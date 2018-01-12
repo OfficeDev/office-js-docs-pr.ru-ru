@@ -1,0 +1,190 @@
+# <a name="work-with-charts-using-the-excel-javascript-api"></a>Работа с диаграммами с использованием API JavaScript для Excel
+
+В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диаграмм с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Chart** и **ChartCollection**, см. в статьях [Объект Chart (API JavaScript для Excel)](../../reference/excel/chart.md) и [Объект ChartCollection (API JavaScript для Excel)](../../reference/excel/chartcollection.md).
+
+## <a name="create-a-chart"></a>Создание диаграммы
+
+В примере кода ниже показано, как создать диаграмму на листе **Sample** (Пример). Диаграмма представляет собой **график**, построенный на основе данных из диапазона **A1:B13**.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+    var dataRange = sheet.getRange("A1:B13");
+    var chart = sheet.charts.add("Line", dataRange, "auto");
+
+    chart.title.text = "Sales Data";
+    chart.legend.position = "right"
+    chart.legend.format.fill.setSolidColor("white");
+    chart.dataLabels.format.font.size = 15;
+    chart.dataLabels.format.font.color = "black";
+
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+**Новый график**
+
+![Новый график в Excel](../../images/Excel-chart-create-line.png)
+
+
+## <a name="add-a-data-series-to-a-chart"></a>Добавление ряда данных в диаграмму
+
+В примере кода ниже показано, как добавить ряд данных в первую диаграмму на листе. Новые ряды данных соответствуют столбцу **2016** и основаны на данных из диапазона **D2:D5**.
+
+**Примечание.** В этом примере используются API, которые в данный момент доступны только в виде общедоступной ознакомительной версии (бета-версии). Чтобы запустить код из этого примера, вам потребуется использовать бета-версию библиотеки в CDN Office.js: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+    var chart = sheet.charts.getItemAt(0);
+    var dataRange = sheet.getRange("D2:D5");
+
+    var newSeries = chart.series.add("2016");
+    newSeries.setValues(dataRange);
+
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+**Диаграмма перед добавлением ряда данных 2016**
+
+![Диаграмма в Excel перед добавлением ряда данных 2016](../../images/Excel-chart-data-series-before.png)
+
+**Диаграмма после добавления ряда данных 2016**
+
+![Диаграмма в Excel после добавления ряда данных 2016](../../images/Excel-chart-data-series-after.png)
+
+## <a name="set-chart-title"></a>Задание названия диаграммы
+
+В примере ниже показано, как задать название **Sales Data by Year** (Данные продаж по годам) для первой диаграммы на листе. 
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+
+    var chart = sheet.charts.getItemAt(0);
+    chart.title.text = "Sales Data by Year";
+
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+**Диаграмма после задания заголовка**
+
+![Диаграмма с заголовком в Excel](../../images/Excel-chart-title-set.png)
+
+## <a name="set-properties-of-an-axis-in-a-chart"></a>Задание свойств оси диаграммы
+
+Диаграммы, в которых используется [декартова система координат](https://en.wikipedia.org/wiki/Cartesian_coordinate_system), например гистограммы, линейчатые и точечные диаграммы, содержат ось категорий и ось значений. В примерах ниже показано, как задать название и отобразить единицу измерения по оси для диаграммы.
+
+### <a name="set-axis-title"></a>Задание названия оси
+
+В примере кода ниже показано, как задать название **Product** (Продукт) для оси категорий первой диаграммы на листе.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+
+    var chart = sheet.charts.getItemAt(0);
+    chart.axes.categoryAxis.title.text = "Product";
+
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+**Диаграмма после задания названия оси категорий**
+
+![Диаграмма с названием оси в Excel](../../images/Excel-chart-axis-title-set.png)
+
+### <a name="set-axis-display-unit"></a>Задание отображаемой единицы измерения оси
+
+В примере ниже показано, как задать отображаемую единицу измерения **Hundreds** (Сотни) для оси значений первой диаграммы на листе.
+
+**Примечание.** В этом примере используются API, которые в данный момент доступны только в виде общедоступной ознакомительной версии (бета-версии). Чтобы запустить код из этого примера, вам потребуется использовать бета-версию библиотеки в CDN Office.js: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+
+    var chart = sheet.charts.getItemAt(0);
+    chart.axes.valueAxis.displayUnit = "Hundreds";
+
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+**Диаграмма после задания единицы измерения оси значений**
+
+![Диаграмма с отображаемой единицей измерения оси значений в Excel](../../images/Excel-chart-axis-display-unit-set.png)
+
+## <a name="set-visibility-of-gridlines-in-a-chart"></a>Настройка видимости линий сетки на диаграмме
+
+В примере ниже показано, как скрыть основные линии сетки для оси значений первой диаграммы на листе. Вы можете отобразить основные линии сетки для оси значений диаграммы, задав для свойства `chart.axes.valueAxis.majorGridlines.visible` значение **true**.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+
+    var chart = sheet.charts.getItemAt(0);
+    chart.axes.valueAxis.majorGridlines.visible = false;
+
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+**Диаграмма со скрытыми линиями сетки**
+
+![Диаграмма со скрытыми линиями сетки в Excel](../../images/Excel-chart-gridlines-removed.png)
+
+## <a name="chart-trendlines"></a>Линии трендов диаграммы
+
+### <a name="add-a-trendline"></a>Добавление линии тренда
+
+В примере кода ниже показано, как добавить линию тренда "скользящее среднее" в первый ряд первой диаграммы на листе **Sample** (Пример). Линия тренда отображает значение скользящего среднего для 5 периодов.
+
+**Примечание.** В этом примере используются API, которые в данный момент доступны только в виде общедоступной ознакомительной версии (бета-версии). Чтобы запустить код из этого примера, вам потребуется использовать бета-версию библиотеки в CDN Office.js: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+
+    var chart = sheet.charts.getItemAt(0);
+    var seriesCollection = chart.series;
+    seriesCollection.getItemAt(0).trendlines.add("MovingAverage").movingAveragePeriod = 5;
+
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+**Диаграмма с линией тренда "скользящее среднее"**
+
+![Диаграмма с линией тренда "скользящее среднее" в Excel](../../images/Excel-chart-create-trendline.png)
+
+### <a name="update-a-trendline"></a>Изменение линии тренда
+
+В примере кода ниже показано, как задать для линии тренда тип **Linear** (Линейная) для первого ряда первой диаграммы на листе **Sample** (Пример).
+
+**Примечание.** В этом примере используются API, которые в данный момент доступны только в виде общедоступной ознакомительной версии (бета-версии). Чтобы запустить код из этого примера, вам потребуется использовать бета-версию библиотеки в CDN Office.js: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+
+    var chart = sheet.charts.getItemAt(0);
+    var seriesCollection = chart.series;
+    var series = seriesCollection.getItemAt(0);
+    series.trendlines.getItem(0).type = "Linear";
+
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+**Диаграмма с линейной линией тренда**
+
+![Диаграмма с линейной линией тренда в Excel](../../images/Excel-chart-trendline-linear.png)
+
+## <a name="additional-resources"></a>Дополнительные ресурсы
+
+- [Основные понятия API JavaScript для Excel](excel-add-ins-core-concepts.md)
+- [Объект Chart (API JavaScript для Excel)](../../reference/excel/chart.md) 
+- [Объект ChartCollection (API JavaScript для Excel)](../../reference/excel/chartcollection.md)
