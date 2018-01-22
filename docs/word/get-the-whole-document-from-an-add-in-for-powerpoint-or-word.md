@@ -135,7 +135,7 @@ input [type="submit"], input[type="button"]
 ## <a name="add-the-javascript-to-get-the-document"></a>Добавление JavaScript для получения документа
 
 
-В коде надстройки обработчик события [Office.initialize](../../reference/shared/office.initialize.md) добавляет обработчик события нажатия кнопки **Submit** (Отправить), расположенной на форме, и информирует пользователя о том, что надстройка готова.
+В коде надстройки обработчик события [Office.initialize](http://dev.office.com/reference/add-ins/shared/office.initialize) добавляет обработчик события нажатия кнопки **Submit** (Отправить), расположенной на форме, и информирует пользователя о том, что надстройка готова.
 
 Следующий пример кода показывает обработчик события **Office.initialize** вместе со вспомогательной функцией `updateStatus`, записывающей в "status div".
 
@@ -166,13 +166,13 @@ function updateStatus(message) {
 
 
 
-Если нажать кнопку **Submit** (Отправить), надстройка вызовет функцию `sendFile`, содержащую вызов метода [Document.getFileAsync](../../reference/shared/document.getfileasync.md). Метод **getFileAsync** использует асинхронный шаблон, аналогичный другим методам в API JavaScript для Office. В нем есть один обязательный параметр _fileType_ и два необязательных параметра _options_ и _callback_. 
+Если нажать кнопку **Submit** (Отправить), надстройка вызовет функцию `sendFile`, содержащую вызов метода [Document.getFileAsync](http://dev.office.com/reference/add-ins/shared/document.getfileasync). Метод **getFileAsync** использует асинхронный шаблон, аналогичный другим методам в API JavaScript для Office. В нем есть один обязательный параметр _fileType_ и два необязательных параметра _options_ и _callback_. 
 
 Параметром _fileType_ поддерживаются следующие константы из перечисления [FileType](http://dev.office.com/reference/add-ins/shared/filetype-enumeration): **Office.FileType.Compressed** ("сжат"), **Office.FileType.PDF** ("pdf") или **Office.FileType.Text** ("текст"). PowerPoint поддерживает только константу **Compressed** в качестве аргумента. Word поддерживает все три константы. Когда вы передаете константу **Compressed** для параметра _fileType_, метод **getFileAsync** возвращает презентацию PowerPoint 2013 (*.pptx) или документ Word 2013 (*.docx), создавая временную копию файла на локальном компьютере.
 
-Метод **getFileAsync** возвращает ссылку на файл в виде объекта [File](http://dev.office.com/reference/add-ins/shared/file). Объект **File** предоставляет четыре элемента: свойства [size](../../reference/shared/file.size.md) и [sliceCount](../../reference/shared/file.slicecount.md), а также методы [getSliceAsync](../../reference/shared/file.getsliceasync.md) и [closeAsync](../../reference/shared/file.closeasync.md). Свойство **size** возвращает количество байтов в файле. Свойство **sliceCount** возвращает количество объектов [Slice](http://dev.office.com/reference/add-ins/shared/document) в файле (которые описаны ниже в этой статье).
+Метод **getFileAsync** возвращает ссылку на файл в виде объекта [File](http://dev.office.com/reference/add-ins/shared/file). Объект **File** предоставляет четыре элемента: свойства [size](http://dev.office.com/reference/add-ins/shared/file.size) и [sliceCount](http://dev.office.com/reference/add-ins/shared/file.slicecount), а также методы [getSliceAsync](http://dev.office.com/reference/add-ins/shared/file.getsliceasync) и [closeAsync](http://dev.office.com/reference/add-ins/shared/file.closeasync). Свойство **size** возвращает количество байтов в файле. Свойство **sliceCount** возвращает количество объектов [Slice](http://dev.office.com/reference/add-ins/shared/document) в файле (которые описаны ниже в этой статье).
 
-Следующий код извлекает документ PowerPoint или Word в виде объекта **File**, используя метод **document.getFileAsync()**. Затем полученный объект **File**, обнуленный счетчик и свойство [sliceCount](../../reference/shared/file.slicecount.md) упаковываются в анонимный объект. Далее этот объект передается в локально определенную функцию `getSlice`. 
+Следующий код извлекает документ PowerPoint или Word в виде объекта **File**, используя метод **document.getFileAsync()**. Затем полученный объект **File**, обнуленный счетчик и свойство [sliceCount](http://dev.office.com/reference/add-ins/shared/file.slicecount) упаковываются в анонимный объект. Далее этот объект передается в локально определенную функцию `getSlice`. 
 
 ```js
 // Get all the content from a PowerPoint or Word document in 100-KB chunks of text.
@@ -206,7 +206,7 @@ function sendFile() {
 
 Локальная функция `getSlice` вызывает метод **File.getSliceAsync**, чтобы получить фрагмент из объекта **File**. Метод **getSliceAsync** возвращает объект **Slice** из коллекции фрагментов. Метод имеет два обязательных параметра: _sliceIndex_ и _callback_. Параметр _sliceIndex_ принимает целое число в качестве индексатора в коллекцию фрагментов. Как и другие функции в API JavaScript для Office, метод **getSliceAsync** также принимает функцию обратного вызова в качестве параметра для обработки результатов от вызова метода.
 
-Объект **Slice** предоставляет доступ к данным, содержащимся в файле. Если в параметре _options_ метода **getFileAsync** не указано иное, объект **Slice** имеет размер 4 МБ. Объект **Slice** предоставляет три свойства: [size](../../reference/shared/slice.size.md), [data](../../reference/shared/slice.data.md) и [index](../../reference/shared/slice.index.md). Свойство **size** получает размер фрагмента в байтах. Свойство **index** получает целое число, представляющее положение фрагмента в коллекции фрагментов.
+Объект **Slice** предоставляет доступ к данным, содержащимся в файле. Если в параметре _options_ метода **getFileAsync** не указано иное, объект **Slice** имеет размер 4 МБ. Объект **Slice** предоставляет три свойства: [size](http://dev.office.com/reference/add-ins/shared/slice.size), [data](http://dev.office.com/reference/add-ins/shared/slice.data) и [index](http://dev.office.com/reference/add-ins/shared/slice.index). Свойство **size** получает размер фрагмента в байтах. Свойство **index** получает целое число, представляющее положение фрагмента в коллекции фрагментов.
 
 
 

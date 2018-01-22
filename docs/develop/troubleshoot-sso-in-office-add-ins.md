@@ -17,7 +17,7 @@
 
 ### <a name="13000"></a>13000
 
-Надстройка или версия Office не поддерживает API [getAccessTokenAsync](../../reference/shared/office.context.auth.getAccessTokenAsync.md). 
+Надстройка или версия Office не поддерживает API [getAccessTokenAsync](http://dev.office.com/reference/add-ins/shared/office.context.auth.getAccessTokenAsync). 
 
 - Эта версия Office не поддерживает единый вход. Необходимо использовать Office 2016 версии 1710 (сборка 8629.nnnn) или более поздняя (эту версию подписки на Office 365 иногда называют "нажми и работай"). Чтобы скачать эту версию, вам может потребоваться принять участие в программе предварительной оценки Office. Дополнительные сведения см. на странице [Примите участие в программе предварительной оценки Office](https://products.office.com/en-us/office-insider?tab=tab-1). 
 - В манифесте надстройки отсутствует подходящий раздел [WebApplicationInfo](http://dev.office.com/reference/add-ins/manifest/webapplicationinfo).

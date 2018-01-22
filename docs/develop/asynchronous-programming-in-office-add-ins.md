@@ -3,7 +3,7 @@
 
 Почему в API Надстройки Office используется асинхронное программирование? JavaScript — это язык однопотокового программирования, поэтому если скрипт вызывает продолжительный синхронный процесс, исполнение всех последующих скриптов будет заблокировано до завершения этого процесса. Поскольку определенные операции с веб-клиентами Office (а также и с полнофункциональными клиентами) могут быть заблокированы при синхронном выполнении, большинство методов в API JavaScript для Office спроектированы для асинхронного выполнения. Это дает гарантию, что Надстройки Office будут отвечать и работать с высокой производительностью. При работе с асинхронными методами зачастую требуется создавать функции обратного вызова.
 
-Имена всех асинхронных методов в API, например [Document.getSelectedDataAsync](../../reference/shared/document.getselecteddataasync.md), [Binding.getDataAsync](../../reference/shared/binding.getdataasync.md) или [Item.loadCustomPropertiesAsync](../../reference/outlook/Office.context.mailbox.item.md), заканчиваются на "Async". При вызове асинхронного метода он выполняется немедленно и все дополнительные скрипты могут продолжать работу. Необязательная функция обратного вызова, передаваемая в асинхронный метод, выполняется тогда, когда готовы данные или запрашиваемая операция. Обычно это происходит быстро, но иногда возможен возврат с небольшой задержкой.
+Имена всех асинхронных методов в API, например [Document.getSelectedDataAsync](http://dev.office.com/reference/add-ins/shared/document.getselecteddataasync), [Binding.getDataAsync](http://dev.office.com/reference/add-ins/shared/binding.getdataasync) или [Item.loadCustomPropertiesAsync](http://dev.office.com/reference/add-ins/outlook/Office.context.mailbox.item), заканчиваются на "Async". При вызове асинхронного метода он выполняется немедленно и все дополнительные скрипты могут продолжать работу. Необязательная функция обратного вызова, передаваемая в асинхронный метод, выполняется тогда, когда готовы данные или запрашиваемая операция. Обычно это происходит быстро, но иногда возможен возврат с небольшой задержкой.
 
 На следующей схеме показан поток выполнения для вызова асинхронного метода, который считывает данные, выделенные пользователем в документе, открытом в серверном веб-приложении Word Online или Excel Online. На момент вызова асинхронного метода поток выполнения JavaScript свободен для выполнения любой дополнительной обработки на стороне клиента, хотя это и не показано на схеме. Когда асинхронный метод возвращается, обратный вызов возобновляет выполнение в потоке, и надстройка может получать доступ к данным, проводить операции над ними и отображать результат. Такой же шаблон асинхронного выполнения используется при работе с ведущими приложениями полнофункционального клиента Office, например с Word 2013 или Excel 2013.
 
@@ -29,7 +29,7 @@
 
 ### <a name="writing-an-anonymous-callback-function"></a>Написание анонимной функции обратного вызова
 
-Следующая анонимная функция обратного вызова объявляет единственный параметр с именем `result`, который получает данные из свойства [AsyncResult.value](../../reference/shared/asyncresult.status.md) при возврате обратного вызова.
+Следующая анонимная функция обратного вызова объявляет единственный параметр с именем `result`, который получает данные из свойства [AsyncResult.value](http://dev.office.com/reference/add-ins/shared/asyncresult.status) при возврате обратного вызова.
 
 
 ```js
@@ -61,7 +61,7 @@ function write(message){
 }
 ```
 
-Вы также можете использовать параметр функции обратного вызова для получения доступа к другим свойствам объекта **AsyncResult**. Используйте свойство [AsyncResult.status](../../reference/shared/asyncresult.error.md), чтобы определить, успешно ли был выполнен вызов. Если не удалось выполнить вызов, можно использовать свойство [AsyncResult.error](../../reference/shared/asyncresult.context.md), чтобы получить доступ к объекту [Error](http://dev.office.com/reference/add-ins/shared/error) и получить сведения об ошибке.
+Вы также можете использовать параметр функции обратного вызова для получения доступа к другим свойствам объекта **AsyncResult**. Используйте свойство [AsyncResult.status](http://dev.office.com/reference/add-ins/shared/asyncresult.error), чтобы определить, успешно ли был выполнен вызов. Если не удалось выполнить вызов, можно использовать свойство [AsyncResult.error](http://dev.office.com/reference/add-ins/shared/asyncresult.context), чтобы получить доступ к объекту [Error](http://dev.office.com/reference/add-ins/shared/error) и получить сведения об ошибке.
 
 Дополнительные сведения об использовании метода **getSelectedDataAsync** см. в статье "Считывание и запись данных в активное выделение документа или таблицы" ([Считывание и запись данных в активное выделение документа или таблицы](../../docs/develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md)). 
 
@@ -92,9 +92,9 @@ function write(message){
 
 Свойства **asyncContext**, **status** и **error** объекта **AsyncResult** возвращают одни и те же виды сведений в функцию обратного вызова, передаваемую в любые асинхронные методы. Однако то, что будет возвращено в свойство **AsyncResult.value**, зависит от функциональных возможностей асинхронного метода.
 
-Например, методы **addHandlerAsync** (для объектов [Binding](http://dev.office.com/reference/add-ins/shared/binding), [CustomXmlPart](../../reference/shared/customxmlpart.customxmlpart.md), [Document](http://dev.office.com/reference/add-ins/shared/document), [RoamingSettings](http://dev.office.com/reference/add-ins/outlook/RoamingSettings) и [Settings](http://dev.office.com/reference/add-ins/shared/settings)) позволяют добавить функции обработчиков событий в элементы, представленные этими объектами. Вы можете получить доступ к свойству **AsyncResult.value** из функции обратного вызова, передаваемой в любой из методов **addHandlerAsync**. Но так как при добавлении обработчика событий не происходит доступа к данным или объектам, то при попытке доступа к нему свойство **value** всегда возвращает значение **undefined**.
+Например, методы **addHandlerAsync** (для объектов [Binding](http://dev.office.com/reference/add-ins/shared/binding), [CustomXmlPart](http://dev.office.com/reference/add-ins/shared/customxmlpart.customxmlpart), [Document](http://dev.office.com/reference/add-ins/shared/document), [RoamingSettings](http://dev.office.com/reference/add-ins/outlook/RoamingSettings) и [Settings](http://dev.office.com/reference/add-ins/shared/settings)) позволяют добавить функции обработчиков событий в элементы, представленные этими объектами. Вы можете получить доступ к свойству **AsyncResult.value** из функции обратного вызова, передаваемой в любой из методов **addHandlerAsync**. Но так как при добавлении обработчика событий не происходит доступа к данным или объектам, то при попытке доступа к нему свойство **value** всегда возвращает значение **undefined**.
 
-С другой стороны, при вызове метода **Document.getSelectedDataAsync** он возвращает данные, выделенные пользователем в документе, в свойство **AsyncResult.value** в обратном вызове. Если вызвать метод [Bindings.getAllAsync](../../reference/shared/bindings.getallasync.md), он возвратит массив всех объектов **Binding** в документе. И, наконец, если вызвать метод [Bindings.getByIdAsync](../../reference/shared/bindings.getbyidasync.md), он возвратит один объект **Binding**.
+С другой стороны, при вызове метода **Document.getSelectedDataAsync** он возвращает данные, выделенные пользователем в документе, в свойство **AsyncResult.value** в обратном вызове. Если вызвать метод [Bindings.getAllAsync](http://dev.office.com/reference/add-ins/shared/bindings.getallasync), он возвратит массив всех объектов **Binding** в документе. И, наконец, если вызвать метод [Bindings.getByIdAsync](http://dev.office.com/reference/add-ins/shared/bindings.getbyidasync), он возвратит один объект **Binding**.
 
 Описание того, что возвращается в свойство **AsyncResult.value** асинхронного метода, см. в разделе "Значение обратного вызова" справочной статьи для этого метода. Сводку всех объектов, имеющих асинхронные методы, см. в таблице в конце статьи об объекте [AsyncResult](http://dev.office.com/reference/add-ins/shared/asyncresult).
 
@@ -122,9 +122,9 @@ API JavaScript для Office поддерживает два вида шабло
 В следующем примере кода показано, как вложить два асинхронных вызова. 
 
 
-- Сначала вызывается метод [Bindings.getByIdAsync](../../reference/shared/bindings.getbyidasync.md) для получения доступа к привязке в документе с именем "MyBinding". Объект **AsyncResult**, возвращаемый в параметр `result` этого обратного вызова, обеспечивает доступ к указанному объекту привязки из свойства **AsyncResult.value**.
+- Сначала вызывается метод [Bindings.getByIdAsync](http://dev.office.com/reference/add-ins/shared/bindings.getbyidasync) для получения доступа к привязке в документе с именем "MyBinding". Объект **AsyncResult**, возвращаемый в параметр `result` этого обратного вызова, обеспечивает доступ к указанному объекту привязки из свойства **AsyncResult.value**.
     
-- Затем объект привязки, к которому получен доступ из первого параметра `result`, используется для вызова метода [Binding.getDataAsync](../../reference/shared/binding.getdataasync.md).
+- Затем объект привязки, к которому получен доступ из первого параметра `result`, используется для вызова метода [Binding.getDataAsync](http://dev.office.com/reference/add-ins/shared/binding.getdataasync).
     
 - И, наконец, параметр `result2` обратного вызова, передаваемый в метод **Binding.getDataAsync**, используется для отображения данных в привязке.
     
@@ -206,7 +206,7 @@ function write(message){
 
 Если применяется шаблон программирования, предусматривающий использование обещаний, в коде не нужно указывать передачу функции обратного вызова и ожидание ее возвращения для продолжения выполнения. В этом случае сразу возвращается объект обещания, который представляет нужный результат. Но в отличие от традиционного синхронного программирования, в этом случае получение обещанного результата на самом деле откладывается до тех пор, пока среда выполнения надстроек Office не сможет выполнить запрос. Обработчик _onError_ предоставляется для ситуаций, когда запрос не может быть выполнен.
 
-API JavaScript для Office предоставляет метод [Office.select](../../reference/shared/office.select.md), которые поддерживает использование шаблона promise для работы с существующими объектами привязки. Объект promise, возвращаемый в метод **Office.select**, поддерживает только четыре метода, к которым можно получить доступ непосредственно из объекта [Binding](http://dev.office.com/reference/add-ins/shared/binding): [getDataAsync](../../reference/shared/binding.getdataasync.md), [setDataAsync](../../reference/shared/binding.setdataasync.md), [addHandlerAsync](../../reference/shared/asyncresult.value.md) или [removeHandlerAsync](../../reference/shared/binding.removehandlerasync.md).
+API JavaScript для Office предоставляет метод [Office.select](http://dev.office.com/reference/add-ins/shared/office.select), которые поддерживает использование шаблона promise для работы с существующими объектами привязки. Объект promise, возвращаемый в метод **Office.select**, поддерживает только четыре метода, к которым можно получить доступ непосредственно из объекта [Binding](http://dev.office.com/reference/add-ins/shared/binding): [getDataAsync](http://dev.office.com/reference/add-ins/shared/binding.getdataasync), [setDataAsync](http://dev.office.com/reference/add-ins/shared/binding.setdataasync), [addHandlerAsync](http://dev.office.com/reference/add-ins/shared/asyncresult.value) или [removeHandlerAsync](http://dev.office.com/reference/add-ins/shared/binding.removehandlerasync).
 
 Шаблон promise для работы с привязками принимает такую форму:
 
@@ -234,7 +234,7 @@ function write(message){
 
 После выполнения promise объекта **Binding** его можно повторно использовать в вызове последующего метода, как если бы он был привязкой (среда выполнения надстройки не будет повторно пытаться асинхронно выполнить promise). Если promise объекта **Binding** невозможно выполнить, среда выполнения надстройки снова попытается получить доступ к объекту привязки в следующий раз, когда будет вызван один из ее асинхронных методов.
 
-В следующем примере кода используется метод **select**, чтобы получить привязку с **id** "`cities`" из коллекции **Bindings**, а затем вызвать метод [addHandlerAsync](../../reference/shared/asyncresult.value.md) для добавления обработчика событий для события [dataChanged](../../reference/shared/binding.bindingdatachangedevent.md) привязки.
+В следующем примере кода используется метод **select**, чтобы получить привязку с **id** "`cities`" из коллекции **Bindings**, а затем вызвать метод [addHandlerAsync](http://dev.office.com/reference/add-ins/shared/asyncresult.value) для добавления обработчика событий для события [dataChanged](http://dev.office.com/reference/add-ins/shared/binding.bindingdatachangedevent) привязки.
 
 
 
@@ -250,7 +250,7 @@ function addBindingDataChangedEventHandler() {
 ```
 
 
- >**Важно!** Обещание объекта **Binding**, возвращенное методом **Office.select**, предоставляет доступ только к четырем методам объекта **Binding**. Если нужен доступ к другим элементам объекта **Binding**, используйте свойство **Document.bindings** и метод **Bindings.getByIdAsync** или **Bindings.getAllAsync** для получения объекта **Binding**. Например, если нужен доступ к свойствам объекта [MatrixBinding](../../reference/shared/binding.matrixbinding.md), [TableBinding](../../reference/shared/binding.tablebinding.md) или **Binding** (свойства последнего: **document**, **id**, **type**), используйте метод **getByIdAsync** или **getAllAsync** для получения объекта **Binding**.
+ >**Важно!** Обещание объекта **Binding**, возвращенное методом **Office.select**, предоставляет доступ только к четырем методам объекта **Binding**. Если нужен доступ к другим элементам объекта **Binding**, используйте свойство **Document.bindings** и метод **Bindings.getByIdAsync** или **Bindings.getAllAsync** для получения объекта **Binding**. Например, если нужен доступ к свойствам объекта [MatrixBinding](http://dev.office.com/reference/add-ins/shared/binding.matrixbinding), [TableBinding](http://dev.office.com/reference/add-ins/shared/binding.tablebinding) или **Binding** (свойства последнего: **document**, **id**, **type**), используйте метод **getByIdAsync** или **getAllAsync** для получения объекта **Binding**.
 
 
 ## <a name="passing-optional-parameters-to-asynchronous-methods"></a>Передача дополнительных параметров в асинхронные методы
@@ -267,7 +267,7 @@ function addBindingDataChangedEventHandler() {
 
 ### <a name="passing-optional-parameters-inline"></a>Передача дополнительных параметров в качестве встроенных
 
-Например, синтаксис вызова метода [Document.setSelectedDataAsync](../../reference/shared/document.setselecteddataasync.md) с необязательными параметрами в качестве встроенных выглядит так:
+Например, синтаксис вызова метода [Document.setSelectedDataAsync](http://dev.office.com/reference/add-ins/shared/document.setselecteddataasync) с необязательными параметрами в качестве встроенных выглядит так:
 
 ```js
  Office.context.document.setSelectedDataAsync(data, {coercionType: 'coercionType', asyncContext:' asyncContext},callback);

@@ -326,7 +326,7 @@ myBinding.setDataAsync('Hello World!', function (asyncResult) { });
 ## <a name="detect-changes-to-data-or-the-selection-in-a-binding"></a>Обнаружение изменений в данных или выделении в привязке
 
 
-В примере ниже показано, как присоединить обработчик события к событию [DataChanged](../../reference/shared/binding.bindingdatachangedevent.md) привязки с идентификатором MyBinding.
+В примере ниже показано, как присоединить обработчик события к событию [DataChanged](http://dev.office.com/reference/add-ins/shared/binding.bindingdatachangedevent) привязки с идентификатором MyBinding.
 
 
 ```js

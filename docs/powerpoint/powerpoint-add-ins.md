@@ -22,11 +22,11 @@
 При создании контентной надстройки вам понадобится получить активное представление презентации, а также обработать событие ActiveViewChanged в рамках обработчика событий Office.Initialize.
 
 
-- Функция `getActiveFileView` вызывает метод [Document.getActiveViewAsync](../../reference/shared/document.getactiveviewasync.md), который возвращает текущее представление презентации: "edit" (представления, в которых можно редактировать слайды, например  **Обычный режим** или **Режим структуры**) или "read" (**Показ слайдов** или **Режим чтения**).
+- Функция `getActiveFileView` вызывает метод [Document.getActiveViewAsync](http://dev.office.com/reference/add-ins/shared/document.getactiveviewasync), который возвращает текущее представление презентации: "edit" (представления, в которых можно редактировать слайды, например  **Обычный режим** или **Режим структуры**) или "read" (**Показ слайдов** или **Режим чтения**).
 
 
-- Функция `registerActiveViewChanged` вызывает метод [addHandlerAsync](../../reference/shared/document.addhandlerasync.md) для регистрации обработчика для события [Document.ActiveViewChanged](../../reference/shared/document.activeviewchanged.md). 
-> Примечание. В PowerPoint Online не удастся запустить событие [Document.ActiveViewChanged](../../reference/shared/document.activeviewchanged.md), поскольку режим показа слайдов обрабатывается как новый сеанс. В этом случае надстройке необходимо получить активное представление по загрузке, как указано ниже.
+- Функция `registerActiveViewChanged` вызывает метод [addHandlerAsync](http://dev.office.com/reference/add-ins/shared/document.addhandlerasync) для регистрации обработчика для события [Document.ActiveViewChanged](http://dev.office.com/reference/add-ins/shared/document.activeviewchanged). 
+> Примечание. В PowerPoint Online не удастся запустить событие [Document.ActiveViewChanged](http://dev.office.com/reference/add-ins/shared/document.activeviewchanged), поскольку режим показа слайдов обрабатывается как новый сеанс. В этом случае надстройке необходимо получить активное представление по загрузке, как указано ниже.
 
 
 
@@ -79,7 +79,7 @@ function registerActiveViewChanged() {
 
 ## <a name="navigate-to-a-particular-slide-in-the-presentation"></a>Переход к определенному слайду презентации
 
-Функция `getSelectedRange` вызывает метод [Document.getSelectedDataAsync](../../reference/shared/document.getselecteddataasync.md), чтобы получить объект JSON, возвращаемый свойством  `asyncResult.value` и который включает в себя массив с именем slides, содержащий идентификаторы, заголовки и индексы выбранного диапазона слайдов (или текущего слайда). Кроме того, он сохраняет идентификатор первого слайда в выбранном диапазоне в глобальной переменной.
+Функция `getSelectedRange` вызывает метод [Document.getSelectedDataAsync](http://dev.office.com/reference/add-ins/shared/document.getselecteddataasync), чтобы получить объект JSON, возвращаемый свойством  `asyncResult.value` и который включает в себя массив с именем slides, содержащий идентификаторы, заголовки и индексы выбранного диапазона слайдов (или текущего слайда). Кроме того, он сохраняет идентификатор первого слайда в выбранном диапазоне в глобальной переменной.
 
 
 ```js
@@ -99,7 +99,7 @@ function getSelectedRange() {
 }
 ```
 
-Функция `goToFirstSlide` вызывает метод [Document.goToByIdAsync](../../reference/shared/document.gotobyidasync.md) для перехода к идентификатору первого слайда, сохраненному описанной выше функцией `getSelectedRange`.
+Функция `goToFirstSlide` вызывает метод [Document.goToByIdAsync](http://dev.office.com/reference/add-ins/shared/document.gotobyidasync) для перехода к идентификатору первого слайда, сохраненному описанной выше функцией `getSelectedRange`.
 
 
 
@@ -143,7 +143,7 @@ function goToSlideByIndex() {
 
 ## <a name="get-the-url-of-the-presentation"></a>Получение URL-адреса презентации
 
-Функция `getFileUrl` вызывает метод [Document.getFileProperties](../../reference/shared/document.getfilepropertiesasync.md), чтобы получить URL-адрес файла презентации.
+Функция `getFileUrl` вызывает метод [Document.getFileProperties](http://dev.office.com/reference/add-ins/shared/document.getfilepropertiesasync), чтобы получить URL-адрес файла презентации.
 
 
 ```js

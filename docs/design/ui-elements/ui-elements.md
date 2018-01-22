@@ -50,7 +50,7 @@ Office UI Fabric содержит следующие элементы польз
 Независимо от того, решите вы применить цветовую схему Office или свою собственную, мы рекомендуем использовать наши API для тем. Надстройки, которые используют темы Office, будут смотреться в нем более целостно.
 
 
-- Для надстроек почты и области задач используйте свойство [Context.officeTheme](../../../reference/shared/office.context.officetheme.md), чтобы соответствовать темам приложений Office. Этот API в данный момент доступен только в Office 2016.  
+- Для надстроек почты и области задач используйте свойство [Context.officeTheme](http://dev.office.com/reference/add-ins/shared/office.context.officetheme), чтобы соответствовать темам приложений Office. Этот API в данный момент доступен только в Office 2016.  
 - Информацию о контентных надстройках PowerPoint см. в инструкциях по [использованию тем Office в надстройках для PowerPoint](../../powerpoint/use-document-themes-in-your-powerpoint-add-ins.md).
 
 <!-- Link to theming API docs and Humberto's seed sample. Add screenshot of themed add-in. -->

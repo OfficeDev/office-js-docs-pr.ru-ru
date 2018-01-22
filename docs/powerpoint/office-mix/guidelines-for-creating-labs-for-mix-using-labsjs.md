@@ -86,7 +86,7 @@ Labs.DefaultHostBuilder = function () {
 Labs.connect((err, connectionResponse) => {});
 ```
 
-После инициализации можно вызвать другие методы API labs.js. Параметр  _connectionResponse_ содержит сведения об узле, пользователе, а также другую информацию о подключении. Дополнительные сведения о возвращаемых значениях см. в разделе [Labs.Core.IConnectionResponse](../../../reference/office-mix/labs.core.iconnectionresponse.md).
+После инициализации можно вызвать другие методы API labs.js. Параметр  _connectionResponse_ содержит сведения об узле, пользователе, а также другую информацию о подключении. Дополнительные сведения о возвращаемых значениях см. в разделе [Labs.Core.IConnectionResponse](http://dev.office.com/reference/add-ins/office-mix/labs.core.iconnectionresponse).
 
 
 ### <a name="time-format"></a>Формат времени

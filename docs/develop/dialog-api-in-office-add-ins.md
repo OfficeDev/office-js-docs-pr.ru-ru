@@ -24,11 +24,11 @@
 
 ## <a name="dialog-api-scenarios"></a>Сценарии с Dialog API
 
-Интерфейсы API JavaScript для Office поддерживают указанные ниже сценарии с объектом [Dialog](../../reference/shared/officeui.dialog.md) и две функции в [пространстве имен Office.context.ui](http://dev.office.com/reference/add-ins/shared/officeui).
+Интерфейсы API JavaScript для Office поддерживают указанные ниже сценарии с объектом [Dialog](http://dev.office.com/reference/add-ins/shared/officeui.dialog) и две функции в [пространстве имен Office.context.ui](http://dev.office.com/reference/add-ins/shared/officeui).
 
 ### <a name="open-a-dialog-box"></a>Открытие диалогового окна
 
-Чтобы открыть диалоговое окно, код в области задач вызывает метод [displayDialogAsync](../../reference/shared/officeui.displaydialogasync.md) и передает ему URL-адрес ресурса, который нужно открыть. Таким ресурсом обычно является страница, но может быть и метод контроллера в приложении MVC, маршрут, метод веб-службы или любой другой ресурс. В этой статье термин "страница" или "веб-сайт" означает ресурс в диалоговом окне. Ниже приведен простой пример кода.
+Чтобы открыть диалоговое окно, код в области задач вызывает метод [displayDialogAsync](http://dev.office.com/reference/add-ins/shared/officeui.displaydialogasync) и передает ему URL-адрес ресурса, который нужно открыть. Таким ресурсом обычно является страница, но может быть и метод контроллера в приложении MVC, маршрут, метод веб-службы или любой другой ресурс. В этой статье термин "страница" или "веб-сайт" означает ресурс в диалоговом окне. Ниже приведен простой пример кода.
 
 ```js
 Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html');
