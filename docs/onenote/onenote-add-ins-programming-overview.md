@@ -15,7 +15,7 @@
 
 **Надстройка Office = манифест + веб-страница**
 
-![Надстройка Office состоит из манифеста и веб-страницы](../../images/onenote-add-in.png)
+![Надстройка Office состоит из манифеста и веб-страницы](../images/onenote-add-in.png)
 
 ## <a name="using-the-javascript-api"></a>Использование API JavaScript
 
@@ -111,7 +111,7 @@ function getSelectionFromPage() {
 ## <a name="onenote-object-model-diagram"></a>Схема объектной модели OneNote 
 На схеме ниже показаны возможности, которые на данный момент доступны в API JavaScript для OneNote .
 
-  ![Схема объектной модели OneNote](../../images/onenote-om.png)
+  ![Схема объектной модели OneNote](../images/onenote-om.png)
 
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы

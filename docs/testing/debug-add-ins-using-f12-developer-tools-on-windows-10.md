@@ -38,7 +38,7 @@
     
     Например, выберите **home.html**. 
     
-    ![Экран F12Chooser с указанием надстройки пузырьков](../../images/4f8823a3-595a-4657-83ac-8b235a7ba087.png)
+    ![Экран F12Chooser с указанием надстройки пузырьков](../images/4f8823a3-595a-4657-83ac-8b235a7ba087.png)
 
 4. В окне F12 выберите файл, который требуется отладить.
     
@@ -48,13 +48,13 @@
     
     To set the breakpoint in home.js, choose line 144, which is in the  _textChanged_ function. You will see a red dot to the left of the line and a corresponding line in the **Callstack and Breakpoints** (bottom right) pane. For other ways to set a breakpoint, see [Inspect running JavaScript with the Debugger](https://msdn.microsoft.com/library/dn255007%28v=vs.85%29.aspx). 
     
-    ![Отладчик с точкой останова в файле home.js](../../images/e3cbc7ca-8b21-4ebb-b7a1-93e2364f1d16.png)
+    ![Отладчик с точкой останова в файле home.js](../images/e3cbc7ca-8b21-4ebb-b7a1-93e2364f1d16.png)
 
 6. Запустите надстройку, чтобы активировать точку останова.
     
     Выберите текстовое поле URL-адреса в верхней части области QR4Office, чтобы изменить текст. В области **стека вызовов и точек останова** в отладчике вы увидите, что точка останова активирована и показывает различные сведения. Чтобы увидеть результаты, может потребоваться обновить средство F12.
     
-    ![Отладчик с результатами из сработавшей точки останова](../../images/e0bcd036-91ce-4509-ae98-6c10b593d61b.png)
+    ![Отладчик с результатами из сработавшей точки останова](../images/e0bcd036-91ce-4509-ae98-6c10b593d61b.png)
 
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы

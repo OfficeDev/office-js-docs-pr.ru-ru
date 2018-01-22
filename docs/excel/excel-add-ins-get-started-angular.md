@@ -43,7 +43,7 @@ ng new my-addin
     ```bash
     yo office
     ```
-    ![Генератор Yeoman](../../images/yo-office.png)
+    ![Генератор Yeoman](../images/yo-office.png)
     > **Примечание.** Если вам будет предложено переписать файл **package.json**, выберите **No** (не переписывать).
 
 3. Откройте файл манифеста (т. е. файл в корневом каталоге приложения, имя которого заканчивается на "manifest.xml"). Замените все вхождения `https://localhost:3000` на `http://localhost:4200` и сохраните файл.
@@ -180,11 +180,11 @@ ng new my-addin
 
 2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
-    ![Кнопка надстройки Excel](../../images/excel_quickstart_addin_2a.png)
+    ![Кнопка надстройки Excel](../images/excel_quickstart_addin_2a.png)
 
 3. Нажмите кнопку **Color Me** (Раскрасить) в области задач, чтобы сделать выбранный диапазон зеленым.
 
-    ![Надстройка Excel](../../images/excel_quickstart_addin_2b.png)
+    ![Надстройка Excel](../images/excel_quickstart_addin_2b.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

@@ -8,7 +8,7 @@
 
 **Команды надстроек**
 
-![Команды надстроек в Excel](../../images/Excel_add-in_commands_Script-Lab.png)
+![Команды надстроек в Excel](../images/Excel_add-in_commands_Script-Lab.png)
 
 Дополнительные сведения о возможностях команд и поддерживаемых платформах, а также рекомендации по разработке команд надстроек см. в статье [Команды надстроек для Excel, Word и PowerPoint](../design/add-in-commands.md).
 
@@ -18,7 +18,7 @@
 
 **Область задач**
 
-![Надстройка области задач в Excel](../../images/Excel_add-in_task_pane_Insights.png)
+![Надстройка области задач в Excel](../images/Excel_add-in_task_pane_Insights.png)
 
 Дополнительные сведения об областях задач см. в статье [Области задач в надстройках Office](../design/task-pane-add-ins.md). Пример реализации области задач в Excel: [Тенденции расходов банка WoodGrove](https://github.com/OfficeDev/Excel-Add-in-WoodGrove-Expense-Trends) на JS.
 
@@ -28,7 +28,7 @@
 
 **Диалоговое окно**
 
-![Диалоговое окно надстройки в Excel](../../images/Excel_add-in_dialog_choose-number.png)
+![Диалоговое окно надстройки в Excel](../images/Excel_add-in_dialog_choose-number.png)
 
 Дополнительные сведения о диалоговых окнах и соответствующем API см. в статьях [Диалоговые окна в надстройках Office](../design/dialog-boxes.md) и [Использование API диалоговых окон в надстройках Office](../develop/dialog-api-in-office-add-ins.md).
 
@@ -38,7 +38,7 @@
 
 **Контентная надстройка**
 
-![Контентная надстройка в Excel](../../images/Excel_add-in_content_map.png)
+![Контентная надстройка в Excel](../images/Excel_add-in_content_map.png)
 
 Дополнительные сведения о контентных надстройках см. в статье [Контентные надстройки Office](../design/content-add-ins.md). Пример контентной надстройки Excel: [Humongous Insurance](https://github.com/OfficeDev/Excel-Content-Add-in-Humongous-Insurance) на сайте GitHub.
 

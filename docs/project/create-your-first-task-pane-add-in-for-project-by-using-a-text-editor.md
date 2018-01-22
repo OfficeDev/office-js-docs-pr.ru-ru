@@ -724,19 +724,19 @@ function manageViewEventHandler(docMethod) {
     
     **Рис. 1. Добавление сетевой папки для манифестов надстроек**
 
-    ![Добавление сетевой папки для манифестов приложений](../../images/pj15_CreateSimpleAgave_ManageCatalogs.png)
+    ![Добавление сетевой папки для манифестов приложений](../images/pj15_CreateSimpleAgave_ManageCatalogs.png)
 
 6. После добавления новых надстроек или изменения исходного кода перезапустите Project. На ленте **ПРОЕКТ** выберите в раскрывающемся меню **Надстройки Office** значение **Просмотреть все**. В диалоговом окне **Вставить надстройку** выберите **ОБЩАЯ ПАПКА** (см. рис. 2), выберите **Project OM Test**, затем **Вставить**. Надстройка Project OM Test запустится в области задач.
     
     **Рис. 2. Запуск надстройки Project OM Test, расположенной в общей папке**
 
-    ![Вставка приложения](../../images/pj15_CreateSimpleAgave_StartAgaveApp.png)
+    ![Вставка приложения](../images/pj15_CreateSimpleAgave_StartAgaveApp.png)
 
 7. В Project создайте и сохраните простой проект, который содержит хотя бы две задачи. Например, создайте задачи с именами T1, T2 и веху с именем M1, затем задайте длительности задач и их предшественников примерно как показано на рис. 3. Выберите вкладку **ПРОЕКТ** на ленте выберите всю строку задачи T2, затем нажмите кнопку **getSelectedDataAsync** в области задач. На рис. 3 показаны данные, выбранные в текстовом окне надстройки **Project OM Test**.
     
     **Рис. 3. Использование надстройки Project OM Test**
 
-    ![Использование приложения OM для тестирования проекта](../../images/pj15_CreateSimpleAgave_ProjectOMTest.gif)
+    ![Использование приложения OM для тестирования проекта](../images/pj15_CreateSimpleAgave_ProjectOMTest.gif)
 
 8. В столбце **Длительность** выберите ячейку, относящуюся к первой задаче, а затем нажмите кнопку **getSelectedDataAsync** в надстройке **Project OM Test**. Функция **getSelectedDataAsync** приведет к отображению в текстовом поле значения `2 days`. 
     
@@ -1122,7 +1122,7 @@ function logMethodError(methodName, errorName, errorMessage, actionMessage) {
 
 **Рис. 4. Функции в файле SurfaceErrors.js могут показывать всплывающее уведомление**
 
-![Использование процедур SurfaceError для отображения ошибки](../../images/pj15_CreateSimpleAgave_SurfaceError.gif)
+![Использование процедур SurfaceError для отображения ошибки](../images/pj15_CreateSimpleAgave_SurfaceError.gif)
 
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы

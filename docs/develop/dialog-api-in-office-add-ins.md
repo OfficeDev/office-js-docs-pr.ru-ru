@@ -18,7 +18,7 @@
 
 На приведенном ниже изображении показан пример диалогового окна.
 
-![Команды надстроек](../../images/Auth0DialogOpen.PNG)
+![Команды надстроек](../images/Auth0DialogOpen.PNG)
 
 Обратите внимание, что диалоговое окно всегда открывается в центре экрана. Пользователь может перемещать его и изменять его размер. Окно *не модальное*: пользователь может продолжать работать и с документом в ведущем приложении Office, и с главной страницей в области задач.
 
@@ -362,7 +362,7 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?client
 
 [Конструктивный шаблон размещения видео](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code/tree/master/templates/first-run/video-placemat) в диалоговом окне вы найдете в репозитории [конструктивных шаблонов для пользовательского интерфейса надстроек Office](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code).
 
-![Снимок экрана: видео в диалоговом окне надстройки.](../../images/VideoPlacematDialogOpen.PNG)
+![Снимок экрана: видео в диалоговом окне надстройки.](../images/VideoPlacematDialogOpen.PNG)
 
 ## <a name="use-the-dialog-apis-in-an-authentication-flow"></a>Использование Dialog API в потоке аутентификации
 

@@ -28,7 +28,7 @@
 1.  Откройте Visual Studio и выберите **Файл** > **Создать** > **Проект**. 
 2.  В разделе **Office/SharePoint**, выберите **Надстройка Excel** и нажмите **ОК**.
 
-    ![Шаблон надстройки Excel в Visual Studio](../../images/visual-studio-addin-template.png)
+    ![Шаблон надстройки Excel в Visual Studio](../images/visual-studio-addin-template.png)
 
 3.  В мастере создания приложений выберите **Добавить новые функции в Excel** и нажмите **Готово**.
 4.  Нажмите клавишу F5 или зеленую кнопку **Запуск**, чтобы запустить новую надстройку Excel. Надстройка будет размещена локально в IIS, и Excel откроется уже с загруженной надстройкой.
@@ -39,13 +39,13 @@
 2. Нажмите **Да**, чтобы подтвердить изменение расширения имени файла.  
 3. Нажмите **Да**, чтобы подтвердить поиск определений TypeScript в диспетчере пакетов NuGet, как показано на приведенном ниже снимке экрана. Откроется **диспетчер пакетов NuGet**.
 
-    ![Диалоговое окно поиска определений TypeScript](../../images/search-typescript-typings.png)
+    ![Диалоговое окно поиска определений TypeScript](../images/search-typescript-typings.png)
 
 4. Выберите **Обзор** в **диспетчере пакетов Nuget**.  
 5. В поле поиска введите **office-js tag:typescript**.
 6. Установите определения **office.js.TypeScript.DefinitelyTyped** и **jquery.TypeScript.DefinitelyTyped**, как показано ниже.
 
-    ![Пакеты NuGet TypeScript.DefinitelyTyped](../../images/typescript-definitelytyped-nugets.png)
+    ![Пакеты NuGet TypeScript.DefinitelyTyped](../images/typescript-definitelytyped-nugets.png)
 
 7. Откройте Home.ts (прежнее название — Home.js). Удалите следующую ссылку в начале файла Home.ts:
 

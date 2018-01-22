@@ -8,11 +8,11 @@
    - В настоящее время единственный поддерживаемый инструмент отладки — [Visual Studio 2015](https://www.visualstudio.com/downloads/) с [обновлением 3](https://msdn.microsoft.com/en-us/library/mt752379.aspx) или более поздней версии. Если у вас нет Visual Studio, при выборе команды **Подключить отладчик** не будет выполняться никаких действий.   
    - Для отладки клиентского кода JavaScript можно использовать только средство **Подключить отладчик**. Для отладки серверного кода, например на сервере Node.js, существует множество вариантов. Сведения о том, как выполнять отладку в Visual Studio Code, см. в статье [Отладка Node.js в VS Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging). Если вы не используете Visual Studio Code, выполните поиск по запросу "отладка Node.js" или "отладка {имя_сервера}".
 
-![Снимок экрана: меню подключения отладчика](../../images/attach-debugger.png)
+![Снимок экрана: меню подключения отладчика](../images/attach-debugger.png)
 
 Выберите **Подключить отладчик**. Откроется диалоговое окно **JIT-отладчик Visual Studio** (см. рисунок ниже). 
 
-![Снимок экрана: JIT-отладчик Visual Studio](../../images/visual-studio-debugger.png)
+![Снимок экрана: JIT-отладчик Visual Studio](../images/visual-studio-debugger.png)
 
 В **обозревателе решений** Visual Studio вы увидите файлы кода.   Вы можете задать точки останова для отлаживаемой строки кода в Visual Studio.
 

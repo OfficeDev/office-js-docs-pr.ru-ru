@@ -94,7 +94,7 @@ function write(message){
 
 **Рис. 1. Пользовательский интерфейс выбора данных в Excel**
 
-![Пользовательский интерфейс выбора данных в Excel](../../images/AgaveAPIOverview_ExcelSelectionUI.png)
+![Пользовательский интерфейс выбора данных в Excel](../images/AgaveAPIOverview_ExcelSelectionUI.png)
 
 
 ## <a name="add-a-binding-to-a-named-item"></a>Добавление привязки к именованному элементу

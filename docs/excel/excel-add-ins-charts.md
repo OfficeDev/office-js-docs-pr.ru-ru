@@ -24,7 +24,7 @@ Excel.run(function (context) {
 
 **Новый график**
 
-![Новый график в Excel](../../images/Excel-chart-create-line.png)
+![Новый график в Excel](../images/Excel-chart-create-line.png)
 
 
 ## <a name="add-a-data-series-to-a-chart"></a>Добавление ряда данных в диаграмму
@@ -48,11 +48,11 @@ Excel.run(function (context) {
 
 **Диаграмма перед добавлением ряда данных 2016**
 
-![Диаграмма в Excel перед добавлением ряда данных 2016](../../images/Excel-chart-data-series-before.png)
+![Диаграмма в Excel перед добавлением ряда данных 2016](../images/Excel-chart-data-series-before.png)
 
 **Диаграмма после добавления ряда данных 2016**
 
-![Диаграмма в Excel после добавления ряда данных 2016](../../images/Excel-chart-data-series-after.png)
+![Диаграмма в Excel после добавления ряда данных 2016](../images/Excel-chart-data-series-after.png)
 
 ## <a name="set-chart-title"></a>Задание названия диаграммы
 
@@ -71,7 +71,7 @@ Excel.run(function (context) {
 
 **Диаграмма после задания заголовка**
 
-![Диаграмма с заголовком в Excel](../../images/Excel-chart-title-set.png)
+![Диаграмма с заголовком в Excel](../images/Excel-chart-title-set.png)
 
 ## <a name="set-properties-of-an-axis-in-a-chart"></a>Задание свойств оси диаграммы
 
@@ -94,7 +94,7 @@ Excel.run(function (context) {
 
 **Диаграмма после задания названия оси категорий**
 
-![Диаграмма с названием оси в Excel](../../images/Excel-chart-axis-title-set.png)
+![Диаграмма с названием оси в Excel](../images/Excel-chart-axis-title-set.png)
 
 ### <a name="set-axis-display-unit"></a>Задание отображаемой единицы измерения оси
 
@@ -115,7 +115,7 @@ Excel.run(function (context) {
 
 **Диаграмма после задания единицы измерения оси значений**
 
-![Диаграмма с отображаемой единицей измерения оси значений в Excel](../../images/Excel-chart-axis-display-unit-set.png)
+![Диаграмма с отображаемой единицей измерения оси значений в Excel](../images/Excel-chart-axis-display-unit-set.png)
 
 ## <a name="set-visibility-of-gridlines-in-a-chart"></a>Настройка видимости линий сетки на диаграмме
 
@@ -134,7 +134,7 @@ Excel.run(function (context) {
 
 **Диаграмма со скрытыми линиями сетки**
 
-![Диаграмма со скрытыми линиями сетки в Excel](../../images/Excel-chart-gridlines-removed.png)
+![Диаграмма со скрытыми линиями сетки в Excel](../images/Excel-chart-gridlines-removed.png)
 
 ## <a name="chart-trendlines"></a>Линии трендов диаграммы
 
@@ -158,7 +158,7 @@ Excel.run(function (context) {
 
 **Диаграмма с линией тренда "скользящее среднее"**
 
-![Диаграмма с линией тренда "скользящее среднее" в Excel](../../images/Excel-chart-create-trendline.png)
+![Диаграмма с линией тренда "скользящее среднее" в Excel](../images/Excel-chart-create-trendline.png)
 
 ### <a name="update-a-trendline"></a>Изменение линии тренда
 
@@ -181,7 +181,7 @@ Excel.run(function (context) {
 
 **Диаграмма с линейной линией тренда**
 
-![Диаграмма с линейной линией тренда в Excel](../../images/Excel-chart-trendline-linear.png)
+![Диаграмма с линейной линией тренда в Excel](../images/Excel-chart-trendline-linear.png)
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 

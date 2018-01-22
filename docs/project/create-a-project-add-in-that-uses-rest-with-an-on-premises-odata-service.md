@@ -74,19 +74,19 @@
     
     **Создание надстройки Office**
 
-    ![Создание приложения для Office 2013](../../images/pj15_HelloProjectOData_CreatingApp.png)
+    ![Создание приложения для Office 2013](../images/pj15_HelloProjectOData_CreatingApp.png)
 
 5. В диалоговом окне **Выбор типа надстройки** выберите пункт **Надстройка области задач** и нажмите кнопку **Далее** (см. следующий снимок экрана).
     
     **Выбор типа создаваемой надстройки**
 
-    ![Выбор типа создаваемого приложения](../../images/pj15_HelloProjectOData_ChooseProject.png)
+    ![Выбор типа создаваемого приложения](../images/pj15_HelloProjectOData_ChooseProject.png)
 
 6. В диалоговом окне **Выбор ведущих приложений** снимите все флажки, кроме флажка **Project** (см. следующий снимок экрана), а затем нажмите кнопку **Готово**.
     
     **Выбор ведущего приложения**
 
-    ![Выбор Project в качестве единственного ведущего приложения](../../images/b2144f2c-51f6-4e61-bc0d-972125c57031.png)
+    ![Выбор Project в качестве единственного ведущего приложения](../images/b2144f2c-51f6-4e61-bc0d-972125c57031.png)
     
     С помощью Visual Studio можно создавать проекты **HelloProjectOdata** и **HelloProjectODataWeb**.
     
@@ -94,7 +94,7 @@
 
 **Просмотр файлов веб-проекта по умолчанию в обозревателе решений**
 
-![Просмотр файлов веб-проекта в обозревателе решений](../../images/pj15_HelloProjectOData_InitialSolutionExplorer.png)
+![Просмотр файлов веб-проекта в обозревателе решений](../images/pj15_HelloProjectOData_InitialSolutionExplorer.png)
 
 Манифест проекта **HelloProjectOData** — это файл HelloProjectOData.xml. Его можно изменить при необходимости, чтобы добавить описание надстройки, ссылку на значок, сведения о дополнительных языках и другие параметры. В процедуре 3 изменяется только отображаемое имя надстройки и описание и добавляется значок.
 
@@ -118,7 +118,7 @@
     
 2. Чтобы отображаться в раскрывающемся списке **Надстройки Office**, значок должен иметь размер 32 x 32 пикселя. Например, установите пакет SDK Project 2013, затем выберите папку **Images** и добавьте следующий файл из пакета SDK: `\Samples\Apps\HelloProjectOData\HelloProjectODataWeb\Images\NewIcon.png`
     
-    Можно использовать свое изображение 32 x 32 или скопировать изображение ![Значок для приложения HelloProjectOData](../../images/pj15_HelloProjectData_NewIcon.jpg) в файл NewIcon.png, а затем добавить этот файл в папку `HelloProjectODataWeb\Images`.
+    Можно использовать свое изображение 32 x 32 или скопировать изображение ![Значок для приложения HelloProjectOData](../images/pj15_HelloProjectData_NewIcon.jpg) в файл NewIcon.png, а затем добавить этот файл в папку `HelloProjectODataWeb\Images`.
 
 3. В манифесте HelloProjectOData.xml добавьте элемент **IconUrl** под элементом **Description**. Значением URL-адреса значка является относительный путь на файл значка размером 32 x 32. Например, добавьте следующую строку: **<IconUrl DefaultValue="~remoteAppUrl/Images/NewIcon.png" />**. Теперь файл манифеста HelloProjectOData.xml содержит следующий текст (ваше значение **Id** будет другим):
 
@@ -578,7 +578,7 @@
     
     **Рис. 4. Запуск надстройки HelloProjectOData**
 
-    ![Тестирование приложения HelloProjectOData](../../images/pj15_HelloProjectData_TestTheApp.png)
+    ![Тестирование приложения HelloProjectOData](../images/pj15_HelloProjectData_TestTheApp.png)
 
 4. В области задач **Hello ProjectData** нажмите кнопку **Get ProjectData Endpoint (получить конечную точку ProjectData)**. Строка **projectDataEndPoint** должна показывать URL-адрес службы **ProjectData** и кнопка **Compare All Projects (сравнить все проекты)** должна быть включена (см. рис. 5).
     
@@ -586,7 +586,7 @@
     
     **Рис. 5. Просмотр результатов запроса REST**
 
-    ![Просмотр результатов запроса REST](../../images/pj15_HelloProjectData_RESTresults.gif)
+    ![Просмотр результатов запроса REST](../images/pj15_HelloProjectData_RESTresults.gif)
 
 6. Проверьте выходные данные в текстовом поле. Они должны показывать путь к документу, запрос REST, сведения о состоянии и результаты JSON от вызовов **ajax** и **parseODataResult**. Выходные данные помогают понять, создать и отладить код в методе **parseODataResult**, такой как `projCost += Number(res.d.results[i].ProjectCost);`.
     
@@ -644,7 +644,7 @@
     
     **Рис. 6. Использование надстройки без подключения Project Web App**
 
-    ![Использование приложения без подключения Project Web App](../../images/pj15_HelloProjectData_NoConnection.gif)
+    ![Использование приложения без подключения Project Web App](../images/pj15_HelloProjectData_NoConnection.gif)
 
 8. Остановите отладку и нажмите клавишу **F5** снова. Войдите в Project Web App и создайте проект, содержащий данные о материальных и трудовых затратах. Проект можно сохранить, но не публикуйте его.
     
@@ -653,7 +653,7 @@
 
     **Рис. 7. Сравнение неопубликованного проекта с другими проектами**
 
-    ![Сравнение неопубликованного проекта с другими проектами](../../images/pj15_HelloProjectData_NotPublished.gif)
+    ![Сравнение неопубликованного проекта с другими проектами](../images/pj15_HelloProjectData_NotPublished.gif)
 
 Даже если ваша надстройка работала правильно в предыдущих тестах, есть другие тесты, которые необходимо выполнить. Например:
 

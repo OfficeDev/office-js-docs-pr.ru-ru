@@ -39,7 +39,7 @@ Excel.run(function (context) {
 
 **Новая таблица**
 
-![Новая таблица в Excel](../../images/Excel-table-create.png)
+![Новая таблица в Excel](../images/Excel-table-create.png)
 
 ## <a name="add-rows-to-a-table"></a>Добавление строк в таблицу
 
@@ -73,7 +73,7 @@ Excel.run(function (context) {
 
 **Таблица с новыми строками**
 
-![Таблица с новыми строками в Excel](../../images/Excel-table-add-rows.png)
+![Таблица с новыми строками в Excel](../images/Excel-table-add-rows.png)
 
 ## <a name="add-a-column-to-a-table"></a>Добавление столбца в таблицу
 
@@ -112,7 +112,7 @@ Excel.run(function (context) {
 
 **Таблица с новым столбцом**
 
-![Таблица с новым столбцом в Excel](../../images/Excel-table-add-column.png)
+![Таблица с новым столбцом в Excel](../images/Excel-table-add-column.png)
 
 ### <a name="add-a-column-that-contains-formulas"></a>Добавление столбца, содержащего формулы
 
@@ -145,7 +145,7 @@ Excel.run(function (context) {
 
 **Таблица с новым столбцом, содержащим вычисленные значения**
 
-![Таблица с новым столбцом, содержащим вычисленные значения, в Excel](../../images/Excel-table-add-calculated-column.png)
+![Таблица с новым столбцом, содержащим вычисленные значения, в Excel](../images/Excel-table-add-calculated-column.png)
 
 ## <a name="update-column-name"></a>Изменение имени столбца
 
@@ -174,7 +174,7 @@ Excel.run(function (context) {
 
 **Таблица со столбцом с новым именем**
 
-![Таблица со столбцом с новым именем в Excel](../../images/Excel-table-update-column-name.png)
+![Таблица со столбцом с новым именем в Excel](../images/Excel-table-update-column-name.png)
 
 ## <a name="get-data-from-a-table"></a>Получение данных из таблицы
 
@@ -220,7 +220,7 @@ Excel.run(function (context) {
 
 **Таблица и выведенные данные**
 
-![Данные из таблицы в Excel](../../images/Excel-table-get-data.png)
+![Данные из таблицы в Excel](../images/Excel-table-get-data.png)
 
 ## <a name="sort-data-in-a-table"></a>Сортировка данных в таблице
 
@@ -247,7 +247,7 @@ Excel.run(function (context) {
 
 **Данные таблицы, отсортированные по столбцу Amount (Сумма) в порядке убывания**
 
-![Данные из таблицы в Excel](../../images/Excel-table-sort.png)
+![Данные из таблицы в Excel](../images/Excel-table-sort.png)
 
 ## <a name="apply-filters-to-a-table"></a>Применение фильтров к таблице
 
@@ -279,7 +279,7 @@ Excel.run(function (context) {
 
 **Таблица данных, в которой применены фильтры для столбцов Category (Категория) и Amount (Сумма)**
 
-![Отфильтрованные данные таблицы в Excel](../../images/Excel-table-filters-apply.png)
+![Отфильтрованные данные таблицы в Excel](../images/Excel-table-filters-apply.png)
 
 ## <a name="clear-table-filters"></a>Удаление фильтров в таблице
 
@@ -298,7 +298,7 @@ Excel.run(function (context) {
 
 **Данные таблицы без фильтров**
 
-![Неотфильтрованные данные таблицы в Excel](../../images/Excel-table-filters-clear.png)
+![Неотфильтрованные данные таблицы в Excel](../images/Excel-table-filters-clear.png)
 
 ## <a name="get-the-visible-range-from-a-filtered-table"></a>Получение отображаемого диапазона из отфильтрованной таблицы
 
@@ -339,7 +339,7 @@ Excel.run(function (context) {
 
 **Таблица после применения форматирования**
 
-![Таблица после применения форматирования в Excel](../../images/Excel-table-formatting-after.png)
+![Таблица после применения форматирования в Excel](../images/Excel-table-formatting-after.png)
 
 ## <a name="convert-a-range-to-a-table"></a>Преобразование диапазона в таблицу
 
@@ -379,11 +379,11 @@ Excel.run(function (context) {
 
 **Данные в диапазоне (перед его преобразованием в таблицу)**
 
-![Данные в диапазоне в Excel](../../images/Excel-range.png)
+![Данные в диапазоне в Excel](../images/Excel-range.png)
 
 **Данные в таблице (после преобразования диапазона в таблицу)**
 
-![Данные в таблице в Excel](../../images/Excel-table-from-range.png)
+![Данные в таблице в Excel](../images/Excel-table-from-range.png)
 
 ## <a name="import-json-data-into-a-table"></a>Импорт данных JSON в таблицу
 
@@ -430,7 +430,7 @@ Excel.run(function (context) {
 
 **Новая таблица**
 
-![Новая таблица в Excel](../../images/Excel-table-create-from-json.png)
+![Новая таблица в Excel](../images/Excel-table-create-from-json.png)
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 

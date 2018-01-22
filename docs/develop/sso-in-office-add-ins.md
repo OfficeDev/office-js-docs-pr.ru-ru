@@ -5,7 +5,7 @@
 * авторизация пользователя для входа в надстройку;
 * предоставление надстройке доступа к [Microsoft Graph](https://developer.microsoft.com/graph/docs).
 
-![Изображение, иллюстрирующее процесс входа в надстройку](../../images/OfficeHostTitleBarLogin.png)
+![Изображение, иллюстрирующее процесс входа в надстройку](../images/OfficeHostTitleBarLogin.png)
 
 >**Примечание.** API единого входа в настоящее время поддерживается для Word, Excel и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы требований для API удостоверений](../../reference/requirement-sets/identity-api-requirement-sets.md).
 > В настоящее функция единого входа в Outlook находится на этапе тестирования. Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Дополнительные сведения о том, как это сделать, см. в статье [Exchange Online: включение современной проверки подлинности для клиента](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
@@ -22,7 +22,7 @@
 
 На приведенной ниже схеме показано, как работает единый вход.
 <!-- Minor fixes to the text in the diagram - change V2 to v2.0, and change "(e.g. Word, Excel, etc.)" to "(for example, Word, Excel)". -->
-![Схема единого входа](../../images/SSOOverviewDiagram.png)
+![Схема единого входа](../images/SSOOverviewDiagram.png)
 
 1. Код JavaScript надстройки вызывает новый API Office.js — `getAccessTokenAsync`. Он указывает ведущему приложению Office, что необходимо получить маркер доступа к надстройке (далее — **маркер надстройки**).
 1. Если вход в Office не выполнен, в ведущем приложении открывается всплывающее окно, в котором пользователю предлагается войти.

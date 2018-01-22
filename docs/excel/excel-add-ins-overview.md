@@ -44,19 +44,19 @@
 
 **Настраиваемые кнопки ленты**
 
-![Команды надстроек](../../images/Excel_add-in_commands_Script-Lab.png)
+![Команды надстроек](../images/Excel_add-in_commands_Script-Lab.png)
 
 **Область задач**
 
-![Область задач надстройки](../../images/Excel_add-in_task_pane_Insights.png)
+![Область задач надстройки](../images/Excel_add-in_task_pane_Insights.png)
 
 **Диалоговое окно**
 
-![Диалоговое окно надстройки](../../images/Excel_add-in_dialog_choose-number.png)
+![Диалоговое окно надстройки](../images/Excel_add-in_dialog_choose-number.png)
 
 **Контентная надстройка**
 
-![Контентная надстройка](../../images/Excel_add-in_content_map.png)
+![Контентная надстройка](../images/Excel_add-in_content_map.png)
 
 ## <a name="javascript-apis-to-interact-with-workbook-content"></a>API JavaScript для взаимодействия с содержимым книги
 

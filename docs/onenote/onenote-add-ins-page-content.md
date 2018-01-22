@@ -2,7 +2,7 @@
 
 В API JavaScript для надстроек OneNote содержимое страницы представлено указанной ниже объектной моделью.
 
-  ![Схема объектной модели страницы OneNote](../../images/OneNoteOM-page.png)
+  ![Схема объектной модели страницы OneNote](../images/OneNoteOM-page.png)
 
 - Объект Page содержит коллекцию объектов PageContent.
 - Объект PageContent содержит контент типов Outline, Image или Other.

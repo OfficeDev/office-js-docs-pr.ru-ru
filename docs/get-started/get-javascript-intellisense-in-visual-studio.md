@@ -36,7 +36,7 @@
 /** @type {Excel.Range} */
 var subsetRange;
 ```
-![Intellisense — переменная](../../images/IntellisenseVS17Var.png)
+![Intellisense — переменная](../images/IntellisenseVS17Var.png)
 
 ### <a name="parameter"></a>Параметр
 
@@ -46,7 +46,7 @@ function myFunc(paragraphs){
 
 }
 ```
-![Intellisense — параметр](../../images/IntellisenseVS17Param.png)
+![Intellisense — параметр](../images/IntellisenseVS17Param.png)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -56,7 +56,7 @@ function myFunc() {
 
 }
 ```
-![Intellisense — возвращаемое значение](../../images/IntellisenseVS17Return.png)
+![Intellisense — возвращаемое значение](../images/IntellisenseVS17Return.png)
 
 ### <a name="complex-types"></a>Сложные типы
 
@@ -68,7 +68,7 @@ function myFunc() {
 
 }
 ```
-![Intellisense — сложный тип](../../images/IntellisenseVS17ComplexType.png)
+![Intellisense — сложный тип](../images/IntellisenseVS17ComplexType.png)
 
 ##<a name="additional-resources"></a>Дополнительные ресурсы
 
