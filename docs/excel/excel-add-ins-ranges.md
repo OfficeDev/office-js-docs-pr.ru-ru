@@ -1,6 +1,6 @@
 # <a name="work-with-ranges-using-the-excel-javascript-api"></a>Работа с диапазонами с использованием API JavaScript для Excel
 
-В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диапазонов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектом **Range**, см. в статье [Объект Range (API JavaScript для Excel)](../../reference/excel/range.md).
+В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диапазонов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектом **Range**, см. в статье [Объект Range (API JavaScript для Excel)](http://dev.office.com/reference/add-ins/excel/range).
 
 ## <a name="get-a-range"></a>Получение диапазона
 
@@ -527,4 +527,4 @@ Excel.run(function (context) {
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - [Основные понятия API JavaScript для Excel](excel-add-ins-core-concepts.md)
-- [Объект Range (API JavaScript для Excel)](../../reference/excel/range.md)
+- [Объект Range (API JavaScript для Excel)](http://dev.office.com/reference/add-ins/excel/range)

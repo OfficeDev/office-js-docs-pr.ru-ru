@@ -69,7 +69,7 @@
 
 Лучший способ начать работу с командами надстроек — ознакомиться с [примерами](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/) на сайте GitHub.
 
-Дополнительные сведения об указании команд надстройки в манифесте см. в статье [Определение команд надстроек в манифесте](../develop/define-add-in-commands.md) и справочных материалах по [VersionOverrides](../../reference/manifest/versionoverrides.md).
+Дополнительные сведения об указании команд надстройки в манифесте см. в статье [Определение команд надстроек в манифесте](../develop/define-add-in-commands.md) и справочных материалах по [VersionOverrides](http://dev.office.com/reference/add-ins/manifest/versionoverrides).
 
 
 

@@ -200,7 +200,7 @@ Project стандартный 2013 и Project профессиональный 
     
 - [XML-манифест надстроек для Office](../../docs/overview/add-in-manifests.md)
     
-- [API JavaScript для Office](../../reference/javascript-api-for-office.md)
+- [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office)
     
 - [Создание первой надстройки области задач для Project 2013 с помощью текстового редактора](../project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md)
     

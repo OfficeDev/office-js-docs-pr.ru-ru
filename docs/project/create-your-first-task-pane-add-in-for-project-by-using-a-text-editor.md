@@ -93,7 +93,7 @@
     
 2. Создайте файл JavaScript с именем JSOM_Sample.js в том же каталоге, где находится файл JSOMCall.html. Следующий код позволяет получить контекст приложения и сведения о документе с помощью функций в файле Office.js. Объект **text** является идентификатором элемента управления **textarea** в HTML-файле.
     
-    Переменная **_projDoc** инициализируется с объектом **ProjectDocument**. Код включает в себя функции обработки простых ошибок, а также функцию **getContextValues**, позволяет получить контекст приложения и свойства контекста для документа проекта. Дополнительные сведения об объектной модели JavaScript для Project см. в статье [API JavaScript для Office](../../reference/javascript-api-for-office.md).
+    Переменная **_projDoc** инициализируется с объектом **ProjectDocument**. Код включает в себя функции обработки простых ошибок, а также функцию **getContextValues**, позволяет получить контекст приложения и свойства контекста для документа проекта. Дополнительные сведения об объектной модели JavaScript для Project см. в статье [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office).
     
 
 
@@ -158,11 +158,11 @@ function getApplicationDisplayLanguage() {
 ```
 
 
-    For information about the functions in the Office.debug.js file, see [JavaScript API for Office](../../reference/javascript-api-for-office.md). For example, the  **getDocumentUrl** function gets the URL or file path of the open project.
+    For information about the functions in the Office.debug.js file, see [JavaScript API for Office](http://dev.office.com/reference/add-ins/javascript-api-for-office). For example, the  **getDocumentUrl** function gets the URL or file path of the open project.
     
 3. Добавьте функции JavaScript, которые вызывают асинхронные функции в Office.js и Project-15.js для получения выбранных данных.
     
-      - Например, **getSelectedDataAsync** — это общая функция в Office.js, которая принимает неформатированный текст из выбранных данных. Дополнительные сведения см. в статье [Объект AsyncResult](../../reference/shared/asyncresult.md).
+      - Например, **getSelectedDataAsync** — это общая функция в Office.js, которая принимает неформатированный текст из выбранных данных. Дополнительные сведения см. в статье [Объект AsyncResult](http://dev.office.com/reference/add-ins/shared/asyncresult).
     
   - Функция **getSelectedTaskAsync** в файле Project-15.js принимает идентификатор GUID выбранной задачи. Аналогичным образом функция **getSelectedResourceAsync** получает GUID выбранного ресурса. Если вызвать эти функции, не выбрав задачи или ресурса, функции отобразят неопределенную ошибку.
     
@@ -175,7 +175,7 @@ function getApplicationDisplayLanguage() {
     
   - Если проект синхронизируется со списком задач SharePoint, функция **getWSSUrlAsync** получает URL-адрес и имя списка задач. Если проект не синхронизируется со списком задач SharePoint, функция **getWSSUrlAsync** выдает ошибку.
     
-     >**Примечание.** Чтобы получить URL-адрес SharePoint и имя списка задач, рекомендуем использовать функцию **getProjectFieldAsync** с константами **WSSUrl** и **WSSList** в перечислении [ProjectProjectFields](../../reference/shared/projectprojectfields-enumeration.md)
+     >**Примечание.** Чтобы получить URL-адрес SharePoint и имя списка задач, рекомендуем использовать функцию **getProjectFieldAsync** с константами **WSSUrl** и **WSSList** в перечислении [ProjectProjectFields](http://dev.office.com/reference/add-ins/shared/projectprojectfields-enumeration)
 
     Все функции в коде ниже содержат анонимную функцию, которую определяет `function (asyncResult)`обратная функция, получающая асинхронный результат. Вместо анонимных можно использовать именованные функции. Благодаря этому будет удобней обеспечивать поддержку сложных надстроек.
     
@@ -1133,7 +1133,7 @@ function logMethodError(methodName, errorName, errorMessage, actionMessage) {
     
 - [Общие сведения об API JavaScript для надстроек](../develop/understanding-the-javascript-api-for-office.md)
     
-- [API JavaScript для надстроек Office](../../reference/javascript-api-for-office.md)
+- [API JavaScript для надстроек Office](http://dev.office.com/reference/add-ins/javascript-api-for-office)
 
 - [Справка по схеме для манифестов надстроек Office (версия 1.1)](../overview/add-in-manifests.md)     
     

@@ -5,7 +5,7 @@
 
 Библиотека LabsJS (labs.js) позволяет создавать специальные Надстройки Office (называемые лабораториями), которые интегрируются с Office Mix. После создания лаборатории обрабатываются в Office Mix с помощью Microsoft PowerPoint. Хотя эти компоненты называются "лабораториями", фактически мы создаем специальные Надстройки Office, а именно Надстройки Office Mix.
 
-Содержимое LabsJS позволяет применять API JavaScript labs.js, обеспечивая инструкции и примеры. Эта библиотека создана на основе [API JavaScript для Office](../../../reference/javascript-api-for-office.md) (Office.js) и обеспечивает уровень абстракции, оптимизированный для надстроек, внедренных в Office Mix.
+Содержимое LabsJS позволяет применять API JavaScript labs.js, обеспечивая инструкции и примеры. Эта библиотека создана на основе [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office) (Office.js) и обеспечивает уровень абстракции, оптимизированный для надстроек, внедренных в Office Mix.
 
 
 ## <a name="general-guidelines"></a>Общие рекомендации

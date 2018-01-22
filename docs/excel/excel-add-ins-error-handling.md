@@ -36,4 +36,4 @@ Excel.run(function (context) {
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - [Основные понятия API JavaScript для Excel](excel-add-ins-core-concepts.md)
-- [Объект OfficeExtension.Error (API JavaScript для Excel)](../../reference/excel/error.md)
+- [Объект OfficeExtension.Error (API JavaScript для Excel)](http://dev.office.com/reference/add-ins/excel/error)

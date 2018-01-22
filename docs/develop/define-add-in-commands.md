@@ -1,6 +1,6 @@
 # <a name="define-add-in-commands-in-your-manifest"></a>Определение команд надстройки в манифесте
 
-С помощью команд надстроек можно с легкостью настроить стандартный пользовательский интерфейс Office, добавив элементы, выполняющие действия. Например, вы можете добавить на ленту собственные кнопки. Чтобы создать команды, можно добавить узел **[VersionOverrides](../../reference/manifest/versionoverrides.md)** в уже созданный манифест. 
+С помощью команд надстроек можно с легкостью настроить стандартный пользовательский интерфейс Office, добавив элементы, выполняющие действия. Например, вы можете добавить на ленту собственные кнопки. Чтобы создать команды, можно добавить узел **[VersionOverrides](http://dev.office.com/reference/add-ins/manifest/versionoverrides)** в уже созданный манифест. 
 
 Если манифест содержит элемент **VersionOverrides**, то версии Word, Excel, Outlook и PowerPoint, поддерживающие команды надстроек, будут использовать данные из этого элемента для загрузки надстройки. В более ранних версиях Office, не поддерживающих команды надстроек, этот элемент игнорируется.
 
@@ -8,7 +8,7 @@
  
 ## <a name="versionoverrides"></a>VersionOverrides
 
-[VersionOverrides](../../reference/manifest/versionoverrides.md) — корневой элемент, который содержит сведения о командах надстройки. Поддерживается в схеме манифеста 1.1 и более поздней версии.
+[VersionOverrides](http://dev.office.com/reference/add-ins/manifest/versionoverrides) — корневой элемент, который содержит сведения о командах надстройки. Поддерживается в схеме манифеста 1.1 и более поздней версии.
 
 Существуют две версии схемы **VersionOverrides**.
 
@@ -21,11 +21,11 @@
 
 Элемент **VersionOverrides** включает следующие дочерние элементы:
 
-- [Description](../../reference/manifest/description.md)
-- [Requirements](../../reference/manifest/requirements.md)
-- [Hosts](../../reference/manifest/hosts.md)
-- [Resources](../../reference/manifest/resources.md);
-- [VersionOverrides](../../reference/manifest/versionoverrides.md)
+- [Description](http://dev.office.com/reference/add-ins/manifest/description)
+- [Requirements](http://dev.office.com/reference/add-ins/manifest/requirements)
+- [Hosts](http://dev.office.com/reference/add-ins/manifest/hosts)
+- [Resources](http://dev.office.com/reference/add-ins/manifest/resources);
+- [VersionOverrides](http://dev.office.com/reference/add-ins/manifest/versionoverrides)
 
 На приведенной ниже схеме показана иерархия элементов, используемых для определения команд надстроек. 
 

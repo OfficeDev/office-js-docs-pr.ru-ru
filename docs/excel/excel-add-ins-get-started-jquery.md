@@ -164,4 +164,4 @@
 * [Основные понятия API JavaScript для Excel](excel-add-ins-core-concepts.md)
 * [Изучайте фрагменты кода с помощью Script Lab](https://store.office.com/en-001/app.aspx?assetid=WA104380862&ui=en-US&rs=en-001&ad=US&appredirect=false)
 * [Примеры кода надстроек Excel](http://dev.office.com/code-samples#?filters=excel,office%20add-ins)
-* [Справочник по API JavaScript для Excel](../../reference/excel/excel-add-ins-reference-overview.md)
+* [Справочник по API JavaScript для Excel](http://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview)

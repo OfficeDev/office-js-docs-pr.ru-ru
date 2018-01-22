@@ -2,7 +2,7 @@
 # <a name="referencing-the-javascript-api-for-office-library-from-its-content-delivery-network-cdn"></a>Указание ссылок на библиотеку JavaScript API для Office из сети доставки содержимого (CDN)
 
 
-Библиотека [API JavaScript для Office](../../reference/javascript-api-for-office.md) состоит из файла Office.js и связанных JS-файлов ведущего приложения, например Excel-15.js и Outlook-15.js. 
+Библиотека [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office) состоит из файла Office.js и связанных JS-файлов ведущего приложения, например Excel-15.js и Outlook-15.js. 
 
 
 Простейший способ добавить ссылку на API — использовать нашу сеть доставки содержимого (CDN), добавив следующий код `<script>` в тег `<head>` страницы:  
@@ -22,5 +22,5 @@
 
 
 - [Общие сведения об интерфейсе API JavaScript для Office](../../docs/develop/understanding-the-javascript-api-for-office.md)    
-- [API JavaScript для Office](../../reference/javascript-api-for-office.md)
+- [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office)
     

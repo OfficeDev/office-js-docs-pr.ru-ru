@@ -17,7 +17,7 @@
 ## <a name="writing-the-callback-function-for-an-async-method"></a>Написание функции обратного вызова для асинхронного метода
 
 
-Функция обратного вызова, передаваемая в асинхронный метод в качестве аргумента _callback_, должна объявлять единственный параметр, который всегда будет использоваться средой выполнения надстройки для предоставления доступа к объекту [AsyncResult](../../reference/shared/asyncresult.md) при выполнении этой функции. Например:
+Функция обратного вызова, передаваемая в асинхронный метод в качестве аргумента _callback_, должна объявлять единственный параметр, который всегда будет использоваться средой выполнения надстройки для предоставления доступа к объекту [AsyncResult](http://dev.office.com/reference/add-ins/shared/asyncresult) при выполнении этой функции. Например:
 
 
 - Анонимная функция, которая должна быть написана и передана непосредственно в вызове асинхронного метода в качестве параметра _callback_ асинхронного метода.
@@ -61,7 +61,7 @@ function write(message){
 }
 ```
 
-Вы также можете использовать параметр функции обратного вызова для получения доступа к другим свойствам объекта **AsyncResult**. Используйте свойство [AsyncResult.status](../../reference/shared/asyncresult.error.md), чтобы определить, успешно ли был выполнен вызов. Если не удалось выполнить вызов, можно использовать свойство [AsyncResult.error](../../reference/shared/asyncresult.context.md), чтобы получить доступ к объекту [Error](../../reference/shared/error.md) и получить сведения об ошибке.
+Вы также можете использовать параметр функции обратного вызова для получения доступа к другим свойствам объекта **AsyncResult**. Используйте свойство [AsyncResult.status](../../reference/shared/asyncresult.error.md), чтобы определить, успешно ли был выполнен вызов. Если не удалось выполнить вызов, можно использовать свойство [AsyncResult.error](../../reference/shared/asyncresult.context.md), чтобы получить доступ к объекту [Error](http://dev.office.com/reference/add-ins/shared/error) и получить сведения об ошибке.
 
 Дополнительные сведения об использовании метода **getSelectedDataAsync** см. в статье "Считывание и запись данных в активное выделение документа или таблицы" ([Считывание и запись данных в активное выделение документа или таблицы](../../docs/develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md)). 
 
@@ -92,11 +92,11 @@ function write(message){
 
 Свойства **asyncContext**, **status** и **error** объекта **AsyncResult** возвращают одни и те же виды сведений в функцию обратного вызова, передаваемую в любые асинхронные методы. Однако то, что будет возвращено в свойство **AsyncResult.value**, зависит от функциональных возможностей асинхронного метода.
 
-Например, методы **addHandlerAsync** (для объектов [Binding](../../reference/shared/binding.md), [CustomXmlPart](../../reference/shared/customxmlpart.customxmlpart.md), [Document](../../reference/shared/document.md), [RoamingSettings](../../reference/outlook/RoamingSettings.md) и [Settings](../../reference/shared/settings.md)) позволяют добавить функции обработчиков событий в элементы, представленные этими объектами. Вы можете получить доступ к свойству **AsyncResult.value** из функции обратного вызова, передаваемой в любой из методов **addHandlerAsync**. Но так как при добавлении обработчика событий не происходит доступа к данным или объектам, то при попытке доступа к нему свойство **value** всегда возвращает значение **undefined**.
+Например, методы **addHandlerAsync** (для объектов [Binding](http://dev.office.com/reference/add-ins/shared/binding), [CustomXmlPart](../../reference/shared/customxmlpart.customxmlpart.md), [Document](http://dev.office.com/reference/add-ins/shared/document), [RoamingSettings](http://dev.office.com/reference/add-ins/outlook/RoamingSettings) и [Settings](http://dev.office.com/reference/add-ins/shared/settings)) позволяют добавить функции обработчиков событий в элементы, представленные этими объектами. Вы можете получить доступ к свойству **AsyncResult.value** из функции обратного вызова, передаваемой в любой из методов **addHandlerAsync**. Но так как при добавлении обработчика событий не происходит доступа к данным или объектам, то при попытке доступа к нему свойство **value** всегда возвращает значение **undefined**.
 
 С другой стороны, при вызове метода **Document.getSelectedDataAsync** он возвращает данные, выделенные пользователем в документе, в свойство **AsyncResult.value** в обратном вызове. Если вызвать метод [Bindings.getAllAsync](../../reference/shared/bindings.getallasync.md), он возвратит массив всех объектов **Binding** в документе. И, наконец, если вызвать метод [Bindings.getByIdAsync](../../reference/shared/bindings.getbyidasync.md), он возвратит один объект **Binding**.
 
-Описание того, что возвращается в свойство **AsyncResult.value** асинхронного метода, см. в разделе "Значение обратного вызова" справочной статьи для этого метода. Сводку всех объектов, имеющих асинхронные методы, см. в таблице в конце статьи об объекте [AsyncResult](../../reference/shared/asyncresult.md).
+Описание того, что возвращается в свойство **AsyncResult.value** асинхронного метода, см. в разделе "Значение обратного вызова" справочной статьи для этого метода. Сводку всех объектов, имеющих асинхронные методы, см. в таблице в конце статьи об объекте [AsyncResult](http://dev.office.com/reference/add-ins/shared/asyncresult).
 
 
 ## <a name="asynchronous-programming-patterns"></a>Шаблоны асинхронного программирования
@@ -206,7 +206,7 @@ function write(message){
 
 Если применяется шаблон программирования, предусматривающий использование обещаний, в коде не нужно указывать передачу функции обратного вызова и ожидание ее возвращения для продолжения выполнения. В этом случае сразу возвращается объект обещания, который представляет нужный результат. Но в отличие от традиционного синхронного программирования, в этом случае получение обещанного результата на самом деле откладывается до тех пор, пока среда выполнения надстроек Office не сможет выполнить запрос. Обработчик _onError_ предоставляется для ситуаций, когда запрос не может быть выполнен.
 
-API JavaScript для Office предоставляет метод [Office.select](../../reference/shared/office.select.md), которые поддерживает использование шаблона promise для работы с существующими объектами привязки. Объект promise, возвращаемый в метод **Office.select**, поддерживает только четыре метода, к которым можно получить доступ непосредственно из объекта [Binding](../../reference/shared/binding.md): [getDataAsync](../../reference/shared/binding.getdataasync.md), [setDataAsync](../../reference/shared/binding.setdataasync.md), [addHandlerAsync](../../reference/shared/asyncresult.value.md) или [removeHandlerAsync](../../reference/shared/binding.removehandlerasync.md).
+API JavaScript для Office предоставляет метод [Office.select](../../reference/shared/office.select.md), которые поддерживает использование шаблона promise для работы с существующими объектами привязки. Объект promise, возвращаемый в метод **Office.select**, поддерживает только четыре метода, к которым можно получить доступ непосредственно из объекта [Binding](http://dev.office.com/reference/add-ins/shared/binding): [getDataAsync](../../reference/shared/binding.getdataasync.md), [setDataAsync](../../reference/shared/binding.setdataasync.md), [addHandlerAsync](../../reference/shared/asyncresult.value.md) или [removeHandlerAsync](../../reference/shared/binding.removehandlerasync.md).
 
 Шаблон promise для работы с привязками принимает такую форму:
 
@@ -317,7 +317,7 @@ var options = {
 
 ```
 
-Это выглядит как следующий пример, когда используется для указания параметров [ValueFormat](../../reference/shared/valueformat-enumeration.md) и [FilterType](../../reference/shared/filtertype-enumeration.md).
+Это выглядит как следующий пример, когда используется для указания параметров [ValueFormat](http://dev.office.com/reference/add-ins/shared/valueformat-enumeration) и [FilterType](http://dev.office.com/reference/add-ins/shared/filtertype-enumeration).
 
 
 
@@ -388,5 +388,5 @@ function write(message){
 
 - [Общие сведения об интерфейсе API JavaScript для Office](../../docs/develop/understanding-the-javascript-api-for-office.md)
     
-- [API JavaScript для Office](../../reference/javascript-api-for-office.md)
+- [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office)
      

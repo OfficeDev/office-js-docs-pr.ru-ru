@@ -21,7 +21,7 @@
 
 Надстройка Excel включает два основных компонента: веб-приложение и файл конфигурации, называемый файлом манифеста. 
 
-Веб-приложение использует [API JavaScript для Office](../../reference/javascript-api-for-office.md) для взаимодействия с объектами в Excel, а также может упрощать работу с ресурсами в Интернете. Например, надстройка может выполнять следующие действия:
+Веб-приложение использует [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office) для взаимодействия с объектами в Excel, а также может упрощать работу с ресурсами в Интернете. Например, надстройка может выполнять следующие действия:
 
 * создавать, читать, обновлять и удалять данные в книге (листы, диапазоны, таблицы, диаграммы, именованные элементы и т. д.);
 * выполнять авторизацию пользователя в веб-службе с помощью стандартного потока OAuth 2.0;
@@ -60,9 +60,9 @@
 
 ## <a name="javascript-apis-to-interact-with-workbook-content"></a>API JavaScript для взаимодействия с содержимым книги
 
-Надстройка Excel взаимодействует с объектами в Excel с помощью [API JavaScript для Office](../../reference/javascript-api-for-office.md), включающего две объектных модели JavaScript.
+Надстройка Excel взаимодействует с объектами в Excel с помощью [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office), включающего две объектных модели JavaScript.
 
-* **API JavaScript для Excel**. Появившийся в Office 2016 [API JavaScript для Excel](../../reference/excel/excel-add-ins-reference-overview.md) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к листам, диапазонам, таблицам, диаграммам и другим объектам. 
+* **API JavaScript для Excel**. Появившийся в Office 2016 [API JavaScript для Excel](http://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к листам, диапазонам, таблицам, диаграммам и другим объектам. 
 
 * **Общий API**. Появившийся в Office 2013 общий API можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов ведущих приложений, например Word, Excel и PowerPoint. Общий API предоставляет ограниченные возможности по взаимодействию с Excel, поэтому его можно использовать, если надстройка должна работать в Excel 2013.
 
@@ -76,4 +76,4 @@
 - [Рекомендации по разработке надстроек Office](../overview/add-in-development-best-practices.md)
 - [Рекомендации по проектированию надстроек Office](../design/add-in-design.md)
 - [Основные понятия API JavaScript для Excel](excel-add-ins-core-concepts.md)
-- [Справочник по API JavaScript для Excel](../../reference/excel/excel-add-ins-reference-overview.md)
+- [Справочник по API JavaScript для Excel](http://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview)

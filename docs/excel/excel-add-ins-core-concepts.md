@@ -1,6 +1,6 @@
 # <a name="excel-javascript-api-core-concepts"></a>Основные понятия API JavaScript для Excel
  
-В этой статье рассказывается, как создавать надстройки для Excel 2016 с помощью [API JavaScript для Excel](../../reference/excel/excel-add-ins-reference-overview.md). В статье изложены основные принципы, которые являются фундаментальными при использовании этого API, а также имеются рекомендации по выполнению определенных задач, например чтению данных из большого диапазона или записи данных в него, изменения всех ячеек в диапазоне и много другого.
+В этой статье рассказывается, как создавать надстройки для Excel 2016 с помощью [API JavaScript для Excel](http://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview). В статье изложены основные принципы, которые являются фундаментальными при использовании этого API, а также имеются рекомендации по выполнению определенных задач, например чтению данных из большого диапазона или записи данных в него, изменения всех ячеек в диапазоне и много другого.
 
 ## <a name="asynchronous-nature-of-excel-apis"></a>Асинхронный характер API Excel
 
@@ -127,8 +127,8 @@ object.load({ loadOption });
  
 _Где:_
  
-* `properties` — это список имен свойств или связей, которые необходимо загрузить, в формате строк с разделителями-запятыми или в виде массива имен. Дополнительные сведения см. в описаниях методов **load()**, определенных для объектов, в [справочнике по API JavaScript для Excel](../../reference/excel/excel-add-ins-reference-overview.md).
-* `loadOption` указывает объект, описывающий параметры выбора, разворачивания, перемещения вверх и пропуска. Дополнительные сведения см. в статье, посвященной [параметрам](../../reference/excel/loadoption.md) загрузки объектов.
+* `properties` — это список имен свойств или связей, которые необходимо загрузить, в формате строк с разделителями-запятыми или в виде массива имен. Дополнительные сведения см. в описаниях методов **load()**, определенных для объектов, в [справочнике по API JavaScript для Excel](http://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview).
+* `loadOption` указывает объект, описывающий параметры выбора, разворачивания, перемещения вверх и пропуска. Дополнительные сведения см. в статье, посвященной [параметрам](http://dev.office.com/reference/add-ins/excel/loadoption) загрузки объектов.
 
 Дополнительные сведения о методе **load()** см. в статье [Расширенные понятия API JavaScript для Excel](excel-add-ins-advanced-concepts.md).
 
@@ -271,4 +271,4 @@ Excel.run(function (context) {
  
 * [Начало работы с надстройками Excel](excel-add-ins-get-started-overview.md)
 * [Примеры кода надстроек Excel](http://dev.office.com/code-samples#?filters=excel,office%20add-ins)
-* [Справочник по API JavaScript для Excel](../../reference/excel/excel-add-ins-reference-overview.md)
+* [Справочник по API JavaScript для Excel](http://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview)

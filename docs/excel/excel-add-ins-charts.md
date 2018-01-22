@@ -1,6 +1,6 @@
 # <a name="work-with-charts-using-the-excel-javascript-api"></a>Работа с диаграммами с использованием API JavaScript для Excel
 
-В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диаграмм с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Chart** и **ChartCollection**, см. в статьях [Объект Chart (API JavaScript для Excel)](../../reference/excel/chart.md) и [Объект ChartCollection (API JavaScript для Excel)](../../reference/excel/chartcollection.md).
+В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диаграмм с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Chart** и **ChartCollection**, см. в статьях [Объект Chart (API JavaScript для Excel)](http://dev.office.com/reference/add-ins/excel/chart) и [Объект ChartCollection (API JavaScript для Excel)](http://dev.office.com/reference/add-ins/excel/chartcollection).
 
 ## <a name="create-a-chart"></a>Создание диаграммы
 
@@ -186,5 +186,5 @@ Excel.run(function (context) {
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - [Основные понятия API JavaScript для Excel](excel-add-ins-core-concepts.md)
-- [Объект Chart (API JavaScript для Excel)](../../reference/excel/chart.md) 
-- [Объект ChartCollection (API JavaScript для Excel)](../../reference/excel/chartcollection.md)
+- [Объект Chart (API JavaScript для Excel)](http://dev.office.com/reference/add-ins/excel/chart) 
+- [Объект ChartCollection (API JavaScript для Excel)](http://dev.office.com/reference/add-ins/excel/chartcollection)

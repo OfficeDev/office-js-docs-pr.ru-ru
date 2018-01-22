@@ -1,6 +1,6 @@
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
-В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для листов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Worksheet** и **WorksheetCollection**, см. в статьях [Объект Worksheet (API JavaScript для Excel)](../../reference/excel/worksheet.md) и [Объект WorksheetCollection (API JavaScript для Excel)](../../reference/excel/worksheetcollection.md).
+В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для листов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Worksheet** и **WorksheetCollection**, см. в статьях [Объект Worksheet (API JavaScript для Excel)](http://dev.office.com/reference/add-ins/excel/worksheet) и [Объект WorksheetCollection (API JavaScript для Excel)](http://dev.office.com/reference/add-ins/excel/worksheetcollection).
 
 **Примечание.** Сведения в этой статье применимы только к обычным листам, а не к листам диаграмм или макросов.
 
@@ -269,5 +269,5 @@ Excel.run(function (context) {
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - [Основные понятия API JavaScript для Excel](excel-add-ins-core-concepts.md)
-- [Объект Worksheet (API JavaScript для Excel)](../../reference/excel/worksheet.md)
-- [Объект WorksheetCollection (API JavaScript для Excel)](../../reference/excel/worksheetcollection.md)
+- [Объект Worksheet (API JavaScript для Excel)](http://dev.office.com/reference/add-ins/excel/worksheet)
+- [Объект WorksheetCollection (API JavaScript для Excel)](http://dev.office.com/reference/add-ins/excel/worksheetcollection)

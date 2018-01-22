@@ -3,14 +3,14 @@
 
 
 
-В этой статье можно узнать об интерфейсе API JavaScript для Office и о том, как его использовать. Справочные сведения см. в разделе [API JavaScript для Office](../../reference/javascript-api-for-office.md). О том, как обновить файлы проекта Visual Studio до последней версии API JavaScript для Office, см. в статье [Обновление версии API JavaScript для Office и файлов схемы манифеста](../../docs/develop/update-your-javascript-api-for-office-and-manifest-schema-version.md).
+В этой статье можно узнать об интерфейсе API JavaScript для Office и о том, как его использовать. Справочные сведения см. в разделе [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office). О том, как обновить файлы проекта Visual Studio до последней версии API JavaScript для Office, см. в статье [Обновление версии API JavaScript для Office и файлов схемы манифеста](../../docs/develop/update-your-javascript-api-for-office-and-manifest-schema-version.md).
 
 >
   **Примечание.** Если вы планируете [публиковать](../publish/publish.md) надстройку в Магазине Office, она должна соответствовать [политикам проверки Магазина Office](https://msdn.microsoft.com/en-us/library/jj220035.aspx), чтобы пройти проверку. Например, работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3) и на [странице с информацией о доступности и ведущих приложениях для надстроек Office](https://dev.office.com/add-in-availability).
 
 ## <a name="referencing-the-javascript-api-for-office-library-in-your-add-in"></a>Ссылки на библиотеку API JavaScript для Office в надстройке
 
-Библиотека [API JavaScript для Office](../../reference/javascript-api-for-office.md) состоит из файла Office.js и связанных JS-файлов ведущего приложения, например Excel-15.js и Outlook-15.js. Простейший способ сослаться на API — использовать нашу сеть доставки содержимого (CDN), добавив следующий код `<script>` в тег `<head>` страницы:  
+Библиотека [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office) состоит из файла Office.js и связанных JS-файлов ведущего приложения, например Excel-15.js и Outlook-15.js. Простейший способ сослаться на API — использовать нашу сеть доставки содержимого (CDN), добавив следующий код `<script>` в тег `<head>` страницы:  
 
 ```html
 <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script>
@@ -59,17 +59,17 @@ Office.initialize = function (reason) {
     }
 }
 ```
-Дополнительные сведения см. в статьях [Событие Office.initialize Event](../../reference/shared/office.initialize.md) и [Перечисление InitializationReason](../../reference/shared/initializationreason-enumeration.md). 
+Дополнительные сведения см. в статьях [Событие Office.initialize Event](../../reference/shared/office.initialize.md) и [Перечисление InitializationReason](http://dev.office.com/reference/add-ins/shared/initializationreason-enumeration). 
 
 ## <a name="context-object"></a>Объект Context
 
  **Область применения:** все типы надстроек
 
-Когда надстройка инициализирована, она содержит множество различных объектов, с которыми она может взаимодействовать в среде выполнения. Контекст среды выполнения надстройки представлен в API объектом [Context](../../reference/shared/office.context.md). Объект **Context** — это основной объект, предоставляющий доступ к наиболее важным объектам API, таким как [Document](../../reference/shared/document.md) и [Mailbox](../../reference/outlook/Office.context.mailbox.md), которые в свою очередь предоставляют доступ к документу и содержимому почтового ящика.
+Когда надстройка инициализирована, она содержит множество различных объектов, с которыми она может взаимодействовать в среде выполнения. Контекст среды выполнения надстройки представлен в API объектом [Context](../../reference/shared/office.context.md). Объект **Context** — это основной объект, предоставляющий доступ к наиболее важным объектам API, таким как [Document](http://dev.office.com/reference/add-ins/shared/document) и [Mailbox](../../reference/outlook/Office.context.mailbox.md), которые в свою очередь предоставляют доступ к документу и содержимому почтового ящика.
 
 Например, в надстройках области задач или контентных надстройках можно использовать свойство [document](../../reference/shared/office.context.document.md) объекта **Context** для получения доступа к свойствам и методам объекта **Document**, чтобы взаимодействовать с содержимым документов Word, электронными таблицами Excel или расписаниями Project. Аналогично этому в надстройках Outlook можно использовать свойство [mailbox](../../reference/outlook/Office.context.mailbox.md) объекта **Context** для получения доступа к свойствам и методам объекта **Mailbox**, чтобы взаимодействовать с контентом сообщений, запросов на собрание или встреч.
 
-Объект **Context** также предоставляет доступ к свойствам [contentLanguage](../../reference/shared/office.context.contentlanguage.md) и [displayLanguage](../../reference/shared/office.context.displaylanguage.md), которые позволяют задать языковые параметры, используемые в документе, элементе или в основном приложении, и к свойству [roamingSettings](../../reference/outlook/Office.context.md), позволяющему получать доступ к элементам объекта [RoamingSettings](../../reference/outlook/RoamingSettings.md). Наконец, объект **Context** предоставляет свойство [ui](../../reference/shared/officeui.md), позволяющее надстройке открывать всплывающие диалоговые окна.
+Объект **Context** также предоставляет доступ к свойствам [contentLanguage](../../reference/shared/office.context.contentlanguage.md) и [displayLanguage](../../reference/shared/office.context.displaylanguage.md), которые позволяют задать языковые параметры, используемые в документе, элементе или в основном приложении, и к свойству [roamingSettings](../../reference/outlook/Office.context.md), позволяющему получать доступ к элементам объекта [RoamingSettings](http://dev.office.com/reference/add-ins/outlook/RoamingSettings). Наконец, объект **Context** предоставляет свойство [ui](http://dev.office.com/reference/add-ins/shared/officeui), позволяющее надстройке открывать всплывающие диалоговые окна.
 
 
 ## <a name="document-object"></a>Объект Document
@@ -77,7 +77,7 @@ Office.initialize = function (reason) {
 
  **Область применения:** надстройки области задач и контентные надстройки
 
-Чтобы взаимодействовать с данными документа в Excel, PowerPoint и Word, интерфейс API предоставляет объект [Document](../../reference/shared/document.md). Члены объекта **Document** можно использовать для получения доступа к данным в следующем виде:
+Чтобы взаимодействовать с данными документа в Excel, PowerPoint и Word, интерфейс API предоставляет объект [Document](http://dev.office.com/reference/add-ins/shared/document). Члены объекта **Document** можно использовать для получения доступа к данным в следующем виде:
 
 
 - Читать и записывать активные выделенные элементы в виде текста, смежных ячеек (матриц) или таблиц.
@@ -127,16 +127,16 @@ Office.initialize = function (reason) {
 |:-----|:-----|:-----|
 |Текст|Предоставляет строковое представление данных в выделенном фрагменте или привязке|В Excel 2013, Project 2013 и PowerPoint 2013 поддерживается только обычный текст. В Word 2013 поддерживаются три текстовых формата: обычный текст, HTML и Office Open XML (OOXML). При выборе текста в ячейке в Excel методы выделения осуществляют чтение и запись всего содержимого ячейки, даже если в ячейке выделена только часть текста. При выделении текста в Word и PowerPoint методы выделения осуществляют чтение и запись только для выполнения выбранных символов. Project 2013 и PowerPoint 2013 поддерживает только доступ к данным на основе выделения.|
 |Матрица|Предоставляет данные в выборе или привязке как двумерный массив **Array**, который в JavaScript реализован как массив массивов. Например, две строки значений **string** в двух столбцах будут выглядеть как ` [['a', 'b'], ['c', 'd']]`, а один столбец, состоящий из трех строк, — как `[['a'], ['b'], ['c']]`.|Доступ к данным на основе матрицы поддерживается только в Excel 2013 и Word 2013.|
-|Таблица|Предоставляет данные в выделенном фрагменте или привязке в виде объекта [TableData](../../reference/shared/tabledata.md). Объект **TableData** предоставляет данные через свойства **headers** и **rows**.|Доступ к данным таблицы поддерживается только в Excel 2013 и Word 2013.|
+|Таблица|Предоставляет данные в выделенном фрагменте или привязке в виде объекта [TableData](http://dev.office.com/reference/add-ins/shared/tabledata). Объект **TableData** предоставляет данные через свойства **headers** и **rows**.|Доступ к данным таблицы поддерживается только в Excel 2013 и Word 2013.|
 
 #### <a name="data-type-coercion"></a>Приведение типов данных
 
-Методы доступа к данным объектам **Document** и [Binding](../../reference/shared/binding.md) поддерживают указание желаемого типа данных, используя параметр _coercionType_ этих методов и соответствующие значения перечисления [CoercionType](../../reference/shared/coerciontype-enumeration.md). Вне зависимости от действительной формы привязки различные приложения Office поддерживают общие типы данных, пытаясь привести данные в запрошенный тип данных. Например, если выделена таблица Word или абзац, разработчик может указать чтение этой таблицы в виде неформатированного текста, HTML, Office Open XML или таблицы, а API производит необходимые преобразования данных.
+Методы доступа к данным объектам **Document** и [Binding](http://dev.office.com/reference/add-ins/shared/binding) поддерживают указание желаемого типа данных, используя параметр _coercionType_ этих методов и соответствующие значения перечисления [CoercionType](http://dev.office.com/reference/add-ins/shared/coerciontype-enumeration). Вне зависимости от действительной формы привязки различные приложения Office поддерживают общие типы данных, пытаясь привести данные в запрошенный тип данных. Например, если выделена таблица Word или абзац, разработчик может указать чтение этой таблицы в виде неформатированного текста, HTML, Office Open XML или таблицы, а API производит необходимые преобразования данных.
 
 
  >**Совет.** **В каких случаях следует использовать для доступа к данным матрицы, а в каких — coercionType?** Если вы хотите, чтобы табличные данные динамически росли при добавлении строк и столбцов, и вам нужно работать с заголовками таблиц, используйте табличный тип данных (для этого укажите параметр _coercionType_ метода для доступа к данным объекта **Document** либо **Binding** в виде `"table"` или **Office.CoercionType.Table**). Добавление строк и столбцов в структуру данных поддерживается как для табличных, так и для матричных данных, но добавление строк и столбцов в конец поддерживается только для табличных данных. Если вы не планируете добавлять строки и столбцы, а для данных не требуются заголовки, следует использовать матричный тип данных (указав параметр _coercionType_ метода доступа к данным в виде `"matrix"` или **Office.CoercionType.Matrix**), что позволяет использовать упрощенный способ взаимодействия с данными.
 
-Если данные невозможно привести к заданному типу, то свойство [AsyncResult.status](../../reference/shared/asyncresult.error.md) в функции обратного вызова возвращает значение `"failed"`, и можно использовать свойство [AsyncResult.error](../../reference/shared/asyncresult.context.md), чтобы получить доступ к объекту [Error](../../reference/shared/error.md) со сведениями о причине ошибки во время вызова метода.
+Если данные невозможно привести к заданному типу, то свойство [AsyncResult.status](../../reference/shared/asyncresult.error.md) в функции обратного вызова возвращает значение `"failed"`, и можно использовать свойство [AsyncResult.error](../../reference/shared/asyncresult.context.md), чтобы получить доступ к объекту [Error](http://dev.office.com/reference/add-ins/shared/error) со сведениями о причине ошибки во время вызова метода.
 
 
 ## <a name="working-with-selections-using-the-document-object"></a>Работа с выделенными фрагментами с помощью объекта Document
@@ -171,7 +171,7 @@ Office.initialize = function (reason) {
 |:-----|:-----|:-----|
 |Привязка текста|Выполняет привязку к области документа, которая может быть представлена как текст.|В Word поддерживается большинство связанных выделений, тогда как в Excel для привязки текста можно использовать только выделения отдельных ячеек. Excel поддерживает только обычный текст, а Word — три формата: обычный текст, HTML и Open XML для Office.|
 |Привязка матрицы|Выполняет привязку к фиксированной области документа, содержащей табличные данные без заголовков. Данные в привязке матрицы записываются или считываются как двумерный  **Array**, который в JavaScript реализован как массив массивов. Например, две строки значений **string** в двух столбцах можно записать или прочитать как ` [['a', 'b'], ['c', 'd']]`, а один столбец, состоящий из трех строк, — как `[['a'], ['b'], ['c']]`.|В Excel для установки матричной привязки может использоваться любое связанное выделение ячеек. В Word матричная привязка поддерживается только таблицами.|
-|Привязка таблицы|Выполняет привязку к области документа, содержащей таблицу с заголовками. Данные в привязке таблицы записываются или считываются как объект [TableData](../../reference/shared/tabledata.md). Объект **TableData** предоставляет данные с помощью свойств **headers** и **rows**.|Любая таблица Excel или Word может быть основой для табличной привязки. После создания табличной привязки каждая новая строка или столбец, добавляемые пользователем в таблицу, автоматически включаются в привязку. |
+|Привязка таблицы|Выполняет привязку к области документа, содержащей таблицу с заголовками. Данные в привязке таблицы записываются или считываются как объект [TableData](http://dev.office.com/reference/add-ins/shared/tabledata). Объект **TableData** предоставляет данные с помощью свойств **headers** и **rows**.|Любая таблица Excel или Word может быть основой для табличной привязки. После создания табличной привязки каждая новая строка или столбец, добавляемые пользователем в таблицу, автоматически включаются в привязку. |
 После создания привязки с помощью одного из трех методов add объекта **Bindings** можно работать с данными и свойствами привязки с помощью методов соответствующего объекта: [MatrixBinding](../../reference/shared/binding.matrixbinding.md), [TableBinding](../../reference/shared/binding.tablebinding.md) или [TextBinding](../../reference/shared/binding.textbinding.md). Все три эти объекта наследуют методы [getDataAsync](../../reference/shared/binding.getdataasync.md) и [setDataAsync](../../reference/shared/binding.setdataasync.md) объекта **Binding**, позволяющие взаимодействовать с привязанными данными.
 
 Примеры кода, демонстрирующие выполнение задач с привязками, см. в статье [Привязка к областям в документе или электронной таблице](../../docs/develop/bind-to-regions-in-a-document-or-spreadsheet.md).
@@ -190,7 +190,7 @@ Office.initialize = function (reason) {
 
  **Область применения:** надстройки области задач Word и PowerPoint
 
-Метод [Document.getFileAsync](../../reference/shared/document.getfileasync.md) и члены объектов [File](../../reference/shared/file.md) и [Slice](../../reference/shared/slice.md) предоставляют функциональность получения целого файла документа Word и PowerPoint в виде порций (блоков) до 4 МБ единовременно. Дополнительные сведения см. в разделе [Получение всего содержимого файла из документа в надстройке](../../docs/develop/get-the-whole-document-from-an-add-in-for-powerpoint-or-word.md).
+Метод [Document.getFileAsync](../../reference/shared/document.getfileasync.md) и члены объектов [File](http://dev.office.com/reference/add-ins/shared/file) и [Slice](http://dev.office.com/reference/add-ins/shared/slice) предоставляют функциональность получения целого файла документа Word и PowerPoint в виде порций (блоков) до 4 МБ единовременно. Дополнительные сведения см. в разделе [Получение всего содержимого файла из документа в надстройке](../../docs/develop/get-the-whole-document-from-an-add-in-for-powerpoint-or-word.md).
 
 
 ## <a name="mailbox-object"></a>Объект Mailbox

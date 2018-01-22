@@ -25,7 +25,7 @@
     
 4. Элемент управления браузера загружает модель DOM и основной текст HTML, а также вызывает обработчик для события  **window.onload**.
     
-5. Ведущее приложение Office загружает среду выполнения, которая загружает и кэширует API JavaScript для файлов библиотеки JavaScript с сервера сети доставки содержимого, а затем вызывает обработчик события [инициализации](../../reference/shared/office.initialize.md) объекта [Office](../../reference/shared/office.md).
+5. Ведущее приложение Office загружает среду выполнения, которая загружает и кэширует API JavaScript для файлов библиотеки JavaScript с сервера сети доставки содержимого, а затем вызывает обработчик события [инициализации](../../reference/shared/office.initialize.md) объекта [Office](http://dev.office.com/reference/add-ins/shared/office).
     
 6. После завершения загрузки DOM и основного текста HTML и инициализации надстройки запускается основная функция надстройки.
     
@@ -52,7 +52,7 @@
     
 5. Элемент управления браузером загружает DOM и основной текст HTML и вызывает обработчик события  **onload**.
     
-6. Outlook вызывает обработчик события [initialize](../../reference/shared/office.initialize.md) объекта [Office](../../reference/shared/office.md) надстройки.
+6. Outlook вызывает обработчик события [initialize](../../reference/shared/office.initialize.md) объекта [Office](http://dev.office.com/reference/add-ins/shared/office) надстройки.
     
 7. После завершения загрузки DOM и основного текста HTML и инициализации надстройки запускается основная функция надстройки.
     

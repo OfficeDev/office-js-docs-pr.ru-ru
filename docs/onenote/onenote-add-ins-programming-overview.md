@@ -72,7 +72,7 @@
     }
 ```
 
-Сведения о поддерживаемых объектах и операциях OneNote см. в [справочнике по API](../../reference/onenote/onenote-add-ins-javascript-reference.md).
+Сведения о поддерживаемых объектах и операциях OneNote см. в [справочнике по API](http://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference).
 
 ### <a name="accessing-the-common-api-through-the-document-object"></a>Получение доступа к стандартному API с помощью объекта *Document*
 
@@ -117,6 +117,6 @@ function getSelectionFromPage() {
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - [Создание первой надстройки OneNote](onenote-add-ins-getting-started.md)
-- [Справочник по API JavaScript для OneNote](../../reference/onenote/onenote-add-ins-javascript-reference.md)
+- [Справочник по API JavaScript для OneNote](http://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
 - [Обзор платформы надстроек Office](https://dev.office.com/docs/add-ins/overview/office-add-ins)

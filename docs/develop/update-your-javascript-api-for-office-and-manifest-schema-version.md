@@ -65,7 +65,7 @@
 </OfficeApp>
 ```
 
-> **Примечание.** После обновления схемы манифеста надстройки до версии 1.1 вам потребуется удалить элементы **Capabilities** и **Capability** и заменить их либо элементами [Hosts](../../reference/manifest/hosts.md) и [Host](../../reference/manifest/hosts.md), либо [элементами Requirements и Requirement](../../docs/overview/specify-office-hosts-and-api-requirements.md).
+> **Примечание.** После обновления схемы манифеста надстройки до версии 1.1 вам потребуется удалить элементы **Capabilities** и **Capability** и заменить их либо элементами [Hosts](http://dev.office.com/reference/add-ins/manifest/hosts) и [Host](http://dev.office.com/reference/add-ins/manifest/hosts), либо [элементами Requirements и Requirement](../../docs/overview/specify-office-hosts-and-api-requirements.md).
 
 ## <a name="updating-an-office-add-in-project-created-with-a-text-editor-or-other-ide"></a>Обновление проекта надстройки Office, созданного с помощью текстового редактора или другого набора IDE
 
@@ -105,7 +105,7 @@
 </OfficeApp>
 ```
 
-> **Примечание.** После обновления схемы манифеста надстройки до версии 1.1 вам потребуется удалить элементы **Capabilities** и **Capability** и заменить их либо элементами [Hosts](../../reference/manifest/hosts.md) и [Host](../../reference/manifest/hosts.md), либо [элементами Requirements и Requirement](../../docs/overview/specify-office-hosts-and-api-requirements.md).
+> **Примечание.** После обновления схемы манифеста надстройки до версии 1.1 вам потребуется удалить элементы **Capabilities** и **Capability** и заменить их либо элементами [Hosts](http://dev.office.com/reference/add-ins/manifest/hosts) и [Host](http://dev.office.com/reference/add-ins/manifest/hosts), либо [элементами Requirements и Requirement](../../docs/overview/specify-office-hosts-and-api-requirements.md).
     
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
@@ -114,7 +114,7 @@
     
 - [Общие сведения об интерфейсе API JavaScript для Office](../../docs/develop/understanding-the-javascript-api-for-office.md)
     
-- [API JavaScript для Office](../../reference/javascript-api-for-office.md)
+- [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office)
     
 - [Справка по схеме для манифестов надстроек Office (версия 1.1)](../overview/add-in-manifests.md)
     

@@ -136,4 +136,4 @@
 
 - [Общие сведения об API JavaScript для надстроек](../develop/understanding-the-javascript-api-for-office.md)
 
-- [API JavaScript для Office](../../reference/javascript-api-for-office.md)
+- [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office)

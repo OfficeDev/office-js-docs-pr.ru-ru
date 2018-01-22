@@ -145,6 +145,6 @@ function addOutlineToPage() {
 ## Дополнительные ресурсы
 
 - [Обзор создания кода с помощью API JavaScript для OneNote](onenote-add-ins-programming-overview.md)
-- [Справочник по API JavaScript для OneNote](../../reference/onenote/onenote-add-ins-javascript-reference.md)
+- [Справочник по API JavaScript для OneNote](http://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
 - [Обзор платформы надстроек Office](https://dev.office.com/docs/add-ins/overview/office-add-ins)

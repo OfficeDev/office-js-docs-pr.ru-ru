@@ -168,4 +168,4 @@ create-react-app my-addin
 
 * [Основные понятия API JavaScript для Excel](excel-add-ins-core-concepts.md)
 * [Примеры кода надстроек Excel](http://dev.office.com/code-samples#?filters=excel,office%20add-ins)
-* [Справочник по API JavaScript для Excel](../../reference/excel/excel-add-ins-reference-overview.md)
+* [Справочник по API JavaScript для Excel](http://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview)

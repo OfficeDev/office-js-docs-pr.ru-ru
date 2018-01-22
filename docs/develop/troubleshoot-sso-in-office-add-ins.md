@@ -20,7 +20,7 @@
 Надстройка или версия Office не поддерживает API [getAccessTokenAsync](../../reference/shared/office.context.auth.getAccessTokenAsync.md). 
 
 - Эта версия Office не поддерживает единый вход. Необходимо использовать Office 2016 версии 1710 (сборка 8629.nnnn) или более поздняя (эту версию подписки на Office 365 иногда называют "нажми и работай"). Чтобы скачать эту версию, вам может потребоваться принять участие в программе предварительной оценки Office. Дополнительные сведения см. на странице [Примите участие в программе предварительной оценки Office](https://products.office.com/en-us/office-insider?tab=tab-1). 
-- В манифесте надстройки отсутствует подходящий раздел [WebApplicationInfo](../../reference/manifest/webapplicationinfo.md).
+- В манифесте надстройки отсутствует подходящий раздел [WebApplicationInfo](http://dev.office.com/reference/add-ins/manifest/webapplicationinfo).
 
 ### <a name="13001"></a>13001
 
@@ -78,7 +78,7 @@
 ### <a name="invalid-or-missing-scope-permission-errors"></a>Ошибки, вызванные недействительными или отсутствующими областями (разрешениями)
 
 - Код на стороне сервера должен отправить отклик `403 Forbidden` клиенту, который должен показать пользователю понятное сообщение. Если это возможно, запишите ошибку в консоли или журнале.
-- Убедитесь, что в разделе [Scopes](../../reference/manifest/scopes.md) манифеста надстройки указаны все необходимые разрешения. Кроме того, убедитесь, что в регистрационных данных веб-службы надстройки указаны те же разрешения. Кроме того, проверьте наличие ошибок правописания. Дополнительные сведения см. в статьях [Регистрация надстройки в конечной точке Azure AD версии 2.0](../../docs/develop/create-sso-office-add-ins-aspnet.md#register-the-add-in-with-azure-ad-v2-0-endpoint) (ASP.NET) или [Регистрация надстройки в конечной точке Azure AD версии 2.0](../../docs/develop/create-sso-office-add-ins-nodejs.md#register-the-add-in-with-azure-ad-v2-0-endpoint) (Node JS) и [Конфигурация надстройки](../../docs/develop/create-sso-office-add-ins-aspnet.md#configure-the-add-in) (ASP.NET) или [Конфигурация надстройки](../../docs/develop/create-sso-office-add-ins-nodejs.md#configure-the-add-in) (Node JS).
+- Убедитесь, что в разделе [Scopes](http://dev.office.com/reference/add-ins/manifest/scopes) манифеста надстройки указаны все необходимые разрешения. Кроме того, убедитесь, что в регистрационных данных веб-службы надстройки указаны те же разрешения. Кроме того, проверьте наличие ошибок правописания. Дополнительные сведения см. в статьях [Регистрация надстройки в конечной точке Azure AD версии 2.0](../../docs/develop/create-sso-office-add-ins-aspnet.md#register-the-add-in-with-azure-ad-v2-0-endpoint) (ASP.NET) или [Регистрация надстройки в конечной точке Azure AD версии 2.0](../../docs/develop/create-sso-office-add-ins-nodejs.md#register-the-add-in-with-azure-ad-v2-0-endpoint) (Node JS) и [Конфигурация надстройки](../../docs/develop/create-sso-office-add-ins-aspnet.md#configure-the-add-in) (ASP.NET) или [Конфигурация надстройки](../../docs/develop/create-sso-office-add-ins-nodejs.md#configure-the-add-in) (Node JS).
 
 ### <a name="expired-or-invalid-token-errors-when-calling-microsoft-graph"></a>Ошибки, вызванные просроченным или недействительным токеном при вызове Microsoft Graph
 

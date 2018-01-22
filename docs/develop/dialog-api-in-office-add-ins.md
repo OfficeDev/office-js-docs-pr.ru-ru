@@ -1,10 +1,10 @@
 # <a name="use-the-dialog-api-in-your-office-add-ins"></a>Использование Dialog API в надстройках Office
 
-Вы можете использовать [Dialog API](../../reference/shared/officeui.md), чтобы открывать диалоговые окна в надстройке Office. Эта статья содержит рекомендации по использованию Dialog API в надстройке Office.
+Вы можете использовать [Dialog API](http://dev.office.com/reference/add-ins/shared/officeui), чтобы открывать диалоговые окна в надстройке Office. Эта статья содержит рекомендации по использованию Dialog API в надстройке Office.
 
 > **Примечания.**
 
-> Сведения о поддержке Dialog API см. в статье [Наборы обязательных элементов Dialog API](../../reference/requirement-sets/dialog-api-requirement-sets.md). В настоящее время Dialog API поддерживается для Word, Excel, PowerPoint и Outlook.
+> Сведения о поддержке Dialog API см. в статье [Наборы обязательных элементов Dialog API](http://dev.office.com/reference/add-ins/requirement-sets/dialog-api-requirement-sets). В настоящее время Dialog API поддерживается для Word, Excel, PowerPoint и Outlook.
 
 > Основной сценарий использования Dialog API — обеспечение проверки подлинности с помощью таких ресурсов, как Google или Facebook. Если вашей надстройке требуются данные о пользователе Office или ресурсах, доступных ему посредством Microsoft Graph (например, Office 365 или OneDrive), рекомендуем по возможности использовать API единого входа. Если вы используете API для единого входа, Dialog API не требуется. Дополнительные сведения см. в статье [Включение единого входа для надстроек Office](http://dev.office.com/docs/add-ins/develop/sso-in-office-add-ins).
 
@@ -24,7 +24,7 @@
 
 ## <a name="dialog-api-scenarios"></a>Сценарии с Dialog API
 
-Интерфейсы API JavaScript для Office поддерживают указанные ниже сценарии с объектом [Dialog](../../reference/shared/officeui.dialog.md) и две функции в [пространстве имен Office.context.ui](../../reference/shared/officeui.md).
+Интерфейсы API JavaScript для Office поддерживают указанные ниже сценарии с объектом [Dialog](../../reference/shared/officeui.dialog.md) и две функции в [пространстве имен Office.context.ui](http://dev.office.com/reference/add-ins/shared/officeui).
 
 ### <a name="open-a-dialog-box"></a>Открытие диалогового окна
 

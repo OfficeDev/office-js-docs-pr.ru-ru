@@ -198,4 +198,4 @@ _Область применения: Word 2016, Word для iPad, Word для M
 * [Обзор надстроек Word](word-add-ins-programming-overview.md)
 * [Изучение фрагментов кода с помощью Script Lab](https://store.office.com/en-001/app.aspx?assetid=WA104380862&ui=en-US&rs=en-001&ad=US&appredirect=false)
 * [Примеры кода надстроек Word](http://dev.office.com/code-samples#?filters=word,office%20add-ins)
-* [Справочник по API JavaScript для Word](../../reference/word/word-add-ins-reference-overview.md)
+* [Справочник по API JavaScript для Word](http://dev.office.com/reference/add-ins/word/word-add-ins-reference-overview)

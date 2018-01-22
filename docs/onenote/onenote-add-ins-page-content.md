@@ -16,9 +16,9 @@
 
 Затем используйте методы в указанных ниже объектах для работы с содержимым страницы, например Page.addOutline и Outline.appendHtml. 
 
-- [Page](../../reference/onenote/page.md)
-- [Outline](../../reference/onenote/outline.md)
-- [Paragraph](../../reference/onenote/paragraph.md)
+- [Page](http://dev.office.com/reference/add-ins/onenote/page)
+- [Outline](http://dev.office.com/reference/add-ins/onenote/outline)
+- [Paragraph](http://dev.office.com/reference/add-ins/onenote/paragraph)
 
 Для представления содержимого и структуры страницы OneNote используется HTML. Для создания или обновления содержимого страницы поддерживается только подмножество HTML, как описано ниже.
 
@@ -44,6 +44,6 @@
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - [Обзор создания кода с помощью API JavaScript для OneNote](onenote-add-ins-programming-overview.md)
-- [Справочник по API JavaScript для OneNote](../../reference/onenote/onenote-add-ins-javascript-reference.md)
+- [Справочник по API JavaScript для OneNote](http://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
 - [Обзор платформы надстроек Office](https://dev.office.com/docs/add-ins/overview/office-add-ins)

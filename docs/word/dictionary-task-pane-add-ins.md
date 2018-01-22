@@ -544,13 +544,13 @@ a:hover, a:active
 Ниже приведены основные элементы интерфейса JavaScript API для Office (Office.js), которые вызываются из этой реализации.
 
 
-- Событие [initialize](../../reference/shared/office.initialize.md) объекта **Office**, возникающее при инициализации контекста надстройки и предоставляющее доступ к объекту [Document](../../reference/shared/document.md), представляющему собой документ, с которым взаимодействует надстройка.
+- Событие [initialize](../../reference/shared/office.initialize.md) объекта **Office**, возникающее при инициализации контекста надстройки и предоставляющее доступ к объекту [Document](http://dev.office.com/reference/add-ins/shared/document), представляющему собой документ, с которым взаимодействует надстройка.
     
 - Метод [addHandlerAsync](../../reference/shared/document.addhandlerasync.md) объекта **Document**, который вызывается в функции **initialize** для добавления обработчика события [SelectionChanged](../../reference/shared/document.selectionchanged.event.md) документа с целью прослушивания изменений, внесенных в выделенный пользователем фрагмент.
     
 - Метод [getSelectedDataAsync](../../reference/shared/document.getselecteddataasync.md) объекта **Document**, который вызывается в функции `tryUpdatingSelectedWord()` при включении обработчика событий **SelectionChanged** для получения слова или фразы по выбору пользователя, приведения их в обычный текст и выполнения асинхронной функции обратного вызова `selectedTextCallback`.
     
-- При выполнении асинхронной функции обратного вызова `selectTextCallback`, которая передается как аргумент _callback_ метода **getSelectedDataAsync**, возвращается значение выделенного текста. Эта функция считывает значение из аргумента _selectedText_ (имеющего тип [AsyncResult](../../reference/shared/asyncresult.md)) с помощью свойства [value](../../reference/shared/asyncresult.status.md) возвращенного объекта **AsyncResult**.
+- При выполнении асинхронной функции обратного вызова `selectTextCallback`, которая передается как аргумент _callback_ метода **getSelectedDataAsync**, возвращается значение выделенного текста. Эта функция считывает значение из аргумента _selectedText_ (имеющего тип [AsyncResult](http://dev.office.com/reference/add-ins/shared/asyncresult)) с помощью свойства [value](../../reference/shared/asyncresult.status.md) возвращенного объекта **AsyncResult**.
     
 - Остальной код функции `selectedTextCallback` отправляет XML-веб-службе запрос на определения. Кроме того, он вызывает API-интерфейсы Microsoft Translator для получения URL-адреса WAV-файла с произношением выделенного слова.
     

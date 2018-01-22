@@ -26,8 +26,8 @@
 
 Сведения о минимальных сборках продуктов для каждой платформы см. в следующих статьях:
 
-- [Наборы обязательных элементов API JavaScript для Word](../../reference/requirement-sets/word-api-requirement-sets.md);
-- [Наборы обязательных элементов API JavaScript для Excel](../../reference/requirement-sets/excel-api-requirement-sets.md);
-- [Наборы обязательных элементов API JavaScript для OneNote](../../reference/requirement-sets/onenote-api-requirement-sets.md);
-- [Наборы обязательных элементов Dialog API](../../reference/requirement-sets/dialog-api-requirement-sets.md);
-- [Стандартные наборы обязательных элементов API для Office](../../reference/requirement-sets/office-add-in-requirement-sets.md).
+- [Наборы обязательных элементов API JavaScript для Word](http://dev.office.com/reference/add-ins/requirement-sets/word-api-requirement-sets);
+- [Наборы обязательных элементов API JavaScript для Excel](http://dev.office.com/reference/add-ins/requirement-sets/excel-api-requirement-sets);
+- [Наборы обязательных элементов API JavaScript для OneNote](http://dev.office.com/reference/add-ins/requirement-sets/onenote-api-requirement-sets);
+- [Наборы обязательных элементов Dialog API](http://dev.office.com/reference/add-ins/requirement-sets/dialog-api-requirement-sets);
+- [Стандартные наборы обязательных элементов API для Office](http://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets).
