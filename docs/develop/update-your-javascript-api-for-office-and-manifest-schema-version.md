@@ -4,7 +4,7 @@
 
 ## <a name="using-the-most-up-to-date-project-files"></a>Использование файлов проекта последней версии
 
-Если для разработки надстройки вы используете Visual Studio, то чтобы можно было применять [самые новые элементы API](../../reference/what's-changed-in-the-javascript-api-for-office.md) в API JavaScript для Office и [возможности манифеста надстройки версии 1.1](../../docs/overview/add-in-manifests.md) (который проверяется на соответствие offappmanifest-1.1.xsd), вам потребуется скачать и установить [Visual Studio 2015 и последнюю версию Office Developer Tools](https://www.visualstudio.com/features/office-tools-vs).
+Если для разработки надстройки вы используете Visual Studio, то чтобы можно было применять [самые новые элементы API](https://dev.office.com/reference/add-ins/what's-changed-in-the-javascript-api-for-office) в API JavaScript для Office и [возможности манифеста надстройки версии 1.1](../../docs/overview/add-in-manifests.md) (который проверяется на соответствие offappmanifest-1.1.xsd), вам потребуется скачать и установить [Visual Studio 2015 и последнюю версию Office Developer Tools](https://www.visualstudio.com/features/office-tools-vs).
 
 Если вы используете текстовый редактор или другую интегрированную среду разработки, отличную от Visual Studio, чтобы разработать надстройка, обновите ссылки на CDN для файла Office.js и версию схемы, на которую ссылается манифест приложения для Office.
 

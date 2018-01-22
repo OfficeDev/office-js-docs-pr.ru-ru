@@ -419,7 +419,7 @@ API JavaScript для Office предоставляет два свойства,
 [DisplayName]:           http://dev.office.com/reference/add-ins/manifest/displayname
 [IconUrl]:               http://dev.office.com/reference/add-ins/manifest/iconurl
 [HighResolutionIconUrl]: http://dev.office.com/reference/add-ins/manifest/highresolutioniconurl
-[Resources]:             ../../reference/manifest/resources
+[Resources]:             https://dev.office.com/reference/add-ins/manifest/resources
 [SourceLocation]:        http://dev.office.com/reference/add-ins/manifest/sourcelocation
 [Переопределение]:              http://dev.office.com/reference/add-ins/manifest/override
 [DesktopSettings]:       http://dev.office.com/reference/add-ins/manifest/desktopsettings
