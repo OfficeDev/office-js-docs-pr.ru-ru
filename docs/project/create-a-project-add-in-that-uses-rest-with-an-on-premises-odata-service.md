@@ -263,7 +263,7 @@
           </tr>
         </table>
       </div>
-      <img alt="Corporation" class="logo" src="../../images/NewLogo.png" />
+      <img alt="Corporation" class="logo" src="../images/NewLogo.png" />
       <br />
       <textarea id="odataText" rows="12" cols="40"></textarea>
     </body>
@@ -750,7 +750,7 @@
           </tr>
         </table>
       </div>
-      <img alt="Corporation" class="logo" src="../../images/NewLogo.png" />
+      <img alt="Corporation" class="logo" src="../images/NewLogo.png" />
       <br />
       <textarea id="odataText" rows="12" cols="40"></textarea>
     </body>

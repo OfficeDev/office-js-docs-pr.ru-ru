@@ -11,8 +11,8 @@
 
 Чтобы создать пустую страницу OneNote, воспользуйтесь одним из указанных ниже методов.
 
-- [Section.addPage](../../reference/onenote/section.md#addpagetitle-string)
-- [Page.insertPageAsSibling](../../reference/onenote/page.md#insertpageassiblinglocation-string-title-string)
+- [Section.addPage](http://dev.office.com/reference/add-ins/onenote/section#addpagetitle-string)
+- [Page.insertPageAsSibling](http://dev.office.com/reference/add-ins/onenote/page#insertpageassiblinglocation-string-title-string)
 
 Затем используйте методы в указанных ниже объектах для работы с содержимым страницы, например Page.addOutline и Outline.appendHtml. 
 
