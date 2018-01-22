@@ -16,7 +16,7 @@
 
 На следующем изображении показан рекомендуемый макет для [контекстной почтовой надстройки](https://msdn.microsoft.com/EN-US/library/office/dn893542.aspx).
 
-![Макет для контекстной почтовой надстройки](../../../images/mail-add-in-contextual-card.png)
+![Макет для контекстной почтовой надстройки](../../images/mail-add-in-contextual-card.png)
 
 ##<a name="functions-with-infobar-notifications"></a>Функции с уведомлениями информационной панели
 
