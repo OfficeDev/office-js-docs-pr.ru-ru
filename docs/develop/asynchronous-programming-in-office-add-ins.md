@@ -63,7 +63,7 @@ function write(message){
 
 Вы также можете использовать параметр функции обратного вызова для получения доступа к другим свойствам объекта **AsyncResult**. Используйте свойство [AsyncResult.status](http://dev.office.com/reference/add-ins/shared/asyncresult.error), чтобы определить, успешно ли был выполнен вызов. Если не удалось выполнить вызов, можно использовать свойство [AsyncResult.error](http://dev.office.com/reference/add-ins/shared/asyncresult.context), чтобы получить доступ к объекту [Error](http://dev.office.com/reference/add-ins/shared/error) и получить сведения об ошибке.
 
-Дополнительные сведения об использовании метода **getSelectedDataAsync** см. в статье "Считывание и запись данных в активное выделение документа или таблицы" ([Считывание и запись данных в активное выделение документа или таблицы](../../docs/develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md)). 
+Дополнительные сведения об использовании метода **getSelectedDataAsync** см. в статье "Считывание и запись данных в активное выделение документа или таблицы" ([Считывание и запись данных в активное выделение документа или таблицы](../develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md)). 
 
 
 ### <a name="writing-a-named-callback-function"></a>Написание именованной функции обратного вызова
@@ -111,7 +111,7 @@ API JavaScript для Office поддерживает два вида шабло
     
 При асинхронном программировании с использованием функций обратного вызова зачастую требуется вкладывать возвращаемый результат одного обратного вызова в один или несколько других обратных вызовов. В этом случае вы можете использовать вложенные обратные вызовы асинхронных методов API.
 
-Использование вложенных обратных вызовов — это шаблон программирования, знакомый большинству разработчиков на языке JavaScript, но код с глубоко вложенными обратными вызовами может быть труден для чтения и понимания. В качестве альтернативы вложенным обратным вызовам API JavaScript для Office также поддерживает реализацию шаблона promise. Однако в текущей версии API JavaScript для Office шаблон promise работает только с кодом для привязок [в электронных таблицах Excel и документах Word](../../docs/develop/bind-to-regions-in-a-document-or-spreadsheet.md).
+Использование вложенных обратных вызовов — это шаблон программирования, знакомый большинству разработчиков на языке JavaScript, но код с глубоко вложенными обратными вызовами может быть труден для чтения и понимания. В качестве альтернативы вложенным обратным вызовам API JavaScript для Office также поддерживает реализацию шаблона promise. Однако в текущей версии API JavaScript для Office шаблон promise работает только с кодом для привязок [в электронных таблицах Excel и документах Word](../develop/bind-to-regions-in-a-document-or-spreadsheet.md).
 
 <a name="AsyncProgramming_NestedCallbacks" />
 ### <a name="asynchronous-programming-using-nested-callback-functions"></a>Асинхронное программирование с использованием вложенных функций обратного вызова
@@ -230,7 +230,7 @@ function write(message){
 }
 ```
 
-Замените заполнитель _BindingObjectAsyncMethod_ вызовом методов любого из четырех объектов **Binding**, поддерживаемых объектом promise: **getDataAsync**, **setDataAsync**, **addHandlerAsync** или **removeHandlerAsync**. Вызовы этих методов не поддерживают дополнительные шаблоны promise. Их нужно вызывать с помощью [шаблона функции вложенного обратного вызова](../../docs/develop/asynchronous-programming-in-office-add-ins.md#AsyncProgramming_NestedCallbacks).
+Замените заполнитель _BindingObjectAsyncMethod_ вызовом методов любого из четырех объектов **Binding**, поддерживаемых объектом promise: **getDataAsync**, **setDataAsync**, **addHandlerAsync** или **removeHandlerAsync**. Вызовы этих методов не поддерживают дополнительные шаблоны promise. Их нужно вызывать с помощью [шаблона функции вложенного обратного вызова](../develop/asynchronous-programming-in-office-add-ins.md#AsyncProgramming_NestedCallbacks).
 
 После выполнения promise объекта **Binding** его можно повторно использовать в вызове последующего метода, как если бы он был привязкой (среда выполнения надстройки не будет повторно пытаться асинхронно выполнить promise). Если promise объекта **Binding** невозможно выполнить, среда выполнения надстройки снова попытается получить доступ к объекту привязки в следующий раз, когда будет вызван один из ее асинхронных методов.
 
@@ -386,7 +386,7 @@ function write(message){
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 
-- [Общие сведения об интерфейсе API JavaScript для Office](../../docs/develop/understanding-the-javascript-api-for-office.md)
+- [Общие сведения об интерфейсе API JavaScript для Office](../develop/understanding-the-javascript-api-for-office.md)
     
 - [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office)
      

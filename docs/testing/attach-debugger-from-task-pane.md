@@ -24,6 +24,6 @@
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-- [Создание и отладка надстроек Office в Visual Studio](../../docs/get-started/create-and-debug-office-add-ins-in-visual-studio.md)
-- [Создание надстройки Office с помощью любого редактора](../../docs/get-started/create-an-office-add-in-using-any-editor.md)
+- [Создание и отладка надстроек Office в Visual Studio](../get-started/create-and-debug-office-add-ins-in-visual-studio.md)
+- [Создание надстройки Office с помощью любого редактора](../get-started/create-an-office-add-in-using-any-editor.md)
 - [Публикация надстройки Office](../publish/publish.md)

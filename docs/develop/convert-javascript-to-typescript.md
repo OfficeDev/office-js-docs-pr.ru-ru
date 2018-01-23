@@ -3,7 +3,7 @@
 
 Вы можете использовать шаблон надстройки Office на JavaScript в Visual Studio, чтобы создать надстройку на TypeScript. После создания надстройки в Visual Studio вы можете преобразовать проект в TypeScript.  Таким образом, вам не нужно начинать проект надстройки Office на TypeScript с нуля.  
 
-   > **Примечание.** Чтобы узнать, как создать проект надстройки Office на TypeScript без Visual Studio, просмотрите статью [Создание надстройки Office с помощью любого редактора](../../docs/get-started/create-an-office-add-in-using-any-editor.md).
+   > **Примечание.** Чтобы узнать, как создать проект надстройки Office на TypeScript без Visual Studio, просмотрите статью [Создание надстройки Office с помощью любого редактора](../get-started/create-an-office-add-in-using-any-editor.md).
 
 В проекте TypeScript могут быть как файлы TypeScript, так и файлы JavaScript, это не повлияет на компиляцию. Потому что TypeScript — это типизированная расширенная версия языка JavaScript. Код TypeScript компилируется в JavaScript. 
 

@@ -14,7 +14,7 @@
 
 При отображении сведений эти примеры зависят от функции `app.showNotification`, включенной в шаблоны проектов надстроек Office в Visual Studio. Если для разработки надстройки вы не используете Visual Studio, замените функцию `showNotification` собственным кодом. Некоторые из этих примеров также зависят от объекта `globals`, объявленного за пределами указанных функций: `var globals = {activeViewHandler:0, firstSlideId:0};`
 
-Эти примеры кода требуют, чтобы проект [ссылался на библиотеку Office.js 1.1 или более поздней версии](../../docs/develop/referencing-the-javascript-api-for-office-library-from-its-cdn.md).
+Эти примеры кода требуют, чтобы проект [ссылался на библиотеку Office.js 1.1 или более поздней версии](../develop/referencing-the-javascript-api-for-office-library-from-its-cdn.md).
 
 
 ## <a name="detect-the-presentations-active-view-and-handle-the-activeviewchanged-event"></a>Определение активного представления презентации и обработка события ActiveViewChanged
@@ -166,11 +166,11 @@ function getFileUrl() {
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 - [Примеры кода PowerPoint](https://dev.office.com/code-samples#?filters=powerpoint)
 
-- [Сохранение состояния надстройки и параметров документа для контентных надстроек и надстроек области задач](../../docs/develop/persisting-add-in-state-and-settings.md#how-to-save-add-in-state-and-settings-per-document-for-content-and-task-pane-add-ins)
+- [Сохранение состояния надстройки и параметров документа для контентных надстроек и надстроек области задач](../develop/persisting-add-in-state-and-settings.md#how-to-save-add-in-state-and-settings-per-document-for-content-and-task-pane-add-ins)
 
-- [Считывание и запись данных в активное выделение документа или таблицы](../../docs/develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md)
+- [Считывание и запись данных в активное выделение документа или таблицы](../develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md)
     
-- [Получение всего документа из надстройки для PowerPoint или Word](../../docs/develop/get-the-whole-document-from-an-add-in-for-powerpoint-or-word.md)
+- [Получение всего документа из надстройки для PowerPoint или Word](../develop/get-the-whole-document-from-an-add-in-for-powerpoint-or-word.md)
     
 - [Использование тем документов в надстройках PowerPoint](../powerpoint/use-document-themes-in-your-powerpoint-add-ins.md)
     

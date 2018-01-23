@@ -43,8 +43,8 @@
 
 В этом разделе описаны задачи, необходимые для создания надстройки Office с единым входом. Эти задачи описываются независимо от языка и платформы. Подробные пошаговые инструкции см. в следующих статьях:
 
-* [Создание надстройки Office на платформе Node.js с использованием единого входа](../../docs/develop/create-sso-office-add-ins-nodejs.md)
-* [Создание надстройки Office на платформе ASP.NET с использованием единого входа](../../docs/develop/create-sso-office-add-ins-aspnet.md)
+* [Создание надстройки Office на платформе Node.js с использованием единого входа](../develop/create-sso-office-add-ins-nodejs.md)
+* [Создание надстройки Office на платформе ASP.NET с использованием единого входа](../develop/create-sso-office-add-ins-aspnet.md)
 
 ### <a name="create-the-service-application"></a>Создание приложения-службы
 

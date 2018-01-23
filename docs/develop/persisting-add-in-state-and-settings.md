@@ -273,7 +273,7 @@ function saveCallback(asyncResult) {
 
 
 
-- [Общие сведения об интерфейсе API JavaScript для Office](../../docs/develop/understanding-the-javascript-api-for-office.md)
+- [Общие сведения об интерфейсе API JavaScript для Office](../develop/understanding-the-javascript-api-for-office.md)
     
 - [Надстройки Outlook](../outlook/outlook-add-ins.md)
     

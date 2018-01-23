@@ -21,6 +21,6 @@
 
 
 
-- [Общие сведения об интерфейсе API JavaScript для Office](../../docs/develop/understanding-the-javascript-api-for-office.md)    
+- [Общие сведения об интерфейсе API JavaScript для Office](../develop/understanding-the-javascript-api-for-office.md)    
 - [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office)
     

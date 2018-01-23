@@ -106,15 +106,15 @@ API JavaScript для Office содержат объекты и элементы
 
 ## <a name="next-steps"></a>Дальнейшие действия 
 
-Чтобы узнать больше о том, как приступить к созданию надстройки Office, перейдите к разделу [Начало работы](https://dev.office.com/getting-started/addins). Сразу же приступить к созданию надстроек можно с помощью [Visual Studio](../../docs/get-started/create-and-debug-office-add-ins-in-visual-studio.md) или [собственных инструментов](../../docs/get-started/create-an-office-add-in-using-any-editor). 
+Чтобы узнать больше о том, как приступить к созданию надстройки Office, перейдите к разделу [Начало работы](https://dev.office.com/getting-started/addins). Сразу же приступить к созданию надстроек можно с помощью [Visual Studio](../get-started/create-and-debug-office-add-ins-in-visual-studio.md) или [собственных инструментов](../get-started/create-an-office-add-in-using-any-editor). 
 
-Чтобы начать планировать создание решений, обеспечивающих удобную работу пользователей, ознакомьтесь с [рекомендациями по дизайну](../../docs/design/add-in-design) и другими [рекомендациями](../../docs/add-ins/overview/add-in-development-best-practices), касающимися надстроек Office.    
+Чтобы начать планировать создание решений, обеспечивающих удобную работу пользователей, ознакомьтесь с [рекомендациями по дизайну](../design/add-in-design) и другими [рекомендациями](../add-ins/overview/add-in-development-best-practices), касающимися надстроек Office.    
    
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - [Примеры надстроек Office](https://dev.office.com/code-samples)
     
-- [Общие сведения об API JavaScript для Office](../../docs/develop/understanding-the-javascript-api-for-office.md)
+- [Общие сведения об API JavaScript для Office](../develop/understanding-the-javascript-api-for-office.md)
 
 - [Доступность ведущих приложений и платформ для надстроек Office](https://dev.office.com/add-in-availability)
 

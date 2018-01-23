@@ -43,7 +43,7 @@
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
     
-- [Конфиденциальность и безопасность надстроек для Office](../../docs/develop/privacy-and-security.md)
+- [Конфиденциальность и безопасность надстроек для Office](../develop/privacy-and-security.md)
     
 
 

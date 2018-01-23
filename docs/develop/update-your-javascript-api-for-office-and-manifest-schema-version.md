@@ -4,7 +4,7 @@
 
 ## <a name="using-the-most-up-to-date-project-files"></a>Использование файлов проекта последней версии
 
-Если для разработки надстройки вы используете Visual Studio, то чтобы можно было применять [самые новые элементы API](https://dev.office.com/reference/add-ins/what's-changed-in-the-javascript-api-for-office) в API JavaScript для Office и [возможности манифеста надстройки версии 1.1](../../docs/overview/add-in-manifests.md) (который проверяется на соответствие offappmanifest-1.1.xsd), вам потребуется скачать и установить [Visual Studio 2015 и последнюю версию Office Developer Tools](https://www.visualstudio.com/features/office-tools-vs).
+Если для разработки надстройки вы используете Visual Studio, то чтобы можно было применять [самые новые элементы API](https://dev.office.com/reference/add-ins/what's-changed-in-the-javascript-api-for-office) в API JavaScript для Office и [возможности манифеста надстройки версии 1.1](../overview/add-in-manifests.md) (который проверяется на соответствие offappmanifest-1.1.xsd), вам потребуется скачать и установить [Visual Studio 2015 и последнюю версию Office Developer Tools](https://www.visualstudio.com/features/office-tools-vs).
 
 Если вы используете текстовый редактор или другую интегрированную среду разработки, отличную от Visual Studio, чтобы разработать надстройка, обновите ссылки на CDN для файла Office.js и версию схемы, на которую ссылается манифест приложения для Office.
 
@@ -65,7 +65,7 @@
 </OfficeApp>
 ```
 
-> **Примечание.** После обновления схемы манифеста надстройки до версии 1.1 вам потребуется удалить элементы **Capabilities** и **Capability** и заменить их либо элементами [Hosts](http://dev.office.com/reference/add-ins/manifest/hosts) и [Host](http://dev.office.com/reference/add-ins/manifest/hosts), либо [элементами Requirements и Requirement](../../docs/overview/specify-office-hosts-and-api-requirements.md).
+> **Примечание.** После обновления схемы манифеста надстройки до версии 1.1 вам потребуется удалить элементы **Capabilities** и **Capability** и заменить их либо элементами [Hosts](http://dev.office.com/reference/add-ins/manifest/hosts) и [Host](http://dev.office.com/reference/add-ins/manifest/hosts), либо [элементами Requirements и Requirement](../overview/specify-office-hosts-and-api-requirements.md).
 
 ## <a name="updating-an-office-add-in-project-created-with-a-text-editor-or-other-ide"></a>Обновление проекта надстройки Office, созданного с помощью текстового редактора или другого набора IDE
 
@@ -105,14 +105,14 @@
 </OfficeApp>
 ```
 
-> **Примечание.** После обновления схемы манифеста надстройки до версии 1.1 вам потребуется удалить элементы **Capabilities** и **Capability** и заменить их либо элементами [Hosts](http://dev.office.com/reference/add-ins/manifest/hosts) и [Host](http://dev.office.com/reference/add-ins/manifest/hosts), либо [элементами Requirements и Requirement](../../docs/overview/specify-office-hosts-and-api-requirements.md).
+> **Примечание.** После обновления схемы манифеста надстройки до версии 1.1 вам потребуется удалить элементы **Capabilities** и **Capability** и заменить их либо элементами [Hosts](http://dev.office.com/reference/add-ins/manifest/hosts) и [Host](http://dev.office.com/reference/add-ins/manifest/hosts), либо [элементами Requirements и Requirement](../overview/specify-office-hosts-and-api-requirements.md).
     
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-- [Указание ведущих приложений Office и требований к API](../../docs/overview/specify-office-hosts-and-api-requirements.md)
+- [Указание ведущих приложений Office и требований к API](../overview/specify-office-hosts-and-api-requirements.md)
     
-- [Общие сведения об интерфейсе API JavaScript для Office](../../docs/develop/understanding-the-javascript-api-for-office.md)
+- [Общие сведения об интерфейсе API JavaScript для Office](../develop/understanding-the-javascript-api-for-office.md)
     
 - [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office)
     

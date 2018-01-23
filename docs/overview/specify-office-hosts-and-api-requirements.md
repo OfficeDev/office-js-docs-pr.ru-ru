@@ -58,11 +58,11 @@
 
 ![Выберите самый подходящий вариант для вашей надстройки, указывая ведущие приложения Office или требования к API](../images/e3498f8f-7c7c-461c-84f3-b93910b088b9.png)
 
-- Если надстройка работает в одном приложении Office, укажите элемент **Hosts** в манифесте. Дополнительные сведения см. в разделе [Задание элемента Hosts](../../docs/overview/specify-office-hosts-and-api-requirements.md#set-the-hosts-element).
+- Если надстройка работает в одном приложении Office, укажите элемент **Hosts** в манифесте. Дополнительные сведения см. в разделе [Задание элемента Hosts](../overview/specify-office-hosts-and-api-requirements.md#set-the-hosts-element).
     
-- Чтобы задать минимальный набор требований или элементы API, которые должно поддерживать ведущее приложение Office для запуска надстройки, задайте элемент **Requirements** в манифесте. Дополнительные сведения см. в разделе [Задание элемента Requirements в манифесте](../../docs/overview/specify-office-hosts-and-api-requirements.md#set-the-requirements-element-in-the-manifest).
+- Чтобы задать минимальный набор требований или элементы API, которые должно поддерживать ведущее приложение Office для запуска надстройки, задайте элемент **Requirements** в манифесте. Дополнительные сведения см. в разделе [Задание элемента Requirements в манифесте](../overview/specify-office-hosts-and-api-requirements.md#set-the-requirements-element-in-the-manifest).
     
-- Чтобы предоставить дополнительные функции, если определенные наборы требований или элементы API доступны в ведущем приложении Office, выполните проверку в среде выполнения для кода JavaScript надстройки. Например, если надстройка выполняется в Excel 2016, используйте элементы нового API JavaScript для Excel, чтобы предоставить дополнительные функции. Дополнительные сведения см. в разделе [Использование проверок в среде выполнения для кода JavaScript](../../docs/overview/specify-office-hosts-and-api-requirements.md#use-runtime-checks-in-your-javascript-code).
+- Чтобы предоставить дополнительные функции, если определенные наборы требований или элементы API доступны в ведущем приложении Office, выполните проверку в среде выполнения для кода JavaScript надстройки. Например, если надстройка выполняется в Excel 2016, используйте элементы нового API JavaScript для Excel, чтобы предоставить дополнительные функции. Дополнительные сведения см. в разделе [Использование проверок в среде выполнения для кода JavaScript](../overview/specify-office-hosts-and-api-requirements.md#use-runtime-checks-in-your-javascript-code).
     
 
 ## <a name="set-the-hosts-element"></a>Задание элемента Hosts
@@ -159,10 +159,10 @@ if (Office.context.requirements.isSetSupported(RequirementSetName , VersionNumbe
     
 -  _VersionNumber_ (необязательный параметр) — это версия набора требований.
     
-В Excel 2016 или Word 2016 для наборов требований **ExcelAPI** или **WordAPI** используйте метод **isSetSupported**. Метод **isSetSupported**, а также наборы требований **ExcelAPI** и **WordAPI** доступны в последней версии файла Office.js в CDN. Если вы не используете файл Office.js из CDN, надстройка может создавать исключения, так как метод **isSetSupported** не будет определен. Дополнительные сведения см. в статье [Выбор последней версии библиотеки API JavaScript для Office](../../docs/overview/specify-office-hosts-and-api-requirements.md#specify-the-latest-javascript-api-for-office-library). 
+В Excel 2016 или Word 2016 для наборов требований **ExcelAPI** или **WordAPI** используйте метод **isSetSupported**. Метод **isSetSupported**, а также наборы требований **ExcelAPI** и **WordAPI** доступны в последней версии файла Office.js в CDN. Если вы не используете файл Office.js из CDN, надстройка может создавать исключения, так как метод **isSetSupported** не будет определен. Дополнительные сведения см. в статье [Выбор последней версии библиотеки API JavaScript для Office](../overview/specify-office-hosts-and-api-requirements.md#specify-the-latest-javascript-api-for-office-library). 
 
 
- >**Примечание.** Метод **isSetSupported** не работает в Outlook и Outlook Web App. Чтобы использовать проверку в среде выполнения в Outlook или Outlook Web App, используйте способ, описанный в разделе [Проверки в среде выполнения с использованием методов, не входящих в набор требований](../../docs/overview/specify-office-hosts-and-api-requirements.md#runtime-checks-using-methods-not-in-a-requirement-set).
+ >**Примечание.** Метод **isSetSupported** не работает в Outlook и Outlook Web App. Чтобы использовать проверку в среде выполнения в Outlook или Outlook Web App, используйте способ, описанный в разделе [Проверки в среде выполнения с использованием методов, не входящих в набор требований](../overview/specify-office-hosts-and-api-requirements.md#runtime-checks-using-methods-not-in-a-requirement-set).
 
 В приведенном ниже примере кода показано, как функциональность надстройки может отличаться в ведущих приложениях Office, поддерживающих разные наборы требований или элементы API.
 
@@ -211,7 +211,7 @@ if (Office.context.document.setSelectedDataAsync)
 
 
 
-- [XML-манифест надстроек для Office](../../docs/overview/add-in-manifests.md)
+- [XML-манифест надстроек для Office](../overview/add-in-manifests.md)
     
 - [Наборы обязательных элементов для надстроек Office](http://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets)
     

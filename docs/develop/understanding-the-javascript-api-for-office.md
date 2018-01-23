@@ -3,7 +3,7 @@
 
 
 
-В этой статье можно узнать об интерфейсе API JavaScript для Office и о том, как его использовать. Справочные сведения см. в разделе [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office). О том, как обновить файлы проекта Visual Studio до последней версии API JavaScript для Office, см. в статье [Обновление версии API JavaScript для Office и файлов схемы манифеста](../../docs/develop/update-your-javascript-api-for-office-and-manifest-schema-version.md).
+В этой статье можно узнать об интерфейсе API JavaScript для Office и о том, как его использовать. Справочные сведения см. в разделе [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office). О том, как обновить файлы проекта Visual Studio до последней версии API JavaScript для Office, см. в статье [Обновление версии API JavaScript для Office и файлов схемы манифеста](../develop/update-your-javascript-api-for-office-and-manifest-schema-version.md).
 
 >
   **Примечание.** Если вы планируете [публиковать](../publish/publish.md) надстройку в Магазине Office, она должна соответствовать [политикам проверки Магазина Office](https://msdn.microsoft.com/en-us/library/jj220035.aspx), чтобы пройти проверку. Например, работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3) и на [странице с информацией о доступности и ведущих приложениях для надстроек Office](https://dev.office.com/add-in-availability).
@@ -45,7 +45,7 @@ Office.initialize = function () {
 ```
 На всех страницах надстроек Office необходимо назначить обработчик события initialize, **Office.initialize**. Если не назначить обработчик события, при запуске надстройки может возникнуть ошибка. Кроме того, если пользователь попробует использовать надстройку с веб-клиентом Office Online, например Excel Online, PowerPoint Online или Outlook Web App, произойдет сбой. Если вам не нужен код инициализации, то функция, назначенная событию **Office.initialize**, может не содержать кода, как показано в первом из приведенных выше примеров.
 
-Дополнительные сведения о последовательности событий при инициализации надстройки см. в статье [Загрузка модели DOM и среды выполнения](../../docs/develop/loading-the-dom-and-runtime-environment.md).
+Дополнительные сведения о последовательности событий при инициализации надстройки см. в статье [Загрузка модели DOM и среды выполнения](../develop/loading-the-dom-and-runtime-environment.md).
 
 #### <a name="initialization-reason"></a>Причина инициализации
 Для надстроек области задач и контентных надстроек Office.initialize обеспечивает дополнительный параметр _reason_. Этот параметр можно использовать для определения способа, каким надстройка была добавлена в текущий документ. Это поможет обеспечить разную логику в тех случаях, когда надстройка вставляется впервые или когда она уже существует в документе. 
@@ -144,7 +144,7 @@ Office.initialize = function (reason) {
 
 Объект **Document** предоставляет методы, позволяющие выполнять чтение и запись к текущему выделенному фрагменту пользователя в виде "get and set". Для этого объект **Document** предоставляет методы **getSelectedDataAsync** и **setSelectedDataAsync**.
 
-Примеры кода, демонстрирующие выполнение задач с выделенными фрагментами, см. в статье [Чтение и запись данных при активном выделении фрагмента в документе или электронной таблице](../../docs/develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md).
+Примеры кода, демонстрирующие выполнение задач с выделенными фрагментами, см. в статье [Чтение и запись данных при активном выделении фрагмента в документе или электронной таблице](../develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md).
 
 
 ## <a name="working-with-bindings-using-the-bindings-and-binding-objects"></a>Работа с привязками с помощью объектов Bindings и Binding
@@ -174,7 +174,7 @@ Office.initialize = function (reason) {
 |Привязка таблицы|Выполняет привязку к области документа, содержащей таблицу с заголовками. Данные в привязке таблицы записываются или считываются как объект [TableData](http://dev.office.com/reference/add-ins/shared/tabledata). Объект **TableData** предоставляет данные с помощью свойств **headers** и **rows**.|Любая таблица Excel или Word может быть основой для табличной привязки. После создания табличной привязки каждая новая строка или столбец, добавляемые пользователем в таблицу, автоматически включаются в привязку. |
 После создания привязки с помощью одного из трех методов add объекта **Bindings** можно работать с данными и свойствами привязки с помощью методов соответствующего объекта: [MatrixBinding](http://dev.office.com/reference/add-ins/shared/binding.matrixbinding), [TableBinding](http://dev.office.com/reference/add-ins/shared/binding.tablebinding) или [TextBinding](http://dev.office.com/reference/add-ins/shared/binding.textbinding). Все три эти объекта наследуют методы [getDataAsync](http://dev.office.com/reference/add-ins/shared/binding.getdataasync) и [setDataAsync](http://dev.office.com/reference/add-ins/shared/binding.setdataasync) объекта **Binding**, позволяющие взаимодействовать с привязанными данными.
 
-Примеры кода, демонстрирующие выполнение задач с привязками, см. в статье [Привязка к областям в документе или электронной таблице](../../docs/develop/bind-to-regions-in-a-document-or-spreadsheet.md).
+Примеры кода, демонстрирующие выполнение задач с привязками, см. в статье [Привязка к областям в документе или электронной таблице](../develop/bind-to-regions-in-a-document-or-spreadsheet.md).
 
 
 ## <a name="working-with-custom-xml-parts-using-the-customxmlparts-and-customxmlpart-objects"></a>Работа с настраиваемыми частями XML с помощью объектов CustomXmlParts и CustomXmlPart
@@ -190,7 +190,7 @@ Office.initialize = function (reason) {
 
  **Область применения:** надстройки области задач Word и PowerPoint
 
-Метод [Document.getFileAsync](http://dev.office.com/reference/add-ins/shared/document.getfileasync) и члены объектов [File](http://dev.office.com/reference/add-ins/shared/file) и [Slice](http://dev.office.com/reference/add-ins/shared/slice) предоставляют функциональность получения целого файла документа Word и PowerPoint в виде порций (блоков) до 4 МБ единовременно. Дополнительные сведения см. в разделе [Получение всего содержимого файла из документа в надстройке](../../docs/develop/get-the-whole-document-from-an-add-in-for-powerpoint-or-word.md).
+Метод [Document.getFileAsync](http://dev.office.com/reference/add-ins/shared/document.getfileasync) и члены объектов [File](http://dev.office.com/reference/add-ins/shared/file) и [Slice](http://dev.office.com/reference/add-ins/shared/slice) предоставляют функциональность получения целого файла документа Word и PowerPoint в виде порций (блоков) до 4 МБ единовременно. Дополнительные сведения см. в разделе [Получение всего содержимого файла из документа в надстройке](../develop/get-the-whole-document-from-an-add-in-for-powerpoint-or-word.md).
 
 
 ## <a name="mailbox-object"></a>Объект Mailbox
@@ -224,7 +224,7 @@ var item = Office.context.mailbox.item;
 ## <a name="api-support-matrix"></a>Матрица поддержки API
 
 
-В данной таблице представлены API и функции, поддерживаемые всеми типами надстроек (контентными, области задач и Outlook), и приложения Office, которые могут их размещать, когда вы указываете [ведущие приложения Office, поддерживаемые вашей надстройкой](http://msdn.microsoft.com/library/cff9fbdf-a530-4f6e-91ca-81bcacd90dcd%28Office.15%29.aspx) с помощью [схемы манифестов надстроек версии 1.1 и функций, поддерживаемых API JavaScript для Office версии 1.1](../../docs/develop/update-your-javascript-api-for-office-and-manifest-schema-version.md).
+В данной таблице представлены API и функции, поддерживаемые всеми типами надстроек (контентными, области задач и Outlook), и приложения Office, которые могут их размещать, когда вы указываете [ведущие приложения Office, поддерживаемые вашей надстройкой](http://msdn.microsoft.com/library/cff9fbdf-a530-4f6e-91ca-81bcacd90dcd%28Office.15%29.aspx) с помощью [схемы манифестов надстроек версии 1.1 и функций, поддерживаемых API JavaScript для Office версии 1.1](../develop/update-your-javascript-api-for-office-and-manifest-schema-version.md).
 
 
 |||||||||

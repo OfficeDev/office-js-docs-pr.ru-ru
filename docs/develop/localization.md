@@ -410,7 +410,7 @@ API JavaScript для Office предоставляет два свойства,
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-- [Рекомендации по проектированию надстроек Office](../../docs/design/add-in-design.md)
+- [Рекомендации по проектированию надстроек Office](../design/add-in-design.md)
     
 - [Идентификаторы языков и значения OptionState Id в Office 2013](http://technet.microsoft.com/en-us/library/cc179219%28Office.15%29.aspx)
 
