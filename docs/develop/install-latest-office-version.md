@@ -3,7 +3,7 @@
 Подписчики, давшие явное согласие на использование последних сборок Office, первыми получают новые возможности для разработки, включая предварительные версии функций. Чтобы дать согласие на использование последних сборок Office 2016, выполните указанные ниже действия. 
 
 - Если у вас подписка на Office 365 для дома, Office 365 персональный или Office 365 для студентов, прочитайте статью [Примите участие в программе предварительной оценки Office](https://products.office.com/en-us/office-insider).
-- Если вы пользуетесь Office 365 для бизнеса, прочитайте статью [Установка сборки раннего выпуска для клиентов Office 365 для бизнеса](https://support.office.com/en-us/article/Install-the-First-Release-build-for-Office-365-for-business-customers-4dd8ba40-73c0-4468-b778-c7b744d03ead?ui=en-US&rs=en-US&ad=US).
+- Если вы пользуетесь Office 365 для бизнеса, прочитайте статью [Установка сборки раннего выпуска для клиентов Office 365 для бизнеса](https://support.office.com/ru-ru/article/Install-the-First-Release-build-for-Office-365-for-business-customers-4dd8ba40-73c0-4468-b778-c7b744d03ead?ui=en-US&rs=en-US&ad=US).
 - Если вы используете Office 2016 для Mac:
     - Запустите программу Office 2016 для Mac.
     - Выберите пункт **Проверить наличие обновлений** в меню "Справка".

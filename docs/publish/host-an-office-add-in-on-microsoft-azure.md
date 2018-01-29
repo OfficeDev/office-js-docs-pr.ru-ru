@@ -9,7 +9,7 @@
 
 1. Установите [Visual Studio 2017](https://www.visualstudio.com/downloads) и укажите, что необходимо включить рабочую нагрузку **разработки Azure**.
 
-    >**Примечание.** Если у вас уже установлен Visual Studio 2017, [используйте установщик Visual Studio](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio), чтобы убедиться, что рабочая нагрузка **разработки Azure** установлена. 
+    >**Примечание.** Если у вас уже установлен Visual Studio 2017, [используйте установщик Visual Studio](https://docs.microsoft.com/ru-ru/visualstudio/install/modify-visual-studio), чтобы убедиться, что рабочая нагрузка **разработки Azure** установлена. 
 
 2. Установите Office 2016. 
     

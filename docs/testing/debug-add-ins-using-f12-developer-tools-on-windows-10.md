@@ -63,5 +63,5 @@
 
 - [Проверка выполнения кода JavaScript с помощью отладчика](https://msdn.microsoft.com/library/dn255007%28v=vs.85%29.aspx)
     
-- [Использование средств разработчика F12](https://msdn.microsoft.com/en-us/library/bg182326%28v=vs.85%29.aspx)
+- [Использование средств разработчика F12](https://msdn.microsoft.com/ru-ru/library/bg182326%28v=vs.85%29.aspx)
     

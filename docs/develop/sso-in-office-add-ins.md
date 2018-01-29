@@ -14,7 +14,7 @@
 
 ## <a name="sso-add-in-architecture"></a>Архитектура надстройки с единым входом
 
-Помимо страниц и кода JavaScript веб-приложения, в надстройке также должны размещаться (с тем же [полным доменном именем](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682135.aspx#_dns_fully_qualified_domain_name_fqdn__gly)) один или несколько веб-API, которые будут получать маркер доступа и отправлять запросы к Microsoft Graph.
+Помимо страниц и кода JavaScript веб-приложения, в надстройке также должны размещаться (с тем же [полным доменном именем](https://msdn.microsoft.com/ru-ru/library/windows/desktop/ms682135.aspx#_dns_fully_qualified_domain_name_fqdn__gly)) один или несколько веб-API, которые будут получать маркер доступа и отправлять запросы к Microsoft Graph.
 
 Манифест надстройки содержит разметку, которая указывает, как надстройка регистрируется в конечной точке Azure Active Directory (Azure AD) версии 2.0, а также задает необходимые надстройке разрешения для Microsoft Graph.
 
@@ -32,7 +32,7 @@
 1. Ведущее приложение Office отправляет **маркер** надстройке в составе объекта результата, возвращенного при вызове метода `getAccessTokenAsync`.
 1. Код JavaScript надстройки отправляет HTTP-запрос к веб-API с тем же полным доменным именем, что и у надстройки. Этот запрос включает **маркер надстройки** в качестве подтверждения авторизации.  
 1. Серверный код проверяет входящий **маркер надстройки**.
-1. Серверный код использует поток "от имени" (определенный в [OAuth2 Token Exchange](https://tools.ietf.org/html/draft-ietf-oauth-token-exchange-02) и [сценарии аутентификации в Azure из управляющей программы или серверного приложения в веб-API](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-scenarios#daemon-or-server-application-to-web-api)), чтобы получить маркер доступа для Microsoft Graph (далее — **маркер MSG**) в обмен на маркер надстройки.
+1. Серверный код использует поток "от имени" (определенный в [OAuth2 Token Exchange](https://tools.ietf.org/html/draft-ietf-oauth-token-exchange-02) и [сценарии аутентификации в Azure из управляющей программы или серверного приложения в веб-API](https://docs.microsoft.com/ru-ru/azure/active-directory/develop/active-directory-authentication-scenarios#daemon-or-server-application-to-web-api)), чтобы получить маркер доступа для Microsoft Graph (далее — **маркер MSG**) в обмен на маркер надстройки.
 1. Azure AD возвращает надстройке **маркер MSG** (и маркер обновления, если надстройка запрашивает разрешение *offline_access*).
 1. Серверный код кэширует **маркеры MSG**.
 1. Серверный код отправляет запросы к Microsoft Graph и включает **маркер MSG**.

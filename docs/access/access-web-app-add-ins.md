@@ -4,7 +4,7 @@
 
 В этой статье показано, как с помощью Visual Studio 2015 создать надстройку Office, предназначенную для веб-приложений Access.
 
->**Примечание.** Дополнительные сведения о разработке решений для Access с помощью VBA см. в статье [Access](https://msdn.microsoft.com/en-us/library/fp179695.aspx) на сайте MSDN.
+>**Примечание.** Дополнительные сведения о разработке решений для Access с помощью VBA см. в статье [Access](https://msdn.microsoft.com/ru-ru/library/fp179695.aspx) на сайте MSDN.
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 

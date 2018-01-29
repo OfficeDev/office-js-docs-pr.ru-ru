@@ -104,7 +104,7 @@ Office.context.document.settings.saveAsync();
 
 >\* Для поиска ИД и версии надстройки в магазине Office перейдите на целевую страницу магазина Office для соответствующей надстройки. ИД ресурса отображается в адресной строке браузера. Версия указана в разделе **подробностей** на этой странице.
 
-Дополнительные сведения об исправлении webextension см. в документе [[MS-OWEXML] 2.2.5. WebExtensionReference](https://msdn.microsoft.com/en-us/library/hh695383(v=office.12).aspx).
+Дополнительные сведения об исправлении webextension см. в документе [[MS-OWEXML] 2.2.5. WebExtensionReference](https://msdn.microsoft.com/ru-ru/library/hh695383(v=office.12).aspx).
 
 В следующем примере показано, как добавить часть taskpane.
 

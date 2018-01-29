@@ -91,7 +91,7 @@ Labs.connect((err, connectionResponse) => {});
 
 ### <a name="time-format"></a>Формат времени
 
-В Labs.js хранятся числа, представляющие миллисекунды, истекшие с 1 января 1970 г. в формате UTC. Это соответствует формату JavaScript [объекта Date](http://msdn.microsoft.com/en-us/library/ie/cd9w2te4%28v=vs.94%29.aspx),
+В Labs.js хранятся числа, представляющие миллисекунды, истекшие с 1 января 1970 г. в формате UTC. Это соответствует формату JavaScript [объекта Date](http://msdn.microsoft.com/ru-ru/library/ie/cd9w2te4%28v=vs.94%29.aspx),
 
 
 ### <a name="timeline"></a>Временная шкала

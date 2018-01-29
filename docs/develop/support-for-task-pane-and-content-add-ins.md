@@ -156,7 +156,7 @@ Office.context.document.settings.set('themeColor', 'green');
 
 - [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office)
     
-- [Справка по схемам манифестов надстроек Office](http://msdn.microsoft.com/en-us/library/7e0cadc3-f613-8eb9-57ef-9032cbb97f92.aspx)
+- [Справка по схемам манифестов надстроек Office](http://msdn.microsoft.com/ru-ru/library/7e0cadc3-f613-8eb9-57ef-9032cbb97f92.aspx)
     
 - [Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office](../testing/testing-and-troubleshooting.md)
     

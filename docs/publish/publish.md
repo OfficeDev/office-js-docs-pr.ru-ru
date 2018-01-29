@@ -10,8 +10,8 @@
 |[Магазин Office](https://dev.office.com/officestore/docs/submit-to-the-office-store)|Для распространения надстройки среди всех пользователей.|
 |[Сервер Exchange Server](#outlook-add-in-deployment)|В локальной или облачной среде для распространения надстроек Outlook.|
 
->
-  **Примечание.** Если вы планируете отправить надстройку в Магазин Office, она должна соответствовать [политикам проверки Магазина Office](https://msdn.microsoft.com/en-us/library/jj220035.aspx). Например, она должна работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://dev.office.com/officestore/docs/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице с информацией о доступности для платформ и ведущих приложений Office](https://dev.office.com/add-in-availability).
+> [!NOTE]
+>  Если вы планируете отправить надстройку в Магазин Office, она должна соответствовать [политикам проверки Магазина Office](https://msdn.microsoft.com/ru-ru/library/jj220035.aspx). Например, она должна работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://dev.office.com/officestore/docs/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице с информацией о доступности для платформ и ведущих приложений Office](https://dev.office.com/add-in-availability).
 
 ## <a name="deployment-options-by-office-host"></a>Варианты развертывания для различных ведущих приложений Office
 
@@ -63,7 +63,7 @@
 - Office 365, Exchange Online или Exchange Server 2013 или более поздней версии
 - Outlook 2013 или более поздней версии
 
-Чтобы назначить надстройки клиентам, загрузите манифест напрямую из файла или URL-адреса в Центре администрирования Exchange или добавьте надстройку из Магазина Office. Чтобы назначить надстройки отдельным пользователям, необходимо использовать Exchange PowerShell. Дополнительные сведения см. в статье [Установка или удаление надстроек Outlook для организации](https://technet.microsoft.com/en-us/library/jj943752(v=exchg.150).aspx) на сайте TechNet.
+Чтобы назначить надстройки клиентам, загрузите манифест напрямую из файла или URL-адреса в Центре администрирования Exchange или добавьте надстройку из Магазина Office. Чтобы назначить надстройки отдельным пользователям, необходимо использовать Exchange PowerShell. Дополнительные сведения см. в статье [Установка или удаление надстроек Outlook для организации](https://technet.microsoft.com/ru-ru/library/jj943752(v=exchg.150).aspx) на сайте TechNet.
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
@@ -71,7 +71,7 @@
 - [Отправка в Магазин Office], [Магазин Office]
 - [Рекомендации по проектированию надстроек Office](../design/add-in-design)
 - 
-  [Создание эффективных надстроек Магазина Office](https://msdn.microsoft.com/en-us/library/jj635874.aspx)
+  [Создание эффективных надстроек Магазина Office](https://msdn.microsoft.com/ru-ru/library/jj635874.aspx)
 - [Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office](../testing/testing-and-troubleshooting.md)
 
 [Магазин Office]: http://msdn.microsoft.com/library/ff075782-1303-4517-91cc-b3d730e9b9ae%28Office.15%29.aspx

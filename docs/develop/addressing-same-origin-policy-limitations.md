@@ -47,7 +47,7 @@ function loadVideoDetails(videoIndex) {
 
 Пример использования OAuth для проверки подлинности см. в статье [Веб-часть Twitter SharePoint с использованием OAuth](http://aidangarnish.net/post/Twitter-SharePoint-Web-Part-With-OAuth).
 
-Пример кода на стороне сервера, демонстрирующего использование объекта `Cookie` в `System.Net` для получения и задания значений файлов cookie, см. в свойстве [Value](http://msdn2.microsoft.com/EN-US/library/4f772twc).
+Пример кода на стороне сервера, демонстрирующего использование объекта `Cookie` в `System.Net` для получения и задания значений файлов cookie, см. в свойстве [Value](http://msdn2.microsoft.com/ru-ru/library/4f772twc).
 
 
 ## <a name="using-cross-origin-resource-sharing-cors"></a>Использование CORS

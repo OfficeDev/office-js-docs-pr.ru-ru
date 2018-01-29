@@ -8,14 +8,14 @@
 
 - Используйте члены JavaScript API для Office, хранящих данные, такие как пары "имя-значение" в контейнере свойств, расположение которого зависит от типа надстройки.
     
-- Используйте способы, предоставленные базовыми элементами управления браузером: cookie-файлы браузера или веб-хранилище HTML5 ([localStorage](http://msdn.microsoft.com/en-us/library/cc848902%28v=vs.85%29.aspx) или [sessionStorage](http://msdn.microsoft.com/en-us/library/cc197020%28v=vs.85%29.aspx)).
+- Используйте способы, предоставленные базовыми элементами управления браузером: cookie-файлы браузера или веб-хранилище HTML5 ([localStorage](http://msdn.microsoft.com/ru-ru/library/cc848902%28v=vs.85%29.aspx) или [sessionStorage](http://msdn.microsoft.com/ru-ru/library/cc197020%28v=vs.85%29.aspx)).
     
 Эта статья содержит сведения об использовании API JavaScript для сохранения состояния надстройки. Примеры использования cookie-файлов браузера и веб-хранилища см. в примере кода [Excel-Add-in-JavaScript-PersistCustomSettings](https://github.com/OfficeDev/Excel-Add-in-JavaScript-PersistCustomSettings).
 
 ## <a name="persisting-add-in-state-and-settings-with-the-javascript-api-for-office"></a>Сохранение состояния и параметров надстройки с помощью JavaScript API для Office
 
 
-API JavaScript для Office предоставляет объекты [Settings](http://dev.office.com/reference/add-ins/shared/settings), [RoamingSettings](http://dev.office.com/reference/add-ins/outlook/RoamingSettings) и [CustomProperties](http://dev.office.com/reference/add-ins/outlook/CustomProperties) для сохранения состояния надстройки во время сеансов, как показано в следующей таблице. Во всех случаях сохраненные значения параметров связаны с [Id](http://msdn.microsoft.com/en-us/library/67c4344a-935c-09d6-1282-55ee61a2838b%28Office.15%29.aspx) создавшей их надстройки.
+API JavaScript для Office предоставляет объекты [Settings](http://dev.office.com/reference/add-ins/shared/settings), [RoamingSettings](http://dev.office.com/reference/add-ins/outlook/RoamingSettings) и [CustomProperties](http://dev.office.com/reference/add-ins/outlook/CustomProperties) для сохранения состояния надстройки во время сеансов, как показано в следующей таблице. Во всех случаях сохраненные значения параметров связаны с [Id](http://msdn.microsoft.com/ru-ru/library/67c4344a-935c-09d6-1282-55ee61a2838b%28Office.15%29.aspx) создавшей их надстройки.
 
 
 

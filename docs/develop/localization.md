@@ -51,7 +51,7 @@ API JavaScript для Office предоставляет два свойства,
 |[SourceLocation]   |Пользователи, имеющие указанные языковые параметры, могут видеть веб-страницу, специально разработанную для надстройки с заданными языковыми параметрами. |
 
 
- > **Примечание.** Вы можете локализовать описание и отображаемое имя только для языковых стандартов, которые поддерживаются в Office. Список языков и языковых стандартов для текущего выпуска Office см. в статье [Идентификаторы языков и значения OptionState Id в Office 2013](http://technet.microsoft.com/en-us/library/cc179219.aspx).
+ > **Примечание.** Вы можете локализовать описание и отображаемое имя только для языковых стандартов, которые поддерживаются в Office. Список языков и языковых стандартов для текущего выпуска Office см. в статье [Идентификаторы языков и значения OptionState Id в Office 2013](http://technet.microsoft.com/ru-ru/library/cc179219.aspx).
 
 
 ### <a name="examples"></a>Примеры
@@ -412,7 +412,7 @@ API JavaScript для Office предоставляет два свойства,
 
 - [Рекомендации по проектированию надстроек Office](../design/add-in-design.md)
     
-- [Идентификаторы языков и значения OptionState Id в Office 2013](http://technet.microsoft.com/en-us/library/cc179219%28Office.15%29.aspx)
+- [Идентификаторы языков и значения OptionState Id в Office 2013](http://technet.microsoft.com/ru-ru/library/cc179219%28Office.15%29.aspx)
 
 [DefaultLocale]:         http://dev.office.com/reference/add-ins/manifest/defaultlocale
 [Описание]:           http://dev.office.com/reference/add-ins/manifest/description

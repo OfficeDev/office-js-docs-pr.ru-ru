@@ -1,6 +1,6 @@
 # <a name="coauthoring-in-excel-add-ins"></a>Совместное редактирование в надстройках Excel  
 
-Благодаря функции [совместного редактирования](https://support.office.com/en-US/article/Collaborate-on-Excel-workbooks-at-the-same-time-with-co-authoring-7152aa8b-b791-414c-a3bb-3024e46fb104), несколько человек могут работать вместе и редактировать одну и ту же книгу Excel одновременно. Все соавторы книги могут видеть изменения, внесенные и сохраненные другими соавторами. Книги Excel, доступные для совместного редактирования, должны храниться в OneDrive, OneDrive для бизнеса или SharePoint Online.
+Благодаря функции [совместного редактирования](https://support.office.com/ru-ru/article/Collaborate-on-Excel-workbooks-at-the-same-time-with-co-authoring-7152aa8b-b791-414c-a3bb-3024e46fb104), несколько человек могут работать вместе и редактировать одну и ту же книгу Excel одновременно. Все соавторы книги могут видеть изменения, внесенные и сохраненные другими соавторами. Книги Excel, доступные для совместного редактирования, должны храниться в OneDrive, OneDrive для бизнеса или SharePoint Online.
 
 > **Важно!** В Excel 2016 для Office 365 в левом верхнем углу можно заметить надпись "Автосохранение". Если автосохранение включено, соавторы видят внесенные вами изменения в режиме реального времени. Учтите влияние такого поведения на макет вашей надстройки Excel. Пользователи могут выключить автосохранение с помощью переключателя в левом верхнем углу окна Excel.
 
@@ -44,5 +44,5 @@
 
 ## <a name="see-also"></a>См. также 
 
-- [О совместном редактировании в Excel (VBA)](https://msdn.microsoft.com/en-us/vba/excel-vba/articles/about-coauthoring-in-excel) 
-- [Как автосохранение влияет на надстройки и макросы (VBA)](https://msdn.microsoft.com/en-us/vba/office-shared-vba/articles/how-autosave-impacts-addins-and-macros) 
+- [О совместном редактировании в Excel (VBA)](https://msdn.microsoft.com/ru-ru/vba/excel-vba/articles/about-coauthoring-in-excel) 
+- [Как автосохранение влияет на надстройки и макросы (VBA)](https://msdn.microsoft.com/ru-ru/vba/office-shared-vba/articles/how-autosave-impacts-addins-and-macros) 

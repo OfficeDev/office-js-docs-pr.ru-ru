@@ -2,8 +2,8 @@
 
 В OneNote представлен API JavaScript для надстроек OneNote Online. Вы можете создавать надстройки области задач, контентные надстройки и команды надстроек, которые взаимодействуют с объектами OneNote и подключаются к веб-службам или другим веб-ресурсам.
 
->
-  **Примечание.** Если вы планируете [публиковать](../publish/publish.md) надстройку в Магазине Office, она должна соответствовать [политикам проверки Магазина Office](https://msdn.microsoft.com/en-us/library/jj220035.aspx), чтобы пройти проверку. Например, работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3) и на [странице с информацией о доступности и ведущих приложениях для надстроек Office](https://dev.office.com/add-in-availability).
+> [!NOTE]
+>  Если вы планируете [публиковать](../publish/publish.md) надстройку в Магазине Office, она должна соответствовать [политикам проверки Магазина Office](https://msdn.microsoft.com/ru-ru/library/jj220035.aspx), чтобы пройти проверку. Например, работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://msdn.microsoft.com/ru-ru/library/jj220035.aspx#Anchor_3) и на [странице с информацией о доступности и ведущих приложениях для надстроек Office](https://dev.office.com/add-in-availability).
 
 ## <a name="components-of-an-office-add-in"></a>Компоненты надстройки Office
 
@@ -98,10 +98,10 @@ function getSelectionFromPage() {
 
 | API | Примечания |
 |:------|:------|
-| [Office.context.document.getSelectedDataAsync](https://msdn.microsoft.com/en-us/library/office/fp142294.aspx) | Только **Office.CoercionType.Text** и **Office.CoercionType.Matrix** |
-| [Office.context.document.setSelectedDataAsync](https://msdn.microsoft.com/en-us/library/office/fp142145.aspx) | Только **Office.CoercionType.Text**, **Office.CoercionType.Image** и **Office.CoercionType.Html** | 
-| [var mySetting = Office.context.document.settings.get(имя);](https://msdn.microsoft.com/en-us/library/office/fp142180.aspx) | Параметры поддерживаются только контентными надстройками | 
-| [Office.context.document.settings.set(имя, значение);](https://msdn.microsoft.com/en-us/library/office/fp161063.aspx) | Параметры поддерживаются только контентными надстройками | 
+| [Office.context.document.getSelectedDataAsync](https://msdn.microsoft.com/ru-ru/library/office/fp142294.aspx) | Только **Office.CoercionType.Text** и **Office.CoercionType.Matrix** |
+| [Office.context.document.setSelectedDataAsync](https://msdn.microsoft.com/ru-ru/library/office/fp142145.aspx) | Только **Office.CoercionType.Text**, **Office.CoercionType.Image** и **Office.CoercionType.Html** | 
+| [var mySetting = Office.context.document.settings.get(имя);](https://msdn.microsoft.com/ru-ru/library/office/fp142180.aspx) | Параметры поддерживаются только контентными надстройками | 
+| [Office.context.document.settings.set(имя, значение);](https://msdn.microsoft.com/ru-ru/library/office/fp161063.aspx) | Параметры поддерживаются только контентными надстройками | 
 | [Office.EventType.DocumentSelectionChanged](https://dev.office.com/reference/add-ins/shared/document.selectionchanged.event) ||
 
 Обычно стандартный API следует использовать только тогда, когда необходимые возможности не поддерживаются в многофункциональном API. Дополнительные сведения об использовании стандартного API см. в [документации](https://dev.office.com/docs/add-ins/overview/office-add-ins) и [справочнике](https://dev.office.com/reference/add-ins/javascript-api-for-office) по надстройкам Office.
