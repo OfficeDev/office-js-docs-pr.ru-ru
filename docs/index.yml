@@ -1,82 +1,82 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: Office Add-ins Documentation
+title: Документация по надстройкам Office
 metadata:
-  title: Office Add-ins Documentation - Quickstarts, API Reference
-  meta.description: Learn how to build Office Add-ins.
+  title: 'Документация по надстройкам Office: краткие руководства, справочные материалы по API'
+  meta.description: Сведения о том, как создавать надстройки Office.
   author: o365devx
   ms.topic: landing-page
   ms.date: 12/04/2017
   ms.author: o365devx
 abstract:
-  description: The <a href="https://docs.microsoft.com/en-us/office/dev/add-ins/overview/office-add-ins">Office Add-ins platform</a> allows you to build solutions that extend Office applications and interact with content in Office documents. With Office Add-ins, you can use familiar web technologies such as HTML, CSS, and JavaScript to extend and interact with Word, Excel, PowerPoint, OneNote, Project, and Outlook. Your solution can run in Office across multiple platforms, including Office for Windows, Office Online, Office for the Mac, and Office for the iPad. Learn how to create Office Add-ins with our quickstarts, how-to guides, and API reference documentation.<br/><br/><b>Note:</b> For information about COM or VSTO add-ins, see the <a href="https://msdn.microsoft.com/en-us/library/fp161347.aspx" target="_blank">MSDN documentation</a>.
+  description: <a href="https://docs.microsoft.com/ru-ru/office/dev/add-ins/overview/office-add-ins">Платформа надстроек Office</a> позволяет создавать решения, которые расширяют возможности приложений Office и взаимодействуют с документами Office. В случае надстроек Office можно использовать привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений. Ваше решение может работать в Office на нескольких платформах, включая Office для Windows, Office Online, Office для Mac и Office для iPad. Информация о том, как создавать надстройки Office, опираясь на наши краткие и практические руководства, а также справочную документацию по API.<br/><br/><b>Примечание.</b> Сведения о надстройках COM или VSTO см. в <a href="https://msdn.microsoft.com/ru-ru/library/fp161347.aspx" target="_blank">документации MSDN</a>.
   aside:
     image:
       alt: 
       height: 130
-      src: https://docs.microsoft.com/en-us/office/dev/add-ins/images/office-add-ins-video-thumbnail.png
+      src: https://docs.microsoft.com/ru-ru/office/dev/add-ins/images/office-add-ins-video-thumbnail.png
       width: 250  
-    title: Get started with Office Add-ins. (14:10)
+    title: Начните работать с надстройками Office. (14:10)
     href: https://channel9.msdn.com/Events/Connect/2017/T192
     width: 250
 sections:
-- title: 5-Minute Quickstarts
+- title: 5-минутные краткие руководства
   items:
   - type: paragraph
-    text: 'Learn how to create your first Office Add-in:'
+    text: 'Узнайте, как создать свою первую надстройку Office:'
   - type: list
     style: icon48
     items: 
     - image: 
-        src: https://docs.microsoft.com/en-us/office/dev/add-ins/images/index/ExcelLogoColor.svg
+        src: https://docs.microsoft.com/ru-ru/office/dev/add-ins/images/index/ExcelLogoColor.svg
       text: Excel
-      href: https://docs.microsoft.com/en-us/office/dev/add-ins/quickstarts/excel-quickstart-jquery
+      href: https://docs.microsoft.com/ru-ru/office/dev/add-ins/quickstarts/excel-quickstart-jquery
     - image: 
-        src: https://docs.microsoft.com/en-us/office/dev/add-ins/images/index/WordLogoColor.svg
+        src: https://docs.microsoft.com/ru-ru/office/dev/add-ins/images/index/WordLogoColor.svg
       text: Word
-      href: https://docs.microsoft.com/en-us/office/dev/add-ins/quickstarts/word-quickstart
+      href: https://docs.microsoft.com/ru-ru/office/dev/add-ins/quickstarts/word-quickstart
     - image: 
-        src: https://docs.microsoft.com/en-us/office/dev/add-ins/images/index/OneNoteLogoColor.svg
+        src: https://docs.microsoft.com/ru-ru/office/dev/add-ins/images/index/OneNoteLogoColor.svg
       text: OneNote
-      href: https://docs.microsoft.com/en-us/office/dev/add-ins/quickstarts/onenote-quickstart
+      href: https://docs.microsoft.com/ru-ru/office/dev/add-ins/quickstarts/onenote-quickstart
     - image: 
-        src: https://docs.microsoft.com/en-us/office/dev/add-ins/images/index/OutlookLogoColor.svg
+        src: https://docs.microsoft.com/ru-ru/office/dev/add-ins/images/index/OutlookLogoColor.svg
       text: Outlook
-      href: https://docs.microsoft.com/en-us/outlook/add-ins/quick-start
+      href: https://docs.microsoft.com/ru-ru/outlook/add-ins/quick-start
     - image: 
-        src: https://docs.microsoft.com/en-us/office/dev/add-ins/images/index/PowerPointLogoColor.svg
+        src: https://docs.microsoft.com/ru-ru/office/dev/add-ins/images/index/PowerPointLogoColor.svg
       text: PowerPoint
-      href: https://docs.microsoft.com/en-us/office/dev/add-ins/quickstarts/powerpoint-quickstart
+      href: https://docs.microsoft.com/ru-ru/office/dev/add-ins/quickstarts/powerpoint-quickstart
     - image: 
-        src: https://docs.microsoft.com/en-us/office/dev/add-ins/images/index/ProjectLogoColor.svg
+        src: https://docs.microsoft.com/ru-ru/office/dev/add-ins/images/index/ProjectLogoColor.svg
       text: Project
-      href: https://docs.microsoft.com/en-us/office/dev/add-ins/quickstarts/project-quickstart
-- title: How-to Guides
+      href: https://docs.microsoft.com/ru-ru/office/dev/add-ins/quickstarts/project-quickstart
+- title: Практические руководства
   items:
   - type: paragraph
-    text: Learn how to design, build, test, debug, and publish Office Add-ins.
+    text: Сведения о том, как оформлять, создавать, тестировать, отлаживать и публиковать надстройки Office.
   - type: list
     style: unordered
     className: spaced bullet
     items:
-    - html: <a href="/en-us/office/dev/add-ins/design/add-in-design">Design the User Interface of an Office Add-in</a>
-    - html: <a href="/en-us/office/dev/add-ins/excel/excel-add-ins-overview">Excel add-in development</a>
-    - html: <a href="/en-us/office/dev/add-ins/word/word-add-ins-programming-overview">Word add-in development</a>
-    - html: <a href="/en-us/office/dev/add-ins/onenote/onenote-add-ins-programming-overview">OneNote add-in development</a>
-    - html: <a href="https://docs.microsoft.com/outlook/add-ins">Outlook add-in development</a>
-    - html: <a href="/en-us/office/dev/add-ins/powerpoint/powerpoint-add-ins">PowerPoint add-in development</a>
-    - html: <a href="/en-us/office/dev/add-ins/project/project-add-ins">Project add-in development</a>
-    - html: <a href="/en-us/office/dev/add-ins/testing/test-debug-office-add-ins">Test and debug an Office Add-in</a>
-    - html: <a href="/en-us/office/dev/add-ins/publish/publish">Publish an Office Add-in</a>
-- title: Reference
+    - html: <a href="/ru-ru/office/dev/add-ins/design/add-in-design">Оформление пользовательского интерфейса для надстройки Office</a>
+    - html: <a href="/ru-ru/office/dev/add-ins/excel/excel-add-ins-overview">Разработка надстроек Excel</a>
+    - html: <a href="/ru-ru/office/dev/add-ins/word/word-add-ins-programming-overview">Разработка надстроек Word</a>
+    - html: <a href="/ru-ru/office/dev/add-ins/onenote/onenote-add-ins-programming-overview">Разработка надстроек OneNote</a>
+    - html: <a href="https://docs.microsoft.com/outlook/add-ins">Разработка надстроек Outlook</a>
+    - html: <a href="/ru-ru/office/dev/add-ins/powerpoint/powerpoint-add-ins">Разработка надстроек PowerPoint</a>
+    - html: <a href="/ru-ru/office/dev/add-ins/project/project-add-ins">Разработка надстроек Project</a>
+    - html: <a href="/ru-ru/office/dev/add-ins/testing/test-debug-office-add-ins">Тестирование и отладка надстроек Office</a>
+    - html: <a href="/ru-ru/office/dev/add-ins/publish/publish">Публикация надстроек Office</a>
+- title: Справочник
   items:
   - type: list
     style: cards
     className: cardsD
     items:
-    - title: Common APIs (2013)
-      html: <p><a href="https://dev.office.com/reference/add-ins/javascript-api-for-office" target="_blank">JavaScript API for Office</a></p>
-    - title: Host-specific APIs (2016)
-      html: <p><a href="https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview" target="_blank">Excel JavaScript API</a></p><p><a href="https://dev.office.com/reference/add-ins/word/word-add-ins-reference-overview" target="_blank">Word JavaScript API</a></p><p><a href="https://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference" target="_blank">OneNote JavaScript API</a></p><p><a href="https://dev.office.com/reference/add-ins/outlook/tutorial-api-requirement-sets" target="_blank">Outlook JavaScript API</a></p>
-    - title: Other
-      html: <p><a href="https://dev.office.com/reference/add-ins/openspec" target="_blank">API open specifications</a></p><p><a href="https://dev.office.com/reference/add-ins/manifest/allowsnapshot" target="_blank">Office Add-ins Manifest</a></p>
+    - title: Общие API (2013)
+      html: <p><a href="https://dev.office.com/reference/add-ins/javascript-api-for-office" target="_blank">API JavaScript для Office</a></p>
+    - title: API для определенных ведущих приложений (2016)
+      html: <p><a href="https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview" target="_blank">API JavaScript для Excel</a></p><p><a href="https://dev.office.com/reference/add-ins/word/word-add-ins-reference-overview" target="_blank">API JavaScript для Word</a></p><p><a href="https://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference" target="_blank">API JavaScript для OneNote</a></p><p><a href="https://dev.office.com/reference/add-ins/outlook/tutorial-api-requirement-sets" target="_blank">API JavaScript для Outlook</a></p>
+    - title: Другие
+      html: <p><a href="https://dev.office.com/reference/add-ins/openspec" target="_blank">Открытые спецификации API</a></p><p><a href="https://dev.office.com/reference/add-ins/manifest/allowsnapshot" target="_blank">Манифест надстроек Office</a></p>
