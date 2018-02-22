@@ -31,7 +31,7 @@ ms.date: 01/23/2018
     * [Конструктивные шаблоны пользовательского интерфейса](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/blob/master/README.md)
     * Рекомендации по [проектированию надстроек Office](add-in-design.md)
     * 
-  [Наборы средств Office UI Fabric](https://developer.microsoft.com/ru-ru/fabric#/resources)
+  [Наборы средств Office UI Fabric](https://developer.microsoft.com/en-us/fabric#/resources)
 
 Чтобы добавить исходный код, сделайте следующее:
 

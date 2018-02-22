@@ -1,78 +1,105 @@
-# <a name="convert-an-office-add-in-task-pane-template-in-visual-studio-to-typescript"></a>Преобразование шаблона области задач надстройки Office в Visual Studio в TypeScript
+---
+title: Преобразование проекта надстройки Office в Visual Studio в TypeScript
+description: ''
+ms.date: 01/19/2018
+---
 
+# <a name="convert-an-office-add-in-project-in-visual-studio-to-typescript"></a>Преобразование проекта надстройки Office в Visual Studio в TypeScript
 
-Вы можете использовать шаблон надстройки Office на JavaScript в Visual Studio, чтобы создать надстройку на TypeScript. После создания надстройки в Visual Studio вы можете преобразовать проект в TypeScript.  Таким образом, вам не нужно начинать проект надстройки Office на TypeScript с нуля.  
+Вы можете использовать шаблон надстройки Office в Visual Studio, чтобы создать надстройку с использованием JavaScript, а затем преобразовать этот проект в TypeScript. Создавая проект надстройки в Visual Studio, вам не придется создавать проект надстройки Office на TypeScript с нуля. 
 
-   > **Примечание.** Чтобы узнать, как создать проект надстройки Office на TypeScript без Visual Studio, просмотрите статью [Создание надстройки Office с помощью любого редактора](../get-started/create-an-office-add-in-using-any-editor.md).
+В этой статье показано, как создать надстройку Excel с помощью Visual Studio, а затем преобразовать проект надстройки из JavaScript в TypeScript. Таким же образом в Visual Studio можно преобразовывать и другие проекты надстроек Office из JavaScript в TypeScript.
 
-В проекте TypeScript могут быть как файлы TypeScript, так и файлы JavaScript, это не повлияет на компиляцию. Потому что TypeScript — это типизированная расширенная версия языка JavaScript. Код TypeScript компилируется в JavaScript. 
-
-В этой статье показано, как преобразовать шаблон области задач надстройки Excel в Visual Studio из JavaScript в TypeScript. Преобразование других шаблонов JavaScript выполняется аналогично.
-
-Чтобы просмотреть или скачать пример кода, который используется в этой статье, откройте страницу [Excel-Add-In-TS-Start](https://github.com/officedev/Excel-Add-In-TS-Start) на сайте GitHub.
+> [!NOTE]
+> Чтобы создать проект надстройки Office на TypeScript без использования Visual Studio, следуйте указаниям из раздела "Любой редактор" любого [5-минутного руководства по началу работы](../index.yml) и выберите `TypeScript` по соответствующему запросу [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
-Убедитесь, что установлены следующие компоненты:
+- [Visual Studio 2017](https://www.visualstudio.com/vs/) с установленной рабочей нагрузкой **Разработка надстроек для Office и SharePoint**
 
-* [Visual Studio 2015 или более поздней версии](https://www.visualstudio.com/downloads/)
-* [Инструменты разработчика Office для Visual Studio](https://www.visualstudio.com/ru-RU/features/office-tools-vs.aspx)
-* [Накопительный выпуск исправлений для Microsoft Visual Studio 2015 с обновлением 3 (KB3165756)](https://msdn.microsoft.com/ru-RU/library/mt752379.aspx)
-* Excel 2016
-* [TypeScript 2.1 для Visual Studio 2015](http://download.microsoft.com/download/6/D/8/6D8381B0-03C1-4BD2-AE65-30FF0A4C62DA/TS2.1-dev14update3-20161206.2/TypeScript_Dev14Full.exe) (после установки Visual Studio 2015 с обновлением 3)
+    > [!NOTE]
+    > Если вы уже установили Visual Studio 2017, [используйте установщик Visual Studio](https://docs.microsoft.com/ru-ru/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**. 
 
-    > **Примечание.**  Дополнительные сведения об установке TypeScript 2.1 см. в статье [Представляем TypeScript 2.1](https://blogs.msdn.microsoft.com/typescript/2016/12/07/announcing-typescript-2-1/).
+- TypeScript 2.3 для Visual Studio 2017
 
-## <a name="create-new-add-in-project"></a>Создание проекта надстройки
+    > [!NOTE]
+    > TypeScript должен быть по умолчанию установлен вместе с Visual Studio 2017, но вы можете убедиться в этом с помощью [Visual Studio Installer](https://docs.microsoft.com/ru-ru/visualstudio/install/modify-visual-studio). В Visual Studio Installer выберите вкладку **Отдельные компоненты** и убедитесь, что в разделе **Пакеты SDK, библиотеки и платформы** выбран узел **Пакет SDK для TypeScript 2.3**.
 
-1.  Откройте Visual Studio и выберите **Файл** > **Создать** > **Проект**. 
-2.  В разделе **Office/SharePoint**, выберите **Надстройка Excel** и нажмите **ОК**.
+- Excel 2016
 
-    ![Шаблон надстройки Excel в Visual Studio](../images/visual-studio-addin-template.png)
+## <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
-3.  В мастере создания приложений выберите **Добавить новые функции в Excel** и нажмите **Готово**.
-4.  Нажмите клавишу F5 или зеленую кнопку **Запуск**, чтобы запустить новую надстройку Excel. Надстройка будет размещена локально в IIS, и Excel откроется уже с загруженной надстройкой.
+1. Откройте Visual Studio и в строке меню выберите **Файл** > **Создать** > **Проект**.
+
+2. В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, затем выберите **Надстройки** > **Веб-надстройка Excel**. 
+
+3. Укажите имя проекта и нажмите кнопку **ОК**.
+
+4. В диалоговом окне **Создание надстройки Office** выберите **Добавить новые функции в Excel**, а затем нажмите кнопку **Готово**, чтобы создать проект.
+
+5. Visual Studio создаст решение, и два соответствующих проекта появятся в **обозревателе решений**. Файл **Home.html** откроется в Visual Studio.
 
 ## <a name="convert-the-add-in-project-to-typescript"></a>Преобразование проекта надстройки в TypeScript
 
-1. В **обозревателе решений** переименуйте файл Home.js на Home.ts.
-2. Нажмите **Да**, чтобы подтвердить изменение расширения имени файла.  
-3. Нажмите **Да**, чтобы подтвердить поиск определений TypeScript в диспетчере пакетов NuGet, как показано на приведенном ниже снимке экрана. Откроется **диспетчер пакетов NuGet**.
+1. В **обозревателе решений** измените имя файла**Home.js** на **Home.ts**.
 
-    ![Диалоговое окно поиска определений TypeScript](../images/search-typescript-typings.png)
+    > [!NOTE]
+    > В проекте TypeScript могут быть как файлы TypeScript, так и файлы JavaScript, это не повлияет на компиляцию. Потому что TypeScript — это типизированная расширенная версия языка JavaScript. Код TypeScript компилируется в JavaScript. 
 
-4. Выберите **Обзор** в **диспетчере пакетов Nuget**.  
-5. В поле поиска введите **office-js tag:typescript**.
-6. Установите определения **office.js.TypeScript.DefinitelyTyped** и **jquery.TypeScript.DefinitelyTyped**, как показано ниже.
+2. Нажмите **Да**, чтобы подтвердить изменение расширения имени файла.
 
-    ![Пакеты NuGet TypeScript.DefinitelyTyped](../images/typescript-definitelytyped-nugets.png)
+3. Создайте файл с именем **Office.d.ts** в корне проекта веб-приложения.
 
-7. Откройте Home.ts (прежнее название — Home.js). Удалите следующую ссылку в начале файла Home.ts:
+4. В веб-браузере откройте [файл определений типов для Office.js](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js/index.d.ts). Скопируйте содержимое этого файла в буфер обмена.
 
-    ```///<reference path="/Scripts/FabricUI/MessageBanner.js" />```
+5. В Visual Studio откройте файл **Office.d.ts**, вставьте в него содержимое буфера обмена и сохраните файл.
 
-8. Добавьте следующее объявление в начало файла Home.ts:
+6. Создайте файл с именем **jQuery.d.ts** в корне проекта веб-приложения.
 
-    ```declare var fabric: any;```
+7. В веб-браузере откройте [файл определений типов для jQuery](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/jquery/index.d.ts). Скопируйте содержимое этого файла в буфер обмена.
 
-9. Измените **‘1.1’** на **1.1**, то есть удалите кавычки из следующей строки в файле Home.ts:
+8. В Visual Studio откройте файл **jQuery.d.ts**, вставьте в него содержимое буфера обмена и сохраните файл.
 
-    ```if (!Office.context.requirements.isSetSupported('ExcelApi', 1.1)) {```
- 
+9. В Visual Studio создайте файл с именем **tsconfig.json** в корне проекта веб-приложения.
+
+10. Откройте файл **tsconfig.json**, добавьте в него приведенное ниже содержимое и сохраните файл.
+
+    ```javascript
+    {
+        "compilerOptions": {
+            "skipLibCheck": true,
+            "lib": [ "es5", "dom", "es2015.promise" ]
+        }
+    }
+    ```
+
+11. Откройте файл **Home.ts** и добавьте в его начале следующее объявление:
+
+    ```javascript
+    declare var fabric: any;
+    ```
+
+12. В файле **Home.ts** замените **'1.1'** на **1.1** (то есть удалите кавычки) в приведенной ниже строке, а затем сохраните файл.
+
+    ```javascript
+    if (!Office.context.requirements.isSetSupported('ExcelApi', '1.1')) {
+    ```
+
 ## <a name="run-the-converted-add-in-project"></a>Запуск преобразованного проекта надстройки
 
-1. Нажмите клавишу F5 или зеленую кнопку **Запуск**, чтобы запустить надстройку. 
-2. Запустив Excel, нажмите кнопку **Показать область задач** на ленте **Главная**.
-3. Выделите все ячейки с числами.
-4. Нажмите кнопку **Выделить** в области задач. 
+1. В Visual Studio нажмите клавишу F5 или нажмите кнопку **Пуск**, чтобы запустить Excel с кнопкой **Показать область задач** на ленте. Надстройка будет размещена на локальном сервере IIS.
+
+2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
+
+3. Выберите на листе девять ячеек, содержащих числа.
+
+4. Нажмите кнопку **Highlight** (Выделить) в области задач, чтобы выделить в выбранном диапазоне ячейку, содержащую самое большое значение.
 
 ## <a name="homets-code-file"></a>Файл с кодом Home.ts
 
-Ниже приведен код, включенный в файл Home.ts. Этот файл включает минимальное количество изменений, необходимое для запуска надстройки.
+Для справки в приведенном ниже фрагменте кода показано содержимое файла **Home.ts** после применения вышеописанных изменений. Этот код включает минимальное количество изменений, необходимое для запуска надстройки.
 
->**Примечание.** Полный пример файла JavaScript, преобразованного в TypeScript, см. в статье [Excel-Add-In-TS-StartWeb/Home.ts](https://github.com/officedev/Excel-Add-In-TS-Start/blob/master/Excel-Add-In-TS-StartWeb/Home.ts). 
-
-```
+```javascript
 declare var fabric: any;
 
 (function () {
@@ -91,12 +118,11 @@ declare var fabric: any;
             
             // If not using Excel 2016, use fallback logic.
             if (!Office.context.requirements.isSetSupported('ExcelApi', 1.1)) {
-                $("#template-description").text("This sample will display the value of the cells you have selected in the spreadsheet.");
+                $("#template-description").text("This sample will display the value of the cells that you have selected in the spreadsheet.");
                 $('#button-text').text("Display!");
                 $('#button-desc').text("Display the selection");
 
-                $('#highlight-button').click(
-                    displaySelectedCells);
+                $('#highlight-button').click(displaySelectedCells);
                 return;
             }
 
@@ -107,20 +133,18 @@ declare var fabric: any;
             loadSampleData();
 
             // Add a click event handler for the highlight button.
-            $('#highlight-button').click(
-                hightlightHighestValue);
+            $('#highlight-button').click(hightlightHighestValue);
         });
-    }
+    };
 
     function loadSampleData() {
-
         var values = [
-                        [Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000)],
-                        [Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000)],
-                        [Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000)]
+            [Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000)],
+            [Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000)],
+            [Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000)]
         ];
 
-        // Run a batch operation against the Excel object model.
+        // Run a batch operation against the Excel object model
         Excel.run(function (ctx) {
             // Create a proxy object for the active sheet
             var sheet = ctx.workbook.worksheets.getActiveWorksheet();
@@ -134,15 +158,13 @@ declare var fabric: any;
     }
 
     function hightlightHighestValue() {
-
-        // Run a batch operation against the Excel object model.
+        // Run a batch operation against the Excel object model
         Excel.run(function (ctx) {
-
-            // Create a proxy object for the selected range and load its address and values properties.
-            var sourceRange = ctx.workbook.getSelectedRange().load("values, address, rowIndex, columnIndex, rowCount, columnCount");
+            // Create a proxy object for the selected range and load its properties
+            var sourceRange = ctx.workbook.getSelectedRange().load("values, rowCount, columnCount");
 
             // Run the queued-up command, and return a promise to indicate task completion
-            return ctx.sync().
+            return ctx.sync()
                 .then(function () {
                     var highestRow = 0;
                     var highestCol = 0;
@@ -163,16 +185,11 @@ declare var fabric: any;
                     sourceRange.worksheet.getUsedRange().format.fill.clear();
                     sourceRange.worksheet.getUsedRange().format.font.bold = false;
 
-                    cellToHighlight.load("values");
-                })
-                   // Run the queued-up commands.
-                .then(ctx.sync)
-                .then(function () {
                     // Highlight the cell
                     cellToHighlight.format.fill.color = "orange";
                     cellToHighlight.format.font.bold = true;
                 })
-                .then(ctx.sync)
+                .then(ctx.sync);
         })
         .catch(errorHandler);
     }
@@ -188,7 +205,7 @@ declare var fabric: any;
             });
     }
 
-    // Helper function for treating errors.
+    // Helper function for treating errors
     function errorHandler(error) {
         // Always be sure to catch any accumulated errors that bubble up from the Excel.run execution
         showNotification("Error", error);
@@ -200,16 +217,15 @@ declare var fabric: any;
 
     // Helper function for displaying notifications
     function showNotification(header, content) {
-        $("#notificationHeader").text(header);
-        $("#notificationBody").text(content);
+        $("#notification-header").text(header);
+        $("#notification-body").text(content);
         messageBanner.showBanner();
         messageBanner.toggleExpansion();
     }
 })();
-
 ```
 
-## <a name="additional-resources"></a>Дополнительные ресурсы
+## <a name="see-also"></a>См. также
 
-* [Обсуждение реализации обещаний на StackOverflow](https://stackoverflow.com/questions/44461312/office-addins-file-in-its-typescript-version-doesnt-work)
+* [Обсуждение реализации обещаний на сайте StackOverflow](https://stackoverflow.com/questions/44461312/office-addins-file-in-its-typescript-version-doesnt-work)
 * [Примеры надстроек Office на сайте GitHub](https://github.com/officedev)
