@@ -1,17 +1,28 @@
-# <a name="tips-for-creating-office-add-ins-with-angular"></a>Советы по созданию надстроек Office с помощью Angular
+---
+title: Разработка надстроек Office с помощью Angular
+description: ''
+ms.date: 12/04/2017
+---
+
+# <a name="develop-office-add-ins-with-angular"></a>Разработка надстроек Office с помощью Angular
 
 В этой статье приведены рекомендации по использованию Angular 2 и более поздних версий для создания надстройки Office в виде одностраничного приложения.
 
->**Примечание.** Вы можете поделиться опытом по использованию Angular для создания надстроек Office? Примите участие в создании этой статьи на сайте [GitHub](https://github.com/OfficeDev/office-js-docs) или сообщите о [проблеме](https://github.com/OfficeDev/office-js-docs/issues) в репозитории. 
+> [!NOTE]
+> Вы можете поделиться опытом по использованию Angular для создания надстроек Office? Примите участие в создании этой статьи на сайте [GitHub](https://github.com/OfficeDev/office-js-docs) или сообщите о [проблеме](https://github.com/OfficeDev/office-js-docs-pr/issues) в соответствующем репозитории. 
 
 Пример надстройки Office, созданной на платформе Angular, приведен в статье [Надстройка на основе Angular для проверки стиля в приложении Word](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker).
 
 ## <a name="install-the-typescript-type-definitions"></a>Установка определений типов TypeScript
-Откройте окно nodejs и введите в командной строке следующую команду: `npm install --save-dev @types/office-js`.
+Откройте окно nodejs и введите в командной строке следующую команду: 
 
-## <a name="bootstrapping-must-be-inside-officeinitialize"></a>Начальная загрузка должна выполняться в методе Office.initialize
+```bash
+npm install --save-dev @types/office-js`
+```
 
-На любой странице, которая вызывает интерфейсы API JavaScript для Office, Word или Excel, в коде сначала нужно назначить метод для свойства `Office.initialize`. (Если у вас нет кода инициализации, тело метода может состоять из пустых символов "`{}`", но свойство `Office.initialize` должно быть определено. Дополнительные сведения см. в разделе [Инициализация надстройки](http://dev.office.com/docs/add-ins/develop/understanding-the-javascript-api-for-office#initializing-your-add-in).) Office вызывает этот метод сразу же после того, как инициализирует библиотеки JavaScript для Office.
+## <a name="bootstrapping-must-be-inside-officeinitialize"></a>Начальная загрузка должна определяться в методе Office.initialize
+
+На любой странице, которая вызывает интерфейсы API JavaScript для Office, Word или Excel, в коде сначала нужно назначить метод для свойства `Office.initialize`. (Если у вас нет кода инициализации, тело метода может состоять из пустых символов "`{}`", но свойство `Office.initialize` должно быть определено. Дополнительные сведения см. в разделе [Инициализация надстройки](understanding-the-javascript-api-for-office.md#initializing-your-add-in).) Office вызывает этот метод сразу же после того, как инициализирует библиотеки JavaScript для Office.
 
 **Вызов кода начальной загрузки на основе Angular необходимо задать в методе, который назначен `Office.initialize`**, чтобы сначала выполнялась инициализация библиотек JavaScript для Office. Вот простой пример, в котором показано, как это сделать. Этот код должен находиться в файле main.ts проекта.
 
@@ -77,7 +88,7 @@ export class AppRoutingModule { }
 
 В приложении Angular пользовательский интерфейс иногда не обновляется. Это происходит потому, что эта часть кода выполняется вне зоны Angular. Чтобы решить эту проблему, поместите код в зону, как показано в приведенном ниже примере.
 
-```ts
+```js
 import { NgZone } from '@angular/core';
 
 export class MyComponent {

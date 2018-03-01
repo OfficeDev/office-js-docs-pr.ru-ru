@@ -1,12 +1,19 @@
+---
+title: Диалоговые окна в надстройках Office
+description: ''
+ms.date: 12/04/2017
+---
+
+
 # <a name="dialog-boxes-in-office-add-ins"></a>Диалоговые окна в надстройках Office
  
 Диалоговые окна — окна, которые накладываются на активное окно приложения Office. Вы можете использовать диалоговые окна, чтобы показывать страницы входа, которые нельзя открыть непосредственно в области задач, запросы на подтверждение действий, предпринятых пользователем, или видео, которые будут слишком маленькими в области задач.
 
-**Пример диалогового окна**
+*Рисунок 1. Типичный макет диалогового окна*
 
-![Изображение, на котором показан типичный макет диалогового окна](../images/overview_withApp_dialog.png)
+![Изображение, на котором показан типичный макет диалогового окна](../images/overview-with-app-dialog.png)
 
-### <a name="best-practices"></a>Рекомендации
+## <a name="best-practices"></a>Рекомендации
 
 |**Рекомендуется**|**Не рекомендуется**|
 |:-----|:--------|
@@ -15,11 +22,11 @@
 
 ## <a name="implementation"></a>Реализация
 
-Пример реализации диалогового окна см. в [этой статье](https://github.com/OfficeDev/Office-Add-in-Dialog-API-Simple-Example) на сайте GitHub.
+Пример реализации диалогового окна с использованием Dialog API для надстроек Office см. в [этой статье](https://github.com/OfficeDev/Office-Add-in-Dialog-API-Simple-Example) на сайте GitHub.
 
-## <a name="additional-resources"></a>Дополнительные ресурсы
+## <a name="see-also"></a>См. также
 
-- [Пример конструктивного шаблона](https://office.visualstudio.com/DefaultCollection/OC/_git/GettingStarted-FabricReact)
+- [Пример шаблона для взаимодействия с пользователем](https://office.visualstudio.com/DefaultCollection/OC/_git/GettingStarted-FabricReact)
 - [Ресурсы для разработки на сайте GitHub](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code)
 - [Объект Dialog](https://dev.office.com/reference/add-ins/shared/officeui.dialog)
 

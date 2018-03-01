@@ -1,17 +1,23 @@
+---
+title: Обзор создания кода с помощью API JavaScript для OneNote
+description: ''
+ms.date: 01/23/2018
+---
+
 # <a name="onenote-javascript-api-programming-overview"></a>Обзор создания кода с помощью API JavaScript для OneNote
 
 В OneNote представлен API JavaScript для надстроек OneNote Online. Вы можете создавать надстройки области задач, контентные надстройки и команды надстроек, которые взаимодействуют с объектами OneNote и подключаются к веб-службам или другим веб-ресурсам.
 
 > [!NOTE]
->  Если вы планируете [публиковать](../publish/publish.md) надстройку в Магазине Office, она должна соответствовать [политикам проверки Магазина Office](https://msdn.microsoft.com/ru-ru/library/jj220035.aspx), чтобы пройти проверку. Например, работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://msdn.microsoft.com/ru-ru/library/jj220035.aspx#Anchor_3) и на [странице с информацией о доступности и ведущих приложениях для надстроек Office](https://dev.office.com/add-in-availability).
+> Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в интерфейсе Office, убедитесь, что она соответствует [политикам проверки AppSource](https://docs.microsoft.com/ru-ru/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка должна работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://docs.microsoft.com/ru-ru/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице со сведениями о доступности и ведущих приложениях для надстроек Office](../overview/office-add-in-availability.md).
 
 ## <a name="components-of-an-office-add-in"></a>Компоненты надстройки Office
 
 Надстройки состоят из двух указанных ниже основных компонентов.
 
-- **Веб-приложение**, состоящее из веб-страницы и необходимых JavaScript-, CSS- или других файлов. Эти файлы можно разместить на веб-сервере или в службе веб-хостинга, например в Microsoft Azure. В OneNote Online веб-приложение отображается в элементе управления браузера или в iFrame.
+- **Веб-приложение**, состоящее из веб-страницы и необходимых JavaScript-, CSS- или других файлов. Эти файлы можно разместить на веб-сервере или в службе веб-хостинга, например в Microsoft Azure. В OneNote Online веб-приложение отображается в элементе управления браузера или в iFrame.
     
-- **Манифест в формате XML**, в котором указан URL-адрес веб-страницы надстройки и все требования, необходимые для получения доступа, параметры и возможности для надстройки. Этот файл хранится на клиентском компьютере. Для надстроек OneNote используется такой же формат [манифеста](https://dev.office.com/docs/add-ins/overview/add-in-manifests), что и для других надстроек Office.
+- **Манифест в формате XML**, в котором указан URL-адрес веб-страницы надстройки и все требования, необходимые для получения доступа, параметры и возможности для надстройки. Этот файл хранится на клиентском компьютере. Для надстроек OneNote используется такой же формат [манифеста](../develop/add-in-manifests.md), что и для других надстроек Office.
 
 **Надстройка Office = манифест + веб-страница**
 
@@ -32,47 +38,48 @@
 
 2. Создание прокси-объекта, представляющего объект OneNote, с которым вам необходимо работать. Для синхронного взаимодействия с прокси-объектами можно считывать и записывать их свойства и вызывать имеющиеся в них методы. 
 
-3. Вызовите метод **load** прокси, чтобы указать для него значения свойств, указанные в параметре. Этот вызов будет добавлен в очередь команд.
+3. Вызовите метод **load** прокси-объекта, чтобы указать для него значения свойств, указанные в параметре. Этот вызов будет добавлен в очередь команд.
 
-    > **Примечание.** Выполняемые методами вызовы API (например, `context.application.getActiveSection().pages;`), также добавляются в очередь.
+   > [!NOTE]
+   > Вызовы, которые методы совершают к API (например, `context.application.getActiveSection().pages;`), также добавляются в очередь.
 
-4. Чтобы запустить все поставленные в очередь команды в том порядке, в котором они были добавлены в очередь, вызовите метод **context.sync**. Этот метод синхронизирует состояния выполняющихся сценариев и реальных объектов, а также получает свойства загруженных объектов OneNote, которые необходимо использовать в сценарии. Вы можете использовать возвращенный объект обещания для связывания дополнительных действий в цепочку.
+4. Чтобы запустить все поставленные в очередь команды в том порядке, в котором они находятся в очереди, вызовите метод **context.sync**. Этот метод синхронизирует состояния выполняющихся сценариев и реальных объектов, а также получает свойства загруженных объектов OneNote, которые необходимо использовать в сценарии. Вы можете использовать возвращенный объект обещания для связывания дополнительных действий в цепочку.
 
-Например: 
+Примеры: 
 
-```
-    function getPagesInSection() {
-        OneNote.run(function (context) {
-            
-            // Get the pages in the current section.
-            var pages = context.application.getActiveSection().pages;
-            
-            // Queue a command to load the id and title for each page.            
-            pages.load('id,title');
-            
-            // Run the queued commands, and return a promise to indicate task completion.
-            return context.sync()
-                .then(function () {
-                    
-                    // Read the id and title of each page. 
-                    $.each(pages.items, function(index, page) {
-                        var pageId = page.id;
-                        var pageTitle = page.title;
-                        console.log(pageTitle + ': ' + pageId); 
-                    });
-                })
-                .catch(function (error) {
-                    app.showNotification("Error: " + error);
-                    console.log("Error: " + error);
-                    if (error instanceof OfficeExtension.Error) {
-                        console.log("Debug info: " + JSON.stringify(error.debugInfo));
-                    }
+```js
+function getPagesInSection() {
+    OneNote.run(function (context) {
+        
+        // Get the pages in the current section.
+        var pages = context.application.getActiveSection().pages;
+        
+        // Queue a command to load the id and title for each page.            
+        pages.load('id,title');
+        
+        // Run the queued commands, and return a promise to indicate task completion.
+        return context.sync()
+            .then(function () {
+                
+                // Read the id and title of each page. 
+                $.each(pages.items, function(index, page) {
+                    var pageId = page.id;
+                    var pageTitle = page.title;
+                    console.log(pageTitle + ': ' + pageId); 
                 });
-        });
-    }
+            })
+            .catch(function (error) {
+                app.showNotification("Error: " + error);
+                console.log("Error: " + error);
+                if (error instanceof OfficeExtension.Error) {
+                    console.log("Debug info: " + JSON.stringify(error.debugInfo));
+                }
+            });
+    });
+}
 ```
 
-Сведения о поддерживаемых объектах и операциях OneNote см. в [справочнике по API](http://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference).
+Сведения о поддерживаемых объектах и операциях OneNote см. в [справочнике по API](https://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference).
 
 ### <a name="accessing-the-common-api-through-the-document-object"></a>Получение доступа к стандартному API с помощью объекта *Document*
 
@@ -80,7 +87,7 @@
 
 Например:  
 
-```
+```js
 function getSelectionFromPage() {
     Office.context.document.getSelectedDataAsync(
         Office.CoercionType.Text,
@@ -98,13 +105,13 @@ function getSelectionFromPage() {
 
 | API | Примечания |
 |:------|:------|
-| [Office.context.document.getSelectedDataAsync](https://msdn.microsoft.com/ru-ru/library/office/fp142294.aspx) | Только **Office.CoercionType.Text** и **Office.CoercionType.Matrix** |
-| [Office.context.document.setSelectedDataAsync](https://msdn.microsoft.com/ru-ru/library/office/fp142145.aspx) | Только **Office.CoercionType.Text**, **Office.CoercionType.Image** и **Office.CoercionType.Html** | 
-| [var mySetting = Office.context.document.settings.get(имя);](https://msdn.microsoft.com/ru-ru/library/office/fp142180.aspx) | Параметры поддерживаются только контентными надстройками | 
-| [Office.context.document.settings.set(имя, значение);](https://msdn.microsoft.com/ru-ru/library/office/fp161063.aspx) | Параметры поддерживаются только контентными надстройками | 
+| [Office.context.document.getSelectedDataAsync](https://dev.office.com/reference/add-ins/shared/document.getselecteddataasync) | Только **Office.CoercionType.Text** и **Office.CoercionType.Matrix** |
+| [Office.context.document.setSelectedDataAsync](https://dev.office.com/reference/add-ins/shared/document.setselecteddataasync) | Только **Office.CoercionType.Text**, **Office.CoercionType.Image** и **Office.CoercionType.Html** | 
+| [var mySetting = Office.context.document.settings.get(имя);](https://dev.office.com/reference/add-ins/shared/settings.get) | Параметры поддерживаются только контентными надстройками | 
+| [Office.context.document.settings.set(имя, значение);](https://dev.office.com/reference/add-ins/shared/settings.set) | Параметры поддерживаются только контентными надстройками | 
 | [Office.EventType.DocumentSelectionChanged](https://dev.office.com/reference/add-ins/shared/document.selectionchanged.event) ||
 
-Обычно стандартный API следует использовать только тогда, когда необходимые возможности не поддерживаются в многофункциональном API. Дополнительные сведения об использовании стандартного API см. в [документации](https://dev.office.com/docs/add-ins/overview/office-add-ins) и [справочнике](https://dev.office.com/reference/add-ins/javascript-api-for-office) по надстройкам Office.
+В общем случае стандартный API следует использовать только тогда, когда необходимые возможности не поддерживаются в многофункциональном API. Дополнительные сведения об использовании стандартного API см. в [документации](../overview/office-add-ins.md) и [справочнике](https://dev.office.com/reference/add-ins/javascript-api-for-office) по надстройкам Office.
 
 
 <a name="om-diagram"></a>
@@ -114,9 +121,9 @@ function getSelectionFromPage() {
   ![Схема объектной модели OneNote](../images/onenote-om.png)
 
 
-## <a name="additional-resources"></a>Дополнительные ресурсы
+## <a name="see-also"></a>См. также
 
 - [Создание первой надстройки OneNote](onenote-add-ins-getting-started.md)
-- [Справочник по API JavaScript для OneNote](http://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference)
+- [Справочник по API JavaScript для OneNote](https://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
-- [Обзор платформы надстроек Office](https://dev.office.com/docs/add-ins/overview/office-add-ins)
+- [Обзор платформы надстроек Office](../overview/office-add-ins.md)

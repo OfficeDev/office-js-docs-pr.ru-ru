@@ -1,8 +1,16 @@
+---
+title: Работа с листами с использованием API JavaScript для Excel
+description: ''
+ms.date: 12/04/2017
+---
+
+
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
-В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для листов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Worksheet** и **WorksheetCollection**, см. в статьях [Объект Worksheet (API JavaScript для Excel)](http://dev.office.com/reference/add-ins/excel/worksheet) и [Объект WorksheetCollection (API JavaScript для Excel)](http://dev.office.com/reference/add-ins/excel/worksheetcollection).
+В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для листов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Worksheet** и **WorksheetCollection**, см. в статьях [Объект Worksheet (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/worksheet) и [Объект WorksheetCollection (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/worksheetcollection).
 
-**Примечание.** Сведения в этой статье применимы только к обычным листам, а не к листам диаграмм или макросов.
+> [!NOTE]
+> Сведения в этой статье применимы только к обычным листам, а не к листам диаграмм или макросов.
 
 ## <a name="get-worksheets"></a>Получение листов
 
@@ -27,7 +35,8 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-**Примечание.** Свойство **id** листа уникальным образом идентифицирует лист в конкретной книге, и его значение не изменяется даже при переименовании или перемещении листа. При удалении листа из книги в Excel для Mac **идентификатор** удаленного листа можно назначить новому листу (созданному после удаления).
+> [!NOTE]
+> Свойство **id** листа уникальным образом идентифицирует лист в конкретной книге, и его значение не изменяется даже при переименовании или перемещении листа. При удалении листа из книги в Excel для Mac **идентификатор** удаленного листа можно назначить новому листу (созданному после удаления).
 
 ## <a name="get-the-active-worksheet"></a>Получение активного листа
 
@@ -134,7 +143,7 @@ Excel.run(function (context) {
 
 ## <a name="add-a-worksheet"></a>Добавление листа
 
-В примере кода ниже показано, как добавить лист **Sample** (Пример) в рабочую книгу, загрузить его свойства **name** и **position** и записать сообщение в консоль. Новый лист будет добавлен после всех существующих листов.
+В примере кода ниже показано, как добавить лист **Sample** (Пример) в рабочую книгу, загрузить его свойства **name** и **position** и записать сообщение в консоль. Новый лист будет следовать за всеми остальными.
 
 ```js
 Excel.run(function (context) {
@@ -266,8 +275,8 @@ Excel.run(function (context) {
 
 Примеры, в которых показано, как получить диапазон на листе, см. в статье [Работа с диапазонами с использованием API JavaScript для Excel](excel-add-ins-ranges.md).
 
-## <a name="additional-resources"></a>Дополнительные ресурсы
+## <a name="see-also"></a>См. также
 
 - [Основные понятия API JavaScript для Excel](excel-add-ins-core-concepts.md)
-- [Объект Worksheet (API JavaScript для Excel)](http://dev.office.com/reference/add-ins/excel/worksheet)
-- [Объект WorksheetCollection (API JavaScript для Excel)](http://dev.office.com/reference/add-ins/excel/worksheetcollection)
+- [Объект Worksheet (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/worksheet)
+- [Объект WorksheetCollection (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/worksheetcollection)

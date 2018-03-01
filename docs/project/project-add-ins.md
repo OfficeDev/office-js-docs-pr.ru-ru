@@ -1,23 +1,26 @@
+---
+title: Надстройки области задач для Project
+description: ''
+ms.date: 01/23/2018
+---
 
 # <a name="task-pane-add-ins-for-project"></a>Надстройки области задач для Project
 
-
 Project стандартный 2013 и Project профессиональный 2013 поддерживают надстройки области задач. Вы можете запускать стандартные надстройки области задач, разработанные для Word 2013 и Excel 2013. Вы также можете разрабатывать собственные надстройки, которые обрабатывают события выбора в Project и интегрируют данные на уровне задачи, ресурса, представления и другие данные уровня ячейки в проект со списками SharePoint, надстройками SharePoint, веб-частями, веб-службами и корпоративными приложениями.
 
- >**Примечание**[Загружаемый пакет SDK Project 2013](https://www.microsoft.com/en-us/download/details.aspx?id=30435%20) включает в себя примеры надстроек, показывающие, как использовать объектную модель надстроек для Project и как использовать службу OData для отчетности в Project Server 2013. При извлечении и установке пакета SDK см. подкаталог `\Samples\Apps\`.
+> [!NOTE]
+> [Загружаемый пакет SDK Project 2013](https://www.microsoft.com/en-us/download/details.aspx?id=30435%20) включает в себя примеры надстроек, показывающие, как использовать объектную модель надстроек для Project и как использовать службу OData для отчетности в Project Server 2013. При извлечении и установке пакета SDK см. подкаталог `\Samples\Apps\`.
 
 Общие сведения о надстройках Office см. в статье [Обзор платформы надстроек Office](../overview/office-add-ins.md).
 
 ## <a name="add-in-scenarios-for-project"></a>Сценарии надстроек для Project
 
-
 Руководители проектов могут использовать надстройки области задач Project, чтобы упростить управление проектом. Вместо переключения из Project и открытия другого приложения для поиска часто используемой информации, руководители проектов могут осуществлять прямой доступ к этой информации в Project. Контент в надстройке области задач может быть контекстно-зависимым на основании выбранной задачи, ресурсов, представления или других данных из ячейки на диаграмме Ганта, в представлении использования задач или представлении использования ресурсов.
 
-
- >**Примечание**  С помощью Project профессиональный 2013 можно разрабатывать надстройки области задач, которые получают доступ к локальным установкам Project Server 2013, Project Online, а также к локальной или веб-версии SharePoint 2013.Project стандартный 2013 не поддерживает прямую интеграцию с данными Project Server или списками задач SharePoint, синхронизированными с Project Server.
+> [!NOTE]
+> С помощью Project профессиональный 2013 можно разрабатывать надстройки области задач, которые получают доступ к локальным установкам Project Server 2013, Project Online, а также к локальной или веб-версии SharePoint 2013.Project стандартный 2013 не поддерживает прямую интеграцию с данными Project Server или списками задач SharePoint, синхронизированными с Project Server.
 
 Возможны следующие сценарии использования надстроек для Project.
-
 
 -  **Составление графика проекта**. Просматривайте данные из связанных проектов, которые могут затрагивать график. Надстройка области задач может интегрировать необходимые данные из других проектов в Project Server 2013. Например, вы можете просматривать наборы проектов и даты этапов разработки для подразделений или просматривать данные на определенную дату из других проектов, основанных на выбранном настраиваемом поле.
     
@@ -37,9 +40,7 @@ Project стандартный 2013 и Project профессиональный 
     
     Пример представлен в статье [Создание надстройки Project, использующей REST с локальной службой OData Project Server](../project/create-a-project-add-in-that-uses-rest-with-an-on-premises-odata-service.md).
     
-
 ## <a name="developing-project-add-ins"></a>Разработка надстроек для Project
-
 
 Библиотека JavaScript для надстройки для Project содержит расширения псевдонима пространства имен  **Office**, позволяющие разработчикам осуществлять доступ к свойствам приложения Project, а также задач, ресурсов и представлений в проекте. Расширения библиотеки JavaScript в файле Project-15.js используются в надстройке для Project, созданной с использованием Visual Studio 2015. Office.js, Office.debug.js, Project-15.js, Project-15.debug.js и другие связанные файлы также предоставлены в загружаемом пакете SDK Project 2013.
 
@@ -66,33 +67,33 @@ Project стандартный 2013 и Project профессиональный 
 ### <a name="procedure-1-to-create-the-add-in-manifest-file-for-bing-search"></a>Процедура 1. Создание файла манифеста для надстройки поиска Bing
 
 
-- Создайте XML-файл в локальном каталоге. Этот XML-файл включает в себя элемент  **OfficeApp** и дочерние элементы, описанные в статье [XML-манифест надстроек для Office](../overview/add-in-manifests.md). Например, создайте файл BingSearch.xml со следующим XML-кодом.
+- Создайте XML-файл в локальном каталоге. Этот XML-файл включает в себя элемент  **OfficeApp** и дочерние элементы, описанные в статье [XML-манифест надстроек для Office](../develop/add-in-manifests.md). Например, создайте файл BingSearch.xml со следующим XML-кодом.
     
-```XML
-   <?xml version="1.0" encoding="utf-8"?>
- <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.0" 
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-           xsi:type="TaskPaneApp">
-   <Id>1234-5678</Id>
-   <Version>15.0</Version>
-   <ProviderName>Microsoft</ProviderName>
-   <DefaultLocale>en-us</DefaultLocale>
-   <DisplayName DefaultValue="Bing Search">
-   </DisplayName>
-   <Description DefaultValue="Search selected data on Bing">
-   </Description>
-   <IconUrl DefaultValue="http://officeimg.vo.msecnd.net/_layouts/images/general/office_logo.jpg">
-   </IconUrl>
-   <Capabilities>
-     <Capability Name="Project"/>
-   </Capabilities>
-   <DefaultSettings>
-     <SourceLocation DefaultValue="http://m.bing.com">
-     </SourceLocation>
-   </DefaultSettings>
-   <Permissions>ReadWriteDocument</Permissions>
- </OfficeApp>
-```
+    ```XML
+    <?xml version="1.0" encoding="utf-8"?>
+    <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.0" 
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:type="TaskPaneApp">
+      <Id>1234-5678</Id>
+      <Version>15.0</Version>
+      <ProviderName>Microsoft</ProviderName>
+      <DefaultLocale>en-us</DefaultLocale>
+      <DisplayName DefaultValue="Bing Search">
+      </DisplayName>
+      <Description DefaultValue="Search selected data on Bing">
+      </Description>
+      <IconUrl DefaultValue="http://officeimg.vo.msecnd.net/_layouts/images/general/office_logo.jpg">
+      </IconUrl>
+      <Capabilities>
+        <Capability Name="Project"/>
+      </Capabilities>
+      <DefaultSettings>
+        <SourceLocation DefaultValue="http://m.bing.com">
+        </SourceLocation>
+      </DefaultSettings>
+      <Permissions>ReadWriteDocument</Permissions>
+    </OfficeApp>
+    ```
 
 - Ниже приведены обязательные элементы манифеста надстройки:
   - Атрибут  `xsi:type="TaskPaneApp"` в элементе **OfficeApp** указывает, что эта надстройка относится к типу области задач.
@@ -106,46 +107,47 @@ Project стандартный 2013 и Project профессиональный 
     
 - (Необязательно) Добавьте элементы  **Override**, имеющие значения для других региональных параметров и языка. Например, следующий манифест предоставляет элементы  **Override** для значений **DisplayName**,  **Description**,  **IconUrl** и **SourceLocation** для французского языка.
     
-```XML
-   <?xml version="1.0" encoding="utf-8"?>
- <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.0" 
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-           xsi:type="TaskPaneApp">
-   <Id>1234-5678</Id>
-   <Version>15.0</Version>
-   <ProviderName>Microsoft</ProviderName>
-   <DefaultLocale>en-us</DefaultLocale>
-   <DisplayName DefaultValue="Bing Search">
-     <Override Locale="fr-fr" Value="Bing Search"/>
-   </DisplayName>
-   <Description DefaultValue="Search selected data on Bing">
-     <Override Locale="fr-fr" Value="Search selected data on Bing"></Override>
-   </Description>
-   <IconUrl DefaultValue="http://officeimg.vo.msecnd.net/_layouts/images/general/office_logo.jpg">
-     <Override Locale="fr-fr" Value="http://officeimg.vo.msecnd.net/_layouts/images/general/office_logo.jpg"/>
-   </IconUrl>
-   <Capabilities>
-     <Capability Name="Project"/>
-   </Capabilities>
-   <DefaultSettings>
-     <SourceLocation DefaultValue="http://m.bing.com">
-       <Override Locale="fr-fr" Value="http://m.bing.com"/>
-     </SourceLocation>
-   </DefaultSettings>
-   <Permissions>ReadWriteDocument</Permissions>
- </OfficeApp>
-```
+    ```XML
+    <?xml version="1.0" encoding="utf-8"?>
+    <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.0" 
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:type="TaskPaneApp">
+      <Id>1234-5678</Id>
+      <Version>15.0</Version>
+      <ProviderName>Microsoft</ProviderName>
+      <DefaultLocale>en-us</DefaultLocale>
+      <DisplayName DefaultValue="Bing Search">
+        <Override Locale="fr-fr" Value="Bing Search"/>
+      </DisplayName>
+      <Description DefaultValue="Search selected data on Bing">
+        <Override Locale="fr-fr" Value="Search selected data on Bing"></Override>
+      </Description>
+      <IconUrl DefaultValue="http://officeimg.vo.msecnd.net/_layouts/images/general/office_logo.jpg">
+        <Override Locale="fr-fr" Value="http://officeimg.vo.msecnd.net/_layouts/images/general/office_logo.jpg"/>
+      </IconUrl>
+      <Capabilities>
+        <Capability Name="Project"/>
+      </Capabilities>
+      <DefaultSettings>
+        <SourceLocation DefaultValue="http://m.bing.com">
+          <Override Locale="fr-fr" Value="http://m.bing.com"/>
+        </SourceLocation>
+      </DefaultSettings>
+      <Permissions>ReadWriteDocument</Permissions>
+    </OfficeApp>
+    ```
 
 
 ## <a name="installing-project-add-ins"></a>Установка надстроек Project
 
 
-В Project 2013 вы можете устанавливать надстройки в виде изолированных решений в общей папке или в частном каталоге надстроек. Вы также можете просматривать и приобретать надстройки в общедоступном магазине Магазин Office.
+В Project 2013 вы можете устанавливать надстройки в виде изолированных решений в общей папке или в частном каталоге надстроек. Вы также можете просматривать и приобретать надстройки в AppSource.
 
 Общая папка может содержать несколько XML-файлов манифестов и несколько подкаталогов. Вы можете добавлять и удалять каталоги для хранения манифестов с помощью вкладки  **Надежные каталоги надстроек** диалогового окна **Центр управления безопасностью** в Project 2013. Для отображения надстройки в Project элемент **SourceLocation** в манифесте должен указывать на существующий веб-сайт или исходный HTML-файл.
 
 
- >**Примечание**  Требуется установленный браузер Internet Explorer 9 (или более поздней версии), который может и не использоваться по умолчанию. Приложениям Надстройки Office необходимы компоненты Internet Explorer 9. В качестве браузера по умолчанию может выступать Internet Explorer 9, Safari 5.0.6, Firefox 5, Chrome 13 или один из этих браузеров более поздней версии.
+> [!NOTE]
+> Требуется установленный браузер Internet Explorer 9 (или более поздней версии), который может и не использоваться по умолчанию. Приложениям Надстройки Office необходимы компоненты Internet Explorer 9. В качестве браузера по умолчанию может выступать Internet Explorer 9, Safari 5.0.6, Firefox 5, Chrome 13 или один из этих браузеров более поздней версии.
 
 В процедуре 2 надстройка поиска Bing устанавливается на локальный компьютер с установленным Project 2013. Однако из-за того, что инфраструктура надстроек не использует локальные пути для файлов, такие как  `C:\Project\AppManifests`, вы можете создать на локальном компьютере сетевую папку. При необходимости вы можете создать общую папку на удаленном компьютере.
 
@@ -165,48 +167,41 @@ Project стандартный 2013 и Project профессиональный 
     
 6. В области  **Надежные каталоги надстроек** (см. рис. 1) добавьте путь `\\ServerName\AppManifests` в текстовое поле **URL-адрес каталога**, выберите элемент  **Добавить каталог** и нажмите кнопку **ОК**.
     
-     >**Примечание.** На рис. 1 показаны две общие папки и один гипотетический URL-адрес частного каталога в списке **Адрес доверенного каталога**. Только одна общая папка может использоваться по умолчанию, и только один URL-адрес может указывать каталог по умолчанию. Например, если сделать`\\Server2\AppManifests` папкой по умолчанию, то Project снимет флажок **По умолчанию** для папки `\\ServerName\AppManifests`. Если выделение по умолчанию будет изменено, вы можете нажать кнопку **Очистить**, чтобы удалить установленные надстройки, а затем перезапустить Project. Если вы добавите надстройку в общую папку по умолчанию или каталог SharePoint при запущенном приложении Project, необходимо перезапустить Project.
+    > [!NOTE]
+    > На рис. 1 показаны две общие папки и один гипотетический URL-адрес частного каталога в списке **Адрес доверенного каталога**. Только одна общая папка может использоваться по умолчанию, и только один URL-адрес может указывать каталог по умолчанию. Например, если сделать `\\Server2\AppManifests` папкой по умолчанию, то Project снимет флажок **По умолчанию** для папки `\\ServerName\AppManifests`. Если выделение по умолчанию будет изменено, вы можете нажать кнопку **Очистить**, чтобы удалить установленные надстройки, а затем перезапустить Project. Если вы добавите надстройку в общую папку по умолчанию или каталог SharePoint при запущенном приложении Project, необходимо перезапустить Project.
 
-    **Рис. 1. Добавление каталогов с манифестами надстроек с помощью центра управления безопасностью**
+    *Рис. 1. Добавление каталогов с манифестами надстроек с помощью центра управления безопасностью*
 
-    ![Использование центра управления безопасностью для добавления манифестов приложений](../images/pj15_AgaveOverview_TrustCenter.PNG)
+    ![Использование центра управления безопасностью для добавления манифестов приложений](../images/pj15-agave-overview-trust-centers.png)
 
 7. На ленте  **Project** выберите раскрывающееся меню **Apps Надстройки Office** и выберите элемент **Просмотреть все**. В диалоговом окне  **Вставка надстройки** выберите **ОБЩАЯ ПАПКА** (см. рис. 2).
     
-    **Рис. 2. Запуск надстройки, расположенной в общей папке**
+    *Рис. 2. Запуск надстройки, расположенной в общей папке*
 
-    ![Запуск приложения Office, расположенного в общей папке](../images/pj15_AgaveOverview_StartAgaveApp.PNG)
+    ![Запуск приложения Office, расположенного в общей папке](../images/pj15-agave-overview-start-agave-apps.png)
 
 8. Выберите надстройку поиска Bing и нажмите кнопку  **Вставить**.
     
-Надстройка поиска Bing отображается в области задач, как показано на рисунке 3. Вы можете вручную изменить размер области задач и использовать надстройку поиска Bing.
+    Надстройка поиска Bing отображается в области задач, как показано на рисунке 3. Вы можете вручную изменить размер области задач и использовать надстройку поиска Bing.
 
-**Рис. 3. Использование приложения поиска Bing**
+    *Рис. 3. Использование приложения поиска Bing*
 
-![Использование приложения поиска Bing](../images/pj15_AgaveOverview_BingSearch.gif)
+    ![Использование приложения поиска Bing](../images/pj15-agave-overview-bing-search.png)
 
 
 ## <a name="distributing-project-add-ins"></a>Распространение надстроек Project
 
 
-Вы можете распространять надстройки через общую папку, каталог надстроек в библиотеке SharePoint или приложение Надстройка Project в Магазин Office. Подробнее: [Публикация надстройки Office](../publish/publish.md).
+Вы можете распространять надстройки через общую папку, каталог надстроек в библиотеке SharePoint или AppSource. Дополнительные сведения см. в статье [Публикация надстройки Office](../publish/publish.md).
 
 
-## <a name="additional-resources"></a>Дополнительные ресурсы
-
-
+## <a name="see-also"></a>См. также
 
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)
-    
-- [XML-манифест надстроек для Office](../overview/add-in-manifests.md)
-    
-- [API JavaScript для Office](http://dev.office.com/reference/add-ins/javascript-api-for-office)
-    
-- [Создание первой надстройки области задач для Project 2013 с помощью текстового редактора](../project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md)
-    
-- [Создание надстройки Project, использующей REST с локальной службой OData Project Server](../project/create-a-project-add-in-that-uses-rest-with-an-on-premises-odata-service.md)
-    
+- [XML-манифест надстройки Office](../develop/add-in-manifests.md)
+- [API JavaScript для Office](https://dev.office.com/reference/add-ins/javascript-api-for-office)
+- [Создание первой надстройки области задач для Project 2013 с помощью текстового редактора](create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md)
+- [Создание надстройки Project, использующей REST с локальной службой OData Project Server](create-a-project-add-in-that-uses-rest-with-an-on-premises-odata-service.md)
 - [Подключение надстройки области задач Project к PWA](http://blogs.msdn.com/b/project_programmability/archive/2012/11/02/connecting-a-project-task-pane-app-to-pwa.aspx)
-    
 - [Загрузка пакета SDK для Project 2013](https://www.microsoft.com/en-us/download/details.aspx?id=30435%20)
     

@@ -1,3 +1,8 @@
+---
+title: Использование Office UI Fabric JS в надстройках Office
+description: ''
+ms.date: 12/04/2017
+---
 
 # <a name="use-office-ui-fabric-js-in-office-add-ins"></a>Использование Office UI Fabric JS в надстройках Office
 
@@ -8,9 +13,11 @@ Office UI Fabric — это интерфейсная платформа JavaScri
 ## <a name="add-the-fabric-cdn-references"></a>Добавление ссылок на CDN Fabric
 Чтобы сослаться на Fabric из CDN, добавьте на страницу приведенный ниже HTML-код.
 
-    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.min.css">
-    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.components.min.css">
-    <script src="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/js/fabric.min.js"></script>
+```html
+<link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.min.css">
+<link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.components.min.css">
+<script src="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/js/fabric.min.js"></script>
+```
 
 ## <a name="use-fabric-js-ux-components"></a>Использование компонентов дизайна Fabric JS
 
@@ -45,16 +52,16 @@ Office UI Fabric — это интерфейсная платформа JavaScri
 - Обновлены некоторые имена классов и стили значков.
 - Наиболее заметное изменение — использование элемента `<label>` во многих компонентах. Элемент `<label>` определяет стиль компонента. Для использования элемента `<label>` может потребоваться обновить код дизайна. Например, изменение значения выбранного атрибута элемента `<input>` для флажка JS Fabric никак не влияет на флажок. Вместо этого можно воспользоваться функцией `check`, `unCheck` или `toggle`.   
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="implementation"></a>Реализация
 Если вы ищете подробный пример кода с Fabric JS, просмотрите следующий ресурс:
 
 - [Отслеживание продаж в Excel](https://github.com/OfficeDev/Excel-Add-in-JavaScript-SalesTracker) 
 
-## <a name="related-resources"></a>Связанные ресурсы
+## <a name="see-also"></a>См. также
 Если вы ищете примеры кода или документацию по предыдущей версии Fabric, просмотрите следующие ресурсы:
 
 - [Конструктивные шаблоны (используется Fabric 2.6.1)](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code) 
 - [Пример пользовательского интерфейса Fabric для надстройки Office (используется Fabric 1.0)](https://github.com/OfficeDev/Office-Add-in-Fabric-UI-Sample) 
-- [Использование Fabric 2.6.1 в надстройке Office](https://dev.office.com/docs/add-ins/design/ui-elements/using-office-ui-fabric)
+- [Использование Fabric 2.6.1 в надстройке Office](ui-elements/using-office-ui-fabric.md)
  
 

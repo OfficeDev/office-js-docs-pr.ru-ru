@@ -1,6 +1,13 @@
+---
+title: Работа с диапазонами с использованием API JavaScript для Excel
+description: ''
+ms.date: 12/04/2017
+---
+
+
 # <a name="work-with-ranges-using-the-excel-javascript-api"></a>Работа с диапазонами с использованием API JavaScript для Excel
 
-В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диапазонов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектом **Range**, см. в статье [Объект Range (API JavaScript для Excel)](http://dev.office.com/reference/add-ins/excel/range).
+В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диапазонов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектом **Range**, см. в статье [Объект Range (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/range).
 
 ## <a name="get-a-range"></a>Получение диапазона
 
@@ -91,11 +98,11 @@ Excel.run(function (context) {
 
 **Данные перед вставкой диапазона**
 
-![Данные в Excel перед вставкой диапазона](../images/Excel-range-start.png)
+![Данные в Excel перед вставкой диапазона](../images/excel-ranges-start.png)
 
 **Данные после вставки диапазона**
 
-![Данные в Excel после вставки диапазона](../images/Excel-range-after-insert.png)
+![Данные в Excel после вставки диапазона](../images/excel-ranges-after-insert.png)
 
 ## <a name="clear-a-range-of-cells"></a>Очистка диапазона ячеек
 
@@ -114,11 +121,11 @@ Excel.run(function (context) {
 
 **Данные перед очисткой диапазона**
 
-![Данные в Excel перед очисткой диапазона](../images/Excel-range-start.png)
+![Данные в Excel перед очисткой диапазона](../images/excel-ranges-start.png)
 
 **Данные после очистки диапазона**
 
-![Данные в Excel после очистки диапазона](../images/Excel-range-after-clear.png)
+![Данные в Excel после очистки диапазона](../images/excel-ranges-after-clear.png)
 
 ## <a name="delete-a-range-of-cells"></a>Удаление диапазона ячеек
 
@@ -137,11 +144,11 @@ Excel.run(function (context) {
 
 **Данные перед удалением диапазона**
 
-![Данные в Excel перед удалением диапазона](../images/Excel-range-start.png)
+![Данные в Excel перед удалением диапазона](../images/excel-ranges-start.png)
 
 **Данные после удаления диапазона**
 
-![Данные в Excel после удаления диапазона](../images/Excel-range-after-delete.png)
+![Данные в Excel после удаления диапазона](../images/excel-ranges-after-delete.png)
 
 ## <a name="set-the-selected-range"></a>Задание выделенного диапазона
 
@@ -160,7 +167,7 @@ Excel.run(function (context) {
 
 **Выделенный диапазон B2:E6**
 
-![Выделенный диапазон в Excel](../images/Excel-range-set-selection.png)
+![Выделенный диапазон в Excel](../images/excel-ranges-set-selection.png)
 
 ## <a name="get-the-selected-range"></a>Получение выделенного диапазона
 
@@ -200,11 +207,11 @@ Excel.run(function (context) {
 
 **Данные перед изменением значения ячейки**
 
-![Данные в Excel перед изменением значения ячейки](../images/Excel-range-set-start.png)
+![Данные в Excel перед изменением значения ячейки](../images/excel-ranges-set-start.png)
 
 **Данные после изменения значения ячейки**
 
-![Данные в Excel после изменения значения ячейки](../images/Excel-range-set-cell-value.png)
+![Данные в Excel после изменения значения ячейки](../images/excel-ranges-set-cell-value.png)
 
 ### <a name="set-values-for-a-range-of-cells"></a>Задание значений для диапазона ячеек
 
@@ -228,11 +235,11 @@ Excel.run(function (context) {
 
 **Данные перед изменением значений ячеек**
 
-![Данные в Excel перед изменением значений ячеек](../images/Excel-range-set-start.png)
+![Данные в Excel перед изменением значений ячеек](../images/excel-ranges-set-start.png)
 
 **Данные после изменения значений ячеек**
 
-![Данные в Excel после изменения значений ячеек](../images/Excel-range-set-cell-values.png)
+![Данные в Excel после изменения значений ячеек](../images/excel-ranges-set-cell-values.png)
 
 ### <a name="set-formula-for-a-single-cell"></a>Задание формулы для одной ячейки
 
@@ -252,11 +259,11 @@ Excel.run(function (context) {
 
 **Данные перед заданием формулы для ячейки**
 
-![Данные в Excel перед заданием формулы для ячейки](../images/Excel-range-start-set-formula.png)
+![Данные в Excel перед заданием формулы для ячейки](../images/excel-ranges-start-set-formula.png)
 
 **Данные после задания формулы для ячейки**
 
-![Данные в Excel после задания формулы для ячейки](../images/Excel-range-set-formula.png)
+![Данные в Excel после задания формулы для ячейки](../images/excel-ranges-set-formula.png)
 
 ### <a name="set-formulas-for-a-range-of-cells"></a>Задание формул для диапазона ячеек
 
@@ -283,11 +290,11 @@ Excel.run(function (context) {
 
 **Данные перед заданием формул для ячеек**
 
-![Данные в Excel перед заданием формул для ячеек](../images/Excel-range-start-set-formula.png)
+![Данные в Excel перед заданием формул для ячеек](../images/excel-ranges-start-set-formula.png)
 
 **Данные после задания формул для ячеек**
 
-![Данные в Excel после задания формул для ячеек](../images/Excel-range-set-formulas.png)
+![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
 
 ## <a name="get-values-text-or-formulas"></a>Получение значений, текста или формул
 
@@ -312,7 +319,7 @@ Excel.run(function (context) {
 
 **Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)**
 
-![Данные в Excel после задания формул для ячеек](../images/Excel-range-set-formulas.png)
+![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
 
 **range.values (как записано в консоль в примере кода выше)**
 
@@ -370,7 +377,7 @@ Excel.run(function (context) {
 
 **Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)**
 
-![Данные в Excel после задания формул для ячеек](../images/Excel-range-set-formulas.png)
+![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
 
 **range.text (как записано в консоль в примере кода выше)**
 
@@ -428,7 +435,7 @@ Excel.run(function (context) {
 
 **Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)**
 
-![Данные в Excel после задания формул для ячеек](../images/Excel-range-set-formulas.png)
+![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
 
 **range.formulas (как записано в консоль в примере кода выше)**
 
@@ -489,11 +496,11 @@ Excel.run(function (context) {
 
 **Данные в диапазоне перед заданием цвета шрифта и цвета заливки**
 
-![Данные в Excel перед заданием формата](../images/Excel-range-format-before.png)
+![Данные в Excel перед заданием формата](../images/excel-ranges-format-before.png)
 
 **Данные в диапазоне после задания цвета шрифта и цвета заливки**
 
-![Данные в Excel после задания формата](../images/Excel-range-format-font-and-fill.png)
+![Данные в Excel после задания формата](../images/excel-ranges-format-font-and-fill.png)
 
 ### <a name="set-number-format"></a>Задание формата чисел
 
@@ -518,13 +525,13 @@ Excel.run(function (context) {
 
 **Данные в диапазоне перед заданием формата чисел**
 
-![Данные в Excel перед заданием формата](../images/Excel-range-format-font-and-fill.png)
+![Данные в Excel перед заданием формата](../images/excel-ranges-format-font-and-fill.png)
 
 **Данные в диапазоне после задания формата чисел**
 
-![Данные в Excel после задания формата](../images/Excel-range-format-numbers.png)
+![Данные в Excel после задания формата](../images/excel-ranges-format-numbers.png)
 
-## <a name="additional-resources"></a>Дополнительные ресурсы
+## <a name="see-also"></a>См. также
 
 - [Основные понятия API JavaScript для Excel](excel-add-ins-core-concepts.md)
-- [Объект Range (API JavaScript для Excel)](http://dev.office.com/reference/add-ins/excel/range)
+- [Объект Range (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/range)

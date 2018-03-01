@@ -1,3 +1,9 @@
+---
+title: Привязка к областям в документе или электронной таблице
+description: ''
+ms.date: 12/04/2017
+---
+
 
 # <a name="bind-to-regions-in-a-document-or-spreadsheet"></a>Привязка к областям в документе или электронной таблице
 
@@ -25,14 +31,15 @@
 
 2. **[Матричная привязка][MatrixBinding]**. Выполняет привязку к фиксированной области документа, содержащей табличные данные без заголовков. Данные в матричной привязке записываются или считываются как двумерный объект **Array**, который реализуется в JavaScript как массив массивов. Например, две строки значений типа **string** в двух столбцах можно записывать или считывать как ` [['a', 'b'], ['c', 'd']]`, а один столбец из трех строк можно записывать или считывать как `[['a'], ['b'], ['c']]`.
 
-    В Excel для установки матричной привязки можно использовать любое связанное выделение ячеек. В Word матричную привязку поддерживают только таблицы.
+    В Excel для установки матричной привязки может использоваться любое связанное выделение ячеек. В Word матричная привязка поддерживается только таблицами.
 
-3. **[Табличная привязка][TableBinding]**. Выполняет привязку к области документа, содержащей таблицу с заголовками. Данные в табличной привязке записываются или считываются как объект [TableData](http://dev.office.com/reference/add-ins/shared/tabledata). Объект `TableData` предоставляет данные с помощью свойств `headers` и `rows`.
+3. **[Табличная привязка][TableBinding]**. Выполняет привязку к области документа, содержащей таблицу с заголовками. Данные в табличной привязке записываются или считываются как объект [TableData](https://dev.office.com/reference/add-ins/shared/tabledata). Объект `TableData` предоставляет данные с помощью свойств `headers` и `rows`.
 
     Любая таблица Excel или Word может быть основой для табличной привязки. После создания табличной привязки каждая новая строка или столбец, добавляемые пользователем в таблицу, автоматически включаются в привязку.
 
 Создав привязку с помощью одного из трех методов addFrom объекта `Bindings`, вы можете работать с данными и свойствами привязки с помощью методов соответствующего объекта: [MatrixBinding], [TableBinding] или [TextBinding]. Все три объекта наследуют методы [getDataAsync] и [setDataAsync] объекта `Binding`, позволяющие работать со связанными данными.
 
+> [!NOTE]
 > **В каких случаях следует использовать матричные и табличные привязки?** Если табличные данные, с которыми вы работаете, содержат строку итогов, а сценарию надстройки необходимо получить доступ к значениям в этой строке или проверить, находится ли в ней выбранный пользователем фрагмент, то необходимо использовать матричную привязку. Если установить привязку к табличным данным, содержащим строку итогов, то значения свойства [TableBinding.rowCount], а также свойств `rowCount` и `startRow` объекта [BindingSelectionChangedEventArgs] в обработчиках событий не будут отражать строку итогов. Чтобы обойти это ограничение, необходимо установить матричную привязку для работы со строкой итогов.
 
 ## <a name="add-a-binding-to-the-users-current-selection"></a>Добавление привязки к текущему фрагменту, выделенному пользователем
@@ -92,9 +99,9 @@ function write(message){
 На рис. 1 показано встроенное окно запроса выбора диапазона в Excel.
 
 
-**Рис. 1. Пользовательский интерфейс выбора данных в Excel**
+*Рис. 1. Пользовательский интерфейс выбора данных в Excel*
 
-![Пользовательский интерфейс выбора данных в Excel](../images/AgaveAPIOverview_ExcelSelectionUI.png)
+![Пользовательский интерфейс выбора данных в Excel](../images/agave-api-overview-excel-selection-ui.png)
 
 
 ## <a name="add-a-binding-to-a-named-item"></a>Добавление привязки к именованному элементу
@@ -121,10 +128,11 @@ function write(message){
 
 ```
 
- **В случае Excel** параметр `itemName` метода [addFromNamedItemAsync] может ссылаться на диапазон, указанный с использованием ссылки вида `A1` `("A1:A3")`, существующий именованный диапазон или таблицу. По умолчанию при добавлении таблиц в Excel первой таблице назначается имя "Таблица1", второй — "Таблица2" и т. д. Назначить таблице понятное имя в пользовательском интерфейсе Excel можно с помощью свойства **Имя таблицы** на вкладке **Работа с таблицами | Конструктор** на ленте.
+**В случае Excel** параметр `itemName` метода [addFromNamedItemAsync] может ссылаться на диапазон, указанный с использованием ссылки вида `A1` `("A1:A3")`, существующий именованный диапазон или таблицу. По умолчанию при добавлении таблиц в Excel первой таблице назначается имя "Таблица1", второй — "Таблица2" и т. д. Назначить таблице понятное имя в пользовательском интерфейсе Excel можно с помощью свойства **Имя таблицы** на вкладке **Работа с таблицами | Конструктор** на ленте.
 
 
- >**Примечание.** В Excel при задании таблицы в качестве именованного элемента необходимо указать ее имя полностью, включая имя листа, в таком формате: `"Sheet1!Table1"`.
+> [!NOTE]
+> В Excel при задании таблицы в качестве именованного элемента необходимо указать ее имя полностью, включая имя листа, в таком формате: `"Sheet1!Table1"`.
 
 В приведенном ниже примере показано, как в Excel создать привязку к первым трем ячейкам столбца A (`"A1:A3"`), назначить значение id `"MyCities"`, а затем записать три названия города в эту привязку.
 
@@ -153,7 +161,7 @@ function write(message){
 }
 ```
 
- **В случае Word** параметр `itemName` метода [addFromNamedItemAsync] ссылается на свойство `Title`, принадлежащее элементу управления содержимым `Rich Text`. (`Rich Text` — единственный элемент управления содержимым, поддерживающий привязку.)
+**В случае Word** параметр `itemName` метода [addFromNamedItemAsync] ссылается на свойство `Title`, принадлежащее элементу управления содержимым `Rich Text`. (`Rich Text` — единственный элемент управления содержимым, поддерживающий привязку.)
 
 По умолчанию элементу управления содержимым не назначено значение `Title*`. Чтобы назначить понятное имя в пользовательском интерфейсе Word, выполните следующее. Вставьте элемент управления содержимым **Форматированный текст** группу **Элементы управления** на вкладке **Разработчик** ленты. Выберите команду **Свойства** в группе **Элементы управления**, чтобы открыть диалоговое окно **Свойства элемента управления содержимым**. Задайте для свойства **Title**, принадлежащего элементу управления содержимым, имя, на которое вы будете ссылаться в коде.
 
@@ -252,9 +260,10 @@ function write(message){
 ```
 
 
- > **Примечание.**  Если при получении обещания для метода `select` успешно возвращается объект [Binding], то этот объект предоставляет только следующие четыре метода: [getDataAsync], [setDataAsync], [addHandlerAsync] и [removeHandlerAsync]. Если же возвратить объект Binding не удается, то для получения дополнительной информации можно получить доступ к объекту [asyncResult].error с помощью параметра обратного вызова `onError`. Если вам необходимо вызвать элемент объекта Binding, которого нет среди четырех методов, предоставленных с обещанием объекта Binding, которое возвращено методом `select`, примените метод [getByIdAsync]. Для этого с помощью свойства [Document.bindings] и метода Bindings.[getByIdAsync] получите объект Binding**.
+> [!NOTE]
+> Если обещание метода `select` успешно возвращает объект [Binding], то этот объект предоставляет только следующие четыре метода: [getDataAsync], [setDataAsync], [addHandlerAsync] и [removeHandlerAsync]. Если же возвратить объект Binding не удается, то для получения дополнительной информации можно получить доступ к объекту [asyncResult.error] с помощью параметра обратного вызова `onError`. Если вам необходимо вызвать элемент объекта Binding, которого нет среди четырех методов, предоставляемых обещанием объекта Binding, которое возвращается методом `select`, примените метод [getByIdAsync]. Для этого с помощью свойства [Document.bindings] и метода [Bindings.getByIdAsync] получите объект Binding**.
 
-## <a name="release-a-binding-by-id"></a>Удаление привязки по идентификатору
+## <a name="release-a-binding-by-id"></a>Отмена привязки по идентификатору
 
 
 В приведенном ниже примере показано, как с помощью метода [releaseByIdAsync] удалить привязку из документа, указав ее идентификатор.
@@ -320,13 +329,14 @@ myBinding.setDataAsync('Hello World!', function (asyncResult) { });
 
 Анонимная функция передается функции в качестве параметра callback и выполняется по завершении операции. Функция вызывается с использованием параметра `asyncResult`, содержащего состояние результата.
 
- > **Примечание.** С момента выпуска Excel 2013 с пакетом обновления 1 (SP1) и соответствующей сборки Excel Online можно [задавать форматирование при записи или обновлении данных в связанных таблицах](../excel/format-tables-in-add-ins-for-excel.md).
+> [!NOTE]
+> С момента выпуска Excel 2013 с пакетом обновления 1 (SP1) и соответствующей сборки Excel Online можно [задавать форматирование при записи или обновлении данных в связанных таблицах](../excel/excel-add-ins-tables.md).
 
 
-## <a name="detect-changes-to-data-or-the-selection-in-a-binding"></a>Обнаружение изменений в данных или выделении в привязке
+## <a name="detect-changes-to-data-or-the-selection-in-a-binding"></a>Обнаружение изменений в данных или выделенном фрагменте для привязки
 
 
-В примере ниже показано, как присоединить обработчик события к событию [DataChanged](http://dev.office.com/reference/add-ins/shared/binding.bindingdatachangedevent) привязки с идентификатором MyBinding.
+В приведенном ниже примере показано, как присоединить обработчик событий к событию [DataChanged](https://dev.office.com/reference/add-ins/shared/binding.bindingdatachangedevent) привязки с идентификатором MyBinding.
 
 
 ```js
@@ -343,7 +353,7 @@ function write(message){
 }
 ```
 
- `myBinding` — переменная, содержащая существующую текстовую привязку в документе.
+`myBinding` — переменная, содержащая существующую текстовую привязку в документе.
 
 Первый параметр `eventType` метода [addHandlerAsync] задает имя события для подписки. [Office.EventType] — это перечисление доступных значений типов событий. `Office.EventType.BindingDataChanged evaluates to the string `"bindingDataChanged"`.
 
@@ -360,7 +370,7 @@ function write(message){
 Чтобы удалить обработчик какого-либо события, вызовите метод [removeHandlerAsync], передав тип события в качестве первого параметра _eventType_, а имя удаляемой функции обработчика событий — в качестве второго параметра _handler_. Например, приведенная ниже функция удалит функцию обработчика событий `dataChanged`, добавленную в примере, который представлен в предыдущем разделе.
 
 
-```
+```js
 function removeEventHandlerFromBinding() {
     Office.select("bindings#MyBinding").removeHandlerAsync(
         Office.EventType.BindingDataChanged, {handler:dataChanged});
@@ -368,41 +378,40 @@ function removeEventHandlerFromBinding() {
 ```
 
 
- >**Важно!**  Если при вызове метода [removeHandlerAsync] не указать необязательный параметр _handler_, то все обработчики событий для указанного параметра `eventType` будут удалены.
+> [!IMPORTANT]
+> Если при вызове метода [removeHandlerAsync] не указать необязательный параметр _handler_, то все обработчики событий для указанного параметра `eventType` будут удалены.
 
 
-## <a name="additional-resources"></a>Дополнительные ресурсы
+## <a name="see-also"></a>См. также
 
-- [Общие сведения об интерфейсе API JavaScript для Office](../develop/understanding-the-javascript-api-for-office.md)
+- [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md) 
+- [Асинхронное программирование в надстройках для Office](asynchronous-programming-in-office-add-ins.md)
+- [Выполняйте чтение и запись данных при активном выделении фрагмента в документе или электронной таблице.](read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md)
     
-- [Асинхронное программирование в надстройках для Office](../develop/asynchronous-programming-in-office-add-ins.md)
-    
-- [Выполняйте чтение и запись данных при активном выделении фрагмента в документе или электронной таблице.](../develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md)
-    
-[Binding]:               http://dev.office.com/reference/add-ins/shared/binding
-[MatrixBinding]:         http://dev.office.com/reference/add-ins/shared/binding.matrixbinding
-[TableBinding]:          http://dev.office.com/reference/add-ins/shared/binding.tablebinding
-[TextBinding]:           http://dev.office.com/reference/add-ins/shared/binding.textbinding
-[getDataAsync]:          http://dev.office.com/reference/add-ins/shared/binding.getdataasync
-[setDataAsync]:          http://dev.office.com/reference/add-ins/shared/binding.setdataasync
-[SelectionChanged]:      http://dev.office.com/reference/add-ins/shared/binding.bindingselectionchangedevent
-[addHandlerAsync]:       http://dev.office.com/reference/add-ins/shared/binding.addhandlerasync
-[removeHandlerAsync]:    http://dev.office.com/reference/add-ins/shared/binding.removehandlerasync
+[Binding]:               https://dev.office.com/reference/add-ins/shared/binding
+[MatrixBinding]:         https://dev.office.com/reference/add-ins/shared/binding.matrixbinding
+[TableBinding]:          https://dev.office.com/reference/add-ins/shared/binding.tablebinding
+[TextBinding]:           https://dev.office.com/reference/add-ins/shared/binding.textbinding
+[getDataAsync]:          https://dev.office.com/reference/add-ins/shared/binding.getdataasync
+[setDataAsync]:          https://dev.office.com/reference/add-ins/shared/binding.setdataasync
+[SelectionChanged]:      https://dev.office.com/reference/add-ins/shared/binding.bindingselectionchangedevent
+[addHandlerAsync]:       https://dev.office.com/reference/add-ins/shared/binding.addhandlerasync
+[removeHandlerAsync]:    https://dev.office.com/reference/add-ins/shared/binding.removehandlerasync
 
-[Bindings]:              http://dev.office.com/reference/add-ins/shared/bindings.bindings
-[getByIdAsync]:          http://dev.office.com/reference/add-ins/shared/bindings.getbyidasync 
-[getAllAsync]:           http://dev.office.com/reference/add-ins/shared/bindings.getallasync
-[addFromNamedItemAsync]: http://dev.office.com/reference/add-ins/shared/bindings.addfromnameditemasync
-[addFromSelectionAsync]: http://dev.office.com/reference/add-ins/shared/bindings.addfromselectionasync
-[addFromPromptAsync]:    http://dev.office.com/reference/add-ins/shared/bindings.addfrompromptasync
-[releaseByIdAsync]:      http://dev.office.com/reference/add-ins/shared/bindings.releasebyidasync
+[Bindings]:              https://dev.office.com/reference/add-ins/shared/bindings.bindings
+[getByIdAsync]:          https://dev.office.com/reference/add-ins/shared/bindings.getbyidasync 
+[getAllAsync]:           https://dev.office.com/reference/add-ins/shared/bindings.getallasync
+[addFromNamedItemAsync]: https://dev.office.com/reference/add-ins/shared/bindings.addfromnameditemasync
+[addFromSelectionAsync]: https://dev.office.com/reference/add-ins/shared/bindings.addfromselectionasync
+[addFromPromptAsync]:    https://dev.office.com/reference/add-ins/shared/bindings.addfrompromptasync
+[releaseByIdAsync]:      https://dev.office.com/reference/add-ins/shared/bindings.releasebyidasync
 
-[AsyncResult]:          http://dev.office.com/reference/add-ins/shared/asyncresult
-[Office.BindingType]:   http://dev.office.com/reference/add-ins/shared/bindingtype-enumeration
-[Office.select]:        http://dev.office.com/reference/add-ins/shared/office.select 
-[Office.EventType]:     http://dev.office.com/reference/add-ins/shared/eventtype-enumeration 
-[Document.bindings]:    http://dev.office.com/reference/add-ins/shared/document.bindings
+[AsyncResult]:          https://dev.office.com/reference/add-ins/shared/asyncresult
+[Office.BindingType]:   https://dev.office.com/reference/add-ins/shared/bindingtype-enumeration
+[Office.select]:        https://dev.office.com/reference/add-ins/shared/office.select 
+[Office.EventType]:     https://dev.office.com/reference/add-ins/shared/eventtype-enumeration 
+[Document.bindings]:    https://dev.office.com/reference/add-ins/shared/document.bindings
 
 
-[TableBinding.rowCount]: http://dev.office.com/reference/add-ins/shared/binding.tablebinding.rowcount
-[BindingSelectionChangedEventArgs]: http://dev.office.com/reference/add-ins/shared/binding.bindingselectionchangedeventargs
+[TableBinding.rowCount]: https://dev.office.com/reference/add-ins/shared/binding.tablebinding.rowcount
+[BindingSelectionChangedEventArgs]: https://dev.office.com/reference/add-ins/shared/binding.bindingselectionchangedeventargs

@@ -1,4 +1,11 @@
-#<a name="layout-for-task-pane-containers"></a>Макет для контейнеров области задач
+---
+title: Макет для контейнеров области задач
+description: ''
+ms.date: 12/04/2017
+---
+
+
+# <a name="layout-for-task-pane-containers"></a>Макет для контейнеров области задач
 
 
 Обеспечьте единообразный внешний вид и удобство использования контейнеров области задач с помощью рекомендованного макета. Рекомендованный макет области задач включает перечисленные ниже элементы. 
@@ -7,10 +14,14 @@
 - Содержимое надстройки
 - Элемент фирменной символики (необязательно)
 
-![Макет области задач с элементами фирменной символики, навигации и контента](../../images/layouts_taskpane_v0.02.png)
+![Макет области задач с элементами фирменной символики, навигации и контента](../../images/layouts-taskpane-v0.02.png)
 
-Вы также можете добавить [настраиваемый пользовательский интерфейс на базе HTML](ui-elements.md#custom-HTML-based-UI) в область задач.
+Вы также можете добавить в область задач [особый пользовательский интерфейс на основе HTML](ui-elements.md#custom-html-based-ui).
 
-Пример использования Office UI Fabric в надстройках Office вы можете найти в статье [Пример использования Office UI Fabric в надстройках для Office](https://github.com/OfficeDev/Office-Add-in-Fabric-UI-Sample).
+[Пример использования Office UI Fabric в надстройках для Office](https://github.com/OfficeDev/Office-Add-in-Fabric-UI-Sample)
 
 <!-- Add sample template for content add-in and individual building blocks - Branding, Navigation bar or pivot, input, layout components -->
+
+## <a name="see-also"></a>См. также
+
+- [Рекомендации по проектированию надстроек Office](../add-in-design.md)

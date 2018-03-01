@@ -1,19 +1,19 @@
-# Office JavaScript APIs
+# <a name="office-javascript-apis"></a>API JavaScript для Office
 
-Welcome to the Office JavaScript API conceptual documentation. In this repository, you can find the documentation source files for Office JavaScript API concepts, quickstarts, tutorials, and how-to guides. For the best experience, we recommend you view this content on [docs.microsoft.com](https://docs.microsoft.com/ru-ru/office/dev/add-ins/).
+Предлагаем ознакомиться с документацией по API JavaScript для Office. В этом репозитории вы найдете исходные файлы понятий, кратких руководств, учебников и инструкций по API JavaScript для Office. Рекомендуем просматривать эти материалы на сайте [docs.microsoft.com](https://docs.microsoft.com/ru-ru/office/dev/add-ins/).
 
-> **Note**: You can find the Office JavaScript API Reference documentation source files in the [office-js-docs](https://github.com/OfficeDev/office-js-docs) repository.
+> **Примечание.** Исходные файлы справочных материалов по API JavaScript для Office можно найти в репозитории [ office-js-docs ](https://github.com/OfficeDev/office-js-docs).
 
-## Give us your feedback
+## <a name="give-us-your-feedback"></a>Оставьте свой отзыв
 
-Your feedback is important to us. 
-* To let us know about any questions or issues you find in the docs, [submit an issue](https://github.com/OfficeDev/office-js-docs-pr/issues) in this repository. Make sure you state the version+build number of the client you are using, and provide repro steps, console output, and error messages, as appropriate. 
-* We also encourage you to fork, make the fix, and do a pull request of your proposed changes. For details, see [Contribute to this documentation](Contributing.md). 
-* To let us know about your programming experience, what you would like to see in future versions, code samples, and so on, enter your suggestions and ideas at [Office Developer Platform UserVoice](https://officespdev.uservoice.com/).
+Ваш отзыв важен для нас. 
+* Чтобы задать нам вопрос или сообщить о проблемах с документацией, [оставьте сообщение](https://github.com/OfficeDev/office-js-docs-pr/issues) на вкладке этого репозитория. Обязательно сообщите номера версии и сборки используемого клиента, а также по необходимости укажите выполненные действия, выходные данные консоли и сообщения об ошибках. 
+* Мы также рекомендуем создать вилку проекта, внести исправление и отправить запрос на включение своих изменений. Подробные сведения см. в разделе [Внесите свой вклад в документацию](Contributing.md). 
+* Чтобы рассказать о своих впечатлениях от использования файлов и пожеланиях насчет будущих версий, примеров кода и т. д., поделитесь своими мыслями на [сайте UserVoice платформы разработки для Office](https://officespdev.uservoice.com/).
 
-## Copyright
+## <a name="copyright"></a>Авторское право
 
-Copyright (c) 2016 Microsoft Corporation. All rights reserved.
+© Корпорация Майкрософт (Microsoft Corporation), 2016 г. Все права защищены.
 
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+Этот проект соответствует [правилам поведения Майкрософт, касающимся обращения с открытым кодом](https://opensource.microsoft.com/codeofconduct/). Дополнительную информацию см. в разделе [часто задаваемых вопросов по правилам поведения](https://opensource.microsoft.com/codeofconduct/faq/). Если у вас возникли вопросы или замечания, напишите нам по адресу [opencode@microsoft.com](mailto:opencode@microsoft.com).

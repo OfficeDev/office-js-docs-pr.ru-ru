@@ -1,3 +1,10 @@
+---
+title: Начало работы с надстройками Excel
+description: ''
+ms.date: 01/23/2018
+---
+
+
 # <a name="get-started-with-excel-add-ins"></a>Начало работы с надстройками Excel
 
 Вы можете создавать надстройки Excel, используя привычные веб-технологии, например HTML, CSS и JavaScript. 
@@ -8,6 +15,6 @@
 
 ## <a name="explore-snippets-with-script-lab"></a>Изучение фрагментов кода с помощью Script Lab
 
-Script Lab — это средство, с помощью которого можно создавать и запускать код надстройки Office (а также делиться им) непосредственно в приложении Office, например в Excel, Word или PowerPoint. Вы можете [бесплатно установить Script Lab, скачав его в Магазине Office,](https://store.office.com/app.aspx?assetid=WA104380862) а затем запустить в Excel, чтобы изучить коллекцию встроенных примеров, в которых показано взаимодействие с данными в книге. Затем вы можете с помощью этого средства написать и выполнить собственный код API JavaScript для Excel, взаимодействующий с электронной таблицей. Дополнительные сведения см. в статье [Script Lab, проект Microsoft Garage](https://github.com/OfficeDev/script-lab/blob/master/README.md).
+Script Lab — это средство, с помощью которого можно создавать и запускать код надстройки Office (а также делиться им) непосредственно в приложении Office, например в Excel, Word или PowerPoint. Вы можете [бесплатно установить Script Lab, скачав его из AppSource](https://appsource.microsoft.com/en-us/product/office/WA104380862?src=office&corrid=ed93ce54-3f2c-48ab-9df7-d9913f7b190b&omexanonuid=4a0102fb-b31a-4b9f-9bb0-39d4cc6b789d), а затем запустить в Excel, чтобы изучить коллекцию встроенных примеров, в которых показано взаимодействие с данными в книге. Затем вы можете с помощью этого средства написать и выполнить собственный код API JavaScript для Excel, взаимодействующий с электронной таблицей. Дополнительные сведения см. в статье [Script Lab, проект Microsoft Garage](https://github.com/OfficeDev/script-lab/blob/master/README.md).
 
-> **Важно!** Script Lab — экспериментальное средство, которое позволит разобраться в создании надстроек Office в Excel, Word и PowerPoint. Оно создавалось как [проект Microsoft Garage](https://www.microsoft.com/ru-RU/garage/about/) и не является официальным продуктом Майкрософт. Корпорация Майкрософт не дает никаких гарантий, прямых или косвенных, в отношении Script Lab.
+[!include[Script Lab support](../includes/alert-script-lab-support.md)]

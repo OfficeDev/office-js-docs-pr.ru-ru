@@ -1,8 +1,14 @@
+---
+title: Работа с содержимым страницы в OneNote
+description: ''
+ms.date: 12/04/2017
+---
+
 # <a name="work-with-onenote-page-content"></a>Работа с содержимым страницы в OneNote 
 
 В API JavaScript для надстроек OneNote содержимое страницы представлено указанной ниже объектной моделью.
 
-  ![Схема объектной модели страницы OneNote](../images/OneNoteOM-page.png)
+  ![Схема объектной модели страницы OneNote](../images/one-note-om-page.png)
 
 - Объект Page содержит коллекцию объектов PageContent.
 - Объект PageContent содержит контент типов Outline, Image или Other.
@@ -11,14 +17,14 @@
 
 Чтобы создать пустую страницу OneNote, воспользуйтесь одним из указанных ниже методов.
 
-- [Section.addPage](http://dev.office.com/reference/add-ins/onenote/section#addpagetitle-string)
-- [Page.insertPageAsSibling](http://dev.office.com/reference/add-ins/onenote/page#insertpageassiblinglocation-string-title-string)
+- [Section.addPage](https://dev.office.com/reference/add-ins/onenote/section#addpagetitle-string)
+- [Page.insertPageAsSibling](https://dev.office.com/reference/add-ins/onenote/page#insertpageassiblinglocation-string-title-string)
 
 Затем используйте методы в указанных ниже объектах для работы с содержимым страницы, например Page.addOutline и Outline.appendHtml. 
 
-- [Page](http://dev.office.com/reference/add-ins/onenote/page)
-- [Outline](http://dev.office.com/reference/add-ins/onenote/outline)
-- [Paragraph](http://dev.office.com/reference/add-ins/onenote/paragraph)
+- [Страница](https://dev.office.com/reference/add-ins/onenote/page)
+- [Структура](https://dev.office.com/reference/add-ins/onenote/outline)
+- [Абзац](https://dev.office.com/reference/add-ins/onenote/paragraph)
 
 Для представления содержимого и структуры страницы OneNote используется HTML. Для создания или обновления содержимого страницы поддерживается только подмножество HTML, как описано ниже.
 
@@ -41,9 +47,9 @@
 
 Метаданные, например "Название", можно запросить для любой страницы.
 
-## <a name="additional-resources"></a>Дополнительные ресурсы
+## <a name="see-also"></a>См. также
 
 - [Обзор создания кода с помощью API JavaScript для OneNote](onenote-add-ins-programming-overview.md)
-- [Справочник по API JavaScript для OneNote](http://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference)
+- [Справочник по API JavaScript для OneNote](https://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
-- [Обзор платформы надстроек Office](https://dev.office.com/docs/add-ins/overview/office-add-ins)
+- [Обзор платформы надстроек Office](../overview/office-add-ins.md)
