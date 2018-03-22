@@ -12,7 +12,7 @@ ms.date: 12/04/2017
 
 Пример надстройки Project OM Test может получить GUID задачи, а также свойства приложения и активного проекта. Если в Project профессиональный 2013 открыт проект, находящийся в библиотеке SharePoint, то надстройка может показать URL-адрес проекта. 
 
-Доступный для скачивания [пакет SDK Project 2013](https://www.microsoft.com/en-us/download/details.aspx?id=30435%20) содержит полный исходный код. Извлекая и устанавливая пакет SDK и примеры из файла Project2013SDK.msi, в подкаталоге `\Samples\Apps\Copy_to_AppManifests_FileShare` вы найдете файл манифеста, а в подкаталоге `\Samples\Apps\Copy_to_AppSource_FileShare` — исходный код. 
+[Пакет SDK для Project 2013](https://www.microsoft.com/en-us/download/details.aspx?id=30435%20) включает весь исходный код. Извлекая и устанавливая пакет SDK и примеры из файла Project2013SDK.msi, в подкаталоге `\Samples\Apps\Copy_to_AppManifests_FileShare` вы найдете файл манифеста, а в подкаталоге `\Samples\Apps\Copy_to_AppSource_FileShare` — исходный код. 
 
 В примере JSOMCall.html используются функции JavaScript из файлов office.js и project-15.js, включенных в пакет. Вы можете изучать функции, используя соответствующие файлы отладки (office.debug.js и project-15.debug.js).
 

@@ -1,68 +1,126 @@
 ---
 title: XML-манифест надстроек Office
 description: ''
-ms.date: 01/23/2018
+ms.date: 02/09/2018
 ---
 
 # <a name="office-add-ins-xml-manifest"></a>XML-манифест надстроек Office
 
-XML-файл манифеста надстройки Office описывает способ ее активации, когда пользователь устанавливает и использует эту надстройку для работы с документами и приложениями Office. 
+XML-файл манифеста надстройки Office описывает способ ее активации, когда пользователь устанавливает и использует эту надстройку для работы с документами и приложениями Office.
 
 С помощью такого XML-файла манифеста надстройка Office может выполнять следующие действия:
 
-- Предоставлять свое описание через идентификатор, версию, описание, отображаемое имя и языковой стандарт по умолчанию.
-    
-- Указывать, как надстройка интегрируется с Office, включая создаваемые ею элементы пользовательского интерфейса, например кнопки на ленте.
-    
-- Определять запрошенные размеры по умолчанию для контентных надстроек, а также запрошенную высоту для надстроек Outlook.
-    
-- Объявлять разрешения, в которых нуждается Надстройка Office, например чтение или запись документа.
-    
-- В случае надстроек Outlook необходимо определить одно или несколько правил, указывающих контекст, в котором эти надстройки будут активироваться и взаимодействовать с сообщением, сведениями о встрече или приглашением на собрание.
+* Предоставлять идентификатор, версию, описание, отображаемое имя и языковой стандарт по умолчанию.
 
-> 
-  **Примечание.** Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в интерфейсе Office, убедитесь, что она соответствует [политикам проверки AppSource](https://docs.microsoft.com/ru-ru/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка должна работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://docs.microsoft.com/ru-ru/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице со сведениями о доступности и ведущих приложениях для надстроек Office](../overview/office-add-in-availability.md). 
+* Указывать изображения, используемые для фирменного оформления надстройки, и значки, используемые для [команд надстройки][] в ленте Office.
+
+* Указывать, как надстройка интегрируется с Office, включая создаваемые ею элементы пользовательского интерфейса, например кнопки на ленте.
+
+* Определять запрошенные размеры по умолчанию для контентных надстроек, а также запрошенную высоту для надстроек Outlook.
+
+* Объявлять разрешения, в которых нуждается Надстройка Office, например чтение или запись документа.
+
+* В случае надстроек Outlook необходимо определить одно или несколько правил, указывающих контекст, в котором эти надстройки будут активироваться и взаимодействовать с сообщением, сведениями о встрече или приглашением на собрание.
+
+> [!NOTE]
+> Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в интерфейсе Office, убедитесь, что она соответствует [политикам проверки AppSource](https://docs.microsoft.com/ru-ru/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка должна работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://docs.microsoft.com/ru-ru/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице со сведениями о доступности и ведущих приложениях для надстроек Office](../overview/office-add-in-availability.md).
 
 ## <a name="required-elements"></a>Обязательные элементы
 
-В приведенной ниже таблице представлены обязательные элементы для трех типов надстроек Office.
+В приведенной ниже таблице указаны обязательные элементы для трех типов надстроек Office.
 
-**Обязательные элементы по типам надстроек Office**
+### <a name="required-elements-by-office-add-in-type"></a>Обязательные элементы по типам надстроек Office
 
-|**Элемент**|**Контентная надстройка**|**Область задач**|**Outlook**|
-|:-----|:-----|:-----|:-----|
-|[OfficeApp](http://msdn.microsoft.com/ru-ru/library/68f1cada-66f8-4341-45f5-14e0634c24fb%28Office.15%29.aspx)|X|X|X|
-|[Id](http://msdn.microsoft.com/ru-ru/library/67c4344a-935c-09d6-1282-55ee61a2838b%28Office.15%29.aspx)|X|X|X|
-|[Version](http://msdn.microsoft.com/ru-ru/library/6a8bbaa5-ee8c-6824-4aba-cb1a804269f6%28Office.15%29.aspx)|X|X|X|
-|[ProviderName](http://msdn.microsoft.com/ru-ru/library/0062693a-fafa-ea2d-051a-75dac0f6c323%28Office.15%29.aspx)|X|X|X|
-|[DefaultLocale](http://msdn.microsoft.com/ru-ru/library/04796a3a-3afa-dc85-db66-4677560c185c%28Office.15%29.aspx)|X|X|X|
-|[DisplayName](http://msdn.microsoft.com/ru-ru/library/529159ca-53bf-efcf-c245-e572dab0ef57%28Office.15%29.aspx)|X|X|X|
-|[Description](http://msdn.microsoft.com/ru-ru/library/bcce6bad-23d0-7631-7d8c-1064b8453b5a%28Office.15%29.aspx)|X|X|X|
-|[IconUrl](http://msdn.microsoft.com/library/c7dac2d4-4fda-6fc7-3774-49f02b2d3e1e%28Office.15%29.aspx)|X|X|X|
-|[HighResolutionIconUrl](http://msdn.microsoft.com/library/ff7b2647-ec8e-70dc-4e4a-e1a1377ff3f2%28Office.15%29.aspx)|X|X|X|
-|[DefaultSettings (ContentApp)](http://msdn.microsoft.com/ru-ru/library/f7edc689-551f-1a17-ea81-ffd58f534557%28Office.15%29.aspx)<br/>[DefaultSettings (TaskPaneApp)](http://msdn.microsoft.com/ru-ru/library/36e3d139-56a4-fb3d-0a21-cbd14e606765%28Office.15%29.aspx)|X|X||
-|[SourceLocation (ContentApp)](http://msdn.microsoft.com/ru-ru/library/00d95bb0-e8f5-647f-790a-0aa3aabc8141%28Office.15%29.aspx)<br/>[SourceLocation (TaskPaneApp)](http://msdn.microsoft.com/ru-ru/library/e6ea8cd4-7c8b-1da7-d8f8-8d3c80a088bc%28Office.15%29.aspx)|X|X||
-|[DesktopSettings](http://msdn.microsoft.com/ru-ru/library/da9fd085-b8cc-2be0-d329-2aa1ef5d3f1c%28Office.15%29.aspx)|||X|
-|[SourceLocation (MailApp)](http://msdn.microsoft.com/ru-ru/library/3792d389-bebd-d19a-9d90-35b7a0bfc623%28Office.15%29.aspx)|||X|
-|[Permissions (ContentApp)](http://msdn.microsoft.com/ru-ru/library/9f3dcf9c-fced-c115-4f0d-38d60fb7c583%28Office.15%29.aspx)<br/>[Permissions (TaskPaneApp)](http://msdn.microsoft.com/ru-ru/library/d4cfe645-353d-8240-8495-f76fb36602fe%28Office.15%29.aspx)<br/>[Permissions (MailApp)](http://msdn.microsoft.com/ru-ru/library/c20cdf29-74b0-564c-e178-b75d148b36d1%28Office.15%29.aspx)|X|X|X|
-|[Rule (RuleCollection)](http://msdn.microsoft.com/ru-ru/library/c6ce9d52-4b53-c6a6-de7e-c64106135c81%28Office.15%29.aspx)<br/>[Rule (MailApp)](http://msdn.microsoft.com/ru-ru/library/56dfc32e-2b8c-1724-05be-5595baf38aa3%28Office.15%29.aspx)|||X|
-|[*Requirements (MailApp)](http://msdn.microsoft.com/ru-ru/library/9536ea30-34f7-76b5-7f30-1508626840e4%28Office.15%29.aspx)|||X|
-|[*Set](http://msdn.microsoft.com/ru-ru/library/1506daa1-332c-30e1-6402-3371bcd0b895%28Office.15%29.aspx)<br/>[**Sets (MailAppRequirements)](http://msdn.microsoft.com/ru-ru/library/2a6a2484-eeee-37e4-43bc-c185e8ae0d1d%28Office.15%29.aspx)|||X|
-|[*Form](http://msdn.microsoft.com/ru-ru/library/77a8ac83-c22b-1225-4fc4-ba4038b68648%28Office.15%29.aspx)<br/>[**FormSettings](http://msdn.microsoft.com/ru-ru/library/0d1a311d-939d-78c1-e968-89ddf7ebc4b4%28Office.15%29.aspx)|||X|
-|[*Sets (Requirements)](http://msdn.microsoft.com/ru-ru/library/509be287-b532-87c6-71ac-64f3a4bbd3af%28Office.15%29.aspx)|X|X||
-|[*Hosts](http://msdn.microsoft.com/library/f9a739c1-3daf-c03a-2bd9-4a2a6b870101%28Office.15%29.aspx)|X|X||
+| Элемент                                                                                      | Контентная | Для области задач | Outlook |
+| :------------------------------------------------------------------------------------------- | :-----: | :-------: | :-----: |
+| [OfficeApp][]                                                                                |    X    |     X     |    X    |
+| [Id][]                                                                                       |    X    |     X     |    X    |
+| [Version][]                                                                                  |    X    |     X     |    X    |
+| [ProviderName][]                                                                             |    X    |     X     |    X    |
+| [DefaultLocale][]                                                                            |    X    |     X     |    X    |
+| [DisplayName][]                                                                              |    X    |     X     |    X    |
+| [Description][]                                                                              |    X    |     X     |    X    |
+| [IconUrl][]                                                                                  |    X    |     X     |    X    |
+| [HighResolutionIconUrl][]                                                                    |    X    |     X     |    X    |
+| [DefaultSettings (ContentApp)][]<br/>[DefaultSettings (TaskPaneApp)][]                       |    X    |     X     |         |
+| [SourceLocation (ContentApp)][]<br/>[SourceLocation (TaskPaneApp)][]                         |    X    |     X     |         |
+| [DesktopSettings][]                                                                          |         |           |    X    |
+| [SourceLocation (MailApp)][]                                                                 |         |           |    X    |
+| [Permissions (ContentApp)][]<br/>[Permissions (TaskPaneApp)][]<br/>[Permissions (MailApp)][] |    X    |     X     |    X    |
+| [Rule (RuleCollection)][]<br/>[Rule (MailApp)][]                                             |         |           |    X    |
+| [Requirements (MailApp)*][]                                                                  |         |           |    X    |
+| [Set*][]<br/>[Sets (MailAppRequirements)*][]                                                 |         |           |    X    |
+| [Form*][]<br/>[FormSettings*][]                                                              |         |           |    X    |
+| [Sets (Requirements)*][]                                                                     |    X    |     X     |         |
+| [Hosts*][]                                                                                   |    X    |     X     |         |
 
-* Элемент добавлен в схеме манифеста для надстроек Office версии 1.1.
+_\*Элемент добавлен в схеме манифеста для надстроек Office версии 1.1._
+
+<!-- Links for above table -->
+
+
+  [officeapp]: http://msdn.microsoft.com/ru-ru/library/68f1cada-66f8-4341-45f5-14e0634c24fb%28Office.15%29.aspx
+
+  [id]: http://msdn.microsoft.com/ru-ru/library/67c4344a-935c-09d6-1282-55ee61a2838b%28Office.15%29.aspx
+
+  [version]: http://msdn.microsoft.com/ru-ru/library/6a8bbaa5-ee8c-6824-4aba-cb1a804269f6%28Office.15%29.aspx
+
+  [providername]: http://msdn.microsoft.com/ru-ru/library/0062693a-fafa-ea2d-051a-75dac0f6c323%28Office.15%29.aspx
+
+  [defaultlocale]: http://msdn.microsoft.com/ru-ru/library/04796a3a-3afa-dc85-db66-4677560c185c%28Office.15%29.aspx
+
+  [displayname]: http://msdn.microsoft.com/ru-ru/library/529159ca-53bf-efcf-c245-e572dab0ef57%28Office.15%29.aspx
+
+  [description]: http://msdn.microsoft.com/ru-ru/library/bcce6bad-23d0-7631-7d8c-1064b8453b5a%28Office.15%29.aspx
+[iconurl]: http://msdn.microsoft.com/library/c7dac2d4-4fda-6fc7-3774-49f02b2d3e1e%28Office.15%29.aspx
+[highresolutioniconurl]: http://msdn.microsoft.com/library/ff7b2647-ec8e-70dc-4e4a-e1a1377ff3f2%28Office.15%29.aspx
+
+  [defaultsettings (contentapp)]: http://msdn.microsoft.com/ru-ru/library/f7edc689-551f-1a17-ea81-ffd58f534557%28Office.15%29.aspx
+
+  [defaultsettings (taskpaneapp)]: http://msdn.microsoft.com/ru-ru/library/36e3d139-56a4-fb3d-0a21-cbd14e606765%28Office.15%29.aspx
+
+  [sourcelocation (contentapp)]: http://msdn.microsoft.com/ru-ru/library/00d95bb0-e8f5-647f-790a-0aa3aabc8141%28Office.15%29.aspx
+
+  [sourcelocation (taskpaneapp)]: http://msdn.microsoft.com/ru-ru/library/e6ea8cd4-7c8b-1da7-d8f8-8d3c80a088bc%28Office.15%29.aspx
+
+  [desktopsettings]: http://msdn.microsoft.com/ru-ru/library/da9fd085-b8cc-2be0-d329-2aa1ef5d3f1c%28Office.15%29.aspx
+
+  [sourcelocation (mailapp)]: http://msdn.microsoft.com/ru-ru/library/3792d389-bebd-d19a-9d90-35b7a0bfc623%28Office.15%29.aspx
+
+  [permissions (contentapp)]: http://msdn.microsoft.com/ru-ru/library/9f3dcf9c-fced-c115-4f0d-38d60fb7c583%28Office.15%29.aspx
+
+  [permissions (taskpaneapp)]: http://msdn.microsoft.com/ru-ru/library/d4cfe645-353d-8240-8495-f76fb36602fe%28Office.15%29.aspx
+
+  [permissions (mailapp)]: http://msdn.microsoft.com/ru-ru/library/c20cdf29-74b0-564c-e178-b75d148b36d1%28Office.15%29.aspx
+
+  [rule (rulecollection)]: http://msdn.microsoft.com/ru-ru/library/c6ce9d52-4b53-c6a6-de7e-c64106135c81%28Office.15%29.aspx
+
+  [rule (mailapp)]: http://msdn.microsoft.com/ru-ru/library/56dfc32e-2b8c-1724-05be-5595baf38aa3%28Office.15%29.aspx
+
+  [requirements (mailapp)*]: http://msdn.microsoft.com/ru-ru/library/9536ea30-34f7-76b5-7f30-1508626840e4%28Office.15%29.aspx
+
+  [set*]: http://msdn.microsoft.com/ru-ru/library/1506daa1-332c-30e1-6402-3371bcd0b895%28Office.15%29.aspx
+
+  [sets (mailapprequirements)*]: http://msdn.microsoft.com/ru-ru/library/2a6a2484-eeee-37e4-43bc-c185e8ae0d1d%28Office.15%29.aspx
+
+  [form*]: http://msdn.microsoft.com/ru-ru/library/77a8ac83-c22b-1225-4fc4-ba4038b68648%28Office.15%29.aspx
+
+  [formsettings*]: http://msdn.microsoft.com/ru-ru/library/0d1a311d-939d-78c1-e968-89ddf7ebc4b4%28Office.15%29.aspx
+
+  [sets (requirements)*]: http://msdn.microsoft.com/ru-ru/library/509be287-b532-87c6-71ac-64f3a4bbd3af%28Office.15%29.aspx
+[hosts*]: http://msdn.microsoft.com/library/f9a739c1-3daf-c03a-2bd9-4a2a6b870101%28Office.15%29.aspx
+
+## <a name="hosting-requirements"></a>Требования к размещению
+
+Все URI изображений, в частности используемых для [команд надстройки][], должны поддерживать кэширование. Сервер с изображением не должен возвращать заголовок `Cache-Control`, содержащий `no-cache`, `no-store` или подобные параметры в HTTP-отклике.
+
+Все URL-адреса, например адреса исходных файлов, указанные в элементе [SourceLocation](https://dev.office.com/reference/add-ins/manifest/sourcelocation), должны быть **защищены с помощью SSL (HTTPS)**. [!include[HTTPS guidance](../includes/https-guidance.md)]
 
 ## <a name="best-practices-for-submitting-to-appsource"></a>Рекомендации по отправке решений в AppSource
 
 Убедитесь, что идентификатор надстройки представляет собой допустимый и уникальный GUID. В Интернете доступно множество генераторов, с помощью которых можно создать уникальный GUID.
 
-Все URL-адреса, например расположения исходных файлов, указанные в элементе [SourceLocation](https://dev.office.com/reference/add-ins/manifest/sourcelocation), должны быть защищены **SSL-шифрованием (HTTPS)**.
-
-Все URL-адреса значков, например для командных зон, должны **поддерживать кэширование**. Веб-сервер НЕ должен возвращать заголовки HTTP, например no-cache или no-store.
-
-Надстройки, отправляемые в AppSource, также должны включать элемент [SupportUrl](https://dev.office.com/reference/add-ins/manifest/supporturl). Дополнительные сведения см. в статье [Политики проверки для приложений и надстроек, отправляемых в AppSource](https://docs.microsoft.com/ru-ru/office/dev/store/validation-policies).
+Надстройки, отправляемые в AppSource, также должны включать элемент [SupportUrl](https://dev.office.com/reference/add-ins/manifest/supporturl). Дополнительные сведения см. в статье [Политики проверки для приложений и надстроек, отправляемых в AppSource](https://docs.microsoft.com/office/dev/store/validation-policies).
 
 Чтобы указать домены, отличные от указанного в элементе [SourceLocation](https://dev.office.com/reference/add-ins/manifest/sourcelocation) для сценариев проверки подлинности, используйте только элемент [AppDomains](https://dev.office.com/reference/add-ins/manifest/appdomains).
 
@@ -70,10 +128,9 @@ XML-файл манифеста надстройки Office описывает �
 
 По умолчанию, если надстройка пытается перейти на URL-адрес в домене, отличном от домена, где размещена начальная страница (указан в элементе [SourceLocation](https://dev.office.com/reference/add-ins/manifest/sourcelocation) файла манифеста), этот URL-адрес откроется в новом окне браузера, а не в области надстроек ведущего приложения Office. Это поведение по умолчанию защищает пользователя от непредвиденной навигации по страницам в области надстроек из-за встроенных элементов **iframe**.
 
-Чтобы переопределить это поведение, добавьте каждый домен, который требуется открыть в окне надстройки, в список доменов в элементе [AppDomains](https://dev.office.com/reference/add-ins/manifest/appdomains) файла манифеста. Если надстройка пытается перейти по URL-адресу домена, не входящего в список, то страница откроется в новом окне браузера (не в области надстроек).
+Чтобы переопределить это поведение, добавьте каждый домен, который требуется открыть в окне надстройки, в список доменов в элементе [AppDomains](https://dev.office.com/reference/add-ins/manifest/appdomains) файла манифеста. Если надстройка попытается перейти по URL-адресу домена, не входящего в список, то страница откроется в новом окне браузера (не в области надстроек).
 
-В приведенном ниже примере XML-манифеста главная страница надстройки размещена в домене `https://www.contoso.com`, как указано в элементе **SourceLocation**. В нем также указан домен `https://www.northwindtraders.com` с помощью элемента [AppDomain](http://msdn.microsoft.com/ru-ru/library/2a0353ec-5e09-6fbf-1636-4bb5dcebb9bf%28Office.15%29.aspx) из списка **AppDomains**. Если надстройка выполняет переход на страницу в домене www.northwindtraders.com, эта страница откроется в области надстроек.
-
+В приведенном ниже примере XML-манифеста главная страница надстройки размещена в домене `https://www.contoso.com`, как указано в элементе **SourceLocation**. В нем также указан домен `https://www.northwindtraders.com` в элементе [AppDomain](http://msdn.microsoft.com/ru-ru/library/2a0353ec-5e09-6fbf-1636-4bb5dcebb9bf%28Office.15%29.aspx) из списка **AppDomains**. Страницы из домена www.northwindtraders.com будут открываться в области надстройки.
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -94,13 +151,12 @@ XML-файл манифеста надстройки Office описывает �
 </OfficeApp>
 ```
 
-## <a name="manifest-v11-xml-file-examples-and-schemas"></a>Примеры и схемы XML-файлов манифеста версии 1.1
+## <a name="manifest-v11-xml-file-examples-and-schemas"></a>XML-файлы манифеста версии 1.1: примеры и схемы
+Ниже показаны примеры XML-файлов манифеста версии 1.1 для надстроек области задач, контентных надстроек и надстроек Outlook.
 
+# <a name="task-panetabtabid-1"></a>[Области задач](#tab/tabid-1)
 
-В следующих разделах приведены примеры XML-файлов манифеста версии 1.1 для надстроек области задач, контентных надстроек и надстроек Outlook.
-
-### <a name="office-add-in-manifest-v11-example-with-commands-and-fallback-task-pane"></a>Пример манифеста версии 1.1 для надстройки Office с командами и резервной областью задач
-[Схема манифеста для надстройки области задач](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas/taskpane)
+[Схема манифеста приложения области задач](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas/taskpane)
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -134,7 +190,7 @@ XML-файл манифеста надстройки Office описывает �
   <Permissions>ReadWriteDocument</Permissions>
 
   <!--BeginAddinCommandsMode integration-->
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">   
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
     <Hosts>
       <!--Each host can have a different set of commands. Cool huh!? -->
       <!-- Workbook=Excel Document=Word Presentation=PowerPoint -->
@@ -142,7 +198,7 @@ XML-файл манифеста надстройки Office описывает �
       <Host xsi:type="Document">
         <!-- Form factor. Currenly only DesktopFormFactor is supported. We will add TabletFormFactor and PhoneFormFactor in the future-->
         <DesktopFormFactor>
-            <!--Function file is an html page that includes the javascript where functions for ExecuteAction will be called. 
+            <!--Function file is an html page that includes the javascript where functions for ExecuteAction will be called.
             Think of the FunctionFile as the "code behind" ExecuteFunction-->
           <FunctionFile resid="Contoso.FunctionFile.Url" />
 
@@ -163,7 +219,7 @@ XML-файл манифеста надстройки Office описывает �
                   <bt:Image size="32" resid="Contoso.TaskpaneButton.Icon" />
                   <bt:Image size="80" resid="Contoso.TaskpaneButton.Icon" />
                 </Icon>
-                
+
                 <!--Control. It can be of type "Button" or "Menu" -->
                 <Control xsi:type="Button" id="Contoso.FunctionButton">
                 <!--Label for your button. resid must point to a ShortString resource -->
@@ -250,7 +306,7 @@ XML-файл манифеста надстройки Office описывает �
                     <SourceLocation resid="Contoso.Taskpane2.Url" />
                   </Action>
                 </Item>
-              
+
               </Items>
             </Control>
 
@@ -295,15 +351,15 @@ XML-файл манифеста надстройки Office описывает �
 </OfficeApp>
 ```
 
-### <a name="content-add-in-manifest-v11-example"></a>Пример манифеста надстройки версии 1.1
-[Схема манифеста контентной надстройки](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas/content)
+# <a name="contenttabtabid-2"></a>[Контентная](#tab/tabid-2)
 
+[Схема манифеста контентного приложения](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas/content)
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
-<OfficeApp 
-  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:type="ContentApp">
   <Id>01eac144-e55a-45a7-b6e3-f1cc60ab0126</Id>
   <AlternateId>en-US\WA123456789</AlternateId>
@@ -324,7 +380,7 @@ XML-файл манифеста надстройки Office описывает �
   </Requirements>  
   <DefaultSettings>
     <SourceLocation DefaultValue="https://contoso.com/apps/content.html" />
-    <RequestedWidth>400</RequestedWidth> 
+    <RequestedWidth>400</RequestedWidth>
     <RequestedHeight>400</RequestedHeight>
   </DefaultSettings>
   <Permissions>Restricted</Permissions>
@@ -332,15 +388,15 @@ XML-файл манифеста надстройки Office описывает �
 </OfficeApp>
 ```
 
-### <a name="outlook-add-in-manifest-v11-example"></a>Пример манифеста надстройки Outlook версии 1.1
-[Схема манифеста контентной надстройки](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas/mail)
+# <a name="mailtabtabid-3"></a>[Почтовая](#tab/tabid-3)
 
+[Схема манифеста почтового приложения](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas/mail)
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 <OfficeApp xmlns=
   "http://schemas.microsoft.com/office/appforoffice/1.1"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:type="MailApp">
 
   <Id>971E76EF-D73E-567F-ADAE-5A76B39052CF</Id>
@@ -403,26 +459,27 @@ XML-файл манифеста надстройки Office описывает �
   </FormSettings>
 
   <Permissions>ReadWriteItem</Permissions>
-  <Rule xsi:type="RuleCollection" Mode="Or"> 
+  <Rule xsi:type="RuleCollection" Mode="Or">
     <Rule xsi:type="RuleCollection" Mode="And">
       <Rule xsi:type="RuleCollection" Mode="Or">
         <Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Read" />
         <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
       </Rule>
-      <Rule xsi:type="ItemHasRegularExpressionMatch" 
-        PropertyName="BodyAsPlaintext" RegExName="VideoURL" 
+      <Rule xsi:type="ItemHasRegularExpressionMatch"
+        PropertyName="BodyAsPlaintext" RegExName="VideoURL"
         RegExValue=
         "http://(((www\.)?youtube\.com/watch\?v=)|
         (youtu\.be/))[a-zA-Z0-9_-]{11}" />
     </Rule>
     <Rule xsi:type="RuleCollection" Mode="Or">
       <Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Edit" />
-      <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit" /> 
-    </Rule> 
+      <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit" />
+    </Rule>
   </Rule>
 </OfficeApp>
-
 ```
+
+---
 
 ## <a name="validate-and-troubleshoot-issues-with-your-manifest"></a>Проверка манифеста и устранение связанных с ним неполадок
 
@@ -430,10 +487,10 @@ XML-файл манифеста надстройки Office описывает �
 
 ## <a name="see-also"></a>См. также
 
+* [Создание команд надстройки в манифесте][команды надстройки]
+* [Указание ведущих приложений Office и обязательных элементов API](specify-office-hosts-and-api-requirements.md)
+* [Локализация надстроек для Office](localization.md)
+* [Справочная схема по манифестам надстроек для Office](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas)
+* [Проверка манифеста и устранение связанных с ним неполадок](../testing/troubleshoot-manifest.md)
 
-- [Создание команд надстройки в манифесте](create-addin-commands.md)
-- [Указание требований касательно API и ведущих приложений Office](specify-office-hosts-and-api-requirements.md)
-- [Локализация надстроек для Office](localization.md)
-- [Справочная схема по манифестам надстроек для Office](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas)
-- [Проверка манифеста и устранение связанных с ним неполадок](../testing/troubleshoot-manifest.md)
-
+[команды надстройки]: create-addin-commands.md

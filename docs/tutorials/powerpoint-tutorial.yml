@@ -1,0 +1,40 @@
+### YamlMime:Tutorial
+documentType: Tutorial
+title: Руководство по надстройкам PowerPoint
+metadata:
+  title: Руководство по надстройкам PowerPoint
+  description: Из этого руководства вы узнаете, как создать надстройку PowerPoint, которая вставляет изображение и текст, получает метаданные слайда и обеспечивает переход между слайдами.
+  audience: Разработчик
+  level: начинающий
+  displayType: one-column
+  ms.date: 02/28/2018
+items:
+- durationInMinutes: 1
+  content: |
+    Из этого руководства вы узнаете, как создать надстройку области задач PowerPoint, которая добавляет фотографию дня <a href="https://www.bing.com">Bing</a> и текст на слайд, получает метаданные слайда и обеспечивает переход между слайдами. Если в процессе возникнет проблема, <a href="https://github.com/OfficeDev/office-js-docs-pr/issues">сообщите нам об этом</a>.
+- title: Создание проекта надстройки
+  durationInMinutes: 5
+  content: |
+    [!INCLUDE [](../includes/powerpoint-tutorial-setup.md)]
+- title: Вставка изображения
+  durationInMinutes: 8
+  content: |
+    [!INCLUDE [](../includes/powerpoint-tutorial-insert-image.md)]
+- title: Настройка элементов пользовательского интерфейса
+  durationInMinutes: 3
+  content: |
+    [!INCLUDE [](../includes/powerpoint-tutorial-customize-ui.md)]
+- title: Вставка текста
+  durationInMinutes: 4
+  content: |
+    [!INCLUDE [](../includes/powerpoint-tutorial-insert-text.md)]
+- title: Получение метаданных слайда
+  durationInMinutes: 4
+  content: |
+    [!INCLUDE [](../includes/powerpoint-tutorial-get-slide-metadata.md)]
+- title: Переход между слайдами
+  durationInMinutes: 5
+  content: |
+    [!INCLUDE [](../includes/powerpoint-tutorial-navigate-slides.md)]
+- content: |
+    Вы выполнили все задания из руководства по надстройкам PowerPoint. Дополнительные сведения о создании надстроек PowerPoint см. в <a href="../powerpoint/powerpoint-add-ins.md">этой статье</a>.

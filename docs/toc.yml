@@ -14,15 +14,18 @@
   items:
   - name: Создание надстройки Excel
     items:
-    - name: Использование React
-      href: quickstarts/excel-quickstart-react.md
-      displayName: Excel
     - name: Использование Angular
       href: quickstarts/excel-quickstart-angular.md
       displayName: Excel
     - name: Использование jQuery
       href: quickstarts/excel-quickstart-jquery.md
       displayName: Excel
+    - name: Использование React
+      href: quickstarts/excel-quickstart-react.md
+      displayName: Excel
+    - name: Использование Vue
+      href: quickstarts/excel-quickstart-vue.md
+      displayName: Excel 
   - name: Создание надстройки Word
     href: quickstarts/word-quickstart.md
     displayName: Word
@@ -43,7 +46,11 @@
   items:
   - name: Учебник по надстройке Excel
     href: tutorials/excel-tutorial.yml
-    
+    displayName: Excel
+  - name: Руководство по надстройкам PowerPoint
+    href: tutorials/powerpoint-tutorial.yml
+    displayName: PowerPoint
+
 - name: Понятия
   items:
   - name: Требования к запуску надстроек
@@ -194,15 +201,21 @@
       href: excel/excel-add-ins-get-started-overview.md
       displayName: Excel
       items:
-      - name: Использование React
-        href: excel/excel-add-ins-get-started-react.md
-        displayName: Excel
       - name: Использование Angular
         href: excel/excel-add-ins-get-started-angular.md
         displayName: Excel
       - name: Использование jQuery
         href: excel/excel-add-ins-get-started-jquery.md
         displayName: Excel
+      - name: Использование React
+        href: excel/excel-add-ins-get-started-react.md
+        displayName: Excel
+      - name: Использование Vue
+        href: excel/excel-add-ins-get-started-vue.md
+        displayName: Excel
+    - name: Руководство по надстройкам Excel
+      href: tutorials/excel-tutorial.yml
+      displayName: Excel
     - name: Основные понятия
       href: excel/excel-add-ins-core-concepts.md
       displayName: Excel
@@ -278,6 +291,9 @@
     items:
     - name: Создание первой надстройки PowerPoint
       href: powerpoint/powerpoint-add-ins-get-started.md
+      displayName: PowerPoint
+    - name: Руководство по надстройкам PowerPoint
+      href: tutorials/powerpoint-tutorial.yml
       displayName: PowerPoint
     - name: Использование тем документов в надстройках PowerPoint
       href: powerpoint/use-document-themes-in-your-powerpoint-add-ins.md

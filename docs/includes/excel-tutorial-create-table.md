@@ -1,5 +1,8 @@
 На этом этапе руководства мы проверим программным способом, поддерживает ли надстройка текущую версию Excel, установленную у пользователя, а также добавим таблицу на лист, заполним ее данными и отформатируем.
 
+> [!NOTE]
+> Это один из разделов руководства по надстройкам Excel. Если вы перешли на эту страницу со страницы результатов поисковой системы или по другой прямой ссылке, перейдите на вводную страницу [руководства по надстройкам Excel](../tutorials/excel-tutorial.yml), чтобы начать обучение с самого начала.
+
 ## <a name="code-the-add-in"></a>Написание кода надстройки
 
 1. Откройте проект в редакторе кода. 
@@ -103,7 +106,7 @@
 3. Выполните команду `npm start`, чтобы запустить веб-сервер, работающий на localhost.   
 4. Загрузите неопубликованную надстройку одним из следующих способов:
     - Windows: [загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-    - Excel Online: [загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online).
+    - [Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
     - iPad и Mac: [загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 5. В меню **Главная** выберите пункт **Показать область задач**.
 6. В области задач нажмите кнопку **Создать таблицу**.

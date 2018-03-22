@@ -20,13 +20,13 @@
 
 ## <a name="generate-a-new-angular-app"></a>Создание приложения Angular
 
-Используйте Angular CLI, чтобы создать приложение Angular. В терминале выполните следующую команду:
+Используйте Angular CLI, чтобы создать приложение Angular. Используя терминал, выполните следующую команду:
 
 ```bash
 ng new my-addin
 ```
 
-## <a name="generate-the-manifest-file-and-sideload-the-add-in"></a>Создание файла манифеста и загрузка неопубликованной надстройки
+## <a name="generate-the-manifest-file"></a>Создание файла манифеста
 
 В файле манифеста надстройки определяются ее параметры и возможности.
 
@@ -36,12 +36,12 @@ ng new my-addin
     cd my-addin
     ```
 
-2. С помощью генератора Yeoman создайте файл манифеста для надстройки. Выполните приведенную ниже команду и ответьте на вопросы, как показано на снимке экрана ниже.
+2. Используя генератор Yeoman, создайте файл манифеста для надстройки. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
     ```bash
     yo office
     ```
-    - **Would you like to create a new subfolder for your project?:** `No` (Создать новую вложенную папку для проекта?)
+    - Для **Would you like to create a new subfolder for your project?** (Создать новую вложенную папку для проекта?) выберите `No` (Нет).
     - **Как вы хотите назвать надстройку?:** `My Office Add-in`
     - **Какое клиентское приложение Office должно поддерживаться?:** `Excel`
     - **Would you like to create a new add-in?:** `No` (Создать новую надстройку?)
@@ -51,28 +51,55 @@ ng new my-addin
     ![Генератор Yeoman](../images/yo-office.png)
     
     > [!NOTE]
-    > Если вам будет предложено переписать файл **package.json**, выберите **No** (не переписывать).
+    > Если вам будет предложено переписать файл **package.json**, выберите **No** (Нет).
 
-3. Откройте файл манифеста (т. е. файл в корневом каталоге приложения, имя которого заканчивается на "manifest.xml"). Замените все вхождения `https://localhost:3000` на `http://localhost:4200` и сохраните файл.
+## <a name="secure-the-app"></a>Защита приложения
 
-    > [!TIP]
-    > Обязательно измените протокол на **http**, а номер порта — на **4200**.
+[!include[HTTPS guidance](../includes/https-guidance.md)]
 
-4. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.
+Для целей этого краткого руководства можно использовать сертификаты, которые предоставляет **генератор Yeoman для надстроек Office**. Вы уже установили генератор глобально (он входит в список **необходимых компонентов** этого краткого руководства), поэтому вам просто нужно скопировать сертификаты из места глобальной установки в папку приложения. Ниже описано, как это сделать.
 
-    - [Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-    - [Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
-    - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+1. Используя терминал, выполните следующую команду, чтобы определить папку, в которую установлены глобальные библиотек **npm**:
+
+    ```bash 
+    npm list -g 
+    ``` 
+    
+    > [!TIP]    
+    > Первая строка выходных данных, создаваемых этой командой, указывает папку, в которую установлены глобальные библиотеки **npm**.          
+    
+2. Используя проводник, перейдите к папке `{global libraries folder}/node_modules/generator-office/generators/app/templates/js/base`. Оттуда скопируйте папку `certs` в буфер обмена.
+
+3. Перейдите в корневую папку приложения Angular, созданную на шаге 1 предыдущего раздела, и вставьте папку `certs` из буфера обмена в эту папку.
 
 ## <a name="update-the-app"></a>Обновление приложения
 
-1. Откройте **src/index.html**, добавьте тег `<script>` сразу перед тегом `</head>` и сохраните файл.
+1. В редакторе кода откройте файл **package.json** в корневой папке проекта. Измените скрипт `start`, чтобы указать, что сервер должен использовать SSL и порт 3000, и сохраните файл.
+
+    ```json
+    "start": "ng serve --ssl true --port 3000"
+    ```
+
+2. Откройте файл **.angular cli.json** в корневой папке проекта. Измените объект **defaults**, чтобы указать расположение сертификатов, и сохраните файл.
+
+    ```json
+    "defaults": {
+      "styleExt": "css",
+      "component": {},
+      "serve": {
+        "sslKey": "certs/server.key",
+        "sslCert": "certs/server.crt"
+      }
+    }
+    ```
+
+3. Откройте файл **src/index.html**, добавьте тег `<script>` сразу перед тегом `</head>` и сохраните.
 
     ```html
     <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
     ```
 
-2. Откройте **src/main.ts**, замените `platformBrowserDynamic().bootstrapModule(AppModule).catch(err => console.log(err));` приведенным ниже кодом и сохраните файл. 
+4. Откройте **src/main.ts**, замените `platformBrowserDynamic().bootstrapModule(AppModule).catch(err => console.log(err));` приведенным ниже кодом и сохраните файл. 
 
     ```typescript 
     declare const Office: any;
@@ -83,13 +110,13 @@ ng new my-addin
     };
     ```
 
-3. Откройте **src/polyfills.ts**, добавьте приведенную ниже строку кода над всеми имеющимися операторами `import` и сохраните файл.
+5. Откройте **src/polyfills.ts**, добавьте приведенную ниже строку кода над всеми имеющимися операторами `import` и сохраните файл.
 
     ```typescript
     import 'core-js/client/shim';
     ```
 
-4. В файле **src/polyfills.ts** раскомментируйте приведенные ниже строки и сохраните файл.
+6. В файле **src/polyfills.ts** раскомментируйте приведенные ниже строки и сохраните файл.
 
     ```typescript
     import 'core-js/es6/symbol';
@@ -108,7 +135,7 @@ ng new my-addin
     import 'core-js/es6/set';
     ```
 
-5. Откройте **src/app/app.component.html**, замените его содержимое приведенным ниже кодом HTML и сохраните файл. 
+7. Откройте **src/app/app.component.html**, замените его содержимое приведенным ниже кодом HTML и сохраните файл. 
 
     ```html
     <div id="content-header">
@@ -126,7 +153,7 @@ ng new my-addin
     </div>
     ```
 
-6. Откройте **src/app/app.component.css**, замените его содержимое приведенным ниже кодом CSS и сохраните файл.
+8. Откройте **src/app/app.component.css**, замените его содержимое приведенным ниже кодом CSS и сохраните файл.
 
     ```css
     #content-header {
@@ -155,7 +182,7 @@ ng new my-addin
     }
     ```
 
-7. Откройте **src/app/app.component.ts**, замените его содержимое приведенным ниже кодом и сохраните файл. 
+9. Откройте файл **src/app/app.component.ts**, замените его содержимое приведенным ниже кодом и сохраните. 
 
     ```typescript
     import { Component } from '@angular/core';
@@ -178,13 +205,29 @@ ng new my-addin
     }
     ```
 
-## <a name="try-it-out"></a>Проверка
+## <a name="start-the-dev-server"></a>Запуск сервера разработки
 
-1. Выполните в терминале приведенную ниже команду, чтобы запустить сервер разработки.
+1. Используя терминал, выполните приведенную ниже команду, чтобы запустить сервер разработки.
 
     ```bash
-    npm start
+    npm run start
     ```
+
+2. В веб-браузере перейдите по адресу `https://localhost:3000`. Если появится сообщение о том, что сертификат сайта не является доверенным, укажите, что ему можно доверять. Дополнительные сведения см. в статье [Добавление самозаверяющего сертификата как доверенного корневого сертификата](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md).
+
+    > [!NOTE]
+    > Chrome может продолжать показывать предупреждение о том, что рабочая станция не доверяет сертификату сайта даже после [его добавления в список доверенных корневых сертификатов](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md). Вы можете игнорировать это предупреждение. Чтобы убедиться, что сертификат является доверенным, перейдите по адресу `https://localhost:3000` в Internet Explorer или Microsoft Edge. 
+
+3. После того как браузер загрузит страницу надстройки без ошибок сертификата, вы можете протестировать надстройку. 
+
+## <a name="try-it-out"></a>Проверка
+
+1. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.
+
+    - [Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
+    - [Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
+    - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+
    
 2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
@@ -209,4 +252,3 @@ ng new my-addin
 * [Основные понятия API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
 * [Примеры кода надстроек Excel](http://dev.office.com/code-samples#?filters=excel,office%20add-ins)
 * [Справочник по API JavaScript для Excel](https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview)
-
