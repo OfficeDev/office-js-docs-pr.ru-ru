@@ -1,7 +1,7 @@
 ---
 title: Доступность ведущих приложений и платформ для надстроек Office
 description: 'Поддерживаемые наборы требований для Excel, Word, Outlook, PowerPoint и OneNote.'
-ms.date: 12/01/2017
+ms.date: 3/20/2018
 ---
 
 # <a name="office-add-in-host-and-platform-availability"></a>Доступность ведущих приложений и платформ для надстроек Office
@@ -137,25 +137,23 @@ ms.date: 12/01/2017
     <td> - Чтение почты<br>
       - Создание сообщения почты<br>
       - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
-    <td> - Mailbox 1.0<br>
-      - Mailbox 1.1<br>
-      - Mailbox 1.2<br>
-      - Mailbox 1.3<br>
-      - Mailbox 1.4<br>
-      - Mailbox 1.5</td>
-    <td>недоступен</td>
+    <td> - <a href="https://dev.office.com/reference/add-ins/outlook/1.1/index?product=outlook&version=v1.1">Mailbox 1.1</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.2/index?product=outlook&version=v1.2">Mailbox 1.2</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.3/index?product=outlook&version=v1.3">Mailbox 1.3</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.4/index?product=outlook&version=v1.4">Mailbox 1.4</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.5/index?product=outlook&version=v1.5">Mailbox 1.5</a></td>
+    <td>Недоступен</td>
   </tr>
   <tr>
     <td>Office 2013 для Windows</td>
     <td> - Чтение почты<br>
       - Создание сообщения почты<br>
       - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
-    <td> - Mailbox 1.0<br>
-      - Mailbox 1.1<br>
-      - Mailbox 1.2<br>
-      - Mailbox 1.3<br>
-      - Mailbox 1.4</td>
-    <td>недоступен</td>
+    <td> - <a href="https://dev.office.com/reference/add-ins/outlook/1.1/index?product=outlook&version=v1.1">Mailbox 1.1</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.2/index?product=outlook&version=v1.2">Mailbox 1.2</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.3/index?product=outlook&version=v1.3">Mailbox 1.3</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.4/index?product=outlook&version=v1.4">Mailbox 1.4</a></td>
+    <td>Недоступен</td>
   </tr>
   <tr>
     <td>Office 2016 для Windows</td>
@@ -163,40 +161,46 @@ ms.date: 12/01/2017
       - Создание сообщения почты<br>
       - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a><br>
       - Модули</td>
-    <td> - Mailbox 1.0<br>
-      - Mailbox 1.1<br>
-      - Mailbox 1.2<br>
-      - Mailbox 1.3<br>
-      - Mailbox 1.4<br>
-      - Mailbox 1.5</td></td>
-    <td>недоступен</td> 
+    <td> - <a href="https://dev.office.com/reference/add-ins/outlook/1.1/index?product=outlook&version=v1.1">Mailbox 1.1</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.2/index?product=outlook&version=v1.2">Mailbox 1.2</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.3/index?product=outlook&version=v1.3">Mailbox 1.3</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.4/index?product=outlook&version=v1.4">Mailbox 1.4</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.5/index?product=outlook&version=v1.5">Mailbox 1.5</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.6/index?product=outlook&version=v1.6">Mailbox 1.6</a></td>
+    <td>Недоступен</td> 
   </tr>
   <tr>
     <td>Office для iOS</td>
     <td> - Чтение почты<br>
       - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
-    <td> - Mailbox 1.4</td>
-    <td>недоступен</td>
+    <td> - <a href="https://dev.office.com/reference/add-ins/outlook/1.1/index?product=outlook&version=v1.1">Mailbox 1.1</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.2/index?product=outlook&version=v1.2">Mailbox 1.2</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.3/index?product=outlook&version=v1.3">Mailbox 1.3</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.4/index?product=outlook&version=v1.4">Mailbox 1.4</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.5/index?product=outlook&version=v1.5">Mailbox 1.5</a></td>    
+    <td>Недоступен</td>
   </tr>
   <tr>
     <td>Office 2016 для Mac</td>
     <td> - Чтение почты<br>
       - Создание сообщения почты<br>
       - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
-    <td> - Mailbox 1.0<br>
-      - Mailbox 1.1<br>
-      - Mailbox 1.2<br>
-      - Mailbox 1.3<br>
-      - Mailbox 1.4<br>
-      - Mailbox 1.5</td>
-    <td>недоступен</td>
+    <td> - <a href="https://dev.office.com/reference/add-ins/outlook/1.1/index?product=outlook&version=v1.1">Mailbox 1.1</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.2/index?product=outlook&version=v1.2">Mailbox 1.2</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.3/index?product=outlook&version=v1.3">Mailbox 1.3</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.4/index?product=outlook&version=v1.4">Mailbox 1.4</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.5/index?product=outlook&version=v1.5">Mailbox 1.5</a></td>
+    <td>Недоступен</td>
   </tr>
   <tr>
     <td>Office для Android</td>
     <td> - Чтение почты<br>
       - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
-    <td> - Mailbox 1.4</td>
-    <td>недоступен</td>
+    <td> - <a href="https://dev.office.com/reference/add-ins/outlook/1.1/index?product=outlook&version=v1.1">Mailbox 1.1</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.2/index?product=outlook&version=v1.2">Mailbox 1.2</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.3/index?product=outlook&version=v1.3">Mailbox 1.3</a><br>
+      - <a href="https://dev.office.com/reference/add-ins/outlook/1.4/index?product=outlook&version=v1.4">Mailbox 1.4</a></td>
+    <td>Недоступен</td>
   </tr>
 </table>
 

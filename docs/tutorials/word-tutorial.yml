@@ -1,0 +1,40 @@
+### YamlMime:Tutorial
+documentType: Tutorial
+title: Руководство по надстройкам Word
+metadata:
+  title: Руководство по надстройкам Word
+  description: В этом руководстве показано создание надстройки Word, которая вставляет и заменяет диапазоны текста, абзацы, изображения, HTML-код, таблицы и элементы управления контентом. Вы также узнаете, как форматировать текст, вставлять и заменять содержимое в элементах управления контентом.
+  audience: Для разработчиков
+  level: начинающих
+  displayType: one-column
+  ms.date: 03/10/2018
+items:
+- durationInMinutes: 1
+  content: |
+    В этом руководстве показано, как создать надстройку Word, которая вставляет и заменяет текст, изображения и другое содержимое. Вы начнете с создания надстройки Word, которая вставляет абзацы. Последовательно выполняя каждый из шагов, описанных в руководстве, вы будете постепенно добавлять функции в надстройку. Если в процессе возникнет проблема, <a href="https://github.com/OfficeDev/office-js-docs-pr/issues">сообщите нам об этом</a>.
+- title: Создание проекта надстройки
+  durationInMinutes: 5
+  content: |
+    [!INCLUDE [](../includes/word-tutorial-setup.md)]
+- title: Вставка диапазона текста
+  durationInMinutes: 10
+  content: |
+    [!INCLUDE [](../includes/word-tutorial-insert-text.md)]
+- title: Формат и стиль текста
+  durationInMinutes: 15
+  content: |
+    [!INCLUDE [](../includes/word-tutorial-format-text.md)]
+- title: Замена и вставка текста в различных расположениях
+  durationInMinutes: 20
+  content: |
+    [!INCLUDE [](../includes/word-tutorial-replace-text.md)]
+- title: Вставка изображений, HTML-кода и таблиц
+  durationInMinutes: 6
+  content: |
+    [!INCLUDE [](../includes/word-tutorial-insert-image-html-table.md)]
+- title: Создание элементов управления контентом и замена их содержимого
+  durationInMinutes: 8
+  content: |
+    [!INCLUDE [](../includes/word-tutorial-content-control.md)]
+- content: |
+    Вы выполнили все действия, указанные в руководстве по надстройкам Word. Дополнительные сведения о создании надстроек Word см. в статье <a href="../word/word-add-ins-programming-overview.md">Обзор надстроек Word</a>.

@@ -38,9 +38,11 @@ ms.date: 12/04/2017
 
 ## <a name="validate-your-manifest-against-the-xml-schema"></a>Проверка манифеста на соответствие схеме XML
 
-Чтобы убедиться, что файл манифеста имеет правильную схему, проверьте его на соответствие файлам [XSD](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas). Для этой проверки можно использовать средство проверки на соответствие схеме XML. 
+Это позволяет обеспечить соответствие файла манифеста правильной схеме (в том числе корректность пространства имен для используемых элементов). Если вы скопировали элементы из других примеров манифеста, еще раз проверьте, **указаны ли подходящие пространства имен**. Вы можете проверить манифест, используя файлы [XML Schema Definition (XSD)](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas). Для этой проверки можно использовать средство проверки на соответствие схеме XML. 
 
-### <a name="to-use-a-command-line-xml-schema-validation-tool-to-validate-your-manifest"></a>Как проверить манифест на соответствие схеме XML
+
+
+### <a name="to-use-a-command-line-xml-schema-validation-tool-to-validate-your-manifest"></a>Как проверить манифест на соответствие схеме XML с помощью программы командной строки
 
 1.  Установите [tar](https://www.gnu.org/software/tar/) и [libxml](http://xmlsoft.org/FAQ.html), если вы еще этого не сделали.
 

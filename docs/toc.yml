@@ -10,7 +10,7 @@
     href: overview/office-add-in-availability.md
     displayName: Excel, Word, Outlook, PowerPoint, OneNote, Project
 
-- name: Примеры использования
+- name: Краткие руководства
   items:
   - name: Создание надстройки Excel
     items:
@@ -50,6 +50,9 @@
   - name: Руководство по надстройкам PowerPoint
     href: tutorials/powerpoint-tutorial.yml
     displayName: PowerPoint
+  - name: Руководство по надстройкам Word
+    href: tutorials/word-tutorial.yml
+    displayName: Word
 
 - name: Понятия
   items:
@@ -75,7 +78,9 @@
       items:
       - name: Язык дизайна
         href: design/add-in-design-language.md
-      - name: Шаблоны оформления
+      - name: Обеспечение движения
+        href: design/using-motion-office-addins.md
+      - name: Шаблоны оформления для взаимодействия с пользователем
         href: design/ux-design-patterns.md
       - name: Тестирование удобства использования
         href: design/usability-testing.md
@@ -129,6 +134,8 @@
 
   - name: Разработка
     items:
+    - name: Наборы обязательных компонентов и версии Office
+      href: develop/office-versions-and-requirement-sets.md
     - name: Установка последней версии Office
       href: develop/install-latest-office-version.md
     - name: API JavaScript для Office
@@ -262,6 +269,9 @@
     - name: Создание первой надстройки Word
       href: word/word-add-ins.md
       displayName: Word
+    - name: Руководство по надстройкам Word
+      href: tutorials/word-tutorial.yml
+      displayName: Word
     - name: Создание лучших надстроек Word с помощью Office Open XML
       href: word/create-better-add-ins-for-word-with-office-open-xml.md
       displayName: Word
@@ -334,7 +344,7 @@
     href: testing/test-debug-office-add-ins.md
     items:
     - name: Windows
-      items: 
+      items:
       - name: Загрузка надстроек Office в Windows
         href: testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md
       - name: Подключение отладчика из области задач
@@ -342,7 +352,7 @@
       - name: Отладка с помощью средств разработчика F12
         href: testing/debug-add-ins-using-f12-developer-tools-on-windows-10.md
     - name: Office Online
-      items: 
+      items:
       - name: Загрузка надстроек Office в Office Online
         href: testing/sideload-office-add-ins-for-testing.md
       - name: Отладка в Office Online

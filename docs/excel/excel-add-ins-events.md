@@ -4,7 +4,7 @@ description: ''
 ms.date: 01/29/2018
 ---
 
-# <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями при помощи API JavaScript для Excel
+# <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями при помощи API JavaScript для Excel 
 
 В этой статье описываются важные понятия, относящиеся к работе с событиями в Excel, а также представлены образцы кода, иллюстрирующие регистрацию, использование и удаление обработчиков событий при помощи API JavaScript для Excel. 
 
@@ -18,10 +18,9 @@ ms.date: 01/29/2018
 | Событие | Описание | Поддерживаемые объекты |
 |:---------------|:-------------|:-----------|
 | `onAdded` | Событие, возникающее при добавлении объекта. | **WorksheetCollection** |
-| `onDeleted`  | Событие, возникающее при удалении объекта. | **WorksheetCollection** |
 | `onActivated` | Событие, возникающее при активации объекта. | **WorksheetCollection**, **Worksheet** |
 | `onDeactivated` | Событие, возникающее при отключении объекта. | **WorksheetCollection**, **Worksheet** |
-| `onDataChanged` | Событие, возникающее при изменении данных в ячейках. | **Worksheet**, **Table**, **TableCollection**, **Binding** |
+| `onChanged` | Событие, возникающее при изменении данных в ячейках. | **Worksheet**, **Table**, **TableCollection**, **Binding** |
 | `onSelectionChanged` | Событие, возникающее при изменении активной ячейки или выбранного диапазона. | **Worksheet**, **Table**, **Binding** |
 
 ### <a name="event-triggers"></a>Триггеры событий
@@ -40,20 +39,20 @@ ms.date: 01/29/2018
 
 ### <a name="events-and-coauthoring"></a>События и совместное редактирование
 
-Несколько человек могут работать вместе и [одновременно редактировать](co-authoring-in-excel-add-ins.md) одну книгу Excel. Для событий, которые может вызвать соавтор, в частности `onDataChanged`, соответствующий объект **Event** будет содержать свойство **source**, указывающее, кем было вызвано событие: локальным пользователем (`event.source = Local`) или удаленным соавтором (`event.source = Remote`).
+Несколько человек могут работать вместе и [одновременно редактировать](co-authoring-in-excel-add-ins.md) одну книгу Excel. Для событий, которые может вызвать соавтор, в частности `onChanged`, соответствующий объект **Event** будет содержать свойство **source**, указывающее, кем было вызвано событие: локальным пользователем (`event.source = Local`) или удаленным соавтором (`event.source = Remote`).
 
 ## <a name="register-an-event-handler"></a>Регистрация обработчика событий
 
-В приведенном ниже примере кода регистрируется обработчик события `onDataChanged` на листе под названием **Sample**. В этом коде указано, что при изменении данных на этом листе должна выполняться функция `handleDataChange`.
+В приведенном ниже примере кода регистрируется обработчик события `onChanged` на листе под названием **Sample**. В этом коде указано, что при изменении данных на этом листе должна выполняться функция `handleDataChange`.
 
 ```js
 Excel.run(function (context) {
     var worksheet = context.workbook.worksheets.getItem("Sample");
-    worksheet.onDataChanged.add(handleDataChange);
+    worksheet.onChanged.add(handleDataChange);
 
     return context.sync()
         .then(function () {
-            console.log("Event handler successfully registered for onDataChanged event in the worksheet.");
+            console.log("Event handler successfully registered for onChanged event in the worksheet.");
         });
 }).catch(errorHandlerFunction);
 ```

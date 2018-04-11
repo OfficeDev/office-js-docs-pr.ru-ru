@@ -1,7 +1,7 @@
 ---
 title: Создание и отладка надстроек Office в Visual Studio
 description: ''
-ms.date: 12/04/2017
+ms.date: 03/14/2018
 ---
 
 
@@ -15,7 +15,7 @@ ms.date: 12/04/2017
 ## <a name="create-an-office-add-in-project-in-visual-studio"></a>Создание проекта надстройки Office в Visual Studio
 
 
-Для начала убедитесь, что у вас установлены инструменты [Office Developer Tools](https://www.visualstudio.com/features/office-tools-vs.aspx) и версия Microsoft Office. Вы можете присоединиться к [программе Office 365 для разработчиков](https://dev.office.com/devprogram) или получить [последнюю версию](../develop/install-latest-office-version.md), следуя приведенным ниже инструкциям.
+Для начала убедитесь, что у вас установлены инструменты [Office Developer Tools](https://www.visualstudio.com/features/office-tools-vs.aspx) и версия Microsoft Office. Вы можете присоединиться к [программе для разработчиков Office 365](https://developer.microsoft.com/en-us/office/dev-program) или получить [последнюю версию](../develop/install-latest-office-version.md), следуя приведенным ниже инструкциям.
 
 
 1. В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.
@@ -101,8 +101,8 @@ ms.date: 12/04/2017
 |**Документ при запуске** (только для контентных надстроек и надстроек области задач)|Указывает, какой документ следует открыть при запуске проекта.|
 |**Веб-проект**|Определяет имя веб-проекта, связанного с надстройкой.|
 |**Адрес электронной почты** (только надстройки Outlook)|Указывает адрес электронной почты учетной записи пользователя на сервере Exchange Server или Exchange Online, с которой нужно проверить надстройкой Outlook.|
-|**URL-адрес EWS** (только надстройки Outlook)|URL-адрес веб-службы Exchange (например, https://www.contoso.com/ews/exchange.aspx). |
-|**URL-адрес OWA** (только надстройки Outlook)|URL-адрес Outlook Web App (например, https://www.contoso.com/owa).|
+|**URL-адрес EWS** (только надстройки Outlook)|URL веб-службы Exchange (пример: https://www.contoso.com/ews/exchange.aspx). |
+|**URL-адрес OWA** (только надстройки Outlook)|URL-адрес Outlook Web App (пример: https://www.contoso.com/owa).|
 |**Имя пользователя** (только надстройки Outlook)|Указывает имя учетной записи пользователя в Exchange Server или Exchange Online.|
 |**Файл проекта **|Задает имя файла, в котором указаны сборка, конфигурация и другие сведения о проекте.|
 |**Папка проекта**|Расположение файла проекта.|

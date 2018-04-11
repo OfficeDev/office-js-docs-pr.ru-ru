@@ -1,23 +1,27 @@
 ---
 title: Проверка интеграции Script Lab
-description: ''
-ms.date: 12/04/2017
+description: 'Этот тестовый файл демонстрирует новую функцию ScriptLab, которая позволит разработчикам опробовать свои фрагменты в Excel, Word и PowerPoint.'
+ms.date: 03/14/2018
 ---
 
 
 # <a name="testing-script-lab-integration"></a>Проверка интеграции Script Lab
 
-Это тестовый файл, предназначенный для демонстрации новой функции ScriptLab, которая позволит разработчикам опробовать свои фрагменты в Excel, Word, PowerPoint.  
+Этот тестовый файл демонстрирует новую функцию ScriptLab, которая позволит разработчикам опробовать свои фрагменты в Excel, Word и PowerPoint. 
 
 ## <a name="prerequisites"></a>Необходимые компоненты
+
 - Вам потребуется URL-адрес представления из фрагмента ScriptLab.
-- Примечание. Чтобы опробовать последние фрагменты с помощью ScriptLab, требуется Office 365. Разработчики могут получить подписку на Office 365 по [специальной программе](https://dev.office.com/devprogram) (исключительно для разработки).  
+
+> [!NOTE] 
+> *Следует* отметить, что для изучения последних фрагментов с помощью ScriptLab требуется Office 365. Разработчики могут получить подписку на Office 365 по [специальной программе](https://developer.microsoft.com/en-us/office/dev-program) (исключительно для разработки). Пошаговые инструкции для принятия участия в этой программе, регистрации и настройки подписки см. в [документации по программе для разработчиков приложений для Office 365](https://docs.microsoft.com/ru-ru/office/developer-program/office-365-developer-program). 
 
 
 ## <a name="try-it-out-button"></a>Кнопка "Попробовать"
-Таким образом мы добавим кнопку "Попробовать", которую рекомендуется связать с фрагментом кода.  Для этого мы используем класс Office UI Fabric, чтобы стилизовать ссылку под кнопку. Для самой ссылки не забудьте задать атрибут *aria label*.
 
-**Демонстрация:**
+Так мы добавим кнопку **Попробовать**, которую рекомендуем связать с фрагментом кода. Для этого используем класс Office UI Fabric, чтобы стилизовать ссылку под кнопку. Для самой ссылки не забудьте задать атрибут `aria label`.
+
+### <a name="demo"></a>Демонстрация
 
 <a href="https://bornholm-edge.azurewebsites.net/#/view/gist/excel/0cc24cee687141d1c2726c0feea70911" class="ms-Button" aria-label="Open this snippet in Script Lab, an Office Add-in">Попробовать</a>
 
@@ -25,27 +29,32 @@ ms.date: 12/04/2017
 <button href="https://bornholm-edge.azurewebsites.net/#/view/gist/excel/0cc24cee687141d1c2726c0feea70911" class="ms-Button" aria-label="Open this snippet in Script Lab, an Office Add-in">Попробовать</button>
 
 
-**Код:**
+### <a name="code"></a>Код
+
 ```html
 <a href="ahttps://bornholm-edge.azurewebsites.net/#/view/gist/excel/0cc24cee687141d1c2726c0feea70911" class="ms-Button" aria-label="Open this snippet in Script Lab, an Office Add-in">Try it out</a>
 ```
 
 
 
-## <a name="embed-script-lab-as-an-iframe"></a>Внедрение лаборатории скриптов в виде iframe
-В этом режиме мы внедрим фрагмент непосредственно в наши документы в виде iframe. Ширина имеет значение 95 % (от ширины всех остальных фрагментов). Рекомендуем удалить границу рамки iframe.  Высота должна соответствовать высоте фрагмента.
+## <a name="embed-script-lab-as-an-iframe"></a>Внедрение Script Lab в виде iframe
 
-**Демонстрация:**
+В этом режиме мы внедрим фрагмент непосредственно в наши документы в виде iframe. Ширина имеет значение 95 % (от ширины всех остальных фрагментов). Рекомендуем удалить границу рамки iframe. Высота должна соответствовать фрагменту.
+
+### <a name="demo"></a>Демонстрация
+
 <iframe src="https://bornholm-edge.azurewebsites.net/#/view/gist/excel/0cc24cee687141d1c2726c0feea70911" height="600px" width="95%" frameborder="0"></iframe>
 
-**Код:**
+### <a name="code"></a>Код
+
 ```html
 <iframe src="https://bornholm-edge.azurewebsites.net/#/view/gist/excel/0cc24cee687141d1c2726c0feea70911" height="600px" width="95%" frameborder="0"></iframe>
 ```
 
 ## <a name="testing-considerations"></a>Рекомендации по тестированию
-Нам нужно проверить мобильные подписки (не на Office 365). Согласно отзывам на сайте office js docs многие разработчики пользовались версией 2013 или более ранней.  
+
+Нам нужно проверить мобильные подписки (не на Office 365). Исходя из отзывов на сайте office-js-docs, многие разработчики пользуются версией 2013 или более ранней.  
 
 Для пути внедрения нам нужно окончательное утверждение. Кроме того, нам нужно убедиться, что содержимое на странице gist представления соответствует нашим рекомендациям по внедрению специальных возможностей.
 
-## <a name="see-also"></a>См. также
+

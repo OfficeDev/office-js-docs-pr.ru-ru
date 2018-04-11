@@ -45,12 +45,16 @@ ms.date: 12/04/2017
 Пример реализации контентной надстройки для Excel: [Humongous Insurance](https://github.com/OfficeDev/Excel-Content-Add-in-Humongous-Insurance) на сайте GitHub.
 
 ## <a name="support-considerations"></a>Что касается поддержки
-- Проверьте, будет ли ваша надстройка Office работать на [конкретной платформе Office](/overview/office-add-in-availability.md). 
-- Чтобы надстройка могла читать и записывать данные в Excel или PowerPoint, может потребоваться добавление в список доверенных. Вы можете объявить нужный [уровень разрешений](/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md) в манифесте надстройки.  
+- Проверьте, будет ли ваша надстройка Office работать на [конкретной платформе Office](https://docs.microsoft.com/ru-ru/office/dev/add-ins/overview/office-add-in-availability). 
+- Чтобы надстройка могла читать и записывать данные в Excel или PowerPoint, может потребоваться добавление в список доверенных. Вы можете объявить нужный [уровень разрешений](https://docs.microsoft.com/ru-ru/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins) в манифесте надстройки.  
 - Контентные надстройки поддерживаются в Excel и PowerPoint в Office 2013 и более поздних версий. Если вы откроете надстройку в версии Office, которая не поддерживает веб-надстройки, вместо надстройки будет показано изображение.
 
 ## <a name="see-also"></a>См. также
-- [Сведения о доступности элементов для надстроек Office, представленные с учетом ведущих приложений и платформ](/overview/office-add-in-availability.md)
-- [Office UI Fabric в надстройках Office](office-ui-fabric.md) 
-- [Шаблоны проектирования взаимодействия для надстроек Office](ux-design-patterns.md)
-- [Запрашивание разрешений на использование API в контентных надстройках и надстройках области задач](/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md)
+- 
+  [Сведения о доступности элементов для надстроек Office, представленные с учетом ведущих приложений и платформ](https://docs.microsoft.com/ru-ru/office/dev/add-ins/overview/office-add-in-availability)
+- 
+  [Office UI Fabric в надстройках Office](https://docs.microsoft.com/ru-ru/office/dev/add-ins/design/office-ui-fabric) 
+- 
+  [Шаблоны проектирования взаимодействия для надстроек Office](https://docs.microsoft.com/ru-ru/office/dev/add-ins/design/ux-design-patterns)
+- 
+  [Запрашивание разрешений на использование API в контентных надстройках и надстройках области задач](https://docs.microsoft.com/ru-ru/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins)
