@@ -1,413 +1,404 @@
-- name: Документация по надстройкам Office
+- name: '???????????? ?? ??????????? Office'
   href: index.yml
-  displayName: Excel, Word, Outlook, PowerPoint, OneNote, Project
-- name: Общие сведения
+  displayName: 'Excel, Word, Outlook, PowerPoint, OneNote, Project'
+- name: '?????'
   items:
-  - name: Сведения о надстройках Office
-    href: overview/office-add-ins.md
-    displayName: Excel, Word, Outlook, PowerPoint, OneNote, Project
-  - name: Доступность ведущих приложений и платформ
-    href: overview/office-add-in-availability.md
-    displayName: Excel, Word, Outlook, PowerPoint, OneNote, Project
-
-- name: Краткие руководства
+    - name: '???????? ? ??????????? Office'
+      href: overview/office-add-ins.md
+      displayName: 'Excel, Word, Outlook, PowerPoint, OneNote, Project'
+    - name: '??????????? ???? ? ?????????'
+      href: overview/office-add-in-availability.md
+      displayName: 'Excel, Word, Outlook, PowerPoint, OneNote, Project'
+- name: '??????? ??????????'
   items:
-  - name: Создание надстройки Excel
-    items:
-    - name: Использование Angular
-      href: quickstarts/excel-quickstart-angular.md
-      displayName: Excel
-    - name: Использование jQuery
-      href: quickstarts/excel-quickstart-jquery.md
-      displayName: Excel
-    - name: Использование React
-      href: quickstarts/excel-quickstart-react.md
-      displayName: Excel
-    - name: Использование Vue
-      href: quickstarts/excel-quickstart-vue.md
-      displayName: Excel 
-  - name: Создание надстройки Word
-    href: quickstarts/word-quickstart.md
-    displayName: Word
-  - name: Создание надстройки OneNote
-    href: quickstarts/onenote-quickstart.md
-    displayName: OneNote
-  - name: Создание надстройки Outlook
-    href: https://docs.microsoft.com/ru-ru/outlook/add-ins/quick-start
-    displayName: Outlook
-  - name: Создание надстройки PowerPoint
-    href: quickstarts/powerpoint-quickstart.md
-    displayName: PowerPoint
-  - name: Создание надстройки Project
-    href: quickstarts/project-quickstart.md
-    displayName: Project
-
-- name: Учебники
+    - name: '???????? ?????????? Excel'
+      items:
+        - name: '???????????? Angular'
+          href: quickstarts/excel-quickstart-angular.md
+          displayName: Excel
+        - name: '???????????? jQuery'
+          href: quickstarts/excel-quickstart-jquery.md
+          displayName: Excel
+        - name: '???????????? React'
+          href: quickstarts/excel-quickstart-react.md
+          displayName: Excel
+        - name: '???????????? Vue'
+          href: quickstarts/excel-quickstart-vue.md
+          displayName: Excel
+    - name: '???????? ?????????? Word'
+      href: quickstarts/word-quickstart.md
+      displayName: Word
+    - name: '???????? ?????????? OneNote'
+      href: quickstarts/onenote-quickstart.md
+      displayName: OneNote
+    - name: '???????? ?????????? Outlook'
+      href: 'https://docs.microsoft.com/en-us/outlook/add-ins/quick-start'
+      displayName: Outlook
+    - name: '???????? ?????????? PowerPoint'
+      href: quickstarts/powerpoint-quickstart.md
+      displayName: PowerPoint
+    - name: '???????? ?????????? ???????'
+      href: quickstarts/project-quickstart.md
+      displayName: Project
+- name: '???????????'
   items:
-  - name: Учебник по надстройке Excel
-    href: tutorials/excel-tutorial.yml
-    displayName: Excel
-  - name: Руководство по надстройкам PowerPoint
-    href: tutorials/powerpoint-tutorial.yml
-    displayName: PowerPoint
-  - name: Руководство по надстройкам Word
-    href: tutorials/word-tutorial.yml
-    displayName: Word
-
-- name: Понятия
-  items:
-  - name: Требования к запуску надстроек
-    href: concepts/requirements-for-running-office-add-ins.md
-  - name: Рекомендации по разработке надстроек
-    href: concepts/add-in-development-best-practices.md
-  - name: Жизненный цикл разработки надстроек
-    href: concepts/add-in-development-lifecycle.md
-  - name: Конфиденциальность и безопасность
-    href: concepts/privacy-and-security.md
-  - name: Производительность
-    href: concepts/resource-limits-and-performance-optimization.md
-
-- name: Практические руководства
-  items:
-
-  - name: Проектирование пользовательского интерфейса
-    href: design/add-in-design.md
-    items:
-    - name: Рекомендации
-      href: design/add-in-design-guidelines.md
-      items:
-      - name: Язык дизайна
-        href: design/add-in-design-language.md
-      - name: Обеспечение движения
-        href: design/using-motion-office-addins.md
-      - name: Шаблоны оформления для взаимодействия с пользователем
-        href: design/ux-design-patterns.md
-      - name: Тестирование удобства использования
-        href: design/usability-testing.md
-    - name: Элементы интерфейса
-      href: design/interface-elements.md
-      items:
-      - name: Команды надстроек
-        href: design/add-in-commands.md
-        items:
-        - name: Рекомендации по созданию значков
-          href: design/design-icons.md
-      - name: Области задач
-        href: design/task-pane-add-ins.md
-        items:
-        - name: Автоматическое открытие области задач с документом
-          href: design/automatically-open-a-task-pane-with-a-document.md
-      - name: Диалоговые окна
-        href: design/dialog-boxes.md
-      - name: Контентные надстройки
-        href: design/content-add-ins.md
-        items:
-        - name: Рекомендации по визуализации данных
-          href: design/data-visualization-guidelines.md
-    - name: Office UI Fabric
-      href: design/office-ui-fabric.md
-      items:
-      - name: Начало работы с Fabric JS
-        href: design/using-office-ui-fabric-js.md
-      - name: Начало работы с Fabric React
-        href: design/using-office-ui-fabric-react.md
-      - name: Breadcrumb
-        href: design/breadcrumb.md
-      - name: Buttons
-        href: design/button.md
-      - name: Флажок
-        href: design/checkbox.md
-      - name: ChoiceGroup
-        href: design/choicegroup.md
-      - name: DropDown
-        href: design/dropdown.md
-      - name: Метка
-        href: design/label.md
-      - name: Перечисление
-        href: design/list.md
-      - name: Сводка
-        href: design/pivot.md
-      - name: TextField
-        href: design/textfield.md
-      - name: Переключатель
-        href: design/toggle.md
-
-  - name: Разработка
-    items:
-    - name: Наборы обязательных компонентов и версии Office
-      href: develop/office-versions-and-requirement-sets.md
-    - name: Установка последней версии Office
-      href: develop/install-latest-office-version.md
-    - name: API JavaScript для Office
-      href: develop/understanding-the-javascript-api-for-office.md
-      items:
-      - name: Поддержка надстроек области задач и контентных надстроек
-        href: develop/support-for-task-pane-and-content-add-ins.md
-      - name: Добавление ссылок на Office.js
-        href: develop/referencing-the-javascript-api-for-office-library-from-its-cdn.md
-      - name: Загрузка Office.js
-        href: develop/loading-the-dom-and-runtime-environment.md
-      - name: Асинхронное программирование в случае надстроек Office
-        href: develop/asynchronous-programming-in-office-add-ins.md
-      - name: Сохранение состояния и параметров
-        href: develop/persisting-add-in-state-and-settings.md
-
-    - name: Манифест
-      href: develop/add-in-manifests.md
-      items:
-      - name: Создание команд надстройки
-        href: develop/create-addin-commands.md
-      - name: Указание ведущих приложений Office
-        href: develop/specify-office-hosts-and-api-requirements.md
-      - name: Запрашивание разрешений на использование API в надстройках панели задач и контентных надстройках
-        href: develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md
-      - name: Обновление версии манифеста и API
-        href: develop/update-your-javascript-api-for-office-and-manifest-schema-version.md
-
-    - name: Проверка подлинности и авторизация
-      items:
-      - name: Включение единого входа в надстройке
-        href: develop/sso-in-office-add-ins.md
-        items:
-        - name: Создание надстройки с системой единого входа с помощью ASP.NET
-          href: develop/create-sso-office-add-ins-aspnet.md
-        - name: Создание надстройки с поддержкой единого входа при помощи Node.js
-          href: develop/create-sso-office-add-ins-nodejs.md
-        - name: Устранение ошибок единого входа
-          href: develop/troubleshoot-sso-in-office-add-ins.md
-      - name: Авторизация внешних служб
-        href: develop/auth-external-add-ins.md
-
-    - name: Использование Dialog API
-      href: develop/dialog-api-in-office-add-ins.md
-    - name: Обход ограничений, связанных с политикой единого домена
-      href: develop/addressing-same-origin-policy-limitations.md
-    - name: Локализация
-      href: develop/localization.md
-
-    - name: Разработка надстроек с помощью Visual Studio
-      items:
-      - name: Создание и отладка надстроек для Office в Visual Studio
-        href: develop/create-and-debug-office-add-ins-in-visual-studio.md
-        items:
-      - name: Использование IntelliSense для JavaScript в Visual Studio
-        href: develop/get-javascript-intellisense-in-visual-studio.md
-      - name: Преобразование JavaScript в TypeScript
-        href: develop/convert-javascript-to-typescript.md
-
-    - name: Разработка надстроек для iPad
-      href: develop/develop-office-add-ins-for-the-ipad.md
-    - name: Разработка надстроек с помощью Angular
-      href: develop/add-ins-with-angular2.md
-
-  - name: Надстройки Excel
-    href: excel/excel-add-ins-overview.md
-    displayName: Excel
-    items:
-    - name: Создание первой надстройки Excel
-      href: excel/excel-add-ins-get-started-overview.md
-      displayName: Excel
-      items:
-      - name: Использование Angular
-        href: excel/excel-add-ins-get-started-angular.md
-        displayName: Excel
-      - name: Использование jQuery
-        href: excel/excel-add-ins-get-started-jquery.md
-        displayName: Excel
-      - name: Использование React
-        href: excel/excel-add-ins-get-started-react.md
-        displayName: Excel
-      - name: Использование Vue
-        href: excel/excel-add-ins-get-started-vue.md
-        displayName: Excel
-    - name: Руководство по надстройкам Excel
+    - name: '??????????? ?? ??????????? Excel'
       href: tutorials/excel-tutorial.yml
       displayName: Excel
-    - name: Основные понятия
-      href: excel/excel-add-ins-core-concepts.md
-      displayName: Excel
-      items:
-      - name: Пользовательские функции
-        href: excel/custom-functions-overview.md
-        displayName: Excel
-      - name: Диаграммы
-        href: excel/excel-add-ins-charts.md
-        displayName: Excel
-      - name: События
-        href: excel/excel-add-ins-events.md
-        displayName: Excel
-      - name: Диапазоны
-        href: excel/excel-add-ins-ranges.md
-        displayName: Excel
-      - name: Таблицы
-        href: excel/excel-add-ins-tables.md
-        displayName: Excel
-      - name: Электронные таблицы
-        href: excel/excel-add-ins-worksheets.md
-        displayName: Excel
-    - name: Более сложные понятия
-      href: excel/excel-add-ins-advanced-concepts.md
-      displayName: Excel
-      items:
-      - name: Вызов встроенных функций
-        href: excel/excel-add-ins-worksheet-functions.md
-        displayName: Excel
-      - name: Совместное редактирование в надстройках Excel
-        href: excel/co-authoring-in-excel-add-ins.md
-        displayName: Excel
-      - name: Обработка ошибок
-        href: excel/excel-add-ins-error-handling.md
-        displayName: Excel
-    - name: Справочник по API JavaScript для Excel
-      href: https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview
-      displayName: Excel
-
-  - name: Надстройки Word
-    href: word/word-add-ins-programming-overview.md
-    displayName: Word
-    items:
-    - name: Создание первой надстройки Word
-      href: word/word-add-ins.md
-      displayName: Word
-    - name: Руководство по надстройкам Word
-      href: tutorials/word-tutorial.yml
-      displayName: Word
-    - name: Создание лучших надстроек Word с помощью Office Open XML
-      href: word/create-better-add-ins-for-word-with-office-open-xml.md
-      displayName: Word
-    - name: Надстройки области задач словаря
-      href: word/dictionary-task-pane-add-ins.md
-      displayName: Word
-    - name: Получение всего документа из надстройки
-      href: word/get-the-whole-document-from-an-add-in-for-word.md
-      displayName: Word
-    - name: Чтение и запись данных в активное выделение
-      href: develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md
-      displayName: Word
-    - name: Привязка к областям в документе
-      href: develop/bind-to-regions-in-a-document-or-spreadsheet.md
-      displayName: Word
-    - name: Справочник по API JavaScript для Word
-      href: https://dev.office.com/reference/add-ins/word/word-add-ins-reference-overview
-      displayName: Word
-
-  - name: надстройки Outlook
-    href: https://docs.microsoft.com/ru-ru/outlook/add-ins/
-    displayName: Outlook
-
-  - name: Надстройки PowerPoint
-    href: powerpoint/powerpoint-add-ins.md
-    displayName: PowerPoint
-    items:
-    - name: Создание первой надстройки PowerPoint
-      href: powerpoint/powerpoint-add-ins-get-started.md
-      displayName: PowerPoint
-    - name: Руководство по надстройкам PowerPoint
+    - name: '??????????? ?? ??????????? PowerPoint'
       href: tutorials/powerpoint-tutorial.yml
       displayName: PowerPoint
-    - name: Использование тем документов в надстройках PowerPoint
-      href: powerpoint/use-document-themes-in-your-powerpoint-add-ins.md
-      displayName: PowerPoint
-    - name: Получение всего документа из надстройки
-      href: powerpoint/get-the-whole-document-from-an-add-in-for-powerpoint.md
-      displayName: PowerPoint
-
-  - name: Надстройки OneNote
-    href: onenote/onenote-add-ins-programming-overview.md
-    displayName: OneNote
-    items:
-    - name: Создание первой надстройки OneNote
-      href: onenote/onenote-add-ins-getting-started.md
-      displayName: OneNote
-    - name: Работа с содержимым страницы в OneNote
-      href: onenote/onenote-add-ins-page-content.md
-      displayName: OneNote
-    - name: Справочник по API JavaScript для OneNote
-      href: https://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference
-      displayName: OneNote
-
-  - name: Надстройки Project
-    href: project/project-add-ins.md
-    displayName: Project
-    items:
-    - name: Создание первой надстройки Project
-      href: project/project-add-ins-get-started.md
-      displayName: Project
-    - name: Создание надстройки Project, использующей REST с локальной службой OData
-      href: project/create-a-project-add-in-that-uses-rest-with-an-on-premises-odata-service.md
-      displayName: Project
-    - name: Создание первой надстройки области задач для Project с помощью текстового редактора
-      href: project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md
-      displayName: Project
-
-  - name: Тестирование и отладка
-    href: testing/test-debug-office-add-ins.md
-    items:
-    - name: Windows
-      items:
-      - name: Загрузка надстроек Office в Windows
-        href: testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md
-      - name: Подключение отладчика из области задач
-        href: testing/attach-debugger-from-task-pane.md
-      - name: Отладка с помощью средств разработчика F12
-        href: testing/debug-add-ins-using-f12-developer-tools-on-windows-10.md
-    - name: Office Online
-      items:
-      - name: Загрузка надстроек Office в Office Online
-        href: testing/sideload-office-add-ins-for-testing.md
-      - name: Отладка в Office Online
-        href: testing/debug-add-ins-in-office-online.md
-    - name: iPad и Mac
-      items:
-      - name: Загрузка надстроек Office на iPad и Mac
-        href: testing/sideload-an-office-add-in-on-ipad-and-mac.md
-      - name: Отладка на устройствах iPad и Mac
-        href: testing/debug-office-add-ins-on-ipad-and-mac.md
-    - name: Устранение ошибок, с которыми сталкиваются пользователи
-      href: testing/testing-and-troubleshooting.md
-    - name: Проверка манифеста надстройки и устранение неполадок
-      href: testing/troubleshoot-manifest.md
-
-  - name: Публикация
-    href: publish/publish.md
-    items:
-    - name: Размещение надстройки Office в Microsoft Azure
-      href: publish/host-an-office-add-in-on-microsoft-azure.md
-    - name: Добавление надстройки в пакет с помощью Visual Studio
-      href: publish/package-your-add-in-using-visual-studio.md
-    - name: Публикация надстроек с помощью централизованного развертывания
-      href: publish/centralized-deployment.md
-    - name: Публикация надстроек в каталоге SharePoint
-      href: publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md
-    - name: Публикация надстроек в AppSource
-      href: https://docs.microsoft.com/ru-ru/office/dev/store/submit-to-the-office-store
-    - name: Политики проверки AppSource
-      href: https://docs.microsoft.com/ru-ru/office/dev/store/validation-policies
-
-- name: Справка
+    - name: '??????????? ?? ??????????? Word'
+      href: tutorials/word-tutorial.yml
+      displayName: Word
+- name: '???????? ???????'
   items:
-  - name: Манифест надстройки Office
-    href: https://dev.office.com/reference/add-ins/manifest/allowsnapshot
-    displayName: Excel, Word, Outlook, PowerPoint, OneNote, Project
-  - name: API JavaScript для Office
-    href: https://dev.office.com/reference/add-ins/javascript-api-for-office
-    displayName: Excel, Word, Outlook, PowerPoint, OneNote, Project
-  - name: API JavaScript для Excel
-    href: https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview
-    displayName: Excel
-  - name: API JavaScript для Word
-    href: https://dev.office.com/reference/add-ins/word/word-add-ins-reference-overview
-    displayName: Word
-  - name: API JavaScript для OneNote
-    href: https://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference
-    displayName: OneNote
-  - name: API JavaScript для Outlook
-    href: https://dev.office.com/reference/add-ins/outlook/tutorial-api-requirement-sets
-    displayName: Outlook
-  - name: Открытые спецификации для API
-    href: https://dev.office.com/reference/add-ins/openspec
-    displayName: Excel, Word
-
-- name: Ресурсы
+    - name: '?????????? ??? ??????? ?????????'
+      href: concepts/requirements-for-running-office-add-ins.md
+    - name: '???????????? ?? ?????????? ?????????'
+      href: concepts/add-in-development-best-practices.md
+    - name: '????????? ???? ?????????? ?????????'
+      href: concepts/add-in-development-lifecycle.md
+    - name: '?????????????????? ? ????????????'
+      href: concepts/privacy-and-security.md
+    - name: '??????????????????'
+      href: concepts/resource-limits-and-performance-optimization.md
+- name: '???????????? ???????????'
+  items:
+    - name: '?????????? ????????????????? ??????????'
+      href: design/add-in-design.md
+      items:
+        - name: '????????????'
+          href: design/add-in-design-guidelines.md
+          items:
+            - name: '???? ??????????????'
+              href: design/add-in-design-language.md
+            - name: '????????????? ????????'
+              href: design/using-motion-office-addins.md
+            - name: '??????? ??????? UX'
+              href: design/ux-design-patterns.md
+            - name: '???????????? ?? ????????'
+              href: design/usability-testing.md
+        - name: '???????? ??????????'
+          href: design/interface-elements.md
+          items:
+            - name: '??????? ?????????'
+              href: design/add-in-commands.md
+              items:
+                - name: '???????????? ?? ???????? ???????'
+                  href: design/design-icons.md
+            - name: '??????? ?????'
+              href: design/task-pane-add-ins.md
+              items:
+                - name: '?????????????? ???????? ??????? ????? ? ??????????'
+                  href: design/automatically-open-a-task-pane-with-a-document.md
+            - name: '?????????? ????'
+              href: design/dialog-boxes.md
+            - name: '?????????? ??????????'
+              href: design/content-add-ins.md
+              items:
+                - name: '???????????? ?? ?????? ????? ???????????? ??????'
+                  href: design/data-visualization-guidelines.md
+        - name: Office UI Fabric
+          href: design/office-ui-fabric.md
+          items:
+            - name: '?????? ?????? ? Fabric React'
+              href: design/using-office-ui-fabric-react.md
+            - name: '?????????'
+              href: design/breadcrumb.md
+            - name: '??????'
+              href: design/button.md
+            - name: '??????'
+              href: design/checkbox.md
+            - name: '?????? ??????'
+              href: design/choicegroup.md
+            - name: '?????????????? ????'
+              href: design/dropdown.md
+            - name: |
+                ?????
+              href: design/label.md
+            - name: |
+                ??????
+              href: design/list.md
+            - name: '??????? ????????'
+              href: design/pivot.md
+            - name: '????????? ????'
+              href: design/textfield.md
+            - name: '?????????????'
+              href: design/toggle.md
+    - name: '??????????'
+      items:
+        - name: '?????? Office ? ?????? ???????????? ?????????'
+          href: develop/office-versions-and-requirement-sets.md
+        - name: '?????????? ????????? ?????? Office'
+          href: develop/install-latest-office-version.md
+        - name: API JavaScript ??? Office
+          href: develop/understanding-the-javascript-api-for-office.md
+          items:
+            - name: '????????? ?????????? ????????? ? ????????? ??????? ?????'
+              href: develop/support-for-task-pane-and-content-add-ins.md
+            - name: '?????? ?? ???? Office.js'
+              href: develop/referencing-the-javascript-api-for-office-library-from-its-cdn.md
+            - name: '????????? Office.js'
+              href: develop/loading-the-dom-and-runtime-environment.md
+            - name: '??????????? ???????????????? ? ??????????? ??? Office'
+              href: develop/asynchronous-programming-in-office-add-ins.md
+            - name: '?????????? ????????? ? ??????????'
+              href: develop/persisting-add-in-state-and-settings.md
+        - name: '????????'
+          href: develop/add-in-manifests.md
+          items:
+            - name: '???????? ?????? ?????????'
+              href: develop/create-addin-commands.md
+            - name: '???????? ??????? ?????????? Office'
+              href: develop/specify-office-hosts-and-api-requirements.md
+            - name: '????????? ?????????? ?? ????????????? API ? ?????????? ??????????? ? ??????????? ??????? ?????'
+              href: develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md
+            - name: '?????????? ?????? ????????? ? API'
+              href: develop/update-your-javascript-api-for-office-and-manifest-schema-version.md
+        - name: '???????? ??????????? ? ???????????'
+          items:
+            - name: '????????? ??????? ????? ? ??????????'
+              href: develop/sso-in-office-add-ins.md
+              items:
+                - name: '???????? ?????????? ? ?????? ?????? ? ??????? ASP.NET'
+                  href: develop/create-sso-office-add-ins-aspnet.md
+                - name: '???????? ?????????? ? ?????? ?????? ? ??????? Node.js'
+                  href: develop/create-sso-office-add-ins-nodejs.md
+                - name: '??????????? ?????????? Office, ???????????? ?????? ???? ? Azure AD ?????? 2.0'
+                  href: develop/register-sso-add-in-aad-v2.md
+                - name: '?????????????? ?????????? ???????? ??????????????'
+                  href: develop/grant-admin-consent-to-an-add-in.md
+                - name: '?????????? ?????? ??????? ?????'
+                  href: develop/troubleshoot-sso-in-office-add-ins.md
+            - name: '??????????? ??????? ?????'
+              href: develop/auth-external-add-ins.md
+            - name: '??????????? ? Microsoft Graph'
+              href: develop/authorize-to-microsoft-graph.md
+        - name: '????????????? Dialog API'
+          href: develop/dialog-api-in-office-add-ins.md
+        - name: '????? ???????????, ????????? ? ????????? ??????? ??????'
+          href: develop/addressing-same-origin-policy-limitations.md
+        - name: '???????????'
+          href: develop/localization.md
+        - name: '?????????? ????????? ? ??????? Visual Studio'
+          items:
+            - name: '???????? ? ??????? ????????? Office ? Visual Studio'
+              href: develop/create-and-debug-office-add-ins-in-visual-studio.md
+              items: null
+            - name: '???????? IntelliSense ??? JavaScript ? Visual Studio'
+              href: develop/get-javascript-intellisense-in-visual-studio.md
+            - name: '?????????????? JavaScript ? TypeScript'
+              href: develop/convert-javascript-to-typescript.md
+        - name: '?????????? ????????? ??? iPad'
+          href: develop/develop-office-add-ins-for-the-ipad.md
+        - name: '?????????? ????????? ? ??????? Angular'
+          href: develop/add-ins-with-angular2.md
+    - name: '?????????? Excel'
+      href: excel/excel-add-ins-overview.md
+      displayName: Excel
+      items:
+        - name: '???????? ?????? ?????????? Excel'
+          href: excel/excel-add-ins-get-started-overview.md
+          displayName: Excel
+          items:
+            - name: '???????????? Angular'
+              href: excel/excel-add-ins-get-started-angular.md
+              displayName: Excel
+            - name: '???????????? jQuery'
+              href: excel/excel-add-ins-get-started-jquery.md
+              displayName: Excel
+            - name: '???????????? React'
+              href: excel/excel-add-ins-get-started-react.md
+              displayName: Excel
+            - name: '???????????? Vue'
+              href: excel/excel-add-ins-get-started-vue.md
+              displayName: Excel
+        - name: '??????????? ?? ??????????? Excel'
+          href: tutorials/excel-tutorial.yml
+          displayName: Excel
+        - name: '???????? ????????'
+          href: excel/excel-add-ins-core-concepts.md
+          displayName: Excel
+          items:
+            - name: '????????????? ???????'
+              href: excel/custom-functions-overview.md
+              displayName: Excel
+            - name: '?????????'
+              href: excel/excel-add-ins-charts.md
+              displayName: Excel
+            - name: '???????'
+              href: excel/excel-add-ins-events.md
+              displayName: Excel
+            - name: '?????????'
+              href: excel/excel-add-ins-ranges.md
+              displayName: Excel
+            - name: '???????'
+              href: excel/excel-add-ins-tables.md
+              displayName: Excel
+            - name: '??????? ???????'
+              href: excel/excel-add-ins-worksheets.md
+              displayName: Excel
+        - name: '??????????? ?????????'
+          href: excel/excel-add-ins-advanced-concepts.md
+          displayName: Excel
+          items:
+            - name: '????? ?????????? ???????'
+              href: excel/excel-add-ins-worksheet-functions.md
+              displayName: Excel
+            - name: '?????????? ?????????????? ? ??????????? Excel'
+              href: excel/co-authoring-in-excel-add-ins.md
+              displayName: Excel
+            - name: '???????? ???????????? ??????'
+              href: excel/excel-add-ins-data-validation.md
+              displayName: Excel
+            - name: '????????? ??????'
+              href: excel/excel-add-ins-error-handling.md
+              displayName: Excel
+            - name: '??????????? ??????????????????'
+              href: excel/performance.md
+              displayName: Excel
+        - name: '?????????? ?? API JavaScript ??? Excel'
+          href: 'https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview'
+          displayName: Excel
+    - name: '?????????? Word'
+      href: word/word-add-ins-programming-overview.md
+      displayName: Word
+      items:
+        - name: '???????? ?????? ?????????? Word'
+          href: word/word-add-ins.md
+          displayName: Word
+        - name: '??????????? ?? ??????????? Word'
+          href: tutorials/word-tutorial.yml
+          displayName: Word
+        - name: '???????? ????????? Word ? ??????? Office Open XML'
+          href: word/create-better-add-ins-for-word-with-office-open-xml.md
+          displayName: Word
+        - name: '?????????? ??????? ????? ???????'
+          href: word/dictionary-task-pane-add-ins.md
+          displayName: Word
+        - name: '????????? ????? ????????? ?? ??????????'
+          href: word/get-the-whole-document-from-an-add-in-for-word.md
+          displayName: Word
+        - name: '?????? ? ?????? ?????? ??? ???????? ?????????'
+          href: develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md
+          displayName: Word
+        - name: '???????? ? ???????? ? ?????????'
+          href: develop/bind-to-regions-in-a-document-or-spreadsheet.md
+          displayName: Word
+        - name: '?????????? ?? API JavaScript ??? Word'
+          href: 'https://dev.office.com/reference/add-ins/word/word-add-ins-reference-overview'
+          displayName: Word
+    - name: '?????????? Outlook'
+      href: 'https://docs.microsoft.com/en-us/outlook/add-ins/'
+      displayName: Outlook
+    - name: '?????????? PowerPoint'
+      href: powerpoint/powerpoint-add-ins.md
+      displayName: PowerPoint
+      items:
+        - name: '???????? ?????? ?????????? PowerPoint'
+          href: powerpoint/powerpoint-add-ins-get-started.md
+          displayName: PowerPoint
+        - name: '??????????? ?? ??????????? PowerPoint'
+          href: tutorials/powerpoint-tutorial.yml
+          displayName: PowerPoint
+        - name: '????????????? ??? ?????????? ? ??????????? PowerPoint'
+          href: powerpoint/use-document-themes-in-your-powerpoint-add-ins.md
+          displayName: PowerPoint
+        - name: '????????? ????? ????????? ?? ??????????'
+          href: powerpoint/get-the-whole-document-from-an-add-in-for-powerpoint.md
+          displayName: PowerPoint
+    - name: '?????????? OneNote'
+      href: onenote/onenote-add-ins-programming-overview.md
+      displayName: OneNote
+      items:
+        - name: '???????? ?????? ?????????? OneNote'
+          href: onenote/onenote-add-ins-getting-started.md
+          displayName: OneNote
+        - name: '?????? ? ?????????? ???????? ? OneNote'
+          href: onenote/onenote-add-ins-page-content.md
+          displayName: OneNote
+        - name: '?????????? ?? API JavaScript ??? OneNote'
+          href: 'https://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference'
+          displayName: OneNote
+    - name: '?????????? Project'
+      href: project/project-add-ins.md
+      displayName: Project
+      items:
+        - name: '???????? ?????? ?????????? Project'
+          href: project/project-add-ins-get-started.md
+          displayName: Project
+        - name: '???????? ?????????? Project, ???????????? REST ? ????????? ??????? OData'
+          href: project/create-a-project-add-in-that-uses-rest-with-an-on-premises-odata-service.md
+          displayName: Project
+        - name: '???????? ?????? ?????????? ??????? ????? ??? Project ? ??????? ?????????? ?????????'
+          href: project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md
+          displayName: Project
+    - name: '???????????? ? ???????'
+      href: testing/test-debug-office-add-ins.md
+      items:
+        - name: Windows
+          items:
+            - name: '???????? ???????????????? ????????? Office ? Windows'
+              href: testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md
+            - name: '??????????? ????????? ?? ??????? ?????'
+              href: testing/attach-debugger-from-task-pane.md
+            - name: '??????? ? ??????? ??????? ???????????? F12'
+              href: testing/debug-add-ins-using-f12-developer-tools-on-windows-10.md
+        - name: Office Online
+          items:
+            - name: '???????? ???????????????? ????????? Office ? Office Online'
+              href: testing/sideload-office-add-ins-for-testing.md
+            - name: '??????? ? Office Online'
+              href: testing/debug-add-ins-in-office-online.md
+        - name: iPad ? Mac
+          items:
+            - name: '???????? ???????????????? ????????? Office ?? iPad ? Mac'
+              href: testing/sideload-an-office-add-in-on-ipad-and-mac.md
+            - name: '??????? ?? iPad ? Mac'
+              href: testing/debug-office-add-ins-on-ipad-and-mac.md
+        - name: '?????????? ??????, ? ???????? ???????????? ????????????'
+          href: testing/testing-and-troubleshooting.md
+        - name: '???????? ????????? ?????????? ? ?????????? ?????????'
+          href: testing/troubleshoot-manifest.md
+    - name: '??????????'
+      href: publish/publish.md
+      items:
+        - name: '?????????? ?????????? Office ? Microsoft Azure'
+          href: publish/host-an-office-add-in-on-microsoft-azure.md
+        - name: '???????????? ?????????? ? ??????? Visual Studio'
+          href: publish/package-your-add-in-using-visual-studio.md
+        - name: '?????????? ????????? ? ??????? ????????????????? ?????????????'
+          href: publish/centralized-deployment.md
+        - name: '?????????? ????????? ? ???????? SharePoint'
+          href: publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md
+        - name: '?????????? ????????? ? AppSource'
+          href: 'https://docs.microsoft.com/en-us/office/dev/store/submit-to-the-office-store'
+        - name: '???????? ???????? AppSource'
+          href: 'https://docs.microsoft.com/en-us/office/dev/store/validation-policies'
+- name: '?????????? ?????????'
+  items:
+    - name: '???????? ?????????? Office'
+      href: 'https://dev.office.com/reference/add-ins/manifest/allowsnapshot'
+      displayName: 'Excel, Word, Outlook, PowerPoint, OneNote, Project'
+    - name: API JavaScript ??? Office
+      href: 'https://dev.office.com/reference/add-ins/javascript-api-for-office'
+      displayName: 'Excel, Word, Outlook, PowerPoint, OneNote, Project'
+    - name: API JavaScript ??? Excel
+      href: 'https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview'
+      displayName: Excel
+    - name: API JavaScript ??? Word
+      href: 'https://dev.office.com/reference/add-ins/word/word-add-ins-reference-overview'
+      displayName: Word
+    - name: API JavaScript ??? OneNote
+      href: 'https://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference'
+      displayName: OneNote
+    - name: API JavaScript ??? Outlook
+      href: 'https://dev.office.com/reference/add-ins/outlook/tutorial-api-requirement-sets'
+      displayName: Outlook
+    - name: '???????? ???????????? API'
+      href: 'https://dev.office.com/reference/add-ins/openspec'
+      displayName: 'Excel, Word'
+- name: '???????'
   href: resources/resources-links-help.md
-  displayName: Excel, Word, Outlook, PowerPoint, OneNote, Project
+  displayName: 'Excel, Word, Outlook, PowerPoint, OneNote, Project'
