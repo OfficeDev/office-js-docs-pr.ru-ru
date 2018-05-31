@@ -1,78 +1,78 @@
-# <a name="build-an-excel-add-in-using-react"></a><span data-ttu-id="1893b-101">???????? ?????????? Excel ? ??????? React</span><span class="sxs-lookup"><span data-stu-id="1893b-101">Build an Excel add-in using React</span></span>
+# <a name="build-an-excel-add-in-using-react"></a><span data-ttu-id="bad6c-101">Создание надстройки Excel с помощью React</span><span class="sxs-lookup"><span data-stu-id="bad6c-101">Build an Excel add-in using React</span></span>
 
-<span data-ttu-id="1893b-102">? ???? ?????? ??????????? ??????? ???????? ?????????? Excel ? ??????? React ? API JavaScript ??? Excel.</span><span class="sxs-lookup"><span data-stu-id="1893b-102">In this article, you'll walk through the process of building an Excel add-in using React and the Excel JavaScript API.</span></span>
+<span data-ttu-id="bad6c-102">В этой статье описывается процесс создания надстройки Excel с помощью React и API JavaScript для Excel.</span><span class="sxs-lookup"><span data-stu-id="bad6c-102">In this article, you'll walk through the process of building an Excel add-in using React and the Excel JavaScript API.</span></span>
 
-## <a name="environment"></a><span data-ttu-id="1893b-103">?????</span><span class="sxs-lookup"><span data-stu-id="1893b-103">Environment</span></span>
+## <a name="environment"></a><span data-ttu-id="bad6c-103">Среда</span><span class="sxs-lookup"><span data-stu-id="bad6c-103">Environment</span></span>
 
-- <span data-ttu-id="1893b-104">**???????????? ?????????? Office.** ?????????, ??? ? ??? ??????????? ??????????? ?????? Office.</span><span class="sxs-lookup"><span data-stu-id="1893b-104">**Office Desktop**: Ensure that you have the latest version of Office installed.</span></span> <span data-ttu-id="1893b-105">??????? ????????? ??????? ?????? 16.0.6769.0000 ??? ????? ??????? (????????????? ?????? **16.0.6868.0000**).</span><span class="sxs-lookup"><span data-stu-id="1893b-105">Add-in commands require build 16.0.6769.0000 or higher (**16.0.6868.0000** recommended).</span></span> <span data-ttu-id="1893b-106">???????, ??? [?????????? ????????? ?????? ?????????? Office](http://aka.ms/latestoffice).</span><span class="sxs-lookup"><span data-stu-id="1893b-106">Learn how to [Install the latest version of Office applications](http://aka.ms/latestoffice).</span></span> 
+- <span data-ttu-id="bad6c-104">**Классическое приложение Office.** Убедитесь, что у вас установлена ​​последняя версия Office.</span><span class="sxs-lookup"><span data-stu-id="bad6c-104">**Office Desktop**: Ensure that you have the latest version of Office installed.</span></span> <span data-ttu-id="bad6c-105">Команды надстроек требуют сборку 16.0.6769.0000 или более позднюю (рекомендуется сборка **16.0.6868.0000**).</span><span class="sxs-lookup"><span data-stu-id="bad6c-105">Add-in commands require build 16.0.6769.0000 or higher (**16.0.6868.0000** recommended).</span></span> <span data-ttu-id="bad6c-106">Узнайте, как [установить последнюю версию приложений Office](http://aka.ms/latestoffice).</span><span class="sxs-lookup"><span data-stu-id="bad6c-106">Learn how to [Install the latest version of Office applications](http://aka.ms/latestoffice).</span></span> 
  
-- <span data-ttu-id="1893b-107">**Office Online.** ?? ????????? ????????? ?????????????? ?????????.</span><span class="sxs-lookup"><span data-stu-id="1893b-107">**Office Online**: There is no additional setup.</span></span> <span data-ttu-id="1893b-108">???????? ????????, ??? ????????? ?????? ? Office Online ??? ??????? ? ??????? ??????? ??????? ??????????????? ? ???????? ??????.</span><span class="sxs-lookup"><span data-stu-id="1893b-108">Please note that support for commands in Office Online for work/school accounts is in preview.</span></span>
+- <span data-ttu-id="bad6c-107">**Office Online.** Не требуется выполнять дополнительную настройку.</span><span class="sxs-lookup"><span data-stu-id="bad6c-107">**Office Online**: There is no additional setup.</span></span> <span data-ttu-id="bad6c-108">Обратите внимание, что поддержка команд в Office Online для рабочих и учебных учетных записей предоставляется в тестовом режиме.</span><span class="sxs-lookup"><span data-stu-id="bad6c-108">Please note that support for commands in Office Online for work/school accounts is in preview.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="1893b-109">??????????? ??????????</span><span class="sxs-lookup"><span data-stu-id="1893b-109">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="bad6c-109">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="bad6c-109">Prerequisites</span></span>
 
-- <span data-ttu-id="1893b-110">????????? ?????????? [Create React App](https://github.com/facebookincubator/create-react-app).</span><span class="sxs-lookup"><span data-stu-id="1893b-110">Install [Create React App](https://github.com/facebookincubator/create-react-app) globally.</span></span>
+- <span data-ttu-id="bad6c-110">Глобально установите [Create React App](https://github.com/facebookincubator/create-react-app).</span><span class="sxs-lookup"><span data-stu-id="bad6c-110">Install [Create React App](https://github.com/facebookincubator/create-react-app) globally.</span></span>
 
     ```bash
     npm install -g create-react-app
     ```
 
-- <span data-ttu-id="1893b-111">????????? ?????????? ????????? ?????? [Yeoman](https://github.com/yeoman/yo) ? [????????? Yeoman ??? ????????? Office](https://github.com/OfficeDev/generator-office).</span><span class="sxs-lookup"><span data-stu-id="1893b-111">Install the latest version of [Yeoman](https://github.com/yeoman/yo) and the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office) globally.</span></span>
+- <span data-ttu-id="bad6c-111">Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).</span><span class="sxs-lookup"><span data-stu-id="bad6c-111">Install the latest version of [Yeoman](https://github.com/yeoman/yo) and the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office) globally.</span></span>
 
     ```bash
     npm install -g yo generator-office
     ```
 
-## <a name="generate-a-new-react-app"></a><span data-ttu-id="1893b-112">???????? ?????????? React</span><span class="sxs-lookup"><span data-stu-id="1893b-112">Generate a new React app</span></span>
+## <a name="generate-a-new-react-app"></a><span data-ttu-id="bad6c-112">Создание приложения React</span><span class="sxs-lookup"><span data-stu-id="bad6c-112">Generate a new React app</span></span>
 
-<span data-ttu-id="1893b-113">???????? ?????????? React ? ??????? Create React App.</span><span class="sxs-lookup"><span data-stu-id="1893b-113">Use Create React App to generate your React app.</span></span> <span data-ttu-id="1893b-114">? ????????? ????????? ????????? ???????:</span><span class="sxs-lookup"><span data-stu-id="1893b-114">From the terminal, run the following command:</span></span>
+<span data-ttu-id="bad6c-113">Создайте приложение React с помощью Create React App.</span><span class="sxs-lookup"><span data-stu-id="bad6c-113">Use Create React App to generate your React app.</span></span> <span data-ttu-id="bad6c-114">В терминале выполните следующую команду:</span><span class="sxs-lookup"><span data-stu-id="bad6c-114">From the terminal, run the following command:</span></span>
 
 ```bash
 create-react-app my-addin
 ```
 
-## <a name="generate-the-manifest-file-and-sideload-the-add-in"></a><span data-ttu-id="1893b-115">???????? ????? ????????? ? ???????? ???????????????? ??????????</span><span class="sxs-lookup"><span data-stu-id="1893b-115">Generate the manifest file and sideload the add-in</span></span>
+## <a name="generate-the-manifest-file-and-sideload-the-add-in"></a><span data-ttu-id="bad6c-115">Создание файла манифеста и загрузка неопубликованной надстройки</span><span class="sxs-lookup"><span data-stu-id="bad6c-115">Generate the manifest file and sideload the add-in</span></span>
 
-<span data-ttu-id="1893b-116">?????? ?????????? ????????? ???? ?????????, ????? ?????????? ?? ????????? ? ???????????.</span><span class="sxs-lookup"><span data-stu-id="1893b-116">Each add-in requires a manifest file to define its settings and capabilities.</span></span>
+<span data-ttu-id="bad6c-116">Каждой надстройке необходим файл манифеста, чтобы определить ее параметры и возможности.</span><span class="sxs-lookup"><span data-stu-id="bad6c-116">Each add-in requires a manifest file to define its settings and capabilities.</span></span>
 
-1. <span data-ttu-id="1893b-117">????????? ? ????? ??????????.</span><span class="sxs-lookup"><span data-stu-id="1893b-117">Navigate to your app folder.</span></span>
+1. <span data-ttu-id="bad6c-117">Перейдите к папке приложения.</span><span class="sxs-lookup"><span data-stu-id="bad6c-117">Navigate to your app folder.</span></span>
 
     ```bash
     cd my-addin
     ```
 
-2. <span data-ttu-id="1893b-118">? ??????? ?????????? Yeoman ???????? ???? ????????? ??? ??????????.</span><span class="sxs-lookup"><span data-stu-id="1893b-118">Use the Yeoman generator to generate the manifest file for your add-in.</span></span> <span data-ttu-id="1893b-119">????????? ??????????? ???? ??????? ? ???????? ?? ???????, ??? ???????? ?? ????????? ?????? ??????:</span><span class="sxs-lookup"><span data-stu-id="1893b-119">Run the following command and then answer the prompts as shown in the following screenshot:</span></span>
+2. <span data-ttu-id="bad6c-118">С помощью генератора Yeoman создайте файл манифеста для надстройки.</span><span class="sxs-lookup"><span data-stu-id="bad6c-118">Use the Yeoman generator to generate the manifest file for your add-in.</span></span> <span data-ttu-id="bad6c-119">Выполните приведенную ниже команду и ответьте на вопросы, как показано на следующем снимке экрана:</span><span class="sxs-lookup"><span data-stu-id="bad6c-119">Run the following command and then answer the prompts as shown in the following screenshot:</span></span>
 
     ```bash
     yo office
     ```
 
-    - <span data-ttu-id="1893b-120">****Would you like to create a new subfolder for your project?:** `No` (??????? ????? ????????? ????? ??? ????????)** `No`</span><span class="sxs-lookup"><span data-stu-id="1893b-120">**Would you like to create a new subfolder for your project?:** `No`</span></span>
-    - <span data-ttu-id="1893b-121">**??? ?? ?????? ??????? ???????????:** `My Office Add-in`</span><span class="sxs-lookup"><span data-stu-id="1893b-121">**What do you want to name your add-in?:** `My Office Add-in`</span></span>
-    - <span data-ttu-id="1893b-122">**????? ?????????? ?????????? Office ?????? ???????????????:** `Excel`</span><span class="sxs-lookup"><span data-stu-id="1893b-122">**Which Office client application would you like to support?:** `Excel`</span></span>
-    - <span data-ttu-id="1893b-123">****Would you like to create a new add-in?:** `No` (??????? ????? ???????????)** `No`</span><span class="sxs-lookup"><span data-stu-id="1893b-123">**Would you like to create a new add-in?:** `No`</span></span>
+    - <span data-ttu-id="bad6c-120">****Would you like to create a new subfolder for your project?:** `No` (Создать новую вложенную папку для проекта?)** `No`</span><span class="sxs-lookup"><span data-stu-id="bad6c-120">**Would you like to create a new subfolder for your project?:** `No`</span></span>
+    - <span data-ttu-id="bad6c-121">**Как вы хотите назвать надстройку?:** `My Office Add-in`</span><span class="sxs-lookup"><span data-stu-id="bad6c-121">**What do you want to name your add-in?:** `My Office Add-in`</span></span>
+    - <span data-ttu-id="bad6c-122">**Какое клиентское приложение Office должно поддерживаться?:** `Excel`</span><span class="sxs-lookup"><span data-stu-id="bad6c-122">**Which Office client application would you like to support?:** `Excel`</span></span>
+    - <span data-ttu-id="bad6c-123">****Would you like to create a new add-in?:** `No` (Создать новую надстройку?)** `No`</span><span class="sxs-lookup"><span data-stu-id="bad6c-123">**Would you like to create a new add-in?:** `No`</span></span>
 
-    <span data-ttu-id="1893b-p105">????? ????????? ????????? ??? ??????? ???? **resource.html**. ? ????? ?????? ????????? ??? ?? ???????????, ?? ?????? ?????????, ???? ??? ?????????! ???????? Yes (??) ??? No (???), ????? ????????? ?????? ???????, ? ?????????, ???? ????????? ???????? ??????.</span><span class="sxs-lookup"><span data-stu-id="1893b-p105">The generator will then ask you if you want to open **resource.html**. It isn't necessary to open it for this tutorial, but feel free to open it if you're curious! Choose yes or no to complete the wizard and allow the generator to do its work.</span></span>
+    <span data-ttu-id="bad6c-p105">Затем генератор предложит вам открыть файл **resource.html**. В нашем случае открывать его не обязательно, но можете заглянуть, если вам интересно! Выберите Yes (Да) или No (Нет), чтобы завершить работу мастера, и подождите, пока генератор закончит работу.</span><span class="sxs-lookup"><span data-stu-id="bad6c-p105">The generator will then ask you if you want to open **resource.html**. It isn't necessary to open it for this tutorial, but feel free to open it if you're curious! Choose yes or no to complete the wizard and allow the generator to do its work.</span></span>
 
-    ![????????? Yeoman](../images/yo-office.png)
+    ![Генератор Yeoman](../images/yo-office.png)
     
     > [!NOTE]
-    > <span data-ttu-id="1893b-128">???? ??? ????? ?????????? ?????????? ???? **package.json**, ???????? **No** (?? ????????????).</span><span class="sxs-lookup"><span data-stu-id="1893b-128">If you're prompted to overwrite **package.json**, answer **No** (do not overwrite).</span></span>
+    > <span data-ttu-id="bad6c-128">Если вам будет предложено переписать файл **package.json**, выберите **No** (не переписывать).</span><span class="sxs-lookup"><span data-stu-id="bad6c-128">If you're prompted to overwrite **package.json**, answer **No** (do not overwrite).</span></span>
 
-3. <span data-ttu-id="1893b-129">?????? ????????? ??? ?????? ?????????, ????????? ???????????????? ?????????? ? Excel.</span><span class="sxs-lookup"><span data-stu-id="1893b-129">Follow the instructions for the platform you'll be using to run your add-in and sideload the add-in within Excel.</span></span>
+3. <span data-ttu-id="bad6c-129">Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.</span><span class="sxs-lookup"><span data-stu-id="bad6c-129">Follow the instructions for the platform you'll be using to run your add-in and sideload the add-in within Excel.</span></span>
 
-    - <span data-ttu-id="1893b-130">Windows[](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)</span><span class="sxs-lookup"><span data-stu-id="1893b-130">Windows: [Sideload Office Add-ins on Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)</span></span>
-    - <span data-ttu-id="1893b-131">Office Online[](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)</span><span class="sxs-lookup"><span data-stu-id="1893b-131">Excel Online: [Sideload Office Add-ins in Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)</span></span>
-    - <span data-ttu-id="1893b-132">iPad ? Mac[](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)</span><span class="sxs-lookup"><span data-stu-id="1893b-132">iPad and Mac: [Sideload Office Add-ins on iPad and Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)</span></span>
+    - <span data-ttu-id="bad6c-130">Windows[](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)</span><span class="sxs-lookup"><span data-stu-id="bad6c-130">Windows: [Sideload Office Add-ins on Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)</span></span>
+    - <span data-ttu-id="bad6c-131">Office Online[](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)</span><span class="sxs-lookup"><span data-stu-id="bad6c-131">Excel Online: [Sideload Office Add-ins in Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)</span></span>
+    - <span data-ttu-id="bad6c-132">iPad и Mac[](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)</span><span class="sxs-lookup"><span data-stu-id="bad6c-132">iPad and Mac: [Sideload Office Add-ins on iPad and Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)</span></span>
 
-## <a name="update-the-app"></a><span data-ttu-id="1893b-133">?????????? ??????????</span><span class="sxs-lookup"><span data-stu-id="1893b-133">Update the app</span></span>
+## <a name="update-the-app"></a><span data-ttu-id="bad6c-133">Обновление приложения</span><span class="sxs-lookup"><span data-stu-id="bad6c-133">Update the app</span></span>
 
-1. <span data-ttu-id="1893b-134">???????? **public/index.html**, ???????? ??? `<script>` ????? ????? ????? `</head>` ? ????????? ????.</span><span class="sxs-lookup"><span data-stu-id="1893b-134">Open **public/index.html**, add the following `<script>` tag immediately before the `</head>` tag, and save the file.</span></span>
+1. <span data-ttu-id="bad6c-134">Откройте **public/index.html**, добавьте тег `<script>` сразу перед тегом `</head>` и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="bad6c-134">Open **public/index.html**, add the following `<script>` tag immediately before the `</head>` tag, and save the file.</span></span>
 
     ```html
     <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
     ```
 
-2. <span data-ttu-id="1893b-135">???????? **src/index.js**, ???????? `ReactDOM.render(<App />, document.getElementById('root'));` ??????????? ???? ????? ? ????????? ????.</span><span class="sxs-lookup"><span data-stu-id="1893b-135">Open **src/index.js**, replace `ReactDOM.render(<App />, document.getElementById('root'));` with the following code, and save the file.</span></span> 
+2. <span data-ttu-id="bad6c-135">Откройте **src/index.js**, замените `ReactDOM.render(<App />, document.getElementById('root'));` приведенным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="bad6c-135">Open **src/index.js**, replace `ReactDOM.render(<App />, document.getElementById('root'));` with the following code, and save the file.</span></span> 
 
     ```typescript
     const Office = window.Office;
@@ -82,7 +82,7 @@ create-react-app my-addin
     };
     ```
 
-3. <span data-ttu-id="1893b-136">???????? **src/App.js**, ???????? ??? ?????????? ??????????? ???? ????? ? ????????? ????.</span><span class="sxs-lookup"><span data-stu-id="1893b-136">Open **src/App.js**, replace file contents with the following code, and save the file.</span></span> 
+3. <span data-ttu-id="bad6c-136">Откройте **src/App.js**, замените его содержимое приведенным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="bad6c-136">Open **src/App.js**, replace file contents with the following code, and save the file.</span></span> 
 
     ```js
     import React, { Component } from 'react';
@@ -127,7 +127,7 @@ create-react-app my-addin
     export default App;
     ```
 
-4. <span data-ttu-id="1893b-137">???????? **src/App.css**, ???????? ??? ?????????? ??????????? ???? ????? ? ????????? ????.</span><span class="sxs-lookup"><span data-stu-id="1893b-137">Open **src/App.css**, replace file contents with the following CSS code, and save the file.</span></span> 
+4. <span data-ttu-id="bad6c-137">Откройте **src/App.css**, замените его содержимое приведенным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="bad6c-137">Open **src/App.css**, replace file contents with the following CSS code, and save the file.</span></span> 
 
     ```css
     #content-header {
@@ -156,43 +156,43 @@ create-react-app my-addin
     }
     ```
 
-## <a name="try-it-out"></a><span data-ttu-id="1893b-138">????????</span><span class="sxs-lookup"><span data-stu-id="1893b-138">Try it out</span></span>
+## <a name="try-it-out"></a><span data-ttu-id="bad6c-138">Проверка</span><span class="sxs-lookup"><span data-stu-id="bad6c-138">Try it out</span></span>
 
-1. <span data-ttu-id="1893b-139">????????? ? ????????? ??????????? ???? ???????, ????? ????????? ?????? ??????????.</span><span class="sxs-lookup"><span data-stu-id="1893b-139">From the terminal, run the following command to start the dev server.</span></span>
+1. <span data-ttu-id="bad6c-139">Выполните в терминале приведенную ниже команду, чтобы запустить сервер разработки.</span><span class="sxs-lookup"><span data-stu-id="bad6c-139">From the terminal, run the following command to start the dev server.</span></span>
 
-    <span data-ttu-id="1893b-140">Windows:</span><span class="sxs-lookup"><span data-stu-id="1893b-140">Windows:</span></span>
+    <span data-ttu-id="bad6c-140">Windows:</span><span class="sxs-lookup"><span data-stu-id="bad6c-140">Windows:</span></span>
     ```bash
     set HTTPS=true&&npm start
     ```
 
-    <span data-ttu-id="1893b-141">macOS:</span><span class="sxs-lookup"><span data-stu-id="1893b-141">macOS:</span></span>
+    <span data-ttu-id="bad6c-141">macOS:</span><span class="sxs-lookup"><span data-stu-id="bad6c-141">macOS:</span></span>
     ```bash
     HTTPS=true npm start
     ```
 
    > [!NOTE]
-   > <span data-ttu-id="1893b-p106">????????? ???? ???????? ? ???????????. ???????? ??? ????.</span><span class="sxs-lookup"><span data-stu-id="1893b-p106">A browser window will open with the add-in in it. Close this window.</span></span>
+   > <span data-ttu-id="bad6c-p106">Откроется окно браузера с надстройкой. Закройте это окно.</span><span class="sxs-lookup"><span data-stu-id="bad6c-p106">A browser window will open with the add-in in it. Close this window.</span></span>
 
-2. <span data-ttu-id="1893b-144">? Excel ???????? ??????? **???????** ? ??????? ?????? **???????? ??????? ?????** ?? ?????, ????? ??????? ??????? ????? ??????????.</span><span class="sxs-lookup"><span data-stu-id="1893b-144">In Excel, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
+2. <span data-ttu-id="bad6c-144">В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="bad6c-144">In Excel, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
 
-    ![?????? ?????????? Excel](../images/excel-quickstart-addin-2b.png)
+    ![Кнопка надстройки Excel](../images/excel-quickstart-addin-2b.png)
 
-3. <span data-ttu-id="1893b-146">???????? ????? ???????? ????? ?? ?????.</span><span class="sxs-lookup"><span data-stu-id="1893b-146">Select any range of cells in the worksheet.</span></span>
+3. <span data-ttu-id="bad6c-146">Выберите любой диапазон ячеек на листе.</span><span class="sxs-lookup"><span data-stu-id="bad6c-146">Select any range of cells in the worksheet.</span></span>
 
-4. <span data-ttu-id="1893b-147">? ??????? ????? ??????? ?????? **Set color** (?????? ????), ????? ??????? ????????? ???????? ???????.</span><span class="sxs-lookup"><span data-stu-id="1893b-147">In the task pane, choose the **Set color** button to set the color of the selected range to green.</span></span>
+4. <span data-ttu-id="bad6c-147">В области задач нажмите кнопку **Set color** (Задать цвет), чтобы сделать выбранный диапазон зеленым.</span><span class="sxs-lookup"><span data-stu-id="bad6c-147">In the task pane, choose the **Set color** button to set the color of the selected range to green.</span></span>
 
-    ![?????????? Excel](../images/excel-quickstart-addin-2c.png)
+    ![Надстройка Excel](../images/excel-quickstart-addin-2c.png)
 
-## <a name="next-steps"></a><span data-ttu-id="1893b-149">?????????? ????????</span><span class="sxs-lookup"><span data-stu-id="1893b-149">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="bad6c-149">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="bad6c-149">Next steps</span></span>
 
-<span data-ttu-id="1893b-p107">???????????, ?? ??????? ??????? ?????????? Excel ? ??????? React! ????? ?????? ?????? ? ???????????? ????????? Excel ? ??????? ????? ??????? ??????????, ?????????????? ???????????? ?? ??????????? Excel.</span><span class="sxs-lookup"><span data-stu-id="1893b-p107">Congratulations, you've successfully created an Excel add-in using React! Next, learn more about the capabilities of an Excel add-in and build a more complex add-in by following along with the Excel add-in tutorial.</span></span>
+<span data-ttu-id="bad6c-p107">Поздравляем, вы успешно создали надстройку Excel с помощью React! Чтобы узнать больше о возможностях надстроек Excel и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Excel.</span><span class="sxs-lookup"><span data-stu-id="bad6c-p107">Congratulations, you've successfully created an Excel add-in using React! Next, learn more about the capabilities of an Excel add-in and build a more complex add-in by following along with the Excel add-in tutorial.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="1893b-152">??????????? ?? ??????????? Excel</span><span class="sxs-lookup"><span data-stu-id="1893b-152">Excel add-in tutorial</span></span>](../tutorials/excel-tutorial.yml)
+> [<span data-ttu-id="bad6c-152">Руководство по надстройкам Excel</span><span class="sxs-lookup"><span data-stu-id="bad6c-152">Excel add-in tutorial</span></span>](../tutorials/excel-tutorial.yml)
 
-## <a name="see-also"></a><span data-ttu-id="1893b-153">??. ?????</span><span class="sxs-lookup"><span data-stu-id="1893b-153">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bad6c-153">См. также</span><span class="sxs-lookup"><span data-stu-id="bad6c-153">See also</span></span>
 
-* [<span data-ttu-id="1893b-154">??????????? ?? ??????????? Excel</span><span class="sxs-lookup"><span data-stu-id="1893b-154">Excel add-in tutorial</span></span>](../tutorials/excel-tutorial-create-table.md)
-* [<span data-ttu-id="1893b-155">???????? ??????? API JavaScript ??? Excel</span><span class="sxs-lookup"><span data-stu-id="1893b-155">Excel JavaScript API core concepts</span></span>](../excel/excel-add-ins-core-concepts.md)
-* [<span data-ttu-id="1893b-156">??????? ???? ????????? Excel</span><span class="sxs-lookup"><span data-stu-id="1893b-156">Excel add-in code samples</span></span>](http://dev.office.com/code-samples#?filters=excel,office%20add-ins)
-* [<span data-ttu-id="1893b-157">?????????? ?? API JavaScript ??? Excel</span><span class="sxs-lookup"><span data-stu-id="1893b-157">Excel JavaScript API reference</span></span>](https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview)
+* [<span data-ttu-id="bad6c-154">Руководство по надстройкам Excel</span><span class="sxs-lookup"><span data-stu-id="bad6c-154">Excel add-in tutorial</span></span>](../tutorials/excel-tutorial-create-table.md)
+* [<span data-ttu-id="bad6c-155">Основные понятия API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="bad6c-155">Excel JavaScript API core concepts</span></span>](../excel/excel-add-ins-core-concepts.md)
+* [<span data-ttu-id="bad6c-156">Примеры кода надстроек Excel</span><span class="sxs-lookup"><span data-stu-id="bad6c-156">Excel add-in code samples</span></span>](http://dev.office.com/code-samples#?filters=excel,office%20add-ins)
+* [<span data-ttu-id="bad6c-157">Справочник по API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="bad6c-157">Excel JavaScript API reference</span></span>](https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview)
