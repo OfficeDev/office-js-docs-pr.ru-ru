@@ -2,8 +2,13 @@
 title: Устранение ошибок единого входа
 description: ''
 ms.date: 12/08/2017
+ms.openlocfilehash: 39099d746db3b5bea8a1ef629872006ba4ee087a
+ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "19437551"
 ---
-
 # <a name="troubleshoot-error-messages-for-single-sign-on-sso-preview"></a>Устранение ошибок единого входа (предварительная версия)
 
 В этой статье представлено руководство по обеспечению надежной обработки специальных условий и ошибок в надстройках Office, поддерживающих единый вход, а также устранению связанных с единым входом проблем в таких надстройках.
@@ -25,22 +30,25 @@ ms.date: 12/08/2017
 - [Home.js в Office-Add-in-ASPNET-SSO](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO/blob/master/Complete/Office-Add-in-ASPNET-SSO-WebAPI/Scripts/Home.js)
 - [program.js в Office-Add-in-NodeJS-SSO](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO/blob/master/Completed/public/program.js)
 
-### <a name="13000"></a>13000
+> [!NOTE]
+> Помимо предложений, сделанных в этом разделе, надстройка Outlook имеет дополнительный способ ответить на любую из 13*ошибок nnn*. Подробнее см. [Сценарий. Внедрите единый вход в свою службу в надстройке Outlook](https://docs.microsoft.com/en-us/outlook/add-ins/implement-sso-in-outlook-add-in) а также надстройке [AttachmentsDemo Sample](https://github.com/OfficeDev/outlook-add-in-attachments-demo). 
+
+### <a name="13000"></a>13 000
 
 Надстройка или версия Office не поддерживает API [getAccessTokenAsync](https://dev.office.com/reference/add-ins/shared/office.context.auth.getAccessTokenAsync). 
 
-- Эта версия Office не поддерживает единый вход. Необходимо установить Office 2016 версии 1710 (сборка 8629.nnnn) или выше (эту версию подписки на Office 365 иногда называют "нажми и работай"). Чтобы скачать эту версию, вам может потребоваться принять участие в программе предварительной оценки Office. Дополнительные сведения см. в статье [Примите участие в программе предварительной оценки Office](https://products.office.com/ru-ru/office-insider?tab=tab-1). 
+- Эта версия Office не поддерживает единый вход. Необходимо установить Office 2016 версии 1710 (сборка 8629.nnnn) или выше (эту версию подписки на Office 365 иногда называют "нажми и работай"). Чтобы скачать эту версию, вам может потребоваться принять участие в программе предварительной оценки Office. Дополнительные сведения см. в статье [Примите участие в программе предварительной оценки Office](https://products.office.com/en-us/office-insider?tab=tab-1). 
 - В манифесте надстройки отсутствует подходящий раздел [WebApplicationInfo](https://dev.office.com/reference/add-ins/manifest/webapplicationinfo).
 
 ### <a name="13001"></a>13001
 
-Пользователь не вошел в Office. Код должен повторно вызвать метод `getAccessTokenAsync` и передать значение `forceAddAccount: true` в параметре [options](https://dev.office.com/reference/add-ins/shared/office.context.auth.getAccessTokenAsync#parameters). 
+Пользователь не вошел в Office. Код должен повторно вызвать метод `getAccessTokenAsync` и передать значение `forceAddAccount: true` в параметре [Опции](https://dev.office.com/reference/add-ins/shared/office.context.auth.getAccessTokenAsync#parameters). Но не делайте этого более одного раза. Пользователь, возможно, решил не входить в систему.
 
 Эта ошибка никогда не возникает в Office Online. Если срок действия cookie-файла пользователя истек, Office Online возвращает ошибку 13006. 
 
 ### <a name="13002"></a>13002
 
-Пользователь прервал вход или отменил согласие. 
+Пользователь прервал вход или согласие; например, путем выбора **Отмена** в диалоговом окне согласия. 
 - Если ваша надстройка предоставляет функции, не требующие входа пользователя (или предоставления согласия), то в коде следует отслеживать эту ошибку и позволять надстройке продолжать работу.
 - Если надстройке необходимо, чтобы пользователь выполнил вход и дал согласие, то код должен предлагать пользователю повторить операцию, но не более одного раза. 
 
@@ -50,7 +58,7 @@ ms.date: 12/08/2017
 
 ### <a name="13004"></a>13004
 
-Недопустимый ресурс. Манифест надстройки неправильно настроен. Обновите манифест. Дополнительные сведения см. в статье [Проверка манифеста и устранение связанных с ним неполадок](../testing/troubleshoot-manifest.md).
+Недопустимый ресурс. Манифест надстройки неправильно настроен. Обновите манифест. Дополнительные сведения см. в статье [Проверка манифеста и устранение связанных с ним неполадок](../testing/troubleshoot-manifest.md). Самая большая проблема заключается в том, что элемент **Ресурс**(в элементе **WebApplicationInfo** ) имеет домен, который не соответствует домену надстройки. Хотя часть протокола значения ресурса должна быть «api», а не «https»; все остальные части имени домена (включая порт, если они есть) должны быть такими же, как для надстройки.
 
 ### <a name="13005"></a>13005
 
@@ -63,8 +71,12 @@ ms.date: 12/08/2017
 ### <a name="13007"></a>13007
 
 Ведущему приложению Office не удалось получить маркер доступа к веб-службе надстройки.
-- Убедитесь, что в данных регистрации и манифесте надстройки указаны разрешения `openid` и `profile`. Дополнительные сведения см. в разделах [Регистрация надстройки в конечной точке Azure AD версии 2.0](create-sso-office-add-ins-aspnet.md#register-the-add-in-with-azure-ad-v20-endpoint) (ASP.NET) или [Регистрация надстройки в конечной точке Azure AD версии 2.0](create-sso-office-add-ins-nodejs.md#register-the-add-in-with-azure-ad-v20-endpoint) (Node JS) и [Конфигурация надстройки](create-sso-office-add-ins-aspnet.md#configure-the-add-in) (ASP.NET) или [Конфигурация надстройки](create-sso-office-add-ins-nodejs.md#configure-the-add-in) (Node JS).
-- Код должен предлагать пользователю повторить попытку позже.
+- Если эта ошибка возникает во время разработки, убедитесь, что в ваших регистрации надстройки и манифесте надстройки `openid` указаны `profile` разрешения. Дополнительные сведения см. в статьях [Регистрация надстройки в конечной точке Azure AD версии 2.0](create-sso-office-add-ins-aspnet.md#register-the-add-in-with-azure-ad-v20-endpoint) (ASP.NET) или [Регистрация надстройки в конечной точке Azure AD версии 2.0](create-sso-office-add-ins-nodejs.md#register-the-add-in-with-azure-ad-v20-endpoint) (Node JS) и [Конфигурация надстройки](create-sso-office-add-ins-aspnet.md#configure-the-add-in) (ASP.NET) или [Конфигурация надстройки](create-sso-office-add-ins-nodejs.md#configure-the-add-in) (Node JS).
+- В производстве есть несколько вещей, которые могут вызвать эту ошибку. Вот некоторые из них:
+    - Пользователь аннулировал согласие, предварительно предоставив его. Ваш код должен вызывать `getAccessTokenAsync` метод с опцией `forceConsent: true`, но не более одного раза.
+    - У пользователя есть идентификатор учетной записи Microsoft (MSA). В некоторых ситуациях, вызвавших одну из ошибок 13nnn с учетной записью Work или School, вы получите 13007 при использовании MSA. 
+
+  Для всех этих случаев, если вы уже пробовали опцию `forceConsent` один раз, то ваш код может предположить, что пользователь повторит операцию позже.
 
 ### <a name="13008"></a>13008
 
@@ -81,11 +93,15 @@ ms.date: 12/08/2017
 
 Пользователь запустил надстройку в Office Online и использует Edge или Internet Explorer. Домен Office 365 пользователя и домен login.microsoftonline.com находятся в разных зонах безопасности в настройках браузера. Если возвращается эта ошибка, то пользователь уже видел сообщение с соответствующим пояснением и ссылкой на инструкции по изменению конфигурации зон. Если ваша надстройка предоставляет функции, не требующие входа пользователя, то в коде следует отслеживать эту ошибку и позволять надстройке продолжать работу.
 
+### <a name="50001"></a>50001
+
+Эта ошибка (которая не является специфической для `getAccessTokenAsync`) может указывать на то, что браузер обналичил старую копию файлов office.js. Очистите кеш браузера. Другая возможность заключается в том, что версия Office недостаточно последняя для поддержки единого входа. См.статью [Компоненты](create-sso-office-add-ins-aspnet.md#prerequisites).
+
 ## <a name="errors-on-the-server-side-from-azure-active-directory"></a>Ошибки на стороне сервера из Azure Active Directory
 
 Примеры обработки ошибок, рассматриваемых в этом разделе:
-- [Office-Add-in-ASPNET-SSO](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO)
-- [Office-Add-in-NodeJS-SSO](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO)
+- [Надстройка Office-Add-in-ASPNET-SSO](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO)
+- [Надстройка Office-Add-in-NodeJS-SSO](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO)
 
 
 ### <a name="conditional-access--multifactor-authentication-errors"></a>Ошибки условного доступа и многофакторной проверки подлинности

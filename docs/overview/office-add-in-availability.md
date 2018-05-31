@@ -1,36 +1,37 @@
 ---
-title: ??????????? ??????? ?????????? ? ???????? ??? ????????? Office
-description: ?????????????? ?????? ?????????? ??? Excel, Word, Outlook, PowerPoint ? OneNote.
+title: Доступность ведущих приложений и платформ для надстроек Office
+description: Поддерживаемые наборы требований для Excel, Word, Outlook, PowerPoint и OneNote.
 ms.date: 03/23/2018
 ms.openlocfilehash: f50ab7e5312702eb25fbb2c8a25291c5ff5027a7
 ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "19438874"
 ---
-# <a name="office-add-in-host-and-platform-availability"></a>??????????? ??????? ?????????? ? ???????? ??? ????????? Office
+# <a name="office-add-in-host-and-platform-availability"></a>Доступность ведущих приложений и платформ для надстроек Office
 
-?????? ?????????? Office ????? ???????? ?? ???????? ?????????? Office, ?????? ??????????, ???????? ??? ?????? API. ? ???????? ???? ???????????? ???????? ? ????????? ?????????, ?????? ??????????, ??????? ???????????? ????????? API ? ??????????? ??????? ???????????? ????????? API, ??????? ? ????????? ????? ?????????????? ??? ???? ?????????? Office. 
+Работа надстройки Office может зависеть от ведущего приложения Office, набора требований, элемента или версии API. В таблицах ниже представлены сведения о доступной платформе, точках расширения, наборах обязательных элементов API и стандартных наборах обязательных элементов API, которые в настоящее время поддерживаются для всех приложений Office. 
 
-?????? * (?????????) ? ?????? ??????? ?????????, ??? ????????? ????? ????????. ? ???????? ?????????? ??? Project ? Access ????? ???????????? ? ?????? [??????????? ?????? ???????????? ????????? ??? Office](https://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets).  
+Символ * (звездочка) в ячейке таблицы указывает, что поддержка скоро появится. С наборами требований для Project и Access можно ознакомиться в статье [Стандартные наборы обязательных элементов для Office](https://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets).  
 
 > [!NOTE]
-> ????? ?????? ??? ?????? Office 2016, ?????????????? ? ??????? MSI, ? 16.0.4266.1001. ??? ?????? ???????? ?????? ????? ???????????? ????????? ExcelApi 1.1, WordApi 1.1 ? ??????????? ?????? ???????????? ????????? API.
+> Номер сборки для набора Office 2016, установленного с помощью MSI, — 16.0.4266.1001. Эта версия содержит только набор обязательных элементов ExcelApi 1.1, WordApi 1.1 и стандартные наборы обязательных элементов API.
 
 ## <a name="excel"></a>Excel
 
 <table style="width:80%">
   <tr>
-    <th style="width:10%">?????????</th>
-    <th style="width:10%">????? ??????????</th> 
-    <th style="width:20%">?????? ???????????? ????????? API</th> 
-    <th style="width:40%"><a href="https://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets"><b>??????????? ???????? API</b></a></th> 
+    <th style="width:10%">Платформа</th>
+    <th style="width:10%">Точки расширения</th> 
+    <th style="width:20%">Наборы обязательных элементов API</th> 
+    <th style="width:40%"><a href="https://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets"><b>Стандартные элементы API</b></a></th> 
   </tr>
   <tr>
     <td>Office Online</td>
-    <td> - ??????? ?????<br>
-        - ???????<br>
-        - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">??????? ??????????</a>
+    <td> - Область задач<br>
+        - Контент<br>
+        - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстройки</a>
     </td>
     <td>
         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
@@ -47,14 +48,14 @@ ms.lasthandoff: 05/23/2018
         - TableCoercion<br>
         - TextBindings<br>
         - CompressedFile<br>
-        - ?????????<br>
+        - Параметры<br>
         - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office 2013 ??? Windows</td>
+    <td>Office 2013 для Windows</td>
     <td>
-        - ??????? ?????<br>
-        - ???????</td>
+        - Область задач<br>
+        - Контент</td>
     <td>  - <a href="https://dev.office.com/reference/add-ins/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td>
         - BindingEvents<br>
@@ -64,14 +65,14 @@ ms.lasthandoff: 05/23/2018
         - TableBindings<br>
         - TableCoercion<br>
         - TextBindings<br>
-        - ?????????<br>
+        - Параметры<br>
         - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office 2016 ??? Windows</td>
-    <td>- ??????? ?????<br>
-        - ???????<br>
-        - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">??????? ?????????</a></td>
+    <td>Office 2016 для Windows</td>
+    <td>- Область задач<br>
+        - Контент<br>
+        - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td>- <a href="https://dev.office.com/reference/add-ins/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/excel-api-requirement-sets">ExcelApi 1.2</a><br>
         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/excel-api-requirement-sets">ExcelApi 1.3</a><br>
@@ -84,13 +85,13 @@ ms.lasthandoff: 05/23/2018
         - TableBindings<br>
         - TableCoercion<br>
         - TextBindings<br>
-        - ?????????<br>
+        - Параметры<br>
         - TextCoercion</td> 
   </tr>
   <tr>
-    <td>Office ??? iOS</td>
-    <td>- ??????? ?????<br>
-        - ???????</td>
+    <td>Office для iOS</td>
+    <td>- Область задач<br>
+        - Контент</td>
     <td>- <a href="https://dev.office.com/reference/add-ins/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/excel-api-requirement-sets">ExcelApi 1.2</a><br>
         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/excel-api-requirement-sets">ExcelApi 1.3</a><br>
@@ -102,14 +103,14 @@ ms.lasthandoff: 05/23/2018
         - TableBindings<br>
         - TableCoercion<br>
         - TextBindings<br>
-        - ?????????<br>
+        - Параметры<br>
         - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office 2016 ??? Mac</td>
-    <td>- ??????? ?????<br>
-        - ???????<br>
-        - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">??????? ?????????</a></td>
+    <td>Office 2016 для Mac</td>
+    <td>- Область задач<br>
+        - Контент<br>
+        - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td>- <a href="https://dev.office.com/reference/add-ins/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/excel-api-requirement-sets">ExcelApi 1.2</a><br>
         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/excel-api-requirement-sets">ExcelApi 1.3</a><br>
@@ -131,83 +132,83 @@ ms.lasthandoff: 05/23/2018
 
 <table style="width:80%">
   <tr>
-    <th>?????????</th>
-    <th>????? ??????????</th> 
-    <th>?????? ???????????? ????????? API</th> 
-    <th><a href="https://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets"><b>??????????? ???????? API</b></a></th> 
+    <th>Платформа</th>
+    <th>Точки расширения</th> 
+    <th>Наборы обязательных элементов API</th> 
+    <th><a href="https://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets"><b>Стандартные элементы API</b></a></th> 
   </tr>
   <tr>
     <td>Office Online</td>
-    <td> - ?????? ?????<br>
-      - ???????? ????????? ?????<br>
-      - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">??????? ?????????</a></td>
+    <td> - Чтение почты<br>
+      - Создание сообщения почты<br>
+      - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://dev.office.com/reference/add-ins/outlook/1.1/index?product=outlook&version=v1.1">Mailbox 1.1</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.2/index?product=outlook&version=v1.2">Mailbox 1.2</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.3/index?product=outlook&version=v1.3">Mailbox 1.3</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.4/index?product=outlook&version=v1.4">Mailbox 1.4</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.5/index?product=outlook&version=v1.5">Mailbox 1.5</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.6/index?product=outlook&version=v1.6">Mailbox 1.6</a></td>
-    <td>??????????</td>
+    <td>Недоступен</td>
   </tr>
   <tr>
-    <td>Office 2013 ??? Windows</td>
-    <td> - ?????? ?????<br>
-      - ???????? ????????? ?????<br>
-      - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">??????? ?????????</a></td>
+    <td>Office 2013 для Windows</td>
+    <td> - Чтение почты<br>
+      - Создание сообщения почты<br>
+      - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://dev.office.com/reference/add-ins/outlook/1.1/index?product=outlook&version=v1.1">Mailbox 1.1</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.2/index?product=outlook&version=v1.2">Mailbox 1.2</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.3/index?product=outlook&version=v1.3">Mailbox 1.3</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.4/index?product=outlook&version=v1.4">Mailbox 1.4</a></td>
-    <td>??????????</td>
+    <td>Недоступен</td>
   </tr>
   <tr>
-    <td>Office 2016 ??? Windows</td>
-    <td> - ?????? ?????<br>
-      - ???????? ????????? ?????<br>
-      - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">??????? ?????????</a><br>
-      - ??????</td>
+    <td>Office 2016 для Windows</td>
+    <td> - Чтение почты<br>
+      - Создание сообщения почты<br>
+      - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a><br>
+      - Модули</td>
     <td> - <a href="https://dev.office.com/reference/add-ins/outlook/1.1/index?product=outlook&version=v1.1">Mailbox 1.1</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.2/index?product=outlook&version=v1.2">Mailbox 1.2</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.3/index?product=outlook&version=v1.3">Mailbox 1.3</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.4/index?product=outlook&version=v1.4">Mailbox 1.4</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.5/index?product=outlook&version=v1.5">Mailbox 1.5</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.6/index?product=outlook&version=v1.6">Mailbox 1.6</a></td>
-    <td>??????????</td> 
+    <td>Недоступен</td> 
   </tr>
   <tr>
-    <td>Office ??? iOS</td>
-    <td> - ?????? ?????<br>
-      - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">??????? ?????????</a></td>
+    <td>Office для iOS</td>
+    <td> - Чтение почты<br>
+      - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://dev.office.com/reference/add-ins/outlook/1.1/index?product=outlook&version=v1.1">Mailbox 1.1</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.2/index?product=outlook&version=v1.2">Mailbox 1.2</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.3/index?product=outlook&version=v1.3">Mailbox 1.3</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.4/index?product=outlook&version=v1.4">Mailbox 1.4</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.5/index?product=outlook&version=v1.5">Mailbox 1.5</a></td>    
-    <td>??????????</td>
+    <td>Недоступен</td>
   </tr>
   <tr>
-    <td>Office 2016 ??? Mac</td>
-    <td> - ?????? ?????<br>
-      - ???????? ????????? ?????<br>
-      - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">??????? ?????????</a></td>
+    <td>Office 2016 для Mac</td>
+    <td> - Чтение почты<br>
+      - Создание сообщения почты<br>
+      - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://dev.office.com/reference/add-ins/outlook/1.1/index?product=outlook&version=v1.1">Mailbox 1.1</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.2/index?product=outlook&version=v1.2">Mailbox 1.2</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.3/index?product=outlook&version=v1.3">Mailbox 1.3</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.4/index?product=outlook&version=v1.4">Mailbox 1.4</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.5/index?product=outlook&version=v1.5">Mailbox 1.5</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.6/index?product=outlook&version=v1.6">Mailbox 1.6</a></td>
-    <td>??????????</td>
+    <td>Недоступен</td>
   </tr>
   <tr>
-    <td>Office ??? Android</td>
-    <td> - ?????? ?????<br>
-      - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">??????? ?????????</a></td>
+    <td>Office для Android</td>
+    <td> - Чтение почты<br>
+      - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://dev.office.com/reference/add-ins/outlook/1.1/index?product=outlook&version=v1.1">Mailbox 1.1</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.2/index?product=outlook&version=v1.2">Mailbox 1.2</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.3/index?product=outlook&version=v1.3">Mailbox 1.3</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.4/index?product=outlook&version=v1.4">Mailbox 1.4</a><br>
       - <a href="https://dev.office.com/reference/add-ins/outlook/1.5/index?product=outlook&version=v1.5">Mailbox 1.5</a></td>
-    <td>??????????</td>
+    <td>Недоступен</td>
   </tr>
 </table>
 
@@ -217,16 +218,16 @@ ms.lasthandoff: 05/23/2018
 
 <table style="width:80%">
   <tr>
-    <th>?????????</th>
-    <th>????? ??????????</th> 
-    <th>?????? ???????????? ????????? API</th> 
-    <th><a href="https://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets"><b>??????????? ???????? API</b></a></th> 
+    <th>Платформа</th>
+    <th>Точки расширения</th> 
+    <th>Наборы обязательных элементов API</th> 
+    <th><a href="https://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets"><b>Стандартные элементы API</b></a></th> 
   </tr> 
   </tr>
   <tr>
     <td>Office Online</td>
-    <td> - ??????? ?????<br>
-         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">??????? ?????????</a></td>
+    <td> - Область задач<br>
+         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://dev.office.com/reference/add-ins/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
          - <a href="https://dev.office.com/reference/add-ins/requirement-sets/word-api-requirement-sets">WordApi 1.2</a><br>
          - <a href="https://dev.office.com/reference/add-ins/requirement-sets/word-api-requirement-sets">WordApi 1.3</a><br>
@@ -241,18 +242,18 @@ ms.lasthandoff: 05/23/2018
          - DocumentEvents<br>
          - TextFile<br>
          - ImageCoercion<br>
-         - ?????????<br>
+         - Параметры<br>
          - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office 2013 ??? Windows</td>
-    <td> - ??????? ?????</td>
+    <td>Office 2013 для Windows</td>
+    <td> - Область задач</td>
     <td> - <a href="https://dev.office.com/reference/add-ins/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td> - BindingEvents<br>
          - CompressedFile<br>
          - CustomXmlPart<br>
          - DocumentEvents<br>
-         - ????<br>
+         - Файл<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - OoxmlCoercion<br>
@@ -260,15 +261,15 @@ ms.lasthandoff: 05/23/2018
          - TableCoercion<br>
          - TextBindings<br>
          - TextFile<br>
-         - ?????????<br>
+         - Параметры<br>
          - TextCoercion<br>
          - MatrixCoercion<br>
-         - ???????? ???????</td>
+         - Привязки матрицы</td>
   </tr>
   <tr>
-    <td>Office 2016 ??? Windows</td>
-    <td> - ??????? ?????<br>
-         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">??????? ?????????</a></td>
+    <td>Office 2016 для Windows</td>
+    <td> - Область задач<br>
+         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://dev.office.com/reference/add-ins/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/word-api-requirement-sets">WordApi 1.2</a><br>
         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/word-api-requirement-sets">WordApi 1.3</a><br>
@@ -277,7 +278,7 @@ ms.lasthandoff: 05/23/2018
          - CompressedFile<br>
          - CustomXmlPart<br>
          - DocumentEvents<br>
-         - ????<br>
+         - Файл<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - OoxmlCoercion<br>
@@ -285,14 +286,14 @@ ms.lasthandoff: 05/23/2018
          - TableCoercion<br>
          - TextBindings<br>
          - TextFile<br>
-         - ?????????<br>
+         - Параметры<br>
          - TextCoercion<br>
          - MatrixCoercion<br>
-         - ???????? ??????? </td> 
+         - Привязки матрицы </td> 
   </tr>
   <tr>
-    <td>Office ??? iOS</td>
-    <td> - ??????? ?????</td>
+    <td>Office для iOS</td>
+    <td> - Область задач</td>
     <td> - <a href="https://dev.office.com/reference/add-ins/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
          - <a href="https://dev.office.com/reference/add-ins/requirement-sets/word-api-requirement-sets">WordApi 1.2</a><br>
          - <a href="https://dev.office.com/reference/add-ins/requirement-sets/word-api-requirement-sets">WordApi 1.3</a><br>
@@ -302,7 +303,7 @@ ms.lasthandoff: 05/23/2018
          - CompressedFile<br>
          - CustomXmlPart<br>
          - DocumentEvents<br>
-         - ????<br>
+         - Файл<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - OoxmlCoercion<br>
@@ -310,15 +311,15 @@ ms.lasthandoff: 05/23/2018
          - TableCoercion<br>
          - TextBindings<br>
          - TextFile<br>
-         - ?????????<br>
+         - Параметры<br>
          - TextCoercion<br>
          - MatrixCoercion<br>
-         - ???????? ??????? </td> 
+         - Привязки матрицы </td> 
   </tr>
   <tr>
-    <td>Office 2016 ??? Mac</td>
-    <td> - ??????? ?????<br>
-         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">??????? ?????????</a></td>
+    <td>Office 2016 для Mac</td>
+    <td> - Область задач<br>
+         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://dev.office.com/reference/add-ins/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/word-api-requirement-sets">WordApi 1.2</a><br>
         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/word-api-requirement-sets">WordApi 1.3</a><br>
@@ -328,7 +329,7 @@ ms.lasthandoff: 05/23/2018
          - CompressedFile<br>
          - CustomXmlPart<br>
          - DocumentEvents<br>
-         - ????<br>
+         - Файл<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - OoxmlCoercion<br>
@@ -336,10 +337,10 @@ ms.lasthandoff: 05/23/2018
          - TableCoercion<br>
          - TextBindings<br>
          - TextFile<br>
-         - ?????????<br>
+         - Параметры<br>
          - TextCoercion<br>
          - MatrixCoercion<br>
-         - ???????? ??????? </td> 
+         - Привязки матрицы </td> 
   </tr>
 </table>
 
@@ -349,82 +350,82 @@ ms.lasthandoff: 05/23/2018
 
 <table style="width:80%">
   <tr>
-    <th>?????????</th>
-    <th>????? ??????????</th> 
-    <th>?????? ???????????? ????????? API</th> 
-    <th><a href="https://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets"><b>??????????? ???????? API</b></a></th> 
+    <th>Платформа</th>
+    <th>Точки расширения</th> 
+    <th>Наборы обязательных элементов API</th> 
+    <th><a href="https://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets"><b>Стандартные элементы API</b></a></th> 
   </tr> 
   </tr>
   <tr>
     <td>Office Online</td>
-    <td> - ???????<br>
-         - ??????? ?????<br>
-         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">??????? ?????????</a></td>
+    <td> - Контент<br>
+         - Область задач<br>
+         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://dev.office.com/reference/add-ins/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td> - ActiveView<br>
          - CompressedFile<br>
-         - ????<br>
-         - ?????????<br>
-         - ?????????<br>
+         - Файл<br>
+         - Выделение<br>
+         - Параметры<br>
          - TextCoercion<br>
          - ImageCoercion</td>
   </tr>
   <tr>
-    <td>Office 2013 ??? Windows</td>
-    <td> - ???????<br>
-         - ??????? ?????<br>
+    <td>Office 2013 для Windows</td>
+    <td> - Контент<br>
+         - Область задач<br>
     </td>
     <td> - <a href="https://dev.office.com/reference/add-ins/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>
 </td>
     <td> - ActiveView<br>
          - CompressedFile<br>
          - DocumentEvents<br>
-         - ????<br>
-         - ?????????<br>
-         - ?????????<br>
+         - Файл<br>
+         - Выделение<br>
+         - Параметры<br>
          - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office 2016 ??? Windows</td>
-    <td> - ???????<br>
-         - ??????? ?????<br>
-         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">??????? ?????????</a></td>
+    <td>Office 2016 для Windows</td>
+    <td> - Контент<br>
+         - Область задач<br>
+         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://dev.office.com/reference/add-ins/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td> - ActiveView<br>
          - CompressedFile<br>
          - DocumentEvents<br>
-         - ????<br>
-         - ?????????<br>
-         - ?????????<br>
+         - Файл<br>
+         - Выделение<br>
+         - Параметры<br>
          - TextCoercion<br>
          - ImageCoercion</td>
   </tr>
   <tr>
-    <td>Office ??? iOS</td>
-    <td> - ???????<br>
-         - ??????? ?????</td>
+    <td>Office для iOS</td>
+    <td> - Контент<br>
+         - Область задач</td>
     <td> - <a href="https://dev.office.com/reference/add-ins/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
      <td> - ActiveView<br>
          - CompressedFile<br>
          - DocumentEvents<br>
-         - ????<br>
-         - ?????????<br>
-         - ?????????<br>
+         - Файл<br>
+         - Выделение<br>
+         - Параметры<br>
          - TextCoercion<br>
          - ImageCoercion</td>
   </tr>
   <tr>
-    <td>Office 2016 ??? Mac</td>
-    <td> - ???????<br>
-         - ??????? ?????<br>
-         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">??????? ?????????</a></td>
+    <td>Office 2016 для Mac</td>
+    <td> - Контент<br>
+         - Область задач<br>
+         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://dev.office.com/reference/add-ins/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td> - ActiveView<br>
          - CompressedFile<br>
          - DocumentEvents<br>
-         - ????<br>
-         - ?????????<br>
-         - ?????????<br>
+         - Файл<br>
+         - Выделение<br>
+         - Параметры<br>
          - TextCoercion<br>
          - ImageCoercion</td>
   </tr>
@@ -436,45 +437,45 @@ ms.lasthandoff: 05/23/2018
 
 <table style="width:80%">
   <tr>
-    <th>?????????</th>
-    <th>????? ??????????</th> 
-    <th>?????? ???????????? ????????? API</th> 
-    <th><a href="https://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets"><b>??????????? ???????? API</b></a></th> 
+    <th>Платформа</th>
+    <th>Точки расширения</th> 
+    <th>Наборы обязательных элементов API</th> 
+    <th><a href="https://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets"><b>Стандартные элементы API</b></a></th> 
   </tr> 
   </tr>
   <tr>
     <td>Office Online</td>
-    <td> - ???????<br>
-         - ??????? ?????<br>
-         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">??????? ?????????</a></td>
+    <td> - Контент<br>
+         - Область задач<br>
+         - <a href="https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://dev.office.com/reference/add-ins/requirement-sets/onenote-api-requirement-sets">OneNoteApi 1.1</a><br>
          - <a href="https://dev.office.com/reference/add-ins/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td> - DocumentEvents<br>
-         - ?????????<br>
+         - Параметры<br>
          - TextCoercion<br>
          - HtmlCoercion<br>
          - ImageCoercion</td>
   </tr>
   <tr>
-    <td>Office 2013 ??? Windows</td>
+    <td>Office 2013 для Windows</td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* </td>
   </tr> 
   <tr>
-    <td>Office 2016 ??? Windows</td>
+    <td>Office 2016 для Windows</td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* </td> 
   </tr>
   <tr>
-    <td>Office ??? iOS</td>
+    <td>Office для iOS</td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* </td>
   </tr>
   <tr>
-    <td>Office 2016 ??? Mac</td>
+    <td>Office 2016 для Mac</td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* </td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* </td>
@@ -483,12 +484,12 @@ ms.lasthandoff: 05/23/2018
 
 <br/>
 
-\* = ????????? ????? ????????. 
+\* = поддержка скоро появится. 
 
-## <a name="see-also"></a>??. ?????
+## <a name="see-also"></a>См. также
 
-- [????? ????????? ????????? Office](office-add-ins.md)
-- [??????????? ?????? ???????????? ????????? API](https://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets)
-- [?????? ???????????? ????????? ??? ?????? ?????????](https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets)
-- [??????? ?? API JavaScript ??? Office](https://dev.office.com/reference/add-ins/javascript-api-for-office)
+- [Обзор платформы надстроек Office](office-add-ins.md)
+- [Стандартные наборы обязательных элементов API](https://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets)
+- [Наборы обязательных элементов для команд надстроек](https://dev.office.com/reference/add-ins/requirement-sets/add-in-commands-requirement-sets)
+- [Справка по API JavaScript для Office](https://dev.office.com/reference/add-ins/javascript-api-for-office)
 

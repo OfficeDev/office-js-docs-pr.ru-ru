@@ -2,18 +2,18 @@
   tocHref: /office/
   topicHref: /office/index
   items:
-    - name: '??????????'
+    - name: Надстройки
       tocHref: /office/dev/add-ins/
       topicHref: /office/dev/add-ins
       items:
-        - name: '???????????'
+        - name: Руководства
           items:
-            - name: '??????????? ?? ??????????? Excel'
+            - name: Руководство по надстройкам Excel
               tocHref: /office/dev/add-ins/tutorials/excel-tutorial
               topicHref: /office/dev/add-ins/tutorials/excel-tutorial
-            - name: '??????????? ?? ??????????? PowerPoint'
+            - name: Руководство по надстройкам PowerPoint
               tocHref: /office/dev/add-ins/tutorials/powerpoint-tutorial
               topicHref: /office/dev/add-ins/tutorials/powerpoint-tutorial
-            - name: '??????????? ?? ??????????? Word'
+            - name: Руководство по надстройкам Word
               tocHref: /office/dev/add-ins/tutorials/word-tutorial
               topicHref: /office/dev/add-ins/tutorials/word-tutorial
