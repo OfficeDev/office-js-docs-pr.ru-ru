@@ -1,20 +1,17 @@
 ---
 title: Работа с событиями при помощи API JavaScript для Excel
 description: ''
-ms.date: 01/29/2018
-ms.openlocfilehash: 4e04b31e7a130f21d6a9c94d041dc2a122a5890e
-ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
+ms.date: 05/25/2018
+ms.openlocfilehash: b928910cc673cfe8ff99906259b51fa2c3afdca4
+ms.sourcegitcommit: 17f60431644b448a4816913039aaebfa328f9b0a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "19437474"
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "19476482"
 ---
 # <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями при помощи API JavaScript для Excel 
 
 В этой статье описываются важные понятия, относящиеся к работе с событиями в Excel, а также представлены образцы кода, иллюстрирующие регистрацию, использование и удаление обработчиков событий при помощи API JavaScript для Excel. 
-
-> [!IMPORTANT]
-> В настоящее время API, описанные в этой статье, представлены только в общедоступной ознакомительной бета-версии и не предназначены для использования в рабочей среде. Чтобы запускать содержащиеся в этой статье примеры кода, необходимо использовать достаточно позднюю сборку Office и ссылаться на бета-версию библиотеки в сети CDN Office.js: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
 
 ## <a name="events-in-excel"></a>События в Excel
 
@@ -22,11 +19,13 @@ ms.locfileid: "19437474"
 
 | Событие | Описание | Поддерживаемые объекты |
 |:---------------|:-------------|:-----------|
-| `onAdded` | Событие, возникающее при добавлении объекта. | [**WorksheetCollection**](https://github.com/OfficeDev/office-js-docs/blob/master/reference/excel/worksheetaddedeventargs.md) |
-| `onActivated` | Событие, возникающее при активации объекта. | [**WorksheetCollection**](https://github.com/OfficeDev/office-js-docs/blob/master/reference/excel/worksheetactivatedeventargs.md), [**Worksheet**](https://github.com/OfficeDev/office-js-docs/blob/master/reference/excel/worksheetactivatedeventargs.md) |
-| `onDeactivated` | Событие, возникающее при отключении объекта. | [**WorksheetCollection**](https://github.com/OfficeDev/office-js-docs/blob/master/reference/excel/worksheetdeactivatedeventargs.md), [**Worksheet**](https://github.com/OfficeDev/office-js-docs/blob/master/reference/excel/worksheetdeactivatedeventargs.md) |
-| `onChanged` | Событие, возникающее при изменении данных в ячейках. | [**Worksheet**](https://github.com/OfficeDev/office-js-docs/blob/master/reference/excel/worksheetchangedeventargs.md), [**Table**](https://github.com/OfficeDev/office-js-docs/blob/master/reference/excel/tablechangedeventargs.md), [**TableCollection**](https://github.com/OfficeDev/office-js-docs/blob/master/reference/excel/tablechangedeventargs.md), [**Binding**](https://github.com/OfficeDev/office-js-docs/blob/master/reference/excel/bindingdatachangedeventargs.md) |
-| `onSelectionChanged` | Событие, возникающее при изменении активной ячейки или выбранного диапазона. | [**Worksheet**](https://github.com/OfficeDev/office-js-docs/blob/master/reference/excel/worksheetselectionchangedeventargs.md), [**Table**](https://github.com/OfficeDev/office-js-docs/blob/master/reference/excel/tableselectionchangedeventargs.md), [**Binding**](https://github.com/OfficeDev/office-js-docs/blob/master/reference/excel/bindingselectionchangedeventargs.md) |
+| `onAdded` | Событие, возникающее при добавлении объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection) |
+| `onDeleted` | Событие, возникающее при удалении объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection) |
+| `onActivated` | Событие, возникающее при активации объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection), [**Worksheet**](https://dev.office.com/reference/add-ins/excel/worksheet) |
+| `onDeactivated` | Событие, возникающее при отключении объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection), [**Worksheet**](https://dev.office.com/reference/add-ins/excel/worksheet) |
+| `onChanged` | Событие, возникающее при изменении данных в ячейках. | [**лист**](https://dev.office.com/reference/add-ins/excel/worksheet), [**таблица**](https://dev.office.com/reference/add-ins/excel/table), [**TableCollection**](https://dev.office.com/reference/add-ins/excel/tablecollection) |
+| `onDataChanged` | Событие, возникающее при изменении данных или форматирования в привязке. | [**Привязка**](https://dev.office.com/reference/add-ins/excel/binding) |
+| `onSelectionChanged` | Событие, возникающее при изменении активной ячейки или выбранного диапазона. | [**лист**](https://dev.office.com/reference/add-ins/excel/worksheet), [**таблица**](https://dev.office.com/reference/add-ins/excel/table), [**привязка**](https://dev.office.com/reference/add-ins/excel/binding) |
 
 ### <a name="event-triggers"></a>Триггеры событий
 
@@ -124,4 +123,3 @@ function remove() {
 
 - [Основные понятия API JavaScript для Excel](excel-add-ins-core-concepts.md)
 - [Открытая спецификация по API JavaScript для Excel](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_OpenSpec)
-- [Общие сведения о функциях событий Excel (ознакомительная версия)](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/Event_README.md)

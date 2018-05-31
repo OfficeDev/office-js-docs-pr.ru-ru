@@ -12,7 +12,7 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
 ### <a name="prerequisites"></a>Необходимые компоненты
 
-[!include[Quickstart prerequisites](../includes/quickstart-vs-prerequisites.md)]
+[!include[Quick Start prerequisites](../includes/quickstart-vs-prerequisites.md)]
 
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
@@ -473,10 +473,10 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Поздравляем, вы успешно создали надстройку Word с помощью jQuery! Чтобы узнать больше о возможностях надстроек Word и создать более сложную надстройку, воспользуйтесь учебным пособием по использованию надстроек Word.
+Поздравляем, вы успешно создали надстройку Word с помощью jQuery! Чтобы узнать больше о возможностях надстроек Word и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Word.
 
 > [!div class="nextstepaction"]
-> [Учебное пособие по использованию надстроек Word](../tutorials/word-tutorial.yml)
+> [Руководство по надстройкам Word](../tutorials/word-tutorial.yml)
 
 ## <a name="see-also"></a>См. также
 

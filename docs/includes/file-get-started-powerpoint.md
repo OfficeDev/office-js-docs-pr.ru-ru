@@ -10,7 +10,7 @@
 
 ### <a name="prerequisites"></a>Необходимые компоненты
 
-[!include[Quickstart prerequisites](../includes/quickstart-vs-prerequisites.md)]
+[!include[Quick Start prerequisites](../includes/quickstart-vs-prerequisites.md)]
 
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
@@ -354,7 +354,7 @@
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Поздравляем, вы успешно создали надстройку PowerPoint! Чтобы узнать больше о возможностях надстроек PowerPoint и создать более сложную надстройку, воспользуйтесь пособием по использованию по надстройкам PowerPoint.
+Поздравляем, вы успешно создали надстройку PowerPoint! Чтобы узнать больше о возможностях надстроек PowerPoint о создании более сложной надстройки, ознакомьтесь с пособием по надстройкам PowerPoint.
 
 > [!div class="nextstepaction"]
-> [Учебное пособие по использованию настроек PowerPoint](../tutorials/powerpoint-tutorial.yml)
+> [Пособие по использованию настроек PowerPoint](../tutorials/powerpoint-tutorial.yml)
