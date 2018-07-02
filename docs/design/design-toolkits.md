@@ -1,0 +1,11 @@
+#<a name="design-toolkits"></a><span data-ttu-id="fce82-101">Наборы инструментов для разработки</span><span class="sxs-lookup"><span data-stu-id="fce82-101">Design toolkits</span></span>
+
+<span data-ttu-id="fce82-102">Мы включили наш набор средств, который поможет вам начать работу.</span><span class="sxs-lookup"><span data-stu-id="fce82-102">We've included our toolkit to help you get started.</span></span> <span data-ttu-id="fce82-103">Здесь представлены все наши доступные шаблоны с краткими описаниями, рекомендациями по макетам и примером надстройки.</span><span class="sxs-lookup"><span data-stu-id="fce82-103">You can find all of our available patterns here with brief descriptions, layout recommendations, and a sample add-in.</span></span>
+
+### <a name="downloads"></a><span data-ttu-id="fce82-104">Файлы для загрузки</span><span class="sxs-lookup"><span data-stu-id="fce82-104">Downloads</span></span>
+
+* [<span data-ttu-id="fce82-105">Набор средств для создания эскизов Fabric Design</span><span class="sxs-lookup"><span data-stu-id="fce82-105">Fabric Design Toolkit</span></span>](https://aka.ms/fabric-sketch-toolkit)
+* [<span data-ttu-id="fce82-106"> Набор средств Fabric Design для Adobe XD</span><span class="sxs-lookup"><span data-stu-id="fce82-106">Fabric Design Adobe XD Toolkit</span></span>](https://aka.ms/fabric-toolkit)
+* [<span data-ttu-id="fce82-107">Набор средства для создания эскизов надстроек</span><span class="sxs-lookup"><span data-stu-id="fce82-107">Add-in Sketch Toolkit</span></span>](https://aka.ms/addins_sketch_toolkit)
+* [<span data-ttu-id="fce82-108">Набор средств для создания надстроек для Adobe XD</span><span class="sxs-lookup"><span data-stu-id="fce82-108">Add-in Adobe XD Toolkit</span></span>](https://aka.ms/addins_toolkit)
+* [<span data-ttu-id="fce82-109">Шрифт значков Segoe UI и Fabric MDL2</span><span class="sxs-lookup"><span data-stu-id="fce82-109">Segoe UI and Fabric MDL2 icon font</span></span>](https://static2.sharepointonline.com/files/fabric/fabric-website/files/segoeui_fabricmdl2_icon_fonts.zip)
