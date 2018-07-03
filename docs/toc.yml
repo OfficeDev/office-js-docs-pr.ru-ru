@@ -51,7 +51,7 @@
     - name: Руководство по надстройкам Word
       href: tutorials/word-tutorial.yml
       displayName: Word
-- name: Основные понятия
+- name: Понятия
   items:
     - name: Требования для запуска надстроек
       href: concepts/requirements-for-running-office-add-ins.md
@@ -69,63 +69,57 @@
       href: design/add-in-design.md
       items:
         - name: Рекомендации
-          href: design/add-in-design-guidelines.md
           items:
-            - name: Язык проектирования
-              href: design/add-in-design-language.md
+            - name: Специальные возможности
+              href: design/accessibility-guidelines.md
+            - name: Стиль речи
+              href: design/voice-guidelines.md
+            - name: Визуализация данных
+              href: design/data-visualization-guidelines.md
+        - name: Язык дизайна
+          href: design/add-in-design-language.md
+          items:
+            - name: Оформление
+              href: design/add-in-typography.md
+            - name: Цвет
+              href: design/add-in-color.md
+            - name: Макет
+              href: design/add-in-layout.md
+            - name: Значки
+              href: design/add-in-icons.md
             - name: Использование движения
               href: design/using-motion-office-addins.md
-            - name: Шаблоны дизайна UX
-              href: design/ux-design-patterns.md
-            - name: Тестирование на удобство
-              href: design/usability-testing.md
+              displayName: Motion
         - name: Элементы интерфейса
           href: design/interface-elements.md
           items:
             - name: Команды надстроек
               href: design/add-in-commands.md
-              items:
-                - name: Рекомендации по созданию значков
-                  href: design/design-icons.md
             - name: Области задач
               href: design/task-pane-add-ins.md
-              items:
-                - name: Автоматическое открытие области задач с документом
-                  href: design/automatically-open-a-task-pane-with-a-document.md
             - name: Диалоговые окна
               href: design/dialog-boxes.md
-            - name: Контентные надстройки
+            - name: Надстройки содержания
               href: design/content-add-ins.md
-              items:
-                - name: Рекомендации по выбору стиля визуализации данных
-                  href: design/data-visualization-guidelines.md
-        - name: Office UI Fabric
-          href: design/office-ui-fabric.md
+        - name: Средство выбора шаблонов оформления
+          href: design/ux-design-pattern-templates.md
           items:
+            - name: Проверка подлинности
+              href: design/authentication-patterns.md
+            - name: Запуск при первом включении компьютера
+              href: design/first-run-experience-patterns.md
+            - name: Навигация
+              href: design/navigation-patterns.md
+            - name: Фирменная символика
+              href: design/branding-patterns.md
+        - name: Ресурсы
+          items:
+            - name: Наборы инструментов для разработки
+              href: design/design-toolkits.md
+            - name: Office UI Fabric
+              href: design/office-ui-fabric.md
             - name: Начало работы с Fabric React
               href: design/using-office-ui-fabric-react.md
-            - name: Навигация
-              href: design/breadcrumb.md
-            - name: Кнопки
-              href: design/button.md
-            - name: Флажок
-              href: design/checkbox.md
-            - name: Группа выбора
-              href: design/choicegroup.md
-            - name: Раскрывающееся меню
-              href: design/dropdown.md
-            - name: |
-                Метка
-              href: design/label.md
-            - name: |
-                Список
-              href: design/list.md
-            - name: Сводный документ
-              href: design/pivot.md
-            - name: Текстовое поле
-              href: design/textfield.md
-            - name: Переключатель
-              href: design/toggle.md
     - name: Разработка
       items:
         - name: Версии Office и наборы обязательных элементов
@@ -135,13 +129,13 @@
         - name: API JavaScript для Office
           href: develop/understanding-the-javascript-api-for-office.md
           items:
-            - name: Поддержка контентных надстроек и надстроек области задач
+            - name: Поддержка надстроек содержания и области задач
               href: develop/support-for-task-pane-and-content-add-ins.md
             - name: Ссылка на файл Office.js
               href: develop/referencing-the-javascript-api-for-office-library-from-its-cdn.md
             - name: Загрузить Office.js
               href: develop/loading-the-dom-and-runtime-environment.md
-            - name: Асинхронное программирование в надстройках для Office
+            - name: Асинхронное программирование в случае надстроек Office
               href: develop/asynchronous-programming-in-office-add-ins.md
             - name: Сохранение состояния и параметров
               href: develop/persisting-add-in-state-and-settings.md
@@ -154,7 +148,7 @@
               href: develop/specify-office-hosts-and-api-requirements.md
             - name: Запросить разрешения на использование API в контентных надстройках и надстройках области задач
               href: develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md
-            - name: Обновление версии манифеста и API
+            - name: Обновление версии API и манифеста
               href: develop/update-your-javascript-api-for-office-and-manifest-schema-version.md
         - name: Проверка подлинности и авторизация
           items:
@@ -169,7 +163,7 @@
                   href: develop/register-sso-add-in-aad-v2.md
                 - name: Предоставление надстройке согласия администратора
                   href: develop/grant-admin-consent-to-an-add-in.md
-                - name: Устранение ошибок единого входа
+                - name: Устранение сообщенных ошибок единого входа (SSO)
                   href: develop/troubleshoot-sso-in-office-add-ins.md
             - name: Авторизация внешних служб
               href: develop/auth-external-add-ins.md
@@ -177,6 +171,8 @@
               href: develop/authorize-to-microsoft-graph.md
         - name: Использование Dialog API
           href: develop/dialog-api-in-office-add-ins.md
+        - name: Автоматическое открытие области задач с документом
+          href: develop/automatically-open-a-task-pane-with-a-document.md
         - name: 'Обход ограничений, связанных с политикой единого домена'
           href: develop/addressing-same-origin-policy-limitations.md
         - name: Локализация
@@ -186,7 +182,7 @@
             - name: Создание и отладка надстроек Office в Visual Studio
               href: develop/create-and-debug-office-add-ins-in-visual-studio.md
               items: null
-            - name: Создание IntelliSense для JavaScript в Visual Studio
+            - name: Получение IntelliSense для JavaScript в Visual Studio
               href: develop/get-javascript-intellisense-in-visual-studio.md
             - name: Преобразование JavaScript в TypeScript
               href: develop/convert-javascript-to-typescript.md
@@ -224,6 +220,10 @@
             - name: Настраиваемые функции
               href: excel/custom-functions-overview.md
               displayName: Excel
+              items:
+                - name: Регистрация настраиваемых функций Excel в JSON
+                  href: excel/custom-functions-json.md
+                  displayName: Excel
             - name: Диаграммы
               href: excel/excel-add-ins-charts.md
               displayName: Excel
@@ -236,20 +236,20 @@
             - name: Таблицы
               href: excel/excel-add-ins-tables.md
               displayName: Excel
-            - name: Рабочие таблицы
+            - name: Листы
               href: excel/excel-add-ins-worksheets.md
               displayName: Excel
-        - name: Расширенные концепции
+        - name: Расширенные понятия
           href: excel/excel-add-ins-advanced-concepts.md
           displayName: Excel
           items:
             - name: Вызов встроенных функций
               href: excel/excel-add-ins-worksheet-functions.md
               displayName: Excel
-            - name: Совместное редактирование в надстройках Excel
+            - name: Совместная работа в надстройках Excel
               href: excel/co-authoring-in-excel-add-ins.md
               displayName: Excel
-            - name: Проверка правильности данных
+            - name: Проверка данных
               href: excel/excel-add-ins-data-validation.md
               displayName: Excel
             - name: Обработка ошибок
@@ -321,17 +321,17 @@
         - name: Справочник по API JavaScript для OneNote
           href: 'https://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference'
           displayName: OneNote
-    - name: Надстройки Project
+    - name: Надстройки проекта
       href: project/project-add-ins.md
       displayName: Project
       items:
-        - name: Создание первой надстройки Project
+        - name: Создание первой надстройки проекта
           href: project/project-add-ins-get-started.md
           displayName: Project
-        - name: 'Создание надстройки Project, использующей REST с локальной службой OData'
+        - name: 'Создание надстройки проекта, использующей REST с локальной службой OData'
           href: project/create-a-project-add-in-that-uses-rest-with-an-on-premises-odata-service.md
           displayName: Project
-        - name: Создание первой надстройки области задач для Project с помощью текстового редактора
+        - name: Создание первой надстройки области задач для проекта с помощью текстового редактора
           href: project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md
           displayName: Project
     - name: Тестирование и отладка
@@ -357,6 +357,8 @@
               href: testing/sideload-an-office-add-in-on-ipad-and-mac.md
             - name: Отладка на iPad и Mac
               href: testing/debug-office-add-ins-on-ipad-and-mac.md
+        - name: Тестирование возможностей использования
+          href: develop/usability-testing.md
         - name: 'Устранение ошибок, с которыми сталкиваются пользователи'
           href: testing/testing-and-troubleshooting.md
         - name: Проверка манифеста надстройки и устранение неполадок
