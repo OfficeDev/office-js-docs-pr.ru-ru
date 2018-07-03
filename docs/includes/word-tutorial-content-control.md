@@ -67,24 +67,27 @@
 ## <a name="replace-the-content-of-the-content-control"></a>Замена содержимого элемента управления
 
 1. Откройте файл index.html.
-3. Под элементом `div`, содержащим кнопку `create-content-control`, добавьте следующую разметку:
+2. Под элементом `div`, содержащим кнопку `create-content-control`, добавьте следующую разметку:
+
     ```html
     <div class="padding">            
         <button class="ms-Button" id="replace-content-in-control">Rename Service</button>            
     </div>
     ```
 
-4. Откройте файл app.js.
+3. Откройте файл app.js.
 
-5. Под строкой, назначающей обработчик нажатия кнопки `create-content-control`, добавьте следующий код:
+4. Под строкой, назначающей обработчик нажатия кнопки `create-content-control`, добавьте следующий код:
 
     ```js
     $('#replace-content-in-control').click(replaceContentInControl);
     ```
 
-6. Добавьте приведенную ниже функцию под функцией `createContentControl`.
+5. Добавьте приведенную ниже функцию под функцией `createContentControl`.
 
-    ```js    function replaceContentInControl() {      Word.run(function (context) {
+    ```js
+    function replaceContentInControl() {
+        Word.run(function (context) {
             
             // TODO1: Queue commands to replace the text in the Service Name
             //        content control.
@@ -100,9 +103,9 @@
     }
     ``` 
 
-7. Replace `TODO1` with the following code. 
+7. Замените `TODO1` приведенным ниже кодом. 
     > [!NOTE]
-    > The `ContentControlCollection.getByTag` method returns a `ContentControlCollection` of all content controls of the specified tag. We use `getFirst` to get a reference to the desired control.
+    >  `ContentControlCollection.getByTag` Метод возвращает `ContentControlCollection` всех элементов управления содержимым указанного тега. Мы используем `getFirst` чтобы получить ссылку на требуемый элемент управления.
 
     ```js
     const serviceNameContentControl = context.document.contentControls.getByTag("serviceName").getFirst();

@@ -26,9 +26,9 @@ vue init webpack my-add-in
 
 Отвечая на вопросы, появляющиеся при выполнении предыдущей команды, переопределите стандартные ответы на 3 указанных ниже вопроса. Вы можете оставить стандартные ответы на все остальные вопросы.
 
-- **Install vue-router?** (Установить vue-router?) `No`
-- **Set up unit tests?** `No` (Настроить модульные тесты?)
-- **Setup e2e tests with Nightwatch?** (Настроить тесты e2e с помощью Nightwatch?) `No`
+- ****Install vue-router?** (Установить vue-router?)** `No`
+- ****Set up unit tests?** `No` (Настроить модульные тесты?)** `No`
+- ****Setup e2e tests with Nightwatch?** (Настроить тесты e2e с помощью Nightwatch?)** `No`
 
 ![Вопросы Vue CLI](../images/vue-cli-prompts.png)
 
@@ -45,15 +45,15 @@ vue init webpack my-add-in
 2. Используя генератор Yeoman, создайте файл манифеста для надстройки. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
     ```bash
-    yo office
+    yo office 
     ```
 
-    - Для **Would you like to create a new subfolder for your project?** (Создать новую вложенную папку для проекта?) выберите `No` (Нет).
+    - **Выберите тип проекта:** `Manifest`
     - **Как вы хотите назвать надстройку?:** `My Office Add-in`
-    - **Какое клиентское приложение Office должно поддерживаться?:** `Excel`
-    - **Would you like to create a new add-in?:** `No` (Создать новую надстройку?)
+    - **Какое клиентское приложение Office вы хотели бы поддерживать?:** `Excel`
 
-    Затем генератор предложит вам открыть файл **resource.html**. В нашем случае открывать его не обязательно, но можете заглянуть, если вам интересно! Выберите Yes (Да) или No (Нет), чтобы завершить работу мастера, и подождите, пока генератор закончит работу.
+
+    После завершения работы мастера вы сможете создать файл манифеста и файл ресурсов для создания вашего проекта.
 
     ![Генератор Yeoman](../images/yo-office.png)
     
@@ -185,9 +185,9 @@ vue init webpack my-add-in
 
 1. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.
 
-    - [Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-    - [Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
-    - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+    - Windows[](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
+    - Office Online[](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
+    - iPad и Mac[](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 
 2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
@@ -204,7 +204,7 @@ vue init webpack my-add-in
 Поздравляем, вы успешно создали надстройку Excel с помощью Vue! Чтобы узнать больше о возможностях надстроек Excel и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Excel.
 
 > [!div class="nextstepaction"]
-> [Руководство по надстройкам Excel](../tutorials/excel-tutorial-create-table.md)
+> [Руководство по надстройкам Excel](../tutorials/excel-tutorial.yml)
 
 ## <a name="see-also"></a>См. также
 

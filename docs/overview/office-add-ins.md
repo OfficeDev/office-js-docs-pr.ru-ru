@@ -2,12 +2,12 @@
 title: Обзор платформы надстроек Office
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: f0f20371eee759a449773effaff1ce365e32bf48
-ms.sourcegitcommit: 17f60431644b448a4816913039aaebfa328f9b0a
+ms.openlocfilehash: f7b1f4add776f1971e9762c5cb80dabed45b0a1c
+ms.sourcegitcommit: a0e0416289b293863b8b4d3f9a12581a9e681b27
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "19476524"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "20023167"
 ---
 # <a name="office-add-ins-platform-overview"></a>Обзор платформы надстроек Office
 
@@ -39,9 +39,9 @@ ms.locfileid: "19476524"
 
 Надстройка Office включает в себя два основных компонента — XML-файл манифеста и веб-приложение. Манифест определяет различные параметры, включая способ интеграции надстройки с клиентами Office. Веб-приложение должно быть размещено на веб-сервере или в службе веб-хостинга, например в Microsoft Azure.
 
-*Рис. 1. Манифест + веб-страница = надстройка Office*
+*Рисунок 1. Манифест надстройки (XML) + веб-страница (HTML, JS) = надстройка Office*
 
-![Манифест + веб-страница = надстройка Office](../images/dk2-agave-overview-01.png)
+![Манифест + веб-страница = надстройка Office](../images/about-addins-manifestwebpage.png)
 
 ### <a name="manifest"></a>Манифест 
 
@@ -59,7 +59,7 @@ ms.locfileid: "19476524"
 
 *Рисунок 2. Компоненты надстройки Hello World для Office*
 
-![Компоненты надстройки Hello World](../images/dk2-agave-overview-07.png)
+![Компоненты надстройки Hello World](../images/about-addins-componentshelloworldoffice.png)
 
 ## <a name="extending-and-interacting-with-office-clients"></a>Расширение возможностей и взаимодействие с клиентами Office 
 
@@ -83,9 +83,9 @@ ms.locfileid: "19476524"
 
 Можно добавить настраиваемые кнопки ленты и элементы меню на ленту в Office для Windows Desktop и Office Online. Это упрощает пользователям доступ к надстройке непосредственно из приложения Office. С помощью кнопок можно запускать различные действия, например отображение области задач с пользовательским HTML или выполнение функции JavaScript.  
 
-*Рисунок 3. Команды надстройки в классическом приложении Excel*
+*Рисунок 3. Команды надстройки в ленте*
 
-![Настраиваемые кнопки и команды меню](../images/add-in-commands-overview.png)
+![Настраиваемые кнопки и команды меню](../images/about-addins-addincommands.png)
 
 #### <a name="task-panes"></a>Области задач  
 
@@ -93,7 +93,7 @@ ms.locfileid: "19476524"
 
 *Рисунок 4. Область задач*
 
-![Область задач](../images/task-pane-overview.jpg)
+![Область задач](../images/about-addins-taskpane.png)
 
 ### <a name="extend-outlook-functionality"></a>Расширение возможностей Outlook 
 
@@ -109,7 +109,7 @@ ms.locfileid: "19476524"
 
 *Рисунок 5. Контентная надстройка*
 
-![Контентная надстройка](../images/dk2-agave-overview-05.png)
+![Контентная надстройка](../images/about-addins-contentaddin.png)
 
 ## <a name="office-javascript-apis"></a>Интерфейсы API JavaScript для Office 
 
@@ -119,7 +119,7 @@ API JavaScript для Office содержат объекты и элементы
 
 Чтобы узнать больше о том, как начать создание надстройки Office, ознакомьтесь с [5-минутными краткими инструкциями](https://docs.microsoft.com/en-us/office/dev/add-ins/). Можно создавать надстройки с помощью Visual Studio или любого другого редактора. 
 
-Чтобы приступить к планированию создания решений с удобным и привлекательным интерфейсом, ознакомьтесь с [рекомендациями по дизайну](../design/add-in-design.md) и другими [рекомендациями](../concepts/add-in-development-best-practices.md), касающимися надстроек Office.    
+Чтобы начать планировать создание решений с удобным и привлекательным интерфейсом, ознакомьтесь с[рекомендациями по дизайну](../design/add-in-design.md) и другими[рекомендациями](../concepts/add-in-development-best-practices.md), касающимися надстроек Office.    
    
 ## <a name="see-also"></a>См. также
 

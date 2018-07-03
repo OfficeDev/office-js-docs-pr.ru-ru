@@ -2,12 +2,12 @@
 title: Использование Office UI Fabric React в надстройках Office
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: 8ae8bac8c8043b51188d765dd7170922dcc1c84e
-ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
+ms.openlocfilehash: e078640cbcc6217e9ed0a1ad99ef02afbfd317a8
+ms.sourcegitcommit: 4e4f7c095e8f33b06bd8a02534ee901125eb1d17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "19437600"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "20084079"
 ---
 # <a name="use-office-ui-fabric-react-in-office-add-ins"></a>Использование Office UI Fabric React в надстройках Office
 
@@ -108,23 +108,7 @@ export class ButtonPrimaryExample extends React.Component<IButtonProps, {}> {
 
 Сохраните изменения. Все открытые экземпляры браузеров, включая надстройку, автоматически обновятся и отобразят компонент React `ButtonPrimaryExample`. Обратите внимание, что текст по умолчанию и кнопка заменяются текстом и основной кнопкой, определенной в `ButtonPrimaryExample`.
 
-## <a name="recommended-components"></a>Рекомендуемые компоненты
 
-Ниже приведен список компонентов дизайна Fabric React, которые мы рекомендуем использовать в надстройке.
-
-- [Строка навигации](breadcrumb.md)
-- [Кнопка](button.md)
-- [Флажок](checkbox.md)
-- [ChoiceGroup](choicegroup.md)
-- [Раскрывающееся меню](dropdown.md)
-- [Подпись](label.md)
-- [Список](list.md)
-- [Сводка](pivot.md)
-- [TextField](textfield.md)
-- [Переключатель](toggle.md)
-
-> [!NOTE]
-> Со временем мы добавим другие компоненты.
 
 ## <a name="see-also"></a>См. также
 
