@@ -2,12 +2,12 @@
 title: Работа с событиями при помощи API JavaScript для Excel
 description: ''
 ms.date: 05/25/2018
-ms.openlocfilehash: b928910cc673cfe8ff99906259b51fa2c3afdca4
-ms.sourcegitcommit: 17f60431644b448a4816913039aaebfa328f9b0a
+ms.openlocfilehash: 575e4112ed5f55356020eed8327d309fc58cd643
+ms.sourcegitcommit: 9685fd83136bd2106f4c5595bda0010bc1b1950b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "19476482"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "20596521"
 ---
 # <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями при помощи API JavaScript для Excel 
 
@@ -21,11 +21,12 @@ ms.locfileid: "19476482"
 |:---------------|:-------------|:-----------|
 | `onAdded` | Событие, возникающее при добавлении объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection) |
 | `onDeleted` | Событие, возникающее при удалении объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection) |
-| `onActivated` | Событие, возникающее при активации объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection), [**Worksheet**](https://dev.office.com/reference/add-ins/excel/worksheet) |
-| `onDeactivated` | Событие, возникающее при отключении объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection), [**Worksheet**](https://dev.office.com/reference/add-ins/excel/worksheet) |
-| `onChanged` | Событие, возникающее при изменении данных в ячейках. | [**лист**](https://dev.office.com/reference/add-ins/excel/worksheet), [**таблица**](https://dev.office.com/reference/add-ins/excel/table), [**TableCollection**](https://dev.office.com/reference/add-ins/excel/tablecollection) |
+| `onActivated` | Событие, возникающее при активации объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection), [**Лист**](https://dev.office.com/reference/add-ins/excel/worksheet) |
+| `onDeactivated` | Событие, возникающее при отключении объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection), [**Лист**](https://dev.office.com/reference/add-ins/excel/worksheet) |
+| `onChanged` | Событие, возникающее при изменении данных в ячейках. | [**Лист**](https://dev.office.com/reference/add-ins/excel/worksheet), [**Таблица**](https://dev.office.com/reference/add-ins/excel/table), [**TableCollection**](https://dev.office.com/reference/add-ins/excel/tablecollection) |
 | `onDataChanged` | Событие, возникающее при изменении данных или форматирования в привязке. | [**Привязка**](https://dev.office.com/reference/add-ins/excel/binding) |
-| `onSelectionChanged` | Событие, возникающее при изменении активной ячейки или выбранного диапазона. | [**лист**](https://dev.office.com/reference/add-ins/excel/worksheet), [**таблица**](https://dev.office.com/reference/add-ins/excel/table), [**привязка**](https://dev.office.com/reference/add-ins/excel/binding) |
+| `onSelectionChanged` | Событие, возникающее при изменении активной ячейки или выбранного диапазона. | [**Лист**](https://dev.office.com/reference/add-ins/excel/worksheet), [**Таблица**](https://dev.office.com/reference/add-ins/excel/table), [**Привязка**](https://dev.office.com/reference/add-ins/excel/binding) |
+| `onSettingsChanged` | Событие, возникающее при изменении Параметров в документе. | [**SettingCollection**](https://dev.office.com/reference/add-ins/excel/settingcollection) |
 
 ### <a name="event-triggers"></a>Триггеры событий
 
