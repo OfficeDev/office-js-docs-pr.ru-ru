@@ -2,18 +2,28 @@
 title: Загрузка неопубликованных надстроек Office для тестирования
 description: ''
 ms.date: 01/25/2018
+ms.openlocfilehash: e5769ef40868ec996194725d98913e61b76279bc
+ms.sourcegitcommit: 9e0952b3df852bd2896e9f4a6f59f5b89fc1ae24
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "21270295"
 ---
-
 # <a name="sideload-office-add-ins-for-testing"></a>Загрузка неопубликованных надстроек Office для тестирования
 
-Вы можете установить надстройку Office для тестирования в клиенте Office, запущенном в Windows, используя каталог общих папок для публикации манифеста в сетевом файловом ресурсе. 
+Вы можете установить надстройку Office для тестирования в клиенте Office, запущенном в Windows одним из следующих способов:
+
+- Использование каталога общих папок для публикации манифеста в общем файловом ресурсе (инструкции ниже)
+- [Запуск команды"**npm run sideload**" из корня папки проекта надстройки.](sideload-office-addin-using-sideload-command.md) 
+>[!NOTE]
+>Метод "npm run sideload" работает только для надстроек Excel, Word и PowerPoint).
 
 Если вы не тестируете надстройку Word, Excel или PowerPoint в Windows, см. одну из следующих статей:
 
 - [Загрузка неопубликованных надстроек Office в Office Online для тестирования](sideload-office-add-ins-for-testing.md)
 - [Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования](sideload-an-office-add-in-on-ipad-and-mac.md)
 
-В приведенном ниже видео показано, как загрузить неопубликованную надстройку в классическое приложение Office или Office Online.  
+В следующем видео вы узнаете ознакомитесь с процессом загрузки вашей надстройки на рабочий стол Office или Office Online с помощью каталога общих папок.  
 
 
 > [!VIDEO https://www.youtube.com/embed/XXsAw2UUiQo]

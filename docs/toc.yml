@@ -79,7 +79,7 @@
         - name: Язык проектирования
           href: design/add-in-design-language.md
           items:
-            - name: шрифтовое оформление;
+            - name: Шрифтовое оформление
               href: design/add-in-typography.md
             - name: Цвет
               href: design/add-in-color.md
@@ -99,7 +99,7 @@
               href: design/task-pane-add-ins.md
             - name: Диалоговые окна
               href: design/dialog-boxes.md
-            - name: Контентные надстройки
+            - name: Надстройки содержимого
               href: design/content-add-ins.md
         - name: Средство выбора шаблонов оформления
           href: design/ux-design-pattern-templates.md
@@ -146,7 +146,7 @@
               href: develop/create-addin-commands.md
             - name: Указание ведущих приложений Office
               href: develop/specify-office-hosts-and-api-requirements.md
-            - name: Запросить разрешения на использование API в надстройках содержимого и области задач
+            - name: Запрос разрешения на использование API в надстройках содержимого и области задач
               href: develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md
             - name: Обновление версии API и манифеста
               href: develop/update-your-javascript-api-for-office-and-manifest-schema-version.md
@@ -163,7 +163,7 @@
                   href: develop/register-sso-add-in-aad-v2.md
                 - name: Предоставление надстройке согласия администратора
                   href: develop/grant-admin-consent-to-an-add-in.md
-                - name: Устранение сообщенных ошибок единого входа
+                - name: Устранение сообщений об ошибках единого входа (SSO)
                   href: develop/troubleshoot-sso-in-office-add-ins.md
             - name: Авторизация внешних служб
               href: develop/auth-external-add-ins.md
@@ -224,7 +224,7 @@
                 - name: Регистрация настраиваемых функций Excel в JSON
                   href: excel/custom-functions-json.md
                   displayName: Excel
-            - name: диаграммы;
+            - name: Диаграммы
               href: excel/excel-add-ins-charts.md
               displayName: Excel
             - name: События
@@ -340,10 +340,12 @@
     - name: Тестирование и отладка
       href: testing/test-debug-office-add-ins.md
       items:
-        - name: '"Windows";'
+        - name: Windows
           items:
             - name: Загрузка неопубликованных надстроек Office в Windows
               href: testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md
+            - name: Загрузка неопубликованных надстроек Office с использованием команды sideload
+              href: testing/sideload-office-addin-using-sideload-command.md
             - name: Подключение отладчика из области задач
               href: testing/attach-debugger-from-task-pane.md
             - name: Отладка с помощью средств разработчика F12

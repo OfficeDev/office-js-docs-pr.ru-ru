@@ -2,12 +2,12 @@
 title: Работа с событиями при помощи API JavaScript для Excel
 description: ''
 ms.date: 05/25/2018
-ms.openlocfilehash: 575e4112ed5f55356020eed8327d309fc58cd643
-ms.sourcegitcommit: 9685fd83136bd2106f4c5595bda0010bc1b1950b
+ms.openlocfilehash: 5b48712b0b1b5bd0dd7492ee7c692104a99678a7
+ms.sourcegitcommit: 9e0952b3df852bd2896e9f4a6f59f5b89fc1ae24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "20596521"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "21270274"
 ---
 # <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями при помощи API JavaScript для Excel 
 
@@ -21,12 +21,25 @@ ms.locfileid: "20596521"
 |:---------------|:-------------|:-----------|
 | `onAdded` | Событие, возникающее при добавлении объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection) |
 | `onDeleted` | Событие, возникающее при удалении объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection) |
-| `onActivated` | Событие, возникающее при активации объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection), [**Лист**](https://dev.office.com/reference/add-ins/excel/worksheet) |
-| `onDeactivated` | Событие, возникающее при отключении объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection), [**Лист**](https://dev.office.com/reference/add-ins/excel/worksheet) |
-| `onChanged` | Событие, возникающее при изменении данных в ячейках. | [**Лист**](https://dev.office.com/reference/add-ins/excel/worksheet), [**Таблица**](https://dev.office.com/reference/add-ins/excel/table), [**TableCollection**](https://dev.office.com/reference/add-ins/excel/tablecollection) |
-| `onDataChanged` | Событие, возникающее при изменении данных или форматирования в привязке. | [**Привязка**](https://dev.office.com/reference/add-ins/excel/binding) |
-| `onSelectionChanged` | Событие, возникающее при изменении активной ячейки или выбранного диапазона. | [**Лист**](https://dev.office.com/reference/add-ins/excel/worksheet), [**Таблица**](https://dev.office.com/reference/add-ins/excel/table), [**Привязка**](https://dev.office.com/reference/add-ins/excel/binding) |
+| `onActivated` | Событие, возникающее при активации объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection), [**Worksheet**](https://dev.office.com/reference/add-ins/excel/worksheet) |
+| `onDeactivated` | Событие, возникающее при отключении объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection), [**Worksheet**](https://dev.office.com/reference/add-ins/excel/worksheet) |
+| `onChanged` | Событие, возникающее при изменении данных в ячейках. | [**Worksheet**](https://dev.office.com/reference/add-ins/excel/worksheet), [**Table**](https://dev.office.com/reference/add-ins/excel/table), [**TableCollection**](https://dev.office.com/reference/add-ins/excel/tablecollection) |
+| `onDataChanged` | Событие, возникающее при изменении данных или форматирования в привязке. | [**Binding**](https://dev.office.com/reference/add-ins/excel/binding) |
+| `onSelectionChanged` | Событие, возникающее при изменении активной ячейки или выбранного диапазона. | [**Worksheet**](https://dev.office.com/reference/add-ins/excel/worksheet), [**Table**](https://dev.office.com/reference/add-ins/excel/table), [**Binding**](https://dev.office.com/reference/add-ins/excel/binding) |
 | `onSettingsChanged` | Событие, возникающее при изменении Параметров в документе. | [**SettingCollection**](https://dev.office.com/reference/add-ins/excel/settingcollection) |
+
+## <a name="preview-beta-events-in-excel"></a>Предварительная (бета) версия событий в Excel
+
+> [!NOTE]
+> Эти события в настоящее время доступны только в общедоступной предварительной версии (бета). Чтобы использовать эти функции, вы должны использовать бета-библиотеку Office.js CDN:https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
+
+| Событие | Описание | Поддерживаемые объекты |
+|:---------------|:-------------|:-----------|
+| `onAdded` | Событие, которое появляется при добавлении диаграммы. | [**ChartCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
+| `onDeleted` | Событие, которое происходит при удалении диаграммы. | [**ChartCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
+| `onActivated` | Событие, которое происходит при активации диаграммы. | [**Диаграмма**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md), [**ChartCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
+| `onDeactivated` | Событие, которое происходит при деактивации диаграммы. | [**Диаграмма**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md), [**ChartCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
+| `onCalculated` | Событие, которое происходит, когда рабочий лист завершил расчет (или все рабочие листы коллекции завершили расчеты). | [**WorksheetCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md), [**Лист**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
 
 ### <a name="event-triggers"></a>Триггеры событий
 
