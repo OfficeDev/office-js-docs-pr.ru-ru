@@ -40,7 +40,7 @@
     - name: Создание надстройки проекта
       href: quickstarts/project-quickstart.md
       displayName: Project
-- name: Руководства
+- name: Учебные пособия
   items:
     - name: Руководство по надстройкам Excel
       href: tutorials/excel-tutorial.yml
@@ -76,10 +76,10 @@
               href: design/voice-guidelines.md
             - name: Визуализация данных
               href: design/data-visualization-guidelines.md
-        - name: Язык дизайна
+        - name: Язык проектирования
           href: design/add-in-design-language.md
           items:
-            - name: Оформление
+            - name: шрифтовое оформление;
               href: design/add-in-typography.md
             - name: Цвет
               href: design/add-in-color.md
@@ -99,18 +99,18 @@
               href: design/task-pane-add-ins.md
             - name: Диалоговые окна
               href: design/dialog-boxes.md
-            - name: Надстройки содержания
+            - name: Контентные надстройки
               href: design/content-add-ins.md
         - name: Средство выбора шаблонов оформления
           href: design/ux-design-pattern-templates.md
           items:
             - name: Проверка подлинности
               href: design/authentication-patterns.md
-            - name: Запуск при первом включении компьютера
+            - name: первый запуск;
               href: design/first-run-experience-patterns.md
             - name: Навигация
               href: design/navigation-patterns.md
-            - name: Фирменная символика
+            - name: Брендирование
               href: design/branding-patterns.md
         - name: Ресурсы
           items:
@@ -146,7 +146,7 @@
               href: develop/create-addin-commands.md
             - name: Указание ведущих приложений Office
               href: develop/specify-office-hosts-and-api-requirements.md
-            - name: Запросить разрешения на использование API в контентных надстройках и надстройках области задач
+            - name: Запросить разрешения на использование API в надстройках содержимого и области задач
               href: develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md
             - name: Обновление версии API и манифеста
               href: develop/update-your-javascript-api-for-office-and-manifest-schema-version.md
@@ -155,15 +155,15 @@
             - name: Включение единого входа в надстройке
               href: develop/sso-in-office-add-ins.md
               items:
-                - name: Создание надстройки с единым входом с помощью ASP.NET
+                - name: Создание надстройки с единым входом с использованием ASP.NET
                   href: develop/create-sso-office-add-ins-aspnet.md
-                - name: Создание надстройки с единым входом с помощью Node.js
+                - name: Создание надстройки с единым входом с использованием Node.js
                   href: develop/create-sso-office-add-ins-nodejs.md
                 - name: 'Регистрация надстройки Office, использующей единый вход с Azure AD версии 2.0'
                   href: develop/register-sso-add-in-aad-v2.md
                 - name: Предоставление надстройке согласия администратора
                   href: develop/grant-admin-consent-to-an-add-in.md
-                - name: Устранение сообщенных ошибок единого входа (SSO)
+                - name: Устранение сообщенных ошибок единого входа
                   href: develop/troubleshoot-sso-in-office-add-ins.md
             - name: Авторизация внешних служб
               href: develop/auth-external-add-ins.md
@@ -224,7 +224,7 @@
                 - name: Регистрация настраиваемых функций Excel в JSON
                   href: excel/custom-functions-json.md
                   displayName: Excel
-            - name: Диаграммы
+            - name: диаграммы;
               href: excel/excel-add-ins-charts.md
               displayName: Excel
             - name: События
@@ -236,17 +236,17 @@
             - name: Таблицы
               href: excel/excel-add-ins-tables.md
               displayName: Excel
-            - name: Листы
+            - name: Электронные таблицы
               href: excel/excel-add-ins-worksheets.md
               displayName: Excel
-        - name: Расширенные понятия
+        - name: Расширенные концепции
           href: excel/excel-add-ins-advanced-concepts.md
           displayName: Excel
           items:
             - name: Вызов встроенных функций
               href: excel/excel-add-ins-worksheet-functions.md
               displayName: Excel
-            - name: Совместная работа в надстройках Excel
+            - name: Совместное редактирование в надстройках Excel
               href: excel/co-authoring-in-excel-add-ins.md
               displayName: Excel
             - name: Проверка данных
@@ -286,6 +286,9 @@
         - name: Привязка к областям в документе
           href: develop/bind-to-regions-in-a-document-or-spreadsheet.md
           displayName: Word
+        - name: 'Используйте параметры поиска, чтобы найти текст в надстройке Word'
+          href: word/search-option-guidance.md
+          displayName: Word
         - name: Справочник по API JavaScript для Word
           href: 'https://dev.office.com/reference/add-ins/word/word-add-ins-reference-overview'
           displayName: Word
@@ -321,23 +324,23 @@
         - name: Справочник по API JavaScript для OneNote
           href: 'https://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference'
           displayName: OneNote
-    - name: Надстройки проекта
+    - name: Надстройки Project
       href: project/project-add-ins.md
       displayName: Project
       items:
-        - name: Создание первой надстройки проекта
+        - name: Создание первой надстройки Project
           href: project/project-add-ins-get-started.md
           displayName: Project
-        - name: 'Создание надстройки проекта, использующей REST с локальной службой OData'
+        - name: 'Создание надстройки Project, использующей REST с локальной службой OData'
           href: project/create-a-project-add-in-that-uses-rest-with-an-on-premises-odata-service.md
           displayName: Project
-        - name: Создание первой надстройки области задач для проекта с помощью текстового редактора
+        - name: Создание первой надстройки области задач для Project с помощью текстового редактора
           href: project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md
           displayName: Project
     - name: Тестирование и отладка
       href: testing/test-debug-office-add-ins.md
       items:
-        - name: Windows
+        - name: '"Windows";'
           items:
             - name: Загрузка неопубликованных надстроек Office в Windows
               href: testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md
@@ -357,7 +360,7 @@
               href: testing/sideload-an-office-add-in-on-ipad-and-mac.md
             - name: Отладка на iPad и Mac
               href: testing/debug-office-add-ins-on-ipad-and-mac.md
-        - name: Тестирование возможностей использования
+        - name: Тестирование на удобство
           href: develop/usability-testing.md
         - name: 'Устранение ошибок, с которыми сталкиваются пользователи'
           href: testing/testing-and-troubleshooting.md
