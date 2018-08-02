@@ -2,12 +2,12 @@
 title: Контентные надстройки Office
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: bd0dcea7a3f37175a48946fc9dcd61d2b89f9c08
-ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
+ms.openlocfilehash: f2632e94e0a797836f73caf0d53fdc0f24bd6790
+ms.sourcegitcommit: bc68b4cf811b45e8b8d1cbd7c8d2867359ab671b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "19437264"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "21703919"
 ---
 # <a name="content-office-add-ins"></a>Контентные надстройки Office
 
@@ -48,12 +48,12 @@ ms.locfileid: "19437264"
 Пример реализации контентной надстройки для Excel: [Humongous Insurance](https://github.com/OfficeDev/Excel-Content-Add-in-Humongous-Insurance) на сайте GitHub.
 
 ## <a name="support-considerations"></a>Что касается поддержки
-- Проверьте, будет ли ваша надстройка Office работать на [конкретной платформе Office](https://docs.microsoft.com/en-us/office/dev/add-ins/overview/office-add-in-availability). 
-- Чтобы надстройка могла читать и записывать данные в Excel или PowerPoint, может потребоваться добавление в список доверия сертификатов. Вы можете объявить нужный [уровень разрешений](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins) в манифесте надстройки.  
-- Надстройки контента поддерживаются в Excel и PowerPoint в Office 2013 и более поздних версиях. Если вы откроете надстройку в версии Office, которая не поддерживает веб-надстройки, вместо надстройки будет показано изображение.
+- Проверьте, будет ли ваша надстройка Office работать на [конкретной платформе Office](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-in-availability). 
+- Для некоторого содержимого может потребоваться, чтобы пользователь добавил надстройку в список «доверенных» с тем, чтобы надстройка могла читать и записывать данные в Excel или PowerPoint. Вы можете объявить нужный [уровень разрешений](https://docs.microsoft.com/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins) в манифесте надстройки.  
+- Контентные надстройки поддерживаются в Excel и PowerPoint в Office 2013 и более поздних версий. Если вы откроете надстройку в версии Office, которая не поддерживает веб-надстройки, вместо надстройки будет показано изображение.
 
 ## <a name="see-also"></a>См. также
-- [Сведения о доступности элементов для надстроек Office, представленные с учетом ведущих приложений и платформ](https://docs.microsoft.com/en-us/office/dev/add-ins/overview/office-add-in-availability)
-- [Office UI Fabric в надстройках Office](https://docs.microsoft.com/en-us/office/dev/add-ins/design/office-ui-fabric) 
-- [Шаблоны проектирования взаимодействия для надстроек Office](https://docs.microsoft.com/en-us/office/dev/add-ins/design/ux-design-patterns)
-- [Запрашивание разрешений на использование API в контентных надстройках и надстройках области задач](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins)
+- [Сведения о доступности элементов для надстроек Office, представленные с учетом ведущих приложений и платформ](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-in-availability)
+- [Office UI Fabric в надстройках Office](https://docs.microsoft.com/office/dev/add-ins/design/office-ui-fabric) 
+- [Шаблоны проектирования взаимодействия для надстроек Office](https://docs.microsoft.com/office/dev/add-ins/design/ux-design-pattern-templates)
+- [Запрашивание разрешений на использование API в контентных надстройках и надстройках области задач](https://docs.microsoft.com/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins)

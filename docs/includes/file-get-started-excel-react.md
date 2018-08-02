@@ -1,6 +1,6 @@
 # <a name="build-an-excel-add-in-using-react"></a>Создание надстройки Excel с помощью React
 
-Эта статья ознакомит вас с процессом создания надстройки Excel с помощью React и API JavaScript для Excel.
+В этой статье описывается процесс создания надстройки Excel с помощью React и API JavaScript для Excel.
 
 ## <a name="environment"></a>Среда
 
@@ -46,7 +46,7 @@ create-react-app my-addin
     yo office 
     ```
 
-    - **Выберите тип проекта:** `Manifest`
+    - **Выберите тип проекта:** `Office Add-in containing the manifest only`
     - **Как вы хотите назвать надстройку?:** `My Office Add-in`
     - **Какое клиентское приложение Office должно поддерживаться?:** `Excel`
 

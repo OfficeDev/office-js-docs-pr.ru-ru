@@ -1,12 +1,17 @@
 ---
 title: Обновление библиотеки API JavaScript для Office до последней версии и схемы манифеста надстройки до версии 1.1
-description: ''
+description: Обновление файлов JavaScript (Office.js и JS-файлы приложения) и файла проверки манифеста надстройки в вашем проекте надстройки Office до версии 1.1.
 ms.date: 12/04/2017
+ms.openlocfilehash: 2ebfa5e908f278fd3abe754e536625fe6e7d9870
+ms.sourcegitcommit: bc68b4cf811b45e8b8d1cbd7c8d2867359ab671b
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "21703786"
 ---
-
 # <a name="update-to-the-latest-javascript-api-for-office-library-and-version-11-add-in-manifest-schema"></a>Обновление библиотеки API JavaScript для Office до последней версии и схемы манифеста надстройки до версии 1.1
 
-В этой статье рассказывается, как обновить файлы JavaScript (Office.js и JS-файлы для конкретной надстройки) и файл проверки манифеста надстройки в проекте надстройки Office до версии 1.1.
+В этой статье рассказывается, как обновить файлы JavaScript (Office.js и JS-файлы для конкретной надстройки) и файл проверки манифеста надстройки в проекте надстройки Office до версии 1.1.
 
 ## <a name="use-the-most-up-to-date-project-files"></a>Использование последних версий файлов в проекте
 
@@ -14,7 +19,7 @@ ms.date: 12/04/2017
 
 Если вы используете текстовый редактор или другую интегрированную среду разработки, отличную от Visual Studio, чтобы разработать надстройка, обновите ссылки на CDN для файла Office.js и версию схемы, на которую ссылается манифест приложения для Office.
 
-Чтобы запустить надстройку, разработанную с использованием новых и обновленных компонентов манифеста надстройки и интерфейса API Office.js, ваши клиенты должны использовать локальные продукты Office 2013 с пакетом обновления 1 (SP1) или более поздней версии, а также при необходимости SharePoint Server 2013 с пакетом обновления 1 (SP1) и связанными серверными продуктами, Пакет обновления 1 (SP1) для Exchange Server 2013 или аналогичные размещенные в сети продукты: Office 365, SharePoint Online и Exchange Online.
+Чтобы запустить надстройку, разработанную с использованием новых и обновленных компонентов манифеста надстройки и интерфейса API Office.js, ваши клиенты должны использовать локальные продукты Office 2013 с пакетом обновления 1 (SP1) или более поздней версии, а также при необходимости SharePoint Server 2013 с пакетом обновления 1 (SP1) и связанными серверными продуктами, Пакет обновления 1 (SP1) для Exchange Server 2013 или аналогичные размещенные в сети продукты: Office 365, SharePoint Online и Exchange Online.
 
 Сведения о том, как скачать Office, SharePoint и Exchange с пакетом обновления 1, см. в следующих статьях:
 
@@ -53,10 +58,11 @@ ms.date: 12/04/2017
     <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script>
     ```
 
-    > **ПРИМЕЧАНИЕ.** Цифра `/1/` перед `office.js` в URL-адресе CDN указывает на то, что необходимо использовать последний накопительный выпуск Office.js версии 1.   
+   > [!NOTE] 
+   > `/1/` перед `office.js` в URL-адресе CDN указывает на то, что необходимо использовать последний добавочный выпуск в Office.js версии 1.   
 
 
-### <a name="update-the-manifest-file-in-your-project-to-use-schema-version-11"></a>Обновление схемы манифеста в проекте до версии 1.1
+### <a name="update-the-manifest-file-in-your-project-to-use-schema-version-11"></a>Обновление файла манифеста в вашем проекте для использования схемы версии 1.1
 
 В файле манифеста надстройки обновите атрибут **xmlns** элемента **OfficeApp**, заменив значение версии на `1.1` и оставив все атрибуты, кроме **xmlns**, без изменений:
     
@@ -71,7 +77,8 @@ ms.date: 12/04/2017
 </OfficeApp>
 ```
 
-> **ПРИМЕЧАНИЕ.** После обновления схемы манифеста надстройки до версии 1.1 вам потребуется удалить элементы **Capabilities** и **Capability** и заменить их элементами [Hosts](https://dev.office.com/reference/add-ins/manifest/hosts) и [Host](https://dev.office.com/reference/add-ins/manifest/hosts) либо [элементами Requirements и Requirement](specify-office-hosts-and-api-requirements.md).
+> [!NOTE] 
+> После обновления схемы манифеста надстройки до версии 1.1 вам потребуется удалить элементы **Capabilities** и **Capability** и заменить их элементами [Hosts](https://dev.office.com/reference/add-ins/manifest/hosts) и [Host](https://dev.office.com/reference/add-ins/manifest/hosts), либо [элементами Requirements и Requirement](specify-office-hosts-and-api-requirements.md).
 
 ## <a name="updating-an-office-add-in-project-created-with-a-text-editor-or-other-ide"></a>Обновление проекта надстройки Office, созданного с помощью текстового редактора или другой среды IDE
 
@@ -81,10 +88,11 @@ ms.date: 12/04/2017
 
 Вам не нужны локальные копии файлов API JavaScript для Office (Office.js и JS-файлов для конкретной надстройки), чтобы разрабатывать надстройку Office (ссылки на CDN для Office.js позволяют скачивать необходимые файлы во время выполнения). Если вам нужны файлы библиотеки, то вы можете скачать их с помощью [служебной программы командной строки NuGet](http://docs.nuget.org/consume/installing-nuget) и `Install-Package Microsoft.Office.js`.
 
-> **ПРИМЕЧАНИЕ.** Чтобы получить копию файла XSD для манифеста надстройки версии 1.1, см. запись в [типовых схемах для манифестов надстроек Office (версия 1.1)](../develop/add-in-manifests.md).
+> [!NOTE] 
+> Чтобы получить копию файла XSD (определение схемы XML) для манифеста надстройки версии 1.1, см. запись в статье [Справка по схеме для манифестов надстроек Office (версия 1.1)](../develop/add-in-manifests.md).
 
 
-### <a name="update-the-javascript-api-for-office-library-files-in-your-project-to-use-the-newest-release"></a>Обновление файлов библиотеки API JavaScript для Office в проекте до последней версии
+### <a name="update-the-javascript-api-for-office-library-files-in-your-project-to-use-the-newest-release"></a>Обновление файлов библиотеки API JavaScript для Office в вашем проекте для использования самых новых выпусков
 
 1. Откройте HTML-страницы надстройки в текстовом редакторе или интегрированной среде разработки.
     
@@ -94,9 +102,10 @@ ms.date: 12/04/2017
     <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script>
     ```
 
-    > **ПРИМЕЧАНИЕ.** Цифра `/1/` перед `office.js` в URL-адресе CDN указывает на то, что необходимо использовать последний накопительный выпуск Office.js версии 1.   
+   > [!NOTE] 
+   > `/1/` перед `office.js` в URL-адресе CDN указывает на то, что необходимо использовать последний добавочный выпуск в Office.js версии 1.   
 
-### <a name="update-the-manifest-file-in-your-project-to-use-schema-version-11"></a>Обновление схемы манифеста в проекте до версии 1.1
+### <a name="update-the-manifest-file-in-your-project-to-use-schema-version-11"></a>Обновление файла манифеста в вашем проекте для использования схемы версии 1.1
 
 В файле манифеста надстройки обновите атрибут **xmlns** элемента **OfficeApp**, заменив значение версии на `1.1` и оставив все атрибуты, кроме **xmlns**, без изменений:
     
@@ -111,7 +120,8 @@ ms.date: 12/04/2017
 </OfficeApp>
 ```
 
-> **ПРИМЕЧАНИЕ.** После обновления схемы манифеста надстройки до версии 1.1 вам потребуется удалить элементы **Capabilities** и **Capability** и заменить их элементами [Hosts](https://dev.office.com/reference/add-ins/manifest/hosts) и [Host](https://dev.office.com/reference/add-ins/manifest/hosts) либо [элементами Requirements и Requirement](specify-office-hosts-and-api-requirements.md).
+> [!NOTE] 
+> После обновления схемы манифеста надстройки до версии 1.1 вам потребуется удалить элементы **Capabilities** и **Capability** и заменить их элементами [Hosts](https://dev.office.com/reference/add-ins/manifest/hosts) и [Host](https://dev.office.com/reference/add-ins/manifest/hosts), либо [элементами Requirements и Requirement](specify-office-hosts-and-api-requirements.md).
     
 
 ## <a name="see-also"></a>См. также

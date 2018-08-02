@@ -40,7 +40,7 @@
     - name: Создание надстройки проекта
       href: quickstarts/project-quickstart.md
       displayName: Project
-- name: Учебные пособия
+- name: Руководства
   items:
     - name: Руководство по надстройкам Excel
       href: tutorials/excel-tutorial.yml
@@ -59,7 +59,7 @@
       href: concepts/add-in-development-best-practices.md
     - name: Жизненный цикл разработки надстроек
       href: concepts/add-in-development-lifecycle.md
-    - name: Конфиденциальность и безопасность
+    - name: Жизненный цикл разработки надстроек
       href: concepts/privacy-and-security.md
     - name: Производительность
       href: concepts/resource-limits-and-performance-optimization.md
@@ -68,7 +68,7 @@
     - name: Разработка пользовательского интерфейса
       href: design/add-in-design.md
       items:
-        - name: Рекомендации
+        - name: Инструкции
           items:
             - name: Специальные возможности
               href: design/accessibility-guidelines.md
@@ -76,7 +76,7 @@
               href: design/voice-guidelines.md
             - name: Визуализация данных
               href: design/data-visualization-guidelines.md
-        - name: Язык проектирования
+        - name: Язык дизайна
           href: design/add-in-design-language.md
           items:
             - name: Шрифтовое оформление
@@ -101,16 +101,16 @@
               href: design/dialog-boxes.md
             - name: Надстройки содержимого
               href: design/content-add-ins.md
-        - name: Средство выбора шаблонов оформления
+        - name: Шаблоны оформления UX
           href: design/ux-design-pattern-templates.md
           items:
             - name: Проверка подлинности
               href: design/authentication-patterns.md
-            - name: первый запуск;
+            - name: Первый запуск
               href: design/first-run-experience-patterns.md
             - name: Навигация
               href: design/navigation-patterns.md
-            - name: Брендирование
+            - name: Фирменная символика
               href: design/branding-patterns.md
         - name: Ресурсы
           items:
@@ -129,12 +129,14 @@
         - name: API JavaScript для Office
           href: develop/understanding-the-javascript-api-for-office.md
           items:
-            - name: Поддержка надстроек содержания и области задач
+            - name: Поддержка надстроек содержимого и области задач
               href: develop/support-for-task-pane-and-content-add-ins.md
             - name: Ссылка на файл Office.js
               href: develop/referencing-the-javascript-api-for-office-library-from-its-cdn.md
-            - name: Загрузить Office.js
+            - name: Загрузка Office.js
               href: develop/loading-the-dom-and-runtime-environment.md
+            - name: Объектная модель API JavaScript для Office
+              href: develop/office-javascript-api-object-model.md
             - name: Асинхронное программирование в случае надстроек Office
               href: develop/asynchronous-programming-in-office-add-ins.md
             - name: Сохранение состояния и параметров
@@ -163,7 +165,7 @@
                   href: develop/register-sso-add-in-aad-v2.md
                 - name: Предоставление надстройке согласия администратора
                   href: develop/grant-admin-consent-to-an-add-in.md
-                - name: Устранение сообщений об ошибках единого входа (SSO)
+                - name: Устранение ошибок единого входа (SSO)
                   href: develop/troubleshoot-sso-in-office-add-ins.md
             - name: Авторизация внешних служб
               href: develop/auth-external-add-ins.md
@@ -182,7 +184,7 @@
             - name: Создание и отладка надстроек Office в Visual Studio
               href: develop/create-and-debug-office-add-ins-in-visual-studio.md
               items: null
-            - name: Получение IntelliSense для JavaScript в Visual Studio
+            - name: Создание и отладка надстроек Office в Visual Studio
               href: develop/get-javascript-intellisense-in-visual-studio.md
             - name: Преобразование JavaScript в TypeScript
               href: develop/convert-javascript-to-typescript.md
@@ -236,7 +238,7 @@
             - name: Таблицы
               href: excel/excel-add-ins-tables.md
               displayName: Excel
-            - name: Электронные таблицы
+            - name: Листы
               href: excel/excel-add-ins-worksheets.md
               displayName: Excel
         - name: Расширенные концепции
@@ -258,7 +260,7 @@
             - name: Оптимизация производительности
               href: excel/performance.md
               displayName: Excel
-        - name: Справочник по API JavaScript для Excel
+        - name: Справка по API JavaScript для Excel
           href: 'https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview'
           displayName: Excel
     - name: Надстройки Word
@@ -271,7 +273,7 @@
         - name: Руководство по надстройкам Word
           href: tutorials/word-tutorial.yml
           displayName: Word
-        - name: Создание надстроек Word с помощью Office Open XML
+        - name: Создание улучшенных надстроек Word с помощью Office Open XML
           href: word/create-better-add-ins-for-word-with-office-open-xml.md
           displayName: Word
         - name: Надстройки области задач словаря
@@ -289,7 +291,7 @@
         - name: 'Используйте параметры поиска, чтобы найти текст в надстройке Word'
           href: word/search-option-guidance.md
           displayName: Word
-        - name: Справочник по API JavaScript для Word
+        - name: Справка по API JavaScript для Word
           href: 'https://dev.office.com/reference/add-ins/word/word-add-ins-reference-overview'
           displayName: Word
     - name: Надстройки Outlook
@@ -321,7 +323,7 @@
         - name: Работа с содержимым страницы в OneNote
           href: onenote/onenote-add-ins-page-content.md
           displayName: OneNote
-        - name: Справочник по API JavaScript для OneNote
+        - name: Справка по API JavaScript для OneNote
           href: 'https://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference'
           displayName: OneNote
     - name: Надстройки Project
@@ -362,7 +364,7 @@
               href: testing/sideload-an-office-add-in-on-ipad-and-mac.md
             - name: Отладка на iPad и Mac
               href: testing/debug-office-add-ins-on-ipad-and-mac.md
-        - name: Тестирование на удобство
+        - name: Тестирование на удобство использования
           href: develop/usability-testing.md
         - name: 'Устранение ошибок, с которыми сталкиваются пользователи'
           href: testing/testing-and-troubleshooting.md

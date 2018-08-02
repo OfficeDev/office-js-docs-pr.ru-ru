@@ -48,15 +48,13 @@
 
 |Правильно|Неправильно|
 |:-----|:-----|
-| Используйте [рекомендуемую длительность движения](https://developer.microsoft.com/en-us/fabric#/styles/animations). | Не используйте чрезмерную анимацию. Старайтесь не создавать нефункциональные движения, которые только отвлекают пользователей.
-| Используйте рекомендуемые кривые замедления из руководства [Microsoft Motion Guide](https://microsoft.sharepoint.com/teams/BrandCentral/Pages/The-Microsoft-brand-Core-elements-Motion.aspx#topic_0).  |Не перемещайте элементы рывками или по частям. Избегайте упреждения, возвратов, эффекта "резиновой ленты" или других эффектов, которые имитируют законы физики реального мира.|
+| Используйте [рекомендуемую длительность движения](https://developer.microsoft.com/fabric#/styles/animations). | Не используйте чрезмерную анимацию. Старайтесь не создавать нефункциональные движения, которые только отвлекают пользователей.
+| Отследите [рекомендуемые кривые плавности](https://docs.microsoft.com/windows/uwp/design/motion/timing-and-easing#easing-in-fluent-motion).  |Не перемещайте элементы рывками или по частям. Избегайте упреждения, возвратов, эффекта "резиновой ленты" или других эффектов, которые имитируют законы физики реального мира.|
 
 ![Загрузка плиток с мягким затуханием и загрузка плиток с отскоком](../images/add-in-motion-character.gif)
 
 ## <a name="see-also"></a>См. также
 
-* 
-  [Правила анимации Fabric](https://developer.microsoft.com/en-us/fabric#/styles/animations)
-* 
-  [Движение для приложений универсальной платформы Windows](https://docs.microsoft.com/ru-ru/windows/uwp/design/motion/)
+* [Правила анимации Fabric](https://developer.microsoft.com/fabric#/styles/animations)
+* [Движение для приложений универсальной платформы Windows](https://docs.microsoft.com/windows/uwp/design/motion)
 
