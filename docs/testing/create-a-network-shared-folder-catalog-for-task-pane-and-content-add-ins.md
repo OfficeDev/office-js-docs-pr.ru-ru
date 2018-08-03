@@ -2,29 +2,27 @@
 title: Загрузка неопубликованных надстроек Office для тестирования
 description: ''
 ms.date: 01/25/2018
-ms.openlocfilehash: 42af5d0665fc6cb1135103789adcb4414c4763ff
-ms.sourcegitcommit: bc68b4cf811b45e8b8d1cbd7c8d2867359ab671b
+ms.openlocfilehash: 1bca17808deaa5e7f0c65669a87abe1b38e5393f
+ms.sourcegitcommit: 0d4d78e275249f0d4b6a6cf807b42b79890c3023
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/02/2018
-ms.locfileid: "21703807"
+ms.locfileid: "21773582"
 ---
 # <a name="sideload-office-add-ins-for-testing"></a>Загрузка неопубликованных надстроек Office для тестирования
 
-Вы можете установить надстройку Office для тестирования в клиенте Office, запущенном в Windows одним из следующих способов:
+Вы можете установить надстройку Office для тестирования в клиенте Office, работающем на Windows, опубликовав манифест в сетевом файловом ресурсе (инструкции ниже).
 
-- Использование каталога общих папок для публикации манифеста в общем файловом ресурсе (инструкции ниже)
-- [Запуск команды"**npm run sideload**" из корня папки проекта надстройки.](sideload-office-addin-using-sideload-command.md)
+> [!NOTE]
+> Если ваш проект надстройки был создан с помощью [**инструмента**yo office](https://github.com/OfficeDev/generator-office), есть альтернативный способ его загрузки, который может вам подойти. Подробнее см. в статье [Загрузка неопубликованных надстроек Office с использованием команды sideload](sideload-office-addin-using-sideload-command.md).
 
-    > [!NOTE]
-    > Метод «npm run sideload» работает только для надстроек Excel, Word и PowerPoint.
-
-Если вы не тестируете надстройку Word, Excel или PowerPoint в Windows, см. одну из следующих статей:
+Эта статья применяется только к тестированию надстроек Word, Excel или PowerPoint на Windows. Если вы хотите выполнить тестирование на другой платформе или протестировать надстройку Outlook, см. одну из следующих тем по загрузке надстройки:
 
 - [Загрузка неопубликованных надстроек Office в Office Online для тестирования](sideload-office-add-ins-for-testing.md)
 - [Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования](sideload-an-office-add-in-on-ipad-and-mac.md)
+- [Загрузка неопубликованных надстроек Outlook для тестирования](../../../../outlook/add-insSideload Outlook Add-ins for testing)
 
-В следующем видео вы ознакомитесь с процессом загрузки вашей надстройки на рабочий стол Office или Office Online с помощью каталога общих папок.  
+В следующем видео вы ознакомитесь с процессом загрузки вашей надстройки для настольной системы Office или Office Online с помощью каталога общих папок.  
 
 
 > [!VIDEO https://www.youtube.com/embed/XXsAw2UUiQo]
