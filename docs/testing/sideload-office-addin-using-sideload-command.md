@@ -2,16 +2,22 @@
 title: Загрузка неопубликованных надстроек Office с использованием команды sideload
 description: ''
 ms.date: 07/24/2018
-ms.openlocfilehash: e831a1dfbc31ecf06c8b2d78dc1e9a8a4c9dcf01
-ms.sourcegitcommit: 9e0952b3df852bd2896e9f4a6f59f5b89fc1ae24
+ms.openlocfilehash: c3b53a70b5696e422653350de18d99be16d1d597
+ms.sourcegitcommit: 0d4d78e275249f0d4b6a6cf807b42b79890c3023
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "21279362"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "21773596"
 ---
 # <a name="sideload-office-add-ins-for-testing-using-the-sideload-command"></a>Загрузка неопубликованных надстроек Office для тестирования с использованием **команды sideload**
  >[!NOTE]
->(Метод «npm run sideload» работает только для надстроек Excel, Word и PowerPoint.)
+>Метод "npm run sideload" работает только для надстроек Excel, Word и PowerPoint, которые запускаются в Windows, и только для проектов надстройки, которые были созданы с помощью [**инструмента**yo office](https://github.com/OfficeDev/generator-office) и которые имеют `sideload` сценарий в `scripts` разделе файла package.json. (Проекты, созданные со старыми версиями **yo office**, также не имеют этого сценария.) Если ваш проект был создан с помощью Visual Studio или не имеет сценария загрузки неопубликованных приложений, вы можете загрузить его неопубликованным в Windows с помощью метода, описанного в статье [Загрузка неопубликованной надстройки Office из сетевой папки](create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md).
+>
+> Если вы не тестируете надстройку Word, Excel или PowerPoint в Windows, см. одну из следующих статей, чтобы загрузить ваше неопубликованное приложение:
+> 
+> - [Загрузка неопубликованных надстроек Office в Office Online для тестирования](sideload-office-add-ins-for-testing.md)
+> - [Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования](sideload-an-office-add-in-on-ipad-and-mac.md)
+> - [Загрузка неопубликованных надстроек Outlook для тестирования](../../../../outlook/add-insSideload Outlook Add-ins for testing)
 
 1. Откройте командную строку от имени администратора.
 
