@@ -5,7 +5,7 @@
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
-[!include[Quickstart prerequisites](../includes/quickstart-vs-prerequisites.md)]
+[!include[Quick Start prerequisites](../includes/quickstart-vs-prerequisites.md)]
 
 ## <a name="setup"></a>Установка
 
