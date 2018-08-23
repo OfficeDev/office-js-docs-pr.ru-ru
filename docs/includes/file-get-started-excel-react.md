@@ -10,150 +10,59 @@
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
-- Глобально установите [Create React App](https://github.com/facebookincubator/create-react-app).
-
-    ```bash
-    npm install -g create-react-app
-    ```
+- [Node.js](https://nodejs.org)
 
 - Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
-
     ```bash
     npm install -g yo generator-office
     ```
 
-## <a name="generate-a-new-react-app"></a>Создание приложения React
+### <a name="create-the-web-app"></a>Создание веб-приложения
 
-Создайте приложение React с помощью Create React App. В терминале выполните следующую команду:
+1. Создайте на локальном диске папку и назовите ее **my-addin**. В ней вы будете создавать файлы для приложения.
 
-```bash
-create-react-app my-addin
-```
-
-## <a name="generate-the-manifest-file-and-sideload-the-add-in"></a>Создание файла манифеста и загрузка неопубликованной надстройки
-
-Каждой надстройке необходим файл манифеста, чтобы определить ее параметры и возможности.
-
-1. Перейдите к папке приложения.
+2. Перейдите к папке приложения.
 
     ```bash
     cd my-addin
     ```
 
-2. С помощью генератора Yeoman создайте файл манифеста для надстройки. Выполните приведенную ниже команду и ответьте на вопросы, как показано на следующем снимке экрана:
+3. Используя генератор Yeoman, создайте файл манифеста для надстройки. Выполните приведенную ниже команду и ответьте на вопросы, как показано на следующем снимке экрана.
 
     ```bash
-    yo office 
+    yo office
     ```
 
-    - **Выберите тип проекта:** `Office Add-in containing the manifest only`
+    - **Выберите тип проекта:** `Office Add-in project using React framework`
     - **Как вы хотите назвать надстройку?:** `My Office Add-in`
     - **Какое клиентское приложение Office должно поддерживаться?:** `Excel`
 
-
-    После завершения работы мастера вы сможете создать файл манифеста и файл ресурсов для создания вашего проекта.
+    ![Генератор Yeoman](../images/yo-office-excel-react.png)
     
-    ![Генератор Yeoman](../images/yo-office.png)
-    
-    > [!NOTE]
-    > Если вам будет предложено переписать файл **package.json**, выберите **No** (не переписывать).
+    После завершения работы мастера генератор создаст проект и установит поддерживающие компоненты узла.
 
-3. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.
-
-    - Windows[](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-    - Office Online[](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
-    - iPad и Mac[](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
-
-## <a name="update-the-app"></a>Обновление приложения
-
-1. Откройте **public/index.html**, добавьте тег `<script>` сразу перед тегом `</head>` и сохраните файл.
-
-    ```html
-    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
-    ```
-
-2. Откройте **src/index.js**, замените `ReactDOM.render(<App />, document.getElementById('root'));` приведенным ниже кодом и сохраните файл. 
-
-    ```typescript
-    const Office = window.Office;
-    
-    Office.initialize = () => {
-      ReactDOM.render(<App />, document.getElementById('root'));
-    };
-    ```
-
-3. Откройте **src/App.js**, замените его содержимое приведенным ниже кодом и сохраните файл. 
+4.  Откройте **src/components/App.tsx**, найдите комментарий "Обновить цвет заливки", а затем измените цвет заливки с 'желтого' на 'синий' и сохраните файл. 
 
     ```js
-    import React, { Component } from 'react';
-    import './App.css';
+    range.format.fill.color = 'blue'
 
-    class App extends Component {
-      constructor(props) {
-        super(props);
-
-        this.onSetColor = this.onSetColor.bind(this);
-      }
-
-      onSetColor() {
-        window.Excel.run(async (context) => {
-          const range = context.workbook.getSelectedRange();
-          range.format.fill.color = 'green';
-          await context.sync();
-        });
-      }
-
-      render() {
-        return (
-          <div id="content">
-            <div id="content-header">
-              <div className="padding">
-                  <h1>Welcome</h1>
-              </div>
-            </div>
-            <div id="content-main">
-              <div className="padding">
-                  <p>Choose the button below to set the color of the selected range to green.</p>
-                  <br />
-                  <h3>Try it out</h3>
-                  <button onClick={this.onSetColor}>Set color</button>
-              </div>
-            </div>
-          </div>
-        );
-      }
-    }
-
-    export default App;
     ```
 
-4. Откройте **src/App.css**, замените его содержимое приведенным ниже кодом и сохраните файл. 
+5. В блоке `return` функции `render` внутри **src/components/App.tsx** обновите `<Herolist>` в соответствии с приведенным ниже кодом и сохраните файл. 
 
-    ```css
-    #content-header {
-        background: #2a8dd4;
-        color: #fff;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 80px; 
-        overflow: hidden;
-    }
+    ```js
+      <HeroList message='Discover what My Office Add-in can do for you today!' items={this.state.listItems}>
+        <p className='ms-font-l'>Choose the button below to set the color of the selected range to blue. <b>Set color</b>.</p>
+        <Button className='ms-welcome__action' buttonType={ButtonType.hero} iconProps={{ iconName: 'ChevronRight' }} onClick={this.click}>Run</Button>
+    </HeroList>
+    ```
 
-    #content-main {
-        background: #fff;
-        position: fixed;
-        top: 80px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        overflow: auto; 
-    }
+6. Сделайте так, чтобы операционная система компьютера разработки доверяла сертификату. Для этого выполните действия, описанные в статье [Добавление самозаверяющих сертификатов в качестве доверенного корневого сертифтката](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md).
 
-    .padding {
-        padding: 15px;
-    }
+7. Загрузите неопубликованную надстройку, чтобы она отобразилась в Excel. В терминале выполните следующую команду: 
+    
+    ```bash
+    npm run sideload
     ```
 
 ## <a name="try-it-out"></a>Проверка
@@ -162,16 +71,8 @@ create-react-app my-addin
 
     Windows:
     ```bash
-    set HTTPS=true&&npm start
+    npm start
     ```
-
-    macOS:
-    ```bash
-    HTTPS=true npm start
-    ```
-
-   > [!NOTE]
-   > Откроется окно браузера с надстройкой. Закройте это окно.
 
 2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
@@ -179,7 +80,7 @@ create-react-app my-addin
 
 3. Выберите любой диапазон ячеек на листе.
 
-4. В области задач нажмите кнопку **Set color** (Задать цвет), чтобы сделать выбранный диапазон зеленым.
+4. В области задач нажмите кнопку **Выбрать цвет**, чтобы сделать выбранный диапазон синим.
 
     ![Надстройка Excel](../images/excel-quickstart-addin-2c.png)
 
