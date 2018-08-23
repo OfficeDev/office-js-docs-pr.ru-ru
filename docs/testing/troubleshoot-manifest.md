@@ -2,8 +2,13 @@
 title: Проверка манифеста и устранение связанных с ним неполадок
 description: Используйте эти методы для проверки манифеста надстройки Office.
 ms.date: 12/04/2017
+ms.openlocfilehash: 19f7caaf1d5482972432aad3d2774d69c75cde76
+ms.sourcegitcommit: 7ecc1dc24bf7488b53117d7a83ad60e952a6f7aa
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "19438762"
 ---
-
 # <a name="validate-and-troubleshoot-issues-with-your-manifest"></a>Проверка манифеста и устранение связанных с ним неполадок
 
 Проверить манифест надстройки Office и устранить связанные с ним неполадки можно с помощью указанных ниже методов. 

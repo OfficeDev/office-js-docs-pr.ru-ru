@@ -3,10 +3,10 @@ title: Оформление надстроек Office
 description: ''
 ms.date: 12/04/2017
 ms.openlocfilehash: 80e349c677a3727f2867a0780a202277f3a6a0d9
-ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
+ms.sourcegitcommit: 7ecc1dc24bf7488b53117d7a83ad60e952a6f7aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/23/2018
 ms.locfileid: "19437404"
 ---
 # <a name="design-your-office-add-ins"></a>Оформление надстроек Office

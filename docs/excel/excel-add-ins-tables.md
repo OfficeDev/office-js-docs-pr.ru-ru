@@ -2,9 +2,13 @@
 title: Работа с таблицами с использованием API JavaScript для Excel
 description: ''
 ms.date: 12/04/2017
+ms.openlocfilehash: c7d5f3f975092250747350501bbe011a17db9852
+ms.sourcegitcommit: 7ecc1dc24bf7488b53117d7a83ad60e952a6f7aa
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "19437502"
 ---
-
-
 # <a name="work-with-tables-using-the-excel-javascript-api"></a>Работа с таблицами с использованием API JavaScript для Excel
 
 В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для таблиц с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Table** и **TableCollection**, см. в статьях [Объект Table (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/table) и [Объект TableCollection (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/tablecollection).

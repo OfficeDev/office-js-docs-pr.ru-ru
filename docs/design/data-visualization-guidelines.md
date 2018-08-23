@@ -2,10 +2,13 @@
 title: Рекомендации по выбору стиля визуализации данных для надстроек Office
 description: ''
 ms.date: 12/04/2017
+ms.openlocfilehash: 3255c1aeff6cba4b9f13aa2555b8c84ac773fb75
+ms.sourcegitcommit: 7ecc1dc24bf7488b53117d7a83ad60e952a6f7aa
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "19437355"
 ---
-
-
-
 # <a name="data-visualization-style-guidelines-for-office-add-ins"></a>Рекомендации по выбору стиля визуализации данных для надстроек Office
 
 Качественная визуализация помогает пользователям анализировать данные. Благодаря этому они смогут рассказывать содержательные и убедительные истории. В этой статье представлены рекомендации по эффективной визуализации данных в надстройках для Excel и других приложений Office.

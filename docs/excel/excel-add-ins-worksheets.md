@@ -2,9 +2,13 @@
 title: Работа с листами с использованием API JavaScript для Excel
 description: ''
 ms.date: 12/04/2017
+ms.openlocfilehash: f4c129f34460340a9abed3eda4a47e3bb6dd5978
+ms.sourcegitcommit: 7ecc1dc24bf7488b53117d7a83ad60e952a6f7aa
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "19437439"
 ---
-
-
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
 В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для листов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Worksheet** и **WorksheetCollection**, см. в статьях [Объект Worksheet (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/worksheet) и [Объект WorksheetCollection (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/worksheetcollection).

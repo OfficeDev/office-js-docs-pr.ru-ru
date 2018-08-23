@@ -2,9 +2,13 @@
 title: Загрузка модели DOM и среды выполнения
 description: ''
 ms.date: 01/23/2018
+ms.openlocfilehash: a5458df9ef266f6ec2811e0f7004125d50d18c22
+ms.sourcegitcommit: 7ecc1dc24bf7488b53117d7a83ad60e952a6f7aa
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "19437334"
 ---
-
-
 # <a name="loading-the-dom-and-runtime-environment"></a>Загрузка модели DOM и среды выполнения
 
 

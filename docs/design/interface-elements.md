@@ -2,9 +2,13 @@
 title: Элементы пользовательского интерфейса Office для надстроек Office
 description: ''
 ms.date: 12/04/2017
+ms.openlocfilehash: 8282caff412a9a258e54092bc77e07571f0d8ac1
+ms.sourcegitcommit: 7ecc1dc24bf7488b53117d7a83ad60e952a6f7aa
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "19437306"
 ---
-
-
 # <a name="office-ui-elements-for-office-add-ins"></a>Элементы пользовательского интерфейса Office для надстроек Office
 
 Для расширения пользовательского интерфейса Office, в том числе команд надстроек и контейнеров HTML, можно использовать несколько типов элементов пользовательского интерфейса, которые полностью совместимы с Office и рядом платформ. Вы можете вставить пользовательский веб-код в любой из этих элементов.

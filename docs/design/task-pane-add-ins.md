@@ -2,9 +2,13 @@
 title: Области задач в надстройках Office
 description: ''
 ms.date: 12/04/2017
+ms.openlocfilehash: d60af0a31b9f96be17aa55bda789d13c386d0a5b
+ms.sourcegitcommit: 7ecc1dc24bf7488b53117d7a83ad60e952a6f7aa
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "19437201"
 ---
-
-
 # <a name="task-panes-in-office-add-ins"></a>Области задач в надстройках Office
  
 Области задач — это области интерфейса, которые обычно отображаются в правой части окна Word, PowerPoint, Excel и Outlook. Элементы области задач выполняют код для изменения документов или писем, а также для отображения данных. Используйте области задач, когда вам не нужно внедрять функции прямо в документ.

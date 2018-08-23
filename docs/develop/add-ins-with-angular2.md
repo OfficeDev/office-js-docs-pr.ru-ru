@@ -2,8 +2,13 @@
 title: Разработка надстроек Office с помощью Angular
 description: ''
 ms.date: 12/04/2017
+ms.openlocfilehash: c3aa67d7427249fb04d9777dc0d76098ea607582
+ms.sourcegitcommit: 7ecc1dc24bf7488b53117d7a83ad60e952a6f7aa
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "19437509"
 ---
-
 # <a name="develop-office-add-ins-with-angular"></a>Разработка надстроек Office с помощью Angular
 
 В этой статье приведены рекомендации по использованию Angular 2 и более поздних версий для создания надстройки Office в виде одностраничного приложения.
@@ -17,7 +22,7 @@ ms.date: 12/04/2017
 Откройте окно nodejs и введите в командной строке следующую команду: 
 
 ```bash
-npm install --save-dev @types/office-js`
+npm install --save-dev @types/office-js
 ```
 
 ## <a name="bootstrapping-must-be-inside-officeinitialize"></a>Начальная загрузка должна определяться в методе Office.initialize

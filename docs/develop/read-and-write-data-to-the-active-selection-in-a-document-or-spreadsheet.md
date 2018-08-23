@@ -2,9 +2,13 @@
 title: Чтение и запись данных в текущую выделенную область документа или электронной таблицы
 description: ''
 ms.date: 12/04/2017
+ms.openlocfilehash: 6d0aa8a27223a436b7f8e99cbbab0c21dd93f2b5
+ms.sourcegitcommit: 7ecc1dc24bf7488b53117d7a83ad60e952a6f7aa
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "19437537"
 ---
-
-
 # <a name="read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet"></a>Чтение и запись данных в текущую выделенную область документа или электронной таблицы
 
 Объект [Document](https://dev.office.com/reference/add-ins/shared/document) предоставляет методы, с помощью которых можно выполнять операции чтения и записи данных над текущим фрагментом, выделенным пользователем, в документе или электронной таблице. Для этого в объекте **Document** имеются методы **getSelectedDataAsync** и **setSelectedDataAsync**. Кроме того, в данной статье рассказывается, как считывать и записывать данные, а также создавать обработчики событий для обнаружения изменений в выделенном пользователем фрагменте.

@@ -2,9 +2,13 @@
 title: Обработка ошибок
 description: ''
 ms.date: 12/04/2017
+ms.openlocfilehash: 59619ff4ccba1985f875d13a29ab691c1617d21b
+ms.sourcegitcommit: 7ecc1dc24bf7488b53117d7a83ad60e952a6f7aa
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "19437208"
 ---
-
-
 # <a name="error-handling"></a>Обработка ошибок
 
 При создании надстройки с использованием API JavaScript для Excel не забудьте включить логику для обработки ошибок, возникающих в среде выполнения. Это очень важно из-за асинхронного характера API.

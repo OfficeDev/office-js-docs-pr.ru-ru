@@ -2,9 +2,13 @@
 title: Использование платформы авторизации OAuth в надстройке Office
 description: ''
 ms.date: 12/04/2017
+ms.openlocfilehash: 36eb0e34ed96bb9289926170bea1b82546695fa8
+ms.sourcegitcommit: 7ecc1dc24bf7488b53117d7a83ad60e952a6f7aa
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "19437376"
 ---
-
-
 # <a name="use-the-oauth-authorization-framework-in-an-office-add-in"></a>Использование платформы авторизации OAuth в надстройке Office
 
 OAuth — это открытый стандарт авторизации, который используется в Office 365, Facebook, Google, SalesForce, LinkedIn и других интернет-службах для проверки подлинности пользователей. Протокол авторизации OAuth используется по умолчанию в Azure и Office 365. Платформа авторизации OAuth используется как в корпоративных, так и частных решениях.
