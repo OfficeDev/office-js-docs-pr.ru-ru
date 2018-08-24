@@ -2,19 +2,19 @@
 title: Требования для запуска надстроек Office
 description: ''
 ms.date: 02/09/2018
-ms.openlocfilehash: 944ac0c26b864124a8c86b46e023609120d8ea75
-ms.sourcegitcommit: 3e4e3a45a07ed91176cab182c44184c196c23d35
+ms.openlocfilehash: 0602bd05927eebabec64f771025be5e064a2a355
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "20159679"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925425"
 ---
 # <a name="requirements-for-running-office-add-ins"></a>Требования для запуска надстроек Office
 
 В этой статье описаны требования к программному обеспечению и устройствам для запуска надстроек Office.
 
 > [!NOTE]
-> Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в Office, убедитесь, что она соответствует [политикам проверки AppSource](https://docs.microsoft.com/en-us/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка должна работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://docs.microsoft.com/en-us/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и [статье о доступности надстроек Office в ведущих приложениях](../overview/office-add-in-availability.md). 
+> Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в Office, убедитесь, что она соответствует [политикам проверки AppSource](https://docs.microsoft.com/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка должна работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://docs.microsoft.com/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и [статье о доступности надстроек Office в ведущих приложениях](../overview/office-add-in-availability.md). 
 
 Общие сведения о том, на каких платформах поддерживаются надстройки Office, см. в [этой статье](../overview/office-add-in-availability.md).
 

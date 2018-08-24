@@ -2,9 +2,13 @@
 title: Начало работы с надстройками Excel
 description: ''
 ms.date: 01/23/2018
+ms.openlocfilehash: d7f44429fd51a274c5c970523ed3e80851855ff6
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925215"
 ---
-
-
 # <a name="get-started-with-excel-add-ins"></a>Начало работы с надстройками Excel
 
 Вы можете создавать надстройки Excel, используя привычные веб-технологии, например HTML, CSS и JavaScript. 
@@ -15,6 +19,6 @@ ms.date: 01/23/2018
 
 ## <a name="explore-snippets-with-script-lab"></a>Изучение фрагментов кода с помощью Script Lab
 
-Script Lab — это средство, с помощью которого можно создавать и запускать код надстройки Office (а также делиться им) непосредственно в приложении Office, например в Excel, Word или PowerPoint. Вы можете [бесплатно установить Script Lab, скачав его из AppSource](https://appsource.microsoft.com/en-us/product/office/WA104380862?src=office&corrid=ed93ce54-3f2c-48ab-9df7-d9913f7b190b&omexanonuid=4a0102fb-b31a-4b9f-9bb0-39d4cc6b789d), а затем запустить в Excel, чтобы изучить коллекцию встроенных примеров, в которых показано взаимодействие с данными в книге. Затем вы можете с помощью этого средства написать и выполнить собственный код API JavaScript для Excel, взаимодействующий с электронной таблицей. Дополнительные сведения см. в статье [Script Lab, проект Microsoft Garage](https://github.com/OfficeDev/script-lab/blob/master/README.md).
+Script Lab — это средство, с помощью которого можно создавать и запускать код надстройки Office (а также делиться им) непосредственно в приложении Office, например в Excel, Word или PowerPoint. Вы можете [бесплатно установить Script Lab, скачав его из AppSource](https://appsource.microsoft.com/product/office/WA104380862?src=office&corrid=ed93ce54-3f2c-48ab-9df7-d9913f7b190b&omexanonuid=4a0102fb-b31a-4b9f-9bb0-39d4cc6b789d), а затем запустить в Excel, чтобы изучить коллекцию встроенных примеров, в которых показано взаимодействие с данными в книге. Затем вы можете с помощью этого средства написать и выполнить собственный код API JavaScript для Excel, взаимодействующий с электронной таблицей. Дополнительные сведения см. в статье [Script Lab, проект Microsoft Garage](https://github.com/OfficeDev/script-lab/blob/master/README.md).
 
 [!include[Script Lab support](../includes/alert-script-lab-support.md)]

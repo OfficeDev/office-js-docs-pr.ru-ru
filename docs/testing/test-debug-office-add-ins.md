@@ -1,9 +1,14 @@
 ---
 title: Тестирование и отладка надстроек Office
-description: null
+description: ''
 ms.date: 11/24/2017
+ms.openlocfilehash: f645482fa92faad2e28484fa4b878bd35c0a27b6
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925264"
 ---
-
 # <a name="test-and-debug-office-add-ins"></a>Тестирование и отладка надстроек Office
 
 Этот раздел содержит рекомендации по тестированию, отладке и диагностике надстроек Office.
@@ -19,7 +24,7 @@ ms.date: 11/24/2017
 - [Загрузка неопубликованных надстроек Office на iPad и Mac](sideload-an-office-add-in-on-ipad-and-mac.md)
 
 - 
-  [Загрузка неопубликованных надстроек Outlook для тестирования](https://docs.microsoft.com/ru-ru/outlook/add-ins/sideload-outlook-add-ins-for-testing)
+  [Загрузка неопубликованных надстроек Outlook для тестирования](https://docs.microsoft.com/outlook/add-ins/sideload-outlook-add-ins-for-testing)
 
 ## <a name="debug-an-office-add-in"></a>Отладка надстройки Office
 

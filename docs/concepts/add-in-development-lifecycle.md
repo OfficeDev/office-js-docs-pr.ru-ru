@@ -2,12 +2,17 @@
 title: Жизненный цикл разработки надстроек Office
 description: ''
 ms.date: 01/23/2018
+ms.openlocfilehash: 8da351a87fdf455d3ae8f8583f2db3226a3cb340
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925439"
 ---
-
 # <a name="office-add-ins-development-lifecycle"></a>Жизненный цикл разработки надстроек Office
 
 > [!NOTE]
-> Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в интерфейсе Office, убедитесь, что она соответствует [политикам проверки AppSource](https://docs.microsoft.com/ru-ru/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка должна работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://docs.microsoft.com/ru-ru/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице со сведениями о доступности и ведущих приложениях для надстроек Office](../overview/office-add-in-availability.md). 
+> Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в интерфейсе Office, убедитесь, что она соответствует [политикам проверки AppSource](https://docs.microsoft.com/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка должна работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://docs.microsoft.com/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице со сведениями о доступности и ведущих приложениях для надстроек Office](../overview/office-add-in-availability.md). 
 
 Типичный жизненный цикл разработки надстройки Office состоит из перечисленных ниже этапов.
 
@@ -44,7 +49,7 @@ ms.date: 01/23/2018
     
     Если вы ответили "да" на какой-либо из этих вопросов, рекомендуем создать **надстройку Outlook**. Определите, в каком контексте будет активироваться надстройка (например, в форме создания, для определенных типов сообщений, при наличии вложения, адреса, предложения задачи, приглашения на собрание или определенных строковых шаблонов в тексте сообщения или сведениях о встрече). 
         
-    Сведения о том, как активировать надстройку Outlook в соответствии с контекстом, см. в статье [Правила активации контекстных надстроек Outlook](https://docs.microsoft.com/ru-ru/outlook/add-ins/activation-rules). 
+    Сведения о том, как активировать надстройку Outlook в соответствии с контекстом, см. в статье [Правила активации контекстных надстроек Outlook](https://docs.microsoft.com/outlook/add-ins/activation-rules). 
     
 - Будут ли клиенты использовать надстройку для расширения возможностей при просмотре или создании документа? Если это так, рекомендуем создать **надстройку области задач**. 
 
@@ -69,7 +74,7 @@ ms.date: 01/23/2018
     
 Поместите HTML-файлы и файлы JavaScript и CSS (если они есть) на веб-серверы, указанные в файле манифеста надстройки. Процесс установки надстройки зависит от ее типа. Дополнительные сведения см. в статье [Загрузка неопубликованных надстроек Office для тестирования](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md).
     
-Если это надстройка Outlook, установите ее в почтовый ящик Exchange и укажите расположение манифеста надстройки в Центре администрирования Exchange (EAC). Дополнительные сведения см. в статье [Развертывание и установка надстроек Outlook для тестирования](https://docs.microsoft.com/ru-ru/outlook/add-ins/testing-and-tips).
+Если это надстройка Outlook, установите ее в почтовый ящик Exchange и укажите расположение манифеста надстройки в Центре администрирования Exchange (EAC). Дополнительные сведения см. в статье [Развертывание и установка надстроек Outlook для тестирования](https://docs.microsoft.com/outlook/add-ins/testing-and-tips).
 
     
 ## <a name="7-publish-the-add-in"></a>7. Публикация надстройки

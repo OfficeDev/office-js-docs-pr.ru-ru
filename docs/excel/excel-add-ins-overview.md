@@ -2,9 +2,13 @@
 title: Общие сведения о надстройках Excel
 description: ''
 ms.date: 01/23/2018
+ms.openlocfilehash: fedeb65e32e96431b56e7b1c029fa4ef4e137b61
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925159"
 ---
-
-
 # <a name="excel-add-ins-overview"></a>Общие сведения о надстройках Excel
 
 С помощью надстройки Excel можно расширить возможности приложения Excel на различных платформах, в том числе Office для Windows, Office Online, Office для Mac и Office для iPad. Используйте надстройки в книге Excel, чтобы:
@@ -20,7 +24,7 @@ ms.date: 01/23/2018
 * **Централизованное развертывание**. Администраторы могут легко и быстро развертывать надстройки Excel для пользователей в организации.
 * **Единый вход**. Надстройка Excel легко интегрируется с Microsoft Graph.
 * **Использование стандартных веб-технологий**. Создавайте надстройки Excel, используя знакомые веб-технологии — HTML, CSS и JavaScript.
-* **Распространение через AppSource**. Представьте свою надстройку Excel широкой аудитории, опубликовав ее в [AppSource](https://appsource.microsoft.com/en-us/marketplace/apps?product=office&page=1&src=office&corrid=53245fad-fcbe-41f8-9f97-b0840264f97c&omexanonuid=4a0102fb-b31a-4b9f-9bb0-39d4cc6b789d).
+* **Распространение через AppSource**. Представьте свою надстройку Excel широкой аудитории, опубликовав ее в [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office&page=1&src=office&corrid=53245fad-fcbe-41f8-9f97-b0840264f97c&omexanonuid=4a0102fb-b31a-4b9f-9bb0-39d4cc6b789d).
 
 > [!NOTE]
 > Надстройки Excel отличаются от надстроек COM и VSTO — устаревших решений для интеграции с Office, работающих только в Office для Windows. В отличие от надстроек COM, надстройки Excel не требуют установки какого-либо кода на устройстве пользователя или в Excel. 

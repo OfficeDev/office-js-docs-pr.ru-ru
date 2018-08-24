@@ -2,9 +2,13 @@
 title: Обход правила ограничения домена в надстройках Office
 description: ''
 ms.date: 12/04/2017
+ms.openlocfilehash: 536e02d2367bef81d4a6e49098d66833c99f5e50
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925110"
 ---
-
-
 # <a name="addressing-same-origin-policy-limitations-in-office-add-ins"></a>Обход правила ограничения домена в надстройках Office
 
 
@@ -51,9 +55,7 @@ function loadVideoDetails(videoIndex) {
 
 Другой способ устранения ограничений, связанных с правилом ограничения домена, состоит в реализации веб-страницы надстройки как страницы ASP, использующей OAuth или выполняющей кэширование учетных данных в файлах cookie.
 
-Пример использования OAuth для проверки подлинности см. в статье [Веб-часть Twitter SharePoint с использованием OAuth](http://aidangarnish.net/post/Twitter-SharePoint-Web-Part-With-OAuth).
-
-Пример кода на стороне сервера, демонстрирующего использование объекта `Cookie` в `System.Net` для получения и задания значений файлов cookie, см. в свойстве [Value](https://msdn.microsoft.com/ru-ru/library/4f772twc).
+Пример кода на стороне сервера, демонстрирующего использование объекта `Cookie` в `System.Net` для получения и задания значений файлов cookie, см. в свойстве [Value](https://msdn.microsoft.com/library/4f772twc).
 
 
 ## <a name="using-cross-origin-resource-sharing-cors"></a>Использование CORS

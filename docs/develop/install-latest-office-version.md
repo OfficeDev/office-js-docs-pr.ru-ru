@@ -1,9 +1,14 @@
 ---
-title: "Установка последней версии Office\_2016"
+title: Установка последней версии Office 2016
 description: ''
 ms.date: 12/04/2017
+ms.openlocfilehash: 98dc69a7971a94b96bc3f7304fc7905f31013a87
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925236"
 ---
-
 # <a name="install-the-latest-version-of-office-2016"></a>Установка последней версии Office 2016
 
 Первыми новые функции для разработчиков, в том числе предварительные версии, получают подписчики, которые получают последние сборки Office раньше других. 
@@ -12,8 +17,8 @@ ms.date: 12/04/2017
 
 Чтобы получать последние сборки Office 2016 раньше других: 
 
-- Если вы подписаны на Office 365 для дома, Office 365 персональный или Office 365 для студентов, [примите участие в программе предварительной оценки Office](https://products.office.com/ru-ru/office-insider).
-- Если вы пользуетесь Office 365 для бизнеса, прочитайте статью [Установка сборки раннего выпуска для клиентов Office 365 для бизнеса](https://support.office.com/ru-ru/article/Install-the-First-Release-build-for-Office-365-for-business-customers-4dd8ba40-73c0-4468-b778-c7b744d03ead?ui=en-US&rs=en-US&ad=US).
+- Если вы подписаны на Office 365 для дома, Office 365 персональный или Office 365 для студентов, [примите участие в программе предварительной оценки Office](https://products.office.com/office-insider).
+- Если вы пользуетесь Office 365 для бизнеса, прочитайте статью [Установка сборки раннего выпуска для клиентов Office 365 для бизнеса](https://support.office.com/article/Install-the-First-Release-build-for-Office-365-for-business-customers-4dd8ba40-73c0-4468-b778-c7b744d03ead).
 - Если вы используете Office 2016 для Mac:
     - Запустите программу Office 2016 для Mac.
     - Выберите пункт **Проверить наличие обновлений** в меню "Справка".
@@ -23,7 +28,7 @@ ms.date: 12/04/2017
 
 Чтобы получить последнюю сборку Office 2016: 
 
-1. Скачайте [средство развертывания Office 2016](https://www.microsoft.com/en-us/download/details.aspx?id=49117). 
+1. Скачайте [средство развертывания Office 2016](https://www.microsoft.com/download/details.aspx?id=49117). 
 2. Запустите это средство. Будут извлечены два файла: Setup.exe и configuration.xml.
 3. Замените файл configuration.xml [файлом конфигурации первого выпуска](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-Commands-Samples/master/Tools/FirstReleaseConfig/configuration.xml).
 4. Выполните следующую команду от имени администратора: `setup.exe /configure configuration.xml` 

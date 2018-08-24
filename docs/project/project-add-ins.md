@@ -2,14 +2,19 @@
 title: Надстройки области задач для Project
 description: ''
 ms.date: 01/23/2018
+ms.openlocfilehash: aa7117ebc1c5bf0038346881b2c6e6f7a80e1bac
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925488"
 ---
-
 # <a name="task-pane-add-ins-for-project"></a>Надстройки области задач для Project
 
 Project стандартный 2013 и Project профессиональный 2013 поддерживают надстройки области задач. Вы можете запускать стандартные надстройки области задач, разработанные для Word 2013 и Excel 2013. Вы также можете разрабатывать собственные надстройки, которые обрабатывают события выбора в Project и интегрируют данные на уровне задачи, ресурса, представления и другие данные уровня ячейки в проект со списками SharePoint, надстройками SharePoint, веб-частями, веб-службами и корпоративными приложениями.
 
 > [!NOTE]
-> [Загружаемый пакет SDK Project 2013](https://www.microsoft.com/en-us/download/details.aspx?id=30435%20) включает в себя примеры надстроек, показывающие, как использовать объектную модель надстроек для Project и как использовать службу OData для отчетности в Project Server 2013. При извлечении и установке пакета SDK см. подкаталог `\Samples\Apps\`.
+> [Загружаемый пакет SDK Project 2013](https://www.microsoft.com/download/details.aspx?id=30435%20) включает в себя примеры надстроек, показывающие, как использовать объектную модель надстроек для Project и как использовать службу OData для отчетности в Project Server 2013. При извлечении и установке пакета SDK см. подкаталог `\Samples\Apps\`.
 
 Общие сведения о надстройках Office см. в статье [Обзор платформы надстроек Office](../overview/office-add-ins.md).
 
@@ -203,5 +208,5 @@ Project стандартный 2013 и Project профессиональный 
 - [Создание первой надстройки области задач для Project 2013 с помощью текстового редактора](create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md)
 - [Создание надстройки Project, использующей REST с локальной службой OData Project Server](create-a-project-add-in-that-uses-rest-with-an-on-premises-odata-service.md)
 - [Подключение надстройки области задач Project к PWA](http://blogs.msdn.com/b/project_programmability/archive/2012/11/02/connecting-a-project-task-pane-app-to-pwa.aspx)
-- [Загрузка пакета SDK для Project 2013](https://www.microsoft.com/en-us/download/details.aspx?id=30435%20)
+- [Загрузка пакета SDK для Project 2013](https://www.microsoft.com/download/details.aspx?id=30435%20)
     

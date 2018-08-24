@@ -2,8 +2,13 @@
 title: Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 description: ''
 ms.date: 12/04/2017
+ms.openlocfilehash: 9b4bcb92e1123c627a8b1a6df4785ff357453189
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925271"
 ---
-
 # <a name="sideload-office-add-ins-on-ipad-and-mac-for-testing"></a>Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 
 Чтобы проверить работу надстройки в Office для iOS, вы можете загрузить манифест неопубликованной надстройки на iPad с помощью iTunes или непосредственно в Office для Mac. Вы не сможете устанавливать точки останова и отлаживать код надстройки во время выполнения, но сможете проверить ее работу и убедиться, что интерфейс отображается правильно и его можно использовать. 
@@ -19,7 +24,7 @@ ms.date: 12/04/2017
 
 ## <a name="prerequisites-for-office-for-mac"></a>Предварительные требования (Office для Mac)
 
-- Компьютер Mac под управлением OS X 10.10 Yosemite или более поздней версии с установленным набором [Office для Mac](https://products.office.com/en-us/buy/compare-microsoft-office-products?tab=omac).
+- Компьютер Mac под управлением OS X 10.10 Yosemite или более поздней версии с установленным набором [Office для Mac](https://products.office.com/buy/compare-microsoft-office-products?tab=omac).
     
 - Word для Mac версии 15.18 (160109).
    
@@ -60,7 +65,7 @@ ms.date: 12/04/2017
 ## <a name="sideload-an-add-in-on-office-for-mac"></a>Загрузка неопубликованной надстройки в Office для Mac
 
 > [!NOTE]
-> Инструкции для надстройки Outlook 2016 для Mac см. в статье [Загрузка неопубликованных надстроек Outlook для тестирования](https://docs.microsoft.com/ru-ru/outlook/add-ins/sideload-outlook-add-ins-for-testing).
+> Инструкции для надстройки Outlook 2016 для Mac см. в статье [Загрузка неопубликованных надстроек Outlook для тестирования](https://docs.microsoft.com/outlook/add-ins/sideload-outlook-add-ins-for-testing).
 
 1. Откройте **Терминал** и перейдите в одну из указанных ниже папок, чтобы сохранить в нее файл манифеста надстройки. Если папки `wef` нет на компьютере, создайте ее.
     

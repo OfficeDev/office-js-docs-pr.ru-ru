@@ -2,16 +2,16 @@
 title: Совместное редактирование в надстройках Excel
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: d0ef481f9efd6b977963091d5d0a123c30a5a789
-ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
+ms.openlocfilehash: 1919f66a3c93c42ec24520f971eda33dac491355
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "19437572"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925243"
 ---
 # <a name="coauthoring-in-excel-add-ins"></a>Совместное редактирование в надстройках Excel  
 
-Благодаря функции [совместного редактирования](https://support.office.com/en-US/article/Collaborate-on-Excel-workbooks-at-the-same-time-with-co-authoring-7152aa8b-b791-414c-a3bb-3024e46fb104) несколько человек могут работать вместе и редактировать одну и ту же книгу Excel одновременно. Все соавторы книги могут видеть изменения, внесенные и сохраненные другими соавторами. Чтобы книги Excel можно было совместно редактировать, они должны храниться в OneDrive, OneDrive для бизнеса или SharePoint Online.
+Благодаря функции [совместного редактирования](https://support.office.com/article/Collaborate-on-Excel-workbooks-at-the-same-time-with-co-authoring-7152aa8b-b791-414c-a3bb-3024e46fb104) несколько человек могут работать вместе и редактировать одну и ту же книгу Excel одновременно. Все соавторы книги могут видеть изменения, внесенные и сохраненные другими соавторами. Чтобы книги Excel можно было совместно редактировать, они должны храниться в OneDrive, OneDrive для бизнеса или SharePoint Online.
 
 > [!IMPORTANT]
 > В Excel 2016 для Office 365 в левом верхнем углу можно заметить надпись "Автосохранение". Если автосохранение включено, соавторы видят внесенные вами изменения в режиме реального времени. Учтите влияние такого поведения на макет вашей надстройки Excel. Пользователи могут выключить автосохранение с помощью переключателя в левом верхнем углу окна Excel.
@@ -56,5 +56,5 @@ range.values = [['Contoso']];
 
 ## <a name="see-also"></a>См. также 
 
-- [О совместном редактировании в Excel (VBA)](https://msdn.microsoft.com/en-us/vba/excel-vba/articles/about-coauthoring-in-excel) 
-- [Как автосохранение влияет на надстройки и макросы (VBA)](https://msdn.microsoft.com/en-us/vba/office-shared-vba/articles/how-autosave-impacts-addins-and-macros) 
+- [О совместном редактировании в Excel (VBA)](https://msdn.microsoft.com/vba/excel-vba/articles/about-coauthoring-in-excel) 
+- [Как автосохранение влияет на надстройки и макросы (VBA)](https://msdn.microsoft.com/vba/office-shared-vba/articles/how-autosave-impacts-addins-and-macros) 
