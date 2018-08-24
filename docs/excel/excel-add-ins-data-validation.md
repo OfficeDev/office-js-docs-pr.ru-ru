@@ -2,12 +2,12 @@
 title: Добавление проверки данных в диапазоны Excel
 description: ''
 ms.date: 04/13/2018
-ms.openlocfilehash: 3d6a901e2f8296806cff470340b40f4d77e79e34
-ms.sourcegitcommit: bc68b4cf811b45e8b8d1cbd7c8d2867359ab671b
+ms.openlocfilehash: af965df4a1aece5b7f8d5ea89664519b576a4850
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "21703947"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925313"
 ---
 # <a name="add-data-validation-to-excel-ranges-preview"></a>Добавление проверки данных в диапазоны Excel (предварительная версия)
 
@@ -19,9 +19,9 @@ ms.locfileid: "21703947"
 
 Библиотека JavaScript Excel предоставляет API, позволяющие вашей надстройке добавлять автоматическую проверку данных в таблицы, столбцы, строки и другие диапазоны в книге. Для ознакомления с понятиями и терминологией проверки данных смотрите следующие статьи о том, как пользователи добавляют проверку данных через интерфейс Excel:
 
-- [Применение проверки данных к ячейкам](https://support.office.com/en-us/article/Apply-data-validation-to-cells-29FECBCC-D1B9-42C1-9D76-EFF3CE5F7249)
-- [Подробнее о проверке данных](https://support.office.com/en-us/article/More-on-data-validation-f38dee73-9900-4ca6-9301-8a5f6e1f0c4c)
-- [Описание и примеры проверки данных в Excel](https://support.microsoft.com/en-us/help/211485/description-and-examples-of-data-validation-in-excel)
+- [Применение проверки данных к ячейкам](https://support.office.com/article/Apply-data-validation-to-cells-29FECBCC-D1B9-42C1-9D76-EFF3CE5F7249)
+- [Подробнее о проверке данных](https://support.office.com/article/More-on-data-validation-f38dee73-9900-4ca6-9301-8a5f6e1f0c4c)
+- [Описание и примеры проверки данных в Excel](https://support.microsoft.com/help/211485/description-and-examples-of-data-validation-in-excel)
 
 ## <a name="programmatic-control-of-data-validation"></a>Программный элемент управления проверкой данных
 

@@ -2,12 +2,12 @@
 title: Загрузка неопубликованных надстроек Office для тестирования
 description: ''
 ms.date: 01/25/2018
-ms.openlocfilehash: b143999422866dba9b43432359c12f3607261c60
-ms.sourcegitcommit: e094aaa06d9aff3d13f8ffd3429d4a31f0b65b81
+ms.openlocfilehash: 94803a2c610fc869aefb6c77d53965981778e62e
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "21782814"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925124"
 ---
 # <a name="sideload-office-add-ins-for-testing"></a>Загрузка неопубликованных надстроек Office для тестирования
 
@@ -20,7 +20,7 @@ ms.locfileid: "21782814"
 
 - [Загрузка неопубликованных надстроек Office в Office Online для тестирования](sideload-office-add-ins-for-testing.md)
 - [Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования](sideload-an-office-add-in-on-ipad-and-mac.md)
-- [Загрузка неопубликованных надстроек Outlook для тестирования](../../../../outlook/add-ins/sideload-outlook-add-ins-for-testing)
+- [Загрузка неопубликованных надстроек Outlook для тестирования](https://docs.microsoft.com/outlook/add-ins/sideload-outlook-add-ins-for-testing)
 
 
 В следующем видео вы ознакомитесь с процессом загрузки вашей неопубликованной надстройки для классической версии Office или Office Online с помощью каталога общих папок.  
@@ -61,7 +61,8 @@ ms.locfileid: "21782814"
 
 ## <a name="sideload-your-add-in"></a>Загрузка неопубликованной надстройки
 
-1. Файл манифеста тестируемой надстройки необходимо поместить в каталог общих папок. Обратите внимание, что вы развертываете веб-приложение непосредственно на веб-сервере. Не забудьте указать URL-адрес в элементе **SourceLocation** файла манифеста.
+
+1. Поместите XML-файл манифеста любой надстройки, которую вы тестируете в каталоге общих папок. Обратите внимание на то, что вы развертываете само веб-приложение на веб-сервере. Не забудьте указать URL-адрес в элементе **SourceLocation** в файле манифеста.
 
     > [!IMPORTANT]
     > [!include[HTTPS guidance](../includes/https-guidance.md)]

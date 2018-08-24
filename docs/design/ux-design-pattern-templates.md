@@ -12,8 +12,8 @@ Office UI Fabric отображает компоненты, которые вы�
 
 * применять решения в распространенных клиентских сценариях;
 * следовать рекомендациям по оформлению;
-* внедрять компоненты и стили [Office UI Fabric](https://developer.microsoft.com/en-us/fabric#/get-started);
-* создавать надстройки, внешний вид которых согласован со стандартным пользовательским интерфейсом Office;
+* внедрять компоненты и стили [Office UI Fabric](https://developer.microsoft.com/fabric#/get-started);
+* создавать надстройки, внешний вид которых согласован со стандартным пользовательским интерфейсом Office.
 * формировать и визуализировать UX.
 
 
@@ -37,6 +37,6 @@ Office UI Fabric отображает компоненты, которые вы�
 
 ## <a name="see-also"></a>См. также
 * [Наборы инструментов для разработки](design-toolkits.md)
-* [Office UI Fabric](https://developer.microsoft.com/en-us/fabric)
-* [Рекомендации по разработке надстроек Office](https://docs.microsoft.com/en-us/office/dev/add-ins/concepts/add-in-development-best-practices)
-* [Начало работы с Fabric React](https://docs.microsoft.com/en-us/office/dev/add-ins/design/using-office-ui-fabric-react)
+* [Office UI Fabric](https://developer.microsoft.com/fabric)
+* [Рекомендации по разработке надстроек Office](https://docs.microsoft.com/office/dev/add-ins/concepts/add-in-development-best-practices)
+* [Начало работы с Fabric React](https://docs.microsoft.com/office/dev/add-ins/design/using-office-ui-fabric-react)

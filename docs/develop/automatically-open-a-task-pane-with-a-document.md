@@ -2,12 +2,12 @@
 title: Автоматическое открытие области задач с документом
 description: ''
 ms.date: 05/02/2018
-ms.openlocfilehash: 06e1cce3a45a5af744a1be4b3feabbf051940d76
-ms.sourcegitcommit: 4e4f7c095e8f33b06bd8a02534ee901125eb1d17
+ms.openlocfilehash: 4f3d677619610208b585df72dd1764be39fd9e35
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "20085498"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925355"
 ---
 # <a name="automatically-open-a-task-pane-with-a-document"></a>Автоматическое открытие области задач с документом
 
@@ -118,7 +118,7 @@ Office.context.document.settings.saveAsync();
 > [!NOTE]
 > Для поиска ИД ресурса и версии надстройки в AppSource перейдите на целевую страницу AppSource для соответствующей надстройки. ИД ресурса отображается в адресной строке браузера. Версия указана в разделе **Сведения** на этой странице.
 
-Дополнительные сведения об исправлении webextension см. в документе [[MS-OWEXML] 2.2.5. WebExtensionReference](https://msdn.microsoft.com/en-us/library/hh695383(v=office.12).aspx).
+Дополнительные сведения об исправлении webextension см. в документе [[MS-OWEXML] 2.2.5. WebExtensionReference](https://msdn.microsoft.com/library/hh695383(v=office.12).aspx).
 
 В следующем примере показано, как добавить часть taskpane.
 
@@ -137,10 +137,10 @@ Office.context.document.settings.saveAsync();
 > [!NOTE]
 > Если вы хотите распространять надстройку вместе с документом, чтобы пользователям предлагалось установить ее, необходимо задать для свойства visibility значение 1. Это можно сделать только через Open XML.
 
-Самый простой способ записи XML — сначала запустить надстройку и [отметить документ на стороне клиента](#tag-the-document-on-the-client-side), чтобы записать значение, а затем сохранить документ и проверить созданный XML. Office обнаружит и укажет соответствующие значения атрибута. Инструмент [Open XML SDK 2.5 Productivity Tool](https://www.microsoft.com/en-us/download/details.aspx?id=30425) также можно использовать для создания кода на языке C#, чтобы программным способом добавить исправление на основе создаваемого XML.
+Самый простой способ записи XML — сначала запустить надстройку и [отметить документ на стороне клиента](#tag-the-document-on-the-client-side), чтобы записать значение, а затем сохранить документ и проверить созданный XML. Office обнаружит и укажет соответствующие значения атрибута. Инструмент [Open XML SDK 2.5 Productivity Tool](https://www.microsoft.com/download/details.aspx?id=30425) также можно использовать для создания кода на языке C#, чтобы программным способом добавить исправление на основе создаваемого XML.
 
 ## <a name="test-and-verify-opening-taskpanes"></a>Тестирование и проверка открывающихся панелей задач
-Вы можете развернуть тестовую версию своей надстройки, котораяс автоматически откроет панель задач с помощью Централизованного развертывания через админитративный центр Office 365. В следующем примере показано, как вставляются надстройки из каталога централизованного развертывания с использованием версии хранилища EXCatalog.
+Вы можете развернуть тестовую версию своей надстройки, которая автоматически откроет область задач с использованием централизованного развертывания через центр администрирования Office 365. В следующем примере показано, как надстройки вставляются в каталог централизованного развертывания при помощи EXCatalog (версии из магазина).
 
 ```xml
 <we:webextension xmlns:we="http://schemas.microsoft.com/office/webextensions/webextension/2010/11" id="{52811C31-4593-43B8-A697-EB873422D156}">
@@ -151,11 +151,11 @@ Office.context.document.settings.saveAsync();
     <we:snapshot xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"/>
 </we:webextension>
 ```
-Чтобы проверить предыдущий пример, см.статью [Настройка среды разработки Office 365](https://msdn.microsoft.com/en-us/office/office365/howto/setup-development-environment) и рассмотритевозможность подписания [Учетной записи разработчика Office 365](https://developer.microsoft.com/en-us/office/dev-program). Фактически вы можете произвести тестовый выпуск централизованного развертывания и убедиться, что ваша надстройка работает правильно.
+Чтобы проверить предыдущий пример, рассмотрите возможность присоединения к [Программе для разработчиков Office 365](https://docs.microsoft.com/office/developer-program/office-365-developer-program) и регистрации [Учетной записи разработчика Office 365](https://developer.microsoft.com/office/dev-program), если у вас еще нет подписки на Office 365. Фактически вы можете произвести тестовый выпуск централизованного развертывания и убедиться, что ваша надстройка работает правильно.
 
 
 ## <a name="see-also"></a>См. также
 
 Пример использования функции автоматического открытия см. в статье [Примеры команд для надстройки Office](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/AutoOpenTaskpane). 
-[Присоединяйтесь к программе разработчика Office 365](https://docs.microsoft.com/en-us/office/developer-program/office-365-developer-program). 
+[Присоединяйтесь к программе разработчика Office 365](https://docs.microsoft.com/office/developer-program/office-365-developer-program). 
 

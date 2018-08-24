@@ -2,12 +2,12 @@
 title: Сохранение состояния и параметров надстройки
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: b4d1cdf2ce127d140153b6db02bc9a337a37bb5d
-ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
+ms.openlocfilehash: ee65d6b1f033b012a548bc685b9228679bec8c5e
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "19437866"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925572"
 ---
 # <a name="persisting-add-in-state-and-settings"></a>Сохранение состояния и параметров надстройки
 
@@ -17,7 +17,7 @@ ms.locfileid: "19437866"
     -  пар имя-значение в контейнере свойств, расположение которого зависит от типа надстройки;
     -  пользовательского кода XML в документе.
     
-- Использовать способы, предоставленные базовыми элементами управления браузером: cookie-файлы браузера или веб-хранилище HTML5 ([localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) или [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)).
+- Использовать способы, предоставленные базовыми элементами управления браузером: cookie-файлы браузера или веб-хранилище HTML5 ([localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) или [sessionStorage](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)).
     
 Эта статья содержит сведения об использовании API JavaScript для сохранения состояния надстройки. Примеры использования cookie-файлов браузера и веб-хранилища см. в примере кода [Excel-Add-in-JavaScript-PersistCustomSettings](https://github.com/OfficeDev/Excel-Add-in-JavaScript-PersistCustomSettings).
 
@@ -333,6 +333,6 @@ function saveCallback(asyncResult) {
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения об интерфейсе API JavaScript для Office](understanding-the-javascript-api-for-office.md)
-- [Надстройки Outlook](https://docs.microsoft.com/en-us/outlook/add-ins/)
+- [Надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/)
 - [Excel-Add-in-JavaScript-PersistCustomSettings](https://github.com/OfficeDev/Excel-Add-in-JavaScript-PersistCustomSettings)
     

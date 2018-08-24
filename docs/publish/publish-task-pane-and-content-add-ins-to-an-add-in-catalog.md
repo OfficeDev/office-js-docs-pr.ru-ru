@@ -2,8 +2,13 @@
 title: Публикация надстроек области задач и контентных надстроек в каталоге SharePoint
 description: ''
 ms.date: 01/23/2018
+ms.openlocfilehash: 6bf63c36d952b901faaa16b0d93748023ac0fef9
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925299"
 ---
-
 # <a name="publish-task-pane-and-content-add-ins-to-a-sharepoint-catalog"></a>Публикация надстроек области задач и контентных надстроек в каталоге SharePoint
 
 Каталог надстроек — это отдельное семейство веб-сайтов в веб-приложении SharePoint или клиенте SharePoint Online, в котором размещены библиотеки документов для надстроек Office и SharePoint. Администраторы могут отправлять в него файлы манифестов надстроек Office, чтобы пользователи в организации могли получить доступ к этим надстройкам. Когда администратор зарегистрирует каталог надстроек как доверенный, пользователи смогут вставлять надстройки в клиентском приложении Office.
@@ -11,7 +16,7 @@ ms.date: 01/23/2018
 > [!IMPORTANT]
 > - Каталоги надстроек в SharePoint не поддерживают функции надстроек, реализованные в узле `VersionOverrides` [манифеста надстройки](../develop/add-in-manifests.md), такие как команды надстроек.
 > - Чтобы публиковать надстройки для облачной или гибридной среды, рекомендуем использовать [централизованное развертывание через Центр администрирования Office 365](../publish/centralized-deployment.md).
-> - Каталоги SharePoint не поддерживаются в Office 2016 для Mac. Для развертывания надстроек Office на клиентах Mac нужно отправить их в [AppSource](https://docs.microsoft.com/ru-ru/office/dev/store/submit-to-the-office-store).   
+> - Каталоги SharePoint не поддерживаются в Office 2016 для Mac. Для развертывания надстроек Office на клиентах Mac нужно отправить их в [AppSource](https://docs.microsoft.com/office/dev/store/submit-to-the-office-store).   
 
 ## <a name="set-up-an-add-in-catalog"></a>Настройка каталога надстроек
 
@@ -39,7 +44,7 @@ ms.date: 01/23/2018
 
 ### <a name="to-set-up-an-add-in-catalog-on-office-365"></a>Настройка каталога надстроек в Office 365
 
-1. На странице Центра администрирования Office 365 выберите элемент **Администратор**, а затем **SharePoint**.
+1. На странице Центра администрирования Office 365 выберите элемент **Администратор**, а затем **SharePoint**.
     
 2. В области задач слева выберите пункт  **надстройки**.
     
@@ -97,4 +102,4 @@ ms.date: 01/23/2018
     
 3. Закройте приложение Office и снова запустите его. Каталог надстроек будет доступен в диалоговом окне **Надстройки Office**.
 
-Кроме того, администратор может указать каталог надстроек Office в SharePoint с помощью групповой политики. Дополнительные сведения см. в разделе [Использование групповой политики для управления возможностью установки и использования пользователями надстроек Office](https://technet.microsoft.com/ru-ru/library/jj219429.aspx#BKMK_GP) на сайте TechNet.
+Кроме того, администратор может указать каталог надстроек Office в SharePoint с помощью групповой политики. Дополнительные сведения см. в разделе [Использование групповой политики для управления возможностью установки и использования пользователями надстроек для Office](https://docs.microsoft.com/previous-versions/office/office-2013-resource-kit/jj219429(v=office.15)#using-group-policy-to-manage-how-users-can-install-and-use-apps-for-office).

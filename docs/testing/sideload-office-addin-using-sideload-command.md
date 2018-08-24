@@ -2,12 +2,12 @@
 title: Загрузка неопубликованных надстроек Office с использованием команды sideload
 description: ''
 ms.date: 07/24/2018
-ms.openlocfilehash: c3b53a70b5696e422653350de18d99be16d1d597
-ms.sourcegitcommit: 0d4d78e275249f0d4b6a6cf807b42b79890c3023
+ms.openlocfilehash: 3aacfdb09f362ea10ba0e2393caca335fe4c04c6
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "21773596"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925103"
 ---
 # <a name="sideload-office-add-ins-for-testing-using-the-sideload-command"></a>Загрузка неопубликованных надстроек Office для тестирования с использованием **команды sideload**
  >[!NOTE]
@@ -17,7 +17,7 @@ ms.locfileid: "21773596"
 > 
 > - [Загрузка неопубликованных надстроек Office в Office Online для тестирования](sideload-office-add-ins-for-testing.md)
 > - [Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования](sideload-an-office-add-in-on-ipad-and-mac.md)
-> - [Загрузка неопубликованных надстроек Outlook для тестирования](../../../../outlook/add-insSideload Outlook Add-ins for testing)
+> - [Загрузка неопубликованных надстроек Outlook для тестирования](https://docs.microsoft.com/outlook/add-ins/sideload-outlook-add-ins-for-testing)
 
 1. Откройте командную строку от имени администратора.
 

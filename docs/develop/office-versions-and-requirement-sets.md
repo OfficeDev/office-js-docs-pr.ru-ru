@@ -1,4 +1,15 @@
-# <a name="office-versions-and-requirement-sets"></a>Версии Office и наборы обязательных элементов
+---
+title: Версии и наборы обязательных требований Office
+description: ''
+ms.date: 03/29/2018
+ms.openlocfilehash: 3900dbc50d879b9dec809e19b0fc3458a3f46729
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925187"
+---
+# <a name="office-versions-and-requirement-sets"></a>Версии и наборы обязательных требований Office
 
 Не все версии Office поддерживают все API в API JavaScript для Office (Office.js). Не всегда можно указать версию Office, с которой должны работать пользователи.  Для таких ситуаций существуют наборы обязательных элементов, которые помогают определить, поддерживает ли ведущее приложение Office необходимые надстройке возможности. 
 
@@ -39,19 +50,16 @@
 
 Номер версии набора обязательных элементов, например "1.1" в `ExcelApi 1.1`, указывается относительно ведущего приложения Office. Номер версии набора обязательных элементов (например, `ExcelApi 1.1`) не соответствует номеру версии Office.js или наборам обязательных элементов для других ведущих приложений Office (например, Word, Outlook и т. д.).  Наборы обязательных элементов для разных ведущих приложений Office выпускаются с разной скоростью и интервалом. Например, набор обязательных элементов `ExcelApi 1.5` был выпущен до набора обязательных элементов `WordApi 1.3`.
 
-Библиотека API JavaScript для Office (Office.js) включает все доступные наборы обязательных элементов. Наборы обязательных элементов `ExcelApi 1.3` и `WordApi 1.3` существуют, но набора обязательных элементов `Office.js 1.3` нет. Доступ к последней версии Office.js осуществляется через единую конечную точку Office, интегрированную в сеть доставки содержимого (CDN). Дополнительные сведения о CDN Office.js, в том числе об управлении версиями и обратной совместимостью, см. в статье [Общие сведения об интерфейсе API JavaScript для Office](https://docs.microsoft.com/ru-ru/office/dev/add-ins/develop/understanding-the-javascript-api-for-office).
+Библиотека API JavaScript для Office (Office.js) включает все доступные наборы обязательных элементов. Наборы обязательных элементов `ExcelApi 1.3` и `WordApi 1.3` существуют, но набора обязательных элементов `Office.js 1.3` нет. Доступ к последней версии Office.js осуществляется через единую конечную точку Office, интегрированную в сеть доставки содержимого (CDN). |||UNTRANSLATED_CONTENT_START|||For more details around the Office.js CDN, including how versioning and backward compatibility is handled, see [Understanding the JavaScript API for Office](https://docs.microsoft.com/office/dev/add-ins/develop/understanding-the-javascript-api-for-office).|||UNTRANSLATED_CONTENT_END|||
 
 ## <a name="specify-office-hosts-and-requirement-sets"></a>Указание ведущих приложений Office и наборов обязательных элементов
 
-Указать необходимые надстройке ведущие приложения Office и наборы обязательных элементов можно разными способами.  Подробные сведения см. в статье [Указание ведущих приложений Office и обязательных элементов API](https://docs.microsoft.com/ru-ru/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements).
+Указать необходимые надстройке ведущие приложения Office и наборы обязательных элементов можно разными способами.  Подробные сведения см. в статье [Указание ведущих приложений Office и обязательных элементов API](https://docs.microsoft.com/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements).
 
 
 ## <a name="see-also"></a>См. также
 
-- 
-  [Указание ведущих приложений Office и обязательных элементов API](https://docs.microsoft.com/ru-ru/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
-- 
-  [Установка последней версии Office](https://docs.microsoft.com/ru-ru/office/dev/add-ins/develop/install-latest-office-version)
-- 
-  [Обзор каналов обновления Office 365 профессиональный плюс](https://docs.microsoft.com/ru-ru/deployoffice/overview-of-update-channels-for-office-365-proplus)
-- [Получите максимум от наших продуктов благодаря Office 365](https://products.office.com/en-us/compare-all-microsoft-office-products?tab=2)
+- [Указание ведущих приложений Office и обязательных элементов API](https://docs.microsoft.com/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
+- [Установка последней версии Office](https://docs.microsoft.com/office/dev/add-ins/develop/install-latest-office-version)
+- [Обзор каналов обновления Office 365 профессиональный плюс](https://docs.microsoft.com/deployoffice/overview-of-update-channels-for-office-365-proplus)
+- [Получите максимум от наших продуктов благодаря Office 365](https://products.office.com/compare-all-microsoft-office-products?tab=2)

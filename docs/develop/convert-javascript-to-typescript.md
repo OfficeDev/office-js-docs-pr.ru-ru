@@ -2,12 +2,12 @@
 title: Преобразование проекта надстройки Office в Visual Studio в TypeScript
 description: ''
 ms.date: 01/19/2018
-ms.openlocfilehash: 05e845b9d085b64b0534d28053dcd5ca3c7b403e
-ms.sourcegitcommit: 17f60431644b448a4816913039aaebfa328f9b0a
+ms.openlocfilehash: 783d47e04fc6d28604501ac77345470c26d36c89
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "19476531"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925383"
 ---
 # <a name="convert-an-office-add-in-project-in-visual-studio-to-typescript"></a>Преобразование проекта надстройки Office в Visual Studio в TypeScript
 
@@ -23,12 +23,12 @@ ms.locfileid: "19476531"
 - [Visual Studio 2017](https://www.visualstudio.com/vs/) с установленной рабочей нагрузкой **Разработка надстроек для Office и SharePoint**
 
     > [!NOTE]
-    > Если вы уже установили Visual Studio 2017, [используйте установщик Visual Studio](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**. 
+    > Если вы уже установили Visual Studio 2017, [используйте установщик Visual Studio](https://docs.microsoft.com/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**. 
 
 - TypeScript 2.3 для Visual Studio 2017
 
     > [!NOTE]
-    > TypeScript должен быть по умолчанию установлен вместе с Visual Studio 2017, но вы можете убедиться в этом с помощью [Visual Studio Installer](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio). В Visual Studio Installer выберите вкладку **Отдельные компоненты** и убедитесь, что в разделе **Пакеты SDK, библиотеки и платформы** выбран узел **Пакет SDK для TypeScript 2.3**.
+    > TypeScript должен быть по умолчанию установлен вместе с Visual Studio 2017, но вы можете убедиться в этом с помощью [Visual Studio Installer](https://docs.microsoft.com/visualstudio/install/modify-visual-studio). В Visual Studio Installer выберите вкладку **Отдельные компоненты** и убедитесь, что в разделе **Пакеты SDK, библиотеки и платформы** выбран узел **Пакет SDK для TypeScript 2.3**.
 
 - Excel 2016
 

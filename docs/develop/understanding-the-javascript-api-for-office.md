@@ -2,19 +2,19 @@
 title: Общие сведения об интерфейсе API JavaScript для Office
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: fef2cdad69408f099296461066f1ea380e3b118b
-ms.sourcegitcommit: bc68b4cf811b45e8b8d1cbd7c8d2867359ab671b
+ms.openlocfilehash: a9e1e26d4ba94a933ecb98250c19afee90750f5d
+ms.sourcegitcommit: 28fc652bded31205e393df9dec3a9dedb4169d78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "21703814"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "22928037"
 ---
 # <a name="understanding-the-javascript-api-for-office"></a>Общие сведения об интерфейсе API JavaScript для Office
 
 В этой статье можно узнать об интерфейсе API JavaScript для Office и о том, как его использовать. Справочные сведения см. в разделе [API JavaScript для Office](https://dev.office.com/reference/add-ins/javascript-api-for-office). О том, как обновить файлы проекта Visual Studio до последней версии API JavaScript для Office, см. в статье [Обновление версии API JavaScript для Office и файлов схемы манифеста](update-your-javascript-api-for-office-and-manifest-schema-version.md).
 
 > [!NOTE]
-> Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в интерфейсе Office, убедитесь, что она соответствует [политикам проверки AppSource](https://docs.microsoft.com/en-us/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://docs.microsoft.com/en-us/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице со сведениями о доступности и ведущих приложениях для надстроек Office](../overview/office-add-in-availability.md). 
+> Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в интерфейсе Office, убедитесь, что она соответствует [политикам проверки AppSource](https://docs.microsoft.com/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://docs.microsoft.com/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице со сведениями о доступности и ведущих приложениях для надстроек Office](../overview/office-add-in-availability.md). 
 
 ## <a name="referencing-the-javascript-api-for-office-library-in-your-add-in"></a>Ссылки на библиотеку API JavaScript для Office в надстройке
 
@@ -71,7 +71,7 @@ Office.initialize = function (reason) {
 
 ## <a name="office-javascript-api-object-model"></a>Объектная модель API JavaScript для Office
 
-После инициализации надстройка может взаимодействовать с узлом (например, Excel, Outlook). Более подробную информацию о конкретных шаблонах использования см. на странице [Объектная модель API Office JavaScript](/office-javascript-api-object-model.md). Существует также подробная справочная документация как для узлов[общих API-интерфейсов](https://dev.office.com/reference/add-ins/javascript-api-for-office), так и для конкретных узлов.
+После инициализации надстройки могут взаимодействовать с узлом (например, Excel, Outlook). Страница [Office JavaScript API object model](office-javascript-api-object-model.md) содержит более подробные сведения по  определенному использованию шаблонов. Также имеются подробные справочные материалы по [общим API](https://dev.office.com/reference/add-ins/javascript-api-for-office) и конкретным узлам.
 
 ## <a name="api-support-matrix"></a>Матрица поддержки API
 
