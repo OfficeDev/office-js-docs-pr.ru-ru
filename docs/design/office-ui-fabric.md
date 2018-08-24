@@ -2,12 +2,12 @@
 title: Office UI Fabric в надстройках Office
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: 04964d5864eea4a960f7b57e5df6f7bd7c844fde
-ms.sourcegitcommit: 4e4f7c095e8f33b06bd8a02534ee901125eb1d17
+ms.openlocfilehash: b573f720ebe4f90f7d4dbfdb05693871b93a2258
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "20084072"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925194"
 ---
 # <a name="office-ui-fabric-in-office-add-ins"></a>Office UI Fabric в надстройках Office 
 
@@ -44,25 +44,25 @@ Fabric Core содержит основные элементы языка диз
 В Fabric есть различные компоненты оформления, которые можно использовать при создании надстроек, в том числе:
 
 - Компоненты ввода — например, Button, Checkbox и Toggle.
-- Компоненты навигации — например, сводка Pivot и навигатор Breadcrumb
+- Компоненты навигации — например, сводка и строка навигации
 - Компоненты уведомления — например, MessageBar и Callout.  
 
 Не все компоненты Fabric рекомендуются для использования в надстройках. Ниже приведен список компонентов Fabric React UX, которые мы рекомендуем использовать в надстройке:
 
-- [Навигатор](https://developer.microsoft.com/en-us/fabric#/components/breadcrumb)
-- [Кнопка](https://developer.microsoft.com/en-us/fabric#/components/button)
-- [Флажок](https://developer.microsoft.com/en-us/fabric#/components/checkbox)
-- [ChoiceGroup](https://developer.microsoft.com/en-us/fabric#/components/choicegroup)
-- [Раскрывающееся меню](https://developer.microsoft.com/en-us/fabric#/components/dropdown)
-- [Подпись](https://developer.microsoft.com/en-us/fabric#/components/label)
-- [Список](https://developer.microsoft.com/en-us/fabric#/components/list)
-- [Сводка](https://developer.microsoft.com/en-us/fabric#/components/pivot)
-- [TextField](https://developer.microsoft.com/en-us/fabric#/components/textfield)
-- [Переключатель](https://developer.microsoft.com/en-us/fabric#/components/toggle)
+- [Строка навигации](https://developer.microsoft.com/fabric#/components/breadcrumb)
+- [Кнопка](https://developer.microsoft.com/fabric#/components/button)
+- [Флажок](https://developer.microsoft.com/fabric#/components/checkbox)
+- [ChoiceGroup](https://developer.microsoft.com/fabric#/components/choicegroup)
+- [Раскрывающееся меню](https://developer.microsoft.com/fabric#/components/dropdown)
+- [Подпись](https://developer.microsoft.com/fabric#/components/label)
+- [Список](https://developer.microsoft.com/fabric#/components/list)
+- [Сводка](https://developer.microsoft.com/fabric#/components/pivot)
+- [TextField](https://developer.microsoft.com/fabric#/components/textfield)
+- [Переключатель](https://developer.microsoft.com/fabric#/components/toggle)
 
 Для создания надстройки можно использовать разные платформы JavaScript, такие как Angular или React. Прежде чем использовать компоненты Fabric со своей платформой, ознакомьтесь с перечисленными ниже ресурсами.
 
 |**Платформа**|**Пример**|
 |:------------|:----------|
-|**Реакция**|[Использование Office UI Fabric React в надстройках Office](using-office-ui-fabric-react.md )|
+|**React**|[Использование Office UI Fabric React в надстройках Office](using-office-ui-fabric-react.md )|
 |**Angular**| См. проект сообщества [ngOfficeUIFabric](http://ngofficeuifabric.com/) с директивами Angular 1.5 и раздел [Обдумайте размещение компонентов Fabric в компонентах Angular 2](../develop/add-ins-with-angular2.md#consider-wrapping-fabric-components-with-angular-components)|

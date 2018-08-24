@@ -2,12 +2,12 @@
 title: Работа с событиями при помощи API JavaScript для Excel
 description: ''
 ms.date: 05/25/2018
-ms.openlocfilehash: 5b48712b0b1b5bd0dd7492ee7c692104a99678a7
-ms.sourcegitcommit: 9e0952b3df852bd2896e9f4a6f59f5b89fc1ae24
+ms.openlocfilehash: 3d94a36a60220b856795b8d0abf5387fcb8c1bad
+ms.sourcegitcommit: e1c92ba882e6eb03a165867c6021a6aa742aa310
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "21270274"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "22925628"
 ---
 # <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями при помощи API JavaScript для Excel 
 
@@ -35,11 +35,11 @@ ms.locfileid: "21270274"
 
 | Событие | Описание | Поддерживаемые объекты |
 |:---------------|:-------------|:-----------|
-| `onAdded` | Событие, которое появляется при добавлении диаграммы. | [**ChartCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
+| `onAdded` | Событие, которое происходит при добавлении диаграммы. | [**ChartCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
 | `onDeleted` | Событие, которое происходит при удалении диаграммы. | [**ChartCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
 | `onActivated` | Событие, которое происходит при активации диаграммы. | [**Диаграмма**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md), [**ChartCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
 | `onDeactivated` | Событие, которое происходит при деактивации диаграммы. | [**Диаграмма**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md), [**ChartCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
-| `onCalculated` | Событие, которое происходит, когда рабочий лист завершил расчет (или все рабочие листы коллекции завершили расчеты). | [**WorksheetCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md), [**Лист**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
+| `onCalculated` | Событие, которое происходит, когда рабочий лист завершил расчет (или все рабочие листы коллекции завершили расчеты). | [**WorksheetCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md), [**Worksheet**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
 
 ### <a name="event-triggers"></a>Триггеры событий
 
@@ -130,6 +130,32 @@ function remove() {
                 console.log("Event handler successfully removed.");
             });
     }).catch(errorHandlerFunction);
+}
+```
+
+## <a name="enable-and-disable-events"></a>Включение и отключение событий
+
+> [!NOTE]
+> В настоящее время эта функция доступна только в общедоступной предварительной версии (бета-версия). Для ее использования необходимо обратиться к библиотеке бета-версиии Office.js сети CDN: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
+
+События включаются и отключаются на уровне [среды выполнения](https://docs.microsoft.com/en-us/javascript/api/excel/excel.runtime?view=office-js). Свойство `enableEvents` определяет, будут ли запускаться события и будут ли активироваться их обработчики. Отключение событий полезно, когда очень важна производительность, или когда вы изменяете нескольких сущностей, и нужно избежать обработки события до завершения.
+
+Следующий пример кода показывает, как включать и отключать события.
+
+```typescript
+async function toggleEvents() {
+    await Excel.run(async (context) => {
+        context.runtime.load("enableEvents");
+        await context.sync();
+        const eventBoolean = !context.runtime.enableEvents
+        context.runtime.enableEvents = eventBoolean;
+        if (eventBoolean) {
+            console.log("Events are currently on.");
+        } else {
+            console.log("Events are currently off.");
+        }
+        await context.sync();
+    });
 }
 ```
 

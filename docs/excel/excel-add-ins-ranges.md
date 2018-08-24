@@ -2,9 +2,13 @@
 title: Работа с диапазонами с использованием API JavaScript для Excel
 description: ''
 ms.date: 12/04/2017
+ms.openlocfilehash: 48784d14542bcff4a2aab416c5f91c132f6c172d
+ms.sourcegitcommit: e1c92ba882e6eb03a165867c6021a6aa742aa310
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "22925621"
 ---
-
-
 # <a name="work-with-ranges-using-the-excel-javascript-api"></a>Работа с диапазонами с использованием API JavaScript для Excel
 
 В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диапазонов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектом **Range**, см. в статье [Объект Range (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/range).
@@ -49,7 +53,7 @@ Excel.run(function (context) {
 
 ### <a name="get-used-range"></a>Получение используемого диапазона
 
-В примере кода ниже показано, как получить используемый диапазон с листа **Sample** (Пример), загрузить его свойство **address** и записать сообщение в консоль. Используемый диапазон — это наименьший диапазон, включающий в себя все ячейки листа, которые содержат значение или форматирование. Если весь лист пуст, метод **getUsedRange()** возвращает диапазон, состоящий только из левой верхней ячейки листа.
+В примере кода ниже показано, как получить используемый диапазон с листа **Sample** (Пример), загрузить его свойство **address** и записать сообщение в консоль. Используемый диапазон — это наименьший диапазон, включающий в себя все ячейки листа, которые содержат значение или форматирование. Если весь лист пуст, метод **getUsedRange()** возвращает диапазон, состоящий только из левой верхней ячейки листа.
 
 ```js
 Excel.run(function (context) {
@@ -191,7 +195,7 @@ Excel.run(function (context) {
 
 ### <a name="set-value-for-a-single-cell"></a>Задание значения для одной ячейки
 
-В примере кода ниже показано, как присвоить ячейке **C3** значение 5, а затем настроить ширину столбцов для наилучшего размещения данных.
+В примере кода ниже показано, как присвоить ячейке **C3** значение 5, а затем настроить ширину столбцов для наилучшего размещения данных.
 
 ```js
 Excel.run(function (context) {
@@ -317,7 +321,7 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-**Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)**
+**Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)**
 
 ![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
 
@@ -375,7 +379,7 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-**Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)**
+**Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)**
 
 ![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
 
@@ -433,7 +437,7 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-**Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)**
+**Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)**
 
 ![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
 
@@ -530,6 +534,67 @@ Excel.run(function (context) {
 **Данные в диапазоне после задания формата чисел**
 
 ![Данные в Excel после задания формата](../images/excel-ranges-format-numbers.png)
+
+## <a name="copy-and-paste"></a>Копировать и вставить
+
+> [!NOTE]
+> Функция copyFrom в настоящее время доступна только в общедоступной предварительной версии (бета-версия). Чтобы использовать эту функцию, необходимо использовать библиотеку бета-версии Office.js CDN: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
+> Если вы используете TypeScript, или ваш редактор кода использует файлы определения типа TypeScript для IntelliSense, воспользуйтесь https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts.
+
+Функция copyFrom диапазона реплицирует поведение копирования и вставки пользовательского интерфейса Excel. Диапазон объектов, который вызывается copyFrom, — это назначение. Источник для копирования передается как диапазон или адрес строки, представляющий диапазон. Следующий пример кода копирует данные из **A1:E1** в диапазон, начиная с **G1** (который заканчивается при вставке в **G1:K1**).
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+    // copy a range starting at a single cell destination
+    sheet.getRange("G1").copyFrom("A1:E1");
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+Range.copyFrom содержит три необязательных параметра.
+
+```ts
+copyFrom(sourceRange: Range | string, copyType?: "All" | "Formulas" | "Values" | "Formats", skipBlanks?: boolean, transpose?: boolean): void;
+``` 
+
+`copyType` указывает, какие данные копируются из источника в назначение. 
+`“Formulas”` переносит формулы в ячейках источника и сохраняет относительное положение диапазонов этих формул. Все записи, не являющиеся формулами, копируются в исходном виде. 
+`“Values”` копирует значения данных, а в случае формул – результат формулы. 
+`“Formats”` копирует форматирование диапазона, включая шрифт, цвет и другие параметры форматирования, но без значений. 
+`”All”` (вариант по умолчанию) копирует и данные и форматирование, сохраняя формулы ячеек при их обнаружении.
+
+`skipBlanks` устанавливает, будут ли копироваться пустые ячейки в назначение. Если значение равно true, `copyFrom` пропускает пустые ячейки в диапазоне источника. Пропущенные ячейки не перезапишут существующие данные в соответствующих им ячейках конечного диапазона. Значение по умолчанию — false.
+
+Следующий пример кода и изображений демонстрирует это поведение в простом сценарии. 
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+    // copy a range, omitting the blank cells so existing data is not overwritten in those cells
+    sheet.getRange("D1").copyFrom("A1:C1",
+        Excel.RangeCopyType.all,
+        true, // skipBlanks
+        false); // transpose
+    // copy a range, including the blank cells which will overwrite existing data in the target cells
+    sheet.getRange("D2").copyFrom("A2:C2",
+        Excel.RangeCopyType.all,
+        false, // skipBlanks
+        false); // transpose
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+*Прежде чем предыдущая функция была запущена.*
+
+![Данные в Excel, прежде чем способ копирования диапазона был запущен.](../images/excel-range-copyfrom-skipblanks-before.png)
+
+*После запуска предыдущей функции.*
+
+![Данные в Excel после запуска способа копирования диапазона.](../images/excel-range-copyfrom-skipblanks-after.png)
+
+`transpose` определяет, транспортируются ли данные – то есть переключаются ли его строки и столбцы – в исходное расположение. Ошибка диапазона отражается на главной диагонали, поэтому строки **1**, **2**и **3** станут столбцами **A**, **B**и **C**. 
+
 
 ## <a name="see-also"></a>См. также
 

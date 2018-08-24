@@ -2,12 +2,12 @@
 title: Создание надстроек Word с помощью Office Open XML
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: ed44b9d331670ac7bf9fb625555dcd05f7bff7ec
-ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
+ms.openlocfilehash: 2e8545f175143c26b3f65af78ad4c47053e927cd
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "19439721"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925558"
 ---
 # <a name="create-better-add-ins-for-word-with-office-open-xml"></a>Создание надстроек Word с помощью Office Open XML
 
@@ -857,5 +857,5 @@ function populateBinding(filename) {
 - [API JavaScript для Office ](https://dev.office.com/reference/add-ins/javascript-api-for-office) 
 - [Стандарт ECMA-376: форматы файлов Office Open XML](http://www.ecma-international.org/publications/standards/Ecma-376.htm) (здесь вы найдете полный справочник по языку и сопутствующую документацию по Open XML) 
 - [OpenXMLDeveloper.org](http://www.openxmldeveloper.org)
-- [Исследование JavaScript API for Office: связывание с данными и собственные XML-фрагменты. Часть 3](https://msdn.microsoft.com/en-us/magazine/dn166930.aspx)
+- [Исследование JavaScript API for Office: связывание с данными и собственные XML-фрагменты. Часть 3](https://msdn.microsoft.com/magazine/dn166930.aspx)
     

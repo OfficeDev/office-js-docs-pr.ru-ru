@@ -2,12 +2,12 @@
 title: Упаковка надстройки с помощью Visual Studio для публикации
 description: ''
 ms.date: 01/25/2018
-ms.openlocfilehash: e03959294536eeb416a1531d2d281ba83f2d3732
-ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
+ms.openlocfilehash: 89f59d06ff305e0d0fd062a36f7e9f756415df45
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "19438755"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925250"
 ---
 # <a name="package-your-add-in-using-visual-studio-to-prepare-for-publishing"></a>Упаковка надстройки с помощью Visual Studio для публикации
 
@@ -28,11 +28,11 @@ ms.locfileid: "19438755"
 
     Если выбрать команду **Создать…**, откроется **мастер создания профиля публикации**. С помощью этого мастера можно импортировать профиль публикации из поставщика услуг размещения веб-сайтов, например Microsoft Azure, или создать новый профиль, а затем добавить сервер, учетные данные и другие параметры, указанные на следующем этапе.
     
-    Дополнительные сведения об импорте существующих профилей публикации и создании новых см. в разделе [Создание профиля публикации](http://msdn.microsoft.com/en-us/library/dd465337.aspx#creating_a_profile).
+    Дополнительные сведения об импорте существующих профилей публикации и создании новых см. в разделе [Создание профиля публикации](http://msdn.microsoft.com/library/dd465337.aspx#creating_a_profile).
     
 3. На странице  **Публикация надстройки** перейдите по ссылке **Выполнить развертывание веб-проекта**.
     
-    Появится диалоговое окно  **Опубликовать веб-проект**. Более подробную информацию об использовании этого мастера см. в статье [Развертывание веб-проекта с помощью публикации одним щелчком в Visual Studio](http://msdn.microsoft.com/en-us/library/dd465337.aspx).
+    Появится диалоговое окно  **Опубликовать веб-проект**. Более подробную информацию об использовании этого мастера см. в статье [Развертывание веб-проекта с помощью публикации одним щелчком в Visual Studio](http://msdn.microsoft.com/library/dd465337.aspx).
     
 
 ## <a name="to-package-your-add-in-using-visual-studio-2015"></a>Упаковка надстройки с помощью Visual Studio 2015
@@ -62,5 +62,5 @@ ms.locfileid: "19438755"
 ## <a name="see-also"></a>См. также
 
 - [Публикация надстройки Office](../publish/publish.md)
-- [Публикация решений в AppSource и в Office](https://docs.microsoft.com/en-us/office/dev/store/submit-to-the-office-store)
+- [Публикация решений в AppSource и в Office](https://docs.microsoft.com/office/dev/store/submit-to-the-office-store)
     

@@ -2,12 +2,12 @@
 title: Тестирование удобства использования надстроек Office
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: 410b8d7ede22cf222ee2df794e438c7f5f8881dd
-ms.sourcegitcommit: 4e4f7c095e8f33b06bd8a02534ee901125eb1d17
+ms.openlocfilehash: 4b21af2502c9357e8a7d2c953cd5182833577ac9
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "20085488"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925453"
 ---
 # <a name="usability-testing-for-office-add-ins"></a>Тестирование удобства использования надстроек Office
 
@@ -24,7 +24,7 @@ ms.locfileid: "20085488"
 Пяти участников достаточно, чтобы обнаружить большую часть проблем при использовании надстройки. В течение цикла разработки регулярно проводите небольшие испытания, чтобы убедиться, что в вашем продукте учитываются потребности пользователей.
 
 > [!NOTE]
-> Рекомендуем тестировать удобство использования надстроек на нескольких платформах. Для [публикации надстройки в AppSource](https://docs.microsoft.com/en-us/office/dev/store/submit-to-the-office-store) она должна работать на всех [платформах, поддерживающих определенные вами методы](../overview/office-add-in-availability.md).
+> Рекомендуем тестировать удобство использования надстроек на нескольких платформах. Для [публикации надстройки в AppSource](https://docs.microsoft.com/office/dev/store/submit-to-the-office-store) она должна работать на всех [платформах, поддерживающих определенные вами методы](../overview/office-add-in-availability.md).
 
 ## <a name="1---sign-up-for-a-testing-service"></a>1. Зарегистрируйтесь в службе тестирования
 

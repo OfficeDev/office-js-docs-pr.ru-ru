@@ -2,12 +2,12 @@
 title: Обзор платформы надстроек Office
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: f7b1f4add776f1971e9762c5cb80dabed45b0a1c
-ms.sourcegitcommit: a0e0416289b293863b8b4d3f9a12581a9e681b27
+ms.openlocfilehash: a35e0db20f5c573357b12b9034d9b13ce0cc3a27
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2018
-ms.locfileid: "20023167"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925278"
 ---
 # <a name="office-add-ins-platform-overview"></a>Обзор платформы надстроек Office
 
@@ -101,7 +101,7 @@ ms.locfileid: "20023167"
 
 Надстройки Outlook могут получать доступ к контекстным данным элемента (например, адресу или идентификатору отслеживания), а затем с помощью этих данных получать доступ к дополнительным сведениям на сервере и из веб-служб для повышения удобства работы пользователей. В большинстве случаев надстройка Outlook работает одинаково в различных ведущих приложениях, поддерживающих ее, включая Outlook, Outlook для Mac, Outlook Web App для устройств и Outlook Web App, чтобы обеспечить согласованную работу в Интернете, на компьютерах, планшетах и мобильных устройствах. 
 
-Обзор надстроек Outlook см. в статье [Общие сведения о надстройках Outlook](https://docs.microsoft.com/en-us/outlook/add-ins/). 
+Обзор надстроек Outlook см. в статье [Общие сведения о надстройках Outlook](https://docs.microsoft.com/outlook/add-ins/). 
 
 ### <a name="create-new-objects-in-office-documents"></a>Создание новых объектов в документах Office 
 
@@ -115,15 +115,15 @@ ms.locfileid: "20023167"
 
 API JavaScript для Office содержат объекты и элементы для создания надстроек и взаимодействия с содержимым Office и веб-службами. В Excel, Outlook, Word, PowerPoint, OneNote и Project используется общая объектная модель. Кроме того, существуют расширенные объектные модели для Excel и Word. Эти API предоставляют доступ к известным объектам, таким как абзацы и книги, что упрощает создание надстройки для определенного ведущего приложения.  
 
-## <a name="next-steps"></a>Дальнейшие шаги 
+## <a name="next-steps"></a>Дальнейшие действия 
 
-Чтобы узнать больше о том, как начать создание надстройки Office, ознакомьтесь с [5-минутными краткими инструкциями](https://docs.microsoft.com/en-us/office/dev/add-ins/). Можно создавать надстройки с помощью Visual Studio или любого другого редактора. 
+Чтобы узнать больше о том, как начать создание надстройки Office, ознакомьтесь с [5-минутными краткими инструкциями](https://docs.microsoft.com/office/dev/add-ins/). Можно создавать надстройки непосредственно с помощью Visual Studio или любого другого редактора. 
 
-Чтобы начать планировать создание решений с удобным и привлекательным интерфейсом, ознакомьтесь с[рекомендациями по дизайну](../design/add-in-design.md) и другими[рекомендациями](../concepts/add-in-development-best-practices.md), касающимися надстроек Office.    
+Чтобы начать планировать создание решений с удобным и привлекательным интерфейсом, ознакомьтесь с [рекомендациями по дизайну](../design/add-in-design.md) и другими [рекомендациями](../concepts/add-in-development-best-practices.md), касающимися надстроек Office.    
    
 ## <a name="see-also"></a>См. также
 
-- [Примеры надстроек Office](https://developer.microsoft.com/en-us/office/gallery/?filterBy=Samples)
+- [Примеры надстроек Office](https://developer.microsoft.com/office/gallery/?filterBy=Samples)
 - [Общие сведения об API JavaScript для Office](../develop/understanding-the-javascript-api-for-office.md)
 - [Доступность ведущих приложений и платформ для надстроек Office](../overview/office-add-in-availability.md)
 

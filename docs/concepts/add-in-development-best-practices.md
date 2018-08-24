@@ -2,19 +2,19 @@
 title: Рекомендации по разработке надстроек Office
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: abb04439d40d412acba51d62bcc7544d01810f52
-ms.sourcegitcommit: 376a80e8bc740a80802af81cabcdabe099217b3e
+ms.openlocfilehash: 2ad5cf1e4c34fdbae827cdd115c57313f6faeda9
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "20246089"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925481"
 ---
 # <a name="best-practices-for-developing-office-add-ins"></a>Рекомендации по разработке надстроек Office
 
 Эффективные надстройки предоставляют уникальные и удобные функции, которые расширяют приложения Office, придавая им привлекательный внешний вид. Чтобы создать хорошую надстройку, сделайте работу пользователей удобной с первого запуска, разработайте первоклассный пользовательский интерфейс и оптимизируйте производительность надстройки. Применяя методики, описанные в этой статье, вы сможете создавать надстройки, которые помогают пользователям выполнять свои задачи быстро и эффективно.
 
 > [!NOTE]
-> Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в Office, убедитесь, что она соответствует [политикам проверки AppSource](https://docs.microsoft.com/en-us/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка должна работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://docs.microsoft.com/en-us/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и [статье о доступности надстроек Office в ведущих приложениях](../overview/office-add-in-availability.md). 
+> Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в Office, убедитесь, что она соответствует [политикам проверки AppSource](https://docs.microsoft.com/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка должна работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://docs.microsoft.com/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и [статье о доступности надстроек Office в ведущих приложениях](../overview/office-add-in-availability.md). 
 
 ## <a name="provide-clear-value"></a>Преимущества должны быть очевидными
 
@@ -24,7 +24,7 @@ ms.locfileid: "20246089"
  - внедрите в ведущие приложения Office дополнительные службы;
  - сделайте работу в Office более удобной, чтобы повысить производительность.
 - Чтобы ваша надстройка быстро заинтересовала пользователей, обеспечьте [демонстрацию ее преимуществ уже при первом использовании](#create-an-engaging-first-run-experience).
-- Создайте [привлекательное описание надстройки в AppSource](https://docs.microsoft.com/en-us/office/dev/store/create-effective-office-store-listings). Сделайте преимущества вашей надстройки очевидными из названия и описания. Не полагайтесь на то, что по вашей торговой марке будет понятно, для чего предназначена надстройка.
+- Создайте [привлекательное описание надстройки в AppSource](https://docs.microsoft.com/office/dev/store/create-effective-office-store-listings). Сделайте преимущества вашей надстройки очевидными из названия и описания. Не полагайтесь на то, что по вашей торговой марке будет понятно, для чего предназначена надстройка.
 
 
 ## <a name="create-an-engaging-first-run-experience"></a>Удобство работы с первого запуска
@@ -43,13 +43,13 @@ ms.locfileid: "20246089"
 
    ![Снимок экрана: контентная надстройка с данными рядом с контентной надстройкой без данных](../images/add-in-title.png)
 
-- Предлагайте [бесплатные пробные версии](https://docs.microsoft.com/en-us/office/dev/store/decide-on-a-pricing-model#office-store-pricing-options). Если для вашей надстройки требуется подписка, сделайте некоторые функции доступными без нее.
+- Предлагайте [бесплатные пробные версии](https://docs.microsoft.com/office/dev/store/decide-on-a-pricing-model#office-store-pricing-options). Если для вашей надстройки требуется подписка, сделайте некоторые функции доступными без нее.
 
 - Упростите регистрацию. Используйте автоматическое заполнение сведений (адрес электронной почты, отображаемое имя) и пропустите проверку электронной почты.
 
 - Избегайте всплывающих окон. Если вам необходимо их использовать, помогите пользователю включить всплывающее окно.
 
-- Используйте [проверку подлинности с единым входом](https://docs.microsoft.com/en-us/outlook/add-ins/authenticate-a-user-with-an-identity-token).
+- Используйте [проверку подлинности с единым входом](https://docs.microsoft.com/outlook/add-ins/authenticate-a-user-with-an-identity-token).
 
 Шаблоны, иллюстрирующие методы, которые можно применять при разработке интерфейса для первого запуска, представлены в статье [Конструктивные шаблоны пользовательского интерфейса для надстроек Office](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code).
 
@@ -59,7 +59,7 @@ ms.locfileid: "20246089"
 
 ## <a name="apply-ux-design-principles"></a>Принципы оформления элементов пользовательского интерфейса
 
-- Убедитесь, что внешний вид и поведение вашей надстройки согласованы с интерфейсом Office. Используйте [Office UI Fabric](https://developer.microsoft.com/en-us/fabric).
+- Убедитесь, что внешний вид и поведение вашей надстройки согласованы с интерфейсом Office. Используйте [Office UI Fabric](https://developer.microsoft.com/fabric).
 
 - Больше содержимого, меньше хрома. Избегайте лишних элементов интерфейса, которые не представляют ценности для пользователя.
 
@@ -71,9 +71,9 @@ ms.locfileid: "20246089"
 
 - Не включайте нелицензированные изображения.
 
-- Используйте [понятный и простой язык](../design/voice-guidelines.md) в вашей надстройке.
+- Используйте [понятный и простой язык](../design/voice-guidelines.md) в надстройке.
 
-- Учитывайте специальные возможности. Обеспечьте удобство работы для всех пользователей и поддержку таких специальных возможностей, как средство чтения с экрана.
+- Учитывайте специальные возможности. Обеспечьте удобство работы для всех пользователей и поддержку таких специальных возможностей, как средства чтения с экрана.
 
 - Обеспечьте поддержку всех платформ и методов ввода, включая мышь, клавиатуру и [сенсорное управление](#optimize-for-touch). Убедитесь, что ваш пользовательский интерфейс поддерживает различные форм-факторы.
 
@@ -128,7 +128,7 @@ ms.locfileid: "20246089"
 
 ## <a name="market-your-add-in"></a>Маркетинг
 
-- Опубликуйте надстройку в [AppSource](https://docs.microsoft.com/en-us/office/dev/store/submit-to-the-office-store) и [рекламируйте ее](https://docs.microsoft.com/en-us/office/dev/store/promote-your-office-store-solution) на своем веб-сайте. Создайте [эффективное описание для AppSource](https://docs.microsoft.com/en-us/office/dev/store/create-effective-office-store-listings).
+- Опубликуйте надстройку в [AppSource](https://docs.microsoft.com/office/dev/store/submit-to-the-office-store) и [рекламируйте ее](https://docs.microsoft.com/office/dev/store/promote-your-office-store-solution) на своем веб-сайте. Создайте [эффективное описание для AppSource](https://docs.microsoft.com/office/dev/store/create-effective-office-store-listings).
 
 - Давайте надстройкам лаконичные и информативные названия. Их длина не должна превышать 128 символов.
 
