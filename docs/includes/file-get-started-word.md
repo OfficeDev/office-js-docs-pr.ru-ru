@@ -270,7 +270,6 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
             <title>Boilerplate text app</title>
             <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
             <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
-            <script src="app.js" type="text/javascript"></script>
             <link href="app.css" rel="stylesheet" type="text/css" />
         </head>
         <body>
@@ -297,7 +296,7 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
     </html>
     ```
 
-2. Откройте файл **app.js**, чтобы указать скрипт для надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл. Этот скрипт содержит код инициализации, а также код, вносящий изменения в документ Word, вставляя текст при нажатии кнопки. 
+2. Откройте файл **src/index.js**, чтобы указать сценарий надстройки. Замените все содержимое следующим кодом и сохраните файл. Этот сценарий содержит код инициализации, а также код, который вносит изменения в документ Word, путем вставки текста в документ при выборе кнопки. 
 
     ```js
     'use strict';
