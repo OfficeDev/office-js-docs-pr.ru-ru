@@ -1,413 +1,427 @@
+items:
 - name: Документация по надстройкам Office
+  displayName: Excel, Word, Outlook, PowerPoint, OneNote, Project
   href: index.yml
-  displayName: 'Excel, Word, Outlook, PowerPoint, OneNote, Project'
 - name: Обзор
   items:
-    - name: Сведения о надстройках Office
-      href: overview/office-add-ins.md
-      displayName: 'Excel, Word, Outlook, PowerPoint, OneNote, Project'
-    - name: Доступность узла и платформы
-      href: overview/office-add-in-availability.md
-      displayName: 'Excel, Word, Outlook, PowerPoint, OneNote, Project'
+  - name: Сведения о надстройках Office
+    displayName: Excel, Word, Outlook, PowerPoint, OneNote, Project
+    href: overview/office-add-ins.md
+  - name: Доступность узла и платформы
+    displayName: Excel, Word, Outlook, PowerPoint, OneNote, Project
+    href: overview/office-add-in-availability.md
 - name: Краткие инструкции
   items:
-    - name: Создание надстройки Excel
-      items:
-        - name: Использовать Angular
-          href: quickstarts/excel-quickstart-angular.md
-          displayName: Excel
-        - name: Использовать jQuery
-          href: quickstarts/excel-quickstart-jquery.md
-          displayName: Excel
-        - name: Использовать React
-          href: quickstarts/excel-quickstart-react.md
-          displayName: Excel
-        - name: Использовать Vue
-          href: quickstarts/excel-quickstart-vue.md
-          displayName: Excel
-    - name: Создание надстройки Word
-      href: quickstarts/word-quickstart.md
-      displayName: Word
-    - name: Создание надстройки OneNote
-      href: quickstarts/onenote-quickstart.md
-      displayName: OneNote
-    - name: Создание надстройки Outlook
-      href: 'https://docs.microsoft.com/en-us/outlook/add-ins/quick-start'
-      displayName: Outlook
-    - name: Создание надстройки PowerPoint
-      href: quickstarts/powerpoint-quickstart.md
-      displayName: PowerPoint
-    - name: Создание надстройки проекта
-      href: quickstarts/project-quickstart.md
-      displayName: Project
+  - name: Создание надстройки Excel
+    items:
+    - name: Использовать Angular
+      displayName: Excel
+      href: quickstarts/excel-quickstart-angular.md
+    - name: Использовать jQuery
+      displayName: Excel
+      href: quickstarts/excel-quickstart-jquery.md
+    - name: Использовать React
+      displayName: Excel
+      href: quickstarts/excel-quickstart-react.md
+    - name: Использовать Vue
+      displayName: Excel
+      href: quickstarts/excel-quickstart-vue.md
+  - name: Создание надстройки Word
+    displayName: Word
+    href: quickstarts/word-quickstart.md
+  - name: Создание надстройки OneNote
+    displayName: OneNote
+    href: quickstarts/onenote-quickstart.md
+  - name: Создание надстройки Outlook
+    displayName: Outlook
+    href: https://docs.microsoft.com/outlook/add-ins/quick-start
+  - name: Создание надстройки PowerPoint
+    displayName: PowerPoint
+    href: quickstarts/powerpoint-quickstart.md
+  - name: Создание надстройки проекта
+    displayName: Project
+    href: quickstarts/project-quickstart.md
 - name: Руководства
   items:
-    - name: Руководство по надстройкам Excel
-      href: tutorials/excel-tutorial.yml
-      displayName: Excel
-    - name: Руководство по надстройкам PowerPoint
-      href: tutorials/powerpoint-tutorial.yml
-      displayName: PowerPoint
-    - name: Руководство по надстройкам Word
-      href: tutorials/word-tutorial.yml
-      displayName: Word
+  - name: Руководство по надстройкам Excel
+    displayName: Excel
+    href: tutorials/excel-tutorial.yml
+  - name: Руководство по надстройкам PowerPoint
+    displayName: PowerPoint
+    href: tutorials/powerpoint-tutorial.yml
+  - name: Руководство по надстройкам Word
+    displayName: Word
+    href: tutorials/word-tutorial.yml
 - name: Понятия
   items:
-    - name: Требования для запуска надстроек
-      href: concepts/requirements-for-running-office-add-ins.md
-    - name: Рекомендации по разработке надстроек
-      href: concepts/add-in-development-best-practices.md
-    - name: Жизненный цикл разработки надстроек
-      href: concepts/add-in-development-lifecycle.md
-    - name: Жизненный цикл разработки надстроек
-      href: concepts/privacy-and-security.md
-    - name: Производительность
-      href: concepts/resource-limits-and-performance-optimization.md
+  - name: Требования для запуска надстроек
+    href: concepts/requirements-for-running-office-add-ins.md
+  - name: Рекомендации по разработке надстроек
+    href: concepts/add-in-development-best-practices.md
+  - name: Жизненный цикл разработки надстроек
+    href: concepts/add-in-development-lifecycle.md
+  - name: Конфиденциальность и безопасность
+    href: concepts/privacy-and-security.md
+  - name: Производительность
+    href: concepts/resource-limits-and-performance-optimization.md
 - name: Практические руководства
   items:
-    - name: Разработка пользовательского интерфейса
-      href: design/add-in-design.md
+  - name: Разработка пользовательского интерфейса
+    href: design/add-in-design.md
+    items:
+    - name: Рекомендации
       items:
-        - name: Инструкции
-          items:
-            - name: Специальные возможности
-              href: design/accessibility-guidelines.md
-            - name: Стиль речи
-              href: design/voice-guidelines.md
-            - name: Визуализация данных
-              href: design/data-visualization-guidelines.md
-        - name: Язык дизайна
-          href: design/add-in-design-language.md
-          items:
-            - name: Шрифтовое оформление
-              href: design/add-in-typography.md
-            - name: Цвет
-              href: design/add-in-color.md
-            - name: Макет
-              href: design/add-in-layout.md
-            - name: Значки
-              href: design/add-in-icons.md
-            - name: Использование движения
-              href: design/using-motion-office-addins.md
-              displayName: Motion
-        - name: Элементы интерфейса
-          href: design/interface-elements.md
-          items:
-            - name: Команды надстроек
-              href: design/add-in-commands.md
-            - name: Области задач
-              href: design/task-pane-add-ins.md
-            - name: Диалоговые окна
-              href: design/dialog-boxes.md
-            - name: Надстройки содержимого
-              href: design/content-add-ins.md
-        - name: Шаблоны оформления UX
-          href: design/ux-design-pattern-templates.md
-          items:
-            - name: Проверка подлинности
-              href: design/authentication-patterns.md
-            - name: Первый запуск
-              href: design/first-run-experience-patterns.md
-            - name: Навигация
-              href: design/navigation-patterns.md
-            - name: Фирменная символика
-              href: design/branding-patterns.md
-        - name: Ресурсы
-          items:
-            - name: Наборы инструментов для разработки
-              href: design/design-toolkits.md
-            - name: Office UI Fabric
-              href: design/office-ui-fabric.md
-            - name: Начало работы с Fabric React
-              href: design/using-office-ui-fabric-react.md
-    - name: Разработка
+      - name: Специальные возможности
+        href: design/accessibility-guidelines.md
+      - name: Стиль речи
+        href: design/voice-guidelines.md
+      - name: Визуализация данных
+        href: design/data-visualization-guidelines.md
+    - name: Язык проектирования
+      href: design/add-in-design-language.md
       items:
-        - name: Версии Office и наборы обязательных элементов
-          href: develop/office-versions-and-requirement-sets.md
-        - name: Установите последнюю версию Office
-          href: develop/install-latest-office-version.md
-        - name: API JavaScript для Office
-          href: develop/understanding-the-javascript-api-for-office.md
-          items:
-            - name: Поддержка надстроек содержимого и области задач
-              href: develop/support-for-task-pane-and-content-add-ins.md
-            - name: Ссылка на файл Office.js
-              href: develop/referencing-the-javascript-api-for-office-library-from-its-cdn.md
-            - name: Загрузка Office.js
-              href: develop/loading-the-dom-and-runtime-environment.md
-            - name: Объектная модель API JavaScript для Office
-              href: develop/office-javascript-api-object-model.md
-            - name: Асинхронное программирование в случае надстроек Office
-              href: develop/asynchronous-programming-in-office-add-ins.md
-            - name: Сохранение состояния и параметров
-              href: develop/persisting-add-in-state-and-settings.md
-        - name: Манифест
-          href: develop/add-in-manifests.md
-          items:
-            - name: Создание команд надстроек
-              href: develop/create-addin-commands.md
-            - name: Указание ведущих приложений Office
-              href: develop/specify-office-hosts-and-api-requirements.md
-            - name: Запрос разрешения на использование API в надстройках содержимого и области задач
-              href: develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md
-            - name: Обновление версии API и манифеста
-              href: develop/update-your-javascript-api-for-office-and-manifest-schema-version.md
-        - name: Проверка подлинности и авторизация
-          items:
-            - name: Включение единого входа в надстройке
-              href: develop/sso-in-office-add-ins.md
-              items:
-                - name: Создание надстройки с единым входом с использованием ASP.NET
-                  href: develop/create-sso-office-add-ins-aspnet.md
-                - name: Создание надстройки с единым входом с использованием Node.js
-                  href: develop/create-sso-office-add-ins-nodejs.md
-                - name: 'Регистрация надстройки Office, использующей единый вход с Azure AD версии 2.0'
-                  href: develop/register-sso-add-in-aad-v2.md
-                - name: Предоставление надстройке согласия администратора
-                  href: develop/grant-admin-consent-to-an-add-in.md
-                - name: Устранение ошибок единого входа (SSO)
-                  href: develop/troubleshoot-sso-in-office-add-ins.md
-            - name: Авторизация внешних служб
-              href: develop/auth-external-add-ins.md
-            - name: Авторизация в Microsoft Graph
-              href: develop/authorize-to-microsoft-graph.md
-        - name: Использование Dialog API
-          href: develop/dialog-api-in-office-add-ins.md
-        - name: Автоматическое открытие области задач с документом
-          href: develop/automatically-open-a-task-pane-with-a-document.md
-        - name: 'Обход ограничений, связанных с политикой единого домена'
-          href: develop/addressing-same-origin-policy-limitations.md
-        - name: Локализация
-          href: develop/localization.md
-        - name: Разработка надстроек с помощью Visual Studio
-          items:
-            - name: Создание и отладка надстроек Office в Visual Studio
-              href: develop/create-and-debug-office-add-ins-in-visual-studio.md
-              items: null
-            - name: Создание и отладка надстроек Office в Visual Studio
-              href: develop/get-javascript-intellisense-in-visual-studio.md
-            - name: Преобразование JavaScript в TypeScript
-              href: develop/convert-javascript-to-typescript.md
-        - name: Разработка надстроек для iPad
-          href: develop/develop-office-add-ins-for-the-ipad.md
-        - name: Разработка надстроек с помощью Angular
-          href: develop/add-ins-with-angular2.md
-    - name: Надстройки Excel
-      href: excel/excel-add-ins-overview.md
+      - name: Шрифтовое оформление
+        href: design/add-in-typography.md
+      - name: Цвет
+        href: design/add-in-color.md
+      - name: Макет
+        href: design/add-in-layout.md
+      - name: Значки
+        href: design/add-in-icons.md
+      - name: Использование движения
+        displayName: Motion
+        href: design/using-motion-office-addins.md
+    - name: Элементы интерфейса
+      href: design/interface-elements.md
+      items:
+      - name: Команды надстроек
+        href: design/add-in-commands.md
+      - name: Области задач
+        href: design/task-pane-add-ins.md
+      - name: Диалоговые окна
+        href: design/dialog-boxes.md
+      - name: Контентные надстройки
+        href: design/content-add-ins.md
+    - name: Шаблоны оформления UX
+      href: design/ux-design-pattern-templates.md
+      items:
+      - name: Проверка подлинности
+        href: design/authentication-patterns.md
+      - name: Первый запуск
+        href: design/first-run-experience-patterns.md
+      - name: Навигация
+        href: design/navigation-patterns.md
+      - name: Фирменная символика
+        href: design/branding-patterns.md
+    - name: Ресурсы
+      items:
+      - name: Наборы инструментов для разработки
+        href: design/design-toolkits.md
+      - name: Office UI Fabric
+        href: design/office-ui-fabric.md
+      - name: Начало работы с Fabric React
+        href: design/using-office-ui-fabric-react.md
+  - name: Разработка
+    items:
+    - name: Версии Office и наборы обязательных элементов
+      href: develop/office-versions-and-requirement-sets.md
+    - name: Установите последнюю версию Office
+      href: develop/install-latest-office-version.md
+    - name: API JavaScript для Office
+      href: develop/understanding-the-javascript-api-for-office.md
+      items:
+      - name: Поддержка надстроек содержимого и области задач
+        href: develop/support-for-task-pane-and-content-add-ins.md
+      - name: Ссылка на файл Office.js
+        href: develop/referencing-the-javascript-api-for-office-library-from-its-cdn.md
+      - name: Загрузка Office.js
+        href: develop/loading-the-dom-and-runtime-environment.md
+      - name: Объектная модель API JavaScript для Office
+        href: develop/office-javascript-api-object-model.md
+      - name: Асинхронное программирование в надстройках Office
+        href: develop/asynchronous-programming-in-office-add-ins.md
+      - name: Сохранение состояния и параметров
+        href: develop/persisting-add-in-state-and-settings.md
+    - name: Манифест
+      href: develop/add-in-manifests.md
+      items:
+      - name: Создание команд надстроек
+        href: develop/create-addin-commands.md
+      - name: Указание ведущих приложений Office
+        href: develop/specify-office-hosts-and-api-requirements.md
+      - name: Запрос разрешения на использование API в надстройках содержимого и области задач
+        href: develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md
+      - name: Обновление версии API и манифеста
+        href: develop/update-your-javascript-api-for-office-and-manifest-schema-version.md
+    - name: Проверка подлинности и авторизация
+      items:
+      - name: Включение единого входа в надстройке
+        href: develop/sso-in-office-add-ins.md
+        items:
+        - name: Создание надстройки с единым входом с использованием ASP.NET
+          href: develop/create-sso-office-add-ins-aspnet.md
+        - name: Создание надстройки с единым входом с использованием Node.js
+          href: develop/create-sso-office-add-ins-nodejs.md
+        - name: Регистрация надстройки Office, использующей единый вход с Azure AD версии 2.0
+          href: develop/register-sso-add-in-aad-v2.md
+        - name: Предоставление надстройке согласия администратора
+          href: develop/grant-admin-consent-to-an-add-in.md
+        - name: Устранение ошибок единого входа
+          href: develop/troubleshoot-sso-in-office-add-ins.md
+      - name: Авторизация внешних служб
+        href: develop/auth-external-add-ins.md
+      - name: Авторизация в Microsoft Graph
+        href: develop/authorize-to-microsoft-graph.md
+    - name: Использование Dialog API
+      href: develop/dialog-api-in-office-add-ins.md
+    - name: Автоматическое открытие области задач с документом
+      href: develop/automatically-open-a-task-pane-with-a-document.md
+    - name: Обход ограничений, связанных с политикой единого домена
+      href: develop/addressing-same-origin-policy-limitations.md
+    - name: Локализация
+      href: develop/localization.md
+    - name: Разработка надстроек с помощью Visual Studio
+      items:
+      - name: Создание и отладка надстроек Office в Visual Studio
+        href: develop/create-and-debug-office-add-ins-in-visual-studio.md
+      - name: Создание и отладка надстроек Office в Visual Studio
+        href: develop/get-javascript-intellisense-in-visual-studio.md
+      - name: Преобразование JavaScript в TypeScript
+        href: develop/convert-javascript-to-typescript.md
+    - name: Разработка надстроек для iPad
+      href: develop/develop-office-add-ins-for-the-ipad.md
+    - name: Разработка надстроек с помощью Angular
+      href: develop/add-ins-with-angular2.md
+  - name: Надстройки Excel
+    displayName: Excel
+    href: excel/excel-add-ins-overview.md
+    items:
+    - name: Создайте свою первую надстройку Excel
       displayName: Excel
+      href: excel/excel-add-ins-get-started-overview.md
       items:
-        - name: Создание первой надстройки Excel
-          href: excel/excel-add-ins-get-started-overview.md
+      - name: Использовать Angular
+        displayName: Excel
+        href: excel/excel-add-ins-get-started-angular.md
+      - name: Использовать jQuery
+        displayName: Excel
+        href: excel/excel-add-ins-get-started-jquery.md
+      - name: Использовать React
+        displayName: Excel
+        href: excel/excel-add-ins-get-started-react.md
+      - name: Использовать Vue
+        displayName: Excel
+        href: excel/excel-add-ins-get-started-vue.md
+    - name: Руководство по надстройкам Excel
+      displayName: Excel
+      href: tutorials/excel-tutorial.yml
+    - name: Основные принципы
+      displayName: Excel
+      href: excel/excel-add-ins-core-concepts.md
+      items:
+      - name: Настраиваемые функции
+        displayName: Excel
+        href: excel/custom-functions-overview.md
+        items:
+        - name: Регистрация настраиваемых функций Excel в JSON
           displayName: Excel
-          items:
-            - name: Использовать Angular
-              href: excel/excel-add-ins-get-started-angular.md
-              displayName: Excel
-            - name: Использовать jQuery
-              href: excel/excel-add-ins-get-started-jquery.md
-              displayName: Excel
-            - name: Использовать React
-              href: excel/excel-add-ins-get-started-react.md
-              displayName: Excel
-            - name: Использовать Vue
-              href: excel/excel-add-ins-get-started-vue.md
-              displayName: Excel
-        - name: Руководство по надстройкам Excel
-          href: tutorials/excel-tutorial.yml
-          displayName: Excel
-        - name: Основные принципы
-          href: excel/excel-add-ins-core-concepts.md
-          displayName: Excel
-          items:
-            - name: Настраиваемые функции
-              href: excel/custom-functions-overview.md
-              displayName: Excel
-              items:
-                - name: Регистрация настраиваемых функций Excel в JSON
-                  href: excel/custom-functions-json.md
-                  displayName: Excel
-            - name: Диаграммы
-              href: excel/excel-add-ins-charts.md
-              displayName: Excel
-            - name: События
-              href: excel/excel-add-ins-events.md
-              displayName: Excel
-            - name: Диапазоны
-              href: excel/excel-add-ins-ranges.md
-              displayName: Excel
-            - name: Таблицы
-              href: excel/excel-add-ins-tables.md
-              displayName: Excel
-            - name: Листы
-              href: excel/excel-add-ins-worksheets.md
-              displayName: Excel
-        - name: Расширенные концепции
-          href: excel/excel-add-ins-advanced-concepts.md
-          displayName: Excel
-          items:
-            - name: Вызов встроенных функций
-              href: excel/excel-add-ins-worksheet-functions.md
-              displayName: Excel
-            - name: Совместное редактирование в надстройках Excel
-              href: excel/co-authoring-in-excel-add-ins.md
-              displayName: Excel
-            - name: Проверка данных
-              href: excel/excel-add-ins-data-validation.md
-              displayName: Excel
-            - name: Обработка ошибок
-              href: excel/excel-add-ins-error-handling.md
-              displayName: Excel
-            - name: Оптимизация производительности
-              href: excel/performance.md
-              displayName: Excel
-        - name: Справка по API JavaScript для Excel
-          href: 'https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview'
-          displayName: Excel
-    - name: Надстройки Word
-      href: word/word-add-ins-programming-overview.md
+          href: excel/custom-functions-json.md
+      - name: Диаграммы
+        displayName: Excel
+        href: excel/excel-add-ins-charts.md
+      - name: События
+        displayName: Excel
+        href: excel/excel-add-ins-events.md
+      - name: Сводные таблицы
+        displayName: Excel
+        href: excel/excel-add-ins-pivottables.md
+      - name: Диапазоны
+        displayName: Excel
+        href: excel/excel-add-ins-ranges.md
+      - name: Таблицы
+        displayName: Excel
+        href: excel/excel-add-ins-tables.md
+      - name: Электронные таблицы
+        displayName: Excel
+        href: excel/excel-add-ins-worksheets.md
+    - name: Расширенные концепции
+      displayName: Excel
+      href: excel/excel-add-ins-advanced-concepts.md
+      items:
+      - name: Вызов встроенных функций
+        displayName: Excel
+        href: excel/excel-add-ins-worksheet-functions.md
+      - name: Совместное редактирование в надстройках Excel
+        displayName: Excel
+        href: excel/co-authoring-in-excel-add-ins.md
+      - name: Проверка данных
+        displayName: Excel
+        href: excel/excel-add-ins-data-validation.md
+      - name: Обработка ошибок
+        displayName: Excel
+        href: excel/excel-add-ins-error-handling.md
+      - name: Оптимизация производительности
+        displayName: Excel
+        href: excel/performance.md
+    - name: Справочник по API JavaScript для Excel
+      displayName: Excel
+      href: https://docs.microsoft.com/en-us/javascript/office/overview/excel-add-ins-reference-overview?view=office-js
+  - name: Надстройки Word
+    displayName: Word
+    href: word/word-add-ins-programming-overview.md
+    items:
+    - name: Создайте свою первую надстройку Word
       displayName: Word
-      items:
-        - name: Создание первой надстройки Word
-          href: word/word-add-ins.md
-          displayName: Word
-        - name: Руководство по надстройкам Word
-          href: tutorials/word-tutorial.yml
-          displayName: Word
-        - name: Создание улучшенных надстроек Word с помощью Office Open XML
-          href: word/create-better-add-ins-for-word-with-office-open-xml.md
-          displayName: Word
-        - name: Надстройки области задач словаря
-          href: word/dictionary-task-pane-add-ins.md
-          displayName: Word
-        - name: Получение всего документа из надстройки
-          href: word/get-the-whole-document-from-an-add-in-for-word.md
-          displayName: Word
-        - name: Чтение и запись данных при активном выделении
-          href: develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md
-          displayName: Word
-        - name: Привязка к областям в документе
-          href: develop/bind-to-regions-in-a-document-or-spreadsheet.md
-          displayName: Word
-        - name: 'Используйте параметры поиска, чтобы найти текст в надстройке Word'
-          href: word/search-option-guidance.md
-          displayName: Word
-        - name: Справка по API JavaScript для Word
-          href: 'https://dev.office.com/reference/add-ins/word/word-add-ins-reference-overview'
-          displayName: Word
-    - name: Надстройки Outlook
-      href: 'https://docs.microsoft.com/en-us/outlook/add-ins/'
-      displayName: Outlook
-    - name: Надстройки PowerPoint
-      href: powerpoint/powerpoint-add-ins.md
+      href: word/word-add-ins.md
+    - name: Руководство по надстройкам Word
+      displayName: Word
+      href: tutorials/word-tutorial.yml
+    - name: Создание надстроек Word с помощью Office Open XML
+      displayName: Word
+      href: word/create-better-add-ins-for-word-with-office-open-xml.md
+    - name: Надстройки области задач словаря
+      displayName: Word
+      href: word/dictionary-task-pane-add-ins.md
+    - name: Получение всего документа из надстройки
+      displayName: Word
+      href: word/get-the-whole-document-from-an-add-in-for-word.md
+    - name: Чтение и запись данных при активном выделении
+      displayName: Word
+      href: develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md
+    - name: Привязка к областям в документе
+      displayName: Word
+      href: develop/bind-to-regions-in-a-document-or-spreadsheet.md
+    - name: Используйте параметры поиска, чтобы найти текст в надстройке Word
+      displayName: Word
+      href: word/search-option-guidance.md
+    - name: Справочник по API JavaScript для Word
+      displayName: Word
+      href: https://docs.microsoft.com/en-us/javascript/office/overview/word-add-ins-reference-overview?view=office-js
+  - name: Надстройки Outlook
+    displayName: Outlook
+    href: https://docs.microsoft.com/outlook/add-ins/
+  - name: Надстройки PowerPoint
+    displayName: PowerPoint
+    href: powerpoint/powerpoint-add-ins.md
+    items:
+    - name: Создайте свою первую надстройку PowerPoint
       displayName: PowerPoint
-      items:
-        - name: Создание первой надстройки PowerPoint
-          href: powerpoint/powerpoint-add-ins-get-started.md
-          displayName: PowerPoint
-        - name: Руководство по надстройкам PowerPoint
-          href: tutorials/powerpoint-tutorial.yml
-          displayName: PowerPoint
-        - name: Использование тем документов в надстройках PowerPoint
-          href: powerpoint/use-document-themes-in-your-powerpoint-add-ins.md
-          displayName: PowerPoint
-        - name: Получение всего документа из надстройки
-          href: powerpoint/get-the-whole-document-from-an-add-in-for-powerpoint.md
-          displayName: PowerPoint
-    - name: Надстройки OneNote
-      href: onenote/onenote-add-ins-programming-overview.md
+      href: powerpoint/powerpoint-add-ins-get-started.md
+    - name: Руководство по надстройкам PowerPoint
+      displayName: PowerPoint
+      href: tutorials/powerpoint-tutorial.yml
+    - name: Использование тем документов в надстройках PowerPoint
+      displayName: PowerPoint
+      href: powerpoint/use-document-themes-in-your-powerpoint-add-ins.md
+    - name: Получение всего документа из надстройки
+      displayName: PowerPoint
+      href: powerpoint/get-the-whole-document-from-an-add-in-for-powerpoint.md
+  - name: Надстройки OneNote
+    displayName: OneNote
+    href: onenote/onenote-add-ins-programming-overview.md
+    items:
+    - name: Создайте свою первую надстройку OneNote
       displayName: OneNote
-      items:
-        - name: Создание первой надстройки OneNote
-          href: onenote/onenote-add-ins-getting-started.md
-          displayName: OneNote
-        - name: Работа с содержимым страницы в OneNote
-          href: onenote/onenote-add-ins-page-content.md
-          displayName: OneNote
-        - name: Справка по API JavaScript для OneNote
-          href: 'https://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference'
-          displayName: OneNote
-    - name: Надстройки Project
-      href: project/project-add-ins.md
+      href: onenote/onenote-add-ins-getting-started.md
+    - name: Работа с содержимым страницы в OneNote
+      displayName: OneNote
+      href: onenote/onenote-add-ins-page-content.md
+    - name: Справочник по API JavaScript для OneNote
+      displayName: OneNote
+      href: https://docs.microsoft.com/en-us/javascript/office/overview/onenote-add-ins-javascript-reference?view=office-js
+  - name: Надстройки Project
+    displayName: Project
+    href: project/project-add-ins.md
+    items:
+    - name: Создайте свою первую надстройку Project
       displayName: Project
+      href: project/project-add-ins-get-started.md
+    - name: Создание надстройки Project, использующей REST с локальной службой OData
+      displayName: Project
+      href: project/create-a-project-add-in-that-uses-rest-with-an-on-premises-odata-service.md
+    - name: Создайте свою первую надстройку области задач для Project с помощью текстового редактора
+      displayName: Project
+      href: project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md
+  - name: Тестирование и отладка
+    href: testing/test-debug-office-add-ins.md
+    items:
+    - name: Windows
       items:
-        - name: Создание первой надстройки Project
-          href: project/project-add-ins-get-started.md
-          displayName: Project
-        - name: 'Создание надстройки Project, использующей REST с локальной службой OData'
-          href: project/create-a-project-add-in-that-uses-rest-with-an-on-premises-odata-service.md
-          displayName: Project
-        - name: Создание первой надстройки области задач для Project с помощью текстового редактора
-          href: project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md
-          displayName: Project
-    - name: Тестирование и отладка
-      href: testing/test-debug-office-add-ins.md
+      - name: Загрузка неопубликованных надстроек Office в Windows
+        href: testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md
+      - name: Загрузка неопубликованных надстроек Office с использованием команды sideload
+        href: testing/sideload-office-addin-using-sideload-command.md
+      - name: Подключение отладчика из области задач
+        href: testing/attach-debugger-from-task-pane.md
+      - name: Отладка с помощью средств разработчика F12
+        href: testing/debug-add-ins-using-f12-developer-tools-on-windows-10.md
+    - name: Office Online
       items:
-        - name: Windows
-          items:
-            - name: Загрузка неопубликованных надстроек Office в Windows
-              href: testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md
-            - name: Загрузка неопубликованных надстроек Office с использованием команды sideload
-              href: testing/sideload-office-addin-using-sideload-command.md
-            - name: Подключение отладчика из области задач
-              href: testing/attach-debugger-from-task-pane.md
-            - name: Отладка с помощью средств разработчика F12
-              href: testing/debug-add-ins-using-f12-developer-tools-on-windows-10.md
-        - name: Office Online
-          items:
-            - name: Загрузка неопубликованных надстроек Office в Office Online
-              href: testing/sideload-office-add-ins-for-testing.md
-            - name: Отладка в Office Online
-              href: testing/debug-add-ins-in-office-online.md
-        - name: iPad и Mac
-          items:
-            - name: Загрузка неопубликованных надстроек Office на iPad и Mac
-              href: testing/sideload-an-office-add-in-on-ipad-and-mac.md
-            - name: Отладка на iPad и Mac
-              href: testing/debug-office-add-ins-on-ipad-and-mac.md
-        - name: Тестирование на удобство использования
-          href: develop/usability-testing.md
-        - name: 'Устранение ошибок, с которыми сталкиваются пользователи'
-          href: testing/testing-and-troubleshooting.md
-        - name: Проверка манифеста надстройки и устранение неполадок
-          href: testing/troubleshoot-manifest.md
-    - name: Публикация
-      href: publish/publish.md
+      - name: Загрузка неопубликованных надстроек Office в Office Online
+        href: testing/sideload-office-add-ins-for-testing.md
+      - name: Отладка в Office Online
+        href: testing/debug-add-ins-in-office-online.md
+    - name: iPad и Mac
       items:
-        - name: Размещение надстройки Office в Microsoft Azure
-          href: publish/host-an-office-add-in-on-microsoft-azure.md
-        - name: Упаковывание надстройки с помощью Visual Studio
-          href: publish/package-your-add-in-using-visual-studio.md
-        - name: Публикация надстроек с помощью централизованного развертывания
-          href: publish/centralized-deployment.md
-        - name: Публикация надстроек в каталоге SharePoint
-          href: publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md
-        - name: Публикация надстроек в AppSource
-          href: 'https://docs.microsoft.com/en-us/office/dev/store/submit-to-the-office-store'
-        - name: Политики проверки AppSource
-          href: 'https://docs.microsoft.com/en-us/office/dev/store/validation-policies'
+      - name: Загрузка неопубликованных надстроек Office на iPad и Mac
+        href: testing/sideload-an-office-add-in-on-ipad-and-mac.md
+      - name: Отладка на iPad и Mac
+        href: testing/debug-office-add-ins-on-ipad-and-mac.md
+    - name: Тестирование удобства использования
+      href: develop/usability-testing.md
+    - name: Устранение ошибок, с которыми сталкиваются пользователи
+      href: testing/testing-and-troubleshooting.md
+    - name: Проверка манифеста надстройки и устранение неполадок
+      href: testing/troubleshoot-manifest.md
+  - name: Публикация
+    href: publish/publish.md
+    items:
+    - name: Размещение надстройки Office в Microsoft Azure
+      href: publish/host-an-office-add-in-on-microsoft-azure.md
+    - name: Упаковывание надстройки с помощью Visual Studio
+      href: publish/package-your-add-in-using-visual-studio.md
+    - name: Публикация надстроек с помощью централизованного развертывания
+      href: publish/centralized-deployment.md
+    - name: Публикация надстроек в каталоге SharePoint
+      href: publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md
+    - name: Публикация надстроек в AppSource
+      href: https://docs.microsoft.com/office/dev/store/submit-to-the-office-store
+    - name: Политики проверки AppSource
+      href: https://docs.microsoft.com/office/dev/store/validation-policies
 - name: Справочные материалы
   items:
-    - name: Манифест надстройки Office
-      href: 'https://dev.office.com/reference/add-ins/manifest/allowsnapshot'
-      displayName: 'Excel, Word, Outlook, PowerPoint, OneNote, Project'
-    - name: API JavaScript для Office
-      href: 'https://dev.office.com/reference/add-ins/javascript-api-for-office'
-      displayName: 'Excel, Word, Outlook, PowerPoint, OneNote, Project'
-    - name: API JavaScript для Excel
-      href: 'https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview'
-      displayName: Excel
-    - name: API JavaScript для Word
-      href: 'https://dev.office.com/reference/add-ins/word/word-add-ins-reference-overview'
-      displayName: Word
-    - name: API JavaScript для OneNote
-      href: 'https://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference'
-      displayName: OneNote
-    - name: API JavaScript для Outlook
-      href: 'https://dev.office.com/reference/add-ins/outlook/tutorial-api-requirement-sets'
-      displayName: Outlook
-    - name: Открытые спецификации API
-      href: 'https://dev.office.com/reference/add-ins/openspec'
-      displayName: 'Excel, Word'
+  - name: Манифест надстройки Office
+    displayName: Excel, Word, Outlook, PowerPoint, OneNote, Project
+    href: https://docs.microsoft.com/javascript/office/manifest/allowsnapshot?view=office-js
+  - name: API JavaScript для Office
+    displayName: Excel, Word, Outlook, Visio, OneNote
+    href: https://docs.microsoft.com/javascript/office/javascript-api-for-office?view=office-js
+  - name: API JavaScript для Excel
+    displayName: Excel
+    href: https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview?view=office-js
+  - name: API JavaScript для OneNote
+    displayName: OneNote
+    href: https://docs.microsoft.com/javascript/office/overview/onenote-add-ins-javascript-reference?view=office-js
+  - name: API JavaScript для Outlook
+    displayName: Outlook
+    href: https://docs.microsoft.com/javascript/office/requirement-sets/outlook-api-requirement-sets?view=office-js
+  - name: API JavaScript для Visio
+    displayName: Visio
+    href: https://docs.microsoft.com/javascript/office/overview/visio-javascript-reference-overview?view=office-js
+  - name: API JavaScript для Word
+    displayName: Word
+    href: https://docs.microsoft.com/javascript/office/overview/word-add-ins-reference-overview?view=office-js
+  - name: API Shared
+    displayName: PowerPoint, Project
+    href: https://docs.microsoft.com/en-us/javascript/office/requirement-sets/office-add-in-requirement-sets?view=office-js
+  - name: Открытые спецификации API
+    displayName: Excel, Word
+    href: https://docs.microsoft.com/javascript/office/openspec?view=office-js
 - name: Ресурсы
   href: resources/resources-links-help.md
-  displayName: 'Excel, Word, Outlook, PowerPoint, OneNote, Project'
+ms.openlocfilehash: 1dd64f00bdf9327b47e74dcc4527d7c6364f8821
+ms.sourcegitcommit: 28fc652bded31205e393df9dec3a9dedb4169d78
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "22928051"
