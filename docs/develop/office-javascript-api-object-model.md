@@ -2,12 +2,12 @@
 title: Объектная модель API JavaScript для Office
 description: ''
 ms.date: 07/27/2018
-ms.openlocfilehash: a1fca2c8dd5a92cadb6f2798c3732093578360e5
-ms.sourcegitcommit: bc68b4cf811b45e8b8d1cbd7c8d2867359ab671b
+ms.openlocfilehash: 999383ae07472ec8d07be0fa714a44339c8ce76d
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "21719883"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925509"
 ---
 # <a name="office-javascript-api-object-model"></a>Объектная модель API JavaScript для Office
 Надстройки JavaScript для Office предоставляют доступ к базовым функциям основного приложения. В основном такой доступ осуществляется при помощи нескольких значимых объектов. Объект [Context](#context-object) предоставляет доступ к среде выполнения после инициализации. Объект [Document](#document-object) дает пользователю контроль над документом Excel, PowerPoint или Word. Объект [Mailbox](#mailbox-object) предоставляет надстройкам Outlook доступ к сообщениям и профилям пользователей. Отношения между этими объектами высокого уровня — это основа надстроек JavaScript.
@@ -16,7 +16,7 @@ ms.locfileid: "21719883"
 
 **Область применения:** все типы надстроек
 
-Когда надстройка [инициализируется](https://docs.microsoft.com/office/dev/add-ins/develop/understanding-the-javascript-api-for-office#initializing-your-add-in), существует множество различных объектов, с которыми она может взаимодействовать в среде выполнения. Контекст среды выполнения надстройки отражается в API посредством объекта [Context](https://dev.office.com/reference/add-ins/shared/office.context) .  **Context** — это основной объект, который предоставляет доступ к наиболее важным объектам API, таким как [Document](https://dev.office.com/reference/add-ins/shared/document) и [Mailbox](https://dev.office.com/reference/add-ins/outlook/Office.context.mailbox), которые, в свою очередь, предоставляют доступ к содержимому документа и почтового ящика.
+Когда надстройка [инициализируется](https://docs.microsoft.com/office/dev/add-ins/develop/understanding-the-javascript-api-for-office#initializing-your-add-in), существует множество различных объектов, с которыми она может взаимодействовать в среде выполнения. Контекст среды выполнения надстройки отражается в API посредством объекта [Context](https://dev.office.com/reference/add-ins/shared/office.context) . **Context** — это основной объект, который предоставляет доступ к наиболее важным объектам API, таким как [Document](https://dev.office.com/reference/add-ins/shared/document) и [Mailbox](https://dev.office.com/reference/add-ins/outlook/Office.context.mailbox), которые, в свою очередь, предоставляют доступ к содержимому документа и почтового ящика.
 
 Например, в надстройках области задач или контентных надстройках можно использовать свойство [document](https://dev.office.com/reference/add-ins/shared/office.context.document) объекта **Context** для получения доступа к свойствам и методам объекта **Document**, чтобы взаимодействовать с содержимым документов Word, электронными таблицами Excel или расписаниями Project. Аналогично этому в надстройках Outlook можно использовать свойство [mailbox](https://dev.office.com/reference/add-ins/outlook/Office.context.mailbox) объекта **Context** для получения доступа к свойствам и методам объекта **Mailbox**, чтобы взаимодействовать с контентом сообщений, запросов на собрание или встреч.
 
@@ -171,4 +171,4 @@ var item = Office.context.mailbox.item;
     
 -  Объект **RoamingSettings** для сохранения пользовательских свойств, относящихся к надстройке Outlook, в почтовом ящике пользователя, в котором установлено приложение.
     
-Сведения об использовании JavaScript в надстройках Outlook см. в статье [Надстройки Outlook](https://docs.microsoft.com/en-us/outlook/add-ins/).
+Сведения об использовании JavaScript в надстройках Outlook см. в статье [Общие сведения о надстройках Outlook](https://docs.microsoft.com/outlook/add-ins/).

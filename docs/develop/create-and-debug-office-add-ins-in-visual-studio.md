@@ -2,12 +2,12 @@
 title: Создание и отладка надстроек Office в Visual Studio
 description: ''
 ms.date: 03/14/2018
-ms.openlocfilehash: 3e4fbcd3919be0d5510b36ae77a6e3706eab9689
-ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
+ms.openlocfilehash: c903f3d475e46ee09a3c350f79c1e3d671ae5923
+ms.sourcegitcommit: 28fc652bded31205e393df9dec3a9dedb4169d78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "19437607"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "22927449"
 ---
 # <a name="create-and-debug-office-add-ins-in-visual-studio"></a>Создание и отладка надстроек Office в Visual Studio
 
@@ -19,7 +19,7 @@ ms.locfileid: "19437607"
 ## <a name="create-an-office-add-in-project-in-visual-studio"></a>Создание проекта надстройки Office в Visual Studio
 
 
-Для начала убедитесь, что у вас установлены инструменты [Office Developer Tools](https://www.visualstudio.com/features/office-tools-vs.aspx) и версия Microsoft Office. Вы можете присоединиться к [программе для разработчиков Office 365](https://developer.microsoft.com/en-us/office/dev-program) или получить [последнюю версию](../develop/install-latest-office-version.md), следуя приведенным ниже инструкциям.
+Для начала убедитесь, что у вас установлены инструменты [Office Developer Tools](https://www.visualstudio.com/features/office-tools-vs.aspx) и версия Microsoft Office. Вы можете присоединиться к [программе для разработчиков Office 365](https://developer.microsoft.com/office/dev-program) или получить [последнюю версию](../develop/install-latest-office-version.md), следуя приведенным ниже инструкциям.
 
 
 1. В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.
@@ -48,7 +48,7 @@ ms.locfileid: "19437607"
 |**Проект**|**Описание**|
 |:-----|:-----|
 |Проект надстройки|Содержит только XML-файл манифеста, который содержит все параметры, описывающие надстройку. Эти параметры помогают ведущему приложению Office определять, когда и где должна активироваться надстройка. Visual Studio создает содержимое этого файла за вас, чтобы вы могли сразу запустить проект и начать использовать надстройку. Вы можете менять эти параметры в любой момент с помощью редактора манифеста.|
-|Проект веб-приложения|Содержит страницы контента надстройки, включающие все файлы и ссылки на файлы, необходимые для разработки страниц HTML и JavaScript с поддержкой Office. При разработке надстройки Visual Studio размещает веб-приложение на локальном сервере IIS. Когда вы будете готовы опубликовать надстройку, потребуется найти сервер для размещения проекта. Дополнительные сведения о проектах веб-приложений ASP.NET см. в статье [Веб-проекты ASP.NET](http://msdn.microsoft.com/en-us/library/cdcd712f-96b0-4165-8b5d-9d0566650a28%28Office.15%29.aspx).|
+|Проект веб-приложения|Содержит страницы контента надстройки, включающие все файлы и ссылки на файлы, необходимые для разработки страниц HTML и JavaScript с поддержкой Office. При разработке надстройки Visual Studio размещает веб-приложение на локальном сервере IIS. Когда вы будете готовы опубликовать надстройку, потребуется найти сервер для размещения проекта. Дополнительные сведения о проектах веб-приложений ASP.NET см. в статье [Веб-проекты ASP.NET](http://msdn.microsoft.com/library/cdcd712f-96b0-4165-8b5d-9d0566650a28%28Office.15%29.aspx).|
 
 ## <a name="modify-your-add-in-settings"></a>Изменение параметров надстроек
 
@@ -91,7 +91,7 @@ ms.locfileid: "19437607"
 ### <a name="to-open-the-property-pages-of-a-project"></a>Открытие страниц свойств проекта
 
 
-1. В **обозревателе решений** выберите имя проекта.
+1. В **Обозревателе решений** выберите основной проект надстройки (не веб-проект).
     
 2. В панели меню выберите пункты **Вид** и **Окно свойств**.
     
@@ -159,19 +159,19 @@ Visual Studio создает проект и выполняет следующи
 Затем Visual Studio делает следующее:
 
 
-1. Изменяет элемент [SourceLocation](http://msdn.microsoft.com/en-us/library/e6ea8cd4-7c8b-1da7-d8f8-8d3c80a088bc%28Office.15%29.aspx) файла манифеста XML, заменяя маркер ~ remoteAppUrl полным адресом начальной страницы (например, http://localhost/MyAgave.html)).
+1. Изменяет элемент [SourceLocation](https://dev.office.com/reference/add-ins/manifest/sourcelocation) файла манифеста XML, заменяя маркер ~remoteAppUrl полным адресом начальной страницы (например, http://localhost/MyAgave.html)).
     
 2. Запускает проект веб-приложения в IIS Express.
     
 3. Открывает ведущее приложение. 
     
-Visual Studio не отображает ошибки проверки в окне **ВЫВОД** при построении проекта. Visual Studio сообщает об ошибках и предупреждениях в окне **ОШИБКИ** по мере их возникновения. Кроме того, Visual Studio также выделяет ошибки волнистой линией разных цветов прямо в коде и текстовом редакторе. Эти пометки уведомляют о проблемах, обнаруженных Visual Studio в коде. Дополнительные сведения можно узнать в разделе [Код и текстовый редактор](https://msdn.microsoft.com/en-us/library/se2f663y(v=vs.140).aspx). Дополнительные сведения о включении или отключении проверки изложены в следующих статьях: 
+Visual Studio не отображает ошибки проверки в окне **ВЫВОД** при построении проекта. Visual Studio сообщает об ошибках и предупреждениях в окне **ОШИБКИ** по мере их возникновения. Кроме того, Visual Studio также выделяет ошибки волнистой линией разных цветов прямо в коде и текстовом редакторе. Эти пометки уведомляют о проблемах, обнаруженных Visual Studio в коде. Дополнительные сведения можно узнать в разделе [Код и текстовый редактор](https://msdn.microsoft.com/library/se2f663y(v=vs.140).aspx). Дополнительные сведения о включении или отключении проверки изложены в следующих статьях: 
 
-- ["Параметры", "Текстовый редактор", JavaScript, IntelliSense](https://msdn.microsoft.com/en-us/library/hh362485(v=vs.140).aspx)
+- ["Параметры", "Текстовый редактор", JavaScript, IntelliSense](https://msdn.microsoft.com/library/hh362485(v=vs.140).aspx)
     
-- [Практическое руководство. Установка параметров проверки редактирования HTML в Visual Web Developer](https://msdn.microsoft.com/en-us/library/0byxkfet(v=vs.100).aspx)
+- [Практическое руководство. Установка параметров проверки редактирования HTML в Visual Web Developer](https://msdn.microsoft.com/library/0byxkfet(v=vs.100).aspx)
     
-- [Проверка, CSS, текстовый редактор, диалоговое окно "Параметры"](https://msdn.microsoft.com/en-us/library/se2f663y(v=vs.140).aspx)
+- [Проверка, CSS, текстовый редактор, диалоговое окно "Параметры"](https://msdn.microsoft.com/library/se2f663y(v=vs.140).aspx)
     
 Чтобы просмотреть правила проверки XML-файла манифеста проекта, ознакомьтесь с разделом [XML-манифест надстроек для Office](../develop/add-in-manifests.md).
 
