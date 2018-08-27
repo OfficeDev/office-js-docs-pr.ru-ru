@@ -2,12 +2,12 @@
 title: Локализация надстроек Office
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: d7888859ca29a62541020b45b0b7a3638c41f4f2
-ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
+ms.openlocfilehash: c700dfa2f424577edf364505b0da47854467f77b
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "19437740"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925579"
 ---
 # <a name="localization-for-office-add-ins"></a>Локализация надстроек Office
 
@@ -62,7 +62,7 @@ API JavaScript для Office предоставляет два свойства,
 |[SourceLocation]   |Пользователи в каждой локали видят веб-страницу, специально разработанную для надстройки в этой локали. |
 
 
-> **Примечание.** Локализовать описание и отображаемое имя можно только для тех языковых стандартов, которые поддерживаются в Office. Список языков и языковых стандартов для текущего выпуска Office см. в статье [Идентификаторы языков и значения OptionState Id в Office 2013](http://technet.microsoft.com/en-us/library/cc179219.aspx).
+> **Примечание.** Локализовать описание и отображаемое имя можно только для тех языковых стандартов, которые поддерживаются в Office. Список языков и языковых стандартов для текущего выпуска Office см. в статье [Идентификаторы языков и значения OptionState Id в Office 2013](https://docs.microsoft.com/previous-versions/office/office-2013-resource-kit/cc179219(v=office.15)).
 
 
 ### <a name="examples"></a>Примеры
@@ -158,7 +158,7 @@ API JavaScript для Office предоставляет два свойства,
 
 Если для создания Надстройки Office вы используете Visual Studio, платформа .NET Framework и Ajax предоставляют способы глобализации и локализации файлов клиентских скриптов.
 
-Можно глобализировать и использовать расширения типов JavaScript [Date](http://msdn.microsoft.com/library/caf98d32-2de2-4704-8198-692350343681.aspx) и [Number](http://msdn.microsoft.com/library/c216d3a1-12ae-47d1-bca1-c3666d04572f.aspx) и объект JavaScript [Date](http://msdn.microsoft.com/library/ce2202bb-7ec9-4f5a-bf48-3a04feff283e.aspx) в коде JavaScript для Надстройка Office, чтобы отображать значения в зависимости от языковых параметров, заданных в текущем браузере. Дополнительные сведения см. в статье [Walkthrough: Globalizing a Date by Using Client Script](http://msdn.microsoft.com/library/69b34e6d-d590-4d03-a763-b7ae54b47d74.aspx).
+Можно глобализировать и использовать расширения типов JavaScript [Date](http://msdn.microsoft.com/library/caf98d32-2de2-4704-8198-692350343681.aspx) и [Number](http://msdn.microsoft.com/library/c216d3a1-12ae-47d1-bca1-c3666d04572f.aspx) и объект JavaScript [Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) в коде JavaScript для Надстройка Office, чтобы отображать значения в зависимости от языковых параметров, заданных в текущем браузере. Дополнительные сведения см. в статье [Walkthrough: Globalizing a Date by Using Client Script](http://msdn.microsoft.com/library/69b34e6d-d590-4d03-a763-b7ae54b47d74.aspx).
 
 Можно включить локализованные строки ресурсов напрямую в отдельные файлы JavaScript, чтобы предоставить клиентские файлы скриптов для разных языковых параметров, задаваемых в браузере или предоставляемых пользователем. Создайте отдельный файл скрипта для каждого поддерживаемого языкового параметра. В каждый файл скрипта включите объект в формате JSON, содержащий строки ресурсов для соответствующего языкового параметра. Локализованные значения применяются во время выполнения скрипта в браузере. 
 
@@ -175,7 +175,7 @@ API JavaScript для Office предоставляет два свойства,
 
 ### <a name="configure-office-2013-to-use-additional-languages-for-display-or-editing"></a>Настройка Office 2013 на использование дополнительных языков для отображения или редактирования
 
-Для установки дополнительного языка можно использовать языковой пакет Office 2013. Дополнительные сведения о языковых пакетах и способах их получения см. в статье [Языковые возможности Office 2013](http://office.microsoft.com/en-us/language-packs/).
+Для установки дополнительного языка можно использовать языковой пакет Office 2013. Дополнительные сведения о языковых пакетах и способах их получения см. в статье [Языковые возможности Office 2013](http://office.microsoft.com/language-packs/).
 
 > **Примечание.** Если вы подписчик MSDN, то для вас уже могут быть доступны языковые пакеты Office 2013. Чтобы определить, позволяет ли ваша подписка скачать языковые пакеты Office 2013, перейдите на [главную страницу подписок на MSDN](https://msdn.microsoft.com/subscriptions/manage/), в поле **Загрузка программного обеспечения** введите "языковой пакет Office 2013", нажмите кнопку **Поиск**, а затем выберите **Продукты, доступные для моей подписки**. В разделе **Язык** установите флажок нужного языкового пакета и нажмите кнопку **Перейти**. 
 
@@ -419,7 +419,7 @@ API JavaScript для Office предоставляет два свойства,
 ## <a name="see-also"></a>См. также
 
 - [Рекомендации по проектированию надстроек Office](../design/add-in-design.md)    
-- [Идентификаторы языков и значения OptionState Id в Office 2013](http://technet.microsoft.com/en-us/library/cc179219%28Office.15%29.aspx)
+- [Идентификаторы языков и значения OptionState Id в Office 2013](https://docs.microsoft.com/previous-versions/office/office-2013-resource-kit/cc179219(v=office.15))
 
 [DefaultLocale]:        https://dev.office.com/reference/add-ins/manifest/defaultlocale
 [Описание]:          https://dev.office.com/reference/add-ins/manifest/description

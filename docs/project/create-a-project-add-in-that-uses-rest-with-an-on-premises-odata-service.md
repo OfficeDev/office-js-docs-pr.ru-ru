@@ -2,12 +2,12 @@
 title: Создание надстройки Project, использующей REST с локальной службой OData Project Server
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: ce481438086f7e55dd27acb61010e61dff7153dc
-ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
+ms.openlocfilehash: 23f9a2f1f2272d5fce4609e111932f4b585caa31
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "19439210"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925544"
 ---
 # <a name="create-a-project-add-in-that-uses-rest-with-an-on-premises-project-server-odata-service"></a>Создание надстройки Project, использующей REST с локальной службой OData Project Server
 
@@ -29,7 +29,7 @@ ms.locfileid: "19439210"
     > [!NOTE]
     > С помощью Project стандартный 2013 можно размещать надстройки области задач, но невозможно войти в Project Web App.
 
-- Visual Studio 2015 с Инструменты разработчика Office для Visual Studio содержит шаблоны, позволяющие создавать Надстройки Office и SharePoint. Убедитесь, что у вас установлена самая последняя версия Office Developer Tools. См. раздел _Средства_ статьи [Надстройки Office и скачиваемые файлы для SharePoint](http://msdn.microsoft.com/en-us/office/apps/fp123627.aspx).
+- Visual Studio 2015 с Инструменты разработчика Office для Visual Studio содержит шаблоны, позволяющие создавать Надстройки Office и SharePoint. Убедитесь, что у вас установлена самая последняя версия Office Developer Tools. См. раздел _Средства_ статьи [Надстройки Office и скачиваемые файлы для SharePoint](https://developer.microsoft.com/office/docs).
     
 - Процедуры и примеры кода, приведенные в этой статье, получают доступ к службе **ProjectData**, предоставляемой Project Server 2013 в локальном домене. Методы jQuery в этой статье не работают с Project Online.
     
@@ -39,9 +39,9 @@ ms.locfileid: "19439210"
 ### <a name="procedure-1-to-verify-that-the-projectdata-service-is-accessible"></a>Процедура 1. Проверка доступности службы ProjectData
 
 
-1. Чтобы разрешить браузеру напрямую отображать XML-данные из запроса REST, отключите вид чтения канала. Дополнительные сведения о том, как это сделать в Internet Explorer, см. в процедуру 1, шаг 4 в статье [Создание запросов веб-каналов OData для данных отчетов Project](http://msdn.microsoft.com/library/3eafda3b-f006-48be-baa6-961b2ed9fe01%28Office.15%29.aspx).
+1. Чтобы разрешить браузеру напрямую отображать XML-данные из запроса REST, отключите вид чтения канала. Дополнительные сведения о том, как это сделать в Internet Explorer, см. в процедуру 1, шаг 4 в статье [Создание запросов веб-каналов OData для данных отчетов Project](https://docs.microsoft.com/previous-versions/office/project-odata/jj163048(v=office.15)).
     
-2. Отправьте запрос службе  **ProjectData** с помощью веб-обозревателя, используя следующий URL-адрес: **http://ServerName /ProjectServerName /_api/ProjectData**. Например, если `http://MyServer/pwa` — это экземпляр Project Web App, то в браузере будут показаны следующие результаты:
+2. Отправьте запрос службе  **ProjectData** с помощью веб-обозревателя, используя следующий URL-адрес: **http://ServerName /ProjectServerName /_api/ProjectData**. Например, если экземпляр Project Web App — это `http://MyServer/pwa`, то в браузере будут показаны следующие результаты:
     
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -667,7 +667,7 @@ ms.locfileid: "19439210"
     
 
 > [!NOTE]
-> Имеются ограничения на объем данных, который может быть возвращен в одном запросе службы **ProjectData**. Это значение зависит от конкретной сущности. Например, для набора сущностей **Projects** по умолчанию действует ограничение в 100 проектов на запрос, но для набора сущностей **Risks** — 200. Для установки в рабочей среде код примера **HelloProjectOData** необходимо изменить, чтобы поддерживались запросы, содержащие более 100 проектов. Дополнительные сведения см. в разделе [Дальнейшие действия](#next-steps) и статье [Создание запросов веб-каналов OData для данных отчетов Project](http://msdn.microsoft.com/library/3eafda3b-f006-48be-baa6-961b2ed9fe01%28Office.15%29.aspx).
+> Имеются ограничения на объем данных, который может быть возвращен в одном запросе службы **ProjectData**. Это значение зависит от конкретной сущности. Например, для набора сущностей **Projects** по умолчанию действует ограничение в 100 проектов на запрос, но для набора сущностей **Risks** — 200. Для установки в рабочей среде код примера **HelloProjectOData** необходимо изменить, чтобы поддерживались запросы, содержащие более 100 проектов. Дополнительные сведения см. в разделе [Дальнейшие действия](#next-steps) и статье [Создание запросов веб-каналов OData для данных отчетов Project](https://docs.microsoft.com/previous-versions/office/project-odata/jj163048(v=office.15)).
 
 
 ## <a name="example-code-for-the-helloprojectodata-add-in"></a>Пример кода для надстройки HelloProjectOData
@@ -1118,7 +1118,7 @@ Table styles
 
 Надстройка должна содержать дополнительные проверки ошибок, а также логику для записи, объяснения или демонстрации пограничных случаев. Например, если экземпляр Project Web App содержит 1000 проектов со средней продолжительностью в пять дней и средними затратами в $2400, а активный проект является единственным с продолжительностью более 20 дней, то сравнение материальных и трудовых затрат может быть перекошено. Это может быть показано с помощью частотной диаграммы. Вам необходимо добавить команды для отображения продолжительности, сравнения проектов с одинаковой продолжительностью или сравнения проектов из одного или разных отделов. Либо добавить возможность пользователю выбирать из списка полей, которые требуется отобразить.
 
-Для других запросов службы **ProjectData** имеются ограничения на длину строки запроса, что влияет на число шагов, которые запрос может предпринять для выборки из родительской коллекции в объект в дочерней коллекции. Например, двухшаговый запрос **Projects** в **Tasks** для получения элементов задач работает, но трехшаговый запрос, такой как **Projects** в **Tasks** в **Assignments**, для получения элемента назначения может превысить максимальную длину URL-адреса по умолчанию. Дополнительные сведения см. в разделе [Создание запросов веб-каналов OData для данных отчетов Project](http://msdn.microsoft.com/library/3eafda3b-f006-48be-baa6-961b2ed9fe01%28Office.15%29.aspx).
+Для других запросов службы **ProjectData** имеются ограничения на длину строки запроса, что влияет на число шагов, которые запрос может предпринять для выборки из родительской коллекции в объект в дочерней коллекции. Например, двухшаговый запрос **Projects** в **Tasks** для получения элементов задач работает, но трехшаговый запрос, такой как **Projects** в **Tasks** в **Assignments**, для получения элемента назначения может превысить максимальную длину URL-адреса по умолчанию. Дополнительные сведения см. в разделе [Создание запросов веб-каналов OData для данных отчетов Project](https://docs.microsoft.com/previous-versions/office/project-odata/jj163048(v=office.15)).
 
 Если вы изменяете надстройку **HelloProjectOData** для использования в рабочей среде, выполните следующие действия.
 
@@ -1132,7 +1132,7 @@ Table styles
 
   `~/ProjectData/Projects()?skip= [numSkipped]&amp;$top=100&amp;$filter=[filter]&amp;$select=[field1,field2, ???????]`
     
-  Дополнительные сведения см. в статье [OData System Query Options Using the REST Endpoint](http://msdn.microsoft.com/library/8a938b9b-7fdb-45a3-a04c-4d2d5cf2e353.aspx). Также можно использовать команду [Set-SPProjectOdataConfiguration](http://technet.microsoft.com/library/jj219516%28v=office.15%29.aspx) в Windows PowerShell, чтобы переопределить размер страницы по умолчанию для запроса набора сущностей **Projects** (или любого другого из 33 наборов сущностей). См. [ProjectData — Справочник по службе Project OData](http://msdn.microsoft.com/library/1ed14ee9-1a1a-4960-9b66-c24ef92cdf6b%28Office.15%29.aspx).
+  Дополнительные сведения см. в статье [OData System Query Options Using the REST Endpoint](https://docs.microsoft.com/previous-versions/dynamicscrm-2015/developers-guide/gg309461(v=crm.7)). Также можно использовать команду [Set-SPProjectOdataConfiguration](http://technet.microsoft.com/library/jj219516%28v=office.15%29.aspx) в Windows PowerShell, чтобы переопределить размер страницы по умолчанию для запроса набора сущностей **Projects** (или любого другого из 33 наборов сущностей). См. [ProjectData — Справочник по службе Project OData](https://docs.microsoft.com/previous-versions/office/project-odata/jj163015(v=office.15)).
     
 - Сведения о развертывании надстройки см. в статье [Публикация надстройки Office](../publish/publish.md).
     
@@ -1141,7 +1141,7 @@ Table styles
 
 - [Надстройки области задач для Project](project-add-ins.md)
 - [Создание первой надстройки области задач для Project 2013 с помощью текстового редактора](create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md)
-- [ProjectData — Справочник по службе Project OData](http://msdn.microsoft.com/library/1ed14ee9-1a1a-4960-9b66-c24ef92cdf6b%28Office.15%29.aspx) 
+- [ProjectData — Справочник по службе Project OData](https://docs.microsoft.com/previous-versions/office/project-odata/jj163015(v=office.15)) 
 - [XML-манифест надстройки Office](../develop/add-in-manifests.md) 
 - [Публикация надстройки Office](../publish/publish.md)
     

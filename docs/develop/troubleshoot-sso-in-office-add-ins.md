@@ -2,12 +2,12 @@
 title: Устранение ошибок единого входа
 description: ''
 ms.date: 12/08/2017
-ms.openlocfilehash: 39099d746db3b5bea8a1ef629872006ba4ee087a
-ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
+ms.openlocfilehash: 8906a168db7be938ecc572ad41a9feec2500c189
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "19437551"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925502"
 ---
 # <a name="troubleshoot-error-messages-for-single-sign-on-sso-preview"></a>Устранение ошибок единого входа (предварительная версия)
 
@@ -31,18 +31,18 @@ ms.locfileid: "19437551"
 - [program.js в Office-Add-in-NodeJS-SSO](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO/blob/master/Completed/public/program.js)
 
 > [!NOTE]
-> Помимо предложений, сделанных в этом разделе, надстройка Outlook имеет дополнительный способ ответить на любую из 13*ошибок nnn*. Подробнее см. [Сценарий. Внедрите единый вход в свою службу в надстройке Outlook](https://docs.microsoft.com/en-us/outlook/add-ins/implement-sso-in-outlook-add-in) а также надстройке [AttachmentsDemo Sample](https://github.com/OfficeDev/outlook-add-in-attachments-demo). 
+> Помимо предложений, сделанных в этом разделе, надстройка Outlook имеет дополнительный способ ответить на любую из 13*ошибок nnn*. Подробнее см. в статьях [Сценарий: внедрение единого входа в службу надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/implement-sso-in-outlook-add-in) и [Пример надстройки AttachmentsDemo](https://github.com/OfficeDev/outlook-add-in-attachments-demo). 
 
 ### <a name="13000"></a>13 000
 
 Надстройка или версия Office не поддерживает API [getAccessTokenAsync](https://dev.office.com/reference/add-ins/shared/office.context.auth.getAccessTokenAsync). 
 
-- Эта версия Office не поддерживает единый вход. Необходимо установить Office 2016 версии 1710 (сборка 8629.nnnn) или выше (эту версию подписки на Office 365 иногда называют "нажми и работай"). Чтобы скачать эту версию, вам может потребоваться принять участие в программе предварительной оценки Office. Дополнительные сведения см. в статье [Примите участие в программе предварительной оценки Office](https://products.office.com/en-us/office-insider?tab=tab-1). 
+- Эта версия Office не поддерживает единый вход. Необходимо установить Office 2016 версии 1710 (сборка 8629.nnnn) или выше (эту версию подписки на Office 365 иногда называют "нажми и работай"). Чтобы скачать эту версию, вам может потребоваться принять участие в программе предварительной оценки Office. Дополнительные сведения см. в статье [Примите участие в программе предварительной оценки Office](https://products.office.com/office-insider?tab=tab-1). 
 - В манифесте надстройки отсутствует подходящий раздел [WebApplicationInfo](https://dev.office.com/reference/add-ins/manifest/webapplicationinfo).
 
 ### <a name="13001"></a>13001
 
-Пользователь не вошел в Office. Код должен повторно вызвать метод `getAccessTokenAsync` и передать значение `forceAddAccount: true` в параметре [Опции](https://dev.office.com/reference/add-ins/shared/office.context.auth.getAccessTokenAsync#parameters). Но не делайте этого более одного раза. Пользователь, возможно, решил не входить в систему.
+Пользователь не вошел в Office. Код должен повторно вызвать метод `getAccessTokenAsync` и передать значение `forceAddAccount: true` параметру [options](https://dev.office.com/reference/add-ins/shared/office.context.auth.getAccessTokenAsync#parameters). Но не делайте этого более одного раза. Пользователь, возможно, решил не входить в систему.
 
 Эта ошибка никогда не возникает в Office Online. Если срок действия cookie-файла пользователя истек, Office Online возвращает ошибку 13006. 
 
@@ -87,7 +87,7 @@ ms.locfileid: "19437551"
 Надстройка вызвала метод `getAccessTokenAsync` с параметром `forceConsent: true`, но ее манифест развернут в каталоге, не поддерживающем принудительное согласие. Код должен повторно вызвать метод `getAccessTokenAsync` и передать значение `forceConsent: false` в параметре [options](https://dev.office.com/reference/add-ins/shared/office.context.auth.getAccessTokenAsync#parameters). Однако вызов метода `getAccessTokenAsync` с параметром `forceConsent: true` мог сам по себе быть автоматической реакцией на неудачный вызов метода `getAccessTokenAsync` с параметром `forceConsent: false`, поэтому в коде следует отслеживать, был ли уже вызван метод `getAccessTokenAsync` с параметром `forceConsent: false`. Если это так, код должен сообщать пользователю, что следует выйти из Office и повторить вход.
 
 > [!NOTE]
-> Корпорация Майкрософт не обязательно применяет это ограничение к каким-либо типам каталогов надстроек. Если ограничение отсутствует, то данная ошибка никогда не возникнет.
+> Корпорация Майкрософт не обязательно применяет это ограничение к каким-либо типам каталогов надстроек. Если ограничение отсутствует, то такая ошибка никогда не возникнет.
 
 ### <a name="13010"></a>13010
 
@@ -95,7 +95,7 @@ ms.locfileid: "19437551"
 
 ### <a name="50001"></a>50001
 
-Эта ошибка (которая не является специфической для `getAccessTokenAsync`) может указывать на то, что браузер обналичил старую копию файлов office.js. Очистите кеш браузера. Другая возможность заключается в том, что версия Office недостаточно последняя для поддержки единого входа. См.статью [Компоненты](create-sso-office-add-ins-aspnet.md#prerequisites).
+Эта ошибка (которая не является специфической для `getAccessTokenAsync`) может указывать на то, что браузер обналичил старую копию файлов office.js. Очистите кэш браузера. Другая возможность заключается в том, что версия Office недостаточно последняя для поддержки единого входа. См.статью [Компоненты](create-sso-office-add-ins-aspnet.md#prerequisites).
 
 ## <a name="errors-on-the-server-side-from-azure-active-directory"></a>Ошибки на стороне сервера из Azure Active Directory
 

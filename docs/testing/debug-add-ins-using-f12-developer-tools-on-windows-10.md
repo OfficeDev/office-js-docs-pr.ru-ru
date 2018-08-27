@@ -2,12 +2,12 @@
 title: Отладка надстроек с помощью средств разработчика F12 в Windows 10
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: e1e4cde4a1a0fe27058346b93e8aaa39dd75a4e3
-ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
+ms.openlocfilehash: 226773962fb1777a3a1f0e09445721ae2b8b5f5b
+ms.sourcegitcommit: e1c92ba882e6eb03a165867c6021a6aa742aa310
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "19438727"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "22925607"
 ---
 # <a name="debug-add-ins-using-f12-developer-tools-on-windows-10"></a>Отладка надстроек с помощью средств разработчика F12 в Windows 10
 
@@ -38,15 +38,15 @@ ms.locfileid: "19438727"
     
 3. Запустите средства разработчика F12, которые соответствуют вашей версии Office.
     
-   - Путь к файлу для 32-разрядной версии Office — C:\Windows\System32\F12\F12Chooser.exe.
+   - Путь к файлу для 32-разрядной версии Office — C:\Windows\System32\F12\IEChooser.exe
     
-   - Путь к файлу для 64-разрядной версии Office — C:\Windows\SysWOW64\F12\F12Chooser.exe.
+   - Путь к файлу для 64-разрядной версии Office — C:\Windows\SysWOW64\F12\IEChooser.exe.
     
-   Когда вы запустите F12Chooser, в отдельном окне "Выбрать цель для отладки" отобразятся приложения, которые, возможно, нужно отладить. Выберите необходимое приложение. Если вы создаете собственную надстройку, выберите веб-сайт, на котором она развернута. Это может быть URL-адрес localhost. 
+   Когда запустите IEChooser, в отдельном окне "Выбрать цель для отладки" отобразятся приложения, которые, возможно, нужно отладить. Выберите необходимое приложение. Если создаете собственную надстройку, выберите веб-сайт, на котором она развернута. Это может быть URL-адрес localhost. 
     
    Например, выберите **home.html**. 
     
-   ![Экран F12Chooser с выделенной надстройкой](../images/choose-target-to-debug.png)
+   ![Экран IEChooser с указанием на выноску надстройки](../images/choose-target-to-debug.png)
 
 4. В окне F12 выберите файл, который требуется отладить.
     
@@ -54,7 +54,7 @@ ms.locfileid: "19438727"
     
 5. Задайте точку останова.
     
-   Чтобы задать точку останова в home.js, выберите строку 144 в функции _textChanged_. Слева от строки появится красная точка, и соответствующая строка отобразится в **области стека вызовов и точек** (справа внизу). Другие способы задания точки останова см. в статье [Проверка выполнения кода JavaScript с помощью отладчика](https://msdn.microsoft.com/library/dn255007%28v=vs.85%29.aspx). 
+   Чтобы задать точку останова в home.js, выберите строку 144 в функции _textChanged_. Слева от строки появится красная точка, и соответствующая строка отобразится в **области стека вызовов и точек** (справа внизу). Другие способы задания точки останова см. в статье [Проверка выполнения кода JavaScript с помощью отладчика](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/dn255007(v=vs.85)). 
     
    ![Отладчик с точкой останова в файле home.js](../images/debugger-home-js-02.png)
 
@@ -67,6 +67,6 @@ ms.locfileid: "19438727"
 
 ## <a name="see-also"></a>См. также
 
-- [Проверка выполнения кода JavaScript с помощью отладчика](https://msdn.microsoft.com/library/dn255007%28v=vs.85%29.aspx)
-- [Использование средств разработчика F12](https://msdn.microsoft.com/en-us/library/bg182326%28v=vs.85%29.aspx)
+- [Проверка выполнения кода JavaScript с помощью отладчика](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/dn255007(v=vs.85))
+- [Использование средств разработчика F12](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v=vs.85))
     
