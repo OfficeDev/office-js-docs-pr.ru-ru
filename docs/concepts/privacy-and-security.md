@@ -2,12 +2,12 @@
 title: Конфиденциальность и безопасность надстроек Office
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: 326c8095b6ced105cc21492dc290a443212b3d3f
-ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
+ms.openlocfilehash: 76408abe96b07e793a72a8cbd177a29428366dd0
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "19437733"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925530"
 ---
 # <a name="privacy-and-security-for-office-add-ins"></a>Конфиденциальность и безопасность надстроек Office
 
@@ -33,13 +33,13 @@ ms.locfileid: "19437733"
 
 В следующих разделах кратко рассказано, как архитектура среды выполнения поддерживает выполнение надстроек в клиентах Office на устройствах под управлением ОС Windows, устройствах Mac с OS X и в клиентах Office Online в Интернете.
 
-> **Примечание.** Сведения об использовании Windows Information Protection и Intune с надстройками Office см. в статье [Использование WIP и Intune для защиты корпоративных данных в документах, в которых используются надстройки Office](https://docs.microsoft.com/en-us/microsoft-365-enterprise/office-add-ins-wip).
+> **Примечание.** Сведения об использовании Windows Information Protection и Intune с надстройками Office см. в статье [Использование WIP и Intune для защиты корпоративных данных в документах, в которых используются надстройки Office](https://docs.microsoft.com/microsoft-365/enterprise/office-add-ins-wip).
 
 ### <a name="clients-for-windows-and-os-x-devices"></a>Клиенты для устройств с Windows и OS X
 
 В поддерживаемых клиентах для настольных компьютеров и планшетов, например в Excel, Outlook и Outlook для Mac, надстройки Office поддерживаются путем интеграции внутрипроцессного компонента — среды выполнения надстроек Office, которая управляет жизненным циклом надстройки и позволяет ей взаимодействовать с клиентским приложением. Сама веб-страница надстройки размещена вне процесса. Как показано на рис. 1, на настольном компьютере или планшете с ОС Windows веб-страница надстройки размещена внутри элемента управления Internet Explorer, который, в свою очередь, размещен внутри процесса среды выполнения надстройки, обеспечивающего безопасность и изоляцию производительности.
 
-На компьютерах с Windows в Internet Explorer для зоны "Опасные сайты" должен быть включен защищенный режим. Обычно этот режим включен по умолчанию. Если он отключен, при запуске надстройки [возникнет ошибка](https://support.microsoft.com/en-us/help/2761180/apps-for-office-don-t-start-if-you-disable-protected-mode-for-the-restricted-sites-zone-in-internet-explorer).
+На компьютерах с Windows в Internet Explorer для зоны "Опасные сайты" должен быть включен защищенный режим. Обычно этот режим включен по умолчанию. Если он отключен, при запуске надстройки [возникнет ошибка](https://support.microsoft.com/help/2761180/apps-for-office-don-t-start-if-you-disable-protected-mode-for-the-restricted-sites-zone-in-internet-explorer).
 
 *Рис. 1. Среда выполнения надстроек для Office в клиентах для настольных компьютеров и планшетов под управлением ОС Windows*
 
@@ -90,7 +90,7 @@ ms.locfileid: "19437733"
 
 - При общем доступе к документу пользователи также совместно используют вставленные в него или связанные с ним надстройки. Если пользователь открывает документ с надстройкой, которая ранее не использовалась, ведущее приложение отображает запрос на предоставление надстройке разрешения на запуск в документе. В среде организации ведущее приложение Office также спрашивает пользователя о том, получен ли документ из внешнего источника.
 
-- Пользователи могут включить или отключить доступ к AppSource. Чтобы управлять доступом к доверенным надстройкам области задач и контентным надстройкам, а также каталогам, откройте **центр управления безопасностью** в ведущем приложении Office. Для этого выберите **Файл** > **Параметры** > **Центр управления безопасностью** > **Параметры центра управления безопасностью** > **Доверенные каталоги надстроек**. Чтобы управлять надстройками Outlook, пользователи могут использовать кнопку **Управление надстройками**: в Outlook для Windows выберите **Файл** > **Управление надстройками** в Outlook для Windows. В Outlook для Mac нажмите кнопку **Управление надстройками** на панели надстройки. В Outlook Web App выберите меню **Параметры** (значок шестеренки) > **Управление надстройками**. Администраторы также могут управлять доступом [с помощью групповой политики](http://technet.microsoft.com/en-us/library/jj219429.aspx#BKMK_Managing).
+- Пользователи могут включить или отключить доступ к AppSource. Чтобы управлять доступом к доверенным надстройкам области задач и контентным надстройкам, а также каталогам, откройте **центр управления безопасностью** в ведущем приложении Office. Для этого выберите **Файл** > **Параметры** > **Центр управления безопасностью** > **Параметры центра управления безопасностью** > **Доверенные каталоги надстроек**. Чтобы управлять надстройками Outlook, пользователи могут использовать кнопку **Управление надстройками**: в Outlook для Windows выберите **Файл** > **Управление надстройками** в Outlook для Windows. В Outlook для Mac нажмите кнопку **Управление надстройками** на панели надстройки. В Outlook Web App выберите меню **Параметры** (значок шестеренки) > **Управление надстройками**. Администраторы также могут управлять доступом [с помощью групповой политики](https://docs.microsoft.com/previous-versions/office/office-2013-resource-kit/jj219429(v=office.15)#using-group-policy-to-manage-how-users-can-install-and-use-apps-for-office).
 
 - Структура платформы надстроек обеспечивает безопасную и эффективную работу пользователей благодаря следующим возможностям:
 
@@ -98,11 +98,11 @@ ms.locfileid: "19437733"
 
   - Выполнение в элементе управления браузера позволяет надстройке совершать практически любые операции, доступные обычной странице в браузере, и в то же время принуждает ее соблюдать политику единого домена для обеспечения изоляции доменов и зон безопасности.
 
-Надстройки Outlook позволяют использовать дополнительные функции обеспечения безопасности и производительности. Для этого отслеживается потребление определенных ресурсов надстройками Outlook. Дополнительные сведения см. в разделе [Конфиденциальность, разрешения и безопасность для надстроек Outlook](https://docs.microsoft.com/en-us/outlook/add-ins/privacy-and-security).
+Надстройки Outlook позволяют использовать дополнительные функции обеспечения безопасности и производительности. Для этого отслеживается потребление определенных ресурсов надстройками Outlook. Дополнительные сведения см. в разделе [Конфиденциальность, разрешения и безопасность для надстроек Outlook](https://docs.microsoft.com/outlook/add-ins/privacy-and-security).
 
 ### <a name="developer-guidelines-to-handle-pii"></a>Рекомендации разработчикам по обработке персональных данных
 
-В статье [Защита конфиденциальности при разработке и тестировании приложений по управлению персоналом](http://technet.microsoft.com/en-us/library/gg447064.aspx) содержатся общие рекомендации по защите личных сведений, предназначенные для ИТ-администраторов и разработчиков. Ниже приведено несколько рекомендаций по защите личных сведений, которых следует придерживаться при разработке надстроек Office.
+В следующем списке для вас, как разработчика надстроек Office, перечислены некоторые правила защиты персональных данных:
 
 - Объект [Settings](https://dev.office.com/reference/add-ins/shared/settings) предназначен для хранения данных о параметрах и состоянии контентных надстроек и надстроек области задач между сеансами. Не следует хранить в объекте **Settings** пароли и другие конфиденциальные личные сведения. Данные в объекте **Settings** невидимы для пользователей, но хранятся в документе в легкодоступном формате. Следует ограничить надстройке доступ к личным сведениям и хранить такие сведения, необходимые для работы надстройки, на сервере, на котором размещена надстройка, в виде защищенного от пользователей ресурса.
 
@@ -139,7 +139,7 @@ ms.locfileid: "19437733"
 </OfficeApp>
 ```
 
-Дополнительные сведения о разрешениях для надстроек области задач и контентных надстроек см. в статье [Запрос разрешений на использование API в контентных надстройках и надстройках области задач](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins).
+Дополнительные сведения о разрешениях для надстроек области задач и контентных надстроек см. в статье [Запрос разрешений на использование API в контентных надстройках и надстройках области задач](https://docs.microsoft.com/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins).
 
 Дополнительные сведения о разрешениях для надстроек Outlook см. в следующих статьях:
 
@@ -176,23 +176,23 @@ Exchange и SharePoint предоставляют прокси-серверы н
 Злонамеренный пользователь может атаковать базовую структуру надстройки, вводя вредоносный сценарий через документ или поля в надстройке. Разработчик должен соответствующим образом обрабатывать вводимые пользователем данные, чтобы избежать выполнения кода JavaScript злоумышленника в его домене. Ниже приводятся некоторые рекомендации по обработке вводимых пользователем данных из документа, сообщения или полей в надстройке:
 
 
-- Вместо свойства DOM [innerHTML](http://msdn.microsoft.com/en-us/library/ie/ms533897.aspx) используйте свойства [innerText](https://msdn.microsoft.com/library/ms533899.aspx) и [textContent](https://developer.mozilla.org/en-US/docs/DOM/Node.textContent), где это возможно. Для обеспечения поддержки Internet Explorer и Firefox используйте указанную ниже строку кода:
+- Вместо свойства DOM [innerHTML](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) используйте свойства [innerText](https://developer.mozilla.org/docs/Web/API/Node/innerText) и [textContent](https://developer.mozilla.org/docs/DOM/Node.textContent), где это возможно. Для обеспечения поддержки Internet Explorer и Firefox используйте указанную ниже строку кода:
 
     ```js
      var text = x.innerText || x.textContent
     ```
 
-    Дополнительные сведения о различиях между свойствами **innerText** и **textContent** см. в разделе [Node.textContent](https://developer.mozilla.org/en-US/docs/DOM/Node.textContent). Дополнительные сведения о совместимости DOM в распространенных браузерах см. в разделе [Совместимость DOM W3C: HTML](http://www.quirksmode.org/dom/w3c_html.html#t07).
+    Дополнительные сведения о различиях между свойствами **innerText** и **textContent** см. в разделе [Node.textContent](https://developer.mozilla.org/docs/DOM/Node.textContent). Дополнительные сведения о совместимости DOM в распространенных браузерах см. в разделе [Совместимость DOM W3C: HTML](http://www.quirksmode.org/dom/w3c_html.html#t07).
 
-- Если вам необходимо использовать свойство **innerHTML**, перед отправкой вводимых пользователем данных в свойство **innerHTML** проверьте, что они не содержат вредоносного контента. Дополнительные сведения и пример безопасного использования свойства **innerHTML** см. в разделе [innerHTML](http://msdn.microsoft.com/en-us/library/ie/ms533897.aspx).
+- Если вам необходимо использовать свойство **innerHTML**, перед отправкой вводимых пользователем данных в свойство **innerHTML** проверьте, что они не содержат вредоносного контента. Дополнительные сведения и пример безопасного использования свойства **innerHTML** см. в разделе [innerHTML](https://developer.mozilla.org/docs/Web/API/Element/innerHTML).
 
 - Если вы используете jQuery, то вместо метода [.html()](http://api.jquery.com/text/) воспользуйтесь методом [.text()](http://api.jquery.com/html/).
 
-- С помощью метода [toStaticHTML](http://msdn.microsoft.com/en-us/library/ie/cc848922.aspx) перед отправкой введенных пользователем данных в свойство **innerHTML** можно удалить из них любые динамические элементы и атрибуты HTML.
+- С помощью метода [toStaticHTML](http://msdn.microsoft.com/library/ie/cc848922.aspx) перед отправкой введенных пользователем данных в свойство **innerHTML** можно удалить из них любые динамические элементы и атрибуты HTML.
 
-- С помощью функции [encodeURIComponent](http://msdn.microsoft.com/en-us/library/8202bce6-1342-40dc-a5ef-ac6d210a7d15.aspx) или [encodeURI](http://msdn.microsoft.com/en-us/library/17bab5a2-bcd4-46c2-8b52-b2b5a0ed98a3.aspx) можно закодировать текст, который будет использоваться в качестве URL-адреса, введенного пользователем или содержащего введенные пользователем данные.
+- С помощью функции [encodeURIComponent](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/encodeuricomponent) или [encodeURI](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/encodeuri) можно закодировать текст, который будет использоваться в качестве URL-адреса, введенного пользователем или содержащего введенные пользователем данные.
 
-- Дополнительные рекомендации по созданию безопасных веб-решений см. в разделе [Разработка безопасных надстроек](http://msdn.microsoft.com/en-us/library/windows/apps/hh849625.aspx).
+- Дополнительные рекомендации по созданию безопасных веб-решений см. в разделе [Разработка безопасных надстроек](https://docs.microsoft.com/previous-versions/windows/apps/hh849625(v=win.10)).
 
 ### <a name="tips-to-prevent-clickjacking"></a>Советы для предотвращения атак типа кликджекинг (clickjacking)
 
@@ -241,7 +241,7 @@ Exchange и SharePoint предоставляют прокси-серверы н
   - создать заявление, прописывающее соответствующую требованиям политику конфиденциальности;
   - подготовиться к подписанию контрактного соглашения при отправке надстройки.
 
-Помимо соблюдения правил использования ресурсов разработчики надстроек Outlook должны проверять, что их надстройки соблюдают ограничения по заданию правил активации и использованию API JavaScript. Дополнительные сведения см. в статье [Ограничения для активации и API JavaScript для надстроек Outlook](http://msdn.microsoft.com/library/e0c9e3d0-517e-4333-b8bd-e169c51a07f6.aspx).
+Помимо соблюдения правил использования ресурсов разработчики надстроек Outlook должны проверять, что их надстройки соблюдают ограничения по заданию правил активации и использованию API JavaScript. Дополнительные сведения см. в статье [Ограничения для активации и API JavaScript для надстроек Outlook](https://docs.microsoft.com/outlook/add-ins/limits-for-activation-and-javascript-api-for-outlook-add-ins).
 
 ## <a name="it-administrators-control"></a>Полномочия ИТ-администраторов
 
@@ -249,12 +249,12 @@ Exchange и SharePoint предоставляют прокси-серверы н
 
 ## <a name="see-also"></a>См. также
 
-- [Запрос разрешений на использование API в контентных надстройках и надстройках области задач](http://msdn.microsoft.com/library/da2efadc-4ebf-45fe-be39-397ac1eb1dbd.aspx)
-- [Конфиденциальность, разрешения и безопасность для надстроек Outlook](http://msdn.microsoft.com/library/44208fc4-05d4-42d8-ab20-faa89624de1c.aspx)
-- [Общие сведения о разрешениях для надстройки Outlook](https://docs.microsoft.com/en-us/outlook/add-ins/understanding-outlook-add-in-permissions)
-- [Ограничения активации и API JavaScript для надстроек Outlook](http://msdn.microsoft.com/library/e0c9e3d0-517e-4333-b8bd-e169c51a07f6.aspx)
-- [Работа с ограничениями по принципу одинакового источника в надстройках Office](http://msdn.microsoft.com/library/36c800ae-1dda-4ea8-a558-37c89ffb161b.aspx)
+- [Запрос разрешений на использование API в контентных надстройках и надстройках области задач](https://docs.microsoft.com/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins)
+- [Конфиденциальность, разрешения и безопасность для надстроек Outlook](https://docs.microsoft.com/outlook/add-ins/privacy-and-security)
+- [Общие сведения о разрешениях для надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)
+- [Ограничения активации и API JavaScript для надстроек Outlook](https://docs.microsoft.com/outlook/add-ins/limits-for-activation-and-javascript-api-for-outlook-add-ins)
+- [Работа с ограничениями по принципу одинакового источника в надстройках Office](https://docs.microsoft.com/office/dev/add-ins/develop/addressing-same-origin-policy-limitations)
 - [Принцип одинакового источника](http://www.w3.org/Security/wiki/Same_Origin_Policy)
 - [Принцип одинакового источника. Часть 1. Без просмотра](http://blogs.msdn.com/b/ieinternals/archive/2009/08/28/explaining-same-origin-policy-part-1-deny-read.aspx)
-- [Принцип одинакового источника для JavaScript](https://developer.mozilla.org/En/Same_origin_policy_for_JavaScript)
-- [Защищенный режим Internet Explorer](https://support.microsoft.com/en-us/help/2761180/apps-for-office-don-t-start-if-you-disable-protected-mode-for-the-restricted-sites-zone-in-internet-explorer)
+- [Принцип одинакового источника для JavaScript](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy)
+- [Защищенный режим Internet Explorer](https://support.microsoft.com/help/2761180/apps-for-office-don-t-start-if-you-disable-protected-mode-for-the-restricted-sites-zone-in-internet-explorer)
