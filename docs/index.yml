@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: c56cc86f11a43fff1a089dc4e24eced24799c327
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: e3a2ccbc7a8d626ad48f7ff8513bbf4acd5910ea
+ms.sourcegitcommit: 90d3b64219f14dd9cfe23ee9746477734195cb8f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925327"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "23271345"
 documentType: LandingData
 title: Документация по надстройкам Office
 metadata:
@@ -15,7 +15,7 @@ metadata:
   ms.date: 12/04/2017
   ms.author: o365devx
 abstract:
-  description: С помощью <a href="https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins">платформы надстроек Office</a> можно создавать решения, расширяющие приложения Office и взаимодействующие с контентом в документах Office. В случае надстроек Office вы можете использовать привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений. Ваше решение может работать в Office на разных платформах, в том числе Office для Windows, Office Online, Office для Mac и Office для iPad. Узнайте, как создавать надстройки Office с помощью наших кратких и пошаговых руководств, а также справочной документации по API.<br/><br/><b>Примечание:</b> Сведения о надстройках COM или VSTO см. в <a href="https://msdn.microsoft.com/library/fp161347.aspx" target="_blank">документации MSDN</a>.
+  description: С помощью <a href="https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins">платформы надстроек Office</a> можно создавать решения, расширяющие приложения Office и взаимодействующие с контентом в документах Office. В случае надстроек Office вы можете использовать привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений. Ваше решение может работать в Office на разных платформах, в том числе Office для Windows, Office Online, Office для Mac и Office для iPad. Узнайте, как создавать надстройки Office с помощью наших кратких и пошаговых руководств, а также справочной документации по API.<br/><br/><b>Примечание:</b> Для получения сведений о надстройках COM или VSTO обратитесь к <a href="https://docs.microsoft.com/office/client-developer/office-client-development" target="_blank">документации разработчика клиента Office</a>.
   aside:
     image:
       alt: 
@@ -55,7 +55,7 @@ sections:
       href: https://docs.microsoft.com/office/dev/add-ins/quickstarts/powerpoint-quickstart
     - image:
         src: https://docs.microsoft.com/office/dev/add-ins/images/index/ProjectLogoColor.svg
-      text: Project
+      text: Проект
       href: https://docs.microsoft.com/office/dev/add-ins/quickstarts/project-quickstart
 - title: Практические руководства
   items:
