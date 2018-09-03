@@ -2,12 +2,12 @@
 title: Работа с событиями при помощи API JavaScript для Excel
 description: ''
 ms.date: 05/25/2018
-ms.openlocfilehash: 3d94a36a60220b856795b8d0abf5387fcb8c1bad
-ms.sourcegitcommit: e1c92ba882e6eb03a165867c6021a6aa742aa310
+ms.openlocfilehash: df3a677cc804e0cc066a6a380e2eb8aac39a1d92
+ms.sourcegitcommit: 78b28ae88d53bfef3134c09cc4336a5a8722c70b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "22925628"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "23797282"
 ---
 # <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями при помощи API JavaScript для Excel 
 
@@ -19,14 +19,14 @@ ms.locfileid: "22925628"
 
 | Событие | Описание | Поддерживаемые объекты |
 |:---------------|:-------------|:-----------|
-| `onAdded` | Событие, возникающее при добавлении объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection) |
-| `onDeleted` | Событие, возникающее при удалении объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection) |
-| `onActivated` | Событие, возникающее при активации объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection), [**Worksheet**](https://dev.office.com/reference/add-ins/excel/worksheet) |
-| `onDeactivated` | Событие, возникающее при отключении объекта. | [**WorksheetCollection**](https://dev.office.com/reference/add-ins/excel/worksheetcollection), [**Worksheet**](https://dev.office.com/reference/add-ins/excel/worksheet) |
-| `onChanged` | Событие, возникающее при изменении данных в ячейках. | [**Worksheet**](https://dev.office.com/reference/add-ins/excel/worksheet), [**Table**](https://dev.office.com/reference/add-ins/excel/table), [**TableCollection**](https://dev.office.com/reference/add-ins/excel/tablecollection) |
-| `onDataChanged` | Событие, возникающее при изменении данных или форматирования в привязке. | [**Binding**](https://dev.office.com/reference/add-ins/excel/binding) |
-| `onSelectionChanged` | Событие, возникающее при изменении активной ячейки или выбранного диапазона. | [**Worksheet**](https://dev.office.com/reference/add-ins/excel/worksheet), [**Table**](https://dev.office.com/reference/add-ins/excel/table), [**Binding**](https://dev.office.com/reference/add-ins/excel/binding) |
-| `onSettingsChanged` | Событие, возникающее при изменении Параметров в документе. | [**SettingCollection**](https://dev.office.com/reference/add-ins/excel/settingcollection) |
+| `onAdded` | Событие, возникающее при добавлении объекта. | [**WorksheetCollection**](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection) |
+| `onDeleted` | Событие, возникающее при удалении объекта. | [**WorksheetCollection**](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection) |
+| `onActivated` | Событие, возникающее при активации объекта. | [**WorksheetCollection**](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection), [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet) |
+| `onDeactivated` | Событие, возникающее при отключении объекта. | [**WorksheetCollection**](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection), [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet) |
+| `onChanged` | Событие, возникающее при изменении данных в ячейках. | [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet), [**Table**](https://docs.microsoft.com/javascript/api/excel/excel.table), [**TableCollection**](https://docs.microsoft.com/javascript/api/excel/excel.tablecollection) |
+| `onDataChanged` | Событие, возникающее при изменении данных или форматирования в привязке. | [**Привязка**](https://docs.microsoft.com/javascript/api/excel/excel.binding) |
+| `onSelectionChanged` | Событие, возникающее при изменении активной ячейки или выбранного диапазона. | [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet), [**Table**](https://docs.microsoft.com/javascript/api/excel/excel.table), [**Binding**](https://docs.microsoft.com/javascript/api/excel/excel.binding) |
+| `onSettingsChanged` | Событие, которое происходит при изменении параметров в документе. | [**SettingCollection**](https://docs.microsoft.com/javascript/api/excel/excel.settingcollection) |
 
 ## <a name="preview-beta-events-in-excel"></a>Предварительная (бета) версия событий в Excel
 
@@ -35,10 +35,10 @@ ms.locfileid: "22925628"
 
 | Событие | Описание | Поддерживаемые объекты |
 |:---------------|:-------------|:-----------|
-| `onAdded` | Событие, которое происходит при добавлении диаграммы. | [**ChartCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
+| `onAdded` | Событие, возникающее при добавлении диаграммы. | [**ChartCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
 | `onDeleted` | Событие, которое происходит при удалении диаграммы. | [**ChartCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
-| `onActivated` | Событие, которое происходит при активации диаграммы. | [**Диаграмма**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md), [**ChartCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
-| `onDeactivated` | Событие, которое происходит при деактивации диаграммы. | [**Диаграмма**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md), [**ChartCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
+| `onActivated` | Событие, возникающее при активации диаграммы. | [**Диаграмма**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md), [**ChartCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
+| `onDeactivated` | Событие, возникающее при отключении диаграммы. | [**Диаграмма**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md), [**ChartCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
 | `onCalculated` | Событие, которое происходит, когда рабочий лист завершил расчет (или все рабочие листы коллекции завершили расчеты). | [**WorksheetCollection**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md), [**Worksheet**](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/new-events.md) |
 
 ### <a name="event-triggers"></a>Триггеры событий
@@ -138,25 +138,26 @@ function remove() {
 > [!NOTE]
 > В настоящее время эта функция доступна только в общедоступной предварительной версии (бета-версия). Для ее использования необходимо обратиться к библиотеке бета-версиии Office.js сети CDN: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
 
-События включаются и отключаются на уровне [среды выполнения](https://docs.microsoft.com/en-us/javascript/api/excel/excel.runtime?view=office-js). Свойство `enableEvents` определяет, будут ли запускаться события и будут ли активироваться их обработчики. Отключение событий полезно, когда очень важна производительность, или когда вы изменяете нескольких сущностей, и нужно избежать обработки события до завершения.
+Производительность надстройки можно повысить с помощью отключения событий. Например, вашему приложению, возможно, никогда не потребуется получать события, или оно может игнорировать события при выполнении пакетных изменений нескольких сущностей. 
+
+События включаются и отключаются на уровне [среды выполнения](https://docs.microsoft.com/javascript/api/excel/excel.runtime). Свойство `enableEvents` определяет, будут ли запускаться события и будут ли активироваться их обработчики. 
 
 Следующий пример кода показывает, как включать и отключать события.
 
-```typescript
-async function toggleEvents() {
-    await Excel.run(async (context) => {
-        context.runtime.load("enableEvents");
-        await context.sync();
-        const eventBoolean = !context.runtime.enableEvents
-        context.runtime.enableEvents = eventBoolean;
-        if (eventBoolean) {
-            console.log("Events are currently on.");
-        } else {
-            console.log("Events are currently off.");
-        }
-        await context.sync();
-    });
-}
+```js
+Excel.run(function (context) {
+    context.runtime.load("enableEvents");
+    return context.sync()
+        .then(function () {
+            var eventBoolean = !context.runtime.enableEvents;
+            context.runtime.enableEvents = eventBoolean;
+            if (eventBoolean) {
+                console.log("Events are currently on.");
+            } else {
+                console.log("Events are currently off.");
+            }
+        }).then(context.sync);
+}).catch(errorHandlerFunction);
 ```
 
 ## <a name="see-also"></a>См. также

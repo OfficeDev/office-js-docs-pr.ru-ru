@@ -2,16 +2,16 @@
 title: Оптимизация производительности API JavaScript для Excel
 description: Оптимизация производительности с помощью API Excel JavaScript
 ms.date: 03/28/2018
-ms.openlocfilehash: dabbb69f8dee0df782a265edcfdfb1c89894e915
-ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
+ms.openlocfilehash: 50fac999093abb3fbfe1bd5be1cd6a77dc930399
+ms.sourcegitcommit: 78b28ae88d53bfef3134c09cc4336a5a8722c70b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "19437411"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "23797317"
 ---
 # <a name="performance-optimization-using-the-excel-javascript-api"></a>Оптимизация производительности с использованием API Excel JavaScript
 
-Существует несколько способов выполнения общих задач с помощью API Excel JavaScript. Вы найдете значительные различия в производительности между различными подходами. В этой статье приведены примеры руководств и кода, чтобы показать вам, как эффективно выполнять общие задачи с помощью API Excel JavaScript.
+Существует несколько способов выполнения общих задач с помощью API Excel JavaScript. Вы найдете значительные различия в производительности между различными подходами. В этой статье приводятся руководства и примеры кода, чтобы показать вам, как эффективно выполнять общие задачи с помощью API Excel JavaScript.
 
 ## <a name="minimize-the-number-of-sync-calls"></a>Минимизировать количество вызовов sync ()
 
@@ -71,8 +71,8 @@ object.load({ loadOption });
  
 _Где:_
  
-* `properties` Это список свойств для загрузки, указанных как строки с разделителями-запятыми или как массив имен. Дополнительные сведения см. в описаниях методов **load()**, определенных для объектов в [справочнике по API JavaScript для Excel](https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview).
-* `loadOption` указывает объект, описывающий параметры "выбрать", "развернуть", "сверху" и "пропустить". Дополнительные сведения см. в статье, посвященной [параметрам загрузки объектов](https://dev.office.com/reference/add-ins/excel/loadoption).
+* `properties` - это список свойств для загрузки, указанных как строки с разделителями-запятыми или как массив имен. Дополнительные сведения см. в описаниях методов **load()**, определенных для объектов, в [справочнике по API JavaScript для Excel](https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview).
+* `loadOption` указывает объект, описывающий параметры "выбрать", "развернуть", "сверху" и "пропустить". Подробнее см. в статье, посвященной [параметрам загрузки объектов](https://docs.microsoft.com/javascript/api/office/officeextension.loadoption).
 
 Помните, что некоторые «свойства» под объектом могут иметь то же имя, что и другой объект. Например, `format` является свойством объекта диапазона, но `format` сам по себе является объектом. Итак, если вы вызываете например, `range.load("format")`, это эквивалентно `range.format.load()`, который представляет собой вызов пустой нагрузки (), который может вызвать проблемы с производительностью, как описано ранее. Чтобы избежать  этого, ваш код должен загружать только «листовые узлы» в представлении объектов. 
 
@@ -80,7 +80,7 @@ _Где:_
 
 Если вы пытаетесь выполнить операцию на большом количестве ячеек (например, установив значение огромного объекта диапазона), и вы не возражаете временно приостановить вычисление в Excel во время завершения операции, мы рекомендуем приостановить расчет до следующего ```context.sync()``` вызова.
 
-См.статью [Объект приложения](https://dev.office.com/reference/add-ins/excel/application), справочную документацию для получения информации о том, как использовать ```suspendApiCalculationUntilNextSync()``` API для приостановки и повторного включения вычислений очень удобным способом. Следующий код демонстрирует, как временно приостановить расчет:
+См.статью [Объект приложения](https://docs.microsoft.com/javascript/api/excel/excel.application), справочную документацию для получения информации о том, как использовать ```suspendApiCalculationUntilNextSync()``` API для приостановки и повторного включения вычислений очень удобным способом. Следующий код демонстрирует, как временно приостановить расчет:
 
 ```js
 Excel.run(async function(ctx) {
@@ -134,7 +134,7 @@ Excel.run(async function(ctx) {
 
 ## <a name="importing-data-into-tables"></a>Импорт данных в таблицы
 
-При попытке импортировать огромное количество данных непосредственно в [Таблицу](https://dev.office.com/reference/add-ins/excel/table) объекта (например, используя `TableRowCollection.add()`), вы можете столкнуться с низкой производительностью. Если вы пытаетесь добавить новую таблицу, сначала необходимо заполнить данные, установив `range.values`, а затем выполнить вызов `worksheet.tables.add()` для создания таблицы по диапазону. Если вы пытаетесь записать данные в существующую таблицу, напишите данные в объект диапазона через `table.getDataBodyRange()`, и таблица будет автоматически расшириться. 
+При попытке импортировать огромное количество данных непосредственно в [Таблицу](https://docs.microsoft.com/javascript/api/excel/excel.table) объекта (например, используя `TableRowCollection.add()`), вы можете столкнуться с низкой производительностью. Если вы пытаетесь добавить новую таблицу, сначала необходимо заполнить данные, установив `range.values`, а затем выполнить вызов `worksheet.tables.add()` для создания таблицы по диапазону. Если вы пытаетесь записать данные в существующую таблицу, напишите данные в объект диапазона через `table.getDataBodyRange()`, и таблица будет автоматически расшириться. 
 
 Вот пример такого подхода:
 
@@ -160,11 +160,15 @@ Excel.run(async (ctx) => {
 ```
 
 > [!NOTE]
-> Вы можете удобно преобразовать объект Table в объект Range, используя [метод Table.convertToRange ()](https://dev.office.com/reference/add-ins/excel/table#converttorange) .
+> Вы можете удобно преобразовать объект Table в объект Range, используя [метод Table.convertToRange ()](https://docs.microsoft.com/javascript/api/excel/excel.table#converttorange--) .
+
+## <a name="enable-and-disable-events"></a>Включение и отключение событий
+
+Производительность надстройки можно повысить с помощью отключения событий. Пример кода, демонстрирующий, как включить и отключить события, см. в статье [Работа с событиями](excel-add-ins-events.md#enable-and-disable-events).
 
 ## <a name="see-also"></a>См. также
 
 - [Основные понятия API JavaScript для Excel](excel-add-ins-core-concepts.md)
 - [Сложные понятия, связанные с API JavaScript для Excel](excel-add-ins-advanced-concepts.md)
 - [Открытая спецификация по API JavaScript для Excel](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_OpenSpec)
-- [Объект Worksheet Functions (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/functions)
+- [Объект Worksheet Functions (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.functions)
