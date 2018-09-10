@@ -2,16 +2,21 @@
 title: Устранение ошибок единого входа
 description: ''
 ms.date: 12/08/2017
-ms.openlocfilehash: 8906a168db7be938ecc572ad41a9feec2500c189
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: ef4d7ed873121deec5fd235e0eace70a3a0c2f0e
+ms.sourcegitcommit: 8333ede51307513312d3078cb072f856f5bef8a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925502"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "23876601"
 ---
 # <a name="troubleshoot-error-messages-for-single-sign-on-sso-preview"></a>Устранение ошибок единого входа (предварительная версия)
 
 В этой статье представлено руководство по обеспечению надежной обработки специальных условий и ошибок в надстройках Office, поддерживающих единый вход, а также устранению связанных с единым входом проблем в таких надстройках.
+
+> [!NOTE]
+> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint в тестовом режиме. Дополнительные сведения о текущей поддержке API единого входа см. в статье Наборы обязательных элементов API идентификацииhttps://docs.microsoft.com/javascript/office/requirement-sets/identity-api-requirement-sets).
+> Чтобы использовать единый вход, необходимо подключить бета-версию библиотеки JavaScript Office из https://appsforoffice.microsoft.com/lib/beta/hosted/office.js на начальной странице HTML-надстройки.
+> Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 ## <a name="debugging-tools"></a>Средства отладки
 
@@ -33,16 +38,16 @@ ms.locfileid: "22925502"
 > [!NOTE]
 > Помимо предложений, сделанных в этом разделе, надстройка Outlook имеет дополнительный способ ответить на любую из 13*ошибок nnn*. Подробнее см. в статьях [Сценарий: внедрение единого входа в службу надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/implement-sso-in-outlook-add-in) и [Пример надстройки AttachmentsDemo](https://github.com/OfficeDev/outlook-add-in-attachments-demo). 
 
-### <a name="13000"></a>13 000
+### <a name="13000"></a>13000
 
-Надстройка или версия Office не поддерживает API [getAccessTokenAsync](https://dev.office.com/reference/add-ins/shared/office.context.auth.getAccessTokenAsync). 
+Надстройка или версия Office не поддерживает API [getAccessTokenAsync](https://docs.microsoft.com/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference). 
 
 - Эта версия Office не поддерживает единый вход. Необходимо установить Office 2016 версии 1710 (сборка 8629.nnnn) или выше (эту версию подписки на Office 365 иногда называют "нажми и работай"). Чтобы скачать эту версию, вам может потребоваться принять участие в программе предварительной оценки Office. Дополнительные сведения см. в статье [Примите участие в программе предварительной оценки Office](https://products.office.com/office-insider?tab=tab-1). 
 - В манифесте надстройки отсутствует подходящий раздел [WebApplicationInfo](https://dev.office.com/reference/add-ins/manifest/webapplicationinfo).
 
 ### <a name="13001"></a>13001
 
-Пользователь не вошел в Office. Код должен повторно вызвать метод `getAccessTokenAsync` и передать значение `forceAddAccount: true` параметру [options](https://dev.office.com/reference/add-ins/shared/office.context.auth.getAccessTokenAsync#parameters). Но не делайте этого более одного раза. Пользователь, возможно, решил не входить в систему.
+Пользователь не вошел в Office. Код должен повторно вызвать метод `getAccessTokenAsync` и передать значение `forceAddAccount: true` в параметре [options](https://docs.microsoft.com/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference). Но не делайте этого более одного раза. Пользователь, возможно, решил не входить в систему.
 
 Эта ошибка никогда не возникает в Office Online. Если срок действия cookie-файла пользователя истек, Office Online возвращает ошибку 13006. 
 
@@ -84,10 +89,10 @@ ms.locfileid: "22925502"
 
 ### <a name="13009"></a>13009
 
-Надстройка вызвала метод `getAccessTokenAsync` с параметром `forceConsent: true`, но ее манифест развернут в каталоге, не поддерживающем принудительное согласие. Код должен повторно вызвать метод `getAccessTokenAsync` и передать значение `forceConsent: false` в параметре [options](https://dev.office.com/reference/add-ins/shared/office.context.auth.getAccessTokenAsync#parameters). Однако вызов метода `getAccessTokenAsync` с параметром `forceConsent: true` мог сам по себе быть автоматической реакцией на неудачный вызов метода `getAccessTokenAsync` с параметром `forceConsent: false`, поэтому в коде следует отслеживать, был ли уже вызван метод `getAccessTokenAsync` с параметром `forceConsent: false`. Если это так, код должен сообщать пользователю, что следует выйти из Office и повторить вход.
+Надстройка вызвала метод `getAccessTokenAsync` с параметром `forceConsent: true`, но ее манифест развернут в каталоге, не поддерживающем принудительное согласие. Код должен повторно вызвать метод `getAccessTokenAsync` и передать значение `forceConsent: false` в параметре [options](https://docs.microsoft.com/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference). Однако вызов метода `getAccessTokenAsync` с параметром `forceConsent: true` мог сам по себе быть автоматической реакцией на неудачный вызов метода `getAccessTokenAsync` с параметром `forceConsent: false`, поэтому в коде следует отслеживать, был ли уже вызван метод `getAccessTokenAsync` с параметром `forceConsent: false`. Если это так, код должен сообщать пользователю, что следует выйти из Office и повторить вход.
 
 > [!NOTE]
-> Корпорация Майкрософт не обязательно применяет это ограничение к каким-либо типам каталогов надстроек. Если ограничение отсутствует, то такая ошибка никогда не возникнет.
+> Корпорация Майкрософт не обязательно применяет это ограничение к каким-либо типам каталогов надстроек. Если ограничение отсутствует, то данная ошибка никогда не возникнет.
 
 ### <a name="13010"></a>13010
 
@@ -108,7 +113,7 @@ ms.locfileid: "22925502"
  
 При использовании некоторых конфигураций удостоверений в AAD и Office 365 некоторым ресурсам, доступным через Microsoft Graph, может потребоваться многофакторная проверка подлинности (MFA), даже если она не требуется клиенту Office 365. Когда служба AAD получает запрос на получение токена для доступа к защищенному с помощью MFA ресурсу, через поток выполнения от имени другого субъекта она возвращает веб-службе надстройки сообщение JSON, содержащее свойство `claims`. Свойство claims содержит сведения о том, какие еще факторы проверки подлинности требуются. 
 
-Код на стороне сервера должен проверить это сообщение и ретранслировать значение свойства claims клиентскому коду. Эти сведения необходимы клиенту, так как Office обрабатывает проверку подлинности для надстроек с единым входом. Сообщение для клиента может быть кодом ошибки (например, `500 Server Error` или `401 Unauthorized`) либо находиться в тексте отклика об успешном выполнении (например, `200 OK`). В обоих случаях функция обратного вызова для клиентского AJAX-вызова веб-API надстройки должна проверять этот отклик. Если значение свойства claims было ретранслировано, то код должен повторно вызвать метод `getAccessTokenAsync` и передать значение `authChallenge: CLAIMS-STRING-HERE` в параметре [options](https://dev.office.com/reference/add-ins/shared/office.context.auth.getAccessTokenAsync#parameters). Когда служба AAD обнаруживает эту строку, она предлагает пользователю указать дополнительные факторы, а затем возвращает новый маркер доступа, который будет принят в потоке выполнения от имени другого субъекта.
+Код на стороне сервера должен проверить это сообщение и ретранслировать значение свойства claims клиентскому коду. Эти сведения необходимы клиенту, так как Office обрабатывает проверку подлинности для надстроек с единым входом. Сообщение для клиента может быть кодом ошибки (например, `500 Server Error` или `401 Unauthorized`) либо находиться в тексте отклика об успешном выполнении (например, `200 OK`). В обоих случаях функция обратного вызова для клиентского AJAX-вызова веб-API надстройки должна проверять этот отклик. Если значение свойства claims было ретранслировано, то код должен повторно вызвать метод `getAccessTokenAsync` и передать значение `authChallenge: CLAIMS-STRING-HERE` в параметре [options](https://docs.microsoft.com/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference). Когда служба AAD обнаруживает эту строку, она предлагает пользователю указать дополнительные факторы, а затем возвращает новый маркер доступа, который будет принят в потоке выполнения от имени другого субъекта.
 
 ### <a name="consent-missing-errors"></a>Ошибки, вызванные отсутствием согласия
 
