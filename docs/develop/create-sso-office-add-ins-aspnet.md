@@ -2,12 +2,12 @@
 title: Создание такой надстройки Office на платформе ASP.NET, для которой используется единый вход
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: 70662a01d86d3fa111b39deb4c16702a4f8530f5
-ms.sourcegitcommit: e1c92ba882e6eb03a165867c6021a6aa742aa310
+ms.openlocfilehash: cdf039e66f0d61e656827ee3ab0ad5762cba430d
+ms.sourcegitcommit: 8333ede51307513312d3078cb072f856f5bef8a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "22925642"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "23876622"
 ---
 # <a name="create-an-aspnet-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office, в которой используется единый вход, на платформе ASP.NET (предварительная версия)
 
@@ -42,7 +42,7 @@ ms.locfileid: "22925642"
 
    > 1. В меню **Сервис** выберите **Диспетчер пакетов NuGet** > **Консоль диспетчера пакетов**. 
 
-   > 2. В консоли выполните указанную ниже команду. Выполнение может занять одну или несколько минут даже при быстром подключении к Интернету. Когда все будет готово, в нижней части окна консоли отобразится такое сообщение: **"Microsoft.Identity.Client 1.1.4-preview0002" успешно установлено...**.
+   > 2. В консоли выполните указанную ниже команду. Выполнение может занять минуту или больше времени, даже при быстром подключении к Интернету. Когда все будет готово, в нижней части окна консоли отобразится такое сообщение: **"Microsoft.Identity.Client 1.1.4-preview0002" успешно установлено...**.
 
    >    `Install-Package Microsoft.Identity.Client -Version 1.1.4-preview0002`
 
@@ -74,7 +74,7 @@ ms.locfileid: "22925642"
 
     `https://login.microsoftonline.com/{tenant_ID}/v2.0`
 
-2. В Visual Studio откройте файл web.config. В разделе **appSettings** есть ключи, которым необходимо присвоить значения.
+2. В Visual Studio откройте файл web.config. В разделе **appSettings** есть ключи, которым необходимо назначить значения.
 
 3. Используйте строку, составленную на шаге 1, в качестве значения ключа ida:Issuer. Убедитесь, что в значении нет пробелов.
 
@@ -183,7 +183,7 @@ ms.locfileid: "22925642"
 
 1. Под методом `getOneDriveFiles` добавьте приведенный ниже код. Вот что нужно знать об этом коде:
 
-    * — это новый API в Office.js, позволяющий надстройке запрашивать у ведущего приложения Office (Excel, PowerPoint, Word и т. д.) маркер доступа к надстройке для пользователя, вошедшего в Office. Ведущее приложение Office запрашивает маркер у конечной точки Azure AD 2.0. Так как вы предварительно авторизовали ведущее приложение Office для надстройки во время ее регистрации, Azure AD отправит маркер.`getAccessTokenAsync`
+    * [getAccessTokenAsync](https://docs.microsoft.com/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference) — это новый API в Office.js, позволяющий надстройке запрашивать у ведущего приложения Office (Excel, PowerPoint, Word и т. д.) маркер доступа к надстройке для пользователя, вошедшего в Office. Ведущее приложение Office, в свою очередь, запрашивает маркер у конечной точки Azure AD 2.0. Так как вы предварительно авторизовали ведущее приложение Office для надстройки во время ее регистрации, Azure AD отправит маркер.
     * Если вход в Office не выполнен, ведущее приложение Office предложит пользователю войти.
     * Параметр настроек задает для `forceConsent` значение `false`, поэтому пользователю не будет предлагаться разрешить ведущему приложению Office доступ к надстройке при каждом ее использовании. При первом запуске надстройки вызов `getAccessTokenAsync` не будет выполнен, но логика обработки ошибок, которую вы добавите на следующем этапе, автоматически выполнит повторный вызов, при этом параметру `forceConsent` будет задано значение `true`, и пользователю будет предложено согласиться. Такая процедура выполняется только в первый раз.
     * Вы создадите метод `handleClientSideErrors` позже.
@@ -282,11 +282,11 @@ ms.locfileid: "22925642"
         break; 
     ```
 
-1. Замените `TODO4` приведенным ниже кодом. Ошибка 13003 возникает, когда пользователь входит под учетной записью, отличной от рабочей, учебной или личной учетной записи Майкрософт. Попросите пользователя выйти, а затем войти с помощью учетной записи поддерживаемого типа.
+1. Замените `TODO4` приведенным ниже кодом. Ошибка 13003 возникает, когда пользователь вошел в систему с учетной записью, которая не является ни рабочей, ни учебной, ни учетной записью Майкрософт. Попросите пользователя выйти из системы, а затем снова войти, используя поддерживаемый тип учетной записи.
 
     ```javascript
     case 13003: 
-        showResult(['Please sign out of Office and sign in again with a work or school account, or Microsoft Account. Other kinds of accounts, like corporate domain accounts do not work.']);
+        showResult(['Please sign out of Office and sign in again with a work or school account, or Microsoft account. Other kinds of accounts, like corporate domain accounts do not work.']);
         break;   
     ```
 
@@ -322,7 +322,7 @@ ms.locfileid: "22925642"
     ```javascript
     case 13009:
         if (triedWithoutForceConsent) {
-            showResult(['Please sign out of Office and sign in again with a work or school account, or Microsoft Account.']);
+            showResult(['Please sign out of Office and sign in again with a work or school account, or Microsoft account.']);
         } else {
             getDataWithToken({ forceConsent: false });
         }

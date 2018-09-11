@@ -1,12 +1,12 @@
 ---
 title: Создание надстройки Office на платформе Node.js с использованием единого входа
 description: 23.01.2018
-ms.openlocfilehash: 70ce81a1cd0038d3219763fb1e15bc3089e06f57
-ms.sourcegitcommit: 28fc652bded31205e393df9dec3a9dedb4169d78
+ms.openlocfilehash: bb77d037140f8c56ca05f3817fb2b9d0271297ae
+ms.sourcegitcommit: 8333ede51307513312d3078cb072f856f5bef8a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "22927392"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "23876615"
 ---
 # <a name="create-a-nodejs-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office на платформе Node.js с использованием единого входа (предварительная версия)
 
@@ -132,7 +132,7 @@ ms.locfileid: "22927392"
 
 1. Под методом `getOneDriveFiles` добавьте приведенный ниже код. Вот что нужно знать об этом коде:
 
-    * — это новый API в Office.js, позволяющий надстройке запрашивать у ведущего приложения Office (Excel, PowerPoint, Word и т. д.) маркер доступа к надстройке для пользователя, вошедшего в Office. Ведущее приложение Office запрашивает маркер у конечной точки Azure AD 2.0. Так как вы предварительно авторизовали ведущее приложение Office для надстройки во время ее регистрации, Azure AD отправит маркер.`getAccessTokenAsync`
+    * [getAccessTokenAsync](https://docs.microsoft.com/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference) — это новый API в Office.js, позволяющий надстройке запрашивать у ведущего приложения Office (Excel, PowerPoint, Word и т. д.) маркер доступа к надстройке для пользователя, вошедшего в Office. Ведущее приложение Office, в свою очередь, запрашивает маркер у конечной точки Azure AD 2.0. Так как вы предварительно авторизовали ведущее приложение Office для надстройки во время ее регистрации, Azure AD отправит маркер.
     * Если вход в Office не выполнен, ведущее приложение Office предложит пользователю войти.
     * Параметр настроек задает для `forceConsent` значение `false`, поэтому пользователю не будет предлагаться разрешить ведущему приложению Office доступ к надстройке при каждом ее использовании. При первом запуске надстройки вызов `getAccessTokenAsync` не будет выполнен, но логика обработки ошибок, которую вы добавите на следующем этапе, автоматически выполнит повторный вызов, при этом параметру `forceConsent` будет задано значение `true`, и пользователю будет предложено согласиться. Такая процедура выполняется только в первый раз.
     * Вы создадите метод `handleClientSideErrors` позже.
