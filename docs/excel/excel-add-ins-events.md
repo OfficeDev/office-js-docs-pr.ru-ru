@@ -2,12 +2,12 @@
 title: Работа с событиями при помощи API JavaScript для Excel
 description: ''
 ms.date: 05/25/2018
-ms.openlocfilehash: df3a677cc804e0cc066a6a380e2eb8aac39a1d92
-ms.sourcegitcommit: 78b28ae88d53bfef3134c09cc4336a5a8722c70b
+ms.openlocfilehash: fbeb0e6efabe37afb0f73ab8e7448d8cf01ebace
+ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "23797282"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "23943980"
 ---
 # <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями при помощи API JavaScript для Excel 
 
@@ -24,9 +24,9 @@ ms.locfileid: "23797282"
 | `onActivated` | Событие, возникающее при активации объекта. | [**WorksheetCollection**](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection), [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet) |
 | `onDeactivated` | Событие, возникающее при отключении объекта. | [**WorksheetCollection**](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection), [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet) |
 | `onChanged` | Событие, возникающее при изменении данных в ячейках. | [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet), [**Table**](https://docs.microsoft.com/javascript/api/excel/excel.table), [**TableCollection**](https://docs.microsoft.com/javascript/api/excel/excel.tablecollection) |
-| `onDataChanged` | Событие, возникающее при изменении данных или форматирования в привязке. | [**Привязка**](https://docs.microsoft.com/javascript/api/excel/excel.binding) |
+| `onDataChanged` | Событие, возникающее при изменении данных или форматирования в привязке. | [**Binding**](https://docs.microsoft.com/javascript/api/excel/excel.binding) |
 | `onSelectionChanged` | Событие, возникающее при изменении активной ячейки или выбранного диапазона. | [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet), [**Table**](https://docs.microsoft.com/javascript/api/excel/excel.table), [**Binding**](https://docs.microsoft.com/javascript/api/excel/excel.binding) |
-| `onSettingsChanged` | Событие, которое происходит при изменении параметров в документе. | [**SettingCollection**](https://docs.microsoft.com/javascript/api/excel/excel.settingcollection) |
+| `onSettingsChanged` | Событие, возникающее при изменении параметров в документе. | [**SettingCollection**](https://docs.microsoft.com/javascript/api/excel/excel.settingcollection) |
 
 ## <a name="preview-beta-events-in-excel"></a>Предварительная (бета) версия событий в Excel
 
@@ -46,7 +46,7 @@ ms.locfileid: "23797282"
 События в книге Excel могут вызываться:
 
 - при взаимодействии пользователя с интерфейсом Excel, вносящим изменения в книгу;
-- из кода (JavaScript) надстройки Office, вносящего изменения в книгу;
+- при внесении кодом (JavaScript) надстройки Office изменения в книгу;
 - из кода (макроса) надстройки VBA, вносящего изменения в книгу.
 
 Любое изменение, соответствующее стандартному поведению Excel, вызывает соответствующие события в книге.
@@ -136,7 +136,7 @@ function remove() {
 ## <a name="enable-and-disable-events"></a>Включение и отключение событий
 
 > [!NOTE]
-> В настоящее время эта функция доступна только в общедоступной предварительной версии (бета-версия). Для ее использования необходимо обратиться к библиотеке бета-версиии Office.js сети CDN: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
+> В настоящее время эта функция доступна только в общедоступной предварительной версии (бета-версия). Для ее использования необходимо обратиться к библиотеке бета-версии Office.js сети CDN: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
 
 Производительность надстройки можно повысить с помощью отключения событий. Например, вашему приложению, возможно, никогда не потребуется получать события, или оно может игнорировать события при выполнении пакетных изменений нескольких сущностей. 
 

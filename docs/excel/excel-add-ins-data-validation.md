@@ -2,12 +2,12 @@
 title: Добавление проверки данных в диапазоны Excel
 description: ''
 ms.date: 04/13/2018
-ms.openlocfilehash: af965df4a1aece5b7f8d5ea89664519b576a4850
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: fd40cab045da0472a060752651a27f0b26028b4b
+ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925313"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "23944879"
 ---
 # <a name="add-data-validation-to-excel-ranges-preview"></a>Добавление проверки данных в диапазоны Excel (предварительная версия)
 
@@ -38,11 +38,11 @@ ms.locfileid: "22925313"
 
 ### <a name="creating-validation-rules"></a>Создание правил проверки
 
-Чтобы добавить проверку данных в диапазон, в код нужно добавить свойство `rule` объекта `DataValidation` в `Range.dataValidation`. При этом используется объект [DataValidationRule](https://dev.office.com/reference/add-ins/excel/datavalidationrule), который имеет семь необязательных свойств. *В любом объекте `DataValidationRule` может использоваться не более одного из этих свойств.* Включенное свойство определяет тип проверки.
+Чтобы добавить проверку данных в диапазон, в код нужно добавить свойство `rule` объекта `DataValidation` в `Range.dataValidation`. При этом используется объект [DataValidationRule](https://docs.microsoft.com/javascript/api/excel?view=office-js), который имеет семь необязательных свойств. *В любом объекте `DataValidationRule` может использоваться не более одного из этих свойств.* Включенное свойство определяет тип проверки.
 
 #### <a name="basic-and-datetime-validation-rule-types"></a>Типы правил проверки Basic и DateTime
 
-Первые три свойства `DataValidationRule` (т. е. типа правил проверки) в качестве своего значения принимают объект [BasicDataValidation](https://docs.microsoft.com/javascript/api/excel/excel.basicdatavalidation).
+Первые три свойства `DataValidationRule` (т. е. типа правил проверки) в качестве своего значения принимают объект [BasicDataValidation](https://docs.microsoft.com/javascript/api/excel?view=office-js).
 
 - `wholeNumber` — Требует целое число в дополнение к другим проверкам, определенным в объекте `BasicDataValidation`.
 - `decimal` — Требует десятичное число в дополнение к другим условиям проверки, определенным в объекте `BasicDataValidation`.

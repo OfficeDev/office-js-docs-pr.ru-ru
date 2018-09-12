@@ -73,11 +73,11 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
                     $('#emerson').click(insertEmersonQuoteAtSelection);
                     $('#checkhov').click(insertChekhovQuoteAtTheBeginning);
                     $('#proverb').click(insertChineseProverbAtTheEnd);
-                    $('#supportedVersion').html('This code is using Word 2016 or greater.');
+                    $('#supportedVersion').html('This code is using Word 2016 or later.');
                 }
                 else {
                     // Just letting you know that this code will not work with your version of Word.
-                    $('#supportedVersion').html('This code requires Word 2016 or greater.');
+                    $('#supportedVersion').html('This code requires Word 2016 or later.');
                 }
             });
         };
@@ -259,7 +259,7 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
 ### <a name="update-the-code"></a>Обновление кода
 
-1. В редакторе кода откройте файл **index.html** из корневой папки проекта. Этот файл содержит HTML-контент, который будет отображаться в области задач надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл. В этой надстройке будет три кнопки. При нажатии любой из них в документ будет добавляться стандартный текст.
+1. В редакторе кода откройте файл **index.html** из корневой папки проекта. Этот файл содержит HTML-контент, который будет отображаться в области задач надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл. В этой надстройке будет три кнопки. При нажатии любой из них в документ добавится стандартный текст.
 
     ```html
     <!DOCTYPE html>
@@ -296,7 +296,7 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
     </html>
     ```
 
-2. Откройте файл **src/index.js**, чтобы указать сценарий надстройки. Замените все содержимое следующим кодом и сохраните файл. Этот сценарий содержит код инициализации, а также код, который вносит изменения в документ Word, путем вставки текста в документ при выборе кнопки. 
+2. Откройте файл **src\index.js**, чтобы указать сценарий для надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл. Этот скрипт содержит код инициализации, а также код, вносящий изменения в документ Word, вставляя текст при нажатии кнопки. 
 
     ```js
     'use strict';
@@ -313,11 +313,11 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
                     $('#emerson').click(insertEmersonQuoteAtSelection);
                     $('#checkhov').click(insertChekhovQuoteAtTheBeginning);
                     $('#proverb').click(insertChineseProverbAtTheEnd);
-                    $('#supportedVersion').html('This code is using Word 2016 or greater.');
+                    $('#supportedVersion').html('This code is using Word 2016 or later.');
                 }
                 else {
                     // Just letting you know that this code will not work with your version of Word.
-                    $('#supportedVersion').html('This code requires Word 2016 or greater.');
+                    $('#supportedVersion').html('This code requires Word 2016 or later.');
                 }
             });
         };
@@ -478,5 +478,5 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 ## <a name="see-also"></a>См. также
 
 * [Обзор надстроек Word](../word/word-add-ins-programming-overview.md)
-* [Примеры кода надстроек Word](http://dev.office.com/code-samples#?filters=word,office%20add-ins)
-* [Справочник по API JavaScript для Word](https://dev.office.com/reference/add-ins/word/word-add-ins-reference-overview)
+* [Примеры кода надстроек Word](https://developer.microsoft.com/en-us/office/gallery/?filterBy=Samples,Word)
+* [Справочник по API JavaScript для Word](https://docs.microsoft.com/javascript/office/overview/word-add-ins-reference-overview?view=office-js)

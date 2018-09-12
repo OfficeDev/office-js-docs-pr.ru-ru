@@ -2,12 +2,12 @@
 title: Автоматическое открытие области задач с документом
 description: ''
 ms.date: 05/02/2018
-ms.openlocfilehash: 4f3d677619610208b585df72dd1764be39fd9e35
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: d624a34e5eb7c23a885aec42c8ed14914f413578
+ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925355"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "23944794"
 ---
 # <a name="automatically-open-a-task-pane-with-a-document"></a>Автоматическое открытие области задач с документом
 
@@ -56,7 +56,7 @@ ms.locfileid: "22925355"
 > Область, отмеченная для автоматического открытия, будет открываться, только если необходимая надстройка уже есть на устройстве пользователя. Если она там не установлена, функция автоматического открытия не сработает при открытии документа, а параметр будет проигнорирован. Чтобы надстройка распространялась вместе с документом, задайте для свойства visibility значение 1. Это можно сделать только с помощью OpenXML. Соответствующий пример приведен ниже. 
 
 ### <a name="step-1-specify-the-task-pane-to-open"></a>Этап 1. Указание области задач, которую необходимо открывать
-Чтобы указать область задач, которую необходимо открывать автоматически, задайте для [TaskpaneId](https://dev.office.com/reference/add-ins/manifest/action#taskpaneid) значение **Office.AutoShowTaskpaneWithDocument**. Это значение можно установить только в одной области задач. Если установить это значение для нескольких областей задач, распознается только первый случай его использования, а все остальные будут игнорироваться. 
+Чтобы указать область задач, которую необходимо открывать автоматически, задайте для [TaskpaneId](https://docs.microsoft.com/javascript/office/manifest/action?view=office-js#taskpaneid) значение **Office.AutoShowTaskpaneWithDocument**. Это значение можно установить только в одной области задач. Если установить это значение для нескольких областей задач, распознается только первый случай его использования, а все остальные будут игнорироваться. 
 
 Ниже представлен пример, где для TaskPaneId задано значение Office.AutoShowTaskpaneWithDocument.
           
@@ -73,7 +73,7 @@ ms.locfileid: "22925355"
 
 
 #### <a name="tag-the-document-on-the-client-side"></a>Установка отметки для документа на стороне клиента
-Используйте метод Office.js [settings.set](https://dev.office.com/reference/add-ins/shared/settings.set), чтобы установить для **Office.AutoShowTaskpaneWithDocument** значение **true**, как показано в следующем примере.   
+Используйте метод Office.js [settings.set](https://docs.microsoft.com/javascript/api/office/office.settings?view=office-js), чтобы установить для **Office.AutoShowTaskpaneWithDocument** значение **true**, как показано в следующем примере.   
 
 ```js
 Office.context.document.settings.set("Office.AutoShowTaskpaneWithDocument", true);
@@ -140,7 +140,7 @@ Office.context.document.settings.saveAsync();
 Самый простой способ записи XML — сначала запустить надстройку и [отметить документ на стороне клиента](#tag-the-document-on-the-client-side), чтобы записать значение, а затем сохранить документ и проверить созданный XML. Office обнаружит и укажет соответствующие значения атрибута. Инструмент [Open XML SDK 2.5 Productivity Tool](https://www.microsoft.com/download/details.aspx?id=30425) также можно использовать для создания кода на языке C#, чтобы программным способом добавить исправление на основе создаваемого XML.
 
 ## <a name="test-and-verify-opening-taskpanes"></a>Тестирование и проверка открывающихся панелей задач
-Вы можете развернуть тестовую версию своей надстройки, которая автоматически откроет область задач с использованием централизованного развертывания через центр администрирования Office 365. В следующем примере показано, как надстройки вставляются в каталог централизованного развертывания при помощи EXCatalog (версии из магазина).
+Вы можете развернуть тестовую версию своей надстройки, которая автоматически откроет панель задач с помощью Централизованного развертывания через центр администрирования Office 365. В следующем примере показано, как вставляются надстройки из каталога централизованного развертывания с использованием версии хранилища EXCatalog.
 
 ```xml
 <we:webextension xmlns:we="http://schemas.microsoft.com/office/webextensions/webextension/2010/11" id="{52811C31-4593-43B8-A697-EB873422D156}">
