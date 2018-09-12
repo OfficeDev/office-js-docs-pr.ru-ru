@@ -2,12 +2,12 @@
 title: Надстройки PowerPoint
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: e5c605410601d711e28ca04ff6e26387019cbb41
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: 21f6ec0b00003a90df6850562e399d33da7b49b9
+ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925320"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "23943889"
 ---
 # <a name="powerpoint-add-ins"></a>Надстройки PowerPoint
 
@@ -30,13 +30,13 @@ ms.locfileid: "22925320"
 При создании контентной надстройки вам понадобится получить активное представление презентации, а также обработать событие ActiveViewChanged в рамках обработчика событий Office.Initialize.
 
 
-- Функция `getActiveFileView` вызывает метод [Document.getActiveViewAsync](https://dev.office.com/reference/add-ins/shared/document.getactiveviewasync), который возвращает текущее представление презентации: "edit" (представления, в которых можно редактировать слайды, например  **Обычный режим** или **Режим структуры**) или "read" (**Показ слайдов** или **Режим чтения**).
+- Функция `getActiveFileView` вызывает метод [Document.getActiveViewAsync](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js#getactiveviewasync-options--callback-), который возвращает текущее представление презентации: "edit" (представления, в которых можно редактировать слайды, например  **Обычный режим** или **Режим структуры**) или "read" (**Показ слайдов** или **Режим чтения**).
 
 
-- Функция `registerActiveViewChanged` вызывает метод [addHandlerAsync](https://dev.office.com/reference/add-ins/shared/document.addhandlerasync) для регистрации обработчика для события [Document.ActiveViewChanged](https://dev.office.com/reference/add-ins/shared/document.activeviewchanged). 
+- Функция `registerActiveViewChanged` вызывает метод [addHandlerAsync](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js#addhandlerasync-eventtype--handler--options--callback-) для регистрации обработчика для события [Document.ActiveViewChanged](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js). 
 
 > [!NOTE]
-> В PowerPoint Online не удастся запустить событие [Document.ActiveViewChanged](https://dev.office.com/reference/add-ins/shared/document.activeviewchanged), поскольку режим показа слайдов обрабатывается как новый сеанс. В этом случае надстройке необходимо получить активное представление по загрузке, как указано ниже.
+> В PowerPoint Online не удастся запустить событие [Document.ActiveViewChanged](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js), поскольку режим показа слайдов обрабатывается как новый сеанс. В этом случае надстройке необходимо получить активное представление по загрузке, как указано ниже.
 
 ```js
 //general Office.initialize function. Fires on load of the add-in.
@@ -85,7 +85,7 @@ function registerActiveViewChanged() {
 
 ## <a name="navigate-to-a-particular-slide-in-the-presentation"></a>Переход к определенному слайду презентации
 
-Функция `getSelectedRange` вызывает метод [Document.getSelectedDataAsync](https://dev.office.com/reference/add-ins/shared/document.getselecteddataasync), чтобы получить объект JSON, возвращаемый свойством  `asyncResult.value` и который включает в себя массив с именем slides, содержащий идентификаторы, заголовки и индексы выбранного диапазона слайдов (или текущего слайда). Кроме того, он сохраняет идентификатор первого слайда в выбранном диапазоне в глобальной переменной.
+Функция `getSelectedRange` вызывает метод [Document.getSelectedDataAsync](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js#getselecteddataasync-coerciontype--options--callback-), чтобы получить объект JSON, возвращаемый свойством  `asyncResult.value` и который включает в себя массив с именем slides, содержащий идентификаторы, заголовки и индексы выбранного диапазона слайдов (или текущего слайда). Кроме того, он сохраняет идентификатор первого слайда в выбранном диапазоне в глобальной переменной.
 
 
 ```js
@@ -105,7 +105,7 @@ function getSelectedRange() {
 }
 ```
 
-Функция `goToFirstSlide` вызывает метод [Document.goToByIdAsync](https://dev.office.com/reference/add-ins/shared/document.gotobyidasync) для перехода к идентификатору первого слайда, сохраненному описанной выше функцией `getSelectedRange`.
+Функция `goToFirstSlide` вызывает метод [Document.goToByIdAsync](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js#gotobyidasync-id--gototype--options--callback-) для перехода к идентификатору первого слайда, сохраненному описанной выше функцией `getSelectedRange`.
 
 
 
@@ -149,7 +149,7 @@ function goToSlideByIndex() {
 
 ## <a name="get-the-url-of-the-presentation"></a>Получение URL-адреса презентации
 
-Функция `getFileUrl` вызывает метод [Document.getFileProperties](https://dev.office.com/reference/add-ins/shared/document.getfilepropertiesasync), чтобы получить URL-адрес файла презентации.
+Функция `getFileUrl` вызывает метод [Document.getFileProperties](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js#getfilepropertiesasync-options--callback-), чтобы получить URL-адрес файла презентации.
 
 
 ```js
@@ -170,7 +170,7 @@ function getFileUrl() {
 
 
 ## <a name="see-also"></a>См. также
-- [Примеры кода PowerPoint](https://dev.office.com/code-samples#?filters=powerpoint)
+- [Примеры кода PowerPoint](https://developer.microsoft.com/en-us/office/gallery/?filterBy=Samples,PowerPoint)
 - [Сохранение состояния надстройки и параметров документа для надстроек области задач и контентных надстроек](../develop/persisting-add-in-state-and-settings.md#how-to-save-add-in-state-and-settings-per-document-for-content-and-task-pane-add-ins)
 - [Чтение и запись данных при активном выделении фрагмента в документе или электронной таблице](../develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md)
 - [Получение всего документа из надстройки для PowerPoint или Word](../powerpoint/get-the-whole-document-from-an-add-in-for-powerpoint.md)

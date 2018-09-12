@@ -2,12 +2,12 @@
 title: Обработка ошибок
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: 59619ff4ccba1985f875d13a29ab691c1617d21b
-ms.sourcegitcommit: 7ecc1dc24bf7488b53117d7a83ad60e952a6f7aa
+ms.openlocfilehash: e39ee537b677803f6c4ebd35e7a8878d62fd6e14
+ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "19437208"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "23945476"
 ---
 # <a name="error-handling"></a>Обработка ошибок
 
@@ -49,4 +49,4 @@ Excel.run(function (context) {
 ## <a name="see-also"></a>См. также
 
 - [Основные понятия API JavaScript для Excel](excel-add-ins-core-concepts.md)
-- [Объект OfficeExtension.Error (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/error)
+- [Объект OfficeExtension.Error (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/office/officeextension.error?view=office-js)

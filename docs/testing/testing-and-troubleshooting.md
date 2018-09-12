@@ -2,12 +2,12 @@
 title: Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: b9f55b5487aec1a2e700863e58cd5bbbf2daf146
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: c56485cff0248484b53974c2685827045bbb68eb
+ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925460"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "23944064"
 ---
 # <a name="troubleshoot-user-errors-with-office-add-ins"></a>Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 
@@ -86,7 +86,7 @@ ms.locfileid: "22925460"
 3. Введите URL-адрес из сообщения об ошибке и нажмите кнопку **Добавить**.
 4. Запустите надстройку снова. Если проблема не исчезла, проверьте параметры для других зон безопасности и убедитесь, что домен надстройки находится в той же зоне, что и URL-адрес, отображаемый в адресной строке приложения Office.
 
-Эта проблема возникает при использовании Dialog API в режиме всплывающих окон. Чтобы эта проблема не возникала, используйте флажок [displayInFrame](https://dev.office.com/reference/add-ins/shared/officeui.displaydialogasync). Для этого страница должна поддерживать отображение в окнах iframe. В приведенном ниже примере показано, как использовать флажок.
+Эта проблема возникает при использовании Dialog API в режиме всплывающих окон. Чтобы эта проблема не возникала, используйте флажок [displayInFrame](https://docs.microsoft.com/javascript/api/office/office.ui?view=office-js). Для этого страница должна поддерживать отображение в окнах iframe. В приведенном ниже примере показано, как использовать флажок.
 
 ```js
 

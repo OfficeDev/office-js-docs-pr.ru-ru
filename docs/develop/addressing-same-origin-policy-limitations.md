@@ -2,12 +2,12 @@
 title: Обход правила ограничения домена в надстройках Office
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: 536e02d2367bef81d4a6e49098d66833c99f5e50
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: cfd61a78bf3dc1602ce140296d3a3d8afa9845eb
+ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925110"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "23944057"
 ---
 # <a name="addressing-same-origin-policy-limitations-in-office-add-ins"></a>Обход правила ограничения домена в надстройках Office
 
@@ -55,7 +55,7 @@ function loadVideoDetails(videoIndex) {
 
 Другой способ устранения ограничений, связанных с правилом ограничения домена, состоит в реализации веб-страницы надстройки как страницы ASP, использующей OAuth или выполняющей кэширование учетных данных в файлах cookie.
 
-Пример кода на стороне сервера, демонстрирующего использование объекта `Cookie` в `System.Net` для получения и задания значений файлов cookie, см. в свойстве [Value](https://msdn.microsoft.com/library/4f772twc).
+Пример кода на стороне сервера, демонстрирующего использование объекта `Cookie` в `System.Net` для получения и задания значений файлов cookie, см. в свойстве [Value](https://docs.microsoft.com/dotnet/api/system.net.cookie.value?view=netframework-4.7.2).
 
 
 ## <a name="using-cross-origin-resource-sharing-cors"></a>Использование CORS

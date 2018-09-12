@@ -2,12 +2,12 @@
 title: Создание надстройки области задач словаря
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: 781e2d07c88e56cbb64a7e7c5671dbbbc1b00894
-ms.sourcegitcommit: 7ecc1dc24bf7488b53117d7a83ad60e952a6f7aa
+ms.openlocfilehash: 234585f1d7909fde5c595865c73394346a11abd5
+ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "19438867"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "23945196"
 ---
 # <a name="create-a-dictionary-task-pane-add-in"></a>Создание надстройки области задач словаря
 
@@ -526,13 +526,13 @@ a:hover, a:active
 Ниже приведены основные элементы интерфейса JavaScript API для Office (Office.js), которые вызываются из этой реализации.
 
 
-- Событие [initialize](https://dev.office.com/reference/add-ins/shared/office.initialize) объекта **Office**, возникающее при инициализации контекста надстройки и предоставляющее доступ к объекту [Document](https://dev.office.com/reference/add-ins/shared/document), представляющему собой документ, с которым взаимодействует надстройка.
+- Событие [initialize](https://docs.microsoft.com/javascript/api/office?view=office-js) объекта **Office**, возникающее при инициализации контекста надстройки и предоставляющее доступ к объекту [Document](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js), представляющему собой документ, с которым взаимодействует надстройка.
     
-- Метод [addHandlerAsync](https://dev.office.com/reference/add-ins/shared/document.addhandlerasync) объекта **Document**, который вызывается в функции **initialize** для добавления обработчика события [SelectionChanged](https://dev.office.com/reference/add-ins/shared/document.selectionchanged.event) документа с целью прослушивания изменений, внесенных в выделенный пользователем фрагмент.
+- Метод [addHandlerAsync](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js#addhandlerasync-eventtype--handler--options--callback-) объекта **Document**, который вызывается в функции **initialize** для добавления обработчика события [SelectionChanged](https://docs.microsoft.com/javascript/api/office/office.documentselectionchangedeventargs?view=office-js) документа с целью прослушивания изменений, внесенных в выделенный пользователем фрагмент.
     
-- Метод [getSelectedDataAsync](https://dev.office.com/reference/add-ins/shared/document.getselecteddataasync) объекта **Document**, который вызывается в функции `tryUpdatingSelectedWord()` при включении обработчика событий **SelectionChanged** для получения слова или фразы по выбору пользователя, приведения их в обычный текст и выполнения асинхронной функции обратного вызова `selectedTextCallback`.
+- Метод [getSelectedDataAsync](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js#getselecteddataasync-coerciontype--options--callback-) объекта **Document**, который вызывается в функции `tryUpdatingSelectedWord()` при включении обработчика событий **SelectionChanged** для получения слова или фразы по выбору пользователя, приведения их в обычный текст и выполнения асинхронной функции обратного вызова `selectedTextCallback`.
     
-- При выполнении асинхронной функции обратного вызова `selectTextCallback`, которая передается как аргумент _callback_ метода **getSelectedDataAsync**, возвращается значение выделенного текста. Эта функция считывает значение из аргумента _selectedText_ (имеющего тип [AsyncResult](https://dev.office.com/reference/add-ins/shared/asyncresult)) с помощью свойства [value](https://dev.office.com/reference/add-ins/shared/asyncresult.status) возвращенного объекта **AsyncResult**.
+- При выполнении асинхронной функции обратного вызова `selectTextCallback`, которая передается как аргумент _callback_ метода **getSelectedDataAsync**, возвращается значение выделенного текста. Эта функция считывает значение из аргумента _selectedText_ (имеющего тип [AsyncResult](https://docs.microsoft.com/javascript/api/office/office.asyncresult?view=office-js)) с помощью свойства [value](https://docs.microsoft.com/javascript/api/office/office.asyncresult?view=office-js#status) возвращенного объекта **AsyncResult**.
     
 - Остальной код функции `selectedTextCallback` отправляет XML-веб-службе запрос на определения. Кроме того, он вызывает API-интерфейсы Microsoft Translator для получения URL-адреса WAV-файла с произношением выделенного слова.
     

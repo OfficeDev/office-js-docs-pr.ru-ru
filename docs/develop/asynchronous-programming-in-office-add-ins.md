@@ -2,12 +2,12 @@
 title: Асинхронное программирование в случае надстроек Office
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: babf71499ad63be757efdfa6ccf7ad9dfd292932
-ms.sourcegitcommit: 90d3b64219f14dd9cfe23ee9746477734195cb8f
+ms.openlocfilehash: c4008eb2238e166095d017bb1477e24f118c0ea0
+ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "23271359"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "23945469"
 ---
 # <a name="asynchronous-programming-in-office-add-ins"></a>Асинхронное программирование в случае надстроек Office
 
@@ -101,7 +101,7 @@ function write(message){
 
 Свойства **asyncContext**, **status** и **error** объекта **AsyncResult** возвращают одни и те же виды сведений в функцию обратного вызова, передаваемую в любые асинхронные методы. Однако то, что будет возвращено в свойство **AsyncResult.value**, зависит от функциональных возможностей асинхронного метода.
 
-Например, методы **addHandlerAsync** (для объектов [Binding](https://docs.microsoft.com/javascript/api/office/office.binding), [CustomXmlPart](https://docs.microsoft.com/javascript/api/office/office.customxmlpart), [Document](https://docs.microsoft.com/javascript/api/office/office.document), [RoamingSettings](https://docs.microsoft.com/en-us/javascript/api/outlook/office.roamingsettings) и [Settings](https://docs.microsoft.com/javascript/api/office/office.settings)) позволяют добавить функции обработчиков событий в элементы, представленные этими объектами. Вы можете получить доступ к свойству **AsyncResult.value** из функции обратного вызова, передаваемой в любой из методов **addHandlerAsync**. Но так как при добавлении обработчика событий не происходит доступа к данным или объектам, то при попытке доступа к нему свойство **value** всегда возвращает значение **undefined**.
+Например, методы **addHandlerAsync** (для объектов [Binding](https://docs.microsoft.com/javascript/api/office/office.binding), [CustomXmlPart](https://docs.microsoft.com/javascript/api/office/office.customxmlpart), [Document](https://docs.microsoft.com/javascript/api/office/office.document), [RoamingSettings](https://docs.microsoft.com/javascript/api/outlook/office.roamingsettings) и [Settings](https://docs.microsoft.com/javascript/api/office/office.settings)) позволяют добавить функции обработчиков событий в элементы, представленные этими объектами. Вы можете получить доступ к свойству **AsyncResult.value** из функции обратного вызова, передаваемой в любой из методов **addHandlerAsync**. Но так как при добавлении обработчика событий не происходит доступа к данным или объектам, то при попытке доступа к нему свойство **value** всегда возвращает значение **undefined**.
 
 С другой стороны, при вызове метода **Document.getSelectedDataAsync** он возвращает данные, выделенные пользователем в документе, в свойство **AsyncResult.value** в обратном вызове. Если вызвать метод [Bindings.getAllAsync](https://docs.microsoft.com/javascript/api/office/office.bindings#getallasync-options--callback-), он возвратит массив всех объектов **Binding** в документе. И, наконец, если вызвать метод [Bindings.getByIdAsync](https://docs.microsoft.com/javascript/api/office/office.bindings#getbyidasync-id--options--callback-), он возвратит один объект **Binding**.
 
