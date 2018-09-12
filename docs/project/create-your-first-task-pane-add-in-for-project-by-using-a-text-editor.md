@@ -2,12 +2,12 @@
 title: Создание первой надстройки области задач для Project 2013 с помощью текстового редактора
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: a09da8fd3ab4989afb8a6ec6e6b2ae226b6f18d5
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: ca00d1922ed3959ea9ab013f4d7f59ded084b241
+ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925551"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "23945703"
 ---
 # <a name="create-your-first-task-pane-add-in-for-project-2013-by-using-a-text-editor"></a>Создание первой надстройки области задач для Project 2013 с помощью текстового редактора
 
@@ -106,7 +106,7 @@ ms.locfileid: "22925551"
 
    Приведенный ниже код получает контекст приложения и сведения о документе с помощью функций из файла Office.js. Объект **text** представляет собой идентификатор элемента управления **textarea** в HTML-файле.
     
-   Переменная **\_projDoc** инициализируется с объектом **ProjectDocument**. Код включает функции обработки простых ошибок, а также функцию **getContextValues**, которая получает контекст приложения и свойства контекста для документа проекта. Дополнительные сведения об объектной модели JavaScript для Project см. в статье [API JavaScript для Office](https://dev.office.com/reference/add-ins/javascript-api-for-office).
+   Переменная **\_projDoc** инициализируется с объектом **ProjectDocument**. Код включает функции обработки простых ошибок, а также функцию **getContextValues**, которая получает контекст приложения и свойства контекста для документа проекта. Дополнительные сведения об объектной модели JavaScript для Project см. в статье [API JavaScript для Office](https://docs.microsoft.com/javascript/office/javascript-api-for-office?view=office-js).
 
     ```javascript
     /*
@@ -168,11 +168,11 @@ ms.locfileid: "22925551"
     }
     ```
 
-   Сведения о функциях в файле Office.debug.js см. в разделе [JavaScript API for Office](https://dev.office.com/reference/add-ins/javascript-api-for-office). Например, функция **getDocumentUrl** получает URL-адрес или путь к файлу открытого проекта.
+   Сведения о функциях в файле Office.debug.js см. в разделе [JavaScript API for Office](https://docs.microsoft.com/javascript/office/javascript-api-for-office?view=office-js). Например, функция **getDocumentUrl** получает URL-адрес или путь к файлу открытого проекта.
     
 3. Добавьте функции JavaScript, которые вызывают асинхронные функции из файлов Office.js и Project-15.js для получения выбранных данных.
     
-   - Например, **getSelectedDataAsync** — это общая функция в Office.js, которая принимает неформатированный текст из выбранных данных. Дополнительные сведения см. в статье [Объект AsyncResult](https://dev.office.com/reference/add-ins/shared/asyncresult).
+   - Например, **getSelectedDataAsync** — это общая функция в Office.js, которая принимает неформатированный текст из выбранных данных. Дополнительные сведения см. в статье [Объект AsyncResult](https://docs.microsoft.com/javascript/api/office/office.asyncresult?view=office-js).
     
    - Функция **getSelectedTaskAsync** из файла Project-15.js принимает идентификатор GUID выбранной задачи. Аналогичным образом функция **getSelectedResourceAsync** получает GUID выбранного ресурса. Если вызвать какую-либо из этих функций, не выбрав задачу или ресурс, функция выдает неопределенную ошибку.
     
@@ -188,7 +188,7 @@ ms.locfileid: "22925551"
    - Если проект синхронизируется со списком задач SharePoint, функция **getWSSUrlAsync** получает URL-адрес и имя списка задач. Если проект не синхронизируется со списком задач SharePoint, функция **getWSSUrlAsync** выдает ошибку.
     
      > [!NOTE]
-     > Чтобы получить URL-адрес SharePoint и имя списка задач, рекомендуется использовать функцию **getProjectFieldAsync** с константами **WSSUrl** и **WSSList** в перечислении [ProjectProjectFields](https://dev.office.com/reference/add-ins/shared/projectprojectfields-enumeration).
+     > Чтобы получить URL-адрес SharePoint и имя списка задач, рекомендуется использовать функцию **getProjectFieldAsync** с константами **WSSUrl** и **WSSList** в перечислении [ProjectProjectFields](https://docs.microsoft.com/javascript/api/office/office.projectprojectfields?view=office-js).
 
    Все функции в коде ниже содержат анонимную функцию, которую определяет `function (asyncResult)`обратная функция, получающая асинхронный результат. Вместо анонимных можно использовать именованные функции. Благодаря этому будет удобней обеспечивать поддержку сложных надстроек.
 
@@ -1095,7 +1095,7 @@ function logMethodError(methodName, errorName, errorMessage, actionMessage) {
 
 - [Надстройки области задач для Project](../project/project-add-ins.md)
 - [Общие сведения об API JavaScript для надстроек](../develop/understanding-the-javascript-api-for-office.md)
-- [API JavaScript для надстроек Office](https://dev.office.com/reference/add-ins/javascript-api-for-office)
+- [API JavaScript для надстроек Office](https://docs.microsoft.com/javascript/office/javascript-api-for-office?view=office-js)
 - [Справочник по схеме для манифестов надстроек Office (версия 1.1)](../develop/add-in-manifests.md)     
 - [Загрузка пакета SDK для Project 2013](https://www.microsoft.com/download/details.aspx?id=30435%20)
     

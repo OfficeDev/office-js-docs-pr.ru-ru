@@ -2,18 +2,18 @@
 title: Загрузка неопубликованных надстроек Office с использованием команды sideload
 description: ''
 ms.date: 07/24/2018
-ms.openlocfilehash: 3aacfdb09f362ea10ba0e2393caca335fe4c04c6
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: 1ab0277493f2899adb479c2f24b1635a881af3cc
+ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925103"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "23944043"
 ---
 # <a name="sideload-office-add-ins-for-testing-using-the-sideload-command"></a>Загрузка неопубликованных надстроек Office для тестирования с использованием **команды sideload**
  >[!NOTE]
->Метод "npm run sideload" работает только для надстроек Excel, Word и PowerPoint, которые запускаются в Windows, и только для проектов надстройки, которые были созданы с помощью [**инструмента**yo office](https://github.com/OfficeDev/generator-office) и которые имеют `sideload` сценарий в `scripts` разделе файла package.json. (Проекты, созданные со старыми версиями **yo office**, также не имеют этого сценария.) Если ваш проект был создан с помощью Visual Studio или не имеет сценария загрузки неопубликованных приложений, вы можете загрузить его неопубликованным в Windows с помощью метода, описанного в статье [Загрузка неопубликованной надстройки Office из сетевой папки](create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md).
+>Метод "npm run sideload" работает только для надстроек Excel, Word и PowerPoint, которые запускаются в Windows, и только для проектов надстройки, которые были созданы с помощью инструмента [**yo office**](https://github.com/OfficeDev/generator-office)   и у которых есть сценарий `sideload` в разделе `scripts` файла package.json (у проектов, созданных с помощью более ранних версий **yo office** также нет этого сценария). Если ваш проект был создан с помощью Visual Studio или у него нет сценария загрузки неопубликованных приложений, вы можете загрузить его неопубликованным в Windows с помощью метода, описанного в статье [ Загрузка неопубликованной надстройки Office из сетевой папки](create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md) .
 >
-> Если вы не тестируете надстройку Word, Excel или PowerPoint в Windows, см. одну из следующих статей, чтобы загрузить ваше неопубликованное приложение:
+> Если вы не тестируете надстройку Word, Excel или PowerPoint в Windows, см. одну из следующих статей.
 > 
 > - [Загрузка неопубликованных надстроек Office в Office Online для тестирования](sideload-office-add-ins-for-testing.md)
 > - [Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования](sideload-an-office-add-in-on-ipad-and-mac.md)
