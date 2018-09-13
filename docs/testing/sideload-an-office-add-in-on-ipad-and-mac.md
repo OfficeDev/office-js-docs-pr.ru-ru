@@ -2,12 +2,12 @@
 title: Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: 9b4bcb92e1123c627a8b1a6df4785ff357453189
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: 48f685cc6c3f1a5193ad4dbd3f9ba27f5f855b05
+ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925271"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "23944451"
 ---
 # <a name="sideload-office-add-ins-on-ipad-and-mac-for-testing"></a>Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 
@@ -69,8 +69,8 @@ ms.locfileid: "22925271"
 
 1. Откройте **Терминал** и перейдите в одну из указанных ниже папок, чтобы сохранить в нее файл манифеста надстройки. Если папки `wef` нет на компьютере, создайте ее.
     
-    - Для Word: `/Users/<username>/Library/Containers/com.microsoft.Word/Data/documents/wef`    
-    - Для Excel: `/Users/<username>/Library/Containers/com.microsoft.Excel/Data/documents/wef`
+    - Для Word:  `/Users/<username>/Library/Containers/com.microsoft.Word/Data/documents/wef`    
+    - Для Excel:  `/Users/<username>/Library/Containers/com.microsoft.Excel/Data/documents/wef`
     - Для PowerPoint: `/Users/<username>/Library/Containers/com.microsoft.Powerpoint/Data/documents/wef`
     
 2. Откройте папку в **Finder** с помощью команды `open .` (включая точку). Скопируйте файл манифеста надстройки в эту папку.

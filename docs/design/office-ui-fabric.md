@@ -2,12 +2,12 @@
 title: Office UI Fabric в надстройках Office
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: b573f720ebe4f90f7d4dbfdb05693871b93a2258
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: 7b1e4a9c377c9a60195a51115d7f275603f1ca5a
+ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925194"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "23944036"
 ---
 # <a name="office-ui-fabric-in-office-add-ins"></a>Office UI Fabric в надстройках Office 
 
@@ -36,15 +36,15 @@ Fabric Core содержит основные элементы языка диз
     <i class="ms-Icon ms-font-xl ms-Icon--Table ms-fontColor-themePrimary"></i>
     ```
 
-    Чтобы найти другие значки, доступные в Office UI Fabric, используйте функцию поиска на странице [Значки](https://dev.office.com/fabric#/styles/icons). Когда вы найдете значок для надстройки, добавьте к его имени префикс `ms-Icon--`. 
+    Чтобы найти другие значки, доступные в Office UI Fabric, используйте функцию поиска на странице [Значки](https://developer.microsoft.com/fabric#/styles/icons). Когда вы найдете значок для надстройки, добавьте к его имени префикс `ms-Icon--`. 
 
-    Сведения о размерах шрифтов и цветах, доступных в Office UI Fabric, см. в разделах [Оформление](https://dev.office.com/fabric#/styles/typography) и [Цвета](https://dev.office.com/fabric#/styles/colors).
+    Сведения о размерах шрифтов и цветах, доступных в Office UI Fabric, см. в разделах [Оформление](https://developer.microsoft.com/fabric#/styles/typography) и [Цвета](https://developer.microsoft.com/fabric#/styles/colors).
  
 ## <a name="use-fabric-components"></a>Использование компонентов Fabric 
 В Fabric есть различные компоненты оформления, которые можно использовать при создании надстроек, в том числе:
 
 - Компоненты ввода — например, Button, Checkbox и Toggle.
-- Компоненты навигации — например, сводка и строка навигации
+- Компоненты навигации – например, сводный документ и строка навигации
 - Компоненты уведомления — например, MessageBar и Callout.  
 
 Не все компоненты Fabric рекомендуются для использования в надстройках. Ниже приведен список компонентов Fabric React UX, которые мы рекомендуем использовать в надстройке:
@@ -64,5 +64,5 @@ Fabric Core содержит основные элементы языка диз
 
 |**Платформа**|**Пример**|
 |:------------|:----------|
-|**React**|[Использование Office UI Fabric React в надстройках Office](using-office-ui-fabric-react.md )|
+|**|||UNTRANSLATED_CONTENT_START|||React|||UNTRANSLATED_CONTENT_END|||**|[Использование Office UI Fabric React в надстройках Office](using-office-ui-fabric-react.md )|
 |**Angular**| См. проект сообщества [ngOfficeUIFabric](http://ngofficeuifabric.com/) с директивами Angular 1.5 и раздел [Обдумайте размещение компонентов Fabric в компонентах Angular 2](../develop/add-ins-with-angular2.md#consider-wrapping-fabric-components-with-angular-components)|
