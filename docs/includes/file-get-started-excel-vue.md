@@ -48,10 +48,9 @@ vue init webpack my-add-in
     yo office 
     ```
 
-    - **Выберите тип проекта:** `Manifest`
+    - **Выберите тип проекта:** `Office Add-in containing the manifest only`
     - **Как вы хотите назвать надстройку?:** `My Office Add-in`
-    - **Какое клиентское приложение Office вы хотели бы поддерживать?:** `Excel`
-
+    - **Какое клиентское приложение Office должно поддерживаться?:** `Excel`
 
     После завершения работы мастера вы сможете создать файл манифеста и файл ресурсов для создания вашего проекта.
 
@@ -210,5 +209,5 @@ vue init webpack my-add-in
 
 * [Руководство по надстройкам Excel](../tutorials/excel-tutorial-create-table.md)
 * [Основные понятия API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
-* [Примеры кода надстроек Excel](http://dev.office.com/code-samples#?filters=excel,office%20add-ins)
-* [Справочник по API JavaScript для Excel](https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview)
+* [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
+* [Справочник по API JavaScript для Excel](https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview?view=office-js)
