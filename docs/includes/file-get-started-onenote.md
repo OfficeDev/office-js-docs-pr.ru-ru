@@ -42,7 +42,7 @@
 
 1. В редакторе кода откройте файл **index.html** из корневой папки проекта. Этот файл содержит HTML-контент, который будет отображаться в области задач надстройки.
 
-2. Замените элемент `<main>` внутри элемента `<body>` приведенной ниже разметкой и сохраните файл. Эта разметка добавляет текстовую область и кнопку, используя [компоненты Office UI Fabric](http://dev.office.com/fabric/components).
+2. Замените элемент `<main>` внутри элемента `<body>` приведенной ниже разметкой и сохраните файл. Эта разметка добавляет текстовую область и кнопку, используя [компоненты Office UI Fabric](https://developer.microsoft.com/en-us/fabric#/components).
 
     ```html
     <main class="ms-welcome__main">
@@ -172,6 +172,6 @@
 ## <a name="see-also"></a>См. также
 
 - [Обзор создания кода с помощью API JavaScript для OneNote](../onenote/onenote-add-ins-programming-overview.md)
-- [Справочник по API JavaScript для OneNote](https://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference)
+- [Справочник по API JavaScript для OneNote](https://docs.microsoft.com/javascript/office/overview/onenote-add-ins-javascript-reference?view=office-js)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)
