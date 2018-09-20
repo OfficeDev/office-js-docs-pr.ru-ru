@@ -2,12 +2,12 @@
 title: Работа с несколькими диапазонами одновременно в надстройках Excel
 description: ''
 ms.date: 9/4/2018
-ms.openlocfilehash: ade97947e513d0af5d7a520c1f07ef1fa046dd0f
-ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
+ms.openlocfilehash: bcb14d1f4c015fe675c2d65cb5f1198d485dd4c5
+ms.sourcegitcommit: 3da2038e827dc3f274d63a01dc1f34c98b04557e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "23949853"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "24016460"
 ---
 # <a name="work-with-multiple-ranges-simultaneously-in-excel-add-ins-preview"></a>Работа с несколькими диапазонами одновременно в надстройках Excel (предварительная версия)
 
@@ -33,11 +33,55 @@ ms.locfileid: "23949853"
 - `RangeAreas.getEntireColumn` и `RangeAreas.getEntireRow` возвращают другой объект `RangeAreas`, представляющий все столбцы (или строки) во всех диапазонах в `RangeAreas`. Например, если `RangeAreas` представляет "A1:C4" и "F14:L15", то `RangeAreas.getEntireColumn` возвращает объект `RangeAreas`, представляющий "A:C" и "F:L".
 - `RangeAreas.copyFrom` можно использовать параметр `Range` или `RangeAreas`, представляющий диапазон(ы) источника операции копирования.
 
+#### <a name="complete-list-of-range-members-that-are-also-available-on-rangeareas"></a>Полный список элементов диапазона Range, которые также доступны на RangeAreas
+
+##### <a name="properties"></a>Свойства
+
+Ознакомьтесь с [Чтением свойств RangeAreas](#reading-properties-of-rangeareas) до написания кода, который считывает все свойства из списка. Существуют подзаголовки к тому, что будет возвращено.
+
+- address
+- addressLocal
+- cellCount
+- conditionalFormats
+- context
+- dataValidation
+- format
+- isEntireColumn
+- isEntireRow
+- стиль
+- лист
+
+##### <a name="methods"></a>Методы
+
+Помеченные методы диапазона в режиме предварительной версии.
+
+- calculate()
+- clear()
+- convertDataTypeToText() (предварительная версия)
+- convertToLinkedDataType() (предварительная версия)
+- copyFrom() (предварительная версия)
+- getEntireColumn()
+- getEntireRow()
+- getIntersection()
+- getIntersectionOrNullObject()
+- getOffsetRange() (с именем getOffsetRangeAreas на объекте RangeAreas)
+- getSpecialCells() (предварительная версия)
+- getSpecialCellsOrNullObject() (предварительная версия)
+- getTables() (предварительная версия)
+- getUsedRange() (с именем getUsedRangeAreas на объекте RangeAreas)
+- getUsedRangeOrNullObject() (с именем getUsedRangeAreasOrNullObject на объекте RangeAreas)
+- load()
+- set()
+- setDirty() (предварительная версия)
+- toJSON()
+- track()
+- untrack()
+
 ### <a name="rangearea-specific-properties-and-methods"></a>Свойства и методы, характерные для объекта RangeArea
 
-Тип `RangeAreas` имеет некоторые свойства и методы, которые не входят в объект `Range`:
+Тип `RangeAreas` имеет некоторые свойства и методы, которые не входят в объект `Range`. Ниже приведено их выделение:
 
-- `areas`объект `RangeCollection`, содержащий все диапазоны, представленные объектом `RangeAreas`. Объект `RangeCollection` – также новый и аналогичен другим объектам коллекции Excel. Он имеет свойство `items`, которое представляет собой массив из объектов `Range`, представляющих диапазоны.
+- `areas`: Объект `RangeCollection`, содержащий все диапазоны, представленные объектом `RangeAreas`. Объект `RangeCollection` – также новый и аналогичен другим объектам коллекции Excel. Он имеет свойство `items`, которое представляет собой массив из объектов `Range`, представляющих диапазоны.
 - `areaCount`: Общее число диапазонов в `RangeAreas`.
 - `getOffsetRangeAreas`: Работает так же, как [Range.getOffsetRange](https://docs.microsoft.com/javascript/api/excel/excel.range#getoffsetrange-rowoffset--columnoffset-), за исключением того, что `RangeAreas` возвращается и содержит диапазоны, каждый из которых смещен от одного из диапазонов в исходном `RangeAreas`.
 
@@ -46,7 +90,7 @@ ms.locfileid: "23949853"
 Можно создать объект `RangeAreas` двумя основными способами:
 
 - Вызовите `Worksheet.getRanges()` и передайте его в строку с адресами диапазона, разделенными запятыми. Если диапазон, который вы хотите включить, был переделан в [NamedItem](https://docs.microsoft.com/javascript/api/excel/excel.nameditem), вы можете включить в строку имя вместо адреса.
-- Вызовите `Workbook.getSelectedRanges()`. Этот метод возвращает `RangeAreas`, представляющий все диапазоны, выбранные на активном в данный момент листе.
+- вызова метода `Workbook.getSelectedRanges()`; Этот метод возвращает `RangeAreas`, представляющий все диапазоны, выбранные на активном в данный момент листе.
 
 После получения объекта `RangeAreas` можно создать другие с помощью методов, применяемых к объекту, который возвращает `RangeAreas`, такие как `getOffsetRangeAreas` и `getIntersection`.
 
@@ -90,7 +134,7 @@ getSpecialCells(cellType: Excel.SpecialCellType, cellValueType?: Excel.SpecialCe
 getSpecialCellsOrNullObject(cellType: Excel.SpecialCellType, cellValueType?: Excel.SpecialCellValueType): Excel.RangeAreas;
 ```
 
-Ниже приведен пример использования первого из них. Вот что нужно знать об этом коде:
+Ниже приведен пример об использовании первого из них. Вот что нужно знать об этом коде:
 
 - Он ограничивает часть листа, которую нужно искать, вызвав сначала `Worksheet.getUsedRange`, а затем вызвав `getSpecialCells` только для этого диапазона.
 - Передает в качестве параметра для `getSpecialCells` версию строки значения из перечисления `Excel.SpecialCellType`. Некоторые другие значения, которые могут быть переданы вместо этого, – это "Blanks" для пустых ячеек, "Constants" для ячейки со значениями литералов вместо формул и "SameConditionalFormat" для ячеек, у которых такое же условное форматирование, как и у первой ячейки в `usedRange`. Первая ячейка является верхней крайней слева ячейкой. Полный список значений перечисления см. в [office.d.ts бета-версии](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts).
@@ -107,7 +151,7 @@ Excel.run(function (context) {
 })
 ```
 
-Иногда не обнаруживается *никаких* ячеек с целевой характеристикой. Если `getSpecialCells` не находит требуемой ячейки, он вызывает ошибку **ItemNotFound**. Это будет переадресовать поток управления к блоку или методу `catch`, если он существует. Если нет, ошибка будет останавливать функцию. Могут быть сценарии, в которых выдача ошибки – это именно то, что должно происходить при отсутствуют ячейки с целевой характеристикой. 
+В некоторых случаях диапазон не содержит*ни одну* из ячеек с целевой характеристикой. Если `getSpecialCells` не находит требуемой ячейки, он вызывает ошибку **ItemNotFound**. Это будет переадресовать поток управления к блоку или методу `catch`, если он существует. Если нет, ошибка будет останавливать функцию. Могут быть сценарии, в которых выдача ошибки – это именно то, что должно происходить при отсутствуют ячейки с целевой характеристикой. 
 
 Однако в сценариях, для которых это нормально, но, возможно, необычно, может не оказаться соответствующих ячеек. Ваш код должен проверить наличие такой возможности и аккуратно провести работу с сценарием без выдачи ошибки. Для этих сценариев следует использовать метод `getSpecialCellsOrNullObject` и протестировать свойство `RangeAreas.isNullObject`. Ниже приведен пример. Вот что нужно знать об этом коде:
 

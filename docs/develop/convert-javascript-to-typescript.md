@@ -2,12 +2,12 @@
 title: Преобразование проекта надстройки Office в Visual Studio в TypeScript
 description: ''
 ms.date: 01/19/2018
-ms.openlocfilehash: 783d47e04fc6d28604501ac77345470c26d36c89
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: 015fd9d7e9bf4412c09b76f0de5a97c9946e4d58
+ms.sourcegitcommit: 3da2038e827dc3f274d63a01dc1f34c98b04557e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925383"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "24016334"
 ---
 # <a name="convert-an-office-add-in-project-in-visual-studio-to-typescript"></a>Преобразование проекта надстройки Office в Visual Studio в TypeScript
 
@@ -30,7 +30,7 @@ ms.locfileid: "22925383"
     > [!NOTE]
     > TypeScript должен быть по умолчанию установлен вместе с Visual Studio 2017, но вы можете убедиться в этом с помощью [Visual Studio Installer](https://docs.microsoft.com/visualstudio/install/modify-visual-studio). В Visual Studio Installer выберите вкладку **Отдельные компоненты** и убедитесь, что в разделе **Пакеты SDK, библиотеки и платформы** выбран узел **Пакет SDK для TypeScript 2.3**.
 
-- Excel 2016
+- Excel 2016 или более поздняя версия
 
 ## <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
@@ -121,7 +121,7 @@ declare var fabric: any;
             messageBanner = new fabric.MessageBanner(element);
             messageBanner.hideBanner();
             
-            // If not using Excel 2016, use fallback logic.
+            // If not using Excel 2016 or later, use fallback logic.
             if (!Office.context.requirements.isSetSupported('ExcelApi', 1.1)) {
                 $("#template-description").text("This sample will display the value of the cells that you have selected in the spreadsheet.");
                 $('#button-text').text("Display!");
