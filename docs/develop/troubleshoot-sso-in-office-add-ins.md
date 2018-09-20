@@ -2,20 +2,20 @@
 title: Устранение ошибок единого входа
 description: ''
 ms.date: 12/08/2017
-ms.openlocfilehash: ef4d7ed873121deec5fd235e0eace70a3a0c2f0e
-ms.sourcegitcommit: 8333ede51307513312d3078cb072f856f5bef8a2
+ms.openlocfilehash: a0eb0839596bad0dfe45c2cbbc05c2c3d74eda24
+ms.sourcegitcommit: 3da2038e827dc3f274d63a01dc1f34c98b04557e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "23876601"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "24016320"
 ---
 # <a name="troubleshoot-error-messages-for-single-sign-on-sso-preview"></a>Устранение ошибок единого входа (предварительная версия)
 
 В этой статье представлено руководство по обеспечению надежной обработки специальных условий и ошибок в надстройках Office, поддерживающих единый вход, а также устранению связанных с единым входом проблем в таких надстройках.
 
 > [!NOTE]
-> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint в тестовом режиме. Дополнительные сведения о текущей поддержке API единого входа см. в статье Наборы обязательных элементов API идентификацииhttps://docs.microsoft.com/javascript/office/requirement-sets/identity-api-requirement-sets).
-> Чтобы использовать единый вход, необходимо подключить бета-версию библиотеки JavaScript Office из https://appsforoffice.microsoft.com/lib/beta/hosted/office.js на начальной странице HTML-надстройки.
+> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint в тестовом режиме. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных  требований  IdentityAPI]https://docs.microsoft.com/javascript/office/requirement-sets/identity-api-requirement-sets).
+> Чтобы использовать единый вход, необходимо подключить бета-версию библиотеки JavaScript Office из https://appsforoffice.microsoft.com/lib/beta/hosted/office.js на начальной HTML-странице надстройки.
 > Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 ## <a name="debugging-tools"></a>Средства отладки
@@ -43,7 +43,7 @@ ms.locfileid: "23876601"
 Надстройка или версия Office не поддерживает API [getAccessTokenAsync](https://docs.microsoft.com/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference). 
 
 - Эта версия Office не поддерживает единый вход. Необходимо установить Office 2016 версии 1710 (сборка 8629.nnnn) или выше (эту версию подписки на Office 365 иногда называют "нажми и работай"). Чтобы скачать эту версию, вам может потребоваться принять участие в программе предварительной оценки Office. Дополнительные сведения см. в статье [Примите участие в программе предварительной оценки Office](https://products.office.com/office-insider?tab=tab-1). 
-- В манифесте надстройки отсутствует подходящий раздел [WebApplicationInfo](https://dev.office.com/reference/add-ins/manifest/webapplicationinfo).
+- В манифесте надстройки отсутствует подходящий раздел [WebApplicationInfo](https://docs.microsoft.com/javascript/office/manifest/webapplicationinfo?view=office-js).
 
 ### <a name="13001"></a>13001
 
@@ -89,7 +89,7 @@ ms.locfileid: "23876601"
 
 ### <a name="13009"></a>13009
 
-Надстройка вызвала метод `getAccessTokenAsync` с параметром `forceConsent: true`, но ее манифест развернут в каталоге, не поддерживающем принудительное согласие. Код должен повторно вызвать метод `getAccessTokenAsync` и передать значение `forceConsent: false` в параметре [options](https://docs.microsoft.com/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference). Однако вызов метода `getAccessTokenAsync` с параметром `forceConsent: true` мог сам по себе быть автоматической реакцией на неудачный вызов метода `getAccessTokenAsync` с параметром `forceConsent: false`, поэтому в коде следует отслеживать, был ли уже вызван метод `getAccessTokenAsync` с параметром `forceConsent: false`. Если это так, код должен сообщать пользователю, что следует выйти из Office и повторить вход.
+Надстройка вызвала метод `getAccessTokenAsync` с параметром `forceConsent: true`, но ее манифест развернут в каталоге, не поддерживающем принудительное согласие. Код должен повторно вызвать метод `getAccessTokenAsync` и передать значение `forceConsent: false` в параметре [options](https://docs.microsoft.com/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference). Однако вызов метода `getAccessTokenAsync` с параметром `forceConsent: true` мог сам по себе быть автоматической реакцией на неудачный вызов метода `getAccessTokenAsync` с параметром `forceConsent: false`, поэтому в коде следует отслеживать, был ли уже вызван метод `getAccessTokenAsync` с параметром `forceConsent: false`. Если это так, то код должен сообщать пользователю, что следует выйти из Office и повторить вход.
 
 > [!NOTE]
 > Корпорация Майкрософт не обязательно применяет это ограничение к каким-либо типам каталогов надстроек. Если ограничение отсутствует, то данная ошибка никогда не возникнет.
@@ -98,9 +98,13 @@ ms.locfileid: "23876601"
 
 Пользователь запустил надстройку в Office Online и использует Edge или Internet Explorer. Домен Office 365 пользователя и домен login.microsoftonline.com находятся в разных зонах безопасности в настройках браузера. Если возвращается эта ошибка, то пользователь уже видел сообщение с соответствующим пояснением и ссылкой на инструкции по изменению конфигурации зон. Если ваша надстройка предоставляет функции, не требующие входа пользователя, то в коде следует отслеживать эту ошибку и позволять надстройке продолжать работу.
 
+### <a name="13012"></a>13012
+
+Надстройка работает на платформе, которая не поддерживает `getAccessTokenAsync` API. Например, она не поддерживается на iPad. См. также [Наборы обязательных элементов API идентификации](https://docs.microsoft.com/javascript/office/requirement-sets/identity-api-requirement-sets).
+
 ### <a name="50001"></a>50001
 
-Эта ошибка (которая не является специфической для `getAccessTokenAsync`) может указывать на то, что браузер обналичил старую копию файлов office.js. Очистите кэш браузера. Другая возможность заключается в том, что версия Office недостаточно последняя для поддержки единого входа. См.статью [Компоненты](create-sso-office-add-ins-aspnet.md#prerequisites).
+Эта ошибка (которая не является специфической для `getAccessTokenAsync`) может указывать на то, что браузер поместил в кэш старую копию файлов office.js. Очистите кэш браузера. Другая возможность заключается в том, что версия Office недостаточно последняя для поддержки единого входа. См.статью [Компоненты](create-sso-office-add-ins-aspnet.md#prerequisites).
 
 ## <a name="errors-on-the-server-side-from-azure-active-directory"></a>Ошибки на стороне сервера из Azure Active Directory
 
@@ -122,7 +126,7 @@ ms.locfileid: "23876601"
 ### <a name="invalid-or-missing-scope-permission-errors"></a>Ошибки, вызванные недействительными или отсутствующими областями (разрешениями)
 
 - Код на стороне сервера должен отправить отклик `403 Forbidden` клиенту, а тот должен показать пользователю понятное сообщение. При возможности также следует записать ошибку в консоли или журнале.
-- Убедитесь, что в разделе [Scopes](https://dev.office.com/reference/add-ins/manifest/scopes) манифеста надстройки указаны все необходимые разрешения. Кроме того, убедитесь, что в регистрационных данных веб-службы надстройки указаны те же разрешения. Кроме того, проверьте наличие ошибок правописания. Дополнительные сведения см. в статьях [Регистрация надстройки в конечной точке Azure AD версии 2.0](create-sso-office-add-ins-aspnet.md#register-the-add-in-with-azure-ad-v20-endpoint) (ASP.NET) или [Регистрация надстройки в конечной точке Azure AD версии 2.0](create-sso-office-add-ins-nodejs.md#register-the-add-in-with-azure-ad-v20-endpoint) (Node JS) и [Конфигурация надстройки](create-sso-office-add-ins-aspnet.md#configure-the-add-in) (ASP.NET) или [Конфигурация надстройки](create-sso-office-add-ins-nodejs.md#configure-the-add-in) (Node JS).
+- Убедитесь, что в разделе [Scopes](https://docs.microsoft.com/javascript/office/manifest/scopes?view=office-js) манифеста надстройки указаны все необходимые разрешения. Кроме того, убедитесь, что в регистрационных данных веб-службы надстройки указаны те же разрешения. Кроме того, проверьте наличие ошибок правописания. Дополнительные сведения см. в статьях [Регистрация надстройки в конечной точке Azure AD версии 2.0](create-sso-office-add-ins-aspnet.md#register-the-add-in-with-azure-ad-v20-endpoint) (ASP.NET) или [Регистрация надстройки в конечной точке Azure AD версии 2.0](create-sso-office-add-ins-nodejs.md#register-the-add-in-with-azure-ad-v20-endpoint) (Node JS) и [Конфигурация надстройки](create-sso-office-add-ins-aspnet.md#configure-the-add-in) (ASP.NET) или [Конфигурация надстройки](create-sso-office-add-ins-nodejs.md#configure-the-add-in) (Node JS).
 
 ### <a name="expired-or-invalid-token-errors-when-calling-microsoft-graph"></a>Ошибки, вызванные просроченным или недействительным токеном при вызове Microsoft Graph
 

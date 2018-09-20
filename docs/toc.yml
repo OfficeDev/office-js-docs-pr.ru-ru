@@ -41,7 +41,7 @@ items:
   - name: Создание надстройки проекта
     displayName: Project
     href: quickstarts/project-quickstart.md
-- name: Руководства
+- name: Учебные пособия
   items:
   - name: Руководство по надстройкам Excel
     displayName: Excel
@@ -80,7 +80,7 @@ items:
     - name: Язык проектирования
       href: design/add-in-design-language.md
       items:
-      - name: Шрифтовое оформление
+      - name: шрифтовое оформление;
         href: design/add-in-typography.md
       - name: Цвет
         href: design/add-in-color.md
@@ -107,11 +107,11 @@ items:
       items:
       - name: Проверка подлинности
         href: design/authentication-patterns.md
-      - name: Первый запуск
+      - name: первый запуск;
         href: design/first-run-experience-patterns.md
       - name: Навигация
         href: design/navigation-patterns.md
-      - name: Фирменная символика
+      - name: Брендирование
         href: design/branding-patterns.md
     - name: Ресурсы
       items:
@@ -138,7 +138,7 @@ items:
         href: develop/loading-the-dom-and-runtime-environment.md
       - name: Объектная модель API JavaScript для Office
         href: develop/office-javascript-api-object-model.md
-      - name: Асинхронное программирование в надстройках Office
+      - name: Асинхронное программирование в случае надстроек Office
         href: develop/asynchronous-programming-in-office-add-ins.md
       - name: Сохранение состояния и параметров
         href: develop/persisting-add-in-state-and-settings.md
@@ -184,7 +184,7 @@ items:
       items:
       - name: Создание и отладка надстроек Office в Visual Studio
         href: develop/create-and-debug-office-add-ins-in-visual-studio.md
-      - name: Создание и отладка надстроек Office в Visual Studio
+      - name: Получение JavaScript IntelliSense в Visual Studio
         href: develop/get-javascript-intellisense-in-visual-studio.md
       - name: Преобразование JavaScript в TypeScript
         href: develop/convert-javascript-to-typescript.md
@@ -196,7 +196,7 @@ items:
     displayName: Excel
     href: excel/excel-add-ins-overview.md
     items:
-    - name: Создайте свою первую надстройку Excel
+    - name: Создание первой надстройки Excel
       displayName: Excel
       href: excel/excel-add-ins-get-started-overview.md
       items:
@@ -263,14 +263,17 @@ items:
       - name: Оптимизация производительности
         displayName: Excel
         href: excel/performance.md
+      - name: Работа с несколькими диапазонами
+        displayName: Excel
+        href: excel/excel-add-ins-multiple-ranges.md
     - name: Справочник по API JavaScript для Excel
       displayName: Excel
-      href: https://docs.microsoft.com/en-us/javascript/office/overview/excel-add-ins-reference-overview?view=office-js
+      href: https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview?view=office-js
   - name: Надстройки Word
     displayName: Word
     href: word/word-add-ins-programming-overview.md
     items:
-    - name: Создайте свою первую надстройку Word
+    - name: Создание первой надстройки Word
       displayName: Word
       href: word/word-add-ins.md
     - name: Руководство по надстройкам Word
@@ -296,7 +299,7 @@ items:
       href: word/search-option-guidance.md
     - name: Справочник по API JavaScript для Word
       displayName: Word
-      href: https://docs.microsoft.com/en-us/javascript/office/overview/word-add-ins-reference-overview?view=office-js
+      href: https://docs.microsoft.com/javascript/office/overview/word-add-ins-reference-overview?view=office-js
   - name: Надстройки Outlook
     displayName: Outlook
     href: https://docs.microsoft.com/outlook/add-ins/
@@ -304,7 +307,7 @@ items:
     displayName: PowerPoint
     href: powerpoint/powerpoint-add-ins.md
     items:
-    - name: Создайте свою первую надстройку PowerPoint
+    - name: Создание первой надстройки PowerPoint
       displayName: PowerPoint
       href: powerpoint/powerpoint-add-ins-get-started.md
     - name: Руководство по надстройкам PowerPoint
@@ -320,7 +323,7 @@ items:
     displayName: OneNote
     href: onenote/onenote-add-ins-programming-overview.md
     items:
-    - name: Создайте свою первую надстройку OneNote
+    - name: Создание первой надстройки OneNote
       displayName: OneNote
       href: onenote/onenote-add-ins-getting-started.md
     - name: Работа с содержимым страницы в OneNote
@@ -328,18 +331,18 @@ items:
       href: onenote/onenote-add-ins-page-content.md
     - name: Справочник по API JavaScript для OneNote
       displayName: OneNote
-      href: https://docs.microsoft.com/en-us/javascript/office/overview/onenote-add-ins-javascript-reference?view=office-js
+      href: https://docs.microsoft.com/javascript/office/overview/onenote-add-ins-javascript-reference?view=office-js
   - name: Надстройки Project
     displayName: Project
     href: project/project-add-ins.md
     items:
-    - name: Создайте свою первую надстройку Project
+    - name: Создание первой надстройки Project
       displayName: Project
       href: project/project-add-ins-get-started.md
     - name: Создание надстройки Project, использующей REST с локальной службой OData
       displayName: Project
       href: project/create-a-project-add-in-that-uses-rest-with-an-on-premises-odata-service.md
-    - name: Создайте свою первую надстройку области задач для Project с помощью текстового редактора
+    - name: Создание первой надстройки области задач для Project с помощью текстового редактора
       displayName: Project
       href: project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md
   - name: Тестирование и отладка
@@ -367,7 +370,7 @@ items:
         href: testing/sideload-an-office-add-in-on-ipad-and-mac.md
       - name: Отладка на iPad и Mac
         href: testing/debug-office-add-ins-on-ipad-and-mac.md
-    - name: Тестирование удобства использования
+    - name: Тестирование на удобство
       href: develop/usability-testing.md
     - name: Устранение ошибок, с которыми сталкиваются пользователи
       href: testing/testing-and-troubleshooting.md
@@ -411,17 +414,17 @@ items:
   - name: API JavaScript для Word
     displayName: Word
     href: https://docs.microsoft.com/javascript/office/overview/word-add-ins-reference-overview?view=office-js
-  - name: API Shared
+  - name: Общий API
     displayName: PowerPoint, Project
-    href: https://docs.microsoft.com/en-us/javascript/office/requirement-sets/office-add-in-requirement-sets?view=office-js
+    href: https://docs.microsoft.com/javascript/office/requirement-sets/office-add-in-requirement-sets?view=office-js
   - name: Открытые спецификации API
     displayName: Excel, Word
     href: https://docs.microsoft.com/javascript/office/openspec?view=office-js
 - name: Ресурсы
   href: resources/resources-links-help.md
-ms.openlocfilehash: 1dd64f00bdf9327b47e74dcc4527d7c6364f8821
-ms.sourcegitcommit: 28fc652bded31205e393df9dec3a9dedb4169d78
+ms.openlocfilehash: 19c424952936e03a982f1c0eba2b01e47e2ff7c4
+ms.sourcegitcommit: 3da2038e827dc3f274d63a01dc1f34c98b04557e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "22928051"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "24016432"

@@ -1,13 +1,13 @@
 ---
 title: Локализация надстроек Office
-description: ''
+description: Вы можете использовать API JavaScript для Office, чтобы определить языковые параметры и отображать строки, основываясь на языковых параметрах ведущего приложения, или интерпретировать и отображать данные на основе языковых параметров данных.
 ms.date: 01/23/2018
-ms.openlocfilehash: c700dfa2f424577edf364505b0da47854467f77b
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: 2b47a54acd2018be0d4c6c6fdac2e5d3bd1d6770
+ms.sourcegitcommit: 3da2038e827dc3f274d63a01dc1f34c98b04557e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925579"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "24016446"
 ---
 # <a name="localization-for-office-add-ins"></a>Локализация надстроек Office
 
@@ -17,7 +17,7 @@ ms.locfileid: "22925579"
 
 API JavaScript для Office предоставляет два свойства, которые поддерживают отображение и интерпретацию значений в соответствии с языковыми параметрами ведущего приложения и данными:
 
-- [Context.displayLanguage][displayLanguage] задает языковой стандарт пользовательского интерфейса ведущего приложения. В следующем примере показано, как проверить, какой языковый параметр используется (en-US или fr-Fr), и отобразить приветствие на языке ведущего приложения.
+- [Context.displayLanguage][displayLanguage] задает языковой стандарт пользовательского интерфейса ведущего приложения. В следующем примере показано, как проверить, какой языковой параметр используется (en-US или fr-Fr), и отобразить приветствие на языке ведущего приложения.
     
     ```js
     function sayHelloWithDisplayLanguage() {
@@ -59,10 +59,11 @@ API JavaScript для Office предоставляет два свойства,
 |[IconUrl]        |Изображение значка является необязательным. Можно использовать ту же методику переопределений, чтобы задать определенное изображение для определенной культуры. Если вы используете значок и локализуете его, пользователи с заданными языковыми параметрами могут видеть локализованный значок надстройки.<br/>В случае надстроек Outlook пользователи могут видеть значок в Центре администрирования Exchange после установки надстройки.<br/>После установки надстроек области задач и контентных надстроек пользователи видят значок на ленте.|
 |[HighResolutionIconUrl] **Важно!** Этот элемент доступен только для надстроек, использующих схему манифеста версии 1.1.|Изображение значка с высоким разрешением не является обязательным, но если оно указано, то должно находиться после элемента [IconUrl]. Если указан параметр [HighResolutionIconUrl] и надстройка установлена на устройстве, поддерживающем высокое разрешение, то вместо значения [IconUrl] используется значение [HighResolutionIconUrl].<br/>Можно использовать ту же методику переопределений, чтобы задать определенное изображение для определенной культуры. Если вы используете значок и локализуете его, пользователи с заданными языковыми параметрами могут видеть локализованный значок надстройки.<br/>В случае надстроек Outlook пользователи могут видеть значок в Центре администрирования Exchange после установки надстройки.<br/>После установки надстроек области задач и контентных надстроек пользователи видят значок на ленте.|
 |[Resources] **Важно!** Этот элемент доступен только для надстроек, в которых используется схема манифеста версии 1.1.   |Для пользователей в каждой указываемой вами локали отображаются ресурсы строк и значков, которые вы специально создаете для надстройки в этой локали. |
-|[SourceLocation]   |Пользователи в каждой локали видят веб-страницу, специально разработанную для надстройки в этой локали. |
+|[SourceLocation]   |Пользователи в каждом указанном вами языковом стандарте могут видеть веб-страницу, специально разработанную для надстройки для этого языкового стандарта. |
 
 
-> **Примечание.** Локализовать описание и отображаемое имя можно только для тех языковых стандартов, которые поддерживаются в Office. Список языков и языковых стандартов для текущего выпуска Office см. в статье [Идентификаторы языков и значения OptionState Id в Office 2013](https://docs.microsoft.com/previous-versions/office/office-2013-resource-kit/cc179219(v=office.15)).
+> [!NOTE] 
+> Вы можете локализовать описание и отображаемое имя только для языков, поддерживаемых Office. Список языков и языковых стандартов для текущего выпуска Office см. в статье [Идентификаторы языков и значения идентификаторов OptionState в Office 2013](https://docs.microsoft.com/previous-versions/office/office-2013-resource-kit/cc179219(v=office.15)).
 
 
 ### <a name="examples"></a>Примеры
@@ -78,11 +79,13 @@ API JavaScript для Office предоставляет два свойства,
 </DisplayName>
 ```
 
-> **Примечание.** Если вам необходимо локализовать несколько областей в семействе языков, например `de-de` и `de-at`, рекомендуем разделить элементы `Override` для каждой области. Использование только названия языка, в данном случае `de`, не поддерживается ни для одного сочетания ведущих приложений Office и платформ.
+> [!NOTE] 
+> Если требуется локализовать несколько областей в семействе языков, таких как `de-de` и `de-at`, мы рекомендуем использовать для каждой области отдельные элементы `Override`. Использование только названия языка, в данном случае `de`, не поддерживается ни для одного сочетания ведущих приложений Office и платформ.
 
 Это значит, что по умолчанию надстройка использует языковой стандарт `en-us`. Пользователи видят отображаемое имя Video player (видеопроигрыватель) на английском языке для всех языковых стандартов за исключением случаев, когда на клиентском компьютере используется языковой стандарт `fr-fr`. В этом случае пользователи увидят отображаемое имя Lecteur video на французском языке.
 
-> **Примечание.** Можно указать только одно переопределение на язык, в том числе для языкового стандарта по умолчанию. Например, если по умолчанию используется языковой стандарт `en-us`, нельзя также указать переопределение для `en-us`. 
+> [!NOTE] 
+> Вы можете указать только одно переопределение на язык, в том числе для языкового стандарта по умолчанию. Например, если по умолчанию используется языковой стандарт `en-us`, нельзя также указать переопределение для `en-us`. 
 
 В приведенном ниже примере применяется переопределение языкового стандарта для элемента [Description]. Сначала он задает языковой стандарт по умолчанию `en-us` и описание на английском языке, а затем указывает оператор [Override] с описанием на французском языке для языкового стандарта `fr-fr`:
 
@@ -171,13 +174,15 @@ API JavaScript для Office предоставляет два свойства,
 
 Кроме того, необходимо создать приложение Visual Studio 2015 для проекта надстройки Office.
 
-> **Примечание.** Скачать Visual Studio 2015 можно на [странице Office Developer Tools](https://www.visualstudio.com/features/office-tools-vs). На этой странице также имеется ссылка на Office Developer Tools.
+> [!NOTE] 
+> Чтобы загрузить Visual Studio 2015, перейдите на страницу [Средства разработчика Office](https://www.visualstudio.com/features/office-tools-vs). На этой странице также есть ссылка на "Средства разработчика Office".
 
 ### <a name="configure-office-2013-to-use-additional-languages-for-display-or-editing"></a>Настройка Office 2013 на использование дополнительных языков для отображения или редактирования
 
 Для установки дополнительного языка можно использовать языковой пакет Office 2013. Дополнительные сведения о языковых пакетах и способах их получения см. в статье [Языковые возможности Office 2013](http://office.microsoft.com/language-packs/).
 
-> **Примечание.** Если вы подписчик MSDN, то для вас уже могут быть доступны языковые пакеты Office 2013. Чтобы определить, позволяет ли ваша подписка скачать языковые пакеты Office 2013, перейдите на [главную страницу подписок на MSDN](https://msdn.microsoft.com/subscriptions/manage/), в поле **Загрузка программного обеспечения** введите "языковой пакет Office 2013", нажмите кнопку **Поиск**, а затем выберите **Продукты, доступные для моей подписки**. В разделе **Язык** установите флажок нужного языкового пакета и нажмите кнопку **Перейти**. 
+> [!NOTE] 
+> Если вы являетесь подписчиком MSDN, возможно, вам уже доступны языковые пакеты Office 2013. Чтобы определить, предоставляет ли подписка языковые пакеты Office 2013 для загрузки, перейдите к[Главной странице подписки на MSDN](https://msdn.microsoft.com/subscriptions/manage/), введите языковой пакет Office 2013 в **Загрузке программного обеспечения**, нажмите **Поиск,** а затем выберите **Продукты, доступные с подпиской**. В разделе **Язык** установите флажок для языкового пакета, который вы хотите загрузить, и нажмите кнопку **Вперед**. 
 
 После установки языкового пакета вы можете настроить Office 2013 на использование установленного языка для пользовательского интерфейса и/или для редактирования содержимого документов. В примере в этой статье используется установка Office 2013, в которой применяется испанский языковой пакет.
 
@@ -204,9 +209,10 @@ API JavaScript для Office предоставляет два свойства,
 
 1. В **обозревателе решений** разверните узлы **WorldReadyAddIn** и **WorldReadyAddInManifest**, а затем выберите **WorldReadyAddIn.xml**.
     
-2. В файле WorldReadyAddInManifest.xml замените элементы [DisplayName] и [Description] на приведенный ниже блок кода.
+2. В файле WorldReadyAddInManifest.xml замените элементы [DisplayName] и [Description] приведенным ниже блоком кода.
     
-    > **Примечание.** Вы можете заменить локализованные строки на испанском языке, используемые в этом примере для элементов [DisplayName] и [Description], локализованными строками на любом другом языке.
+    > [!NOTE] 
+    > Вы можете заменить локализованные строки на испанском языке, используемые в этом примере для элементов [DisplayName] и [Description], локализованными строками на любом другом языке.
 
     ```xml
     <DisplayName DefaultValue="World Ready add-in">
@@ -354,7 +360,8 @@ API JavaScript для Office предоставляет два свойства,
 
 Замените код в файле Home.js на следующий код. Этот код показывает, как вы можете изменить строки, используемые в элементах пользовательского интерфейса из файла Home.html, в зависимости от языка отображаемых элементов или языка редактирования в ведущем приложении.
 
-> **Примечание.** Для переключения локализаций надстройки на основании языка, используемого для редактирования, раскомментируйте строку кода `var myLanguage = Office.context.contentLanguage;` и закомментируйте строку `var myLanguage = Office.context.displayLanguage;`. `var myLanguage = Office.context.displayLanguage;`
+> [!NOTE] 
+> Для переключения локализаций надстройки на основании языка, используемого для редактирования, раскомментируйте строку кода  `var myLanguage = Office.context.contentLanguage;` и закомментируйте строку кода `var myLanguage = Office.context.displayLanguage;`
 
 ```js
 /// <reference path="../App.js" />
@@ -421,17 +428,17 @@ API JavaScript для Office предоставляет два свойства,
 - [Рекомендации по проектированию надстроек Office](../design/add-in-design.md)    
 - [Идентификаторы языков и значения OptionState Id в Office 2013](https://docs.microsoft.com/previous-versions/office/office-2013-resource-kit/cc179219(v=office.15))
 
-[DefaultLocale]:        https://dev.office.com/reference/add-ins/manifest/defaultlocale
-[Описание]:          https://dev.office.com/reference/add-ins/manifest/description
-[DisplayName]:          https://dev.office.com/reference/add-ins/manifest/displayname
-[IconUrl]:              https://dev.office.com/reference/add-ins/manifest/iconurl
-[HighResolutionIconUrl]:https://dev.office.com/reference/add-ins/manifest/highresolutioniconurl
-[Ресурсы]:            https://dev.office.com/reference/add-ins/manifest/resources
-[SourceLocation]:       https://dev.office.com/reference/add-ins/manifest/sourcelocation
-[Переопределение]:             https://dev.office.com/reference/add-ins/manifest/override
-[DesktopSettings]:      https://dev.office.com/reference/add-ins/manifest/desktopsettings
-[TabletSettings]:       https://dev.office.com/reference/add-ins/manifest/tabletsettings
-[PhoneSettings]:        https://dev.office.com/reference/add-ins/manifest/phonesettings
-[displayLanguage]:  https://dev.office.com/reference/add-ins/shared/office.context.displaylanguage 
-[contentLanguage]:  https://dev.office.com/reference/add-ins/shared/office.context.contentlanguage 
+[DefaultLocale]:        https://docs.microsoft.com/javascript/office/manifest/defaultlocale?view=office-js
+[Описание]:          https://docs.microsoft.com/javascript/office/manifest/description?view=office-js
+[DisplayName]:          https://docs.microsoft.com/javascript/office/manifest/displayname?view=office-js
+[IconUrl]:              https://docs.microsoft.com/javascript/office/manifest/iconurl?view=office-js
+[HighResolutionIconUrl]:https://docs.microsoft.com/javascript/office/manifest/highresolutioniconurl?view=office-js
+[Ресурсы]:            https://docs.microsoft.com/javascript/office/manifest/resources?view=office-js
+[SourceLocation]:       https://docs.microsoft.com/javascript/office/manifest/sourcelocation?view=office-js
+[Переопределение]:             https://docs.microsoft.com/javascript/office/manifest/override?view=office-js
+[DesktopSettings]:      https://docs.microsoft.com/javascript/office/manifest/desktopsettings?view=office-js
+[TabletSettings]:       https://docs.microsoft.com/javascript/office/manifest/tabletsettings?view=office-js
+[PhoneSettings]:        https://docs.microsoft.com/javascript/office/manifest/phonesettings?view=office-js
+[displayLanguage]:  https://docs.microsoft.com/javascript/api/office/office.context?view=office-js#displaylanguage 
+[contentLanguage]:  https://docs.microsoft.com/javascript/api/office/office.context?view=office-js#contentlanguage 
 [RFC 3066]: https://www.rfc-editor.org/info/rfc3066
