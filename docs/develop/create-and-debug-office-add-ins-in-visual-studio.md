@@ -2,12 +2,12 @@
 title: Создание и отладка надстроек Office в Visual Studio
 description: ''
 ms.date: 03/14/2018
-ms.openlocfilehash: c903f3d475e46ee09a3c350f79c1e3d671ae5923
-ms.sourcegitcommit: 28fc652bded31205e393df9dec3a9dedb4169d78
+ms.openlocfilehash: 991b5cf31f05f18f315311a5735d3ed207a655c6
+ms.sourcegitcommit: 3da2038e827dc3f274d63a01dc1f34c98b04557e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "22927449"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "24016418"
 ---
 # <a name="create-and-debug-office-add-ins-in-visual-studio"></a>Создание и отладка надстроек Office в Visual Studio
 
@@ -24,7 +24,7 @@ ms.locfileid: "22927449"
 
 1. В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.
     
-2. В списке типов проектов **Visual C#** или **Visual Basic** разверните узел **Office/SharePoint**, выберите **Веб-надстройки**, а затем выберите один из проектов надстроек.  
+2. В списке типов проектов, в разделе **Visual C#** или **Visual Basic**, разверните узел **Office/SharePoint**, выберите **Веб-надстройки**, а затем выберите один из проектов надстроек.  
     
 3. Введите имя проекта и нажмите кнопку **ОК**, чтобы создать его.
     
@@ -159,7 +159,7 @@ Visual Studio создает проект и выполняет следующи
 Затем Visual Studio делает следующее:
 
 
-1. Изменяет элемент [SourceLocation](https://dev.office.com/reference/add-ins/manifest/sourcelocation) файла манифеста XML, заменяя маркер ~remoteAppUrl полным адресом начальной страницы (например, http://localhost/MyAgave.html)).
+1. Изменяет элемент [SourceLocation](https://docs.microsoft.com/javascript/office/manifest/sourcelocation?view=office-js) файла манифеста XML, заменяя маркер ~remoteAppUrl полным адресом начальной страницы (например, http://localhost/MyAgave.html)).
     
 2. Запускает проект веб-приложения в IIS Express.
     
@@ -167,7 +167,7 @@ Visual Studio создает проект и выполняет следующи
     
 Visual Studio не отображает ошибки проверки в окне **ВЫВОД** при построении проекта. Visual Studio сообщает об ошибках и предупреждениях в окне **ОШИБКИ** по мере их возникновения. Кроме того, Visual Studio также выделяет ошибки волнистой линией разных цветов прямо в коде и текстовом редакторе. Эти пометки уведомляют о проблемах, обнаруженных Visual Studio в коде. Дополнительные сведения можно узнать в разделе [Код и текстовый редактор](https://msdn.microsoft.com/library/se2f663y(v=vs.140).aspx). Дополнительные сведения о включении или отключении проверки изложены в следующих статьях: 
 
-- ["Параметры", "Текстовый редактор", JavaScript, IntelliSense](https://msdn.microsoft.com/library/hh362485(v=vs.140).aspx)
+- ["Параметры", "Текстовый редактор", JavaScript, IntelliSense](https://docs.microsoft.com/visualstudio/ide/reference/options-text-editor-javascript-intellisense?view=vs-2015)
     
 - [Практическое руководство. Установка параметров проверки редактирования HTML в Visual Web Developer](https://msdn.microsoft.com/library/0byxkfet(v=vs.100).aspx)
     
