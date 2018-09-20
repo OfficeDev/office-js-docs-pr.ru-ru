@@ -1,36 +1,36 @@
-# <a name="build-your-first-powerpoint-add-in"></a><span data-ttu-id="0843d-101">Создание первой надстройки PowerPoint</span><span class="sxs-lookup"><span data-stu-id="0843d-101">Build your first PowerPoint add-in</span></span>
+# <a name="build-your-first-powerpoint-add-in"></a><span data-ttu-id="cc4fc-101">Создание первой надстройки PowerPoint</span><span class="sxs-lookup"><span data-stu-id="cc4fc-101">Build your first PowerPoint add-in</span></span>
 
-<span data-ttu-id="0843d-102">В этой статье описывается процесс создания надстройки PowerPoint с помощью jQuery и API JavaScript для Office.</span><span class="sxs-lookup"><span data-stu-id="0843d-102">In this article, you'll walk through the process of building a PowerPoint add-in by using jQuery and the Office JavaScript API.</span></span>
+<span data-ttu-id="cc4fc-102">В этой статье описывается процесс создания надстройки PowerPoint с помощью jQuery и API JavaScript для Office.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-102">In this article, you'll walk through the process of building a PowerPoint add-in by using jQuery and the Office JavaScript API.</span></span>
 
-## <a name="create-the-add-in"></a><span data-ttu-id="0843d-103">Создание надстройки</span><span class="sxs-lookup"><span data-stu-id="0843d-103">Create the add-in</span></span> 
+## <a name="create-the-add-in"></a><span data-ttu-id="cc4fc-103">Создание надстройки</span><span class="sxs-lookup"><span data-stu-id="cc4fc-103">Create the add-in</span></span> 
 
 [!include[Choose your editor](../includes/quickstart-choose-editor.md)]
 
-# <a name="visual-studiotabvisual-studio"></a>[<span data-ttu-id="0843d-104">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="0843d-104">Visual Studio</span></span>](#tab/visual-studio)
+# <a name="visual-studiotabvisual-studio"></a>[<span data-ttu-id="cc4fc-104">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="cc4fc-104">Visual Studio</span></span>](#tab/visual-studio)
 
-### <a name="prerequisites"></a><span data-ttu-id="0843d-105">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="0843d-105">Prerequisites</span></span>
+### <a name="prerequisites"></a><span data-ttu-id="cc4fc-105">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="cc4fc-105">Prerequisites</span></span>
 
 [!include[Quick Start prerequisites](../includes/quickstart-vs-prerequisites.md)]
 
-### <a name="create-the-add-in-project"></a><span data-ttu-id="0843d-106">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="0843d-106">Create the add-in project</span></span>
+### <a name="create-the-add-in-project"></a><span data-ttu-id="cc4fc-106">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="cc4fc-106">Create the add-in project</span></span>
 
-1. <span data-ttu-id="0843d-107">В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.</span><span class="sxs-lookup"><span data-stu-id="0843d-107">On the Visual Studio menu bar, choose  **File** > **New** > **Project**.</span></span>
+1. <span data-ttu-id="cc4fc-107">В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-107">On the Visual Studio menu bar, choose  **File** > **New** > **Project**.</span></span>
     
-2. <span data-ttu-id="0843d-108">В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, затем выберите **Надстройки** > **Веб-надстройка PowerPoint**.</span><span class="sxs-lookup"><span data-stu-id="0843d-108">In the list of project types under **Visual C#** or **Visual Basic**, expand  **Office/SharePoint**, choose **Add-ins**, and then choose **PowerPoint Web Add-in** as the project type.</span></span> 
+2. <span data-ttu-id="cc4fc-108">В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, затем выберите **Надстройки** > **Веб-надстройка PowerPoint**.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-108">In the list of project types under **Visual C#** or **Visual Basic**, expand  **Office/SharePoint**, choose **Add-ins**, and then choose **PowerPoint Web Add-in** as the project type.</span></span> 
 
-3. <span data-ttu-id="0843d-109">Укажите имя проекта и нажмите кнопку **OK**.</span><span class="sxs-lookup"><span data-stu-id="0843d-109">Name the project, and then choose **OK**.</span></span>
+3. <span data-ttu-id="cc4fc-109">Укажите имя проекта и нажмите кнопку **OK**.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-109">Name the project, and then choose **OK**.</span></span>
 
-4. <span data-ttu-id="0843d-110">В диалоговом окне **Создание надстройки Office** выберите **Добавить новые функции в PowerPoint**, а затем нажмите кнопку **Готово**, чтобы создать проект.</span><span class="sxs-lookup"><span data-stu-id="0843d-110">In the **Create Office Add-in** dialog window, choose **Add new functionalities to PowerPoint**, and then choose **Finish** to create the project.</span></span>
+4. <span data-ttu-id="cc4fc-110">В диалоговом окне **Создание надстройки Office** выберите **Добавить новые функции в PowerPoint**, а затем нажмите кнопку **Готово**, чтобы создать проект.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-110">In the **Create Office Add-in** dialog window, choose **Add new functionalities to PowerPoint**, and then choose **Finish** to create the project.</span></span>
 
-5. <span data-ttu-id="0843d-p101">Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.</span><span class="sxs-lookup"><span data-stu-id="0843d-p101">Visual Studio creates a solution and its two projects appear in **Solution Explorer**. The **Home.html** file opens in Visual Studio.</span></span>
+5. <span data-ttu-id="cc4fc-p101">Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-p101">Visual Studio creates a solution and its two projects appear in **Solution Explorer**. The **Home.html** file opens in Visual Studio.</span></span>
     
-### <a name="explore-the-visual-studio-solution"></a><span data-ttu-id="0843d-113">Обзор решения Visual Studio</span><span class="sxs-lookup"><span data-stu-id="0843d-113">Explore the Visual Studio solution</span></span>
+### <a name="explore-the-visual-studio-solution"></a><span data-ttu-id="cc4fc-113">Обзор решения Visual Studio</span><span class="sxs-lookup"><span data-stu-id="cc4fc-113">Explore the Visual Studio solution</span></span>
 
 [!include[Description of Visual Studio projects](../includes/quickstart-vs-solution.md)]
 
-### <a name="update-the-code"></a><span data-ttu-id="0843d-114">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="0843d-114">Update the code</span></span>
+### <a name="update-the-code"></a><span data-ttu-id="cc4fc-114">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="cc4fc-114">Update the code</span></span>
 
-1. <span data-ttu-id="0843d-115">Файл **Home.html** содержит HTML-контент, который будет отображаться в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="0843d-115">**Home.html** specifies the HTML that will be rendered in the add-in's task pane.</span></span> <span data-ttu-id="0843d-116">В файле **Home.html** замените элемент `<body>` на приведенную ниже часть кода и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="0843d-116">In **Home.html**, replace the `<body>` element with the following markup and save the file.</span></span>
+1. <span data-ttu-id="cc4fc-115">Файл **Home.html** содержит HTML-контент, который будет отображаться в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-115">**Home.html** specifies the HTML that will be rendered in the add-in's task pane.</span></span> <span data-ttu-id="cc4fc-116">В файле **Home.html** замените элемент `<body>` на приведенную ниже часть кода и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-116">In **Home.html**, replace the `<body>` element with the following markup and save the file.</span></span>
  
     ```html
     <body class="ms-font-m ms-welcome">
@@ -52,7 +52,7 @@
     </body>
     ```
 
-2. <span data-ttu-id="0843d-117">Откройте файл **Home.js** в корневой папке проекта веб-приложения.</span><span class="sxs-lookup"><span data-stu-id="0843d-117">Open the file **Home.js** in the root of the web application project.</span></span> <span data-ttu-id="0843d-118">Этот файл содержит скрипт надстройки.</span><span class="sxs-lookup"><span data-stu-id="0843d-118">This file specifies the script for the add-in.</span></span> <span data-ttu-id="0843d-119">Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="0843d-119">Replace the entire contents with the following code and save the file.</span></span>
+2. <span data-ttu-id="cc4fc-117">Откройте файл **Home.js** в корневой папке проекта веб-приложения.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-117">Open the file **Home.js** in the root of the web application project.</span></span> <span data-ttu-id="cc4fc-118">Этот файл содержит скрипт надстройки.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-118">This file specifies the script for the add-in.</span></span> <span data-ttu-id="cc4fc-119">Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-119">Replace the entire contents with the following code and save the file.</span></span>
 
     ```js
     'use strict';
@@ -97,7 +97,7 @@
     })();
     ```
 
-3. <span data-ttu-id="0843d-120">Откройте файл **Home.css** в корневой папке проекта веб-приложения.</span><span class="sxs-lookup"><span data-stu-id="0843d-120">Open the file **Home.css** in the root of the web application project.</span></span> <span data-ttu-id="0843d-121">Этот файл определяет специальные стили надстройки.</span><span class="sxs-lookup"><span data-stu-id="0843d-121">This file specifies the custom styles for the add-in.</span></span> <span data-ttu-id="0843d-122">Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="0843d-122">Replace the entire contents with the following code and save the file.</span></span>
+3. <span data-ttu-id="cc4fc-120">Откройте файл **Home.css** в корневой папке проекта веб-приложения.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-120">Open the file **Home.css** in the root of the web application project.</span></span> <span data-ttu-id="cc4fc-121">Этот файл определяет специальные стили надстройки.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-121">This file specifies the custom styles for the add-in.</span></span> <span data-ttu-id="cc4fc-122">Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-122">Replace the entire contents with the following code and save the file.</span></span>
 
     ```css
     #content-header {
@@ -126,17 +126,17 @@
     }
     ```
 
-### <a name="update-the-manifest"></a><span data-ttu-id="0843d-123">Обновление манифеста</span><span class="sxs-lookup"><span data-stu-id="0843d-123">Update the manifest</span></span>
+### <a name="update-the-manifest"></a><span data-ttu-id="cc4fc-123">Обновление манифеста</span><span class="sxs-lookup"><span data-stu-id="cc4fc-123">Update the manifest</span></span>
 
-1. <span data-ttu-id="0843d-124">Откройте XML-файл манифеста в проекте надстройки.</span><span class="sxs-lookup"><span data-stu-id="0843d-124">Open the XML manifest file in the Add-in project.</span></span> <span data-ttu-id="0843d-125">Этот файл определяет параметры и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="0843d-125">This file defines the add-in's settings and capabilities.</span></span>
+1. <span data-ttu-id="cc4fc-p105">Откройте XML-файл манифеста в проекте надстройки. Этот файл определяет параметры и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-p105">Open the XML manifest file in the Add-in project. This file defines the add-in's settings and capabilities.</span></span>
 
-2. <span data-ttu-id="0843d-126">Элемент `ProviderName` содержит заполнитель.</span><span class="sxs-lookup"><span data-stu-id="0843d-126">The `ProviderName` element has a placeholder value.</span></span> <span data-ttu-id="0843d-127">Замените его на свое имя.</span><span class="sxs-lookup"><span data-stu-id="0843d-127">Replace it with your name.</span></span>
+2. <span data-ttu-id="cc4fc-126">Элемент `ProviderName` содержит заполнитель.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-126">The `ProviderName` element has a placeholder value.</span></span> <span data-ttu-id="cc4fc-127">Замените его на свое имя.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-127">Replace it with your name.</span></span>
 
-3. <span data-ttu-id="0843d-128">Атрибут `DefaultValue` элемента `DisplayName` содержит заполнитель.</span><span class="sxs-lookup"><span data-stu-id="0843d-128">The `DefaultValue` attribute of the `DisplayName` element has a placeholder.</span></span> <span data-ttu-id="0843d-129">Замените его на строку **Моя надстройка Office**.</span><span class="sxs-lookup"><span data-stu-id="0843d-129">Replace it with **My Office Add-in**.</span></span>
+3. <span data-ttu-id="cc4fc-128">Атрибут `DefaultValue` элемента `DisplayName` содержит заполнитель.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-128">The `DefaultValue` attribute of the `DisplayName` element has a placeholder.</span></span> <span data-ttu-id="cc4fc-129">Замените его на строку **Моя надстройка Office**.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-129">Replace it with **My Office Add-in**.</span></span>
 
-4. <span data-ttu-id="0843d-130">Атрибут `DefaultValue` элемента `Description` содержит заполнитель.</span><span class="sxs-lookup"><span data-stu-id="0843d-130">The `DefaultValue` attribute of the `Description` element has a placeholder.</span></span> <span data-ttu-id="0843d-131">Замените его на строку **Надстройка области задач для PowerPoint**.</span><span class="sxs-lookup"><span data-stu-id="0843d-131">Replace it with **A task pane add-in for PowerPoint**.</span></span>
+4. <span data-ttu-id="cc4fc-130">Атрибут `DefaultValue` элемента `Description` содержит заполнитель.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-130">The `DefaultValue` attribute of the `Description` element has a placeholder.</span></span> <span data-ttu-id="cc4fc-131">Замените его на строку **Надстройка области задач для PowerPoint**.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-131">Replace it with **A task pane add-in for PowerPoint**.</span></span>
 
-5. <span data-ttu-id="0843d-132">Сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="0843d-132">Save the file.</span></span>
+5. <span data-ttu-id="cc4fc-132">Сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-132">Save the file.</span></span>
 
     ```xml
     ...
@@ -148,64 +148,70 @@
     ...
     ```
 
-### <a name="try-it-out"></a><span data-ttu-id="0843d-133">Проверка</span><span class="sxs-lookup"><span data-stu-id="0843d-133">Try it out</span></span>
+### <a name="try-it-out"></a><span data-ttu-id="cc4fc-133">Проверка</span><span class="sxs-lookup"><span data-stu-id="cc4fc-133">Try it out</span></span>
 
-1. <span data-ttu-id="0843d-p109">Протестируйте новую надстройку PowerPoint с помощью Visual Studio, нажав клавишу F5 или кнопку **Запустить**, чтобы запустить PowerPoint с кнопкой надстройки **Show Taskpane** (Показать область задач) на ленте. Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="0843d-p109">Using Visual Studio, test the newly created PowerPoint add-in by pressing F5 or choosing the **Start** button to launch PowerPoint with the **Show Taskpane** add-in button displayed in the ribbon. The add-in will be hosted locally on IIS.</span></span>
+1. <span data-ttu-id="cc4fc-p109">Протестируйте новую надстройку PowerPoint с помощью Visual Studio, нажав клавишу F5 или кнопку **Запустить**, чтобы запустить PowerPoint с кнопкой надстройки **Show Taskpane** (Показать область задач) на ленте. Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-p109">Using Visual Studio, test the newly created PowerPoint add-in by pressing F5 or choosing the **Start** button to launch PowerPoint with the **Show Taskpane** add-in button displayed in the ribbon. The add-in will be hosted locally on IIS.</span></span>
 
-2. <span data-ttu-id="0843d-136">В PowerPoint вставьте новый пустой слайд, выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="0843d-136">In PowerPoint, insert a new blank slide, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
+2. <span data-ttu-id="cc4fc-136">В PowerPoint вставьте новый пустой слайд, выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-136">In PowerPoint, insert a new blank slide, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
 
     ![Снимок экрана PowerPoint с выделенной кнопкой "Показать область задач"](../images/powerpoint_quickstart_addin_1.png)
 
-3. <span data-ttu-id="0843d-138">В области задач нажмите кнопку **Вставить изображение**, чтобы добавить изображение на выбранный слайд.</span><span class="sxs-lookup"><span data-stu-id="0843d-138">In the task pane, choose the **Insert Image** button to add an image to the selected slide.</span></span>
+3. <span data-ttu-id="cc4fc-138">В области задач нажмите кнопку **Вставить изображение**, чтобы добавить изображение на выбранный слайд.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-138">In the task pane, choose the **Insert Image** button to add an image to the selected slide.</span></span>
 
     ![Снимок экрана PowerPoint с изображением собаки на слайде](../images/powerpoint_quickstart_addin_2.png)
 
-4. <span data-ttu-id="0843d-140">В области задач нажмите кнопку **Вставить текст**, чтобы добавить текст к выбранному слайду.</span><span class="sxs-lookup"><span data-stu-id="0843d-140">In the task pane, choose the **Insert Text** button to add text to the selected slide.</span></span>
+4. <span data-ttu-id="cc4fc-140">В области задач нажмите кнопку **Вставить текст**, чтобы добавить текст к выбранному слайду.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-140">In the task pane, choose the **Insert Text** button to add text to the selected slide.</span></span>
 
     ![Снимок экрана PowerPoint с изображением собаки и надписью "Hello World" на слайде](../images/powerpoint_quickstart_addin_3.png)
 
-# <a name="any-editortabvisual-studio-code"></a>[<span data-ttu-id="0843d-142">Любой редактор</span><span class="sxs-lookup"><span data-stu-id="0843d-142">Any editor</span></span>](#tab/visual-studio-code)
+# <a name="any-editortabvisual-studio-code"></a>[<span data-ttu-id="cc4fc-142">Любой редактор</span><span class="sxs-lookup"><span data-stu-id="cc4fc-142">Any editor</span></span>](#tab/visual-studio-code)
 
-### <a name="prerequisites"></a><span data-ttu-id="0843d-143">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="0843d-143">Prerequisites</span></span>
+### <a name="prerequisites"></a><span data-ttu-id="cc4fc-143">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="cc4fc-143">Prerequisites</span></span>
 
-- [<span data-ttu-id="0843d-144">Node.js</span><span class="sxs-lookup"><span data-stu-id="0843d-144">Node.js</span></span>](https://nodejs.org)
+- [<span data-ttu-id="cc4fc-144">Node.js</span><span class="sxs-lookup"><span data-stu-id="cc4fc-144">Node.js</span></span>](https://nodejs.org)
 
-- <span data-ttu-id="0843d-145">Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).</span><span class="sxs-lookup"><span data-stu-id="0843d-145">Install the latest version of [Yeoman](https://github.com/yeoman/yo) and the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office) globally.</span></span>
+- <span data-ttu-id="cc4fc-145">Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).</span><span class="sxs-lookup"><span data-stu-id="cc4fc-145">Install the latest version of [Yeoman](https://github.com/yeoman/yo) and the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office) globally.</span></span>
 
     ```bash
     npm install -g yo generator-office
     ```
 
-### <a name="create-the-add-in-project"></a><span data-ttu-id="0843d-146">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="0843d-146">Create the add-in project</span></span>
+### <a name="create-the-add-in-project"></a><span data-ttu-id="cc4fc-146">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="cc4fc-146">Create the add-in project</span></span>
 
-1. <span data-ttu-id="0843d-147">Создайте на локальном диске папку и назовите ее `my-powerpoint-addin`.</span><span class="sxs-lookup"><span data-stu-id="0843d-147">Create a folder on your local drive and name it `my-powerpoint-addin`.</span></span> <span data-ttu-id="0843d-148">В ней вы будете создавать файлы для надстройки.</span><span class="sxs-lookup"><span data-stu-id="0843d-148">This is where you'll create the files for your add-in.</span></span>
+1. <span data-ttu-id="cc4fc-147">Создайте на локальном диске папку и назовите ее `my-powerpoint-addin`.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-147">Create a folder on your local drive and name it `my-powerpoint-addin`.</span></span> <span data-ttu-id="cc4fc-148">В ней вы будете создавать файлы для надстройки.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-148">This is where you'll create the files for your add-in.</span></span>
 
-2. <span data-ttu-id="0843d-149">Перейдите к новой папке.</span><span class="sxs-lookup"><span data-stu-id="0843d-149">Navigate to your new folder.</span></span>
+2. <span data-ttu-id="cc4fc-149">Перейдите к новой папке.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-149">Navigate to your new folder.</span></span>
 
     ```bash
     cd my-powerpoint-addin
     ```
 
-3. <span data-ttu-id="0843d-150">С помощью генератора Yeoman создайте проект надстройки PowerPoint.</span><span class="sxs-lookup"><span data-stu-id="0843d-150">Use the Yeoman generator to create a PowerPoint add-in project.</span></span> <span data-ttu-id="0843d-151">Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже:</span><span class="sxs-lookup"><span data-stu-id="0843d-151">Run the following command and then answer the prompts as follows:</span></span>
+3. <span data-ttu-id="cc4fc-150">С помощью генератора Yeoman создайте проект надстройки PowerPoint.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-150">Use the Yeoman generator to create a PowerPoint add-in project.</span></span> <span data-ttu-id="cc4fc-151">Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-151">Run the following command and then answer the prompts as follows:</span></span>
 
     ```bash
     yo office
     ```
 
-    - <span data-ttu-id="0843d-152">**Выберите тип проекта:** `Office Add-in project using Jquery framework`</span><span class="sxs-lookup"><span data-stu-id="0843d-152">**Choose a project type:** `Office Add-in project using Jquery framework`</span></span>
-    - <span data-ttu-id="0843d-153">**Выберите тип сценария:** `Javascript`</span><span class="sxs-lookup"><span data-stu-id="0843d-153">**Choose a script type:** `Javascript`</span></span>
-    - <span data-ttu-id="0843d-154">**Как вы хотите назвать надстройку?** `My Office Add-in`</span><span class="sxs-lookup"><span data-stu-id="0843d-154">**What do you want to name your add-in?:** `My Office Add-in`</span></span>
-    - <span data-ttu-id="0843d-155">**Какое клиентское приложение Office должно поддерживаться?** `Powerpoint`</span><span class="sxs-lookup"><span data-stu-id="0843d-155">**Which Office client application would you like to support?:** `Powerpoint`</span></span>
+    - <span data-ttu-id="cc4fc-152">**Выберите тип проекта:** `Office Add-in project using Jquery framework`</span><span class="sxs-lookup"><span data-stu-id="cc4fc-152">**Choose a project type:** `Office Add-in project using Jquery framework`</span></span>
+    - <span data-ttu-id="cc4fc-153">**Выберите тип сценария:** `Javascript`</span><span class="sxs-lookup"><span data-stu-id="cc4fc-153">**Choose a script type:** `Javascript`</span></span>
+    - <span data-ttu-id="cc4fc-154">**Как вы хотите назвать надстройку?** `My Office Add-in`</span><span class="sxs-lookup"><span data-stu-id="cc4fc-154">**What do you want to name your add-in?:** `My Office Add-in`</span></span>
+    - <span data-ttu-id="cc4fc-155">**Какое клиентское приложение Office должно поддерживаться?** `Powerpoint`</span><span class="sxs-lookup"><span data-stu-id="cc4fc-155">**Which Office client application would you like to support?:** `Powerpoint`</span></span>
 
     ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-powerpoint-jquery.png)
     
-    <span data-ttu-id="0843d-157">После завершения работы мастера генератор создаст проект и установит поддерживающие компоненты узла.</span><span class="sxs-lookup"><span data-stu-id="0843d-157">After you complete the wizard, the generator will create the project and install supporting Node components.</span></span>
+    <span data-ttu-id="cc4fc-157">После завершения работы мастера генератор создаст проект и установит поддерживающие компоненты узла.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-157">After you complete the wizard, the generator will create the project and install supporting Node components.</span></span>
+    
+4. <span data-ttu-id="cc4fc-158">Перейдите в корневую папку проекта веб-приложения.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-158">Navigate to the root folder of the web application project.</span></span>
 
-### <a name="update-the-code"></a><span data-ttu-id="0843d-158">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="0843d-158">Update the code</span></span>
+    ```bash
+    cd "My Office Add-in"
+    ```
 
-1. <span data-ttu-id="0843d-159">В редакторе кода откройте файл **index.html** из корневой папки проекта.</span><span class="sxs-lookup"><span data-stu-id="0843d-159">In your code editor, open **index.html** in the root of the project.</span></span> <span data-ttu-id="0843d-160">Этот файл содержит HTML-контент, который будет отображаться в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="0843d-160">This file contains the HTML that will be rendered in the add-in's task pane.</span></span>
+### <a name="update-the-code"></a><span data-ttu-id="cc4fc-159">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="cc4fc-159">Update the code</span></span>
 
-2. <span data-ttu-id="0843d-161">Замените элемент `<header>` внутри элемента `<body>` на приведенную ниже разметку.</span><span class="sxs-lookup"><span data-stu-id="0843d-161">Replace the `<header>` element inside the `<body>` element with the following markup.</span></span>
+1. <span data-ttu-id="cc4fc-160">В редакторе кода откройте файл **index.html** из корневой папки проекта.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-160">In your code editor, open **index.html** in the root of the project.</span></span> <span data-ttu-id="cc4fc-161">Этот файл содержит HTML-контент, который будет отображаться в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-161">This file contains the HTML that will be rendered in the add-in's task pane.</span></span>
+
+2. <span data-ttu-id="cc4fc-162">Замените элемент `<header>` внутри элемента `<body>` на приведенную ниже разметку.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-162">Replace the `<header>` element inside the `<body>` element with the following markup.</span></span>
 
     ```html
     <div id="content-header">
@@ -215,7 +221,7 @@
     </div>
     ```
 
-3. <span data-ttu-id="0843d-162">Замените элемент `<main>` внутри элемента `<body>` на приведенную ниже разметку и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="0843d-162">Replace the `<main>` element inside the `<body>` element with the following markup and save the file.</span></span>
+3. <span data-ttu-id="cc4fc-163">Замените элемент `<main>` внутри элемента `<body>` на приведенную ниже разметку и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-163">Replace the `<main>` element inside the `<body>` element with the following markup and save the file.</span></span>
 
     ```html
     <div id="content-main">
@@ -230,7 +236,7 @@
     </div>
     ```
 
-4. <span data-ttu-id="0843d-163">Откройте файл **src\index.js**, чтобы указать сценарий для надстройки.</span><span class="sxs-lookup"><span data-stu-id="0843d-163">Open the file **app.js** to specify the script for the add-in.</span></span> <span data-ttu-id="0843d-164">Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="0843d-164">Replace the entire contents with the following code and save the file.</span></span>
+4. <span data-ttu-id="cc4fc-164">Откройте файл **src\index.js**, чтобы указать сценарий для надстройки.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-164">Open the file **app.js** to specify the script for the add-in.</span></span> <span data-ttu-id="cc4fc-165">Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-165">Replace the entire contents with the following code and save the file.</span></span>
 
     ```js
     'use strict';
@@ -275,7 +281,7 @@
     })();
     ```
 
-5. <span data-ttu-id="0843d-165">Откройте файл **app.css** в корневой папке проекта, чтобы указать специальные стили для надстройки.</span><span class="sxs-lookup"><span data-stu-id="0843d-165">Open the file **app.css** in the root of the project to specify the custom styles for the add-in.</span></span> <span data-ttu-id="0843d-166">Замените все его содержимое следующим кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="0843d-166">Replace the entire contents with the following and save the file.</span></span>
+5. <span data-ttu-id="cc4fc-166">Откройте файл **app.css** в корневой папке проекта, чтобы указать специальные стили для надстройки.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-166">Open the file **app.css** in the root of the project to specify the custom styles for the add-in.</span></span> <span data-ttu-id="cc4fc-167">Замените все его содержимое следующим кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-167">Replace the entire contents with the following and save the file.</span></span>
 
     ```css
     #content-header {
@@ -304,15 +310,15 @@
     }
     ```
 
-### <a name="update-the-manifest"></a><span data-ttu-id="0843d-167">Обновление манифеста</span><span class="sxs-lookup"><span data-stu-id="0843d-167">Update the manifest</span></span>
+### <a name="update-the-manifest"></a><span data-ttu-id="cc4fc-168">Обновление манифеста</span><span class="sxs-lookup"><span data-stu-id="cc4fc-168">Update the manifest</span></span>
 
-1. <span data-ttu-id="0843d-168">Откройте файл **my-office-add-in-manifest.xml**, чтобы определить параметры и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="0843d-168">Open the file **my-office-add-in-manifest.xml** to define the add-in's settings and capabilities.</span></span>
+1. <span data-ttu-id="cc4fc-169">Откройте файл **my-office-add-in-manifest.xml**, чтобы определить параметры и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-169">Open the file **my-office-add-in-manifest.xml** to define the add-in's settings and capabilities.</span></span>
 
-2. <span data-ttu-id="0843d-169">Элемент `ProviderName` содержит заполнитель.</span><span class="sxs-lookup"><span data-stu-id="0843d-169">The `ProviderName` element has a placeholder value.</span></span> <span data-ttu-id="0843d-170">Замените его на свое имя.</span><span class="sxs-lookup"><span data-stu-id="0843d-170">Replace it with your name.</span></span>
+2. <span data-ttu-id="cc4fc-170">Элемент `ProviderName` содержит заполнитель.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-170">The `ProviderName` element has a placeholder value.</span></span> <span data-ttu-id="cc4fc-171">Замените его на свое имя.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-171">Replace it with your name.</span></span>
 
-3. <span data-ttu-id="0843d-171">Атрибут `DefaultValue` элемента `Description` содержит заполнитель.</span><span class="sxs-lookup"><span data-stu-id="0843d-171">The `DefaultValue` attribute of the `Description` element has a placeholder.</span></span> <span data-ttu-id="0843d-172">Замените его на строку **Надстройка области задач для PowerPoint**.</span><span class="sxs-lookup"><span data-stu-id="0843d-172">Replace it with **A task pane add-in for PowerPoint**.</span></span>
+3. <span data-ttu-id="cc4fc-172">Атрибут `DefaultValue` элемента `Description` содержит заполнитель.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-172">The `DefaultValue` attribute of the `Description` element has a placeholder.</span></span> <span data-ttu-id="cc4fc-173">Замените его на строку **Надстройка области задач для PowerPoint**.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-173">Replace it with **A task pane add-in for PowerPoint**.</span></span>
 
-4. <span data-ttu-id="0843d-173">Сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="0843d-173">Save the file.</span></span>
+4. <span data-ttu-id="cc4fc-174">Сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-174">Save the file.</span></span>
 
     ```xml
     ...
@@ -324,35 +330,35 @@
     ...
     ```
 
-### <a name="start-the-dev-server"></a><span data-ttu-id="0843d-174">Запуск сервера разработки</span><span class="sxs-lookup"><span data-stu-id="0843d-174">Start the dev server</span></span>
+### <a name="start-the-dev-server"></a><span data-ttu-id="cc4fc-175">Запуск сервера разработки</span><span class="sxs-lookup"><span data-stu-id="cc4fc-175">Start the dev server</span></span>
 
 [!include[Start server section](../includes/quickstart-yo-start-server.md)] 
 
-### <a name="try-it-out"></a><span data-ttu-id="0843d-175">Проверка</span><span class="sxs-lookup"><span data-stu-id="0843d-175">Try it out</span></span>
+### <a name="try-it-out"></a><span data-ttu-id="cc4fc-176">Проверка</span><span class="sxs-lookup"><span data-stu-id="cc4fc-176">Try it out</span></span>
 
-1. <span data-ttu-id="0843d-176">Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в PowerPoint.</span><span class="sxs-lookup"><span data-stu-id="0843d-176">Follow the instructions for the platform you'll use to run your add-in to sideload the add-in within PowerPoint.</span></span>
+1. <span data-ttu-id="cc4fc-177">Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в PowerPoint.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-177">Follow the instructions for the platform you'll use to run your add-in to sideload the add-in within PowerPoint.</span></span>
 
-    - <span data-ttu-id="0843d-177">Windows: [загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)</span><span class="sxs-lookup"><span data-stu-id="0843d-177">Windows: [Sideload Office Add-ins on Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)</span></span>
-    - <span data-ttu-id="0843d-178">PowerPoint Online: [загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)</span><span class="sxs-lookup"><span data-stu-id="0843d-178">PowerPoint Online: [Sideload Office Add-ins in Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)</span></span>
-    - <span data-ttu-id="0843d-179">iPad и Mac: [загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)</span><span class="sxs-lookup"><span data-stu-id="0843d-179">iPad and Mac: [Sideload Office Add-ins on iPad and Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)</span></span>
+    - <span data-ttu-id="cc4fc-178">Windows: [загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)</span><span class="sxs-lookup"><span data-stu-id="cc4fc-178">Windows: [Sideload Office Add-ins on Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)</span></span>
+    - <span data-ttu-id="cc4fc-179">PowerPoint Online: [загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)</span><span class="sxs-lookup"><span data-stu-id="cc4fc-179">PowerPoint Online: [Sideload Office Add-ins in Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)</span></span>
+    - <span data-ttu-id="cc4fc-180">iPad и Mac: [загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)</span><span class="sxs-lookup"><span data-stu-id="cc4fc-180">iPad and Mac: [Sideload Office Add-ins on iPad and Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)</span></span>
 
-2. <span data-ttu-id="0843d-180">В PowerPoint создайте новый файл, выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="0843d-180">In PowerPoint, create a new file, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
+2. <span data-ttu-id="cc4fc-181">В PowerPoint создайте новый файл, выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-181">In PowerPoint, create a new file, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
 
     ![Снимок экрана PowerPoint с выделенной кнопкой "Показать область задач"](../images/powerpoint_quickstart_addin_1b.png)
 
-3. <span data-ttu-id="0843d-182">В области задач нажмите кнопку **Вставить изображение**, чтобы добавить изображение на выбранный слайд.</span><span class="sxs-lookup"><span data-stu-id="0843d-182">In the task pane, choose the **Insert Image** button to add an image to the selected slide.</span></span>
+3. <span data-ttu-id="cc4fc-183">В области задач нажмите кнопку **Вставить изображение**, чтобы добавить изображение на выбранный слайд.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-183">In the task pane, choose the **Insert Image** button to add an image to the selected slide.</span></span>
 
     ![Снимок экрана PowerPoint с изображением собаки на слайде](../images/powerpoint_quickstart_addin_2b.png)
 
-4. <span data-ttu-id="0843d-184">В области задач нажмите кнопку **Вставить текст**, чтобы добавить текст к выбранному слайду.</span><span class="sxs-lookup"><span data-stu-id="0843d-184">In the task pane, choose the **Insert Text** button to add text to the selected slide.</span></span>
+4. <span data-ttu-id="cc4fc-185">В области задач нажмите кнопку **Вставить текст**, чтобы добавить текст к выбранному слайду.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-185">In the task pane, choose the **Insert Text** button to add text to the selected slide.</span></span>
 
     ![Снимок экрана PowerPoint с изображением собаки и надписью "Hello World" на слайде](../images/powerpoint_quickstart_addin_3b.png)
 
 ---
 
-## <a name="next-steps"></a><span data-ttu-id="0843d-186">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="0843d-186">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="cc4fc-187">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="cc4fc-187">Next steps</span></span>
 
-<span data-ttu-id="0843d-187">Поздравляем, вы успешно создали надстройку PowerPoint!</span><span class="sxs-lookup"><span data-stu-id="0843d-187">Congratulations, you've successfully created a PowerPoint add-in!</span></span> <span data-ttu-id="0843d-188">Чтобы получить дополнительные сведения о возможностях надстройки PowerPoint и о создании более сложной надстройки, ознакомьтесь с пособием по надстройкам PowerPoint.</span><span class="sxs-lookup"><span data-stu-id="0843d-188">Next, learn more about the capabilities of an Excel add-in and build a more complex add-in by following along with the Excel add-in tutorial.</span></span>
+<span data-ttu-id="cc4fc-188">Поздравляем, вы успешно создали надстройку PowerPoint!</span><span class="sxs-lookup"><span data-stu-id="cc4fc-188">Congratulations, you've successfully created a PowerPoint add-in!</span></span> <span data-ttu-id="cc4fc-189">Чтобы получить дополнительные сведения о возможностях надстройки PowerPoint и о создании более сложной надстройки, ознакомьтесь с пособием по надстройкам PowerPoint.</span><span class="sxs-lookup"><span data-stu-id="cc4fc-189">Next, learn more about the capabilities of an Excel add-in and build a more complex add-in by following along with the Excel add-in tutorial.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="0843d-189">Пособие по использованию настроек PowerPoint</span><span class="sxs-lookup"><span data-stu-id="0843d-189">PowerPoint add-in tutorial</span></span>](../tutorials/powerpoint-tutorial.yml)
+> [<span data-ttu-id="cc4fc-190">Пособие по использованию настроек PowerPoint</span><span class="sxs-lookup"><span data-stu-id="cc4fc-190">PowerPoint add-in tutorial</span></span>](../tutorials/powerpoint-tutorial.yml)
