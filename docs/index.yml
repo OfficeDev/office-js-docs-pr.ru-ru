@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 666f4ddb314c4fae960195efde6f6f2231b8f5b6
-ms.sourcegitcommit: 3da2038e827dc3f274d63a01dc1f34c98b04557e
+ms.openlocfilehash: 2d9cd30df34fee32821e4746ca369c2dc850f2b1
+ms.sourcegitcommit: e7e4d08569a01c69168bb005188e9a1e628304b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "24016299"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "24967650"
 documentType: LandingData
 title: Документация по надстройкам Office
 metadata:
@@ -69,7 +69,7 @@ sections:
     - html: <a href="/office/dev/add-ins/excel/excel-add-ins-overview">Разработка надстроек Excel</a>
     - html: <a href="/office/dev/add-ins/word/word-add-ins-programming-overview">Разработка надстроек Word</a>
     - html: <a href="/office/dev/add-ins/onenote/onenote-add-ins-programming-overview">Разработка надстроек OneNote</a>
-    - html: <a href="/office/dev/add-ins/outlook/add-ins">Разработка надстроек Outlook</a>
+    - html: <a href="/outlook/add-ins">Разработка надстроек Outlook</a>
     - html: <a href="/office/dev/add-ins/powerpoint/powerpoint-add-ins">Разработка надстроек PowerPoint</a>
     - html: <a href="/office/dev/add-ins/project/project-add-ins">Разработка надстроек Project</a>
     - html: <a href="/office/dev/add-ins/testing/test-debug-office-add-ins">Тестирование и отладка надстроек Office</a>
@@ -84,5 +84,6 @@ sections:
       html: <p><a href="https://docs.microsoft.com/javascript/office/javascript-api-for-office?view=office-js" target="_blank">API JavaScript для Office</a></p>
     - title: API, специфичные для основного приложения (2016)
       html: <p><a href="https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview?view=office-js" target="_blank">API JavaScript для Excel</a></p><p><a href="https://docs.microsoft.com/javascript/office/overview/word-add-ins-reference-overview?view=office-js" target="_blank">API JavaScript для Word</a></p><p><a href="https://docs.microsoft.com/javascript/office/overview/onenote-add-ins-javascript-reference?view=office-js" target="_blank">API JavaScript для OneNote</a></p><p><a href="https://docs.microsoft.com/javascript/office/requirement-sets/outlook-api-requirement-sets?view=office-js" target="_blank">API JavaScript для Outlook</a></p>
-    - title: Другие
+    - title: >
+        Прочие материалы
       html: <p><a href="https://docs.microsoft.com/javascript/office/openspec?view=office-js" target="_blank">Открытые спецификации API</a></p><p><a href="https://docs.microsoft.com/javascript/office/manifest/allowsnapshot?view=office-js" target="_blank">Манифест надстроек Office</a></p>

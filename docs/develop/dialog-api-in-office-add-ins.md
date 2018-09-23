@@ -2,12 +2,12 @@
 title: Использование Dialog API в надстройках Office
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: 65ac55baa31f298ea5a17d789ba96772c8f5bb02
-ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
+ms.openlocfilehash: 569aa6fe6a16b4dc158f0b4e0f5b457650a5a46a
+ms.sourcegitcommit: 470d8212b256275587e651abaa6f28beafebcab4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "23945612"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "24062139"
 ---
 # <a name="use-the-dialog-api-in-your-office-add-ins"></a>Использование Dialog API в надстройках Office
 
@@ -47,7 +47,10 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html');
 
 > [!NOTE]
 > - В случае URL-адреса используется протокол HTTP**S**, обязательный для всех страниц, загружаемых в диалоговом окне, а не только для первой страницы.
-> - Домен совпадает с доменом главной страницы, которая может быть страницей в области задач или [файлом функций](https://docs.microsoft.com/javascript/office/manifest/functionfile?view=office-js) для команды надстройки. Страница, метод контроллера или другой ресурс, переданный в метод `displayDialogAsync`, должен быть в том же домене, что и главная страница.
+> - Домен диалогового ресурса совпадает с доменом главной страницы, которая может быть страницей в области задач или [файлом функций](https://docs.microsoft.com/javascript/office/manifest/functionfile?view=office-js) для команды надстройки. Страница, метод контроллера или другой ресурс, передаваемый в метод `displayDialogAsync`, должен находиться в том же домене, что и главная страница.
+
+> [!IMPORTANT]
+> У главной страницы и у ресурса диалогового окна должен быть один и тот же полный домен. Если вы попытаетесь передать методу `displayDialogAsync` поддомен домена надстройки, это не сработает. Полные доменные имена, включая любые поддомены, должны совпадать.
 
 После загрузки первой страницы (или другого ресурса) пользователь может перейти к любому веб-сайту (или другому ресурсу), который использует HTTPS. Первая страница также может сразу перенаправлять пользователя на другой сайт.
 

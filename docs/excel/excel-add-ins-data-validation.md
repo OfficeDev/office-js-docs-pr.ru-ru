@@ -2,20 +2,14 @@
 title: Добавление проверки данных в диапазоны Excel
 description: ''
 ms.date: 04/13/2018
-ms.openlocfilehash: fd40cab045da0472a060752651a27f0b26028b4b
-ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
+ms.openlocfilehash: 7e545ccca01a12257f4083f19135a320b2693190
+ms.sourcegitcommit: e7e4d08569a01c69168bb005188e9a1e628304b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "23944879"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "24967692"
 ---
 # <a name="add-data-validation-to-excel-ranges-preview"></a>Добавление проверки данных в диапазоны Excel (предварительная версия)
-
-> [!NOTE]
-> Пока API проверки данных являются предварительной версией, для их использования вы должны загрузить бета-версию библиотеки JavaScript для Office. URL-адрес: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js. Если вы используете TypeScript или редактор кода использует файл определения типа TypeScript для IntelliSense, воспользуйтесь https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts.
-
-> [!NOTE]
-> Поскольку API проверки достоверности данных находятся в режиме предварительного просмотра, в этой статье ссылки на API работать не будут. Тем временем вы можете использовать [черновой вариант справки по API Excel](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_OpenSpec/reference/excel).
 
 Библиотека JavaScript Excel предоставляет API, позволяющие вашей надстройке добавлять автоматическую проверку данных в таблицы, столбцы, строки и другие диапазоны в книге. Для ознакомления с понятиями и терминологией проверки данных смотрите следующие статьи о том, как пользователи добавляют проверку данных через интерфейс Excel:
 
@@ -42,7 +36,7 @@ ms.locfileid: "23944879"
 
 #### <a name="basic-and-datetime-validation-rule-types"></a>Типы правил проверки Basic и DateTime
 
-Первые три свойства `DataValidationRule` (т. е. типа правил проверки) в качестве своего значения принимают объект [BasicDataValidation](https://docs.microsoft.com/javascript/api/excel?view=office-js).
+Первые три свойства `DataValidationRule` (т. е. типа правил проверки) в качестве своего значения принимают объект [BasicDataValidation](https://docs.microsoft.com/javascript/api/excel).
 
 - `wholeNumber` — Требует целое число в дополнение к другим проверкам, определенным в объекте `BasicDataValidation`.
 - `decimal` — Требует десятичное число в дополнение к другим условиям проверки, определенным в объекте `BasicDataValidation`.
