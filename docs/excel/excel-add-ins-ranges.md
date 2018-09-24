@@ -2,16 +2,16 @@
 title: Работа с диапазонами с использованием API JavaScript для Excel
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: 48784d14542bcff4a2aab416c5f91c132f6c172d
-ms.sourcegitcommit: e1c92ba882e6eb03a165867c6021a6aa742aa310
+ms.openlocfilehash: dea015c028d58a708bb83f79fcbfebc3cf3bfc1e
+ms.sourcegitcommit: e7e4d08569a01c69168bb005188e9a1e628304b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "22925621"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "24967713"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api"></a>Работа с диапазонами с использованием API JavaScript для Excel
 
-В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диапазонов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектом **Range**, см. в статье [Объект Range (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/range).
+В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диапазонов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектом **Range**, см. в статье [Объект Range (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.range).
 
 ## <a name="get-a-range"></a>Получение диапазона
 
@@ -535,10 +535,10 @@ Excel.run(function (context) {
 
 ![Данные в Excel после задания формата](../images/excel-ranges-format-numbers.png)
 
-## <a name="copy-and-paste"></a>Копировать и вставить
+## <a name="copy-and-paste"></a>Копирование и вставка
 
 > [!NOTE]
-> Функция copyFrom в настоящее время доступна только в общедоступной предварительной версии (бета-версия). Чтобы использовать эту функцию, необходимо использовать библиотеку бета-версии Office.js CDN: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
+> Функция copyFrom в настоящее время доступна только в общедоступной предварительной версии (бета-версия). Для применения этой функции, необходимо использовать библиотеку бета-версии Office.js CDN: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
 > Если вы используете TypeScript, или ваш редактор кода использует файлы определения типа TypeScript для IntelliSense, воспользуйтесь https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts.
 
 Функция copyFrom диапазона реплицирует поведение копирования и вставки пользовательского интерфейса Excel. Диапазон объектов, который вызывается copyFrom, — это назначение. Источник для копирования передается как диапазон или адрес строки, представляющий диапазон. Следующий пример кода копирует данные из **A1:E1** в диапазон, начиная с **G1** (который заканчивается при вставке в **G1:K1**).
@@ -564,7 +564,7 @@ copyFrom(sourceRange: Range | string, copyType?: "All" | "Formulas" | "Values" |
 `“Formats”` копирует форматирование диапазона, включая шрифт, цвет и другие параметры форматирования, но без значений. 
 `”All”` (вариант по умолчанию) копирует и данные и форматирование, сохраняя формулы ячеек при их обнаружении.
 
-`skipBlanks` устанавливает, будут ли копироваться пустые ячейки в назначение. Если значение равно true, `copyFrom` пропускает пустые ячейки в диапазоне источника. Пропущенные ячейки не перезапишут существующие данные в соответствующих им ячейках конечного диапазона. Значение по умолчанию — false.
+`skipBlanks` устанавливает, будут ли копироваться пустые ячейки в назначение. Если значение равно true, `copyFrom` пропускает пустые ячейки в диапазоне источника. Пропущенные ячейки не перезапишут существующие данные в соответствующих им ячейках конечного диапазона. Значением по умолчанию является false.
 
 Следующий пример кода и изображений демонстрирует это поведение в простом сценарии. 
 
@@ -599,4 +599,4 @@ Excel.run(function (context) {
 ## <a name="see-also"></a>См. также
 
 - [Основные понятия API JavaScript для Excel](excel-add-ins-core-concepts.md)
-- [Объект Range (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/range)
+
