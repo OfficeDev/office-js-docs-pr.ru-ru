@@ -41,7 +41,7 @@ items:
   - name: Создание надстройки проекта
     displayName: Project
     href: quickstarts/project-quickstart.md
-- name: Учебные пособия
+- name: Руководства
   items:
   - name: Руководство по надстройкам Excel
     displayName: Excel
@@ -52,9 +52,9 @@ items:
   - name: Руководство по надстройкам Word
     displayName: Word
     href: tutorials/word-tutorial.yml
-- name: Понятия
+- name: Основные понятия
   items:
-  - name: Требования для запуска надстроек
+  - name: Требования к запуску надстроек
     href: concepts/requirements-for-running-office-add-ins.md
   - name: Рекомендации по разработке надстроек
     href: concepts/add-in-development-best-practices.md
@@ -73,18 +73,18 @@ items:
       items:
       - name: Специальные возможности
         href: design/accessibility-guidelines.md
-      - name: Стиль речи
+      - name: Голосовая связь
         href: design/voice-guidelines.md
       - name: Визуализация данных
         href: design/data-visualization-guidelines.md
     - name: Язык проектирования
       href: design/add-in-design-language.md
       items:
-      - name: шрифтовое оформление;
+      - name: Оформление
         href: design/add-in-typography.md
       - name: Цвет
         href: design/add-in-color.md
-      - name: Макет
+      - name: Структура
         href: design/add-in-layout.md
       - name: Значки
         href: design/add-in-icons.md
@@ -100,18 +100,18 @@ items:
         href: design/task-pane-add-ins.md
       - name: Диалоговые окна
         href: design/dialog-boxes.md
-      - name: Контентные надстройки
+      - name: Надстройки содержимого
         href: design/content-add-ins.md
     - name: Шаблоны оформления UX
       href: design/ux-design-pattern-templates.md
       items:
       - name: Проверка подлинности
         href: design/authentication-patterns.md
-      - name: первый запуск;
+      - name: Первый запуск
         href: design/first-run-experience-patterns.md
       - name: Навигация
         href: design/navigation-patterns.md
-      - name: Брендирование
+      - name: Фирменная символика
         href: design/branding-patterns.md
     - name: Ресурсы
       items:
@@ -138,7 +138,7 @@ items:
         href: develop/loading-the-dom-and-runtime-environment.md
       - name: Объектная модель API JavaScript для Office
         href: develop/office-javascript-api-object-model.md
-      - name: Асинхронное программирование в случае надстроек Office
+      - name: Асинхронное программирование в надстройках Office
         href: develop/asynchronous-programming-in-office-add-ins.md
       - name: Сохранение состояния и параметров
         href: develop/persisting-add-in-state-and-settings.md
@@ -223,9 +223,15 @@ items:
         displayName: Excel
         href: excel/custom-functions-overview.md
         items:
-        - name: Регистрация настраиваемых функций Excel в JSON
+        - name: Среда выполнения настраиваемых функций
+          displayName: Excel
+          href: excel/custom-functions-runtime.md
+        - name: Метаданные настраиваемых функций
           displayName: Excel
           href: excel/custom-functions-json.md
+        - name: Рекомендации по настраиваемым функциям
+          displayName: Excel
+          href: excel/custom-functions-best-practices.md
       - name: Диаграммы
         displayName: Excel
         href: excel/excel-add-ins-charts.md
@@ -244,7 +250,7 @@ items:
       - name: Электронные таблицы
         displayName: Excel
         href: excel/excel-add-ins-worksheets.md
-    - name: Расширенные концепции
+    - name: Развитые концепции
       displayName: Excel
       href: excel/excel-add-ins-advanced-concepts.md
       items:
@@ -285,7 +291,7 @@ items:
     - name: Надстройки области задач словаря
       displayName: Word
       href: word/dictionary-task-pane-add-ins.md
-    - name: Получение всего документа из надстройки
+    - name: Получение целого документа из надстройки
       displayName: Word
       href: word/get-the-whole-document-from-an-add-in-for-word.md
     - name: Чтение и запись данных при активном выделении
@@ -316,7 +322,7 @@ items:
     - name: Использование тем документов в надстройках PowerPoint
       displayName: PowerPoint
       href: powerpoint/use-document-themes-in-your-powerpoint-add-ins.md
-    - name: Получение всего документа из надстройки
+    - name: Получение целого документа из надстройки
       displayName: PowerPoint
       href: powerpoint/get-the-whole-document-from-an-add-in-for-powerpoint.md
   - name: Надстройки OneNote
@@ -370,7 +376,7 @@ items:
         href: testing/sideload-an-office-add-in-on-ipad-and-mac.md
       - name: Отладка на iPad и Mac
         href: testing/debug-office-add-ins-on-ipad-and-mac.md
-    - name: Тестирование на удобство
+    - name: Тестирование удобства использования
       href: develop/usability-testing.md
     - name: Устранение ошибок, с которыми сталкиваются пользователи
       href: testing/testing-and-troubleshooting.md
@@ -414,7 +420,7 @@ items:
   - name: API JavaScript для Word
     displayName: Word
     href: https://docs.microsoft.com/javascript/office/overview/word-add-ins-reference-overview?view=office-js
-  - name: Общий API
+  - name: API Shared
     displayName: PowerPoint, Project
     href: https://docs.microsoft.com/javascript/office/requirement-sets/office-add-in-requirement-sets?view=office-js
   - name: Открытые спецификации API
@@ -422,9 +428,9 @@ items:
     href: https://docs.microsoft.com/javascript/office/openspec?view=office-js
 - name: Ресурсы
   href: resources/resources-links-help.md
-ms.openlocfilehash: 19c424952936e03a982f1c0eba2b01e47e2ff7c4
-ms.sourcegitcommit: 3da2038e827dc3f274d63a01dc1f34c98b04557e
+ms.openlocfilehash: b02b37aa7b85e2a2e1126c065636158928bd1ced
+ms.sourcegitcommit: 470d8212b256275587e651abaa6f28beafebcab4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "24016432"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "24062118"
