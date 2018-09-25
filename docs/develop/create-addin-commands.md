@@ -2,12 +2,12 @@
 title: Создание команд надстроек в манифесте для Excel, Word и PowerPoint
 description: Используйте элемент VersionOverrides в манифесте, чтобы определить команды надстроек для Excel, Word и PowerPoint. Используйте команды надстроек, чтобы создать элементы пользовательского интерфейса, добавить кнопки или списки, а также для выполнения действий.
 ms.date: 12/04/2017
-ms.openlocfilehash: 4d0bb5eb82ef931c94e6791aaeab598af9f0e298
-ms.sourcegitcommit: eb74e94d3e1bc1930a9c6582a0a99355d0da34f2
+ms.openlocfilehash: 6542084e5f63480100a72121e6acf25e7fc49ac8
+ms.sourcegitcommit: 4b2e93db537d89e8aa7a9eb05b0338debb42ba56
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/25/2018
-ms.locfileid: "25005031"
+ms.locfileid: "25018214"
 ---
 # <a name="create-add-in-commands-in-your-manifest-for-excel-word-and-powerpoint"></a>Создание команд надстроек в манифесте для Excel, Word и PowerPoint
 
@@ -182,7 +182,7 @@ JavaScript должен вызывать `Office.initialize` в HTML-файле,
         Office.context.document.setSelectedDataAsync("ExecuteFunction works. Button ID=" + event.source.id,
             function (asyncResult) {
                 var error = asyncResult.error;
-                if (asyncResult.status === "failed") {
+                if (asyncResult.status === Office.AsyncResultStatus.Failed) {
                     // Show error message. 
                 }
                 else {

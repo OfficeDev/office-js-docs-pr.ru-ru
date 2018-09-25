@@ -2,12 +2,12 @@
 title: Использование Dialog API в надстройках Office
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: 569aa6fe6a16b4dc158f0b4e0f5b457650a5a46a
-ms.sourcegitcommit: 470d8212b256275587e651abaa6f28beafebcab4
+ms.openlocfilehash: 148f4b564169e62f6444e87074c45cb8e4ce5c63
+ms.sourcegitcommit: eb74e94d3e1bc1930a9c6582a0a99355d0da34f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "24062139"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "25005059"
 ---
 # <a name="use-the-dialog-api-in-your-office-add-ins"></a>Использование Dialog API в надстройках Office
 
@@ -47,10 +47,10 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html');
 
 > [!NOTE]
 > - В случае URL-адреса используется протокол HTTP**S**, обязательный для всех страниц, загружаемых в диалоговом окне, а не только для первой страницы.
-> - Домен диалогового ресурса совпадает с доменом главной страницы, которая может быть страницей в области задач или [файлом функций](https://docs.microsoft.com/javascript/office/manifest/functionfile?view=office-js) для команды надстройки. Страница, метод контроллера или другой ресурс, передаваемый в метод `displayDialogAsync`, должен находиться в том же домене, что и главная страница.
+> - Домен ресурса диалогового окна совпадает с доменом главной страницы, которая может представлять собой страницу в области задач или [файл функции](https://docs.microsoft.com/javascript/office/manifest/functionfile?view=office-js) команды надстройки. Обязательным является следующее: страница, метод контроллера или другой ресурс, передаваемый методу `displayDialogAsync`, должны находиться в том же домене, что и главная страница.
 
 > [!IMPORTANT]
-> У главной страницы и у ресурса диалогового окна должен быть один и тот же полный домен. Если вы попытаетесь передать методу `displayDialogAsync` поддомен домена надстройки, это не сработает. Полные доменные имена, включая любые поддомены, должны совпадать.
+> У главной страницы и у ресурсов диалогового окна должен быть один и тот же полный домен. Если вы попытаетесь передать методу `displayDialogAsync` поддомен домена надстройки, это не сработает. Полные доменные имена, включая любые поддомены, должны совпадать.
 
 После загрузки первой страницы (или другого ресурса) пользователь может перейти к любому веб-сайту (или другому ресурсу), который использует HTTPS. Первая страница также может сразу перенаправлять пользователя на другой сайт.
 
@@ -318,7 +318,7 @@ function processDialogEvent(arg) {
 Иногда главной странице нужно передать данные в диалоговое окно. Есть два основных способа обеспечить эту возможность:
 
 - Добавьте параметры запроса в URL-адрес, который передается в метод `displayDialogAsync`.
-- Храните информацию в месте, доступном как для главного, так и для диалогового окна. У всех окон есть отдельное хранилище сеанса, но *если для них используется один домен* (включая номер порта), у них общее [локальное хранилище](http://www.w3schools.com/html/html5_webstorage.asp).
+- Храните информацию в месте, доступном как для главного, так и для диалогового окна. У всех окон есть отдельное хранилище сеанса, но *если для них используется один домен* (включая номер порта), у них общее [локальное хранилище](https://www.w3schools.com/html/html5_webstorage.asp).
 
 ### <a name="use-local-storage"></a>Использование локального хранилища
 
@@ -349,7 +349,7 @@ var clientID = localStorage.getItem("clientID");
 Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?clientID=15963ac5-314f-4d9b-b5a1-ccb2f1aea248');
 ```
 
-Пример, в котором используется эта техника, см. в статье [Вставка диаграмм Excel с помощью Microsoft Graph в надстройке PowerPoint](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart).
+Пример, в котором используется эта методика, см. в статье [Вставка диаграмм Excel с помощью Microsoft Graph в надстройке PowerPoint](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart).
 
 Код в диалоговом окне может проанализировать URL-адрес и считать значение параметра.
 
@@ -392,10 +392,10 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?client
 3. Когда открывается страница redirectPage.html, она вызывает функцию `messageParent`, чтобы сообщить о результате главной странице, а также сообщить пользовательские данные или данные об ошибке.
 4. На главной странице запускается событие `DialogMessageReceived`, и его обработчик закрывает диалоговое окно и (при необходимости) обрабатывает сообщение.
 
-Примеры надстроек, в которых используется этот шаблон, см. в следующих статьях:
+Чтобы ознакомиться с примерами надстроек, в которых используется этот шаблон, см.:
 
-- [Вставка диаграмм Excel с помощью Microsoft Graph в надстройке PowerPoint](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart). Ресурс, который изначально открывается в диалоговом окне, — метод контроллера, не имеющий своего представления. Он перенаправляет пользователя на страницу входа в Office 365.
-- [Проверка подлинности клиента Office 365 для надстройки Office с помощью AngularJS](https://github.com/OfficeDev/Word-Add-in-AngularJS-Client-OAuth). Ресурс, который изначально открывается в диалоговом окне, — это страница.
+- [Вставка диаграмм Excel с помощью Microsoft Graph в надстройке PowerPoint](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart). Ресурс, который изначально открывается в диалоговом окне, представляет собой метод контроллера, не имеющий собственного представления. Он перенаправляет пользователя на страницу входа в Office 365.
+- [Проверка подлинности клиента Office 365 в надстройке Office для AngularJS](https://github.com/OfficeDev/Word-Add-in-AngularJS-Client-OAuth). Ресурс, который изначально открывается в диалоговом окне, представляет собой страницу.
 
 #### <a name="support-multiple-identity-providers"></a>Поддержка нескольких поставщиков удостоверений
 
@@ -418,7 +418,7 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?client
 - Диалоговое окно отправляет маркер доступа в главное окно, преобразовывая его в строку с помощью функции `messageParent` или сохраняя его там, откуда главное окно сможет его извлечь. Пока срок действия этого маркера не истек, главное окно может использовать его для прямого доступа к ресурсам пользователя без дополнительных запросов.
 
 Dialog API используется для этой цели в следующих примерах:
-- [Вставка диаграмм Excel с помощью Microsoft Graph в надстройке PowerPoint](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart) (маркер доступа хранится в базе данных).
+- [Вставка диаграмм Excel с помощью Microsoft Graph в надстройке PowerPoint](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart) — маркер доступа сохраняется в базе данных.
 - [Использование службы OAuth.io в надстройках Office для упрощения доступа к популярным веб-службам](https://github.com/OfficeDev/Office-Add-in-OAuth.io)
 
 Дополнительные сведения об аутентификации и авторизации в надстройках см. в статьях:

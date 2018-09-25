@@ -2,16 +2,16 @@
 title: Разработка надстроек Office с помощью Angular
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: c3aa67d7427249fb04d9777dc0d76098ea607582
-ms.sourcegitcommit: 7ecc1dc24bf7488b53117d7a83ad60e952a6f7aa
+ms.openlocfilehash: 65b2a229e0379106b63b0f1abaaa8b66d7cdf367
+ms.sourcegitcommit: eb74e94d3e1bc1930a9c6582a0a99355d0da34f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "19437509"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "25004976"
 ---
 # <a name="develop-office-add-ins-with-angular"></a>Разработка надстроек Office с помощью Angular
 
-В этой статье приведены рекомендации по использованию Angular 2 и более поздних версий для создания надстройки Office в виде одностраничного приложения.
+В этой статье приведены рекомендации по использованию Angular 2 и более поздних версий для создания надстройки Office в виде одностраничного приложения.
 
 > [!NOTE]
 > Вы можете поделиться опытом по использованию Angular для создания надстроек Office? Примите участие в создании этой статьи на сайте [GitHub](https://github.com/OfficeDev/office-js-docs) или сообщите о [проблеме](https://github.com/OfficeDev/office-js-docs-pr/issues) в соответствующем репозитории. 
@@ -77,14 +77,14 @@ export class AppRoutingModule { }
 
 ## <a name="consider-wrapping-fabric-components-with-angular-components"></a>Советуем разместить компоненты Fabric в компонентах Angular
 
-Рекомендуем использовать в надстройке стили [Office UI Fabric](http://dev.office.com/fabric#/fabric-js). Fabric включает компоненты, для которых предусмотрено несколько версий, в том числе версии [на основе TypeScript](https://github.com/OfficeDev/office-ui-fabric-js). Советуем использовать компоненты Fabric в надстройке, размещая их в компонентах Angular. Пример см. в статье [Надстройка проверки стиля в программе Word на основе Angular](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker). Обратите внимание, например, как компонент Angular, определенный в [fabric.textfield.wrapper](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker/blob/master/app/shared/office-fabric-component-wrappers/fabric.textfield.wrapper.component.ts), импортирует файл TextField.ts Fabric, где определен компонент Fabric. 
+Рекомендуем использовать в надстройке стили [Office UI Fabric](https://developer.microsoft.com/fabric#/fabric-js). Fabric включает компоненты, для которых предусмотрено несколько версий, в том числе версии [на основе TypeScript](https://github.com/OfficeDev/office-ui-fabric-js). Советуем использовать компоненты Fabric в надстройке, размещая их в компонентах Angular. Пример см. в статье [Надстройка проверки стиля в программе Word на основе Angular](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker). Обратите внимание, например, как компонент Angular, определенный в [fabric.textfield.wrapper](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker/blob/master/app/shared/office-fabric-component-wrappers/fabric.textfield.wrapper.component.ts), импортирует файл TextField.ts Fabric, где определен компонент Fabric. 
 
 
 ## <a name="using-the-office-dialog-api-with-angular"></a>Использование API диалоговых окон Office с Angular
 
-Благодаря API диалоговых окон надстройка Office может открывать страницу в полумодальном диалоговом окне, которое обменивается данными с главной страницей (как правило, в области задач). 
+API диалогового окна надстройки Office позволяет открывать страницу в полумодальном диалоговом окне, способном обменивается данными с главной страницей, которая, как правило, располагается в области задач). 
 
-В методе [displayDialogAsync](http://dev.office.com/reference/add-ins/shared/officeui.displaydialogasync) используется параметр, указывающий URL-адрес страницы, которая должна открываться в диалоговом окне. В вашей надстройке может быть отдельная HTML-страница, отличная от базовой, для передачи этому параметру. Можно также передать URL-адрес маршрута в приложении на основе Angular. 
+В методе [displayDialogAsync](https://docs.microsoft.com/javascript/api/office/office.ui?view=office-js) используется параметр, указывающий URL-адрес страницы, которая должна открываться в диалоговом окне. В вашей надстройке может быть отдельная HTML-страница, отличная от базовой, для передачи этому параметру. Можно также передать URL-адрес маршрута в приложении на основе Angular. 
 
 Важно помнить, что в случае передачи маршрута диалоговое окно создает новое окно с собственным контекстом выполнения. Базовая страница со всем ее кодом инициализации и начальной загрузки запускается снова в этом новом контексте, а возможным переменным присваиваются первоначальные значения в диалоговом окне. Такой способ приводит к запуску второго экземпляра одностраничного приложения в диалоговом окне. Код, меняющий переменные в диалоговом окне, не меняет версию области задач этих переменных. Для диалогового окна предусмотрено отдельное хранилище сеанса, недоступное из кода в области задач.  
 
@@ -111,7 +111,7 @@ export class MyComponent {
 
 Angular использует библиотеку RxJS, в которой предусмотрены объекты `Observable` и `Observer` для реализации асинхронной обработки. Из этого раздела вы узнаете, как использовать `Observables`. Более подробную информацию см. в официальной документации по [RxJS](http://reactivex.io/rxjs/).
 
-Объект `Observable` отчасти похож на объект `Promise`: он возвращается сразу же после асинхронного вызова, но для его разрешения может потребоваться некоторое время. Но если `Promise` — это единственное значение (которое может быть объектом массивов), то `Observable` — это массив объектов (возможно, только с одним элементом). Благодаря этому код может вызывать такие [методы массива](http://www.w3schools.com/jsref/jsref_obj_array.asp), как `concat`, `map` и `filter`, для объектов `Observable`. 
+Объект `Observable` отчасти похож на объект `Promise`: он возвращается сразу же после асинхронного вызова, но для его разрешения может потребоваться некоторое время. Но если `Promise` — это единственное значение (которое может быть объектом массивов), то `Observable` — это массив объектов (возможно, только с одним элементом). Благодаря этому код может вызывать такие [методы массива](https://www.w3schools.com/jsref/jsref_obj_array.asp), как `concat`, `map` и `filter`, для объектов `Observable`. 
 
 ### <a name="pushing-instead-of-pulling"></a>Рассылка вместо извлечения
 

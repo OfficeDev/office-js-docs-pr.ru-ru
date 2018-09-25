@@ -2,12 +2,12 @@
 title: Указание ведущих приложение Office и требований к API
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: bd517dee1faf8d3f3009a0b9ce7127f5760e730d
-ms.sourcegitcommit: c72c35e8389c47a795afbac1b2bcf98c8e216d82
+ms.openlocfilehash: 1a1b98763b73d4c41cb9853c139866b727c125a1
+ms.sourcegitcommit: eb74e94d3e1bc1930a9c6582a0a99355d0da34f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "19437712"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "25005013"
 ---
 # <a name="specify-office-hosts-and-api-requirements"></a>Указание ведущих приложение Office и требований к API
 
@@ -30,7 +30,7 @@ ms.locfileid: "19437712"
 |:-----|:-----|
 |Приложение Office, ведущее приложение Office или ведущее приложение|Приложение Office, используемое для запуска надстройки, например Word, Word Online, Excel и т. д.|
 |Платформа|Платформа ведущего приложения Office, например Office Online или Office для iPad.|
-|Набор обязательных элементов|Именованная группа связанных элементов API. С помощью наборов требований надстройка определяет, поддерживает ли ведущее приложение Office элементы API, которые она использует. Проще проверять поддержку набора требований, а не отдельных элементов API. Поддержка набора требований зависит от ведущего приложения Office и его версии. <br >Наборы требований указываются в файле манифеста. Задавая наборы требований в манифесте, вы указываете, какой минимальный уровень поддержки API должно обеспечить ведущее приложение Office, чтобы можно было запустить надстройку. Надстройка не будет работать в ведущих приложениях Office, которые не поддерживают наборы требований, указанные в манифесте, и не будет отображаться в разделе <span class="ui">Мои надстройки</span>. Это ограничивает доступность надстройки.В коде с помощью проверок в среде выполнения. Полный список наборов требований см. в статье[Наборы требований для надстроек Office](https://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets).|
+|Набор обязательных элементов|Именованная группа связанных элементов API. С помощью наборов требований надстройка определяет, поддерживает ли ведущее приложение Office элементы API, которые она использует. Проще проверять поддержку набора требований, а не отдельных элементов API. Поддержка набора требований зависит от ведущего приложения Office и его версии. <br >Наборы требований указываются в файле манифеста. При указании наборов требований в манифесте задается минимальный уровень поддержки API, который должен обеспечиваться узлом Office для запуска надстройки. Запуск надстройки на тех узлах Office, которые не поддерживают указанные в манифесте наборы требований, остается невозможным, и надстройка в секции <span class="ui">Мои надстройки</span> не отображается. Это ограничивает доступность надстройки в коде, где используются проверки во время выполнения. Полный список наборов требований см. в статье[Наборы требований для надстроек Office](https://docs.microsoft.com/javascript/office/requirement-sets/office-add-in-requirement-sets?view=office-js).|
 |Проверка в среде выполнения|Проверка в среде выполнения, которая позволяет определить, поддерживает ли ведущее приложение Office наборы требований или методы, которые использует надстройка. Чтобы запустить такую проверку, используйте оператор **if** с методом **isSetSupported**, наборами требований или именами методов, которые не входят в набор требований. Проверки в среде выполнения позволяют максимально расширить аудиторию надстройки. В отличие от наборов требований, такие проверки не позволяют задать минимальный уровень поддержки API, который требуется для запуска надстройки. Вместо этого с помощью оператора **if** вы определяете, поддерживается ли элемент API, и если это так, добавляете в надстройку дополнительные функции. Если вы используете проверки в среде выполнения, ваша надстройка всегда будет отображаться в разделе **Мои надстройки**.|
 
 ## <a name="before-you-begin"></a>Перед началом работы
@@ -42,7 +42,7 @@ ms.locfileid: "19437712"
 Ваша надстройка должна использовать схему манифеста 1.1. Настройте элемент **OfficeApp** в манифесте надстройки указанным ниже образом.
 
 ```XML
-<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TaskPaneApp">
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:type="TaskPaneApp">
 ```
 
 ### <a name="specify-the-latest-javascript-api-for-office-library"></a>Выбор последней версии библиотеки API JavaScript для Office
@@ -123,7 +123,7 @@ ms.locfileid: "19437712"
     
 - Элемент **Sets** может содержать один или несколько элементов **Set**. Параметр **DefaultMinVersion** задает значение **MinVersion** по умолчанию для всех дочерних элементов **Set**.
     
-- Элемент **Set** указывает наборы требований, которые ведущее приложение Office должно поддерживать для запуска надстройки. Атрибут **Name** указывает имя набора требований. Атрибут **MinVersion** указывает минимальную версию набора требований. **MinVersion** переопределяет значение **DefaultMinVersion**. Дополнительные сведения о наборах требований и их версиях, к которым принадлежат элементы API, см. в статье [Наборы требований для надстроек Office](https://dev.office.com/reference/add-ins/office-add-in-requirement-sets).
+- Элемент **Set** характеризует наборы требований, которые должны поддерживаться узлом Office для запуска надстройки. Атрибут **Name** характеризует имя набора требований. **MinVersion** указывает минимальную версию набора требований. **MinVersion** переопределяет значение **DefaultMinVersion**. Дополнительные сведения о наборах требований и их версиях, к которым принадлежат элементы API, см. в статье [Наборы требований для надстроек Office](https://docs.microsoft.com/javascript/office/requirement-sets/office-add-in-requirement-sets?view=office-js).
     
 - Элемент **Methods** может содержать один или несколько элементов **Method**. Элемент **Methods** не следует использовать с надстройками Outlook.
     
@@ -145,7 +145,7 @@ if (Office.context.requirements.isSetSupported(RequirementSetName , VersionNumbe
 ```
 
 
--  _RequirementSetName_ (обязательный параметр) — это имя набора требований. Дополнительные сведения о доступных наборах требований см. в статье [Наборы требований для надстроек Office](https://dev.office.com/reference/add-ins/office-add-in-requirement-sets).
+-  _RequirementSetName_ (обязательный параметр) представляет собой строку, отображающую имя набора требований. Дополнительные сведения о доступных наборах требований см. в статье [Наборы требований для надстроек Office](https://docs.microsoft.com/javascript/office/requirement-sets/office-add-in-requirement-sets?view=office-js).
     
 -  _VersionNumber_ (необязательный параметр) — это версия набора требований.
     
@@ -180,7 +180,7 @@ else
 ## <a name="runtime-checks-using-methods-not-in-a-requirement-set"></a>Проверки в среде выполнения с использованием методов, не входящих в набор требований
 
 
-Некоторые элементы API не входят в наборы требований. Это относится только к тем элементам API, которые входят в пространства имен [JavaScript для Office](https://dev.office.com/reference/add-ins/javascript-api-for-office) (все элементы в Office.), и не относится к элементам API, принадлежащим к пространствам имен API JavaScript для Word (все элементы в Word.) или [API JavaScript для надстроек Excel](https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview) (все элементы в Excel.). Если надстройка зависит от метода, не входящего в набор требований, вы можете использовать проверку в среде выполнения, чтобы определить, поддерживается ли метод ведущим приложением Office, как показано в примере кода ниже. Список всех методов, не входящих в набор требований, см. в статье [Наборы требований для надстроек Office](https://dev.office.com/reference/add-ins/office-add-in-requirement-sets).
+Некоторые элементы API не входят в состав наборов требований. Это относится только к тем элементам API, которые являются частью пространства имен [API JavaScript для Office](https://docs.microsoft.com/javascript/office/javascript-api-for-office?view=office-js) (все элементы в Office.), и не относится к элементам API, принадлежащим к пространствам имен API JavaScript для Word (все элементы в Word.) или [справочник по API JavaScript для надстроек Excel](https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview?view=office-js) (все элементы в Excel.). Если надстройка зависит от метода, не входящего в набор требований, то для того, чтобы определить, поддерживается ли метод узлом Office, можно воспользоваться проверкой в процессе выполнения, как показано в приведенном ниже примере кода. Полный список методов, не входящих в набор требований, см. в статье [Наборы требований для надстроек Office](https://docs.microsoft.com/javascript/office/requirement-sets/office-add-in-requirement-sets?view=office-js).
 
 
 > [!NOTE]
@@ -202,5 +202,5 @@ if (Office.context.document.setSelectedDataAsync)
 ## <a name="see-also"></a>См. также
 
 - [XML-манифест надстройки Office](add-in-manifests.md)
-- [Наборы обязательных элементов для надстроек Office](https://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets)
+- [Наборы требований для надстроек Office](https://docs.microsoft.com/javascript/office/requirement-sets/office-add-in-requirement-sets?view=office-js)
 - [Word-Add-in-Get-Set-EditOpen-XML](https://github.com/OfficeDev/Word-Add-in-Get-Set-EditOpen-XML)

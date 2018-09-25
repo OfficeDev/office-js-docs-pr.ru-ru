@@ -1,13 +1,13 @@
 ---
-title: Развертывание и публикация надстройки Office
-description: ''
+title: Развертывание и публикация надстройки Office | Microsoft Docs
+description: Методы и параметры, применяемые при развертывании надстройки Office для тестирования или распространения среди пользователей.
 ms.date: 01/23/2018
-ms.openlocfilehash: 83581b729f5004c36d267bda14795275a5153a9c
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: ada786ed7ded1f34d564389c09c2cd5c25c2a331
+ms.sourcegitcommit: eb74e94d3e1bc1930a9c6582a0a99355d0da34f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925348"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "25004933"
 ---
 # <a name="deploy-and-publish-your-office-add-in"></a>Развертывание и публикация надстройки Office
 
@@ -31,26 +31,26 @@ ms.locfileid: "22925348"
 
 ### <a name="deployment-options-for-word-excel-and-powerpoint-add-ins"></a>Варианты развертывания для надстроек Word, Excel и PowerPoint
 
-| Точка расширения | Загрузка неопубликованного приложения | Центр администрирования Office 365 |AppSource| Каталог SharePoint\*  |
+| Точка расширения | Загрузка неопубликованного приложения | Центр администрирования Office 365 |AppSource   | Каталог SharePoint\* |
 |:----------------|:-----------:|:-----------------------:|:----------:|:--------------------:|
 | Контент         | X           | X                       | X          | X                    |
 | Область задач       | X           | X                       | X          | X                    |
-| Команда           | X           | X                       | X          |                      |
+| Команда         | X           | X                       | X          |                      |
 
-* Каталоги SharePoint не поддерживают Office 2016 для Mac.
+* Каталоги SharePoint не поддерживают Office для Mac.
 
-### <a name="deployment-options-for-outlook-add-ins"></a>Способы развертывания надстроек Outlook
+### <a name="deployment-options-for-outlook-add-ins"></a>Варианты развертывания надстроек Outlook
 
-| Точка расширения | Загрузка неопубликованного приложения | Сервер Exchange Server | AppSource |
+| Точка расширения | Загрузка неопубликованного приложения | Сервер Exchange Server | AppSource    |
 |:----------------|:-----------:|:---------------:|:------------:|
 | Почтовое приложение        | X           | X               | X            |
 | Команда         | X           | X               | X            |
 
 ## <a name="deployment-methods"></a>Методы развертывания
 
-Указанные ниже разделы содержат дополнительные сведения о методах развертывания, которые чаще всего используются для распространения надстроек Office в организации.
+В последующих разделах приводится дополнительная информация о методах развертывания, наиболее часто используемых для распространения надстроек Office среди пользователей в рамках организации.
 
-Сведения о том, как пользователи приобретают, вставляют и запускают надстройки, см. в статье [Начало работы с надстройкой Office](https://support.office.com/en-ie/article/Start-using-your-Office-Add-in-82e665c4-6700-4b56-a3f3-ef5441996862?ui=en-US&rs=en-IE&ad=IE).
+Сведения о приобретении, вставке и запуске надстроек конечными пользователями см. в статье [Начало работы с надстройкой Office](https://support.office.com/en-ie/article/Start-using-your-Office-Add-in-82e665c4-6700-4b56-a3f3-ef5441996862?ui=en-US&rs=en-IE&ad=IE).
 
 ### <a name="centralized-deployment-via-the-office-365-admin-center"></a>Централизованное развертывание в Центре администрирования Office 365 
 
@@ -65,7 +65,7 @@ ms.locfileid: "22925348"
 Если вы развертываете надстройки в локальной среде, используйте каталог SharePoint. Дополнительные сведения см. в статье [Публикация надстроек области задач и контентных надстроек в каталоге SharePoint](publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md).
 
 > [!NOTE]
-> Каталоги SharePoint не поддерживают Office 2016 для Mac. Чтобы развернуть надстройки Office на клиентах Mac, их необходимо отправить в [AppSource]. 
+> * Каталоги SharePoint не поддерживают Office для Mac. Для развертывания надстроек Office на клиентах Mac их необходимо отправить в [AppSource](https://docs.microsoft.com/office/dev/store/submit-to-the-office-store). 
 
 ### <a name="outlook-add-in-deployment"></a>Развертывание надстроек Outlook
 

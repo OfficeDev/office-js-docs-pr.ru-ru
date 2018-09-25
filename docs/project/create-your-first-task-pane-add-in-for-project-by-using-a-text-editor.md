@@ -2,12 +2,12 @@
 title: Создание первой надстройки области задач для Project 2013 с помощью текстового редактора
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: ca00d1922ed3959ea9ab013f4d7f59ded084b241
-ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
+ms.openlocfilehash: eb12f1d15135301fe27b143781e1f622475f7b66
+ms.sourcegitcommit: eb74e94d3e1bc1930a9c6582a0a99355d0da34f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "23945703"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "25004898"
 ---
 # <a name="create-your-first-task-pane-add-in-for-project-2013-by-using-a-text-editor"></a>Создание первой надстройки области задач для Project 2013 с помощью текстового редактора
 
@@ -30,7 +30,7 @@ ms.locfileid: "23945703"
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
    <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
-              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" 
               xsi:type="TaskPaneApp">
      <Id>93A26520-9414-492F-994B-4983A1C7A607</Id>
      <Version>15.0</Version>
@@ -766,7 +766,7 @@ ms.locfileid: "23945703"
     - Приоритет: `500`
     - Примечания: "Это примечание для задачи T2. Это лишь тестовое примечание. Если бы оно было настоящим, тут были бы настоящие сведения".
 
-13. Нажмите кнопку **getWSSUrlAsync**. Если проект относится к одному из указанных ниже типов, то в результатах появятся список задач, URL-адрес и имя.
+13. Нажмите кнопку **getWSSUrlAsync**. Если проект относится к одному из указанных ниже типов, то в результатах появятся URL-адрес и имя списка задач.
     
     - Список задач SharePoint, импортированный в Project Server.
     - Список задач SharePoint, импортированный в Project профессиональный, а затем снова сохраненный в SharePoint (без использования Project Server).

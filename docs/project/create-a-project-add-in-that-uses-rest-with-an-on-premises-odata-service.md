@@ -2,12 +2,12 @@
 title: Создание надстройки Project, использующей REST с локальной службой OData Project Server
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: 23f9a2f1f2272d5fce4609e111932f4b585caa31
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: 7a632b708ebcf714ce1fa6ca2f5feb095fcd9f9d
+ms.sourcegitcommit: eb74e94d3e1bc1930a9c6582a0a99355d0da34f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925544"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "25005038"
 ---
 # <a name="create-a-project-add-in-that-uses-rest-with-an-on-premises-project-server-odata-service"></a>Создание надстройки Project, использующей REST с локальной службой OData Project Server
 
@@ -41,13 +41,13 @@ ms.locfileid: "22925544"
 
 1. Чтобы разрешить браузеру напрямую отображать XML-данные из запроса REST, отключите вид чтения канала. Дополнительные сведения о том, как это сделать в Internet Explorer, см. в процедуру 1, шаг 4 в статье [Создание запросов веб-каналов OData для данных отчетов Project](https://docs.microsoft.com/previous-versions/office/project-odata/jj163048(v=office.15)).
     
-2. Отправьте запрос службе  **ProjectData** с помощью веб-обозревателя, используя следующий URL-адрес: **http://ServerName /ProjectServerName /_api/ProjectData**. Например, если экземпляр Project Web App — это `http://MyServer/pwa`, то в браузере будут показаны следующие результаты:
+2. Отправьте запрос службе **ProjectData** с помощью веб-обозревателя, воспользовавшись следующим URL-адресом: **http://ServerName /ProjectServerName /_api/ProjectData**. Если, к примеру, экземпляр Project Web App представляет собой `http://MyServer/pwa`, то в веб-обозревателе будут отображены следующие результаты:
     
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
         <service xml:base="http://myserver/pwa/_api/ProjectData/" 
-        xmlns="http://www.w3.org/2007/app" 
-        xmlns:atom="http://www.w3.org/2005/Atom">
+        xmlns="https://www.w3.org/2007/app" 
+        xmlns:atom="https://www.w3.org/2005/Atom">
         <workspace>
             <atom:title>Default</atom:title>
             <collection href="Projects">
@@ -103,7 +103,7 @@ ms.locfileid: "22925544"
     
     С помощью Visual Studio можно создавать проекты **HelloProjectOdata** и **HelloProjectODataWeb**.
     
-В папке **AddIn** (см. следующий снимок экрана) находится файл App.css для пользовательских стилей CSS. В дочерней папке **Home** находится файл Home.html, который содержит ссылки на CSS-файлы и файлы JavaScript, которые использует надстройка, и код HTML5 для надстройки. Кроме того, файл Home.js предназначен для пользовательского кода JavaScript. В папке **Scripts** находятся файлы библиотек jQuery. В дочерней папке **Office** находятся библиотеки JavaScript, например office.js и project-15.js, а также языковые библиотеки для стандартных строк в надстройках Office. В папке **Content** находится файл Office.css, который содержит стили по умолчанию для всех надстроек Office.
+В папке **AddIn** (см. следующий снимок экрана) содержится файл App.css для настраиваемых стилей CSS. Во вложенной папке **Home** находится файл Home.html, содержащий ссылки на CSS-файлы и файлы JavaScript, используемые надстройкой, а также содержимое HTML5, предназначенное для этой надстройки. Также в ней располагается файл Home.js, предназначенный для настраиваемого кода JavaScript. Папка **Scripts** включает в себя файлы библиотеки jQuery. Во вложенной папке **Office** содержатся библиотеки JavaScript, такие как office.js и project-15.js, а также языковые библиотеки для стандартных строк в надстройках Office. В папке **Content** находится файл Office.css, который содержит стили, применяемые по умолчанию для всех надстроек Office.
 
 *Рис. 4. Просмотр файлов веб-проекта по умолчанию в обозревателе решений*
 
@@ -139,7 +139,7 @@ ms.locfileid: "22925544"
     ```XML
     <?xml version="1.0" encoding="UTF-8"?>
     <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TaskPaneApp">
+            xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:type="TaskPaneApp">
         <Id>c512df8d-a1c5-4d74-8a34-d30f6bbcbd82 </Id>
         <Version>1.0</Version>
         <ProviderName> [Provider name]</ProviderName>
@@ -316,7 +316,7 @@ ms.locfileid: "22925544"
     }
     ```
 
-2. Добавьте функцию **setOdataUrl** и связанные функции. Функция **setOdataUrl** вызывает **getProjectGuid** и **getDocumentUrl** для инициализации глобальных переменных. В [методе getProjectFieldAsync](https://dev.office.com/reference/add-ins/shared/projectdocument.getprojectfieldasync) анонимная функция для параметра _callback_ включает кнопку **Compare All Projects** (сравнить все проекты) с помощью метода **removeAttr** из библиотеки jQuery, а затем отображает URL-адрес службы **ProjectData**. Если Project не подключен к Project Web App, функция вызывает ошибку, которая отображает всплывающее сообщение об ошибке. Файл SurfaceErrors.js содержит метод **throwError**.
+2. Добавьте функцию **setOdataUrl** и связанные функции. Функция **setOdataUrl** вызывает **getProjectGuid** и **getDocumentUrl** для инициализации глобальных переменных. В [методе getProjectFieldAsync](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js) анонимная функция для параметра _callback_ включает кнопку **Compare All Projects** (сравнить все проекты) с помощью метода **removeAttr** из библиотеки jQuery, а затем отображает URL-адрес службы **ProjectData**. Если Project не подключен к Project Web App, функция вызывает ошибку, которая отображает всплывающее сообщение об ошибке. Файл SurfaceErrors.js содержит метод **throwError**.
     
    > [!NOTE]
    > Если вы работаете в Visual Studio на компьютере с Project Server, раскомментируйте код после строки, отвечающей за инициализацию глобальной переменной **_pwa**, чтобы можно было выполнять его отладки с помощью клавиши **F5**. Чтобы использовать метод jQuery **ajax** во время отладки на компьютере с Project Server, следует задать значение **localhost** для URL-адреса PWA. При работе в Visual Studio на удаленном компьютере URL-адрес **localhost** не требуется. Перед развертыванием надстройки закомментируйте этот код.

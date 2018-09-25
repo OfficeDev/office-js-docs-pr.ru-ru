@@ -1,13 +1,13 @@
 ---
-title: Обзор платформы надстроек Office
-description: ''
+title: Обзор платформы надстройки Office | Документация Microsoft
+description: Используйте привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений.
 ms.date: 01/23/2018
-ms.openlocfilehash: a35e0db20f5c573357b12b9034d9b13ce0cc3a27
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: 4249e675f4f6a0371e13c5933b3277e7e38841d0
+ms.sourcegitcommit: eb74e94d3e1bc1930a9c6582a0a99355d0da34f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925278"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "25004982"
 ---
 # <a name="office-add-ins-platform-overview"></a>Обзор платформы надстроек Office
 
@@ -93,9 +93,9 @@ ms.locfileid: "22925278"
 
 *Рисунок 4. Область задач*
 
-![Область задач](../images/about-addins-taskpane.png)
+![Использование области задач в дополнение к командам надстроек](../images/about-addins-taskpane.png)
 
-### <a name="extend-outlook-functionality"></a>Расширение возможностей Outlook 
+### <a name="extend-outlook-functionality"></a>Расширение функциональных возможностей Outlook 
 
 Надстройки Outlook могут расширять функциональные возможности ленты Office и в зависимости от контекста отображаться рядом с просматриваемым или создаваемым элементом Outlook. Они могут взаимодействовать с письмами, приглашениями на собрания, ответами на приглашения на собрания, сообщениями об отмене собраний или данными о встречах, когда пользователь просматривает полученный элемент, отвечает на него или создает новый. 
 
@@ -109,7 +109,7 @@ ms.locfileid: "22925278"
 
 *Рисунок 5. Контентная надстройка*
 
-![Контентная надстройка](../images/about-addins-contentaddin.png)
+![Внедрение веб-объектов, называемых контентными надстройками](../images/about-addins-contentaddin.png)
 
 ## <a name="office-javascript-apis"></a>Интерфейсы API JavaScript для Office 
 
@@ -117,7 +117,7 @@ API JavaScript для Office содержат объекты и элементы
 
 ## <a name="next-steps"></a>Дальнейшие действия 
 
-Чтобы узнать больше о том, как начать создание надстройки Office, ознакомьтесь с [5-минутными краткими инструкциями](https://docs.microsoft.com/office/dev/add-ins/). Можно создавать надстройки непосредственно с помощью Visual Studio или любого другого редактора. 
+Чтобы узнать больше о том, как приступить к созданию надстройки Office, ознакомьтесь с нашими [5-минутными краткими инструкциями](https://docs.microsoft.com/office/dev/add-ins/). Вы можете создавать надстройки непосредственно с помощью Visual Studio или любого другого редактора. 
 
 Чтобы начать планировать создание решений с удобным и привлекательным интерфейсом, ознакомьтесь с [рекомендациями по дизайну](../design/add-in-design.md) и другими [рекомендациями](../concepts/add-in-development-best-practices.md), касающимися надстроек Office.    
    

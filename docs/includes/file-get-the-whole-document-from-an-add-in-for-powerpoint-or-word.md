@@ -1,6 +1,6 @@
 # <a name="get-the-whole-document-from-an-add-in-for-powerpoint-or-word"></a>Получение всего документа из надстройки для PowerPoint или Word
 
-Можно создать Надстройка Office для отправки или публикации одним щелчком документа Word 2013 или PowerPoint 2013 в удаленное расположение. В данной статье показано, как создать простую надстройку области задач для PowerPoint 2013, которая получает все представление в виде объекта данных и отправляет эти данные на веб-сервер через запрос HTTP.
+Можно создать Надстройка Office для отправки или публикации одним щелчком документа Word 2013 или PowerPoint 2013 в удаленное расположение. В данной статье показано, как создать простую надстройку области задач для PowerPoint 2013, которая получает все представление в виде объекта данных и отправляет эти данные на веб-сервер через запрос HTTP.
 
 ## <a name="prerequisites-for-creating-an-add-in-for-powerpoint-or-word"></a>Необходимые условия создания надстройки для PowerPoint или Word
 
@@ -16,7 +16,7 @@
     
 - Файл XML-манифеста (GetDoc_App.xml) для надстройки, доступный в общей сетевой папке или каталоге надстроек. Файл манифеста должен указывать на расположение HTML-файла, упомянутого ранее.
     
-Вы также можете создать надстройку для PowerPoint или Word, используя [Visual Studio](../quickstarts/powerpoint-quickstart.md?tabs=visual-studio) или [любой редактор](../quickstarts/powerpoint-quickstart.md?tabs=visual-studio-code). 
+Вы также можете создать надстройку для PowerPoint или Word, используя [Visual Studio](../quickstarts/powerpoint-quickstart.md?tabs=visual-studio) или [любой редактор](../quickstarts/powerpoint-quickstart.md?tabs=visual-studio-code).[](../quickstarts/word-quickstart.md?tabs=visual-studio)[](../quickstarts/word-quickstart.md?tabs=visual-studio-code) 
 
 ### <a name="core-concepts-to-know-for-creating-a-task-pane-add-in"></a>Что нужно знать для создания надстроек области задач
 
@@ -32,7 +32,7 @@
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?> 
     <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" 
     xsi:type="TaskPaneApp">
         <Id>[Replace_With_Your_GUID]</Id> 
         <Version>1.0</Version> 
@@ -122,7 +122,7 @@
     
 ## <a name="add-the-javascript-to-get-the-document"></a>Добавление JavaScript для получения документа
 
-В коде надстройки обработчик события [Office.initialize](https://dev.office.com/reference/add-ins/shared/office.initialize) добавляет обработчик события нажатия кнопки **Submit** (Отправить), расположенной на форме, и информирует пользователя о том, что надстройка готова.
+В коде надстройки обработчик события [Office.initialize](https://docs.microsoft.com/javascript/api/office?view=office-js) добавляет обработчик события нажатия кнопки **Submit** (Отправить), расположенной на форме, и информирует пользователя о том, что надстройка готова.
 
 Следующий пример кода показывает обработчик события **Office.initialize** вместе со вспомогательной функцией `updateStatus`, записывающей в "status div".
 
@@ -150,11 +150,11 @@ function updateStatus(message) {
 }
 ```
 
-Если нажать кнопку **Submit** (Отправить), надстройка вызовет функцию `sendFile`, содержащую вызов метода [Document.getFileAsync](https://dev.office.com/reference/add-ins/shared/document.getfileasync). Метод **getFileAsync** использует асинхронный шаблон, аналогичный другим методам в API JavaScript для Office. В нем есть один обязательный параметр _fileType_ и два необязательных параметра _options_ и _callback_. 
+Если нажать кнопку **Submit** (Отправить), надстройка вызовет функцию `sendFile`, содержащую вызов метода [Document.getFileAsync](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js#getfileasync-filetype--options--callback-). Метод **getFileAsync** использует асинхронный шаблон, аналогичный другим методам в API JavaScript для Office. В нем есть один обязательный параметр _fileType_ и два необязательных параметра _options_ и _callback_. 
 
-Параметром _fileType_ поддерживаются следующие константы из перечисления [FileType](https://dev.office.com/reference/add-ins/shared/filetype-enumeration): **Office.FileType.Compressed** ("сжат"), **Office.FileType.PDF** ("pdf") или **Office.FileType.Text** ("текст"). PowerPoint поддерживает только константу **Compressed** в качестве аргумента. Word поддерживает все три константы. Когда вы передаете константу **Compressed** для параметра _fileType_, метод **getFileAsync** возвращает презентацию PowerPoint 2013 (*.pptx) или документ Word 2013 (*.docx), создавая временную копию файла на локальном компьютере.
+Параметром _fileType_ поддерживаются следующие константы из перечисления [FileType](https://docs.microsoft.com/javascript/api/office/office.filetype?view=office-js): **Office.FileType.Compressed** ("сжат"), **Office.FileType.PDF** ("pdf") или **Office.FileType.Text** ("текст"). PowerPoint поддерживает только константу **Compressed** в качестве аргумента. Word поддерживает все три константы. Когда вы передаете константу **Compressed** для параметра _fileType_, метод **getFileAsync** возвращает презентацию PowerPoint 2013 (*.pptx) или документ Word 2013 (*.docx), создавая временную копию файла на локальном компьютере.
 
-Метод **getFileAsync** возвращает ссылку на файл в виде объекта [File](https://dev.office.com/reference/add-ins/shared/file). Объект **File** предоставляет четыре элемента: свойства [size](https://dev.office.com/reference/add-ins/shared/file.size) и [sliceCount](https://dev.office.com/reference/add-ins/shared/file.slicecount), а также методы [getSliceAsync](https://dev.office.com/reference/add-ins/shared/file.getsliceasync) и [closeAsync](https://dev.office.com/reference/add-ins/shared/file.closeasync). Свойство **size** возвращает количество байтов в файле. Свойство **sliceCount** возвращает количество объектов [Slice](https://dev.office.com/reference/add-ins/shared/document) в файле (которые описаны ниже в этой статье).
+Метод **getFileAsync** возвращает ссылку на файл в виде объекта [File](https://docs.microsoft.com/javascript/api/office/office.file?view=office-js). Объект **File** предоставляет четыре элемента: свойства [size](https://docs.microsoft.com/javascript/api/office/office.file?view=office-js#size) и [sliceCount](https://docs.microsoft.com/javascript/api/office/office.file?view=office-js#slicecount), а также методы [getSliceAsync](https://docs.microsoft.com/javascript/api/office/office.file?view=office-js#getsliceasync-sliceindex--callback-) и [closeAsync](https://docs.microsoft.com/javascript/api/office/office.file?view=office-js#closeasync-callback-). Свойство **size** возвращает количество байтов в файле. Свойство **sliceCount** возвращает количество объектов [Slice](https://docs.microsoft.com/javascript/api/office/office.slice?view=office-js) в файле (которые описаны ниже в этой статье).
 
 Используйте приведенный ниже код, чтобы получить документ PowerPoint или Word в виде объекта **File** при помощи метода **Document.getFileAsync**, а затем вызовите локально определенную функцию `getSlice`. Обратите внимание, что объект **File**, переменная счетчика и общее число фрагментов в файле предаются при вызове `getSlice` в анонимном объекте.
 
@@ -187,7 +187,7 @@ function sendFile() {
 
 Локальная функция `getSlice` вызывает метод **File.getSliceAsync**, чтобы получить фрагмент из объекта **File**. Метод **getSliceAsync** возвращает объект **Slice** из коллекции фрагментов. Метод имеет два обязательных параметра: _sliceIndex_ и _callback_. Параметр _sliceIndex_ принимает целое число в качестве индексатора в коллекцию фрагментов. Как и другие функции в API JavaScript для Office, метод **getSliceAsync** также принимает функцию обратного вызова в качестве параметра для обработки результатов от вызова метода.
 
-Объект **Slice** предоставляет доступ к данным, содержащимся в файле. Если в параметре _options_ метода **getFileAsync** не указано иное, объект **Slice** имеет размер 4 МБ. Объект **Slice** предоставляет три свойства: [size](https://dev.office.com/reference/add-ins/shared/slice.size), [data](https://dev.office.com/reference/add-ins/shared/slice.data) и [index](https://dev.office.com/reference/add-ins/shared/slice.index). Свойство **size** получает размер фрагмента в байтах. Свойство **index** получает целое число, представляющее положение фрагмента в коллекции фрагментов.
+Объект **Slice** предоставляет доступ к данным, содержащимся в файле. Если не указано иное с помощью параметра _параметров_ метода **getFileAsync**, объект- **Slice** имеет размер 4 МБ. Объект **Slice** предоставляет три свойства: [size](https://docs.microsoft.com/javascript/api/office/office.slice?view=office-js#size), [data](https://docs.microsoft.com/javascript/api/office/office.slice?view=office-js#data)и [index](https://docs.microsoft.com/javascript/api/office/office.slice?view=office-js#index). Свойство **size** возвращает размер фрагмента, в байтах. Свойство **index** возвращает целое число, представляющее номер фрагмента в коллекции фрагментов.
 
 ```js
 // Get a slice from the file and then call sendSlice.
