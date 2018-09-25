@@ -1,13 +1,13 @@
 ---
 title: Обзор надстроек Word
 description: ''
-ms.date: 01/23/2018
-ms.openlocfilehash: 51ab24fa12017fc16a49d5ac2f97dad288bcfcfe
-ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
+ms.date: 09/24/2018
+ms.openlocfilehash: 6dedb3386d6e052b374c8716e90899ef2aca7880
+ms.sourcegitcommit: 8ce9a8d7f41d96879c39cc5527a3007dff25bee8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "23944643"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "24985804"
 ---
 # <a name="word-add-ins-overview"></a>Обзор надстроек Word
 
@@ -42,17 +42,16 @@ Word.run(function (context) {
 
 API JavaScript для Word предоставляют приложению доступ к объектам и метаданным документа Word. С помощью этих API можно создавать надстройки, предназначенные для:
 
-* Word 2013 для Windows
-* Word 2016 для Windows
+* Word 2013 или более поздней версии для Windows
 * Word Online
-* Word 2016 для Mac
+* Word 2016 или более поздней версии для Mac
 * Word для iOS
 
 Написанные вами надстройки будут работать во всех версиях Word на различных платформах. Дополнительные сведения см. в статье [Доступность ведущих приложений и платформ для надстроек Office](../overview/office-add-in-availability.md).
 
 ## <a name="javascript-apis-for-word"></a>API JavaScript для Word
 
-Для взаимодействия с объектами и метаданными в документе Word можно использовать два набора API JavaScript. Первый — [API JavaScript для Office](https://docs.microsoft.com/javascript/office/javascript-api-for-office?view=office-js?product=word) — появился в Office 2013. Это общий API — многие объекты можно использовать в надстройках, размещенных в двух или более клиентах Office. В этом API широко используются обратные вызовы. 
+Для взаимодействия с объектами и метаданными в документе Word можно использовать два набора API JavaScript. Первый — [API JavaScript для Office](https://docs.microsoft.com/javascript/office/javascript-api-for-office?view=office-js?product=word) — появился в Office 2013. Это общий API — многие объекты можно использовать в надстройках, размещенных в двух или более клиентах Office. В этом API широко используются обратные вызовы.
 
 Второй — [API JavaScript для Word](https://docs.microsoft.com/javascript/office/overview/word-add-ins-reference-overview?view=office-js). Это строго типизированная объектная модель, с помощью которой можно создавать надстройки Word, предназначенные для Word 2016 для Mac и Windows. Эта объектная модель использует обещания и предоставляет доступ к объектам Word, в частности [Body](https://docs.microsoft.com/javascript/api/word/word.body?view=office-js), [ContentControl](https://docs.microsoft.com/javascript/api/word/word.contentcontrol?view=office-js), [InlinePicture](https://docs.microsoft.com/javascript/api/word/word.inlinepicture?view=office-js) и [Paragraph](https://docs.microsoft.com/javascript/api/word/word.paragraph?view=office-js). API JavaScript для Word включает определения TypeScript и файлы vsdoc, чтобы вы могли получать подсказки кода в своей интегрированной среде разработки.
 

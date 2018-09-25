@@ -2,14 +2,14 @@
 ms.date: 09/20/2018
 description: Настраиваемые функции Excel используют новую среду выполнения JavaScript, которая отличается от стандартного управления во время выполнения веб-представления надстройки.
 title: Среда выполнения для  настраиваемых функций Excel
-ms.openlocfilehash: d31002096fccd682c0f2a23a8b43249af5d4df8f
-ms.sourcegitcommit: 470d8212b256275587e651abaa6f28beafebcab4
+ms.openlocfilehash: fa2b2030259e05f64b8b4660ded8b80c6af1eb5a
+ms.sourcegitcommit: 8ce9a8d7f41d96879c39cc5527a3007dff25bee8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "24068828"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "24985797"
 ---
-# <a name="runtime-for-excel-custom-functions"></a>Среда выполнения для  настраиваемых функций Excel
+# <a name="runtime-for-excel-custom-functions-preview"></a>Среда выполнения для настраиваемых функций Excel (предварительная версия)
 
 Настраиваемые функции расширяют возможности Excel с помощью новой среды выполнения JavaScript, использующей изолированную подсистему JavaScript, а не веб-браузер. Поскольку настраиваемые функции не требуют отображения элементов пользовательского интерфейса, новая среда выполнения JavaScript оптимизирована для выполнения вычислений, что позволяет одновременно выполнять тысячи настраиваемых функций.
 
@@ -28,7 +28,7 @@ ms.locfileid: "24068828"
 Среда выполнения JavaScript, которую используют настраиваемые функции имеет следующие API-интерфейсы:
 
 - [XHR](#xhr)
-- [WebSockets](#websockets)
+- [WebSocket](#websockets)
 - [AsyncStorage](#asyncstorage)
 - [API общих диалогов](#dialog-api)
 
@@ -36,7 +36,7 @@ ms.locfileid: "24068828"
 
 XHR означает [XmlHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest), стандартный веб-API, который выдает HTTP-запросы для взаимодействия с серверами. В новой среде выполнения JavaScript XHR реализует дополнительные меры безопасности, требуя [Политику единого происхождения](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) и простой [CORS](https://www.w3.org/TR/cors/).  
 
-В следующем примере кода `getTemperature()` функция отправляет веб-запрос для получения температуры отдельной области на основе идентификатора термометра.  `sendWebRequest()` Функция использует XHR для выдачи `GET` запроса к конечной точке, которая может предоставлять данные.  
+В следующем примере кода `getTemperature()` функция отправляет веб-запрос для получения температуры отдельной области на основе идентификатора термометра. Функция использует XHR для выдачи `GET` запроса к конечной точке, которая может предоставлять данные.`sendWebRequest()`  
 
 ```js
 function getTemperature(thermometerID) {
@@ -62,7 +62,7 @@ function sendWebRequest(thermometerID, data) {
 
 ```
 
-### <a name="websockets"></a>WebSockets
+### <a name="websockets"></a>WebSocket
 
 [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) — это сетевой протокол, который создает в режиме реального времени обмен данными между сервером и одним или несколькими клиентами. Его часто используется для приложений чата, так как он позволяет одновременно читать и записывать текст.  
 
