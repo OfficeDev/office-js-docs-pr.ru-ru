@@ -1,13 +1,13 @@
 ---
 title: Доступность ведущих приложений и платформ для надстроек Office
 description: Поддерживаемые наборы требований для Excel, Word, Outlook, PowerPoint и OneNote.
-ms.date: 09/19/2018
-ms.openlocfilehash: 09fb72c88bd0496c413f94b7ba4149192380d664
-ms.sourcegitcommit: e7e4d08569a01c69168bb005188e9a1e628304b9
+ms.date: 09/24/2018
+ms.openlocfilehash: b06602e35ec906866ad16d667036a4cbaff2d89e
+ms.sourcegitcommit: 8ce9a8d7f41d96879c39cc5527a3007dff25bee8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "24967706"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "24985825"
 ---
 # <a name="office-add-in-host-and-platform-availability"></a>Доступность ведущих приложений и платформ для надстроек Office
 
@@ -105,6 +105,33 @@ ms.locfileid: "24967706"
         - TextCoercion</td>
   </tr>
   <tr>
+    <td>Office 2019 для Windows</td>
+    <td>- Область задач<br>
+        - Контент<br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
+    <td>- <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.2</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.3</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.4</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.5</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.6</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.7</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
+    <td>- BindingEvents<br>
+        - CompressedFile<br>
+        - DocumentEvents<br>
+        - File<br>
+        - ImageCoercion<br>
+        - MatrixBindings<br>
+        - MatrixCoercion<br>
+        - Selection<br>
+        - Settings<br>
+        - TableBindings<br>
+        - TableCoercion<br>
+        - TextBindings<br>
+        - TextCoercion</td>
+  </tr>
+  <tr>
     <td>Office для iOS</td>
     <td>- Область задач<br>
         - Контент</td>
@@ -158,6 +185,34 @@ ms.locfileid: "24967706"
         - TextBindings<br>
         - TextCoercion</td>
   </tr>
+  <tr>
+    <td>Office 2019 для Mac</td>
+    <td>- Область задач<br>
+        - Контент<br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
+    <td>- <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.2</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.3</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.4</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.5</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.6</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.7</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
+    <td>- BindingEvents<br>
+        - CompressedFile<br>
+        - DocumentEvents<br>
+        - File<br>
+        - ImageCoercion<br>
+        - MatrixBindings<br>
+        - MatrixCoercion<br>
+        - PdfFile<br>
+        - Selection<br>
+        - Settings<br>
+        - TableBindings<br>
+        - TableCoercion<br>
+        - TextBindings<br>
+        - TextCoercion</td>
+  </tr>
 </table>
 
 <br/>
@@ -182,7 +237,7 @@ ms.locfileid: "24967706"
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.5/outlook-requirement-set-1.5">Mailbox 1.5</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.6/outlook-requirement-set-1.6">Mailbox 1.6</a></td>
-    <td>Недоступно</td>
+    <td>Недоступна</td>
   </tr>
   <tr>
     <td>Office 2013 для Windows</td>
@@ -193,7 +248,7 @@ ms.locfileid: "24967706"
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2">Mailbox 1.2</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3">Mailbox 1.3</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a></td>
-    <td>Недоступно</td>
+    <td>Недоступна</td>
   </tr>
   <tr>
     <td>Office 2016 для Windows</td>
@@ -208,7 +263,21 @@ ms.locfileid: "24967706"
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.5/outlook-requirement-set-1.5">Mailbox 1.5</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.6/outlook-requirement-set-1.6">Mailbox 1.6</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.7/outlook-requirement-set-1.7">Mailbox 1.7</a></td>
-    <td>Недоступно</td>
+    <td>Недоступна</td>
+  </tr>
+  <tr>
+    <td>Office 2019 для Windows</td>
+    <td> - Чтение почты<br>
+      - Создание сообщения почты<br>
+      - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a><br>
+      - Модули</td>
+    <td> - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
+      - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2">Mailbox 1.2</a><br>
+      - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3">Mailbox 1.3</a><br>
+      - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a><br>
+      - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.5/outlook-requirement-set-1.5">Mailbox 1.5</a><br>
+      - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.6/outlook-requirement-set-1.6">Mailbox 1.6</a></td>
+    <td>Недоступна</td>
   </tr>
   <tr>
     <td>Office для iOS</td>
@@ -219,7 +288,7 @@ ms.locfileid: "24967706"
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3">Mailbox 1.3</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.5/outlook-requirement-set-1.5">Mailbox 1.5</a></td>
-    <td>Недоступно</td>
+    <td>Недоступна</td>
   </tr>
   <tr>
     <td>Office 2016 для Mac</td>
@@ -232,7 +301,20 @@ ms.locfileid: "24967706"
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.5/outlook-requirement-set-1.5">Mailbox 1.5</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.6/outlook-requirement-set-1.6">Mailbox 1.6</a></td>
-    <td>Недоступно</td>
+    <td>Недоступна</td>
+  </tr>
+  <tr>
+    <td>Office 2019 для Mac</td>
+    <td> - Чтение почты<br>
+      - Создание сообщения почты<br>
+      - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
+    <td> - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
+      - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2">Mailbox 1.2</a><br>
+      - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3">Mailbox 1.3</a><br>
+      - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a><br>
+      - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.5/outlook-requirement-set-1.5">Mailbox 1.5</a><br>
+      - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.6/outlook-requirement-set-1.6">Mailbox 1.6</a></td>
+    <td>Недоступна</td>
   </tr>
   <tr>
     <td>Office для Android</td>
@@ -243,7 +325,7 @@ ms.locfileid: "24967706"
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3">Mailbox 1.3</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.5/outlook-requirement-set-1.5">Mailbox 1.5</a></td>
-    <td>Недоступно</td>
+    <td>Недоступна</td>
   </tr>
 </table>
 
@@ -336,6 +418,33 @@ ms.locfileid: "24967706"
          - TextFile </td>
   </tr>
   <tr>
+    <td>Office 2019 для Windows</td>
+    <td> - Область задач<br>
+         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
+    <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.2</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.3</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
+    <td> - BindingEvents<br>
+         - CompressedFile<br>
+         - CustomXmlParts<br>
+         - DocumentEvents<br>
+         - File<br>
+         - HtmlCoercion<br>
+         - ImageCoercion<br>
+         - MatrixBindings<br>
+         - MatrixCoercion<br>
+         - OoxmlCoercion<br>
+         - PdfFile<br>
+         - Selection<br>
+         - Settings<br>
+         - TableBindings<br>
+         - TableCoercion<br>
+         - TextBindings<br>
+         - TextCoercion<br>
+         - TextFile </td>
+  </tr>
+  <tr>
     <td>Office для iOS</td>
     <td> - Область задач</td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
@@ -390,6 +499,34 @@ ms.locfileid: "24967706"
          - TextCoercion<br>
          - TextFile </td>
   </tr>
+  <tr>
+    <td>Office 2019 для Mac</td>
+    <td> - Область задач<br>
+         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
+    <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.2</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.3</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>
+</td>
+    <td> - BindingEvents<br>
+         - CompressedFile<br>
+         - CustomXmlParts<br>
+         - DocumentEvents<br>
+         - File<br>
+         - HtmlCoercion<br>
+         - ImageCoercion<br>
+         - MatrixBindings<br>
+         - MatrixCoercion<br>
+         - OoxmlCoercion<br>
+         - PdfFile<br>
+         - Selection<br>
+         - Settings<br>
+         - TableBindings<br>
+         - TableCoercion<br>
+         - TextBindings<br>
+         - TextCoercion<br>
+         - TextFile </td>
+  </tr>
 </table>
 
 <br/>
@@ -417,7 +554,7 @@ ms.locfileid: "24967706"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Settings<br>
+         - Параметры<br>
          - TextCoercion</td>
   </tr>
   <tr>
@@ -434,7 +571,7 @@ ms.locfileid: "24967706"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Settings<br>
+         - Параметры<br>
          - TextCoercion</td>
   </tr>
   <tr>
@@ -450,7 +587,23 @@ ms.locfileid: "24967706"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Settings<br>
+         - Параметры<br>
+         - TextCoercion</td>
+  </tr>
+  <tr>
+    <td>Office 2019 для Windows</td>
+    <td> - Содержимое<br>
+         - Область задач<br>
+         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
+    <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
+    <td> - ActiveView<br>
+         - CompressedFile<br>
+         - DocumentEvents<br>
+         - File<br>
+         - ImageCoercion<br>
+         - PdfFile<br>
+         - Selection<br>
+         - Параметры<br>
          - TextCoercion</td>
   </tr>
   <tr>
@@ -464,7 +617,7 @@ ms.locfileid: "24967706"
          - File<br>
          - PdfFile<br>
          - Selection<br>
-         - Settings<br>
+         - Параметры<br>
          - TextCoercion<br>
          - ImageCoercion</td>
   </tr>
@@ -481,7 +634,23 @@ ms.locfileid: "24967706"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Settings<br>
+         - Параметры<br>
+         - TextCoercion</td>
+  </tr>
+  <tr>
+    <td>Office 2019 для Mac</td>
+    <td> - Содержимое<br>
+         - Область задач<br>
+         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
+    <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
+    <td> - ActiveView<br>
+         - CompressedFile<br>
+         - DocumentEvents<br>
+         - File<br>
+         - ImageCoercion<br>
+         - PdfFile<br>
+         - Selection<br>
+         - Параметры<br>
          - TextCoercion</td>
   </tr>
 </table>
@@ -508,7 +677,7 @@ ms.locfileid: "24967706"
     <td> - DocumentEvents<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
-         - Settings<br>
+         - Параметры<br>
          - TextCoercion</td>
   </tr>
 </table>
