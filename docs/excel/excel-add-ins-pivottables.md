@@ -2,18 +2,18 @@
 title: Работа со сводными таблицами с помощью API JavaScript для Excel
 description: Использование Excel JavaScript API для создания сводных таблиц и взаимодействия с их компонентами.
 ms.date: 09/21/2018
-ms.openlocfilehash: b8704389ced3686858f488b2a50f80c22b1b8bd6
-ms.sourcegitcommit: e7e4d08569a01c69168bb005188e9a1e628304b9
+ms.openlocfilehash: 7178ae0d578e9f52bd9590c764c488c7fa4d2b43
+ms.sourcegitcommit: fdf7f4d686700edd6e6b04b2ea1bd43e59d4a03a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "24967671"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "25348186"
 ---
 # <a name="work-with-pivottables-using-the-excel-javascript-api"></a>Работа со сводными таблицами с помощью API JavaScript для Excel
 
 Сводные таблицы упрощают большие наборы данных. Они позволяют производить быструю манипуляцию сгруппированных данных. API JavaScript для Excel позволяет надстройке создавать сводные таблицы и взаимодействовать с их компонентами. 
 
-Если вы не знакомы с функциональностью сводных таблиц, рекомендуем рассмотреть их в качестве конечного пользователя. См. [Создание сводной таблицы для анализа данных листа](https://support.office.com/en-us/article/Import-and-analyze-data-ccd3c4a6-272f-4c97-afbb-d3f27407fcde#ID0EAABAAA=PivotTables) как учебник для начинающих на этих инструментах. 
+Если вы не знакомы с возможностями сводных таблиц, рекомендуем исследовать их с точки зрения конечного пользователя. Хороший учебник для начинающих по этим средствам содержится в разделе [Создание сводной таблицы для анализа данных листа](https://support.office.com/en-us/article/Import-and-analyze-data-ccd3c4a6-272f-4c97-afbb-d3f27407fcde#ID0EAABAAA=PivotTables). 
 
 В этой статье приведены примеры кода для распространенных сценариев. Подробнее об API сводных таблиц см. статьи [**PivotTable**](https://docs.microsoft.com/javascript/api/excel/excel.pivottable) и [**PivotTableCollection**](https://docs.microsoft.com/javascript/api/excel/excel.pivottable).
 
