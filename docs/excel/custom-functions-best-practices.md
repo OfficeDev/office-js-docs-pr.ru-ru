@@ -1,81 +1,132 @@
 ---
-ms.date: 09/20/2018
+ms.date: 09/27/2018
 description: Рекомендации и рекомендуемые шаблоны для настраиваемых функций Excel.
 title: Рекомендации по настраиваемым функциям
-ms.openlocfilehash: 4fe0ddc36ce1b08ea360bb556121e76cd57c3823
-ms.sourcegitcommit: eb74e94d3e1bc1930a9c6582a0a99355d0da34f2
+ms.openlocfilehash: d157464a3a8bf453cd0970281f1a4fdd27df5d25
+ms.sourcegitcommit: 1852ae367de53deb91d03ca55d16eb69709340d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "25004912"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "25348789"
 ---
-# <a name="custom-functions-best-practices"></a><span data-ttu-id="696db-103">Рекомендации по настраиваемым функциям</span><span class="sxs-lookup"><span data-stu-id="696db-103">Custom functions best practices</span></span>
+# <a name="custom-functions-best-practices-preview"></a><span data-ttu-id="6ec63-103">Рекомендации по настраиваемым функциям (предварительная версия)</span><span class="sxs-lookup"><span data-stu-id="6ec63-103">Custom functions best practices</span></span>
 
-<span data-ttu-id="696db-104">В этой статье описаны рекомендации по разработке настраиваемых функций в Excel.</span><span class="sxs-lookup"><span data-stu-id="696db-104">This article describes best practices for developing custom functions in Excel.</span></span>
+<span data-ttu-id="6ec63-104">В этой статье приводятся рекомендации по разработке настраиваемых функций в Excel.</span><span class="sxs-lookup"><span data-stu-id="6ec63-104">This article describes best practices for developing custom functions in Excel.</span></span>
 
-## <a name="error-handling"></a><span data-ttu-id="696db-105">Обработка ошибок</span><span class="sxs-lookup"><span data-stu-id="696db-105">Error handling</span></span>
+[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
-<span data-ttu-id="696db-106">При построении надстройки, которая определяет настраиваемые функции, не забудьте включить логику обработки ошибок, возникающих в среде выполнения.</span><span class="sxs-lookup"><span data-stu-id="696db-106">When you build an add-in using the Excel JavaScript API, be sure to include error handling logic to account for runtime errors.</span></span> <span data-ttu-id="696db-107">Обработка ошибок для настраиваемых функций совпадает с [обработкой ошибок для Excel API JavaScript в целом](excel-add-ins-error-handling.md).</span><span class="sxs-lookup"><span data-stu-id="696db-107">Error handling for custom functions is the same as [error handling for the Excel JavaScript API at large](excel-add-ins-error-handling.md).</span></span> <span data-ttu-id="696db-108">В следующем примере кода метод `.catch` будет обрабатывать все ошибки, возникающие ранее в коде.</span><span class="sxs-lookup"><span data-stu-id="696db-108">In the following code sample, `.catch` will handle any errors that occur previously in the code.</span></span>
+## <a name="error-handling"></a><span data-ttu-id="6ec63-105">Обработка ошибок</span><span class="sxs-lookup"><span data-stu-id="6ec63-105">Error handling</span></span>
+
+<span data-ttu-id="6ec63-106">При построении надстройки, которая определяет настраиваемые функции, не забудьте включить логику обработки ошибок, возникающих в среде выполнения.</span><span class="sxs-lookup"><span data-stu-id="6ec63-106">When you build an add-in using the Excel JavaScript API, be sure to include error handling logic to account for runtime errors.</span></span> <span data-ttu-id="6ec63-107">Обработка ошибок для настраиваемых функций такая же, как и в случае [обработки ошибок для API JavaScript Excel в целом](excel-add-ins-error-handling.md).</span><span class="sxs-lookup"><span data-stu-id="6ec63-107">Error handling for custom functions is the same as [error handling for the Excel JavaScript API at large](excel-add-ins-error-handling.md).</span></span> <span data-ttu-id="6ec63-108">В следующем примере кода `.catch` будет обрабатывать все ошибки, возникшие ранее в этом коде.</span><span class="sxs-lookup"><span data-stu-id="6ec63-108">In the following code sample, `.catch` will handle any errors that occur previously in the code.</span></span>
 
 ```js
 function getComment(x) {
-    let url = "https://yourhypotheticalapi.com/comments/" + x; 
-    return fetch(url)
-        .then(function (data) {
-            return data.json();
-        })
-        .then((json) => {
-            return json.body;
-        })
-        .catch(function (error) {
-            throw error;
-        })
+  let url = "https://www.contoso.com/comments/" + x;
+  return fetch(url)
+    .then(function (data) {
+      return data.json();
+    })
+    .then((json) => {
+      return json.body;
+    })
+    .catch(function (error) {
+      throw error;
+    })
 }
 ```
 
-## <a name="debugging"></a><span data-ttu-id="696db-109">Отладка</span><span class="sxs-lookup"><span data-stu-id="696db-109">Debugging</span></span>
-<span data-ttu-id="696db-110">На данный момент наилучшим методом отладки пользовательских функций Excel является предварительная [загрузка неопубликованной надстройки](../testing/sideload-office-add-ins-for-testing.md) в **Excel Online**.</span><span class="sxs-lookup"><span data-stu-id="696db-110">Currently, the best method for debugging Excel custom functions is to first [sideload](../testing/sideload-office-add-ins-for-testing.md) your add-in within **Excel Online**.</span></span> <span data-ttu-id="696db-111">Затем вы можете выполнить отладку настраиваемых функций с помощью [собственного средства отладки F12 вашего веб-обозревателя](../testing/debug-add-ins-in-office-online.md).</span><span class="sxs-lookup"><span data-stu-id="696db-111">You can then debug your custom functions by using the [F12 debugging tool native to your browser](../testing/debug-add-ins-in-office-online.md).</span></span> <span data-ttu-id="696db-112">Используйте `console.log` операторы в коде настраиваемых функций для отправки выходных данных в консоль в режиме реального времени.</span><span class="sxs-lookup"><span data-stu-id="696db-112">Use `console.log` statements within your custom functions code to send output to the console in real time.</span></span>
+## <a name="debugging"></a><span data-ttu-id="6ec63-109">Отладка</span><span class="sxs-lookup"><span data-stu-id="6ec63-109">Debugging</span></span>
 
-<span data-ttu-id="696db-113">Если надстройку не удалось зарегистрировать, [проверьте правильность настройки сертификатов SSL](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md) для веб-сервера, где размещено приложение надстройки.</span><span class="sxs-lookup"><span data-stu-id="696db-113">If your add-in fails to register, [verify that SSL certificates are correctly configured](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md) for the web server that's hosting your add-in application.</span></span>
+<span data-ttu-id="6ec63-p102">На данный момент наилучшим способом отладки настраиваемых функций Excel является [загрузка неопубликованных](../testing/sideload-office-add-ins-for-testing.md) надстроек в **Excel Online**. После этого отладку настраиваемых функций можно выполнить с помощью [входящего в состав веб-обозревателя средства отладки, вызываемого при нажатии на F12](../testing/debug-add-ins-in-office-online.md), используемого в сочетании со следующими методами:</span><span class="sxs-lookup"><span data-stu-id="6ec63-p102">Currently, the best method for debugging Excel custom functions is to first [sideload](../testing/sideload-office-add-ins-for-testing.md) your add-in within **Excel Online**. You can then debug your custom functions by using the [F12 debugging tool native to your browser](../testing/debug-add-ins-in-office-online.md). Use  statements within your custom functions code to send output to the console in real time.</span></span>
 
-<span data-ttu-id="696db-114">При тестировании надстройки в классическом приложении Office 2016 можно включить [регистрацию времени выполнения](../testing/troubleshoot-manifest.md#use-runtime-logging-to-debug-your-add-in) для отладки проблем, связанных с XML-файлом манифеста вашей надстройки, а также несколько условий установки и выполнения.</span><span class="sxs-lookup"><span data-stu-id="696db-114">If you are testing your add-in in Office 2016 desktop, you can enable [runtime logging](../testing/troubleshoot-manifest.md#use-runtime-logging-to-debug-your-add-in) to debug issues with your add-in's XML manifest file as well as several installation and runtime conditions.</span></span> 
+- <span data-ttu-id="6ec63-112">Используйте операторы `console.log` в коде настраиваемых функций для отправки выходных данных в консоль в режиме реального времени.</span><span class="sxs-lookup"><span data-stu-id="6ec63-112">Use `console.log` statements within your custom functions code to send output to the console in real time.</span></span>
 
+- <span data-ttu-id="6ec63-113">Используйте операторы `debugger;` в коде настраиваемых функций для указания точек останова, в которых выполнение будет приостановлено, если открыто окно F12.</span><span class="sxs-lookup"><span data-stu-id="6ec63-113">Use `debugger;` statements within your custom functions code to specify breakpoints where execution will pause when the F12 window is open.</span></span> <span data-ttu-id="6ec63-114">Так, к примеру, если следующая функция выполняется при открытом окне F12, то ее выполнение будет приостановлено при достижнии оператора `debugger;`, что позволит вручную проверить значения параметров до возврата данных функцией.</span><span class="sxs-lookup"><span data-stu-id="6ec63-114">For example, if the following function runs while the F12 window is open, execution will pause on the `debugger;` statement, enabling you to manually inspect parameter values before the function returns.</span></span> <span data-ttu-id="6ec63-115">Если окно F12 не открыто, то оператор `debugger;` в Excel Online не влияет на выполнение функции.</span><span class="sxs-lookup"><span data-stu-id="6ec63-115">The `debugger;` statement has no effect in Excel Online when the F12 window is not open.</span></span> <span data-ttu-id="6ec63-116">В настоящий момент оператор `debugger;` в Excel для Windows не работает.</span><span class="sxs-lookup"><span data-stu-id="6ec63-116">Currently, the `debugger;` statement has no effect in Excel for Windows.</span></span>
 
-## <a name="mapping-names"></a><span data-ttu-id="696db-115">Сопоставление имен</span><span class="sxs-lookup"><span data-stu-id="696db-115">Mapping names</span></span>
+    ```js
+    function add(first, second){
+      debugger;
+      return first + second;
+    }
+    ```
 
-<span data-ttu-id="696db-116">По умолчанию, имя настраиваемой функции в файл JavaScript обычно объявляется полностью с помощьюпрописных букв и в точности соответствует имени функции, которую видят конечные пользователи в Excel.</span><span class="sxs-lookup"><span data-stu-id="696db-116">By default, the name of a custom function in your JavaScript file is typically declared using entirely uppercase letters, and corresponds exactly to the function name that end users see in Excel.</span></span> <span data-ttu-id="696db-117">Тем не менее, можно изменить это с помощью `CustomFunctionsMappings` объекта для сопоставления одного или нескольких имен функции из файла JavaScript с разными значениями, которые  конечные пользователи увидят как имена функций в Excel.</span><span class="sxs-lookup"><span data-stu-id="696db-117">However, you can change this by using the `CustomFunctionsMappings` object to map one or more function names from the JavaScript file to different values that end users will see as function names in Excel.</span></span> <span data-ttu-id="696db-118">Эта функция полезна, если вы используете синтаксис методов uglifier, webpack или import, у каждого из которых есть трудности с именами функций в верхнем регистре.</span><span class="sxs-lookup"><span data-stu-id="696db-118">Although you're not required to use , it can be helpful if you are using an uglifier, webpack, or import syntax - all of which have difficulty with uppercase function names.</span></span> <span data-ttu-id="696db-119">`CustomFunctionsMappings` может быть не обязательным для проектов, использующих JavaScript, но этот объект необходимо использовать, если в вашем проекте применяется TypeScript.</span><span class="sxs-lookup"><span data-stu-id="696db-119">`CustomFunctionsMappings` is possibly optional for projects using JavaScript but must be used if your project uses TypeScript.</span></span>  
-  
-<span data-ttu-id="696db-120">В следующем примере кода определяется одна пара "ключ-значение", которая сопоставляет имя функции JavaScript `plusFortyTwo` с `ADD42` именем функции в пользовательском интерфейсе Excel.</span><span class="sxs-lookup"><span data-stu-id="696db-120">The following code sample defines a single key-value pair that maps the JavaScript function name `plusFortyTwo` to the `ADD42` function name in the Excel UI.</span></span> <span data-ttu-id="696db-121">Когда конечный пользователь выбирает `ADD42` функцию в Excel, `plusFortyTwo`запускается функция JavaScript.</span><span class="sxs-lookup"><span data-stu-id="696db-121">When the end user chooses the `ADD42` function in Excel, the `plusFortyTwo` JavaScript function will run.</span></span>
+<span data-ttu-id="6ec63-117">Если надстройку не удалось зарегистрировать, [проверьте правильность настройки сертификатов SSL](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md) для веб-сервера, на котором размещено приложение надстройки.</span><span class="sxs-lookup"><span data-stu-id="6ec63-117">If your add-in fails to register, [verify that SSL certificates are correctly configured](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md) for the web server that's hosting your add-in application.</span></span>
+
+<span data-ttu-id="6ec63-118">При тестировании надстройки в классическом приложении Office 2016 можно включить [регистрацию времени выполнения](../testing/troubleshoot-manifest.md#use-runtime-logging-to-debug-your-add-in) для отладки проблем, связанных с XML-файлом манифеста надстройки, а также использовать несколько условий установки и выполнения.</span><span class="sxs-lookup"><span data-stu-id="6ec63-118">If you are testing your add-in in Office 2016 desktop, you can enable [runtime logging](../testing/troubleshoot-manifest.md#use-runtime-logging-to-debug-your-add-in) to debug issues with your add-in's XML manifest file as well as several installation and runtime conditions.</span></span>
+
+## <a name="mapping-function-names-to-json-metadata"></a><span data-ttu-id="6ec63-119">Сопоставление имен функций с метаданными JSON</span><span class="sxs-lookup"><span data-stu-id="6ec63-119">Mapping function names to JSON metadata</span></span>
+
+<span data-ttu-id="6ec63-120">Как описано в статье [Обзор настраиваемых функций](custom-functions-overview.md), проект настраиваемых функций должен включать в себя файл метаданных JSON, который содержит информацию, необходимую Excel для регистрации настраиваемых функций и их предоставления конечным пользователям.</span><span class="sxs-lookup"><span data-stu-id="6ec63-120">As described in the [custom functions overview](custom-functions-overview.md) article, a custom functions project must include a JSON metadata file which provides the information that Excel requires to register the custom functions and make them available to end users.</span></span> <span data-ttu-id="6ec63-121">Кроме того, в файле JavaScript, которым определяются настраиваемые функции, должна содержаться информация о том, какие объекты функции в файле метаданных JSON сответствуют каждой из настраиваемых функций в файле JavaScript.</span><span class="sxs-lookup"><span data-stu-id="6ec63-121">Additionally, within the JavaScript file that defines your custom functions, you must provide information to specify which function object in the JSON metadata file corresponds to each custom function in the JavaScript file.</span></span>
+
+<span data-ttu-id="6ec63-122">Так, к примеру, приведенный ниже пример кода определяет настраиваемую функцию `add` и указывает, какая функция `add` соответствует объекту в файле метаданных JSON, где значение свойства `id` равно **ADD**.</span><span class="sxs-lookup"><span data-stu-id="6ec63-122">For example, the following code sample defines the custom function `add` and then specifies that the function `add` corresponds to the object in the JSON metadata file where the value of the `id` property is **ADD**.</span></span>
 
 ```js
-function plusFortyTwo(num) {
-    return num + 42;  
-}  
-  
-CustomFunctionsMappings = {
-    "plusFortyTwo" : ADD42
+function add(first, second){
+  return first + second;
 }
+
+CustomFunctionMappings.ADD = add;
 ```
 
-<span data-ttu-id="696db-122">В следующем примере кода определяются две пары "ключ-значение".</span><span class="sxs-lookup"><span data-stu-id="696db-122">The following code sample defines a two key-value pairs.</span></span> <span data-ttu-id="696db-123">Первая пара сопоставляет имя функции JavaScript `plusFifty` с `ADD50` именем функции в пользовательском Интерфейсе Excel и вторая пара сопоставляет имя функции JavaScript `plusOneHundred` с `ADD100` именем функции в пользовательском Интерфейсе Excel.</span><span class="sxs-lookup"><span data-stu-id="696db-123">The first pair maps the JavaScript function name `plusFifty` to the `ADD50` function name in the Excel UI, and the second pair maps the JavaScript function name `plusOneHundred` to the `ADD100` function name in the Excel UI.</span></span> <span data-ttu-id="696db-124">Когда конечный пользователь выбирает `ADD50` функцию в Excel, `plusFifty`запускается функция JavaScript.</span><span class="sxs-lookup"><span data-stu-id="696db-124">When the end user chooses the `ADD50` function in Excel, the `plusFifty` JavaScript function will run.</span></span> <span data-ttu-id="696db-125">Когда конечный пользователь выбирает `ADD100` функцию в Excel, `plusOneHundred`запускается функция JavaScript.</span><span class="sxs-lookup"><span data-stu-id="696db-125">When the end user chooses the `ADD100` function in Excel, the `plusOneHundred` JavaScript function will run.</span></span>
+<span data-ttu-id="6ec63-123">При создании настраиваемых функций в файле JavaScript и указании соответствующей информации в файле метаданных JSON принимайте во внимание следующие рекомендации.</span><span class="sxs-lookup"><span data-stu-id="6ec63-123">Keep in mind the following best practices when creating custom functions in your JavaScript file and specifying corresponding information in the JSON metadata file.</span></span>
 
-```js
-function plusFifty(num) {
-    return num + 50;  
-} 
+* <span data-ttu-id="6ec63-124">В файле JavaScript укажите имена функций в camelCase.</span><span class="sxs-lookup"><span data-stu-id="6ec63-124">In the JavaScript file, specify function names in camelCase.</span></span> <span data-ttu-id="6ec63-125">Примером может служить запись имени функции `addTenToInput` в camelCase: первое слово в имени начинается со строчной буквы нижнего регистра, а все последующие — с прописной буквы.</span><span class="sxs-lookup"><span data-stu-id="6ec63-125">For example, the function name `addTenToInput` is written in camelCase: the first word in the name starts with a lowercase letter and each subsequent word in the name starts with an uppercase letter.</span></span>
 
-function plusOneHundred(num) {
-    return num + 100;  
-}  
-  
-CustomFunctionsMappings = {
-    "plusFifty" : ADD50,  
-    "plusOneHundred" : ADD100
-}
- ```
+* <span data-ttu-id="6ec63-126">В файле метаданных JSON укажите прописными буквами значение каждого свойства `name`.</span><span class="sxs-lookup"><span data-stu-id="6ec63-126">In the JSON metadata file, specify the value of each `name` property in uppercase.</span></span> <span data-ttu-id="6ec63-127">Свойство `name` определяет имя функции, которое конечные пользователи видят в Excel.</span><span class="sxs-lookup"><span data-stu-id="6ec63-127">The `name` property defines the function name that end users will see in Excel.</span></span> <span data-ttu-id="6ec63-128">Использование прописных букв для имен всех настраиваемых функций позволяет сформировать согласованное представление в Excel для конечных пользователей, при котором все имена встроенных функций показываются прописными буквами.</span><span class="sxs-lookup"><span data-stu-id="6ec63-128">Using uppercase letters for the name of each custom function provides a consistent experience for end users in Excel, where all built-in function names are uppercase.</span></span>
 
- ## <a name="see-also"></a><span data-ttu-id="696db-126">См. также</span><span class="sxs-lookup"><span data-stu-id="696db-126">See also</span></span>
+* <span data-ttu-id="6ec63-129">В файле метаданных JSON укажите прописными буквами значение каждого свойства `id`.</span><span class="sxs-lookup"><span data-stu-id="6ec63-129">In the JSON metadata file, specify the value of each `id` property in uppercase.</span></span> <span data-ttu-id="6ec63-130">Такой подход позволяет четко обозначить, какая часть оператора `CustomFunctionMappings` в коде JavaScript соответствует свойству `id` в файле метаданных JSON (при условии, что именем функции используется camelCase в соответствии с приведенными выше рекомендациями).</span><span class="sxs-lookup"><span data-stu-id="6ec63-130">Doing so makes it obvious which part of the `CustomFunctionMappings` statement in your JavaScript code corresponds to the `id` property in the JSON metadata file (provided that your function name uses camelCase, as recommended earlier).</span></span>
 
-- [<span data-ttu-id="696db-127">Создание настраиваемых функций в Excel</span><span class="sxs-lookup"><span data-stu-id="696db-127">Create custom functions in Excel (Preview)</span></span>](custom-functions-overview.md)
-- [<span data-ttu-id="696db-128">Настраиваемые функции метаданных</span><span class="sxs-lookup"><span data-stu-id="696db-128">Custom functions metadata</span></span>](custom-functions-json.md)
-- [<span data-ttu-id="696db-129">Среда выполнения для настраиваемых функций Excel</span><span class="sxs-lookup"><span data-stu-id="696db-129">Runtime for Excel custom functions</span></span>](custom-functions-runtime.md)
+* <span data-ttu-id="6ec63-131">Убедитесь в том, что в файле метаданных JSON значение каждого из свойств `id` является уникальным для этого файла.</span><span class="sxs-lookup"><span data-stu-id="6ec63-131">In the JSON metadata file, ensure that the value of each `id` property is unique within the scope of the file.</span></span> <span data-ttu-id="6ec63-132">При этом в файле метаданных не должно быть двух объектов функции, имеющих одинаковое значение `id`.</span><span class="sxs-lookup"><span data-stu-id="6ec63-132">That is, no two function objects in the metadata file should have the same `id` value.</span></span> <span data-ttu-id="6ec63-133">Кроме того, не указывайте в файле метаданных два значения `id`, которые различаются только регистром.</span><span class="sxs-lookup"><span data-stu-id="6ec63-133">Additionally, do not specify two `id` values in the metadata file that only differ by case.</span></span> <span data-ttu-id="6ec63-134">К примеру, не используйте для определения одного объекта функции значение `id` **add**, а для определения другого — значение `id` **ADD**.</span><span class="sxs-lookup"><span data-stu-id="6ec63-134">For example, do not define one function object with an `id` value of **add** and another function object with an `id` value of **ADD**.</span></span>
+
+* <span data-ttu-id="6ec63-135">Не изменяйте значение свойства `id` в файле метаданных JSON после его сопоставления с соответствующим именем функции JavaScript.</span><span class="sxs-lookup"><span data-stu-id="6ec63-135">Do not change the value of an `id` property in the JSON metadata file after it's been mapped to a corresponding JavaScript function name.</span></span> <span data-ttu-id="6ec63-136">Имя функции, отображаемое в Excel для конечных пользователей, можно изменить, обновив свойство `name` в файле метаданных JSON, но изменять значение свойства `id` после его установки не следует ни при каких обстоятельствах.</span><span class="sxs-lookup"><span data-stu-id="6ec63-136">You can change the function name that end users see in Excel by updating the `name` property within the JSON metadata file, but you should never change the value of an `id` property after it's been established.</span></span>
+
+* <span data-ttu-id="6ec63-137">В файле JavaScript укажите все сопоставления настраиваемых функций для одного и того же расположения.</span><span class="sxs-lookup"><span data-stu-id="6ec63-137">In the JavaScript file, specify all custom function mappings in the same location.</span></span> <span data-ttu-id="6ec63-138">Так, к примеру, в приведенном далее примере кода определяются две настраиваемые функции, а затем указывается информация о сопоставлении для обеих функций.</span><span class="sxs-lookup"><span data-stu-id="6ec63-138">For example, the following code sample defines two custom functions and then specifies the mapping information for both functions.</span></span>
+
+    ```js
+    function add(first, second){
+      return first + second;
+    }
+
+    function increment(incrementBy, callback) {
+      var result = 0;
+      var timer = setInterval(function() {
+        result += incrementBy;
+        callback.setResult(result);
+      }, 1000);
+
+      callback.onCanceled = function() {
+        clearInterval(timer);
+      };
+    }
+
+    // map `id` values in the JSON metadata file to JavaScript function names
+    CustomFunctionMappings.ADD = add;
+    CustomFunctionMappings.INCREMENT = increment;
+    ```
+
+    <span data-ttu-id="6ec63-139">В следующем примере показаны метаданные JSON, соответствующие функциям, определенным в этом примере кода JavaScript.</span><span class="sxs-lookup"><span data-stu-id="6ec63-139">The following sample shows the JSON metadata that corresponds to the functions defined in this JavaScript code sample.</span></span>
+
+    ```json
+    {
+      "$schema": "https://developer.microsoft.com/en-us/json-schemas/office-js/custom-functions.schema.json",
+      "functions": [
+        {
+          "id": "ADD",
+          "name": "ADD",
+          ...
+        },
+        {
+          "id": "INCREMENT",
+          "name": "INCREMENT",
+          ...
+        }
+      ]
+    }
+    ```
+
+## <a name="see-also"></a><span data-ttu-id="6ec63-140">См. также</span><span class="sxs-lookup"><span data-stu-id="6ec63-140">See also</span></span>
+
+* [<span data-ttu-id="6ec63-141">Создание настраиваемых функций в Excel</span><span class="sxs-lookup"><span data-stu-id="6ec63-141">Create custom functions in Excel (Preview)</span></span>](custom-functions-overview.md)
+* [<span data-ttu-id="6ec63-142">Настраиваемые функции метаданных</span><span class="sxs-lookup"><span data-stu-id="6ec63-142">Custom functions metadata</span></span>](custom-functions-json.md)
+* [<span data-ttu-id="6ec63-143">Среда выполнения для настраиваемых функций Excel</span><span class="sxs-lookup"><span data-stu-id="6ec63-143">Runtime for Excel custom functions</span></span>](custom-functions-runtime.md)
+* [<span data-ttu-id="6ec63-144">Руководство по настраиваемых функциях Excel</span><span class="sxs-lookup"><span data-stu-id="6ec63-144">Excel custom functions tutorial</span></span>](excel-tutorial-custom-functions.md)
