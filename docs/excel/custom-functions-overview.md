@@ -1,55 +1,154 @@
 ---
-ms.date: 09/20/2018
+ms.date: 09/27/2018
 description: Создание настраиваемой функции в Excel с помощью JavaScript.
 title: Создание настраиваемых функций в Excel (предварительная версия)
-ms.openlocfilehash: b214329fe50955d0f39d50f674152f475ca24b4d
-ms.sourcegitcommit: eb74e94d3e1bc1930a9c6582a0a99355d0da34f2
+ms.openlocfilehash: 98e418f843f6f5574088cea9c7393afc4a42060b
+ms.sourcegitcommit: 1852ae367de53deb91d03ca55d16eb69709340d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "25005045"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "25348803"
 ---
 # <a name="create-custom-functions-in-excel-preview"></a>Создание настраиваемых функций в Excel (предварительная версия)
 
-Настраиваемые функции позволяют разработчикам добавлять новые функции в Excel, определяя эти функции в JavaScript как часть надстройки. Пользователи в Excel могут получать доступ к настраиваемым функциям, как к любой другой встроенной функции Excel (например, `SUM()`). В этой статье описывается порядок создания настраиваемых функций в Excel.
+Настраиваемые функции позволяют разработчикам добавлять новые функции в Excel путем определения этих функций в JavaScript как части надстройки. Пользователи в Excel могут получать доступ к настраиваемым функциям так же, как и к любой собственной функции в Excel, например, `SUM()`. В этой статье описывается создание настраиваемых функций в Excel.
 
-На следующем рисунке показан конечный пользователь, вставляющий пользовательскую функцию в ячейку листа Excel. Настраиваемая функция `CONTOSO.ADD42` предназначена для добавления 42 к паре чисел, которую пользователь указывает в качестве входных параметров для функции.
+[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
+
+На следующем рисунке показан конечный пользователь, вставляющий настраиваемую функцию в ячейку листа Excel. Настраиваемая функция `CONTOSO.ADD42` предназначена для добавления 42 к паре чисел, которую пользователь указывает в качестве входных параметров для функции.
 
 <img alt="animated image showing an end user inserting the CONTOSO.ADD42 custom function into a cell of an Excel worksheet" src="../images/custom-function.gif" width="579" height="383" />
 
 Следующий код определяет настраиваемую функцию `ADD42`.
 
 ```js
-function ADD42(a, b) {
-    return a + b + 42;
+function add42(a, b) {
+  return a + b + 42;
 }
 ```
-
-Настраиваемые функции теперь доступны для разработчика в форме предварительной версии на Windows, Mac, а также в Excel Online. Чтобы попробовать их, выполните следующие действия.
-
-1. Установите Office (сборка 10827 на Windows или 13.329 на Mac) и присоединитесь к программе [предварительной оценки Office](https://products.office.com/office-insider) . Вы должны присоединиться к программе предварительной оценки Office, чтобы иметь доступ к настраиваемым функциям. В настоящее время настраиваемые функции отключены во всех сборках Office, если вы не являетесь членом программы предварительной оценки Office.
-
-2. Создайте проект надстройки настраиваемых функций Excel с помощью [Yo Office](https://github.com/OfficeDev/generator-office), а затем следуйте инструкциям в [OfficeDev/Excel-Custom-Functions README](https://github.com/OfficeDev/Excel-Custom-Functions/blob/master/README.md) для использования проекта.
-
-3. Введите `=CONTOSO.ADD42(1,2)` в любой ячейке листа Excel, после чего нажмите на клавишу **Enter**, чтобы запустить настраиваемую функцию.
 
 > [!NOTE]
 > В разделе [Известные проблемы](#known-issues) далее в этой статье указаны текущие ограничения настраиваемых функций.
 
-## <a name="learn-the-basics"></a>Ознакомьтесь с основными сведениями
+## <a name="components-of-a-custom-functions-add-in-project"></a>Компоненты проекта надстройки настраиваемых функций
 
-В проекте настраиваемых функций, который вы создали с помощью [Yo Office](https://github.com/OfficeDev/generator-office), вы увидите следующие файлы:
+Если вы используете [генератор Yo Office](https://github.com/OfficeDev/generator-office) для создания проекта надстройки настраиваемых функций Excel, вы увидите следующие файлы в проекте, который создает генератор:
 
 | Файл | Формат файла | Описание |
 |------|-------------|-------------|
-| **./src/customfunctions.js** | JavaScript | Содержит код, который определяет настраиваемые функции. |
+| **./src/customfunctions.js**<br/>или<br/>**./src/customfunctions.ts** | JavaScript<br/>или<br/>TypeScript | Содержит код, который определяет настраиваемые функции. |
 | **./config/customfunctions.json** | JSON | Содержит метаданные, которые описывают настраиваемые функции и позволяют Excel регистрировать настраиваемые функции, чтобы сделать их доступными для пользователей. |
 | **./index.html** | HTML | Предоставляет ссылку в тегах &lt;script&gt; на файл JavaScript, который определяет пользовательские функции. |
 | **./manifest.xml** | XML | Указывает пространство имен для всех настраиваемых функций в пределах надстройки и расположение файлов JavaScript, JSON и HTML, указанных ранее в этой таблице. |
 
-### <a name="manifest-file-manifestxml"></a>Файл манифеста (./manifest.xml)
+Дополнительные сведения об этих файлах можно найти в следующих разделах.
 
-XML-файл манифеста для надстройки, который определяет настраиваемые функции, определяет пространство имен для всех настраиваемых функций в пределах надстройки и расположение файлов JavaScript, JSON и HTML. Ниже показан пример использования элементов `<ExtensionPoint>` и `<Resources>` в разметке XML. Эти элементы необходимо включить в манифест надстройки, чтобы Excel мог выполнять настраиваемые функции.  
+### <a name="script-file"></a>Файл сценария 
+
+Файл сценария (**./src/customfunctions.js** или **./src/customfunctions.ts** в проекте, который создает генератор Yo Office) содержит код, который определяет настраиваемые функции и сопоставляется с объектами в [файле метаданных JSON](#json-metadata-file). 
+
+Так, к примеру, в приведенном далее примере кода определяются настраиваемые функции `add` и `increment`, а затем указывается информация о сопоставлении для обеих функций. Функция `add` сопоставляется с объектом в файле метаданных JSON, где значение свойства `id` – это **ADD**, а функция `increment` сопоставляется с объектом в файле метаданных, где значение свойства `id` – это **INCREMENT**. См. [Рекомендации по настраиваемым функциям](custom-functions-best-practices.md#mapping-function-names-to-json-metadata) для получения более подробных сведений о сопоставлении имен функций в файле сценария с объектами в файле метаданных JSON.
+
+```js
+function add(first, second){
+  return first + second;
+}
+
+function increment(incrementBy, callback) {
+  var result = 0;
+  var timer = setInterval(function() {
+    result += incrementBy;
+    callback.setResult(result);
+  }, 1000);
+
+  callback.onCanceled = function() {
+    clearInterval(timer);
+  };
+}
+
+// map `id` values in the JSON metadata file to the JavaScript function names
+CustomFunctionMappings.ADD = add;
+CustomFunctionMappings.INCREMENT = increment;
+```
+
+### <a name="json-metadata-file"></a>Файл метаданных JSON 
+
+Файл метаданных настраиваемых функций (**./config/customfunctions.json** в проекте, который создает генератор Yo Office) предоставляет информацию о том, что Excel требуется зарегистрировать настраиваемые функции и сделать их доступными для конечных пользователей. Настраиваемые функции регистрируются при первом запуске надстройки пользователем. После этого пользователь может использовать их во всех книгах (то есть, не только в книге, в которой первоначально выполнялась надстройка).
+
+> [!TIP]
+> Чтобы настраиваемые функции правильно работали в Excel Online, в параметры сервера, на котором размещен файл JSON, необходимо включить [CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS).
+
+Следующий код в **customfunctions.json** определяет метаданные для функций `add` и `increment`, описанных ранее. В таблице, следующей за этим примером кода, содержится подробная информация об отдельных свойствах этого объекта JSON. См. [Рекомендации по настраиваемым функциям](custom-functions-best-practices.md#mapping-function-names-to-json-metadata) для получения более подробных сведений о задании значений свойств `id` и `name` в файле метаданных JSON.
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/office-js/custom-functions.schema.json",
+  "functions": [
+    {
+      "id": "ADD",
+      "name": "ADD",
+      "description": "Add two numbers",
+      "helpUrl": "http://www.contoso.com",
+      "result": {
+        "type": "number",
+        "dimensionality": "scalar"
+      },
+      "parameters": [
+        {
+          "name": "first",
+          "description": "first number to add",
+          "type": "number",
+          "dimensionality": "scalar"
+        },
+        {
+          "name": "second",
+          "description": "second number to add",
+          "type": "number",
+          "dimensionality": "scalar"
+        }
+      ]
+    },
+    {
+      "id": "INCREMENT",
+      "name": "INCREMENT",
+      "description": "Periodically increment a value",
+      "helpUrl": "http://www.contoso.com",
+      "result": {
+          "type": "number",
+          "dimensionality": "scalar"
+    },
+    "parameters": [
+        {
+            "name": "increment",
+            "description": "Amount to increment",
+            "type": "number",
+            "dimensionality": "scalar"
+        }
+    ],
+    "options": {
+        "cancelable": true,
+        "stream": true
+      }
+    }
+  ]
+}
+```
+
+В следующей таблице перечислены свойства, которые обычно присутствуют в файле метаданных JSON. Более подробные сведения о файле метаданных JSON см. в статье [Метаданные настраиваемых функций](custom-functions-json.md).
+
+| Свойство  | Описание |
+|---------|---------|
+| `id` | Уникальный идентификатор для функции. Изменение этого идентификатора после его настройки не допускается. |
+| `name` | Имя функции, которое конечный пользователь видит в Excel. В Excel название этой функции будет иметь префикс пространства имен настраиваемых функций, [который указан в XML-файле манифеста](#manifest-file). |
+| `helpUrl` | URL-адрес страницы, которая отображается, когда пользователь запрашивает справку. |
+| `description` | Описывает, что делает функция. Это значение появляется как подсказка, когда функция является выбранным элементом в меню автозаполнения в Excel. |
+| `result`  | Объект, который определяет тип данных, который возвращается функцией. Значение дочернего свойства `type` может быть **string**, **number**или **boolean**. Дочернему свойству `dimensionality` может присваиваться значение **scalar** или **matrix** (двухмерный массив значений указанного типа `type`). |
+| `parameters` | Массив, который определяет входные параметры для функции. В Excel intelliSense появляются дочерние свойства `name` и `description`. Значение дочернего свойства `type` может быть **string**, **number**или **boolean**. Дочернему свойству `dimensionality` может присваиваться значение **scalar** или **matrix** (двухмерный массив значений указанного типа `type`). |
+| `options` | Это позволяет настраивать некоторые аспекты того, как и когда Excel выполняет эту функцию. Подробнее о том, как можно использовать это свойство, см. в разделах [Потоковые функции](#streamed-functions) и [Отмена функции](#canceling-a-function) ниже в этой статье. |
+
+### <a name="manifest-file"></a>Файл манифеста
+
+XML-файл манифеста для надстройки, который определяет настраиваемые функции (**./manifest.xml** в проекте, создаваемом генератором Yo Office), определяет пространство имен для всех настраиваемых функций в пределах надстройки и расположение файлов JavaScript, JSON и HTML. Ниже показан пример использования элементов `<ExtensionPoint>` и `<Resources>` в разметке XML. Эти элементы необходимо включить в манифест надстройки, чтобы иметь возможность выполнять настраиваемые функции.  
 
 ```xml
 <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -78,66 +177,14 @@ XML-файл манифеста для надстройки, который оп
             <bt:Url id="HTML-URL" DefaultValue="http://127.0.0.1:8080/index.html" /> <!--specifies the location of your HTML file-->
         </bt:Urls>
         <bt:ShortStrings>
-            <bt:String id="namespace" DefaultValue="CONTOSO" /> <!--specifies the namespace that will be prepended to a function's name when it is called in Excel. For example, a function named "ADD42" is invoked as `=CONTOSO.ADD42` in Excel.-->
+            <bt:String id="namespace" DefaultValue="CONTOSO" /> <!--specifies the namespace that will be prepended to a function's name when it is called in Excel. -->
         </bt:ShortStrings>
     </Resources>
 </VersionOverrides>
 ```
 
 > [!NOTE]
-> Функции Excel добавляются пространством имен, указанным в XML-файле манифеста. Пространство имен функции предшествует имени функции и отделяется от него точкой. Например, чтобы вызвать функцию `ADD42()` в ячейке листа Excel, следует ввести `=CONTOSO.ADD42`, так как CONTOSO — это пространство имен, а `ADD42` — имя функции, указанной в файле JSON. Данное пространство имен используется в качестве идентификатора для вашей организации или надстройки. 
-
-### <a name="json-file-configcustomfunctionsjson"></a>Файл JSON (./config/customfunctions.json)
-
-Файл метаданных настраиваемых функций предоставляет информацию, которую Excel требует для их регистрации, и делает их доступными для конечных пользователей. Настраиваемые функции регистрируются при первом запуске надстройки пользователем. После этого пользователь может использовать их во всех книгах (то есть, не только в книге, в которой первоначально выполнялась надстройка).
-
-> [!TIP]
-> Чтобы настраиваемая функция правильно работала в Excel Online, в параметрах сервера, на котором размещен файл JSON, необходимо включить [CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS).
-
-Следующий код в файле **customfunctions.json** определяет метаданные для функции `ADD42`, описанной выше в этой статье. Эти метаданные определяют имя функции, ее описание, возвращаемое значение, входные параметры и многое другое. В таблице, следующей за этим примером кода, содержится подробная информация об отдельных свойствах этого объекта JSON.
-
-```json
-{
-    "$schema": "https://developer.microsoft.com/json-schemas/office-js/custom-functions.schema.json",
-    "functions": [
-        {
-            "id": "ADD42",
-            "name": "ADD42",
-            "description":  "adds 42 to the input numbers",
-            "helpUrl": "http://dev.office.com",
-            "result": {
-                "type": "number",
-                "dimensionality": "scalar"
-            },
-            "parameters": [                {
-                    "name": "number 1",
-                    "description": "the first number to be added",
-                    "type": "number",
-                    "dimensionality": "scalar"
-                },
-                {
-                    "name": "number 2",
-                    "description": "the second number to be added",
-                    "type": "number",
-                    "dimensionality": "scalar"
-                }
-            ],
-        }
-    ]
-}
-```
-
-В следующей таблице перечислены свойства, которые обычно присутствуют в файле метаданных JSON. Более подробные сведения о файле метаданных JSON, в том числе о параметрах, не использующихся в предыдущем примере, см. в статье [Метаданные настраиваемых функций](custom-functions-json.md).
-
-| Свойство  | Описание |
-|---------|---------|
-| `id` | Уникальный идентификатор для функции. Этот идентификатор не должен изменяться после его установки. |
-| `name` | Имя функции, отображаемое в меню автозаполнения, когда пользователь вводит формулу в ячейке. В меню автозаполнения это значение будет иметь префикс пространства имен настраиваемых функций, указанного в XML-файле манифеста. |
-| `helpUrl` | URL-адрес страницы, которая отображается, когда пользователь запрашивает справку. |
-| `description` | Описывает, что делает функция. Это значение появляется как подсказка, когда функция является выбранным элементом в меню автозаполнения в Excel. |
-| `result`  | Объект, который определяет тип данных, который возвращается функцией. Значение дочернего свойства `type` может быть **string**, **number**или **boolean**. Дочернему свойству `dimensionality` может присваиваться значение **scalar** или **matrix** (двухмерный массив значений указанного типа `type`). |
-| `parameters` | Массив, который определяет входные параметры для функции. В Excel intelliSense появляются дочерние свойства `name` и `description`. Дочерние свойства `type` и `dimensionality` идентичны дочерним свойствам объекта `result`, описанного выше в этой таблице. |
-| `options` | Это позволяет настраивать некоторые аспекты того, как и когда Excel выполняет эту функцию. Подробнее о том, как можно использовать это свойство, см. в разделах [Потоковые функции](#streamed-functions) и [Отмена](#canceling-a-function) ниже в этой статье. |
+> Функции Excel добавляются пространством имен, указанным в XML-файле манифеста. Пространство имен функции предшествует имени функции и отделяется от него точкой. Например, чтобы вызвать функцию `ADD42` в ячейке листа Excel, следует ввести `=CONTOSO.ADD42`, так как CONTOSO — это пространство имен, а `ADD42` — имя функции, указанной в файле JSON. Данное пространство имен используется в качестве идентификатора для вашей организации или надстройки. 
 
 ## <a name="functions-that-return-data-from-external-sources"></a>Функции, возвращающие данные из внешних источников
 
@@ -145,11 +192,11 @@ XML-файл манифеста для надстройки, который оп
 
 1. возвращать обещание JavaScript в Excel.
 
-2. Разрешите обещание с помощью окончательного значения, воспользовавшись функцией обратного вызова.
+2. Разрешать Promise окончательным значением, используя функцию обратного вызова.
 
 Пока Excel ожидает конечный результат, настраиваемые функции отображают в ячейке временный результат `#GETTING_DATA`. Во время ожидания результата пользователи могут нормально взаимодействовать с остальной частью листа.
 
-В следующем примере кода настраиваемая функция `getTemperature()` получает от термометра текущую температуру. Обратите внимание на то, что функция `sendWebRequest` является гипотетической (не указывается здесь) и использует XHR для вызова веб-службы температуры.
+В следующем примере кода настраиваемая функция `getTemperature()` получает от термометра текущую температуру. Обратите внимание на то, что функция `sendWebRequest` является гипотетической (не указывается здесь) и использует [XHR](custom-functions-runtime.md#xhr) для вызова веб-службы температуры.
 
 ```js
 function getTemperature(thermometerID){
@@ -163,21 +210,52 @@ function getTemperature(thermometerID){
 
 ## <a name="streamed-functions"></a>Потоковые функции
 
-Потоковые настраиваемые функции позволяют вам выводить данные в ячейки многократно с течением времени, не требуя от пользователя явно запрашивать пересчет. Следующий пример кода представляет собой настраиваемую функцию, которая каждую секунду добавляет число к результату. Обратите внимание на следующие особенности этого кода:
+Потоковые настраиваемые функции позволяют вам выводить данные в ячейки многократно с течением времени, не требуя от пользователя явно запрашивать обновление данных. Следующий пример кода представляет собой настраиваемую функцию, которая каждую секунду добавляет число к результату. Обратите внимание на следующие особенности этого кода:
 
-- Excel автоматически отображает каждое новое значение при помощи `setResult` обратного вызова.
+- Excel автоматически отображает каждое новое значение при помощи обратного вызова `setResult`.
 
-- Последний параметр, `handler`, никогда не указывается в коде регистрации и не отображается в меню автозаполнения для пользователей Excel, когда они вводят функцию. Это объект, который содержит функцию обратного вызова `setResult`, используемую для передачи данных из функции в Excel и обновления значения ячейки.
+- Второй входной параметр `handler` не отображается для конечных пользователей в Excel при выборе функции из меню автозаполнения.
 
-- Чтобы Excel передал функцию `setResult` объекту `handler`, необходимо объявить поддержку потоковой передачи при регистрации функции, установив параметр `"stream": true` в свойстве `options` для настраиваемой функции в JSON-файле метаданных.
+- Обратный вызов `onCanceled` определяет функцию, которая выполняется при отмене функции. Необходимо реализовать обработчик отмены следующим образом для любой потоковой функции. Для получения дополнительных сведений см. статью [Отмена функции](#canceling-a-function). 
 
 ```js
 function incrementValue(increment, handler){
-    var result = 0;
-    setInterval(function(){
-         result += increment;
-         handler.setResult(result);
-    }, 1000);
+  var result = 0;
+  setInterval(function(){
+    result += increment;
+    handler.setResult(result);
+  }, 1000);
+
+  handler.onCanceled = function(){
+    clearInterval(timer);
+  }
+}
+```
+
+При указании метаданных для потоковой функции в файле метаданных JSON необходимо задать свойства `"cancelable": true` и `"stream": true` для объекта `options`, как показано в следующем примере.
+
+```json
+{
+  "id": "INCREMENT",
+  "name": "INCREMENT",
+  "description": "Periodically increment a value",
+  "helpUrl": "http://www.contoso.com",
+  "result": {
+    "type": "number",
+    "dimensionality": "scalar"
+  },
+  "parameters": [
+    {
+      "name": "increment",
+      "description": "Amount to increment",
+      "type": "number",
+      "dimensionality": "scalar"
+    }
+  ],
+  "options": {
+    "cancelable": true,
+    "stream": true
+  }
 }
 ```
 
@@ -191,30 +269,11 @@ function incrementValue(increment, handler){
 
 - Пользователь вызывает пересчет вручную. В этом случае после отмены активируется новый вызов функции.
 
-> [!NOTE]
-> Обработчик отмены необходимо реализовать для каждой потоковой функции.
-
-Чтобы сделать функцию отменяемой, установите для настраиваемой функции параметр `"cancelable": true` в свойстве `options` с помощью JSON-файла метаданных.
-
-В следующем коде показана та же функция `incrementValue`, которая была описана выше, но на этот раз с реализованным обработчиком отмены. В этом примере при отмене функции `incrementValue` будет выполняться метод `clearInterval()`.
-
-```js
-function incrementValue(increment, handler){
-    var result = 0;
-    var timer = setInterval(function(){
-         result += increment;
-         handler.setResult(result);
-    }, 1000);
-
-    handler.onCanceled = function(){
-        clearInterval(timer);
-    }
-}
-```
+Чтобы включить возможность отмены функции, необходимо реализовать обработчик отмены в функции JavaScript и указать свойство `"cancelable": true` в объекте `options` в метаданных JSON, которые описывают функцию. В примерах кода в предыдущем разделе данной статьи приводится пример из этих методов.
 
 ## <a name="saving-and-sharing-state"></a>Сохранение и передача состояния
 
-Настраиваемые функции могут сохранять данные в глобальных переменных JavaScript. При последующих вызовах настраиваемая функция может использовать значения, сохраненные в этих переменных. Сохранение состояния может быть полезно, когда пользователи добавляют одну настраиваемую функцию к нескольким ячейкам, потому что все экземпляры функции могут совместно использовать ее состояние. Например, вы можете сохранить данные, возвращенные при вызове веб-ресурса, чтобы не пришлось обеспечивать выполнение дополнительных вызовов.
+Настраиваемые функции могут сохранять данные в глобальных переменных JavaScript. При последующих вызовах настраиваемая функция может использовать значения, сохраненные в этих переменных. Сохранение состояния может быть полезно, когда пользователи добавляют одну настраиваемую функцию к нескольким ячейкам, потому что все экземпляры функции могут совместно использовать ее состояние. Например, вы можете сохранить данные, возвращенные при вызове веб-ресурса, чтобы не пришлось делать дополнительные вызовы одного и того же веб-ресурса.
 
 В приведенном ниже примере кода показана реализация вышеописанной потоковой функции температуры, осуществляющей глобальное сохранение состояния. Обратите внимание на следующие особенности этого кода:
 
@@ -228,24 +287,24 @@ function incrementValue(increment, handler){
 var savedTemperatures;
 
 function streamTemperature(thermometerID, handler){
-     if(!savedTemperatures[thermometerID]){
-         refreshTemperatures(thermometerID); // starts fetching temperatures if the thermometer hasn't been read yet
-     }
+  if(!savedTemperatures[thermometerID]){
+    refreshTemperatures(thermometerID); // starts fetching temperatures if the thermometer hasn't been read yet
+  }
 
-     function getNextTemperature(){
-         handler.setResult(savedTemperatures[thermometerID]); // setResult sends the saved temperature value to Excel.
-         setTimeout(getNextTemperature, 1000); // Wait 1 second before updating Excel again.
-     }
-     getNextTemperature();
+  function getNextTemperature(){
+    handler.setResult(savedTemperatures[thermometerID]); // setResult sends the saved temperature value to Excel.
+    setTimeout(getNextTemperature, 1000); // Wait 1 second before updating Excel again.
+  }
+  getNextTemperature();
 }
 
 function refreshTemperature(thermometerID){
-     sendWebRequest(thermometerID, function(data){
-         savedTemperatures[thermometerID] = data.temperature;
-     });
-     setTimeout(function(){
-         refreshTemperature(thermometerID);
-     }, 1000); // Wait 1 second before reading the thermometer again, and then update the saved temperature of thermometerID.
+  sendWebRequest(thermometerID, function(data){
+    savedTemperatures[thermometerID] = data.temperature;
+  });
+  setTimeout(function(){
+    refreshTemperature(thermometerID);
+  }, 1000); // Wait 1 second before reading the thermometer again, and then update the saved temperature of thermometerID.
 }
 ```
 
@@ -253,44 +312,44 @@ function refreshTemperature(thermometerID){
 
 Настраиваемая функция может принимать диапазон данных в качестве входного параметра, или она может возвращать диапазон данных. В JavaScript диапазон данных представляется как двухмерный массив.
 
-Предположим, к примеру, что ваша функция возвращает второе наибольшое значение из диапазона чисел, хранящихся в Excel. Следующая функция принимает параметр `values`, который имеет тип `Excel.CustomFunctionDimensionality.matrix`. Обратите внимание, что в JSON-метаданных для этой функции вы должны для параметра `type` установить значение `matrix`.
+Предположим, к примеру, что ваша функция возвращает второе наибольшее значение из диапазона чисел, хранящихся в Excel. Следующая функция принимает параметр `values`, который имеет тип `Excel.CustomFunctionDimensionality.matrix`. Обратите внимание, что в JSON-метаданных для этой функции вы должны для параметра `type` установить значение `matrix`.
 
 ```js
 function secondHighest(values){
-     let highest = values[0][0], secondHighest = values[0][0];
-     for(var i = 0; i < values.length; i++){
-         for(var j = 1; j < values[i].length; j++){
-             if(values[i][j] >= highest){
-                 secondHighest = highest;
-                 highest = values[i][j];
-             }
-             else if(values[i][j] >= secondHighest){
-                 secondHighest = values[i][j];
-             }
-         }
-     }
-     return secondHighest;
- }
+  let highest = values[0][0], secondHighest = values[0][0];
+  for(var i = 0; i < values.length; i++){
+    for(var j = 1; j < values[i].length; j++){
+      if(values[i][j] >= highest){
+        secondHighest = highest;
+        highest = values[i][j];
+      }
+      else if(values[i][j] >= secondHighest){
+        secondHighest = values[i][j];
+      }
+    }
+  }
+  return secondHighest;
+}
 ```
 
 ## <a name="handling-errors"></a>Обработка ошибок
 
-При построении надстройки, определяющей настраиваемые функции, не забудьте добавить логику для обработки ошибок, возникающих в среде выполнения. Обработка ошибок для настраиваемых функций совпадает с [обработкой ошибок для Excel API JavaScript в целом](excel-add-ins-error-handling.md). В следующем примере кода метод `.catch` будет обрабатывать все ошибки, возникающие ранее в коде.
+При построении надстройки, определяющей настраиваемые функции, не забудьте добавить логику для обработки ошибок, возникающих в среде выполнения. Обработка ошибок для настраиваемых функций такая же, как и в случае [обработки ошибок для API JavaScript Excel в целом](excel-add-ins-error-handling.md). В следующем примере кода метод `.catch` будет обрабатывать все ошибки, возникающие ранее в коде.
 
 ```js
 function getComment(x) {
-    let url = "https://yourhypotheticalapi/comments/" + x;
+  let url = "https://www.contoso.com/comments/" + x;
 
-    return fetch(url)
-        .then(function (data) {
-            return data.json();
-        })
-        .then((json) => {
-            return json.body;
-        })
-        .catch(function (error) {
-            throw error;
-        })
+  return fetch(url)
+    .then(function (data) {
+      return data.json();
+    })
+    .then((json) => {
+      return json.body;
+    })
+    .catch(function (error) {
+      throw error;
+    })
 }
 ```
 
@@ -306,10 +365,10 @@ function getComment(x) {
 
 ## <a name="changelog"></a>Журнал изменений
 
-- **7 ноября 2017 г.**. Выпущена* предварительная версия настраиваемых функций с примерами
-- **20 ноября 2017 г.** Исправлена ошибка совместимости для пользователей, использующих сборки 8801 и выше.
-- **28 ноября 2017 г.**. Выпущена* поддержка отмены вызова асинхронных функций (необходимо изменение потоковых функций)
-- **7 мая 2018 г.**. Выпущена*​​поддержка Mac, Excel Online и синхронных функций, выполняемых внутри процесса
+- **7 ноября 2017 г.**. Доставлена* предварительная версия настраиваемых функций с примерами
+- **20 ноября 2017 года** исправлена ошибка совместимости для пользователей, использующих сборки 8801 и более новых версий
+- **28 ноября 2017 г.**. Доставлена* поддержка отмены вызова асинхронных функций (необходимо изменение потоковых функций)
+- **7 мая 2018 г.**. Доставлена*​​поддержка Mac, Excel Online и синхронных функций, выполняемых внутри процесса
 - **20 сентября 2018 г.**. Выпущена поддержка среды выполнения JavaScript настраиваемых функций. Подробнее см. статью [Среда выполнения для настраиваемых функций Excel](custom-functions-runtime.md).
 
 \* на канале участников программы предварительной оценки Office
@@ -319,3 +378,4 @@ function getComment(x) {
 * [Метаданные настраиваемых функций](custom-functions-json.md)
 * [Среда выполнения для настраиваемых функций Excel](custom-functions-runtime.md)
 * [Рекомендации по настраиваемым функциям](custom-functions-best-practices.md)
+* [Руководство по настраиваемым функциям Excel](excel-tutorial-custom-functions.md)

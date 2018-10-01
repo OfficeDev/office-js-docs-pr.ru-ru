@@ -1,133 +1,104 @@
 ---
-ms.date: 09/20/2018
+ms.date: 09/27/2018
 description: Определение метаданных для настраиваемых функций в Excel.
 title: Метаданные для настраиваемых функций в Excel
-ms.openlocfilehash: 815b0c6e65966867d9e5d953a40ffc705a63ee63
-ms.sourcegitcommit: 470d8212b256275587e651abaa6f28beafebcab4
+ms.openlocfilehash: 025be277a5e436a1ce2885815e9b8cbf9b206799
+ms.sourcegitcommit: fdf7f4d686700edd6e6b04b2ea1bd43e59d4a03a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "24062146"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "25348137"
 ---
-# <a name="custom-functions-metadata"></a>Метаданные настраиваемых функций
+# <a name="custom-functions-metadata-preview"></a>Метаданные для настраиваемых функций (предварительная версия)
 
-При определении [настраиваемых функций](custom-functions-overview.md) в надстройке Excel в проект надстройки необходимо включить файл метаданных JSON, содержащий информацию о том, что требуется Excel для того, чтобы зарегистрировать настраиваемые функции и сделать их доступными для пользователей. В этой статье описывается формат файла метаданных JSON.
+При определении [настраиваемых функций](custom-functions-overview.md) в надстройке Excel в проект надстройки необходимо включить файл метаданных JSON, содержащий информацию, необходимую Excel для регистрации настраиваемых функций и предоставления пользователям доступа к ним. В этой статье описан формат JSON-файла метаданных.
 
-> [!NOTE]
-> Сведения о других файлах, котрые необходимо включить в проект надстройки для включения настраиваемых функций, см. в статье [Создание настраиваемых функций в Excel](custom-functions-overview.md#learn-the-basics).
+Сведения о других файлах, которые необходимо добавить в проект надстройки для включения настраиваемых функций, см. в статье [Создание настраиваемых функций в Excel](custom-functions-overview.md).
+
+[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
 ## <a name="example-metadata"></a>Пример метаданных
 
-В следующем примере показано содержимое файла метаданных JSON для надстройки, определяющей настраиваемые функции. В следующих за этим примером разделах приводится подробная информация об отдельных свойствах, рассматриваемых в данном примере JSON.
+В следующем примере показано содержимое файла метаданных JSON для надстройки, определяющей настраиваемые функции. В следующих за этим примером разделах приводится подробная информация об отдельных свойствах, представленных в данном примере JSON.
 
 ```json
 {
-    "functions": [
+  "functions": [
+    {
+      "id": "ADD",
+      "name": "ADD",
+      "description": "Add two numbers",
+      "helpUrl": "http://www.contoso.com/help",
+      "result": {
+        "type": "number",
+        "dimensionality": "scalar"
+      },
+      "parameters": [
         {
-            "id": "ADD42",
-            "name": "ADD42",
-            "description":  "Adds 42 to the input number",
-            "helpUrl": "http://dev.office.com",
-            "result": {
-                "type": "number",
-                "dimensionality": "scalar"
-            },
-            "parameters": [
-                {
-                    "name": "num",
-                    "description": "Number",
-                    "type": "number",
-                    "dimensionality": "scalar"
-                }
-            ]
+          "name": "first",
+          "description": "first number to add",
+          "type": "number",
+          "dimensionality": "scalar"
         },
         {
-            "id": "ADD42ASYNC",
-            "name": "ADD42ASYNC",
-            "description":  "asynchronously wait 250ms, then add 42",
-            "helpUrl": "http://dev.office.com",
-            "result": {
-                "type": "number",
-                "dimensionality": "scalar"
-            },
-            "parameters": [
-                {
-                    "name": "num",
-                    "description": "Number",
-                    "type": "number",
-                    "dimensionality": "scalar"
-                }
-            ]
-        },
-        {
-            "id": "ISEVEN",
-            "name": "ISEVEN", 
-            "description":  "Determines whether a number is even",
-            "helpUrl": "http://dev.office.com",
-            "result": {
-                "type": "boolean",
-                "dimensionality": "scalar"
-            },
-            "parameters": [
-                {
-                    "name": "num",
-                    "description": "the number to be evaluated",
-                    "type": "number",
-                    "dimensionality": "scalar"
-                }
-            ]
-        },
-        {
-            "id": "GETDAY",
-            "name": "GETDAY",
-            "description": "Gets the day of the week",
-            "helpUrl": "http://dev.office.com",
-            "result": {
-                "type": "string"
-            },
-            "parameters": []
-        },
-        {
-            "id": "INCREMENTVALUE",
-            "name": "INCREMENTVALUE", 
-            "description":  "Counts up from zero",
-            "helpUrl": "http://dev.office.com",
-            "result": {
-                "type": "number",
-                "dimensionality": "scalar"
-            },
-            "parameters": [
-                {
-                    "name": "increment",
-                    "description": "the number to be added each time",
-                    "type": "number",
-                    "dimensionality": "scalar"
-                }
-            ],
-            "options": {
-                "stream": true,
-                "cancelable": true
-            }
-        },
-        {
-            "id": "SECONDHIGHEST",
-            "name": "SECONDHIGHEST", 
-            "description":  "gets the second highest number from a range",
-            "helpUrl": "http://dev.office.com",
-            "result": {
-                "type": "number",
-                "dimensionality": "scalar"
-            },
-            "parameters": [
-                {
-                    "name": "range",
-                    "description": "the input range",
-                    "type": "number",
-                    "dimensionality": "matrix"
-                }
-            ]
+          "name": "second",
+          "description": "second number to add",
+          "type": "number",
+          "dimensionality": "scalar"
         }
-    ]
+      ]
+    },
+    {
+      "id": "GETDAY",
+      "name": "GETDAY",
+      "description": "Get the day of the week",
+      "helpUrl": "http://www.contoso.com/help",
+      "result": {
+        "type": "string"
+      },
+      "parameters": []
+    },
+    {
+      "id": "INCREMENTVALUE",
+      "name": "INCREMENTVALUE", 
+      "description":  "Count up from zero",
+      "helpUrl": "http://www.contoso.com/help",
+      "result": {
+        "type": "number",
+        "dimensionality": "scalar"
+      },
+      "parameters": [
+        {
+          "name": "increment",
+          "description": "the number to be added each time",
+          "type": "number",
+          "dimensionality": "scalar"
+        }
+      ],
+      "options": {
+        "stream": true,
+        "cancelable": true
+      }
+    },
+    {
+      "id": "SECONDHIGHEST",
+      "name": "SECONDHIGHEST", 
+      "description":  "Get the second highest number from a range",
+      "helpUrl": "http://www.contoso.com/help",
+      "result": {
+        "type": "number",
+        "dimensionality": "scalar"
+      },
+      "parameters": [
+        {
+          "name": "range",
+          "description": "the input range",
+          "type": "number",
+          "dimensionality": "matrix"
+        }
+      ]
+    }
+  ]
 }
 ```
 
@@ -140,10 +111,10 @@ ms.locfileid: "24062146"
 
 |  Свойство  |  Тип данных  |  Обязательное  |  Описание  |
 |:-----|:-----|:-----|:-----|
-|  `description`  |  string  |  Нет  |  Описание функции, отображаемое в пользовательском интерфейсе Excel. К примеру, **Преобразует градусы Цельсия в градусы Фаренгейта**. |
-|  `helpUrl`  |  string  |   Нет  |  URL-адрес, позволяющий пользователю получить информацию о функции. (Отображается в области задач). Например, **http://contoso.com/help/convertcelsiustofahrenheit.html**. |
+|  `description`  |  string  |  Нет  |  Описание функции, которое пользователи видят в Excel. Например, **преобразует значение по шкале Цельсия в температуру по шкале Фаренгейта**. |
+|  `helpUrl`  |  string  |   Нет  |  URL-адрес, который предоставляет сведения о функции (отображается в области задач). Например, **http://contoso.com/help/convertcelsiustofahrenheit.html**. |
 | `id`     | string | Да | Уникальный идентификатор функции. Изменение этого идентификатора после его настройки не допускается. |
-|  `name`  |  string  |  Да  |  Имя функции, которая будет отображаться (добавлено в пространстве имен) в пользовательском интерфейсе Excel, когда пользователь выбирает функцию. Его совпадение с именем функции, указанным при ее определении в JavaScript, не обязательно. |
+|  `name`  |  string  |  Да  |  Название функции, которое пользователи видят в Excel. В Excel название этой функции будет иметь префикс пространства имен настраиваемых функций, указанного в XML-файле манифеста. |
 |  `options`  |  object  |  Нет  |  Это свойство позволяет настраивать некоторые аспекты того, как и когда Excel выполняет эту функцию. См. [объект параметров](#options-object) для получения дополнительной информации. |
 |  `parameters`  |  array  |  Да  |  Массив, который определяет входные параметры для функции. См. [массив параметров](#parameters-array) для получения дополнительной информации. |
 |  `result`  |  object  |  Да  |  Объект, который определяет тип возвращаемой функцией информации. См. [объект результата](#result-object) для получения дополнительной информации. |
@@ -152,10 +123,10 @@ ms.locfileid: "24062146"
 
 Объект `options` позволяет настроить некоторые аспекты того, как и когда Excel выполняет данные функции. В следующей таблице описываются свойства объекта `options`.
 
-|  Свойство  |  Тип данных  |  Обязательное  |  Description  |
+|  Свойство  |  Тип данных  |  Обязательное  |  Описание  |
 |:-----|:-----|:-----|:-----|
-|  `cancelable`  |  boolean  |  Нет, значение по умолчанию — `false`.  |  Если `true`, Excel вызывает обработчика `onCanceled` всякий раз, когда пользователь предпринимает действие, которое имеет эффект отмены функции, например, вручную вызывая пересчет или редактирование ячейки, на которую ссылается функция. Если вы используете эту опцию, Excel вызовет функцию JavaScript с дополнительным параметром `caller`. (***Не***регистрируйте этот параметр в свойстве `parameters`.) В теле функции обработчик необходимо назначить члену `caller.onCanceled`. Для получения дополнительной информации см. [Отмена функции](custom-functions-overview.md#canceling-a-function). |
-|  `stream`  |  boolean  |  Нет, значение по умолчанию — `false`.  |  Если `true`, функция может выводить несколько раз в ячейку даже при вызове только один раз. Этот параметр полезен для быстро изменяющихся источников данных, таких как цена акций. Если вы используете эту опцию, Excel вызовет функцию JavaScript с дополнительным параметром `caller`. (***Не***регистрируйте этот параметр в свойстве `parameters`.) Функция должна иметь выписку `return`. Вместо этого результирующее значение передается как аргумент метода обратного вызова `caller.setResult`. Для получения дополнительной информации см. статью [Потоковые функции](custom-functions-overview.md#streamed-functions). |
+|  `cancelable`  |  boolean  |  Нет<br/><br/>Значение по умолчанию: `false`.  |  Если значение `true`, Excel будет вызывать обработчик `onCanceled` каждый раз, когда пользователь будет предпринимать действия, которые имеют эффект отмены функции, например, вручную вызывая пересчет или редактирование ячейки, на которую ссылается функция. Если вы используете эту опцию, Excel вызовет функцию JavaScript с дополнительным `caller` параметром. (Не ****** регистрируйте свои параметры в свойстве `parameters`). В теле функции обработчик необходимо назначить члену `caller.onCanceled`. Для получения дополнительной информации см. [Отмена функции](custom-functions-overview.md#canceling-a-function). |
+|  `stream`  |  boolean  |  Нет<br/><br/>Значение по умолчанию: `false`.  |  Если значение `true`, функция может выводить значение в ячейку несколько раз, даже если была вызвана всего один раз. Этот параметр полезен для быстро изменяющихся источников данных, таких как цена акций. Если вы используете эту опцию, Excel вызовет функцию JavaScript с дополнительным параметром `caller`. (Не ****** регистрируйте свои параметры в свойстве `parameters`.) Функция не должна содержать оператор `return`. Вместо этого результирующее значение передается как аргумент метода обратного вызова `caller.setResult`. Для получения дополнительной информации см. статью [Потоковые функции](custom-functions-overview.md#streamed-functions). |
 
 ## <a name="parameters"></a>parameters
 

@@ -2,12 +2,12 @@
 ms.date: 09/27/2018
 description: Настраиваемые функции Excel используют новую среду выполнения JavaScript, которая отличается от стандартного управления во время выполнения веб-представления надстройки.
 title: Среда выполнения для настраиваемых функций Excel
-ms.openlocfilehash: ce9678d68860c0f8f4c868712155af7824ceb93f
-ms.sourcegitcommit: fdf7f4d686700edd6e6b04b2ea1bd43e59d4a03a
+ms.openlocfilehash: 7489cd66851d1e0c24ef573ffa920b794cf749c2
+ms.sourcegitcommit: 1852ae367de53deb91d03ca55d16eb69709340d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "25348109"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "25348761"
 ---
 # <a name="runtime-for-excel-custom-functions-preview"></a>Среда выполнения для настраиваемых функций Excel (предварительная версия)
 
@@ -213,3 +213,4 @@ function getStock (ticker) {
 * [Создание настраиваемых функций в Excel](custom-functions-overview.md)
 * [Настраиваемые функции метаданных](custom-functions-json.md)
 * [Рекомендации по настраиваемым функциям](custom-functions-best-practices.md)
+* [Руководство по настраиваемым функциям Excel](excel-tutorial-custom-functions.md)
