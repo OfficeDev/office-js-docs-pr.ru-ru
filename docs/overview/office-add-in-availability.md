@@ -1,19 +1,19 @@
 ---
 title: Доступность ведущих приложений и платформ для надстроек Office
-description: Поддерживаемые наборы требований для Excel, Word, Outlook, PowerPoint и OneNote.
-ms.date: 09/24/2018
-ms.openlocfilehash: b06602e35ec906866ad16d667036a4cbaff2d89e
-ms.sourcegitcommit: 8ce9a8d7f41d96879c39cc5527a3007dff25bee8
+description: Поддерживаемые наборы обязательных элементов  для Excel, Word, Outlook, PowerPoint и OneNote.
+ms.date: 10/03/2018
+ms.openlocfilehash: 6f7b5b565773457e6cd8a9eee69eb304784a29a9
+ms.sourcegitcommit: 563c53bac52b31277ab935f30af648f17c5ed1e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "24985825"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "25459317"
 ---
 # <a name="office-add-in-host-and-platform-availability"></a>Доступность ведущих приложений и платформ для надстроек Office
 
-Работа надстройки Office может зависеть от ведущего приложения Office, набора требований, элемента или версии API. В таблицах ниже представлены сведения о доступной платформе, точках расширения, наборах обязательных элементов API и стандартных наборах обязательных элементов API, которые в настоящее время поддерживаются для всех приложений Office.
+Работа надстройки Office должным образом может зависеть от ведущего приложения Office, набора требований, элемента или версии API. В таблицах ниже представлены сведения о доступной платформе, точках расширения, наборах обязательных элементов API и стандартных наборах обязательных элементов API,  которые в настоящее время поддерживаются для всех приложений Office.
 
-Символ * (звездочка) в ячейке таблицы указывает, что поддержка скоро появится. С наборами требований для Project и Access можно ознакомиться в статье [Стандартные наборы обязательных элементов для Office](https://docs.microsoft.com/javascript/office/requirement-sets/office-add-in-requirement-sets).  
+Если ячейка таблицы содержит символ звездочки (*), это означает, что поддержка скоро появится. С наборами требований для Project и Access можно ознакомиться в статье [Стандартные наборы обязательных элементов для Office](https://docs.microsoft.com/javascript/office/requirement-sets/office-add-in-requirement-sets).  
 
 > [!NOTE]
 > Номер сборки для набора Office 2016, установленного с помощью MSI, — 16.0.4266.1001. Эта версия содержит только набор обязательных элементов ExcelApi 1.1, WordApi 1.1 и стандартные наборы обязательных элементов API.
@@ -29,9 +29,9 @@ ms.locfileid: "24985825"
   </tr>
   <tr>
     <td>Office Online</td>
-    <td> - Область задач<br>
-        - Контент<br>
-        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстройки</a>
+    <td> - Панель задач<br>
+        - Содержимое<br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a>
     </td>
     <td>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
@@ -41,6 +41,7 @@ ms.locfileid: "24985825"
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.5</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.6</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.7</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.8</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td>
         - BindingEvents<br>
@@ -59,8 +60,8 @@ ms.locfileid: "24985825"
   <tr>
     <td>Office 2013 для Windows</td>
     <td>
-        - Область задач<br>
-        - Контент</td>
+        - Панель задач<br>
+        - Содержимое</td>
     <td>  - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td>
         - BindingEvents<br>
@@ -79,8 +80,8 @@ ms.locfileid: "24985825"
   </tr>
   <tr>
     <td>Office 2016 для Windows</td>
-    <td>- Область задач<br>
-        - Контент<br>
+    <td>- Панель задач<br>
+        - Содержимое<br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td>- <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.2</a><br>
@@ -89,6 +90,7 @@ ms.locfileid: "24985825"
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.5</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.6</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.7</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.8</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td>- BindingEvents<br>
         - CompressedFile<br>
@@ -106,8 +108,8 @@ ms.locfileid: "24985825"
   </tr>
   <tr>
     <td>Office 2019 для Windows</td>
-    <td>- Область задач<br>
-        - Контент<br>
+    <td>- Панель задач<br>
+        - Содержимое<br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td>- <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.2</a><br>
@@ -116,6 +118,7 @@ ms.locfileid: "24985825"
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.5</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.6</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.7</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.8</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td>- BindingEvents<br>
         - CompressedFile<br>
@@ -133,8 +136,8 @@ ms.locfileid: "24985825"
   </tr>
   <tr>
     <td>Office для iOS</td>
-    <td>- Область задач<br>
-        - Контент</td>
+    <td>- Панель задач<br>
+        - Содержимое</td>
     <td>- <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.2</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.3</a><br>
@@ -142,6 +145,7 @@ ms.locfileid: "24985825"
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.5</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.6</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.7</a><br>
+         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.8</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td>- BindingEvents<br>
         - CompressedFile<br>
@@ -159,8 +163,8 @@ ms.locfileid: "24985825"
   </tr>
   <tr>
     <td>Office 2016 для Mac</td>
-    <td>- Область задач<br>
-        - Контент<br>
+    <td>- Панель задач<br>
+        - Содержимое<br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td>- <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.2</a><br>
@@ -169,6 +173,7 @@ ms.locfileid: "24985825"
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.5</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.6</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.7</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.8</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td>- BindingEvents<br>
         - CompressedFile<br>
@@ -187,8 +192,8 @@ ms.locfileid: "24985825"
   </tr>
   <tr>
     <td>Office 2019 для Mac</td>
-    <td>- Область задач<br>
-        - Контент<br>
+    <td>- Панель задач<br>
+        - Содержимое<br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td>- <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.2</a><br>
@@ -197,6 +202,7 @@ ms.locfileid: "24985825"
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.5</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.6</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.7</a><br>
+        - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets">ExcelApi 1.8</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td>- BindingEvents<br>
         - CompressedFile<br>
@@ -229,20 +235,21 @@ ms.locfileid: "24985825"
   <tr>
     <td>Office Online</td>
     <td> - Чтение почты<br>
-      - Создание сообщения почты<br>
+      -  Создание сообщения почты<br>
       - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2">Mailbox 1.2</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3">Mailbox 1.3</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.5/outlook-requirement-set-1.5">Mailbox 1.5</a><br>
-      - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.6/outlook-requirement-set-1.6">Mailbox 1.6</a></td>
+      - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.6/outlook-requirement-set-1.6">Mailbox 1.6</a><br>
+      - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.7/outlook-requirement-set-1.7">Mailbox 1.7</a></td>
     <td>Недоступна</td>
   </tr>
   <tr>
     <td>Office 2013 для Windows</td>
     <td> - Чтение почты<br>
-      - Создание сообщения почты<br>
+      -  Создание сообщения почты<br>
       - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2">Mailbox 1.2</a><br>
@@ -253,7 +260,7 @@ ms.locfileid: "24985825"
   <tr>
     <td>Office 2016 для Windows</td>
     <td> - Чтение почты<br>
-      - Создание сообщения почты<br>
+      -  Создание сообщения почты<br>
       - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a><br>
       - Модули</td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
@@ -268,7 +275,7 @@ ms.locfileid: "24985825"
   <tr>
     <td>Office 2019 для Windows</td>
     <td> - Чтение почты<br>
-      - Создание сообщения почты<br>
+      -  Создание сообщения почты<br>
       - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a><br>
       - Модули</td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
@@ -276,7 +283,8 @@ ms.locfileid: "24985825"
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3">Mailbox 1.3</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.5/outlook-requirement-set-1.5">Mailbox 1.5</a><br>
-      - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.6/outlook-requirement-set-1.6">Mailbox 1.6</a></td>
+      - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.6/outlook-requirement-set-1.6">Mailbox 1.6</a><br>
+      - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.7/outlook-requirement-set-1.7">Mailbox 1.7</a></td>
     <td>Недоступна</td>
   </tr>
   <tr>
@@ -293,7 +301,7 @@ ms.locfileid: "24985825"
   <tr>
     <td>Office 2016 для Mac</td>
     <td> - Чтение почты<br>
-      - Создание сообщения почты<br>
+      -  Создание сообщения почты<br>
       - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2">Mailbox 1.2</a><br>
@@ -306,7 +314,7 @@ ms.locfileid: "24985825"
   <tr>
     <td>Office 2019 для Mac</td>
     <td> - Чтение почты<br>
-      - Создание сообщения почты<br>
+      -  Создание сообщения почты<br>
       - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
       - <a href="https://docs.microsoft.com/javascript/office/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2">Mailbox 1.2</a><br>
@@ -343,7 +351,7 @@ ms.locfileid: "24985825"
   </tr>
   <tr>
     <td>Office Online</td>
-    <td> - Область задач<br>
+    <td> - Панель задач<br>
          - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
          - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.2</a><br>
@@ -369,7 +377,7 @@ ms.locfileid: "24985825"
   </tr>
   <tr>
     <td>Office 2013 для Windows</td>
-    <td> - Область задач</td>
+    <td> - Панель задач</td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td> - BindingEvents<br>
          - CompressedFile<br>
@@ -392,7 +400,7 @@ ms.locfileid: "24985825"
   </tr>
   <tr>
     <td>Office 2016 для Windows</td>
-    <td> - Область задач<br>
+    <td> - Панель задач<br>
          - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.2</a><br>
@@ -419,7 +427,7 @@ ms.locfileid: "24985825"
   </tr>
   <tr>
     <td>Office 2019 для Windows</td>
-    <td> - Область задач<br>
+    <td> - Панель задач<br>
          - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.2</a><br>
@@ -446,7 +454,7 @@ ms.locfileid: "24985825"
   </tr>
   <tr>
     <td>Office для iOS</td>
-    <td> - Область задач</td>
+    <td> - Панель задач</td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
          - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.2</a><br>
          - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.3</a><br>
@@ -473,7 +481,7 @@ ms.locfileid: "24985825"
   </tr>
   <tr>
     <td>Office 2016 для Mac</td>
-    <td> - Область задач<br>
+    <td> - Панель задач<br>
          - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.2</a><br>
@@ -501,7 +509,7 @@ ms.locfileid: "24985825"
   </tr>
   <tr>
     <td>Office 2019 для Mac</td>
-    <td> - Область задач<br>
+    <td> - Панель задач<br>
          - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
         - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets">WordApi 1.2</a><br>
@@ -543,8 +551,8 @@ ms.locfileid: "24985825"
   </tr>
   <tr>
     <td>Office Online</td>
-    <td> - Контент<br>
-         - Область задач<br>
+    <td> - Содержимое<br>
+         - Панель задач<br>
          - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td> - ActiveView<br>
@@ -554,13 +562,13 @@ ms.locfileid: "24985825"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion</td>
   </tr>
   <tr>
     <td>Office 2013 для Windows</td>
-    <td> - Контент<br>
-         - Область задач<br>
+    <td> - Содержимое<br>
+         - Панель задач<br>
     </td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>
 </td>
@@ -571,13 +579,13 @@ ms.locfileid: "24985825"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion</td>
   </tr>
   <tr>
     <td>Office 2016 для Windows</td>
-    <td> - Контент<br>
-         - Область задач<br>
+    <td> - Содержимое<br>
+         - Панель задач<br>
          - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td> - ActiveView<br>
@@ -587,13 +595,13 @@ ms.locfileid: "24985825"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion</td>
   </tr>
   <tr>
     <td>Office 2019 для Windows</td>
     <td> - Содержимое<br>
-         - Область задач<br>
+         - Панель задач<br>
          - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td> - ActiveView<br>
@@ -603,13 +611,13 @@ ms.locfileid: "24985825"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion</td>
   </tr>
   <tr>
     <td>Office для iOS</td>
-    <td> - Контент<br>
-         - Область задач</td>
+    <td> - Содержимое<br>
+         - Панель задач</td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
      <td> - ActiveView<br>
          - CompressedFile<br>
@@ -617,14 +625,14 @@ ms.locfileid: "24985825"
          - File<br>
          - PdfFile<br>
          - Selection<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion<br>
          - ImageCoercion</td>
   </tr>
   <tr>
     <td>Office 2016 для Mac</td>
-    <td> - Контент<br>
-         - Область задач<br>
+    <td> - Содержимое<br>
+         - Панель задач<br>
          - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td> - ActiveView<br>
@@ -634,13 +642,13 @@ ms.locfileid: "24985825"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion</td>
   </tr>
   <tr>
     <td>Office 2019 для Mac</td>
     <td> - Содержимое<br>
-         - Область задач<br>
+         - Панель задач<br>
          - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td> - ActiveView<br>
@@ -650,7 +658,7 @@ ms.locfileid: "24985825"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion</td>
   </tr>
 </table>
@@ -669,15 +677,15 @@ ms.locfileid: "24985825"
   </tr>
   <tr>
     <td>Office Online</td>
-    <td> - Контент<br>
-         - Область задач<br>
+    <td> - Содержимое<br>
+         - Панель задач<br>
          - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/onenote-api-requirement-sets">OneNoteApi 1.1</a><br>
          - <a href="https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td> - DocumentEvents<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion</td>
   </tr>
 </table>
@@ -689,4 +697,4 @@ ms.locfileid: "24985825"
 - [Обзор платформы надстроек Office](office-add-ins.md)
 - [Стандартные наборы обязательных элементов API](https://docs.microsoft.com/javascript/office/requirement-sets/office-add-in-requirement-sets)
 - [Наборы обязательных элементов для команд надстроек](https://docs.microsoft.com/javascript/office/requirement-sets/add-in-commands-requirement-sets)
-- [Справка по API JavaScript для Office](https://docs.microsoft.com/javascript/office/javascript-api-for-office)
+- [Ссылка на API JavaScript для Office](https://docs.microsoft.com/javascript/office/javascript-api-for-office)

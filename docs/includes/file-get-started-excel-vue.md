@@ -4,7 +4,7 @@
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
-- Установите [Vue CLI](https://github.com/vuejs/vue-cli) глобально.
+- Глобально установите [CLI для Vue](https://github.com/vuejs/vue-cli).
 
     ```bash
     npm install -g vue-cli
@@ -18,7 +18,7 @@
 
 ## <a name="generate-a-new-vue-app"></a>Создание нового приложения Vue
 
-Используйте Vue CLI, чтобы создать новое приложение Vue. Используя терминал, выполните приведенную ниже команду и ответьте на вопросы, как описано ниже.
+Используйте CLI для Vue, чтобы создать новое приложение Vue. Используя терминал, выполните следующую команду и ответьте на вопросы, как описано ниже.
 
 ```bash
 vue init webpack my-add-in
@@ -26,11 +26,11 @@ vue init webpack my-add-in
 
 Отвечая на вопросы, появляющиеся при выполнении предыдущей команды, переопределите стандартные ответы на 3 указанных ниже вопроса. Вы можете оставить стандартные ответы на все остальные вопросы.
 
-- ****Install vue-router?** (Установить vue-router?)** `No`
-- ****Set up unit tests?** `No` (Настроить модульные тесты?)** `No`
-- ****Setup e2e tests with Nightwatch?** (Настроить тесты e2e с помощью Nightwatch?)** `No`
+- **Установить vue-router?** `No`
+- **Настроить модульные тесты?** `No`
+- **Настроить тесты e2e с помощью Nightwatch?** `No`
 
-![Вопросы Vue CLI](../images/vue-cli-prompts.png)
+![Вопросы CLI для Vue](../images/vue-cli-prompts.png)
 
 ## <a name="generate-the-manifest-file"></a>Создание файла манифеста
 
@@ -42,7 +42,7 @@ vue init webpack my-add-in
     cd my-add-in
     ```
 
-2. Используя генератор Yeoman, создайте файл манифеста для надстройки. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
+2. Используя генератор Yeoman, создайте файл манифеста для надстройки. Выполните приведенную ниже команду и ответьте на запросы, как показано ниже.
 
     ```bash
     yo office 
@@ -50,20 +50,20 @@ vue init webpack my-add-in
 
     - **Выберите тип проекта:** `Office Add-in containing the manifest only`
     - **Как вы хотите назвать надстройку?:** `My Office Add-in`
-    - **Какое клиентское приложение Office должно поддерживаться?:** `Excel`
+    - **Какое клиентское приложение Office вы хотели бы поддерживать?:** `Excel`
 
     После завершения работы мастера вы сможете создать файл манифеста и файл ресурсов для создания вашего проекта.
 
     ![Генератор Yeoman](../images/yo-office.png)
     
     > [!NOTE]
-    > Если вам будет предложено переписать файл **package.json**, выберите **No** (Нет).
+    > Если вам будет предложено перезаписать файл **package.json**, выберите **No** (Не перезаписывать).
 
 ## <a name="secure-the-app"></a>Защита приложения
 
 [!include[HTTPS guidance](../includes/https-guidance.md)]
 
-Чтобы включить HTTPS для своего приложения, откройте файл **package.json** в корневой папке проекта, добавьте флаг `--https` в скрипт `dev` и сохраните файл.
+Чтобы включить HTTPS для своего приложения, откройте файл **package.json** в корневой папке проекта, добавьте в сценарий `dev` флажок `--https` и сохраните файл.
 
 ```json
 "dev": "webpack-dev-server --https --inline --progress --config build/webpack.dev.conf.js"
@@ -73,7 +73,7 @@ vue init webpack my-add-in
 
 1. В редакторе кода откройте файл манифеста (т. е. файл в корневом каталоге приложения, имя которого заканчивается на "manifest.xml"). Замените все вхождения `https://localhost:3000` на `https://localhost:8080` и сохраните файл.
 
-2. Откройте файл **index.html**, добавьте тег `<script>` сразу перед тегом `</head>` и сохраните.
+2. Откройте файл **index.html**, добавьте метку `<script>` сразу перед меткой `</head>` и сохраните.
 
     ```html
     <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
@@ -102,7 +102,7 @@ vue init webpack my-add-in
     }
     ```
 
-4. Откройте файл **src/App.vue**, замените его содержимое приведенным ниже кодом, добавьте разрыв строки в конце (т. е. после тега `</style>`) и сохраните файл. 
+4. Откройте файл **src/App.vue**, замените его содержимое приведенным ниже кодом, добавьте разрыв строки в конце (т. е. после метки `</style>`) и сохраните файл. 
 
     ```html
     <template>
@@ -176,7 +176,7 @@ vue init webpack my-add-in
     npm start
     ```
 
-2. В веб-браузере перейдите по адресу `https://localhost:8080`. Если появится сообщение, что сертификат сайта не является доверенным, сделайте так, чтобы компьютер ему доверял. 
+2. В веб-браузере перейдите к разделу `https://localhost:8080`. Если появится сообщение, что сертификат сайта не является доверенным, сделайте так, чтобы компьютер ему доверял. 
 
 3. После того как браузер загрузит страницу надстройки без ошибок сертификата, вы можете протестировать надстройку. 
 
@@ -184,17 +184,17 @@ vue init webpack my-add-in
 
 1. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.
 
-    - Windows[](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-    - Office Online[](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
-    - iPad и Mac[](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+    - Windows: [Загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
+    - Excel Online: [Загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
+    - iPad и Mac: [загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 
-2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
+2. В Excel перейдите на вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
     ![Кнопка надстройки Excel](../images/excel-quickstart-addin-2a.png)
 
 3. Выберите любой диапазон ячеек на листе.
 
-4. В области задач нажмите кнопку **Set color** (Задать цвет), чтобы сделать выбранный диапазон зеленым.
+4. В области задач нажмите кнопку **Выбрать цвет**, чтобы задать цвет выбранного диапазона зеленым.
 
     ![Надстройка Excel](../images/excel-quickstart-addin-2c.png)
 
@@ -208,6 +208,6 @@ vue init webpack my-add-in
 ## <a name="see-also"></a>См. также
 
 * [Руководство по надстройкам Excel](../tutorials/excel-tutorial-create-table.md)
-* [Основные понятия API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
+* [Основные принципы программирования с использованием интерфейса API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
 * [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
 * [Справочник по API JavaScript для Excel](https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview?view=office-js)

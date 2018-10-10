@@ -2,16 +2,16 @@
 title: Работа с листами с использованием API JavaScript для Excel
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: f4c129f34460340a9abed3eda4a47e3bb6dd5978
-ms.sourcegitcommit: 7ecc1dc24bf7488b53117d7a83ad60e952a6f7aa
+ms.openlocfilehash: 9ceb2187cdd7f503fb39171e420adabcc2f13041
+ms.sourcegitcommit: 563c53bac52b31277ab935f30af648f17c5ed1e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "19437439"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "25459135"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
-В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для листов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Worksheet** и **WorksheetCollection**, см. в статьях [Объект Worksheet (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/worksheet) и [Объект WorksheetCollection (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/worksheetcollection).
+В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для листов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Worksheet** и **WorksheetCollection**, см. в статьях [Объект Worksheet (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.worksheet?view=office-js) и [Объект WorksheetCollection (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection?view=office-js).
 
 > [!NOTE]
 > Сведения в этой статье применимы только к обычным листам, а не к листам диаграмм или макросов.
@@ -113,7 +113,7 @@ Excel.run(function (context) {
 
 ### <a name="get-the-next-worksheet"></a>Получение следующего листа
 
-В примере кода ниже показано, как получить лист, следующий за активным листом, в книге, загрузить его свойство **name** и записать сообщение в консоль. Если нет листа после активного листа, метод **getNext()** создаст ошибку **ItemNotFound**.
+В примере кода ниже показано, как получить лист, следующий за активным листом в книге, загрузить его свойство **name** и записать сообщение в консоль. Если нет листа после активного листа, метод **getNext()** создаст ошибку **ItemNotFound**.
 
 ```js
  Excel.run(function (context) {
@@ -130,7 +130,7 @@ Excel.run(function (context) {
 
 ### <a name="get-the-previous-worksheet"></a>Получение предыдущего листа
 
-В примере кода ниже показано, как получить лист, предшествующий активному листу, в книге, загрузить его свойство **name** и записать сообщение в консоль. Если нет листа перед активным листом, метод **getPrevious()** создаст ошибку **ItemNotFound**.
+В примере кода ниже показано, как получить лист, предшествующий активному листу в книге, загрузить его свойство **name** и записать сообщение в консоль. Если нет листа перед активным листом, метод **getPrevious()** создаст ошибку **ItemNotFound**.
 
 ```js
 Excel.run(function (context) {
@@ -260,7 +260,7 @@ Excel.run(function (context) {
 
 ## <a name="get-a-cell-within-a-worksheet"></a>Получение ячейки листа
 
-В примере кода ниже показано, как получить ячейку, расположенную в строке 2 и столбце 5 листа **Sample** (Пример), загрузить его свойства **address** и **values** и записать сообщение в консоль. Значения, передаваемые в метод **getCell(row: число, column: число)**, представляют собой индексируемые с нуля номера строк и столбцов получаемой ячейки.
+В примере кода ниже показано, как получить ячейку, расположенную в строке 2 и столбце 5 листа **Sample** (Пример), загрузить ее свойства **address** и **values** и записать сообщение в консоль. Значения, передаваемые в метод **getCell(row: число, column: число)**, представляют собой индексируемые с нуля номера строк и столбцов получаемой ячейки.
 
 ```js
 Excel.run(function (context) {
@@ -281,6 +281,5 @@ Excel.run(function (context) {
 
 ## <a name="see-also"></a>См. также
 
-- [Основные понятия API JavaScript для Excel](excel-add-ins-core-concepts.md)
-- [Объект Worksheet (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/worksheet)
-- [Объект WorksheetCollection (API JavaScript для Excel)](https://dev.office.com/reference/add-ins/excel/worksheetcollection)
+- [Основные принципы программирования с использованием интерфейса API JavaScript для Excel](excel-add-ins-core-concepts.md)
+

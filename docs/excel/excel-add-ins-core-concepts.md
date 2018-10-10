@@ -1,21 +1,21 @@
 ---
-title: Основные понятия API JavaScript для Excel
-description: ''
-ms.date: 12/04/2017
-ms.openlocfilehash: 37d652d2ad2f323d0f94583e530e91e775e06ddf
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+title: Основные принципы программирования с использованием интерфейса API JavaScript для Excel
+description: Вы можете использовать API JavaScript для Excel, чтобы создавать надстройки для Excel.
+ms.date: 10/03/2018
+ms.openlocfilehash: c66d44b76fad9f1559da7514997b62670a0f9360
+ms.sourcegitcommit: 563c53bac52b31277ab935f30af648f17c5ed1e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925411"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "25459205"
 ---
-# <a name="excel-javascript-api-core-concepts"></a>Основные понятия API JavaScript для Excel
+# <a name="fundamental-programming-concepts-with-the-excel-javascript-api"></a>Основные принципы программирования с использованием интерфейса API JavaScript для Excel
  
-В этой статье рассказывается, как создавать надстройки для Excel 2016 с помощью [API JavaScript для Excel](https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview). В статье изложены основные принципы, которые являются фундаментальными при использовании этого API, а также имеются рекомендации по выполнению определенных задач, например чтению данных из большого диапазона или записи данных в него, изменения всех ячеек в диапазоне и много другого.
+В этой статье рассказывается, как создавать надстройки для Excel 2016 или более поздней версии с помощью [API JavaScript для Excel](https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview?view=office-js). В статье изложены основные принципы, которые являются фундаментальными при использовании этого API, а также имеются рекомендации по выполнению определенных задач, например чтению данных из большого диапазона или записи данных в него, изменения всех ячеек в диапазоне и много другого.
 
 ## <a name="asynchronous-nature-of-excel-apis"></a>Асинхронный характер API Excel
 
-Веб-надстройки Excel работают в контейнере браузера, внедренном в приложение Office на платформах для настольных ПК, например Office для Windows, и работающем в iFrame HTML в Office Online. Вам не удастся заставить API Office.js синхронно взаимодействовать с ведущим приложением Excel на всех поддерживаемых платформах из-за соображений производительности. Таким образом, вызов API **sync()** в Office.js возвращает [обещание](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise), которое разрешается, когда приложение Excel выполняет запрошенные действия чтения или записи. Кроме того, вы можете поместить в очередь несколько действий, например действия настройки свойств или вызова методов, а затем запустить их в виде пакета команд в одном вызове метода **sync()**, а не отправлять отдельные запросы для каждого действия. В разделах ниже описано, как сделать это, используя API **Excel.run()** и **sync()**.
+Веб-надстройки Excel работают в контейнере браузера, внедренном в приложение Office на платформах для настольных ПК, например Office для Windows, и работающем в iFrame HTML в Office Online. Вам не удастся заставить API Office.js синхронно взаимодействовать с основным приложением Excel на всех поддерживаемых платформах из-за соображений производительности. Таким образом, вызов API **sync()** в Office.js возвращает [обещание](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise), которое разрешается, когда приложение Excel выполняет запрошенные действия чтения или записи. Кроме того, вы можете поместить в очередь несколько действий, например действия настройки свойств или вызова методов, а затем запустить их в виде пакета команд в одном вызове метода **sync()**, а не отправлять отдельные запросы для каждого действия. В разделах ниже описано, как сделать это, используя API **Excel.run()** и **sync()**.
  
 ## <a name="excelrun"></a>Excel.run
  
@@ -115,9 +115,9 @@ Excel.run(function (context) {
 });
 ```
  
-Так как в предыдущем примере в вызове метода **myRange.load()** не указан `format/font`, вам не удастся считать свойство `format.font.color`.
+Так как в предыдущем примере, не указан `format/font` в вызове метода **myRange.load()** вам не удастся считать свойство `format.font.color`.
 
-Чтобы оптимизировать производительность, явно укажите свойства и отношения, загружаемые при использовании метода **load()** для объекта, как описано в статье [Оптимизация производительности API Excel JavaScript](performance.md). Дополнительные сведения о методе **load()** см. в статье [Расширенные концепции API JavaScript для Excel](excel-add-ins-advanced-concepts.md).
+Чтобы оптимизировать производительность, явно укажите свойства и отношения, загружаемые при использовании метода **load()** для объекта, как описано в статье [Оптимизация производительности API JavaScript для Excel](performance.md). Дополнительные сведения о методе **load()** см. в статье [Углубленные принципы программирования с использованием интерфейса API JavaScript для Excel](excel-add-ins-advanced-concepts.md).
 
 ## <a name="null-or-blank-property-values"></a>Значения null или пустые значения свойств
  
@@ -140,7 +140,7 @@ range.numberFormat = [[null, null, null, 'm/d/yyyy;@']];
 range.values = null;
 ```
  
-Аналогично, указанный ниже фрагмент кода не является допустимым, так как `null` — недопустимое значение для свойства **color**.
+Аналогично указанный ниже фрагмент кода не является допустимым, так как `null` — недопустимое значение для свойства **color**.
  
 ```js
 range.format.fill.color =  null;
@@ -148,7 +148,7 @@ range.format.fill.color =  null;
  
 ### <a name="null-property-values-in-the-response"></a>Значения свойств null в ответе
  
-Если в указанном диапазоне имеются другие значения, свойства форматирования, например `size` и `color` будут содержать значения `null` в ответе. Например, если вы получаете диапазон и загружаете его свойство `format.font.color`:
+Если в указанном диапазоне имеются другие значения, свойства форматирования, например `size` и `color`, будут содержать значения `null` в ответе. Например, если вы получаете диапазон и загружаете его свойство `format.font.color`:
  
 * Если у всех ячеек в диапазоне один и тот же цвет шрифта, свойство `range.format.font.color` указывает этот цвет.
 * Если в диапазоне используется несколько цветов шрифтов, свойство `range.format.font.color` имеет значение `null`.
@@ -258,5 +258,6 @@ Excel.run(function (context) {
  
 * [Начало работы с надстройками Excel](excel-add-ins-get-started-overview.md)
 * [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples)
-* [Оптимизация производительности JavaScript API для Excel](https://docs.microsoft.com/office/dev/add-ins/excel/performance)
-* [Справочник по API JavaScript для Excel](https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview)
+* [Углубленные принципы программирования с использованием интерфейса API JavaScript для Excel](excel-add-ins-advanced-concepts.md)
+* [Оптимизация производительности API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/excel/performance)
+* [Справочник по API JavaScript для Excel](https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview?view=office-js)

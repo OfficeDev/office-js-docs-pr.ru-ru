@@ -20,7 +20,7 @@
 
 ## <a name="generate-a-new-angular-app"></a>Создание приложения Angular
 
-Используйте Angular CLI, чтобы создать приложение Angular. Используя терминал, выполните следующую команду:
+Используйте угловые CLI, чтобы создать угловые приложения. Используя терминал, выполните следующую команду:
 
 ```bash
 ng new my-addin
@@ -44,22 +44,22 @@ ng new my-addin
 
     - **Выберите тип проекта:** `Office Add-in containing the manifest only`
     - **Как вы хотите назвать надстройку?:** `My Office Add-in`
-    - **Какое клиентское приложение Office должно поддерживаться?:** `Excel`
+    - **Какое клиентское приложение Office вы хотели бы поддерживать?:** `Excel`
 
     После завершения работы мастера вы сможете создать файл манифеста и файл ресурсов для создания вашего проекта.
 
     ![Генератор Yeoman](../images/yo-office.png)
     
     > [!NOTE]
-    > Если вам будет предложено переписать файл **package.json**, выберите **No** (Нет).
+    > Если вам будет предложено переписать файл **package.json**, выберите **No** (Не перезаписывать).
 
 ## <a name="secure-the-app"></a>Защита приложения
 
 [!include[HTTPS guidance](../includes/https-guidance.md)]
 
-Для краткого руководства можно использовать сертификаты, которые предоставляет **генератор Yeoman для надстроек Office**. Вы уже установили генератор глобально (он входит в список **необходимых компонентов** этого краткого руководства), поэтому вам просто нужно скопировать сертификаты из приложения глобальной установки в папку приложения. Ниже описано, как это сделать.
+Для краткого руководства можно использовать сертификаты, которые предоставляют **Генератор Yeoman для надстроек Office**. Вы уже установили генератор глобально  (как часть **Необходимых компонентов** этого краткого руководства), поэтому вам просто нужно скопировать сертификаты из приложения глобальной установки в папку приложения. Следуюшие шаги описывают как выполнить этот процесс.
 
-1. Используя терминал, выполните следующую команду, чтобы определить папку, в которую установлены глобальные библиотек **npm**:
+1. Используя терминал, выполните следующую команду, чтобы определить папку, в которую установлены глобальные библиотеки **npm**:
 
     ```bash 
     npm list -g 
@@ -68,7 +68,7 @@ ng new my-addin
     > [!TIP]    
     > Первая строка выходных данных, создаваемых этой командой, указывает папку, в которую установлены глобальные библиотеки **npm**.          
     
-2. Используя проводник, перейдите к папке `{global libraries folder}/node_modules/generator-office/generators/app/templates/js/base`. Оттуда скопируйте папку `certs` в буфер обмена.
+2. Используя проводник, перейдите к папке  `{global libraries folder}/node_modules/generator-office/generators/app/templates/js/base` . Из этого расположения скопируйте папку `certs` в буфер обмена.
 
 3. Перейдите в корневую папку приложения Angular, созданную на шаге 1 предыдущего раздела, и вставьте папку `certs` из буфера обмена в эту папку.
 
@@ -99,7 +99,7 @@ ng new my-addin
     <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
     ```
 
-4. Откройте **src/main.ts**, замените `platformBrowserDynamic().bootstrapModule(AppModule).catch(err => console.log(err));` приведенным ниже кодом и сохраните файл. 
+4. Откройте файл **src/main.ts**, замените `platformBrowserDynamic().bootstrapModule(AppModule).catch(err => console.log(err));` приведенным ниже кодом и сохраните файл. 
 
     ```typescript 
     declare const Office: any;
@@ -110,7 +110,7 @@ ng new my-addin
     };
     ```
 
-5. Откройте **src/polyfills.ts**, добавьте приведенную ниже строку кода над всеми имеющимися операторами `import` и сохраните файл.
+5. Откройте файл **src/polyfills.ts**, добавьте приведенную ниже строку кода над всеми имеющимися операторами `import` и сохраните файл.
 
     ```typescript
     import 'core-js/client/shim';
@@ -135,7 +135,7 @@ ng new my-addin
     import 'core-js/es6/set';
     ```
 
-7. Откройте **src/app/app.component.html**, замените его содержимое приведенным ниже кодом HTML и сохраните файл. 
+7. Откройте файл **src/app/app.component.html**, замените его содержимое приведенным ниже кодом HTML и сохраните файл. 
 
     ```html
     <div id="content-header">
@@ -153,7 +153,7 @@ ng new my-addin
     </div>
     ```
 
-8. Откройте **src/app/app.component.css**, замените его содержимое приведенным ниже кодом CSS и сохраните файл.
+8. Откройте файл **src/app/app.component.css**, замените его содержимое приведенным ниже кодом CSS и сохраните файл.
 
     ```css
     #content-header {
@@ -216,7 +216,7 @@ ng new my-addin
 2. В веб-браузере перейдите по адресу `https://localhost:3000`. Если появится сообщение о том, что сертификат сайта не является доверенным, укажите, что ему можно доверять. Дополнительные сведения см. в статье [Добавление самозаверяющего сертификата как доверенного корневого сертификата](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md).
 
     > [!NOTE]
-    > Chrome может продолжать показывать предупреждение о том, что рабочая станция не доверяет сертификату сайта даже после [его добавления в список доверенных корневых сертификатов](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md). Вы можете игнорировать это предупреждение. Чтобы убедиться, что сертификат является доверенным, перейдите по адресу `https://localhost:3000` в Internet Explorer или Microsoft Edge. 
+    > Веб-браузер Chrome может продолжать показывать предупреждение о том, что рабочая станция не доверяет сертификату сайта даже после его [добавления в список доверенных корневых сертификатов](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md). Вы можете игнорировать это предупреждение. Чтобы убедиться, что сертификат является доверенным, перейдите по адресу  `https://localhost:3000` в Internet Explorer или Microsoft Edge. 
 
 3. После того как браузер загрузит страницу надстройки без ошибок сертификата, вы можете протестировать надстройку. 
 
@@ -224,22 +224,22 @@ ng new my-addin
 
 1. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.
 
-    - Windows[](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-    - Office Online[](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
-    - iPad и Mac[](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+    - Windows: [Загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
+    - Excel Online: [Загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
+    - iPad и Mac: [Загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 
    
-2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
+2. В Excel перейдите на вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
     ![Кнопка надстройки Excel](../images/excel-quickstart-addin-2a.png)
 
 3. Выберите любой диапазон ячеек на листе.
 
-4. В области задач нажмите кнопку **Set color** (Задать цвет), чтобы сделать выбранный диапазон зеленым.
+4. В области задач нажмите кнопку **Set color**, чтобы задать цвет выбранного диапазона зеленым.
 
     ![Надстройка Excel](../images/excel-quickstart-addin-2c.png)
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 Поздравляем, вы успешно создали надстройку Excel с помощью Angular! Чтобы узнать больше о возможностях надстроек Excel и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Excel.
 
@@ -249,6 +249,6 @@ ng new my-addin
 ## <a name="see-also"></a>См. также
 
 * [Руководство по надстройкам Excel](../tutorials/excel-tutorial-create-table.md)
-* [Основные понятия API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
-* [Примеры кода надстроек Excel](http://dev.office.com/code-samples#?filters=excel,office%20add-ins)
-* [Справочник по API JavaScript для Excel](https://dev.office.com/reference/add-ins/excel/excel-add-ins-reference-overview)
+* [Основные принципы программирования с использованием интерфейса API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
+* [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
+* [Справочник по API JavaScript для Excel](https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview?view=office-js)
