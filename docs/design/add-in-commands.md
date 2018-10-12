@@ -2,12 +2,12 @@
 title: Команды надстроек для Excel, Word и PowerPoint
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: 101c34748f0eba5502caeab63ecbc00992ac548e
-ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
+ms.openlocfilehash: 3db846e9d28e063d959fd617bf8c50ab5cb5ec86
+ms.sourcegitcommit: c53f05bbd4abdfe1ee2e42fdd4f82b318b363ad7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "23944518"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "25506268"
 ---
 # <a name="add-in-commands-for-excel-word-and-powerpoint"></a>Команды надстроек для Excel, Word и PowerPoint
 
@@ -85,7 +85,7 @@ ms.locfileid: "23944518"
 
 Лучший способ начать работу с командами надстроек Office — ознакомиться с [примерами](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/) на сайте GitHub.
 
-Дополнительные сведения об указании команд надстройки в манифесте см. в статье [Создание команд надстроек в манифесте](../develop/create-addin-commands.md) и справочных материалах по [VersionOverrides](https://docs.microsoft.com/javascript/office/manifest/versionoverrides?view=office-js).
+Дополнительные сведения об указании команд надстройки в манифесте см. в статье [Создание команд надстроек в манифесте](../develop/create-addin-commands.md) и справочных материалах по [VersionOverrides](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/versionoverrides?view=office-js).
 
 
 

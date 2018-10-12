@@ -1,18 +1,18 @@
 ---
 title: Создание команд надстроек в манифесте для Excel, Word и PowerPoint
-description: Используйте элемент VersionOverrides в манифесте, чтобы определить команды надстроек для Excel, Word и PowerPoint. Используйте команды надстроек, чтобы создать элементы пользовательского интерфейса, добавить кнопки или списки, а также для выполнения действий.
+description: Use VersionOverrides in your manifest to define add-in commands for Excel, Word, and PowerPoint. Use add-in commands to create UI elements, add buttons or lists, and perform actions.
 ms.date: 12/04/2017
-ms.openlocfilehash: 6542084e5f63480100a72121e6acf25e7fc49ac8
-ms.sourcegitcommit: 4b2e93db537d89e8aa7a9eb05b0338debb42ba56
+ms.openlocfilehash: 652add3eeadcbeefc20db1bf65a3255e4175332a
+ms.sourcegitcommit: c53f05bbd4abdfe1ee2e42fdd4f82b318b363ad7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "25018214"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "25506317"
 ---
 # <a name="create-add-in-commands-in-your-manifest-for-excel-word-and-powerpoint"></a>Создание команд надстроек в манифесте для Excel, Word и PowerPoint
 
 
-Используйте элемент **[VersionOverrides](https://docs.microsoft.com/javascript/office/manifest/versionoverrides?view=office-js)** в манифесте, чтобы определить команды надстроек для Excel, Word и PowerPoint. Команды надстроек позволяют легко настроить пользовательский интерфейс Office по умолчанию, добавив конкретные элементы интерфейса, выполняющие действия. С помощью команд надстройки можно следующее:
+Use **[VersionOverrides](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/versionoverrides?view=office-js)** in your manifest to define add-in commands for Excel, Word, and PowerPoint. Add-in commands provide an easy way to customize the default Office user interface (UI) with specified UI elements that perform actions. You can use add-in commands to:
 - Создавать элементы пользовательского интерфейса или точки входа, которые упрощают использование функций надстройки.  
   
 - Добавлять кнопки или раскрывающийся список кнопок на ленту.    
@@ -29,8 +29,7 @@ ms.locfileid: "25018214"
       
 В этой статье описывается, как отредактировать манифест, чтобы задать команды надстройки. На следующей схеме показана иерархия элементов, используемых для задания команд надстройки. Эти элементы подробнее рассматриваются в этой статье. 
       
-На приведенном ниже изображении представлен обзор элементов команд надстройки в манифесте. 
-![Обзор элементов команд надстройки в манифесте](../images/version-overrides.png)
+The following image is an overview of add-in commands elements in the manifest. ![Overview of add-in commands elements in the manifest](../images/version-overrides.png)
  
 ## <a name="step-1-start-from-a-sample"></a>Этап 1. Ознакомление с примером
 
@@ -143,7 +142,7 @@ ms.locfileid: "25018214"
 
 ## <a name="step-5-add-the-functionfile-element"></a>Этап 5. Добавление элемента FunctionFile
 
-Элемент **FunctionFile** задает файл, который содержит код JavaScript, выполняемый, когда команда надстройки использует действие **ExecuteFunction** (описание см. в разделе [Элементы управления "Кнопка"](https://docs.microsoft.com/javascript/office/manifest/control?view=office-js#Button-control)). В атрибуте **resid** элемента **FunctionFile** указан HTML-файл, включающий все файлы JavaScript, необходимые командам надстройки. Ссылаться непосредственно на файл JavaScript невозможно. Вы можете сослаться только на HTML-файл. Имя файла задано в дочернем элементе **Url** элемента **Resources**.
+Элемент **FunctionFile** задает файл, который содержит код JavaScript, выполняемый, когда команда надстройки использует действие **ExecuteFunction** (описание см. в разделе [Элементы управления "Кнопка"](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/control?view=office-js#Button-control)). В атрибуте **resid** элемента **FunctionFile** указан HTML-файл, включающий все файлы JavaScript, необходимые командам надстройки. Ссылаться непосредственно на файл JavaScript невозможно. Вы можете сослаться только на HTML-файл. Имя файла задано в дочернем элементе **Url** элемента **Resources**.
         
 Ниже приведен пример элемента **FunctionFile**.
   
@@ -161,7 +160,7 @@ ms.locfileid: "25018214"
 > [!IMPORTANT]
 > Убедитесь, что код JavaScript вызывает `Office.initialize`. 
    
-JavaScript должен вызывать `Office.initialize` в HTML-файле, на который ссылается элемент **FunctionFile**. Элемент **FunctionName** (описание см. в разделе [Элементы управления "Кнопка"](https://docs.microsoft.com/javascript/office/manifest/control?view=office-js#Button-control)) использует функции в элементе **FunctionFile**.
+JavaScript должен вызывать `Office.initialize` в HTML-файле, на который ссылается элемент **FunctionFile**. Элемент **FunctionName** (описание см. в разделе [Элементы управления "Кнопка"](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/control?view=office-js#Button-control)) использует функции в элементе **FunctionFile**.
      
 Приведенный ниже пример кода показывает, как внедрить функцию, используемую элементом **FunctionName**.
 
@@ -247,13 +246,13 @@ JavaScript должен вызывать `Office.initialize` в HTML-файле,
 |**Элемент**|**Описание**|
 |:-----|:-----|
 |**CustomTab** <br/> |Обязательный, если требуется добавить пользовательскую вкладку в ленту (с помощью элемента **PrimaryCommandSurface**). Невозможно использовать элементы **CustomTab** и **OfficeTab** одновременно. Атрибут **id** является обязательным. <br/> |
-|**OfficeTab** <br/> |Обязательный, если требуется расширить стандартную вкладку ленты Office (с помощью элемента **PrimaryCommandSurface**). Невозможно использовать элементы **OfficeTab** и **CustomTab** одновременно. <br/> Дополнительные значения, которые можно использовать с атрибутом **id**, см. в разделе [Значения для стандартных вкладок Office](https://docs.microsoft.com/javascript/office/manifest/officetab?view=office-js).  <br/> |
+|**OfficeTab** <br/> |Обязательный, если требуется расширить стандартную вкладку ленты Office (с помощью элемента **PrimaryCommandSurface**). Невозможно использовать элементы **OfficeTab** и **CustomTab** одновременно. <br/> Дополнительные значения, которые можно использовать с атрибутом **id**, см. в разделе [Значения для стандартных вкладок Office](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/officetab?view=office-js).  <br/> |
 |**OfficeMenu** <br/> | Обязательный при добавлении команд надстройки в контекстное меню по умолчанию (с помощью элемента **ContextMenu**). Для атрибута **id** необходимо задать следующее значение: <br/> **ContextMenuText** для Excel или Word. Отображает элемент в контекстном меню, когда пользователь щелкает выделенный текст правой кнопкой мыши. <br/> **ContextMenuCell** для Excel. Отображает элемент в контекстном меню, когда пользователь щелкает ячейку электронной таблицы правой кнопкой мыши. <br/> |
 |**Группа** <br/> |Группа точек расширения интерфейса пользователя на вкладке. В группе может быть до шести элементов управления. Атрибут **id** является обязательным. Это строка длиной до 125 символов. <br/> |
 |**Label** <br/> |Обязательный. Метка группы. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **String**. **String** — это дочерний элемент **ShortStrings**, который в свою очередь является дочерним для элемента **Resources**. <br/> |
 |**Значок** <br/> |Обязательный. Определяет значок группы для использования на устройствах с малым форм-фактором или в случаях, когда отображается слишком много кнопок. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **Image**. **Image** — это дочерний элемент **Images**, который в свою очередь является дочерним для элемента **Resources**. Атрибут **size** определяет размер изображения в пикселях. Обязательными являются три размера изображения: 16, 32 и 80. Кроме того, поддерживаются пять необязательных размеров: 20, 24, 40, 48 и 64. <br/> |
 |**Подсказка** <br/> |Необязательный параметр. Всплывающая подсказка группы. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **String**. **String** — это дочерний элемент **LongStrings**, который в свою очередь является дочерним для элемента **Resources**. <br/> |
-|**Элемент управления** <br/> |Для каждой группы требуется хотя бы один элемент управления. Элемент **Control** может иметь значение **Button** или **Menu**. Укажите **Menu**, чтобы задать раскрывающийся список элементов управления "Кнопка". В настоящий момент поддерживаются только кнопки и меню. Дополнительные сведения см. в разделах [Элементы управления "Кнопка"](https://docs.microsoft.com/javascript/office/manifest/control?view=office-js#Button-control) и [Элементы управления "Меню"](https://docs.microsoft.com/javascript/office/manifest/control?view=office-js#menu-dropdown-button-controls). <br/>**Примечание.** Чтобы упростить устранение неполадок, рекомендуем добавлять элемент **Control** и соответствующие дочерние элементы **Resources** по одному.          |
+|**Элемент управления** <br/> |Для каждой группы требуется хотя бы один элемент управления. Элемент **Control** может иметь значение **Button** или **Menu**. Укажите **Menu**, чтобы задать раскрывающийся список элементов управления "Кнопка". В настоящий момент поддерживаются только кнопки и меню. Дополнительные сведения см. в разделах [Элементы управления "Кнопка"](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/control?view=office-js#Button-control) и [Элементы управления "Меню"](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/control?view=office-js#menu-dropdown-button-controls). <br/>**Примечание.** Чтобы упростить устранение неполадок, рекомендуем добавлять элемент **Control** и соответствующие дочерние элементы **Resources** по одному.          |
    
 
 ### <a name="button-controls"></a>Элементы управления "Кнопка"
@@ -381,7 +380,7 @@ JavaScript должен вызывать `Office.initialize` в HTML-файле,
 |**Подсказка** <br/> |Необязательный параметр. Всплывающая подсказка для меню. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **String**. **String** — это дочерний элемент **LongStrings**, который в свою очередь является дочерним для элемента **Resources**. <br/> |
 |**SuperTip** <br/> | Обязательный элемент. Суперподсказка для меню, определяемая указанными ниже элементами. <br/> **Заголовок** <br/>  Обязательный. Текст суперподсказки. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **String**. **String** — это дочерний элемент **ShortStrings**, который в свою очередь является дочерним для элемента **Resources**. <br/> **Описание** <br/>  Обязательный. Описание суперподсказки. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **String**. **String** — это дочерний элемент **LongStrings**, который в свою очередь является дочерним для элемента **Resources**. <br/> |
 |**Значок** <br/> | Обязательный. Содержит элементы **Image** для меню. Файлы изображений должны быть в формате PNG. <br/> **Образ** <br/>  Изображение для меню. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **Image**. **Image** — это дочерний элемент **Images**, который в свою очередь является дочерним для элемента **Resources**. Атрибут **size** определяет размер изображения в пикселях. Обязательными являются три размера изображения в пикселях: 16, 32 и 80. Кроме того, поддерживаются пять необязательных размеров в пикселях: 20, 24, 40, 48 и 64. <br/> |
-|**Items** <br/> |Обязательный. Содержит элементы **Item** для каждого элемента подменю. Каждый элемент **Item** содержит те же дочерние элементы, что и [Элементы управления ''Кнопка''](https://docs.microsoft.com/javascript/office/manifest/control?view=office-js#Button-control).  <br/> |
+|**Items** <br/> |Обязательный. Содержит элементы **Item** для каждого элемента подменю. Каждый элемент **Item** содержит те же дочерние элементы, что и [Элементы управления ''Кнопка''](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/control?view=office-js#Button-control).  <br/> |
    
 ## <a name="step-7-add-the-resources-element"></a>Этап 7. Добавление элемента Resources
 
