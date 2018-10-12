@@ -12,7 +12,7 @@
     npm install -g @angular/cli
     ```
 
-- Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
+- Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
 
     ```bash
     npm install -g yo generator-office
@@ -51,7 +51,7 @@ ng new my-addin
     ![Генератор Yeoman](../images/yo-office.png)
     
     > [!NOTE]
-    > Если вам будет предложено переписать файл **package.json**, выберите **No** (Не перезаписывать).
+    > Если вам будет предложено перезаписать файл **package.json**, выберите **No** (Не перезаписывать).
 
 ## <a name="secure-the-app"></a>Защита приложения
 
@@ -225,8 +225,8 @@ ng new my-addin
 1. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.
 
     - Windows: [Загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-    - Excel Online: [Загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
-    - iPad и Mac: [Загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+    - Excel Online: [загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
+    - iPad и Mac: [загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 
    
 2. В Excel перейдите на вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
@@ -235,7 +235,7 @@ ng new my-addin
 
 3. Выберите любой диапазон ячеек на листе.
 
-4. В области задач нажмите кнопку **Set color**, чтобы задать цвет выбранного диапазона зеленым.
+4. В области задач нажмите кнопку **Задать цвет**, чтобы сделать выбранный диапазон зеленым.
 
     ![Надстройка Excel](../images/excel-quickstart-addin-2c.png)
 
@@ -249,6 +249,6 @@ ng new my-addin
 ## <a name="see-also"></a>См. также
 
 * [Руководство по надстройкам Excel](../tutorials/excel-tutorial-create-table.md)
-* [Основные принципы программирования с использованием интерфейса API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
+* [Основные принципы программирования с помощью API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
 * [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
-* [Справочник по API JavaScript для Excel](https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview?view=office-js)
+* [Справочник по API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js)

@@ -5,12 +5,20 @@
 
 Пространство имен Office.context содержит общие интерфейсы, которые используются надстройками всех приложений Office. В этот список входят только интерфейсы, используемые надстройками Outlook. Полный список интерфейсов пространства имен Office.context см. в статье [Ссылка на пространство имен Office.context в общем API](/javascript/api/office/office.context).
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Обязательные элементы
 
-|Требование| Значение|
+|Обязательный элемент| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose (создание) или read (чтение)|
+
+##### <a name="members-and-methods"></a>Члены и методы
+
+| Член | Тип |
+|--------|------|
+| [displayLanguage](#displaylanguage-string) | Член |
+| [officeTheme](#officetheme-object) | Член |
+| [roamingSettings](#roamingsettings-roamingsettingsjavascriptapioutlookofficeroamingsettings) | Член |
 
 ### <a name="namespaces"></a>Пространства имен
 
@@ -20,7 +28,7 @@
 
 ####  <a name="displaylanguage-string"></a>displayLanguage :String
 
-Получает определенный пользователем языковой стандарт в формате обозначений языка RFC 1766 для пользовательского интерфейса ведущего приложения Office.
+Получает определенный пользователем языковой стандарт в формате метки языка RFC 1766 для пользовательского интерфейса ведущего приложения Office.
 
 Значение `displayLanguage` отображает текущий параметр **Язык интерфейса**, заданный в разделе **Файл > Параметры > Язык** ведущего приложения Office.
 
@@ -28,11 +36,11 @@
 
 *   String
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Обязательные элементы
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
@@ -70,19 +78,19 @@ function write(message){
 
 ##### <a name="properties"></a>Свойства:
 
-|Name| Тип| Описание|
+|Имя| Тип| Описание|
 |---|---|---|
 |`bodyBackgroundColor`| String|Получает цвет фона текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
-|`bodyForegroundColor`| String|Получает основной цвет текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
+|`bodyForegroundColor`| String|Получает цвет переднего плана текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
 |`controlBackgroundColor`| String|Получает цвет фона элемента управления для темы Office в виде шестнадцатеричной триады цветов.|
 |`controlForegroundColor`| String|Получает цвет элемента управления текстом сообщения для темы Office в виде шестнадцатеричной триады цветов.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Обязательные элементы
 
-|Требование| Значение|
+|Обязательный элемент| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.3|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.3|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose (создание) или read (чтение)|
 
 ##### <a name="example"></a>Пример
 
@@ -99,7 +107,7 @@ function applyOfficeTheme(){
 }
 ```
 
-####  <a name="roamingsettings-roamingsettingsjavascriptapioutlook14officeroamingsettings"></a>roamingSettings :[RoamingSettings](/javascript/api/outlook_1_4/office.RoamingSettings)
+####  <a name="roamingsettings-roamingsettingsjavascriptapioutlookofficeroamingsettings"></a>roamingSettings :[RoamingSettings](/javascript/api/outlook/office.RoamingSettings)
 
 Получает объект, представляющий настраиваемые параметры или состояние надстройки почты, сохраненное в почтовом ящике пользователя.
 
@@ -107,12 +115,12 @@ function applyOfficeTheme(){
 
 ##### <a name="type"></a>Тип:
 
-*   [RoamingSettings](/javascript/api/outlook_1_4/office.RoamingSettings)
+*   [RoamingSettings](/javascript/api/outlook/office.RoamingSettings)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Обязательные элементы
 
-|Требование| Значение|
+|Обязательный элемент| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| Ограниченный доступ|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose (создание) или read (чтение)|

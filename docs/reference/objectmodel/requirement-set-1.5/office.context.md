@@ -1,4 +1,3 @@
-
 # <a name="context"></a>context
 
 ### <a name="officeofficemdcontext"></a>[Office](Office.md).context
@@ -9,8 +8,16 @@
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+
+##### <a name="members-and-methods"></a>Члены и методы
+
+| Член | Тип |
+|--------|------|
+| [displayLanguage](#displaylanguage-string) | Член |
+| [officeTheme](#officetheme-object) | Член |
+| [roamingSettings](#roamingsettings-roamingsettingsjavascriptapioutlook15officeroamingsettings) | Член |
 
 ### <a name="namespaces"></a>Пространства имен
 
@@ -26,13 +33,13 @@
 
 ##### <a name="type"></a>Тип:
 
-*   String
+*   Строка
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
@@ -70,18 +77,18 @@ function write(message){
 
 ##### <a name="properties"></a>Свойства:
 
-|Name| Тип| Описание|
+|Имя| Тип| Описание|
 |---|---|---|
-|`bodyBackgroundColor`| String|Получает цвет фона текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
-|`bodyForegroundColor`| String|Получает основной цвет текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
-|`controlBackgroundColor`| String|Получает цвет фона элемента управления для темы Office в виде шестнадцатеричной триады цветов.|
-|`controlForegroundColor`| String|Получает цвет элемента управления текстом сообщения для темы Office в виде шестнадцатеричной триады цветов.|
+|`bodyBackgroundColor`| Строка|Получает цвет фона текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
+|`bodyForegroundColor`| Строка|Получает основной цвет текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
+|`controlBackgroundColor`| Строка|Получает цвет фона элемента управления для темы Office в виде шестнадцатеричной триады цветов.|
+|`controlForegroundColor`| Строка|Получает цвет элемента управления текстом сообщения для темы Office в виде шестнадцатеричной триады цветов.|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.3|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.3|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
@@ -99,7 +106,7 @@ function applyOfficeTheme(){
 }
 ```
 
-####  <a name="roamingsettings-roamingsettingsjavascriptapioutlook14officeroamingsettings"></a>roamingSettings :[RoamingSettings](/javascript/api/outlook_1_4/office.RoamingSettings)
+####  <a name="roamingsettings-roamingsettingsjavascriptapioutlook15officeroamingsettings"></a>roamingSettings :[RoamingSettings](/javascript/api/outlook_1_5/office.RoamingSettings)
 
 Получает объект, представляющий настраиваемые параметры или состояние надстройки почты, сохраненное в почтовом ящике пользователя.
 
@@ -107,12 +114,12 @@ function applyOfficeTheme(){
 
 ##### <a name="type"></a>Тип:
 
-*   [RoamingSettings](/javascript/api/outlook_1_4/office.RoamingSettings)
+*   [RoamingSettings](/javascript/api/outlook_1_5/office.RoamingSettings)
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| Ограниченный доступ|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|

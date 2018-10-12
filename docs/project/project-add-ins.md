@@ -2,19 +2,19 @@
 title: Надстройки области задач для Project
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: 2aa8a88878082357949935305b9d39d203f5fb5d
-ms.sourcegitcommit: fdf7f4d686700edd6e6b04b2ea1bd43e59d4a03a
+ms.openlocfilehash: 1b7554920c0f6e76ec0b351e103781e152c70a9d
+ms.sourcegitcommit: c53f05bbd4abdfe1ee2e42fdd4f82b318b363ad7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "25348165"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "25506107"
 ---
 # <a name="task-pane-add-ins-for-project"></a>Надстройки области задач для Project
 
-Project стандартный 2013 и Project профессиональный 2013 (версия 15.1 или выше) включают поддержку надстроек области задач. Вы можете запускать общие надстройки области задач, разработанные для Word 2013 или Excel 2013. Вы также можете создавать настраиваемые надстройки, которые обрабатывают события выбора в Project и интегрируют данные о задачах, ресурсах, представлениях и других данных на уровне ячеек в проект с помощью списков SharePoint, надстроек SharePoint, веб-частей, веб-служб и корпоративных приложений.
+Project стандартный 2013 и Project профессиональный 2013 (версии 15.1 или более поздней) поддерживают надстройки области задач. Вы можете запускать стандартные надстройки области задач, разработанные для Word 2013 и Excel 2013. Вы также можете разрабатывать собственные надстройки, которые обрабатывают события выбора в Project и интегрируют данные на уровне задачи, ресурса, представления и другие данные уровня ячейки в проект со списками SharePoint, надстройками SharePoint, веб-частями, веб-службами и корпоративными приложениями.
 
 > [!NOTE]
-> [Загружаемый пакет SDK Project 2013](https://www.microsoft.com/download/details.aspx?id=30435%20) включает в себя примеры надстроек, показывающие, как использовать объектную модель надстроек для Project и как использовать службу OData для отчетности в Project Server 2013. При извлечении и установке пакета SDK см. подкаталог `\Samples\Apps\`.
+> [Загружаемый пакет SDK Project 2013](https://www.microsoft.com/download/details.aspx?id=30435%20) включает примеры надстроек, показывающие, как использовать объектную модель надстроек для Project и службу OData для отчетности в Project Server 2013. При извлечении и установке пакета SDK см. подкаталог `\Samples\Apps\`.
 
 Общие сведения о надстройках Office см. в статье [Обзор платформы надстроек Office](../overview/office-add-ins.md).
 
@@ -204,7 +204,7 @@ Project стандартный 2013 и Project профессиональный 
 
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)
 - [XML-манифест надстройки Office](../develop/add-in-manifests.md)
-- [API JavaScript для Office](https://docs.microsoft.com/javascript/office/javascript-api-for-office?view=office-js)
+- [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js)
 - [Создайте свою первую надстройку области задач для Project 2013 с помощью текстового редактора](create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md)
 - [Создание надстройки Project, использующей REST с локальной службой OData Project Server](create-a-project-add-in-that-uses-rest-with-an-on-premises-odata-service.md)
 - [Подключение надстройки области задач Project к PWA](http://blogs.msdn.com/b/project_programmability/archive/2012/11/02/connecting-a-project-task-pane-app-to-pwa.aspx)

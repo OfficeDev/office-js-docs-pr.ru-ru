@@ -1,7 +1,7 @@
 
 # <a name="mailbox"></a>mailbox
 
-### Почтовый ящик[Microsoft Office](Office.md)[.context](Office.context.md).
+### [Office](Office.md)[.context](Office.context.md). mailbox
 
 Предоставляет для Microsoft Outlook и Microsoft Outlook в Интернете доступ к объектной модели надстройки Outlook.
 
@@ -9,23 +9,23 @@
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| Restricted|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| Ограниченный доступ|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose или read|
 
 ### <a name="namespaces"></a>Пространства имен
 
 [diagnostics](Office.context.mailbox.diagnostics.md): предоставляет надстройке Outlook диагностические сведения.
 
-[item](Office.context.mailbox.item.md): предоставляет методы и свойства для доступа к сообщению или встрече в надстройке Outlook.
+[item](Office.context.mailbox.item.md). Предоставляет методы и свойства для доступа к сообщению или встрече в надстройке Outlook.
 
 [userProfile](Office.context.mailbox.userProfile.md): предоставляет сведения о пользователе в надстройке Outlook.
 
-### <a name="members"></a>Элементы
+### <a name="members"></a>Члены
 
-#### <a name="ewsurl-string"></a>ewsUrl: String
+#### <a name="ewsurl-string"></a>ewsUrl :String
 
-Получает URL-адрес конечной точки веб-служб Exchange (EWS) для этой учетной записи электронной почты. Только в режиме чтения.
+Получает URL-адрес конечной точки веб-служб Exchange (EWS) для конкретной учетной записи электронной почты. Только в режиме чтения.
 
 > [!NOTE]
 > Этот элемент не поддерживается в Outlook для iOS или Outlook для Android.
@@ -34,13 +34,13 @@
 
 ##### <a name="type"></a>Тип:
 
-*   Строка
+*   String
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
 
@@ -48,9 +48,9 @@
 
 ####  <a name="converttolocalclienttimetimevalue--localclienttimejavascriptapioutlook12officelocalclienttime"></a>convertToLocalClientTime(timeValue) → {[LocalClientTime](/javascript/api/outlook_1_2/office.LocalClientTime)}
 
-Получает словарь, содержащий сведения о локальном времени клиента.
+Получает словарь, содержащий информацию о времени в локальном времени клиента.
 
-В случае дат и времени в почтовом приложении для Outlook или Outlook Web App могут использоваться разные часовые пояса. Outlook использует часовой пояс клиентского компьютера. Outlook Web App использует часовой пояс, заданный в Центре администрирования Exchange (EAC). Значения даты и времени должны обрабатываться так, чтобы значения в пользовательском интерфейсе всегда согласовывались с часовым поясом, ожидаемым пользователем.
+Для даты и времени в почтовом приложении для Outlook или Outlook Web App могут использоваться разные часовые пояса. Outlook использует часовой пояс клиентского компьютера. Outlook Web App использует часовой пояс, заданный в Центре администрирования Exchange (EAC). Значения даты и времени должны обрабатываться так, чтобы значения в пользовательском интерфейсе всегда согласовывались с часовым поясом, ожидаемым пользователем.
 
 Если почтовое приложение работает в Outlook, метод `convertToLocalClientTime` вернет объект словаря со значениями часового пояса клиентского компьютера. Если почтовое приложение работает в Outlook Web App, метод `convertToLocalClientTime` вернет объект словаря со значениями часового пояса, заданного в Центре администрирования Exchange.
 
@@ -58,15 +58,15 @@
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`timeValue`| Дата|Объект Date|
+|`timeValue`| Date|Объект Date|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose или read|
 
 ##### <a name="returns"></a>Возвращаемое значение:
 
@@ -88,9 +88,9 @@
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose или read|
 
 ##### <a name="returns"></a>Возвращаемое значение:
 
@@ -100,7 +100,7 @@
 
 <dt>Тип</dt>
 
-<dd>Дата</dd>
+<dd>Date</dd>
 
 </dl>
 
@@ -113,9 +113,9 @@
 
 Метод `displayAppointmentForm` открывает новое окно на компьютере или диалоговое окно на мобильном устройстве, содержащее сведения календаря о существующей встрече.
 
-В Outlook для Mac с помощью этого метода можно отобразить одну встречу, которая не является частью повторяющегося ряда, или основную встречу такого ряда, но не экземпляр из него, так как в Outlook для Mac невозможно получить доступ к свойствам экземпляра повторяющегося ряда (в том числе к идентификатору элемента).
+В Outlook для Mac с помощью этого метода можно отобразить одну встречу, которая не является частью повторяющегося ряда, или образец встречи из повторяющегося ряда, но не экземпляр ряда, так как в Outlook для Mac невозможно получить доступ к свойствам экземпляра повторяющегося ряда (в том числе к идентификатору элемента).
 
-В Outlook Web App этот метод открывает указанную форму, только если текст формы содержит символы размером не более 32 КБ.
+В Outlook Web App этот метод открывает указанную форму, только если текст формы содержит не более 32 КБ символов.
 
 Если указанный идентификатор элемента не определяет существующую встречу, на клиентском компьютере или устройстве открывается пустая страница, и сообщение об ошибке не возвращается.
 
@@ -123,15 +123,15 @@
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`itemId`| Строка|Идентификатор веб-служб Exchange для существующей встречи в календаре.|
+|`itemId`| String|Идентификатор веб-служб Exchange (EWS) для существующей встречи в календаре.|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose или read|
 
 ##### <a name="example"></a>Пример
 
@@ -141,14 +141,14 @@ Office.context.mailbox.displayAppointmentForm(appointmentId);
 
 ####  <a name="displaymessageformitemid"></a>displayMessageForm(itemId)
 
-Отображает имеющееся сообщение.
+Отображает существующее сообщение.
 
 > [!NOTE]
 > Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
 
-Метод `displayMessageForm` открывает новое окно на компьютере или диалоговое окно на мобильном устройстве, содержащее существующее сообщение.
+Метод `displayMessageForm` открывает существующее сообщение в новом окне на компьютере или в диалоговом окне на мобильных устройствах.
 
-В Outlook Web App этот метод открывает указанную форму, только если текст формы содержит символы размером не более 32 КБ.
+В Outlook Web App этот метод открывает указанную форму, только если текст формы содержит не более 32 КБ символов.
 
 Если указанный идентификатор элемента не определяет существующее сообщение, окно на клиентском компьютере не открывается и сообщение об ошибке не возвращается.
 
@@ -158,15 +158,15 @@ Office.context.mailbox.displayAppointmentForm(appointmentId);
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`itemId`| Строка|Идентификатор веб-служб Exchange для существующего сообщения.|
+|`itemId`| String|Идентификатор веб-служб Exchange (EWS) для существующего сообщения.|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose или read|
 
 ##### <a name="example"></a>Пример
 
@@ -187,7 +187,7 @@ Office.context.mailbox.displayMessageForm(messageId);
 
 Если вы укажете участников или ресурсы с помощью параметра `requiredAttendees`, `optionalAttendees` или `resources` в клиенте Outlook с расширенными возможностями и Outlook RT, этот метод отобразит форму собрания с кнопкой **Отправить**. Если не указать получателей, этот метод отобразит форму встречи с кнопкой **Сохранить и закрыть**.
 
-Если параметры превышают указанные ограничения размера или если указано неизвестное имя параметра, вызывается исключение.
+Если параметры превышают указанные ограничения размера или если указано неизвестное имя параметра, создается исключение.
 
 ##### <a name="parameters"></a>Параметры:
 
@@ -196,18 +196,18 @@ Office.context.mailbox.displayMessageForm(messageId);
 | `parameters` | Объект | Словарь параметров, описывающий новую встречу. |
 | `parameters.requiredAttendees` | Array.&lt;String&gt; | Array.&lt;[EmailAddressDetails](/javascript/api/outlook_1_2/office.emailaddressdetails)&gt; | Массив строк, содержащий электронные адреса, или массив, содержащий объекты `EmailAddressDetails` для каждого из обязательных участников встречи. Массив может включать не более 100 записей. |
 | `parameters.optionalAttendees` | Array.&lt;String&gt; | Array.&lt;[EmailAddressDetails](/javascript/api/outlook_1_2/office.emailaddressdetails)&gt; | Массив строк, содержащий электронные адреса, или массив, содержащий объекты `EmailAddressDetails` для каждого из необязательных участников встречи. Массив может включать не более 100 записей. |
-| `parameters.start` | Дата | Объект `Date`, указывающий дату и время начала встречи. |
-| `parameters.end` | Дата | Объект `Date`, указывающий дату и время окончания встречи. |
-| `parameters.location` | Строка | Строка со сведениями о месте встречи. Максимальное количество символов в строке — 255. |
+| `parameters.start` | Date | Объект `Date`, указывающий дату и время начала встречи. |
+| `parameters.end` | Date | Объект `Date`, указывающий дату и время окончания встречи. |
+| `parameters.location` | String | Строка со сведениями о месте встречи. Максимальное количество символов в строке — 255. |
 | `parameters.resources` | Array.&lt;String&gt; | Массив строк, содержащий необходимые для встречи ресурсы. Массив может включать не более 100 записей. |
-| `parameters.subject` | Строка | Строка с темой встречи. Максимальное количество символов в строке — 255. |
-| `parameters.body` | Строка | Текст сообщения о встрече. Максимальный размер содержимого сообщения — 32 КБ. |
+| `parameters.subject` | String | Строка с темой встречи. Максимальное количество символов в строке — 255. |
+| `parameters.body` | String | Текст сообщения о встрече. Максимальный размер содержимого сообщения — 32 КБ. |
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
 
@@ -237,7 +237,7 @@ Office.context.mailbox.displayNewAppointmentForm(
 
 Метод `getCallbackTokenAsync` совершает асинхронный вызов, чтобы получить непрозрачный маркер с сервера Exchange Server, на котором размещен почтовый ящик пользователя. Время существования маркера обратного вызова составляет 5 минут.
 
-Вы можете передать сторонней системе маркери идентификатор вложения или элемента. Сторонняя система использует этот токен, как маркер авторизации, чтобы вызвать операцию [GetAttachment](https://docs.microsoft.com/exchange/client-developer/web-service-reference/getattachment-operation) или [GetItem](https://docs.microsoft.com/exchange/client-developer/web-service-reference/getitem-operation) веб-служб Exchange для возврата вложения или элемента. Например, вы можете создать удаленную службу, чтобы [получить вложения из выбранного элемента](https://docs.microsoft.com/outlook/add-ins/get-attachments-of-an-outlook-item).
+Вы можете передать сторонней системе маркер и идентификатор вложения или элемента. Сторонняя система использует этот маркер как маркер авторизации, чтобы вызвать операцию [GetAttachment](https://docs.microsoft.com/exchange/client-developer/web-service-reference/getattachment-operation) или [GetItem](https://docs.microsoft.com/exchange/client-developer/web-service-reference/getitem-operation) веб-служб Exchange для возврата вложения или элемента. Например, вы можете создать удаленную службу, чтобы [получить вложения из выбранного элемента](https://docs.microsoft.com/outlook/add-ins/get-attachments-of-an-outlook-item).
 
 Чтобы вызвать метод `getCallbackTokenAsync`, у вашего приложения должно быть разрешение **ReadItem**, указанное в его манифесте.
 
@@ -246,13 +246,13 @@ Office.context.mailbox.displayNewAppointmentForm(
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
 |`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.|
-|`userContext`| Объект| &lt;optional&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+|`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
 
@@ -272,22 +272,22 @@ function cb(asyncResult) {
 
 Получает маркер, идентифицирующий пользователя и надстройку Office.
 
-Метод `getUserIdentityTokenAsync` возвращает маркер, который можно использовать для идентификации, а также [проверки подлинности надстройки и пользователя в сторонней системе](https://docs.microsoft.com/outlook/add-ins/authentication).
+Метод `getUserIdentityTokenAsync` возвращает маркер, который можно использовать для идентификации и [проверки подлинности надстройки и пользователя в сторонней системе](https://docs.microsoft.com/outlook/add-ins/authentication).
 
 ##### <a name="parameters"></a>Параметры:
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
 |`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.|
-|`userContext`| Объект| &lt;optional&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+|`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose или read|
 
 ##### <a name="example"></a>Пример
 
@@ -307,16 +307,16 @@ function cb(asyncResult) {
 
 > [!NOTE]
 > Этот метод не поддерживается в следующих сценариях.
-> - In Outlook for iOS or Outlook for Android
+> - В Outlook для iOS или Outlook для Android.
 > - Когда надстройка загружается в почтовом ящике Gmail
 > 
-> Вместо этого, надстройкам следует [API-интерфейсы REST](https://docs.microsoft.com/outlook/add-ins/use-rest-api) для доступа к почтовому ящику пользователя.
+> Вместо этого надстройкам следует использовать [API-интерфейсы REST](https://docs.microsoft.com/outlook/add-ins/use-rest-api) для доступа к почтовому ящику пользователя.
 
-Метод `makeEwsRequestAsync` отправляет запрос EWS от имени надстройки в Exchange. См. [Вызов веб-служб из надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/web-services#ews-operations-that-add-ins-support) для информации о списке поддерживаемых операций веб-служб Exchange.
+Метод `makeEwsRequestAsync` отправляет к Exchange EWS-запрос от имени надстройки. См. [Вызов веб-служб из надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/web-services#ews-operations-that-add-ins-support) для ознакомления с информацией о списке поддерживаемых операций веб-служб Exchange.
 
 С помощью метода `makeEwsRequestAsync` невозможно запрашивать элементы, связанные с папкой.
 
-В запросе XML должна быть указана кодировка UTF-8.
+XML-запрос должен указывать кодировку UTF-8.
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -325,11 +325,11 @@ function cb(asyncResult) {
 У вашей надстройки должно быть разрешение **ReadWriteMailbox** для использования метода `makeEwsRequestAsync`. Сведения об использовании разрешения **ReadWriteMailbox** и операций EWS, которые можно вызывать с помощью метода `makeEwsRequestAsync`, см. в статье [Указание разрешений для доступа почтовой надстройки к почтовому ящику пользователя](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions).
 
 > [!NOTE]
-> Администратор сервера должен установить `OAuthAuthentication` значение true в каталоге сервера клиентского доступа EWS, чтобы включить метод  `makeEwsRequestAsync` для запросов служб EWS.
+> Администратор сервера должен установить для `OAuthAuthentication` значение true в каталоге сервера клиентского доступа EWS, чтобы включить метод  `makeEwsRequestAsync` для запросов служб EWS.
 
 ##### <a name="version-differences"></a>Различия версий
 
-Если вы используете метод `makeEwsRequestAsync` в почтовых приложениях, которые выполняются в Outlook версии более ранней, чем 15.0.4535.1004, указывайте кодировку `ISO-8859-1`.
+Если вы используете метод `makeEwsRequestAsync` в почтовых приложениях, которые выполняются в версии Outlook, предшествующей 15.0.4535.1004, указывайте кодировку `ISO-8859-1`.
 
 ```
 <?xml version="1.0" encoding="iso-8859-1"?>
@@ -341,17 +341,17 @@ function cb(asyncResult) {
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-|`data`| Строка||Запрос EWS.|
+|`data`| String||Запрос EWS.|
 |`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Результат XML вызова EWS указывается в виде строки в свойстве `asyncResult.value`. Если размер результата превышает 1 МБ, возвращается сообщение об ошибке.|
-|`userContext`| Объект| &lt;optional&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+|`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadWriteMailbox|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose или read|
 
 ##### <a name="example"></a>Пример
 

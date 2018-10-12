@@ -2,17 +2,16 @@
 title: Используйте параметры поиска, чтобы найти текст в надстройке Word
 description: ''
 ms.date: 7/20/2018
-ms.openlocfilehash: 9dcd5e42de9cc0816797a4a14b40a0e3e376f158
-ms.sourcegitcommit: eea7f2b1679cf9a209d35880b906e311bdf1359c
+ms.openlocfilehash: ca5c819edb7f3c183379d9df997e41eb56a4de51
+ms.sourcegitcommit: c53f05bbd4abdfe1ee2e42fdd4f82b318b363ad7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "21254863"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "25505372"
 ---
 # <a name="use-search-options-to-find-text-in-your-word-add-in"></a>Используйте параметры поиска, чтобы найти текст в надстройке Word 
 
-Надстройки часто должны действовать на основе текста документа.
-Функция поиска предоставлена для каждого элемента управления содержимым (включает объекты [Текст сообщения](https://dev.office.com/reference/add-ins/word/body), [Параграф](https://dev.office.com/reference/add-ins/word/paragraph), [Диапазон](https://dev.office.com/reference/add-ins/word/range), [Таблица](https://dev.office.com/reference/add-ins/word/table), [TableRow](https://dev.office.com/reference/add-ins/word/tablerow), и базовый объект[ContentControl](https://dev.office.com/reference/add-ins/word/contentcontrol)). Эта функция принимает строку (или выражение wldcard), представляющую текст, который вы ищете, а также объект[SearchOptions](https://dev.office.com/reference/add-ins/word/searchoptions). Он возвращает набор диапазонов, которые соответствуют искомому тексту.
+Надстройки часто должны действовать на основе текста документа. Функция поиска предоставлена для каждого элемента управления содержимым (включает объекты [Текст сообщения](https://docs.microsoft.com/javascript/api/word/word.body?view=office-js) , [Параграф](https://docs.microsoft.com/javascript/api/word/word.paragraph?view=office-js), [Диапазон](https://docs.microsoft.com/javascript/api/word/word.range?view=office-js), [Table](https://docs.microsoft.com/javascript/api/word/word.table?view=office-js), [TableRow](https://docs.microsoft.com/javascript/api/word/word.tablerow?view=office-js)  и базовый объект [ContentControl](https://docs.microsoft.com/javascript/api/word/word.contentcontrol?view=office-js)). Эта функция принимает строку (или выражение wldcard), представляющую текст, который вы ищете, а также объект [SearchOptions](https://docs.microsoft.com/javascript/api/word/word.searchoptions?view=office-js). Он возвращает набор диапазонов, которые соответствуют искомому тексту.
 
 ## <a name="search-options"></a>Параметры поиска
 Параметры поиска представляют собой набор логических значений, определяющих способ обработки параметра поиска. 
@@ -40,11 +39,11 @@ ms.locfileid: "21254863"
 |Любой символ из этого диапазона| [-] |"[б-с]оль" находит "боль" и "соль". Диапазон должен быть указан в алфавитном порядке.|
 |Любой символ, кроме символов из диапазона, указанного в скобках|[!э-я] |"ко[!а-п]а" находит "кора" и "коса", но не "коза" или "кожа".|
 |Точное количество повторений (n) предыдущего знака или выражения|{n} |"жарен{2}ый" находит "жаренный", но не "жареный".|
-|Количество повторений предыдущего знака или выражения не менее n раз|{n,} |"жарен{1,} ый" находит "жареный" и "жаренный".|
+|Количество повторений предыдущего знака или выражения не менее n раз|{n,} |"жарен{1,}ый" находит "жареный" и "жаренный".|
 |Количество повторений предыдущего знака или выражения в диапазоне от n до m|{n,m} |10{1,3} находит 10, 100 и 1000.|
 |Одно или несколько повторений предыдущего знака или выражения|@ |"жарен@ый" находит "жареный" и "жаренный".|
 
-### <a name="escaping-the-special-characters"></a>Отмена специальных символов
+### <a name="escaping-the-special-characters"></a>Специальные escape-символы
 
 Поиск с использованием подстановочных знаков по сути аналогичен поиску по регулярному выражению. В регулярных выражениях используются специальные знаки, в том числе '[', ']', '(', ')', '{', '}', '\*', '?', '<', '>', '!' и '@'. Если один из этих знаков входит в состав искомого строкового литерала, его необходимо отменить, чтобы приложение Word знало, что его необходимо рассматривать буквально, а не как часть логики регулярного выражения. Чтобы отменить символ при поиске с помощью пользовательского интерфейса Word, добавьте перед ним символ '\'. Чтобы отменить символ в программном коде, заключите его в символы '[]'. Например, выражение '[\*]\*' ищет все строки, начинающиеся с символа '\*', за которым следует любое количество других символов. 
 
@@ -200,4 +199,4 @@ Word.run(function (context) {
 });
 ```
 
-Более подробную информацию можно найти в [Справочнике по API Word JavaScript](https://dev.office.com/reference/add-ins/word/word-add-ins-reference-overview).
+Более подробную информацию можно найти в [Справочнике по API Word JavaScript](https://docs.microsoft.com/office/dev/add-ins/reference/overview/word-add-ins-reference-overview?view=office-js).

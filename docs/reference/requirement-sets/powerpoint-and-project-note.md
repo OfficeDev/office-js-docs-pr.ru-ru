@@ -4,6 +4,6 @@ PowerPoint и Project поддерживают надстроки, внесен�
 
 ## <a name="see-also"></a>См. также
 
-- [API JavaScript для Office](/javascript/office/javascript-api-for-office)
+- [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office)
 - [Доступность ведущих приложений и платформ для надстроек Office](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-in-availability)
 - [Справочник по общим API](/javascript/api/overview/office)

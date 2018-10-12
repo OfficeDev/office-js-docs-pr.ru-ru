@@ -1,9 +1,9 @@
-# <a name="outlook-add-in-api-requirement-set-11"></a>Набор требований 1.1 к API надстройки Outlook
+# <a name="outlook-add-in-api-requirement-set-11"></a>Набор обязательных элементов 1.1 к API надстройки Outlook
 
 Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.
 
 > [!NOTE]
-> В этой документации рассматривается не последняя версия [набора требований](/javascript/office/requirement-sets/outlook-api-requirement-sets). 
+> В этой документации рассматривается не последняя версия [набора обязательных элементов](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets). 
 
 ## <a name="whats-new-in-11"></a>Новые возможности в версии 1.1
 

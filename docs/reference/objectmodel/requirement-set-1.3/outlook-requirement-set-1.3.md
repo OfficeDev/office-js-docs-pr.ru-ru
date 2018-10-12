@@ -3,7 +3,7 @@
 Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.
 
 > [!NOTE]
-> В этой документации рассматривается не последняя версия [набора требований](/javascript/office/requirement-sets/outlook-api-requirement-sets). 
+> В этой документации рассматривается не последняя версия [набора обязательных элементов](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets). 
 
 ## <a name="whats-new-in-13"></a>Новые возможности в версии 1.3
 

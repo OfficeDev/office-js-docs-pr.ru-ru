@@ -2,12 +2,12 @@
 title: Оптимизация производительности API JavaScript для Excel
 description: Оптимизация производительности с помощью API Excel JavaScript
 ms.date: 03/28/2018
-ms.openlocfilehash: 83150e01a691379f244ce1ce43c190ea32dd170f
-ms.sourcegitcommit: 563c53bac52b31277ab935f30af648f17c5ed1e2
+ms.openlocfilehash: ee1687fcb1a5db74e65f5e73994653df235b4823
+ms.sourcegitcommit: c53f05bbd4abdfe1ee2e42fdd4f82b318b363ad7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "25459128"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "25505379"
 ---
 # <a name="performance-optimization-using-the-excel-javascript-api"></a>Оптимизация производительности с использованием API JavaScript для Excel
 
@@ -71,7 +71,7 @@ object.load({ loadOption });
  
 _Где:_
  
-* `properties` — это список свойств для загрузки,указанных как строки с разделителями-запятыми или как массив имен. Для получения дополнительных сведений см. описания методов **load()**, определенных для объектов, в [справочнике по API JavaScript для Excel](https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview).
+* `properties` — это список свойств для загрузки,указанных как строки с разделителями-запятыми или как массив имен. Для получения дополнительных сведений см. описания методов **load()**, определенных для объектов, в [справочнике по API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview).
 * `loadOption` указывает объект, описывающий параметры «выбрать», «развернуть», «сверху» и «пропустить». Дополнительные сведения см. в статье, посвященной [параметрам загрузки объектов](https://docs.microsoft.com/javascript/api/office/officeextension.loadoption).
 
 Имейте в виду, что некоторые «свойства» объекта могут совпадать с именем другого объекта. Например, `format` — это свойство объекта range, но также `format` сам по себе является объектом. Итак, если вы вызываете, например, `range.load("format")`, это эквивалентно `range.format.load()`, который представляет собой пустой вызов load(), который может стать причиной проблем с производительностью, как описано ранее. Чтобы избежать этого, ваш код должен загружать только «листовые узлов» в дереве объектов. 
@@ -168,7 +168,7 @@ Excel.run(async (ctx) => {
 
 ## <a name="see-also"></a>См. также
 
-- [Основные принципы программирования с использованием интерфейса API JavaScript для Excel](excel-add-ins-core-concepts.md)
+- [Основные принципы программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
 - [Углубленные принципы программирования с использованием интерфейса API JavaScript для Excel](excel-add-ins-advanced-concepts.md)
 - [Открытая спецификация по API JavaScript для Excel](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_OpenSpec)
 - [Объект Worksheet Functions (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.functions)
