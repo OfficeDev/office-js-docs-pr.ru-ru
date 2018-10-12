@@ -1,0 +1,9 @@
+# <a name="powerpoint-and-project-in-the-javascript-api"></a><span data-ttu-id="19dc9-101">PowerPoint и Project в API JavaScript</span><span class="sxs-lookup"><span data-stu-id="19dc9-101">PowerPoint and Project in the JavaScript API</span></span>
+
+<span data-ttu-id="19dc9-102">PowerPoint и Project поддерживают надстроки, внесенные с помощью API JavaScript.</span><span class="sxs-lookup"><span data-stu-id="19dc9-102">PowerPoint and Project support add-ins made with the JavaScript API.</span></span> <span data-ttu-id="19dc9-103">Тем не менее в настоящее время у них нет API для конкретных ведущих приложений.</span><span class="sxs-lookup"><span data-stu-id="19dc9-103">However, they currently do not have host-specific APIs.</span></span> <span data-ttu-id="19dc9-104">Взаимодействие с этими ведущими приложениями происходит через общие API.</span><span class="sxs-lookup"><span data-stu-id="19dc9-104">You interact with these hosts through the Shared API.</span></span> 
+
+## <a name="see-also"></a><span data-ttu-id="19dc9-105">См. также</span><span class="sxs-lookup"><span data-stu-id="19dc9-105">See also</span></span>
+
+- [<span data-ttu-id="19dc9-106">API JavaScript для Office</span><span class="sxs-lookup"><span data-stu-id="19dc9-106">JavaScript API for Office</span></span>](/javascript/office/javascript-api-for-office)
+- [<span data-ttu-id="19dc9-107">Доступность ведущих приложений и платформ для надстроек Office</span><span class="sxs-lookup"><span data-stu-id="19dc9-107">Office Add-in host and platform availability</span></span>](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-in-availability)
+- [<span data-ttu-id="19dc9-108">Справочник по общим API</span><span class="sxs-lookup"><span data-stu-id="19dc9-108">Shared API Reference</span></span>](/javascript/api/overview/office)
