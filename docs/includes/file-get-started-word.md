@@ -30,7 +30,7 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
 ### <a name="update-the-code"></a>Обновление кода
 
-1. Файл **Home.html** содержит HTML-контент, который будет отображаться в области задач надстройки. В файле **Home.html** замените элемент `<body>` на приведенную ниже часть кода и сохраните файл.
+1. Файл **Home.html** содержит HTML-содержимое, которое будет отображаться в области задач надстройки. В файле **Home.html** замените элемент `<body>` на приведенную ниже часть кода и сохраните файл.
  
     ```html
     <body>
@@ -190,11 +190,11 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
 1. Откройте XML-файл манифеста в проекте надстройки. Этот файл определяет параметры и возможности надстройки.
 
-2. Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.
+2. Элемент `ProviderName` содержит значение заполнителя. Замените его на свое имя.
 
 3. Атрибут `DefaultValue` элемента `DisplayName` содержит заполнитель. Замените его на строку **Моя надстройка Office**.
 
-4. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его строкой **Надстройка области задач для Word**.
+4. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его на строку **Надстройка области задач для Excel**.
 
 5. Сохраните файл.
 
@@ -210,9 +210,9 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
 ### <a name="try-it-out"></a>Проверка
 
-1. Протестируйте новую надстройку Word в Visual Studio, нажав клавишу F5 или кнопку **Запустить**, чтобы запустить Word с кнопкой надстройки **Show Taskpane** (Показать область задач) на ленте. Надстройка будет размещена на локальном сервере IIS.
+1. Протестируйте новую надстройку Word в Visual Studio, нажав клавишу F5 или кнопку **Пуск**, чтобы запустить Word с кнопкой надстройки **Show Taskpane** (Показать область задач) на ленте. Надстройка будет размещена на локальном сервере IIS.
 
-2. В Word выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
+2. В Word выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки. (Если вы используете версию без подписки Office 2016 вместо версии Office 365, тогда настраиваемые кнопки не поддерживаются. Вместо этого область задач откроется сразу же.)
 
     ![Снимок экрана: приложение Word с выделенной кнопкой "Показать область задач"](../images/word-quickstart-addin-0.png)
 
@@ -242,7 +242,7 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
     cd my-word-addin
     ```
 
-3. С помощью генератора Yeoman создайте проект надстройки Word. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
+3. С помощью генератора Yeoman создайте проект надстройки Word. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже:
 
     ```bash
     yo office
@@ -250,12 +250,12 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
     - **Выберите тип проекта:** `Office Add-in project using Jquery framework`
     - **Выберите тип сценария:** `Javascript`
-    - **Как вы хотите назвать надстройку?** `My Office Add-in`
+    - **Как вы хотите назвать надстройку?:** `My Office Add-in`
     - **Какое клиентское приложение Office должно поддерживаться?** `Word`
 
     ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-word-jquery.png)
     
-    После завершения работы мастера, генератор создаст проект и установит поддерживающие компоненты узла.
+    После завершения работы мастера генератор создаст проект и установит поддерживающие компоненты узла.
     
 4. Перейдите в корневую папку проекта веб-приложения.
 
@@ -436,7 +436,7 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
 1. Откройте файл **my-office-add-in-manifest.xml**, чтобы определить параметры и возможности надстройки.
 
-2. Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.
+2. Элемент `ProviderName` содержит значение заполнителя. Замените его на свое имя.
 
 3. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его строкой **Надстройка области задач для Word**.
 
@@ -460,9 +460,9 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
 1. Следуйте инструкциям для нужной платформы, чтобы загрузить неопубликованную надстройку в Word.
 
-    - Windows[](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-    - Office Online[](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
-    - iPad и Mac[](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+    - Windows: [Загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
+    - Word Online: [Загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
+    - iPad and Mac: [Загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 
 2. В Word выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
@@ -485,4 +485,4 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
 * [Обзор надстроек Word](../word/word-add-ins-programming-overview.md)
 * [Примеры кода надстроек Word](https://developer.microsoft.com/en-us/office/gallery/?filterBy=Samples,Word)
-* [Справочник по API JavaScript для Word](https://docs.microsoft.com/javascript/office/overview/word-add-ins-reference-overview?view=office-js)
+* [Справочник по API JavaScript для Word](https://docs.microsoft.com/office/dev/add-ins/reference/overview/word-add-ins-reference-overview?view=office-js)
