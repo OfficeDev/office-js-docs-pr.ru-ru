@@ -1,13 +1,13 @@
 ---
 title: Контентные надстройки Office
-description: ''
+description: Контентные надстройки — это рабочие области, которые можно внедрять прямо в документы Word, Excel и PowerPoint. Контентные надстройки предоставляют пользователям доступ к элементам управления интерфейсом, которые выполняют код для изменения документов или отображения данных из источника данных.
 ms.date: 12/04/2017
-ms.openlocfilehash: f2632e94e0a797836f73caf0d53fdc0f24bd6790
-ms.sourcegitcommit: bc68b4cf811b45e8b8d1cbd7c8d2867359ab671b
+ms.openlocfilehash: 8692b6e8af4504a5eadcba64c9659adaa9122975
+ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "21703919"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "23944085"
 ---
 # <a name="content-office-add-ins"></a>Контентные надстройки Office
 
@@ -24,7 +24,7 @@ ms.locfileid: "21703919"
 
 ## <a name="variants"></a>Варианты
 
-Размеры контентных надстроек для Word, Excel и PowerPoint в Office 2016 для настольных систем и Office 365 указывает пользователь.
+Размеры контентных надстроек для Word, Excel и PowerPoint в Office для настольных систем и Office 365 указывает пользователь.
 
 ## <a name="personality-menu"></a>Меню личных данных
 

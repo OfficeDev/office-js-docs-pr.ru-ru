@@ -2,12 +2,12 @@
 title: Обзор создания кода с помощью API JavaScript для OneNote
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: a2161484991888a6a8c834ba61398cc8c0afb955
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: d45e73841c191d5760963cbc684f03cf23ea1989
+ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925173"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "23944153"
 ---
 # <a name="onenote-javascript-api-programming-overview"></a>Обзор создания кода с помощью API JavaScript для OneNote
 
@@ -84,11 +84,12 @@ function getPagesInSection() {
 }
 ```
 
-Сведения о поддерживаемых объектах и операциях OneNote см. в [справочнике по API](https://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference).
+Сведения о поддерживаемых объектах и операциях OneNote см. в [справочнике по API](https://docs.microsoft.com/javascript/office/overview/onenote-add-ins-javascript-reference?view=office-js).
 
 ### <a name="accessing-the-common-api-through-the-document-object"></a>Получение доступа к стандартному API с помощью объекта *Document*
 
-Для доступа к стандартному API, например к методам **getSelectedDataAsync** и [setSelectedDataAsync](https://dev.office.com/reference/add-ins/shared/document.getselecteddataasync), используйте объект [Document](https://dev.office.com/reference/add-ins/shared/document.setselecteddataasync). 
+Для доступа к стандартному API, например к методам **getSelectedDataAsync** и [setSelectedDataAsync](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js#getselecteddataasync-coerciontype--options--callback-), используйте объект [Document](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js#setselecteddataasync-data--options--callback-). 
+
 
 Например:  
 
@@ -110,13 +111,13 @@ function getSelectionFromPage() {
 
 | API | Примечания |
 |:------|:------|
-| [Office.context.document.getSelectedDataAsync](https://dev.office.com/reference/add-ins/shared/document.getselecteddataasync) | Только **Office.CoercionType.Text** и **Office.CoercionType.Matrix** |
-| [Office.context.document.setSelectedDataAsync](https://dev.office.com/reference/add-ins/shared/document.setselecteddataasync) | Только **Office.CoercionType.Text**, **Office.CoercionType.Image** и **Office.CoercionType.Html** | 
-| [var mySetting = Office.context.document.settings.get(имя);](https://dev.office.com/reference/add-ins/shared/settings.get) | Параметры поддерживаются только контентными надстройками | 
-| [Office.context.document.settings.set(имя, значение);](https://dev.office.com/reference/add-ins/shared/settings.set) | Параметры поддерживаются только контентными надстройками | 
-| [Office.EventType.DocumentSelectionChanged](https://dev.office.com/reference/add-ins/shared/document.selectionchanged.event) ||
+| [Office.context.document.getSelectedDataAsync](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js#getselecteddataasync-coerciontype--options--callback-) | Только **Office.CoercionType.Text** и **Office.CoercionType.Matrix** |
+| [Office.context.document.setSelectedDataAsync](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js#setselecteddataasync-data--options--callback-) | Только **Office.CoercionType.Text**, **Office.CoercionType.Image** и **Office.CoercionType.Html** | 
+| [var mySetting = Office.context.document.settings.get(имя);](https://docs.microsoft.com/javascript/api/office/office.settings?view=office-js#get-name-) | Параметры поддерживаются только контентными надстройками | 
+| [Office.context.document.settings.set(имя, значение);](https://docs.microsoft.com/javascript/api/office/office.settings?view=office-js#set-name--value-) | Параметры поддерживаются только контентными надстройками | 
+| [Office.EventType.DocumentSelectionChanged](https://docs.microsoft.com/javascript/api/office/office.documentselectionchangedeventargs?view=office-js) ||
 
-В общем случае стандартный API следует использовать только тогда, когда необходимые возможности не поддерживаются в многофункциональном API. Дополнительные сведения об использовании стандартного API см. в [документации](../overview/office-add-ins.md) и [справочнике](https://dev.office.com/reference/add-ins/javascript-api-for-office) по надстройкам Office.
+В общем случае стандартный API следует использовать только тогда, когда необходимые возможности не поддерживаются в многофункциональном API. Дополнительные сведения об использовании стандартного API см. в [документации](../overview/office-add-ins.md) и [справочнике](https://docs.microsoft.com/javascript/office/javascript-api-for-office?view=office-js) по надстройкам Office.
 
 
 <a name="om-diagram"></a>
@@ -129,6 +130,6 @@ function getSelectionFromPage() {
 ## <a name="see-also"></a>См. также
 
 - [Создание первой надстройки OneNote](onenote-add-ins-getting-started.md)
-- [Справочник по API JavaScript для OneNote](https://dev.office.com/reference/add-ins/onenote/onenote-add-ins-javascript-reference)
+- [Справочник по API JavaScript для OneNote](https://docs.microsoft.com/javascript/office/overview/onenote-add-ins-javascript-reference?view=office-js)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)

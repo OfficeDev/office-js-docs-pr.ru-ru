@@ -1,42 +1,42 @@
 ---
-title: Установка последней версии Office 2016
-description: ''
+title: Установка последней версии Office
+description: Сведения о том, как получать последние сборки Office раньше других.
 ms.date: 12/04/2017
-ms.openlocfilehash: 98dc69a7971a94b96bc3f7304fc7905f31013a87
-ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
+ms.openlocfilehash: 14e26d9fa9f7ec3b2724cbf2e9787cde9dbe4094
+ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "22925236"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "23943882"
 ---
-# <a name="install-the-latest-version-of-office-2016"></a>Установка последней версии Office 2016
+# <a name="install-the-latest-version-of-office"></a>Установка последней версии Office
 
 Первыми новые функции для разработчиков, в том числе предварительные версии, получают подписчики, которые получают последние сборки Office раньше других. 
 
 ## <a name="opt-in-to-getting-the-latest-builds"></a>Как получать последние сборки раньше других
 
-Чтобы получать последние сборки Office 2016 раньше других: 
+Чтобы получать последние сборки Office раньше других: 
 
 - Если вы подписаны на Office 365 для дома, Office 365 персональный или Office 365 для студентов, [примите участие в программе предварительной оценки Office](https://products.office.com/office-insider).
-- Если вы пользуетесь Office 365 для бизнеса, прочитайте статью [Установка сборки раннего выпуска для клиентов Office 365 для бизнеса](https://support.office.com/article/Install-the-First-Release-build-for-Office-365-for-business-customers-4dd8ba40-73c0-4468-b778-c7b744d03ead).
-- Если вы используете Office 2016 для Mac:
-    - Запустите программу Office 2016 для Mac.
+- Если вы пользуетесь Office 365 для бизнеса, прочитайте статью [Установка сборки раннего выпуска для клиентов Office 365 для бизнеса](https://support.office.com/article/Install-the-First-Release-build-for-Office-365-for-business-customers-4dd8ba40-73c0-4468-b778-c7b744d03ead).
+- Если вы используете Office для Mac:
+    - Запустите программу Office для Mac.
     - Выберите пункт **Проверить наличие обновлений** в меню "Справка".
     - В окне "Автоматическое обновление (Майкрософт)" установите флажок для участия в программе предварительной оценки Office. 
 
 ## <a name="get-the-latest-build"></a>Как получить последнюю сборку
 
-Чтобы получить последнюю сборку Office 2016: 
+Чтобы получить последнюю сборку Office: 
 
-1. Скачайте [средство развертывания Office 2016](https://www.microsoft.com/download/details.aspx?id=49117). 
+1. Скачайте [средство развертывания Office](https://www.microsoft.com/download/details.aspx?id=49117). 
 2. Запустите это средство. Будут извлечены два файла: Setup.exe и configuration.xml.
 3. Замените файл configuration.xml [файлом конфигурации первого выпуска](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-Commands-Samples/master/Tools/FirstReleaseConfig/configuration.xml).
-4. Выполните следующую команду от имени администратора: `setup.exe /configure configuration.xml` 
+4. Выполните следующую команду от имени администратора:  `setup.exe /configure configuration.xml` 
 
     > [!NOTE]
-    > Команды может выполняться долго, при этом ход ее выполнения нигде не отображается.
+    > Команда может выполняться долго, при этом ход ее выполнения нигде не отображается.
 
-По завершении процесса установки у вас будут последние версии приложений Office 2016. Чтобы убедиться, что у вас последняя сборка, в любом приложении Office последовательно выберите **Файл**  >  **Учетная запись**. В разделе "Обновления Office" над номером версии должна быть надпись Office Insiders.
+По завершении процесса установки будут установлены последние приложения Office. Чтобы убедиться в том, что у вас установлена последняя сборка, выберите **Файл** > **Учетная запись** из любого приложения Office. В разделе "Обновления Office" над номером версии должна быть надпись Office Insiders.
 
 ![Снимок экрана, на котором показаны сведения о продукте с надписью "Участники программы предварительной оценки Office"](../images/office-insiders.png)
 
@@ -44,8 +44,8 @@ ms.locfileid: "22925236"
 
 Сведения о минимальных сборках продуктов для каждой платформы см. в следующих статьях:
 
-- [Наборы обязательных элементов API JavaScript для Word](https://dev.office.com/reference/add-ins/requirement-sets/word-api-requirement-sets)
-- [Наборы обязательных элементов API JavaScript для Excel](https://dev.office.com/reference/add-ins/requirement-sets/excel-api-requirement-sets)
-- [Наборы обязательных элементов API JavaScript для OneNote](https://dev.office.com/reference/add-ins/requirement-sets/onenote-api-requirement-sets)
-- [Наборы обязательных элементов API диалоговых окон](https://dev.office.com/reference/add-ins/requirement-sets/dialog-api-requirement-sets)
-- [Наборы обязательных элементов общего API для Office](https://dev.office.com/reference/add-ins/requirement-sets/office-add-in-requirement-sets)
+- [Наборы обязательных элементов API JavaScript для Word](https://docs.microsoft.com/javascript/office/requirement-sets/word-api-requirement-sets?view=office-js)
+- [Наборы обязательных элементов API JavaScript для Excel](https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets?view=office-js)
+- [Наборы обязательных элементов API JavaScript для OneNote](https://docs.microsoft.com/javascript/office/requirement-sets/onenote-api-requirement-sets?view=office-js)
+- [Наборы обязательных элементов API диалоговых окон](https://docs.microsoft.com/javascript/office/requirement-sets/dialog-api-requirement-sets?view=office-js)
+- [Наборы обязательных элементов общего API для Office](https://docs.microsoft.com/javascript/office/requirement-sets/office-add-in-requirement-sets?view=office-js)

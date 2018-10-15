@@ -2,12 +2,12 @@
 title: Использование Office UI Fabric React в надстройках Office
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: e078640cbcc6217e9ed0a1ad99ef02afbfd317a8
-ms.sourcegitcommit: 4e4f7c095e8f33b06bd8a02534ee901125eb1d17
+ms.openlocfilehash: 4baeea20457892bcc7b94b381f5c0a577274408a
+ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "20084079"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "23944277"
 ---
 # <a name="use-office-ui-fabric-react-in-office-add-ins"></a>Использование Office UI Fabric React в надстройках Office
 
@@ -20,7 +20,7 @@ Office UI Fabric — это интерфейсная платформа JavaScri
 
 ## <a name="step-1---create-your-project-with-the-yeoman-generator-for-office"></a>Шаг 1. Создание проекта с помощью генератора Yeoman для Office
 
-Чтобы создать надстройку, в которой используется Fabric React, рекомендуется использовать генератор Yeoman для Office. Генератор Yeoman для Office обеспечивает формирование шаблонов для проектов и управление сборкой, необходимые для разработки надстройки Office.
+Чтобы создать надстройку, в которой используется Fabric React, мы рекомендуем использовать генератор Yeoman для Office. Генератор Yeoman для Office обеспечивает формирование шаблонов для проектов и управление сборкой, необходимые для разработки надстройки Office.
 
 Чтобы создать проект, выполните следующие действия, используя **Windows PowerShell** (а не командную строку):
 
@@ -112,7 +112,7 @@ export class ButtonPrimaryExample extends React.Component<IButtonProps, {}> {
 
 ## <a name="see-also"></a>См. также
 
-- [Office UI Fabric React](https://dev.office.com/fabric#/)
+- [Office UI Fabric React](https://developer.microsoft.com/fabric)
 - [Начало работы с примером кода Fabric React](https://github.com/OfficeDev/Word-Add-in-GettingStartedFabricReact)
 - [Конструктивные шаблоны (используется Fabric 2.6.1)](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code)
 - [Пример пользовательского интерфейса Fabric для надстройки Office (используется Fabric 1.0)](https://github.com/OfficeDev/Office-Add-in-Fabric-UI-Sample)
