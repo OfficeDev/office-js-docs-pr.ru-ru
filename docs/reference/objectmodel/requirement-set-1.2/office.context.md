@@ -10,8 +10,8 @@
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose (создание) или read (чтение)|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ### <a name="namespaces"></a>Пространства имен
 
@@ -33,8 +33,8 @@
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose (создание) или read (чтение)|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -70,6 +70,6 @@ function write(message){
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose (создание) или read (чтение)|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| Ограниченный доступ|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|

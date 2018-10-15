@@ -12,14 +12,14 @@
 
 - [Node.js](https://nodejs.org)
 
-- Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
+- Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
     ```bash
     npm install -g yo generator-office
     ```
 
 ### <a name="create-the-web-app"></a>Создание веб-приложения
 
-1. Создайте на локальном диске папку и назовите ее **my addin**. В ней вы будете создавать файлы для приложения.
+1. Создайте на локальном диске папку и назовите ее **my-addin**. В ней вы будете создавать файлы для приложения.
 
 2. Перейдите к папке приложения.
 
@@ -94,6 +94,6 @@
 ## <a name="see-also"></a>См. также
 
 * [Руководство по надстройкам Excel](../tutorials/excel-tutorial-create-table.md)
-* [Основные принципы программирования с использованием интерфейса API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
+* [Основные принципы программирования с помощью API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
 * [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
-* [Справочник по API JavaScript для Excel](https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview?view=office-js)
+* [Справочник по API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js)

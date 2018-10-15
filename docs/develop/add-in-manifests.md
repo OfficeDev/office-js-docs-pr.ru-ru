@@ -1,15 +1,15 @@
 ---
-title: XML-манифест надстроек Office
+title: XML-манифест надстройки Office
 description: ''
 ms.date: 02/09/2018
-ms.openlocfilehash: b2e0db2712ecfcd9e7df740548968c91ff1c1af2
-ms.sourcegitcommit: eb74e94d3e1bc1930a9c6582a0a99355d0da34f2
+ms.openlocfilehash: 8d8363b80b948f30e13ccd8620178268e03f1d57
+ms.sourcegitcommit: c53f05bbd4abdfe1ee2e42fdd4f82b318b363ad7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "25004989"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "25505869"
 ---
-# <a name="office-add-ins-xml-manifest"></a>XML-манифест надстроек Office
+# <a name="office-add-ins-xml-manifest"></a>XML-манифест надстройки Office
 
 XML-файл манифеста надстройки Office описывает способ ее активации, когда пользователь устанавливает и использует эту надстройку для работы с документами и приложениями Office.
 
@@ -21,7 +21,7 @@ XML-файл манифеста надстройки Office описывает �
 
 * Указывать, как надстройка интегрируется с Office, включая создаваемые ею элементы пользовательского интерфейса, например кнопки на ленте.
 
-* Определять запрошенные размеры по умолчанию для контентных надстроек, а также запрошенную высоту для надстроек Outlook.
+* Определять запрошенные размеры по умолчанию для надстроек содержимого, а также запрошенную высоту для надстроек Outlook.
 
 * Объявлять разрешения, в которых нуждается Надстройка Office, например чтение или запись документа.
 
@@ -36,7 +36,7 @@ XML-файл манифеста надстройки Office описывает �
 
 ### <a name="required-elements-by-office-add-in-type"></a>Обязательные элементы по типам надстроек Office
 
-| Элемент                                                                                      | Контент | Область задач | Outlook |
+| Элемент                                                                                      | Содержимое | Область задач | Outlook |
 | :------------------------------------------------------------------------------------------- | :-----: | :-------: | :-----: |
 | [OfficeApp][]                                                                                |    X    |     X     |    X    |
 | [Id][]                                                                                       |    X    |     X     |    X    |
@@ -59,62 +59,62 @@ XML-файл манифеста надстройки Office описывает �
 | [Установка (требований)*][]                                                                     |    X    |     X     |         |
 | [Хосты*][]                                                                                   |    X    |     X     |         |
 
-_\*Элемент добавлен в схеме манифеста для надстроек Office версии 1.1._
+_\*Элемент добавлен в схему манифеста для надстроек Office версии 1.1._
 
 <!-- Links for above table -->
 
-[officeapp]: https://docs.microsoft.com/javascript/office/manifest/officeapp?view=office-js
-[идентификатор id]: https://docs.microsoft.com/javascript/office/manifest/id
-[версия]: https://docs.microsoft.com/javascript/office/manifest/version
-[providername]: https://docs.microsoft.com/javascript/office/manifest/providername
-[defaultlocale]: https://docs.microsoft.com/javascript/office/manifest/defaultlocale
-[displayname]: https://docs.microsoft.com/javascript/office/manifest/displayname
-[описание]: https://docs.microsoft.com/javascript/office/manifest/description
-[iconurl]: https://docs.microsoft.com/javascript/office/manifest/iconurl
-[highresolutioniconurl]: https://docs.microsoft.com/javascript/office/manifest/highresolutioniconurl
-[defaultsettings (contentapp)]: https://docs.microsoft.com/javascript/office/manifest/defaultsettings
-[defaultsettings (taskpaneapp)]: https://docs.microsoft.com/javascript/office/manifest/defaultsettings
-[sourcelocation (contentapp)]: https://docs.microsoft.com/javascript/office/manifest/sourcelocation
-[sourcelocation (taskpaneapp)]: https://docs.microsoft.com/javascript/office/manifest/sourcelocation
+[officeapp]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/officeapp?view=office-js
+[идентификатор]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/id
+[версия]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/version
+[providername]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/providername
+[defaultlocale]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/defaultlocale
+[displayname]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/displayname
+[description]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/description
+[iconurl]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/iconurl
+[highresolutioniconurl]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/highresolutioniconurl
+[defaultsettings (contentapp)]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/defaultsettings
+[defaultsettings (taskpaneapp)]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/defaultsettings
+[sourcelocation (contentapp)]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/sourcelocation
+[sourcelocation (taskpaneapp)]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/sourcelocation
 [desktopsettings]: https://msdn.microsoft.com/library/da9fd085-b8cc-2be0-d329-2aa1ef5d3f1c(Office.15).aspx
 [sourcelocation (mailapp)]: http://msdn.microsoft.com/library/3792d389-bebd-d19a-9d90-35b7a0bfc623%28Office.15%29.aspx
-[разрешения (contentapp)]: https://docs.microsoft.com/javascript/office/manifest/permissions
-[разрешения (taskpaneapp)]: https://docs.microsoft.com/javascript/office/manifest/permissions
-[разрешения (mailapp)]: https://docs.microsoft.com/javascript/office/manifest/permissions
-[правило (rulecollection)]: https://docs.microsoft.com/javascript/office/manifest/rule
-[правило  (mailapp)]: https://docs.microsoft.com/javascript/office/manifest/rule
-[требования (mailapp)*]: https://docs.microsoft.com/javascript/office/manifest/requirements
-[установка*]: https://docs.microsoft.com/javascript/office/manifest/set
-[установки (mailapprequirements)*]: https://docs.microsoft.com/javascript/office/manifest/sets
-[форма*]: https://docs.microsoft.com/javascript/office/manifest/form
-[formsettings*]: https://docs.microsoft.com/javascript/office/manifest/formsettings
-[Установка (требований)*]: https://docs.microsoft.com/javascript/office/manifest/sets
-[хосты*]: https://docs.microsoft.com/javascript/office/manifest/hosts
+[разрешения (contentapp)]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/permissions
+[разрешения (taskpaneapp)]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/permissions
+[разрешения (mailapp)]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/permissions
+[правило (rulecollection)]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/rule
+[правило  (mailapp)]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/rule
+[требования (mailapp)*]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/requirements
+[установка*]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/set
+[установки (mailapprequirements)*]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/sets
+[форма*]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/form
+[formsettings*]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/formsettings
+[Установка (требований)*]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/sets
+[хосты*]: https://docs.microsoft.com/office/dev/add-ins/reference/manifest/hosts
 
 ## <a name="hosting-requirements"></a>Требования к размещению
 
-Все изображения URI-адресов, например, используемые для [команд надстроек][], должны поддерживать кэширование. Сервер, на котором размещено изображение, не должен возвращать заголовок `Cache-Control`, указывающий `no-cache`, `no-store` или аналогичные параметры в HTTP-ответе.
+Все URI изображений, в частности используемых для [команд надстройки][], должны поддерживать кэширование. Сервер с изображением не должен возвращать заголовок `Cache-Control`, содержащий `no-cache`, `no-store` или подобные параметры в HTTP-отклике.
 
-Все URL-адреса, например адреса исходных файлов, указанные в элементе [SourceLocation](https://docs.microsoft.com/javascript/office/manifest/sourcelocation), должны быть **защищены с помощью SSL (HTTPS)**. [!include[HTTPS guidance](../includes/https-guidance.md)]
+Все URL-адреса, например адреса исходных файлов, указанные в элементе [SourceLocation](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/sourcelocation), должны быть **защищены с помощью SSL (HTTPS)**. [!include[HTTPS guidance](../includes/https-guidance.md)]
 
 ## <a name="best-practices-for-submitting-to-appsource"></a>Рекомендации по отправке решений в AppSource
 
 Убедитесь, что идентификатор надстройки представляет собой допустимый и уникальный GUID. В Интернете доступно множество генераторов, с помощью которых можно создать уникальный GUID.
 
-Надстройки, отправляемые в AppSource, также должны включать элемент [SupportUrl](https://docs.microsoft.com/javascript/office/manifest/supporturl). Дополнительные сведения см. в статье [Политики проверки для приложений и надстроек, отправляемых в AppSource](https://docs.microsoft.com/office/dev/store/validation-policies).
+Надстройки, представленные в AppSource, также должны содержать элемент [SupportUrl](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/supporturl). Для получения дополнительной информации см. [Политики проверки для приложений и надстроек, представленных в AppSource](https://docs.microsoft.com/office/dev/store/validation-policies).
 
-Чтобы указать домены, отличные от указанного в элементе [SourceLocation](https://docs.microsoft.com/javascript/office/manifest/sourcelocation) для сценариев проверки подлинности, используйте только элемент [AppDomains](https://docs.microsoft.com/javascript/office/manifest/appdomains).
+Чтобы указать домены, отличные от указанного в элементе [SourceLocation](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/sourcelocation) для сценариев проверки подлинности, используйте только элемент [AppDomains](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/appdomains).
 
 ## <a name="specify-domains-you-want-to-open-in-the-add-in-window"></a>Указание доменов, которые необходимо открыть в окне надстройки
 
-При работе в Office Online ваша панель задач может быть перенесена на любой URL-адрес. Но на классических платформах в случае, если надстройка пытается перейти на URL-адрес в домене, отличном от домена, где размещена начальная страница (как указано в элементе [SourceLocation](https://docs.microsoft.com/javascript/office/manifest/sourcelocation) файла манифеста), этот URL-адрес откроется в новом окне веб-обозревателя, а не в панели надстроек ведущего приложения Office.
+При работе в Office Online ваша панель задач может быть перенесена на любой URL-адрес. Однако на классических платформах, если надстройка пытается перейти на URL-адрес в домене, отличном от домена, где размещена начальная страница (как указано в элементе [SourceLocation](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/sourcelocation) файла манифеста), этот URL-адрес откроется в новом окне веб-обозревателя, а не в панели надстроек ведущего приложения Office.
 
-Для того, чтобы переопределить эту реакцию на событие (в классической версии Office), добавьте каждый домен, который требуется открыть в окне надстройки, в список доменов в элементе [AppDomains](https://docs.microsoft.com/javascript/office/manifest/appdomains) файла манифеста. Если надстройка пытается перейти по URL-адресу в домене, который находится в списке, она откроется в области задач как в классической версии Office, так и в Office Online. Если она пытается перейти по URL-адресу, отсутствующему в списке, тогда в классической версии Office этот URL-адрес откроется в новом окне веб-обозревателя (вне панели надстройки).
+Чтобы переопределить это поведение (Office настольного компьютера), укажите каждый домен, который вы хотите открыть, в окне надстройки в списке доменов, указанных в элементе [AppDomains](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/appdomains) файла манифеста. Если надстройка пытается перейти к URL-адресу в домене, который находится в списке, он открывается в панели задач как в Office настольного ПК, так и в Office Online. Если он пытается перейти к URL-адресу, отсутствующему в списке, то в Office настольного ПК этот URL-адрес открывается в новом окне браузера (вне панели надстройки).
 
 > [!NOTE]
-> Эта реакция на событие относится только к корневой панели надстройки. Если на странице надстройки есть элемент iframe, он может быть перенаправлен на любой URL-адрес независимо от того, указан ли он в **AppDomains** – даже в классической версии Office.
+> Это поведение относится только к корневой панели надстройки. Если на странице надстройки есть элемент iframe, он может быть перенаправлен на любой URL-адрес независимо от того, указан ли он в **AppDomains** – даже в классической версии Office.
 
-В приведенном ниже примере XML-манифеста главная страница надстройки размещена в домене `https://www.contoso.com`, как указано в элементе **SourceLocation**. В нем также указан домен `https://www.northwindtraders.com` с помощью элемента [AppDomain](https://docs.microsoft.com/javascript/office/manifest/appdomain) из списка **AppDomains**. Если надстройка переходит на страницу в домене www.northwindtraders.com, эта страница открывается на панели надстройки даже в классическом приложении Office.
+В приведенном ниже примере XML-манифеста главная страница надстройки размещена в домене `https://www.contoso.com`, как указано в элементе **SourceLocation**. В нем также указан домен `https://www.northwindtraders.com` в элементе [AppDomain](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/appdomain) из списка **AppDomains**. Страницы из домена www.northwindtraders.com будут открываться в области надстройки даже на ПК с Office.
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -138,9 +138,9 @@ _\*Элемент добавлен в схеме манифеста для на�
 ## <a name="manifest-v11-xml-file-examples-and-schemas"></a>XML-файлы манифеста версии 1.1: примеры и схемы
 Ниже показаны примеры XML-файлов манифеста версии 1.1 для надстроек области задач, контентных надстроек и надстроек Outlook.
 
-# <a name="task-panetabtabid-1"></a>[Области задач](#tab/tabid-1)
+# <a name="task-panetabtabid-1"></a>[Область задач](#tab/tabid-1)
 
-[Схема манифеста приложения области задач](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas/taskpane)
+[Схема манифеста приложения панели задач](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas/taskpane)
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -335,7 +335,7 @@ _\*Элемент добавлен в схеме манифеста для на�
 </OfficeApp>
 ```
 
-# <a name="contenttabtabid-2"></a>[Контентная](#tab/tabid-2)
+# <a name="contenttabtabid-2"></a>[Содержимое](#tab/tabid-2)
 
 [Схема манифеста контентного приложения](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas/content)
 
@@ -372,7 +372,7 @@ _\*Элемент добавлен в схеме манифеста для на�
 </OfficeApp>
 ```
 
-# <a name="mailtabtabid-3"></a>[Почтовая](#tab/tabid-3)
+# <a name="mailtabtabid-3"></a>[Почта](#tab/tabid-3)
 
 [Схема манифеста почтового приложения](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas/mail)
 
@@ -472,8 +472,8 @@ _\*Элемент добавлен в схеме манифеста для на�
 ## <a name="see-also"></a>См. также
 
 * [Создание команд надстройки в манифесте][команды надстройки]
-* [Указание ведущих приложений Office и обязательных элементов API](specify-office-hosts-and-api-requirements.md)
-* [Локализация надстроек для Office](localization.md)
+* [Указание ведущих приложений Office и требований API](specify-office-hosts-and-api-requirements.md)
+* [Локализация надстроек Office](localization.md)
 * [Справочная схема по манифестам надстроек для Office](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas)
 * [Проверка манифеста и устранение связанных с ним неполадок](../testing/troubleshoot-manifest.md)
 

@@ -3,15 +3,15 @@
 
 ### <a name="officeofficemdcontextofficecontextmdmailboxofficecontextmailboxmditem"></a>[Office](office.md)[.context](office.context.md)[.mailbox](office.context.mailbox.md).item
 
-Пространство имен `item` используется для доступа к выбранному в данный момент сообщению, приглашению на собрание или встрече. Вы можете определить тип пространства имен `item` с помощью свойства [itemType](#itemtype-officemailboxenumsitemtypejavascriptapioutlookofficemailboxenumsitemtype).
+Пространство имен `item` используется для доступа к выбранному в данный момент сообщению, приглашению на собрание или описанию встречи. Вы можете определить тип пространства имен `item` с помощью свойства [itemType](#itemtype-officemailboxenumsitemtypejavascriptapioutlookofficemailboxenumsitemtype).
 
 ##### <a name="requirements"></a>Требования
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|С ограничениями|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Compose (создание) или read (чтение)|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|Ограниченный доступ|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Cоздание или чтение|
 
 ##### <a name="members-and-methods"></a>Члены и методы
 
@@ -67,7 +67,7 @@
 
 ### <a name="example"></a>Пример
 
-В примере кода JavaScript, приведенном ниже, показано, как получить доступ к свойству `subject` текущего элемента в Outlook.
+В приведенном ниже примере кода JavaScript показано, как получить доступ к свойству `subject` текущего элемента в Outlook.
 
 ```
 // The initialize function is required for all apps.
@@ -100,7 +100,7 @@ Office.initialize = function () {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
@@ -140,7 +140,7 @@ if (_Item.attachments.length > 0) {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.1|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.1|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Создание|
 
@@ -158,7 +158,7 @@ function callback(asyncResult) {
 
 ####  <a name="body-bodyjavascriptapioutlookofficebody"></a>body :[Body](/javascript/api/outlook/office.body)
 
-Получает объект, предоставляющий методы для манипуляции текстом элемента.
+Получает объект, предоставляющий методы для работы с основным текстом элемента.
 
 ##### <a name="type"></a>Тип:
 
@@ -168,13 +168,13 @@ function callback(asyncResult) {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.1|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.1|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Compose (создание) или read (чтение)|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Cоздание или чтение|
 
 ####  <a name="cc-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients"></a>cc :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)
 
-Предоставляет доступ к получателям Cc (копии) сообщения. Тип объекта и уровень доступа зависят от режима текущего элемента.
+Предоставляет доступ к получателям Cc (копии) сообщения. Уровень доступа и тип объекта, зависит от режима текущего элемента.
 
 ##### <a name="read-mode"></a>Режим чтения
 
@@ -192,9 +192,9 @@ function callback(asyncResult) {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Compose (создание) или read (чтение)|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Cоздание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -224,9 +224,9 @@ function callback(asyncResult) {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Compose (создание) или read (чтение)|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Cоздание или чтение|
 
 #### <a name="datetimecreated-date"></a>dateTimeCreated :Date
 
@@ -240,7 +240,7 @@ function callback(asyncResult) {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
@@ -265,7 +265,7 @@ var created = Office.context.mailbox.item.dateTimeCreated;
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
@@ -299,9 +299,9 @@ var modified = Office.context.mailbox.item.dateTimeModified;
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Compose (создание) или read (чтение)|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Cоздание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -361,7 +361,7 @@ function callback(asyncResult) {
 
 |Требование|||
 |---|---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|1.7|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|1.7|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|ReadWriteItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|Создание|
 
@@ -377,7 +377,7 @@ function callback(asyncResult) {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
@@ -408,7 +408,7 @@ var internetMessageId = Office.context.mailbox.item.internetMessageId;
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
@@ -435,7 +435,7 @@ var itemClass = Office.context.mailbox.item.itemClass;
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
@@ -466,9 +466,9 @@ if (itemId === null || itemId == undefined) {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Compose (создание) или read (чтение)|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Cоздание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -499,9 +499,9 @@ else
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Compose (создание) или read (чтение)|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Cоздание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -529,7 +529,7 @@ function callback(asyncResult) {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
@@ -551,13 +551,13 @@ var normalizedSubject = Office.context.mailbox.item.normalizedSubject;
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.3|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.3|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Compose (создание) или read (чтение)|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Cоздание или чтение|
 
 ####  <a name="optionalattendees-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients"></a>optionalAttendees :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)
 
-Предоставляет доступ к необязательным участникам события. Тип объекта и уровень доступа зависят от режима текущего элемента.
+Предоставляет доступ к необязательным участникам события. Уровень доступа и тип объекта, зависит от режима текущего элемента.
 
 ##### <a name="read-mode"></a>Режим чтения
 
@@ -575,9 +575,9 @@ var normalizedSubject = Office.context.mailbox.item.normalizedSubject;
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Compose (создание) или read (чтение)|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Cоздание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -611,7 +611,7 @@ function callback(asyncResult) {
 
 |Требование|||
 |---|---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|1.7|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|1.7|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|ReadWriteItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|Создание|
 
@@ -638,13 +638,13 @@ var organizerAddress = Office.context.mailbox.item.organizer.emailAddress;
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.7|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.7|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Compose (создание) или read (чтение)|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Cоздание или чтение|
 
 ####  <a name="requiredattendees-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients"></a>requiredAttendees :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)
 
-Предоставляет доступ к обязательным участникам события. Тип объекта и уровень доступа зависят от режима текущего элемента.
+Предоставляет доступ к обязательным участникам события. Уровень доступа и тип объекта, зависит от режима текущего элемента.
 
 ##### <a name="read-mode"></a>Режим чтения
 
@@ -662,9 +662,9 @@ var organizerAddress = Office.context.mailbox.item.organizer.emailAddress;
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Compose (создание) или read (чтение)|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Cоздание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -695,7 +695,7 @@ function callback(asyncResult) {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
@@ -713,7 +713,7 @@ var senderAddress = Office.context.mailbox.item.sender.emailAddress;
 В OWA и Outlook `seriesId` возвращает идентификатор веб-служб Exchange (EWS) родительского (серийного) элемента, к которому принадлежит этот элемент. Однако в iOS и Android `seriesId` возвращает REST идентификатор родительского элемента.
 
 > [!NOTE]
-> Идентификатор, возвращаемый свойством `seriesId`, совпадает с идентификатором элемента веб-служб Exchange. Свойство `seriesId` не идентично идентификаторам Outlook, используемым API-Интерфейсом REST Outlook. Прежде чем осуществлять вызовы API-Интерфейса REST с помощью этого значения, его следует преобразовать с помощью [Office.context.mailbox.convertToRestId](office.context.mailbox.md#converttorestiditemid-restversion--string). Дополнительные сведения см. в статье [Использование API REST для Outlook из надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/use-rest-api).
+> Идентификатор, возвращаемый свойством `seriesId`, совпадает с идентификатором элемента веб-служб Exchange. Свойство `seriesId` не идентично идентификаторам Outlook, используемым API-Интерфейсом REST Outlook. Прежде чем осуществлять вызовы API-Интерфейса REST с помощью этого значения, его следует преобразовать с помощью [Office.context.mailbox.convertToRestId](office.context.mailbox.md#converttorestiditemid-restversion--string). Для получения дополнительных сведений см. [Использование API REST Outlook из надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/use-rest-api).
 
 Свойство `seriesId` возвращает `null` для элементов, у которых нет родительских элементов, таких как одиночные встречи, элементы серии или запросы на собрания и возвращает `undefined` для любых других элементов, которые не являются запросами на собрание.
 
@@ -725,9 +725,9 @@ var senderAddress = Office.context.mailbox.item.sender.emailAddress;
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.7|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.7|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Compose (создание) или read (чтение)|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Cоздание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -760,9 +760,9 @@ var isSeries = (seriesId == null);
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Compose (создание) или read (чтение)|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Cоздание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -819,13 +819,13 @@ function callback(asyncResult) {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Compose (создание) или read (чтение)|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Cоздание или чтение|
 
 ####  <a name="to-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients"></a>to :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)
 
-Предоставляет доступ получателей к строке **To (Кому)** в сообщении. Тип объекта и уровень доступа зависят от режима текущего элемента.
+Предоставляет доступ получателей к строке **To (Кому)** в сообщении. Уровень доступа и тип объекта, зависит от режима текущего элемента.
 
 ##### <a name="read-mode"></a>Режим чтения
 
@@ -843,9 +843,9 @@ function callback(asyncResult) {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Compose (создание) или read (чтение)|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Cоздание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -876,8 +876,8 @@ function callback(asyncResult) {
 |`attachmentName`|String||Имя вложения, которое отображается при передаче вложения. Максимальная длина — 255 символов.|
 |`options`|Объект|&lt;необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Объект|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
-|`options.isInline`|Логическое значение|&lt;необязательно&gt;|Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.|
-|`callback`|function|&lt;необязательно&gt;|Когда метод завершает выполнение, переданная в параметре `callback` функция вызывается с единственным параметром `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.<br/>Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.|
+|`options.isInline`|Boolean|&lt;необязательно&gt;|Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.|
+|`callback`|function|&lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.<br/>Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.|
 
 ##### <a name="errors"></a>Ошибки
 
@@ -891,7 +891,7 @@ function callback(asyncResult) {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.1|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.1|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadWriteItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Создание|
 
@@ -954,8 +954,8 @@ Office.context.mailbox.item.addFileAttachmentAsync
 |`attachmentName`|String||Имя вложения, которое отображается при передаче вложения. Максимальная длина — 255 символов.|
 |`options`|Объект|&lt;необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Объект|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
-|`options.isInline`|Логическое значение|&lt;необязательно&gt;|Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.|
-|`callback`|function|&lt;необязательно&gt;|Когда метод завершает выполнение, переданная в параметре `callback` функция вызывается с единственным параметром `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.<br/>Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.|
+|`options.isInline`|Boolean|&lt;необязательно&gt;|Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.|
+|`callback`|function|&lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.<br/>Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.|
 
 ##### <a name="errors"></a>Ошибки
 
@@ -969,7 +969,7 @@ Office.context.mailbox.item.addFileAttachmentAsync
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|Предварительная версия|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|Предварительная версия|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadWriteItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Создание|
 
@@ -1009,15 +1009,15 @@ Office.context.mailbox.item.addFileAttachmentFromBase64Async(
 | `handler` | Функция || Функция для обработки события. Функция должна принимать один параметр, представляющий собой объектный литерал. Значение свойства `type` параметра совпадет со значением параметра `eventType`, переданного методу `addHandlerAsync`. |
 | `options` | Объект | &lt;необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
 | `options.asyncContext` | Объект | &lt;необязательно&gt; | Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова. |
-| `callback` | function| &lt;необязательно&gt;|Когда метод завершает выполнение, переданная в параметре `callback` функция вызывается с единственным параметром `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).|
+| `callback` | function| &lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.7 |
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.7 |
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem |
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose (создание) или read (чтение) |
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Cоздание или чтение |
 
 ####  <a name="additemattachmentasyncitemid-attachmentname-options-callback"></a>addItemAttachmentAsync(itemId, attachmentName, [options], [callback])
 
@@ -1037,7 +1037,7 @@ Office.context.mailbox.item.addFileAttachmentFromBase64Async(
 |`attachmentName`|String||Тема вкладываемого элемента. Максимальная длина — 255 символов.|
 |`options`|Объект|&lt;необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Объект|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
-|`callback`|function|&lt;необязательно&gt;|Когда метод завершает выполнение, переданная в параметре `callback` функция вызывается с единственным параметром `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.<br/>Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.|
+|`callback`|function|&lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.<br/>Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.|
 
 ##### <a name="errors"></a>Ошибки
 
@@ -1049,7 +1049,7 @@ Office.context.mailbox.item.addFileAttachmentFromBase64Async(
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.1|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.1|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadWriteItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Создание|
 
@@ -1093,8 +1093,8 @@ function addAttachment() {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.3|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|С ограничениями|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.3|
+|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|Ограниченный доступ|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Создание|
 
 #### <a name="displayreplyallformformdata"></a>displayReplyAllForm(formData)
@@ -1128,7 +1128,7 @@ function addAttachment() {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
@@ -1247,7 +1247,7 @@ Office.context.mailbox.item.displayReplyAllForm(
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
@@ -1346,7 +1346,7 @@ Office.context.mailbox.item.displayReplyForm(
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
@@ -1379,8 +1379,8 @@ var contacts = Office.context.mailbox.item.getEntities().contacts;
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|С ограничениями|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|Ограниченный доступ|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
 ##### <a name="returns"></a>Возвращаемое значение:
@@ -1426,7 +1426,7 @@ Office.initialize = function () {
 > [!NOTE]
 > Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
 
-Метод `getFilteredEntitiesByName` возвращает сущности, соответствующие регулярному выражению, которое определяется в элементе правила [ItemHasKnownEntity](/javascript/office/manifest/rule#itemhasknownentity-rule) в XML-файле манифеста, с использованием указанного значения элемента `FilterName`.
+Метод `getFilteredEntitiesByName` возвращает сущности, соответствующие регулярному выражению, которое определяется в элементе правила [ItemHasKnownEntity](/office/dev/add-ins/reference/manifest/rule#itemhasknownentity-rule) в XML-файле манифеста, с использованием указанного значения элемента `FilterName`.
 
 ##### <a name="parameters"></a>Параметры:
 
@@ -1438,7 +1438,7 @@ Office.initialize = function () {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
@@ -1460,13 +1460,13 @@ Type: Array.<(String|[Contact](/javascript/api/outlook/office.contact)|[MeetingS
 |---|---|---|---|
 |`options`|Объект|&lt;необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Объект|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
-|`callback`|function|&lt;необязательно&gt;|Когда метод завершает выполнение, переданная в параметре `callback` функция вызывается с единственным параметром `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>В случае успешного выполнения инициализации данных предоставляются в свойстве `asyncResult.value` в виде строки.<br/>Если контекст инициализации отсутствует, объект `asyncResult` будет содержать объект `Error`, одному свойству которого (`code`) будет присвоено значение `9020`, а другому (`name`) — значение `GenericResponseError`.|
+|`callback`|function|&lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>В случае успешного выполнения инициализации данных предоставляются в свойстве `asyncResult.value` в виде строки.<br/>Если контекст инициализации отсутствует, объект `asyncResult` будет содержать объект `Error`, одному свойству которого (`code`) будет присвоено значение `9020`, а другому (`name`) — значение `GenericResponseError`.|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|Предварительная версия|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|Предварительная версия|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
@@ -1533,7 +1533,7 @@ Office.context.mailbox.item.getInitializationContextAsync(
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
@@ -1551,7 +1551,7 @@ Office.context.mailbox.item.getInitializationContextAsync(
 
 ##### <a name="example"></a>Пример
 
-В приведенном ниже примере показано, как получить доступ к массиву совпадений с элементами `fruits` и `veggies` правил активации регулярных выражений, указанными в манифесте.
+В следующем примере показано, как получить доступ к массиву совпадений для элементов правила регулярного выражения `fruits` и `veggies`, которые указаны в манифесте.
 
 ```
 var allMatches = Office.context.mailbox.item.getRegExMatches();
@@ -1580,7 +1580,7 @@ var veges = allMatches.veggies;
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
@@ -1616,13 +1616,13 @@ var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");
 |`coercionType`|[Office.CoercionType](office.md#coerciontype-string)||Запрашивает формат данных. Если задано значение Text, метод возвращает обычный текст как строку, удаляя все имеющиеся HTML-теги. Если задано значение HTML, метод возвращает выделенный текст (обычный текст или HTML).|
 |`options`|Объект|&lt;необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Объект|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
-|`callback`|function||Когда метод завершает выполнение, переданная в параметре `callback` функция вызывается с единственным параметром `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Чтобы получить доступ к выбранным данным из метода обратного вызова, вызовите `asyncResult.value.data`. Для доступа к исходному свойству, на основе которого созданы выбранные данные, вызовите  `asyncResult.value.sourceProperty`, который может иметь значение `body` или `subject`.|
+|`callback`|функция||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Чтобы получить доступ к выбранным данным из метода обратного вызова, вызовите `asyncResult.value.data`. Для доступа к исходному свойству, на основе которого созданы выбранные данные, вызовите  `asyncResult.value.sourceProperty`, который может иметь значение `body` или `subject`.|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.2|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.2|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadWriteItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Создание|
 
@@ -1669,7 +1669,7 @@ function setCallback(asyncResult) {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.6|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.6|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
@@ -1721,7 +1721,7 @@ var contacts = Office.context.mailbox.item.getSelectedEntities().addresses;
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.6|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.6|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
@@ -1731,7 +1731,7 @@ var contacts = Office.context.mailbox.item.getSelectedEntities().addresses;
 
 ##### <a name="example"></a>Пример
 
-В приведенном ниже примере показано, как получить доступ к массиву совпадений с элементами `fruits` и `veggies` правил активации регулярных выражений, указанными в манифесте.
+В следующем примере показано, как получить доступ к массиву совпадений для элементов правила регулярного выражения `fruits` и `veggies`, которые указаны в манифесте.
 
 ```
 var selectedMatches = Office.context.mailbox.item.getSelectedRegExMatches();
@@ -1749,15 +1749,15 @@ var veggies = selectedMatches.veggies;
 |---|---|---|---|
 |`options`|Объект|&lt;необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Объект|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
-|`callback`|function||Когда метод завершает выполнение, переданная в параметре `callback` функция вызывается с единственным параметром `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Настраиваемые свойства предоставляются в виде объекта [`SharedProperties`](/javascript/api/outlook/office.sharedproperties) в свойстве `asyncResult.value`. Этот объект можно использовать для получения общих свойств элемента.|
+|`callback`|функция||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Настраиваемые свойства предоставляются в виде объекта [`SharedProperties`](/javascript/api/outlook/office.sharedproperties) в свойстве `asyncResult.value`. Этот объект можно использовать для получения общих свойств элемента.|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|Предварительная версия|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|Предварительная версия|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Compose (создание) или read (чтение)|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Cоздание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -1779,16 +1779,16 @@ function callback (asyncResult) {
 
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
-|`callback`|function||Когда метод завершает выполнение, переданная в параметре `callback` функция вызывается с единственным параметром `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Настраиваемые свойства предоставляются в виде объекта [`CustomProperties`](/javascript/api/outlook/office.customproperties) в свойстве `asyncResult.value`. Этот объект можно использовать для получения, задания и удаления настраиваемых свойств из элемента и сохранения изменений настраиваемого свойства на сервере.|
+|`callback`|function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Настраиваемые свойства предоставляются в виде объекта [`CustomProperties`](/javascript/api/outlook/office.customproperties) в свойстве `asyncResult.value`. Этот объект можно использовать для получения, задания и удаления настраиваемых свойств из элемента и сохранения изменений настраиваемого свойства на сервере.|
 |`userContext`|Объект|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в функции обратного вызова. Доступ к этому объекту можно получить с помощью свойства `asyncResult.asyncContext` в функции обратного вызова.|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Compose (создание) или read (чтение)|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Cоздание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -1830,7 +1830,7 @@ function saveCallback(asyncResult) {
 |`attachmentId`|String||Идентификатор удаляемого вложения. Максимальная длина строки — 100 символов.|
 |`options`|Объект|&lt;необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Объект|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
-|`callback`|function|&lt;необязательно&gt;|Когда метод завершает выполнение, переданная в параметре `callback` функция вызывается с единственным параметром `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>Если удалить вложение не удается, свойство `asyncResult.error` содержит код ошибки с указанием ее причины.|
+|`callback`|function|&lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>Если удалить вложение не удается, свойство `asyncResult.error` содержит код ошибки с указанием ее причины.|
 
 ##### <a name="errors"></a>Ошибки
 
@@ -1842,7 +1842,7 @@ function saveCallback(asyncResult) {
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.1|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.1|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadWriteItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Создание|
 
@@ -1865,7 +1865,7 @@ Office.context.mailbox.item.removeAttachmentAsync(
 
 Удаляет обработчик для поддерживаемого события.
 
-В настоящее время поддерживаемые типы событий — `Office.EventType.AppointmentTimeChanged`, `Office.EventType.RecipientsChanged`, и `Office.EventType.RecurrenceChanged`
+В настоящее время поддерживаемые типы событий, `Office.EventType.AppointmentTimeChanged`, `Office.EventType.RecipientsChanged`, и `Office.EventType.RecurrenceChanged`
 
 ##### <a name="parameters"></a>Параметры:
 
@@ -1875,15 +1875,15 @@ Office.context.mailbox.item.removeAttachmentAsync(
 | `handler` | Функция || Функция для обработки события. Функция должна принимать один параметр, представляющий собой объектный литерал. Значение свойства `type` параметра совпадет со значением параметра `eventType`, переданного методу `removeHandlerAsync`. |
 | `options` | Объект | &lt;необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
 | `options.asyncContext` | Объект | &lt;необязательно&gt; | Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова. |
-| `callback` | function| &lt;необязательно&gt;|Когда метод завершает выполнение, переданная в параметре `callback` функция вызывается с единственным параметром `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).|
+| `callback` | function| &lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)| 1.7 |
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.7 |
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem |
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose (создание) или read (чтение) |
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Cоздание или чтение |
 
 ####  <a name="saveasyncoptions-callback"></a>saveAsync([options], callback)
 
@@ -1908,13 +1908,13 @@ Office.context.mailbox.item.removeAttachmentAsync(
 |---|---|---|---|
 |`options`|Объект|&lt;необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Объект|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
-|`callback`|function||Когда метод завершает выполнение, переданная в параметре `callback` функция вызывается с единственным параметром `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>После успешного выполнения идентификатор элемента будет предоставлен в свойстве `asyncResult.value`.|
+|`callback`|функция||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>После успешного выполнения идентификатор элемента будет предоставлен в свойстве `asyncResult.value`.|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.3|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.3|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadWriteItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Создание|
 
@@ -1950,13 +1950,13 @@ Office.context.mailbox.item.saveAsync(
 |`options`|Объект|&lt;необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Объект|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
 |`options.coercionType`|[Office.CoercionType](office.md#coerciontype-string)|&lt;необязательно&gt;|Если задано значение `text`, текущий стиль применяется в Outlook и веб-приложении Outlook. Если поле представляет собой редактор HTML, вставляются только текстовые данные, даже если они имеют формат HTML.<br/><br/>Если `html` и поле поддерживают HTML (а тема не поддерживает), в веб-приложении Outlook применяется текущий стиль, а в Outlook — стиль по умолчанию. Если поле является текстовым, возвращается ошибка `InvalidDataFormat`.<br/><br/>Если тип `coercionType` не установлен, результат зависит от поля: если поле имеет формат HTML, то используется HTML; если поле является текстовым, то используется обычный текст.|
-|`callback`|function||Когда метод завершает выполнение, переданная в параметре `callback` функция вызывается с единственным параметром `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).|
+|`callback`|function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование|Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/javascript/office/requirement-sets/outlook-api-requirement-sets)|1.2|
+|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.2|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadWriteItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Создание|
 

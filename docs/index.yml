@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 2d9cd30df34fee32821e4746ca369c2dc850f2b1
-ms.sourcegitcommit: e7e4d08569a01c69168bb005188e9a1e628304b9
+ms.openlocfilehash: a9cb9bfcca336398117de5000bb9f5e9bc2c16de
+ms.sourcegitcommit: c53f05bbd4abdfe1ee2e42fdd4f82b318b363ad7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "24967650"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "25505617"
 documentType: LandingData
 title: Документация по надстройкам Office
 metadata:
@@ -15,7 +15,7 @@ metadata:
   ms.date: 12/04/2017
   ms.author: o365devx
 abstract:
-  description: С помощью <a href="https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins">платформы надстроек Office</a> можно создавать решения, расширяющие приложения Office и взаимодействующие с контентом в документах Office. В случае надстроек Office вы можете использовать привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений. Ваше решение может работать в Office на разных платформах, в том числе Office для Windows, Office Online, Office для Mac и Office для iPad. Узнайте, как создавать надстройки Office с помощью наших кратких и пошаговых руководств, а также справочной документации по API.<br/><br/><b>Примечание.</b> Для получения сведений о надстройках COM или VSTO обратитесь к <a href="https://docs.microsoft.com/office/client-developer/office-client-development" target="_blank">документации разработчика клиента Office</a>.
+  description: С помощью  <a href="https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins">платформы надстроек Office</a> можно создавать решения, расширяющие приложения Office и взаимодействующие с содержимым в документах Office. В случае надстроек Office вы можете использовать привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений. Ваше решение может работать в Office на разных платформах, в том числе Office для Windows, Office Online, Office для Mac и Office для iPad. Узнайте, как создавать надстройки Office с помощью наших кратких и пошаговых руководств, а также справочной документации по API.<br/><br/><b>Примечание.</b> Для получения сведений о надстройках COM или VSTO обратитесь к <a href="https://docs.microsoft.com/office/client-developer/office-client-development" target="_blank">документации разработчика клиента Office</a>.
   aside:
     image:
       alt: 
@@ -80,10 +80,9 @@ sections:
     style: cards
     className: cardsD
     items:
-    - title: Общие API (2013)
-      html: <p><a href="https://docs.microsoft.com/javascript/office/javascript-api-for-office?view=office-js" target="_blank">API JavaScript для Office</a></p>
+    - title: Стандартные API (2013)
+      html: <p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js" target="_blank">API JavaScript для Office</a></p>
     - title: API, специфичные для основного приложения (2016)
-      html: <p><a href="https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview?view=office-js" target="_blank">API JavaScript для Excel</a></p><p><a href="https://docs.microsoft.com/javascript/office/overview/word-add-ins-reference-overview?view=office-js" target="_blank">API JavaScript для Word</a></p><p><a href="https://docs.microsoft.com/javascript/office/overview/onenote-add-ins-javascript-reference?view=office-js" target="_blank">API JavaScript для OneNote</a></p><p><a href="https://docs.microsoft.com/javascript/office/requirement-sets/outlook-api-requirement-sets?view=office-js" target="_blank">API JavaScript для Outlook</a></p>
-    - title: >
-        Прочие материалы
-      html: <p><a href="https://docs.microsoft.com/javascript/office/openspec?view=office-js" target="_blank">Открытые спецификации API</a></p><p><a href="https://docs.microsoft.com/javascript/office/manifest/allowsnapshot?view=office-js" target="_blank">Манифест надстроек Office</a></p>
+      html: <p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js" target="_blank">API JavaScript для Excel</a></p><p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/overview/word-add-ins-reference-overview?view=office-js" target="_blank">API JavaScript для Word</a></p><p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference?view=office-js" target="_blank">API JavaScript для OneNote</a></p><p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets?view=office-js" target="_blank">API JavaScript для Outlook</a></p>
+    - title: Прочие материалы
+      html: <p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/openspec?view=office-js" target="_blank">Открытые спецификации API</a></p><p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/manifest/allowsnapshot?view=office-js" target="_blank">Манифест надстроек Office</a></p>

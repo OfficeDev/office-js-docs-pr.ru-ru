@@ -1,13 +1,13 @@
-# <a name="outlook-add-in-api-requirement-set-14"></a>Набор требований API для надстройки Outlook 1.4
+# <a name="outlook-add-in-api-requirement-set-14"></a>Набор обязательных элементов API для надстройки Outlook 1.4
 
-Вложенный набор API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.
+Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.
 
 > [!NOTE]
-> В этой документации рассматривается не последняя версия [набора требований](/javascript/office/requirement-sets/outlook-api-requirement-sets).
+> В этой документации рассматривается не последняя версия [набора обязательных элементов](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets).
 
 ## <a name="whats-new-in-14"></a>Новые возможности в версии 1.4
 
-Набор требований 1.4 включает все возможности [набора требований версии 1.3](../requirement-set-1.3/outlook-requirement-set-1.3.md). В нем добавлен доступ к пространству имен `Office.ui`.
+Набор обязательных элементов 1.4 включает все возможности [набора обязательных элементов версии 1.3](../requirement-set-1.3/outlook-requirement-set-1.3.md). В нем добавлен доступ к пространству имен `Office.ui`.
 
 ### <a name="change-log"></a>Журнал изменений
 
