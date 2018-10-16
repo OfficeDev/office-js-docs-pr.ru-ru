@@ -2,12 +2,12 @@
 title: Углубленные принципы программирования с использованием интерфейса API JavaScript для Excel
 description: ''
 ms.date: 10/03/2018
-ms.openlocfilehash: 190eb65e45ce246009b6d85d378571bd2f451e0b
-ms.sourcegitcommit: 563c53bac52b31277ab935f30af648f17c5ed1e2
+ms.openlocfilehash: 09f2d95e4cf7631b519f00cddee265dbf697e07e
+ms.sourcegitcommit: c53f05bbd4abdfe1ee2e42fdd4f82b318b363ad7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "25459254"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "25505890"
 ---
 # <a name="advanced-programming-concepts-with-the-excel-javascript-api"></a>Углубленные принципы программирования с использованием интерфейса API JavaScript для Excel
 
@@ -17,23 +17,23 @@ ms.locfileid: "25459254"
 
 Надстройка Excel взаимодействует с объектами в Excel с помощью API JavaScript для Office, включающего две объектных модели JavaScript:
 
-* **API JavaScript для Excel**. Впервые представленный в Office 2016 [, интерфейс API JavaScript для Excel](https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview?view=office-js) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к листам, диапазонам, таблицам, диаграммам и другим объектам. 
+* **API JavaScript для Excel**. Впервые представленный в Office 2016 [, интерфейс API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к листам, диапазонам, таблицам, диаграммам и другим объектам. 
 
-* **Общие API**. Впервые представленные в Office 2013, [общие API](https://docs.microsoft.com/javascript/office/javascript-api-for-office?view=office-js) можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов ведущих приложений, например, Word, Excel и PowerPoint.
+* **Общие API**. Впервые представленные в Office 2013, [общие API](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js) можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов ведущих приложений, например, Word, Excel и PowerPoint.
 
 Хотя, скорее всего, вы будете использовать API JavaScript для Excel для разработки большинства функций, предназначенных для надстроек Excel 2016 или более поздней версии, но объекты в общих API Shared тоже будут нужны. Например:
 
-- [Контекст](https://docs.microsoft.com/javascript/api/office/office.context?view=office-js): объект **Context** представляет собой среду выполнения надстройки и предоставляет доступ к ключевым объектам API-интерфейса. Он содержит сведения о конфигурации книги, например, `contentLanguage` и `officeTheme` , а также сведения о среде выполнения надстройки, например, `host` и `platform`. Кроме того, объект предусматривает метод  `requirements.isSetSupported()` , который можно использовать для проверки поддержки указанного набора обязательных элементов приложением Excel, в котором установлена надстройка. 
+- [Контекст](https://docs.microsoft.com/javascript/api/office/office.context?view=office-js): объект **Context** представляет собой среду выполнения надстройки и предоставляет доступ к ключевым объектам API-интерфейса. Он содержит сведения о конфигурации книги, например, `contentLanguage` и `officeTheme` , а также сведения о среде выполнения надстройки, например, `host` и `platform`. Кроме того, объект предусматривает метод  `requirements.isSetSupported()` , который можно использовать для проверки поддержки указанного набора требований приложением Excel, в котором установлена надстройка. 
 
 - [Документ](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js). Объект **Document** предоставляет метод `getFileAsync()`, позволяющий скачать файл Excel, в котором работает надстройка. 
 
-## <a name="requirement-sets"></a>Наборы обязательных элементов
+## <a name="requirement-sets"></a>Наборы требований
 
-Наборы обязательных элементов — это именованные группы элементов API. Надстройка Office может выполнять проверку в среде выполнения или использовать указанные в манифесте наборы обязательных элементов, чтобы определить, поддерживает ли ведущее приложение Office необходимые надстройке API. Информацию о том, как задать конкретные наборы обязательных элементов, доступные на каждой поддерживаемые платформы, см. в статье [Наборы обязательных элементов API JavaScript для Excel](https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets?view=office-js).
+Наборы требований — это именованные группы элементов API. Надстройка Office может выполнять проверку в среде выполнения или использовать указанные в манифесте наборы требований, чтобы определить, поддерживает ли ведущее приложение Office необходимые надстройке API. Информацию о том, как задать конкретные наборы требований, доступные на каждой поддерживаемые платформы, см. в статье [Наборы требований API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets?view=office-js).
 
-### <a name="checking-for-requirement-set-support-at-runtime"></a>Проверка поддержки наборов обязательных элементов в среде выполнения
+### <a name="checking-for-requirement-set-support-at-runtime"></a>Проверка поддержки наборов требований в среде выполнения
 
-В приведенном ниже примере кода показано, как определить, поддерживает ли ведущее приложение надстройки указанный набор обязательных элементов API.
+В приведенном ниже примере кода показано, как определить, поддерживает ли ведущее приложение надстройки указанный набор требований API.
 
 ```js
 if (Office.context.requirements.isSetSupported('ExcelApi', 1.3) === true) {
@@ -44,11 +44,11 @@ else {
 }
 ```
 
-### <a name="defining-requirement-set-support-in-the-manifest"></a>Определение поддержки наборов обязательных элементов в манифесте
+### <a name="defining-requirement-set-support-in-the-manifest"></a>Определение поддержки наборов требований в манифесте
 
-|||UNTRANSLATED_CONTENT_START|||You can use the [Requirements element](https://docs.microsoft.com/javascript/office/manifest/requirements?view=office-js) in the add-in manifest to specify the minimal requirement sets and/or API methods that your add-in requires to activate. If the Office host or platform doesn't support the requirement sets or API methods that are specified in the **Requirements** element of the manifest, the add-in won't run in that host or platform, and won't display in the list of add-ins that are shown in **My Add-ins**.|||UNTRANSLATED_CONTENT_END||| 
+Используйте [элемент Requirements](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/requirements?view=office-js) в манифесте надстройки, чтобы указать минимальные наборы требований и/или элементов API, которые должна использовать надстройка. Если платформа или ведущее приложение Office не поддерживает наборы требований или методы API, указанные в элементе ** Requirements** манифеста, надстройка не будет работать в этом ведущем приложении или на этой платформе, а также не будет отображаться в списке надстроек в разделе ** Мои надстройки**. 
 
-В приведенном ниже примере кода показан элемент **Requirements**в манифесте надстройки, где указано, что надстройка должна загружаться во всех ведущих приложениях Office, поддерживающих набор обязательных элементов ExcelApi версии 1.3 или выше.
+В приведенном ниже примере кода показан элемент **Requirements**в манифесте надстройки, где указано, что надстройка должна загружаться во всех ведущих приложениях Office, поддерживающих набор требований ExcelApi версии 1.3 или выше.
 
 ```xml
 <Requirements>
@@ -59,11 +59,11 @@ else {
 ```
 
 > [!NOTE]
-> Чтобы надстройка была доступна на всех платформах ведущего приложения Office, например, Excel для Windows, Excel Online и Excel для iPad, рекомендуем проверять поддержку обязательных элементов в среде выполнения, а не определять поддержку набора обязательных элементов в манифесте.
+> Чтобы надстройка была доступна на всех платформах ведущего приложения Office, например, Excel для Windows, Excel Online и Excel для iPad, рекомендуем проверять поддержку требований в среде выполнения, а не определять поддержку набора требований в манифесте.
 
-### <a name="requirement-sets-for-the-officejs-common-api"></a>Наборы обязательных элементов общего API JavaScript для Office
+### <a name="requirement-sets-for-the-officejs-common-api"></a>Наборы требований общего API JavaScript для Office
 
-Сведения об общих наборах обязательных элементов API см. в статье [Общие наборы обязательных элементов API для Office](https://docs.microsoft.com/javascript/office/requirement-sets/office-add-in-requirement-sets?view=office-js).
+Сведения об общих наборах требований API см. в статье [Стандартные наборы требований API для Office](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets?view=office-js).
 
 ## <a name="loading-the-properties-of-an-object"></a>Загрузка свойств объекта
 
@@ -86,7 +86,7 @@ object.load(param);
 
 #### <a name="parameters"></a>Параметры
 
-|**Параметр**|**Тип**|**Описание**|
+|**Параметр**|**Type**|**Описание**|
 |:------------|:-------|:----------|
 |`param`|объект|Необязательный атрибут. Принимает имена параметров и связей в виде строки с разделителями-запятыми или массива. Кроме того, можно передать объект, чтобы задать свойства выделения и навигации (как показано в приведенном ниже примере).|
 
@@ -124,7 +124,7 @@ Excel.run(function (ctx) {
 
 Вместо того чтобы передавать строку с разделителями-запятыми или массив при вызове метода `load()`, можно передать объект, содержащий указанные ниже свойства. 
 
-|**Свойство**|**Тип**|**Описание**|
+|**Свойство**|**Type**|**Описание**|
 |:-----------|:-------|:----------|
 |`select`|объект|Содержит массив или разделенный запятыми список имен параметров и связей. Необязательный параметр.|
 |`expand`|объект|Содержит массив или разделенный запятыми список имен связей. Необязательный параметр.|
@@ -176,7 +176,7 @@ object.set(properties[, options]);
 
 #### <a name="parameters"></a>Параметры
 
-|**Параметр**|**Тип**|**Описание**|
+|**Параметр**|**Type**|**Описание**|
 |:------------|:--------|:----------|
 |`properties`|объект|Либо объект того же типа Office.js, что и объект, для которого вызывается метод, либо объект JavaScript, имена и типы свойств которого повторяют структуру объекта, для которого вызывается метод.|
 |`options`|объект|Необязательный параметр. Может передаваться, только если первый параметр является объектом JavaScript. Объект может содержать следующее свойство: `throwOnReadOnly?: boolean` (по умолчанию — `true`: если переданный объект JavaScript включает нередактируемые свойства, возникает ошибка.)|
@@ -238,7 +238,7 @@ return context.sync()
 
 ## <a name="see-also"></a>См. также
  
-* [Основные принципы программирования с использованием интерфейса API JavaScript для Excel](excel-add-ins-core-concepts.md)
+* [Основные принципы программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
 * [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
 * [Оптимизация производительности API JavaScript для Excel](performance.md)
-* [Справочник по API JavaScript для Excel](https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview?view=office-js)
+* [Справочник по API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js)
