@@ -2,20 +2,20 @@
 title: Работа с таблицами с использованием API JavaScript для Excel
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: 1e8c71f34de7a295fcac8e5ea6a4fff5cae4fdcf
-ms.sourcegitcommit: 563c53bac52b31277ab935f30af648f17c5ed1e2
+ms.openlocfilehash: 18b9a4413d8478d548fc4abf4e4df5479ef2cf23
+ms.sourcegitcommit: c53f05bbd4abdfe1ee2e42fdd4f82b318b363ad7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "25459163"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "25505687"
 ---
 # <a name="work-with-tables-using-the-excel-javascript-api"></a>Работа с таблицами с использованием API JavaScript для Excel
 
-В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для таблиц с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Table** и **TableCollection**, см. в статьях [Объект Table (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.table?view=office-js) и [Объект TableCollection (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.tablecollection?view=office-js).
+В этой статье представлены примеры кода, которые показывают, как выполнять общие задачи с таблицами с помощью API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Table** и **TableCollection**, см. [объект Table (JavaScript API для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.table?view=office-js) и [объект TableCollection (JavaScript API для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.tablecollection?view=office-js).
 
 ## <a name="create-a-table"></a>Создание таблицы
 
-В примере кода ниже показано, как создать таблицу на листе **Sample** (Пример). В таблице имеются заголовки, а также четыре столбца и семь строк с данными. Если ведущее приложение Excel, в котором выполняется этот код, поддерживает [набор требований](https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets?view=office-js) **ExcelApi 1.2**, то ширина столбцов и высота строк будет задана так, чтобы наилучшим образом разместить текущие данные в таблице.
+Следующий пример кода создает таблицу на листе с именем **Sample**. Таблица имеет заголовки и содержит четыре столбца и семь строк данных. Если ведущее приложение Excel, в котором работает данный код, поддерживает **ExcelApi 1.2** [набора требований](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets?view=office-js), то ширина столбцов и высота строк будет задана так, чтобы наилучшим образом разместить текущие данные в таблице.
 
 > [!NOTE]
 > Чтобы указать имя таблицы, необходимо сначала создать таблицу и задать для нее свойство **name**, как показано в примере ниже.
@@ -55,10 +55,10 @@ Excel.run(function (context) {
 
 ## <a name="add-rows-to-a-table"></a>Добавление строк в таблицу
 
-В следующем примере показано, как добавить семь новых строк в таблицу **ExpensesTable** (Таблица расходов) на листе **Sample** (Пример). Новые строки добавляются в конец таблицы. Если ведущее приложение Excel, в котором выполняется этот код, поддерживает [набор требований](https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets?view=office-js) **ExcelApi 1.2**, то ширина столбцов и высота строк будет задана так, чтобы наилучшим образом разместить текущие данные в таблице.
+Следующий пример кода добавляет семь новых строк в таблицу с именем **ExpensesTable** в листе с именем **Sample**. Новые строки добавляются в конец таблицы. Если ведущее приложение Excel, в котором работает код, поддерживает **ExcelApi 1.2** [набора требований](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets?view=office-js), ширина столбцов и высота строк подбираются так, чтобы наилучшим образом соответствовать текущим данным в таблице.
 
 > [!NOTE]
-> Свойство **index** объекта [TableRow](https://docs.microsoft.com/javascript/api/excel/excel.tablerow?view=office-js) указывает номер индекса строки в коллекции строк таблицы. У объекта **TableRow** нет свойства **id**, которое можно использовать в качестве уникального ключа для идентификации строки.
+> Свойство **index** объекта [TableRow](https://docs.microsoft.com/javascript/api/excel/excel.tablerow?view=office-js) указывает номер индекса строки в коллекции строк таблицы. Объект **TableRow** не содержит свойство **id**, которое может использоваться как уникальный ключ для идентификации строки.
 
 ```js
 Excel.run(function (context) {
@@ -90,14 +90,14 @@ Excel.run(function (context) {
 
 ## <a name="add-a-column-to-a-table"></a>Добавление столбца в таблицу
 
-В примерах ниже показано, как добавить столбец в таблицу. В первом примере показано, как заполнить новый столбец статическими значениями, во втором — как заполнить новый столбец формулами.
+В этих примерах показано, как добавить столбец в таблицу. Первый пример заполняет новый столбец статическими значениями; второй пример заполняет новый столбец формулами.
 
 > [!NOTE]
-> Свойство **index** объекта [TableColumn](https://docs.microsoft.com/javascript/api/excel/excel.tablecolumn?view=office-js) указывает номер индекса столбца в коллекции столбцов таблицы. Свойство **id** объекта **TableColumn** содержит уникальный ключ, идентифицирующий столбец.
+> Свойство **index** объекта [TableColumn](https://docs.microsoft.com/javascript/api/excel/excel.tablecolumn?view=office-js) указывает номер индекса столбца в коллекции колонок таблицы. Свойство **id** объекта **TableColumn** содержит уникальный ключ, который идентифицирует столбец.
 
 ### <a name="add-a-column-that-contains-static-values"></a>Добавление столбца, содержащего статические значения
 
-В следующем примере кода показано, как добавить новый столбец в таблицу **ExpensesTable** (Таблица расходов) на листе **Sample** (Пример). Новый столбец будет добавлен после всех существующих столбцов в таблице. Он будет содержать заголовок Day of the Week (День недели), а также данные для заполнения ячеек в столбце. Если ведущее приложение Excel, в котором выполняется этот код, поддерживает [набор требований](https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets?view=office-js) **ExcelApi 1.2**, то ширина столбцов и высота строк будет задана так, чтобы наилучшим образом разместить текущие данные в таблице.
+Следующий пример кода добавляет новый столбец в таблицу с именем **ExpensesTable** в листе с именем **Sample**. Новый столбец добавляется после всех существующих столбцов в таблице и содержит заголовок («День недели»), а также данные для заполнения ячеек в столбце. Если ведущее приложение Excel, в котором работает код, поддерживает **ExcelApi 1.2** [набора требований](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets?view=office-js), ширина столбцов и высота строк подбираются для наилучшего соответствия текущим данным в таблице. 
 
 ```js
 Excel.run(function (context) {
@@ -130,7 +130,7 @@ Excel.run(function (context) {
 
 ### <a name="add-a-column-that-contains-formulas"></a>Добавление столбца, содержащего формулы
 
-В следующем примере кода показано, как добавить новый столбец в таблицу **ExpensesTable** (Таблица расходов) на листе **Sample** (Пример). Новый столбец будет добавлен в конец таблицы, будет содержать заголовок Type of the Day (Тип дня), и в нем будет использована формула для заполнения каждой ячейки столбца. Если ведущее приложение Excel, в котором выполняется этот код, поддерживает [набор требований](https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets?view=office-js) **ExcelApi 1.2**, то ширина столбцов и высота строк будет задана так, чтобы наилучшим образом разместить текущие данные в таблице.
+Следующий пример кода добавляет новый столбец в таблицу с именем **ExpensesTable** в листе с именем **Sample**. Новый столбец добавляется в конец таблицы, содержит заголовок («Тип дня») и использует формулу для заполнения каждой ячейки данных в столбце. Если ведущее приложение Excel, в котором работает код, поддерживает **ExcelApi 1.2** [набора требований](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets?view=office-js), ширина столбцов и высота строк подбираются для наилучшего соответствия текущим данным в таблице. 
 
 ```js
 Excel.run(function (context) {
@@ -163,7 +163,7 @@ Excel.run(function (context) {
 
 ## <a name="update-column-name"></a>Изменение имени столбца
 
-В следующем примере кода показано, как изменить имя первого столбца в таблице на **Purchase date** (Дата покупки). Если ведущее приложение Excel, в котором выполняется этот код, поддерживает [набор требований](https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets?view=office-js) **ExcelApi 1.2**, то ширина столбцов и высота строк будет задана так, чтобы наилучшим образом разместить текущие данные в таблице.
+В следующем примере кода показано, как изменить имя первого столбца в таблице на **Purchase date** (Дата покупки). Если ведущее приложение Excel, в котором выполняется этот код, поддерживает [набор требований](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets?view=office-js) **ExcelApi 1.2**, то ширина столбцов и высота строк будет задана так, чтобы наилучшим образом разместить текущие данные в таблице.
 
 ```js
 Excel.run(function (context) {
@@ -265,7 +265,7 @@ Excel.run(function (context) {
 
 ## <a name="apply-filters-to-a-table"></a>Применение фильтров к таблице
 
-В следующем примере кода показано, как применить фильтры для столбцов **Amount** (Сумма) и **Category** (Категория) в таблице. В результате применения фильтров будут отображены только те строки, у которых в столбце **Category** (Категория) содержится одно из указанных значений, а значения в столбце **Amount** (Сумма) меньше среднего значения для всех строк.
+Следующий пример кода применяет фильтры к столбцу **Amount** и столбцу **Category** в таблице. В результате действия фильтров отображаются только строки, где **Category** — одно из заданных значений, а **Amount** ниже среднего значения для всех строк.
 
 ```js
 Excel.run(function (context) {
@@ -316,7 +316,7 @@ Excel.run(function (context) {
 
 ## <a name="get-the-visible-range-from-a-filtered-table"></a>Получение отображаемого диапазона из отфильтрованной таблицы
 
-В следующем примере кода показано, как получить диапазон, содержащий данные только из тех ячеек, которые в данный момент отображаются в указанной таблице, и записать значения из этого диапазона в консоль. Чтобы получить отображаемое содержимое таблицы, к столбцам которой применены фильтры, вы можете использовать метод **getVisibleView()**, как показано ниже.
+Следующий образец кода получает диапазон, содержащий данные только для ячеек, которые в настоящее время видны в указанной таблице, а затем записывает значения этого диапазона в консоль. Вы можете использовать метод **getVisibleView ()**, как показано ниже, чтобы получать отображаемое содержимое таблицы всякий раз, когда применяются фильтры столбцов.
 
 ```js
 Excel.run(function (context) {
@@ -335,7 +335,7 @@ Excel.run(function (context) {
 
 ## <a name="format-a-table"></a>Форматирование таблицы
 
-В примере кода ниже показано, как применить форматирование к таблице. В примере показано, как указать различные цвета заливки для строки заголовков, основной части, второй строки и первого столбца таблицы. Сведения о свойствах, которые вы можете использовать для задания формата, см. в статье [Объект RangeFormat (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.rangeformat?view=office-js).
+Следующий пример кода применяет форматирование к таблице. Он определяет различные цвета заливки для строки заголовка таблицы, тела таблицы, второй строки таблицы и первого столбца таблицы. Для получения информации о свойствах, которые вы можете использовать для задания формата, см. [Объект RangeFormat (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.rangeformat?view=office-js).
 
 ```js
 Excel.run(function (context) {
@@ -401,7 +401,7 @@ Excel.run(function (context) {
 
 ## <a name="import-json-data-into-a-table"></a>Импорт данных JSON в таблицу
 
-В следующем примере кода показано, как создать таблицу на листе **Sample** (Пример), а затем заполнить ее с помощью объекта JSON, который определяет две строки данных. Если ведущее приложение Excel, в котором выполняется этот код, поддерживает [набор требований](https://docs.microsoft.com/javascript/office/requirement-sets/excel-api-requirement-sets?view=office-js) **ExcelApi 1.2**, то ширина столбцов и высота строк будет задана так, чтобы наилучшим образом разместить текущие данные в таблице.
+Следующий образец кода создает таблицу в листе с именем **Sample**, а затем заполняет таблицу с помощью объекта JSON, который задает две строки данных. Если ведущее приложение Excel, в котором работает данный код, поддерживает **ExcelApi 1.2** [набора требований](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets?view=office-js), ширина столбцов и высота строк подбираются для наилучшего соответствия текущим данным в таблице. 
 
 ```js
 Excel.run(function (context) {
@@ -448,5 +448,5 @@ Excel.run(function (context) {
 
 ## <a name="see-also"></a>См. также
 
-- [Основные принципы программирования с использованием интерфейса API JavaScript для Excel](excel-add-ins-core-concepts.md)
+- [Основные принципы программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
 
