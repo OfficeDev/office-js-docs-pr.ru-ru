@@ -1,12 +1,12 @@
-# <a name="build-your-first-project-add-in"></a>Создание первой надстройки Project
+# <a name="build-your-first-project-add-in"></a>Создание вашей первой надстройки Project
 
-В этой статье мы разберем, как создать надстройку Project, используя jQuery и API JavaScript для Office.
+В этой статье рассматривается процесс создания надстройки Project с прмиенением jQuery и API JavaScript для Office.
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
 - [Node.js](https://nodejs.org)
 
-- Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
+- Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
 
     ```bash
     npm install -g yo generator-office
@@ -14,7 +14,11 @@
 
 ## <a name="create-the-add-in"></a>Создание надстройки
 
-1. Создайте на локальном диске папку и назовите ее `my-project-addin`. В ней вы будете создавать файлы для надстройки.
+1. Создайте на локальном диске папку и назовите ее `my-project-addin`. В ней будут создаваться файлы для новой надстройки.
+
+    ```bash
+    mkdir my-project-addin
+    ```
 
 2. Перейдите к новой папке.
 
@@ -22,7 +26,7 @@
     cd my-project-addin
     ```
 
-3. С помощью генератора Yeoman создайте проект надстройки Project. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
+3. Используйте генератор Yeoman для создания проекта надстройки Project. Запустите указанную ниже команду, после чего ответьте на предлагаемые вопросы следующим образом:
 
     ```bash
     yo office
@@ -30,7 +34,7 @@
 
     - **Выберите тип проекта:** `Office Add-in project using Jquery framework`
     - **Выберите тип сценария:** `Javascript`
-    - **Как вы хотите назвать надстройку?** `My Office Add-in`
+    - **Как вы хотите назвать надстройку?:** `My Office Add-in`
     - **Какое клиентское приложение Office должно поддерживаться?** `Project`
 
     ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-project-jquery.png)
@@ -45,36 +49,35 @@
 
 ## <a name="update-the-code"></a>Обновление кода
 
-1. В редакторе кода откройте файл **index.html** из корневой папки проекта. Этот файл содержит HTML-контент, который будет отображаться в области задач надстройки.
+1. В редакторе кода откройте файл **index.html**, имеющийся в корневой папке проекта. Этот файл содержит HTML-содержимое, которое будет отображаться в области задач надстройки.
 
-2. Замените элемент `<header>` внутри элемента `<body>` на приведенную ниже разметку.
-
-    ```html
-    <div id="content-header">
-        <div class="padding">
-            <h1>Welcome</h1>
-        </div>
-    </div>
-    ```
-
-3. Замените элемент `<main>` внутри элемента `<body>` приведенной ниже разметкой и сохраните файл.
+2. Замените элемент `<body>` на следующую разметку.
 
     ```html
-    <div id="content-main">
-        <div class="padding">
-            <p>Select a task and then choose the buttons below and observe the output in the <b>Results</b> textbox.</p>
-            <h3>Try it out</h3>
-            <button class="ms-Button" id="get-task-guid">Get Task GUID</button>
-            <br/><br/>
-            <button class="ms-Button" id="get-task">Get Task data</button>
-            <br/>
-            <h4>Results:</h4>
-            <textarea id="result" rows="6" cols="25"></textarea>
+    <body class="ms-font-m ms-welcome">
+        <div id="content-header">
+            <div class="padding">
+                <h1>Welcome</h1>
+            </div>
         </div>
-    </div>
+        <div id="content-main">
+            <div class="padding">
+                <p>Select a task and then choose the buttons below and observe the output in the <b>Results</b> textbox.</p>
+                <h3>Try it out</h3>
+                <button class="ms-Button" id="get-task-guid">Get Task GUID</button>
+                <br/><br/>
+                <button class="ms-Button" id="get-task">Get Task data</button>
+                <br/>
+                <h4>Results:</h4>
+                <textarea id="result" rows="6" cols="25"></textarea>
+            </div>
+        </div>
+        <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="node_modules/office-ui-fabric-js/dist/js/fabric.js"></script>
+    </body>
     ```
 
-4. Откройте файл **src\index.js**, чтобы указать сценарий для надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.
+3. Откройте файл **src/index.js**, чтобы указать сценарий для надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.
 
     ```js
     'use strict';
@@ -127,7 +130,7 @@
     })();
     ```
 
-4. Откройте файл **app.css** в корневой папке проекта, чтобы указать специальные стили для надстройки. Замените все его содержимое следующим кодом и сохраните файл.
+4. Откройте файл **app.css** в корневой папке проекта, чтобы указать настраиваемые стили для надстройки. Замените все его содержимое следующим кодом и сохраните файл.
 
     ```css
     #content-header {
@@ -160,7 +163,7 @@
 
 1. Откройте файл **my-office-add-in-manifest.xml**, чтобы определить параметры и возможности надстройки.
 
-2. Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.
+2. Элемент `ProviderName` содержит значение заполнителя. Замените его на свое имя.
 
 3. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его строкой **Надстройка области задач для Project**.
 
@@ -180,31 +183,31 @@
 
 [!include[Start server section](../includes/quickstart-yo-start-server.md)] 
 
-## <a name="try-it-out"></a>Проверка
+## <a name="try-it-out"></a>Проверьте надстройку
 
-1. Создайте простой проект Project, содержащий по крайней мере одну задачу.
+1. В Project создайте простой проект, содержащий хотя бы одну задачу.
 
-2. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Project.
+2. Следуя указаниям, касающимся платформы, которая используется для запуска надстройки, загрузите неопубликованную надстройку в Project.
 
-    - Windows[](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-    - Office Online[](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
-    - iPad и Mac[](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+    - Windows: [Загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
+    - Project Online: [Загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
+    - iPad и Mac: [Загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 
 3. Выберите задачу в Project.
 
-    ![Снимок экрана: план проекта в Project с одной выбранной задачей](../images/project_quickstart_addin_1.png)
+    ![Снимок экрана, отображающего план проекта в Project с одной выбранной задачей](../images/project_quickstart_addin_1.png)
 
-4. В области задач нажмите кнопку **Get Task GUID**, чтобы записать GUID задачи в поле **Results**.
+4. В области задач нажмите на кнопку **Получить GUID задачи**, чтобы записать GUID задачи в поле **Результаты**.
 
-    ![Снимок экрана: план проекта в Project с одной выбранной задачей и GUID в текстовом поле области задач](../images/project_quickstart_addin_2.png)
+    ![Снимок экрана, отображающего план проекта в Project с одной выбранной задачей и указанном в соответствующем поле области задач GUID задачи](../images/project_quickstart_addin_2.png)
 
-5. В области задач нажмите кнопку **Get Task data**, чтобы записать несколько свойств выбранной задачи в поле **Results**.
+5. В области задач нажмите на кнопку **Получить данные задачи**, чтобы записать несколько свойств выбранной задачи в поле **Результаты**.
 
-    ![Снимок экрана: план проекта в Project с одной выбранной задачей и несколькими свойствами в текстовом поле области задач](../images/project_quickstart_addin_3.png)
+    ![Снимок экрана, отображающего план проекта в Project с одной выбранной задачей и несколькими свойствами задачи, содержащимися в соответствующем поле области задач](../images/project_quickstart_addin_3.png)
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
-Поздравляем, вы успешно создали надстройку Project! Следующим шагом узнайте больше о возможностях надстроек Project и изучите распространенные сценарии.
+Поздравляем, вы успешно создали надстройку Project! После этого, узнайте больше о возможностях надстроек Project и изучите распространенные сценарии.
 
 > [!div class="nextstepaction"]
 > [Надстройки Project](../project/project-add-ins.md)
