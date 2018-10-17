@@ -16,6 +16,10 @@
 
 1. Создайте на локальном диске папку и назовите ее `my-onenote-addin`.  В ней вы будете создавать файлы для приложения.
 
+    ```bash
+    mkdir my-onenote-addin
+    ```
+
 2. Перейдите к новой папке.
 
     ```bash
@@ -45,75 +49,156 @@
 
 ## <a name="update-the-code"></a>Обновление кода
 
-1. В редакторе кода откройте **index.html** в корневой папке проекта. Этот файл содержит HTML-содержимое, которое будет отображаться в области задач надстройки.
+1. В редакторе кода откройте файл **index.html**, имеющийся в корневой папке проекта. Этот файл содержит HTML-содержимое, которое будет отображаться в области задач надстройки.
 
-2. Замените элемент `<main>` внутри элемента `<body>` на следующую разметку и сохраните файл. Это добавляет текстовое поле и кнопку с помощью [компонентов Fabric пользовательского интерфейса Office](https://developer.microsoft.com/en-us/fabric#/components).
+2. Замените элемент `<body>` следующей разметкой и сохраните файл. 
 
     ```html
-    <main class="ms-welcome__main">
-        <br />
-        <p class="ms-font-l">Enter content below</p>
-        <div class="ms-TextField ms-TextField--placeholder">
-            <textarea id="textBox" rows="5"></textarea>
-        </div>
-        <button id="addOutline" class="ms-welcome__action ms-Button ms-Button--hero ms-u-slideUpIn20">
-            <span class="ms-Button-label">Add Outline</span>
-            <span class="ms-Button-icon"><i class="ms-Icon"></i></span>
-            <span class="ms-Button-description">Adds the content above to the current page.</span>
-        </button>
-    </main>
+    <body class="ms-font-m ms-welcome">
+        <header class="ms-welcome__header ms-bgColor-themeDark ms-u-fadeIn500">
+            <h2 class="ms-fontSize-xxl ms-fontWeight-regular ms-fontColor-white">OneNote Add-in</h1>
+        </header>
+        <main id="app-body" class="ms-welcome__main">
+            <br />
+            <p class="ms-font-m">Enter HTML content here:</p>
+            <div class="ms-TextField ms-TextField--placeholder">
+                <textarea id="textBox" rows="8" cols="30"></textarea>
+            </div>
+            <button id="addOutline" class="ms-Button ms-Button--primary">
+                <span class="ms-Button-label">Add outline</span>
+            </button>
+        </main>
+        <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="node_modules/office-ui-fabric-js/dist/js/fabric.js"></script>
+    </body>
     ```
 
-3. Откройте файл **src\index.js** для указания скрипта надстройки. Замените все содержимое следующим кодом и сохраните файл.
+3. Откройте файл **src\index.js**, чтобы указать сценарий для надстройки. Замените все содержимое следующим кодом и сохраните файл.
 
     ```js
-    'use strict';
+    import * as OfficeHelpers from "@microsoft/office-js-helpers";
 
-    (function () {
-
-        Office.initialize = function (reason) {
-            $(document).ready(function () {
-                // Set up event handler for the UI.
-                $('#addOutline').click(addOutlineToPage);
-            });
-        };
-
-        // Add the contents of the text area to the page.
-        function addOutlineToPage() {        
-            OneNote.run(function (context) {
-                var html = '<p>' + $('#textBox').val() + '</p>';
+    Office.initialize = (reason) => {
+        $(document).ready(() => {
+            $('#addOutline').click(addOutlineToPage);
+        });
+    };
+    
+    async function addOutlineToPage() {
+        try {
+            await OneNote.run(async context => {
+                var html = "<p>" + $("#textBox").val() + "</p>";
 
                 // Get the current page.
                 var page = context.application.getActivePage();
 
-                // Queue a command to load the page with the title property.             
-                page.load('title'); 
+                // Queue a command to load the page with the title property.
+                page.load("title");
 
-                // Add an outline with the specified HTML to the page.
+                // Add text to the page by using the specified HTML.
                 var outline = page.addOutline(40, 90, html);
 
                 // Run the queued commands, and return a promise to indicate task completion.
                 return context.sync()
                     .then(function() {
-                        console.log('Added outline to page ' + page.title);
+                        console.log("Added outline to page " + page.title);
                     })
                     .catch(function(error) {
-                        app.showNotification("Error: " + error); 
-                        console.log("Error: " + error); 
-                        if (error instanceof OfficeExtension.Error) { 
-                            console.log("Debug info: " + JSON.stringify(error.debugInfo)); 
-                        } 
-                    }); 
-            });
+                        app.showNotification("Error: " + error);
+                        console.log("Error: " + error);
+                        if (error instanceof OfficeExtension.Error) {
+                            console.log("Debug info: " + JSON.stringify(error.debugInfo));
+                        }
+                    });
+                });
+        } catch (error) {
+            OfficeHelpers.UI.notify(error);
+            OfficeHelpers.Utilities.log(error);
         }
-    })();
+    }
+    ```
+
+4. Откройте файл **app.css**, чтобы указать настраиваемые стили для надстройки. Замените все содержимое следующим кодом и сохраните файл.
+
+    ```css
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul, p, h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .ms-welcome {
+        position: relative;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        min-height: 500px;
+        min-width: 320px;
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    .ms-welcome__header {
+        min-height: 30px;
+        padding: 0px;
+        padding-bottom: 5px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: flex-end;
+        justify-content: flex-end;
+    }
+
+    .ms-welcome__header > h1 {
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    .ms-welcome__main {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-align-items: center;
+        align-items: left;
+        -webkit-flex: 1 0 0;
+        flex: 1 0 0;
+        padding: 30px 20px;
+    }
+
+    .ms-welcome__main > h2 {
+        width: 100%;
+        text-align: left;
+    }
+
+    @media (min-width: 0) and (max-width: 350px) {
+        .ms-welcome__features {
+            width: 100%;
+        }
+    }
     ```
 
 ## <a name="update-the-manifest"></a>Обновление манифеста
 
-1. Откройте файл **one-note-add-in-manifest.xml**, чтобы определить параметры и возможности надстройки.
+1. Откройте файл **my-office-add-in-manifest.xml**, чтобы определить параметры и возможности надстройки.
 
-2. Элемент `ProviderName` содержит значение заполнителя. Замените его на свое имя.
+2. Элемент `ProviderName` содержит значение заполнителя. Замените его своим именем.
 
 3. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его на строку **Надстройка области задач для OneNote**.
 
@@ -124,7 +209,7 @@
     <ProviderName>John Doe</ProviderName>
     <DefaultLocale>en-US</DefaultLocale>
     <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
-    <DisplayName DefaultValue="OneNote Add-in" />
+    <DisplayName DefaultValue="My Office Add-in" />
     <Description DefaultValue="A task pane add-in for OneNote"/>
     ...
     ```
@@ -143,7 +228,7 @@
 
     - Если вы вошли с помощью рабочей или учебной учетной записи, выберите **Отправить надстройку** на вкладке **МОЯ ОРГАНИЗАЦИЯ**. 
 
-    На следующем изображении показана вкладка **МОИ НАДСТРОЙКИ** для потребительских записных книжек.
+    На следующем рисунке показана вкладка **МОИ НАДСТРОЙКИ** для пользовательских записных книжек.
 
     <img alt="The Office Add-ins dialog showing the MY ADD-INS tab" src="../images/onenote-office-add-ins-dialog.png" width="500">
 
@@ -151,9 +236,20 @@
 
 4. На вкладке **Главная** нажмите кнопку **Показать область задач** на ленте. Область задач надстройки открывается в iFrame рядом со страницей OneNote.
 
-5. Введите текст в текстовом поле и нажмите кнопку **Добавить структуру**. Введенный текст добавляется на страницу. 
+5. Введите следующее HTML-содержимое в текстовом поле и нажмите кнопку **Добавить структуры**.  
 
-    ![Надстройка OneNote, созданная на основе этого руководства](../images/onenote-first-add-in.png)
+    ```html
+    <ol>
+    <li>Item #1</li>
+    <li>Item #2</li>
+    <li>Item #3</li>
+    <li>Item #4</li>
+    </ol>
+    ```
+
+    Указанная вами структура добавляется на страницу.
+
+    ![Надстройка OneNote, созданная на основе этого пошагового руководства](../images/onenote-first-add-in-3.png)
 
 ## <a name="troubleshooting-and-tips"></a>Средство устранения неполадок и советы
 
@@ -167,7 +263,7 @@
 
 - Надстройки области задач можно открыть откуда угодно, но контентные надстройки вставляются только в содержимое стандартной страницы (не в заголовки, изображения, iFrames и т. д.). 
 
-## <a name="next-steps"></a>Дальнейшие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Поздравляем, вы успешно ли создали надстройку OneNote! Узнайте подробнее об основных концепциях создания надстройки OneNote далее.
 

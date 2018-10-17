@@ -4,10 +4,6 @@
 
 В каждом определении DesktopFormFactor есть элемент **FunctionFile**, а также один или несколько элементов **ExtensionPoint**. Дополнительные сведения см. в статьях [Элемент FunctionFile](functionfile.md) и [Элемент ExtensionPoint](extensionpoint.md).
 
-> [!IMPORTANT]
-> Элемент SupportsSharedFolders доступен только в наборе требований предварительной версии надстроек Outlook относительно Exchange Online.
-> Надстройки, использующие этот элемент, не разрешаются в магазине Office или для централизованного развертывания.
-
 ## <a name="child-elements"></a>Дочерние элементы
 
 | Элемент                               | Обязательный | Описание  |
@@ -15,7 +11,7 @@
 | [ExtensionPoint](extensionpoint.md)   | Да      | Определяет, где предоставляется функциональность надстройки. |
 | [FunctionFile](functionfile.md)       | Да      | URL-адрес файла, содержащего функции JavaScript.|
 | [GetStarted](getstarted.md)           | Нет       | Определяет выноску, которая отображается при установке надстройки в основных приложениях Word, Excel и PowerPoint. |
-| SupportsSharedFolders                 | Нет       | Определяет, доступна ли надстройка Outlook в сценарии делегата, и имеет значение *false* по умолчанию. Набор требований для предварительной версии.|
+| [SupportsSharedFolders](supportssharedfolders.md) | Нет | Определяет, доступна ли надстройка Outlook в сценарии делегата, и имеет значение *false* по умолчанию.<br><br>**Важно**: этот элемент доступен только в наборе требований предварительной версии надстроек Outlook относительно Exchange Online. Надстройки, использующие этот элемент, нельзя опубликовать в AppSource или развернуть с помощью централизованного развертывания. |
 
 ## <a name="desktopformfactor-example"></a>Пример DesktopFormFactor
 

@@ -2,12 +2,12 @@
 title: Включение единого входа для надстроек Office
 description: ''
 ms.date: 09/26/2018
-ms.openlocfilehash: fb4eacee9419339116e15ef3fccc03b291faf3ec
-ms.sourcegitcommit: c53f05bbd4abdfe1ee2e42fdd4f82b318b363ad7
+ms.openlocfilehash: 1a75f7d619d2375a2f7fcb07f6afb7e0d6261ead
+ms.sourcegitcommit: f47654582acbe9f618bec49fb97e1d30f8701b62
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "25506030"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "25579907"
 ---
 # <a name="enable-single-sign-on-for-office-add-ins-preview"></a>Включение единого входа для надстроек Office (предварительная версия)
 
@@ -154,7 +154,7 @@ $.ajax({
 
     * Проверка маркеров доступа (см. приведенную ниже статью **Проверка маркера доступа**).
     * Запуск потока «от имени пользователя» с вызовом конечной точки Azure AD версии 2.0, которая включает в себя маркер доступа, некоторые метаданные о пользователе и учетные данные надстройки (ее идентификатор и секрет). В подобной ситуации маркер доступа именуется маркером начальной загрузки.
-    * Кэширование нового маркера доступа, возвращаемого потоком, запущенным «от имени пользователя».
+    * Кэширование нового маркера доступа, возвращаемого потоком, запущенным «от имени пользователя»
     * Получите данные с Microsoft Graph, используя новый маркер.
 
  Для ознакомления с дополнительной информацией о получении авторизованного доступа к данным пользователя Microsoft Graph см. статью [Авторизованный доступ в Microsoft Graph из вашей надстройки Office](authorize-to-microsoft-graph.md).
@@ -177,10 +177,10 @@ $.ajax({
 
 Если надстройке требуется проверить идентификатор пользователя, то информация, которая может использоваться в качестве удостоверения, содержится в маркере единого входа. С идентификатором связаны следующие утверждения, имеющиеся в маркере.
 
-- `name` - Отображаемое имя пользователя.
-- `preferred_username` - Адрес электронной почты пользователя.
-- `oid` - GUID, характеризующий идентификатор пользователя в Azure Active Directory.
-- `tid` - GUID, характеризующий идентификатор организации пользователя в Azure Active Directory.
+- `name` — отображаемое имя пользователя.
+- `preferred_username` — адрес электронной почты пользователя.
+- `oid` — GUID, предоставляющий ИД пользователя в Azure Active Directory.
+- `tid` — GUID, предоставляющий ИД организации пользователя в Azure Active Directory.
 
 В связи с тем,что значения `name` и `preferred_username` могут меняться, рекомендуется использовать значения `oid` и `tid`, позволяющие коррелировать идентификатор с внутренней службой авторизации.
 
@@ -234,7 +234,7 @@ getAccessTokenAsync(options?: AuthOptions, callback?: (result: AsyncResult<strin
 
 <table><tr><td>Основные приложения</td><td>Excel, OneNote, Outlook, PowerPoint, Word</td></tr>
 
- <tr><td>Наборы обязательных элементов</td><td>[IdentityAPI](https://docs.microsoft.com/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)</td></tr></table>
+ <tr><td>[Наборы требований](https://docs.microsoft.com/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)</td><td>[IdentityAPI](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets?view=office-js)</td></tr></table>
 
 #### <a name="parameters"></a>Параметры
 

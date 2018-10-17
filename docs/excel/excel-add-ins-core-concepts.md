@@ -1,13 +1,13 @@
 ---
 title: Основные принципы программирования с помощью API JavaScript для Excel
 description: Вы можете использовать API JavaScript для Excel, чтобы создавать надстройки для Excel.
-ms.date: 10/03/2018
-ms.openlocfilehash: f93ec7b5e34f90f2d61f29d861b7e0c19f66f6e3
-ms.sourcegitcommit: c53f05bbd4abdfe1ee2e42fdd4f82b318b363ad7
+ms.date: 10/16/2018
+ms.openlocfilehash: 21fcbc32dab2057f6d1f5e97a62a6b00bf1f7f03
+ms.sourcegitcommit: f47654582acbe9f618bec49fb97e1d30f8701b62
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "25505988"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "25579893"
 ---
 # <a name="fundamental-programming-concepts-with-the-excel-javascript-api"></a>Основные принципы программирования с помощью API JavaScript для Excel
  
@@ -228,31 +228,9 @@ Excel.run(function (context) {
 });
 ```
  
-## <a name="error-messages"></a>Сообщения об ошибках
- 
-При возникновении ошибки в API он возвратит объект **error**, содержащий код и сообщение. В следующей таблице перечислены ошибки, которые может возвращать API.
- 
-|error.code | error.message |
-|:----------|:--------------|
-|InvalidArgument |Аргумент недопустим, отсутствует или имеет неправильный формат.|
-|InvalidRequest  |Не удается обработать запрос.|
-|InvalidReference|Эта ссылка недопустима для текущей операции.|
-|InvalidBinding  |Эта привязка объектов недопустима из-за предыдущих обновлений.|
-|InvalidSelection|Выбранный фрагмент недопустим для этой операции.|
-|Unauthenticated |Требуемые сведения о проверке подлинности отсутствуют или недопустимы.|
-|AccessDenied |Вы не можете выполнить запрашиваемую операцию.|
-|ItemNotFound |Запрашиваемый ресурс не существует.|
-|ActivityLimitReached|Достигнут предел действий.|
-|GeneralException|При обработке запроса возникла внутренняя ошибка.|
-|NotImplemented  |Запрашиваемая функция не реализована.|
-|ServiceNotAvailable|Служба недоступна.|
-|Conflict              |Запрос не удалось обработать из-за конфликта.|
-|ItemAlreadyExists|Создаваемый ресурс уже существует.|
-|UnsupportedOperation|Выполняемая операция не поддерживается.|
-|RequestAborted|Запрос прерван во время выполнения.|
-|ApiNotAvailable|Запрашиваемый интерфейс API недоступен.|
-|InsertDeleteConflict|Операция вставки или удаления привела к конфликту.|
-|InvalidOperation|Выполняемая операция недопустима для этого объекта.|
+##<a name="handle-errors"></a>Обработка ошибок
+
+При возникновении ошибки API возвратит объект **error**, содержащий код и сообщение. Подробные сведения об обработке ошибок, включая список ошибок API, см. в статье [Обработка ошибок](excel-add-ins-error-handling.md).
  
 ## <a name="see-also"></a>См. также
  

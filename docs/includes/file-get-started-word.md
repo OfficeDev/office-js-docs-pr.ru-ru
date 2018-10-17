@@ -210,11 +210,11 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
 ### <a name="try-it-out"></a>Проверка
 
-1. Протестируйте новую надстройку Word в Visual Studio, нажав клавишу F5 или кнопку **Пуск**, чтобы запустить Word с кнопкой надстройки **Show Taskpane** (Показать область задач) на ленте. Надстройка будет размещена на локальном сервере IIS.
+1. Протестируйте новую надстройку Word в Visual Studio, нажав на клавишу F5 или кнопку **Пуск**, чтобы запустить Word с отображаемой в ленте кнопкой надстройки **Показать область задач**. Надстройка будет размещена на локальном сервере IIS.
 
-2. В Word выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки. (Если вы используете версию без подписки Office 2016 вместо версии Office 365, тогда настраиваемые кнопки не поддерживаются. Вместо этого область задач откроется сразу же.)
+2. В Word перейдите на вкладку **Главная**, а затем нажмите на имеющуюся в лене кнопку **Показать область задач**, чтобы открыть область задач надстройки. (При использовании версии Office 2016 без подписки вместо версии Office 365 настраиваемые кнопки не поддерживаются. Вместо этого в ней происходит незамедлительное отображение области задач).
 
-    ![Снимок экрана: приложение Word с выделенной кнопкой "Показать область задач"](../images/word-quickstart-addin-0.png)
+    ![Снимок экрана с отображаемым приложением Word и выделенной кнопкой «Показать область задач»](../images/word-quickstart-addin-0.png)
 
 3. В области задач нажмите любую кнопку, чтобы добавить стандартный текст в документ.
 
@@ -234,7 +234,11 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
-1. Создайте на локальном диске папку и назовите ее `my-word-addin`. В ней вы будете создавать файлы для надстройки.
+1. Создайте на локальном диске папку и назовите ее `my-word-addin`.  В ней вы будете создавать файлы для приложения.
+
+    ```bash
+    mkdir my-word-addin
+    ```
 
 2. Перейдите к новой папке.
 
@@ -242,7 +246,7 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
     cd my-word-addin
     ```
 
-3. С помощью генератора Yeoman создайте проект надстройки Word. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже:
+3. Используйте генератор Yeoman для создания проекта надстройки Word. Запустите указанную ниже команду, после чего ответьте на предлагаемые вопросы следующим образом:
 
     ```bash
     yo office
@@ -265,44 +269,37 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
 ### <a name="update-the-code"></a>Обновление кода
 
-1. В редакторе кода откройте файл **index.html** из корневой папки проекта. Этот файл содержит HTML-контент, который будет отображаться в области задач надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл. В этой надстройке будет три кнопки. При нажатии любой из них в документ будет добавляться стандартный текст.
+1. В редакторе кода откройте файл **index.html**, имеющийся в корневой папке проекта. Этот файл содержит HTML-содержимое, которое будет отображаться в области задач надстройки. 
+
+2. Замените элемент `<body>` следующей разметкой и сохраните файл.
 
     ```html
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <meta charset="UTF-8" />
-            <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-            <title>Boilerplate text app</title>
-            <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
-            <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
-            <link href="app.css" rel="stylesheet" type="text/css" />
-        </head>
-        <body>
-            <div id="content-header">
-                <div class="padding">
-                    <h1>Welcome</h1>
-                </div>
-            </div>    
-            <div id="content-main">
-                <div class="padding">
-                    <p>Choose the buttons below to add boilerplate text to the document by using the Word JavaScript API.</p>
-                    <br />
-                    <h3>Try it out</h3>
-                    <button id="emerson">Add quote from Ralph Waldo Emerson</button>
-                    <br /><br />
-                    <button id="checkhov">Add quote from Anton Chekhov</button>
-                    <br /><br />
-                    <button id="proverb">Add Chinese proverb</button>
-                </div>
+    <body>
+        <div id="content-header">
+            <div class="padding">
+                <h1>Welcome</h1>
             </div>
-            <br />
-            <div id="supportedVersion"/>
-        </body>
-    </html>
+        </div>
+        <div id="content-main">
+            <div class="padding">
+                <p>Choose the buttons below to add boilerplate text to the document by using the Word JavaScript API.</p>
+                <br />
+                <h3>Try it out</h3>
+                <button id="emerson">Add quote from Ralph Waldo Emerson</button>
+                <br /><br />
+                <button id="checkhov">Add quote from Anton Chekhov</button>
+                <br /><br />
+                <button id="proverb">Add Chinese proverb</button>
+            </div>
+        </div>
+        <br />
+        <div id="supportedVersion" />
+        <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="node_modules/office-ui-fabric-js/dist/js/fabric.js"></script>
+    </body>
     ```
 
-2. Откройте файл **src\index.js**, чтобы указать сценарий для надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл. Этот скрипт содержит код инициализации, а также код, вносящий изменения в документ Word, вставляя текст при нажатии кнопки. 
+2. Откройте файл **src/index.js**, чтобы указать сценарий для надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл. Этот скрипт содержит код инициализации, а также код, вносящий изменения в документ Word, вставляя текст при нажатии кнопки. 
 
     ```js
     'use strict';
@@ -438,7 +435,7 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
 2. Элемент `ProviderName` содержит значение заполнителя. Замените его на свое имя.
 
-3. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его строкой **Надстройка области задач для Word**.
+3. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его на строку **Надстройка области задач для Word**.
 
 4. Сохраните файл.
 
@@ -470,11 +467,11 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
 3. В области задач нажмите любую кнопку, чтобы добавить стандартный текст в документ.
 
-    ![Снимок экрана: приложение Word с загруженной надстройкой, добавляющей стандартный текст.](../images/word-quickstart-addin-1.png)
+    ![Снимок экрана с отображаемым приложением Word с загруженной надстройкой, добавляющей стандартный текст.](../images/word-quickstart-addin-1.png)
 
 ---
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Последующие шаги
 
 Поздравляем, вы успешно создали надстройку Word с помощью jQuery! Чтобы узнать больше о возможностях надстроек Word и создать более сложную надстройку, воспользуйтесь руководством по использованию надстроек Word.
 

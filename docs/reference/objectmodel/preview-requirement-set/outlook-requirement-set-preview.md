@@ -1,9 +1,9 @@
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора требований API для надстройки Outlook
 
-Вложенный набор API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.
+Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.
 
 > [!NOTE]
-> Примечание. Эта документация относится к **предварительной версии** [набора требований](/javascript/office/requirement-sets/outlook-api-requirement-sets). Этот набор требований еще не полностью реализован, и клиенты будут неправильно сообщать о его поддержке. Не следует указывать этот набор требований в манифесте надстройки. Прежде чем использовать методы и свойства, добавленные в этом наборе требований, следует отдельно проверять их на доступность.
+> Эта документация является **предварительной версией** [набора требований](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets). Этот набор требований еще не полностью реализован, и клиенты будут неправильно сообщать о его поддержке. Не следует указывать этот набор требований в манифесте надстройки. Методы и свойства, представленные в этом наборе требований, должны быть по отдельности протестированы на доступность перед их использованием.
 
 Предварительная версия набора требований включает все возможности [набора требований 1.7](../requirement-set-1.7/outlook-requirement-set-1.7.md).
 
@@ -18,7 +18,8 @@
 - [Office.context.mailbox.item.getSharedPropertiesAsync](office.context.mailbox.item.md#getsharedpropertiesasyncoptions-callback): добавлен новый метод, который возвращает объект, представляющий sharedProperties элемента appointment или message.
 - [Office.context.auth.getAccessTokenAsync](https://docs.microsoft.com/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference): добавлен доступ к `getAccessTokenAsync`, что позволяет надстройкам [получать маркер доступа](https://docs.microsoft.com/outlook/add-ins/authenticate-a-user-with-an-sso-token) для API Microsoft Graph.
 - [Office.MailboxEnums.DelegatePermissions](/javascript/api/outlook/office.mailboxenums.delegatepermissions): добавлено новое перечисление битового флага, указывающее делегированные разрешения.
-- [Office.EventType](/javascript/api/office/office.eventtype): изменено для поддержки событий OfficeThemeChanged посредством добавления записи `OfficeThemeChanged`.
+- [Office.EventType](/javascript/api/office/office.eventtype): изменен для поддержки события OfficeThemeChanged посредством добавления записи `OfficeThemeChanged`.
+- [Элемент манифеста SupportsSharedFolders](../../manifest/supportssharedfolders.md): добавлен дочерний элемент к элементу манифеста [DesktopFormFactor](../../manifest/desktopformfactor.md). Он определяет, является ли надстройка доступной в сценарии делегирования.
 
 ## <a name="see-also"></a>См. также
 
