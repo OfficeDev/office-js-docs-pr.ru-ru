@@ -2,12 +2,12 @@
 title: Общие сведения о надстройках Excel
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: 8ce01df60489d05f1ba9f4b53f04fa99f61e1d36
-ms.sourcegitcommit: 563c53bac52b31277ab935f30af648f17c5ed1e2
+ms.openlocfilehash: 6d67cd05e7021c8b76fb69135000d4079024713a
+ms.sourcegitcommit: c53f05bbd4abdfe1ee2e42fdd4f82b318b363ad7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "25459100"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "25505960"
 ---
 # <a name="excel-add-ins-overview"></a>Общие сведения о надстройках Excel
 
@@ -33,7 +33,7 @@ ms.locfileid: "25459100"
 
 Надстройка Excel включает два основных компонента: веб-приложение и файл конфигурации, называемый файлом манифеста. 
 
-Веб-приложение использует [API JavaScript для Office](https://docs.microsoft.com/javascript/office/javascript-api-for-office?view=office-js) для взаимодействия с объектами в Excel, а также может упрощать работу с ресурсами в Интернете. Например, надстройка может выполнять следующие действия:
+Веб-приложение использует [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js) для взаимодействия с объектами в Excel, а также может упрощать работу с ресурсами в Интернете. Например, надстройка может выполнять следующие действия:
 
 * создавать, читать, обновлять и удалять данные в книге (листы, диапазоны, таблицы, диаграммы, именованные элементы и т. д.);
 * выполнять авторизацию пользователя в веб-службе с помощью стандартного потока OAuth 2.0;
@@ -96,9 +96,9 @@ ms.locfileid: "25459100"
 
 ## <a name="javascript-apis-to-interact-with-workbook-content"></a>API JavaScript для взаимодействия с содержимым книги
 
-Надстройка Excel взаимодействует с объектами в Excel с помощью [API JavaScript для Office](https://docs.microsoft.com/javascript/office/javascript-api-for-office?view=office-js), включающего две представленные ниже объектных модели JavaScript.
+Надстройка Excel взаимодействует с объектами в Excel с помощью [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js), включающего две представленные ниже объектных модели JavaScript.
 
-* **API JavaScript для Excel**. Представленный в Office 2016 [API JavaScript для Excel](https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview?view=office-js) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к листам, диапазонам, таблицам, диаграммам и пр. 
+* **API JavaScript для Excel**. Представленный в Office 2016 [API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к листам, диапазонам, таблицам, диаграммам и пр. 
 
 * **Общий API**. Представленный в Office 2013 общий API можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов ведущих приложений, как, например, Word, Excel и PowerPoint. Общий API предоставляет ограниченные возможности по взаимодействию с Excel, поэтому его можно использовать, если надстройка должна работать в Excel 2013.
 
@@ -111,5 +111,5 @@ ms.locfileid: "25459100"
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)
 - [Рекомендации по разработке надстроек Office](../concepts/add-in-development-best-practices.md)
 - [Рекомендации по проектированию надстроек Office](../design/add-in-design.md)
-- [Основные принципы программирования с использованием интерфейса API JavaScript для Excel](excel-add-ins-core-concepts.md)
-- [Справочник по API JavaScript для Excel](https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview?view=office-js)
+- [Основные принципы программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
+- [Справочник по API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js)
