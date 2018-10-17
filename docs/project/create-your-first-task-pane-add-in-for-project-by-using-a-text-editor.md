@@ -2,12 +2,12 @@
 title: Создание первой надстройки области задач для Project 2013 с помощью текстового редактора
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: eb12f1d15135301fe27b143781e1f622475f7b66
-ms.sourcegitcommit: eb74e94d3e1bc1930a9c6582a0a99355d0da34f2
+ms.openlocfilehash: 03d8ad30e4ee52274c6b96ab6290337e6f2a2223
+ms.sourcegitcommit: c53f05bbd4abdfe1ee2e42fdd4f82b318b363ad7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "25004898"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "25506247"
 ---
 # <a name="create-your-first-task-pane-add-in-for-project-2013-by-using-a-text-editor"></a>Создание первой надстройки области задач для Project 2013 с помощью текстового редактора
 
@@ -106,7 +106,7 @@ ms.locfileid: "25004898"
 
    Приведенный ниже код получает контекст приложения и сведения о документе с помощью функций из файла Office.js. Объект **text** представляет собой идентификатор элемента управления **textarea** в HTML-файле.
     
-   Переменная **\_projDoc** инициализируется с объектом **ProjectDocument**. Код включает функции обработки простых ошибок, а также функцию **getContextValues**, которая получает контекст приложения и свойства контекста для документа проекта. Дополнительные сведения об объектной модели JavaScript для Project см. в статье [API JavaScript для Office](https://docs.microsoft.com/javascript/office/javascript-api-for-office?view=office-js).
+   Переменная **\_projDoc** инициализируется с объектом **ProjectDocument**. Код включает функции обработки простых ошибок, а также функцию **getContextValues**, которая получает контекст приложения и свойства контекста для документа проекта. Дополнительные сведения об объектной модели JavaScript для Project см. в статье [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js).
 
     ```javascript
     /*
@@ -168,7 +168,7 @@ ms.locfileid: "25004898"
     }
     ```
 
-   Сведения о функциях в файле Office.debug.js см. в разделе [JavaScript API for Office](https://docs.microsoft.com/javascript/office/javascript-api-for-office?view=office-js). Например, функция **getDocumentUrl** получает URL-адрес или путь к файлу открытого проекта.
+   Сведения о функциях в файле Office.debug.js см. в разделе [JavaScript API for Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js). Например, функция **getDocumentUrl** получает URL-адрес или путь к файлу открытого проекта.
     
 3. Добавьте функции JavaScript, которые вызывают асинхронные функции из файлов Office.js и Project-15.js для получения выбранных данных.
     
@@ -190,7 +190,7 @@ ms.locfileid: "25004898"
      > [!NOTE]
      > Чтобы получить URL-адрес SharePoint и имя списка задач, рекомендуется использовать функцию **getProjectFieldAsync** с константами **WSSUrl** и **WSSList** в перечислении [ProjectProjectFields](https://docs.microsoft.com/javascript/api/office/office.projectprojectfields?view=office-js).
 
-   Все функции в коде ниже содержат анонимную функцию, которую определяет `function (asyncResult)`обратная функция, получающая асинхронный результат. Вместо анонимных можно использовать именованные функции. Благодаря этому будет удобней обеспечивать поддержку сложных надстроек.
+   Все функции в коде ниже содержат анонимную функцию, которую определяет `function (asyncResult)` — функция обратного звонка, получающая асинхронный результат. Вместо анонимных можно использовать именованные функции. Благодаря этому будет удобней обеспечивать поддержку сложных надстроек.
 
     ```javascript
     // Get the data in the selected cells of the grid in the active view.
@@ -710,7 +710,7 @@ ms.locfileid: "25004898"
     
     `Net share AppManifests=C:\Project\AppManifests`
     
-2. Создайте сетевую папку для размещения файлов HTML и JavaScript, относящихся к надстройке Project OM Test. Убедитесь, что путь к сетевой папке совпадает с путем, указанным в манифесте JSOM_SimpleOMCalls.xml. Например, если файлы расположены в каталоге `C:\Project\AppSource` на локальном компьютере, выполните следующую команду:
+2. Создайте общую папку для размещения файлов HTML и JavaScript, относящихся к надстройке Project OM Test. Убедитесь, что путь к общей папке совпадает с путем, указанным в манифесте JSOM_SimpleOMCalls.xml. Например, если файлы расположены в каталоге `C:\Project\AppSource` на локальном компьютере, выполните следующую команду:
     
     `net share AppSource=C:\Project\AppSource`
 
@@ -720,7 +720,7 @@ ms.locfileid: "25004898"
     
 4. В диалоговом окне **Центр управления безопасностью** выберите в левой области **Доверенные каталоги надстроек**.
     
-5. Если вы уже добавляли путь `\\ServerName\AppManifests` для надстройки "Поиск Bing", пропустите этот этап. В противном случае в области **Доверенные каталоги надстроек** укажите путь `\\ServerName\AppManifests` в текстовом окне **URL-адрес каталога**, выберите пункт **Добавить каталог**, включите сетевую общую папку как источник по умолчанию (см. рис. 1), а затем нажмите кнопку **ОК**.
+5. Если вы уже добавили путь `\\ServerName\AppManifests` для надстройки "Поиск Bing", пропустите этот этап. В противном случае в области **Доверенные каталоги надстроек** укажите путь `\\ServerName\AppManifests` в текстовом окне **URL-адрес каталога**, выберите пункт **Добавить каталог**, включите сетевую общую папку как источник по умолчанию (см. рис. 1), а затем нажмите кнопку **ОК**.
     
    *Рис. 1. Добавление сетевой общей папки для манифестов надстроек*
 
@@ -764,9 +764,9 @@ ms.locfileid: "25004898"
     - Начало: `Thu 6/14/12`
     - Продолжительность: `4d`
     - Приоритет: `500`
-    - Примечания: "Это примечание для задачи T2. Это лишь тестовое примечание. Если бы оно было настоящим, тут были бы настоящие сведения".
+    - Примечание: "Это примечание для задачи T2. Это лишь тестовое примечание. Если бы оно было настоящим, тут были бы настоящие сведения".
 
-13. Нажмите кнопку **getWSSUrlAsync**. Если проект относится к одному из указанных ниже типов, то в результатах появятся URL-адрес и имя списка задач.
+13. Нажмите кнопку **getWSSUrlAsync**. Если проект относится к одному из указанных ниже типов, то в результатах появятся список задач, URL-адрес и имя.
     
     - Список задач SharePoint, импортированный в Project Server.
     - Список задач SharePoint, импортированный в Project профессиональный, а затем снова сохраненный в SharePoint (без использования Project Server).
@@ -1095,7 +1095,7 @@ function logMethodError(methodName, errorName, errorMessage, actionMessage) {
 
 - [Надстройки области задач для Project](../project/project-add-ins.md)
 - [Общие сведения об API JavaScript для надстроек](../develop/understanding-the-javascript-api-for-office.md)
-- [API JavaScript для надстроек Office](https://docs.microsoft.com/javascript/office/javascript-api-for-office?view=office-js)
-- [Справочник по схеме для манифестов надстроек Office (версия 1.1)](../develop/add-in-manifests.md)     
+- [API JavaScript для надстроек Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js)
+- [Ссылка на схему для манифестов надстроек Office (версия 1.1)](../develop/add-in-manifests.md)     
 - [Загрузка пакета SDK для Project 2013](https://www.microsoft.com/download/details.aspx?id=30435%20)
     

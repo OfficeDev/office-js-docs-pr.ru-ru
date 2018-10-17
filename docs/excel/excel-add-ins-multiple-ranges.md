@@ -2,12 +2,12 @@
 title: Работа с несколькими диапазонами одновременно в надстройках Excel
 description: ''
 ms.date: 9/4/2018
-ms.openlocfilehash: 2387be8dc17d85028b1d086cb192ac1accf167d5
-ms.sourcegitcommit: 563c53bac52b31277ab935f30af648f17c5ed1e2
+ms.openlocfilehash: a00bbf15b53649147fb2c2b1dfa590f15c5739be
+ms.sourcegitcommit: c53f05bbd4abdfe1ee2e42fdd4f82b318b363ad7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "25459198"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "25506296"
 ---
 # <a name="work-with-multiple-ranges-simultaneously-in-excel-add-ins-preview"></a>Работа с несколькими диапазонами одновременно в надстройках Excel (предварительная версия)
 
@@ -214,7 +214,7 @@ Excel.run(function (context) {
 
 ### <a name="get-rangeareas-within-rangeareas"></a>Получение объектов RangeAreas в RangeAreas
 
-|||UNTRANSLATED_CONTENT_START|||The `RangeAreas` type itself also has `getSpecialCells` and `getSpecialCellsOrNullObject` methods which take the same two parameters. These methods return all the targeted cells from all of the ranges in the `RangeAreas.areas` collection. There is one small difference in the behavior of the methods when called on a `RangeAreas` object instead of a `Range` object: when you pass "SameConditionalFormat" as the first parameter, the method returns all cells that have the same conditional formatting as the upper leftmost cell *in the first range in the `RangeAreas.areas` collection*. The same point applies to "SameDataValidation": when passed to `Range.getSpecialCells`, it returns all cells that have the same data validation rule as the upper leftmost cell *in the range*. But when it is passed to `RangeAreas.getSpecialCells`, it returns all cells that have the same data validation rule as the upper leftmost cell *in the first range in the `RangeAreas.areas` collection*.|||UNTRANSLATED_CONTENT_END|||
+Тип  `RangeAreas` также имеет методы  `getSpecialCells` и `getSpecialCellsOrNullObject`, которые принимают те же два параметра. Эти методы возвращают все целевые ячейки из всех диапазонов в коллекции `RangeAreas.areas`. Существует одно небольшое отличие в поведении методов при вызове объекта `RangeAreas`вместо объекта `Range`: когда вы передаете "SameConditionalFormat" в качестве первого параметра, метод возвращает все ячейки, имеющие одинаковое условное форматирование, как верхнюю крайнюю слева ячейку *в первом диапазоне в коллекции `getSpecialCellsOrNullObject`*. То же касается и "SameDataValidation": при передаче к `Range.getSpecialCells`он возвращает все ячейки, которые имеют такое же правило проверки данных, как верхнюю крайнюю слева ячейку *в диапазоне*. Но при передаче к `RangeAreas.getSpecialCells` он возвращает все ячейки, которые имеют такое же правило проверки данных, как верхнюю крайнюю слева ячейку * в первом диапазоне в коллекции`RangeAreas.areas`*.
 
 ## <a name="read-properties-of-rangeareas"></a>Чтение свойств RangeAreas
 
@@ -269,6 +269,6 @@ Excel.run(function (context) {
 
 ## <a name="see-also"></a>См. также
 
-- [Основные принципы программирования с помощью API JavaScript для Excel](https://docs.microsoft.com/javascript/office/overview/excel-add-ins-reference-overview)
+- [Основные принципы программирования с помощью API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)
 - [Объект Range (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.range)
 - Объект[RangeAreas (JavaScript API для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.rangeareas) (эта ссылка может не работать, пока API находится в режиме предварительной версии. В качестве альтернативы см. [бета-версию office.d.ts](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts).)

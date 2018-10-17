@@ -2,7 +2,7 @@
 
 С помощью API JavaScript для Visio вы можете внедрять схемы Visio в SharePoint Online. Внедренный документ Visio — схема, которая хранится в библиотеке документов SharePoint и отображается на странице SharePoint. Чтобы внедрить документ Visio, отобразите его в элементе `<iframe>` HTML. После этого вы сможете программным способом работать с внедренным документом при помощи API JavaScript для Visio.
 
-![Документ Visio в iframe на странице SharePoint вместе с веб-частью редактора сценариев](/javascript/api/docs-ref-conceptual/images/visio-api-block-diagram.png)
+![Документ Visio в iframe на странице SharePoint вместе с веб-частью редактора сценариев](../images/visio-api-block-diagram.png)
 
 
 API JavaScript для Visio позволяет следующее:
@@ -183,7 +183,7 @@ function getSelectedShapeText() {
 
 После этого все, что требуется — это URL-адрес схемы Visio, с которой вы хотите работать. Просто загрузите схему Visio в SharePoint Online и откройте ее в Visio Online. Оттуда откройте диалоговое окно Внедрить и используйте URL-адрес Внедрить в приведенном выше примере.
 
-![Скопируйте URL-адрес файла Visio из диалога Внедрить](/javascript/api/docs-ref-conceptual/images/Visio-embed-url.png)
+![Скопируйте URL-адрес файла Visio из диалога Внедрить](../images/Visio-embed-url.png)
 
 Если вы используете Visio Online в Режиме правки, откройте диалоговое окно Внедрить, выбрав **Файл** > **Поделиться** > **Внедрить**. Если вы используете Visio Online в режиме просмотра, откройте диалоговое окно Внедрить, выбрав '... а затем **Внедрить**.
 
