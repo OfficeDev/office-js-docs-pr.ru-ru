@@ -2,12 +2,12 @@
 title: Конфиденциальность и безопасность надстроек Office
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: e627c847f203205b808918acf3af3154bdbe04ce
-ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
+ms.openlocfilehash: c8fb61d6366d36ab14a072af80702226fe5efa9c
+ms.sourcegitcommit: eb74e94d3e1bc1930a9c6582a0a99355d0da34f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "23945581"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "25005052"
 ---
 # <a name="privacy-and-security-for-office-add-ins"></a>Конфиденциальность и безопасность надстроек Office
 
@@ -129,7 +129,7 @@ ms.locfileid: "23945581"
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.0"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+           xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" 
            xmlns:ver="http://schemas.microsoft.com/office/appforoffice/1.0"
            xsi:type="TaskPaneApp">
 
@@ -149,7 +149,7 @@ ms.locfileid: "23945581"
 
 ### <a name="same-origin-policy"></a>Политика единого домена
 
-Так как надстройки Office представляют собой веб-страницы, выполняемые в элементе управления веб-браузера, они должны соответствовать политике единого домена, применяемой браузером: по умолчанию веб-страница, расположенная в одном домене, не может выполнять запросы [XmlHttpRequest](http://www.w3.org/TR/XMLHttpRequest/) веб-службы к домену, отличному от домена, в котором она размещена.
+Так как надстройки Office представляют собой веб-страницы, выполняемые в элементе управления веб-браузера, они должны соответствовать политике единого домена, применяемой браузером: по умолчанию веб-страница, расположенная в одном домене, не может выполнять запросы [XmlHttpRequest](https://www.w3.org/TR/XMLHttpRequest/) веб-службы к домену, отличному от домена, в котором она размещена.
 
 Один из способов обойти это ограничение — использовать JSON/P, то есть предоставить прокси-сервер веб-службе. Для этого необходимо включить тег **script** с атрибутом **src**, который указывает на какой-либо сценарий, размещенный в другом домене. Вы можете программно создавать теги **script**, динамически формируя URL-адрес, на который указывает атрибут **src**, и передавая параметры на URL-адрес через параметры запроса URI. Поставщики веб-служб создают и размещают код JavaScript по определенным URL-адресам и возвращают различные сценарии в зависимости от параметров запроса URI. После этого такие сценарии выполняются в месте их вставки и работают правильно.
 
@@ -188,7 +188,7 @@ Exchange и SharePoint предоставляют прокси-серверы н
 
 - Если вы используете jQuery, то вместо метода [.html()](http://api.jquery.com/text/) воспользуйтесь методом [.text()](http://api.jquery.com/html/).
 
-- С помощью метода [toStaticHTML](http://msdn.microsoft.com/library/ie/cc848922.aspx) перед отправкой введенных пользователем данных в свойство **innerHTML** можно удалить из них любые динамические элементы и атрибуты HTML.
+- С помощью метода [toStaticHTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference) перед отправкой введенных пользователем данных в свойство **innerHTML** можно удалить из них любые динамические элементы и атрибуты HTML.
 
 - С помощью функции [encodeURIComponent](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/encodeuricomponent) или [encodeURI](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/encodeuri) можно закодировать текст, который будет использоваться в качестве URL-адреса, введенного пользователем или содержащего введенные пользователем данные.
 
@@ -254,7 +254,7 @@ Exchange и SharePoint предоставляют прокси-серверы н
 - [Общие сведения о разрешениях для надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)
 - [Ограничения активации и API JavaScript для надстроек Outlook](https://docs.microsoft.com/outlook/add-ins/limits-for-activation-and-javascript-api-for-outlook-add-ins)
 - [Работа с ограничениями по принципу одинакового источника в надстройках Office](https://docs.microsoft.com/office/dev/add-ins/develop/addressing-same-origin-policy-limitations)
-- [Принцип одинакового источника](http://www.w3.org/Security/wiki/Same_Origin_Policy)
+- [Принцип одинакового источника](https://www.w3.org/Security/wiki/Same_Origin_Policy)
 - [Принцип одинакового источника. Часть 1. Без просмотра](http://blogs.msdn.com/b/ieinternals/archive/2009/08/28/explaining-same-origin-policy-part-1-deny-read.aspx)
 - [Принцип одинакового источника для JavaScript](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy)
 - [Защищенный режим Internet Explorer](https://support.microsoft.com/help/2761180/apps-for-office-don-t-start-if-you-disable-protected-mode-for-the-restricted-sites-zone-in-internet-explorer)
