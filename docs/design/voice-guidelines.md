@@ -1,4 +1,4 @@
-# <a name="voice-guidelines"></a>Рекомендации по тону
+# <a name="voice-guidelines"></a>Рекомендации по стилю
 
 Разрабатывая надстройки Office, обращайте внимание на стиль элементов пользовательского интерфейса и их текст. Старайтесь следовать стилю пользовательского интерфейса Office — разговорному, непринужденному и доступному. 
 
@@ -13,7 +13,7 @@
 
 ## <a name="see-also"></a>См. также
 
-- Рекомендации по [стилю для любых пользователей](https://docs.microsoft.com/en-us/style-guide/accessibility/writing-all-abilities)
-- [10 лучших советов по стилю и тону компании Майкрософт](https://docs.microsoft.com/en-us/style-guide/top-10-tips-style-voice)
-- Рекомендации по [выбору слов](https://docs.microsoft.com/en-us/style-guide/word-choice/)
--  Надстройка Office [политики проверки](https://docs.microsoft.com/en-us/office/dev/store/validation-policies)
+- Рекомендации по [стилю для любых пользователей](https://docs.microsoft.com/style-guide/accessibility/writing-all-abilities)
+- [10 лучших советов по стилю и тону компании Майкрософт](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)
+- Рекомендации по [выбору слов](https://docs.microsoft.com/style-guide/word-choice/)
+-  Надстройка Office [политики проверки](https://docs.microsoft.com/office/dev/store/validation-policies)

@@ -2,12 +2,12 @@
 title: Загрузка неопубликованных надстроек Office в Office Online для тестирования
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: 69b255545525ff667618c9f8bd1e1b7953592967
-ms.sourcegitcommit: 58af795c3d0393a4b1f6425fa1cbdca1e48fb473
+ms.openlocfilehash: 10e236366012bb402b968d0f61ea64326bb9172d
+ms.sourcegitcommit: 4de2a1b62ccaa8e51982e95537fc9f52c0c5e687
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "20138851"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "22925306"
 ---
 # <a name="sideload-office-add-ins-in-office-online-for-testing"></a>Загрузка неопубликованных надстроек Office в Office Online для тестирования
 
@@ -17,7 +17,7 @@ ms.locfileid: "20138851"
 
 
 > [!NOTE]
-> Загрузка неопубликованных надстроек, описанная в этой статье, поддерживается в Word, Excel и PowerPoint. Соответствующие действия касательно надстройки Outlook приведены в статье [Загрузка неопубликованных надстроек Outlook для тестирования](https://docs.microsoft.com/en-us/outlook/add-ins/sideload-outlook-add-ins-for-testing).
+> Загрузка неопубликованных надстроек, описанная в этой статье, поддерживается в Word, Excel и PowerPoint. Соответствующие действия касательно надстройки Outlook приведены в статье [Загрузка неопубликованных надстроек Outlook для тестирования](https://docs.microsoft.com/outlook/add-ins/sideload-outlook-add-ins-for-testing).
 
 Из следующего видео вы узнаете, как загрузить неопубликованную надстройку в классическое приложение Office или Office Online.  
 

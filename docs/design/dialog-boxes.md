@@ -2,12 +2,12 @@
 title: Диалоговые окна в надстройках Office
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: f18f603d76a902bdce56152ecb3f63bbafad56fb
-ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
+ms.openlocfilehash: 3d2fe2767f2f0d2d044dd2a4c5b309ff35202384
+ms.sourcegitcommit: 3da2038e827dc3f274d63a01dc1f34c98b04557e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "23945752"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "24016271"
 ---
 # <a name="dialog-boxes-in-office-add-ins"></a>Диалоговые окна в надстройках Office
  
@@ -30,7 +30,6 @@ ms.locfileid: "23945752"
 
 ## <a name="see-also"></a>См. также
 
-- [Пример шаблона для взаимодействия с пользователем](https://office.visualstudio.com/DefaultCollection/OC/_git/GettingStarted-FabricReact)
 - [Ресурсы для разработки на сайте GitHub](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code)
 - [Объект Dialog](https://docs.microsoft.com/javascript/api/office/office.dialog?view=office-js)
 
