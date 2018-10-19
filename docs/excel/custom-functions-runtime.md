@@ -1,13 +1,13 @@
 ---
-ms.date: 10/03/2018
+ms.date: 10/17/2018
 description: Основные сведения о ключевых сценариях разработки настраиваемых функций Excel, использующие новую среду выполнения JavaScript.
 title: Среда выполнения для настраиваемых функций Excel
-ms.openlocfilehash: a48b02a8ca404b51740d9052d199da934eb9312e
-ms.sourcegitcommit: 563c53bac52b31277ab935f30af648f17c5ed1e2
+ms.openlocfilehash: 333816c3916af1490d14b8344c4bb49094f9a7f9
+ms.sourcegitcommit: a6d6348075c1abed76d2146ddfc099b0151fe403
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "25459107"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "25640017"
 ---
 # <a name="runtime-for-excel-custom-functions-preview"></a>Среда выполнения для настраиваемых функций Excel (предварительная версия)
 
@@ -17,14 +17,14 @@ ms.locfileid: "25459107"
 
 ## <a name="requesting-external-data"></a>Запрос внешних данных
 
-В настраиваемой функции можно запросить внешние данные с помощью API, например, [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), или используя [XmlHttpRequest (XHR)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)— стандартный API, который выдает HTTP-запросы для взаимодействия с серверами. В новой среде выполнения JavaScript XHR реализует дополнительные меры безопасности, требуя [исходную политику](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) и простой механизм [CORS](https://www.w3.org/TR/cors/).  
+В настраиваемой функции можно запросить внешние данные с помощью API, например, [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), или используя [XmlHttpRequest (XHR)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)— стандартный API, который выдает HTTP-запросы для взаимодействия с серверами. В новой среде выполнения JavaScript XHR реализует дополнительные меры безопасности, требуя [ исходную политику](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) и простой механизм [ CORS](https://www.w3.org/TR/cors/).  
 
 ### <a name="xhr-example"></a>Пример XHR
 
-В следующем примере кода функция `getTemperature` вызывает функцию `sendWebRequest` для получения температуры отдельной области на основе идентификатора термометра. Функция `sendWebRequest` использует XHR для выдачи запроса `GET` конечной точке, которая может предоставить данные. 
+В следующем примере кода функция `getTemperature` вызывает функцию `sendWebRequest` для получения температуры отдельной области на основе идентификатора термометра. Функция `sendWebRequest` использует XHR для выдачи запроса `GET` к конечной точке, которая может предоставлять данные. 
 
 > [!NOTE] 
-> При использовании Fetch или XHR возвращается новый JavaScript `Promise` . До сентября 2018 года необходимо было указывать `OfficeExtension.Promise`, чтобы использовать обещания в API Office JavaScript, но теперь вы можете просто использовать JavaScript `Promise`.
+> При использовании Fetch или XHR возвращается новый JavaScript `Promise`. До сентября 2018 года необходимо было указывать `OfficeExtension.Promise`, чтобы использовать обещания в API Office JavaScript, но теперь вы можете просто использовать JavaScript `Promise`.
 
 ```js
 function getTemperature(thermometerID) {
@@ -51,7 +51,7 @@ function sendWebRequest(thermometerID, data) {
 
 ## <a name="receiving-data-via-websockets"></a>Получение данных с помощью WebSockets
 
-В пользовательской функции можно использовать [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) для обмена данными при постоянном подключении к серверу. При использовании WebSockets ваша настраиваемая функция может открывать подключение с сервером, а затем автоматически получать сообщения от сервера, когда происходят определенные события, без необходимости явно запрашивать данные у сервера.
+В пользовательской функции можно использовать [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) для обмена данными при постоянном подключении к серверу. При использовании WebSockets ваша настраиваемая функция может открывать подключение с сервером, а затем автоматически получать сообщения от сервера, когда происходят определенные события, без необходимости прямо запрашивать данные у сервера.
 
 ### <a name="websockets-example"></a>Пример WebSockets
 
@@ -69,9 +69,9 @@ ws.onerror = (error) => {
 
 ## <a name="storing-and-accessing-data"></a>Хранение данных и доступ к ним
 
-Вы можете хранить данные и получать к ним доступ в настраиваемой функции (или в любой другой части надстройки), используя объект `OfficeRuntime.AsyncStorage`. `AsyncStorage` — это постоянная, не зашифрованная система хранения с ключевым значением, являющаяся альтернативой для хранилища [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), которое не может использоваться для настраиваемых функций. Надстройка может хранить до 10 МБ данных с помощью `AsyncStorage`.
+В настраиваемой функции (или в любой другой части надстройки) можно использовать объект `OfficeRuntime.AsyncStorage` для хранения данных и доступа к ним. `AsyncStorage` — это постоянная, не зашифрованная система хранения с ключевым значением, являющаяся альтернативой для хранилища [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), которое не может использоваться для настраиваемых функций. Надстройка может хранить до 10 МБ данных с помощью `AsyncStorage`.
 
-Доступны следующие методы на объекте `AsyncStorage`:
+Доступны следующие методы в объекте `AsyncStorage`:
  
  - `getItem`
  - `setItem`
@@ -102,11 +102,11 @@ _goGetData = async () => {
 
 ## <a name="displaying-a-dialog-box"></a>Отображение диалогового окна
 
-В настраиваемой функции (или в любой другой части надстройки) можно использовать API`OfficeRuntime.displayWebDialogOptions` для отображения диалогового окна. Этот API диалогового окна является альтернативой [API диалогового окна](../develop/dialog-api-in-office-add-ins.md) , который можно использовать в области задач и команд надстроек, но не в настраиваемых функциях.
+В настраиваемой функции (или в любой другой части надстройки) можно использовать API `OfficeRuntime.displayWebDialogOptions` для отображения диалогового окна. Этот API диалогового окна является альтернативой [API общих диалогов](../develop/dialog-api-in-office-add-ins.md) , который можно использовать в области задач и команд надстроек, но не в настраиваемых функциях.
 
-### <a name="dialog-api-example"></a>Пример API диалогового окна 
+### <a name="dialog-api-example"></a>Пример API общих диалогов 
 
-В следующем примере кода функция `getTokenViaDialog` использует функцию API диалогового окна `displayWebDialogOptions`, чтобы открыть диалоговое окно.
+В следующем примере кода функция `getTokenViaDialog` использует функцию API общих диалогов `displayWebDialogOptions`, чтобы открыть диалоговое окно.
 
 ```js
 // Get auth token before calling my service, a hypothetical API that will deliver a stock price based on stock ticker string, such as "MSFT"
@@ -189,7 +189,7 @@ function getStock (ticker) {
 
 ## <a name="additional-considerations"></a>Дополнительные рекомендации
 
-Чтобы создать надстройку, которая будет работать на нескольких платформах (для одного из основных клиентов надстроек Office), вы не должны запрашивать доступ к модели DOM в настраиваемых функциях или использовать библиотеки, такие как jQuery, которые полагаются на DOM. В Excel для Windows, где настраиваемые функции используют среду выполнения JavaScript, у настраиваемых функций нет доступа к DOM.
+Чтобы создать надстройку, которая будет работать на нескольких платформах (для одного из основных клиентов надстроек Office), вы не должны запрашивать доступ к модели DOM в настраиваемых функциях или использовать библиотеки, такие как jQuery, которые полагаются на DOM. В Excel для Windows настраиваемые функции, использующие среду выполнения JavaScripte, не могут получить доступ к DOM.
 
 ## <a name="see-also"></a>См. также
 
