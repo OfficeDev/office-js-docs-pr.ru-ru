@@ -34,7 +34,7 @@ items:
     href: quickstarts/onenote-quickstart.md
   - name: Создание надстройки Outlook
     displayName: Outlook
-    href: https://docs.microsoft.com/outlook/add-ins/quick-start
+    href: /outlook/add-ins/quick-start
   - name: Создание надстройки PowerPoint
     displayName: PowerPoint
     href: quickstarts/powerpoint-quickstart.md
@@ -87,7 +87,7 @@ items:
         href: design/add-in-typography.md
       - name: Цвет
         href: design/add-in-color.md
-      - name: Структура
+      - name: Макет
         href: design/add-in-layout.md
       - name: Значки
         href: design/add-in-icons.md
@@ -282,10 +282,10 @@ items:
         href: excel/excel-add-ins-worksheets.md
     - name: Обзор API JavaScript для Excel
       displayName: Excel
-      href: https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js
+      href: https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview
     - name: Справка по API JavaScript для Excel
       displayName: Excel
-      href: https://docs.microsoft.com/javascript/api/excel?view=office-js
+      href: /javascript/api/excel
   - name: Надстройки Word
     displayName: Word
     href: word/word-add-ins-programming-overview.md
@@ -316,18 +316,18 @@ items:
       href: word/search-option-guidance.md
     - name: Обзор использования API JavaScript для Word
       displayName: Word
-      href: https://docs.microsoft.com/office/dev/add-ins/reference/overview/word-add-ins-reference-overview?view=office-js
+      href: https://docs.microsoft.com/office/dev/add-ins/reference/overview/word-add-ins-reference-overview
     - name: Справка по API JavaScript для Word
       displayName: Word
-      href: https://docs.microsoft.com/en-us/javascript/api/word?view=office-js
+      href: /javascript/api/word
   - name: Надстройки Outlook
     displayName: Outlook
-    href: https://docs.microsoft.com/outlook/add-ins/
+    href: /outlook/add-ins/
   - name: Надстройки PowerPoint
     displayName: PowerPoint
     href: powerpoint/powerpoint-add-ins.md
     items:
-    - name: Создание первой надстройки PowerPoint
+    - name: Создайте свою первую надстройку PowerPoint
       displayName: PowerPoint
       href: powerpoint/powerpoint-add-ins-get-started.md
     - name: Руководство по надстройкам PowerPoint
@@ -351,10 +351,10 @@ items:
       href: onenote/onenote-add-ins-page-content.md
     - name: Обзор API JavaScript для OneNote
       displayName: OneNote
-      href: https://docs.microsoft.com/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference?view=office-js
+      href: https://docs.microsoft.com/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference
     - name: Справка по API JavaScript для OneNote
       displayName: OneNote
-      href: https://docs.microsoft.com/en-us/javascript/api/onenote?view=office-js
+      href: /javascript/api/onenote
   - name: Надстройки Project
     displayName: Project
     href: project/project-add-ins.md
@@ -411,9 +411,9 @@ items:
     - name: Публикация надстроек в каталоге SharePoint
       href: publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md
     - name: Публикация надстроек в AppSource
-      href: https://docs.microsoft.com/office/dev/store/submit-to-the-office-store
+      href: /office/dev/store/submit-to-the-office-store
     - name: Политики проверки AppSource
-      href: https://docs.microsoft.com/office/dev/store/validation-policies
+      href: /office/dev/store/validation-policies
 - name: Справочные материалы
   items:
   - name: API JavaScript для Office
@@ -651,7 +651,7 @@ items:
       href: reference/manifest/id.md
     - name: Metadata
       href: reference/manifest/metadata.md
-    - name: Method
+    - name: Метод
       href: reference/manifest/method.md
     - name: Methods
       href: reference/manifest/methods.md
@@ -744,9 +744,9 @@ items:
         href: reference/manifest/webapplicationinfo.md
 - name: Ресурсы
   href: resources/resources-links-help.md
-ms.openlocfilehash: 554141ecd56a9f08e38b0d579f96a6d239ac7a22
-ms.sourcegitcommit: f47654582acbe9f618bec49fb97e1d30f8701b62
+ms.openlocfilehash: 1102af4ae8618cd2c2ced018bffa7e64c4fb2ece
+ms.sourcegitcommit: a6d6348075c1abed76d2146ddfc099b0151fe403
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "25579886"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "25640087"

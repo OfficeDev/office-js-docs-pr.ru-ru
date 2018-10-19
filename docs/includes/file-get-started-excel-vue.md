@@ -4,6 +4,8 @@
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
+- [Node.js](https://nodejs.org)
+
 - Глобально установите [CLI для Vue](https://github.com/vuejs/vue-cli).
 
     ```bash
@@ -50,20 +52,17 @@ vue init webpack my-add-in
 
     - **Выберите тип проекта:** `Office Add-in containing the manifest only`
     - **Как вы хотите назвать надстройку?:** `My Office Add-in`
-    - **Какое клиентское приложение Office вы хотели бы поддерживать?:** `Excel`
-
-    После завершения работы мастера вы сможете создать файл манифеста и файл ресурсов для создания вашего проекта.
+    - **Какое клиентское приложение Office должно поддерживаться?:** `Excel`
 
     ![Генератор Yeoman](../images/yo-office.png)
     
-    > [!NOTE]
-    > Если вам будет предложено перезаписать файл **package.json**, выберите **No** (Не перезаписывать).
+    После завершения работы мастера генератор создаст файл манифеста.
 
 ## <a name="secure-the-app"></a>Защита приложения
 
 [!include[HTTPS guidance](../includes/https-guidance.md)]
 
-Чтобы включить HTTPS для своего приложения, откройте файл **package.json** в корневой папке проекта, добавьте в сценарий `dev` флажок `--https` и сохраните файл.
+Чтобы включить HTTPS для своего приложения, откройте файл **package.json** в корневой папке проекта Vue, добавьте в сценарий `dev` флажок `--https` и сохраните файл.
 
 ```json
 "dev": "webpack-dev-server --https --inline --progress --config build/webpack.dev.conf.js"
@@ -71,9 +70,11 @@ vue init webpack my-add-in
 
 ## <a name="update-the-app"></a>Обновление приложения
 
-1. В редакторе кода откройте файл манифеста (т. е. файл в корневом каталоге приложения, имя которого заканчивается на "manifest.xml"). Замените все вхождения `https://localhost:3000` на `https://localhost:8080` и сохраните файл.
+1. В редакторе кода откройте папку **Мои надстройки Office**, созданную Yo Office в корне проекта Vue. В этой папке вы увидите файл манифеста, который определяет параметры для надстройки: **manifest.xml**.
 
-2. Откройте файл **index.html**, добавьте метку `<script>` сразу перед меткой `</head>` и сохраните.
+2. Откройте файл манифеста, замените все вхождения `https://localhost:3000` на `https://localhost:8080` и сохраните файл.
+
+3. Откройте файл **index.html** (находится в корневой папке проекта Vue), добавьте метку `<script>` сразу перед меткой `</head>` и сохраните файл.
 
     ```html
     <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
@@ -184,7 +185,7 @@ vue init webpack my-add-in
 
 1. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.
 
-    - Windows: [Загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
+    - Windows: [загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
     - Excel Online: [загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
     - iPad и Mac: [загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 

@@ -1,13 +1,13 @@
 ---
 title: Работа с событиями с помощью API JavaScript для Excel
 description: ''
-ms.date: 09/21/2018
-ms.openlocfilehash: b56d25e7e0306b4881115397d4136e63ddc03e5c
-ms.sourcegitcommit: 563c53bac52b31277ab935f30af648f17c5ed1e2
+ms.date: 10/17/2018
+ms.openlocfilehash: c3fbdf27dcbedf0d006973e6ebc2e01b02e6cec2
+ms.sourcegitcommit: a6d6348075c1abed76d2146ddfc099b0151fe403
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "25459177"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "25639940"
 ---
 # <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями с помощью API JavaScript для Excel 
 
@@ -41,7 +41,10 @@ ms.locfileid: "25459177"
 
 ### <a name="lifecycle-of-an-event-handler"></a>Жизненный цикл обработчика событий
 
-Обработчик событий создается при его регистрации надстройкой и удаляется при отмене его регистрации или закрытии надстройки. Обработчики событий не остаются в составе файла Excel.
+Обработчик событий создается при его регистрации надстройкой. Он удаляется при отмене его регистрации надстройкой или при обновлении, перезагрузке или закрытии надстройки. Обработчики событий не остаются в составе файла Excel или между сеансами с Excel Online.
+
+> [!CAUTION]
+> Когда объект, к которому зарегистрированы события, удаляется (например, таблица с зарегистрированным событием `onChanged`), обработчик событий более не запускается, а остается в памяти до тех пор, пока сеанс надстройки или Excel не обновится или не закроется.
 
 ### <a name="events-and-coauthoring"></a>События и совместное редактирование
 

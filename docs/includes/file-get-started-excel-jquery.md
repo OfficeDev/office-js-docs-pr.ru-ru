@@ -158,6 +158,10 @@
 
 1. Создайте на локальном диске папку и назовите ее **my-addin**. В ней вы будете создавать файлы для приложения.
 
+    ```bash
+    mkdir my-addin
+    ```
+
 2. Перейдите к папке приложения.
 
     ```bash
@@ -185,32 +189,33 @@
     cd "My Office Add-in"
     ```
 
-5. В редакторе кода откройте **index.html** в корневой папке проекта. Этот файл содержит HTML-содержимое, которое будет отображаться в области задач надстройки. 
+### <a name="update-the-code"></a>Обновление кода 
+
+1. В редакторе кода откройте **index.html** в корневой папке проекта. Этот файл содержит HTML-содержимое, которое будет отображаться в области задач надстройки. 
  
-6. Замените созданный тег `header` в файле **index.html** приведенной ниже разметкой.
+2. Замените тег `body` в файле **index.html** приведенной ниже разметкой и сохраните файл.
  
     ```html
-    <div id="content-header">
-        <div class="padding">
-            <h1>Welcome</h1>
+    <body class="ms-font-m ms-welcome">
+        <div id="content-header">
+            <div class="padding">
+                <h1>Welcome</h1>
+            </div>
         </div>
-    </div>
+        <div id="content-main">
+            <div class="padding">
+                <p>Choose the button below to set the color of the selected range to green.</p>
+                <br />
+                <h3>Try it out</h3>
+                <button class="ms-Button" id="set-color">Set color</button>
+            </div>
+        </div>
+        <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="node_modules/office-ui-fabric-js/dist/js/fabric.js"></script>
+    </body>    
     ```
 
-7. Замените созданный тег `main` в файле **index.html** приведенной ниже разметкой и сохраните файл.
-
-    ```html
-    <div id="content-main">
-        <div class="padding">
-            <p>Choose the button below to set the color of the selected range to green.</p>
-            <br />
-            <h3>Try it out</h3>
-            <button class="ms-Button" id="set-color">Set color</button>
-        </div>
-    </div>
-    ```
-
-8. Откройте файл **src\index.js** для указания скрипта надстройки. Замените все содержимое следующим кодом и сохраните файл.
+3. Откройте файл **src\index.js** для указания сценария надстройки. Замените все содержимое следующим кодом и сохраните файл.
 
     ```js
     'use strict';
@@ -238,7 +243,7 @@
     })();
     ```
 
-9. Откройте файл **app.css**, чтобы указать собственные стили для надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.
+4. Откройте файл **app.css**, чтобы указать собственные стили для надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.
 
     ```css
     #content-header {
@@ -269,15 +274,13 @@
 
 ### <a name="update-the-manifest"></a>Обновление манифеста
 
-1. Откройте файл **my-office-add-in-manifest.xml**, чтобы определить параметры и возможности надстройки. 
+1. Откройте файл **manifest.xml**, чтобы определить параметры и возможности надстройки. 
 
 2. Элемент `ProviderName` содержит значение заполнителя. Замените его на свое имя.
 
-3. Атрибут `DefaultValue` элемента `DisplayName` содержит заполнитель. Замените его на строку **Моя надстройка Office**.
+3. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его на строку **Надстройка области задач для Excel**.
 
-4. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его на строку **Надстройка области задач для Excel**.
-
-5. Сохраните файл.
+4. Сохраните файл.
 
     ```xml
     ...

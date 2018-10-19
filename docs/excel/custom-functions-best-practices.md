@@ -1,13 +1,13 @@
 ---
-ms.date: 10/03/2018
+ms.date: 10/17/2018
 description: Рекомендации и рекомендуемые шаблоны для настраиваемых функций Excel.
 title: Рекомендации по настраиваемым функциям
-ms.openlocfilehash: 218e62cd074ccf3f3708bba90c938f7ddef059cb
-ms.sourcegitcommit: f47654582acbe9f618bec49fb97e1d30f8701b62
+ms.openlocfilehash: 10ba29966c1e991ca23674ce3e5da88de2772e00
+ms.sourcegitcommit: a6d6348075c1abed76d2146ddfc099b0151fe403
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "25579823"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "25640003"
 ---
 # <a name="custom-functions-best-practices-preview"></a>Рекомендации по настраиваемым функциям (предварительная версия)
 
@@ -128,7 +128,7 @@ CustomFunctionMappings.ADD = add;
 
 ## <a name="additional-considerations"></a>Дополнительные рекомендации
 
-Чтобы создать надстройку, которая будет работать на нескольких платформах (для одного из основных клиентов надстроек Office), вы не должны запрашивать доступ к модели DOM в настраиваемых функциях или использовать библиотеки, такие как jQuery, которые полагаются на DOM. В Excel для Windows настраиваемые функции, использующие [среду выполнения JavaScript](custom-functions-runtime.md), не могут получить доступ к DOM.
+Чтобы создать надстройку, которая будет работать на нескольких платформах (для одного из основных клиентов надстроек Office), вы не должны запрашивать доступ к модели DOM в настраиваемых функциях или использовать библиотеки, такие как jQuery, которые полагаются на DOM. В Excel для Windows настраиваемые функции, использующие [среду выполнения JavaScripte](custom-functions-runtime.md), не могут получить доступ к DOM.
 
 ## <a name="see-also"></a>См. также
 
