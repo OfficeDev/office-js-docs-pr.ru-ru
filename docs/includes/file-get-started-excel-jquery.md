@@ -1,36 +1,36 @@
-# <a name="build-an-excel-add-in-using-jquery"></a><span data-ttu-id="75f84-101">Создание надстройки Excel с помощью jQuery</span><span class="sxs-lookup"><span data-stu-id="75f84-101">Build an Excel add-in using jQuery</span></span>
+# <a name="build-an-excel-add-in-using-jquery"></a><span data-ttu-id="96d0f-101">Создание надстройки Excel с помощью jQuery</span><span class="sxs-lookup"><span data-stu-id="96d0f-101">Build an Excel add-in using jQuery</span></span>
 
-<span data-ttu-id="75f84-102">В этой статье мы разберем, как создать надстройку Excel, используя jQuery и API JavaScript для Excel.</span><span class="sxs-lookup"><span data-stu-id="75f84-102">In this article, you'll walk through the process of building an Excel add-in by using jQuery and the Excel JavaScript API.</span></span> 
+<span data-ttu-id="96d0f-102">В этой статье мы разберем, как создать надстройку Excel, используя jQuery и API JavaScript для Excel.</span><span class="sxs-lookup"><span data-stu-id="96d0f-102">In this article, you'll walk through the process of building an Excel add-in by using jQuery and the Excel JavaScript API.</span></span> 
 
-## <a name="create-the-add-in"></a><span data-ttu-id="75f84-103">Создание надстройки</span><span class="sxs-lookup"><span data-stu-id="75f84-103">Create the add-in</span></span> 
+## <a name="create-the-add-in"></a><span data-ttu-id="96d0f-103">Создание надстройки</span><span class="sxs-lookup"><span data-stu-id="96d0f-103">Create the add-in</span></span> 
 
 [!include[Choose your editor](../includes/quickstart-choose-editor.md)]
 
-# <a name="visual-studiotabvisual-studio"></a>[<span data-ttu-id="75f84-104">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="75f84-104">Visual Studio</span></span>](#tab/visual-studio)
+# <a name="visual-studiotabvisual-studio"></a>[<span data-ttu-id="96d0f-104">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="96d0f-104">Visual Studio</span></span>](#tab/visual-studio)
 
-### <a name="prerequisites"></a><span data-ttu-id="75f84-105">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="75f84-105">Prerequisites</span></span>
+### <a name="prerequisites"></a><span data-ttu-id="96d0f-105">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="96d0f-105">Prerequisites</span></span>
 
 [!include[Quick Start prerequisites](../includes/quickstart-vs-prerequisites.md)]
 
-### <a name="create-the-add-in-project"></a><span data-ttu-id="75f84-106">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="75f84-106">Create the add-in project</span></span>
+### <a name="create-the-add-in-project"></a><span data-ttu-id="96d0f-106">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="96d0f-106">Create the add-in project</span></span>
 
-1. <span data-ttu-id="75f84-107">В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.</span><span class="sxs-lookup"><span data-stu-id="75f84-107">On the Visual Studio menu bar, choose  **File** > **New** > **Project**.</span></span>
+1. <span data-ttu-id="96d0f-107">В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.</span><span class="sxs-lookup"><span data-stu-id="96d0f-107">On the Visual Studio menu bar, choose  **File** > **New** > **Project**.</span></span>
     
-2. <span data-ttu-id="75f84-108">В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, затем выберите **Надстройки** > **Веб-надстройка Excel** в качестве типа проекта.</span><span class="sxs-lookup"><span data-stu-id="75f84-108">In the list of project types under **Visual C#** or **Visual Basic**, expand  **Office/SharePoint**, choose **Add-ins**, and then choose **Excel Web Add-in** as the project type.</span></span> 
+2. <span data-ttu-id="96d0f-108">В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, затем выберите **Надстройки** > **Веб-надстройка Excel** в качестве типа проекта.</span><span class="sxs-lookup"><span data-stu-id="96d0f-108">In the list of project types under **Visual C#** or **Visual Basic**, expand  **Office/SharePoint**, choose **Add-ins**, and then choose **Excel Web Add-in** as the project type.</span></span> 
 
-3. <span data-ttu-id="75f84-109">Укажите имя проекта и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="75f84-109">Name the project, and then choose **OK**.</span></span>
+3. <span data-ttu-id="96d0f-109">Укажите имя проекта и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="96d0f-109">Name the project, and then choose **OK**.</span></span>
 
-4. <span data-ttu-id="75f84-110">В диалоговом окне **Создание надстройки Office** выберите **Добавить новые функции в Excel**, а затем нажмите кнопку **Готово**, чтобы создать проект.</span><span class="sxs-lookup"><span data-stu-id="75f84-110">In the **Create Office Add-in** dialog window, choose **Add new functionalities to Excel**, and then choose **Finish** to create the project.</span></span>
+4. <span data-ttu-id="96d0f-110">В диалоговом окне **Создание надстройки Office** выберите **Добавить новые функции в Excel**, а затем нажмите кнопку **Готово**, чтобы создать проект.</span><span class="sxs-lookup"><span data-stu-id="96d0f-110">In the **Create Office Add-in** dialog window, choose **Add new functionalities to Excel**, and then choose **Finish** to create the project.</span></span>
 
-5. <span data-ttu-id="75f84-p101">Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.</span><span class="sxs-lookup"><span data-stu-id="75f84-p101">Visual Studio creates a solution and its two projects appear in **Solution Explorer**. The **Home.html** file opens in Visual Studio.</span></span>
+5. <span data-ttu-id="96d0f-p101">Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.</span><span class="sxs-lookup"><span data-stu-id="96d0f-p101">Visual Studio creates a solution and its two projects appear in **Solution Explorer**. The **Home.html** file opens in Visual Studio.</span></span>
     
-### <a name="explore-the-visual-studio-solution"></a><span data-ttu-id="75f84-113">Обзор решения Visual Studio</span><span class="sxs-lookup"><span data-stu-id="75f84-113">Explore the Visual Studio solution</span></span>
+### <a name="explore-the-visual-studio-solution"></a><span data-ttu-id="96d0f-113">Обзор решения Visual Studio</span><span class="sxs-lookup"><span data-stu-id="96d0f-113">Explore the Visual Studio solution</span></span>
 
 [!include[Description of Visual Studio projects](../includes/quickstart-vs-solution.md)]
 
-### <a name="update-the-code"></a><span data-ttu-id="75f84-114">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="75f84-114">Update the code</span></span>
+### <a name="update-the-code"></a><span data-ttu-id="96d0f-114">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="96d0f-114">Update the code</span></span>
 
-1. <span data-ttu-id="75f84-p102">Файл **Home.html** содержит HTML-содержимое, которое будет отображаться в области задач надстройки. В файле **Home.html** замените элемент `<body>` на приведенную ниже часть кода и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="75f84-p102">**Home.html** specifies the HTML that will be rendered in the add-in's task pane. In **Home.html**, replace the `<body>` element with the following markup and save the file.</span></span>
+1. <span data-ttu-id="96d0f-p102">Файл **Home.html** содержит HTML-содержимое, которое будет отображаться в области задач надстройки. В файле **Home.html** замените элемент `<body>` на приведенную ниже часть кода и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="96d0f-p102">**Home.html** specifies the HTML that will be rendered in the add-in's task pane. In **Home.html**, replace the `<body>` element with the following markup and save the file.</span></span>
  
     ```html
     <body class="ms-font-m ms-welcome">
@@ -50,7 +50,7 @@
     </body>
     ```
 
-2. <span data-ttu-id="75f84-p103">Откройте файл **Home.js** в корневой папке проекта веб-приложения. Этот файл содержит скрипт надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="75f84-p103">Open the file **Home.js** in the root of the web application project. This file specifies the script for the add-in. Replace the entire contents with the following code and save the file.</span></span> 
+2. <span data-ttu-id="96d0f-p103">Откройте файл **Home.js** в корневой папке проекта веб-приложения. Этот файл содержит скрипт надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="96d0f-p103">Open the file **Home.js** in the root of the web application project. This file specifies the script for the add-in. Replace the entire contents with the following code and save the file.</span></span> 
 
     ```js
     'use strict';
@@ -78,7 +78,7 @@
     })();
     ```
 
-3. <span data-ttu-id="75f84-p104">Откройте файл **Home.css** в корневой папке проекта веб-приложения. Этот файл определяет специальные стили надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="75f84-p104">Open the file **Home.css** in the root of the web application project. This file specifies the custom styles for the add-in. Replace the entire contents with the following code and save the file.</span></span> 
+3. <span data-ttu-id="96d0f-p104">Откройте файл **Home.css** в корневой папке проекта веб-приложения. Этот файл определяет специальные стили надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="96d0f-p104">Open the file **Home.css** in the root of the web application project. This file specifies the custom styles for the add-in. Replace the entire contents with the following code and save the file.</span></span> 
 
     ```css
     #content-header {
@@ -107,17 +107,17 @@
     }
     ```
 
-### <a name="update-the-manifest"></a><span data-ttu-id="75f84-123">Обновление манифеста</span><span class="sxs-lookup"><span data-stu-id="75f84-123">Update the manifest</span></span>
+### <a name="update-the-manifest"></a><span data-ttu-id="96d0f-123">Обновление манифеста</span><span class="sxs-lookup"><span data-stu-id="96d0f-123">Update the manifest</span></span>
 
-1. <span data-ttu-id="75f84-p105">Откройте XML-файл манифеста в проекте надстройки. Этот файл определяет параметры и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="75f84-p105">Open the XML manifest file in the add-in project. This file defines the add-in's settings and capabilities.</span></span>
+1. <span data-ttu-id="96d0f-p105">Откройте XML-файл манифеста в проекте надстройки. Этот файл определяет параметры и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="96d0f-p105">Open the XML manifest file in the add-in project. This file defines the add-in's settings and capabilities.</span></span>
 
-2. <span data-ttu-id="75f84-p106">Элемент `ProviderName` содержит значение заполнителя. Замените его на свое имя.</span><span class="sxs-lookup"><span data-stu-id="75f84-p106">The `ProviderName` element has a placeholder value. Replace it with your name.</span></span>
+2. <span data-ttu-id="96d0f-p106">Элемент `ProviderName` содержит значение заполнителя. Замените его на свое имя.</span><span class="sxs-lookup"><span data-stu-id="96d0f-p106">The `ProviderName` element has a placeholder value. Replace it with your name.</span></span>
 
-3. <span data-ttu-id="75f84-p107">Атрибут `DefaultValue` элемента `DisplayName` содержит заполнитель. Замените его на строку **Моя надстройка Office**.</span><span class="sxs-lookup"><span data-stu-id="75f84-p107">The `DefaultValue` attribute of the `DisplayName` element has a placeholder. Replace it with **My Office Add-in**.</span></span>
+3. <span data-ttu-id="96d0f-p107">Атрибут `DefaultValue` элемента `DisplayName` содержит заполнитель. Замените его на строку **Моя надстройка Office**.</span><span class="sxs-lookup"><span data-stu-id="96d0f-p107">The `DefaultValue` attribute of the `DisplayName` element has a placeholder. Replace it with **My Office Add-in**.</span></span>
 
-4. <span data-ttu-id="75f84-p108">Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его на строку **Надстройка области задач для Excel**.</span><span class="sxs-lookup"><span data-stu-id="75f84-p108">The `DefaultValue` attribute of the `Description` element has a placeholder. Replace it with **A task pane add-in for Excel**.</span></span>
+4. <span data-ttu-id="96d0f-p108">Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его на строку **Надстройка области задач для Excel**.</span><span class="sxs-lookup"><span data-stu-id="96d0f-p108">The `DefaultValue` attribute of the `Description` element has a placeholder. Replace it with **A task pane add-in for Excel**.</span></span>
 
-5. <span data-ttu-id="75f84-132">Сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="75f84-132">Save the file.</span></span>
+5. <span data-ttu-id="96d0f-132">Сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="96d0f-132">Save the file.</span></span>
 
     ```xml
     ...
@@ -129,71 +129,59 @@
     ...
     ```
 
-### <a name="try-it-out"></a><span data-ttu-id="75f84-133">Проверка</span><span class="sxs-lookup"><span data-stu-id="75f84-133">Try it out</span></span>
+### <a name="try-it-out"></a><span data-ttu-id="96d0f-133">Проверка</span><span class="sxs-lookup"><span data-stu-id="96d0f-133">Try it out</span></span>
 
-1. <span data-ttu-id="75f84-p109">Протестируйте новую надстройку Excel в Visual Studio, нажав клавишу F5 или кнопку **Запустить**, чтобы запустить Excel с кнопкой надстройки **Показать область задач** на ленте. Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="75f84-p109">Using Visual Studio, test the newly created Excel add-in by pressing F5 or choosing the **Start** button to launch Excel with the **Show Taskpane** add-in button displayed in the ribbon. The add-in will be hosted locally on IIS.</span></span>
+1. <span data-ttu-id="96d0f-p109">Протестируйте новую надстройку Excel в Visual Studio, нажав клавишу F5 или кнопку **Запустить**, чтобы запустить Excel с кнопкой надстройки **Показать область задач** на ленте. Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="96d0f-p109">Using Visual Studio, test the newly created Excel add-in by pressing F5 or choosing the **Start** button to launch Excel with the **Show Taskpane** add-in button displayed in the ribbon. The add-in will be hosted locally on IIS.</span></span>
 
-2. <span data-ttu-id="75f84-136">В Excel перейдите на вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="75f84-136">In Excel, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
+2. <span data-ttu-id="96d0f-136">В Excel перейдите на вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="96d0f-136">In Excel, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
 
     ![Кнопка надстройки Excel](../images/excel-quickstart-addin-2a.png)
 
-3. <span data-ttu-id="75f84-138">Выберите любой диапазон ячеек на листе.</span><span class="sxs-lookup"><span data-stu-id="75f84-138">Select any range of cells in the worksheet.</span></span>
+3. <span data-ttu-id="96d0f-138">Выберите любой диапазон ячеек на листе.</span><span class="sxs-lookup"><span data-stu-id="96d0f-138">Select any range of cells in the worksheet.</span></span>
 
-4. <span data-ttu-id="75f84-139">В области задач нажмите кнопку **Задать цвет**, чтобы сделать выбранный диапазон зеленым.</span><span class="sxs-lookup"><span data-stu-id="75f84-139">In the task pane, choose the **Set color** button to set the color of the selected range to green.</span></span>
+4. <span data-ttu-id="96d0f-139">В области задач нажмите кнопку **Задать цвет**, чтобы сделать выбранный диапазон зеленым.</span><span class="sxs-lookup"><span data-stu-id="96d0f-139">In the task pane, choose the **Set color** button to set the color of the selected range to green.</span></span>
 
     ![Надстройка Excel](../images/excel-quickstart-addin-2c.png)
 
-# <a name="any-editortabvisual-studio-code"></a>[<span data-ttu-id="75f84-141">Любой редактор</span><span class="sxs-lookup"><span data-stu-id="75f84-141">Any editor</span></span>](#tab/visual-studio-code)
+# <a name="any-editortabvisual-studio-code"></a>[<span data-ttu-id="96d0f-141">Любой редактор</span><span class="sxs-lookup"><span data-stu-id="96d0f-141">Any editor</span></span>](#tab/visual-studio-code)
 
-### <a name="prerequisites"></a><span data-ttu-id="75f84-142">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="75f84-142">Prerequisites</span></span>
+### <a name="prerequisites"></a><span data-ttu-id="96d0f-142">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="96d0f-142">Prerequisites</span></span>
 
-- [<span data-ttu-id="75f84-143">Node.js</span><span class="sxs-lookup"><span data-stu-id="75f84-143">Node.js</span></span>](https://nodejs.org)
+- [<span data-ttu-id="96d0f-143">Node.js</span><span class="sxs-lookup"><span data-stu-id="96d0f-143">Node.js</span></span>](https://nodejs.org)
 
-- <span data-ttu-id="75f84-144">Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).</span><span class="sxs-lookup"><span data-stu-id="75f84-144">Install the latest version of [Yeoman](https://github.com/yeoman/yo) and the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office) globally.</span></span>
+- <span data-ttu-id="96d0f-144">Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).</span><span class="sxs-lookup"><span data-stu-id="96d0f-144">Install the latest version of [Yeoman](https://github.com/yeoman/yo) and the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office) globally.</span></span>
     ```bash
     npm install -g yo generator-office
     ```
 
-### <a name="create-the-web-app"></a><span data-ttu-id="75f84-145">Создание веб-приложения</span><span class="sxs-lookup"><span data-stu-id="75f84-145">Create the web app</span></span>
+### <a name="create-the-web-app"></a><span data-ttu-id="96d0f-145">Создание веб-приложения</span><span class="sxs-lookup"><span data-stu-id="96d0f-145">Create the web app</span></span>
 
-1. <span data-ttu-id="75f84-p110">Создайте на локальном диске папку и назовите ее **my-addin**. В ней вы будете создавать файлы для приложения.</span><span class="sxs-lookup"><span data-stu-id="75f84-p110">Create a folder on your local drive and name it **my-addin**. This is where you'll create the files for your app.</span></span>
-
-    ```bash
-    mkdir my-addin
-    ```
-
-2. <span data-ttu-id="75f84-148">Перейдите к папке приложения.</span><span class="sxs-lookup"><span data-stu-id="75f84-148">Navigate to your app folder.</span></span>
-
-    ```bash
-    cd my-addin
-    ```
-
-3. <span data-ttu-id="75f84-p111">С помощью генератора Yeoman создайте файл манифеста для надстройки. Выполните приведенную ниже команду и ответьте на вопросы, как показано на следующем снимке экрана.</span><span class="sxs-lookup"><span data-stu-id="75f84-p111">Use the Yeoman generator to generate the manifest file for your add-in. Run the following command and then answer the prompts as shown in the following screenshot:</span></span>
+1. <span data-ttu-id="96d0f-146">С помощью генератора Yeoman создайте проект надстройки Excel.</span><span class="sxs-lookup"><span data-stu-id="96d0f-146">Use the Yeoman generator to create an Outlook add-in project.</span></span> <span data-ttu-id="96d0f-147">Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже:</span><span class="sxs-lookup"><span data-stu-id="96d0f-147">Run the following command and then answer the prompts as follows:</span></span>
 
     ```bash
     yo office
     ```
 
-    - <span data-ttu-id="75f84-151">**Выберите тип проекта:** `Office Add-in project using Jquery framework`</span><span class="sxs-lookup"><span data-stu-id="75f84-151">**Choose a project type:** `Office Add-in project using Jquery framework`</span></span>
-    - <span data-ttu-id="75f84-152">**Выберите тип сценария:** `Javascript`</span><span class="sxs-lookup"><span data-stu-id="75f84-152">**Choose a script type:** `Javascript`</span></span>
-    - <span data-ttu-id="75f84-153">**Как вы хотите назвать надстройку?:** `My Office Add-in`</span><span class="sxs-lookup"><span data-stu-id="75f84-153">**What do you want to name your add-in?:** `My Office Add-in`</span></span>
-    - <span data-ttu-id="75f84-154">**Какое клиентское приложение Office должно поддерживаться?:** `Excel`</span><span class="sxs-lookup"><span data-stu-id="75f84-154">**Which Office client application would you like to support?:** `Excel`</span></span>
+    - <span data-ttu-id="96d0f-148">**Выберите тип проекта:** `Office Add-in project using Jquery framework`</span><span class="sxs-lookup"><span data-stu-id="96d0f-148">**Choose a project type:** `Office Add-in project using Jquery framework`</span></span>
+    - <span data-ttu-id="96d0f-149">**Выберите тип сценария:** `Javascript`</span><span class="sxs-lookup"><span data-stu-id="96d0f-149">**Choose a script type:** `Javascript`</span></span>
+    - <span data-ttu-id="96d0f-150">**Как вы хотите назвать надстройку?:** `My Office Add-in`</span><span class="sxs-lookup"><span data-stu-id="96d0f-150">**What do you want to name your add-in?:** `My Office Add-in`</span></span>
+    - <span data-ttu-id="96d0f-151">**Какое клиентское приложение Office должно поддерживаться?:** `Excel`</span><span class="sxs-lookup"><span data-stu-id="96d0f-151">**Which Office client application would you like to support?:** `Excel`</span></span>
 
     ![Генератор Yeoman](../images/yo-office-jquery.png)
     
-    <span data-ttu-id="75f84-156">После завершения работы мастера генератор создаст проект и установит поддерживающие компоненты узла.</span><span class="sxs-lookup"><span data-stu-id="75f84-156">After you complete the wizard, the generator will create the project and install supporting Node components.</span></span>
+    <span data-ttu-id="96d0f-153">После завершения работы мастера генератор создаст проект и установит поддерживающие компоненты узла.</span><span class="sxs-lookup"><span data-stu-id="96d0f-153">After you complete the wizard, the generator will create the project and install supporting Node components.</span></span>
 
-4. <span data-ttu-id="75f84-157">Перейдите в корневую папку проекта веб-приложения.</span><span class="sxs-lookup"><span data-stu-id="75f84-157">Navigate to the root folder of the web application project.</span></span>
+2. <span data-ttu-id="96d0f-154">Перейдите в корневую папку проекта.</span><span class="sxs-lookup"><span data-stu-id="96d0f-154">Navigate to the root folder of the web application project.</span></span>
 
     ```bash
     cd "My Office Add-in"
     ```
 
-### <a name="update-the-code"></a><span data-ttu-id="75f84-158">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="75f84-158">Update the code</span></span> 
+### <a name="update-the-code"></a><span data-ttu-id="96d0f-155">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="96d0f-155">Update the code</span></span> 
 
-1. <span data-ttu-id="75f84-p112">В редакторе кода откройте **index.html** в корневой папке проекта. Этот файл содержит HTML-содержимое, которое будет отображаться в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="75f84-p112">In your code editor, open **index.html** in the root of the project. This file specifies the HTML that will be rendered in the add-in's task pane.</span></span> 
+1. <span data-ttu-id="96d0f-p111">В редакторе кода откройте **index.html** в корневой папке проекта. Этот файл содержит HTML-содержимое, которое будет отображаться в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="96d0f-p111">In your code editor, open **index.html** in the root of the project. This file specifies the HTML that will be rendered in the add-in's task pane.</span></span> 
  
-2. <span data-ttu-id="75f84-161">Замените тег `body` в файле **index.html** приведенной ниже разметкой и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="75f84-161">Within **index.html**, replace the generated `body` tag with the following markup, and save the file.</span></span>
+2. <span data-ttu-id="96d0f-158">Замените тег `body` в файле **index.html** приведенной ниже разметкой и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="96d0f-158">Within **index.html**, replace the generated `body` tag with the following markup, and save the file.</span></span>
  
     ```html
     <body class="ms-font-m ms-welcome">
@@ -215,7 +203,7 @@
     </body>    
     ```
 
-3. <span data-ttu-id="75f84-p113">Откройте файл **src\index.js** для указания сценария надстройки. Замените все содержимое следующим кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="75f84-p113">Open the file **src\index.js** to specify the script for the add-in. Replace the entire contents with the following code and save the file.</span></span>
+3. <span data-ttu-id="96d0f-p112">Откройте файл **src\index.js** для указания сценария надстройки. Замените все содержимое следующим кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="96d0f-p112">Open the file **src\index.js** to specify the script for the add-in. Replace the entire contents with the following code and save the file.</span></span>
 
     ```js
     'use strict';
@@ -243,7 +231,7 @@
     })();
     ```
 
-4. <span data-ttu-id="75f84-p114">Откройте файл **app.css**, чтобы указать собственные стили для надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="75f84-p114">Open the file **app.css** to specify the custom styles for the add-in. Replace the entire contents with the following code and save the file.</span></span>
+4. <span data-ttu-id="96d0f-p113">Откройте файл **app.css**, чтобы указать собственные стили для надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="96d0f-p113">Open the file **app.css** to specify the custom styles for the add-in. Replace the entire contents with the following code and save the file.</span></span>
 
     ```css
     #content-header {
@@ -272,15 +260,15 @@
     }
     ```
 
-### <a name="update-the-manifest"></a><span data-ttu-id="75f84-166">Обновление манифеста</span><span class="sxs-lookup"><span data-stu-id="75f84-166">Update the manifest</span></span>
+### <a name="update-the-manifest"></a><span data-ttu-id="96d0f-163">Обновление манифеста</span><span class="sxs-lookup"><span data-stu-id="96d0f-163">Update the manifest</span></span>
 
-1. <span data-ttu-id="75f84-167">Откройте файл **manifest.xml**, чтобы определить параметры и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="75f84-167">Open the file **my-office-add-in-manifest.xml** to define the add-in's settings and capabilities.</span></span> 
+1. <span data-ttu-id="96d0f-164">Откройте файл **manifest.xml**, чтобы определить параметры и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="96d0f-164">Open the file **my-office-add-in-manifest.xml** to define the add-in's settings and capabilities.</span></span> 
 
-2. <span data-ttu-id="75f84-p115">Элемент `ProviderName` содержит значение заполнителя. Замените его на свое имя.</span><span class="sxs-lookup"><span data-stu-id="75f84-p115">The `ProviderName` element has a placeholder value. Replace it with your name.</span></span>
+2. <span data-ttu-id="96d0f-p114">Элемент `ProviderName` содержит значение заполнителя. Замените его на свое имя.</span><span class="sxs-lookup"><span data-stu-id="96d0f-p114">The `ProviderName` element has a placeholder value. Replace it with your name.</span></span>
 
-3. <span data-ttu-id="75f84-p116">Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его на строку **Надстройка области задач для Excel**.</span><span class="sxs-lookup"><span data-stu-id="75f84-p116">The `DefaultValue` attribute of the `Description` element has a placeholder. Replace it with **A task pane add-in for Excel**.</span></span>
+3. <span data-ttu-id="96d0f-p115">Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его на строку **Надстройка области задач для Excel**.</span><span class="sxs-lookup"><span data-stu-id="96d0f-p115">The `DefaultValue` attribute of the `Description` element has a placeholder. Replace it with **A task pane add-in for Excel**.</span></span>
 
-4. <span data-ttu-id="75f84-172">Сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="75f84-172">Save the file.</span></span>
+4. <span data-ttu-id="96d0f-169">Сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="96d0f-169">Save the file.</span></span>
 
     ```xml
     ...
@@ -292,40 +280,40 @@
     ...
     ```
 
-### <a name="start-the-dev-server"></a><span data-ttu-id="75f84-173">Запуск сервера разработки</span><span class="sxs-lookup"><span data-stu-id="75f84-173">Start the dev server</span></span>
+### <a name="start-the-dev-server"></a><span data-ttu-id="96d0f-170">Запуск сервера разработки</span><span class="sxs-lookup"><span data-stu-id="96d0f-170">Start the dev server</span></span>
 
 [!include[Start server section](../includes/quickstart-yo-start-server.md)] 
 
-### <a name="try-it-out"></a><span data-ttu-id="75f84-174">Проверка</span><span class="sxs-lookup"><span data-stu-id="75f84-174">Try it out</span></span>
+### <a name="try-it-out"></a><span data-ttu-id="96d0f-171">Проверка</span><span class="sxs-lookup"><span data-stu-id="96d0f-171">Try it out</span></span>
 
-1. <span data-ttu-id="75f84-175">Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.</span><span class="sxs-lookup"><span data-stu-id="75f84-175">Follow the instructions for the platform you'll use to run your add-in to sideload the add-in within Excel.</span></span>
+1. <span data-ttu-id="96d0f-172">Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.</span><span class="sxs-lookup"><span data-stu-id="96d0f-172">Follow the instructions for the platform you'll use to run your add-in to sideload the add-in within Excel.</span></span>
 
-    - <span data-ttu-id="75f84-176">Windows: [ загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)</span><span class="sxs-lookup"><span data-stu-id="75f84-176">Windows: [Sideload Office Add-ins on Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)</span></span>
-    - <span data-ttu-id="75f84-177">Excel Online: [загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)</span><span class="sxs-lookup"><span data-stu-id="75f84-177">Excel Online: [Sideload Office Add-ins in Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)</span></span>
-    - <span data-ttu-id="75f84-178">iPad и Mac: [загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)</span><span class="sxs-lookup"><span data-stu-id="75f84-178">iPad and Mac: [Sideload Office Add-ins on iPad and Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)</span></span>
+    - <span data-ttu-id="96d0f-173">Windows: [ загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)</span><span class="sxs-lookup"><span data-stu-id="96d0f-173">Windows: [Sideload Office Add-ins on Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)</span></span>
+    - <span data-ttu-id="96d0f-174">Excel Online: [загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)</span><span class="sxs-lookup"><span data-stu-id="96d0f-174">Excel Online: [Sideload Office Add-ins in Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)</span></span>
+    - <span data-ttu-id="96d0f-175">iPad и Mac: [загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)</span><span class="sxs-lookup"><span data-stu-id="96d0f-175">iPad and Mac: [Sideload Office Add-ins on iPad and Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)</span></span>
 
-2. <span data-ttu-id="75f84-179">В Excel перейдите на вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="75f84-179">In Excel, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
+2. <span data-ttu-id="96d0f-176">В Excel перейдите на вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="96d0f-176">In Excel, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
 
     ![Кнопка надстройки Excel](../images/excel-quickstart-addin-2b.png)
 
-3. <span data-ttu-id="75f84-181">Выберите любой диапазон ячеек на листе.</span><span class="sxs-lookup"><span data-stu-id="75f84-181">Select any range of cells in the worksheet.</span></span>
+3. <span data-ttu-id="96d0f-178">Выберите любой диапазон ячеек на листе.</span><span class="sxs-lookup"><span data-stu-id="96d0f-178">Select any range of cells in the worksheet.</span></span>
 
-4. <span data-ttu-id="75f84-182">В области задач нажмите кнопку **Задать цвет**, чтобы сделать выбранный диапазон зеленым.</span><span class="sxs-lookup"><span data-stu-id="75f84-182">In the task pane, choose the **Set color** button to set the color of the selected range to green.</span></span>
+4. <span data-ttu-id="96d0f-179">В области задач нажмите кнопку **Задать цвет**, чтобы сделать выбранный диапазон зеленым.</span><span class="sxs-lookup"><span data-stu-id="96d0f-179">In the task pane, choose the **Set color** button to set the color of the selected range to green.</span></span>
 
     ![Надстройка Excel](../images/excel-quickstart-addin-2c.png)
 
 ---
 
-## <a name="next-steps"></a><span data-ttu-id="75f84-184">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="75f84-184">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="96d0f-181">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="96d0f-181">Next steps</span></span>
 
-<span data-ttu-id="75f84-p117">Поздравляем, вы успешно создали надстройку Excel с помощью jQuery! Чтобы узнать больше о возможностях надстроек Excel и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Excel.</span><span class="sxs-lookup"><span data-stu-id="75f84-p117">Congratulations, you've successfully created an Excel add-in using jQuery! Next, learn more about the capabilities of an Excel add-in and build a more complex add-in by following along with the Excel add-in tutorial.</span></span>
+<span data-ttu-id="96d0f-p116">Поздравляем, вы успешно создали надстройку Excel с помощью jQuery! Чтобы узнать больше о возможностях надстроек Excel и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Excel.</span><span class="sxs-lookup"><span data-stu-id="96d0f-p116">Congratulations, you've successfully created an Excel add-in using jQuery! Next, learn more about the capabilities of an Excel add-in and build a more complex add-in by following along with the Excel add-in tutorial.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="75f84-187">Руководство по надстройкам Excel</span><span class="sxs-lookup"><span data-stu-id="75f84-187">Excel add-in tutorial</span></span>](../tutorials/excel-tutorial.yml)
+> [<span data-ttu-id="96d0f-184">Руководство по надстройкам Excel</span><span class="sxs-lookup"><span data-stu-id="96d0f-184">Excel add-in tutorial</span></span>](../tutorials/excel-tutorial.yml)
 
-## <a name="see-also"></a><span data-ttu-id="75f84-188">См. также</span><span class="sxs-lookup"><span data-stu-id="75f84-188">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96d0f-185">См. также</span><span class="sxs-lookup"><span data-stu-id="96d0f-185">See also</span></span>
 
-* [<span data-ttu-id="75f84-189">Руководство по надстройкам Excel</span><span class="sxs-lookup"><span data-stu-id="75f84-189">Excel add-in tutorial</span></span>](../tutorials/excel-tutorial-create-table.md)
-* [<span data-ttu-id="75f84-190">Основные принципы программирования с помощью API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="75f84-190">Fundamental programming concepts with the Excel JavaScript API</span></span>](../excel/excel-add-ins-core-concepts.md)
-* [<span data-ttu-id="75f84-191">Примеры кода надстроек Excel</span><span class="sxs-lookup"><span data-stu-id="75f84-191">Excel add-in code samples</span></span>](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
-* [<span data-ttu-id="75f84-192">Справочник по API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="75f84-192">Excel JavaScript API reference</span></span>](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js)
+* [<span data-ttu-id="96d0f-186">Руководство по надстройкам Excel</span><span class="sxs-lookup"><span data-stu-id="96d0f-186">Excel add-in tutorial</span></span>](../tutorials/excel-tutorial-create-table.md)
+* [<span data-ttu-id="96d0f-187">Основные принципы программирования с помощью API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="96d0f-187">Fundamental programming concepts with the Excel JavaScript API</span></span>](../excel/excel-add-ins-core-concepts.md)
+* [<span data-ttu-id="96d0f-188">Примеры кода надстроек Excel</span><span class="sxs-lookup"><span data-stu-id="96d0f-188">Excel add-in code samples</span></span>](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
+* [<span data-ttu-id="96d0f-189">Справочник по API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="96d0f-189">Excel JavaScript API reference</span></span>](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js)
