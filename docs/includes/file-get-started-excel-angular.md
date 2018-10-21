@@ -4,13 +4,7 @@
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
-- Посмотрите, что [необходимо для использования CLI для Angular](https://github.com/angular/angular-cli#prerequisites), и установите все недостающие компоненты.
-
-- Глобально установите [CLI для Angular](https://github.com/angular/angular-cli). 
-
-    ```bash
-    npm install -g @angular/cli
-    ```
+- [Node.js](https://nodejs.org)
 
 - Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
 
@@ -18,142 +12,32 @@
     npm install -g yo generator-office
     ```
 
-## <a name="generate-a-new-angular-app"></a>Создание приложения Angular
+## <a name="create-the-web-app"></a>Создание веб-приложения
 
-Используйте угловые CLI, чтобы создать угловые приложения. Используя терминал, выполните следующую команду:
-
-```bash
-ng new my-addin
-```
-
-## <a name="generate-the-manifest-file"></a>Создание файла манифеста
-
-В файле манифеста надстройки определяются ее параметры и возможности.
-
-1. Перейдите к папке приложения.
+1. С помощью генератора Yeoman создайте проект надстройки Excel. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже:
 
     ```bash
-    cd my-addin
+    yo office
     ```
 
-2. Используя генератор Yeoman, создайте файл манифеста для надстройки. Выполните приведенную ниже команду и ответьте на запросы, как показано ниже.
-
-    ```bash
-    yo office 
-    ```
-
-    - **Выберите тип проекта:** `Office Add-in containing the manifest only`
+    - **Выберите тип проекта:** `Office Add-in project using Angular framework`
+    - **Выберите тип сценария:** `Typescript`
     - **Как вы хотите назвать надстройку?:** `My Office Add-in`
-    - **Какое клиентское приложение Office вы хотели бы поддерживать?:** `Excel`
+    - **Какое клиентское приложение Office должно поддерживаться?:** `Excel`
 
-    После завершения работы мастера вы сможете создать файл манифеста и файл ресурсов для создания вашего проекта.
-
-    ![Генератор Yeoman](../images/yo-office.png)
+    ![Генератор Yeoman](../images/yo-office-excel-angular.png)
     
-    > [!NOTE]
-    > Если вам будет предложено перезаписать файл **package.json**, выберите **No** (Не перезаписывать).
+    После завершения работы мастера генератор создаст проект и установит поддерживающие компоненты узла.
 
-## <a name="secure-the-app"></a>Защита приложения
+2. Перейдите в корневую папку проекта.
 
-[!include[HTTPS guidance](../includes/https-guidance.md)]
-
-Для краткого руководства можно использовать сертификаты, которые предоставляют **Генератор Yeoman для надстроек Office**. Вы уже установили генератор глобально  (как часть **Необходимых компонентов** этого краткого руководства), поэтому вам просто нужно скопировать сертификаты из приложения глобальной установки в папку приложения. Следуюшие шаги описывают как выполнить этот процесс.
-
-1. Используя терминал, выполните следующую команду, чтобы определить папку, в которую установлены глобальные библиотеки **npm**:
-
-    ```bash 
-    npm list -g 
-    ``` 
-    
-    > [!TIP]    
-    > Первая строка выходных данных, создаваемых этой командой, указывает папку, в которую установлены глобальные библиотеки **npm**.          
-    
-2. Используя проводник, перейдите к папке  `{global libraries folder}/node_modules/generator-office/generators/app/templates/js/base` . Из этого расположения скопируйте папку `certs` в буфер обмена.
-
-3. Перейдите в корневую папку приложения Angular, созданную на шаге 1 предыдущего раздела, и вставьте папку `certs` из буфера обмена в эту папку.
-
-## <a name="update-the-app"></a>Обновление приложения
-
-1. В редакторе кода откройте файл **package.json** в корневой папке проекта. Измените скрипт `start`, чтобы указать, что сервер должен использовать SSL и порт 3000, и сохраните файл.
-
-    ```json
-    "start": "ng serve --ssl true --port 3000"
+    ```bash
+    cd "My Office Add-in"
     ```
 
-2. Откройте файл **.angular cli.json** в корневой папке проекта. Измените объект **defaults**, чтобы указать расположение сертификатов, и сохраните файл.
+## <a name="update-the-code"></a>Обновление кода
 
-    ```json
-    "defaults": {
-      "styleExt": "css",
-      "component": {},
-      "serve": {
-        "sslKey": "certs/server.key",
-        "sslCert": "certs/server.crt"
-      }
-    }
-    ```
-
-3. Откройте файл **src/index.html**, добавьте тег `<script>` сразу перед тегом `</head>` и сохраните.
-
-    ```html
-    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
-    ```
-
-4. Откройте файл **src/main.ts**, замените `platformBrowserDynamic().bootstrapModule(AppModule).catch(err => console.log(err));` приведенным ниже кодом и сохраните файл. 
-
-    ```typescript 
-    declare const Office: any;
-
-    Office.initialize = () => {
-    platformBrowserDynamic().bootstrapModule(AppModule)
-        .catch(err => console.log(err));
-    };
-    ```
-
-5. Откройте файл **src/polyfills.ts**, добавьте приведенную ниже строку кода над всеми имеющимися операторами `import` и сохраните файл.
-
-    ```typescript
-    import 'core-js/client/shim';
-    ```
-
-6. В файле **src/polyfills.ts** раскомментируйте приведенные ниже строки и сохраните файл.
-
-    ```typescript
-    import 'core-js/es6/symbol';
-    import 'core-js/es6/object';
-    import 'core-js/es6/function';
-    import 'core-js/es6/parse-int';
-    import 'core-js/es6/parse-float';
-    import 'core-js/es6/number';
-    import 'core-js/es6/math';
-    import 'core-js/es6/string';
-    import 'core-js/es6/date';
-    import 'core-js/es6/array';
-    import 'core-js/es6/regexp';
-    import 'core-js/es6/map';
-    import 'core-js/es6/weak-map';
-    import 'core-js/es6/set';
-    ```
-
-7. Откройте файл **src/app/app.component.html**, замените его содержимое приведенным ниже кодом HTML и сохраните файл. 
-
-    ```html
-    <div id="content-header">
-        <div class="padding">
-            <h1>Welcome</h1>
-        </div>
-    </div>
-    <div id="content-main">
-        <div class="padding">
-            <p>Choose the button below to set the color of the selected range to green.</p>
-            <br />
-            <h3>Try it out</h3>
-            <button (click)="onSetColor()">Set color</button>
-        </div>
-    </div>
-    ```
-
-8. Откройте файл **src/app/app.component.css**, замените его содержимое приведенным ниже кодом CSS и сохраните файл.
+1. В редакторе кода откройте файл **app.css**, добавьте следующие стили в конец файла и сохраните файл.
 
     ```css
     #content-header {
@@ -165,6 +49,8 @@ ng new my-addin
         width: 100%;
         height: 80px; 
         overflow: hidden;
+        font-family: Arial;
+        padding-top: 25px;
     }
 
     #content-main {
@@ -175,63 +61,114 @@ ng new my-addin
         right: 0;
         bottom: 0;
         overflow: auto; 
+        font-family: Arial;
     }
 
     .padding {
         padding: 15px;
     }
+
+    .padding-sm {
+        padding: 4px;
+    }
+
+    .normal-button {
+        width: 80px;
+        padding: 2px;
+    }
     ```
 
-9. Откройте файл **src/app/app.component.ts**, замените его содержимое приведенным ниже кодом и сохраните. 
+2. Откройте файл **src/app/app.component.html**, замените все содержимое следующим кодом и сохраните файл.
+
+    ```html
+    <div id="content-header">
+        <div class="padding">
+            <h1>{{welcomeMessage}}</h1>
+        </div>
+    </div>
+    <div id="content-main">
+        <div class="padding">
+            <p>Choose the button below to set the color of the selected range to green.</p>
+            <br />
+            <h3>Try it out</h3>
+            <br />
+            <div role="button" class="ms-Button" (click)="setColor()">
+                <span class="ms-Button-label">Set color</span>
+                <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--ChevronRight"></i></span>
+            </div>
+        </div>
+    </div>
+    ```
+
+3. Откройте файл **src/app/app.component.ts**, замените все его содержимое приведенным ниже кодом и сохраните.
 
     ```typescript
     import { Component } from '@angular/core';
+    import * as OfficeHelpers from '@microsoft/office-js-helpers';
 
-    declare const Excel: any;
+    const template = require('./app.component.html');
 
     @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+        selector: 'app-home',
+        template
     })
-    export class AppComponent {
-    onSetColor() {
-        Excel.run(async (context) => {
-        const range = context.workbook.getSelectedRange();
-        range.format.fill.color = 'green';
-        await context.sync();
-        });
+    export default class AppComponent {
+        welcomeMessage = 'Welcome';
+
+        async setColor() {
+            try {
+                await Excel.run(async context => {
+                    const range = context.workbook.getSelectedRange();
+                    range.load('address');
+                    range.format.fill.color = 'green';
+                    await context.sync();
+                    console.log(`The range address was ${range.address}.`);
+                });
+            } catch (error) {
+                OfficeHelpers.UI.notify(error);
+                OfficeHelpers.Utilities.log(error);
+            }
+        }
+
     }
-    }
+    ```
+
+## <a name="update-the-manifest"></a>Обновление манифеста
+
+1. Откройте файл **manifest.xml**, чтобы определить параметры и возможности надстройки. 
+
+2. Элемент `ProviderName` содержит значение заполнителя. Замените его на свое имя.
+
+3. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его на строку **Надстройка области задач для Excel**.
+
+4. Сохраните файл.
+
+    ```xml
+    ...
+    <ProviderName>John Doe</ProviderName>
+    <DefaultLocale>en-US</DefaultLocale>
+    <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
+    <DisplayName DefaultValue="My Office Add-in" />
+    <Description DefaultValue="A task pane add-in for Excel"/>
+    ...
     ```
 
 ## <a name="start-the-dev-server"></a>Запуск сервера разработки
 
-1. Используя терминал, выполните приведенную ниже команду, чтобы запустить сервер разработки.
-
-    ```bash
-    npm run start
-    ```
-
-2. В веб-браузере перейдите по адресу `https://localhost:3000`. Если появится сообщение о том, что сертификат сайта не является доверенным, укажите, что ему можно доверять. Дополнительные сведения см. в статье [Добавление самозаверяющего сертификата как доверенного корневого сертификата](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md).
-
-    > [!NOTE]
-    > Веб-браузер Chrome может продолжать показывать предупреждение о том, что рабочая станция не доверяет сертификату сайта даже после его [добавления в список доверенных корневых сертификатов](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md). Вы можете игнорировать это предупреждение. Чтобы убедиться, что сертификат является доверенным, перейдите по адресу  `https://localhost:3000` в Internet Explorer или Microsoft Edge. 
-
-3. После того как браузер загрузит страницу надстройки без ошибок сертификата, вы можете протестировать надстройку. 
+[!include[Start server section](../includes/quickstart-yo-start-server.md)] 
 
 ## <a name="try-it-out"></a>Проверка
 
 1. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.
 
-    - Windows: [Загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
+    - Windows: [загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
     - Excel Online: [загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
     - iPad и Mac: [загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 
    
 2. В Excel перейдите на вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
-    ![Кнопка надстройки Excel](../images/excel-quickstart-addin-2a.png)
+    ![Кнопка надстройки Excel](../images/excel-quickstart-addin-2b.png)
 
 3. Выберите любой диапазон ячеек на листе.
 
