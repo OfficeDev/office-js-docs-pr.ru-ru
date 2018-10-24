@@ -1,13 +1,13 @@
 ---
 title: Общие сведения об API JavaScript для Office
 description: ''
-ms.date: 01/23/2018
-ms.openlocfilehash: e9d9efdda5e237ab076d22d50b1f7ded5e075845
-ms.sourcegitcommit: c53f05bbd4abdfe1ee2e42fdd4f82b318b363ad7
+ms.date: 10/17/2018
+ms.openlocfilehash: 58829c623c06225bcc7d15925fb02a082df039c6
+ms.sourcegitcommit: a6d6348075c1abed76d2146ddfc099b0151fe403
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "25505953"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "25640094"
 ---
 # <a name="understanding-the-javascript-api-for-office"></a>Общие сведения об API JavaScript для Office
 
@@ -44,9 +44,12 @@ ms.locfileid: "25505953"
 
 - Используйте API диалога для Office, предлагающий пользователю установить для параметров надстройки значения по умолчанию.
 
-Однако запуск кода не должен вызывать API-интерфейсы  Office.js, пока библиотека не загрузится полностью. Существует два способа обеспечить загрузку библиотеки кодом. Они описаны в следующих разделах. Мы рекомендуем использовать более новую и более гибкую технику, вызвав `Office.onReady()`. Предыдущая техника, которая назначает обработчик для `Office.initialize`, по-прежнему поддерживается. См. также статью [Основные различия между Office.initialize и Office.onReady()](#major-differences-between-office-initialize-and-office-onready).
+Но ваш стартовый код не должен вызывать API-интерфейсы Office.js до тех пор, пока библиотека не будет полностью загружена. Имеется два способа для проверки вашим кодом загрузки библиотеки. Они описаны в следующих разделах: 
 
-Дополнительные сведения о последовательности событий при инициализации надстройки приведены в разделе [Загрузка модели DOM и среды выполнения](loading-the-dom-and-runtime-environment.md).
+- [Инициализация с помощью Office.onReady()](#initialize-with-officeonready)
+- [Инициализация с использованием функции Office.initialize](#initialize-with-officeinitialize)
+
+Для получения сведений о различиях в этих методах см. [Основные различия между Office.initialize и Office.onReady()](#major-differences-between-officeinitialize-and-officeonready). Дополнительные сведения о последовательности событий при инициализации надстройки приведены в разделе [Загрузка модели DOM и среды выполнения](loading-the-dom-and-runtime-environment.md).
 
 ### <a name="initialize-with-officeonready"></a>Инициализация с помощью Office.onReady()
 
@@ -138,7 +141,14 @@ Office.initialize = function (reason) {
  };
 ```
 
-Дополнительные сведения см. в разделах [Событие Office.initialize](https://docs.microsoft.com/javascript/api/office?view=office-js) и [Перечисление InitializationReason](https://docs.microsoft.com/javascript/api/office/office.initializationreason?view=office-js).
+Дополнительные сведения см. в статьях [Событие Office.initialize Event](https://docs.microsoft.com/javascript/api/office?view=office-js) и [Перечисление InitializationReason](https://docs.microsoft.com/javascript/api/office/office.initializationreason?view=office-js).
+
+> [!NOTE]
+> В настоящее время, необходимо установить `Office.Initialize`, независимо от того, вызывается ли еще и `Office.onReady()`. Если вы не используете `Office.Initialize`, вы можете задать в нем пустую функцию, как показано в следующем примере.
+> 
+>```js
+>Office.initialize = function () {};
+>```
 
 ### <a name="major-differences-between-officeinitialize-and-officeonready"></a>Основные различия между Office.initialize и Office.onReady
 
@@ -147,12 +157,8 @@ Office.initialize = function (reason) {
 - Событие  `Office.initialize` запускается в конце внутреннего процесса, в котором инициализируется Office.js. Оно запускается *сразу же* после завершения внутреннего процесса. Если код, в котором вы присвоили обработчика событию, выполняется слишком долго после запуска события, тогда ваш обработчик не запускается. Например, при использовании диспетчера задач WebPack он может настроить домашнюю страницу надстройки для загрузки файлов polyfill после загрузки файла Office.js, но перед загрузкой настраиваемого JavaScript. К моменту загрузки вашего сценария и назначения им обработчика событие инициализации уже произойдет. Но никогда не «слишком поздно» вызвать `Office.onReady()`. Если событие инициализации уже произошло, обратный вызов выполнится немедленно.
 
 > [!NOTE]
-> Даже если у вас нет логики запуска, рекомендуется либо вызвать `Office.onReady()`, либо назначить пустую функцию для `Office.initialize` при загрузке вашей надстройки JavaScript, поскольку некоторые комбинации ведущего приложения и платформы Office не будут загружать область задач до тех пор, пока не произойдет одно из этих событий. Следующие строки показывают два пути выполнения этой процедуры:
->
->```js
->Office.onReady();
->```
->
+> Даже если у вас нет логики запуска, вы должны назначить пустую функцию `Office.initialize` при загрузке надстройки JavaScript, как показано в следующем примере. Некоторые комбинации ведущего приложения и платформы Office не будут загружать панель задач до тех пор, пока не произойдет событие инициализации и не будет запущена указанная функция обработчика событий.
+> 
 >```js
 >Office.initialize = function () {};
 >```
@@ -168,7 +174,7 @@ Office.initialize = function (reason) {
 
 |||||||||
 |:-----|:-----|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-||**Имя узла**|База данных|Книга|Почтовый ящик|Презентация|Документ|Project|
+||**Имя узла**|База данных|Книга|Почтовый ящик|Презентация|Документ|Проект|
 ||**Поддерживаемые** **ведущие приложения**|Веб-приложения Access|Excel,<br/>Excel Online|Outlook,<br/>веб-приложение Outlook,<br/>OWA (веб-приложения Outlook) для устройств|PowerPoint,<br/>PowerPoint Online|Word|Project|
 |**Поддерживаемые типы надстроек**|Содержимое|Да|Да||Да|||
 ||Область задач||Да||Да|Да|Да|

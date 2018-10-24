@@ -2,12 +2,6 @@
 
 В этой статье описывается процесс создания надстройки Excel с помощью React и API JavaScript для Excel.
 
-## <a name="environment"></a>Среда
-
-- **Классическое приложение Office**. Убедитесь, что у вас установлена ​​последняя версия Office. Команды надстроек требуют сборку 16.0.6769.0000 или более позднюю (рекомендуется сборка **16.0.6868.0000**). Узнайте, как [установить последнюю версию приложения Office](http://aka.ms/latestoffice). 
- 
-- **Office Online**. Не требуется выполнять дополнительную настройку. Обратите внимание, что поддержка команд в Office Online для рабочих и учебных учетных записей предоставляется в тестовом режиме.
-
 ## <a name="prerequisites"></a>Необходимые компоненты
 
 - [Node.js](https://nodejs.org)
@@ -17,17 +11,9 @@
     npm install -g yo generator-office
     ```
 
-### <a name="create-the-web-app"></a>Создание веб-приложения
+## <a name="create-the-web-app"></a>Создание веб-приложения
 
-1. Создайте на локальном диске папку и назовите ее **my-addin**. В ней вы будете создавать файлы для приложения.
-
-2. Перейдите к папке приложения.
-
-    ```bash
-    cd my-addin
-    ```
-
-3. С помощью генератора Yeoman создайте файл манифеста для надстройки. Выполните приведенную ниже команду и ответьте на вопросы, как показано на следующем снимке экрана.
+1. С помощью генератора Yeoman создайте проект надстройки Excel. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже:
 
     ```bash
     yo office
@@ -41,46 +27,219 @@
     
     После завершения работы мастера генератор создаст проект и установит поддерживающие компоненты узла.
 
-4.  Откройте **src/components/App.tsx**, найдите комментарий "Обновить цвет заливки", а затем измените цвет заливки с 'желтого' на 'синий' и сохраните файл. 
+2. Перейдите в корневую папку проекта.
 
-    ```js
-    range.format.fill.color = 'blue'
-
-    ```
-
-5. В блоке `return` функции `render` внутри **src/components/App.tsx** обновите `<Herolist>` в соответствии с приведенным ниже кодом и сохраните файл. 
-
-    ```js
-      <HeroList message='Discover what My Office Add-in can do for you today!' items={this.state.listItems}>
-        <p className='ms-font-l'>Choose the button below to set the color of the selected range to blue. <b>Set color</b>.</p>
-        <Button className='ms-welcome__action' buttonType={ButtonType.hero} iconProps={{ iconName: 'ChevronRight' }} onClick={this.click}>Run</Button>
-    </HeroList>
-    ```
-
-6. Сделайте так, чтобы операционная система компьютера разработки доверяла сертификату. Для этого выполните действия, описанные в статье [Добавление самозаверяющих сертификатов в качестве доверенного корневого сертифтката](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md).
-
-7. Загрузите неопубликованную надстройку, чтобы она отобразилась в Excel. В терминале выполните следующую команду: 
-    
     ```bash
-    npm run sideload
+    cd "My Office Add-in"
     ```
+
+## <a name="update-the-code"></a>Обновление кода
+
+1. В редакторе кода откройте файл **src/styles.less**, добавьте следующие стили в конец файла и сохраните файл.
+
+    ```css
+    #content-header {
+        background: #2a8dd4;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px; 
+        overflow: hidden;
+        font-family: Arial;
+        padding-top: 25px;
+    }
+
+    #content-main {
+        background: #fff;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: auto; 
+        font-family: Arial;
+    }
+
+    .padding {
+        padding: 15px;
+    }
+
+    .padding-sm {
+        padding: 4px;
+    }
+
+    .normal-button {
+        width: 80px;
+        padding: 2px;
+    }
+    ```
+
+2. Шаблон проекта, созданный генератором Yeoman для надстройки Office, включает в себя компонент React, который не требуется для этой краткой инструкции. Удалите файл **src/components/HeroList.tsx**.
+
+3. Откройте файл **src/components/Header.tsx**, замените все содержимое следующим кодом и сохраните файл.
+
+    ```typescript
+    import * as React from 'react';
+
+    export interface HeaderProps {
+        title: string;
+    }
+
+    export class Header extends React.Component<HeaderProps, any> {
+        constructor(props, context) {
+            super(props, context);
+        }
+
+        render() {
+            return (
+                <div id='content-header'>
+                    <div className='padding'>
+                        <h1>{this.props.title}</h1>
+                    </div>
+                </div>
+            );
+        }
+    }
+    ```
+
+4. Создайте новый компонент React с именем **Content.tsx** в папке **src/components**, добавьте следующий код и сохраните файл.
+
+    ```typescript
+    import * as React from 'react';
+    import { Button, ButtonType } from 'office-ui-fabric-react';
+
+    export interface ContentProps {
+        message: string;
+        buttonLabel: string;
+        click: any;
+    }
+
+    export class Content extends React.Component<ContentProps, any> {
+        constructor(props, context) {
+            super(props, context);
+        }
+
+        render() {
+            return (
+                <div id='content-main'>
+                    <div className='padding'>
+                        <p>{this.props.message}</p>
+                        <br />
+                        <h3>Try it out</h3>
+                        <br/>
+                        <Button className='normal-button' buttonType={ButtonType.hero} onClick={this.props.click}>{this.props.buttonLabel}</Button>
+                    </div>
+                </div>
+            );
+        }
+    }
+    ```
+
+5. Откройте файл **src/components/App.tsx**, замените все содержимое следующим кодом и сохраните файл.
+
+    ```typescript
+    import * as React from 'react';
+    import { Header } from './Header';
+    import { Content } from './Content';
+    import Progress from './Progress';
+
+    import * as OfficeHelpers from '@microsoft/office-js-helpers';
+
+    export interface AppProps {
+        title: string;
+        isOfficeInitialized: boolean;
+    }
+
+    export interface AppState {
+    }
+
+    export default class App extends React.Component<AppProps, AppState> {
+        constructor(props, context) {
+            super(props, context);
+        }
+
+        setColor = async () => {
+            try {
+                await Excel.run(async context => {
+                    const range = context.workbook.getSelectedRange();
+                    range.load('address');
+                    range.format.fill.color = 'green';
+                    await context.sync();
+                    console.log(`The range address was ${range.address}.`);
+                });
+            } catch (error) {
+                OfficeHelpers.UI.notify(error);
+                OfficeHelpers.Utilities.log(error);
+            }
+        }
+
+        render() {
+            const {
+                title,
+                isOfficeInitialized,
+            } = this.props;
+
+            if (!isOfficeInitialized) {
+                return (
+                    <Progress
+                        title={title}
+                        logo='assets/logo-filled.png'
+                        message='Please sideload your addin to see app body.'
+                    />
+                );
+            }
+
+            return (
+                <div className='ms-welcome'>
+                    <Header title='Welcome' />
+                    <Content message='Choose the button below to set the color of the selected range to green.' buttonLabel='Set color' click={this.setColor} />
+                </div>
+            );
+        }
+    }
+    ```
+
+## <a name="update-the-manifest"></a>Обновление манифеста
+
+1. Откройте файл **manifest.xml**, чтобы определить параметры и возможности надстройки. 
+
+2. Элемент `ProviderName` содержит значение заполнителя. Замените его на свое имя.
+
+3. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его на строку **Надстройка области задач для Excel**.
+
+4. Сохраните файл.
+
+    ```xml
+    ...
+    <ProviderName>John Doe</ProviderName>
+    <DefaultLocale>en-US</DefaultLocale>
+    <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
+    <DisplayName DefaultValue="My Office Add-in" />
+    <Description DefaultValue="A task pane add-in for Excel"/>
+    ...
+    ```
+
+## <a name="start-the-dev-server"></a>Запуск сервера разработки
+
+[!include[Start server section](../includes/quickstart-yo-start-server.md)] 
 
 ## <a name="try-it-out"></a>Проверка
 
-1. Используя терминал, выполните приведенную ниже команду, чтобы запустить сервер разработки.
+1. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.
 
-    Windows:
-    ```bash
-    npm start
-    ```
+    - Windows: [ загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
+    - Excel Online: [загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
+    - iPad и Mac: [загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 
-2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
+2. В Excel перейдите на вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
     ![Кнопка надстройки Excel](../images/excel-quickstart-addin-2b.png)
 
 3. Выберите любой диапазон ячеек на листе.
 
-4. В области задач нажмите кнопку **Выбрать цвет**, чтобы сделать выбранный диапазон синим.
+4. В области задач нажмите кнопку **Задать цвет**, чтобы сделать выбранный диапазон зеленым.
 
     ![Надстройка Excel](../images/excel-quickstart-addin-2c.png)
 
