@@ -1,36 +1,34 @@
 ---
 title: Преобразование проекта надстройки Office в Visual Studio в TypeScript
 description: ''
-ms.date: 01/19/2018
-ms.openlocfilehash: 015fd9d7e9bf4412c09b76f0de5a97c9946e4d58
-ms.sourcegitcommit: 3da2038e827dc3f274d63a01dc1f34c98b04557e
+ms.date: 10/30/2018
+ms.openlocfilehash: d2a092cb48864cb9a4c9e791e3485963d0329ed2
+ms.sourcegitcommit: 161a0625646a8c2ebaf1773c6369ee7cc96aa07b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "24016334"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "25891804"
 ---
 # <a name="convert-an-office-add-in-project-in-visual-studio-to-typescript"></a>Преобразование проекта надстройки Office в Visual Studio в TypeScript
 
-Вы можете использовать шаблон надстройки Office в Visual Studio, чтобы создать надстройку с использованием JavaScript, а затем преобразовать этот проект в TypeScript. Создавая проект надстройки в Visual Studio, вам не придется создавать проект надстройки Office на TypeScript с нуля. 
-
-В этой статье показано, как создать надстройку Excel с помощью Visual Studio, а затем преобразовать проект надстройки из JavaScript в TypeScript. Таким же образом в Visual Studio можно преобразовывать и другие проекты надстроек Office из JavaScript в TypeScript.
+Вы можете использовать шаблон надстройки Office в Visual Studio, чтобы создать надстройку с использованием JavaScript, а затем преобразовать этот проект в TypeScript. В этой статье описан процесс преобразования для надстройки Excel. Таким же образом в Visual Studio можно преобразовывать и другие проекты надстроек Office из JavaScript в TypeScript.
 
 > [!NOTE]
-> Чтобы создать проект надстройки Office на TypeScript без использования Visual Studio, следуйте указаниям из раздела "Любой редактор" любого [5-минутного руководства по началу работы](../index.yml) и выберите `TypeScript` по соответствующему запросу [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
+> Чтобы создать проект надстройки Office на TypeScript без использования Visual Studio, следуйте указаниям из раздела "Любой редактор" любого [5-минутного руководства по началу работы](../index.yml) и выберите `TypeScript` по соответствующему запросу [генератора Yeoman для надстроек Office](https://github.com/officedev/generator-office).
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
 - [Visual Studio 2017](https://www.visualstudio.com/vs/) с установленной рабочей нагрузкой **Разработка надстроек для Office и SharePoint**
 
-    > [!NOTE]
-    > Если вы уже установили Visual Studio 2017, [используйте установщик Visual Studio](https://docs.microsoft.com/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**. 
+    > [!TIP]
+    > Если вы уже установили Visual Studio 2017, [используйте установщик Visual Studio](https://docs.microsoft.com/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**. Если эта рабочая нагрузка еще не установлена, используйте установщик Visual Studio, чтобы [установить ее](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2017#modify-workloads).
 
-- TypeScript 2.3 для Visual Studio 2017
+- Пакет SDK для TypeScript версии 2.3 или более поздней (для Visual Studio 2017)
 
-    > [!NOTE]
-    > TypeScript должен быть по умолчанию установлен вместе с Visual Studio 2017, но вы можете убедиться в этом с помощью [Visual Studio Installer](https://docs.microsoft.com/visualstudio/install/modify-visual-studio). В Visual Studio Installer выберите вкладку **Отдельные компоненты** и убедитесь, что в разделе **Пакеты SDK, библиотеки и платформы** выбран узел **Пакет SDK для TypeScript 2.3**.
+    > [!TIP]
+    > В [установщике Visual Studio](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) выберите вкладку **Отдельные компоненты** и прокрутите вниз до раздела **Пакеты SDK, библиотеки и платформы**. Убедитесь, что в этом разделе выбран хотя бы один из компонентов **Пакет SDK для TypeScript** (версии 2.3 или более поздней). Если не выбран ни один из компонентов **Пакет для TypeScript**, выберите последнюю доступную версию пакета SDK и нажмите кнопку **Изменить**, чтобы [установить этот отдельный компонент](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2017#modify-individual-components). 
 
-- Excel 2016 или более поздняя версия
+- Excel 2016 или более поздней версии
 
 ## <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
@@ -49,7 +47,7 @@ ms.locfileid: "24016334"
 1. В **обозревателе решений** измените имя файла**Home.js** на **Home.ts**.
 
     > [!NOTE]
-    > В проекте TypeScript могут быть как файлы TypeScript, так и файлы JavaScript, это не повлияет на компиляцию. Потому что TypeScript — это типизированная расширенная версия языка JavaScript. Код TypeScript компилируется в JavaScript. 
+    > В проекте TypeScript могут быть как файлы TypeScript, так и файлы JavaScript, это не повлияет на компиляцию. Потому что TypeScript — это типизированная расширенная версия языка JavaScript. Код TypeScript компилируется в JavaScript. 
 
 2. Нажмите **Да**, чтобы подтвердить изменение расширения имени файла.
 
@@ -61,7 +59,7 @@ ms.locfileid: "24016334"
 
 6. Создайте файл с именем **jQuery.d.ts** в корне проекта веб-приложения.
 
-7. В веб-браузере откройте [файл определений типов для jQuery](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/jquery/index.d.ts). Скопируйте содержимое этого файла в буфер обмена.
+7. В веб-браузере откройте [файл определений типов для jQuery](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/jquery/misc.d.ts). Скопируйте содержимое этого файла в буфер обмена.
 
 8. В Visual Studio откройте файл **jQuery.d.ts**, вставьте в него содержимое буфера обмена и сохраните файл.
 
@@ -69,7 +67,7 @@ ms.locfileid: "24016334"
 
 10. Откройте файл **tsconfig.json**, добавьте в него приведенное ниже содержимое и сохраните файл.
 
-    ```javascript
+    ```json
     {
         "compilerOptions": {
             "skipLibCheck": true,
@@ -80,14 +78,30 @@ ms.locfileid: "24016334"
 
 11. Откройте файл **Home.ts** и добавьте в его начале следующее объявление:
 
-    ```javascript
+    ```typescript
     declare var fabric: any;
     ```
 
-12. В файле **Home.ts** замените **'1.1'** на **1.1** (то есть удалите кавычки) в приведенной ниже строке, а затем сохраните файл.
+12. В файле **Home.ts** замените **'1.1'** на **1.1** (то есть удалите кавычки) в приведенной ниже строке:
 
-    ```javascript
+    ```typescript
     if (!Office.context.requirements.isSetSupported('ExcelApi', '1.1')) {
+    ```
+
+13. В файле **Home.ts** найдите функцию `displaySelectedCells`, замените всю функцию приведенным ниже кодом и сохраните файл:
+
+    ```typescript
+    function displaySelectedCells() {
+        Office.context.document.getSelectedDataAsync(Office.CoercionType.Text,
+            null,
+            function (result) {
+                if (result.status === Office.AsyncResultStatus.Succeeded) {
+                    showNotification('The selected text is:', '"' + result.value + '"');
+                } else {
+                    showNotification('Error', result.error.message);
+                }
+            });
+    }
     ```
 
 ## <a name="run-the-converted-add-in-project"></a>Запуск преобразованного проекта надстройки
@@ -104,7 +118,7 @@ ms.locfileid: "24016334"
 
 Для справки в приведенном ниже фрагменте кода показано содержимое файла **Home.ts** после применения вышеописанных изменений. Этот код включает минимальное количество изменений, необходимое для запуска надстройки.
 
-```javascript
+```typescript
 declare var fabric: any;
 
 (function () {
@@ -121,7 +135,7 @@ declare var fabric: any;
             messageBanner = new fabric.MessageBanner(element);
             messageBanner.hideBanner();
             
-            // If not using Excel 2016 or later, use fallback logic.
+            // If not using Excel 2016, use fallback logic.
             if (!Office.context.requirements.isSetSupported('ExcelApi', 1.1)) {
                 $("#template-description").text("This sample will display the value of the cells that you have selected in the spreadsheet.");
                 $('#button-text').text("Display!");
@@ -201,6 +215,7 @@ declare var fabric: any;
 
     function displaySelectedCells() {
         Office.context.document.getSelectedDataAsync(Office.CoercionType.Text,
+            null,
             function (result) {
                 if (result.status === Office.AsyncResultStatus.Succeeded) {
                     showNotification('The selected text is:', '"' + result.value + '"');

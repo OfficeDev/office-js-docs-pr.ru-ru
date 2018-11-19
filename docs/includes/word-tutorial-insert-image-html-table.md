@@ -5,13 +5,13 @@
 
 ## <a name="insert-an-image"></a>Вставка изображения
 
-1. Откройте проект в редакторе кода. 
+1. Откройте проект в редакторе кода.
 2. Откройте файл index.html.
 3. Под элементом `div`, содержащим кнопку `replace-text`, добавьте следующую разметку:
 
     ```html
-    <div class="padding">            
-        <button class="ms-Button" id="insert-image">Insert Image</button>            
+    <div class="padding">
+        <button class="ms-Button" id="insert-image">Insert Image</button>
     </div>
     ```
 
@@ -21,20 +21,20 @@
 
     ```js
     import { base64Image } from "./base64Image";
-    ``` 
+    ```
 
-5. Под строкой, назначающей обработчик нажатия кнопки `replace-text`, добавьте следующий код:
+6. Под строкой, назначающей обработчик нажатия кнопки `replace-text`, добавьте следующий код:
 
     ```js
     $('#insert-image').click(insertImage);
     ```
 
-6. Добавьте приведенную ниже функцию под функцией `replaceText`.
+7. Добавьте приведенную ниже функцию под функцией `replaceText`.
 
     ```js
     function insertImage() {
         Word.run(function (context) {
-            
+
             // TODO1: Queue commands to insert an image.
 
             return context.sync();
@@ -46,13 +46,13 @@
             }
         });
     }
-    ``` 
+    ```
 
-7. Замените `TODO1` на приведенный ниже код. Обратите внимание, что эта строка вставляет изображение с кодировкой Base 64 в конце документа. У объекта `Paragraph` также есть метод `insertInlinePictureFromBase64` и другие методы `insert*`. Пример представлен в следующем разделе, посвященном вставке HTML.
+8. Замените `TODO1` на приведенный ниже код. Обратите внимание, что эта строка вставляет изображение с кодировкой Base 64 в конце документа. У объекта `Paragraph` также есть метод `insertInlinePictureFromBase64` и другие методы `insert*`. Пример представлен в следующем разделе, посвященном вставке HTML.
 
     ```js
     context.document.body.insertInlinePictureFromBase64(base64Image, "End");
-    ``` 
+    ```
 
 ## <a name="insert-html"></a>Вставка HTML
 
@@ -60,8 +60,8 @@
 2. Под элементом `div`, содержащим кнопку `insert-image`, добавьте следующую разметку:
 
     ```html
-    <div class="padding">            
-        <button class="ms-Button" id="insert-html">Insert HTML</button>            
+    <div class="padding">
+        <button class="ms-Button" id="insert-html">Insert HTML</button>
     </div>
     ```
 
@@ -78,7 +78,7 @@
     ```js
     function insertHTML() {
         Word.run(function (context) {
-            
+
             // TODO1: Queue commands to insert a string of HTML.
 
             return context.sync();
@@ -90,42 +90,42 @@
             }
         });
     }
-    ``` 
+    ```
 
 6. Замените `TODO1` на приведенный ниже код. Обратите внимание:
    - Первая строка добавляет пустой абзац в конце документа. 
-   - Вторая команда вставляет строку HTML-кода в конце абзаца. В частности, вставляются два абзаца, в одном из которых используется шрифт Verdana, а в другом — стандартный стиль документа Word. Как видно по вышеописанному методу `insertImage`, у объекта `context.document.body` также есть методы `insert*`.
+   - Вторая команда вставляет строку HTML-кода в конце абзаца. В частности, вставляются два абзаца, в одном из которых используется шрифт Verdana, а в другом — стандартный стиль документа Word. Как видно по вышеописанному методу `insertImage`, у объекта `context.document.body` также есть методы `insert*`.
 
     ```js
     const blankParagraph = context.document.body.paragraphs.getLast().insertParagraph("", "After");
     blankParagraph.insertHtml('<p style="font-family: verdana;">Inserted HTML.</p><p>Another paragraph</p>', "End");
-    ``` 
+    ```
 
 ## <a name="insert-table"></a>Вставка таблицы
 
 1. Откройте файл index.html.
-3. Под элементом `div`, содержащим кнопку `insert-html`, добавьте следующую разметку:
+2. Под элементом `div`, содержащим кнопку `insert-html`, добавьте следующую разметку:
 
     ```html
-    <div class="padding">            
-        <button class="ms-Button" id="insert-table">Insert Table</button>            
+    <div class="padding">
+        <button class="ms-Button" id="insert-table">Insert Table</button>
     </div>
     ```
 
-4. Откройте файл app.js.
+3. Откройте файл app.js.
 
-5. Под строкой, назначающей обработчик нажатия кнопки `insert-html`, добавьте следующий код:
+4. Под строкой, назначающей обработчик нажатия кнопки `insert-html`, добавьте следующий код:
 
     ```js
     $('#insert-table').click(insertTable);
     ```
 
-6. Добавьте приведенную ниже функцию под функцией `insertHTML`.
+5. Добавьте приведенную ниже функцию под функцией `insertHTML`.
 
     ```js
     function insertTable() {
         Word.run(function (context) {
-            
+
             // TODO1: Queue commands to get a reference to the paragraph
             //        that will proceed the table.
 
@@ -140,28 +140,28 @@
             }
         });
     }
-    ``` 
+    ```
 
-7. Замените `TODO1` на приведенный ниже код. Обратите внимание, что в этой строке используется метод `ParapgraphCollection.getFirst`, чтобы получить ссылку на первый абзац, а затем — метод `Paragraph.getNext`, чтобы получить ссылку на второй абзац.
+6. Замените `TODO1` на приведенный ниже код. Обратите внимание, что в этой строке используется метод `ParagraphCollection.getFirst`, чтобы получить ссылку на первый абзац, а затем — метод `Paragraph.getNext`, чтобы получить ссылку на второй абзац.
 
     ```js
     const secondParagraph = context.document.body.paragraphs.getFirst().getNext();
-    ``` 
+    ```
 
-8. Замените `TODO2` на приведенный ниже код. Обратите внимание:
+7. Замените `TODO2` на приведенный ниже код. Обратите внимание:
    - Первые два параметра метода `insertTable` задают количество строк и столбцов.
-   - Третий параметр указывает, где вставить таблицу (в данном случае — после абзаца).
+   - Третий параметр указывает, где вставить таблицу (в данном случае — после абзаца).
    - Четвертый параметр представляет собой двумерный массив, задающий значения ячеек таблицы.
    - К таблице применяется простой стиль по умолчанию, но метод `insertTable` возвращает объект `Table` со множеством элементов, некоторые из которых используются для настройки стиля таблицы.
 
-     ```js
+    ```js
     const tableData = [
             ["Name", "ID", "Birth City"],
             ["Bob", "434", "Chicago"],
             ["Sue", "719", "Havana"],
         ];
     secondParagraph.insertTable(3, 3, "After", tableData);
-    ``` 
+    ```
 
 ## <a name="test-the-add-in"></a>Тестирование надстройки
 

@@ -5,7 +5,7 @@
 
 ## <a name="code-the-add-in"></a>Написание кода надстройки
 
-1. Откройте проект в редакторе кода. 
+1. Откройте проект в редакторе кода.
 2. Откройте файл index.html.
 3. Замените `TODO1` на следующую разметку:
 
@@ -19,7 +19,7 @@
     ```js
     if (!Office.context.requirements.isSetSupported('WordApi', 1.3)) {
         console.log('Sorry. The tutorial add-in uses Word.js APIs that are not available in your version of Office.');
-    } 
+    }
     ```
 
 6. Замените `TODO2` на следующий код:
@@ -36,7 +36,7 @@
     ```js
     function insertParagraph() {
         Word.run(function (context) {
-            
+
             // TODO4: Queue commands to insert a paragraph into the document.
 
             return context.sync();
@@ -48,30 +48,30 @@
             }
         });
     }
-    ``` 
+    ```
 
 8. Замените `TODO4` на приведенный ниже код. Обратите внимание:
-   - Первый параметр метода `insertParagraph` — это текст нового абзаца.
-   - Второй параметр — расположение в основном тексте, где будет вставлен абзац. Другие варианты вставки абзаца, родительским объектом которого является основной текст, — End и Replace. 
+   - Первый параметр метода `insertParagraph` — это текст нового абзаца.
+   - Второй параметр — расположение в основном тексте, где будет вставлен абзац. Другие варианты вставки абзаца, родительским объектом которого является основной текст, — End и Replace.
 
     ```js
     const docBody = context.document.body;
     docBody.insertParagraph("Office has several versions, including Office 2016, Office 365 Click-to-Run, and Office Online.",
-                            "Start");   
-    ``` 
+                            "Start");
+    ```
 
 ## <a name="test-the-add-in"></a>Тестирование надстройки
 
 1. Откройте окно Git Bash или системную командную строку с поддержкой Node.JS и перейдите к папке **Start** проекта.
 2. Выполните команду `npm run build`, чтобы преобразовать исходный код ES6 в более раннюю версию JavaScript, поддерживаемую всеми ведущими приложениями, в которых могут работать надстройки Office.
-3. Выполните команду `npm start`, чтобы запустить веб-сервер, работающий на localhost.   
+3. Выполните команду `npm start`, чтобы запустить веб-сервер, работающий на localhost.
 4. Загрузите неопубликованную надстройку одним из следующих способов:
-    - Windows[](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-    - Office Online[](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
-    - iPad и Mac[](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+    - [Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
+    - [Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-online)
+    - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 5. В меню **Главная** в Word выберите пункт **Показать область задач**.
 6. В области задач нажмите кнопку **Insert Paragraph** (Вставить абзац).
-7. Внесите изменение в абзац. 
+7. Внесите изменение в абзац.
 8. Снова нажмите кнопку **Insert Paragraph**. Обратите внимание, что новый абзац находится над предыдущим, так как метод `insertParagraph` вставляет текст в начале основного текста документа.
 
     ![Руководство по Word: вставка абзаца](../images/word-tutorial-insert-paragraph.png)
