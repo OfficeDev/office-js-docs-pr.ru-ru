@@ -5,35 +5,35 @@
 
 ##### <a name="requirements"></a>Требования
 
-|Требование| Значение|
+|Requirement| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Cоздание или чтение|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
-##### <a name="members-and-methods"></a>Члены и методы
+##### <a name="members-and-methods"></a>Элементы и методы
 
-| Член | Тип |
+| Член | Type |
 |--------|------|
-| [AccountType](#accounttype-string) | Член |
-| [displayName](#displayname-string) | Член |
-| [emailAddress](#emailaddress-string) | Член |
-| [timeZone](#timezone-string) | Член |
+| [accountType](#accounttype-string) | Member |
+| [displayName](#displayname-string) | Элемент |
+| [emailAddress](#emailaddress-string) | Элемент |
+| [timeZone](#timezone-string) | Элемент |
 
-### <a name="members"></a>Члены
+### <a name="members"></a>Members
 
 ####  <a name="accounttype-string"></a>accountType :String
 
 > [!NOTE]
-> В настоящее время этот член поддерживается только в Outlook 2016 или более поздней версии для Mac (сборки 16.9.1212 или более поздней версии).
+> В настоящее время этот элемент поддерживается только в Outlook 2016 или более поздней версии для Mac (сборка 16.9.1212 или более поздняя версия).
 
-Получает тип учетной записи пользователя, связанной с почтовым ящиком. В следующей таблице перечислены возможные значения.
+Возвращает тип учетной записи пользователя, связанной с почтовым ящиком. Возможные значения перечислены в таблице ниже.
 
 | Значение | Описание |
 |-------|-------------|
-| `enterprise` | Почтовый ящик находится на локальном сервере Exchange. |
+| `enterprise` | Почтовый ящик размещен на локальном сервере Exchange. |
 | `gmail` | Почтовый ящик связан с учетной записью Gmail. |
-| `office365` | Почтовый ящик связан с рабочей или учебной учетной записью Office 365. |
+| `office365` | Почтовый ящик связан с рабочей или учебной учетной записью Office 365. |
 | `outlookCom` | Почтовый ящик связан с личной учетной записью Outlook.com. |
 
 ##### <a name="type"></a>Тип:
@@ -42,15 +42,15 @@
 
 ##### <a name="requirements"></a>Требования
 
-|Требование| Значение|
+|Requirement| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.6 |
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.6 |
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Cоздание или чтение|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
-```
+```js
 console.log(Office.context.mailbox.userProfile.accountType);
 ```
 
@@ -64,15 +64,15 @@ console.log(Office.context.mailbox.userProfile.accountType);
 
 ##### <a name="requirements"></a>Требования
 
-|Требование| Значение|
+|Requirement| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Cоздание или чтение|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
-```
+```js
 // Example: Allie Bellew
 console.log(Office.context.mailbox.userProfile.displayName);
 ```
@@ -87,15 +87,15 @@ console.log(Office.context.mailbox.userProfile.displayName);
 
 ##### <a name="requirements"></a>Требования
 
-|Требование| Значение|
+|Requirement| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Cоздание или чтение|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
-```
+```js
 // Example: allieb@contoso.com
 console.log(Office.context.mailbox.userProfile.emailAddress);
 ```
@@ -110,15 +110,15 @@ console.log(Office.context.mailbox.userProfile.emailAddress);
 
 ##### <a name="requirements"></a>Требования
 
-|Требование| Значение|
+|Requirement| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Cоздание или чтение|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
-```
+```js
 // Example: Pacific Standard Time
 console.log(Office.context.mailbox.userProfile.timeZone);
 ```

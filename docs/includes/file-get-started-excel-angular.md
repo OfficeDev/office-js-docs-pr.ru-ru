@@ -6,7 +6,7 @@
 
 - [Node.js](https://nodejs.org)
 
-- Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
+- Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
 
     ```bash
     npm install -g yo generator-office
@@ -14,7 +14,7 @@
 
 ## <a name="create-the-web-app"></a>Создание веб-приложения
 
-1. С помощью генератора Yeoman создайте проект надстройки Excel. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже:
+1. С помощью генератора Yeoman создайте проект надстройки Excel. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
     ```bash
     yo office
@@ -22,14 +22,14 @@
 
     - **Выберите тип проекта:** `Office Add-in project using Angular framework`
     - **Выберите тип сценария:** `Typescript`
-    - **Как вы хотите назвать надстройку?:** `My Office Add-in`
-    - **Какое клиентское приложение Office должно поддерживаться?:** `Excel`
+    - **Как вы хотите назвать надстройку?** `My Office Add-in`
+    - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
     ![Генератор Yeoman](../images/yo-office-excel-angular.png)
     
-    После завершения работы мастера генератор создаст проект и установит поддерживающие компоненты узла.
+    После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
-2. Перейдите в корневую папку проекта.
+2. Перейдите к корневой папке проекта.
 
     ```bash
     cd "My Office Add-in"
@@ -37,7 +37,7 @@
 
 ## <a name="update-the-code"></a>Обновление кода
 
-1. В редакторе кода откройте файл **app.css**, добавьте следующие стили в конец файла и сохраните файл.
+1. В редакторе кода откройте файл **app.css**, добавьте указанные ниже стили в конец файла и сохраните его.
 
     ```css
     #content-header {
@@ -78,7 +78,7 @@
     }
     ```
 
-2. Откройте файл **src/app/app.component.html**, замените все содержимое следующим кодом и сохраните файл.
+2. Откройте файл **src/app/app.component.html**, замените все его содержимое приведенным ниже кодом и сохраните файл.
 
     ```html
     <div id="content-header">
@@ -100,7 +100,7 @@
     </div>
     ```
 
-3. Откройте файл **src/app/app.component.ts**, замените все его содержимое приведенным ниже кодом и сохраните.
+3. Откройте файл **src/app/app.component.ts**, замените все его содержимое приведенным ниже кодом и сохраните файл.
 
     ```typescript
     import { Component } from '@angular/core';
@@ -137,9 +137,9 @@
 
 1. Откройте файл **manifest.xml**, чтобы определить параметры и возможности надстройки. 
 
-2. Элемент `ProviderName` содержит значение заполнителя. Замените его на свое имя.
+2. Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.
 
-3. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его на строку **Надстройка области задач для Excel**.
+3. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его строкой **Надстройка области задач для Excel**.
 
 4. Сохраните файл.
 
@@ -161,22 +161,22 @@
 
 1. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.
 
-    - Windows: [загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-    - Excel Online: [загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
-    - iPad и Mac: [загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+    - [Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
+    - [Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-online)
+    - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 
    
-2. В Excel перейдите на вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
+2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
     ![Кнопка надстройки Excel](../images/excel-quickstart-addin-2b.png)
 
 3. Выберите любой диапазон ячеек на листе.
 
-4. В области задач нажмите кнопку **Задать цвет**, чтобы сделать выбранный диапазон зеленым.
+4. В области задач нажмите кнопку **Set color** (Задать цвет), чтобы сделать зеленым выбранный диапазон.
 
     ![Надстройка Excel](../images/excel-quickstart-addin-2c.png)
 
-## <a name="next-steps"></a>Дальнейшие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Поздравляем, вы успешно создали надстройку Excel с помощью Angular! Чтобы узнать больше о возможностях надстроек Excel и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Excel.
 
@@ -186,6 +186,6 @@
 ## <a name="see-also"></a>См. также
 
 * [Руководство по надстройкам Excel](../tutorials/excel-tutorial-create-table.md)
-* [Основные принципы программирования с помощью API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
+* [Основные концепции программирования с помощью API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
 * [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
 * [Справочник по API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js)

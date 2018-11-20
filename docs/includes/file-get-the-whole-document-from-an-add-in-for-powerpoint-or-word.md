@@ -1,6 +1,6 @@
 # <a name="get-the-whole-document-from-an-add-in-for-powerpoint-or-word"></a>Получение всего документа из надстройки для PowerPoint или Word
 
-Можно создать Надстройка Office для отправки или публикации одним щелчком документа Word 2013 или PowerPoint 2013 в удаленное расположение. В данной статье показано, как создать простую надстройку области задач для PowerPoint 2013, которая получает все представление в виде объекта данных и отправляет эти данные на веб-сервер через запрос HTTP.
+Можно создать Надстройка Office для отправки или публикации одним щелчком документа Word 2013 или PowerPoint 2013 в удаленное расположение. В данной статье показано, как создать простую надстройку области задач для PowerPoint 2013, которая получает все представление в виде объекта данных и отправляет эти данные на веб-сервер через запрос HTTP.
 
 ## <a name="prerequisites-for-creating-an-add-in-for-powerpoint-or-word"></a>Необходимые условия создания надстройки для PowerPoint или Word
 
@@ -16,7 +16,7 @@
     
 - Файл XML-манифеста (GetDoc_App.xml) для надстройки, доступный в общей сетевой папке или каталоге надстроек. Файл манифеста должен указывать на расположение HTML-файла, упомянутого ранее.
     
-Вы также можете создать надстройку для PowerPoint или Word, используя [Visual Studio](../quickstarts/powerpoint-quickstart.md?tabs=visual-studio) или [любой редактор](../quickstarts/powerpoint-quickstart.md?tabs=visual-studio-code).[](../quickstarts/word-quickstart.md?tabs=visual-studio)[](../quickstarts/word-quickstart.md?tabs=visual-studio-code) 
+Вы также можете создать надстройку для PowerPoint или Word, используя [Visual Studio](../quickstarts/powerpoint-quickstart.md?tabs=visual-studio) или [любой редактор](../quickstarts/powerpoint-quickstart.md?tabs=visual-studio-code). 
 
 ### <a name="core-concepts-to-know-for-creating-a-task-pane-add-in"></a>Что нужно знать для создания надстроек области задач
 
@@ -187,7 +187,7 @@ function sendFile() {
 
 Локальная функция `getSlice` вызывает метод **File.getSliceAsync**, чтобы получить фрагмент из объекта **File**. Метод **getSliceAsync** возвращает объект **Slice** из коллекции фрагментов. Метод имеет два обязательных параметра: _sliceIndex_ и _callback_. Параметр _sliceIndex_ принимает целое число в качестве индексатора в коллекцию фрагментов. Как и другие функции в API JavaScript для Office, метод **getSliceAsync** также принимает функцию обратного вызова в качестве параметра для обработки результатов от вызова метода.
 
-Объект **Slice** предоставляет доступ к данным, содержащимся в файле. Если не указано иное с помощью параметра _параметров_ метода **getFileAsync**, объект- **Slice** имеет размер 4 МБ. Объект **Slice** предоставляет три свойства: [size](https://docs.microsoft.com/javascript/api/office/office.slice?view=office-js#size), [data](https://docs.microsoft.com/javascript/api/office/office.slice?view=office-js#data)и [index](https://docs.microsoft.com/javascript/api/office/office.slice?view=office-js#index). Свойство **size** возвращает размер фрагмента, в байтах. Свойство **index** возвращает целое число, представляющее номер фрагмента в коллекции фрагментов.
+Объект **Slice** дает вам доступ к данным, содержащимся в файле.  Если иное не указано в параметре _options_ метода **getFileAsync**, размер объекта **Slice** равен 4 МБ. Объект **Slice** отображает три свойства: [size](https://docs.microsoft.com/javascript/api/office/office.slice?view=office-js#size), [data](https://docs.microsoft.com/javascript/api/office/office.slice?view=office-js#data) и[index](https://docs.microsoft.com/javascript/api/office/office.slice?view=office-js#index). Свойство **size** возвращает размер среза в байтах. Свойство**index** возвращает целое число, отображающее положение среза в коллекции срезов.
 
 ```js
 // Get a slice from the file and then call sendSlice.

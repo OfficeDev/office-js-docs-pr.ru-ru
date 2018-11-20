@@ -6,7 +6,7 @@
 
 - [Node.js](https://nodejs.org)
 
-- Глобально установите [CLI для Vue](https://github.com/vuejs/vue-cli).
+- Установите [Vue CLI](https://github.com/vuejs/vue-cli) глобально.
 
     ```bash
     npm install -g vue-cli
@@ -20,7 +20,7 @@
 
 ## <a name="generate-a-new-vue-app"></a>Создание нового приложения Vue
 
-Используйте CLI для Vue, чтобы создать новое приложение Vue. Используя терминал, выполните следующую команду и ответьте на вопросы, как описано ниже.
+Используйте Vue CLI, чтобы создать новое приложение Vue. Используя терминал, выполните приведенную ниже команду и ответьте на вопросы, как описано ниже.
 
 ```bash
 vue init webpack my-add-in
@@ -28,11 +28,11 @@ vue init webpack my-add-in
 
 Отвечая на вопросы, появляющиеся при выполнении предыдущей команды, переопределите стандартные ответы на 3 указанных ниже вопроса. Вы можете оставить стандартные ответы на все остальные вопросы.
 
-- **Установить vue-router?** `No`
-- **Настроить модульные тесты?** `No`
-- **Настроить тесты e2e с помощью Nightwatch?** `No`
+- **Install vue-router?** (Установить vue-router?) `No`
+- **Set up unit tests?** `No` (Настроить модульные тесты?)
+- **Setup e2e tests with Nightwatch?** (Настроить тесты e2e с помощью Nightwatch?) `No`
 
-![Вопросы CLI для Vue](../images/vue-cli-prompts.png)
+![Вопросы Vue CLI](../images/vue-cli-prompts.png)
 
 ## <a name="generate-the-manifest-file"></a>Создание файла манифеста
 
@@ -44,25 +44,25 @@ vue init webpack my-add-in
     cd my-add-in
     ```
 
-2. Используя генератор Yeoman, создайте файл манифеста для надстройки. Выполните приведенную ниже команду и ответьте на запросы, как показано ниже.
+2. Используя генератор Yeoman, создайте файл манифеста для надстройки. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
     ```bash
     yo office 
     ```
 
     - **Выберите тип проекта:** `Office Add-in containing the manifest only`
-    - **Как вы хотите назвать надстройку?:** `My Office Add-in`
-    - **Какое клиентское приложение Office должно поддерживаться?:** `Excel`
+    - **Как вы хотите назвать надстройку?** `My Office Add-in`
+    - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
     ![Генератор Yeoman](../images/yo-office.png)
     
-    После завершения работы мастера генератор создаст файл манифеста.
+    После выполнения указаний мастера генератор создаст файл манифеста.
 
 ## <a name="secure-the-app"></a>Защита приложения
 
 [!include[HTTPS guidance](../includes/https-guidance.md)]
 
-Чтобы включить HTTPS для своего приложения, откройте файл **package.json** в корневой папке проекта Vue, добавьте в сценарий `dev` флажок `--https` и сохраните файл.
+Чтобы включить HTTPS для своего приложения, откройте файл **package.json** в корневой папке проекта Vue, добавьте флаг `--https` в скрипт `dev` и сохраните файл.
 
 ```json
 "dev": "webpack-dev-server --https --inline --progress --config build/webpack.dev.conf.js"
@@ -70,11 +70,11 @@ vue init webpack my-add-in
 
 ## <a name="update-the-app"></a>Обновление приложения
 
-1. В редакторе кода откройте папку **Мои надстройки Office**, созданную Yo Office в корне проекта Vue. В этой папке вы увидите файл манифеста, который определяет параметры для надстройки: **manifest.xml**.
+1. В редакторе кода откройте папку **My Office Add-in**, созданную Yo Office в корневой папке проекта Vue. В этой папке вы увидите файл манифеста, который определяет параметры надстройки (**manifest.xml**).
 
-2. Откройте файл манифеста, замените все вхождения `https://localhost:3000` на `https://localhost:8080` и сохраните файл.
+2. Откройте файл манифеста и замените все вхождения `https://localhost:3000`, указав вместо них `https://localhost:8080`, затем сохраните файл.
 
-3. Откройте файл **index.html** (находится в корневой папке проекта Vue), добавьте метку `<script>` сразу перед меткой `</head>` и сохраните файл.
+3. Откройте файл **index.html**, который находится в корневой папке проекта Vue, добавьте тег `<script>` сразу перед тегом `</head>` и сохраните файл.
 
     ```html
     <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
@@ -103,7 +103,7 @@ vue init webpack my-add-in
     }
     ```
 
-4. Откройте файл **src/App.vue**, замените его содержимое приведенным ниже кодом, добавьте разрыв строки в конце (т. е. после метки `</style>`) и сохраните файл. 
+4. Откройте файл **src/App.vue**, замените его содержимое приведенным ниже кодом, добавьте разрыв строки в конце (т. е. после тега `</style>`) и сохраните файл. 
 
     ```html
     <template>
@@ -177,7 +177,7 @@ vue init webpack my-add-in
     npm start
     ```
 
-2. В веб-браузере перейдите к разделу `https://localhost:8080`. Если появится сообщение, что сертификат сайта не является доверенным, сделайте так, чтобы компьютер ему доверял. 
+2. В веб-браузере перейдите по адресу `https://localhost:8080`. Если появится сообщение, что сертификат сайта не является доверенным, сделайте так, чтобы компьютер ему доверял. 
 
 3. После того как браузер загрузит страницу надстройки без ошибок сертификата, вы можете протестировать надстройку. 
 
@@ -185,17 +185,17 @@ vue init webpack my-add-in
 
 1. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.
 
-    - Windows: [загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-    - Excel Online: [загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
-    - iPad и Mac: [загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+    - [Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
+    - [Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-online)
+    - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 
-2. В Excel перейдите на вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
+2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
     ![Кнопка надстройки Excel](../images/excel-quickstart-addin-2a.png)
 
 3. Выберите любой диапазон ячеек на листе.
 
-4. В области задач нажмите кнопку **Задать цвет**, чтобы сделать выбранный диапазон зеленым.
+4. В области задач нажмите кнопку **Set color** (Задать цвет), чтобы сделать зеленым выбранный диапазон.
 
     ![Надстройка Excel](../images/excel-quickstart-addin-2c.png)
 
@@ -209,6 +209,6 @@ vue init webpack my-add-in
 ## <a name="see-also"></a>См. также
 
 * [Руководство по надстройкам Excel](../tutorials/excel-tutorial-create-table.md)
-* [Основные принципы программирования с помощью API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
+* [Основные концепции программирования с помощью API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
 * [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
 * [Справочник по API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js)

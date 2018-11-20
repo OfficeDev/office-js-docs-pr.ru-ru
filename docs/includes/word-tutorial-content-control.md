@@ -11,13 +11,13 @@
 
 ## <a name="create-a-content-control"></a>Создание элемента управления содержимым
 
-1. Откройте проект в редакторе кода. 
+1. Откройте проект в редакторе кода.
 2. Откройте файл index.html.
 3. Под элементом `div`, содержащим кнопку `replace-text`, добавьте следующую разметку:
 
     ```html
-    <div class="padding">            
-        <button class="ms-Button" id="create-content-control">Create Content Control</button>            
+    <div class="padding">
+        <button class="ms-Button" id="create-content-control">Create Content Control</button>
     </div>
     ```
 
@@ -34,7 +34,7 @@
     ```js
     function createContentControl() {
         Word.run(function (context) {
-            
+
             // TODO1: Queue commands to create a content control.
 
             return context.sync();
@@ -46,12 +46,12 @@
             }
         });
     }
-    ``` 
+    ```
 
 7. Замените `TODO1` на приведенный ниже код. Обратите внимание:
    - Этот код заключает фразу "Office 365" в элемент управления содержимым. Для простоты предполагается, что такая строка существует и пользователь выделил ее.
-   - Свойство `ContentControl.title` задает видимый заголовок элемента управления содержимым. 
-   - Свойство `ContentControl.tag` задает тег, с помощью которого можно получить ссылку на элемент управления содержимым путем вызова метода `ContentControlCollection.getByTag`, который будет использоваться в последующей функции. 
+   - Свойство `ContentControl.title` задает видимый заголовок элемента управления содержимым.
+   - Свойство `ContentControl.tag` задает тег, с помощью которого можно получить ссылку на элемент управления содержимым путем вызова метода `ContentControlCollection.getByTag`, который будет использоваться в последующей функции.
    - Свойство `ContentControl.appearance` задает внешний вид элемента управления. Значение Tags указывает, что элемент управления будет заключен в открывающие и закрывающие теги, а открывающий тег будет содержать заголовок элемента управления содержимым. Другие возможные значения: BoundingBox и None.
    - Свойство `ContentControl.color` задает цвет тегов или рамки ограничивающего прямоугольника.
 
@@ -62,7 +62,7 @@
     serviceNameContentControl.tag = "serviceName";
     serviceNameContentControl.appearance = "Tags";
     serviceNameContentControl.color = "blue";
-    ``` 
+    ```
 
 ## <a name="replace-the-content-of-the-content-control"></a>Замена содержимого элемента управления
 
@@ -70,8 +70,8 @@
 2. Под элементом `div`, содержащим кнопку `create-content-control`, добавьте следующую разметку:
 
     ```html
-    <div class="padding">            
-        <button class="ms-Button" id="replace-content-in-control">Rename Service</button>            
+    <div class="padding">
+        <button class="ms-Button" id="replace-content-in-control">Rename Service</button>
     </div>
     ```
 
@@ -88,7 +88,7 @@
     ```js
     function replaceContentInControl() {
         Word.run(function (context) {
-            
+
             // TODO1: Queue commands to replace the text in the Service Name
             //        content control.
 
@@ -101,16 +101,16 @@
             }
         });
     }
-    ``` 
+    ```
 
-7. Замените `TODO1` приведенным ниже кодом. 
+7. Замените `TODO1` на приведенный ниже код.
     > [!NOTE]
-    > Метод возвращает `ContentControlCollection` всех элементов управления содержимым указанного тега.`ContentControlCollection.getByTag` Мы используем `getFirst` чтобы получить ссылку на требуемый элемент управления.
+    > Метод `ContentControlCollection.getByTag` возвращает значение `ContentControlCollection` для всех элементов управления контентом указанного тега. Чтобы получить ссылку на нужный элемент управления, используйте `getFirst`.
 
     ```js
     const serviceNameContentControl = context.document.contentControls.getByTag("serviceName").getFirst();
     serviceNameContentControl.insertText("Fabrikam Online Productivity Suite", "Replace");
-    ``` 
+    ```
 
 ## <a name="test-the-add-in"></a>Тестирование надстройки
 

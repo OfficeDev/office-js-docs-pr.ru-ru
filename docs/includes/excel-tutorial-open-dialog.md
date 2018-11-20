@@ -8,7 +8,7 @@
 1. Откройте проект в редакторе кода.
 2. Создайте в корневой папке проекта (где находится index.html) файл popup.html.
 3. Добавьте в файл popup.html приведенный ниже код. Обратите внимание:
-   - На странице находится`<input>`, где пользователь будет вводить свое имя, и кнопка, при нажатии которой имя будет отправлено на страницу области задач, где оно отобразится.
+   - На странице находится `<input>`, где пользователь будет вводить свое имя, и кнопка, при нажатии которой имя будет отправлено на страницу области задач, где оно отобразится.
    - Код загружает скрипт под названием popup.js, который будет создан на более позднем этапе.
    - Он загружает также библиотеку Office.JS и jQuery, так как они будут использоваться в popup.js.
 
@@ -19,27 +19,27 @@
             <title>Dialog for My Office Add-in</title>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
             <link rel="stylesheet" href="node_modules/office-ui-fabric-js/dist/css/fabric.min.css" />
             <link rel="stylesheet" href="node_modules/office-ui-fabric-js/dist/css/fabric.components.css" />
-            <link rel="stylesheet" href="app.css">
-    
+            <link rel="stylesheet" href="app.css" />
+
             <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
             <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.1.min.js"></script>
             <script type="text/javascript" src="popup.js"></script>
-    
+
         </head>
-         <body style="display:flex;flex-direction:column;align-items:center;justify-content:center">
-         <div class="padding">
-            <p class="ms-font-xl">ENTER YOUR NAME</p>
-         </div>        
-        <div class="padding">
-            <input id="name-box" type="text"/>
-        <div>
-        <div class="padding">
-            <button id="ok-button" class="ms-Button">OK</button>
-        </div>
-    </body>
+        <body style="display:flex;flex-direction:column;align-items:center;justify-content:center">
+            <div class="padding">
+                <p class="ms-font-xl">ENTER YOUR NAME</p>
+            </div>
+            <div class="padding">
+                <input id="name-box" type="text"/>
+            </div>
+            <div class="padding">
+                <button id="ok-button" class="ms-Button">OK</button>
+            </div>
+        </body>
     </html>
     ```
 
@@ -52,17 +52,17 @@
     (function () {
     "use strict";
 
-        Office.initialize = function() {        
+        Office.initialize = function() {
             $(document).ready(function () {  
-    
+
                 // TODO1: Assign handler to the OK button.
-    
+
             });
         }
 
         // TODO2: Create the OK button handler
-    
-    }());    
+
+    }());
     ```
 
 6. Замените `TODO1` приведенным ниже кодом. Вы создадите функцию `sendStringToParentPage` на следующем этапе.
@@ -71,7 +71,7 @@
     $('#ok-button').click(sendStringToParentPage);
     ```
 
-7. Замените `TODO2` приведенным ниже кодом. Метод `messageParent` передает свой параметр родительской странице (в данном случае это страница на панели задач). Параметр может быть логическим или строковым. Во втором случае подразумевается все, что можно сериализовать, представив в виде строки (например, XML или JSON). 
+7. Замените `TODO2` приведенным ниже кодом. Метод `messageParent` передает свой параметр родительской странице (в данном случае это страница на панели задач). Параметр может быть логическим или строковым. Во втором случае подразумевается все, что можно сериализовать, представив в виде строки (например, XML или JSON).
 
     ```js
     function sendStringToParentPage() {
@@ -83,7 +83,7 @@
 8. Сохраните файл.
 
    > [!NOTE]
-   > Файл popup.html и загружаемый им файл popup.js выполняются в полностью отдельном процессе Internet Explorer из области задач надстройки. Если файл popup.js был передан в тот же файл bundle.js, что и файл app.js, надстройка загрузит два экземпляра файла bundle.js, и это отменяет цель объединения. Кроме того, файл popup.js не содержит код JavaScript, который не поддерживается в IE. По этим двум причинам эта надстройка не передает файл popup.js вообще. 
+   > Файл popup.html и загружаемый им файл popup.js выполняются в полностью отдельном процессе Internet Explorer из области задач надстройки. Если файл popup.js был передан в тот же файл bundle.js, что и файл app.js, надстройка загрузит два экземпляра файла bundle.js, и это отменяет цель объединения. Кроме того, файл popup.js не содержит код JavaScript, который не поддерживается в IE. По этим двум причинам эта надстройка не передает файл popup.js вообще.
 
 
 ## <a name="open-the-dialog-from-the-task-pane"></a>Открытие диалогового окна из области задач
@@ -92,16 +92,16 @@
 2. Под `div` с кнопкой `freeze-header` добавьте приведенный ниже код.
 
     ```html
-    <div class="padding">            
-        <button class="ms-Button" id="open-dialog">Open Dialog</button>          
+    <div class="padding">
+        <button class="ms-Button" id="open-dialog">Open Dialog</button>
     </div>
     ```
 
 3. В диалоговом окне пользователю будет предложено ввести имя и передать имя пользователя в область задач. Область задач отобразит его в подписи. Непосредственно под только что добавленным тегом `div` добавьте приведенный ниже код.
 
     ```html
-    <div class="padding">            
-        <label id="user-name"></label>            
+    <div class="padding">
+        <label id="user-name"></label>
     </div>
     ```
 
@@ -125,27 +125,27 @@
     function openDialog() {
         // TODO1: Call the Office Shared API that opens a dialog
     }
-    ``` 
+    ```
 
 8. Замените `TODO1` приведенным ниже кодом. Примечание:
    - Метод `displayDialogAsync` открывает диалоговое окно в центре экрана.
    - Первый параметр — это URL-адрес открываемой страницы.
-   - Второй параметр передает параметры. `height` и `width` — процентные значения размера окна для приложения Office. 
-   
+   - Второй параметр передает параметры. `height` и `width` — процентные значения размера окна для приложения Office.
+
     ```js
     Office.context.ui.displayDialogAsync(
         'https://localhost:3000/popup.html',
         {height: 45, width: 55},
-        
+
         // TODO2: Add callback parameter.
     );
-    ``` 
+    ```
 
 ## <a name="process-the-message-from-the-dialog-and-close-the-dialog"></a>Обработка сообщения из диалогового окна и закрытие диалогового окна
 
 1. Продолжайте работать в файле app.js. Замените `TODO2` приведенным ниже кодом. Обратите внимание:
    - Обратный вызов выполняется сразу же после успешного открытия диалогового окна и до того, как пользователь предпримет какие-либо действия в диалоговом окне.
-   - — это объект, который выступает в качестве посредника между контекстами выполнения родительских страниц и страниц диалоговых окон.`result.value`
+   - `result.value` — это объект, который выступает в качестве посредника между контекстами выполнения родительских страниц и страниц диалоговых окон.
    - Функция `processMessage` будет создана на более позднем этапе. Этот обработчик будет обрабатывать любые значения, которые отправляются со страницы диалогового окна с вызовами функции `messageParent`.
 
     ```js
@@ -174,10 +174,9 @@
 1. Выполните команду `npm run build`, чтобы преобразовать исходный код ES6 в JavaScript более ранней версии, которую поддерживает Internet Explorer (используется приложением Excel в фоновом режиме для запуска надстроек Excel).
 2. Выполните команду `npm start`, чтобы запустить веб-сервер, работающий на localhost.
 4. Повторно загрузите область задач. Для этого закройте ее, а затем выберите в меню **Главная** пункт **Show Taskpane** (Показать область задач) для повторного открытия надстройки.
-6. Нажмите кнопку **Open Dialog** (Открыть диалоговое окно) в области задач. 
-7. Когда диалоговое окно открыто, перетащите его и измените его размер. Обратите внимание на то, что вы можете работать на листе и нажимать другие кнопки в области задач. Но запустить второе диалоговое окно с той же страницы области задач невозможно.
+6. Нажмите кнопку **Open Dialog** (Открыть диалоговое окно) в области задач.
+7. Когда диалоговое окно открыто, перетащите его и измените его размер. Обратите внимание, что вы можете работать на листе и нажимать другие кнопки в области задач. Но запустить второе диалоговое окно с той же страницы области задач невозможно.
 8. В диалоговом окне введите имя и нажмите кнопку **OK**. В области задач отобразится имя, и диалоговое окно закроется.
 9. При желании можно закомментировать строку `dialog.close();` в функции `processMessage`. Повторите шаги этого раздела. Диалоговое окно остается открытым, и вы можете изменить имя. Можно закрыть его вручную, нажав кнопку **X** в правом верхнему углу.
 
     ![Руководство по Excel: диалоговое окно](../images/excel-tutorial-dialog-open.png)
-

@@ -6,28 +6,28 @@
 
 - [Node.js](https://nodejs.org)
 
-- Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
+- Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
     ```bash
     npm install -g yo generator-office
     ```
 
 ## <a name="create-the-web-app"></a>Создание веб-приложения
 
-1. С помощью генератора Yeoman создайте проект надстройки Excel. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже:
+1. Создайте проект надстройки Excel помощью генератора Yeoman. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
     ```bash
     yo office
     ```
 
     - **Выберите тип проекта:** `Office Add-in project using React framework`
-    - **Как вы хотите назвать надстройку?:** `My Office Add-in`
-    - **Какое клиентское приложение Office должно поддерживаться?:** `Excel`
+    - **Как вы хотите назвать надстройку?** `My Office Add-in`
+    - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
     ![Генератор Yeoman](../images/yo-office-excel-react.png)
     
-    После завершения работы мастера генератор создаст проект и установит поддерживающие компоненты узла.
+    После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
-2. Перейдите в корневую папку проекта.
+2. Перейдите к корневой папке проекта.
 
     ```bash
     cd "My Office Add-in"
@@ -35,7 +35,7 @@
 
 ## <a name="update-the-code"></a>Обновление кода
 
-1. В редакторе кода откройте файл **src/styles.less**, добавьте следующие стили в конец файла и сохраните файл.
+1. В редакторе кода откройте файл **src/styles.less**, добавьте указанные ниже стили в конец файла и сохраните его.
 
     ```css
     #content-header {
@@ -76,9 +76,9 @@
     }
     ```
 
-2. Шаблон проекта, созданный генератором Yeoman для надстройки Office, включает в себя компонент React, который не требуется для этой краткой инструкции. Удалите файл **src/components/HeroList.tsx**.
+2. Шаблон проекта, созданный генератором надстройки Office Yeoman включает в себя компонент React, который не является обязательным для быстрого запуска. Удалите файл **src/components/HeroList.tsx**.
 
-3. Откройте файл **src/components/Header.tsx**, замените все содержимое следующим кодом и сохраните файл.
+3. Откройте файл **src/components/Header.tsx**, замените все его содержимое приведенным ниже кодом и сохраните файл.
 
     ```typescript
     import * as React from 'react';
@@ -104,7 +104,7 @@
     }
     ```
 
-4. Создайте новый компонент React с именем **Content.tsx** в папке **src/components**, добавьте следующий код и сохраните файл.
+4. Создайте новый компонент React с именем **Content.tsx** в папке**src/components**, добавьте приведенный ниже код и сохраните файл.
 
     ```typescript
     import * as React from 'react';
@@ -137,7 +137,7 @@
     }
     ```
 
-5. Откройте файл **src/components/App.tsx**, замените все содержимое следующим кодом и сохраните файл.
+5. Откройте файл **src/components/App.tsx**, замените все его содержимое приведенным ниже кодом и сохраните файл.
 
     ```typescript
     import * as React from 'react';
@@ -205,9 +205,9 @@
 
 1. Откройте файл **manifest.xml**, чтобы определить параметры и возможности надстройки. 
 
-2. Элемент `ProviderName` содержит значение заполнителя. Замените его на свое имя.
+2. Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.
 
-3. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его на строку **Надстройка области задач для Excel**.
+3. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его строкой **Надстройка области задач для Excel**.
 
 4. Сохраните файл.
 
@@ -229,17 +229,17 @@
 
 1. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.
 
-    - Windows: [ загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-    - Excel Online: [загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-on-office-online)
-    - iPad и Mac: [загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+    - [Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
+    - [Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-online)
+    - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 
-2. В Excel перейдите на вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
+2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
     ![Кнопка надстройки Excel](../images/excel-quickstart-addin-2b.png)
 
 3. Выберите любой диапазон ячеек на листе.
 
-4. В области задач нажмите кнопку **Задать цвет**, чтобы сделать выбранный диапазон зеленым.
+4. В области задач нажмите кнопку **Set color** (Задать цвет), чтобы сделать выбранный диапазон зеленым.
 
     ![Надстройка Excel](../images/excel-quickstart-addin-2c.png)
 
@@ -253,6 +253,6 @@
 ## <a name="see-also"></a>См. также
 
 * [Руководство по надстройкам Excel](../tutorials/excel-tutorial-create-table.md)
-* [Основные принципы программирования с помощью API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
+* [Основные концепции программирования с помощью API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
 * [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
 * [Справочник по API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js)

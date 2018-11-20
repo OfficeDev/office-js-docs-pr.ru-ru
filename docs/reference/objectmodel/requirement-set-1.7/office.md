@@ -6,12 +6,12 @@
 
 ##### <a name="requirements"></a>Требования
 
-|Требование| Значение|
+|Requirement| Значение|
 |---|---|
-|[Версия минимального набора требований для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose или read|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
-##### <a name="members-and-methods"></a>Члены и методы
+##### <a name="members-and-methods"></a>Элементы и методы
 
 | Член | Тип |
 |--------|------|
@@ -22,11 +22,11 @@
 
 ### <a name="namespaces"></a>Пространства имен
 
-[context](office.context.md) — предоставляет общие интерфейсы из контекстного пространства имен API надстроек Office для использования в API надстройки Outlook.
+[context](office.context.md). Предоставляет общие интерфейсы из контекстного пространства имен API надстроек Office для использования в API надстройки Outlook.
 
-[MailboxEnums](/javascript/api/outlook_1_7/office.mailboxenums.attachmenttype) — включает перечисления ItemType, EntityType, AttachmentType, RecipientType, ResponseType и ItemNotificationMessageType.
+[MailboxEnums](/javascript/api/outlook_1_7/office.mailboxenums.attachmenttype). Включает перечисления ItemType, EntityType, AttachmentType, RecipientType, ResponseType и ItemNotificationMessageType.
 
-### <a name="members"></a>Члены
+### <a name="members"></a>Элементы
 
 ####  <a name="asyncresultstatus-string"></a>AsyncResultStatus :String
 
@@ -40,15 +40,15 @@
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Succeeded`| String|Вызов завершился успешно.|
-|`Failed`| String|Вызов не удался.|
+|`Succeeded`| Для указания|Вызов завершился успешно.|
+|`Failed`| Для указания|Вызов завершился ошибкой.|
 
 ##### <a name="requirements"></a>Требования
 
-|Требование| Значение|
+|Requirement| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose или read|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ---
 
@@ -69,16 +69,16 @@
 
 ##### <a name="requirements"></a>Требования
 
-|Требование| Значение|
+|Requirement| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose или read|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ---
 
 ####  <a name="eventtype-string"></a>EventType :String
 
-Указывает событие, связанное с обработчиком событий.
+Указывает событие, связанное с обработчиком.
 
 ##### <a name="type"></a>Тип:
 
@@ -86,19 +86,19 @@
 
 ##### <a name="properties"></a>Свойства:
 
-| Имя | Тип | Описание | Минимальный набор требований |
+| Имя | Тип | Описание | Минимальный набор обязательных элементов |
 |---|---|---|---|
-|`AppointmentTimeChanged`| String | Дата или время выбранной встречи или серии была изменена. | 1.7 |
-|`ItemChanged`| String | Выбранный элемент изменился. | 1.5 |
-|`RecipientsChanged`| String | Список получателей в выбранном элементе или расположение встречи изменен(-о). | 1.7 |
-|`RecurrenceChanged`| String | Расписание повторения выбранной серии было изменено. | 1.7 |
+|`AppointmentTimeChanged`| String | Произошло изменение даты или времени выбранной встречи либо ряда встреч. | 1.7 |
+|`ItemChanged`| String | Пока область задач закреплена, для просмотра выбран другой элемент Outlook. | 1.5 |
+|`RecipientsChanged`| String | Произошло изменение списка получателей выбранного элемента или места встречи. | 1.7 |
+|`RecurrenceChanged`| String | Расписание повторения выбранного ряда элементов изменилось. | 1.7 |
 
 ##### <a name="requirements"></a>Требования
 
-|Требование| Значение|
+|Requirement| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.5 |
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose или read |
+|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.5 |
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение |
 
 ---
 
@@ -119,7 +119,7 @@
 
 ##### <a name="requirements"></a>Требования
 
-|Требование| Значение|
+|Requirement| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose или read|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|

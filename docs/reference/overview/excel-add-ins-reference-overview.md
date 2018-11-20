@@ -1,48 +1,54 @@
 # <a name="excel-javascript-api-overview"></a>Обзор API JavaScript для Excel
 
-Вы можете использовать API JavaScript для Excel, чтобы создавать надстройки для Excel 2016 или более поздней версии. Ниже перечислены объекты Excel высокого уровня, доступные в API. Каждая ссылка на страницу объекта содержит описание свойств, связей и методов, доступных для объекта. Чтобы узнать больше, перейдите по соответствующим ссылкам в меню.
+Вы можете использовать API JavaScript для Excel, чтобы создавать надстройки для Excel 2016 и более поздних версий. Ниже перечислены объекты Excel высокого уровня, доступные в API. Каждая ссылка на страницу объекта содержит описание свойств, событий и методов, доступных для объекта. Чтобы узнать больше, перейдите по соответствующим ссылкам в меню.
 
 Для удобства ниже перечислены некоторые из основных объектов Excel. 
 
 - [Workbook](/javascript/api/excel/excel.workbook) — объект верхнего уровня, содержащий связанные объекты книг, такие как листы, таблицы, диапазоны и т. д. Его также можно использовать для вывода списка связанных ссылок.
 
-- [Worksheet](/javascript/api/excel/excel.worksheet) — представляет лист в книге. 
-    - [WorksheetCollection](/javascript/api/excel/excel.worksheetcollection) — коллекция объектов **Worksheet** в книге.
+- [Worksheet](/javascript/api/excel/excel.worksheet). Представляет лист в книге. 
+    - [WorksheetCollection](/javascript/api/excel/excel.worksheetcollection): коллекция объектов **Worksheet** в книге.
+    - [Worksheet Protection](/javascript/api/excel/excel.worksheetprotection): защита объекта **Worksheet**.
 
-- [Range](/javascript/api/excel/excel.range) — представляет ячейку, строку, столбец или группу ячеек, содержащую один или несколько смежных блоков ячеек.
+- [Range](/javascript/api/excel/excel.range): ячейка, строка, столбец или группа ячеек, содержащая один или несколько смежных блоков ячеек.
+    - [ConditionalFormat](/javascript/api/excel/excel.conditionalformat): объект, определяющий правило и формат, которые применяются к диапазону при соблюдении условия правила.
+    - [DataValidation](/javascript/api/excel/excel.datavalidation): объект, ограничивающий вводимые пользователем данные диапазоном, в основе которого лежит ряд условий.
+    - [RangeSort](/javascript/api/excel/excel.rangesort): объект, управляющий операциями сортировки для диапазона.
 
-- [Table](/javascript/api/excel/excel.table) — представляет коллекцию упорядоченных ячеек, которая упрощает управление данными.
-    - [TableCollection](/javascript/api/excel/excel.tablecollection) — коллекция таблиц в книге или на листе.
-    - [TableColumnCollection](/javascript/api/excel/excel.tablecolumncollection) — коллекция всех столбцов в таблице.
-    - [TableRowCollection](/javascript/api/excel/excel.tablerowcollection) — коллекция всех строк в таблице.
+- [Table](/javascript/api/excel/excel.table): коллекция упорядоченных ячеек для упрощения управления данными.
+    - [TableCollection](/javascript/api/excel/excel.tablecollection). Коллекция таблиц в книге или на листе.
+    - [TableColumnCollection](/javascript/api/excel/excel.tablecolumncollection). Коллекция всех столбцов в таблице.
+    - [TableRowCollection](/javascript/api/excel/excel.tablerowcollection): коллекция всех строк в таблице.
+    - [TableSort](/javascript/api/excel/excel.tablesort): объект, управляющий операциями сортировки в таблице.
 
-- [Chart](/javascript/api/excel/excel.chart) — представляет объект диаграммы на листе, который является визуальным представлением базовых данных.
-    - [ChartCollection](/javascript/api/excel/excel.chartcollection) — коллекция диаграмм на листе.
+- [Chart](/javascript/api/excel/excel.chart): объект диаграммы на листе, который является визуальным представлением базовых данных.
+    - [ChartCollection](/javascript/api/excel/excel.chartcollection): коллекция диаграмм на листе.
+    
+- [PivotTable](/javascript/api/excel/excel.pivottable): сводная таблица Excel, которая является иерархической группировкой и представлением данных. 
+    - [PivotTableCollection](/javascript/api/excel/excel.pivottablecollection): коллекция сводных таблиц на листе.
 
-- [TableSort](/javascript/api/excel/excel.tablesort) — представляет объект, управляющий операциями сортировки для объектов **Table**.
+- [Filter](/javascript/api/excel/excel.filter): объект, управляющий фильтрацией столбца таблицы.
 
-- [RangeSort](/javascript/api/excel/excel.rangesort) — представляет объект, управляющий операциями сортировки для объектов **Range**.
+- [NamedItem](/javascript/api/excel/excel.nameditem): определенное имя для диапазона ячеек или значения. 
+    - [NamedItemCollection](/javascript/api/excel/excel.nameditemcollection). Коллекция объектов **NamedItem** в книге.
 
-- [Filter](/javascript/api/excel/excel.filter) — представляет объект, управляющий фильтрацией столбца таблицы.
+- [Binding](/javascript/api/excel/excel.binding): абстрактный класс, представляющий привязку к разделу книги.
+    - [BindingCollection](/javascript/api/excel/excel.bindingcollection): коллекция объектов **Binding** в книге.
 
-- [WorksheetProtection](/javascript/api/excel/excel.worksheetprotection) — представляет защиту объекта **Worksheet**.
+## <a name="excel-javascript-api-open-specifications"></a>Открытая спецификация по API JavaScript для Excel
 
-- [NamedItem](/javascript/api/excel/excel.nameditem) — представляет определенное имя для диапазона ячеек или значения. 
-    - [NamedItemCollection](/javascript/api/excel/excel.nameditemcollection) — коллекция объектов **NamedItem** в книге.
+Мы публикуем новые API для надстроек Excel на странице [Открытые спецификации API](../openspec.md), чтобы вы могли делиться своим мнением. Узнайте, над какими функциями API JavaScript для Excel мы работаем, и поделитесь своим мнением о проектируемых спецификациях.
 
-- [Binding](/javascript/api/excel/excel.binding) — абстрактный класс, представляющий привязку к разделу книги.
-    - [BindingCollection](/javascript/api/excel/excel.bindingcollection) — коллекция объектов **Binding** в книге.
+## <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
 
-## <a name="excel-javascript-api-open-specifications"></a>Открытые спецификации API JavaScript для Excel
+Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительны сведения о наборах обязательных элементов API JavaScript для Excel см. в статье [Наборы требований API JavaScript для Excel](../requirement-sets/excel-api-requirement-sets.md).
 
-Мы разрабатываем публикуем новые API на странице [Открытые спецификации API](../openspec.md), чтобы вы могли оставлять свои отзывы и предложения о них. Узнайте, над какими функциями для API JavaScript для Excel мы работаем, и поделитесь своим мнением о спецификациях.
+## <a name="excel-javascript-api-reference"></a>Справочные материалы по API JavaScript для Excel
 
-## <a name="excel-javascript-api-reference"></a>Справочник по API JavaScript для Excel
-
-Для получения подробных сведений об API JavaScript для Excel см. [Справочную документацию по API JavaScript  для Excel](/javascript/api/excel).
+Дополнительные сведения об API JavaScript для Excel см. в [справочной документации по API JavaScript для Excel](/javascript/api/excel).
 
 ## <a name="see-also"></a>См. также
 
-- [Обзор надстроек Excel](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-overview)
+- [Общие сведения о надстройках Excel](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-overview)
 - [Обзор платформы надстроек Office](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins)
 - [Примеры надстроек Excel на сайте GitHub](https://github.com/OfficeDev?utf8=%E2%9C%93&q=Excel)

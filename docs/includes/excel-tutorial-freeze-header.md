@@ -5,13 +5,13 @@
 
 ## <a name="freeze-the-tables-header-row"></a>Закрепление строки заголовков таблицы
 
-1. Откройте проект в редакторе кода. 
+1. Откройте проект в редакторе кода.
 2. Откройте файл index.html.
 3. Под элементом `div`, содержащим кнопку `create-chart`, добавьте следующую разметку:
 
     ```html
-    <div class="padding">            
-        <button class="ms-Button" id="freeze-header">Freeze Header</button>            
+    <div class="padding">
+        <button class="ms-Button" id="freeze-header">Freeze Header</button>
     </div>
     ```
 
@@ -28,7 +28,7 @@
     ```js
     function freezeHeader() {
         Excel.run(function (context) {
-            
+
             // TODO1: Queue commands to keep the header visible when the user scrolls.
 
             return context.sync();
@@ -40,7 +40,7 @@
             }
         });
     }
-    ``` 
+    ```
 
 7. Замените `TODO1` приведенным ниже кодом. Обратите внимание:
    - Коллекция `Worksheet.freezePanes` — это набор закрепленных строк, которые не исчезают с экрана при прокрутке листа.
@@ -49,7 +49,7 @@
     ```js
     const currentWorksheet = context.workbook.worksheets.getActiveWorksheet();
     currentWorksheet.freezePanes.freezeRows(1);
-    ``` 
+    ```
 
 ## <a name="test-the-add-in"></a>Тестирование надстройки
 
@@ -62,7 +62,7 @@
 2. Выполните команду `npm start`, чтобы запустить веб-сервер, работающий на localhost.
 4. Повторно загрузите область задач. Для этого закройте ее, а затем выберите в меню **Главная** пункт **Показать область задач**.
 6. Если таблица на листе, удалите ее.
-7. В области задач нажмите кнопку **Create Table** (Создать таблицу). 
+7. В области задач нажмите кнопку **Create Table** (Создать таблицу).
 8. Нажмите кнопку **Freeze Header** (Закрепить заголовок).
 9. Прокрутите лист вниз, чтобы убедиться, что заголовок таблицы по-прежнему остается на экране, даже когда более высокие строки исчезают.
 

@@ -5,13 +5,13 @@
 
 ## <a name="filter-the-table"></a>Фильтрация таблицы
 
-1. Откройте проект в редакторе кода. 
+1. Откройте проект в редакторе кода.
 2. Откройте файл index.html.
 3. Под элементом `div`, содержащим кнопку `create-table`, добавьте следующую разметку:
 
     ```html
-    <div class="padding">            
-        <button class="ms-Button" id="filter-table">Filter Table</button>            
+    <div class="padding">
+        <button class="ms-Button" id="filter-table">Filter Table</button>
     </div>
     ```
 
@@ -28,8 +28,8 @@
     ```js
     function filterTable() {
         Excel.run(function (context) {
-            
-            // TODO1: Queue commands to filter out all expense categories except 
+
+            // TODO1: Queue commands to filter out all expense categories except
             //        Groceries and Education.
 
             return context.sync();
@@ -41,7 +41,7 @@
             }
         });
     }
-    ``` 
+    ```
 
 7. Замените `TODO1` приведенным ниже кодом. Обратите внимание:
    - Код получает ссылку на столбец, который нужно отфильтровать, передавая имя столбца методу `getItem`, а не передавая его индекс методу `getItemAt`, как это делает метод `createTable`. Так как пользователи могут перемещать столбцы, по заданному индексу может располагаться уже другой столбец. Следовательно, для получения ссылки безопаснее использовать имя столбца. Мы спокойно использовали метод `getItemAt` в предыдущем разделе, потому что мы использовали его в методе, который создает таблицу, и пользователь никак не мог переместить столбец.
@@ -60,8 +60,8 @@
 2. Под элементом `div`, содержащим кнопку `filter-table`, добавьте следующую разметку:
 
     ```html
-    <div class="padding">            
-        <button class="ms-Button" id="sort-table">Sort Table</button>            
+    <div class="padding">
+        <button class="ms-Button" id="sort-table">Sort Table</button>
     </div>
     ```
 
@@ -78,7 +78,7 @@
     ```js
     function sortTable() {
         Excel.run(function (context) {
-            
+
             // TODO1: Queue commands to sort the table by Merchant name.
 
             return context.sync();
@@ -90,25 +90,25 @@
             }
         });
     }
-    ``` 
+    ```
 
 7. Замените `TODO1` приведенным ниже кодом. Обратите внимание:
    - Код создает массив объектов `SortField`, состоящий из одного элемента, так как надстройка сортирует таблицу только по столбцу Merchant.
    - Свойство `key` объекта `SortField` — это отсчитываемый от нуля индекс столбца, по которому необходимо сортировать таблицу.
-   - Элемент `sort` объекта `Table` — это объект `TableSort`, а не метод. Объекты `SortField` передаются методу `TableSort` объекта `apply`.
+   - Элемент `sort` объекта `Table` — это объект `TableSort`, а не метод. Объекты `SortField` передаются методу `apply` объекта `TableSort`.
 
     ```js
     const currentWorksheet = context.workbook.worksheets.getActiveWorksheet();
     const expensesTable = currentWorksheet.tables.getItem('ExpensesTable');
     const sortFields = [
-        { 
+        {
             key: 1,            // Merchant column
             ascending: false,
         }
     ];
 
     expensesTable.sort.apply(sortFields);
-    ``` 
+    ```
 
 ## <a name="test-the-add-in"></a>Тестирование надстройки
 
@@ -119,8 +119,8 @@
 
 1. Выполните команду `npm run build`, чтобы преобразовать исходный код ES6 в JavaScript более ранней версии, которую поддерживает Internet Explorer (используется приложением Excel в фоновом режиме для запуска надстроек Excel).
 2. Выполните команду `npm start`, чтобы запустить веб-сервер, работающий на localhost.
-4. Повторно загрузите область задач. Для этого закройте ее, а затем выберите в меню **Главная** пункт **Показать область задач**.
-5. Если по той или иной причине на открытом листе нет таблицы, нажмите в области задач кнопку **Create Table** (Создать таблицу). 
+4. Перезагрузите область задач. Для этого закройте ее, а затем выберите в меню **Главная** пункт **Показать область задач**, чтобы заново открыть надстройку.
+5. Если по той или иной причине на открытом листе нет таблицы, нажмите в области задач кнопку **Create Table** (Создать таблицу).
 6. Нажмите кнопки **Filter Table** (Фильтровать таблицу) и **Sort Table** (Сортировать таблицу) в любом порядке.
 
     ![Учебник Excel | Фильтрация и сортировка таблицы](../images/excel-tutorial-filter-and-sort-table.png)
