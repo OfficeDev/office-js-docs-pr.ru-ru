@@ -2,12 +2,12 @@
 title: Доступность ведущих приложений и платформ для надстроек Office
 description: Поддерживаемые наборы обязательных элементов для Excel, Word, Outlook, PowerPoint, OneNote и Project.
 ms.date: 11/07/2018
-ms.openlocfilehash: f8d7d9d393531301829b31dd171a5332a0da536b
-ms.sourcegitcommit: 9b021af6cb23a58486d6c5c7492be425e309bea1
+ms.openlocfilehash: c3da40be21c0e569028dd10e93e33760ba2bd39d
+ms.sourcegitcommit: 3e84d616e69f39eeeeea773f2431e7d674c4a9f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "26533800"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "26644755"
 ---
 # <a name="office-add-in-host-and-platform-availability"></a>Доступность ведущих приложений и платформ для надстроек Office
 
@@ -133,7 +133,7 @@ ms.locfileid: "26533800"
         - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office для iOS</td>
+    <td>Office для iPad</td>
     <td>- Область задач<br>
         - Контент</td>
     <td>- <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
@@ -451,7 +451,7 @@ ms.locfileid: "26533800"
          - TextFile </td>
   </tr>
   <tr>
-    <td>Office для iOS</td>
+    <td>Office для iPad</td>
     <td> - Область задач</td>
     <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
          - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.2</a><br>
@@ -612,7 +612,7 @@ ms.locfileid: "26533800"
          - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office для iOS</td>
+    <td>Office для iPad</td>
     <td> - Контент<br>
          - Область задач</td>
     <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
