@@ -1,17 +1,17 @@
 ---
 title: Работа с листами с использованием API JavaScript для Excel
 description: ''
-ms.date: 12/04/2017
-ms.openlocfilehash: 9ceb2187cdd7f503fb39171e420adabcc2f13041
-ms.sourcegitcommit: 563c53bac52b31277ab935f30af648f17c5ed1e2
+ms.date: 11/27/2018
+ms.openlocfilehash: ef74dc622f3e857314874763a54df67bcff1d8ff
+ms.sourcegitcommit: 026437bd3819f4e9cd4153ebe60c98ab04e18f4e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "25459135"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "26992228"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
-В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для листов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Worksheet** и **WorksheetCollection**, см. в статьях [Объект Worksheet (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.worksheet?view=office-js) и [Объект WorksheetCollection (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection?view=office-js).
+В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для листов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Worksheet** и **WorksheetCollection**, см. в статьях [Объект Worksheet (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.worksheet) и [Объект WorksheetCollection (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection).
 
 > [!NOTE]
 > Сведения в этой статье применимы только к обычным листам, а не к листам диаграмм или макросов.
@@ -113,7 +113,7 @@ Excel.run(function (context) {
 
 ### <a name="get-the-next-worksheet"></a>Получение следующего листа
 
-В примере кода ниже показано, как получить лист, следующий за активным листом в книге, загрузить его свойство **name** и записать сообщение в консоль. Если нет листа после активного листа, метод **getNext()** создаст ошибку **ItemNotFound**.
+В примере кода ниже показано, как получить лист, следующий за активным листом, в книге, загрузить его свойство **name** и записать сообщение в консоль. Если нет листа после активного листа, метод **getNext()** создаст ошибку **ItemNotFound**.
 
 ```js
  Excel.run(function (context) {
@@ -130,7 +130,7 @@ Excel.run(function (context) {
 
 ### <a name="get-the-previous-worksheet"></a>Получение предыдущего листа
 
-В примере кода ниже показано, как получить лист, предшествующий активному листу в книге, загрузить его свойство **name** и записать сообщение в консоль. Если нет листа перед активным листом, метод **getPrevious()** создаст ошибку **ItemNotFound**.
+В примере кода ниже показано, как получить лист, предшествующий активному листу, в книге, загрузить его свойство **name** и записать сообщение в консоль. Если нет листа перед активным листом, метод **getPrevious()** создаст ошибку **ItemNotFound**.
 
 ```js
 Excel.run(function (context) {
@@ -260,7 +260,7 @@ Excel.run(function (context) {
 
 ## <a name="get-a-cell-within-a-worksheet"></a>Получение ячейки листа
 
-В примере кода ниже показано, как получить ячейку, расположенную в строке 2 и столбце 5 листа **Sample** (Пример), загрузить ее свойства **address** и **values** и записать сообщение в консоль. Значения, передаваемые в метод **getCell(row: число, column: число)**, представляют собой индексируемые с нуля номера строк и столбцов получаемой ячейки.
+В примере кода ниже показано, как получить ячейку, расположенную в строке 2 и столбце 5 листа **Sample** (Пример), загрузить его свойства **address** и **values** и записать сообщение в консоль. Значения, передаваемые в метод **getCell(row: число, column: число)**, представляют собой индексируемые с нуля номера строк и столбцов получаемой ячейки.
 
 ```js
 Excel.run(function (context) {
@@ -279,7 +279,31 @@ Excel.run(function (context) {
 
 Примеры, в которых показано, как получить диапазон на листе, см. в статье [Работа с диапазонами с использованием API JavaScript для Excel](excel-add-ins-ranges.md).
 
+## <a name="data-protection"></a>Защита данных
+
+Надстройка может управлять возможностью пользователя по изменению данных на листе. Свойство `protection` листа является объектом [WorksheetProtection](https://docs.microsoft.com/javascript/api/excel/excel.worksheetprotection) с методом `protect()`. В приведенном ниже примере показан основной сценарий переключения полной защиты активного листа.
+
+```js
+Excel.run(function (context) {
+    var activeSheet = context.workbook.worksheets.getActiveWorksheet();
+    activeSheet.load("protection/protected");
+
+    return context.sync().then(function() {
+        if (!activeSheet.protection.protected) {
+            activeSheet.protection.protect();
+        }
+    })
+}).catch(errorHandlerFunction);
+```
+
+Метод `protect` содержит два необязательных параметра:
+
+ - `options`: объект [WorksheetProtectionOptions](https://docs.microsoft.com/javascript/api/excel/excel.worksheetprotectionoptions), определяющий конкретные ограничения на редактирование.
+ - `password`: строка, представляющая пароль, необходимый пользователю для обхода защиты и редактирования листа.
+
+В статье [Защита листа](https://support.office.com/article/protect-a-worksheet-3179efdb-1285-4d49-a9c3-f4ca36276de6) содержатся дополнительные сведения о защите листа и ее изменении с помощью пользовательского интерфейса Excel.
+
 ## <a name="see-also"></a>См. также
 
-- [Основные принципы программирования с использованием интерфейса API JavaScript для Excel](excel-add-ins-core-concepts.md)
+- [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
 
