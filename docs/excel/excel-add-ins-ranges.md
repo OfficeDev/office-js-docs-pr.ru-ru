@@ -1,13 +1,13 @@
 ---
 title: Работа с диапазонами с использованием API JavaScript для Excel
 description: ''
-ms.date: 10/19/2018
-ms.openlocfilehash: 9ac2ce808390dce90572aa27f3f8da2bce9cb572
-ms.sourcegitcommit: 8b079005eb042035328e89b29bf2ec775dd08a96
+ms.date: 12/04/2018
+ms.openlocfilehash: 4a6e0014da82956b15e11e2739f6f58fb82d5030
+ms.sourcegitcommit: e2ba9d7210c921d068f40d9f689314c73ad5ab4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "25772251"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "27156609"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api"></a>Работа с диапазонами с использованием API JavaScript для Excel
 
@@ -538,6 +538,54 @@ Excel.run(function (context) {
 ### <a name="conditional-formatting-of-ranges"></a>Условное форматирование диапазонов
 
 В диапазонах может применяться форматирование к отдельным ячейкам на основе условий. Дополнительные сведения об этом см. в статье [Применение условного форматирования к диапазонам Excel](excel-add-ins-conditional-formatting.md).
+
+## <a name="work-with-dates-using-the-moment-msdate-plug-in"></a>Работа с датами с использованием подключаемого модуля Moment-MSDate
+
+[Библиотека JavaScript Moment](https://momentjs.com/) предоставляет удобный способ использования дат и меток времени. [Подключаемый модуль Moment-MSDate](https://www.npmjs.com/package/moment-msdate) преобразует формат моментов времени в предпочитаемый для Excel. Это тот же формат, который возвращает [функция ТДАТА](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46).
+
+В приведенном ниже коде показано, как установить для диапазона в **B4** метку момента времени.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+    
+    var now = Date.now();
+    var nowMoment = moment(now);
+    var nowMS = nowMoment.toOADate();
+    
+    var dateRange = sheet.getRange("B4");
+    dateRange.values = [[nowMS]];
+    
+    dateRange.numberFormat = [["[$-409]m/d/yy h:mm AM/PM;@"]];
+    
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+Это похоже на способ получения даты из ячейки и ее преобразования в формат момента времени или другой формат, как показано в приведенном ниже коде:
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+
+    var dateRange = sheet.getRange("B4");
+    dateRange.load("values");
+        
+    return context.sync().then(function () {
+        var nowMS = dateRange.values[0][0];
+
+        // log the date as a moment
+        var nowMoment = moment.fromOADate(nowMS);
+        console.log(`get (moment): ${JSON.stringify(nowMoment)}`);
+
+        // log the date as a UNIX-style timestamp 
+        var now = nowMoment.unix();
+        console.log(`get (timestamp): ${now}`);
+    });
+}).catch(errorHandlerFunction);
+```
+
+Вашей надстройке потребуется отформатировать диапазоны, чтобы отобразить даты в более понятной для человека форме. В примере `"[$-409]m/d/yy h:mm AM/PM;@"` время отобразится как "12/3/18 3:57 PM". Дополнительные сведения о форматах чисел даты и времени см. в разделе "Рекомендации по форматам даты и времени" статьи [Рекомендации по настройке числовых форматов](https://support.office.com/article/review-guidelines-for-customizing-a-number-format-c0a1d1fa-d3f4-4018-96b7-9c9354dd99f5).
 
 ## <a name="copy-and-paste"></a>Копирование и вставка
 

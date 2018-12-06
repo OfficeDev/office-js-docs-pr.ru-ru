@@ -1,13 +1,13 @@
 ---
-ms.date: 10/24/2018
-description: Ознакомьтесь с советами и рекомендованными шаблонами в отношении пользовательских функций Excel.
+ms.date: 11/29/2018
+description: Ознакомьтесь с рекомендациями по разработке пользовательских функций в Excel.
 title: Рекомендации в отношении пользовательских функций
-ms.openlocfilehash: 0408318227e1f89726ed7c0e4dfbb8e6340abef4
-ms.sourcegitcommit: 52d18dd8a60e0cec1938394669d577570700e61e
+ms.openlocfilehash: b1785c7f41af9823cfd135ead29fff4eda4b0b1d
+ms.sourcegitcommit: e2ba9d7210c921d068f40d9f689314c73ad5ab4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "25797401"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "27156588"
 ---
 # <a name="custom-functions-best-practices-preview"></a>Рекомендации в отношении пользовательских функций (предварительная версия)
 
@@ -39,7 +39,7 @@ function getComment(x) {
 
 Если вы проверяете надстройку в Office для Windows, нужно включить **[ведение журнала в среде выполнения](../testing/troubleshoot-manifest.md#use-runtime-logging-to-debug-your-add-in)**, чтобы устранять проблемы с XML-файлом манифеста надстройки, а также с некоторыми условиями установки и среды выполнения. В файл журнала в среде выполнения записываются операторы `console.log`, что облегчает выявление проблем.
 
-Чтобы поделиться своим мнением об этом методе устранения неполадок с группой, отвечающей за пользовательские функции Excel, отправьте отзыв группе. Для этого выберите **Файл | Отзыв | Отправить нахмуренный смайлик**. Отправка нахмуренного смайлика предоставит необходимые журналы для понимания проблемы, на которую вы указываете. 
+Чтобы поделиться своим мнением об этом методе устранения неполадок с группой, отвечающей за пользовательские функции Excel, отправьте отзыв группе. Для этого выберите **Файл | Отзыв | Отправить нахмуренный смайлик**. Отправка нахмуренного смайлика предоставит необходимые журналы для понимания проблемы, на которую вы указываете.
 
 ## <a name="debugging"></a>Отладка
 
@@ -129,6 +129,66 @@ CustomFunctionMappings.ADD = add;
       ]
     }
     ```
+
+## <a name="declaring-optional-parameters"></a>Объявление необязательных параметров 
+В Excel для Windows (версии 1812 или более поздней) можно объявлять необязательные параметры для пользовательских функций. Если пользователь вызывает функцию в Excel, необязательные параметры отображаются в квадратных скобках. Например, функция `FOO` с одним обязательным параметром `parameter1` и одним необязательным параметром `parameter2` будет отображаться в Excel как `=FOO(parameter1, [parameter2])`.
+
+Чтобы сделать параметр необязательным, добавьте `"optional": true` к параметру в файле метаданных JSON, определяющем функцию. В приведенном ниже примере показано, как это может выглядеть для функции `=ADD(first, second, [third])`. Обратите внимание, что необязательный параметр `[third]` расположен после двух обязательных параметров. Обязательные параметры отображаются первыми в интерфейсе формулы Excel.
+
+```json
+{
+    "id": "add",
+    "name": "ADD",
+    "description": "Add two numbers",
+    "helpUrl": "http://www.contoso.com",
+    "result": {
+        "type": "number",
+        "dimensionality": "scalar"
+        },
+    "parameters": [
+        {
+            "name": "first",
+            "description": "first number to add",
+            "type": "number",
+            "dimensionality": "scalar"
+        },
+        {
+            "name": "second",
+            "description": "second number to add",
+            "type": "number",
+            "dimensionality": "scalar",
+        },
+        {
+            "name": "third",
+            "description": "third optional number to add",
+            "type": "number",
+            "dimensionality": "scalar",
+            "optional": true
+        }
+    ],
+    "options": {
+        "sync": false
+    }
+}
+```
+
+Если вы определяете функцию, содержащую один или несколько необязательных параметров, нужно указать, что происходит, когда необязательный параметр не задан. В приведенном ниже примере `zipCode` и `dayOfWeek` являются необязательными параметрами для функции `getWeatherReport`. Если параметр `zipCode` не определен, значение по умолчанию устанавливается равным 98052. Если параметр `dayOfWeek` не определен, ему присваивается значение Wednesday (Среда).
+
+```js
+function getWeatherReport(zipCode, dayOfWeek)
+{
+  if (zipCode === undefined) {
+      zipCode = "98052";
+  }
+
+  if (dayOfWeek === undefined) {
+    dayOfWeek = "Wednesday";
+  }
+
+  // Get weather report for specified zipCode and dayOfWeek
+  // ...
+}
+```
 
 ## <a name="additional-considerations"></a>Дополнительные рекомендации
 
