@@ -1,12 +1,13 @@
 ---
 title: Создание надстройки Office на платформе Node.js с использованием единого входа
-description: 23.01.2018
-ms.openlocfilehash: a6e91b84de69e4b2da5cc10277f0ca3579287b96
-ms.sourcegitcommit: 9b021af6cb23a58486d6c5c7492be425e309bea1
+description: ''
+ms.date: 12/7/2018
+ms.openlocfilehash: 5a3a4d398842119dc8c0d935f83a233313bb35c4
+ms.sourcegitcommit: f130dfa423bc536804fa4a90e1183d85f1bef730
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "26533765"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "27243487"
 ---
 # <a name="create-a-nodejs-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office на платформе Node.js с использованием единого входа (предварительная версия)
 
@@ -132,7 +133,7 @@ ms.locfileid: "26533765"
     }   
     ```
 
-1. Под методом `getOneDriveFiles` добавьте приведенный ниже код. Вот что нужно знать о нем:
+1. Под методом `getOneDriveFiles` добавьте приведенный ниже код. Вот что нужно знать об этом коде:
 
     * [getAccessTokenAsync](https://docs.microsoft.com/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference) — это новый API в Office.js, позволяющий надстройке запрашивать у ведущего приложения Office (Excel, PowerPoint, Word и т. д.) маркер доступа к надстройке (для пользователя, выполнившего вход в Office). Ведущее приложение Office, в свою очередь, запрашивает маркер у конечной точки Azure AD версии 2.0. Так как вы предварительно авторизовали ведущее приложение Office для надстройки во время ее регистрации, Azure AD отправит токен.
     * Если вход в Office не выполнен, ведущее приложение Office предложит пользователю войти.
@@ -196,14 +197,14 @@ ms.locfileid: "26533765"
             // TODO3: Handle the case where the user's sign-in or consent was aborted.
     
             // TODO4: Handle the case where the user is logged in with an account that is neither work or school, 
-            //        nor Micrososoft Account.
+            //        nor Microsoft Account.
     
             // TODO5: Handle an unspecified error from the Office host.
     
             // TODO6: Handle the case where the Office host cannot get an access token to the add-ins 
             //        web service/application.
     
-            // TODO7: Handle the case where the user tiggered an operation that calls `getAccessTokenAsync` 
+            // TODO7: Handle the case where the user triggered an operation that calls `getAccessTokenAsync` 
             //        before a previous call of it completed.
     
             // TODO8: Handle the case where the add-in does not support forcing consent.
@@ -268,7 +269,7 @@ ms.locfileid: "26533765"
         break;
     ```      
 
-1. Замените `TODO8` указанным ниже кодом. Ошибка 13009 возникает, если надстройка не поддерживает принудительное запрашивание разрешения, но выполняется вызов `getAccessTokenAsync` с установкой для параметра `forceConsent` значения `true`. Обычно в таком случае код должен автоматически повторно запустить метод `getAccessTokenAsync` с параметром, имеющим значение `false`. Но в некоторых случаях вызов метода с установкой для параметра `forceConsent` значения `true` сам по себе является автоматическим откликом на ошибку вызова метода с установкой для параметра значения `false`. В этом случае код должен не повторять попытку, а предложить пользователю выйти и войти заново.
+1. Замените `TODO8` приведенным ниже кодом. Ошибка 13009 возникает, если надстройка не поддерживает принудительное запрашивание разрешения, но выполняется вызов `getAccessTokenAsync` с установкой для параметра `forceConsent` значения `true`. Обычно в таком случае код должен автоматически повторно запустить метод `getAccessTokenAsync` с параметром, имеющим значение `false`. Но в некоторых случаях вызов метода с установкой для параметра `forceConsent` значения `true` сам по себе является автоматическим откликом на ошибку вызова метода с установкой для параметра значения `false`. В этом случае код должен не повторять попытку, а предложить пользователю выйти и войти заново.
 
     ```javascript
     case 13009:
@@ -331,13 +332,7 @@ ms.locfileid: "26533765"
     else if (result.responseJSON.error.innerError
             && result.responseJSON.error.innerError.error_codes
             && result.responseJSON.error.innerError.error_codes[0] === 65001){
-        showResult(['Please grant consent to this add-in to access your Microsoft Graph data.']);        
-        /*
-            THE FORCE CONSENT OPTION IS NOT AVAILABLE IN DURING PREVIEW. WHEN SSO FOR
-            OFFICE ADD-INS IS RELEASED, REMOVE THE showResult LINE ABOVE AND UNCOMMENT
-            THE FOLLOWING LINE.
-        */
-        // getDataWithToken({ forceConsent: true });
+        getDataWithToken({ forceConsent: true });
     }
     ```
 
@@ -406,7 +401,7 @@ ms.locfileid: "26533765"
 
     * Параметр `jwt` — это маркер доступа к приложению. В потоке "от имени" он отправляется службе AAD в обмен на маркер доступа к ресурсу.
     * Параметр scopes содержит значение по умолчанию, но в этом примере его переопределяет код вызова.
-    * Указывать параметр resource не обязательно. Его не следует использовать, если службой токенов безопасности является конечная точка AAD версии 2.0. Конечная точка версии 2.0 получает ресурс из областей и возвращает ошибку, если ресурс отправлен в HTTP-запросе. 
+    * Указывать параметр resource не обязательно. Его не следует использовать, если [службой токенов безопасности (STS)](https://docs.microsoft.com/previous-versions/windows-identity-foundation/ee748490(v=msdn.10)) является конечная точка AAD версии 2.0. Конечная точка версии 2.0 получает ресурс из областей и возвращает ошибку, если ресурс отправлен в HTTP-запросе. 
     * Выдача исключения в блоке `catch` *не* приводит к немедленной отправке текста "500 внутренняя ошибка сервера" клиенту. Вызов кода в файле server.js захватывает данное исключение и преобразует его в сообщение об ошибке, отправляемое клиенту.
 
         ```typescript
@@ -521,9 +516,9 @@ ms.locfileid: "26533765"
     })); 
     ```
 
-3. Добавьте приведенный ниже метод в конец файла. Этот метод будет обрабатывать все запросы к API `onedriveitems`.
+3. Добавьте приведенный ниже метод в конец файла. Этот метод будет обрабатывать все запросы к API `values`.
     ```typescript
-    app.get('/api/onedriveitems', handler(async (req, res) => {
+    app.get('/api/values', handler(async (req, res) => {
         // TODO7: Initialize the AuthModule object and validate the access token 
         //        that the client-side received from the Office host.
         // TODO8: Get a token to Microsoft Graph from either persistent storage 
