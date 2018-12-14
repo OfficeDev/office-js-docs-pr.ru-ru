@@ -2,12 +2,12 @@
 title: Рекомендации по разработке надстроек Office
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: 93af27de1f5e22aada7caf9ded97ab6fb200b332
-ms.sourcegitcommit: 86724e980f720ed05359c9525948cb60b6f10128
+ms.openlocfilehash: 5f412de24f1210259ec4255c1776f5e572f0529e
+ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "26237516"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "27270770"
 ---
 # <a name="best-practices-for-developing-office-add-ins"></a>Рекомендации по разработке надстроек Office
 
@@ -43,7 +43,7 @@ ms.locfileid: "26237516"
 
    ![Снимок экрана: контентная надстройка с данными рядом с контентной надстройкой без данных](../images/add-in-title.png)
 
-- Предлагайте [бесплатные пробные версии](https://docs.microsoft.com/office/dev/store/decide-on-a-pricing-model#office-store-pricing-options). Если для вашей надстройки требуется подписка, сделайте некоторые функции доступными без нее.
+- Предлагайте [бесплатные пробные версии](https://docs.microsoft.com/office/dev/store/decide-on-a-pricing-model). Если для вашей надстройки требуется подписка, сделайте некоторые функции доступными без нее.
 
 - Упростите регистрацию. Используйте автоматическое заполнение сведений (адрес электронной почты, отображаемое имя) и пропустите проверку электронной почты.
 

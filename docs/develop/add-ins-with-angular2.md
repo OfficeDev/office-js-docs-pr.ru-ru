@@ -2,12 +2,12 @@
 title: Разработка надстроек Office с помощью Angular
 description: ''
 ms.date: 11/02/2018
-ms.openlocfilehash: 312317e594024125e2dc86d23840750e48d81e40
-ms.sourcegitcommit: c6723a31b48945ca4c466ba016a3dfc7b6267f5c
+ms.openlocfilehash: b8756b9336e0d39c5544b264a110950fdd4d75ce
+ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "25942253"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "27270665"
 ---
 # <a name="develop-office-add-ins-with-angular"></a>Разработка надстроек Office с помощью Angular
 
@@ -109,7 +109,7 @@ export class MyComponent {
 
 ## <a name="using-observable"></a>Использование Observable
 
-Angular использует библиотеку RxJS, в которой предусмотрены объекты `Observable` и `Observer` для реализации асинхронной обработки. Из этого раздела вы узнаете, как использовать `Observables`. Более подробную информацию см. в официальной документации по [RxJS](http://reactivex.io/rxjs/).
+Angular использует библиотеку RxJS, в которой предусмотрены объекты `Observable` и `Observer` для реализации асинхронной обработки. Из этого раздела вы узнаете, как использовать `Observables`. Более подробную информацию см. в официальной документации по [RxJS](https://rxjs-dev.firebaseapp.com/).
 
 Объект `Observable` отчасти похож на объект `Promise`: он возвращается сразу же после асинхронного вызова, но для его разрешения может потребоваться некоторое время. Но если `Promise` — это единственное значение (которое может быть объектом массивов), то `Observable` — это массив объектов (возможно, только с одним элементом). Благодаря этому код может вызывать такие [методы массива](https://www.w3schools.com/jsref/jsref_obj_array.asp), как `concat`, `map` и `filter`, для объектов `Observable`. 
 

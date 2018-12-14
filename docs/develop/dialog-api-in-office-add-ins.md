@@ -2,12 +2,12 @@
 title: Использование Dialog API в надстройках Office
 description: ''
 ms.date: 11/28/2018
-ms.openlocfilehash: 0b6879f9c91ef6443718b032f9ec53c9a9c3afa0
-ms.sourcegitcommit: 026437bd3819f4e9cd4153ebe60c98ab04e18f4e
+ms.openlocfilehash: b19d56d3f4fb831eb8c0ca16af53ee309989d223
+ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "26992235"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "27270959"
 ---
 # <a name="use-the-dialog-api-in-your-office-add-ins"></a>Использование Dialog API в надстройках Office
 
@@ -131,7 +131,7 @@ Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 
 ```
 
 > [!NOTE]
-> - Office передает объект [AsyncResult]() в функцию обратного вызова. Он представляет собой результат попытки открыть диалоговое окно, но не результат событий в диалоговом окне. Дополнительные сведения об этой особенности см. в разделе [Обработка ошибок и событий](#handle-errors-and-events).
+> - Office передает объект [AsyncResult](https://docs.microsoft.com/javascript/api/office/office.asyncresult?view=office-js) в функцию обратного вызова. Он представляет собой результат попытки открыть диалоговое окно, но не результат событий в диалоговом окне. Дополнительные сведения об этой особенности см. в разделе [Обработка ошибок и событий](#handle-errors-and-events).
 > - Для свойства `value` объекта `asyncResult` задан объект [Dialog](https://docs.microsoft.com/javascript/api/office/office.dialog?view=office-js), который существует на главной странице, а не в контексте выполнения диалогового окна.
 > - `processMessage` — это функция, которая обрабатывает событие. Вы можете присвоить ей любое имя.
 > - Переменная `dialog` объявляется в более широком контексте, чем обратный вызов, так как на нее также ссылается `processMessage`.

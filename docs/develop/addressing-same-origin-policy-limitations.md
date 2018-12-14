@@ -2,12 +2,12 @@
 title: Обход правила ограничения домена в надстройках Office
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: 054a01d554c529579917218361bcb8aeebb04c3c
-ms.sourcegitcommit: eb74e94d3e1bc1930a9c6582a0a99355d0da34f2
+ms.openlocfilehash: e5aa329eb3f073f3544d8446683debed3239fd00
+ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "25004884"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "27270602"
 ---
 # <a name="addressing-same-origin-policy-limitations-in-office-add-ins"></a>Обход правила ограничения домена в надстройках Office
 
@@ -61,7 +61,7 @@ function loadVideoDetails(videoIndex) {
 ## <a name="using-cross-origin-resource-sharing-cors"></a>Использование CORS
 
 
-Пример использования функций предоставления общего доступа к ресурсам разного происхождения [XmlHttpRequest2](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) см. в разделе Cross Origin Resource Sharing (CORS) статьи [Новые возможности XMLHttpRequest2](http://www.html5rocks.com/en/tutorials/file/xhr2/).
+Пример использования функций предоставления общего доступа к ресурсам разного происхождения [XmlHttpRequest2](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) см. в разделе Cross Origin Resource Sharing (CORS) статьи [Новые возможности XMLHttpRequest2](https://www.html5rocks.com/en/tutorials/file/xhr2/).
 
 
 ## <a name="building-your-own-proxy-using-iframe-and-post-message"></a>Создание собственного прокси-сервера с использованием IFRAME и POST MESSAGE

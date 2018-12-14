@@ -2,12 +2,12 @@
 title: Устранение ошибок единого входа
 description: ''
 ms.date: 12/08/2017
-ms.openlocfilehash: 28493809c537cecc392f73f5f047e62741c5f77c
-ms.sourcegitcommit: 86724e980f720ed05359c9525948cb60b6f10128
+ms.openlocfilehash: 42f0bf50e65e10f21df11403f53942cc4753a79b
+ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "26237495"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "27270896"
 ---
 # <a name="troubleshoot-error-messages-for-single-sign-on-sso-preview"></a>Устранение ошибок единого входа (предварительная версия)
 
@@ -22,12 +22,12 @@ ms.locfileid: "26237495"
 
 Настоятельно рекомендуем использовать во время разработки средство, которое может перехватывать и отображать HTTP-запросы от веб-службы надстройки и отклики для нее. Из них наиболее популярны следующие средства:
 
-- [Fiddler](http://www.telerik.com/fiddler), предоставляемое бесплатно ([документация](http://docs.telerik.com/fiddler/configure-fiddler/tasks/configurefiddler));
+- [Fiddler](https://www.telerik.com/fiddler), предоставляемое бесплатно ([документация](https://docs.telerik.com/fiddler/configure-fiddler/tasks/configurefiddler));
 - [Charles](https://www.charlesproxy.com/), предоставляемое бесплатно в течение 30 дней ([документация](https://www.charlesproxy.com/documentation/)).
 
 При разработке API службы вы также можете попробовать следующее:
 
-- [Postman](http://www.getpostman.com/postman), бесплатное средство ([документация](https://www.getpostman.com/docs/)).
+- [Postman](https://www.getpostman.com/postman), бесплатное средство ([документация](https://www.getpostman.com/docs/)).
 
 ## <a name="causes-and-handling-of-errors-from-getaccesstokenasync"></a>Причины и обработка ошибок в методе getAccessTokenAsync
 

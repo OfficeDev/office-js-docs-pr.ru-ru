@@ -57,7 +57,7 @@
 > [!NOTE]
 > Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
 
-Формат идентификаторов, извлекаемых через API REST (например, [API Почты Outlook](https://docs.microsoft.com/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](http://graph.microsoft.io/)), отличается от формата веб-служб Exchange (EWS). Метод `convertToEwsId` преобразовывает идентификатор в формате REST в формат EWS.
+Формат идентификаторов, извлекаемых через API REST (например, [API Почты Outlook](https://docs.microsoft.com/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](https://graph.microsoft.io/)), отличается от формата веб-служб Exchange (EWS). Метод `convertToEwsId` преобразовывает идентификатор в формате REST в формат EWS.
 
 ##### <a name="parameters"></a>Параметры
 
@@ -122,7 +122,7 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 > [!NOTE]
 > Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
 
-Формат идентификаторов, извлекаемых через EWS или свойство `itemId`, отличается от формата API REST (таких как [API Почты Outlook](https://docs.microsoft.com/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](http://graph.microsoft.io/)). Метод `convertToRestId` преобразовывает идентификатор в формате EWS в формат REST.
+Формат идентификаторов, извлекаемых через EWS или свойство `itemId`, отличается от формата API REST (таких как [API Почты Outlook](https://docs.microsoft.com/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](https://graph.microsoft.io/)). Метод `convertToRestId` преобразовывает идентификатор в формате EWS в формат REST.
 
 ##### <a name="parameters"></a>Параметры
 
@@ -201,7 +201,7 @@ var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.R
 
 Если указанный идентификатор элемента не определяет существующую встречу, на клиентском компьютере или устройстве открывается пустая страница, и сообщение об ошибке не возвращается.
 
-##### <a name="parameters"></a>Параметры
+##### <a name="parameters"></a>Параметры:
 
 |Имя| Тип| Описание|
 |---|---|---|
@@ -271,7 +271,7 @@ Office.context.mailbox.displayMessageForm(messageId);
 
 Если параметры превышают указанные ограничения размера или если указано неизвестное имя параметра, вызывается исключение.
 
-##### <a name="parameters"></a>Параметры
+##### <a name="parameters"></a>Параметры:
 
 |Имя| Тип| Описание|
 |---|---|---|
@@ -282,7 +282,7 @@ Office.context.mailbox.displayMessageForm(messageId);
 | `parameters.end` | Date | Объект `Date`, указывающий дату и время окончания встречи. |
 | `parameters.location` | String | Строка со сведениями о месте встречи. Максимальное количество символов в строке — 255. |
 | `parameters.resources` | Array.&lt;String&gt; | Массив строк, содержащий необходимые для встречи ресурсы. Массив может включать не более 100 записей. |
-| `parameters.subject` | String | Строка с темой встречи. Максимальное количество символов в строке — 255. |
+| `parameters.subject` | Строка | Строка с темой встречи. Максимальное количество символов в строке — 255. |
 | `parameters.body` | String | Текст сообщения о встрече. Максимальный размер содержимого сообщения — 32 КБ. |
 
 ##### <a name="requirements"></a>Требования
@@ -421,7 +421,7 @@ function cb(asyncResult) {
 
 Значение кодировки не нужно указывать, если почтовое приложение выполняется в Outlook в Интернете. Чтобы определить, выполняется ли приложение в Outlook или Outlook в Интернете, используйте свойство mailbox.diagnostics.hostName. Используемую версию Outlook можно определить с помощью свойства mailbox.diagnostics.hostVersion.
 
-##### <a name="parameters"></a>Параметры
+##### <a name="parameters"></a>Параметры:
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|

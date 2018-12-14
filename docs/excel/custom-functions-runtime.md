@@ -1,13 +1,13 @@
 ---
-ms.date: 10/17/2018
+ms.date: 12/5/2018
 description: Сведения об основных сценариях при разработке пользовательских функций Excel, которые используют новую среду выполнения JavaScript.
 title: Среда выполнения для пользовательских функций Excel
-ms.openlocfilehash: 7261eb214e97a2a05e08571a31ac9b449df14083
-ms.sourcegitcommit: 161a0625646a8c2ebaf1773c6369ee7cc96aa07b
+ms.openlocfilehash: 715690c5cba2466e4a50ba2a33d2324a1abe02f5
+ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "25891713"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "27270833"
 ---
 # <a name="runtime-for-excel-custom-functions-preview"></a>Среда выполнения для пользовательских функций Excel (предварительный просмотр)
 
@@ -17,11 +17,11 @@ ms.locfileid: "25891713"
 
 ## <a name="requesting-external-data"></a>Запрос внешних данных
 
-В пределах пользовательской функции можно запрашивать внешние данные с помощью такого API, как [Fetch](https://developer.mozilla.org/ru-RU/docs/Web/API/Fetch_API), или с помощью [XmlHttpRequest (XHR)](https://developer.mozilla.org/ru-RU/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который отправляет HTTP-запросы для взаимодействия с серверами. В среде выполнения JavaScript XHR реализует дополнительные меры по обеспечению безопасности, предъявляя в качестве требования [Политику единого домена](https://developer.mozilla.org/ru-RU/docs/Web/Security/Same-origin_policy) и простой механизм [CORS](https://www.w3.org/TR/cors/).  
+В пределах пользовательской функции можно запрашивать внешние данные с помощью такого API, как [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), или с помощью [XmlHttpRequest (XHR)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который отправляет HTTP-запросы для взаимодействия с серверами. В среде выполнения JavaScript XHR реализует дополнительные меры по обеспечению безопасности, предъявляя в качестве требования [Политику единого домена](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) и простой механизм [CORS](https://www.w3.org/TR/cors/).  
 
 ### <a name="xhr-example"></a>Пример XHR
 
-В приведенном ниже примере кода функция `getTemperature` вызывает функцию `sendWebRequest` для получения температуры в определенной области на основе идентификатора термометра. Функция `sendWebRequest` использует XHR для отправления запроса `GET` в конечную точку, которая может предоставить данные. 
+В приведенном ниже примере кода функция `getTemperature` вызывает функцию `sendWebRequest` для получения температуры в определенной области на основе идентификатора термометра. Функция `sendWebRequest` использует XHR для отправления запроса `GET` в конечную точку, которая может предоставить данные.
 
 > [!NOTE] 
 > При использовании Fetch или XHR возвращается новое значение `Promise` JavaScript. До сентября 2018 г. необходимо было указывать `OfficeExtension.Promise` использовать обещания в пределах API Office JavaScript, но теперь вы можете просто использовать JavaScript `Promise`.
@@ -51,7 +51,7 @@ function sendWebRequest(thermometerID, data) {
 
 ## <a name="receiving-data-via-websockets"></a>Получение данных через WebSockets
 
-В пределах пользовательской функции можно использовать [WebSockets](https://developer.mozilla.org/ru-RU/docs/Web/API/WebSockets_API) для обмена данными через постоянное соединение с сервером. С помощью WebSockets ваша пользовательская функция может открыть соединение с сервером, а затем автоматически получать сообщения от сервера при возникновении определенных событий, без необходимости специально запрашивать у сервера данные.
+В пределах пользовательской функции можно использовать [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) для обмена данными через постоянное соединение с сервером. С помощью WebSockets ваша пользовательская функция может открыть соединение с сервером, а затем автоматически получать сообщения от сервера при возникновении определенных событий, без необходимости специально запрашивать у сервера данные.
 
 ### <a name="websockets-example"></a>Пример WebSockets
 
@@ -69,7 +69,7 @@ ws.onerror = (error) => {
 
 ## <a name="storing-and-accessing-data"></a>Хранения данных и доступ к ним
 
-В пределах функции (или в пределах любой другой части надстройки) можно хранить данные и выполнять доступ к ним с помощью объекта `OfficeRuntime.AsyncStorage`. `AsyncStorage` — это постоянная незашифрованная система-хранилище пары "ключ-значение", обеспечивающая альтернативу хранилищу [localStorage](https://developer.mozilla.org/ru-RU/docs/Web/API/Window/localStorage), которое нельзя использовать в пределах пользовательских функций. Надстройка может хранить до 10 МБ данных, используя `AsyncStorage`.
+В пределах функции (или в пределах любой другой части надстройки) можно хранить данные и выполнять доступ к ним с помощью объекта `OfficeRuntime.AsyncStorage`. `AsyncStorage` — это постоянная незашифрованная система-хранилище пары "ключ-значение", обеспечивающая альтернативу хранилищу [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), которое нельзя использовать в пределах пользовательских функций. Надстройка может хранить до 10 МБ данных, используя `AsyncStorage`.
 
 `AsyncStorage` предназначается для использования в качестве решения-хранилища с общим доступом. Это означает, что несколько частей надстройки могут выполнять доступ к одним и тем же данным. Например, токены для аутентификации пользователей могут храниться в `AsyncStorage`, так как доступ к нему могут выполнять и пользовательская функция, и элементы пользовательского интерфейса надстройки, такие как область задач. Точно так же, если две надстройки используют один и тот же домен (например, www.contoso.com/addin1, www.contoso.com/addin2), им также разрешается обмен информацией в оба направления через `AsyncStorage`. Обратите внимание, что надстройки, имеющие разные поддомены, будут иметь разные экземпляры `AsyncStorage` (например, subdomain.contoso.com/addin1, differentsubdomain.contoso.com/addin2). 
 
@@ -107,7 +107,7 @@ _goGetData = async () => {
 
 В пределах пользовательской функции (или в пределах любой другой части надстройки) можно использовать API `OfficeRuntime.displayWebDialogOptions`, чтобы отобразить диалоговое окно. Этот диалоговый API является альтернативой [Dialog API](../develop/dialog-api-in-office-add-ins.md), который можно использовать в пределах областей задач и команд надстройки, но не в пределах пользовательских функций.
 
-### <a name="dialog-api-example"></a>Пример Dialog API 
+### <a name="dialog-api-example"></a>Пример Dialog API
 
 В приведенном ниже примере кода функция `getTokenViaDialog` использует функцию `displayWebDialogOptions` Dialog API для отображения диалогового окна.
 
