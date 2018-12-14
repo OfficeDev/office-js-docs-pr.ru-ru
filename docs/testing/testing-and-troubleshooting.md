@@ -2,18 +2,18 @@
 title: Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: c56485cff0248484b53974c2685827045bbb68eb
-ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
+ms.openlocfilehash: fb1b15236214056e6e15b4581a3813d42e31dc54
+ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "23944064"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "27270777"
 ---
 # <a name="troubleshoot-user-errors-with-office-add-ins"></a>Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 
 Иногда при работе с вашими надстройками Office пользователи могут столкнуться с определенными проблемами. Например, надстройка может не загружаться или быть недоступной. Эта статья поможет вам устранить распространенные проблемы, с которыми сталкиваются пользователи при работе с вашими надстройками Office. 
 
-Для выявления и устранения проблем с надстройками также можно использовать [Fiddler](http://www.telerik.com/fiddler).
+Для выявления и устранения проблем с надстройками также можно использовать [Fiddler](https://www.telerik.com/fiddler).
 
 Устранив проблему, вы можете [написать об этом пользователям в AppSource напрямую](https://docs.microsoft.com/office/dev/store/create-effective-office-store-listings).
 
