@@ -2,12 +2,12 @@
 title: Загрузка модели DOM и среды выполнения
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: 3ce0da16a134c435147f7106d6bea9c006ce2922
-ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
+ms.openlocfilehash: ac4d26d964f844f08e1d2975c1be8bbccf40349f
+ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "23944050"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "27271064"
 ---
 # <a name="loading-the-dom-and-runtime-environment"></a>Загрузка модели DOM и среды выполнения
 
@@ -70,7 +70,7 @@ ms.locfileid: "23944050"
 ## <a name="checking-the-load-status"></a>Проверка состояния загрузки
 
 
-Один из способов проверки завершения загрузки DOM и среды выполнения надстроек для — это возможность использования функции [.ready()](http://api.jquery.com/ready/) jQuery — `$(document).ready()`. Например, следующая функция обработчика событий  **initialize** убеждается в полной загрузке DOM, прежде чем выполняется код, относящийся к инициализации надстроек. После этого обработчик события **initialize**переходит на использование текущего выбранного элемента в Outlook, а обработчик событий переходит на использование свойства [mailbox.item](https://docs.microsoft.com/javascript/api/outlook/office.mailbox?view=office-js) для получения выбранного в настоящий момент элемента Outlook и вызывает основную функцию надстройки `initDialer`.
+Один из способов проверки завершения загрузки DOM и среды выполнения надстроек для — это возможность использования функции [.ready()](https://api.jquery.com/ready/) jQuery — `$(document).ready()`. Например, следующая функция обработчика событий  **initialize** убеждается в полной загрузке DOM, прежде чем выполняется код, относящийся к инициализации надстроек. После этого обработчик события **initialize**переходит на использование текущего выбранного элемента в Outlook, а обработчик событий переходит на использование свойства [mailbox.item](https://docs.microsoft.com/javascript/api/outlook/office.mailbox?view=office-js) для получения выбранного в настоящий момент элемента Outlook и вызывает основную функцию надстройки `initDialer`.
 
 
 ```js

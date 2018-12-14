@@ -10,7 +10,7 @@
 |Requirement| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| Ограниченный доступ|
+|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| Restricted|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="members-and-methods"></a>Элементы и методы
@@ -99,7 +99,7 @@
 
 В настоящее время поддерживаются следующие типы событий: `Office.EventType.ItemChanged` и `Office.EventType.OfficeThemeChanged`.
 
-##### <a name="parameters"></a>Параметры
+##### <a name="parameters"></a>Параметры:
 
 | Имя | Тип | Атрибуты | Описание |
 |---|---|---|---|
@@ -143,7 +143,7 @@ function loadNewItem(eventArgs) {
 > [!NOTE]
 > Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
 
-Формат идентификаторов, извлекаемых через API REST (например, [API Почты Outlook](https://docs.microsoft.com/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](http://graph.microsoft.io/)), отличается от формата веб-служб Exchange (EWS). Метод `convertToEwsId` преобразовывает идентификатор в формате REST в формат EWS.
+Формат идентификаторов, извлекаемых через API REST (например, [API Почты Outlook](https://docs.microsoft.com/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](https://graph.microsoft.io/)), отличается от формата веб-служб Exchange (EWS). Метод `convertToEwsId` преобразовывает идентификатор в формате REST в формат EWS.
 
 ##### <a name="parameters"></a>Параметры
 
@@ -157,7 +157,7 @@ function loadNewItem(eventArgs) {
 |Requirement| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.3|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| Ограниченный доступ|
+|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="returns"></a>Возвращаемое значение:
@@ -208,7 +208,7 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 > [!NOTE]
 > Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
 
-Формат идентификаторов, извлекаемых через EWS или свойство `itemId`, отличается от формата API REST (таких как [API Почты Outlook](https://docs.microsoft.com/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](http://graph.microsoft.io/)). Метод `convertToRestId` преобразовывает идентификатор в формате EWS в формат REST.
+Формат идентификаторов, извлекаемых через EWS или свойство `itemId`, отличается от формата API REST (таких как [API Почты Outlook](https://docs.microsoft.com/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](https://graph.microsoft.io/)). Метод `convertToRestId` преобразовывает идентификатор в формате EWS в формат REST.
 
 ##### <a name="parameters"></a>Параметры
 
@@ -222,7 +222,7 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 |Requirement| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.3|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| Ограниченный доступ|
+|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="returns"></a>Возвращаемое значение:
@@ -357,7 +357,7 @@ Office.context.mailbox.displayMessageForm(messageId);
 
 Если параметры превышают указанные ограничения размера или если указано неизвестное имя параметра, вызывается исключение.
 
-##### <a name="parameters"></a>Параметры
+##### <a name="parameters"></a>Параметры:
 
 > [!NOTE]
 > Все параметры являются необязательными.
@@ -410,7 +410,7 @@ Office.context.mailbox.displayNewAppointmentForm(
 
 Если параметры превышают указанные ограничения размера или если указано неизвестное имя параметра, вызывается исключение.
 
-##### <a name="parameters"></a>Параметры
+##### <a name="parameters"></a>Параметры:
 
 > [!NOTE]
 > Все параметры являются необязательными.
@@ -428,7 +428,7 @@ Office.context.mailbox.displayNewAppointmentForm(
 | `parameters.attachments.name` | String | Строка, содержащая имя вложения, длиной до 255 символов.|
 | `parameters.attachments.url` | String | Используется, только если свойству `type` задано значение `file`. URI расположения файла. |
 | `parameters.attachments.isInline` | Логический | Используется, только если свойству `type` задано значение `file`. Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений. |
-| `parameters.attachments.itemId` | String | Используется, только если свойству `type` присвоено значение `item`. Идентификатор элемента EWS существующего письма, который вы хотите подключить к новому сообщению. Это строка длиной до 100 символов. |
+| `parameters.attachments.itemId` | String | Используется, только если для `type` задано значение `item`. Идентификатор элемента EWS существующего письма, которое нужно вложить в новое сообщение. Это строка длиной до 100 символов. |
 
 
 ##### <a name="requirements"></a>Требования
@@ -463,7 +463,7 @@ Office.context.mailbox.displayNewMessageForm(
 
 Возвращает строку, содержащую маркер, который используется для вызова интерфейсов REST API или веб-служб Exchange.
 
-Метод `getCallbackTokenAsync` совершает асинхронный вызов, чтобы получить непрозрачный маркер с сервера Exchange Server, на котором размещен почтовый ящик пользователя. Время существования маркера обратного вызова составляет 5 минут.
+Метод `getCallbackTokenAsync` совершает асинхронный вызов, чтобы получить непрозрачный токен с сервера Exchange Server, на котором размещен почтовый ящик пользователя. Время существования маркера обратного вызова составляет 5 минут.
 
 > [!NOTE]
 > Рекомендуем сделать так, чтобы по мере возможности надстройки использовали интерфейсы REST API, а не веб-службы Exchange. 
@@ -588,7 +588,7 @@ function cb(asyncResult) {
 
 ####  <a name="makeewsrequestasyncdata-callback-usercontext"></a>makeEwsRequestAsync(data, callback, [userContext])
 
-Выполняет асинхронный запрос для веб-служб Exchange (EWS) на сервере Exchange, на котором размещен почтовый ящик пользователя.
+Выполняет асинхронный запрос для веб-служб Exchange (EWS) на сервере Exchange Server, на котором размещен почтовый ящик пользователя.
 
 > [!NOTE]
 > Этот метод не поддерживается в следующих сценариях:
@@ -610,7 +610,7 @@ function cb(asyncResult) {
 У вашей надстройки должно быть разрешение **ReadWriteMailbox** для использования метода `makeEwsRequestAsync`. Сведения об использовании разрешения **ReadWriteMailbox** и операций EWS, которые можно вызывать с помощью метода `makeEwsRequestAsync`, см. в статье [Указание разрешений для доступа почтовой надстройки к почтовому ящику пользователя](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions).
 
 > [!NOTE]
-> Администратор сервера должен установить значение true для параметра `OAuthAuthentication` в каталоге Client Access Server EWS, чтобы метод `makeEwsRequestAsync` мог выполнять запросы EWS.
+> Администратор сервера должен установить значение true для параметра `OAuthAuthentication` в каталоге сервера клиентского доступа EWS, чтобы метод `makeEwsRequestAsync` мог выполнять запросы EWS.
 
 ##### <a name="version-differences"></a>Различия версий
 
@@ -684,17 +684,17 @@ function callback(asyncResult)  {
 }
 ```
 
-####  <a name="removehandlerasynceventtype-handler-options-callback"></a>removeHandlerAsync(eventType, handler, [options], [callback])
+####  <a name="removehandlerasynceventtype-handler-options-callback"></a>removeHandlerAsync(eventType, handler, [параметры], [функция обратного вызова])
 
 Удаляет обработчик для поддерживаемого события.
 
 В настоящее время поддерживаются следующие типы событий: `Office.EventType.ItemChanged` и `Office.EventType.OfficeThemeChanged`.
 
-##### <a name="parameters"></a>Параметры
+##### <a name="parameters"></a>Параметры:
 
 | Имя | Тип | Атрибуты | Описание |
 |---|---|---|---|
-| `eventType` | [Office.EventType](office.md#eventtype-string) || Событие, которое должно аннулировать обработчик. |
+| `eventType` | [Office.EventType](office.md#eventtype-string) || Событие, которое должно отменить обработчик. |
 | `handler` | Функция || Функция для обработки события. Функция должна принимать один параметр, представляющий собой объектный литерал. Значение свойства `type` параметра совпадет со значением параметра `eventType`, переданного методу `addHandlerAsync`. |
 | `options` | Объект | &lt;необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
 | `options.asyncContext` | Object | &lt;необязательно&gt; | Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова. |

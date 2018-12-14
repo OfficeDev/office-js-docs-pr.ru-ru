@@ -145,7 +145,7 @@ function loadNewItem(eventArgs) {
 > [!NOTE]
 > Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
 
-Формат идентификаторов, извлекаемых через API REST (например, [API Почты Outlook](https://docs.microsoft.com/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](http://graph.microsoft.io/)), отличается от формата веб-служб Exchange (EWS). Метод `convertToEwsId` преобразовывает идентификатор в формате REST в формат EWS.
+Формат идентификаторов, извлекаемых через API REST (например, [API Почты Outlook](https://docs.microsoft.com/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](https://graph.microsoft.io/)), отличается от формата веб-служб Exchange (EWS). Метод `convertToEwsId` преобразовывает идентификатор в формате REST в формат EWS.
 
 ##### <a name="parameters"></a>Параметры
 
@@ -159,7 +159,7 @@ function loadNewItem(eventArgs) {
 |Requirement| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.3|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| Restricted|
+|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="returns"></a>Возвращаемое значение:
@@ -210,7 +210,7 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 > [!NOTE]
 > Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
 
-Формат идентификаторов, извлекаемых через EWS или свойство `itemId`, отличается от формата API REST (таких как [API Почты Outlook](https://docs.microsoft.com/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](http://graph.microsoft.io/)). Метод `convertToRestId` преобразовывает идентификатор в формате EWS в формат REST.
+Формат идентификаторов, извлекаемых через EWS или свойство `itemId`, отличается от формата API REST (таких как [API Почты Outlook](https://docs.microsoft.com/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](https://graph.microsoft.io/)). Метод `convertToRestId` преобразовывает идентификатор в формате EWS в формат REST.
 
 ##### <a name="parameters"></a>Параметры
 
@@ -224,7 +224,7 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 |Requirement| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.3|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| Restricted|
+|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="returns"></a>Возвращаемое значение:
@@ -289,7 +289,7 @@ var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.R
 
 Если указанный идентификатор элемента не определяет существующую встречу, на клиентском компьютере или устройстве открывается пустая страница, и сообщение об ошибке не возвращается.
 
-##### <a name="parameters"></a>Параметры
+##### <a name="parameters"></a>Параметры:
 
 |Имя| Тип| Описание|
 |---|---|---|
@@ -359,7 +359,7 @@ Office.context.mailbox.displayMessageForm(messageId);
 
 Если параметры превышают указанные ограничения размера или если указано неизвестное имя параметра, вызывается исключение.
 
-##### <a name="parameters"></a>Параметры
+##### <a name="parameters"></a>Параметры:
 
 |Имя| Тип| Описание|
 |---|---|---|
@@ -370,7 +370,7 @@ Office.context.mailbox.displayMessageForm(messageId);
 | `parameters.end` | Date | Объект `Date`, указывающий дату и время окончания встречи. |
 | `parameters.location` | String | Строка со сведениями о месте встречи. Максимальное количество символов в строке — 255. |
 | `parameters.resources` | Array.&lt;String&gt; | Массив строк, содержащий необходимые для встречи ресурсы. Массив может включать не более 100 записей. |
-| `parameters.subject` | String | Строка с темой встречи. Максимальное количество символов в строке — 255. |
+| `parameters.subject` | Строка | Строка с темой встречи. Максимальное количество символов в строке — 255. |
 | `parameters.body` | String | Текст сообщения о встрече. Максимальный размер содержимого сообщения — 32 КБ. |
 
 ##### <a name="requirements"></a>Требования
@@ -426,7 +426,7 @@ Office.context.mailbox.displayNewAppointmentForm(
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-| `options` | Object | &lt;необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
+| `options` | Объект | &lt;необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
 | `options.isRest` | Boolean |  &lt;необязательно&gt; | Определяет, будет ли предоставленный маркер использоваться для интерфейсов REST API Outlook или веб-служб Exchange. Значение по умолчанию: `false`. |
 | `options.asyncContext` | Объект |  &lt;необязательно&gt; | Данные о состоянии, передаваемые в асинхронный метод. |
 |`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). Токен указывается в виде строки в свойстве `asyncResult.value`.|
@@ -564,7 +564,7 @@ function cb(asyncResult) {
 
 Значение кодировки не нужно указывать, если почтовое приложение выполняется в Outlook в Интернете. Чтобы определить, выполняется ли приложение в Outlook или Outlook в Интернете, используйте свойство mailbox.diagnostics.hostName. Используемую версию Outlook можно определить с помощью свойства mailbox.diagnostics.hostVersion.
 
-##### <a name="parameters"></a>Параметры
+##### <a name="parameters"></a>Параметры:
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
@@ -626,7 +626,7 @@ function callback(asyncResult)  {
 }
 ```
 
-####  <a name="removehandlerasynceventtype-handler-options-callback"></a>removeHandlerAsync(eventType, handler, [параметры], [функция обратного вызова])
+####  <a name="removehandlerasynceventtype-handler-options-callback"></a>removeHandlerAsync(eventType, handler, [options], [callback])
 
 Удаляет обработчик для поддерживаемого события.
 
@@ -636,7 +636,7 @@ function callback(asyncResult)  {
 
 | Имя | Тип | Атрибуты | Описание |
 |---|---|---|---|
-| `eventType` | [Office.EventType](office.md#eventtype-string) || Событие, которое должно аннулировать обработчик. |
+| `eventType` | [Office.EventType](office.md#eventtype-string) || Событие, которое должно отменить обработчик. |
 | `handler` | Функция || Функция для обработки события. Функция должна принимать один параметр, представляющий собой объектный литерал. Значение свойства `type` параметра совпадет со значением параметра `eventType`, переданного методу `addHandlerAsync`. |
 | `options` | Объект | &lt;необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
 | `options.asyncContext` | Object | &lt;необязательно&gt; | Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова. |
