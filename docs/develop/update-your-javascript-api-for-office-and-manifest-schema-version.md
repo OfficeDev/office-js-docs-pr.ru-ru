@@ -1,33 +1,36 @@
 ---
 title: Обновление библиотеки API JavaScript для Office до последней версии и схемы манифеста надстройки до версии 1.1
-description: Обновление файлов JavaScript (Office.js и JS-файлы приложения) и файла проверки манифеста надстройки в вашем проекте надстройки Office до версии 1.1.
-ms.date: 12/04/2017
-ms.openlocfilehash: 676d1cde832399b2518a6393c38e7c4bf78d608c
-ms.sourcegitcommit: c53f05bbd4abdfe1ee2e42fdd4f82b318b363ad7
+description: Обновление до версии 1.1 файлов JavaScript (Office.js и JS-файлов приложения) и файла проверки манифеста надстройки в проекте надстройки Office.
+ms.date: 12/12/2018
+ms.openlocfilehash: 1f88d6a7f663af06304326a78bb4ff47d82dab94
+ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "25505764"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "27270742"
 ---
 # <a name="update-to-the-latest-javascript-api-for-office-library-and-version-11-add-in-manifest-schema"></a>Обновление библиотеки API JavaScript для Office до последней версии и схемы манифеста надстройки до версии 1.1
 
-В этой статье рассказывается, как обновить файлы JavaScript (Office.js и JS-файлы для конкретной надстройки), а также файл проверки манифеста надстройки в проекте надстройки Office до версии 1.1.
+В этой статье рассказывается, как обновить файлы JavaScript (Office.js и JS-файлы для конкретной надстройки) и файл проверки манифеста надстройки в проекте надстройки Office до версии 1.1.
+
+> [!NOTE]
+> Проекты, создаваемые в Visual Studio 2017, уже используют версию 1.1. Однако для версии 1.1 периодически выпускаются незначительные обновления, которые можно применить с помощью методов, описанных в этой статье.
 
 ## <a name="use-the-most-up-to-date-project-files"></a>Использование последних версий файлов в проекте
 
-Если для разработки надстройки вы используете Visual Studio, то чтобы можно было применять [самые новые элементы API](https://docs.microsoft.com/office/dev/add-ins/reference/what's-changed-in-the-javascript-api-for-office?view=office-js) в API JavaScript для Office и [возможности манифеста надстройки версии 1.1](../develop/add-in-manifests.md) (который проверяется на соответствие offappmanifest-1.1.xsd), вам потребуется скачать и установить [Visual Studio 2015 и последнюю версию Office Developer Tools](https://www.visualstudio.com/features/office-tools-vs).
+Если для разработки надстройки вы используете Visual Studio, то чтобы можно было применять [самые новые элементы API](https://docs.microsoft.com/office/dev/add-ins/reference/what's-changed-in-the-javascript-api-for-office?view=office-js) в API JavaScript для Office и [возможности манифеста надстройки версии 1.1](../develop/add-in-manifests.md) (который проверяется на соответствие offappmanifest-1.1.xsd), вам потребуется скачать Visual Studio 2017. Чтобы скачать Visual Studio 2017, перейдите на [страницу интегрированной среды разработки Visual Studio](https://visualstudio.microsoft.com/vs/). Во время установки потребуется выбрать рабочую нагрузку разработки Office и SharePoint.
 
-Если для разработки надстройки вы используете текстовый редактор или другую интегрированную среду разработки, отличную от Visual Studio, обновите ссылки на CDN для файла Office.js и версию схемы, на которую ссылается манифест приложения для Office.
+Если вы используете текстовый редактор или другую интегрированную среду разработки, отличную от Visual Studio, чтобы разработать надстройка, обновите ссылки на CDN для файла Office.js и версию схемы, на которую ссылается манифест приложения для Office.
 
-Чтобы запустить надстройку, разработанную с использованием новых и обновленных компонентов манифеста надстройки и интерфейса API Office.js, ваши клиенты должны использовать Office 2013 SP1 или локальные продукты более поздней версии, и, где это применимо, SharePoint Server 2013 SP1 и связанные серверные продукты, Exchange Server 2013 SP1 или аналогичные размещенные в сети продукты: Office 365, SharePoint Online и Exchange Online.
+Чтобы запустить надстройку, разработанную с использованием новых и обновленных компонентов манифеста надстройки и интерфейса API Office.js, ваши клиенты должны использовать локальные продукты Office 2013 с пакетом обновления 1 (SP1) или более поздней версии, а также при необходимости SharePoint Server 2013 с пакетом обновления 1 (SP1) и связанными серверными продуктами, Пакет обновления 1 (SP1) для Exchange Server 2013 или аналогичные размещенные в сети продукты: Office 365, SharePoint Online и Exchange Online.
 
-Сведения о том, как скачать Office, SharePoint и Exchange SP1, см. в следующих статьях:
+Сведения о том, как скачать Office, SharePoint и Exchange с пакетом обновления 1, см. в следующих статьях:
 
-- [Список всех пакетов обновления SP1 для Microsoft Office 2013 и связанных продуктов для настольных систем](http://support.microsoft.com/kb/2850036)
+- [Список всех пакетов обновления 1 (SP1) для Microsoft Office 2013 и связанных продуктов для настольных систем](https://support.microsoft.com/kb/2850036)
     
-- [Список всех пакетов обновления SP1 для Microsoft SharePoint Server 2013 и связанных серверных продуктов](http://support.microsoft.com/kb/2850035)
+- [Список всех пакетов обновления 1 (SP1) для Microsoft SharePoint Server 2013 и связанных серверных продуктов](https://support.microsoft.com/kb/2850035)
     
-- [Описание пакета обновления 1 для Exchange Server 2013](http://support.microsoft.com/kb/2926248)
+- [Описание пакета обновления 1 для Exchange Server 2013](https://support.microsoft.com/kb/2926248)
     
 
 ## <a name="updating-an-office-add-in-project-created-with-visual-studio"></a>Обновление проекта надстройки Office, созданного в Visual Studio
@@ -38,28 +41,23 @@ ms.locfileid: "25505764"
 
 
 ### <a name="update-the-javascript-api-for-office-library-files-in-your-project-to-the-newest-release"></a>Обновление файлов библиотеки API JavaScript для Office в проекте до последней версии
+Обновить файлы библиотеки Office до последней версии можно с помощью указанных ниже действий. В них используется Visual Studio 2017, но они аналогичны для Visual Studio 2015.
 
-
-1. В Visual Studio 2015 откройте или создайте проект **Надстройка Office**.
-    
-      - В области слева выберите **Обновить** и завершите обновление пакета.
-    
-      - Перейдите к этапу 6.
-    
+1. В Visual Studio 2017 откройте или создайте проект **Надстройка Office**.    
 2. Выберите **Средства** > **Диспетчер пакетов NuGet** > **Управление пакетами Nuget для решения**.
+3. В **диспетчере пакетов NuGet** выберите **nuget.org** для параметра **Источник пакетов**.
+4. Выберите вкладку **Обновления**.
+5. Выберите Microsoft.Office.js.
+6. В области слева выберите **Обновить** и завершите обновление пакета.
+
+Вам потребуется выполнить несколько дополнительных действий, чтобы завершить обновление. В теге **head** HTML-страниц надстройки закомментируйте или удалите все ссылки на скрипт office.js и добавьте ссылки на обновленную библиотеку API JavaScript для Office, как показано ниже.
     
-3. В **диспетчере пакетов NuGet** выберите **nuget.org** в качестве **источника пакетов** и **Доступны обновления** в поле **Фильтр**. Затем выберите файл Microsoft.Office.js.
-    
-4. В области слева выберите **Обновить** и завершите обновление пакета.
-    
-5. В теге **head** HTML-страниц надстройки закомментируйте или удалите все ссылки на скрипт office.js и добавьте ссылки на обновленную библиотеку API JavaScript для Office, как показано ниже.
-    
-    ```html
-    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script>
-    ```
+  ```html
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script>
+  ```
 
    > [!NOTE] 
-   > Цифра `/1/` перед `office.js` в URL-адресе CDN указывает на то, что необходимо использовать последний накопительный выпуск Office.js версии 1.   
+   > `/1/` в `office.js` в URL-адресе CDN указывает на то, что необходимо использовать последний добавочный выпуск Office.js версии 1.
 
 
 ### <a name="update-the-manifest-file-in-your-project-to-use-schema-version-11"></a>Обновление схемы манифеста в проекте до версии 1.1
@@ -78,7 +76,7 @@ ms.locfileid: "25505764"
 ```
 
 > [!NOTE] 
-> После обновления схемы манифеста надстройки до версии 1.1 вам потребуется удалить элементы **Capabilities** и **Capability** и заменить их элементами [Hosts](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/hosts?view=office-js) и [Host](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/host?view=office-js) либо [элементами Requirements и Requirement](specify-office-hosts-and-api-requirements.md).
+> После обновления схемы манифеста надстройки до версии 1.1 вам потребуется удалить элементы   **Capabilities** и **Capability** и заменить их либо элементами [Hosts](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/hosts?view=office-js) и [Host](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/host?view=office-js), либо [элементами Requirements и Requirement](specify-office-hosts-and-api-requirements.md).
 
 ## <a name="updating-an-office-add-in-project-created-with-a-text-editor-or-other-ide"></a>Обновление проекта надстройки Office, созданного с помощью текстового редактора или другой среды IDE
 
@@ -86,10 +84,10 @@ ms.locfileid: "25505764"
 
 Процесс обновления применяется к _проектам по отдельности_. Вам потребуется повторить его для каждого проекта надстройки, в котором вы хотите использовать файл Office.js и схему манифеста надстройки версии 1.1.
 
-Вам не нужны локальные копии файлов API JavaScript для Office (Office.js и JS-файлов для конкретной надстройки), чтобы разрабатывать надстройку Office (ссылки на CDN для Office.js позволяют скачивать необходимые файлы во время выполнения). Если вам нужны файлы библиотеки, то вы можете скачать их с помощью [служебной программы командной строки NuGet](http://docs.nuget.org/consume/installing-nuget) и `Install-Package Microsoft.Office.js`.
+Вам не нужны локальные копии файлов API JavaScript для Office (Office.js и JS-файлов для конкретной надстройки), чтобы разрабатывать надстройку Office (ссылки на CDN для Office.js позволяют скачивать необходимые файлы во время выполнения). Если вам нужны файлы библиотеки, то вы можете скачать их с помощью [служебной программы командной строки NuGet](https://docs.nuget.org/consume/installing-nuget) и `Install-Package Microsoft.Office.js`.
 
 > [!NOTE] 
-> Чтобы получить копию файла XSD (определение схемы XML) для манифеста надстройки версии 1.1, см. запись в статье [Справка по схеме для манифестов надстроек Office (версия 1.1)](../develop/add-in-manifests.md).
+> Чтобы получить копию XSD (определения схемы XML) для манифеста надстройки версии 1.1, см. статью [Справочник по схеме манифестов надстроек Office (версия 1.1)](../develop/add-in-manifests.md).
 
 
 ### <a name="update-the-javascript-api-for-office-library-files-in-your-project-to-use-the-newest-release"></a>Обновление файлов библиотеки API JavaScript для Office в проекте до последней версии
@@ -103,7 +101,7 @@ ms.locfileid: "25505764"
     ```
 
    > [!NOTE] 
-   > Цифра `/1/` перед `office.js` в URL-адресе CDN указывает на то, что необходимо использовать последний накопительный выпуск Office.js версии 1.   
+   > `/1/` перед `office.js` в URL-адресе CDN указывает на то, что необходимо использовать последний добавочный выпуск Office.js версии 1.   
 
 ### <a name="update-the-manifest-file-in-your-project-to-use-schema-version-11"></a>Обновление схемы манифеста в проекте до версии 1.1
 
@@ -121,13 +119,13 @@ ms.locfileid: "25505764"
 ```
 
 > [!NOTE] 
-> После обновления схемы манифеста надстройки до версии 1.1 вам потребуется удалить элементы **Capabilities** и **Capability** и заменить их элементами [Hosts](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/hosts?view=office-js) и [Host](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/host?view=office-js) либо [элементами Requirements и Requirement](specify-office-hosts-and-api-requirements.md).
+> После обновления схемы манифеста надстройки до версии 1.1 вам потребуется удалить элементы   **Capabilities** и **Capability** и заменить их либо элементами [Hosts](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/hosts?view=office-js) и [Host](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/host?view=office-js), либо [элементами Requirements и Requirement](specify-office-hosts-and-api-requirements.md).
     
 
 ## <a name="see-also"></a>См. также
 
-- [Указание ведущих приложений Office и обязательных элементов API](specify-office-hosts-and-api-requirements.md) 
+- [Указание ведущих приложений Office и элементов API](specify-office-hosts-and-api-requirements.md) 
 - [Общие сведения об интерфейсе API JavaScript для Office](understanding-the-javascript-api-for-office.md)    
 - [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js)   
-- [Справочник по схеме для манифестов надстроек Office (версия 1.1)](../develop/add-in-manifests.md)
+- [Справка по схеме для манифестов надстроек Office (версия 1.1)](../develop/add-in-manifests.md)
     
