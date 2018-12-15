@@ -12,8 +12,8 @@
 ### <a name="change-log"></a>Журнал изменений
 
 - Добавлен метод [Office.context.ui.displayDialogAsync](/javascript/api/office/office.ui#displaydialogasync-startaddress--options--callback-). Отображает диалоговое окно в ведущем приложении Office.
-- Добавлен метод [Office.context.ui.messageParent](/javascript/api/office/office.ui#messageparent-messageobject-). Доставляет сообщение из диалогового окна родительской странице.
-- Добавлен объект[Dialog](/javascript/api/office/office.dialog): Объект, возвращаемый при вызове метода [`displayDialogAsync`](/javascript/api/office/office.ui#displaydialogasync-startaddress--options--callback-).
+- Добавлен метод [Office.context.ui.messageParent](/javascript/api/office/office.ui#messageparent-message-). Доставляет сообщение из диалогового окна родительской странице.
+- Добавлен объект [Dialog](/javascript/api/office/office.dialog). Объект, возвращаемый при вызове метода [`displayDialogAsync`](/javascript/api/office/office.ui#displaydialogasync-startaddress--options--callback-).
 
 ## <a name="see-also"></a>См. также
 
