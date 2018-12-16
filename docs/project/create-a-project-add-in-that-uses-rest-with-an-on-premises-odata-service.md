@@ -2,12 +2,12 @@
 title: Создание надстройки Project, использующей REST с локальной службой OData Project Server
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: 7a632b708ebcf714ce1fa6ca2f5feb095fcd9f9d
-ms.sourcegitcommit: eb74e94d3e1bc1930a9c6582a0a99355d0da34f2
+ms.openlocfilehash: 0bd11e15d2742db12ecbe88d60e02f4e1fa87867
+ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "25005038"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "27271029"
 ---
 # <a name="create-a-project-add-in-that-uses-rest-with-an-on-premises-project-server-odata-service"></a>Создание надстройки Project, использующей REST с локальной службой OData Project Server
 
@@ -22,7 +22,7 @@ ms.locfileid: "25005038"
 Далее приводятся необходимые условия для создания надстройки области задач Project, считывающей данные из службы **ProjectData** в экземпляре Project Web App локальной установки Project Server 2013:
 
 
-- Проверьте, что на локальном компьютере разработчика установлены самые последние пакеты обновления и обновления Windows. Операционной системой может быть Windows 7, Windows 8, Windows Server 2008 или Windows Server 2012.
+- Проверьте, что на локальном компьютере разработчика установлены самые последние пакеты обновления и обновления Windows. Операционной системой может быть Windows 7, Windows 8, Windows Server 2008 или Windows Server 2012.
     
 - Project профессиональный 2013 требуется для подключения к Project Web App. На компьютере разработчика должен быть установлен Project профессиональный 2013, чтобы включить отладку по клавише **F5** с помощью Visual Studio.
     
@@ -41,7 +41,7 @@ ms.locfileid: "25005038"
 
 1. Чтобы разрешить браузеру напрямую отображать XML-данные из запроса REST, отключите вид чтения канала. Дополнительные сведения о том, как это сделать в Internet Explorer, см. в процедуру 1, шаг 4 в статье [Создание запросов веб-каналов OData для данных отчетов Project](https://docs.microsoft.com/previous-versions/office/project-odata/jj163048(v=office.15)).
     
-2. Отправьте запрос службе **ProjectData** с помощью веб-обозревателя, воспользовавшись следующим URL-адресом: **http://ServerName /ProjectServerName /_api/ProjectData**. Если, к примеру, экземпляр Project Web App представляет собой `http://MyServer/pwa`, то в веб-обозревателе будут отображены следующие результаты:
+2. Отправьте запрос службе **ProjectData** с помощью браузера, используя следующий URL-адрес: **http://ServerName /ProjectServerName /_api/ProjectData**. Например, если `http://MyServer/pwa` — это экземпляр Project Web App, то в браузере будут показаны следующие результаты:
     
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -103,7 +103,7 @@ ms.locfileid: "25005038"
     
     С помощью Visual Studio можно создавать проекты **HelloProjectOdata** и **HelloProjectODataWeb**.
     
-В папке **AddIn** (см. следующий снимок экрана) содержится файл App.css для настраиваемых стилей CSS. Во вложенной папке **Home** находится файл Home.html, содержащий ссылки на CSS-файлы и файлы JavaScript, используемые надстройкой, а также содержимое HTML5, предназначенное для этой надстройки. Также в ней располагается файл Home.js, предназначенный для настраиваемого кода JavaScript. Папка **Scripts** включает в себя файлы библиотеки jQuery. Во вложенной папке **Office** содержатся библиотеки JavaScript, такие как office.js и project-15.js, а также языковые библиотеки для стандартных строк в надстройках Office. В папке **Content** находится файл Office.css, который содержит стили, применяемые по умолчанию для всех надстроек Office.
+В папке **AddIn** (см. следующий снимок экрана) содержится файл App.css для настраиваемых стилей CSS. Во вложенной папке **Home** находится файл Home.html, содержащий ссылки на CSS-файлы и файлы JavaScript, используемые надстройкой, а также содержимое HTML5 для этой надстройки. Также в ней располагается файл Home.js, предназначенный для настраиваемого кода JavaScript. Папка **Scripts** содержит файлы библиотеки jQuery. Во вложенной папке **Office** находятся библиотеки JavaScript, например office.js и project-15.js, а также языковые библиотеки для стандартных строк в надстройках Office. В папке **Content** находится файл Office.css, содержащий стили по умолчанию для всех надстроек Office.
 
 *Рис. 4. Просмотр файлов веб-проекта по умолчанию в обозревателе решений*
 
@@ -382,7 +382,7 @@ ms.locfileid: "25005038"
    > [!NOTE]
    > Приведенный ниже код подходит для локального сервера Project Server 2013. В Project Online можно использовать OAuth для проверки подлинности на основе токенов. Дополнительные сведения см. в статье [Обход ограничений, связанных с принципом одинакового источника, в надстройках Office](../develop/addressing-same-origin-policy-limitations.md).
 
-   Для вызова **ajax** можно использовать параметр _headers_ или _beforeSend_. Параметр _complete_ — анонимная функция, поэтому находится в той же области, что и переменные в **retrieveOData**. Функция для параметра _complete_ выводит результаты в элементе управления **odataText**, а также вызывает метод **parseODataResult** для анализа и отображения отклика JSON. Параметр _error_ указывает именованную функцию **getProjectDataErrorHandler**, которая записывает сообщение об ошибке в элемент управления **odataText**, а также выводит всплывающее сообщение с помощью метода **throwError**.
+   Для вызова **ajax** можно использовать параметр _headers_ или _beforeSend_. Параметр _complete_ — анонимная функция, поэтому находится в той же области, что и переменные в **retrieveOData**. Функция для параметра _complete_ выводит результаты в элементе управления **odataText**, а также вызывает метод **parseODataResult** для анализа и отображения отклика JSON. Параметр _error_ указывает именованную функцию **getProjectDataErrorHandler**, которая записывает сообщение об ошибке в элемент управления **odataText**, а также выводит всплывающее сообщение с помощью метода **throwError**.
 
     ```js
     /****************************************************************
@@ -579,9 +579,9 @@ ms.locfileid: "25005038"
     
 2. В Visual Studio нажмите клавишу **F5**. Войдите в Project Web App и затем откройте проект, созданный на предыдущем шаге. Проект можно открыть в режиме чтения или в режиме редактирования.
     
-3. На вкладке **Проект** ленты в раскрывающемся списке **Надстройки Office** выберите **Hello ProjectData** (см. рис. 5). Кнопка **Compare All Projects** (Сравнить все проекты) должна быть отключена.
+3. На вкладке **Проект** ленты в раскрывающемся списке **Надстройки Office** выберите **Hello ProjectData** (см. рис. 5). Кнопка **Compare All Projects** (Сравнить все проекты) должна быть отключена.
     
-    *Рис. 5. Запуск надстройки HelloProjectOData*
+    *Рис. 5. Запуск надстройки HelloProjectOData*
 
     ![Тестирование приложения HelloProjectOData](../images/pj15-hello-project-data-test-the-app.png)
 
@@ -589,7 +589,7 @@ ms.locfileid: "25005038"
     
 5. Нажмите кнопку **Compare All Projects**. Надстройка может приостановить работу на время получения данных из службы **ProjectData**, а затем она должна отобразить отформатированные средние и текущие значения в таблице.
     
-    *Рис. 6. Просмотр результатов запроса REST*
+    *Рис. 6. Просмотр результатов запроса REST*
 
     ![Просмотр результатов запроса REST](../images/pj15-hello-project-data-rest-results.png)
 
@@ -645,7 +645,7 @@ ms.locfileid: "25005038"
 
 7. Остановите отладку (нажмите клавиши **SHIFT+F5**), а затем еще раз нажмите клавишу **F5**, чтобы запустить новый экземпляр Project. В диалоговом окне **Вход** выберите локальный профиль **Компьютер**, а не Project Web App. Создайте или откройте локальный MPP-файл проекта, откройте область задач **Hello ProjectData** и нажмите кнопку **Get ProjectData Endpoint** (Получить конечную точку ProjectData). В надстройке должна появиться ошибка **No connection!** (см. рис. 7), а кнопка **Compare All Projects** (Сравнить все проекты) должна остаться отключенной.
     
-   *Рис. 7. Использование надстройки без подключения Project Web App*
+   *Рис. 7. Использование надстройки без подключения Project Web App*
 
    ![Использование приложения без подключения Project Web App](../images/pj15-hello-project-data-no-connection.png)
 
@@ -653,7 +653,7 @@ ms.locfileid: "25005038"
     
    Когда вы нажимаете кнопку **Compare All Projects** (Сравнить все проекты) в области задач **Hello ProjectData**, в полях столбца **Текущее** должны появиться значения **NA**, выделенные синим цветом (см. рис. 8).
     
-   *Рис. 8. Сравнение неопубликованного проекта с другими проектами*
+   *Рис. 8. Сравнение неопубликованного проекта с другими проектами*
 
    ![Сравнение неопубликованного проекта с другими проектами](../images/pj15-hello-project-data-not-published.png)
 
@@ -667,7 +667,7 @@ ms.locfileid: "25005038"
     
 
 > [!NOTE]
-> Имеются ограничения на объем данных, который может быть возвращен в одном запросе службы **ProjectData**. Это значение зависит от конкретной сущности. Например, для набора сущностей **Projects** по умолчанию действует ограничение в 100 проектов на запрос, но для набора сущностей **Risks** — 200. Для установки в рабочей среде код примера **HelloProjectOData** необходимо изменить, чтобы поддерживались запросы, содержащие более 100 проектов. Дополнительные сведения см. в разделе [Дальнейшие действия](#next-steps) и статье [Создание запросов веб-каналов OData для данных отчетов Project](https://docs.microsoft.com/previous-versions/office/project-odata/jj163048(v=office.15)).
+> Имеются ограничения на объем данных, который может быть возвращен в одном запросе службы **ProjectData**. Это значение зависит от конкретной сущности. Например, для набора сущностей **Projects** по умолчанию действует ограничение в 100 проектов на запрос, но для набора сущностей **Risks** — 200. Для установки в рабочей среде код примера **HelloProjectOData** необходимо изменить, чтобы поддерживались запросы, содержащие более 100 проектов. Дополнительные сведения см. в разделе [Дальнейшие действия](#next-steps) и статье [Создание запросов веб-каналов OData для данных отчетов Project](https://docs.microsoft.com/previous-versions/office/project-odata/jj163048(v=office.15)).
 
 
 ## <a name="example-code-for-the-helloprojectodata-add-in"></a>Пример кода для надстройки HelloProjectOData
@@ -1132,7 +1132,7 @@ Table styles
 
   `~/ProjectData/Projects()?skip= [numSkipped]&amp;$top=100&amp;$filter=[filter]&amp;$select=[field1,field2, ???????]`
     
-  Дополнительные сведения см. в статье [OData System Query Options Using the REST Endpoint](https://docs.microsoft.com/previous-versions/dynamicscrm-2015/developers-guide/gg309461(v=crm.7)). Также можно использовать команду [Set-SPProjectOdataConfiguration](http://technet.microsoft.com/library/jj219516%28v=office.15%29.aspx) в Windows PowerShell, чтобы переопределить размер страницы по умолчанию для запроса набора сущностей **Projects** (или любого другого из 33 наборов сущностей). См. [ProjectData — Справочник по службе Project OData](https://docs.microsoft.com/previous-versions/office/project-odata/jj163015(v=office.15)).
+  For more information, see [OData System Query Options Using the REST Endpoint](https://docs.microsoft.com/previous-versions/dynamicscrm-2015/developers-guide/gg309461(v=crm.7)). You can also use the [Set-SPProjectOdataConfiguration](https://docs.microsoft.com/en-us/powershell/module/sharepoint-server/Set-SPProjectOdataConfiguration?view=sharepoint-ps) command in Windows PowerShell to override the default page size for a query of the **Projects** entity set (or any of the 33 entity sets). See [ProjectData - Project OData service reference](https://docs.microsoft.com/previous-versions/office/project-odata/jj163015(v=office.15)).
     
 - Сведения о развертывании надстройки см. в статье [Публикация надстройки Office](../publish/publish.md).
     

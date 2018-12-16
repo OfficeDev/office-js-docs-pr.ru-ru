@@ -2,12 +2,12 @@
 title: Создание надстроек Word с помощью Office Open XML
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: 5eb50d19e23521cf3a6f7c58b1ad0b0cd6b64cab
-ms.sourcegitcommit: 9b021af6cb23a58486d6c5c7492be425e309bea1
+ms.openlocfilehash: f178a9ee05661e69cc5e08857bbdf8f5081553e0
+ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "26533828"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "27271050"
 ---
 # <a name="create-better-add-ins-for-word-with-office-open-xml"></a>Создание надстроек Word с помощью Office Open XML
 
@@ -852,6 +852,5 @@ function populateBinding(filename) {
 ## <a name="see-also"></a>См. также
 
 - [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js)
-- [Стандарт ECMA-376: форматы файлов Office Open XML](http://www.ecma-international.org/publications/standards/Ecma-376.htm) (здесь вы найдете полный справочник по языку и сопутствующую документацию по Open XML)
-- [OpenXMLDeveloper.org](http://www.openxmldeveloper.org)
-- [Исследование JavaScript API for Office: связывание с данными и собственные XML-фрагменты. Часть 3](https://msdn.microsoft.com/magazine/dn166930.aspx)
+- [Стандарт ECMA-376: форматы файлов Office Open XML](https://www.ecma-international.org/publications/standards/Ecma-376.htm) (здесь вы найдете полный справочник по языку и сопутствующую документацию по Open XML)
+- [API JavaScript для Office: привязка данных и пользовательские XML-части](https://msdn.microsoft.com/magazine/dn166930.aspx)

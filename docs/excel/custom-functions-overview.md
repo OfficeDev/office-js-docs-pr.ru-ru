@@ -1,13 +1,13 @@
 ---
-ms.date: 11/29/2018
+ms.date: 12/5/2018
 description: Создание пользовательских функций в Excel с помощью JavaScript.
 title: Создание пользовательских функций в Excel (Ознакомительная версия)
-ms.openlocfilehash: daa0cea24473290a2bc1b5c931f2f7a00ddc8276
-ms.sourcegitcommit: e2ba9d7210c921d068f40d9f689314c73ad5ab4a
+ms.openlocfilehash: 6c8f25cfea2ce37b34817c330c0e36ed095cabb7
+ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "27156616"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "27270973"
 ---
 # <a name="create-custom-functions-in-excel-preview"></a>Создание пользовательских функций в Excel (ознакомительная версия)
 
@@ -36,16 +36,16 @@ function add42(a, b) {
 
 | Файл | Формат файла | Описание |
 |------|-------------|-------------|
-| **./src/customfunctions.js**<br/>или<br/>**./src/customfunctions.ts** | JavaScript<br/>или<br/>TypeScript | Содержит код, который определяет пользовательские функции. |
-| **./config/customfunctions.json** | JSON | Содержит метаданные с описанием пользовательских функций и позволяет Excel регистрировать пользовательские функции и сделать их доступными для конечных пользователей. |
-| **./index.html** | HTML | Предоставляет &lt;скрипт&gt; со ссылкой на файл JavaScript, который определяет пользовательские функции. |
+| **./src/functions/functions.js**<br/>или<br/>**./src/functions/functions.ts** | JavaScript<br/>или<br/>TypeScript | Содержит код, который определяет пользовательские функции. |
+| **./src/functions/functions.json** | JSON | Содержит метаданные с описанием пользовательских функций и позволяет Excel регистрировать пользовательские функции и сделать их доступными для конечных пользователей. |
+| **./src/functions/functions.html** | HTML | Предоставляет &lt;скрипт&gt; со ссылкой на файл JavaScript, который определяет пользовательские функции. |
 | **./manifest.xml** | XML | Определяет пространство имен для всех пользовательских функций в надстройку и расположение JavaScript, JSON и HTML-файлов, которые указаны ранее в этой таблице. |
 
 В разделах ниже приведены дополнительные сведения о данных файлах.
 
 ### <a name="script-file"></a>Файл скрипта
 
-Файл сценария (**./src/customfunctions.js** или **./src/customfunctions.ts** в проекте, созданном генератором Yo Office) содержит код, который определяет пользовательские функции и размещает имена пользовательских функций к объектам в [файле метаданных JSON](#json-metadata-file). 
+Файл скрипта (**./src/functions/functions.js** или **./src/functions/functions.ts** в проекте, созданном генератором Yo Office) содержит код, который определяет пользовательские функции и сопоставляет имена пользовательских функций с объектами в [файле метаданных JSON](#json-metadata-file). 
 
 Например, приведенный ниже код определяет пользовательские функции `add` и `increment`, а затем указывают информация о сопоставлении для обоих функций. Функция `add` будет сопоставлена с объектом в файле метаданных JSON, где значение свойства `id` **ADD**, и функция `increment` будет сопоставлена с объектом в файле метаданных, где значение свойства`id` **INCREMENT**. См. статью [Советы и рекомендации по работе с пользовательскими функциями](custom-functions-best-practices.md#mapping-function-names-to-json-metadata) для получения дополнительных данных о сопоставление имен функций в файле скрипта с объектами в файле метаданных JSON.
 
@@ -73,12 +73,12 @@ CustomFunctionMappings.INCREMENT = increment;
 
 ### <a name="json-metadata-file"></a>Файл метаданных JSON 
 
-Файл метаданных пользовательских функций (**./config/customfunctions.json** в проекте, созданном во время генератора Yo Office) предоставляет информацию, которая необходима Excel для регистрации пользовательских функций и обеспечения их доступности для конечных пользователей. Пользовательские функции регистрируются, когда пользователь запускает надстройку в первый раз. После этого как они становятся доступны тому самому пользователю во всех рабочих книгах (т.е. не только в рабочей книге, где надстройка первоначально запущена).
+Файл метаданных пользовательских функций (**./src/functions/functions.json** в проекте, созданном генератором Yo Office) предоставляет информацию, которая необходима Excel для регистрации пользовательских функций и обеспечения их доступности для конечных пользователей. Пользовательские функции регистрируются, когда пользователь запускает надстройку в первый раз. После этого как они становятся доступны тому самому пользователю во всех рабочих книгах (т.е. не только в рабочей книге, где надстройка первоначально запущена).
 
 > [!TIP]
 > Настройки сервера на сервере, на котором размещен JSON-файл, должны включать активацию [CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS), чтобы пользовательские функции сработали надлежащим образом в Excel Online.
 
-Код ниже в **customfunctions.json** определяет метаданные для функции `add` и функции `increment`, описанные ранее. Таблица, которая следует за этим примером кода, предоставляет подробные сведения об отдельных свойств для этого объекта JSON. См. статью [Советы и рекомендации по работе с пользовательскими функциями](custom-functions-best-practices.md#mapping-function-names-to-json-metadata) для получения дополнительных данных об указании имен свойств `id` и `name` в файле метаданных JSON.
+Код ниже в **functions.json** определяет метаданные для функции `add` и функции `increment`, описанные ранее. Таблица, которая следует за этим примером кода, предоставляет подробные сведения об отдельных свойств для этого объекта JSON. См. статью [Советы и рекомендации по работе с пользовательскими функциями](custom-functions-best-practices.md#mapping-function-names-to-json-metadata) для получения дополнительных данных об указании имен свойств `id` и `name` в файле метаданных JSON.
 
 ```json
 {
@@ -153,35 +153,41 @@ XML-файл манифеста для надстройки, который оп
 
 ```xml
 <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
-    <Hosts>
-        <Host xsi:type="Workbook">
-            <AllFormFactors>
-                <ExtensionPoint xsi:type="CustomFunctions">
-                    <Script>
-                        <SourceLocation resid="JS-URL" /> <!--resid points to location of JavaScript file-->
-                    </Script>
-                    <Page>
-                        <SourceLocation resid="HTML-URL"/> <!--resid points to location of HTML file-->
-                    </Page>
-                    <Metadata>
-                        <SourceLocation resid="JSON-URL" /> <!--resid points to location of JSON file-->
-                    </Metadata>
-                    <Namespace resid="namespace" />
-                </ExtensionPoint>
-            </AllFormFactors>
-        </Host>
-    </Hosts>
-    <Resources>
-        <bt:Urls>
-            <bt:Url id="JSON-URL" DefaultValue="http://127.0.0.1:8080/customfunctions.json" /> <!--specifies the location of your JSON file-->
-            <bt:Url id="JS-URL" DefaultValue="http://127.0.0.1:8080/customfunctions.js" /> <!--specifies the location of your JavaScript file-->
-            <bt:Url id="HTML-URL" DefaultValue="http://127.0.0.1:8080/index.html" /> <!--specifies the location of your HTML file-->
-        </bt:Urls>
-        <bt:ShortStrings>
-            <bt:String id="namespace" DefaultValue="CONTOSO" /> <!--specifies the namespace that will be prepended to a function's name when it is called in Excel. Can only contain alphanumeric characters and periods.-->
-        </bt:ShortStrings>
-    </Resources>
-</VersionOverrides>
+        <Hosts>
+            <Host xsi:type="Workbook">
+                <AllFormFactors>
+                    <ExtensionPoint xsi:type="CustomFunctions">
+                        <Script>
+                            <SourceLocation resid="Contoso.Functions.Script.Url" />
+                        </Script>
+                        <Page>
+                            <SourceLocation resid="Contoso.Functions.Page.Url"/>
+                        </Page>
+                        <Metadata>
+                            <SourceLocation resid="Contoso.Functions.Metadata.Url" />
+                        </Metadata>
+                        <Namespace resid="Contoso.Functions.Namespace" />
+                    </ExtensionPoint>
+                </AllFormFactors>
+            </Host>
+        </Hosts>
+        <Resources>
+            <bt:Images>
+                <bt:Image id="Contoso.tpicon_16x16" DefaultValue="https://localhost:3000/assets/icon-16.png" />
+                <bt:Image id="Contoso.tpicon_32x32" DefaultValue="https://localhost:3000/assets/icon-32.png" />
+                <bt:Image id="Contoso.tpicon_80x80" DefaultValue="https://localhost:3000/assets/icon-80.png" />
+            </bt:Images>
+            <bt:Urls>
+                <bt:Url id="Contoso.Functions.Script.Url" DefaultValue="https://localhost:3000/dist/functions.js" />
+                <bt:Url id="Contoso.Functions.Metadata.Url" DefaultValue="https://localhost:3000/dist/functions.json" />
+                <bt:Url id="Contoso.Functions.Page.Url" DefaultValue="https://localhost:3000/dist/functions.html" />
+                <bt:Url id="Contoso.Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html" />
+            </bt:Urls>
+            <bt:ShortStrings>
+                <bt:String id="Contoso.Functions.Namespace" DefaultValue="CONTOSO" />
+            </bt:ShortStrings>
+        </Resources>
+    </VersionOverrides>
 ```
 
 > [!NOTE]

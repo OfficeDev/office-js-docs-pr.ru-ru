@@ -2,12 +2,12 @@
 title: Тестирование удобства использования надстроек Office
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: 0c90cc4e573d24f9c7c4e5c4f6a77853ec9fc93e
-ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
+ms.openlocfilehash: 38f0416d56f3fc43c6d5f68df9b5c84586b03c8c
+ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "23945607"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "27270931"
 ---
 # <a name="usability-testing-for-office-add-ins"></a>Тестирование удобства использования надстроек Office
 
@@ -28,7 +28,7 @@ ms.locfileid: "23945607"
 
 ## <a name="1---sign-up-for-a-testing-service"></a>1. Зарегистрируйтесь в службе тестирования
 
-Дополнительные сведения см. в статье [Выбор веб-инструмента для удаленного немодерируемого тестирования.](https://www.nngroup.com/articles/unmoderated-user-testing-tools/)
+Дополнительные сведения см. в статье [Выбор веб-инструмента для удаленного немодерируемого тестирования](https://www.nngroup.com/articles/unmoderated-user-testing-tools/).
 
 ## <a name="2-develop-your-research-questions"></a>2. Определите предметы исследования
  
@@ -57,7 +57,7 @@ ms.locfileid: "23945607"
  - взаимодействие надстройки с пространством документа в приложении Office;
  - возможности пользователя по управлению вставкой содержимого.
 
-Дополнительные сведения см. в статье [Эффективный выбор предметов исследования](http://help.usertesting.com/customer/en/portal/articles/2077663-writing-effective-questions).
+Дополнительные сведения см. в статье [Gathering factual responses vs. subjective data](https://help.usertesting.com/hc/ru-RU/articles/115003378572-Writing-effective-questions) (Сбор фактических ответов и субъективных данных).
  
 ## <a name="3-identify-participants-to-target"></a>3. Определите участников тестирования
  
@@ -87,7 +87,7 @@ ms.locfileid: "23945607"
  a. Да [*Должен выбрать*]  
  b. Нет [*Отклонение*]  
 
-Дополнительные сведения см. в статье [Рекомендации по составлению вопросов для отбора](http://help.usertesting.com/customer/en/portal/articles/2077835-screener-question-best-practices).
+Дополнительные сведения см. в статье [Рекомендации по составлению вопросов для отбора](https://help.usertesting.com/hc/ru-RU/articles/115003370731-Screener-question-best-practices).
  
 ## <a name="5-create-tasks-and-questions-for-participants"></a>5. Составьте список задач и вопросов для участников
  
@@ -99,15 +99,15 @@ ms.locfileid: "23945607"
 
 Не полагайтесь на то, что у пользователя будет открыт именно тот экран, который необходим на этом этапе тестирования. Рекомендуем сообщать участникам, какой экран должен быть открыт в начале следующей задачи. 
 
-Дополнительные сведения см. в статье [Составление хороших задач](http://help.usertesting.com/customer/en/portal/articles/2077824-writing-great-tasks).
+Дополнительные сведения см. в статье [Составление хороших задач](https://help.usertesting.com/hc/ru-RU/articles/115003371651-Writing-great-tasks).
 
 ## <a name="6-create-a-prototype-to-match-the-tasks-and-questions"></a>6. Создайте прототип, соответствующий задачам и вопросам
  
-Вы можете тестировать либо готовую версию надстройки, либо ее прототип. Помните, что если вы хотите протестировать готовую версию надстройки, вам потребуется отобрать участников, у которых есть последняя версия Office и которые готовы установить надстройку и зарегистрировать учетную запись (по крайней мере, если у вас нет готовых учетных данных для входа). Затем необходимо убедиться, что они успешно установили надстройку. 
+Вы можете тестировать либо готовую версию надстройки, либо ее прототип. Помните, что если вы хотите протестировать готовую версию надстройки, вам потребуется отобрать участников, у которых есть последняя версия Office и которые готовы установить надстройку и зарегистрировать учетную запись (если у вас нет для них готовых учетных данных для входа). Затем необходимо убедиться, что они успешно установили надстройку. 
 
 В среднем обучение пользователей установке надстройки занимает около 5 минут. Ниже представлен пример понятных, кратких указаний по установке. Откорректируйте их в соответствии с особенностями вашего тестирования.
 
-**Установите (вставить добавьте имя здесь) надстройки для PowerPoint, выполнив следующие действия:** 
+**Установите надстройку <название надстройки> для PowerPoint, выполнив указанные ниже действия.** 
 
 1. Откройте Microsoft PowerPoint.
 2. Выберите элемент **Пустая презентация**.
@@ -139,6 +139,6 @@ ms.locfileid: "23945607"
 
 ## <a name="see-also"></a>См. также
  
- - [Как проводить тестирование удобства использования](http://whatpixel.com/howto-conduct-usability-testing/)  
- - [Рекомендации](http://help.usertesting.com/customer/en/portal/articles/1680726-best-practices)  
- - [Предотвращение предвзятости](http://downloads.usertesting.com/white_papers/TipSheet_MinimizingBias.pdf)  
+ - [Как проводить тестирование удобства использования](https://whatpixel.com/howto-conduct-usability-testing/)  
+ - [Рекомендации по пользовательскому тестированию](https://help.usertesting.com/hc/ru-RU/articles/115003370231-Best-practices-for-UserTesting)  
+ - [Предотвращение предвзятости](https://downloads.usertesting.com/white_papers/TipSheet_MinimizingBias.pdf)  

@@ -2,12 +2,12 @@
 title: Проверка манифеста и устранение связанных с ним неполадок
 description: Используйте эти методы для проверки манифеста надстройки Office.
 ms.date: 11/02/2018
-ms.openlocfilehash: 710a06108206675a6c4fe523137f12a5d12f1da4
-ms.sourcegitcommit: c6723a31b48945ca4c466ba016a3dfc7b6267f5c
+ms.openlocfilehash: c166220f0ddd5002efcb2805b5e50ee20a48b4fe
+ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "25942246"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "27270791"
 ---
 # <a name="validate-and-troubleshoot-issues-with-your-manifest"></a>Проверка манифеста и устранение связанных с ним неполадок
 
@@ -16,7 +16,7 @@ ms.locfileid: "25942246"
 - [Проверка манифеста с помощью средства проверки надстроек Office](#validate-your-manifest-with-the-office-add-in-validator)   
 - [Проверка манифеста на соответствие схеме XML](#validate-your-manifest-against-the-xml-schema)
 - [Проверка манифеста с помощью генератора Yeoman для надстроек Office](#validate-your-manifest-with-the-yeoman-generator-for-office-add-ins)
-- [Отладка манифеста надстройки с помощью журнала среды выполнения](#use-runtime-logging-to-debug-your-add-in-manifest)
+- [Отладка надстройки с помощью журнала среды выполнения](#use-runtime-logging-to-debug-your-add-in)
 
 
 ## <a name="validate-your-manifest-with-the-office-add-in-validator"></a>Проверка манифеста с помощью средства проверки надстроек Office
