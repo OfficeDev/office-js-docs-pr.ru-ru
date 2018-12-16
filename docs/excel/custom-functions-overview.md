@@ -1,13 +1,13 @@
 ---
-ms.date: 12/5/2018
+ms.date: 12/14/2018
 description: Создание пользовательских функций в Excel с помощью JavaScript.
 title: Создание пользовательских функций в Excel (Ознакомительная версия)
-ms.openlocfilehash: 6c8f25cfea2ce37b34817c330c0e36ed095cabb7
-ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
+ms.openlocfilehash: 87f56f4c697d19296fe1b539e4071c8e79fbed6a
+ms.sourcegitcommit: 09f124fac7b2e711e1a8be562a99624627c0699e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "27270973"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "27283118"
 ---
 # <a name="create-custom-functions-in-excel-preview"></a>Создание пользовательских функций в Excel (ознакомительная версия)
 
@@ -370,6 +370,50 @@ function secondHighest(values){
   return secondHighest;
 }
 ```
+
+## <a name="discovering-cells-that-invoke-custom-functions"></a>Обнаружение ячеек, вызывающих пользовательские функции
+
+Пользовательские функции также позволяют форматировать диапазоны, отображать кэшированные значения и сверять значения с помощью свойства `caller.address`, позволяющего находить ячейку, которая вызвала пользовательскую функцию. `caller.address` можно использовать в некоторых скриптах, указанных ниже.
+
+- Форматирование диапазонов. Используйте `caller.address` в качестве ключа ячейки для хранения сведений в объекте [AsyncStorage](https://docs.microsoft.com/office/dev/add-ins/excel/custom-functions-runtime#storing-and-accessing-data). После этого используйте событие [onCalculated](https://docs.microsoft.com/javascript/api/excel/excel.worksheet#oncalculated) в Excel, чтобы загрузить ключ из `AsyncStorage`.
+- Отображение кэшированных значений. Если функция используется в автономном режиме, отображайте сохраненные в кэше значения из `AsyncStorage` с помощью `onCalculated`.
+- Сверка. С помощью `caller.address` находите исходную ячейку, чтобы упростить сверку, где выполняется обработка.
+
+Сведения об адресе ячейки предоставляются только в том случае, если параметру `requiresAddress` присвоено значение `true` в файле метаданных JSON функции. Ниже приведен пример:
+
+```JSON
+{
+   "id": "ADDTIME",
+   "name": "ADDTIME",
+   "description": "Display current date and add the amount of hours to it designated by the parameter",
+   "helpUrl": "http://www.contoso.com",
+   "result": {
+      "type": "number",
+      "dimensionality": "scalar"
+   },
+   "parameters": [
+      {
+         "name": "Additional time",
+         "description": "Amount of hours to increase current date by",
+         "type": "number",
+         "dimensionality": "scalar"
+      }
+   ],
+   "options": {
+      "requiresAddress": true
+   }
+}
+```
+
+Чтобы найти адрес ячейки, в файл скрипта (**./src/customfunctions.js** или **./src/customfunctions.ts**) потребуется также добавить функцию `getAddress`. В этой функции можно использовать параметры, как показано в примере ниже в виде `parameter1`. В качестве последнего параметра всегда будет использоваться `invocationContext` — объект, содержащий расположение ячейки, которое передает приложение Excel, если параметру `requiresAddress` присвоено значение `true` в файле метаданных JSON.
+
+```js
+function getAddress(parameter1, invocationContext) {
+    return invocationContext.address;
+}
+```
+
+По умолчанию значения, возвращаемые из функции `getAddress`, соответствуют следующему формату: `SheetName!CellNumber`. Например, если функция вызвана с листа с названием Expenses (Расходы) в ячейке B2, возвращаемым значением будет `Expenses!B2`.
 
 ## <a name="handling-errors"></a>Обработка ошибок
 
