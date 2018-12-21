@@ -1,13 +1,13 @@
 ---
 title: Использование Dialog API в надстройках Office
 description: ''
-ms.date: 11/28/2018
-ms.openlocfilehash: b19d56d3f4fb831eb8c0ca16af53ee309989d223
-ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
+ms.date: 12/20/2018
+ms.openlocfilehash: 0c45a17935cb264db4b8488ec8eaae2535848770
+ms.sourcegitcommit: 6870f0d96ed3da2da5a08652006c077a72d811b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "27270959"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "27383248"
 ---
 # <a name="use-the-dialog-api-in-your-office-add-ins"></a>Использование Dialog API в надстройках Office
 
@@ -218,6 +218,9 @@ function processMessage(arg) {
     }
 }
 ```
+
+> [!NOTE]
+> Реализация функции `showNotification` не показана в примере кода, представленном в этой статье. Пример возможного способа реализации этой функции в своей надстройке см. в статье [Пример использования API диалоговых окон в надстройке Office](https://github.com/OfficeDev/Office-Add-in-Dialog-API-Simple-Example).
 
 ### <a name="closing-the-dialog-box"></a>Закрытие диалогового окна
 

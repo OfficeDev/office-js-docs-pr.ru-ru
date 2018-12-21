@@ -1,13 +1,13 @@
 ---
 title: Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 description: ''
-ms.date: 12/14/2018
-ms.openlocfilehash: 42b1127580c46120d337553fdb86a19a78b37567
-ms.sourcegitcommit: 09f124fac7b2e711e1a8be562a99624627c0699e
+ms.date: 12/18/2018
+ms.openlocfilehash: 6d3da1e7eff4e61ae1b88213d0b432581d8f6a8a
+ms.sourcegitcommit: 6870f0d96ed3da2da5a08652006c077a72d811b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "27283795"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "27383241"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api-advanced"></a>Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 
@@ -61,7 +61,15 @@ Excel.run(function (context) {
 
 Вашей надстройке потребуется отформатировать диапазоны, чтобы отобразить даты в более понятной для человека форме. В примере `"[$-409]m/d/yy h:mm AM/PM;@"` время отобразится как "12/3/18 3:57 PM". Дополнительные сведения о форматах чисел даты и времени см. в разделе "Рекомендации по форматам даты и времени" статьи [Рекомендации по настройке числовых форматов](https://support.office.com/article/review-guidelines-for-customizing-a-number-format-c0a1d1fa-d3f4-4018-96b7-9c9354dd99f5).
 
-## <a name="copy-and-paste"></a>Копирование и вставка
+## <a name="work-with-multiple-ranges-simultaneously-preview"></a>Работа с несколькими диапазонами одновременно (предварительная версия)
+
+> [!NOTE]
+> Объект `RangeAreas` в настоящее время доступен только в общедоступной предварительной версии (бета-версии). Для применения этой функции необходимо использовать бета-версию библиотеки в CDN Office.js: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
+> Если вы используете TypeScript или ваш редактор кода использует файлы определения типа TypeScript для IntelliSense, воспользуйтесь https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts.
+
+Объект `RangeAreas` позволяет вашей надстройке выполнять операции над несколькими диапазонами одновременно. Эти диапазоны могут быть смежными, но это необязательно. Объект `RangeAreas` подробнее рассматривается в статье [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md).
+
+## <a name="copy-and-paste-preview"></a>Копирование и вставка (предварительная версия)
 
 > [!NOTE]
 > Функция `Range.copyFrom` в настоящее время доступна только в общедоступной предварительной версии (бета-версии). Для применения этой функции необходимо использовать бета-версию библиотеки в CDN Office.js: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
@@ -125,7 +133,7 @@ Excel.run(function (context) {
 
 ![Данные в Excel после запуска метода копирования диапазона](../images/excel-range-copyfrom-skipblanks-after.png)
 
-## <a name="remove-duplicates"></a>Удаление дубликатов
+## <a name="remove-duplicates-preview"></a>Удаление дубликатов (предварительная версия)
 
 > [!NOTE]
 > Функция `removeDuplicates` объекта Range в настоящее время доступна только в общедоступной предварительной версии (бета-версии). Для применения этой функции необходимо использовать бета-версию библиотеки в CDN Office.js: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
