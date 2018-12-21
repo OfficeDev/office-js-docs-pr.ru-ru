@@ -2,12 +2,12 @@
 title: Работа с несколькими диапазонами одновременно в надстройках Excel
 description: ''
 ms.date: 09/04/2018
-ms.openlocfilehash: 37f9c8a9f3127d78e1cc794aea9e6d1502cdeaf9
-ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
+ms.openlocfilehash: f1217fc76d14269882a73ec5eb7758e519563456
+ms.sourcegitcommit: 6870f0d96ed3da2da5a08652006c077a72d811b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "27270980"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "27383227"
 ---
 # <a name="work-with-multiple-ranges-simultaneously-in-excel-add-ins-preview"></a>Работа с несколькими диапазонами одновременно в надстройках Excel (предварительная версия)
 
@@ -97,8 +97,7 @@ ms.locfileid: "27270980"
 > [!NOTE]
 > Нельзя напрямую добавить дополнительные диапазоны к объекту `RangeAreas`. Например, у коллекции в `RangeAreas.areas` нет метода `add`.
 
-
-> [!WARNING] 
+> [!WARNING]
 > Не пытайтесь напрямую добавлять или удалять элементы из массива `RangeAreas.areas.items`. Это приведет к нежелательному поведению кода.  Например, существует возможность принудительно добавить дополнительный объект `Range` в массив, но это приведет к ошибкам, поскольку свойства и методы `RangeAreas` действуют, как будто новый элемент не был добавлен. Например, свойство `areaCount` не включает диапазоны, принудительно добавленные таким образом, а `RangeAreas.getItemAt(index)` вызывает ошибку, если `index` больше, чем `areasCount-1`.  Аналогичным образом, удаление объекта `Range` в массиве `RangeAreas.areas.items` путем получения ссылки на него и вызова его метода `Range.delete` приводит к ошибкам: хотя объект `Range` *удален*, свойства и методы родительского объекта `RangeAreas` будут действовать (или пытаться действовать), как будто он еще существует. Например, если код вызывает метод `RangeAreas.calculate`, Office попытается рассчитать диапазон, но это завершится ошибкой, поскольку объект range отсутствует.
 
 Установка свойства для `RangeAreas` задает соответствующее свойство для всех диапазонов в коллекции `RangeAreas.areas`.
@@ -107,8 +106,8 @@ ms.locfileid: "27270980"
 
 ```js
 Excel.run(function (context) {
-    const sheet = context.workbook.worksheets.getActiveWorksheet();
-    const rangeAreas = sheet.getRanges("F3:F5, H3:H5");
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+    var rangeAreas = sheet.getRanges("F3:F5, H3:H5");
     rangeAreas.format.fill.color = "pink";
 
     return context.sync();
@@ -142,9 +141,9 @@ getSpecialCellsOrNullObject(cellType: Excel.SpecialCellType, cellValueType?: Exc
 
 ```js
 Excel.run(function (context) {
-    const sheet = context.workbook.worksheets.getActiveWorksheet();
-    const usedRange = sheet.getUsedRange();
-    const formulaRanges = usedRange.getSpecialCells("Formulas");
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+    var usedRange = sheet.getUsedRange();
+    var formulaRanges = usedRange.getSpecialCells("Formulas");
     formulaRanges.format.fill.color = "pink";
 
     return context.sync();
@@ -161,8 +160,8 @@ Excel.run(function (context) {
 
 ```js
 Excel.run(function (context) {
-    const range = context.workbook.getSelectedRange();
-    const formulaRanges = range.getSpecialCellsOrNullObject("Formulas");
+    var range = context.workbook.getSelectedRange();
+    var formulaRanges = range.getSpecialCellsOrNullObject("Formulas");
     return context.sync()
         .then(function() {
             if (formulaRanges.isNullObject) {
@@ -187,9 +186,9 @@ Excel.run(function (context) {
 
 ```js
 Excel.run(function (context) {
-    const sheet = context.workbook.worksheets.getActiveWorksheet();
-    const usedRange = sheet.getUsedRange();
-    const constantNumberRanges = usedRange.getSpecialCells("Constants", "Numbers");
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+    var usedRange = sheet.getUsedRange();
+    var constantNumberRanges = usedRange.getSpecialCells("Constants", "Numbers");
     constantNumberRanges.format.fill.color = "pink";
 
     return context.sync();
@@ -200,9 +199,9 @@ Excel.run(function (context) {
 
 ```js
 Excel.run(function (context) {
-    const sheet = context.workbook.worksheets.getActiveWorksheet();
-    const usedRange = sheet.getUsedRange();
-    const formulaLogicalNumberRanges = usedRange.getSpecialCells("Formulas", "LogicalNumbers");
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+    var usedRange = sheet.getUsedRange();
+    var formulaLogicalNumberRanges = usedRange.getSpecialCells("Formulas", "LogicalNumbers");
     formulaLogicalNumberRanges.format.fill.color = "pink";
 
     return context.sync();
@@ -222,10 +221,10 @@ Excel.run(function (context) {
 
 ```js
 Excel.run(function (context) {
-    const sheet = context.workbook.worksheets.getActiveWorksheet();
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
 
     // The ranges are the F column and the H column.
-    const rangeAreas = sheet.getRanges("F:F, H:H");  
+    var rangeAreas = sheet.getRanges("F:F, H:H");  
     rangeAreas.format.fill.color = "pink";
 
     rangeAreas.load("format/fill/color, isEntireColumn");
@@ -249,10 +248,10 @@ Excel.run(function (context) {
 
 ```js
 Excel.run(function (context) {
-    const sheet = context.workbook.worksheets.getActiveWorksheet();
-    const rangeAreas = sheet.getRanges("F3:F5, H:H");
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+    var rangeAreas = sheet.getRanges("F3:F5, H:H");
 
-    const pinkColumnRange = sheet.getRange("H:H");
+    var pinkColumnRange = sheet.getRange("H:H");
     pinkColumnRange.format.fill.color = "pink";
 
     rangeAreas.load("format/fill/color, isEntireColumn, address");
