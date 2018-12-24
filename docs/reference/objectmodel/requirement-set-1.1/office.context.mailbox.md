@@ -1,16 +1,26 @@
-
+---
+title: Office.context.mailbox — набор обязательных элементов 1.1
+description: ''
+ms.date: 10/31/2018
+ms.openlocfilehash: 352132fcc4645463b922cd3bab200fb8efb167b4
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27433329"
+---
 # <a name="mailbox"></a>mailbox
 
-### [Office](Office.md)[.context](Office.context.md). mailbox
+### <a name="officeofficemdcontextofficecontextmdmailbox"></a>[Office](Office.md)[.context](Office.context.md).mailbox
 
 Предоставляет для Microsoft Outlook и Microsoft Outlook в Интернете доступ к объектной модели надстройки Outlook.
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| Restricted|
+|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ### <a name="namespaces"></a>Пространства имен
@@ -38,7 +48,7 @@
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
@@ -62,7 +72,7 @@
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
@@ -86,7 +96,7 @@
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
@@ -127,7 +137,7 @@
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
@@ -162,7 +172,7 @@ Office.context.mailbox.displayAppointmentForm(appointmentId);
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
@@ -205,7 +215,7 @@ Office.context.mailbox.displayMessageForm(messageId);
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
@@ -250,7 +260,7 @@ Office.context.mailbox.displayNewAppointmentForm(
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
@@ -283,7 +293,7 @@ function cb(asyncResult) {
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
@@ -347,7 +357,7 @@ function cb(asyncResult) {
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadWriteMailbox|

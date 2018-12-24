@@ -1,6 +1,17 @@
+---
+title: Рекомендации по стилю надстроек Office
+description: ''
+ms.date: 06/27/2018
+ms.openlocfilehash: afd8d63095661634052c51ea528502368023140d
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27433287"
+---
 # <a name="voice-guidelines"></a>Рекомендации по стилю
 
-Разрабатывая надстройки Office, обращайте внимание на стиль элементов пользовательского интерфейса и их текст. Старайтесь следовать стилю пользовательского интерфейса Office — разговорному, непринужденному и доступному. 
+Разрабатывая надстройки Office, обращайте внимание на стиль элементов пользовательского интерфейса и их текст. Старайтесь следовать стилю пользовательского интерфейса Office — разговорному, непринужденному и доступному. 
 
 Чтобы текст соответствовал стилю Office:
 
@@ -13,7 +24,7 @@
 
 ## <a name="see-also"></a>См. также
 
-- Рекомендации по [стилю для любых пользователей](https://docs.microsoft.com/style-guide/accessibility/writing-all-abilities)
-- [10 лучших советов по стилю и тону компании Майкрософт](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)
+- Рекомендации по [стилю для всех пользователей без исключения](https://docs.microsoft.com/style-guide/accessibility/writing-all-abilities)
+- [10 лучших советов по стилю корпорации Майкрософт](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)
 - Рекомендации по [выбору слов](https://docs.microsoft.com/style-guide/word-choice/)
--  Надстройка Office [политики проверки](https://docs.microsoft.com/office/dev/store/validation-policies)
+-  [Политики проверки](https://docs.microsoft.com/office/dev/store/validation-policies) надстройки Office
