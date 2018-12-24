@@ -1,24 +1,35 @@
-# <a name="onenote-javascript-api-requirement-sets"></a><span data-ttu-id="67117-101">Наборы требований API JavaScript для OneNote</span><span class="sxs-lookup"><span data-stu-id="67117-101">OneNote JavaScript API requirement sets</span></span>
+---
+title: Наборы обязательных элементов API JavaScript для OneNote
+description: ''
+ms.date: 10/09/2018
+ms.openlocfilehash: c0cec9375dc0d3db4a09e44a9b73935af0691bde
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27433826"
+---
+# <a name="onenote-javascript-api-requirement-sets"></a><span data-ttu-id="4cc7c-102">Наборы обязательных элементов API JavaScript для OneNote</span><span class="sxs-lookup"><span data-stu-id="4cc7c-102">OneNote JavaScript API requirement sets</span></span>
 
-<span data-ttu-id="67117-102">Наборы требований — это именованные группы требований API.</span><span class="sxs-lookup"><span data-stu-id="67117-102">Requirement sets are named groups of API members.</span></span> <span data-ttu-id="67117-103">С помощью наборов требований, указанных в манифесте, или проверки в среде выполнения надстройки Office определяют, поддерживает ли ведущее приложение Office необходимые API.</span><span class="sxs-lookup"><span data-stu-id="67117-103">Requirement sets are named groups of API members. Office Add-ins use requirement sets specified in the manifest or use a runtime check to determine whether an Office host supports APIs that an add-in needs. For more information, see Specify Office hosts and API requirements.</span></span> <span data-ttu-id="67117-104">Дополнительные сведения см. в статье [Версии Office и наборы требований](https://docs.microsoft.com/office/dev/add-ins/develop/office-versions-and-requirement-sets).</span><span class="sxs-lookup"><span data-stu-id="67117-104">For more information, see [Office versions and requirement sets](https://docs.microsoft.com/office/dev/add-ins/develop/office-versions-and-requirement-sets).</span></span>
+<span data-ttu-id="4cc7c-p101">Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](https://docs.microsoft.com/office/dev/add-ins/develop/office-versions-and-requirement-sets).</span><span class="sxs-lookup"><span data-stu-id="4cc7c-p101">Requirement sets are named groups of API members. Office Add-ins use requirement sets specified in the manifest or use a runtime check to determine whether an Office host supports APIs that an add-in needs. For more information, see [Office versions and requirement sets](https://docs.microsoft.com/office/dev/add-ins/develop/office-versions-and-requirement-sets).</span></span>
 
-<span data-ttu-id="67117-105">В приведенной ниже таблице перечислены наборы требований для OneNote, ведущие приложения Office, которые их поддерживают, а также версии сборок или даты выхода.</span><span class="sxs-lookup"><span data-stu-id="67117-105">The following table lists the OneNote requirement sets, the Office host applications that support those requirement sets, and the build versions or availability date.</span></span>
+<span data-ttu-id="4cc7c-106">В приведенной ниже таблице перечислены наборы обязательных элементов для OneNote, ведущие приложения Office, которые их поддерживают, а также версии сборок или даты выхода.</span><span class="sxs-lookup"><span data-stu-id="4cc7c-106">The following table lists the OneNote requirement sets, the Office host applications that support those requirement sets, and the build versions or availability date.</span></span>
 
-|  <span data-ttu-id="67117-106">Набор требований</span><span class="sxs-lookup"><span data-stu-id="67117-106">Requirement set</span></span>  |  <span data-ttu-id="67117-107">Office Online</span><span class="sxs-lookup"><span data-stu-id="67117-107">Office Online</span></span> | 
+|  <span data-ttu-id="4cc7c-107">Набор обязательных элементов</span><span class="sxs-lookup"><span data-stu-id="4cc7c-107">Requirement set</span></span>  |  <span data-ttu-id="4cc7c-108">Office Online</span><span class="sxs-lookup"><span data-stu-id="4cc7c-108">Office Online</span></span> | 
 |:-----|:-----|
-| <span data-ttu-id="67117-108">OneNoteApi 1.1</span><span class="sxs-lookup"><span data-stu-id="67117-108">OneNoteApi 1.1</span></span>  | <span data-ttu-id="67117-109">Сентябрь 2016 г.</span><span class="sxs-lookup"><span data-stu-id="67117-109">September 2016</span></span> |  
+| <span data-ttu-id="4cc7c-109">OneNoteApi 1.1</span><span class="sxs-lookup"><span data-stu-id="4cc7c-109">OneNoteApi 1.1</span></span>  | <span data-ttu-id="4cc7c-110">Сентябрь 2016 г.</span><span class="sxs-lookup"><span data-stu-id="4cc7c-110">September 2016</span></span> |  
 
-## <a name="office-common-api-requirement-sets"></a><span data-ttu-id="67117-110">Стандартные наборы требований API для Office</span><span class="sxs-lookup"><span data-stu-id="67117-110">Office common API requirement sets</span></span>
+## <a name="office-common-api-requirement-sets"></a><span data-ttu-id="4cc7c-111">Стандартные наборы обязательных элементов API для Office</span><span class="sxs-lookup"><span data-stu-id="4cc7c-111">Office common API requirement sets</span></span>
 
-<span data-ttu-id="67117-111">Сведения о стандартных наборах требований API см. в статье [Стандартные наборы требований API для Office](office-add-in-requirement-sets.md).</span><span class="sxs-lookup"><span data-stu-id="67117-111">For information about common API requirement sets, see [Office common API requirement sets](office-add-in-requirement-sets.md).</span></span>
+<span data-ttu-id="4cc7c-112">Сведения о типичных наборах обязательных элементов API см. в статье [Стандартные наборы обязательных элементов API для Office](office-add-in-requirement-sets.md).</span><span class="sxs-lookup"><span data-stu-id="4cc7c-112">For information about common API requirement sets, see [Office common API requirement sets](office-add-in-requirement-sets.md).</span></span>
 
-## <a name="onenote-javascript-api-11"></a><span data-ttu-id="67117-112">API JavaScript для OneNote 1.1</span><span class="sxs-lookup"><span data-stu-id="67117-112">OneNote JavaScript API 1.1</span></span> 
+## <a name="onenote-javascript-api-11"></a><span data-ttu-id="4cc7c-113">API JavaScript для OneNote 1.1</span><span class="sxs-lookup"><span data-stu-id="4cc7c-113">OneNote JavaScript API 1.1</span></span> 
 
-<span data-ttu-id="67117-113">API JavaScript для OneNote 1.1 — первая версия этого API.</span><span class="sxs-lookup"><span data-stu-id="67117-113">OneNote JavaScript API 1.1 is the first version of the API.</span></span> <span data-ttu-id="67117-114">Подробнее об API см. [Общие сведения о программировании API JavaScript для OneNote](https://docs.microsoft.com/office/dev/add-ins/onenote/onenote-add-ins-programming-overview).</span><span class="sxs-lookup"><span data-stu-id="67117-114">For details about the API, see the [OneNote JavaScript API](https://docs.microsoft.com/office/dev/add-ins/onenote/onenote-add-ins-programming-overview) reference topics.</span></span>
+<span data-ttu-id="4cc7c-114">API JavaScript для OneNote 1.1 — первая версия этого API.</span><span class="sxs-lookup"><span data-stu-id="4cc7c-114">OneNote JavaScript API 1.1 is the first version of the API.</span></span> <span data-ttu-id="4cc7c-115">Дополнительные сведения об этом API см. в статье [Обзор создания кода с помощью API JavaScript для OneNote](https://docs.microsoft.com/office/dev/add-ins/onenote/onenote-add-ins-programming-overview).</span><span class="sxs-lookup"><span data-stu-id="4cc7c-115">For details about the API, see the [OneNote JavaScript API](https://docs.microsoft.com/office/dev/add-ins/onenote/onenote-add-ins-programming-overview) reference topics.</span></span>
 
-## <a name="runtime-requirement-support-check"></a><span data-ttu-id="67117-115">Проверка поддержки требований в среде выполнения</span><span class="sxs-lookup"><span data-stu-id="67117-115">Runtime requirement support check</span></span>
+## <a name="runtime-requirement-support-check"></a><span data-ttu-id="4cc7c-116">Проверка поддержки требований в среде выполнения</span><span class="sxs-lookup"><span data-stu-id="4cc7c-116">Runtime requirement support check</span></span>
 
-<span data-ttu-id="67117-116">Во время выполнения кода надстройки могут проверять, поддерживает ли ведущее приложение набор требований API, выполняя следующую проверку:</span><span class="sxs-lookup"><span data-stu-id="67117-116">During the runtime, add-ins can check if a particular host supports an API requirement set by doing the following-check:</span></span> 
+<span data-ttu-id="4cc7c-117">Во время выполнения кода надстройки могут проверять, поддерживает ли ведущее приложение набор обязательных элементов API, выполняя следующую проверку:</span><span class="sxs-lookup"><span data-stu-id="4cc7c-117">During the runtime, add-ins can check if a particular host supports an API requirement set by doing the following-check:</span></span> 
 
 ```js
 if (Office.context.requirements.isSetSupported('OneNoteApi', 1.1) === true) {
@@ -29,11 +40,11 @@ else {
 }
 ```
 
-## <a name="manifest-based-requirement-support-check"></a><span data-ttu-id="67117-117">Проверка поддержки требований в манифесте</span><span class="sxs-lookup"><span data-stu-id="67117-117">Manifest-based requirement support check</span></span>
+## <a name="manifest-based-requirement-support-check"></a><span data-ttu-id="4cc7c-118">Проверка поддержки обязательных элементов в манифесте</span><span class="sxs-lookup"><span data-stu-id="4cc7c-118">Manifest-based requirement support check</span></span>
 
-<span data-ttu-id="67117-p103">Используйте элемент Requirements в манифесте надстройки, чтобы указать ключевые наборы требований или элементы API, которые должна использовать надстройка. Если платформа или ведущее приложение Office не поддерживает наборы требований или элементы API, указанные в элементе Requirements, надстройка не будет работать в этом ведущем приложении или на этой платформе, а также не будет отображаться в разделе «Мои надстройки».</span><span class="sxs-lookup"><span data-stu-id="67117-p103">Use the Requirements element in the add-in manifest to specify critical requirement sets or API members that your add-in must use. If the Office host or platform doesn't support the requirement sets or API members specified in the Requirements element, the add-in won't run in that host or platform, and won't display in My Add-ins.</span></span>
+<span data-ttu-id="4cc7c-p103">Используйте элемент Requirements в манифесте надстройки, чтобы указать ключевые наборы требований или элементы API, которые должна использовать надстройка. Если платформа или ведущее приложение Office не поддерживает наборы требований или элементы API, указанные в элементе Requirements, надстройка не будет работать в этом ведущем приложении или на этой платформе, а также не будет отображаться в разделе "Мои надстройки".</span><span class="sxs-lookup"><span data-stu-id="4cc7c-p103">Use the Requirements element in the add-in manifest to specify critical requirement sets or API members that your add-in must use. If the Office host or platform doesn't support the requirement sets or API members specified in the Requirements element, the add-in won't run in that host or platform, and won't display in My Add-ins.</span></span>
 
-<span data-ttu-id="67117-120">Ниже показана надстройка, которая загружается во всех ведущих приложениях Office, поддерживающих набор требований OneNoteApi версии 1.1.</span><span class="sxs-lookup"><span data-stu-id="67117-120">The following code example shows an add-in that loads in all Office host applications that support the OneNoteApi requirement set, version 1.1.</span></span>
+<span data-ttu-id="4cc7c-121">Ниже показана надстройка, которая загружается во всех ведущих приложениях Office, поддерживающих набор обязательных элементов OneNoteApi версии 1.1.</span><span class="sxs-lookup"><span data-stu-id="4cc7c-121">The following code example shows an add-in that loads in all Office host applications that support the OneNoteApi requirement set, version 1.1.</span></span>
 
 ```xml
 <Requirements>
@@ -43,8 +54,8 @@ else {
 </Requirements>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="67117-121">См. также</span><span class="sxs-lookup"><span data-stu-id="67117-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4cc7c-122">См. также</span><span class="sxs-lookup"><span data-stu-id="4cc7c-122">See also</span></span>
 
-- [<span data-ttu-id="67117-122">Версии Office и наборы требований</span><span class="sxs-lookup"><span data-stu-id="67117-122">Office versions and requirement sets</span></span>](https://docs.microsoft.com/office/dev/add-ins/develop/office-versions-and-requirement-sets)
-- [<span data-ttu-id="67117-123">Указание ведущих приложений Office и требований API</span><span class="sxs-lookup"><span data-stu-id="67117-123">Specify Office hosts and API requirements</span></span>](https://docs.microsoft.com/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
-- [<span data-ttu-id="67117-124">XML-манифест надстроек Office</span><span class="sxs-lookup"><span data-stu-id="67117-124">Office Add-ins XML manifest</span></span>](https://docs.microsoft.com/office/dev/add-ins/develop/add-in-manifests)
+- [<span data-ttu-id="4cc7c-123">Версии Office и наборы обязательных элементов</span><span class="sxs-lookup"><span data-stu-id="4cc7c-123">Office versions and requirement sets</span></span>](https://docs.microsoft.com/office/dev/add-ins/develop/office-versions-and-requirement-sets)
+- [<span data-ttu-id="4cc7c-124">Указание ведущих приложений Office и обязательных элементов API</span><span class="sxs-lookup"><span data-stu-id="4cc7c-124">Specify Office hosts and API requirements</span></span>](https://docs.microsoft.com/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
+- [<span data-ttu-id="4cc7c-125">XML-манифест надстроек Office</span><span class="sxs-lookup"><span data-stu-id="4cc7c-125">Office Add-ins XML manifest</span></span>](https://docs.microsoft.com/office/dev/add-ins/develop/add-in-manifests)
