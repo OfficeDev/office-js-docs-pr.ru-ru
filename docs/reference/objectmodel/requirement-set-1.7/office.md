@@ -1,5 +1,14 @@
- 
-
+---
+title: Пространство имен Office — набор обязательных элементов 1.7
+description: ''
+ms.date: 11/08/2018
+ms.openlocfilehash: 2bf1c31f4dc4156cb4f1d0eb3508193305c860e9
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27432804"
+---
 # <a name="office"></a>Office
 
 Пространство имен Office содержит общие интерфейсы, которые используются надстройками всех приложений Office. В этот список входят только интерфейсы, используемые надстройками Outlook. Полный список интерфейсов пространства имен Office см. в статье [Общий API](/javascript/api/office).
@@ -13,7 +22,7 @@
 
 ##### <a name="members-and-methods"></a>Элементы и методы
 
-| Член | Тип |
+| Элемент | Тип |
 |--------|------|
 | [AsyncResultStatus](#asyncresultstatus-string) | Член |
 | [CoercionType](#coerciontype-string) | Член |
@@ -22,9 +31,9 @@
 
 ### <a name="namespaces"></a>Пространства имен
 
-[context](office.context.md). Предоставляет общие интерфейсы из контекстного пространства имен API надстроек Office для использования в API надстройки Outlook.
+[context.](office.context.md) Предоставляет общие интерфейсы из контекстного пространства имен API надстроек Office для использования в API надстройки Outlook.
 
-[MailboxEnums](/javascript/api/outlook_1_7/office.mailboxenums.attachmenttype). Включает перечисления ItemType, EntityType, AttachmentType, RecipientType, ResponseType и ItemNotificationMessageType.
+[MailboxEnums.](/javascript/api/outlook_1_7/office.mailboxenums.attachmenttype) Включает перечисления ItemType, EntityType, AttachmentType, RecipientType, ResponseType и ItemNotificationMessageType.
 
 ### <a name="members"></a>Элементы
 

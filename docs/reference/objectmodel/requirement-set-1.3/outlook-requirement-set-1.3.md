@@ -1,4 +1,15 @@
-# <a name="outlook-add-in-api-requirement-set-13"></a>Набор требований API для надстройки Outlook 1.3
+---
+title: Набор обязательных элементов API для надстройки Outlook 1.3
+description: ''
+ms.date: 10/11/2018
+ms.openlocfilehash: c34be8f30a2c674035e5ab0ca223f630d9bb5e5a
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27432629"
+---
+# <a name="outlook-add-in-api-requirement-set-13"></a>Набор обязательных элементов API для надстройки Outlook 1.3
 
 Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.
 
@@ -7,29 +18,29 @@
 
 ## <a name="whats-new-in-13"></a>Новые возможности в версии 1.3
 
-Набор требований 1.3 включает все возможности [набора требований версии 1.2](../requirement-set-1.2/outlook-requirement-set-1.2.md). К нему добавлены перечисленные ниже возможности.
+Набор обязательных элементов 1.3 включает все возможности [набора обязательных элементов версии 1.2](../requirement-set-1.2/outlook-requirement-set-1.2.md). В нем добавлены перечисленные ниже возможности.
 
 - Добавлена поддержка [команд надстроек](https://docs.microsoft.com/outlook/add-ins/add-in-commands-for-outlook).
 - Добавлена возможность сохранять и закрывать создаваемый элемент.
 - Расширенный объект [Body](/javascript/api/outlook_1_3/office.body) позволяет надстройкам получать или задавать текст целиком.
 - Добавлены методы для преобразования идентификаторов из формата EWS в формат REST и наоборот.
-- Появилась возможность добавлять сообщения уведомлений на информационную панель элементов.
+- Появилась возможность добавлять сообщения уведомления на информационную панель элементов.
 
 ### <a name="change-log"></a>Журнал изменений
 
-- Добавлен метод [Body.getAsync](/javascript/api/outlook_1_3/office.body#getasync-coerciontype--options--callback-). Он возвращает текущий текст в указанном формате.
-- Добавлен метод [Body.setAsync](/javascript/api/outlook_1_3/office.body#setasync-data--options--callback-). Он заменяет весь текст указанным текстом.
-- Добавлено свойство [Office.context.officeTheme](office.context.md#officetheme-object). Оно предоставляет доступ к цветам темы Office.
-- Добавлен объект [Event](/javascript/api/office/office.addincommands.event). Он передается как параметр в функции команд, не требующих пользовательского интерфейса, в надстройке Outlook. Используется для уведомления о завершении обработки.
-- Добавлен метод [Office.context.mailbox.item.close](office.context.mailbox.item.md#close). Он закрывает текущий создаваемый элемент.
-- Добавлен метод [Office.context.mailbox.item.saveAsync](office.context.mailbox.item.md#saveasyncoptions-callback). Он асинхронно сохраняет элемент.
-- Добавлено свойство [Office.context.mailbox.item.notificationMessages](office.context.mailbox.item.md#notificationmessages-notificationmessagesjavascriptapioutlook13officenotificationmessages). Оно получает сообщения уведомления для элемента.
-- Добавлен метод [Office.context.mailbox.convertToEwsId](office.context.mailbox.md#converttoewsiditemid-restversion--string). Он преобразует идентификатор элемента из формата REST в формат EWS.
-- Добавлен метод [Office.context.mailbox.convertToRestId](office.context.mailbox.md#converttorestiditemid-restversion--string). Он преобразует идентификатор элемента из формата EWS в формат REST.
-- Добавлено свойство [Office.MailboxEnums.ItemNotificationMessageType](/javascript/api/outlook_1_3/office.mailboxenums.itemnotificationmessagetype). Оно указывает тип сообщения уведомления для встречи или сообщения.
-- Добавлено свойство [Office.MailboxEnums.RestVersion](/javascript/api/outlook_1_3/office.mailboxenums.restversion). Оно указывает версию REST API, которая соответствует идентификатору элемента в формате REST.
-- Добавлен объект [NotificationMessages](/javascript/api/outlook_1_3/office.notificationmessages). Он предоставляет методы для доступа к сообщениям уведомления в надстройке Outlook.
-- Добавлен тип [NotificationMessageDetails](/javascript/api/outlook_1_3/office.notificationmessagedetails). Он возвращается методом `NotificationMessages.getAllAsync`.
+- Добавлен метод [Body.getAsync](/javascript/api/outlook_1_3/office.body#getasync-coerciontype--options--callback-). Возвращает текущий текст в указанном формате.
+- Добавлен метод [Body.setAsync](/javascript/api/outlook_1_3/office.body#setasync-data--options--callback-). Заменяет весь текст указанным текстом.
+- Добавлено свойство [Office.context.officeTheme](office.context.md#officetheme-object). Предоставляет доступ к цветам темы Office.
+- Добавлен объект [Event](/javascript/api/office/office.addincommands.event). Передается как параметр в функции команд, не требующих пользовательского интерфейса, в надстройке Outlook. Используется для уведомления о завершении обработки.
+- Добавлен метод [Office.context.mailbox.item.close](office.context.mailbox.item.md#close). Закрывает текущий создаваемый элемент.
+- Добавлен метод [Office.context.mailbox.item.saveAsync](office.context.mailbox.item.md#saveasyncoptions-callback). Асинхронно сохраняет элемент.
+- Добавлено свойство [Office.context.mailbox.item.notificationMessages](office.context.mailbox.item.md#notificationmessages-notificationmessagesjavascriptapioutlook13officenotificationmessages). Получает сообщения уведомления для элемента.
+- Добавлен метод [Office.context.mailbox.convertToEwsId](office.context.mailbox.md#converttoewsiditemid-restversion--string). Преобразует идентификатор элемента из формата REST в формат EWS.
+- Добавлен метод [Office.context.mailbox.convertToRestId](office.context.mailbox.md#converttorestiditemid-restversion--string). Преобразует идентификатор элемента из формата EWS в формат REST.
+- Добавлено свойство [Office.MailboxEnums.ItemNotificationMessageType](/javascript/api/outlook_1_3/office.mailboxenums.itemnotificationmessagetype). Указывает тип сообщения уведомления для встречи или сообщения.
+- Добавлено свойство [Office.MailboxEnums.RestVersion](/javascript/api/outlook_1_3/office.mailboxenums.restversion). Указывает версию REST API, которая соответствует идентификатору элемента в формате REST.
+- Добавлен объект [NotificationMessages](/javascript/api/outlook_1_3/office.notificationmessages). Предоставляет методы для доступа к сообщениям уведомления в надстройке Outlook.
+- Добавлен тип [NotificationMessageDetails](/javascript/api/outlook_1_3/office.notificationmessagedetails). Возвращается методом `NotificationMessages.getAllAsync`.
 
 ## <a name="see-also"></a>См. также
 

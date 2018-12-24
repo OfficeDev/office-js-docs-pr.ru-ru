@@ -1,3 +1,14 @@
+---
+title: Элемент HighResolutionIconUrl в файле манифеста
+description: ''
+ms.date: 12/04/2018
+ms.openlocfilehash: dc8feb92eb8a53351679834a39c012b47f43aad4
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27432595"
+---
 # <a name="highresolutioniconurl-element"></a>Элемент HighResolutionIconUrl
 
 Указывает URL-адрес изображения, которое используется для представления надстройки Office в пользовательском интерфейсе вставки и Магазине Office на экранах с высоким DPI.

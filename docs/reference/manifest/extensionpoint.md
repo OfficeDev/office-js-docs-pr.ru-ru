@@ -1,3 +1,14 @@
+---
+title: Элемент ExtensionPoint в файле манифеста
+description: ''
+ms.date: 10/09/2018
+ms.openlocfilehash: 21def2de7168ff06c1eda26add07c33d366ec296
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27433966"
+---
 # <a name="extensionpoint-element"></a>Элемент ExtensionPoint
 
  Определяет, где доступны функции надстройки в пользовательском интерфейсе Office. Элемент **ExtensionPoint** является дочерним для элемента [AllFormFactors](allformfactors.md), [DesktopFormFactor](desktopformfactor.md) или [MobileFormFactor](mobileformfactor.md). 
@@ -10,19 +21,19 @@
 
 ## <a name="extension-points-for-excel-only"></a>Точки расширения только для Excel
 
-- **CustomFunctions** — настраиваемая функция, написанная на JavaScript для Excel.
+- **CustomFunctions** — пользовательская функция, написанная на JavaScript для Excel.
 
-[Пример кода в этой XML](https://github.com/OfficeDev/Excel-Custom-Functions/blob/master/customfunctions.xml) показывает, как использовать элемент **ExtensionPoint** со значением атрибута **CustomFunctions** и как использовать дочерние элементы.
+[В этом примере кода XML](https://github.com/OfficeDev/Excel-Custom-Functions/blob/master/customfunctions.xml) показано, как использовать элемент **ExtensionPoint** со значением атрибута **CustomFunctions** и какие дочерние элементы следует использовать.
 
 ## <a name="extension-points-for-word-excel-powerpoint-and-onenote-add-in-commands"></a>Точки расширения для команд надстроек Word, Excel, PowerPoint и OneNote
 
-- **PrimaryCommandSurface** — лента в Office.
-- **ContextMenu** — контекстное меню, которое появляется при нажатии правой кнопкой мыши в интерфейсе Office.
+- **PrimaryCommandSurface** — лента в Office.
+- **ContextMenu** — контекстное меню, которое появляется при нажатии правой кнопкой мыши в интерфейсе Office.
 
 В следующих примерах показано, как использовать элемент **ExtensionPoint** со значениями атрибута **PrimaryCommandSurface** и **ContextMenu**, и какие дочерние элементы использовать с каждым из них.
 
 > [!IMPORTANT] 
-> Убедитесь, что для элементов, содержащих атрибут ID, указан уникальный идентификатор. Рекомендуем указать название компании и ваш идентификатор. Например, используйте следующий формат. <CustomTab id="mycompanyname.mygroupname">
+> Убедитесь, что для элементов, которые содержат атрибут ID, указан уникальный идентификатор. Рекомендуем указать название компании и ваш идентификатор. Например, используйте следующий формат. <CustomTab id="mycompanyname.mygroupname">
 
 ```XML
 <ExtensionPoint xsi:type="PrimaryCommandSurface">
@@ -68,9 +79,9 @@
 |**Label**|Обязательный. Метка группы. Для атрибута **resid** необходимо задать значение атрибута **id** элемента **String**. Элемент **String** — это дочерний элемент элемента **ShortStrings**, который является дочерним для элемента **Resources**.|
 |**Icon**|Обязательный. Задает значок группы, который будет использоваться на устройствах с малым форм-фактором либо при отображении слишком большого количества кнопок. Для атрибута **resid** необходимо задать значение атрибута **id** элемента **Image**. Элемент **Image** — это дочерний элемент элемента **Images**, который является дочерним для элемента **Resources**. Атрибут **size** указывает размер изображения в пикселях. Необходимо три размера изображения: 16, 32 и 80. Кроме того, поддерживается пять необязательных размеров: 20, 24, 40, 48 и 64.|
 |**Tooltip**|Необязательный. Подсказка группы. Для атрибута **resid** необходимо задать значение атрибута **id** элемента **String**. Элемент **String** — это дочерний элемент элемента **LongStrings**, который является дочерним для элемента **Resources**.|
-|**Control**|В каждой группе должен быть по крайней мере один элемент управления. Элемент **Control** может относиться к типу **Button** или **Menu**. С помощью элемента **Menu** можно указать раскрывающийся список элементов управления "Кнопка". В настоящее время поддерживаются только кнопки и меню. Дополнительные сведения см. в разделах [Элементы управления "Кнопка"](control.md#button-control) и [Элементы управления меню](control.md#menu-dropdown-button-controls).<br/>**Примечание.** Чтобы упростить устранение неполадок, рекомендуем добавлять элемент **Control** и соответствующий дочерний элемент **Resources** по одному за раз.|
-|**Script**|Ссылка на файл JavaScript с определением настраиваемой функции и кодом регистрации. Этот элемент не используется в предварительной версии для разработчиков. Вместо этого, загрузку всех файлов JavaScript выполняет страница HTML.|
-|**Page**|Ссылка на HTML-страницу для настраиваемых функций.|
+|**Control**|В каждой группе должен быть по крайней мере один элемент управления. Элемент **Control** может относиться к типу **Button** или **Menu**. С помощью элемента **Menu** можно указать раскрывающийся список элементов управления "Кнопка". В настоящее время поддерживаются только кнопки и меню. Дополнительные сведения см. в разделах [Элементы управления "Кнопка"](control.md#button-control) и [Элементы управления меню](control.md#menu-dropdown-button-controls).<br/>**Примечание.** Чтобы упростить устранение неполадок, рекомендуем добавлять элемент **Control** и соответствующий дочерний элемент **Resources** по одному.|
+|**Script**|Ссылка на файл JavaScript с пользовательским определением функции и кодом регистрации. Этот элемент не используется в предварительной версии для разработчиков. Загрузку всех файлов JavaScript выполняет страница HTML.|
+|**Page**|Ссылка на HTML-страницу для пользовательских функций.|
 
 ## <a name="extension-points-for-outlook"></a>Точки расширения для Outlook
 
@@ -78,9 +89,9 @@
 - [MessageComposeCommandSurface](#messagecomposecommandsurface) 
 - [AppointmentOrganizerCommandSurface](#appointmentorganizercommandsurface) 
 - [AppointmentAttendeeCommandSurface](#appointmentattendeecommandsurface)
-- [Module](#module) (можно использовать только в [DesktopFormFactor](desktopformfactor.md)).
+- [Module](#module) (можно использовать только в [DesktopFormFactor](desktopformfactor.md))
 - [MobileMessageReadCommandSurface](#mobilemessagereadcommandsurface)
-- [События](#events)
+- [Events](#events)
 - [DetectedEntity](#detectedentity)
 
 ### <a name="messagereadcommandsurface"></a>MessageReadCommandSurface
@@ -90,8 +101,8 @@
 
 |  Элемент |  Описание  |
 |:-----|:-----|
-|  [OfficeTab](officetab.md) |  Добавляет команду(ы) на вкладку ленты по умолчанию.  |
-|  [CustomTab](customtab.md) |  Добавляет команду(ы)  на специальную вкладку ленты.  |
+|  [OfficeTab](officetab.md) |  Добавляет команды на вкладку ленты по умолчанию.  |
+|  [CustomTab](customtab.md) |  Добавляет команды на специальную вкладку ленты.  |
 
 #### <a name="officetab-example"></a>Пример элемента OfficeTab
 ```xml
@@ -118,8 +129,8 @@
 
 |  Элемент |  Описание  |
 |:-----|:-----|
-|  [OfficeTab](officetab.md) |  Добавляет команду(ы) на вкладку ленты по умолчанию.  |
-|  [CustomTab](customtab.md) |  Добавляет команду(ы)  на специальную вкладку ленты.  |
+|  [OfficeTab](officetab.md) |  Добавляет команды на вкладку ленты по умолчанию.  |
+|  [CustomTab](customtab.md) |  Добавляет команды на специальную вкладку ленты.  |
 
 #### <a name="officetab-example"></a>Пример элемента OfficeTab
 ```xml
@@ -148,8 +159,8 @@
 
 |  Элемент |  Описание  |
 |:-----|:-----|
-|  [OfficeTab](officetab.md) |  Добавляет команду(ы) на вкладку ленты по умолчанию.  |
-|  [CustomTab](customtab.md) |  Добавляет команду(ы)  на специальную вкладку ленты.  |
+|  [OfficeTab](officetab.md) |  Добавляет команды на вкладку ленты по умолчанию.  |
+|  [CustomTab](customtab.md) |  Добавляет команды на специальную вкладку ленты.  |
 
 #### <a name="officetab-example"></a>Пример элемента OfficeTab
 ```xml
@@ -177,8 +188,8 @@
 
 |  Элемент |  Описание  |
 |:-----|:-----|
-|  [OfficeTab](officetab.md) |  Добавляет команду(ы) на вкладку ленты по умолчанию.  |
-|  [CustomTab](customtab.md) |  Добавляет команду(ы)  на специальную вкладку ленты.  |
+|  [OfficeTab](officetab.md) |  Добавляет команды на вкладку ленты по умолчанию.  |
+|  [CustomTab](customtab.md) |  Добавляет команды на специальную вкладку ленты.  |
 
 #### <a name="officetab-example"></a>Пример элемента OfficeTab
 ```xml
@@ -198,7 +209,7 @@
 </ExtensionPoint>
 ```
 
-### <a name="module"></a>Модуль
+### <a name="module"></a>Module
 
 Эта точка расширения добавляет кнопки на ленту для расширения модуля. 
 
@@ -206,8 +217,8 @@
 
 |  Элемент |  Описание  |
 |:-----|:-----|
-|  [OfficeTab](officetab.md) |  Добавляет команду(ы) на вкладку ленты по умолчанию.  |
-|  [CustomTab](customtab.md) |  Добавляет команду(ы)  на специальную вкладку ленты.  |
+|  [OfficeTab](officetab.md) |  Добавляет команды на вкладку ленты по умолчанию.  |
+|  [CustomTab](customtab.md) |  Добавляет команды на специальную вкладку ленты.  |
 
 ### <a name="mobilemessagereadcommandsurface"></a>MobileMessageReadCommandSurface
 Эта точка расширения помещает кнопки на панель команд для чтения почты в форм-факторе мобильного устройства.
@@ -218,7 +229,7 @@
 |:-----|:-----|
 |  [Group](group.md) |  Добавляет группу кнопок на панель команд.  |
 
-У элементов **ExtensionPoint** этого типа может быть только один дочерний элемент —  **Group**.
+У элементов **ExtensionPoint** этого типа может быть только один дочерний элемент **Group**.
 
 Для атрибута **xsi:type** элементов **Control**, содержащихся в этой точке расширения, должно быть назначено значение `MobileButton`.
 
@@ -239,18 +250,18 @@
 Эта точка расширения добавляет обработчик для указанного события.
 
 > [!NOTE]
-> Данный тип элементов поддерживается только с Outlook в Интернете в Office 365.
+> Этот тип элемента поддерживается только в Outlook в Интернете из Office 365.
 
 | Элемент | Описание  |
 |:-----|:-----|
-|  [Событие](event.md) |  Задает событие и функцию его обработчика.  |
+|  [Event](event.md) |  Задает событие и функцию его обработчика.  |
 
 #### <a name="itemsend-event-example"></a>Пример события ItemSend
 
 ```xml
-<ExtensionPoint xsi:type="Events"> 
-  <Event Type="ItemSend" FunctionExecution="synchronous" FunctionName="itemSendHandler" /> 
-</ExtensionPoint> 
+<ExtensionPoint xsi:type="Events"> 
+  <Event Type="ItemSend" FunctionExecution="synchronous" FunctionName="itemSendHandler" /> 
+</ExtensionPoint> 
 ```
 
 ### <a name="detectedentity"></a>DetectedEntity
@@ -260,7 +271,7 @@
 В соответствующем элементе [VersionOverrides](versionoverrides.md) для атрибута `xsi:type` должно быть задано значение `VersionOverridesV1_1`.
 
 > [!NOTE]
-> Данный тип элементов поддерживается только с Outlook в Интернете в Office 365.
+> Этот тип элемента поддерживается только в Outlook в Интернете из Office 365.
 
 |  Элемент |  Описание  |
 |:-----|:-----|

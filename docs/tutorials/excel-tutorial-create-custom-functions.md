@@ -1,14 +1,14 @@
 ---
-title: Руководство по настраиваемым функциям Excel
-description: Следуя этому руководству вы создадите надстройку Excel, содержащую настраиваемую функцию, которая может выполнять вычисления, запросы или потоки веб-данных.
-ms.date: 10/01/2018
+title: Руководство по пользовательским функциям в Excel
+description: Из этого руководства вы узнаете, как создать надстройку, Excel, содержащую пользовательские функции, которые могут выполнять вычисления, запрашивать или передавать веб-данные.
+ms.date: 12/21/2018
 ms.topic: tutorial
 ROBOTS: NOINDEX
-ms.openlocfilehash: e687b5d66ab9f6c5322e631551c34212358db462
-ms.sourcegitcommit: 1852ae367de53deb91d03ca55d16eb69709340d3
+ms.openlocfilehash: 356bde45c7cd0657ca3b4b493f0614285ef35c5d
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "25348926"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27432636"
 ---
 [!include[Excel custom functions tutorial](../includes/file-tutorial-excel-custom-functions.md)]
