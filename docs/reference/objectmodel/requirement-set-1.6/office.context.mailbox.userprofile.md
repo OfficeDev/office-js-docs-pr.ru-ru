@@ -1,11 +1,21 @@
-
+---
+title: Office.context.mailbox.userProfile — набор обязательных элементов 1.6
+description: ''
+ms.date: 10/31/2018
+ms.openlocfilehash: fe30a390583dc646e9c8792710c580d02c373a1a
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27432900"
+---
 # <a name="userprofile"></a>userProfile
 
-### [Office](Office.md)[.context](Office.context.md)[.mailbox](Office.context.mailbox.md). userProfile
+### <a name="officeofficemdcontextofficecontextmdmailboxofficecontextmailboxmduserprofile"></a>[Office](Office.md)[.context](Office.context.md)[.mailbox](Office.context.mailbox.md).userProfile
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
@@ -13,14 +23,14 @@
 
 ##### <a name="members-and-methods"></a>Элементы и методы
 
-| Член | Type |
+| Элемент | Тип |
 |--------|------|
-| [accountType](#accounttype-string) | Member |
+| [accountType](#accounttype-string) | Элемент |
 | [displayName](#displayname-string) | Элемент |
 | [emailAddress](#emailaddress-string) | Элемент |
 | [timeZone](#timezone-string) | Элемент |
 
-### <a name="members"></a>Members
+### <a name="members"></a>Элементы
 
 ####  <a name="accounttype-string"></a>accountType :String
 
@@ -31,7 +41,7 @@
 
 | Значение | Описание |
 |-------|-------------|
-| `enterprise` | Почтовый ящик размещен на локальном сервере Exchange. |
+| `enterprise` | Почтовый ящик размещен на локальном сервере Exchange Server. |
 | `gmail` | Почтовый ящик связан с учетной записью Gmail. |
 | `office365` | Почтовый ящик связан с рабочей или учебной учетной записью Office 365. |
 | `outlookCom` | Почтовый ящик связан с личной учетной записью Outlook.com. |
@@ -42,9 +52,9 @@
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.6 |
+|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.6 |
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
@@ -64,7 +74,7 @@ console.log(Office.context.mailbox.userProfile.accountType);
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
@@ -87,7 +97,7 @@ console.log(Office.context.mailbox.userProfile.displayName);
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
@@ -110,7 +120,7 @@ console.log(Office.context.mailbox.userProfile.emailAddress);
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|

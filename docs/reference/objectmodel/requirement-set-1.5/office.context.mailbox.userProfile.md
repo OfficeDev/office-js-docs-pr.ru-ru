@@ -1,10 +1,21 @@
+---
+title: Office.context.mailbox.userProfile — набор обязательных элементов 1.5
+description: ''
+ms.date: 10/31/2018
+ms.openlocfilehash: 748daf4d14aae1d14560d29e1d76eeea09830573
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27432720"
+---
 # <a name="userprofile"></a>userProfile
 
-### [Office](Office.md)[.context](Office.context.md)[.mailbox](Office.context.mailbox.md). userProfile
+### <a name="officeofficemdcontextofficecontextmdmailboxofficecontextmailboxmduserprofile"></a>[Office](Office.md)[.context](Office.context.md)[.mailbox](Office.context.mailbox.md).userProfile
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
@@ -12,7 +23,7 @@
 
 ##### <a name="members-and-methods"></a>Элементы и методы
 
-| Член | Тип |
+| Элемент | Тип |
 |--------|------|
 | [displayName](#displayname-string) | Элемент |
 | [emailAddress](#emailaddress-string) | Элемент |
@@ -30,7 +41,7 @@
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
@@ -53,7 +64,7 @@ console.log(Office.context.mailbox.userProfile.displayName);
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
@@ -76,7 +87,7 @@ console.log(Office.context.mailbox.userProfile.emailAddress);
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|

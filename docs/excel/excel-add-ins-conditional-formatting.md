@@ -1,3 +1,14 @@
+---
+title: Применение условного форматирования к диапазонам с помощью API JavaScript для Excel
+description: ''
+ms.date: 10/22/2018
+ms.openlocfilehash: f4baaea04ef487c26721ecfb2a90b8609ee96777
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27433182"
+---
 # <a name="apply-conditional-formatting-to-excel-ranges"></a>Применение условного форматирования к диапазонам Excel
 
 Библиотека JavaScript Excel предоставляет API для применения условного форматирования к диапазонам данных в книгах. Эта функция упрощает визуальный анализ больших наборов данных. Форматирование также динамически обновляется с учетом изменений в диапазоне. 

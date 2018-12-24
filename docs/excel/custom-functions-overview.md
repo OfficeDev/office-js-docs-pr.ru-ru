@@ -1,13 +1,13 @@
 ---
-ms.date: 12/14/2018
+ms.date: 12/21/2018
 description: Создание пользовательских функций в Excel с помощью JavaScript.
 title: Создание пользовательских функций в Excel (Ознакомительная версия)
-ms.openlocfilehash: be90f1f16b2e32b1b835781df95a1872516e4cfb
-ms.sourcegitcommit: 1b90ec48be51629625d21ca04e3b8880399c0116
+ms.openlocfilehash: 8f30ee32168147b8beeb6e60372cd631237ce993
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "27378087"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27433042"
 ---
 # <a name="create-custom-functions-in-excel-preview"></a>Создание пользовательских функций в Excel (ознакомительная версия)
 
@@ -419,6 +419,7 @@ function getComment(x) {
 - Пользовательские функции в Excel Online могут перестать работать во время сеанса после периода бездействия. Обновите страницу браузера (F5) и еще раз введите пользовательскую функции для восстановления работоспособности.
 - Вы можете увидеть временный результат **#GETTING_DATA** (# ОЖИДАНИЕ_ДАННЫХ) внутри ячейки(-ек), листа, если у вас есть несколько надстроек, запущенных в Excel для Windows. Закройте все окна Excel и перезапустите Excel.
 - Инструменты для отладки, предназначенные специально для пользовательских функций, могут быть доступны в будущем. В настоящее время вы можете выполнить отладку в Excel Online при использовании средств разработчика F12. Дополнительные данные см. [Советы и рекомендации в отношении пользовательских функций](custom-functions-best-practices.md)
+- В 32-разрядной версии Office 365 для участников программы предварительной оценки, выпущенной в *декабре* (версия 1901, сборка 11128.20000), пользовательские функции могут работать неправильно. В некоторых случаях эту проблему можно решить, скачав файл на сайте https://github.com/OfficeDev/Excel-Custom-Functions/blob/december-insiders-workaround/excel-udf-host.win32.bundle и скопировав его папку "C:\Program Files (x86)\Microsoft Office\root\Office16".
 
 ## <a name="changelog"></a>Журнал изменений
 

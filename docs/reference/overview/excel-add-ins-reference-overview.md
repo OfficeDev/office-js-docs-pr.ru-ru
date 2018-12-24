@@ -1,3 +1,14 @@
+---
+title: Обзор API JavaScript для Excel
+description: ''
+ms.date: 11/01/2018
+ms.openlocfilehash: 202e6eb4993e43191f4f8c867ff0907af61a2ed6
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27433805"
+---
 # <a name="excel-javascript-api-overview"></a>Обзор API JavaScript для Excel
 
 Вы можете использовать API JavaScript для Excel, чтобы создавать надстройки для Excel 2016 и более поздних версий. Ниже перечислены объекты Excel высокого уровня, доступные в API. Каждая ссылка на страницу объекта содержит описание свойств, событий и методов, доступных для объекта. Чтобы узнать больше, перейдите по соответствующим ссылкам в меню.

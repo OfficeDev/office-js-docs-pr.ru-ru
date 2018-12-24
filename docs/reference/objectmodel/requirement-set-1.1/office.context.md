@@ -1,27 +1,37 @@
-
+---
+title: Office.context — набор обязательных элементов 1.1
+description: ''
+ms.date: 10/11/2018
+ms.openlocfilehash: 392e54f1004bb395672c026ef749113f94ec7479
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27432727"
+---
 # <a name="context"></a>context
 
-### [Office](Office.md).context
+### <a name="officeofficemdcontext"></a>[Office](Office.md).context
 
 Пространство имен Office.context содержит общие интерфейсы, которые используются надстройками всех приложений Office. В этот список входят только интерфейсы, используемые надстройками Outlook. Полный список интерфейсов пространства имен Office.context см. в статье [Ссылка на пространство имен Office.context в общем API](/javascript/api/office/office.context).
 
 
 ##### <a name="requirements"></a>Требования
 
-|Требование| Значение|
+|Requirement| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание и чтение|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ### <a name="namespaces"></a>Пространства имен
 
-[mailbox](office.context.mailbox.md): предоставляет для Microsoft Outlook и Microsoft Outlook в Интернете доступ к объектной модели надстройки Outlook.
+[mailbox](office.context.mailbox.md). Предоставляет для Microsoft Outlook и Microsoft Outlook в Интернете доступ к объектной модели надстройки Outlook.
 
-### <a name="members"></a>Члены
+### <a name="members"></a>Элементы
 
 ####  <a name="displaylanguage-string"></a>displayLanguage :String
 
-Получает определенный пользователем языковой стандарт в формате обозначений языка RFC 1766 для пользовательского интерфейса ведущего приложения Office.
+Получает определенный пользователем языковой стандарт (язык) в формате обозначений языка RFC 1766 для пользовательского интерфейса ведущего приложения Office.
 
 Значение `displayLanguage` отображает текущий параметр **Язык интерфейса**, заданный в разделе **Файл > Параметры > Язык** ведущего приложения Office.
 
@@ -31,10 +41,10 @@
 
 ##### <a name="requirements"></a>Требования
 
-|Требование| Значение|
+|Requirement| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose или read|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -68,8 +78,8 @@ function write(message){
 
 ##### <a name="requirements"></a>Требования
 
-|Требование| Значение|
+|Requirement| Значение|
 |---|---|
-|[Версия минимального набора обязательных элементов для почтового ящика (mailbox)](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| Ограниченный доступ|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Compose или read|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
+|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|

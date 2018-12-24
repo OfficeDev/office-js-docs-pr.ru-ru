@@ -1,3 +1,14 @@
+---
+title: Элемент Scopes в файле манифеста
+description: ''
+ms.date: 10/09/2018
+ms.openlocfilehash: 01d34481b14ac6a9186de07d352b9985dc1695a4
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27432643"
+---
 # <a name="scopes-element"></a>Элемент Scopes
 
 Содержит разрешения, необходимые надстройке для работы с Microsoft Graph. Магазин Office использует элемент Scopes для создания диалогового окна подтверждения. Когда пользователи устанавливают надстройку из Магазина, им предлагается предоставить ей указанные разрешения на доступ к данным Microsoft Graph.

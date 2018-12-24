@@ -1,22 +1,33 @@
+---
+title: Элемент GetStarted в файле манифеста
+description: ''
+ms.date: 10/09/2018
+ms.openlocfilehash: e6fb1c56d051e9de607e97979225e484adb9affb
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27433117"
+---
 # <a name="getstarted-element"></a>Элемент GetStarted
 
 Предоставляет сведения для выноски, которая отображается при установке надстройки в ведущих приложениях Word, Excel, PowerPoint и OneNote. Элемент **GetStarted** является дочерним для элемента [DesktopFormFactor](desktopformfactor.md).
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-| Элемент                       | Обязательный | Description                                        |
+| Элемент                       | Обязательный | Описание                                        |
 |:------------------------------|:--------:|:---------------------------------------------------|
 | [Title](#title)               | Да      | Определяет, где предоставляются функции надстройки.     |
-| [Description](#description)   | Да      | URL-адрес файла, содержащего функции JavaScript.|
+| [Description](#description)   | Да      | URL-адрес файла, который содержит функции JavaScript.|
 | [LearnMoreUrl](#learnmoreurl) | Нет       | URL-адрес страницы с подробным описанием надстройки.   |
 
-### <a name="title"></a>Title 
+### <a name="title"></a>Название 
 
 Обязательный. Заголовок в верхней части выноски. Атрибут **resid** ссылается на допустимый идентификатор элемента **ShortStrings** в разделе [Resources](resources.md).
 
-### <a name="description"></a>Description
+### <a name="description"></a>Описание
 
-Обязательный.  Атрибут **resid** ссылается на допустимый идентификатор элемента **ShortStrings** в разделе [Resources](resources.md).
+Обязательный. Описание и основной текст выноски. Атрибут **resid** ссылается на допустимый идентификатор элемента **LongStrings** в разделе [Resources](resources.md).
 
 ### <a name="learnmoreurl"></a>LearnMoreUrl
 

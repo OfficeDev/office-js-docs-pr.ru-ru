@@ -1,3 +1,14 @@
+---
+title: Стандартные наборы обязательных элементов API для Office
+description: ''
+ms.date: 11/20/2018
+ms.openlocfilehash: 4ce96babd7f819e4cfe1581db1a51d0ae67390fd
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27433105"
+---
 # <a name="office-common-api-requirement-sets"></a>Стандартные наборы обязательных элементов API для Office
 
 Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](https://docs.microsoft.com/office/dev/add-ins/develop/office-versions-and-requirement-sets).

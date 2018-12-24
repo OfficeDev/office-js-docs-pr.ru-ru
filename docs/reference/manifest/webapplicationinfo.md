@@ -1,3 +1,14 @@
+---
+title: Элемент WebApplicationInfo в файле манифеста
+description: ''
+ms.date: 10/09/2018
+ms.openlocfilehash: 14c375898a05aa957d2c2b906ebaba961c4f1c2d
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27432734"
+---
 # <a name="webapplicationinfo-element"></a>Элемент WebApplicationInfo
 
 Поддерживает единый вход в надстройках Office. Этот элемент содержит сведения для надстройки в качестве следующего:
@@ -6,7 +17,7 @@
 - *Клиент* OAuth 2.0, которому могут потребоваться разрешения для Microsoft Graph.
 
 > [!NOTE]
-> В настоящее время API единого входа поддерживается в тестовом режиме для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы требований API Identity](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets?view=office-js). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для области клиентов Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить современную проверку подлинности для клиента](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> В настоящее время API единого входа поддерживается в тестовом режиме для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API удостоверений](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets?view=office-js). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить современную проверку подлинности для клиента](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 **WebApplicationInfo** — дочерний элемент элемента [VersionOverrides](versionoverrides.md) в манифесте.  
 

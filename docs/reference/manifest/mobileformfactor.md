@@ -1,3 +1,14 @@
+---
+title: Элемент MobileFormFactor в файле манифеста
+description: ''
+ms.date: 10/09/2018
+ms.openlocfilehash: f0a68c7127f7872207a58ed252def7a2977c33ed
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27433697"
+---
 # <a name="mobileformfactor-element"></a>Элемент MobileFormFactor
 
 Указывает параметры для надстройки в случае форм-фактора мобильного устройства. Содержит все сведения о надстройке для форм-фактора мобильного устройства, кроме узла **Resources**.

@@ -1,3 +1,14 @@
+---
+title: Элемент AppDomains в файле манифеста
+description: ''
+ms.date: 12/13/2018
+ms.openlocfilehash: cc2f5ade0bdda214c85490f8e474b42f921edbe8
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27433683"
+---
 # <a name="appdomains-element"></a>Элемент AppDomains
 
 Определяет все домены, кроме указанного в элементе SourceLocation, которые надстройка Office будет использовать для загрузки страниц. Для каждого дополнительного домена укажите элемент AppDomain.

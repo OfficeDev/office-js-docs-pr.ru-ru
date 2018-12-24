@@ -1,22 +1,33 @@
+---
+title: Элемент Host в файле манифеста
+description: ''
+ms.date: 10/09/2018
+ms.openlocfilehash: 37b772261ad82b4f899e73314a08ffd1dd03b442
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27432811"
+---
 # <a name="host-element"></a>Элемент Host
 
 Определяет тип приложения Office, в котором следует активировать надстройку.
 
 > [!IMPORTANT] 
-> Синтаксис элемента **Host** зависит от того, задается ли элемент в [базовом манифесте](#basic-manifest) или в узле [VersionOverrides](#versionoverrides-node). Однако функциональность в обоих случаях одинакова.  
+> Синтаксис элемента **Host** зависит от того, задается ли элемент в [базовом манифесте](#basic-manifest) или в узле [VersionOverrides](#versionoverrides-node). Функциональность в обоих случаях одинакова.  
 
 ## <a name="basic-manifest"></a>Базовый манифест
 
-Если основное приложение задается в базовом манифесте (в разделе [OfficeApp](officeapp.md)), то его тип определяется атрибутом `Name`.   
+Если ведущее приложение задается в базовом манифесте (в разделе [OfficeApp](officeapp.md)), то его тип определяет атрибут `Name`.   
 
 ### <a name="attributes"></a>Атрибуты
 
 | Атрибут     | Тип   | Обязательный | Описание                                      |
 |:--------------|:-------|:---------|:-------------------------------------------------|
-| [Имя](#name) | строка | обязательный | Имя типа основного приложения Office. |
+| [Name](#name) | string | Обязательный | Имя типа ведущего приложения Office. |
 
 ### <a name="name"></a>Имя
-Определяет тип основного приложения, для которого предназначена эта надстройка. Поддерживаются такие значения:
+Определяет тип ведущего приложения, для которого предназначена эта надстройка. Поддерживаются такие значения:
 
 - `Document` (Word)
 - `Database` (Access)
@@ -53,7 +64,7 @@
 
 ### <a name="xsitype"></a>xsi:type
 
-Указывает, к какому основному приложению Office (Word, Excel, PowerPoint, Outlook, OneNote) применяются содержащиеся параметры. Допустимые значения:
+Указывает, к какому ведущему приложению Office (Word, Excel, PowerPoint, Outlook, OneNote) применяются содержащиеся параметры. Допустимые значения:
 
 - `Document` (Word)
 - `MailHost` (Outlook)    
@@ -61,7 +72,7 @@
 - `Presentation` (PowerPoint)
 - `Workbook` (Excel)
 
-## <a name="host-example"></a>Пример основного приложения 
+## <a name="host-example"></a>Пример ведущего приложения 
 ```xml
 <Hosts>
     <Host xsi:type="MailHost">

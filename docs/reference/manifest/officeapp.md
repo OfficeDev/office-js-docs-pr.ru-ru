@@ -1,3 +1,14 @@
+---
+title: Элемент OfficeApp в файле манифеста
+description: ''
+ms.date: 10/09/2018
+ms.openlocfilehash: 42b6fe2e1c33322b90016d5e7ceec7b1bfe5b72d
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27433168"
+---
 # <a name="officeapp-element"></a>Элемент OfficeApp
 
 Корневой элемент в манифесте надстройки Office.

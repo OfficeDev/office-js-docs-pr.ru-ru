@@ -1,3 +1,14 @@
+---
+title: Элемент Rule в файле манифеста
+description: ''
+ms.date: 11/30/2018
+ms.openlocfilehash: ce7763ecb4ef81587ccacbd4090a6f412baf99b2
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27433118"
+---
 # <a name="rule-element"></a>Элемент Rule
 
 Указывает правила активации, которые следует оценивать для этой контекстной почтовой надстройки.
