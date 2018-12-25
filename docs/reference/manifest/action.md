@@ -1,34 +1,45 @@
-# <a name="action-element"></a><span data-ttu-id="f9487-101">Элемент Action</span><span class="sxs-lookup"><span data-stu-id="f9487-101">Action element</span></span>
+---
+title: Элемент Action в файле манифеста
+description: ''
+ms.date: 11/14/2018
+ms.openlocfilehash: 04c081a02768446fcf587b8b6a7c4e1dcd66012f
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27433273"
+---
+# <a name="action-element"></a><span data-ttu-id="8b785-102">Элемент Action</span><span class="sxs-lookup"><span data-stu-id="8b785-102">Action element</span></span>
 
-<span data-ttu-id="f9487-102">Указывает действие, которое необходимо выполнить, когда пользователь выбирает элемент управления [Button](control.md#button-control) или [Menu](control.md#menu-dropdown-button-controls).</span><span class="sxs-lookup"><span data-stu-id="f9487-102">Specifies the action to perform when the user selects a  [Button](control.md#button-control) or [Menu](control.md#menu-dropdown-button-controls) controls.</span></span>
+<span data-ttu-id="8b785-103">Указывает действие, которое необходимо выполнить, когда пользователь выбирает элемент управления [Button](control.md#button-control) или [Menu](control.md#menu-dropdown-button-controls).</span><span class="sxs-lookup"><span data-stu-id="8b785-103">Specifies the action to perform when the user selects a  [Button](control.md#button-control) or [Menu](control.md#menu-dropdown-button-controls) controls.</span></span>
 
-## <a name="attributes"></a><span data-ttu-id="f9487-103">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="f9487-103">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="8b785-104">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="8b785-104">Attributes</span></span>
 
-|  <span data-ttu-id="f9487-104">Атрибут</span><span class="sxs-lookup"><span data-stu-id="f9487-104">Attribute</span></span>  |  <span data-ttu-id="f9487-105">Обязательный</span><span class="sxs-lookup"><span data-stu-id="f9487-105">Required</span></span>  |  <span data-ttu-id="f9487-106">Описание</span><span class="sxs-lookup"><span data-stu-id="f9487-106">Description</span></span>  |
+|  <span data-ttu-id="8b785-105">Атрибут</span><span class="sxs-lookup"><span data-stu-id="8b785-105">Attribute</span></span>  |  <span data-ttu-id="8b785-106">Обязательный</span><span class="sxs-lookup"><span data-stu-id="8b785-106">Required</span></span>  |  <span data-ttu-id="8b785-107">Описание</span><span class="sxs-lookup"><span data-stu-id="8b785-107">Description</span></span>  |
 |:-----|:-----|:-----|
-|  [<span data-ttu-id="f9487-107">xsi:type</span><span class="sxs-lookup"><span data-stu-id="f9487-107">xsi:type</span></span>](#xsitype)  |  <span data-ttu-id="f9487-108">Да</span><span class="sxs-lookup"><span data-stu-id="f9487-108">Yes</span></span>  | <span data-ttu-id="f9487-109">Тип выполняемого действия</span><span class="sxs-lookup"><span data-stu-id="f9487-109">Action type to take</span></span>|
+|  [<span data-ttu-id="8b785-108">xsi:type</span><span class="sxs-lookup"><span data-stu-id="8b785-108">xsi:type</span></span>](#xsitype)  |  <span data-ttu-id="8b785-109">Да</span><span class="sxs-lookup"><span data-stu-id="8b785-109">Yes</span></span>  | <span data-ttu-id="8b785-110">Тип выполняемого действия</span><span class="sxs-lookup"><span data-stu-id="8b785-110">Action type to take</span></span>|
 
-## <a name="child-elements"></a><span data-ttu-id="f9487-110">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="f9487-110">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="8b785-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="8b785-111">Child elements</span></span>
 
-|  <span data-ttu-id="f9487-111">Элемент</span><span class="sxs-lookup"><span data-stu-id="f9487-111">Element</span></span> |  <span data-ttu-id="f9487-112">Описание</span><span class="sxs-lookup"><span data-stu-id="f9487-112">Description</span></span>  |
+|  <span data-ttu-id="8b785-112">Элемент</span><span class="sxs-lookup"><span data-stu-id="8b785-112">Element</span></span> |  <span data-ttu-id="8b785-113">Описание</span><span class="sxs-lookup"><span data-stu-id="8b785-113">Description</span></span>  |
 |:-----|:-----|
-|  [<span data-ttu-id="f9487-113">FunctionName</span><span class="sxs-lookup"><span data-stu-id="f9487-113">FunctionName</span></span>](#functionname) |    <span data-ttu-id="f9487-114">Указывает имя выполняемой функции.</span><span class="sxs-lookup"><span data-stu-id="f9487-114">Specifies the name of the function to execute.</span></span> |
-|  [<span data-ttu-id="f9487-115">SourceLocation</span><span class="sxs-lookup"><span data-stu-id="f9487-115">SourceLocation</span></span>](#sourcelocation) |    <span data-ttu-id="f9487-116">Указывает расположение исходного файла для этого действия.</span><span class="sxs-lookup"><span data-stu-id="f9487-116">Specifies the source file location for this action.</span></span> |
-| <span data-ttu-id="f9487-117"> [TaskpaneId](#taskpaneid)</span><span class="sxs-lookup"><span data-stu-id="f9487-117"> [TaskpaneId](#taskpaneid)</span></span> | <span data-ttu-id="f9487-118">Определяет идентификатор контейнера области задач.</span><span class="sxs-lookup"><span data-stu-id="f9487-118">Specifies the ID of the task pane container.</span></span>|
-| <span data-ttu-id="f9487-119"> [Title](#title)</span><span class="sxs-lookup"><span data-stu-id="f9487-119"> [Title](#title)</span></span> | <span data-ttu-id="f9487-120">Определяет заголовок области задач.</span><span class="sxs-lookup"><span data-stu-id="f9487-120">Specifies the custom title for the task pane.</span></span>|
-| <span data-ttu-id="f9487-121"> [SupportsPinning](#supportspinning)</span><span class="sxs-lookup"><span data-stu-id="f9487-121"> [SupportsPinning](#supportspinning)</span></span> | <span data-ttu-id="f9487-122">Указывает, что область задач поддерживает закрепление (область задач остается открытой, когда пользователь выбирает другой элемент).</span><span class="sxs-lookup"><span data-stu-id="f9487-122">Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection.</span></span>|
+|  [<span data-ttu-id="8b785-114">FunctionName</span><span class="sxs-lookup"><span data-stu-id="8b785-114">FunctionName</span></span>](#functionname) |    <span data-ttu-id="8b785-115">Указывает имя выполняемой функции.</span><span class="sxs-lookup"><span data-stu-id="8b785-115">Specifies the name of the function to execute.</span></span> |
+|  [<span data-ttu-id="8b785-116">SourceLocation</span><span class="sxs-lookup"><span data-stu-id="8b785-116">SourceLocation</span></span>](#sourcelocation) |    <span data-ttu-id="8b785-117">Указывает расположение исходного файла для этого действия.</span><span class="sxs-lookup"><span data-stu-id="8b785-117">Specifies the source file location for this action.</span></span> |
+| <span data-ttu-id="8b785-118"> [TaskpaneId](#taskpaneid)</span><span class="sxs-lookup"><span data-stu-id="8b785-118"> [TaskpaneId](#taskpaneid)</span></span> | <span data-ttu-id="8b785-119">Определяет идентификатор контейнера области задач.</span><span class="sxs-lookup"><span data-stu-id="8b785-119">Specifies the ID of the task pane container.</span></span>|
+| <span data-ttu-id="8b785-120"> [Title](#title)</span><span class="sxs-lookup"><span data-stu-id="8b785-120"> [Title](#title)</span></span> | <span data-ttu-id="8b785-121">Определяет заголовок области задач.</span><span class="sxs-lookup"><span data-stu-id="8b785-121">Specifies the custom title for the task pane.</span></span>|
+| <span data-ttu-id="8b785-122"> [SupportsPinning](#supportspinning)</span><span class="sxs-lookup"><span data-stu-id="8b785-122"> [SupportsPinning](#supportspinning)</span></span> | <span data-ttu-id="8b785-123">Указывает, что область задач поддерживает закрепление (область задач остается открытой, когда пользователь выбирает другой элемент).</span><span class="sxs-lookup"><span data-stu-id="8b785-123">Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection.</span></span>|
   
 
-## <a name="xsitype"></a><span data-ttu-id="f9487-123">xsi:type</span><span class="sxs-lookup"><span data-stu-id="f9487-123">xsi:type</span></span>
+## <a name="xsitype"></a><span data-ttu-id="8b785-124">xsi:type</span><span class="sxs-lookup"><span data-stu-id="8b785-124">xsi:type</span></span>
 
-<span data-ttu-id="f9487-p101">Этот атрибут указывает действие, которое выполняется, когда пользователь нажимает кнопку. Допустимые значения:</span><span class="sxs-lookup"><span data-stu-id="f9487-p101">This attribute specifies the kind of action performed when the user selects the button. It can be one of the following:</span></span>
+<span data-ttu-id="8b785-p101">Этот атрибут указывает действие, которое выполняется, когда пользователь нажимает кнопку. Допустимые значения:</span><span class="sxs-lookup"><span data-stu-id="8b785-p101">This attribute specifies the kind of action performed when the user selects the button. It can be one of the following:</span></span>
 
 - `ExecuteFunction`
 - `ShowTaskpane`
 
-## <a name="functionname"></a><span data-ttu-id="f9487-126">FunctionName</span><span class="sxs-lookup"><span data-stu-id="f9487-126">FunctionName</span></span>
+## <a name="functionname"></a><span data-ttu-id="8b785-127">FunctionName</span><span class="sxs-lookup"><span data-stu-id="8b785-127">FunctionName</span></span>
 
-<span data-ttu-id="f9487-p102">Обязательный элемент, если атрибуту **xsi:type** присвоено значение ExecuteFunction. Указывает имя выполняемой функции. Функция содержится в файле, указанном в элементе [FunctionFile](functionfile.md).</span><span class="sxs-lookup"><span data-stu-id="f9487-p102">Required element when **xsi:type** is "ExecuteFunction". Specifies the name of the function to execute. The function is contained in the file specified in the [FunctionFile](functionfile.md) element.</span></span>
+<span data-ttu-id="8b785-p102">Обязательный элемент, если атрибуту **xsi:type** присвоено значение ExecuteFunction. Указывает имя выполняемой функции. Функция содержится в файле, указанном в элементе [FunctionFile](functionfile.md).</span><span class="sxs-lookup"><span data-stu-id="8b785-p102">Required element when **xsi:type** is "ExecuteFunction". Specifies the name of the function to execute. The function is contained in the file specified in the [FunctionFile](functionfile.md) element.</span></span>
 
 ```xml
 <Action xsi:type="ExecuteFunction">
@@ -36,9 +47,9 @@
 </Action>
 ```
 
-## <a name="sourcelocation"></a><span data-ttu-id="f9487-130">SourceLocation</span><span class="sxs-lookup"><span data-stu-id="f9487-130">SourceLocation</span></span>
+## <a name="sourcelocation"></a><span data-ttu-id="8b785-131">SourceLocation</span><span class="sxs-lookup"><span data-stu-id="8b785-131">SourceLocation</span></span>
 
-<span data-ttu-id="f9487-p103">Обязательный элемент, если атрибуту **xsi:type** присвоено значение ShowTaskpane. Указывает расположение исходного файла для этого действия. Атрибуту **resid** должно быть присвоено значение атрибута **id** элемента **Url** в элементе **Urls**, включенном в элемент [Resources](resources.md).</span><span class="sxs-lookup"><span data-stu-id="f9487-p103">Required element when  **xsi:type** is "ShowTaskpane". Specifies the source file location for this action. The **resid** attribute must be set to the value of the **id** attribute of a **Url** element in the **Urls** element in the [Resources](resources.md) element.</span></span>
+<span data-ttu-id="8b785-p103">Обязательный элемент, если атрибуту **xsi:type** присвоено значение ShowTaskpane. Указывает расположение исходного файла для этого действия. Атрибуту **resid** должно быть присвоено значение атрибута **id** элемента **Url** в элементе **Urls**, включенном в элемент [Resources](resources.md).</span><span class="sxs-lookup"><span data-stu-id="8b785-p103">Required element when  **xsi:type** is "ShowTaskpane". Specifies the source file location for this action. The **resid** attribute must be set to the value of the **id** attribute of a **Url** element in the **Urls** element in the [Resources](resources.md) element.</span></span>
 
 ```xml
 <Action xsi:type="ShowTaskpane">
@@ -46,14 +57,14 @@
 </Action>
 ```  
 
-## <a name="taskpaneid"></a><span data-ttu-id="f9487-134">TaskpaneId</span><span class="sxs-lookup"><span data-stu-id="f9487-134">TaskpaneId</span></span>
+## <a name="taskpaneid"></a><span data-ttu-id="8b785-135">TaskpaneId</span><span class="sxs-lookup"><span data-stu-id="8b785-135">TaskpaneId</span></span>
 
-<span data-ttu-id="f9487-135">Элемент необязательный, когда для  **xsi:type** задано значение ShowTaskpane.</span><span class="sxs-lookup"><span data-stu-id="f9487-135">Optional element when  **xsi:type** is "ShowTaskpane".</span></span> <span data-ttu-id="f9487-136">Определяет идентификатор контейнера области задач.</span><span class="sxs-lookup"><span data-stu-id="f9487-136">Specifies the ID of the task pane container.</span></span> <span data-ttu-id="f9487-137">Если у вас несколько действий ShowTaskpane и для каждого из них нужна отдельная область, используйте разные элементы **TaskpaneId**.</span><span class="sxs-lookup"><span data-stu-id="f9487-137">When you have multiple "ShowTaskpane" actions, use a different **TaskpaneId** if you want an independent pane for each.</span></span> <span data-ttu-id="f9487-138">Указывайте одинаковые элементы **TaskpaneId** для разных действий, если для последних используется одна и та же область.</span><span class="sxs-lookup"><span data-stu-id="f9487-138">Use the same **TaskpaneId** for  different actions that share the same pane.</span></span> <span data-ttu-id="f9487-139">Когда пользователи выбирают команды, для которых используется один и тот же элемент **TaskpaneId**, контейнер области останется открытым, но содержимое области будет заменено соответствующим дочерним элементом SourceLocation элемента Action.</span><span class="sxs-lookup"><span data-stu-id="f9487-139">When users choose commands that share the same **TaskpaneId**, the pane container will remain open but the contents of the pane will be replaced with the corresponding Action "SourceLocation".</span></span>
+<span data-ttu-id="8b785-136">Элемент необязательный, когда для  **xsi:type** задано значение ShowTaskpane.</span><span class="sxs-lookup"><span data-stu-id="8b785-136">Optional element when  **xsi:type** is "ShowTaskpane".</span></span> <span data-ttu-id="8b785-137">Определяет идентификатор контейнера области задач.</span><span class="sxs-lookup"><span data-stu-id="8b785-137">Specifies the ID of the task pane container.</span></span> <span data-ttu-id="8b785-138">Если у вас несколько действий ShowTaskpane и для каждого из них нужна отдельная область, используйте разные элементы **TaskpaneId**.</span><span class="sxs-lookup"><span data-stu-id="8b785-138">When you have multiple "ShowTaskpane" actions, use a different **TaskpaneId** if you want an independent pane for each.</span></span> <span data-ttu-id="8b785-139">Указывайте одинаковые элементы **TaskpaneId** для разных действий, если для последних используется одна и та же область.</span><span class="sxs-lookup"><span data-stu-id="8b785-139">Use the same **TaskpaneId** for  different actions that share the same pane.</span></span> <span data-ttu-id="8b785-140">Когда пользователи выбирают команды, для которых используется один и тот же элемент **TaskpaneId**, контейнер области останется открытым, но содержимое области будет заменено соответствующим дочерним элементом SourceLocation элемента Action.</span><span class="sxs-lookup"><span data-stu-id="8b785-140">When users choose commands that share the same **TaskpaneId**, the pane container will remain open but the contents of the pane will be replaced with the corresponding Action "SourceLocation".</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f9487-140">Этот элемент не поддерживается в Outlook.</span><span class="sxs-lookup"><span data-stu-id="f9487-140">Note: This element is not supported in Outlook.</span></span>
+> <span data-ttu-id="8b785-141">Этот элемент не поддерживается в Outlook.</span><span class="sxs-lookup"><span data-stu-id="8b785-141">This element is not supported in Outlook.</span></span>
 
-<span data-ttu-id="f9487-141">В следующем примере показаны два действия, для которых используется один и тот же элемент **TaskpaneId**.</span><span class="sxs-lookup"><span data-stu-id="f9487-141">The following example shows two actions that share the same **TaskpaneId**.</span></span>
+<span data-ttu-id="8b785-142">В следующем примере показаны два действия, для которых используется один и тот же элемент **TaskpaneId**.</span><span class="sxs-lookup"><span data-stu-id="8b785-142">The following example shows two actions that share the same **TaskpaneId**.</span></span>
 
 ```xml
 <Action xsi:type="ShowTaskpane">
@@ -67,7 +78,7 @@
 </Action>
 ```  
 
-<span data-ttu-id="f9487-p105">В следующих примерах показаны два действия, использующие другой элемент **TaskpaneId**. Чтобы увидеть эти примеры в контексте, ознакомьтесь с [примером команд простых надстроек](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Simple/Manifest/SimpleAddin.xml).</span><span class="sxs-lookup"><span data-stu-id="f9487-p105">The following examples show two actions that use a different **TaskpaneId**. To see these examples in context, see [Simple Add-in Commands Sample](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Simple/Manifest/SimpleAddin.xml).</span></span>
+<span data-ttu-id="8b785-p105">В следующих примерах показаны два действия, использующие другой элемент **TaskpaneId**. Чтобы увидеть эти примеры в контексте, ознакомьтесь с [примером команд простых надстроек](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Simple/Manifest/SimpleAddin.xml).</span><span class="sxs-lookup"><span data-stu-id="8b785-p105">The following examples show two actions that use a different **TaskpaneId**. To see these examples in context, see [Simple Add-in Commands Sample](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Simple/Manifest/SimpleAddin.xml).</span></span>
 
 ```xml
 <Action xsi:type="ShowTaskpane">
@@ -88,11 +99,11 @@
 </bt:Urls>
 ```  
 
-## <a name="title"></a><span data-ttu-id="f9487-144">Должность</span><span class="sxs-lookup"><span data-stu-id="f9487-144">Title</span></span>
+## <a name="title"></a><span data-ttu-id="8b785-145">Должность</span><span class="sxs-lookup"><span data-stu-id="8b785-145">Title</span></span>
 
-<span data-ttu-id="f9487-145">Элемент необязательный, когда для  **xsi:type** задано значение ShowTaskpane.</span><span class="sxs-lookup"><span data-stu-id="f9487-145">Optional element when  **xsi:type** is "ShowTaskpane".</span></span> <span data-ttu-id="f9487-146">Определяет заголовок области задач для этого действия.</span><span class="sxs-lookup"><span data-stu-id="f9487-146">Specifies the custom title for the task pane for this action.</span></span>
+<span data-ttu-id="8b785-146">Элемент необязательный, когда для  **xsi:type** задано значение ShowTaskpane.</span><span class="sxs-lookup"><span data-stu-id="8b785-146">Optional element when  **xsi:type** is "ShowTaskpane".</span></span> <span data-ttu-id="8b785-147">Определяет заголовок области задач для этого действия.</span><span class="sxs-lookup"><span data-stu-id="8b785-147">Specifies the custom title for the task pane for this action.</span></span>
 
-<span data-ttu-id="f9487-147">В приведенных ниже примерах показаны два действия, для которых используется элемент **Title**.</span><span class="sxs-lookup"><span data-stu-id="f9487-147">The following examples show two different actions that use the **Title** element.</span></span>
+<span data-ttu-id="8b785-148">В приведенных ниже примерах показаны два действия, для которых используется элемент **Title**.</span><span class="sxs-lookup"><span data-stu-id="8b785-148">The following examples show two different actions that use the **Title** element.</span></span>
 
 ```xml
 <Action xsi:type="ShowTaskpane">
@@ -123,12 +134,12 @@
 </bt:ShortStrings>
 ```
 
-## <a name="supportspinning"></a><span data-ttu-id="f9487-148">SupportsPinning</span><span class="sxs-lookup"><span data-stu-id="f9487-148">SupportsPinning</span></span>
+## <a name="supportspinning"></a><span data-ttu-id="8b785-149">SupportsPinning</span><span class="sxs-lookup"><span data-stu-id="8b785-149">SupportsPinning</span></span>
 
-<span data-ttu-id="f9487-149">Элемент необязательный, когда для **xsi:type** задано значение ShowTaskpane.</span><span class="sxs-lookup"><span data-stu-id="f9487-149">Optional element when **xsi:type** is "ShowTaskpane".</span></span> <span data-ttu-id="f9487-150">Родительские элементы [VersionOverrides](versionoverrides.md) должны иметь значение атрибута `xsi:type` `VersionOverridesV1_1`.</span><span class="sxs-lookup"><span data-stu-id="f9487-150">The containing [VersionOverrides](versionoverrides.md) elements must have an `xsi:type` attribute value of `VersionOverridesV1_1`.</span></span> <span data-ttu-id="f9487-151">Включите этот элемент со значением `true` для поддержки закрепления области задач.</span><span class="sxs-lookup"><span data-stu-id="f9487-151">Include this element with a value of `true` to support taskpane pinning.</span></span> <span data-ttu-id="f9487-152">Пользователь сможет закрепить область задач, после чего она будет оставаться открытой при выборе другого элемента.</span><span class="sxs-lookup"><span data-stu-id="f9487-152">The user will be able to "pin" the taskpane, causing it to stay open when changing the selection.</span></span> <span data-ttu-id="f9487-153">Дополнительные сведения см. в статье [Реализация закрепляемой области задач в Outlook](https://docs.microsoft.com/outlook/add-ins/pinnable-taskpane).</span><span class="sxs-lookup"><span data-stu-id="f9487-153">For more information, see [Implement a pinnable taskpane in Outlook](https://docs.microsoft.com/outlook/add-ins/pinnable-taskpane).</span></span>
+<span data-ttu-id="8b785-150">Элемент необязательный, когда для **xsi:type** задано значение ShowTaskpane.</span><span class="sxs-lookup"><span data-stu-id="8b785-150">Optional element when **xsi:type** is "ShowTaskpane".</span></span> <span data-ttu-id="8b785-151">Родительские элементы [VersionOverrides](versionoverrides.md) должны иметь значение атрибута `xsi:type` `VersionOverridesV1_1`.</span><span class="sxs-lookup"><span data-stu-id="8b785-151">The containing [VersionOverrides](versionoverrides.md) elements must have an `xsi:type` attribute value of `VersionOverridesV1_1`.</span></span> <span data-ttu-id="8b785-152">Включите этот элемент со значением `true` для поддержки закрепления области задач.</span><span class="sxs-lookup"><span data-stu-id="8b785-152">Include this element with a value of `true` to support task pane pinning.</span></span> <span data-ttu-id="8b785-153">Пользователь сможет закрепить область задач, после чего она будет оставаться открытой при выборе другого элемента.</span><span class="sxs-lookup"><span data-stu-id="8b785-153">The user will be able to "pin" the task pane, causing it to stay open when changing the selection.</span></span> <span data-ttu-id="8b785-154">Дополнительные сведения см. в статье [Реализация закрепляемой области задач в Outlook](https://docs.microsoft.com/outlook/add-ins/pinnable-taskpane).</span><span class="sxs-lookup"><span data-stu-id="8b785-154">For more information, see [Implement a pinnable task pane in Outlook](https://docs.microsoft.com/outlook/add-ins/pinnable-taskpane).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f9487-154">В настоящее время элемент SupportsPinning поддерживается только в Outlook 2016 для Windows (сборка 7628.1000 или более поздней версии).</span><span class="sxs-lookup"><span data-stu-id="f9487-154">Note: SupportsPinning currently only supported by Outlook 2016 for Windows (build 7628.1000 or later).</span></span>
+> <span data-ttu-id="8b785-155">В настоящее время элемент SupportsPinning поддерживается только в Outlook 2016 для Windows (сборка 7628.1000 или более поздней версии).</span><span class="sxs-lookup"><span data-stu-id="8b785-155">SupportsPinning currently only supported by Outlook 2016 for Windows (build 7628.1000 or later).</span></span>
 
 ```xml
 <Action xsi:type="ShowTaskpane">
