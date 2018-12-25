@@ -1,3 +1,14 @@
+---
+title: Элемент Action в файле манифеста
+description: ''
+ms.date: 11/14/2018
+ms.openlocfilehash: 04c081a02768446fcf587b8b6a7c4e1dcd66012f
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27433273"
+---
 # <a name="action-element"></a>Элемент Action
 
 Указывает действие, которое необходимо выполнить, когда пользователь выбирает элемент управления [Button](control.md#button-control) или [Menu](control.md#menu-dropdown-button-controls).

@@ -1,3 +1,14 @@
+---
+title: Набор обязательных элементов API для надстройки Outlook 1.4
+description: ''
+ms.date: 10/11/2018
+ms.openlocfilehash: be700af413a041502cddd491f304a693c259da28
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27432370"
+---
 # <a name="outlook-add-in-api-requirement-set-14"></a>Набор обязательных элементов API для надстройки Outlook 1.4
 
 Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.
