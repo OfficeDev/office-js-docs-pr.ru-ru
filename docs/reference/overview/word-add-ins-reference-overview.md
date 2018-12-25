@@ -1,3 +1,14 @@
+---
+title: Обзор API JavaScript для Word
+description: ''
+ms.date: 10/09/2018
+ms.openlocfilehash: fb45b4197b464f1bf9799a557be0dd3c2881c63d
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27433854"
+---
 # <a name="word-javascript-api-overview"></a>Обзор API JavaScript для Word
 
 Word предоставляет большой набор API. Вы можете использовать эти API для создания надстроек, взаимодействующих с контентом и метаданными документов. С помощью этих API вы сможете создавать привлекательные приложения, интегрируемые с Word и расширяющие возможности этой программы. Вы можете импортировать и экспортировать контент, собирать новые документы на основе различных источников данных, выполнять интеграцию с рабочими процессами документов и создавать пользовательские решения для работы с документами.
@@ -116,7 +127,7 @@ Word.run(function (context) {
 
 ## <a name="word-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Word
 
-Наборы обязательных элементов — это именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Подробнее о наборах обязательных элементов API JavaScript для Word см. в статье [Наборы требований API JavaScript для Word](../requirement-sets/word-api-requirement-sets.md).
+Наборы требований — это именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Подробнее о наборах обязательных элементов API JavaScript для Word см. в статье [Наборы требований API JavaScript для Word](../requirement-sets/word-api-requirement-sets.md).
 
 ## <a name="word-javascript-api-reference"></a>Справочные материалы по API JavaScript для Word
 

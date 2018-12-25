@@ -1,6 +1,17 @@
-# <a name="word-javascript-api-requirement-sets"></a>Наборы требований API JavaScript для Word
+---
+title: Наборы обязательных элементов API JavaScript для Word
+description: ''
+ms.date: 11/14/2018
+ms.openlocfilehash: 061d9d9ddd7ad6ba9009e6f0f468050c369f5571
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27434015"
+---
+# <a name="word-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Word
 
-Наборы требований — это именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](https://docs.microsoft.com/office/dev/add-ins/develop/office-versions-and-requirement-sets).
+Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](https://docs.microsoft.com/office/dev/add-ins/develop/office-versions-and-requirement-sets).
 
 Надстройки Word работают в нескольких версиях Office, включая Office 2016 для Windows, Office для iPad, Office для Mac и Office Online. В приведенной ниже таблице перечислены наборы требований Word, ведущие приложения Office, которые их поддерживают, а также номера сборок или версий для этих приложений.
 
@@ -33,7 +44,7 @@
 
 Ниже перечислены новые возможности API JavaScript для Word в наборе требований 1.3. 
 
-|Объект| Новые возможности| Описание|Набор требований| 
+|Объект| Новые возможности| Описание|Набор обязательных элементов| 
 |:-----|-----|:----|:----| 
 |[application](/javascript/api/word/word.application)|_Метод_ > createDocument(base64File: string) | Создает документ с помощью DOCX-файла с кодировкой base64. Только для чтения.|1.3|
 |[body](/javascript/api/word/word.body)|_Связь_ > lists|Возвращает коллекцию объектов списков в основном тексте. Только для чтения.|1.3|

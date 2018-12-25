@@ -1,3 +1,14 @@
+---
+title: Наборы обязательных элементов API JavaScript для Outlook
+description: ''
+ms.date: 12/04/2018
+ms.openlocfilehash: 3d2b17de4e1bc8510b06901b4cfd1949d9490564
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27433028"
+---
 # <a name="outlook-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Outlook
 
 Для надстроек Outlook требуются определенные версии API, которые указываются в элементе [Requirements](/office/dev/add-ins/reference/manifest/requirements) их [манифестов](https://docs.microsoft.com/office/dev/add-ins/develop/add-in-manifests). Надстройки Outlook всегда включают элемент [Set](/office/dev/add-ins/reference/manifest/set), где для атрибута `Name` задано значение `Mailbox`, а в атрибуте `MinVersion` указан минимальный набор обязательных элементов API, поддерживающий сценарии надстройки.

@@ -1,3 +1,14 @@
+---
+title: Наборы обязательных элементов для команд надстроек
+description: ''
+ms.date: 11/21/2018
+ms.openlocfilehash: d0da9d9584a899658ab73e1373589a6d824f0c3e
+ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "27432783"
+---
 # <a name="add-in-commands-requirement-sets"></a>Наборы обязательных элементов для команд надстроек
 
 Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](https://docs.microsoft.com/office/dev/add-ins/develop/office-versions-and-requirement-sets).
