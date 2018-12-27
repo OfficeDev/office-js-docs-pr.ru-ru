@@ -1,13 +1,13 @@
 ---
 title: Работа с несколькими диапазонами одновременно в надстройках Excel
 description: ''
-ms.date: 09/04/2018
-ms.openlocfilehash: f1217fc76d14269882a73ec5eb7758e519563456
-ms.sourcegitcommit: 6870f0d96ed3da2da5a08652006c077a72d811b6
+ms.date: 12/26/2018
+ms.openlocfilehash: ab7cd9757adaedf2b6cc43fdcc604b98a60b6ecd
+ms.sourcegitcommit: 8d248cd890dae1e9e8ef1bd47e09db4c1cf69593
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "27383227"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "27447234"
 ---
 # <a name="work-with-multiple-ranges-simultaneously-in-excel-add-ins-preview"></a>Работа с несколькими диапазонами одновременно в надстройках Excel (предварительная версия)
 
@@ -85,7 +85,7 @@ ms.locfileid: "27383227"
 - `areaCount`. Общее количество диапазонов в `RangeAreas`.
 - `getOffsetRangeAreas`. Действует аналогично методу [Range.getOffsetRange](/javascript/api/excel/excel.range#getoffsetrange-rowoffset--columnoffset-), за исключением того, что возвращается объект `RangeAreas`, содержащий диапазоны, каждый из которых смещен относительно одного из диапазонов в исходном объекте `RangeAreas`.
 
-## <a name="create-rangeareas-and-set-properties"></a>Создание RangeAreas и установка свойств
+## <a name="create-rangeareas"></a>Создание RangeAreas
 
 Объект `RangeAreas` можно создать двумя основными способами:
 
@@ -100,7 +100,9 @@ ms.locfileid: "27383227"
 > [!WARNING]
 > Не пытайтесь напрямую добавлять или удалять элементы из массива `RangeAreas.areas.items`. Это приведет к нежелательному поведению кода.  Например, существует возможность принудительно добавить дополнительный объект `Range` в массив, но это приведет к ошибкам, поскольку свойства и методы `RangeAreas` действуют, как будто новый элемент не был добавлен. Например, свойство `areaCount` не включает диапазоны, принудительно добавленные таким образом, а `RangeAreas.getItemAt(index)` вызывает ошибку, если `index` больше, чем `areasCount-1`.  Аналогичным образом, удаление объекта `Range` в массиве `RangeAreas.areas.items` путем получения ссылки на него и вызова его метода `Range.delete` приводит к ошибкам: хотя объект `Range` *удален*, свойства и методы родительского объекта `RangeAreas` будут действовать (или пытаться действовать), как будто он еще существует. Например, если код вызывает метод `RangeAreas.calculate`, Office попытается рассчитать диапазон, но это завершится ошибкой, поскольку объект range отсутствует.
 
-Установка свойства для `RangeAreas` задает соответствующее свойство для всех диапазонов в коллекции `RangeAreas.areas`.
+## <a name="set-properties-on-multiple-ranges"></a>Задание свойств для нескольких диапазонов
+
+Установка свойства для объекта `RangeAreas` задает соответствующее свойство для всех диапазонов в коллекции `RangeAreas.areas`.
 
 Ниже приведен пример установки свойства в нескольких диапазонах. Функция выделяет диапазоны **F3:F5** и **H3:H5**.
 
@@ -114,106 +116,19 @@ Excel.run(function (context) {
 })
 ```
 
-Этот пример применяется к сценариям, в которых можно жестко задать адреса диапазонов, передаваемых в `getRanges`, или легко рассчитать их во время выполнения. Ниже перечислены некоторые сценарии, в которых это возможно: 
+Этот пример применяется к сценариям, в которых можно жестко задать адреса диапазонов, передаваемых в `getRanges`, или легко рассчитать их во время выполнения. Ниже перечислены некоторые сценарии, в которых это возможно:
 
 - Код выполняется в контексте известного шаблона.
 - Код выполняется в контексте импортированных данных, в котором известна схема данных.
 
-Если при создании кода неизвестно, с какими диапазонами придется работать, необходимо обнаружить их во время выполнения. В следующем разделе рассматриваются эти сценарии.
+## <a name="get-special-cells-from-multiple-ranges"></a>Получение специальных ячеек из нескольких диапазонов
 
-### <a name="discover-range-areas-programmatically"></a>Обнаружение областей диапазона программным способом
+Методы `getSpecialCells` и `getSpecialCellsOrNullObject` для объекта `RangeAreas` действуют аналогично методам с теми же названиями для объекта `Range`. Эти методы возвращают ячейки с указанными характеристиками из всех диапазонов в коллекции `RangeAreas.areas`. Дополнительные сведения о специальных ячейках см. в разделе [Поиск специальных ячеек в диапазоне](excel-add-ins-ranges-advanced.md#find-special-cells-within-a-range-preview).
 
-Методы `Range.getSpecialCells()` и `Range.getSpecialCellsOrNullObject()` позволяют во время выполнения обнаруживать диапазоны, с которыми нужно работать, на основе характеристик ячеек и типа значений в ячейках. Подписи методов из файла типов данных TypeScript:
+При вызове метода `getSpecialCells` или `getSpecialCellsOrNullObject` для объекта `RangeAreas`:
 
-```typescript
-getSpecialCells(cellType: Excel.SpecialCellType, cellValueType?: Excel.SpecialCellValueType): Excel.RangeAreas;
-```
-
-```typescript
-getSpecialCellsOrNullObject(cellType: Excel.SpecialCellType, cellValueType?: Excel.SpecialCellValueType): Excel.RangeAreas;
-```
-
-Ниже приведен пример использования первого из них. Вот что нужно знать об этом коде:
-
-- Он ограничивает часть листа, в которой требуется выполнять поиск, путем вызова сначала метода `Worksheet.getUsedRange`, а затем метода `getSpecialCells` только для этого диапазона.
-- В качестве параметра для `getSpecialCells` он передает строковое представление значения из перечисления `Excel.SpecialCellType`. Некоторые другие значения, которые могут быть переданы вместо этого: "Blanks" для пустых ячеек, "Constants" для ячеек со значениями литералов вместо формул и "SameConditionalFormat" для ячеек, у которых такое же условное форматирование, как и у первой ячейки в `usedRange`. Первая ячейка — это верхняя крайняя ячейка слева. Полный список значений перечисления см. в [бета-версии office.d.ts](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts).
-- Метод `getSpecialCells` возвращает объект `RangeAreas`, поэтому все ячейки с формулами окрашены розовым цветом даже в том случае, если они не являются смежными. 
-
-```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
-    var usedRange = sheet.getUsedRange();
-    var formulaRanges = usedRange.getSpecialCells("Formulas");
-    formulaRanges.format.fill.color = "pink";
-
-    return context.sync();
-})
-```
-
-В некоторых случаях диапазон не содержит *ни одной* ячейки с целевой характеристикой. Если метод `getSpecialCells` не находит ни одной такой ячейки, он выдает ошибку **ItemNotFound**. Это приведет к переадресации потока управления к блоку/методу `catch`, если таковой существует. Если нет, ошибка останавливает исполнение функции. Могут существовать сценарии, в которых выдача ошибки – это именно то, что должно происходить при отсутствии ячейки с целевой характеристикой. 
-
-Если в сценариях отсутствие соответствующих ячеек является нормальной, но редкой ситуацией, ваш код должен проверить наличие такой возможности и корректно выполнить действие без выдачи ошибки. Для этих сценариев следует использовать метод `getSpecialCellsOrNullObject` и протестировать свойство `RangeAreas.isNullObject`. Ниже приведен пример. Вот что нужно знать об этом коде:
-
-- Метод `getSpecialCellsOrNullObject` всегда возвращает прокси-объект, поэтому он не может иметь значение `null` в обычном смысле JavaScript. Но если соответствующие ячейки не обнаружены, свойству `isNullObject` объекта присваивается значение `true`.
-- Он вызывает `context.sync` *перед* тестированием свойства `isNullObject`. Это требование для всех методов и свойств `*OrNullObject`, так как всегда нужно загружать и синхронизировать свойство, чтобы его прочесть. Однако необязательно *явно* загружать свойство `isNullObject`. Оно автоматически загружается с помощью `context.sync`, даже если `load` не вызывается для объекта. Дополнительные сведения см. в разделе [\*OrNullObject](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-advanced-concepts#42ornullobject-methods).
-- Этот код можно проверить, выбрав сначала диапазон без ячеек с формулами и запустив его. Затем следует выбрать диапазон, содержащий по крайней мере одну ячейку с формулой, и снова запустить его.
-
-```js
-Excel.run(function (context) {
-    var range = context.workbook.getSelectedRange();
-    var formulaRanges = range.getSpecialCellsOrNullObject("Formulas");
-    return context.sync()
-        .then(function() {
-            if (formulaRanges.isNullObject) {
-                console.log("No cells have formulas");
-            }
-            else {
-                formulaRanges.format.fill.color = "pink";
-            }
-        })
-        .then(context.sync);
-})
-```
-
-Для удобства во всех других примерах в этой статье используйте метод `getSpecialCells` вместо `getSpecialCellsOrNullObject`.
-
-#### <a name="narrow-the-target-cells-with-cell-value-types"></a>Ограничение целевых ячеек с помощью типа значений ячеек
-
-Существует необязательный второй параметр типа перечисления `Excel.SpecialCellValueType`, который дополнительно ограничивает целевые ячейки. Его можно использовать только в том случае, если передается значение "Formulas" или "Constants" для `getSpecialCells` или `getSpecialCellsOrNullObject`. Этот параметр указывает, что требуются только ячейки с определенными типами значений. Существует четыре основных типа: "Error", "Logical" (логический), "Numbers" и "Text" (у перечисления есть другие значения помимо этих четырех, которые рассматриваются ниже). Ниже приведен пример. Вот что нужно знать об этом коде:
-
-- Он выделяет только ячейки с числовым значением литерала. Он не выделяет ячейки с формулой (даже если результат является числом), логическим значением, текстовым значением или ячейки с состоянием ошибки.
-- Чтобы протестировать код, убедитесь, что в листе есть ячейки с числовыми значениями литералов, ячейки с другими значениями литералов и ячейки с формулами.
-
-```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
-    var usedRange = sheet.getUsedRange();
-    var constantNumberRanges = usedRange.getSpecialCells("Constants", "Numbers");
-    constantNumberRanges.format.fill.color = "pink";
-
-    return context.sync();
-})
-```
-
-Иногда требуется работать с ячейками, имеющими несколько типов значений, например со всеми ячейками с текстовыми значениями и всеми ячейками с логическими значениями ("Logical"). Перечисление `Excel.SpecialCellValueType` содержит значения, позволяющие объединять типы. Например, "LogicalText" обрабатывает все ячейки с логическими и текстовыми значениями. Можно объединить любые два или три из четырех основных типов. Имена этих значений перечисления, объединяющих основные типы, всегда располагаются в алфавитном порядке. Поэтому для объединения ячеек со значениями ошибок, текстовыми и логическими значениями используйте параметр "ErrorLogicalText", а не "LogicalErrorText" или "TextErrorLogical". Параметр по умолчанию "All" объединяет все четыре типа. В приведенном ниже примере выделены все ячейки с формулами, которые производят числовые или логические значения:
-
-```js
-Excel.run(function (context) {
-    var sheet = context.workbook.worksheets.getActiveWorksheet();
-    var usedRange = sheet.getUsedRange();
-    var formulaLogicalNumberRanges = usedRange.getSpecialCells("Formulas", "LogicalNumbers");
-    formulaLogicalNumberRanges.format.fill.color = "pink";
-
-    return context.sync();
-})
-```
-
-> [!NOTE]
-> Параметр `Excel.SpecialCellValueType` можно использовать, только если параметру `Excel.SpecialCellType` присвоено значение "Formulas" или "Constants".
-
-### <a name="get-rangeareas-within-rangeareas"></a>Получение объектов RangeAreas в RangeAreas
-
-У типа `RangeAreas` также есть методы `getSpecialCells` и `getSpecialCellsOrNullObject`, которые используют те же два параметра. Эти методы возвращают все целевые ячейки из всех диапазонов в коллекции `RangeAreas.areas`. Существует одно небольшое отличие в поведении методов при вызове объекта `RangeAreas` вместо объекта `Range`: если вы передаете "SameConditionalFormat" в качестве первого параметра, метод возвращает все ячейки с таким же условным форматированием, как у крайней левой верхней ячейки *первого диапазона в коллекции `RangeAreas.areas`*. То же касается и "SameDataValidation": при передаче к `Range.getSpecialCells` возвращаются все ячейки с таким же правилом проверки данных, как у крайней левой верхней ячейки *диапазона*.  Но при передаче к `RangeAreas.getSpecialCells` возвращаются все ячейки с таким же правилом проверки данных, как у крайней левой верхней ячейки *первого диапазона в коллекции `RangeAreas.areas`*.
+- Если в качестве первого параметра передается `Excel.SpecialCellType.sameConditionalFormat`, метод возвращает все ячейки с таким же условным форматированием, как у крайней левой верхней ячейки первого диапазона в коллекции `RangeAreas.areas`.
+- Если в качестве первого параметра передается `Excel.SpecialCellType.sameDataValidation`, метод возвращает все ячейки с таким же правилом проверки данных, как у крайней левой верхней ячейки первого диапазона в коллекции `RangeAreas.areas`.
 
 ## <a name="read-properties-of-rangeareas"></a>Чтение свойств RangeAreas
 
@@ -244,7 +159,7 @@ Excel.run(function (context) {
 - Свойства, не являющиеся логическими, за исключением свойства `address`, возвращают значение `null`, кроме тех случаев, когда соответствующее свойство для всех диапазонов элементов обладает тем же значением.
 - Свойство `address` возвращает строку с адресами диапазонов элементов, разделенными запятыми.
 
-Например, в приведенном ниже коде создается объект `RangeAreas`, в котором только один диапазон является целым столбцом и только один залит розовым цветом. Консоль отобразит значение `null` для цвета заливки, `false` для свойства `isEntireRow` и "Sheet1!F3:F5, Sheet1!H:H" (при условии, что имя листа — "Sheet1") для свойства `address`. 
+Например, в приведенном ниже коде создается объект `RangeAreas`, в котором только один диапазон является целым столбцом и только один залит розовым цветом. Консоль отобразит значение `null` для цвета заливки, `false` для свойства `isEntireRow` и "Sheet1!F3:F5, Sheet1!H:H" (при условии, что имя листа — "Sheet1") для свойства `address`.
 
 ```js
 Excel.run(function (context) {
@@ -268,6 +183,6 @@ Excel.run(function (context) {
 
 ## <a name="see-also"></a>См. также
 
-- [Основные концепции программирования с помощью API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)
-- [Объект Range (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.range)
-- [Объект RangeAreas (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.rangeareas) (эта ссылка может не работать, пока API находится в предварительной версии. В качестве альтернативы см. [бета-версию office.d.ts](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts)).
+- [Основные концепции программирования с помощью API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
+- [Работа с диапазонами с использованием API JavaScript для Excel (основные задачи)](excel-add-ins-ranges.md)
+- [Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)](excel-add-ins-ranges-advanced.md)

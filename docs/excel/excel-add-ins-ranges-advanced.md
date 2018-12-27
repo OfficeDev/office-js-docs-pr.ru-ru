@@ -1,13 +1,13 @@
 ---
 title: Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 description: ''
-ms.date: 12/18/2018
-ms.openlocfilehash: 6d3da1e7eff4e61ae1b88213d0b432581d8f6a8a
-ms.sourcegitcommit: 6870f0d96ed3da2da5a08652006c077a72d811b6
+ms.date: 12/26/2018
+ms.openlocfilehash: 43c32bb8f579a231eae289df4e026b45afac6dcb
+ms.sourcegitcommit: 8d248cd890dae1e9e8ef1bd47e09db4c1cf69593
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "27383241"
+ms.lasthandoff: 12/27/2018
+ms.locfileid: "27447241"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api-advanced"></a>Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 
@@ -69,6 +69,116 @@ Excel.run(function (context) {
 
 Объект `RangeAreas` позволяет вашей надстройке выполнять операции над несколькими диапазонами одновременно. Эти диапазоны могут быть смежными, но это необязательно. Объект `RangeAreas` подробнее рассматривается в статье [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md).
 
+## <a name="find-special-cells-within-a-range-preview"></a>Поиск специальных ячеек в диапазоне (предварительная версия)
+
+> [!NOTE]
+> Методы `getSpecialCells` и `getSpecialCellsOrNullObject` в настоящее время доступны только в общедоступной предварительной версии (бета-версии). Для применения этой функции необходимо использовать бета-версию библиотеки в CDN Office.js: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
+> Если вы используете TypeScript или ваш редактор кода использует файлы определения типа TypeScript для IntelliSense, воспользуйтесь https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts.
+
+Методы `Range.getSpecialCells()` и `Range.getSpecialCellsOrNullObject()` находят диапазоны с учетом характеристик ячеек и типов значений ячеек. Оба этих метода возвращают объекты `RangeAreas`. Подписи методов из файла типов данных TypeScript:
+
+```typescript
+getSpecialCells(cellType: Excel.SpecialCellType, cellValueType?: Excel.SpecialCellValueType): Excel.RangeAreas;
+```
+
+```typescript
+getSpecialCellsOrNullObject(cellType: Excel.SpecialCellType, cellValueType?: Excel.SpecialCellValueType): Excel.RangeAreas;
+```
+
+В приведенном ниже примере используется метод `getSpecialCells`, чтобы найти все ячейки с формулами. Вот что нужно знать об этом коде:
+
+- Он ограничивает часть листа, в которой требуется выполнять поиск, путем вызова сначала метода `Worksheet.getUsedRange`, а затем метода `getSpecialCells` только для этого диапазона.
+- Метод `getSpecialCells` возвращает объект `RangeAreas`, поэтому все ячейки с формулами окрашены розовым цветом даже в том случае, если они не являются смежными.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+    var usedRange = sheet.getUsedRange();
+    var formulaRanges = usedRange.getSpecialCells(Excel.SpecialCellType.formulas);
+    formulaRanges.format.fill.color = "pink";
+
+    return context.sync();
+})
+```
+
+Если в диапазоне нет ячеек с целевыми характеристиками, метод `getSpecialCells` выдает ошибку **ItemNotFound**. Это приведет к переадресации потока управления к блоку `catch`, если таковой существует. Если блок `catch` отсутствует, ошибка останавливает исполнение функции.
+
+Если ожидается, что всегда должны существовать ячейки с целевыми характеристиками, скорее всего вы захотите, чтобы код выдавал ошибку при их отсутствии. Если отсутствие соответствующих ячеек является допустимым сценарием, ваш код должен проверить наличие такой возможности и корректно выполнить действие без выдачи ошибки. Добиться такого поведения можно с помощью метода `getSpecialCellsOrNullObject` и возвращаемого им свойства `isNullObject`. Этот шаблон используется в приведенном ниже примере. Вот что нужно знать об этом коде:
+
+- Метод `getSpecialCellsOrNullObject` всегда возвращает прокси-объект, поэтому он не может иметь значение `null` в обычном смысле JavaScript. Но если соответствующие ячейки не обнаружены, свойству `isNullObject` объекта присваивается значение `true`.
+- Он вызывает `context.sync` *перед* тестированием свойства `isNullObject`. Это требование для всех методов и свойств `*OrNullObject`, так как всегда нужно загружать и синхронизировать свойство, чтобы его прочесть. Однако необязательно *явно* загружать свойство `isNullObject`. Оно автоматически загружается с помощью `context.sync`, даже если `load` не вызывается для объекта. Дополнительные сведения см. в разделе [\*OrNullObject](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-advanced-concepts#42ornullobject-methods).
+- Этот код можно проверить, выбрав сначала диапазон без ячеек с формулами и запустив его. Затем следует выбрать диапазон, содержащий по крайней мере одну ячейку с формулой, и снова запустить его.
+
+```js
+Excel.run(function (context) {
+    var range = context.workbook.getSelectedRange();
+    var formulaRanges = range.getSpecialCellsOrNullObject(Excel.SpecialCellType.formulas);
+    return context.sync()
+        .then(function() {
+            if (formulaRanges.isNullObject) {
+                console.log("No cells have formulas");
+            }
+            else {
+                formulaRanges.format.fill.color = "pink";
+            }
+        })
+        .then(context.sync);
+})
+```
+
+Для удобства во всех других примерах в этой статье используйте метод `getSpecialCells` вместо `getSpecialCellsOrNullObject`.
+
+### <a name="narrow-the-target-cells-with-cell-value-types"></a>Ограничение целевых ячеек с помощью типа значений ячеек
+
+Методы `Range.getSpecialCells()` и `Range.getSpecialCellsOrNullObject()` принимают необязательный второй параметр, используемый для дополнительного ограничения целевых ячеек. Этот второй параметр `Excel.SpecialCellValueType` используется для указания того, что требуются только ячейки, содержащие определенные типы значений.
+
+> [!NOTE]
+> Параметр `Excel.SpecialCellValueType` можно использовать, только если для параметра `Excel.SpecialCellType` задано значение `Excel.SpecialCellType.formulas` или `Excel.SpecialCellType.constants`.
+
+#### <a name="test-for-a-single-cell-value-type"></a>Тестирование для ячеек с одним типом значений
+
+Для перечисления `Excel.SpecialCellValueType` существует четыре основных типа (в дополнение к другим объединенным значениям, описанным ниже в этом разделе):
+
+- `Excel.SpecialCellValueType.errors`
+- `Excel.SpecialCellValueType.logical` (означает логическое значение)
+- `Excel.SpecialCellValueType.numbers`
+- `Excel.SpecialCellValueType.text`
+
+В приведенном ниже примере выполняется поиск специальных ячеек, являющихся числовыми константами, и их окрашивание в розовый цвет. Вот что нужно знать об этом коде:
+
+- Он выделяет только ячейки с числовым значением литерала. Он не выделяет ячейки с формулой (даже если результат является числом), логическим значением, текстовым значением или ячейки с состоянием ошибки.
+- Чтобы протестировать код, убедитесь, что в листе есть ячейки с числовыми значениями литералов, ячейки с другими значениями литералов и ячейки с формулами.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+    var usedRange = sheet.getUsedRange();
+    var constantNumberRanges = usedRange.getSpecialCells(
+        Excel.SpecialCellType.constants,
+        Excel.SpecialCellValueType.numbers);
+    constantNumberRanges.format.fill.color = "pink";
+
+    return context.sync();
+})
+```
+
+#### <a name="test-for-multiple-cell-value-types"></a>Тестирование для ячеек с несколькими типами значений
+
+Иногда требуется работать с ячейками, имеющими несколько типов значений, например со всеми ячейками с текстовыми значениями и всеми ячейками с логическими значениями (`Excel.SpecialCellValueType.logical`). Для перечисления `Excel.SpecialCellValueType` существуют значения с объединенными типами. Например, `Excel.SpecialCellValueType.logicalText` обрабатывает все ячейки с логическими и текстовыми значениями. `Excel.SpecialCellValueType.all` является значением по умолчанию, которое не ограничивает возвращаемые типы значений ячеек. В приведенном ниже примере окрашены все ячейки с формулами, которые производят числовое или логическое значение.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+    var usedRange = sheet.getUsedRange();
+    var formulaLogicalNumberRanges = usedRange.getSpecialCells(
+        Excel.SpecialCellType.formulas,
+        Excel.SpecialCellValueType.logicalNumbers);
+    formulaLogicalNumberRanges.format.fill.color = "pink";
+
+    return context.sync();
+})
+```
+
 ## <a name="copy-and-paste-preview"></a>Копирование и вставка (предварительная версия)
 
 > [!NOTE]
@@ -76,7 +186,8 @@ Excel.run(function (context) {
 > Если вы используете TypeScript или ваш редактор кода использует файлы определения типа TypeScript для IntelliSense, воспользуйтесь https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts.
 
 Функция `copyFrom` диапазона реплицирует поведение копирования и вставки пользовательского интерфейса Excel. Диапазон объекта, который вызывается `copyFrom`, является назначением.
-Источник для копирования передается как диапазон или адрес строки, представляющий диапазон. В следующем примере кода копируются данные из **A1:E1** в диапазон, начиная с **G1** (который заканчивается вставкой в **G1:K1**).
+Источник для копирования передается как диапазон или адрес строки, представляющий диапазон.
+В следующем примере кода копируются данные из **A1:E1** в диапазон, начиная с **G1** (который заканчивается вставкой в **G1:K1**).
 
 ```js
 Excel.run(function (context) {
@@ -90,15 +201,15 @@ Excel.run(function (context) {
 У функции `Range.copyFrom` есть три необязательных параметра.
 
 ```TypeScript
-copyFrom(sourceRange: Range | string, copyType?: "All" | "Formulas" | "Values" | "Formats", skipBlanks?: boolean, transpose?: boolean): void;
+copyFrom(sourceRange: Range | RangeAreas | string, copyType?: Excel.RangeCopyType, skipBlanks?: boolean, transpose?: boolean): void;
 ```
 
 `copyType` указывает, какие данные копируются из источника в назначение.
 
-- `"Formulas"` переносит формулы в ячейках источника и сохраняет относительное положение диапазонов этих формул. Все записи, не являющиеся формулами, копируются в исходном виде.
-- `"Values"` копирует значения данных, а в случае формул — результат формулы.
-- `"Formats"` копирует форматирование диапазона, включая шрифт, цвет и другие параметры форматирования, но без значений.
-- `"All"` (вариант по умолчанию) копирует данные и форматирование, сохраняя формулы ячеек при их обнаружении.
+- `Excel.RangeCopyType.formulas` переносит формулы в ячейках источника и сохраняет относительное положение диапазонов этих формул. Все записи, не являющиеся формулами, копируются в исходном виде.
+- `Excel.RangeCopyType.values` копирует значения данных, а в случае формул — результат формулы.
+- `Excel.RangeCopyType.formats` копирует форматирование диапазона, включая шрифт, цвет и другие параметры форматирования, но без значений.
+- `Excel.RangeCopyType.all` (вариант по умолчанию) копирует данные и форматирование, сохраняя формулы ячеек при их обнаружении.
 
 `skipBlanks` устанавливает, будут ли копироваться пустые ячейки в назначение. Если значение равно true, `copyFrom` пропускает пустые ячейки в диапазоне источника.
 Пропущенные ячейки не перезапишут существующие данные в соответствующих им ячейках конечного диапазона. Значение по умолчанию: false.
@@ -177,3 +288,4 @@ Excel.run(async (context) => {
 
 - [Работа с диапазонами с использованием API JavaScript для Excel](excel-add-ins-ranges.md)
 - [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
+- [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md)
