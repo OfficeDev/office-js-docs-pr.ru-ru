@@ -2,12 +2,12 @@
 title: Устранение ошибок единого входа
 description: ''
 ms.date: 12/08/2017
-ms.openlocfilehash: 42f0bf50e65e10f21df11403f53942cc4753a79b
-ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
+ms.openlocfilehash: d0235f767dd6c41b10d7d594425da603d6a523da
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "27270896"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27457938"
 ---
 # <a name="troubleshoot-error-messages-for-single-sign-on-sso-preview"></a>Устранение ошибок единого входа (предварительная версия)
 
@@ -43,7 +43,7 @@ ms.locfileid: "27270896"
 Надстройка или версия Office не поддерживает API [getAccessTokenAsync](https://docs.microsoft.com/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference).
 
 - Эта версия Office не поддерживает единый вход. Необходимо установить Office 2016 версии 1710 (сборка 8629.nnnn) или выше (эту версию подписки на Office 365 иногда называют "нажми и работай"). Чтобы скачать эту версию, вам может потребоваться принять участие в программе предварительной оценки Office. Дополнительные сведения см. в статье [Примите участие в программе предварительной оценки Office](https://products.office.com/office-insider?tab=tab-1). 
-- В манифесте надстройки отсутствует подходящий раздел [WebApplicationInfo](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/webapplicationinfo?view=office-js).
+- В манифесте надстройки отсутствует подходящий раздел [WebApplicationInfo](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/webapplicationinfo).
 
 Ваша надстройка должна отреагировать на эту ошибку, переключившись на альтернативную систему проверки подлинности пользователя. Дополнительные сведения см. в разделе [Требования и рекомендации](https://docs.microsoft.com/office/dev/add-ins/develop/sso-in-office-add-ins#requirements-and-best-practices).
 
@@ -133,7 +133,7 @@ ms.locfileid: "27270896"
 ### <a name="invalid-or-missing-scope-permission-errors"></a>Ошибки, вызванные недействительными или отсутствующими областями (разрешениями)
 
 - Код на стороне сервера должен отправить отклик `403 Forbidden` клиенту, а тот должен показать пользователю понятное сообщение. При возможности также следует записать ошибку в консоли или журнале.
-- Убедитесь, что в разделе [Scopes](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/scopes?view=office-js) манифеста надстройки указаны все необходимые разрешения. Кроме того, убедитесь, что в регистрационных данных веб-службы надстройки указаны те же разрешения. Кроме того, проверьте наличие ошибок правописания. Дополнительные сведения см. в статьях [Регистрация надстройки в конечной точке Azure AD версии 2.0](create-sso-office-add-ins-aspnet.md#register-the-add-in-with-azure-ad-v20-endpoint) (ASP.NET) или [Регистрация надстройки в конечной точке Azure AD версии 2.0](create-sso-office-add-ins-nodejs.md#register-the-add-in-with-azure-ad-v20-endpoint) (Node JS) и [Конфигурация надстройки](create-sso-office-add-ins-aspnet.md#configure-the-add-in) (ASP.NET) или [Конфигурация надстройки](create-sso-office-add-ins-nodejs.md#configure-the-add-in) (Node JS).
+- Убедитесь, что в разделе [Scopes](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/scopes) манифеста надстройки указаны все необходимые разрешения. Кроме того, убедитесь, что в регистрационных данных веб-службы надстройки указаны те же разрешения. Кроме того, проверьте наличие ошибок правописания. Дополнительные сведения см. в статьях [Регистрация надстройки в конечной точке Azure AD версии 2.0](create-sso-office-add-ins-aspnet.md#register-the-add-in-with-azure-ad-v20-endpoint) (ASP.NET) или [Регистрация надстройки в конечной точке Azure AD версии 2.0](create-sso-office-add-ins-nodejs.md#register-the-add-in-with-azure-ad-v20-endpoint) (Node JS) и [Конфигурация надстройки](create-sso-office-add-ins-aspnet.md#configure-the-add-in) (ASP.NET) или [Конфигурация надстройки](create-sso-office-add-ins-nodejs.md#configure-the-add-in) (Node JS).
 
 ### <a name="expired-or-invalid-token-errors-when-calling-microsoft-graph"></a>Ошибки, вызванные просроченным или недействительным токеном при вызове Microsoft Graph
 

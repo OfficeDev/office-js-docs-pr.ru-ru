@@ -2,12 +2,12 @@
 title: Добавление ссылок на библиотеку JavaScript API для Office из сети доставки содержимого (CDN)
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: fec75531997a6b496b442b72d8139a9c98f37cd5
-ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
+ms.openlocfilehash: 9943af86419652e5f5e89b1741b32b4e0da15e77
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "27270840"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27457623"
 ---
 # <a name="referencing-the-javascript-api-for-office-library-from-its-content-delivery-network-cdn"></a>Добавление ссылок на библиотеку JavaScript API для Office из сети доставки содержимого (CDN)
 
@@ -18,7 +18,7 @@ ms.locfileid: "27270840"
 > npm install --save-dev @types/office-js
 > ```
 
-Библиотека [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js) состоит из файла Office.js и связанных JS-файлов ведущего приложения, например Excel-15.js и Outlook-15.js. 
+Библиотека [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office) состоит из файла Office.js и связанных JS-файлов ведущего приложения, например Excel-15.js и Outlook-15.js. 
 
 
 Простейший способ добавить ссылку на API — использовать нашу сеть доставки содержимого (CDN), добавив следующий код `<script>` в тег `<head>` страницы:  
@@ -37,5 +37,5 @@ ms.locfileid: "27270840"
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)    
-- [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js)
+- [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office)
     

@@ -2,12 +2,12 @@
 title: Работа с содержимым страницы в OneNote
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: f44c58ac9cb3502889e280c63538603901b63a88
-ms.sourcegitcommit: 86724e980f720ed05359c9525948cb60b6f10128
+ms.openlocfilehash: aef9d80ebb37dacd2c3b5f2ec9d33cb0164d8452
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "26237416"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27457616"
 ---
 # <a name="work-with-onenote-page-content"></a>Работа с содержимым страницы в OneNote 
 
@@ -22,14 +22,14 @@ ms.locfileid: "26237416"
 
 Чтобы создать пустую страницу OneNote, воспользуйтесь одним из указанных ниже методов.
 
-- [Section.addPage](https://docs.microsoft.com/javascript/api/onenote/onenote.section?view=office-js#addpage-title-)
-- [Page.insertPageAsSibling](https://docs.microsoft.com/javascript/api/onenote/onenote.section?view=office-js#insertsectionassibling-location--title-)
+- [Section.addPage](https://docs.microsoft.com/javascript/api/onenote/onenote.section#addpage-title-)
+- [Page.insertPageAsSibling](https://docs.microsoft.com/javascript/api/onenote/onenote.section#insertsectionassibling-location--title-)
 
 Затем используйте методы в указанных ниже объектах для работы с содержимым страницы, например Page.addOutline и Outline.appendHtml. 
 
-- [Страница](https://docs.microsoft.com/javascript/api/onenote/onenote.page?view=office-js)
-- [Структура](https://docs.microsoft.com/javascript/api/onenote/onenote.outline?view=office-js)
-- [Абзац](https://docs.microsoft.com/javascript/api/onenote/onenote.paragraph?view=office-js)
+- [Страница](https://docs.microsoft.com/javascript/api/onenote/onenote.page)
+- [Структура](https://docs.microsoft.com/javascript/api/onenote/onenote.outline)
+- [Абзац](https://docs.microsoft.com/javascript/api/onenote/onenote.paragraph)
 
 Для представления содержимого и структуры страницы OneNote используется HTML. Для создания или обновления содержимого страницы поддерживается только подмножество HTML, как описано ниже.
 
@@ -58,6 +58,6 @@ ms.locfileid: "26237416"
 ## <a name="see-also"></a>См. также
 
 - [Обзор создания кода с помощью API JavaScript для OneNote](onenote-add-ins-programming-overview.md)
-- [Справочник по API JavaScript для OneNote](https://docs.microsoft.com/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference?view=office-js)
+- [Справочник по API JavaScript для OneNote](https://docs.microsoft.com/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)

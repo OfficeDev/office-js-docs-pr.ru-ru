@@ -2,19 +2,19 @@
 title: Использование Dialog API в надстройках Office
 description: ''
 ms.date: 12/20/2018
-ms.openlocfilehash: 0c45a17935cb264db4b8488ec8eaae2535848770
-ms.sourcegitcommit: 6870f0d96ed3da2da5a08652006c077a72d811b6
+ms.openlocfilehash: c96fa69e5bd3d1c6c028921ec9e4f7f220e710c9
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "27383248"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27458085"
 ---
 # <a name="use-the-dialog-api-in-your-office-add-ins"></a>Использование Dialog API в надстройках Office
 
-Вы можете использовать [Dialog API](https://docs.microsoft.com/javascript/api/office/office.ui?view=office-js), чтобы открывать диалоговые окна в надстройке Office. Эта статья содержит рекомендации по использованию Dialog API в надстройке Office.
+Вы можете использовать [Dialog API](https://docs.microsoft.com/javascript/api/office/office.ui), чтобы открывать диалоговые окна в надстройке Office. Эта статья содержит рекомендации по использованию Dialog API в надстройке Office.
 
 > [!NOTE]
-> Сведения о поддержке Dialog API см. в статье [Наборы обязательных элементов Dialog API](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets?view=office-js). В настоящее время Dialog API поддерживается для Word, Excel, PowerPoint и Outlook.
+> Сведения о поддержке Dialog API см. в статье [Наборы обязательных элементов Dialog API](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets). В настоящее время Dialog API поддерживается для Word, Excel, PowerPoint и Outlook.
 
 > Основной сценарий применения Dialog API — обеспечение проверки подлинности с использованием таких ресурсов, как Google или Facebook.
 
@@ -35,11 +35,11 @@ ms.locfileid: "27383248"
 
 ## <a name="dialog-api-scenarios"></a>Сценарии с Dialog API
 
-Интерфейсы API JavaScript для Office поддерживают указанные ниже сценарии с объектом [Dialog](https://docs.microsoft.com/javascript/api/office/office.dialog?view=office-js) и две функции в [пространстве имен Office.context.ui](https://docs.microsoft.com/javascript/api/office/office.ui?view=office-js).
+Интерфейсы API JavaScript для Office поддерживают указанные ниже сценарии с объектом [Dialog](https://docs.microsoft.com/javascript/api/office/office.dialog) и две функции в [пространстве имен Office.context.ui](https://docs.microsoft.com/javascript/api/office/office.ui).
 
 ### <a name="open-a-dialog-box"></a>Открытие диалогового окна
 
-Чтобы открыть диалоговое окно, код в области задач вызывает метод [displayDialogAsync](https://docs.microsoft.com/javascript/api/office/office.ui?view=office-js) и передает ему URL-адрес ресурса, который нужно открыть. Таким ресурсом обычно является страница, но может быть и метод контроллера в приложении MVC, метод веб-службы, маршрута или любой другой ресурс. В этой статье термин "страница" или "веб-сайт" означает ресурс в диалоговом окне. Ниже приведен простой пример кода.
+Чтобы открыть диалоговое окно, код в области задач вызывает метод [displayDialogAsync](https://docs.microsoft.com/javascript/api/office/office.ui) и передает ему URL-адрес ресурса, который нужно открыть. Таким ресурсом обычно является страница, но может быть и метод контроллера в приложении MVC, метод веб-службы, маршрута или любой другой ресурс. В этой статье термин "страница" или "веб-сайт" означает ресурс в диалоговом окне. Ниже приведен простой пример кода.
 
 ```js
 Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html');
@@ -47,7 +47,7 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html');
 
 > [!NOTE]
 > - В случае URL-адреса используется протокол HTTP**S**, обязательный для всех страниц, загружаемых в диалоговом окне, а не только для первой страницы.
-> - Домен ресурса диалоговых окон совпадает с доменом страницы ведущего приложения, которая может быть страницей в области задач или [файле функций](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/functionfile?view=office-js) для команды надстройки. Страница, метод контроллера или другой ресурс, передаваемый в метод `displayDialogAsync`, должен быть в том же домене, что и страница ведущего приложения.
+> - Домен ресурса диалоговых окон совпадает с доменом страницы ведущего приложения, которая может быть страницей в области задач или [файле функций](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/functionfile) для команды надстройки. Страница, метод контроллера или другой ресурс, передаваемый в метод `displayDialogAsync`, должен быть в том же домене, что и страница ведущего приложения.
 
 > [!IMPORTANT]
 > Страница ведущего приложения и ресурсы диалоговых окон должны иметь одинаковые полные доменные имена. Если вы попробуете передать поддомен домена надстройки в `displayDialogAsync`, ничего не получится. Полные доменные имена, включая поддомены, должны совпадать.
@@ -131,8 +131,8 @@ Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 
 ```
 
 > [!NOTE]
-> - Office передает объект [AsyncResult](https://docs.microsoft.com/javascript/api/office/office.asyncresult?view=office-js) в функцию обратного вызова. Он представляет собой результат попытки открыть диалоговое окно, но не результат событий в диалоговом окне. Дополнительные сведения об этой особенности см. в разделе [Обработка ошибок и событий](#handle-errors-and-events).
-> - Для свойства `value` объекта `asyncResult` задан объект [Dialog](https://docs.microsoft.com/javascript/api/office/office.dialog?view=office-js), который существует на главной странице, а не в контексте выполнения диалогового окна.
+> - Office передает объект [AsyncResult](https://docs.microsoft.com/javascript/api/office/office.asyncresult) в функцию обратного вызова. Он представляет собой результат попытки открыть диалоговое окно, но не результат событий в диалоговом окне. Дополнительные сведения об этой особенности см. в разделе [Обработка ошибок и событий](#handle-errors-and-events).
+> - Для свойства `value` объекта `asyncResult` задан объект [Dialog](https://docs.microsoft.com/javascript/api/office/office.dialog), который существует на главной странице, а не в контексте выполнения диалогового окна.
 > - `processMessage` — это функция, которая обрабатывает событие. Вы можете присвоить ей любое имя.
 > - Переменная `dialog` объявляется в более широком контексте, чем обратный вызов, так как на нее также ссылается `processMessage`.
 
@@ -268,7 +268,7 @@ function processMessage(arg) {
 |<span id="12007">12007</span>|Диалоговое окно уже открыто из этого главного окна. Для главного окна, например области задач, невозможно открыть сразу несколько диалоговых окон.|
 |12009|Пользователь проигнорировал диалоговое окно. Эта ошибка может возникнуть в веб-версиях Office, где пользователи могут не разрешить надстройке открыть диалоговое окно.|
 
-При вызове `displayDialogAsync` он всегда передает объект [AsyncResult](https://docs.microsoft.com/javascript/api/office/office.asyncresult?view=office-js) в функцию обратного вызова. Если вызов выполнен, т. е. диалоговое окно открыто, свойство `value` объекта `AsyncResult` представляет собой объект [Dialog](https://docs.microsoft.com/javascript/api/office/office.dialog?view=office-js). См. пример в разделе [Отправка данных из диалогового окна на страницу ведущего приложения](#send-information-from-the-dialog-box-to-the-host-page). Если вызвать `displayDialogAsync` не удается, то окно не создается, свойству `status` объекта `AsyncResult` присваивается значение `Office.AsyncResultStatus.Failed`, а также заполняется свойство `error` объекта. У вас всегда должна быть функция обратного вызова, которая проверяет `status` и сообщает об ошибке. Ниже приведен пример кода, сообщающий об ошибке, независимо от ее кода.
+При вызове `displayDialogAsync` он всегда передает объект [AsyncResult](https://docs.microsoft.com/javascript/api/office/office.asyncresult) в функцию обратного вызова. Если вызов выполнен, т. е. диалоговое окно открыто, свойство `value` объекта `AsyncResult` представляет собой объект [Dialog](https://docs.microsoft.com/javascript/api/office/office.dialog). См. пример в разделе [Отправка данных из диалогового окна на страницу ведущего приложения](#send-information-from-the-dialog-box-to-the-host-page). Если вызвать `displayDialogAsync` не удается, то окно не создается, свойству `status` объекта `AsyncResult` присваивается значение `Office.AsyncResultStatus.Failed`, а также заполняется свойство `error` объекта. У вас всегда должна быть функция обратного вызова, которая проверяет `status` и сообщает об ошибке. Ниже приведен пример кода, сообщающий об ошибке, независимо от ее кода.
 
 ```js
 var dialog;
@@ -443,7 +443,7 @@ Dialog API используется для этой цели в следующи
 
 ## <a name="use-the-office-dialog-api-with-single-page-applications-and-client-side-routing"></a>Использование Dialog API для Office с одностраничными приложениями и клиентской маршрутизацией
 
-Если надстройка использует клиентскую маршрутизацию подобно тому, как это делает одностраничное приложение, вы можете передавать в метод [displayDialogAsync](https://docs.microsoft.com/javascript/api/office/office.ui?view=office-js) не URL-адрес отдельной HTML-страницы, а URL-адрес маршрута.
+Если надстройка использует клиентскую маршрутизацию подобно тому, как это делает одностраничное приложение, вы можете передавать в метод [displayDialogAsync](https://docs.microsoft.com/javascript/api/office/office.ui) не URL-адрес отдельной HTML-страницы, а URL-адрес маршрута.
 
 > [!IMPORTANT]
 >Диалоговое окно — это новое окно с собственным контекстом выполнения. Если вы передаете маршрут, базовая страница со всем ее кодом инициализации и начальной загрузки запускается снова в этом новом контексте, а возможным переменным присваиваются первоначальные значения в диалоговом окне. Такой способ приводит к запуску второго экземпляра приложения в диалоговом окне. Код, меняющий переменные в диалоговом окне, не меняет версию области задач этих переменных. Для диалогового окна предусмотрено отдельное хранилище сеанса, недоступное из кода в области задач.

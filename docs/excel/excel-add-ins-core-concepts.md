@@ -2,16 +2,16 @@
 title: Основные концепции программирования с помощью API JavaScript для Excel
 description: Создание надстроек для Excel с помощью API JavaScript для Excel.
 ms.date: 11/29/2018
-ms.openlocfilehash: c92006fe8b1b51daa7cac420c63c5926a2414b61
-ms.sourcegitcommit: 026437bd3819f4e9cd4153ebe60c98ab04e18f4e
+ms.openlocfilehash: b32efc539b983a0fc0d1e8696869cedbb0a14095
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "26992221"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27457903"
 ---
 # <a name="fundamental-programming-concepts-with-the-excel-javascript-api"></a>Основные концепции программирования с помощью API JavaScript для Excel
  
-В этой статье описано, как создавать надстройки для Excel 2016 или более поздней версии с помощью [API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js). В статье изложены основные принципы, которые являются фундаментальными при использовании этого API, а также имеются рекомендации по выполнению определенных задач, например чтению данных из большого диапазона или записи данных в него, изменения всех ячеек в диапазоне и много другого.
+В этой статье описано, как создавать надстройки для Excel 2016 или более поздней версии с помощью [API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview). В статье изложены основные принципы, которые являются фундаментальными при использовании этого API, а также имеются рекомендации по выполнению определенных задач, например чтению данных из большого диапазона или записи данных в него, изменения всех ячеек в диапазоне и много другого.
 
 ## <a name="asynchronous-nature-of-excel-apis"></a>Асинхронный характер API Excel
 
@@ -248,4 +248,4 @@ Excel.run(function (context) {
 * [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples)
 * [Дополнительные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-advanced-concepts.md)
 * [Оптимизация производительности API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/excel/performance)
-* [Справочник по API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js)
+* [Справочник по API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)

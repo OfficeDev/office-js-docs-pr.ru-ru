@@ -2,12 +2,12 @@
 title: Команды надстроек для Excel, Word и PowerPoint
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: 698fd4b77ea90430a141db1c791856f4f57fa29b
-ms.sourcegitcommit: 9b021af6cb23a58486d6c5c7492be425e309bea1
+ms.openlocfilehash: 17bc464793e8a85c54b4e2d3abe2e94e38c2e185
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "26533667"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27457679"
 ---
 # <a name="add-in-commands-for-excel-word-and-powerpoint"></a>Команды надстроек для Excel, Word и PowerPoint
 
@@ -45,7 +45,7 @@ ms.locfileid: "26533667"
 **Действия**
 
 - ShowTaskpane: отображает одну или несколько областей, в которые можно загрузить пользовательские HTML-страницы.
-- ExecuteFunction загружает невидимую HTML-страницу, а затем выполняет содержащуюся в ней функцию JavaScript. Для показа ошибок, хода выполнения или дополнительных данных функции можно использовать API [displayDialog](https://docs.microsoft.com/javascript/api/office/office.ui?view=office-js).  
+- ExecuteFunction загружает невидимую HTML-страницу, а затем выполняет содержащуюся в ней функцию JavaScript. Для показа ошибок, хода выполнения или дополнительных данных функции можно использовать API [displayDialog](https://docs.microsoft.com/javascript/api/office/office.ui).  
 
 ## <a name="supported-platforms"></a>Поддерживаемые платформы
 
@@ -85,4 +85,4 @@ ms.locfileid: "26533667"
 
 Лучший способ начать работу с командами надстроек Office — ознакомиться с [примерами](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/) на сайте GitHub.
 
-Дополнительные сведения об указании команд надстройки в манифесте см. в статье [Создание команд надстроек в манифесте](../develop/create-addin-commands.md) и справочных материалах по [VersionOverrides](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/versionoverrides?view=office-js).
+Дополнительные сведения об указании команд надстройки в манифесте см. в статье [Создание команд надстроек в манифесте](../develop/create-addin-commands.md) и справочных материалах по [VersionOverrides](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/versionoverrides).

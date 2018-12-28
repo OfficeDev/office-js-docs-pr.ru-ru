@@ -2,17 +2,17 @@
 title: Поиск текста в надстройке Word
 description: ''
 ms.date: 07/20/2018
-ms.openlocfilehash: d2c0fa2d542cd64986c2fd82f8a50a813f14610a
-ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
+ms.openlocfilehash: 36946f7b9bbcb4c8b5ceca1e8b88e7588c0814ce
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "27270623"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27457728"
 ---
 # <a name="use-search-options-to-find-text-in-your-word-add-in"></a>Поиск текста в надстройке Word 
 
 Надстройки часто должны действовать на основе текста документа.
-Функция поиска предоставлена для каждого элемента управления содержимым (включает объекты [Body](https://docs.microsoft.com/javascript/api/word/word.body?view=office-js), [Paragraph](https://docs.microsoft.com/javascript/api/word/word.paragraph?view=office-js), [Range](https://docs.microsoft.com/javascript/api/word/word.range?view=office-js), [Table](https://docs.microsoft.com/javascript/api/word/word.table?view=office-js), [TableRow](https://docs.microsoft.com/javascript/api/word/word.tablerow?view=office-js), и базовый объект [ContentControl](https://docs.microsoft.com/javascript/api/word/word.contentcontrol?view=office-js)). Эта функция принимает строку (или подстановочное выражение), представляющую текст, который вы ищете, а также объект [SearchOptions](https://docs.microsoft.com/javascript/api/word/word.searchoptions?view=office-js). Она возвращает коллекцию диапазонов, соответствующих искомому тексту.
+Функция поиска предоставлена для каждого элемента управления содержимым (включает объекты [Body](https://docs.microsoft.com/javascript/api/word/word.body), [Paragraph](https://docs.microsoft.com/javascript/api/word/word.paragraph), [Range](https://docs.microsoft.com/javascript/api/word/word.range), [Table](https://docs.microsoft.com/javascript/api/word/word.table), [TableRow](https://docs.microsoft.com/javascript/api/word/word.tablerow), и базовый объект [ContentControl](https://docs.microsoft.com/javascript/api/word/word.contentcontrol)). Эта функция принимает строку (или подстановочное выражение), представляющую текст, который вы ищете, а также объект [SearchOptions](https://docs.microsoft.com/javascript/api/word/word.searchoptions). Она возвращает коллекцию диапазонов, соответствующих искомому тексту.
 
 ## <a name="search-options"></a>Параметры поиска
 Параметры поиска представляют собой коллекцию логических значений, определяющих способ обработки параметра поиска. 
@@ -200,4 +200,4 @@ Word.run(function (context) {
 });
 ```
 
-Дополнительные сведения можно найти в [Справочнике по API JavaScript для Word](https://docs.microsoft.com/office/dev/add-ins/reference/overview/word-add-ins-reference-overview?view=office-js).
+Дополнительные сведения можно найти в [Справочнике по API JavaScript для Word](https://docs.microsoft.com/office/dev/add-ins/reference/overview/word-add-ins-reference-overview).

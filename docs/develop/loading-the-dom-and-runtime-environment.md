@@ -2,12 +2,12 @@
 title: Загрузка модели DOM и среды выполнения
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: ac4d26d964f844f08e1d2975c1be8bbccf40349f
-ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
+ms.openlocfilehash: 0de9acf842d28002ec134998c36224f98574cf8f
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "27271064"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27457693"
 ---
 # <a name="loading-the-dom-and-runtime-environment"></a>Загрузка модели DOM и среды выполнения
 
@@ -35,7 +35,7 @@ ms.locfileid: "27271064"
     
 4. Элемент управления браузера загружает модель DOM и основной текст HTML, а также вызывает обработчик для события  **window.onload**.
     
-5. Ведущее приложение Office загружает среду выполнения, которая загружает и кэширует API JavaScript для файлов библиотеки JavaScript с сервера сети доставки содержимого, а затем вызывает обработчик события [инициализации](https://docs.microsoft.com/javascript/api/office?view=office-js) объекта [Office](https://docs.microsoft.com/javascript/api/office?view=office-js).
+5. Ведущее приложение Office загружает среду выполнения, которая загружает и кэширует API JavaScript для файлов библиотеки JavaScript с сервера сети доставки содержимого, а затем вызывает обработчик события [инициализации](https://docs.microsoft.com/javascript/api/office) объекта [Office](https://docs.microsoft.com/javascript/api/office).
     
 6. После завершения загрузки DOM и основного текста HTML и инициализации надстройки запускается основная функция надстройки.
     
@@ -62,7 +62,7 @@ ms.locfileid: "27271064"
     
 5. Элемент управления браузером загружает DOM и основной текст HTML и вызывает обработчик события  **onload**.
     
-6. Outlook вызывает обработчик события [initialize](https://docs.microsoft.com/javascript/api/office?view=office-js) объекта [Office](https://docs.microsoft.com/javascript/api/office?view=office-js) надстройки.
+6. Outlook вызывает обработчик события [initialize](https://docs.microsoft.com/javascript/api/office) объекта [Office](https://docs.microsoft.com/javascript/api/office) надстройки.
     
 7. После завершения загрузки DOM и основного текста HTML и инициализации надстройки запускается основная функция надстройки.
     
@@ -70,7 +70,7 @@ ms.locfileid: "27271064"
 ## <a name="checking-the-load-status"></a>Проверка состояния загрузки
 
 
-Один из способов проверки завершения загрузки DOM и среды выполнения надстроек для — это возможность использования функции [.ready()](https://api.jquery.com/ready/) jQuery — `$(document).ready()`. Например, следующая функция обработчика событий  **initialize** убеждается в полной загрузке DOM, прежде чем выполняется код, относящийся к инициализации надстроек. После этого обработчик события **initialize**переходит на использование текущего выбранного элемента в Outlook, а обработчик событий переходит на использование свойства [mailbox.item](https://docs.microsoft.com/javascript/api/outlook/office.mailbox?view=office-js) для получения выбранного в настоящий момент элемента Outlook и вызывает основную функцию надстройки `initDialer`.
+Один из способов проверки завершения загрузки DOM и среды выполнения надстроек для — это возможность использования функции [.ready()](https://api.jquery.com/ready/) jQuery — `$(document).ready()`. Например, следующая функция обработчика событий  **initialize** убеждается в полной загрузке DOM, прежде чем выполняется код, относящийся к инициализации надстроек. После этого обработчик события **initialize**переходит на использование текущего выбранного элемента в Outlook, а обработчик событий переходит на использование свойства [mailbox.item](https://docs.microsoft.com/javascript/api/outlook/office.mailbox) для получения выбранного в настоящий момент элемента Outlook и вызывает основную функцию надстройки `initDialer`.
 
 
 ```js

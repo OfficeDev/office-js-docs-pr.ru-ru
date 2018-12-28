@@ -2,12 +2,12 @@
 title: Создание надстройки Project, использующей REST с локальной службой OData Project Server
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: 0bd11e15d2742db12ecbe88d60e02f4e1fa87867
-ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
+ms.openlocfilehash: 9fc6e526587a6256e5ee51effe3bdb5cfe27af47
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "27271029"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27458036"
 ---
 # <a name="create-a-project-add-in-that-uses-rest-with-an-on-premises-project-server-odata-service"></a>Создание надстройки Project, использующей REST с локальной службой OData Project Server
 
@@ -316,7 +316,7 @@ ms.locfileid: "27271029"
     }
     ```
 
-2. Добавьте функцию **setOdataUrl** и связанные функции. Функция **setOdataUrl** вызывает **getProjectGuid** и **getDocumentUrl** для инициализации глобальных переменных. В [методе getProjectFieldAsync](https://docs.microsoft.com/javascript/api/office/office.document?view=office-js) анонимная функция для параметра _callback_ включает кнопку **Compare All Projects** (сравнить все проекты) с помощью метода **removeAttr** из библиотеки jQuery, а затем отображает URL-адрес службы **ProjectData**. Если Project не подключен к Project Web App, функция вызывает ошибку, которая отображает всплывающее сообщение об ошибке. Файл SurfaceErrors.js содержит метод **throwError**.
+2. Добавьте функцию **setOdataUrl** и связанные функции. Функция **setOdataUrl** вызывает **getProjectGuid** и **getDocumentUrl** для инициализации глобальных переменных. В [методе getProjectFieldAsync](https://docs.microsoft.com/javascript/api/office/office.document) анонимная функция для параметра _callback_ включает кнопку **Compare All Projects** (сравнить все проекты) с помощью метода **removeAttr** из библиотеки jQuery, а затем отображает URL-адрес службы **ProjectData**. Если Project не подключен к Project Web App, функция вызывает ошибку, которая отображает всплывающее сообщение об ошибке. Файл SurfaceErrors.js содержит метод **throwError**.
     
    > [!NOTE]
    > Если вы работаете в Visual Studio на компьютере с Project Server, раскомментируйте код после строки, отвечающей за инициализацию глобальной переменной **_pwa**, чтобы можно было выполнять его отладки с помощью клавиши **F5**. Чтобы использовать метод jQuery **ajax** во время отладки на компьютере с Project Server, следует задать значение **localhost** для URL-адреса PWA. При работе в Visual Studio на удаленном компьютере URL-адрес **localhost** не требуется. Перед развертыванием надстройки закомментируйте этот код.

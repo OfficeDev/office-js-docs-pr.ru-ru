@@ -2,12 +2,12 @@
 title: Надстройки области задач для Project
 description: ''
 ms.date: 12/17/2018
-ms.openlocfilehash: 80f8e41a2409873283a38e30506fa954771ecb1e
-ms.sourcegitcommit: 6870f0d96ed3da2da5a08652006c077a72d811b6
+ms.openlocfilehash: 33067fc048be9a69c76d34e19928f5a4bf5bf166
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "27383283"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27457945"
 ---
 # <a name="task-pane-add-ins-for-project"></a>Надстройки области задач для Project
 
@@ -202,7 +202,7 @@ Project стандартный 2013 и Project профессиональный 
 
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)
 - [XML-манифест надстройки Office](../develop/add-in-manifests.md)
-- [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js)
+- [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office)
 - [Создание первой надстройки области задач для Project 2013 с помощью текстового редактора](create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md)
 - [Создание надстройки Project, использующей REST с локальной службой OData Project Server](create-a-project-add-in-that-uses-rest-with-an-on-premises-odata-service.md)
 - [Загрузка пакета SDK для Project 2013](https://www.microsoft.com/download/details.aspx?id=30435%20)

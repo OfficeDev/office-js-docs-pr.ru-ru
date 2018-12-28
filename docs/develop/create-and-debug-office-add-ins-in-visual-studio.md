@@ -2,12 +2,12 @@
 title: Создание и отладка надстроек Office в Visual Studio
 description: Используйте Visual Studio для создания и отладки надстроек Office в настольном клиенте Office для Windows
 ms.date: 11/02/2018
-ms.openlocfilehash: eccdde75c60d30dce28320b820df9c187f6eb7a3
-ms.sourcegitcommit: 9b021af6cb23a58486d6c5c7492be425e309bea1
+ms.openlocfilehash: 99b642804cb662d66106d3a599e5d84dbab8c4a3
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "26533723"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27458029"
 ---
 # <a name="create-and-debug-office-add-ins-in-visual-studio"></a>Создание и отладка надстроек Office в Visual Studio
 
@@ -186,7 +186,7 @@ ms.locfileid: "26533723"
     
 Затем Visual Studio выполняет следующее:
 
-1. Изменяет элемент [SourceLocation](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/sourcelocation?view=office-js) XML-файла манифеста, выполняя замену маркера `~remoteAppUrl` с полностью отвечающим требованиям адресом начальной страницы (например, `https://localhost:44302/Home.html`).
+1. Изменяет элемент [SourceLocation](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/sourcelocation) XML-файла манифеста, выполняя замену маркера `~remoteAppUrl` с полностью отвечающим требованиям адресом начальной страницы (например, `https://localhost:44302/Home.html`).
     
 2. Запускает проект веб-приложения в IIS Express.
     

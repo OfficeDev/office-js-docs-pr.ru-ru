@@ -2,12 +2,12 @@
 title: Автоматическое открытие области задач с документом
 description: ''
 ms.date: 05/02/2018
-ms.openlocfilehash: 7022381eb24d5b0566936b068f2940703f0eef9f
-ms.sourcegitcommit: 9b021af6cb23a58486d6c5c7492be425e309bea1
+ms.openlocfilehash: 84e64c74b1c14da39a1f375fe54b1e6dcc887d16
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "26533751"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27457924"
 ---
 # <a name="automatically-open-a-task-pane-with-a-document"></a>Автоматическое открытие области задач с документом
 
@@ -59,7 +59,7 @@ ms.locfileid: "26533751"
 
 ### <a name="step-1-specify-the-task-pane-to-open"></a>Этап 1. Указание области задач, которую необходимо открывать
 
-Чтобы указать область задач, которую необходимо открывать автоматически, задайте для [TaskpaneId](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/action?view=office-js#taskpaneid) значение **Office.AutoShowTaskpaneWithDocument**. Это значение можно установить только в одной области задач. Если установить это значение для нескольких областей задач, распознается только первый случай его использования, а все остальные будут игнорироваться.
+Чтобы указать область задач, которую необходимо открывать автоматически, задайте для [TaskpaneId](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/action#taskpaneid) значение **Office.AutoShowTaskpaneWithDocument**. Это значение можно установить только в одной области задач. Если установить это значение для нескольких областей задач, распознается только первый случай его использования, а все остальные будут игнорироваться.
 
 Ниже представлен пример, где для TaskPaneId задано значение Office.AutoShowTaskpaneWithDocument.
 
@@ -77,7 +77,7 @@ ms.locfileid: "26533751"
 
 #### <a name="tag-the-document-on-the-client-side"></a>Установка отметки для документа на стороне клиента
 
-Используйте метод Office.js [settings.set](https://docs.microsoft.com/javascript/api/office/office.settings?view=office-js), чтобы установить для **Office.AutoShowTaskpaneWithDocument** значение **true**, как показано в следующем примере.
+Используйте метод Office.js [settings.set](https://docs.microsoft.com/javascript/api/office/office.settings), чтобы установить для **Office.AutoShowTaskpaneWithDocument** значение **true**, как показано в следующем примере.
 
 ```js
 Office.context.document.settings.set("Office.AutoShowTaskpaneWithDocument", true);
