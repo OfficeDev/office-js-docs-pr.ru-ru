@@ -2,12 +2,12 @@
 title: Наборы обязательных элементов API JavaScript для OneNote
 description: ''
 ms.date: 10/09/2018
-ms.openlocfilehash: c0cec9375dc0d3db4a09e44a9b73935af0691bde
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.openlocfilehash: 2402d9100228e079066f4abd4f8909aa384dd1c9
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433826"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27457602"
 ---
 # <a name="onenote-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для OneNote
 
@@ -17,11 +17,11 @@ ms.locfileid: "27433826"
 
 |  Набор обязательных элементов  |  Office Online | 
 |:-----|:-----|
-| OneNoteApi 1.1  | Сентябрь 2016 г. |  
+| OneNoteApi 1.1  | Сентябрь 2016 г. |  
 
-## <a name="office-common-api-requirement-sets"></a>Стандартные наборы обязательных элементов API для Office
+## <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
-Сведения о типичных наборах обязательных элементов API см. в статье [Стандартные наборы обязательных элементов API для Office](office-add-in-requirement-sets.md).
+Сведения о наборах обязательных элементов общего API см. в статье [Наборы обязательных элементов общего API для Office](office-add-in-requirement-sets.md).
 
 ## <a name="onenote-javascript-api-11"></a>API JavaScript для OneNote 1.1 
 

@@ -1,21 +1,21 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: a9cb9bfcca336398117de5000bb9f5e9bc2c16de
-ms.sourcegitcommit: c53f05bbd4abdfe1ee2e42fdd4f82b318b363ad7
+ms.openlocfilehash: e7a11901a47c1a8d2ea5f412c324e4c5c69645ac
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "25505617"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27457581"
 documentType: LandingData
 title: Документация по надстройкам Office
 metadata:
-  title: Документация по надстройкам Office - краткие руководства, справочник по API
+  title: 'Документация по надстройкам Office: краткие руководства, справочные материалы по API'
   meta.description: Learn how to build Office Add-ins.
   author: o365devx
   ms.topic: landing-page
   ms.date: 12/04/2017
   ms.author: o365devx
 abstract:
-  description: С помощью  <a href="https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins">платформы надстроек Office</a> можно создавать решения, расширяющие приложения Office и взаимодействующие с содержимым в документах Office. В случае надстроек Office вы можете использовать привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений. Ваше решение может работать в Office на разных платформах, в том числе Office для Windows, Office Online, Office для Mac и Office для iPad. Узнайте, как создавать надстройки Office с помощью наших кратких и пошаговых руководств, а также справочной документации по API.<br/><br/><b>Примечание.</b> Для получения сведений о надстройках COM или VSTO обратитесь к <a href="https://docs.microsoft.com/office/client-developer/office-client-development" target="_blank">документации разработчика клиента Office</a>.
+  description: <a href="https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins">Платформа надстроек Office</a> позволяет создавать решения, которые расширяют возможности приложений Office и взаимодействуют с содержимым документов Office. В случае надстроек Office можно использовать привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений. Ваше решение может работать в Office на нескольких платформах, включая Office для Windows, Office Online, Office для Mac и Office для iPad. Узнайте, как создавать надстройки Office с помощью наших кратких и пошаговых руководств, а также справочной документации по API.<br/><br/><b>Примечание.</b> Сведения о надстройках COM или VSTO см. в <a href="https://docs.microsoft.com/office/client-developer/office-client-development" target="_blank">документации по разработке клиентов Office</a>.
   aside:
     image:
       alt: 
@@ -60,29 +60,29 @@ sections:
 - title: Практические руководства
   items:
   - type: paragraph
-    text: Узнайте, как разрабатывать, выполнять сборку, тестировать, отлаживать и публиковать надстройки Office.
+    text: Сведения о том, как оформлять, создавать, тестировать, отлаживать и публиковать надстройки Office.
   - type: list
     style: unordered
     className: spaced bullet
     items:
-    - html: <a href="/office/dev/add-ins/design/add-in-design">Разработка пользовательского интерфейса для надстройки Office</a>
-    - html: <a href="/office/dev/add-ins/excel/excel-add-ins-overview">Разработка надстроек Excel</a>
-    - html: <a href="/office/dev/add-ins/word/word-add-ins-programming-overview">Разработка надстроек Word</a>
-    - html: <a href="/office/dev/add-ins/onenote/onenote-add-ins-programming-overview">Разработка надстроек OneNote</a>
-    - html: <a href="/outlook/add-ins">Разработка надстроек Outlook</a>
-    - html: <a href="/office/dev/add-ins/powerpoint/powerpoint-add-ins">Разработка надстроек PowerPoint</a>
-    - html: <a href="/office/dev/add-ins/project/project-add-ins">Разработка надстроек Project</a>
-    - html: <a href="/office/dev/add-ins/testing/test-debug-office-add-ins">Тестирование и отладка надстроек Office</a>
-    - html: <a href="/office/dev/add-ins/publish/publish">Публикация надстроек Office</a>
+    - html: <a href="/office/dev/add-ins/design/add-in-design">Оформление пользовательского интерфейса для надстройки Office</a>
+    - html: <a href="/office/dev/add-ins/excel/excel-add-ins-overview">Разработка надстройки Excel</a>
+    - html: <a href="/office/dev/add-ins/word/word-add-ins-programming-overview">Разработка надстройки Word</a>
+    - html: <a href="/office/dev/add-ins/onenote/onenote-add-ins-programming-overview">Разработка надстройки OneNote</a>
+    - html: <a href="/outlook/add-ins">Разработка надстройки Outlook</a>
+    - html: <a href="/office/dev/add-ins/powerpoint/powerpoint-add-ins">Разработка надстройки PowerPoint</a>
+    - html: <a href="/office/dev/add-ins/project/project-add-ins">Разработка надстройки Project</a>
+    - html: <a href="/office/dev/add-ins/testing/test-debug-office-add-ins">Тестирование и отладка надстройки Office</a>
+    - html: <a href="/office/dev/add-ins/publish/publish">Публикация надстройки Office</a>
 - title: Справочные материалы
   items:
   - type: list
     style: cards
     className: cardsD
     items:
-    - title: Стандартные API (2013)
-      html: <p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js" target="_blank">API JavaScript для Office</a></p>
-    - title: API, специфичные для основного приложения (2016)
-      html: <p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js" target="_blank">API JavaScript для Excel</a></p><p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/overview/word-add-ins-reference-overview?view=office-js" target="_blank">API JavaScript для Word</a></p><p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference?view=office-js" target="_blank">API JavaScript для OneNote</a></p><p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets?view=office-js" target="_blank">API JavaScript для Outlook</a></p>
-    - title: Прочие материалы
-      html: <p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/openspec?view=office-js" target="_blank">Открытые спецификации API</a></p><p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/manifest/allowsnapshot?view=office-js" target="_blank">Манифест надстроек Office</a></p>
+    - title: Общие API (2013)
+      html: <p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office" target="_blank">API JavaScript для Office</a></p>
+    - title: API для определенных ведущих приложений (2016)
+      html: <p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview" target="_blank">API JavaScript для Excel</a></p><p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/overview/word-add-ins-reference-overview" target="_blank">API JavaScript для Word</a></p><p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference" target="_blank">API JavaScript для OneNote</a></p><p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets" target="_blank">API JavaScript для Outlook</a></p>
+    - title: Другое
+      html: <p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/openspec" target="_blank">Открытые спецификации API</a></p><p><a href="https://docs.microsoft.com/office/dev/add-ins/reference/manifest/allowsnapshot" target="_blank">Манифест надстроек Office</a></p>

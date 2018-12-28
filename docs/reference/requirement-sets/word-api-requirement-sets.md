@@ -2,12 +2,12 @@
 title: Наборы обязательных элементов API JavaScript для Word
 description: ''
 ms.date: 11/14/2018
-ms.openlocfilehash: 061d9d9ddd7ad6ba9009e6f0f468050c369f5571
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.openlocfilehash: 92678945f504e39bcf712558736145e948a8c628
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27434015"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27458050"
 ---
 # <a name="word-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Word
 
@@ -34,11 +34,11 @@ ms.locfileid: "27434015"
 - [Номера версий и сборок выпусков из канала обновления для клиентов Office 365](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7);
 - [Какая у меня версия Office](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19);
 - [Где можно найти номера версии и сборки клиентского приложения Office 365](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7);
-- [Обзор Office Online Server](https://docs.microsoft.com/officeonlineserver/office-online-server-overview).
+- [Обзор Office Online Server](https://docs.microsoft.com/officeonlineserver/office-online-server-overview)
 
-## <a name="office-common-api-requirement-sets"></a>Стандартные наборы обязательных элементов API для Office
+## <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
-Сведения об общих наборах требований API см. в статье [Общие наборы требований API для Office](office-add-in-requirement-sets.md).
+Сведения о наборах обязательных элементов общего API см. в статье [Наборы обязательных элементов общего API для Office](office-add-in-requirement-sets.md).
 
 ## <a name="whats-new-in-word-javascript-api-13"></a>Новые возможности API JavaScript для Word 1.3 
 

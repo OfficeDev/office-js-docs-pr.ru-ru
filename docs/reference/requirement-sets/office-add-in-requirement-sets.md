@@ -1,15 +1,15 @@
 ---
-title: Стандартные наборы обязательных элементов API для Office
+title: Наборы обязательных элементов общего API для Office
 description: ''
 ms.date: 11/20/2018
-ms.openlocfilehash: 4ce96babd7f819e4cfe1581db1a51d0ae67390fd
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.openlocfilehash: 189753fc76bb207ebfcb19577471572aeb543659
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433105"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27457910"
 ---
-# <a name="office-common-api-requirement-sets"></a>Стандартные наборы обязательных элементов API для Office
+# <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
 Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](https://docs.microsoft.com/office/dev/add-ins/develop/office-versions-and-requirement-sets).
 
@@ -25,9 +25,9 @@ ms.locfileid: "27433105"
 > [!IMPORTANT]
 > Больше не рекомендуется создавать и использовать веб-приложения и базы данных Access в SharePoint. В качестве альтернативы рекомендуем использовать [Microsoft PowerApps](https://powerapps.microsoft.com/) для создания бизнес-решений для Интернета и мобильных устройств без написания кода.
 
-## <a name="common-api-requirement-sets"></a>Стандартные наборы обязательных элементов API
+## <a name="common-api-requirement-sets"></a>Наборы обязательных элементов общего API
 
-В приведенной ниже таблице указаны типичные наборы обязательных элементов API, ведущие приложения Office, которые их поддерживают, и методы в каждом наборе. Все эти наборы обязательных элементов API имеют версию 1.1.
+В приведенной ниже таблице указаны наборы обязательных элементов общего API, ведущие приложения Office, которые их поддерживают, и методы в каждом наборе. Все эти наборы обязательных элементов API имеют версию 1.1.
 
 |**Набор обязательных элементов**|**Ведущее приложение Office**|**Методы в наборе**|
 |:-----|:-----|:-----|

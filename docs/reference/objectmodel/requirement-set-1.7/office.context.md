@@ -2,12 +2,12 @@
 title: Office.context — набор обязательных элементов 1.7
 description: ''
 ms.date: 10/11/2018
-ms.openlocfilehash: 86d65e827705476aa1e72e5eb178a546833c9acc
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.openlocfilehash: 7b2886901fc23f998c2254bca834e3608f8cf5c3
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433581"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27457469"
 ---
 # <a name="context"></a>context
 
@@ -17,7 +17,7 @@ ms.locfileid: "27433581"
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
@@ -26,9 +26,9 @@ ms.locfileid: "27433581"
 
 | Элемент | Тип |
 |--------|------|
-| [displayLanguage](#displaylanguage-string) | Член |
-| [officeTheme](#officetheme-object) | Член |
-| [roamingSettings](#roamingsettings-roamingsettingsjavascriptapioutlook17officeroamingsettings) | Член |
+| [displayLanguage](#displaylanguage-string) | Элемент |
+| [officeTheme](#officetheme-object) | Элемент |
+| [roamingSettings](#roamingsettings-roamingsettingsjavascriptapioutlook17officeroamingsettings) | Элемент |
 
 ### <a name="namespaces"></a>Пространства имен
 
@@ -48,7 +48,7 @@ ms.locfileid: "27433581"
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
@@ -97,7 +97,7 @@ function write(message){
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.3|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
@@ -129,7 +129,7 @@ function applyOfficeTheme(){
 
 ##### <a name="requirements"></a>Требования
 
-|Requirement| Значение|
+|Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|

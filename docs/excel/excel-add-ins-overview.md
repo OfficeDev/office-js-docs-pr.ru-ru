@@ -2,12 +2,12 @@
 title: Общие сведения о надстройках Excel
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: b8fc1aadaf47195f55fb3ed3c6281d33b32f2e4e
-ms.sourcegitcommit: 86724e980f720ed05359c9525948cb60b6f10128
+ms.openlocfilehash: ecc581a0ddb19d6c5351fd4b4e251aad8136a2e1
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "26237460"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27457476"
 ---
 # <a name="excel-add-ins-overview"></a>Общие сведения о надстройках Excel
 
@@ -32,7 +32,7 @@ ms.locfileid: "26237460"
 
 Надстройка Excel включает два основных компонента: веб-приложение и файл конфигурации, называемый файлом манифеста. 
 
-Веб-приложение использует [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js) для взаимодействия с объектами в Excel, а также может упрощать работу с ресурсами в Интернете. Например, надстройка может выполнять следующие действия:
+Веб-приложение использует [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office) для взаимодействия с объектами в Excel, а также может упрощать работу с ресурсами в Интернете. Например, надстройка может выполнять следующие действия:
 
 * создавать, читать, обновлять и удалять данные в книге (листы, диапазоны, таблицы, диаграммы, именованные элементы и т. д.);
 * выполнять авторизацию пользователя в веб-службе с помощью стандартного потока OAuth 2.0;
@@ -75,7 +75,7 @@ ms.locfileid: "26237460"
 
 ### <a name="dialog-boxes"></a>Диалоговые окна
 
-Диалоговые окна — это поверхности, которые накладываются на активное окно приложения Excel. Например, с помощью диалоговых окон можно отображать страницы входа, которые невозможно открыть непосредственно в области задач, запрашивать подтверждение действий пользователем и размещать видео, которые могут не помещаться в области задач. Чтобы открывать диалоговые окна в надстройке Excel, используйте [API диалоговых окон](https://docs.microsoft.com/javascript/api/office/office.ui?view=office-js).
+Диалоговые окна — это поверхности, которые накладываются на активное окно приложения Excel. Например, с помощью диалоговых окон можно отображать страницы входа, которые невозможно открыть непосредственно в области задач, запрашивать подтверждение действий пользователем и размещать видео, которые могут не помещаться в области задач. Чтобы открывать диалоговые окна в надстройке Excel, используйте [API диалоговых окон](https://docs.microsoft.com/javascript/api/office/office.ui).
 
 **Диалоговое окно**
 
@@ -95,9 +95,9 @@ ms.locfileid: "26237460"
 
 ## <a name="javascript-apis-to-interact-with-workbook-content"></a>API JavaScript для взаимодействия с содержимым книги
 
-Надстройка Excel взаимодействует с объектами в Excel с помощью [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js), включающего две объектных модели JavaScript.
+Надстройка Excel взаимодействует с объектами в Excel с помощью [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office), включающего две объектных модели JavaScript.
 
-* **API JavaScript для Excel**. Появившийся в Office 2016 [API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к листам, диапазонам, таблицам, диаграммам и другим объектам. 
+* **API JavaScript для Excel**. Появившийся в Office 2016 [API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к листам, диапазонам, таблицам, диаграммам и другим объектам. 
 
 * **Общий API**. Появившийся в Office 2013 общий API можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов ведущих приложений, например Word, Excel и PowerPoint. Общий API предоставляет ограниченные возможности по взаимодействию с Excel, поэтому его можно использовать, если надстройка должна работать в Excel 2013.
 
@@ -111,4 +111,4 @@ ms.locfileid: "26237460"
 - [Рекомендации по разработке надстроек Office](../concepts/add-in-development-best-practices.md)
 - [Рекомендации по проектированию надстроек Office](../design/add-in-design.md)
 - [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
-- [Справочник по API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview?view=office-js)
+- [Справочник по API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)

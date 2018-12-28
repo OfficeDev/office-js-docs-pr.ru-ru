@@ -2,12 +2,12 @@
 title: Наборы обязательных элементов для команд надстроек
 description: ''
 ms.date: 11/21/2018
-ms.openlocfilehash: d0da9d9584a899658ab73e1373589a6d824f0c3e
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.openlocfilehash: c308112a923483ac9ac82cd08b42d7744d93c8e3
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27432783"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27457609"
 ---
 # <a name="add-in-commands-requirement-sets"></a>Наборы обязательных элементов для команд надстроек
 
@@ -29,18 +29,18 @@ ms.locfileid: "27432783"
 |:-----|:-----|:-----|:-----|:-----|:-----|:-----|
 | AddInCommands 1.1  | Н/Д | 16.0.4678.1000 *Поддерживается только в Outlook*  | Версия 1705 (сборка 8121.1000) или более поздняя | Н/Д | 15.34 или более поздняя версия\*| Май 2017 г. |
 
->\*Метод [Office.context.requirements.isSetSupported](https://docs.microsoft.com/javascript/api/office/office.requirementsetsupport?view=office-js#issetsupported-name--minversion-) ошибочно возвращает значение `false` для версий 16.9&ndash;16.14 (включительно), но набор обязательных элементов *поддерживается* в этих версиях.
+>\*Метод [Office.context.requirements.isSetSupported](https://docs.microsoft.com/javascript/api/office/office.requirementsetsupport#issetsupported-name--minversion-) ошибочно возвращает значение `false` для версий 16.9&ndash;16.14 (включительно), но набор обязательных элементов *поддерживается* в этих версиях.
 
 Статьи и разделы с дополнительными сведениями о версиях, номерах сборок и Office Online Server:
 
 - [Номера версий и сборок выпусков из канала обновления для клиентов Office 365](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7);
 - [Какая у меня версия Office](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19);
 - [Где можно найти номера версии и сборки клиентского приложения Office 365](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7);
-- [Обзор Office Online Server](https://docs.microsoft.com/officeonlineserver/office-online-server-overview).
+- [Обзор Office Online Server](https://docs.microsoft.com/officeonlineserver/office-online-server-overview)
 
-## <a name="office-common-api-requirement-sets"></a>Стандартные наборы обязательных элементов API для Office
+## <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
-Сведения о типичных наборах обязательных элементов API для Office см. в статье [Стандартные наборы обязательных элементов API для Office](office-add-in-requirement-sets.md).
+Сведения о наборах обязательных элементов общего API см. в статье [Наборы обязательных элементов общего API для Office](office-add-in-requirement-sets.md).
 
 ## <a name="see-also"></a>См. также
 

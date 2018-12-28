@@ -2,18 +2,18 @@
 title: API JavaScript для Office
 description: ''
 ms.date: 10/09/2018
-ms.openlocfilehash: d1f57ec9e4420a17ef0997d8d293c484887d5d79
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.openlocfilehash: 87ad98f8233e4ff6fb2fe15d09daff6b7b422b08
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27432776"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27457714"
 ---
 # <a name="javascript-api-for-office"></a>API JavaScript для Office
 
 API JavaScript для Office позволяет создавать веб-приложения, взаимодействующие с объектными моделями в ведущих приложениях Office. Ваше приложение будет ссылаться на библиотеку office.js, которая загружает скрипты. Библиотека office.js загружает объектные модели, подходящие для приложения Office, в котором запущена надстройка. Вы можете использовать следующие объектные модели JavaScript:
 
-- **Общие интерфейсы API**, представленные в **Office 2013**. Модель загружается для **всех ведущих приложений Office** и подключает надстройку к клиентскому приложению Office. Объектная модель содержит API, предназначенные для определенных клиентов Office, а также API, которые подходят для нескольких ведущих клиентских приложений Office. Все это содержимое находится в разделе **Общие API**. 
+- **Общие интерфейсы API**, представленные в **Office 2013**. Модель загружается для **всех ведущих приложений Office** и подключает надстройку к клиентскому приложению Office. Объектная модель содержит API, предназначенные для определенных клиентов Office, а также API, которые подходят для нескольких ведущих клиентских приложений Office. Все это содержимое находится в разделе **Общий API**. Эта объектная модель использует обратные вызовы. 
 
   **Outlook** также использует синтаксис общих API. Все, к чему относится псевдоним Office, содержит объекты, которые можно использовать для написания скриптов надстроек Office, взаимодействующих с содержимым документов, листов, презентаций, почтовых элементов и проектов Office. Нужно использовать общие API, если надстройка предназначена для Office 2013 и более поздних версий. Эта объектная модель использует обратные вызовы.
 
@@ -26,12 +26,12 @@ API JavaScript для Office позволяет создавать веб-при
 - [Outlook](requirement-sets/outlook-api-requirement-sets.md)
 - [Visio](overview/visio-javascript-reference-overview.md)
 - [Word](overview/word-add-ins-reference-overview.md)
-- [Общие API](requirement-sets/office-add-in-requirement-sets.md)
+- [Общий API](requirement-sets/office-add-in-requirement-sets.md)
 
 > [!NOTE] 
 > [PowerPoint и Project](requirement-sets/powerpoint-and-project-note.md) поддерживают надстройки, созданные с помощью API JavaScript. Тем не менее в настоящее время у них нет API для конкретных ведущих приложений. Взаимодействие с этими ведущими приложениями происходит через общие API.
 
-Дополнительные сведения о [поддерживаемых ведущих приложениях и других требованиях](https://docs.microsoft.com/office/dev/add-ins/concepts/requirements-for-running-office-add-ins).
+Дополнительные сведения о [поддерживаемых ведущих приложениях и других требованиях](../concepts/requirements-for-running-office-add-ins.md).
 
 ## <a name="open-api-specifications"></a>Открытые спецификации API
 
@@ -39,4 +39,4 @@ API JavaScript для Office позволяет создавать веб-при
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по API JavaScript для Office](https://docs.microsoft.com/javascript/api/overview/office?view=office-js)
+- [Справочник по API JavaScript для Office](https://docs.microsoft.com/javascript/api/overview/office)

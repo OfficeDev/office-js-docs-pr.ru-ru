@@ -2,23 +2,23 @@
 title: Общие сведения об интерфейсе API JavaScript для Office
 description: ''
 ms.date: 10/17/2018
-ms.openlocfilehash: 266014305af67d53046dac9a5492e08dbbb8dc29
-ms.sourcegitcommit: 2ac7d64bb2db75ace516a604866850fce5cb2174
+ms.openlocfilehash: 14de5d8bab791d0954179c21163ba0a08824b834
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "26298560"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27458106"
 ---
 # <a name="understanding-the-javascript-api-for-office"></a>Общие сведения об интерфейсе API JavaScript для Office
 
-В этой статье можно узнать об интерфейсе API JavaScript для Office и о том, как его использовать. Справочные сведения см. в разделе [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js). О том, как обновить файлы проекта Visual Studio до последней версии API JavaScript для Office, см. в статье [Обновление версии API JavaScript для Office и файлов схемы манифеста](update-your-javascript-api-for-office-and-manifest-schema-version.md).
+В этой статье можно узнать об интерфейсе API JavaScript для Office и о том, как его использовать. Справочные сведения см. в разделе [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office). О том, как обновить файлы проекта Visual Studio до последней версии API JavaScript для Office, см. в статье [Обновление версии API JavaScript для Office и файлов схемы манифеста](update-your-javascript-api-for-office-and-manifest-schema-version.md).
 
 > [!NOTE]
 > Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в интерфейсе Office, убедитесь, что она соответствует [политикам проверки AppSource](https://docs.microsoft.com/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://docs.microsoft.com/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице со сведениями о доступности и ведущих приложениях для надстроек Office](../overview/office-add-in-availability.md). 
 
 ## <a name="referencing-the-javascript-api-for-office-library-in-your-add-in"></a>Ссылки на библиотеку API JavaScript для Office в надстройке
 
-Библиотека [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js) состоит из файла Office.js и связанных JS-файлов ведущего приложения, например Excel-15.js и Outlook-15.js. Простейший способ сослаться на API — использовать нашу сеть доставки содержимого (CDN), добавив следующий код `<script>` в тег `<head>` страницы:  
+Библиотека [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office) состоит из файла Office.js и связанных JS-файлов ведущего приложения, например Excel-15.js и Outlook-15.js. Простейший способ сослаться на API — использовать нашу сеть доставки содержимого (CDN), добавив следующий код `<script>` в тег `<head>` страницы:  
 
 ```html
 <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script>
@@ -141,7 +141,7 @@ Office.initialize = function (reason) {
  };
 ```
 
-Дополнительные сведения см. в статьях [Событие Office.initialize](https://docs.microsoft.com/javascript/api/office?view=office-js) и [Перечисление InitializationReason](https://docs.microsoft.com/javascript/api/office/office.initializationreason?view=office-js).
+Дополнительные сведения см. в статьях [Событие Office.initialize](https://docs.microsoft.com/javascript/api/office) и [Перечисление InitializationReason](https://docs.microsoft.com/javascript/api/office/office.initializationreason).
 
 > [!NOTE]
 > В настоящее время, вам необходимо задать `Office.Initialize` независимо от того, вызывается ли `Office.onReady()`. Если вы не используете `Office.Initialize`, как показано в приведенном ниже примере, можно задать пустую функцию.
@@ -165,7 +165,7 @@ Office.initialize = function (reason) {
 
 ## <a name="office-javascript-api-object-model"></a>Объектная модель API JavaScript для Office
 
-После инициализации надстройка может взаимодействовать с хостом (например, Excel, Outlook). Страница [объектной модели Office JavaScript API](office-javascript-api-object-model.md) содержит дополнительную информацию об определенных способах использования. Также существует подробная документация как для [API общего доступа](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office?view=office-js), так и определенных хостов.
+После инициализации надстройка может взаимодействовать с хостом (например, Excel, Outlook). Страница [объектной модели Office JavaScript API](office-javascript-api-object-model.md) содержит дополнительную информацию об определенных способах использования. Также существует подробная справочная документация для [общих API](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office) и API для определенных ведущих приложений.
 
 ## <a name="api-support-matrix"></a>Матрица поддержки API
 

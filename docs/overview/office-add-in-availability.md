@@ -2,19 +2,19 @@
 title: Доступность ведущих приложений и платформ для надстроек Office
 description: Поддерживаемые наборы обязательных элементов для Excel, Word, Outlook, PowerPoint, OneNote и Project.
 ms.date: 11/07/2018
-ms.openlocfilehash: c601eac5ed3fcad76b63fff5ae6eeadb7662c8b7
-ms.sourcegitcommit: 0adc31ceaba92cb15dc6430c00fe7a96c107c9de
+ms.openlocfilehash: 9490fca9663737e2397de159169b545e3900289f
+ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2018
-ms.locfileid: "27210107"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "27458043"
 ---
 # <a name="office-add-in-host-and-platform-availability"></a>Доступность ведущих приложений и платформ для надстроек Office
 
-Работа надстройки Office может зависеть от ведущего приложения Office, набора требований, элемента или версии API. В таблицах ниже представлены сведения о доступных платформах, точках расширения, наборах обязательных элементов API и стандартных наборах обязательных элементов API, которые в настоящее время поддерживаются для всех приложений Office.
+Работа надстройки Office может зависеть от ведущего приложения Office, набора требований, элемента или версии API. В таблицах ниже представлены сведения о доступных платформах, точках расширения, наборах обязательных элементов API и общих API, которые в настоящее время поддерживаются для всех приложений Office.
 
 > [!NOTE]
-> Номер сборки для набора Office 2016, установленного с помощью MSI, — 16.0.4266.1001. Эта версия содержит только набор обязательных элементов ExcelApi 1.1, WordApi 1.1 и стандартные наборы обязательных элементов API.
+> Номер сборки для набора Office 2016, установленного с помощью MSI, — 16.0.4266.1001. Эта версия содержит только набор обязательных элементов ExcelApi 1.1, WordApi 1.1 и наборы обязательных элементов общего API.
 
 ## <a name="excel"></a>Excel
 
@@ -23,7 +23,7 @@ ms.locfileid: "27210107"
     <th style="width:10%">Платформа</th>
     <th style="width:10%">Точки расширения</th>
     <th style="width:20%">Наборы обязательных элементов API</th>
-    <th style="width:40%"><a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Стандартные элементы API</b></a></th>
+    <th style="width:40%"><a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Общие API</b></a></th>
   </tr>
   <tr>
     <td>Office Online</td>
@@ -228,7 +228,7 @@ ms.locfileid: "27210107"
     <th>Платформа</th>
     <th>Точки расширения</th>
     <th>Наборы обязательных элементов API</th>
-    <th><a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Стандартные элементы API</b></a></th>
+    <th><a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Общие API</b></a></th>
   </tr>
   <tr>
     <td>Office Online</td>
@@ -345,7 +345,7 @@ ms.locfileid: "27210107"
     <th>Платформа</th>
     <th>Точки расширения</th>
     <th>Наборы обязательных элементов API</th>
-    <th><a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Стандартные элементы API</b></a></th>
+    <th><a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Общие API</b></a></th>
   </tr>
   <tr>
     <td>Office Online</td>
@@ -544,7 +544,7 @@ ms.locfileid: "27210107"
     <th>Платформа</th>
     <th>Точки расширения</th>
     <th>Наборы обязательных элементов API</th>
-    <th><a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Стандартные элементы API</b></a></th>
+    <th><a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Общие API</b></a></th>
   </tr>
   <tr>
     <td>Office Online</td>
@@ -669,7 +669,7 @@ ms.locfileid: "27210107"
     <th>Платформа</th>
     <th>Точки расширения</th>
     <th>Наборы обязательных элементов API</th>
-    <th><a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Стандартные элементы API</b></a></th>
+    <th><a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Общие API</b></a></th>
   </tr>
   <tr>
     <td>Office Online</td>
@@ -695,7 +695,7 @@ ms.locfileid: "27210107"
     <th>Платформа</th>
     <th>Точки расширения</th>
     <th>Наборы обязательных элементов API</th>
-    <th><a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Стандартные API</b></a></th>
+    <th><a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Общие API</b></a></th>
   </tr>
   <tr>
     <td>Office 2013 для Windows</td>
@@ -725,6 +725,6 @@ ms.locfileid: "27210107"
 ## <a name="see-also"></a>См. также
 
 - [Обзор платформы надстроек Office](office-add-ins.md)
-- [Стандартные наборы обязательных элементов API](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets)
+- [Наборы обязательных элементов общего API](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets)
 - [Наборы обязательных элементов для команд надстроек](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets)
 - [Справка по API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office)
