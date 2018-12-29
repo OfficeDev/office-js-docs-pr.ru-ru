@@ -261,6 +261,6 @@
 ## <a name="see-also"></a>См. также
 
 - [Обзор API JavaScript для OneNote](../onenote/onenote-add-ins-programming-overview.md)
-- [Справочник по API JavaScript для OneNote](https://docs.microsoft.com/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference?view=office-js)
+- [Справочник по API JavaScript для OneNote](https://docs.microsoft.com/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)

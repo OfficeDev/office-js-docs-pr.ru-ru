@@ -471,4 +471,4 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 * [Обзор надстроек Word](../word/word-add-ins-programming-overview.md)
 * 
   [Примеры кода надстроек Word](https://developer.microsoft.com/en-us/office/gallery/?filterBy=Samples,Word)
-* [Справочник по API JavaScript для Word](https://docs.microsoft.com/office/dev/add-ins/reference/overview/word-add-ins-reference-overview?view=office-js)
+* [Справочник по API JavaScript для Word](https://docs.microsoft.com/office/dev/add-ins/reference/overview/word-add-ins-reference-overview)
