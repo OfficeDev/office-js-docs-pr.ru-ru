@@ -1,13 +1,13 @@
 ---
 title: Работа с листами с использованием API JavaScript для Excel
 description: ''
-ms.date: 11/27/2018
-ms.openlocfilehash: ef74dc622f3e857314874763a54df67bcff1d8ff
-ms.sourcegitcommit: 026437bd3819f4e9cd4153ebe60c98ab04e18f4e
+ms.date: 12/28/2018
+ms.openlocfilehash: 804d047270f5236209c1555190f465a760548875
+ms.sourcegitcommit: d75295cc4f47d8d872e7a361fdb5526f0f145dd2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "26992228"
+ms.lasthandoff: 12/29/2018
+ms.locfileid: "27460865"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
@@ -50,7 +50,7 @@ Excel.run(function (context) {
 Excel.run(function (context) {
     var sheet = context.workbook.worksheets.getActiveWorksheet();
     sheet.load("name");
-    
+
     return context.sync()
         .then(function () {
             console.log(`The active worksheet is "${sheet.name}"`);
@@ -155,7 +155,7 @@ Excel.run(function (context) {
 
     var sheet = sheets.add("Sample");
     sheet.load("name, position");
-    
+
     return context.sync()
         .then(function () {
             console.log(`Added worksheet named "${sheet.name}" in position ${sheet.position}`);
@@ -258,16 +258,16 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="get-a-cell-within-a-worksheet"></a>Получение ячейки листа
+## <a name="get-a-single-cell-within-a-worksheet"></a>Получение одной ячейки листа
 
-В примере кода ниже показано, как получить ячейку, расположенную в строке 2 и столбце 5 листа **Sample** (Пример), загрузить его свойства **address** и **values** и записать сообщение в консоль. Значения, передаваемые в метод **getCell(row: число, column: число)**, представляют собой индексируемые с нуля номера строк и столбцов получаемой ячейки.
+В примере кода ниже показано, как получить ячейку, расположенную в строке 2 и столбце 5 листа **Sample** (Пример), загрузить его свойства **address** и **values** и записать сообщение в консоль. Значения, передаваемые в метод `getCell(row: number, column:number)`, представляют собой индексируемые с нуля номера строк и столбцов получаемой ячейки.
 
 ```js
 Excel.run(function (context) {
     var sheet = context.workbook.worksheets.getItem("Sample");
     var cell = sheet.getCell(1, 4);
     cell.load("address, values");
-    
+
     return context.sync()
         .then(function() {
             console.log(`The value of the cell in row 2, column 5 is "${cell.values[0][0]}" and the address of that cell is "${cell.address}"`);
@@ -275,9 +275,34 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="get-a-range-within-a-worksheet"></a>Получение диапазона на листе
+## <a name="find-all-cells-with-matching-text-preview"></a>Поиск всех ячеек с соответствующим текстом (предварительная версия)
 
-Примеры, в которых показано, как получить диапазон на листе, см. в статье [Работа с диапазонами с использованием API JavaScript для Excel](excel-add-ins-ranges.md).
+> [!NOTE]
+> Функция `findAll` объекта Worksheet в настоящее время доступна только в общедоступной предварительной версии (бета-версии). Для применения этой функции необходимо использовать бета-версию библиотеки в CDN Office.js: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
+> Если вы используете TypeScript или ваш редактор кода использует файлы определения типа TypeScript для IntelliSense, воспользуйтесь https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts.
+
+У объекта `Worksheet` есть метод `find` для поиска указанной строки в листе. Он возвращает объект `RangeAreas`, являющийся коллекцией объектов `Range`, которые можно отредактировать все сразу. Приведенный ниже пример кода находит все ячейки со значениями, соответствующими строке **Complete** (Завершено), и окрашивает их зеленым цветом. Обратите внимание, что метод `findAll` выдаст ошибку `ItemNotFound`, если указанной строки не существует в листе. Если ожидается, что указанная строка может отсутствовать в листе, используйте вместо этого метод [findAllOrNullObject](excel-add-ins-advanced-concepts.md#42ornullobject-methods), чтобы ваш код корректно обработал этот сценарий.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+    var foundRanges = sheet.findAll("Complete", {
+        completeMatch: true, // findAll will match the whole cell value
+        matchCase: false // findAll will not match case
+    });
+
+    return context.sync()
+        .then(function() {
+            foundRanges.format.fill.color = "green"
+    });
+}).catch(errorHandlerFunction);
+```
+
+> [!NOTE]
+> В этом разделе описано, как найти ячейки и диапазоны с помощью функций объекта `Worksheet`. Дополнительные сведения об извлечении диапазонов можно найти в статьях о конкретных объектах.
+> - Примеры, в которых показано, как получить диапазон в листе с помощью объекта `Range`, см. в статье [Работа с диапазонами с использованием API JavaScript для Excel](excel-add-ins-ranges.md).
+> - Примеры, в которых показано, как получить диапазоны из объекта `Table`, см. в статье [Работа с таблицами с использованием API JavaScript для Excel](excel-add-ins-tables.md).
+> - Примеры, в которых показано, как выполнять поиск большого диапазона для нескольких поддиапазонов с учетом характеристик ячеек, см. в статье [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md).
 
 ## <a name="data-protection"></a>Защита данных
 
@@ -298,12 +323,11 @@ Excel.run(function (context) {
 
 Метод `protect` содержит два необязательных параметра:
 
- - `options`: объект [WorksheetProtectionOptions](https://docs.microsoft.com/javascript/api/excel/excel.worksheetprotectionoptions), определяющий конкретные ограничения на редактирование.
- - `password`: строка, представляющая пароль, необходимый пользователю для обхода защиты и редактирования листа.
+- `options`: объект [WorksheetProtectionOptions](https://docs.microsoft.com/javascript/api/excel/excel.worksheetprotectionoptions), определяющий конкретные ограничения на редактирование.
+- `password`: строка, представляющая пароль, необходимый пользователю для обхода защиты и редактирования листа.
 
 В статье [Защита листа](https://support.office.com/article/protect-a-worksheet-3179efdb-1285-4d49-a9c3-f4ca36276de6) содержатся дополнительные сведения о защите листа и ее изменении с помощью пользовательского интерфейса Excel.
 
 ## <a name="see-also"></a>См. также
 
 - [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
-

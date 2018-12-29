@@ -1,13 +1,13 @@
 ---
 title: Работа с диапазонами с использованием API JavaScript для Excel (основные задачи)
 description: ''
-ms.date: 12/14/2018
-ms.openlocfilehash: 4c64abec1f79bd1194a106e46b8a6fe6c4b71d07
-ms.sourcegitcommit: 09f124fac7b2e711e1a8be562a99624627c0699e
+ms.date: 12/28/2018
+ms.openlocfilehash: 843f57f8e5dc20d4341749f4594e0bd8139e60fa
+ms.sourcegitcommit: d75295cc4f47d8d872e7a361fdb5526f0f145dd2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "27283104"
+ms.lasthandoff: 12/29/2018
+ms.locfileid: "27460872"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api"></a>Работа с диапазонами с использованием API JavaScript для Excel
 
@@ -541,6 +541,35 @@ Excel.run(function (context) {
 ### <a name="conditional-formatting-of-ranges"></a>Условное форматирование диапазонов
 
 В диапазонах может применяться форматирование к отдельным ячейкам на основе условий. Дополнительные сведения об этом см. в статье [Применение условного форматирования к диапазонам Excel](excel-add-ins-conditional-formatting.md).
+
+## <a name="find-a-cell-using-string-matching-preview"></a>Поиск ячейки с помощью сопоставления строк (предварительная версия)
+
+> [!NOTE]
+> Функция `find` объекта Range в настоящее время доступна только в общедоступной предварительной версии (бета-версии). Для применения этой функции необходимо использовать бета-версию библиотеки в CDN Office.js: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
+> Если вы используете TypeScript или ваш редактор кода использует файлы определения типа TypeScript для IntelliSense, воспользуйтесь https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts.
+
+У объекта `Range` есть метод `find` для поиска указанной строки в диапазоне. Он возвращает диапазон первой ячейки с текстом, соответствующим критериям. Приведенный ниже пример кода находит первую ячейку со значением, соответствующим строке **Food** (Еда), и заносит ее адрес в консоль. Обратите внимание, что метод `find` выдает ошибку `ItemNotFound`, если указанной строки не существует в диапазоне. Если ожидается, что указанная строка может отсутствовать в диапазоне, используйте вместо этого метод [findOrNullObject](excel-add-ins-advanced-concepts.md#42ornullobject-methods), чтобы ваш код корректно обработал этот сценарий.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+    var table = sheet.tables.getItem("ExpensesTable");
+    var searchRange = table.getRange();
+    var foundRange = searchRange.find("Food", {
+        completeMatch: true, // find will match the whole cell value
+        matchCase: false, // find will not match case
+        searchDirection: Excel.SearchDirection.forward // find will start searching at the beginning of the range
+    });
+
+    foundRange.load("address");
+    return context.sync()
+        .then(function() {
+            console.log(foundRange.address);
+    });
+}).catch(errorHandlerFunction);
+```
+
+Если метод `find` вызывается для диапазона, представляющего одну ячейку, поиск выполняется во всем листе. Поиск начинается в этой ячейке и продолжается в направлении, которое определяется параметром `SearchCriteria.searchDirection`, охватывающим концы листа при необходимости.
 
 ## <a name="see-also"></a>См. также
 
