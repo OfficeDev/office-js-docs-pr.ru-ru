@@ -2,12 +2,12 @@
 ms.date: 11/29/2018
 description: Ознакомьтесь с рекомендациями по разработке пользовательских функций в Excel.
 title: Рекомендации в отношении пользовательских функций
-ms.openlocfilehash: b1785c7f41af9823cfd135ead29fff4eda4b0b1d
-ms.sourcegitcommit: e2ba9d7210c921d068f40d9f689314c73ad5ab4a
+ms.openlocfilehash: c1be1d01a88d50bb0f3aee8af1aea7c47658bc10
+ms.sourcegitcommit: 3007bf57515b0811ff98a7e1518ecc6fc9462276
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "27156588"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "27724888"
 ---
 # <a name="custom-functions-best-practices-preview"></a>Рекомендации в отношении пользовательских функций (предварительная версия)
 
@@ -199,4 +199,4 @@ function getWeatherReport(zipCode, dayOfWeek)
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)
 * [Метаданные пользовательских функций](custom-functions-json.md)
 * [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
-* [Руководство по пользовательским функциям в Excel](excel-tutorial-custom-functions.md)
+* [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)

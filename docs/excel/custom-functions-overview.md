@@ -2,12 +2,12 @@
 ms.date: 12/21/2018
 description: Создание пользовательских функций в Excel с помощью JavaScript.
 title: Создание пользовательских функций в Excel (Ознакомительная версия)
-ms.openlocfilehash: 8f30ee32168147b8beeb6e60372cd631237ce993
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.openlocfilehash: bee981d11f8c05948795867f2d759936bfe16d82
+ms.sourcegitcommit: 3007bf57515b0811ff98a7e1518ecc6fc9462276
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433042"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "27724874"
 ---
 # <a name="create-custom-functions-in-excel-preview"></a>Создание пользовательских функций в Excel (ознакомительная версия)
 
@@ -428,7 +428,7 @@ function getComment(x) {
 - **28 ноября 2017 г.**: Добавлена поддержка отмены вызова асинхронных функций (необходимо изменение для потоковых функций).
 - **7 мая 2018 г.**: Реализована* поддержка запущенный подпроцессов для Mac, Excel Online и синхронных функций
 - **20 сентября 2018 г.**: Реализована поддержка пользовательских функций среды выполнения JavaScript. Дополнительные сведения см. в статье [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md).
-- **20 октября 2018 г.**: После выхода [Сборки October Insiders](https://support.office.com/ru-RU/article/what-s-new-for-office-insiders-c152d1e2-96ff-4ce9-8c14-e74e13847a24), пользовательские функции требуют параметр «идентификатор» в [метаданных пользовательских функций](custom-functions-json.md) для настольных версий Windows и Online. На компьютерах Mac можно игнорировать этот параметр.
+- **20 октября 2018 г.**: После выхода [Сборки October Insiders](https://support.office.com/en-us/article/what-s-new-for-office-insiders-c152d1e2-96ff-4ce9-8c14-e74e13847a24), пользовательские функции требуют параметр «идентификатор» в [метаданных пользовательских функций](custom-functions-json.md) для настольных версий Windows и Online. На компьютерах Mac можно игнорировать этот параметр.
 
 
 \* к каналу [Office Insider ](https://products.office.com/office-insider) (ранее "Предварительная оценка — ранний доступ")
@@ -438,4 +438,4 @@ function getComment(x) {
 * [Метаданные пользовательских функций](custom-functions-json.md)
 * [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
 * [Рекомендации по настраиваемым функциям](custom-functions-best-practices.md)
-* [Руководство по настраиваемым функциям в Excel](excel-tutorial-custom-functions.md)
+* [Руководство по настраиваемым функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)

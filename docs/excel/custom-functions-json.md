@@ -2,12 +2,12 @@
 ms.date: 11/26/2018
 description: Определение метаданных для настраиваемых функций в Excel.
 title: Метаданные для настраиваемых функций в Excel
-ms.openlocfilehash: 60b22283d533cec6546d4ba8e7217868ef2be97c
-ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
+ms.openlocfilehash: 4bdf27173c5e912aa3eba3c8661ba45dd8b453cb
+ms.sourcegitcommit: 3007bf57515b0811ff98a7e1518ecc6fc9462276
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "27270644"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "27724860"
 ---
 # <a name="custom-functions-metadata-preview"></a>Метаданные для настраиваемых функций (предварительная версия)
 
@@ -158,4 +158,4 @@ ms.locfileid: "27270644"
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)
 * [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
 * [Рекомендации по настраиваемым функциям](custom-functions-best-practices.md)
-* [Руководство по настраиваемым функциям в Excel](excel-tutorial-custom-functions.md)
+* [Руководство по настраиваемым функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
