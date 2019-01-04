@@ -2,12 +2,12 @@
 title: Преобразование проекта надстройки Office в Visual Studio в TypeScript
 description: ''
 ms.date: 10/30/2018
-ms.openlocfilehash: d2a092cb48864cb9a4c9e791e3485963d0329ed2
-ms.sourcegitcommit: 161a0625646a8c2ebaf1773c6369ee7cc96aa07b
+ms.openlocfilehash: 9ea1cf421ce94d7756595950604ab3279e049c95
+ms.sourcegitcommit: 3007bf57515b0811ff98a7e1518ecc6fc9462276
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "25891804"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "27724853"
 ---
 # <a name="convert-an-office-add-in-project-in-visual-studio-to-typescript"></a>Преобразование проекта надстройки Office в Visual Studio в TypeScript
 
@@ -21,7 +21,7 @@ ms.locfileid: "25891804"
 - [Visual Studio 2017](https://www.visualstudio.com/vs/) с установленной рабочей нагрузкой **Разработка надстроек для Office и SharePoint**
 
     > [!TIP]
-    > Если вы уже установили Visual Studio 2017, [используйте установщик Visual Studio](https://docs.microsoft.com/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**. Если эта рабочая нагрузка еще не установлена, используйте установщик Visual Studio, чтобы [установить ее](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2017#modify-workloads).
+    > Если вы уже установили Visual Studio 2017, [используйте Visual Studio Installer](https://docs.microsoft.com/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**. Если эта рабочая нагрузка еще не установлена, используйте установщик Visual Studio, чтобы [установить ее](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2017#modify-workloads).
 
 - Пакет SDK для TypeScript версии 2.3 или более поздней (для Visual Studio 2017)
 
@@ -106,7 +106,7 @@ ms.locfileid: "25891804"
 
 ## <a name="run-the-converted-add-in-project"></a>Запуск преобразованного проекта надстройки
 
-1. В Visual Studio нажмите клавишу F5 или кнопку **Запустить**, чтобы запустить Excel с кнопкой **Show Taskpane** (Показать область задач) на ленте. Надстройка будет размещена на локальном сервере IIS.
+1. В Visual Studio нажмите клавишу **F5** или кнопку **Запустить**, чтобы запустить Excel с кнопкой **Показать область задач** на ленте. Надстройка будет размещена на локальном сервере IIS.
 
 2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 

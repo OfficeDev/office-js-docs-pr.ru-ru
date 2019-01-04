@@ -2,12 +2,12 @@
 title: Создание надстройки Office на платформе Node.js с использованием единого входа
 description: ''
 ms.date: 12/07/2018
-ms.openlocfilehash: 6579549fbad4a44d73edfacefe53875e2a6e0918
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.openlocfilehash: b05ef90000da7fda3a72d2ba873c169a469731a6
+ms.sourcegitcommit: 3007bf57515b0811ff98a7e1518ecc6fc9462276
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433336"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "27724909"
 ---
 # <a name="create-a-nodejs-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office на платформе Node.js с использованием единого входа (предварительная версия)
 
@@ -658,7 +658,7 @@ ms.locfileid: "27433336"
 2. Если используется VS Code:
  1. Откройте проект в VS Code.
  2. Нажмите клавиши CTRL+SHIFT+B, чтобы выполнить сборку проекта.
- 3. Нажмите клавишу F5, чтобы запустить проект в сеансе отладки.
+ 3. Нажмите клавишу **F5**, чтобы запустить проект в сеансе отладки.
 
 
 ## <a name="add-the-add-in-to-an-office-document"></a>Добавление надстройки в документ Office

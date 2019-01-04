@@ -2,12 +2,12 @@
 title: Создание надстройки Office, в которой используется единый вход, на платформе ASP.NET
 description: ''
 ms.date: 01/23/2018
-ms.openlocfilehash: 9ccabfcb2f3dc071ab9be181dda1ed5cadadd763
-ms.sourcegitcommit: 979e8d2b0fbc537f9c01527062767c026592aa62
+ms.openlocfilehash: 295d586e363345c819584c3e04dd59c2c98f90b8
+ms.sourcegitcommit: 3007bf57515b0811ff98a7e1518ecc6fc9462276
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "25852947"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "27724902"
 ---
 # <a name="create-an-aspnet-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office, в которой используется единый вход, на платформе ASP.NET (предварительная версия)
 
@@ -132,7 +132,7 @@ ms.locfileid: "25852947"
 
         1. Закомментируйте раздел `<WebApplicationInfo>` в манифесте прямо перед завершением узла `</VersionOverrides>`.
 
-        2. Нажмите клавишу F5, чтобы запустить сеанс отладки. В результате будет создана копия манифеста в следующей папке (доступ к которой проще получить в **проводнике**, чем в Visual Studio): `Office-Add-in-ASP.NET-SSO\Complete\Office-Add-in-ASPNET-SSO\bin\Debug\OfficeAppManifests`
+        2. Нажмите клавишу **F5**, чтобы запустить сеанс отладки. В результате будет создана копия манифеста в следующей папке (доступ к которой проще получить в **проводнике**, чем в Visual Studio): `Office-Add-in-ASP.NET-SSO\Complete\Office-Add-in-ASPNET-SSO\bin\Debug\OfficeAppManifests`
 
         3. В копии манифеста удалите синтаксис комментария для раздела `<WebApplicationInfo>`.
 
