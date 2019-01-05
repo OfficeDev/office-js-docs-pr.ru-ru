@@ -204,7 +204,7 @@ vue init webpack my-add-in
 Поздравляем, вы успешно создали надстройку Excel с помощью Vue! Чтобы узнать больше о возможностях надстроек Excel и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Excel.
 
 > [!div class="nextstepaction"]
-> [Руководство по надстройкам Excel](../tutorials/excel-tutorial.yml)
+> [Руководство по надстройкам Excel](../tutorials/excel-tutorial.md)
 
 ## <a name="see-also"></a>См. также
 
