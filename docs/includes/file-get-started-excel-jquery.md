@@ -131,7 +131,7 @@
 
 ### <a name="try-it-out"></a>Проверка
 
-1. Протестируйте новую надстройку Excel в Visual Studio, нажав клавишу F5 или кнопку **Запустить**, чтобы запустить Excel с кнопкой надстройки **Show Taskpane** (Показать область задач) на ленте. Надстройка будет размещена на локальном сервере IIS.
+1. Протестируйте новую надстройку Excel в Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить Excel с кнопкой надстройки **Показать область задач** на ленте. Надстройка будет размещена на локальном сервере IIS.
 
 2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
@@ -156,7 +156,7 @@
 
 ### <a name="create-the-web-app"></a>Создание веб-приложения
 
-1. С помощью генератора Yeoman создайте проект надстройки Excel. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
+1. Создайте проект надстройки Excel помощью генератора Yeoman. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
     ```bash
     yo office
@@ -309,11 +309,12 @@
 Поздравляем, вы успешно создали надстройку Excel с помощью jQuery! Чтобы узнать больше о возможностях надстроек Excel и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Excel.
 
 > [!div class="nextstepaction"]
-> [Руководство по надстройкам Excel](../tutorials/excel-tutorial.yml)
+> [Руководство по надстройкам Excel](../tutorials/excel-tutorial.md)
 
 ## <a name="see-also"></a>См. также
 
 * [Руководство по надстройкам Excel](../tutorials/excel-tutorial-create-table.md)
 * [Основные концепции программирования с помощью API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
-* [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
+* 
+  [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
 * [Справочник по API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)
