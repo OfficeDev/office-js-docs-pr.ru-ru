@@ -1,13 +1,13 @@
 ---
 title: Работа с книгами с использованием API JavaScript для Excel
 description: ''
-ms.date: 12/13/2018
-ms.openlocfilehash: 388e061f72055b557a9da822391a9c0cd64a2c24
-ms.sourcegitcommit: 09f124fac7b2e711e1a8be562a99624627c0699e
+ms.date: 1/7/2019
+ms.openlocfilehash: db32cf0c847d578fb909d9ad97a3a75ef3f97eee
+ms.sourcegitcommit: 9afcb1bb295ec0c8940ed3a8364dbac08ef6b382
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "27283125"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "27770590"
 ---
 # <a name="work-with-workbooks-using-the-excel-javascript-api"></a>Работа с книгами с использованием API JavaScript для Excel
 
@@ -50,7 +50,7 @@ Excel.createWorkbook();
 
 С помощью метода `createWorkbook` также можно создать копию существующей книги. Метод принимает в качестве необязательного параметра строковое представление XLSX-файла в кодировке base64. Полученная книга будет копией этого файла, предполагая, что строковый аргумент является допустимым XLSX-файлом.
 
-Текущую книгу надстройки можно получить в виде строки в кодировке base64 с помощью [среза файла](/javascript/api/office/office.document#getfileasync-filetype--options--callback-). Преобразование файла в нужную строку в кодировке base64 можно выполнить с помощью класса [FileReader](https://developer.mozilla.org/docs/Web/API/FileReader), как показано в приведенном ниже примере. 
+Текущую книгу надстройки можно получить в виде строки в кодировке base64 с помощью [среза файла](/javascript/api/office/office.document#getfileasync-filetype--options--callback-). Преобразование файла в нужную строку в кодировке base64 можно выполнить с помощью класса [FileReader](https://developer.mozilla.org/docs/Web/API/FileReader), как показано в приведенном ниже примере.
 
 ```js
 var myFile = document.getElementById("file");
@@ -60,9 +60,9 @@ reader.onload = (function (event) {
     Excel.run(function (context) {
         // strip off the metadata before the base64-encoded string
         var startIndex = event.target.result.indexOf("base64,");
-        var mybase64 = event.target.result.substr(startIndex + 7);
+        var workbookContents = event.target.result.substr(startIndex + 7);
 
-        Excel.createWorkbook(mybase64);
+        Excel.createWorkbook(workbookContents);
         return context.sync();
     }).catch(errorHandlerFunction);
 });
@@ -71,9 +71,48 @@ reader.onload = (function (event) {
 reader.readAsDataURL(myFile.files[0]);
 ```
 
+### <a name="insert-a-copy-of-an-existing-workbook-into-the-current-one"></a>Вставка копии существующей книги в текущую книгу.
+
+> [!NOTE]
+> Функция `WorksheetCollection.addFromBase64` в настоящее время доступна только в общедоступной предварительной версии (бета-версии). Для применения этой функции необходимо использовать бета-версию библиотеки в CDN Office.js: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
+> Если вы используете TypeScript или ваш редактор кода использует файлы определения типа TypeScript для IntelliSense, воспользуйтесь https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts.
+
+В предыдущем примере показана новая книга, которая была создана из существующей книги. Вы также можете скопировать отдельные части или всю существующую книгу целиком в книгу, привязанную в настоящее время к вашей надстройке. [WorksheetCollection](/javascript/api/excel/excel.worksheetcollection) для книги имеет метод `addFromBase64` для вставки копий листов целевой книги в саму книгу. Файл другой книги передается в виде строки в кодировке base64, как и вызов `Excel.createWorkbook`.
+
+```TypeScript
+addFromBase64(base64File: string, sheetNamesToInsert?: string[], positionType?: Excel.WorksheetPositionType, relativeTo?: Worksheet | string): OfficeExtension.ClientResult<string[]>;
+```
+
+В примере ниже показаны листы книги, которые были вставлены в текущую книгу непосредственно после активного листа. Обратите внимание, что `null` передается для параметра `sheetNamesToInsert?: string[]`. Это означает, что все листы были вставлены.
+
+```js
+var myFile = <HTMLInputElement>document.getElementById("file");
+var reader = new FileReader();
+
+reader.onload = (event) => {
+    Excel.run((context) => {
+        // strip off the metadata before the base64-encoded string
+        var startIndex = (<string>(<FileReader>event.target).result).indexOf("base64,");
+        var workbookContents = (<string>(<FileReader>event.target).result).substr(startIndex + 7);
+
+        var sheets = context.workbook.worksheets;
+        sheets.addFromBase64(
+            workbookContents,
+            null, // get all the worksheets
+            Excel.WorksheetPositionType.after, // insert them after the worksheet specified by the next parameter
+            sheets.getActiveWorksheet() // insert them after the active worksheet
+        );
+        return context.sync();
+    });
+};
+
+// read in the file as a data URL so we can parse the base64-encoded string
+reader.readAsDataURL(myFile.files[0]);
+```
+
 ## <a name="protect-the-workbooks-structure"></a>Защита структуры книги
 
-Надстройка может управлять возможностью пользователя по изменению структуры книги. Свойство `protection` объекта Workbook является объектом [WorkbookProtection](/javascript/api/excel/excel.workbookprotection) с методом `protect()`. В приведенном ниже примере показан основной сценарий переключения защиты структуры книги. 
+Надстройка может управлять возможностью пользователя по изменению структуры книги. Свойство `protection` объекта Workbook является объектом [WorkbookProtection](/javascript/api/excel/excel.workbookprotection) с методом `protect()`. В приведенном ниже примере показан основной сценарий переключения защиты структуры книги.
 
 ```js
 Excel.run(function (context) {
@@ -200,18 +239,18 @@ Excel.run(async (context) => {
 
 По умолчанию Excel пересчитывает результаты формул при каждом изменении ячейки из ссылки. Производительность вашей надстройки можно улучшить путем изменения режима вычислений. У объекта Application есть свойство `calculationMode` типа `CalculationMode`. Ему можно присвоить следующие значения:
 
- - `automatic`: режим пересчета по умолчанию, при котором Excel вычисляет новые результаты формулы при каждом изменении соответствующих данных.
- - `automaticExceptTables`: аналогично `automatic`, за исключением того, что игнорируются любые изменения значений таблиц.
- - `manual`: вычисления выполняются только в том случае, если пользователь или надстройка запрашивает их.
+- `automatic`: режим пересчета по умолчанию, при котором Excel вычисляет новые результаты формулы при каждом изменении соответствующих данных.
+- `automaticExceptTables`: аналогично `automatic`, за исключением того, что игнорируются любые изменения значений таблиц.
+- `manual`: вычисления выполняются только в том случае, если пользователь или надстройка запрашивает их.
 
 ### <a name="set-calculation-type"></a>Установка типа вычислений
 
 Объект [Application](/javascript/api/excel/excel.application) предоставляет метод применения немедленного пересчета. Метод `Application.calculate(calculationType)` запускает ручной пересчет с учетом указанного типа `calculationType`. Можно указать следующие значения:
 
- - `full`: пересчет всех формул во всех открытых книгах независимо от их изменения с прошлого пересчета.
- - `fullRebuild`: проверка зависимых формул с последующим пересчетом всех формул во всех открытых книгах независимо от их изменения с прошлого пересчета.
- - `recalculate`: пересчет формул, которые были изменены (или помечены программным путем для пересчета) с момента последнего вычисления, и зависимых от них формул во всех активных книгах.
- 
+- `full`: пересчет всех формул во всех открытых книгах независимо от их изменения с прошлого пересчета.
+- `fullRebuild`: проверка зависимых формул с последующим пересчетом всех формул во всех открытых книгах независимо от их изменения с прошлого пересчета.
+- `recalculate`: пересчет формул, которые были изменены (или помечены программным путем для пересчета) с момента последнего вычисления, и зависимых от них формул во всех активных книгах.
+
 > [!NOTE]
 > Дополнительные сведения о пересчете см. в статье [Изменение пересчета, итерации или точности формулы](https://support.office.com/article/change-formula-recalculation-iteration-or-precision-73fc7dac-91cf-4d36-86e8-67124f6bcce4).
 

@@ -1,13 +1,13 @@
 ---
-ms.date: 12/21/2018
+ms.date: 01/08/2019
 description: Создание пользовательских функций в Excel с помощью JavaScript.
-title: Создание пользовательских функций в Excel (Ознакомительная версия)
-ms.openlocfilehash: bee981d11f8c05948795867f2d759936bfe16d82
-ms.sourcegitcommit: 3007bf57515b0811ff98a7e1518ecc6fc9462276
+title: Создание пользовательских функций в Excel (ознакомительная версия)
+ms.openlocfilehash: 0bc1b9face240f6218b501dd195bde39e8781205
+ms.sourcegitcommit: 9afcb1bb295ec0c8940ed3a8364dbac08ef6b382
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "27724874"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "27770639"
 ---
 # <a name="create-custom-functions-in-excel-preview"></a>Создание пользовательских функций в Excel (ознакомительная версия)
 
@@ -36,18 +36,18 @@ function add42(a, b) {
 
 | Файл | Формат файла | Описание |
 |------|-------------|-------------|
-| **./src/functions/functions.js**<br/>или<br/>**./src/functions/functions.ts** | JavaScript<br/>или<br/>TypeScript | Содержит код, который определяет пользовательские функции. |
-| **./src/functions/functions.json** | JSON | Содержит метаданные с описанием пользовательских функций и позволяет Excel регистрировать пользовательские функции и сделать их доступными для конечных пользователей. |
-| **./src/functions/functions.html** | HTML | Предоставляет &lt;скрипт&gt; со ссылкой на файл JavaScript, который определяет пользовательские функции. |
+| **./src/customfunctions.js**<br/>или<br/>**./src/customfunctions.ts** | JavaScript<br/>или<br/>TypeScript | Содержит код, который определяет пользовательские функции. |
+| **./config/customfunctions.json** | JSON | Содержит метаданные с описанием пользовательских функций и позволяет Excel регистрировать пользовательские функции и сделать их доступными для конечных пользователей. |
+| **./index.html** | HTML | Предоставляет &lt;скрипт&gt; со ссылкой на файл JavaScript, который определяет пользовательские функции. |
 | **./manifest.xml** | XML | Определяет пространство имен для всех пользовательских функций в надстройку и расположение JavaScript, JSON и HTML-файлов, которые указаны ранее в этой таблице. |
 
 В разделах ниже приведены дополнительные сведения о данных файлах.
 
 ### <a name="script-file"></a>Файл скрипта
 
-Файл скрипта (**./src/functions/functions.js** или **./src/functions/functions.ts** в проекте, созданном генератором Yo Office) содержит код, который определяет пользовательские функции и сопоставляет имена пользовательских функций с объектами в [файле метаданных JSON](#json-metadata-file). 
+Файл сценария (**./src/customfunctions.js** или **./src/customfunctions.ts** в проекте, созданном генератором Yo Office) содержит код, который определяет пользовательские функции и размещает имена пользовательских функций к объектам в [файле метаданных JSON](#json-metadata-file). 
 
-Например, приведенный ниже код определяет пользовательские функции `add` и `increment`, а затем указывают информация о сопоставлении для обоих функций. Функция `add` будет сопоставлена с объектом в файле метаданных JSON, где значение свойства `id` **ADD**, и функция `increment` будет сопоставлена с объектом в файле метаданных, где значение свойства`id` **INCREMENT**. См. статью [Советы и рекомендации по работе с пользовательскими функциями](custom-functions-best-practices.md#mapping-function-names-to-json-metadata) для получения дополнительных данных о сопоставление имен функций в файле скрипта с объектами в файле метаданных JSON.
+Например, приведенный ниже код определяет пользовательские функции `add` и `increment`, а затем указывают информацию о сопоставлении для обеих функций. Функция `add` сопоставляется с объектом в файле метаданных JSON, где значение свойства `id` **ADD**, и функция `increment` будет сопоставляться с объектом в файле метаданных, где значение свойства`id` **INCREMENT**. См. статью [Советы и рекомендации по работе с пользовательскими функциями](custom-functions-best-practices.md#associating-function-names-with-json-metadata) для получения дополнительных данных о сопоставлении имен функций в файле скрипта с объектами в файле метаданных JSON.
 
 ```js
 function add(first, second){
@@ -66,19 +66,19 @@ function increment(incrementBy, callback) {
   };
 }
 
-// map `id` values in the JSON metadata file to the JavaScript function names
-CustomFunctionMappings.ADD = add;
-CustomFunctionMappings.INCREMENT = increment;
+// associate `id` values in the JSON metadata file to the JavaScript function names
+ CustomFunctions.associate("ADD", add);
+ CustomFunctions.associate("INCREMENT", increment);
 ```
 
-### <a name="json-metadata-file"></a>Файл метаданных JSON 
+### <a name="json-metadata-file"></a>Файл метаданных JSON
 
-Файл метаданных пользовательских функций (**./src/functions/functions.json** в проекте, созданном генератором Yo Office) предоставляет информацию, которая необходима Excel для регистрации пользовательских функций и обеспечения их доступности для конечных пользователей. Пользовательские функции регистрируются, когда пользователь запускает надстройку в первый раз. После этого как они становятся доступны тому самому пользователю во всех рабочих книгах (т.е. не только в рабочей книге, где надстройка первоначально запущена).
+Файл метаданных пользовательских функций (**./config/customfunctions.json** в проекте, созданном во время генератора Yo Office) предоставляет информацию, которая необходима Excel для регистрации пользовательских функций и обеспечения их доступности для конечных пользователей. Пользовательские функции регистрируются, когда пользователь запускает надстройку в первый раз. После этого как они становятся доступны тому самому пользователю во всех рабочих книгах (т.е. не только в рабочей книге, где надстройка первоначально запущена).
 
 > [!TIP]
 > Настройки сервера на сервере, на котором размещен JSON-файл, должны включать активацию [CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS), чтобы пользовательские функции сработали надлежащим образом в Excel Online.
 
-Код ниже в **functions.json** определяет метаданные для функции `add` и функции `increment`, описанные ранее. Таблица, которая следует за этим примером кода, предоставляет подробные сведения об отдельных свойств для этого объекта JSON. См. статью [Советы и рекомендации по работе с пользовательскими функциями](custom-functions-best-practices.md#mapping-function-names-to-json-metadata) для получения дополнительных данных об указании имен свойств `id` и `name` в файле метаданных JSON.
+Код ниже в **customfunctions.json** определяет метаданные для функции `add` и функции `increment`, описанные ранее. Таблица, которая следует за этим примером кода, предоставляет подробные сведения об отдельных свойств для этого объекта JSON. См. статью [Советы и рекомендации по работе с пользовательскими функциями](custom-functions-best-practices.md#associating-function-names-with-json-metadata) для получения дополнительных данных об указании имен свойств `id` и `name` в файле метаданных JSON.
 
 ```json
 {
@@ -151,42 +151,52 @@ CustomFunctionMappings.INCREMENT = increment;
 XML-файл манифеста для надстройки, который определяет пользовательские функции (**./manifest.xml** в проекте, который создает генератор Yo Office) и определяет пространство имен для всех пользовательских функций в надстройке, а также расположение файлов JavaScript, JSON и HTML. XML-разметка ниже представляет пример элементов `<ExtensionPoint>` и `<Resources>`, которые необходимо включить в манифест надстройки, чтобы активировать пользовательские функции.  
 
 ```xml
-<VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
-        <Hosts>
-            <Host xsi:type="Workbook">
-                <AllFormFactors>
-                    <ExtensionPoint xsi:type="CustomFunctions">
-                        <Script>
-                            <SourceLocation resid="Contoso.Functions.Script.Url" />
-                        </Script>
-                        <Page>
-                            <SourceLocation resid="Contoso.Functions.Page.Url"/>
-                        </Page>
-                        <Metadata>
-                            <SourceLocation resid="Contoso.Functions.Metadata.Url" />
-                        </Metadata>
-                        <Namespace resid="Contoso.Functions.Namespace" />
-                    </ExtensionPoint>
-                </AllFormFactors>
-            </Host>
-        </Hosts>
-        <Resources>
-            <bt:Images>
-                <bt:Image id="Contoso.tpicon_16x16" DefaultValue="https://localhost:3000/assets/icon-16.png" />
-                <bt:Image id="Contoso.tpicon_32x32" DefaultValue="https://localhost:3000/assets/icon-32.png" />
-                <bt:Image id="Contoso.tpicon_80x80" DefaultValue="https://localhost:3000/assets/icon-80.png" />
-            </bt:Images>
-            <bt:Urls>
-                <bt:Url id="Contoso.Functions.Script.Url" DefaultValue="https://localhost:3000/dist/functions.js" />
-                <bt:Url id="Contoso.Functions.Metadata.Url" DefaultValue="https://localhost:3000/dist/functions.json" />
-                <bt:Url id="Contoso.Functions.Page.Url" DefaultValue="https://localhost:3000/dist/functions.html" />
-                <bt:Url id="Contoso.Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html" />
-            </bt:Urls>
-            <bt:ShortStrings>
-                <bt:String id="Contoso.Functions.Namespace" DefaultValue="CONTOSO" />
-            </bt:ShortStrings>
-        </Resources>
-    </VersionOverrides>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+  <Id>6f4e46e8-07a8-4644-b126-547d5b539ece</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Contoso</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="helloworld"/>
+  <Description DefaultValue="Samples to test custom functions"/>
+  <Hosts>
+    <Host Name="Workbook"/>
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://localhost:8081/index.html"/>
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Workbook">
+        <AllFormFactors>
+          <ExtensionPoint xsi:type="CustomFunctions">
+            <Script>
+              <SourceLocation resid="JS-URL"/>
+            </Script>
+            <Page>
+              <SourceLocation resid="HTML-URL"/>
+            </Page>
+            <Metadata>
+              <SourceLocation resid="JSON-URL"/>
+            </Metadata>
+            <Namespace resid="namespace"/>
+          </ExtensionPoint>
+        </AllFormFactors>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Urls>
+        <bt:Url id="JSON-URL" DefaultValue="https://localhost:8081/config/customfunctions.json"/>
+        <bt:Url id="JS-URL" DefaultValue="https://localhost:8081/dist/win32/ship/index.win32.bundle"/>
+        <bt:Url id="HTML-URL" DefaultValue="https://localhost:8081/index.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="namespace" DefaultValue="CONTOSO"/>
+      </bt:ShortStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>
 ```
 
 > [!NOTE]
@@ -345,13 +355,13 @@ function secondHighest(values){
 }
 ```
 
-## <a name="discovering-cells-that-invoke-custom-functions"></a>Обнаружение ячеек, вызывающих пользовательские функции
+## <a name="determine-which-cell-invoked-your-custom-function"></a>Определение того, какая ячейка вызывала пользовательскую функцию
 
-Пользовательские функции также позволяют форматировать диапазоны, отображать кэшированные значения и сверять значения с помощью свойства `caller.address`, позволяющего находить ячейку, которая вызвала пользовательскую функцию. `caller.address` можно использовать в некоторых скриптах, указанных ниже.
+В некоторых случаях вам потребуется получить адрес ячейки, которая вызывала пользовательскую функцию. Это может быть полезно в следующих типах сценариев:
 
-- Форматирование диапазонов. Используйте `caller.address` в качестве ключа ячейки для хранения сведений в объекте [AsyncStorage](https://docs.microsoft.com/office/dev/add-ins/excel/custom-functions-runtime#storing-and-accessing-data). После этого используйте событие [onCalculated](https://docs.microsoft.com/javascript/api/excel/excel.worksheet#oncalculated) в Excel, чтобы загрузить ключ из `AsyncStorage`.
+- Форматирование диапазонов: Используйте адрес ячейки в качестве ключа для хранения сведений в [AsyncStorage](https://docs.microsoft.com/office/dev/add-ins/excel/custom-functions-runtime#storing-and-accessing-data). После этого используйте событие [onCalculated](https://docs.microsoft.com/javascript/api/excel/excel.worksheet#oncalculated) в Excel, чтобы загрузить ключ из `AsyncStorage`.
 - Отображение кэшированных значений. Если функция используется в автономном режиме, отображайте сохраненные в кэше значения из `AsyncStorage` с помощью `onCalculated`.
-- Сверка. С помощью `caller.address` находите исходную ячейку, чтобы упростить сверку, где выполняется обработка.
+- Сверка: используйте адрес ячейки, чтобы найти исходную ячейку, чтобы упростить сверку при выполнении обработки.
 
 Сведения об адресе ячейки предоставляются только в том случае, если параметру `requiresAddress` присвоено значение `true` в файле метаданных JSON функции. Ниже приведен пример:
 
@@ -421,21 +431,11 @@ function getComment(x) {
 - Инструменты для отладки, предназначенные специально для пользовательских функций, могут быть доступны в будущем. В настоящее время вы можете выполнить отладку в Excel Online при использовании средств разработчика F12. Дополнительные данные см. [Советы и рекомендации в отношении пользовательских функций](custom-functions-best-practices.md)
 - В 32-разрядной версии Office 365 для участников программы предварительной оценки, выпущенной в *декабре* (версия 1901, сборка 11128.20000), пользовательские функции могут работать неправильно. В некоторых случаях эту проблему можно решить, скачав файл на сайте https://github.com/OfficeDev/Excel-Custom-Functions/blob/december-insiders-workaround/excel-udf-host.win32.bundle и скопировав его папку "C:\Program Files (x86)\Microsoft Office\root\Office16".
 
-## <a name="changelog"></a>Журнал изменений
-
-- **7 ноября 2017 г.**: Выпущена ознакомительная версия пользовательских функций с примерами.
-- **20 ноября 2017 г.**: Исправлена ошибка совместимости для пользователей, использующих сборки 8801 и выше.
-- **28 ноября 2017 г.**: Добавлена поддержка отмены вызова асинхронных функций (необходимо изменение для потоковых функций).
-- **7 мая 2018 г.**: Реализована* поддержка запущенный подпроцессов для Mac, Excel Online и синхронных функций
-- **20 сентября 2018 г.**: Реализована поддержка пользовательских функций среды выполнения JavaScript. Дополнительные сведения см. в статье [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md).
-- **20 октября 2018 г.**: После выхода [Сборки October Insiders](https://support.office.com/en-us/article/what-s-new-for-office-insiders-c152d1e2-96ff-4ce9-8c14-e74e13847a24), пользовательские функции требуют параметр «идентификатор» в [метаданных пользовательских функций](custom-functions-json.md) для настольных версий Windows и Online. На компьютерах Mac можно игнорировать этот параметр.
-
-
-\* к каналу [Office Insider ](https://products.office.com/office-insider) (ранее "Предварительная оценка — ранний доступ")
-
 ## <a name="see-also"></a>См. также
 
 * [Метаданные пользовательских функций](custom-functions-json.md)
 * [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
-* [Рекомендации по настраиваемым функциям](custom-functions-best-practices.md)
-* [Руководство по настраиваемым функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
+* [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
+* [Журнал изменений пользовательских функций](custom-functions-changelog.md)
+* [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
+
