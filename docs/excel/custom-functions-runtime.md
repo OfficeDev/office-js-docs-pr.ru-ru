@@ -1,13 +1,13 @@
 ---
-ms.date: 12/5/2018
+ms.date: 01/08/2019
 description: Сведения об основных сценариях при разработке пользовательских функций Excel, которые используют новую среду выполнения JavaScript.
-title: Среда выполнения для пользовательских функций Excel
-ms.openlocfilehash: a2e59c24addecbf0159b816b15c3bf6faf623475
-ms.sourcegitcommit: 3007bf57515b0811ff98a7e1518ecc6fc9462276
+title: Среда выполнения для пользовательских функций Excel (предварительный просмотр)
+ms.openlocfilehash: 2610be95ea255d14c577d8b9215f32a79ab04463
+ms.sourcegitcommit: 9afcb1bb295ec0c8940ed3a8364dbac08ef6b382
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "27724846"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "27770583"
 ---
 # <a name="runtime-for-excel-custom-functions-preview"></a>Среда выполнения для пользовательских функций Excel (предварительный просмотр)
 
@@ -17,7 +17,7 @@ ms.locfileid: "27724846"
 
 ## <a name="requesting-external-data"></a>Запрос внешних данных
 
-В пределах пользовательской функции можно запрашивать внешние данные с помощью такого API, как [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), или с помощью [XmlHttpRequest (XHR)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который отправляет HTTP-запросы для взаимодействия с серверами. В среде выполнения JavaScript XHR реализует дополнительные меры по обеспечению безопасности, предъявляя в качестве требования [Политику единого домена](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) и простой механизм [CORS](https://www.w3.org/TR/cors/).  
+В пределах пользовательской функции можно запрашивать внешние данные с помощью такого API, как [Fetch](https://developer.mozilla.org/ru-RU/docs/Web/API/Fetch_API), или с помощью [XmlHttpRequest (XHR)](https://developer.mozilla.org/ru-RU/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который отправляет HTTP-запросы для взаимодействия с серверами. В среде выполнения JavaScript XHR реализует дополнительные меры по обеспечению безопасности, предъявляя в качестве требования [Политику единого домена](https://developer.mozilla.org/ru-RU/docs/Web/Security/Same-origin_policy) и простой механизм [CORS](https://www.w3.org/TR/cors/).  
 
 ### <a name="xhr-example"></a>Пример XHR
 
@@ -51,7 +51,7 @@ function sendWebRequest(thermometerID, data) {
 
 ## <a name="receiving-data-via-websockets"></a>Получение данных через WebSockets
 
-В пределах пользовательской функции можно использовать [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) для обмена данными через постоянное соединение с сервером. С помощью WebSockets ваша пользовательская функция может открыть соединение с сервером, а затем автоматически получать сообщения от сервера при возникновении определенных событий, без необходимости специально запрашивать у сервера данные.
+В пределах пользовательской функции можно использовать [WebSockets](https://developer.mozilla.org/ru-RU/docs/Web/API/WebSockets_API) для обмена данными через постоянное соединение с сервером. С помощью WebSockets ваша пользовательская функция может открыть соединение с сервером, а затем автоматически получать сообщения от сервера при возникновении определенных событий, без необходимости специально запрашивать у сервера данные.
 
 ### <a name="websockets-example"></a>Пример WebSockets
 
@@ -69,7 +69,7 @@ ws.onerror = (error) => {
 
 ## <a name="storing-and-accessing-data"></a>Хранения данных и доступ к ним
 
-В пределах функции (или в пределах любой другой части надстройки) можно хранить данные и выполнять доступ к ним с помощью объекта `OfficeRuntime.AsyncStorage`. `AsyncStorage` — это постоянная незашифрованная система-хранилище пары "ключ-значение", обеспечивающая альтернативу хранилищу [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), которое нельзя использовать в пределах пользовательских функций. Надстройка может хранить до 10 МБ данных, используя `AsyncStorage`.
+В пределах функции (или в пределах любой другой части надстройки) можно хранить данные и выполнять доступ к ним с помощью объекта `OfficeRuntime.AsyncStorage`. `AsyncStorage` — это постоянная незашифрованная система-хранилище пары "ключ-значение", обеспечивающая альтернативу хранилищу [localStorage](https://developer.mozilla.org/ru-RU/docs/Web/API/Window/localStorage), которое нельзя использовать в пределах пользовательских функций. Надстройка может хранить до 10 МБ данных, используя `AsyncStorage`.
 
 `AsyncStorage` предназначается для использования в качестве решения-хранилища с общим доступом. Это означает, что несколько частей надстройки могут выполнять доступ к одним и тем же данным. Например, токены для аутентификации пользователей могут храниться в `AsyncStorage`, так как доступ к нему могут выполнять и пользовательская функция, и элементы пользовательского интерфейса надстройки, такие как область задач. Точно так же, если две надстройки используют один и тот же домен (например, www.contoso.com/addin1, www.contoso.com/addin2), им также разрешается обмен информацией в оба направления через `AsyncStorage`. Обратите внимание, что надстройки, имеющие разные поддомены, будут иметь разные экземпляры `AsyncStorage` (например, subdomain.contoso.com/addin1, differentsubdomain.contoso.com/addin2). 
 
@@ -198,5 +198,6 @@ function getStock (ticker) {
 
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)
 * [Метаданные пользовательских функций](custom-functions-json.md)
-* [Советы и рекомендации в отношении пользовательских функций](custom-functions-best-practices.md)
-* [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
+* [Рекомендации по настраиваемым функциям](custom-functions-best-practices.md)
+* [Журнал изменений пользовательских функций](custom-functions-changelog.md)
+* [Руководство по настраиваемым функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
