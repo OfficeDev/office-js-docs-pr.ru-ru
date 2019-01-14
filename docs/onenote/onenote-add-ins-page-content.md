@@ -1,15 +1,15 @@
 ---
 title: Работа с содержимым страницы в OneNote
 description: ''
-ms.date: 12/04/2017
-ms.openlocfilehash: aef9d80ebb37dacd2c3b5f2ec9d33cb0164d8452
-ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
+ms.date: 1/10/2019
+ms.openlocfilehash: 617c30f2a9a0c72b1c309ce299f388b5a16b983f
+ms.sourcegitcommit: 384e217fd51d73d13ccfa013bfc6e049b66bd98c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/28/2018
-ms.locfileid: "27457616"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "27896338"
 ---
-# <a name="work-with-onenote-page-content"></a>Работа с содержимым страницы в OneNote 
+# <a name="work-with-onenote-page-content"></a>Работа с содержимым страницы в OneNote
 
 В API JavaScript для надстроек OneNote содержимое страницы представлено указанной ниже объектной моделью.
 
@@ -25,7 +25,7 @@ ms.locfileid: "27457616"
 - [Section.addPage](https://docs.microsoft.com/javascript/api/onenote/onenote.section#addpage-title-)
 - [Page.insertPageAsSibling](https://docs.microsoft.com/javascript/api/onenote/onenote.section#insertsectionassibling-location--title-)
 
-Затем используйте методы в указанных ниже объектах для работы с содержимым страницы, например Page.addOutline и Outline.appendHtml. 
+Затем используйте методы в указанных ниже объектах для работы с содержимым страницы, например `Page.addOutline` и `Outline.appendHtml`.
 
 - [Страница](https://docs.microsoft.com/javascript/api/onenote/onenote.page)
 - [Структура](https://docs.microsoft.com/javascript/api/onenote/onenote.outline)
@@ -37,17 +37,19 @@ ms.locfileid: "27457616"
 
 Для создания и обновления содержимого страницы в API JavaScript для надстроек OneNote используются указанные ниже элементы HTML.
 
-- `<html>`, `<body>`, `<div>`, `<span>`, `<br/>` 
+- `<html>`, `<body>`, `<div>`, `<span>`, `<br/>`
 - `<p>`
 - `<img>`
 - `<a>`
-- `<ul>`, `<ol>`, `<li>` 
+- `<ul>`, `<ol>`, `<li>`
 - `<table>`, `<tr>`, `<td>`
 - `<h1>` ... `<h6>`
 - `<b>`, `<em>`, `<strong>`, `<i>`, `<u>`, `<del>`, `<sup>`, `<sub>`, `<cite>`
 
 > [!NOTE]
 > Импорт HTML в OneNote консолидирует пробелы. Полученное в результате содержимое вставляется в одну структуру.
+
+Приложение OneNote пытается наилучшим образом преобразовать HTML в содержимое страницы, обеспечивая безопасность для пользователей. Так как стандарты HTML и CSS не полностью соответствуют модели содержимого OneNote, будут иметься различия во внешнем виде, особенно при использовании стилей CSS. Рекомендуется использовать объекты JavaScript, если требуется определенное форматирование.
 
 ## <a name="accessing-page-contents"></a>Доступ к содержимому страницы
 
@@ -57,7 +59,7 @@ ms.locfileid: "27457616"
 
 ## <a name="see-also"></a>См. также
 
-- [Обзор создания кода с помощью API JavaScript для OneNote](onenote-add-ins-programming-overview.md)
+- [Обзор API JavaScript для OneNote](onenote-add-ins-programming-overview.md)
 - [Справочник по API JavaScript для OneNote](https://docs.microsoft.com/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)
