@@ -1,13 +1,14 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.7
 description: ''
-ms.date: 10/09/2018
-ms.openlocfilehash: 2e233c614a902a724ead0240c4e5229e1053ee81
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.date: 01/16/2019
+localization_priority: Priority
+ms.openlocfilehash: 9023997e06a659252abeecca4681b2ec250fd63c
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27432314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29387970"
 ---
 # <a name="outlook-add-in-api-requirement-set-17"></a>Набор обязательных элементов API для надстройки Outlook 1.7
 
@@ -32,7 +33,7 @@ ms.locfileid: "27432314"
 - Изменен объект [Office.context.mailbox.item.from](office.context.mailbox.item.md#from-emailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsfromjavascriptapioutlook17officefrom). Изменение для получения значения отправителя в режиме создания.
 - Изменен объект [Office.context.mailbox.item.organizer](office.context.mailbox.item.md#organizer-emailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsorganizerjavascriptapioutlook17officeorganizer). Изменение для получения значения организатора в режиме создания.
 - Добавлен объект [Office.context.mailbox.item.recurrence](office.context.mailbox.item.md#nullable-recurrence-recurrencejavascriptapioutlook17officerecurrence). Добавляет новое свойство, которое получает или задает объект, предоставляющий методы управления расписанием повторения встреч. Это свойство можно также использовать для получения расписания повторения приглашения на собрание.
-- Добавлен объект [Office.context.mailbox.item.removeHandlerAsync](office.context.mailbox.item.md#removehandlerasynceventtype-handler-options-callback). Добавляет новый метод, удаляющий обработчик событий.
+- Добавлен объект [Office.context.mailbox.item.removeHandlerAsync](office.context.mailbox.item.md#removehandlerasynceventtype-options-callback). Добавляет новый метод, удаляющий обработчиков событий для поддерживаемого типа события. 
 - Добавлен объект [Office.context.mailbox.item.seriesId](office.context.mailbox.item.md#nullable-seriesid-string). Добавляет новое свойство, получающее идентификатор ряда, к которому относится событие.
 - Добавлен объект [Office.MailboxEnums.Days](/javascript/api/outlook_1_7/office.mailboxenums.days). Добавляет новое перечисление, указывающее день недели или тип дня.
 - Добавлен объект [Office.MailboxEnums.Month](/javascript/api/outlook_1_7/office.mailboxenums.month). Добавляет новое перечисление, указывающее месяц.

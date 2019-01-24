@@ -2,12 +2,13 @@
 title: Наборы обязательных элементов API JavaScript для Excel
 description: ''
 ms.date: 10/09/2018
-ms.openlocfilehash: 4456ac3cb2411f9a22cb131b7a53884a760a2f22
-ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
+localization_priority: Priority
+ms.openlocfilehash: fdcbee0374851f0f88130ae8afe28eec3a0fe77c
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/28/2018
-ms.locfileid: "27458148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29388726"
 ---
 # <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
 

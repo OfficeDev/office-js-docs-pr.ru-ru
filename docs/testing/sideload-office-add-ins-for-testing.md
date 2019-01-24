@@ -2,12 +2,13 @@
 title: Загрузка неопубликованных надстроек Office в Office Online для тестирования
 description: Тестирование неопубликованной надстройки Office в Office Online путем ее загрузки
 ms.date: 10/19/2018
-ms.openlocfilehash: 94138cd0a22f053a9471bf905b8d0838dead15cf
-ms.sourcegitcommit: 3a808cf39cbc77056968d53a5957462371ad83a1
+localization_priority: Priority
+ms.openlocfilehash: f656b83a7d9841cc362276ccc7c5729927cbc392
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "25911230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29389405"
 ---
 # <a name="sideload-office-add-ins-in-office-online-for-testing"></a>Загрузка неопубликованных надстроек Office в Office Online для тестирования
 
@@ -64,7 +65,11 @@ ms.locfileid: "25911230"
 6. Убедитесь, что надстройка установлена. Например, если надстройка вызывается командой, эта команда должна появиться на ленте или в контекстном меню. Если же у вас надстройка области задач, должна появиться область.
 
 > [!NOTE]
->Чтобы протестировать надстройку Office в Edge, введите **about:flags** в панели поиска Edge, чтобы открыть раздел "Параметры разработчика".  Установите флажок **Разрешить замыкание на себя для localhost** и перезапустите Edge.
+>Чтобы протестировать надстройку Office с помощью Microsoft Edge, требуются выполнить два действия по настройке: 
+>
+> - В командной строке Windows выполните следующую строку: `CheckNetIsolation LoopbackExempt -a -n="Microsoft.MicrosoftEdge_8wekyb3d8bbwe"`
+>
+> - Введите **about:flags** в панели поиска Microsoft Edge, чтобы открыть раздел "Параметры разработчика".  Установите флажок **Разрешить замыкание на себя для localhost** и перезапустите Microsoft Edge.
 
 >    ![Параметр "Разрешить замыкание на себя для localhost" в Edge с установленным флажком.](../images/allow-localhost-loopback.png)
 

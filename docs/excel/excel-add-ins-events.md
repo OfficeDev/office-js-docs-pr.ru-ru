@@ -1,58 +1,59 @@
 ---
-title: Работа с событиями с помощью API JavaScript для Excel
+title: Работа с событиями при помощи API JavaScript для Excel
 description: ''
 ms.date: 10/17/2018
-ms.openlocfilehash: c3fbdf27dcbedf0d006973e6ebc2e01b02e6cec2
-ms.sourcegitcommit: a6d6348075c1abed76d2146ddfc099b0151fe403
+localization_priority: Priority
+ms.openlocfilehash: 58bb6c01babc19840444a4bee9daef03ad9a7df5
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "25639940"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29386528"
 ---
-# <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями с помощью API JavaScript для Excel 
+# <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями при помощи API JavaScript для Excel 
 
-В этой статье описаны важные понятия, относящиеся к работе с событиями в Excel, а также представлены образцы кода, иллюстрирующие регистрацию, использование и удаление обработчиков событий с помощью API JavaScript для Excel. 
+В этой статье описываются важные понятия, относящиеся к работе с событиями в Excel, а также представлены образцы кода, иллюстрирующие регистрацию, использование и удаление обработчиков событий при помощи API JavaScript для Excel. 
 
 ## <a name="events-in-excel"></a>События в Excel
 
-Каждый раз, когда в книге Excel происходят изменения определенного типа, срабатывает уведомление о событии. С помощью API JavaScript для Excel можно регистрировать обработчики событий, позволяющие надстройке автоматически выполнять специальную функцию при возникновении определенного события. Далее перечислены поддерживаемые в настоящее время события.
+Каждый раз, когда в книге Excel происходят изменения определенного типа, срабатывает уведомление о событии. С помощью API JavaScript для Excel можно регистрировать обработчики событий, позволяющие надстройке автоматически выполнять специальную функцию при возникновении определенного события. Ниже перечислены поддерживаемые в настоящее время события.
 
 | Событие | Описание | Поддерживаемые объекты |
 |:---------------|:-------------|:-----------|
-| `onAdded` | Событие, происходящее при добавлении объекта. | [**ChartCollection**](https://docs.microsoft.com/javascript/api/excel/excel.chartcollection), [**WorksheetCollection**](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection) |
-| `onDeleted` | Событие, происходящее  при удалении объекта. | [**ChartCollection**](https://docs.microsoft.com/javascript/api/excel/excel.chartcollection), [**WorksheetCollection**](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection) |
-| `onActivated` | Событие, происходящее  при активации объекта. | [**Chart**](https://docs.microsoft.com/javascript/api/excel/excel.chart), [**ChartCollection**](https://docs.microsoft.com/javascript/api/excel/excel.chartcollection), [**WorksheetCollection**](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection), [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet) |
-| `onDeactivated` | Событие, происходящее  при отключении объекта. | [**Chart**](https://docs.microsoft.com/javascript/api/excel/excel.chart), [**ChartCollection**](https://docs.microsoft.com/javascript/api/excel/excel.chartcollection), [**WorksheetCollection**](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection), [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet) |
-| `onCalculated` | Событие, происходящее после завершения расчета на листе (или на всех листах коллекции). | [**WorksheetCollection**](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection), [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet) |
-| `onChanged` | Событие, происходящее при изменении данных в ячейках. | [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet), [**Table**](https://docs.microsoft.com/javascript/api/excel/excel.table), [**TableCollection**](https://docs.microsoft.com/javascript/api/excel/excel.tablecollection) |
-| `onDataChanged` | Событие, происходящее при изменении данных или форматирования в привязке. | [**Привязка**](https://docs.microsoft.com/javascript/api/excel/excel.binding) |
-| `onSelectionChanged` | Событие, происходящее при изменении активной ячейки или выбранного диапазона. | [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet), [**Table**](https://docs.microsoft.com/javascript/api/excel/excel.table), [**Binding**](https://docs.microsoft.com/javascript/api/excel/excel.binding) |
-| `onSettingsChanged` | Событие, происходящее при изменении параметров в документе. | [**SettingCollection**](https://docs.microsoft.com/javascript/api/excel/excel.settingcollection) |
+| `onAdded` | Событие, возникающее при добавлении объекта. | [**ChartCollection**](https://docs.microsoft.com/javascript/api/excel/excel.chartcollection), [**WorksheetCollection**](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection) |
+| `onDeleted` | Событие, возникающее при удалении объекта. | [**ChartCollection**](https://docs.microsoft.com/javascript/api/excel/excel.chartcollection), [**WorksheetCollection**](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection) |
+| `onActivated` | Событие, возникающее при активации объекта. | [**Chart**](https://docs.microsoft.com/javascript/api/excel/excel.chart), [**ChartCollection**](https://docs.microsoft.com/javascript/api/excel/excel.chartcollection), [**WorksheetCollection**](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection), [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet) |
+| `onDeactivated` | Событие, возникающее при отключении объекта. | [**Chart**](https://docs.microsoft.com/javascript/api/excel/excel.chart), [**ChartCollection**](https://docs.microsoft.com/javascript/api/excel/excel.chartcollection), [**WorksheetCollection**](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection), [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet) |
+| `onCalculated` | Событие, возникающее после завершения вычислений на листе (или на всех листах коллекции). | [**WorksheetCollection**](https://docs.microsoft.com/javascript/api/excel/excel.worksheetcollection), [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet) |
+| `onChanged` | Событие, возникающее при изменении данных в ячейках. | [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet), [**Table**](https://docs.microsoft.com/javascript/api/excel/excel.table), [**TableCollection**](https://docs.microsoft.com/javascript/api/excel/excel.tablecollection) |
+| `onDataChanged` | Событие, возникающее при изменении данных или форматирования в привязке. | [**Binding**](https://docs.microsoft.com/javascript/api/excel/excel.binding) |
+| `onSelectionChanged` | Событие, возникающее при изменении активной ячейки или выбранного диапазона. | [**Worksheet**](https://docs.microsoft.com/javascript/api/excel/excel.worksheet), [**Table**](https://docs.microsoft.com/javascript/api/excel/excel.table), [**Binding**](https://docs.microsoft.com/javascript/api/excel/excel.binding) |
+| `onSettingsChanged` | Событие, возникающее при изменении параметров в документе. | [**SettingCollection**](https://docs.microsoft.com/javascript/api/excel/excel.settingcollection) |
 
 ### <a name="event-triggers"></a>Триггеры событий
 
 События в книге Excel могут вызываться:
 
-- изменениями, вносимыми в книгу пользователем с помощью пользовательского интерфейса Excel;
-- изменениями, вносимыми в книгу кодом надстройки Office (JavaScript);
-- изменениями, вносимыми в книгу кодом (макросом) надстройки VBA.
+- при взаимодействии пользователя с интерфейсом Excel, вносящим изменения в книгу;
+- из кода (JavaScript) надстройки Office, вносящего изменения в книгу;
+- из кода (макроса) надстройки VBA, вносящего изменения в книгу.
 
-Любое изменение, которое отвечает требованиям реакции на событие Excel по умолчанию, вызывает соответствующие события в книге.
+Любое изменение, соответствующее стандартному поведению Excel, вызывает соответствующие события в книге.
 
 ### <a name="lifecycle-of-an-event-handler"></a>Жизненный цикл обработчика событий
 
 Обработчик событий создается при его регистрации надстройкой. Он удаляется при отмене его регистрации надстройкой или при обновлении, перезагрузке или закрытии надстройки. Обработчики событий не остаются в составе файла Excel или между сеансами с Excel Online.
 
 > [!CAUTION]
-> Когда объект, к которому зарегистрированы события, удаляется (например, таблица с зарегистрированным событием `onChanged`), обработчик событий более не запускается, а остается в памяти до тех пор, пока сеанс надстройки или Excel не обновится или не закроется.
+> Когда объект, для которого зарегистрированы события, удаляется (например, таблица с зарегистрированным событием `onChanged`), обработчик событий больше не запускается, но остается в памяти, пока сеанс надстройки или Excel не обновится или не закроется.
 
 ### <a name="events-and-coauthoring"></a>События и совместное редактирование
 
-Несколько человек могут работать вместе и [одновременно редактировать](co-authoring-in-excel-add-ins.md) одну книгу Excel. Для событий, которые может вызвать соавтор, например `onChanged`, соответствующий объект **Event** будет содержать свойство **source**, указывающее, кем было вызвано событие: локальным пользователем (`event.source = Local`) или удаленным соавтором (`event.source = Remote`).
+Несколько человек могут работать вместе и [одновременно редактировать](co-authoring-in-excel-add-ins.md) одну книгу Excel. Для событий, которые может вызвать соавтор, в частности `onChanged`, соответствующий объект **Event** будет содержать свойство **source**, указывающее, кем было вызвано событие: локальным пользователем (`event.source = Local`) или удаленным соавтором (`event.source = Remote`).
 
 ## <a name="register-an-event-handler"></a>Регистрация обработчика событий
 
-В приведенном ниже примере кода регистрируется обработчик событий для события `onChanged` на листе под названием **Sample**. В этом коде указано, что при изменении данных на этом листе должна выполняться функция `handleDataChange`.
+В приведенном ниже примере кода регистрируется обработчик события `onChanged` на листе под названием **Sample**. В этом коде указано, что при изменении данных на этом листе должна выполняться функция `handleDataChange`.
 
 ```js
 Excel.run(function (context) {
@@ -68,7 +69,7 @@ Excel.run(function (context) {
 
 ## <a name="handle-an-event"></a>Обработка событий
 
-Как показано в предыдущем примере, при регистрации обработчика событий вы задаете функцию, которая должна выполняться при возникновении указанного события. Можно настроить эту функцию на выполнение любых действий, необходимых для сценария. В приведенном ниже примере кода показана функция обработчика событий, которая просто записывает сведения о событии в консоль. 
+Как показано в предыдущем примере, при регистрации обработчика событий вы задаете функцию, которая должна выполняться при возникновении указанного события. Вы можете настроить эту функцию на выполнение любых действий, необходимых для вашего сценария. В приведенном ниже примере кода показана функция обработчика событий, которая просто записывает сведения о событии в консоль. 
 
 ```js
 function handleChange(event)
@@ -84,9 +85,9 @@ function handleChange(event)
 }
 ```
 
-## <a name="remove-an-event-handler"></a>Удаление обработчика событий
+## <a name="remove-an-event-handler"></a>Удаление обработчика события
 
-В приведенном ниже примере кода регистрируется обработчик событий для события `onSelectionChanged` на листе под названием **Sample** и определяется функция `handleSelectionChange`, которая будет выполняться при возникновении события. В нем также определяется функция `remove()`, которую можно впоследствии вызвать для удаления обработчика событий.
+В приведенном ниже примере кода регистрируется обработчик событий `onSelectionChanged` на листе под названием **Sample** и определяется функция `handleSelectionChange`, которая будет выполняться при возникновении события. В нем также определяется функция `remove()`, которую можно впоследствии вызвать для удаления обработчика событий.
 
 ```js
 var eventResult;
@@ -126,11 +127,11 @@ function remove() {
 
 ## <a name="enable-and-disable-events"></a>Включение и отключение событий
 
-Производительность надстройки можно повысить, отключив событие. Например, вашему приложению, возможно, никогда не потребуется получать события, или оно может игнорировать события при выполнении пакетных изменений нескольких сущностей. 
+Производительность надстройки можно повысить с помощью отключения событий. Например, вашему приложению, возможно, никогда не потребуется получать события, или оно может игнорировать события при выполнении пакетных изменений нескольких сущностей. 
 
 События включаются и отключаются на уровне [среды выполнения](https://docs.microsoft.com/javascript/api/excel/excel.runtime). Свойство `enableEvents` определяет, будут ли запускаться события и будут ли активироваться их обработчики. 
 
-Следующий пример кода показывает, как включать и отключать события.
+В приведенном ниже примере кода показано, как включать и отключать события.
 
 ```js
 Excel.run(function (context) {
@@ -150,4 +151,4 @@ Excel.run(function (context) {
 
 ## <a name="see-also"></a>См. также
 
-- [Основные принципы программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
+- [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)

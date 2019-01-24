@@ -1,13 +1,14 @@
 ---
-title: Развертывание и публикация надстройки Office | Microsoft Docs
-description: Методы и параметры, применяемые при развертывании надстройки Office для тестирования или распространения среди пользователей.
+title: Развертывание и публикация надстройки Office | Документация Майкрософт
+description: Методы и варианты развертывания надстройки Office для тестирования и распространения.
 ms.date: 01/23/2018
-ms.openlocfilehash: ada786ed7ded1f34d564389c09c2cd5c25c2a331
-ms.sourcegitcommit: eb74e94d3e1bc1930a9c6582a0a99355d0da34f2
+localization_priority: Priority
+ms.openlocfilehash: 0a99218a3eed3143f70ace6e63f5a01b952a5623
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "25004933"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29388768"
 ---
 # <a name="deploy-and-publish-your-office-add-in"></a>Развертывание и публикация надстройки Office
 
@@ -37,7 +38,7 @@ ms.locfileid: "25004933"
 | Область задач       | X           | X                       | X          | X                    |
 | Команда         | X           | X                       | X          |                      |
 
-* Каталоги SharePoint не поддерживают Office для Mac.
+&#42; Каталоги SharePoint не поддерживают Office для Mac.
 
 ### <a name="deployment-options-for-outlook-add-ins"></a>Варианты развертывания надстроек Outlook
 
@@ -48,9 +49,9 @@ ms.locfileid: "25004933"
 
 ## <a name="deployment-methods"></a>Методы развертывания
 
-В последующих разделах приводится дополнительная информация о методах развертывания, наиболее часто используемых для распространения надстроек Office среди пользователей в рамках организации.
+Указанные ниже разделы содержат дополнительные сведения о методах развертывания, которые чаще всего используются для распространения надстроек Office в организации.
 
-Сведения о приобретении, вставке и запуске надстроек конечными пользователями см. в статье [Начало работы с надстройкой Office](https://support.office.com/en-ie/article/Start-using-your-Office-Add-in-82e665c4-6700-4b56-a3f3-ef5441996862?ui=en-US&rs=en-IE&ad=IE).
+Сведения о том, как пользователи приобретают, вставляют и запускают надстройки, см. в статье [Начало работы с надстройкой Office](https://support.office.com/en-ie/article/Start-using-your-Office-Add-in-82e665c4-6700-4b56-a3f3-ef5441996862?ui=en-US&rs=en-IE&ad=IE).
 
 ### <a name="centralized-deployment-via-the-office-365-admin-center"></a>Централизованное развертывание в Центре администрирования Office 365 
 
@@ -65,7 +66,7 @@ ms.locfileid: "25004933"
 Если вы развертываете надстройки в локальной среде, используйте каталог SharePoint. Дополнительные сведения см. в статье [Публикация надстроек области задач и контентных надстроек в каталоге SharePoint](publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md).
 
 > [!NOTE]
-> * Каталоги SharePoint не поддерживают Office для Mac. Для развертывания надстроек Office на клиентах Mac их необходимо отправить в [AppSource](https://docs.microsoft.com/office/dev/store/submit-to-the-office-store). 
+> Каталоги SharePoint не поддерживают Office для Mac. Для развертывания надстроек Office на клиентах Mac необходимо отправить их в [AppSource](https://docs.microsoft.com/office/dev/store/submit-to-the-office-store). 
 
 ### <a name="outlook-add-in-deployment"></a>Развертывание надстроек Outlook
 
@@ -74,7 +75,7 @@ ms.locfileid: "25004933"
 Для развертывания надстроек Outlook требуется следующее:
 
 - Office 365, Exchange Online или Exchange Server 2013 или более поздней версии
-- Outlook 2013 или более поздней версии
+- Outlook 2013 или более поздней версии
 
 Чтобы назначить надстройки клиентам, загрузите манифест напрямую из файла или URL-адреса в Центре администрирования Exchange или добавьте надстройку из AppSource. Чтобы назначить надстройки отдельным пользователям, необходимо использовать Exchange PowerShell. Дополнительные сведения см. в статье [Установка или удаление надстроек Outlook для организации](https://technet.microsoft.com/library/jj943752(v=exchg.150).aspx) на сайте TechNet.
 
@@ -82,7 +83,7 @@ ms.locfileid: "25004933"
 
 - [Загрузка неопубликованных надстроек Outlook для тестирования](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
 - [Отправка в AppSource][AppSource]
-- [Рекомендации по проектированию надстроек Office](../design/add-in-design.md)
+- [Рекомендации по разработке надстроек Office](../design/add-in-design.md)
 - [Создание эффективных описаний в AppSource](https://docs.microsoft.com/office/dev/store/create-effective-office-store-listings)
 - [Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office](../testing/testing-and-troubleshooting.md)
 
