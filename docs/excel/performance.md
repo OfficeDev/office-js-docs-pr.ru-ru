@@ -2,12 +2,13 @@
 title: Оптимизация производительности API JavaScript для Excel
 description: Оптимизируйте производительность с использованием API JavaScript для Excel
 ms.date: 12/06/2018
-ms.openlocfilehash: f076ad6f773725c878b404d1039271a2ac59be48
-ms.sourcegitcommit: 0adc31ceaba92cb15dc6430c00fe7a96c107c9de
+localization_priority: Priority
+ms.openlocfilehash: 0c288f3e29d2a956238d9597730312ae0608a7ec
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2018
-ms.locfileid: "27210093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29389125"
 ---
 # <a name="performance-optimization-using-the-excel-javascript-api"></a>Оптимизация производительности с использованием API JavaScript для Excel
 

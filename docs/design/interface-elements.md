@@ -2,12 +2,13 @@
 title: Элементы пользовательского интерфейса Office для надстроек Office
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: 8282caff412a9a258e54092bc77e07571f0d8ac1
-ms.sourcegitcommit: 7ecc1dc24bf7488b53117d7a83ad60e952a6f7aa
+localization_priority: Priority
+ms.openlocfilehash: 444aca7b75e35ef502075876a7d1324fcdca0603
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "19437306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29388103"
 ---
 # <a name="office-ui-elements-for-office-add-ins"></a>Элементы пользовательского интерфейса Office для надстроек Office
 
