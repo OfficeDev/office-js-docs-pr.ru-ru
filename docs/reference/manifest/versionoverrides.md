@@ -1,13 +1,14 @@
 ---
 title: Элемент VersionOverrides в файле манифеста
 description: ''
-ms.date: 10/09/2018
-ms.openlocfilehash: a8bdc18b289d8d83336b0ce270f36d71170aecbf
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+ms.date: 01/15/2019
+localization_priority: Normal
+ms.openlocfilehash: 197a636169b7f00edd44019cee21686065845800
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29387802"
 ---
 # <a name="versionoverrides-element"></a>Элемент VersionOverrides
 
@@ -34,9 +35,10 @@ ms.locfileid: "27433882"
 |  **VersionOverrides**    |  Нет  | Определяет команды надстроек в новой версии схемы. Подробные сведения см. в разделе [Реализация нескольких версий](#implementing-multiple-versions). |
 |  **WebApplicationInfo**    |  Нет  | Указывает сведения о связанном с надстройкой веб-приложении. |
 
-
-
 ### <a name="versionoverrides-example"></a>Пример VersionOverrides
+
+Ниже приведен пример типичного `<VersionOverrides>` элемент, включая некоторые дочерние элементы, которые не являются обязательными, но обычно используются.
+
 ```xml
 <OfficeApp>
 ...
@@ -97,6 +99,7 @@ ms.locfileid: "27433882"
         <!-- add information on resources -->
       </Resources>
     </VersionOverrides>  
+  </VersionOverrides>
 ...
 </OfficeApp>
 ```

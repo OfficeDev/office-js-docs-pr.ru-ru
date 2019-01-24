@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: f090023acbeae8bab9e25a36b64669c7d033daea
+ms.sourcegitcommit: 319780e4fb77b97d16d5657950e4eb84415eb7eb
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "28725531"
+---
 # <a name="build-an-excel-add-in-using-react"></a>Создание надстройки Excel с помощью React
 
 В этой статье описывается процесс создания надстройки Excel с помощью React и API JavaScript для Excel.
@@ -140,6 +148,8 @@
 5. Откройте файл **src/components/App.tsx**, замените все его содержимое приведенным ниже кодом и сохраните файл.
 
     ```typescript
+    /* global Office, Excel */
+
     import * as React from 'react';
     import { Header } from './Header';
     import { Content } from './Content';

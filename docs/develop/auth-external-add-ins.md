@@ -2,12 +2,13 @@
 title: Авторизация внешних служб в надстройке Office
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: 65b9325cc838dafca7f7e8e3402fc45762321459
-ms.sourcegitcommit: 3d8454055ba4d7aae12f335def97357dea5beb30
+localization_priority: Priority
+ms.openlocfilehash: 4c045c28d62993db630c27553e8f52b8da5a0ee1
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "27270749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29388789"
 ---
 # <a name="authorize-external-services-in-your-office-add-in"></a>Авторизация внешних служб в надстройке Office
 

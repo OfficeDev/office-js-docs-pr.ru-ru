@@ -2,12 +2,13 @@
 title: Обзор API JavaScript для Visio
 description: ''
 ms.date: 10/11/2018
-ms.openlocfilehash: f530e1541146fb2f38209845791132b789577640
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+localization_priority: Priority
+ms.openlocfilehash: 0a3a141ec624a2e509ae34290691bff6e8e529a5
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27432937"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29389440"
 ---
 # <a name="visio-javascript-api-overview"></a>Обзор API JavaScript для Visio
 
@@ -65,7 +66,7 @@ function hideToolbars() {
 
 Объекты JavaScript для Visio, объявленные и использованные в надстройке, — это прокси-объекты для реальных объектов в документе Visio. Все действия над прокси-объектами не реализуются в Visio, а состояние документа Visio — в прокси-объектах, пока оно не будет синхронизировано. Состояние документа синхронизируется при выполнении `context.sync()`.
 
-Например, локальный объект JavaScript getActivePage объявлен в качестве ссылки на выбранную страницу. Это можно использовать для добавления в очередь настройки его свойств и вызова методов. Действия над такими объектами не реализуются до выполнения метода **sync()**.
+Например, локальный объект JavaScript getActivePage объявлен в качестве ссылки на выбранную страницу. Это можно использовать для добавления в очередь настройки его свойств и вызова методов. Действия над такими объектами не реализуются до выполнения метода sync().
 
 ```js
 var activePage = context.document.getActivePage();

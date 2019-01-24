@@ -2,12 +2,13 @@
 title: Работа с диаграммами с использованием API JavaScript для Excel
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: b804e2130e30626a9caf21bca1f3955c57a3f94c
-ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
+localization_priority: Priority
+ms.openlocfilehash: 72724c4efd6f87bad90b64b4ac363c796de952bd
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/28/2018
-ms.locfileid: "27457553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29387879"
 ---
 # <a name="work-with-charts-using-the-excel-javascript-api"></a>Работа с диаграммами с использованием API JavaScript для Excel
 

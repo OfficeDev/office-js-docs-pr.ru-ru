@@ -2,12 +2,13 @@
 title: Основные концепции программирования с помощью API JavaScript для Excel
 description: Создание надстроек для Excel с помощью API JavaScript для Excel.
 ms.date: 11/29/2018
-ms.openlocfilehash: b32efc539b983a0fc0d1e8696869cedbb0a14095
-ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
+localization_priority: Priority
+ms.openlocfilehash: b04ed4053f0cc16c38d69cf62942559e1b4f514a
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/28/2018
-ms.locfileid: "27457903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29388705"
 ---
 # <a name="fundamental-programming-concepts-with-the-excel-javascript-api"></a>Основные концепции программирования с помощью API JavaScript для Excel
  

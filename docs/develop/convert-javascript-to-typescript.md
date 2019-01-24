@@ -2,19 +2,20 @@
 title: Преобразование проекта надстройки Office в Visual Studio в TypeScript
 description: ''
 ms.date: 10/30/2018
-ms.openlocfilehash: 9ea1cf421ce94d7756595950604ab3279e049c95
-ms.sourcegitcommit: 3007bf57515b0811ff98a7e1518ecc6fc9462276
+localization_priority: Priority
+ms.openlocfilehash: 6587665d57121619f9730448b27b045630f9e1aa
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "27724853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29386605"
 ---
 # <a name="convert-an-office-add-in-project-in-visual-studio-to-typescript"></a>Преобразование проекта надстройки Office в Visual Studio в TypeScript
 
 Вы можете использовать шаблон надстройки Office в Visual Studio, чтобы создать надстройку с использованием JavaScript, а затем преобразовать этот проект в TypeScript. В этой статье описан процесс преобразования для надстройки Excel. Таким же образом в Visual Studio можно преобразовывать и другие проекты надстроек Office из JavaScript в TypeScript.
 
 > [!NOTE]
-> Чтобы создать проект надстройки Office на TypeScript без использования Visual Studio, следуйте указаниям из раздела "Любой редактор" любого [5-минутного руководства по началу работы](../index.yml) и выберите `TypeScript` по соответствующему запросу [генератора Yeoman для надстроек Office](https://github.com/officedev/generator-office).
+> Чтобы создать проект надстройки Office на TypeScript без использования Visual Studio, следуйте указаниям из раздела "Любой редактор" любого [5-минутного руководства по началу работы](../index.yml) и выберите `TypeScript` по соответствующему запросу [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 

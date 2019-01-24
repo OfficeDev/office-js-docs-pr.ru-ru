@@ -1,13 +1,14 @@
 ---
 title: Office.context.mailbox — предварительная версия набора обязательных элементов
 description: ''
-ms.date: 10/31/2018
-ms.openlocfilehash: 97f92f86c1bd8737c3c657c22b2ca882c88fb3e3
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+ms.date: 01/16/2019
+localization_priority: Normal
+ms.openlocfilehash: a1b6c66f34cebe936614ff3c37a888a12b9e21b6
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29388222"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -42,7 +43,7 @@ ms.locfileid: "27433952"
 | [getCallbackTokenAsync](#getcallbacktokenasynccallback-usercontext) | Метод |
 | [getUserIdentityTokenAsync](#getuseridentitytokenasynccallback-usercontext) | Метод |
 | [makeEwsRequestAsync](#makeewsrequestasyncdata-callback-usercontext) | Метод |
-| [removeHandlerAsync](#removehandlerasynceventtype-handler-options-callback) | Метод |
+| [removeHandlerAsync](#removehandlerasynceventtype-options-callback) | Метод |
 
 ### <a name="namespaces"></a>Пространства имен
 
@@ -109,7 +110,7 @@ ms.locfileid: "27433952"
 
 В настоящее время поддерживаются следующие типы событий: `Office.EventType.ItemChanged` и `Office.EventType.OfficeThemeChanged`.
 
-##### <a name="parameters"></a>Параметры
+##### <a name="parameters"></a>Параметры:
 
 | Имя | Тип | Атрибуты | Описание |
 |---|---|---|---|
@@ -694,20 +695,19 @@ function callback(asyncResult)  {
 }
 ```
 
-####  <a name="removehandlerasynceventtype-handler-options-callback"></a>removeHandlerAsync(eventType, handler, [параметры], [функция обратного вызова])
+####  <a name="removehandlerasynceventtype-options-callback"></a>removeHandlerAsync (eventType [параметры], [обратного вызова])
 
-Удаляет обработчик для поддерживаемого события.
+Удаляет обработчики событий для поддерживаемых событий.
 
 В настоящее время поддерживаются следующие типы событий: `Office.EventType.ItemChanged` и `Office.EventType.OfficeThemeChanged`.
 
-##### <a name="parameters"></a>Параметры
+##### <a name="parameters"></a>Параметры:
 
 | Имя | Тип | Атрибуты | Описание |
 |---|---|---|---|
 | `eventType` | [Office.EventType](office.md#eventtype-string) || Событие, которое должно отменить обработчик. |
-| `handler` | Функция || Функция для обработки события. Функция должна принимать один параметр, представляющий собой объектный литерал. Значение свойства `type` параметра совпадет со значением параметра `eventType`, переданного методу `addHandlerAsync`. |
-| `options` | Объект | &lt;необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
-| `options.asyncContext` | Object | &lt;необязательно&gt; | Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова. |
+| `options` | Объект | &lt;необязательный&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
+| `options.asyncContext` | Object | &lt;необязательный&gt; | Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова. |
 | `callback` | функция| &lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).|
 
 ##### <a name="requirements"></a>Требования

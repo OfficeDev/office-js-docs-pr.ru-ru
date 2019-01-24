@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 5d5640a2c7c04817ab5ad87fc1b01e6866917830
+ms.sourcegitcommit: 984c425e2ad58577af8f494079923cab165ad36c
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "28726970"
+---
 # <a name="build-your-first-onenote-add-in"></a>Создание первой надстройки OneNote
 
 В этой статье мы разберем, как создать надстройку OneNote, используя jQuery и API JavaScript для Office.
@@ -66,11 +74,13 @@
     ```js
     import * as OfficeHelpers from "@microsoft/office-js-helpers";
 
-    Office.initialize = (reason) => {
+    Office.onReady(() => {
+        // Office is ready
         $(document).ready(() => {
+            // The document is ready
             $('#addOutline').click(addOutlineToPage);
         });
-    };
+    });
     
     async function addOutlineToPage() {
         try {

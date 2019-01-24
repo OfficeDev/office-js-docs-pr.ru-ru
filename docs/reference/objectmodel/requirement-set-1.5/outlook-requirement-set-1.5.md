@@ -1,13 +1,14 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.5
 description: ''
-ms.date: 11/14/2018
-ms.openlocfilehash: dc6432c3e55ed75c120c2872233ca0f275010e73
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+ms.date: 01/16/2019
+localization_priority: Normal
+ms.openlocfilehash: fde394ff4b75e0f6b160f5d56cb73adc9da9dede
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433931"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29388382"
 ---
 # <a name="outlook-add-in-api-requirement-set-15"></a>Набор обязательных элементов API для надстройки Outlook 1.5
 
@@ -28,7 +29,7 @@ ms.locfileid: "27433931"
 ### <a name="change-log"></a>Журнал изменений
 
 - Добавлен метод [Office.context.mailbox.addHandlerAsync](office.context.mailbox.md#addhandlerasynceventtype-handler-options-callback). Добавляет обработчик для поддерживаемого события.
-- Добавлен метод [Office.context.mailbox.removeHandlerAsync](office.context.mailbox.md#removehandlerasynceventtype-handler-options-callback). Удаляет обработчик для поддерживаемого события.
+- Добавлена [Office.context.mailbox.removeHandlerAsync](office.context.mailbox.md#removehandlerasynceventtype-options-callback): Удаляет обработчики событий для событий поддерживается.
 - Добавлено свойство [Office.EventType](office.md#eventtype-string). Указывает событие, связанное с обработчиком, и включает поддержку события ItemChanged.
 - Добавлен метод [Office.context.mailbox.restUrl](office.context.mailbox.md#resturl-string). Возвращает URL-адрес конечной точки REST для этой учетной записи электронной почты.
 - Изменен метод [Office.context.mailbox.getCallbackTokenAsync](office.context.mailbox.md#getcallbacktokenasyncoptions-callback). Добавлен новый вариант этого метода с новой подписью (`getCallbackTokenAsync([options], callback)`). Исходная версия по-прежнему доступна и осталась без изменений.

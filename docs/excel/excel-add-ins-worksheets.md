@@ -2,12 +2,13 @@
 title: Работа с листами с использованием API JavaScript для Excel
 description: ''
 ms.date: 12/28/2018
-ms.openlocfilehash: 804d047270f5236209c1555190f465a760548875
-ms.sourcegitcommit: d75295cc4f47d8d872e7a361fdb5526f0f145dd2
+localization_priority: Priority
+ms.openlocfilehash: 62f64beaefcc938f91ee581594922b2c965f2655
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/29/2018
-ms.locfileid: "27460865"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29389531"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
