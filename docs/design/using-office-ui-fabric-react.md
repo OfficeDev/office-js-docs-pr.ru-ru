@@ -2,12 +2,13 @@
 title: Использование Office UI Fabric React в надстройках Office
 description: ''
 ms.date: 12/04/2017
-ms.openlocfilehash: 4baeea20457892bcc7b94b381f5c0a577274408a
-ms.sourcegitcommit: 30435939ab8b8504c3dbfc62fd29ec6b0f1a7d22
+localization_priority: Priority
+ms.openlocfilehash: 6013275a9a7a4d5d01f37bbbd268a9258cc82f17
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "23944277"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29389286"
 ---
 # <a name="use-office-ui-fabric-react-in-office-add-ins"></a>Использование Office UI Fabric React в надстройках Office
 
@@ -20,7 +21,7 @@ Office UI Fabric — это интерфейсная платформа JavaScri
 
 ## <a name="step-1---create-your-project-with-the-yeoman-generator-for-office"></a>Шаг 1. Создание проекта с помощью генератора Yeoman для Office
 
-Чтобы создать надстройку, в которой используется Fabric React, мы рекомендуем использовать генератор Yeoman для Office. Генератор Yeoman для Office обеспечивает формирование шаблонов для проектов и управление сборкой, необходимые для разработки надстройки Office.
+Чтобы создать надстройку, в которой используется Fabric React, рекомендуется использовать генератор Yeoman для Office. Генератор Yeoman для Office обеспечивает формирование шаблонов для проектов и управление сборкой, необходимые для разработки надстройки Office.
 
 Чтобы создать проект, выполните следующие действия, используя **Windows PowerShell** (а не командную строку):
 
@@ -32,7 +33,7 @@ Office UI Fabric — это интерфейсная платформа JavaScri
 
 ## <a name="step-2---add-a-fabric-react-component"></a>Шаг 2. Добавление компонента Fabric React
 
-Теперь добавьте в надстройку компоненты Fabric React. Создайте компонент React под названием `ButtonPrimaryExample`, который состоит из элементов Label и PrimaryButton из Fabric React. Создание`ButtonPrimaryExample`
+Теперь добавьте в надстройку компоненты Fabric React. Создайте компонент React под названием `ButtonPrimaryExample`, который состоит из элементов Label и PrimaryButton из Fabric React. Создание `ButtonPrimaryExample`
 
 1. Откройте папку проекта, созданную генератором Yeoman, и перейдите в раздел **src\components**.
 2. Создайте файл **button.tsx**.

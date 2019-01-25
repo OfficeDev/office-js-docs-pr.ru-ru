@@ -1,13 +1,14 @@
 ---
 title: Office.context.mailbox — набор обязательных элементов 1.5
 description: ''
-ms.date: 10/31/2018
-ms.openlocfilehash: c80ed3837315f3bf51da302d91f08e2114af3b2f
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
+ms.date: 01/16/2019
+localization_priority: Priority
+ms.openlocfilehash: fb84d1e7a5ffd1a5549f213e63ae827f8a883d34
+ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433959"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "29389433"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -41,7 +42,7 @@ ms.locfileid: "27433959"
 | [getCallbackTokenAsync](#getcallbacktokenasynccallback-usercontext) | Метод |
 | [getUserIdentityTokenAsync](#getuseridentitytokenasynccallback-usercontext) | Метод |
 | [makeEwsRequestAsync](#makeewsrequestasyncdata-callback-usercontext) | Метод |
-| [removeHandlerAsync](#removehandlerasynceventtype-handler-options-callback) | Метод |
+| [removeHandlerAsync](#removehandlerasynceventtype-options-callback) | Метод |
 
 ### <a name="namespaces"></a>Пространства имен
 
@@ -592,7 +593,7 @@ function cb(asyncResult) {
 
 ##### <a name="example"></a>Пример
 
-В следующем примере вызывается `makeEwsRequestAsync` для получения темы элемента с помощью операции `GetItem`.
+В приведенном ниже примере вызывается `makeEwsRequestAsync` для получения темы элемента с помощью операции `GetItem`.
 
 ```js
 function getSubjectRequest(id) {
@@ -636,9 +637,9 @@ function callback(asyncResult)  {
 }
 ```
 
-####  <a name="removehandlerasynceventtype-handler-options-callback"></a>removeHandlerAsync(eventType, handler, [параметры], [функция обратного вызова])
+####  <a name="removehandlerasynceventtype-options-callback"></a>removeHandlerAsync(eventType, [options], [callback])
 
-Удаляет обработчик для поддерживаемого события.
+Удаляет обработчиков для поддерживаемого типа события.
 
 В настоящее время единственный поддерживаемый тип события — `Office.EventType.ItemChanged`.
 
@@ -647,7 +648,6 @@ function callback(asyncResult)  {
 | Имя | Тип | Атрибуты | Описание |
 |---|---|---|---|
 | `eventType` | [Office.EventType](office.md#eventtype-string) || Событие, которое должно отменить обработчик. |
-| `handler` | Функция || Функция для обработки события. Функция должна принимать один параметр, представляющий собой объектный литерал. Значение свойства `type` параметра совпадет со значением параметра `eventType`, переданного методу `addHandlerAsync`. |
 | `options` | Объект | &lt;необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
 | `options.asyncContext` | Object | &lt;необязательно&gt; | Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова. |
 | `callback` | функция| &lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).|
