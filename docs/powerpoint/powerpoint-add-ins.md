@@ -1,14 +1,14 @@
 ---
 title: Надстройки PowerPoint
 description: ''
-ms.date: 10/16/2018
+ms.date: 01/24/2019
 localization_priority: Priority
-ms.openlocfilehash: 022bed349dde061b61a8db0711a94a0a4d77f2e1
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: da60c87993bc67057aeec6a4e754f57ae376ddd4
+ms.sourcegitcommit: b3812245ee1426c299e6484fdd2096a9212ce823
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29388635"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "29539865"
 ---
 # <a name="powerpoint-add-ins"></a>Надстройки PowerPoint
 
@@ -30,7 +30,7 @@ ms.locfileid: "29388635"
 
 ## <a name="detect-the-presentations-active-view-and-handle-the-activeviewchanged-event"></a>Определение активного представления презентации и обработка события ActiveViewChanged
 
-При создании контентной надстройки вам понадобится получить активное представление презентации, а также обработать событие `ActiveViewChanged` в рамках обработчика событий `Office.Initialize`. 
+При создании контентной надстройки вам понадобится получить активное представление презентации, а также обработать событие `ActiveViewChanged` в рамках обработчика событий `Office.Initialize`.
 
 > [!NOTE]
 > В PowerPoint Online не удастся запустить событие [Document.ActiveViewChanged](https://docs.microsoft.com/javascript/api/office/office.document), поскольку режим показа слайдов обрабатывается как новый сеанс. В этом случае надстройке необходимо получить активное представление по загрузке, как показано в примере кода ниже.
@@ -39,7 +39,7 @@ ms.locfileid: "29388635"
 
 - Функция `getActiveFileView` вызывает метод [Document.getActiveViewAsync](https://docs.microsoft.com/javascript/api/office/office.document#getactiveviewasync-options--callback-), который возвращает текущее представление презентации: "edit" (представления, в которых можно редактировать слайды, например  **Обычный режим** или **Режим структуры**) или "read" (**Показ слайдов** или **Режим чтения**).
 
-- Функция `registerActiveViewChanged` вызывает метод [addHandlerAsync](https://docs.microsoft.com/javascript/api/office/office.document#addhandlerasync-eventtype--handler--options--callback-) для регистрации обработчика для события [Document.ActiveViewChanged](https://docs.microsoft.com/javascript/api/office/office.document). 
+- Функция `registerActiveViewChanged` вызывает метод [addHandlerAsync](https://docs.microsoft.com/javascript/api/office/office.document#addhandlerasync-eventtype--handler--options--callback-) для регистрации обработчика для события [Document.ActiveViewChanged](https://docs.microsoft.com/javascript/api/office/office.document).
 
 
 ```js
@@ -74,7 +74,7 @@ function registerActiveViewChanged() {
         app.showNotification(JSON.stringify(args));
     }
 
-    Office.context.document.addHandlerAsync(Office.EventType.ActiveViewChanged, Globals.activeViewHandler, 
+    Office.context.document.addHandlerAsync(Office.EventType.ActiveViewChanged, Globals.activeViewHandler,
         function (asyncResult) {
             if (asyncResult.status == "failed") {
                 app.showNotification("Action failed with error: " + asyncResult.error.message);
@@ -163,13 +163,37 @@ function getFileUrl() {
 }
 ```
 
+## <a name="create-a-presentation"></a>Создание презентации
 
+Ваша надстройка может создать новую презентацию, отдельную от экземпляра PowerPoint, в котором в настоящее время работает надстройка. Для этой цели в пространстве имен PowerPoint есть метод `createPresentation`. При вызове этого метода сразу открывается и отображается новая презентация в новом экземпляре программы PowerPoint. Ваша надстройка остается открытой и запущенной в предыдущей презентации.
+
+```js
+PowerPoint.createPresentation();
+```
+
+С помощью метода `createPresentation` также можно создать копию существующей презентации. Метод принимает в качестве необязательного параметра строковое представление PPTX-файла в кодировке base64. Полученная презентация будет копией этого файла, предполагая, что строковый аргумент является допустимым PPTX-файлом. Преобразование файла в нужную строку в кодировке base64 можно выполнить с помощью класса [FileReader](https://developer.mozilla.org/docs/Web/API/FileReader), как показано в приведенном ниже примере.
+
+```js
+var myFile = document.getElementById("file");
+var reader = new FileReader();
+
+reader.onload = function (event) {
+    // strip off the metadata before the base64-encoded string
+    var startIndex = event.target.result.indexOf("base64,");
+    var copyBase64 = event.target.result.substr(startIndex + 7);
+
+    PowerPoint.createPresentation(copyBase64);
+};
+
+// read in the file as a data URL so we can parse the base64-encoded string
+reader.readAsDataURL(myFile.files[0]);
+```
 
 ## <a name="see-also"></a>См. также
+
 - 
   [Примеры кода PowerPoint](https://developer.microsoft.com/en-us/office/gallery/?filterBy=Samples,PowerPoint)
 - [Сохранение состояния надстройки и параметров документа для надстроек области задач и контентных надстроек](../develop/persisting-add-in-state-and-settings.md#how-to-save-add-in-state-and-settings-per-document-for-content-and-task-pane-add-ins)
 - [Чтение и запись данных при активном выделении фрагмента в документе или электронной таблице](../develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md)
 - [Получение всего документа из надстройки для PowerPoint или Word](../powerpoint/get-the-whole-document-from-an-add-in-for-powerpoint.md)
 - [Использование тем документов в надстройках PowerPoint](use-document-themes-in-your-powerpoint-add-ins.md)
-    
