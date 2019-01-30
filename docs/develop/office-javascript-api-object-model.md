@@ -3,12 +3,12 @@ title: Объектная модель API JavaScript для Office
 description: ''
 ms.date: 07/27/2018
 localization_priority: Priority
-ms.openlocfilehash: 5530b77fb25a9decc5f4ae02008808811e7e6513
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 7e93a46019816daa236c986aac921a2962ca1af2
+ms.sourcegitcommit: 2e4b97f0252ff3dd908a3aa7a9720f0cb50b855d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29388530"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "29635960"
 ---
 # <a name="office-javascript-api-object-model"></a>Объектная модель API JavaScript для Office
 Надстройки JavaScript для Office предоставляют доступ к базовым функциям ведущего приложения. В основном такой доступ осуществляется при помощи нескольких значимых объектов. Объект [Context](#context-object) предоставляет доступ к среде выполнения после инициализации. Объект [Document](#document-object) предоставляет пользователю управление документом Excel, PowerPoint или Word. Объект [Mailbox](#mailbox-object) предоставляет надстройкам Outlook доступ к сообщениям и профилям пользователей. Связи между этими объектами высокого уровня — это основа надстроек JavaScript.
@@ -87,7 +87,7 @@ ms.locfileid: "29388530"
 > [!TIP]
 > **В каких случаях следует использовать для доступа к данным матрицы, а в каких — coercionType?** Если вы хотите, чтобы табличные данные динамически росли при добавлении строк и столбцов, и вам нужно работать с заголовками таблиц, используйте табличный тип данных (для этого укажите параметр _coercionType_ метода для доступа к данным объекта **Document** либо **Binding** в виде `"table"` или **Office.CoercionType.Table**). Добавление строк и столбцов в структуру данных поддерживается как для табличных, так и для матричных данных, но добавление строк и столбцов в конец поддерживается только для табличных данных. Если вы не планируете добавлять строки и столбцы, а для данных не требуются заголовки, следует использовать матричный тип данных (указав параметр _coercionType_ метода доступа к данным в виде `"matrix"` или **Office.CoercionType.Matrix**), что позволяет использовать упрощенный способ взаимодействия с данными.
 
-Если данные невозможно привести к заданному типу, то свойство [AsyncResult.status](https://docs.microsoft.com/javascript/api/office/office.asyncresult.error) в функции обратного вызова возвращает значение `"failed"`, и можно использовать свойство [AsyncResult.error](https://docs.microsoft.com/javascript/api/office/office.asyncresult.context), чтобы получить доступ к объекту [Error](https://docs.microsoft.com/javascript/api/office/office.error) со сведениями о причине ошибки во время вызова метода.
+Если данные невозможно привести к заданному типу, то свойство [AsyncResult.status](https://docs.microsoft.com/javascript/api/office/office.asyncresult#status) в функции обратного вызова возвращает значение `"failed"`, и можно использовать свойство [AsyncResult.error](https://docs.microsoft.com/javascript/api/office/office.asyncresult#error), чтобы получить доступ к объекту [Error](https://docs.microsoft.com/javascript/api/office/office.error) со сведениями о причине ошибки во время вызова метода.
 
 
 ## <a name="working-with-selections-using-the-document-object"></a>Работа с выделенными фрагментами с помощью объекта Document

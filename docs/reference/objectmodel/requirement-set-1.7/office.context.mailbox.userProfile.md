@@ -2,12 +2,13 @@
 title: Office.context.mailbox.userProfile — набор обязательных элементов 1.7
 description: ''
 ms.date: 10/31/2018
-ms.openlocfilehash: 866bf063cf4ad8bf040753714986a7b2db05b6d6
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: b07ff5bee3adc18cc1006bb574e373182b29f5fe
+ms.sourcegitcommit: 2e4b97f0252ff3dd908a3aa7a9720f0cb50b855d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433861"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "29635904"
 ---
 # <a name="userprofile"></a>userProfile
 
@@ -35,7 +36,7 @@ ms.locfileid: "27433861"
 ####  <a name="accounttype-string"></a>accountType :String
 
 > [!NOTE]
-> В настоящее время этот элемент поддерживается только в Outlook 2016 для Mac (сборка 16.9.1212 или более поздняя версия).
+> Этот член в данный момент поддерживается только Outlook 2016 для Mac (построение 16.9.1212 или более поздней версии).
 
 Возвращает тип учетной записи пользователя, связанной с почтовым ящиком. Возможные значения перечислены в таблице ниже.
 
