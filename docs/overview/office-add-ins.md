@@ -1,14 +1,14 @@
 ---
 title: Обзор платформы надстроек Office | Microsoft Docs
 description: Используйте привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений.
-ms.date: 01/23/2018
+ms.date: 01/29/2019
 localization_priority: Priority
-ms.openlocfilehash: aa969815cedfe0832151d2e94adc47ac6a097760
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: febd7a49568d8e924558b11ad17b357e17c65867
+ms.sourcegitcommit: 2e4b97f0252ff3dd908a3aa7a9720f0cb50b855d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29388586"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "29635939"
 ---
 # <a name="office-add-ins-platform-overview"></a>Обзор платформы надстроек Office
 
@@ -20,7 +20,7 @@ ms.locfileid: "29388586"
     
 -  **Создание оснащенных различными функциями интерактивных объектов, которые можно внедрить в документы Office.** Внедряйте карты, диаграммы и интерактивные визуализации, которые пользователи могут добавлять в свои электронные таблицы Excel и презентации PowerPoint. 
     
-## <a name="how-are-office-add-ins-different-than-com-and-vsto-add-ins"></a>Чем надстройки Office отличаются от надстроек COM и VSTO? 
+## <a name="how-are-office-add-ins-different-from-com-and-vsto-add-ins"></a>Чем надстройки Office отличаются от надстроек COM и VSTO? 
 
 Надстройки COM и VSTO представляют собой более ранние решения для интеграции Office, которые работают только в Office для Windows. В отличие от надстроек COM, надстройкам Office не требуется код, который выполняется на устройстве пользователя или в клиенте Office. В надстройках Office ведущее приложение, например Excel, считывает манифест надстройки и подключает настраиваемые кнопки ленты и команды меню надстройки в пользовательском интерфейсе. При необходимости оно загружает JavaScript и HTML-код надстройки, который выполняется в "песочнице" в контексте браузера. 
 
