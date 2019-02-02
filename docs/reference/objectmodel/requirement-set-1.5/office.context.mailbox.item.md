@@ -1,14 +1,14 @@
 ---
 title: Office.context.mailbox.item — набор обязательных элементов 1.5
 description: ''
-ms.date: 12/18/2018
+ms.date: 01/30/2019
 localization_priority: Priority
-ms.openlocfilehash: 48bc1291e7aa6d8e335c07d16ddd74e6e9455f0d
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: cca0bb4baa15d72a58909ca1417eb52a9bf70a8f
+ms.sourcegitcommit: bf5c56d9b8c573e42bf2268e10ca3fd4d2bb4ff9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29389573"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "29701843"
 ---
 # <a name="item"></a>item
 
@@ -377,7 +377,7 @@ var internetMessageId = Office.context.mailbox.item.internetMessageId;
 
 | Тип | Описание | Класс элемента |
 | --- | --- | --- |
-| Элементы встречи | Это элементы календаря для класса элемента `IPM.Appointment` или `IPM.Appointment.Occurence`. | `IPM.Appointment`<br />`IPM.Appointment.Occurence` |
+| Элементы встречи | Это элементы календаря для класса элемента `IPM.Appointment` или `IPM.Appointment.Occurrence`. | `IPM.Appointment`<br />`IPM.Appointment.Occurrence` |
 | Элементы сообщения | Сюда входят электронные сообщения, для которых по умолчанию задан класс сообщения `IPM.Note`, а также приглашения на собрания, ответы на них и уведомления об их отмене, использующие `IPM.Schedule.Meeting` в качестве базового класса сообщения. | `IPM.Note`<br />`IPM.Schedule.Meeting.Request`<br />`IPM.Schedule.Meeting.Neg`<br />`IPM.Schedule.Meeting.Pos`<br />`IPM.Schedule.Meeting.Tent`<br />`IPM.Schedule.Meeting.Canceled` |
 
 Можно создавать настраиваемые классы сообщения, расширяющие классы сообщения по умолчанию, например настраиваемый класс сообщения о встрече `IPM.Appointment.Contoso`.
