@@ -2,14 +2,15 @@
 title: Руководство по настраиваемым функциям в Excel (предварительная версия)
 description: Из этого руководства вы узнаете, как создать надстройку, Excel, содержащую пользовательские функции, которые могут выполнять вычисления, запрашивать или передавать веб-данные.
 ms.date: 01/08/2019
+ms.prod: excel
 ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: 9491b29094eb486f7efbe7e128a7a77be43bff39
-ms.sourcegitcommit: 2e4b97f0252ff3dd908a3aa7a9720f0cb50b855d
+ms.openlocfilehash: 5ec99be6aec35ab659f5ddb6bdd270aa892a45eb
+ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "29635953"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "29742431"
 ---
 # <a name="tutorial-create-custom-functions-in-excel-preview"></a>Руководство: создание пользовательских функций в Excel (предварительная версия)
 

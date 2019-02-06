@@ -2,13 +2,15 @@
 title: Руководство по надстройкам Word
 description: В этом руководстве показано создание надстройки Word, которая вставляет (и заменяет) диапазоны текста, абзацы, изображения, HTML-код, таблицы и элементы управления контентом. Вы также узнаете, как форматировать текст, вставлять и заменять содержимое в элементах управления контентом.
 ms.date: 12/31/2018
+ms.prod: word
 ms.topic: tutorial
-ms.openlocfilehash: d1d278d1acd9e8a1377773b90ae9d528af69b93c
-ms.sourcegitcommit: 3007bf57515b0811ff98a7e1518ecc6fc9462276
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: 019329db156e63148a047466b9b3770128cb7fbf
+ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "27724965"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "29742403"
 ---
 # <a name="tutorial-create-a-word-task-pane-add-in"></a>Учебник: Создание надстройки области задач Word
 

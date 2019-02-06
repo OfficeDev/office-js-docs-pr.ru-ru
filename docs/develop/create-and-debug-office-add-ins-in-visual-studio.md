@@ -3,12 +3,12 @@ title: Создание и отладка надстроек Office в Visual St
 description: Используйте Visual Studio для создания и отладки надстроек Office в настольном клиенте Office для Windows
 ms.date: 11/02/2018
 localization_priority: Priority
-ms.openlocfilehash: 377c65d089ef43814bbc419435d2b817e80b3fcc
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: eb7a64d9ad5096af7eb900a6d29b682e950c1bed
+ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29389454"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "29742382"
 ---
 # <a name="create-and-debug-office-add-ins-in-visual-studio"></a>Создание и отладка надстроек Office в Visual Studio
 
@@ -16,9 +16,9 @@ ms.locfileid: "29389454"
 
 > [!NOTE]
 > Visual Studio не поддерживает создание надстроек Office для OneNote или проекта, но вы можете использовать [Yeoman генератор для надстроек Office ](https://github.com/OfficeDev/generator-office) для создания данных типов надстроек.
-> - Чтобы начать работу с надстройкой OneNote, см. статью [Создание вашей первой надстройки OneNote](../onenote/onenote-add-ins-getting-started.md).
+> - Чтобы начать работу с надстройкой OneNote, см. статью [Создание вашей первой надстройки OneNote](../quickstarts/onenote-quickstart.md).
 > 
-> - Чтобы начать работу с надстройкой для проекта, ознакомьтесь со статьей [Создание вашей первой надстройки для проекта](../project/project-add-ins-get-started.md).
+> - Чтобы начать работу с надстройкой для проекта, ознакомьтесь со статьей [Создание вашей первой надстройки для проекта](../quickstarts/project-quickstart.md).
 
 ## <a name="prerequisites"></a>Обязательные условия
 

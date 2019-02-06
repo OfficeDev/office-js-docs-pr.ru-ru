@@ -2,13 +2,15 @@
 title: Руководство по надстройкам PowerPoint
 description: Из этого руководства вы узнаете, как создать надстройку PowerPoint, которая вставляет изображение и текст, получает метаданные слайда и выполняет переход между слайдами.
 ms.date: 12/31/2018
+ms.prod: powerpoint
 ms.topic: tutorial
-ms.openlocfilehash: b0b571dde171cd0693067e699a8554b9da676ccc
-ms.sourcegitcommit: 3007bf57515b0811ff98a7e1518ecc6fc9462276
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: 9f5e30929c0881c0216b7ca77fbfa4b989fabc6e
+ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "27724963"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "29742417"
 ---
 # <a name="tutorial-create-a-powerpoint-task-pane-add-in"></a>Учебник: Создание надстройки области задач PowerPoint
 
@@ -219,7 +221,7 @@ ms.locfileid: "27724963"
 
 ### <a name="test-the-add-in"></a>Тестирование надстройки
 
-1. Испытайте новую надстройку PowerPoint с помощью Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить PowerPoint с кнопкой надстройки **Показать область задач** на ленте. Надстройка будет размещена на локальном сервере IIS.
+1. Протестируйте новую надстройку PowerPoint с помощью Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить PowerPoint с кнопкой надстройки **Показать область задач** на ленте. Надстройка будет размещена на локальном сервере IIS.
 
     ![Снимок экрана: Visual Studio с выделенной кнопкой "Запустить"](../images/powerpoint-tutorial-start.png)
 
