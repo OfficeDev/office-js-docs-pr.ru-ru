@@ -3,12 +3,12 @@ title: Начало работы с надстройками Excel
 description: ''
 ms.date: 01/23/2018
 localization_priority: Priority
-ms.openlocfilehash: b75a25f986d4dd141a3858a357592c5ba9c28bd8
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: ad0c948be710f6274d50c341854e43fc42639ee8
+ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29388971"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "29742263"
 ---
 # <a name="get-started-with-excel-add-ins"></a>Начало работы с надстройками Excel
 
@@ -16,7 +16,7 @@ ms.locfileid: "29388971"
 
 ## <a name="create-your-first-excel-add-in"></a>Создание первой надстройки Excel
 
-Чтобы приступить к работе, выполните одно из пошаговых руководств в этом разделе и создайте надстройку Excel с использованием [React](excel-add-ins-get-started-react.md), [Angular](excel-add-ins-get-started-angular.md) или [jQuery](excel-add-ins-get-started-jquery.md). В каждом пошаговом руководстве имеются подробные инструкции по созданию простой надстройки области задач, использующей API JavaScript для Excel для взаимодействия с листом. 
+Чтобы приступить к работе, выполните одно из пошаговых руководств в этом разделе и создайте надстройку Excel с использованием [React](../quickstarts/excel-quickstart-react.md), [Angular](../quickstarts/excel-quickstart-angular.md), [jQuery](../quickstarts/excel-quickstart-jquery.md) или [Vue](../quickstarts/excel-quickstart-vue.md). В каждом пошаговом руководстве имеются подробные инструкции по созданию простой надстройки области задач, использующей API JavaScript для Excel для взаимодействия с листом. 
 
 ## <a name="explore-snippets-with-script-lab"></a>Изучение фрагментов кода с помощью Script Lab
 
