@@ -5,12 +5,12 @@ ms.date: 01/08/2019
 ms.prod: excel
 ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: 5ec99be6aec35ab659f5ddb6bdd270aa892a45eb
-ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.openlocfilehash: 4ac735e6fc19f13859d07df6cb3d2443e6dfe2fd
+ms.sourcegitcommit: a59f4e322238efa187f388a75b7709462c71e668
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "29742431"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "29982022"
 ---
 # <a name="tutorial-create-custom-functions-in-excel-preview"></a>Руководство: создание пользовательских функций в Excel (предварительная версия)
 
@@ -89,7 +89,7 @@ npm run start
 Эта команда запускает веб-сервер и загружает неопубликованную надстройку пользовательской функции в Excel для Windows.
 
 > [!NOTE]
-> Если надстройка не загружается, проверьте правильность выполнения шага 3.
+> Если надстройка не загружается, проверьте правильность выполнения шага 3. Можно также включить **[Ведение журнала среды выполнения](../testing/troubleshoot-manifest.md#use-runtime-logging-to-debug-your-add-in)** для устранения неполадок с помощью надстройки в XML-файл манифеста, а также проблемы установки или среды выполнения. Число операций записи регистрации времени выполнения `console.log` инструкции в файле журнала, которые помогут вам определить и исправить проблемы.
 
 # <a name="excel-onlinetabexcel-online"></a>[Excel Online](#tab/excel-online)
 
@@ -316,6 +316,7 @@ npm run start-web
 <ol start="4">
 <li>Теперь давайте оценим, как работает новая функция. В ячейке <strong>C1</strong> введите нужный текст <strong>=CONTOSO.STOCKPRICESTREAM("MSFT")</strong> и нажмите ВВОД. Если рынок ценных бумаг открыт, вы увидите, что результат в ячейке <strong>C1</strong> постоянно обновляется, отражая в режиме реального времени цену одной акции корпорации Майкрософт.</li>
 </ol>
+
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

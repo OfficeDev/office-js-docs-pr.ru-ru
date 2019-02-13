@@ -3,12 +3,12 @@ title: Office.Context.Mailbox.Item - требование задать 1.7
 description: ''
 ms.date: 01/30/2019
 localization_priority: Normal
-ms.openlocfilehash: 6ac795d426cf80071d7b83d5e10714f4d3a6036b
-ms.sourcegitcommit: bf5c56d9b8c573e42bf2268e10ca3fd4d2bb4ff9
+ms.openlocfilehash: e4bfbd9629913f775edff66f4592c220c4e5d580
+ms.sourcegitcommit: a59f4e322238efa187f388a75b7709462c71e668
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "29701892"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "29982057"
 ---
 # <a name="item"></a>item
 
@@ -51,7 +51,7 @@ ms.locfileid: "29701892"
 | [sender](#sender-emailaddressdetailsjavascriptapioutlook17officeemailaddressdetails) | Элемент |
 | [seriesId](#nullable-seriesid-string) | Элемент |
 | [start](#start-datetimejavascriptapioutlook17officetime) | Элемент |
-| [subject](#subject-stringsubjectjavascriptapioutlook17officesubject) | Элемент |
+| [subject](#subject-stringsubjectjavascriptapioutlook17officesubject) | Member |
 | [to](#to-arrayemailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsrecipientsjavascriptapioutlook17officerecipients) | Элемент |
 | [addFileAttachmentAsync](#addfileattachmentasyncuri-attachmentname-options-callback) | Метод |
 | [addHandlerAsync](#addhandlerasynceventtype-handler-options-callback) | Метод |
@@ -346,7 +346,7 @@ Office.context.mailbox.item.end.setAsync(endTime, options, function(result) {
 Свойство `from` возвращает объект `EmailAddressDetails`.
 
 ```js
-var subject = Office.context.mailbox.item.from;
+var from = Office.context.mailbox.item.from;
 ```
 
 ##### <a name="compose-mode"></a>Режим создания
@@ -880,7 +880,7 @@ function callback(asyncResult) {
 ##### <a name="parameters"></a>Параметры
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
-|`uri`|String||Универсальный код ресурса (URI), представляющий расположение файла, который нужно вложить в сообщение или встречу. Максимальная длина — 2048 символов.|
+|`uri`|Строка||Универсальный код ресурса (URI), представляющий расположение файла, который нужно вложить в сообщение или встречу. Максимальная длина — 2048 символов.|
 |`attachmentName`|String||Имя вложения, которое отображается при передаче вложения. Максимальная длина — 255 символов.|
 |`options`|Object|&lt;необязательный&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Object|&lt;необязательный&gt;|В методе обратного вызова разработчики могут указать любой объект, к которому необходимо получить доступ.|
@@ -1005,7 +1005,7 @@ function loadNewItem(eventArgs) {
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
 |`itemId`|String||Идентификатор Exchange для вкладываемого элемента. Максимальная длина — 100 символов.|
-|`attachmentName`|String||Тема вкладываемого элемента. Максимальная длина — 255 символов.|
+|`attachmentName`|Строка||Тема вкладываемого элемента. Максимальная длина — 255 символов.|
 |`options`|Object|&lt;необязательный&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Object|&lt;необязательный&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
 |`callback`|функция|&lt;необязательный&gt;|После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.<br/>Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.|
@@ -1065,7 +1065,7 @@ function addAttachment() {
 |Требование|Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.3|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|С ограничениями|
+|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|Restricted|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Создание|
 
 #### <a name="displayreplyallformformdata"></a>displayReplyAllForm(formData)
@@ -1086,9 +1086,9 @@ function addAttachment() {
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
 |`formData`|String &#124; Object||Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.<br/>**ИЛИ**<br/>Объект, который содержит текст или данные вложения и функцию обратного вызова. Ниже представлено определение этого объекта.|
-|`formData.htmlBody`|String|&lt;необязательный&gt;|Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.
+|`formData.htmlBody`|Строка|&lt;необязательный&gt;|Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.
 |`formData.attachments`|Array.&lt;Object&gt;|&lt;необязательно&gt;|Массив объектов JSON, представляющих собой вложенные файлы или элементы.|
-|`formData.attachments.type`|String||Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента.|
+|`formData.attachments.type`|Строка||Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента.|
 |`formData.attachments.name`|String||Строка, содержащая имя вложения, длиной до 255 символов.|
 |`formData.attachments.url`|Строка||Используется, только если свойству `type` задано значение `file`. URI расположения файла.|
 |`formData.attachments.isInline`|Boolean||Используется, только если свойству `type` задано значение `file`. Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.|
@@ -1205,9 +1205,9 @@ Office.context.mailbox.item.displayReplyAllForm(
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
 |`formData`|String &#124; Object||Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.<br/>**ИЛИ**<br/>Объект, который содержит текст или данные вложения и функцию обратного вызова. Ниже представлено определение этого объекта.|
-|`formData.htmlBody`|String|&lt;необязательный&gt;|Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.
+|`formData.htmlBody`|Строка|&lt;необязательный&gt;|Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.
 |`formData.attachments`|Array.&lt;Object&gt;|&lt;необязательно&gt;|Массив объектов JSON, представляющих собой вложенные файлы или элементы.|
-|`formData.attachments.type`|String||Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента.|
+|`formData.attachments.type`|Строка||Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента.|
 |`formData.attachments.name`|Строка||Строка, содержащая имя вложения, длиной до 255 символов.|
 |`formData.attachments.url`|Строка||Используется, только если свойству `type` задано значение `file`. URI расположения файла.|
 |`formData.attachments.isInline`|Boolean||Используется, только если свойству `type` задано значение `file`. Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.|
@@ -1351,7 +1351,7 @@ var contacts = Office.context.mailbox.item.getEntities().contacts;
 |Требование|Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|С ограничениями|
+|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|Restricted|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)|Чтение|
 
 ##### <a name="returns"></a>Возвращаемое значение:
@@ -1362,7 +1362,7 @@ var contacts = Office.context.mailbox.item.getEntities().contacts;
 
 |Значение параметра `entityType`|Тип объектов в возвращаемом массиве|Необходимый уровень разрешений|
 |---|---|---|
-|`Address`|String|**Restricted**|
+|`Address`|Строка|**Restricted**|
 |`Contact`|Contact|**ReadItem**|
 |`EmailAddress`|String|**ReadItem**|
 |`MeetingSuggestion`|MeetingSuggestion|**ReadItem**|
@@ -1403,7 +1403,7 @@ Office.initialize = function () {
 
 |Имя|Тип|Описание|
 |---|---|---|
-|`name`|String|Имя элемента правила `ItemHasKnownEntity`, определяющее соответствующий фильтр.|
+|`name`|Строка|Имя элемента правила `ItemHasKnownEntity`, определяющее соответствующий фильтр.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -1496,7 +1496,7 @@ var veges = allMatches.veggies;
 
 |Имя|Тип|Описание|
 |---|---|---|
-|`name`|String|Имя элемента правила `ItemHasRegularExpressionMatch`, определяющее соответствующий фильтр.|
+|`name`|Строка|Имя элемента правила `ItemHasRegularExpressionMatch`, определяющее соответствующий фильтр.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -1719,7 +1719,7 @@ function saveCallback(asyncResult) {
 
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
-|`attachmentId`|String||Идентификатор удаляемого вложения.|
+|`attachmentId`|Строка||Идентификатор удаляемого вложения.|
 |`options`|Object|&lt;необязательный&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Object|&lt;необязательный&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
 |`callback`|функция|&lt;необязательно&gt;|После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>Если удалить вложение не удается, свойство `asyncResult.error` содержит код ошибки с указанием ее причины.|

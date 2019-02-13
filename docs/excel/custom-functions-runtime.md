@@ -1,14 +1,14 @@
 ---
-ms.date: 01/08/2019
+ms.date: 02/06/2019
 description: Сведения об основных сценариях при разработке пользовательских функций Excel, которые используют новую среду выполнения JavaScript.
 title: Среда выполнения для пользовательских функций Excel (предварительный просмотр)
 localization_priority: Normal
-ms.openlocfilehash: dd8158da4ebcccac61b8ab6958a101489bf5a668
-ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.openlocfilehash: d891a41dc9e142ef3cfaa00c8b54d8d27913c57d
+ms.sourcegitcommit: a59f4e322238efa187f388a75b7709462c71e668
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "29742320"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "29982043"
 ---
 # <a name="runtime-for-excel-custom-functions-preview"></a>Среда выполнения для пользовательских функций Excel (предварительный просмотр)
 
@@ -18,7 +18,11 @@ ms.locfileid: "29742320"
 
 ## <a name="requesting-external-data"></a>Запрос внешних данных
 
-В пределах пользовательской функции можно запрашивать внешние данные с помощью такого API, как [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), или с помощью [XmlHttpRequest (XHR)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который отправляет HTTP-запросы для взаимодействия с серверами. В среде выполнения JavaScript XHR реализует дополнительные меры по обеспечению безопасности, предъявляя в качестве требования [Политику единого домена](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) и простой механизм [CORS](https://www.w3.org/TR/cors/).  
+В пределах пользовательской функции можно запрашивать внешние данные с помощью такого API, как [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), или с помощью [XmlHttpRequest (XHR)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который отправляет HTTP-запросы для взаимодействия с серверами.
+
+В среде выполнения JavaScript, используемых настраиваемых функций XHR реализует дополнительные меры безопасности, требуя [Политики единого происхождения](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) и простой [CORS](https://www.w3.org/TR/cors/).
+
+Обратите внимание на то, что простая реализация CORS нельзя использовать файлы cookie и поддерживает только простых методов (GET, HEAD, POST). Простой CORS принимает простой заголовков с именами полей `Accept`, `Accept-Language`, `Content-Language`. Вы также можете использовать `Content-Type` предоставляемых верхнего колонтитула в простой CORS, что тип контента является `application/x-www-form-urlencoded`, `text/plain`, или `multipart/form-data`.
 
 ### <a name="xhr-example"></a>Пример XHR
 
@@ -44,6 +48,9 @@ function sendWebRequest(thermometerID, data) {
         if (this.readyState == 4 && this.status == 200) {
            data.temperature = JSON.parse(xhttp.responseText).temperature
         };
+        
+        //set Content-Type to application/text. Application/json is not currently supported with Simple CORS
+        xhttp.setRequestHeader("Content-Type", "application/text");
         xhttp.open("GET", "https://contoso.com/temperature/" + thermometerID), true)
         xhttp.send();  
     }
