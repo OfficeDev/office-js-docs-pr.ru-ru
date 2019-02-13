@@ -1,14 +1,14 @@
 ---
 title: Использование Dialog API в надстройках Office
 description: ''
-ms.date: 12/20/2018
+ms.date: 02/12/2019
 localization_priority: Priority
-ms.openlocfilehash: fa6524e36319d2031ab005c8dec2fc8b5c50d7cd
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: d53fa5ddbafae5afb0e925762f9d738b9b78c9b0
+ms.sourcegitcommit: a59f4e322238efa187f388a75b7709462c71e668
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29386969"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "29982036"
 ---
 # <a name="use-the-dialog-api-in-your-office-add-ins"></a>Использование Dialog API в надстройках Office
 
@@ -200,10 +200,6 @@ if (loginSuccess) {
 > - Реализация функций `getProfile` и `getError` не показана. Они получают данные из параметра запроса или ответа HTTP.
 > - В зависимости от того, удалось ли выполнить вход, отправляются анонимные объекты различных типов. Оба содержат свойство `messageType`, но один содержит свойство `profile`, а другой — свойство `error`.
 
-Примеры использования условных сообщений см. в таких статьях:
-- [Использование службы Auth0 в надстройках Office для упрощения входа через социальные сети](https://github.com/OfficeDev/Office-Add-in-Auth0)
-- [Использование службы OAuth.io в надстройках Office для упрощения доступа к популярным веб-службам](https://github.com/OfficeDev/Office-Add-in-OAuth.io)
-
 Код обработчика на главной странице использует значение свойства `messageType` для разветвления, как показано в приведенном ниже примере. Обратите внимание на то, что здесь используется та же функция `showUserName`, что и в примере выше, а функция `showNotification` отображает сообщение об ошибке в элементе пользовательского интерфейса на главной странице.
 
 ```js
@@ -352,11 +348,6 @@ var clientID = localStorage.getItem("clientID");
 // var clientID = localStorage.clientID;
 ```
 
-Примеры подобного использования локального хранилища надстройками см. в таких статьях:
-
-- [Использование службы Auth0 в надстройках Office для упрощения входа через социальные сети](https://github.com/OfficeDev/Office-Add-in-Auth0)
-- [Использование службы OAuth.io в надстройках Office для упрощения доступа к популярным веб-службам](https://github.com/OfficeDev/Office-Add-in-OAuth.io)
-
 ### <a name="use-query-parameters"></a>Использование параметров запроса
 
 В приведенном ниже примере показано, как передавать данные с помощью параметра запроса.
@@ -417,8 +408,6 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?client
 
 Если пользователь может выбрать поставщика для входа в надстройку, например учетную запись Майкрософт, Google или Facebook, первой должна открываться локальная страница со списком поставщиков (см. предыдущий раздел). После выбора поставщика происходит создание URL-адреса входа и перенаправление на него.
 
-Пример, в котором используется этот шаблон, см. в статье [Использование службы Auth0 в надстройках Office для упрощения входа через социальные сети](https://github.com/OfficeDev/Office-Add-in-Auth0).
-
 #### <a name="authorization-of-the-add-in-to-an-external-resource"></a>Авторизация надстройки через внешний ресурс
 
 В современном Интернете веб-приложения — это такие же субъекты безопасности, как пользователи, у них есть свои удостоверения и разрешения для онлайн-ресурсов, таких как Office 365, Google+, Facebook и LinkedIn. Перед развертыванием приложение регистрируется у поставщика ресурса. Регистрация включает:
@@ -435,7 +424,6 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?client
 
 Dialog API используется для этой цели в следующих примерах:
 - [Вставка диаграмм Excel с помощью Microsoft Graph в надстройке PowerPoint](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart) (маркер доступа хранится в базе данных).
-- [Использование службы OAuth.io в надстройках Office для упрощения доступа к популярным веб-службам.](https://github.com/OfficeDev/Office-Add-in-OAuth.io)
 
 Дополнительные сведения об аутентификации и авторизации в надстройках см. в статьях:
 - [Авторизация внешних служб в надстройке Office](auth-external-add-ins.md)
