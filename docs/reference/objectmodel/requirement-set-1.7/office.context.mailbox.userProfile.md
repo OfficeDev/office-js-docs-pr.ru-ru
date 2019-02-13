@@ -4,10 +4,10 @@ description: ''
 ms.date: 10/31/2018
 localization_priority: Normal
 ms.openlocfilehash: b07ff5bee3adc18cc1006bb574e373182b29f5fe
-ms.sourcegitcommit: 2e4b97f0252ff3dd908a3aa7a9720f0cb50b855d
+ms.sourcegitcommit: a59f4e322238efa187f388a75b7709462c71e668
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
+ms.lasthandoff: 02/13/2019
 ms.locfileid: "29635904"
 ---
 # <a name="userprofile"></a>userProfile
@@ -26,12 +26,12 @@ ms.locfileid: "29635904"
 
 | Элемент | Тип |
 |--------|------|
-| [accountType](#accounttype-string) | Элемент |
-| [displayName](#displayname-string) | Элемент |
-| [emailAddress](#emailaddress-string) | Элемент |
-| [timeZone](#timezone-string) | Элемент |
+| [accountType](#accounttype-string) | Member |
+| [displayName](#displayname-string) | Member |
+| [emailAddress](#emailaddress-string) | Member |
+| [timeZone](#timezone-string) | Член |
 
-### <a name="members"></a>Элементы
+### <a name="members"></a>Members
 
 ####  <a name="accounttype-string"></a>accountType :String
 
@@ -77,7 +77,7 @@ console.log(Office.context.mailbox.userProfile.accountType);
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
@@ -100,7 +100,7 @@ console.log(Office.context.mailbox.userProfile.displayName);
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
@@ -123,7 +123,7 @@ console.log(Office.context.mailbox.userProfile.emailAddress);
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
