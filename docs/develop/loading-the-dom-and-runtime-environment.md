@@ -3,12 +3,12 @@ title: Загрузка модели DOM и среды выполнения
 description: ''
 ms.date: 01/09/2019
 localization_priority: Priority
-ms.openlocfilehash: ce56518759740e20f2643bb675274602b3d968a4
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: c569825ae73d32259fc1554aa8233461bbbe9813
+ms.sourcegitcommit: 70ef38a290c18a1d1a380fd02b263470207a5dc6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29389230"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "30052751"
 ---
 # <a name="loading-the-dom-and-runtime-environment"></a>Загрузка модели DOM и среды выполнения
 
@@ -70,7 +70,7 @@ ms.locfileid: "29389230"
 
 ## <a name="checking-the-load-status"></a>Проверка состояния загрузки
 
-Одним из способов проверки завершения загрузки DOM и среды выполнения надстроек является использование функции [.ready()](http://api.jquery.com/ready/) jQuery — `$(document).ready()`. Например, указанный ниже обработчик событий **onReady** убеждается в полной загрузке DOM, прежде чем выполняется код, относящийся к инициализации надстройки. После этого обработчик **onReady** переходит на использование свойства [mailbox.item](https://docs.microsoft.com/javascript/api/outlook/office.mailbox?view=office-js) для получения выбранного в настоящий момент элемента Outlook и вызывает основную функцию надстройки `initDialer`.
+Одним из способов проверки завершения загрузки DOM и среды выполнения надстроек является использование функции [.ready()](https://api.jquery.com/ready/) jQuery — `$(document).ready()`. Например, указанный ниже обработчик событий **onReady** убеждается в полной загрузке DOM, прежде чем выполняется код, относящийся к инициализации надстройки. После этого обработчик **onReady** переходит на использование свойства [mailbox.item](https://docs.microsoft.com/javascript/api/outlook/office.mailbox) для получения выбранного в настоящий момент элемента Outlook и вызывает основную функцию надстройки `initDialer`.
 
 ```js
 Office.onReady()
