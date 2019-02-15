@@ -1,14 +1,14 @@
 ---
 title: Использование Dialog API в надстройках Office
 description: ''
-ms.date: 02/12/2019
+ms.date: 02/13/2019
 localization_priority: Priority
-ms.openlocfilehash: d53fa5ddbafae5afb0e925762f9d738b9b78c9b0
-ms.sourcegitcommit: a59f4e322238efa187f388a75b7709462c71e668
+ms.openlocfilehash: 81154f039a87973e222188d894d5e4289d0bf647
+ms.sourcegitcommit: 70ef38a290c18a1d1a380fd02b263470207a5dc6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "29982036"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "30052772"
 ---
 # <a name="use-the-dialog-api-in-your-office-add-ins"></a>Использование Dialog API в надстройках Office
 
@@ -399,10 +399,9 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?client
 3. Когда открывается страница redirectPage.html, она вызывает функцию `messageParent`, чтобы сообщить о результате главной странице, а также сообщить пользовательские данные или данные об ошибке.
 4. На главной странице запускается событие `DialogMessageReceived`, и его обработчик закрывает диалоговое окно и (при необходимости) обрабатывает сообщение.
 
-Примеры надстроек, в которых используется этот шаблон, см. в следующих статьях:
+Пример надстройки, в которой используется этот шаблон, см. в указанных ниже статьях:
 
 - [Вставка диаграмм Excel с помощью Microsoft Graph в надстройке PowerPoint.](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart) Ресурс, который изначально открывается в диалоговом окне, — метод контроллера, не имеющий своего представления. Он перенаправляет пользователя на страницу входа в Office 365.
-- [Проверка подлинности клиента Office 365 для надстройки Office с помощью AngularJS.](https://github.com/OfficeDev/Word-Add-in-AngularJS-Client-OAuth) Ресурс, который изначально открывается в диалоговом окне, — это страница.
 
 #### <a name="support-multiple-identity-providers"></a>Поддержка нескольких поставщиков удостоверений
 
