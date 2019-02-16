@@ -1,165 +1,165 @@
 ---
-title: Office.Context.Mailbox.Item - наборы требований предварительного просмотра
+title: Office. Context. Mailbox. Item — Предварительная версия набора требований
 description: ''
-ms.date: 01/30/2019
+ms.date: 02/15/2019
 localization_priority: Normal
-ms.openlocfilehash: a660f8bafdd2587f97d704e42c47abbe6c7d533d
-ms.sourcegitcommit: a59f4e322238efa187f388a75b7709462c71e668
+ms.openlocfilehash: ed3926e7e77550f43b87306cf27cf1e96341bd82
+ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "29982050"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "30068247"
 ---
-# <a name="item"></a><span data-ttu-id="b789e-102">item</span><span class="sxs-lookup"><span data-stu-id="b789e-102">item</span></span>
+# <a name="item"></a><span data-ttu-id="2fb0b-102">item</span><span class="sxs-lookup"><span data-stu-id="2fb0b-102">item</span></span>
 
-### <a name="officeofficemdcontextofficecontextmdmailboxofficecontextmailboxmditem"></a><span data-ttu-id="b789e-103">[Office](office.md)[.context](office.context.md)[.mailbox](office.context.mailbox.md).item</span><span class="sxs-lookup"><span data-stu-id="b789e-103">[Office](office.md)[.context](office.context.md)[.mailbox](office.context.mailbox.md).item</span></span>
+### <a name="officeofficemdcontextofficecontextmdmailboxofficecontextmailboxmditem"></a><span data-ttu-id="2fb0b-103">[Office](office.md)[.context](office.context.md)[.mailbox](office.context.mailbox.md).item</span><span class="sxs-lookup"><span data-stu-id="2fb0b-103">[Office](office.md)[.context](office.context.md)[.mailbox](office.context.mailbox.md).item</span></span>
 
-<span data-ttu-id="b789e-p101">Пространство имен `item` используется для доступа к выбранному в данный момент сообщению, приглашению на собрание или описанию встречи. Вы можете определить тип пространства имен `item` с помощью свойства [itemType](#itemtype-officemailboxenumsitemtypejavascriptapioutlookofficemailboxenumsitemtype).</span><span class="sxs-lookup"><span data-stu-id="b789e-p101">The `item` namespace is used to access the currently selected message, meeting request, or appointment. You can determine the type of the `item` by using the [itemType](#itemtype-officemailboxenumsitemtypejavascriptapioutlookofficemailboxenumsitemtype) property.</span></span>
+<span data-ttu-id="2fb0b-p101">Пространство имен `item` используется для доступа к выбранному в данный момент сообщению, приглашению на собрание или описанию встречи. Вы можете определить тип пространства имен `item` с помощью свойства [itemType](#itemtype-officemailboxenumsitemtypejavascriptapioutlookofficemailboxenumsitemtype).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p101">The `item` namespace is used to access the currently selected message, meeting request, or appointment. You can determine the type of the `item` by using the [itemType](#itemtype-officemailboxenumsitemtypejavascriptapioutlookofficemailboxenumsitemtype) property.</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-106">Requirements</span><span class="sxs-lookup"><span data-stu-id="b789e-106">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-106">Requirements</span><span class="sxs-lookup"><span data-stu-id="2fb0b-106">Requirements</span></span>
 
-|<span data-ttu-id="b789e-107">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-107">Requirement</span></span>|<span data-ttu-id="b789e-108">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-108">Value</span></span>|
+|<span data-ttu-id="2fb0b-107">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-107">Requirement</span></span>|<span data-ttu-id="2fb0b-108">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-108">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-109">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-109">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-110">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-110">1.0</span></span>|
-|[<span data-ttu-id="b789e-111">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-111">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-112">С ограничениями</span><span class="sxs-lookup"><span data-stu-id="b789e-112">Restricted</span></span>|
-|[<span data-ttu-id="b789e-113">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-113">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-114">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-114">Compose or read</span></span>|
+|[<span data-ttu-id="2fb0b-109">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-109">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-110">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-110">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-111">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-111">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-112">С ограничениями</span><span class="sxs-lookup"><span data-stu-id="2fb0b-112">Restricted</span></span>|
+|[<span data-ttu-id="2fb0b-113">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-113">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-114">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-114">Compose or Read</span></span>|
 
-##### <a name="members-and-methods"></a><span data-ttu-id="b789e-115">Элементы и методы</span><span class="sxs-lookup"><span data-stu-id="b789e-115">Members and methods</span></span>
+##### <a name="members-and-methods"></a><span data-ttu-id="2fb0b-115">Элементы и методы</span><span class="sxs-lookup"><span data-stu-id="2fb0b-115">Members and methods</span></span>
 
-| <span data-ttu-id="b789e-116">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-116">Member</span></span> | <span data-ttu-id="b789e-117">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-117">Type</span></span> |
+| <span data-ttu-id="2fb0b-116">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-116">Member</span></span> | <span data-ttu-id="2fb0b-117">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-117">Type</span></span> |
 |--------|------|
-| [<span data-ttu-id="b789e-118">attachments</span><span class="sxs-lookup"><span data-stu-id="b789e-118">attachments</span></span>](#attachments-arrayattachmentdetailsjavascriptapioutlookofficeattachmentdetails) | <span data-ttu-id="b789e-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-119">Member</span></span> |
-| [<span data-ttu-id="b789e-120">bcc</span><span class="sxs-lookup"><span data-stu-id="b789e-120">bcc</span></span>](#bcc-recipientsjavascriptapioutlookofficerecipients) | <span data-ttu-id="b789e-121">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-121">Member</span></span> |
-| [<span data-ttu-id="b789e-122">body</span><span class="sxs-lookup"><span data-stu-id="b789e-122">body</span></span>](#body-bodyjavascriptapioutlookofficebody) | <span data-ttu-id="b789e-123">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-123">Member</span></span> |
-| [<span data-ttu-id="b789e-124">cc</span><span class="sxs-lookup"><span data-stu-id="b789e-124">cc</span></span>](#cc-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients) | <span data-ttu-id="b789e-125">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-125">Member</span></span> |
-| [<span data-ttu-id="b789e-126">conversationId</span><span class="sxs-lookup"><span data-stu-id="b789e-126">conversationId</span></span>](#nullable-conversationid-string) | <span data-ttu-id="b789e-127">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-127">Member</span></span> |
-| [<span data-ttu-id="b789e-128">dateTimeCreated</span><span class="sxs-lookup"><span data-stu-id="b789e-128">dateTimeCreated</span></span>](#datetimecreated-date) | <span data-ttu-id="b789e-129">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-129">Member</span></span> |
-| [<span data-ttu-id="b789e-130">dateTimeModified</span><span class="sxs-lookup"><span data-stu-id="b789e-130">dateTimeModified</span></span>](#datetimemodified-date) | <span data-ttu-id="b789e-131">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-131">Member</span></span> |
-| [<span data-ttu-id="b789e-132">end</span><span class="sxs-lookup"><span data-stu-id="b789e-132">end</span></span>](#end-datetimejavascriptapioutlookofficetime) | <span data-ttu-id="b789e-133">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-133">Member</span></span> |
-| [<span data-ttu-id="b789e-134">enhancedLocation</span><span class="sxs-lookup"><span data-stu-id="b789e-134">enhancedLocation</span></span>](#enhancedlocation-enhancedlocationjavascriptapioutlookofficeenhancedlocation) | <span data-ttu-id="b789e-135">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-135">Member</span></span> |
-| [<span data-ttu-id="b789e-136">from</span><span class="sxs-lookup"><span data-stu-id="b789e-136">from</span></span>](#from-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsfromjavascriptapioutlookofficefrom) | <span data-ttu-id="b789e-137">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-137">Member</span></span> |
-| [<span data-ttu-id="b789e-138">internetHeaders</span><span class="sxs-lookup"><span data-stu-id="b789e-138">internetHeaders</span></span>](#internetheaders-internetheadersjavascriptapioutlookofficeinternetheaders) | <span data-ttu-id="b789e-139">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-139">Member</span></span> |
-| [<span data-ttu-id="b789e-140">internetMessageId</span><span class="sxs-lookup"><span data-stu-id="b789e-140">internetMessageId</span></span>](#internetmessageid-string) | <span data-ttu-id="b789e-141">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-141">Member</span></span> |
-| [<span data-ttu-id="b789e-142">itemClass</span><span class="sxs-lookup"><span data-stu-id="b789e-142">itemClass</span></span>](#itemclass-string) | <span data-ttu-id="b789e-143">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-143">Member</span></span> |
-| [<span data-ttu-id="b789e-144">itemId</span><span class="sxs-lookup"><span data-stu-id="b789e-144">itemId</span></span>](#nullable-itemid-string) | <span data-ttu-id="b789e-145">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-145">Member</span></span> |
-| [<span data-ttu-id="b789e-146">itemType</span><span class="sxs-lookup"><span data-stu-id="b789e-146">itemType</span></span>](#itemtype-officemailboxenumsitemtypejavascriptapioutlookofficemailboxenumsitemtype) | <span data-ttu-id="b789e-147">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-147">Member</span></span> |
-| [<span data-ttu-id="b789e-148">location</span><span class="sxs-lookup"><span data-stu-id="b789e-148">location</span></span>](#location-stringlocationjavascriptapioutlookofficelocation) | <span data-ttu-id="b789e-149">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-149">Member</span></span> |
-| [<span data-ttu-id="b789e-150">normalizedSubject</span><span class="sxs-lookup"><span data-stu-id="b789e-150">normalizedSubject</span></span>](#normalizedsubject-string) | <span data-ttu-id="b789e-151">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-151">Member</span></span> |
-| [<span data-ttu-id="b789e-152">notificationMessages</span><span class="sxs-lookup"><span data-stu-id="b789e-152">notificationMessages</span></span>](#notificationmessages-notificationmessagesjavascriptapioutlookofficenotificationmessages) | <span data-ttu-id="b789e-153">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-153">Member</span></span> |
-| [<span data-ttu-id="b789e-154">optionalAttendees</span><span class="sxs-lookup"><span data-stu-id="b789e-154">optionalAttendees</span></span>](#optionalattendees-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients) | <span data-ttu-id="b789e-155">Member</span><span class="sxs-lookup"><span data-stu-id="b789e-155">Member</span></span> |
-| [<span data-ttu-id="b789e-156">organizer</span><span class="sxs-lookup"><span data-stu-id="b789e-156">organizer</span></span>](#organizer-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsorganizerjavascriptapioutlookofficeorganizer) | <span data-ttu-id="b789e-157">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-157">Member</span></span> |
-| [<span data-ttu-id="b789e-158">recurrence</span><span class="sxs-lookup"><span data-stu-id="b789e-158">recurrence</span></span>](#nullable-recurrence-recurrencejavascriptapioutlookofficerecurrence) | <span data-ttu-id="b789e-159">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-159">Member</span></span> |
-| [<span data-ttu-id="b789e-160">requiredAttendees</span><span class="sxs-lookup"><span data-stu-id="b789e-160">requiredAttendees</span></span>](#requiredattendees-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients) | <span data-ttu-id="b789e-161">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-161">Member</span></span> |
-| [<span data-ttu-id="b789e-162">sender</span><span class="sxs-lookup"><span data-stu-id="b789e-162">sender</span></span>](#sender-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetails) | <span data-ttu-id="b789e-163">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-163">Member</span></span> |
-| [<span data-ttu-id="b789e-164">seriesId</span><span class="sxs-lookup"><span data-stu-id="b789e-164">seriesId</span></span>](#nullable-seriesid-string) | <span data-ttu-id="b789e-165">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-165">Member</span></span> |
-| [<span data-ttu-id="b789e-166">start</span><span class="sxs-lookup"><span data-stu-id="b789e-166">start</span></span>](#start-datetimejavascriptapioutlookofficetime) | <span data-ttu-id="b789e-167">Member</span><span class="sxs-lookup"><span data-stu-id="b789e-167">Member</span></span> |
-| [<span data-ttu-id="b789e-168">subject</span><span class="sxs-lookup"><span data-stu-id="b789e-168">subject</span></span>](#subject-stringsubjectjavascriptapioutlookofficesubject) | <span data-ttu-id="b789e-169">Member</span><span class="sxs-lookup"><span data-stu-id="b789e-169">Member</span></span> |
-| [<span data-ttu-id="b789e-170">to</span><span class="sxs-lookup"><span data-stu-id="b789e-170">to</span></span>](#to-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients) | <span data-ttu-id="b789e-171">Элемент</span><span class="sxs-lookup"><span data-stu-id="b789e-171">Member</span></span> |
-| [<span data-ttu-id="b789e-172">addFileAttachmentAsync</span><span class="sxs-lookup"><span data-stu-id="b789e-172">addFileAttachmentAsync</span></span>](#addfileattachmentasyncuri-attachmentname-options-callback) | <span data-ttu-id="b789e-173">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-173">Method</span></span> |
-| [<span data-ttu-id="b789e-174">addFileAttachmentFromBase64Async</span><span class="sxs-lookup"><span data-stu-id="b789e-174">addFileAttachmentFromBase64Async</span></span>](#addfileattachmentfrombase64asyncbase64file-attachmentname-options-callback) | <span data-ttu-id="b789e-175">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-175">Method</span></span> |
-| [<span data-ttu-id="b789e-176">addHandlerAsync</span><span class="sxs-lookup"><span data-stu-id="b789e-176">addHandlerAsync</span></span>](#addhandlerasynceventtype-handler-options-callback) | <span data-ttu-id="b789e-177">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-177">Method</span></span> |
-| [<span data-ttu-id="b789e-178">addItemAttachmentAsync</span><span class="sxs-lookup"><span data-stu-id="b789e-178">addItemAttachmentAsync</span></span>](#additemattachmentasyncitemid-attachmentname-options-callback) | <span data-ttu-id="b789e-179">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-179">Method</span></span> |
-| [<span data-ttu-id="b789e-180">close</span><span class="sxs-lookup"><span data-stu-id="b789e-180">close</span></span>](#close) | <span data-ttu-id="b789e-181">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-181">Method</span></span> |
-| [<span data-ttu-id="b789e-182">displayReplyAllForm</span><span class="sxs-lookup"><span data-stu-id="b789e-182">displayReplyAllForm</span></span>](#displayreplyallformformdata) | <span data-ttu-id="b789e-183">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-183">Method</span></span> |
-| [<span data-ttu-id="b789e-184">displayReplyForm</span><span class="sxs-lookup"><span data-stu-id="b789e-184">displayReplyForm</span></span>](#displayreplyformformdata) | <span data-ttu-id="b789e-185">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-185">Method</span></span> |
-| [<span data-ttu-id="b789e-186">getAttachmentContentAsync</span><span class="sxs-lookup"><span data-stu-id="b789e-186">getAttachmentContentAsync</span></span>](#getattachmentcontentasyncattachmentid-options-callback--attachmentcontentjavascriptapioutlookofficeattachmentcontent) | <span data-ttu-id="b789e-187">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-187">Method</span></span> |
-| [<span data-ttu-id="b789e-188">getAttachmentsAsync</span><span class="sxs-lookup"><span data-stu-id="b789e-188">getAttachmentsAsync</span></span>](#getattachmentsasyncoptions-callback--arrayattachmentdetailsjavascriptapioutlookofficeattachmentdetails) | <span data-ttu-id="b789e-189">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-189">Method</span></span> |
-| [<span data-ttu-id="b789e-190">getEntities</span><span class="sxs-lookup"><span data-stu-id="b789e-190">getEntities</span></span>](#getentities--entitiesjavascriptapioutlookofficeentities) | <span data-ttu-id="b789e-191">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-191">Method</span></span> |
-| [<span data-ttu-id="b789e-192">getEntitiesByType</span><span class="sxs-lookup"><span data-stu-id="b789e-192">getEntitiesByType</span></span>](#getentitiesbytypeentitytype--nullable-arraystringcontactjavascriptapioutlookofficecontactmeetingsuggestionjavascriptapioutlookofficemeetingsuggestionphonenumberjavascriptapioutlookofficephonenumbertasksuggestionjavascriptapioutlookofficetasksuggestion) | <span data-ttu-id="b789e-193">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-193">Method</span></span> |
-| [<span data-ttu-id="b789e-194">getFilteredEntitiesByName</span><span class="sxs-lookup"><span data-stu-id="b789e-194">getFilteredEntitiesByName</span></span>](#getfilteredentitiesbynamename--nullable-arraystringcontactjavascriptapioutlookofficecontactmeetingsuggestionjavascriptapioutlookofficemeetingsuggestionphonenumberjavascriptapioutlookofficephonenumbertasksuggestionjavascriptapioutlookofficetasksuggestion) | <span data-ttu-id="b789e-195">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-195">Method</span></span> |
-| [<span data-ttu-id="b789e-196">getInitializationContextAsync</span><span class="sxs-lookup"><span data-stu-id="b789e-196">getInitializationContextAsync</span></span>](#getinitializationcontextasyncoptions-callback) | <span data-ttu-id="b789e-197">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-197">Method</span></span> |
-| [<span data-ttu-id="b789e-198">getRegExMatches</span><span class="sxs-lookup"><span data-stu-id="b789e-198">getRegExMatches</span></span>](#getregexmatches--object) | <span data-ttu-id="b789e-199">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-199">Method</span></span> |
-| [<span data-ttu-id="b789e-200">getRegExMatchesByName</span><span class="sxs-lookup"><span data-stu-id="b789e-200">getRegExMatchesByName</span></span>](#getregexmatchesbynamename--nullable-array-string-) | <span data-ttu-id="b789e-201">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-201">Method</span></span> |
-| [<span data-ttu-id="b789e-202">getSelectedDataAsync</span><span class="sxs-lookup"><span data-stu-id="b789e-202">getSelectedDataAsync</span></span>](#getselecteddataasynccoerciontype-options-callback--string) | <span data-ttu-id="b789e-203">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-203">Method</span></span> |
-| [<span data-ttu-id="b789e-204">getSelectedEntities</span><span class="sxs-lookup"><span data-stu-id="b789e-204">getSelectedEntities</span></span>](#getselectedentities--entitiesjavascriptapioutlookofficeentities) | <span data-ttu-id="b789e-205">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-205">Method</span></span> |
-| [<span data-ttu-id="b789e-206">getSelectedRegExMatches</span><span class="sxs-lookup"><span data-stu-id="b789e-206">getSelectedRegExMatches</span></span>](#getselectedregexmatches--object) | <span data-ttu-id="b789e-207">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-207">Method</span></span> |
-| [<span data-ttu-id="b789e-208">getSharedPropertiesAsync</span><span class="sxs-lookup"><span data-stu-id="b789e-208">getSharedPropertiesAsync</span></span>](#getsharedpropertiesasyncoptions-callback) | <span data-ttu-id="b789e-209">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-209">Method</span></span> |
-| [<span data-ttu-id="b789e-210">loadCustomPropertiesAsync</span><span class="sxs-lookup"><span data-stu-id="b789e-210">loadCustomPropertiesAsync</span></span>](#loadcustompropertiesasynccallback-usercontext) | <span data-ttu-id="b789e-211">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-211">Method</span></span> |
-| [<span data-ttu-id="b789e-212">removeAttachmentAsync</span><span class="sxs-lookup"><span data-stu-id="b789e-212">removeAttachmentAsync</span></span>](#removeattachmentasyncattachmentid-options-callback) | <span data-ttu-id="b789e-213">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-213">Method</span></span> |
-| [<span data-ttu-id="b789e-214">removeHandlerAsync</span><span class="sxs-lookup"><span data-stu-id="b789e-214">removeHandlerAsync</span></span>](#removehandlerasynceventtype-options-callback) | <span data-ttu-id="b789e-215">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-215">Method</span></span> |
-| [<span data-ttu-id="b789e-216">saveAsync</span><span class="sxs-lookup"><span data-stu-id="b789e-216">saveAsync</span></span>](#saveasyncoptions-callback) | <span data-ttu-id="b789e-217">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-217">Method</span></span> |
-| [<span data-ttu-id="b789e-218">setSelectedDataAsync</span><span class="sxs-lookup"><span data-stu-id="b789e-218">setSelectedDataAsync</span></span>](#setselecteddataasyncdata-options-callback) | <span data-ttu-id="b789e-219">Метод</span><span class="sxs-lookup"><span data-stu-id="b789e-219">Method</span></span> |
+| [<span data-ttu-id="2fb0b-118">attachments</span><span class="sxs-lookup"><span data-stu-id="2fb0b-118">attachments</span></span>](#attachments-arrayattachmentdetailsjavascriptapioutlookofficeattachmentdetails) | <span data-ttu-id="2fb0b-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-119">Member</span></span> |
+| [<span data-ttu-id="2fb0b-120">bcc</span><span class="sxs-lookup"><span data-stu-id="2fb0b-120">bcc</span></span>](#bcc-recipientsjavascriptapioutlookofficerecipients) | <span data-ttu-id="2fb0b-121">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-121">Member</span></span> |
+| [<span data-ttu-id="2fb0b-122">body</span><span class="sxs-lookup"><span data-stu-id="2fb0b-122">body</span></span>](#body-bodyjavascriptapioutlookofficebody) | <span data-ttu-id="2fb0b-123">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-123">Member</span></span> |
+| [<span data-ttu-id="2fb0b-124">cc</span><span class="sxs-lookup"><span data-stu-id="2fb0b-124">cc</span></span>](#cc-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients) | <span data-ttu-id="2fb0b-125">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-125">Member</span></span> |
+| [<span data-ttu-id="2fb0b-126">conversationId</span><span class="sxs-lookup"><span data-stu-id="2fb0b-126">conversationId</span></span>](#nullable-conversationid-string) | <span data-ttu-id="2fb0b-127">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-127">Member</span></span> |
+| [<span data-ttu-id="2fb0b-128">dateTimeCreated</span><span class="sxs-lookup"><span data-stu-id="2fb0b-128">dateTimeCreated</span></span>](#datetimecreated-date) | <span data-ttu-id="2fb0b-129">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-129">Member</span></span> |
+| [<span data-ttu-id="2fb0b-130">dateTimeModified</span><span class="sxs-lookup"><span data-stu-id="2fb0b-130">dateTimeModified</span></span>](#datetimemodified-date) | <span data-ttu-id="2fb0b-131">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-131">Member</span></span> |
+| [<span data-ttu-id="2fb0b-132">end</span><span class="sxs-lookup"><span data-stu-id="2fb0b-132">end</span></span>](#end-datetimejavascriptapioutlookofficetime) | <span data-ttu-id="2fb0b-133">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-133">Member</span></span> |
+| [<span data-ttu-id="2fb0b-134">Енханцедлокатион</span><span class="sxs-lookup"><span data-stu-id="2fb0b-134">enhancedLocation</span></span>](#enhancedlocation-enhancedlocationjavascriptapioutlookofficeenhancedlocation) | <span data-ttu-id="2fb0b-135">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-135">Member</span></span> |
+| [<span data-ttu-id="2fb0b-136">from</span><span class="sxs-lookup"><span data-stu-id="2fb0b-136">from</span></span>](#from-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsfromjavascriptapioutlookofficefrom) | <span data-ttu-id="2fb0b-137">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-137">Member</span></span> |
+| [<span data-ttu-id="2fb0b-138">internetHeaders</span><span class="sxs-lookup"><span data-stu-id="2fb0b-138">internetHeaders</span></span>](#internetheaders-internetheadersjavascriptapioutlookofficeinternetheaders) | <span data-ttu-id="2fb0b-139">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-139">Member</span></span> |
+| [<span data-ttu-id="2fb0b-140">internetMessageId</span><span class="sxs-lookup"><span data-stu-id="2fb0b-140">internetMessageId</span></span>](#internetmessageid-string) | <span data-ttu-id="2fb0b-141">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-141">Member</span></span> |
+| [<span data-ttu-id="2fb0b-142">itemClass</span><span class="sxs-lookup"><span data-stu-id="2fb0b-142">itemClass</span></span>](#itemclass-string) | <span data-ttu-id="2fb0b-143">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-143">Member</span></span> |
+| [<span data-ttu-id="2fb0b-144">itemId</span><span class="sxs-lookup"><span data-stu-id="2fb0b-144">itemId</span></span>](#nullable-itemid-string) | <span data-ttu-id="2fb0b-145">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-145">Member</span></span> |
+| [<span data-ttu-id="2fb0b-146">itemType</span><span class="sxs-lookup"><span data-stu-id="2fb0b-146">itemType</span></span>](#itemtype-officemailboxenumsitemtypejavascriptapioutlookofficemailboxenumsitemtype) | <span data-ttu-id="2fb0b-147">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-147">Member</span></span> |
+| [<span data-ttu-id="2fb0b-148">location</span><span class="sxs-lookup"><span data-stu-id="2fb0b-148">location</span></span>](#location-stringlocationjavascriptapioutlookofficelocation) | <span data-ttu-id="2fb0b-149">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-149">Member</span></span> |
+| [<span data-ttu-id="2fb0b-150">normalizedSubject</span><span class="sxs-lookup"><span data-stu-id="2fb0b-150">normalizedSubject</span></span>](#normalizedsubject-string) | <span data-ttu-id="2fb0b-151">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-151">Member</span></span> |
+| [<span data-ttu-id="2fb0b-152">notificationMessages</span><span class="sxs-lookup"><span data-stu-id="2fb0b-152">notificationMessages</span></span>](#notificationmessages-notificationmessagesjavascriptapioutlookofficenotificationmessages) | <span data-ttu-id="2fb0b-153">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-153">Member</span></span> |
+| [<span data-ttu-id="2fb0b-154">optionalAttendees</span><span class="sxs-lookup"><span data-stu-id="2fb0b-154">optionalAttendees</span></span>](#optionalattendees-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients) | <span data-ttu-id="2fb0b-155">Member</span><span class="sxs-lookup"><span data-stu-id="2fb0b-155">Member</span></span> |
+| [<span data-ttu-id="2fb0b-156">organizer</span><span class="sxs-lookup"><span data-stu-id="2fb0b-156">organizer</span></span>](#organizer-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsorganizerjavascriptapioutlookofficeorganizer) | <span data-ttu-id="2fb0b-157">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-157">Member</span></span> |
+| [<span data-ttu-id="2fb0b-158">recurrence</span><span class="sxs-lookup"><span data-stu-id="2fb0b-158">recurrence</span></span>](#nullable-recurrence-recurrencejavascriptapioutlookofficerecurrence) | <span data-ttu-id="2fb0b-159">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-159">Member</span></span> |
+| [<span data-ttu-id="2fb0b-160">requiredAttendees</span><span class="sxs-lookup"><span data-stu-id="2fb0b-160">requiredAttendees</span></span>](#requiredattendees-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients) | <span data-ttu-id="2fb0b-161">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-161">Member</span></span> |
+| [<span data-ttu-id="2fb0b-162">sender</span><span class="sxs-lookup"><span data-stu-id="2fb0b-162">sender</span></span>](#sender-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetails) | <span data-ttu-id="2fb0b-163">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-163">Member</span></span> |
+| [<span data-ttu-id="2fb0b-164">seriesId</span><span class="sxs-lookup"><span data-stu-id="2fb0b-164">seriesId</span></span>](#nullable-seriesid-string) | <span data-ttu-id="2fb0b-165">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-165">Member</span></span> |
+| [<span data-ttu-id="2fb0b-166">start</span><span class="sxs-lookup"><span data-stu-id="2fb0b-166">start</span></span>](#start-datetimejavascriptapioutlookofficetime) | <span data-ttu-id="2fb0b-167">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-167">Member</span></span> |
+| [<span data-ttu-id="2fb0b-168">subject</span><span class="sxs-lookup"><span data-stu-id="2fb0b-168">subject</span></span>](#subject-stringsubjectjavascriptapioutlookofficesubject) | <span data-ttu-id="2fb0b-169">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-169">Member</span></span> |
+| [<span data-ttu-id="2fb0b-170">to</span><span class="sxs-lookup"><span data-stu-id="2fb0b-170">to</span></span>](#to-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients) | <span data-ttu-id="2fb0b-171">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fb0b-171">Member</span></span> |
+| [<span data-ttu-id="2fb0b-172">addFileAttachmentAsync</span><span class="sxs-lookup"><span data-stu-id="2fb0b-172">addFileAttachmentAsync</span></span>](#addfileattachmentasyncuri-attachmentname-options-callback) | <span data-ttu-id="2fb0b-173">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-173">Method</span></span> |
+| [<span data-ttu-id="2fb0b-174">addFileAttachmentFromBase64Async</span><span class="sxs-lookup"><span data-stu-id="2fb0b-174">addFileAttachmentFromBase64Async</span></span>](#addfileattachmentfrombase64asyncbase64file-attachmentname-options-callback) | <span data-ttu-id="2fb0b-175">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-175">Method</span></span> |
+| [<span data-ttu-id="2fb0b-176">addHandlerAsync</span><span class="sxs-lookup"><span data-stu-id="2fb0b-176">addHandlerAsync</span></span>](#addhandlerasynceventtype-handler-options-callback) | <span data-ttu-id="2fb0b-177">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-177">Method</span></span> |
+| [<span data-ttu-id="2fb0b-178">addItemAttachmentAsync</span><span class="sxs-lookup"><span data-stu-id="2fb0b-178">addItemAttachmentAsync</span></span>](#additemattachmentasyncitemid-attachmentname-options-callback) | <span data-ttu-id="2fb0b-179">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-179">Method</span></span> |
+| [<span data-ttu-id="2fb0b-180">close</span><span class="sxs-lookup"><span data-stu-id="2fb0b-180">close</span></span>](#close) | <span data-ttu-id="2fb0b-181">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-181">Method</span></span> |
+| [<span data-ttu-id="2fb0b-182">displayReplyAllForm</span><span class="sxs-lookup"><span data-stu-id="2fb0b-182">displayReplyAllForm</span></span>](#displayreplyallformformdata-callback) | <span data-ttu-id="2fb0b-183">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-183">Method</span></span> |
+| [<span data-ttu-id="2fb0b-184">displayReplyForm</span><span class="sxs-lookup"><span data-stu-id="2fb0b-184">displayReplyForm</span></span>](#displayreplyformformdata-callback) | <span data-ttu-id="2fb0b-185">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-185">Method</span></span> |
+| [<span data-ttu-id="2fb0b-186">getAttachmentContentAsync</span><span class="sxs-lookup"><span data-stu-id="2fb0b-186">getAttachmentContentAsync</span></span>](#getattachmentcontentasyncattachmentid-options-callback--attachmentcontentjavascriptapioutlookofficeattachmentcontent) | <span data-ttu-id="2fb0b-187">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-187">Method</span></span> |
+| [<span data-ttu-id="2fb0b-188">getAttachmentsAsync</span><span class="sxs-lookup"><span data-stu-id="2fb0b-188">getAttachmentsAsync</span></span>](#getattachmentsasyncoptions-callback--arrayattachmentdetailsjavascriptapioutlookofficeattachmentdetails) | <span data-ttu-id="2fb0b-189">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-189">Method</span></span> |
+| [<span data-ttu-id="2fb0b-190">getEntities</span><span class="sxs-lookup"><span data-stu-id="2fb0b-190">getEntities</span></span>](#getentities--entitiesjavascriptapioutlookofficeentities) | <span data-ttu-id="2fb0b-191">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-191">Method</span></span> |
+| [<span data-ttu-id="2fb0b-192">getEntitiesByType</span><span class="sxs-lookup"><span data-stu-id="2fb0b-192">getEntitiesByType</span></span>](#getentitiesbytypeentitytype--nullable-arraystringcontactjavascriptapioutlookofficecontactmeetingsuggestionjavascriptapioutlookofficemeetingsuggestionphonenumberjavascriptapioutlookofficephonenumbertasksuggestionjavascriptapioutlookofficetasksuggestion) | <span data-ttu-id="2fb0b-193">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-193">Method</span></span> |
+| [<span data-ttu-id="2fb0b-194">getFilteredEntitiesByName</span><span class="sxs-lookup"><span data-stu-id="2fb0b-194">getFilteredEntitiesByName</span></span>](#getfilteredentitiesbynamename--nullable-arraystringcontactjavascriptapioutlookofficecontactmeetingsuggestionjavascriptapioutlookofficemeetingsuggestionphonenumberjavascriptapioutlookofficephonenumbertasksuggestionjavascriptapioutlookofficetasksuggestion) | <span data-ttu-id="2fb0b-195">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-195">Method</span></span> |
+| [<span data-ttu-id="2fb0b-196">getInitializationContextAsync</span><span class="sxs-lookup"><span data-stu-id="2fb0b-196">getInitializationContextAsync</span></span>](#getinitializationcontextasyncoptions-callback) | <span data-ttu-id="2fb0b-197">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-197">Method</span></span> |
+| [<span data-ttu-id="2fb0b-198">getRegExMatches</span><span class="sxs-lookup"><span data-stu-id="2fb0b-198">getRegExMatches</span></span>](#getregexmatches--object) | <span data-ttu-id="2fb0b-199">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-199">Method</span></span> |
+| [<span data-ttu-id="2fb0b-200">getRegExMatchesByName</span><span class="sxs-lookup"><span data-stu-id="2fb0b-200">getRegExMatchesByName</span></span>](#getregexmatchesbynamename--nullable-array-string-) | <span data-ttu-id="2fb0b-201">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-201">Method</span></span> |
+| [<span data-ttu-id="2fb0b-202">getSelectedDataAsync</span><span class="sxs-lookup"><span data-stu-id="2fb0b-202">getSelectedDataAsync</span></span>](#getselecteddataasynccoerciontype-options-callback--string) | <span data-ttu-id="2fb0b-203">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-203">Method</span></span> |
+| [<span data-ttu-id="2fb0b-204">getSelectedEntities</span><span class="sxs-lookup"><span data-stu-id="2fb0b-204">getSelectedEntities</span></span>](#getselectedentities--entitiesjavascriptapioutlookofficeentities) | <span data-ttu-id="2fb0b-205">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-205">Method</span></span> |
+| [<span data-ttu-id="2fb0b-206">getSelectedRegExMatches</span><span class="sxs-lookup"><span data-stu-id="2fb0b-206">getSelectedRegExMatches</span></span>](#getselectedregexmatches--object) | <span data-ttu-id="2fb0b-207">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-207">Method</span></span> |
+| [<span data-ttu-id="2fb0b-208">getSharedPropertiesAsync</span><span class="sxs-lookup"><span data-stu-id="2fb0b-208">getSharedPropertiesAsync</span></span>](#getsharedpropertiesasyncoptions-callback) | <span data-ttu-id="2fb0b-209">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-209">Method</span></span> |
+| [<span data-ttu-id="2fb0b-210">loadCustomPropertiesAsync</span><span class="sxs-lookup"><span data-stu-id="2fb0b-210">loadCustomPropertiesAsync</span></span>](#loadcustompropertiesasynccallback-usercontext) | <span data-ttu-id="2fb0b-211">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-211">Method</span></span> |
+| [<span data-ttu-id="2fb0b-212">removeAttachmentAsync</span><span class="sxs-lookup"><span data-stu-id="2fb0b-212">removeAttachmentAsync</span></span>](#removeattachmentasyncattachmentid-options-callback) | <span data-ttu-id="2fb0b-213">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-213">Method</span></span> |
+| [<span data-ttu-id="2fb0b-214">removeHandlerAsync</span><span class="sxs-lookup"><span data-stu-id="2fb0b-214">removeHandlerAsync</span></span>](#removehandlerasynceventtype-options-callback) | <span data-ttu-id="2fb0b-215">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-215">Method</span></span> |
+| [<span data-ttu-id="2fb0b-216">saveAsync</span><span class="sxs-lookup"><span data-stu-id="2fb0b-216">saveAsync</span></span>](#saveasyncoptions-callback) | <span data-ttu-id="2fb0b-217">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-217">Method</span></span> |
+| [<span data-ttu-id="2fb0b-218">setSelectedDataAsync</span><span class="sxs-lookup"><span data-stu-id="2fb0b-218">setSelectedDataAsync</span></span>](#setselecteddataasyncdata-options-callback) | <span data-ttu-id="2fb0b-219">Метод</span><span class="sxs-lookup"><span data-stu-id="2fb0b-219">Method</span></span> |
 
-### <a name="example"></a><span data-ttu-id="b789e-220">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-220">Example</span></span>
+### <a name="example"></a><span data-ttu-id="2fb0b-220">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-220">Example</span></span>
 
-<span data-ttu-id="b789e-221">В примере кода JavaScript, приведенном ниже, показано, как получить доступ к свойству `subject` текущего элемента в Outlook.</span><span class="sxs-lookup"><span data-stu-id="b789e-221">The following JavaScript code example shows how to access the `subject` property of the current item in Outlook.</span></span>
+<span data-ttu-id="2fb0b-221">В примере кода JavaScript, приведенном ниже, показано, как получить доступ к свойству `subject` текущего элемента в Outlook.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-221">The following JavaScript code example shows how to access the `subject` property of the current item in Outlook.</span></span>
 
 ```javascript
 // The initialize function is required for all apps.
 Office.initialize = function () {
-    // Checks for the DOM to load using the jQuery ready function.
-    $(document).ready(function () {
+  // Checks for the DOM to load using the jQuery ready function.
+  $(document).ready(function () {
     // After the DOM is loaded, app-specific code can run.
     var item = Office.context.mailbox.item;
     var subject = item.subject;
     // Continue with processing the subject of the current item,
     // which can be a message or appointment.
-    });
-}
+  });
+};
 ```
 
-### <a name="members"></a><span data-ttu-id="b789e-222">Элементы</span><span class="sxs-lookup"><span data-stu-id="b789e-222">Members</span></span>
+### <a name="members"></a><span data-ttu-id="2fb0b-222">Элементы</span><span class="sxs-lookup"><span data-stu-id="2fb0b-222">Members</span></span>
 
-#### <a name="attachments-arrayattachmentdetailsjavascriptapioutlookofficeattachmentdetails"></a><span data-ttu-id="b789e-223">attachments :Array.<[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)></span><span class="sxs-lookup"><span data-stu-id="b789e-223">attachments :Array.<[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)></span></span>
+#### <a name="attachments-arrayattachmentdetailsjavascriptapioutlookofficeattachmentdetails"></a><span data-ttu-id="2fb0b-223">attachments :Array.<[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)></span><span class="sxs-lookup"><span data-stu-id="2fb0b-223">attachments :Array.<[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)></span></span>
 
-<span data-ttu-id="b789e-224">Получает вложения элемента в качестве массива.</span><span class="sxs-lookup"><span data-stu-id="b789e-224">Gets the item's attachments as an array.</span></span> <span data-ttu-id="b789e-225">Только в режиме чтения.</span><span class="sxs-lookup"><span data-stu-id="b789e-225">Read mode only.</span></span>
+<span data-ttu-id="2fb0b-224">Получает вложения элемента в качестве массива.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-224">Gets the item's attachments as an array.</span></span> <span data-ttu-id="2fb0b-225">Только в режиме чтения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-225">Read mode only.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-226">Outlook блокирует определенные типы файлов из-за потенциальных проблем с безопасностью, поэтому они не возвращаются.</span><span class="sxs-lookup"><span data-stu-id="b789e-226">Certain types of files are blocked by Outlook due to potential security issues and are therefore not returned.</span></span> <span data-ttu-id="b789e-227">Дополнительные сведения см. в статье [Блокировка вложений в Outlook](https://support.office.com/article/Blocked-attachments-in-Outlook-434752E1-02D3-4E90-9124-8B81E49A8519).</span><span class="sxs-lookup"><span data-stu-id="b789e-227">For more information, see [Blocked attachments in Outlook](https://support.office.com/article/Blocked-attachments-in-Outlook-434752E1-02D3-4E90-9124-8B81E49A8519).</span></span>
+> <span data-ttu-id="2fb0b-226">Outlook блокирует определенные типы файлов из-за потенциальных проблем с безопасностью, поэтому они не возвращаются.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-226">Certain types of files are blocked by Outlook due to potential security issues and are therefore not returned.</span></span> <span data-ttu-id="2fb0b-227">Дополнительные сведения см. в статье [Блокировка вложений в Outlook](https://support.office.com/article/Blocked-attachments-in-Outlook-434752E1-02D3-4E90-9124-8B81E49A8519).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-227">For more information, see [Blocked attachments in Outlook](https://support.office.com/article/Blocked-attachments-in-Outlook-434752E1-02D3-4E90-9124-8B81E49A8519).</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-228">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-228">Type:</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-228">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-228">Type</span></span>
 
-*   <span data-ttu-id="b789e-229">Array.<[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)></span><span class="sxs-lookup"><span data-stu-id="b789e-229">Array.<[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)></span></span>
+*   <span data-ttu-id="2fb0b-229">Array.<[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)></span><span class="sxs-lookup"><span data-stu-id="2fb0b-229">Array.<[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)></span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-230">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-230">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-230">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-230">Requirements</span></span>
 
-|<span data-ttu-id="b789e-231">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-231">Requirement</span></span>|<span data-ttu-id="b789e-232">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-232">Value</span></span>|
+|<span data-ttu-id="2fb0b-231">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-231">Requirement</span></span>|<span data-ttu-id="2fb0b-232">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-232">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-233">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-233">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-234">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-234">1.0</span></span>|
-|[<span data-ttu-id="b789e-235">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-235">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-236">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-236">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-237">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-237">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-238">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-238">Read</span></span>|
+|[<span data-ttu-id="2fb0b-233">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-233">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-234">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-234">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-235">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-235">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-236">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-236">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-237">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-237">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-238">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-238">Read</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-239">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-239">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-239">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-239">Example</span></span>
 
-<span data-ttu-id="b789e-240">С помощью приведенного ниже кода можно создать HTML-строку с подробными сведениями обо всех вложениях для текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-240">The following code builds an HTML string with details of all attachments on the current item.</span></span>
+<span data-ttu-id="2fb0b-240">С помощью приведенного ниже кода можно создать HTML-строку с подробными сведениями обо всех вложениях для текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-240">The following code builds an HTML string with details of all attachments on the current item.</span></span>
 
 ```javascript
-var _Item = Office.context.mailbox.item;
+var item = Office.context.mailbox.item;
 var outputString = "";
 
-if (_Item.attachments.length > 0) {
-  for (i = 0 ; i < _Item.attachments.length ; i++) {
-    var _att = _Item.attachments[i];
+if (item.attachments.length > 0) {
+  for (i = 0 ; i < item.attachments.length ; i++) {
+    var attachment = item.attachments[i];
     outputString += "<BR>" + i + ". Name: ";
-    outputString += _att.name;
-    outputString += "<BR>ID: " + _att.id;
-    outputString += "<BR>contentType: " + _att.contentType;
-    outputString += "<BR>size: " + _att.size;
-    outputString += "<BR>attachmentType: " + _att.attachmentType;
-    outputString += "<BR>isInline: " + _att.isInline;
+    outputString += attachment.name;
+    outputString += "<BR>ID: " + attachment.id;
+    outputString += "<BR>contentType: " + attachment.contentType;
+    outputString += "<BR>size: " + attachment.size;
+    outputString += "<BR>attachmentType: " + attachment.attachmentType;
+    outputString += "<BR>isInline: " + attachment.isInline;
   }
 }
 
-// Do something with outputString
+console.log(outputString);
 ```
 
-####  <a name="bcc-recipientsjavascriptapioutlookofficerecipients"></a><span data-ttu-id="b789e-241">bcc :[Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="b789e-241">bcc :[Recipients](/javascript/api/outlook/office.recipients)</span></span>
+####  <a name="bcc-recipientsjavascriptapioutlookofficerecipients"></a><span data-ttu-id="2fb0b-241">bcc :[Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-241">bcc :[Recipients](/javascript/api/outlook/office.recipients)</span></span>
 
-<span data-ttu-id="b789e-242">Получает объект, который предоставляет методы для получения или обновления получателей скрытой копии сообщения.</span><span class="sxs-lookup"><span data-stu-id="b789e-242">Gets an object that provides methods to get or update the recipients on the Bcc (blind carbon copy) line of a message.</span></span> <span data-ttu-id="b789e-243">Только в режиме создания.</span><span class="sxs-lookup"><span data-stu-id="b789e-243">Compose mode only.</span></span>
+<span data-ttu-id="2fb0b-242">Получает объект, который предоставляет методы для получения или обновления получателей скрытой копии сообщения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-242">Gets an object that provides methods to get or update the recipients on the Bcc (blind carbon copy) line of a message.</span></span> <span data-ttu-id="2fb0b-243">Только в режиме создания.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-243">Compose mode only.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-244">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-244">Type:</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-244">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-244">Type</span></span>
 
-*   [<span data-ttu-id="b789e-245">Recipients</span><span class="sxs-lookup"><span data-stu-id="b789e-245">Recipients</span></span>](/javascript/api/outlook/office.recipients)
+*   [<span data-ttu-id="2fb0b-245">Recipients</span><span class="sxs-lookup"><span data-stu-id="2fb0b-245">Recipients</span></span>](/javascript/api/outlook/office.recipients)
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-246">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-246">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-246">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-246">Requirements</span></span>
 
-|<span data-ttu-id="b789e-247">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-247">Requirement</span></span>|<span data-ttu-id="b789e-248">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-248">Value</span></span>|
+|<span data-ttu-id="2fb0b-247">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-247">Requirement</span></span>|<span data-ttu-id="2fb0b-248">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-248">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-249">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-249">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-250">1.1</span><span class="sxs-lookup"><span data-stu-id="b789e-250">1.1</span></span>|
-|[<span data-ttu-id="b789e-251">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-251">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-252">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-252">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-253">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-253">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-254">Создание</span><span class="sxs-lookup"><span data-stu-id="b789e-254">Compose</span></span>|
+|[<span data-ttu-id="2fb0b-249">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-249">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-250">1.1</span><span class="sxs-lookup"><span data-stu-id="2fb0b-250">1.1</span></span>|
+|[<span data-ttu-id="2fb0b-251">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-251">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-252">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-252">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-253">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-253">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-254">Создание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-254">Compose</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-255">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-255">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-255">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-255">Example</span></span>
 
 ```javascript
 Office.context.mailbox.item.bcc.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
@@ -171,47 +171,61 @@ function callback(asyncResult) {
 }
 ```
 
-####  <a name="body-bodyjavascriptapioutlookofficebody"></a><span data-ttu-id="b789e-256">body :[Body](/javascript/api/outlook/office.body)</span><span class="sxs-lookup"><span data-stu-id="b789e-256">body :[Body](/javascript/api/outlook/office.body)</span></span>
+####  <a name="body-bodyjavascriptapioutlookofficebody"></a><span data-ttu-id="2fb0b-256">body :[Body](/javascript/api/outlook/office.body)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-256">body :[Body](/javascript/api/outlook/office.body)</span></span>
 
-<span data-ttu-id="b789e-257">Получает объект, предоставляющий методы для работы с основным текстом элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-257">Gets an object that provides methods for manipulating the body of an item.</span></span>
+<span data-ttu-id="2fb0b-257">Получает объект, предоставляющий методы для работы с основным текстом элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-257">Gets an object that provides methods for manipulating the body of an item.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-258">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-258">Type:</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-258">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-258">Type</span></span>
 
-*   [<span data-ttu-id="b789e-259">Body</span><span class="sxs-lookup"><span data-stu-id="b789e-259">Body</span></span>](/javascript/api/outlook/office.body)
+*   [<span data-ttu-id="2fb0b-259">Body</span><span class="sxs-lookup"><span data-stu-id="2fb0b-259">Body</span></span>](/javascript/api/outlook/office.body)
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-260">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-260">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-260">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-260">Requirements</span></span>
 
-|<span data-ttu-id="b789e-261">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-261">Requirement</span></span>|<span data-ttu-id="b789e-262">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-262">Value</span></span>|
+|<span data-ttu-id="2fb0b-261">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-261">Requirement</span></span>|<span data-ttu-id="2fb0b-262">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-262">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-263">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-263">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-264">1.1</span><span class="sxs-lookup"><span data-stu-id="b789e-264">1.1</span></span>|
-|[<span data-ttu-id="b789e-265">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-265">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-266">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-266">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-267">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-267">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-268">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-268">Compose or read</span></span>|
+|[<span data-ttu-id="2fb0b-263">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-263">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-264">1.1</span><span class="sxs-lookup"><span data-stu-id="2fb0b-264">1.1</span></span>|
+|[<span data-ttu-id="2fb0b-265">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-265">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-266">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-266">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-267">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-267">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-268">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-268">Compose or Read</span></span>|
 
-####  <a name="cc-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients"></a><span data-ttu-id="b789e-269">cc :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="b789e-269">cc :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-269">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-269">Example</span></span>
 
-<span data-ttu-id="b789e-270">Предоставляет доступ к получателям копии сообщения.</span><span class="sxs-lookup"><span data-stu-id="b789e-270">Provides access to the Cc (carbon copy) recipients of a message.</span></span> <span data-ttu-id="b789e-271">Тип объекта и уровень доступа зависят от режима текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-271">The type of object and level of access depends on the mode of the current item.</span></span>
+<span data-ttu-id="2fb0b-270">В этом примере возвращается текст сообщения в формате обычного текста.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-270">This example gets the body of the message in plain text.</span></span>
 
-##### <a name="read-mode"></a><span data-ttu-id="b789e-272">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="b789e-272">Read mode</span></span>
+```javascript
+Office.context.mailbox.item.body.getAsync(
+  "text",
+  { asyncContext: "This is passed to the callback" },
+  function callback(result) {
+    // Do something with the result.
+  });
 
-<span data-ttu-id="b789e-p106">Свойство `cc` возвращает массив, который содержит объект `EmailAddressDetails` для каждого получателя, указанного в строке **Копия** сообщения. Коллекция может включать не более 100 элементов.</span><span class="sxs-lookup"><span data-stu-id="b789e-p106">The `cc` property returns an array that contains an `EmailAddressDetails` object for each recipient listed on the **Cc** line of the message. The collection is limited to a maximum of 100 members.</span></span>
+```
 
-##### <a name="compose-mode"></a><span data-ttu-id="b789e-275">Режим создания</span><span class="sxs-lookup"><span data-stu-id="b789e-275">Compose mode</span></span>
+<span data-ttu-id="2fb0b-271">Ниже приведен пример параметра result, переданного функции обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-271">The following is an example of the result parameter passed to the callback function.</span></span>
 
-<span data-ttu-id="b789e-276">Свойство `cc` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Копия** сообщения.</span><span class="sxs-lookup"><span data-stu-id="b789e-276">The `cc` property returns a `Recipients` object that provides methods to get or update the recipients on the **Cc** line of the message.</span></span>
+```json
+{
+  "value": "TEXT of whole body (including threads below)",
+  "status": "succeeded",
+  "asyncContext": "This is passed to the callback"
+}
+```
 
-##### <a name="type"></a><span data-ttu-id="b789e-277">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-277">Type:</span></span>
+####  <a name="cc-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients"></a><span data-ttu-id="2fb0b-272">cc :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-272">cc :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)</span></span>
 
-*   <span data-ttu-id="b789e-278">Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="b789e-278">Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients)</span></span>
+<span data-ttu-id="2fb0b-273">Предоставляет доступ к получателям копии сообщения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-273">Provides access to the Cc (carbon copy) recipients of a message.</span></span> <span data-ttu-id="2fb0b-274">Тип объекта и уровень доступа зависят от режима текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-274">The type of object and level of access depends on the mode of the current item.</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-279">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-279">Requirements</span></span>
+##### <a name="read-mode"></a><span data-ttu-id="2fb0b-275">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="2fb0b-275">Read mode</span></span>
 
-|<span data-ttu-id="b789e-280">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-280">Requirement</span></span>|<span data-ttu-id="b789e-281">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-281">Value</span></span>|
-|---|---|
-|[<span data-ttu-id="b789e-282">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-282">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-283">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-283">1.0</span></span>|
-|[<span data-ttu-id="b789e-284">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-284">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-285">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-285">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-286">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-286">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-287">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-287">Compose or read</span></span>|
+<span data-ttu-id="2fb0b-p106">Свойство `cc` возвращает массив, который содержит объект `EmailAddressDetails` для каждого получателя, указанного в строке **Копия** сообщения. Коллекция может включать не более 100 элементов.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p106">The `cc` property returns an array that contains an `EmailAddressDetails` object for each recipient listed on the **Cc** line of the message. The collection is limited to a maximum of 100 members.</span></span>
 
-##### <a name="example"></a><span data-ttu-id="b789e-288">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-288">Example</span></span>
+```javascript
+console.log(JSON.stringify(Office.context.mailbox.item.cc));
+```
+
+##### <a name="compose-mode"></a><span data-ttu-id="2fb0b-278">Режим создания</span><span class="sxs-lookup"><span data-stu-id="2fb0b-278">Compose mode</span></span>
+
+<span data-ttu-id="2fb0b-279">Свойство `cc` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Копия** сообщения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-279">The `cc` property returns a `Recipients` object that provides methods to get or update the recipients on the **Cc** line of the message.</span></span>
 
 ```javascript
 Office.context.mailbox.item.cc.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
@@ -223,149 +237,172 @@ function callback(asyncResult) {
 }
 ```
 
-####  <a name="nullable-conversationid-string"></a><span data-ttu-id="b789e-289">(nullable) conversationId :String</span><span class="sxs-lookup"><span data-stu-id="b789e-289">(nullable) conversationId :String</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-280">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-280">Type</span></span>
 
-<span data-ttu-id="b789e-290">Получает идентификатор разговора по электронной почте, содержащего конкретное сообщение.</span><span class="sxs-lookup"><span data-stu-id="b789e-290">Gets an identifier for the email conversation that contains a particular message.</span></span>
+*   <span data-ttu-id="2fb0b-281">Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-281">Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients)</span></span>
 
-<span data-ttu-id="b789e-p107">Вы можете получить целочисленное значение этого свойства, если ваше почтовое приложение активируется в формах просмотра или формах создания ответов. Если пользователь изменит тему ответа, после его отправки идентификатор беседы будет изменен, и полученное ранее значение будет недействительным.</span><span class="sxs-lookup"><span data-stu-id="b789e-p107">You can get an integer for this property if your mail app is activated in read forms or responses in compose forms. If subsequently the user changes the subject of the reply message, upon sending the reply, the conversation ID for that message will change and that value you obtained earlier will no longer apply.</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-282">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-282">Requirements</span></span>
 
-<span data-ttu-id="b789e-p108">Это свойство имеет значение NULL для нового элемента в форме создания. Свойство `conversationId` вернет значение, если пользователь задаст тему и сохранит элемент.</span><span class="sxs-lookup"><span data-stu-id="b789e-p108">You get null for this property for a new item in a compose form. If the user sets a subject and saves the item, the `conversationId` property will return a value.</span></span>
-
-##### <a name="type"></a><span data-ttu-id="b789e-295">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-295">Type:</span></span>
-
-*   <span data-ttu-id="b789e-296">String</span><span class="sxs-lookup"><span data-stu-id="b789e-296">String</span></span>
-
-##### <a name="requirements"></a><span data-ttu-id="b789e-297">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-297">Requirements</span></span>
-
-|<span data-ttu-id="b789e-298">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-298">Requirement</span></span>|<span data-ttu-id="b789e-299">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-299">Value</span></span>|
+|<span data-ttu-id="2fb0b-283">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-283">Requirement</span></span>|<span data-ttu-id="2fb0b-284">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-284">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-300">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-300">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-301">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-301">1.0</span></span>|
-|[<span data-ttu-id="b789e-302">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-302">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-303">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-303">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-304">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-304">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-305">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-305">Compose or read</span></span>|
+|[<span data-ttu-id="2fb0b-285">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-285">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-286">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-286">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-287">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-287">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-288">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-288">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-289">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-289">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-290">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-290">Compose or Read</span></span>|
 
-#### <a name="datetimecreated-date"></a><span data-ttu-id="b789e-306">dateTimeCreated :Date</span><span class="sxs-lookup"><span data-stu-id="b789e-306">dateTimeCreated :Date</span></span>
+####  <a name="nullable-conversationid-string"></a><span data-ttu-id="2fb0b-291">(nullable) conversationId :String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-291">(nullable) conversationId :String</span></span>
 
-<span data-ttu-id="b789e-p109">Получает дату и время создания элемента. Только в режиме чтения.</span><span class="sxs-lookup"><span data-stu-id="b789e-p109">Gets the date and time that an item was created. Read mode only.</span></span>
+<span data-ttu-id="2fb0b-292">Получает идентификатор разговора по электронной почте, содержащего конкретное сообщение.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-292">Gets an identifier for the email conversation that contains a particular message.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-309">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-309">Type:</span></span>
+<span data-ttu-id="2fb0b-p107">Вы можете получить целочисленное значение этого свойства, если ваше почтовое приложение активируется в формах просмотра или формах создания ответов. Если пользователь изменит тему ответа, после его отправки идентификатор беседы будет изменен, и полученное ранее значение будет недействительным.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p107">You can get an integer for this property if your mail app is activated in read forms or responses in compose forms. If subsequently the user changes the subject of the reply message, upon sending the reply, the conversation ID for that message will change and that value you obtained earlier will no longer apply.</span></span>
 
-*   <span data-ttu-id="b789e-310">Date</span><span class="sxs-lookup"><span data-stu-id="b789e-310">Date</span></span>
+<span data-ttu-id="2fb0b-p108">Это свойство имеет значение NULL для нового элемента в форме создания. Свойство `conversationId` вернет значение, если пользователь задаст тему и сохранит элемент.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p108">You get null for this property for a new item in a compose form. If the user sets a subject and saves the item, the `conversationId` property will return a value.</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-311">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-311">Requirements</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-297">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-297">Type</span></span>
 
-|<span data-ttu-id="b789e-312">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-312">Requirement</span></span>|<span data-ttu-id="b789e-313">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-313">Value</span></span>|
+*   <span data-ttu-id="2fb0b-298">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-298">String</span></span>
+
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-299">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-299">Requirements</span></span>
+
+|<span data-ttu-id="2fb0b-300">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-300">Requirement</span></span>|<span data-ttu-id="2fb0b-301">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-301">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-314">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-314">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-315">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-315">1.0</span></span>|
-|[<span data-ttu-id="b789e-316">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-316">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-317">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-317">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-318">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-318">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-319">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-319">Read</span></span>|
+|[<span data-ttu-id="2fb0b-302">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-302">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-303">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-303">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-304">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-304">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-305">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-305">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-306">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-306">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-307">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-307">Compose or Read</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-320">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-320">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-308">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-308">Example</span></span>
 
 ```javascript
-var created = Office.context.mailbox.item.dateTimeCreated;
+var conversationId = Office.context.mailbox.item.conversationId;
+console.log("conversationId: " + conversationId);
 ```
 
-#### <a name="datetimemodified-date"></a><span data-ttu-id="b789e-321">dateTimeModified :Date</span><span class="sxs-lookup"><span data-stu-id="b789e-321">dateTimeModified :Date</span></span>
+#### <a name="datetimecreated-date"></a><span data-ttu-id="2fb0b-309">dateTimeCreated :Date</span><span class="sxs-lookup"><span data-stu-id="2fb0b-309">dateTimeCreated :Date</span></span>
 
-<span data-ttu-id="b789e-p110">Получает дату и время последнего изменения элемента. Только в режиме чтения.</span><span class="sxs-lookup"><span data-stu-id="b789e-p110">Gets the date and time that an item was last modified. Read mode only.</span></span>
+<span data-ttu-id="2fb0b-p109">Получает дату и время создания элемента. Только в режиме чтения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p109">Gets the date and time that an item was created. Read mode only.</span></span>
+
+##### <a name="type"></a><span data-ttu-id="2fb0b-312">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-312">Type</span></span>
+
+*   <span data-ttu-id="2fb0b-313">Date</span><span class="sxs-lookup"><span data-stu-id="2fb0b-313">Date</span></span>
+
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-314">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-314">Requirements</span></span>
+
+|<span data-ttu-id="2fb0b-315">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-315">Requirement</span></span>|<span data-ttu-id="2fb0b-316">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-316">Value</span></span>|
+|---|---|
+|[<span data-ttu-id="2fb0b-317">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-317">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-318">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-318">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-319">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-319">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-320">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-320">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-321">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-321">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-322">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-322">Read</span></span>|
+
+##### <a name="example"></a><span data-ttu-id="2fb0b-323">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-323">Example</span></span>
+
+```javascript
+var dateTimeCreated = Office.context.mailbox.item.dateTimeCreated;
+console.log("Date and time created: " + dateTimeCreated);
+```
+
+#### <a name="datetimemodified-date"></a><span data-ttu-id="2fb0b-324">dateTimeModified :Date</span><span class="sxs-lookup"><span data-stu-id="2fb0b-324">dateTimeModified :Date</span></span>
+
+<span data-ttu-id="2fb0b-p110">Получает дату и время последнего изменения элемента. Только в режиме чтения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p110">Gets the date and time that an item was last modified. Read mode only.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-324">Этот элемент не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="b789e-324">This member is not supported in Outlook for iOS or Outlook for Android.</span></span>
+> <span data-ttu-id="2fb0b-327">Этот элемент не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-327">This member is not supported in Outlook for iOS or Outlook for Android.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-325">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-325">Type:</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-328">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-328">Type</span></span>
 
-*   <span data-ttu-id="b789e-326">Date</span><span class="sxs-lookup"><span data-stu-id="b789e-326">Date</span></span>
+*   <span data-ttu-id="2fb0b-329">Date</span><span class="sxs-lookup"><span data-stu-id="2fb0b-329">Date</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-327">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-327">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-330">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-330">Requirements</span></span>
 
-|<span data-ttu-id="b789e-328">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-328">Requirement</span></span>|<span data-ttu-id="b789e-329">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-329">Value</span></span>|
+|<span data-ttu-id="2fb0b-331">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-331">Requirement</span></span>|<span data-ttu-id="2fb0b-332">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-332">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-330">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-330">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-331">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-331">1.0</span></span>|
-|[<span data-ttu-id="b789e-332">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-332">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-333">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-333">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-334">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-334">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-335">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-335">Read</span></span>|
+|[<span data-ttu-id="2fb0b-333">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-333">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-334">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-334">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-335">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-335">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-336">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-336">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-337">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-337">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-338">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-338">Read</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-336">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-336">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-339">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-339">Example</span></span>
 
 ```javascript
-var modified = Office.context.mailbox.item.dateTimeModified;
+var dateTimeModified = Office.context.mailbox.item.dateTimeModified;
+console.log("Date and time modified: " + dateTimeModified);
 ```
 
-####  <a name="end-datetimejavascriptapioutlookofficetime"></a><span data-ttu-id="b789e-337">end :Date|[Time](/javascript/api/outlook/office.time)</span><span class="sxs-lookup"><span data-stu-id="b789e-337">end :Date|[Time](/javascript/api/outlook/office.time)</span></span>
+####  <a name="end-datetimejavascriptapioutlookofficetime"></a><span data-ttu-id="2fb0b-340">end :Date|[Time](/javascript/api/outlook/office.time)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-340">end :Date|[Time](/javascript/api/outlook/office.time)</span></span>
 
-<span data-ttu-id="b789e-338">Получает или задает дату и время окончания встречи.</span><span class="sxs-lookup"><span data-stu-id="b789e-338">Gets or sets the date and time that the appointment is to end.</span></span>
+<span data-ttu-id="2fb0b-341">Получает или задает дату и время окончания встречи.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-341">Gets or sets the date and time that the appointment is to end.</span></span>
 
-<span data-ttu-id="b789e-p111">Свойство `end` представлено в виде значения даты и времени в формате UTC. Преобразовать значение свойства end в местные значения даты и времени клиента можно с помощью метода [`convertToLocalClientTime`](office.context.mailbox.md#converttolocalclienttimetimevalue--localclienttimejavascriptapioutlookofficelocalclienttime).</span><span class="sxs-lookup"><span data-stu-id="b789e-p111">The `end` property is expressed as a Coordinated Universal Time (UTC) date and time value. You can use the [`convertToLocalClientTime`](office.context.mailbox.md#converttolocalclienttimetimevalue--localclienttimejavascriptapioutlookofficelocalclienttime) method to convert the end property value to the client’s local date and time.</span></span>
+<span data-ttu-id="2fb0b-p111">Свойство `end` представлено в виде значения даты и времени в формате UTC. Преобразовать значение свойства end в местные значения даты и времени клиента можно с помощью метода [`convertToLocalClientTime`](office.context.mailbox.md#converttolocalclienttimetimevalue--localclienttimejavascriptapioutlookofficelocalclienttime).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p111">The `end` property is expressed as a Coordinated Universal Time (UTC) date and time value. You can use the [`convertToLocalClientTime`](office.context.mailbox.md#converttolocalclienttimetimevalue--localclienttimejavascriptapioutlookofficelocalclienttime) method to convert the end property value to the client’s local date and time.</span></span>
 
-##### <a name="read-mode"></a><span data-ttu-id="b789e-341">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="b789e-341">Read mode</span></span>
+##### <a name="read-mode"></a><span data-ttu-id="2fb0b-344">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="2fb0b-344">Read mode</span></span>
 
-<span data-ttu-id="b789e-342">Свойство `end` возвращает объект `Date`.</span><span class="sxs-lookup"><span data-stu-id="b789e-342">The `end` property returns a `Date` object.</span></span>
+<span data-ttu-id="2fb0b-345">Свойство `end` возвращает объект `Date`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-345">The `end` property returns a `Date` object.</span></span>
 
-##### <a name="compose-mode"></a><span data-ttu-id="b789e-343">Режим создания</span><span class="sxs-lookup"><span data-stu-id="b789e-343">Compose mode</span></span>
+```javascript
+var end = Office.context.mailbox.item.end;
+console.log("Appointment end: " + end);
+```
 
-<span data-ttu-id="b789e-344">Свойство `end` возвращает объект `Time`.</span><span class="sxs-lookup"><span data-stu-id="b789e-344">The `end` property returns a `Time` object.</span></span>
+##### <a name="compose-mode"></a><span data-ttu-id="2fb0b-346">Режим создания</span><span class="sxs-lookup"><span data-stu-id="2fb0b-346">Compose mode</span></span>
 
-<span data-ttu-id="b789e-345">Если вы задаете время окончания с помощью метода [`Time.setAsync`](/javascript/api/outlook/office.time#setasync-datetime--options--callback-), необходимо использовать метод [`convertToUtcClientTime`](office.context.mailbox.md#converttoutcclienttimeinput--date) для преобразования местного времени на клиенте в формат UTC для сервера.</span><span class="sxs-lookup"><span data-stu-id="b789e-345">When you use the [`Time.setAsync`](/javascript/api/outlook/office.time#setasync-datetime--options--callback-) method to set the end time, you should use the [`convertToUtcClientTime`](office.context.mailbox.md#converttoutcclienttimeinput--date) method to convert the local time on the client to UTC for the server.</span></span>
+<span data-ttu-id="2fb0b-347">Свойство `end` возвращает объект `Time`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-347">The `end` property returns a `Time` object.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-346">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-346">Type:</span></span>
+<span data-ttu-id="2fb0b-348">Если вы задаете время окончания с помощью метода [`Time.setAsync`](/javascript/api/outlook/office.time#setasync-datetime--options--callback-), необходимо использовать метод [`convertToUtcClientTime`](office.context.mailbox.md#converttoutcclienttimeinput--date) для преобразования местного времени на клиенте в формат UTC для сервера.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-348">When you use the [`Time.setAsync`](/javascript/api/outlook/office.time#setasync-datetime--options--callback-) method to set the end time, you should use the [`convertToUtcClientTime`](office.context.mailbox.md#converttoutcclienttimeinput--date) method to convert the local time on the client to UTC for the server.</span></span>
 
-*   <span data-ttu-id="b789e-347">Date | [Time](/javascript/api/outlook/office.time)</span><span class="sxs-lookup"><span data-stu-id="b789e-347">Date | [Time](/javascript/api/outlook/office.time)</span></span>
-
-##### <a name="requirements"></a><span data-ttu-id="b789e-348">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-348">Requirements</span></span>
-
-|<span data-ttu-id="b789e-349">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-349">Requirement</span></span>|<span data-ttu-id="b789e-350">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-350">Value</span></span>|
-|---|---|
-|[<span data-ttu-id="b789e-351">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-351">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-352">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-352">1.0</span></span>|
-|[<span data-ttu-id="b789e-353">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-353">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-354">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-354">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-355">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-355">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-356">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-356">Compose or read</span></span>|
-
-##### <a name="example"></a><span data-ttu-id="b789e-357">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-357">Example</span></span>
-
-<span data-ttu-id="b789e-358">В примере ниже показано, как с помощью метода [`setAsync`](/javascript/api/outlook/office.time#setasync-datetime--options--callback-) объекта `Time` задать время окончания встречи в режиме создания.</span><span class="sxs-lookup"><span data-stu-id="b789e-358">The following example sets the end time of an appointment in compose mode by using the [`setAsync`](/javascript/api/outlook/office.time#setasync-datetime--options--callback-) method of the `Time` object.</span></span>
+<span data-ttu-id="2fb0b-349">В следующем примере задается время окончания встречи с помощью [`setAsync`](/javascript/api/outlook/office.time#setasync-datetime--options--callback-) метода `Time` объекта.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-349">The following example sets the end time of an appointment by using the [`setAsync`](/javascript/api/outlook/office.time#setasync-datetime--options--callback-) method of the `Time` object.</span></span>
 
 ```javascript
 var endTime = new Date("3/14/2015");
 var options = {
-  // Pass information that can be used
-  // in the callback
-  asyncContext: {verb:"Set"}
-}
+  // Pass information that can be used in the callback.
+  asyncContext: {verb: "Set"}
+};
 Office.context.mailbox.item.end.setAsync(endTime, options, function(result) {
   if (result.error) {
     console.debug(result.error);
   } else {
-    // Access the asyncContext that was passed to the setAsync function
+    // Access the asyncContext that was passed to the setAsync function.
     console.debug("End Time " + result.asyncContext.verb);
   }
 });
 ```
 
-#### <a name="enhancedlocation-enhancedlocationjavascriptapioutlookofficeenhancedlocation"></a><span data-ttu-id="b789e-359">enhancedLocation:[EnhancedLocation](/javascript/api/outlook/office.enhancedlocation)</span><span class="sxs-lookup"><span data-stu-id="b789e-359">enhancedLocation :[EnhancedLocation](/javascript/api/outlook/office.enhancedlocation)</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-350">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-350">Type</span></span>
 
-<span data-ttu-id="b789e-360">Получает или задает расположение встречи.</span><span class="sxs-lookup"><span data-stu-id="b789e-360">Gets or sets the locations of an appointment.</span></span>
+*   <span data-ttu-id="2fb0b-351">Date | [Time](/javascript/api/outlook/office.time)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-351">Date | [Time](/javascript/api/outlook/office.time)</span></span>
 
-##### <a name="read-mode"></a><span data-ttu-id="b789e-361">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="b789e-361">Read mode</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-352">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-352">Requirements</span></span>
 
-<span data-ttu-id="b789e-362">`enhancedLocation` Свойство возвращает объект [EnhancedLocation](/javascript/api/outlook/office.enhancedlocation) , который позволяет задать расположения (каждый из которых представлен объектом [LocationDetails](/javascript/api/outlook/office.locationdetails) ), связанный с встречи.</span><span class="sxs-lookup"><span data-stu-id="b789e-362">The `enhancedLocation` property returns an [EnhancedLocation](/javascript/api/outlook/office.enhancedlocation) object that allows you to get the set of locations (each represented by a [LocationDetails](/javascript/api/outlook/office.locationdetails) object) associated with the appointment.</span></span>
-
-##### <a name="compose-mode"></a><span data-ttu-id="b789e-363">Режим создания</span><span class="sxs-lookup"><span data-stu-id="b789e-363">Compose mode</span></span>
-
-<span data-ttu-id="b789e-364">`enhancedLocation` Свойство возвращает объект [EnhancedLocation](/javascript/api/outlook/office.enhancedlocation) , который предоставляет методы для получения, удалить или добавить расположения на встречи.</span><span class="sxs-lookup"><span data-stu-id="b789e-364">The `enhancedLocation` property returns an [EnhancedLocation](/javascript/api/outlook/office.enhancedlocation) object that provides methods to get, remove, or add locations on an appointment.</span></span>
-
-##### <a name="type"></a><span data-ttu-id="b789e-365">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-365">Type:</span></span>
-
-*   [<span data-ttu-id="b789e-366">EnhancedLocation</span><span class="sxs-lookup"><span data-stu-id="b789e-366">EnhancedLocation</span></span>](/javascript/api/outlook/office.enhancedlocation)
-
-##### <a name="requirements"></a><span data-ttu-id="b789e-367">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-367">Requirements</span></span>
-
-|<span data-ttu-id="b789e-368">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-368">Requirement</span></span>|<span data-ttu-id="b789e-369">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-369">Value</span></span>|
+|<span data-ttu-id="2fb0b-353">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-353">Requirement</span></span>|<span data-ttu-id="2fb0b-354">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-354">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-370">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-370">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-371">Предварительная версия</span><span class="sxs-lookup"><span data-stu-id="b789e-371">Preview</span></span>|
-|[<span data-ttu-id="b789e-372">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-372">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-373">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-373">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-374">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-374">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-375">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-375">Compose or read</span></span>|
+|[<span data-ttu-id="2fb0b-355">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-355">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-356">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-356">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-357">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-357">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-358">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-358">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-359">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-359">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-360">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-360">Compose or Read</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-376">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-376">Example</span></span>
+#### <a name="enhancedlocation-enhancedlocationjavascriptapioutlookofficeenhancedlocation"></a><span data-ttu-id="2fb0b-361">Енханцедлокатион:[енханцедлокатион](/javascript/api/outlook/office.enhancedlocation)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-361">enhancedLocation :[EnhancedLocation](/javascript/api/outlook/office.enhancedlocation)</span></span>
 
-<span data-ttu-id="b789e-377">В следующем примере получается текущего расположения, связанной со встречей.</span><span class="sxs-lookup"><span data-stu-id="b789e-377">The following example gets the current locations associated with the appointment.</span></span>
+<span data-ttu-id="2fb0b-362">Получает или задает расположение встречи.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-362">Gets or sets the locations of an appointment.</span></span>
+
+##### <a name="read-mode"></a><span data-ttu-id="2fb0b-363">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="2fb0b-363">Read mode</span></span>
+
+<span data-ttu-id="2fb0b-364">Свойство возвращает объект [енханцедлокатион](/javascript/api/outlook/office.enhancedlocation) , который позволяет получить набор расположений (каждый, представленный объектом локатиондетаилс), связанный с встречей. [](/javascript/api/outlook/office.locationdetails) `enhancedLocation`</span><span class="sxs-lookup"><span data-stu-id="2fb0b-364">The `enhancedLocation` property returns an [EnhancedLocation](/javascript/api/outlook/office.enhancedlocation) object that allows you to get the set of locations (each represented by a [LocationDetails](/javascript/api/outlook/office.locationdetails) object) associated with the appointment.</span></span>
+
+##### <a name="compose-mode"></a><span data-ttu-id="2fb0b-365">Режим создания</span><span class="sxs-lookup"><span data-stu-id="2fb0b-365">Compose mode</span></span>
+
+<span data-ttu-id="2fb0b-366">`enhancedLocation` Свойство возвращает объект [енханцедлокатион](/javascript/api/outlook/office.enhancedlocation) , который предоставляет методы для получения, удаления или добавления расположений для встречи.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-366">The `enhancedLocation` property returns an [EnhancedLocation](/javascript/api/outlook/office.enhancedlocation) object that provides methods to get, remove, or add locations on an appointment.</span></span>
+
+##### <a name="type"></a><span data-ttu-id="2fb0b-367">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-367">Type</span></span>
+
+*   [<span data-ttu-id="2fb0b-368">EnhancedLocation</span><span class="sxs-lookup"><span data-stu-id="2fb0b-368">EnhancedLocation</span></span>](/javascript/api/outlook/office.enhancedlocation)
+
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-369">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-369">Requirements</span></span>
+
+|<span data-ttu-id="2fb0b-370">Requirement</span><span class="sxs-lookup"><span data-stu-id="2fb0b-370">Requirement</span></span>|<span data-ttu-id="2fb0b-371">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-371">Value</span></span>|
+|---|---|
+|[<span data-ttu-id="2fb0b-372">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-372">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-373">Предварительная версия</span><span class="sxs-lookup"><span data-stu-id="2fb0b-373">Preview</span></span>|
+|[<span data-ttu-id="2fb0b-374">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-374">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-375">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-375">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-376">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-376">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-377">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-377">Compose or Read</span></span>|
+
+##### <a name="example"></a><span data-ttu-id="2fb0b-378">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-378">Example</span></span>
+
+<span data-ttu-id="2fb0b-379">В следующем примере показано получение текущих расположений, связанных с встречей.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-379">The following example gets the current locations associated with the appointment.</span></span>
 
 ```javascript
 Office.context.mailbox.item.enhancedLocation.getAsync(callbackFunction);
@@ -374,40 +411,34 @@ function callbackFunction(asyncResult) {
   asyncResult.value.forEach(function (place) {
     console.log("Display name: " + place.displayName);
     console.log("Type: " + place.locationIdentifier.type);
-    if (place.locationIdentifier.type == Office.MailboxEnums.LocationType.Room) {
+    if (place.locationIdentifier.type === Office.MailboxEnums.LocationType.Room) {
       console.log("Email address: " + place.emailAddress);
     }
   });
 }
-
-// Sample output:
-// Display name: Conf Room 14
-// Type: room
-// Email address: cr14@contoso.com
-// Display name: Paris
-// Type: custom
 ```
 
-#### <a name="from-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsfromjavascriptapioutlookofficefrom"></a><span data-ttu-id="b789e-378">from :[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)|[From](/javascript/api/outlook/office.from)</span><span class="sxs-lookup"><span data-stu-id="b789e-378">from :[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)|[From](/javascript/api/outlook/office.from)</span></span>
+#### <a name="from-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsfromjavascriptapioutlookofficefrom"></a><span data-ttu-id="2fb0b-380">from :[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)|[From](/javascript/api/outlook/office.from)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-380">from :[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)|[From](/javascript/api/outlook/office.from)</span></span>
 
-<span data-ttu-id="b789e-379">Получает адрес электронной почты отправителя сообщения.</span><span class="sxs-lookup"><span data-stu-id="b789e-379">Gets the email address of the sender of a message.</span></span>
+<span data-ttu-id="2fb0b-381">Получает адрес электронной почты отправителя сообщения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-381">Gets the email address of the sender of a message.</span></span>
 
-<span data-ttu-id="b789e-p112">Свойства `from` и [`sender`](#sender-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetails) представляют одно лицо, если сообщение не отправлено представителем. В противном случае свойство `from` представляет лицо, делегировавшее полномочия, а свойство sender — представителя.</span><span class="sxs-lookup"><span data-stu-id="b789e-p112">The `from` and [`sender`](#sender-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetails) properties represent the same person unless the message is sent by a delegate. In that case, the `from` property represents the delegator, and the sender property represents the delegate.</span></span>
+<span data-ttu-id="2fb0b-p112">Свойства `from` и [`sender`](#sender-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetails) представляют одно лицо, если сообщение не отправлено представителем. В противном случае свойство `from` представляет лицо, делегировавшее полномочия, а свойство sender — представителя.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p112">The `from` and [`sender`](#sender-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetails) properties represent the same person unless the message is sent by a delegate. In that case, the `from` property represents the delegator, and the sender property represents the delegate.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-382">Свойству `recipientType`, принадлежащему объекту `EmailAddressDetails` в свойстве `from`, задано значение `undefined`.</span><span class="sxs-lookup"><span data-stu-id="b789e-382">The `recipientType` property of the `EmailAddressDetails` object in the `from` property is `undefined`.</span></span>
+> <span data-ttu-id="2fb0b-384">Свойству `recipientType`, принадлежащему объекту `EmailAddressDetails` в свойстве `from`, задано значение `undefined`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-384">The `recipientType` property of the `EmailAddressDetails` object in the `from` property is `undefined`.</span></span>
 
-##### <a name="read-mode"></a><span data-ttu-id="b789e-383">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="b789e-383">Read mode</span></span>
+##### <a name="read-mode"></a><span data-ttu-id="2fb0b-385">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="2fb0b-385">Read mode</span></span>
 
-<span data-ttu-id="b789e-384">Свойство `from` возвращает объект `EmailAddressDetails`.</span><span class="sxs-lookup"><span data-stu-id="b789e-384">The `from` property returns an `EmailAddressDetails` object.</span></span>
+<span data-ttu-id="2fb0b-386">Свойство `from` возвращает объект `EmailAddressDetails`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-386">The `from` property returns an `EmailAddressDetails` object.</span></span>
 
 ```javascript
 var from = Office.context.mailbox.item.from;
+console.log("From " + from);
 ```
 
-##### <a name="compose-mode"></a><span data-ttu-id="b789e-385">Режим создания</span><span class="sxs-lookup"><span data-stu-id="b789e-385">Compose mode</span></span>
+##### <a name="compose-mode"></a><span data-ttu-id="2fb0b-387">Режим создания</span><span class="sxs-lookup"><span data-stu-id="2fb0b-387">Compose mode</span></span>
 
-<span data-ttu-id="b789e-386">Свойство `from` возвращает объект `From`, который предоставляет метод для получения значения отправителя.</span><span class="sxs-lookup"><span data-stu-id="b789e-386">The `from` property returns a `From` object that provides a method to get the from value.</span></span>
+<span data-ttu-id="2fb0b-388">Свойство `from` возвращает объект `From`, который предоставляет метод для получения значения отправителя.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-388">The `from` property returns a `From` object that provides a method to get the from value.</span></span>
 
 ```javascript
 Office.context.mailbox.item.from.getAsync(callback);
@@ -417,173 +448,178 @@ function callback(asyncResult) {
 }
 ```
 
-##### <a name="type"></a><span data-ttu-id="b789e-387">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-387">Type:</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-389">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-389">Type</span></span>
 
-*   <span data-ttu-id="b789e-388">[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails) | [From](/javascript/api/outlook/office.from)</span><span class="sxs-lookup"><span data-stu-id="b789e-388">[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails) | [From](/javascript/api/outlook/office.from)</span></span>
+*   <span data-ttu-id="2fb0b-390">[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails) | [From](/javascript/api/outlook/office.from)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-390">[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails) | [From](/javascript/api/outlook/office.from)</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-389">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-389">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-391">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-391">Requirements</span></span>
 
-|<span data-ttu-id="b789e-390">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-390">Requirement</span></span>|||
+|<span data-ttu-id="2fb0b-392">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-392">Requirement</span></span>|||
 |---|---|---|
-|[<span data-ttu-id="b789e-391">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-391">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-392">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-392">1.0</span></span>|<span data-ttu-id="b789e-393">1.7</span><span class="sxs-lookup"><span data-stu-id="b789e-393">1.7</span></span>|
-|[<span data-ttu-id="b789e-394">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-394">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-395">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-395">ReadItem</span></span>|<span data-ttu-id="b789e-396">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="b789e-396">ReadWriteItem</span></span>|
-|[<span data-ttu-id="b789e-397">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-397">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-398">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-398">Read</span></span>|<span data-ttu-id="b789e-399">Создание</span><span class="sxs-lookup"><span data-stu-id="b789e-399">Compose</span></span>|
+|[<span data-ttu-id="2fb0b-393">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-393">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-394">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-394">1.0</span></span>|<span data-ttu-id="2fb0b-395">1.7</span><span class="sxs-lookup"><span data-stu-id="2fb0b-395">1.7</span></span>|
+|[<span data-ttu-id="2fb0b-396">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-396">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-397">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-397">ReadItem</span></span>|<span data-ttu-id="2fb0b-398">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-398">ReadWriteItem</span></span>|
+|[<span data-ttu-id="2fb0b-399">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-399">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-400">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-400">Read</span></span>|<span data-ttu-id="2fb0b-401">Создание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-401">Compose</span></span>|
 
-#### <a name="internetheaders-internetheadersjavascriptapioutlookofficeinternetheaders"></a><span data-ttu-id="b789e-400">internetHeaders :[InternetHeaders](/javascript/api/outlook/office.internetheaders)</span><span class="sxs-lookup"><span data-stu-id="b789e-400">internetHeaders :[InternetHeaders](/javascript/api/outlook/office.internetheaders)</span></span>
+#### <a name="internetheaders-internetheadersjavascriptapioutlookofficeinternetheaders"></a><span data-ttu-id="2fb0b-402">internetHeaders :[InternetHeaders](/javascript/api/outlook/office.internetheaders)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-402">internetHeaders :[InternetHeaders](/javascript/api/outlook/office.internetheaders)</span></span>
 
-<span data-ttu-id="b789e-401">Получает или задает заголовки Интернета в сообщении.</span><span class="sxs-lookup"><span data-stu-id="b789e-401">Gets or sets the internet headers of a message.</span></span>
+<span data-ttu-id="2fb0b-403">Получает или задает заголовки Интернета в сообщении.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-403">Gets or sets the internet headers of a message.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-402">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-402">Type:</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-404">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-404">Type</span></span>
 
-*   [<span data-ttu-id="b789e-403">InternetHeaders</span><span class="sxs-lookup"><span data-stu-id="b789e-403">InternetHeaders</span></span>](/javascript/api/outlook/office.internetheaders)
+*   [<span data-ttu-id="2fb0b-405">InternetHeaders</span><span class="sxs-lookup"><span data-stu-id="2fb0b-405">InternetHeaders</span></span>](/javascript/api/outlook/office.internetheaders)
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-404">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-404">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-406">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-406">Requirements</span></span>
 
-|<span data-ttu-id="b789e-405">Requirement</span><span class="sxs-lookup"><span data-stu-id="b789e-405">Requirement</span></span>|<span data-ttu-id="b789e-406">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-406">Value</span></span>|
+|<span data-ttu-id="2fb0b-407">Requirement</span><span class="sxs-lookup"><span data-stu-id="2fb0b-407">Requirement</span></span>|<span data-ttu-id="2fb0b-408">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-408">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-407">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-407">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-408">Предварительная версия</span><span class="sxs-lookup"><span data-stu-id="b789e-408">Preview</span></span>|
-|[<span data-ttu-id="b789e-409">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-409">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-410">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-410">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-411">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-411">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-412">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-412">Compose or read</span></span>|
+|[<span data-ttu-id="2fb0b-409">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-409">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-410">Предварительная версия</span><span class="sxs-lookup"><span data-stu-id="2fb0b-410">Preview</span></span>|
+|[<span data-ttu-id="2fb0b-411">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-411">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-412">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-412">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-413">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-413">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-414">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-414">Compose or Read</span></span>|
 
-#### <a name="internetmessageid-string"></a><span data-ttu-id="b789e-413">internetMessageId :String</span><span class="sxs-lookup"><span data-stu-id="b789e-413">internetMessageId :String</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-415">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-415">Example</span></span>
 
-<span data-ttu-id="b789e-p113">Получает идентификатор интернет-сообщения для электронного сообщения. Только в режиме чтения.</span><span class="sxs-lookup"><span data-stu-id="b789e-p113">Gets the Internet message identifier for an email message. Read mode only.</span></span>
+```javascript
+Office.context.mailbox.item.internetHeaders.getAsync(["header1", "header2"], callback);
 
-##### <a name="type"></a><span data-ttu-id="b789e-416">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-416">Type:</span></span>
+function callback(asyncResult) {
+  var dictionary = asyncResult.value;
+  var header1_value = dictionary["header1"];
+}
+```
 
-*   <span data-ttu-id="b789e-417">String</span><span class="sxs-lookup"><span data-stu-id="b789e-417">String</span></span>
+#### <a name="internetmessageid-string"></a><span data-ttu-id="2fb0b-416">internetMessageId :String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-416">internetMessageId :String</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-418">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-418">Requirements</span></span>
+<span data-ttu-id="2fb0b-p113">Получает идентификатор интернет-сообщения для электронного сообщения. Только в режиме чтения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p113">Gets the Internet message identifier for an email message. Read mode only.</span></span>
 
-|<span data-ttu-id="b789e-419">Requirement</span><span class="sxs-lookup"><span data-stu-id="b789e-419">Requirement</span></span>|<span data-ttu-id="b789e-420">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-420">Value</span></span>|
+##### <a name="type"></a><span data-ttu-id="2fb0b-419">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-419">Type</span></span>
+
+*   <span data-ttu-id="2fb0b-420">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-420">String</span></span>
+
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-421">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-421">Requirements</span></span>
+
+|<span data-ttu-id="2fb0b-422">Requirement</span><span class="sxs-lookup"><span data-stu-id="2fb0b-422">Requirement</span></span>|<span data-ttu-id="2fb0b-423">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-423">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-421">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-421">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-422">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-422">1.0</span></span>|
-|[<span data-ttu-id="b789e-423">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-423">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-424">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-424">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-425">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-425">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-426">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-426">Read</span></span>|
+|[<span data-ttu-id="2fb0b-424">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-424">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-425">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-425">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-426">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-426">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-427">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-427">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-428">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-428">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-429">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-429">Read</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-427">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-427">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-430">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-430">Example</span></span>
 
 ```javascript
 var internetMessageId = Office.context.mailbox.item.internetMessageId;
+console.log("internetMessageId: " + internetMessageId);
 ```
 
-#### <a name="itemclass-string"></a><span data-ttu-id="b789e-428">itemClass :String</span><span class="sxs-lookup"><span data-stu-id="b789e-428">itemClass :String</span></span>
+#### <a name="itemclass-string"></a><span data-ttu-id="2fb0b-431">itemClass :String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-431">itemClass :String</span></span>
 
-<span data-ttu-id="b789e-p114">Получает класс элемента веб-служб Exchange для выбранного элемента. Только в режиме чтения.</span><span class="sxs-lookup"><span data-stu-id="b789e-p114">Gets the Exchange Web Services item class of the selected item. Read mode only.</span></span>
+<span data-ttu-id="2fb0b-p114">Получает класс элемента веб-служб Exchange для выбранного элемента. Только в режиме чтения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p114">Gets the Exchange Web Services item class of the selected item. Read mode only.</span></span>
 
-<span data-ttu-id="b789e-p115">Свойство `itemClass` указывает класс сообщения выбранного элемента. Ниже приводятся классы сообщения по умолчанию для элемента сообщения или встречи.</span><span class="sxs-lookup"><span data-stu-id="b789e-p115">The `itemClass` property specifies the message class of the selected item. The following are the default message classes for the message or appointment item.</span></span>
+<span data-ttu-id="2fb0b-p115">Свойство `itemClass` указывает класс сообщения выбранного элемента. Ниже приводятся классы сообщения по умолчанию для элемента сообщения или встречи.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p115">The `itemClass` property specifies the message class of the selected item. The following are the default message classes for the message or appointment item.</span></span>
 
-|<span data-ttu-id="b789e-433">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-433">Type</span></span>|<span data-ttu-id="b789e-434">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-434">Description</span></span>|<span data-ttu-id="b789e-435">Класс элемента</span><span class="sxs-lookup"><span data-stu-id="b789e-435">item class</span></span>|
+|<span data-ttu-id="2fb0b-436">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-436">Type</span></span>|<span data-ttu-id="2fb0b-437">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-437">Description</span></span>|<span data-ttu-id="2fb0b-438">Класс элемента</span><span class="sxs-lookup"><span data-stu-id="2fb0b-438">item class</span></span>|
 |---|---|---|
-|<span data-ttu-id="b789e-436">Элементы встречи</span><span class="sxs-lookup"><span data-stu-id="b789e-436">Appointment items</span></span>|<span data-ttu-id="b789e-437">Это элементы календаря для класса элемента `IPM.Appointment` или `IPM.Appointment.Occurrence`.</span><span class="sxs-lookup"><span data-stu-id="b789e-437">These are calendar items of the item class `IPM.Appointment` or `IPM.Appointment.Occurrence`.</span></span>|`IPM.Appointment`<br />`IPM.Appointment.Occurrence`|
-|<span data-ttu-id="b789e-438">Элементы сообщения</span><span class="sxs-lookup"><span data-stu-id="b789e-438">Message items</span></span>|<span data-ttu-id="b789e-439">Сюда входят электронные сообщения, для которых по умолчанию задан класс сообщения `IPM.Note`, а также приглашения на собрания, ответы на них и уведомления об их отмене, использующие `IPM.Schedule.Meeting` в качестве базового класса сообщения.</span><span class="sxs-lookup"><span data-stu-id="b789e-439">These include email messages that have the default message class `IPM.Note`, and meeting requests, responses, and cancellations, that use `IPM.Schedule.Meeting` as the base message class.</span></span>|`IPM.Note`<br />`IPM.Schedule.Meeting.Request`<br />`IPM.Schedule.Meeting.Neg`<br />`IPM.Schedule.Meeting.Pos`<br />`IPM.Schedule.Meeting.Tent`<br />`IPM.Schedule.Meeting.Canceled`|
+|<span data-ttu-id="2fb0b-439">Элементы встречи</span><span class="sxs-lookup"><span data-stu-id="2fb0b-439">Appointment items</span></span>|<span data-ttu-id="2fb0b-440">Это элементы календаря для класса элемента `IPM.Appointment` или `IPM.Appointment.Occurrence`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-440">These are calendar items of the item class `IPM.Appointment` or `IPM.Appointment.Occurrence`.</span></span>|`IPM.Appointment`<br />`IPM.Appointment.Occurrence`|
+|<span data-ttu-id="2fb0b-441">Элементы сообщения</span><span class="sxs-lookup"><span data-stu-id="2fb0b-441">Message items</span></span>|<span data-ttu-id="2fb0b-442">Сюда входят электронные сообщения, для которых по умолчанию задан класс сообщения `IPM.Note`, а также приглашения на собрания, ответы на них и уведомления об их отмене, использующие `IPM.Schedule.Meeting` в качестве базового класса сообщения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-442">These include email messages that have the default message class `IPM.Note`, and meeting requests, responses, and cancellations, that use `IPM.Schedule.Meeting` as the base message class.</span></span>|`IPM.Note`<br />`IPM.Schedule.Meeting.Request`<br />`IPM.Schedule.Meeting.Neg`<br />`IPM.Schedule.Meeting.Pos`<br />`IPM.Schedule.Meeting.Tent`<br />`IPM.Schedule.Meeting.Canceled`|
 
-<span data-ttu-id="b789e-440">Можно создавать настраиваемые классы сообщения, расширяющие классы сообщения по умолчанию, например настраиваемый класс сообщения о встрече `IPM.Appointment.Contoso`.</span><span class="sxs-lookup"><span data-stu-id="b789e-440">You can create custom message classes that extends a default message class, for example, a custom appointment message class `IPM.Appointment.Contoso`.</span></span>
+<span data-ttu-id="2fb0b-443">Можно создавать настраиваемые классы сообщения, расширяющие классы сообщения по умолчанию, например настраиваемый класс сообщения о встрече `IPM.Appointment.Contoso`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-443">You can create custom message classes that extends a default message class, for example, a custom appointment message class `IPM.Appointment.Contoso`.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-441">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-441">Type:</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-444">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-444">Type</span></span>
 
-*   <span data-ttu-id="b789e-442">String</span><span class="sxs-lookup"><span data-stu-id="b789e-442">String</span></span>
+*   <span data-ttu-id="2fb0b-445">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-445">String</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-443">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-443">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-446">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-446">Requirements</span></span>
 
-|<span data-ttu-id="b789e-444">Requirement</span><span class="sxs-lookup"><span data-stu-id="b789e-444">Requirement</span></span>|<span data-ttu-id="b789e-445">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-445">Value</span></span>|
+|<span data-ttu-id="2fb0b-447">Requirement</span><span class="sxs-lookup"><span data-stu-id="2fb0b-447">Requirement</span></span>|<span data-ttu-id="2fb0b-448">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-448">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-446">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-446">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-447">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-447">1.0</span></span>|
-|[<span data-ttu-id="b789e-448">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-448">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-449">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-449">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-450">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-450">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-451">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-451">Read</span></span>|
+|[<span data-ttu-id="2fb0b-449">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-449">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-450">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-450">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-451">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-451">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-452">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-452">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-453">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-453">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-454">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-454">Read</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-452">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-452">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-455">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-455">Example</span></span>
 
 ```javascript
 var itemClass = Office.context.mailbox.item.itemClass;
+console.log("Item class: " + itemClass);
 ```
 
-#### <a name="nullable-itemid-string"></a><span data-ttu-id="b789e-453">(nullable) itemId :String</span><span class="sxs-lookup"><span data-stu-id="b789e-453">(nullable) itemId :String</span></span>
+#### <a name="nullable-itemid-string"></a><span data-ttu-id="2fb0b-456">(nullable) itemId :String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-456">(nullable) itemId :String</span></span>
 
-<span data-ttu-id="b789e-p116">Получает идентификатор элемента веб-служб Exchange для текущего элемента. Только в режиме чтения.</span><span class="sxs-lookup"><span data-stu-id="b789e-p116">Gets the Exchange Web Services item identifier for the current item. Read mode only.</span></span>
+<span data-ttu-id="2fb0b-p116">Получает идентификатор элемента веб-служб Exchange для текущего элемента. Только в режиме чтения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p116">Gets the Exchange Web Services item identifier for the current item. Read mode only.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-456">Идентификатор, возвращаемый свойством `itemId`, совпадает с идентификатором элемента веб-служб Exchange.</span><span class="sxs-lookup"><span data-stu-id="b789e-456">The identifier returned by the `itemId` property is the same as the Exchange Web Services item identifier.</span></span> <span data-ttu-id="b789e-457">Свойство `itemId` не совпадает с идентификатором записи Outlook, а также идентификатором, который используется REST API Outlook.</span><span class="sxs-lookup"><span data-stu-id="b789e-457">The `itemId` property is not identical to the Outlook Entry ID or the ID used by the Outlook REST API.</span></span> <span data-ttu-id="b789e-458">Прежде чем совершать вызовы REST API, используя это значение, его необходимо преобразовать с помощью [Office.context.mailbox.convertToRestId](office.context.mailbox.md#converttorestiditemid-restversion--string).</span><span class="sxs-lookup"><span data-stu-id="b789e-458">Before making REST API calls using this value, it should be converted using [Office.context.mailbox.convertToRestId](office.context.mailbox.md#converttorestiditemid-restversion--string).</span></span> <span data-ttu-id="b789e-459">Дополнительные сведения см. в статье [Использование REST API Outlook из надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/use-rest-api#get-the-item-id).</span><span class="sxs-lookup"><span data-stu-id="b789e-459">For more details, see [Use the Outlook REST APIs from an Outlook add-in](https://docs.microsoft.com/outlook/add-ins/use-rest-api#get-the-item-id).</span></span>
+> <span data-ttu-id="2fb0b-459">Идентификатор, возвращаемый свойством `itemId`, совпадает с идентификатором элемента веб-служб Exchange.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-459">The identifier returned by the `itemId` property is the same as the Exchange Web Services item identifier.</span></span> <span data-ttu-id="2fb0b-460">Свойство `itemId` не совпадает с идентификатором записи Outlook, а также идентификатором, который используется REST API Outlook.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-460">The `itemId` property is not identical to the Outlook Entry ID or the ID used by the Outlook REST API.</span></span> <span data-ttu-id="2fb0b-461">Прежде чем совершать вызовы REST API, используя это значение, его необходимо преобразовать с помощью [Office.context.mailbox.convertToRestId](office.context.mailbox.md#converttorestiditemid-restversion--string).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-461">Before making REST API calls using this value, it should be converted using [Office.context.mailbox.convertToRestId](office.context.mailbox.md#converttorestiditemid-restversion--string).</span></span> <span data-ttu-id="2fb0b-462">Дополнительные сведения см. в статье [Использование REST API Outlook из надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/use-rest-api#get-the-item-id).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-462">For more details, see [Use the Outlook REST APIs from an Outlook add-in](https://docs.microsoft.com/outlook/add-ins/use-rest-api#get-the-item-id).</span></span>
 
-<span data-ttu-id="b789e-p118">Свойство `itemId` недоступно в режиме создания. Если требуется идентификатор элемента, с помощью метода [`saveAsync`](#saveasyncoptions-callback) можно сохранить элемент в хранилище. При этом в параметре [`AsyncResult.value`](/javascript/api/office/office.asyncresult) функции обратного вызова возвращается идентификатор элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-p118">The `itemId` property is not available in compose mode. If an item identifier is required, the [`saveAsync`](#saveasyncoptions-callback) method can be used to save the item to the store, which will return the item identifier in the [`AsyncResult.value`](/javascript/api/office/office.asyncresult) parameter in the callback function.</span></span>
+<span data-ttu-id="2fb0b-p118">Свойство `itemId` недоступно в режиме создания. Если требуется идентификатор элемента, с помощью метода [`saveAsync`](#saveasyncoptions-callback) можно сохранить элемент в хранилище. При этом в параметре [`AsyncResult.value`](/javascript/api/office/office.asyncresult) функции обратного вызова возвращается идентификатор элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p118">The `itemId` property is not available in compose mode. If an item identifier is required, the [`saveAsync`](#saveasyncoptions-callback) method can be used to save the item to the store, which will return the item identifier in the [`AsyncResult.value`](/javascript/api/office/office.asyncresult) parameter in the callback function.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-462">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-462">Type:</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-465">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-465">Type</span></span>
 
-*   <span data-ttu-id="b789e-463">String</span><span class="sxs-lookup"><span data-stu-id="b789e-463">String</span></span>
+*   <span data-ttu-id="2fb0b-466">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-466">String</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-464">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-464">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-467">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-467">Requirements</span></span>
 
-|<span data-ttu-id="b789e-465">Requirement</span><span class="sxs-lookup"><span data-stu-id="b789e-465">Requirement</span></span>|<span data-ttu-id="b789e-466">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-466">Value</span></span>|
+|<span data-ttu-id="2fb0b-468">Requirement</span><span class="sxs-lookup"><span data-stu-id="2fb0b-468">Requirement</span></span>|<span data-ttu-id="2fb0b-469">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-469">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-467">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-467">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-468">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-468">1.0</span></span>|
-|[<span data-ttu-id="b789e-469">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-469">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-470">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-470">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-471">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-471">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-472">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-472">Read</span></span>|
+|[<span data-ttu-id="2fb0b-470">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-470">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-471">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-471">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-472">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-472">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-473">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-473">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-474">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-474">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-475">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-475">Read</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-473">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-473">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-476">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-476">Example</span></span>
 
-<span data-ttu-id="b789e-p119">Указанный ниже код проверяет наличие идентификатора элемента. Если свойство `itemId` возвращает значение `null` или `undefined`, элемент будет сохранен в хранилище, а из асинхронного результата будет получен идентификатор элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-p119">The following code checks for the presence of an item identifier. If the `itemId` property returns `null` or `undefined`, it saves the item to the store and gets the item identifier from the asynchronous result.</span></span>
+<span data-ttu-id="2fb0b-p119">Указанный ниже код проверяет наличие идентификатора элемента. Если свойство `itemId` возвращает значение `null` или `undefined`, элемент будет сохранен в хранилище, а из асинхронного результата будет получен идентификатор элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p119">The following code checks for the presence of an item identifier. If the `itemId` property returns `null` or `undefined`, it saves the item to the store and gets the item identifier from the asynchronous result.</span></span>
 
 ```javascript
 var itemId = Office.context.mailbox.item.itemId;
 if (itemId === null || itemId == undefined) {
-  Office.context.mailbox.item.saveAsync(function(result){
+  Office.context.mailbox.item.saveAsync(function(result) {
     itemId = result.value;
   });
 }
 ```
 
-####  <a name="itemtype-officemailboxenumsitemtypejavascriptapioutlookofficemailboxenumsitemtype"></a><span data-ttu-id="b789e-476">itemType :[Office.MailboxEnums.ItemType](/javascript/api/outlook/office.mailboxenums.itemtype)</span><span class="sxs-lookup"><span data-stu-id="b789e-476">itemType :[Office.MailboxEnums.ItemType](/javascript/api/outlook/office.mailboxenums.itemtype)</span></span>
+####  <a name="itemtype-officemailboxenumsitemtypejavascriptapioutlookofficemailboxenumsitemtype"></a><span data-ttu-id="2fb0b-479">itemType :[Office.MailboxEnums.ItemType](/javascript/api/outlook/office.mailboxenums.itemtype)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-479">itemType :[Office.MailboxEnums.ItemType](/javascript/api/outlook/office.mailboxenums.itemtype)</span></span>
 
-<span data-ttu-id="b789e-477">Получает тип элемента, который представляет экземпляр.</span><span class="sxs-lookup"><span data-stu-id="b789e-477">Gets the type of item that an instance represents.</span></span>
+<span data-ttu-id="2fb0b-480">Получает тип элемента, который представляет экземпляр.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-480">Gets the type of item that an instance represents.</span></span>
 
-<span data-ttu-id="b789e-478">Свойство `itemType` возвращает одно из значений перечисления `ItemType`, которое указывает, является ли экземпляр объекта `item` сообщением или встречей.</span><span class="sxs-lookup"><span data-stu-id="b789e-478">The `itemType` property returns one of the `ItemType` enumeration values, indicating whether the `item` object instance is a message or an appointment.</span></span>
+<span data-ttu-id="2fb0b-481">Свойство `itemType` возвращает одно из значений перечисления `ItemType`, которое указывает, является ли экземпляр объекта `item` сообщением или встречей.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-481">The `itemType` property returns one of the `ItemType` enumeration values, indicating whether the `item` object instance is a message or an appointment.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-479">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-479">Type:</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-482">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-482">Type</span></span>
 
-*   [<span data-ttu-id="b789e-480">Office.MailboxEnums.ItemType</span><span class="sxs-lookup"><span data-stu-id="b789e-480">Office.MailboxEnums.ItemType</span></span>](/javascript/api/outlook/office.mailboxenums.itemtype)
+*   [<span data-ttu-id="2fb0b-483">Office.MailboxEnums.ItemType</span><span class="sxs-lookup"><span data-stu-id="2fb0b-483">Office.MailboxEnums.ItemType</span></span>](/javascript/api/outlook/office.mailboxenums.itemtype)
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-481">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-481">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-484">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-484">Requirements</span></span>
 
-|<span data-ttu-id="b789e-482">Requirement</span><span class="sxs-lookup"><span data-stu-id="b789e-482">Requirement</span></span>|<span data-ttu-id="b789e-483">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-483">Value</span></span>|
+|<span data-ttu-id="2fb0b-485">Requirement</span><span class="sxs-lookup"><span data-stu-id="2fb0b-485">Requirement</span></span>|<span data-ttu-id="2fb0b-486">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-486">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-484">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-484">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-485">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-485">1.0</span></span>|
-|[<span data-ttu-id="b789e-486">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-486">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-487">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-487">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-488">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-488">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-489">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-489">Compose or read</span></span>|
+|[<span data-ttu-id="2fb0b-487">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-487">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-488">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-488">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-489">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-489">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-490">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-490">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-491">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-491">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-492">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-492">Compose or Read</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-490">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-490">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-493">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-493">Example</span></span>
 
 ```javascript
-if (Office.context.mailbox.item.itemType == Office.MailboxEnums.ItemType.Message)
-  // do something
-else
-  // do something else
+if (Office.context.mailbox.item.itemType === Office.MailboxEnums.ItemType.Message) {
+  // Do something.
+} else {
+  // Do something else.
+}
 ```
 
-####  <a name="location-stringlocationjavascriptapioutlookofficelocation"></a><span data-ttu-id="b789e-491">location :String|[Location](/javascript/api/outlook/office.location)</span><span class="sxs-lookup"><span data-stu-id="b789e-491">location :String|[Location](/javascript/api/outlook/office.location)</span></span>
+####  <a name="location-stringlocationjavascriptapioutlookofficelocation"></a><span data-ttu-id="2fb0b-494">location :String|[Location](/javascript/api/outlook/office.location)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-494">location :String|[Location](/javascript/api/outlook/office.location)</span></span>
 
-<span data-ttu-id="b789e-492">Получает или задает место встречи.</span><span class="sxs-lookup"><span data-stu-id="b789e-492">Gets or sets the location of an appointment.</span></span>
+<span data-ttu-id="2fb0b-495">Получает или задает место встречи.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-495">Gets or sets the location of an appointment.</span></span>
 
-##### <a name="read-mode"></a><span data-ttu-id="b789e-493">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="b789e-493">Read mode</span></span>
+##### <a name="read-mode"></a><span data-ttu-id="2fb0b-496">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="2fb0b-496">Read mode</span></span>
 
-<span data-ttu-id="b789e-494">Свойство `location` возвращает строку, содержащую сведения о месте встречи.</span><span class="sxs-lookup"><span data-stu-id="b789e-494">The `location` property returns a string that contains the location of the appointment.</span></span>
+<span data-ttu-id="2fb0b-497">Свойство `location` возвращает строку, содержащую сведения о месте встречи.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-497">The `location` property returns a string that contains the location of the appointment.</span></span>
 
-##### <a name="compose-mode"></a><span data-ttu-id="b789e-495">Режим создания</span><span class="sxs-lookup"><span data-stu-id="b789e-495">Compose mode</span></span>
+```javascript
+var location = Office.context.mailbox.item.location;
+console.log("location: " + location);
+```
 
-<span data-ttu-id="b789e-496">Свойство `location` возвращает объект `Location`, предоставляющий методы, которые используются для получения и задания места встречи.</span><span class="sxs-lookup"><span data-stu-id="b789e-496">The `location` property returns a `Location` object that provides methods that are used to get and set the location of the appointment.</span></span>
+##### <a name="compose-mode"></a><span data-ttu-id="2fb0b-498">Режим создания</span><span class="sxs-lookup"><span data-stu-id="2fb0b-498">Compose mode</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-497">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-497">Type:</span></span>
-
-*   <span data-ttu-id="b789e-498">String | [Location](/javascript/api/outlook/office.location)</span><span class="sxs-lookup"><span data-stu-id="b789e-498">String | [Location](/javascript/api/outlook/office.location)</span></span>
-
-##### <a name="requirements"></a><span data-ttu-id="b789e-499">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-499">Requirements</span></span>
-
-|<span data-ttu-id="b789e-500">Requirement</span><span class="sxs-lookup"><span data-stu-id="b789e-500">Requirement</span></span>|<span data-ttu-id="b789e-501">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-501">Value</span></span>|
-|---|---|
-|[<span data-ttu-id="b789e-502">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-502">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-503">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-503">1.0</span></span>|
-|[<span data-ttu-id="b789e-504">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-504">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-505">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-505">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-506">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-506">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-507">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-507">Compose or read</span></span>|
-
-##### <a name="example"></a><span data-ttu-id="b789e-508">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-508">Example</span></span>
+<span data-ttu-id="2fb0b-499">Свойство `location` возвращает объект `Location`, предоставляющий методы, которые используются для получения и задания места встречи.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-499">The `location` property returns a `Location` object that provides methods that are used to get and set the location of the appointment.</span></span>
 
 ```javascript
 var userContext = { value : 1 };
@@ -595,71 +631,86 @@ function callback(asyncResult) {
 }
 ```
 
-#### <a name="normalizedsubject-string"></a><span data-ttu-id="b789e-509">normalizedSubject :String</span><span class="sxs-lookup"><span data-stu-id="b789e-509">normalizedSubject :String</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-500">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-500">Type</span></span>
 
-<span data-ttu-id="b789e-p120">Получает тему элемента со всеми удаленными префиксами (включая `RE:` и `FWD:`). Только в режиме чтения.</span><span class="sxs-lookup"><span data-stu-id="b789e-p120">Gets the subject of an item, with all prefixes removed (including `RE:` and `FWD:`). Read mode only.</span></span>
+*   <span data-ttu-id="2fb0b-501">String | [Location](/javascript/api/outlook/office.location)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-501">String | [Location](/javascript/api/outlook/office.location)</span></span>
 
-<span data-ttu-id="b789e-p121">Свойство normalizedSubject получает тему элемента со стандартными префиксами (такими как `RE:` и `FW:`), добавляемыми почтовыми программами. Для получения темы элемента с неизмененными префиксами используйте свойство [`subject`](#subject-stringsubjectjavascriptapioutlookofficesubject).</span><span class="sxs-lookup"><span data-stu-id="b789e-p121">The normalizedSubject property gets the subject of the item, with any standard prefixes (such as `RE:` and `FW:`) that are added by email programs. To get the subject of the item with the prefixes intact, use the [`subject`](#subject-stringsubjectjavascriptapioutlookofficesubject) property.</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-502">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-502">Requirements</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-514">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-514">Type:</span></span>
-
-*   <span data-ttu-id="b789e-515">String</span><span class="sxs-lookup"><span data-stu-id="b789e-515">String</span></span>
-
-##### <a name="requirements"></a><span data-ttu-id="b789e-516">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-516">Requirements</span></span>
-
-|<span data-ttu-id="b789e-517">Requirement</span><span class="sxs-lookup"><span data-stu-id="b789e-517">Requirement</span></span>|<span data-ttu-id="b789e-518">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-518">Value</span></span>|
+|<span data-ttu-id="2fb0b-503">Requirement</span><span class="sxs-lookup"><span data-stu-id="2fb0b-503">Requirement</span></span>|<span data-ttu-id="2fb0b-504">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-504">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-519">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-519">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-520">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-520">1.0</span></span>|
-|[<span data-ttu-id="b789e-521">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-521">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-522">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-522">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-523">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-523">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-524">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-524">Read</span></span>|
+|[<span data-ttu-id="2fb0b-505">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-505">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-506">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-506">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-507">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-507">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-508">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-508">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-509">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-509">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-510">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-510">Compose or Read</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-525">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-525">Example</span></span>
+#### <a name="normalizedsubject-string"></a><span data-ttu-id="2fb0b-511">normalizedSubject :String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-511">normalizedSubject :String</span></span>
+
+<span data-ttu-id="2fb0b-p120">Получает тему элемента со всеми удаленными префиксами (включая `RE:` и `FWD:`). Только в режиме чтения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p120">Gets the subject of an item, with all prefixes removed (including `RE:` and `FWD:`). Read mode only.</span></span>
+
+<span data-ttu-id="2fb0b-p121">Свойство normalizedSubject получает тему элемента со стандартными префиксами (такими как `RE:` и `FW:`), добавляемыми почтовыми программами. Для получения темы элемента с неизмененными префиксами используйте свойство [`subject`](#subject-stringsubjectjavascriptapioutlookofficesubject).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p121">The normalizedSubject property gets the subject of the item, with any standard prefixes (such as `RE:` and `FW:`) that are added by email programs. To get the subject of the item with the prefixes intact, use the [`subject`](#subject-stringsubjectjavascriptapioutlookofficesubject) property.</span></span>
+
+##### <a name="type"></a><span data-ttu-id="2fb0b-516">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-516">Type</span></span>
+
+*   <span data-ttu-id="2fb0b-517">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-517">String</span></span>
+
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-518">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-518">Requirements</span></span>
+
+|<span data-ttu-id="2fb0b-519">Requirement</span><span class="sxs-lookup"><span data-stu-id="2fb0b-519">Requirement</span></span>|<span data-ttu-id="2fb0b-520">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-520">Value</span></span>|
+|---|---|
+|[<span data-ttu-id="2fb0b-521">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-521">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-522">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-522">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-523">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-523">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-524">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-524">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-525">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-525">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-526">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-526">Read</span></span>|
+
+##### <a name="example"></a><span data-ttu-id="2fb0b-527">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-527">Example</span></span>
 
 ```javascript
 var normalizedSubject = Office.context.mailbox.item.normalizedSubject;
+console.log("Normalized subject: " + normalizedSubject);
 ```
 
-####  <a name="notificationmessages-notificationmessagesjavascriptapioutlookofficenotificationmessages"></a><span data-ttu-id="b789e-526">notificationMessages :[NotificationMessages](/javascript/api/outlook/office.notificationmessages)</span><span class="sxs-lookup"><span data-stu-id="b789e-526">notificationMessages :[NotificationMessages](/javascript/api/outlook/office.notificationmessages)</span></span>
+####  <a name="notificationmessages-notificationmessagesjavascriptapioutlookofficenotificationmessages"></a><span data-ttu-id="2fb0b-528">notificationMessages :[NotificationMessages](/javascript/api/outlook/office.notificationmessages)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-528">notificationMessages :[NotificationMessages](/javascript/api/outlook/office.notificationmessages)</span></span>
 
-<span data-ttu-id="b789e-527">Получает сообщения уведомления для элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-527">Gets the notification messages for an item.</span></span>
+<span data-ttu-id="2fb0b-529">Получает сообщения уведомления для элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-529">Gets the notification messages for an item.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-528">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-528">Type:</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-530">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-530">Type</span></span>
 
-*   [<span data-ttu-id="b789e-529">NotificationMessages</span><span class="sxs-lookup"><span data-stu-id="b789e-529">NotificationMessages</span></span>](/javascript/api/outlook/office.notificationmessages)
+*   [<span data-ttu-id="2fb0b-531">NotificationMessages</span><span class="sxs-lookup"><span data-stu-id="2fb0b-531">NotificationMessages</span></span>](/javascript/api/outlook/office.notificationmessages)
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-530">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-530">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-532">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-532">Requirements</span></span>
 
-|<span data-ttu-id="b789e-531">Requirement</span><span class="sxs-lookup"><span data-stu-id="b789e-531">Requirement</span></span>|<span data-ttu-id="b789e-532">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-532">Value</span></span>|
+|<span data-ttu-id="2fb0b-533">Requirement</span><span class="sxs-lookup"><span data-stu-id="2fb0b-533">Requirement</span></span>|<span data-ttu-id="2fb0b-534">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-534">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-533">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-533">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-534">1.3</span><span class="sxs-lookup"><span data-stu-id="b789e-534">1.3</span></span>|
-|[<span data-ttu-id="b789e-535">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-535">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-536">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-536">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-537">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-537">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-538">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-538">Compose or read</span></span>|
+|[<span data-ttu-id="2fb0b-535">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-535">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-536">1.3</span><span class="sxs-lookup"><span data-stu-id="2fb0b-536">1.3</span></span>|
+|[<span data-ttu-id="2fb0b-537">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-537">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-538">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-538">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-539">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-539">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-540">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-540">Compose or Read</span></span>|
 
-####  <a name="optionalattendees-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients"></a><span data-ttu-id="b789e-539">optionalAttendees :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="b789e-539">optionalAttendees :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-541">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-541">Example</span></span>
 
-<span data-ttu-id="b789e-540">Предоставляет доступ к необязательным участникам события.</span><span class="sxs-lookup"><span data-stu-id="b789e-540">Provides access to the optional attendees of an event.</span></span> <span data-ttu-id="b789e-541">Тип объекта и уровень доступа зависят от режима текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-541">The type of object and level of access depends on the mode of the current item.</span></span>
+```javascript
+// Get all notifications.
+Office.context.mailbox.item.notificationMessages.getAllAsync(
+  function (asyncResult) {
+    console.log(JSON.stringify(asyncResult));
+  }
+);
+```
 
-##### <a name="read-mode"></a><span data-ttu-id="b789e-542">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="b789e-542">Read mode</span></span>
+####  <a name="optionalattendees-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients"></a><span data-ttu-id="2fb0b-542">optionalAttendees :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-542">optionalAttendees :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)</span></span>
 
-<span data-ttu-id="b789e-543">Свойство `optionalAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого необязательного участника собрания.</span><span class="sxs-lookup"><span data-stu-id="b789e-543">The `optionalAttendees` property returns an array that contains an `EmailAddressDetails` object for each optional attendee to the meeting.</span></span>
+<span data-ttu-id="2fb0b-543">Предоставляет доступ к необязательным участникам события.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-543">Provides access to the optional attendees of an event.</span></span> <span data-ttu-id="2fb0b-544">Тип объекта и уровень доступа зависят от режима текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-544">The type of object and level of access depends on the mode of the current item.</span></span>
 
-##### <a name="compose-mode"></a><span data-ttu-id="b789e-544">Режим создания</span><span class="sxs-lookup"><span data-stu-id="b789e-544">Compose mode</span></span>
+##### <a name="read-mode"></a><span data-ttu-id="2fb0b-545">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="2fb0b-545">Read mode</span></span>
 
-<span data-ttu-id="b789e-545">Свойство `optionalAttendees` возвращает объект `Recipients`, который предоставляет методы для получения или обновления необязательных участников собрания.</span><span class="sxs-lookup"><span data-stu-id="b789e-545">The `optionalAttendees` property returns a `Recipients` object that provides methods to get or update the optional attendees for a meeting.</span></span>
+<span data-ttu-id="2fb0b-546">Свойство `optionalAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого необязательного участника собрания.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-546">The `optionalAttendees` property returns an array that contains an `EmailAddressDetails` object for each optional attendee to the meeting.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-546">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-546">Type:</span></span>
+```javascript
+var optionalAttendees = Office.context.mailbox.item.optionalAttendees;
+console.log("Optional attendees: " + JSON.stringify(optionalAttendees));
+```
 
-*   <span data-ttu-id="b789e-547">Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="b789e-547">Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients)</span></span>
+##### <a name="compose-mode"></a><span data-ttu-id="2fb0b-547">Режим создания</span><span class="sxs-lookup"><span data-stu-id="2fb0b-547">Compose mode</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-548">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-548">Requirements</span></span>
-
-|<span data-ttu-id="b789e-549">Requirement</span><span class="sxs-lookup"><span data-stu-id="b789e-549">Requirement</span></span>|<span data-ttu-id="b789e-550">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-550">Value</span></span>|
-|---|---|
-|[<span data-ttu-id="b789e-551">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-551">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-552">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-552">1.0</span></span>|
-|[<span data-ttu-id="b789e-553">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-553">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-554">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-554">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-555">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-555">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-556">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-556">Compose or read</span></span>|
-
-##### <a name="example"></a><span data-ttu-id="b789e-557">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-557">Example</span></span>
+<span data-ttu-id="2fb0b-548">Свойство `optionalAttendees` возвращает объект `Recipients`, который предоставляет методы для получения или обновления необязательных участников собрания.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-548">The `optionalAttendees` property returns a `Recipients` object that provides methods to get or update the optional attendees for a meeting.</span></span>
 
 ```javascript
 Office.context.mailbox.item.optionalAttendees.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
@@ -671,82 +722,130 @@ function callback(asyncResult) {
 }
 ```
 
-#### <a name="organizer-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsorganizerjavascriptapioutlookofficeorganizer"></a><span data-ttu-id="b789e-558">organizer :[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)|[Organizer](/javascript/api/outlook/office.organizer)</span><span class="sxs-lookup"><span data-stu-id="b789e-558">organizer :[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)|[Organizer](/javascript/api/outlook/office.organizer)</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-549">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-549">Type</span></span>
 
-<span data-ttu-id="b789e-559">Получает адрес электронной почты организатора указанного собрания.</span><span class="sxs-lookup"><span data-stu-id="b789e-559">Gets the email address of the organizer for a specified meeting.</span></span>
+*   <span data-ttu-id="2fb0b-550">Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-550">Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients)</span></span>
 
-##### <a name="read-mode"></a><span data-ttu-id="b789e-560">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="b789e-560">Read mode</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-551">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-551">Requirements</span></span>
 
-<span data-ttu-id="b789e-561">Свойство `organizer` возвращает объект [EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails), представляющий организатора собрания.</span><span class="sxs-lookup"><span data-stu-id="b789e-561">The `organizer` property returns an [EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails) object that represents the meeting organizer.</span></span>
+|<span data-ttu-id="2fb0b-552">Requirement</span><span class="sxs-lookup"><span data-stu-id="2fb0b-552">Requirement</span></span>|<span data-ttu-id="2fb0b-553">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-553">Value</span></span>|
+|---|---|
+|[<span data-ttu-id="2fb0b-554">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-554">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-555">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-555">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-556">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-556">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-557">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-557">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-558">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-558">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-559">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-559">Compose or Read</span></span>|
 
-##### <a name="compose-mode"></a><span data-ttu-id="b789e-562">Режим создания</span><span class="sxs-lookup"><span data-stu-id="b789e-562">Compose mode</span></span>
+#### <a name="organizer-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsorganizerjavascriptapioutlookofficeorganizer"></a><span data-ttu-id="2fb0b-560">organizer :[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)|[Organizer](/javascript/api/outlook/office.organizer)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-560">organizer :[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)|[Organizer](/javascript/api/outlook/office.organizer)</span></span>
 
-<span data-ttu-id="b789e-563">Свойство `organizer` возвращает объект [Organizer](/javascript/api/outlook/office.organizer), который предоставляет метод для получения значения организатора.</span><span class="sxs-lookup"><span data-stu-id="b789e-563">The `organizer` property returns an [Organizer](/javascript/api/outlook/office.organizer) object that provides a method to get the organizer value.</span></span>
+<span data-ttu-id="2fb0b-561">Получает адрес электронной почты организатора указанного собрания.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-561">Gets the email address of the organizer for a specified meeting.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-564">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-564">Type:</span></span>
+##### <a name="read-mode"></a><span data-ttu-id="2fb0b-562">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="2fb0b-562">Read mode</span></span>
 
-*   <span data-ttu-id="b789e-565">[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails) | [Organizer](/javascript/api/outlook/office.organizer)</span><span class="sxs-lookup"><span data-stu-id="b789e-565">[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails) | [Organizer](/javascript/api/outlook/office.organizer)</span></span>
-
-##### <a name="requirements"></a><span data-ttu-id="b789e-566">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-566">Requirements</span></span>
-
-|<span data-ttu-id="b789e-567">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-567">Requirement</span></span>|||
-|---|---|---|
-|[<span data-ttu-id="b789e-568">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-568">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-569">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-569">1.0</span></span>|<span data-ttu-id="b789e-570">1.7</span><span class="sxs-lookup"><span data-stu-id="b789e-570">1.7</span></span>|
-|[<span data-ttu-id="b789e-571">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-571">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-572">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-572">ReadItem</span></span>|<span data-ttu-id="b789e-573">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="b789e-573">ReadWriteItem</span></span>|
-|[<span data-ttu-id="b789e-574">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-574">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-575">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-575">Read</span></span>|<span data-ttu-id="b789e-576">Создание</span><span class="sxs-lookup"><span data-stu-id="b789e-576">Compose</span></span>|
-
-##### <a name="example"></a><span data-ttu-id="b789e-577">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-577">Example</span></span>
+<span data-ttu-id="2fb0b-563">Свойство `organizer` возвращает объект [EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails), представляющий организатора собрания.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-563">The `organizer` property returns an [EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails) object that represents the meeting organizer.</span></span>
 
 ```javascript
 var organizerName = Office.context.mailbox.item.organizer.displayName;
 var organizerAddress = Office.context.mailbox.item.organizer.emailAddress;
+console.log("Organizer: " + organizerName + " (" + organizerAddress + ")");
 ```
 
-#### <a name="nullable-recurrence-recurrencejavascriptapioutlookofficerecurrence"></a><span data-ttu-id="b789e-578">(nullable) recurrence :[Recurrence](/javascript/api/outlook/office.recurrence)</span><span class="sxs-lookup"><span data-stu-id="b789e-578">(nullable) recurrence :[Recurrence](/javascript/api/outlook/office.recurrence)</span></span>
+##### <a name="compose-mode"></a><span data-ttu-id="2fb0b-564">Режим создания</span><span class="sxs-lookup"><span data-stu-id="2fb0b-564">Compose mode</span></span>
 
-<span data-ttu-id="b789e-579">Получает или задает расписание повторения для встречи.</span><span class="sxs-lookup"><span data-stu-id="b789e-579">Gets or sets the recurrence pattern of an appointment.</span></span> <span data-ttu-id="b789e-580">Получает расписание повторения для приглашения на собрание.</span><span class="sxs-lookup"><span data-stu-id="b789e-580">Gets the recurrence pattern of a meeting request.</span></span> <span data-ttu-id="b789e-581">Доступно в режимах чтения и создания для элементов встречи.</span><span class="sxs-lookup"><span data-stu-id="b789e-581">Read and compose modes for appointment items.</span></span> <span data-ttu-id="b789e-582">Доступно в режиме чтения для элементов приглашения на собрание.</span><span class="sxs-lookup"><span data-stu-id="b789e-582">Read mode for meeting request items.</span></span>
+<span data-ttu-id="2fb0b-565">Свойство `organizer` возвращает объект [Organizer](/javascript/api/outlook/office.organizer), который предоставляет метод для получения значения организатора.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-565">The `organizer` property returns an [Organizer](/javascript/api/outlook/office.organizer) object that provides a method to get the organizer value.</span></span>
 
-<span data-ttu-id="b789e-583">Свойство `recurrence` возвращает объект [recurrence](/javascript/api/outlook/office.recurrence) для повторяющихся встреч или приглашений на собрание, если элемент представляет собой серию или экземпляр в пределах серии.</span><span class="sxs-lookup"><span data-stu-id="b789e-583">The `recurrence` property returns a [recurrence](/javascript/api/outlook/office.recurrence) object for recurring appointments or meetings requests if an item is a series or an instance in a series.</span></span> <span data-ttu-id="b789e-584">Значение `null` возвращается для отдельных встреч и приглашений на собрания, связанных с одной встречей.</span><span class="sxs-lookup"><span data-stu-id="b789e-584">`null` is returned for single appointments and meeting requests of single appointments.</span></span> <span data-ttu-id="b789e-585">Значение `undefined` возвращается для сообщений, которые не являются приглашениями на собрания.</span><span class="sxs-lookup"><span data-stu-id="b789e-585">`undefined` is returned for messages that are not meeting requests.</span></span>
+```javascript
+Office.context.mailbox.item.organizer.getAsync(
+  function(asyncResult) {
+    console.log(JSON.stringify(asyncResult));
+  }
+);
+```
 
-> <span data-ttu-id="b789e-586">Примечание. Приглашения на собрания имеют значение `itemClass` для класса IPM.Schedule.Meeting.Request.</span><span class="sxs-lookup"><span data-stu-id="b789e-586">Note: Meeting requests have an `itemClass` value of IPM.Schedule.Meeting.Request.</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-566">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-566">Type</span></span>
 
-> <span data-ttu-id="b789e-587">Примечание. Если объект recurrence имеет значение `null`, он представляет собой отдельную встречу или приглашение на собрание, связанное с одной встречей, и НЕ входит в серию.</span><span class="sxs-lookup"><span data-stu-id="b789e-587">Note: If the recurrence object is `null`, this indicates that the object is a single appointment or a meeting request of a single appointment and NOT a part of a series.</span></span>
+*   <span data-ttu-id="2fb0b-567">[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails) | [Organizer](/javascript/api/outlook/office.organizer)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-567">[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails) | [Organizer](/javascript/api/outlook/office.organizer)</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-588">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-588">Type:</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-568">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-568">Requirements</span></span>
 
-* [<span data-ttu-id="b789e-589">Recurrence</span><span class="sxs-lookup"><span data-stu-id="b789e-589">Recurrence</span></span>](/javascript/api/outlook/office.recurrence)
+|<span data-ttu-id="2fb0b-569">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-569">Requirement</span></span>|||
+|---|---|---|
+|[<span data-ttu-id="2fb0b-570">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-570">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-571">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-571">1.0</span></span>|<span data-ttu-id="2fb0b-572">1.7</span><span class="sxs-lookup"><span data-stu-id="2fb0b-572">1.7</span></span>|
+|[<span data-ttu-id="2fb0b-573">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-573">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-574">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-574">ReadItem</span></span>|<span data-ttu-id="2fb0b-575">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-575">ReadWriteItem</span></span>|
+|[<span data-ttu-id="2fb0b-576">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-576">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-577">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-577">Read</span></span>|<span data-ttu-id="2fb0b-578">Создание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-578">Compose</span></span>|
 
-|<span data-ttu-id="b789e-590">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-590">Requirement</span></span>|<span data-ttu-id="b789e-591">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-591">Value</span></span>|
+#### <a name="nullable-recurrence-recurrencejavascriptapioutlookofficerecurrence"></a><span data-ttu-id="2fb0b-579">(nullable) recurrence :[Recurrence](/javascript/api/outlook/office.recurrence)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-579">(nullable) recurrence :[Recurrence](/javascript/api/outlook/office.recurrence)</span></span>
+
+<span data-ttu-id="2fb0b-580">Получает или задает расписание повторения для встречи.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-580">Gets or sets the recurrence pattern of an appointment.</span></span> <span data-ttu-id="2fb0b-581">Получает расписание повторения для приглашения на собрание.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-581">Gets the recurrence pattern of a meeting request.</span></span> <span data-ttu-id="2fb0b-582">Доступно в режимах чтения и создания для элементов встречи.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-582">Read and compose modes for appointment items.</span></span> <span data-ttu-id="2fb0b-583">Доступно в режиме чтения для элементов приглашения на собрание.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-583">Read mode for meeting request items.</span></span>
+
+<span data-ttu-id="2fb0b-584">Свойство `recurrence` возвращает объект [recurrence](/javascript/api/outlook/office.recurrence) для повторяющихся встреч или приглашений на собрание, если элемент представляет собой серию или экземпляр в пределах серии.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-584">The `recurrence` property returns a [recurrence](/javascript/api/outlook/office.recurrence) object for recurring appointments or meetings requests if an item is a series or an instance in a series.</span></span> <span data-ttu-id="2fb0b-585">Значение `null` возвращается для отдельных встреч и приглашений на собрания, связанных с одной встречей.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-585">`null` is returned for single appointments and meeting requests of single appointments.</span></span> <span data-ttu-id="2fb0b-586">Значение `undefined` возвращается для сообщений, которые не являются приглашениями на собрания.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-586">`undefined` is returned for messages that are not meeting requests.</span></span>
+
+> <span data-ttu-id="2fb0b-587">Примечание. Приглашения на собрания имеют значение `itemClass` для класса IPM.Schedule.Meeting.Request.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-587">Note: Meeting requests have an `itemClass` value of IPM.Schedule.Meeting.Request.</span></span>
+
+> <span data-ttu-id="2fb0b-588">Примечание. Если объект recurrence имеет значение `null`, он представляет собой отдельную встречу или приглашение на собрание, связанное с одной встречей, и НЕ входит в серию.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-588">Note: If the recurrence object is `null`, this indicates that the object is a single appointment or a meeting request of a single appointment and NOT a part of a series.</span></span>
+
+##### <a name="read-mode"></a><span data-ttu-id="2fb0b-589">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="2fb0b-589">Read mode</span></span>
+
+<span data-ttu-id="2fb0b-590">`recurrence` Свойство возвращает объект [повторения](/javascript/api/outlook/office.recurrence) , представляющий повторение встречи.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-590">The `recurrence` property returns a [Recurrence](/javascript/api/outlook/office.recurrence) object that represents the appointment recurrence.</span></span> <span data-ttu-id="2fb0b-591">Оно доступно для встреч и приглашений на собрания.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-591">This is available for appointments and meeting requests.</span></span>
+
+```javascript
+var recurrence = Office.context.mailbox.item.recurrence;
+console.log("Recurrence: " + JSON.stringify(recurrence));
+```
+
+##### <a name="compose-mode"></a><span data-ttu-id="2fb0b-592">Режим создания</span><span class="sxs-lookup"><span data-stu-id="2fb0b-592">Compose mode</span></span>
+
+<span data-ttu-id="2fb0b-593">`recurrence` Свойство возвращает объект [повторения](/javascript/api/outlook/office.recurrence) , который предоставляет методы для управления повторением встречи.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-593">The `recurrence` property returns a [Recurrence](/javascript/api/outlook/office.recurrence) object that provides methods to manage the appointment recurrence.</span></span> <span data-ttu-id="2fb0b-594">Оно доступно для встреч.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-594">This is available for appointments.</span></span>
+
+```javascript
+Office.context.mailbox.item.recurrence.getAsync(callback);
+
+function callback(asyncResult) {
+  var context = asyncResult.context;
+  var recurrence = asyncResult.value;
+  if (!recurrence) {
+    console.log("One-time appointment or meeting");
+  } else {
+    console.log(JSON.stringify(recurrence));
+  }
+}
+
+// The following example shows the results of the getAsync call that retrieves the recurrence for a series.
+// NOTE: In this example, seriesTimeObject is a placeholder for the JSON representing the
+// recurrence.seriesTime property. You should use the SeriesTime object's methods to get the
+// recurrence date and time properties.
+Recurrence = {
+  "recurrenceType": "weekly",
+  "recurrenceProperties": {"interval": 2, "days": ["mon","thu","fri"], "firstDayOfWeek": "sun"},
+  "seriesTime": {seriesTimeObject},
+  "recurrenceTimeZone": {"name": "Pacific Standard Time", "offset": -480}
+}
+```
+
+##### <a name="type"></a><span data-ttu-id="2fb0b-595">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-595">Type</span></span>
+
+* [<span data-ttu-id="2fb0b-596">Recurrence</span><span class="sxs-lookup"><span data-stu-id="2fb0b-596">Recurrence</span></span>](/javascript/api/outlook/office.recurrence)
+
+|<span data-ttu-id="2fb0b-597">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-597">Requirement</span></span>|<span data-ttu-id="2fb0b-598">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-598">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-592">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-592">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-593">1.7</span><span class="sxs-lookup"><span data-stu-id="b789e-593">1.7</span></span>|
-|[<span data-ttu-id="b789e-594">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-594">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-595">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-595">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-596">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-596">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-597">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-597">Compose or read</span></span>|
+|[<span data-ttu-id="2fb0b-599">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-599">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-600">1.7</span><span class="sxs-lookup"><span data-stu-id="2fb0b-600">1.7</span></span>|
+|[<span data-ttu-id="2fb0b-601">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-601">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-602">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-602">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-603">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-603">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-604">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-604">Compose or Read</span></span>|
 
-####  <a name="requiredattendees-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients"></a><span data-ttu-id="b789e-598">requiredAttendees :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="b789e-598">requiredAttendees :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)</span></span>
+####  <a name="requiredattendees-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients"></a><span data-ttu-id="2fb0b-605">requiredAttendees :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-605">requiredAttendees :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)</span></span>
 
-<span data-ttu-id="b789e-599">Предоставляет доступ к обязательным участникам события.</span><span class="sxs-lookup"><span data-stu-id="b789e-599">Provides access to the required attendees of an event.</span></span> <span data-ttu-id="b789e-600">Тип объекта и уровень доступа зависят от режима текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-600">The type of object and level of access depends on the mode of the current item.</span></span>
+<span data-ttu-id="2fb0b-606">Предоставляет доступ к обязательным участникам события.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-606">Provides access to the required attendees of an event.</span></span> <span data-ttu-id="2fb0b-607">Тип объекта и уровень доступа зависят от режима текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-607">The type of object and level of access depends on the mode of the current item.</span></span>
 
-##### <a name="read-mode"></a><span data-ttu-id="b789e-601">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="b789e-601">Read mode</span></span>
+##### <a name="read-mode"></a><span data-ttu-id="2fb0b-608">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="2fb0b-608">Read mode</span></span>
 
-<span data-ttu-id="b789e-602">Свойство `requiredAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого обязательного участника собрания.</span><span class="sxs-lookup"><span data-stu-id="b789e-602">The `requiredAttendees` property returns an array that contains an `EmailAddressDetails` object for each required attendee to the meeting.</span></span>
+<span data-ttu-id="2fb0b-609">Свойство `requiredAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого обязательного участника собрания.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-609">The `requiredAttendees` property returns an array that contains an `EmailAddressDetails` object for each required attendee to the meeting.</span></span>
 
-##### <a name="compose-mode"></a><span data-ttu-id="b789e-603">Режим создания</span><span class="sxs-lookup"><span data-stu-id="b789e-603">Compose mode</span></span>
+```javascript
+var requiredAttendees = Office.context.mailbox.item.requiredAttendees;
+console.log("Required attendees: " + JSON.stringify(requiredAttendees));
+```
 
-<span data-ttu-id="b789e-604">Свойство `requiredAttendees` возвращает объект `Recipients`, предоставляющий методы, с помощью которых можно получить или обновить сведения об обязательных участниках собрания.</span><span class="sxs-lookup"><span data-stu-id="b789e-604">The `requiredAttendees` property returns a `Recipients` object that provides methods to get or update the required attendees for a meeting.</span></span>
+##### <a name="compose-mode"></a><span data-ttu-id="2fb0b-610">Режим создания</span><span class="sxs-lookup"><span data-stu-id="2fb0b-610">Compose mode</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-605">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-605">Type:</span></span>
-
-*   <span data-ttu-id="b789e-606">Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="b789e-606">Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients)</span></span>
-
-##### <a name="requirements"></a><span data-ttu-id="b789e-607">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-607">Requirements</span></span>
-
-|<span data-ttu-id="b789e-608">Requirement</span><span class="sxs-lookup"><span data-stu-id="b789e-608">Requirement</span></span>|<span data-ttu-id="b789e-609">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-609">Value</span></span>|
-|---|---|
-|[<span data-ttu-id="b789e-610">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-610">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-611">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-611">1.0</span></span>|
-|[<span data-ttu-id="b789e-612">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-612">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-613">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-613">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-614">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-614">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-615">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-615">Compose or read</span></span>|
-
-##### <a name="example"></a><span data-ttu-id="b789e-616">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-616">Example</span></span>
+<span data-ttu-id="2fb0b-611">Свойство `requiredAttendees` возвращает объект `Recipients`, предоставляющий методы, с помощью которых можно получить или обновить сведения об обязательных участниках собрания.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-611">The `requiredAttendees` property returns a `Recipients` object that provides methods to get or update the required attendees for a meeting.</span></span>
 
 ```javascript
 Office.context.mailbox.item.requiredAttendees.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
@@ -755,179 +854,194 @@ Office.context.mailbox.item.requiredAttendees.getAsync(callback);
 
 function callback(asyncResult) {
   var arrayOfRequiredAttendeesRecipients = asyncResult.value;
+  console.log(JSON.stringify(arrayOfRequiredAttendeesRecipients));
 }
 ```
 
-#### <a name="sender-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetails"></a><span data-ttu-id="b789e-617">sender :[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)</span><span class="sxs-lookup"><span data-stu-id="b789e-617">sender :[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-612">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-612">Type</span></span>
 
-<span data-ttu-id="b789e-p126">Получает электронный адрес отправителя электронного сообщения. Только в режиме чтения.</span><span class="sxs-lookup"><span data-stu-id="b789e-p126">Gets the email address of the sender of an email message. Read mode only.</span></span>
+*   <span data-ttu-id="2fb0b-613">Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-613">Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients)</span></span>
 
-<span data-ttu-id="b789e-p127">Свойства [`from`](#from-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsfromjavascriptapioutlookofficefrom) и `sender` представляют одно лицо, если сообщение не отправлено представителем. В противном случае свойство `from` представляет лицо, делегировавшее полномочия, а свойство sender — представителя.</span><span class="sxs-lookup"><span data-stu-id="b789e-p127">The [`from`](#from-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsfromjavascriptapioutlookofficefrom) and `sender` properties represent the same person unless the message is sent by a delegate. In that case, the `from` property represents the delegator, and the sender property represents the delegate.</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-614">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-614">Requirements</span></span>
+
+|<span data-ttu-id="2fb0b-615">Requirement</span><span class="sxs-lookup"><span data-stu-id="2fb0b-615">Requirement</span></span>|<span data-ttu-id="2fb0b-616">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-616">Value</span></span>|
+|---|---|
+|[<span data-ttu-id="2fb0b-617">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-617">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-618">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-618">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-619">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-619">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-620">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-620">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-621">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-621">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-622">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-622">Compose or Read</span></span>|
+
+#### <a name="sender-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetails"></a><span data-ttu-id="2fb0b-623">sender :[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-623">sender :[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)</span></span>
+
+<span data-ttu-id="2fb0b-p128">Получает электронный адрес отправителя электронного сообщения. Только в режиме чтения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p128">Gets the email address of the sender of an email message. Read mode only.</span></span>
+
+<span data-ttu-id="2fb0b-p129">Свойства [`from`](#from-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsfromjavascriptapioutlookofficefrom) и `sender` представляют одно лицо, если сообщение не отправлено представителем. В противном случае свойство `from` представляет лицо, делегировавшее полномочия, а свойство sender — представителя.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p129">The [`from`](#from-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsfromjavascriptapioutlookofficefrom) and `sender` properties represent the same person unless the message is sent by a delegate. In that case, the `from` property represents the delegator, and the sender property represents the delegate.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-622">Свойству `recipientType`, принадлежащему объекту `EmailAddressDetails` в свойстве `sender`, задано значение `undefined`.</span><span class="sxs-lookup"><span data-stu-id="b789e-622">The `recipientType` property of the `EmailAddressDetails` object in the `sender` property is `undefined`.</span></span>
+> <span data-ttu-id="2fb0b-628">Свойству `recipientType`, принадлежащему объекту `EmailAddressDetails` в свойстве `sender`, задано значение `undefined`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-628">The `recipientType` property of the `EmailAddressDetails` object in the `sender` property is `undefined`.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-623">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-623">Type:</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-629">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-629">Type</span></span>
 
-*   [<span data-ttu-id="b789e-624">EmailAddressDetails</span><span class="sxs-lookup"><span data-stu-id="b789e-624">EmailAddressDetails</span></span>](/javascript/api/outlook/office.emailaddressdetails)
+*   [<span data-ttu-id="2fb0b-630">EmailAddressDetails</span><span class="sxs-lookup"><span data-stu-id="2fb0b-630">EmailAddressDetails</span></span>](/javascript/api/outlook/office.emailaddressdetails)
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-625">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-625">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-631">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-631">Requirements</span></span>
 
-|<span data-ttu-id="b789e-626">Requirement</span><span class="sxs-lookup"><span data-stu-id="b789e-626">Requirement</span></span>|<span data-ttu-id="b789e-627">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-627">Value</span></span>|
+|<span data-ttu-id="2fb0b-632">Requirement</span><span class="sxs-lookup"><span data-stu-id="2fb0b-632">Requirement</span></span>|<span data-ttu-id="2fb0b-633">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-633">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-628">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-628">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-629">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-629">1.0</span></span>|
-|[<span data-ttu-id="b789e-630">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-630">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-631">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-631">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-632">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-632">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-633">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-633">Read</span></span>|
+|[<span data-ttu-id="2fb0b-634">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-634">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-635">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-635">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-636">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-636">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-637">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-637">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-638">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-638">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-639">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-639">Read</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-634">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-634">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-640">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-640">Example</span></span>
 
 ```javascript
 var senderName = Office.context.mailbox.item.sender.displayName;
 var senderAddress = Office.context.mailbox.item.sender.emailAddress;
+console.log("Sender: " + senderName + " (" + senderAddress + ")");
 ```
 
-#### <a name="nullable-seriesid-string"></a><span data-ttu-id="b789e-635">(nullable) seriesId :String</span><span class="sxs-lookup"><span data-stu-id="b789e-635">(nullable) seriesId :String</span></span>
+#### <a name="nullable-seriesid-string"></a><span data-ttu-id="2fb0b-641">(nullable) seriesId :String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-641">(nullable) seriesId :String</span></span>
 
-<span data-ttu-id="b789e-636">Получает идентификатор серии, к которой относится экземпляр.</span><span class="sxs-lookup"><span data-stu-id="b789e-636">Gets the id of the series that an instance belongs to.</span></span>
+<span data-ttu-id="2fb0b-642">Получает идентификатор серии, к которой относится экземпляр.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-642">Gets the id of the series that an instance belongs to.</span></span>
 
-<span data-ttu-id="b789e-637">В Outlook Web App и Outlook свойство `seriesId` возвращает идентификатор веб-служб Exchange (EWS) родительского элемента (серии), к которому относится этот элемент.</span><span class="sxs-lookup"><span data-stu-id="b789e-637">In OWA and Outlook, the `seriesId` returns the Exchange Web Services (EWS) ID of the parent (series) item that this item belongs to.</span></span> <span data-ttu-id="b789e-638">Однако в iOS и Android свойство `seriesId` возвращает идентификатор REST родительского элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-638">However, in iOS and Android, the `seriesId` returns the REST ID of the parent item.</span></span>
+<span data-ttu-id="2fb0b-643">В Outlook Web App и Outlook свойство `seriesId` возвращает идентификатор веб-служб Exchange (EWS) родительского элемента (серии), к которому относится этот элемент.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-643">In OWA and Outlook, the `seriesId` returns the Exchange Web Services (EWS) ID of the parent (series) item that this item belongs to.</span></span> <span data-ttu-id="2fb0b-644">Однако в iOS и Android свойство `seriesId` возвращает идентификатор REST родительского элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-644">However, in iOS and Android, the `seriesId` returns the REST ID of the parent item.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-639">Идентификатор, возвращаемый свойством `seriesId`, совпадает с идентификатором элемента веб-служб Exchange.</span><span class="sxs-lookup"><span data-stu-id="b789e-639">The identifier returned by the `seriesId` property is the same as the Exchange Web Services item identifier.</span></span> <span data-ttu-id="b789e-640">Свойство `seriesId` не совпадает с идентификаторами Outlook, которые используются в REST API Outlook.</span><span class="sxs-lookup"><span data-stu-id="b789e-640">The `seriesId` property is not identical to the Outlook IDs used by the Outlook REST API.</span></span> <span data-ttu-id="b789e-641">Прежде чем совершать вызовы REST API, используя это значение, его необходимо преобразовать с помощью [Office.context.mailbox.convertToRestId](office.context.mailbox.md#converttorestiditemid-restversion--string).</span><span class="sxs-lookup"><span data-stu-id="b789e-641">Before making REST API calls using this value, it should be converted using [Office.context.mailbox.convertToRestId](office.context.mailbox.md#converttorestiditemid-restversion--string).</span></span> <span data-ttu-id="b789e-642">Дополнительные сведения см. в статье [Использование REST API Outlook из надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/use-rest-api).</span><span class="sxs-lookup"><span data-stu-id="b789e-642">For more details, see [Use the Outlook REST APIs from an Outlook add-in](https://docs.microsoft.com/outlook/add-ins/use-rest-api).</span></span>
+> <span data-ttu-id="2fb0b-645">Идентификатор, возвращаемый свойством `seriesId`, совпадает с идентификатором элемента веб-служб Exchange.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-645">The identifier returned by the `seriesId` property is the same as the Exchange Web Services item identifier.</span></span> <span data-ttu-id="2fb0b-646">Свойство `seriesId` не совпадает с идентификаторами Outlook, которые используются в REST API Outlook.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-646">The `seriesId` property is not identical to the Outlook IDs used by the Outlook REST API.</span></span> <span data-ttu-id="2fb0b-647">Прежде чем совершать вызовы REST API, используя это значение, его необходимо преобразовать с помощью [Office.context.mailbox.convertToRestId](office.context.mailbox.md#converttorestiditemid-restversion--string).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-647">Before making REST API calls using this value, it should be converted using [Office.context.mailbox.convertToRestId](office.context.mailbox.md#converttorestiditemid-restversion--string).</span></span> <span data-ttu-id="2fb0b-648">Дополнительные сведения см. в статье [Использование REST API Outlook из надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/use-rest-api).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-648">For more details, see [Use the Outlook REST APIs from an Outlook add-in](https://docs.microsoft.com/outlook/add-ins/use-rest-api).</span></span>
 
-<span data-ttu-id="b789e-643">Свойство `seriesId` возвращает значение `null` для элементов, у которых нет родительских элементов, например отдельных встреч, элементов серий или приглашений на собрания, и возвращает значение `undefined` для всех других элементов, которые не представляют собой приглашения на собрания.</span><span class="sxs-lookup"><span data-stu-id="b789e-643">The `seriesId` property returns `null` for items that do not have parent items such as single appointments, series items, or meeting requests and returns `undefined` for any other items that are not meeting requests.</span></span>
+<span data-ttu-id="2fb0b-649">Свойство `seriesId` возвращает значение `null` для элементов, у которых нет родительских элементов, например отдельных встреч, элементов серий или приглашений на собрания, и возвращает значение `undefined` для всех других элементов, которые не представляют собой приглашения на собрания.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-649">The `seriesId` property returns `null` for items that do not have parent items such as single appointments, series items, or meeting requests and returns `undefined` for any other items that are not meeting requests.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-644">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-644">Type:</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-650">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-650">Type</span></span>
 
-* <span data-ttu-id="b789e-645">String</span><span class="sxs-lookup"><span data-stu-id="b789e-645">String</span></span>
+* <span data-ttu-id="2fb0b-651">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-651">String</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-646">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-646">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-652">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-652">Requirements</span></span>
 
-|<span data-ttu-id="b789e-647">Requirement</span><span class="sxs-lookup"><span data-stu-id="b789e-647">Requirement</span></span>|<span data-ttu-id="b789e-648">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-648">Value</span></span>|
+|<span data-ttu-id="2fb0b-653">Requirement</span><span class="sxs-lookup"><span data-stu-id="2fb0b-653">Requirement</span></span>|<span data-ttu-id="2fb0b-654">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-654">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-649">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-649">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-650">1.7</span><span class="sxs-lookup"><span data-stu-id="b789e-650">1.7</span></span>|
-|[<span data-ttu-id="b789e-651">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-651">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-652">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-652">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-653">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-653">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-654">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-654">Compose or read</span></span>|
+|[<span data-ttu-id="2fb0b-655">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-655">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-656">1.7</span><span class="sxs-lookup"><span data-stu-id="2fb0b-656">1.7</span></span>|
+|[<span data-ttu-id="2fb0b-657">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-657">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-658">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-658">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-659">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-659">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-660">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-660">Compose or Read</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-655">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-655">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-661">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-661">Example</span></span>
 
 ```javascript
 var seriesId = Office.context.mailbox.item.seriesId;
-var isSeries = (seriesId == null);
+
+// The seriesId property returns null for items that do
+// not have parent items (such as single appointments,
+// series items, or meeting requests) and returns
+// undefined for messages that are not meeting requests.
+var isSeriesInstance = (seriesId != null);
+console.log("SeriesId is " + seriesId + " and isSeriesInstance is " + isSeriesInstance);
 ```
 
-####  <a name="start-datetimejavascriptapioutlookofficetime"></a><span data-ttu-id="b789e-656">start :Date|[Time](/javascript/api/outlook/office.time)</span><span class="sxs-lookup"><span data-stu-id="b789e-656">start :Date|[Time](/javascript/api/outlook/office.time)</span></span>
+####  <a name="start-datetimejavascriptapioutlookofficetime"></a><span data-ttu-id="2fb0b-662">start :Date|[Time](/javascript/api/outlook/office.time)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-662">start :Date|[Time](/javascript/api/outlook/office.time)</span></span>
 
-<span data-ttu-id="b789e-657">Получает или задает дату и время начала встречи.</span><span class="sxs-lookup"><span data-stu-id="b789e-657">Gets or sets the date and time that the appointment is to begin.</span></span>
+<span data-ttu-id="2fb0b-663">Получает или задает дату и время начала встречи.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-663">Gets or sets the date and time that the appointment is to begin.</span></span>
 
-<span data-ttu-id="b789e-p130">Свойство `start` представлено в виде значения даты и времени в формате UTC. Это значение можно преобразовать в местные значения даты и времени клиента с помощью метода [`convertToLocalClientTime`](office.context.mailbox.md#converttolocalclienttimetimevalue--localclienttimejavascriptapioutlookofficelocalclienttime).</span><span class="sxs-lookup"><span data-stu-id="b789e-p130">The `start` property is expressed as a Coordinated Universal Time (UTC) date and time value. You can use the [`convertToLocalClientTime`](office.context.mailbox.md#converttolocalclienttimetimevalue--localclienttimejavascriptapioutlookofficelocalclienttime) method to convert the value to the client’s local date and time.</span></span>
+<span data-ttu-id="2fb0b-p132">Свойство `start` представлено в виде значения даты и времени в формате UTC. Это значение можно преобразовать в местные значения даты и времени клиента с помощью метода [`convertToLocalClientTime`](office.context.mailbox.md#converttolocalclienttimetimevalue--localclienttimejavascriptapioutlookofficelocalclienttime).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p132">The `start` property is expressed as a Coordinated Universal Time (UTC) date and time value. You can use the [`convertToLocalClientTime`](office.context.mailbox.md#converttolocalclienttimetimevalue--localclienttimejavascriptapioutlookofficelocalclienttime) method to convert the value to the client’s local date and time.</span></span>
 
-##### <a name="read-mode"></a><span data-ttu-id="b789e-660">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="b789e-660">Read mode</span></span>
+##### <a name="read-mode"></a><span data-ttu-id="2fb0b-666">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="2fb0b-666">Read mode</span></span>
 
-<span data-ttu-id="b789e-661">Свойство `start` возвращает объект `Date`.</span><span class="sxs-lookup"><span data-stu-id="b789e-661">The `start` property returns a `Date` object.</span></span>
+<span data-ttu-id="2fb0b-667">Свойство `start` возвращает объект `Date`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-667">The `start` property returns a `Date` object.</span></span>
 
-##### <a name="compose-mode"></a><span data-ttu-id="b789e-662">Режим создания</span><span class="sxs-lookup"><span data-stu-id="b789e-662">Compose mode</span></span>
+```javascript
+var start = Office.context.mailbox.item.start;
+console.log("Appointment start: " + JSON.stringify(start));
+```
 
-<span data-ttu-id="b789e-663">Свойство `start` возвращает объект `Time`.</span><span class="sxs-lookup"><span data-stu-id="b789e-663">The `start` property returns a `Time` object.</span></span>
+##### <a name="compose-mode"></a><span data-ttu-id="2fb0b-668">Режим создания</span><span class="sxs-lookup"><span data-stu-id="2fb0b-668">Compose mode</span></span>
 
-<span data-ttu-id="b789e-664">Если вы задаете время начала с помощью метода [`Time.setAsync`](/javascript/api/outlook/office.time#setasync-datetime--options--callback-), необходимо использовать метод [`convertToUtcClientTime`](office.context.mailbox.md#converttoutcclienttimeinput--date) для преобразования местного времени на клиенте в формат UTC для сервера.</span><span class="sxs-lookup"><span data-stu-id="b789e-664">When you use the [`Time.setAsync`](/javascript/api/outlook/office.time#setasync-datetime--options--callback-) method to set the start time, you should use the [`convertToUtcClientTime`](office.context.mailbox.md#converttoutcclienttimeinput--date) method to convert the local time on the client to UTC for the server.</span></span>
+<span data-ttu-id="2fb0b-669">Свойство `start` возвращает объект `Time`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-669">The `start` property returns a `Time` object.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-665">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-665">Type:</span></span>
+<span data-ttu-id="2fb0b-670">Если вы задаете время начала с помощью метода [`Time.setAsync`](/javascript/api/outlook/office.time#setasync-datetime--options--callback-), необходимо использовать метод [`convertToUtcClientTime`](office.context.mailbox.md#converttoutcclienttimeinput--date) для преобразования местного времени на клиенте в формат UTC для сервера.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-670">When you use the [`Time.setAsync`](/javascript/api/outlook/office.time#setasync-datetime--options--callback-) method to set the start time, you should use the [`convertToUtcClientTime`](office.context.mailbox.md#converttoutcclienttimeinput--date) method to convert the local time on the client to UTC for the server.</span></span>
 
-*   <span data-ttu-id="b789e-666">Date | [Time](/javascript/api/outlook/office.time)</span><span class="sxs-lookup"><span data-stu-id="b789e-666">Date | [Time](/javascript/api/outlook/office.time)</span></span>
-
-##### <a name="requirements"></a><span data-ttu-id="b789e-667">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-667">Requirements</span></span>
-
-|<span data-ttu-id="b789e-668">Requirement</span><span class="sxs-lookup"><span data-stu-id="b789e-668">Requirement</span></span>|<span data-ttu-id="b789e-669">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-669">Value</span></span>|
-|---|---|
-|[<span data-ttu-id="b789e-670">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-670">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-671">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-671">1.0</span></span>|
-|[<span data-ttu-id="b789e-672">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-672">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-673">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-673">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-674">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-674">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-675">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-675">Compose or read</span></span>|
-
-##### <a name="example"></a><span data-ttu-id="b789e-676">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-676">Example</span></span>
-
-<span data-ttu-id="b789e-677">В примере ниже с помощью метода [`setAsync`](/javascript/api/outlook/office.time#setasync-datetime--options--callback-) объекта `Time` задается время начала встречи в режиме создания.</span><span class="sxs-lookup"><span data-stu-id="b789e-677">The following example sets the start time of an appointment in compose mode by using the [`setAsync`](/javascript/api/outlook/office.time#setasync-datetime--options--callback-) method of the `Time` object.</span></span>
+<span data-ttu-id="2fb0b-671">В примере ниже с помощью метода [`setAsync`](/javascript/api/outlook/office.time#setasync-datetime--options--callback-) объекта `Time` задается время начала встречи в режиме создания.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-671">The following example sets the start time of an appointment in compose mode by using the [`setAsync`](/javascript/api/outlook/office.time#setasync-datetime--options--callback-) method of the `Time` object.</span></span>
 
 ```javascript
 var startTime = new Date("3/14/2015");
 var options = {
-  // Pass information that can be used
-  // in the callback
-  asyncContext: {verb:"Set"}
-}
+  // Pass information that can be used in the callback.
+  asyncContext: {verb: "Set"}
+};
 Office.context.mailbox.item.start.setAsync(startTime, options, function(result) {
   if (result.error) {
     console.debug(result.error);
   } else {
-    // Access the asyncContext that was passed to the setAsync function
+    // Access the asyncContext that was passed to the setAsync function.
     console.debug("Start Time " + result.asyncContext.verb);
   }
 });
 ```
 
-####  <a name="subject-stringsubjectjavascriptapioutlookofficesubject"></a><span data-ttu-id="b789e-678">subject :String|[Subject](/javascript/api/outlook/office.subject)</span><span class="sxs-lookup"><span data-stu-id="b789e-678">subject :String|[Subject](/javascript/api/outlook/office.subject)</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-672">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-672">Type</span></span>
 
-<span data-ttu-id="b789e-679">Получает или задает описание, которое отображается в поле темы элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-679">Gets or sets the description that appears in the subject field of an item.</span></span>
+*   <span data-ttu-id="2fb0b-673">Date | [Time](/javascript/api/outlook/office.time)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-673">Date | [Time](/javascript/api/outlook/office.time)</span></span>
 
-<span data-ttu-id="b789e-680">Свойство `subject` получает или задает всю тему элемента для отправки с почтового сервера.</span><span class="sxs-lookup"><span data-stu-id="b789e-680">The `subject` property gets or sets the entire subject of the item, as sent by the email server.</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-674">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-674">Requirements</span></span>
 
-##### <a name="read-mode"></a><span data-ttu-id="b789e-681">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="b789e-681">Read mode</span></span>
+|<span data-ttu-id="2fb0b-675">Requirement</span><span class="sxs-lookup"><span data-stu-id="2fb0b-675">Requirement</span></span>|<span data-ttu-id="2fb0b-676">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-676">Value</span></span>|
+|---|---|
+|[<span data-ttu-id="2fb0b-677">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-677">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-678">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-678">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-679">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-679">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-680">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-680">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-681">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-681">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-682">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-682">Compose or Read</span></span>|
 
-<span data-ttu-id="b789e-p131">Свойство `subject` возвращает строку. С помощью свойства [`normalizedSubject`](#normalizedsubject-string) можно получить тему без начальных префиксов, таких как `RE:` и `FW:`.</span><span class="sxs-lookup"><span data-stu-id="b789e-p131">The `subject` property returns a string. Use the [`normalizedSubject`](#normalizedsubject-string) property to get the subject minus any leading prefixes such as `RE:` and `FW:`.</span></span>
+####  <a name="subject-stringsubjectjavascriptapioutlookofficesubject"></a><span data-ttu-id="2fb0b-683">subject :String|[Subject](/javascript/api/outlook/office.subject)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-683">subject :String|[Subject](/javascript/api/outlook/office.subject)</span></span>
+
+<span data-ttu-id="2fb0b-684">Получает или задает описание, которое отображается в поле темы элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-684">Gets or sets the description that appears in the subject field of an item.</span></span>
+
+<span data-ttu-id="2fb0b-685">Свойство `subject` получает или задает всю тему элемента для отправки с почтового сервера.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-685">The `subject` property gets or sets the entire subject of the item, as sent by the email server.</span></span>
+
+##### <a name="read-mode"></a><span data-ttu-id="2fb0b-686">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="2fb0b-686">Read mode</span></span>
+
+<span data-ttu-id="2fb0b-p133">Свойство `subject` возвращает строку. С помощью свойства [`normalizedSubject`](#normalizedsubject-string) можно получить тему без начальных префиксов, таких как `RE:` и `FW:`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p133">The `subject` property returns a string. Use the [`normalizedSubject`](#normalizedsubject-string) property to get the subject minus any leading prefixes such as `RE:` and `FW:`.</span></span>
+
+<span data-ttu-id="2fb0b-689">В примере кода JavaScript, приведенном ниже, показано, как получить доступ к свойству `subject` текущего элемента в Outlook.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-689">The following JavaScript code example shows how to access the `subject` property of the current item in Outlook.</span></span>
 
 ```javascript
 var subject = Office.context.mailbox.item.subject;
+console.log(subject);
 ```
 
-##### <a name="compose-mode"></a><span data-ttu-id="b789e-684">Режим создания</span><span class="sxs-lookup"><span data-stu-id="b789e-684">Compose mode</span></span>
-
-<span data-ttu-id="b789e-685">Свойство `subject` возвращает объект `Subject`, который предоставляет методы для получения и задания темы.</span><span class="sxs-lookup"><span data-stu-id="b789e-685">The `subject` property returns a `Subject` object that provides methods to get and set the subject.</span></span>
+##### <a name="compose-mode"></a><span data-ttu-id="2fb0b-690">Режим создания</span><span class="sxs-lookup"><span data-stu-id="2fb0b-690">Compose mode</span></span>
+<span data-ttu-id="2fb0b-691">Свойство `subject` возвращает объект `Subject`, который предоставляет методы для получения и задания темы.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-691">The `subject` property returns a `Subject` object that provides methods to get and set the subject.</span></span>
 
 ```javascript
 Office.context.mailbox.item.subject.getAsync(callback);
 
 function callback(asyncResult) {
   var subject = asyncResult.value;
+  console.log(subject);
 }
 ```
 
-##### <a name="type"></a><span data-ttu-id="b789e-686">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-686">Type:</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-692">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-692">Type</span></span>
 
-*   <span data-ttu-id="b789e-687">String | [Subject](/javascript/api/outlook/office.subject)</span><span class="sxs-lookup"><span data-stu-id="b789e-687">String | [Subject](/javascript/api/outlook/office.subject)</span></span>
+*   <span data-ttu-id="2fb0b-693">String | [Subject](/javascript/api/outlook/office.subject)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-693">String | [Subject](/javascript/api/outlook/office.subject)</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-688">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-688">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-694">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-694">Requirements</span></span>
 
-|<span data-ttu-id="b789e-689">Requirement</span><span class="sxs-lookup"><span data-stu-id="b789e-689">Requirement</span></span>|<span data-ttu-id="b789e-690">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-690">Value</span></span>|
+|<span data-ttu-id="2fb0b-695">Requirement</span><span class="sxs-lookup"><span data-stu-id="2fb0b-695">Requirement</span></span>|<span data-ttu-id="2fb0b-696">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-696">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-691">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-691">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-692">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-692">1.0</span></span>|
-|[<span data-ttu-id="b789e-693">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-693">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-694">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-694">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-695">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-695">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-696">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-696">Compose or read</span></span>|
+|[<span data-ttu-id="2fb0b-697">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-697">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-698">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-698">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-699">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-699">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-700">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-700">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-701">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-701">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-702">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-702">Compose or Read</span></span>|
 
-####  <a name="to-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients"></a><span data-ttu-id="b789e-697">to :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="b789e-697">to :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)</span></span>
+####  <a name="to-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsrecipientsjavascriptapioutlookofficerecipients"></a><span data-ttu-id="2fb0b-703">to :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-703">to :Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook/office.recipients)</span></span>
 
-<span data-ttu-id="b789e-698">Предоставляет доступ к получателям, указанным в строке **Кому** сообщения.</span><span class="sxs-lookup"><span data-stu-id="b789e-698">Provides access to the recipients on the **To** line of a message.</span></span> <span data-ttu-id="b789e-699">Тип объекта и уровень доступа зависят от режима текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-699">The type of object and level of access depends on the mode of the current item.</span></span>
+<span data-ttu-id="2fb0b-704">Предоставляет доступ к получателям, указанным в строке **Кому** сообщения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-704">Provides access to the recipients on the **To** line of a message.</span></span> <span data-ttu-id="2fb0b-705">Тип объекта и уровень доступа зависят от режима текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-705">The type of object and level of access depends on the mode of the current item.</span></span>
 
-##### <a name="read-mode"></a><span data-ttu-id="b789e-700">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="b789e-700">Read mode</span></span>
+##### <a name="read-mode"></a><span data-ttu-id="2fb0b-706">Режим чтения</span><span class="sxs-lookup"><span data-stu-id="2fb0b-706">Read mode</span></span>
 
-<span data-ttu-id="b789e-p133">Свойство `to` возвращает массив, содержащий объект `EmailAddressDetails` для каждого получателя в строке **Кому** сообщения. Коллекция может включать не более 100 элементов.</span><span class="sxs-lookup"><span data-stu-id="b789e-p133">The `to` property returns an array that contains an `EmailAddressDetails` object for each recipient listed on the **To** line of the message. The collection is limited to a maximum of 100 members.</span></span>
+<span data-ttu-id="2fb0b-p135">Свойство `to` возвращает массив, содержащий объект `EmailAddressDetails` для каждого получателя в строке **Кому** сообщения. Коллекция может включать не более 100 элементов.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p135">The `to` property returns an array that contains an `EmailAddressDetails` object for each recipient listed on the **To** line of the message. The collection is limited to a maximum of 100 members.</span></span>
 
-##### <a name="compose-mode"></a><span data-ttu-id="b789e-703">Режим создания</span><span class="sxs-lookup"><span data-stu-id="b789e-703">Compose mode</span></span>
+```javascript
+console.log(JSON.stringify(Office.context.mailbox.item.to));
+```
 
-<span data-ttu-id="b789e-704">Свойство `to` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Кому** сообщения.</span><span class="sxs-lookup"><span data-stu-id="b789e-704">The `to` property returns a `Recipients` object that provides methods to get or update the recipients on the **To** line of the message.</span></span>
+##### <a name="compose-mode"></a><span data-ttu-id="2fb0b-709">Режим создания</span><span class="sxs-lookup"><span data-stu-id="2fb0b-709">Compose mode</span></span>
 
-##### <a name="type"></a><span data-ttu-id="b789e-705">Тип:</span><span class="sxs-lookup"><span data-stu-id="b789e-705">Type:</span></span>
-
-*   <span data-ttu-id="b789e-706">Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="b789e-706">Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients)</span></span>
-
-##### <a name="requirements"></a><span data-ttu-id="b789e-707">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-707">Requirements</span></span>
-
-|<span data-ttu-id="b789e-708">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-708">Requirement</span></span>|<span data-ttu-id="b789e-709">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-709">Value</span></span>|
-|---|---|
-|[<span data-ttu-id="b789e-710">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-710">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-711">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-711">1.0</span></span>|
-|[<span data-ttu-id="b789e-712">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-712">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-713">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-713">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-714">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-714">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-715">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-715">Compose or read</span></span>|
-
-##### <a name="example"></a><span data-ttu-id="b789e-716">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-716">Example</span></span>
+<span data-ttu-id="2fb0b-710">Свойство `to` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Кому** сообщения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-710">The `to` property returns a `Recipients` object that provides methods to get or update the recipients on the **To** line of the message.</span></span>
 
 ```javascript
 Office.context.mailbox.item.to.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
@@ -939,55 +1053,67 @@ function callback(asyncResult) {
 }
 ```
 
-### <a name="methods"></a><span data-ttu-id="b789e-717">Методы</span><span class="sxs-lookup"><span data-stu-id="b789e-717">Methods</span></span>
+##### <a name="type"></a><span data-ttu-id="2fb0b-711">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-711">Type</span></span>
 
-####  <a name="addfileattachmentasyncuri-attachmentname-options-callback"></a><span data-ttu-id="b789e-718">addFileAttachmentAsync(uri, attachmentName, [options], [callback])</span><span class="sxs-lookup"><span data-stu-id="b789e-718">addFileAttachmentAsync(uri, attachmentName, [options], [callback])</span></span>
+*   <span data-ttu-id="2fb0b-712">Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-712">Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients)</span></span>
 
-<span data-ttu-id="b789e-719">Добавляет файл в сообщение или встречу в качестве вложения.</span><span class="sxs-lookup"><span data-stu-id="b789e-719">Adds a file to a message or appointment as an attachment.</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-713">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-713">Requirements</span></span>
 
-<span data-ttu-id="b789e-720">Метод `addFileAttachmentAsync` передает файл по указанному универсальному коду ресурса (URI) и вкладывает его в элемент в форме создания.</span><span class="sxs-lookup"><span data-stu-id="b789e-720">The `addFileAttachmentAsync` method uploads the file at the specified URI and attaches it to the item in the compose form.</span></span>
-
-<span data-ttu-id="b789e-721">Идентификатор можно последовательно использовать с методом [`removeAttachmentAsync`](#removeattachmentasyncattachmentid-options-callback), чтобы удалить вложение, добавленное во время текущего сеанса.</span><span class="sxs-lookup"><span data-stu-id="b789e-721">You can subsequently use the identifier with the [`removeAttachmentAsync`](#removeattachmentasyncattachmentid-options-callback) method to remove the attachment in the same session.</span></span>
-
-##### <a name="parameters"></a><span data-ttu-id="b789e-722">Параметры</span><span class="sxs-lookup"><span data-stu-id="b789e-722">Parameters:</span></span>
-|<span data-ttu-id="b789e-723">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-723">Name</span></span>|<span data-ttu-id="b789e-724">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-724">Type</span></span>|<span data-ttu-id="b789e-725">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b789e-725">Attributes</span></span>|<span data-ttu-id="b789e-726">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-726">Description</span></span>|
-|---|---|---|---|
-|`uri`|<span data-ttu-id="b789e-727">String</span><span class="sxs-lookup"><span data-stu-id="b789e-727">String</span></span>||<span data-ttu-id="b789e-p134">Универсальный код ресурса (URI), представляющий расположение файла, который нужно вложить в сообщение или встречу. Максимальная длина — 2048 символов.</span><span class="sxs-lookup"><span data-stu-id="b789e-p134">The URI that provides the location of the file to attach to the message or appointment. The maximum length is 2048 characters.</span></span>|
-|`attachmentName`|<span data-ttu-id="b789e-730">String</span><span class="sxs-lookup"><span data-stu-id="b789e-730">String</span></span>||<span data-ttu-id="b789e-p135">Имя вложения, которое отображается при передаче вложения. Максимальная длина — 255 символов.</span><span class="sxs-lookup"><span data-stu-id="b789e-p135">The name of the attachment that is shown while the attachment is uploading. The maximum length is 255 characters.</span></span>|
-|`options`|<span data-ttu-id="b789e-733">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-733">Object</span></span>|<span data-ttu-id="b789e-734">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-734">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-735">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="b789e-735">An object literal that contains one or more of the following properties.</span></span>|
-|`options.asyncContext`|<span data-ttu-id="b789e-736">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-736">Object</span></span>|<span data-ttu-id="b789e-737">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-737">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-738">В методе обратного вызова разработчики могут указать любой объект, к которому необходимо получить доступ.</span><span class="sxs-lookup"><span data-stu-id="b789e-738">Developers can provide any object they wish to access in the callback method.</span></span>|
-|`options.isInline`|<span data-ttu-id="b789e-739">Boolean</span><span class="sxs-lookup"><span data-stu-id="b789e-739">Boolean</span></span>|<span data-ttu-id="b789e-740">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-740">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-741">Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.</span><span class="sxs-lookup"><span data-stu-id="b789e-741">If `true`, indicates that the attachment will be shown inline in the message body, and should not be displayed in the attachment list.</span></span>|
-|`callback`|<span data-ttu-id="b789e-742">function</span><span class="sxs-lookup"><span data-stu-id="b789e-742">function</span></span>|<span data-ttu-id="b789e-743">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-743">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-744">После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="b789e-744">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span> <br/><span data-ttu-id="b789e-745">После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.</span><span class="sxs-lookup"><span data-stu-id="b789e-745">On success, the attachment identifier will be provided in the `asyncResult.value` property.</span></span><br/><span data-ttu-id="b789e-746">Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.</span><span class="sxs-lookup"><span data-stu-id="b789e-746">If uploading the attachment fails, the `asyncResult` object will contain an `Error` object that provides a description of the error.</span></span>|
-
-##### <a name="errors"></a><span data-ttu-id="b789e-747">Ошибки</span><span class="sxs-lookup"><span data-stu-id="b789e-747">Errors</span></span>
-
-|<span data-ttu-id="b789e-748">Код ошибки</span><span class="sxs-lookup"><span data-stu-id="b789e-748">Error code</span></span>|<span data-ttu-id="b789e-749">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-749">Description</span></span>|
-|------------|-------------|
-|`AttachmentSizeExceeded`|<span data-ttu-id="b789e-750">Вложение превышает максимальный размер.</span><span class="sxs-lookup"><span data-stu-id="b789e-750">The attachment is larger than allowed.</span></span>|
-|`FileTypeNotSupported`|<span data-ttu-id="b789e-751">Расширение вложения не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="b789e-751">The attachment has an extension that is not allowed.</span></span>|
-|`NumberOfAttachmentsExceeded`|<span data-ttu-id="b789e-752">Сообщение или встреча содержат слишком много вложений.</span><span class="sxs-lookup"><span data-stu-id="b789e-752">The message or appointment has too many attachments.</span></span>|
-
-##### <a name="requirements"></a><span data-ttu-id="b789e-753">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-753">Requirements</span></span>
-
-|<span data-ttu-id="b789e-754">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-754">Requirement</span></span>|<span data-ttu-id="b789e-755">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-755">Value</span></span>|
+|<span data-ttu-id="2fb0b-714">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-714">Requirement</span></span>|<span data-ttu-id="2fb0b-715">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-715">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-756">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-756">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-757">1.1</span><span class="sxs-lookup"><span data-stu-id="b789e-757">1.1</span></span>|
-|[<span data-ttu-id="b789e-758">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-758">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-759">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="b789e-759">ReadWriteItem</span></span>|
-|[<span data-ttu-id="b789e-760">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-760">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-761">Создание</span><span class="sxs-lookup"><span data-stu-id="b789e-761">Compose</span></span>|
+|[<span data-ttu-id="2fb0b-716">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-716">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-717">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-717">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-718">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-718">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-719">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-719">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-720">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-720">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-721">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-721">Compose or Read</span></span>|
 
-##### <a name="examples"></a><span data-ttu-id="b789e-762">Примеры</span><span class="sxs-lookup"><span data-stu-id="b789e-762">Examples</span></span>
+### <a name="methods"></a><span data-ttu-id="2fb0b-722">Методы</span><span class="sxs-lookup"><span data-stu-id="2fb0b-722">Methods</span></span>
 
-```js
+####  <a name="addfileattachmentasyncuri-attachmentname-options-callback"></a><span data-ttu-id="2fb0b-723">addFileAttachmentAsync(uri, attachmentName, [options], [callback])</span><span class="sxs-lookup"><span data-stu-id="2fb0b-723">addFileAttachmentAsync(uri, attachmentName, [options], [callback])</span></span>
+
+<span data-ttu-id="2fb0b-724">Добавляет файл в сообщение или встречу в качестве вложения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-724">Adds a file to a message or appointment as an attachment.</span></span>
+
+<span data-ttu-id="2fb0b-725">Метод `addFileAttachmentAsync` передает файл по указанному универсальному коду ресурса (URI) и вкладывает его в элемент в форме создания.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-725">The `addFileAttachmentAsync` method uploads the file at the specified URI and attaches it to the item in the compose form.</span></span>
+
+<span data-ttu-id="2fb0b-726">Идентификатор можно последовательно использовать с методом [`removeAttachmentAsync`](#removeattachmentasyncattachmentid-options-callback), чтобы удалить вложение, добавленное во время текущего сеанса.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-726">You can subsequently use the identifier with the [`removeAttachmentAsync`](#removeattachmentasyncattachmentid-options-callback) method to remove the attachment in the same session.</span></span>
+
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-727">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-727">Parameters</span></span>
+|<span data-ttu-id="2fb0b-728">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-728">Name</span></span>|<span data-ttu-id="2fb0b-729">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-729">Type</span></span>|<span data-ttu-id="2fb0b-730">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2fb0b-730">Attributes</span></span>|<span data-ttu-id="2fb0b-731">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-731">Description</span></span>|
+|---|---|---|---|
+|`uri`|<span data-ttu-id="2fb0b-732">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-732">String</span></span>||<span data-ttu-id="2fb0b-p136">Универсальный код ресурса (URI), представляющий расположение файла, который нужно вложить в сообщение или встречу. Максимальная длина — 2048 символов.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p136">The URI that provides the location of the file to attach to the message or appointment. The maximum length is 2048 characters.</span></span>|
+|`attachmentName`|<span data-ttu-id="2fb0b-735">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-735">String</span></span>||<span data-ttu-id="2fb0b-p137">Имя вложения, которое отображается при передаче вложения. Максимальная длина — 255 символов.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p137">The name of the attachment that is shown while the attachment is uploading. The maximum length is 255 characters.</span></span>|
+|`options`|<span data-ttu-id="2fb0b-738">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-738">Object</span></span>|<span data-ttu-id="2fb0b-739">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-739">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-740">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-740">An object literal that contains one or more of the following properties.</span></span>|
+|`options.asyncContext`|<span data-ttu-id="2fb0b-741">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-741">Object</span></span>|<span data-ttu-id="2fb0b-742">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-742">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-743">В методе обратного вызова разработчики могут указать любой объект, к которому необходимо получить доступ.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-743">Developers can provide any object they wish to access in the callback method.</span></span>|
+|`options.isInline`|<span data-ttu-id="2fb0b-744">Boolean</span><span class="sxs-lookup"><span data-stu-id="2fb0b-744">Boolean</span></span>|<span data-ttu-id="2fb0b-745">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-745">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-746">Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-746">If `true`, indicates that the attachment will be shown inline in the message body, and should not be displayed in the attachment list.</span></span>|
+|`callback`|<span data-ttu-id="2fb0b-747">function</span><span class="sxs-lookup"><span data-stu-id="2fb0b-747">function</span></span>|<span data-ttu-id="2fb0b-748">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-748">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-749">После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-749">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span> <br/><span data-ttu-id="2fb0b-750">После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-750">On success, the attachment identifier will be provided in the `asyncResult.value` property.</span></span><br/><span data-ttu-id="2fb0b-751">Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-751">If uploading the attachment fails, the `asyncResult` object will contain an `Error` object that provides a description of the error.</span></span>|
+
+##### <a name="errors"></a><span data-ttu-id="2fb0b-752">Ошибки</span><span class="sxs-lookup"><span data-stu-id="2fb0b-752">Errors</span></span>
+
+|<span data-ttu-id="2fb0b-753">Код ошибки</span><span class="sxs-lookup"><span data-stu-id="2fb0b-753">Error code</span></span>|<span data-ttu-id="2fb0b-754">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-754">Description</span></span>|
+|------------|-------------|
+|`AttachmentSizeExceeded`|<span data-ttu-id="2fb0b-755">Вложение превышает максимальный размер.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-755">The attachment is larger than allowed.</span></span>|
+|`FileTypeNotSupported`|<span data-ttu-id="2fb0b-756">Расширение вложения не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-756">The attachment has an extension that is not allowed.</span></span>|
+|`NumberOfAttachmentsExceeded`|<span data-ttu-id="2fb0b-757">Сообщение или встреча содержат слишком много вложений.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-757">The message or appointment has too many attachments.</span></span>|
+
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-758">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-758">Requirements</span></span>
+
+|<span data-ttu-id="2fb0b-759">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-759">Requirement</span></span>|<span data-ttu-id="2fb0b-760">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-760">Value</span></span>|
+|---|---|
+|[<span data-ttu-id="2fb0b-761">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-761">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-762">1.1</span><span class="sxs-lookup"><span data-stu-id="2fb0b-762">1.1</span></span>|
+|[<span data-ttu-id="2fb0b-763">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-763">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-764">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-764">ReadWriteItem</span></span>|
+|[<span data-ttu-id="2fb0b-765">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-765">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-766">Создание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-766">Compose</span></span>|
+
+##### <a name="examples"></a><span data-ttu-id="2fb0b-767">Примеры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-767">Examples</span></span>
+
+```javascript
 function callback(result) {
   if (result.error) {
-    showMessage(result.error);
+    console.log(result.error);
   } else {
-    showMessage("Attachment added");
+    console.log("Attachment added");
   }
 }
 
 function addAttachment() {
-  // The values in asyncContext can be accessed in the callback
+  // The values in asyncContext can be accessed in the callback.
   var options = { 'asyncContext': { var1: 1, var2: 2 } };
 
   var attachmentURL = "https://contoso.com/rtm/icon.png";
@@ -995,11 +1121,10 @@ function addAttachment() {
 }
 ```
 
-<span data-ttu-id="b789e-763">В приведенном ниже примере файл изображения добавляется в качестве встроенного вложения, а ссылка на вложение добавляется в текст сообщения.</span><span class="sxs-lookup"><span data-stu-id="b789e-763">The following example adds an image file as an inline attachment and references the attachment in the message body.</span></span>
+<span data-ttu-id="2fb0b-768">В приведенном ниже примере файл изображения добавляется в качестве встроенного вложения, а ссылка на вложение добавляется в текст сообщения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-768">The following example adds an image file as an inline attachment and references the attachment in the message body.</span></span>
 
-```js
-Office.context.mailbox.item.addFileAttachmentAsync
-(
+```javascript
+Office.context.mailbox.item.addFileAttachmentAsync(
   "http://i.imgur.com/WJXklif.png",
   "cute_bird.png",
   {
@@ -1012,50 +1137,48 @@ Office.context.mailbox.item.addFileAttachmentAsync
         "coercionType": "html"
       },
       function (asyncResult) {
-        
-      }
-    );
-  }
-);
+        // Do something here.
+      });
+  });
 ```
 
-#### <a name="addfileattachmentfrombase64asyncbase64file-attachmentname-options-callback"></a><span data-ttu-id="b789e-764">addFileAttachmentFromBase64Async(base64File, attachmentName, [options], [callback])</span><span class="sxs-lookup"><span data-stu-id="b789e-764">addFileAttachmentFromBase64Async(base64File, attachmentName, [options], [callback])</span></span>
+#### <a name="addfileattachmentfrombase64asyncbase64file-attachmentname-options-callback"></a><span data-ttu-id="2fb0b-769">addFileAttachmentFromBase64Async(base64File, attachmentName, [options], [callback])</span><span class="sxs-lookup"><span data-stu-id="2fb0b-769">addFileAttachmentFromBase64Async(base64File, attachmentName, [options], [callback])</span></span>
 
-<span data-ttu-id="b789e-765">Добавляет файл из кодирования base64 в сообщение или встречу в качестве вложения.</span><span class="sxs-lookup"><span data-stu-id="b789e-765">Adds a file from the base64 encoding to a message or appointment as an attachment.</span></span>
+<span data-ttu-id="2fb0b-770">Добавляет файл из кодирования base64 в сообщение или встречу в качестве вложения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-770">Adds a file from the base64 encoding to a message or appointment as an attachment.</span></span>
 
-<span data-ttu-id="b789e-766">Метод `addFileAttachmentFromBase64Async` передает файл из кодировки base64 и вкладывает его в элемент в форме создания.</span><span class="sxs-lookup"><span data-stu-id="b789e-766">The `addFileAttachmentFromBase64Async` method uploads the file from the base64 encoding and attaches it to the item in the compose form.</span></span> <span data-ttu-id="b789e-767">Этот способ возвращает идентификатор вложения в объекте AsyncResult.value.</span><span class="sxs-lookup"><span data-stu-id="b789e-767">This method returns the attachment identifier in the AsyncResult.value object.</span></span>
+<span data-ttu-id="2fb0b-771">Метод `addFileAttachmentFromBase64Async` передает файл из кодировки base64 и вкладывает его в элемент в форме создания.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-771">The `addFileAttachmentFromBase64Async` method uploads the file from the base64 encoding and attaches it to the item in the compose form.</span></span> <span data-ttu-id="2fb0b-772">Этот способ возвращает идентификатор вложения в объекте AsyncResult.value.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-772">This method returns the attachment identifier in the AsyncResult.value object.</span></span>
 
-<span data-ttu-id="b789e-768">Идентификатор можно использовать с методом [`removeAttachmentAsync`](#removeattachmentasyncattachmentid-options-callback), чтобы удалить вложение, добавленное во время текущего сеанса.</span><span class="sxs-lookup"><span data-stu-id="b789e-768">You can subsequently use the identifier with the [`removeAttachmentAsync`](#removeattachmentasyncattachmentid-options-callback) method to remove the attachment in the same session.</span></span>
+<span data-ttu-id="2fb0b-773">Идентификатор можно использовать с методом [`removeAttachmentAsync`](#removeattachmentasyncattachmentid-options-callback), чтобы удалить вложение, добавленное во время текущего сеанса.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-773">You can subsequently use the identifier with the [`removeAttachmentAsync`](#removeattachmentasyncattachmentid-options-callback) method to remove the attachment in the same session.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-769">Параметры</span><span class="sxs-lookup"><span data-stu-id="b789e-769">Parameters:</span></span>
-|<span data-ttu-id="b789e-770">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-770">Name</span></span>|<span data-ttu-id="b789e-771">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-771">Type</span></span>|<span data-ttu-id="b789e-772">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b789e-772">Attributes</span></span>|<span data-ttu-id="b789e-773">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-773">Description</span></span>|
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-774">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-774">Parameters</span></span>
+|<span data-ttu-id="2fb0b-775">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-775">Name</span></span>|<span data-ttu-id="2fb0b-776">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-776">Type</span></span>|<span data-ttu-id="2fb0b-777">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2fb0b-777">Attributes</span></span>|<span data-ttu-id="2fb0b-778">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-778">Description</span></span>|
 |---|---|---|---|
-|`base64File`|<span data-ttu-id="b789e-774">String</span><span class="sxs-lookup"><span data-stu-id="b789e-774">String</span></span>||<span data-ttu-id="b789e-775">Закодированное содержимое base64 изображения или файла, которое следует добавить в сообщение электронной почты или событие.</span><span class="sxs-lookup"><span data-stu-id="b789e-775">The base64 encoded content of an image or file to be added to an email or event.</span></span>|
-|`attachmentName`|<span data-ttu-id="b789e-776">Строка</span><span class="sxs-lookup"><span data-stu-id="b789e-776">String</span></span>||<span data-ttu-id="b789e-p137">Имя вложения, которое отображается при передаче вложения. Максимальная длина — 255 символов.</span><span class="sxs-lookup"><span data-stu-id="b789e-p137">The name of the attachment that is shown while the attachment is uploading. The maximum length is 255 characters.</span></span>|
-|`options`|<span data-ttu-id="b789e-779">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-779">Object</span></span>|<span data-ttu-id="b789e-780">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-780">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-781">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="b789e-781">An object literal that contains one or more of the following properties.</span></span>|
-|`options.asyncContext`|<span data-ttu-id="b789e-782">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-782">Object</span></span>|<span data-ttu-id="b789e-783">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-783">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-784">В методе обратного вызова разработчики могут указать любой объект, к которому необходимо получить доступ.</span><span class="sxs-lookup"><span data-stu-id="b789e-784">Developers can provide any object they wish to access in the callback method.</span></span>|
-|`options.isInline`|<span data-ttu-id="b789e-785">Boolean</span><span class="sxs-lookup"><span data-stu-id="b789e-785">Boolean</span></span>|<span data-ttu-id="b789e-786">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-786">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-787">Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.</span><span class="sxs-lookup"><span data-stu-id="b789e-787">If `true`, indicates that the attachment will be shown inline in the message body, and should not be displayed in the attachment list.</span></span>|
-|`callback`|<span data-ttu-id="b789e-788">function</span><span class="sxs-lookup"><span data-stu-id="b789e-788">function</span></span>|<span data-ttu-id="b789e-789">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-789">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-790">После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="b789e-790">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span> <br/><span data-ttu-id="b789e-791">После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.</span><span class="sxs-lookup"><span data-stu-id="b789e-791">On success, the attachment identifier will be provided in the `asyncResult.value` property.</span></span><br/><span data-ttu-id="b789e-792">Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.</span><span class="sxs-lookup"><span data-stu-id="b789e-792">If uploading the attachment fails, the `asyncResult` object will contain an `Error` object that provides a description of the error.</span></span>|
+|`base64File`|<span data-ttu-id="2fb0b-779">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-779">String</span></span>||<span data-ttu-id="2fb0b-780">Закодированное содержимое base64 изображения или файла, которое следует добавить в сообщение электронной почты или событие.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-780">The base64 encoded content of an image or file to be added to an email or event.</span></span>|
+|`attachmentName`|<span data-ttu-id="2fb0b-781">Строка</span><span class="sxs-lookup"><span data-stu-id="2fb0b-781">String</span></span>||<span data-ttu-id="2fb0b-p139">Имя вложения, которое отображается при передаче вложения. Максимальная длина — 255 символов.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p139">The name of the attachment that is shown while the attachment is uploading. The maximum length is 255 characters.</span></span>|
+|`options`|<span data-ttu-id="2fb0b-784">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-784">Object</span></span>|<span data-ttu-id="2fb0b-785">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-785">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-786">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-786">An object literal that contains one or more of the following properties.</span></span>|
+|`options.asyncContext`|<span data-ttu-id="2fb0b-787">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-787">Object</span></span>|<span data-ttu-id="2fb0b-788">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-788">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-789">В методе обратного вызова разработчики могут указать любой объект, к которому необходимо получить доступ.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-789">Developers can provide any object they wish to access in the callback method.</span></span>|
+|`options.isInline`|<span data-ttu-id="2fb0b-790">Boolean</span><span class="sxs-lookup"><span data-stu-id="2fb0b-790">Boolean</span></span>|<span data-ttu-id="2fb0b-791">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-791">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-792">Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-792">If `true`, indicates that the attachment will be shown inline in the message body, and should not be displayed in the attachment list.</span></span>|
+|`callback`|<span data-ttu-id="2fb0b-793">function</span><span class="sxs-lookup"><span data-stu-id="2fb0b-793">function</span></span>|<span data-ttu-id="2fb0b-794">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-794">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-795">После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-795">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span> <br/><span data-ttu-id="2fb0b-796">После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-796">On success, the attachment identifier will be provided in the `asyncResult.value` property.</span></span><br/><span data-ttu-id="2fb0b-797">Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-797">If uploading the attachment fails, the `asyncResult` object will contain an `Error` object that provides a description of the error.</span></span>|
 
-##### <a name="errors"></a><span data-ttu-id="b789e-793">Ошибки</span><span class="sxs-lookup"><span data-stu-id="b789e-793">Errors</span></span>
+##### <a name="errors"></a><span data-ttu-id="2fb0b-798">Ошибки</span><span class="sxs-lookup"><span data-stu-id="2fb0b-798">Errors</span></span>
 
-|<span data-ttu-id="b789e-794">Код ошибки</span><span class="sxs-lookup"><span data-stu-id="b789e-794">Error code</span></span>|<span data-ttu-id="b789e-795">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-795">Description</span></span>|
+|<span data-ttu-id="2fb0b-799">Код ошибки</span><span class="sxs-lookup"><span data-stu-id="2fb0b-799">Error code</span></span>|<span data-ttu-id="2fb0b-800">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-800">Description</span></span>|
 |------------|-------------|
-|`AttachmentSizeExceeded`|<span data-ttu-id="b789e-796">Вложение превышает максимальный размер.</span><span class="sxs-lookup"><span data-stu-id="b789e-796">The attachment is larger than allowed.</span></span>|
-|`FileTypeNotSupported`|<span data-ttu-id="b789e-797">Расширение вложения не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="b789e-797">The attachment has an extension that is not allowed.</span></span>|
-|`NumberOfAttachmentsExceeded`|<span data-ttu-id="b789e-798">Сообщение или встреча содержат слишком много вложений.</span><span class="sxs-lookup"><span data-stu-id="b789e-798">The message or appointment has too many attachments.</span></span>|
+|`AttachmentSizeExceeded`|<span data-ttu-id="2fb0b-801">Вложение превышает максимальный размер.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-801">The attachment is larger than allowed.</span></span>|
+|`FileTypeNotSupported`|<span data-ttu-id="2fb0b-802">Расширение вложения не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-802">The attachment has an extension that is not allowed.</span></span>|
+|`NumberOfAttachmentsExceeded`|<span data-ttu-id="2fb0b-803">Сообщение или встреча содержат слишком много вложений.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-803">The message or appointment has too many attachments.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-799">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-799">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-804">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-804">Requirements</span></span>
 
-|<span data-ttu-id="b789e-800">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-800">Requirement</span></span>|<span data-ttu-id="b789e-801">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-801">Value</span></span>|
+|<span data-ttu-id="2fb0b-805">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-805">Requirement</span></span>|<span data-ttu-id="2fb0b-806">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-806">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-802">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-802">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-803">Предварительная версия</span><span class="sxs-lookup"><span data-stu-id="b789e-803">Preview</span></span>|
-|[<span data-ttu-id="b789e-804">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-804">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-805">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="b789e-805">ReadWriteItem</span></span>|
-|[<span data-ttu-id="b789e-806">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-806">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-807">Создание</span><span class="sxs-lookup"><span data-stu-id="b789e-807">Compose</span></span>|
+|[<span data-ttu-id="2fb0b-807">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-807">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-808">Предварительная версия</span><span class="sxs-lookup"><span data-stu-id="2fb0b-808">Preview</span></span>|
+|[<span data-ttu-id="2fb0b-809">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-809">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-810">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-810">ReadWriteItem</span></span>|
+|[<span data-ttu-id="2fb0b-811">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-811">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-812">Создание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-812">Compose</span></span>|
 
-##### <a name="examples"></a><span data-ttu-id="b789e-808">Примеры</span><span class="sxs-lookup"><span data-stu-id="b789e-808">Examples</span></span>
+##### <a name="examples"></a><span data-ttu-id="2fb0b-813">Примеры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-813">Examples</span></span>
 
-```js
+```javascript
 Office.context.mailbox.item.addFileAttachmentFromBase64Async(
   base64String,
   "cute_bird.png",
@@ -1069,165 +1192,177 @@ Office.context.mailbox.item.addFileAttachmentFromBase64Async(
         "coercionType": "html"
       },
       function (asyncResult) {
-      }
-    );
-  }
-);
+        // Do something here.
+      });
+  });
 ```
 
-####  <a name="addhandlerasynceventtype-handler-options-callback"></a><span data-ttu-id="b789e-809">addHandlerAsync(eventType, handler, [options], [callback])</span><span class="sxs-lookup"><span data-stu-id="b789e-809">addHandlerAsync(eventType, handler, [options], [callback])</span></span>
+####  <a name="addhandlerasynceventtype-handler-options-callback"></a><span data-ttu-id="2fb0b-814">addHandlerAsync(eventType, handler, [options], [callback])</span><span class="sxs-lookup"><span data-stu-id="2fb0b-814">addHandlerAsync(eventType, handler, [options], [callback])</span></span>
 
-<span data-ttu-id="b789e-810">Добавляет обработчик для поддерживаемого события.</span><span class="sxs-lookup"><span data-stu-id="b789e-810">Adds an event handler for a supported event.</span></span>
+<span data-ttu-id="2fb0b-815">Добавляет обработчик для поддерживаемого события.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-815">Adds an event handler for a supported event.</span></span>
 
-<span data-ttu-id="b789e-811">Сейчас поддерживаются следующие типы событий: `Office.EventType.AttachmentsChanged`, `Office.EventType.AppointmentTimeChanged`, `Office.EventType.RecipientsChanged` и `Office.EventType.RecurrenceChanged`.</span><span class="sxs-lookup"><span data-stu-id="b789e-811">Currently the supported event types are `Office.EventType.AttachmentsChanged`, `Office.EventType.AppointmentTimeChanged`, `Office.EventType.RecipientsChanged`, and `Office.EventType.RecurrenceChanged`.</span></span>
+<span data-ttu-id="2fb0b-816">Сейчас поддерживаются следующие типы событий: `Office.EventType.AttachmentsChanged`, `Office.EventType.AppointmentTimeChanged`, `Office.EventType.RecipientsChanged` и `Office.EventType.RecurrenceChanged`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-816">Currently the supported event types are `Office.EventType.AttachmentsChanged`, `Office.EventType.AppointmentTimeChanged`, `Office.EventType.RecipientsChanged`, and `Office.EventType.RecurrenceChanged`.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-812">Параметры:</span><span class="sxs-lookup"><span data-stu-id="b789e-812">Parameters:</span></span>
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-817">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-817">Parameters</span></span>
 
-| <span data-ttu-id="b789e-813">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-813">Name</span></span> | <span data-ttu-id="b789e-814">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-814">Type</span></span> | <span data-ttu-id="b789e-815">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b789e-815">Attributes</span></span> | <span data-ttu-id="b789e-816">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-816">Description</span></span> |
+| <span data-ttu-id="2fb0b-818">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-818">Name</span></span> | <span data-ttu-id="2fb0b-819">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-819">Type</span></span> | <span data-ttu-id="2fb0b-820">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2fb0b-820">Attributes</span></span> | <span data-ttu-id="2fb0b-821">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-821">Description</span></span> |
 |---|---|---|---|
-| `eventType` | [<span data-ttu-id="b789e-817">Office.EventType</span><span class="sxs-lookup"><span data-stu-id="b789e-817">Office.EventType</span></span>](office.md#eventtype-string) || <span data-ttu-id="b789e-818">Событие, которое должно вызвать обработчик.</span><span class="sxs-lookup"><span data-stu-id="b789e-818">The event that should invoke the handler.</span></span> |
-| `handler` | <span data-ttu-id="b789e-819">Function</span><span class="sxs-lookup"><span data-stu-id="b789e-819">Function</span></span> || <span data-ttu-id="b789e-p138">Функция для обработки события. Функция должна принимать один параметр, представляющий собой объектный литерал. Значение свойства `type` параметра совпадет со значением параметра `eventType`, переданного методу `addHandlerAsync`.</span><span class="sxs-lookup"><span data-stu-id="b789e-p138">The function to handle the event. The function must accept a single parameter, which is an object literal. The `type` property on the parameter will match the `eventType` parameter passed to `addHandlerAsync`.</span></span> |
-| `options` | <span data-ttu-id="b789e-823">Объект</span><span class="sxs-lookup"><span data-stu-id="b789e-823">Object</span></span> | <span data-ttu-id="b789e-824">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-824">&lt;optional&gt;</span></span> | <span data-ttu-id="b789e-825">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="b789e-825">An object literal that contains one or more of the following properties.</span></span> |
-| `options.asyncContext` | <span data-ttu-id="b789e-826">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-826">Object</span></span> | <span data-ttu-id="b789e-827">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-827">&lt;optional&gt;</span></span> | <span data-ttu-id="b789e-828">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="b789e-828">Developers can provide any object they wish to access in the callback method.</span></span> |
-| `callback` | <span data-ttu-id="b789e-829">функция</span><span class="sxs-lookup"><span data-stu-id="b789e-829">function</span></span>| <span data-ttu-id="b789e-830">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-830">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-831">После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="b789e-831">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span>|
+| `eventType` | [<span data-ttu-id="2fb0b-822">Office.EventType</span><span class="sxs-lookup"><span data-stu-id="2fb0b-822">Office.EventType</span></span>](office.md#eventtype-string) || <span data-ttu-id="2fb0b-823">Событие, которое должно вызвать обработчик.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-823">The event that should invoke the handler.</span></span> |
+| `handler` | <span data-ttu-id="2fb0b-824">Function</span><span class="sxs-lookup"><span data-stu-id="2fb0b-824">Function</span></span> || <span data-ttu-id="2fb0b-p140">Функция для обработки события. Функция должна принимать один параметр, представляющий собой объектный литерал. Значение свойства `type` параметра совпадет со значением параметра `eventType`, переданного методу `addHandlerAsync`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p140">The function to handle the event. The function must accept a single parameter, which is an object literal. The `type` property on the parameter will match the `eventType` parameter passed to `addHandlerAsync`.</span></span> |
+| `options` | <span data-ttu-id="2fb0b-828">Объект</span><span class="sxs-lookup"><span data-stu-id="2fb0b-828">Object</span></span> | <span data-ttu-id="2fb0b-829">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-829">&lt;optional&gt;</span></span> | <span data-ttu-id="2fb0b-830">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-830">An object literal that contains one or more of the following properties.</span></span> |
+| `options.asyncContext` | <span data-ttu-id="2fb0b-831">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-831">Object</span></span> | <span data-ttu-id="2fb0b-832">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-832">&lt;optional&gt;</span></span> | <span data-ttu-id="2fb0b-833">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-833">Developers can provide any object they wish to access in the callback method.</span></span> |
+| `callback` | <span data-ttu-id="2fb0b-834">функция</span><span class="sxs-lookup"><span data-stu-id="2fb0b-834">function</span></span>| <span data-ttu-id="2fb0b-835">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-835">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-836">После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-836">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-832">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-832">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-837">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-837">Requirements</span></span>
 
-|<span data-ttu-id="b789e-833">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-833">Requirement</span></span>| <span data-ttu-id="b789e-834">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-834">Value</span></span>|
+|<span data-ttu-id="2fb0b-838">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-838">Requirement</span></span>| <span data-ttu-id="2fb0b-839">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-839">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-835">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-835">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="b789e-836">1.7</span><span class="sxs-lookup"><span data-stu-id="b789e-836">1.7</span></span> |
-|[<span data-ttu-id="b789e-837">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-837">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| <span data-ttu-id="b789e-838">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-838">ReadItem</span></span> |
-|[<span data-ttu-id="b789e-839">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-839">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)| <span data-ttu-id="b789e-840">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-840">Compose or read</span></span> |
+|[<span data-ttu-id="2fb0b-840">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-840">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="2fb0b-841">1.7</span><span class="sxs-lookup"><span data-stu-id="2fb0b-841">1.7</span></span> |
+|[<span data-ttu-id="2fb0b-842">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-842">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| <span data-ttu-id="2fb0b-843">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-843">ReadItem</span></span> |
+|[<span data-ttu-id="2fb0b-844">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-844">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)| <span data-ttu-id="2fb0b-845">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-845">Compose or Read</span></span> |
 
-####  <a name="additemattachmentasyncitemid-attachmentname-options-callback"></a><span data-ttu-id="b789e-841">addItemAttachmentAsync(itemId, attachmentName, [options], [callback])</span><span class="sxs-lookup"><span data-stu-id="b789e-841">addItemAttachmentAsync(itemId, attachmentName, [options], [callback])</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-846">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-846">Example</span></span>
 
-<span data-ttu-id="b789e-842">Добавляет к сообщению элемент Exchange, например сообщение, в виде вложения.</span><span class="sxs-lookup"><span data-stu-id="b789e-842">Adds an Exchange item, such as a message, as an attachment to the message or appointment.</span></span>
+```javascript
+function myHandlerFunction(eventarg) {
+  if (eventarg.attachmentStatus === Office.MailboxEnums.AttachmentStatus.Added) {
+    var attachment = eventarg.attachmentDetails;
+    console.log("Event Fired and Attachment Added!");
+    getAttachmentContentAsync(attachment.id, options, callback);
+  }
+}
 
-<span data-ttu-id="b789e-p139">С помощью метода `addItemAttachmentAsync` можно в элемент формы создания вложить элемент с указанным идентификатором Exchange. Если указать метод обратного вызова, то этот метод вызывается с помощью параметра `asyncResult`, который содержит идентификатор вложения или код, указывающий на ошибки, которые произошли при вложении элемента. При необходимости можно использовать параметр `options` для передачи сведений о состоянии методу обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="b789e-p139">The `addItemAttachmentAsync` method attaches the item with the specified Exchange identifier to the item in the compose form. If you specify a callback method, the method is called with one parameter, `asyncResult`, which contains either the attachment identifier or a code that indicates any error that occurred while attaching the item. You can use the `options` parameter to pass state information to the callback method, if needed.</span></span>
+Office.context.mailbox.item.addHandlerAsync(Office.EventType.AttachmentsChanged, myHandlerFunction, myCallback);
+```
 
-<span data-ttu-id="b789e-846">Идентификатор можно использовать с методом [`removeAttachmentAsync`](#removeattachmentasyncattachmentid-options-callback), чтобы удалить вложение, добавленное во время текущего сеанса.</span><span class="sxs-lookup"><span data-stu-id="b789e-846">You can subsequently use the identifier with the [`removeAttachmentAsync`](#removeattachmentasyncattachmentid-options-callback) method to remove the attachment in the same session.</span></span>
+####  <a name="additemattachmentasyncitemid-attachmentname-options-callback"></a><span data-ttu-id="2fb0b-847">addItemAttachmentAsync(itemId, attachmentName, [options], [callback])</span><span class="sxs-lookup"><span data-stu-id="2fb0b-847">addItemAttachmentAsync(itemId, attachmentName, [options], [callback])</span></span>
 
-<span data-ttu-id="b789e-847">Если ваша надстройка Office выполняется в Outlook Web App, метод `addItemAttachmentAsync` обеспечивает вложение элементов в элементы, отличные от редактируемого. Однако это действие не рекомендуем выполнять, так как оно не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="b789e-847">If your Office Add-in is running in Outlook Web App, the `addItemAttachmentAsync` method can attach items to items other than the item that you are editing; however, this is not supported and is not recommended.</span></span>
+<span data-ttu-id="2fb0b-848">Добавляет к сообщению элемент Exchange, например сообщение, в виде вложения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-848">Adds an Exchange item, such as a message, as an attachment to the message or appointment.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-848">Параметры</span><span class="sxs-lookup"><span data-stu-id="b789e-848">Parameters:</span></span>
+<span data-ttu-id="2fb0b-p141">С помощью метода `addItemAttachmentAsync` можно в элемент формы создания вложить элемент с указанным идентификатором Exchange. Если указать метод обратного вызова, то этот метод вызывается с помощью параметра `asyncResult`, который содержит идентификатор вложения или код, указывающий на ошибки, которые произошли при вложении элемента. При необходимости можно использовать параметр `options` для передачи сведений о состоянии методу обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p141">The `addItemAttachmentAsync` method attaches the item with the specified Exchange identifier to the item in the compose form. If you specify a callback method, the method is called with one parameter, `asyncResult`, which contains either the attachment identifier or a code that indicates any error that occurred while attaching the item. You can use the `options` parameter to pass state information to the callback method, if needed.</span></span>
 
-|<span data-ttu-id="b789e-849">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-849">Name</span></span>|<span data-ttu-id="b789e-850">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-850">Type</span></span>|<span data-ttu-id="b789e-851">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b789e-851">Attributes</span></span>|<span data-ttu-id="b789e-852">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-852">Description</span></span>|
+<span data-ttu-id="2fb0b-852">Идентификатор можно использовать с методом [`removeAttachmentAsync`](#removeattachmentasyncattachmentid-options-callback), чтобы удалить вложение, добавленное во время текущего сеанса.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-852">You can subsequently use the identifier with the [`removeAttachmentAsync`](#removeattachmentasyncattachmentid-options-callback) method to remove the attachment in the same session.</span></span>
+
+<span data-ttu-id="2fb0b-853">Если ваша надстройка Office выполняется в Outlook Web App, метод `addItemAttachmentAsync` обеспечивает вложение элементов в элементы, отличные от редактируемого. Однако это действие не рекомендуем выполнять, так как оно не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-853">If your Office Add-in is running in Outlook Web App, the `addItemAttachmentAsync` method can attach items to items other than the item that you are editing; however, this is not supported and is not recommended.</span></span>
+
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-854">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-854">Parameters</span></span>
+
+|<span data-ttu-id="2fb0b-855">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-855">Name</span></span>|<span data-ttu-id="2fb0b-856">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-856">Type</span></span>|<span data-ttu-id="2fb0b-857">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2fb0b-857">Attributes</span></span>|<span data-ttu-id="2fb0b-858">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-858">Description</span></span>|
 |---|---|---|---|
-|`itemId`|<span data-ttu-id="b789e-853">Строка</span><span class="sxs-lookup"><span data-stu-id="b789e-853">String</span></span>||<span data-ttu-id="b789e-p140">Идентификатор Exchange для вкладываемого элемента. Максимальная длина — 100 символов.</span><span class="sxs-lookup"><span data-stu-id="b789e-p140">The Exchange identifier of the item to attach. The maximum length is 100 characters.</span></span>|
-|`attachmentName`|<span data-ttu-id="b789e-856">Строка</span><span class="sxs-lookup"><span data-stu-id="b789e-856">String</span></span>||<span data-ttu-id="b789e-p141">Тема вкладываемого элемента. Максимальная длина — 255 символов.</span><span class="sxs-lookup"><span data-stu-id="b789e-p141">The sujbect of the item to be attached. The maximum length is 255 characters.</span></span>|
-|`options`|<span data-ttu-id="b789e-859">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-859">Object</span></span>|<span data-ttu-id="b789e-860">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-860">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-861">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="b789e-861">An object literal that contains one or more of the following properties.</span></span>|
-|`options.asyncContext`|<span data-ttu-id="b789e-862">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-862">Object</span></span>|<span data-ttu-id="b789e-863">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-863">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-864">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="b789e-864">Developers can provide any object they wish to access in the callback method.</span></span>|
-|`callback`|<span data-ttu-id="b789e-865">функция</span><span class="sxs-lookup"><span data-stu-id="b789e-865">function</span></span>|<span data-ttu-id="b789e-866">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-866">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-867">После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="b789e-867">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span> <br/><span data-ttu-id="b789e-868">После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.</span><span class="sxs-lookup"><span data-stu-id="b789e-868">On success, the attachment identifier will be provided in the `asyncResult.value` property.</span></span><br/><span data-ttu-id="b789e-869">Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.</span><span class="sxs-lookup"><span data-stu-id="b789e-869">If adding the attachment fails, the `asyncResult` object will contain an `Error` object that provides a description of the error.</span></span>|
+|`itemId`|<span data-ttu-id="2fb0b-859">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-859">String</span></span>||<span data-ttu-id="2fb0b-p142">Идентификатор Exchange для вкладываемого элемента. Максимальная длина — 100 символов.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p142">The Exchange identifier of the item to attach. The maximum length is 100 characters.</span></span>|
+|`attachmentName`|<span data-ttu-id="2fb0b-862">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-862">String</span></span>||<span data-ttu-id="2fb0b-863">Тема элемента, который необходимо присоединить.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-863">The subject of the item to be attached.</span></span> <span data-ttu-id="2fb0b-864">Максимальная длина — 255 символов.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-864">The maximum length is 255 characters.</span></span>|
+|`options`|<span data-ttu-id="2fb0b-865">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-865">Object</span></span>|<span data-ttu-id="2fb0b-866">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-866">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-867">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-867">An object literal that contains one or more of the following properties.</span></span>|
+|`options.asyncContext`|<span data-ttu-id="2fb0b-868">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-868">Object</span></span>|<span data-ttu-id="2fb0b-869">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-869">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-870">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-870">Developers can provide any object they wish to access in the callback method.</span></span>|
+|`callback`|<span data-ttu-id="2fb0b-871">функция</span><span class="sxs-lookup"><span data-stu-id="2fb0b-871">function</span></span>|<span data-ttu-id="2fb0b-872">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-872">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-873">После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-873">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span> <br/><span data-ttu-id="2fb0b-874">После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-874">On success, the attachment identifier will be provided in the `asyncResult.value` property.</span></span><br/><span data-ttu-id="2fb0b-875">Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-875">If adding the attachment fails, the `asyncResult` object will contain an `Error` object that provides a description of the error.</span></span>|
 
-##### <a name="errors"></a><span data-ttu-id="b789e-870">Ошибки</span><span class="sxs-lookup"><span data-stu-id="b789e-870">Errors</span></span>
+##### <a name="errors"></a><span data-ttu-id="2fb0b-876">Ошибки</span><span class="sxs-lookup"><span data-stu-id="2fb0b-876">Errors</span></span>
 
-|<span data-ttu-id="b789e-871">Код ошибки</span><span class="sxs-lookup"><span data-stu-id="b789e-871">Error code</span></span>|<span data-ttu-id="b789e-872">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-872">Description</span></span>|
+|<span data-ttu-id="2fb0b-877">Код ошибки</span><span class="sxs-lookup"><span data-stu-id="2fb0b-877">Error code</span></span>|<span data-ttu-id="2fb0b-878">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-878">Description</span></span>|
 |------------|-------------|
-|`NumberOfAttachmentsExceeded`|<span data-ttu-id="b789e-873">Сообщение или встреча содержат слишком много вложений.</span><span class="sxs-lookup"><span data-stu-id="b789e-873">The message or appointment has too many attachments.</span></span>|
+|`NumberOfAttachmentsExceeded`|<span data-ttu-id="2fb0b-879">Сообщение или встреча содержат слишком много вложений.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-879">The message or appointment has too many attachments.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-874">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-874">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-880">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-880">Requirements</span></span>
 
-|<span data-ttu-id="b789e-875">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-875">Requirement</span></span>|<span data-ttu-id="b789e-876">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-876">Value</span></span>|
+|<span data-ttu-id="2fb0b-881">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-881">Requirement</span></span>|<span data-ttu-id="2fb0b-882">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-882">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-877">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-877">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-878">1.1</span><span class="sxs-lookup"><span data-stu-id="b789e-878">1.1</span></span>|
-|[<span data-ttu-id="b789e-879">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-879">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-880">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="b789e-880">ReadWriteItem</span></span>|
-|[<span data-ttu-id="b789e-881">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-881">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-882">Создание</span><span class="sxs-lookup"><span data-stu-id="b789e-882">Compose</span></span>|
+|[<span data-ttu-id="2fb0b-883">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-883">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-884">1.1</span><span class="sxs-lookup"><span data-stu-id="2fb0b-884">1.1</span></span>|
+|[<span data-ttu-id="2fb0b-885">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-885">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-886">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-886">ReadWriteItem</span></span>|
+|[<span data-ttu-id="2fb0b-887">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-887">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-888">Создание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-888">Compose</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-883">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-883">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-889">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-889">Example</span></span>
 
-<span data-ttu-id="b789e-884">В следующем примере существующий элемент Outlook добавляется в виде вложения с именем `My Attachment`.</span><span class="sxs-lookup"><span data-stu-id="b789e-884">The following example adds an existing Outlook item as an attachment with the name `My Attachment`.</span></span>
+<span data-ttu-id="2fb0b-890">В следующем примере существующий элемент Outlook добавляется в виде вложения с именем `My Attachment`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-890">The following example adds an existing Outlook item as an attachment with the name `My Attachment`.</span></span>
 
 ```javascript
 function callback(result) {
   if (result.error) {
-    showMessage(result.error);
+    console.log(result.error);
   } else {
-    showMessage("Attachment added");
+    console.log("Attachment added");
   }
 }
 
 function addAttachment() {
-  // EWS ID of item to attach
-  // (Shortened for readability)
+  // EWS ID of item to attach (shortened for readability).
   var itemId = "AAMkADI1...AAA=";
 
-  // The values in asyncContext can be accessed in the callback
+  // The values in asyncContext can be accessed in the callback.
   var options = { 'asyncContext': { var1: 1, var2: 2 } };
 
   Office.context.mailbox.item.addItemAttachmentAsync(itemId, "My Attachment", options, callback);
 }
 ```
 
-####  <a name="close"></a><span data-ttu-id="b789e-885">close()</span><span class="sxs-lookup"><span data-stu-id="b789e-885">close()</span></span>
+####  <a name="close"></a><span data-ttu-id="2fb0b-891">close()</span><span class="sxs-lookup"><span data-stu-id="2fb0b-891">close()</span></span>
 
-<span data-ttu-id="b789e-886">Закрывает текущий создаваемый элемент.</span><span class="sxs-lookup"><span data-stu-id="b789e-886">Closes the current item that is being composed.</span></span>
+<span data-ttu-id="2fb0b-892">Закрывает текущий создаваемый элемент.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-892">Closes the current item that is being composed.</span></span>
 
-<span data-ttu-id="b789e-p142">Работа метода `close` зависит от текущего состояния создаваемого элемента. Если элемент содержит несохраненные изменения, клиент предложит пользователю сохранить или отклонить их либо отменить действие закрытия.</span><span class="sxs-lookup"><span data-stu-id="b789e-p142">The behavior of the `close` method depends on the current state of the item being composed. If the item has unsaved changes, the client prompts the user to save, discard, or cancel the close action.</span></span>
+<span data-ttu-id="2fb0b-p144">Работа метода `close` зависит от текущего состояния создаваемого элемента. Если элемент содержит несохраненные изменения, клиент предложит пользователю сохранить или отклонить их либо отменить действие закрытия.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p144">The behavior of the `close` method depends on the current state of the item being composed. If the item has unsaved changes, the client prompts the user to save, discard, or cancel the close action.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-889">Если в Outlook в Интернете элемент представляет собой встречу, ранее сохраненную с помощью метода `saveAsync`, пользователю предлагается сохранить, отклонить или отменить действие, даже если с момента последнего сохранения элемента не вносились какие-либо изменения.</span><span class="sxs-lookup"><span data-stu-id="b789e-889">In Outlook on the web, if the item is an appointment and it has previously been saved using `saveAsync`, the user is prompted to save, discard, or cancel even if no changes have occurred since the item was last saved.</span></span>
+> <span data-ttu-id="2fb0b-895">Если в Outlook в Интернете элемент представляет собой встречу, ранее сохраненную с помощью метода `saveAsync`, пользователю предлагается сохранить, отклонить или отменить действие, даже если с момента последнего сохранения элемента не вносились какие-либо изменения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-895">In Outlook on the web, if the item is an appointment and it has previously been saved using `saveAsync`, the user is prompted to save, discard, or cancel even if no changes have occurred since the item was last saved.</span></span>
 
-<span data-ttu-id="b789e-890">Если в клиенте Outlook для настольных ПК сообщение представляет собой ответ в тексте, метод `close` не работает.</span><span class="sxs-lookup"><span data-stu-id="b789e-890">In the Outlook desktop client, if the message is an inline reply, the `close` method has no effect.</span></span>
+<span data-ttu-id="2fb0b-896">Если в клиенте Outlook для настольных ПК сообщение представляет собой ответ в тексте, метод `close` не работает.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-896">In the Outlook desktop client, if the message is an inline reply, the `close` method has no effect.</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-891">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-891">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-897">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-897">Requirements</span></span>
 
-|<span data-ttu-id="b789e-892">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-892">Requirement</span></span>|<span data-ttu-id="b789e-893">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-893">Value</span></span>|
+|<span data-ttu-id="2fb0b-898">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-898">Requirement</span></span>|<span data-ttu-id="2fb0b-899">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-899">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-894">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-894">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-895">1.3</span><span class="sxs-lookup"><span data-stu-id="b789e-895">1.3</span></span>|
-|[<span data-ttu-id="b789e-896">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-896">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-897">Restricted</span><span class="sxs-lookup"><span data-stu-id="b789e-897">Restricted</span></span>|
-|[<span data-ttu-id="b789e-898">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-898">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-899">Создание</span><span class="sxs-lookup"><span data-stu-id="b789e-899">Compose</span></span>|
+|[<span data-ttu-id="2fb0b-900">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-900">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-901">1.3</span><span class="sxs-lookup"><span data-stu-id="2fb0b-901">1.3</span></span>|
+|[<span data-ttu-id="2fb0b-902">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-902">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-903">С ограничениями</span><span class="sxs-lookup"><span data-stu-id="2fb0b-903">Restricted</span></span>|
+|[<span data-ttu-id="2fb0b-904">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-904">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-905">Создание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-905">Compose</span></span>|
 
-#### <a name="displayreplyallformformdata"></a><span data-ttu-id="b789e-900">displayReplyAllForm(formData)</span><span class="sxs-lookup"><span data-stu-id="b789e-900">displayReplyAllForm(formData)</span></span>
+#### <a name="displayreplyallformformdata-callback"></a><span data-ttu-id="2fb0b-906">displayReplyAllForm (Формдата, [callback])</span><span class="sxs-lookup"><span data-stu-id="2fb0b-906">displayReplyAllForm(formData, [callback])</span></span>
 
-<span data-ttu-id="b789e-901">Отображает форму ответа, включающую отправителя и всех получателей выбранного сообщения или организатора и всех участников выбранной встречи.</span><span class="sxs-lookup"><span data-stu-id="b789e-901">Displays a reply form that includes the sender and all recipients of the selected message or the organizer and all attendees of the selected appointment.</span></span>
+<span data-ttu-id="2fb0b-907">Отображает форму ответа, включающую отправителя и всех получателей выбранного сообщения или организатора и всех участников выбранной встречи.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-907">Displays a reply form that includes the sender and all recipients of the selected message or the organizer and all attendees of the selected appointment.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-902">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="b789e-902">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
+> <span data-ttu-id="2fb0b-908">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-908">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
 
-<span data-ttu-id="b789e-903">В Outlook Web App форма ответа отображается в виде всплывающей формы в представлении с 3 либо 1 или 2 колонками.</span><span class="sxs-lookup"><span data-stu-id="b789e-903">In Outlook Web App, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the 2- or 1-column view.</span></span>
+<span data-ttu-id="2fb0b-909">В Outlook Web App форма ответа отображается в виде всплывающей формы в представлении с 3 либо 1 или 2 колонками.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-909">In Outlook Web App, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the 2- or 1-column view.</span></span>
 
-<span data-ttu-id="b789e-904">Если любой строковый параметр превышает указанные для него ограничения, `displayReplyAllForm` возвращает исключение.</span><span class="sxs-lookup"><span data-stu-id="b789e-904">If any of the string parameters exceed their limits, `displayReplyAllForm` throws an exception.</span></span>
+<span data-ttu-id="2fb0b-910">Если любой строковый параметр превышает указанные для него ограничения, `displayReplyAllForm` возвращает исключение.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-910">If any of the string parameters exceed their limits, `displayReplyAllForm` throws an exception.</span></span>
 
-<span data-ttu-id="b789e-p143">Если в параметре `formData.attachments` указаны вложения, Outlook и Outlook Web App пытаются скачать их и вложить в форму ответа. Если какие-либо вложения добавить не удается, в форме отображается сообщение об ошибке. Если сообщения об ошибках не предусмотрены, то они не отображаются.</span><span class="sxs-lookup"><span data-stu-id="b789e-p143">When attachments are specified in the `formData.attachments` parameter, Outlook and Outlook Web App attempt to download all attachments and attach them to the reply form. If any attachments fail to be added, an error is shown in the form UI. If this isn't possible, then no error message is thrown.</span></span>
+<span data-ttu-id="2fb0b-p145">Если в параметре `formData.attachments` указаны вложения, Outlook и Outlook Web App пытаются скачать их и вложить в форму ответа. Если какие-либо вложения добавить не удается, в форме отображается сообщение об ошибке. Если сообщения об ошибках не предусмотрены, то они не отображаются.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p145">When attachments are specified in the `formData.attachments` parameter, Outlook and Outlook Web App attempt to download all attachments and attach them to the reply form. If any attachments fail to be added, an error is shown in the form UI. If this isn't possible, then no error message is thrown.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-908">Параметры:</span><span class="sxs-lookup"><span data-stu-id="b789e-908">Parameters:</span></span>
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-914">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-914">Parameters</span></span>
 
-|<span data-ttu-id="b789e-909">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-909">Name</span></span>|<span data-ttu-id="b789e-910">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-910">Type</span></span>|<span data-ttu-id="b789e-911">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b789e-911">Attributes</span></span>|<span data-ttu-id="b789e-912">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-912">Description</span></span>|
+|<span data-ttu-id="2fb0b-915">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-915">Name</span></span>|<span data-ttu-id="2fb0b-916">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-916">Type</span></span>|<span data-ttu-id="2fb0b-917">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2fb0b-917">Attributes</span></span>|<span data-ttu-id="2fb0b-918">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-918">Description</span></span>|
 |---|---|---|---|
-|`formData`|<span data-ttu-id="b789e-913">String &#124; Object</span><span class="sxs-lookup"><span data-stu-id="b789e-913">String &#124; Object</span></span>||<span data-ttu-id="b789e-p144">Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.</span><span class="sxs-lookup"><span data-stu-id="b789e-p144">A string that contains text and HTML and that represents the body of the reply form. The string is limited to 32 KB.</span></span><br/><span data-ttu-id="b789e-916">**ИЛИ**</span><span class="sxs-lookup"><span data-stu-id="b789e-916">**OR**</span></span><br/><span data-ttu-id="b789e-p145">Объект, который содержит текст или данные вложения и функцию обратного вызова. Ниже представлено определение этого объекта.</span><span class="sxs-lookup"><span data-stu-id="b789e-p145">An object that contains body or attachment data and a callback function. The object is defined as follows.</span></span>|
-|`formData.htmlBody`|<span data-ttu-id="b789e-919">String</span><span class="sxs-lookup"><span data-stu-id="b789e-919">String</span></span>|<span data-ttu-id="b789e-920">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-920">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-p146">Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.</span><span class="sxs-lookup"><span data-stu-id="b789e-p146">A string that contains text and HTML and that represents the body of the reply form. The string is limited to 32 KB.</span></span>
-|`formData.attachments`|<span data-ttu-id="b789e-923">Array.&lt;Object&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-923">Array.&lt;Object&gt;</span></span>|<span data-ttu-id="b789e-924">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-924">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-925">Массив объектов JSON, представляющих собой вложенные файлы или элементы.</span><span class="sxs-lookup"><span data-stu-id="b789e-925">An array of JSON objects that are either file or item attachments.</span></span>|
-|`formData.attachments.type`|<span data-ttu-id="b789e-926">Строка</span><span class="sxs-lookup"><span data-stu-id="b789e-926">String</span></span>||<span data-ttu-id="b789e-p147">Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-p147">Indicates the type of attachment. Must be `file` for a file attachment or `item` for an item attachment.</span></span>|
-|`formData.attachments.name`|<span data-ttu-id="b789e-929">Строка</span><span class="sxs-lookup"><span data-stu-id="b789e-929">String</span></span>||<span data-ttu-id="b789e-930">Строка, содержащая имя вложения, длиной до 255 символов.</span><span class="sxs-lookup"><span data-stu-id="b789e-930">A string that contains the name of the attachment, up to 255 characters in length.</span></span>|
-|`formData.attachments.url`|<span data-ttu-id="b789e-931">Строка</span><span class="sxs-lookup"><span data-stu-id="b789e-931">String</span></span>||<span data-ttu-id="b789e-p148">Используется, только если свойству `type` задано значение `file`. URI расположения файла.</span><span class="sxs-lookup"><span data-stu-id="b789e-p148">Only used if `type` is set to `file`. The URI of the location for the file.</span></span>|
-|`formData.attachments.isInline`|<span data-ttu-id="b789e-934">Boolean</span><span class="sxs-lookup"><span data-stu-id="b789e-934">Boolean</span></span>||<span data-ttu-id="b789e-p149">Используется, только если свойству `type` задано значение `file`. Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.</span><span class="sxs-lookup"><span data-stu-id="b789e-p149">Only used if `type` is set to `file`. If `true`, indicates that the attachment will be shown inline in the message body, and should not be displayed in the attachment list.</span></span>|
-|`formData.attachments.itemId`|<span data-ttu-id="b789e-937">String</span><span class="sxs-lookup"><span data-stu-id="b789e-937">String</span></span>||<span data-ttu-id="b789e-p150">Используется, только если свойству `type` задано значение `item`. Идентификатор вложения EWS. Это строка длиной до 100 символов.</span><span class="sxs-lookup"><span data-stu-id="b789e-p150">Only used if `type` is set to `item`. The EWS item id of the attachment. This is a string up to 100 characters.</span></span>|
-|`callback`|<span data-ttu-id="b789e-941">функция</span><span class="sxs-lookup"><span data-stu-id="b789e-941">function</span></span>|<span data-ttu-id="b789e-942">&lt;Необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-942">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-943">По завершении работы метода функция, переданная параметру `callback`, вызывается с помощью одного параметра `asyncResult`, представляющего собой объект [AsyncResult](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="b789e-943">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [AsyncResult](/javascript/api/office/office.asyncresult) object.</span></span>|
+|`formData`|<span data-ttu-id="2fb0b-919">String &#124; Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-919">String &#124; Object</span></span>||<span data-ttu-id="2fb0b-p146">Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p146">A string that contains text and HTML and that represents the body of the reply form. The string is limited to 32 KB.</span></span><br/><span data-ttu-id="2fb0b-922">**ИЛИ**</span><span class="sxs-lookup"><span data-stu-id="2fb0b-922">**OR**</span></span><br/><span data-ttu-id="2fb0b-p147">Объект, который содержит текст или данные вложения и функцию обратного вызова. Ниже представлено определение этого объекта.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p147">An object that contains body or attachment data and a callback function. The object is defined as follows.</span></span>|
+|`formData.htmlBody`|<span data-ttu-id="2fb0b-925">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-925">String</span></span>|<span data-ttu-id="2fb0b-926">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-926">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-p148">Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p148">A string that contains text and HTML and that represents the body of the reply form. The string is limited to 32 KB.</span></span>
+|`formData.attachments`|<span data-ttu-id="2fb0b-929">Array.&lt;Object&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-929">Array.&lt;Object&gt;</span></span>|<span data-ttu-id="2fb0b-930">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-930">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-931">Массив объектов JSON, представляющих собой вложенные файлы или элементы.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-931">An array of JSON objects that are either file or item attachments.</span></span>|
+|`formData.attachments.type`|<span data-ttu-id="2fb0b-932">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-932">String</span></span>||<span data-ttu-id="2fb0b-p149">Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p149">Indicates the type of attachment. Must be `file` for a file attachment or `item` for an item attachment.</span></span>|
+|`formData.attachments.name`|<span data-ttu-id="2fb0b-935">Строка</span><span class="sxs-lookup"><span data-stu-id="2fb0b-935">String</span></span>||<span data-ttu-id="2fb0b-936">Строка, содержащая имя вложения, длиной до 255 символов.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-936">A string that contains the name of the attachment, up to 255 characters in length.</span></span>|
+|`formData.attachments.url`|<span data-ttu-id="2fb0b-937">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-937">String</span></span>||<span data-ttu-id="2fb0b-p150">Используется, только если свойству `type` задано значение `file`. URI расположения файла.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p150">Only used if `type` is set to `file`. The URI of the location for the file.</span></span>|
+|`formData.attachments.isInline`|<span data-ttu-id="2fb0b-940">Boolean</span><span class="sxs-lookup"><span data-stu-id="2fb0b-940">Boolean</span></span>||<span data-ttu-id="2fb0b-p151">Используется, только если свойству `type` задано значение `file`. Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p151">Only used if `type` is set to `file`. If `true`, indicates that the attachment will be shown inline in the message body, and should not be displayed in the attachment list.</span></span>|
+|`formData.attachments.itemId`|<span data-ttu-id="2fb0b-943">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-943">String</span></span>||<span data-ttu-id="2fb0b-p152">Используется, только если свойству `type` задано значение `item`. Идентификатор вложения EWS. Это строка длиной до 100 символов.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p152">Only used if `type` is set to `item`. The EWS item id of the attachment. This is a string up to 100 characters.</span></span>|
+|`callback`|<span data-ttu-id="2fb0b-947">функция</span><span class="sxs-lookup"><span data-stu-id="2fb0b-947">function</span></span>|<span data-ttu-id="2fb0b-948">&lt;Необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-948">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-949">По завершении работы метода функция, переданная параметру `callback`, вызывается с помощью одного параметра `asyncResult`, представляющего собой объект [AsyncResult](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-949">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [AsyncResult](/javascript/api/office/office.asyncresult) object.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-944">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-944">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-950">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-950">Requirements</span></span>
 
-|<span data-ttu-id="b789e-945">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-945">Requirement</span></span>|<span data-ttu-id="b789e-946">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-946">Value</span></span>|
+|<span data-ttu-id="2fb0b-951">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-951">Requirement</span></span>|<span data-ttu-id="2fb0b-952">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-952">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-947">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-947">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-948">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-948">1.0</span></span>|
-|[<span data-ttu-id="b789e-949">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-949">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-950">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-950">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-951">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-951">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-952">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-952">Read</span></span>|
+|[<span data-ttu-id="2fb0b-953">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-953">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-954">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-954">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-955">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-955">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-956">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-956">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-957">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-957">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-958">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-958">Read</span></span>|
 
-##### <a name="examples"></a><span data-ttu-id="b789e-953">Примеры</span><span class="sxs-lookup"><span data-stu-id="b789e-953">Examples</span></span>
+##### <a name="examples"></a><span data-ttu-id="2fb0b-959">Примеры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-959">Examples</span></span>
 
-<span data-ttu-id="b789e-954">Приведенный ниже код передает строку в функцию `displayReplyAllForm`.</span><span class="sxs-lookup"><span data-stu-id="b789e-954">The following code passes a string to the `displayReplyAllForm` function.</span></span>
+<span data-ttu-id="2fb0b-960">Приведенный ниже код передает строку в функцию `displayReplyAllForm`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-960">The following code passes a string to the `displayReplyAllForm` function.</span></span>
 
 ```javascript
 Office.context.mailbox.item.displayReplyAllForm('hello there');
 Office.context.mailbox.item.displayReplyAllForm('<b>hello there</b>');
 ```
 
-<span data-ttu-id="b789e-955">Ответ с пустым текстом сообщения.</span><span class="sxs-lookup"><span data-stu-id="b789e-955">Reply with an empty body.</span></span>
+<span data-ttu-id="2fb0b-961">Ответ с пустым текстом сообщения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-961">Reply with an empty body.</span></span>
 
 ```javascript
 Office.context.mailbox.item.displayReplyAllForm({});
 ```
 
-<span data-ttu-id="b789e-956">Ответ только с текстом сообщения.</span><span class="sxs-lookup"><span data-stu-id="b789e-956">Reply with just a body.</span></span>
+<span data-ttu-id="2fb0b-962">Ответ только с текстом сообщения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-962">Reply with just a body.</span></span>
 
 ```javascript
 Office.context.mailbox.item.displayReplyAllForm(
@@ -1236,7 +1371,7 @@ Office.context.mailbox.item.displayReplyAllForm(
 });
 ```
 
-<span data-ttu-id="b789e-957">Ответ с текстом сообщения и вложенным файлом.</span><span class="sxs-lookup"><span data-stu-id="b789e-957">Reply with a body and a file attachment.</span></span>
+<span data-ttu-id="2fb0b-963">Ответ с текстом сообщения и вложенным файлом.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-963">Reply with a body and a file attachment.</span></span>
 
 ```javascript
 Office.context.mailbox.item.displayReplyAllForm(
@@ -1253,7 +1388,7 @@ Office.context.mailbox.item.displayReplyAllForm(
 });
 ```
 
-<span data-ttu-id="b789e-958">Ответ с текстом сообщения и вложенным элементом.</span><span class="sxs-lookup"><span data-stu-id="b789e-958">Reply with a body and an item attachment.</span></span>
+<span data-ttu-id="2fb0b-964">Ответ с текстом сообщения и вложенным элементом.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-964">Reply with a body and an item attachment.</span></span>
 
 ```javascript
 Office.context.mailbox.item.displayReplyAllForm(
@@ -1270,7 +1405,7 @@ Office.context.mailbox.item.displayReplyAllForm(
 });
 ```
 
-<span data-ttu-id="b789e-959">Ответ с текстом сообщения, вложенным файлом, вложенным элементом и обратным вызовом.</span><span class="sxs-lookup"><span data-stu-id="b789e-959">Reply with a body, file attachment, item attachment, and a callback.</span></span>
+<span data-ttu-id="2fb0b-965">Ответ с текстом сообщения, вложенным файлом, вложенным элементом и обратным вызовом.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-965">Reply with a body, file attachment, item attachment, and a callback.</span></span>
 
 ```javascript
 Office.context.mailbox.item.displayReplyAllForm(
@@ -1296,57 +1431,57 @@ Office.context.mailbox.item.displayReplyAllForm(
 });
 ```
 
-#### <a name="displayreplyformformdata"></a><span data-ttu-id="b789e-960">displayReplyForm(formData)</span><span class="sxs-lookup"><span data-stu-id="b789e-960">displayReplyForm(formData)</span></span>
+#### <a name="displayreplyformformdata-callback"></a><span data-ttu-id="2fb0b-966">displayReplyForm (Формдата, [callback])</span><span class="sxs-lookup"><span data-stu-id="2fb0b-966">displayReplyForm(formData, [callback])</span></span>
 
-<span data-ttu-id="b789e-961">Отображает форму ответа, включающую только отправителя выбранного сообщения или организатора выбранной встречи.</span><span class="sxs-lookup"><span data-stu-id="b789e-961">Displays a reply form that includes only the sender of the selected message or the organizer of the selected appointment.</span></span>
+<span data-ttu-id="2fb0b-967">Отображает форму ответа, включающую только отправителя выбранного сообщения или организатора выбранной встречи.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-967">Displays a reply form that includes only the sender of the selected message or the organizer of the selected appointment.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-962">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="b789e-962">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
+> <span data-ttu-id="2fb0b-968">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-968">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
 
-<span data-ttu-id="b789e-963">В Outlook Web App форма ответа отображается в виде всплывающей формы в представлении с 3 либо 1 или 2 колонками.</span><span class="sxs-lookup"><span data-stu-id="b789e-963">In Outlook Web App, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the 2- or 1-column view.</span></span>
+<span data-ttu-id="2fb0b-969">В Outlook Web App форма ответа отображается в виде всплывающей формы в представлении с 3 либо 1 или 2 колонками.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-969">In Outlook Web App, the reply form is displayed as a pop-out form in the 3-column view and a pop-up form in the 2- or 1-column view.</span></span>
 
-<span data-ttu-id="b789e-964">Если любой строковый параметр превышает указанные для него ограничения, `displayReplyForm` возвращает исключение.</span><span class="sxs-lookup"><span data-stu-id="b789e-964">If any of the string parameters exceed their limits, `displayReplyForm` throws an exception.</span></span>
+<span data-ttu-id="2fb0b-970">Если любой строковый параметр превышает указанные для него ограничения, `displayReplyForm` возвращает исключение.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-970">If any of the string parameters exceed their limits, `displayReplyForm` throws an exception.</span></span>
 
-<span data-ttu-id="b789e-p151">Если в параметре `formData.attachments` указаны вложения, Outlook и Outlook Web App пытаются скачать их и вложить в форму ответа. Если какие-либо вложения добавить не удается, в форме отображается сообщение об ошибке. Если сообщения об ошибках не предусмотрены, то они не отображаются.</span><span class="sxs-lookup"><span data-stu-id="b789e-p151">When attachments are specified in the `formData.attachments` parameter, Outlook and Outlook Web App attempt to download all attachments and attach them to the reply form. If any attachments fail to be added, an error is shown in the form UI. If this isn't possible, then no error message is thrown.</span></span>
+<span data-ttu-id="2fb0b-p153">Если в параметре `formData.attachments` указаны вложения, Outlook и Outlook Web App пытаются скачать их и вложить в форму ответа. Если какие-либо вложения добавить не удается, в форме отображается сообщение об ошибке. Если сообщения об ошибках не предусмотрены, то они не отображаются.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p153">When attachments are specified in the `formData.attachments` parameter, Outlook and Outlook Web App attempt to download all attachments and attach them to the reply form. If any attachments fail to be added, an error is shown in the form UI. If this isn't possible, then no error message is thrown.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-968">Параметры</span><span class="sxs-lookup"><span data-stu-id="b789e-968">Parameters:</span></span>
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-974">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-974">Parameters</span></span>
 
-|<span data-ttu-id="b789e-969">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-969">Name</span></span>|<span data-ttu-id="b789e-970">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-970">Type</span></span>|<span data-ttu-id="b789e-971">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b789e-971">Attributes</span></span>|<span data-ttu-id="b789e-972">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-972">Description</span></span>|
+|<span data-ttu-id="2fb0b-975">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-975">Name</span></span>|<span data-ttu-id="2fb0b-976">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-976">Type</span></span>|<span data-ttu-id="2fb0b-977">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2fb0b-977">Attributes</span></span>|<span data-ttu-id="2fb0b-978">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-978">Description</span></span>|
 |---|---|---|---|
-|`formData`|<span data-ttu-id="b789e-973">String &#124; Object</span><span class="sxs-lookup"><span data-stu-id="b789e-973">String &#124; Object</span></span>||<span data-ttu-id="b789e-p152">Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.</span><span class="sxs-lookup"><span data-stu-id="b789e-p152">A string that contains text and HTML and that represents the body of the reply form. The string is limited to 32 KB.</span></span><br/><span data-ttu-id="b789e-976">**ИЛИ**</span><span class="sxs-lookup"><span data-stu-id="b789e-976">**OR**</span></span><br/><span data-ttu-id="b789e-p153">Объект, который содержит текст или данные вложения и функцию обратного вызова. Ниже представлено определение этого объекта.</span><span class="sxs-lookup"><span data-stu-id="b789e-p153">An object that contains body or attachment data and a callback function. The object is defined as follows.</span></span>|
-|`formData.htmlBody`|<span data-ttu-id="b789e-979">Строка</span><span class="sxs-lookup"><span data-stu-id="b789e-979">String</span></span>|<span data-ttu-id="b789e-980">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-980">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-p154">Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.</span><span class="sxs-lookup"><span data-stu-id="b789e-p154">A string that contains text and HTML and that represents the body of the reply form. The string is limited to 32 KB.</span></span>
-|`formData.attachments`|<span data-ttu-id="b789e-983">Array.&lt;Object&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-983">Array.&lt;Object&gt;</span></span>|<span data-ttu-id="b789e-984">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-984">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-985">Массив объектов JSON, представляющих собой вложенные файлы или элементы.</span><span class="sxs-lookup"><span data-stu-id="b789e-985">An array of JSON objects that are either file or item attachments.</span></span>|
-|`formData.attachments.type`|<span data-ttu-id="b789e-986">Строка</span><span class="sxs-lookup"><span data-stu-id="b789e-986">String</span></span>||<span data-ttu-id="b789e-p155">Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-p155">Indicates the type of attachment. Must be `file` for a file attachment or `item` for an item attachment.</span></span>|
-|`formData.attachments.name`|<span data-ttu-id="b789e-989">Строка</span><span class="sxs-lookup"><span data-stu-id="b789e-989">String</span></span>||<span data-ttu-id="b789e-990">Строка, содержащая имя вложения, длиной до 255 символов.</span><span class="sxs-lookup"><span data-stu-id="b789e-990">A string that contains the name of the attachment, up to 255 characters in length.</span></span>|
-|`formData.attachments.url`|<span data-ttu-id="b789e-991">Строка</span><span class="sxs-lookup"><span data-stu-id="b789e-991">String</span></span>||<span data-ttu-id="b789e-p156">Используется, только если свойству `type` задано значение `file`. URI расположения файла.</span><span class="sxs-lookup"><span data-stu-id="b789e-p156">Only used if `type` is set to `file`. The URI of the location for the file.</span></span>|
-|`formData.attachments.isInline`|<span data-ttu-id="b789e-994">Boolean</span><span class="sxs-lookup"><span data-stu-id="b789e-994">Boolean</span></span>||<span data-ttu-id="b789e-p157">Используется, только если свойству `type` задано значение `file`. Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.</span><span class="sxs-lookup"><span data-stu-id="b789e-p157">Only used if `type` is set to `file`. If `true`, indicates that the attachment will be shown inline in the message body, and should not be displayed in the attachment list.</span></span>|
-|`formData.attachments.itemId`|<span data-ttu-id="b789e-997">String</span><span class="sxs-lookup"><span data-stu-id="b789e-997">String</span></span>||<span data-ttu-id="b789e-p158">Используется, только если свойству `type` задано значение `item`. Идентификатор вложения EWS. Это строка длиной до 100 символов.</span><span class="sxs-lookup"><span data-stu-id="b789e-p158">Only used if `type` is set to `item`. The EWS item id of the attachment. This is a string up to 100 characters.</span></span>|
-|`callback`|<span data-ttu-id="b789e-1001">функция</span><span class="sxs-lookup"><span data-stu-id="b789e-1001">function</span></span>|<span data-ttu-id="b789e-1002">&lt;Необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1002">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1003">По завершении работы метода функция, переданная параметру `callback`, вызывается с помощью одного параметра `asyncResult`, представляющего собой объект [AsyncResult](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="b789e-1003">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [AsyncResult](/javascript/api/office/office.asyncresult) object.</span></span>|
+|`formData`|<span data-ttu-id="2fb0b-979">String &#124; Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-979">String &#124; Object</span></span>||<span data-ttu-id="2fb0b-p154">Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p154">A string that contains text and HTML and that represents the body of the reply form. The string is limited to 32 KB.</span></span><br/><span data-ttu-id="2fb0b-982">**ИЛИ**</span><span class="sxs-lookup"><span data-stu-id="2fb0b-982">**OR**</span></span><br/><span data-ttu-id="2fb0b-p155">Объект, который содержит текст или данные вложения и функцию обратного вызова. Ниже представлено определение этого объекта.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p155">An object that contains body or attachment data and a callback function. The object is defined as follows.</span></span>|
+|`formData.htmlBody`|<span data-ttu-id="2fb0b-985">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-985">String</span></span>|<span data-ttu-id="2fb0b-986">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-986">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-p156">Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p156">A string that contains text and HTML and that represents the body of the reply form. The string is limited to 32 KB.</span></span>
+|`formData.attachments`|<span data-ttu-id="2fb0b-989">Array.&lt;Object&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-989">Array.&lt;Object&gt;</span></span>|<span data-ttu-id="2fb0b-990">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-990">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-991">Массив объектов JSON, представляющих собой вложенные файлы или элементы.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-991">An array of JSON objects that are either file or item attachments.</span></span>|
+|`formData.attachments.type`|<span data-ttu-id="2fb0b-992">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-992">String</span></span>||<span data-ttu-id="2fb0b-p157">Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p157">Indicates the type of attachment. Must be `file` for a file attachment or `item` for an item attachment.</span></span>|
+|`formData.attachments.name`|<span data-ttu-id="2fb0b-995">Строка</span><span class="sxs-lookup"><span data-stu-id="2fb0b-995">String</span></span>||<span data-ttu-id="2fb0b-996">Строка, содержащая имя вложения, длиной до 255 символов.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-996">A string that contains the name of the attachment, up to 255 characters in length.</span></span>|
+|`formData.attachments.url`|<span data-ttu-id="2fb0b-997">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-997">String</span></span>||<span data-ttu-id="2fb0b-p158">Используется, только если свойству `type` задано значение `file`. URI расположения файла.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p158">Only used if `type` is set to `file`. The URI of the location for the file.</span></span>|
+|`formData.attachments.isInline`|<span data-ttu-id="2fb0b-1000">Boolean</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1000">Boolean</span></span>||<span data-ttu-id="2fb0b-p159">Используется, только если свойству `type` задано значение `file`. Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p159">Only used if `type` is set to `file`. If `true`, indicates that the attachment will be shown inline in the message body, and should not be displayed in the attachment list.</span></span>|
+|`formData.attachments.itemId`|<span data-ttu-id="2fb0b-1003">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1003">String</span></span>||<span data-ttu-id="2fb0b-p160">Используется, только если свойству `type` задано значение `item`. Идентификатор вложения EWS. Это строка длиной до 100 символов.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p160">Only used if `type` is set to `item`. The EWS item id of the attachment. This is a string up to 100 characters.</span></span>|
+|`callback`|<span data-ttu-id="2fb0b-1007">функция</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1007">function</span></span>|<span data-ttu-id="2fb0b-1008">&lt;Необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1008">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1009">По завершении работы метода функция, переданная параметру `callback`, вызывается с помощью одного параметра `asyncResult`, представляющего собой объект [AsyncResult](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1009">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [AsyncResult](/javascript/api/office/office.asyncresult) object.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1004">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-1004">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1010">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1010">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1005">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1005">Requirement</span></span>|<span data-ttu-id="b789e-1006">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1006">Value</span></span>|
+|<span data-ttu-id="2fb0b-1011">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1011">Requirement</span></span>|<span data-ttu-id="2fb0b-1012">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1012">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1007">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-1007">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-1008">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-1008">1.0</span></span>|
-|[<span data-ttu-id="b789e-1009">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1009">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-1010">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-1010">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-1011">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1011">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-1012">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-1012">Read</span></span>|
+|[<span data-ttu-id="2fb0b-1013">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1013">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-1014">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1014">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-1015">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1015">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-1016">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1016">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-1017">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1017">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-1018">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1018">Read</span></span>|
 
-##### <a name="examples"></a><span data-ttu-id="b789e-1013">Примеры</span><span class="sxs-lookup"><span data-stu-id="b789e-1013">Examples</span></span>
+##### <a name="examples"></a><span data-ttu-id="2fb0b-1019">Примеры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1019">Examples</span></span>
 
-<span data-ttu-id="b789e-1014">Приведенный ниже код передает строку в функцию `displayReplyForm`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1014">The following code passes a string to the `displayReplyForm` function.</span></span>
+<span data-ttu-id="2fb0b-1020">Приведенный ниже код передает строку в функцию `displayReplyForm`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1020">The following code passes a string to the `displayReplyForm` function.</span></span>
 
 ```javascript
 Office.context.mailbox.item.displayReplyForm('hello there');
 Office.context.mailbox.item.displayReplyForm('<b>hello there</b>');
 ```
 
-<span data-ttu-id="b789e-1015">Ответ с пустым текстом сообщения.</span><span class="sxs-lookup"><span data-stu-id="b789e-1015">Reply with an empty body.</span></span>
+<span data-ttu-id="2fb0b-1021">Ответ с пустым текстом сообщения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1021">Reply with an empty body.</span></span>
 
 ```javascript
 Office.context.mailbox.item.displayReplyForm({});
 ```
 
-<span data-ttu-id="b789e-1016">Ответ только с текстом сообщения.</span><span class="sxs-lookup"><span data-stu-id="b789e-1016">Reply with just a body.</span></span>
+<span data-ttu-id="2fb0b-1022">Ответ только с текстом сообщения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1022">Reply with just a body.</span></span>
 
 ```javascript
 Office.context.mailbox.item.displayReplyForm(
@@ -1355,7 +1490,7 @@ Office.context.mailbox.item.displayReplyForm(
 });
 ```
 
-<span data-ttu-id="b789e-1017">Ответ с текстом сообщения и вложенным файлом.</span><span class="sxs-lookup"><span data-stu-id="b789e-1017">Reply with a body and a file attachment.</span></span>
+<span data-ttu-id="2fb0b-1023">Ответ с текстом сообщения и вложенным файлом.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1023">Reply with a body and a file attachment.</span></span>
 
 ```javascript
 Office.context.mailbox.item.displayReplyForm(
@@ -1372,7 +1507,7 @@ Office.context.mailbox.item.displayReplyForm(
 });
 ```
 
-<span data-ttu-id="b789e-1018">Ответ с текстом сообщения и вложенным элементом.</span><span class="sxs-lookup"><span data-stu-id="b789e-1018">Reply with a body and an item attachment.</span></span>
+<span data-ttu-id="2fb0b-1024">Ответ с текстом сообщения и вложенным элементом.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1024">Reply with a body and an item attachment.</span></span>
 
 ```javascript
 Office.context.mailbox.item.displayReplyForm(
@@ -1389,7 +1524,7 @@ Office.context.mailbox.item.displayReplyForm(
 });
 ```
 
-<span data-ttu-id="b789e-1019">Ответ с текстом сообщения, вложенным файлом, вложенным элементом и обратным вызовом.</span><span class="sxs-lookup"><span data-stu-id="b789e-1019">Reply with a body, file attachment, item attachment, and a callback.</span></span>
+<span data-ttu-id="2fb0b-1025">Ответ с текстом сообщения, вложенным файлом, вложенным элементом и обратным вызовом.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1025">Reply with a body, file attachment, item attachment, and a callback.</span></span>
 
 ```javascript
 Office.context.mailbox.item.displayReplyForm(
@@ -1415,182 +1550,183 @@ Office.context.mailbox.item.displayReplyForm(
 });
 ```
 
-#### <a name="getattachmentcontentasyncattachmentid-options-callback--attachmentcontentjavascriptapioutlookofficeattachmentcontent"></a><span data-ttu-id="b789e-1020">getAttachmentContentAsync(attachmentId, [options], callback) → [AttachmentContent](/javascript/api/outlook/office.attachmentcontent)</span><span class="sxs-lookup"><span data-stu-id="b789e-1020">getAttachmentContentAsync(attachmentId, [options], callback) → [AttachmentContent](/javascript/api/outlook/office.attachmentcontent)</span></span>
+#### <a name="getattachmentcontentasyncattachmentid-options-callback--attachmentcontentjavascriptapioutlookofficeattachmentcontent"></a><span data-ttu-id="2fb0b-1026">Жетаттачментконтентасинк (attachmentId, [параметры], [callback]) → [вложениеимеет содержимое](/javascript/api/outlook/office.attachmentcontent)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1026">getAttachmentContentAsync(attachmentId, [options], [callback]) → [AttachmentContent](/javascript/api/outlook/office.attachmentcontent)</span></span>
 
-<span data-ttu-id="b789e-1021">Получает указанное вложение из сообщения или встречи и возвращает в качестве объекта `AttachmentContent`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1021">Gets the specified attachment from a message or appointment and returns it as an `AttachmentContent` object.</span></span>
+<span data-ttu-id="2fb0b-1027">Получает указанное вложение из сообщения или встречи и возвращает в качестве объекта `AttachmentContent`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1027">Gets the specified attachment from a message or appointment and returns it as an `AttachmentContent` object.</span></span>
 
-<span data-ttu-id="b789e-1022">Метод `getAttachmentContentAsync` получает вложение с указанным идентификатором из элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-1022">The `getAttachmentContentAsync` method gets the attachment with the specified identifier from the item.</span></span> <span data-ttu-id="b789e-1023">Рекомендуется использовать идентификатор для получения вложения в том же сеансе, в котором были получены идентификаторы вложений attachmentIds посредством вызова `getAttachmentsAsync` или `item.attachments`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1023">As a best practice, you should use the identifier to retrieve an attachment in the same session that the attachmentIds were retrieved with the `getAttachmentsAsync` or `item.attachments` call.</span></span> <span data-ttu-id="b789e-1024">В Outlook Web App и Outlook Web App для устройств идентификатор вложения действителен только в рамках одного сеанса.</span><span class="sxs-lookup"><span data-stu-id="b789e-1024">In Outlook Web App and OWA for Devices, the attachment identifier is valid only within the same session.</span></span> <span data-ttu-id="b789e-1025">Сеанс завершается, когда пользователь закрывает приложение или начинает создавать элемент во встроенной форме, а затем переходит из формы в отдельное окно.</span><span class="sxs-lookup"><span data-stu-id="b789e-1025">A session is over when the user closes the app, or if the user starts composing an inline form then subsequently pops out the form to continue in a separate window.</span></span>
+<span data-ttu-id="2fb0b-1028">Метод `getAttachmentContentAsync` получает вложение с указанным идентификатором из элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1028">The `getAttachmentContentAsync` method gets the attachment with the specified identifier from the item.</span></span> <span data-ttu-id="2fb0b-1029">Рекомендуется использовать идентификатор для получения вложения в том же сеансе, в котором были получены идентификаторы вложений attachmentIds посредством вызова `getAttachmentsAsync` или `item.attachments`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1029">As a best practice, you should use the identifier to retrieve an attachment in the same session that the attachmentIds were retrieved with the `getAttachmentsAsync` or `item.attachments` call.</span></span> <span data-ttu-id="2fb0b-1030">В Outlook Web App и Outlook Web App для устройств идентификатор вложения действителен только в рамках одного сеанса.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1030">In Outlook Web App and OWA for Devices, the attachment identifier is valid only within the same session.</span></span> <span data-ttu-id="2fb0b-1031">Сеанс завершается, когда пользователь закрывает приложение или начинает создавать элемент во встроенной форме, а затем переходит из формы в отдельное окно.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1031">A session is over when the user closes the app, or if the user starts composing an inline form then subsequently pops out the form to continue in a separate window.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-1026">Параметры:</span><span class="sxs-lookup"><span data-stu-id="b789e-1026">Parameters:</span></span>
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-1032">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1032">Parameters</span></span>
 
-|<span data-ttu-id="b789e-1027">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-1027">Name</span></span>|<span data-ttu-id="b789e-1028">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-1028">Type</span></span>|<span data-ttu-id="b789e-1029">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b789e-1029">Attributes</span></span>|<span data-ttu-id="b789e-1030">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-1030">Description</span></span>|
+|<span data-ttu-id="2fb0b-1033">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1033">Name</span></span>|<span data-ttu-id="2fb0b-1034">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1034">Type</span></span>|<span data-ttu-id="2fb0b-1035">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1035">Attributes</span></span>|<span data-ttu-id="2fb0b-1036">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1036">Description</span></span>|
 |---|---|---|---|
-|`attachmentId`|<span data-ttu-id="b789e-1031">Строка</span><span class="sxs-lookup"><span data-stu-id="b789e-1031">String</span></span>||<span data-ttu-id="b789e-1032">Идентификатор вложения, который необходимо получить.</span><span class="sxs-lookup"><span data-stu-id="b789e-1032">The identifier of the attachment you want to get.</span></span>|
-|`options`|<span data-ttu-id="b789e-1033">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-1033">Object</span></span>|<span data-ttu-id="b789e-1034">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1034">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1035">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="b789e-1035">An object literal that contains one or more of the following properties.</span></span>|
-|`options.asyncContext`|<span data-ttu-id="b789e-1036">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-1036">Object</span></span>|<span data-ttu-id="b789e-1037">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1037">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1038">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="b789e-1038">Developers can provide any object they wish to access in the callback method.</span></span>|
-|`callback`|<span data-ttu-id="b789e-1039">функция</span><span class="sxs-lookup"><span data-stu-id="b789e-1039">function</span></span>|<span data-ttu-id="b789e-1040">&lt;Необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1040">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1041">По завершении работы метода функция, переданная параметру `callback`, вызывается с помощью одного параметра `asyncResult`, представляющего собой объект [AsyncResult](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="b789e-1041">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [AsyncResult](/javascript/api/office/office.asyncresult) object.</span></span>|
+|`attachmentId`|<span data-ttu-id="2fb0b-1037">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1037">String</span></span>||<span data-ttu-id="2fb0b-1038">Идентификатор вложения, который необходимо получить.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1038">The identifier of the attachment you want to get.</span></span>|
+|`options`|<span data-ttu-id="2fb0b-1039">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1039">Object</span></span>|<span data-ttu-id="2fb0b-1040">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1040">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1041">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1041">An object literal that contains one or more of the following properties.</span></span>|
+|`options.asyncContext`|<span data-ttu-id="2fb0b-1042">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1042">Object</span></span>|<span data-ttu-id="2fb0b-1043">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1043">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1044">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1044">Developers can provide any object they wish to access in the callback method.</span></span>|
+|`callback`|<span data-ttu-id="2fb0b-1045">функция</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1045">function</span></span>|<span data-ttu-id="2fb0b-1046">&lt;Необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1046">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1047">По завершении работы метода функция, переданная параметру `callback`, вызывается с помощью одного параметра `asyncResult`, представляющего собой объект [AsyncResult](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1047">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [AsyncResult](/javascript/api/office/office.asyncresult) object.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1042">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-1042">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1048">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1048">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1043">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1043">Requirement</span></span>|<span data-ttu-id="b789e-1044">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1044">Value</span></span>|
+|<span data-ttu-id="2fb0b-1049">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1049">Requirement</span></span>|<span data-ttu-id="2fb0b-1050">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1050">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1045">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-1045">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-1046">Предварительная версия</span><span class="sxs-lookup"><span data-stu-id="b789e-1046">Preview</span></span>|
-|[<span data-ttu-id="b789e-1047">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1047">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-1048">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-1048">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-1049">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1049">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-1050">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-1050">Compose or read</span></span>|
+|[<span data-ttu-id="2fb0b-1051">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1051">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-1052">Предварительная версия</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1052">Preview</span></span>|
+|[<span data-ttu-id="2fb0b-1053">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1053">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-1054">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1054">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-1055">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1055">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-1056">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1056">Compose or Read</span></span>|
 
-##### <a name="returns"></a><span data-ttu-id="b789e-1051">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="b789e-1051">Returns:</span></span>
+##### <a name="returns"></a><span data-ttu-id="2fb0b-1057">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1057">Returns:</span></span>
 
-<span data-ttu-id="b789e-1052">Тип: [AttachmentContent](/javascript/api/outlook/office.attachmentcontent)</span><span class="sxs-lookup"><span data-stu-id="b789e-1052">Type: [AttachmentContent](/javascript/api/outlook/office.attachmentcontent)</span></span>
+<span data-ttu-id="2fb0b-1058">Тип: [AttachmentContent](/javascript/api/outlook/office.attachmentcontent)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1058">Type: [AttachmentContent](/javascript/api/outlook/office.attachmentcontent)</span></span>
 
-##### <a name="example"></a><span data-ttu-id="b789e-1053">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-1053">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-1059">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1059">Example</span></span>
 
 ```javascript
 var item = Office.context.mailbox.item;
 var listOfAttachments = [];
 item.getAttachmentsAsync(callback);
+
 function callback(result) {
-    if (result.value.length > 0) {
-        for (i = 0 ; i < result.value.length ; i++) {
-            var options = {asyncContext: {type: result.value[i].attachmentType}};
-            getAttachmentContentAsync(result.value[i].id, options, handleAttachmentsCallback);  
-        }
+  if (result.value.length > 0) {
+    for (i = 0 ; i < result.value.length ; i++) {
+      var options = {asyncContext: {type: result.value[i].attachmentType}};
+      getAttachmentContentAsync(result.value[i].id, options, handleAttachmentsCallback);
     }
+  }
 }
 
 function handleAttachmentsCallback(result) {
-    // parse string to be a url, an .eml file, a base64-encoded string, or an .icalendar file
-    if (result.format == Office.MailboxEnums.AttachmentContentFormat.Base64) {
-        // handle file attachment
-    }
-    else if (result.format == Office.MailboxEnums.AttachmentContentFormat.Eml) {
-        // handle item attachment
-    }
-    else if (result.format == Office.MailboxEnums.AttachmentContentFormat.ICalendar) {
-        // handle .icalender attachment
-    }
-    else {
-        // handle cloud attachment  
-    }
+  // Parse string to be a url, an .eml file, a base64-encoded string, or an .icalendar file.
+  if (result.format === Office.MailboxEnums.AttachmentContentFormat.Base64) {
+    // Handle file attachment.
+  } else if (result.format === Office.MailboxEnums.AttachmentContentFormat.Eml) {
+    // Handle email item attachment.
+  } else if (result.format === Office.MailboxEnums.AttachmentContentFormat.ICalendar) {
+    // Handle .icalender attachment.
+  } else if (result.format === Office.MailboxEnums.AttachmentContentFormat.Url) {
+    // Handle cloud attachment.
+  } else {
+    // Handle attachment formats that are not supported.
+  }
 }
 ```
 
-#### <a name="getattachmentsasyncoptions-callback--arrayattachmentdetailsjavascriptapioutlookofficeattachmentdetails"></a><span data-ttu-id="b789e-1054">getAttachmentsAsync([options], callback) → Array.<[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)></span><span class="sxs-lookup"><span data-stu-id="b789e-1054">getAttachmentsAsync([options], callback) → Array.<[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)></span></span>
+#### <a name="getattachmentsasyncoptions-callback--arrayattachmentdetailsjavascriptapioutlookofficeattachmentdetails"></a><span data-ttu-id="2fb0b-1060">Жетаттачментсасинк ([параметры], [обратный вызов]) → Array. _Лт_[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)></span><span class="sxs-lookup"><span data-stu-id="2fb0b-1060">getAttachmentsAsync([options], [callback]) → Array.<[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)></span></span>
 
-<span data-ttu-id="b789e-1055">Получает вложения элемента в качестве массива.</span><span class="sxs-lookup"><span data-stu-id="b789e-1055">Gets the item's attachments as an array.</span></span> <span data-ttu-id="b789e-1056">Только в режиме создания.</span><span class="sxs-lookup"><span data-stu-id="b789e-1056">Compose mode only.</span></span>
+<span data-ttu-id="2fb0b-1061">Получает вложения элемента в качестве массива.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1061">Gets the item's attachments as an array.</span></span> <span data-ttu-id="2fb0b-1062">Только в режиме создания.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1062">Compose mode only.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-1057">Параметры:</span><span class="sxs-lookup"><span data-stu-id="b789e-1057">Parameters:</span></span>
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-1063">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1063">Parameters</span></span>
 
-|<span data-ttu-id="b789e-1058">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-1058">Name</span></span>|<span data-ttu-id="b789e-1059">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-1059">Type</span></span>|<span data-ttu-id="b789e-1060">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b789e-1060">Attributes</span></span>|<span data-ttu-id="b789e-1061">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-1061">Description</span></span>|
+|<span data-ttu-id="2fb0b-1064">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1064">Name</span></span>|<span data-ttu-id="2fb0b-1065">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1065">Type</span></span>|<span data-ttu-id="2fb0b-1066">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1066">Attributes</span></span>|<span data-ttu-id="2fb0b-1067">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1067">Description</span></span>|
 |---|---|---|---|
-|`options`|<span data-ttu-id="b789e-1062">Объект</span><span class="sxs-lookup"><span data-stu-id="b789e-1062">Object</span></span>|<span data-ttu-id="b789e-1063">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1063">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1064">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="b789e-1064">An object literal that contains one or more of the following properties.</span></span>|
-|`options.asyncContext`|<span data-ttu-id="b789e-1065">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-1065">Object</span></span>|<span data-ttu-id="b789e-1066">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1066">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1067">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="b789e-1067">Developers can provide any object they wish to access in the callback method.</span></span>|
-|`callback`|<span data-ttu-id="b789e-1068">функция</span><span class="sxs-lookup"><span data-stu-id="b789e-1068">function</span></span>|<span data-ttu-id="b789e-1069">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1069">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1070">По завершении работы метода функция, переданная параметру `callback`, вызывается с помощью одного параметра `asyncResult`, представляющего собой объект [AsyncResult](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="b789e-1070">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [AsyncResult](/javascript/api/office/office.asyncresult) object.</span></span>|
+|`options`|<span data-ttu-id="2fb0b-1068">Объект</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1068">Object</span></span>|<span data-ttu-id="2fb0b-1069">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1069">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1070">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1070">An object literal that contains one or more of the following properties.</span></span>|
+|`options.asyncContext`|<span data-ttu-id="2fb0b-1071">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1071">Object</span></span>|<span data-ttu-id="2fb0b-1072">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1072">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1073">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1073">Developers can provide any object they wish to access in the callback method.</span></span>|
+|`callback`|<span data-ttu-id="2fb0b-1074">функция</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1074">function</span></span>|<span data-ttu-id="2fb0b-1075">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1075">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1076">По завершении работы метода функция, переданная параметру `callback`, вызывается с помощью одного параметра `asyncResult`, представляющего собой объект [AsyncResult](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1076">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [AsyncResult](/javascript/api/office/office.asyncresult) object.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1071">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-1071">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1077">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1077">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1072">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1072">Requirement</span></span>|<span data-ttu-id="b789e-1073">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1073">Value</span></span>|
+|<span data-ttu-id="2fb0b-1078">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1078">Requirement</span></span>|<span data-ttu-id="2fb0b-1079">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1079">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1074">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-1074">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-1075">Предварительная версия</span><span class="sxs-lookup"><span data-stu-id="b789e-1075">Preview</span></span>|
-|[<span data-ttu-id="b789e-1076">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1076">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-1077">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-1077">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-1078">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1078">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-1079">Создание</span><span class="sxs-lookup"><span data-stu-id="b789e-1079">Compose</span></span>|
+|[<span data-ttu-id="2fb0b-1080">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1080">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-1081">Предварительная версия</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1081">Preview</span></span>|
+|[<span data-ttu-id="2fb0b-1082">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1082">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-1083">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1083">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-1084">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1084">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-1085">Создание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1085">Compose</span></span>|
 
-##### <a name="returns"></a><span data-ttu-id="b789e-1080">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="b789e-1080">Returns:</span></span>
+##### <a name="returns"></a><span data-ttu-id="2fb0b-1086">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1086">Returns:</span></span>
 
-<span data-ttu-id="b789e-1081">Тип: Array.<[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)></span><span class="sxs-lookup"><span data-stu-id="b789e-1081">Type: Array.<[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)></span></span>
+<span data-ttu-id="2fb0b-1087">Тип: Array.<[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)></span><span class="sxs-lookup"><span data-stu-id="2fb0b-1087">Type: Array.<[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)></span></span>
 
-##### <a name="example"></a><span data-ttu-id="b789e-1082">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-1082">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-1088">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1088">Example</span></span>
 
-<span data-ttu-id="b789e-1083">В приведенном ниже примере создается HTML-строка с подробными сведениями обо всех вложениях для текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-1083">The following example builds an HTML string with details of all attachments on the current item.</span></span>
+<span data-ttu-id="2fb0b-1089">В приведенном ниже примере создается HTML-строка с подробными сведениями обо всех вложениях для текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1089">The following example builds an HTML string with details of all attachments on the current item.</span></span>
 
 ```javascript
 var item = Office.context.mailbox.item;
 var outputString = "";
-item.getAttachmentsAsync(callback);  
+item.getAttachmentsAsync(callback);
+
 function callback(result) {
-    if (result.value.length > 0) {
-        for (i = 0 ; i < result.value.length ; i++) {
-            var _att = result.value [i];
-            outputString += "<BR>" + i + ". Name: ";
-            outputString += _att.name;
-            outputString += "<BR>ID: " + _att.id;
-            outputString += "<BR>contentType: " + _att.contentType;
-            outputString += "<BR>size: " + _att.size;
-            outputString += "<BR>attachmentType: " + _att.attachmentType;
-            outputString += "<BR>isInline: " + _att.isInline;
-        }
+  if (result.value.length > 0) {
+    for (i = 0 ; i < result.value.length ; i++) {
+      var attachment = result.value [i];
+      outputString += "<BR>" + i + ". Name: ";
+      outputString += attachment.name;
+      outputString += "<BR>ID: " + attachment.id;
+      outputString += "<BR>contentType: " + attachment.contentType;
+      outputString += "<BR>size: " + attachment.size;
+      outputString += "<BR>attachmentType: " + attachment.attachmentType;
+      outputString += "<BR>isInline: " + attachment.isInline;
     }
+  }
 }
 ```
 
-#### <a name="getentities--entitiesjavascriptapioutlookofficeentities"></a><span data-ttu-id="b789e-1084">getEntities() → {[Entities](/javascript/api/outlook/office.entities)}</span><span class="sxs-lookup"><span data-stu-id="b789e-1084">getEntities() → {[Entities](/javascript/api/outlook/office.entities)}</span></span>
+#### <a name="getentities--entitiesjavascriptapioutlookofficeentities"></a><span data-ttu-id="2fb0b-1090">getEntities() → {[Entities](/javascript/api/outlook/office.entities)}</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1090">getEntities() → {[Entities](/javascript/api/outlook/office.entities)}</span></span>
 
-<span data-ttu-id="b789e-1085">Получает сущности, обнаруженные в теле выбранного элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-1085">Gets the entities found in the selected item's body.</span></span>
+<span data-ttu-id="2fb0b-1091">Получает сущности, обнаруженные в теле выбранного элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1091">Gets the entities found in the selected item's body.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-1086">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="b789e-1086">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
+> <span data-ttu-id="2fb0b-1092">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1092">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1087">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-1087">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1093">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1093">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1088">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1088">Requirement</span></span>|<span data-ttu-id="b789e-1089">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1089">Value</span></span>|
+|<span data-ttu-id="2fb0b-1094">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1094">Requirement</span></span>|<span data-ttu-id="2fb0b-1095">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1095">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1090">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-1090">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-1091">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-1091">1.0</span></span>|
-|[<span data-ttu-id="b789e-1092">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1092">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-1093">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-1093">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-1094">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1094">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-1095">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-1095">Read</span></span>|
+|[<span data-ttu-id="2fb0b-1096">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1096">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-1097">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1097">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-1098">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1098">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-1099">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1099">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-1100">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1100">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-1101">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1101">Read</span></span>|
 
-##### <a name="returns"></a><span data-ttu-id="b789e-1096">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="b789e-1096">Returns:</span></span>
+##### <a name="returns"></a><span data-ttu-id="2fb0b-1102">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1102">Returns:</span></span>
 
-<span data-ttu-id="b789e-1097">Тип: [Entities](/javascript/api/outlook/office.entities)</span><span class="sxs-lookup"><span data-stu-id="b789e-1097">Type: [Entities](/javascript/api/outlook/office.entities)</span></span>
+<span data-ttu-id="2fb0b-1103">Тип: [Entities](/javascript/api/outlook/office.entities)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1103">Type: [Entities](/javascript/api/outlook/office.entities)</span></span>
 
-##### <a name="example"></a><span data-ttu-id="b789e-1098">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-1098">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-1104">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1104">Example</span></span>
 
-<span data-ttu-id="b789e-1099">Ниже приведен пример получения доступа к сущностям контактов в теле текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-1099">The following example accesses the contacts entities in the current item's body.</span></span>
+<span data-ttu-id="2fb0b-1105">Ниже приведен пример получения доступа к сущностям контактов в теле текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1105">The following example accesses the contacts entities in the current item's body.</span></span>
 
 ```javascript
 var contacts = Office.context.mailbox.item.getEntities().contacts;
 ```
 
-#### <a name="getentitiesbytypeentitytype--nullable-arraystringcontactjavascriptapioutlookofficecontactmeetingsuggestionjavascriptapioutlookofficemeetingsuggestionphonenumberjavascriptapioutlookofficephonenumbertasksuggestionjavascriptapioutlookofficetasksuggestion"></a><span data-ttu-id="b789e-1100">getEntitiesByType(entityType) → (nullable) {Array.<(String|[Contact](/javascript/api/outlook/office.contact)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion))>}</span><span class="sxs-lookup"><span data-stu-id="b789e-1100">getEntitiesByType(entityType) → (nullable) {Array.<(String|[Contact](/javascript/api/outlook/office.contact)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion))>}</span></span>
+#### <a name="getentitiesbytypeentitytype--nullable-arraystringcontactjavascriptapioutlookofficecontactmeetingsuggestionjavascriptapioutlookofficemeetingsuggestionphonenumberjavascriptapioutlookofficephonenumbertasksuggestionjavascriptapioutlookofficetasksuggestion"></a><span data-ttu-id="2fb0b-1106">getEntitiesByType(entityType) → (nullable) {Array.<(String|[Contact](/javascript/api/outlook/office.contact)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion))>}</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1106">getEntitiesByType(entityType) → (nullable) {Array.<(String|[Contact](/javascript/api/outlook/office.contact)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion))>}</span></span>
 
-<span data-ttu-id="b789e-1101">Получает массив всех сущностей указанного типа, обнаруженных в теле выбранного элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-1101">Gets an array of all the entities of the specified entity type found in the selected item's body.</span></span>
+<span data-ttu-id="2fb0b-1107">Получает массив всех сущностей указанного типа, обнаруженных в теле выбранного элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1107">Gets an array of all the entities of the specified entity type found in the selected item's body.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-1102">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="b789e-1102">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
+> <span data-ttu-id="2fb0b-1108">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1108">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-1103">Параметры</span><span class="sxs-lookup"><span data-stu-id="b789e-1103">Parameters:</span></span>
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-1109">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1109">Parameters</span></span>
 
-|<span data-ttu-id="b789e-1104">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-1104">Name</span></span>|<span data-ttu-id="b789e-1105">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-1105">Type</span></span>|<span data-ttu-id="b789e-1106">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-1106">Description</span></span>|
+|<span data-ttu-id="2fb0b-1110">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1110">Name</span></span>|<span data-ttu-id="2fb0b-1111">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1111">Type</span></span>|<span data-ttu-id="2fb0b-1112">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1112">Description</span></span>|
 |---|---|---|
-|`entityType`|[<span data-ttu-id="b789e-1107">Office.MailboxEnums.EntityType</span><span class="sxs-lookup"><span data-stu-id="b789e-1107">Office.MailboxEnums.EntityType</span></span>](/javascript/api/outlook/office.mailboxenums.entitytype)|<span data-ttu-id="b789e-1108">Одно из значений перечисления EntityType.</span><span class="sxs-lookup"><span data-stu-id="b789e-1108">One of the EntityType enumeration values.</span></span>|
+|`entityType`|[<span data-ttu-id="2fb0b-1113">Office.MailboxEnums.EntityType</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1113">Office.MailboxEnums.EntityType</span></span>](/javascript/api/outlook/office.mailboxenums.entitytype)|<span data-ttu-id="2fb0b-1114">Одно из значений перечисления EntityType.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1114">One of the EntityType enumeration values.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1109">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-1109">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1115">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1115">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1110">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1110">Requirement</span></span>|<span data-ttu-id="b789e-1111">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1111">Value</span></span>|
+|<span data-ttu-id="2fb0b-1116">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1116">Requirement</span></span>|<span data-ttu-id="2fb0b-1117">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1117">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1112">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-1112">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-1113">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-1113">1.0</span></span>|
-|[<span data-ttu-id="b789e-1114">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1114">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-1115">Restricted</span><span class="sxs-lookup"><span data-stu-id="b789e-1115">Restricted</span></span>|
-|[<span data-ttu-id="b789e-1116">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1116">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-1117">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-1117">Read</span></span>|
+|[<span data-ttu-id="2fb0b-1118">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1118">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-1119">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1119">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-1120">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1120">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-1121">С ограничениями</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1121">Restricted</span></span>|
+|[<span data-ttu-id="2fb0b-1122">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1122">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-1123">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1123">Read</span></span>|
 
-##### <a name="returns"></a><span data-ttu-id="b789e-1118">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="b789e-1118">Returns:</span></span>
+##### <a name="returns"></a><span data-ttu-id="2fb0b-1124">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1124">Returns:</span></span>
 
-<span data-ttu-id="b789e-1119">Если значение, переданное в `entityType`, не является допустимым членом перечисления `EntityType`, метод возвращает значение NULL.</span><span class="sxs-lookup"><span data-stu-id="b789e-1119">If the value passed in `entityType` is not a valid member of the `EntityType` enumeration, the method returns null.</span></span> <span data-ttu-id="b789e-1120">Если в теле элемента отсутствуют сущности указанного типа, метод возвращает пустой массив.</span><span class="sxs-lookup"><span data-stu-id="b789e-1120">If no entities of the specified type are present in the item's body, the method returns an empty array.</span></span> <span data-ttu-id="b789e-1121">В противном случае тип объектов в возвращаемом массиве зависит от типа сущности, запрошенной в параметре `entityType`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1121">Otherwise, the type of the objects in the returned array depends on the type of entity requested in the `entityType` parameter.</span></span>
+<span data-ttu-id="2fb0b-1125">Если значение, переданное в `entityType`, не является допустимым членом перечисления `EntityType`, метод возвращает значение NULL.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1125">If the value passed in `entityType` is not a valid member of the `EntityType` enumeration, the method returns null.</span></span> <span data-ttu-id="2fb0b-1126">Если в теле элемента отсутствуют сущности указанного типа, метод возвращает пустой массив.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1126">If no entities of the specified type are present in the item's body, the method returns an empty array.</span></span> <span data-ttu-id="2fb0b-1127">В противном случае тип объектов в возвращаемом массиве зависит от типа сущности, запрошенной в параметре `entityType`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1127">Otherwise, the type of the objects in the returned array depends on the type of entity requested in the `entityType` parameter.</span></span>
 
-<span data-ttu-id="b789e-1122">Хотя минимальный уровень разрешений для использования этого метода — **Restricted**, для некоторых типов сущностей требуется доступ на уровне **ReadItem**, как указано в приведенной ниже таблице.</span><span class="sxs-lookup"><span data-stu-id="b789e-1122">While the minimum permission level to use this method is **Restricted**, some entity types require **ReadItem** to access, as specified in the following table.</span></span>
+<span data-ttu-id="2fb0b-1128">Хотя минимальный уровень разрешений для использования этого метода — **Restricted**, для некоторых типов сущностей требуется доступ на уровне **ReadItem**, как указано в приведенной ниже таблице.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1128">While the minimum permission level to use this method is **Restricted**, some entity types require **ReadItem** to access, as specified in the following table.</span></span>
 
-|<span data-ttu-id="b789e-1123">Значение параметра `entityType`</span><span class="sxs-lookup"><span data-stu-id="b789e-1123">Value of `entityType`</span></span>|<span data-ttu-id="b789e-1124">Тип объектов в возвращаемом массиве</span><span class="sxs-lookup"><span data-stu-id="b789e-1124">Type of objects in returned array</span></span>|<span data-ttu-id="b789e-1125">Необходимый уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1125">Required Permission Level</span></span>|
+|<span data-ttu-id="2fb0b-1129">Значение параметра `entityType`</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1129">Value of `entityType`</span></span>|<span data-ttu-id="2fb0b-1130">Тип объектов в возвращаемом массиве</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1130">Type of objects in returned array</span></span>|<span data-ttu-id="2fb0b-1131">Необходимый уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1131">Required Permission Level</span></span>|
 |---|---|---|
-|`Address`|<span data-ttu-id="b789e-1126">Строка</span><span class="sxs-lookup"><span data-stu-id="b789e-1126">String</span></span>|<span data-ttu-id="b789e-1127">**Restricted**</span><span class="sxs-lookup"><span data-stu-id="b789e-1127">**Restricted**</span></span>|
-|`Contact`|<span data-ttu-id="b789e-1128">Contact</span><span class="sxs-lookup"><span data-stu-id="b789e-1128">Contact</span></span>|<span data-ttu-id="b789e-1129">**ReadItem**</span><span class="sxs-lookup"><span data-stu-id="b789e-1129">**ReadItem**</span></span>|
-|`EmailAddress`|<span data-ttu-id="b789e-1130">String</span><span class="sxs-lookup"><span data-stu-id="b789e-1130">String</span></span>|<span data-ttu-id="b789e-1131">**ReadItem**</span><span class="sxs-lookup"><span data-stu-id="b789e-1131">**ReadItem**</span></span>|
-|`MeetingSuggestion`|<span data-ttu-id="b789e-1132">MeetingSuggestion</span><span class="sxs-lookup"><span data-stu-id="b789e-1132">MeetingSuggestion</span></span>|<span data-ttu-id="b789e-1133">**ReadItem**</span><span class="sxs-lookup"><span data-stu-id="b789e-1133">**ReadItem**</span></span>|
-|`PhoneNumber`|<span data-ttu-id="b789e-1134">PhoneNumber</span><span class="sxs-lookup"><span data-stu-id="b789e-1134">PhoneNumber</span></span>|<span data-ttu-id="b789e-1135">**Restricted**</span><span class="sxs-lookup"><span data-stu-id="b789e-1135">**Restricted**</span></span>|
-|`TaskSuggestion`|<span data-ttu-id="b789e-1136">TaskSuggestion</span><span class="sxs-lookup"><span data-stu-id="b789e-1136">TaskSuggestion</span></span>|<span data-ttu-id="b789e-1137">**ReadItem**</span><span class="sxs-lookup"><span data-stu-id="b789e-1137">**ReadItem**</span></span>|
-|`URL`|<span data-ttu-id="b789e-1138">String</span><span class="sxs-lookup"><span data-stu-id="b789e-1138">String</span></span>|<span data-ttu-id="b789e-1139">**Restricted**</span><span class="sxs-lookup"><span data-stu-id="b789e-1139">**Restricted**</span></span>|
+|`Address`|<span data-ttu-id="2fb0b-1132">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1132">String</span></span>|<span data-ttu-id="2fb0b-1133">**Restricted**</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1133">**Restricted**</span></span>|
+|`Contact`|<span data-ttu-id="2fb0b-1134">Contact</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1134">Contact</span></span>|<span data-ttu-id="2fb0b-1135">**ReadItem**</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1135">**ReadItem**</span></span>|
+|`EmailAddress`|<span data-ttu-id="2fb0b-1136">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1136">String</span></span>|<span data-ttu-id="2fb0b-1137">**ReadItem**</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1137">**ReadItem**</span></span>|
+|`MeetingSuggestion`|<span data-ttu-id="2fb0b-1138">MeetingSuggestion</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1138">MeetingSuggestion</span></span>|<span data-ttu-id="2fb0b-1139">**ReadItem**</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1139">**ReadItem**</span></span>|
+|`PhoneNumber`|<span data-ttu-id="2fb0b-1140">PhoneNumber</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1140">PhoneNumber</span></span>|<span data-ttu-id="2fb0b-1141">**Restricted**</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1141">**Restricted**</span></span>|
+|`TaskSuggestion`|<span data-ttu-id="2fb0b-1142">TaskSuggestion</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1142">TaskSuggestion</span></span>|<span data-ttu-id="2fb0b-1143">**ReadItem**</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1143">**ReadItem**</span></span>|
+|`URL`|<span data-ttu-id="2fb0b-1144">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1144">String</span></span>|<span data-ttu-id="2fb0b-1145">**Restricted**</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1145">**Restricted**</span></span>|
 
-<span data-ttu-id="b789e-1140">Тип: Array.<(String|[Contact](/javascript/api/outlook/office.contact)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion))></span><span class="sxs-lookup"><span data-stu-id="b789e-1140">Type: Array.<(String|[Contact](/javascript/api/outlook/office.contact)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion))></span></span>
+<span data-ttu-id="2fb0b-1146">Тип: Array.<(String|[Contact](/javascript/api/outlook/office.contact)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion))></span><span class="sxs-lookup"><span data-stu-id="2fb0b-1146">Type: Array.<(String|[Contact](/javascript/api/outlook/office.contact)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion))></span></span>
 
-##### <a name="example"></a><span data-ttu-id="b789e-1141">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-1141">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-1147">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1147">Example</span></span>
 
-<span data-ttu-id="b789e-1142">В примере ниже показано, как получить доступ к массиву строк, которые представляют собой почтовые адреса в теле текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-1142">The following example shows how to access an array of strings that represent postal addresses in the current item's body.</span></span>
+<span data-ttu-id="2fb0b-1148">В примере ниже показано, как получить доступ к массиву строк, которые представляют собой почтовые адреса в теле текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1148">The following example shows how to access an array of strings that represent postal addresses in the current item's body.</span></span>
 
 ```javascript
 // The initialize function is required for all apps.
@@ -1603,97 +1739,96 @@ Office.initialize = function () {
     var addresses = item.getEntitiesByType(Office.MailboxEnums.EntityType.Address);
     // Continue processing the array of addresses.
   });
-}
+};
 ```
 
-#### <a name="getfilteredentitiesbynamename--nullable-arraystringcontactjavascriptapioutlookofficecontactmeetingsuggestionjavascriptapioutlookofficemeetingsuggestionphonenumberjavascriptapioutlookofficephonenumbertasksuggestionjavascriptapioutlookofficetasksuggestion"></a><span data-ttu-id="b789e-1143">getFilteredEntitiesByName(name) → (nullable) {Array.<(String|[Contact](/javascript/api/outlook/office.contact)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion))>}</span><span class="sxs-lookup"><span data-stu-id="b789e-1143">getFilteredEntitiesByName(name) → (nullable) {Array.<(String|[Contact](/javascript/api/outlook/office.contact)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion))>}</span></span>
+#### <a name="getfilteredentitiesbynamename--nullable-arraystringcontactjavascriptapioutlookofficecontactmeetingsuggestionjavascriptapioutlookofficemeetingsuggestionphonenumberjavascriptapioutlookofficephonenumbertasksuggestionjavascriptapioutlookofficetasksuggestion"></a><span data-ttu-id="2fb0b-1149">getFilteredEntitiesByName(name) → (nullable) {Array.<(String|[Contact](/javascript/api/outlook/office.contact)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion))>}</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1149">getFilteredEntitiesByName(name) → (nullable) {Array.<(String|[Contact](/javascript/api/outlook/office.contact)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion))>}</span></span>
 
-<span data-ttu-id="b789e-1144">Возвращает известные сущности в выбранном элементе, которые проходят через именованный фильтр, определяемый в XML-файле манифеста.</span><span class="sxs-lookup"><span data-stu-id="b789e-1144">Returns well-known entities in the selected item that pass the named filter defined in the manifest XML file.</span></span>
+<span data-ttu-id="2fb0b-1150">Возвращает известные сущности в выбранном элементе, которые проходят через именованный фильтр, определяемый в XML-файле манифеста.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1150">Returns well-known entities in the selected item that pass the named filter defined in the manifest XML file.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-1145">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="b789e-1145">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
+> <span data-ttu-id="2fb0b-1151">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1151">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
 
-<span data-ttu-id="b789e-1146">Метод `getFilteredEntitiesByName` возвращает сущности, соответствующие регулярному выражению, которое определяется в элементе правила [ItemHasKnownEntity](/office/dev/add-ins/reference/manifest/rule#itemhasknownentity-rule) в XML-файле манифеста, с использованием указанного значения элемента `FilterName`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1146">The `getFilteredEntitiesByName` method returns the entities that match the regular expression defined in the [ItemHasKnownEntity](/office/dev/add-ins/reference/manifest/rule#itemhasknownentity-rule) rule element in the manifest XML file with the specified `FilterName` element value.</span></span>
+<span data-ttu-id="2fb0b-1152">Метод `getFilteredEntitiesByName` возвращает сущности, соответствующие регулярному выражению, которое определяется в элементе правила [ItemHasKnownEntity](/office/dev/add-ins/reference/manifest/rule#itemhasknownentity-rule) в XML-файле манифеста, с использованием указанного значения элемента `FilterName`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1152">The `getFilteredEntitiesByName` method returns the entities that match the regular expression defined in the [ItemHasKnownEntity](/office/dev/add-ins/reference/manifest/rule#itemhasknownentity-rule) rule element in the manifest XML file with the specified `FilterName` element value.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-1147">Параметры:</span><span class="sxs-lookup"><span data-stu-id="b789e-1147">Parameters:</span></span>
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-1153">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1153">Parameters</span></span>
 
-|<span data-ttu-id="b789e-1148">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-1148">Name</span></span>|<span data-ttu-id="b789e-1149">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-1149">Type</span></span>|<span data-ttu-id="b789e-1150">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-1150">Description</span></span>|
+|<span data-ttu-id="2fb0b-1154">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1154">Name</span></span>|<span data-ttu-id="2fb0b-1155">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1155">Type</span></span>|<span data-ttu-id="2fb0b-1156">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1156">Description</span></span>|
 |---|---|---|
-|`name`|<span data-ttu-id="b789e-1151">Строка</span><span class="sxs-lookup"><span data-stu-id="b789e-1151">String</span></span>|<span data-ttu-id="b789e-1152">Имя элемента правила `ItemHasKnownEntity`, определяющее соответствующий фильтр.</span><span class="sxs-lookup"><span data-stu-id="b789e-1152">The name of the `ItemHasKnownEntity` rule element that defines the filter to match.</span></span>|
+|`name`|<span data-ttu-id="2fb0b-1157">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1157">String</span></span>|<span data-ttu-id="2fb0b-1158">Имя элемента правила `ItemHasKnownEntity`, определяющее соответствующий фильтр.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1158">The name of the `ItemHasKnownEntity` rule element that defines the filter to match.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1153">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-1153">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1159">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1159">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1154">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1154">Requirement</span></span>|<span data-ttu-id="b789e-1155">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1155">Value</span></span>|
+|<span data-ttu-id="2fb0b-1160">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1160">Requirement</span></span>|<span data-ttu-id="2fb0b-1161">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1161">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1156">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-1156">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-1157">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-1157">1.0</span></span>|
-|[<span data-ttu-id="b789e-1158">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1158">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-1159">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-1159">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-1160">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1160">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-1161">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-1161">Read</span></span>|
+|[<span data-ttu-id="2fb0b-1162">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1162">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-1163">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1163">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-1164">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1164">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-1165">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1165">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-1166">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1166">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-1167">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1167">Read</span></span>|
 
-##### <a name="returns"></a><span data-ttu-id="b789e-1162">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="b789e-1162">Returns:</span></span>
+##### <a name="returns"></a><span data-ttu-id="2fb0b-1168">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1168">Returns:</span></span>
 
-<span data-ttu-id="b789e-p162">Если в манифесте нет элемента `ItemHasKnownEntity` со значением `FilterName`, соответствующим параметру `name`, метод возвращает `null`. Если параметр `name` соответствует элементу `ItemHasKnownEntity` в манифесте, но при этом в текущем элементе нет соответствующих сущностей, метод возвращает пустой массив.</span><span class="sxs-lookup"><span data-stu-id="b789e-p162">If there is no `ItemHasKnownEntity` element in the manifest with a `FilterName` element value that matches the `name` parameter, the method returns `null`. If the `name` parameter does match an `ItemHasKnownEntity` element in the manifest, but there are no entities in the current item that match, the method return an empty array.</span></span>
+<span data-ttu-id="2fb0b-p164">Если в манифесте нет элемента `ItemHasKnownEntity` со значением `FilterName`, соответствующим параметру `name`, метод возвращает `null`. Если параметр `name` соответствует элементу `ItemHasKnownEntity` в манифесте, но при этом в текущем элементе нет соответствующих сущностей, метод возвращает пустой массив.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p164">If there is no `ItemHasKnownEntity` element in the manifest with a `FilterName` element value that matches the `name` parameter, the method returns `null`. If the `name` parameter does match an `ItemHasKnownEntity` element in the manifest, but there are no entities in the current item that match, the method return an empty array.</span></span>
 
-<span data-ttu-id="b789e-1165">Тип: Array.<(String|[Contact](/javascript/api/outlook/office.contact)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion))></span><span class="sxs-lookup"><span data-stu-id="b789e-1165">Type: Array.<(String|[Contact](/javascript/api/outlook/office.contact)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion))></span></span>
+<span data-ttu-id="2fb0b-1171">Тип: Array.<(String|[Contact](/javascript/api/outlook/office.contact)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion))></span><span class="sxs-lookup"><span data-stu-id="2fb0b-1171">Type: Array.<(String|[Contact](/javascript/api/outlook/office.contact)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion))></span></span>
 
-#### <a name="getinitializationcontextasyncoptions-callback"></a><span data-ttu-id="b789e-1166">getInitializationContextAsync([options], [callback])</span><span class="sxs-lookup"><span data-stu-id="b789e-1166">getInitializationContextAsync([options], [callback])</span></span>
+#### <a name="getinitializationcontextasyncoptions-callback"></a><span data-ttu-id="2fb0b-1172">getInitializationContextAsync([options], [callback])</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1172">getInitializationContextAsync([options], [callback])</span></span>
 
-<span data-ttu-id="b789e-1167">Получает данные инициализации, передаваемые при [активации надстройки интерактивным сообщением](https://docs.microsoft.com/outlook/actionable-messages/invoke-add-in-from-actionable-message).</span><span class="sxs-lookup"><span data-stu-id="b789e-1167">Gets initialization data passed when the add-in is [activated by an actionable message](https://docs.microsoft.com/outlook/actionable-messages/invoke-add-in-from-actionable-message).</span></span>
+<span data-ttu-id="2fb0b-1173">Получает данные инициализации, передаваемые при [активации надстройки интерактивным сообщением](https://docs.microsoft.com/outlook/actionable-messages/invoke-add-in-from-actionable-message).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1173">Gets initialization data passed when the add-in is [activated by an actionable message](https://docs.microsoft.com/outlook/actionable-messages/invoke-add-in-from-actionable-message).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-1168">Этот метод поддерживается только версией Outlook 2016 для Windows или более поздней (версии "нажми и работай" с номером больше 16.0.8413.1000) и Outlook в Интернете для Office 365.</span><span class="sxs-lookup"><span data-stu-id="b789e-1168">This method is only supported by Outlook 2016 or later for Windows (Click-to-Run versions later than 16.0.8413.1000) and Outlook on the web for Office 365.</span></span>
+> <span data-ttu-id="2fb0b-1174">Этот метод поддерживается только версией Outlook 2016 для Windows или более поздней (версии "нажми и работай" с номером больше 16.0.8413.1000) и Outlook в Интернете для Office 365.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1174">This method is only supported by Outlook 2016 or later for Windows (Click-to-Run versions later than 16.0.8413.1000) and Outlook on the web for Office 365.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-1169">Параметры:</span><span class="sxs-lookup"><span data-stu-id="b789e-1169">Parameters:</span></span>
-|<span data-ttu-id="b789e-1170">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-1170">Name</span></span>|<span data-ttu-id="b789e-1171">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-1171">Type</span></span>|<span data-ttu-id="b789e-1172">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b789e-1172">Attributes</span></span>|<span data-ttu-id="b789e-1173">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-1173">Description</span></span>|
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-1175">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1175">Parameters</span></span>
+|<span data-ttu-id="2fb0b-1176">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1176">Name</span></span>|<span data-ttu-id="2fb0b-1177">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1177">Type</span></span>|<span data-ttu-id="2fb0b-1178">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1178">Attributes</span></span>|<span data-ttu-id="2fb0b-1179">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1179">Description</span></span>|
 |---|---|---|---|
-|`options`|<span data-ttu-id="b789e-1174">Объект</span><span class="sxs-lookup"><span data-stu-id="b789e-1174">Object</span></span>|<span data-ttu-id="b789e-1175">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1175">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1176">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="b789e-1176">An object literal that contains one or more of the following properties.</span></span>|
-|`options.asyncContext`|<span data-ttu-id="b789e-1177">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-1177">Object</span></span>|<span data-ttu-id="b789e-1178">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1178">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1179">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="b789e-1179">Developers can provide any object they wish to access in the callback method.</span></span>|
-|`callback`|<span data-ttu-id="b789e-1180">функция</span><span class="sxs-lookup"><span data-stu-id="b789e-1180">function</span></span>|<span data-ttu-id="b789e-1181">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1181">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1182">После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="b789e-1182">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span> <br/><span data-ttu-id="b789e-1183">В случае успешного выполнения данные инициализации предоставляются в свойстве `asyncResult.value` как строка.</span><span class="sxs-lookup"><span data-stu-id="b789e-1183">On success, the initialization data is provided in the `asyncResult.value` property as a string.</span></span><br/><span data-ttu-id="b789e-1184">Если контекст инициализации отсутствует, объект `asyncResult` будет содержать объект `Error`, одному свойству которого (`code`) будет присвоено значение `9020`, а другому (`name`) — значение `GenericResponseError`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1184">If there is no initialization context, the `asyncResult` object will contain an `Error` object with its `code` property set to `9020` and its `name` property set to `GenericResponseError`.</span></span>|
+|`options`|<span data-ttu-id="2fb0b-1180">Объект</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1180">Object</span></span>|<span data-ttu-id="2fb0b-1181">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1181">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1182">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1182">An object literal that contains one or more of the following properties.</span></span>|
+|`options.asyncContext`|<span data-ttu-id="2fb0b-1183">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1183">Object</span></span>|<span data-ttu-id="2fb0b-1184">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1184">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1185">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1185">Developers can provide any object they wish to access in the callback method.</span></span>|
+|`callback`|<span data-ttu-id="2fb0b-1186">функция</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1186">function</span></span>|<span data-ttu-id="2fb0b-1187">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1187">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1188">После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1188">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span> <br/><span data-ttu-id="2fb0b-1189">В случае успешного выполнения данные инициализации предоставляются в свойстве `asyncResult.value` как строка.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1189">On success, the initialization data is provided in the `asyncResult.value` property as a string.</span></span><br/><span data-ttu-id="2fb0b-1190">Если контекст инициализации отсутствует, объект `asyncResult` будет содержать объект `Error`, одному свойству которого (`code`) будет присвоено значение `9020`, а другому (`name`) — значение `GenericResponseError`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1190">If there is no initialization context, the `asyncResult` object will contain an `Error` object with its `code` property set to `9020` and its `name` property set to `GenericResponseError`.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1185">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-1185">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1191">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1191">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1186">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1186">Requirement</span></span>|<span data-ttu-id="b789e-1187">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1187">Value</span></span>|
+|<span data-ttu-id="2fb0b-1192">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1192">Requirement</span></span>|<span data-ttu-id="2fb0b-1193">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1193">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1188">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-1188">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-1189">Предварительная версия</span><span class="sxs-lookup"><span data-stu-id="b789e-1189">Preview</span></span>|
-|[<span data-ttu-id="b789e-1190">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1190">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-1191">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-1191">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-1192">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1192">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-1193">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-1193">Read</span></span>|
+|[<span data-ttu-id="2fb0b-1194">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1194">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-1195">Предварительная версия</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1195">Preview</span></span>|
+|[<span data-ttu-id="2fb0b-1196">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1196">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-1197">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1197">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-1198">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1198">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-1199">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1199">Read</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-1194">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-1194">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-1200">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1200">Example</span></span>
 
 ```javascript
-// Get the initialization context (if present)
+// Get the initialization context (if present).
 Office.context.mailbox.item.getInitializationContextAsync(
   function(asyncResult) {
     if (asyncResult.status == Office.AsyncResultStatus.Succeeded) {
       if (asyncResult.value != null && asyncResult.value.length > 0) {
-        // The value is a string, parse to an object
+        // The value is a string, parse to an object.
         var context = JSON.parse(asyncResult.value);
-        // Do something with context
+        // Do something with context.
       } else {
-        // Empty context, treat as no context
+        // Empty context, treat as no context.
       }
     } else {
       if (asyncResult.error.code == 9020) {
-        // GenericResponseError returned when there is
-        // no context
-        // Treat as no context
+        // GenericResponseError returned when there is no context.
+        // Treat as no context.
       } else {
-        // Handle the error
+        // Handle the error.
       }
     }
   }
 );
 ```
 
-#### <a name="getregexmatches--object"></a><span data-ttu-id="b789e-1195">getRegExMatches() → {Object}</span><span class="sxs-lookup"><span data-stu-id="b789e-1195">getRegExMatches() → {Object}</span></span>
+#### <a name="getregexmatches--object"></a><span data-ttu-id="2fb0b-1201">getRegExMatches() → {Object}</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1201">getRegExMatches() → {Object}</span></span>
 
-<span data-ttu-id="b789e-1196">Возвращает строковые значения в выбранном элементе, которые соответствуют регулярным выражениям, определенным в XML-файле манифеста.</span><span class="sxs-lookup"><span data-stu-id="b789e-1196">Returns string values in the selected item that match the regular expressions defined in the manifest XML file.</span></span>
+<span data-ttu-id="2fb0b-1202">Возвращает строковые значения в выбранном элементе, которые соответствуют регулярным выражениям, определенным в XML-файле манифеста.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1202">Returns string values in the selected item that match the regular expressions defined in the manifest XML file.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-1197">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="b789e-1197">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
+> <span data-ttu-id="2fb0b-1203">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1203">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
 
-<span data-ttu-id="b789e-p163">Метод `getRegExMatches` возвращает строки, соответствующие регулярному выражению, которое определяется в каждом элементе правила `ItemHasRegularExpressionMatch` или `ItemHasKnownEntity` в XML-файле манифеста. Для правила `ItemHasRegularExpressionMatch` соответствующую строку должно содержать свойство элемента, указанного этим правилом. Простой тип `PropertyName` определяет поддерживаемые свойства.</span><span class="sxs-lookup"><span data-stu-id="b789e-p163">The `getRegExMatches` method returns the strings that match the regular expression defined in each `ItemHasRegularExpressionMatch` or `ItemHasKnownEntity` rule element in the manifest XML file. For an `ItemHasRegularExpressionMatch` rule, a matching string has to occur in the property of the item that is specified by that rule. The `PropertyName` simple type defines the supported properties.</span></span>
+<span data-ttu-id="2fb0b-p165">Метод `getRegExMatches` возвращает строки, соответствующие регулярному выражению, которое определяется в каждом элементе правила `ItemHasRegularExpressionMatch` или `ItemHasKnownEntity` в XML-файле манифеста. Для правила `ItemHasRegularExpressionMatch` соответствующую строку должно содержать свойство элемента, указанного этим правилом. Простой тип `PropertyName` определяет поддерживаемые свойства.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p165">The `getRegExMatches` method returns the strings that match the regular expression defined in each `ItemHasRegularExpressionMatch` or `ItemHasKnownEntity` rule element in the manifest XML file. For an `ItemHasRegularExpressionMatch` rule, a matching string has to occur in the property of the item that is specified by that rule. The `PropertyName` simple type defines the supported properties.</span></span>
 
-<span data-ttu-id="b789e-1201">Например, рассмотрим манифест надстройки, который содержит указанный ниже элемент `Rule`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1201">For example, consider an add-in manifest has the following `Rule` element:</span></span>
+<span data-ttu-id="2fb0b-1207">Например, рассмотрим манифест надстройки, который содержит указанный ниже элемент `Rule`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1207">For example, consider an add-in manifest has the following `Rule` element:</span></span>
 
 ```xml
 <Rule xsi:type="RuleCollection" Mode="And">
@@ -1705,7 +1840,7 @@ Office.context.mailbox.item.getInitializationContextAsync(
 </Rule>
 ```
 
-<span data-ttu-id="b789e-1202">Объект, возвращаемый методом `getRegExMatches`, будет содержать два свойства: `fruits` и `veggies`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1202">The object returned from `getRegExMatches` would have two properties: `fruits` and `veggies`.</span></span>
+<span data-ttu-id="2fb0b-1208">Объект, возвращаемый методом `getRegExMatches`, будет содержать два свойства: `fruits` и `veggies`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1208">The object returned from `getRegExMatches` would have two properties: `fruits` and `veggies`.</span></span>
 
 ```json
 {
@@ -1714,186 +1849,186 @@ Office.context.mailbox.item.getInitializationContextAsync(
 }
 ```
 
-<span data-ttu-id="b789e-p164">Если вы указываете правило `ItemHasRegularExpressionMatch` для свойства текста элемента, регулярное выражение должно дальше фильтровать текст, а не пытаться вернуть весь текст элемента. Использование регулярного выражения, такого как `.*`, для получения всего текста элемента не всегда приносит ожидаемые результаты. Лучше используйте метод [`Body.getAsync`](/javascript/api/outlook/office.body#getasync-coerciontype--options--callback-) для этого.</span><span class="sxs-lookup"><span data-stu-id="b789e-p164">If you specify an `ItemHasRegularExpressionMatch` rule on the body property of an item, the regular expression should further filter the body and should not attempt to return the entire body of the item. Using a regular expression such as `.*` to obtain the entire body of an item does not always return the expected results. Instead, use the [`Body.getAsync`](/javascript/api/outlook/office.body#getasync-coerciontype--options--callback-) method to retrieve the entire body.</span></span>
+<span data-ttu-id="2fb0b-p166">Если вы указываете правило `ItemHasRegularExpressionMatch` для свойства текста элемента, регулярное выражение должно дальше фильтровать текст, а не пытаться вернуть весь текст элемента. Использование регулярного выражения, такого как `.*`, для получения всего текста элемента не всегда приносит ожидаемые результаты. Лучше используйте метод [`Body.getAsync`](/javascript/api/outlook/office.body#getasync-coerciontype--options--callback-) для этого.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p166">If you specify an `ItemHasRegularExpressionMatch` rule on the body property of an item, the regular expression should further filter the body and should not attempt to return the entire body of the item. Using a regular expression such as `.*` to obtain the entire body of an item does not always return the expected results. Instead, use the [`Body.getAsync`](/javascript/api/outlook/office.body#getasync-coerciontype--options--callback-) method to retrieve the entire body.</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1206">Requirements</span><span class="sxs-lookup"><span data-stu-id="b789e-1206">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1212">Requirements</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1212">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1207">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1207">Requirement</span></span>|<span data-ttu-id="b789e-1208">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1208">Value</span></span>|
+|<span data-ttu-id="2fb0b-1213">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1213">Requirement</span></span>|<span data-ttu-id="2fb0b-1214">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1214">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1209">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-1209">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-1210">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-1210">1.0</span></span>|
-|[<span data-ttu-id="b789e-1211">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1211">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-1212">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-1212">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-1213">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1213">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-1214">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-1214">Read</span></span>|
+|[<span data-ttu-id="2fb0b-1215">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1215">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-1216">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1216">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-1217">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1217">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-1218">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1218">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-1219">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1219">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-1220">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1220">Read</span></span>|
 
-##### <a name="returns"></a><span data-ttu-id="b789e-1215">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="b789e-1215">Returns:</span></span>
+##### <a name="returns"></a><span data-ttu-id="2fb0b-1221">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1221">Returns:</span></span>
 
-<span data-ttu-id="b789e-p165">Объект, содержащий массив строк, которые соответствуют регулярным выражениям, определяемым в XML-файле манифеста. Имя каждого массива равно соответствующему значению атрибута `RegExName` подходящего правила `ItemHasRegularExpressionMatch` или атрибута `FilterName` соответствующего правила `ItemHasKnownEntity`.</span><span class="sxs-lookup"><span data-stu-id="b789e-p165">An object that contains arrays of strings that match the regular expressions defined in the manifest XML file. The name of each array is equal to the corresponding value of the `RegExName` attribute of the matching `ItemHasRegularExpressionMatch` rule or the `FilterName` attribute of the matching `ItemHasKnownEntity` rule.</span></span>
+<span data-ttu-id="2fb0b-p167">Объект, содержащий массив строк, которые соответствуют регулярным выражениям, определяемым в XML-файле манифеста. Имя каждого массива равно соответствующему значению атрибута `RegExName` подходящего правила `ItemHasRegularExpressionMatch` или атрибута `FilterName` соответствующего правила `ItemHasKnownEntity`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p167">An object that contains arrays of strings that match the regular expressions defined in the manifest XML file. The name of each array is equal to the corresponding value of the `RegExName` attribute of the matching `ItemHasRegularExpressionMatch` rule or the `FilterName` attribute of the matching `ItemHasKnownEntity` rule.</span></span>
 
-<dl class="param-type"><span data-ttu-id="b789e-1218">
+<dl class="param-type"><span data-ttu-id="2fb0b-1224">
 
 <dt>Тип</dt>
 
-</span><span class="sxs-lookup"><span data-stu-id="b789e-1218">
+</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1224">
 
 <dt>Type</dt>
 
-</span></span><dd><span data-ttu-id="b789e-1219">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-1219">Object</span></span></dd>
+</span></span><dd><span data-ttu-id="2fb0b-1225">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1225">Object</span></span></dd>
 
 </dl>
 
-##### <a name="example"></a><span data-ttu-id="b789e-1220">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-1220">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-1226">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1226">Example</span></span>
 
-<span data-ttu-id="b789e-1221">В приведенном ниже примере показано, как получить доступ к массиву совпадений с элементами `fruits` и `veggies` правил активации регулярных выражений, указанными в манифесте.</span><span class="sxs-lookup"><span data-stu-id="b789e-1221">The following example shows how to access the array of matches for the regular expression rule elements `fruits` and `veggies`, which are specified in the manifest.</span></span>
+<span data-ttu-id="2fb0b-1227">В приведенном ниже примере показано, как получить доступ к массиву совпадений с элементами `fruits` и `veggies` правил активации регулярных выражений, указанными в манифесте.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1227">The following example shows how to access the array of matches for the regular expression rule elements `fruits` and `veggies`, which are specified in the manifest.</span></span>
 
 ```javascript
 var allMatches = Office.context.mailbox.item.getRegExMatches();
 var fruits = allMatches.fruits;
-var veges = allMatches.veggies;
+var veggies = allMatches.veggies;
 ```
 
-#### <a name="getregexmatchesbynamename--nullable-array-string-"></a><span data-ttu-id="b789e-1222">getRegExMatchesByName(name) → (nullable) {Array.< String >}</span><span class="sxs-lookup"><span data-stu-id="b789e-1222">getRegExMatchesByName(name) → (nullable) {Array.< String >}</span></span>
+#### <a name="getregexmatchesbynamename--nullable-array-string-"></a><span data-ttu-id="2fb0b-1228">getRegExMatchesByName(name) → (nullable) {Array.< String >}</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1228">getRegExMatchesByName(name) → (nullable) {Array.< String >}</span></span>
 
-<span data-ttu-id="b789e-1223">Возвращает строковые значения в выбранном элементе, которые соответствуют именованному регулярному выражению, определенному в XML-файле манифеста.</span><span class="sxs-lookup"><span data-stu-id="b789e-1223">Returns string values in the selected item that match the named regular expression defined in the manifest XML file.</span></span>
+<span data-ttu-id="2fb0b-1229">Возвращает строковые значения в выбранном элементе, которые соответствуют именованному регулярному выражению, определенному в XML-файле манифеста.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1229">Returns string values in the selected item that match the named regular expression defined in the manifest XML file.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-1224">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="b789e-1224">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
+> <span data-ttu-id="2fb0b-1230">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1230">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
 
-<span data-ttu-id="b789e-1225">Метод `getRegExMatchesByName` возвращает строки, соответствующие регулярному выражению, которое определяется в элементе правила `ItemHasRegularExpressionMatch` в XML-файле манифеста, с использованием указанного значения элемента `RegExName`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1225">The `getRegExMatchesByName` method returns the strings that match the regular expression defined in the `ItemHasRegularExpressionMatch` rule element in the manifest XML file with the specified `RegExName` element value.</span></span>
+<span data-ttu-id="2fb0b-1231">Метод `getRegExMatchesByName` возвращает строки, соответствующие регулярному выражению, которое определяется в элементе правила `ItemHasRegularExpressionMatch` в XML-файле манифеста, с использованием указанного значения элемента `RegExName`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1231">The `getRegExMatchesByName` method returns the strings that match the regular expression defined in the `ItemHasRegularExpressionMatch` rule element in the manifest XML file with the specified `RegExName` element value.</span></span>
 
-<span data-ttu-id="b789e-p166">Если вы указываете правило `ItemHasRegularExpressionMatch` для свойства текста элемента, регулярное выражение должно дальше фильтровать текст, а не пытаться вернуть весь текст элемента. Использование регулярного выражения, такого как `.*`, для получения всего текста элемента не всегда приносит ожидаемые результаты.</span><span class="sxs-lookup"><span data-stu-id="b789e-p166">If you specify an `ItemHasRegularExpressionMatch` rule on the body property of an item, the regular expression should further filter the body and should not attempt to return the entire body of the item. Using a regular expression such as `.*` to obtain the entire body of an item does not always return the expected results.</span></span>
+<span data-ttu-id="2fb0b-p168">Если вы указываете правило `ItemHasRegularExpressionMatch` для свойства текста элемента, регулярное выражение должно дальше фильтровать текст, а не пытаться вернуть весь текст элемента. Использование регулярного выражения, такого как `.*`, для получения всего текста элемента не всегда приносит ожидаемые результаты.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p168">If you specify an `ItemHasRegularExpressionMatch` rule on the body property of an item, the regular expression should further filter the body and should not attempt to return the entire body of the item. Using a regular expression such as `.*` to obtain the entire body of an item does not always return the expected results.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-1228">Параметры:</span><span class="sxs-lookup"><span data-stu-id="b789e-1228">Parameters:</span></span>
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-1234">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1234">Parameters</span></span>
 
-|<span data-ttu-id="b789e-1229">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-1229">Name</span></span>|<span data-ttu-id="b789e-1230">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-1230">Type</span></span>|<span data-ttu-id="b789e-1231">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-1231">Description</span></span>|
+|<span data-ttu-id="2fb0b-1235">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1235">Name</span></span>|<span data-ttu-id="2fb0b-1236">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1236">Type</span></span>|<span data-ttu-id="2fb0b-1237">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1237">Description</span></span>|
 |---|---|---|
-|`name`|<span data-ttu-id="b789e-1232">String</span><span class="sxs-lookup"><span data-stu-id="b789e-1232">String</span></span>|<span data-ttu-id="b789e-1233">Имя элемента правила `ItemHasRegularExpressionMatch`, определяющее соответствующий фильтр.</span><span class="sxs-lookup"><span data-stu-id="b789e-1233">The name of the `ItemHasRegularExpressionMatch` rule element that defines the filter to match.</span></span>|
+|`name`|<span data-ttu-id="2fb0b-1238">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1238">String</span></span>|<span data-ttu-id="2fb0b-1239">Имя элемента правила `ItemHasRegularExpressionMatch`, определяющее соответствующий фильтр.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1239">The name of the `ItemHasRegularExpressionMatch` rule element that defines the filter to match.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1234">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-1234">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1240">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1240">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1235">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1235">Requirement</span></span>|<span data-ttu-id="b789e-1236">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1236">Value</span></span>|
+|<span data-ttu-id="2fb0b-1241">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1241">Requirement</span></span>|<span data-ttu-id="2fb0b-1242">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1242">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1237">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-1237">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-1238">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-1238">1.0</span></span>|
-|[<span data-ttu-id="b789e-1239">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1239">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-1240">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-1240">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-1241">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1241">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-1242">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-1242">Read</span></span>|
+|[<span data-ttu-id="2fb0b-1243">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1243">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-1244">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1244">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-1245">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1245">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-1246">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1246">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-1247">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1247">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-1248">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1248">Read</span></span>|
 
-##### <a name="returns"></a><span data-ttu-id="b789e-1243">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="b789e-1243">Returns:</span></span>
+##### <a name="returns"></a><span data-ttu-id="2fb0b-1249">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1249">Returns:</span></span>
 
-<span data-ttu-id="b789e-1244">Массив строк, соответствующих регулярному выражению, определяемому в XML-файле манифеста.</span><span class="sxs-lookup"><span data-stu-id="b789e-1244">An array that contains the strings that match the regular expression defined in the manifest XML file.</span></span>
+<span data-ttu-id="2fb0b-1250">Массив строк, соответствующих регулярному выражению, определяемому в XML-файле манифеста.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1250">An array that contains the strings that match the regular expression defined in the manifest XML file.</span></span>
 
-<dl class="param-type"><span data-ttu-id="b789e-1245">
+<dl class="param-type"><span data-ttu-id="2fb0b-1251">
 
 <dt>Тип</dt>
 
-</span><span class="sxs-lookup"><span data-stu-id="b789e-1245">
+</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1251">
 
 <dt>Type</dt>
 
-</span></span><dd><span data-ttu-id="b789e-1246">Array.< String ></span><span class="sxs-lookup"><span data-stu-id="b789e-1246">Array.< String ></span></span></dd>
+</span></span><dd><span data-ttu-id="2fb0b-1252">Array.< String ></span><span class="sxs-lookup"><span data-stu-id="2fb0b-1252">Array.< String ></span></span></dd>
 
 </dl>
 
-##### <a name="example"></a><span data-ttu-id="b789e-1247">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-1247">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-1253">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1253">Example</span></span>
 
 ```javascript
 var fruits = Office.context.mailbox.item.getRegExMatchesByName("fruits");
 var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");
 ```
 
-####  <a name="getselecteddataasynccoerciontype-options-callback--string"></a><span data-ttu-id="b789e-1248">getSelectedDataAsync(coercionType, [options], callback) → {String}</span><span class="sxs-lookup"><span data-stu-id="b789e-1248">getSelectedDataAsync(coercionType, [options], callback) → {String}</span></span>
+####  <a name="getselecteddataasynccoerciontype-options-callback--string"></a><span data-ttu-id="2fb0b-1254">getSelectedDataAsync(coercionType, [options], callback) → {String}</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1254">getSelectedDataAsync(coercionType, [options], callback) → {String}</span></span>
 
-<span data-ttu-id="b789e-1249">Асинхронно возвращает данные, выбранные в теме или тексте сообщения.</span><span class="sxs-lookup"><span data-stu-id="b789e-1249">Asynchronously returns selected data from the subject or body of a message.</span></span>
+<span data-ttu-id="2fb0b-1255">Асинхронно возвращает данные, выбранные в теме или тексте сообщения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1255">Asynchronously returns selected data from the subject or body of a message.</span></span>
 
-<span data-ttu-id="b789e-p167">Если выделенный фрагмент отсутствует, но курсор находится в тексте или теме, метод возвращает значение NULL для выбранных данных. Если выбраны не текст и не тема, метод возвращает ошибку `InvalidSelection`.</span><span class="sxs-lookup"><span data-stu-id="b789e-p167">If there is no selection but the cursor is in the body or subject, the method returns null for the selected data. If a field other than the body or subject is selected, the method returns the `InvalidSelection` error.</span></span>
+<span data-ttu-id="2fb0b-p169">Если выделенный фрагмент отсутствует, но курсор находится в тексте или теме, метод возвращает значение NULL для выбранных данных. Если выбраны не текст и не тема, метод возвращает ошибку `InvalidSelection`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p169">If there is no selection but the cursor is in the body or subject, the method returns null for the selected data. If a field other than the body or subject is selected, the method returns the `InvalidSelection` error.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-1252">Параметры</span><span class="sxs-lookup"><span data-stu-id="b789e-1252">Parameters:</span></span>
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-1258">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1258">Parameters</span></span>
 
-|<span data-ttu-id="b789e-1253">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-1253">Name</span></span>|<span data-ttu-id="b789e-1254">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-1254">Type</span></span>|<span data-ttu-id="b789e-1255">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b789e-1255">Attributes</span></span>|<span data-ttu-id="b789e-1256">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-1256">Description</span></span>|
+|<span data-ttu-id="2fb0b-1259">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1259">Name</span></span>|<span data-ttu-id="2fb0b-1260">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1260">Type</span></span>|<span data-ttu-id="2fb0b-1261">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1261">Attributes</span></span>|<span data-ttu-id="2fb0b-1262">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1262">Description</span></span>|
 |---|---|---|---|
-|`coercionType`|[<span data-ttu-id="b789e-1257">Office.CoercionType</span><span class="sxs-lookup"><span data-stu-id="b789e-1257">Office.CoercionType</span></span>](office.md#coerciontype-string)||<span data-ttu-id="b789e-p168">Запрашивает формат данных. Если задано значение Text, метод возвращает обычный текст как строку, удаляя все имеющиеся HTML-теги. Если задано значение HTML, метод возвращает выделенный текст (обычный текст или HTML).</span><span class="sxs-lookup"><span data-stu-id="b789e-p168">Requests a format for the data. If Text, the method returns the plain text as a string , removing any HTML tags present. If HTML, the method returns the selected text, whether it is plaintext or HTML.</span></span>|
-|`options`|<span data-ttu-id="b789e-1261">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-1261">Object</span></span>|<span data-ttu-id="b789e-1262">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1262">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1263">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="b789e-1263">An object literal that contains one or more of the following properties.</span></span>|
-|`options.asyncContext`|<span data-ttu-id="b789e-1264">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-1264">Object</span></span>|<span data-ttu-id="b789e-1265">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1265">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1266">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="b789e-1266">Developers can provide any object they wish to access in the callback method.</span></span>|
-|`callback`|<span data-ttu-id="b789e-1267">функция</span><span class="sxs-lookup"><span data-stu-id="b789e-1267">function</span></span>||<span data-ttu-id="b789e-1268">После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="b789e-1268">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span><br/><br/><span data-ttu-id="b789e-1269">Чтобы получить доступ к выбранным данным из метода обратного вызова, вызовите `asyncResult.value.data`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1269">To access the selected data from the callback method, call `asyncResult.value.data`.</span></span> <span data-ttu-id="b789e-1270">Для доступа к исходному свойству, представляющему собой источник выбранных данных, вызовите параметр `asyncResult.value.sourceProperty`, который может иметь значение `body` или `subject`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1270">To access the source property that the selection comes from, call `asyncResult.value.sourceProperty`, which will be either `body` or `subject`.</span></span>|
+|`coercionType`|[<span data-ttu-id="2fb0b-1263">Office.CoercionType</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1263">Office.CoercionType</span></span>](office.md#coerciontype-string)||<span data-ttu-id="2fb0b-p170">Запрашивает формат данных. Если задано значение Text, метод возвращает обычный текст как строку, удаляя все имеющиеся HTML-теги. Если задано значение HTML, метод возвращает выделенный текст (обычный текст или HTML).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p170">Requests a format for the data. If Text, the method returns the plain text as a string , removing any HTML tags present. If HTML, the method returns the selected text, whether it is plaintext or HTML.</span></span>|
+|`options`|<span data-ttu-id="2fb0b-1267">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1267">Object</span></span>|<span data-ttu-id="2fb0b-1268">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1268">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1269">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1269">An object literal that contains one or more of the following properties.</span></span>|
+|`options.asyncContext`|<span data-ttu-id="2fb0b-1270">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1270">Object</span></span>|<span data-ttu-id="2fb0b-1271">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1271">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1272">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1272">Developers can provide any object they wish to access in the callback method.</span></span>|
+|`callback`|<span data-ttu-id="2fb0b-1273">функция</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1273">function</span></span>||<span data-ttu-id="2fb0b-1274">После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1274">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span><br/><br/><span data-ttu-id="2fb0b-1275">Чтобы получить доступ к выбранным данным из метода обратного вызова, вызовите `asyncResult.value.data`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1275">To access the selected data from the callback method, call `asyncResult.value.data`.</span></span> <span data-ttu-id="2fb0b-1276">Для доступа к исходному свойству, представляющему собой источник выбранных данных, вызовите параметр `asyncResult.value.sourceProperty`, который может иметь значение `body` или `subject`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1276">To access the source property that the selection comes from, call `asyncResult.value.sourceProperty`, which will be either `body` or `subject`.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1271">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-1271">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1277">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1277">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1272">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1272">Requirement</span></span>|<span data-ttu-id="b789e-1273">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1273">Value</span></span>|
+|<span data-ttu-id="2fb0b-1278">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1278">Requirement</span></span>|<span data-ttu-id="2fb0b-1279">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1279">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1274">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-1274">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-1275">1.2</span><span class="sxs-lookup"><span data-stu-id="b789e-1275">1.2</span></span>|
-|[<span data-ttu-id="b789e-1276">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1276">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-1277">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="b789e-1277">ReadWriteItem</span></span>|
-|[<span data-ttu-id="b789e-1278">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1278">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-1279">Создание</span><span class="sxs-lookup"><span data-stu-id="b789e-1279">Compose</span></span>|
+|[<span data-ttu-id="2fb0b-1280">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1280">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-1281">1.2</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1281">1.2</span></span>|
+|[<span data-ttu-id="2fb0b-1282">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1282">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-1283">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1283">ReadWriteItem</span></span>|
+|[<span data-ttu-id="2fb0b-1284">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1284">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-1285">Создание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1285">Compose</span></span>|
 
-##### <a name="returns"></a><span data-ttu-id="b789e-1280">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="b789e-1280">Returns:</span></span>
+##### <a name="returns"></a><span data-ttu-id="2fb0b-1286">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1286">Returns:</span></span>
 
-<span data-ttu-id="b789e-1281">Выбранные данные в виде строки с форматом, определенным в параметре `coercionType`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1281">The selected data as a string with format determined by `coercionType`.</span></span>
+<span data-ttu-id="2fb0b-1287">Выбранные данные в виде строки с форматом, определенным в параметре `coercionType`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1287">The selected data as a string with format determined by `coercionType`.</span></span>
 
-<dl class="param-type"><span data-ttu-id="b789e-1282">
+<dl class="param-type"><span data-ttu-id="2fb0b-1288">
 
 <dt>Тип</dt>
 
-</span><span class="sxs-lookup"><span data-stu-id="b789e-1282">
+</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1288">
 
 <dt>Type</dt>
 
-</span></span><dd><span data-ttu-id="b789e-1283">String</span><span class="sxs-lookup"><span data-stu-id="b789e-1283">String</span></span></dd>
+</span></span><dd><span data-ttu-id="2fb0b-1289">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1289">String</span></span></dd>
 
 </dl>
 
-##### <a name="example"></a><span data-ttu-id="b789e-1284">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-1284">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-1290">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1290">Example</span></span>
 
 ```javascript
-// getting selected data
+// Get selected data.
 Office.initialize = function () {
-    Office.context.mailbox.item.getSelectedDataAsync(Office.CoercionType.Text, {}, getCallback);
-}
+  Office.context.mailbox.item.getSelectedDataAsync(Office.CoercionType.Text, {}, getCallback);
+};
 
 function getCallback(asyncResult) {
-    var text = asyncResult.value.data;
-    var prop = asyncResult.value.sourceProperty;
+  var text = asyncResult.value.data;
+  var prop = asyncResult.value.sourceProperty;
 
-    Office.context.mailbox.item.setSelectedDataAsync('Setting ' + prop + ': ' + text, {}, setCallback);
+  Office.context.mailbox.item.setSelectedDataAsync('Setting ' + prop + ': ' + text, {}, setCallback);
 }
 
 function setCallback(asyncResult) {
-    // check for errors
+  // Check for errors.
 }
 ```
 
-#### <a name="getselectedentities--entitiesjavascriptapioutlookofficeentities"></a><span data-ttu-id="b789e-1285">getSelectedEntities() → {[Entities](/javascript/api/outlook/office.entities)}</span><span class="sxs-lookup"><span data-stu-id="b789e-1285">getSelectedEntities() → {[Entities](/javascript/api/outlook/office.entities)}</span></span>
+#### <a name="getselectedentities--entitiesjavascriptapioutlookofficeentities"></a><span data-ttu-id="2fb0b-1291">getSelectedEntities() → {[Entities](/javascript/api/outlook/office.entities)}</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1291">getSelectedEntities() → {[Entities](/javascript/api/outlook/office.entities)}</span></span>
 
-<span data-ttu-id="b789e-p170">Возвращает сущности, найденные в выделенном совпадении, выбранном пользователем. Выделенные совпадения применяются к [контекстным надстройкам](https://docs.microsoft.com/outlook/add-ins/contextual-outlook-add-ins).</span><span class="sxs-lookup"><span data-stu-id="b789e-p170">Gets the entities found in a highlighted match a user has selected. Highlighted matches apply to [contextual add-ins](https://docs.microsoft.com/outlook/add-ins/contextual-outlook-add-ins).</span></span>
+<span data-ttu-id="2fb0b-p172">Возвращает сущности, найденные в выделенном совпадении, выбранном пользователем. Выделенные совпадения применяются к [контекстным надстройкам](https://docs.microsoft.com/outlook/add-ins/contextual-outlook-add-ins).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p172">Gets the entities found in a highlighted match a user has selected. Highlighted matches apply to [contextual add-ins](https://docs.microsoft.com/outlook/add-ins/contextual-outlook-add-ins).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-1288">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="b789e-1288">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
+> <span data-ttu-id="2fb0b-1294">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1294">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1289">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-1289">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1295">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1295">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1290">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1290">Requirement</span></span>|<span data-ttu-id="b789e-1291">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1291">Value</span></span>|
+|<span data-ttu-id="2fb0b-1296">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1296">Requirement</span></span>|<span data-ttu-id="2fb0b-1297">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1297">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1292">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-1292">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-1293">1.6</span><span class="sxs-lookup"><span data-stu-id="b789e-1293">1.6</span></span>|
-|[<span data-ttu-id="b789e-1294">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1294">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-1295">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-1295">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-1296">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1296">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-1297">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-1297">Read</span></span>|
+|[<span data-ttu-id="2fb0b-1298">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1298">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-1299">1.6</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1299">1.6</span></span>|
+|[<span data-ttu-id="2fb0b-1300">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1300">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-1301">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1301">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-1302">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1302">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-1303">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1303">Read</span></span>|
 
-##### <a name="returns"></a><span data-ttu-id="b789e-1298">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="b789e-1298">Returns:</span></span>
+##### <a name="returns"></a><span data-ttu-id="2fb0b-1304">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1304">Returns:</span></span>
 
-<span data-ttu-id="b789e-1299">Тип: [Entities](/javascript/api/outlook/office.entities)</span><span class="sxs-lookup"><span data-stu-id="b789e-1299">Type: [Entities](/javascript/api/outlook/office.entities)</span></span>
+<span data-ttu-id="2fb0b-1305">Тип: [Entities](/javascript/api/outlook/office.entities)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1305">Type: [Entities](/javascript/api/outlook/office.entities)</span></span>
 
-##### <a name="example"></a><span data-ttu-id="b789e-1300">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-1300">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-1306">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1306">Example</span></span>
 
-<span data-ttu-id="b789e-1301">В приведенном ниже примере показано, как получить доступ к сущностям адресов в выделенном совпадении, выбранном пользователем.</span><span class="sxs-lookup"><span data-stu-id="b789e-1301">The following example accesses the addresses entities in the highlighted match selected by the user.</span></span>
+<span data-ttu-id="2fb0b-1307">В приведенном ниже примере показано, как получить доступ к сущностям адресов в выделенном совпадении, выбранном пользователем.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1307">The following example accesses the addresses entities in the highlighted match selected by the user.</span></span>
 
 ```javascript
 var contacts = Office.context.mailbox.item.getSelectedEntities().addresses;
 ```
 
-#### <a name="getselectedregexmatches--object"></a><span data-ttu-id="b789e-1302">getSelectedRegExMatches() → {Object}</span><span class="sxs-lookup"><span data-stu-id="b789e-1302">getSelectedRegExMatches() → {Object}</span></span>
+#### <a name="getselectedregexmatches--object"></a><span data-ttu-id="2fb0b-1308">getSelectedRegExMatches() → {Object}</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1308">getSelectedRegExMatches() → {Object}</span></span>
 
-<span data-ttu-id="b789e-p171">Возвращает строковые значения в выделенном совпадении, которые соответствуют регулярным выражениям, определенным в XML-файле манифеста. Выделенные совпадения применяются к [контекстным надстройкам](https://docs.microsoft.com/outlook/add-ins/contextual-outlook-add-ins).</span><span class="sxs-lookup"><span data-stu-id="b789e-p171">Returns string values in a highlighted match that match the regular expressions defined in the manifest XML file. Highlighted matches apply to [contextual add-ins](https://docs.microsoft.com/outlook/add-ins/contextual-outlook-add-ins).</span></span>
+<span data-ttu-id="2fb0b-p173">Возвращает строковые значения в выделенном совпадении, которые соответствуют регулярным выражениям, определенным в XML-файле манифеста. Выделенные совпадения применяются к [контекстным надстройкам](https://docs.microsoft.com/outlook/add-ins/contextual-outlook-add-ins).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p173">Returns string values in a highlighted match that match the regular expressions defined in the manifest XML file. Highlighted matches apply to [contextual add-ins](https://docs.microsoft.com/outlook/add-ins/contextual-outlook-add-ins).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-1305">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="b789e-1305">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
+> <span data-ttu-id="2fb0b-1311">Этот метод не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1311">This method is not supported in Outlook for iOS or Outlook for Android.</span></span>
 
-<span data-ttu-id="b789e-p172">Метод `getSelectedRegExMatches` возвращает строки, соответствующие регулярному выражению, которое определяется в каждом элементе правила `ItemHasRegularExpressionMatch` или `ItemHasKnownEntity` в XML-файле манифеста. Для правила `ItemHasRegularExpressionMatch` соответствующую строку должно содержать свойство элемента, указанного этим правилом. Простой тип `PropertyName` определяет поддерживаемые свойства.</span><span class="sxs-lookup"><span data-stu-id="b789e-p172">The `getSelectedRegExMatches` method returns the strings that match the regular expression defined in each `ItemHasRegularExpressionMatch` or `ItemHasKnownEntity` rule element in the manifest XML file. For an `ItemHasRegularExpressionMatch` rule, a matching string has to occur in the property of the item that is specified by that rule. The `PropertyName` simple type defines the supported properties.</span></span>
+<span data-ttu-id="2fb0b-p174">Метод `getSelectedRegExMatches` возвращает строки, соответствующие регулярному выражению, которое определяется в каждом элементе правила `ItemHasRegularExpressionMatch` или `ItemHasKnownEntity` в XML-файле манифеста. Для правила `ItemHasRegularExpressionMatch` соответствующую строку должно содержать свойство элемента, указанного этим правилом. Простой тип `PropertyName` определяет поддерживаемые свойства.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p174">The `getSelectedRegExMatches` method returns the strings that match the regular expression defined in each `ItemHasRegularExpressionMatch` or `ItemHasKnownEntity` rule element in the manifest XML file. For an `ItemHasRegularExpressionMatch` rule, a matching string has to occur in the property of the item that is specified by that rule. The `PropertyName` simple type defines the supported properties.</span></span>
 
-<span data-ttu-id="b789e-1309">Например, рассмотрим манифест надстройки, который содержит указанный ниже элемент `Rule`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1309">For example, consider an add-in manifest has the following `Rule` element:</span></span>
+<span data-ttu-id="2fb0b-1315">Например, рассмотрим манифест надстройки, который содержит указанный ниже элемент `Rule`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1315">For example, consider an add-in manifest has the following `Rule` element:</span></span>
 
 ```xml
 <Rule xsi:type="RuleCollection" Mode="And">
@@ -1905,7 +2040,7 @@ var contacts = Office.context.mailbox.item.getSelectedEntities().addresses;
 </Rule>
 ```
 
-<span data-ttu-id="b789e-1310">Объект, возвращаемый методом `getRegExMatches`, будет содержать два свойства: `fruits` и `veggies`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1310">The object returned from `getRegExMatches` would have two properties: `fruits` and `veggies`.</span></span>
+<span data-ttu-id="2fb0b-1316">Объект, возвращаемый методом `getRegExMatches`, будет содержать два свойства: `fruits` и `veggies`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1316">The object returned from `getRegExMatches` would have two properties: `fruits` and `veggies`.</span></span>
 
 ```json
 {
@@ -1914,23 +2049,23 @@ var contacts = Office.context.mailbox.item.getSelectedEntities().addresses;
 }
 ```
 
-<span data-ttu-id="b789e-p173">Если вы указываете правило `ItemHasRegularExpressionMatch` для свойства текста элемента, регулярное выражение должно дальше фильтровать текст, а не пытаться вернуть весь текст элемента. Использование регулярного выражения, такого как `.*`, для получения всего текста элемента не всегда приносит ожидаемые результаты. Лучше используйте метод [`Body.getAsync`](/javascript/api/outlook/office.body#getasync-coerciontype--options--callback-) для этого.</span><span class="sxs-lookup"><span data-stu-id="b789e-p173">If you specify an `ItemHasRegularExpressionMatch` rule on the body property of an item, the regular expression should further filter the body and should not attempt to return the entire body of the item. Using a regular expression such as `.*` to obtain the entire body of an item does not always return the expected results. Instead, use the [`Body.getAsync`](/javascript/api/outlook/office.body#getasync-coerciontype--options--callback-) method to retrieve the entire body.</span></span>
+<span data-ttu-id="2fb0b-p175">Если вы указываете правило `ItemHasRegularExpressionMatch` для свойства текста элемента, регулярное выражение должно дальше фильтровать текст, а не пытаться вернуть весь текст элемента. Использование регулярного выражения, такого как `.*`, для получения всего текста элемента не всегда приносит ожидаемые результаты. Лучше используйте метод [`Body.getAsync`](/javascript/api/outlook/office.body#getasync-coerciontype--options--callback-) для этого.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p175">If you specify an `ItemHasRegularExpressionMatch` rule on the body property of an item, the regular expression should further filter the body and should not attempt to return the entire body of the item. Using a regular expression such as `.*` to obtain the entire body of an item does not always return the expected results. Instead, use the [`Body.getAsync`](/javascript/api/outlook/office.body#getasync-coerciontype--options--callback-) method to retrieve the entire body.</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1314">Requirements</span><span class="sxs-lookup"><span data-stu-id="b789e-1314">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1320">Requirements</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1320">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1315">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1315">Requirement</span></span>|<span data-ttu-id="b789e-1316">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1316">Value</span></span>|
+|<span data-ttu-id="2fb0b-1321">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1321">Requirement</span></span>|<span data-ttu-id="2fb0b-1322">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1322">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1317">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-1317">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-1318">1.6</span><span class="sxs-lookup"><span data-stu-id="b789e-1318">1.6</span></span>|
-|[<span data-ttu-id="b789e-1319">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1319">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-1320">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-1320">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-1321">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1321">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-1322">Чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-1322">Read</span></span>|
+|[<span data-ttu-id="2fb0b-1323">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1323">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-1324">1.6</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1324">1.6</span></span>|
+|[<span data-ttu-id="2fb0b-1325">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1325">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-1326">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1326">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-1327">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1327">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-1328">Чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1328">Read</span></span>|
 
-##### <a name="returns"></a><span data-ttu-id="b789e-1323">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="b789e-1323">Returns:</span></span>
+##### <a name="returns"></a><span data-ttu-id="2fb0b-1329">Возвращаемое значение:</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1329">Returns:</span></span>
 
-<span data-ttu-id="b789e-p174">Объект, содержащий массив строк, которые соответствуют регулярным выражениям, определяемым в XML-файле манифеста. Имя каждого массива равно соответствующему значению атрибута `RegExName` подходящего правила `ItemHasRegularExpressionMatch` или атрибута `FilterName` соответствующего правила `ItemHasKnownEntity`.</span><span class="sxs-lookup"><span data-stu-id="b789e-p174">An object that contains arrays of strings that match the regular expressions defined in the manifest XML file. The name of each array is equal to the corresponding value of the `RegExName` attribute of the matching `ItemHasRegularExpressionMatch` rule or the `FilterName` attribute of the matching `ItemHasKnownEntity` rule.</span></span>
+<span data-ttu-id="2fb0b-p176">Объект, содержащий массив строк, которые соответствуют регулярным выражениям, определяемым в XML-файле манифеста. Имя каждого массива равно соответствующему значению атрибута `RegExName` подходящего правила `ItemHasRegularExpressionMatch` или атрибута `FilterName` соответствующего правила `ItemHasKnownEntity`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p176">An object that contains arrays of strings that match the regular expressions defined in the manifest XML file. The name of each array is equal to the corresponding value of the `RegExName` attribute of the matching `ItemHasRegularExpressionMatch` rule or the `FilterName` attribute of the matching `ItemHasKnownEntity` rule.</span></span>
 
-##### <a name="example"></a><span data-ttu-id="b789e-1326">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-1326">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-1332">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1332">Example</span></span>
 
-<span data-ttu-id="b789e-1327">В приведенном ниже примере показано, как получить доступ к массиву совпадений с элементами `fruits` и `veggies` правил активации регулярных выражений, указанными в манифесте.</span><span class="sxs-lookup"><span data-stu-id="b789e-1327">The following example shows how to access the array of matches for the regular expression rule elements `fruits` and `veggies`, which are specified in the manifest.</span></span>
+<span data-ttu-id="2fb0b-1333">В приведенном ниже примере показано, как получить доступ к массиву совпадений с элементами `fruits` и `veggies` правил активации регулярных выражений, указанными в манифесте.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1333">The following example shows how to access the array of matches for the regular expression rule elements `fruits` and `veggies`, which are specified in the manifest.</span></span>
 
 ```javascript
 var selectedMatches = Office.context.mailbox.item.getSelectedRegExMatches();
@@ -1938,71 +2073,72 @@ var fruits = selectedMatches.fruits;
 var veggies = selectedMatches.veggies;
 ```
 
-#### <a name="getsharedpropertiesasyncoptions-callback"></a><span data-ttu-id="b789e-1328">getSharedPropertiesAsync([options], callback)</span><span class="sxs-lookup"><span data-stu-id="b789e-1328">getSharedPropertiesAsync([options], callback)</span></span>
+#### <a name="getsharedpropertiesasyncoptions-callback"></a><span data-ttu-id="2fb0b-1334">getSharedPropertiesAsync([options], callback)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1334">getSharedPropertiesAsync([options], callback)</span></span>
 
-<span data-ttu-id="b789e-1329">Получает свойства выбранного встречи или сообщения в общей папке, календаре или почтовом ящике.</span><span class="sxs-lookup"><span data-stu-id="b789e-1329">Gets the properties of the selected appointment or message in a shared folder, calendar, or mailbox.</span></span>
+<span data-ttu-id="2fb0b-1335">Получает свойства выбранного встречи или сообщения в общей папке, календаре или почтовом ящике.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1335">Gets the properties of the selected appointment or message in a shared folder, calendar, or mailbox.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-1330">Параметры:</span><span class="sxs-lookup"><span data-stu-id="b789e-1330">Parameters:</span></span>
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-1336">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1336">Parameters</span></span>
 
-|<span data-ttu-id="b789e-1331">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-1331">Name</span></span>|<span data-ttu-id="b789e-1332">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-1332">Type</span></span>|<span data-ttu-id="b789e-1333">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b789e-1333">Attributes</span></span>|<span data-ttu-id="b789e-1334">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-1334">Description</span></span>|
+|<span data-ttu-id="2fb0b-1337">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1337">Name</span></span>|<span data-ttu-id="2fb0b-1338">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1338">Type</span></span>|<span data-ttu-id="2fb0b-1339">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1339">Attributes</span></span>|<span data-ttu-id="2fb0b-1340">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1340">Description</span></span>|
 |---|---|---|---|
-|`options`|<span data-ttu-id="b789e-1335">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-1335">Object</span></span>|<span data-ttu-id="b789e-1336">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1336">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1337">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="b789e-1337">An object literal that contains one or more of the following properties.</span></span>|
-|`options.asyncContext`|<span data-ttu-id="b789e-1338">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-1338">Object</span></span>|<span data-ttu-id="b789e-1339">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1339">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1340">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="b789e-1340">Developers can provide any object they wish to access in the callback method.</span></span>|
-|`callback`|<span data-ttu-id="b789e-1341">функция</span><span class="sxs-lookup"><span data-stu-id="b789e-1341">function</span></span>||<span data-ttu-id="b789e-1342">После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="b789e-1342">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span><br/><br/><span data-ttu-id="b789e-1343">Общие свойства предоставляются в виде объекта [`SharedProperties`](/javascript/api/outlook/office.sharedproperties) в свойстве `asyncResult.value`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1343">The shared properties are provided as a [`SharedProperties`](/javascript/api/outlook/office.sharedproperties) object in the `asyncResult.value` property.</span></span> <span data-ttu-id="b789e-1344">Этот объект можно использовать для получения общих свойств элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-1344">This object can be used to get the item's shared properties.</span></span>|
+|`options`|<span data-ttu-id="2fb0b-1341">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1341">Object</span></span>|<span data-ttu-id="2fb0b-1342">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1342">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1343">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1343">An object literal that contains one or more of the following properties.</span></span>|
+|`options.asyncContext`|<span data-ttu-id="2fb0b-1344">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1344">Object</span></span>|<span data-ttu-id="2fb0b-1345">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1345">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1346">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1346">Developers can provide any object they wish to access in the callback method.</span></span>|
+|`callback`|<span data-ttu-id="2fb0b-1347">функция</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1347">function</span></span>||<span data-ttu-id="2fb0b-1348">После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1348">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span><br/><br/><span data-ttu-id="2fb0b-1349">Общие свойства предоставляются в виде объекта [`SharedProperties`](/javascript/api/outlook/office.sharedproperties) в свойстве `asyncResult.value`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1349">The shared properties are provided as a [`SharedProperties`](/javascript/api/outlook/office.sharedproperties) object in the `asyncResult.value` property.</span></span> <span data-ttu-id="2fb0b-1350">Этот объект можно использовать для получения общих свойств элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1350">This object can be used to get the item's shared properties.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1345">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-1345">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1351">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1351">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1346">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1346">Requirement</span></span>|<span data-ttu-id="b789e-1347">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1347">Value</span></span>|
+|<span data-ttu-id="2fb0b-1352">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1352">Requirement</span></span>|<span data-ttu-id="2fb0b-1353">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1353">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1348">Минимальная версия набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-1348">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-1349">Предварительная версия</span><span class="sxs-lookup"><span data-stu-id="b789e-1349">Preview</span></span>|
-|[<span data-ttu-id="b789e-1350">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1350">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-1351">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-1351">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-1352">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1352">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-1353">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-1353">Compose or read</span></span>|
+|[<span data-ttu-id="2fb0b-1354">Минимальная версия набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1354">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-1355">Предварительная версия</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1355">Preview</span></span>|
+|[<span data-ttu-id="2fb0b-1356">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1356">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-1357">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1357">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-1358">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1358">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-1359">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1359">Compose or Read</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-1354">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-1354">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-1360">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1360">Example</span></span>
 
-```js
+```javascript
 Office.context.mailbox.item.getSharedPropertiesAsync(callback);
+
 function callback (asyncResult) {
-  var context=asyncResult.context;
+  var context = asyncResult.context;
   var sharedProperties = asyncResult.value;
 }
 ```
 
-####  <a name="loadcustompropertiesasynccallback-usercontext"></a><span data-ttu-id="b789e-1355">loadCustomPropertiesAsync(callback, [userContext])</span><span class="sxs-lookup"><span data-stu-id="b789e-1355">loadCustomPropertiesAsync(callback, [userContext])</span></span>
+####  <a name="loadcustompropertiesasynccallback-usercontext"></a><span data-ttu-id="2fb0b-1361">loadCustomPropertiesAsync(callback, [userContext])</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1361">loadCustomPropertiesAsync(callback, [userContext])</span></span>
 
-<span data-ttu-id="b789e-1356">Асинхронно загружает настраиваемые свойства для надстройки для выбранного элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-1356">Asynchronously loads custom properties for this add-in on the selected item.</span></span>
+<span data-ttu-id="2fb0b-1362">Асинхронно загружает настраиваемые свойства для надстройки для выбранного элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1362">Asynchronously loads custom properties for this add-in on the selected item.</span></span>
 
-<span data-ttu-id="b789e-p176">Настраиваемые свойства сохраняются в виде пар "ключ-значение" для каждого приложения и каждого элемента. Этот метод возвращает объект `CustomProperties` при обратном вызове, который предоставляет методы для доступа к настраиваемым свойствам, характерным для текущего элемента и текущей надстройки. Настраиваемые свойства не шифруются для элемента, поэтому этот способ хранения не является безопасным.</span><span class="sxs-lookup"><span data-stu-id="b789e-p176">Custom properties are stored as key/value pairs on a per-app, per-item basis. This method returns a `CustomProperties` object in the callback, which provides methods to access the custom properties specific to the current item and the current add-in. Custom properties are not encrypted on the item, so this should not be used as secure storage.</span></span>
+<span data-ttu-id="2fb0b-p178">Настраиваемые свойства сохраняются в виде пар "ключ-значение" для каждого приложения и каждого элемента. Этот метод возвращает объект `CustomProperties` при обратном вызове, который предоставляет методы для доступа к настраиваемым свойствам, характерным для текущего элемента и текущей надстройки. Настраиваемые свойства не шифруются для элемента, поэтому этот способ хранения не является безопасным.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p178">Custom properties are stored as key/value pairs on a per-app, per-item basis. This method returns a `CustomProperties` object in the callback, which provides methods to access the custom properties specific to the current item and the current add-in. Custom properties are not encrypted on the item, so this should not be used as secure storage.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-1360">Параметры</span><span class="sxs-lookup"><span data-stu-id="b789e-1360">Parameters:</span></span>
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-1366">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1366">Parameters</span></span>
 
-|<span data-ttu-id="b789e-1361">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-1361">Name</span></span>|<span data-ttu-id="b789e-1362">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-1362">Type</span></span>|<span data-ttu-id="b789e-1363">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b789e-1363">Attributes</span></span>|<span data-ttu-id="b789e-1364">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-1364">Description</span></span>|
+|<span data-ttu-id="2fb0b-1367">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1367">Name</span></span>|<span data-ttu-id="2fb0b-1368">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1368">Type</span></span>|<span data-ttu-id="2fb0b-1369">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1369">Attributes</span></span>|<span data-ttu-id="2fb0b-1370">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1370">Description</span></span>|
 |---|---|---|---|
-|`callback`|<span data-ttu-id="b789e-1365">функция</span><span class="sxs-lookup"><span data-stu-id="b789e-1365">function</span></span>||<span data-ttu-id="b789e-1366">После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="b789e-1366">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span><br/><br/><span data-ttu-id="b789e-1367">Настраиваемые свойства предоставляются в виде объекта [`CustomProperties`](/javascript/api/outlook/office.customproperties) в свойстве `asyncResult.value`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1367">The custom properties are provided as a [`CustomProperties`](/javascript/api/outlook/office.customproperties) object in the `asyncResult.value` property.</span></span> <span data-ttu-id="b789e-1368">Этот объект позволяет получить, задать и удалить настраиваемые свойства для элемента, а также сохранить изменения, внесенные в набор настраиваемых свойств, на сервере.</span><span class="sxs-lookup"><span data-stu-id="b789e-1368">This object can be used to get, set, and remove custom properties from the item and save changes to the custom property set back to the server.</span></span>|
-|`userContext`|<span data-ttu-id="b789e-1369">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-1369">Object</span></span>|<span data-ttu-id="b789e-1370">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1370">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1371">Разработчики могут указать любой объект, к которому необходимо получить доступ, в функции обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="b789e-1371">Developers can provide any object they wish to access in the callback function.</span></span> <span data-ttu-id="b789e-1372">Доступ к этому объекту можно получить с помощью свойства `asyncResult.asyncContext` в функции обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="b789e-1372">This object can be accessed by the `asyncResult.asyncContext` property in the callback function.</span></span>|
+|`callback`|<span data-ttu-id="2fb0b-1371">функция</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1371">function</span></span>||<span data-ttu-id="2fb0b-1372">После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1372">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span><br/><br/><span data-ttu-id="2fb0b-1373">Настраиваемые свойства предоставляются в виде объекта [`CustomProperties`](/javascript/api/outlook/office.customproperties) в свойстве `asyncResult.value`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1373">The custom properties are provided as a [`CustomProperties`](/javascript/api/outlook/office.customproperties) object in the `asyncResult.value` property.</span></span> <span data-ttu-id="2fb0b-1374">Этот объект позволяет получить, задать и удалить настраиваемые свойства для элемента, а также сохранить изменения, внесенные в набор настраиваемых свойств, на сервере.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1374">This object can be used to get, set, and remove custom properties from the item and save changes to the custom property set back to the server.</span></span>|
+|`userContext`|<span data-ttu-id="2fb0b-1375">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1375">Object</span></span>|<span data-ttu-id="2fb0b-1376">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1376">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1377">Разработчики могут указать любой объект, к которому необходимо получить доступ, в функции обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1377">Developers can provide any object they wish to access in the callback function.</span></span> <span data-ttu-id="2fb0b-1378">Доступ к этому объекту можно получить с помощью свойства `asyncResult.asyncContext` в функции обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1378">This object can be accessed by the `asyncResult.asyncContext` property in the callback function.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1373">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-1373">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1379">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1379">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1374">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1374">Requirement</span></span>|<span data-ttu-id="b789e-1375">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1375">Value</span></span>|
+|<span data-ttu-id="2fb0b-1380">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1380">Requirement</span></span>|<span data-ttu-id="2fb0b-1381">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1381">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1376">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-1376">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-1377">1.0</span><span class="sxs-lookup"><span data-stu-id="b789e-1377">1.0</span></span>|
-|[<span data-ttu-id="b789e-1378">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1378">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-1379">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-1379">ReadItem</span></span>|
-|[<span data-ttu-id="b789e-1380">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1380">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-1381">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-1381">Compose or read</span></span>|
+|[<span data-ttu-id="2fb0b-1382">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1382">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-1383">1.0</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1383">1.0</span></span>|
+|[<span data-ttu-id="2fb0b-1384">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1384">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-1385">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1385">ReadItem</span></span>|
+|[<span data-ttu-id="2fb0b-1386">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1386">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-1387">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1387">Compose or Read</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-1382">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-1382">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-1388">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1388">Example</span></span>
 
-<span data-ttu-id="b789e-p179">Приведенный ниже пример кода показывает, как асинхронно загружать настраиваемые свойства, характерные для текущего элемента, с помощью метода `loadCustomPropertiesAsync`. Этот пример также показывает, как сохранять эти свойства на сервере с помощью метода `CustomProperties.saveAsync`. После загрузки настраиваемых свойств в этом примере кода метод `CustomProperties.get` используется для считывания настраиваемого свойства `myProp`, метод `CustomProperties.set` — для записи настраиваемого свойства `otherProp`, а метод `saveAsync` — для сохранения настраиваемых свойств.</span><span class="sxs-lookup"><span data-stu-id="b789e-p179">The following code example shows how to use the `loadCustomPropertiesAsync` method to asynchronously load custom properties that are specific to the current item. The example also shows how to use the `CustomProperties.saveAsync` method to save these properties back to the server. After loading the custom properties, the code sample uses the `CustomProperties.get` method to read the custom property `myProp`, the `CustomProperties.set` method to write the custom property `otherProp`, and then finally calls the `saveAsync` method to save the custom properties.</span></span>
+<span data-ttu-id="2fb0b-p181">Приведенный ниже пример кода показывает, как асинхронно загружать настраиваемые свойства, характерные для текущего элемента, с помощью метода `loadCustomPropertiesAsync`. Этот пример также показывает, как сохранять эти свойства на сервере с помощью метода `CustomProperties.saveAsync`. После загрузки настраиваемых свойств в этом примере кода метод `CustomProperties.get` используется для считывания настраиваемого свойства `myProp`, метод `CustomProperties.set` — для записи настраиваемого свойства `otherProp`, а метод `saveAsync` — для сохранения настраиваемых свойств.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p181">The following code example shows how to use the `loadCustomPropertiesAsync` method to asynchronously load custom properties that are specific to the current item. The example also shows how to use the `CustomProperties.saveAsync` method to save these properties back to the server. After loading the custom properties, the code sample uses the `CustomProperties.get` method to read the custom property `myProp`, the `CustomProperties.set` method to write the custom property `otherProp`, and then finally calls the `saveAsync` method to save the custom properties.</span></span>
 
 ```javascript
 // The initialize function is required for all add-ins.
 Office.initialize = function () {
   // Checks for the DOM to load using the jQuery ready function.
   $(document).ready(function () {
-  // After the DOM is loaded, add-in-specific code can run.
-  var item = Office.context.mailbox.item;
-  item.loadCustomPropertiesAsync(customPropsCallback);
+    // After the DOM is loaded, add-in-specific code can run.
+    var item = Office.context.mailbox.item;
+    item.loadCustomPropertiesAsync(customPropsCallback);
   });
-}
+};
 
 function customPropsCallback(asyncResult) {
   var customProps = asyncResult.value;
@@ -2016,38 +2152,38 @@ function saveCallback(asyncResult) {
 }
 ```
 
-####  <a name="removeattachmentasyncattachmentid-options-callback"></a><span data-ttu-id="b789e-1386">removeAttachmentAsync(attachmentId, [options], [callback])</span><span class="sxs-lookup"><span data-stu-id="b789e-1386">removeAttachmentAsync(attachmentId, [options], [callback])</span></span>
+####  <a name="removeattachmentasyncattachmentid-options-callback"></a><span data-ttu-id="2fb0b-1392">removeAttachmentAsync(attachmentId, [options], [callback])</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1392">removeAttachmentAsync(attachmentId, [options], [callback])</span></span>
 
-<span data-ttu-id="b789e-1387">Удаляет вложение из сообщения или встречи.</span><span class="sxs-lookup"><span data-stu-id="b789e-1387">Removes an attachment from a message or appointment.</span></span>
+<span data-ttu-id="2fb0b-1393">Удаляет вложение из сообщения или встречи.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1393">Removes an attachment from a message or appointment.</span></span>
 
-<span data-ttu-id="b789e-1388">Метод `removeAttachmentAsync` удаляет из элемента вложение с указанным идентификатором.</span><span class="sxs-lookup"><span data-stu-id="b789e-1388">The `removeAttachmentAsync` method removes the attachment with the specified identifier from the item.</span></span> <span data-ttu-id="b789e-1389">Идентификатор вложения рекомендуется использовать для удаления вложения, только если оно добавлено тем же почтовым приложением в ходе текущего сеанса.</span><span class="sxs-lookup"><span data-stu-id="b789e-1389">As a best practice, you should use the attachment identifier to remove an attachment only if the same mail app has added that attachment in the same session.</span></span> <span data-ttu-id="b789e-1390">В Outlook Web App и Outlook Web App для устройств идентификатор вложения действителен только в рамках одного сеанса.</span><span class="sxs-lookup"><span data-stu-id="b789e-1390">In Outlook Web App and OWA for Devices, the attachment identifier is valid only within the same session.</span></span> <span data-ttu-id="b789e-1391">Сеанс завершается, когда пользователь закрывает приложение или начинает создавать элемент во встроенной форме, а затем переходит из формы в отдельное окно.</span><span class="sxs-lookup"><span data-stu-id="b789e-1391">A session is over when the user closes the app, or if the user starts composing an inline form then subsequently pops out the form to continue in a separate window.</span></span>
+<span data-ttu-id="2fb0b-1394">Метод `removeAttachmentAsync` удаляет из элемента вложение с указанным идентификатором.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1394">The `removeAttachmentAsync` method removes the attachment with the specified identifier from the item.</span></span> <span data-ttu-id="2fb0b-1395">Идентификатор вложения рекомендуется использовать для удаления вложения, только если оно добавлено тем же почтовым приложением в ходе текущего сеанса.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1395">As a best practice, you should use the attachment identifier to remove an attachment only if the same mail app has added that attachment in the same session.</span></span> <span data-ttu-id="2fb0b-1396">В Outlook Web App и Outlook Web App для устройств идентификатор вложения действителен только в рамках одного сеанса.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1396">In Outlook Web App and OWA for Devices, the attachment identifier is valid only within the same session.</span></span> <span data-ttu-id="2fb0b-1397">Сеанс завершается, когда пользователь закрывает приложение или начинает создавать элемент во встроенной форме, а затем переходит из формы в отдельное окно.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1397">A session is over when the user closes the app, or if the user starts composing an inline form then subsequently pops out the form to continue in a separate window.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-1392">Параметры:</span><span class="sxs-lookup"><span data-stu-id="b789e-1392">Parameters:</span></span>
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-1398">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1398">Parameters</span></span>
 
-|<span data-ttu-id="b789e-1393">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-1393">Name</span></span>|<span data-ttu-id="b789e-1394">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-1394">Type</span></span>|<span data-ttu-id="b789e-1395">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b789e-1395">Attributes</span></span>|<span data-ttu-id="b789e-1396">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-1396">Description</span></span>|
+|<span data-ttu-id="2fb0b-1399">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1399">Name</span></span>|<span data-ttu-id="2fb0b-1400">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1400">Type</span></span>|<span data-ttu-id="2fb0b-1401">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1401">Attributes</span></span>|<span data-ttu-id="2fb0b-1402">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1402">Description</span></span>|
 |---|---|---|---|
-|`attachmentId`|<span data-ttu-id="b789e-1397">String</span><span class="sxs-lookup"><span data-stu-id="b789e-1397">String</span></span>||<span data-ttu-id="b789e-1398">Идентификатор удаляемого вложения.</span><span class="sxs-lookup"><span data-stu-id="b789e-1398">The identifier of the attachment to remove.</span></span>|
-|`options`|<span data-ttu-id="b789e-1399">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-1399">Object</span></span>|<span data-ttu-id="b789e-1400">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1400">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1401">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="b789e-1401">An object literal that contains one or more of the following properties.</span></span>|
-|`options.asyncContext`|<span data-ttu-id="b789e-1402">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-1402">Object</span></span>|<span data-ttu-id="b789e-1403">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1403">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1404">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="b789e-1404">Developers can provide any object they wish to access in the callback method.</span></span>|
-|`callback`|<span data-ttu-id="b789e-1405">функция</span><span class="sxs-lookup"><span data-stu-id="b789e-1405">function</span></span>|<span data-ttu-id="b789e-1406">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1406">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1407">После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="b789e-1407">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span> <br/><span data-ttu-id="b789e-1408">Если удалить вложение не удается, свойство `asyncResult.error` содержит код ошибки с указанием ее причины.</span><span class="sxs-lookup"><span data-stu-id="b789e-1408">If removing the attachment fails, the `asyncResult.error` property will contain an error code with the reason for the failure.</span></span>|
+|`attachmentId`|<span data-ttu-id="2fb0b-1403">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1403">String</span></span>||<span data-ttu-id="2fb0b-1404">Идентификатор удаляемого вложения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1404">The identifier of the attachment to remove.</span></span>|
+|`options`|<span data-ttu-id="2fb0b-1405">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1405">Object</span></span>|<span data-ttu-id="2fb0b-1406">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1406">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1407">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1407">An object literal that contains one or more of the following properties.</span></span>|
+|`options.asyncContext`|<span data-ttu-id="2fb0b-1408">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1408">Object</span></span>|<span data-ttu-id="2fb0b-1409">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1409">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1410">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1410">Developers can provide any object they wish to access in the callback method.</span></span>|
+|`callback`|<span data-ttu-id="2fb0b-1411">функция</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1411">function</span></span>|<span data-ttu-id="2fb0b-1412">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1412">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1413">После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1413">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span> <br/><span data-ttu-id="2fb0b-1414">Если удалить вложение не удается, свойство `asyncResult.error` содержит код ошибки с указанием ее причины.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1414">If removing the attachment fails, the `asyncResult.error` property will contain an error code with the reason for the failure.</span></span>|
 
-##### <a name="errors"></a><span data-ttu-id="b789e-1409">Ошибки</span><span class="sxs-lookup"><span data-stu-id="b789e-1409">Errors</span></span>
+##### <a name="errors"></a><span data-ttu-id="2fb0b-1415">Ошибки</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1415">Errors</span></span>
 
-|<span data-ttu-id="b789e-1410">Код ошибки</span><span class="sxs-lookup"><span data-stu-id="b789e-1410">Error code</span></span>|<span data-ttu-id="b789e-1411">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-1411">Description</span></span>|
+|<span data-ttu-id="2fb0b-1416">Код ошибки</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1416">Error code</span></span>|<span data-ttu-id="2fb0b-1417">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1417">Description</span></span>|
 |------------|-------------|
-|`InvalidAttachmentId`|<span data-ttu-id="b789e-1412">Идентификатор вложения не существует.</span><span class="sxs-lookup"><span data-stu-id="b789e-1412">The attachment identifier does not exist.</span></span>|
+|`InvalidAttachmentId`|<span data-ttu-id="2fb0b-1418">Идентификатор вложения не существует.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1418">The attachment identifier does not exist.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1413">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-1413">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1419">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1419">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1414">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1414">Requirement</span></span>|<span data-ttu-id="b789e-1415">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1415">Value</span></span>|
+|<span data-ttu-id="2fb0b-1420">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1420">Requirement</span></span>|<span data-ttu-id="2fb0b-1421">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1421">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1416">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-1416">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-1417">1.1</span><span class="sxs-lookup"><span data-stu-id="b789e-1417">1.1</span></span>|
-|[<span data-ttu-id="b789e-1418">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1418">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-1419">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="b789e-1419">ReadWriteItem</span></span>|
-|[<span data-ttu-id="b789e-1420">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1420">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-1421">Создание</span><span class="sxs-lookup"><span data-stu-id="b789e-1421">Compose</span></span>|
+|[<span data-ttu-id="2fb0b-1422">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1422">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-1423">1.1</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1423">1.1</span></span>|
+|[<span data-ttu-id="2fb0b-1424">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1424">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-1425">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1425">ReadWriteItem</span></span>|
+|[<span data-ttu-id="2fb0b-1426">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1426">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-1427">Создание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1427">Compose</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-1422">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-1422">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-1428">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1428">Example</span></span>
 
-<span data-ttu-id="b789e-1423">Указанный ниже код удаляет вложение с идентификатором "0".</span><span class="sxs-lookup"><span data-stu-id="b789e-1423">The following code removes an attachment with an identifier of '0'.</span></span>
+<span data-ttu-id="2fb0b-1429">Указанный ниже код удаляет вложение с идентификатором "0".</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1429">The following code removes an attachment with an identifier of '0'.</span></span>
 
 ```javascript
 Office.context.mailbox.item.removeAttachmentAsync(
@@ -2060,72 +2196,72 @@ Office.context.mailbox.item.removeAttachmentAsync(
 );
 ```
 
-####  <a name="removehandlerasynceventtype-options-callback"></a><span data-ttu-id="b789e-1424">removeHandlerAsync(eventType, [options], [callback])</span><span class="sxs-lookup"><span data-stu-id="b789e-1424">removeHandlerAsync(eventType, [options], [callback])</span></span>
+####  <a name="removehandlerasynceventtype-options-callback"></a><span data-ttu-id="2fb0b-1430">removeHandlerAsync(eventType, [options], [callback])</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1430">removeHandlerAsync(eventType, [options], [callback])</span></span>
 
-<span data-ttu-id="b789e-1425">Удаляет обработчиков для поддерживаемого типа события.</span><span class="sxs-lookup"><span data-stu-id="b789e-1425">Removes the event handlers for a supported event type.</span></span>
+<span data-ttu-id="2fb0b-1431">Удаляет обработчиков для поддерживаемого типа события.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1431">Removes the event handlers for a supported event type.</span></span>
 
-<span data-ttu-id="b789e-1426">Сейчас поддерживаются следующие типы событий: `Office.EventType.AttachmentsChanged`, `Office.EventType.AppointmentTimeChanged`, `Office.EventType.RecipientsChanged` и `Office.EventType.RecurrenceChanged`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1426">Currently the supported event types are `Office.EventType.AttachmentsChanged`, `Office.EventType.AppointmentTimeChanged`, `Office.EventType.RecipientsChanged`, and `Office.EventType.RecurrenceChanged`.</span></span>
+<span data-ttu-id="2fb0b-1432">Сейчас поддерживаются следующие типы событий: `Office.EventType.AttachmentsChanged`, `Office.EventType.AppointmentTimeChanged`, `Office.EventType.RecipientsChanged` и `Office.EventType.RecurrenceChanged`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1432">Currently the supported event types are `Office.EventType.AttachmentsChanged`, `Office.EventType.AppointmentTimeChanged`, `Office.EventType.RecipientsChanged`, and `Office.EventType.RecurrenceChanged`.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-1427">Параметры:</span><span class="sxs-lookup"><span data-stu-id="b789e-1427">Parameters:</span></span>
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-1433">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1433">Parameters</span></span>
 
-| <span data-ttu-id="b789e-1428">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-1428">Name</span></span> | <span data-ttu-id="b789e-1429">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-1429">Type</span></span> | <span data-ttu-id="b789e-1430">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b789e-1430">Attributes</span></span> | <span data-ttu-id="b789e-1431">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-1431">Description</span></span> |
+| <span data-ttu-id="2fb0b-1434">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1434">Name</span></span> | <span data-ttu-id="2fb0b-1435">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1435">Type</span></span> | <span data-ttu-id="2fb0b-1436">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1436">Attributes</span></span> | <span data-ttu-id="2fb0b-1437">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1437">Description</span></span> |
 |---|---|---|---|
-| `eventType` | [<span data-ttu-id="b789e-1432">Office.EventType</span><span class="sxs-lookup"><span data-stu-id="b789e-1432">Office.EventType</span></span>](office.md#eventtype-string) || <span data-ttu-id="b789e-1433">Событие, которое должно отменить обработчик.</span><span class="sxs-lookup"><span data-stu-id="b789e-1433">The event that should revoke the handler.</span></span> |
-| `options` | <span data-ttu-id="b789e-1434">Объект</span><span class="sxs-lookup"><span data-stu-id="b789e-1434">Object</span></span> | <span data-ttu-id="b789e-1435">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1435">&lt;optional&gt;</span></span> | <span data-ttu-id="b789e-1436">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="b789e-1436">An object literal that contains one or more of the following properties.</span></span> |
-| `options.asyncContext` | <span data-ttu-id="b789e-1437">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-1437">Object</span></span> | <span data-ttu-id="b789e-1438">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1438">&lt;optional&gt;</span></span> | <span data-ttu-id="b789e-1439">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="b789e-1439">Developers can provide any object they wish to access in the callback method.</span></span> |
-| `callback` | <span data-ttu-id="b789e-1440">функция</span><span class="sxs-lookup"><span data-stu-id="b789e-1440">function</span></span>| <span data-ttu-id="b789e-1441">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1441">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1442">После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="b789e-1442">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span>|
+| `eventType` | [<span data-ttu-id="2fb0b-1438">Office.EventType</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1438">Office.EventType</span></span>](office.md#eventtype-string) || <span data-ttu-id="2fb0b-1439">Событие, которое должно отменить обработчик.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1439">The event that should revoke the handler.</span></span> |
+| `options` | <span data-ttu-id="2fb0b-1440">Объект</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1440">Object</span></span> | <span data-ttu-id="2fb0b-1441">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1441">&lt;optional&gt;</span></span> | <span data-ttu-id="2fb0b-1442">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1442">An object literal that contains one or more of the following properties.</span></span> |
+| `options.asyncContext` | <span data-ttu-id="2fb0b-1443">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1443">Object</span></span> | <span data-ttu-id="2fb0b-1444">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1444">&lt;optional&gt;</span></span> | <span data-ttu-id="2fb0b-1445">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1445">Developers can provide any object they wish to access in the callback method.</span></span> |
+| `callback` | <span data-ttu-id="2fb0b-1446">функция</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1446">function</span></span>| <span data-ttu-id="2fb0b-1447">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1447">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1448">После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1448">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1443">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-1443">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1449">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1449">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1444">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1444">Requirement</span></span>| <span data-ttu-id="b789e-1445">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1445">Value</span></span>|
+|<span data-ttu-id="2fb0b-1450">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1450">Requirement</span></span>| <span data-ttu-id="2fb0b-1451">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1451">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1446">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="b789e-1446">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="b789e-1447">1.7</span><span class="sxs-lookup"><span data-stu-id="b789e-1447">1.7</span></span> |
-|[<span data-ttu-id="b789e-1448">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1448">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| <span data-ttu-id="b789e-1449">ReadItem</span><span class="sxs-lookup"><span data-stu-id="b789e-1449">ReadItem</span></span> |
-|[<span data-ttu-id="b789e-1450">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1450">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)| <span data-ttu-id="b789e-1451">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="b789e-1451">Compose or read</span></span> |
+|[<span data-ttu-id="2fb0b-1452">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1452">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="2fb0b-1453">1.7</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1453">1.7</span></span> |
+|[<span data-ttu-id="2fb0b-1454">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1454">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| <span data-ttu-id="2fb0b-1455">ReadItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1455">ReadItem</span></span> |
+|[<span data-ttu-id="2fb0b-1456">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1456">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)| <span data-ttu-id="2fb0b-1457">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1457">Compose or Read</span></span> |
 
-####  <a name="saveasyncoptions-callback"></a><span data-ttu-id="b789e-1452">saveAsync([options], обратный вызов)</span><span class="sxs-lookup"><span data-stu-id="b789e-1452">saveAsync([options], callback)</span></span>
+####  <a name="saveasyncoptions-callback"></a><span data-ttu-id="2fb0b-1458">saveAsync([options], callback)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1458">saveAsync([options], callback)</span></span>
 
-<span data-ttu-id="b789e-1453">Асинхронно сохраняет элемент.</span><span class="sxs-lookup"><span data-stu-id="b789e-1453">Asynchronously saves an item.</span></span>
+<span data-ttu-id="2fb0b-1459">Асинхронно сохраняет элемент.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1459">Asynchronously saves an item.</span></span>
 
-<span data-ttu-id="b789e-p181">При вызове этот метод сохраняет текущее сообщение в виде черновика и возвращает идентификатор элемента с помощью метода обратного вызова. В Outlook Web App или интерактивном режиме Outlook этот элемент сохраняется на сервере. В Outlook в режиме кэширования этот элемент сохраняется в локальном кэше.</span><span class="sxs-lookup"><span data-stu-id="b789e-p181">When invoked, this method saves the current message as a draft and returns the item id via the callback method. In Outlook Web App or Outlook in online mode, the item is saved to the server. In Outlook in cached mode, the item is saved to the local cache.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="b789e-1457">Если в режиме создания надстройка вызывает для элемента метод `saveAsync`, чтобы получить параметр `itemId` для использования с EWS или REST API, необходимо помнить, что синхронизация элемента с сервером может занять много времени, если Outlook работает в режиме кэширования данных.</span><span class="sxs-lookup"><span data-stu-id="b789e-1457">If your add-in calls `saveAsync` on an item in compose mode in order to get an `itemId` to use with EWS or the REST API, be aware that when Outlook is in cached mode, it may take some time before the item is actually synced to the server.</span></span> <span data-ttu-id="b789e-1458">До окончания синхронизации элемента применение параметра `itemId` будет приводить к ошибке.</span><span class="sxs-lookup"><span data-stu-id="b789e-1458">Until the item is synced, using the `itemId` will return an error.</span></span>
-
-<span data-ttu-id="b789e-p183">Если метод `saveAsync` вызывается для встречи в режиме создания, она сохраняется как обычная встреча в календаре пользователя, а не как черновик. При сохранении новой встречи приглашения не отправляются. При сохранении существующей встречи уведомления отправляются добавленным или удаленным участникам.</span><span class="sxs-lookup"><span data-stu-id="b789e-p183">Since appointments have no draft state, if `saveAsync` is called on an appointment in compose mode, the item will be saved as a normal appointment on the user's calendar. For new appointments that have not been saved before, no invitation will be sent. Saving an existing appointment will send an update to added or removed attendees.</span></span>
+<span data-ttu-id="2fb0b-p183">При вызове этот метод сохраняет текущее сообщение в виде черновика и возвращает идентификатор элемента с помощью метода обратного вызова. В Outlook Web App или интерактивном режиме Outlook этот элемент сохраняется на сервере. В Outlook в режиме кэширования этот элемент сохраняется в локальном кэше.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p183">When invoked, this method saves the current message as a draft and returns the item id via the callback method. In Outlook Web App or Outlook in online mode, the item is saved to the server. In Outlook in cached mode, the item is saved to the local cache.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b789e-1462">Следующие клиенты отличаются другим поведением `saveAsync` в отношении встреч в режиме создания:</span><span class="sxs-lookup"><span data-stu-id="b789e-1462">The following clients have different behavior for `saveAsync` on appointments in compose mode:</span></span>
+> <span data-ttu-id="2fb0b-1463">Если в режиме создания надстройка вызывает для элемента метод `saveAsync`, чтобы получить параметр `itemId` для использования с EWS или REST API, необходимо помнить, что синхронизация элемента с сервером может занять много времени, если Outlook работает в режиме кэширования данных.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1463">If your add-in calls `saveAsync` on an item in compose mode in order to get an `itemId` to use with EWS or the REST API, be aware that when Outlook is in cached mode, it may take some time before the item is actually synced to the server.</span></span> <span data-ttu-id="2fb0b-1464">До окончания синхронизации элемента применение параметра `itemId` будет приводить к ошибке.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1464">Until the item is synced, using the `itemId` will return an error.</span></span>
+
+<span data-ttu-id="2fb0b-p185">Если метод `saveAsync` вызывается для встречи в режиме создания, она сохраняется как обычная встреча в календаре пользователя, а не как черновик. При сохранении новой встречи приглашения не отправляются. При сохранении существующей встречи уведомления отправляются добавленным или удаленным участникам.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p185">Since appointments have no draft state, if `saveAsync` is called on an appointment in compose mode, the item will be saved as a normal appointment on the user's calendar. For new appointments that have not been saved before, no invitation will be sent. Saving an existing appointment will send an update to added or removed attendees.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="2fb0b-1468">Следующие клиенты отличаются другим поведением `saveAsync` в отношении встреч в режиме создания:</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1468">The following clients have different behavior for `saveAsync` on appointments in compose mode:</span></span>
 >
-> - <span data-ttu-id="b789e-1463">Outlook для Mac не поддерживает `saveAsync` для собраний в режиме создания.</span><span class="sxs-lookup"><span data-stu-id="b789e-1463">Mac Outlook does not support `saveAsync` on a meeting in compose mode.</span></span> <span data-ttu-id="b789e-1464">При вызове `saveAsync` для собрания в Outlook для Mac возвращается ошибка.</span><span class="sxs-lookup"><span data-stu-id="b789e-1464">Calling `saveAsync` on a meeting in Mac Outlook will return an error.</span></span>
-> - <span data-ttu-id="b789e-1465">Outlook в Интернете всегда отправляет приглашение или обновление при вызове `saveAsync` для встречи в режиме создания.</span><span class="sxs-lookup"><span data-stu-id="b789e-1465">Outlook on the web always sends an invitation or update when `saveAsync` is called on an appointment in compose mode.</span></span>
+> - <span data-ttu-id="2fb0b-1469">Outlook для Mac не поддерживает `saveAsync` для собраний в режиме создания.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1469">Mac Outlook does not support `saveAsync` on a meeting in compose mode.</span></span> <span data-ttu-id="2fb0b-1470">При вызове `saveAsync` для собрания в Outlook для Mac возвращается ошибка.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1470">Calling `saveAsync` on a meeting in Mac Outlook will return an error.</span></span>
+> - <span data-ttu-id="2fb0b-1471">Outlook в Интернете всегда отправляет приглашение или обновление при вызове `saveAsync` для встречи в режиме создания.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1471">Outlook on the web always sends an invitation or update when `saveAsync` is called on an appointment in compose mode.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-1466">Параметры</span><span class="sxs-lookup"><span data-stu-id="b789e-1466">Parameters:</span></span>
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-1472">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1472">Parameters</span></span>
 
-|<span data-ttu-id="b789e-1467">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-1467">Name</span></span>|<span data-ttu-id="b789e-1468">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-1468">Type</span></span>|<span data-ttu-id="b789e-1469">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b789e-1469">Attributes</span></span>|<span data-ttu-id="b789e-1470">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-1470">Description</span></span>|
+|<span data-ttu-id="2fb0b-1473">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1473">Name</span></span>|<span data-ttu-id="2fb0b-1474">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1474">Type</span></span>|<span data-ttu-id="2fb0b-1475">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1475">Attributes</span></span>|<span data-ttu-id="2fb0b-1476">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1476">Description</span></span>|
 |---|---|---|---|
-|`options`|<span data-ttu-id="b789e-1471">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-1471">Object</span></span>|<span data-ttu-id="b789e-1472">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1472">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1473">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="b789e-1473">An object literal that contains one or more of the following properties.</span></span>|
-|`options.asyncContext`|<span data-ttu-id="b789e-1474">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-1474">Object</span></span>|<span data-ttu-id="b789e-1475">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1475">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1476">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="b789e-1476">Developers can provide any object they wish to access in the callback method.</span></span>|
-|`callback`|<span data-ttu-id="b789e-1477">функция</span><span class="sxs-lookup"><span data-stu-id="b789e-1477">function</span></span>||<span data-ttu-id="b789e-1478">После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="b789e-1478">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span><br/><br/><span data-ttu-id="b789e-1479">После успешного выполнения идентификатор элемента будет предоставлен в свойстве `asyncResult.value`.</span><span class="sxs-lookup"><span data-stu-id="b789e-1479">On success, the item identifier is provided in the `asyncResult.value` property.</span></span>|
+|`options`|<span data-ttu-id="2fb0b-1477">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1477">Object</span></span>|<span data-ttu-id="2fb0b-1478">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1478">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1479">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1479">An object literal that contains one or more of the following properties.</span></span>|
+|`options.asyncContext`|<span data-ttu-id="2fb0b-1480">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1480">Object</span></span>|<span data-ttu-id="2fb0b-1481">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1481">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1482">Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1482">Developers can provide any object they wish to access in the callback method.</span></span>|
+|`callback`|<span data-ttu-id="2fb0b-1483">функция</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1483">function</span></span>||<span data-ttu-id="2fb0b-1484">После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1484">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span><br/><br/><span data-ttu-id="2fb0b-1485">После успешного выполнения идентификатор элемента будет предоставлен в свойстве `asyncResult.value`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1485">On success, the item identifier is provided in the `asyncResult.value` property.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1480">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-1480">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1486">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1486">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1481">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1481">Requirement</span></span>|<span data-ttu-id="b789e-1482">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1482">Value</span></span>|
+|<span data-ttu-id="2fb0b-1487">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1487">Requirement</span></span>|<span data-ttu-id="2fb0b-1488">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1488">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1483">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-1483">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-1484">1.3</span><span class="sxs-lookup"><span data-stu-id="b789e-1484">1.3</span></span>|
-|[<span data-ttu-id="b789e-1485">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1485">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-1486">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="b789e-1486">ReadWriteItem</span></span>|
-|[<span data-ttu-id="b789e-1487">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1487">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-1488">Создание</span><span class="sxs-lookup"><span data-stu-id="b789e-1488">Compose</span></span>|
+|[<span data-ttu-id="2fb0b-1489">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1489">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-1490">1.3</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1490">1.3</span></span>|
+|[<span data-ttu-id="2fb0b-1491">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1491">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-1492">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1492">ReadWriteItem</span></span>|
+|[<span data-ttu-id="2fb0b-1493">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1493">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-1494">Создание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1494">Compose</span></span>|
 
-##### <a name="examples"></a><span data-ttu-id="b789e-1489">Примеры</span><span class="sxs-lookup"><span data-stu-id="b789e-1489">Examples</span></span>
+##### <a name="examples"></a><span data-ttu-id="2fb0b-1495">Примеры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1495">Examples</span></span>
 
 ```javascript
 Office.context.mailbox.item.saveAsync(
   function callback(result) {
-    // Process the result
+    // Process the result.
   });
 ```
 
-<span data-ttu-id="b789e-p185">Ниже приведен пример параметра `result`, переданного функции обратного вызова. Свойство `value` содержит идентификатор элемента.</span><span class="sxs-lookup"><span data-stu-id="b789e-p185">The following is an example of the `result` parameter passed to the callback function. The `value` property contains the item ID of the item.</span></span>
+<span data-ttu-id="2fb0b-p187">Ниже приведен пример параметра `result`, переданного функции обратного вызова. Свойство `value` содержит идентификатор элемента.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p187">The following is an example of the `result` parameter passed to the callback function. The `value` property contains the item ID of the item.</span></span>
 
 ```json
 {
@@ -2134,31 +2270,31 @@ Office.context.mailbox.item.saveAsync(
 }
 ```
 
-####  <a name="setselecteddataasyncdata-options-callback"></a><span data-ttu-id="b789e-1492">setSelectedDataAsync(data, [options], callback)</span><span class="sxs-lookup"><span data-stu-id="b789e-1492">setSelectedDataAsync(data, [options], callback)</span></span>
+####  <a name="setselecteddataasyncdata-options-callback"></a><span data-ttu-id="2fb0b-1498">setSelectedDataAsync(data, [options], callback)</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1498">setSelectedDataAsync(data, [options], callback)</span></span>
 
-<span data-ttu-id="b789e-1493">Асинхронно вставляет данные в текст или тему сообщения.</span><span class="sxs-lookup"><span data-stu-id="b789e-1493">Asynchronously inserts data into the body or subject of a message.</span></span>
+<span data-ttu-id="2fb0b-1499">Асинхронно вставляет данные в текст или тему сообщения.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1499">Asynchronously inserts data into the body or subject of a message.</span></span>
 
-<span data-ttu-id="b789e-p186">Метод `setSelectedDataAsync` вставляет указанную строку в местоположение курсора в теме или тексте элемента либо, если текст выделен в редакторе, он заменяет выделенный текст. Если курсор находится вне текста или темы элемента, возвращается ошибка. После вставки курсор помещается в конец вставленного содержимого.</span><span class="sxs-lookup"><span data-stu-id="b789e-p186">The `setSelectedDataAsync` method inserts the specified string at the cursor location in the subject or body of the item, or, if text is selected in the editor, it replaces the selected text. If the cursor is not in the body or subject field, an error is returned. After insertion, the cursor is placed at the end of the inserted content.</span></span>
+<span data-ttu-id="2fb0b-p188">Метод `setSelectedDataAsync` вставляет указанную строку в местоположение курсора в теме или тексте элемента либо, если текст выделен в редакторе, он заменяет выделенный текст. Если курсор находится вне текста или темы элемента, возвращается ошибка. После вставки курсор помещается в конец вставленного содержимого.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p188">The `setSelectedDataAsync` method inserts the specified string at the cursor location in the subject or body of the item, or, if text is selected in the editor, it replaces the selected text. If the cursor is not in the body or subject field, an error is returned. After insertion, the cursor is placed at the end of the inserted content.</span></span>
 
-##### <a name="parameters"></a><span data-ttu-id="b789e-1497">Параметры:</span><span class="sxs-lookup"><span data-stu-id="b789e-1497">Parameters:</span></span>
+##### <a name="parameters"></a><span data-ttu-id="2fb0b-1503">Параметры</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1503">Parameters</span></span>
 
-|<span data-ttu-id="b789e-1498">Имя</span><span class="sxs-lookup"><span data-stu-id="b789e-1498">Name</span></span>|<span data-ttu-id="b789e-1499">Тип</span><span class="sxs-lookup"><span data-stu-id="b789e-1499">Type</span></span>|<span data-ttu-id="b789e-1500">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b789e-1500">Attributes</span></span>|<span data-ttu-id="b789e-1501">Описание</span><span class="sxs-lookup"><span data-stu-id="b789e-1501">Description</span></span>|
+|<span data-ttu-id="2fb0b-1504">Имя</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1504">Name</span></span>|<span data-ttu-id="2fb0b-1505">Тип</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1505">Type</span></span>|<span data-ttu-id="2fb0b-1506">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1506">Attributes</span></span>|<span data-ttu-id="2fb0b-1507">Описание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1507">Description</span></span>|
 |---|---|---|---|
-|`data`|<span data-ttu-id="b789e-1502">String</span><span class="sxs-lookup"><span data-stu-id="b789e-1502">String</span></span>||<span data-ttu-id="b789e-p187">Вставляемые данные. Объем данных не должен превышать 1 000 000 символов. Если передано больше 1 000 000 символов, возвращается исключение `ArgumentOutOfRange`.</span><span class="sxs-lookup"><span data-stu-id="b789e-p187">The data to be inserted. Data is not to exceed 1,000,000 characters. If more than 1,000,000 characters are passed in, an `ArgumentOutOfRange` exception is thrown.</span></span>|
-|`options`|<span data-ttu-id="b789e-1506">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-1506">Object</span></span>|<span data-ttu-id="b789e-1507">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1507">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1508">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="b789e-1508">An object literal that contains one or more of the following properties.</span></span>|
-|`options.asyncContext`|<span data-ttu-id="b789e-1509">Object</span><span class="sxs-lookup"><span data-stu-id="b789e-1509">Object</span></span>|<span data-ttu-id="b789e-1510">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1510">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-1511">В методе обратного вызова разработчики могут указать любой объект, к которому необходимо получить доступ.</span><span class="sxs-lookup"><span data-stu-id="b789e-1511">Developers can provide any object they wish to access in the callback method.</span></span>|
-|`options.coercionType`|[<span data-ttu-id="b789e-1512">Office.CoercionType</span><span class="sxs-lookup"><span data-stu-id="b789e-1512">Office.CoercionType</span></span>](office.md#coerciontype-string)|<span data-ttu-id="b789e-1513">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="b789e-1513">&lt;optional&gt;</span></span>|<span data-ttu-id="b789e-p188">Если задано значение `text`, текущий стиль применяется в Outlook Web App и Outlook. Если поле представляет собой редактор HTML, вставляются только текстовые данные, даже если они имеют формат HTML.</span><span class="sxs-lookup"><span data-stu-id="b789e-p188">If `text`, the current style is applied in Outlook Web App and Outlook. If the field is an HTML editor, only the text data is inserted, even if the data is HTML.</span></span><br/><br/><span data-ttu-id="b789e-p189">Если задано значение `html` и поле (не тема) поддерживает HTML, в Outlook Web App применяется текущий стиль, а в Outlook — стиль по умолчанию. Если поле является текстовым, возвращается ошибка `InvalidDataFormat`.</span><span class="sxs-lookup"><span data-stu-id="b789e-p189">If `html` and the field supports HTML (the subject doesn't), the current style is applied in Outlook Web App and the default style is applied in Outlook. If the field is a text field, an `InvalidDataFormat` error is returned.</span></span><br/><br/><span data-ttu-id="b789e-1518">Если свойство `coercionType` не задано, результат зависит от поля: если поле имеет формат HTML, используется текст в формате HTML, а если поле текстовое, применяется обычный текст.</span><span class="sxs-lookup"><span data-stu-id="b789e-1518">If `coercionType` is not set, the result depends on the field: if the field is HTML then HTML is used; if the field is text, then plain text is used.</span></span>|
-|`callback`|<span data-ttu-id="b789e-1519">функция</span><span class="sxs-lookup"><span data-stu-id="b789e-1519">function</span></span>||<span data-ttu-id="b789e-1520">После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="b789e-1520">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span>|
+|`data`|<span data-ttu-id="2fb0b-1508">String</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1508">String</span></span>||<span data-ttu-id="2fb0b-p189">Вставляемые данные. Объем данных не должен превышать 1 000 000 символов. Если передано больше 1 000 000 символов, возвращается исключение `ArgumentOutOfRange`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p189">The data to be inserted. Data is not to exceed 1,000,000 characters. If more than 1,000,000 characters are passed in, an `ArgumentOutOfRange` exception is thrown.</span></span>|
+|`options`|<span data-ttu-id="2fb0b-1512">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1512">Object</span></span>|<span data-ttu-id="2fb0b-1513">&lt;необязательный&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1513">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1514">Объектный литерал, содержащий одно или несколько из указанных ниже свойств.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1514">An object literal that contains one or more of the following properties.</span></span>|
+|`options.asyncContext`|<span data-ttu-id="2fb0b-1515">Object</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1515">Object</span></span>|<span data-ttu-id="2fb0b-1516">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1516">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-1517">В методе обратного вызова разработчики могут указать любой объект, к которому необходимо получить доступ.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1517">Developers can provide any object they wish to access in the callback method.</span></span>|
+|`options.coercionType`|[<span data-ttu-id="2fb0b-1518">Office.CoercionType</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1518">Office.CoercionType</span></span>](office.md#coerciontype-string)|<span data-ttu-id="2fb0b-1519">&lt;необязательно&gt;</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1519">&lt;optional&gt;</span></span>|<span data-ttu-id="2fb0b-p190">Если задано значение `text`, текущий стиль применяется в Outlook Web App и Outlook. Если поле представляет собой редактор HTML, вставляются только текстовые данные, даже если они имеют формат HTML.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p190">If `text`, the current style is applied in Outlook Web App and Outlook. If the field is an HTML editor, only the text data is inserted, even if the data is HTML.</span></span><br/><br/><span data-ttu-id="2fb0b-p191">Если задано значение `html` и поле (не тема) поддерживает HTML, в Outlook Web App применяется текущий стиль, а в Outlook — стиль по умолчанию. Если поле является текстовым, возвращается ошибка `InvalidDataFormat`.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-p191">If `html` and the field supports HTML (the subject doesn't), the current style is applied in Outlook Web App and the default style is applied in Outlook. If the field is a text field, an `InvalidDataFormat` error is returned.</span></span><br/><br/><span data-ttu-id="2fb0b-1524">Если свойство `coercionType` не задано, результат зависит от поля: если поле имеет формат HTML, используется текст в формате HTML, а если поле текстовое, применяется обычный текст.</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1524">If `coercionType` is not set, the result depends on the field: if the field is HTML then HTML is used; if the field is text, then plain text is used.</span></span>|
+|`callback`|<span data-ttu-id="2fb0b-1525">функция</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1525">function</span></span>||<span data-ttu-id="2fb0b-1526">После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1526">When the method completes, the function passed in the `callback` parameter is called with a single parameter, `asyncResult`, which is an [`AsyncResult`](/javascript/api/office/office.asyncresult) object.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="b789e-1521">Требования</span><span class="sxs-lookup"><span data-stu-id="b789e-1521">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="2fb0b-1527">Требования</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1527">Requirements</span></span>
 
-|<span data-ttu-id="b789e-1522">Требование</span><span class="sxs-lookup"><span data-stu-id="b789e-1522">Requirement</span></span>|<span data-ttu-id="b789e-1523">Значение</span><span class="sxs-lookup"><span data-stu-id="b789e-1523">Value</span></span>|
+|<span data-ttu-id="2fb0b-1528">Требование</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1528">Requirement</span></span>|<span data-ttu-id="2fb0b-1529">Значение</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1529">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="b789e-1524">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="b789e-1524">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="b789e-1525">1.2</span><span class="sxs-lookup"><span data-stu-id="b789e-1525">1.2</span></span>|
-|[<span data-ttu-id="b789e-1526">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="b789e-1526">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="b789e-1527">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="b789e-1527">ReadWriteItem</span></span>|
-|[<span data-ttu-id="b789e-1528">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="b789e-1528">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="b789e-1529">Создание</span><span class="sxs-lookup"><span data-stu-id="b789e-1529">Compose</span></span>|
+|[<span data-ttu-id="2fb0b-1530">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1530">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|<span data-ttu-id="2fb0b-1531">1.2</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1531">1.2</span></span>|
+|[<span data-ttu-id="2fb0b-1532">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1532">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)|<span data-ttu-id="2fb0b-1533">ReadWriteItem</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1533">ReadWriteItem</span></span>|
+|[<span data-ttu-id="2fb0b-1534">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1534">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)|<span data-ttu-id="2fb0b-1535">Создание</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1535">Compose</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="b789e-1530">Пример</span><span class="sxs-lookup"><span data-stu-id="b789e-1530">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="2fb0b-1536">Пример</span><span class="sxs-lookup"><span data-stu-id="2fb0b-1536">Example</span></span>
 
 ```javascript
 Office.context.mailbox.item.setSelectedDataAsync("Hello World!");
