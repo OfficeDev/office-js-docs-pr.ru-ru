@@ -1,13 +1,14 @@
 ---
 title: Office.context.mailbox.diagnostics — набор обязательных элементов 1.2
 description: ''
-ms.date: 10/11/2018
-ms.openlocfilehash: c8b9d6dd4334a6d3a797ca16f1cb8136515b01fd
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+ms.date: 02/15/2019
+localization_priority: Normal
+ms.openlocfilehash: f3697d149789a9690bdaf5b6d4891bd678196088
+ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433231"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "30068086"
 ---
 # <a name="diagnostics"></a>diagnostics
 
@@ -31,7 +32,7 @@ ms.locfileid: "27433231"
 
 Строка, которая может иметь одно из следующих значений: `Outlook`, `OutlookIOS` или `OutlookWebApp`.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -49,7 +50,7 @@ ms.locfileid: "27433231"
 
 Если почтовая надстройка запущена в классическом клиенте Outlook или Outlook для iOS, свойство `hostVersion` возвращает версию ведущего приложения, Outlook. В Outlook Web App это свойство возвращает версию Exchange Server. Пример — строка `15.0.468.0`.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -75,7 +76,7 @@ Outlook Web App включает три представления, которы
 *   `TwoColumns` используется при более широком экране: Outlook Web App использует это представление на большинстве планшетных ПК.
 *   `ThreeColumns` используется для полноразмерных экранов. Например, Outlook Web App использует это представление в полноэкранном режиме на настольных компьютерах.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 

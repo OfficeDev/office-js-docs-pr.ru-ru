@@ -1,13 +1,14 @@
 ---
 title: Office.context.mailbox — набор обязательных элементов 1.2
 description: ''
-ms.date: 10/31/2018
-ms.openlocfilehash: 18ac05d9d097253a2b1f51e162a6a8600b2b88cf
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+ms.date: 02/15/2019
+localization_priority: Normal
+ms.openlocfilehash: 5d3cc3fbcc233e8afd0d0a6f3a3ae80534eb3c28
+ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433406"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "30068219"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -42,7 +43,7 @@ ms.locfileid: "27433406"
 
 Удаленная служба может использовать значение `ewsUrl`, чтобы выполнять вызовы EWS для почтового ящика пользователя. Например, вы можете создать удаленную службу, чтобы [получить вложения из выбранного элемента](https://docs.microsoft.com/outlook/add-ins/get-attachments-of-an-outlook-item).
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -145,7 +146,7 @@ ms.locfileid: "27433406"
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 Office.context.mailbox.displayAppointmentForm(appointmentId);
 ```
 
@@ -180,7 +181,7 @@ Office.context.mailbox.displayAppointmentForm(appointmentId);
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 Office.context.mailbox.displayMessageForm(messageId);
 ```
 
@@ -223,7 +224,7 @@ Office.context.mailbox.displayMessageForm(messageId);
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 var start = new Date();
 var end = new Date();
 end.setHours(start.getHours() + 1);
@@ -268,7 +269,7 @@ Office.context.mailbox.displayNewAppointmentForm(
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 function getCallbackToken() {
   Office.context.mailbox.getCallbackTokenAsync(cb);
 }
@@ -301,7 +302,7 @@ function cb(asyncResult) {
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 function getIdentityToken() {
   Office.context.mailbox.getUserIdentityTokenAsync(cb);
 }
@@ -367,10 +368,10 @@ function cb(asyncResult) {
 
 В следующем примере вызывается `makeEwsRequestAsync` для получения темы элемента с помощью операции `GetItem`.
 
-```js
+```javascript
 function getSubjectRequest(id) {
-   // Return a GetItem operation request for the subject of the specified item.
-   var request =
+  // Return a GetItem operation request for the subject of the specified item.
+  var request =
     '<?xml version="1.0" encoding="utf-8"?>' +
     '<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"' +
     '               xmlns:xsd="http://www.w3.org/2001/XMLSchema"' +
@@ -392,19 +393,19 @@ function getSubjectRequest(id) {
     '  </soap:Body>' +
     '</soap:Envelope>';
 
-   return request;
+  return request;
 }
 
 function sendRequest() {
-   // Create a local variable that contains the mailbox.
-   Office.context.mailbox.makeEwsRequestAsync(
+  // Create a local variable that contains the mailbox.
+  Office.context.mailbox.makeEwsRequestAsync(
     getSubjectRequest(mailbox.item.itemId), callback);
 }
 
 function callback(asyncResult)  {
-   var result = asyncResult.value;
-   var context = asyncResult.asyncContext;
+  var result = asyncResult.value;
+  var context = asyncResult.asyncContext;
 
-   // Process the returned response here.
+  // Process the returned response here.
 }
 ```

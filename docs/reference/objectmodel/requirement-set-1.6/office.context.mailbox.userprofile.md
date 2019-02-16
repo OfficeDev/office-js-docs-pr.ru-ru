@@ -1,13 +1,14 @@
 ---
 title: Office.context.mailbox.userProfile — набор обязательных элементов 1.6
 description: ''
-ms.date: 10/31/2018
-ms.openlocfilehash: fe30a390583dc646e9c8792710c580d02c373a1a
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+ms.date: 02/15/2019
+localization_priority: Normal
+ms.openlocfilehash: 09457a41fe68ae03e035d3d3f4b80b139be348e0
+ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27432900"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "30067876"
 ---
 # <a name="userprofile"></a>userProfile
 
@@ -28,7 +29,7 @@ ms.locfileid: "27432900"
 | [accountType](#accounttype-string) | Элемент |
 | [displayName](#displayname-string) | Элемент |
 | [emailAddress](#emailaddress-string) | Элемент |
-| [timeZone](#timezone-string) | Элемент |
+| [timeZone](#timezone-string) | Член |
 
 ### <a name="members"></a>Элементы
 
@@ -46,7 +47,7 @@ ms.locfileid: "27432900"
 | `office365` | Почтовый ящик связан с рабочей или учебной учетной записью Office 365. |
 | `outlookCom` | Почтовый ящик связан с личной учетной записью Outlook.com. |
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -60,7 +61,7 @@ ms.locfileid: "27432900"
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 console.log(Office.context.mailbox.userProfile.accountType);
 ```
 
@@ -68,7 +69,7 @@ console.log(Office.context.mailbox.userProfile.accountType);
 
 Получает отображаемое имя пользователя.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -76,13 +77,13 @@ console.log(Office.context.mailbox.userProfile.accountType);
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 // Example: Allie Bellew
 console.log(Office.context.mailbox.userProfile.displayName);
 ```
@@ -91,7 +92,7 @@ console.log(Office.context.mailbox.userProfile.displayName);
 
 Получает адрес электронной почты SMTP пользователя.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -99,13 +100,13 @@ console.log(Office.context.mailbox.userProfile.displayName);
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 // Example: allieb@contoso.com
 console.log(Office.context.mailbox.userProfile.emailAddress);
 ```
@@ -114,7 +115,7 @@ console.log(Office.context.mailbox.userProfile.emailAddress);
 
 Получает часовой пояс пользователя по умолчанию.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -122,13 +123,13 @@ console.log(Office.context.mailbox.userProfile.emailAddress);
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 // Example: Pacific Standard Time
 console.log(Office.context.mailbox.userProfile.timeZone);
 ```

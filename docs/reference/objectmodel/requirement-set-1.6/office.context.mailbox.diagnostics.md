@@ -1,13 +1,14 @@
 ---
 title: Office.context.mailbox.diagnostics — набор обязательных элементов 1.6
 description: ''
-ms.date: 10/11/2018
-ms.openlocfilehash: a3b64e2c24c28fc93807ce3ab6261111e44e28b4
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+ms.date: 02/15/2019
+localization_priority: Normal
+ms.openlocfilehash: 19c56b334bbbc0edc7fa972ed974d318d1cff2fc
+ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27432713"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "30068149"
 ---
 # <a name="diagnostics"></a>diagnostics
 
@@ -27,11 +28,11 @@ ms.locfileid: "27432713"
 
 | Элемент | Тип |
 |--------|------|
-| [hostName](#hostname-string) | Член |
-| [hostVersion](#hostversion-string) | Член |
+| [hostName](#hostname-string) | Элемент |
+| [hostVersion](#hostversion-string) | Элемент |
 | [OWAView](#owaview-string) | Член |
 
-### <a name="members"></a>Члены
+### <a name="members"></a>Элементы
 
 ####  <a name="hostname-string"></a>hostName :String
 
@@ -39,7 +40,7 @@ ms.locfileid: "27432713"
 
 Строка, которая может иметь одно из следующих значений: `Outlook`, `Mac Outlook`, `OutlookIOS` или `OutlookWebApp`.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -57,7 +58,7 @@ ms.locfileid: "27432713"
 
 Если почтовая надстройка запущена в классическом клиенте Outlook или Outlook для iOS, свойство `hostVersion` возвращает версию ведущего приложения, Outlook. В Outlook Web App это свойство возвращает версию Exchange Server. Пример — строка `15.0.468.0`.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -83,7 +84,7 @@ Outlook Web App включает три представления, которы
 *   `TwoColumns` используется при более широком экране: Outlook Web App использует это представление на большинстве планшетных ПК.
 *   `ThreeColumns` используется для полноразмерных экранов. Например, Outlook Web App использует это представление в полноэкранном режиме на настольных компьютерах.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 

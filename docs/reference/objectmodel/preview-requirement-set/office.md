@@ -1,13 +1,14 @@
 ---
 title: Пространство имен Office — предварительная версия набора обязательных элементов
 description: ''
-ms.date: 11/08/2018
-ms.openlocfilehash: f4a4f0d7a4ce0de433d4e70b6a4675b5f63f26f0
-ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
-ms.translationtype: HT
+ms.date: 02/15/2019
+localization_priority: Normal
+ms.openlocfilehash: bbec602680da7914666daf33ed36c45751ae69c6
+ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/28/2018
-ms.locfileid: "27457931"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "30068324"
 ---
 # <a name="office"></a>Office
 
@@ -24,10 +25,10 @@ ms.locfileid: "27457931"
 
 | Элемент | Тип |
 |--------|------|
-| [AsyncResultStatus](#asyncresultstatus-string) | Член |
-| [CoercionType](#coerciontype-string) | Член |
+| [AsyncResultStatus](#asyncresultstatus-string) | Элемент |
+| [CoercionType](#coerciontype-string) | Элемент |
 | [EventType](#eventtype-string) | Член |
-| [SourceProperty](#sourceproperty-string) | Член |
+| [SourceProperty](#sourceproperty-string) | Элемент |
 
 ### <a name="namespaces"></a>Пространства имен
 
@@ -41,7 +42,7 @@ ms.locfileid: "27457931"
 
 Указывает результат асинхронного вызова.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -49,7 +50,7 @@ ms.locfileid: "27457931"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Succeeded`| Для указания|Вызов завершился успешно.|
+|`Succeeded`| Строка|Вызов завершился успешно.|
 |`Failed`| Для указания|Вызов завершился ошибкой.|
 
 ##### <a name="requirements"></a>Требования
@@ -65,7 +66,7 @@ ms.locfileid: "27457931"
 
 Указывает способ приведения данных, возвращаемых или задаваемых вызванным методом.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -73,7 +74,7 @@ ms.locfileid: "27457931"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Html`| String|Запрашивает возврат данных в формате HTML.|
+|`Html`| Строка|Запрашивает возврат данных в формате HTML.|
 |`Text`| String|Запрашивает возврат данных в формате текста.|
 
 ##### <a name="requirements"></a>Требования
@@ -89,7 +90,7 @@ ms.locfileid: "27457931"
 
 Указывает событие, связанное с обработчиком.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -117,7 +118,7 @@ ms.locfileid: "27457931"
 
 Указывает источник данных, возвращаемых вызванным методом.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -125,7 +126,7 @@ ms.locfileid: "27457931"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Body`| String|Источник данных — текст сообщения.|
+|`Body`| Строка|Источник данных — текст сообщения.|
 |`Subject`| String|Источник данных — тема сообщения.|
 
 ##### <a name="requirements"></a>Требования

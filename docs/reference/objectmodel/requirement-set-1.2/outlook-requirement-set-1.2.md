@@ -1,13 +1,14 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.2
 description: ''
-ms.date: 10/11/2018
-ms.openlocfilehash: a77c9c0399d42029b86595f119c51071dc3bf4ac
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+ms.date: 02/15/2019
+localization_priority: Normal
+ms.openlocfilehash: 1767b1b93f13de2c8a0731d2f08a1141b709b734
+ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433546"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "30068030"
 ---
 # <a name="outlook-add-in-api-requirement-set-12"></a>Набор обязательных элементов API для надстройки Outlook 1.2
 
@@ -24,8 +25,8 @@ ms.locfileid: "27433546"
 
 - Добавлен метод [Office.context.mailbox.item.getSelectedDataAsync](office.context.mailbox.item.md#getselecteddataasynccoerciontype-options-callback--string). Асинхронно возвращает данные, выбранные в теме или тексте сообщения.
 - Добавлен метод [Office.context.mailbox.item.setSelectedDataAsync](office.context.mailbox.item.md#setselecteddataasyncdata-options-callback). Асинхронно вставляет данные в текст или тему сообщения.
-- Изменен метод [Office.context.mailbox.item.displayReplyAllForm](office.context.mailbox.item.md#displayreplyallformformdata). Добавлено свойство `attachments` параметра `formData`.
-- Изменен метод [Office.context.mailbox.item.displayReplyForm](office.context.mailbox.item.md#displayreplyformformdata). Добавлено свойство `attachments` параметра `formData`.
+- Изменен метод [Office.context.mailbox.item.displayReplyAllForm](office.context.mailbox.item.md#displayreplyallformformdata-callback). Добавлено свойство `attachments` параметра `formData`.
+- Изменен метод [Office.context.mailbox.item.displayReplyForm](office.context.mailbox.item.md#displayreplyformformdata-callback). Добавлено свойство `attachments` параметра `formData`.
 
 ## <a name="see-also"></a>См. также
 

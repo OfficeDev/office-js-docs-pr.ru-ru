@@ -1,13 +1,14 @@
 ---
 title: Пространство имен Office — набор обязательных элементов 1.1
 description: ''
-ms.date: 11/08/2018
-ms.openlocfilehash: af2a48d5bc943d4f443c32777fefaf8ed4a30032
-ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
-ms.translationtype: HT
+ms.date: 02/15/2019
+localization_priority: Normal
+ms.openlocfilehash: b98f8fa01e2cfdf17d6105beab67199a2cec4317
+ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/28/2018
-ms.locfileid: "27457434"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "30068023"
 ---
 # <a name="office"></a>Office
 
@@ -24,7 +25,7 @@ ms.locfileid: "27457434"
 
 [context.](office.context.md) Предоставляет общие интерфейсы из контекстного пространства имен API надстроек Office для использования в API надстройки Outlook.
 
-[MailboxEnums.](/javascript/api/outlook/office.mailboxenums.attachmenttype) Включает перечисления ItemType, EntityType, AttachmentType, RecipientType, ResponseType и ItemNotificationMessageType.
+[MailboxEnums.](/javascript/api/outlook_1_1/office.mailboxenums.attachmenttype) Включает перечисления ItemType, EntityType, AttachmentType, RecipientType, ResponseType и ItemNotificationMessageType.
 
 ### <a name="members"></a>Элементы
 
@@ -32,7 +33,7 @@ ms.locfileid: "27457434"
 
 Указывает результат асинхронного вызова.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -49,11 +50,12 @@ ms.locfileid: "27457434"
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+
 ####  <a name="coerciontype-string"></a>CoercionType :String
 
 Указывает способ приведения данных, возвращаемых или задаваемых вызванным методом.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -70,11 +72,12 @@ ms.locfileid: "27457434"
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+
 ####  <a name="sourceproperty-string"></a>SourceProperty :String
 
 Указывает источник данных, возвращаемых вызванным методом.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 

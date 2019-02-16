@@ -1,13 +1,14 @@
 ---
 title: Office.context — набор обязательных элементов 1.4
 description: ''
-ms.date: 10/11/2018
-ms.openlocfilehash: e07ab0ea83147082aaf89271f222264f1a74b0d8
-ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
-ms.translationtype: HT
+ms.date: 02/15/2019
+localization_priority: Normal
+ms.openlocfilehash: 07358710a84321db7c249b911e59794b561acfca
+ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/28/2018
-ms.locfileid: "27457700"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "30068198"
 ---
 # <a name="context"></a>context
 
@@ -34,7 +35,7 @@ ms.locfileid: "27457700"
 
 Значение `displayLanguage` отображает текущий параметр **Язык интерфейса**, заданный в разделе **Файл > Параметры > Язык** ведущего приложения Office.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -47,7 +48,7 @@ ms.locfileid: "27457700"
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 function sayHelloWithDisplayLanguage() {
   var myDisplayLanguage = Office.context.displayLanguage;
   switch (myDisplayLanguage) {
@@ -59,6 +60,7 @@ function sayHelloWithDisplayLanguage() {
       break;
   }
 }
+
 // Function that writes to a div with id='message' on the page.
 function write(message){
   document.getElementById('message').innerText += message;
@@ -74,7 +76,7 @@ function write(message){
 
 Цвета тем Office позволяют согласовать цветовую схему надстройки с текущей темой Office, которую пользователь выбрал с помощью элементов **Файл > Учетная запись Office > Тема Office** и которая применяется во всех ведущих приложениях Office. Цвета тем Office можно использовать для всех надстроек почты и области задач.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   Object
 
@@ -82,7 +84,7 @@ function write(message){
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`bodyBackgroundColor`| String|Получает цвет фона текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
+|`bodyBackgroundColor`| Строка|Получает цвет фона текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
 |`bodyForegroundColor`| String|Получает цвет переднего плана текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
 |`controlBackgroundColor`| String|Получает цвет фона элемента управления для темы Office в виде шестнадцатеричной триады цветов.|
 |`controlForegroundColor`| String|Получает цвет элемента управления текстом сообщения для темы Office в виде шестнадцатеричной триады цветов.|
@@ -96,7 +98,7 @@ function write(message){
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 function applyOfficeTheme(){
   // Get office theme colors.
   var bodyBackgroundColor = Office.context.officeTheme.bodyBackgroundColor;
@@ -115,7 +117,7 @@ function applyOfficeTheme(){
 
 Объект `RoamingSettings` позволяет сохранять данные для надстройки почты, записанные в почтовом ящике пользователя, и получать к ним доступ, таким образом делая их доступными для этой надстройки, когда она запускается из любого клиентского ведущего приложения, используемого для доступа к этому почтовому ящику.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   [RoamingSettings](/javascript/api/outlook_1_4/office.RoamingSettings)
 

@@ -1,14 +1,14 @@
 ---
 title: Office.context.mailbox.userProfile — набор обязательных элементов 1.7
 description: ''
-ms.date: 10/31/2018
+ms.date: 02/15/2019
 localization_priority: Normal
-ms.openlocfilehash: b07ff5bee3adc18cc1006bb574e373182b29f5fe
-ms.sourcegitcommit: a59f4e322238efa187f388a75b7709462c71e668
+ms.openlocfilehash: fb55d11fd46a9957dab124514ef3bfe5a7c138eb
+ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "29635904"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "30067869"
 ---
 # <a name="userprofile"></a>userProfile
 
@@ -26,17 +26,17 @@ ms.locfileid: "29635904"
 
 | Элемент | Тип |
 |--------|------|
-| [accountType](#accounttype-string) | Member |
-| [displayName](#displayname-string) | Member |
-| [emailAddress](#emailaddress-string) | Member |
+| [accountType](#accounttype-string) | Элемент |
+| [displayName](#displayname-string) | Элемент |
+| [emailAddress](#emailaddress-string) | Элемент |
 | [timeZone](#timezone-string) | Член |
 
-### <a name="members"></a>Members
+### <a name="members"></a>Элементы
 
 ####  <a name="accounttype-string"></a>accountType :String
 
 > [!NOTE]
-> Этот член в данный момент поддерживается только Outlook 2016 для Mac (построение 16.9.1212 или более поздней версии).
+> В настоящее время этот элемент поддерживается только Outlook 2016 для Mac (сборка 16.9.1212 или более поздняя).
 
 Возвращает тип учетной записи пользователя, связанной с почтовым ящиком. Возможные значения перечислены в таблице ниже.
 
@@ -47,7 +47,7 @@ ms.locfileid: "29635904"
 | `office365` | Почтовый ящик связан с рабочей или учебной учетной записью Office 365. |
 | `outlookCom` | Почтовый ящик связан с личной учетной записью Outlook.com. |
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -61,7 +61,7 @@ ms.locfileid: "29635904"
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 console.log(Office.context.mailbox.userProfile.accountType);
 ```
 
@@ -69,7 +69,7 @@ console.log(Office.context.mailbox.userProfile.accountType);
 
 Получает отображаемое имя пользователя.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -83,7 +83,7 @@ console.log(Office.context.mailbox.userProfile.accountType);
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 // Example: Allie Bellew
 console.log(Office.context.mailbox.userProfile.displayName);
 ```
@@ -92,7 +92,7 @@ console.log(Office.context.mailbox.userProfile.displayName);
 
 Получает адрес электронной почты SMTP пользователя.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -106,7 +106,7 @@ console.log(Office.context.mailbox.userProfile.displayName);
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 // Example: allieb@contoso.com
 console.log(Office.context.mailbox.userProfile.emailAddress);
 ```
@@ -115,7 +115,7 @@ console.log(Office.context.mailbox.userProfile.emailAddress);
 
 Получает часовой пояс пользователя по умолчанию.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -129,7 +129,7 @@ console.log(Office.context.mailbox.userProfile.emailAddress);
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 // Example: Pacific Standard Time
 console.log(Office.context.mailbox.userProfile.timeZone);
 ```

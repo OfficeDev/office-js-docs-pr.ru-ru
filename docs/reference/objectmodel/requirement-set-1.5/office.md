@@ -1,13 +1,14 @@
 ---
 title: Пространство имен Office — набор обязательных элементов 1.5
 description: ''
-ms.date: 11/08/2018
-ms.openlocfilehash: 11b9ea439e659f0aefdcd15ae9a73ac128aee98b
-ms.sourcegitcommit: 60fd8a3ac4a6d66cb9e075ce7e0cde3c888a5fe9
-ms.translationtype: HT
+ms.date: 02/15/2019
+localization_priority: Normal
+ms.openlocfilehash: c9f769550ad2c4994545e51d140b6ea6e67761bc
+ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/28/2018
-ms.locfileid: "27458008"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "30067939"
 ---
 # <a name="office"></a>Office
 
@@ -24,16 +25,16 @@ ms.locfileid: "27458008"
 
 | Элемент | Тип |
 |--------|------|
-| [AsyncResultStatus](#asyncresultstatus-string) | Член |
-| [CoercionType](#coerciontype-string) | Член |
+| [AsyncResultStatus](#asyncresultstatus-string) | Элемент |
+| [CoercionType](#coerciontype-string) | Элемент |
 | [EventType](#eventtype-string) | Член |
-| [SourceProperty](#sourceproperty-string) | Член |
+| [SourceProperty](#sourceproperty-string) | Элемент |
 
 ### <a name="namespaces"></a>Пространства имен
 
 [context.](office.context.md) Предоставляет общие интерфейсы из контекстного пространства имен API надстроек Office для использования в API надстройки Outlook.
 
-[MailboxEnums.](/javascript/api/outlook/office.mailboxenums.attachmenttype) Включает перечисления ItemType, EntityType, AttachmentType, RecipientType, ResponseType и ItemNotificationMessageType.
+[MailboxEnums.](/javascript/api/outlook_1_5/office.mailboxenums.attachmenttype) Включает перечисления ItemType, EntityType, AttachmentType, RecipientType, ResponseType и ItemNotificationMessageType.
 
 ### <a name="members"></a>Элементы
 
@@ -41,7 +42,7 @@ ms.locfileid: "27458008"
 
 Указывает результат асинхронного вызова.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -49,7 +50,7 @@ ms.locfileid: "27458008"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Succeeded`| Для указания|Вызов завершился успешно.|
+|`Succeeded`| Строка|Вызов завершился успешно.|
 |`Failed`| Для указания|Вызов завершился ошибкой.|
 
 ##### <a name="requirements"></a>Требования
@@ -65,7 +66,7 @@ ms.locfileid: "27458008"
 
 Указывает способ приведения данных, возвращаемых или задаваемых вызванным методом.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -73,7 +74,7 @@ ms.locfileid: "27458008"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Html`| String|Запрашивает возврат данных в формате HTML.|
+|`Html`| Строка|Запрашивает возврат данных в формате HTML.|
 |`Text`| String|Запрашивает возврат данных в формате текста.|
 
 ##### <a name="requirements"></a>Требования
@@ -89,7 +90,7 @@ ms.locfileid: "27458008"
 
 Указывает событие, связанное с обработчиком.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -112,7 +113,7 @@ ms.locfileid: "27458008"
 
 Указывает источник данных, возвращаемых вызванным методом.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -120,7 +121,7 @@ ms.locfileid: "27458008"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Body`| String|Источник данных — текст сообщения.|
+|`Body`| Строка|Источник данных — текст сообщения.|
 |`Subject`| String|Источник данных — тема сообщения.|
 
 ##### <a name="requirements"></a>Требования
