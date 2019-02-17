@@ -6,4 +6,4 @@
 - Office 2016 или более поздние версии
     
     > [!NOTE]
-    > Если у вас еще нет Office, можете [оформить бесплатную пробную подписку на 1 месяц](https://products.office.com/en-US/try?legRedir=true&WT.intid1=ODC_ENUS_FX101785584_XT104056786&CorrelationId=64c762de-7a97-4dd1-bb96-e231d7485735).
+    > Если у вас еще нет Office, вы можете [принять участие в программе для разработчиков Office](https://developer.microsoft.com/ru-RU/office/dev-program), чтобы получить лицензию для своей разработки и поэкспериментировать с надстройками.
