@@ -1,14 +1,14 @@
 ---
 title: Office.context.mailbox — набор обязательных элементов 1.5
 description: ''
-ms.date: 01/16/2019
+ms.date: 02/15/2019
 localization_priority: Priority
-ms.openlocfilehash: fb84d1e7a5ffd1a5549f213e63ae827f8a883d34
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 511d4353998ff46f9402865453d8e7b29b6d0758
+ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29389433"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "30068051"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -67,7 +67,7 @@ ms.locfileid: "29389433"
 
 Перед использованием элемента `ewsUrl` в режиме создания необходимо вызвать метод [`saveAsync`](Office.context.mailbox.item.md#saveasyncoptions-callback). Для вызова метода `saveAsync` приложение должно иметь разрешения **ReadWriteItem**.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -92,7 +92,7 @@ ms.locfileid: "29389433"
 > [!NOTE]
 > Клиенты Outlook, подключенные к локальным установленным версиям Exchange 2016 или более поздним с пользовательским URL-адресом REST, возвращают недопустимое значение `restUrl`.
 
-##### <a name="type"></a>Тип:
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -112,7 +112,7 @@ ms.locfileid: "29389433"
 
 В настоящее время поддерживаются только события типа `Office.EventType.ItemChanged`, которые вызываются, когда пользователь выбирает новый элемент. Это событие используется надстройками, реализующими закрепляемую область задач, и позволяет надстройке обновлять пользовательский интерфейс области задач в соответствии с выбранным в данный момент элементом.
 
-##### <a name="parameters"></a>Параметры:
+##### <a name="parameters"></a>Параметры
 
 | Имя | Тип | Атрибуты | Описание |
 |---|---|---|---|
@@ -132,19 +132,19 @@ ms.locfileid: "29389433"
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 Office.initialize = function (reason) {
   $(document).ready(function () {
     Office.context.mailbox.addHandlerAsync(Office.EventType.ItemChanged, loadNewItem, function (result) {
       if (result.status === Office.AsyncResultStatus.Failed) {
-        // Handle error
+        // Handle error.
       }
     });
   });
 };
 
 function loadNewItem(eventArgs) {
-  // Load the properties of the newly selected item
+  // Load the properties of the newly selected item.
   loadProps(Office.context.mailbox.item);
 };
 ```
@@ -179,12 +179,11 @@ function loadNewItem(eventArgs) {
 
 ##### <a name="example"></a>Пример
 
-```js
-// Get an item's ID from a REST API
+```javascript
+// Get an item's ID from a REST API.
 var restId = 'AAMkAGVlOTZjNTM3LW...';
 
-// Treat restId as coming from the v2.0 version of the
-// Outlook Mail API
+// Treat restId as coming from the v2.0 version of the Outlook Mail API.
 var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.RestVersion.v2_0);
 ```
 
@@ -244,12 +243,11 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 
 ##### <a name="example"></a>Пример
 
-```js
-// Get the currently selected item's ID
+```javascript
+// Get the currently selected item's ID.
 var ewsId = Office.context.mailbox.item.itemId;
 
-// Convert to a REST ID for the v2.0 version of the
-// Outlook Mail API
+// Convert to a REST ID for the v2.0 version of the Outlook Mail API.
 var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.RestVersion.v2_0);
 ```
 
@@ -316,7 +314,7 @@ var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.R
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 Office.context.mailbox.displayAppointmentForm(appointmentId);
 ```
 
@@ -351,7 +349,7 @@ Office.context.mailbox.displayAppointmentForm(appointmentId);
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 Office.context.mailbox.displayMessageForm(messageId);
 ```
 
@@ -394,7 +392,7 @@ Office.context.mailbox.displayMessageForm(messageId);
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 var start = new Date();
 var end = new Date();
 end.setHours(start.getHours() + 1);
@@ -433,14 +431,14 @@ Office.context.mailbox.displayNewAppointmentForm(
 
 С помощью свойства `ewsUrl` надстройка должна определить правильный URL-адрес для вызовов EWS.
 
-##### <a name="parameters"></a>Параметры:
+##### <a name="parameters"></a>Параметры
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
 | `options` | Object | &lt;необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
 | `options.isRest` | Boolean |  &lt;необязательно&gt; | Определяет, будет ли предоставленный маркер использоваться для интерфейсов REST API Outlook или веб-служб Exchange. Значение по умолчанию: `false`. |
 | `options.asyncContext` | Объект |  &lt;необязательно&gt; | Данные о состоянии, передаваемые в асинхронный метод. |
-|`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). Токен указывается в виде строки в свойстве `asyncResult.value`.|
+|`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). Маркер указывается в виде строки в свойстве `asyncResult.value`.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -452,7 +450,7 @@ Office.context.mailbox.displayNewAppointmentForm(
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 function getCallbackToken() {
   var options = {
     isRest: true,
@@ -471,9 +469,9 @@ function cb(asyncResult) {
 
 Получает строку, содержащую маркер, используемый для получения вложения или элемента с Exchange Server.
 
-Метод `getCallbackTokenAsync` совершает асинхронный вызов, чтобы получить непрозрачный токен с сервера Exchange Server, на котором размещен почтовый ящик пользователя. Время существования маркера обратного вызова составляет 5 минут.
+Метод `getCallbackTokenAsync` совершает асинхронный вызов, чтобы получить непрозрачный маркер с сервера Exchange Server, на котором размещен почтовый ящик пользователя. Время существования маркера обратного вызова составляет 5 минут.
 
-Вы можете передать сторонней системе токен и идентификатор вложения или элемента. Сторонняя система использует этот токен как токен авторизации, чтобы вызвать операцию [GetAttachment](https://docs.microsoft.com/exchange/client-developer/web-service-reference/getattachment-operation) или [GetItem](https://docs.microsoft.com/exchange/client-developer/web-service-reference/getitem-operation) веб-служб Exchange для возврата вложения или элемента. Например, вы можете создать удаленную службу, чтобы [получить вложения из выбранного элемента](https://docs.microsoft.com/outlook/add-ins/get-attachments-of-an-outlook-item).
+Вы можете передать сторонней системе маркер и идентификатор вложения или элемента. Сторонняя система использует этот маркер как маркер авторизации, чтобы вызвать операцию [GetAttachment](https://docs.microsoft.com/exchange/client-developer/web-service-reference/getattachment-operation) или [GetItem](https://docs.microsoft.com/exchange/client-developer/web-service-reference/getitem-operation) веб-служб Exchange для возврата вложения или элемента. Например, вы можете создать удаленную службу, чтобы [получить вложения из выбранного элемента](https://docs.microsoft.com/outlook/add-ins/get-attachments-of-an-outlook-item).
 
 Для вызова метода `getCallbackTokenAsync` в режиме чтения манифесте приложения должно быть указано разрешение **ReadItem**.
 
@@ -483,7 +481,7 @@ function cb(asyncResult) {
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-|`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). Токен указывается в виде строки в свойстве `asyncResult.value`.|
+|`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). Маркер указывается в виде строки в свойстве `asyncResult.value`.|
 |`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования
@@ -496,7 +494,7 @@ function cb(asyncResult) {
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 function getCallbackToken() {
   Office.context.mailbox.getCallbackTokenAsync(cb);
 }
@@ -510,13 +508,13 @@ function cb(asyncResult) {
 
 Получает маркер, идентифицирующий пользователя и надстройку Office.
 
-Метод `getUserIdentityTokenAsync` возвращает токен, который можно использовать для идентификации, а также [проверки подлинности надстройки и пользователя в сторонней системе](https://docs.microsoft.com/outlook/add-ins/authentication).
+Метод `getUserIdentityTokenAsync` возвращает маркер, который можно использовать для идентификации, а также [проверки подлинности надстройки и пользователя в сторонней системе](https://docs.microsoft.com/outlook/add-ins/authentication).
 
 ##### <a name="parameters"></a>Параметры
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-|`callback`| function||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Токен указывается в виде строки в свойстве `asyncResult.value`.|
+|`callback`| function||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.|
 |`userContext`| Object| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования
@@ -529,7 +527,7 @@ function cb(asyncResult) {
 
 ##### <a name="example"></a>Пример
 
-```js
+```javascript
 function getIdentityToken() {
   Office.context.mailbox.getUserIdentityTokenAsync(cb);
 }
@@ -595,10 +593,10 @@ function cb(asyncResult) {
 
 В приведенном ниже примере вызывается `makeEwsRequestAsync` для получения темы элемента с помощью операции `GetItem`.
 
-```js
+```javascript
 function getSubjectRequest(id) {
-   // Return a GetItem operation request for the subject of the specified item.
-   var request =
+  // Return a GetItem operation request for the subject of the specified item.
+  var request =
     '<?xml version="1.0" encoding="utf-8"?>' +
     '<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"' +
     '               xmlns:xsd="http://www.w3.org/2001/XMLSchema"' +
@@ -620,20 +618,20 @@ function getSubjectRequest(id) {
     '  </soap:Body>' +
     '</soap:Envelope>';
 
-   return request;
+  return request;
 }
 
 function sendRequest() {
-   // Create a local variable that contains the mailbox.
-   Office.context.mailbox.makeEwsRequestAsync(
+  // Create a local variable that contains the mailbox.
+  Office.context.mailbox.makeEwsRequestAsync(
     getSubjectRequest(mailbox.item.itemId), callback);
 }
 
 function callback(asyncResult)  {
-   var result = asyncResult.value;
-   var context = asyncResult.asyncContext;
+  var result = asyncResult.value;
+  var context = asyncResult.asyncContext;
 
-   // Process the returned response here.
+  // Process the returned response here.
 }
 ```
 
@@ -643,7 +641,7 @@ function callback(asyncResult)  {
 
 В настоящее время единственный поддерживаемый тип события — `Office.EventType.ItemChanged`.
 
-##### <a name="parameters"></a>Параметры:
+##### <a name="parameters"></a>Параметры
 
 | Имя | Тип | Атрибуты | Описание |
 |---|---|---|---|
