@@ -4,10 +4,10 @@ description: ''
 ms.date: 01/23/2018
 localization_priority: Normal
 ms.openlocfilehash: 7aaae96377c58656d82802e44c964f651e7accbc
-ms.sourcegitcommit: a59f4e322238efa187f388a75b7709462c71e668
+ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
+ms.lasthandoff: 02/19/2019
 ms.locfileid: "29388117"
 ---
 # <a name="develop-office-add-ins-for-the-ipad"></a>Разработка надстроек Office для iPad

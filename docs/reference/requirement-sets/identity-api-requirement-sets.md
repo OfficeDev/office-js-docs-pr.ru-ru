@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API удостоверений
 description: ''
-ms.date: 10/09/2018
+ms.date: 02/18/2019
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 8db095c54322f04781b7dfa7bfadd857800678e3
-ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.openlocfilehash: e0a04f084deb0b366600b4f2597658d1f54ab7f5
+ms.sourcegitcommit: 03773fef3d2a380028ba0804739d2241d4b320e5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "29742200"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "30091241"
 ---
 # <a name="identity-api-requirement-sets"></a>Наборы обязательных элементов API удостоверений
 
@@ -17,11 +17,11 @@ ms.locfileid: "29742200"
 
 Надстройки Office работают в нескольких версиях Office. В приведенной ниже таблице перечислены наборы обязательных элементов API удостоверений, ведущие приложения Office, которые их поддерживают, а также номера сборок или версий для этих приложений.
 
-|  Набор обязательных элементов  | Office 2013 для Windows | Office 365 для Windows   |  Office 365 для iPad  |  Office 365 для Mac  | Office Online  | SharePoint Online | OneDrive.com |Outlook.com и Exchange Online|
+|  Набор обязательных элементов  | Office 2013/2016/2019 для Windows | Office 365 для Windows   |  Office 365 для iPad  |  Office 365 для Mac  | Office Online  | SharePoint Online | OneDrive.com |Outlook.com и Exchange Online|
 |:-----|-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-| IdentityAPI 1.1  | Н/Д | Предварительная версия **&#42;** | Скоро | Предварительная версия **&#42;**| Предварительная версия | Предварительная версия| Скоро | Скоро |
+| IdentityAPI 1.1  | Н/Д **_амп_ # 42;** | Предварительная версия **&#42;** | Скоро | Предварительная версия **&#42;**| Предварительная версия | Предварительная версия| Скоро | Скоро |
 
-> **&#42;** На этапе предварительной версии API удостоверений поддерживается в Windows 2016 и Mac только для пользователей, участвующих в программе предварительной оценки с ранним доступом. Чтобы присоединиться к программе предварительной оценки, см. сайт [программы предварительной оценки Office](https://products.office.com/office-insider?tab=tab-1). Чтобы переключиться на ранний доступ, см. статью [Предварительная оценка — ранний доступ](https://answers.microsoft.com/en-us/msoffice/forum/msoffice_officeinsider-mso_win10-msoinsider_reg/its-here-office-insider-fast-for-office-2016-on/dbe8e7bb-9523-44a4-948b-9436fedfd961).
+> **_амп_ # 42;** На этапе предварительной версии для API удостоверений требуется Office 365 (версия подписки Office, также называемая "щелкните для запуска"). Следует использовать последнюю версию для текущего месяца и сборку из канала для участников программы предварительной оценки. Чтобы получить эту версию, необходимо быть участником программы предварительной оценки Office. Дополнительные сведения см. на странице [Примите участие в программе предварительной оценки Office](https://products.office.com/office-insider?tab=tab-1). Обратите внимание на то, что когда сборка будет готова для выпуска на канале Semi-annual channel, поддержка функций предварительного просмотра, включая единый вход, отключается для этой сборки.
 
 Статьи и разделы с дополнительными сведениями о версиях, номерах сборок и Office Online Server:
 
