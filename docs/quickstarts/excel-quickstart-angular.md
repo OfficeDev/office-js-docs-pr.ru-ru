@@ -4,16 +4,16 @@ description: ''
 ms.date: 10/19/2018
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: a7600b5e53fa9c7361f2dd0c117d97937ec954c7
-ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.openlocfilehash: da3e0ce9c6cb075ff828344956cfe25fb579a8fa
+ms.sourcegitcommit: 03773fef3d2a380028ba0804739d2241d4b320e5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "29742375"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "30091255"
 ---
 # <a name="build-an-excel-add-in-using-angular"></a>Создание надстройки Excel с помощью Angular
 
-В этой статье описывается процесс создания надстройки Excel с помощью Angular и API JavaScript для Excel.
+В этой статье описан процесс создания надстройки Excel с помощью Angular и API JavaScript для Excel.
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 

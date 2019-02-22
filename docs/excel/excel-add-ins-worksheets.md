@@ -1,14 +1,14 @@
 ---
 title: Работа с листами с использованием API JavaScript для Excel
 description: ''
-ms.date: 12/28/2018
+ms.date: 02/15/2018
 localization_priority: Priority
-ms.openlocfilehash: 62f64beaefcc938f91ee581594922b2c965f2655
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 6d34807b1511573c507d43dad678811c5c1592ec
+ms.sourcegitcommit: 03773fef3d2a380028ba0804739d2241d4b320e5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29389531"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "30091248"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
@@ -188,6 +188,9 @@ Excel.run(function (context) {
         });
 }).catch(errorHandlerFunction);
 ```
+
+> [!NOTE]
+> Лист с уровнем скрытия "[надежно скрыт](/javascript/api/excel/excel.sheetvisibility)" невозможно удалить с помощью метода `delete`. Чтобы удалить лист, нужно сперва изменить его уровень скрытия.
 
 ## <a name="rename-a-worksheet"></a>Переименование листа
 
