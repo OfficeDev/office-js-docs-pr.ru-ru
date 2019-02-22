@@ -1,17 +1,18 @@
 ---
 title: Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 description: ''
-ms.date: 12/26/2018
-ms.openlocfilehash: 43c32bb8f579a231eae289df4e026b45afac6dcb
-ms.sourcegitcommit: 8d248cd890dae1e9e8ef1bd47e09db4c1cf69593
-ms.translationtype: HT
+ms.date: 02/20/2019
+localization_priority: Normal
+ms.openlocfilehash: ce4440798fdd23106ef0357df47cf850a5a5be71
+ms.sourcegitcommit: 8e20e7663be2aaa0f7a5436a965324d171bc667d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "27447241"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "30199601"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api-advanced"></a>Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 
-Эта статья основана на сведениях из статьи [Работа с диапазонами с использованием API JavaScript для Excel (основные задачи)](excel-add-ins-ranges.md) с предоставлением примеров кода, демонстрирующих способы выполнения более сложных задач с диапазонами с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектом **Range**, см. в статье [Объект Range (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.range).
+Эта статья основана на сведениях из статьи [Работа с диапазонами с использованием API JavaScript для Excel (основные задачи)](excel-add-ins-ranges.md) с предоставлением примеров кода, демонстрирующих способы выполнения более сложных задач с диапазонами с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектом **Range**, см. в статье [Объект Range (API JavaScript для Excel)](/javascript/api/excel/excel.range).
 
 ## <a name="work-with-dates-using-the-moment-msdate-plug-in"></a>Работа с датами с использованием подключаемого модуля Moment-MSDate
 
@@ -64,16 +65,14 @@ Excel.run(function (context) {
 ## <a name="work-with-multiple-ranges-simultaneously-preview"></a>Работа с несколькими диапазонами одновременно (предварительная версия)
 
 > [!NOTE]
-> Объект `RangeAreas` в настоящее время доступен только в общедоступной предварительной версии (бета-версии). Для применения этой функции необходимо использовать бета-версию библиотеки в CDN Office.js: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
-> Если вы используете TypeScript или ваш редактор кода использует файлы определения типа TypeScript для IntelliSense, воспользуйтесь https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts.
+> `RangeAreas` Объект в настоящее время доступен только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-preview-apis.md)]
 
 Объект `RangeAreas` позволяет вашей надстройке выполнять операции над несколькими диапазонами одновременно. Эти диапазоны могут быть смежными, но это необязательно. Объект `RangeAreas` подробнее рассматривается в статье [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md).
 
 ## <a name="find-special-cells-within-a-range-preview"></a>Поиск специальных ячеек в диапазоне (предварительная версия)
 
 > [!NOTE]
-> Методы `getSpecialCells` и `getSpecialCellsOrNullObject` в настоящее время доступны только в общедоступной предварительной версии (бета-версии). Для применения этой функции необходимо использовать бета-версию библиотеки в CDN Office.js: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
-> Если вы используете TypeScript или ваш редактор кода использует файлы определения типа TypeScript для IntelliSense, воспользуйтесь https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts.
+> Методы `getSpecialCells` и `getSpecialCellsOrNullObject` в настоящее время доступны только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-preview-apis.md)]
 
 Методы `Range.getSpecialCells()` и `Range.getSpecialCellsOrNullObject()` находят диапазоны с учетом характеристик ячеек и типов значений ячеек. Оба этих метода возвращают объекты `RangeAreas`. Подписи методов из файла типов данных TypeScript:
 
@@ -182,8 +181,7 @@ Excel.run(function (context) {
 ## <a name="copy-and-paste-preview"></a>Копирование и вставка (предварительная версия)
 
 > [!NOTE]
-> Функция `Range.copyFrom` в настоящее время доступна только в общедоступной предварительной версии (бета-версии). Для применения этой функции необходимо использовать бета-версию библиотеки в CDN Office.js: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
-> Если вы используете TypeScript или ваш редактор кода использует файлы определения типа TypeScript для IntelliSense, воспользуйтесь https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts.
+> `Range.copyFrom` Функция в настоящее время доступна только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-preview-apis.md)]
 
 Функция `copyFrom` диапазона реплицирует поведение копирования и вставки пользовательского интерфейса Excel. Диапазон объекта, который вызывается `copyFrom`, является назначением.
 Источник для копирования передается как диапазон или адрес строки, представляющий диапазон.
@@ -247,8 +245,7 @@ Excel.run(function (context) {
 ## <a name="remove-duplicates-preview"></a>Удаление дубликатов (предварительная версия)
 
 > [!NOTE]
-> Функция `removeDuplicates` объекта Range в настоящее время доступна только в общедоступной предварительной версии (бета-версии). Для применения этой функции необходимо использовать бета-версию библиотеки в CDN Office.js: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
-> Если вы используете TypeScript или ваш редактор кода использует файлы определения типа TypeScript для IntelliSense, воспользуйтесь https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts.
+> `removeDuplicates` Функция объекта Range в настоящее время доступна только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-preview-apis.md)]
 
 Функция `removeDuplicates` объекта Range удаляет строки с повторяющимися записями в указанных столбцах. Функция проверяет каждую строку в диапазоне от индекса с наименьшим значением до индекса с наибольшим значением (сверху вниз). Строка удаляется, если значение в ее указанном столбце или столбцах уже встречалось в диапазоне. Строки в диапазоне под удаленной строкой сдвигаются вверх. Функция `removeDuplicates` не влияет на положение ячеек вне диапазона.
 
