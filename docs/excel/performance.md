@@ -1,14 +1,14 @@
 ---
 title: Оптимизация производительности API JavaScript для Excel
 description: Оптимизируйте производительность с использованием API JavaScript для Excel
-ms.date: 12/06/2018
+ms.date: 02/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 0c288f3e29d2a956238d9597730312ae0608a7ec
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: d15a4b3ad4ae44399572282889855b1cdc32bc39
+ms.sourcegitcommit: 8e20e7663be2aaa0f7a5436a965324d171bc667d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29389125"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "30199580"
 ---
 # <a name="performance-optimization-using-the-excel-javascript-api"></a>Оптимизация производительности с использованием API JavaScript для Excel
 
@@ -106,7 +106,7 @@ Excel.run(async function(ctx) {
     // Range value should be [1, 2, 3] now
     console.log(rangeToGet.values);
 
-    // Suspending recalc
+    // Suspending recalculation
     app.suspendApiCalculationUntilNextSync();
     rangeToSet = sheet.getRange("A1:B1");
     rangeToSet.values = [[10, 20]];
@@ -116,7 +116,7 @@ Excel.run(async function(ctx) {
     await ctx.sync();
     // Range value should be [10, 20, 3] when we load the property, because calculation is suspended at that point
     console.log(rangeToGet.values);
-    // Calculation mode should still be "Automatic" even with supend recalc
+    // Calculation mode should still be "Automatic" even with suspend recalculation
     console.log(app.calculationMode);
 
     rangeToGet.load("values");
@@ -129,7 +129,7 @@ Excel.run(async function(ctx) {
 ### <a name="suspend-screen-updating"></a>Приостановка обновления экрана
 
 > [!NOTE]
-> Для метода `suspendScreenUpdatingUntilNextSync()`, описанного в этой статье, требуется бета-версия библиотеки JavaScript для Office из [сети CDN Office.js](https://appsforoffice.microsoft.com/lib/beta/hosted/office.js). [Файл определения типа] (https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts) также находится в сети CDN. Дополнительные сведения о наших планируемых API см. на странице [открытой спецификации](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_OpenSpec) на портале GitHub.
+> Метод `suspendScreenUpdatingUntilNextSync`, описанный в этой статье, в настоящее время доступен только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-preview-apis.md)]
 
 Excel отображает изменения, производимые вашей надстройкой, примерно по мере их выполнения в коде. Для больших циклических наборов данных может не требоваться просмотр хода выполнения на экране в режиме реального времени. Параметр `Application.suspendScreenUpdatingUntilNextSync()` приостанавливает визуальные обновления для Excel до вызова надстройкой метода `context.sync()` или завершения метода `Excel.run` (неявно вызывающего `context.sync`). Необходимо учитывать, что Excel не будет проявлять признаков работы до следующей синхронизации. Ваша надстройка должна либо предоставить пользователям инструкции, оповещающие их об этой задержке, либо отобразить строку состояния, демонстрирующую активность.
 
@@ -137,7 +137,7 @@ Excel отображает изменения, производимые ваше
 
 Производительность надстройки можно повысить с помощью отключения событий. Пример кода, в котором показано, как включить и отключить события, см. в статье [Работа с событиями](excel-add-ins-events.md#enable-and-disable-events).
 
-## <a name="update-all-cells-in-a-range"></a>Изменение всех ячеек в диапазоне 
+## <a name="update-all-cells-in-a-range"></a>Изменение всех ячеек в диапазоне
 
 Если нужно изменить все ячейки в диапазоне с использованием одинакового значения или свойства, это может занять много времени при применении двумерного массива, многократно задающего одно и то же значение, поскольку в этом способе Excel требуется выполнять итерации по всем ячейкам в диапазоне для установки каждой отдельно. В Excel есть более эффективный способ изменения всех ячеек в диапазоне с использованием одинакового значения или свойства.
 
@@ -182,7 +182,7 @@ Excel.run(async (ctx) => {
 
 Слой JavaScript создает прокси-объекты для вашей надстройки для взаимодействия с книгой Excel и базовыми диапазонами. Эти объекты хранятся в памяти до вызова `context.sync()`. Операции с большими пакетами могут создавать много прокси-объектов, необходимых надстройке лишь один раз, которые можно удалить из памяти до выполнения пакетных действий.
 
-Метод [Range.untrack()](/javascript/api/excel/excel.range#untrack--) удаляет объект Excel Range из памяти. Вызов этого метода после завершения действий надстройки с диапазоном должен приводить к заметному повышению производительности при использовании большого количества объектов Range. 
+Метод [Range.untrack()](/javascript/api/excel/excel.range#untrack--) удаляет объект Excel Range из памяти. Вызов этого метода после завершения действий надстройки с диапазоном должен приводить к заметному повышению производительности при использовании большого количества объектов Range.
 
 > [!NOTE]
 > `Range.untrack()` — это ярлык для [ClientRequestContext.trackedObjects.remove(thisRange)](/javascript/api/office/officeextension.trackedobjects#remove-object-). Отслеживание любого прокси-объекта можно прекратить, удалив его из списка отслеживаемых объектов в контексте. Обычно объекты Range являются единственными объектами Excel, используемыми в достаточных количествах для применения прекращения отслеживания.
