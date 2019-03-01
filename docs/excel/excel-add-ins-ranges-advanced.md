@@ -7,7 +7,7 @@ ms.openlocfilehash: ce4440798fdd23106ef0357df47cf850a5a5be71
 ms.sourcegitcommit: 8e20e7663be2aaa0f7a5436a965324d171bc667d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
+ms.lasthandoff: 02/28/2019
 ms.locfileid: "30199601"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api-advanced"></a>Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)

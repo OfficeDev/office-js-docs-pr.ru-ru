@@ -207,16 +207,16 @@ items:
       items:
       - name: Использование Angular
         displayName: Excel
-        href: excel/excel-add-ins-get-started-angular.md
+        href: quickstarts/excel-quickstart-angular.md
       - name: Использование jQuery
         displayName: Excel
-        href: excel/excel-add-ins-get-started-jquery.md
+        href: quickstarts/excel-quickstart-jquery.md
       - name: Использование React
         displayName: Excel
-        href: excel/excel-add-ins-get-started-react.md
+        href: quickstarts/excel-quickstart-react.md
       - name: Использование Vue
         displayName: Excel
-        href: excel/excel-add-ins-get-started-vue.md
+        href: quickstarts/excel-quickstart-vue.md
     - name: Руководство по надстройкам Excel
       displayName: Excel
       href: tutorials/excel-tutorial.md
@@ -258,9 +258,18 @@ items:
         - name: Рекомендации в отношении пользовательских функций
           displayName: Excel
           href: excel/custom-functions-best-practices.md
+        - name: Проверка подлинности пользовательских функций
+          displayName: Excel
+          href: excel/custom-functions-authentication.md
         - name: Журнал изменений пользовательских функций
           displayName: Excel
           href: excel/custom-functions-changelog.md
+        - name: Требования к настраиваемым функциям
+          displayName: Excel
+          href: excel/custom-functions-requirements.md
+        - name: Рекомендации по именованию пользовательских функций
+          displayName: Excel
+          href: excel/custom-functions-naming.md
       - name: Проверка данных
         displayName: Excel
         href: excel/excel-add-ins-data-validation.md
@@ -306,7 +315,7 @@ items:
     items:
     - name: Создание первой надстройки Word
       displayName: Word
-      href: word/word-add-ins.md
+      href: quickstarts/word-quickstart.md
     - name: Руководство по надстройкам Word
       displayName: Word
       href: tutorials/word-tutorial.md
@@ -343,7 +352,7 @@ items:
     items:
     - name: Создание первой надстройки PowerPoint
       displayName: PowerPoint
-      href: powerpoint/powerpoint-add-ins-get-started.md
+      href: quickstarts/powerpoint-quickstart.md
     - name: Руководство по надстройкам PowerPoint
       displayName: PowerPoint
       href: tutorials/powerpoint-tutorial.md
@@ -359,7 +368,7 @@ items:
     items:
     - name: Создание первой надстройки OneNote
       displayName: OneNote
-      href: onenote/onenote-add-ins-getting-started.md
+      href: quickstarts/onenote-quickstart.md
     - name: Работа с содержимым страницы в OneNote
       displayName: OneNote
       href: onenote/onenote-add-ins-page-content.md
@@ -375,7 +384,7 @@ items:
     items:
     - name: Создание первой надстройки Project
       displayName: Project
-      href: project/project-add-ins-get-started.md
+      href: quickstarts/project-quickstart.md
     - name: Создание надстройки Project, использующей REST с локальной службой OData
       displayName: Project
       href: project/create-a-project-add-in-that-uses-rest-with-an-on-premises-odata-service.md
@@ -759,9 +768,9 @@ items:
         href: reference/manifest/webapplicationinfo.md
 - name: Ресурсы
   href: resources/resources-links-help.md
-ms.openlocfilehash: 7ad59f66ad87a5bbdbcb52d0af4e98af2a69a6da
-ms.sourcegitcommit: 9afcb1bb295ec0c8940ed3a8364dbac08ef6b382
-ms.translationtype: HT
+ms.openlocfilehash: e2dde2b09439c3de60363cb29609df8dbb39365a
+ms.sourcegitcommit: 8e20e7663be2aaa0f7a5436a965324d171bc667d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "27770625"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "30199769"

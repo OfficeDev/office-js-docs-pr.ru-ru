@@ -1,24 +1,25 @@
 ---
 title: Работа с несколькими диапазонами одновременно в надстройках Excel
 description: ''
-ms.date: 12/26/2018
-ms.openlocfilehash: ab7cd9757adaedf2b6cc43fdcc604b98a60b6ecd
-ms.sourcegitcommit: 8d248cd890dae1e9e8ef1bd47e09db4c1cf69593
-ms.translationtype: HT
+ms.date: 02/20/2019
+localization_priority: Normal
+ms.openlocfilehash: c6bbbaee6f6cbfda5d495f533caf3dbe1325401b
+ms.sourcegitcommit: 8e20e7663be2aaa0f7a5436a965324d171bc667d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "27447234"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "30199608"
 ---
 # <a name="work-with-multiple-ranges-simultaneously-in-excel-add-ins-preview"></a>Работа с несколькими диапазонами одновременно в надстройках Excel (предварительная версия)
 
 Библиотека JavaScript для Excel позволяет вашей надстройке выполнять операции и устанавливать свойства одновременно для нескольких диапазонов. Диапазоны необязательно должны быть смежными. Этот способ установки свойства не только упрощает код, но и выполняется намного быстрее, чем установка одинакового свойства отдельно для каждого диапазона.
 
 > [!NOTE]
-> Для работы с API-интерфейсами, описанными в этой статье, требуется **Office 2016 "нажми и работай" версии 1809 сборки 10820.20000** или более поздней версии (возможно, вам придется принять участие в [программе предварительной оценки Office](https://products.office.com/office-insider) для получения нужной сборки). Кроме того, необходимо загрузить бета-версию библиотеки JavaScript для Office из сети [CDN Office.js](https://appsforoffice.microsoft.com/lib/beta/hosted/office.js). В настоящее время нет справочных страниц для этих API. Но следующий файл типа определения содержит их описания: [бета-версия office.d.ts](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts).
+> Для работы с API-интерфейсами, описанными в этой статье, требуется **Office 2016 "нажми и работай" версии 1809 сборки 10820.20000** или более поздней версии (Возможно, вам потребуется присоединиться к [программе предварительНой оценки Office](https://products.office.com/office-insider) для получения соответствующей сборки.)[!INCLUDE [Information about using preview APIs](../includes/using-preview-apis.md)]
 
 ## <a name="rangeareas"></a>RangeAreas
 
-Набор диапазонов (возможно, несмежных) представлен объектом `Excel.RangeAreas`. Его свойства и методы аналогичны типу `Range` (многие с одинаковыми или похожими именами), но с изменением указанных ниже параметров:
+Набор диапазонов (возможно, несмежных) представлен объектом [RangeAreas](/javascript/api/excel/excel.rangeareas) . Его свойства и методы аналогичны типу `Range` (многие с одинаковыми или похожими именами), но с изменением указанных ниже параметров:
 
 - Типы данных для свойств и поведений методов задания и методов получения.
 - Типы данных параметров метода и поведений метода.
@@ -89,7 +90,7 @@ ms.locfileid: "27447234"
 
 Объект `RangeAreas` можно создать двумя основными способами:
 
-- Вызвать метод `Worksheet.getRanges()` и передать ему строку с адресами диапазона, разделенными запятыми. Если диапазон, который нужно включить, был преобразован [NamedItem](https://docs.microsoft.com/javascript/api/excel/excel.nameditem), в строку можно включить имя вместо адреса.
+- Вызвать метод `Worksheet.getRanges()` и передать ему строку с адресами диапазона, разделенными запятыми. Если диапазон, который нужно включить, был преобразован [NamedItem](/javascript/api/excel/excel.nameditem), в строку можно включить имя вместо адреса.
 - Вызвать метод `Workbook.getSelectedRanges()`. Этот метод возвращает объект `RangeAreas`, представляющий все диапазоны, выбранные в активном на данный момент листе.
 
 После получения объекта `RangeAreas` можно создать другие с помощью методов объекта, возвращающих `RangeAreas`, например `getOffsetRangeAreas` и `getIntersection`.
