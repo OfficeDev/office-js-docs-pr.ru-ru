@@ -1,14 +1,14 @@
 ---
 title: Пространство имен Office — предварительная версия набора обязательных элементов
 description: ''
-ms.date: 02/15/2019
+ms.date: 02/26/2019
 localization_priority: Normal
-ms.openlocfilehash: bbec602680da7914666daf33ed36c45751ae69c6
-ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.openlocfilehash: 7b27963a85f1dcdaa6f269fce242c45bf1bdd146
+ms.sourcegitcommit: f7f3d38ae4430e2218bf0abe7bb2976108de3579
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "30068324"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "30359235"
 ---
 # <a name="office"></a>Office
 
@@ -100,6 +100,7 @@ ms.locfileid: "30068324"
 |---|---|---|---|
 |`AppointmentTimeChanged`| String | Произошло изменение даты или времени выбранной встречи либо ряда встреч. | 1.7 |
 |`AttachmentsChanged`| String | Было добавлено или удалено вложение для элемента. | Предварительная версия |
+|`EnhancedLocationsChanged`| String | Расположение выбранной встречи изменилось. | Предварительная версия |
 |`ItemChanged`| String | Пока область задач закреплена, для просмотра выбран другой элемент Outlook. | 1.5 |
 |`OfficeThemeChanged`| String | Тема Office в почтовом ящике была изменена. | Предварительная версия |
 |`RecipientsChanged`| String | Произошло изменение списка получателей выбранного элемента или места встречи. | 1.7 |
@@ -126,7 +127,7 @@ ms.locfileid: "30068324"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Body`| Строка|Источник данных — текст сообщения.|
+|`Body`| String|Источник данных — текст сообщения.|
 |`Subject`| String|Источник данных — тема сообщения.|
 
 ##### <a name="requirements"></a>Требования

@@ -1,14 +1,14 @@
 ---
 title: Области задач в надстройках Office
 description: Области задач предоставляют пользователям доступ к элементам управления интерфейсом, которые выполняют код для изменения документов или сообщений электронной почты, а также для отображения данных из источника данных.
-ms.date: 12/04/2017
+ms.date: 2/28/2019
 localization_priority: Priority
-ms.openlocfilehash: f9cbbf3a696eb4b3b6a8622f275c2b1808aff643
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 93210a4725e9878a214f1113f68644756f539fbc
+ms.sourcegitcommit: f7f3d38ae4430e2218bf0abe7bb2976108de3579
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29389321"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "30359228"
 ---
 # <a name="task-panes-in-office-add-ins"></a>Области задач в надстройках Office
  
@@ -76,6 +76,5 @@ ms.locfileid: "29389321"
 ## <a name="see-also"></a>См. также
 
 - [Office UI Fabric в надстройках Office](office-ui-fabric.md) 
-- [Конструктивные шаблоны для надстроек Office](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code)
-
+- [Конструктивные шаблоны для надстроек Office](../design/ux-design-pattern-templates.md)
 

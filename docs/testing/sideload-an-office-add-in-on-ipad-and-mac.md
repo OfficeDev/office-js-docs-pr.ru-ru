@@ -1,14 +1,14 @@
 ---
 title: Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 description: ''
-ms.date: 12/04/2017
+ms.date: 02/25/2019
 localization_priority: Priority
-ms.openlocfilehash: cf27b72fe744358f902d36ebd2b89a432aa305f5
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: dc0fad24d7f4f062fb0115edcc58a37d8d9052da
+ms.sourcegitcommit: f7f3d38ae4430e2218bf0abe7bb2976108de3579
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29388194"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "30359256"
 ---
 # <a name="sideload-office-add-ins-on-ipad-and-mac-for-testing"></a>Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 
@@ -41,16 +41,10 @@ ms.locfileid: "29388194"
 1. Подключите iPad к компьютеру с помощью кабеля для синхронизации. Если вы подключаете iPad к компьютеру в первый раз, появится запрос **Доверять этому компьютеру?**. Выберите **Доверять**.
 
 2. В iTunes под строкой меню выберите значок **iPad**.
-    
-    ![Значок iPad в iTunes](../images/ipad.png)
 
 3. В левой части iTunes в разделе  **Параметры** выберите **Приложения**.
-    
-    ![Параметры приложений для iTunes](../images/file-settings-apps.png)
 
 4. В правой части iTunes прокрутите окно вниз до раздела  **Общий доступ к файлам**, а затем в столбце  **Надстройки** выберите **Excel** или **Word**.
-    
-    ![Общий доступ к файлам iTunes](../images/file-sharing.png)
 
 5. В нижней части столбца  **Документы Excel** или **Документы Word** выберите элемент **Добавить файл**, а затем выберите XML-файл манифеста для надстройки, которую необходимо загрузить. 
     
@@ -97,4 +91,3 @@ ms.locfileid: "29388194"
 ## <a name="see-also"></a>См. также
 
 - [Отладка надстроек Office на iPad и Mac](debug-office-add-ins-on-ipad-and-mac.md)
-    
