@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Excel
 description: ''
-ms.date: 10/09/2018
+ms.date: 02/15/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 0cb01bffb2947c4269e377c39ff3c329c48591d9
-ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.openlocfilehash: 9985fabdf0c5e9e6c09cf490b55fffd7f87a195a
+ms.sourcegitcommit: 8e20e7663be2aaa0f7a5436a965324d171bc667d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "29742473"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "30199629"
 ---
 # <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
 
@@ -18,13 +18,13 @@ ms.locfileid: "29742473"
 Надстройки Excel работают в нескольких версиях Office, включая Office 2016 или более поздней версии для Windows, Office для iPad, Office для Mac и Office Online. В приведенной ниже таблице перечислены наборы обязательных элементов для Excel, ведущие приложения Office, которые поддерживают каждый набор обязательных элементов, а также номера сборок или версий для этих приложений.
 
 > [!NOTE]
-> Любой API с пометкой **(бета-версия)** не готов для конечных пользователей. Мы предоставляем их разработчикам для использования в средах тестирования и разработки. Они не предназначены для использования с рабочими и критически важными для бизнеса документами.
-> 
-> Для наборов обязательных элементов с пометкой **(бета-версия)**, используйте указанную (или более позднюю) версию программного обеспечения Office и используйте бета-библиотеку в сети CDN: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js. Записи без пометки **(бета-версия)** общедоступны и вы можете использовать рабочую библиотеку из сети CDN: https://appsforoffice.microsoft.com/lib/1/hosted/office.js.
+> Чтобы использовать API в любом из нумерованных наборов обязательных элементов, следует ссылаться на **рабочую** библиотеку в сети CDN: https://appsforoffice.microsoft.com/lib/1/hosted/office.js.
+>
+> Сведения об использовании API предварительных версий см. в разделе [Предварительные версии API JavaScript для Excel](#excel-javascript-preview-apis) этой статьи.
 
-|  Набор обязательных элементов  |  Microsoft Office 365 для Windows\*  |  Office 365 для iPad  |  Office 365 для Mac  | Office Online  |  Office Online Server  |
+|  Набор обязательных элементов  |  Office 365 для Windows  |  Office 365 для iPad  |  Office 365 для Mac  | Office Online  |  Office Online Server  |
 |:-----|-----|:-----|:-----|:-----|:-----|
-| Бета-версия  | [Посетите страницу открытых спецификаций по API JavaScript для Excel](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_OpenSpec)! |
+| Предварительная версия  | Применяйте последнюю версию Office для использования предварительных версий API (может потребоваться присоединение к [программе предварительной оценки Office](https://products.office.com/office-insider)) |
 | ExcelApi1.8  | Версия 1808 (сборка 10730.20102) или более поздняя | 2.17 или более поздняя | 16.17 или более поздняя | Сентябрь 2018 г. | Скоро |
 | ExcelApi1.7  | Версия 1801 (сборка 9001.2171) или более поздняя   | 2.9 или более поздняя | 16.9 или более поздняя | Апрель 2018 г. | Скоро |
 | ExcelApi1.6  | Версия 1704 (сборка 8201.2001) или более поздняя   | Версия 2.2 или более поздняя |Версия 15.36 или более поздняя| Апрель 2017 г. | Скоро|
@@ -43,6 +43,581 @@ ms.locfileid: "29742473"
 - [Какая у меня версия Office](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19);
 - [Где можно найти номера версии и сборки клиентского приложения Office 365](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7);
 - [Обзор Office Online Server](https://docs.microsoft.com/officeonlineserver/office-online-server-overview)
+
+## <a name="excel-javascript-preview-apis"></a>Предварительные версии API JavaScript для Excel
+
+Новые API JavaScript для Excel сначала выпускаются в "предварительной версии", а затем становятся частью определенного нумерованного набора обязательных элементов после выполнения достаточного тестирования и получения отзывов пользователей. В таблице ниже перечислены API, доступные в настоящее время в предварительной версии. Чтобы отправить отзыв о предварительной версии API, используйте способ обратной связи, представленный в конце веб-страницы с описанием API.
+
+> [!NOTE]
+> API предварительной версии могут быть изменены и не предназначены для использования в рабочей среде. Рекомендуется использовать их только в тестовой среде и среде разработки. Не используйте API предварительной версии в рабочей среде или в важных деловых документах.
+>
+> Чтобы использовать API предварительной версии, нужно сослаться на **бета-версию** библиотеки в сети CDN: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js и также может потребоваться присоединение к программе предварительной оценки Office для получения достаточно новой сборки Office.
+
+Сейчас в предварительной версии находятся более 400 новых API для Excel. В первой таблице представлен краткий обзор API, а в последующей таблице приведен подробный список. Попробуйте новые функции и оставьте свой отзыв.
+
+| Функциональная область | Описание | Соответствующие объекты |
+|:--- |:--- |:--- |
+| Срез | Вставка и настройка срезов для таблиц и сводных таблиц. | [Slicer](/javascript/api/excel/excel.slicer) |
+| Примечания | Добавление, редактирование и удаление примечаний. | [Comment](/javascript/api/excel/excel.comment), [CommentCollection](/javascript/api/excel/excel.commentcollection) |
+| Формы | Вставка, размещение и форматирование изображений, геометрических фигур и текстовых полей. | [ShapeCollection](/javascript/api/excel/excel.shapecollection) [Shape](/javascript/api/excel/excel.shape) [GeometricShape](/javascript/api/excel/excel.geometricshape)  [Image](/javascript/api/excel/excel.image) |
+| Новые диаграммы | Познакомьтесь с новыми поддерживаемыми типами диаграмм: с картами, ящик с усами, каскадная, солнечные лучи, диаграмма Парето и воронка. | [Chart](/javascript/api/excel/excel.charttype) |
+| Автофильтр | Добавление фильтров к диапазонам. | [AutoFilter](/javascript/api/excel/excel.autofilter) |
+| Области | Поддержка несплошных диапазонов. | [RangeAreas](/javascript/api/excel/excel.rangeareas) |
+| Специальные ячейки | Получение ячеек, содержащих даты, примечания или формулы в диапазоне. | [Range](/javascript/api/excel/excel.range#getspecialcells-celltype--cellvaluetype-)|
+| Поиск | Поиск значений или формул в диапазоне или листе. | [Range](/javascript/api/excel/excel.range#find-text--criteria-)[Worksheet](/javascript/api/excel/excel.worksheet#findall-text--criteria-) |
+| Копирование и вставка | Копирование значений, форматов и формул из одного диапазона в другой. | [Range](/javascript/api/excel/excel.range#copyfrom-sourcerange--copytype--skipblanks--transpose-) |
+| Формат диапазона | Новые возможности для форматирования диапазонов. | [Range](/javascript/api/excel/excel.rangeformat) |
+| Сохранение и закрытие рабочей книги | Сохранение и закрытие книг.  | [Workbook](/javascript/api/excel/excel.workbook) |
+| Вставка книги | Вставка одной книги в другую.  | [Workbook](/javascript/api/excel/excel.worksheetcollection) |
+| Вычисление | Улучшенное управление модулем вычислений Excel. | [Application](/javascript/api/excel/excel.application) |
+
+Ниже приведен полный список API в состоянии предварительных версий.
+
+| Класс | Поля | Описание |
+|:---|:---|:---|
+|[Application](/javascript/api/excel/excel.application)|[calculationEngineVersion](/javascript/api/excel/excel.application#calculationengineversion)|Возвращает номер версии модуля вычислений Excel, с помощью которого в последний раз была полностью пересчитана книга. Только для чтения.|
+||[calculationState](/javascript/api/excel/excel.application#calculationstate)|Возвращает свойство CalculationState, указывающее состояние вычисления приложения. Дополнительные сведения см. в статье Excel.CalculationState. Только для чтения.|
+||[iterativeCalculation](/javascript/api/excel/excel.application#iterativecalculation)|Возвращает параметры итеративных вычислений.|
+||[suspendScreenUpdatingUntilNextSync()](/javascript/api/excel/excel.application#suspendscreenupdatinguntilnextsync--)|Приостанавливает обновление экрана до вызова следующего метода context.sync().|
+|[AutoFilter](/javascript/api/excel/excel.autofilter)|[apply(range: Range \| string, columnIndex?: number, criteria?: Excel.FilterCriteria)](/javascript/api/excel/excel.autofilter#apply-range--columnindex--criteria-)|Применяет автофильтр к диапазону и фильтрует столбец, если указаны индекс столбца и условия фильтрации.|
+||[clearCriteria()](/javascript/api/excel/excel.autofilter#clearcriteria--)|Очищает условия, если в автофильтре есть фильтры|
+||[getRange()](/javascript/api/excel/excel.autofilter#getrange--)|Возвращает объект Range, представляющий диапазон, к которому применяется автофильтр.|
+||[getRangeOrNullObject()](/javascript/api/excel/excel.autofilter#getrangeornullobject--)|Если существует объект Range, связанный с автофильтром, этот метод возвращает его.|
+||[criteria](/javascript/api/excel/excel.autofilter#criteria)|Массив, содержащий все условия фильтрации в диапазоне с примененным автофильтром. Только для чтения.|
+||[enabled](/javascript/api/excel/excel.autofilter#enabled)|Указывает, включен ли автофильтр. Только для чтения.|
+||[isDataFiltered](/javascript/api/excel/excel.autofilter#isdatafiltered)|Указывает, есть ли в автофильтре условия фильтрации. Только для чтения.|
+||[reapply()](/javascript/api/excel/excel.autofilter#reapply--)|Применяет указанный объект Autofilter, находящийся в настоящее время в диапазоне.|
+||[remove()](/javascript/api/excel/excel.autofilter#remove--)|Удаляет автофильтр из диапазона.|
+|[CellBorder](/javascript/api/excel/excel.cellborder)|[color](/javascript/api/excel/excel.cellborder#color)||
+||[style](/javascript/api/excel/excel.cellborder#style)||
+||[tintAndShade](/javascript/api/excel/excel.cellborder#tintandshade)||
+||[weight](/javascript/api/excel/excel.cellborder#weight)||
+|[CellBorderCollection](/javascript/api/excel/excel.cellbordercollection)|[bottom](/javascript/api/excel/excel.cellbordercollection#bottom)||
+||[diagonalDown](/javascript/api/excel/excel.cellbordercollection#diagonaldown)||
+||[diagonalUp](/javascript/api/excel/excel.cellbordercollection#diagonalup)||
+||[horizontal](/javascript/api/excel/excel.cellbordercollection#horizontal)||
+||[left](/javascript/api/excel/excel.cellbordercollection#left)||
+||[right](/javascript/api/excel/excel.cellbordercollection#right)||
+||[top](/javascript/api/excel/excel.cellbordercollection#top)||
+||[vertical](/javascript/api/excel/excel.cellbordercollection#vertical)||
+|[CellProperties](/javascript/api/excel/excel.cellproperties)|[address](/javascript/api/excel/excel.cellproperties#address)||
+||[addressLocal](/javascript/api/excel/excel.cellproperties#addresslocal)||
+||[hasSpill](/javascript/api/excel/excel.cellproperties#hasspill)||
+||[hidden](/javascript/api/excel/excel.cellproperties#hidden)||
+|[CellPropertiesFill](/javascript/api/excel/excel.cellpropertiesfill)|[color](/javascript/api/excel/excel.cellpropertiesfill#color)||
+||[pattern](/javascript/api/excel/excel.cellpropertiesfill#pattern)||
+||[patternColor](/javascript/api/excel/excel.cellpropertiesfill#patterncolor)||
+||[patternTintAndShade](/javascript/api/excel/excel.cellpropertiesfill#patterntintandshade)||
+||[tintAndShade](/javascript/api/excel/excel.cellpropertiesfill#tintandshade)||
+|[CellPropertiesFont](/javascript/api/excel/excel.cellpropertiesfont)|[bold](/javascript/api/excel/excel.cellpropertiesfont#bold)||
+||[color](/javascript/api/excel/excel.cellpropertiesfont#color)||
+||[italic](/javascript/api/excel/excel.cellpropertiesfont#italic)||
+||[name](/javascript/api/excel/excel.cellpropertiesfont#name)||
+||[size](/javascript/api/excel/excel.cellpropertiesfont#size)||
+||[strikethrough](/javascript/api/excel/excel.cellpropertiesfont#strikethrough)||
+||[subscript](/javascript/api/excel/excel.cellpropertiesfont#subscript)||
+||[superscript](/javascript/api/excel/excel.cellpropertiesfont#superscript)||
+||[tintAndShade](/javascript/api/excel/excel.cellpropertiesfont#tintandshade)||
+||[underline](/javascript/api/excel/excel.cellpropertiesfont#underline)||
+|[CellPropertiesFormat](/javascript/api/excel/excel.cellpropertiesformat)|[autoIndent](/javascript/api/excel/excel.cellpropertiesformat#autoindent)||
+||[borders](/javascript/api/excel/excel.cellpropertiesformat#borders)||
+||[fill](/javascript/api/excel/excel.cellpropertiesformat#fill)||
+||[font](/javascript/api/excel/excel.cellpropertiesformat#font)||
+||[horizontalAlignment](/javascript/api/excel/excel.cellpropertiesformat#horizontalalignment)||
+||[indentLevel](/javascript/api/excel/excel.cellpropertiesformat#indentlevel)||
+||[protection](/javascript/api/excel/excel.cellpropertiesformat#protection)||
+||[readingOrder](/javascript/api/excel/excel.cellpropertiesformat#readingorder)||
+||[shrinkToFit](/javascript/api/excel/excel.cellpropertiesformat#shrinktofit)||
+||[textOrientation](/javascript/api/excel/excel.cellpropertiesformat#textorientation)||
+||[useStandardHeight](/javascript/api/excel/excel.cellpropertiesformat#usestandardheight)||
+||[useStandardWidth](/javascript/api/excel/excel.cellpropertiesformat#usestandardwidth)||
+||[verticalAlignment](/javascript/api/excel/excel.cellpropertiesformat#verticalalignment)||
+||[wrapText](/javascript/api/excel/excel.cellpropertiesformat#wraptext)|Создает и открывает новую книгу.  При желании книгу можно предварительно заполнить с помощью XLSX-файла в кодировке base64.|
+|[CellPropertiesProtection](/javascript/api/excel/excel.cellpropertiesprotection)|[formulaHidden](/javascript/api/excel/excel.cellpropertiesprotection#formulahidden)||
+||[locked](/javascript/api/excel/excel.cellpropertiesprotection#locked)||
+|[Chart](/javascript/api/excel/excel.chart)|[activate()](/javascript/api/excel/excel.chart#activate--)|Активация диаграммы в пользовательском интерфейсе Excel.|
+||[pivotOptions](/javascript/api/excel/excel.chart#pivotoptions)|Объединяет параметры для сводной таблицы. Только для чтения.|
+|[ChartAreaFormat](/javascript/api/excel/excel.chartareaformat)|[colorScheme](/javascript/api/excel/excel.chartareaformat#colorscheme)|Возвращает или задает целое число, представляющее цветовую схему для диаграммы. Для чтения и записи.|
+||[roundedCorners](/javascript/api/excel/excel.chartareaformat#roundedcorners)|Значение true, если область диаграммы содержит скругленные углы. Для чтения и записи.|
+|[ChartAxis](/javascript/api/excel/excel.chartaxis)|[linkNumberFormat](/javascript/api/excel/excel.chartaxis#linknumberformat)|Указывает, связан ли числовой формат с ячейками (с изменением числового формата в подписях при его изменении в ячейках).|
+|[ChartBinOptions](/javascript/api/excel/excel.chartbinoptions)|[allowOverflow](/javascript/api/excel/excel.chartbinoptions#allowoverflow)|Возвращает или задает, разрешен ли выход за верхнюю границу интервала в гистограмме или диаграмме Парето. Для чтения и записи.|
+||[allowUnderflow](/javascript/api/excel/excel.chartbinoptions#allowunderflow)|Возвращает или задает, разрешен ли выход за нижнюю границу интервала в гистограмме или диаграмме Парето. Для чтения и записи.|
+||[count](/javascript/api/excel/excel.chartbinoptions#count)|Возвращает или задает количество интервалов в гистограмме или диаграмме Парето. Для чтения и записи.|
+||[overflowValue](/javascript/api/excel/excel.chartbinoptions#overflowvalue)|Возвращает или задает значение выхода за верхнюю границу интервала в гистограмме или диаграмме Парето. Для чтения и записи.|
+||[type](/javascript/api/excel/excel.chartbinoptions#type)|Возвращает или задает тип интервала в гистограмме или диаграмме Парето. Для чтения и записи.|
+||[underflowValue](/javascript/api/excel/excel.chartbinoptions#underflowvalue)|Возвращает или задает значение выхода за нижнюю границу интервала в гистограмме или диаграмме Парето. Для чтения и записи.|
+||[width](/javascript/api/excel/excel.chartbinoptions#width)|Возвращает или задает значение ширины интервала в гистограмме или диаграмме Парето. Для чтения и записи.|
+|[ChartBoxwhiskerOptions](/javascript/api/excel/excel.chartboxwhiskeroptions)|[quartileCalculation](/javascript/api/excel/excel.chartboxwhiskeroptions#quartilecalculation)|Возвращает или задает тип вычисления квартилей для диаграммы "ящик с усами". Для чтения и записи.|
+||[showInnerPoints](/javascript/api/excel/excel.chartboxwhiskeroptions#showinnerpoints)|Возвращает или задает, отображаются ли внутренние точки на диаграмме "ящик с усами". Для чтения и записи.|
+||[showMeanLine](/javascript/api/excel/excel.chartboxwhiskeroptions#showmeanline)|Возвращает или задает, отображается ли линия медианы на диаграмме "ящик с усами". Для чтения и записи.|
+||[showMeanMarker](/javascript/api/excel/excel.chartboxwhiskeroptions#showmeanmarker)|Возвращает или задает, отображается ли маркер медианы на диаграмме "ящик с усами". Для чтения и записи.|
+||[showOutlierPoints](/javascript/api/excel/excel.chartboxwhiskeroptions#showoutlierpoints)|Возвращает или задает, отображаются ли точки выбросов на диаграмме "ящик с усами". Для чтения и записи.|
+|[ChartDataLabel](/javascript/api/excel/excel.chartdatalabel)|[linkNumberFormat](/javascript/api/excel/excel.chartdatalabel#linknumberformat)|Логическое значение, которое указывает, связан ли числовой формат с ячейками (с изменением числового формата в подписях при его изменении в ячейках).|
+|[ChartDataLabels](/javascript/api/excel/excel.chartdatalabels)|[linkNumberFormat](/javascript/api/excel/excel.chartdatalabels#linknumberformat)|Указывает, связан ли числовой формат с ячейками (с изменением числового формата в подписях при его изменении в ячейках).|
+|[ChartErrorBars](/javascript/api/excel/excel.charterrorbars)|[endStyleCap](/javascript/api/excel/excel.charterrorbars#endstylecap)|Представляет, есть ли точки с конечным стилем для планок погрешностей.|
+||[include](/javascript/api/excel/excel.charterrorbars#include)|Указывает, какие части планки погрешностей включить. Дополнительные сведения см. в статье Excel.ChartErrorBarsInclude.|
+||[format](/javascript/api/excel/excel.charterrorbars#format)|Представляет форматирование планок погрешностей диаграммы.|
+||[type](/javascript/api/excel/excel.charterrorbars#type)|Представляет диапазон, помеченный планками погрешностей. Дополнительные сведения см. в статье Excel.ChartErrorBarsType.|
+||[visible](/javascript/api/excel/excel.charterrorbars#visible)|Указывает, отображаются ли планки погрешностей.|
+|[ChartErrorBarsFormat](/javascript/api/excel/excel.charterrorbarsformat)|[line](/javascript/api/excel/excel.charterrorbarsformat#line)|Представляет форматирование линий диаграммы.|
+|[ChartMapOptions](/javascript/api/excel/excel.chartmapoptions)|[labelStrategy](/javascript/api/excel/excel.chartmapoptions#labelstrategy)|Возвращает или задает стратегию подписей карт ряда для диаграммы с картой региона. Для чтения и записи.|
+||[level](/javascript/api/excel/excel.chartmapoptions#level)|Возвращает или задает область карты для диаграммы с картой региона. Для чтения и записи.|
+||[projectionType](/javascript/api/excel/excel.chartmapoptions#projectiontype)|Возвращает или задает тип проекции ряда для диаграммы с картой региона. Для чтения и записи.|
+|[ChartPivotOptions](/javascript/api/excel/excel.chartpivotoptions)|[showAxisFieldButtons](/javascript/api/excel/excel.chartpivotoptions#showaxisfieldbuttons)|Указывает, следует ли отображать кнопки полей осей в сводной диаграмме.|
+||[showLegendFieldButtons](/javascript/api/excel/excel.chartpivotoptions#showlegendfieldbuttons)|Указывает, следует ли отображать кнопки полей условных обозначений в сводной диаграмме.|
+||[showReportFilterFieldButtons](/javascript/api/excel/excel.chartpivotoptions#showreportfilterfieldbuttons)|Указывает, следует ли отображать кнопки полей фильтра отчета в сводной диаграмме.|
+||[showValueFieldButtons](/javascript/api/excel/excel.chartpivotoptions#showvaluefieldbuttons)|Указывает, следует ли отображать кнопки полей значений в сводной диаграмме.|
+|[ChartSeries](/javascript/api/excel/excel.chartseries)|[bubbleScale](/javascript/api/excel/excel.chartseries#bubblescale)|Возвращает или задает коэффициент масштаба для пузырьков в указанной группе диаграммы. Может быть целым числом от 0 (нуля) до 300, соответствующим процентному значению от размера по умолчанию. Применяется только к пузырьковым диаграммам. Для чтения и записи.|
+||[gradientMaximumColor](/javascript/api/excel/excel.chartseries#gradientmaximumcolor)|Возвращает или задает цвет максимального значения для ряда диаграммы с картой региона. Для чтения и записи.|
+||[gradientMaximumType](/javascript/api/excel/excel.chartseries#gradientmaximumtype)|Возвращает или задает тип максимального значения для ряда диаграммы с картой региона. Для чтения и записи.|
+||[gradientMaximumValue](/javascript/api/excel/excel.chartseries#gradientmaximumvalue)|Возвращает или задает максимальное значение для ряда диаграммы с картой региона. Для чтения и записи.|
+||[gradientMidpointColor](/javascript/api/excel/excel.chartseries#gradientmidpointcolor)|Возвращает или задает цвет среднего значения для ряда диаграммы с картой региона. Для чтения и записи.|
+||[gradientMidpointType](/javascript/api/excel/excel.chartseries#gradientmidpointtype)|Возвращает или задает тип среднего значения для ряда диаграммы с картой региона. Для чтения и записи.|
+||[gradientMidpointValue](/javascript/api/excel/excel.chartseries#gradientmidpointvalue)|Возвращает или задает среднее значение для ряда диаграммы с картой региона. Для чтения и записи.|
+||[gradientMinimumColor](/javascript/api/excel/excel.chartseries#gradientminimumcolor)|Возвращает или задает цвет минимального значения для ряда диаграммы с картой региона. Для чтения и записи.|
+||[gradientMinimumType](/javascript/api/excel/excel.chartseries#gradientminimumtype)|Возвращает или задает тип минимального значения для ряда диаграммы с картой региона. Для чтения и записи.|
+||[gradientMinimumValue](/javascript/api/excel/excel.chartseries#gradientminimumvalue)|Возвращает или задает минимальное значение для ряда диаграммы с картой региона. Для чтения и записи.|
+||[gradientStyle](/javascript/api/excel/excel.chartseries#gradientstyle)|Возвращает или задает стиль градиента ряда для диаграммы с картой региона. Для чтения и записи.|
+||[invertColor](/javascript/api/excel/excel.chartseries#invertcolor)|Возвращает или задает цвет заливки для точек отрицательных данных в ряду. Для чтения и записи.|
+||[parentLabelStrategy](/javascript/api/excel/excel.chartseries#parentlabelstrategy)|Возвращает или задает область стратегии родительских подписей ряда для диаграммы "дерево". Для чтения и записи.|
+||[binOptions](/javascript/api/excel/excel.chartseries#binoptions)|Объединяет параметры интервала только для гистограммы и диаграммы Парето. Только для чтения.|
+||[boxwhiskerOptions](/javascript/api/excel/excel.chartseries#boxwhiskeroptions)|Объединяет параметры для диаграммы "ящик с усами" Только для чтения.|
+||[mapOptions](/javascript/api/excel/excel.chartseries#mapoptions)|Объединяет параметры для диаграммы с картой. Только для чтения.|
+||[xerrorBars](/javascript/api/excel/excel.chartseries#xerrorbars)|Представляет объект планки погрешностей для ряда диаграммы.|
+||[yerrorBars](/javascript/api/excel/excel.chartseries#yerrorbars)|Представляет объект планки погрешностей для ряда диаграммы.|
+||[showConnectorLines](/javascript/api/excel/excel.chartseries#showconnectorlines)|Возвращает или задает, отображаются ли соединительные линии в каскадной диаграмме. Для чтения и записи.|
+||[showLeaderLines](/javascript/api/excel/excel.chartseries#showleaderlines)|Значение true, если в Microsoft Excel отображаются линии выноски для каждой подписи данных в ряду. Для чтения и записи.|
+||[splitValue](/javascript/api/excel/excel.chartseries#splitvalue)|Возвращает или задает пороговое значение, разделяющее два раздела круга круговой диаграммы или линии круговой диаграммы. Для чтения и записи.|
+|[ChartTrendlineLabel](/javascript/api/excel/excel.charttrendlinelabel)|[linkNumberFormat](/javascript/api/excel/excel.charttrendlinelabel#linknumberformat)|Логическое значение, которое указывает, связан ли числовой формат с ячейками (с изменением числового формата в подписях при его изменении в ячейках).|
+|[ColumnProperties](/javascript/api/excel/excel.columnproperties)|[address](/javascript/api/excel/excel.columnproperties#address)||
+||[addressLocal](/javascript/api/excel/excel.columnproperties#addresslocal)||
+||[columnIndex](/javascript/api/excel/excel.columnproperties#columnindex)||
+||[hasSpill](/javascript/api/excel/excel.columnproperties#hasspill)||
+|[Comment](/javascript/api/excel/excel.comment)|[content](/javascript/api/excel/excel.comment#content)|Получает или задает содержимое.|
+||[delete()](/javascript/api/excel/excel.comment#delete--)|Удаляет цепочку примечаний.|
+||[id](/javascript/api/excel/excel.comment#id)|Представляет идентификатор примечания. Только для чтения.|
+||[isParent](/javascript/api/excel/excel.comment#isparent)|Указывает, является ли объект цепочкой примечаний или ответом. Всегда возвращайте здесь значение true. Только для чтения.|
+||[replies](/javascript/api/excel/excel.comment#replies)|Представляет коллекцию объектов ответов, связанных с примечанием. Только для чтения.|
+|[CommentCollection](/javascript/api/excel/excel.commentcollection)|[add(content: string, cellAddress: Range \| string, contentType?: "Plain")](/javascript/api/excel/excel.commentcollection#add-content--celladdress--contenttype-)|Создает новое примечание (цепочку примечаний) на основе расположения ячейки и содержимого. Возвращается недопустимый аргумент, если расположение больше одной ячейки.|
+||[add(content: string, cellAddress: Range \| string, contentType?: Excel.ContentType)](/javascript/api/excel/excel.commentcollection#add-content--celladdress--contenttype-)|Создает новое примечание (цепочку примечаний) на основе расположения ячейки и содержимого. Возвращается недопустимый аргумент, если расположение больше одной ячейки.|
+||[getCount()](/javascript/api/excel/excel.commentcollection#getcount--)|Получает количество примечаний в коллекции.|
+||[getItem(commentId: string)](/javascript/api/excel/excel.commentcollection#getitem-commentid-)|Возвращает примечание, определенное по идентификатору. Только для чтения.|
+||[getItemAt(index: number)](/javascript/api/excel/excel.commentcollection#getitemat-index-)|Возвращает примечание на основе его позиции в коллекции.|
+||[getItemByCell(cellAddress: Range \| string)](/javascript/api/excel/excel.commentcollection#getitembycell-celladdress-)|Возвращает примечание в определенной ячейке в коллекции.|
+||[getItemByReplyId(replyId: string)](/javascript/api/excel/excel.commentcollection#getitembyreplyid-replyid-)|Возвращает примечание, связанное с идентификатором ответа в коллекции.|
+||[load(option?: OfficeExtension.LoadOption)](/javascript/api/excel/excel.commentcollection#load-option-)|Добавляет в очередь команду для загрузки указанных свойств объекта. Перед чтением свойств необходимо вызвать метод context.sync().|
+||[items](/javascript/api/excel/excel.commentcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
+|[CommentReply](/javascript/api/excel/excel.commentreply)|[content](/javascript/api/excel/excel.commentreply#content)|Получает или задает содержимое.|
+||[delete()](/javascript/api/excel/excel.commentreply#delete--)|Удаляет ответ на примечание.|
+||[getParentComment()](/javascript/api/excel/excel.commentreply#getparentcomment--)|Получает родительское примечание для этого ответа.|
+||[id](/javascript/api/excel/excel.commentreply#id)|Представляет идентификатор ответа на примечание. Только для чтения.|
+||[isParent](/javascript/api/excel/excel.commentreply#isparent)|Указывает, является ли объект цепочкой примечаний или ответом. Всегда возвращайте здесь значение false. Только для чтения.|
+|[CommentReplyCollection](/javascript/api/excel/excel.commentreplycollection)|[add(content: string, contentType?: "Plain")](/javascript/api/excel/excel.commentreplycollection#add-content--contenttype-)|Создает ответ на примечание.|
+||[add(content: string, contentType?: Excel.ContentType)](/javascript/api/excel/excel.commentreplycollection#add-content--contenttype-)|Создает ответ на примечание.|
+||[getCount()](/javascript/api/excel/excel.commentreplycollection#getcount--)|Получает количество ответов на примечания в коллекции.|
+||[getItem(commentReplyId: string)](/javascript/api/excel/excel.commentreplycollection#getitem-commentreplyid-)|Возвращает ответ на примечание, определенное по идентификатору. Только для чтения.|
+||[getItemAt(index: number)](/javascript/api/excel/excel.commentreplycollection#getitemat-index-)|Возвращает ответ на примечание на основе его позиции в коллекции.|
+||[load(option?: OfficeExtension.LoadOption)](/javascript/api/excel/excel.commentreplycollection#load-option-)|Добавляет в очередь команду для загрузки указанных свойств объекта. Перед чтением свойств необходимо вызвать метод context.sync().|
+||[items](/javascript/api/excel/excel.commentreplycollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
+|[ConditionalFormat](/javascript/api/excel/excel.conditionalformat)|[getRanges()](/javascript/api/excel/excel.conditionalformat#getranges--)|Возвращает объект RangeAreas, состоящий из одного или нескольких прямоугольных диапазонов, к которым применено условное форматирование. Только для чтения.|
+|[DataValidation](/javascript/api/excel/excel.datavalidation)|[getInvalidCells()](/javascript/api/excel/excel.datavalidation#getinvalidcells--)|Возвращает объект RangeAreas, состоящий из одного или нескольких прямоугольных диапазонов, с недопустимыми значениями ячеек. Если все значения ячеек являются допустимыми, эта функция выдаст ошибку ItemNotFound.|
+||[getInvalidCellsOrNullObject()](/javascript/api/excel/excel.datavalidation#getinvalidcellsornullobject--)|Возвращает объект RangeAreas, состоящий из одного или нескольких прямоугольных диапазонов, с недопустимыми значениями ячеек. Если все значения ячеек являются допустимыми, эта функция вернет значение null.|
+|[FilterCriteria](/javascript/api/excel/excel.filtercriteria)|[subField](/javascript/api/excel/excel.filtercriteria#subfield)|Свойство, используемое фильтром для расширенной фильтрации по объектам richvalue.|
+|[GeometricShape](/javascript/api/excel/excel.geometricshape)|[id](/javascript/api/excel/excel.geometricshape#id)|Представляет идентификатор фигуры. Только для чтения.|
+||[shape](/javascript/api/excel/excel.geometricshape#shape)|Возвращает объект shape для геометрической фигуры. Только для чтения.|
+|[GroupShapeCollection](/javascript/api/excel/excel.groupshapecollection)|[getCount()](/javascript/api/excel/excel.groupshapecollection#getcount--)|Возвращает количество фигур в сгруппированной фигуре. Только для чтения.|
+||[getItem(name: string)](/javascript/api/excel/excel.groupshapecollection#getitem-name-)|Получает фигуру по имени.|
+||[getItemAt(index: number)](/javascript/api/excel/excel.groupshapecollection#getitemat-index-)|Получает фигуру на основе ее позиции в коллекции.|
+||[load(option?: OfficeExtension.LoadOption)](/javascript/api/excel/excel.groupshapecollection#load-option-)|Добавляет в очередь команду для загрузки указанных свойств объекта. Перед чтением свойств необходимо вызвать метод context.sync().|
+||[items](/javascript/api/excel/excel.groupshapecollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
+|[HeaderFooter](/javascript/api/excel/excel.headerfooter)|[centerFooter](/javascript/api/excel/excel.headerfooter#centerfooter)|Получает или задает центральный нижний колонтитул листа.|
+||[centerHeader](/javascript/api/excel/excel.headerfooter#centerheader)|Получает или задает центральный верхний колонтитул листа.|
+||[leftFooter](/javascript/api/excel/excel.headerfooter#leftfooter)|Получает или задает левый нижний колонтитул листа.|
+||[leftHeader](/javascript/api/excel/excel.headerfooter#leftheader)|Получает или задает левый верхний колонтитул листа.|
+||[rightFooter](/javascript/api/excel/excel.headerfooter#rightfooter)|Получает или задает правый нижний колонтитул листа.|
+||[rightHeader](/javascript/api/excel/excel.headerfooter#rightheader)|Получает или задает правый верхний колонтитул листа.|
+|[HeaderFooterGroup](/javascript/api/excel/excel.headerfootergroup)|[defaultForAllPages](/javascript/api/excel/excel.headerfootergroup#defaultforallpages)|Общий колонтитул, используемый для всех страниц, если не указан колонтитул четных и нечетных страниц или первой страницы.|
+||[evenPages](/javascript/api/excel/excel.headerfootergroup#evenpages)|Колонтитул для четных страниц, для нечетных страниц нужно указывать отдельный колонтитул.|
+||[firstPage](/javascript/api/excel/excel.headerfootergroup#firstpage)|Колонтитул первой страницы, для остальных страниц используется общий или четный и нечетный колонтитулы.|
+||[oddPages](/javascript/api/excel/excel.headerfootergroup#oddpages)|Колонтитул для нечетных страниц, для четных страниц нужно указывать отдельный колонтитул.|
+||[state](/javascript/api/excel/excel.headerfootergroup#state)|Получает или задает состояние, в котором находятся колонтитулы. Дополнительные сведения см. в статье Excel.HeaderFooterState.|
+||[useSheetMargins](/javascript/api/excel/excel.headerfootergroup#usesheetmargins)|Получает или задает отметку, которая указывает, выровнены ли колонтитулы относительно полей страницы, установленных в параметрах макета страницы для листа.|
+||[useSheetScale](/javascript/api/excel/excel.headerfootergroup#usesheetscale)|Получает или задает отметку, которая указывает, нужно ли масштабировать колонтитулы с помощью процентных значений, установленных в параметрах макета страницы для листа.|
+|[Image](/javascript/api/excel/excel.image)|[format](/javascript/api/excel/excel.image#format)|Возвращает формат для изображения. Только для чтения.|
+||[id](/javascript/api/excel/excel.image#id)|Представляет идентификатор фигуры для объекта image. Только для чтения.|
+||[shape](/javascript/api/excel/excel.image#shape)|Возвращает объект shape для изображения. Только для чтения.|
+|[IterativeCalculation](/javascript/api/excel/excel.iterativecalculation)|[enabled](/javascript/api/excel/excel.iterativecalculation#enabled)|Значение true, если в Excel используется итерация для разрешения циклических ссылок.|
+||[maxChange](/javascript/api/excel/excel.iterativecalculation#maxchange)|Возвращает или задает максимальное изменение между итерациями при разрешении в Excel циклических ссылок.|
+||[maxIteration](/javascript/api/excel/excel.iterativecalculation#maxiteration)|Возвращает или задает максимальное количество итераций, которое можно использовать в Excel для разрешения циклической ссылки.|
+|[Line](/javascript/api/excel/excel.line)|[connectorType](/javascript/api/excel/excel.line#connectortype)|Представляет тип соединительной линии.|
+||[id](/javascript/api/excel/excel.line#id)|Представляет идентификатор фигуры. Только для чтения.|
+||[shape](/javascript/api/excel/excel.line#shape)|Возвращает объект shape для линии. Только для чтения.|
+|[ListDataValidation](/javascript/api/excel/excel.listdatavalidation)|[source](/javascript/api/excel/excel.listdatavalidation#source)|Источник списка для проверки данных|
+|[PageBreak](/javascript/api/excel/excel.pagebreak)|[delete()](/javascript/api/excel/excel.pagebreak#delete--)|Удаляет объект разрыва страницы.|
+||[getStartCell()](/javascript/api/excel/excel.pagebreak#getstartcell--)|Получает первую ячейку после разрыва страницы.|
+||[columnIndex](/javascript/api/excel/excel.pagebreak#columnindex)|Представляет индекс столбца для разрыва страницы|
+||[rowIndex](/javascript/api/excel/excel.pagebreak#rowindex)|Представляет индекс строки для разрыва страницы|
+|[PageBreakCollection](/javascript/api/excel/excel.pagebreakcollection)|[add(pageBreakRange: Range \| string)](/javascript/api/excel/excel.pagebreakcollection#add-pagebreakrange-)|Добавляет разрыв страницы перед левой верхней ячейкой указанного диапазона.|
+||[getCount()](/javascript/api/excel/excel.pagebreakcollection#getcount--)|Получает количество разрывов страниц в коллекции.|
+||[getItem(index: number)](/javascript/api/excel/excel.pagebreakcollection#getitem-index-)|Получает объект разрыва страницы по индексу.|
+||[load(option?: OfficeExtension.LoadOption)](/javascript/api/excel/excel.pagebreakcollection#load-option-)|Добавляет в очередь команду для загрузки указанных свойств объекта. Перед чтением свойств необходимо вызвать метод context.sync().|
+||[items](/javascript/api/excel/excel.pagebreakcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
+||[removePageBreaks()](/javascript/api/excel/excel.pagebreakcollection#removepagebreaks--)|Сбрасывает все добавленные вручную разрывы страниц в коллекции.|
+|[PageLayout](/javascript/api/excel/excel.pagelayout)|[blackAndWhite](/javascript/api/excel/excel.pagelayout#blackandwhite)|Получает или задает параметр черно-белой печати листа.|
+||[bottomMargin](/javascript/api/excel/excel.pagelayout#bottommargin)|Получает или задает нижнее поле страницы листа, чтобы использовать для печати в пунктах.|
+||[centerHorizontally](/javascript/api/excel/excel.pagelayout#centerhorizontally)|Получает или задает отметку выравнивания листа по горизонтали относительно центра. Эта отметка определяет, выравнивается ли лист по горизонтали относительно центра при печати.|
+||[centerVertically](/javascript/api/excel/excel.pagelayout#centervertically)|Получает или задает отметку выравнивания листа по вертикали относительно центра. Эта отметка определяет, выравнивается ли лист по вертикали относительно центра при печати.|
+||[draftMode](/javascript/api/excel/excel.pagelayout#draftmode)|Получает или задает параметр режима черновика листа. Если присвоено значение true, лист будет печататься без рисунков.|
+||[firstPageNumber](/javascript/api/excel/excel.pagelayout#firstpagenumber)|Получает или задает номер первой страницы листа для печати. Значение null представляет автоматическую нумерацию страниц.|
+||[footerMargin](/javascript/api/excel/excel.pagelayout#footermargin)|Получает или задает поле нижнего колонтитула листа (в пунктах) для использования при печати.|
+||[getPrintArea()](/javascript/api/excel/excel.pagelayout#getprintarea--)|Получает объект RangeAreas, состоящий из одного или нескольких прямоугольных диапазонов, представляющих область печати для листа. Если область печати отсутствует, возникает ошибка ItemNotFound.|
+||[getPrintAreaOrNullObject()](/javascript/api/excel/excel.pagelayout#getprintareaornullobject--)|Получает объект RangeAreas, состоящий из одного или нескольких прямоугольных диапазонов, представляющих область печати для листа. Если область печати отсутствует, возвращается пустой объект.|
+||[getPrintTitleColumns()](/javascript/api/excel/excel.pagelayout#getprinttitlecolumns--)|Получает объект range, представляющий столбцы заголовков.|
+||[getPrintTitleColumnsOrNullObject()](/javascript/api/excel/excel.pagelayout#getprinttitlecolumnsornullobject--)|Получает объект range, представляющий столбцы заголовков. Если значение не установлено, возвращается пустой объект.|
+||[getPrintTitleRows()](/javascript/api/excel/excel.pagelayout#getprinttitlerows--)|Получает объект range, представляющий строки заголовков.|
+||[getPrintTitleRowsOrNullObject()](/javascript/api/excel/excel.pagelayout#getprinttitlerowsornullobject--)|Получает объект range, представляющий строки заголовков. Если значение не установлено, возвращается пустой объект.|
+||[headerMargin](/javascript/api/excel/excel.pagelayout#headermargin)|Получает или задает поле верхнего колонтитула листа (в пунктах) для использования при печати.|
+||[leftMargin](/javascript/api/excel/excel.pagelayout#leftmargin)|Получает или задает левое поле листа (в пунктах) для использования при печати.|
+||[orientation](/javascript/api/excel/excel.pagelayout#orientation)|Получает или задает ориентацию страницы для листа.|
+||[paperSize](/javascript/api/excel/excel.pagelayout#papersize)|Получает или задает размер бумаги для листа.|
+||[printComments](/javascript/api/excel/excel.pagelayout#printcomments)|Получает или задает, должны ли отображаться примечания листа при печати.|
+||[printErrors](/javascript/api/excel/excel.pagelayout#printerrors)|Получает или задает параметр ошибок печати листа.|
+||[printGridlines](/javascript/api/excel/excel.pagelayout#printgridlines)|Получает или задает отметку печати линий сетки листа. Эта отметка определяет, печатаются ли линии сетки.|
+||[printHeadings](/javascript/api/excel/excel.pagelayout#printheadings)|Получает или задает отметку печати заголовков листа. Эта отметка определяет, печатаются ли заголовки.|
+||[printOrder](/javascript/api/excel/excel.pagelayout#printorder)|Получает или задает параметр порядка печати листа. Определяет порядок, использующийся при обработке распечатываемых номеров страниц.|
+||[headersFooters](/javascript/api/excel/excel.pagelayout#headersfooters)|Настройка колонтитулов для листа.|
+||[rightMargin](/javascript/api/excel/excel.pagelayout#rightmargin)|Получает или задает правое поле листа (в пунктах) для использования при печати.|
+||[setPrintArea(printArea: Range \| RangeAreas \| string)](/javascript/api/excel/excel.pagelayout#setprintarea-printarea-)|Задает область печати листа.|
+||[setPrintMargins(unit: "Points" \| "Inches" \| "Centimeters", marginOptions: Excel.PageLayoutMarginOptions)](/javascript/api/excel/excel.pagelayout#setprintmargins-unit--marginoptions-)|Задает поля страницы с единицами измерения для листа.|
+||[setPrintMargins(unit: Excel.PrintMarginUnit, marginOptions: Excel.PageLayoutMarginOptions)](/javascript/api/excel/excel.pagelayout#setprintmargins-unit--marginoptions-)|Задает поля страницы с единицами измерения для листа.|
+||[setPrintTitleColumns(printTitleColumns: Range \| string)](/javascript/api/excel/excel.pagelayout#setprinttitlecolumns-printtitlecolumns-)|Задает столбцы, содержащие ячейки, которые должны повторяться слева на каждой странице при печати листа.|
+||[setPrintTitleRows(printTitleRows: Range \| string)](/javascript/api/excel/excel.pagelayout#setprinttitlerows-printtitlerows-)|Задает строки, содержащие ячейки, которые должны повторяться сверху каждой страницы при печати листа.|
+||[topMargin](/javascript/api/excel/excel.pagelayout#topmargin)|Получает или задает верхнее поле листа (в пунктах) для использования при печати.|
+||[zoom](/javascript/api/excel/excel.pagelayout#zoom)|Получает или задает параметры масштабирования при печати листа.|
+|[PageLayoutMarginOptions](/javascript/api/excel/excel.pagelayoutmarginoptions)|[bottom](/javascript/api/excel/excel.pagelayoutmarginoptions#bottom)|Представляет нижнее поле макета страницы в указанных единицах измерения для использования при печати.|
+||[footer](/javascript/api/excel/excel.pagelayoutmarginoptions#footer)|Представляет поле нижнего колонтитула макета страницы в указанных единицах измерения для использования при печати.|
+||[header](/javascript/api/excel/excel.pagelayoutmarginoptions#header)|Представляет поле верхнего колонтитула макета страницы в указанных единицах измерения для использования при печати.|
+||[left](/javascript/api/excel/excel.pagelayoutmarginoptions#left)|Представляет левое поле макета страницы в указанных единицах измерения для использования при печати.|
+||[right](/javascript/api/excel/excel.pagelayoutmarginoptions#right)|Представляет правое поле макета страницы в указанных единицах измерения для использования при печати.|
+||[top](/javascript/api/excel/excel.pagelayoutmarginoptions#top)|Представляет верхнее поле макета страницы в указанных единицах измерения для использования при печати.|
+|[PageLayoutZoomOptions](/javascript/api/excel/excel.pagelayoutzoomoptions)|[horizontalFitToPages](/javascript/api/excel/excel.pagelayoutzoomoptions#horizontalfittopages)|Количество страниц, размещаемых по горизонтали. Это значение может быть равно null, если используется процентный масштаб.|
+||[scale](/javascript/api/excel/excel.pagelayoutzoomoptions#scale)|Значение масштаба печатной страницы может быть равным от 10 до 400. Это значение может быть равно null, если указано размещение по высоте или ширине страницы.|
+||[verticalFitToPages](/javascript/api/excel/excel.pagelayoutzoomoptions#verticalfittopages)|Количество страниц, размещаемых по вертикали. Это значение может быть равно null, если используется процентный масштаб.|
+|[PivotField](/javascript/api/excel/excel.pivotfield)|[sortByValues(sortby: "Ascending" \| "Descending", valuesHierarchy: Excel.DataPivotHierarchy, pivotItemScope?: Array<PivotItem \| string>)](/javascript/api/excel/excel.pivotfield#sortbyvalues-sortby--valueshierarchy--pivotitemscope-)|Сортирует сводную таблицу по указанным значениям в определенной области. Область определяет, какие конкретные значения будут использоваться для сортировки|
+||[sortByValues(sortby: Excel.SortBy, valuesHierarchy: Excel.DataPivotHierarchy, pivotItemScope?: Array<PivotItem \| string>)](/javascript/api/excel/excel.pivotfield#sortbyvalues-sortby--valueshierarchy--pivotitemscope-)|Сортирует сводную таблицу по указанным значениям в определенной области. Область определяет, какие конкретные значения будут использоваться для сортировки|
+|[PivotLayout](/javascript/api/excel/excel.pivotlayout)|[autoFormat](/javascript/api/excel/excel.pivotlayout#autoformat)|Значение true, если форматирование применяется автоматически при его обновлении или перемещении полей|
+||[enableFieldList](/javascript/api/excel/excel.pivotlayout#enablefieldlist)|Значение true, если список полей должен отображаться или скрываться в пользовательском интерфейсе.|
+||[getCell(dataHierarchy: DataPivotHierarchy \| string, rowItems: Array<PivotItem \| string>, columnItems: Array<PivotItem \| string>)](/javascript/api/excel/excel.pivotlayout#getcell-datahierarchy--rowitems--columnitems-)|Получает ячейку в данных сводной таблицы, содержащую значение для пересечения указанных объектов dataHierarchy, rowItems и columnItems.|
+||[getDataHierarchy(cell: Range \| string)](/javascript/api/excel/excel.pivotlayout#getdatahierarchy-cell-)|Получает объект DataHierarchy, использующийся для вычисления значения в указанном диапазоне сводной таблицы.|
+||[getPivotItems(axis: "Unknown" \| "Row" \| "Column" \| "Data" \| "Filter", cell: Range \| string)](/javascript/api/excel/excel.pivotlayout#getpivotitems-axis--cell-)|Получает объекты PivotItem с оси, образующие значение в указанном диапазоне сводной таблицы.|
+||[getPivotItems(axis: Excel.PivotAxis, cell: Range \| string)](/javascript/api/excel/excel.pivotlayout#getpivotitems-axis--cell-)|Получает объекты PivotItem с оси, образующие значение в указанном диапазоне сводной таблицы.|
+||[preserveFormatting](/javascript/api/excel/excel.pivotlayout#preserveformatting)|Значение true, если форматирование сохраняется при обновлении или пересчете отчета с помощью таких операций, как сведение, сортировка или изменение элементов полей страницы.|
+||[setAutosortOnCell(cell: Range \| string, sortby: "Ascending" \| "Descending")](/javascript/api/excel/excel.pivotlayout#setautosortoncell-cell--sortby-)|Задает автоматическую сортировку с использованием конкретной ячейки для автоматического выбора всех условий и контекста для сортировки.|
+||[setAutosortOnCell(cell: Range \| string, sortby: Excel.SortBy)](/javascript/api/excel/excel.pivotlayout#setautosortoncell-cell--sortby-)|Задает автоматическую сортировку с использованием конкретной ячейки для автоматического выбора всех условий и контекста для сортировки.|
+|[PivotTable](/javascript/api/excel/excel.pivottable)|[enableDataValueEditing](/javascript/api/excel/excel.pivottable#enabledatavalueediting)|Значение true, если в сводной таблице следует использовать настраиваемые списки при сортировке.|
+||[useCustomSortLists](/javascript/api/excel/excel.pivottable#usecustomsortlists)|Значение true, если в сводной таблице следует использовать настраиваемые списки при сортировке.|
+|[Range](/javascript/api/excel/excel.range)|[autoFill(destinationRange: Range \| string, autoFillType?: "FillDefault" \| "FillCopy" \| "FillSeries" \| "FillFormats" \| "FillValues" \| "FillDays" \| "FillWeekdays" \| "FillMonths" \| "FillYears" \| "LinearTrend" \| "GrowthTrend" \| "FlashFill")](/javascript/api/excel/excel.range#autofill-destinationrange--autofilltype-)||
+||[autoFill(destinationRange: Range \| string, autoFillType?: Excel.AutoFillType)](/javascript/api/excel/excel.range#autofill-destinationrange--autofilltype-)||
+||[convertDataTypeToText()](/javascript/api/excel/excel.range#convertdatatypetotext--)|Преобразует диапазон ячеек с типами данных в текст.|
+||[convertToLinkedDataType(serviceID: number, languageCulture: string)](/javascript/api/excel/excel.range#converttolinkeddatatype-serviceid--languageculture-)|Преобразует ячейки диапазона в связанный тип данных на листе.|
+||[copyFrom(sourceRange: Range \| RangeAreas \| string, copyType?: "All" \| "Formulas" \| "Values" \| "Formats", skipBlanks?: boolean, transpose?: boolean)](/javascript/api/excel/excel.range#copyfrom-sourcerange--copytype--skipblanks--transpose-)|Копирует данные ячейки или форматирование из исходного диапазона или объекта RangeAreas в текущий диапазон.|
+||[copyFrom(sourceRange: Range \| RangeAreas \| string, copyType?: Excel.RangeCopyType, skipBlanks?: boolean, transpose?: boolean)](/javascript/api/excel/excel.range#copyfrom-sourcerange--copytype--skipblanks--transpose-)|Копирует данные ячейки или форматирование из исходного диапазона или объекта RangeAreas в текущий диапазон.|
+||[find(text: string, criteria: Excel.SearchCriteria)](/javascript/api/excel/excel.range#find-text--criteria-)|Находит определенную строку на основе указанных условий.|
+||[findOrNullObject(text: string, criteria: Excel.SearchCriteria)](/javascript/api/excel/excel.range#findornullobject-text--criteria-)|Находит определенную строку на основе указанных условий.|
+||[getCellProperties(cellPropertiesLoadOptions: CellPropertiesLoadOptions)](/javascript/api/excel/excel.range#getcellproperties-cellpropertiesloadoptions-)|Возвращает двумерный массив, в который включены данные для шрифта, заливки, границ, выравнивания и других свойств каждой ячейки.|
+||[getColumnProperties(columnPropertiesLoadOptions: ColumnPropertiesLoadOptions)](/javascript/api/excel/excel.range#getcolumnproperties-columnpropertiesloadoptions-)|Возвращает одномерный массив, в который включены данные для шрифта, заливки, границ, выравнивания и других свойств каждого столбца.  Для свойств, не являющихся одинаковыми в каждой ячейке определенного столбца, возвращается значение null.|
+||[getRowProperties(rowPropertiesLoadOptions: RowPropertiesLoadOptions)](/javascript/api/excel/excel.range#getrowproperties-rowpropertiesloadoptions-)|Возвращает одномерный массив, в который включены данные для шрифта, заливки, границ, выравнивания и других свойств каждой строки.  Для свойств, не являющихся одинаковыми в каждой ячейке определенной строки, возвращается значение null.|
+||[getSpecialCells(cellType: "ConditionalFormats" \| "DataValidations" \| "Blanks" \| "Comments" \| "Constants" \| "Formulas" \| "SameConditionalFormat" \| "SameDataValidation" \| "Visible", cellValueType?: "All" \| "Errors" \| "ErrorsLogical" \| "ErrorsNumbers" \| "ErrorsText" \| "ErrorsLogicalNumber" \| "ErrorsLogicalText" \| "ErrorsNumberText" \| "Logical" \| "LogicalNumbers" \| "LogicalText" \| "LogicalNumbersText" \| "Numbers" \| "NumbersText" \| "Text")](/javascript/api/excel/excel.range#getspecialcells-celltype--cellvaluetype-)|Получает объект RangeAreas, состоящий из одного или нескольких прямоугольных диапазонов, представляющих все ячейки, которые соответствуют указанному типу и значению.|
+||[getSpecialCells(cellType: Excel.SpecialCellType, cellValueType?: Excel.SpecialCellValueType)](/javascript/api/excel/excel.range#getspecialcells-celltype--cellvaluetype-)|Получает объект RangeAreas, состоящий из одного или нескольких прямоугольных диапазонов, представляющих все ячейки, которые соответствуют указанному типу и значению.|
+||[getSpecialCellsOrNullObject(cellType: "ConditionalFormats" \| "DataValidations" \| "Blanks" \| "Comments" \| "Constants" \| "Formulas" \| "SameConditionalFormat" \| "SameDataValidation" \| "Visible", cellValueType?: "All" \| "Errors" \| "ErrorsLogical" \| "ErrorsNumbers" \| "ErrorsText" \| "ErrorsLogicalNumber" \| "ErrorsLogicalText" \| "ErrorsNumberText" \| "Logical" \| "LogicalNumbers" \| "LogicalText" \| "LogicalNumbersText" \| "Numbers" \| "NumbersText" \| "Text")](/javascript/api/excel/excel.range#getspecialcellsornullobject-celltype--cellvaluetype-)|Получает объект RangeAreas, состоящий из одного или нескольких диапазонов, представляющих все ячейки, которые соответствуют указанному типу и значению.|
+||[getSpecialCellsOrNullObject(cellType: Excel.SpecialCellType, cellValueType?: Excel.SpecialCellValueType)](/javascript/api/excel/excel.range#getspecialcellsornullobject-celltype--cellvaluetype-)|Получает объект RangeAreas, состоящий из одного или нескольких диапазонов, представляющих все ячейки, которые соответствуют указанному типу и значению.|
+||[getSpillParent()](/javascript/api/excel/excel.range#getspillparent--)|Получает объект диапазона, содержащий базовую ячейку для переносимой ячейки. Возвращает ошибку, если применяется к диапазону с несколькими ячейками. Только для чтения.|
+||[getSpillingToRange()](/javascript/api/excel/excel.range#getspillingtorange--)|Получает объект range, содержащий диапазон переноса при вызове для базовой ячейки. Возвращает ошибку, если применяется к диапазону с несколькими ячейками. Только для чтения.|
+||[getTables(fullyContained?: boolean)](/javascript/api/excel/excel.range#gettables-fullycontained-)|Получает коллекцию таблиц с заданной областью, перекрывающую диапазон.|
+||[hasSpill](/javascript/api/excel/excel.range#hasspill)|Указывает, есть ли во всех ячейках граница переноса.|
+||[linkedDataTypeState](/javascript/api/excel/excel.range#linkeddatatypestate)|Представляет состояние типа данных каждой ячейки. Только для чтения.|
+||[removeDuplicates(columns: number[], includesHeader: boolean)](/javascript/api/excel/excel.range#removeduplicates-columns--includesheader-)|Удаляет повторяющиеся значения из диапазона, заданного столбцами.|
+||[replaceAll(text: string, replacement: string, criteria: Excel.ReplaceCriteria)](/javascript/api/excel/excel.range#replaceall-text--replacement--criteria-)|Находит и заменяет определенную строку на основе условий, указанных в текущем диапазоне.|
+||[setCellProperties(cellPropertiesData: SettableCellProperties[][])](/javascript/api/excel/excel.range#setcellproperties-cellpropertiesdata-)|Обновляет диапазон на основе двумерного массива свойств ячейки, в который включены такие элементы, как шрифт, заливка, границы, выравнивание и т. д.|
+||[setColumnProperties(columnPropertiesData: SettableColumnProperties[])](/javascript/api/excel/excel.range#setcolumnproperties-columnpropertiesdata-)|Обновляет диапазон на основе одномерного массива свойств столбца, в который включены такие элементы, как шрифт, заливка, границы, выравнивание и т. д.|
+||[setDirty()](/javascript/api/excel/excel.range#setdirty--)|Устанавливает диапазон, предназначенный для пересчета при выполнении следующего пересчета.|
+||[setRowProperties(rowPropertiesData: SettableRowProperties[])](/javascript/api/excel/excel.range#setrowproperties-rowpropertiesdata-)|Обновляет диапазон на основе одномерного массива свойств строки, в который включены такие элементы, как шрифт, заливка, границы, выравнивание и т. д.|
+|[RangeAreas](/javascript/api/excel/excel.rangeareas)|[calculate()](/javascript/api/excel/excel.rangeareas#calculate--)|Вычисляет все ячейки в объекте RangeAreas.|
+||[clear(applyTo?: "All" \| "Formats" \| "Contents" \| "Hyperlinks" \| "RemoveHyperlinks")](/javascript/api/excel/excel.rangeareas#clear-applyto-)|Удаляет значения, формат, заливку, границу и т. д. для каждой области, входящей в этот объект RangeAreas.|
+||[clear(applyTo?: Excel.ClearApplyTo)](/javascript/api/excel/excel.rangeareas#clear-applyto-)|Удаляет значения, формат, заливку, границу и т. д. для каждой области, входящей в этот объект RangeAreas.|
+||[convertDataTypeToText()](/javascript/api/excel/excel.rangeareas#convertdatatypetotext--)|Преобразует все ячейки в объекте RangeAreas с типами данных в текст.|
+||[convertToLinkedDataType(serviceID: number, languageCulture: string)](/javascript/api/excel/excel.rangeareas#converttolinkeddatatype-serviceid--languageculture-)|Преобразует все ячейки в объекте RangeAreas в связанный тип данных.|
+||[copyFrom(sourceRange: Range \| RangeAreas \| string, copyType?: "All" \| "Formulas" \| "Values" \| "Formats", skipBlanks?: boolean, transpose?: boolean)](/javascript/api/excel/excel.rangeareas#copyfrom-sourcerange--copytype--skipblanks--transpose-)|Копирует данные ячейки или форматирование из исходного диапазона или объекта RangeAreas в текущий объект RangeAreas.|
+||[copyFrom(sourceRange: Range \| RangeAreas \| string, copyType?: Excel.RangeCopyType, skipBlanks?: boolean, transpose?: boolean)](/javascript/api/excel/excel.rangeareas#copyfrom-sourcerange--copytype--skipblanks--transpose-)|Копирует данные ячейки или форматирование из исходного диапазона или объекта RangeAreas в текущий объект RangeAreas.|
+||[getEntireColumn()](/javascript/api/excel/excel.rangeareas#getentirecolumn--)|Возвращает объект RangeAreas, представляющий все столбцы объекта RangeAreas (например, если текущий объект RangeAreas представляет ячейки "B4:E11, H2", возвращается объект RangeAreas, представляющий столбцы "B:E, H:H").|
+||[getEntireRow()](/javascript/api/excel/excel.rangeareas#getentirerow--)|Возвращает объект RangeAreas, представляющий все строки объекта RangeAreas (например, если текущий объект RangeAreas представляет ячейки "B4:E11", возвращается объект RangeAreas, представляющий строки "4:11").|
+||[getIntersection(anotherRange: Range \| RangeAreas \| string)](/javascript/api/excel/excel.rangeareas#getintersection-anotherrange-)|Возвращает объект RangeAreas, представляющий пересечение заданных диапазонов или RangeAreas. Если пересечение не найдено, возвращается сообщение об ошибке ItemNotFound.|
+||[getIntersectionOrNullObject(anotherRange: Range \| RangeAreas \| string)](/javascript/api/excel/excel.rangeareas#getintersectionornullobject-anotherrange-)|Возвращает объект RangeAreas, представляющий пересечение заданных диапазонов или RangeAreas. Если пересечение не найдено, возвращается пустой объект.|
+||[getOffsetRangeAreas(rowOffset: number, columnOffset: number)](/javascript/api/excel/excel.rangeareas#getoffsetrangeareas-rowoffset--columnoffset-)|Возвращает объект RangeAreas, смещенный на определенное количество строк и столбцов. Измерение возвращаемого объекта RangeAreas будет соответствовать исходному объекту. Если результирующий объект RangeAreas выходит за пределы таблицы листа, возникнет ошибка.|
+||[getSpecialCells(cellType: "ConditionalFormats" \| "DataValidations" \| "Blanks" \| "Comments" \| "Constants" \| "Formulas" \| "SameConditionalFormat" \| "SameDataValidation" \| "Visible", cellValueType?: "All" \| "Errors" \| "ErrorsLogical" \| "ErrorsNumbers" \| "ErrorsText" \| "ErrorsLogicalNumber" \| "ErrorsLogicalText" \| "ErrorsNumberText" \| "Logical" \| "LogicalNumbers" \| "LogicalText" \| "LogicalNumbersText" \| "Numbers" \| "NumbersText" \| "Text")](/javascript/api/excel/excel.rangeareas#getspecialcells-celltype--cellvaluetype-)|Возвращает объект RangeAreas, представляющий все ячейки, которые соответствуют указанному типу и значению. Выдает ошибку, если не найдено специальных ячеек, соответствующих условиям. |
+||[getSpecialCells(cellType: Excel.SpecialCellType, cellValueType?: Excel.SpecialCellValueType)](/javascript/api/excel/excel.rangeareas#getspecialcells-celltype--cellvaluetype-)|Возвращает объект RangeAreas, представляющий все ячейки, которые соответствуют указанному типу и значению. Выдает ошибку, если не найдено специальных ячеек, соответствующих условиям. |
+||[getSpecialCellsOrNullObject(cellType: "ConditionalFormats" \| "DataValidations" \| "Blanks" \| "Comments" \| "Constants" \| "Formulas" \| "SameConditionalFormat" \| "SameDataValidation" \| "Visible", cellValueType?: "All" \| "Errors" \| "ErrorsLogical" \| "ErrorsNumbers" \| "ErrorsText" \| "ErrorsLogicalNumber" \| "ErrorsLogicalText" \| "ErrorsNumberText" \| "Logical" \| "LogicalNumbers" \| "LogicalText" \| "LogicalNumbersText" \| "Numbers" \| "NumbersText" \| "Text")](/javascript/api/excel/excel.rangeareas#getspecialcellsornullobject-celltype--cellvaluetype-)|Возвращает объект RangeAreas, представляющий все ячейки, которые соответствуют указанному типу и значению. Возвращает пустой объект, если не найдено специальных ячеек, соответствующих условиям. |
+||[getSpecialCellsOrNullObject(cellType: Excel.SpecialCellType, cellValueType?: Excel.SpecialCellValueType)](/javascript/api/excel/excel.rangeareas#getspecialcellsornullobject-celltype--cellvaluetype-)|Возвращает объект RangeAreas, представляющий все ячейки, которые соответствуют указанному типу и значению. Возвращает пустой объект, если не найдено специальных ячеек, соответствующих условиям. |
+||[getTables(fullyContained?: boolean)](/javascript/api/excel/excel.rangeareas#gettables-fullycontained-)|Возвращает коллекцию таблиц с заданной областью, перекрывающую любой диапазон в объекте RangeAreas.|
+||[getUsedRangeAreas(valuesOnly?: boolean)](/javascript/api/excel/excel.rangeareas#getusedrangeareas-valuesonly-)|Возвращает использованный объект RangeAreas, включающий все использованные области отдельных прямоугольных диапазонов в объекте RangeAreas.|
+||[getUsedRangeAreasOrNullObject(valuesOnly?: boolean)](/javascript/api/excel/excel.rangeareas#getusedrangeareasornullobject-valuesonly-)|Возвращает использованный объект RangeAreas, включающий все использованные области отдельных прямоугольных диапазонов в объекте RangeAreas.|
+||[address](/javascript/api/excel/excel.rangeareas#address)|Возвращает ссылку на RageAreas в стиле A1. Значение адреса содержит имя листа для каждого прямоугольного блока или ячейки (например, "Лист1!A1:B4, Лист1!D1:D4"). Только для чтения.|
+||[addressLocal](/javascript/api/excel/excel.rangeareas#addresslocal)|Возвращает ссылку на RageAreas в языковом стандарте пользователя. Только для чтения.|
+||[areaCount](/javascript/api/excel/excel.rangeareas#areacount)|Возвращает количество прямоугольных диапазонов, составляющих этот объект RangeAreas.|
+||[areas](/javascript/api/excel/excel.rangeareas#areas)|Возвращает коллекцию прямоугольных диапазонов, составляющих этот объект RangeAreas.|
+||[cellCount](/javascript/api/excel/excel.rangeareas#cellcount)|Возвращает число ячеек в объекте RangeAreas с суммированием количества ячеек всех отдельных прямоугольных диапазонов. Возвращает значение -1, если количество ячеек превышает 2^31-1 (2 147 483 647). Только для чтения.|
+||[conditionalFormats](/javascript/api/excel/excel.rangeareas#conditionalformats)|Возвращает коллекцию объектов ConditionalFormat, пересекающихся с любыми ячейками в этом объекте RangeAreas. Только для чтения.|
+||[dataValidation](/javascript/api/excel/excel.rangeareas#datavalidation)|Возвращает объект dataValidation для всех диапазонов в объекте RangeAreas.|
+||[format](/javascript/api/excel/excel.rangeareas#format)|Возвращает объект rangeFormat, в который включены шрифт, заливка, границы, выравнивание и другие свойства всех диапазонов в объекте RangeAreas. Только для чтения.|
+||[isEntireColumn](/javascript/api/excel/excel.rangeareas#isentirecolumn)|Указывает, представляют ли все диапазоны в объекте RangeAreas целые столбцы (например, "A:C, Q:Z"). Только для чтения.|
+||[isEntireRow](/javascript/api/excel/excel.rangeareas#isentirerow)|Указывает, представляют ли все диапазоны в объекте RangeAreas целые строки (например, "1:3, 5:7"). Только для чтения.|
+||[worksheet](/javascript/api/excel/excel.rangeareas#worksheet)|Возвращает лист для текущего объекта RangeAreas. Только для чтения.|
+||[setDirty()](/javascript/api/excel/excel.rangeareas#setdirty--)|Устанавливает объект RangeAreas, предназначенный для пересчета при выполнении следующего пересчета.|
+||[style](/javascript/api/excel/excel.rangeareas#style)|Представляет стиль всех диапазонов в этом объекте RangeAreas.|
+||[track()](/javascript/api/excel/excel.rangeareas#track--)|Отслеживает объект для автоматической корректировки с учетом окружающих изменений в документе. Этот вызов является сокращением для context.trackedObjects.add(thisObject). Если этот объект используется в вызовах .sync и вне последовательного выполнения пакета .run с возникновением ошибки InvalidObjectPath при установке свойства или вызове метода для объекта, необходимо было добавить объект в коллекцию отслеживаемых объектов при первоначальном создании объекта.|
+||[untrack()](/javascript/api/excel/excel.rangeareas#untrack--)|Освобождает память, связанную с этим объектом, если он ранее отслеживался. Этот вызов является сокращением для context.trackedObjects.remove(thisObject). Наличие большого количества отслеживаемых объектов замедляет ведущее приложение, поэтому не забывайте освобождать любые добавленные объекты после завершения их использования. Перед фактическим освобождением памяти потребуется вызвать метод context.sync().|
+|[RangeBorder](/javascript/api/excel/excel.rangeborder)|[tintAndShade](/javascript/api/excel/excel.rangeborder#tintandshade)|Возвращает или задает значение типа double, осветляющее или затемняющее цвет для границы диапазона. Значение: от -1 (самый темный) до 1 (самый светлый). Исходному цвету соответствует значение 0.|
+|[RangeBorderCollection](/javascript/api/excel/excel.rangebordercollection)|[tintAndShade](/javascript/api/excel/excel.rangebordercollection#tintandshade)|Возвращает или задает значение типа double, осветляющее или затемняющее цвет для границ диапазона. Значение: от -1 (самый темный) до 1 (самый светлый). Исходному цвету соответствует значение 0.|
+|[RangeCollection](/javascript/api/excel/excel.rangecollection)|[getCount()](/javascript/api/excel/excel.rangecollection#getcount--)|Возвращает количество диапазонов в объекте RangeCollection.|
+||[getItemAt(index: number)](/javascript/api/excel/excel.rangecollection#getitemat-index-)|Возвращает объект диапазона в зависимости от его позиции в объекте RangeCollection.|
+||[load(option?: OfficeExtension.LoadOption)](/javascript/api/excel/excel.rangecollection#load-option-)|Добавляет в очередь команду для загрузки указанных свойств объекта. Перед чтением свойств необходимо вызвать метод context.sync().|
+||[items](/javascript/api/excel/excel.rangecollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
+|[RangeFill](/javascript/api/excel/excel.rangefill)|[pattern](/javascript/api/excel/excel.rangefill#pattern)|Получает или задает шаблон объекта Range. Дополнительные сведения см. в статье Excel.FillPattern. LinearGradient и RectangularGradient не поддерживаются.|
+||[patternColor](/javascript/api/excel/excel.rangefill#patterncolor)|Задает HTML-код, представляющий шаблон объекта Range в виде #RRGGBB (например, FFA500) или в виде ключевого слова (например, orange).|
+||[patternTintAndShade](/javascript/api/excel/excel.rangefill#patterntintandshade)|Возвращает или задает значение типа double, осветляющее или затемняющее цвет шаблона для заливки диапазона. Значение: от -1 (самый темный) до 1 (самый светлый). Исходному цвету соответствует значение 0.|
+||[tintAndShade](/javascript/api/excel/excel.rangefill#tintandshade)|Возвращает или задает значение типа double, осветляющее или затемняющее цвет для заливки диапазона. Значение: от -1 (самый темный) до 1 (самый светлый). Исходному цвету соответствует значение 0.|
+|[RangeFont](/javascript/api/excel/excel.rangefont)|[strikethrough](/javascript/api/excel/excel.rangefont#strikethrough)|Указывает, зачеркнут ли шрифт. Значение null указывает, что для всего диапазона не применяется единый параметр зачеркивания.|
+||[subscript](/javascript/api/excel/excel.rangefont#subscript)|Указывает, является ли шрифт подстрочным.|
+||[superscript](/javascript/api/excel/excel.rangefont#superscript)|Указывает, является ли шрифт надстрочным.|
+||[tintAndShade](/javascript/api/excel/excel.rangefont#tintandshade)|Возвращает или задает значение типа double, осветляющее или затемняющее цвет для шрифта диапазона. Значение: от -1 (самый темный) до 1 (самый светлый). Исходному цвету соответствует значение 0.|
+|[RangeFormat](/javascript/api/excel/excel.rangeformat)|[autoIndent](/javascript/api/excel/excel.rangeformat#autoindent)|Указывает, будет ли выполнен автоматический отступ для текста, если выравнивание текста установлено на равномерное распределение.|
+||[indentLevel](/javascript/api/excel/excel.rangeformat#indentlevel)|Целое число от 0 до 250, указывающее уровень отступа.|
+||[readingOrder](/javascript/api/excel/excel.rangeformat#readingorder)|Направление чтения для диапазона.|
+||[shrinkToFit](/javascript/api/excel/excel.rangeformat#shrinktofit)|Указывает, сжимается ли автоматически текст для соответствия имеющейся ширине столбца.|
+|[RemoveDuplicatesResult](/javascript/api/excel/excel.removeduplicatesresult)|[removed](/javascript/api/excel/excel.removeduplicatesresult#removed)|Количество повторяющихся строк, удаленных операцией.|
+||[uniqueRemaining](/javascript/api/excel/excel.removeduplicatesresult#uniqueremaining)|Количество оставшихся уникальных строк, присутствующих в получившемся диапазоне.|
+|[ReplaceCriteria](/javascript/api/excel/excel.replacecriteria)|[completeMatch](/javascript/api/excel/excel.replacecriteria#completematch)|Указывает, должно ли совпадение быть полным или частичным. Значение по умолчанию: false (частичное).|
+||[matchCase](/javascript/api/excel/excel.replacecriteria#matchcase)|Указывает, учитывается ли регистр при сопоставлении. Значение по умолчанию: false (без учета регистра).|
+|[RowProperties](/javascript/api/excel/excel.rowproperties)|[address](/javascript/api/excel/excel.rowproperties#address)||
+||[addressLocal](/javascript/api/excel/excel.rowproperties#addresslocal)||
+||[hasSpill](/javascript/api/excel/excel.rowproperties#hasspill)||
+||[rowIndex](/javascript/api/excel/excel.rowproperties#rowindex)||
+|[SearchCriteria](/javascript/api/excel/excel.searchcriteria)|[completeMatch](/javascript/api/excel/excel.searchcriteria#completematch)|Указывает, должно ли совпадение быть полным или частичным. Значение по умолчанию: false (частичное).|
+||[matchCase](/javascript/api/excel/excel.searchcriteria#matchcase)|Указывает, учитывается ли регистр при сопоставлении. Значение по умолчанию: false (без учета регистра).|
+||[searchDirection](/javascript/api/excel/excel.searchcriteria#searchdirection)|Указывает направление поиска. Значение по умолчанию: вперед. См. статью Excel.SearchDirection.|
+|[SettableCellProperties](/javascript/api/excel/excel.settablecellproperties)|[format](/javascript/api/excel/excel.settablecellproperties#format)||
+||[hyperlink](/javascript/api/excel/excel.settablecellproperties#hyperlink)||
+||[style](/javascript/api/excel/excel.settablecellproperties#style)||
+|[SettableColumnProperties](/javascript/api/excel/excel.settablecolumnproperties)|[columnHidden](/javascript/api/excel/excel.settablecolumnproperties#columnhidden)||
+||[columnWidth](/javascript/api/excel/excel.settablecolumnproperties#columnwidth)||
+|[SettableRowProperties](/javascript/api/excel/excel.settablerowproperties)|[rowHeight](/javascript/api/excel/excel.settablerowproperties#rowheight)||
+||[rowHidden](/javascript/api/excel/excel.settablerowproperties#rowhidden)||
+|[Setting](/javascript/api/excel/excel.setting)|[](/javascript/api/excel/excel.setting#replacestringdatewithdate)||
+|[Shape](/javascript/api/excel/excel.shape)|[altTextDescription](/javascript/api/excel/excel.shape#alttextdescription)|Возвращает или задает строку описательного замещающего текста для объекта Shape, если объект сохранен на веб-странице.|
+||[altTextTitle](/javascript/api/excel/excel.shape#alttexttitle)|Возвращает или задает текстовую строку замещающего заголовка для объекта Shape, если объект сохранен на веб-странице.|
+||[delete()](/javascript/api/excel/excel.shape#delete--)|Удаляет фигуру|
+||[geometricShapeType](/javascript/api/excel/excel.shape#geometricshapetype)|Представляет геометрический тип указанной фигуры. Дополнительные сведения см. в статье Excel.GeometricShapeType. Возвращает значение null, если фигура не геометрическая, например запрос get GeometricShapeType для строки или диаграммы возвращает значение null.|
+||[height](/javascript/api/excel/excel.shape#height)|Представляет высоту фигуры (в пунктах).|
+||[incrementLeft(increment: number)](/javascript/api/excel/excel.shape#incrementleft-increment-)|Перемещает фигуру по горизонтали на указанное число пунктов.|
+||[incrementRotation(increment: number)](/javascript/api/excel/excel.shape#incrementrotation-increment-)|Изменяет угол поворота фигуры относительно оси Z на указанное число градусов.|
+||[incrementTop(increment: number)](/javascript/api/excel/excel.shape#incrementtop-increment-)|Перемещает фигуру по вертикали на указанное число пунктов.|
+||[left](/javascript/api/excel/excel.shape#left)|Расстояние в пунктах от левого края фигуры до левого края листа.|
+||[lockAspectRatio](/javascript/api/excel/excel.shape#lockaspectratio)|Представляет зафиксированные пропорции фигуры (в логических значениях).|
+||[name](/javascript/api/excel/excel.shape#name)|Представляет название фигуры.|
+||[placement](/javascript/api/excel/excel.shape#placement)|Представляет значение расположения, указывающее способ привязки объекта к ячейкам под ним.|
+||[fill](/javascript/api/excel/excel.shape#fill)|Возвращает формат заливки объекта shape. Только для чтения.|
+||[geometricShape](/javascript/api/excel/excel.shape#geometricshape)|Возвращает геометрическую фигуру для объекта shape. Возникает ошибка, если объект shape относится к другому типу фигуры (например, Image, SmartArt и т. д.), а не к типу GeometricShape.|
+||[group](/javascript/api/excel/excel.shape#group)|Возвращает группу фигуры для объекта shape. Возникает ошибка, если объект shape относится к другому типу фигуры (например, Image, SmartArt и т. д.), а не к типу GroupShape.|
+||[id](/javascript/api/excel/excel.shape#id)|Представляет идентификатор фигуры. Только для чтения.|
+||[image](/javascript/api/excel/excel.shape#image)|Возвращает изображение для объекта shape. Возникает ошибка, если объект shape относится к другому типу фигуры (например, GeometricShape, SmartArt и т. д.), а не к типу Image.|
+||[level](/javascript/api/excel/excel.shape#level)|Представляет уровень указанной фигуры. Уровень 0 означает фигуру, не являющуюся частью группы, уровень 1 означает, что фигура является частью группы верхнего уровня, и т. д.|
+||[line](/javascript/api/excel/excel.shape#line)|Возвращает объект line для объекта shape. Возникает ошибка, если объект shape относится к другому типу фигуры (например, GeometricShape, SmartArt и т. д.), а не к типу Image.|
+||[lineFormat](/javascript/api/excel/excel.shape#lineformat)|Возвращает формат линии для объекта shape. Только для чтения.|
+||[onActivated](/javascript/api/excel/excel.shape#onactivated)|Возникает, если фигура активирована.|
+||[onDeactivated](/javascript/api/excel/excel.shape#ondeactivated)|Возникает, если фигура активирована.|
+||[parentGroup](/javascript/api/excel/excel.shape#parentgroup)|Представляет родительскую группу указанной фигуры.|
+||[textFrame](/javascript/api/excel/excel.shape#textframe)|Возвращает объект textFrame фигуры. Только для чтения.|
+||[type](/javascript/api/excel/excel.shape#type)|Возвращает тип указанной фигуры. Только для чтения. Дополнительные сведения см. в статье Excel.ShapeType.|
+||[zorderPosition](/javascript/api/excel/excel.shape#zorderposition)|Возвращает положение указанной фигуры по оси Z. Значение самого нижнего положения фигуры по оси Z равно 0. Только для чтения.|
+||[rotation](/javascript/api/excel/excel.shape#rotation)|Представляет поворот фигуры в градусах.|
+||[saveAsPicture(format: "UNKNOWN" \| "BMP" \| "JPEG" \| "GIF" \| "PNG" \| "SVG")](/javascript/api/excel/excel.shape#saveaspicture-format-)|Сохраняет фигуру в виде рисунка и возвращает его как строку в кодировке base64 с установкой значения DPI равного 96. Поддерживается сохранение только в форматах Excel.PictureFormat.BMP, Excel.PictureFormat.PNG, Excel.PictureFormat.JPEG и Excel.PictureFormat.GIF.|
+||[saveAsPicture(format: Excel.PictureFormat)](/javascript/api/excel/excel.shape#saveaspicture-format-)|Сохраняет фигуру в виде рисунка и возвращает его как строку в кодировке base64 с установкой значения DPI равного 96. Поддерживается сохранение только в форматах Excel.PictureFormat.BMP, Excel.PictureFormat.PNG, Excel.PictureFormat.JPEG и Excel.PictureFormat.GIF.|
+||[scaleHeight(scaleFactor: number, scaleType: "CurrentSize" \| "OriginalSize", scaleFrom?: "ScaleFromTopLeft" \| "ScaleFromMiddle" \| "ScaleFromBottomRight")](/javascript/api/excel/excel.shape#scaleheight-scalefactor--scaletype--scalefrom-)|Масштабирует высоту фигуры с применением указанного коэффициента. Для рисунков можно указать, следует ли изменить масштаб фигуры относительно исходного или текущего размера. Фигуры, не являющиеся рисунками, всегда масштабируются относительно их текущей высоты.|
+||[scaleHeight(scaleFactor: number, scaleType: Excel.ShapeScaleType, scaleFrom?: Excel.ShapeScaleFrom)](/javascript/api/excel/excel.shape#scaleheight-scalefactor--scaletype--scalefrom-)|Масштабирует высоту фигуры с применением указанного коэффициента. Для рисунков можно указать, следует ли изменить масштаб фигуры относительно исходного или текущего размера. Фигуры, не являющиеся рисунками, всегда масштабируются относительно их текущей высоты.|
+||[scaleWidth(scaleFactor: number, scaleType: "CurrentSize" \| "OriginalSize", scaleFrom?: "ScaleFromTopLeft" \| "ScaleFromMiddle" \| "ScaleFromBottomRight")](/javascript/api/excel/excel.shape#scalewidth-scalefactor--scaletype--scalefrom-)|Масштабирует ширину фигуры с применением указанного коэффициента. Для рисунков можно указать, следует ли изменить масштаб фигуры относительно исходного или текущего размера. Фигуры, не являющиеся рисунками, всегда масштабируются относительно их текущей ширины.|
+||[scaleWidth(scaleFactor: number, scaleType: Excel.ShapeScaleType, scaleFrom?: Excel.ShapeScaleFrom)](/javascript/api/excel/excel.shape#scalewidth-scalefactor--scaletype--scalefrom-)|Масштабирует ширину фигуры с применением указанного коэффициента. Для рисунков можно указать, следует ли изменить масштаб фигуры относительно исходного или текущего размера. Фигуры, не являющиеся рисунками, всегда масштабируются относительно их текущей ширины.|
+||[setZOrder(value: "BringToFront" \| "BringForward" \| "SendToBack" \| "SendBackward")](/javascript/api/excel/excel.shape#setzorder-value-)|Помещает указанную фигуру перед или за другими фигурами в коллекции (то есть изменяет положение фигуры по оси Z).|
+||[setZOrder(value: Excel.ShapeZOrder)](/javascript/api/excel/excel.shape#setzorder-value-)|Помещает указанную фигуру перед или за другими фигурами в коллекции (то есть изменяет положение фигуры по оси Z).|
+||[top](/javascript/api/excel/excel.shape#top)|Расстояние в пунктах от верхнего края фигуры до верхнего края листа.|
+||[visible](/javascript/api/excel/excel.shape#visible)|Представляет видимость указанной фигуры (в логических значениях).|
+||[width](/javascript/api/excel/excel.shape#width)|Представляет ширину фигуры (в пунктах).|
+|[ShapeActivatedEventArgs](/javascript/api/excel/excel.shapeactivatedeventargs)|[shapeId](/javascript/api/excel/excel.shapeactivatedeventargs#shapeid)|Получает идентификатор активированной фигуры.|
+||[type](/javascript/api/excel/excel.shapeactivatedeventargs#type)|Получает тип события. Дополнительные сведения см. в статье Excel.EventType.|
+||[worksheetId](/javascript/api/excel/excel.shapeactivatedeventargs#worksheetid)|Получает идентификатор листа, в котором активирована фигура.|
+|[ShapeCollection](/javascript/api/excel/excel.shapecollection)|[addGeometricShape(geometricShapeType: "LineInverse" \| "Triangle" \| "RightTriangle" \| "Rectangle" \| "Diamond" \| "Parallelogram" \| "Trapezoid" \| "NonIsoscelesTrapezoid" \| "Pentagon" \| "Hexagon" \| "Heptagon" \| "Octagon" \| "Decagon" \| "Dodecagon" \| "Star4" \| "Star5" \| "Star6" \| "Star7" \| "Star8" \| "Star10" \| "Star12" \| "Star16" \| "Star24" \| "Star32" \| "RoundRectangle" \| "Round1Rectangle" \| "Round2SameRectangle" \| "Round2DiagonalRectangle" \| "SnipRoundRectangle" \| "Snip1Rectangle" \| "Snip2SameRectangle" \| "Snip2DiagonalRectangle" \| "Plaque" \| "Ellipse" \| "Teardrop" \| "HomePlate" \| "Chevron" \| "PieWedge" \| "Pie" \| "BlockArc" \| "Donut" \| "NoSmoking" \| "RightArrow" \| "LeftArrow" \| "UpArrow" \| "DownArrow" \| "StripedRightArrow" \| "NotchedRightArrow" \| "BentUpArrow" \| "LeftRightArrow" \| "UpDownArrow" \| "LeftUpArrow" \| "LeftRightUpArrow" \| "QuadArrow" \| "LeftArrowCallout" \| "RightArrowCallout" \| "UpArrowCallout" \| "DownArrowCallout" \| "LeftRightArrowCallout" \| "UpDownArrowCallout" \| "QuadArrowCallout" \| "BentArrow" \| "UturnArrow" \| "CircularArrow" \| "LeftCircularArrow" \| "LeftRightCircularArrow" \| "CurvedRightArrow" \| "CurvedLeftArrow" \| "CurvedUpArrow" \| "CurvedDownArrow" \| "SwooshArrow" \| "Cube" \| "Can" \| "LightningBolt" \| "Heart" \| "Sun" \| "Moon" \| "SmileyFace" \| "IrregularSeal1" \| "IrregularSeal2" \| "FoldedCorner" \| "Bevel" \| "Frame" \| "HalfFrame" \| "Corner" \| "DiagonalStripe" \| "Chord" \| "Arc" \| "LeftBracket" \| "RightBracket" \| "LeftBrace" \| "RightBrace" \| "BracketPair" \| "BracePair" \| "Callout1" \| "Callout2" \| "Callout3" \| "AccentCallout1" \| "AccentCallout2" \| "AccentCallout3" \| "BorderCallout1" \| "BorderCallout2" \| "BorderCallout3" \| "AccentBorderCallout1" \| "AccentBorderCallout2" \| "AccentBorderCallout3" \| "WedgeRectCallout" \| "WedgeRRectCallout" \| "WedgeEllipseCallout" \| "CloudCallout" \| "Cloud" \| "Ribbon" \| "Ribbon2" \| "EllipseRibbon" \| "EllipseRibbon2" \| "LeftRightRibbon" \| "VerticalScroll" \| "HorizontalScroll" \| "Wave" \| "DoubleWave" \| "Plus" \| "FlowChartProcess" \| "FlowChartDecision" \| "FlowChartInputOutput" \| "FlowChartPredefinedProcess" \| "FlowChartInternalStorage" \| "FlowChartDocument" \| "FlowChartMultidocument" \| "FlowChartTerminator" \| "FlowChartPreparation" \| "FlowChartManualInput" \| "FlowChartManualOperation" \| "FlowChartConnector" \| "FlowChartPunchedCard" \| "FlowChartPunchedTape" \| "FlowChartSummingJunction" \| "FlowChartOr" \| "FlowChartCollate" \| "FlowChartSort" \| "FlowChartExtract" \| "FlowChartMerge" \| "FlowChartOfflineStorage" \| "FlowChartOnlineStorage" \| "FlowChartMagneticTape" \| "FlowChartMagneticDisk" \| "FlowChartMagneticDrum" \| "FlowChartDisplay" \| "FlowChartDelay" \| "FlowChartAlternateProcess" \| "FlowChartOffpageConnector" \| "ActionButtonBlank" \| "ActionButtonHome" \| "ActionButtonHelp" \| "ActionButtonInformation" \| "ActionButtonForwardNext" \| "ActionButtonBackPrevious" \| "ActionButtonEnd" \| "ActionButtonBeginning" \| "ActionButtonReturn" \| "ActionButtonDocument" \| "ActionButtonSound" \| "ActionButtonMovie" \| "Gear6" \| "Gear9" \| "Funnel" \| "MathPlus" \| "MathMinus" \| "MathMultiply" \| "MathDivide" \| "MathEqual" \| "MathNotEqual" \| "CornerTabs" \| "SquareTabs" \| "PlaqueTabs" \| "ChartX" \| "ChartStar" \| "ChartPlus", left: number, top: number, width: number, height: number)](/javascript/api/excel/excel.shapecollection#addgeometricshape-geometricshapetype--left--top--width--height-)|Добавляет геометрическую фигуру на лист. Возвращает объект Shape, представляющий новую фигуру.|
+||[addGeometricShape(geometricShapeType: Excel.GeometricShapeType, left: number, top: number, width: number, height: number)](/javascript/api/excel/excel.shapecollection#addgeometricshape-geometricshapetype--left--top--width--height-)|Добавляет геометрическую фигуру на лист. Возвращает объект Shape, представляющий новую фигуру.|
+||[addGroup(values: Array<string \| Shape>)](/javascript/api/excel/excel.shapecollection#addgroup-values-)|Группирует подмножество фигур на листе. Возвращает объект Shape, представляющий новую группу фигур.|
+||[addImage(base64ImageString: string)](/javascript/api/excel/excel.shapecollection#addimage-base64imagestring-)|Создает изображение из строки base64 и добавляет его на лист. Возвращает объект Shape, представляющий новое изображение.|
+||[addLine(startLeft: number, startTop: number, endLeft: number, endTop: number, connectorType?: "Straight" \| "Elbow" \| "Curve")](/javascript/api/excel/excel.shapecollection#addline-startleft--starttop--endleft--endtop--connectortype-)|Добавляет линию на лист. Возвращает объект Shape, представляющий новую линию.|
+||[addLine(startLeft: number, startTop: number, endLeft: number, endTop: number, connectorType?: Excel.ConnectorType)](/javascript/api/excel/excel.shapecollection#addline-startleft--starttop--endleft--endtop--connectortype-)|Добавляет линию на лист. Возвращает объект Shape, представляющий новую линию.|
+||[addSVG(xmlImageString: string)](/javascript/api/excel/excel.shapecollection#addsvg-xmlimagestring-)|Создает изображение SVG из строки XML и добавляет его на лист. Возвращает объект Shape, представляющий новое изображение.|
+||[addTextBox(text?: string)](/javascript/api/excel/excel.shapecollection#addtextbox-text-)|Добавляет текстовое поле на лист путем указания его текстового содержимого. Возвращает объект Shape, представляющий новое текстовое поле.|
+||[getCount()](/javascript/api/excel/excel.shapecollection#getcount--)|Возвращает количество фигур на листе. Только для чтения.|
+||[getItem(name: string)](/javascript/api/excel/excel.shapecollection#getitem-name-)|Получает фигуру по имени.|
+||[getItemAt(index: number)](/javascript/api/excel/excel.shapecollection#getitemat-index-)|Получает фигуру на основе ее позиции в коллекции.|
+||[load(option?: OfficeExtension.LoadOption)](/javascript/api/excel/excel.shapecollection#load-option-)|Добавляет в очередь команду для загрузки указанных свойств объекта. Перед чтением свойств необходимо вызвать метод context.sync().|
+||[items](/javascript/api/excel/excel.shapecollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
+|[ShapeDeactivatedEventArgs](/javascript/api/excel/excel.shapedeactivatedeventargs)|[shapeId](/javascript/api/excel/excel.shapedeactivatedeventargs#shapeid)|Получает идентификатор деактивированной фигуры.|
+||[type](/javascript/api/excel/excel.shapedeactivatedeventargs#type)|Получает тип события. Дополнительные сведения см. в статье Excel.EventType.|
+||[worksheetId](/javascript/api/excel/excel.shapedeactivatedeventargs#worksheetid)|Получает идентификатор листа, в котором деактивирована фигура.|
+|[ShapeFill](/javascript/api/excel/excel.shapefill)|[clear()](/javascript/api/excel/excel.shapefill#clear--)|Очищает формат заливки объекта shape.|
+||[foreColor](/javascript/api/excel/excel.shapefill#forecolor)|Представляет цвет текста заливки фигуры в формате HTML в виде #RRGGBB (например, FFA500) или в виде ключевого слова (например, orange).|
+||[type](/javascript/api/excel/excel.shapefill#type)|Возвращает тип заливки фигуры. Только для чтения. Дополнительные сведения см. в статье Excel.ShapeFillType.|
+||[setSolidColor(color: string)](/javascript/api/excel/excel.shapefill#setsolidcolor-color-)|Устанавливает формат заливки для объекта shape с использованием одного цвета, изменяя тип заливки на сплошную заливку.|
+||[transparency](/javascript/api/excel/excel.shapefill#transparency)|Возвращает или задает степень прозрачности указанной заливки как значение от 0,0 (непрозрачная) до 1,0 (полностью прозрачная). Для типов фигур, не поддерживающих API, или специального типа заливки с несогласованной прозрачностью, возвращает значение null. Например, градиентная заливка может иметь несогласованную прозрачность.|
+|[ShapeFont](/javascript/api/excel/excel.shapefont)|[bold](/javascript/api/excel/excel.shapefont#bold)|Указывает, является ли шрифт полужирным. Возвращает значение null, если объект TextRange включает фрагменты как с полужирным, так и без полужирного текста.|
+||[color](/javascript/api/excel/excel.shapefont#color)|HTML-код цвета текста. Например, #FF0000 обозначает красный. Возвращает значение null, если объект TextRange включает фрагменты текста с разными цветами.|
+||[italic](/javascript/api/excel/excel.shapefont#italic)|Указывает, применяется ли курсив. Возвращает значение null, если объект TextRange включает фрагменты текста как выделенные, так и не выделенные курсивом.|
+||[name](/javascript/api/excel/excel.shapefont#name)|Представляет имя шрифта (например, Calibri). Если текст является набором сложных знаков или написан на восточноазиатских языках, представляет соответствующее имя шрифта. В противном случае представляет имя шрифта на латинице.|
+||[size](/javascript/api/excel/excel.shapefont#size)|Представляет размер шрифта в пунктах (например, 11). Возвращает значение null, если объект TextRange включает фрагменты текста с разными размерами шрифта.|
+||[underline](/javascript/api/excel/excel.shapefont#underline)|Тип подчеркивания, применяемый для шрифта. Возвращает значение null, если объект TextRange включает фрагменты текста с разными стилями подчеркивания. Дополнительные сведения см. в статье Excel.ShapeFontUnderlineStyle.|
+|[ShapeGroup](/javascript/api/excel/excel.shapegroup)|[id](/javascript/api/excel/excel.shapegroup#id)|Представляет идентификатор фигуры. Только для чтения.|
+||[shape](/javascript/api/excel/excel.shapegroup#shape)|Возвращает объект shape для группы. Только для чтения.|
+||[shapes](/javascript/api/excel/excel.shapegroup#shapes)|Возвращает коллекцию фигур в группе. Только для чтения.|
+||[ungroup()](/javascript/api/excel/excel.shapegroup#ungroup--)|Отменяет группировку любых сгруппированных фигур в указанной группе фигур.|
+|[ShapeLineFormat](/javascript/api/excel/excel.shapelineformat)|[color](/javascript/api/excel/excel.shapelineformat#color)|Представляет цвет линии в формате HTML в виде #RRGGBB (например, FFA500) или в виде ключевого слова (например, orange).|
+||[dashStyle](/javascript/api/excel/excel.shapelineformat#dashstyle)|Представляет тип линии фигуры. Возвращает значение null, если линия является невидимой или содержит свойство со смешанным стилем штриха (например, тип группы или фигуру). Дополнительные сведения см. в статье Excel.ShapeLineStyle.|
+||[style](/javascript/api/excel/excel.shapelineformat#style)|Представляет тип линии объекта shape. Возвращает значение null, если линия является невидимой или содержит свойство со смешанной видимостью линии (например, тип группы или фигуру). Дополнительные сведения см. в статье Excel.ShapeLineStyle.|
+||[transparency](/javascript/api/excel/excel.shapelineformat#transparency)|Представляет степень прозрачности указанной линии как значение от 0,0 (непрозрачная) до 1,0 (полностью прозрачная). Возвращает значение null, если фигура содержит свойство со смешанной прозрачностью линии (например, тип группы или фигуру).|
+||[visible](/javascript/api/excel/excel.shapelineformat#visible)|Указывает, отображается ли форматирование линии элемента фигуры. Возвращает значение null, если фигура содержит свойство со смешанной видимостью линии (например, тип группы или фигуру).|
+||[weight](/javascript/api/excel/excel.shapelineformat#weight)|Представляет толщину линии (в пунктах). Возвращает значение null, если линия является невидимой или содержит свойство со смешанной толщиной линии (например, тип группы или фигуру).|
+|[Slicer](/javascript/api/excel/excel.slicer)|[caption](/javascript/api/excel/excel.slicer#caption)|Представляет подпись среза.|
+||[clearFilters()](/javascript/api/excel/excel.slicer#clearfilters--)|Удаляет все фильтры, примененные к срезу.|
+||[delete()](/javascript/api/excel/excel.slicer#delete--)|Удаляет срез.|
+||[getSelectedItems()](/javascript/api/excel/excel.slicer#getselecteditems--)|Возвращает массив имен выбранных элементов. Только для чтения.|
+||[height](/javascript/api/excel/excel.slicer#height)|Представляет высоту среза (в пунктах).|
+||[left](/javascript/api/excel/excel.slicer#left)|Представляет расстояние в пунктах от левого края среза до левого края листа.|
+||[name](/javascript/api/excel/excel.slicer#name)|Представляет имя среза.|
+||[nameInFormula](/javascript/api/excel/excel.slicer#nameinformula)|Представляет имя, используемое в формуле.|
+||[id](/javascript/api/excel/excel.slicer#id)|Представляет уникальный идентификатор среза. Только для чтения.|
+||[isFilterCleared](/javascript/api/excel/excel.slicer#isfiltercleared)|Значение true, если удалены все фильтры, примененные к срезу.|
+||[slicerItems](/javascript/api/excel/excel.slicer#sliceritems)|Представляет коллекцию объектов SlicerItem, которые являются частью среза. Только для чтения.|
+||[worksheet](/javascript/api/excel/excel.slicer#worksheet)|Представляет лист, содержащий срез. Только для чтения.|
+||[selectItems(items?: string[])](/javascript/api/excel/excel.slicer#selectitems-items-)|Выделяет элементы среза на основе их имен. Предыдущее выделение очищается.|
+||[sortBy](/javascript/api/excel/excel.slicer#sortby)|Представляет порядок сортировки элементов в срезе.|
+||[style](/javascript/api/excel/excel.slicer#style)|Постоянное значение, представляющее стиль среза. Возможные значения: SlicerStyleLight1–SlicerStyleLight6, TableStyleOther1–TableStyleOther2, SlicerStyleDark1–SlicerStyleDark6. Также можно указать настраиваемый пользовательский стиль, имеющийся в книге.|
+||[top](/javascript/api/excel/excel.slicer#top)|Представляет расстояние в пунктах от верхнего края среза до правого края листа.|
+||[width](/javascript/api/excel/excel.slicer#width)|Представляет ширину среза (в пунктах).|
+|[SlicerCollection](/javascript/api/excel/excel.slicercollection)|[add(slicerSource: string \| PivotTable \| Table, sourceField: string \| PivotField \| number \| TableColumn, slicerDestination?: string \| Worksheet)](/javascript/api/excel/excel.slicercollection#add-slicersource--sourcefield--slicerdestination-)|Добавляет новый срез в книгу.|
+||[getCount()](/javascript/api/excel/excel.slicercollection#getcount--)|Возвращает количество срезов в коллекции.|
+||[getItem(key: string)](/javascript/api/excel/excel.slicercollection#getitem-key-)|Получает объект slicer по его имени или ИД.|
+||[getItemAt(index: number)](/javascript/api/excel/excel.slicercollection#getitemat-index-)|Получает срез на основе его позиции в коллекции.|
+||[getItemOrNullObject(key: string)](/javascript/api/excel/excel.slicercollection#getitemornullobject-key-)|Получает срез по его имени или ИД. Если срез не существует, возвращает пустой объект.|
+||[load(option?: OfficeExtension.LoadOption)](/javascript/api/excel/excel.slicercollection#load-option-)|Добавляет в очередь команду для загрузки указанных свойств объекта. Перед чтением свойств необходимо вызвать метод context.sync().|
+||[items](/javascript/api/excel/excel.slicercollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
+|[SlicerItem](/javascript/api/excel/excel.sliceritem)|[isSelected](/javascript/api/excel/excel.sliceritem#isselected)|Значение true, если выбран элемент среза. Установка этого значения не удаляет выбранное состояние других объектов SlicerItem.|
+||[hasData](/javascript/api/excel/excel.sliceritem#hasdata)|Значение true, если элемент среза содержит данные. |
+||[key](/javascript/api/excel/excel.sliceritem#key)|Представляет уникальное значение, соответствующее элементу среза.|
+||[name](/javascript/api/excel/excel.sliceritem#name)|Представляет значение, отображаемое в пользовательском интерфейсе.|
+|[SlicerItemCollection](/javascript/api/excel/excel.sliceritemcollection)|[getCount()](/javascript/api/excel/excel.sliceritemcollection#getcount--)|Возвращает количество элементов в срезе.|
+||[getItem(key: string)](/javascript/api/excel/excel.sliceritemcollection#getitem-key-)|Получает объект элемента среза по ключу или имени.|
+||[getItemAt(index: number)](/javascript/api/excel/excel.sliceritemcollection#getitemat-index-)|Получает элемент среза на основе его позиции в коллекции.|
+||[getItemOrNullObject(key: string)](/javascript/api/excel/excel.sliceritemcollection#getitemornullobject-key-)|Получает элемент среза по ключу или имени. Если элемент среза не существует, возвращает пустой объект.|
+||[load(option?: OfficeExtension.LoadOption)](/javascript/api/excel/excel.sliceritemcollection#load-option-)|Добавляет в очередь команду для загрузки указанных свойств объекта. Перед чтением свойств необходимо вызвать метод context.sync().|
+||[items](/javascript/api/excel/excel.sliceritemcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
+|[SortField](/javascript/api/excel/excel.sortfield)|[subField](/javascript/api/excel/excel.sortfield#subfield)|Представляет подполе, являющееся именем целевого свойства форматированного значения, по которому выполняется сортировка.|
+|[StyleCollection](/javascript/api/excel/excel.stylecollection)|[getCount()](/javascript/api/excel/excel.stylecollection#getcount--)|Получает количество стилей в коллекции.|
+||[getItemAt(index: number)](/javascript/api/excel/excel.stylecollection#getitemat-index-)|Получает стиль на основе его позиции в коллекции.|
+|[Table](/javascript/api/excel/excel.table)|[clearStyle()](/javascript/api/excel/excel.table#clearstyle--)|Изменяет таблицу для использования стиля таблицы по умолчанию.|
+||[autoFilter](/javascript/api/excel/excel.table#autofilter)|Представляет объект AutoFilter таблицы. Только для чтения.|
+||[onFiltered](/javascript/api/excel/excel.table#onfiltered)|Возникает, если применен фильтр к указанной таблице.|
+|[TableAddedEventArgs](/javascript/api/excel/excel.tableaddedeventargs)|[source](/javascript/api/excel/excel.tableaddedeventargs#source)|Получает источник события. Дополнительные сведения см. в статье Excel.EventSource.|
+||[tableId](/javascript/api/excel/excel.tableaddedeventargs#tableid)|Получает идентификатор добавленной таблицы.|
+||[type](/javascript/api/excel/excel.tableaddedeventargs#type)|Получает тип события. Дополнительные сведения см. в статье Excel.EventType.|
+||[worksheetId](/javascript/api/excel/excel.tableaddedeventargs#worksheetid)|Получает идентификатор листа, в который добавлена таблица.|
+|[TableCollection](/javascript/api/excel/excel.tablecollection)|[onAdded](/javascript/api/excel/excel.tablecollection#onadded)|Возникает, если в книгу добавлена новая таблица.|
+||[onDeleted](/javascript/api/excel/excel.tablecollection#ondeleted)|Возникает, если указанная таблица удалена из книги.|
+||[onFiltered](/javascript/api/excel/excel.tablecollection#onfiltered)|Возникает, если применен фильтр к любой таблице в книге или листе.|
+|[TableDeletedEventArgs](/javascript/api/excel/excel.tabledeletedeventargs)|[source](/javascript/api/excel/excel.tabledeletedeventargs#source)|Указывает источник события. Дополнительные сведения см. в статье Excel.EventSource.|
+||[tableId](/javascript/api/excel/excel.tabledeletedeventargs#tableid)|Указывает идентификатор удаленной таблицы.|
+||[tableName](/javascript/api/excel/excel.tabledeletedeventargs#tablename)|Указывает имя удаленной таблицы.|
+||[type](/javascript/api/excel/excel.tabledeletedeventargs#type)|Указывает тип события. Дополнительные сведения см. в статье Excel.EventType.|
+||[worksheetId](/javascript/api/excel/excel.tabledeletedeventargs#worksheetid)|Указывает идентификатор листа, в котором удаляется таблица.|
+|[TableFilteredEventArgs](/javascript/api/excel/excel.tablefilteredeventargs)|[tableId](/javascript/api/excel/excel.tablefilteredeventargs#tableid)|Представляет идентификатор таблицы, в которой применен фильтр.|
+||[type](/javascript/api/excel/excel.tablefilteredeventargs#type)|Представляет тип события. Дополнительные сведения см. в статье Excel.EventType.|
+||[worksheetId](/javascript/api/excel/excel.tablefilteredeventargs#worksheetid)|Представляет идентификатор листа, содержащего таблицу.|
+|[TableScopedCollection](/javascript/api/excel/excel.tablescopedcollection)|[getCount()](/javascript/api/excel/excel.tablescopedcollection#getcount--)|Получает количество таблиц в коллекции.|
+||[getFirst()](/javascript/api/excel/excel.tablescopedcollection#getfirst--)|Получает первую таблицу в коллекции. Таблицы в коллекции сортируются сверху вниз и слева направо, поэтому верхняя левая таблица является первой в коллекции.|
+||[getItem(key: string)](/javascript/api/excel/excel.tablescopedcollection#getitem-key-)|Получает таблицу по имени или идентификатору.|
+||[load(option?: OfficeExtension.LoadOption)](/javascript/api/excel/excel.tablescopedcollection#load-option-)|Добавляет в очередь команду для загрузки указанных свойств объекта. Перед чтением свойств необходимо вызвать метод context.sync().|
+||[items](/javascript/api/excel/excel.tablescopedcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
+|[TextFrame](/javascript/api/excel/excel.textframe)|[autoSize](/javascript/api/excel/excel.textframe#autosize)|Возвращает или задает параметры автоматического подбора размера для рамки с текстом. Для рамки с текстом можно настроить автоматический подбор размера текста в соответствии с размером рамки или автоматический подбор размера рамки в соответствии с содержимым либо не применять автоматический подбор размера.|
+||[bottomMargin](/javascript/api/excel/excel.textframe#bottommargin)|Представляет нижнее поле рамки с текстом (в пунктах).|
+||[deleteText()](/javascript/api/excel/excel.textframe#deletetext--)|Удаляет весь текст в рамке с текстом.|
+||[horizontalAlignment](/javascript/api/excel/excel.textframe#horizontalalignment)|Представляет горизонтальное выравнивание рамки с текстом.|
+||[horizontalOverflow](/javascript/api/excel/excel.textframe#horizontaloverflow)|Представляет тип горизонтального переполнения рамки с текстом.|
+||[leftMargin](/javascript/api/excel/excel.textframe#leftmargin)|Представляет левое поле рамки с текстом (в пунктах).|
+||[orientation](/javascript/api/excel/excel.textframe#orientation)|Представляет ориентацию текста для рамки с текстом.|
+||[readingOrder](/javascript/api/excel/excel.textframe#readingorder)|Представляет направление чтения рамки с текстом (справа налево или слева направо).|
+||[hasText](/javascript/api/excel/excel.textframe#hastext)|Указывает, содержит ли объект TextFrame текст.|
+||[textRange](/javascript/api/excel/excel.textframe#textrange)||
+||[rightMargin](/javascript/api/excel/excel.textframe#rightmargin)|Представляет правое поле рамки с текстом (в пунктах).|
+||[topMargin](/javascript/api/excel/excel.textframe#topmargin)|Представляет верхнее поле рамки с текстом (в пунктах).|
+||[verticalAlignment](/javascript/api/excel/excel.textframe#verticalalignment)|Представляет вертикальное выравнивание для рамки с текстом.|
+||[verticalOverflow](/javascript/api/excel/excel.textframe#verticaloverflow)|Представляет тип вертикального переполнения рамки с текстом.|
+|[TextRange](/javascript/api/excel/excel.textrange)|[getCharacters(start: number, length?: number)](/javascript/api/excel/excel.textrange#getcharacters-start--length-)|Возвращает объект TextRange для символов в указанном диапазоне.|
+||[font](/javascript/api/excel/excel.textrange#font)|Возвращает объект ShapeFont, представляющий атрибуты шрифта для диапазона текста. Только для чтения.|
+||[text](/javascript/api/excel/excel.textrange#text)|Представляет содержимое с обычным текстом в диапазоне текста.|
+|[Workbook](/javascript/api/excel/excel.workbook)|[chartDataPointTrack](/javascript/api/excel/excel.workbook#chartdatapointtrack)|Значение true, если все диаграммы в книге отслеживают точки фактических данных, с которыми они связаны.|
+||[close(closeBehavior?: "Save" \| "SkipSave")](/javascript/api/excel/excel.workbook#close-closebehavior-)|Закрывает текущую книгу.|
+||[close(closeBehavior?: Excel.CloseBehavior)](/javascript/api/excel/excel.workbook#close-closebehavior-)|Закрывает текущую книгу.|
+||[getActiveChart()](/javascript/api/excel/excel.workbook#getactivechart--)|Получает текущую активную диаграмму в книге. Если активная диаграмма отсутствует, при вызове этого оператора возникает исключение|
+||[getActiveChartOrNullObject()](/javascript/api/excel/excel.workbook#getactivechartornullobject--)|Получает текущую активную диаграмму в книге. Если активная диаграмма отсутствует, возвращает пустой объект|
+||[getActiveSlicer()](/javascript/api/excel/excel.workbook#getactiveslicer--)|Получает текущий активный срез в книге. Если активный срез отсутствует, при вызове этого оператора возникает исключение.|
+||[getActiveSlicerOrNullObject()](/javascript/api/excel/excel.workbook#getactiveslicerornullobject--)|Получает текущий активный срез в книге. Если активный срез отсутствует, возвращает пустой объект|
+||[getIsActiveCollabSession()](/javascript/api/excel/excel.workbook#getisactivecollabsession--)|Значение true, если книга редактируется несколькими пользователями (совместное редактирование).|
+||[getSelectedRanges()](/javascript/api/excel/excel.workbook#getselectedranges--)|Получает текущий выделенный диапазон (один или несколько) в книге. В отличие от getSelectedRange() этот метод возвращает объект RangeAreas, представляющий все выделенные диапазоны.|
+||[isDirty](/javascript/api/excel/excel.workbook#isdirty)|Значение true, если в указанную книгу не были внесены изменения с момента последнего сохранения.|
+||[autoSave](/javascript/api/excel/excel.workbook#autosave)|Значение true, если книга находится в режиме автоматического сохранения.|
+||[calculationEngineVersion](/javascript/api/excel/excel.workbook#calculationengineversion)|Возвращает номер версии модуля вычислений Excel. Только для чтения.|
+||[comments](/javascript/api/excel/excel.workbook#comments)|Представляет коллекцию примечаний, связанных с книгой. Только для чтения.|
+||[onAutoSaveSettingChanged](/javascript/api/excel/excel.workbook#onautosavesettingchanged)|Возникает при изменении параметра автосохранения для книги.|
+||[previouslySaved](/javascript/api/excel/excel.workbook#previouslysaved)|Значение true, если книга сохранялась локально или в Интернете.|
+||[slicers](/javascript/api/excel/excel.workbook#slicers)|Представляет коллекцию срезов, связанных с книгой. Только для чтения.|
+||[save(saveBehavior?: "Save" \| "Prompt")](/javascript/api/excel/excel.workbook#save-savebehavior-)|Сохраняет текущую книгу.|
+||[save(saveBehavior?: Excel.SaveBehavior)](/javascript/api/excel/excel.workbook#save-savebehavior-)|Сохраняет текущую книгу.|
+||[use1904DateSystem](/javascript/api/excel/excel.workbook#use1904datesystem)|Значение true, если в книге используется система дат 1904.|
+||[usePrecisionAsDisplayed](/javascript/api/excel/excel.workbook#useprecisionasdisplayed)|Значение true, если вычисления в книге выполняются только с той точностью чисел, с которой они отображаются.|
+|[Worksheet](/javascript/api/excel/excel.worksheet)|[enableCalculation](/javascript/api/excel/excel.worksheet#enablecalculation)|Получает или задает свойство enableCalculation для листа.|
+||[findAll(text: string, criteria: Excel.WorksheetSearchCriteria)](/javascript/api/excel/excel.worksheet#findall-text--criteria-)|Находит все вхождения определенной строки на основе указанных условий и возвращает их в виде объекта RangeAreas, состоящего из одного или нескольких прямоугольных диапазонов.|
+||[findAllOrNullObject(text: string, criteria: Excel.WorksheetSearchCriteria)](/javascript/api/excel/excel.worksheet#findallornullobject-text--criteria-)|Находит все вхождения определенной строки на основе указанных условий и возвращает их в виде объекта RangeAreas, состоящего из одного или нескольких прямоугольных диапазонов.|
+||[getRanges(address?: string)](/javascript/api/excel/excel.worksheet#getranges-address-)|Получает объект RangeAreas, представляющий один или несколько блоков прямоугольных диапазонов, указанных по адресу или имени.|
+||[autoFilter](/javascript/api/excel/excel.worksheet#autofilter)|Представляет объект AutoFilter листа. Только для чтения.|
+||[comments](/javascript/api/excel/excel.worksheet#comments)|Возвращает коллекцию всех объектов Comments на листе. Только для чтения.|
+||[horizontalPageBreaks](/javascript/api/excel/excel.worksheet#horizontalpagebreaks)|Получает коллекцию горизонтальных разрывов страницы для листа. Эта коллекция содержит только добавленные вручную разрывы страниц.|
+||[onFiltered](/javascript/api/excel/excel.worksheet#onfiltered)|Возникает, если применен фильтр к указанному листу.|
+||[onFormatChanged](/javascript/api/excel/excel.worksheet#onformatchanged)|Возникает, если изменен формат указанного листа.|
+||[pageLayout](/javascript/api/excel/excel.worksheet#pagelayout)|Получает объект PageLayout листа.|
+||[shapes](/javascript/api/excel/excel.worksheet#shapes)|Возвращает коллекцию всех объектов Shape на листе. Только для чтения.|
+||[slicers](/javascript/api/excel/excel.worksheet#slicers)|Возвращает коллекцию срезов, имеющихся на листе. Только для чтения.|
+||[verticalPageBreaks](/javascript/api/excel/excel.worksheet#verticalpagebreaks)|Получает коллекцию вертикальных разрывов страницы для листа. Эта коллекция содержит только добавленные вручную разрывы страниц.|
+||[replaceAll(text: string, replacement: string, criteria: Excel.ReplaceCriteria)](/javascript/api/excel/excel.worksheet#replaceall-text--replacement--criteria-)|Находит и заменяет определенную строку на основе условий, указанных в текущем листе.|
+|[WorksheetCollection](/javascript/api/excel/excel.worksheetcollection)|[addFromBase64(base64File: string, sheetNamesToInsert?: string[], positionType?: "None" \| "Before" \| "After" \| "Beginning" \| "End", relativeTo?: Worksheet \| string)](/javascript/api/excel/excel.worksheetcollection#addfrombase64-base64file--sheetnamestoinsert--positiontype--relativeto-)|Вставляет указанные листы книги в текущую книгу.|
+||[addFromBase64(base64File: string, sheetNamesToInsert?: string[], positionType?: Excel.WorksheetPositionType, relativeTo?: Worksheet \| string)](/javascript/api/excel/excel.worksheetcollection#addfrombase64-base64file--sheetnamestoinsert--positiontype--relativeto-)|Вставляет указанные листы книги в текущую книгу.|
+||[onChanged](/javascript/api/excel/excel.worksheetcollection#onchanged)|Возникает при изменении любого листа в книге.|
+||[onFiltered](/javascript/api/excel/excel.worksheetcollection#onfiltered)|Возникает при применении любого фильтра листа в книге.|
+||[onFormatChanged](/javascript/api/excel/excel.worksheetcollection#onformatchanged)|Возникает при изменении формата любого листа в книге.|
+||[onSelectionChanged](/javascript/api/excel/excel.worksheetcollection#onselectionchanged)|Возникает при изменениях выделения на любом листе.|
+|[WorksheetFilteredEventArgs](/javascript/api/excel/excel.worksheetfilteredeventargs)|[type](/javascript/api/excel/excel.worksheetfilteredeventargs#type)|Представляет тип события. Дополнительные сведения см. в статье Excel.EventType.|
+||[worksheetId](/javascript/api/excel/excel.worksheetfilteredeventargs#worksheetid)|Представляет идентификатор листа, в котором применен фильтр.|
+|[WorksheetFormatChangedEventArgs](/javascript/api/excel/excel.worksheetformatchangedeventargs)|[address](/javascript/api/excel/excel.worksheetformatchangedeventargs#address)|Получает адрес диапазона, представляющий измененную область конкретного листа.|
+||[getRange(ctx: Excel.RequestContext)](/javascript/api/excel/excel.worksheetformatchangedeventargs#getrange-ctx-)|Получает диапазон, представляющий измененную область конкретного листа.|
+||[getRangeOrNullObject(ctx: Excel.RequestContext)](/javascript/api/excel/excel.worksheetformatchangedeventargs#getrangeornullobject-ctx-)|Получает диапазон, представляющий измененную область конкретного листа. Может возвращать пустой объект.|
+||[source](/javascript/api/excel/excel.worksheetformatchangedeventargs#source)|Получает источник события. Дополнительные сведения см. в статье Excel.EventSource.|
+||[type](/javascript/api/excel/excel.worksheetformatchangedeventargs#type)|Получает тип события. Дополнительные сведения см. в статье Excel.EventType.|
+||[worksheetId](/javascript/api/excel/excel.worksheetformatchangedeventargs#worksheetid)|Получает идентификатор листа, в котором изменены данные.|
+|[WorksheetSearchCriteria](/javascript/api/excel/excel.worksheetsearchcriteria)|[completeMatch](/javascript/api/excel/excel.worksheetsearchcriteria#completematch)|Указывает, должно ли совпадение быть полным или частичным. Значение по умолчанию: false (частичное).|
+||[matchCase](/javascript/api/excel/excel.worksheetsearchcriteria#matchcase)|Указывает, учитывается ли регистр при сопоставлении. Значение по умолчанию: false (без учета регистра).|
 
 ## <a name="whats-new-in-excel-javascript-api-18"></a>Новые возможности API JavaScript для Excel 1.8
 
@@ -63,7 +638,6 @@ ms.locfileid: "29742473"
 ### <a name="events"></a>События
 
 Для диаграмм добавлены [дополнительные](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-events) события. Пусть ваша надстройка реагирует на взаимодействие пользователей с диаграммой. Вы также можете [включать и отключать события](https://docs.microsoft.com/office/dev/add-ins/excel/performance#enable-and-disable-events), запускаемые во всей книге.
-
 
 |Объект| Новые возможности| Описание|Набор обязательных элементов|
 |:----|:----|:----|:----|
