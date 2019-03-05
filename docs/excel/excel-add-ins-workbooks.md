@@ -1,14 +1,14 @@
 ---
 title: Работа с книгами с использованием API JavaScript для Excel
 description: ''
-ms.date: 02/20/2019
+ms.date: 02/28/2019
 localization_priority: Priority
-ms.openlocfilehash: 3d0cbc21d7e6b5c987df5a29d1aa83790c5685bc
-ms.sourcegitcommit: 8e20e7663be2aaa0f7a5436a965324d171bc667d
+ms.openlocfilehash: eb647fe7f82dc669f071de53f6bac705e303c652
+ms.sourcegitcommit: f7f3d38ae4430e2218bf0abe7bb2976108de3579
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "30199594"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "30359270"
 ---
 # <a name="work-with-workbooks-using-the-excel-javascript-api"></a>Работа с книгами с использованием API JavaScript для Excel
 
@@ -86,14 +86,14 @@ addFromBase64(base64File: string, sheetNamesToInsert?: string[], positionType?: 
 В примере ниже показаны листы книги, которые были вставлены в текущую книгу непосредственно после активного листа. Обратите внимание, что `null` передается для параметра `sheetNamesToInsert?: string[]`. Это означает, что все листы были вставлены.
 
 ```js
-var myFile = <HTMLInputElement>document.getElementById("file");
+var myFile = document.getElementById("file");
 var reader = new FileReader();
 
 reader.onload = (event) => {
     Excel.run((context) => {
         // strip off the metadata before the base64-encoded string
-        var startIndex = (<string>(<FileReader>event.target).result).indexOf("base64,");
-        var workbookContents = (<string>(<FileReader>event.target).result).substr(startIndex + 7);
+        var startIndex = event.target.result.indexOf("base64,");
+        var workbookContents = event.target.result.substr(startIndex + 7);
 
         var sheets = context.workbook.worksheets;
         sheets.addFromBase64(
@@ -260,6 +260,37 @@ API Excel также позволяет надстройкам отключит�
 
 ```js
 context.application.suspendApiCalculationUntilNextSync();
+```
+
+## <a name="save-the-workbook"></a>Сохраните книгу.
+
+> [!NOTE]
+> Функция `Workbook.save(saveBehavior)` в настоящее время доступна только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-preview-apis.md)]
+
+`Workbook.save(saveBehavior)` сохраняет книгу в постоянную хранилище. Метод `save` имеет один необязательный параметр, который может иметь одно из следующих значений:
+
+- `Excel.SaveBehavior.save` (по умолчанию): файл будет сохранен без предварительного запроса имени файла, а также место для сохранения. Если файл не был сохранен ранее, он будет сохранен в папке по умолчанию. Если файл уже был сохранен ранее, он будет сохранен в той же папке.
+- `Excel.SaveBehavior.prompt`: если файл не был сохранен ранее, будет предложено ввести имя файла и место для сохранения. Если файл уже был сохранен ранее, он будет сохраняться в той же папке, и никаких дополнительных действий не потребуется.
+
+> [!CAUTION]
+> Если пользователь при запрос на сохранение отменяет операцию, `save` выдает исключение.
+
+```js
+context.workbook.save(Excel.SaveBehavior.prompt);
+```
+
+## <a name="close-the-workbook"></a>Закрытие книги.
+
+> [!NOTE]
+> Функция `Workbook.close(closeBehavior)` в настоящее время доступна только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-preview-apis.md)]
+
+`Workbook.close(closeBehavior)` закрывает книгу, а также надстройки, которые связаны с книгой, (приложение Excel остается открытым). Метод `close` имеет один необязательный параметр, который может иметь одно из следующих значений:
+
+- `Excel.CloseBehavior.save` (по умолчанию): файл будет сохранен до закрытия. Если файл не был сохранен ранее, будет предложено ввести имя файла и место для сохранения.
+- `Excel.CloseBehavior.skipSave`: файл будет немедленно закрыт без сохранения. Все несохраненные изменения будут потеряны.
+
+```js
+context.workbook.close(Excel.CloseBehavior.save);
 ```
 
 ## <a name="see-also"></a>См. также
