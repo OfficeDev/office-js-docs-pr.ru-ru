@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: ''
-ms.date: 01/30/2019
+ms.date: 02/26/2019
 localization_priority: Priority
-ms.openlocfilehash: 47db6824fa328a61e47d577a85375f43e73f16df
-ms.sourcegitcommit: bf5c56d9b8c573e42bf2268e10ca3fd4d2bb4ff9
+ms.openlocfilehash: 233bc6770faefaa0e101fd01c353e7ce0df972a1
+ms.sourcegitcommit: f7f3d38ae4430e2218bf0abe7bb2976108de3579
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "29701787"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "30359249"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -42,7 +42,7 @@ ms.locfileid: "29701787"
 - [Office.MailboxEnums.AttachmentStatus](/javascript/api/outlook/office.mailboxenums.attachmentstatus): добавлено новое перечисление, в котором указывается, добавлено вложение в элемент или удалено из него.
 - [Office.MailboxEnums.DelegatePermissions](/javascript/api/outlook/office.mailboxenums.delegatepermissions): добавлено перечисление нового битового флага, в котором указываются разрешения на делегирование.
 - [Office.MailboxEnums.LocationType](/javascript/api/outlook/office.mailboxenums.locationtype): добавлено новое перечисление, которое определяет тип расположения встречи.
-- [Office.EventType](/javascript/api/office/office.eventtype): этот элемент изменен для поддержки событий AttachmentsChanged и OfficeThemeChanged путем добавления записей `AttachmentsChanged` и `OfficeThemeChanged` соответственно.
+- [Office.EventType](/javascript/api/office/office.eventtype): элемент изменен для поддержки событий AttachmentsChanged, EnhancedLocationsChanged и OfficeThemeChanged путем добавления записей `AttachmentsChanged`, `EnhancedLocationsChanged` и `OfficeThemeChanged` соответственно.
 - [Элемент манифеста SupportsSharedFolders](../../manifest/supportssharedfolders.md): к элементу манифеста [DesktopFormFactor](../../manifest/desktopformfactor.md) добавлен дочерний элемент. Он определяет, доступна ли надстройка в сценариях делегирования.
 
 ## <a name="see-also"></a>См. также

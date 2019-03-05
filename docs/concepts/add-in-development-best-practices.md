@@ -1,14 +1,14 @@
 ---
 title: Рекомендации по разработке надстроек Office
 description: ''
-ms.date: 01/23/2018
+ms.date: 02/28/2019
 localization_priority: Priority
-ms.openlocfilehash: 774dacc2fa48a75a95b88740d65eca88ad7dcfdd
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 0227b73223d5d2284d697f98ff598dc4cf5dce81
+ms.sourcegitcommit: f7f3d38ae4430e2218bf0abe7bb2976108de3579
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29388985"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "30359284"
 ---
 # <a name="best-practices-for-developing-office-add-ins"></a>Рекомендации по разработке надстроек Office
 
@@ -50,7 +50,7 @@ ms.locfileid: "29388985"
 
 - Избегайте всплывающих окон. Если вам необходимо их использовать, помогите пользователю включить всплывающее окно.
 
-Шаблоны, иллюстрирующие методы, которые можно применять при разработке интерфейса для первого запуска, представлены в статье [Конструктивные шаблоны пользовательского интерфейса для надстроек Office](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code).
+Шаблоны, которые можно применять при разработке для первого запуска, представлены в статье [Конструктивные шаблоны для надстроек Office](https://docs.microsoft.com/office/dev/add-ins/design/first-run-experience-patterns).
 
 ## <a name="use-add-in-commands"></a>Команды надстроек
 
@@ -75,8 +75,6 @@ ms.locfileid: "29388985"
 - Учитывайте специальные возможности. Обеспечьте удобство работы для всех пользователей и поддержку таких специальных возможностей, как средство чтения с экрана.
 
 - Обеспечьте поддержку всех платформ и методов ввода, включая мышь, клавиатуру и [сенсорное управление](#optimize-for-touch). Убедитесь, что ваш пользовательский интерфейс поддерживает различные форм-факторы.
-
-Шаблоны с применением принципов разработки, которые вы можете использовать и модифицировать при разработке надстройки, представлены в статье [Конструктивные шаблоны пользовательского интерфейса для надстроек Office](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code).
 
 ### <a name="optimize-for-touch"></a>Оптимизация для сенсорного управления
 

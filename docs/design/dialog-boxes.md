@@ -1,14 +1,14 @@
 ---
 title: Диалоговые окна в надстройках Office
 description: ''
-ms.date: 12/04/2017
+ms.date: 2/28/2019
 localization_priority: Priority
-ms.openlocfilehash: 78a3419dd93f2a19e3addbeb5a77271b5b124680
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 1710d609910cc3c15143605570f97d013a104194
+ms.sourcegitcommit: f7f3d38ae4430e2218bf0abe7bb2976108de3579
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29388404"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "30359221"
 ---
 # <a name="dialog-boxes-in-office-add-ins"></a>Диалоговые окна в надстройках Office
  
@@ -31,7 +31,7 @@ ms.locfileid: "29388404"
 
 ## <a name="see-also"></a>См. также
 
-- [Ресурсы для разработки на сайте GitHub](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code)
 - [Объект Dialog](https://docs.microsoft.com/javascript/api/office/office.dialog)
+- [Конструктивные шаблоны для надстроек Office](../design/ux-design-pattern-templates.md)
 
 

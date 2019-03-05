@@ -1,14 +1,14 @@
 ---
 title: Использование Dialog API в надстройках Office
 description: ''
-ms.date: 02/13/2019
+ms.date: 02/28/2019
 localization_priority: Priority
-ms.openlocfilehash: 81154f039a87973e222188d894d5e4289d0bf647
-ms.sourcegitcommit: 70ef38a290c18a1d1a380fd02b263470207a5dc6
+ms.openlocfilehash: c474e0f3bf27b70565174b797d726a1651a55952
+ms.sourcegitcommit: f7f3d38ae4430e2218bf0abe7bb2976108de3579
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "30052772"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "30359291"
 ---
 # <a name="use-the-dialog-api-in-your-office-add-ins"></a>Использование Dialog API в надстройках Office
 
@@ -243,8 +243,6 @@ function processMessage(arg) {
 }
 ```
 
-[Конструктивный шаблон обеспечения навигации для диалогового окна](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code/tree/master/templates/dialog/navigation), в случае которого используется эта техника, см. в репозитории [конструктивных шаблонов для пользовательского интерфейса надстроек Office](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code).
-
 Даже если у вас нет собственной кнопки для закрытия диалогового окна, пользователь сможет закрыть его, нажав кнопку **X** в правом верхнем углу. Это действие запускает событие `DialogEventReceived`. Чтобы главная область могла реагировать на это событие, для нее должен быть объявлен обработчик этого события. Подробнее: [Ошибки и события в диалоговом окне](#errors-and-events-in-the-dialog-window).
 
 ## <a name="handle-errors-and-events"></a>Обработка ошибок и событий
@@ -380,7 +378,7 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?client
 3.  Используйте вызов `displayDialogAsync` на главной странице, чтобы открыть страницу video.dialogbox.html.
 4.  Если надстройке необходимо знать, когда пользователь закрывает диалоговое окно, зарегистрируйте обработчик для события `DialogEventReceived` и обработайте событие 12006. Дополнительные сведения см. в разделе [Ошибки и события в диалоговом окне](#errors-and-events-in-the-dialog-window).
 
-[Конструктивный шаблон размещения видео](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code/tree/master/templates/first-run/video-placemat) в диалоговом окне вы найдете в репозитории [конструктивных шаблонов для пользовательского интерфейса надстроек Office](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code).
+Пример видео в диалоговом окне см. в статье [Конструктивный шаблон размещения видео](https://docs.microsoft.com/office/dev/add-ins/design/first-run-experience-patterns#video-placemat).
 
 ![Снимок экрана: видео в диалоговом окне надстройки](../images/video-placemats-dialog-open.png)
 
