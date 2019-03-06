@@ -1,13 +1,14 @@
 ---
 title: Элемент DesktopFormFactor в файле манифеста
 description: ''
-ms.date: 10/09/2018
-ms.openlocfilehash: dea632f7f8afa5d9b69f257798022e9e520e9394
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+ms.date: 03/01/2019
+localization_priority: Normal
+ms.openlocfilehash: cddf76af01ec9f3016b28a3f7692aa6dfeb9bd60
+ms.sourcegitcommit: 7ebd383f16ae5809bb6980a5f213b695d410e62c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433742"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "30413624"
 ---
 # <a name="desktopformfactor-element"></a>Элемент DesktopFormFactor
 
@@ -22,7 +23,7 @@ ms.locfileid: "27433742"
 | [ExtensionPoint](extensionpoint.md)   | Да      | Определяет, где предоставляются функции надстройки. |
 | [FunctionFile](functionfile.md)       | Да      | URL-адрес файла, который содержит функции JavaScript.|
 | [GetStarted](getstarted.md)           | Нет       | Определяет выноску, которая отображается при установке надстройки в ведущих приложениях Word, Excel и PowerPoint. |
-| [SupportsSharedFolders](supportssharedfolders.md) | Нет | Определяет, доступна ли надстройка Outlook в сценариях делегирования, и имеет значение *false* по умолчанию.<br><br>**Важно!** Этот элемент доступен только в предварительной версии набора обязательных элементов надстроек Outlook для Exchange Online. Надстройки, использующие этот элемент, нельзя опубликовать в AppSource или развернуть с помощью централизованного развертывания. |
+| [SupportsSharedFolders](supportssharedfolders.md) | Нет | Определяет, доступна ли надстройка Outlook в сценариях делегирования, и имеет значение *false* по умолчанию.<br><br>**Важно!** поскольку доступ представителя для надстроек Outlook в настоящее время находится в предварительной версии, надстройки, использующие `SupportSharedFolders` этот элемент, не могут быть опубликованы в AppSource или развернуты с помощью централизованного развертывания. |
 
 ## <a name="desktopformfactor-example"></a>Пример DesktopFormFactor
 
