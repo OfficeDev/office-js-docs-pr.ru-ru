@@ -1,14 +1,14 @@
 ---
 title: Доступность ведущих приложений и платформ для надстроек Office
 description: Поддерживаемые наборы обязательных элементов для Excel, Word, Outlook, PowerPoint, OneNote и Project.
-ms.date: 02/20/2019
+ms.date: 03/07/2019
 localization_priority: Priority
-ms.openlocfilehash: a3e9c508a5bae0e7eb660458835b9242d0602818
-ms.sourcegitcommit: 8e20e7663be2aaa0f7a5436a965324d171bc667d
+ms.openlocfilehash: 636c6290d8c67901beb195990593727485467460
+ms.sourcegitcommit: 8e7b7b0cfb68b91a3a95585d094cf5f5ffd00178
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "30199615"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "30512883"
 ---
 # <a name="office-add-in-host-and-platform-availability"></a>Доступность ведущих приложений и платформ для надстроек Office
 
@@ -203,6 +203,8 @@ ms.locfileid: "30199615"
         - TextCoercion</td>
   </tr>
 </table>
+
+*&ast; - Добавлены обновления после выпуска.*
 
 <br/>
 
@@ -511,6 +513,8 @@ ms.locfileid: "30199615"
   </tr>
 </table>
 
+*&ast; - Добавлены обновления после выпуска.*
+
 <br/>
 
 ## <a name="powerpoint"></a>PowerPoint
@@ -632,6 +636,8 @@ ms.locfileid: "30199615"
   </tr>
 </table>
 
+*&ast; - Добавлены обновления после выпуска.*
+
 <br/>
 
 ## <a name="onenote"></a>OneNote
@@ -657,7 +663,6 @@ ms.locfileid: "30199615"
          - TextCoercion</td>
   </tr>
 </table>
-*&ast; - Добавлены обновления после выпуска.*
 
 <br/>
 
