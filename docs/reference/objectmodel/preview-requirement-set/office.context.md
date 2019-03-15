@@ -3,12 +3,12 @@ title: Office.context — предварительная версия набор
 description: ''
 ms.date: 02/15/2019
 localization_priority: Normal
-ms.openlocfilehash: afc74aba3ebacd2d8f54cdc94e02b9f9ba19dcbf
-ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.openlocfilehash: 0d47ab4f136cfc51808ca509de8177bb331e3cb7
+ms.sourcegitcommit: 8fb60c3a31faedaea8b51b46238eb80c590a2491
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "30068289"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "30600272"
 ---
 # <a name="context"></a>context
 
@@ -16,20 +16,20 @@ ms.locfileid: "30068289"
 
 Пространство имен Office.context содержит общие интерфейсы, которые используются надстройками всех приложений Office. В этот список входят только интерфейсы, используемые надстройками Outlook. Полный список интерфейсов пространства имен Office.context см. в статье [Ссылка на пространство имен Office.context в общем API](/javascript/api/office/office.context).
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
-|Требование| Значение|
+|Requirement| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="members-and-methods"></a>Элементы и методы
 
-| Элемент | Тип |
+| Элемент	 | Тип |
 |--------|------|
-| [displayLanguage](#displaylanguage-string) | Элемент |
-| [officeTheme](#officetheme-object) | Элемент |
-| [roamingSettings](#roamingsettings-roamingsettingsjavascriptapioutlookofficeroamingsettings) | Элемент |
+| [displayLanguage](#displaylanguage-string) | Member |
+| [officeTheme](#officetheme-object) | Member |
+| [roamingSettings](#roamingsettings-roamingsettings) | Элемент |
 
 ### <a name="namespaces"></a>Пространства имен
 
@@ -41,17 +41,17 @@ ms.locfileid: "30068289"
 
 Получает определенный пользователем языковой стандарт (язык) в формате обозначений языка RFC 1766 для пользовательского интерфейса ведущего приложения Office.
 
-Значение `displayLanguage` отображает текущий параметр **Язык интерфейса**, заданный в разделе **Файл > Параметры > Язык** ведущего приложения Office.
+The `displayLanguage` value reflects the current **Display Language** setting specified with **File > Options > Language** in the Office host application.
 
 ##### <a name="type"></a>Тип
 
 *   String
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
-|Требование| Значение|
+|Requirement| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
@@ -92,14 +92,14 @@ function write(message){
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`bodyBackgroundColor`| String|Получает цвет фона текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
-|`bodyForegroundColor`| String|Получает цвет переднего плана текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
-|`controlBackgroundColor`| String|Получает цвет фона элемента управления для темы Office в виде шестнадцатеричной триады цветов.|
+|`bodyBackgroundColor`| Строка|Получает цвет фона текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
+|`bodyForegroundColor`| Строка|Получает цвет переднего плана текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
+|`controlBackgroundColor`| Строка|Получает цвет фона элемента управления для темы Office в виде шестнадцатеричной триады цветов.|
 |`controlForegroundColor`| String|Получает цвет элемента управления текстом сообщения для темы Office в виде шестнадцатеричной триады цветов.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
-|Требование| Значение|
+|Requirement| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.3|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
@@ -131,8 +131,8 @@ function applyOfficeTheme(){
 
 ##### <a name="requirements"></a>Требования
 
-|Требование| Значение|
+|Requirement| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
 |[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
