@@ -3,18 +3,18 @@ title: Office.context.mailbox.item — набор обязательных эл�
 description: ''
 ms.date: 02/15/2019
 localization_priority: Priority
-ms.openlocfilehash: b95985f7ed76b9952e5698e9190ff4c1fa00a7cb
-ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.openlocfilehash: 999a9b732a7efd3f4a9c289e5ff0b97e87278e60
+ms.sourcegitcommit: 8fb60c3a31faedaea8b51b46238eb80c590a2491
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "30068240"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "30600279"
 ---
 # <a name="item"></a>item
 
 ### <a name="officeofficemdcontextofficecontextmdmailboxofficecontextmailboxmditem"></a>[Office](office.md)[.context](office.context.md)[.mailbox](office.context.mailbox.md).item
 
-Пространство имен `item` используется для доступа к выбранному в данный момент сообщению, приглашению на собрание или описанию встречи. Вы можете определить тип пространства имен `item` с помощью свойства [itemType](#itemtype-officemailboxenumsitemtypejavascriptapioutlook15officemailboxenumsitemtype).
+Пространство имен `item` используется для доступа к выбранному в данный момент сообщению, приглашению на собрание или описанию встречи. Вы можете определить тип пространства имен `item` с помощью свойства [itemType](#itemtype-officemailboxenumsitemtype).
 
 ##### <a name="requirements"></a>Requirements
 
@@ -28,37 +28,37 @@ ms.locfileid: "30068240"
 
 | Элемент | Тип |
 |--------|------|
-| [attachments](#attachments-arrayattachmentdetailsjavascriptapioutlook15officeattachmentdetails) | Элемент |
-| [bcc](#bcc-recipientsjavascriptapioutlook15officerecipients) | Элемент |
-| [body](#body-bodyjavascriptapioutlook15officebody) | Элемент |
-| [cc](#cc-arrayemailaddressdetailsjavascriptapioutlook15officeemailaddressdetailsrecipientsjavascriptapioutlook15officerecipients) | Элемент |
+| [attachments](#attachments-arrayattachmentdetails) | Элемент |
+| [bcc](#bcc-recipients) | Элемент |
+| [body](#body-body) | Элемент |
+| [cc](#cc-arrayemailaddressdetails) | Элемент |
 | [conversationId](#nullable-conversationid-string) | Элемент |
 | [dateTimeCreated](#datetimecreated-date) | Элемент |
 | [dateTimeModified](#datetimemodified-date) | Элемент |
-| [end](#end-datetimejavascriptapioutlook15officetime) | Элемент |
-| [from](#from-emailaddressdetailsjavascriptapioutlook15officeemailaddressdetails) | Элемент |
+| [end](#end-datetime) | Элемент |
+| [from](#from-emailaddressdetails) | Элемент |
 | [internetMessageId](#internetmessageid-string) | Элемент |
 | [itemClass](#itemclass-string) | Элемент |
 | [itemId](#nullable-itemid-string) | Элемент |
-| [itemType](#itemtype-officemailboxenumsitemtypejavascriptapioutlook15officemailboxenumsitemtype) | Элемент |
-| [location](#location-stringlocationjavascriptapioutlook15officelocation) | Элемент |
+| [itemType](#itemtype-officemailboxenumsitemtype) | Элемент |
+| [location](#location-stringlocation) | Элемент |
 | [normalizedSubject](#normalizedsubject-string) | Элемент |
-| [notificationMessages](#notificationmessages-notificationmessagesjavascriptapioutlook15officenotificationmessages) | Элемент |
-| [optionalAttendees](#optionalattendees-arrayemailaddressdetailsjavascriptapioutlook15officeemailaddressdetailsrecipientsjavascriptapioutlook15officerecipients) | Элемент |
-| [organizer](#organizer-emailaddressdetailsjavascriptapioutlook15officeemailaddressdetails) | Элемент |
-| [requiredAttendees](#requiredattendees-arrayemailaddressdetailsjavascriptapioutlook15officeemailaddressdetailsrecipientsjavascriptapioutlook15officerecipients) | Member |
-| [sender](#sender-emailaddressdetailsjavascriptapioutlook15officeemailaddressdetails) | Элемент |
-| [start](#start-datetimejavascriptapioutlook15officetime) | Элемент |
-| [subject](#subject-stringsubjectjavascriptapioutlook15officesubject) | Элемент |
-| [to](#to-arrayemailaddressdetailsjavascriptapioutlook15officeemailaddressdetailsrecipientsjavascriptapioutlook15officerecipients) | Элемент |
+| [notificationMessages](#notificationmessages-notificationmessages) | Элемент |
+| [optionalAttendees](#optionalattendees-arrayemailaddressdetails) | Элемент |
+| [organizer](#organizer-emailaddressdetails) | Элемент |
+| [requiredAttendees](#requiredattendees-arrayemailaddressdetails) | Member |
+| [sender](#sender-emailaddressdetails) | Элемент |
+| [start](#start-datetime) | Элемент |
+| [subject](#subject-stringsubject) | Элемент |
+| [to](#to-arrayemailaddressdetails) | Элемент |
 | [addFileAttachmentAsync](#addfileattachmentasyncuri-attachmentname-options-callback) | Метод |
 | [addItemAttachmentAsync](#additemattachmentasyncitemid-attachmentname-options-callback) | Метод |
 | [close](#close) | Метод |
 | [displayReplyAllForm](#displayreplyallformformdata-callback) | Метод |
 | [displayReplyForm](#displayreplyformformdata-callback) | Метод |
-| [getEntities](#getentities--entitiesjavascriptapioutlook15officeentities) | Метод |
-| [getEntitiesByType](#getentitiesbytypeentitytype--nullable-arraystringcontactjavascriptapioutlook15officecontactmeetingsuggestionjavascriptapioutlook15officemeetingsuggestionphonenumberjavascriptapioutlook15officephonenumbertasksuggestionjavascriptapioutlook15officetasksuggestion) | Метод |
-| [getFilteredEntitiesByName](#getfilteredentitiesbynamename--nullable-arraystringcontactjavascriptapioutlook15officecontactmeetingsuggestionjavascriptapioutlook15officemeetingsuggestionphonenumberjavascriptapioutlook15officephonenumbertasksuggestionjavascriptapioutlook15officetasksuggestion) | Метод |
+| [getEntities](#getentities--entities) | Метод |
+| [getEntitiesByType](#getentitiesbytypeentitytype--nullable-arraystringcontact) | Метод |
+| [getFilteredEntitiesByName](#getfilteredentitiesbynamename--nullable-arraystringcontact) | Метод |
 | [getRegExMatches](#getregexmatches--object) | Метод |
 | [getRegExMatchesByName](#getregexmatchesbynamename--nullable-array-string-) | Метод |
 | [getSelectedDataAsync](#getselecteddataasynccoerciontype-options-callback--string) | Метод |
@@ -316,7 +316,7 @@ console.log("Date and time modified: " + dateTimeModified);
 
 Получает или задает дату и время окончания встречи.
 
-Свойство `end` представлено в виде значения даты и времени в формате UTC. Преобразовать значение свойства end в местные значения даты и времени клиента можно с помощью метода [`convertToLocalClientTime`](office.context.mailbox.md#converttolocalclienttimetimevalue--localclienttimejavascriptapioutlook15officelocalclienttime).
+Свойство `end` представлено в виде значения даты и времени в формате UTC. Преобразовать значение свойства end в местные значения даты и времени клиента можно с помощью метода [`convertToLocalClientTime`](office.context.mailbox.md#converttolocalclienttimetimevalue--localclienttime).
 
 ##### <a name="read-mode"></a>Режим чтения
 
@@ -367,7 +367,7 @@ Office.context.mailbox.item.end.setAsync(endTime, options, function(result) {
 
 Получает электронный адрес отправителя сообщения. Только в режиме чтения.
 
-Свойства `from` и [`sender`](#sender-emailaddressdetailsjavascriptapioutlook15officeemailaddressdetails) представляют одно лицо, если сообщение не отправлено представителем. В противном случае свойство `from` представляет лицо, делегировавшее полномочия, а свойство sender — представителя.
+Свойства `from` и [`sender`](#sender-emailaddressdetails) представляют одно лицо, если сообщение не отправлено представителем. В противном случае свойство `from` представляет лицо, делегировавшее полномочия, а свойство sender — представителя.
 
 > [!NOTE]
 > Свойству `recipientType`, принадлежащему объекту `EmailAddressDetails` в свойстве `from`, задано значение `undefined`.
@@ -550,7 +550,7 @@ function callback(asyncResult) {
 
 Получает тему элемента со всеми удаленными префиксами (включая `RE:` и `FWD:`). Только в режиме чтения.
 
-Свойство normalizedSubject получает тему элемента со стандартными префиксами (такими как `RE:` и `FW:`), добавляемыми почтовыми программами. Для получения темы элемента с неизмененными префиксами используйте свойство [`subject`](#subject-stringsubjectjavascriptapioutlook15officesubject).
+Свойство normalizedSubject получает тему элемента со стандартными префиксами (такими как `RE:` и `FW:`), добавляемыми почтовыми программами. Для получения темы элемента с неизмененными префиксами используйте свойство [`subject`](#subject-stringsubject).
 
 ##### <a name="type"></a>Тип
 
@@ -705,7 +705,7 @@ function callback(asyncResult) {
 
 Получает электронный адрес отправителя электронного сообщения. Только в режиме чтения.
 
-Свойства [`from`](#from-emailaddressdetailsjavascriptapioutlook15officeemailaddressdetails) и `sender` представляют одно лицо, если сообщение не отправлено представителем. В противном случае свойство `from` представляет лицо, делегировавшее полномочия, а свойство sender — представителя.
+Свойства [`from`](#from-emailaddressdetails) и `sender` представляют одно лицо, если сообщение не отправлено представителем. В противном случае свойство `from` представляет лицо, делегировавшее полномочия, а свойство sender — представителя.
 
 > [!NOTE]
 > Свойству `recipientType`, принадлежащему объекту `EmailAddressDetails` в свойстве `sender`, задано значение `undefined`.
@@ -734,7 +734,7 @@ console.log("Sender: " + senderName + " (" + senderAddress + ")");
 
 Получает или задает дату и время начала встречи.
 
-Свойство `start` представлено в виде значения даты и времени в формате UTC. Это значение можно преобразовать в местные значения даты и времени клиента с помощью метода [`convertToLocalClientTime`](office.context.mailbox.md#converttolocalclienttimetimevalue--localclienttimejavascriptapioutlook15officelocalclienttime).
+Свойство `start` представлено в виде значения даты и времени в формате UTC. Это значение можно преобразовать в местные значения даты и времени клиента с помощью метода [`convertToLocalClientTime`](office.context.mailbox.md#converttolocalclienttimetimevalue--localclienttime).
 
 ##### <a name="read-mode"></a>Режим чтения
 
