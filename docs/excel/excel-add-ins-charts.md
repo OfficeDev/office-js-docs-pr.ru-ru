@@ -1,14 +1,14 @@
 ---
 title: Работа с диаграммами с использованием API JavaScript для Excel
 description: ''
-ms.date: 12/04/2017
+ms.date: 03/11/2019
 localization_priority: Priority
-ms.openlocfilehash: 72724c4efd6f87bad90b64b4ac363c796de952bd
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: f058110c7c150a75c847a07df83aa2795c891025
+ms.sourcegitcommit: 8fb60c3a31faedaea8b51b46238eb80c590a2491
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29387879"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "30600265"
 ---
 # <a name="work-with-charts-using-the-excel-javascript-api"></a>Работа с диаграммами с использованием API JavaScript для Excel
 
@@ -66,7 +66,7 @@ Excel.run(function (context) {
 
 ## <a name="set-chart-title"></a>Задание названия диаграммы
 
-В примере ниже показано, как задать название **Sales Data by Year** (Данные продаж по годам) для первой диаграммы на листе. 
+В примере ниже показано, как задать название **Sales Data by Year** (Данные продаж по годам) для первой диаграммы на листе.
 
 ```js
 Excel.run(function (context) {
@@ -186,6 +186,33 @@ Excel.run(function (context) {
 **Диаграмма с линейной линией тренда**
 
 ![Диаграмма с линейной линией тренда в Excel](../images/excel-charts-trendline-linear.png)
+
+## <a name="export-a-chart-as-an-image"></a>Экспорт диаграммы как изображения
+
+Диаграммы можно отображать как изображения за пределами Excel. Метод `Chart.getImage` возвращает диаграмму в виде строки в кодировке base64, представляющей диаграмму в формате изображения JPEG. В приведенном ниже коде показано, как получить строку изображения и записать ее в консоли.
+
+```js
+Excel.run(function (ctx) {
+    var chart = ctx.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1");
+    var imageAsString = chart.getImage();
+    return context.sync().then(function () {
+        console.log(imageAsString.value);
+        // Instead of logging, your add-in may use the base64-encoded string to save the image as a file or insert it in HTML.
+    });
+}).catch(errorHandlerFunction);
+```
+
+Метод `Chart.getImage` использует три дополнительных параметра: ширина, высота и режим подгонки.
+
+```typescript
+getImage(width?: number, height?: number, fittingMode?: Excel.ImageFittingMode): OfficeExtension.ClientResult<string>;
+```
+
+Эти параметры определяют размер изображения. Изображения всегда масштабируются пропорционально. Параметры ширины и высоты устанавливают верхние или нижние границы для масштабированного изображения. У параметра `ImageFittingMode` есть три значения с указанными ниже действиями.
+
+- `Fill`: минимальная высота или ширина изображения соответствует указанной высоте или ширине (в зависимости от того, какое значение достигнуто первым при масштабировании изображения). Это поведение по умолчанию, если не задан параметр режима подгонки.
+- `Fit`: максимальная высота или ширина изображения соответствует указанной высоте или ширине (в зависимости от того, какое значение достигнуто первым при масштабировании изображения).
+- `FitAndCenter`: максимальная высота или ширина изображения соответствует указанной высоте или ширине (в зависимости от того, какое значение достигнуто первым при масштабировании изображения). Получившееся изображение выравнивается по центру относительно другого измерения.
 
 ## <a name="see-also"></a>См. также
 
