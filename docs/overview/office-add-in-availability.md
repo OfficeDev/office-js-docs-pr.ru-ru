@@ -1,14 +1,14 @@
 ---
 title: Доступность ведущих приложений и платформ для надстроек Office
 description: Поддерживаемые наборы обязательных элементов для Excel, Word, Outlook, PowerPoint, OneNote и Project.
-ms.date: 03/07/2019
+ms.date: 03/15/2019
 localization_priority: Priority
-ms.openlocfilehash: 636c6290d8c67901beb195990593727485467460
-ms.sourcegitcommit: 8e7b7b0cfb68b91a3a95585d094cf5f5ffd00178
+ms.openlocfilehash: 4348881c35e4c79975d34406e4668b2693405134
+ms.sourcegitcommit: c4d6ecdc41ea67291b6d155c3b246e31ec2e38b7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "30512883"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "30654965"
 ---
 # <a name="office-add-in-host-and-platform-availability"></a>Доступность ведущих приложений и платформ для надстроек Office
 
@@ -16,6 +16,8 @@ ms.locfileid: "30512883"
 
 > [!NOTE]
 > Номер сборки для набора Office 2016, установленного с помощью MSI, — 16.0.4266.1001. Эта версия содержит только набор обязательных элементов ExcelApi 1.1, WordApi 1.1 и наборы обязательных элементов общего API.
+>
+> Номер сборки для единовременной покупки Office 2019 — 16.0.10827.20150.
 
 ## <a name="excel"></a>Excel
 
@@ -57,37 +59,26 @@ ms.locfileid: "30512883"
         - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office 2013 для Windows</td>
+    <td>Office 365 для Windows</td>
+    <td> - Область задач<br>
+        - Контент<br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстройки</a>
+    </td>
     <td>
-        - Область задач<br>
-        - Контент</td>
-    <td>  - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.2</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.3</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.4</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.5</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.6</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.7</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.8</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td>
         - BindingEvents<br>
         - CompressedFile<br>
         - DocumentEvents<br>
         - File<br>
-        - ImageCoercion<br>
-        - MatrixBindings<br>
-        - MatrixCoercion<br>
-        - Selection<br>
-        - Settings<br>
-        - TableBindings<br>
-        - TableCoercion<br>
-        - TextBindings<br>
-        - TextCoercion</td>
-  </tr>
-  <tr>
-    <td>Office 2016 для Windows</td>
-    <td>- Область задач<br>
-        - Контент</td>
-    <td>- <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
-        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
-    <td>- BindingEvents<br>
-        - CompressedFile<br>
-        - DocumentEvents<br>
-        - File<br>
-        - ImageCoercion<br>
         - MatrixBindings<br>
         - MatrixCoercion<br>
         - Selection<br>
@@ -126,7 +117,48 @@ ms.locfileid: "30512883"
         - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office для iPad</td>
+    <td>Office 2016 для Windows</td>
+    <td>- Область задач<br>
+        - Контент</td>
+    <td>- <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
+    <td>- BindingEvents<br>
+        - CompressedFile<br>
+        - DocumentEvents<br>
+        - File<br>
+        - ImageCoercion<br>
+        - MatrixBindings<br>
+        - MatrixCoercion<br>
+        - Selection<br>
+        - Settings<br>
+        - TableBindings<br>
+        - TableCoercion<br>
+        - TextBindings<br>
+        - TextCoercion</td>
+  </tr>
+  <tr>
+    <td>Office 2013 для Windows</td>
+    <td>
+        - Область задач<br>
+        - Контент</td>
+    <td>  - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
+    <td>
+        - BindingEvents<br>
+        - CompressedFile<br>
+        - DocumentEvents<br>
+        - File<br>
+        - ImageCoercion<br>
+        - MatrixBindings<br>
+        - MatrixCoercion<br>
+        - Selection<br>
+        - Settings<br>
+        - TableBindings<br>
+        - TableCoercion<br>
+        - TextBindings<br>
+        - TextCoercion</td>
+  </tr>
+  <tr>
+    <td>Office 365 для iPad</td>
     <td>- Область задач<br>
         - Контент</td>
     <td>- <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
@@ -153,11 +185,19 @@ ms.locfileid: "30512883"
         - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office 2016 для Mac</td>
+    <td>Office 365 для Mac</td>
     <td>- Область задач<br>
-        - Контент</td>
+        - Контент<br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td>- <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
-        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.2</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.3</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.4</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.5</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.6</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.7</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.8</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td>- BindingEvents<br>
         - CompressedFile<br>
         - DocumentEvents<br>
@@ -187,6 +227,27 @@ ms.locfileid: "30512883"
         - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.7</a><br>
         - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.8</a><br>
         - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
+    <td>- BindingEvents<br>
+        - CompressedFile<br>
+        - DocumentEvents<br>
+        - File<br>
+        - ImageCoercion<br>
+        - MatrixBindings<br>
+        - MatrixCoercion<br>
+        - PdfFile<br>
+        - Selection<br>
+        - Settings<br>
+        - TableBindings<br>
+        - TableCoercion<br>
+        - TextBindings<br>
+        - TextCoercion</td>
+  </tr>
+  <tr>
+    <td>Office 2016 для Mac</td>
+    <td>- Область задач<br>
+        - Контент</td>
+    <td>- <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
     <td>- BindingEvents<br>
         - CompressedFile<br>
         - DocumentEvents<br>
@@ -232,17 +293,7 @@ ms.locfileid: "30512883"
     <td>Недоступно</td>
   </tr>
   <tr>
-    <td>Office 2013 для Windows</td>
-    <td> - Чтение почты<br>
-      - Создание сообщения почты</td>
-    <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
-      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2">Mailbox 1.2</a><br>
-      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3">Mailbox 1.3</a><br>
-      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a></td>
-    <td>Недоступно</td>
-  </tr>
-  <tr>
-    <td>Office 2016 для Windows</td>
+    <td>Office 365 для Windows</td>
     <td> - Чтение почты<br>
       - Создание сообщения почты<br>
       - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a><br>
@@ -272,7 +323,29 @@ ms.locfileid: "30512883"
     <td>Недоступно</td>
   </tr>
   <tr>
-    <td>Office для iOS</td>
+    <td>Office 2016 для Windows</td>
+    <td> - Чтение почты<br>
+      - Создание сообщения почты<br>
+      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a><br>
+      - Модули</td>
+    <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
+      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2">Mailbox 1.2</a><br>
+      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3">Mailbox 1.3</a><br>
+      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a></td>
+    <td>Недоступно</td>
+  </tr>
+  <tr>
+    <td>Office 2013 для Windows</td>
+    <td> - Чтение почты<br>
+      - Создание сообщения почты</td>
+    <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
+      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2">Mailbox 1.2</a><br>
+      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3">Mailbox 1.3</a><br>
+      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a></td>
+    <td>Недоступно</td>
+  </tr>
+  <tr>
+    <td>Office 365 для iOS</td>
     <td> - Чтение почты<br>
       - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
@@ -283,7 +356,7 @@ ms.locfileid: "30512883"
     <td>Недоступно</td>
   </tr>
   <tr>
-    <td>Office 2016 для Mac</td>
+    <td>Office 365 для Mac</td>
     <td> - Чтение почты<br>
       - Создание сообщения почты<br>
       - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
@@ -309,7 +382,20 @@ ms.locfileid: "30512883"
     <td>Недоступно</td>
   </tr>
   <tr>
-    <td>Office для Android</td>
+    <td>Office 2016 для Mac</td>
+    <td> - Чтение почты<br>
+      - Создание сообщения почты<br>
+      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
+    <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
+      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2">Mailbox 1.2</a><br>
+      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3">Mailbox 1.3</a><br>
+      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a><br>
+      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.5/outlook-requirement-set-1.5">Mailbox 1.5</a><br>
+      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.6/outlook-requirement-set-1.6">Mailbox 1.6</a></td>
+    <td>Недоступно</td>
+  </tr>
+  <tr>
+    <td>Office 365 для Android</td>
     <td> - Чтение почты<br>
       - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
@@ -359,33 +445,13 @@ ms.locfileid: "30512883"
          - TextFile</td>
   </tr>
   <tr>
-    <td>Office 2013 для Windows</td>
-    <td> - Область задач</td>
-    <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
-    <td> - BindingEvents<br>
-         - CompressedFile<br>
-         - CustomXmlParts<br>
-         - DocumentEvents<br>
-         - Файл<br>
-         - HtmlCoercion<br>
-         - ImageCoercion<br>
-         - MatrixBindings<br>
-         - MatrixCoercion<br>
-         - OoxmlCoercion<br>
-         - PdfFile<br>
-         - Selection<br>
-         - Settings<br>
-         - TableBindings<br>
-         - TableCoercion<br>
-         - TextBindings<br>
-         - TextCoercion<br>
-         - TextFile</td>
-  </tr>
-  <tr>
-    <td>Office 2016 для Windows</td>
-    <td> - Область задач</td>
+    <td>Office 365 для Windows</td>
+    <td> - Область задач<br>
+         - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
-         - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.2</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.3</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td> - BindingEvents<br>
          - CompressedFile<br>
          - CustomXmlParts<br>
@@ -433,7 +499,54 @@ ms.locfileid: "30512883"
          - TextFile </td>
   </tr>
   <tr>
-    <td>Office для iPad</td>
+    <td>Office 2016 для Windows</td>
+    <td> - Область задач</td>
+    <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
+         - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
+    <td> - BindingEvents<br>
+         - CompressedFile<br>
+         - CustomXmlParts<br>
+         - DocumentEvents<br>
+         - Файл<br>
+         - HtmlCoercion<br>
+         - ImageCoercion<br>
+         - MatrixBindings<br>
+         - MatrixCoercion<br>
+         - OoxmlCoercion<br>
+         - PdfFile<br>
+         - Selection<br>
+         - Settings<br>
+         - TableBindings<br>
+         - TableCoercion<br>
+         - TextBindings<br>
+         - TextCoercion<br>
+         - TextFile </td>
+  </tr>
+  <tr>
+    <td>Office 2013 для Windows</td>
+    <td> - Область задач</td>
+    <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
+    <td> - BindingEvents<br>
+         - CompressedFile<br>
+         - CustomXmlParts<br>
+         - DocumentEvents<br>
+         - Файл<br>
+         - HtmlCoercion<br>
+         - ImageCoercion<br>
+         - MatrixBindings<br>
+         - MatrixCoercion<br>
+         - OoxmlCoercion<br>
+         - PdfFile<br>
+         - Selection<br>
+         - Settings<br>
+         - TableBindings<br>
+         - TableCoercion<br>
+         - TextBindings<br>
+         - TextCoercion<br>
+         - TextFile</td>
+  </tr>
+  <tr>
+    <td>Office 365 для iPad</td>
     <td> - Область задач</td>
     <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
          - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.2</a><br>
@@ -460,10 +573,14 @@ ms.locfileid: "30512883"
          - TextFile </td>
   </tr>
   <tr>
-    <td>Office 2016 для Mac</td>
-    <td> - Область задач</td>
+    <td>Office 365 для Mac</td>
+    <td> - Область задач<br>
+         - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
-        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.2</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.3</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>
+</td>
     <td> - BindingEvents<br>
          - CompressedFile<br>
          - CustomXmlParts<br>
@@ -492,6 +609,30 @@ ms.locfileid: "30512883"
         - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.3</a><br>
         - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>
 </td>
+    <td> - BindingEvents<br>
+         - CompressedFile<br>
+         - CustomXmlParts<br>
+         - DocumentEvents<br>
+         - Файл<br>
+         - HtmlCoercion<br>
+         - ImageCoercion<br>
+         - MatrixBindings<br>
+         - MatrixCoercion<br>
+         - OoxmlCoercion<br>
+         - PdfFile<br>
+         - Selection<br>
+         - Settings<br>
+         - TableBindings<br>
+         - TableCoercion<br>
+         - TextBindings<br>
+         - TextCoercion<br>
+         - TextFile </td>
+  </tr>
+  <tr>
+    <td>Office 2016 для Mac</td>
+    <td> - Область задач</td>
+    <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
+        - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
     <td> - BindingEvents<br>
          - CompressedFile<br>
          - CustomXmlParts<br>
@@ -543,26 +684,11 @@ ms.locfileid: "30512883"
          - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office 2013 для Windows</td>
+    <td>Office 365 для Windows</td>
     <td> - Контент<br>
          - Область задач<br>
-    </td>
-    <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
-    <td> - ActiveView<br>
-         - CompressedFile<br>
-         - DocumentEvents<br>
-         - File<br>
-         - ImageCoercion<br>
-         - PdfFile<br>
-         - Selection<br>
-         - Параметры<br>
-         - TextCoercion</td>
-  </tr>
-  <tr>
-    <td>Office 2016 для Windows</td>
-    <td> - Контент<br>
-         - Область задач</td>
-    <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
+         - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
+    <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td> - ActiveView<br>
          - CompressedFile<br>
          - DocumentEvents<br>
@@ -590,7 +716,38 @@ ms.locfileid: "30512883"
          - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office для iPad</td>
+    <td>Office 2016 для Windows</td>
+    <td> - Контент<br>
+         - Область задач</td>
+    <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
+    <td> - ActiveView<br>
+         - CompressedFile<br>
+         - DocumentEvents<br>
+         - File<br>
+         - ImageCoercion<br>
+         - PdfFile<br>
+         - Selection<br>
+         - Параметры<br>
+         - TextCoercion</td>
+  </tr>
+  <tr>
+    <td>Office 2013 для Windows</td>
+    <td> - Контент<br>
+         - Область задач<br>
+    </td>
+    <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
+    <td> - ActiveView<br>
+         - CompressedFile<br>
+         - DocumentEvents<br>
+         - File<br>
+         - ImageCoercion<br>
+         - PdfFile<br>
+         - Selection<br>
+         - Параметры<br>
+         - TextCoercion</td>
+  </tr>
+  <tr>
+    <td>Office 365 для iPad</td>
     <td> - Контент<br>
          - Область задач</td>
     <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
@@ -605,9 +762,11 @@ ms.locfileid: "30512883"
          - ImageCoercion</td>
   </tr>
   <tr>
-    <td>Office 2016 для Mac</td>
+    <td>Office 365 для Mac</td>
     <td> - Контент<br>
-         - Область задач/td> <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
+         - Область задач<br>
+         - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
+    <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td> - ActiveView<br>
          - CompressedFile<br>
          - DocumentEvents<br>
@@ -624,6 +783,20 @@ ms.locfileid: "30512883"
          - Область задач<br>
          - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
+    <td> - ActiveView<br>
+         - CompressedFile<br>
+         - DocumentEvents<br>
+         - File<br>
+         - ImageCoercion<br>
+         - PdfFile<br>
+         - Selection<br>
+         - Параметры<br>
+         - TextCoercion</td>
+  </tr>
+  <tr>
+    <td>Office 2016 для Mac</td>
+    <td> - Контент<br>
+         - Область задач/td> <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
     <td> - ActiveView<br>
          - CompressedFile<br>
          - DocumentEvents<br>
@@ -676,7 +849,7 @@ ms.locfileid: "30512883"
     <th><a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Общие API</b></a></th>
   </tr>
   <tr>
-    <td>Office 2013 для Windows</td>
+    <td>Office 2019 для Windows</td>
     <td> - Область задач</td>
     <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td> - Selection<br>
@@ -690,7 +863,7 @@ ms.locfileid: "30512883"
          - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office 2019 для Windows</td>
+    <td>Office 2013 для Windows</td>
     <td> - Область задач</td>
     <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
     <td> - Selection<br>
