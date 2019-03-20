@@ -3,12 +3,12 @@ title: Загрузка модели DOM и среды выполнения
 description: ''
 ms.date: 01/09/2019
 localization_priority: Priority
-ms.openlocfilehash: c569825ae73d32259fc1554aa8233461bbbe9813
-ms.sourcegitcommit: 70ef38a290c18a1d1a380fd02b263470207a5dc6
+ms.openlocfilehash: e4975a979939b9af74630c5794b8f02cc0b15cba
+ms.sourcegitcommit: c5daedf017c6dd5ab0c13607589208c3f3627354
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "30052751"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "30691155"
 ---
 # <a name="loading-the-dom-and-runtime-environment"></a>Загрузка модели DOM и среды выполнения
 
@@ -36,7 +36,7 @@ ms.locfileid: "30052751"
     
 4. Элемент управления браузера загружает модель DOM и основной текст HTML, а также вызывает обработчик для события **window.onload**.
     
-5. Ведущее приложение Office загружает среду выполнения, которая загружает и кэширует API JavaScript для файлов библиотеки JavaScript с сервера сети доставки содержимого, а затем вызывает обработчик события [инициализации](/javascript/api/office#initialize-reason-) объекта [Office](/javascript/api/office), если ему назначен обработчик. В это время также проверяется, выполнялась ли передача (или связывание) любых обратных вызовов (или связанных функций `then()`) обработчику `Office.onReady`. Дополнительные сведения о различии между `Office.initialize` и `Office.onReady` см. в статье [Инициализация надстройки](/office/dev/add-ins/develop/understanding-the-javascript-api-for-office#initializing-your-add-in).
+5. Ведущее приложение Office загружает среду выполнения, которая загружает и кэширует API JavaScript для файлов библиотеки JavaScript с сервера сети доставки содержимого, а затем вызывает обработчик события [инициализации](/javascript/api/office#office-initialize) объекта [Office](/javascript/api/office), если ему назначен обработчик. В это время также проверяется, выполнялась ли передача (или связывание) любых обратных вызовов (или связанных функций `then()`) обработчику `Office.onReady`. Дополнительные сведения о различии между `Office.initialize` и `Office.onReady` см. в статье [Инициализация надстройки](/office/dev/add-ins/develop/understanding-the-javascript-api-for-office#initializing-your-add-in).
     
 6. После завершения загрузки DOM и основного текста HTML и инициализации надстройки запускается основная функция надстройки.
     
@@ -63,7 +63,7 @@ ms.locfileid: "30052751"
     
 5. Элемент управления браузером загружает DOM и основной текст HTML и вызывает обработчик события **onload**.
     
-6. Outlook загружает среду выполнения, которая загружает и кэширует API JavaScript для файлов библиотеки JavaScript с сервера сети доставки содержимого, а затем вызывает обработчик события [инициализации](/javascript/api/office#initialize-reason-) объекта [Office](/javascript/api/office) надстройки, если ему назначен обработчик. В это время также проверяется, выполнялась ли передача (или связывание) любых обратных вызовов (или связанных функций `then()`) обработчику `Office.onReady`. Дополнительные сведения о различии между `Office.initialize` и `Office.onReady` см. в статье [Инициализация надстройки](/office/dev/add-ins/develop/understanding-the-javascript-api-for-office#initializing-your-add-in).
+6. Outlook загружает среду выполнения, которая загружает и кэширует API JavaScript для файлов библиотеки JavaScript с сервера сети доставки содержимого, а затем вызывает обработчик события [инициализации](/javascript/api/office#office-initialize) объекта [Office](/javascript/api/office) надстройки, если ему назначен обработчик. В это время также проверяется, выполнялась ли передача (или связывание) любых обратных вызовов (или связанных функций `then()`) обработчику `Office.onReady`. Дополнительные сведения о различии между `Office.initialize` и `Office.onReady` см. в статье [Инициализация надстройки](/office/dev/add-ins/develop/understanding-the-javascript-api-for-office#initializing-your-add-in).
     
 7. После завершения загрузки DOM и основного текста HTML и инициализации надстройки запускается основная функция надстройки.
     

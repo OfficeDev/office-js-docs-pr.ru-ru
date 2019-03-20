@@ -1,14 +1,14 @@
 ---
 title: Использование Office UI Fabric React в надстройках Office
 description: ''
-ms.date: 2/28/2019
+ms.date: 02/28/2019
 localization_priority: Priority
-ms.openlocfilehash: 7d3e280298ee6761be9e7ced96d3490defeef7f0
-ms.sourcegitcommit: f7f3d38ae4430e2218bf0abe7bb2976108de3579
+ms.openlocfilehash: 11bb9daf99d85f1c4551363e9f04056870631378
+ms.sourcegitcommit: c5daedf017c6dd5ab0c13607589208c3f3627354
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "30359242"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "30691148"
 ---
 # <a name="use-office-ui-fabric-react-in-office-add-ins"></a>Использование Office UI Fabric React в надстройках Office
 
@@ -29,7 +29,7 @@ Office UI Fabric — это интерфейсная платформа JavaScri
 2. Запустите `yo office`, чтобы создать файлы проекта для надстройки.
 3. Когда вам будет предложено выбрать клиентское приложение Office, выберите **Word**.
 4. Перейдите к каталогу с файлами проекта и запустите `npm start`. Автоматически откроется окно браузера с вертушкой.
-5. [Загрузите неопубликованный манифест](..\testing\test-debug-office-add-ins.md), чтобы просмотреть весь пользовательский интерфейс надстройки.
+5. [Загрузите неопубликованный манифест](../testing/test-debug-office-add-ins.md), чтобы просмотреть весь пользовательский интерфейс надстройки.
 
 ## <a name="step-2---add-a-fabric-react-component"></a>Шаг 2. Добавление компонента Fabric React
 
