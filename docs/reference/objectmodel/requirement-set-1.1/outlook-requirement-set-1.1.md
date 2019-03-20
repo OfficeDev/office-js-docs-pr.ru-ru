@@ -1,13 +1,14 @@
 ---
-title: Набор обязательных элементов API для надстройки Outlook 1.1
+title: Набор требований к API надстройки Outlook 1.1
 description: ''
 ms.date: 10/11/2018
-ms.openlocfilehash: 13334029cd30742e6d7dd77cb569a1028a35106a
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: a074d0e38f8d872f0d75a68851aef947989c625e
+ms.sourcegitcommit: c4d6ecdc41ea67291b6d155c3b246e31ec2e38b7
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433035"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "30600258"
 ---
 # <a name="outlook-add-in-api-requirement-set-11"></a>Набор обязательных элементов API для надстройки Outlook 1.1
 
@@ -30,8 +31,8 @@ ms.locfileid: "27433035"
 - Добавлен метод [Office.context.mailbox.item.addFileAttachmentAsync](office.context.mailbox.item.md#addfileattachmentasyncuri-attachmentname-options-callback). Добавляет файл в сообщение или встречу в качестве вложения.
 - Добавлен метод [Office.context.mailbox.item.addItemAttachmentAsync](office.context.mailbox.item.md#additemattachmentasyncitemid-attachmentname-options-callback). Добавляет к сообщению или встрече элемент Exchange (например, сообщение) в виде вложения.
 - Добавлен метод [Office.context.mailbox.item.removeAttachmentAsync](office.context.mailbox.item.md#removeattachmentasyncattachmentid-options-callback). Удаляет вложение из сообщения или встречи.
-- Добавлено свойство [Office.context.mailbox.item.body](office.context.mailbox.item.md#body-bodyjavascriptapioutlook11officebody). Получает объект, предоставляющий методы для работы с текстом элемента.
-- Добавлено свойство [Office.context.mailbox.item.bcc](office.context.mailbox.item.md#bcc-recipientsjavascriptapioutlook11officerecipients). Получает или задает получателей скрытой копии сообщения.
+- Добавлено свойство [Office.context.mailbox.item.body](office.context.mailbox.item.md#body-body). Получает объект, предоставляющий методы для работы с текстом элемента.
+- Добавлена строка [Office. Context. Mailbox. Item. BCC](office.context.mailbox.item.md#bcc-recipients) сообщения.
 - Добавлено свойство [Office.MailboxEnums.RecipientType](/javascript/api/outlook_1_1/office.mailboxenums.recipienttype). Указывает тип получателя для встречи.
 
 ## <a name="see-also"></a>См. также
