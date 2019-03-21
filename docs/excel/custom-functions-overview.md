@@ -1,14 +1,14 @@
 ---
-ms.date: 01/30/2019
+ms.date: 03/19/2019
 description: Создание пользовательских функций в Excel с помощью JavaScript.
 title: Создание пользовательских функций в Excel (ознакомительная версия)
 localization_priority: Priority
-ms.openlocfilehash: 312a590052f1f78c8ff5477c8cfb85eb94f03aad
-ms.sourcegitcommit: 70ef38a290c18a1d1a380fd02b263470207a5dc6
+ms.openlocfilehash: 4a9e240646b41b737652b6e64eb83e03d0824178
+ms.sourcegitcommit: c5daedf017c6dd5ab0c13607589208c3f3627354
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "30052765"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "30691204"
 ---
 # <a name="create-custom-functions-in-excel-preview"></a>Создание пользовательских функций в Excel (ознакомительная версия)
 
@@ -290,9 +290,9 @@ function incrementValue(increment, handler){
 
 ## <a name="declaring-a-volatile-function"></a>Объявление переменной функции
 
-[Переменные функции](https://docs.microsoft.com/office/client-developer/excel/excel-recalculation#volatile-and-non-volatile-functions) — это функции, значение которых периодически изменяется, даже если никакой из аргументов функции не меняется. Эти функции пересчитываются при каждом пересчете в Excel. К примеру, представьте себе ячейку, вызывающую функцию `NOW`. При каждом вызове `NOW` она будет автоматически возвращать текущую дату и время.
+[Переменные функции](/office/client-developer/excel/excel-recalculation#volatile-and-non-volatile-functions) — это функции, значение которых периодически изменяется, даже если никакой из аргументов функции не меняется. Эти функции пересчитываются при каждом пересчете в Excel. К примеру, представьте себе ячейку, вызывающую функцию `NOW`. При каждом вызове `NOW` она будет автоматически возвращать текущую дату и время.
 
-В Excel есть несколько встроенных переменных функций, таких как `RAND` и `TODAY`. Полный список переменных функций Excel см. в статье [Переменные и постоянные функции](https://docs.microsoft.com/ru-RU/office/client-developer/excel/excel-recalculation#volatile-and-non-volatile-functions).
+В Excel есть несколько встроенных переменных функций, таких как `RAND` и `TODAY`. Полный список переменных функций Excel см. в статье [Переменные и постоянные функции](/office/client-developer/excel/excel-recalculation#volatile-and-non-volatile-functions).
 
 Пользовательские функции позволяют создавать собственные переменные функции, которые могут быть полезны при обработке дат, времени, случайных чисел и моделировании. Например, при моделированиях методом Монте-Карло требуется создание случайных входных данных, чтобы определить оптимальное решение.
 
@@ -358,10 +358,10 @@ function refreshTemperature(thermometerID){
 }
 ```
 
-## <a name="co-authoring"></a>Совместное редактирование
+## <a name="coauthoring"></a>Совместное редактирование
 Excel Online и Excel для Windows с подпиской на Office 365 позволяют совместно редактировать документы. Эта функция работает с пользовательскими функциями. Если в книге используется пользовательская функция, вашему коллеге будет предложено загрузить надстройку пользовательской функции. Когда вы оба загрузите надстройку, пользовательская функция поделится результатами с помощью совместного редактирования.
 
-Дополнительные сведения о совместном редактировании см. в статье [О совместном редактировании в Excel](https://docs.microsoft.com/ru-RU/office/vba/excel/concepts/about-coauthoring-in-excel).
+Дополнительные сведения о совместном редактировании см. в статье [О совместном редактировании в Excel](/office/vba/excel/concepts/about-coauthoring-in-excel).
 
 ## <a name="working-with-ranges-of-data"></a>Работа с диапазонами данных
 
@@ -391,7 +391,7 @@ function secondHighest(values){
 
 В некоторых случаях вам потребуется получить адрес ячейки, которая вызывала пользовательскую функцию. Это может быть полезно в следующих типах сценариев:
 
-- Форматирование диапазонов: Используйте адрес ячейки в качестве ключа для хранения сведений в [AsyncStorage](https://docs.microsoft.com/office/dev/add-ins/excel/custom-functions-runtime#storing-and-accessing-data). После этого используйте событие [onCalculated](https://docs.microsoft.com/javascript/api/excel/excel.worksheet#oncalculated) в Excel, чтобы загрузить ключ из `AsyncStorage`.
+- Форматирование диапазонов: Используйте адрес ячейки в качестве ключа для хранения сведений в [AsyncStorage](/office/dev/add-ins/excel/custom-functions-runtime#storing-and-accessing-data). После этого используйте событие [onCalculated](/javascript/api/excel/excel.worksheet#oncalculated) в Excel, чтобы загрузить ключ из `AsyncStorage`.
 - Отображение кэшированных значений. Если функция используется в автономном режиме, отображайте сохраненные в кэше значения из `AsyncStorage` с помощью `onCalculated`.
 - Сверка: используйте адрес ячейки, чтобы найти исходную ячейку, чтобы упростить сверку при выполнении обработки.
 
@@ -431,27 +431,6 @@ function getAddress(parameter1, invocationContext) {
 
 По умолчанию значения, возвращаемые из функции `getAddress`, соответствуют следующему формату: `SheetName!CellNumber`. Например, если функция вызвана с листа с названием Expenses (Расходы) в ячейке B2, возвращаемым значением будет `Expenses!B2`.
 
-## <a name="handling-errors"></a>Обработка ошибок
-
-При создании надстройки, которая определяет пользовательские функции, не забудьте включить логику для обработки ошибок, возникающих в среде выполнения. Обработка ошибок для пользовательских функций в значительной степени совпадает с [обработкой ошибок для API JavaScript в Excel](excel-add-ins-error-handling.md). В следующем примере кода `.catch` будет обрабатывать любые ошибки, возникающие ранее в коде.
-
-```js
-function getComment(x) {
-  let url = "https://www.contoso.com/comments/" + x;
-
-  return fetch(url)
-    .then(function (data) {
-      return data.json();
-    })
-    .then((json) => {
-      return json.body;
-    })
-    .catch(function (error) {
-      throw error;
-    })
-}
-```
-
 ## <a name="known-issues"></a>Известные проблемы
 
 С известными проблемами можно ознакомиться в нашем [репозитории GitHub, посвященном пользовательским функциям в Excel](https://github.com/OfficeDev/Excel-Custom-Functions/issues). 
@@ -463,4 +442,3 @@ function getComment(x) {
 * [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
 * [Журнал изменений пользовательских функций](custom-functions-changelog.md)
 * [Руководство по настраиваемым функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
-

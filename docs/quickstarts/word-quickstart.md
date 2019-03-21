@@ -1,23 +1,23 @@
 ---
 title: Создание первой надстройки Word
 description: ''
-ms.date: 01/17/2019
+ms.date: 03/19/2019
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 20f63c7e61fd4b576eda7c1d737d377439055fe2
-ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.openlocfilehash: 9da974ff604570367771c98e47d549ecc70eee7b
+ms.sourcegitcommit: c5daedf017c6dd5ab0c13607589208c3f3627354
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "29742326"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "30691176"
 ---
 # <a name="build-your-first-word-add-in"></a>Создание первой надстройки Word
 
-_Относится к: Word 2016, Word для iPad, Word для Mac_
+_Применяется к: Word 2016 или более поздней версии для Windows, Word для iPad, Word для Mac_
 
-В этой статье мы разберем, как создать надстройку Word, используя jQuery и API JavaScript для Word. 
+В этой статье мы разберем, как создать надстройку Word, используя jQuery и API JavaScript для Word.
 
-## <a name="create-the-add-in"></a>Создание надстройки 
+## <a name="create-the-add-in"></a>Создание надстройки
 
 [!include[Choose your editor](../includes/quickstart-choose-editor.md)]
 
@@ -30,13 +30,13 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
 1. В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.
-    
+
 2. В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, а затем выберите **Надстройки** > **Веб-надстройка Word**. 
 
 3. Укажите имя проекта и нажмите кнопку **ОК**.
 
 4. Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.
-    
+
 ### <a name="explore-the-visual-studio-solution"></a>Обзор решения Visual Studio
 
 [!include[Description of Visual Studio projects](../includes/quickstart-vs-solution.md)]
@@ -44,14 +44,14 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 ### <a name="update-the-code"></a>Обновление кода
 
 1. Файл **Home.html** содержит HTML-контент, который будет отображаться в области задач надстройки. В файле **Home.html** замените элемент `<body>` на приведенную ниже часть кода и сохраните файл.
- 
+
     ```html
     <body>
         <div id="content-header">
             <div class="padding">
                 <h1>Welcome</h1>
             </div>
-        </div>    
+        </div>
         <div id="content-main">
             <div class="padding">
                 <p>Choose the buttons below to add boilerplate text to the document by using the Word JavaScript API.</p>
@@ -73,7 +73,7 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
     ```js
     'use strict';
-    
+
     (function () {
 
         Office.onReady(function() {
@@ -191,7 +191,7 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
         left: 0;
         right: 0;
         bottom: 0;
-        overflow: auto; 
+        overflow: auto;
     }
 
     .padding {
@@ -225,7 +225,7 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
 1. Протестируйте новую надстройку Word в Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить Word с кнопкой надстройки **Show Taskpane** (Показать область задач) на ленте. Надстройка будет размещена на локальном сервере IIS.
 
-2. В Word выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки. (Если вы используете версию Office 2016 без подписки, а не версию Office 365, пользовательские кнопки не поддерживаются. Сразу откроется область задач.)
+2. В Word выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки. (Если вы используете единовременно приобретенную версию Office, а не версию Office 365, пользовательские кнопки не поддерживаются. Сразу откроется область задач.)
 
     ![Снимок экрана: приложение Word с выделенной кнопкой "Показать область задач"](../images/word-quickstart-addin-0.png)
 
@@ -259,9 +259,9 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
     - **Какое клиентское приложение Office должно поддерживаться?** `Word`
 
     ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-word-jquery.png)
-    
+
     После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
-    
+
 2. Перейдите к корневой папке проекта.
 
     ```bash
@@ -270,7 +270,7 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 
 ### <a name="update-the-code"></a>Обновление кода
 
-1. В редакторе кода откройте файл **index.html** из корневой папки проекта. Этот файл содержит HTML-содержимое, которое будет отображаться в области задач надстройки. 
+1. В редакторе кода откройте файл **index.html** из корневой папки проекта. Этот файл содержит HTML-контент, который будет отображаться в области задач надстройки.
 
 2. Замените элемент `<body>` приведенной ниже разметкой и сохраните файл.
 
@@ -300,11 +300,11 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
     </body>
     ```
 
-2. Откройте файл **src/index.js**, чтобы указать скрипт для надстройки. Замените все его содержимое следующим кодом и сохраните файл. Этот скрипт содержит код инициализации, а также код, вносящий изменения в документ Word, вставляя текст при нажатии кнопки. 
+3. Откройте файл **src/index.js**, чтобы указать скрипт для надстройки. Замените все его содержимое следующим кодом и сохраните файл. Этот скрипт содержит код инициализации, а также код, вносящий изменения в документ Word, вставляя текст при нажатии кнопки.
 
     ```js
     'use strict';
-    
+
     (function () {
 
         Office.onReady(function() {
@@ -401,7 +401,7 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
     })();
     ```
 
-3. Откройте файл **app.css** в корневой папке проекта, чтобы указать специальные стили для надстройки. Замените все его содержимое на приведенный ниже код и сохраните файл.
+4. Откройте файл **app.css** в корневой папке проекта, чтобы указать специальные стили для надстройки. Замените все его содержимое на приведенный ниже код и сохраните файл.
 
     ```css
     #content-header {
@@ -422,7 +422,7 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
         left: 0;
         right: 0;
         bottom: 0;
-        overflow: auto; 
+        overflow: auto;
     }
 
     .padding {
@@ -484,5 +484,4 @@ _Относится к: Word 2016, Word для iPad, Word для Mac_
 * [Обзор надстроек Word](../word/word-add-ins-programming-overview.md)
 * 
   [Примеры кода надстроек Word](https://developer.microsoft.com/en-us/office/gallery/?filterBy=Samples,Word)
-* [Справочник по API JavaScript для Word](https://docs.microsoft.com/office/dev/add-ins/reference/overview/word-add-ins-reference-overview)
-
+* [Справочник по API JavaScript для Word](/office/dev/add-ins/reference/overview/word-add-ins-reference-overview)
