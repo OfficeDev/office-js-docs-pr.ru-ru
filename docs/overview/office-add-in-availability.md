@@ -1,14 +1,14 @@
 ---
 title: Доступность ведущих приложений и платформ для надстроек Office
 description: Поддерживаемые наборы обязательных элементов для Excel, Word, Outlook, PowerPoint, OneNote и Project.
-ms.date: 03/15/2019
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 4348881c35e4c79975d34406e4668b2693405134
-ms.sourcegitcommit: c4d6ecdc41ea67291b6d155c3b246e31ec2e38b7
+ms.openlocfilehash: fe5b1d1278d2c14192fb6fd212f24bb08571d35d
+ms.sourcegitcommit: c5daedf017c6dd5ab0c13607589208c3f3627354
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "30654965"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "30691127"
 ---
 # <a name="office-add-in-host-and-platform-availability"></a>Доступность ведущих приложений и платформ для надстроек Office
 
@@ -331,7 +331,7 @@ ms.locfileid: "30654965"
     <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
       - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2">Mailbox 1.2</a><br>
       - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3">Mailbox 1.3</a><br>
-      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a></td>
+      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a>*</td>
     <td>Недоступно</td>
   </tr>
   <tr>
@@ -340,8 +340,8 @@ ms.locfileid: "30654965"
       - Создание сообщения почты</td>
     <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
       - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2">Mailbox 1.2</a><br>
-      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3">Mailbox 1.3</a><br>
-      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a></td>
+      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3">Mailbox 1.3</a>*<br>
+      - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a>*</td>
     <td>Недоступно</td>
   </tr>
   <tr>
@@ -406,6 +406,8 @@ ms.locfileid: "30654965"
     <td>Недоступно</td>
   </tr>
 </table>
+
+*&ast; - Добавлены обновления после выпуска.*
 
 <br/>
 
@@ -796,7 +798,8 @@ ms.locfileid: "30654965"
   <tr>
     <td>Office 2016 для Mac</td>
     <td> - Контент<br>
-         - Область задач/td> <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
+         - Область задач</td>
+    <td> - <a href="https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
     <td> - ActiveView<br>
          - CompressedFile<br>
          - DocumentEvents<br>
@@ -876,6 +879,6 @@ ms.locfileid: "30654965"
 ## <a name="see-also"></a>См. также
 
 - [Обзор платформы надстроек Office](office-add-ins.md)
-- [Наборы обязательных элементов общего API](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets)
-- [Наборы обязательных элементов для команд надстроек](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets)
-- [Справка по API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office)
+- [Наборы обязательных элементов общего API](/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets)
+- [Наборы обязательных элементов для команд надстроек](/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets)
+- [Справка по API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office)
