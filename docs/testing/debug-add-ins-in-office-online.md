@@ -1,14 +1,14 @@
 ---
 title: Отладка надстроек в Office Online
 description: Сведения о том, как тестировать и отлаживать надстройки в Office Online.
-ms.date: 03/14/2018
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 6252a713444f7ec8bf955c3283a650f72cbcbed1
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: ff77f3d8b3e332288d4ccb3e2d2305d1b1c4a825
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29386556"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871152"
 ---
 # <a name="debug-add-ins-in-office-online"></a>Отладка надстроек в Office Online
 
@@ -22,7 +22,7 @@ ms.locfileid: "29386556"
 - Получите учетную запись разработчика приложений для Office 365 (если у вас еще нет ее) или доступ к сайту SharePoint.
     
   > [!NOTE]
-  > Чтобы бесплатно получить подписку разработчика приложений для Office 365, примите участие в нашей [программе для разработчиков приложений Office 365](https://developer.microsoft.com/office/dev-program). Пошаговые инструкции для принятия участия в этой программе, регистрации и настройки подписки см. в [документации по программе для разработчиков приложений для Office 365](https://docs.microsoft.com/office/developer-program/office-365-developer-program).
+  > Чтобы бесплатно получить подписку разработчика приложений для Office 365, примите участие в нашей [программе для разработчиков приложений Office 365](https://developer.microsoft.com/office/dev-program). Пошаговые инструкции для принятия участия в этой программе, регистрации и настройки подписки см. в [документации по программе для разработчиков приложений для Office 365](/office/developer-program/office-365-developer-program).
      
 - Настройте каталог надстроек в Office 365 (SharePoint Online). Каталог надстроек — это специальное семейство веб-сайтов в SharePoint Online, в котором размещены библиотеки документов для надстроек Office. Если у вас есть сайт SharePoint, вы можете настроить библиотеку документов каталога надстроек. Дополнительные сведения см. в статье [Публикация надстроек области задач и контентных надстроек в каталоге надстроек в SharePoint](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md).
     
@@ -63,7 +63,7 @@ ms.locfileid: "29386556"
 ## <a name="see-also"></a>См. также
 
 - [Рекомендации по разработке надстроек Office](../concepts/add-in-development-best-practices.md)
-- [Политики проверки AppSource](https://docs.microsoft.com/office/dev/store/validation-policies)  
-- [Создание эффективных приложений и надстроек AppSource](https://docs.microsoft.com/office/dev/store/create-effective-office-store-listings)  
+- [Политики проверки AppSource](/office/dev/store/validation-policies)  
+- [Создание эффективных приложений и надстроек AppSource](/office/dev/store/create-effective-office-store-listings)  
 - [Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office](testing-and-troubleshooting.md)
     

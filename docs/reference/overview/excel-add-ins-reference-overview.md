@@ -1,15 +1,15 @@
 ---
 title: Обзор API JavaScript для Excel
 description: ''
-ms.date: 11/01/2018
+ms.date: 03/19/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: e5d32e583dd89cd22f80687cdd273375ab3a815c
-ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.openlocfilehash: bf1d4642a7ceeb34eab51722a398887bb5c03fec
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "29742312"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871131"
 ---
 # <a name="excel-javascript-api-overview"></a>Обзор API JavaScript для Excel
 
@@ -62,6 +62,6 @@ ms.locfileid: "29742312"
 
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения о надстройках Excel](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-overview)
-- [Обзор платформы надстроек Office](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins)
+- [Общие сведения о надстройках Excel](/office/dev/add-ins/excel/excel-add-ins-overview)
+- [Обзор платформы надстроек Office](/office/dev/add-ins/overview/office-add-ins)
 - [Примеры надстроек Excel на сайте GitHub](https://github.com/OfficeDev?utf8=%E2%9C%93&q=Excel)

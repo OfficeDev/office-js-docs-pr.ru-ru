@@ -1,14 +1,14 @@
 ---
 title: Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 description: ''
-ms.date: 01/23/2018
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 8996cab27fc2ad9368d959086cd9ca53902e9be1
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 84f18543c7bafac905805095c89f8e19a855ea76
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29388950"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871075"
 ---
 # <a name="troubleshoot-user-errors-with-office-add-ins"></a>Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 
@@ -16,7 +16,7 @@ ms.locfileid: "29388950"
 
 Для выявления и устранения проблем с надстройками также можно использовать [Fiddler](https://www.telerik.com/fiddler).
 
-Устранив проблему, вы можете [написать об этом пользователям в AppSource напрямую](https://docs.microsoft.com/office/dev/store/create-effective-office-store-listings).
+Устранив проблему, вы можете [написать об этом пользователям в AppSource напрямую](/office/dev/store/create-effective-office-store-listings).
 
 ## <a name="common-errors-and-troubleshooting-steps"></a>Распространенные ошибки и инструкции по устранению неполадок
 
@@ -87,7 +87,7 @@ ms.locfileid: "29388950"
 3. Введите URL-адрес из сообщения об ошибке и нажмите кнопку **Добавить**.
 4. Запустите надстройку снова. Если проблема не исчезла, проверьте параметры для других зон безопасности и убедитесь, что домен надстройки находится в той же зоне, что и URL-адрес, отображаемый в адресной строке приложения Office.
 
-Эта проблема возникает при использовании Dialog API в режиме всплывающих окон. Чтобы эта проблема не возникала, используйте флажок [displayInFrame](https://docs.microsoft.com/javascript/api/office/office.ui). Для этого страница должна поддерживать отображение в окнах iframe. В приведенном ниже примере показано, как использовать флажок.
+Эта проблема возникает при использовании Dialog API в режиме всплывающих окон. Чтобы эта проблема не возникала, используйте флажок [displayInFrame](/javascript/api/office/office.ui). Для этого страница должна поддерживать отображение в окнах iframe. В приведенном ниже примере показано, как использовать флажок.
 
 ```js
 

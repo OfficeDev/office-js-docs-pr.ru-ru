@@ -3,12 +3,12 @@ ms.date: 02/08/2019
 description: Обработка ошибок в пользовательских функциях Excel.
 title: Обработка ошибок в пользовательских функциях Excel (предварительная версия)
 localization_priority: Priority
-ms.openlocfilehash: 170da03331663d6779bed7bf0bf5a9b75b908b3f
-ms.sourcegitcommit: 8fb60c3a31faedaea8b51b46238eb80c590a2491
+ms.openlocfilehash: 6c1c7f780aea125977510e4eb0e320933cd6ed9c
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "30632697"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870011"
 ---
 # <a name="error-handling-within-custom-functions"></a>Обработка ошибок в пользовательских функциях
 
@@ -26,7 +26,7 @@ function getComment(commentID) {
     .then(function (data) {
       return data.json();
     })
-    .then((json) => {
+    .then(function (json) {
       return json.body;
     })
     .catch(function (error) {

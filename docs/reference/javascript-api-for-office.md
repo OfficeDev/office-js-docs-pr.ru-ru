@@ -1,14 +1,14 @@
 ---
 title: API JavaScript для Office
 description: ''
-ms.date: 10/09/2018
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 51ae2a2391a63ab20a33e8ae590834f33311230a
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: c8b33bbf9d0107786c0272410c59b1a3fe998cba
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29387844"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870620"
 ---
 # <a name="javascript-api-for-office"></a>API JavaScript для Office
 
@@ -40,4 +40,4 @@ API JavaScript для Office позволяет создавать веб-при
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по API JavaScript для Office](https://docs.microsoft.com/javascript/api/overview/office)
+- [Справочник по API JavaScript для Office](/javascript/api/overview/office)

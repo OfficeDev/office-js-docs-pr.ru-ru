@@ -1,14 +1,14 @@
 ---
 title: Сохранение состояния и параметров надстройки
 description: ''
-ms.date: 12/04/2017
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 7739dd46499c3ab5ccda13d362950ec86d761660
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 5a6846133fc5aeed5eab84f961d76b93b31e562f
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29388243"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30872027"
 ---
 # <a name="persisting-add-in-state-and-settings"></a>Сохранение состояния и параметров надстройки
 
@@ -17,28 +17,28 @@ ms.locfileid: "29388243"
 - Использовать элементы API JavaScript для Office, чтобы хранить данные в виде:
     -  пар имя-значение в контейнере свойств, расположение которого зависит от типа надстройки;
     -  пользовательского кода XML в документе.
-    
+
 - Использовать способы, предоставленные базовыми элементами управления браузером: cookie-файлы браузера или веб-хранилище HTML5 ([localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) или [sessionStorage](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)).
-    
+
 Эта статья содержит сведения об использовании API JavaScript для сохранения состояния надстройки. Примеры использования cookie-файлов браузера и веб-хранилища см. в примере кода [Excel-Add-in-JavaScript-PersistCustomSettings](https://github.com/OfficeDev/Excel-Add-in-JavaScript-PersistCustomSettings).
 
 ## <a name="persisting-add-in-state-and-settings-with-the-javascript-api-for-office"></a>Сохранение состояния и параметров надстройки с помощью JavaScript API для Office
 
-API JavaScript для Office предоставляет объекты [Settings](https://docs.microsoft.com/javascript/api/office/office.settings), [RoamingSettings](https://docs.microsoft.com/javascript/api/outlook/office.roamingsettings) и [CustomProperties](https://docs.microsoft.com/javascript/api/outlook/office.customproperties) для сохранения состояния надстройки во время сеансов, как показано в следующей таблице. Во всех случаях сохраненные значения параметров связаны с [Id](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/id) создавшей их надстройки.
+API JavaScript для Office предоставляет объекты [Settings](/javascript/api/office/office.settings), [RoamingSettings](/javascript/api/outlook/office.roamingsettings) и [CustomProperties](/javascript/api/outlook/office.customproperties) для сохранения состояния надстройки во время сеансов, как показано в следующей таблице. Во всех случаях сохраненные значения параметров связаны с [Id](/office/dev/add-ins/reference/manifest/id) создавшей их надстройки.
 
 |**Объект**|**Поддерживаемый тип надстроек**|**Расположение хранилища**|**Поддержка ведущих приложений Office**|
 |:-----|:-----|:-----|:-----|
-|[Параметры](https://docs.microsoft.com/javascript/api/office/office.settings)|Надстройки области задач и контентные надстройки|Документ, электронная таблица или презентация, с которой работает надстройка. Параметры надстроек области задач и контентных надстроек доступны создавшей их надстройке в том документе, где они сохранены.<br/><br/>**Внимание!** Не храните в объекте **Settings** пароли и другие конфиденциальные персональные данные. Сохраненные данные не видны пользователям, но содержатся документе, доступ к которому можно получить при прямом считывании. Необходимо ограничить использование надстройкой персональных данных и использовать для их хранения сервер, на котором эта надстройка размещена, как защищенный от пользователей ресурс.|Word, Excel или PowerPoint<br/><br/> **Примечание.** Надстройки области задач для Project 2013 не поддерживают API **Settings** для хранения данных о состоянии или параметров. Однако для надстроек, работающих в Project (а также в других ведущих приложениях Office), можно использовать cookie-файлы браузера или веб-хранилище. Дополнительные сведения об этих технологиях см. в статье [Excel-Add-in-JavaScript-PersistCustomSettings](https://github.com/OfficeDev/Excel-Add-in-JavaScript-PersistCustomSettings). |
-|[RoamingSettings](https://docs.microsoft.com/javascript/api/outlook/office.roamingsettings)|Outlook|Почтовый ящик пользователя на сервере Exchange Server, где установлена надстройка. Так как параметры сохраняются на сервере почтового ящика пользователя, они могут "перемещаться" с пользователем и доступны надстройке при запуске в контексте любого поддерживаемого клиентского ведущего приложения или браузера, получающего доступ к почтовому ящику этого пользователя.<br/><br/> Параметры перемещения надстройки Outlook доступны только создавшей их надстройке и только в том почтовом ящике, в котором она установлена.|Outlook|
-|[CustomProperties](https://docs.microsoft.com/javascript/api/outlook/office.customproperties)|Outlook|Элемент сообщения, встречи, запроса на собрание для которого была запущена надстройка. Пользовательские свойства элемента надстройки Outlook доступны только для создавшей их надстройки и только в элементе, в котором они сохранены.|Outlook|
-|[CustomXmlParts](https://docs.microsoft.com/javascript/api/office/office.customxmlparts)|Надстройки области задач|Документ, электронная таблица или презентация, с которыми работает надстройка. Параметры надстроек области задач доступны создавшей их надстройке в том документе, где они сохранены.<br/><br/>**Внимание!** Не храните пароли и другие конфиденциальные личные сведения в пользовательской части XML. Сохраненные данные не видны пользователям, но содержатся в документе, доступ к которому можно получить при прямом считывании формата файла. Необходимо ограничить использование надстройкой личных сведений и хранить их только на том сервере, где размещена эта надстройка, так как этот ресурс защищен от пользователей.|Word (с использованием общего API JavaScript для Office), Excel (с использованием специального API JavaScript для Excel)|
+|[Параметры](/javascript/api/office/office.settings)|Надстройки области задач и контентные надстройки|Документ, электронная таблица или презентация, с которой работает надстройка. Параметры надстроек области задач и контентных надстроек доступны создавшей их надстройке в том документе, где они сохранены.<br/><br/>**Внимание!** Не храните в объекте **Settings** пароли и другие конфиденциальные персональные данные. Сохраненные данные не видны пользователям, но содержатся документе, доступ к которому можно получить при прямом считывании. Необходимо ограничить использование надстройкой персональных данных и использовать для их хранения сервер, на котором эта надстройка размещена, как защищенный от пользователей ресурс.|Word, Excel или PowerPoint<br/><br/> **Примечание.** Надстройки области задач для Project 2013 не поддерживают API **Settings** для хранения данных о состоянии или параметров. Однако для надстроек, работающих в Project (а также в других ведущих приложениях Office), можно использовать cookie-файлы браузера или веб-хранилище. Дополнительные сведения об этих технологиях см. в статье [Excel-Add-in-JavaScript-PersistCustomSettings](https://github.com/OfficeDev/Excel-Add-in-JavaScript-PersistCustomSettings). |
+|[RoamingSettings](/javascript/api/outlook/office.roamingsettings)|Outlook|Почтовый ящик пользователя на сервере Exchange Server, где установлена надстройка. Так как параметры сохраняются на сервере почтового ящика пользователя, они могут "перемещаться" с пользователем и доступны надстройке при запуске в контексте любого поддерживаемого клиентского ведущего приложения или браузера, получающего доступ к почтовому ящику этого пользователя.<br/><br/> Параметры перемещения надстройки Outlook доступны только создавшей их надстройке и только в том почтовом ящике, в котором она установлена.|Outlook|
+|[CustomProperties](/javascript/api/outlook/office.customproperties)|Outlook|Элемент сообщения, встречи, запроса на собрание для которого была запущена надстройка. Пользовательские свойства элемента надстройки Outlook доступны только для создавшей их надстройки и только в элементе, в котором они сохранены.|Outlook|
+|[CustomXmlParts](/javascript/api/office/office.customxmlparts)|Надстройки области задач|Документ, электронная таблица или презентация, с которыми работает надстройка. Параметры надстроек области задач доступны создавшей их надстройке в том документе, где они сохранены.<br/><br/>**Внимание!** Не храните пароли и другие конфиденциальные личные сведения в пользовательской части XML. Сохраненные данные не видны пользователям, но содержатся в документе, доступ к которому можно получить при прямом считывании формата файла. Необходимо ограничить использование надстройкой личных сведений и хранить их только на том сервере, где размещена эта надстройка, так как этот ресурс защищен от пользователей.|Word (с использованием общего API JavaScript для Office), Excel (с использованием специального API JavaScript для Excel)|
 
 ## <a name="settings-data-is-managed-in-memory-at-runtime"></a>Данные параметров обрабатываются в памяти во время выполнения.
 
 > [!NOTE]
-> В следующих двух разделах рассматриваются параметры в контексте общего API JavaScript для Office. Специальный API JavaScript для Excel также предоставляет доступ к настраиваемым параметрам. Интерфейсы API Excel и шаблоны программирования слегка отличаются. Дополнительные сведения см. в статье [Excel SettingCollection](https://docs.microsoft.com/javascript/api/excel/excel.settingcollection).
+> В следующих двух разделах рассматриваются параметры в контексте общего API JavaScript для Office. Специальный API JavaScript для Excel также предоставляет доступ к настраиваемым параметрам. Интерфейсы API Excel и шаблоны программирования слегка отличаются. Дополнительные сведения см. в статье [Excel SettingCollection](/javascript/api/excel/excel.settingcollection).
 
-Для внутренних целей данные в контейнере свойств, открываемые с помощью объектов  **Settings**,  **CustomProperties** или **RoamingSettings**, сохраняются в качестве сериализованного объекта JSON, содержащего пары "имя-значение". Имя (ключ) для каждого значения должно быть  **string** и значение, сохраненное в свойстве, может быть JavaScript **string**,  **number**,  **date** или **object**, но не должно быть  **function**.
+Для внутренних целей данные в контейнере свойств, открываемые с помощью объектов **Settings**, **CustomProperties** или **RoamingSettings**, сохраняются в качестве сериализованного объекта JSON, содержащего пары "имя-значение". Имя (ключ) для каждого значения должно быть **строкой** и значение, сохраненное в свойстве, может быть **строкой**, **числом**, **датой** или **объектом** JavaScript, но не должно быть **функцией**.
 
 Пример структуры контейнера свойств, содержащего три определенных **строковых** значения с именами `firstName`, `location` и `defaultView`.
 
@@ -50,7 +50,7 @@ API JavaScript для Office предоставляет объекты [Settings
 }
 ```
 
-После сохранения контейнера свойств параметров во время предыдущего сеанса надстройки он может быть загружен при инициализации надстройки или в любое время после этого в течение текущего сеанса приложения. Во время сеанса параметры изменяются только в памяти с помощью методов объекта  **get**,  **set** и **remove**, соответствующего типу создаваемых параметров ( **Settings**,  **CustomProperties** или **RoamingSettings**). 
+После сохранения контейнера свойств параметров во время предыдущего сеанса надстройки он может быть загружен при инициализации надстройки или в любое время после этого в течение текущего сеанса надстройки. Во время сеанса параметры изменяются только в памяти с помощью методов **get**, **set** и **remove** объекта, соответствующего типу создаваемых параметров (**Settings**, **CustomProperties** или **RoamingSettings**). 
 
 
 > [!IMPORTANT]
@@ -60,16 +60,16 @@ API JavaScript для Office предоставляет объекты [Settings
 ## <a name="how-to-save-add-in-state-and-settings-per-document-for-content-and-task-pane-add-ins"></a>Сохранение состояния надстройки и параметров документа для надстроек области задач и контентных надстроек
 
 
-Чтобы сохранить состояние или пользовательские параметры в контентной надстройке или надстройке области задач в Word, Excel или PowerPoint, следует использовать объект [Settings](https://docs.microsoft.com/javascript/api/office/office.settings) и его методы. Контейнер свойств, созданный с помощью методов объекта **Settings**, доступен только тому экземпляру контентной надстройки или надстройки области задач, который создал этот контейнер, и только в том документе, где он сохранен.
+Чтобы сохранить состояние или пользовательские параметры в контентной надстройке или надстройке области задач в Word, Excel или PowerPoint, следует использовать объект [Settings](/javascript/api/office/office.settings) и его методы. Контейнер свойств, созданный с помощью методов объекта **Settings**, доступен только тому экземпляру контентной надстройки или надстройки области задач, который создал этот контейнер, и только в том документе, где он сохранен.
 
-Объект **Settings** автоматически загружается как часть объекта [Document](https://docs.microsoft.com/javascript/api/office/office.document) и доступен при активации надстройки области задач или контентной надстройки. После создания экземпляра объекта **Document** вы можете получить доступ к объекту **Settings** с помощью свойства [settings](https://docs.microsoft.com/javascript/api/office/office.document#settings) объекта **Document**. Во время действия сеанса можно использовать методы **Settings.get**, **Settings.set** и **Settings.remove** для чтения, записи или удаления сохраненных параметров и состояния надстройки из копии контейнера свойств, содержащейся в памяти.
+Объект **Settings** автоматически загружается как часть объекта [Document](/javascript/api/office/office.document) и доступен при активации надстройки области задач или контентной надстройки. После создания экземпляра объекта **Document** вы можете получить доступ к объекту **Settings** с помощью свойства [settings](/javascript/api/office/office.document#settings) объекта **Document**. Во время действия сеанса можно использовать методы **Settings.get**, **Settings.set** и **Settings.remove** для чтения, записи или удаления сохраненных параметров и состояния надстройки из копии контейнера свойств, содержащейся в памяти.
 
-Поскольку методы "set" и "remove" работают только в копии контейнера свойств параметров, содержащейся в памяти, для сохранения новых или измененных параметров документа, с которым сопоставлена надстройка, необходимо вызвать метод [Settings.saveAsync](https://docs.microsoft.com/javascript/api/office/office.settings#saveasync-options--callback-).
+Поскольку методы "set" и "remove" работают только в копии контейнера свойств параметров, содержащейся в памяти, для сохранения новых или измененных параметров документа, с которым сопоставлена надстройка, необходимо вызвать метод [Settings.saveAsync](/javascript/api/office/office.settings#saveasync-options--callback-).
 
 
 ### <a name="creating-or-updating-a-setting-value"></a>Создание или обновление значения параметра
 
-Следующий пример кода демонстрирует использование метода [Settings.set](https://docs.microsoft.com/javascript/api/office/office.settings#set-name--value-) для создания параметра с именем `'themeColor'`, имеющий значение  `'green'`. Первый параметр этого метода — это зависящий от регистра идентификатор  _name_ параметра, который следует определить или создать. Второй параметр — это _value_ параметра.
+Следующий пример кода демонстрирует использование метода [Settings.set](/javascript/api/office/office.settings#set-name--value-) для создания параметра с именем `'themeColor'`, имеющий значение  `'green'`. Первый параметр этого метода — это зависящий от регистра идентификатор  _name_ параметра, который следует определить или создать. Второй параметр — это _value_ параметра.
 
 
 ```js
@@ -81,7 +81,7 @@ Office.context.document.settings.set('themeColor', 'green');
 
 ### <a name="getting-the-value-of-a-setting"></a>Получение значения параметра
 
-В следующем примере показано, как использовать метод [Settings.get](https://docs.microsoft.com/javascript/api/office/office.settings#get-name-) для получения значения параметра "themeColor". Единственным параметром метода **get** является зависящий от регистра параметр _name_.
+В следующем примере показано, как использовать метод [Settings.get](/javascript/api/office/office.settings#get-name-) для получения значения параметра "themeColor". Единственным параметром метода **get** является зависящий от регистра параметр _name_.
 
 
 ```js
@@ -98,7 +98,7 @@ function write(message){
 
 ### <a name="removing-a-setting"></a>Удаление параметра
 
-В следующем примере показано, как использовать метод [Settings.remove](https://docs.microsoft.com/javascript/api/office/office.settings#remove-name-) для удаления параметра с именем "themeColor". Единственным параметром метода **remove** является зависящий от регистра параметр _name_.
+В следующем примере показано, как использовать метод [Settings.remove](/javascript/api/office/office.settings#remove-name-) для удаления параметра с именем "themeColor". Единственным параметром метода **remove** является зависящий от регистра параметр _name_.
 
 
 ```js
@@ -110,7 +110,7 @@ Office.context.document.settings.remove('themeColor');
 
 ### <a name="saving-your-settings"></a>Сохранение параметров
 
-Чтобы сохранить любые добавления, изменения или удаления, внесенные надстройкой в копию контейнера свойств параметров, хранящуюся в памяти, во время текущего сеанса надстройки, необходимо вызвать метод [Settings.saveAsync](https://docs.microsoft.com/javascript/api/office/office.settings#saveasync-options--callback-) для их сохранения в документе. Единственный параметр метода **saveAsync** — это _callback_, представляющий собой функцию обратного вызова с одним параметром. 
+Чтобы сохранить любые добавления, изменения или удаления, внесенные надстройкой в копию контейнера свойств параметров, хранящуюся в памяти, во время текущего сеанса надстройки, необходимо вызвать метод [Settings.saveAsync](/javascript/api/office/office.settings#saveasync-options--callback-) для их сохранения в документе. Единственный параметр метода **saveAsync** — это _callback_, представляющий собой функцию обратного вызова с одним параметром. 
 
 
 ```js
@@ -132,9 +132,9 @@ function write(message){
 ## <a name="how-to-save-custom-xml-to-the-document"></a>Сохранение пользовательского кода XML в документе
 
 > [!NOTE]
-> В этом разделе рассматриваются пользовательские части XML в контексте общего API JavaScript для Office, поддерживаемого в Word. Специальный API JavaScript для Excel также предоставляет доступ к пользовательским частям XML. Интерфейсы API Excel и шаблоны программирования слегка отличаются. Дополнительные сведения см. в статье [Excel CustomXmlPart](https://docs.microsoft.com/javascript/api/excel/excel.customxmlpart).
+> В этом разделе рассматриваются пользовательские части XML в контексте общего API JavaScript для Office, поддерживаемого в Word. Специальный API JavaScript для Excel также предоставляет доступ к пользовательским частям XML. Интерфейсы API Excel и шаблоны программирования слегка отличаются. Дополнительные сведения см. в статье [Excel CustomXmlPart](/javascript/api/excel/excel.customxmlpart).
 
-Если требуется сохранить данные, размер которых превышает ограничения для параметров документа, или структурированные данные, то используется дополнительный параметр хранения. Вы можете сохранять пользовательскую разметку XML в надстройке области задач для Word (а также для Excel, но следует учитывать примечание в начале этого раздела). В Word можно использовать объект [CustomXmlPart](https://docs.microsoft.com/javascript/api/office/office.customxmlpart) и его методы (еще раз, см. примечание для Excel выше). В приведенном ниже коде создается пользовательская часть XML, после чего в разделителях на странице отображается сначала ее ИД, а затем ее содержимое. Обратите внимание, что в строке XML должен быть указан атрибут `xmlns`.
+Если требуется сохранить данные, размер которых превышает ограничения для параметров документа, или структурированные данные, то используется дополнительный параметр хранения. Вы можете сохранять пользовательскую разметку XML в надстройке области задач для Word (а также для Excel, но следует учитывать примечание в начале этого раздела). В Word можно использовать объект [CustomXmlPart](/javascript/api/office/office.customxmlpart) и его методы (еще раз, см. примечание для Excel выше). В приведенном ниже коде создается пользовательская часть XML, после чего в разделителях на странице отображается сначала ее ИД, а затем ее содержимое. Обратите внимание, что в строке XML должен быть указан атрибут `xmlns`.
 
 ```js
 function createCustomXmlPart() {
@@ -144,7 +144,7 @@ function createCustomXmlPart() {
             $("#xml-id").text("Your new XML part's ID: " + asyncResult.id);
             asyncResult.value.getXmlAsync(
                 (asyncResult) => {
-                    $("#xml-blob").text(asyncResult.value);                    
+                    $("#xml-blob").text(asyncResult.value);
                 }
             );
         }
@@ -152,7 +152,7 @@ function createCustomXmlPart() {
 }
 ```
 
-Чтобы получить пользовательскую часть XML, используйте метод [getByIdAsync](https://docs.microsoft.com/javascript/api/office/office.customxmlparts#getbyidasync-id--options--callback-). Однако ИД — это GUID, генерируемый при создании части XML, поэтому его невозможно узнать во время написания кода. По этой причине при создании части XML рекомендуется сразу сохранить ее ИД в виде параметра с запоминающимся идентификатором. Ниже показано, как это сделать. В предыдущих разделах этой статьи вы найдете подробные сведения и рекомендации по работе с настраиваемыми параметрами.
+Чтобы получить пользовательскую часть XML, используйте метод [getByIdAsync](/javascript/api/office/office.customxmlparts#getbyidasync-id--options--callback-). Однако ИД — это GUID, генерируемый при создании части XML, поэтому его невозможно узнать во время написания кода. По этой причине при создании части XML рекомендуется сразу сохранить ее ИД в виде параметра с запоминающимся идентификатором. Ниже показано, как это сделать. В предыдущих разделах этой статьи вы найдете подробные сведения и рекомендации по работе с настраиваемыми параметрами.
 
  ```js
 function createCustomXmlPartAndStoreId() {
@@ -171,11 +171,11 @@ function createCustomXmlPartAndStoreId() {
  ```js
 function getReviewers() {
     const reviewersXmlId = Office.context.document.settings.get('ReviewersID'));
-    Office.context.document.customXmlParts.getByIdAsync(reviewersXmlId, 
+    Office.context.document.customXmlParts.getByIdAsync(reviewersXmlId,
         (asyncResult) => {
             asyncResult.value.getXmlAsync(
                 (asyncResult) => {
-                    $("#xml-blob").text(asyncResult.value);                    
+                    $("#xml-blob").text(asyncResult.value);
                 }
             );
         }
@@ -187,13 +187,13 @@ function getReviewers() {
 ## <a name="how-to-save-settings-in-the-users-mailbox-for-outlook-add-ins-as-roaming-settings"></a>Сохранение параметров в почтовом ящике пользователя для надстроек Outlook в качестве параметров перемещения
 
 
-Надстройка Outlook может использовать объект [RoamingSettings](https://docs.microsoft.com/javascript/api/outlook/office.roamingsettings) для сохранения сведений о состоянии и параметров надстройки, относящихся к почтовому ящику пользователя. Эти данные доступны только этой надстройке Outlook, запущенной от имени пользователя. Эти данные хранятся в почтовом ящике пользователя на сервере Exchange Server и становятся доступны, когда пользователь войдет в свою учетную запись и запустит надстройку Outlook.
+Надстройка Outlook может использовать объект [RoamingSettings](/javascript/api/outlook/office.roamingsettings) для сохранения сведений о состоянии и параметров надстройки, относящихся к почтовому ящику пользователя. Эти данные доступны только этой надстройке Outlook, запущенной от имени пользователя. Эти данные хранятся в почтовом ящике пользователя на сервере Exchange Server и становятся доступны, когда пользователь войдет в свою учетную запись и запустит надстройку Outlook.
 
 
 ### <a name="loading-roaming-settings"></a>Загрузка параметров перемещения
 
 
-Надстройка Outlook обычно загружает параметры перемещения в обработчик событий [Office.initialize](https://docs.microsoft.com/javascript/api/office). В следующем примере кода JavaScript показано, как выполняется загрузка существующих параметров перемещения.
+Надстройка Outlook обычно загружает параметры перемещения в обработчик событий [Office.initialize](/javascript/api/office). В следующем примере кода JavaScript показано, как выполняется загрузка существующих параметров перемещения.
 
 
 ```js
@@ -217,7 +217,7 @@ Office.initialize = function (reason) {
 ### <a name="creating-or-assigning-a-roaming-setting"></a>Создание или назначение параметра перемещения
 
 
-Развивая предыдущий пример, следующая функция  `setAppSetting`, показывает, как использовать метод [RoamingSettings.set](https://docs.microsoft.com/javascript/api/outlook/office.roamingsettings#set-name--value-) для определения или обновления заданного параметра `cookie` с указанием сегодняшнего числа. Затем он позволяет заново сохранить все параметры перемещения на сервере Exchange при помощи метода [RoamingSettings.saveAsync](https://docs.microsoft.com/javascript/api/outlook/office.roamingsettings#saveasync-callback-).
+Развивая предыдущий пример, следующая функция  `setAppSetting`, показывает, как использовать метод [RoamingSettings.set](/javascript/api/outlook/office.roamingsettings#set-name--value-) для определения или обновления заданного параметра `cookie` с указанием сегодняшнего числа. Затем он позволяет заново сохранить все параметры перемещения на сервере Exchange при помощи метода [RoamingSettings.saveAsync](/javascript/api/outlook/office.roamingsettings#saveasync-callback-).
 
 
 ```js
@@ -235,13 +235,13 @@ function saveMyAppSettingsCallback(asyncResult) {
 }
 ```
 
-Метод **saveAsync** сохраняет параметры перемещения асинхронно и получает дополнительную функцию обратного вызова. Данный пример кода передает функцию обратного вызова `saveMyAppSettingsCallback` в метод **saveAsync**. После возврата асинхронного вызова параметр _asyncResult_ функции `saveMyAppSettingsCallback` предоставляет доступ к объекту [AsyncResult](https://docs.microsoft.com/javascript/api/outlook), который можно использовать для определения успешного или неудачного выполнения операции при помощи свойства **AsyncResult.status**.
+Метод **saveAsync** сохраняет параметры перемещения асинхронно и получает дополнительную функцию обратного вызова. Данный пример кода передает функцию обратного вызова `saveMyAppSettingsCallback` в метод **saveAsync**. После возврата асинхронного вызова параметр _asyncResult_ функции `saveMyAppSettingsCallback` предоставляет доступ к объекту [AsyncResult](/javascript/api/outlook), который можно использовать для определения успешного или неудачного выполнения операции при помощи свойства **AsyncResult.status**.
 
 
 ### <a name="removing-a-roaming-setting"></a>Удаление параметра перемещения
 
 
-Предыдущие примеры дополняет следующая функция  `removeAppSetting`, демонстрирующая применение метода [RoamingSettings.remove](https://docs.microsoft.com/javascript/api/outlook/office.roamingsettings#remove-name-) для удаления параметра `cookie` и повторного сохранения всех параметров перемещения на сервере Exchange.
+Предыдущие примеры дополняет следующая функция  `removeAppSetting`, демонстрирующая применение метода [RoamingSettings.remove](/javascript/api/outlook/office.roamingsettings#remove-name-) для удаления параметра `cookie` и повторного сохранения всех параметров перемещения на сервере Exchange.
 
 
 ```js
@@ -259,7 +259,7 @@ function removeAppSetting()
 
 Пользовательские свойства позволяют надстройке Outlook сохранять сведения об элементе, который она использует. Например, если в надстройке Outlook создается встреча на основе приглашения на собрание в сообщении, с помощью пользовательских свойств можно сохранить сведения о факте создания собрания. Это гарантирует, что надстройка не предложит создать встречу еще раз при повторном открытии сообщения.
 
-Перед использованием пользовательских свойств для определенного сообщения, встречи или элемента приглашения на собрание, необходимо загрузить свойства в память путем вызова метода [loadCustomPropertiesAsync](https://docs.microsoft.com/javascript/api/outlook/office.mailbox) объекта **Item**. Если какие-либо пользовательские свойства уже заданы для текущего элемента, на этом этапе они загружаются с сервера Exchange. После загрузки свойств можно использовать методы [set](https://docs.microsoft.com/javascript/api/outlook/office.customproperties#set-name--value-) и [get](https://docs.microsoft.com/javascript/api/outlook/office.roamingsettings) объекта **CustomProperties** для добавления, обновления и получения свойств в памяти. Чтобы сохранить любые изменения, внесенные в пользовательские свойства элемента, необходимо использовать метод [saveAsync](https://docs.microsoft.com/javascript/api/outlook/office.customproperties#saveasync-callback--asynccontext-) для сохранения изменений в элементе на сервере Exchange.
+Перед использованием пользовательских свойств для определенного сообщения, встречи или элемента приглашения на собрание, необходимо загрузить свойства в память путем вызова метода [loadCustomPropertiesAsync](/javascript/api/outlook/office.mailbox) объекта **Item**. Если какие-либо пользовательские свойства уже заданы для текущего элемента, на этом этапе они загружаются с сервера Exchange. После загрузки свойств можно использовать методы [set](/javascript/api/outlook/office.customproperties#set-name--value-) и [get](/javascript/api/outlook/office.roamingsettings) объекта **CustomProperties** для добавления, обновления и получения свойств в памяти. Чтобы сохранить любые изменения, внесенные в пользовательские свойства элемента, необходимо использовать метод [saveAsync](/javascript/api/outlook/office.customproperties#saveasync-callback--asynccontext-) для сохранения изменений в элементе на сервере Exchange.
 
 
 ### <a name="custom-properties-example"></a>Пример пользовательских свойств
@@ -308,21 +308,21 @@ function customPropsCallback(asyncResult) {
     _customProps = asyncResult.value;
 }
 
-// Sets or updates the specified property, and then saves the change 
+// Sets or updates the specified property, and then saves the change
 // to the server.
 function updateProperty(name, value) {
     _customProps.set(name, value);
     _customProps.saveAsync(saveCallback);
 }
 
-// Removes the specified property, and then persists the removal 
+// Removes the specified property, and then persists the removal
 // to the server.
 function removeProperty(name) {
    _customProps.remove(name);
    _customProps.saveAsync(saveCallback);
 }
 
-// Callback for calls to saveAsync method. 
+// Callback for calls to saveAsync method.
 function saveCallback(asyncResult) {
     if (asyncResult.status == Office.AsyncResultStatus.Failed) {
         // Handle the failure.
@@ -334,6 +334,5 @@ function saveCallback(asyncResult) {
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения об интерфейсе API JavaScript для Office](understanding-the-javascript-api-for-office.md)
-- [Надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/)
+- [Надстройки Outlook](/outlook/add-ins/)
 - [Excel-Add-in-JavaScript-PersistCustomSettings](https://github.com/OfficeDev/Excel-Add-in-JavaScript-PersistCustomSettings)
-    

@@ -3,12 +3,12 @@ title: Работа с книгами с использованием API JavaSc
 description: ''
 ms.date: 02/28/2019
 localization_priority: Priority
-ms.openlocfilehash: eb647fe7f82dc669f071de53f6bac705e303c652
-ms.sourcegitcommit: f7f3d38ae4430e2218bf0abe7bb2976108de3579
+ms.openlocfilehash: 4ced2fe36e4429b3dc0836f18ef0bdc7a823b3bf
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "30359270"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870312"
 ---
 # <a name="work-with-workbooks-using-the-excel-javascript-api"></a>Работа с книгами с использованием API JavaScript для Excel
 
@@ -75,7 +75,7 @@ reader.readAsDataURL(myFile.files[0]);
 ### <a name="insert-a-copy-of-an-existing-workbook-into-the-current-one"></a>Вставка копии существующей книги в текущую книгу.
 
 > [!NOTE]
-> Функция `WorksheetCollection.addFromBase64` в настоящее время доступна только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-preview-apis.md)]
+> Функция `WorksheetCollection.addFromBase64` в настоящее время доступна только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
 
 В предыдущем примере показана новая книга, которая была создана из существующей книги. Вы также можете скопировать отдельные части или всю существующую книгу целиком в книгу, привязанную в настоящее время к вашей надстройке. [WorksheetCollection](/javascript/api/excel/excel.worksheetcollection) для книги имеет метод `addFromBase64` для вставки копий листов целевой книги в саму книгу. Файл другой книги передается в виде строки в кодировке base64, как и вызов `Excel.createWorkbook`.
 
@@ -265,7 +265,7 @@ context.application.suspendApiCalculationUntilNextSync();
 ## <a name="save-the-workbook"></a>Сохраните книгу.
 
 > [!NOTE]
-> Функция `Workbook.save(saveBehavior)` в настоящее время доступна только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-preview-apis.md)]
+> Функция `Workbook.save(saveBehavior)` в настоящее время доступна только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
 
 `Workbook.save(saveBehavior)` сохраняет книгу в постоянную хранилище. Метод `save` имеет один необязательный параметр, который может иметь одно из следующих значений:
 
@@ -282,7 +282,7 @@ context.workbook.save(Excel.SaveBehavior.prompt);
 ## <a name="close-the-workbook"></a>Закрытие книги.
 
 > [!NOTE]
-> Функция `Workbook.close(closeBehavior)` в настоящее время доступна только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-preview-apis.md)]
+> Функция `Workbook.close(closeBehavior)` в настоящее время доступна только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
 
 `Workbook.close(closeBehavior)` закрывает книгу, а также надстройки, которые связаны с книгой, (приложение Excel остается открытым). Метод `close` имеет один необязательный параметр, который может иметь одно из следующих значений:
 

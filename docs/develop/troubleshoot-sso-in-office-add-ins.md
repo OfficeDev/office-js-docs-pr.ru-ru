@@ -1,23 +1,23 @@
 ---
 title: Устранение ошибок единого входа
 description: ''
-ms.date: 03/19/2019
+ms.date: 03/22/2019
 localization_priority: Priority
-ms.openlocfilehash: 9045ebc55813644cdfba4787579022d78c47b13f
-ms.sourcegitcommit: c5daedf017c6dd5ab0c13607589208c3f3627354
+ms.openlocfilehash: 1b885834304ebedd62eea206f02dae4bacefba5c
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "30691190"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30872160"
 ---
 # <a name="troubleshoot-error-messages-for-single-sign-on-sso-preview"></a>Устранение ошибок единого входа (предварительная версия)
 
 В этой статье представлено руководство по обеспечению надежной обработки специальных условий и ошибок в надстройках Office, поддерживающих единый вход, а также устранению связанных с единым входом проблем в таких надстройках.
 
 > [!NOTE]
-> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint в тестовом режиме. Дополнительные сведения о текущей поддержке API единого входа см. в статье "Наборы требований API Identity"https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets).
-> Чтобы использовать единый вход, вам необходимо загрузить бета-версию библиотеки JavaScript Office из https://appsforoffice.microsoft.com/lib/beta/hosted/office.js на страницу подготовки HTML для надстройки.
-> Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint в тестовом режиме. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets).
+> [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+> Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 ## <a name="debugging-tools"></a>Средства отладки
 
@@ -122,7 +122,7 @@ ms.locfileid: "30691190"
 
 
 ### <a name="conditional-access--multifactor-authentication-errors"></a>Ошибки условного доступа и многофакторной проверки подлинности
- 
+
 При использовании некоторых конфигураций удостоверений в AAD и Office 365 некоторым ресурсам, доступным через Microsoft Graph, может потребоваться многофакторная проверка подлинности (MFA), даже если она не требуется клиенту Office 365. Когда служба AAD получает запрос на получение токена для доступа к защищенному с помощью MFA ресурсу, через поток выполнения от имени другого субъекта она возвращает веб-службе надстройки сообщение JSON, содержащее свойство `claims`. Свойство claims содержит сведения о том, какие еще факторы проверки подлинности требуются.
 
 Код на стороне сервера должен проверить это сообщение и ретранслировать значение свойства claims клиентскому коду. Эти сведения необходимы клиенту, так как Office обрабатывает проверку подлинности для надстроек с единым входом. Сообщение для клиента может быть кодом ошибки (например, `500 Server Error` или `401 Unauthorized`) либо находиться в тексте отклика об успешном выполнении (например, `200 OK`). В обоих случаях функция обратного вызова для клиентского AJAX-вызова веб-API надстройки должна проверять этот отклик. Если значение свойства claims было ретранслировано, то код должен повторно вызвать метод `getAccessTokenAsync` и передать значение `authChallenge: CLAIMS-STRING-HERE` в параметре [options](/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference). Когда служба AAD обнаруживает эту строку, она предлагает пользователю указать дополнительные факторы, а затем возвращает новый маркер доступа, который будет принят в потоке выполнения от имени другого субъекта.

@@ -1,22 +1,23 @@
 ---
 title: Поиск текста в надстройке Word
 description: ''
-ms.date: 07/20/2018
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 3e97a9ff41ac2969eddafe8c5b4e762bcc70289b
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 343271b0863379d799c22f9b63a47a9acfd67b93
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29386766"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870683"
 ---
-# <a name="use-search-options-to-find-text-in-your-word-add-in"></a>Поиск текста в надстройке Word 
+# <a name="use-search-options-to-find-text-in-your-word-add-in"></a>Поиск текста в надстройке Word
 
 Надстройки часто должны действовать на основе текста документа.
-Функция поиска предоставлена для каждого элемента управления содержимым (включает объекты [Body](https://docs.microsoft.com/javascript/api/word/word.body), [Paragraph](https://docs.microsoft.com/javascript/api/word/word.paragraph), [Range](https://docs.microsoft.com/javascript/api/word/word.range), [Table](https://docs.microsoft.com/javascript/api/word/word.table), [TableRow](https://docs.microsoft.com/javascript/api/word/word.tablerow), и базовый объект [ContentControl](https://docs.microsoft.com/javascript/api/word/word.contentcontrol)). Эта функция принимает строку (или подстановочное выражение), представляющую текст, который вы ищете, а также объект [SearchOptions](https://docs.microsoft.com/javascript/api/word/word.searchoptions). Она возвращает коллекцию диапазонов, соответствующих искомому тексту.
+Функция поиска предоставлена для каждого элемента управления содержимым (включает объекты [Body](/javascript/api/word/word.body), [Paragraph](/javascript/api/word/word.paragraph), [Range](/javascript/api/word/word.range), [Table](/javascript/api/word/word.table), [TableRow](/javascript/api/word/word.tablerow), и базовый объект [ContentControl](/javascript/api/word/word.contentcontrol)). Эта функция принимает строку (или подстановочное выражение), представляющую текст, который вы ищете, а также объект [SearchOptions](/javascript/api/word/word.searchoptions). Она возвращает коллекцию диапазонов, соответствующих искомому тексту.
 
 ## <a name="search-options"></a>Параметры поиска
-Параметры поиска представляют собой коллекцию логических значений, определяющих способ обработки параметра поиска. 
+
+Параметры поиска представляют собой коллекцию логических значений, определяющих способ обработки параметра поиска.
 
 | Свойство     | Описание|
 |:---------------|:----|
@@ -29,6 +30,7 @@ ms.locfileid: "29386766"
 |matchWildcards|Возвращает или задает значение, которое указывает, будет ли выполняться поиск с использованием специальных операторов поиска. Соответствует установленному флажку "Подстановочные знаки" в диалоговом окне "Найти и заменить".|
 
 ## <a name="wildcard-guidance"></a>Руководство по подстановочным знакам
+
 В таблице ниже приведено руководство по подстановочным знакам поиска в API JavaScript для Word.
 
 | Чтобы найти:         | Подстановочный знак |  Пример |
@@ -50,6 +52,7 @@ ms.locfileid: "29386766"
 Поиск с использованием подстановочных знаков по сути аналогичен поиску по регулярному выражению. В регулярных выражениях используются специальные знаки, в том числе '[', ']', '(', ')', '{', '}', '\*', '?', '<', '>', '!' и '@'. Если один из этих знаков входит в состав искомого строкового литерала, его необходимо отменить, чтобы приложение Word знало, что его необходимо рассматривать буквально, а не как часть логики регулярного выражения. Чтобы отменить символ при поиске с помощью пользовательского интерфейса Word, добавьте перед ним символ '\'. Чтобы отменить символ в программном коде, заключите его в символы '[]'. Например, выражение '[\*]\*' ищет все строки, начинающиеся с символа '\*', за которым следует любое количество других символов. 
 
 ## <a name="examples"></a>Примеры
+
 В приведенных ниже примерах показаны распространенные сценарии.
 
 ### <a name="ignore-punctuation-search"></a>Поиск без учета знаков препинания
@@ -57,14 +60,14 @@ ms.locfileid: "29386766"
 ```js
 // Run a batch operation against the Word object model.
 Word.run(function (context) {
-    
+
     // Queue a command to search the document and ignore punctuation.
     var searchResults = context.document.body.search('video you', {ignorePunct: true});
 
     // Queue a command to load the search results and get the font property values.
     context.load(searchResults, 'font');
-    
-    // Synchronize the document state by executing the queued commands, 
+
+    // Synchronize the document state by executing the queued commands,
     // and return a promise to indicate task completion.
     return context.sync().then(function () {
         console.log('Found count: ' + searchResults.items.length);
@@ -75,8 +78,8 @@ Word.run(function (context) {
             searchResults.items[i].font.highlightColor = '#FFFF00'; //Yellow
             searchResults.items[i].font.bold = true;
         }
-        
-        // Synchronize the document state by executing the queued commands, 
+
+        // Synchronize the document state by executing the queued commands,
         // and return a promise to indicate task completion.
         return context.sync();
     });  
@@ -94,13 +97,13 @@ Word.run(function (context) {
 ```js
 // Run a batch operation against the Word object model.
 Word.run(function (context) {
-    
+
     // Queue a command to search the document based on a prefix.
     var searchResults = context.document.body.search('vid', {matchPrefix: true});
 
     // Queue a command to load the search results and get the font property values.
     context.load(searchResults, 'font');
-    
+
     // Synchronize the document state by executing the queued commands, 
     // and return a promise to indicate task completion.
     return context.sync().then(function () {
@@ -112,8 +115,8 @@ Word.run(function (context) {
             searchResults.items[i].font.highlightColor = '#FFFF00'; //Yellow
             searchResults.items[i].font.bold = true;
         }
-        
-        // Synchronize the document state by executing the queued commands, 
+
+        // Synchronize the document state by executing the queued commands,
         // and return a promise to indicate task completion.
         return context.sync();
     });  
@@ -137,8 +140,8 @@ Word.run(function (context) {
 
     // Queue a command to load the search results and get the font property values.
     context.load(searchResults, 'font');
-    
-    // Synchronize the document state by executing the queued commands, 
+
+    // Synchronize the document state by executing the queued commands,
     // and return a promise to indicate task completion.
     return context.sync().then(function () {
         console.log('Found count: ' + searchResults.items.length);
@@ -149,8 +152,8 @@ Word.run(function (context) {
             searchResults.items[i].font.highlightColor = 'black';
             searchResults.items[i].font.bold = true;
         }
-        
-        // Synchronize the document state by executing the queued commands, 
+
+        // Synchronize the document state by executing the queued commands,
         // and return a promise to indicate task completion.
         return context.sync();
     });  
@@ -168,14 +171,14 @@ Word.run(function (context) {
 ```js
 // Run a batch operation against the Word object model.
 Word.run(function (context) {
-    
+
     // Queue a command to search the document with a wildcard
     // for any string of characters that starts with 'to' and ends with 'n'.
     var searchResults = context.document.body.search('to*n', {matchWildCards: true});
 
     // Queue a command to load the search results and get the font property values.
     context.load(searchResults, 'font');
-    
+
     // Synchronize the document state by executing the queued commands, 
     // and return a promise to indicate task completion.
     return context.sync().then(function () {
@@ -187,8 +190,8 @@ Word.run(function (context) {
             searchResults.items[i].font.highlightColor = 'pink';
             searchResults.items[i].font.bold = true;
         }
-        
-        // Synchronize the document state by executing the queued commands, 
+
+        // Synchronize the document state by executing the queued commands,
         // and return a promise to indicate task completion.
         return context.sync();
     });  
@@ -201,4 +204,4 @@ Word.run(function (context) {
 });
 ```
 
-Дополнительные сведения можно найти в [Справочнике по API JavaScript для Word](https://docs.microsoft.com/office/dev/add-ins/reference/overview/word-add-ins-reference-overview).
+Дополнительные сведения можно найти в [Справочнике по API JavaScript для Word](/office/dev/add-ins/reference/overview/word-add-ins-reference-overview).

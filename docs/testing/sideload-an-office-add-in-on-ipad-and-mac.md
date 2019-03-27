@@ -1,14 +1,14 @@
 ---
 title: Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 description: ''
-ms.date: 02/25/2019
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: dc0fad24d7f4f062fb0115edcc58a37d8d9052da
-ms.sourcegitcommit: f7f3d38ae4430e2218bf0abe7bb2976108de3579
+ms.openlocfilehash: e2f9ee912395e0f54130f0e78109cab4479b6567
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "30359256"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871978"
 ---
 # <a name="sideload-office-add-ins-on-ipad-and-mac-for-testing"></a>Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 
@@ -60,7 +60,7 @@ ms.locfileid: "30359256"
 ## <a name="sideload-an-add-in-on-office-for-mac"></a>Загрузка неопубликованной надстройки в Office для Mac
 
 > [!NOTE]
-> Инструкции для надстройки Outlook для Mac см. в статье [Загрузка неопубликованных надстроек Outlook для тестирования](https://docs.microsoft.com/outlook/add-ins/sideload-outlook-add-ins-for-testing).
+> Инструкции для надстройки Outlook для Mac см. в статье [Загрузка неопубликованных надстроек Outlook для тестирования](/outlook/add-ins/sideload-outlook-add-ins-for-testing).
 
 1. Откройте **Терминал** и перейдите в одну из указанных ниже папок, чтобы сохранить в нее файл манифеста надстройки. Если папки `wef` нет на компьютере, создайте ее.
     

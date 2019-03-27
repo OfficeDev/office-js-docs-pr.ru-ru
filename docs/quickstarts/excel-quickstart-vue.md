@@ -1,15 +1,15 @@
 ---
 title: Создание надстройки Excel с помощью Vue
 description: ''
-ms.date: 10/18/2018
+ms.date: 03/19/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: d68c30cbff61de9374dff483aa259864a1d86baf
-ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.openlocfilehash: 1925c9fcde0bb2f07cce4c0bcb0be99cc1c6061c
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "29742207"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870998"
 ---
 # <a name="build-an-excel-add-in-using-vue"></a>Создание надстройки Excel с помощью Vue
 
@@ -60,7 +60,7 @@ vue init webpack my-add-in
 2. Используя генератор Yeoman, создайте файл манифеста для надстройки. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
     ```bash
-    yo office 
+    yo office
     ```
 
     - **Выберите тип проекта:** `Office Add-in containing the manifest only`
@@ -68,7 +68,7 @@ vue init webpack my-add-in
     - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
     ![Генератор Yeoman](../images/yo-office.png)
-    
+
     После выполнения указаний мастера генератор создаст файл манифеста.
 
 ## <a name="secure-the-app"></a>Защита приложения
@@ -224,5 +224,5 @@ vue init webpack my-add-in
 * [Руководство по надстройкам Excel](../tutorials/excel-tutorial-create-table.md)
 * [Основные концепции программирования с помощью API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
 * [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
-* [Справочник по API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)
+* [Справочник по API JavaScript для Excel](/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)
 

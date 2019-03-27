@@ -3,12 +3,12 @@ title: Работа с диапазонами с использованием AP
 description: ''
 ms.date: 02/20/2019
 localization_priority: Priority
-ms.openlocfilehash: c911bf6e908d06298e768bdaf047262d78808321
-ms.sourcegitcommit: 8e20e7663be2aaa0f7a5436a965324d171bc667d
+ms.openlocfilehash: bb3971a88b6721206424a62c007ce2bcdbd7d3a0
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "30199587"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30872167"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api"></a>Работа с диапазонами с использованием API JavaScript для Excel
 
@@ -546,9 +546,9 @@ Excel.run(function (context) {
 ## <a name="find-a-cell-using-string-matching-preview"></a>Поиск ячейки с помощью сопоставления строк (предварительная версия)
 
 > [!NOTE]
-> Функция `find` объекта Range в настоящее время доступна только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-preview-apis.md)]
+> Функция `find` объекта Range в настоящее время доступна только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
 
-У объекта `Range` есть метод `find` для поиска указанной строки в диапазоне. Он возвращает диапазон первой ячейки с текстом, соответствующим критериям. Приведенный ниже пример кода находит первую ячейку со значением, соответствующим строке **Food** (Еда), и заносит ее адрес в консоль. Обратите внимание, что метод `find` выдает ошибку `ItemNotFound`, если указанной строки не существует в диапазоне. Если ожидается, что указанная строка может отсутствовать в диапазоне, используйте вместо этого метод [findOrNullObject](excel-add-ins-advanced-concepts.md#42ornullobject-methods), чтобы ваш код корректно обработал этот сценарий.
+У объекта `Range` есть метод `find` для поиска указанной строки в диапазоне. Он возвращает диапазон первой ячейки с текстом, соответствующим критериям. Приведенный ниже пример кода находит первую ячейку со значением, соответствующим строке **Food** (Еда), и заносит ее адрес в консоль. Обратите внимание, что метод `find` выдает ошибку `ItemNotFound`, если указанной строки не существует в диапазоне. Если ожидается, что указанная строка может отсутствовать в диапазоне, используйте вместо этого метод [findOrNullObject](excel-add-ins-advanced-concepts.md#ornullobject-methods), чтобы ваш код корректно обработал этот сценарий.
 
 ```js
 Excel.run(function (context) {

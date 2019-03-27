@@ -1,21 +1,21 @@
 ---
 title: Версии Office и наборы обязательных элементов
 description: ''
-ms.date: 03/29/2018
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: fce111a25a4d88964827a403aad80d8899c7fb86
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 1af4840e965d7043505aedc8330cebacacc4d203
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29386682"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30872209"
 ---
 # <a name="office-versions-and-requirement-sets"></a>Версии Office и наборы обязательных элементов
 
 Не все версии Office поддерживают все API в API JavaScript для Office (Office.js). Не всегда можно указать версию Office, с которой должны работать пользователи.  Для таких ситуаций существуют наборы обязательных элементов, которые помогают определить, поддерживает ли ведущее приложение Office необходимые надстройке возможности. 
 
 > [!NOTE]
-> - Office работает на разных платформах, в том числе Office для Windows, Office Online, Office для Mac и Office для iPad.  
+> - Office работает на разных платформах, в том числе Office для Windows, Office Online, Office для Mac и Office для iPad.
 > - Примеры ведущих приложений Office — Excel, Word, PowerPoint, Outlook, OneNote и другие продукты.  
 > - Набор обязательных элементов — это именованная группа элементов API, например, `ExcelApi 1.5`, `WordApi 1.3` и т. д.  
 
@@ -37,30 +37,30 @@ ms.locfileid: "29386682"
 
 Надстройка может использовать API только в наборах обязательных элементов, поддерживаемых версией ведущего приложения Office, в которой она работает. Чтобы узнать, какие наборы обязательных элементов доступны для конкретной версии ведущего приложения Office, просмотрите следующие статьи:
 
-- [Наборы обязательных элементов API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) (ExcelApi)
-- [Наборы обязательных элементов API JavaScript для Word](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) (WordApi)
-- [Наборы обязательных элементов API JavaScript для OneNote](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) (OneNoteApi)
-- [Общие сведения о наборах обязательных элементов API Outlook](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) (MailBox)
+- [Наборы обязательных элементов API JavaScript для Excel](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) (ExcelApi)
+- [Наборы обязательных элементов API JavaScript для Word](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) (WordApi)
+- [Наборы обязательных элементов API JavaScript для OneNote](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) (OneNoteApi)
+- [Общие сведения о наборах обязательных элементов API Outlook](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) (MailBox)
 
 Некоторые наборы обязательных элементов содержат API, которые могут использоваться любым ведущим приложением Office. Информацию об этих наборах обязательных элементов см. в следующих статьях:
 
-- [Общие наборы обязательных элементов для Office](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets)
-- [Наборы обязательных элементов для команд надстроек](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets)
-- [Наборы обязательных элементов API диалоговых окон](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets)
-- [Наборы обязательных элементов API идентификации](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets)
+- [Общие наборы обязательных элементов для Office](/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets)
+- [Наборы обязательных элементов для команд надстроек](/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets)
+- [Наборы обязательных элементов API диалоговых окон](/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets)
+- [Наборы обязательных элементов API идентификации](/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets)
 
 Номер версии набора обязательных элементов, например "1.1" в `ExcelApi 1.1`, указывается относительно ведущего приложения Office. Номер версии набора обязательных элементов (например, `ExcelApi 1.1`) не соответствует номеру версии Office.js или наборам обязательных элементов для других ведущих приложений Office (например, Word, Outlook и т. д.).  Наборы обязательных элементов для разных ведущих приложений Office выпускаются с разной скоростью и интервалом. Например, набор обязательных элементов `ExcelApi 1.5` был выпущен до набора обязательных элементов `WordApi 1.3`.
 
-Библиотека API JavaScript для Office (Office.js) включает все доступные наборы обязательных элементов. Наборы обязательных элементов `ExcelApi 1.3` и `WordApi 1.3` существуют, но набора обязательных элементов `Office.js 1.3` нет. Доступ к последней версии Office.js осуществляется через единую конечную точку Office, интегрированную в сеть доставки содержимого (CDN). Дополнительные сведения о CDN Office.js, в том числе об управлении версиями и обратной совместимостью, см. в статье [Общие сведения об интерфейсе API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/develop/understanding-the-javascript-api-for-office).
+Библиотека API JavaScript для Office (Office.js) включает все доступные наборы обязательных элементов. Наборы обязательных элементов `ExcelApi 1.3` и `WordApi 1.3` существуют, но набора обязательных элементов `Office.js 1.3` нет. Доступ к последней версии Office.js осуществляется через единую конечную точку Office, интегрированную в сеть доставки содержимого (CDN). Дополнительные сведения о CDN Office.js, в том числе об управлении версиями и обратной совместимостью, см. в статье [Общие сведения об интерфейсе API JavaScript для Office](/office/dev/add-ins/develop/understanding-the-javascript-api-for-office).
 
 ## <a name="specify-office-hosts-and-requirement-sets"></a>Указание ведущих приложений Office и наборов обязательных элементов
 
-Указать необходимые надстройке ведущие приложения Office и наборы обязательных элементов можно разными способами.  Подробные сведения см. в статье [Указание ведущих приложений Office и обязательных элементов API](https://docs.microsoft.com/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements).
+Указать необходимые надстройке ведущие приложения Office и наборы обязательных элементов можно разными способами.  Подробные сведения см. в статье [Указание ведущих приложений Office и обязательных элементов API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements).
 
 
 ## <a name="see-also"></a>См. также
 
-- [Указание ведущих приложений Office и обязательных элементов API](https://docs.microsoft.com/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
-- [Установка последней версии Office](https://docs.microsoft.com/office/dev/add-ins/develop/install-latest-office-version)
-- [Обзор каналов обновления Office 365 профессиональный плюс](https://docs.microsoft.com/deployoffice/overview-of-update-channels-for-office-365-proplus)
+- [Указание ведущих приложений Office и обязательных элементов API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
+- [Установка последней версии Office](/office/dev/add-ins/develop/install-latest-office-version)
+- [Обзор каналов обновления Office 365 профессиональный плюс](/deployoffice/overview-of-update-channels-for-office-365-proplus)
 - [Получите максимум от наших продуктов благодаря Office 365](https://products.office.com/compare-all-microsoft-office-products?tab=2)

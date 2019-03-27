@@ -1,26 +1,26 @@
 ---
 title: Чтение и запись данных в текущую выделенную область документа или электронной таблицы
 description: ''
-ms.date: 12/04/2017
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 8f45c5f92bb8c2b38ee744331ce74c93220f69fb
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 2fe847fcc04e3670db294a421388dbd2faad6f2f
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29387781"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871453"
 ---
 # <a name="read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet"></a>Чтение и запись данных в текущую выделенную область документа или электронной таблицы
 
-Объект [Document](https://docs.microsoft.com/javascript/api/office/office.document) предоставляет методы, с помощью которых можно выполнять операции чтения и записи данных над текущим фрагментом, выделенным пользователем, в документе или электронной таблице. Для этого в объекте **Document** имеются методы **getSelectedDataAsync** и **setSelectedDataAsync**. Кроме того, в данной статье рассказывается, как считывать и записывать данные, а также создавать обработчики событий для обнаружения изменений в выделенном пользователем фрагменте.
+Объект [Document](/javascript/api/office/office.document) предоставляет методы, с помощью которых можно выполнять операции чтения и записи данных над текущим фрагментом, выделенным пользователем, в документе или электронной таблице. Для этого в объекте **Document** имеются методы **getSelectedDataAsync** и **setSelectedDataAsync**. Кроме того, в данной статье рассказывается, как считывать и записывать данные, а также создавать обработчики событий для обнаружения изменений в выделенном пользователем фрагменте.
 
-Метод **getSelectedDataAsync** работает только для текущего фрагмента, выделенного пользователем. Если вам необходимо сохранить выделенный фрагмент в документе, чтобы он был доступен для чтения и записи во время последующих сеансов работы надстройки, необходимо добавить привязку с помощью метода [Bindings.addFromSelectionAsync](https://docs.microsoft.com/javascript/api/office/office.bindings#addfromselectionasync-bindingtype--options--callback-) (или создать привязку с помощью любого метода addFrom объекта [Bindings](https://docs.microsoft.com/javascript/api/office/office.bindings)). Дополнительные сведения о том, как создать привязку к области в документе, а также о чтении и записи данных через привязку см. в разделе [Привязка к областям в документе или электронной таблице](bind-to-regions-in-a-document-or-spreadsheet.md).
+Метод **getSelectedDataAsync** работает только для текущего фрагмента, выделенного пользователем. Если вам необходимо сохранить выделенный фрагмент в документе, чтобы он был доступен для чтения и записи во время последующих сеансов работы надстройки, необходимо добавить привязку с помощью метода [Bindings.addFromSelectionAsync](/javascript/api/office/office.bindings#addfromselectionasync-bindingtype--options--callback-) (или создать привязку с помощью любого метода addFrom объекта [Bindings](/javascript/api/office/office.bindings)). Дополнительные сведения о том, как создать привязку к области в документе, а также о чтении и записи данных через привязку см. в разделе [Привязка к областям в документе или электронной таблице](bind-to-regions-in-a-document-or-spreadsheet.md).
 
 
 ## <a name="read-selected-data"></a>Чтение выбранных данных
 
 
-В примере ниже показано, как получить данные из выделенного фрагмента в документе с помощью метода [getSelectedDataAsync](https://docs.microsoft.com/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-).
+В примере ниже показано, как получить данные из выделенного фрагмента в документе с помощью метода [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-).
 
 
 ```js
@@ -39,15 +39,15 @@ function write(message){
 }
 ```
 
-В этом примере первый параметр _coercionType_ имеет значение **Office.CoercionType.Text** (вы также можете указать этот параметр, используя строку литерала `"text"`). Это означает, что свойство [value](https://docs.microsoft.com/javascript/api/office/office.asyncresult#status) объекта [AsyncResult](https://docs.microsoft.com/javascript/api/office/office.asyncresult), доступного из параметра _asyncResult_ в функции обратного вызова, возвратит **строку**, содержащую выделенный текст в документе. Если вы укажете какой-либо другой тип приведения, то получите другие значения. [Office.CoercionType](https://docs.microsoft.com/javascript/api/office/office.coerciontype) — это перечисление значений доступных типов приведений. **Office.CoercionType.Text** имеет значение text.
+В этом примере первый параметр _coercionType_ имеет значение **Office.CoercionType.Text** (вы также можете указать этот параметр, используя строку литерала `"text"`). Это означает, что свойство [value](/javascript/api/office/office.asyncresult#status) объекта [AsyncResult](/javascript/api/office/office.asyncresult), доступного из параметра _asyncResult_ в функции обратного вызова, возвратит **строку**, содержащую выделенный текст в документе. Если вы укажете какой-либо другой тип приведения, то получите другие значения. [Office.CoercionType](/javascript/api/office/office.coerciontype) — это перечисление значений доступных типов приведений. **Office.CoercionType.Text** имеет значение text.
 
 
 > [!TIP]
 > **Информация о выборе матричного или табличного coercionType для доступа к данным.** Если предполагается динамический рост данных таблицы с добавлением строк и столбцов, при этом требуется обрабатывать заголовки таблицы, следует использовать табличные данные (указав параметр _coercionType_ метода **getSelectedDataAsync** в виде `"table"` или **Office.CoercionType.Table**). Добавление строк и столбцов в структуре данных поддерживается как табличными, так и матричными данными, но присоединение строк и столбцов поддерживается только табличными данными. В отсутствие необходимости добавления строк и столбцов, если при этом не требуется использовать заголовки, следует выбрать матричные данные (указав параметр _coercionType_ метода **getSelecteDataAsync** в виде `"matrix"` или **Office.CoercionType.Matrix**), что позволяет использовать упрощенный способ взаимодействия с данными.
 
-Анонимная функция, которая передается в функцию в качестве второго параметра _callback_, выполняется после завершения операции **getSelectedDataAsync**. При вызове функции передается один параметр _asyncResult_, который содержит результат и сведения о состоянии вызова. Если вызов завершается с ошибкой, свойство [error](https://docs.microsoft.com/javascript/api/office/office.asyncresult#asynccontext) объекта **AsyncResult** предоставляет доступ к объекту [Error](https://docs.microsoft.com/javascript/api/office/office.error). Вы можете проверить значение свойств [Error.name](https://docs.microsoft.com/javascript/api/office/office.error#name) и [Error.message](https://docs.microsoft.com/javascript/api/office/office.error#message), чтобы определить, почему операция завершилась с ошибкой. В противном случае будет отображен выделенный в документе текст.
+Анонимная функция, которая передается в функцию в качестве второго параметра _callback_, выполняется после завершения операции **getSelectedDataAsync**. При вызове функции передается один параметр _asyncResult_, который содержит результат и сведения о состоянии вызова. Если вызов завершается с ошибкой, свойство [error](/javascript/api/office/office.asyncresult#asynccontext) объекта **AsyncResult** предоставляет доступ к объекту [Error](/javascript/api/office/office.error). Вы можете проверить значение свойств [Error.name](/javascript/api/office/office.error#name) и [Error.message](/javascript/api/office/office.error#message), чтобы определить, почему операция завершилась с ошибкой. В противном случае будет отображен выделенный в документе текст.
 
-Свойство [AsyncResult.status](https://docs.microsoft.com/javascript/api/office/office.asyncresult#error) используется в выражении **if** для проверки того, успешно ли выполнен вызов. [Office.AsyncResultStatus](https://docs.microsoft.com/javascript/api/office/office.asyncresult#status) — это перечисление доступных значений свойства **AsyncResult.status**. **Office.AsyncResultStatus.Failed** имеет значение failed (и его можно указать в виде строки литералов).
+Свойство [AsyncResult.status](/javascript/api/office/office.asyncresult#error) используется в выражении **if** для проверки того, успешно ли выполнен вызов. [Office.AsyncResultStatus](/javascript/api/office/office.asyncresult#status) — это перечисление доступных значений свойства **AsyncResult.status**. **Office.AsyncResultStatus.Failed** имеет значение failed (и его можно указать в виде строки литералов).
 
 
 ## <a name="write-data-to-the-selection"></a>Запись данных в выделение
@@ -65,13 +65,13 @@ Office.context.document.setSelectedDataAsync("Hello World!", function (asyncResu
 
 // Function that writes to a div with id='message' on the page.
 function write(message){
-    document.getElementById('message').innerText += message; 
+    document.getElementById('message').innerText += message;
 }
 ```
 
 Передача в параметре _data_ других типов объектов может привести к разным результатам. Результат зависит от текущего выделения в документе, от ведущего приложения, а также от возможности приведения переданных данных применительно к текущему выделению.
 
-Анонимная функция, которая передается в метод [setSelectedDataAsync](https://docs.microsoft.com/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) в качестве параметра _callback_, выполняется после завершения асинхронного вызова. При записи данных в выделенный фрагмент с помощью метода **setSelectedDataAsync** параметр _asyncResult_ обратного вызова предоставляет доступ только к сведениям о состоянии вызова и к объекту [Error](https://docs.microsoft.com/javascript/api/office/office.error) в случае сбоя вызова.
+Анонимная функция, которая передается в метод [setSelectedDataAsync](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) в качестве параметра _callback_, выполняется после завершения асинхронного вызова. При записи данных в выделенный фрагмент с помощью метода **setSelectedDataAsync** параметр _asyncResult_ обратного вызова предоставляет доступ только к сведениям о состоянии вызова и к объекту [Error](/javascript/api/office/office.error) в случае сбоя вызова.
 
 > [!NOTE]
 > Начиная с выпуска Excel 2013 с пакетом обновления 1 (SP1) и соответствующей сборки Excel Online вы можете [задать форматирование при записи таблицы в текущую выделенную область](../excel/excel-add-ins-tables.md).
@@ -80,11 +80,11 @@ function write(message){
 ## <a name="detect-changes-in-the-selection"></a>Обнаружение изменений в выделенной области
 
 
-В примере ниже показано, как определять изменения в выделенном фрагменте, используя метод [Document.addHandlerAsync](https://docs.microsoft.com/javascript/api/office/office.document#addhandlerasync-eventtype--handler--options--callback-) для добавления обработчика события [SelectionChanged](https://docs.microsoft.com/javascript/api/office/office.documentselectionchangedeventargs) в документе.
+В примере ниже показано, как определять изменения в выделенном фрагменте, используя метод [Document.addHandlerAsync](/javascript/api/office/office.document#addhandlerasync-eventtype--handler--options--callback-) для добавления обработчика события [SelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) в документе.
 
 
 ```js
-Office.context.document.addHandlerAsync("documentSelectionChanged", myHandler, function(result){} 
+Office.context.document.addHandlerAsync("documentSelectionChanged", myHandler, function(result){}
 );
 
 // Event handler function.
@@ -94,13 +94,13 @@ write('Document Selection Changed');
 
 // Function that writes to a div with id='message' on the page.
 function write(message){
-    document.getElementById('message').innerText += message; 
+    document.getElementById('message').innerText += message;
 }
 ```
 
-Первый параметр _eventType_ задает имя события для подписки. Передача строки `"documentSelectionChanged"` для этого параметра эквивалентна передаче типа события **Office.EventType.DocumentSelectionChanged** перечисления [Office.EventType](https://docs.microsoft.com/javascript/api/office/office.eventtype).
+Первый параметр _eventType_ задает имя события для подписки. Передача строки `"documentSelectionChanged"` для этого параметра эквивалентна передаче типа события **Office.EventType.DocumentSelectionChanged** перечисления [Office.EventType](/javascript/api/office/office.eventtype).
 
-Анонимная функция `myHander()`, передаваемая в эту функцию в качестве второго параметра _handler_, представляет собой обработчик событий, который выполняется при изменении выделенного фрагмента в документе. При вызове этой функции передается единственный параметр _eventArgs_, который после завершения асинхронной операции будет содержать ссылку на объект [DocumentSelectionChangedEventArgs](https://docs.microsoft.com/javascript/api/office/office.documentselectionchangedeventargs). Вы можете использовать свойство [DocumentSelectionChangedEventArgs.document](https://docs.microsoft.com/javascript/api/office/office.documentselectionchangedeventargs#document) для доступа к документу, создавшему событие.
+Анонимная функция `myHander()`, передаваемая в эту функцию в качестве второго параметра _handler_, представляет собой обработчик событий, который выполняется при изменении выделенного фрагмента в документе. При вызове этой функции передается единственный параметр _eventArgs_, который после завершения асинхронной операции будет содержать ссылку на объект [DocumentSelectionChangedEventArgs](/javascript/api/office/office.documentselectionchangedeventargs). Вы можете использовать свойство [DocumentSelectionChangedEventArgs.document](/javascript/api/office/office.documentselectionchangedeventargs#document) для доступа к документу, создавшему событие.
 
 
 > [!NOTE]
@@ -110,7 +110,7 @@ function write(message){
 ## <a name="stop-detecting-changes-in-the-selection"></a>Отключение обнаружения изменений в выделенной области
 
 
-В примере ниже показано, как остановить прослушивание события [Document.SelectionChanged](https://docs.microsoft.com/javascript/api/office/office.documentselectionchangedeventargs), вызвав метод [document.removeHandlerAsync](https://docs.microsoft.com/javascript/api/office/office.document#removehandlerasync-eventtype--options--callback-).
+В примере ниже показано, как остановить прослушивание события [Document.SelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs), вызвав метод [document.removeHandlerAsync](/javascript/api/office/office.document#removehandlerasync-eventtype--options--callback-).
 
 
 ```js
@@ -122,4 +122,3 @@ Office.context.document.removeHandlerAsync("documentSelectionChanged", {handler:
 
 > [!IMPORTANT]
 > Если необязательный параметр _handler_ при вызове метода **removeHandlerAsync** не указывается, то все обработчики событий для указанного объекта _eventType_ будут удалены.
-

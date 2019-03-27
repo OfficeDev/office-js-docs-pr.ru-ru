@@ -1,21 +1,21 @@
 ---
 title: Наборы обязательных элементов общего API для Office
 description: ''
-ms.date: 11/20/2018
+ms.date: 03/19/2019
 ms.prod: non-product-specific
 localization_priority: Priority
-ms.openlocfilehash: 59280a2e61713e27b44e3068b9e77afa58230517
-ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.openlocfilehash: 84eee3c085821e741f44fc4a413005cbc1a61951
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "29742389"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870200"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
-Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](https://docs.microsoft.com/office/dev/add-ins/develop/office-versions-and-requirement-sets).
+Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets).
 
-Сведения о поддержке надстроек ведущим приложением Office см. в статье [Доступность ведущих приложений и платформ для надстроек Office](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-in-availability).
+Сведения о поддержке надстроек ведущим приложением Office см. в статье [Доступность ведущих приложений и платформ для надстроек Office](/office/dev/add-ins/overview/office-add-in-availability).
 
 Наборы обязательных элементов API *для конкретных ведущих приложений* см. ниже.
  
@@ -60,7 +60,7 @@ ms.locfileid: "29742389"
 
 ## <a name="methods-that-arent-part-of-a-requirement-set"></a>Методы, отсутствующие в наборе требований
 
-Указанные ниже методы API JavaScript для Office не входят в состав набора обязательных элементов. Если вашей надстройке необходимы какие-либо из этих методов, используйте элементы **Methods** и **Method** в манифесте надстройки, чтобы объявить их обязательными, или выполняйте проверку в среде выполнения с использованием оператора `if`. Дополнительные сведения см. в статье [Указание ведущих приложений Office и обязательных элементов API](https://docs.microsoft.com/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements).
+Указанные ниже методы API JavaScript для Office не входят в состав набора обязательных элементов. Если вашей надстройке необходимы какие-либо из этих методов, используйте элементы **Methods** и **Method** в манифесте надстройки, чтобы объявить их обязательными, или выполняйте проверку в среде выполнения с использованием оператора `if`. Дополнительные сведения см. в статье [Указание ведущих приложений Office и обязательных элементов API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements).
 
 |**Имя метода**|**Поддержка ведущих приложений Office**|
 |:-----|:-----|
@@ -83,6 +83,6 @@ ms.locfileid: "29742389"
 
 ## <a name="see-also"></a>См. также
 
-- [Версии Office и наборы обязательных элементов](https://docs.microsoft.com/office/dev/add-ins/develop/office-versions-and-requirement-sets)
-- [Указание ведущих приложений Office и обязательных элементов API](https://docs.microsoft.com/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
-- [XML-манифест надстроек Office](https://docs.microsoft.com/office/dev/add-ins/develop/add-in-manifests)
+- [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets)
+- [Указание ведущих приложений Office и обязательных элементов API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
+- [XML-манифест надстроек Office](/office/dev/add-ins/develop/add-in-manifests)

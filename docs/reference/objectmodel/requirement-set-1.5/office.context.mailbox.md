@@ -1,14 +1,14 @@
 ---
 title: Office.context.mailbox — набор обязательных элементов 1.5
 description: ''
-ms.date: 02/15/2019
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 511d4353998ff46f9402865453d8e7b29b6d0758
-ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.openlocfilehash: d2b210db9ee8816d8fedf8720d1744da80eeab8d
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "30068051"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870907"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -21,8 +21,8 @@ ms.locfileid: "30068051"
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="members-and-methods"></a>Элементы и методы
 
@@ -32,7 +32,7 @@ ms.locfileid: "30068051"
 | [restUrl](#resturl-string) | Элемент |
 | [addHandlerAsync](#addhandlerasynceventtype-handler-options-callback) | Метод |
 | [convertToEwsId](#converttoewsiditemid-restversion--string) | Метод |
-| [convertToLocalClientTime](#converttolocalclienttimetimevalue--localclienttimejavascriptapioutlook15officelocalclienttime) | Метод |
+| [convertToLocalClientTime](#converttolocalclienttimetimevalue--localclienttime) | Метод |
 | [convertToRestId](#converttorestiditemid-restversion--string) | Метод |
 | [convertToUtcClientTime](#converttoutcclienttimeinput--date) | Метод |
 | [displayAppointmentForm](#displayappointmentformitemid) | Метод |
@@ -61,7 +61,7 @@ ms.locfileid: "30068051"
 > [!NOTE]
 > Этот элемент не поддерживается в Outlook для iOS или Outlook для Android.
 
-Удаленная служба может использовать значение `ewsUrl`, чтобы выполнять вызовы EWS для почтового ящика пользователя. Например, вы можете создать удаленную службу, чтобы [получить вложения из выбранного элемента](https://docs.microsoft.com/outlook/add-ins/get-attachments-of-an-outlook-item).
+Удаленная служба может использовать значение `ewsUrl`, чтобы выполнять вызовы EWS для почтового ящика пользователя. Например, вы можете создать удаленную службу, чтобы [получить вложения из выбранного элемента](/outlook/add-ins/get-attachments-of-an-outlook-item).
 
 Чтобы вызвать элемент `ewsUrl` в режиме чтения, в манифесте приложения должно быть указано разрешение **ReadItem**.
 
@@ -76,14 +76,14 @@ ms.locfileid: "30068051"
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 #### <a name="resturl-string"></a>restUrl :String
 
 Возвращает URL-адрес конечной точки REST для этой учетной записи электронной почты.
 
-С помощью значения `restUrl` можно выполнять вызовы [REST API](https://docs.microsoft.com/outlook/rest/) для почтового ящика пользователя.
+С помощью значения `restUrl` можно выполнять вызовы [REST API](/outlook/rest/) для почтового ящика пользователя.
 
 Чтобы вызвать элемент `restUrl` в режиме чтения, в манифесте приложения необходимо указать разрешение **ReadItem**.
 
@@ -101,8 +101,8 @@ ms.locfileid: "30068051"
 |Требование| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.5 |
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ### <a name="methods"></a>Методы
 
@@ -127,8 +127,8 @@ ms.locfileid: "30068051"
 |Требование| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.5 |
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem |
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem |
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -156,7 +156,7 @@ function loadNewItem(eventArgs) {
 > [!NOTE]
 > Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
 
-Формат идентификаторов, извлекаемых через API REST (например, [API Почты Outlook](https://docs.microsoft.com/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](https://graph.microsoft.io/)), отличается от формата веб-служб Exchange (EWS). Метод `convertToEwsId` преобразовывает идентификатор в формате REST в формат EWS.
+Формат идентификаторов, извлекаемых через API REST (например, [API Почты Outlook](/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](https://graph.microsoft.io/)), отличается от формата веб-служб Exchange (EWS). Метод `convertToEwsId` преобразовывает идентификатор в формате REST в формат EWS.
 
 ##### <a name="parameters"></a>Параметры
 
@@ -170,8 +170,8 @@ function loadNewItem(eventArgs) {
 |Требование| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.3|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="returns"></a>Возвращаемое значение:
 
@@ -206,8 +206,8 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="returns"></a>Возвращаемое значение:
 
@@ -220,7 +220,7 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 > [!NOTE]
 > Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
 
-Формат идентификаторов, извлекаемых через EWS или свойство `itemId`, отличается от формата API REST (таких как [API Почты Outlook](https://docs.microsoft.com/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](https://graph.microsoft.io/)). Метод `convertToRestId` преобразовывает идентификатор в формате EWS в формат REST.
+Формат идентификаторов, извлекаемых через EWS или свойство `itemId`, отличается от формата API REST (таких как [API Почты Outlook](/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](https://graph.microsoft.io/)). Метод `convertToRestId` преобразовывает идентификатор в формате EWS в формат REST.
 
 ##### <a name="parameters"></a>Параметры
 
@@ -234,8 +234,8 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 |Требование| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.3|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="returns"></a>Возвращаемое значение:
 
@@ -268,8 +268,8 @@ var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.R
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="returns"></a>Возвращаемое значение:
 
@@ -309,8 +309,8 @@ var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.R
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -344,8 +344,8 @@ Office.context.mailbox.displayAppointmentForm(appointmentId);
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -387,8 +387,8 @@ Office.context.mailbox.displayMessageForm(messageId);
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -421,7 +421,7 @@ Office.context.mailbox.displayNewAppointmentForm(
 
 **Маркеры REST**
 
-Если запрашивается маркер REST (`options.isRest = true`), полученный маркер не подойдет для проверки подлинности при вызовах веб-служб Exchange. Область действия маркера будет ограничена доступом только для чтения к текущему элементу и его вложениям, если в манифесте надстройки не указано разрешение [`ReadWriteMailbox`](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions#readwritemailbox-permission). Если указано разрешение `ReadWriteMailbox`, полученный маркер предоставит доступ на чтение и запись к почте, календарю и контактам, включая возможность отправки почты.
+Если запрашивается маркер REST (`options.isRest = true`), полученный маркер не подойдет для проверки подлинности при вызовах веб-служб Exchange. Область действия маркера будет ограничена доступом только для чтения к текущему элементу и его вложениям, если в манифесте надстройки не указано разрешение [`ReadWriteMailbox`](/outlook/add-ins/understanding-outlook-add-in-permissions#readwritemailbox-permission). Если указано разрешение `ReadWriteMailbox`, полученный маркер предоставит доступ на чтение и запись к почте, календарю и контактам, включая возможность отправки почты.
 
 С помощью свойства `restUrl` надстройка должна определить правильный URL-адрес для вызовов REST API.
 
@@ -445,8 +445,8 @@ Office.context.mailbox.displayNewAppointmentForm(
 |Требование| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.5 |
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание и чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание и чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -471,7 +471,7 @@ function cb(asyncResult) {
 
 Метод `getCallbackTokenAsync` совершает асинхронный вызов, чтобы получить непрозрачный маркер с сервера Exchange Server, на котором размещен почтовый ящик пользователя. Время существования маркера обратного вызова составляет 5 минут.
 
-Вы можете передать сторонней системе маркер и идентификатор вложения или элемента. Сторонняя система использует этот маркер как маркер авторизации, чтобы вызвать операцию [GetAttachment](https://docs.microsoft.com/exchange/client-developer/web-service-reference/getattachment-operation) или [GetItem](https://docs.microsoft.com/exchange/client-developer/web-service-reference/getitem-operation) веб-служб Exchange для возврата вложения или элемента. Например, вы можете создать удаленную службу, чтобы [получить вложения из выбранного элемента](https://docs.microsoft.com/outlook/add-ins/get-attachments-of-an-outlook-item).
+Вы можете передать сторонней системе маркер и идентификатор вложения или элемента. Сторонняя система использует этот маркер как маркер авторизации, чтобы вызвать операцию [GetAttachment](/exchange/client-developer/web-service-reference/getattachment-operation) или [GetItem](/exchange/client-developer/web-service-reference/getitem-operation) веб-служб Exchange для возврата вложения или элемента. Например, вы можете создать удаленную службу, чтобы [получить вложения из выбранного элемента](/outlook/add-ins/get-attachments-of-an-outlook-item).
 
 Для вызова метода `getCallbackTokenAsync` в режиме чтения манифесте приложения должно быть указано разрешение **ReadItem**.
 
@@ -489,8 +489,8 @@ function cb(asyncResult) {
 |Требование| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.3|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание и чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание и чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -508,7 +508,7 @@ function cb(asyncResult) {
 
 Получает маркер, идентифицирующий пользователя и надстройку Office.
 
-Метод `getUserIdentityTokenAsync` возвращает маркер, который можно использовать для идентификации, а также [проверки подлинности надстройки и пользователя в сторонней системе](https://docs.microsoft.com/outlook/add-ins/authentication).
+Метод `getUserIdentityTokenAsync` возвращает маркер, который можно использовать для идентификации, а также [проверки подлинности надстройки и пользователя в сторонней системе](/outlook/add-ins/authentication).
 
 ##### <a name="parameters"></a>Параметры
 
@@ -522,8 +522,8 @@ function cb(asyncResult) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -546,9 +546,9 @@ function cb(asyncResult) {
 > - В Outlook для iOS или Outlook для Android.
 > - Если надстройка загружается в почтовый ящик Gmail.
 > 
-> В таких случаях надстройка должна [использовать REST API](https://docs.microsoft.com/outlook/add-ins/use-rest-api) для доступа к почтовому ящику пользователя.
+> В таких случаях надстройка должна [использовать REST API](/outlook/add-ins/use-rest-api) для доступа к почтовому ящику пользователя.
 
-Метод `makeEwsRequestAsync` отправляет запрос EWS от имени надстройки в Exchange. Список поддерживаемых операций EWS см. в статье [Вызов веб-служб из надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/web-services#ews-operations-that-add-ins-support).
+Метод `makeEwsRequestAsync` отправляет запрос EWS от имени надстройки в Exchange. Список поддерживаемых операций EWS см. в статье [Вызов веб-служб из надстройки Outlook](/outlook/add-ins/web-services#ews-operations-that-add-ins-support).
 
 С помощью метода `makeEwsRequestAsync` невозможно запрашивать элементы, связанные с папкой.
 
@@ -558,7 +558,7 @@ function cb(asyncResult) {
 <?xml version="1.0" encoding="utf-8"?>
 ```
 
-У вашей надстройки должно быть разрешение **ReadWriteMailbox** для использования метода `makeEwsRequestAsync`. Сведения об использовании разрешения **ReadWriteMailbox** и операций EWS, которые можно вызывать с помощью метода `makeEwsRequestAsync`, см. в статье [Указание разрешений для доступа почтовой надстройки к почтовому ящику пользователя](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions).
+У вашей надстройки должно быть разрешение **ReadWriteMailbox** для использования метода `makeEwsRequestAsync`. Сведения об использовании разрешения **ReadWriteMailbox** и операций EWS, которые можно вызывать с помощью метода `makeEwsRequestAsync`, см. в статье [Указание разрешений для доступа почтовой надстройки к почтовому ящику пользователя](/outlook/add-ins/understanding-outlook-add-in-permissions).
 
 > [!NOTE]
 > Администратор сервера должен установить значение true для параметра `OAuthAuthentication` в каталоге сервера клиентского доступа EWS, чтобы метод `makeEwsRequestAsync` мог выполнять запросы EWS.
@@ -586,8 +586,8 @@ function cb(asyncResult) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadWriteMailbox|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadWriteMailbox|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -655,5 +655,5 @@ function callback(asyncResult)  {
 |Требование| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.5 |
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem |
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem |
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|

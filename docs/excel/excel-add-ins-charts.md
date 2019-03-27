@@ -1,18 +1,18 @@
 ---
 title: Работа с диаграммами с использованием API JavaScript для Excel
 description: ''
-ms.date: 03/11/2019
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: f058110c7c150a75c847a07df83aa2795c891025
-ms.sourcegitcommit: 8fb60c3a31faedaea8b51b46238eb80c590a2491
+ms.openlocfilehash: adaae105050a01968525e38deb6db570b962ddde
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "30600265"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870886"
 ---
 # <a name="work-with-charts-using-the-excel-javascript-api"></a>Работа с диаграммами с использованием API JavaScript для Excel
 
-В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диаграмм с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Chart** и **ChartCollection**, см. в статьях [Объект Chart (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.chart) и [Объект ChartCollection (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.chartcollection).
+В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диаграмм с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Chart** и **ChartCollection**, см. в статьях [Объект Chart (API JavaScript для Excel)](/javascript/api/excel/excel.chart) и [Объект ChartCollection (API JavaScript для Excel)](/javascript/api/excel/excel.chartcollection).
 
 ## <a name="create-a-chart"></a>Создание диаграммы
 

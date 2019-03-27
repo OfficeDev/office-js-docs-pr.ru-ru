@@ -1,14 +1,14 @@
 ---
 title: Отладка надстроек с помощью средств разработчика F12 в Windows 10
 description: ''
-ms.date: 10/16/2018
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: e2378a0449ea33551051b9c3788b84b23a51feb8
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 750411bea187a0ade9b3723e3198d82f7c482c9f
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29386906"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871236"
 ---
 # <a name="debug-add-ins-using-f12-developer-tools-on-windows-10"></a>Отладка надстроек с помощью средств разработчика F12 в Windows 10
 
@@ -58,7 +58,7 @@ ms.locfileid: "29386906"
     
 5. Задайте точку останова.
     
-   Чтобы задать точку останова в файле **Home.js**, выберите строку 144 (код функции `textChanged`). Появятся красная точка слева от строки и соответствующая строка в области стека вызовов и точек останова (справа внизу). Другие способы задания точки останова см. в статье [Проверка выполнения кода JavaScript при помощи отладчика](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/dn255007(v=vs.85)). 
+   Чтобы задать точку останова в файле **Home.js**, выберите строку 144 (код функции `textChanged`). Появятся красная точка слева от строки и соответствующая строка в области стека вызовов и точек останова (справа внизу). Другие способы задания точки останова см. в статье [Проверка выполнения кода JavaScript при помощи отладчика](/previous-versions/windows/internet-explorer/ie-developer/samples/dn255007(v=vs.85)). 
     
    ![Отладчик с точкой останова в файле home.js](../images/debugger-home-js-02.png)
 
@@ -71,5 +71,5 @@ ms.locfileid: "29386906"
 
 ## <a name="see-also"></a>См. также
 
-- [Проверка выполнения кода JavaScript с помощью отладчика](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/dn255007(v=vs.85))
-- [Использование средств разработчика F12](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v=vs.85))
+- [Проверка выполнения кода JavaScript с помощью отладчика](/previous-versions/windows/internet-explorer/ie-developer/samples/dn255007(v=vs.85))
+- [Использование средств разработчика F12](/previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v=vs.85))

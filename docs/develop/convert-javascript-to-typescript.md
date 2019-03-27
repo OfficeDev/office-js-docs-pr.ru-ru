@@ -1,33 +1,33 @@
 ---
 title: Преобразование проекта надстройки Office в Visual Studio в TypeScript
 description: ''
-ms.date: 10/30/2018
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 6587665d57121619f9730448b27b045630f9e1aa
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 9b3916dc61fadb3b6d9bf61e43cb22bdc7ff68c8
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29386605"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30869955"
 ---
 # <a name="convert-an-office-add-in-project-in-visual-studio-to-typescript"></a>Преобразование проекта надстройки Office в Visual Studio в TypeScript
 
 Вы можете использовать шаблон надстройки Office в Visual Studio, чтобы создать надстройку с использованием JavaScript, а затем преобразовать этот проект в TypeScript. В этой статье описан процесс преобразования для надстройки Excel. Таким же образом в Visual Studio можно преобразовывать и другие проекты надстроек Office из JavaScript в TypeScript.
 
 > [!NOTE]
-> Чтобы создать проект надстройки Office на TypeScript без использования Visual Studio, следуйте указаниям из раздела "Любой редактор" любого [5-минутного руководства по началу работы](../index.yml) и выберите `TypeScript` по соответствующему запросу [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
+> Чтобы создать проект надстройки Office на TypeScript без использования Visual Studio, следуйте указаниям из раздела "Любой редактор" любого [5-минутного руководства по началу работы](../index.yml) и выберите `TypeScript` по соответствующему запросу [генератора Yeoman для надстроек Office](https://github.com/officedev/generator-office).
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
 - [Visual Studio 2017](https://www.visualstudio.com/vs/) с установленной рабочей нагрузкой **Разработка надстроек для Office и SharePoint**
 
     > [!TIP]
-    > Если вы уже установили Visual Studio 2017, [используйте Visual Studio Installer](https://docs.microsoft.com/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**. Если эта рабочая нагрузка еще не установлена, используйте установщик Visual Studio, чтобы [установить ее](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2017#modify-workloads).
+    > Если вы уже установили Visual Studio 2017, [используйте Visual Studio Installer](/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**. Если эта рабочая нагрузка еще не установлена, используйте установщик Visual Studio, чтобы [установить ее](/visualstudio/install/modify-visual-studio?view=vs-2017#modify-workloads).
 
 - Пакет SDK для TypeScript версии 2.3 или более поздней (для Visual Studio 2017)
 
     > [!TIP]
-    > В [установщике Visual Studio](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) выберите вкладку **Отдельные компоненты** и прокрутите вниз до раздела **Пакеты SDK, библиотеки и платформы**. Убедитесь, что в этом разделе выбран хотя бы один из компонентов **Пакет SDK для TypeScript** (версии 2.3 или более поздней). Если не выбран ни один из компонентов **Пакет для TypeScript**, выберите последнюю доступную версию пакета SDK и нажмите кнопку **Изменить**, чтобы [установить этот отдельный компонент](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2017#modify-individual-components). 
+    > В [установщике Visual Studio](/visualstudio/install/modify-visual-studio) выберите вкладку **Отдельные компоненты** и прокрутите вниз до раздела **Пакеты SDK, библиотеки и платформы**. Убедитесь, что в этом разделе выбран хотя бы один из компонентов **Пакет SDK для TypeScript** (версии 2.3 или более поздней). Если не выбран ни один из компонентов **Пакет для TypeScript**, выберите последнюю доступную версию пакета SDK и нажмите кнопку **Изменить**, чтобы [установить этот отдельный компонент](/visualstudio/install/modify-visual-studio?view=vs-2017#modify-individual-components). 
 
 - Excel 2016 или более поздней версии
 
@@ -135,7 +135,7 @@ declare var fabric: any;
             var element = document.querySelector('.ms-MessageBanner');
             messageBanner = new fabric.MessageBanner(element);
             messageBanner.hideBanner();
-            
+
             // If not using Excel 2016, use fallback logic.
             if (!Office.context.requirements.isSetSupported('ExcelApi', 1.1)) {
                 $("#template-description").text("This sample will display the value of the cells that you have selected in the spreadsheet.");
@@ -149,7 +149,7 @@ declare var fabric: any;
             $("#template-description").text("This sample highlights the highest value from the cells you have selected in the spreadsheet.");
             $('#button-text').text("Highlight!");
             $('#button-desc').text("Highlights the largest number.");
-                
+
             loadSampleData();
 
             // Add a click event handler for the highlight button.

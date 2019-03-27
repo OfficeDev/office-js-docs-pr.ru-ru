@@ -1,14 +1,14 @@
 ---
 title: Подключение отладчика из области задач
 description: ''
-ms.date: 10/17/2018
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 1c2be843fcd911c1bfd87408d603bb750d6e738a
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 941a67695f573cbf0955038916cb1e7ada9cc08f
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29386479"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870431"
 ---
 # <a name="attach-a-debugger-from-the-task-pane"></a>Подключение отладчика из области задач
 
@@ -37,8 +37,8 @@ ms.locfileid: "29386479"
 Дополнительные сведения об отладке в Visual Studio см. в следующих статьях:
 
 -   Дополнительные сведения о запуске и использовании Проводника DOM в Visual Studio приведены в совете № 4 в разделе [Советы и рекомендации](https://blogs.msdn.microsoft.com/officeapps/2013/04/16/building-great-looking-apps-for-office-using-the-new-project-templates/#tips_tricks) записи в блоге [Создание отличных приложений для Office с помощью новых шаблонов проекта](https://blogs.msdn.microsoft.com/officeapps/2013/04/16/building-great-looking-apps-for-office-using-the-new-project-templates).
--   Как задать точки останова, можно узнать в статье [Использование точек останова](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints?view=vs-2015).
--   Сведения об использовании F12 см. в статье [Использование средств разработчика F12](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v=vs.85)).
+-   Как задать точки останова, можно узнать в статье [Использование точек останова](/visualstudio/debugger/using-breakpoints?view=vs-2015).
+-   Сведения об использовании F12 см. в статье [Использование средств разработчика F12](/previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v=vs.85)).
 
 ## <a name="see-also"></a>См. также
 

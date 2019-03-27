@@ -1,15 +1,15 @@
 ---
 title: Создание надстройки Excel с помощью Angular
 description: ''
-ms.date: 10/19/2018
+ms.date: 03/19/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: da3e0ce9c6cb075ff828344956cfe25fb579a8fa
-ms.sourcegitcommit: 03773fef3d2a380028ba0804739d2241d4b320e5
+ms.openlocfilehash: e814fb2a1dd24a272a24ca9debead2d836aed5c8
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "30091255"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870991"
 ---
 # <a name="build-an-excel-add-in-using-angular"></a>Создание надстройки Excel с помощью Angular
 
@@ -39,7 +39,7 @@ ms.locfileid: "30091255"
     - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
     ![Генератор Yeoman](../images/yo-office-excel-angular.png)
-    
+
     После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
 2. Перейдите к корневой папке проекта.
@@ -60,7 +60,7 @@ ms.locfileid: "30091255"
         top: 0;
         left: 0;
         width: 100%;
-        height: 80px; 
+        height: 80px;
         overflow: hidden;
         font-family: Arial;
         padding-top: 25px;
@@ -73,7 +73,7 @@ ms.locfileid: "30091255"
         left: 0;
         right: 0;
         bottom: 0;
-        overflow: auto; 
+        overflow: auto;
         font-family: Arial;
     }
 
@@ -178,7 +178,6 @@ ms.locfileid: "30091255"
     - [Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-online)
     - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 
-   
 2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
     ![Кнопка надстройки Excel](../images/excel-quickstart-addin-2b.png)
@@ -201,5 +200,4 @@ ms.locfileid: "30091255"
 * [Руководство по надстройкам Excel](../tutorials/excel-tutorial-create-table.md)
 * [Основные концепции программирования с помощью API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
 * [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
-* [Справочник по API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)
-
+* [Справочник по API JavaScript для Excel](/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)

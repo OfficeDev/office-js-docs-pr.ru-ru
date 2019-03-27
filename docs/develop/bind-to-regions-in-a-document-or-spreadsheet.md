@@ -1,14 +1,14 @@
 ---
 title: Привязка к областям в документе или электронной таблице
 description: ''
-ms.date: 12/04/2017
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: f475da024428999ca4192fb6a395cee2bb7b0e30
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: be633fc99d4a80257a9c8f68b5e9569727ac30a5
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29388558"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870438"
 ---
 # <a name="bind-to-regions-in-a-document-or-spreadsheet"></a>Привязка к областям в документе или электронной таблице
 
@@ -16,11 +16,11 @@ ms.locfileid: "29388558"
 
 
 - Разрешает доступ к общим структурам данных в поддерживаемых приложениях Office, таким как: таблицы, диапазоны или текст (связанная последовательность знаков).
-    
+
 - Позволяет производить операции чтения или записи без необходимости выделения пользователем фрагмента.
-    
+
 - Устанавливает отношение между надстройкой и данными в документе. Привязки сохраняются в документе и могут использоваться позже.
-    
+
 Установка привязки также позволяет подписываться на данные и выбирать изменения событий, относящиеся к конкретной области документа или электронной таблицы. Это означает, что надстройка уведомляется только об изменениях, происходящих внутри данной конкретной области, в отличие от изменений, затрагивающих в целом весь документ или электронную таблицу.
 
 Объект [Bindings] предоставляет метод [getAllAsync], открывающий доступ к полному набору привязок, установленных в документе или на листе. Доступ к отдельной привязке можно получить по ее идентификатору с помощью метода Bindings.[getByIdAsync] или [Office.select]. Вы можете устанавливать новые привязки или удалять существующие с помощью одного из следующих методов объекта [Bindings]: [addFromSelectionAsync], [addFromPromptAsync], [addFromNamedItemAsync] или [releaseByIdAsync].
@@ -38,7 +38,7 @@ ms.locfileid: "29388558"
 
     В Excel для установки матричной привязки может использоваться любое связанное выделение ячеек. В Word матричная привязка поддерживается только таблицами.
 
-3. **[Табличная привязка][TableBinding]**. Выполняет привязку к области документа, содержащей таблицу с заголовками. Данные в табличной привязке записываются или считываются как объект [TableData](https://docs.microsoft.com/javascript/api/office/office.tabledata). Объект `TableData` предоставляет данные с помощью свойств `headers` и `rows`.
+3. **[Табличная привязка][TableBinding]**. Выполняет привязку к области документа, содержащей таблицу с заголовками. Данные в табличной привязке записываются или считываются как объект [TableData](/javascript/api/office/office.tabledata). Объект `TableData` предоставляет данные с помощью свойств `headers` и `rows`.
 
     Любая таблица Excel или Word может быть основой для табличной привязки. После создания табличной привязки каждая новая строка или столбец, добавляемые пользователем в таблицу, автоматически включаются в привязку.
 
@@ -91,7 +91,7 @@ function bindFromPrompt() {
 
 // Function that writes to a div with id='message' on the page.
 function write(message){
-    document.getElementById('message').innerText += message; 
+    document.getElementById('message').innerText += message;
 }
 ```
 
@@ -341,7 +341,7 @@ myBinding.setDataAsync('Hello World!', function (asyncResult) { });
 ## <a name="detect-changes-to-data-or-the-selection-in-a-binding"></a>Обнаружение изменений в данных или выделенном фрагменте для привязки
 
 
-В приведенном ниже примере показано, как присоединить обработчик событий к событию [DataChanged](https://docs.microsoft.com/javascript/api/office/office.binding) привязки с идентификатором MyBinding.
+В приведенном ниже примере показано, как присоединить обработчик событий к событию [DataChanged](/javascript/api/office/office.binding) привязки с идентификатором MyBinding.
 
 
 ```js
@@ -354,7 +354,7 @@ function dataChanged(eventArgs) {
 }
 // Function that writes to a div with id='message' on the page.
 function write(message){
-    document.getElementById('message').innerText += message; 
+    document.getElementById('message').innerText += message;
 }
 ```
 
@@ -392,7 +392,7 @@ function removeEventHandlerFromBinding() {
 - [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md) 
 - [Асинхронное программирование в надстройках для Office](asynchronous-programming-in-office-add-ins.md)
 - [Выполняйте чтение и запись данных при активном выделении фрагмента в документе или электронной таблице.](read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md)
-    
+
 [Binding]:               https://docs.microsoft.com/javascript/api/office/office.binding
 [MatrixBinding]:         https://docs.microsoft.com/javascript/api/office/office.matrixbinding
 [TableBinding]:          https://docs.microsoft.com/javascript/api/office/office.tablebinding

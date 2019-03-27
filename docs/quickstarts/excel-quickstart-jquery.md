@@ -1,21 +1,21 @@
 ---
 title: Создание первой надстройки Excel с помощью jQuery
 description: ''
-ms.date: 01/17/2019
+ms.date: 03/19/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 7931e06899a94a0dcda2a5ab442d37ce21c119c0
-ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.openlocfilehash: 09c3819efde35b9f35847c8ca3bca558b391d98a
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "29742445"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30872125"
 ---
 # <a name="build-an-excel-add-in-using-jquery"></a>Создание надстройки Excel с помощью jQuery
 
 В этой статье мы разберем, как создать надстройку Excel, используя jQuery и API JavaScript для Excel. 
 
-## <a name="create-the-add-in"></a>Создание надстройки 
+## <a name="create-the-add-in"></a>Создание надстройки
 
 [!include[Choose your editor](../includes/quickstart-choose-editor.md)]
 
@@ -28,7 +28,7 @@ ms.locfileid: "29742445"
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
 1. В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.
-    
+
 2. В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, затем выберите **Надстройки** > **Веб-надстройка Excel**. 
 
 3. Укажите имя проекта и нажмите кнопку **ОК**.
@@ -36,7 +36,7 @@ ms.locfileid: "29742445"
 4. В диалоговом окне **Создание надстройки Office** выберите **Добавить новые функции в Excel**, а затем нажмите кнопку **Готово**, чтобы создать проект.
 
 5. Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.
-    
+
 ### <a name="explore-the-visual-studio-solution"></a>Обзор решения Visual Studio
 
 [!include[Description of Visual Studio projects](../includes/quickstart-vs-solution.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "29742445"
 ### <a name="update-the-code"></a>Обновление кода
 
 1. Файл **Home.html** содержит HTML-контент, который будет отображаться в области задач надстройки. В файле **Home.html** замените элемент `<body>` на приведенную ниже часть кода и сохраните файл.
- 
+
     ```html
     <body class="ms-font-m ms-welcome">
         <div id="content-header">
@@ -184,7 +184,7 @@ ms.locfileid: "29742445"
     - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
     ![Генератор Yeoman](../images/yo-office-jquery.png)
-    
+
     После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
 2. Перейдите к корневой папке проекта.
@@ -196,9 +196,9 @@ ms.locfileid: "29742445"
 ### <a name="update-the-code"></a>Обновление кода 
 
 1. В редакторе кода откройте файл **index.html** из корневой папки проекта. Этот файл содержит HTML-контент, который будет отображаться в области задач надстройки. 
- 
+
 2. Замените тег `body` в файле **index.html** приведенной ниже разметкой и сохраните файл.
- 
+
     ```html
     <body class="ms-font-m ms-welcome">
         <div id="content-header">
@@ -216,14 +216,14 @@ ms.locfileid: "29742445"
         </div>
         <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
         <script type="text/javascript" src="node_modules/office-ui-fabric-js/dist/js/fabric.js"></script>
-    </body>    
+    </body>
     ```
 
 3. Откройте файл **src\index.js**, чтобы указать скрипт для надстройки. Замените все его содержимое следующим кодом и сохраните файл.
 
     ```js
     'use strict';
-    
+
     (function () {
         Office.onReady(function() {
             // Office is ready
@@ -259,7 +259,7 @@ ms.locfileid: "29742445"
         top: 0;
         left: 0;
         width: 100%;
-        height: 80px; 
+        height: 80px;
         overflow: hidden;
     }
 
@@ -270,7 +270,7 @@ ms.locfileid: "29742445"
         left: 0;
         right: 0;
         bottom: 0;
-        overflow: auto; 
+        overflow: auto;
     }
 
     .padding {
@@ -280,7 +280,7 @@ ms.locfileid: "29742445"
 
 ### <a name="update-the-manifest"></a>Обновление манифеста
 
-1. Откройте файл **manifest.xml**, чтобы определить параметры и возможности надстройки. 
+1. Откройте файл **manifest.xml**, чтобы определить параметры и возможности надстройки.
 
 2. Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.
 
@@ -334,5 +334,4 @@ ms.locfileid: "29742445"
 * [Руководство по надстройкам Excel](../tutorials/excel-tutorial-create-table.md)
 * [Основные концепции программирования с помощью API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
 * [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
-* [Справочник по API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)
-
+* [Справочник по API JavaScript для Excel](/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)

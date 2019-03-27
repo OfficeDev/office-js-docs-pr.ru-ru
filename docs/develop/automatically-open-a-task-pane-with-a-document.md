@@ -1,14 +1,14 @@
 ---
 title: Автоматическое открытие области задач с документом
 description: ''
-ms.date: 05/02/2018
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: dd0fb8befdfe41ec96f1f418b3e4eb43f6ba98da
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: a231255200d6edd1fc923a82711c8c24819bf914
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29386759"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870242"
 ---
 # <a name="automatically-open-a-task-pane-with-a-document"></a>Автоматическое открытие области задач с документом
 
@@ -25,7 +25,7 @@ ms.locfileid: "29386759"
 
 ## <a name="support-and-availability"></a>Поддержка и доступность
 
-Ниже перечислены продукты и платформы, <!-- in **developer preview** and it is only --> в которых поддерживается функция автоматического открытия.
+Функция автоматического открытия <!-- in **developer preview** and it is only --> поддерживается в продуктах и платформах, перечисленных ниже.
 
 |**Продукты**|**Платформы**|
 |:-----------|:------------|
@@ -60,7 +60,7 @@ ms.locfileid: "29386759"
 
 ### <a name="step-1-specify-the-task-pane-to-open"></a>Этап 1. Указание области задач, которую необходимо открывать
 
-Чтобы указать область задач, которую необходимо открывать автоматически, задайте для [TaskpaneId](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/action#taskpaneid) значение **Office.AutoShowTaskpaneWithDocument**. Это значение можно установить только в одной области задач. Если установить это значение для нескольких областей задач, распознается только первый случай его использования, а все остальные будут игнорироваться.
+Чтобы указать область задач, которую необходимо открывать автоматически, задайте для [TaskpaneId](/office/dev/add-ins/reference/manifest/action#taskpaneid) значение **Office.AutoShowTaskpaneWithDocument**. Это значение можно установить только в одной области задач. Если установить это значение для нескольких областей задач, распознается только первый случай его использования, а все остальные будут игнорироваться.
 
 Ниже представлен пример, где для TaskPaneId задано значение Office.AutoShowTaskpaneWithDocument.
 
@@ -78,7 +78,7 @@ ms.locfileid: "29386759"
 
 #### <a name="tag-the-document-on-the-client-side"></a>Установка отметки для документа на стороне клиента
 
-Используйте метод Office.js [settings.set](https://docs.microsoft.com/javascript/api/office/office.settings), чтобы установить для **Office.AutoShowTaskpaneWithDocument** значение **true**, как показано в следующем примере.
+Используйте метод Office.js [settings.set](/javascript/api/office/office.settings), чтобы установить для **Office.AutoShowTaskpaneWithDocument** значение **true**, как показано в следующем примере.
 
 ```js
 Office.context.document.settings.set("Office.AutoShowTaskpaneWithDocument", true);
@@ -159,10 +159,10 @@ Office.context.document.settings.saveAsync();
 </we:webextension>
 ```
 
-Чтобы протестировать предыдущий пример, рассмотрите возможность присоединения к [программе для разработчиков Office 365](https://docs.microsoft.com/office/developer-program/office-365-developer-program) и подписки на [учетную запись разработчика Office 365](https://developer.microsoft.com/office/dev-program), если у вас еще нет этой подписки. Вы можете в реальных условиях протестировать централизованное развертывание и убедиться, что ваша надстройка работает должным образом.
+Чтобы протестировать предыдущий пример, рассмотрите возможность присоединения к [программе для разработчиков Office 365](/office/developer-program/office-365-developer-program) и подписки на [учетную запись разработчика Office 365](https://developer.microsoft.com/office/dev-program), если у вас еще нет этой подписки. Вы можете в реальных условиях протестировать централизованное развертывание и убедиться, что ваша надстройка работает должным образом.
 
 
 ## <a name="see-also"></a>См. также
 
 Пример использования функции автоматического открытия см. [на странице с примерами команд для надстройки Office](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/AutoOpenTaskpane).
-[Присоединитесь к программе для разработчиков Office 365](https://docs.microsoft.com/office/developer-program/office-365-developer-program).
+[Присоединитесь к программе для разработчиков Office 365](/office/developer-program/office-365-developer-program).

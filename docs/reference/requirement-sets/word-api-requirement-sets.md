@@ -1,19 +1,19 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Word
 description: ''
-ms.date: 11/14/2018
+ms.date: 03/19/2019
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: ec33a55c20fbc1b7b2cb0603034bd74f54b0b4b2
-ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.openlocfilehash: 21bd99dda479c0c2181f546303e79e50f33ded00
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "29742459"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870802"
 ---
 # <a name="word-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Word
 
-Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](https://docs.microsoft.com/office/dev/add-ins/develop/office-versions-and-requirement-sets).
+Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets).
 
 Надстройки Word работают в нескольких версиях Office, включая Office 2016 для Windows, Office для iPad, Office для Mac и Office Online. В приведенной ниже таблице перечислены наборы требований Word, ведущие приложения Office, которые их поддерживают, а также номера сборок или версий для этих приложений.
 
@@ -36,7 +36,7 @@ ms.locfileid: "29742459"
 - [Номера версий и сборок выпусков из канала обновления для клиентов Office 365](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7);
 - [Какая у меня версия Office](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19);
 - [Где можно найти номера версии и сборки клиентского приложения Office 365](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7);
-- [Обзор Office Online Server](https://docs.microsoft.com/officeonlineserver/office-online-server-overview)
+- [Обзор Office Online Server](/officeonlineserver/office-online-server-overview)
 
 ## <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
@@ -296,6 +296,6 @@ API JavaScript для Word 1.1 — это первая версия API. Доп
 
 ## <a name="see-also"></a>См. также
 
-- [Версии Office и наборы обязательных элементов](https://docs.microsoft.com/office/dev/add-ins/develop/office-versions-and-requirement-sets)
-- [Указание ведущих приложений Office и обязательных элементов API](https://docs.microsoft.com/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
-- [XML-манифест надстроек Office](https://docs.microsoft.com/office/dev/add-ins/develop/add-in-manifests)
+- [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets)
+- [Указание ведущих приложений Office и обязательных элементов API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
+- [XML-манифест надстроек Office](/office/dev/add-ins/develop/add-in-manifests)

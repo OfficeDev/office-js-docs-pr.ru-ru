@@ -1,15 +1,15 @@
 ---
 title: Обзор API JavaScript для Word
 description: ''
-ms.date: 10/09/2018
+ms.date: 03/19/2019
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 9a884e0e092779cc5959aa9b32ae6a5c4f3c0893
-ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.openlocfilehash: 19e3b7732fb5372228ea1458c57df5e79b08078a
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "29742305"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870578"
 ---
 # <a name="word-javascript-api-overview"></a>Обзор API JavaScript для Word
 
@@ -37,7 +37,7 @@ API JavaScript для Word загружается с помощью файла O
 
 ## <a name="running-word-add-ins"></a>Запуск надстроек Word
 
-Чтобы запустить надстройку, воспользуйтесь обработчиком событий Office.initialize. Дополнительные сведения об инициализации надстроек см. в статье [Общие сведения об API](https://docs.microsoft.com/office/dev/add-ins/develop/understanding-the-javascript-api-for-office).
+Чтобы запустить надстройку, воспользуйтесь обработчиком событий Office.initialize. Дополнительные сведения об инициализации надстроек см. в статье [Общие сведения об API](/office/dev/add-ins/develop/understanding-the-javascript-api-for-office).
 
 Надстройки для Word 2016 или более поздней версии выполняются передачей функции в метод **Word.run()**. Функции, передаваемой в метод **run**, обязательно должен быть присвоен контекстный аргумент. Этот [контекстный объект](/javascript/api/word/word.requestcontext) отличается от контекстного объекта, получаемого из объекта Office, но он также используется для взаимодействия со средой выполнения Word. Контекстный объект предоставляет доступ к объектной модели API JavaScript для Word. В приведенном ниже примере показано, как инициализировать и выполнить надстройку Word с помощью метода **Word.run()**.
 
@@ -137,6 +137,6 @@ Word.run(function (context) {
 
 ## <a name="see-also"></a>См. также
 
-* [Обзор надстроек Word](https://docs.microsoft.com/office/dev/add-ins/word/word-add-ins-programming-overview)
-* [Обзор платформы надстроек Office](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins)
+* [Обзор надстроек Word](/office/dev/add-ins/word/word-add-ins-programming-overview)
+* [Обзор платформы надстроек Office](/office/dev/add-ins/overview/office-add-ins)
 * [Примеры надстроек Word на сайте GitHub](https://github.com/OfficeDev?utf8=%E2%9C%93&q=Word)

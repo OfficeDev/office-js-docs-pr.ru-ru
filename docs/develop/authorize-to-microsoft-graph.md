@@ -1,26 +1,25 @@
 ---
 title: Авторизация в Microsoft Graph из надстройки Office
 description: ''
-ms.date: 04/10/2018
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: ce1e54168d32a362777e08d573fe99c0d6a9cd33
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 5c34e00a2083f3554480f5900929806e10576350
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29386262"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871985"
 ---
 # <a name="authorize-to-microsoft-graph-in-your-office-add-in-preview"></a>Авторизация в Microsoft Graph из надстройки Office (предварительная версия)
 
 Пользователи входят в Office (в Интернете, на мобильных устройствах и настольных компьютерах), используя личную учетную запись Майкрософт либо рабочую или учебную учетную запись (Office 365). Чтобы надстройка Office могла получить авторизованный доступ к [Microsoft Graph](https://developer.microsoft.com/graph/docs), лучше всего использовать учетные данные для входа пользователя в Office. Это позволяет пользователям получить доступ к своим данным Microsoft Graph без необходимости повторного входа. 
 
 > [!NOTE]
-> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint в тестовом режиме. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets).
-> Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint в тестовом режиме. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Инструкции см. в [этой статье](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 ## <a name="add-in-architecture-for-sso-and-microsoft-graph"></a>Архитектура надстройки для единого входа и Microsoft Graph
 
-Помимо страниц и кода JavaScript веб-приложения, в надстройке также должны размещаться (с тем же [полным доменном именем](https://docs.microsoft.com/windows/desktop/DNS/f-gly#_dns_fully_qualified_domain_name_fqdn__gly)) один или несколько веб-API, которые будут получать маркер доступа и отправлять запросы к Microsoft Graph.
+Помимо страниц и кода JavaScript веб-приложения, в надстройке также должны размещаться (с тем же [полным доменном именем](/windows/desktop/DNS/f-gly#_dns_fully_qualified_domain_name_fqdn__gly)) один или несколько веб-API, которые будут получать маркер доступа и отправлять запросы к Microsoft Graph.
 
 Манифест надстройки содержит разметку, которая указывает, как надстройка регистрируется в конечной точке Azure Active Directory (Azure AD) версии 2.0, а также задает необходимые надстройке разрешения для Microsoft Graph.
 
@@ -30,7 +29,7 @@ ms.locfileid: "29386262"
 
 ![Схема единого входа](../images/sso-access-to-microsoft-graph.png)
 
-1. В надстройке JavaScript вызывает новый API Office.js [getAccessTokenAsync](https://docs.microsoft.com/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference). Он указывает ведущему приложению Office, что необходимо получить маркер доступа к надстройке. (Далее он будет называться **маркером доступа к начальной загрузке**, поскольку в этом процессе он позже будет заменен вторым маркером. Пример раскодированного маркера доступа к начальной загрузке см. в разделе [Пример маркера доступа](sso-in-office-add-ins.md#example-access-token)).
+1. В надстройке JavaScript вызывает новый API Office.js [getAccessTokenAsync](/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference). Он указывает ведущему приложению Office, что необходимо получить маркер доступа к надстройке. (Далее он будет называться **маркером доступа к начальной загрузке**, поскольку в этом процессе он позже будет заменен вторым маркером. Пример раскодированного маркера доступа к начальной загрузке см. в разделе [Пример маркера доступа](sso-in-office-add-ins.md#example-access-token)).
 1. Если вход в Office не выполнен, в ведущем приложении открывается всплывающее окно, в котором пользователю предлагается войти.
 1. Если пользователь запускает надстройку в первый раз, ему предлагается дать согласие.
 1. Ведущее приложение Office запрашивает **маркер доступа к начальной загрузке** у конечной точки Azure AD версии 2.0 для текущего пользователя.
@@ -38,7 +37,7 @@ ms.locfileid: "29386262"
 1. Ведущее приложение Office отправляет надстройке **маркер доступа к начальной загрузке** в составе объекта результата, возвращенного при вызове метода `getAccessTokenAsync`.
 1. Код JavaScript надстройки отправляет HTTP-запрос к веб-API с тем же полным доменным именем, что и у надстройки. Этот запрос включает **маркер доступа к начальной загрузке** в качестве подтверждения авторизации.  
 1. Серверный код проверяет входящий **маркер доступа к начальной загрузке**.
-1. Серверный код использует поток "от имени" (определенный в [OAuth2 Token Exchange](https://tools.ietf.org/html/draft-ietf-oauth-token-exchange-02) и [сценарии аутентификации в Azure из управляющей программы или серверного приложения в веб-API](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios)), чтобы получить маркер доступа в Microsoft Graph в обмен на маркер доступа к начальной загрузке.
+1. Серверный код использует поток "от имени" (определенный в [OAuth2 Token Exchange](https://tools.ietf.org/html/draft-ietf-oauth-token-exchange-02) и [сценарии аутентификации в Azure из управляющей программы или серверного приложения в веб-API](/azure/active-directory/develop/active-directory-authentication-scenarios)), чтобы получить маркер доступа в Microsoft Graph в обмен на маркер доступа к начальной загрузке.
 1. Azure AD возвращает надстройке маркер доступа в Microsoft Graph (и маркер обновления, если надстройка запрашивает разрешение *offline_access*).
 1. Серверный код кэширует маркер доступа в Microsoft Graph.
 1. Серверный код отправляет запросы к Microsoft Graph и включает маркер доступа в Microsoft Graph.
@@ -47,23 +46,20 @@ ms.locfileid: "29386262"
 
 ## <a name="develop-an-sso-add-in-that-accesses-microsoft-graph"></a>Разработка надстройки с единым входом для Microsoft Graph
 
-Надстройка с доступом в Microsoft Graph разрабатывается так же, как и любая другая надстройка с единым входом. Подробное описание см. в статье [Включение единого входа для надстроек Office](https://docs.microsoft.com/office/dev/add-ins/develop/sso-in-office-add-ins). Разница заключается в том, что у надстройки обязательно должен быть серверный веб-API, а также в использовании термина "маркер доступа к начальной загрузке" вместо термина "маркер доступа" из указанной статьи. 
+Надстройка с доступом в Microsoft Graph разрабатывается так же, как и любая другая надстройка с единым входом. Подробное описание см. в статье [Включение единого входа для надстроек Office](/office/dev/add-ins/develop/sso-in-office-add-ins). Разница заключается в том, что у надстройки обязательно должен быть серверный веб-API, а также в использовании термина "маркер доступа к начальной загрузке" вместо термина "маркер доступа" из указанной статьи. 
 
 В зависимости от языка и платформы могут быть доступны библиотеки, которые упростят создание серверного кода. Ваш код должен выполнять следующее:
 
 * проверять маркер доступа к начальной загрузке надстройки, полученный от созданного ранее обработчика маркеров. Дополнительные сведения см. в разделе [Проверка маркера доступа](sso-in-office-add-ins.md#validate-the-access-token); 
 * запускать поток "от имени" путем вызова конечной точки Azure AD версии 2.0, включающего маркер доступа к начальной загрузке, некоторые метаданные пользователя и учетные данные надстройки (идентификатор и секрет);
-* поместить в кэш возвращенный маркер доступа в Microsoft Graph. Дополнительные сведения об этом потоке см. в статье [Azure Active Directory версии 2.0 и поток "от имени" OAuth 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-protocols-oauth-on-behalf-of);
+* поместить в кэш возвращенный маркер доступа в Microsoft Graph. Дополнительные сведения об этом потоке см. в статье [Azure Active Directory версии 2.0 и поток "от имени" OAuth 2.0](/azure/active-directory/develop/active-directory-v2-protocols-oauth-on-behalf-of);
 * создать один или несколько методов веб-API, которые получают данные Microsoft Graph, передавая кэшированный маркер доступа в Microsoft Graph.
 
 > [!NOTE]
-> Примеры раскодированных маркеров доступа в Microsoft Graph, которые были получены потоком "от имени", см. в статье [Azure Active Directory версии 2.0 и поток "от имени" OAuth 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-protocols-oauth-on-behalf-of).
+> Примеры раскодированных маркеров доступа в Microsoft Graph, которые были получены потоком "от имени", см. в статье [Azure Active Directory версии 2.0 и поток "от имени" OAuth 2.0](/azure/active-directory/develop/active-directory-v2-protocols-oauth-on-behalf-of).
 
 Подробные пошаговые инструкции и сценарии см. в следующих статьях:
 
 * [Создание надстройки Office на платформе Node.js с использованием единого входа](create-sso-office-add-ins-nodejs.md)
 * [Создание надстройки Office на платформе ASP.NET с использованием единого входа](create-sso-office-add-ins-aspnet.md)
-* [Сценарий: реализация единого входа для службы в надстройке Outlook](https://docs.microsoft.com/outlook/add-ins/implement-sso-in-outlook-add-in)
-
-
-
+* [Сценарий: реализация единого входа для службы в надстройке Outlook](/outlook/add-ins/implement-sso-in-outlook-add-in)

@@ -1,14 +1,14 @@
 ---
 title: Office.context.mailbox.item — набор обязательных элементов 1.5
 description: ''
-ms.date: 02/15/2019
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 999a9b732a7efd3f4a9c289e5ff0b97e87278e60
-ms.sourcegitcommit: 8fb60c3a31faedaea8b51b46238eb80c590a2491
+ms.openlocfilehash: c31deaf3fad0fbfbf4075d85c422a05a418707de
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "30600279"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871789"
 ---
 # <a name="item"></a>item
 
@@ -21,8 +21,8 @@ ms.locfileid: "30600279"
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="members-and-methods"></a>Элементы и методы
 
@@ -103,8 +103,8 @@ Office.initialize = function () {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -143,8 +143,8 @@ console.log(outputString);
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.1|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание|
 
 ##### <a name="example"></a>Пример
 
@@ -171,8 +171,8 @@ function callback(asyncResult) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.1|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -233,8 +233,8 @@ function callback(asyncResult) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ####  <a name="nullable-conversationid-string"></a>(nullable) conversationId :String
 
@@ -253,8 +253,8 @@ function callback(asyncResult) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -276,8 +276,8 @@ console.log("conversationId: " + conversationId);
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -302,8 +302,8 @@ console.log("Date and time created: " + dateTimeCreated);
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -360,8 +360,8 @@ Office.context.mailbox.item.end.setAsync(endTime, options, function(result) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 #### <a name="from-emailaddressdetailsjavascriptapioutlook15officeemailaddressdetails"></a>from :[EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)
 
@@ -381,8 +381,8 @@ Office.context.mailbox.item.end.setAsync(endTime, options, function(result) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -404,8 +404,8 @@ console.log("From " + from);
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -435,8 +435,8 @@ var internetMessageId = Office.context.mailbox.item.internetMessageId;
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -450,7 +450,7 @@ console.log("Item class: " + itemClass);
 Получает идентификатор элемента веб-служб Exchange для текущего элемента. Только в режиме чтения.
 
 > [!NOTE]
-> Идентификатор, возвращаемый свойством `itemId`, совпадает с идентификатором элемента веб-служб Exchange. Свойство `itemId` не совпадает с идентификатором записи Outlook, а также идентификатором, который используется REST API Outlook. Прежде чем совершать вызовы REST API, используя это значение, его необходимо преобразовать с помощью [Office.context.mailbox.convertToRestId](office.context.mailbox.md#converttorestiditemid-restversion--string). Дополнительные сведения см. в статье [Использование REST API Outlook из надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/use-rest-api#get-the-item-id).
+> Идентификатор, возвращаемый свойством `itemId`, совпадает с идентификатором элемента веб-служб Exchange. Свойство `itemId` не совпадает с идентификатором записи Outlook, а также идентификатором, который используется REST API Outlook. Прежде чем совершать вызовы REST API, используя это значение, его необходимо преобразовать с помощью [Office.context.mailbox.convertToRestId](office.context.mailbox.md#converttorestiditemid-restversion--string). Дополнительные сведения см. в статье [Использование REST API Outlook из надстройки Outlook](/outlook/add-ins/use-rest-api#get-the-item-id).
 
 Свойство `itemId` недоступно в режиме создания. Если требуется идентификатор элемента, с помощью метода [`saveAsync`](#saveasyncoptions-callback) можно сохранить элемент в хранилище. При этом в параметре [`AsyncResult.value`](/javascript/api/office/office.asyncresult) функции обратного вызова возвращается идентификатор элемента.
 
@@ -463,8 +463,8 @@ console.log("Item class: " + itemClass);
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -494,8 +494,8 @@ if (itemId === null || itemId == undefined) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -543,8 +543,8 @@ function callback(asyncResult) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 #### <a name="normalizedsubject-string"></a>normalizedSubject :String
 
@@ -561,8 +561,8 @@ function callback(asyncResult) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -584,8 +584,8 @@ console.log("Normalized subject: " + normalizedSubject);
 |Требование| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.3|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -634,8 +634,8 @@ function callback(asyncResult) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 #### <a name="organizer-emailaddressdetailsjavascriptapioutlook15officeemailaddressdetails"></a>organizer :[EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)
 
@@ -650,8 +650,8 @@ function callback(asyncResult) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -698,8 +698,8 @@ function callback(asyncResult) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 #### <a name="sender-emailaddressdetailsjavascriptapioutlook15officeemailaddressdetails"></a>sender :[EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)
 
@@ -719,8 +719,8 @@ function callback(asyncResult) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -778,8 +778,8 @@ Office.context.mailbox.item.start.setAsync(startTime, options, function(result) 
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ####  <a name="subject-stringsubjectjavascriptapioutlook15officesubject"></a>subject :String|[Subject](/javascript/api/outlook_1_5/office.subject)
 
@@ -818,8 +818,8 @@ function callback(asyncResult) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ####  <a name="to-arrayemailaddressdetailsjavascriptapioutlook15officeemailaddressdetailsrecipientsjavascriptapioutlook15officerecipients"></a>to :Array.<[EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook_1_5/office.recipients)
 
@@ -856,8 +856,8 @@ function callback(asyncResult) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ### <a name="methods"></a>Методы
 
@@ -893,8 +893,8 @@ function callback(asyncResult) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.1|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadWriteItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadWriteItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание|
 
 ##### <a name="examples"></a>Примеры
 
@@ -968,8 +968,8 @@ Office.context.mailbox.item.addFileAttachmentAsync(
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.1|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadWriteItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadWriteItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание|
 
 ##### <a name="example"></a>Пример
 
@@ -1011,8 +1011,8 @@ function addAttachment() {
 |Требование| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.3|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание|
 
 #### <a name="displayreplyallformformdata-callback"></a>displayReplyAllForm(formData, [callback])
 
@@ -1046,8 +1046,8 @@ function addAttachment() {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="examples"></a>Примеры
 
@@ -1165,8 +1165,8 @@ Office.context.mailbox.item.displayReplyAllForm(
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="examples"></a>Примеры
 
@@ -1264,8 +1264,8 @@ Office.context.mailbox.item.displayReplyForm(
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="returns"></a>Возвращаемое значение:
 
@@ -1297,8 +1297,8 @@ var contacts = Office.context.mailbox.item.getEntities().contacts;
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="returns"></a>Возвращаемое значение:
 
@@ -1356,8 +1356,8 @@ Office.initialize = function () {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="returns"></a>Возвращаемое значение:
 
@@ -1402,8 +1402,8 @@ Office.initialize = function () {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="returns"></a>Возвращаемое значение:
 
@@ -1449,8 +1449,8 @@ var veggies = allMatches.veggies;
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
 ##### <a name="returns"></a>Возвращаемое значение:
 
@@ -1491,8 +1491,8 @@ var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");
 |Требование| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.2|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadWriteItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadWriteItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание|
 
 ##### <a name="returns"></a>Возвращаемое значение:
 
@@ -1544,8 +1544,8 @@ function setCallback(asyncResult) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -1600,8 +1600,8 @@ function saveCallback(asyncResult) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.1|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadWriteItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadWriteItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание|
 
 ##### <a name="example"></a>Пример
 
@@ -1648,8 +1648,8 @@ Office.context.mailbox.item.removeAttachmentAsync(
 |Требование| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.3|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadWriteItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadWriteItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание|
 
 ##### <a name="examples"></a>Примеры
 
@@ -1690,8 +1690,8 @@ Office.context.mailbox.item.saveAsync(
 |Требование| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.2|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadWriteItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadWriteItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание|
 
 ##### <a name="example"></a>Пример
 

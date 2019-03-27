@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки OneNote
 description: ''
-ms.date: 01/17/2019
+ms.date: 03/19/2019
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: a0b2820f33e3a7cd31c12aec017ca552575a3f9b
-ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.openlocfilehash: 378d691d1994a2d22166afc5338007400f7a48af
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "29742340"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871922"
 ---
 # <a name="build-your-first-onenote-add-in"></a>Создание первой надстройки OneNote
 
@@ -50,9 +50,9 @@ ms.locfileid: "29742340"
 
 ## <a name="update-the-code"></a>Обновление кода
 
-1. В редакторе кода откройте файл **index.html** из корневой папки проекта. Этот файл содержит HTML-содержимое, которое будет отображаться в области задач надстройки.
+1. В редакторе кода откройте файл **index.html** из корневой папки проекта. Этот файл содержит HTML-контент, который будет отображаться в области задач надстройки.
 
-2. Замените элемент `<body>` приведенным ниже кодом и сохраните файл. 
+2. Замените элемент `<body>` приведенной ниже разметкой и сохраните файл. 
 
     ```html
     <body class="ms-font-m ms-welcome">
@@ -276,7 +276,7 @@ ms.locfileid: "29742340"
 ## <a name="see-also"></a>См. также
 
 - [Обзор API JavaScript для OneNote](../onenote/onenote-add-ins-programming-overview.md)
-- [Справочник по API JavaScript для OneNote](https://docs.microsoft.com/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference)
+- [Справочник по API JavaScript для OneNote](/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)
 

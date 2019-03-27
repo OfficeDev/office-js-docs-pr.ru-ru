@@ -1,18 +1,18 @@
 ---
 title: Создание IntelliSense для JavaScript в Visual Studio 2017
 description: ''
-ms.date: 12/04/2017
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: acbdd3e7bec080509cf957f8de42bfe585ed6f31
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 7a4e2962933ccef0912ba3f96ed67af580fab60b
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29388054"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870977"
 ---
-# <a name="get-javascript-intellisense-in-visual-studio-2017"></a>Создание IntelliSense для JavaScript в Visual Studio 2017 
+# <a name="get-javascript-intellisense-in-visual-studio-2017"></a>Создание IntelliSense для JavaScript в Visual Studio 2017
 
-При применении Visual Studio 2017 для разработки надстроек Office можно использовать JSDoc, чтобы активировать IntelliSense для переменных, объектов, параметров и возвращаемых значений JavaScript. В этой статье предоставлен обзор JSDoc, а также возможности его использования для создания IntellSense в Visual Studio. Дополнительные сведения см. в статьях [IntelliSense для JavaScript](https://docs.microsoft.com/visualstudio/ide/javascript-intellisense) и [Поддержка JSDoc в JavaScript](https://github.com/Microsoft/TypeScript/wiki/JsDoc-support-in-JavaScript). 
+При применении Visual Studio 2017 для разработки надстроек Office можно использовать JSDoc, чтобы активировать IntelliSense для переменных, объектов, параметров и возвращаемых значений JavaScript. В этой статье предоставлен обзор JSDoc, а также возможности его использования для создания IntellSense в Visual Studio. Дополнительные сведения см. в статьях [IntelliSense для JavaScript](/visualstudio/ide/javascript-intellisense) и [Поддержка JSDoc в JavaScript](https://github.com/Microsoft/TypeScript/wiki/JsDoc-support-in-JavaScript). 
 
 ## <a name="officejs-type-definitions"></a>Определения типов Office.js
 
@@ -22,7 +22,7 @@ ms.locfileid: "29388054"
 - Использовать интернет-версию Office.js, добавив файл tsconfig.json в корневой каталог проекта веб-приложения в решении надстройки. Этот файл должен иметь указанное ниже содержимое.
 
     ```json
-        {        
+        {
             "compilerOptions": {
                 "allowJs": true,            // These settings apply to JavaScript files also.
                 "noEmit":  true             // Do not compile the JS (or TS) files in this project.

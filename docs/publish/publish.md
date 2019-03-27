@@ -1,14 +1,14 @@
 ---
 title: Развертывание и публикация надстройки Office | Документация Майкрософт
 description: Методы и варианты развертывания надстройки Office для тестирования и распространения.
-ms.date: 01/23/2018
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 0a99218a3eed3143f70ace6e63f5a01b952a5623
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: eeaf4b61948952ff7e536f3e1a6b38dc46adb93e
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29388768"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871705"
 ---
 # <a name="deploy-and-publish-your-office-add-in"></a>Развертывание и публикация надстройки Office
 
@@ -19,12 +19,12 @@ ms.locfileid: "29388768"
 |[Загрузка неопубликованного приложения](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)|При разработке для проверки работы надстройки в Windows, Office Online, на iPad или Mac.|
 |[Централизованное развертывание](centralized-deployment.md)|В облачном или гибридном развертывании для распространения надстройки в организации с помощью Центра администрирования Office 365.|
 |[Каталог SharePoint](publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md)|В локальной среде для распространения надстройки в организации.|
-|[AppSource](https://docs.microsoft.com/office/dev/store/submit-to-the-office-store)|Для распространения надстройки среди всех пользователей.|
+|[AppSource](/office/dev/store/submit-to-the-office-store)|Для распространения надстройки среди всех пользователей.|
 |[Сервер Exchange Server](#outlook-add-in-deployment)|В локальной или облачной среде для распространения надстроек Outlook.|
 |[Общая сетевая папка](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)|На том расположенном в сети компьютере с Windows, где должна размещаться надстройка, перейдите к родительской папке или диску с папкой, которую требуется использовать в качестве каталога общих папок.|
 
 > [!NOTE]
-> Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в интерфейсе Office, убедитесь, что она соответствует [политикам проверки AppSource](https://docs.microsoft.com/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка должна работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](https://docs.microsoft.com/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице со сведениями о доступности и ведущих приложениях для надстроек Office](../overview/office-add-in-availability.md).
+> Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в интерфейсе Office, убедитесь, что она соответствует [политикам проверки AppSource](/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка должна работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице со сведениями о доступности и ведущих приложениях для надстроек Office](../overview/office-add-in-availability.md).
 
 ## <a name="deployment-options-by-office-host"></a>Варианты развертывания для различных ведущих приложений Office
 
@@ -66,11 +66,11 @@ ms.locfileid: "29388768"
 Если вы развертываете надстройки в локальной среде, используйте каталог SharePoint. Дополнительные сведения см. в статье [Публикация надстроек области задач и контентных надстроек в каталоге SharePoint](publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md).
 
 > [!NOTE]
-> Каталоги SharePoint не поддерживают Office для Mac. Для развертывания надстроек Office на клиентах Mac необходимо отправить их в [AppSource](https://docs.microsoft.com/office/dev/store/submit-to-the-office-store). 
+> Каталоги SharePoint не поддерживают Office для Mac. Для развертывания надстроек Office на клиентах Mac необходимо отправить их в [AppSource](/office/dev/store/submit-to-the-office-store).
 
 ### <a name="outlook-add-in-deployment"></a>Развертывание надстроек Outlook
 
-В локальных и онлайн-средах, в которых не используется служба идентификации Azure AD, надстройки Outlook можно развертывать через сервер Exchange Server. 
+В локальных и онлайн-средах, в которых не используется служба идентификации Azure AD, надстройки Outlook можно развертывать через сервер Exchange Server.
 
 Для развертывания надстроек Outlook требуется следующее:
 
@@ -84,7 +84,7 @@ ms.locfileid: "29388768"
 - [Загрузка неопубликованных надстроек Outlook для тестирования](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
 - [Отправка в AppSource][AppSource]
 - [Рекомендации по разработке надстроек Office](../design/add-in-design.md)
-- [Создание эффективных описаний в AppSource](https://docs.microsoft.com/office/dev/store/create-effective-office-store-listings)
+- [Создание эффективных описаний в AppSource](/office/dev/store/create-effective-office-store-listings)
 - [Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office](../testing/testing-and-troubleshooting.md)
 
 [AppSource]: https://docs.microsoft.com/office/dev/store/submit-to-the-office-store

@@ -1,14 +1,14 @@
 ---
 title: Создание надстроек Word с помощью Office Open XML
 description: ''
-ms.date: 12/17/2018
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: ce27c326b5e4ac9dd7e4966f72348d2c4cfbac60
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: e13911da0dbdb9fdb0215d433a9559bf1b747eb9
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29387305"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30872146"
 ---
 # <a name="create-better-add-ins-for-word-with-office-open-xml"></a>Создание надстроек Word с помощью Office Open XML
 
@@ -103,7 +103,7 @@ Microsoft Office предоставляет большой выбор макет
 
 ![Диаграмма в Word.](../images/office15-app-create-wd-app-using-ooxml-fig11.png)
 
-Вы можете вставлять диаграммы Excel в документы Word как динамические диаграммы. Это также означает, что их можно использовать в надстройке для Word. Как видно из предыдущих примеров, с помощью приведения Office Open XML можно вставлять содержимое практически любого типа, доступного пользователям для вставки в документы. Получить нужную разметку Office Open XML можно двумя простыми способами. Добавьте форматированное содержимое в пустой документ Word и сохраните файл в формате XML-документа Word или используйте тестовую надстройку с методом [getSelectedDataAsync](https://docs.microsoft.com/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-), чтобы захватить разметку. Оба способа, по сути, обеспечивают одинаковый результат.
+Вы можете вставлять диаграммы Excel в документы Word как динамические диаграммы. Это также означает, что их можно использовать в надстройке для Word. Как видно из предыдущих примеров, с помощью приведения Office Open XML можно вставлять содержимое практически любого типа, доступного пользователям для вставки в документы. Получить нужную разметку Office Open XML можно двумя простыми способами. Добавьте форматированное содержимое в пустой документ Word и сохраните файл в формате XML-документа Word или используйте тестовую надстройку с методом [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-), чтобы захватить разметку. Оба способа, по сути, обеспечивают одинаковый результат.
 
 
 > [!NOTE]
@@ -114,7 +114,7 @@ Microsoft Office предоставляет большой выбор макет
 ## <a name="exploring-the-office-open-xml-document-package"></a>Изучение пакета документа Office Open XML
 
 
-Когда вы используете метод [getSelectedDataAsync](https://docs.microsoft.com/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) для получения разметки Office Open XML для выделенного содержимого (или сохраняете документ в формате XML-документа Word), вы получаете не только разметку, описывающую выделенное содержимое, а весь документ со множеством параметров и настроек, которые вам в большинстве случаев не пригодятся. Если вы используете этот метод из документа, содержащего надстройку области задач, полученная разметка будет включать даже область задач.
+Когда вы используете метод [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) для получения разметки Office Open XML для выделенного содержимого (или сохраняете документ в формате XML-документа Word), вы получаете не только разметку, описывающую выделенное содержимое, а весь документ со множеством параметров и настроек, которые вам в большинстве случаев не пригодятся. Если вы используете этот метод из документа, содержащего надстройку области задач, полученная разметка будет включать даже область задач.
 
 Даже простой пакет документа Word, помимо основного содержимого, включает свойства, стили, тему (параметры форматирования), веб-параметры, шрифты документа и другие части.
 
@@ -216,7 +216,7 @@ Microsoft Office предоставляет большой выбор макет
 
 После сохранения предыдущей разметки Office Open XML в XML-файле, доступном из вашего решения, вы можете использовать следующую функцию, чтобы задать форматированный текст в документе с помощью приведения Office Open XML. 
 
-В этой функции все строки, кроме последней, используются для получения сохраненной разметки и ее использования в методе [setSelectedDataAsync](https://docs.microsoft.com/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) в конце функции. Для метода **setSelectedDataASync** требуется только указать содержимое, которое необходимо вставить, и тип приведения.
+В этой функции все строки, кроме последней, используются для получения сохраненной разметки и ее использования в методе [setSelectedDataAsync](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) в конце функции. Для метода **setSelectedDataASync** требуется только указать содержимое, которое необходимо вставить, и тип приведения.
 
 
 > [!NOTE]
@@ -550,7 +550,7 @@ function addAndBindControl() {
 Показанный код выполняет следующие действия:
 
 
-- Пытается создать привязку к именованному элементу управления содержимым с помощью метода [addFromNamedItemAsync](https://docs.microsoft.com/javascript/api/office/office.bindings#addfromnameditemasync-itemname--bindingtype--options--callback-).
+- Пытается создать привязку к именованному элементу управления содержимым с помощью метода [addFromNamedItemAsync](/javascript/api/office/office.bindings#addfromnameditemasync-itemname--bindingtype--options--callback-).
 
   Выполните этот шаг сначала, если есть вероятность того, что именованный элемент управления уже существует в документе при запуске кода надстройки. Например, вам понадобится выполнить это действие, если надстройка вставлена в шаблон с последующим сохранением, при этом шаблон создан для работы с надстройкой, содержащей предварительно размещенный элемент управления. Вам также понадобится выполнить это действие, если требуется связать элемент управления, размещенный надстройкой ранее.
 
@@ -852,6 +852,6 @@ function populateBinding(filename) {
 
 ## <a name="see-also"></a>См. также
 
-- [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office)
+- [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office)
 - [Стандарт ECMA-376: форматы файлов Office Open XML](https://www.ecma-international.org/publications/standards/Ecma-376.htm) (здесь вы найдете полный справочник по языку и сопутствующую документацию по Open XML)
 - [API JavaScript для Office: привязка данных и пользовательские XML-части](https://msdn.microsoft.com/magazine/dn166930.aspx)

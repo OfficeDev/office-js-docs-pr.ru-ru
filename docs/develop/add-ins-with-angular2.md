@@ -1,14 +1,14 @@
 ---
 title: Разработка надстроек Office с помощью Angular
 description: ''
-ms.date: 11/02/2018
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: a385fb1abc0e43423471d02f2a05bfb1824f8aeb
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 20e66fe1a7a6cce17428424290d4e4c99995efb2
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29388873"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30872230"
 ---
 # <a name="develop-office-add-ins-with-angular"></a>Разработка надстроек Office с помощью Angular
 
@@ -20,7 +20,8 @@ ms.locfileid: "29388873"
 Пример надстройки Office, созданной на платформе Angular, приведен в статье [Надстройка на основе Angular для проверки стиля в приложении Word](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker).
 
 ## <a name="install-the-typescript-type-definitions"></a>Установка определений типов TypeScript
-Откройте окно nodejs и введите в командной строке следующую команду: 
+
+Откройте окно nodejs и введите в командной строке следующую команду:
 
 ```bash
 npm install --save-dev @types/office-js
@@ -73,7 +74,7 @@ const routes: Routes = // route definitions go here
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-```   
+```
 
 
 ## <a name="consider-wrapping-fabric-components-with-angular-components"></a>Советуем разместить компоненты Fabric в компонентах Angular
@@ -83,9 +84,9 @@ export class AppRoutingModule { }
 
 ## <a name="using-the-office-dialog-api-with-angular"></a>Использование API диалоговых окон Office с Angular
 
-Благодаря API диалоговых окон надстройка Office может открывать страницу в полумодальном диалоговом окне, которое обменивается данными с главной страницей (как правило, в области задач). 
+Благодаря API диалоговых окон надстройка Office может открывать страницу в полумодальном диалоговом окне, которое обменивается данными с главной страницей (как правило, в области задач).
 
-В методе [displayDialogAsync](https://docs.microsoft.com/javascript/api/office/office.ui) используется параметр, указывающий URL-адрес страницы, которая должна открываться в диалоговом окне. В вашей надстройке может быть отдельная HTML-страница, отличная от базовой, для передачи этому параметру. Можно также передать URL-адрес маршрута в приложении на основе Angular. 
+В методе [displayDialogAsync](/javascript/api/office/office.ui) используется параметр, указывающий URL-адрес страницы, которая должна открываться в диалоговом окне. В вашей надстройке может быть отдельная HTML-страница, отличная от базовой, для передачи этому параметру. Можно также передать URL-адрес маршрута в приложении на основе Angular. 
 
 Важно помнить, что в случае передачи маршрута диалоговое окно создает новое окно с собственным контекстом выполнения. Базовая страница со всем ее кодом инициализации и начальной загрузки запускается снова в этом новом контексте, а возможным переменным присваиваются первоначальные значения в диалоговом окне. Такой способ приводит к запуску второго экземпляра одностраничного приложения в диалоговом окне. Код, меняющий переменные в диалоговом окне, не меняет версию области задач этих переменных. Для диалогового окна предусмотрено отдельное хранилище сеанса, недоступное из кода в области задач.  
 
@@ -106,7 +107,7 @@ export class MyComponent {
     });
   }
 }
-``` 
+```
 
 ## <a name="using-observable"></a>Использование Observable
 

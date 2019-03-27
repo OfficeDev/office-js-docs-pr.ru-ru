@@ -1,14 +1,14 @@
 ---
 title: Добавление ссылок на библиотеку JavaScript API для Office из сети доставки содержимого (CDN)
 description: ''
-ms.date: 01/23/2018
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 1d19121c5f641b509c1e32d74b20f7095abe7d8d
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 4993a6a36004ced94ad37487f8e63d6b9f3f3f48
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29388026"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871593"
 ---
 # <a name="referencing-the-javascript-api-for-office-library-from-its-content-delivery-network-cdn"></a>Добавление ссылок на библиотеку JavaScript API для Office из сети доставки содержимого (CDN)
 
@@ -19,7 +19,7 @@ ms.locfileid: "29388026"
 > npm install --save-dev @types/office-js
 > ```
 
-Библиотека [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office) состоит из файла Office.js и связанных JS-файлов ведущего приложения, например Excel-15.js и Outlook-15.js. 
+Библиотека [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office) состоит из файла Office.js и связанных JS-файлов ведущего приложения, например Excel-15.js и Outlook-15.js. 
 
 
 Простейший способ добавить ссылку на API — использовать нашу сеть доставки содержимого (CDN), добавив следующий код `<script>` в тег `<head>` страницы:  
@@ -33,10 +33,9 @@ ms.locfileid: "29388026"
 Если вы планируете опубликовать свою надстройку Office из AppSource, необходимо использовать эту ссылку на сеть CDN. Локальные ссылки подходят только для внутренних сценариев, а также сценариев разработки и отладки.
 
 > [!IMPORTANT]
->  Разрабатывая надстройку для ведущего приложения Office, ссылайтесь на API JavaScript для Office из раздела `<head>` страницы. Это гарантирует, что API полностью инициализируется раньше всех элементов основного текста. Ведущим приложениям Office необходимо, чтобы надстройки инициализировались в течение 5 секунд после активации. Если надстройка не активируется в течение этого срока, будет считаться, что она не отвечает, и пользователь увидит сообщение об ошибке.       
+> Разрабатывая надстройку для ведущего приложения Office, ссылайтесь на API JavaScript для Office из раздела `<head>` страницы. Это гарантирует, что API полностью инициализируется раньше всех элементов основного текста. Ведущим приложениям Office необходимо, чтобы надстройки инициализировались в течение 5 секунд после активации. Если надстройка не активируется в течение этого срока, будет считаться, что она не отвечает, и пользователь увидит сообщение об ошибке.
 
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)    
-- [API JavaScript для Office](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office)
-    
+- [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)
+- [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office)
