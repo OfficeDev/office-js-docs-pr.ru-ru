@@ -1,14 +1,14 @@
 ---
 title: Дополнительные концепции программирования с помощью API JavaScript для Excel
 description: ''
-ms.date: 10/03/2018
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 1e623e87cbda8b8aeb6e51104bec818d62bf489e
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: e7220a36293171fcc13a6311c297584ea51e9006
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29388485"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871047"
 ---
 # <a name="advanced-programming-concepts-with-the-excel-javascript-api"></a>Дополнительные концепции программирования с помощью API JavaScript для Excel
 
@@ -18,19 +18,19 @@ ms.locfileid: "29388485"
 
 Надстройка Excel взаимодействует с объектами в Excel с помощью API JavaScript для Office, включающего две объектных модели JavaScript:
 
-* **API JavaScript для Excel**. Появившийся в Office 2016 [API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к листам, диапазонам, таблицам, диаграммам и другим объектам. 
+* **API JavaScript для Excel**. Появившийся в Office 2016 [API JavaScript для Excel](/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к листам, диапазонам, таблицам, диаграммам и другим объектам. 
 
 * **Общие API**. Появившиеся в Office 2013 [общие API](../reference/javascript-api-for-office.md) можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов ведущих приложений, например Word, Excel и PowerPoint.
 
-Скорее всего, вы будете разрабатывать большую часть функций надстроек для Excel 2016 или более поздней версии с помощью API JavaScript для Excel, но вам также потребуются объекты из общего API. Например:
+Скорее всего, вы будете разрабатывать большую часть функций надстроек для Excel 2016 или более поздней версии с помощью API JavaScript для Excel, но вам также потребуются объекты из общего API. Пример:
 
-- [Context](https://docs.microsoft.com/javascript/api/office/office.context). Объект **Context** представляет среду выполнения надстройки и предоставляет доступ к ключевым объектам API. Он состоит из данных конфигурации книги, например `contentLanguage` и `officeTheme`, а также предоставляет сведения о среде выполнения надстройки, например `host` и `platform`. Кроме того, он предоставляет метод `requirements.isSetSupported()`, с помощью которого можно проверить, поддерживается ли указанный набор обязательных элементов приложением Excel, в котором работает надстройка. 
+- [Context](/javascript/api/office/office.context). Объект **Context** представляет среду выполнения надстройки и предоставляет доступ к ключевым объектам API. Он состоит из данных конфигурации книги, например `contentLanguage` и `officeTheme`, а также предоставляет сведения о среде выполнения надстройки, например `host` и `platform`. Кроме того, он предоставляет метод `requirements.isSetSupported()`, с помощью которого можно проверить, поддерживается ли указанный набор обязательных элементов приложением Excel, в котором работает надстройка. 
 
-- [Document](https://docs.microsoft.com/javascript/api/office/office.document). Объект **Document** предоставляет метод `getFileAsync()`, позволяющий скачать файл Excel, в котором работает надстройка. 
+- [Document](/javascript/api/office/office.document). Объект **Document** предоставляет метод `getFileAsync()`, позволяющий скачать файл Excel, в котором работает надстройка. 
 
-## <a name="requirement-sets"></a>Наборы обязательных элементов
+## <a name="requirement-sets"></a>Наборы требований
 
-Наборы обязательных элементов — это именованные группы элементов API. Надстройка Office может выполнить проверку в среде выполнения или использовать указанные в манифесте наборы обязательных элементов, чтобы определить, поддерживает ли ведущее приложение Office необходимые надстройке API. Сведения о том, какие именно наборы обязательных элементов доступны на каждой поддерживаемой платформе, см. в статье [Наборы обязательных элементов API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets).
+Наборы обязательных элементов — это именованные группы элементов API. Надстройка Office может выполнить проверку в среде выполнения или использовать указанные в манифесте наборы обязательных элементов, чтобы определить, поддерживает ли ведущее приложение Office необходимые надстройке API. Сведения о том, какие именно наборы обязательных элементов доступны на каждой поддерживаемой платформе, см. в статье [Наборы обязательных элементов API JavaScript для Excel](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets).
 
 ### <a name="checking-for-requirement-set-support-at-runtime"></a>Проверка поддержки наборов обязательных элементов в среде выполнения
 
@@ -47,7 +47,7 @@ else {
 
 ### <a name="defining-requirement-set-support-in-the-manifest"></a>Определение поддержки наборов обязательных элементов в манифесте
 
-С помощью [элемента Requirements](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/requirements) в манифесте надстройки можно указать минимальные наборы обязательных элементов и/или методы API, необходимые надстройке для активации. Если платформа или ведущее приложение Office не поддерживает наборы обязательных элементов или методы API, указанные в элементе **Requirements** манифеста, надстройка не будет работать в этом ведущем приложении или на этой платформе, а также не будет отображаться в списке надстроек в разделе **Мои надстройки**. 
+С помощью [элемента Requirements](/office/dev/add-ins/reference/manifest/requirements) в манифесте надстройки можно указать минимальные наборы обязательных элементов и/или методы API, необходимые надстройке для активации. Если платформа или ведущее приложение Office не поддерживает наборы обязательных элементов или методы API, указанные в элементе **Requirements** манифеста, надстройка не будет работать в этом ведущем приложении или на этой платформе, а также не будет отображаться в списке надстроек в разделе **Мои надстройки**. 
 
 В приведенном ниже примере кода показан элемент **Requirements** в манифесте надстройки, где указано, что надстройка должна загружаться во всех ведущих приложениях Office, поддерживающих набор обязательных элементов ExcelApi версии 1.3 или выше.
 
@@ -64,7 +64,7 @@ else {
 
 ### <a name="requirement-sets-for-the-officejs-common-api"></a>Наборы обязательных элементов общего API JavaScript для Office
 
-Сведения о наборах обязательных элементов общего API см. в статье [Наборы обязательных элементов общего API для Office](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets).
+Сведения о наборах обязательных элементов общего API см. в статье [Наборы обязательных элементов общего API для Office](/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets).
 
 ## <a name="loading-the-properties-of-an-object"></a>Загрузка свойств объекта
 
@@ -100,7 +100,7 @@ void
 В приведенном ниже примере кода показано, как задать свойства одного диапазона в Excel, скопировав их из другого. Обратите внимание, что для начала необходимо загрузить исходный объект, чтобы можно было получить доступ к значениям его свойств и записать их в целевой диапазон. В этом примере предполагается, что два диапазона (**B2:E2** и **B7:E7**) содержат данные, а их форматирование изначально отличается.
 
 ```js
-Excel.run(function (ctx) { 
+Excel.run(function (ctx) {
     var sheet = ctx.workbook.worksheets.getItem("Sample");
     var sourceRange = sheet.getRange("B2:E2");
     sourceRange.load("format/fill/color, format/font/name, format/font/color");
@@ -108,7 +108,7 @@ Excel.run(function (ctx) {
     return ctx.sync()
         .then(function () {
             var targetRange = sheet.getRange("B7:E7");
-            targetRange.set(sourceRange); 
+            targetRange.set(sourceRange);
             targetRange.format.autofitColumns();
 
             return ctx.sync();
@@ -132,7 +132,7 @@ Excel.run(function (ctx) {
 |`top`|int| Указывает максимальное число элементов в коллекции, которые можно включить в результат. Необязательный параметр. Его можно применять, только если используется параметр нотации объектов.|
 |`skip`|int|Укажите количество элементов в коллекции, которые необходимо пропустить и исключить из результата. Если указан параметр `top`, результирующий набор начнется после пропуска заданного числа элементов. Необязательный. Его можно применять, только если используется параметр нотации объектов.|
 
-В приведенном ниже примере кода показано, как загрузить коллекцию листов, выбрав свойства `name` и `address` используемого диапазона для каждого листа в коллекции. В нем также указано, что следует загружать только пять верхних листов в коллекции. Для обработки следующих пяти листов можно указать для атрибутов значения `top: 10` и `skip: 5`. 
+В следующем примере кода показано, как загрузить коллекцию листов, выбрав свойства `name` и `address` используемого диапазона для каждого листа в коллекции. В нем также указано, что следует загружать только пять верхних листов в коллекции. Для обработки следующих пяти листов можно указать для атрибутов значения `top: 10` и `skip: 5`.
 
 ```js 
 myWorksheets.load({
@@ -143,9 +143,9 @@ myWorksheets.load({
 });
 ```
 
-## <a name="scalar-and-navigation-properties"></a>Скалярные и навигационные свойства 
+## <a name="scalar-and-navigation-properties"></a>Скалярные и навигационные свойства
 
-Вы могли заметить, что в справочной документации по API JavaScript для Excel элементы объектов делятся на две категории: **свойства** и **связи**. Свойство объекта — это скалярный элемент, например строка, целое число или логическое значение, а связь объекта (другое название — свойство навигации) — это элемент, представляющий собой объект или их коллекцию. Например, элементы `name` и `position` объекта [Worksheet](https://docs.microsoft.com/javascript/api/excel/excel.worksheet) являются скалярными свойствами, а `protection` и `tables` — связями (свойствами навигации). 
+Вы могли заметить, что в справочной документации по API JavaScript для Excel элементы объектов делятся на две категории: **свойства** и **связи**. Свойство объекта — это скалярный элемент, например строка, целое число или логическое значение, а связь объекта (другое название — свойство навигации) — это элемент, представляющий собой объект или их коллекцию. Например, элементы `name` и `position` объекта [Worksheet](/javascript/api/excel/excel.worksheet) являются скалярными свойствами, а `protection` и `tables` — связями (свойствами навигации). 
 
 ### <a name="scalar-properties-and-navigation-properties-with-objectload"></a>Скалярные и навигационные свойства с методом `object.load()`
 
@@ -184,14 +184,14 @@ object.set(properties[, options]);
 
 #### <a name="returns"></a>Возвращаемое значение
 
-void    
+void
 
 #### <a name="example"></a>Пример
 
 В приведенном ниже примере кода показано, как задать несколько свойств формата диапазона, вызвав метод `set()` и передав в него объект JavaScript, имена и типы свойств которого повторяют структуру свойств объекта **Range**. В этом примере предполагается, что данные находятся в диапазоне **B2:E2**.
 
 ```js
-Excel.run(function (ctx) { 
+Excel.run(function (ctx) {
     var sheet = ctx.workbook.worksheets.getItem("Sample");
     var range = sheet.getRange("B2:E2");
     range.set({
@@ -207,7 +207,7 @@ Excel.run(function (ctx) {
     });
     range.format.autofitColumns();
 
-    return ctx.sync(); 
+    return ctx.sync();
 }).catch(function(error) {
     console.log("Error: " + error);
     if (error instanceof OfficeExtension.Error) {
@@ -215,6 +215,7 @@ Excel.run(function (ctx) {
     }
 });
 ```
+
 ## <a name="42ornullobject-methods"></a>Методы &#42;OrNullObject
 
 Многие методы API JavaScript для Excel возвращают исключение, если условие API не соблюдается. Например, если для получения листа указать имя листа, не существующее в книге, то метод `getItem()` вернет исключение `ItemNotFound`. 
@@ -224,11 +225,11 @@ Excel.run(function (ctx) {
 В приведенном ниже примере кода осуществляется попытка получить лист Data с помощью метода `getItemOrNullObject()`. Если метод возвращает нулевой объект, то, прежде чем выполнять какие-либо действия с листом, его необходимо создать.
 
 ```js
-var dataSheet = context.workbook.worksheets.getItemOrNullObject("Data"); 
+var dataSheet = context.workbook.worksheets.getItemOrNullObject("Data");
 
 return context.sync()
   .then(function() {
-    if (dataSheet.isNullObject) { 
+    if (dataSheet.isNullObject) {
         // Create the sheet
     }
 
@@ -238,9 +239,8 @@ return context.sync()
 ```
 
 ## <a name="see-also"></a>См. также
- 
+
 * [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
-* 
-  [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
+* [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
 * [Оптимизация производительности API JavaScript для Excel](performance.md)
-* [Справочник по API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)
+* [Справочник по API JavaScript для Excel](/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)

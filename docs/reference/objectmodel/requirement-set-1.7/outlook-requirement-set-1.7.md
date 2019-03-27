@@ -1,14 +1,14 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.7
 description: ''
-ms.date: 01/16/2019
+ms.date: 03/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 9023997e06a659252abeecca4681b2ec250fd63c
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 8daf10239a704206d53a544185e030afa6b6a27a
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29387970"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871948"
 ---
 # <a name="outlook-add-in-api-requirement-set-17"></a>Набор обязательных элементов API для надстройки Outlook 1.7
 
@@ -30,9 +30,9 @@ ms.locfileid: "29387970"
 - Добавлен объект [RecurrenceTimeZone](/javascript/api/outlook_1_7/office.recurrencetimezone). Добавляет новый объект, представляющий настройку часового пояса расписания повторения.
 - Добавлен объект [SeriesTime](/javascript/api/outlook_1_7/office.seriestime). Добавляет новый объект, предоставляющий методы получения и установки даты и времени встреч в повторяющемся ряду и методы получения даты и времени приглашений на собрание в повторяющемся ряду.
 - Добавлен объект [Office.context.mailbox.item.addHandlerAsync](office.context.mailbox.item.md#addhandlerasynceventtype-handler-options-callback). Добавляет новый метод, добавляющий обработчик для поддерживаемого события.
-- Изменен объект [Office.context.mailbox.item.from](office.context.mailbox.item.md#from-emailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsfromjavascriptapioutlook17officefrom). Изменение для получения значения отправителя в режиме создания.
-- Изменен объект [Office.context.mailbox.item.organizer](office.context.mailbox.item.md#organizer-emailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsorganizerjavascriptapioutlook17officeorganizer). Изменение для получения значения организатора в режиме создания.
-- Добавлен объект [Office.context.mailbox.item.recurrence](office.context.mailbox.item.md#nullable-recurrence-recurrencejavascriptapioutlook17officerecurrence). Добавляет новое свойство, которое получает или задает объект, предоставляющий методы управления расписанием повторения встреч. Это свойство можно также использовать для получения расписания повторения приглашения на собрание.
+- Изменен объект [Office.context.mailbox.item.from](office.context.mailbox.item.md#from-emailaddressdetailsfrom). Добавляет возможность получения значения отправителя в режиме создания.
+- Изменен объект [Office.context.mailbox.item.organizer](office.context.mailbox.item.md#organizer-emailaddressdetailsorganizer). Добавляет возможность получения значения организатора в режиме создания.
+- Добавлен объект [Office.context.mailbox.item.recurrence](office.context.mailbox.item.md#nullable-recurrence-recurrence). Добавляет новое свойство, которое получает или задает объект, предоставляющий методы управления расписанием повторения встреч. Это свойство можно также использовать для получения расписания повторения приглашения на собрание.
 - Добавлен объект [Office.context.mailbox.item.removeHandlerAsync](office.context.mailbox.item.md#removehandlerasynceventtype-options-callback). Добавляет новый метод, удаляющий обработчиков событий для поддерживаемого типа события. 
 - Добавлен объект [Office.context.mailbox.item.seriesId](office.context.mailbox.item.md#nullable-seriesid-string). Добавляет новое свойство, получающее идентификатор ряда, к которому относится событие.
 - Добавлен объект [Office.MailboxEnums.Days](/javascript/api/outlook_1_7/office.mailboxenums.days). Добавляет новое перечисление, указывающее день недели или тип дня.
@@ -40,10 +40,10 @@ ms.locfileid: "29387970"
 - Добавлен объект [Office.MailboxEnums.RecurrenceTimeZone](/javascript/api/outlook_1_7/office.mailboxenums.recurrencetimezone). Добавляет новое перечисление, указывающее часовой пояс повторения.
 - Добавлен объект [Office.MailboxEnums.RecurrenceType](/javascript/api/outlook_1_7/office.mailboxenums.recurrencetype). Добавляет новое перечисление, указывающее тип повторения.
 - Добавлен объект [ Office.MailboxEnums.WeekNumber](/javascript/api/outlook_1_7/office.mailboxenums.weeknumber). Добавляет новое перечисление, указывающее неделю месяца.
-- Изменен объект [Office.EventType](/javascript/api/office/office.eventtype). Изменение для поддержки событий RecurrenceChanged, RecipientsChanged и AppointmentTimeChanged путем добавления записей `RecurrenceChanged`, `RecipientsChanged` и `AppointmentTimeChanged` соответственно.
+- Изменен объект [Office.EventType](/javascript/api/office/office.eventtype). Добавляет поддержку событий `RecurrenceChanged`, `RecipientsChanged` и `AppointmentTimeChanged`.
 
 ## <a name="see-also"></a>См. также
 
-- [Надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/)
+- [Надстройки Outlook](/outlook/add-ins/)
 - [Примеры кода надстройки Outlook](https://developer.microsoft.com/outlook/gallery/?filterBy=Outlook,Samples,Add-ins)
-- [Начало работы](https://docs.microsoft.com/outlook/add-ins/quick-start)
+- [Начало работы](/outlook/add-ins/quick-start)

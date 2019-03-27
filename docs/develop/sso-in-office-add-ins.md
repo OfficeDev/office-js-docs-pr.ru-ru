@@ -1,14 +1,14 @@
 ---
 title: Включение единого входа для надстроек Office
 description: ''
-ms.date: 03/19/2019
+ms.date: 03/22/2019
 localization_priority: Priority
-ms.openlocfilehash: dc9050d574e0a5e74ae8cae2c63817aa4f952eb9
-ms.sourcegitcommit: c5daedf017c6dd5ab0c13607589208c3f3627354
+ms.openlocfilehash: ef2e2c275a3b7d157029d873e34cc17339dcee66
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "30691197"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870039"
 ---
 # <a name="enable-single-sign-on-for-office-add-ins-preview"></a>Включение единого входа для надстроек Office (тестовый режим)
 
@@ -26,7 +26,8 @@ API единого входа в настоящее время поддержи�
 
 ### <a name="requirements-and-best-practices"></a>Рекомендации и требования
 
-Чтобы использовать единый вход, вам необходимо загрузить бета-версию библиотеки JavaScript Office из `https://appsforoffice.microsoft.com/lib/beta/hosted/office.js` на страницу подготовки HTML для надстройки.
+> [!NOTE]
+> [!INCLUDE [Information about using preview APIs](../includes/using-preview-apis.md)]
 
 Если вы работаете с надстройкой **Outlook**, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
@@ -224,7 +225,7 @@ $.ajax({
 
 ### <a name="getaccesstokenasync"></a>getAccessTokenAsync
 
-В пространстве имен Office Auth, `Office.context.auth`, имеется метод,`getAccessTokenAsync`, который позволяет узлу Office получать маркер доступа для надстройки веб-приложения. Косвенно это также дает возможность надстройке получать доступ к данным Microsoft Graph пользователя, вошедшего в систему, не требуя от пользователя еще раз выполнить вход в систему.
+В пространстве имен Office [Auth](/javascript/api/office/office.auth) (`Office.context.auth`) имеется метод `getAccessTokenAsync`, который позволяет узлу Office получать маркер доступа для веб-приложения надстройки. Косвенно это также дает возможность надстройке получать доступ к данным Microsoft Graph пользователя, вошедшего в систему, не требуя от пользователя еще раз выполнить вход в систему.
 
 ```typescript
 getAccessTokenAsync(options?: AuthOptions, callback?: (result: AsyncResult<string>) => void): void;
@@ -241,34 +242,8 @@ getAccessTokenAsync(options?: AuthOptions, callback?: (result: AsyncResult<strin
 
 #### <a name="parameters"></a>Параметры
 
-`options` - Опционально. Принимает объект `AuthOptions` (см. ниже) для определения поведения при входе.
+`options` - Опционально. Принимает объект [AuthOptions](/javascript/api/office/office.authoptions) (см. ниже) для определения поведения при входе.
 
 `callback` - Опционально. Принимает метод обратного вызова, который может выполнить анализ маркера для идентификатора пользователя или использовать маркер в потоке «от имени ваших», чтобы получать доступ к Microsoft Graph. Если [AsyncResult](/javascript/api/office/office.asyncresult) `.status` был выполнен «успешно», тогда `AsyncResult.value` представляет собой необработанный маркер доступа AAD версии 2.0.
 
-Интерфейс `AuthOptions` предоставляет опции для взаимодействия с пользователем, когда Office получает маркер доступа для надстройки из AAD в. 2.0 с методом `getAccessTokenAsync`.
-
-```typescript
-interface AuthOptions {
-    /**
-        * Causes Office to display the add-in consent experience. Useful if the add-in's Azure permissions have changed or if the user's consent has
-        * been revoked.
-        */
-    forceConsent?: boolean,
-    /**
-        * Prompts the user to add their Office account (or to switch to it, if it is already added).
-        */
-    forceAddAccount?: boolean,
-    /**
-        * Causes Office to prompt the user to provide the additional factor when the tenancy being targeted by Microsoft Graph requires multifactor
-        * authentication. The string value identifies the type of additional factor that is required. In most cases, you won't know at development
-        * time whether the user's tenant requires an additional factor or what the string should be. So this option would be used in a "second try"
-        * call of getAccessTokenAsync after Microsoft Graph has sent an error requesting the additional factor and containing the string that should
-        * be used with the authChallenge option.
-        */
-    authChallenge?: string
-    /**
-        * A user-defined item of any type that is returned, unchanged, in the asyncContext property of the AsyncResult object that is passed to a callback.
-        */
-    asyncContext?: any
-}
-```
+Интерфейс [AuthOptions](/javascript/api/office/office.authoptions) предоставляет опции для взаимодействия с пользователем, когда Office получает маркер доступа для надстройки из AAD версии 2.0 с методом `getAccessTokenAsync`.

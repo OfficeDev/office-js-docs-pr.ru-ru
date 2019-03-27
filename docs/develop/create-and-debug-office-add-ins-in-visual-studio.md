@@ -1,14 +1,14 @@
 ---
 title: Создание и отладка надстроек Office в Visual Studio
 description: Используйте Visual Studio для создания и отладки надстроек Office в настольном клиенте Office для Windows
-ms.date: 11/02/2018
+ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: eb7a64d9ad5096af7eb900a6d29b682e950c1bed
-ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.openlocfilehash: f9a52719ed7990063ed3f2dbb7d6bd5866e73760
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "29742382"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870718"
 ---
 # <a name="create-and-debug-office-add-ins-in-visual-studio"></a>Создание и отладка надстроек Office в Visual Studio
 
@@ -17,7 +17,7 @@ ms.locfileid: "29742382"
 > [!NOTE]
 > Visual Studio не поддерживает создание надстроек Office для OneNote или проекта, но вы можете использовать [Yeoman генератор для надстроек Office ](https://github.com/OfficeDev/generator-office) для создания данных типов надстроек.
 > - Чтобы начать работу с надстройкой OneNote, см. статью [Создание вашей первой надстройки OneNote](../quickstarts/onenote-quickstart.md).
-> 
+>
 > - Чтобы начать работу с надстройкой для проекта, ознакомьтесь со статьей [Создание вашей первой надстройки для проекта](../quickstarts/project-quickstart.md).
 
 ## <a name="prerequisites"></a>Обязательные условия
@@ -25,7 +25,7 @@ ms.locfileid: "29742382"
 - [Visual Studio 2017](https://www.visualstudio.com/vs/) с установленной рабочей нагрузкой **Разработка надстроек для Office и SharePoint**
 
     > [!TIP]
-    > Если вы уже установили Visual Studio 2017, [используйте Visual Studio Installer](https://docs.microsoft.com/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**. Если эта рабочая нагрузка еще не установлена, используйте установщик Visual Studio Installer, чтобы [установить ее](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2017#modify-workloads).
+    > Если вы уже установили Visual Studio 2017, [используйте Visual Studio Installer](/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**. Если эта рабочая нагрузка еще не установлена, используйте установщик Visual Studio Installer, чтобы [установить ее](/visualstudio/install/modify-visual-studio?view=vs-2017#modify-workloads).
 
 - Office 2013 или более поздние версии
 
@@ -157,13 +157,13 @@ ms.locfileid: "29742382"
 Если у вас есть документ, содержащий тестовые данные, которые вы хотите использовать при отладке надстройки Excel, PowerPoint или Word, Visual Studio можно настроить на открытия документа при запуске проекта. Чтобы указать существующий документ для использования при отладке надстройки, выполните указанные ниже действия.
 
 1. В **Обозревателе решений** выберите проект надстройки (*не* проект веб-приложения).
-    
+
 2. В строке меню выберите **Проект** > **добавить существующий элемент**.
-    
+
 3. В диалоговом окне **Добавление существующего элемента** найдите и выберите документ, который вы хотите добавить.
-    
+
 4. Нажмите кнопку **Добавить**, чтобы добавить документ в проект.
-    
+
 5. В **Обозревателе решений** выберите проект надстройки (*не* проект веб-приложения).
 
 6. В панели меню выберите **Вид** > **Окно свойств**.
@@ -180,21 +180,21 @@ ms.locfileid: "29742382"
 Когда Visual Studio выполняет сборку проекта, происходит выполнение следующих действий:
 
 1. Создает копию XML-файл манифеста и добавляет ее в каталоге `_ProjectName_\bin\Debug\OfficeAppManifests`. Хост-приложение использует эту копию, когда вы запускаете Visual Studio и выполняете отладку надстройки.
-    
+
 2. Создает набор записей реестра на компьютере, который позволяет отображать надстройку в хост-приложении.
-    
-3. Выполняет сборку проекта веб-приложения, а затем развертывает его на локальном веб-сервере IIS (https://localhost). 
-    
+
+3. Выполняет сборку проекта веб-приложения, а затем развертывает его на локальном веб-сервере IIS (https://localhost).
+
 Затем Visual Studio выполняет следующее:
 
-1. Изменяет элемент [SourceLocation](https://docs.microsoft.com/office/dev/add-ins/reference/manifest/sourcelocation) XML-файла манифеста, выполняя замену маркера `~remoteAppUrl` с полностью отвечающим требованиям адресом начальной страницы (например, `https://localhost:44302/Home.html`).
-    
+1. Изменяет элемент [SourceLocation](/office/dev/add-ins/reference/manifest/sourcelocation) XML-файла манифеста, выполняя замену маркера `~remoteAppUrl` с полностью отвечающим требованиям адресом начальной страницы (например, `https://localhost:44302/Home.html`).
+
 2. Запускает проект веб-приложения в IIS Express.
-    
-3. Открывает хост-приложение. 
-    
-Visual Studio не отображает ошибки проверки в окне **ВЫХОДНЫЕ ДАННЫЕ** при сборке проекта. Visual Studio генерирует ошибки и предупреждения в окне **СПИСОК ОШИБОК** при их появлении. Visual Studio также генерирует отчеты об ошибках проверки, отображая волнистые линии (называется волнистой линией) различных цветов в редакторе кода и текста. Эти отметки уведомляют о проблемах, которые Visual Studio обнаружил в вашем коде. Дополнительные сведения см. в статье [Редактор кода и текста](https://msdn.microsoft.com/library/se2f663y(v=vs.140).aspx). Дополнительные сведения о том, как включить или отключить проверку см. в статье [Параметры, текстовый редактор, JavaScript, IntelliSense](https://docs.microsoft.com/en-us/visualstudio/ide/reference/options-text-editor-javascript-intellisense?view=vs-2017).
-    
+
+3. Открывает хост-приложение.
+
+Visual Studio не отображает ошибки проверки в окне **ВЫХОДНЫЕ ДАННЫЕ** при сборке проекта. Visual Studio генерирует ошибки и предупреждения в окне **СПИСОК ОШИБОК** при их появлении. Visual Studio также генерирует отчеты об ошибках проверки, отображая волнистые линии (называется волнистой линией) различных цветов в редакторе кода и текста. Эти отметки уведомляют о проблемах, которые Visual Studio обнаружил в вашем коде. Дополнительные сведения см. в статье [Редактор кода и текста](https://msdn.microsoft.com/library/se2f663y(v=vs.140).aspx). Дополнительные сведения о том, как включить или отключить проверку см. в статье [Параметры, текстовый редактор, JavaScript, IntelliSense](/visualstudio/ide/reference/options-text-editor-javascript-intellisense?view=vs-2017).
+
 Чтобы просмотреть правила проверки XML-файла манифеста проекта, ознакомьтесь с разделом [XML-манифест надстройки для Office](../develop/add-in-manifests.md).
 
 ### <a name="debug-the-code-for-an-excel-powerpoint-or-word-add-in"></a>Отладка кода для надстройки Excel, PowerPoint или Word
@@ -234,4 +234,3 @@ Outlook активирует надстройка для этого элемен
 ## <a name="next-steps"></a>Дальнейшие действия
 
 Если надстройка работает корректно, см. статью [Развертывание и публикация вашей надстройки Office](../publish/publish.md), чтобы ознакомиться со способами распространения вашей надстройки среди пользователей.
-    
