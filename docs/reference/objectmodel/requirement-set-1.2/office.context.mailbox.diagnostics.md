@@ -1,14 +1,14 @@
 ---
-title: Office.context.mailbox.diagnostics — набор обязательных элементов 1.2
+title: Office. Context. Mailbox. Diagnostics — набор обязательных элементов 1,2
 description: ''
-ms.date: 02/15/2019
+ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: f3697d149789a9690bdaf5b6d4891bd678196088
-ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.openlocfilehash: 2b57a26233ce76ed35ce9428cc12a4ba93b5ace8
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "30068086"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871502"
 ---
 # <a name="diagnostics"></a>diagnostics
 
@@ -21,8 +21,8 @@ ms.locfileid: "30068086"
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ### <a name="members"></a>Элементы
 
@@ -41,8 +41,8 @@ ms.locfileid: "30068086"
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ####  <a name="hostversion-string"></a>hostVersion :String
 
@@ -59,8 +59,8 @@ ms.locfileid: "30068086"
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ####  <a name="owaview-string"></a>OWAView :String
 
@@ -85,5 +85,5 @@ Outlook Web App включает три представления, которы
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|

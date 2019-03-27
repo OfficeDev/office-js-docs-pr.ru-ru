@@ -1,14 +1,14 @@
 ---
 title: Рекомендации по разработке аутентификации для надстроек Office
 description: ''
-ms.date: 11/02/2018
+ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 937f1a78dfb4276df4aa17ab48dfa15cfd937861
-ms.sourcegitcommit: 8e20e7663be2aaa0f7a5436a965324d171bc667d
+ms.openlocfilehash: c8d61d42eabca0a57e1a09dda95ee8c0572d5ecb
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "29388866"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870221"
 ---
 # <a name="authentication-patterns"></a>Шаблоны аутентификации
 
@@ -26,6 +26,7 @@ ms.locfileid: "29388866"
 |Предоставьте пользователям возможность выйти и пройти аутентификацию еще раз.    |Не заставляйте пользователей удалять надстройку, чтобы сменить учетную запись.|
 
 ## <a name="authentication-flow"></a>Последовательность аутентификации
+
 Пока система единого входа находится на этапе тестирования, у пользователей должен быть выбор, как войти в производственную надстройку — непосредственно через вашу службу или через службу идентификации, например Майкрософт.
 
 1. Первый запуск. Разместите кнопку для входа как четкий призыв к действию при первом запуске надстройки.
@@ -36,7 +37,7 @@ ms.locfileid: "29388866"
 
 
 
-3. Вход через службу идентификации. Отобразится пользовательский интерфейс службы идентификации. Microsoft Azure Active Directory позволяет настроить страницы входа и панели доступа, чтобы они соответствовали оформлению вашей службы.  [Подробнее](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
+3. Вход через службу идентификации. Отобразится пользовательский интерфейс службы идентификации. Microsoft Azure Active Directory позволяет настроить страницы входа и панели доступа, чтобы они соответствовали оформлению вашей службы.  [Подробнее](/azure/active-directory/fundamentals/customize-branding).
 ![Снимок экрана: диалоговое окно входа поставщика удостоверений в приложении Office](../images/add-in-auth-identity-sign-in.png)
 
 4. Ход выполнения. Показывайте ход загрузки параметров и пользовательского интерфейса.
@@ -48,7 +49,7 @@ ms.locfileid: "29388866"
 ## <a name="single-sign-on-authentication-flow-preview"></a>Последовательность аутентификации при едином входе (предварительная версия)
 
 > [!NOTE]
-> В настоящее время API единого входа поддерживается в тестовом режиме для Word, Excel, Outlook и PowerPoint. Дополнительную информацию о поддержке единого входа см. в статье  [Наборы требований IdentityAPI](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Информацию о том, как это сделать, см. в статье  [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> В настоящее время API единого входа поддерживается в тестовом режиме для Word, Excel, Outlook и PowerPoint. Дополнительную информацию о поддержке единого входа см. в статье  [Наборы требований IdentityAPI](/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Информацию о том, как это сделать, см. в статье  [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 Когда единый вход будет доступен для производственных надстроек, используйте его, чтобы сделать надстройку удобнее для конечных пользователей. Для входа в надстройку используется учетная запись пользователя в Office (учетная запись Майкрософт или удостоверение Office 365). В результате пользователь входит только один раз. Это упрощает начало работы для пользователей.
 
@@ -60,4 +61,5 @@ ms.locfileid: "29388866"
 ![Снимок экрана: приложение Office с кнопками надстроек на ленте](../images/add-in-ribbon.png)
 
 ## <a name="see-also"></a>См. также
-- Узнайте больше о [разработке надстроек с единым входом (предварительная версия)](https://docs.microsoft.com/office/dev/add-ins/develop/sso-in-office-add-ins)
+
+- Узнайте больше о [разработке надстроек с единым входом (предварительная версия)](/office/dev/add-ins/develop/sso-in-office-add-ins)

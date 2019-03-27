@@ -1,14 +1,14 @@
 ---
-title: Пространство имен Office — набор обязательных элементов 1.1
+title: Пространство имен Office — набор обязательных элементов 1,1
 description: ''
-ms.date: 02/15/2019
+ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: b98f8fa01e2cfdf17d6105beab67199a2cec4317
-ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.openlocfilehash: eda5e1fb5f2c11ae91e4a1479892c36ec23e1897
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "30068023"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871999"
 ---
 # <a name="office"></a>Office
 
@@ -19,7 +19,7 @@ ms.locfileid: "30068023"
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ### <a name="namespaces"></a>Пространства имен
 
@@ -41,7 +41,7 @@ ms.locfileid: "30068023"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Succeeded`| Для указания|Вызов завершился успешно.|
+|`Succeeded`| String|Вызов завершился успешно.|
 |`Failed`| Для указания|Вызов завершился ошибкой.|
 
 ##### <a name="requirements"></a>Требования
@@ -49,7 +49,7 @@ ms.locfileid: "30068023"
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ####  <a name="coerciontype-string"></a>CoercionType :String
 
@@ -71,7 +71,7 @@ ms.locfileid: "30068023"
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ####  <a name="sourceproperty-string"></a>SourceProperty :String
 
@@ -93,4 +93,4 @@ ms.locfileid: "30068023"
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Применимый режим Outlook](https://docs.microsoft.com/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|

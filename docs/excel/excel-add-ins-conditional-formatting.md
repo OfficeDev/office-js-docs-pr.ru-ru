@@ -1,26 +1,27 @@
 ---
 title: Применение условного форматирования к диапазонам с помощью API JavaScript для Excel
 description: ''
-ms.date: 10/22/2018
-ms.openlocfilehash: f4baaea04ef487c26721ecfb2a90b8609ee96777
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+ms.date: 03/19/2019
+localization_priority: Normal
+ms.openlocfilehash: 1c601782ca048fe1488f4ce578a7ee4d896b6b26
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433182"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870382"
 ---
 # <a name="apply-conditional-formatting-to-excel-ranges"></a>Применение условного форматирования к диапазонам Excel
 
 Библиотека JavaScript Excel предоставляет API для применения условного форматирования к диапазонам данных в книгах. Эта функция упрощает визуальный анализ больших наборов данных. Форматирование также динамически обновляется с учетом изменений в диапазоне. 
 
-> [!NOTE] 
+> [!NOTE]
 > В этой статье рассматривается условное форматирование в контексте надстроек JavaScript для Excel. В указанных ниже статьях представлены подробные сведения о всех возможностях условного форматирования в Excel.
--   [Добавление, изменение или удаление условного форматирования](https://support.office.com/article/add-change-or-clear-conditional-formats-8a1cc355-b113-41b7-a483-58460332a1af)
--   [Использование формул с условным форматированием](https://support.office.com/article/Use-formulas-with-conditional-formatting-FED60DFA-1D3F-4E13-9ECB-F1951FF89D7F)
+> -  [Добавление, изменение или удаление условного форматирования](https://support.office.com/article/add-change-or-clear-conditional-formats-8a1cc355-b113-41b7-a483-58460332a1af)
+> -  [Использование формул с условным форматированием](https://support.office.com/article/Use-formulas-with-conditional-formatting-FED60DFA-1D3F-4E13-9ECB-F1951FF89D7F)
 
 ## <a name="programmatic-control-of-conditional-formatting"></a>Программное управление условным форматированием
 
-Свойство `Range.conditionalFormats` — это коллекция объектов [ConditionalFormat](https://docs.microsoft.com/javascript/api/excel/excel.conditionalformat), применяемых к диапазону.  Объект `ConditionalFormat` содержит несколько свойств, определяющих применяемый формат на основе [ConditionalFormatType](https://docs.microsoft.com/javascript/api/excel/excel.conditionalformattype). 
+Свойство `Range.conditionalFormats` — это коллекция объектов [ConditionalFormat](/javascript/api/excel/excel.conditionalformat), применяемых к диапазону.  Объект `ConditionalFormat` содержит несколько свойств, определяющих применяемый формат на основе [ConditionalFormatType](/javascript/api/excel/excel.conditionalformattype). 
 
 -   `cellValue`
 -   `colorScale`
@@ -32,17 +33,17 @@ ms.locfileid: "27433182"
 -   `topBottom`
 
 > [!NOTE]
-> У каждого из этих свойств форматирования есть соответствующий вариант `*OrNullObject`. Дополнительные сведения об этом шаблоне см. в разделе [Методы *OrNullObject](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-advanced-concepts#42ornullobject-methods).
+> У каждого из этих свойств форматирования есть соответствующий вариант `*OrNullObject`. Дополнительные сведения об этом шаблоне см. в разделе [Методы *OrNullObject](/office/dev/add-ins/excel/excel-add-ins-advanced-concepts#42ornullobject-methods).
 
-Для объекта ConditionalFormat можно установить только один тип формата. Это определено свойством `type`, которое является значением перечисления объекта [ConditionalFormatType](https://docs.microsoft.com/javascript/api/excel/excel.conditionalformattype). Параметр `type` устанавливается при добавлении условного форматирования к диапазону. 
+Для объекта ConditionalFormat можно установить только один тип формата. Это определено свойством `type`, которое является значением перечисления объекта [ConditionalFormatType](/javascript/api/excel/excel.conditionalformattype). Параметр `type` устанавливается при добавлении условного форматирования к диапазону. 
 
 ## <a name="creating-conditional-formatting-rules"></a>Создание правил условного форматирования
 
 Условное форматирование добавляется к диапазону с помощью `conditionalFormats.add`. После добавления можно задать свойства, относящиеся к условному форматированию. В примерах ниже показано создание различных типов форматирования.
 
-### <a name="cell-valuehttpsdocsmicrosoftcomjavascriptapiexcelexcelcellvalueconditionalformat"></a>[Значение ячейки](https://docs.microsoft.com/javascript/api/excel/excel.cellvalueconditionalformat)
+### <a name="cell-valuejavascriptapiexcelexcelcellvalueconditionalformat"></a>[Значение ячейки](/javascript/api/excel/excel.cellvalueconditionalformat)
 
-При условном форматировании значения ячейки применяется пользовательский формат на основе результатов одной или двух формул в [ConditionalCellValueRule]( https://docs.microsoft.com/javascript/api/excel/excel.conditionalcellvaluerule). Свойство `operator` является оператором [ConditionalCellValueOperator]( https://docs.microsoft.com/javascript/api/excel/excel.conditionalcellvalueoperator), который определяет, как итоговое выражение связано с форматированием. 
+При условном форматировании значения ячейки применяется пользовательский формат на основе результатов одной или двух формул в [ConditionalCellValueRule](/javascript/api/excel/excel.conditionalcellvaluerule). Свойство `operator` является оператором [ConditionalCellValueOperator](/javascript/api/excel/excel.conditionalcellvalueoperator), который определяет, как итоговое выражение связано с форматированием.
 
 В приведенном ниже примере показано применение красного шрифта ко всем значениям диапазона, которые меньше нуля.
 
@@ -62,9 +63,9 @@ conditionalFormat.cellValue.rule = { formula1: "=0", operator: "LessThan" };
 await context.sync();
 ```
 
-### <a name="color-scalehttpsdocsmicrosoftcomjavascriptapiexcelexcelcolorscaleconditionalformat"></a>[Цветовая шкала](https://docs.microsoft.com/javascript/api/excel/excel.colorscaleconditionalformat)
+### <a name="color-scalejavascriptapiexcelexcelcolorscaleconditionalformat"></a>[Цветовая шкала](/javascript/api/excel/excel.colorscaleconditionalformat)
 
-При условном форматировании с использованием цветовой шкалы применяется цветовой градиент в диапазоне данных. Свойство `criteria` в `ColorScaleConditionalFormat` определяет три точки [ConditionalColorScaleCriterion](https://docs.microsoft.com/javascript/api/excel/excel.conditionalcolorscalecriterion): `minimum`, `maximum` и (при желании) `midpoint`. У каждой точки условия есть три свойства:
+При условном форматировании с использованием цветовой шкалы применяется цветовой градиент в диапазоне данных. Свойство `criteria` в `ColorScaleConditionalFormat` определяет три точки [ConditionalColorScaleCriterion](/javascript/api/excel/excel.conditionalcolorscalecriterion): `minimum`, `maximum` и (при желании) `midpoint`. У каждой точки условия есть три свойства:
 
 -   `color` — HTML-код цвета для конечной точки.
 -   `formula` — число или формула, представляющая значение конечной точки. Оно будет равным `null`, если `type` имеет значение `lowestValue` или `highestValue`.
@@ -104,11 +105,11 @@ conditionalFormat.colorScale.criteria = criteria;
 await context.sync();
 ```
 
-### <a name="customhttpsdocsmicrosoftcomjavascriptapiexcelexcelcustomconditionalformat"></a>[Пользовательское](https://docs.microsoft.com/javascript/api/excel/excel.customconditionalformat) 
+### <a name="customjavascriptapiexcelexcelcustomconditionalformat"></a>[Пользовательское](/javascript/api/excel/excel.customconditionalformat)
 
-При пользовательском условном форматировании применяется пользовательский формат к ячейкам на основе формулы произвольной сложности. Объект [ConditionalFormatRule](https://docs.microsoft.com/javascript/api/excel/excel.conditionalformatrule) позволяет определять формулу в разных нотациях:
+При пользовательском условном форматировании применяется пользовательский формат к ячейкам на основе формулы произвольной сложности. Объект [ConditionalFormatRule](/javascript/api/excel/excel.conditionalformatrule) позволяет определять формулу в разных нотациях:
 
--   `formula` — стандартная нотация. 
+-   `formula` — стандартная нотация.
 -   `formulaLocal` — локализованная на основе языка пользователя.
 -   `formulaR1C1` — нотация R1C1.
 
@@ -130,7 +131,7 @@ conditionalFormat.custom.format.font.color = "green";
 await context.sync();
 
 ```
-### <a name="data-barhttpsdocsmicrosoftcomjavascriptapiexcelexceldatabarconditionalformat"></a>[Гистограмма](https://docs.microsoft.com/javascript/api/excel/excel.databarconditionalformat)
+### <a name="data-barjavascriptapiexcelexceldatabarconditionalformat"></a>[Гистограмма](/javascript/api/excel/excel.databarconditionalformat)
 
 При условном форматировании с использованием гистограмм они добавляются к ячейкам. По умолчанию минимальное и максимальное значения в диапазоне создают границы и пропорциональные размеры гистограмм. У объекта `DataBarConditionalFormat` есть несколько свойств, определяющих внешний вид гистограммы. 
 
@@ -150,13 +151,13 @@ conditionalFormat.dataBar.barDirection = Excel.ConditionalDataBarDirection.leftT
 await context.sync();
 ```
 
-### <a name="icon-sethttpsdocsmicrosoftcomjavascriptapiexcelexceliconsetconditionalformat"></a>[Набор значков](https://docs.microsoft.com/javascript/api/excel/excel.iconsetconditionalformat)
+### <a name="icon-setjavascriptapiexcelexceliconsetconditionalformat"></a>[Набор значков](/javascript/api/excel/excel.iconsetconditionalformat)
 
-При условном форматировании с набором значков используются [значки]( https://docs.microsoft.com/javascript/api/excel/excel.icon) Excel для выделения ячеек. Свойство `criteria` — это массив объекта [ConditionalIconCriterion](https://docs.microsoft.com/javascript/api/excel/excel.ConditionalIconCriterion), определяющий добавляемый символ и условия для добавления. Этот массив автоматически заполняется элементами условия со свойствами по умолчанию. Отдельные свойства не могут быть перезаписаны. Вместо этого необходимо заменить весь объект условия. 
+При условном форматировании с набором значков используются [значки](/javascript/api/excel/excel.icon) Excel для выделения ячеек. Свойство `criteria` — это массив объекта [ConditionalIconCriterion](/javascript/api/excel/excel.ConditionalIconCriterion), определяющий добавляемый символ и условия для добавления. Этот массив автоматически заполняется элементами условия со свойствами по умолчанию. Отдельные свойства не могут быть перезаписаны. Вместо этого необходимо заменить весь объект условия. 
 
 В приведенном ниже примере показано применение в диапазоне набора из трех значков с треугольниками.
 
-![Диапазон с зелеными треугольниками с направленной вверх вершиной для значений, превышающих 1000, желтыми линиями для значений от 700 до 1000 и красными треугольниками с направленной вниз вершиной для более низких значений.](../images/excel-conditional-format-iconset.png)
+![Диапазон с зелеными треугольными треугольниками для значений выше 1000, желтые линии для значений между 700 и 1000, а треугольники Красного вниз для уменьшения значений.](../images/excel-conditional-format-iconset.png)
 
 ```typescript
 const sheet = context.workbook.worksheets.getItem("Sample");
@@ -193,9 +194,9 @@ iconSetCF.criteria = [
 await context.sync();
 ```
 
-### <a name="preset-criteriahttpsdocsmicrosoftcomjavascriptapiexcelexcelpresetcriteriaconditionalformat"></a>[Готовые условия](https://docs.microsoft.com/javascript/api/excel/excel.presetcriteriaconditionalformat)
+### <a name="preset-criteriajavascriptapiexcelexcelpresetcriteriaconditionalformat"></a>[Готовые условия](/javascript/api/excel/excel.presetcriteriaconditionalformat)
 
-При условном форматировании с готовыми условиями применяется пользовательский формат к диапазону на основе выбранного стандартного правила. Эти правила определяются с помощью [ConditionalFormatPresetCriterion](https://docs.microsoft.com/javascript/api/excel/excel.ConditionalFormatPresetCriterion) в [ConditionalPresetCriteriaRule](https://docs.microsoft.com/javascript/api/excel/excel.conditionalpresetcriteriarule). 
+При условном форматировании с готовыми условиями применяется пользовательский формат к диапазону на основе выбранного стандартного правила. Эти правила определяются с помощью [ConditionalFormatPresetCriterion](/javascript/api/excel/excel.ConditionalFormatPresetCriterion) в [ConditionalPresetCriteriaRule](/javascript/api/excel/excel.conditionalpresetcriteriarule). 
 
 В приведенном ниже примере белым цветом окрашивается шрифт во всех ячейках со значениями, превышающими среднее значение диапазона хотя бы на одно стандартное отклонение.
 
@@ -217,9 +218,9 @@ conditionalFormat.preset.rule = {
 await context.sync();
 ```
 
-### <a name="text-comparisonhttpsdocsmicrosoftcomjavascriptapiexcelexceltextconditionalformat"></a>[Сравнение текста](https://docs.microsoft.com/javascript/api/excel/excel.textconditionalformat)
+### <a name="text-comparisonjavascriptapiexcelexceltextconditionalformat"></a>[Сравнение текста](/javascript/api/excel/excel.textconditionalformat)
 
-При условном форматировании со сравнением текста используется сравнение строк в качестве условия. Свойство `rule` является объектом [ConditionalTextComparisonRule](https://docs.microsoft.com/javascript/api/excel/excel.conditionaltextcomparisonrule), определяющим строку для сравнения с ячейкой и оператор для указания типа сравнения. 
+При условном форматировании со сравнением текста используется сравнение строк в качестве условия. Свойство `rule` является объектом [ConditionalTextComparisonRule](/javascript/api/excel/excel.conditionaltextcomparisonrule), определяющим строку для сравнения с ячейкой и оператор для указания типа сравнения. 
 
 В приведенном ниже примере применяется форматирование шрифта красным цветом, если текст ячейки содержит слово Delayed.
 
@@ -242,9 +243,9 @@ conditionalFormat.textComparison.rule = {
 await context.sync();
 ```
 
-### <a name="topbottomhttpsdocsmicrosoftcomjavascriptapiexcelexceltopbottomconditionalformat"></a>[Верхнее или нижнее значение](https://docs.microsoft.com/javascript/api/excel/excel.TopBottomconditionalformat)
+### <a name="topbottomjavascriptapiexcelexceltopbottomconditionalformat"></a>[Верхнее или нижнее значение](/javascript/api/excel/excel.TopBottomconditionalformat)
 
-При условном форматировании верхнего или нижнего значения применяется форматирование к наибольшему или наименьшему значению в диапазоне. Свойство `rule`, являющееся типом [ConditionalTopBottomRule](https://docs.microsoft.com/javascript/api/excel/excel.conditionaltopbottomrule), указывает основание для условия (максимальное или минимальное значение), а также применение ранжированной или процентной оценки. 
+При условном форматировании верхнего или нижнего значения применяется форматирование к наибольшему или наименьшему значению в диапазоне. Свойство `rule`, являющееся типом [ConditionalTopBottomRule](/javascript/api/excel/excel.conditionaltopbottomrule), указывает основание для условия (максимальное или минимальное значение), а также применение ранжированной или процентной оценки. 
 
 В приведенном ниже примере применяется зеленое выделение к ячейке с максимальным значением в диапазоне.
 
@@ -334,8 +335,9 @@ await context.sync();
 ```
 
 ## <a name="see-also"></a>См. также
--   [Основные концепции программирования с помощью API JavaScript для Excel]( https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-core-concepts)
--   [Работа с диапазонами с использованием API JavaScript для Excel](https://docs.microsoft.com/office/dev/add-ins/excel/excel-add-ins-ranges)
--   [Объект ConditionalFormat (API JavaScript для Excel)]( https://docs.microsoft.com/javascript/api/excel/excel.conditionalformat)
--   [Добавление, изменение или удаление условного форматирования](https://support.office.com/article/add-change-or-clear-conditional-formats-8a1cc355-b113-41b7-a483-58460332a1af)
--   [Использование формул с условным форматированием](https://support.office.com/article/Use-formulas-with-conditional-formatting-FED60DFA-1D3F-4E13-9ECB-F1951FF89D7F)
+
+- [Основные концепции программирования с помощью API JavaScript для Excel](/office/dev/add-ins/excel/excel-add-ins-core-concepts)
+- [Работа с диапазонами с использованием API JavaScript для Excel](/office/dev/add-ins/excel/excel-add-ins-ranges)
+- [Объект ConditionalFormat (API JavaScript для Excel)](/javascript/api/excel/excel.conditionalformat)
+- [Добавление, изменение или удаление условного форматирования](https://support.office.com/article/add-change-or-clear-conditional-formats-8a1cc355-b113-41b7-a483-58460332a1af)
+- [Использование формул с условным форматированием](https://support.office.com/article/Use-formulas-with-conditional-formatting-FED60DFA-1D3F-4E13-9ECB-F1951FF89D7F)

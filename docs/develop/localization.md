@@ -1,13 +1,14 @@
 ---
-title: Локализация надстроек Office
+title: Локализация надстроек для Office
 description: Вы можете использовать API JavaScript для Office, чтобы определить языковой стандарт и отображать строки, основываясь на языковом стандарте ведущего приложения, либо интерпретировать или отображать данные на основе языкового стандарта данных.
-ms.date: 12/11/2018
-ms.openlocfilehash: 050880d8b2d5091cc0e5ab3e3dc14e632e0014f1
-ms.sourcegitcommit: 3007bf57515b0811ff98a7e1518ecc6fc9462276
-ms.translationtype: HT
+ms.date: 03/19/2019
+localization_priority: Normal
+ms.openlocfilehash: b01535b76485847783104ce840256949ce17ca26
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "27724895"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871712"
 ---
 # <a name="localization-for-office-add-ins"></a>Локализация надстроек Office
 
@@ -47,7 +48,7 @@ API JavaScript для Office предоставляет два свойства,
 ## <a name="control-localization-from-the-manifest"></a>Управление локализацией через манифест
 
 
-Каждая надстройка Office задает в своем манифесте элемент [DefaultLocale] и языковой стандарт. По умолчанию платформа надстроек Office и ведущие приложения Office применяют значения элементов [Description], [DisplayName], [IconUrl], [HighResolutionIconUrl] и [SourceLocation] ко всем языковым стандартам. Чтобы изменить значения для определенных языковых стандартов, укажите для любого из этих пяти элементов дочерний элемент [Override]. Значение элемента [DefaultLocale] и атрибута `Locale` элемента [Override] указывается в соответствии со спецификацией [RFC 3066], "Теги для идентификации языков". В таблице 1 описана поддержка локализации для этих элементов.
+Каждая надстройка Office задает в своем манифесте элемент [DefaultLocale] и языковой стандарт. По умолчанию платформа "Надстройка Office" и ведущие приложения Office применяют значения элементов [Description], [DisplayName], [IconUrl], [HighResolutionIconUrl] и [SourceLocation] ко всем языковым стандартам. Чтобы изменить значения для определенных языковых стандартов, укажите для любого из этих пяти элементов дочерний элемент [Override]. Значение элемента [DefaultLocale] и атрибута `Locale` элемента [Override] указывается в соответствии со спецификацией [RFC 3066], "Теги для идентификации языков". В таблице 1 описана поддержка локализации для этих элементов.
 
 *Таблица 1. Поддержка локализации*
 
@@ -56,14 +57,14 @@ API JavaScript для Office предоставляет два свойства,
 |:-----|:-----|
 |[Описание]   |Для каждого заданного языкового стандарта пользователи могут видеть локализованное описание надстройки в AppSource (или частном каталоге).<br/>В случае надстроек Outlook пользователи смогут увидеть описание в Центре администрирования Exchange после установки.|
 |[DisplayName]   |Для каждого заданного языкового стандарта пользователи могут видеть локализованное описание надстройки в AppSource (или частном каталоге).<br/>В случае надстроек Outlook пользователи смогут увидеть отображаемое имя в качестве метки для кнопки надстройки Outlook и в Центре администрирования Exchange после установки.<br/>В случае контентных надстроек и надстроек области задач пользователи могут видеть отображаемое имя на ленте после установки надстройки.|
-|[IconUrl]        |Изображение значка является необязательным. Можно использовать ту же методику переопределений, чтобы задать определенное изображение для определенной культуры. Если вы используете значок и локализуете его, пользователи с заданными языковыми параметрами могут видеть локализованный значок надстройки.<br/>В случае надстроек Outlook пользователи могут видеть значок в Центре администрирования Exchange после установки надстройки.<br/>После установки надстроек области задач и контентных надстроек пользователи видят значок на ленте.|
+|[IconUrl]        |Изображение значка является необязательным. Можно использовать ту же методику переопределений, чтобы задать определенное изображение для определенной культуры. Если вы используете значок и локализуете его, пользователи с заданными языковыми параметрами могут видеть локализованный значок надстройки.<br/>В случае надстроек Outlook пользователи могут видеть значок в Центре администрирования Exchange после установки надстройки.<br/>В случае контентных надстроек и надстроек области задач пользователи могут видеть значок на ленте после установки надстройки.|
 |[HighResolutionIconUrl] **Важно!** Этот элемент доступен только для надстроек, использующих схему манифеста версии 1.1.|Изображение значка с высоким разрешением не является обязательным, но если оно указано, то должно находиться после элемента [IconUrl]. Если указан параметр [HighResolutionIconUrl] и надстройка установлена на устройстве, поддерживающем высокое разрешение, то вместо значения [IconUrl] используется значение [HighResolutionIconUrl].<br/>Можно использовать ту же методику переопределений, чтобы задать определенное изображение для определенной культуры. Если вы используете значок и локализуете его, пользователи с заданными языковыми параметрами могут видеть локализованный значок надстройки.<br/>В случае надстроек Outlook пользователи могут видеть значок в Центре администрирования Exchange после установки надстройки.<br/>После установки надстроек области задач и контентных надстроек пользователи видят значок на ленте.|
 |[Resources] **Важно!** Этот элемент доступен только для надстроек, в которых используется схема манифеста версии 1.1.   |Для пользователей в каждой указываемой вами локали отображаются ресурсы строк и значков, которые вы специально создаете для надстройки в этой локали. |
 |[SourceLocation]   |Пользователи каждого языкового стандарта видят веб-страницу, специально разработанную для использования надстройки с этим стандартом. |
 
 
 > [!NOTE]
-> Локализовать описание и отображаемое имя можно только для языковых стандартов, которые поддерживаются в Office. Список языков и языковых стандартов для текущего выпуска Office см. в статье [Идентификаторы языков и значения OptionState Id в Office 2013](https://docs.microsoft.com/previous-versions/office/office-2013-resource-kit/cc179219(v=office.15)).
+> Локализовать описание и отображаемое имя можно только для языковых стандартов, которые поддерживаются в Office. Список языков и языковых стандартов для текущего выпуска Office см. в статье [Идентификаторы языков и значения OptionState Id в Office 2013](/previous-versions/office/office-2013-resource-kit/cc179219(v=office.15)).
 
 
 ### <a name="examples"></a>Примеры
@@ -171,7 +172,7 @@ API JavaScript для Office предоставляет два свойства,
 В этом разделе представлены примеры того, как локализовать описание, отображаемое имя и пользовательский интерфейс Надстройка Office. 
 
 > [!NOTE]
-> Чтобы скачать Visual Studio 2017, перейдите на [страницу интегрированной среды разработки Visual Studio](https://visualstudio.microsoft.com/vs/). Во время установки потребуется выбрать рабочую нагрузку разработки для Office и SharePoint.
+> Чтобы скачать Visual Studio 2017, перейдите на [страницу интегрированной среды разработки Visual Studio](https://visualstudio.microsoft.com/vs/). Во время установки потребуется выбрать рабочую нагрузку разработки Office и SharePoint.
 
 ### <a name="configure-office-to-use-additional-languages-for-display-or-editing"></a>Настройка Office на использование дополнительных языков для отображения или редактирования
 
@@ -183,10 +184,10 @@ API JavaScript для Office предоставляет два свойства,
 
 ### <a name="create-an-office-add-in-project"></a>Создание проекта надстройки Office
 
-Необходимо создать проект надстройки Office в Visual Studio 2017. 
+Необходимо создать проект надстройки Office в Visual Studio 2017.
 
 > [!NOTE]
-> Если вы еще не установили Visual Studio 2017, см. инструкции по скачиванию на [странице интегрированной среды разработки Visual Studio](https://visualstudio.microsoft.com/vs/). Во время установки потребуется выбрать рабочую нагрузку разработки для Office и SharePoint. Если вы уже установили Visual Studio 2017, [используйте установщик Visual Studio](https://docs.microsoft.com/visualstudio/install/modify-visual-studio/), чтобы убедиться, что также установлена рабочая нагрузка разработки для Office и SharePoint.
+> Если вы еще не установили Visual Studio 2017, см. инструкции по скачиванию на [странице интегрированной среды разработки Visual Studio](https://visualstudio.microsoft.com/vs/). Во время установки потребуется выбрать рабочую нагрузку разработки для Office и SharePoint. Если вы уже установили Visual Studio 2017, [используйте установщик Visual Studio](/visualstudio/install/modify-visual-studio/), чтобы убедиться, что также установлена рабочая нагрузка разработки для Office и SharePoint.
 
 
 1. В Visual Studio выберите команду **Файл** > **Создать проект**.
@@ -404,7 +405,7 @@ API JavaScript для Office предоставляет два свойства,
 ## <a name="see-also"></a>См. также
 
 - [Рекомендации по разработке надстроек Office](../design/add-in-design.md)
-- [Идентификаторы языков и значения OptionState Id в Office 2013](https://docs.microsoft.com/previous-versions/office/office-2013-resource-kit/cc179219(v=office.15))
+- [Идентификаторы языков и значения OptionState Id в Office 2013](/previous-versions/office/office-2013-resource-kit/cc179219(v=office.15))
 
 [DefaultLocale]:        https://docs.microsoft.com/office/dev/add-ins/reference/manifest/defaultlocale
 [Описание]:          https://docs.microsoft.com/office/dev/add-ins/reference/manifest/description
@@ -413,7 +414,7 @@ API JavaScript для Office предоставляет два свойства,
 [HighResolutionIconUrl]:https://docs.microsoft.com/office/dev/add-ins/reference/manifest/highresolutioniconurl
 [Resources]:            https://docs.microsoft.com/office/dev/add-ins/reference/manifest/resources
 [SourceLocation]:       https://docs.microsoft.com/office/dev/add-ins/reference/manifest/sourcelocation
-[Переопределение]:             https://docs.microsoft.com/office/dev/add-ins/reference/manifest/override
+[Override]:             https://docs.microsoft.com/office/dev/add-ins/reference/manifest/override
 [DesktopSettings]:      https://docs.microsoft.com/office/dev/add-ins/reference/manifest/desktopsettings
 [TabletSettings]:       https://docs.microsoft.com/office/dev/add-ins/reference/manifest/tabletsettings
 [PhoneSettings]:        https://docs.microsoft.com/office/dev/add-ins/reference/manifest/phonesettings

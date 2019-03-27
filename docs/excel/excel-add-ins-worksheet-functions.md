@@ -1,14 +1,14 @@
 ---
 title: Вызов встроенных функций листов Excel с помощью API JavaScript для Excel
 description: ''
-ms.date: 01/24/2017
+ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 5ce8ac0c56a7d6a499f601fcc0767a1e76ea14cc
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 6994a6075732b9eac7e9d8c911e7a9e2c5e87cb4
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29388614"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871460"
 ---
 # <a name="call-built-in-excel-worksheet-functions"></a>Вызов встроенных функций листов Excel
 
@@ -19,7 +19,7 @@ ms.locfileid: "29388614"
 
 ## <a name="calling-a-worksheet-function"></a>Вызов функции листа
 
-В приведенном ниже фрагменте кода показано, как вызвать функцию листа, где `sampleFunction()` — это заполнитель, который следует заменить на имя вызываемой функции и необходимые ей входные параметры. Свойство **value** объекта **FunctionResult**, возвращаемого функцией листа, содержит результат выполнения указанной функции. Как показано в этом примере, необходимо выполнить операцию `load` со свойством **value** объекта **FunctionResult**, прежде чем считывать его. В этом примере результат выполнения функции просто записывается в консоль. 
+В приведенном ниже фрагменте кода показано, как вызвать функцию листа, где `sampleFunction()`— это заполнитель, который следует заменить на имя вызываемой функции и необходимые ей входные параметры. Свойство **value** объекта **FunctionResult**, возвращаемого функцией листа, содержит результат выполнения указанной функции. Как показано в этом примере, необходимо выполнить операцию `load` со свойством **value** объекта **FunctionResult**, прежде чем считывать его. В этом примере результат выполнения функции просто записывается в консоль. 
 
 ```js
 var functionResult = context.workbook.functions.sampleFunction(); 
@@ -33,7 +33,7 @@ return context.sync()
 > [!TIP]
 > В разделе [Поддерживаемые функции листов](#supported-worksheet-functions) в этой статье представлен список функций, которые можно вызывать с помощью API JavaScript для Excel.
 
-## <a name="sample-data"></a>Пример данных
+## <a name="sample-data"></a>Образец данных
 
 На приведенном ниже изображении показана таблица на листе Excel, содержащая данные о продажах различных инструментов в течение трех месяцев. Каждое число в таблице представляет количество единиц того или иного инструмента, проданных за определенный месяц. В последующих примерах показано, как применить к этим данным встроенные функции листов.
 
@@ -66,7 +66,7 @@ Excel.run(function (context) {
 Excel.run(function (context) {
     var range = context.workbook.worksheets.getItem("Sheet1").getRange("A1:D4");
     var sumOfTwoLookups = context.workbook.functions.sum(
-        context.workbook.functions.vlookup("Wrench", range, 2, false), 
+        context.workbook.functions.vlookup("Wrench", range, 2, false),
         context.workbook.functions.vlookup("Wrench", range, 3, false)
     );
     sumOfTwoLookups.load('value');
@@ -80,7 +80,7 @@ Excel.run(function (context) {
 
 ## <a name="supported-worksheet-functions"></a>Поддерживаемые функции листов
 
-Ниже перечислены встроенные функции листов Excel, которые можно вызывать с помощью API JavaScript для Excel 
+Ниже перечислены встроенные функции листов Excel, которые можно вызывать с помощью API JavaScript для Excel
 
 | Функция | Тип возвращаемых данных | Описание |
 |:---------------|:-------------|:-----------|
@@ -126,7 +126,7 @@ Excel.run(function (context) {
 | <a href="https://support.office.com/article/BITOR-function-f6ead5c8-5b98-4c9e-9053-8ad5234919b2" target="_blank">Функция БИТ.ИЛИ</a> | FunctionResult | Возвращает результат операции поразрядного ИЛИ для двух чисел |
 | <a href="https://support.office.com/article/BITRSHIFT-function-274d6996-f42c-4743-abdb-4ff95351222c" target="_blank">Функция БИТ.СДВИГП</a> | FunctionResult | Возвращает число со сдвигом вправо на указанное число бит |
 | <a href="https://support.office.com/article/BITXOR-function-c81306a1-03f9-4e89-85ac-b86c3cba10e4" target="_blank">Функция БИТ.ИСКЛИЛИ</a> | FunctionResult | Возвращает результат операции поразрядного исключающего ИЛИ для двух чисел |
-| <a href="https://support.office.com/article/CEILINGMATH-function-80f95d2f-b499-4eee-9f16-f795a8e306c8" target="_blank">ПОТОЛОК. МАТЕМАТИЧЕСКИЕ, ECMA_CEILING функции</a> | FunctionResult | Округляет число к большему до ближайшего целого или до ближайшего кратного значения с указанной точностью |
+| <a href="https://support.office.com/article/CEILINGMATH-function-80f95d2f-b499-4eee-9f16-f795a8e306c8" target="_blank">Г. МАТЕМАТИЧЕСКИе функции, функции ЕКМА_ЦЕИЛИНГ</a> | FunctionResult | Округляет число к большему до ближайшего целого или до ближайшего кратного значения с указанной точностью |
 | <a href="https://support.office.com/article/CEILINGPRECISE-function-f366a774-527a-4c92-ba49-af0a196e66cb" target="_blank">Функция ОКРВВЕРХ.ТОЧН</a> | FunctionResult | Округляет число до ближайшего целого или до ближайшего кратного значения с указанной точностью. Число округляется до большего значения вне зависимости от его знака. |
 | <a href="https://support.office.com/article/CHAR-function-bbd249c8-b36e-4a91-8017-1c133f9b837a" target="_blank">Функция СИМВОЛ</a> | FunctionResult | Возвращает символ с указанным кодом |
 | <a href="https://support.office.com/article/CHISQDIST-function-8486b05e-5c05-4942-a9ea-f6b341518732" target="_blank">Функция ХИ2.РАСП</a> | FunctionResult | Возвращает интегральную функцию плотности бета-распределения |
@@ -185,7 +185,7 @@ Excel.run(function (context) {
 | <a href="https://support.office.com/article/DISC-function-71fce9f3-3f05-4acf-a5a3-eac6ef4daa53" target="_blank">Функция СКИДКА</a> | FunctionResult | Возвращает ставку дисконтирования ценной бумаги |
 | <a href="https://support.office.com/article/DMAX-function-f4e8209d-8958-4c3d-a1ee-6351665d41c2" target="_blank">Функция ДМАКС</a> | FunctionResult | Возвращает наибольшее значение из выбранных записей базы данных |
 | <a href="https://support.office.com/article/DMIN-function-4ae6f1d9-1f26-40f1-a783-6dc3680192a3" target="_blank">Функция ДМИН</a> | FunctionResult | Возвращает наименьшее значение из выбранных записей базы данных |
-| <a href="https://support.office.com/article/DOLLAR-function-a6cd05d9-9740-4ad3-a469-8109d18ff611" target="_blank">ДОЛЛАР, ДОЛЛСША функции</a> | FunctionResult | Преобразует число в текст, используя денежный формат |
+| <a href="https://support.office.com/article/DOLLAR-function-a6cd05d9-9740-4ad3-a469-8109d18ff611" target="_blank">ДОЛЛАРы, функции УСДОЛЛАР</a> | FunctionResult | Преобразует число в текст, используя денежный формат |
 | <a href="https://support.office.com/article/DOLLARDE-function-db85aab0-1677-428a-9dfd-a38476693427" target="_blank">Функция РУБЛЬ.ДЕС</a> | FunctionResult | Преобразует цену в рублях, представленную в виде десятичной дроби, в десятичное число |
 | <a href="https://support.office.com/article/DOLLARFR-function-0835d163-3023-4a33-9824-3042c5d4f495" target="_blank">Функция РУБЛЬ.ДРОБЬ</a> | FunctionResult | Преобразует цену в рублях, представленную в виде десятичного числа, в десятичную дробь |
 | <a href="https://support.office.com/article/DPRODUCT-function-4f96b13e-d49c-47a7-b769-22f6d017cb31" target="_blank">Функция БДПРОИЗВЕД</a> | FunctionResult | Перемножает значения определенного поля записей, соответствующих условию, в базе данных |
@@ -446,5 +446,5 @@ Excel.run(function (context) {
 ## <a name="see-also"></a>См. также
 
 - [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
-- [Класс функции (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.functions)
-- [Объект книги функции (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/excel/excel.workbook#functions)
+- [Класс functions (API JavaScript для Excel)](/javascript/api/excel/excel.functions)
+- [Объект функции книги (API JavaScript для Excel)](/javascript/api/excel/excel.workbook#functions)

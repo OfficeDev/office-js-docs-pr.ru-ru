@@ -1,14 +1,14 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.5
 description: ''
-ms.date: 02/15/2019
+ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: edc34bd088c1e8a2e88732518dcb335d38b8ba21
-ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.openlocfilehash: d0489e4efa763b3963fcdc78ec894db46fa06362
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "30067925"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870871"
 ---
 # <a name="outlook-add-in-api-requirement-set-15"></a>Набор обязательных элементов API для надстройки Outlook 1.5
 
@@ -21,8 +21,8 @@ ms.locfileid: "30067925"
 
 Набор обязательных элементов 1.5 включает все возможности [набора обязательных элементов версии 1.4](../requirement-set-1.4/outlook-requirement-set-1.4.md). В нем добавлены перечисленные ниже возможности.
 
-- Добавлена поддержка [закрепляемых областей задач](https://docs.microsoft.com/outlook/add-ins/pinnable-taskpane).
-- Добавлена поддержка вызовов [REST API](https://docs.microsoft.com/outlook/add-ins/use-rest-api).
+- Добавлена поддержка [закрепляемых областей задач](/outlook/add-ins/pinnable-taskpane).
+- Добавлена поддержка вызовов [REST API](/outlook/add-ins/use-rest-api).
 - Добавлена возможность отметить вложение как встроенное.
 - Добавлена возможность закрыть область задач или диалоговое окно.
 
@@ -40,6 +40,6 @@ ms.locfileid: "30067925"
 
 ## <a name="see-also"></a>См. также
 
-- [Надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/)
+- [Надстройки Outlook](/outlook/add-ins/)
 - [Примеры кода надстройки Outlook](https://developer.microsoft.com/outlook/gallery/?filterBy=Outlook,Samples,Add-ins)
-- [Начало работы](https://docs.microsoft.com/outlook/add-ins/quick-start)
+- [Начало работы](/outlook/add-ins/quick-start)

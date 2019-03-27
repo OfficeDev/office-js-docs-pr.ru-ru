@@ -1,13 +1,14 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.3
 description: ''
-ms.date: 10/11/2018
-ms.openlocfilehash: c34be8f30a2c674035e5ab0ca223f630d9bb5e5a
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+ms.date: 03/19/2019
+localization_priority: Normal
+ms.openlocfilehash: 276096870b128896e987bcb303b4cccdb77e0e50
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27432629"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871278"
 ---
 # <a name="outlook-add-in-api-requirement-set-13"></a>Набор обязательных элементов API для надстройки Outlook 1.3
 
@@ -20,7 +21,7 @@ ms.locfileid: "27432629"
 
 Набор обязательных элементов 1.3 включает все возможности [набора обязательных элементов версии 1.2](../requirement-set-1.2/outlook-requirement-set-1.2.md). В нем добавлены перечисленные ниже возможности.
 
-- Добавлена поддержка [команд надстроек](https://docs.microsoft.com/outlook/add-ins/add-in-commands-for-outlook).
+- Добавлена поддержка [команд надстроек](/outlook/add-ins/add-in-commands-for-outlook).
 - Добавлена возможность сохранять и закрывать создаваемый элемент.
 - Расширенный объект [Body](/javascript/api/outlook_1_3/office.body) позволяет надстройкам получать или задавать текст целиком.
 - Добавлены методы для преобразования идентификаторов из формата EWS в формат REST и наоборот.
@@ -34,7 +35,7 @@ ms.locfileid: "27432629"
 - Добавлен объект [Event](/javascript/api/office/office.addincommands.event). Передается как параметр в функции команд, не требующих пользовательского интерфейса, в надстройке Outlook. Используется для уведомления о завершении обработки.
 - Добавлен метод [Office.context.mailbox.item.close](office.context.mailbox.item.md#close). Закрывает текущий создаваемый элемент.
 - Добавлен метод [Office.context.mailbox.item.saveAsync](office.context.mailbox.item.md#saveasyncoptions-callback). Асинхронно сохраняет элемент.
-- Добавлено свойство [Office.context.mailbox.item.notificationMessages](office.context.mailbox.item.md#notificationmessages-notificationmessagesjavascriptapioutlook13officenotificationmessages). Получает сообщения уведомления для элемента.
+- Добавлено свойство [Office.context.mailbox.item.notificationMessages](office.context.mailbox.item.md#notificationmessages-notificationmessages). Получает сообщения уведомления для элемента.
 - Добавлен метод [Office.context.mailbox.convertToEwsId](office.context.mailbox.md#converttoewsiditemid-restversion--string). Преобразует идентификатор элемента из формата REST в формат EWS.
 - Добавлен метод [Office.context.mailbox.convertToRestId](office.context.mailbox.md#converttorestiditemid-restversion--string). Преобразует идентификатор элемента из формата EWS в формат REST.
 - Добавлено свойство [Office.MailboxEnums.ItemNotificationMessageType](/javascript/api/outlook_1_3/office.mailboxenums.itemnotificationmessagetype). Указывает тип сообщения уведомления для встречи или сообщения.
@@ -44,6 +45,6 @@ ms.locfileid: "27432629"
 
 ## <a name="see-also"></a>См. также
 
-- [Надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/)
+- [Надстройки Outlook](/outlook/add-ins/)
 - [Примеры кода надстройки Outlook](https://developer.microsoft.com/outlook/gallery/?filterBy=Outlook,Samples,Add-ins)
-- [Начало работы](https://docs.microsoft.com/outlook/add-ins/quick-start)
+- [Начало работы](/outlook/add-ins/quick-start)

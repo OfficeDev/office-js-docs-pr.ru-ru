@@ -1,15 +1,15 @@
 ---
 title: Обзор API JavaScript для OneNote
 description: ''
-ms.date: 10/09/2018
+ms.date: 03/19/2019
 ms.prod: onenote
 localization_priority: Normal
-ms.openlocfilehash: f8fed0104412f60ec59146ef7820be958047d1f3
-ms.sourcegitcommit: 70ef38a290c18a1d1a380fd02b263470207a5dc6
+ms.openlocfilehash: 53b120fbe2bba3967c1b89699daef6bd452b5c24
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "30052744"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870550"
 ---
 # <a name="onenote-javascript-api-overview"></a>Обзор API JavaScript для OneNote
 
@@ -38,7 +38,7 @@ ms.locfileid: "30052744"
 
 - [Image](/javascript/api/onenote/onenote.image): объект Image. Объект Image может быть прямым потомком объекта PageContent или объекта Paragraph.
 
-- [Paragraph](/javascript/api/onenote/onenote.paragraph): контейнер для содержимого, отображаемого на странице. Объект Paragraph — прямой потомок объекта Outline.
+- [Paragraph](/javascript/api/onenote/onenote.paragraph): Контейнер для содержимого, отображаемого на странице. Объект Paragraph — прямой потомок объекта Outline.
     - [ParagraphCollection](/javascript/api/onenote/onenote.paragraphcollection): коллекция объектов Paragraph в объекте Outline.
 
 - [RichText](/javascript/api/onenote/onenote.richtext): объект RichText.
@@ -61,7 +61,7 @@ ms.locfileid: "30052744"
 
 ## <a name="see-also"></a>См. также
 
-- [Обзор создания кода с помощью API JavaScript для OneNote](https://docs.microsoft.com/office/dev/add-ins/onenote/onenote-add-ins-programming-overview)
+- [Обзор создания кода с помощью API JavaScript для OneNote](/office/dev/add-ins/onenote/onenote-add-ins-programming-overview)
 - [Создание первой надстройки OneNote](../../quickstarts/onenote-quickstart.md)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
-- [Обзор платформы надстроек Office](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins)
+- [Обзор платформы надстроек Office](/office/dev/add-ins/overview/office-add-ins)

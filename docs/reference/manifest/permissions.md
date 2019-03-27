@@ -1,13 +1,14 @@
 ---
 title: Элемент Permissions в файле манифеста
 description: ''
-ms.date: 10/09/2018
-ms.openlocfilehash: 9193651ec0c795cdb55eb3fc6576dbacd59e0fb2
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+ms.date: 03/19/2019
+localization_priority: Normal
+ms.openlocfilehash: 3442a8e0caee442ce1b38c5ff39cfd1ef5088fb7
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27432356"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30872062"
 ---
 # <a name="permissions-element"></a>Элемент Permissions
 
@@ -33,6 +34,6 @@ ms.locfileid: "27432356"
 
 [OfficeApp](officeapp.md)
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 
-Подробные сведения см. в статьях [Запрашивание разрешений на использование API в надстройках области задач и контентных надстройках](https://docs.microsoft.com/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins) и [Общие сведения о разрешениях для надстроек Outlook](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions).
+Подробные сведения см. в статьях [Запрашивание разрешений на использование API в надстройках области задач и контентных надстройках](/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins) и [Общие сведения о разрешениях для надстроек Outlook](/outlook/add-ins/understanding-outlook-add-in-permissions).

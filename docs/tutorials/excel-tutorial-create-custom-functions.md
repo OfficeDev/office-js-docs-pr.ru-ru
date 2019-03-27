@@ -1,16 +1,16 @@
 ---
 title: Руководство по настраиваемым функциям в Excel (предварительная версия)
 description: Из этого руководства вы узнаете, как создать надстройку, Excel, содержащую пользовательские функции, которые могут выполнять вычисления, запрашивать или передавать веб-данные.
-ms.date: 01/08/2019
+ms.date: 03/19/2019
 ms.prod: excel
 ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: 4ac735e6fc19f13859d07df6cb3d2443e6dfe2fd
-ms.sourcegitcommit: a59f4e322238efa187f388a75b7709462c71e668
+ms.openlocfilehash: 328d4da7a4dfcc2098f7c5425f84b851bd9dd9d6
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "29982022"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870676"
 ---
 # <a name="tutorial-create-custom-functions-in-excel-preview"></a>Руководство: создание пользовательских функций в Excel (предварительная версия)
 
@@ -89,7 +89,7 @@ npm run start
 Эта команда запускает веб-сервер и загружает неопубликованную надстройку пользовательской функции в Excel для Windows.
 
 > [!NOTE]
-> Если надстройка не загружается, проверьте правильность выполнения шага 3. Можно также включить **[Ведение журнала среды выполнения](../testing/troubleshoot-manifest.md#use-runtime-logging-to-debug-your-add-in)** для устранения неполадок с помощью надстройки в XML-файл манифеста, а также проблемы установки или среды выполнения. Число операций записи регистрации времени выполнения `console.log` инструкции в файле журнала, которые помогут вам определить и исправить проблемы.
+> Если надстройка не загружается, проверьте правильность выполнения шага 3. Кроме того, можно включить **[ведение журнала в среде выполнения](../testing/troubleshoot-manifest.md#use-runtime-logging-to-debug-your-add-in)** для устранения неполадок в XML-файле манифеста надстройки, а также при любых проблемах установки или выполнения. Инструкции Write `console.log` в файл журнала в среде выполнения, чтобы помочь найти и устранить проблемы.
 
 # <a name="excel-onlinetabexcel-online"></a>[Excel Online](#tab/excel-online)
 
@@ -151,7 +151,7 @@ npm run start-web
 
 > [!NOTE]
 > In the January Insiders 1901 Build, there is a bug preventing fetch calls from executing which will result in #VALUE!.
-> To workaround this please use the [XMLHTTPRequest API](https://docs.microsoft.com/en-us/office/dev/add-ins/excel/custom-functions-runtime#requesting-external-data) to make the web request.
+> To workaround this please use the [XMLHTTPRequest API](/office/dev/add-ins/excel/custom-functions-runtime#requesting-external-data) to make the web request.
 
 3. In **customfunctions.js**, locate the line `CustomFunctions.associate("INCREMENT", increment);`. Add the following line of code immediately after that line, and save the file.
 

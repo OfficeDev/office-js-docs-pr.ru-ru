@@ -1,13 +1,14 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.6
 description: ''
-ms.date: 10/11/2018
-ms.openlocfilehash: e780cff1a4cfe0751fccc9192784d143ab9c483f
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+ms.date: 03/19/2019
+localization_priority: Normal
+ms.openlocfilehash: 0e1f920c259ca1ef8a137bab07132b015d9c75d2
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433685"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871328"
 ---
 # <a name="outlook-add-in-api-requirement-set-16"></a>Набор обязательных элементов API для надстройки Outlook 1.6
 
@@ -26,13 +27,13 @@ ms.locfileid: "27433685"
 
 ### <a name="change-log"></a>Журнал изменений
 
-- Добавлен объект [Office.context.mailbox.item.getSelectedEntities](office.context.mailbox.item.md#getselectedentities--entitiesjavascriptapioutlook16officeentities). Добавляет новую функцию, которая возвращает объекты, найденные в выделенном совпадении. Выделенные совпадения применяются к контекстным надстройкам.
+- Добавлен объект [Office.context.mailbox.item.getSelectedEntities](office.context.mailbox.item.md#getselectedentities--entities). Добавляет новую функцию, которая возвращает объекты, найденные в выделенном совпадении. Выделенные совпадения применяются к контекстным надстройкам.
 - Добавлен объект [Office.context.mailbox.item.getSelectedRegExMatches](office.context.mailbox.item.md#getselectedregexmatches--object). Добавляет новую функцию, которая возвращает строковые значения в выделенном совпадении, соответствующие регулярным выражениям, определенным в XML-файле манифеста. Выделенные совпадения применяются к контекстным надстройкам.
 - Добавлен объект [Office.context.mailbox.displayNewMessageForm](office.context.mailbox.md#displaynewmessageformparameters). Добавляет новую функцию, которая открывает новую форму сообщения.
 - Добавлен объект [Office.context.mailbox.userProfile.accountType](office.context.mailbox.userprofile.md#accounttype-string). Добавляет новый элемент в профиль пользователя, указывающий тип учетной записи пользователя.
 
 ## <a name="see-also"></a>См. также
 
-- [Надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/)
+- [Надстройки Outlook](/outlook/add-ins/)
 - [Примеры кода надстройки Outlook](https://developer.microsoft.com/outlook/gallery/?filterBy=Outlook,Samples,Add-ins)
-- [Начало работы](https://docs.microsoft.com/outlook/add-ins/quick-start)
+- [Начало работы](/outlook/add-ins/quick-start)

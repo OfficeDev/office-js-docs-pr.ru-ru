@@ -1,14 +1,14 @@
 ---
 title: Работа с содержимым страницы в OneNote
 description: ''
-ms.date: 01/10/2019
+ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: b92f83ee85943ca4e819b04e2b6fa90e6d4fe4b3
-ms.sourcegitcommit: 70ef38a290c18a1d1a380fd02b263470207a5dc6
+ms.openlocfilehash: f60cdee7eb549acc0f2c84a1aa9acea7fe77274a
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "30052723"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30872188"
 ---
 # <a name="work-with-onenote-page-content"></a>Работа с содержимым страницы в OneNote
 
@@ -23,14 +23,14 @@ ms.locfileid: "30052723"
 
 Чтобы создать пустую страницу OneNote, воспользуйтесь одним из указанных ниже методов.
 
-- [Section.addPage](https://docs.microsoft.com/javascript/api/onenote/onenote.section#addpage-title-)
-- [Page.insertPageAsSibling](https://docs.microsoft.com/javascript/api/onenote/onenote.section#insertsectionassibling-location--title-)
+- [Section.addPage](/javascript/api/onenote/onenote.section#addpage-title-)
+- [Page.insertPageAsSibling](/javascript/api/onenote/onenote.section#insertsectionassibling-location--title-)
 
 Затем используйте методы в указанных ниже объектах для работы с содержимым страницы, например `Page.addOutline` и `Outline.appendHtml`.
 
-- [Страница](https://docs.microsoft.com/javascript/api/onenote/onenote.page)
-- [Структура](https://docs.microsoft.com/javascript/api/onenote/onenote.outline)
-- [Абзац](https://docs.microsoft.com/javascript/api/onenote/onenote.paragraph)
+- [Страница](/javascript/api/onenote/onenote.page)
+- [Outline](/javascript/api/onenote/onenote.outline)
+- [Paragraph](/javascript/api/onenote/onenote.paragraph)
 
 Для представления содержимого и структуры страницы OneNote используется HTML. Для создания или обновления содержимого страницы поддерживается только подмножество HTML, как описано ниже.
 
@@ -54,13 +54,13 @@ ms.locfileid: "30052723"
 
 ## <a name="accessing-page-contents"></a>Доступ к содержимому страницы
 
-Через `Page#load` доступ можно получить только к *содержимому активной страницы*. Чтобы изменить активную страницу, вызовите команду `navigateToPage($page)`.
+Через ** доступ можно получить только к `Page#load`. Чтобы изменить активную страницу, вызовите команду `navigateToPage($page)`.
 
 Метаданные, например "Название", можно запросить для любой страницы.
 
 ## <a name="see-also"></a>См. также
 
 - [Обзор API JavaScript для OneNote](onenote-add-ins-programming-overview.md)
-- [Справочник по API JavaScript для OneNote](https://docs.microsoft.com/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference)
+- [Справочник по API JavaScript для OneNote](/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)

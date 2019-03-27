@@ -249,12 +249,18 @@ items:
         - name: Обзор настраиваемых функций
           displayName: Excel
           href: excel/custom-functions-overview.md
+        - name: Архитектура пользовательских функций
+          displayName: Excel
+          href: excel/custom-functions-architecture.md
         - name: Примеры использования пользовательских функций
           displayName: Excel
           href: quickstarts/excel-custom-functions-quickstart.md
         - name: Руководство по настраиваемым функциям
           displayName: Excel
           href: tutorials/excel-tutorial-create-custom-functions.md
+        - name: Веб-запросы пользовательских функций
+          displayName: Excel
+          href: excel/custom-functions-web-reqs.md
         - name: Среда выполнения пользовательских функций
           displayName: Excel
           href: excel/custom-functions-runtime.md
@@ -267,6 +273,9 @@ items:
         - name: Проверка подлинности пользовательских функций
           displayName: Excel
           href: excel/custom-functions-authentication.md
+        - name: Диалоговое окно настраиваемых функций
+          displayName: Excel
+          href: excel/custom-functions-dialog.md
         - name: Журнал изменений пользовательских функций
           displayName: Excel
           href: excel/custom-functions-changelog.md
@@ -288,7 +297,7 @@ items:
       - name: Обработка ошибок
         displayName: Excel
         href: excel/excel-add-ins-error-handling.md
-      - name: События
+      - name: Мероприятия
         displayName: Excel
         href: excel/excel-add-ins-events.md
       - name: Несколько диапазонов
@@ -306,6 +315,9 @@ items:
       - name: Диапазоны (дополнительно)
         displayName: Excel
         href: excel/excel-add-ins-ranges-advanced.md
+      - name: Формы
+        displayName: Excel
+        href: excel/excel-add-ins-shapes.md
       - name: Таблицы
         displayName: Excel
         href: excel/excel-add-ins-tables.md
@@ -679,7 +691,7 @@ items:
       href: reference/manifest/highresolutioniconurl.md
     - name: Host (Узел)
       href: reference/manifest/host.md
-    - name: Hosts
+    - name: Узлы
       href: reference/manifest/hosts.md
     - name: IconUrl
       href: reference/manifest/iconurl.md
@@ -752,7 +764,7 @@ items:
         href: reference/manifest/getstarted.md
       - name: Группа
         href: reference/manifest/group.md
-      - name: Hosts
+      - name: Узлы
         href: reference/manifest/hosts.md
       - name: Значок
         href: reference/manifest/icon.md
@@ -766,7 +778,7 @@ items:
         href: reference/manifest/page.md
       - name: Ресурсы
         href: reference/manifest/resources.md
-      - name: Scopes
+      - name: Области
         href: reference/manifest/scopes.md
       - name: Script
         href: reference/manifest/script.md
@@ -780,9 +792,9 @@ items:
         href: reference/manifest/webapplicationinfo.md
 - name: Ресурсы
   href: resources/resources-links-help.md
-ms.openlocfilehash: 24f8d304d6b23c7abfcde3cc0177f9582a804252
-ms.sourcegitcommit: c5daedf017c6dd5ab0c13607589208c3f3627354
+ms.openlocfilehash: 7b872ef8236dd2f0ce4000772755ff93eb66abc4
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "30691211"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30872202"

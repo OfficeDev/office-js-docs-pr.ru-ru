@@ -1,14 +1,14 @@
 ---
-title: Набор обязательных элементов API для надстройки Outlook 1.2
+title: Набор требований к API надстройки Outlook 1.2
 description: ''
-ms.date: 02/15/2019
+ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 1767b1b93f13de2c8a0731d2f08a1141b709b734
-ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.openlocfilehash: dfd61738fe9e941d7d0f3a70173ab1f087f9f552
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "30068030"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30869934"
 ---
 # <a name="outlook-add-in-api-requirement-set-12"></a>Набор обязательных элементов API для надстройки Outlook 1.2
 
@@ -30,6 +30,6 @@ ms.locfileid: "30068030"
 
 ## <a name="see-also"></a>См. также
 
-- [Надстройки Outlook](https://docs.microsoft.com/outlook/add-ins/)
+- [Надстройки Outlook](/outlook/add-ins/)
 - [Примеры кода надстройки Outlook](https://developer.microsoft.com/outlook/gallery/?filterBy=Outlook,Samples,Add-ins)
-- [Начало работы](https://docs.microsoft.com/outlook/add-ins/quick-start)
+- [Начало работы](/outlook/add-ins/quick-start)

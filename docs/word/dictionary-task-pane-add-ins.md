@@ -1,14 +1,14 @@
 ---
 title: Создание надстройки области задач словаря
 description: ''
-ms.date: 12/04/2017
+ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: a97c378092da783e748f014515de587383201818
-ms.sourcegitcommit: d1aa7201820176ed986b9f00bb9c88e055906c77
+ms.openlocfilehash: 5f48d4aa96609f92e7ea1e38dcdd93c91b61a755
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "29388215"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871208"
 ---
 # <a name="create-a-dictionary-task-pane-add-in"></a>Создание надстройки области задач словаря
 
@@ -30,17 +30,17 @@ ms.locfileid: "29388215"
 ![Меню определения контекста](../images/dictionary-agave-02.jpg)
 
 
-*Рисунок 3. Определения в областях "Грамматика" и "Правописание"*
+*Рис. 3. Определения в областях проверки правописания*
 
 ![Определения в областях проверки правописания](../images/dictionary-agave-03.jpg)
 
 
-*Рисунок 4. Определения в области "Тезаурус"*
+*Рис. 4. Определения в области "Тезаурус"*
 
 ![Определения в области "Тезаурус"](../images/dictionary-agave-04.jpg)
 
 
-*Рисунок 5. Определения в режиме чтения*
+*Рис. 5. Определения в режиме чтения*
 
 ![Определения в режиме чтения](../images/dictionary-agave-05.jpg)
 
@@ -352,7 +352,7 @@ public class WebService : System.Web.Services.WebService {
 
  **Замечания**
 
-Это URI веб-службы XML для поставщика словаря. К этому URI добавляется строка запроса с надлежащими escape-символами. 
+Это универсальный код ресурса (URI) XML-веб-службы поставщика словаря. К этому URI добавляется строка запроса с надлежащими escape-символами. 
 
  **Пример**
 
@@ -514,9 +514,9 @@ a:hover, a:active
 }
 ```
 
-*Рисунок 6. Демонстрационный пользовательский интерфейс словаря*
+*Рис. 6. Демонстрационный пользовательский интерфейс словаря*
 
-![Демонстрационный пользовательский интерфейс словаря](../images/dictionary-agave-06.jpg)
+![Пользовательский интерфейс демоверсии словаря](../images/dictionary-agave-06.jpg)
 
 
 ### <a name="writing-the-javascript-implementation"></a>Реализация JavaScript
@@ -524,20 +524,20 @@ a:hover, a:active
 
 В приведенном ниже примере показана реализация JavaScript в файле Dictionary.js, которая вызывается с HTML-страницы надстройки и предоставляет программную логику для надстройки Demo Dictionary. В этом сценарии используется вышеописанная XML-веб-служба. Если поместить сценарий в тот же каталог, что и пример веб-службы, он будет получать определения из этой службы. Его можно использовать с общедоступной XML-веб-службой, соответствующей схеме OfficeDefinitions. Для этого измените переменную `xmlServiceURL` в начале файла, а затем замените ключ API Bing для произношений на правильно зарегистрированный.
 
-Ниже приведены основные элементы интерфейса JavaScript API для Office (Office.js), которые вызываются из этой реализации.
+Ниже приведены основные элементы API JavaScript для Office (Office.js), которые вызываются в реализованном коде.
 
 
-- Событие [initialize](https://docs.microsoft.com/javascript/api/office) объекта **Office**, возникающее при инициализации контекста надстройки и предоставляющее доступ к объекту [Document](https://docs.microsoft.com/javascript/api/office/office.document), представляющему собой документ, с которым взаимодействует надстройка.
+- Событие [initialize](/javascript/api/office) объекта **Office**, возникающее при инициализации контекста надстройки и предоставляющее доступ к объекту [Document](/javascript/api/office/office.document), представляющему собой документ, с которым взаимодействует надстройка.
     
-- Метод [addHandlerAsync](https://docs.microsoft.com/javascript/api/office/office.document#addhandlerasync-eventtype--handler--options--callback-) объекта **Document**, который вызывается в функции **initialize** для добавления обработчика события [SelectionChanged](https://docs.microsoft.com/javascript/api/office/office.documentselectionchangedeventargs) документа с целью прослушивания изменений, внесенных в выделенный пользователем фрагмент.
+- Метод [addHandlerAsync](/javascript/api/office/office.document#addhandlerasync-eventtype--handler--options--callback-) объекта **Document**, который вызывается в функции **initialize** для добавления обработчика события [SelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) документа с целью прослушивания изменений, внесенных в выделенный пользователем фрагмент.
     
-- Метод [getSelectedDataAsync](https://docs.microsoft.com/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) объекта **Document**, который вызывается в функции `tryUpdatingSelectedWord()` при включении обработчика событий **SelectionChanged** для получения слова или фразы по выбору пользователя, приведения их в обычный текст и выполнения асинхронной функции обратного вызова `selectedTextCallback`.
+- Метод [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) объекта **Document**, который вызывается в функции `tryUpdatingSelectedWord()` при включении обработчика событий **SelectionChanged** для получения слова или фразы по выбору пользователя, приведения их в обычный текст и выполнения асинхронной функции обратного вызова `selectedTextCallback`.
     
-- При выполнении асинхронной функции обратного вызова `selectTextCallback`, которая передается как аргумент _callback_ метода **getSelectedDataAsync**, возвращается значение выделенного текста. Эта функция считывает значение из аргумента _selectedText_ (имеющего тип [AsyncResult](https://docs.microsoft.com/javascript/api/office/office.asyncresult)) с помощью свойства [value](https://docs.microsoft.com/javascript/api/office/office.asyncresult#status) возвращенного объекта **AsyncResult**.
+- При выполнении асинхронной функции обратного вызова `selectTextCallback`, которая передается как аргумент _callback_ метода **getSelectedDataAsync**, возвращается значение выделенного текста. Эта функция считывает значение из аргумента _selectedText_ (имеющего тип [AsyncResult](/javascript/api/office/office.asyncresult)) с помощью свойства [value](/javascript/api/office/office.asyncresult#status) возвращенного объекта **AsyncResult**.
     
 - Остальной код функции `selectedTextCallback` отправляет XML-веб-службе запрос на определения. Кроме того, он вызывает API-интерфейсы Microsoft Translator для получения URL-адреса WAV-файла с произношением выделенного слова.
     
-- Оставшийся код в файле Dictionary.js служит для отображения списка определений и ссылок на произношения в пользовательском интерфейс HTML надстройки.
+- Остальной код в файле Dictionary.js служит для отображения списка определений и ссылок на произношения в пользовательском интерфейсе HTML надстройки.
     
 
 

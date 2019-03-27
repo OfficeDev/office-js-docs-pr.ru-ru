@@ -1,13 +1,14 @@
 ---
 title: Элемент IconUrl в файле манифеста
 description: ''
-ms.date: 12/04/2018
-ms.openlocfilehash: 471a168b5aa0091292132a1e078fa2b3f5efb448
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+ms.date: 03/19/2019
+localization_priority: Normal
+ms.openlocfilehash: f7eda7ec9e4c5da8ad0b19e5e10649696d4e85c1
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433126"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871726"
 ---
 # <a name="iconurl-element"></a>Элемент IconUrl
 
@@ -23,7 +24,7 @@ ms.locfileid: "27433126"
 
 ## <a name="can-contain"></a>Может содержать:
 
-[Переопределение](override.md)
+[Override](override.md)
 
 ## <a name="attributes"></a>Атрибуты
 
@@ -35,4 +36,4 @@ ms.locfileid: "27433126"
 
 Значок почтовой надстройки отображается в разделе **Файл**  >  **Управление надстройками** (Outlook) или **Параметры**  >  **Управление надстройками** UI (Outlook Web App). Значок надстройки области задач или контентной надстройки отображается в разделе **Вставка**  >  **Надстройки**. В случае всех типов надстроек значок также используется на сайте Магазина Office, если надстройка опубликована там.
 
-Изображение должно быть в формате GIF, JPG, PNG, EXIF, BMP или TIFF. Для приложений области задач и приложений для работы с контентом указанное изображение должно иметь размеры 32 х 32 пикселя. Для почтовых приложений рекомендуется размер изображения 64 х 64 пикселя. Кроме того, следует указать значок, который будет использоваться в ведущих приложениях Office на экранах c высоким DPI, при помощи элемента [HighResolutionIconUrl](highresolutioniconurl.md). Дополнительные сведения см. в разделе _Создание согласованного визуального образа приложения_ статьи [Создание эффективных описаний в AppSource и в Office](https://docs.microsoft.com/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity).
+Изображение должно быть в формате GIF, JPG, PNG, EXIF, BMP или TIFF. Для приложений области задач и приложений для работы с контентом указанное изображение должно иметь размеры 32 х 32 пикселя. Для почтовых приложений рекомендуется размер изображения 64 х 64 пикселя. Кроме того, следует указать значок, который будет использоваться в ведущих приложениях Office на экранах c высоким DPI, при помощи элемента [HighResolutionIconUrl](highresolutioniconurl.md). Дополнительные сведения см. в разделе _Создание согласованного визуального образа приложения_ статьи [Создание эффективных описаний в AppSource и в Office](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity).

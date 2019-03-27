@@ -3,12 +3,12 @@ ms.date: 02/06/2019
 description: Сведения об основных сценариях при разработке пользовательских функций Excel, которые используют новую среду выполнения JavaScript.
 title: Среда выполнения для пользовательских функций Excel (предварительный просмотр)
 localization_priority: Normal
-ms.openlocfilehash: d891a41dc9e142ef3cfaa00c8b54d8d27913c57d
-ms.sourcegitcommit: a59f4e322238efa187f388a75b7709462c71e668
+ms.openlocfilehash: 85024b6c3559e2a5f32bae9297787f8052bba38d
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "29982043"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871782"
 ---
 # <a name="runtime-for-excel-custom-functions-preview"></a>Среда выполнения для пользовательских функций Excel (предварительный просмотр)
 
@@ -20,9 +20,9 @@ ms.locfileid: "29982043"
 
 В пределах пользовательской функции можно запрашивать внешние данные с помощью такого API, как [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), или с помощью [XmlHttpRequest (XHR)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который отправляет HTTP-запросы для взаимодействия с серверами.
 
-В среде выполнения JavaScript, используемых настраиваемых функций XHR реализует дополнительные меры безопасности, требуя [Политики единого происхождения](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) и простой [CORS](https://www.w3.org/TR/cors/).
+В среде выполнения JavaScript, используемой пользовательскими функциями, XHR реализует дополнительные меры безопасности, требуя [одного и того же политики начала](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) и простой [CORS](https://www.w3.org/TR/cors/).
 
-Обратите внимание на то, что простая реализация CORS нельзя использовать файлы cookie и поддерживает только простых методов (GET, HEAD, POST). Простой CORS принимает простой заголовков с именами полей `Accept`, `Accept-Language`, `Content-Language`. Вы также можете использовать `Content-Type` предоставляемых верхнего колонтитула в простой CORS, что тип контента является `application/x-www-form-urlencoded`, `text/plain`, или `multipart/form-data`.
+Обратите внимание, что простая реализация CORS не может использовать файлы cookie и поддерживает только простые методы (GET, HEAD, POST). Простая CORS принимает простые заголовки с именами `Accept` `Accept-Language`полей,. `Content-Language` Вы также можете `Content-Type` использовать заголовок в простой CORS, при условии, что тип контента `application/x-www-form-urlencoded`: `text/plain`, или `multipart/form-data`.
 
 ### <a name="xhr-example"></a>Пример XHR
 
@@ -67,10 +67,10 @@ function sendWebRequest(thermometerID, data) {
 
 ```typescript
 const ws = new WebSocket('wss://bundles.office.com');
-ws.onmessage = (message) => {
+ws.onmessage = function (message) {
     console.log(`Received: ${message}`);
-};
-ws.onerror = (error) => {
+}
+ws.onerror = function (error) {
     console.err(`Failed: ${error}`);
 }
 ```
@@ -96,105 +96,16 @@ ws.onerror = (error) => {
 
 ### <a name="asyncstorage-example"></a>Пример AsyncStorage 
 
-Указанный ниже пример кода вызывает функцию `AsyncStorage.getItem` для получения значения из хранилища.
+В следующем примере кода вызывается `AsyncStorage.setItem` функция для установки ключа и значения `AsyncStorage`.
 
-```typescript
-_goGetData = async () => {
-    try {
-        const value = await AsyncStorage.getItem('toDoItem');
-        if (value !== null) {
-            //data exists and you can do something with it here
-        }
-    } catch (error) {
-        //handle errors here
-    }
-}
-```
+```JavaScript
+function StoreValue(key, value) {
 
-## <a name="displaying-a-dialog-box"></a>Отображение диалогового окна
-
-В пределах пользовательской функции (или в пределах любой другой части надстройки) можно использовать API `OfficeRuntime.displayWebDialog`, чтобы отобразить диалоговое окно. Этот диалоговый API является альтернативой [Dialog API](../develop/dialog-api-in-office-add-ins.md), который можно использовать в пределах областей задач и команд надстройки, но не в пределах пользовательских функций.
-
-### <a name="dialog-api-example"></a>Пример Dialog API
-
-В приведенном ниже примере кода функция `getTokenViaDialog` использует функцию `displayWebDialog` Dialog API для отображения диалогового окна.
-
-```js
-// Get auth token before calling my service, a hypothetical API that will deliver a stock price based on stock ticker string, such as "MSFT"
-
-function getStock (ticker) {
-  return new Promise(function (resolve, reject) {
-    // Get a token
-    getToken("https://www.contoso.com/auth")
-    .then(function (token) {
-
-      // Use token to get stock price
-      fetch("https://www.contoso.com/?token=token&ticker= + ticker")
-      .then(function (result) {
-
-        // Return stock price to cell
-        resolve(result);
-      });
-    })
-    .catch(function (error) {
-      reject(error);
-    });
+  return OfficeRuntime.AsyncStorage.setItem(key, value).then(function (result) {
+      return "Success: Item with key '" + key + "' saved to AsyncStorage.";
+  }, function (error) {
+      return "Error: Unable to save item with key '" + key + "' to AsyncStorage. " + error;
   });
-  
-  //Helper
-  function getToken(url) {
-    return new Promise(function (resolve,reject) {
-      if(_cachedToken) {
-        resolve(_cachedToken);
-      } else {
-        getTokenViaDialog(url)
-        .then(function (result) {
-          resolve(result);
-        })
-        .catch(function (result) {
-          reject(result);
-        });
-      }
-    });
-  }
-
-  function getTokenViaDialog(url) {
-    return new Promise (function (resolve, reject) {
-      if (_dialogOpen) {
-        // Can only have one dialog open at once, wait for previous dialog's token
-        let timeout = 5;
-        let count = 0;
-        var intervalId = setInterval(function () {
-          count++;
-          if(_cachedToken) {
-            resolve(_cachedToken);
-            clearInterval(intervalId);
-          }
-          if(count >= timeout) {
-            reject("Timeout while waiting for token");
-            clearInterval(intervalId);
-          }
-        }, 1000);
-      } else {
-        _dialogOpen = true;
-        OfficeRuntime.displayWebDialog(url, {
-          height: '50%',
-          width: '50%',
-          onMessage: function (message, dialog) {
-            _cachedToken = message;
-            resolve(message);
-            dialog.close();
-            return;
-          },
-          onRuntimeError: function(error, dialog) {
-            reject(error);
-          },
-        }).catch(function (e) {
-          reject(e);
-        });
-      }
-    });
-  }
 }
 ```
 
@@ -206,6 +117,6 @@ function getStock (ticker) {
 
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)
 * [Метаданные пользовательских функций](custom-functions-json.md)
-* [Рекомендации по настраиваемым функциям](custom-functions-best-practices.md)
+* [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
 * [Журнал изменений пользовательских функций](custom-functions-changelog.md)
 * [Руководство по настраиваемым функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)

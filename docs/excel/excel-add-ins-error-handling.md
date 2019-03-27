@@ -1,14 +1,14 @@
 ---
 title: Обработка ошибок
 description: ''
-ms.date: 10/16/2018
+ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 8c6de5d2a22fdb4614742ddfb7fbf566780c0f0f
-ms.sourcegitcommit: 8e20e7663be2aaa0f7a5436a965324d171bc667d
+ms.openlocfilehash: 87401773ad4a27bf0a30bc80b229d2879dd5234f
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "29388964"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871068"
 ---
 # <a name="error-handling"></a>Обработка ошибок
 
@@ -38,7 +38,7 @@ Excel.run(function (context) {
 
 Если не удается выполнить запрос API JavaScript для Excel, API возвращает объект error, содержащий следующие свойства:
 
-- **code.** Свойство `code` сообщения об ошибке содержит строку, входящую в список `OfficeExtension.ErrorCodes` или `Excel.ErrorCodes`. Например, код ошибки InvalidReference указывает, что ссылка недопустима для указанной операции. Коды ошибок не локализованы.
+- **code**.  Свойство `code` сообщения об ошибке содержит строку, входящую в список `OfficeExtension.ErrorCodes` или `Excel.ErrorCodes`. Например, код ошибки InvalidReference указывает, что ссылка недопустима для указанной операции. Коды ошибок не локализованы.
 
 - **message.** Свойство `message` сообщения об ошибке содержит сводные сведения об ошибке в локализованной строке. Сообщение об ошибке не предназначено для пользователей. Код ошибки и соответствующую бизнес-логику следует использовать для определения сообщения об ошибке, которое ваша надстройка будет отображать для пользователей.
 
@@ -76,4 +76,4 @@ Excel.run(function (context) {
 ## <a name="see-also"></a>См. также
 
 - [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
-- [Объект OfficeExtension.Error (API JavaScript для Excel)](https://docs.microsoft.com/javascript/api/office/officeextension.error)
+- [Объект OfficeExtension.Error (API JavaScript для Excel)](/javascript/api/office/officeextension.error)

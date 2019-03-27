@@ -1,14 +1,14 @@
 ---
 title: Элемент Action в файле манифеста
 description: ''
-ms.date: 11/14/2018
+ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 589a4af94c7abbcf61cd7a5210d5df29ba8a3a4e
-ms.sourcegitcommit: 2e4b97f0252ff3dd908a3aa7a9720f0cb50b855d
+ms.openlocfilehash: 59df6cce6af1277f365a1dd3cd0b3ef11230804e
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "29635897"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30870830"
 ---
 # <a name="action-element"></a>Элемент Action
 
@@ -26,7 +26,7 @@ ms.locfileid: "29635897"
 |:-----|:-----|
 |  [FunctionName](#functionname) |    Указывает имя выполняемой функции. |
 |  [SourceLocation](#sourcelocation) |    Указывает расположение исходного файла для этого действия. |
-|  [TaskpaneId](#taskpaneid) | Определяет идентификатор контейнера области задач.|
+|  [TaskpaneId](#taskpaneid) | Определяет идентификатор для контейнера области задач.|
 |  [Title](#title) | Определяет заголовок области задач.|
 |  [SupportsPinning](#supportspinning) | Указывает, что область задач поддерживает закрепление (область задач остается открытой, когда пользователь выбирает другой элемент).|
   
@@ -137,10 +137,10 @@ ms.locfileid: "29635897"
 
 ## <a name="supportspinning"></a>SupportsPinning
 
-Элемент необязательный, когда для **xsi:type** задано значение ShowTaskpane. Родительские элементы [VersionOverrides](versionoverrides.md) должны иметь значение атрибута `xsi:type` `VersionOverridesV1_1`. Включите этот элемент со значением `true` для поддержки закрепления области задач. Пользователь сможет закрепить область задач, после чего она будет оставаться открытой при выборе другого элемента. Дополнительные сведения см. в статье [Реализация закрепляемой области задач в Outlook](https://docs.microsoft.com/outlook/add-ins/pinnable-taskpane).
+Элемент необязательный, когда для **xsi:type** задано значение ShowTaskpane. Родительские элементы [VersionOverrides](versionoverrides.md) должны иметь значение атрибута `xsi:type` `VersionOverridesV1_1`. Включите этот элемент со значением `true` для поддержки закрепления области задач. Пользователь сможет закрепить область задач, после чего она будет оставаться открытой при выборе другого элемента. Дополнительные сведения см. в статье [Реализация закрепляемой области задач в Outlook](/outlook/add-ins/pinnable-taskpane).
 
 > [!NOTE]
-> SupportsPinning в данный момент поддерживается только 2016 Outlook для Windows (сборка 7628.1000 или более поздней версии) и 2016 Outlook для Mac (построение 16.13.503 или более поздней версии).
+> Суппортспиннинг в настоящее время поддерживается только Outlook 2016 для Windows (сборка 7628,1000 или более поздней версии) и Outlook 2016 для Mac (сборка 16.13.503 или более поздняя).
 
 ```xml
 <Action xsi:type="ShowTaskpane">
