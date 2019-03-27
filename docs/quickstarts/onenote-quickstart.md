@@ -1,58 +1,58 @@
 ---
 title: Создание первой надстройки OneNote
 description: ''
-ms.date: 01/17/2019
+ms.date: 03/19/2019
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: a0b2820f33e3a7cd31c12aec017ca552575a3f9b
-ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.openlocfilehash: 378d691d1994a2d22166afc5338007400f7a48af
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "29742340"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871922"
 ---
-# <a name="build-your-first-onenote-add-in"></a><span data-ttu-id="77d8a-102">Создание первой надстройки OneNote</span><span class="sxs-lookup"><span data-stu-id="77d8a-102">Build your first OneNote add-in</span></span>
+# <a name="build-your-first-onenote-add-in"></a><span data-ttu-id="a2410-102">Создание первой надстройки OneNote</span><span class="sxs-lookup"><span data-stu-id="a2410-102">Build your first OneNote add-in</span></span>
 
-<span data-ttu-id="77d8a-103">В этой статье мы разберем, как создать надстройку OneNote, используя jQuery и API JavaScript для Office.</span><span class="sxs-lookup"><span data-stu-id="77d8a-103">In this article, you'll walk through the process of building a OneNote add-in by using jQuery and the Office JavaScript API.</span></span>
+<span data-ttu-id="a2410-103">В этой статье мы разберем, как создать надстройку OneNote, используя jQuery и API JavaScript для Office.</span><span class="sxs-lookup"><span data-stu-id="a2410-103">In this article, you'll walk through the process of building a OneNote add-in by using jQuery and the Office JavaScript API.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="77d8a-104">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="77d8a-104">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="a2410-104">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="a2410-104">Prerequisites</span></span>
 
-- [<span data-ttu-id="77d8a-105">Node.js</span><span class="sxs-lookup"><span data-stu-id="77d8a-105">Node.js</span></span>](https://nodejs.org)
+- [<span data-ttu-id="a2410-105">Node.js</span><span class="sxs-lookup"><span data-stu-id="a2410-105">Node.js</span></span>](https://nodejs.org)
 
-- <span data-ttu-id="77d8a-106">Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).</span><span class="sxs-lookup"><span data-stu-id="77d8a-106">Install the latest version of [Yeoman](https://github.com/yeoman/yo) and the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office) globally.</span></span>
+- <span data-ttu-id="a2410-106">Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).</span><span class="sxs-lookup"><span data-stu-id="a2410-106">Install the latest version of [Yeoman](https://github.com/yeoman/yo) and the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office) globally.</span></span>
 
     ```bash
     npm install -g yo generator-office
     ```
 
-## <a name="create-the-add-in-project"></a><span data-ttu-id="77d8a-107">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="77d8a-107">Create the add-in project</span></span>
+## <a name="create-the-add-in-project"></a><span data-ttu-id="a2410-107">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="a2410-107">Create the add-in project</span></span>
 
-1. <span data-ttu-id="77d8a-108">С помощью генератора Yeoman создайте проект надстройки OneNote.</span><span class="sxs-lookup"><span data-stu-id="77d8a-108">Use the Yeoman generator to create a OneNote add-in project.</span></span> <span data-ttu-id="77d8a-109">Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="77d8a-109">Run the following command and then answer the prompts as follows:</span></span>
+1. <span data-ttu-id="a2410-108">С помощью генератора Yeoman создайте проект надстройки OneNote.</span><span class="sxs-lookup"><span data-stu-id="a2410-108">Use the Yeoman generator to create a OneNote add-in project.</span></span> <span data-ttu-id="a2410-109">Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="a2410-109">Run the following command and then answer the prompts as follows:</span></span>
 
     ```bash
     yo office
     ```
 
-    - <span data-ttu-id="77d8a-110">**Выберите тип проекта:** `Office Add-in project using Jquery framework`</span><span class="sxs-lookup"><span data-stu-id="77d8a-110">**Choose a project type:** `Office Add-in project using Jquery framework`</span></span>
-    - <span data-ttu-id="77d8a-111">**Выберите тип сценария:** `Javascript`</span><span class="sxs-lookup"><span data-stu-id="77d8a-111">**Choose a script type:** `Javascript`</span></span>
-    - <span data-ttu-id="77d8a-112">**Как вы хотите назвать надстройку?** `My Office Add-in`</span><span class="sxs-lookup"><span data-stu-id="77d8a-112">**What do you want to name your add-in?:** `My Office Add-in`</span></span>
-    - <span data-ttu-id="77d8a-113">**Какое клиентское приложение Office должно поддерживаться?** `Onenote`</span><span class="sxs-lookup"><span data-stu-id="77d8a-113">**Which Office client application would you like to support?:** `Onenote`</span></span>
+    - <span data-ttu-id="a2410-110">**Выберите тип проекта:** `Office Add-in project using Jquery framework`</span><span class="sxs-lookup"><span data-stu-id="a2410-110">**Choose a project type:** `Office Add-in project using Jquery framework`</span></span>
+    - <span data-ttu-id="a2410-111">**Выберите тип сценария:** `Javascript`</span><span class="sxs-lookup"><span data-stu-id="a2410-111">**Choose a script type:** `Javascript`</span></span>
+    - <span data-ttu-id="a2410-112">**Как вы хотите назвать надстройку?** `My Office Add-in`</span><span class="sxs-lookup"><span data-stu-id="a2410-112">**What do you want to name your add-in?:** `My Office Add-in`</span></span>
+    - <span data-ttu-id="a2410-113">**Какое клиентское приложение Office должно поддерживаться?** `Onenote`</span><span class="sxs-lookup"><span data-stu-id="a2410-113">**Which Office client application would you like to support?:** `Onenote`</span></span>
 
     ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-onenote-jquery.png)
     
-    <span data-ttu-id="77d8a-115">После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.</span><span class="sxs-lookup"><span data-stu-id="77d8a-115">After you complete the wizard, the generator will create the project and install supporting Node components.</span></span>
+    <span data-ttu-id="a2410-115">После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.</span><span class="sxs-lookup"><span data-stu-id="a2410-115">After you complete the wizard, the generator will create the project and install supporting Node components.</span></span>
     
-2. <span data-ttu-id="77d8a-116">Перейдите к корневой папке проекта.</span><span class="sxs-lookup"><span data-stu-id="77d8a-116">Navigate to the root folder of the project.</span></span>
+2. <span data-ttu-id="a2410-116">Перейдите к корневой папке проекта.</span><span class="sxs-lookup"><span data-stu-id="a2410-116">Navigate to the root folder of the project.</span></span>
 
     ```bash
     cd "My Office Add-in"
     ```
 
-## <a name="update-the-code"></a><span data-ttu-id="77d8a-117">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="77d8a-117">Update the code</span></span>
+## <a name="update-the-code"></a><span data-ttu-id="a2410-117">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="a2410-117">Update the code</span></span>
 
-1. <span data-ttu-id="77d8a-118">В редакторе кода откройте файл **index.html** из корневой папки проекта.</span><span class="sxs-lookup"><span data-stu-id="77d8a-118">In your code editor, open **index.html** in the root of the project.</span></span> <span data-ttu-id="77d8a-119">Этот файл содержит HTML-содержимое, которое будет отображаться в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="77d8a-119">This file contains the HTML that will be rendered in the add-in's task pane.</span></span>
+1. <span data-ttu-id="a2410-p102">В редакторе кода откройте файл **index.html** из корневой папки проекта. Этот файл содержит HTML-контент, который будет отображаться в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="a2410-p102">In your code editor, open **index.html** in the root of the project. This file contains the HTML that will be rendered in the add-in's task pane.</span></span>
 
-2. <span data-ttu-id="77d8a-120">Замените элемент `<body>` приведенным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="77d8a-120">Replace the `<body>` element with the following markup and save the file.</span></span> 
+2. <span data-ttu-id="a2410-120">Замените элемент `<body>` приведенной ниже разметкой и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="a2410-120">Replace the `<body>` element with the following markup and save the file.</span></span> 
 
     ```html
     <body class="ms-font-m ms-welcome">
@@ -74,7 +74,7 @@ ms.locfileid: "29742340"
     </body>
     ```
 
-3. <span data-ttu-id="77d8a-121">Откройте файл **src\index.js**, чтобы указать скрипт для надстройки.</span><span class="sxs-lookup"><span data-stu-id="77d8a-121">Open the file **src\index.js** to specify the script for the add-in.</span></span> <span data-ttu-id="77d8a-122">Замените все его содержимое следующим кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="77d8a-122">Replace the entire contents with the following code and save the file.</span></span>
+3. <span data-ttu-id="a2410-121">Откройте файл **src\index.js**, чтобы указать скрипт для надстройки.</span><span class="sxs-lookup"><span data-stu-id="a2410-121">Open the file **src\index.js** to specify the script for the add-in.</span></span> <span data-ttu-id="a2410-122">Замените все его содержимое следующим кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="a2410-122">Replace the entire contents with the following code and save the file.</span></span>
 
     ```js
     import * as OfficeHelpers from "@microsoft/office-js-helpers";
@@ -121,7 +121,7 @@ ms.locfileid: "29742340"
     }
     ```
 
-4. <span data-ttu-id="77d8a-123">Откройте файл **app.css**, чтобы указать собственные стили для надстройки.</span><span class="sxs-lookup"><span data-stu-id="77d8a-123">Open the file **app.css** to specify the custom styles for the add-in.</span></span> <span data-ttu-id="77d8a-124">Замените все его содержимое приведенным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="77d8a-124">Replace the entire contents with the following and save the file.</span></span>
+4. <span data-ttu-id="a2410-123">Откройте файл **app.css**, чтобы указать собственные стили для надстройки.</span><span class="sxs-lookup"><span data-stu-id="a2410-123">Open the file **app.css** to specify the custom styles for the add-in.</span></span> <span data-ttu-id="a2410-124">Замените все его содержимое приведенным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="a2410-124">Replace the entire contents with the following and save the file.</span></span>
 
     ```css
     html, body {
@@ -197,15 +197,15 @@ ms.locfileid: "29742340"
     }
     ```
 
-## <a name="update-the-manifest"></a><span data-ttu-id="77d8a-125">Обновление манифеста</span><span class="sxs-lookup"><span data-stu-id="77d8a-125">Update the manifest</span></span>
+## <a name="update-the-manifest"></a><span data-ttu-id="a2410-125">Обновление манифеста</span><span class="sxs-lookup"><span data-stu-id="a2410-125">Update the manifest</span></span>
 
-1. <span data-ttu-id="77d8a-126">Откройте файл **manifest.xml**, чтобы определить параметры и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="77d8a-126">Open the file **manifest.xml** to define the add-in's settings and capabilities.</span></span>
+1. <span data-ttu-id="a2410-126">Откройте файл **manifest.xml**, чтобы определить параметры и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="a2410-126">Open the file **manifest.xml** to define the add-in's settings and capabilities.</span></span>
 
-2. <span data-ttu-id="77d8a-127">Элемент `ProviderName` содержит заполнитель.</span><span class="sxs-lookup"><span data-stu-id="77d8a-127">The `ProviderName` element has a placeholder value.</span></span> <span data-ttu-id="77d8a-128">Замените его на свое имя.</span><span class="sxs-lookup"><span data-stu-id="77d8a-128">Replace it with your name.</span></span>
+2. <span data-ttu-id="a2410-p105">Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.</span><span class="sxs-lookup"><span data-stu-id="a2410-p105">The `ProviderName` element has a placeholder value. Replace it with your name.</span></span>
 
-3. <span data-ttu-id="77d8a-129">Атрибут `DefaultValue` элемента `Description` содержит заполнитель.</span><span class="sxs-lookup"><span data-stu-id="77d8a-129">The `DefaultValue` attribute of the `Description` element has a placeholder.</span></span> <span data-ttu-id="77d8a-130">Замените его строкой **Надстройка области задач для OneNote**.</span><span class="sxs-lookup"><span data-stu-id="77d8a-130">Replace it with **A task pane add-in for OneNote**.</span></span>
+3. <span data-ttu-id="a2410-p106">Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его строкой **Надстройка области задач для OneNote**.</span><span class="sxs-lookup"><span data-stu-id="a2410-p106">The `DefaultValue` attribute of the `Description` element has a placeholder. Replace it with **A task pane add-in for OneNote**.</span></span>
 
-4. <span data-ttu-id="77d8a-131">Сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="77d8a-131">Save the file.</span></span>
+4. <span data-ttu-id="a2410-131">Сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="a2410-131">Save the file.</span></span>
 
     ```xml
     ...
@@ -217,29 +217,29 @@ ms.locfileid: "29742340"
     ...
     ```
 
-## <a name="start-the-dev-server"></a><span data-ttu-id="77d8a-132">Запуск сервера разработки</span><span class="sxs-lookup"><span data-stu-id="77d8a-132">Start the dev server</span></span>
+## <a name="start-the-dev-server"></a><span data-ttu-id="a2410-132">Запуск сервера разработки</span><span class="sxs-lookup"><span data-stu-id="a2410-132">Start the dev server</span></span>
 
 [!include[Start server section](../includes/quickstart-yo-start-server.md)]
 
-## <a name="try-it-out"></a><span data-ttu-id="77d8a-133">Проверка</span><span class="sxs-lookup"><span data-stu-id="77d8a-133">Try it out</span></span>
+## <a name="try-it-out"></a><span data-ttu-id="a2410-133">Проверка</span><span class="sxs-lookup"><span data-stu-id="a2410-133">Try it out</span></span>
 
-1. <span data-ttu-id="77d8a-134">Откройте записную книжку в [OneNote Online](https://www.onenote.com/notebooks).</span><span class="sxs-lookup"><span data-stu-id="77d8a-134">In [OneNote Online](https://www.onenote.com/notebooks), open a notebook.</span></span>
+1. <span data-ttu-id="a2410-134">Откройте записную книжку в [OneNote Online](https://www.onenote.com/notebooks).</span><span class="sxs-lookup"><span data-stu-id="a2410-134">In [OneNote Online](https://www.onenote.com/notebooks), open a notebook.</span></span>
 
-2. <span data-ttu-id="77d8a-135">Выберите **Вставка > Надстройки Office**. Откроется диалоговое окно "Надстройки Office".</span><span class="sxs-lookup"><span data-stu-id="77d8a-135">Choose **Insert > Office Add-ins** to open the Office Add-ins dialog.</span></span>
+2. <span data-ttu-id="a2410-135">Выберите **Вставка > Надстройки Office**. Откроется диалоговое окно "Надстройки Office".</span><span class="sxs-lookup"><span data-stu-id="a2410-135">Choose **Insert > Office Add-ins** to open the Office Add-ins dialog.</span></span>
 
-    - <span data-ttu-id="77d8a-136">Если вы вошли с помощью обычной учетной записи, выберите **Отправить надстройку** на вкладке **МОИ НАДСТРОЙКИ**.</span><span class="sxs-lookup"><span data-stu-id="77d8a-136">If you're signed in with your consumer account, select the **MY ADD-INS** tab, and then choose **Upload My Add-in**.</span></span>
+    - <span data-ttu-id="a2410-136">Если вы вошли с помощью обычной учетной записи, выберите **Отправить надстройку** на вкладке **МОИ НАДСТРОЙКИ**.</span><span class="sxs-lookup"><span data-stu-id="a2410-136">If you're signed in with your consumer account, select the **MY ADD-INS** tab, and then choose **Upload My Add-in**.</span></span>
 
-    - <span data-ttu-id="77d8a-137">Если вы вошли с помощью рабочей или учебной учетной записи, выберите **Отправить надстройку** на вкладке **МОЯ ОРГАНИЗАЦИЯ**.</span><span class="sxs-lookup"><span data-stu-id="77d8a-137">If you're signed in with your work or school account, select the **MY ORGANIZATION** tab, and then select **Upload My Add-in**.</span></span> 
+    - <span data-ttu-id="a2410-137">Если вы вошли с помощью рабочей или учебной учетной записи, выберите **Отправить надстройку** на вкладке **МОЯ ОРГАНИЗАЦИЯ**.</span><span class="sxs-lookup"><span data-stu-id="a2410-137">If you're signed in with your work or school account, select the **MY ORGANIZATION** tab, and then select **Upload My Add-in**.</span></span> 
 
-    <span data-ttu-id="77d8a-138">На следующем изображении показана вкладка **МОИ НАДСТРОЙКИ** для обычных записных книжек.</span><span class="sxs-lookup"><span data-stu-id="77d8a-138">The following image shows the **MY ADD-INS** tab for consumer notebooks.</span></span>
+    <span data-ttu-id="a2410-138">На следующем изображении показана вкладка **МОИ НАДСТРОЙКИ** для обычных записных книжек.</span><span class="sxs-lookup"><span data-stu-id="a2410-138">The following image shows the **MY ADD-INS** tab for consumer notebooks.</span></span>
 
     <img alt="The Office Add-ins dialog showing the MY ADD-INS tab" src="../images/onenote-office-add-ins-dialog.png" width="500">
 
-3. <span data-ttu-id="77d8a-139">В диалоговом окне "Отправить надстройку" выберите **manifest.xml** в папке проекта и нажмите кнопку **Отправить**.</span><span class="sxs-lookup"><span data-stu-id="77d8a-139">In the Upload Add-in dialog, browse to **manifest.xml** in your project folder, and then choose **Upload**.</span></span> 
+3. <span data-ttu-id="a2410-139">В диалоговом окне "Отправить надстройку" выберите **manifest.xml** в папке проекта и нажмите кнопку **Отправить**.</span><span class="sxs-lookup"><span data-stu-id="a2410-139">In the Upload Add-in dialog, browse to **manifest.xml** in your project folder, and then choose **Upload**.</span></span> 
 
-4. <span data-ttu-id="77d8a-140">На вкладке **Главная** ленты нажмите кнопку **Показать область задач**.</span><span class="sxs-lookup"><span data-stu-id="77d8a-140">From the **Home** tab, choose the **Show Taskpane** button in the ribbon.</span></span> <span data-ttu-id="77d8a-141">Область задач надстройки откроется в iFrame рядом со страницей OneNote.</span><span class="sxs-lookup"><span data-stu-id="77d8a-141">The add-in task pane opens in an iFrame next to the OneNote page.</span></span>
+4. <span data-ttu-id="a2410-140">На вкладке **Главная** ленты нажмите кнопку **Показать область задач**.</span><span class="sxs-lookup"><span data-stu-id="a2410-140">From the **Home** tab, choose the **Show Taskpane** button in the ribbon.</span></span> <span data-ttu-id="a2410-141">Область задач надстройки откроется в iFrame рядом со страницей OneNote.</span><span class="sxs-lookup"><span data-stu-id="a2410-141">The add-in task pane opens in an iFrame next to the OneNote page.</span></span>
 
-5. <span data-ttu-id="77d8a-142">Введите указанное ниже HTML-содержимое в области текста и нажмите кнопку **Добавить структуру**.</span><span class="sxs-lookup"><span data-stu-id="77d8a-142">Enter the following HTML content in the text area, and then choose **Add outline**.</span></span>  
+5. <span data-ttu-id="a2410-142">Введите указанное ниже HTML-содержимое в области текста и нажмите кнопку **Добавить структуру**.</span><span class="sxs-lookup"><span data-stu-id="a2410-142">Enter the following HTML content in the text area, and then choose **Add outline**.</span></span>  
 
     ```html
     <ol>
@@ -250,33 +250,33 @@ ms.locfileid: "29742340"
     </ol>
     ```
 
-    <span data-ttu-id="77d8a-143">Указанная структура будет добавлена на страницу.</span><span class="sxs-lookup"><span data-stu-id="77d8a-143">The outline that you specified is added to the page.</span></span>
+    <span data-ttu-id="a2410-143">Указанная структура будет добавлена на страницу.</span><span class="sxs-lookup"><span data-stu-id="a2410-143">The outline that you specified is added to the page.</span></span>
 
     ![Надстройка OneNote, созданная на основе этого руководства](../images/onenote-first-add-in-3.png)
 
-## <a name="troubleshooting-and-tips"></a><span data-ttu-id="77d8a-145">Устранение неполадок и советы</span><span class="sxs-lookup"><span data-stu-id="77d8a-145">Troubleshooting and tips</span></span>
+## <a name="troubleshooting-and-tips"></a><span data-ttu-id="a2410-145">Устранение неполадок и советы</span><span class="sxs-lookup"><span data-stu-id="a2410-145">Troubleshooting and tips</span></span>
 
-- <span data-ttu-id="77d8a-p108">Для отладки надстройки можно использовать имеющиеся в браузере средства разработчика. При использовании веб-сервера Gulp и отладке в Internet Explorer или Chrome вы можете сохранить внесенные изменения в локальном расположении, а затем просто обновить iFrame надстройки.</span><span class="sxs-lookup"><span data-stu-id="77d8a-p108">You can debug the add-in using your browser's developer tools. When you're using the Gulp web server and debugging in Internet Explorer or Chrome, you can save your changes locally and then just refresh the add-in's iFrame.</span></span>
+- <span data-ttu-id="a2410-p108">Для отладки надстройки можно использовать имеющиеся в браузере средства разработчика. При использовании веб-сервера Gulp и отладке в Internet Explorer или Chrome вы можете сохранить внесенные изменения в локальном расположении, а затем просто обновить iFrame надстройки.</span><span class="sxs-lookup"><span data-stu-id="a2410-p108">You can debug the add-in using your browser's developer tools. When you're using the Gulp web server and debugging in Internet Explorer or Chrome, you can save your changes locally and then just refresh the add-in's iFrame.</span></span>
 
-- <span data-ttu-id="77d8a-p109">Просматривая объект OneNote, вы увидите, что доступные для использования свойства имеют действительные значения. Свойства, которые необходимо загрузить, имеют значение *undefined*. Разверните узел `_proto_`, чтобы увидеть свойства, которые определены для объекта, но еще не загружены.</span><span class="sxs-lookup"><span data-stu-id="77d8a-p109">When you inspect a OneNote object, the properties that are currently available for use display actual values. Properties that need to be loaded display *undefined*. Expand the `_proto_` node to see properties that are defined on the object but are not yet loaded.</span></span>
+- <span data-ttu-id="a2410-p109">Просматривая объект OneNote, вы увидите, что доступные для использования свойства имеют действительные значения. Свойства, которые необходимо загрузить, имеют значение *undefined*. Разверните узел `_proto_`, чтобы увидеть свойства, которые определены для объекта, но еще не загружены.</span><span class="sxs-lookup"><span data-stu-id="a2410-p109">When you inspect a OneNote object, the properties that are currently available for use display actual values. Properties that need to be loaded display *undefined*. Expand the `_proto_` node to see properties that are defined on the object but are not yet loaded.</span></span>
 
    ![Выгруженный объект OneNote в отладчике](../images/onenote-debug.png)
 
-- <span data-ttu-id="77d8a-p110">Если надстройка использует какие-либо HTTP-ресурсы, то вам потребуется включить смешанное содержимое в браузере. Надстройки, которые применяются в рабочей среде, должны использовать только безопасные HTTPS-ресурсы.</span><span class="sxs-lookup"><span data-stu-id="77d8a-p110">You need to enable mixed content in the browser if your add-in uses any HTTP resources. Production add-ins should use only secure HTTPS resources.</span></span>
+- <span data-ttu-id="a2410-p110">Если надстройка использует какие-либо HTTP-ресурсы, то вам потребуется включить смешанное содержимое в браузере. Надстройки, которые применяются в рабочей среде, должны использовать только безопасные HTTPS-ресурсы.</span><span class="sxs-lookup"><span data-stu-id="a2410-p110">You need to enable mixed content in the browser if your add-in uses any HTTP resources. Production add-ins should use only secure HTTPS resources.</span></span>
 
-- <span data-ttu-id="77d8a-154">Надстройки области задач можно открыть откуда угодно, но контентные надстройки вставляются только в содержимое стандартной страницы (не в заголовки, изображения, iFrames и т. д.).</span><span class="sxs-lookup"><span data-stu-id="77d8a-154">Task pane add-ins can be opened from anywhere, but content add-ins can only be inserted inside regular page content (i.e. not in titles, images, iFrames, etc.).</span></span> 
+- <span data-ttu-id="a2410-154">Надстройки области задач можно открыть откуда угодно, но контентные надстройки вставляются только в содержимое стандартной страницы (не в заголовки, изображения, iFrames и т. д.).</span><span class="sxs-lookup"><span data-stu-id="a2410-154">Task pane add-ins can be opened from anywhere, but content add-ins can only be inserted inside regular page content (i.e. not in titles, images, iFrames, etc.).</span></span> 
 
-## <a name="next-steps"></a><span data-ttu-id="77d8a-155">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="77d8a-155">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="a2410-155">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="a2410-155">Next steps</span></span>
 
-<span data-ttu-id="77d8a-156">Поздравляем, вы успешно создали надстройку OneNote!</span><span class="sxs-lookup"><span data-stu-id="77d8a-156">Congratulations, you've successfully created a OneNote add-in!</span></span> <span data-ttu-id="77d8a-157">Следующим шагом узнайте больше об основных понятиях, связанных с созданием надстроек OneNote.</span><span class="sxs-lookup"><span data-stu-id="77d8a-157">Next, learn more about the core concepts of building OneNote add-ins.</span></span>
+<span data-ttu-id="a2410-p111">Поздравляем, вы успешно создали надстройку OneNote! Следующим шагом узнайте больше об основных понятиях, связанных с созданием надстроек OneNote.</span><span class="sxs-lookup"><span data-stu-id="a2410-p111">Congratulations, you've successfully created a OneNote add-in! Next, learn more about the core concepts of building OneNote add-ins.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="77d8a-158">Обзор API JavaScript для OneNote</span><span class="sxs-lookup"><span data-stu-id="77d8a-158">OneNote JavaScript API programming overview</span></span>](../onenote/onenote-add-ins-programming-overview.md)
+> [<span data-ttu-id="a2410-158">Обзор API JavaScript для OneNote</span><span class="sxs-lookup"><span data-stu-id="a2410-158">OneNote JavaScript API programming overview</span></span>](../onenote/onenote-add-ins-programming-overview.md)
 
-## <a name="see-also"></a><span data-ttu-id="77d8a-159">См. также</span><span class="sxs-lookup"><span data-stu-id="77d8a-159">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a2410-159">См. также</span><span class="sxs-lookup"><span data-stu-id="a2410-159">See also</span></span>
 
-- [<span data-ttu-id="77d8a-160">Обзор API JavaScript для OneNote</span><span class="sxs-lookup"><span data-stu-id="77d8a-160">OneNote JavaScript API programming overview</span></span>](../onenote/onenote-add-ins-programming-overview.md)
-- [<span data-ttu-id="77d8a-161">Справочник по API JavaScript для OneNote</span><span class="sxs-lookup"><span data-stu-id="77d8a-161">OneNote JavaScript API reference</span></span>](https://docs.microsoft.com/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference)
-- [<span data-ttu-id="77d8a-162">Пример надстройки Rubric Grader</span><span class="sxs-lookup"><span data-stu-id="77d8a-162">Rubric Grader sample</span></span>](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
-- [<span data-ttu-id="77d8a-163">Обзор платформы надстроек Office</span><span class="sxs-lookup"><span data-stu-id="77d8a-163">Office Add-ins platform overview</span></span>](../overview/office-add-ins.md)
+- [<span data-ttu-id="a2410-160">Обзор API JavaScript для OneNote</span><span class="sxs-lookup"><span data-stu-id="a2410-160">OneNote JavaScript API programming overview</span></span>](../onenote/onenote-add-ins-programming-overview.md)
+- [<span data-ttu-id="a2410-161">Справочник по API JavaScript для OneNote</span><span class="sxs-lookup"><span data-stu-id="a2410-161">OneNote JavaScript API reference</span></span>](/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference)
+- [<span data-ttu-id="a2410-162">Пример надстройки Rubric Grader</span><span class="sxs-lookup"><span data-stu-id="a2410-162">Rubric Grader sample</span></span>](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
+- [<span data-ttu-id="a2410-163">Обзор платформы надстроек Office</span><span class="sxs-lookup"><span data-stu-id="a2410-163">Office Add-ins platform overview</span></span>](../overview/office-add-ins.md)
 
