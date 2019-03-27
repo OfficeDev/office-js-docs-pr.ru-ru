@@ -1,60 +1,60 @@
 ---
-title: Office.context — набор обязательных элементов 1.7
+title: Office. Context — набор обязательных элементов 1,7
 description: ''
-ms.date: 02/15/2019
+ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 2d17d1a91d4ecbf8a46d0aa9c972187b0006fb82
-ms.sourcegitcommit: f26778b596b6b022814c39601485ff676ed4e2fa
+ms.openlocfilehash: 6a6c7e01df7a063759d3658283f6d724a2b16ca7
+ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "30068317"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30871355"
 ---
-# <a name="context"></a><span data-ttu-id="4b8fd-102">context</span><span class="sxs-lookup"><span data-stu-id="4b8fd-102">context</span></span>
+# <a name="context"></a><span data-ttu-id="e0d1e-102">context</span><span class="sxs-lookup"><span data-stu-id="e0d1e-102">context</span></span>
 
-### <a name="officeofficemdcontext"></a><span data-ttu-id="4b8fd-103">[Office](Office.md).context</span><span class="sxs-lookup"><span data-stu-id="4b8fd-103">[Office](Office.md).context</span></span>
+### <a name="officeofficemdcontext"></a><span data-ttu-id="e0d1e-103">[Office](Office.md).context</span><span class="sxs-lookup"><span data-stu-id="e0d1e-103">[Office](Office.md).context</span></span>
 
-<span data-ttu-id="4b8fd-p101">Пространство имен Office.context содержит общие интерфейсы, которые используются надстройками всех приложений Office. В этот список входят только интерфейсы, используемые надстройками Outlook. Полный список интерфейсов пространства имен Office.context см. в статье [Ссылка на пространство имен Office.context в общем API](/javascript/api/office/office.context).</span><span class="sxs-lookup"><span data-stu-id="4b8fd-p101">The Office.context namespace provides shared interfaces that are used by add-ins in all of the Office apps. This listing documents only those interfaces that are used by Outlook add-ins. For a full listing of the Office.context namespace, see the [Office.context reference in the Common API](/javascript/api/office/office.context).</span></span>
+<span data-ttu-id="e0d1e-p101">Пространство имен Office.context содержит общие интерфейсы, которые используются надстройками всех приложений Office. В этот список входят только интерфейсы, используемые надстройками Outlook. Полный список интерфейсов пространства имен Office.context см. в статье [Ссылка на пространство имен Office.context в общем API](/javascript/api/office/office.context).</span><span class="sxs-lookup"><span data-stu-id="e0d1e-p101">The Office.context namespace provides shared interfaces that are used by add-ins in all of the Office apps. This listing documents only those interfaces that are used by Outlook add-ins. For a full listing of the Office.context namespace, see the [Office.context reference in the Common API](/javascript/api/office/office.context).</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="4b8fd-106">Требования</span><span class="sxs-lookup"><span data-stu-id="4b8fd-106">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="e0d1e-106">Требования</span><span class="sxs-lookup"><span data-stu-id="e0d1e-106">Requirements</span></span>
 
-|<span data-ttu-id="4b8fd-107">Требование</span><span class="sxs-lookup"><span data-stu-id="4b8fd-107">Requirement</span></span>| <span data-ttu-id="4b8fd-108">Значение</span><span class="sxs-lookup"><span data-stu-id="4b8fd-108">Value</span></span>|
+|<span data-ttu-id="e0d1e-107">Требование</span><span class="sxs-lookup"><span data-stu-id="e0d1e-107">Requirement</span></span>| <span data-ttu-id="e0d1e-108">Значение</span><span class="sxs-lookup"><span data-stu-id="e0d1e-108">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="4b8fd-109">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="4b8fd-109">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="4b8fd-110">1.0</span><span class="sxs-lookup"><span data-stu-id="4b8fd-110">1.0</span></span>|
-|[<span data-ttu-id="4b8fd-111">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="4b8fd-111">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)| <span data-ttu-id="4b8fd-112">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="4b8fd-112">Compose or Read</span></span>|
+|[<span data-ttu-id="e0d1e-109">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="e0d1e-109">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="e0d1e-110">1.0</span><span class="sxs-lookup"><span data-stu-id="e0d1e-110">1.0</span></span>|
+|[<span data-ttu-id="e0d1e-111">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="e0d1e-111">Applicable Outlook mode</span></span>](/outlook/add-ins/#extension-points)| <span data-ttu-id="e0d1e-112">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="e0d1e-112">Compose or Read</span></span>|
 
-##### <a name="members-and-methods"></a><span data-ttu-id="4b8fd-113">Элементы и методы</span><span class="sxs-lookup"><span data-stu-id="4b8fd-113">Members and methods</span></span>
+##### <a name="members-and-methods"></a><span data-ttu-id="e0d1e-113">Элементы и методы</span><span class="sxs-lookup"><span data-stu-id="e0d1e-113">Members and methods</span></span>
 
-| <span data-ttu-id="4b8fd-114">Элемент</span><span class="sxs-lookup"><span data-stu-id="4b8fd-114">Member</span></span> | <span data-ttu-id="4b8fd-115">Тип</span><span class="sxs-lookup"><span data-stu-id="4b8fd-115">Type</span></span> |
+| <span data-ttu-id="e0d1e-114">Элемент</span><span class="sxs-lookup"><span data-stu-id="e0d1e-114">Member</span></span> | <span data-ttu-id="e0d1e-115">Тип</span><span class="sxs-lookup"><span data-stu-id="e0d1e-115">Type</span></span> |
 |--------|------|
-| [<span data-ttu-id="4b8fd-116">displayLanguage</span><span class="sxs-lookup"><span data-stu-id="4b8fd-116">displayLanguage</span></span>](#displaylanguage-string) | <span data-ttu-id="4b8fd-117">Элемент</span><span class="sxs-lookup"><span data-stu-id="4b8fd-117">Member</span></span> |
-| [<span data-ttu-id="4b8fd-118">officeTheme</span><span class="sxs-lookup"><span data-stu-id="4b8fd-118">officeTheme</span></span>](#officetheme-object) | <span data-ttu-id="4b8fd-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="4b8fd-119">Member</span></span> |
-| [<span data-ttu-id="4b8fd-120">roamingSettings</span><span class="sxs-lookup"><span data-stu-id="4b8fd-120">roamingSettings</span></span>](#roamingsettings-roamingsettingsjavascriptapioutlook17officeroamingsettings) | <span data-ttu-id="4b8fd-121">Элемент</span><span class="sxs-lookup"><span data-stu-id="4b8fd-121">Member</span></span> |
+| [<span data-ttu-id="e0d1e-116">displayLanguage</span><span class="sxs-lookup"><span data-stu-id="e0d1e-116">displayLanguage</span></span>](#displaylanguage-string) | <span data-ttu-id="e0d1e-117">Member</span><span class="sxs-lookup"><span data-stu-id="e0d1e-117">Member</span></span> |
+| [<span data-ttu-id="e0d1e-118">officeTheme</span><span class="sxs-lookup"><span data-stu-id="e0d1e-118">officeTheme</span></span>](#officetheme-object) | <span data-ttu-id="e0d1e-119">Member</span><span class="sxs-lookup"><span data-stu-id="e0d1e-119">Member</span></span> |
+| [<span data-ttu-id="e0d1e-120">roamingSettings</span><span class="sxs-lookup"><span data-stu-id="e0d1e-120">roamingSettings</span></span>](#roamingsettings-roamingsettings) | <span data-ttu-id="e0d1e-121">Элемент</span><span class="sxs-lookup"><span data-stu-id="e0d1e-121">Member</span></span> |
 
-### <a name="namespaces"></a><span data-ttu-id="4b8fd-122">Пространства имен</span><span class="sxs-lookup"><span data-stu-id="4b8fd-122">Namespaces</span></span>
+### <a name="namespaces"></a><span data-ttu-id="e0d1e-122">Пространства имен</span><span class="sxs-lookup"><span data-stu-id="e0d1e-122">Namespaces</span></span>
 
-<span data-ttu-id="4b8fd-123">[mailbox](office.context.mailbox.md). Предоставляет для Microsoft Outlook и Microsoft Outlook в Интернете доступ к объектной модели надстройки Outlook.</span><span class="sxs-lookup"><span data-stu-id="4b8fd-123">[mailbox](office.context.mailbox.md): Provides access to the Outlook add-in object model for Microsoft Outlook and Microsoft Outlook on the web.</span></span>
+<span data-ttu-id="e0d1e-123">[mailbox](office.context.mailbox.md). Предоставляет для Microsoft Outlook и Microsoft Outlook в Интернете доступ к объектной модели надстройки Outlook.</span><span class="sxs-lookup"><span data-stu-id="e0d1e-123">[mailbox](office.context.mailbox.md): Provides access to the Outlook add-in object model for Microsoft Outlook and Microsoft Outlook on the web.</span></span>
 
-### <a name="members"></a><span data-ttu-id="4b8fd-124">Элементы</span><span class="sxs-lookup"><span data-stu-id="4b8fd-124">Members</span></span>
+### <a name="members"></a><span data-ttu-id="e0d1e-124">Элементы</span><span class="sxs-lookup"><span data-stu-id="e0d1e-124">Members</span></span>
 
-####  <a name="displaylanguage-string"></a><span data-ttu-id="4b8fd-125">displayLanguage :String</span><span class="sxs-lookup"><span data-stu-id="4b8fd-125">displayLanguage :String</span></span>
+####  <a name="displaylanguage-string"></a><span data-ttu-id="e0d1e-125">displayLanguage :String</span><span class="sxs-lookup"><span data-stu-id="e0d1e-125">displayLanguage :String</span></span>
 
-<span data-ttu-id="4b8fd-126">Получает определенный пользователем языковой стандарт (язык) в формате обозначений языка RFC 1766 для пользовательского интерфейса ведущего приложения Office.</span><span class="sxs-lookup"><span data-stu-id="4b8fd-126">Gets the locale (language) in RFC 1766 Language tag format specified by the user for the UI of the Office host application.</span></span>
+<span data-ttu-id="e0d1e-126">Получает определенный пользователем языковой стандарт (язык) в формате обозначений языка RFC 1766 для пользовательского интерфейса ведущего приложения Office.</span><span class="sxs-lookup"><span data-stu-id="e0d1e-126">Gets the locale (language) in RFC 1766 Language tag format specified by the user for the UI of the Office host application.</span></span>
 
-<span data-ttu-id="4b8fd-127">Значение `displayLanguage` отображает текущий параметр **Язык интерфейса**, заданный в разделе **Файл > Параметры > Язык** ведущего приложения Office.</span><span class="sxs-lookup"><span data-stu-id="4b8fd-127">The `displayLanguage` value reflects the current **Display Language** setting specified with **File > Options > Language** in the Office host application.</span></span>
+<span data-ttu-id="e0d1e-127">The `displayLanguage` value reflects the current **Display Language** setting specified with **File > Options > Language** in the Office host application.</span><span class="sxs-lookup"><span data-stu-id="e0d1e-127">The `displayLanguage` value reflects the current **Display Language** setting specified with **File > Options > Language** in the Office host application.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="4b8fd-128">Тип</span><span class="sxs-lookup"><span data-stu-id="4b8fd-128">Type</span></span>
+##### <a name="type"></a><span data-ttu-id="e0d1e-128">Тип</span><span class="sxs-lookup"><span data-stu-id="e0d1e-128">Type</span></span>
 
-*   <span data-ttu-id="4b8fd-129">String</span><span class="sxs-lookup"><span data-stu-id="4b8fd-129">String</span></span>
+*   <span data-ttu-id="e0d1e-129">String</span><span class="sxs-lookup"><span data-stu-id="e0d1e-129">String</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="4b8fd-130">Требования</span><span class="sxs-lookup"><span data-stu-id="4b8fd-130">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="e0d1e-130">Требования</span><span class="sxs-lookup"><span data-stu-id="e0d1e-130">Requirements</span></span>
 
-|<span data-ttu-id="4b8fd-131">Требование</span><span class="sxs-lookup"><span data-stu-id="4b8fd-131">Requirement</span></span>| <span data-ttu-id="4b8fd-132">Значение</span><span class="sxs-lookup"><span data-stu-id="4b8fd-132">Value</span></span>|
+|<span data-ttu-id="e0d1e-131">Требование</span><span class="sxs-lookup"><span data-stu-id="e0d1e-131">Requirement</span></span>| <span data-ttu-id="e0d1e-132">Значение</span><span class="sxs-lookup"><span data-stu-id="e0d1e-132">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="4b8fd-133">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="4b8fd-133">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="4b8fd-134">1.0</span><span class="sxs-lookup"><span data-stu-id="4b8fd-134">1.0</span></span>|
-|[<span data-ttu-id="4b8fd-135">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="4b8fd-135">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)| <span data-ttu-id="4b8fd-136">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="4b8fd-136">Compose or Read</span></span>|
+|[<span data-ttu-id="e0d1e-133">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="e0d1e-133">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="e0d1e-134">1.0</span><span class="sxs-lookup"><span data-stu-id="e0d1e-134">1.0</span></span>|
+|[<span data-ttu-id="e0d1e-135">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="e0d1e-135">Applicable Outlook mode</span></span>](/outlook/add-ins/#extension-points)| <span data-ttu-id="e0d1e-136">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="e0d1e-136">Compose or Read</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="4b8fd-137">Пример</span><span class="sxs-lookup"><span data-stu-id="4b8fd-137">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="e0d1e-137">Пример</span><span class="sxs-lookup"><span data-stu-id="e0d1e-137">Example</span></span>
 
 ```javascript
 function sayHelloWithDisplayLanguage() {
@@ -75,36 +75,36 @@ function write(message){
 }
 ```
 
-####  <a name="officetheme-object"></a><span data-ttu-id="4b8fd-138">officeTheme :Object</span><span class="sxs-lookup"><span data-stu-id="4b8fd-138">officeTheme :Object</span></span>
+####  <a name="officetheme-object"></a><span data-ttu-id="e0d1e-138">officeTheme :Object</span><span class="sxs-lookup"><span data-stu-id="e0d1e-138">officeTheme :Object</span></span>
 
-<span data-ttu-id="4b8fd-139">Предоставляет доступ к свойствам цветов темы Office.</span><span class="sxs-lookup"><span data-stu-id="4b8fd-139">Provides access to the properties for Office theme colors.</span></span>
+<span data-ttu-id="e0d1e-139">Предоставляет доступ к свойствам цветов темы Office.</span><span class="sxs-lookup"><span data-stu-id="e0d1e-139">Provides access to the properties for Office theme colors.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="4b8fd-140">Этот элемент не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="4b8fd-140">This member is not supported in Outlook for iOS or Outlook for Android.</span></span>
+> <span data-ttu-id="e0d1e-140">Этот элемент не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="e0d1e-140">This member is not supported in Outlook for iOS or Outlook for Android.</span></span>
 
-<span data-ttu-id="4b8fd-p102">Цвета тем Office позволяют согласовать цветовую схему надстройки с текущей темой Office, которую пользователь выбрал с помощью элементов **Файл > Учетная запись Office > Тема Office** и которая применяется во всех ведущих приложениях Office. Цвета тем Office можно использовать для всех надстроек почты и области задач.</span><span class="sxs-lookup"><span data-stu-id="4b8fd-p102">Using Office theme colors let's you coordinate the color scheme of your add-in with the current Office theme selected by the user with **File > Office Account > Office Theme UI**, which is applied across all Office host applications. Using Office theme colors is appropriate for mail and task pane add-ins.</span></span>
+<span data-ttu-id="e0d1e-p102">Цвета тем Office позволяют согласовать цветовую схему надстройки с текущей темой Office, которую пользователь выбрал с помощью элементов **Файл > Учетная запись Office > Тема Office** и которая применяется во всех ведущих приложениях Office. Цвета тем Office можно использовать для всех надстроек почты и области задач.</span><span class="sxs-lookup"><span data-stu-id="e0d1e-p102">Using Office theme colors let's you coordinate the color scheme of your add-in with the current Office theme selected by the user with **File > Office Account > Office Theme UI**, which is applied across all Office host applications. Using Office theme colors is appropriate for mail and task pane add-ins.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="4b8fd-143">Тип</span><span class="sxs-lookup"><span data-stu-id="4b8fd-143">Type</span></span>
+##### <a name="type"></a><span data-ttu-id="e0d1e-143">Тип</span><span class="sxs-lookup"><span data-stu-id="e0d1e-143">Type</span></span>
 
-*   <span data-ttu-id="4b8fd-144">Object</span><span class="sxs-lookup"><span data-stu-id="4b8fd-144">Object</span></span>
+*   <span data-ttu-id="e0d1e-144">Object</span><span class="sxs-lookup"><span data-stu-id="e0d1e-144">Object</span></span>
 
-##### <a name="properties"></a><span data-ttu-id="4b8fd-145">Свойства:</span><span class="sxs-lookup"><span data-stu-id="4b8fd-145">Properties:</span></span>
+##### <a name="properties"></a><span data-ttu-id="e0d1e-145">Свойства:</span><span class="sxs-lookup"><span data-stu-id="e0d1e-145">Properties:</span></span>
 
-|<span data-ttu-id="4b8fd-146">Имя</span><span class="sxs-lookup"><span data-stu-id="4b8fd-146">Name</span></span>| <span data-ttu-id="4b8fd-147">Тип</span><span class="sxs-lookup"><span data-stu-id="4b8fd-147">Type</span></span>| <span data-ttu-id="4b8fd-148">Описание</span><span class="sxs-lookup"><span data-stu-id="4b8fd-148">Description</span></span>|
+|<span data-ttu-id="e0d1e-146">Имя</span><span class="sxs-lookup"><span data-stu-id="e0d1e-146">Name</span></span>| <span data-ttu-id="e0d1e-147">Тип</span><span class="sxs-lookup"><span data-stu-id="e0d1e-147">Type</span></span>| <span data-ttu-id="e0d1e-148">Описание</span><span class="sxs-lookup"><span data-stu-id="e0d1e-148">Description</span></span>|
 |---|---|---|
-|`bodyBackgroundColor`| <span data-ttu-id="4b8fd-149">String</span><span class="sxs-lookup"><span data-stu-id="4b8fd-149">String</span></span>|<span data-ttu-id="4b8fd-150">Получает цвет фона текста сообщения для темы Office в виде шестнадцатеричной триады цветов.</span><span class="sxs-lookup"><span data-stu-id="4b8fd-150">Gets the Office theme body background color as a hexadecimal color triplet.</span></span>|
-|`bodyForegroundColor`| <span data-ttu-id="4b8fd-151">String</span><span class="sxs-lookup"><span data-stu-id="4b8fd-151">String</span></span>|<span data-ttu-id="4b8fd-152">Получает цвет переднего плана текста сообщения для темы Office в виде шестнадцатеричной триады цветов.</span><span class="sxs-lookup"><span data-stu-id="4b8fd-152">Gets the Office theme body foreground color as a hexadecimal color triplet.</span></span>|
-|`controlBackgroundColor`| <span data-ttu-id="4b8fd-153">String</span><span class="sxs-lookup"><span data-stu-id="4b8fd-153">String</span></span>|<span data-ttu-id="4b8fd-154">Получает цвет фона элемента управления для темы Office в виде шестнадцатеричной триады цветов.</span><span class="sxs-lookup"><span data-stu-id="4b8fd-154">Gets the Office theme control background color as a hexadecimal color triplet.</span></span>|
-|`controlForegroundColor`| <span data-ttu-id="4b8fd-155">String</span><span class="sxs-lookup"><span data-stu-id="4b8fd-155">String</span></span>|<span data-ttu-id="4b8fd-156">Получает цвет элемента управления текстом сообщения для темы Office в виде шестнадцатеричной триады цветов.</span><span class="sxs-lookup"><span data-stu-id="4b8fd-156">Gets the Office theme body control color as a hexadecimal color triplet.</span></span>|
+|`bodyBackgroundColor`| <span data-ttu-id="e0d1e-149">String</span><span class="sxs-lookup"><span data-stu-id="e0d1e-149">String</span></span>|<span data-ttu-id="e0d1e-150">Получает цвет фона текста сообщения для темы Office в виде шестнадцатеричной триады цветов.</span><span class="sxs-lookup"><span data-stu-id="e0d1e-150">Gets the Office theme body background color as a hexadecimal color triplet.</span></span>|
+|`bodyForegroundColor`| <span data-ttu-id="e0d1e-151">String</span><span class="sxs-lookup"><span data-stu-id="e0d1e-151">String</span></span>|<span data-ttu-id="e0d1e-152">Получает цвет переднего плана текста сообщения для темы Office в виде шестнадцатеричной триады цветов.</span><span class="sxs-lookup"><span data-stu-id="e0d1e-152">Gets the Office theme body foreground color as a hexadecimal color triplet.</span></span>|
+|`controlBackgroundColor`| <span data-ttu-id="e0d1e-153">String</span><span class="sxs-lookup"><span data-stu-id="e0d1e-153">String</span></span>|<span data-ttu-id="e0d1e-154">Получает цвет фона элемента управления для темы Office в виде шестнадцатеричной триады цветов.</span><span class="sxs-lookup"><span data-stu-id="e0d1e-154">Gets the Office theme control background color as a hexadecimal color triplet.</span></span>|
+|`controlForegroundColor`| <span data-ttu-id="e0d1e-155">String</span><span class="sxs-lookup"><span data-stu-id="e0d1e-155">String</span></span>|<span data-ttu-id="e0d1e-156">Получает цвет элемента управления текстом сообщения для темы Office в виде шестнадцатеричной триады цветов.</span><span class="sxs-lookup"><span data-stu-id="e0d1e-156">Gets the Office theme body control color as a hexadecimal color triplet.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="4b8fd-157">Требования</span><span class="sxs-lookup"><span data-stu-id="4b8fd-157">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="e0d1e-157">Требования</span><span class="sxs-lookup"><span data-stu-id="e0d1e-157">Requirements</span></span>
 
-|<span data-ttu-id="4b8fd-158">Требование</span><span class="sxs-lookup"><span data-stu-id="4b8fd-158">Requirement</span></span>| <span data-ttu-id="4b8fd-159">Значение</span><span class="sxs-lookup"><span data-stu-id="4b8fd-159">Value</span></span>|
+|<span data-ttu-id="e0d1e-158">Требование</span><span class="sxs-lookup"><span data-stu-id="e0d1e-158">Requirement</span></span>| <span data-ttu-id="e0d1e-159">Значение</span><span class="sxs-lookup"><span data-stu-id="e0d1e-159">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="4b8fd-160">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="4b8fd-160">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="4b8fd-161">1.3</span><span class="sxs-lookup"><span data-stu-id="4b8fd-161">1.3</span></span>|
-|[<span data-ttu-id="4b8fd-162">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="4b8fd-162">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)| <span data-ttu-id="4b8fd-163">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="4b8fd-163">Compose or Read</span></span>|
+|[<span data-ttu-id="e0d1e-160">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="e0d1e-160">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="e0d1e-161">1.3</span><span class="sxs-lookup"><span data-stu-id="e0d1e-161">1.3</span></span>|
+|[<span data-ttu-id="e0d1e-162">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="e0d1e-162">Applicable Outlook mode</span></span>](/outlook/add-ins/#extension-points)| <span data-ttu-id="e0d1e-163">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="e0d1e-163">Compose or Read</span></span>|
 
-##### <a name="example"></a><span data-ttu-id="4b8fd-164">Пример</span><span class="sxs-lookup"><span data-stu-id="4b8fd-164">Example</span></span>
+##### <a name="example"></a><span data-ttu-id="e0d1e-164">Пример</span><span class="sxs-lookup"><span data-stu-id="e0d1e-164">Example</span></span>
 
 ```javascript
 function applyOfficeTheme(){
@@ -119,20 +119,20 @@ function applyOfficeTheme(){
 }
 ```
 
-####  <a name="roamingsettings-roamingsettingsjavascriptapioutlook17officeroamingsettings"></a><span data-ttu-id="4b8fd-165">roamingSettings :[RoamingSettings](/javascript/api/outlook_1_7/office.RoamingSettings)</span><span class="sxs-lookup"><span data-stu-id="4b8fd-165">roamingSettings :[RoamingSettings](/javascript/api/outlook_1_7/office.RoamingSettings)</span></span>
+####  <a name="roamingsettings-roamingsettingsjavascriptapioutlook17officeroamingsettings"></a><span data-ttu-id="e0d1e-165">roamingSettings :[RoamingSettings](/javascript/api/outlook_1_7/office.RoamingSettings)</span><span class="sxs-lookup"><span data-stu-id="e0d1e-165">roamingSettings :[RoamingSettings](/javascript/api/outlook_1_7/office.RoamingSettings)</span></span>
 
-<span data-ttu-id="4b8fd-166">Получает объект, представляющий настраиваемые параметры или состояние надстройки почты, сохраненное в почтовом ящике пользователя.</span><span class="sxs-lookup"><span data-stu-id="4b8fd-166">Gets an object that represents the custom settings or state of a mail add-in saved to a user's mailbox.</span></span>
+<span data-ttu-id="e0d1e-166">Получает объект, представляющий настраиваемые параметры или состояние надстройки почты, сохраненное в почтовом ящике пользователя.</span><span class="sxs-lookup"><span data-stu-id="e0d1e-166">Gets an object that represents the custom settings or state of a mail add-in saved to a user's mailbox.</span></span>
 
-<span data-ttu-id="4b8fd-167">Объект `RoamingSettings` позволяет сохранять данные для надстройки почты, записанные в почтовом ящике пользователя, и получать к ним доступ, таким образом делая их доступными для этой надстройки, когда она запускается из любого клиентского ведущего приложения, используемого для доступа к этому почтовому ящику.</span><span class="sxs-lookup"><span data-stu-id="4b8fd-167">The `RoamingSettings` object lets you store and access data for a mail add-in that is stored in a user's mailbox, so that is available to that add-in when it is running from any host client application used to access that mailbox.</span></span>
+<span data-ttu-id="e0d1e-167">Объект `RoamingSettings` позволяет сохранять данные для надстройки почты, записанные в почтовом ящике пользователя, и получать к ним доступ, таким образом делая их доступными для этой надстройки, когда она запускается из любого клиентского ведущего приложения, используемого для доступа к этому почтовому ящику.</span><span class="sxs-lookup"><span data-stu-id="e0d1e-167">The `RoamingSettings` object lets you store and access data for a mail add-in that is stored in a user's mailbox, so that is available to that add-in when it is running from any host client application used to access that mailbox.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="4b8fd-168">Тип</span><span class="sxs-lookup"><span data-stu-id="4b8fd-168">Type</span></span>
+##### <a name="type"></a><span data-ttu-id="e0d1e-168">Тип</span><span class="sxs-lookup"><span data-stu-id="e0d1e-168">Type</span></span>
 
-*   [<span data-ttu-id="4b8fd-169">RoamingSettings</span><span class="sxs-lookup"><span data-stu-id="4b8fd-169">RoamingSettings</span></span>](/javascript/api/outlook_1_7/office.RoamingSettings)
+*   [<span data-ttu-id="e0d1e-169">RoamingSettings</span><span class="sxs-lookup"><span data-stu-id="e0d1e-169">RoamingSettings</span></span>](/javascript/api/outlook_1_7/office.RoamingSettings)
 
-##### <a name="requirements"></a><span data-ttu-id="4b8fd-170">Требования</span><span class="sxs-lookup"><span data-stu-id="4b8fd-170">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="e0d1e-170">Требования</span><span class="sxs-lookup"><span data-stu-id="e0d1e-170">Requirements</span></span>
 
-|<span data-ttu-id="4b8fd-171">Требование</span><span class="sxs-lookup"><span data-stu-id="4b8fd-171">Requirement</span></span>| <span data-ttu-id="4b8fd-172">Значение</span><span class="sxs-lookup"><span data-stu-id="4b8fd-172">Value</span></span>|
+|<span data-ttu-id="e0d1e-171">Требование</span><span class="sxs-lookup"><span data-stu-id="e0d1e-171">Requirement</span></span>| <span data-ttu-id="e0d1e-172">Значение</span><span class="sxs-lookup"><span data-stu-id="e0d1e-172">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="4b8fd-173">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="4b8fd-173">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="4b8fd-174">1.0</span><span class="sxs-lookup"><span data-stu-id="4b8fd-174">1.0</span></span>|
-|[<span data-ttu-id="4b8fd-175">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="4b8fd-175">Minimum permission level</span></span>](https://docs.microsoft.com/outlook/add-ins/understanding-outlook-add-in-permissions)| <span data-ttu-id="4b8fd-176">С ограничениями</span><span class="sxs-lookup"><span data-stu-id="4b8fd-176">Restricted</span></span>|
-|[<span data-ttu-id="4b8fd-177">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="4b8fd-177">Applicable Outlook mode</span></span>](https://docs.microsoft.com/outlook/add-ins/#extension-points)| <span data-ttu-id="4b8fd-178">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="4b8fd-178">Compose or Read</span></span>|
+|[<span data-ttu-id="e0d1e-173">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="e0d1e-173">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="e0d1e-174">1.0</span><span class="sxs-lookup"><span data-stu-id="e0d1e-174">1.0</span></span>|
+|[<span data-ttu-id="e0d1e-175">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="e0d1e-175">Minimum permission level</span></span>](/outlook/add-ins/understanding-outlook-add-in-permissions)| <span data-ttu-id="e0d1e-176">С ограничениями</span><span class="sxs-lookup"><span data-stu-id="e0d1e-176">Restricted</span></span>|
+|[<span data-ttu-id="e0d1e-177">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="e0d1e-177">Applicable Outlook mode</span></span>](/outlook/add-ins/#extension-points)| <span data-ttu-id="e0d1e-178">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="e0d1e-178">Compose or Read</span></span>|
