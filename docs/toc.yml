@@ -2,7 +2,7 @@ items:
 - name: Документация по надстройкам Office
   displayName: Excel, Word, Outlook, PowerPoint, OneNote, Project
   href: index.yml
-- name: Обзор
+- name: Общие сведения
   items:
   - name: Сведения о надстройках Office
     displayName: Excel, Word, Outlook, PowerPoint, OneNote, Project
@@ -144,7 +144,7 @@ items:
         href: develop/loading-the-dom-and-runtime-environment.md
       - name: Объектная модель API JavaScript для Office
         href: develop/office-javascript-api-object-model.md
-      - name: Асинхронное программирование в надстройках для Office
+      - name: Асинхронное программирование в случае надстроек Office
         href: develop/asynchronous-programming-in-office-add-ins.md
       - name: Сохранение состояния и параметров
         href: develop/persisting-add-in-state-and-settings.md
@@ -190,7 +190,7 @@ items:
       href: develop/localization.md
     - name: Разработка надстроек с помощью Visual Studio
       items:
-      - name: Создание и отладка надстроек для Office в Visual Studio
+      - name: Создание и отладка надстроек Office в Visual Studio
         href: develop/create-and-debug-office-add-ins-in-visual-studio.md
       - name: Получение IntelliSense для JavaScript в Visual Studio
         href: develop/get-javascript-intellisense-in-visual-studio.md
@@ -267,9 +267,15 @@ items:
         - name: Метаданные пользовательских функций
           displayName: Excel
           href: excel/custom-functions-json.md
+        - name: Создание метаданных пользовательских функций
+          displayName: Excel
+          href: excel/custom-functions-json-autogeneration.md
         - name: Рекомендации по пользовательским функциям
           displayName: Excel
           href: excel/custom-functions-best-practices.md
+        - name: Отладка пользовательских функций
+          displayName: Excel
+          href: excel/custom-functions-debugging.md
         - name: Проверка подлинности пользовательских функций
           displayName: Excel
           href: excel/custom-functions-authentication.md
@@ -297,7 +303,7 @@ items:
       - name: Обработка ошибок
         displayName: Excel
         href: excel/excel-add-ins-error-handling.md
-      - name: Мероприятия
+      - name: События
         displayName: Excel
         href: excel/excel-add-ins-events.md
       - name: Несколько диапазонов
@@ -318,7 +324,7 @@ items:
       - name: Формы
         displayName: Excel
         href: excel/excel-add-ins-shapes.md
-      - name: Таблицы
+      - name: Tables
         displayName: Excel
         href: excel/excel-add-ins-tables.md
       - name: Workbooks
@@ -330,7 +336,7 @@ items:
     - name: Обзор API JavaScript для Excel
       displayName: Excel
       href: https://docs.microsoft.com/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview
-    - name: Справочник по API JavaScript для Excel
+    - name: Справочные материалы по API JavaScript для Excel
       displayName: Excel
       href: /javascript/api/excel
   - name: Надстройки Word
@@ -506,7 +512,7 @@ items:
           href: reference/objectmodel/preview-requirement-set/office.md
         - name: Office. Context
           href: reference/objectmodel/preview-requirement-set/Office.context.md
-        - name: Office. Context. Mailbox
+        - name: Office.context.mailbox
           href: reference/objectmodel/preview-requirement-set/Office.context.mailbox.md
         - name: Office.context.mailbox.diagnostics
           href: reference/objectmodel/preview-requirement-set/Office.context.mailbox.diagnostics.md
@@ -523,7 +529,7 @@ items:
           href: reference/objectmodel/requirement-set-1.7/office.md
         - name: Office. Context
           href: reference/objectmodel/requirement-set-1.7/Office.context.md
-        - name: Office. Context. Mailbox
+        - name: Office.context.mailbox
           href: reference/objectmodel/requirement-set-1.7/Office.context.mailbox.md
         - name: Office.context.mailbox.diagnostics
           href: reference/objectmodel/requirement-set-1.7/Office.context.mailbox.diagnostics.md
@@ -540,7 +546,7 @@ items:
           href: reference/objectmodel/requirement-set-1.6/office.md
         - name: Office. Context
           href: reference/objectmodel/requirement-set-1.6/Office.context.md
-        - name: Office. Context. Mailbox
+        - name: Office.context.mailbox
           href: reference/objectmodel/requirement-set-1.6/Office.context.mailbox.md
         - name: Office.context.mailbox.diagnostics
           href: reference/objectmodel/requirement-set-1.6/Office.context.mailbox.diagnostics.md
@@ -557,7 +563,7 @@ items:
           href: reference/objectmodel/requirement-set-1.5/office.md
         - name: Office. Context
           href: reference/objectmodel/requirement-set-1.5/Office.context.md
-        - name: Office. Context. Mailbox
+        - name: Office.context.mailbox
           href: reference/objectmodel/requirement-set-1.5/Office.context.mailbox.md
         - name: Office.context.mailbox.diagnostics
           href: reference/objectmodel/requirement-set-1.5/Office.context.mailbox.diagnostics.md
@@ -574,7 +580,7 @@ items:
           href: reference/objectmodel/requirement-set-1.4/office.md
         - name: Office. Context
           href: reference/objectmodel/requirement-set-1.4/Office.context.md
-        - name: Office. Context. Mailbox
+        - name: Office.context.mailbox
           href: reference/objectmodel/requirement-set-1.4/Office.context.mailbox.md
         - name: Office.context.mailbox.diagnostics
           href: reference/objectmodel/requirement-set-1.4/Office.context.mailbox.diagnostics.md
@@ -591,7 +597,7 @@ items:
           href: reference/objectmodel/requirement-set-1.3/office.md
         - name: Office. Context
           href: reference/objectmodel/requirement-set-1.3/Office.context.md
-        - name: Office. Context. Mailbox
+        - name: Office.context.mailbox
           href: reference/objectmodel/requirement-set-1.3/Office.context.mailbox.md
         - name: Office.context.mailbox.diagnostics
           href: reference/objectmodel/requirement-set-1.3/Office.context.mailbox.diagnostics.md
@@ -608,7 +614,7 @@ items:
           href: reference/objectmodel/requirement-set-1.2/office.md
         - name: Office. Context
           href: reference/objectmodel/requirement-set-1.2/Office.context.md
-        - name: Office. Context. Mailbox
+        - name: Office.context.mailbox
           href: reference/objectmodel/requirement-set-1.2/Office.context.mailbox.md
         - name: Office.context.mailbox.diagnostics
           href: reference/objectmodel/requirement-set-1.2/Office.context.mailbox.diagnostics.md
@@ -625,7 +631,7 @@ items:
           href: reference/objectmodel/requirement-set-1.1/office.md
         - name: Office. Context
           href: reference/objectmodel/requirement-set-1.1/Office.context.md
-        - name: Office. Context. Mailbox
+        - name: Office.context.mailbox
           href: reference/objectmodel/requirement-set-1.1/Office.context.mailbox.md
         - name: Office.context.mailbox.diagnostics
           href: reference/objectmodel/requirement-set-1.1/Office.context.mailbox.diagnostics.md
@@ -744,7 +750,7 @@ items:
     - name: VersionOverrides
       href: reference/manifest/versionoverrides.md
       items:
-      - name: Action
+      - name: Действие
         href: reference/manifest/action.md
       - name: AllFormFactors
         href: reference/manifest/allformfactors.md
@@ -792,9 +798,9 @@ items:
         href: reference/manifest/webapplicationinfo.md
 - name: Ресурсы
   href: resources/resources-links-help.md
-ms.openlocfilehash: 7b872ef8236dd2f0ce4000772755ff93eb66abc4
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: 86f9006398dc54fa4fc9af11b88c2ccb15a0a8b4
+ms.sourcegitcommit: 14ceac067e0e130869b861d289edb438b5e3eff9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30872202"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "31477581"
