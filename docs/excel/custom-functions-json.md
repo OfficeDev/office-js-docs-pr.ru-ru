@@ -1,22 +1,31 @@
 ---
-ms.date: 01/08/2019
+ms.date: 03/29/2019
 description: Определение метаданных для настраиваемых функций в Excel.
 title: Метаданные для настраиваемых функций в Excel (предварительная версия)
 localization_priority: Normal
-ms.openlocfilehash: 43ec436d15d118346bb04dcd4d16f5eb180ecbd3
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: 28a9a0207f7439af164eb9ca7c4b9ed9e966b3ed
+ms.sourcegitcommit: 14ceac067e0e130869b861d289edb438b5e3eff9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30872090"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "31477553"
 ---
 # <a name="custom-functions-metadata-preview"></a>Метаданные для настраиваемых функций (предварительная версия)
 
-При определении [настраиваемых функций](custom-functions-overview.md) в надстройке Excel в проект надстройки необходимо включить JSON-файл метаданных, содержащий информацию, необходимую Excel для регистрации настраиваемых функций и предоставления пользователям доступа к ним. В этой статье описан формат JSON-файла метаданных.
+При определении [пользовательских функций](custom-functions-overview.md) в надстройке Excel проект надстройки содержит файл метаданных JSON, который предоставляет сведения, необходимые Excel для регистрации настраиваемых функций и предоставления доступа к ним конечным пользователям. Этот файл создается следующим образом:
+
+- в рукописном файле JSON
+- из комментариев Жсдок, вводимых в начале функции;
+
+Пользовательские функции регистрируются при первом запуске надстройки и после их появления для одного и того же пользователя во всех книгах.
+
+В этой статье описывается формат файла метаданных JSON, предполагая, что он пишется вручную. Дополнительные сведения о создании файла Жсдок комментариев JSON можно узнать в статье [Создание МЕТАДАННЫХ JSON для пользовательских функций](custom-functions-json-autogeneration.md).
 
 Сведения о других файлах, которые необходимо добавить в проект надстройки для включения настраиваемых функций, см. в статье [Создание пользовательских функций в Excel](custom-functions-overview.md).
 
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
+
+> Настройки сервера на сервере, на котором размещен JSON-файл, должны включать активацию [CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS), чтобы пользовательские функции сработали надлежащим образом в Excel Online.
 
 ## <a name="example-metadata"></a>Пример метаданных
 
@@ -104,7 +113,7 @@ ms.locfileid: "30872090"
 ```
 
 > [!NOTE]
-> Пример готового JSON-файла приводится в репозитории GitHub [OfficeDev/Excel-Custom-Functions](https://github.com/OfficeDev/Excel-Custom-Functions/blob/master/config/customfunctions.json).
+> Пример готового JSON-файла приводится в репозитории GitHub [OfficeDev/Excel-Custom-Functions](https://github.com/OfficeDev/Excel-Custom-Functions/blob/master/src/functions/functions.json).
 
 ## <a name="functions"></a>functions 
 
@@ -160,4 +169,4 @@ ms.locfileid: "30872090"
 * [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
 * [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
 * [Журнал изменений пользовательских функций](custom-functions-changelog.md)
-* [Руководство по настраиваемым функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
+* [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)

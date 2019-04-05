@@ -2,12 +2,13 @@
 ms.date: 01/08/2019
 description: Знакомство с последними обновлениями пользовательских функций Excel.
 title: Журнал изменений пользовательских функций (предварительная версия)
-ms.openlocfilehash: a450bf2f6a297fe0843f3b3b57a17be0c854905e
-ms.sourcegitcommit: d1b5966b157a262536699eeb26ac5029cb5bf7f5
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: 03e4dd922ac3895e11a508f97e7ac3fa3e7b1cb0
+ms.sourcegitcommit: 14ceac067e0e130869b861d289edb438b5e3eff9
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "27783298"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "31477539"
 ---
 # <a name="custom-functions-changelog-preview"></a>Журнал изменений пользовательских функций (предварительная версия)
 
@@ -18,7 +19,7 @@ ms.locfileid: "27783298"
 - **28 ноября 2017 г.**: Добавлена поддержка отмены вызова асинхронных функций (необходимо изменение для потоковых функций).
 - **7 мая 2018 г.**: Реализована* поддержка запущенный подпроцессов для Mac, Excel Online и синхронных функций
 - **20 сентября 2018 г.**: Реализована поддержка пользовательских функций среды выполнения JavaScript. Дополнительные сведения см. в статье [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md).
-- **20 октября 2018 г.**: После выхода [cборки October Insiders](https://support.office.com/ru-RU/article/what-s-new-for-office-insiders-c152d1e2-96ff-4ce9-8c14-e74e13847a24) для использования пользовательских функций требуется параметр «идентификатор» в [метаданных пользовательских функций](custom-functions-json.md) для настольных версий под Windows и Online-версий. На компьютерах Mac нужно игнорировать этот параметр. Пользовательские функции теперь также поддерживают дополнительные параметры и `any` тип возвращаемых данных.
+- **20 октября 2018 г.**: После выхода [cборки October Insiders](https://support.office.com/en-us/article/what-s-new-for-office-insiders-c152d1e2-96ff-4ce9-8c14-e74e13847a24) для использования пользовательских функций требуется параметр «идентификатор» в [метаданных пользовательских функций](custom-functions-json.md) для настольных версий под Windows и Online-версий. На компьютерах Mac нужно игнорировать этот параметр. Пользовательские функции теперь также поддерживают дополнительные параметры и `any` тип возвращаемых данных.
 - **12 декабря 2018 г.**: Пользовательские функции теперь включают способ обнаружения адреса ячейки. Дополнительные сведения см. в статье [Определение того, какая ячейка вызывала пользовательскую функцию](custom-functions-overview.md#determine-which-cell-invoked-your-custom-function).
 - **8 января 2019 г.**: Метод привязки `CustomFunctionMapping()` был изменен на `CustomFunctions.associate()`. Дополнительные сведения см. в статье [Рекомендации по пользовательским функциям (предварительная версия)](custom-functions-best-practices.md).
 
@@ -31,5 +32,6 @@ ms.locfileid: "27783298"
 * [Обзор пользовательских функций](custom-functions-overview.md)
 * [Метаданные пользовательских функций](custom-functions-json.md)
 * [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
-* [Рекомендации по настраиваемым функциям](custom-functions-best-practices.md)
-* [Руководство по настраиваемым функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
+* [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
+* [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
+* [Отладка пользовательских функций](custom-functions-debugging.md)

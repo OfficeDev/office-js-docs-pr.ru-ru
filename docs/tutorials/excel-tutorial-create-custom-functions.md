@@ -5,12 +5,12 @@ ms.date: 03/19/2019
 ms.prod: excel
 ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: 328d4da7a4dfcc2098f7c5425f84b851bd9dd9d6
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: 76f4d88b9da39a4d71927982836ee061b329a9b3
+ms.sourcegitcommit: 14ceac067e0e130869b861d289edb438b5e3eff9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30870676"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "31477574"
 ---
 # <a name="tutorial-create-custom-functions-in-excel-preview"></a>Руководство: создание пользовательских функций в Excel (предварительная версия)
 
@@ -78,12 +78,12 @@ ms.locfileid: "30870676"
 
 5. Запустите локальный веб-сервер, работающий на Node.js. Вы можете попробовать использовать надстройку пользовательской функции в Excel для Windows или в Excel Online.
 
-# <a name="excel-for-windowstabexcel-windows"></a>[Excel для Windows](#tab/excel-windows)
+# [<a name="excel-for-windows"></a>Excel для Windows](#tab/excel-windows)
 
 Выполните следующую команду.
 
 ```
-npm run start
+npm start desktop
 ```
 
 Эта команда запускает веб-сервер и загружает неопубликованную надстройку пользовательской функции в Excel для Windows.
@@ -91,12 +91,12 @@ npm run start
 > [!NOTE]
 > Если надстройка не загружается, проверьте правильность выполнения шага 3. Кроме того, можно включить **[ведение журнала в среде выполнения](../testing/troubleshoot-manifest.md#use-runtime-logging-to-debug-your-add-in)** для устранения неполадок в XML-файле манифеста надстройки, а также при любых проблемах установки или выполнения. Инструкции Write `console.log` в файл журнала в среде выполнения, чтобы помочь найти и устранить проблемы.
 
-# <a name="excel-onlinetabexcel-online"></a>[Excel Online](#tab/excel-online)
+# [<a name="excel-online"></a>Excel Online](#tab/excel-online)
 
 Выполните следующую команду.
 
 ```
-npm run start-web
+npm start web
 ```
 
 Эта команда запускает веб-сервер. Выполните шаги, описанные ниже, чтобы загрузить неопубликованную надстройку.
@@ -116,7 +116,7 @@ npm run start-web
     
 ## <a name="try-out-a-prebuilt-custom-function"></a>Проверка работы готовой пользовательской функции
 
-В проекте пользовательской функции, который вы создали, уже имеются две готовые пользовательские функции с именами ADD (Добавить) и INCREMENT (Увеличить). Код для этих встроенных функций содержится в файле **src/customfunctions.js**. Файл **./manifest.xml** указывает, что все пользовательские функции принадлежат пространству имен `CONTOSO`. Вы будете использовать пространство имен CONTOSO для доступа к пользовательским функциям в Excel.
+В проекте пользовательской функции, который вы создали, уже имеются две готовые пользовательские функции с именами ADD (Добавить) и INCREMENT (Увеличить). Код для этих встроенных функций находится в файле **src/functions/functions. js** . Файл **./manifest.xml** указывает, что все пользовательские функции принадлежат пространству имен `CONTOSO`. Вы будете использовать пространство имен CONTOSO для доступа к пользовательским функциям в Excel.
 
 Затем вы проверите пользовательскую функцию `ADD`, выполнив описанные ниже действия:
 
@@ -130,9 +130,9 @@ npm run start-web
 
 Интеграция данных из Интернета — отличный способ расширения функционала Excel через пользовательские функции. Далее необходимо создать пользовательскую функцию под именем `stockPrice`, которая получает котировки акций из Web API и возвращает результат в ячейку на листе. Вы будете использовать API IEX Trading, который предоставляется бесплатно и не требует проверки подлинности.
 
-1. В проекте **stock-ticker** найдите файл **src/customfunctions.js** и откройте его в редакторе кода.
+1. В проекте **Stock-Tick** найдите файл **src/functions/functions. js** и откройте его в редакторе кода.
 
-2. В **customfunctions.js** найдите функцию `increment` и добавьте приведенный ниже код сразу после этой функции.
+2. В файле Function **. js**нахождение `increment` функции и добавление следующего кода сразу после этой функции.
 
     ```js
     function stockPrice(ticker) {
@@ -153,7 +153,7 @@ npm run start-web
 > In the January Insiders 1901 Build, there is a bug preventing fetch calls from executing which will result in #VALUE!.
 > To workaround this please use the [XMLHTTPRequest API](/office/dev/add-ins/excel/custom-functions-runtime#requesting-external-data) to make the web request.
 
-3. In **customfunctions.js**, locate the line `CustomFunctions.associate("INCREMENT", increment);`. Add the following line of code immediately after that line, and save the file.
+3. In **functions.js**, locate the line `CustomFunctions.associate("INCREMENT", increment);`. Add the following line of code immediately after that line, and save the file.
 
     ```js
     CustomFunctions.associate("STOCKPRICE", stockprice);
@@ -164,7 +164,7 @@ npm run start-web
     Прежде чем Excel сможет использовать вашу пользовательскую функцию, необходимо описать ее с помощью метаданных. Вам нужно определить `id`, используемый в методе `associate` ранее, а также некоторые другие метаданные.
 
 
-4. Откройте файл **config/customfunctions.json**. Добавьте указанный ниже объект JSON в массив 'functions' и сохраните файл.
+4. Откройте файл **src/functions/functions. JSON** . Добавьте указанный ниже объект JSON в массив 'functions' и сохраните файл.
 
     ```JSON
     {
@@ -191,16 +191,16 @@ npm run start-web
 
 5. Повторно зарегистрируйте надстройку в Excel, чтобы новая функция стала доступной. 
 
-# <a name="excel-for-windowstabexcel-windows"></a>[Excel для Windows](#tab/excel-windows)
+# [<a name="excel-for-windows"></a>Excel для Windows](#tab/excel-windows)
 
 1. Закройте Excel, а затем откройте Excel повторно.
 
 2. В Excel выберите вкладку **Вставка**, а затем нажмите стрелку вниз, которая находится справа от пункта **Мои надстройки**. ![Вставьте ленту в Excel для Windows с выделенной стрелкой "Мои надстройки"](../images/excel-cf-register-add-in-1b.png).
 
 3. В списке доступных надстроек найдите раздел **Надстройки разработчика** и выберите надстройку **stock-ticker**, чтобы зарегистрировать ее.
-    ![Вставка ленты в Excel для Windows с выделенной надстройкой "Пользовательские функции Excel" в списке "Мои надстройки"](../images/excel-cf-register-add-in-2.png).
+    ![Вставьте ленту в Excel для Windows с выделенной надстройкой "Пользовательские функции Excel" в списке "Мои надстройки".](../images/excel-cf-register-add-in-2.png)
 
-# <a name="excel-onlinetabexcel-online"></a>[Excel Online](#tab/excel-online)
+# [<a name="excel-online"></a>Excel Online](#tab/excel-online)
 
 1. В Excel Online выберите вкладку **Вставка**, а затем выберите **Надстройки**. ![Вставьте ленту в Excel Online с выделенным значком "Мои надстройки"](../images/excel-cf-online-register-add-in-1.png)
 
@@ -220,7 +220,7 @@ npm run start-web
 
 Функция `stockPrice` возвращает цену акции в конкретный момент времени, однако цены на акции всегда меняются. Далее вы создадите пользовательскую функцию с именем `stockPriceStream`, которая получает цену акции каждые 1000 милисекунд.
 
-1. В проекте **stock-ticker** добавьте указанный ниже код в файл **src/customfunctions.js** и сохраните его.
+1. В проекте **Stock-Tick** добавьте следующий код в **src/functions/functions. js** и сохраните файл.
 
     ```js
     function stockPriceStream(ticker, handler) {
@@ -261,7 +261,7 @@ npm run start-web
     
     Прежде чем Excel сможет использовать вашу пользовательскую функцию, необходимо описать ее с помощью метаданных.
     
-2. В проекте **stock-ticker** добавьте указанный ниже объект в массив `functions` в файле **config/customfunctions.json** и сохраните файл.
+2. В проекте **Stock-Ticks** добавьте следующий объект в `functions` массив в файле **src/functions/functions. JSON** и сохраните файл.
     
     ```json
     { 
@@ -292,16 +292,16 @@ npm run start-web
 
 3. Повторно зарегистрируйте надстройку в Excel, чтобы новая функция стала доступной.
 
-# <a name="excel-for-windowstabexcel-windows"></a>[Excel для Windows](#tab/excel-windows)
+# [<a name="excel-for-windows"></a>Excel для Windows](#tab/excel-windows)
 
 1. Закройте Excel, а затем откройте Excel повторно.
 
 2. В Excel выберите вкладку **Вставка**, а затем нажмите стрелку вниз, которая находится справа от пункта **Мои надстройки**. ![Вставьте ленту в Excel для Windows с выделенной стрелкой "Мои надстройки"](../images/excel-cf-register-add-in-1b.png).
 
 3. В списке доступных надстроек найдите раздел **Надстройки разработчика** и выберите надстройку **stock-ticker**, чтобы зарегистрировать ее.
-    ![Вставка ленты в Excel для Windows с выделенной надстройкой "Пользовательские функции Excel" в списке "Мои надстройки"](../images/excel-cf-register-add-in-2.png).
+    ![Вставьте ленту в Excel для Windows с выделенной надстройкой "Пользовательские функции Excel" в списке "Мои надстройки".](../images/excel-cf-register-add-in-2.png)
 
-# <a name="excel-onlinetabexcel-online"></a>[Excel Online](#tab/excel-online)
+# [<a name="excel-online"></a>Excel Online](#tab/excel-online)
 
 1. В Excel Online выберите вкладку **Вставка**, а затем выберите **Надстройки**. ![Вставьте ленту в Excel Online с выделенным значком "Мои надстройки"](../images/excel-cf-online-register-add-in-1.png)
 
@@ -317,10 +317,9 @@ npm run start-web
 <li>Теперь давайте оценим, как работает новая функция. В ячейке <strong>C1</strong> введите нужный текст <strong>=CONTOSO.STOCKPRICESTREAM("MSFT")</strong> и нажмите ВВОД. Если рынок ценных бумаг открыт, вы увидите, что результат в ячейке <strong>C1</strong> постоянно обновляется, отражая в режиме реального времени цену одной акции корпорации Майкрософт.</li>
 </ol>
 
-
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Поздравляем! Вы создали новый проект пользовательских функций, попробовали, как работает готовая функция, создали пользовательскую функцию, которая запрашивает данные из Интернета, а также создали пользовательскую функцию, которая осуществляет потоковую передачу данных в реальном времени из сети Интернет. Чтобы узнать больше о пользовательских функции в Excel, перейдите к следующей статье:
+Поздравляем! Вы создали новый проект пользовательских функций, попробовали, как работает готовая функция, создали пользовательскую функцию, которая запрашивает данные из Интернета, а также создали пользовательскую функцию, которая осуществляет потоковую передачу данных в реальном времени из сети Интернет. Вы также можете попробовать выполнить отладку этой функции [, используя инструкции по отладке пользовательских функций](../excel/custom-functions-debugging.md). Чтобы узнать больше о пользовательских функции в Excel, перейдите к следующей статье:
 
 > [!div class="nextstepaction"]
 > [Создание пользовательских функций в Excel](../excel/custom-functions-overview.md)
