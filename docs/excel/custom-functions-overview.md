@@ -1,14 +1,14 @@
 ---
-ms.date: 03/19/2019
+ms.date: 03/29/2019
 description: Создание пользовательских функций в Excel с помощью JavaScript.
 title: Создание пользовательских функций в Excel (ознакомительная версия)
 localization_priority: Priority
-ms.openlocfilehash: ac3410267da415c4d567092da2e653fcffd10b72
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: 59620b19cb8613e411abb84ed6766da94cae02c4
+ms.sourcegitcommit: 14ceac067e0e130869b861d289edb438b5e3eff9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30870452"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "31477560"
 ---
 # <a name="create-custom-functions-in-excel-preview"></a>Создание пользовательских функций в Excel (ознакомительная версия)
 
@@ -33,123 +33,44 @@ function add42(a, b) {
 
 ## <a name="components-of-a-custom-functions-add-in-project"></a>Компоненты пользовательские функции для надстройки проекта.
 
-Если вы используете [генератор Yo Office](https://github.com/OfficeDev/generator-office) для создания в Excel проекта с пользовательскими функциями, вы увидите следующие файлы в проекте, созданном генератором:
+Если вы используете [генератор Yo Office](https://github.com/OfficeDev/generator-office) для создания в Excel проекта с пользовательскими функциями, вы обнаружите, что он создает файлы, управляющие вашими функциями, областью задач и надстройкой в целом. Мы сосредоточимся на файлах, которые важны для пользовательских функций: 
 
 | Файл | Формат файла | Описание |
 |------|-------------|-------------|
-| **./src/customfunctions.js**<br/>или<br/>**./src/customfunctions.ts** | JavaScript<br/>или<br/>TypeScript | Содержит код, который определяет пользовательские функции. |
-| **./config/customfunctions.json** | JSON | Содержит метаданные с описанием пользовательских функций и позволяет Excel регистрировать пользовательские функции и сделать их доступными для конечных пользователей. |
-| **./index.html** | HTML | Предоставляет &lt;скрипт&gt; со ссылкой на файл JavaScript, который определяет пользовательские функции. |
-| **./manifest.xml** | XML | Определяет пространство имен для всех пользовательских функций в надстройку и расположение JavaScript, JSON и HTML-файлов, которые указаны ранее в этой таблице. |
-
-В разделах ниже приведены дополнительные сведения о данных файлах.
+| **./src/functions/functions.js**<br/>или<br/>**./src/functions/functions.ts** | JavaScript<br/>или<br/>TypeScript | Содержит код, который определяет пользовательские функции. |
+| **./src/functions/functions.html** | HTML | Предоставляет &lt;скрипт&gt; со ссылкой на файл JavaScript, который определяет пользовательские функции. |
+| **./manifest.xml** | XML | Определяет пространство имен для всех пользовательских функций в надстройке и расположение JavaScript и HTML-файлов, которые указаны ранее в этой таблице. Он также перечисляет расположения других файлов, которые могут использоваться надстройкой, например файлы области задач и командные файлы. |
 
 ### <a name="script-file"></a>Файл скрипта
 
-Файл сценария (**./src/customfunctions.js** или **./src/customfunctions.ts** в проекте, созданном генератором Yo Office) содержит код, который определяет пользовательские функции и размещает имена пользовательских функций к объектам в [файле метаданных JSON](#json-metadata-file). 
+Файл скрипта (**./src/functions/functions.js** или **./src/functions/functions.ts** в проекте, созданном генератором Yo Office) содержит код, определяющий пользовательские функции, комментарии, определяющие функцию, и сопоставляет имена пользовательских функций с объектами в [файле метаданных JSON](#json-metadata-file).
 
-Например, приведенный ниже код определяет пользовательские функции `add` и `increment`, а затем указывают информацию о сопоставлении для обеих функций. Функция `add` сопоставляется с объектом в файле метаданных JSON, где значение свойства `id` **ADD**, и функция `increment` будет сопоставляться с объектом в файле метаданных, где значение свойства`id` **INCREMENT**. См. статью [Советы и рекомендации по работе с пользовательскими функциями](custom-functions-best-practices.md#associating-function-names-with-json-metadata) для получения дополнительных данных о сопоставлении имен функций в файле скрипта с объектами в файле метаданных JSON.
+Указанный ниже код определяет пользовательскую функцию `add` и указывает информацию о сопоставлении для функции. Дополнительные сведения о сопоставлении функций см. в статье [Рекомендации по пользовательским функциям](custom-functions-best-practices.md#associating-function-names-with-json-metadata).
+
+В следующем коде также представлены комментарии кода, определяющие функцию. Обязательный комментарий `@customfunction` объявлен первым, чтобы указать, что это пользовательская функция. Вы также увидите два объявленных параметра (`first` и `second`), за которыми следуют их свойства `description`. Наконец, дается описание `returns`. Дополнительные сведения о том, какие комментарии являются обязательными для вашей пользовательской функции, см. в статье [Создание метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md).
 
 ```js
+/**
+ * Adds two numbers.
+ * @customfunction 
+ * @param first First number
+ * @param second Second number
+ * @returns The sum of the two numbers.
+ */
+
 function add(first, second){
   return first + second;
 }
 
-function increment(incrementBy, callback) {
-  var result = 0;
-  var timer = setInterval(function() {
-    result += incrementBy;
-    callback.setResult(result);
-  }, 1000);
-
-  callback.onCanceled = function() {
-    clearInterval(timer);
-  };
-}
-
 // associate `id` values in the JSON metadata file to the JavaScript function names
  CustomFunctions.associate("ADD", add);
- CustomFunctions.associate("INCREMENT", increment);
 ```
-
-### <a name="json-metadata-file"></a>Файл метаданных JSON
-
-Файл метаданных пользовательских функций (**./config/customfunctions.json** в проекте, созданном во время генератора Yo Office) предоставляет информацию, которая необходима Excel для регистрации пользовательских функций и обеспечения их доступности для конечных пользователей. Пользовательские функции регистрируются, когда пользователь запускает надстройку в первый раз. После этого как они становятся доступны тому самому пользователю во всех рабочих книгах (т.е. не только в рабочей книге, где надстройка первоначально запущена).
-
-> [!TIP]
-> Настройки сервера на сервере, на котором размещен JSON-файл, должны включать активацию [CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS), чтобы пользовательские функции сработали надлежащим образом в Excel Online.
-
-Код ниже в **customfunctions.json** определяет метаданные для функции `add` и функции `increment`, описанные ранее. Таблица, которая следует за этим примером кода, предоставляет подробные сведения об отдельных свойств для этого объекта JSON. См. статью [Советы и рекомендации по работе с пользовательскими функциями](custom-functions-best-practices.md#associating-function-names-with-json-metadata) для получения дополнительных данных об указании имен свойств `id` и `name` в файле метаданных JSON.
-
-```json
-{
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/office-js/custom-functions.schema.json",
-  "functions": [
-    {
-      "id": "ADD",
-      "name": "ADD",
-      "description": "Add two numbers",
-      "helpUrl": "http://www.contoso.com",
-      "result": {
-        "type": "number",
-        "dimensionality": "scalar"
-      },
-      "parameters": [
-        {
-          "name": "first",
-          "description": "first number to add",
-          "type": "number",
-          "dimensionality": "scalar"
-        },
-        {
-          "name": "second",
-          "description": "second number to add",
-          "type": "number",
-          "dimensionality": "scalar"
-        }
-      ]
-    },
-    {
-      "id": "INCREMENT",
-      "name": "INCREMENT",
-      "description": "Periodically increment a value",
-      "helpUrl": "http://www.contoso.com",
-      "result": {
-          "type": "number",
-          "dimensionality": "scalar"
-    },
-    "parameters": [
-        {
-            "name": "increment",
-            "description": "Amount to increment",
-            "type": "number",
-            "dimensionality": "scalar"
-        }
-    ],
-    "options": {
-        "cancelable": true,
-        "stream": true
-      }
-    }
-  ]
-}
-```
-
-В таблице ниже перечислены свойства, которые обычно есть в файле метаданных JSON. Дополнительные сведения о файле метаданных JSON см. в статье [Пользовательские функции метаданных](custom-functions-json.md).
-
-| Свойство  | Описание |
-|---------|---------|
-| `id` | Уникальный идентификатор для функции. Этот идентификатор может содержать только буквы, цифры и точки и не может изменяться после настройки. |
-| `name` | Имя функции, которая будет отображаться пользователю в Excel. В Excel это имя функции будет включать префикс пространства имен пользовательских функций, который указан в [XML файле манифеста](#manifest-file). |
-| `helpUrl` | URL-адрес страницы, который отображается при запросе пользователем справки. |
-| `description` | Описание того, что делает функция. Это значение отображается в виде подсказки, когда функция представляет собой выделенный элемент в меню автозаполнения в Excel. |
-| `result`  | Объект, который определяет тип информации, возвращаемый функцией. Для получения более подробной информации об этом объекте см. [результат](custom-functions-json.md#result). |
-| `parameters` | Массив, который определяет входные параметры для функции. Для получения более подробной информации об этом объекте см. [параметры](custom-functions-json.md#parameters). |
-| `options` | Позволяет настроить некоторые аспекты того, как и когда Excel выполняет функцию. Дополнительные сведения о способах использования этого свойства см. в разделах [Потоковая передача функций](#streaming-functions) и [Отмена функции](#canceling-a-function). |
 
 ### <a name="manifest-file"></a>Файл манифеста
 
-XML-файл манифеста для надстройки, который определяет пользовательские функции (**./manifest.xml** в проекте, который создает генератор Yo Office) и определяет пространство имен для всех пользовательских функций в надстройке, а также расположение файлов JavaScript, JSON и HTML. XML-разметка ниже представляет пример элементов `<ExtensionPoint>` и `<Resources>`, которые необходимо включить в манифест надстройки, чтобы активировать пользовательские функции.  
+XML-файл манифеста для надстройки, который определяет пользовательские функции (**./manifest.xml** в проекте, который создает генератор Yo Office) и определяет пространство имен для всех пользовательских функций в надстройке, а также расположение файлов JavaScript, JSON и HTML. 
+
+Базовая XML-разметка ниже представляет пример элементов `<ExtensionPoint>` и `<Resources>`, которые необходимо включить в манифест надстройки, чтобы активировать пользовательские функции. Если вы используете генератор Yo Office, созданные файлы пользовательской функции будут содержать более сложный файл манифеста, который можно сравнить в этом [репозитории Github](https://github.com/OfficeDev/Excel-Custom-Functions/blob/generate-metadata/manifest.xml).
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -337,7 +258,7 @@ function secondHighest(values){
 }
 ```
 
-Чтобы найти адрес ячейки, в файл скрипта (**./src/customfunctions.js** или **./src/customfunctions.ts**) потребуется также добавить функцию `getAddress`. В этой функции можно использовать параметры, как показано в примере ниже в виде `parameter1`. В качестве последнего параметра всегда будет использоваться `invocationContext` — объект, содержащий расположение ячейки, которое передает приложение Excel, если параметру `requiresAddress` присвоено значение `true` в файле метаданных JSON.
+Чтобы найти адрес ячейки, в файл скрипта (**./src/functions/functions.js** или **./src/functions/functions.ts**) потребуется также добавить функцию `getAddress`. В этой функции можно использовать параметры, как показано в примере ниже в виде `parameter1`. В качестве последнего параметра всегда будет использоваться `invocationContext` — объект, содержащий расположение ячейки, которое передает приложение Excel, если параметру `requiresAddress` присвоено значение `true` в файле метаданных JSON.
 
 ```js
 function getAddress(parameter1, invocationContext) {
@@ -355,6 +276,7 @@ function getAddress(parameter1, invocationContext) {
 
 * [Метаданные пользовательских функций](custom-functions-json.md)
 * [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
-* [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
+* [Рекомендации в отношении пользовательских функций](custom-functions-best-practices.md)
 * [Журнал изменений пользовательских функций](custom-functions-changelog.md)
-* [Руководство по настраиваемым функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
+* [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
+* [Отладка пользовательских функций](custom-functions-debugging.md)

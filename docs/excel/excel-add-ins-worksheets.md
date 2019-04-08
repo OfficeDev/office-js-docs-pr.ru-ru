@@ -1,14 +1,14 @@
 ---
 title: Работа с листами с использованием API JavaScript для Excel
 description: ''
-ms.date: 02/20/2019
+ms.date: 04/04/2019
 localization_priority: Priority
-ms.openlocfilehash: 825ae88afd98afbcd268716c93ddcb13d24a9a1e
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: 0c66022112e6a6742753feb9945300a5d214e9bb
+ms.sourcegitcommit: 63219bcc1bb5e3bed7eb6c6b0adb73a4829c7e8f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30871558"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "31479727"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
@@ -277,6 +277,30 @@ Excel.run(function (context) {
             console.log(`The value of the cell in row 2, column 5 is "${cell.values[0][0]}" and the address of that cell is "${cell.address}"`);
         })
 }).catch(errorHandlerFunction);
+```
+
+## <a name="detect-data-changes"></a>Обнаружение изменений данных
+
+Возможно, надстройке потребуется реагировать на изменения пользователями данных в листе. Чтобы обнаружить эти изменения, можно [зарегистрировать обработчик событий](excel-add-ins-events.md#register-an-event-handler) для события `onChanged` листа. Обработчики события `onChanged` получают объект [WorksheetChangedEventArgs](/javascript/api/excel/excel.worksheetchangedeventargs) при возникновении события.
+
+Объект `WorksheetChangedEventArgs` предоставляет сведения об изменениях и источнике. Так как событие `onChanged` возникает при изменении формата или значения данных, может быть полезно, чтобы надстройка проверяла, действительно ли значения изменились. Свойство `details` объединяет эти сведения в виде интерфейса [ChangedEventDetail](/javascript/api/excel/excel.changedeventdetail). В следующем примере кода показано, как отобразить значения и типы измененной ячейки до и после изменения.
+
+> [!NOTE]
+> `WorksheetChangedEventArgs.details` в настоящее время доступен только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+
+```js
+// This function would be used as an event handler for the Worksheet.onChanged event.
+function onWorksheetChanged(eventArgs) {
+    Excel.run(function (context) {
+        var details = eventArgs.details;
+        var address = eventArgs.address;
+
+        // Print the before and after types and values to the console.
+        console.log(`Change at ${address}: was ${details.valueBefore}(${details.valueTypeBefore}),`
+            + ` now is ${details.valueAfter}(${details.valueTypeAfter})`);
+        return context.sync();
+    });
+}
 ```
 
 ## <a name="find-all-cells-with-matching-text-preview"></a>Поиск всех ячеек с соответствующим текстом (предварительная версия)

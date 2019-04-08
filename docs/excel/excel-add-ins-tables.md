@@ -1,14 +1,14 @@
 ---
 title: Работа с таблицами с использованием API JavaScript для Excel
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/04/2019
 localization_priority: Priority
-ms.openlocfilehash: a628c182ccb570fcda3db813f7debb237682b915
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: 1b409e27c12d4741f59a027dd4962fdee65b96bf
+ms.sourcegitcommit: 63219bcc1bb5e3bed7eb6c6b0adb73a4829c7e8f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30869976"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "31479720"
 ---
 # <a name="work-with-tables-using-the-excel-javascript-api"></a>Работа с таблицами с использованием API JavaScript для Excel
 
@@ -236,6 +236,30 @@ Excel.run(function (context) {
 **Таблица и выведенные данные**
 
 ![Данные из таблицы в Excel](../images/excel-tables-get-data.png)
+
+## <a name="detect-data-changes"></a>Обнаружение изменений данных
+
+Возможно, надстройке потребуется реагировать на изменения пользователями данных в таблице. Чтобы обнаружить эти изменения, можно [зарегистрировать обработчик событий](excel-add-ins-events.md#register-an-event-handler) для события `onChanged` таблицы. Обработчики события `onChanged` получают объект [TableChangedEventArgs](/javascript/api/excel/excel.tablechangedeventargs) при возникновении события.
+
+Объект `TableChangedEventArgs` предоставляет сведения об изменениях и источнике. Так как событие `onChanged` возникает при изменении формата или значения данных, может быть полезно, чтобы надстройка проверяла, действительно ли значения изменились. Свойство `details` объединяет эти сведения в виде интерфейса [ChangedEventDetail](/javascript/api/excel/excel.changedeventdetail). В следующем примере кода показано, как отобразить значения и типы измененной ячейки до и после изменения.
+
+> [!NOTE]
+> `TableChangedEventArgs.details` в настоящее время доступен только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+
+```js
+// This function would be used as an event handler for the Table.onChanged event.
+function onTableChanged(eventArgs) {
+    Excel.run(function (context) {
+        var details = eventArgs.details;
+        var address = eventArgs.address;
+
+        // Print the before and after types and values to the console.
+        console.log(`Change at ${address}: was ${details.valueBefore}(${details.valueTypeBefore}),`
+            + ` now is ${details.valueAfter}(${details.valueTypeAfter})`);
+        return context.sync();
+    });
+}
+```
 
 ## <a name="sort-data-in-a-table"></a>Сортировка данных в таблице
 

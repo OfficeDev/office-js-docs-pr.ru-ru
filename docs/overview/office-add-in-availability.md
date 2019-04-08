@@ -1,23 +1,21 @@
 ---
 title: Доступность ведущих приложений и платформ для надстроек Office
 description: Поддерживаемые наборы обязательных элементов для Excel, Word, Outlook, PowerPoint, OneNote и Project.
-ms.date: 03/19/2019
+ms.date: 04/03/2019
 localization_priority: Priority
-ms.openlocfilehash: 28a6d0e4c86d05855ed9d24461dbeb77454d2b48
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: a9ecd44edf9221a403eb42756cd1e9f5e676ad01
+ms.sourcegitcommit: 14ceac067e0e130869b861d289edb438b5e3eff9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30872132"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "31477595"
 ---
 # <a name="office-add-in-host-and-platform-availability"></a>Доступность ведущих приложений и платформ для надстроек Office
 
 Работа надстройки Office может зависеть от ведущего приложения Office, набора требований, элемента или версии API. В таблицах ниже представлены сведения о доступных платформах, точках расширения, наборах обязательных элементов API и общих API, которые в настоящее время поддерживаются для всех приложений Office.
 
 > [!NOTE]
-> Номер сборки для набора Office 2016, установленного с помощью MSI, — 16.0.4266.1001. Эта версия содержит только набор обязательных элементов ExcelApi 1.1, WordApi 1.1 и наборы обязательных элементов общего API.
->
-> Номер сборки для единовременной покупки Office 2019 — 16.0.10827.20150.
+> Исходный выпуск Office 2016, установленный с помощью MSI, содержит только набор обязательных элементов ExcelApi 1.1, WordApi 1.1 и наборы обязательных элементов общего API. Дополнительные сведения о журналах обновлений различных версий Office см. в разделе [См. также](#see-also).
 
 ## <a name="excel"></a>Excel
 
@@ -32,7 +30,7 @@ ms.locfileid: "30872132"
     <td>Office Online</td>
     <td> - Область задач<br>
         - Контент<br>
-        - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстройки</a>
+        - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a>
     </td>
     <td>
         - <a href="/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
@@ -62,7 +60,7 @@ ms.locfileid: "30872132"
     <td>Office 365 для Windows</td>
     <td> - Область задач<br>
         - Контент<br>
-        - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстройки</a>
+        - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a>
     </td>
     <td>
         - <a href="/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
@@ -265,7 +263,7 @@ ms.locfileid: "30872132"
   </tr>
 </table>
 
-*&ast; - Добавлены обновления после выпуска.*
+*&ast; — Добавлены обновления после выпуска.*
 
 <br/>
 
@@ -407,7 +405,7 @@ ms.locfileid: "30872132"
   </tr>
 </table>
 
-*&ast; - Добавлены обновления после выпуска.*
+*&ast; — Добавлены обновления после выпуска.*
 
 <br/>
 
@@ -431,7 +429,7 @@ ms.locfileid: "30872132"
     <td> - BindingEvents<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - Файл<br>
+         - File<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -458,7 +456,7 @@ ms.locfileid: "30872132"
          - CompressedFile<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - Файл<br>
+         - File<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -485,7 +483,7 @@ ms.locfileid: "30872132"
          - CompressedFile<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - Файл<br>
+         - File<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -509,7 +507,7 @@ ms.locfileid: "30872132"
          - CompressedFile<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - Файл<br>
+         - File<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -532,7 +530,7 @@ ms.locfileid: "30872132"
          - CompressedFile<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - Файл<br>
+         - File<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -559,7 +557,7 @@ ms.locfileid: "30872132"
          - CompressedFile<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - Файл<br>
+         - File<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -587,7 +585,7 @@ ms.locfileid: "30872132"
          - CompressedFile<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - Файл<br>
+         - File<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -615,7 +613,7 @@ ms.locfileid: "30872132"
          - CompressedFile<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - Файл<br>
+         - File<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -639,7 +637,7 @@ ms.locfileid: "30872132"
          - CompressedFile<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - Файл<br>
+         - File<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -656,7 +654,7 @@ ms.locfileid: "30872132"
   </tr>
 </table>
 
-*&ast; - Добавлены обновления после выпуска.*
+*&ast; — Добавлены обновления после выпуска.*
 
 <br/>
 
@@ -682,7 +680,7 @@ ms.locfileid: "30872132"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion</td>
   </tr>
   <tr>
@@ -698,7 +696,7 @@ ms.locfileid: "30872132"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion</td>
   </tr>
   <tr>
@@ -714,7 +712,7 @@ ms.locfileid: "30872132"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion</td>
   </tr>
   <tr>
@@ -729,7 +727,7 @@ ms.locfileid: "30872132"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion</td>
   </tr>
   <tr>
@@ -745,7 +743,7 @@ ms.locfileid: "30872132"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion</td>
   </tr>
   <tr>
@@ -759,7 +757,7 @@ ms.locfileid: "30872132"
          - File<br>
          - PdfFile<br>
          - Selection<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion<br>
          - ImageCoercion</td>
   </tr>
@@ -776,7 +774,7 @@ ms.locfileid: "30872132"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion</td>
   </tr>
   <tr>
@@ -792,7 +790,7 @@ ms.locfileid: "30872132"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion</td>
   </tr>
   <tr>
@@ -807,12 +805,12 @@ ms.locfileid: "30872132"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion</td>
   </tr>
 </table>
 
-*&ast; - Добавлены обновления после выпуска.*
+*&ast; — Добавлены обновления после выпуска.*
 
 <br/>
 
@@ -835,7 +833,7 @@ ms.locfileid: "30872132"
     <td> - DocumentEvents<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
-         - Параметры<br>
+         - Settings<br>
          - TextCoercion</td>
   </tr>
 </table>
@@ -882,3 +880,7 @@ ms.locfileid: "30872132"
 - [Наборы обязательных элементов общего API](/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets)
 - [Наборы обязательных элементов для команд надстроек](/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets)
 - [Справка по API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office)
+- [Журнал обновлений Office 2016 и 2019 ("нажми и работай")](/officeupdates/update-history-office-2019)
+- [Журнал обновлений Office 2013 ("нажми и работай")](/officeupdates/update-history-office-2013)
+- [Журнал обновлений Office 2010, 2013 и 2016 (MSI)](/officeupdates/office-updates-msi)
+- [Журнал обновлений Outlook 2010, 2013 и 2016 (MSI)](/officeupdates/outlook-updates-msi)

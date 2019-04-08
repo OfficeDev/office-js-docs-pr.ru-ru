@@ -1,14 +1,14 @@
 ---
 title: Работа с событиями при помощи API JavaScript для Excel
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/03/2019
 localization_priority: Priority
-ms.openlocfilehash: 08653a84c051709d16371d89672d3f7ebe2030b7
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: 7f05263f5220c2d60d0cebcfc686e1fed3f07900
+ms.sourcegitcommit: 63219bcc1bb5e3bed7eb6c6b0adb73a4829c7e8f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30872020"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "31479713"
 ---
 # <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями при помощи API JavaScript для Excel
 
@@ -20,15 +20,32 @@ ms.locfileid: "30872020"
 
 | Событие | Описание | Поддерживаемые объекты |
 |:---------------|:-------------|:-----------|
-| `onAdded` | Событие, возникающее при добавлении объекта. | [**ChartCollection**](/javascript/api/excel/excel.chartcollection), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection) |
-| `onDeleted` | Событие, возникающее при удалении объекта. | [**ChartCollection**](/javascript/api/excel/excel.chartcollection), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection) |
-| `onActivated` | Событие, возникающее при активации объекта. | [**Chart**](/javascript/api/excel/excel.chart), [**ChartCollection**](/javascript/api/excel/excel.chartcollection), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection), [**Worksheet**](/javascript/api/excel/excel.worksheet) |
-| `onDeactivated` | Событие, возникающее при отключении объекта. | [**Chart**](/javascript/api/excel/excel.chart), [**ChartCollection**](/javascript/api/excel/excel.chartcollection), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection), [**Worksheet**](/javascript/api/excel/excel.worksheet) |
-| `onCalculated` | Событие, возникающее после завершения вычислений на листе (или на всех листах коллекции). | [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection), [**Worksheet**](/javascript/api/excel/excel.worksheet) |
-| `onChanged` | Событие, возникающее при изменении данных в ячейках. | [**Worksheet**](/javascript/api/excel/excel.worksheet), [**Table**](/javascript/api/excel/excel.table), [**TableCollection**](/javascript/api/excel/excel.tablecollection) |
-| `onDataChanged` | Событие, возникающее при изменении данных или форматирования в привязке. | [**Binding**](/javascript/api/excel/excel.binding) |
-| `onSelectionChanged` | Событие, возникающее при изменении активной ячейки или выбранного диапазона. | [**Worksheet**](/javascript/api/excel/excel.worksheet), [**Table**](/javascript/api/excel/excel.table), [**Binding**](/javascript/api/excel/excel.binding) |
-| `onSettingsChanged` | Событие, возникающее при изменении параметров в документе. | [**SettingCollection**](/javascript/api/excel/excel.settingcollection) |
+| `onActivated` | Возникает при активации объекта. | [**Chart**](/javascript/api/excel/excel.chart), [**ChartCollection**](/javascript/api/excel/excel.chartcollection), [**Worksheet**](/javascript/api/excel/excel.worksheet), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection) |
+| `onAdded` | Возникает при добавлении объекта. | [**ChartCollection**](/javascript/api/excel/excel.chartcollection), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection) |
+| `onCalculated` | Возникает после завершения вычислений на листе (или на всех листах коллекции). | [**Worksheet**](/javascript/api/excel/excel.worksheet), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection) |
+| `onChanged` | Возникает при изменении данных в ячейках. | [**Table**](/javascript/api/excel/excel.table), [**TableCollection**](/javascript/api/excel/excel.tablecollection), [**Worksheet**](/javascript/api/excel/excel.worksheet) |
+| `onDataChanged` | Возникает при изменении данных или форматирования в привязке. | [**Binding**](/javascript/api/excel/excel.binding) |
+| `onDeactivated` | Возникает при отключении объекта. | [**Chart**](/javascript/api/excel/excel.chart), [**ChartCollection**](/javascript/api/excel/excel.chartcollection), [**Worksheet**](/javascript/api/excel/excel.worksheet), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection) |
+| `onDeleted` | Возникает при удалении объекта. | [**ChartCollection**](/javascript/api/excel/excel.chartcollection), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection) |
+| `onSelectionChanged` | Возникает при изменении активной ячейки или выбранного диапазона. | [**Binding**](/javascript/api/excel/excel.binding), [**Table**](/javascript/api/excel/excel.table),  [**Worksheet**](/javascript/api/excel/excel.worksheet) |
+| `onSettingsChanged` | Возникает при изменении параметров в документе. | [**SettingCollection**](/javascript/api/excel/excel.settingcollection) |
+
+### <a name="events-in-preview"></a>События в предварительной версии
+
+> [!NOTE]
+> Следующие события в настоящее время доступны только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+
+| Событие | Описание | Поддерживаемые объекты |
+|:---------------|:-------------|:-----------|
+| `onActivated` | Возникает, если фигура активирована. | [**Shape**](/javascript/api/excel/excel.shape)|
+| `onAdded` | Возникает, если в книгу добавлена новая таблица. | [**TableCollection**](/javascript/api/excel/excel.tablecollection)|
+| `onAutoSaveSettingChanged` | Возникает при изменении параметра `autoSave` для книги. | [**Workbook**](/javascript/api/excel/excel.workbook) |
+| `onChanged` | Возникает при изменении любого листа в книге. | [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection)|
+| `onDeactivated` | Возникает, если фигура деактивирована. | [**Shape**](/javascript/api/excel/excel.shape)|
+| `onDeleted` | Возникает, если указанная таблица удалена из книги. | [**TableCollection**](/javascript/api/excel/excel.tablecollection)|
+| `onFiltered` | Возникает при применении фильтра к объекту. | [**Table**](/javascript/api/excel/excel.table), [**TableCollection**](/javascript/api/excel/excel.tablecollection), [**Worksheet**](/javascript/api/excel/excel.worksheet), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection) |
+| `onFormatChanged` | Возникает при изменении формата на листе. | [**Worksheet**](/javascript/api/excel/excel.worksheet), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection) |
+| `onSelectionChanged` | Возникает при изменениях выделения на любом листе. | [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection) |
 
 ### <a name="event-triggers"></a>Триггеры событий
 
@@ -69,7 +86,7 @@ Excel.run(function (context) {
 
 ## <a name="handle-an-event"></a>Обработка событий
 
-Как показано в предыдущем примере, при регистрации обработчика событий вы задаете функцию, которая должна выполняться при возникновении указанного события. Вы можете настроить эту функцию на выполнение любых действий, необходимых для вашего сценария. В приведенном ниже примере кода показана функция обработчика событий, которая просто записывает сведения о событии в консоль. 
+Как показано в предыдущем примере, при регистрации обработчика событий вы задаете функцию, которая должна выполняться при возникновении указанного события. Вы можете настроить эту функцию на выполнение любых действий, необходимых для вашего сценария. В приведенном ниже примере кода показана функция обработчика событий, которая просто записывает сведения о событии в консоль.
 
 ```js
 function handleChange(event)
@@ -127,7 +144,8 @@ function remove() {
 
 ## <a name="enable-and-disable-events"></a>Включение и отключение событий
 
-Производительность надстройки можно повысить с помощью отключения событий. Например, вашему приложению, возможно, никогда не потребуется получать события, или оно может игнорировать события при выполнении пакетных изменений нескольких сущностей.
+Производительность надстройки можно повысить с помощью отключения событий.
+Например, вашему приложению, возможно, никогда не потребуется получать события, или оно может игнорировать события при выполнении пакетных изменений нескольких сущностей.
 
 События включаются и отключаются на уровне [среды выполнения](/javascript/api/excel/excel.runtime).
 Свойство `enableEvents` определяет, будут ли запускаться события и будут ли активироваться их обработчики.
