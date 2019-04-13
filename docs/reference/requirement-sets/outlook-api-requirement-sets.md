@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Outlook
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/10/2019
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: a17d73d0c7bd7307440229504329cc231c3acf39
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: d27db830c88385e4e8d6f90b48fca0dab62b8972
+ms.sourcegitcommit: 95ed6dfbfa680dbb40ff9757020fa7e5be4760b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30870697"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "31838503"
 ---
 # <a name="outlook-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Outlook
 
@@ -20,7 +20,7 @@ ms.locfileid: "30870697"
 ```xml
 <Requirements>
   <Sets>
-    <Set Name="MailBox" MinVersion="1.1" />
+    <Set Name="Mailbox" MinVersion="1.1" />
   </Sets>
 </Requirements>
 ```

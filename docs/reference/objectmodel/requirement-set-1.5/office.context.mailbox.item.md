@@ -1,14 +1,14 @@
 ---
 title: Office.context.mailbox.item — набор обязательных элементов 1.5
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/12/2019
 localization_priority: Priority
-ms.openlocfilehash: c31deaf3fad0fbfbf4075d85c422a05a418707de
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: 2f9394751180296d876d8c577d68adc1b5abb692
+ms.sourcegitcommit: 95ed6dfbfa680dbb40ff9757020fa7e5be4760b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30871789"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "31838580"
 ---
 # <a name="item"></a>item
 
@@ -31,7 +31,7 @@ ms.locfileid: "30871789"
 | [attachments](#attachments-arrayattachmentdetails) | Элемент |
 | [bcc](#bcc-recipients) | Элемент |
 | [body](#body-body) | Элемент |
-| [cc](#cc-arrayemailaddressdetails) | Элемент |
+| [cc](#cc-arrayemailaddressdetailsrecipients) | Элемент |
 | [conversationId](#nullable-conversationid-string) | Элемент |
 | [dateTimeCreated](#datetimecreated-date) | Элемент |
 | [dateTimeModified](#datetimemodified-date) | Элемент |
@@ -44,21 +44,21 @@ ms.locfileid: "30871789"
 | [location](#location-stringlocation) | Элемент |
 | [normalizedSubject](#normalizedsubject-string) | Элемент |
 | [notificationMessages](#notificationmessages-notificationmessages) | Элемент |
-| [optionalAttendees](#optionalattendees-arrayemailaddressdetails) | Элемент |
+| [optionalAttendees](#optionalattendees-arrayemailaddressdetailsrecipients) | Элемент |
 | [organizer](#organizer-emailaddressdetails) | Элемент |
-| [requiredAttendees](#requiredattendees-arrayemailaddressdetails) | Member |
+| [requiredAttendees](#requiredattendees-arrayemailaddressdetailsrecipients) | Member |
 | [sender](#sender-emailaddressdetails) | Элемент |
 | [start](#start-datetime) | Элемент |
 | [subject](#subject-stringsubject) | Элемент |
-| [to](#to-arrayemailaddressdetails) | Элемент |
+| [to](#to-arrayemailaddressdetailsrecipients) | Элемент |
 | [addFileAttachmentAsync](#addfileattachmentasyncuri-attachmentname-options-callback) | Метод |
 | [addItemAttachmentAsync](#additemattachmentasyncitemid-attachmentname-options-callback) | Метод |
 | [close](#close) | Метод |
 | [displayReplyAllForm](#displayreplyallformformdata-callback) | Метод |
 | [displayReplyForm](#displayreplyformformdata-callback) | Метод |
 | [getEntities](#getentities--entities) | Метод |
-| [getEntitiesByType](#getentitiesbytypeentitytype--nullable-arraystringcontact) | Метод |
-| [getFilteredEntitiesByName](#getfilteredentitiesbynamename--nullable-arraystringcontact) | Метод |
+| [getEntitiesByType](#getentitiesbytypeentitytype--nullable-arraystringcontactmeetingsuggestionphonenumbertasksuggestion) | Метод |
+| [getFilteredEntitiesByName](#getfilteredentitiesbynamename--nullable-arraystringcontactmeetingsuggestionphonenumbertasksuggestion) | Метод |
 | [getRegExMatches](#getregexmatches--object) | Метод |
 | [getRegExMatchesByName](#getregexmatchesbynamename--nullable-array-string-) | Метод |
 | [getSelectedDataAsync](#getselecteddataasynccoerciontype-options-callback--string) | Метод |
