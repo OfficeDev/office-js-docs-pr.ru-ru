@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox. Diagnostics — Предварительная версия набора требований
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/12/2019
 localization_priority: Normal
-ms.openlocfilehash: 3bcc1004ddcee638965c15c7f320e2320a6faf06
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: dc68aac6e50005415d0a76780c5d56c083709992
+ms.sourcegitcommit: 95ed6dfbfa680dbb40ff9757020fa7e5be4760b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30871901"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "31838398"
 ---
 # <a name="diagnostics"></a>diagnostics
 
@@ -52,6 +52,9 @@ ms.locfileid: "30871901"
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
+---
+---
+
 ####  <a name="hostversion-string"></a>hostVersion :String
 
 Получает строку, которая представляет версию ведущего приложения или Exchange Server.
@@ -69,6 +72,9 @@ ms.locfileid: "30871901"
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+
+---
+---
 
 ####  <a name="owaview-string"></a>OWAView :String
 

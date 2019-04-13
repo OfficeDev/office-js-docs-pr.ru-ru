@@ -1,14 +1,14 @@
 ---
 title: Office. Context — набор обязательных элементов 1,7
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/12/2019
 localization_priority: Normal
-ms.openlocfilehash: 6a6c7e01df7a063759d3658283f6d724a2b16ca7
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: dddf0035f52daadc926ca5a707383730a97c1002
+ms.sourcegitcommit: 95ed6dfbfa680dbb40ff9757020fa7e5be4760b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30871355"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "31838475"
 ---
 # <a name="context"></a>context
 
@@ -75,6 +75,9 @@ function write(message){
 }
 ```
 
+---
+---
+
 ####  <a name="officetheme-object"></a>officeTheme :Object
 
 Предоставляет доступ к свойствам цветов темы Office.
@@ -118,6 +121,9 @@ function applyOfficeTheme(){
   $('.body').css('background-color', bodyBackgroundColor);
 }
 ```
+
+---
+---
 
 ####  <a name="roamingsettings-roamingsettingsjavascriptapioutlook17officeroamingsettings"></a>roamingSettings :[RoamingSettings](/javascript/api/outlook_1_7/office.RoamingSettings)
 

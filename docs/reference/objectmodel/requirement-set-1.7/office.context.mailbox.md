@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox — набор обязательных элементов 1,7
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/12/2019
 localization_priority: Normal
-ms.openlocfilehash: 94f0bbf7d54bdbad3770862576592209508278b2
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: 0f84e657644b198fbca722a0628a5bafcce84377
+ms.sourcegitcommit: 95ed6dfbfa680dbb40ff9757020fa7e5be4760b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30871411"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "31838552"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -28,7 +28,7 @@ ms.locfileid: "30871411"
 
 | Элемент | Тип |
 |--------|------|
-| [ewsUrl](#ewsurl-string) | Member |
+| [ewsUrl](#ewsurl-string) | Элемент |
 | [restUrl](#resturl-string) | Элемент |
 | [addHandlerAsync](#addhandlerasynceventtype-handler-options-callback) | Метод |
 | [convertToEwsId](#converttoewsiditemid-restversion--string) | Метод |
@@ -80,6 +80,9 @@ ms.locfileid: "30871411"
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
+---
+---
+
 #### <a name="resturl-string"></a>restUrl :String
 
 Возвращает URL-адрес конечной точки REST для этой учетной записи электронной почты.
@@ -116,8 +119,8 @@ ms.locfileid: "30871411"
 |---|---|---|---|
 | `eventType` | [Office.EventType](office.md#eventtype-string) || Событие, которое должно вызвать обработчик. |
 | `handler` | Function || Функция для обработки события. Функция должна принимать один параметр, представляющий собой объектный литерал. Значение свойства `type` параметра совпадет со значением параметра `eventType`, переданного методу `addHandlerAsync`. |
-| `options` | Объект | &lt;необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
-| `options.asyncContext` | Object | &lt;необязательно&gt; | Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова. |
+| `options` | Объект | &lt;Необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
+| `options.asyncContext` | Object | &lt;Необязательно&gt; | Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова. |
 | `callback` | функция| &lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).|
 
 ##### <a name="requirements"></a>Требования
@@ -146,6 +149,9 @@ function loadNewItem(eventArgs) {
   loadProps(Office.context.mailbox.item);
 };
 ```
+
+---
+---
 
 ####  <a name="converttoewsiditemid-restversion--string"></a>convertToEwsId(itemId, restVersion) → {String}
 
@@ -185,6 +191,9 @@ var restId = 'AAMkAGVlOTZjNTM3LW...';
 var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.RestVersion.v2_0);
 ```
 
+---
+---
+
 ####  <a name="converttolocalclienttimetimevalue--localclienttimejavascriptapioutlook17officelocalclienttime"></a>convertToLocalClientTime(timeValue) → {[LocalClientTime](/javascript/api/outlook_1_7/office.LocalClientTime)}
 
 Получает словарь, содержащий сведения о локальном времени клиента.
@@ -210,6 +219,9 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 ##### <a name="returns"></a>Возвращаемое значение:
 
 Тип: [LocalClientTime](/javascript/api/outlook_1_7/office.LocalClientTime)
+
+---
+---
 
 ####  <a name="converttorestiditemid-restversion--string"></a>convertToRestId(itemId, restVersion) → {String}
 
@@ -249,6 +261,9 @@ var ewsId = Office.context.mailbox.item.itemId;
 var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.RestVersion.v2_0);
 ```
 
+---
+---
+
 ####  <a name="converttoutcclienttimeinput--date"></a>convertToUtcClientTime(input) → {Date}
 
 Получает объект Date из словаря, содержащего сведения о времени.
@@ -280,6 +295,9 @@ var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.R
 <dd>Date</dd>
 
 </dl>
+
+---
+---
 
 ####  <a name="displayappointmentformitemid"></a>displayAppointmentForm(itemId)
 
@@ -316,6 +334,9 @@ var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.R
 Office.context.mailbox.displayAppointmentForm(appointmentId);
 ```
 
+---
+---
+
 ####  <a name="displaymessageformitemid"></a>displayMessageForm(itemId)
 
 Отображает имеющееся сообщение.
@@ -350,6 +371,9 @@ Office.context.mailbox.displayAppointmentForm(appointmentId);
 ```javascript
 Office.context.mailbox.displayMessageForm(messageId);
 ```
+
+---
+---
 
 #### <a name="displaynewappointmentformparameters"></a>displayNewAppointmentForm(parameters)
 
@@ -411,6 +435,9 @@ Office.context.mailbox.displayNewAppointmentForm(
   });
 ```
 
+---
+---
+
 #### <a name="displaynewmessageformparameters"></a>Дисплайневмессажеформ (Parameters)
 
 Отображает форму для создания нового сообщения.
@@ -437,7 +464,7 @@ Office.context.mailbox.displayNewAppointmentForm(
 | `parameters.attachments.name` | Строка | Строка, содержащая имя вложения, длиной до 255 символов.|
 | `parameters.attachments.url` | String | Используется, только если свойству `type` задано значение `file`. URI расположения файла. |
 | `parameters.attachments.isInline` | Логический | Используется, только если свойству `type` задано значение `file`. Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений. |
-| `parameters.attachments.itemId` | String | Используется, только если свойству `type` присвоено значение `item`. Идентификатор элемента EWS существующего сообщения электронной почты, которое необходимо присоединить к новому сообщению. Это строка длиной до 100 символов. |
+| `parameters.attachments.itemId` | Строка | Используется, только если свойству `type` присвоено значение `item`. Идентификатор элемента EWS существующего сообщения электронной почты, которое необходимо присоединить к новому сообщению. Это строка длиной до 100 символов. |
 
 
 ##### <a name="requirements"></a>Требования
@@ -469,11 +496,14 @@ Office.context.mailbox.displayNewMessageForm(
   });
 ```
 
+---
+---
+
 #### <a name="getcallbacktokenasyncoptions-callback"></a>getCallbackTokenAsync([options], callback)
 
 Возвращает строку, содержащую маркер, который используется для вызова интерфейсов REST API или веб-служб Exchange.
 
-Метод `getCallbackTokenAsync` совершает асинхронный вызов, чтобы получить непрозрачный токен с сервера Exchange Server, на котором размещен почтовый ящик пользователя. Время существования маркера обратного вызова составляет 5 минут.
+Метод `getCallbackTokenAsync` совершает асинхронный вызов, чтобы получить непрозрачный маркер с сервера Exchange Server, на котором размещен почтовый ящик пользователя. Время существования маркера обратного вызова составляет 5 минут.
 
 > [!NOTE]
 > Рекомендуем сделать так, чтобы по мере возможности надстройки использовали интерфейсы REST API, а не веб-службы Exchange.
@@ -494,8 +524,8 @@ Office.context.mailbox.displayNewMessageForm(
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-| `options` | Object | &lt;необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
-| `options.isRest` | Boolean |  &lt;Необязательный&gt; | Определяет, будет ли предоставленный маркер использоваться для интерфейсов REST API Outlook или веб-служб Exchange. Значение по умолчанию: `false`. |
+| `options` | Объект | &lt;Необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
+| `options.isRest` | Boolean |  &lt;необязательно&gt; | Определяет, будет ли предоставленный маркер использоваться для интерфейсов REST API Outlook или веб-служб Exchange. Значение по умолчанию: `false`. |
 | `options.asyncContext` | Объект |  &lt;необязательно&gt; | Данные о состоянии, передаваемые в асинхронный метод. |
 |`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). Маркер указывается в виде строки в свойстве `asyncResult.value`.|
 
@@ -523,6 +553,9 @@ function cb(asyncResult) {
   var token = asyncResult.value;
 }
 ```
+
+---
+---
 
 #### <a name="getcallbacktokenasynccallback-usercontext"></a>getCallbackTokenAsync(callback, [userContext])
 
@@ -563,6 +596,9 @@ function cb(asyncResult) {
 }
 ```
 
+---
+---
+
 ####  <a name="getuseridentitytokenasynccallback-usercontext"></a>getUserIdentityTokenAsync(callback, [userContext])
 
 Получает маркер, идентифицирующий пользователя и надстройку Office.
@@ -573,8 +609,8 @@ function cb(asyncResult) {
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-|`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.|
-|`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+|`callback`| функция||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.|
+|`userContext`| Object| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -595,6 +631,9 @@ function cb(asyncResult) {
   var token = asyncResult.value;
 }
 ```
+
+---
+---
 
 ####  <a name="makeewsrequestasyncdata-callback-usercontext"></a>makeEwsRequestAsync(data, callback, [userContext])
 
@@ -637,8 +676,8 @@ function cb(asyncResult) {
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
 |`data`| String||Запрос EWS.|
-|`callback`| функция||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Результат XML вызова EWS указывается в виде строки в свойстве `asyncResult.value`. Если размер результата превышает 1 МБ, возвращается сообщение об ошибке.|
-|`userContext`| Объект| &lt;Необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+|`callback`| функция||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Результат XML вызова EWS указывается в виде строки в свойстве `asyncResult.value`. Если размер результата превышает 1 МБ, возвращается сообщение об ошибке.|
+|`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -693,6 +732,9 @@ function callback(asyncResult)  {
   // Process the returned response here.
 }
 ```
+
+---
+---
 
 ####  <a name="removehandlerasynceventtype-options-callback"></a>removeHandlerAsync(eventType, [options], [callback])
 

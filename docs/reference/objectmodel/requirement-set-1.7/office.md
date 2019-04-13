@@ -1,14 +1,14 @@
 ---
 title: Пространство имен Office — набор обязательных элементов 1,7
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/12/2019
 localization_priority: Normal
-ms.openlocfilehash: 533e997fc7f8be6eb6d3aefefaf023e8c7666af2
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: 523df189b28fc568ac32e8d17d4a226b52cbd23c
+ms.sourcegitcommit: 95ed6dfbfa680dbb40ff9757020fa7e5be4760b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30870529"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "31838454"
 ---
 # <a name="office"></a>Office
 
@@ -61,6 +61,7 @@ ms.locfileid: "30870529"
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ---
+---
 
 ####  <a name="coerciontype-string"></a>CoercionType :String
 
@@ -84,6 +85,7 @@ ms.locfileid: "30870529"
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
+---
 ---
 
 ####  <a name="eventtype-string"></a>EventType :String
@@ -110,6 +112,7 @@ ms.locfileid: "30870529"
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.5 |
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение |
 
+---
 ---
 
 ####  <a name="sourceproperty-string"></a>SourceProperty :String

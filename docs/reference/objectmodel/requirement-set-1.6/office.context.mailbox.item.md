@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox. Item — набор требований 1,6
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/12/2019
 localization_priority: Normal
-ms.openlocfilehash: 009adf0730edc0e619a9fe15f20af07246da39a4
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: cc7897f791c5a07ed5c17a686b6601a1a7633f00
+ms.sourcegitcommit: 95ed6dfbfa680dbb40ff9757020fa7e5be4760b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30871145"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "31838545"
 ---
 # <a name="item"></a>item
 
@@ -31,7 +31,7 @@ ms.locfileid: "30871145"
 | [attachments](#attachments-arrayattachmentdetails) | Элемент |
 | [bcc](#bcc-recipients) | Элемент |
 | [body](#body-body) | Элемент |
-| [cc](#cc-arrayemailaddressdetails) | Элемент |
+| [cc](#cc-arrayemailaddressdetailsrecipients) | Элемент |
 | [conversationId](#nullable-conversationid-string) | Элемент |
 | [dateTimeCreated](#datetimecreated-date) | Элемент |
 | [dateTimeModified](#datetimemodified-date) | Элемент |
@@ -44,21 +44,21 @@ ms.locfileid: "30871145"
 | [location](#location-stringlocation) | Элемент |
 | [normalizedSubject](#normalizedsubject-string) | Элемент |
 | [notificationMessages](#notificationmessages-notificationmessages) | Элемент |
-| [optionalAttendees](#optionalattendees-arrayemailaddressdetails) | Элемент |
+| [optionalAttendees](#optionalattendees-arrayemailaddressdetailsrecipients) | Элемент |
 | [organizer](#organizer-emailaddressdetails) | Элемент |
-| [requiredAttendees](#requiredattendees-arrayemailaddressdetails) | Member |
+| [requiredAttendees](#requiredattendees-arrayemailaddressdetailsrecipients) | Member |
 | [sender](#sender-emailaddressdetails) | Элемент |
 | [start](#start-datetime) | Элемент |
 | [subject](#subject-stringsubject) | Элемент |
-| [to](#to-arrayemailaddressdetails) | Элемент |
+| [to](#to-arrayemailaddressdetailsrecipients) | Элемент |
 | [addFileAttachmentAsync](#addfileattachmentasyncuri-attachmentname-options-callback) | Метод |
 | [addItemAttachmentAsync](#additemattachmentasyncitemid-attachmentname-options-callback) | Метод |
 | [close](#close) | Метод |
 | [displayReplyAllForm](#displayreplyallformformdata-callback) | Метод |
 | [displayReplyForm](#displayreplyformformdata-callback) | Метод |
 | [getEntities](#getentities--entities) | Метод |
-| [getEntitiesByType](#getentitiesbytypeentitytype--nullable-arraystringcontact) | Метод |
-| [getFilteredEntitiesByName](#getfilteredentitiesbynamename--nullable-arraystringcontact) | Метод |
+| [getEntitiesByType](#getentitiesbytypeentitytype--nullable-arraystringcontactmeetingsuggestionphonenumbertasksuggestion) | Метод |
+| [getFilteredEntitiesByName](#getfilteredentitiesbynamename--nullable-arraystringcontactmeetingsuggestionphonenumbertasksuggestion) | Метод |
 | [getRegExMatches](#getregexmatches--object) | Метод |
 | [getRegExMatchesByName](#getregexmatchesbynamename--nullable-array-string-) | Метод |
 | [getSelectedDataAsync](#getselecteddataasynccoerciontype-options-callback--string) | Метод |
@@ -879,7 +879,7 @@ function callback(asyncResult) {
 |`attachmentName`| String||Имя вложения, которое отображается при передаче вложения. Максимальная длина — 255 символов.|
 |`options`| Объект| &lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 | `options.asyncContext` | Object | &lt;Необязательно&gt; | В методе обратного вызова разработчики могут указать любой объект, к которому необходимо получить доступ. |
-| `options.isInline` | Boolean | &lt;Необязательный&gt; | Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений. |
+| `options.isInline` | Boolean | &lt;необязательно&gt; | Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений. |
 |`callback`| function| &lt;необязательно&gt;|После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.<br/>Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.|
 
 ##### <a name="errors"></a>Ошибки
@@ -1615,7 +1615,7 @@ var veggies = selectedMatches.veggies;
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-|`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Настраиваемые свойства предоставляются в виде объекта [`CustomProperties`](/javascript/api/outlook_1_6/office.customproperties) в свойстве `asyncResult.value`. Этот объект позволяет получить, задать и удалить настраиваемые свойства для элемента, а также сохранить изменения, внесенные в набор настраиваемых свойств, на сервере.|
+|`callback`| function||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Настраиваемые свойства предоставляются в виде объекта [`CustomProperties`](/javascript/api/outlook_1_6/office.customproperties) в свойстве `asyncResult.value`. Этот объект позволяет получить, задать и удалить настраиваемые свойства для элемента, а также сохранить изменения, внесенные в набор настраиваемых свойств, на сервере.|
 |`userContext`| Объект| &lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в функции обратного вызова. Доступ к этому объекту можно получить с помощью свойства `asyncResult.asyncContext` в функции обратного вызова.|
 
 ##### <a name="requirements"></a>Требования
@@ -1666,7 +1666,7 @@ function saveCallback(asyncResult) {
 |`attachmentId`| String||Идентификатор удаляемого вложения.|
 |`options`| Object| &lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`| Объект| &lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
-|`callback`| функция| &lt;необязательно&gt;|После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>Если удалить вложение не удается, свойство `asyncResult.error` содержит код ошибки с указанием ее причины.|
+|`callback`| функция| &lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>Если удалить вложение не удается, свойство `asyncResult.error` содержит код ошибки с указанием ее причины.|
 
 ##### <a name="errors"></a>Ошибки
 

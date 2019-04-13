@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox. userProfile — Предварительная версия набора требований
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/12/2019
 localization_priority: Normal
-ms.openlocfilehash: 204097497c958c26a6e67fc01d6dbd5142d8dced
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: 29111314f16bb9c6518b350254a3036ffa125796
+ms.sourcegitcommit: 95ed6dfbfa680dbb40ff9757020fa7e5be4760b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30871873"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "31838440"
 ---
 # <a name="userprofile"></a>userProfile
 
@@ -65,6 +65,9 @@ ms.locfileid: "30871873"
 console.log(Office.context.mailbox.userProfile.accountType);
 ```
 
+---
+---
+
 ####  <a name="displayname-string"></a>displayName :String
 
 Получает отображаемое имя пользователя.
@@ -88,6 +91,9 @@ console.log(Office.context.mailbox.userProfile.accountType);
 console.log(Office.context.mailbox.userProfile.displayName);
 ```
 
+---
+---
+
 ####  <a name="emailaddress-string"></a>emailAddress :String
 
 Получает адрес электронной почты SMTP пользователя.
@@ -110,6 +116,9 @@ console.log(Office.context.mailbox.userProfile.displayName);
 // Example: allieb@contoso.com
 console.log(Office.context.mailbox.userProfile.emailAddress);
 ```
+
+---
+---
 
 ####  <a name="timezone-string"></a>timeZone :String
 
