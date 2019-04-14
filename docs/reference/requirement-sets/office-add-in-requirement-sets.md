@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов общего API для Office
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/09/2019
 ms.prod: non-product-specific
 localization_priority: Priority
-ms.openlocfilehash: 84eee3c085821e741f44fc4a413005cbc1a61951
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: 05b1c4a3dde09f223a3383b49bf2f48e15f1e3e7
+ms.sourcegitcommit: fbe2a799fda71aab73ff1c5546c936edbac14e47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30870200"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "31764406"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
@@ -18,7 +18,7 @@ ms.locfileid: "30870200"
 Сведения о поддержке надстроек ведущим приложением Office см. в статье [Доступность ведущих приложений и платформ для надстроек Office](/office/dev/add-ins/overview/office-add-in-availability).
 
 Наборы обязательных элементов API *для конкретных ведущих приложений* см. ниже.
- 
+
 - [Наборы обязательных элементов API JavaScript для Excel](excel-api-requirement-sets.md) (ExcelApi)
 - [Наборы обязательных элементов API JavaScript для Word](word-api-requirement-sets.md) (WordApi)
 - [Наборы обязательных элементов API JavaScript для OneNote](onenote-api-requirement-sets.md) (OneNoteApi)
@@ -29,34 +29,197 @@ ms.locfileid: "30870200"
 
 ## <a name="common-api-requirement-sets"></a>Наборы обязательных элементов общего API
 
-В приведенной ниже таблице указаны наборы обязательных элементов общего API, ведущие приложения Office, которые их поддерживают, и методы в каждом наборе. Все эти наборы обязательных элементов API имеют версию 1.1.
+В приведенных ниже разделах указаны наборы обязательных элементов общего API, ведущие приложения Office, которые их поддерживают, и методы в каждом наборе. Все эти наборы обязательных элементов API имеют версию 1.1.
 
-|**Набор обязательных элементов**|**Ведущее приложение Office**|**Методы в наборе**|
-|:-----|:-----|:-----|
-| ActiveView | PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac|Document.getActiveViewAsync|
-| AddInCommands | См. статью [Наборы обязательных элементов для команд надстроек](add-in-commands-requirement-sets.md). | |
-| BindingEvents  | Веб-приложения Access<br>Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Binding.addHanderAsync<br>Binding.removeHanderAsync|
-| CompressedFile    | Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает вывод в формате Office Open XML (OOXML) в виде байтового массива<br>(Office.FileType.Compressed) при использовании метода Document.getFileAsync.|
-| CustomXmlParts    | Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|CustomXmlNode.getNodesAsync<br>CustomXmlNode.getNodeValueAsync<br>CustomXmlNode.getTextAsync<br>CustomXmlNode.getXmlAsync<br>CustomXmlNode.setNodeValueAsync<br>CustomXmlNode.setTextAsync<br>CustomXmlNode.setXmlAsync<br>CustomXmlPart.addHandlerAsync<br>CustomXmlPart.deleteAsync<br>CustomXmlPart.getNodesAsync<br>CustomXmlPart.getXmlAsync<br>CustomXmlPart.removeHandlerAsync<br>CustomXmlParts.addAsync<br>CustomXmlParts.getByIdAsync<br>CustomXmlParts.getByNamespaceAsync<br>CustomXmlPrefixMappings.addNamespaceAsync<br>CustomXmlPrefixMappings.getNamespaceAsync<br>CustomXmlPrefixMappings.getPrefixAsync|
-| DialogApi | См. статью [Наборы обязательных элементов API диалоговых окон](dialog-api-requirement-sets.md). | UI.messageParent<br>UI.displayDialogAsync<br>UI.closeContainer<br>UI.Dialog |
-| DocumentEvents    | Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>OneNote Online<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Document.addHandlerAsync<br>Document.removeHandlerAsync|
-| File  | Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Document.getFileAsync<br>File.closeAsync<br>File.getSliceAsync|
-| HtmlCoercion  | OneNote Online<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает приведение в HTML (Office.CoercionType.Html) при чтении и записи данных с использованием методов Document.getSelectedDataAsync,<br>Методы Document.setSelectedDataAsync, Binding.getDataAsync или Binding.setDataAsync.|
-| IdentityAPI | См. статью [Наборы обязательных элементов API удостоверений](identity-api-requirement-sets.md). | Auth.getAccessTokenAsync |
-| ImageCoercion | Excel<br>Excel для iPad<br>Excel для Mac<br>OneNote Online<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает преобразование в изображение (Office.CoercionType.Image) при записи данных с помощью метода Document.setSelectedDataAsync.|
-| Почтовый ящик   |Outlook для Windows<br>Outlook для веб-браузеров<br>Outlook для Android<br>Outlook для Mac<br>Outlook Web App |См. статью [Общие сведения о наборах обязательных элементов API для Outlook](outlook-api-requirement-sets.md).|
-| MatrixBindings    | Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word<br>Word Online<br>Word для iPad<br>Word для Mac|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsyncMatrix<br>Binding.getDataAsyncMatrix<br>Binding.setDataAsync|
-| MatrixCoercion    | Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает приведение в структуру данных "матрица" (массив массивов, Office.CoercionType.Matrix) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
-| OoxmlCoercion | Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает приведение в формат Open Office XML (OOXML, Office.CoercionType.Ooxml) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
-| PartialTableBindings  | Веб-приложения Access||
-| PdfFile   | Excel для Mac<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает вывод в формате PDF (Office.FileType.Pdf)<br>при использовании метода Document.getFileAsync.|
-| Selection | Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Project<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Document.getSelectedDataAsync<br>Document.setSelectedDataAsync|
-| Параметры  | Веб-приложения Access<br>Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>OneNote Online<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Settings.get<br>Settings.remove<br>Settings.saveAsync<br>Settings.set|
-| TableBindings | Веб-приложения Access<br>Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsyncTable<br>Binding.addColumnsAsyncTable<br>Binding.addRowsAsyncTable<br>Binding.deleteAllDataValuesAsyncTable<br>Binding.getDataAsyncTable<br>Binding.setDataAsync|
-| TableCoercion | Веб-приложения Access<br>Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает приведение в структуру данных "таблица" (Office.CoercionType.Table) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
-| TextBindings  | Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsyncText<br>Binding.getDataAsyncText<br>Binding.setDataAsync|
-| TextCoercion  | Excel<br>Excel Online<br>Excel для iPad<br>OneNote Online<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Project<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает приведение в текстовый формат (Office.CoercionType.Text) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
-| TextFile  | Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает вывод в текстовом формате (Office.FileType.Text) при использовании метода Document.getFileAsync.|
+### <a name="activeview"></a>ActiveView
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac|Document.getActiveViewAsync|
+
+---
+
+### <a name="addincommands"></a>AddInCommands
+
+См. статью [Наборы обязательных элементов для команд надстроек](add-in-commands-requirement-sets.md).
+
+---
+
+### <a name="bindingevents"></a>BindingEvents
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Веб-приложения Access<br>Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Binding.addHanderAsync<br>Binding.removeHanderAsync|
+
+---
+
+### <a name="compressedfile"></a>CompressedFile
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает вывод в формате Office Open XML (OOXML) в виде байтового массива<br>(Office.FileType.Compressed) при использовании метода Document.getFileAsync.|
+
+---
+
+### <a name="customxmlparts"></a>CustomXmlParts
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|CustomXmlNode.getNodesAsync<br>CustomXmlNode.getNodeValueAsync<br>CustomXmlNode.getTextAsync<br>CustomXmlNode.getXmlAsync<br>CustomXmlNode.setNodeValueAsync<br>CustomXmlNode.setTextAsync<br>CustomXmlNode.setXmlAsync<br>CustomXmlPart.addHandlerAsync<br>CustomXmlPart.deleteAsync<br>CustomXmlPart.getNodesAsync<br>CustomXmlPart.getXmlAsync<br>CustomXmlPart.removeHandlerAsync<br>CustomXmlParts.addAsync<br>CustomXmlParts.getByIdAsync<br>CustomXmlParts.getByNamespaceAsync<br>CustomXmlPrefixMappings.addNamespaceAsync<br>CustomXmlPrefixMappings.getNamespaceAsync<br>CustomXmlPrefixMappings.getPrefixAsync|
+
+---
+
+### <a name="dialogapi"></a>DialogApi
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| См. статью [Наборы обязательных элементов API диалоговых окон](dialog-api-requirement-sets.md). | UI.messageParent<br>UI.displayDialogAsync<br>UI.closeContainer<br>UI.Dialog |
+
+---
+
+### <a name="documentevents"></a>DocumentEvents
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>OneNote Online<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Document.addHandlerAsync<br>Document.removeHandlerAsync|
+
+---
+
+### <a name="file"></a>File
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Document.getFileAsync<br>File.closeAsync<br>File.getSliceAsync|
+
+---
+
+### <a name="htmlcoercion"></a>HtmlCoercion
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| OneNote Online<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает приведение в HTML (Office.CoercionType.Html) при чтении и записи данных с использованием методов Document.getSelectedDataAsync,<br>Методы Document.setSelectedDataAsync, Binding.getDataAsync или Binding.setDataAsync.|
+
+---
+
+### <a name="identityapi"></a>IdentityAPI
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| См. статью [Наборы обязательных элементов API удостоверений](identity-api-requirement-sets.md). | Auth.getAccessTokenAsync |
+
+---
+
+### <a name="imagecoercion"></a>ImageCoercion
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Excel<br>Excel для iPad<br>Excel для Mac<br>OneNote Online<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает преобразование в изображение (Office.CoercionType.Image) при записи данных с помощью метода Document.setSelectedDataAsync.|
+
+---
+
+### <a name="mailbox"></a>почтовый ящик.
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+|Outlook для Windows<br>Outlook для веб-браузеров<br>Outlook для Android<br>Outlook для Mac<br>Outlook Web App |См. статью [Общие сведения о наборах обязательных элементов API для Outlook](outlook-api-requirement-sets.md).|
+
+---
+
+### <a name="matrixbindings"></a>MatrixBindings
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word<br>Word Online<br>Word для iPad<br>Word для Mac|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsyncMatrix<br>Binding.getDataAsyncMatrix<br>Binding.setDataAsync|
+
+---
+
+### <a name="matrixcoercion"></a>MatrixCoercion
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает приведение в структуру данных "матрица" (массив массивов, Office.CoercionType.Matrix) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
+
+---
+
+### <a name="ooxmlcoercion"></a>OoxmlCoercion
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает приведение в формат Open Office XML (OOXML, Office.CoercionType.Ooxml) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
+
+---
+
+### <a name="partialtablebindings"></a>PartialTableBindings
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Веб-приложения Access||
+
+---
+
+### <a name="pdffile"></a>PdfFile
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Excel для Mac<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает вывод в формате PDF (Office.FileType.Pdf)<br>при использовании метода Document.getFileAsync.|
+
+---
+
+### <a name="selection"></a>Selection
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Project<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Document.getSelectedDataAsync<br>Document.setSelectedDataAsync|
+
+---
+
+### <a name="settings"></a>Settings
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Веб-приложения Access<br>Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>OneNote Online<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Settings.get<br>Settings.remove<br>Settings.saveAsync<br>Settings.set|
+
+---
+
+### <a name="tablebindings"></a>TableBindings
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Веб-приложения Access<br>Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsyncTable<br>Binding.addColumnsAsyncTable<br>Binding.addRowsAsyncTable<br>Binding.deleteAllDataValuesAsyncTable<br>Binding.getDataAsyncTable<br>Binding.setDataAsync|
+
+---
+
+### <a name="tablecoercion"></a>TableCoercion
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Веб-приложения Access<br>Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает приведение в структуру данных "таблица" (Office.CoercionType.Table) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
+
+---
+
+### <a name="textbindings"></a>TextBindings
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsyncText<br>Binding.getDataAsyncText<br>Binding.setDataAsync|
+
+---
+
+### <a name="textcoercion"></a>TextCoercion
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Excel<br>Excel Online<br>Excel для iPad<br>OneNote Online<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Project<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает приведение в текстовый формат (Office.CoercionType.Text) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
+
+---
+
+### <a name="textfile"></a>TextFile
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает вывод в текстовом формате (Office.FileType.Text) при использовании метода Document.getFileAsync.|
+
+---
 
 ## <a name="methods-that-arent-part-of-a-requirement-set"></a>Методы, отсутствующие в наборе требований
 
@@ -84,5 +247,5 @@ ms.locfileid: "30870200"
 ## <a name="see-also"></a>См. также
 
 - [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets)
-- [Указание ведущих приложений Office и обязательных элементов API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
+- [Указание ведущих приложений Office и требований к API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
 - [XML-манифест надстроек Office](/office/dev/add-ins/develop/add-in-manifests)

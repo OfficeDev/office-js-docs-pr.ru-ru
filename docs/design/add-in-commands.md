@@ -1,14 +1,14 @@
 ---
 title: Команды надстроек для Excel, Word и PowerPoint
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/05/2019
 localization_priority: Priority
-ms.openlocfilehash: e255e6e517f6292b7e7cb7df7b59476b21306911
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: 0a2a28e09061248851e8ee1037d0219c7fcda1a5
+ms.sourcegitcommit: fbe2a799fda71aab73ff1c5546c936edbac14e47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30872251"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "31764399"
 ---
 # <a name="add-in-commands-for-excel-word-and-powerpoint"></a>Команды надстроек для Excel, Word и PowerPoint
 
@@ -23,7 +23,7 @@ ms.locfileid: "30872251"
 
 ![Снимок экрана с командой надстройки в приложении Excel](../images/add-in-commands-1.png)
 
-*Рисунок 2. Надстройка с командами, работающая в Excel Online*
+*Рисунок 2. Надстройка с командами, работающая в Excel Online*
 
 ![Снимок экрана с командой надстройки в Excel Online](../images/add-in-commands-2.png)
 
@@ -59,6 +59,10 @@ ms.locfileid: "30872251"
 
 Скоро можно будет использовать другие платформы.
 
+## <a name="debugging"></a>Отладка
+
+Чтобы выполнить отладку команды надстройки, необходимо запустить ее в Office Online. Дополнительные сведения см. в статье [Отладка надстроек в Office Online](../testing/debug-add-ins-in-office-online.md)
+
 ## <a name="best-practices"></a>Рекомендации
 
 При разработке надстроек придерживайтесь следующих рекомендаций:
@@ -78,7 +82,7 @@ ms.locfileid: "30872251"
 - [Руководство по оформлению значков](add-in-icons.md) подходит для всех значков.
 - Предоставьте версию надстройки, которая работает в ведущих приложениях, не поддерживающих команды. Один манифест надстройки может работать в ведущих приложениях независимо от того, поддерживают ли они команды.
 
-   *Рис. 3. Надстройка области задач в Office 2013 и эта же надстройка, использующая команды надстройки в Office 2016*
+   *Рисунок 3. Надстройка области задач в Office 2013 и аналогичная надстройка, использующая команды надстройки в Office 2016*
 
    ![Снимок экрана: надстройка области задач в Office 2013 и эта же надстройка, использующая команды надстройки в Office 2016](../images/office-task-pane-add-ins.png)
 
