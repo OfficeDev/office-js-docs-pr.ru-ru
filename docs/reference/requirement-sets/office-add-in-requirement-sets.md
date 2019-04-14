@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов общего API для Office
 description: ''
-ms.date: 04/09/2019
+ms.date: 04/10/2019
 ms.prod: non-product-specific
 localization_priority: Priority
-ms.openlocfilehash: 05b1c4a3dde09f223a3383b49bf2f48e15f1e3e7
-ms.sourcegitcommit: fbe2a799fda71aab73ff1c5546c936edbac14e47
+ms.openlocfilehash: f3aa63b65768ab27015d59687ec9929a82bc99ab
+ms.sourcegitcommit: 95ed6dfbfa680dbb40ff9757020fa7e5be4760b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "31764406"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "31838601"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
@@ -85,7 +85,7 @@ ms.locfileid: "31764406"
 
 ---
 
-### <a name="file"></a>File
+### <a name="file"></a>Файл
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
@@ -129,7 +129,7 @@ ms.locfileid: "31764406"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word<br>Word Online<br>Word для iPad<br>Word для Mac|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsyncMatrix<br>Binding.getDataAsyncMatrix<br>Binding.setDataAsync|
+| Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word<br>Word Online<br>Word для iPad<br>Word для Mac|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsync<br>Binding.getDataAsync<br>Binding.setDataAsync|
 
 ---
 
@@ -173,7 +173,7 @@ ms.locfileid: "31764406"
 
 ---
 
-### <a name="settings"></a>Settings
+### <a name="settings"></a>Параметры
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
@@ -185,7 +185,7 @@ ms.locfileid: "31764406"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Веб-приложения Access<br>Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsyncTable<br>Binding.addColumnsAsyncTable<br>Binding.addRowsAsyncTable<br>Binding.deleteAllDataValuesAsyncTable<br>Binding.getDataAsyncTable<br>Binding.setDataAsync|
+| Веб-приложения Access<br>Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsync<br>Binding.addColumnsAsync<br>Binding.addRowsAsync<br>Binding.deleteAllDataValuesAsync<br>Binding.getDataAsync<br>Binding.setDataAsync|
 
 ---
 
@@ -201,7 +201,7 @@ ms.locfileid: "31764406"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsyncText<br>Binding.getDataAsyncText<br>Binding.setDataAsync|
+| Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsync<br>Binding.getDataAsync<br>Binding.setDataAsync|
 
 ---
 
@@ -247,5 +247,5 @@ ms.locfileid: "31764406"
 ## <a name="see-also"></a>См. также
 
 - [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets)
-- [Указание ведущих приложений Office и требований к API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
+- [Указание ведущих приложений Office и обязательных элементов API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
 - [XML-манифест надстроек Office](/office/dev/add-ins/develop/add-in-manifests)
