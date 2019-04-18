@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox — Предварительная версия набора обязательных элементов
 description: ''
-ms.date: 04/12/2019
+ms.date: 04/17/2019
 localization_priority: Normal
-ms.openlocfilehash: d19cb7c664cda42469cf7cde31d69f87101278c8
-ms.sourcegitcommit: 95ed6dfbfa680dbb40ff9757020fa7e5be4760b6
+ms.openlocfilehash: 557dedf3943be12fbb9e384873d0b9079b251c2f
+ms.sourcegitcommit: 6d375518c119d09c8d3fb5f0cc4583ba5b20ac03
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "31838538"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "31914335"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -29,6 +29,7 @@ ms.locfileid: "31838538"
 | Элемент | Тип |
 |--------|------|
 | [ewsUrl](#ewsurl-string) | Элемент |
+| [masterCategories](#mastercategories-mastercategories) | Элемент |
 | [restUrl](#resturl-string) | Элемент |
 | [addHandlerAsync](#addhandlerasynceventtype-handler-options-callback) | Метод |
 | [convertToEwsId](#converttoewsiditemid-restversion--string) | Метод |
@@ -79,6 +80,42 @@ ms.locfileid: "31838538"
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+
+---
+---
+
+#### <a name="mastercategories-mastercategoriesjavascriptapioutlookofficemastercategories"></a>Мастеркатегориес:[мастеркатегориес](/javascript/api/outlook/office.mastercategories)
+
+Получает объект, предоставляющий методы для управления главным списком категорий в этом почтовом ящике.
+
+> [!NOTE]
+> Этот элемент не поддерживается в Outlook для iOS или Outlook для Android.
+
+##### <a name="type"></a>Тип
+
+*   [Мастеркатегориес](/javascript/api/outlook/office.mastercategories)
+
+##### <a name="requirements"></a>Требования
+
+|Требование| Значение|
+|---|---|
+|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| Предварительная версия |
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadWriteMailbox |
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение |
+
+##### <a name="example"></a>Пример
+
+В этом примере показано получение сводного списка категорий для этого почтового ящика.
+
+```javascript
+Office.context.mailbox.masterCategories.getAsync(function (asyncResult) {
+  if (asyncResult.status === Office.AsyncResultStatus.Failed) {
+    console.log("Action failed with error: " + asyncResult.error.message);
+  } else {
+    console.log("Master categories: " + JSON.stringify(asyncResult.value));
+  }
+});
+```
 
 ---
 ---
@@ -524,9 +561,9 @@ Office.context.mailbox.displayNewMessageForm(
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-| `options` | Объект | &lt;Необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
+| `options` | Object | &lt;Необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
 | `options.isRest` | Boolean |  &lt;необязательно&gt; | Определяет, будет ли предоставленный маркер использоваться для интерфейсов REST API Outlook или веб-служб Exchange. Значение по умолчанию: `false`. |
-| `options.asyncContext` | Объект |  &lt;необязательно&gt; | Данные о состоянии, передаваемые в асинхронный метод. |
+| `options.asyncContext` | Object |  &lt;необязательно&gt; | Данные о состоянии, передаваемые в асинхронный метод. |
 |`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). Маркер указывается в виде строки в свойстве `asyncResult.value`.|
 
 ##### <a name="requirements"></a>Требования
@@ -609,7 +646,7 @@ function cb(asyncResult) {
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-|`callback`| функция||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.|
+|`callback`| функция||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.|
 |`userContext`| Object| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования
@@ -676,8 +713,8 @@ function cb(asyncResult) {
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
 |`data`| String||Запрос EWS.|
-|`callback`| функция||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Результат XML вызова EWS указывается в виде строки в свойстве `asyncResult.value`. Если размер результата превышает 1 МБ, возвращается сообщение об ошибке.|
-|`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+|`callback`| function||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Результат XML вызова EWS указывается в виде строки в свойстве `asyncResult.value`. Если размер результата превышает 1 МБ, возвращается сообщение об ошибке.|
+|`userContext`| Object| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования
 

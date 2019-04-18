@@ -2,19 +2,20 @@
 ms.date: 03/06/2019
 description: Разработка настраиваемых функций в кратком руководстве по Excel.
 title: Краткое руководство по настраиваемым функциям (Предварительная версия)
+ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 9dd3e5a99f08ce0b931e705fac3312ab10c19e18
-ms.sourcegitcommit: 8fb60c3a31faedaea8b51b46238eb80c590a2491
+ms.openlocfilehash: 80c500e1e30e8751a7d969d33cd7e13b7943b1b5
+ms.sourcegitcommit: 6d375518c119d09c8d3fb5f0cc4583ba5b20ac03
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "30632704"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "31914300"
 ---
 # <a name="get-started-developing-excel-custom-functions"></a>Приступая к разработке пользовательских функций Excel
 
 С помощью пользовательских функций разработчики могут добавлять новые функции в Excel, определяя их в JavaScript или typescript как часть надстройки. Пользователи Excel могут получить доступ к пользовательским функциям так же, как и к любой собственной `SUM()`функции в Excel, например.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Обязательные условия
 
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
@@ -111,4 +112,4 @@ ms.locfileid: "30632704"
 * [Обзор пользовательских функций](../excel/custom-functions-overview.md)
 * [Метаданные пользовательских функций](../excel/custom-functions-json.md)
 * [Среда выполнения для пользовательских функций Excel](../excel/custom-functions-runtime.md)
-* [Рекомендации по настраиваемым функциям](../excel/custom-functions-best-practices.md)
+* [Рекомендации по пользовательским функциям](../excel/custom-functions-best-practices.md)

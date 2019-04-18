@@ -1,13 +1,13 @@
 ---
-ms.date: 03/19/2019
+ms.date: 04/15/2019
 description: Проверка поДлинности пользователей с помощью пользовательских функций в Excel.
 title: Проверка поДлинности для пользовательских функций
-ms.openlocfilehash: 7db46e40758ea0282a2fd7c4d40739304a874e76
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: 75ffb82c0dc9350c35b22b1d1676990598ea0c44
+ms.sourcegitcommit: 6d375518c119d09c8d3fb5f0cc4583ba5b20ac03
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30871495"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "31914188"
 ---
 # <a name="authentication"></a>Проверка подлинности
 
@@ -30,7 +30,7 @@ ms.locfileid: "30871495"
 > [!NOTE]
 > В среде выполнения пользовательских функций используется объект Dialog, который немного отличается от объекта Dialog в среде выполнения модуля браузера, используемого панелями задач. Они обе называются "диалоговым API", но используются `Officeruntime.Dialog` для проверки подлинности пользователей в среде выполнения пользовательских функций.
 
-Сведения о том `OfficeRuntime.Dialog`, как использовать, можно найти в разделе [Среда выполнения пользовательских функций](/office/dev/add-ins/excel/custom-functions-runtime?view=office-js#displaying-a-dialog-box).
+Сведения о том `OfficeRuntime.Dialog`, как использовать диалоговое окно, можно найти в разделе [Custom functions](/office/dev/add-ins/excel/custom-functions-dialog).
 
 Выполняя весь процесс проверки подлинности в целом, можно представить себе область задач и элементы ПОЛЬЗОВАТЕЛЬСКОГО интерфейса надстройки, а также компонент Custom functions в надстройке как отдельные объекты, которые могут общаться друг с другом с помощью `AsyncStorage`.
 

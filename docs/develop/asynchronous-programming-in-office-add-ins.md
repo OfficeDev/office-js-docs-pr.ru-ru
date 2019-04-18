@@ -1,14 +1,14 @@
 ---
 title: Асинхронное программирование в случае надстроек Office
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/15/2019
 localization_priority: Priority
-ms.openlocfilehash: 5046ea39d571984be9b735290f08ee186ad08b09
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: 6fad9030ecfbb89d515e6cd3b7bb3eeae0e17379
+ms.sourcegitcommit: 6d375518c119d09c8d3fb5f0cc4583ba5b20ac03
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30870165"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "31914279"
 ---
 # <a name="asynchronous-programming-in-office-add-ins"></a>Асинхронное программирование в случае надстроек Office
 
@@ -212,7 +212,7 @@ function write(message){
 
 Если применяется шаблон программирования, предусматривающий использование обещаний, в коде не нужно указывать передачу функции обратного вызова и ожидание ее возвращения для продолжения выполнения. В этом случае сразу возвращается объект обещания, который представляет нужный результат. Но в отличие от традиционного синхронного программирования, в этом случае получение обещанного результата на самом деле откладывается до тех пор, пока среда выполнения надстроек Office не сможет выполнить запрос. Обработчик _onError_ предоставляется для ситуаций, когда запрос не может быть выполнен.
 
-API JavaScript для Office предоставляет метод [Office.select](/javascript/api/office#select-expression--callback-), которые поддерживает использование шаблона promise для работы с существующими объектами привязки. Объект promise, возвращаемый в метод **Office.select**, поддерживает только четыре метода, к которым можно получить доступ непосредственно из объекта [Binding](/javascript/api/office/office.binding): [getDataAsync](/javascript/api/office/office.binding#getdataasync-options--callback-), [setDataAsync](/javascript/api/office/office.binding#setdataasync-data--options--callback-), [addHandlerAsync](/javascript/api/office/office.binding#addhandlerasync-eventtype--handler--options--callback-) или [removeHandlerAsync](/javascript/api/office/office.binding#removehandlerasync-eventtype--options--callback-).
+API JavaScript для Office предоставляет метод [Office.select](/javascript/api/office#office-select), которые поддерживает использование шаблона promise для работы с существующими объектами привязки. Объект promise, возвращаемый в метод **Office.select**, поддерживает только четыре метода, к которым можно получить доступ непосредственно из объекта [Binding](/javascript/api/office/office.binding): [getDataAsync](/javascript/api/office/office.binding#getdataasync-options--callback-), [setDataAsync](/javascript/api/office/office.binding#setdataasync-data--options--callback-), [addHandlerAsync](/javascript/api/office/office.binding#addhandlerasync-eventtype--handler--options--callback-) или [removeHandlerAsync](/javascript/api/office/office.binding#removehandlerasync-eventtype--options--callback-).
 
 Шаблон promise для работы с привязками принимает такую форму:
 

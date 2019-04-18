@@ -3,12 +3,12 @@ ms.date: 03/13/2019
 description: Отладка пользовательских функций в Excel.
 title: Отладка пользовательских функций (Предварительная версия)
 localization_priority: Normal
-ms.openlocfilehash: 66b55855fdbdc3b3cfc7a316cb8fd7e06f073213
-ms.sourcegitcommit: 14ceac067e0e130869b861d289edb438b5e3eff9
+ms.openlocfilehash: 08563ef630ebc457219c4c622328b84d13e6acab
+ms.sourcegitcommit: 6d375518c119d09c8d3fb5f0cc4583ba5b20ac03
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "31478968"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "31914391"
 ---
 # <a name="custom-functions-debugging-preview"></a>Отладка пользовательских функций (Предварительная версия)
 
@@ -27,18 +27,18 @@ ms.locfileid: "31478968"
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
 > [!NOTE]
-> Для простоты в этой статье показана Отладка в контексте использования Visual Studio Code для редактирования, запуска задач и в некоторых случаях использования представления отладки. Если вы используете другой редактор или средство командной строки, ознакомьтесь с инструкциями по использованию [командной строки](#Use-the-command-line-tools-to-debug) в конце этой статьи.
+> Для простоты в этой статье показана Отладка в контексте использования Visual Studio Code для редактирования, запуска задач и в некоторых случаях использования представления отладки. Если вы используете другой редактор или средство командной строки, ознакомьтесь с инструкциями по использованию [командной строки](#use-the-command-line-tools-to-debug) в конце этой статьи.
 
 ## <a name="requirements"></a>Требования
 
-Перед началом отладки необходимо создать проект надстройки настраиваемых функций с помощью генератора Yo Office и убедиться, что у вас есть доверенные самозаверяющие сертификаты для вашего проекта. Инструкции по созданию проекта представлены в [руководстве Custom functions](https://review.docs.microsoft.com/office/dev/add-ins/tutorials/excel-tutorial-create-custom-functions). Инструкции по доверенным сертификатам можно узнать в статье [Добавление самозаверяющих сертификатов в качестве доверенных корневых сертификатов](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md).
+Перед началом отладки необходимо создать проект надстройки настраиваемых функций с помощью генератора Yo Office и убедиться, что у вас есть доверенные самозаверяющие сертификаты для вашего проекта. Инструкции по созданию проекта представлены в [руководстве Custom functions](../tutorials/excel-tutorial-create-custom-functions.md). Инструкции по доверенным сертификатам можно узнать в статье [Добавление самозаверяющих сертификатов в качестве доверенных корневых сертификатов](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md).
 
 ## <a name="use-the-vs-code-debugger-for-excel-desktop"></a>Использование отладчика кода VS для классической версии Excel
 
 Вы можете использовать код VS для отладки настраиваемых функций в Office Excel на настольном компьютере.
 
 > [!NOTE]
-> Отладка на рабочем столе для Mac недоступна, но ее можно [использовать с помощью средств браузера для отладки Excel Online](#debug-in-excel-online-by-using-the-browser-developer-tools).
+> Отладка на рабочем столе для Mac недоступна, но ее можно [использовать с помощью средств браузера для отладки Excel Online](#use-the-browser-developer-tools-to-debug-custom-functions-in-excel-online).
 
 ### <a name="run-your-add-in-from-vs-code"></a>Запуск надстройки из кода VS
 
@@ -145,7 +145,7 @@ ms.locfileid: "31478968"
     
     `npm run start web`
     
-    Для Excel Online также потребуется Загрузка неопубликованных надстройку. Выполните действия, описанные в [Загрузка неопубликованных надстройки](#Sideload-your-add-in) , чтобы Загрузка неопубликованных надстройку. Затем перейдите к следующему разделу, чтобы начать отладку.
+    Для Excel Online также потребуется Загрузка неопубликованных надстройку. Выполните действия, описанные в [Загрузка неопубликованных надстройки](#sideload-your-add-in) , чтобы Загрузка неопубликованных надстройку. Затем перейдите к следующему разделу, чтобы начать отладку.
     
 4. Откройте Инструменты разработчика в браузере. Для Chrome и большинства браузеров F12 откроет средства разработчика.
 5. В средствах разработчика откройте файл сценария исходного кода (functions. js или functions. TS). Код настраиваемых функций может располагаться около конца файла.
@@ -172,4 +172,4 @@ ms.locfileid: "31478968"
 * [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
 * [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
 * [Журнал изменений пользовательских функций](custom-functions-changelog.md)
-* [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
+* [Руководство по настраиваемым функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)

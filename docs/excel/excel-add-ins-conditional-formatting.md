@@ -1,14 +1,14 @@
 ---
 title: Применение условного форматирования к диапазонам с помощью API JavaScript для Excel
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/15/2019
 localization_priority: Normal
-ms.openlocfilehash: 1c601782ca048fe1488f4ce578a7ee4d896b6b26
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: 7c6b5b5433e2dc59259eb937ef553ff265443f75
+ms.sourcegitcommit: 6d375518c119d09c8d3fb5f0cc4583ba5b20ac03
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30870382"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "31914384"
 ---
 # <a name="apply-conditional-formatting-to-excel-ranges"></a>Применение условного форматирования к диапазонам Excel
 
@@ -33,7 +33,7 @@ ms.locfileid: "30870382"
 -   `topBottom`
 
 > [!NOTE]
-> У каждого из этих свойств форматирования есть соответствующий вариант `*OrNullObject`. Дополнительные сведения об этом шаблоне см. в разделе [Методы *OrNullObject](/office/dev/add-ins/excel/excel-add-ins-advanced-concepts#42ornullobject-methods).
+> У каждого из этих свойств форматирования есть соответствующий вариант `*OrNullObject`. Дополнительные сведения об этом шаблоне см. в разделе [Методы *OrNullObject](/office/dev/add-ins/excel/excel-add-ins-advanced-concepts#ornullobject-methods).
 
 Для объекта ConditionalFormat можно установить только один тип формата. Это определено свойством `type`, которое является значением перечисления объекта [ConditionalFormatType](/javascript/api/excel/excel.conditionalformattype). Параметр `type` устанавливается при добавлении условного форматирования к диапазону. 
 
