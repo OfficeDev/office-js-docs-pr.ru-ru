@@ -1,14 +1,14 @@
 ---
 title: Создание надстройки Office, в которой используется единый вход, на платформе ASP.NET
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/15/2019
 localization_priority: Priority
-ms.openlocfilehash: 3dd78866c53863a5847fe6f6cf1083d804b2ca2f
-ms.sourcegitcommit: c5daedf017c6dd5ab0c13607589208c3f3627354
+ms.openlocfilehash: ebcf5cd72f841f5d97093e3b5f43833e97fa9947
+ms.sourcegitcommit: 6d375518c119d09c8d3fb5f0cc4583ba5b20ac03
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "30691113"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "31914307"
 ---
 # <a name="create-an-aspnet-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office, в которой используется единый вход, на платформе ASP.NET (предварительная версия)
 
@@ -69,7 +69,7 @@ ms.locfileid: "30691113"
 
 ## <a name="configure-the-add-in"></a>Конфигурация надстройки
 
-1. В приведенной ниже строке замените заполнитель {tenant_ID} на идентификатор клиента Office 365. Чтобы получить его, используйте один из способов, описанных в статье [Поиск идентификатора клиента Office 365](/onedrive/find-your-office-365-tenant-id).
+1. В приведенной ниже строке замените заполнитель {tenant_ID} на идентификатор клиента Office 365. Если вы не скопировали идентификатор клиента при регистрации надстройки с помощью AAD, воспользуйтесь одним из способов, описанных в статье [Поиск идентификатора клиента Office 365](/onedrive/find-your-office-365-tenant-id).
 
     `https://login.microsoftonline.com/{tenant_ID}/v2.0`
 
@@ -608,7 +608,7 @@ ms.locfileid: "30691113"
     string[] graphScopes = { "Files.Read.All" };
     ```
 
-1. Замените `TODO3` приведенным ниже кодом. Что нужно знать об этом коде:
+1. Замените `TODO3` приведенным ниже кодом. Вот что нужно знать об этом коде:
 
     * Для начала метод `ConfidentialClientApplication.AcquireTokenOnBehalfOfAsync` проверит кэш MSAL, который находится в памяти, на наличие подходящего маркера доступа. Только в случае его отсутствия запускается поток "от имени" с конечной точкой Azure AD версии 2.
     * Если ресурс Microsoft Graph требует многофакторной проверки подлинности, а пользователь еще не предоставил соответствующие данные, AAD вызовет исключение, содержащее свойство Claims.

@@ -1,20 +1,20 @@
 ---
-ms.date: 03/19/2019
+ms.date: 04/15/2019
 description: Устранение распространенных проблем в пользовательских функциях Excel.
 title: Устранение проблем в пользовательских функциях (предварительная версия)
 localization_priority: Priority
-ms.openlocfilehash: 19c3dcccce7618289dc49c3f61ce781744c24369
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: 6a11b733c528028a2ea9fc48b08e9308a2cf6e97
+ms.sourcegitcommit: 6d375518c119d09c8d3fb5f0cc4583ba5b20ac03
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30871341"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "31914223"
 ---
 # <a name="troubleshoot-custom-functions"></a>Устранение проблем в пользовательских функциях
 
 При разработке пользовательских функций могут возникать ошибки в продукте при создании и тестировании функций.
 
-Для устранения проблем можно [включить ведение журнала в среде выполнения для регистрации ошибок](#enable-runtime-logging) и ознакомиться с [собственными сообщениями об ошибках Excel](#check-for-excel-error-messages). Также проверьте наличие распространенных ошибок, например отсутствие надлежащей [проверки SSL-сертификатов](#verify-ssl-certificates), [оставление неразрешенных обещаний](#ensure-promises-return) и отсутствие [связывания функций](#associate-your-functions).
+Для устранения проблем можно [включить ведение журнала в среде выполнения для регистрации ошибок](#enable-runtime-logging) и ознакомиться с [собственными сообщениями об ошибках Excel](#check-for-excel-error-messages). Также проверьте наличие распространенных ошибок, например отсутствие надлежащей [проверки SSL-сертификатов](#my-add-in-wont-load-verify-certificates), [оставление неразрешенных обещаний](#ensure-promises-return) и отсутствие [связывания функций](#my-functions-wont-load-associate-functions).
 
 ## <a name="enable-runtime-logging"></a>Включение ведения журнала в среде выполнения
 
@@ -26,7 +26,7 @@ ms.locfileid: "30871341"
 
 ## <a name="common-issues"></a>Распространенные проблемы
 
-### <a name="my-add-in-wont-load-verify-certifications"></a>Моя надстройка не загружается: проверьте сертификаты
+### <a name="my-add-in-wont-load-verify-certificates"></a>Моя надстройка не загружается: проверьте сертификаты
 
 Если не удается установить надстройку, проверьте, что SSL-сертификаты правильно настроены для веб-сервера, на котором размещается ваша надстройка. Обычно при наличии проблемы с SSL-сертификатами отображается сообщение об ошибке в Excel, предупреждающее, что надстройку не удалось правильно установить. Дополнительные сведения см. в статье [Добавление самозаверяющих сертификатов в качестве доверенных корневых сертификатов](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md).
 

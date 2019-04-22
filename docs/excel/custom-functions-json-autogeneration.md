@@ -3,12 +3,12 @@ ms.date: 04/03/2019
 description: Использование тегов JSDOC для динамического создания метаданных JSON пользовательских функций.
 title: Создание метаданных JSON для пользовательских функций (предварительная версия)
 localization_priority: Priority
-ms.openlocfilehash: c6d89684da2d0773ccfb1763e5e3e426e647523b
-ms.sourcegitcommit: 14ceac067e0e130869b861d289edb438b5e3eff9
+ms.openlocfilehash: 2efe2a9a5a83ba60ef327273d5bd599f82916d48
+ms.sourcegitcommit: 6d375518c119d09c8d3fb5f0cc4583ba5b20ac03
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "31478967"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "31914286"
 ---
 # <a name="create-json-metadata-for-custom-functions-preview"></a>Создание метаданных JSON для пользовательских функций (предварительная версия)
 
@@ -16,7 +16,7 @@ ms.locfileid: "31478967"
 
 Добавьте тег `@customfunction` в примечаниях к коду для функции JavaScript или TypeScript, чтобы пометить ее как пользовательскую.
 
-Типы параметров функции можно получить с помощью тега [@param](#param) в JavaScript или из раздела [Типа функции](http://www.typescriptlang.org/docs/handbook/functions.html) в TypeScript. Дополнительную информацию см. в теге [@param](#param) и разделе [Типы](#Types).
+Типы параметров функции можно получить с помощью тега [@param](#param) в JavaScript или из раздела [Тип функции](https://www.typescriptlang.org/docs/handbook/functions.html) в TypeScript. Дополнительную информацию см. в теге [@param](#param) и разделе [Типы](#types).
 
 ## <a name="jsdoc-tags"></a>Теги JSDoc
 Ниже приведены теги JSDoc, которые поддерживаются в пользовательских функциях Excel:
@@ -86,7 +86,7 @@ ms.locfileid: "31478967"
 
 Синтаксис JavaScript: @param {type} name _description_
 
-* `{type}` следует указать информацию о типе в фигурных скобках. Дополнительную информацию о типах, которые могут использоваться, см. в разделе [Типы](##types). Необязательно: если тип не указан, будет использоваться тип `any`.
+* `{type}` должен указывать информацию о типе в фигурных скобках. Дополнительную информацию о типах, которые могут использоваться, см. в разделе [Типы](##types). Необязательно: если тип не указан, будет использоваться тип `any`.
 * `name` указывает, к какому параметру относится тег @param. Обязательно.
 * `description` предоставляет описание, которое отображается в Excel для параметра функции. Необязательно.
 
@@ -181,7 +181,7 @@ ms.locfileid: "31478967"
 
 * [Метаданные пользовательских функций](custom-functions-json.md)
 * [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
-* [Рекомендации в отношении пользовательских функций](custom-functions-best-practices.md)
+* [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
 * [Журнал изменений пользовательских функций](custom-functions-changelog.md)
 * [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
 * [Отладка пользовательских функций](custom-functions-debugging.md)

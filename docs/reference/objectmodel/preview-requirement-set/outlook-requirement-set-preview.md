@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/17/2019
 localization_priority: Priority
-ms.openlocfilehash: d24c4647116b4af56d85a434f3ece5ccf4662a39
-ms.sourcegitcommit: c5daedf017c6dd5ab0c13607589208c3f3627354
+ms.openlocfilehash: 9a3d09a78a7644b3b26c345ba2588a1fae59c1eb
+ms.sourcegitcommit: 6d375518c119d09c8d3fb5f0cc4583ba5b20ac03
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "30691169"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "31914272"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -30,6 +30,8 @@ ms.locfileid: "30691169"
 Добавлен новый необязательный параметр `options`, представляющий собой словарь с одним допустимым значением `allowEvent`. Это значение используется для отмены выполнения события.
 
 **Доступно в** Outlook в Интернете (классическая версия)
+
+---
 
 ### <a name="attachments"></a>Вложения
 
@@ -75,6 +77,53 @@ ms.locfileid: "30691169"
 
 **Доступно в** Outlook для Windows (Office 365)
 
+---
+
+### <a name="categories"></a>Категории
+
+В Outlook пользователь может группировать сообщения и встречи, используя категории для выделения их цветом. Пользователь определяет категории в главном списке своего почтового ящика. Затем он может применить одну или несколько категорий к элементу.
+
+> [!NOTE]
+> Эта функция не поддерживается в Outlook для iOS или Outlook для Android.
+
+#### <a name="categoriesjavascriptapioutlookofficecategories"></a>[Categories](/javascript/api/outlook/office.categories)
+
+Добавлен новый объект, представляющий категории элемента.
+
+**Доступно в** Outlook для Windows (Office 365)
+
+#### <a name="categorydetailsjavascriptapioutlookofficecategorydetails"></a>[CategoryDetails](/javascript/api/outlook/office.categorydetails)
+
+Добавлен новый объект, представляющий сведения о категории (ее имя и соответствующий цвет).
+
+**Доступно в** Outlook для Windows (Office 365)
+
+#### <a name="mastercategoriesjavascriptapioutlookofficemastercategories"></a>[MasterCategories](/javascript/api/outlook/office.mastercategories)
+
+Добавлен новый объект, представляющий главный список категорий для почтового ящика.
+
+**Доступно в** Outlook для Windows (Office 365)
+
+#### <a name="officecontextmailboxmastercategoriesjavascriptapioutlookofficemailboxmastercategories"></a>[Office.context.mailbox.masterCategories](/javascript/api/outlook/office.mailbox#mastercategories)
+
+Добавлено новое свойство, представляющее главный список категорий для почтового ящика.
+
+**Доступно в** Outlook для Windows (Office 365)
+
+#### <a name="officecontextmailboxitemcategoriesjavascriptapioutlookofficeitemcategories"></a>[Office.context.mailbox.item.categories](/javascript/api/outlook/office.item#categories)
+
+Добавлено новое свойство, представляющее набор категорий для элемента.
+
+**Доступно в** Outlook для Windows (Office 365)
+
+#### <a name="officemailboxenumscategorycolorjavascriptapioutlookofficemailboxenumscategorycolor"></a>[Office.MailboxEnums.CategoryColor](/javascript/api/outlook/office.mailboxenums.categorycolor)
+
+Добавлено новое перечисление, указывающее цвета, доступные для сопоставления с категориями.
+
+**Доступно в** Outlook для Windows (Office 365)
+
+---
+
 ### <a name="delegate-access"></a>Делегированный доступ
 
 #### <a name="sharedpropertiesjavascriptapioutlookofficesharedproperties"></a>[SharedProperties](/javascript/api/outlook/office.sharedproperties)
@@ -100,6 +149,8 @@ ms.locfileid: "30691169"
 К элементу манифеста [DesktopFormFactor](../../manifest/desktopformfactor.md) добавлен дочерний элемент. Он определяет, доступна ли надстройка в сценариях делегирования.
 
 **Доступно в** Outlook для Windows (Office 365)
+
+---
 
 ### <a name="enhanced-location"></a>Расширенные функции расположения
 
@@ -139,6 +190,8 @@ ms.locfileid: "30691169"
 
 **Доступно в** Outlook для Windows (Office 365)
 
+---
+
 ### <a name="integration-with-actionable-messages"></a>Взаимодействие с интерактивными сообщениями
 
 #### <a name="officecontextmailboxitemgetinitializationcontextasyncofficecontextmailboxitemmdgetinitializationcontextasyncoptions-callback"></a>[Office.context.mailbox.item.getInitializationContextAsync](office.context.mailbox.item.md#getinitializationcontextasyncoptions-callback)
@@ -146,6 +199,8 @@ ms.locfileid: "30691169"
 Добавлена новая функция, которая возвращает данные инициализации, передаваемые при [активации надстройки интерактивным сообщением](/outlook/actionable-messages/invoke-add-in-from-actionable-message).
 
 **Доступно в** Outlook для Windows (Office 365), Outlook в Интернете (классическая версия)
+
+---
 
 ### <a name="internet-headers"></a>Заголовки Интернета
 
@@ -161,6 +216,8 @@ ms.locfileid: "30691169"
 
 **Доступно в** Outlook для Windows (Office 365)
 
+---
+
 ### <a name="office-theme"></a>Тема Office
 
 #### <a name="officecontextmailboxofficethemejavascriptapiofficeofficeofficetheme"></a>[Office.context.mailbox.officeTheme](/javascript/api/office/office.officetheme)
@@ -174,6 +231,8 @@ ms.locfileid: "30691169"
 Добавлено событие `OfficeThemeChanged` в объект `Mailbox`.
 
 **Доступно в** Outlook для Windows (Office 365)
+
+---
 
 ### <a name="sso"></a>Единый вход
 
