@@ -1,14 +1,14 @@
 ---
 title: Работа с листами с использованием API JavaScript для Excel
 description: ''
-ms.date: 04/04/2019
+ms.date: 04/18/2019
 localization_priority: Priority
-ms.openlocfilehash: 0c66022112e6a6742753feb9945300a5d214e9bb
-ms.sourcegitcommit: 63219bcc1bb5e3bed7eb6c6b0adb73a4829c7e8f
+ms.openlocfilehash: 5df0bbdd1b6cf1cf3ef7a6aa14b7e00dee7ad9b2
+ms.sourcegitcommit: 44c61926d35809152cbd48f7b97feb694c7fa3de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "31479727"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "31959120"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
@@ -330,6 +330,52 @@ Excel.run(function (context) {
 > - Примеры, в которых показано, как получить диапазон в листе с помощью объекта `Range`, см. в статье [Работа с диапазонами с использованием API JavaScript для Excel](excel-add-ins-ranges.md).
 > - Примеры, в которых показано, как получить диапазоны из объекта `Table`, см. в статье [Работа с таблицами с использованием API JavaScript для Excel](excel-add-ins-tables.md).
 > - Примеры, в которых показано, как выполнять поиск большого диапазона для нескольких поддиапазонов с учетом характеристик ячеек, см. в статье [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md).
+
+## <a name="filter-data"></a>Фильтрация данных
+
+> [!NOTE]
+> `AutoFilter` в настоящее время доступен только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+
+Объект [AutoFilter](/javascript/api/excel/excel.autofilter) применяет фильтры данных в диапазоне на листе. Он создается с помощью метода `Worksheet.autoFilter.apply`, содержащего следующие параметры:
+
+- `range`: диапазон, к которому применяется фильтр, указанный в виде объекта `Range` или строки.
+- `columnIndex`: отсчитываемый от нуля индекс столбца, по которому оценивается условие фильтра.
+- `criteria`: объект [FilterCriteria](/javascript/api/excel/excel.filtercriteria), определяющий, какие строки следует фильтровать на основе ячейки столбца.
+
+В первом примере кода показано, как добавить фильтр в используемый диапазон на листе. Этот фильтр скрывает записи, не входящие в верхние 25 %, на основе значений в столбце **3**.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+    var farmData = sheet.getUsedRange();
+
+    // This filter will only show the rows with the top 25% of values in column 3.
+    sheet.autoFilter.apply(farmData, 3, { criterion1: "25", filterOn: Excel.FilterOn.topPercent });
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+В следующем примере кода показано, как обновить автофильтр, используя метод `reapply`. Это следует выполнять при изменении данных в диапазоне.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+    sheet.autoFilter.reapply();
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+В последнем примере кода автофильтра показано, как удалить автофильтр с листа с помощью метода `remove`.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+    sheet.autoFilter.remove();
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+Объект `AutoFilter` также можно применять к отдельным таблицам. Дополнительные сведения см. в статье [Работа с таблицами с использованием API JavaScript для Excel](excel-add-ins-tables.md#autofilter).
 
 ## <a name="data-protection"></a>Защита данных
 

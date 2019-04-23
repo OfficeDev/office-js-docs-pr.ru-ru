@@ -1,14 +1,14 @@
 ---
 title: Работа с таблицами с использованием API JavaScript для Excel
 description: ''
-ms.date: 04/04/2019
+ms.date: 04/18/2019
 localization_priority: Priority
-ms.openlocfilehash: 1b409e27c12d4741f59a027dd4962fdee65b96bf
-ms.sourcegitcommit: 63219bcc1bb5e3bed7eb6c6b0adb73a4829c7e8f
+ms.openlocfilehash: ba48fce1bee28bf4cad8b5d0ab91d9c1fb12fea8
+ms.sourcegitcommit: 44c61926d35809152cbd48f7b97feb694c7fa3de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "31479720"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "31959134"
 ---
 # <a name="work-with-tables-using-the-excel-javascript-api"></a>Работа с таблицами с использованием API JavaScript для Excel
 
@@ -357,6 +357,35 @@ Excel.run(function (context) {
         });
 }).catch(errorHandlerFunction);
 ```
+
+## <a name="autofilter"></a>Автофильтр
+
+> [!NOTE]
+> `Table.autoFilter` в настоящее время доступен только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+
+Надстройка может использовать объект [AutoFilter](/javascript/api/excel/excel.autofilter) таблицы для фильтрации данных. Объект `AutoFilter` является целой структурой фильтра таблицы или диапазона. Все операции фильтрации, описанные выше в этой статье, совместимы с автофильтром. Единая точка доступа упрощает доступ к нескольким фильтрам и управление ими.
+
+В следующем примере кода показана такая же [фильтрация данных, как в примере кода выше](#apply-filters-to-a-table), но выполненная полностью с помощью автофильтра.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+    var expensesTable = sheet.tables.getItem("ExpensesTable");
+
+    expensesTable.autoFilter.apply(expensesTable.getRange(), 2, {
+        filterOn: Excel.FilterOn.values,
+        values: ["Restaurant", "Groceries"]
+    });
+    expensesTable.autoFilter.apply(expensesTable.getRange(), 3, {
+        filterOn: Excel.FilterOn.dynamic,
+        dynamicCriteria: Excel.DynamicFilterCriteria.belowAverage
+    });
+
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+Объект `AutoFilter` можно также применять к диапазону на уровне листа. Дополнительные сведения см. в статье [Работа с листами с использованием API JavaScript для Excel](excel-add-ins-worksheets.md#filter-data).
 
 ## <a name="format-a-table"></a>Форматирование таблицы
 

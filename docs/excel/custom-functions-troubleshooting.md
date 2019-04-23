@@ -1,14 +1,14 @@
 ---
-ms.date: 04/15/2019
+ms.date: 04/18/2019
 description: Устранение распространенных проблем в пользовательских функциях Excel.
 title: Устранение проблем в пользовательских функциях (предварительная версия)
 localization_priority: Priority
-ms.openlocfilehash: 6a11b733c528028a2ea9fc48b08e9308a2cf6e97
-ms.sourcegitcommit: 6d375518c119d09c8d3fb5f0cc4583ba5b20ac03
+ms.openlocfilehash: cf54aa3b719b7893799df5d1c5206c6fb904be69
+ms.sourcegitcommit: 44c61926d35809152cbd48f7b97feb694c7fa3de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "31914223"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "31959106"
 ---
 # <a name="troubleshoot-custom-functions"></a>Устранение проблем в пользовательских функциях
 
@@ -45,6 +45,10 @@ CustomFunctions.associate("ADD", add);
 ```
 
 Дополнительные сведения об этом процессе см. в статье [Сопоставление имен функций с метаданными JSON](/office/dev/add-ins/excel/custom-functions-best-practices#associating-function-names-with-json-metadata).
+
+### <a name="cant-open-add-in-from-localhost-use-a-local-loopback-exception"></a>Не удается открыть надстройку из узла localhost: используйте исключение локального замыкания на себя
+
+Если отображается ошибка "Не удается открыть эту надстройку из localhost", необходимо включить исключение локального замыкания на себя. Подробные сведения о том, как это сделать, см. в [этой статье службы поддержки Майкрософт](https://support.microsoft.com/ru-RU/help/4490419/local-loopback-exemption-does-not-work).
 
 ### <a name="ensure-promises-return"></a>Проверка возвращения обещаний
 
