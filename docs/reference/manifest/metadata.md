@@ -2,28 +2,29 @@
 title: Элемент Metadata в файле манифеста
 description: ''
 ms.date: 10/09/2018
-ms.openlocfilehash: 79038fc13eba76176be19e484ffa57e64727bf94
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: a3aecb1983905658f3a55fdb8bf0629a8d5ef474
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27432664"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32452048"
 ---
-# <a name="metadata-element"></a><span data-ttu-id="bd30a-102">Элемент Metadata</span><span class="sxs-lookup"><span data-stu-id="bd30a-102">MetaData element</span></span>
+# <a name="metadata-element"></a><span data-ttu-id="c07ef-102">Элемент Metadata</span><span class="sxs-lookup"><span data-stu-id="c07ef-102">Metadata element</span></span>
 
-<span data-ttu-id="bd30a-103">Определяет параметры метаданных, используемые пользовательской функцией в Excel.</span><span class="sxs-lookup"><span data-stu-id="bd30a-103">Defines script settings used by a custom function in Excel.</span></span>
+<span data-ttu-id="c07ef-103">Определяет параметры метаданных, используемые пользовательской функцией в Excel.</span><span class="sxs-lookup"><span data-stu-id="c07ef-103">Defines the metadata settings used by a custom function in Excel.</span></span>
 
-## <a name="attributes"></a><span data-ttu-id="bd30a-104">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="bd30a-104">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="c07ef-104">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="c07ef-104">Attributes</span></span>
 
-<span data-ttu-id="bd30a-105">Нет</span><span class="sxs-lookup"><span data-stu-id="bd30a-105">None</span></span>
+<span data-ttu-id="c07ef-105">Нет</span><span class="sxs-lookup"><span data-stu-id="c07ef-105">None</span></span>
 
-## <a name="child-elements"></a><span data-ttu-id="bd30a-106">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="bd30a-106">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="c07ef-106">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="c07ef-106">Child elements</span></span>
 
-|  <span data-ttu-id="bd30a-107">Элемент</span><span class="sxs-lookup"><span data-stu-id="bd30a-107">Element</span></span>  |  <span data-ttu-id="bd30a-108">Обязательный</span><span class="sxs-lookup"><span data-stu-id="bd30a-108">Required</span></span>  |  <span data-ttu-id="bd30a-109">Описание</span><span class="sxs-lookup"><span data-stu-id="bd30a-109">Description</span></span>  |
+|  <span data-ttu-id="c07ef-107">Элемент</span><span class="sxs-lookup"><span data-stu-id="c07ef-107">Element</span></span>  |  <span data-ttu-id="c07ef-108">Обязательный</span><span class="sxs-lookup"><span data-stu-id="c07ef-108">Required</span></span>  |  <span data-ttu-id="c07ef-109">Описание</span><span class="sxs-lookup"><span data-stu-id="c07ef-109">Description</span></span>  |
 |:-----|:-----|:-----|
-|  [<span data-ttu-id="bd30a-110">SourceLocation</span><span class="sxs-lookup"><span data-stu-id="bd30a-110">SourceLocation</span></span>](customfunctionssourcelocation.md)  |  <span data-ttu-id="bd30a-111">Да</span><span class="sxs-lookup"><span data-stu-id="bd30a-111">Yes</span></span>  | <span data-ttu-id="bd30a-112">Строка с идентификатором ресурса JSON-файла, используемого пользовательскими функциями.</span><span class="sxs-lookup"><span data-stu-id="bd30a-112">String with the resource id of the HTML file used by custom functions.</span></span> |
+|  [<span data-ttu-id="c07ef-110">SourceLocation</span><span class="sxs-lookup"><span data-stu-id="c07ef-110">SourceLocation</span></span>](customfunctionssourcelocation.md)  |  <span data-ttu-id="c07ef-111">Да</span><span class="sxs-lookup"><span data-stu-id="c07ef-111">Yes</span></span>  | <span data-ttu-id="c07ef-112">Строка с идентификатором ресурса JSON-файла, используемого пользовательскими функциями.</span><span class="sxs-lookup"><span data-stu-id="c07ef-112">String with the resource id of the JSON file used by custom functions.</span></span> |
 
-## <a name="example"></a><span data-ttu-id="bd30a-113">Пример</span><span class="sxs-lookup"><span data-stu-id="bd30a-113">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c07ef-113">Пример</span><span class="sxs-lookup"><span data-stu-id="c07ef-113">Example</span></span>
 
 ```xml
 <Metadata>
