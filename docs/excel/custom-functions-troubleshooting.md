@@ -4,11 +4,11 @@ description: Устранение распространенных пробле�
 title: Устранение проблем в пользовательских функциях (предварительная версия)
 localization_priority: Priority
 ms.openlocfilehash: cf54aa3b719b7893799df5d1c5206c6fb904be69
-ms.sourcegitcommit: 44c61926d35809152cbd48f7b97feb694c7fa3de
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "31959106"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32449220"
 ---
 # <a name="troubleshoot-custom-functions"></a>Устранение проблем в пользовательских функциях
 

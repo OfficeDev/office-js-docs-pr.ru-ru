@@ -5,11 +5,11 @@ ms.date: 01/17/2019
 ms.prod: project
 localization_priority: Priority
 ms.openlocfilehash: 4d0dfa98d36d6da56fe2b9687922371eea29062a
-ms.sourcegitcommit: 33dcf099c6b3d249811580d67ee9b790c0fdccfb
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "29742237"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32450790"
 ---
 # <a name="build-your-first-project-add-in"></a>Создание первой надстройки Project
 
@@ -50,7 +50,7 @@ ms.locfileid: "29742237"
 
 ## <a name="update-the-code"></a>Обновление кода
 
-1. В редакторе кода откройте файл **index.html** из корневой папки проекта. Этот файл содержит HTML-содержимое, которое будет отображаться в области задач надстройки.
+1. В редакторе кода откройте файл **index.html** из корневой папки проекта. Этот файл содержит HTML-контент, который будет отображаться в области задач надстройки.
 
 2. Замените элемент `<body>` приведенным ниже исправлением.
 
@@ -78,7 +78,7 @@ ms.locfileid: "29742237"
     </body>
     ```
 
-3. Откройте файл **src/index.js**, чтобы указать скрипт для надстройки. Замените все его содержимое приведенным ниже кодом и сохраните файл.
+3. Откройте файл **src/index.js**, чтобы указать скрипт для надстройки. Замените все его содержимое следующим кодом и сохраните файл.
 
     ```js
     'use strict';

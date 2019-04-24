@@ -4,11 +4,11 @@ description: ''
 ms.date: 04/05/2019
 localization_priority: Priority
 ms.openlocfilehash: 0a2a28e09061248851e8ee1037d0219c7fcda1a5
-ms.sourcegitcommit: fbe2a799fda71aab73ff1c5546c936edbac14e47
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "31764399"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32448741"
 ---
 # <a name="add-in-commands-for-excel-word-and-powerpoint"></a>Команды надстроек для Excel, Word и PowerPoint
 
@@ -23,7 +23,7 @@ ms.locfileid: "31764399"
 
 ![Снимок экрана с командой надстройки в приложении Excel](../images/add-in-commands-1.png)
 
-*Рисунок 2. Надстройка с командами, работающая в Excel Online*
+*Рисунок 2. Надстройка с командами, работающая в Excel Online*
 
 ![Снимок экрана с командой надстройки в Excel Online](../images/add-in-commands-2.png)
 
@@ -82,7 +82,7 @@ ms.locfileid: "31764399"
 - [Руководство по оформлению значков](add-in-icons.md) подходит для всех значков.
 - Предоставьте версию надстройки, которая работает в ведущих приложениях, не поддерживающих команды. Один манифест надстройки может работать в ведущих приложениях независимо от того, поддерживают ли они команды.
 
-   *Рисунок 3. Надстройка области задач в Office 2013 и аналогичная надстройка, использующая команды надстройки в Office 2016*
+   *Рис. 3. Надстройка области задач в Office 2013 и эта же надстройка, использующая команды надстройки в Office 2016*
 
    ![Снимок экрана: надстройка области задач в Office 2013 и эта же надстройка, использующая команды надстройки в Office 2016](../images/office-task-pane-add-ins.png)
 

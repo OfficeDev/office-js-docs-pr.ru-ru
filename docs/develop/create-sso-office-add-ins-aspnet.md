@@ -4,11 +4,11 @@ description: ''
 ms.date: 04/15/2019
 localization_priority: Priority
 ms.openlocfilehash: ebcf5cd72f841f5d97093e3b5f43833e97fa9947
-ms.sourcegitcommit: 6d375518c119d09c8d3fb5f0cc4583ba5b20ac03
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "31914307"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32450165"
 ---
 # <a name="create-an-aspnet-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office, в которой используется единый вход, на платформе ASP.NET (предварительная версия)
 
@@ -426,7 +426,7 @@ ms.locfileid: "31914307"
     }
     ```
 
-1. Замените `TODO13C` приведенным ниже кодом. Что нужно знать об этом коде:
+1. Замените `TODO13C` приведенным ниже кодом. Вот что нужно знать об этом коде:
 
     * Серверный код, который вы создадите позже, отправит сообщение `Missing access_as_user`, если разрешения `access_as_user` не будет в маркере доступа, который клиент надстройки отправит в AAD для использования в потоке "от имени".
     * Надстройка должна сообщить об ошибке.
