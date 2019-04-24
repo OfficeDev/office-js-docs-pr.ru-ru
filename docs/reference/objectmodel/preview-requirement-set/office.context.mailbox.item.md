@@ -4,11 +4,11 @@ description: ''
 ms.date: 04/17/2019
 localization_priority: Normal
 ms.openlocfilehash: cb9c298302bf0df9d7842fde4706d9d0c9710ae4
-ms.sourcegitcommit: 6d375518c119d09c8d3fb5f0cc4583ba5b20ac03
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "31914349"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32450396"
 ---
 # <a name="item"></a>item
 
@@ -51,9 +51,9 @@ ms.locfileid: "31914349"
 | [organizer](#organizer-emailaddressdetailsorganizer) | Элемент |
 | [recurrence](#nullable-recurrence-recurrence) | Элемент |
 | [requiredAttendees](#requiredattendees-arrayemailaddressdetailsrecipients) | Элемент |
-| [sender](#sender-emailaddressdetails) | Элемент |
-| [seriesId](#nullable-seriesid-string) | Элемент |
-| [start](#start-datetime) | Элемент |
+| [sender](#sender-emailaddressdetails) | Member |
+| [seriesId](#nullable-seriesid-string) | Member |
+| [start](#start-datetime) | Member |
 | [subject](#subject-stringsubject) | Элемент |
 | [to](#to-arrayemailaddressdetailsrecipients) | Элемент |
 | [addFileAttachmentAsync](#addfileattachmentasyncuri-attachmentname-options-callback) | Метод |
@@ -108,7 +108,7 @@ Office.initialize = function () {
 > [!NOTE]
 > Outlook блокирует определенные типы файлов из-за потенциальных проблем с безопасностью, поэтому они не возвращаются. Дополнительные сведения см. в статье [Блокировка вложений в Outlook](https://support.office.com/article/Blocked-attachments-in-Outlook-434752E1-02D3-4E90-9124-8B81E49A8519).
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   Array.<[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails)>
 
@@ -182,7 +182,7 @@ function callback(asyncResult) {
 
 Получает объект, предоставляющий методы для работы с основным текстом элемента.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [Body](/javascript/api/outlook/office.body)
 
@@ -283,7 +283,7 @@ function callback(asyncResult) {
 }
 ```
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients)
 
@@ -306,7 +306,7 @@ function callback(asyncResult) {
 
 Это свойство имеет значение NULL для нового элемента в форме создания. Свойство `conversationId` вернет значение, если пользователь задаст тему и сохранит элемент.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   String
 
@@ -449,7 +449,7 @@ Office.context.mailbox.item.end.setAsync(endTime, options, function(result) {
 
 `enhancedLocation` Свойство возвращает объект [енханцедлокатион](/javascript/api/outlook/office.enhancedlocation) , который предоставляет методы для получения, удаления или добавления расположений для встречи.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [EnhancedLocation](/javascript/api/outlook/office.enhancedlocation)
 
@@ -512,7 +512,7 @@ function callback(asyncResult) {
 }
 ```
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails) | [из](/javascript/api/outlook/office.from)
 
@@ -531,7 +531,7 @@ function callback(asyncResult) {
 
 Возвращает или задает заголовки Интернета сообщения.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [InternetHeaders](/javascript/api/outlook/office.internetheaders)
 
@@ -561,7 +561,7 @@ function callback(asyncResult) {
 
 Получает идентификатор интернет-сообщения для электронного сообщения. Только в режиме чтения.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   String
 
@@ -627,7 +627,7 @@ console.log("Item class: " + itemClass);
 
 Свойство `itemId` недоступно в режиме создания. Если требуется идентификатор элемента, с помощью метода [`saveAsync`](#saveasyncoptions-callback) можно сохранить элемент в хранилище. При этом в параметре [`AsyncResult.value`](/javascript/api/office/office.asyncresult) функции обратного вызова возвращается идентификатор элемента.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   String
 
@@ -661,7 +661,7 @@ if (itemId === null || itemId == undefined) {
 
 Свойство `itemType` возвращает одно из значений перечисления `ItemType`, которое указывает, является ли экземпляр объекта `item` сообщением или встречей.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [Office.MailboxEnums.ItemType](/javascript/api/outlook/office.mailboxenums.itemtype)
 
@@ -854,7 +854,7 @@ Office.context.mailbox.item.organizer.getAsync(
 );
 ```
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [](/javascript/api/outlook/office.emailaddressdetails) | [Организатор](/javascript/api/outlook/office.organizer) EmailAddressDetails
 
@@ -917,7 +917,7 @@ Recurrence = {
 }
 ```
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 * [Повторения](/javascript/api/outlook/office.recurrence)
 
@@ -1016,7 +1016,7 @@ console.log("Sender: " + senderName + " (" + senderAddress + ")");
 
 `seriesId` Свойство возвращает `null` элементы, у которых нет родительских элементов, таких как одиночные встречи, элементы ряда или приглашения на собрание, `undefined` и возвращаемые для других элементов, не являющиеся приглашениями на собрания.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 * String
 
@@ -1083,7 +1083,7 @@ Office.context.mailbox.item.start.setAsync(startTime, options, function(result) 
 });
 ```
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   Date | [Time](/javascript/api/outlook/office.time)
 
@@ -1193,7 +1193,7 @@ function callback(asyncResult) {
 ##### <a name="parameters"></a>Параметры
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
-|`uri`|String||Универсальный код ресурса (URI), представляющий расположение файла, который нужно вложить в сообщение или встречу. Максимальная длина — 2048 символов.|
+|`uri`|Строка||Универсальный код ресурса (URI), представляющий расположение файла, который нужно вложить в сообщение или встречу. Максимальная длина — 2048 символов.|
 |`attachmentName`|String||Имя вложения, которое отображается при передаче вложения. Максимальная длина — 255 символов.|
 |`options`|Object|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Object|&lt;Необязательно&gt;|В методе обратного вызова разработчики могут указать любой объект, к которому необходимо получить доступ.|
@@ -1272,8 +1272,8 @@ Office.context.mailbox.item.addFileAttachmentAsync(
 
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
-|`base64File`|String||Содержимое изображения или файла в кодировке Base64, которое добавляется в сообщение электронной почты или событие.|
-|`attachmentName`|String||Имя вложения, которое отображается при передаче вложения. Максимальная длина — 255 символов.|
+|`base64File`|Строка||Содержимое изображения или файла в кодировке Base64, которое добавляется в сообщение электронной почты или событие.|
+|`attachmentName`|Строка||Имя вложения, которое отображается при передаче вложения. Максимальная длина — 255 символов.|
 |`options`|Object|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Object|&lt;Необязательно&gt;|В методе обратного вызова разработчики могут указать любой объект, к которому необходимо получить доступ.|
 |`options.isInline`|Boolean|&lt;необязательно&gt;|Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.|
@@ -1374,7 +1374,7 @@ Office.context.mailbox.item.addHandlerAsync(Office.EventType.AttachmentsChanged,
 
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
-|`itemId`|String||Идентификатор Exchange для вкладываемого элемента. Максимальная длина — 100 символов.|
+|`itemId`|Строка||Идентификатор Exchange для вкладываемого элемента. Максимальная длина — 100 символов.|
 |`attachmentName`|String||Тема вкладываемого элемента. Максимальная длина: 255 символов.|
 |`options`|Object|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Object|&lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
@@ -1461,9 +1461,9 @@ function addAttachment() {
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
 |`formData`|String &#124; Object||Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.<br/>**ИЛИ**<br/>Объект, который содержит текст или данные вложения и функцию обратного вызова. Ниже представлено определение этого объекта.|
-|`formData.htmlBody`|String|&lt;необязательно&gt;|Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.
+|`formData.htmlBody`|Строка|&lt;необязательно&gt;|Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.
 |`formData.attachments`|Array.&lt;Object&gt;|&lt;необязательно&gt;|Массив объектов JSON, представляющих собой вложенные файлы или элементы.|
-|`formData.attachments.type`|String||Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента.|
+|`formData.attachments.type`|Строка||Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента.|
 |`formData.attachments.name`|Строка||Строка, содержащая имя вложения, длиной до 255 символов.|
 |`formData.attachments.url`|Строка||Используется, только если свойству `type` задано значение `file`. URI расположения файла.|
 |`formData.attachments.isInline`|Логический||Используется, только если свойству `type` задано значение `file`. Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.|
@@ -1583,9 +1583,9 @@ Office.context.mailbox.item.displayReplyAllForm(
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
 |`formData`|String &#124; Object||Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.<br/>**ИЛИ**<br/>Объект, который содержит текст или данные вложения и функцию обратного вызова. Ниже представлено определение этого объекта.|
-|`formData.htmlBody`|String|&lt;необязательно&gt;|Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.
+|`formData.htmlBody`|Строка|&lt;необязательно&gt;|Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.
 |`formData.attachments`|Array.&lt;Object&gt;|&lt;необязательно&gt;|Массив объектов JSON, представляющих собой вложенные файлы или элементы.|
-|`formData.attachments.type`|String||Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента.|
+|`formData.attachments.type`|Строка||Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента.|
 |`formData.attachments.name`|Строка||Строка, содержащая имя вложения, длиной до 255 символов.|
 |`formData.attachments.url`|Строка||Используется, только если свойству `type` задано значение `file`. URI расположения файла.|
 |`formData.attachments.isInline`|Логический||Используется, только если свойству `type` задано значение `file`. Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.|
@@ -1697,7 +1697,7 @@ Office.context.mailbox.item.displayReplyForm(
 
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
-|`attachmentId`|String||Идентификатор вложения, которое требуется получить.|
+|`attachmentId`|Строка||Идентификатор вложения, которое требуется получить.|
 |`options`|Object|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Object|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
 |`callback`|функция|&lt;Необязательный&gt;|По завершении работы метода функция, переданная параметру `callback`, вызывается с помощью одного параметра `asyncResult`, представляющего собой объект [AsyncResult](/javascript/api/office/office.asyncresult).|
@@ -1904,7 +1904,7 @@ Office.initialize = function () {
 
 |Имя|Тип|Описание|
 |---|---|---|
-|`name`|String|Имя элемента правила `ItemHasKnownEntity`, определяющее соответствующий фильтр.|
+|`name`|Строка|Имя элемента правила `ItemHasKnownEntity`, определяющее соответствующий фильтр.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -2055,7 +2055,7 @@ var veggies = allMatches.veggies;
 
 |Имя|Тип|Описание|
 |---|---|---|
-|`name`|String|Имя элемента правила `ItemHasRegularExpressionMatch`, определяющее соответствующий фильтр.|
+|`name`|Строка|Имя элемента правила `ItemHasRegularExpressionMatch`, определяющее соответствующий фильтр.|
 
 ##### <a name="requirements"></a>Требования
 

@@ -2,12 +2,13 @@
 title: Элемент Control в файле манифеста
 description: ''
 ms.date: 10/09/2018
-ms.openlocfilehash: e5d8574e322c21e768fb9f66fe9bbb0c12a34ed4
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: d77b464fde9898ef216ef9e47c651fb5750e4453
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433938"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32450641"
 ---
 # <a name="control-element"></a>Элемент Control
 
@@ -30,11 +31,11 @@ ms.locfileid: "27433938"
 ### <a name="child-elements"></a>Дочерние элементы
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  **Label**     | Да |  Текст для кнопки. Для атрибута **resid** должно быть задано значение атрибута **id**, который принадлежит элементу **String** в элементе **ShortStrings**, вложенном в элемент [Resources](resources.md).        |
+|  **Label**     | Да |  Текст для кнопки. Атрибуту **resid** нужно присвоить значение атрибута **id** элемента **String** элементе **ShortStrings**, вложенном в элемент [Resources](resources.md).        |
 |  **ToolTip**  |Нет|Подсказка для кнопки. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **String**. **String** — это дочерний элемент **LongStrings**, являющийся дочерним для элемента [Resources](resources.md).|        
 |  [Supertip](supertip.md)  | Да |  Суперподсказка для кнопки.    |
 |  [Icon](icon.md)      | Да |  Изображение для кнопки.         |
-|  [Action](action.md)    | Да |  Задает выполняемое действие.  |
+|  [Action](action.md)    | Да |  Указание действия, которое предстоит выполнить.  |
 
 ### <a name="executefunction-button-example"></a>Пример кнопки ExecuteFunction
 
@@ -245,7 +246,7 @@ ms.locfileid: "27433938"
 |:-----|:-----|:-----|
 |  **Label**     | Да |  Текст для кнопки. Для атрибута **resid** должно быть задано значение атрибута **id**, который принадлежит элементу **String** в элементе **ShortStrings**, вложенном в элемент [Resources](resources.md).        |
 |  [Icon](icon.md)      | Да |  Изображение для кнопки.         |
-|  [Action](action.md)    | Да |  Задает выполняемое действие.  |
+|  [Action](action.md)    | Да |  Указание действия, которое предстоит выполнить.  |
 
 ### <a name="executefunction-mobile-button-example"></a>Пример кнопки ExecuteFunction для мобильного устройства
 

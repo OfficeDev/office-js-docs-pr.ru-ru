@@ -2,12 +2,13 @@
 title: Элемент Supertip в файле манифеста
 description: ''
 ms.date: 10/09/2018
-ms.openlocfilehash: bae997eda8e1055c5be76382456ba83acca7b91c
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: cdbba342fa591ddff3faf94ecd63a4740fb904da
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433672"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32450543"
 ---
 # <a name="supertip"></a>Supertip
 
@@ -20,7 +21,7 @@ ms.locfileid: "27433672"
 |  [Title](#title)        | Да |   Текст подсказки.         |
 |  [Description](#description)  | Да |  Описание подсказки.    |
 
-### <a name="title"></a>Title
+### <a name="title"></a>Заголовок
 
 Обязательный элемент. Текст суперподсказки. Атрибуту **resid** должно быть присвоено значение атрибута **id** элемента **String** в элементе **ShortStrings**, вложенном в элемент [Resources](resources.md).
 

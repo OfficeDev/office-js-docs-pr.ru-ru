@@ -2,12 +2,13 @@
 title: Элемент AlternateId в файле манифеста
 description: ''
 ms.date: 10/09/2018
-ms.openlocfilehash: db7c8e97f880fcbef0aff8fa5ceae48bf2604230
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: 7a19715fa987978a4540b717f1d30fbff97157c5
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433749"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32450669"
 ---
 # <a name="alternateid-element"></a>Элемент AlternateId
 

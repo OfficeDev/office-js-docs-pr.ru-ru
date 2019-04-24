@@ -4,11 +4,11 @@ description: Знакомство с последними обновлениям
 title: Журнал изменений пользовательских функций (предварительная версия)
 localization_priority: Normal
 ms.openlocfilehash: 03e4dd922ac3895e11a508f97e7ac3fa3e7b1cb0
-ms.sourcegitcommit: 14ceac067e0e130869b861d289edb438b5e3eff9
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "31477539"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32449278"
 ---
 # <a name="custom-functions-changelog-preview"></a>Журнал изменений пользовательских функций (предварительная версия)
 

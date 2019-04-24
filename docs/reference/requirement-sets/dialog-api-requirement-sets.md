@@ -5,11 +5,11 @@ ms.date: 03/19/2019
 ms.prod: non-product-specific
 localization_priority: Normal
 ms.openlocfilehash: ebbd10e65894a7d038e54ffbaac20c973adf4a9f
-ms.sourcegitcommit: c5daedf017c6dd5ab0c13607589208c3f3627354
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "30691134"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32450088"
 ---
 # <a name="dialog-api-requirement-sets"></a>Наборы обязательных элементов API диалоговых окон
 
@@ -17,7 +17,7 @@ ms.locfileid: "30691134"
 
 Надстройки Office работают в нескольких версиях Office. В приведенной ниже таблице перечислены наборы обязательных элементов Dialog API, ведущие приложения Office, которые их поддерживают, а также номера сборок или версий для этих приложений.
 
-|  Набор обязательных элементов  | Office 2013 для Windows | Office 2016 или более поздней версии для Windows   | Office 365 для Windows |  Office 365 для iPad  |  Office 365 для Mac  | Office Online  |  Office Online Server  |
+|  Набор обязательных элементов  | Office 2013 для Windows | Office 2016 или более поздняя версия для Windows   | Office 365 для Windows |  Office 365 для iPad  |  Office 365 для Mac  | Office Online  |  Office Online Server  |
 |:-----|-----|:-----|:-----|:-----|:-----|:-----|:-----|
 | DialogApi 1.1  | Сборка 15.0.4855.1000 или более поздняя | Сборка 16.0.4390.1000 или более поздняя | Версия 1602 (сборка 6741.0000) или более поздняя | 1.22 или более поздняя | 15.20 или более поздняя| Январь 2017 г. | Версия 1608 (сборка 7601.6800) или более поздняя|
 

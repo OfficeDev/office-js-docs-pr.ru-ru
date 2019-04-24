@@ -2,12 +2,13 @@
 title: Элемент FunctionFile в файле манифеста
 description: ''
 ms.date: 10/09/2018
-ms.openlocfilehash: 634d383498698b55990dc73e66ec11616396f968
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: 5f87d10428b58adfb89f1119ba5741599079afba
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27432699"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32450585"
 ---
 # <a name="functionfile-element"></a>Элемент FunctionFile
 
@@ -75,4 +76,4 @@ function writeText(event) {
 ```
 
 > [!IMPORTANT]
-> Вызов метода **event.completed** означает, что событие успешно обработано. Если функция вызывается несколько раз, например при многократном выборе одной команды надстройки, все события автоматически помещаются в очередь. Первое событие запускается автоматически, а другие ожидают в очереди. Когда функция вызывает метод **event.completed**, для нее запускается следующий вызов в очереди. Если вы не реализуете вызов **event.completed**, функция не будет работать.
+> Вызов метода **event.completed** означает, что событие успешно обработано. Если функция вызывается несколько раз, например при многократном выборе одной команды надстройки, все события автоматически помещаются в очередь. Первое событие запускается автоматически, тогда как остальные ожидают в очереди. Когда функция вызывает метод **event.completed**, для нее запускается следующий вызов в очереди. Если вы не реализуете вызов **event.completed**, функция не будет работать.

@@ -2,12 +2,13 @@
 title: Элемент OfficeTab в файле манифеста
 description: ''
 ms.date: 10/09/2018
-ms.openlocfilehash: 721064687c3c892b565a94e418815726cc0817f5
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: b61c245c000f8bf13eb71c991ec57a125993c2fc
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27432874"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32450466"
 ---
 # <a name="officetab-element"></a>Элемент OfficeTab
 
@@ -17,7 +18,7 @@ ms.locfileid: "27432874"
 
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  Group      | Да |  Определяет группу команд. На вкладке по умолчанию можно добавить только одну группу для каждой надстройки.  |
+|  Группа      | Да |  Определяет группу команд. На вкладке по умолчанию можно добавить только одну группу для каждой надстройки.  |
 
 Ниже приведены допустимые значения `id` для вкладок каждого ведущего приложения. Значения, выделенные **полужирным шрифтом**, поддерживаются классическими и веб-приложениями (например, Word 2016 или более поздней версии для Windows и Word Online).
 

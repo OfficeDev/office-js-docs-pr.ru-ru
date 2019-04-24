@@ -2,12 +2,13 @@
 title: Как определить правильный порядок элементов манифеста
 description: Узнайте, как определить правильный порядок расположения дочерних элементов в родительском элементе.
 ms.date: 11/16/2018
-ms.openlocfilehash: d460cc57eed2ce4e1b226fe5fe6434a25bbc455b
-ms.sourcegitcommit: 09f124fac7b2e711e1a8be562a99624627c0699e
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: 8eeaedffcc143b0e8d61e9c151f3786b67a0e3fc
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "27283069"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32449731"
 ---
 # <a name="how-to-find-the-proper-order-of-manifest-elements"></a>Как определить правильный порядок элементов манифеста
 
