@@ -2,12 +2,13 @@
 title: Элемент HighResolutionIconUrl в файле манифеста
 description: ''
 ms.date: 12/04/2018
-ms.openlocfilehash: dc8feb92eb8a53351679834a39c012b47f43aad4
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: 5264fc969bda30a9b2212996800b984533a3188c
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27432595"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32452090"
 ---
 # <a name="highresolutioniconurl-element"></a>Элемент HighResolutionIconUrl
 
@@ -23,7 +24,7 @@ ms.locfileid: "27432595"
 
 ## <a name="can-contain"></a>Может содержать:
 
-[Переопределение](override.md)
+[Override](override.md)
 
 ## <a name="attributes"></a>Атрибуты
 

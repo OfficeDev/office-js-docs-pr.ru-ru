@@ -2,12 +2,13 @@
 title: Элемент GetStarted в файле манифеста
 description: ''
 ms.date: 10/09/2018
-ms.openlocfilehash: e6fb1c56d051e9de607e97979225e484adb9affb
-ms.sourcegitcommit: 6f53df6f3ee91e084cd5160bb48afbbd49743b7e
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: d9ebcba7881b388544eeb3e2c3028bff9bdcf9a6
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "27433117"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32452083"
 ---
 # <a name="getstarted-element"></a>Элемент GetStarted
 
@@ -18,7 +19,7 @@ ms.locfileid: "27433117"
 | Элемент                       | Обязательный | Описание                                        |
 |:------------------------------|:--------:|:---------------------------------------------------|
 | [Title](#title)               | Да      | Определяет, где предоставляются функции надстройки.     |
-| [Description](#description)   | Да      | URL-адрес файла, который содержит функции JavaScript.|
+| [Описание](#description)   | Да      | URL-адрес файла, который содержит функции JavaScript.|
 | [LearnMoreUrl](#learnmoreurl) | Нет       | URL-адрес страницы с подробным описанием надстройки.   |
 
 ### <a name="title"></a>Название 

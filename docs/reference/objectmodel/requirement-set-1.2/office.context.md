@@ -4,11 +4,11 @@ description: ''
 ms.date: 03/19/2019
 localization_priority: Normal
 ms.openlocfilehash: 8c0c84d4c763e125992b06abfb33985085a56210
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30870305"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32451859"
 ---
 # <a name="context"></a>context
 
@@ -74,7 +74,7 @@ function write(message){
 
 Объект `RoamingSettings` позволяет сохранять данные для надстройки почты, записанные в почтовом ящике пользователя, и получать к ним доступ, таким образом делая их доступными для этой надстройки, когда она запускается из любого клиентского ведущего приложения, используемого для доступа к этому почтовому ящику.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [RoamingSettings](/javascript/api/outlook_1_2/office.RoamingSettings)
 

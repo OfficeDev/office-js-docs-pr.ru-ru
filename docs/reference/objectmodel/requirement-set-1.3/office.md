@@ -4,11 +4,11 @@ description: ''
 ms.date: 03/19/2019
 localization_priority: Normal
 ms.openlocfilehash: ef01b7da3d447af852a5558853e0902eab815dd3
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30871223"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32451901"
 ---
 # <a name="office"></a>Office
 
@@ -41,7 +41,7 @@ ms.locfileid: "30871223"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Succeeded`| String|Вызов завершился успешно.|
+|`Succeeded`| Строка|Вызов завершился успешно.|
 |`Failed`| Для указания|Вызов завершился ошибкой.|
 
 ##### <a name="requirements"></a>Требования
@@ -63,8 +63,8 @@ ms.locfileid: "30871223"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Html`| String|Запрашивает возврат данных в формате HTML.|
-|`Text`| String|Запрашивает возврат данных в формате текста.|
+|`Html`| Строка|Запрашивает возврат данных в формате HTML.|
+|`Text`| Строка|Запрашивает возврат данных в формате текста.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -85,8 +85,8 @@ ms.locfileid: "30871223"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Body`| String|Источник данных — текст сообщения.|
-|`Subject`| String|Источник данных — тема сообщения.|
+|`Body`| Строка|Источник данных — текст сообщения.|
+|`Subject`| Строка|Источник данных — тема сообщения.|
 
 ##### <a name="requirements"></a>Требования
 

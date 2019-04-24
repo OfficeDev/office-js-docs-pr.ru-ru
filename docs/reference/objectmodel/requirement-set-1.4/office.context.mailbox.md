@@ -4,11 +4,11 @@ description: ''
 ms.date: 03/19/2019
 localization_priority: Normal
 ms.openlocfilehash: 394e33bd3058fabd29d00178eecb150b88eafd57
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30872048"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32451873"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -74,7 +74,7 @@ ms.locfileid: "30872048"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`itemId`| String|Идентификатор элемента в формате REST API для Outlook|
+|`itemId`| Строка|Идентификатор элемента в формате REST API для Outlook|
 |`restVersion`| [Office.MailboxEnums.RestVersion](/javascript/api/outlook_1_4/office.mailboxenums.restversion)|Значение, определяющее версию REST API для Outlook, которая используется для извлечения идентификатора элемента.|
 
 ##### <a name="requirements"></a>Требования
@@ -111,7 +111,7 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`timeValue`| Дата|Объект Date|
+|`timeValue`| Date|Объект Date|
 
 ##### <a name="requirements"></a>Требования
 
@@ -191,7 +191,7 @@ var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.R
 
 <dt>Тип</dt>
 
-<dd>Date</dd>
+<dd>Дата</dd>
 
 </dl>
 
@@ -214,7 +214,7 @@ var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.R
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`itemId`| String|Идентификатор веб-служб Exchange для существующей встречи в календаре.|
+|`itemId`| Строка|Идентификатор веб-служб Exchange для существующей встречи в календаре.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -249,7 +249,7 @@ Office.context.mailbox.displayAppointmentForm(appointmentId);
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`itemId`| String|Идентификатор веб-служб Exchange для существующего сообщения.|
+|`itemId`| Строка|Идентификатор веб-служб Exchange для существующего сообщения.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -371,8 +371,8 @@ function cb(asyncResult) {
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-|`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.|
-|`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+|`callback`| функция||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.|
+|`userContext`| Object| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -435,7 +435,7 @@ function cb(asyncResult) {
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
 |`data`| String||Запрос EWS.|
-|`callback`| функция||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Результат XML вызова EWS указывается в виде строки в свойстве `asyncResult.value`. Если размер результата превышает 1 МБ, возвращается сообщение об ошибке.|
+|`callback`| function||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Результат XML вызова EWS указывается в виде строки в свойстве `asyncResult.value`. Если размер результата превышает 1 МБ, возвращается сообщение об ошибке.|
 |`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования
@@ -448,7 +448,7 @@ function cb(asyncResult) {
 
 ##### <a name="example"></a>Пример
 
-В следующем примере вызывается `makeEwsRequestAsync` для получения темы элемента с помощью операции `GetItem`.
+В приведенном ниже примере вызывается `makeEwsRequestAsync` для получения темы элемента с помощью операции `GetItem`.
 
 ```javascript
 function getSubjectRequest(id) {

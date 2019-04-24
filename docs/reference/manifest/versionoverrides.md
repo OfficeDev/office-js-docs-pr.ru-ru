@@ -4,11 +4,11 @@ description: ''
 ms.date: 01/29/2019
 localization_priority: Normal
 ms.openlocfilehash: 897c2203ef6ae84911b7f269ee8a2c88aec36bd0
-ms.sourcegitcommit: 2e4b97f0252ff3dd908a3aa7a9720f0cb50b855d
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "29635911"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32452069"
 ---
 # <a name="versionoverrides-element"></a>Элемент VersionOverrides
 
@@ -22,7 +22,7 @@ ms.locfileid: "29635911"
 |  **xsi:type**  |  Да  | Версия схемы. В настоящее время допускаются только значения `VersionOverridesV1_0` и `VersionOverridesV1_1`. |
 
 > [!NOTE]
-> В настоящее время только Outlook 2016 или более поздняя версия поддерживает схемы версии 1.1 VersionOverrides и `VersionOverridesV1_1` типа.
+> В настоящее время только Outlook 2016 или более поздней версии поддерживает схему VersionOverrides `VersionOverridesV1_1` 1.1 и тип.
 
 ## <a name="child-elements"></a>Дочерние элементы
 
@@ -37,7 +37,7 @@ ms.locfileid: "29635911"
 
 ### <a name="versionoverrides-example"></a>Пример VersionOverrides
 
-Ниже приведен пример типичного `<VersionOverrides>` элемент, включая некоторые дочерние элементы, которые не являются обязательными, но обычно используются.
+Ниже приведен пример типичного `<VersionOverrides>` элемента, в том числе некоторые необязательные дочерние элементы, которые обычно используются.
 
 ```xml
 <OfficeApp>

@@ -4,11 +4,11 @@ description: ''
 ms.date: 03/19/2019
 localization_priority: Normal
 ms.openlocfilehash: 9b91a61d301434886723a55eca9608f004f598eb
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30871936"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32451782"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -28,7 +28,7 @@ ms.locfileid: "30871936"
 
 | Элемент | Тип |
 |--------|------|
-| [ewsUrl](#ewsurl-string) | Member |
+| [ewsUrl](#ewsurl-string) | Элемент |
 | [restUrl](#resturl-string) | Элемент |
 | [addHandlerAsync](#addhandlerasynceventtype-handler-options-callback) | Метод |
 | [convertToEwsId](#converttoewsiditemid-restversion--string) | Метод |
@@ -116,8 +116,8 @@ ms.locfileid: "30871936"
 |---|---|---|---|
 | `eventType` | [Office.EventType](office.md#eventtype-string) || Событие, которое должно вызвать обработчик. |
 | `handler` | Function || Функция для обработки события. Функция должна принимать один параметр, представляющий собой объектный литерал. Значение свойства `type` параметра совпадет со значением параметра `eventType`, переданного методу `addHandlerAsync`. |
-| `options` | Объект | &lt;необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
-| `options.asyncContext` | Object | &lt;необязательно&gt; | Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова. |
+| `options` | Объект | &lt;Необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
+| `options.asyncContext` | Object | &lt;Необязательно&gt; | Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова. |
 | `callback` | функция| &lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).|
 
 ##### <a name="requirements"></a>Требования
@@ -197,7 +197,7 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`timeValue`| Дата|Объект Date|
+|`timeValue`| Date|Объект Date|
 
 ##### <a name="requirements"></a>Требования
 
@@ -224,7 +224,7 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`itemId`| String|Идентификатор элемента в формате EWS|
+|`itemId`| Строка|Идентификатор элемента в формате EWS|
 |`restVersion`| [Office.MailboxEnums.RestVersion](/javascript/api/outlook_1_6/office.mailboxenums.restversion)|Значение, определяющее версию REST API для Outlook, с которой будет использоваться преобразованный идентификатор.|
 
 ##### <a name="requirements"></a>Требования
@@ -300,7 +300,7 @@ var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.R
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`itemId`| String|Идентификатор веб-служб Exchange для существующей встречи в календаре.|
+|`itemId`| Строка|Идентификатор веб-служб Exchange для существующей встречи в календаре.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -378,7 +378,7 @@ Office.context.mailbox.displayMessageForm(messageId);
 | `parameters.optionalAttendees` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook_1_6/office.emailaddressdetails)&gt; | Массив строк, содержащий электронные адреса, или массив, содержащий объекты `EmailAddressDetails` для каждого из необязательных участников встречи. Массив может включать не более 100 записей. |
 | `parameters.start` | Date | Объект `Date`, указывающий дату и время начала встречи. |
 | `parameters.end` | Date | Объект `Date`, указывающий дату и время окончания встречи. |
-| `parameters.location` | String | Строка со сведениями о месте встречи. Максимальное количество символов в строке — 255. |
+| `parameters.location` | Строка | Строка со сведениями о месте встречи. Максимальное количество символов в строке — 255. |
 | `parameters.resources` | Array.&lt;String&gt; | Массив строк, содержащий необходимые для встречи ресурсы. Массив может включать не более 100 записей. |
 | `parameters.subject` | String | Строка с темой встречи. Максимальное количество символов в строке — 255. |
 | `parameters.body` | String | Текст сообщения о встрече. Максимальный размер содержимого сообщения — 32 КБ. |
@@ -430,14 +430,14 @@ Office.context.mailbox.displayNewAppointmentForm(
 | `parameters.toRecipients` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook_1_6/office.emailaddressdetails)&gt; | Массив строк, содержащий адреса электронной почты или массив, содержащий `EmailAddressDetails` объект для каждого из получателей в строке "Кому". Массив может включать не более 100 записей. |
 | `parameters.ccRecipients` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook_1_6/office.emailaddressdetails)&gt; | Массив строк, содержащий адреса электронной почты или массив, содержащий `EmailAddressDetails` объект для каждого получателя в строке "копия". Массив может включать не более 100 записей. |
 | `parameters.bccRecipients` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook_1_6/office.emailaddressdetails)&gt; | Массив строк, содержащий адреса электронной почты или массив, содержащий `EmailAddressDetails` объект для каждого из получателей, указанных в строке "СК". Массив может включать не более 100 записей. |
-| `parameters.subject` | String | Строка, содержащая тему сообщения. Максимальное количество символов в строке — 255. |
-| `parameters.htmlBody` | String | Текст сообщения в формате HTML. Максимальный размер содержимого сообщения — 32 КБ. |
+| `parameters.subject` | Строка | Строка, содержащая тему сообщения. Максимальное количество символов в строке — 255. |
+| `parameters.htmlBody` | Строка | Текст сообщения в формате HTML. Максимальный размер содержимого сообщения — 32 КБ. |
 | `parameters.attachments` | Array.&lt;Object&gt; | Массив объектов JSON, представляющих собой вложенные файлы или элементы. |
-| `parameters.attachments.type` | String | Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента. |
+| `parameters.attachments.type` | Строка | Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента. |
 | `parameters.attachments.name` | Строка | Строка, содержащая имя вложения, длиной до 255 символов.|
-| `parameters.attachments.url` | String | Используется, только если свойству `type` задано значение `file`. URI расположения файла. |
+| `parameters.attachments.url` | Строка | Используется, только если свойству `type` задано значение `file`. URI расположения файла. |
 | `parameters.attachments.isInline` | Логический | Используется, только если свойству `type` задано значение `file`. Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений. |
-| `parameters.attachments.itemId` | String | Используется, только если свойству `type` присвоено значение `item`. Идентификатор элемента EWS существующего сообщения электронной почты, которое необходимо присоединить к новому сообщению. Это строка длиной до 100 символов. |
+| `parameters.attachments.itemId` | Строка | Используется, только если свойству `type` присвоено значение `item`. Идентификатор элемента EWS существующего сообщения электронной почты, которое необходимо присоединить к новому сообщению. Это строка длиной до 100 символов. |
 
 
 ##### <a name="requirements"></a>Требования
@@ -472,7 +472,7 @@ Office.context.mailbox.displayNewMessageForm(
 
 Возвращает строку, содержащую маркер, который используется для вызова интерфейсов REST API или веб-служб Exchange.
 
-Метод `getCallbackTokenAsync` совершает асинхронный вызов, чтобы получить непрозрачный токен с сервера Exchange Server, на котором размещен почтовый ящик пользователя. Время существования маркера обратного вызова составляет 5 минут.
+Метод `getCallbackTokenAsync` совершает асинхронный вызов, чтобы получить непрозрачный маркер с сервера Exchange Server, на котором размещен почтовый ящик пользователя. Время существования маркера обратного вызова составляет 5 минут.
 
 > [!NOTE]
 > Рекомендуем сделать так, чтобы по мере возможности надстройки использовали интерфейсы REST API, а не веб-службы Exchange. 
@@ -493,8 +493,8 @@ Office.context.mailbox.displayNewMessageForm(
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-| `options` | Object | &lt;необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
-| `options.isRest` | Boolean |  &lt;Необязательный&gt; | Определяет, будет ли предоставленный маркер использоваться для интерфейсов REST API Outlook или веб-служб Exchange. Значение по умолчанию: `false`. |
+| `options` | Object | &lt;Необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
+| `options.isRest` | Boolean |  &lt;необязательно&gt; | Определяет, будет ли предоставленный маркер использоваться для интерфейсов REST API Outlook или веб-служб Exchange. Значение по умолчанию: `false`. |
 | `options.asyncContext` | Объект |  &lt;необязательно&gt; | Данные о состоянии, передаваемые в асинхронный метод. |
 |`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). Маркер указывается в виде строки в свойстве `asyncResult.value`.|
 
@@ -540,7 +540,7 @@ function cb(asyncResult) {
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
 |`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). Маркер указывается в виде строки в свойстве `asyncResult.value`.|
-|`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+|`userContext`| Object| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -572,8 +572,8 @@ function cb(asyncResult) {
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-|`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.|
-|`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+|`callback`| функция||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.|
+|`userContext`| Object| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -636,8 +636,8 @@ function cb(asyncResult) {
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
 |`data`| String||Запрос EWS.|
-|`callback`| функция||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Результат XML вызова EWS указывается в виде строки в свойстве `asyncResult.value`. Если размер результата превышает 1 МБ, возвращается сообщение об ошибке.|
-|`userContext`| Объект| &lt;Необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+|`callback`| функция||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Результат XML вызова EWS указывается в виде строки в свойстве `asyncResult.value`. Если размер результата превышает 1 МБ, возвращается сообщение об ошибке.|
+|`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования
 

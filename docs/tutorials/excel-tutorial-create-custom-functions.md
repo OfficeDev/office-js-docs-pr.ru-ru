@@ -6,11 +6,11 @@ ms.prod: excel
 ms.topic: tutorial
 localization_priority: Normal
 ms.openlocfilehash: 76f4d88b9da39a4d71927982836ee061b329a9b3
-ms.sourcegitcommit: 14ceac067e0e130869b861d289edb438b5e3eff9
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "31477574"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32451416"
 ---
 # <a name="tutorial-create-custom-functions-in-excel-preview"></a>Руководство: создание пользовательских функций в Excel (предварительная версия)
 
@@ -78,7 +78,7 @@ ms.locfileid: "31477574"
 
 5. Запустите локальный веб-сервер, работающий на Node.js. Вы можете попробовать использовать надстройку пользовательской функции в Excel для Windows или в Excel Online.
 
-# [<a name="excel-for-windows"></a>Excel для Windows](#tab/excel-windows)
+# <a name="excel-for-windowstabexcel-windows"></a>[Excel для Windows](#tab/excel-windows)
 
 Выполните следующую команду.
 
@@ -91,7 +91,7 @@ npm start desktop
 > [!NOTE]
 > Если надстройка не загружается, проверьте правильность выполнения шага 3. Кроме того, можно включить **[ведение журнала в среде выполнения](../testing/troubleshoot-manifest.md#use-runtime-logging-to-debug-your-add-in)** для устранения неполадок в XML-файле манифеста надстройки, а также при любых проблемах установки или выполнения. Инструкции Write `console.log` в файл журнала в среде выполнения, чтобы помочь найти и устранить проблемы.
 
-# [<a name="excel-online"></a>Excel Online](#tab/excel-online)
+# <a name="excel-onlinetabexcel-online"></a>[Excel Online](#tab/excel-online)
 
 Выполните следующую команду.
 
@@ -191,16 +191,16 @@ npm start web
 
 5. Повторно зарегистрируйте надстройку в Excel, чтобы новая функция стала доступной. 
 
-# [<a name="excel-for-windows"></a>Excel для Windows](#tab/excel-windows)
+# <a name="excel-for-windowstabexcel-windows"></a>[Excel для Windows](#tab/excel-windows)
 
 1. Закройте Excel, а затем откройте Excel повторно.
 
 2. В Excel выберите вкладку **Вставка**, а затем нажмите стрелку вниз, которая находится справа от пункта **Мои надстройки**. ![Вставьте ленту в Excel для Windows с выделенной стрелкой "Мои надстройки"](../images/excel-cf-register-add-in-1b.png).
 
 3. В списке доступных надстроек найдите раздел **Надстройки разработчика** и выберите надстройку **stock-ticker**, чтобы зарегистрировать ее.
-    ![Вставьте ленту в Excel для Windows с выделенной надстройкой "Пользовательские функции Excel" в списке "Мои надстройки".](../images/excel-cf-register-add-in-2.png)
+    ![Вставка ленты в Excel для Windows с выделенной надстройкой "Пользовательские функции Excel" в списке "Мои надстройки"](../images/excel-cf-register-add-in-2.png).
 
-# [<a name="excel-online"></a>Excel Online](#tab/excel-online)
+# <a name="excel-onlinetabexcel-online"></a>[Excel Online](#tab/excel-online)
 
 1. В Excel Online выберите вкладку **Вставка**, а затем выберите **Надстройки**. ![Вставьте ленту в Excel Online с выделенным значком "Мои надстройки"](../images/excel-cf-online-register-add-in-1.png)
 
@@ -292,16 +292,16 @@ npm start web
 
 3. Повторно зарегистрируйте надстройку в Excel, чтобы новая функция стала доступной.
 
-# [<a name="excel-for-windows"></a>Excel для Windows](#tab/excel-windows)
+# <a name="excel-for-windowstabexcel-windows"></a>[Excel для Windows](#tab/excel-windows)
 
 1. Закройте Excel, а затем откройте Excel повторно.
 
 2. В Excel выберите вкладку **Вставка**, а затем нажмите стрелку вниз, которая находится справа от пункта **Мои надстройки**. ![Вставьте ленту в Excel для Windows с выделенной стрелкой "Мои надстройки"](../images/excel-cf-register-add-in-1b.png).
 
 3. В списке доступных надстроек найдите раздел **Надстройки разработчика** и выберите надстройку **stock-ticker**, чтобы зарегистрировать ее.
-    ![Вставьте ленту в Excel для Windows с выделенной надстройкой "Пользовательские функции Excel" в списке "Мои надстройки".](../images/excel-cf-register-add-in-2.png)
+    ![Вставка ленты в Excel для Windows с выделенной надстройкой "Пользовательские функции Excel" в списке "Мои надстройки"](../images/excel-cf-register-add-in-2.png).
 
-# [<a name="excel-online"></a>Excel Online](#tab/excel-online)
+# <a name="excel-onlinetabexcel-online"></a>[Excel Online](#tab/excel-online)
 
 1. В Excel Online выберите вкладку **Вставка**, а затем выберите **Надстройки**. ![Вставьте ленту в Excel Online с выделенным значком "Мои надстройки"](../images/excel-cf-online-register-add-in-1.png)
 
