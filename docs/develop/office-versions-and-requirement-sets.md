@@ -1,14 +1,14 @@
 ---
 title: Версии Office и наборы обязательных элементов
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 1af4840e965d7043505aedc8330cebacacc4d203
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.openlocfilehash: e1047501cdac8dc88ab9f7778b846e171ee02d44
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30872209"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32449702"
 ---
 # <a name="office-versions-and-requirement-sets"></a>Версии Office и наборы обязательных элементов
 
