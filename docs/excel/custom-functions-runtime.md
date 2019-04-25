@@ -4,11 +4,11 @@ description: Сведения об основных сценариях при р
 title: Среда выполнения для пользовательских функций Excel (предварительный просмотр)
 localization_priority: Normal
 ms.openlocfilehash: 85024b6c3559e2a5f32bae9297787f8052bba38d
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30871782"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32448219"
 ---
 # <a name="runtime-for-excel-custom-functions-preview"></a>Среда выполнения для пользовательских функций Excel (предварительный просмотр)
 
@@ -22,7 +22,7 @@ ms.locfileid: "30871782"
 
 В среде выполнения JavaScript, используемой пользовательскими функциями, XHR реализует дополнительные меры безопасности, требуя [одного и того же политики начала](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) и простой [CORS](https://www.w3.org/TR/cors/).
 
-Обратите внимание, что простая реализация CORS не может использовать файлы cookie и поддерживает только простые методы (GET, HEAD, POST). Простая CORS принимает простые заголовки с именами `Accept` `Accept-Language`полей,. `Content-Language` Вы также можете `Content-Type` использовать заголовок в простой CORS, при условии, что тип контента `application/x-www-form-urlencoded`: `text/plain`, или `multipart/form-data`.
+Обратите внимание, что при реализации простых запросов CORS нельзя использовать файлы cookie и поддерживаются только простые методы (GET, HEAD, POST). Простые запросы CORS принимают простые заголовки с именами полей `Accept`, `Accept-Language`, `Content-Language`. Вы также можете `Content-Type` использовать заголовок в простой CORS, при условии, что тип контента `application/x-www-form-urlencoded`: `text/plain`, или `multipart/form-data`.
 
 ### <a name="xhr-example"></a>Пример XHR
 
