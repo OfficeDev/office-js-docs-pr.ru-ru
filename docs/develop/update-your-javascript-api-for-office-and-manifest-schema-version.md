@@ -4,11 +4,11 @@ description: Обновление до версии 1.1 файлов JavaScript 
 ms.date: 03/19/2019
 localization_priority: Normal
 ms.openlocfilehash: 7cbda821897b33a19e4bc9eeac27a096e01bc217
-ms.sourcegitcommit: a2950492a2337de3180b713f5693fe82dbdd6a17
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30872195"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32448716"
 ---
 # <a name="update-to-the-latest-javascript-api-for-office-library-and-version-11-add-in-manifest-schema"></a>Обновление библиотеки API JavaScript для Office до последней версии и схемы манифеста надстройки до версии 1.1
 
@@ -125,6 +125,6 @@ ms.locfileid: "30872195"
 ## <a name="see-also"></a>См. также
 
 - [Указание ведущих приложений Office и требований к API](specify-office-hosts-and-api-requirements.md) ]
-- [Общие сведения об интерфейсе API JavaScript для Office](understanding-the-javascript-api-for-office.md)
+- [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)
 - [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office)
 - [Справка по схеме для манифестов надстроек Office (версия 1.1)](../develop/add-in-manifests.md)
