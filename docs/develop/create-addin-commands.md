@@ -4,11 +4,11 @@ description: Используйте элемент VersionOverrides в мани�
 ms.date: 04/15/2019
 localization_priority: Priority
 ms.openlocfilehash: a85d6a693995c8d0327c1b511e85e2159e51a042
-ms.sourcegitcommit: 6d375518c119d09c8d3fb5f0cc4583ba5b20ac03
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "31914314"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32448708"
 ---
 # <a name="create-add-in-commands-in-your-manifest-for-excel-word-and-powerpoint"></a>Создание команд надстроек в манифесте для Excel, Word и PowerPoint
 
