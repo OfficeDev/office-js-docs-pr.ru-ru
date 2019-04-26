@@ -4,11 +4,11 @@ description: Создание пользовательских функций в
 title: Создание пользовательских функций в Excel (ознакомительная версия)
 localization_priority: Priority
 ms.openlocfilehash: 7a461728061ace532a11a8473d27ec4340eebb97
-ms.sourcegitcommit: fbe2a799fda71aab73ff1c5546c936edbac14e47
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "31764413"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32448477"
 ---
 # <a name="create-custom-functions-in-excel-preview"></a>Создание пользовательских функций в Excel (ознакомительная версия)
 
@@ -279,7 +279,7 @@ function getAddress(parameter1, invocationContext) {
 
 * [Метаданные пользовательских функций](custom-functions-json.md)
 * [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
-* [Рекомендации в отношении пользовательских функций](custom-functions-best-practices.md)
+* [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
 * [Журнал изменений пользовательских функций](custom-functions-changelog.md)
 * [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
 * [Отладка пользовательских функций](custom-functions-debugging.md)
