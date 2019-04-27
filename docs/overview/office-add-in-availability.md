@@ -4,11 +4,11 @@ description: Поддерживаемые наборы обязательных 
 ms.date: 04/03/2019
 localization_priority: Priority
 ms.openlocfilehash: a9ecd44edf9221a403eb42756cd1e9f5e676ad01
-ms.sourcegitcommit: 14ceac067e0e130869b861d289edb438b5e3eff9
+ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "31477595"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "32448149"
 ---
 # <a name="office-add-in-host-and-platform-availability"></a>Доступность ведущих приложений и платформ для надстроек Office
 
@@ -30,7 +30,7 @@ ms.locfileid: "31477595"
     <td>Office Online</td>
     <td> - Область задач<br>
         - Контент<br>
-        - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a>
+        - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстройки</a>
     </td>
     <td>
         - <a href="/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
@@ -60,7 +60,7 @@ ms.locfileid: "31477595"
     <td>Office 365 для Windows</td>
     <td> - Область задач<br>
         - Контент<br>
-        - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a>
+        - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстройки</a>
     </td>
     <td>
         - <a href="/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
@@ -263,7 +263,7 @@ ms.locfileid: "31477595"
   </tr>
 </table>
 
-*&ast; — Добавлены обновления после выпуска.*
+*&ast; - Добавлены обновления после выпуска.*
 
 <br/>
 
@@ -405,7 +405,7 @@ ms.locfileid: "31477595"
   </tr>
 </table>
 
-*&ast; — Добавлены обновления после выпуска.*
+*&ast; - Добавлены обновления после выпуска.*
 
 <br/>
 
@@ -429,7 +429,7 @@ ms.locfileid: "31477595"
     <td> - BindingEvents<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - File<br>
+         - Файл<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -456,7 +456,7 @@ ms.locfileid: "31477595"
          - CompressedFile<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - File<br>
+         - Файл<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -483,7 +483,7 @@ ms.locfileid: "31477595"
          - CompressedFile<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - File<br>
+         - Файл<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -507,7 +507,7 @@ ms.locfileid: "31477595"
          - CompressedFile<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - File<br>
+         - Файл<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -530,7 +530,7 @@ ms.locfileid: "31477595"
          - CompressedFile<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - File<br>
+         - Файл<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -557,7 +557,7 @@ ms.locfileid: "31477595"
          - CompressedFile<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - File<br>
+         - Файл<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -585,7 +585,7 @@ ms.locfileid: "31477595"
          - CompressedFile<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - File<br>
+         - Файл<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -613,7 +613,7 @@ ms.locfileid: "31477595"
          - CompressedFile<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - File<br>
+         - Файл<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -637,7 +637,7 @@ ms.locfileid: "31477595"
          - CompressedFile<br>
          - CustomXmlParts<br>
          - DocumentEvents<br>
-         - File<br>
+         - Файл<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
          - MatrixBindings<br>
@@ -654,7 +654,7 @@ ms.locfileid: "31477595"
   </tr>
 </table>
 
-*&ast; — Добавлены обновления после выпуска.*
+*&ast; - Добавлены обновления после выпуска.*
 
 <br/>
 
@@ -680,7 +680,7 @@ ms.locfileid: "31477595"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Settings<br>
+         - Параметры<br>
          - TextCoercion</td>
   </tr>
   <tr>
@@ -696,7 +696,7 @@ ms.locfileid: "31477595"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Settings<br>
+         - Параметры<br>
          - TextCoercion</td>
   </tr>
   <tr>
@@ -712,7 +712,7 @@ ms.locfileid: "31477595"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Settings<br>
+         - Параметры<br>
          - TextCoercion</td>
   </tr>
   <tr>
@@ -727,7 +727,7 @@ ms.locfileid: "31477595"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Settings<br>
+         - Параметры<br>
          - TextCoercion</td>
   </tr>
   <tr>
@@ -743,7 +743,7 @@ ms.locfileid: "31477595"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Settings<br>
+         - Параметры<br>
          - TextCoercion</td>
   </tr>
   <tr>
@@ -757,7 +757,7 @@ ms.locfileid: "31477595"
          - File<br>
          - PdfFile<br>
          - Selection<br>
-         - Settings<br>
+         - Параметры<br>
          - TextCoercion<br>
          - ImageCoercion</td>
   </tr>
@@ -774,7 +774,7 @@ ms.locfileid: "31477595"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Settings<br>
+         - Параметры<br>
          - TextCoercion</td>
   </tr>
   <tr>
@@ -790,7 +790,7 @@ ms.locfileid: "31477595"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Settings<br>
+         - Параметры<br>
          - TextCoercion</td>
   </tr>
   <tr>
@@ -805,12 +805,12 @@ ms.locfileid: "31477595"
          - ImageCoercion<br>
          - PdfFile<br>
          - Selection<br>
-         - Settings<br>
+         - Параметры<br>
          - TextCoercion</td>
   </tr>
 </table>
 
-*&ast; — Добавлены обновления после выпуска.*
+*&ast; - Добавлены обновления после выпуска.*
 
 <br/>
 
@@ -833,7 +833,7 @@ ms.locfileid: "31477595"
     <td> - DocumentEvents<br>
          - HtmlCoercion<br>
          - ImageCoercion<br>
-         - Settings<br>
+         - Параметры<br>
          - TextCoercion</td>
   </tr>
 </table>
