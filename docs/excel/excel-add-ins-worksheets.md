@@ -3,12 +3,12 @@ title: Работа с листами с использованием API JavaSc
 description: ''
 ms.date: 04/18/2019
 localization_priority: Priority
-ms.openlocfilehash: 5df0bbdd1b6cf1cf3ef7a6aa14b7e00dee7ad9b2
-ms.sourcegitcommit: 44c61926d35809152cbd48f7b97feb694c7fa3de
+ms.openlocfilehash: 002c5763ebcfbbecbcfc5cb416d200b357c45bf2
+ms.sourcegitcommit: 7462409209264dc7f8f89f3808a7a6249fcd739e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "31959120"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "33440033"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
@@ -400,6 +400,45 @@ Excel.run(function (context) {
 - `password`: строка, представляющая пароль, необходимый пользователю для обхода защиты и редактирования листа.
 
 В статье [Защита листа](https://support.office.com/article/protect-a-worksheet-3179efdb-1285-4d49-a9c3-f4ca36276de6) содержатся дополнительные сведения о защите листа и ее изменении с помощью пользовательского интерфейса Excel.
+
+## <a name="page-layout-and-print-settings"></a>Параметры разметки страницы и печати
+
+> [!NOTE]
+> Интерфейсы API в этом разделе, связанные с разметкой страницы, в настоящее время представлены только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+
+Надстройкам доступны параметры разметки страницы на уровне листа. Они управляют печатью листа. У объекта `Worksheet` есть три связанных с разметкой свойства: `horizontalPageBreaks`, `verticalPageBreaks`, `pageLayout`.
+
+`Worksheet.horizontalPageBreaks` и `Worksheet.verticalPageBreaks` относятся к [PageBreakCollections](/javascript/api/excel/excel.pagebreakcollection). Это коллекции объектов [PageBreak](/javascript/api/excel/excel.pagebreak), указывающих диапазоны вставки разрывов страниц, добавляемых вручную. В следующем примере кода добавляется горизонтальный разрыв страницы над строкой **21**.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+    sheet.horizontalPageBreaks.add("A21:E21"); // The page break is added above this range.
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+`Worksheet.pageLayout` является объектом [PageLayout](/javascript/api/excel/excel.pagelayout). Этот объект содержит параметры разметки и печати, не зависящие от применения конкретного принтера. Эти параметры включают поля, ориентацию, нумерацию страницы, строки заголовков и область печати.
+
+В следующем примере кода страница выравнивается по центру (по вертикали и горизонтали), устанавливается строка заголовка, которая печатается в верхней части каждой страницы, и задается подраздел листа в качестве области печати.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+
+    // Center the page in both directions.
+    sheet.pageLayout.centerHorizontally = true;
+    sheet.pageLayout.centerVertically = true;
+
+    // Set the first row as the title row for every page.
+    sheet.pageLayout.setPrintTitleRows("$1:$1");
+
+    // Limit the area to be printed to the range "A1:D100".
+    sheet.pageLayout.setPrintArea("A1:D100");
+
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
 
 ## <a name="see-also"></a>См. также
 
