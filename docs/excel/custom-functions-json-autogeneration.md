@@ -1,14 +1,14 @@
 ---
-ms.date: 04/03/2019
+ms.date: 04/25/2019
 description: Использование тегов JSDOC для динамического создания метаданных JSON пользовательских функций.
 title: Создание метаданных JSON для пользовательских функций (предварительная версия)
 localization_priority: Priority
-ms.openlocfilehash: 2efe2a9a5a83ba60ef327273d5bd599f82916d48
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: f13c9b2ff0adfd1bda493433761dc74cb9ea37dc
+ms.sourcegitcommit: 7462409209264dc7f8f89f3808a7a6249fcd739e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449255"
+ms.lasthandoff: 04/26/2019
+ms.locfileid: "33353274"
 ---
 # <a name="create-json-metadata-for-custom-functions-preview"></a>Создание метаданных JSON для пользовательских функций (предварительная версия)
 
@@ -53,7 +53,7 @@ ms.locfileid: "32449255"
 
 Кроме того, требуется вызов функции `CustomFunctions.associate("id", functionName);`
 
-#### <a name="id"></a>id 
+#### <a name="id"></a>id
 
 Идентификатор используется как инвариантный идентификатор для пользовательских функций, которые хранятся в документе. Его не следует менять.
 
@@ -63,7 +63,7 @@ ms.locfileid: "32449255"
 
 #### <a name="name"></a>name
 
-Предоставляет отображаемое имя для пользовательской функции. 
+Предоставляет отображаемое имя для пользовательской функции.
 
 * Если имя не указано, идентификатор тоже используется как имя.
 * Допустимые символы: буквы [буквенные символы Юникод](https://www.unicode.org/reports/tr44/tr44-22.html#Alphabetic), числа, точки (.) и подчеркивания (\_).
@@ -93,6 +93,9 @@ ms.locfileid: "32449255"
 Чтобы обозначить параметр пользовательской функции как необязательный:
 * Поместите имя параметра в квадратные скобки. Пример: `@param {string} [text] Optional text`.
 
+> [!NOTE]
+> Значение по умолчанию для дополнительных параметров — `null`.
+
 #### <a name="typescript"></a>TypeScript
 
 Синтаксис TypeScript: @param name _description_
@@ -107,6 +110,9 @@ ms.locfileid: "32449255"
 * Задайте для параметра значение по умолчанию. Пример: `function f(text: string = "abc")`
 
 Подробное описание @param см. в [JSDoc](http://usejsdoc.org/tags-param.html)
+
+> [!NOTE]
+> Значение по умолчанию для дополнительных параметров — `null`.
 
 ---
 ### <a name="requiresaddress"></a>@requiresAddress

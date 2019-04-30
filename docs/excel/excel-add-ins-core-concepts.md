@@ -1,14 +1,14 @@
 ---
 title: Основные концепции программирования с помощью API JavaScript для Excel
 description: Создание надстроек для Excel с помощью API JavaScript для Excel.
-ms.date: 03/19/2019
+ms.date: 04/25/2019
 localization_priority: Priority
-ms.openlocfilehash: c6552ff5df3a8cf9c6c329dcfbbbe001a6a2ed6b
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 26822d9caa91f4a65a9dbb82f82db989b4409214
+ms.sourcegitcommit: 7462409209264dc7f8f89f3808a7a6249fcd739e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32448191"
+ms.lasthandoff: 04/26/2019
+ms.locfileid: "33353260"
 ---
 # <a name="fundamental-programming-concepts-with-the-excel-javascript-api"></a>Основные концепции программирования с помощью API JavaScript для Excel
 
@@ -26,14 +26,14 @@ ms.locfileid: "32448191"
 
 ```js
 Excel.run(function (context) {
-  // You can use the Excel JavaScript API here in the batch function
-  // to execute actions on the Excel object model.
-  console.log('Your code goes here.');
+    // You can use the Excel JavaScript API here in the batch function
+    // to execute actions on the Excel object model.
+    console.log('Your code goes here.');
 }).catch(function (error) {
-  console.log('error: ' + error);
-  if (error instanceof OfficeExtension.Error) {
-    console.log('Debug info: ' + JSON.stringify(error.debugInfo));
-  }
+    console.log('error: ' + error);
+    if (error instanceof OfficeExtension.Error) {
+        console.log('Debug info: ' + JSON.stringify(error.debugInfo));
+    }
 });
 ```
 
@@ -41,7 +41,7 @@ Excel.run(function (context) {
 
 В **Excel.run** есть перегрузка, получающая объект [RunOptions](/javascript/api/excel/excel.runoptions). Он содержит набор свойств, влияющих на поведение платформы при выполнении функции. Ниже перечислены поддерживаемые в настоящее время свойства.
 
- - `delayForCellEdit`: определяет, откладывает ли Excel пакетный запрос до выхода пользователя из режима правки ячейки. Если присвоено значение **true**, пакетный запрос откладывается и запускается, когда пользователь выходит из режима правки ячейки. Если присвоено значение **false**, происходит автоматический сбой пакетного запроса, если пользователь находится в режиме правки ячейки (приводит к ошибке обращения к пользователю). Поведение по умолчанию при отсутствии заданного свойства `delayForCellEdit` аналогично поведению при значении **false**.
+- `delayForCellEdit`: определяет, откладывает ли Excel пакетный запрос до выхода пользователя из режима правки ячейки. Если присвоено значение **true**, пакетный запрос откладывается и запускается, когда пользователь выходит из режима правки ячейки. Если присвоено значение **false**, происходит автоматический сбой пакетного запроса, если пользователь находится в режиме правки ячейки (приводит к ошибке обращения к пользователю). Поведение по умолчанию при отсутствии заданного свойства `delayForCellEdit` аналогично поведению при значении **false**.
 
 ```js
 Excel.run({ delayForCellEdit: true }, function (context) { ... })
@@ -58,7 +58,7 @@ Excel и ваша надстройка запускаются как два от
 Например, во фрагменте кода ниже показано, как объявить локальный объект JavaScript **selectedRange** для ссылки на выделенный диапазон в документе Excel, а затем задать ряд свойств для этого объекта. Объект **selectedRange** представляет собой прокси-объект, поэтому свойства, заданные в этом объекте, и методы, вызванные в этом объекте, не будут отображены в документе Excel, пока надстройка не вызовет метод **context.sync()**.
 
 ```js
-const selectedRange = context.workbook.getSelectedRange();
+var selectedRange = context.workbook.getSelectedRange();
 selectedRange.format.fill.color = "#4472C4";
 selectedRange.format.font.color = "white";
 selectedRange.format.autofitColumns();
@@ -72,17 +72,17 @@ selectedRange.format.autofitColumns();
 
 ```js
 Excel.run(function (context) {
-  const selectedRange = context.workbook.getSelectedRange();
-  selectedRange.load('address');
-  return context.sync()
-    .then(function () {
-      console.log('The selected range is: ' + selectedRange.address);
-  });
+    var selectedRange = context.workbook.getSelectedRange();
+    selectedRange.load('address');
+    return context.sync()
+      .then(function () {
+        console.log('The selected range is: ' + selectedRange.address);
+    });
 }).catch(function (error) {
-  console.log('error: ' + error);
-  if (error instanceof OfficeExtension.Error) {
-    console.log('Debug info: ' + JSON.stringify(error.debugInfo));
-  }
+    console.log('error: ' + error);
+    if (error instanceof OfficeExtension.Error) {
+        console.log('Debug info: ' + JSON.stringify(error.debugInfo));
+    }
 });
 ```
 
@@ -103,26 +103,26 @@ Excel.run(function (context) {
 
 ```js
 Excel.run(function (context) {
-  const sheetName = 'Sheet1';
-  const rangeAddress = 'A1:B2';
-  const myRange = context.workbook.worksheets.getItem(sheetName).getRange(rangeAddress);
+    var sheetName = 'Sheet1';
+    var rangeAddress = 'A1:B2';
+    var myRange = context.workbook.worksheets.getItem(sheetName).getRange(rangeAddress);
 
-  myRange.load(['address', 'format/*', 'format/fill', 'entireRow' ]);
+    myRange.load(['address', 'format/*', 'format/fill', 'entireRow' ]);
 
-  return context.sync()
-    .then(function () {
-      console.log (myRange.address);              // ok
-      console.log (myRange.format.wrapText);      // ok
-      console.log (myRange.format.fill.color);    // ok
-      //console.log (myRange.format.font.color);  // not ok as it was not loaded
-  });
-}).then(function () {
-  console.log('done');
+    return context.sync()
+      .then(function () {
+        console.log (myRange.address);              // ok
+        console.log (myRange.format.wrapText);      // ok
+        console.log (myRange.format.fill.color);    // ok
+        //console.log (myRange.format.font.color);  // not ok as it was not loaded
+        });
+    }).then(function () {
+        console.log('done');
 }).catch(function (error) {
-  console.log('Error: ' + error);
-  if (error instanceof OfficeExtension.Error) {
-    console.log('Debug info: ' + JSON.stringify(error.debugInfo));
-  }
+    console.log('Error: ' + error);
+    if (error instanceof OfficeExtension.Error) {
+        console.log('Debug info: ' + JSON.stringify(error.debugInfo));
+    }
 });
 ```
 
@@ -161,18 +161,18 @@ range.format.fill.color =  null;
 
 Если в указанном диапазоне имеются другие значения, свойства форматирования, например `size` и `color` будут содержать значения `null` в ответе. Например, если вы получаете диапазон и загружаете его свойство `format.font.color`:
 
-* Если у всех ячеек в диапазоне один и тот же цвет шрифта, свойство `range.format.font.color` указывает этот цвет.
-* Если в диапазоне используется несколько цветов шрифтов, свойство `range.format.font.color` имеет значение `null`.
+- Если у всех ячеек в диапазоне один и тот же цвет шрифта, свойство `range.format.font.color` указывает этот цвет.
+- Если в диапазоне используется несколько цветов шрифтов, свойство `range.format.font.color` имеет значение `null`.
 
 ### <a name="blank-input-for-a-property"></a>Пустое входное значение для свойства
 
 Когда вы указываете пустое значение для свойства (то есть две кавычки подряд без других знаков между `''`), это будет интерпретировано как инструкция по очистке или сбросу свойства. Например:
 
-* Если вы укажете пустое значение для свойства `values` диапазона, содержимое диапазона будет очищено.
+- Если вы укажете пустое значение для свойства `values` диапазона, содержимое диапазона будет очищено.
 
-* Если вы укажете пустое значение для свойства `numberFormat`, формат чисел будет "сброшен" до формата `General`.
+- Если вы укажете пустое значение для свойства `numberFormat`, формат чисел будет "сброшен" до формата `General`.
 
-* Если вы укажете пустое значение для свойств `formula` и `formulaLocale`, значения формул будут очищены.
+- Если вы укажете пустое значение для свойств `formula` и `formulaLocale`, значения формул будут очищены.
 
 ### <a name="blank-property-values-in-the-response"></a>Значения пустых свойств в ответе
 
@@ -191,9 +191,9 @@ range.formula = [['', '', '=Rand()']];
 ### <a name="read-an-unbounded-range"></a>Чтение из неограниченного диапазона
 
 Адрес неограниченного диапазона представляет собой адрес диапазона, указывающий весь столбец (столбцы) либо всю строку (строки). Например:
- 
-* Адреса диапазона включают в себя весь столбец (столбцы):<ul><li>`C:C`</li><li>`A:F`</li></ul>
-* Адреса диапазона включают в себя всю строку (строки):<ul><li>`2:2`</li><li>`1:4`</li></ul>
+
+- Адреса диапазона включают в себя весь столбец (столбцы):<ul><li>`C:C`</li><li>`A:F`</li></ul>
+- Адреса диапазона включают в себя всю строку (строки):<ul><li>`2:2`</li><li>`1:4`</li></ul>
 
 Когда API отправляет запрос на получение неограниченного диапазона (например, `getRange('C:C')`), ответ будет содержать значения `null` для свойств уровня ячейки, например свойств `values`, `text`, `numberFormat` и `formula`. Другие свойства диапазона, например `address` и `cellCount`, будут содержать допустимые значения для неограниченного диапазона.
 
@@ -202,13 +202,16 @@ range.formula = [['', '', '=Rand()']];
 Вам не удастся задать свойства уровня ячейки, например `values`, `numberFormat` и `formula`, в неограниченном диапазоне, так как входной запрос слишком велик. Например, приведенный ниже фрагмент кода недопустим, так как он пытается указать свойство `values` для неограниченного диапазона. Если вы попытаетесь задать свойства уровня ячейки для неограниченного диапазона, API возвратит ошибку.
 
 ```js
-const range = context.workbook.worksheets.getActiveWorksheet().getRange('A:B');
+var range = context.workbook.worksheets.getActiveWorksheet().getRange('A:B');
 range.values = 'Due Date';
 ```
 
 ## <a name="read-or-write-to-a-large-range"></a>Чтение из большого диапазона и запись в него
 
 Если диапазон содержит большое количество ячеек, значений, форматов чисел или формул, то, возможно, не удастся выполнить операции API над этим диапазоном. API всегда делает все возможное, чтобы выполнить запрошенную операцию над диапазоном (то есть получить или записать указанные данные), но попытка выполнить операцию чтения или записи для большого диапазона может привести к ошибке API из-за чрезмерного потребления ресурсов. Чтобы избежать таких ошибок, мы рекомендуем выполнять отдельные операции чтения или записи для небольших подмножеств большого диапазона, а не пытаться выполнить одну операцию чтения или записи для большого диапазона.
+
+> [!IMPORTANT]
+> В Excel Online применяется ограничение **5 МБ** для размера полезных данных запросов и откликов. При превышении этого ограничения возникает ошибка `RichAPI.Error`.
 
 ## <a name="update-all-cells-in-a-range"></a>Изменение всех ячеек в диапазоне
 
@@ -218,24 +221,24 @@ range.values = 'Due Date';
 
 ```js
 Excel.run(function (context) {
-  const sheetName = 'Sheet1';
-  const rangeAddress = 'A1:A20';
-  const worksheet = context.workbook.worksheets.getItem(sheetName);
+    var sheetName = 'Sheet1';
+    var rangeAddress = 'A1:A20';
+    var worksheet = context.workbook.worksheets.getItem(sheetName);
 
-  const range = worksheet.getRange(rangeAddress);
-  range.numberFormat = 'm/d/yyyy';
-  range.values = '3/11/2015';
-  range.load('text');
+    var range = worksheet.getRange(rangeAddress);
+    range.numberFormat = 'm/d/yyyy';
+    range.values = '3/11/2015';
+    range.load('text');
 
-  return context.sync()
-    .then(function () {
-      console.log(range.text);
-  });
+    return context.sync()
+      .then(function () {
+        console.log(range.text);
+    });
 }).catch(function (error) {
-  console.log('Error: ' + error);
-  if (error instanceof OfficeExtension.Error) {
-    console.log('Debug info: ' + JSON.stringify(error.debugInfo));
-  }
+    console.log('Error: ' + error);
+    if (error instanceof OfficeExtension.Error) {
+      console.log('Debug info: ' + JSON.stringify(error.debugInfo));
+    }
 });
 ```
 
@@ -245,8 +248,8 @@ Excel.run(function (context) {
 
 ## <a name="see-also"></a>См. также
 
-* [Начало работы с надстройками Excel](excel-add-ins-get-started-overview.md)
-* [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples)
-* [Дополнительные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-advanced-concepts.md)
-* [Оптимизация производительности API JavaScript для Excel](/office/dev/add-ins/excel/performance)
-* [Справочник по API JavaScript для Excel](/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)
+- [Начало работы с надстройками Excel](excel-add-ins-get-started-overview.md)
+- [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples)
+- [Дополнительные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-advanced-concepts.md)
+- [Оптимизация производительности API JavaScript для Excel](/office/dev/add-ins/excel/performance)
+- [Справочник по API JavaScript для Excel](/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)

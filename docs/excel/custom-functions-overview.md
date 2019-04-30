@@ -1,14 +1,14 @@
 ---
-ms.date: 03/29/2019
+ms.date: 04/20/2019
 description: Создание пользовательских функций в Excel с помощью JavaScript.
 title: Создание пользовательских функций в Excel (ознакомительная версия)
 localization_priority: Priority
-ms.openlocfilehash: 7a461728061ace532a11a8473d27ec4340eebb97
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 634b76ed90a30c7aa8252da346ba3f95684967a4
+ms.sourcegitcommit: 7462409209264dc7f8f89f3808a7a6249fcd739e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32448477"
+ms.lasthandoff: 04/26/2019
+ms.locfileid: "33353253"
 ---
 # <a name="create-custom-functions-in-excel-preview"></a>Создание пользовательских функций в Excel (ознакомительная версия)
 
@@ -235,7 +235,7 @@ function secondHighest(values){
 - Отображение кэшированных значений. Если функция используется в автономном режиме, отображайте сохраненные в кэше значения из `AsyncStorage` с помощью `onCalculated`.
 - Сверка: используйте адрес ячейки, чтобы найти исходную ячейку, чтобы упростить сверку при выполнении обработки.
 
-Сведения об адресе ячейки предоставляются только в том случае, если параметру `requiresAddress` присвоено значение `true` в файле метаданных JSON функции. Ниже приведен пример:
+Сведения об адресе ячейки предоставляются только в том случае, если параметру `requiresAddress` присвоено значение `true` в файле метаданных JSON функции. Ниже приведен пример этого при создании JSON-файла вручную. Вы также можете использовать тег `@requiresAddress` при автоматическом создании JSON-файла. Дополнительные сведения см. в статье [Автоматическое создание JSON](custom-functions-json-autogeneration.md).
 
 ```JSON
 {

@@ -1,14 +1,14 @@
 ---
-ms.date: 03/21/2019
+ms.date: 04/20/2019
 description: Запрос, потоковая передача и отмена потоковой передачи внешних данных к книге с помощью пользовательских функций в Excel
 title: Обработка веб-запросов и других данных с помощью пользовательских функций (предварительная версия)
 localization_priority: Priority
-ms.openlocfilehash: 9256e2aa87ec6d7b314314a1e4bc2b3793f1df5c
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 2942ec56e46d6eb586b516eedab17c1eeb98d9c8
+ms.sourcegitcommit: 7462409209264dc7f8f89f3808a7a6249fcd739e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449710"
+ms.lasthandoff: 04/26/2019
+ms.locfileid: "33353267"
 ---
 # <a name="receiving-and-handling-data-with-custom-functions"></a>Получение и обработка данных с помощью пользовательских функций
 
@@ -148,32 +148,7 @@ function incrementValue(increment, handler){
 CustomFunctions.associate("INCREMENTVALUE", incrementValue);
 ```
 
-Когда вы указываете метаданные для функции потоковой передачи в файле метаданных JSON, необходимо задать свойства "cancelable": true и "stream": true в объекте параметров, как показано в следующем примере.
-
-```JSON
-{
-  "id": "INCREMENT",
-  "name": "INCREMENT",
-  "description": "Periodically increment a value",
-  "helpUrl": "http://www.contoso.com",
-  "result": {
-    "type": "number",
-    "dimensionality": "scalar"
-  },
-  "parameters": [
-    {
-      "name": "increment",
-      "description": "Amount to increment",
-      "type": "number",
-      "dimensionality": "scalar"
-    }
-  ],
-  "options": {
-    "cancelable": true,
-    "stream": true
-  }
-}
-```
+Когда вы указываете метаданные для функции потоковой передачи в файле метаданных JSON, это можно автоматически создать с помощью тега комментария JSDOC `@streaming` в файле скрипта функции. Дополнительные сведения см. в статье [Создание метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md).
 
 ## <a name="canceling-a-function"></a>Отмена функции
 
@@ -183,12 +158,13 @@ CustomFunctions.associate("INCREMENTVALUE", incrementValue);
 - Когда изменяется один из аргументов (входных параметров) функции. В этом случае после отмены выполняется новый вызов функции.
 - Когда пользователь вручную вызывает пересчет. В этом случае после отмены выполняется новый вызов функции.
 
-Чтобы сделать функцию отменяемой, нужно реализовать обработчик в коде функции с указанием действий при ее отмене. Кроме того, нужно указать свойство `"cancelable": true` в объекте параметров в метаданных JSON, описывающих функцию. Примеры кода в предыдущем разделе этой статьи предоставляют собой пример использования данных техник.
+Чтобы сделать функцию отменяемой, нужно реализовать обработчик в коде функции с указанием действий при ее отмене. Также можно использовать тег комментария JSDOC `@cancelable` в файле скрипта функции. Дополнительные сведения см. в статье [Создание метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md).
 
 ## <a name="see-also"></a>См. также
 
 * [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
 * [Метаданные пользовательских функций](custom-functions-json.md)
+* [Создание метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md)
 * [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
 * [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
 * [Журнал изменений пользовательских функций](custom-functions-changelog.md)
