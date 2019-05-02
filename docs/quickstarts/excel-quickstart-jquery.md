@@ -4,12 +4,12 @@ description: ''
 ms.date: 03/19/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 09c3819efde35b9f35847c8ca3bca558b391d98a
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: d1783d257b0d46c42f16cf5e1f261407a355a63d
+ms.sourcegitcommit: 68872372d181cca5bee37ade73c2250c4a56bab6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450939"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "33517081"
 ---
 # <a name="build-an-excel-add-in-using-jquery"></a>Создание надстройки Excel с помощью jQuery
 
@@ -166,7 +166,7 @@ ms.locfileid: "32450939"
 - [Node.js](https://nodejs.org)
 
 - Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
-    ```bash
+    ```command&nbsp;line
     npm install -g yo generator-office
     ```
 
@@ -174,7 +174,7 @@ ms.locfileid: "32450939"
 
 1. Создайте проект надстройки Excel помощью генератора Yeoman. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
-    ```bash
+    ```command&nbsp;line
     yo office
     ```
 
@@ -189,7 +189,7 @@ ms.locfileid: "32450939"
 
 2. Перейдите к корневой папке проекта.
 
-    ```bash
+    ```command&nbsp;line
     cd "My Office Add-in"
     ```
 

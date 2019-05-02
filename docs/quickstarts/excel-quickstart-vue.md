@@ -4,12 +4,12 @@ description: ''
 ms.date: 03/19/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 1925c9fcde0bb2f07cce4c0bcb0be99cc1c6061c
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: b3c65d2594e2d260f3e332fd20cdee2e56b02fcf
+ms.sourcegitcommit: 68872372d181cca5bee37ade73c2250c4a56bab6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450869"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "33517053"
 ---
 # <a name="build-an-excel-add-in-using-vue"></a>Создание надстройки Excel с помощью Vue
 
@@ -21,13 +21,13 @@ ms.locfileid: "32450869"
 
 - Установите [Vue CLI](https://github.com/vuejs/vue-cli) глобально.
 
-    ```bash
+    ```command&nbsp;line
     npm install -g vue-cli
     ```
 
 - Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
 
-    ```bash
+    ```command&nbsp;line
     npm install -g yo generator-office
     ```
 
@@ -35,7 +35,7 @@ ms.locfileid: "32450869"
 
 Используйте Vue CLI, чтобы создать новое приложение Vue. Используя терминал, выполните приведенную ниже команду и ответьте на вопросы, как описано ниже.
 
-```bash
+```command&nbsp;line
 vue init webpack my-add-in
 ```
 
@@ -53,13 +53,13 @@ vue init webpack my-add-in
 
 1. Перейдите к папке приложения.
 
-    ```bash
+    ```command&nbsp;line
     cd my-add-in
     ```
 
 2. Используя генератор Yeoman, создайте файл манифеста для надстройки. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
-    ```bash
+    ```command&nbsp;line
     yo office
     ```
 
@@ -186,7 +186,7 @@ vue init webpack my-add-in
 
 1. Используя терминал, выполните приведенную ниже команду, чтобы запустить сервер разработки.
 
-    ```bash
+    ```command&nbsp;line
     npm start
     ```
 
