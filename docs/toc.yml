@@ -1,7 +1,7 @@
 - name: Документация по надстройкам Office
   href: index.yml
   displayName: 'Excel, Word, Outlook, PowerPoint, OneNote, Project'
-- name: Общие сведения
+- name: Обзор
   items:
     - name: Сведения о надстройках Office
       href: overview/office-add-ins.md
@@ -75,9 +75,10 @@
 - name: Практические руководства
   items:
     - name: Проектирование пользовательского интерфейса
-      href: design/add-in-design.md
       items:
-        - name: Рекомендации
+        - name: Обзор
+          href: design/add-in-design.md
+        - name: Директив
           items:
             - name: Специальные возможности
               href: design/accessibility-guidelines.md
@@ -86,8 +87,9 @@
             - name: Визуализация данных
               href: design/data-visualization-guidelines.md
         - name: Язык проектирования
-          href: design/add-in-design-language.md
           items:
+            - name: Обзор
+              href: design/add-in-design-language.md
             - name: шрифтовое оформление;
               href: design/add-in-typography.md
             - name: Цвет
@@ -100,8 +102,9 @@
               href: design/using-motion-office-addins.md
               displayName: Motion
         - name: Элементы интерфейса
-          href: design/interface-elements.md
           items:
+            - name: Обзор
+              href: design/interface-elements.md
             - name: Команды надстроек
               href: design/add-in-commands.md
             - name: Области задач
@@ -111,8 +114,9 @@
             - name: Контентные надстройки
               href: design/content-add-ins.md
         - name: Шаблоны оформления UX
-          href: design/ux-design-pattern-templates.md
           items:
+            - name: Обзор
+              href: design/ux-design-pattern-templates.md
             - name: Проверка подлинности
               href: design/authentication-patterns.md
             - name: первый запуск;
@@ -136,8 +140,9 @@
         - name: Установка последней версии Office
           href: develop/install-latest-office-version.md
         - name: API JavaScript для Office
-          href: develop/understanding-the-javascript-api-for-office.md
           items:
+            - name: Общие сведения об интерфейсе API JavaScript для Office
+              href: develop/understanding-the-javascript-api-for-office.md
             - name: Поддержка надстроек области задач и контентных надстроек
               href: develop/support-for-task-pane-and-content-add-ins.md
             - name: Ссылка на Office. js
@@ -151,8 +156,9 @@
             - name: Сохранение состояния и параметров
               href: develop/persisting-add-in-state-and-settings.md
         - name: Манифест
-          href: develop/add-in-manifests.md
           items:
+            - name: XML-манифест надстроек Office
+              href: develop/add-in-manifests.md
             - name: Создание команд надстройки
               href: develop/create-addin-commands.md
             - name: Указание ведущих приложений Office
@@ -161,13 +167,16 @@
               href: develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md
             - name: API обновления и версия манифеста
               href: develop/update-your-javascript-api-for-office-and-manifest-schema-version.md
+            - name: Определение эквивалентной надстройки COM
+              href: develop/make-office-add-in-compatible-with-existing-com-add-in.md
             - name: Как определить правильный порядок элементов манифеста
               href: develop/manifest-element-ordering.md
-        - name: Проверка подлинности и авторизация.
+        - name: Проверка подлинности и авторизация
           items:
             - name: Включение единого входа в надстройке
-              href: develop/sso-in-office-add-ins.md
               items:
+                - name: Включение единого входа
+                  href: develop/sso-in-office-add-ins.md
                 - name: Создание надстройки единого входа с помощью ASP.NET
                   href: develop/create-sso-office-add-ins-aspnet.md
                 - name: Создание надстройки единого входа с помощью Node. js
@@ -188,13 +197,12 @@
           href: develop/automatically-open-a-task-pane-with-a-document.md
         - name: Ограничения для одной политики происхождения
           href: develop/addressing-same-origin-policy-limitations.md
-        - name: Локализация
+        - name: локализация.
           href: develop/localization.md
         - name: Разработка надстроек с помощью Visual Studio
           items:
             - name: Создание и отладка надстроек Office в Visual Studio
               href: develop/create-and-debug-office-add-ins-in-visual-studio.md
-              items: null
             - name: Получение IntelliSense для JavaScript в Visual Studio
               href: develop/get-javascript-intellisense-in-visual-studio.md
             - name: Преобразование JavaScript в TypeScript
@@ -204,13 +212,17 @@
         - name: Разработка надстроек с помощью угловой
           href: develop/add-ins-with-angular2.md
     - name: Надстройки Excel
-      href: excel/excel-add-ins-overview.md
       displayName: Excel
       items:
+        - name: Обзор
+          href: excel/excel-add-ins-overview.md
+          displayName: Excel
         - name: Создание первой надстройки Excel
-          href: excel/excel-add-ins-get-started-overview.md
           displayName: Excel
           items:
+            - name: Начало работы с надстройками Excel
+              href: excel/excel-add-ins-get-started-overview.md
+              displayName: Excel
             - name: Использование угловой
               href: quickstarts/excel-quickstart-angular.md
               displayName: Excel
@@ -267,10 +279,16 @@
                 - name: Полняющего
                   href: excel/custom-functions-runtime.md
                   displayName: Excel
+                - name: Переменные функции
+                  href: excel/custom-functions-volatile.md
+                  displayName: Excel
+                - name: Параметры параметров пользовательских функций
+                  href: excel/custom-functions-parameter-options.md
+                  displayName: Excel
                 - name: Метаданные
                   href: excel/custom-functions-json.md
                   displayName: Excel
-                - name: Пользовательские метаданные функции
+                - name: Генерация метаданных
                   href: excel/custom-functions-json-autogeneration.md
                   displayName: Excel
                 - name: Рекомендации
@@ -296,6 +314,15 @@
                   displayName: Excel
                 - name: Рекомендации по именованию
                   href: excel/custom-functions-naming.md
+                  displayName: Excel
+                - name: локализация.
+                  href: excel/custom-functions-localize.md
+                  displayName: Excel
+                - name: Определение эквивалентного XLL
+                  href: excel/make-custom-functions-compatible-with-xll-udf.md
+                  displayName: Excel
+                - name: Пакетная обработка
+                  href: excel/custom-functions-batching.md
                   displayName: Excel
                 - name: Устранение неполадок
                   href: excel/custom-functions-troubleshooting.md
@@ -327,7 +354,7 @@
             - name: Формы
               href: excel/excel-add-ins-shapes.md
               displayName: Excel
-            - name: Tables
+            - name: таблицы;
               href: excel/excel-add-ins-tables.md
               displayName: Excel
             - name: Книги
@@ -343,9 +370,11 @@
           href: /javascript/api/excel
           displayName: Excel
     - name: Надстройки Word
-      href: word/word-add-ins-programming-overview.md
       displayName: Word
       items:
+        - name: Обзор
+          href: word/word-add-ins-programming-overview.md
+          displayName: Word
         - name: Создание первой надстройки Word
           href: quickstarts/word-quickstart.md
           displayName: Word
@@ -380,9 +409,11 @@
       href: /outlook/add-ins/
       displayName: Outlook
     - name: Надстройки PowerPoint
-      href: powerpoint/powerpoint-add-ins.md
       displayName: PowerPoint
       items:
+        - name: Обзор
+          href: powerpoint/powerpoint-add-ins.md
+          displayName: PowerPoint
         - name: Создание первой надстройки PowerPoint
           href: quickstarts/powerpoint-quickstart.md
           displayName: PowerPoint
@@ -396,9 +427,11 @@
           href: powerpoint/get-the-whole-document-from-an-add-in-for-powerpoint.md
           displayName: PowerPoint
     - name: Надстройки OneNote
-      href: onenote/onenote-add-ins-programming-overview.md
       displayName: OneNote
       items:
+        - name: Обзор
+          href: onenote/onenote-add-ins-programming-overview.md
+          displayName: OneNote
         - name: Создание первой надстройки OneNote
           href: quickstarts/onenote-quickstart.md
           displayName: OneNote
@@ -412,9 +445,11 @@
           href: /javascript/api/onenote
           displayName: OneNote
     - name: Надстройки Project
-      href: project/project-add-ins.md
       displayName: Project
       items:
+        - name: Обзор
+          href: project/project-add-ins.md
+          displayName: Project
         - name: Создание первой надстройки Project
           href: quickstarts/project-quickstart.md
           displayName: Project
@@ -425,8 +460,9 @@
           href: project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md
           displayName: Project
     - name: Тестирование и отладка
-      href: testing/test-debug-office-add-ins.md
       items:
+        - name: Обзор
+          href: testing/test-debug-office-add-ins.md
         - name: Windows
           items:
             - name: Загрузка неопубликованных надстроек Office в Windows
@@ -437,7 +473,7 @@
               href: testing/attach-debugger-from-task-pane.md
             - name: Отладка с помощью средств разработчика F12
               href: testing/debug-add-ins-using-f12-developer-tools-on-windows-10.md
-        - name: Office Online.
+        - name: Office Online
           items:
             - name: Загрузка неопубликованных надстроек Office в Office Online
               href: testing/sideload-office-add-ins-for-testing.md
@@ -447,7 +483,7 @@
           items:
             - name: Загрузка неопубликованных надстроек Office на iPad и Mac
               href: testing/sideload-an-office-add-in-on-ipad-and-mac.md
-            - name: Отладка на iPad и Mac
+            - name: Отладка на Mac
               href: testing/debug-office-add-ins-on-ipad-and-mac.md
         - name: Тестирование удобства использования
           href: develop/usability-testing.md
@@ -456,8 +492,9 @@
         - name: Проверка манифеста надстройки и устранение неполадок
           href: testing/troubleshoot-manifest.md
     - name: Публикация
-      href: publish/publish.md
       items:
+        - name: Обзор
+          href: publish/publish.md
         - name: Размещение надстройки Office в Microsoft Azure
           href: publish/host-an-office-add-in-on-microsoft-azure.md
         - name: Упаковка надстройки с помощью Visual Studio
@@ -509,9 +546,10 @@
         - name: Объектная модель Outlook
           items:
             - name: Предварительная версия набора требований
-              href: reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md
               items:
-                - name: Кабинет
+                - name: Обзор
+                  href: reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md
+                - name: Office
                   href: reference/objectmodel/preview-requirement-set/office.md
                 - name: Office. Context
                   href: reference/objectmodel/preview-requirement-set/Office.context.md
@@ -526,9 +564,10 @@
                 - name: Справочные материалы по API предварительной версии Outlook
                   href: /javascript/api/outlook
             - name: 'Набор требований 1,7'
-              href: reference/objectmodel/requirement-set-1.7/outlook-requirement-set-1.7.md
               items:
-                - name: Кабинет
+                - name: Обзор
+                  href: reference/objectmodel/requirement-set-1.7/outlook-requirement-set-1.7.md
+                - name: Office
                   href: reference/objectmodel/requirement-set-1.7/office.md
                 - name: Office. Context
                   href: reference/objectmodel/requirement-set-1.7/Office.context.md
@@ -543,9 +582,10 @@
                 - name: 'Справочник по API для Outlook 1,7'
                   href: /javascript/api/outlook_1_7
             - name: 'Набор требований 1,6'
-              href: reference/objectmodel/requirement-set-1.6/outlook-requirement-set-1.6.md
               items:
-                - name: Кабинет
+                - name: Обзор
+                  href: reference/objectmodel/requirement-set-1.6/outlook-requirement-set-1.6.md
+                - name: Office
                   href: reference/objectmodel/requirement-set-1.6/office.md
                 - name: Office. Context
                   href: reference/objectmodel/requirement-set-1.6/Office.context.md
@@ -560,9 +600,10 @@
                 - name: 'Справочник по API для Outlook 1,6'
                   href: /javascript/api/outlook_1_6
             - name: 'Набор требований 1,5'
-              href: reference/objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md
               items:
-                - name: Кабинет
+                - name: Обзор
+                  href: reference/objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md
+                - name: Office
                   href: reference/objectmodel/requirement-set-1.5/office.md
                 - name: Office. Context
                   href: reference/objectmodel/requirement-set-1.5/Office.context.md
@@ -577,9 +618,10 @@
                 - name: 'Справочник по API для Outlook 1,5'
                   href: /javascript/api/outlook_1_5
             - name: 'Набор требований 1,4'
-              href: reference/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4.md
               items:
-                - name: Кабинет
+                - name: Обзор
+                  href: reference/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4.md
+                - name: Office
                   href: reference/objectmodel/requirement-set-1.4/office.md
                 - name: Office. Context
                   href: reference/objectmodel/requirement-set-1.4/Office.context.md
@@ -594,9 +636,10 @@
                 - name: 'Справочник по API для Outlook 1,4'
                   href: /javascript/api/outlook_1_4
             - name: 'Набор требований 1,3'
-              href: reference/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3.md
               items:
-                - name: Кабинет
+                - name: Обзор
+                  href: reference/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3.md
+                - name: Office
                   href: reference/objectmodel/requirement-set-1.3/office.md
                 - name: Office. Context
                   href: reference/objectmodel/requirement-set-1.3/Office.context.md
@@ -611,9 +654,10 @@
                 - name: 'Справочник по API для Outlook 1,3'
                   href: /javascript/api/outlook_1_3
             - name: 'Набор требований 1,2'
-              href: reference/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2.md
               items:
-                - name: Кабинет
+                - name: Обзор
+                  href: reference/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2.md
+                - name: Office
                   href: reference/objectmodel/requirement-set-1.2/office.md
                 - name: Office. Context
                   href: reference/objectmodel/requirement-set-1.2/Office.context.md
@@ -628,9 +672,10 @@
                 - name: 'Справочник по API для Outlook 1,2'
                   href: /javascript/api/outlook_1_2
             - name: 'Набор требований 1,1'
-              href: reference/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1.md
               items:
-                - name: Кабинет
+                - name: Обзор
+                  href: reference/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1.md
+                - name: Office
                   href: reference/objectmodel/requirement-set-1.1/office.md
                 - name: Office. Context
                   href: reference/objectmodel/requirement-set-1.1/Office.context.md
@@ -684,7 +729,7 @@
           href: reference/manifest/description.md
         - name: DesktopSettings
           href: reference/manifest/desktopsettings.md
-        - name: Dictionary
+        - name: Словарь
           href: reference/manifest/dictionary.md
         - name: DictionaryHomePage
           href: reference/manifest/dictionaryhomepage.md
@@ -692,6 +737,12 @@
           href: reference/manifest/disableentityhighlighting.md
         - name: DisplayName
           href: reference/manifest/displayname.md
+        - name: Екуивалентаддин
+          href: reference/manifest/equivalentaddin.md
+        - name: Екуивалентаддинс
+          href: reference/manifest/equivalentaddins.md
+        - name: FileName
+          href: reference/manifest/filename.md
         - name: Form
           href: reference/manifest/form.md
         - name: FormSettings
@@ -722,6 +773,8 @@
           href: reference/manifest/permissions.md
         - name: PhoneSettings
           href: reference/manifest/phonesettings.md
+        - name: ProgID
+          href: reference/manifest/progid.md
         - name: ProviderName
           href: reference/manifest/providername.md
         - name: QueryUri
@@ -748,11 +801,14 @@
           href: reference/manifest/targetdialect.md
         - name: TargetDialects
           href: reference/manifest/targetdialects.md
+        - name: Тип
+          href: reference/manifest/type.md
         - name: Версия
           href: reference/manifest/version.md
         - name: VersionOverrides
-          href: reference/manifest/versionoverrides.md
           items:
+            - name: VersionOverrides
+              href: reference/manifest/versionoverrides.md
             - name: Action
               href: reference/manifest/action.md
             - name: AllFormFactors
