@@ -1,14 +1,14 @@
 ---
 title: Загрузка неопубликованных надстроек Office в Office Online для тестирования
 description: Тестирование неопубликованной надстройки Office в Office Online путем ее загрузки
-ms.date: 03/19/2019
+ms.date: 04/29/2019
 localization_priority: Priority
-ms.openlocfilehash: 8870e955ca30c4a3b35f2b51e0e16a3ee634960d
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 2bcab7b41fa7f5b9590aacc19645253ee822eeb8
+ms.sourcegitcommit: 68872372d181cca5bee37ade73c2250c4a56bab6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451437"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "33517088"
 ---
 # <a name="sideload-office-add-ins-in-office-online-for-testing"></a>Загрузка неопубликованных надстроек Office в Office Online для тестирования
 
@@ -25,28 +25,7 @@ ms.locfileid: "32451437"
 
 > [!VIDEO https://www.youtube.com/embed/XXsAw2UUiQo]
 
-## <a name="sideload-an-office-add-in-in-office-365"></a>Загрузка неопубликованной надстройки Office в Office 365
-
-
-1. Войдите в свою учетную запись Office 365.
-    
-2. Откройте средство запуска приложений в левой части панели инструментов, выберите **Excel**, **Word** или **PowerPoint** и создайте документ.
-    
-3. Откройте вкладку  **Вставка** на ленте и в разделе **Надстройки** выберите **Надстройки Office**.
-    
-4. В диалоговом окне **Надстройки Office** откройте вкладку **МОЯ ОРГАНИЗАЦИЯ** и выберите **Отправить надстройку**.
-    
-    ![Диалоговое окно "Надстройка Office" со ссылкой "Отправить надстройку" в верхнем левом углу](../images/office-add-ins.png)
-
-5.  **Найдите** файл манифеста надстройки и выберите **Отправить**.
-    
-    ![Диалоговое окно отправки надстройки с кнопками "Обзор", "Отправить" и "Отмена"](../images/upload-add-in.png)
-
-6. Убедитесь, что надстройка установлена. Например, если надстройка вызывается командой, эта команда должна появиться на ленте или в контекстном меню. Если же у вас надстройка области задач, должна появиться область.
-    
-
 ## <a name="sideload-an-office-add-in-in-office-online"></a>Загрузка неопубликованной надстройки Office в Office Online
-
 
 1. Откройте [Microsoft Office Online](https://office.live.com/).
     
@@ -72,6 +51,16 @@ ms.locfileid: "32451437"
 > - Введите **about:flags** в панели поиска Microsoft Edge, чтобы открыть раздел "Параметры разработчика".  Установите флажок **Разрешить замыкание на себя для localhost** и перезапустите Microsoft Edge.
 
 >    ![Параметр "Разрешить замыкание на себя для localhost" в Edge с установленным флажком.](../images/allow-localhost-loopback.png)
+
+
+## <a name="sideload-an-office-add-in-in-office-365"></a>Загрузка неопубликованной надстройки Office в Office 365
+
+1. Войдите в свою учетную запись Office 365.
+    
+2. Откройте средство запуска приложений в левой части панели инструментов, выберите **Excel**, **Word** или **PowerPoint** и создайте документ.
+    
+3. Действия 3–6 совпадают с действиями в предыдущем разделе **Загрузка неопубликованной надстройки Office в Office Online**.
+
 
 ## <a name="sideload-an-add-in-when-using-visual-studio"></a>Загрузка неопубликованной настройки при использовании Visual Studio
 
