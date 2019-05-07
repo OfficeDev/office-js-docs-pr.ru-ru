@@ -16,19 +16,19 @@
   items:
     - name: Создание надстройки Excel
       items:
-        - name: Использование угловой
-          href: quickstarts/excel-quickstart-angular.md
-          displayName: Excel
-        - name: Использование jQuery
+        - name: Для области задач
           href: quickstarts/excel-quickstart-jquery.md
           displayName: Excel
-        - name: Использование реакции
+        - name: Область задач (радиально)
+          href: quickstarts/excel-quickstart-angular.md
+          displayName: Excel
+        - name: Область задач (реагирует)
           href: quickstarts/excel-quickstart-react.md
           displayName: Excel
-        - name: Использование Vue
+        - name: Область задач (VUE)
           href: quickstarts/excel-quickstart-vue.md
           displayName: Excel
-        - name: Создание настраиваемой функции
+        - name: Пользовательские функции
           href: quickstarts/excel-custom-functions-quickstart.md
           displayName: Excel
     - name: Создание надстройки Word
@@ -64,6 +64,8 @@
   items:
     - name: Требования к запуску надстроек
       href: concepts/requirements-for-running-office-add-ins.md
+    - name: 'Веб-средства просмотра, используемые надстройками Office'
+      href: concepts/web-viewers-used-by-office-web-add-ins.md
     - name: Рекомендации по разработке надстроек
       href: concepts/add-in-development-best-practices.md
     - name: Жизненный цикл разработки надстроек
@@ -78,7 +80,7 @@
       items:
         - name: Обзор
           href: design/add-in-design.md
-        - name: Директив
+        - name: Рекомендации
           items:
             - name: Специальные возможности
               href: design/accessibility-guidelines.md
@@ -197,7 +199,7 @@
           href: develop/automatically-open-a-task-pane-with-a-document.md
         - name: Ограничения для одной политики происхождения
           href: develop/addressing-same-origin-policy-limitations.md
-        - name: локализация.
+        - name: Локализация
           href: develop/localization.md
         - name: Разработка надстроек с помощью Visual Studio
           items:
@@ -223,17 +225,20 @@
             - name: Начало работы с надстройками Excel
               href: excel/excel-add-ins-get-started-overview.md
               displayName: Excel
-            - name: Использование угловой
-              href: quickstarts/excel-quickstart-angular.md
-              displayName: Excel
-            - name: Использование jQuery
+            - name: Для области задач
               href: quickstarts/excel-quickstart-jquery.md
               displayName: Excel
-            - name: Использование реакции
+            - name: Область задач (радиально)
+              href: quickstarts/excel-quickstart-angular.md
+              displayName: Excel
+            - name: Область задач (реагирует)
               href: quickstarts/excel-quickstart-react.md
               displayName: Excel
-            - name: Использование Vue
+            - name: Область задач (VUE)
               href: quickstarts/excel-quickstart-vue.md
+              displayName: Excel
+            - name: Пользовательские функции
+              href: quickstarts/excel-custom-functions-quickstart.md
               displayName: Excel
         - name: Руководство по надстройкам Excel
           href: tutorials/excel-tutorial.md
@@ -264,32 +269,20 @@
                 - name: Обзор
                   href: excel/custom-functions-overview.md
                   displayName: Excel
-                - name: Архитектура
-                  href: excel/custom-functions-architecture.md
-                  displayName: Excel
-                - name: Быстрый запуск
+                - name: Краткий старт
                   href: quickstarts/excel-custom-functions-quickstart.md
                   displayName: Excel
                 - name: Руководство
                   href: tutorials/excel-tutorial-create-custom-functions.md
                   displayName: Excel
-                - name: Веб-запросы
-                  href: excel/custom-functions-web-reqs.md
+                - name: Архитектура
+                  href: excel/custom-functions-architecture.md
                   displayName: Excel
-                - name: Полняющего
-                  href: excel/custom-functions-runtime.md
+                - name: Проверка подлинности
+                  href: excel/custom-functions-authentication.md
                   displayName: Excel
-                - name: Переменные функции
-                  href: excel/custom-functions-volatile.md
-                  displayName: Excel
-                - name: Параметры параметров пользовательских функций
-                  href: excel/custom-functions-parameter-options.md
-                  displayName: Excel
-                - name: Метаданные
-                  href: excel/custom-functions-json.md
-                  displayName: Excel
-                - name: Генерация метаданных
-                  href: excel/custom-functions-json-autogeneration.md
+                - name: Совмещение
+                  href: excel/custom-functions-batching.md
                   displayName: Excel
                 - name: Рекомендации
                   href: excel/custom-functions-best-practices.md
@@ -297,35 +290,47 @@
                 - name: Отладка
                   href: excel/custom-functions-debugging.md
                   displayName: Excel
-                - name: Проверка подлинности
-                  href: excel/custom-functions-authentication.md
-                  displayName: Excel
                 - name: Диалогов
                   href: excel/custom-functions-dialog.md
-                  displayName: Excel
-                - name: Журнал изменений
-                  href: excel/custom-functions-changelog.md
                   displayName: Excel
                 - name: Обработка ошибок
                   href: excel/custom-functions-errors.md
                   displayName: Excel
-                - name: Требования
-                  href: excel/custom-functions-requirements.md
+                - name: Определение эквивалентного XLL
+                  href: excel/make-custom-functions-compatible-with-xll-udf.md
+                  displayName: Excel
+                - name: Локализация
+                  href: excel/custom-functions-localize.md
+                  displayName: Excel
+                - name: Метаданные
+                  href: excel/custom-functions-json.md
+                  displayName: Excel
+                - name: Генерация метаданных
+                  href: excel/custom-functions-json-autogeneration.md
                   displayName: Excel
                 - name: Рекомендации по именованию
                   href: excel/custom-functions-naming.md
                   displayName: Excel
-                - name: локализация.
-                  href: excel/custom-functions-localize.md
+                - name: Параметры параметров
+                  href: excel/custom-functions-parameter-options.md
                   displayName: Excel
-                - name: Определение эквивалентного XLL
-                  href: excel/make-custom-functions-compatible-with-xll-udf.md
+                - name: Требования
+                  href: excel/custom-functions-requirements.md
                   displayName: Excel
-                - name: Пакетная обработка
-                  href: excel/custom-functions-batching.md
+                - name: Полняющего
+                  href: excel/custom-functions-runtime.md
+                  displayName: Excel
+                - name: Сохранение и общий доступ к состоянию
+                  href: excel/custom-functions-save-state.md
                   displayName: Excel
                 - name: Устранение неполадок
                   href: excel/custom-functions-troubleshooting.md
+                  displayName: Excel
+                - name: Переменные функции
+                  href: excel/custom-functions-volatile.md
+                  displayName: Excel
+                - name: Веб-запросы
+                  href: excel/custom-functions-web-reqs.md
                   displayName: Excel
             - name: Проверка данных
               href: excel/excel-add-ins-data-validation.md
@@ -751,7 +756,7 @@
           href: reference/manifest/highresolutioniconurl.md
         - name: Host (Узел)
           href: reference/manifest/host.md
-        - name: Узлы
+        - name: Hosts
           href: reference/manifest/hosts.md
         - name: IconUrl
           href: reference/manifest/iconurl.md
@@ -829,7 +834,7 @@
               href: reference/manifest/getstarted.md
             - name: Группа
               href: reference/manifest/group.md
-            - name: Узлы
+            - name: Hosts
               href: reference/manifest/hosts.md
             - name: Значок
               href: reference/manifest/icon.md

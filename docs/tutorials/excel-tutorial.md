@@ -5,12 +5,12 @@ ms.date: 01/28/2019
 ms.prod: excel
 ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: 410b2391d207f7c83f9accb349448dbc0c92a0e2
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: d32b5b03b29ddfa2213b0dd91d9f02e72b173fbf
+ms.sourcegitcommit: 47b792755e655043d3db2f1fdb9a1eeb7453c636
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451314"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "33619072"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -46,7 +46,7 @@ ms.locfileid: "32451314"
 
 3. Выполните команду `npm install`, чтобы установить инструменты и библиотеки, указанные в файле package.json. 
 
-4. Сделайте так, чтобы операционная система компьютера разработки доверяла сертификату. Для этого выполните действия, описанные в [этой статье](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md).
+4. Выполните действия, описанные в статье [Установка самозаверяющего сертификата](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md) , чтобы доверять сертификату операционной системы на компьютере разработчика.
 
 ## <a name="create-a-table"></a>Создание таблицы
 
