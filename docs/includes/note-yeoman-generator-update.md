@@ -1,0 +1,2 @@
+> [!NOTE]
+> <span data-ttu-id="4329f-101">Даже если вы ранее установили генератор Yeoman, рекомендуем обновить его до последней версии из NPM.</span><span class="sxs-lookup"><span data-stu-id="4329f-101">Even if you've previously installed the Yeoman generator, we recommend you update your package to the latest version from npm.</span></span>

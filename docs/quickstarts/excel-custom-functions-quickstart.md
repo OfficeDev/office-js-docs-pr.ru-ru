@@ -1,115 +1,119 @@
 ---
-ms.date: 03/06/2019
+ms.date: 05/02/2019
 description: Разработка настраиваемых функций в кратком руководстве по Excel.
-title: Краткое руководство по настраиваемым функциям (Предварительная версия)
+title: Краткое руководство по настраиваемым функциям
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 3ea7ec4c2089aaa4e9f193a45e7c4a31c691f213
-ms.sourcegitcommit: 68872372d181cca5bee37ade73c2250c4a56bab6
+ms.openlocfilehash: 8eb2630526ce939273024eebd533bd99fa5e94a1
+ms.sourcegitcommit: 47b792755e655043d3db2f1fdb9a1eeb7453c636
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "33517074"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "33619899"
 ---
-# <a name="get-started-developing-excel-custom-functions"></a><span data-ttu-id="1a9bb-103">Приступая к разработке пользовательских функций Excel</span><span class="sxs-lookup"><span data-stu-id="1a9bb-103">Get started developing Excel custom functions</span></span>
+# <a name="get-started-developing-excel-custom-functions"></a><span data-ttu-id="757b8-103">Приступая к разработке пользовательских функций Excel</span><span class="sxs-lookup"><span data-stu-id="757b8-103">Get started developing Excel custom functions</span></span>
 
-<span data-ttu-id="1a9bb-104">С помощью пользовательских функций разработчики могут добавлять новые функции в Excel, определяя их в JavaScript или typescript как часть надстройки.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-104">With custom functions, developers can now add new functions to Excel by defining them in JavaScript or Typescript as part of an add-in.</span></span> <span data-ttu-id="1a9bb-105">Пользователи Excel могут получить доступ к пользовательским функциям так же, как и к любой собственной `SUM()`функции в Excel, например.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-105">Excel users can access custom functions just as they would any native function in Excel, such as `SUM()`.</span></span>
+<span data-ttu-id="757b8-104">С помощью пользовательских функций разработчики могут добавлять новые функции в Excel, определяя их в JavaScript или typescript как часть надстройки.</span><span class="sxs-lookup"><span data-stu-id="757b8-104">With custom functions, developers can now add new functions to Excel by defining them in JavaScript or Typescript as part of an add-in.</span></span> <span data-ttu-id="757b8-105">Пользователи Excel могут получить доступ к пользовательским функциям так же, как и к любой собственной `SUM()`функции в Excel, например.</span><span class="sxs-lookup"><span data-stu-id="757b8-105">Excel users can access custom functions just as they would any native function in Excel, such as `SUM()`.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="1a9bb-106">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="1a9bb-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="757b8-106">Необходимые условия</span><span class="sxs-lookup"><span data-stu-id="757b8-106">Prerequisites</span></span>
 
-[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
+[!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
-<span data-ttu-id="1a9bb-107">Для создания пользовательских функций потребуются следующие средства и связанные ресурсы.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-107">You'll need the following tools and related resources to begin creating custom functions.</span></span>
+* <span data-ttu-id="757b8-107">Excel для Windows (64-разрядная версия 1810 или более поздняя) или Excel Online</span><span class="sxs-lookup"><span data-stu-id="757b8-107">Excel for Windows (64-bit version 1810 or later) or Excel Online</span></span>
 
-- <span data-ttu-id="1a9bb-108">[Node.js](https://nodejs.org/en/) (версия 8.0.0 или более поздняя)</span><span class="sxs-lookup"><span data-stu-id="1a9bb-108">[Node.js](https://nodejs.org/en/) (version 8.0.0 or later)</span></span>
+* <span data-ttu-id="757b8-108">Присоединитесь к [Программе предварительной оценки Office](https://products.office.com/office-insider) (уровень **Участник**; ранее "Предварительная оценка — ранний доступ")</span><span class="sxs-lookup"><span data-stu-id="757b8-108">Join the [Office Insider program](https://products.office.com/office-insider) (**Insider** level -- formerly called "Insider Fast")</span></span>
 
-- <span data-ttu-id="1a9bb-109">[Git Bash](https://git-scm.com/downloads) (или другой клиент Git)</span><span class="sxs-lookup"><span data-stu-id="1a9bb-109">[Git Bash](https://git-scm.com/downloads) (or another Git client)</span></span>
+## <a name="build-your-first-custom-functions-project"></a><span data-ttu-id="757b8-109">Создание проекта пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="757b8-109">Build your first custom functions project</span></span>
 
-- <span data-ttu-id="1a9bb-110">Последняя версия [Yeoman](https://yeoman.io/) и [генератора Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office). Выполните в командной строке указанную ниже команду, чтобы установить эти инструменты глобально.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-110">The latest version of [Yeoman](https://yeoman.io/) and the [Yeoman generator for Office Add-ins](https://www.npmjs.com/package/generator-office). To install these tools globally, run the following command via the command prompt:</span></span>
+<span data-ttu-id="757b8-110">Чтобы начать работу, создайте проект пользовательских функций с помощью генератора Yeoman.</span><span class="sxs-lookup"><span data-stu-id="757b8-110">To start, you'll use the Yeoman generator to create the custom functions project.</span></span> <span data-ttu-id="757b8-111">Это позволит настроить для проекта правильную структуру папок, исходные файлы и зависимости, чтобы начать написание кода пользовательских функций.</span><span class="sxs-lookup"><span data-stu-id="757b8-111">This will set up your project with the correct folder structure, source files, and dependencies to begin coding your custom functions.</span></span>
 
-    ```command&nbsp;line
-    npm install -g yo generator-office
-    ```
-
-    > [!NOTE]
-    > <span data-ttu-id="1a9bb-111">Даже если вы ранее установили генератор Yeoman, рекомендуем обновить его до последней версии из NPM.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-111">Even if you've previously installed the Yeoman generator, we recommend you update your package to the latest version from npm.</span></span>
-
-## <a name="build-your-first-custom-functions-project"></a><span data-ttu-id="1a9bb-112">Создание проекта пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="1a9bb-112">Build your first custom functions project</span></span>
-
-<span data-ttu-id="1a9bb-113">Чтобы начать работу, создайте проект пользовательских функций с помощью генератора Yeoman.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-113">To start, you'll use the Yeoman generator to create the custom functions project.</span></span> <span data-ttu-id="1a9bb-114">Это позволит настроить для проекта правильную структуру папок, исходные файлы и зависимости, чтобы начать написание кода пользовательских функций.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-114">This will set up your project with the correct folder structure, source files, and dependencies to begin coding your custom functions.</span></span>
-
-1. <span data-ttu-id="1a9bb-115">Выполните указанную ниже команду и ответьте на вопросы, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-115">Run the following command and then answer the prompts as follows.</span></span>
+1. <span data-ttu-id="757b8-112">В выбранной папке выполните следующую команду, а затем ответьте на приглашение следующим образом.</span><span class="sxs-lookup"><span data-stu-id="757b8-112">In a folder of your choice, run the following command and then answer the prompts as follows.</span></span>
 
     ```command&nbsp;line
     yo office
     ```
 
-    - <span data-ttu-id="1a9bb-116">Выберите тип проекта: `Excel Custom Functions Add-in project (...)`</span><span class="sxs-lookup"><span data-stu-id="1a9bb-116">Choose a project type: `Excel Custom Functions Add-in project (...)`</span></span>
+    - <span data-ttu-id="757b8-113">**Выберите тип проекта:** `Excel Custom Functions Add-in project (...)`</span><span class="sxs-lookup"><span data-stu-id="757b8-113">**Choose a project type:** `Excel Custom Functions Add-in project (...)`</span></span>
+    - <span data-ttu-id="757b8-114">**Выберите тип сценария:** `JavaScript`</span><span class="sxs-lookup"><span data-stu-id="757b8-114">**Choose a script type:** `JavaScript`</span></span>
+    - <span data-ttu-id="757b8-115">**Как вы хотите назвать надстройку?**</span><span class="sxs-lookup"><span data-stu-id="757b8-115">**What do you want to name your add-in?**</span></span> `stock-ticker`
 
-    - <span data-ttu-id="1a9bb-117">Выберите тип сценария: `JavaScript`</span><span class="sxs-lookup"><span data-stu-id="1a9bb-117">Choose a script type: `JavaScript`</span></span>
+    ![Генератор Yeoman для надстройки Office, приглашающий к созданию пользовательских функций](../images/yo-office-excel-cf.png)
 
-    - <span data-ttu-id="1a9bb-118">Как вы хотите назвать свою надстройку?</span><span class="sxs-lookup"><span data-stu-id="1a9bb-118">What do you want to name your add-in?</span></span> `stock-ticker`
+    <span data-ttu-id="757b8-117">Генератор Yeoman создаст файлы проекта и установит вспомогательные компоненты Node.</span><span class="sxs-lookup"><span data-stu-id="757b8-117">The Yeoman generator will create the project files and install supporting Node components.</span></span>
 
-    ![Генератор Yeoman для надстройки Office, приглашающий к созданию пользовательских функций](../images/12-10-fork-cf-pic.jpg)
-
-    <span data-ttu-id="1a9bb-120">Генератор Yeoman создаст файлы проекта и установит вспомогательные компоненты Node.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-120">The Yeoman generator will create the project files and install supporting Node components.</span></span>
-
-2. <span data-ttu-id="1a9bb-121">Перейдите к только что созданной папке проекта.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-121">Navigate to the project folder you just created.</span></span>
+2. <span data-ttu-id="757b8-118">Генератор Yeoman предоставит вам некоторые инструкции в командной строке о том, что делать с проектом, но проигнорируя их и продолжите выполнение дальнейших действий.</span><span class="sxs-lookup"><span data-stu-id="757b8-118">The Yeoman generator will give you some instructions in your command line about what to do with the project, but ignore them and continue to follow our instructions.</span></span> <span data-ttu-id="757b8-119">Перейдите к корневой папке проекта.</span><span class="sxs-lookup"><span data-stu-id="757b8-119">Navigate to the root folder of the project.</span></span>
 
     ```command&nbsp;line
     cd stock-ticker
     ```
 
-3. <span data-ttu-id="1a9bb-122">Доверяете самозаверяющий сертификату, который требуется для запуска этого проекта.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-122">Trust the self-signed certificate you need to run this project.</span></span> <span data-ttu-id="1a9bb-123">Подробные инструкции для Windows или Mac см. в статье [Добавление самозаверяющих сертификатов в качестве доверенных корневых сертификатов](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md).</span><span class="sxs-lookup"><span data-stu-id="1a9bb-123">For detailed instructions for either Windows or Mac, see [Adding Self Signed Certificates as Trusted Root Certificate](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md).</span></span>  
-
-4. <span data-ttu-id="1a9bb-124">Выполните сборку проекта.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-124">Build the project.</span></span>
+3. <span data-ttu-id="757b8-120">Выполните построение проекта.</span><span class="sxs-lookup"><span data-stu-id="757b8-120">Build the project.</span></span> <span data-ttu-id="757b8-121">При этом также будут установлены сертификаты, необходимые вашему проекту для правильной работы.</span><span class="sxs-lookup"><span data-stu-id="757b8-121">This will also install certificates that your project needs in order to function properly.</span></span> 
 
     ```command&nbsp;line
     npm run build
     ```
 
-5. <span data-ttu-id="1a9bb-125">Запустите локальный веб-сервер, работающий на Node.js.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-125">Start the local web server, which runs in Node.js.</span></span>
+4. <span data-ttu-id="757b8-122">Запустите локальный веб-сервер, работающий на Node.js.</span><span class="sxs-lookup"><span data-stu-id="757b8-122">Start the local web server, which runs in Node.js.</span></span> <span data-ttu-id="757b8-123">Вы можете испытать надстройку настраиваемой функции в Excel для Windows или Excel Online.</span><span class="sxs-lookup"><span data-stu-id="757b8-123">You can try out the custom function add-in in Excel for Windows or Excel Online.</span></span> <span data-ttu-id="757b8-124">Вам может быть предложено открыть область задач надстройки, хотя это необязательный параметр.</span><span class="sxs-lookup"><span data-stu-id="757b8-124">You may be prompted to open the add-in's task pane, although this is optional.</span></span> <span data-ttu-id="757b8-125">Вы можете по-прежнему запускать пользовательские функции, не открывая область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="757b8-125">You can still run your custom functions without opening your add-in's task pane.</span></span>
 
-    - <span data-ttu-id="1a9bb-126">Если вы используете Excel для Windows для тестирования пользовательских функций, выполните следующую команду для запуска локального веб-сервера, запуска Excel и Загрузка неопубликованных надстройки:</span><span class="sxs-lookup"><span data-stu-id="1a9bb-126">If you use Excel for Windows to test your custom functions, run the following command to start the local web server, launch Excel, and sideload the add-in:</span></span>
+> [!NOTE]
+> <span data-ttu-id="757b8-126">Надстройки Office должны использовать протокол HTTPS, а не HTTP, даже при разработке.</span><span class="sxs-lookup"><span data-stu-id="757b8-126">Office Add-ins should use HTTPS, not HTTP, even when you are developing.</span></span> <span data-ttu-id="757b8-127">Если после запуска `npm run start:desktop`будет предложено установить сертификат, примите приглашение установить сертификат, который предоставляет генератор Yeoman.</span><span class="sxs-lookup"><span data-stu-id="757b8-127">If you are prompted to install a certificate after you run `npm run start:desktop`, accept the prompt to install the certificate that the Yeoman generator provides.</span></span>
 
-        ```command&nbsp;line
-         npm run start
-        ```
-        <span data-ttu-id="1a9bb-127">После выполнения этой команды в командной строки будут отображаться сведения о запуске веб-сервера.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-127">After running this command, your command prompt will show details about starting the web server.</span></span> <span data-ttu-id="1a9bb-128">Excel начнет работу с загруженной надстройкой.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-128">Excel will start with your add-in loaded.</span></span> <span data-ttu-id="1a9bb-129">Если надстройка не загружается, проверьте правильность выполнения шага 3.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-129">If you add-in does not load, check that you have completed step 3 properly.</span></span>
+# <a name="excel-for-windowstabexcel-windows"></a>[<span data-ttu-id="757b8-128">Excel для Windows</span><span class="sxs-lookup"><span data-stu-id="757b8-128">Excel for Windows</span></span>](#tab/excel-windows)
 
-    - <span data-ttu-id="1a9bb-130">Если вы используете Excel Online для тестирования пользовательских функций, выполните следующую команду для запуска локального веб-сервера:</span><span class="sxs-lookup"><span data-stu-id="1a9bb-130">If you use Excel Online to test your custom functions, run the following command to start the local web server:</span></span>
+<span data-ttu-id="757b8-129">Чтобы протестировать надстройку в Excel для Windows, выполните следующую команду.</span><span class="sxs-lookup"><span data-stu-id="757b8-129">To test your add-in in Excel for Windows, run the following command.</span></span> <span data-ttu-id="757b8-130">При выполнении этой команды запустится локальный веб-сервер, и откроется приложение Excel с загруженной надстройкой.</span><span class="sxs-lookup"><span data-stu-id="757b8-130">When you run this command, the local web server will start and Excel will open with your add-in loaded.</span></span>
 
-        ```command&nbsp;line
-        npm run start-web
-        ```
+```command&nbsp;line
+npm run start:desktop
+```
 
-         <span data-ttu-id="1a9bb-131">После выполнения этой команды в командной строки будут отображаться сведения о запуске веб-сервера.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-131">After running this command, your command prompt will show details about starting the web server.</span></span> <span data-ttu-id="1a9bb-132">Чтобы использовать функции, откройте новую книгу в Excel Online.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-132">To use your functions, open a new workbook in Excel Online.</span></span> <span data-ttu-id="1a9bb-133">В этой книге вам потребуется загрузить надстройку.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-133">In this workbook, you'll need to load your add-in.</span></span> 
+# <a name="excel-onlinetabexcel-online"></a>[<span data-ttu-id="757b8-131">Excel Online</span><span class="sxs-lookup"><span data-stu-id="757b8-131">Excel Online</span></span>](#tab/excel-online)
 
-        <span data-ttu-id="1a9bb-134">Для этого перейдите на вкладку **Вставка** на ленте и выберите **получить надстройки**. В открывшемся новом окне убедитесь, что вы используете вкладку **Мои надстройки** . Затем выберите **Управление моими надстройками _Гт_ отправить мою надстройку**.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-134">To do this, select the **Insert** tab on the ribbon and select **Get Add-ins**. In the resulting new window, ensure you are on the **My Add-ins** tab. Next, select **Manage My Add-ins > Upload My Add-in**.</span></span> <span data-ttu-id="1a9bb-135">Найдите файл манифеста и отправьте его.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-135">Browse for your manifest file and upload it.</span></span> <span data-ttu-id="1a9bb-136">Если надстройка не загружается, проверьте правильность выполнения шага 3.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-136">If your add-in does not load, check you've completed step 3 correctly.</span></span>
+<span data-ttu-id="757b8-132">Чтобы протестировать надстройку в Excel Online, выполните следующую команду.</span><span class="sxs-lookup"><span data-stu-id="757b8-132">To test your add-in in Excel Online, run the following command.</span></span> <span data-ttu-id="757b8-133">При выполнении этой команды запустится локальный веб-сервер.</span><span class="sxs-lookup"><span data-stu-id="757b8-133">When you run this command, the local web server will start.</span></span>
 
-## <a name="try-out-the-prebuilt-custom-functions"></a><span data-ttu-id="1a9bb-137">Опробуйте готовые пользовательские функции</span><span class="sxs-lookup"><span data-stu-id="1a9bb-137">Try out the prebuilt custom functions</span></span>
+```command&nbsp;line
+npm run start:web
+```
 
-<span data-ttu-id="1a9bb-138">Проект пользовательских функций, созданный с помощью генератора Yeoman, содержит некоторые готовые пользовательские функции, определенные в файле **src/customfunctions.js**.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-138">The custom functions project that you created by using the Yeoman generator contains some prebuilt custom functions, defined within the **src/customfunctions.js** file.</span></span> <span data-ttu-id="1a9bb-139">Файл **manifest.xml** в корневом каталоге проекта указывает, что все пользовательские функции принадлежат пространству имен `CONTOSO`.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-139">The **manifest.xml** file in the root directory of the project specifies that all custom functions belong to the `CONTOSO` namespace.</span></span>
+> [!NOTE]
+> <span data-ttu-id="757b8-134">Надстройки Office должны использовать протокол HTTPS, а не HTTP, даже при разработке.</span><span class="sxs-lookup"><span data-stu-id="757b8-134">Office Add-ins should use HTTPS, not HTTP, even when you are developing.</span></span> <span data-ttu-id="757b8-135">Если после запуска `npm run start:web`будет предложено установить сертификат, примите приглашение установить сертификат, который предоставляет генератор Yeoman.</span><span class="sxs-lookup"><span data-stu-id="757b8-135">If you are prompted to install a certificate after you run `npm run start:web`, accept the prompt to install the certificate that the Yeoman generator provides.</span></span>
 
-<span data-ttu-id="1a9bb-140">В книге Excel проверьте `ADD` пользовательскую функцию, выполнив следующие действия:</span><span class="sxs-lookup"><span data-stu-id="1a9bb-140">In your Excel workbook, try out the `ADD` custom function by completing the following steps:</span></span>
+<span data-ttu-id="757b8-136">Чтобы использовать надстройку с пользовательскими функциями, откройте новую книгу в Excel Online.</span><span class="sxs-lookup"><span data-stu-id="757b8-136">To use your custom functions add-in, open a new workbook in Excel Online.</span></span> <span data-ttu-id="757b8-137">В этой книге выполните следующие действия, чтобы Загрузка неопубликованных надстройку.</span><span class="sxs-lookup"><span data-stu-id="757b8-137">In this workbook, complete the following steps to sideload your add-in.</span></span>
 
-1. <span data-ttu-id="1a9bb-141">Выберите ячейку и введите текст `=CONTOSO`.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-141">Select a cell and type `=CONTOSO`.</span></span> <span data-ttu-id="1a9bb-142">Обратите внимание на то, что в меню автозаполнения содержится список всех функций в пространстве имен `CONTOSO`.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-142">Notice that the autocomplete menu shows the list of all functions in the `CONTOSO` namespace.</span></span>
+1. <span data-ttu-id="757b8-138">В Excel Online на вкладке **Вставка** выберите пункт **Надстройки**.</span><span class="sxs-lookup"><span data-stu-id="757b8-138">In Excel Online, choose the **Insert** tab and then choose **Add-ins**.</span></span>
 
-2. <span data-ttu-id="1a9bb-143">Выполните `CONTOSO.ADD` функцию, используя числа `10` и `200` входные параметры, введя значение `=CONTOSO.ADD(10,200)` в ячейке и нажав клавишу ВВОД.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-143">Run the `CONTOSO.ADD` function, using numbers `10` and `200` as input parameters, by typing the value `=CONTOSO.ADD(10,200)` in the cell and pressing enter.</span></span>
+   ![Вставка ленты в Excel Online с выделенным значком "Мои надстройки"](../images/excel-cf-online-register-add-in-1.png)
+   
+2. <span data-ttu-id="757b8-140">Выберите пункт **Управление моими надстройками**, а затем выберите **Отправить мою надстройку**.</span><span class="sxs-lookup"><span data-stu-id="757b8-140">Choose **Manage My Add-ins** and select **Upload My Add-in**.</span></span>
 
-<span data-ttu-id="1a9bb-144">Пользовательская функция `ADD` вычисляет сумму двух чисел, которые вы указываете в качестве входных параметров.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-144">The `ADD` custom function computes the sum of the two numbers that you specify as input parameters.</span></span> <span data-ttu-id="1a9bb-145">При вводе `=CONTOSO.ADD(10,200)` в ячейке должен отобразиться результат **210** после нажатия клавиши ВВОД.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-145">Typing `=CONTOSO.ADD(10,200)` should produce the result **210** in the cell after you press enter.</span></span>
+3. <span data-ttu-id="757b8-141">Выберите \*\*Обзор... \*\* и откройте корневой каталог проекта, созданный генератором Yeoman.</span><span class="sxs-lookup"><span data-stu-id="757b8-141">Choose **Browse...** and navigate to the root directory of the project that the Yeoman generator created.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="1a9bb-146">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="1a9bb-146">Next steps</span></span>
+4. <span data-ttu-id="757b8-142">Выберите файл **manifest.xml** и нажмите кнопку **Открыть**, затем нажмите кнопку **Отправить**.</span><span class="sxs-lookup"><span data-stu-id="757b8-142">Select the file **manifest.xml** and choose **Open**, then choose **Upload**.</span></span>
 
-<span data-ttu-id="1a9bb-147">Поздравляем, вы успешно создали пользовательскую функцию в надстройке Excel!</span><span class="sxs-lookup"><span data-stu-id="1a9bb-147">Congratulations, you've successfully created a custom function in an Excel add-in!</span></span> <span data-ttu-id="1a9bb-148">Затем создайте более сложную надстройку с возможностью потоковой передачи данных.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-148">Next, build a more complex add-in with streaming data capability.</span></span> <span data-ttu-id="1a9bb-149">Следующая ссылка поможет вам выполнить следующие действия в руководстве надстройки Excel с пользовательскими функциями.</span><span class="sxs-lookup"><span data-stu-id="1a9bb-149">The following link takes you through the next steps in the Excel add-in with custom functions tutorial.</span></span>
+---
+
+## <a name="try-out-a-prebuilt-custom-function"></a><span data-ttu-id="757b8-143">Проверка работы готовой пользовательской функции</span><span class="sxs-lookup"><span data-stu-id="757b8-143">Try out a prebuilt custom function</span></span>
+
+<span data-ttu-id="757b8-144">Проект пользовательских функций, созданный с помощью генератора Yeoman, содержит некоторые предварительно созданные пользовательские функции, определенные в файле **./СРК/функтионс/функтионс.ЖС** .</span><span class="sxs-lookup"><span data-stu-id="757b8-144">The custom functions project that you created by using the Yeoman generator contains some prebuilt custom functions, defined within the **./src/functions/functions.js** file.</span></span> <span data-ttu-id="757b8-145">Файл **./манифест.ксмл** в корневом каталоге проекта указывает, что все пользовательские функции принадлежат `CONTOSO` пространству имен.</span><span class="sxs-lookup"><span data-stu-id="757b8-145">The **./manifest.xml** file in the root directory of the project specifies that all custom functions belong to the `CONTOSO` namespace.</span></span>
+
+<span data-ttu-id="757b8-146">В книге Excel проверьте `ADD` пользовательскую функцию, выполнив следующие действия:</span><span class="sxs-lookup"><span data-stu-id="757b8-146">In your Excel workbook, try out the `ADD` custom function by completing the following steps:</span></span>
+
+1. <span data-ttu-id="757b8-147">Выберите ячейку и введите текст `=CONTOSO`.</span><span class="sxs-lookup"><span data-stu-id="757b8-147">Select a cell and type `=CONTOSO`.</span></span> <span data-ttu-id="757b8-148">Обратите внимание на то, что в меню автозаполнения содержится список всех функций в пространстве имен `CONTOSO`.</span><span class="sxs-lookup"><span data-stu-id="757b8-148">Notice that the autocomplete menu shows the list of all functions in the `CONTOSO` namespace.</span></span>
+
+2. <span data-ttu-id="757b8-149">Выполните `CONTOSO.ADD` функцию, используя числа `10` и `200` входные параметры, введя значение `=CONTOSO.ADD(10,200)` в ячейке и нажав клавишу ВВОД.</span><span class="sxs-lookup"><span data-stu-id="757b8-149">Run the `CONTOSO.ADD` function, using numbers `10` and `200` as input parameters, by typing the value `=CONTOSO.ADD(10,200)` in the cell and pressing enter.</span></span>
+
+<span data-ttu-id="757b8-150">Пользовательская функция `ADD` вычисляет сумму двух чисел, которые вы указываете в качестве входных параметров.</span><span class="sxs-lookup"><span data-stu-id="757b8-150">The `ADD` custom function computes the sum of the two numbers that you specify as input parameters.</span></span> <span data-ttu-id="757b8-151">При вводе `=CONTOSO.ADD(10,200)` в ячейке должен отобразиться результат **210** после нажатия клавиши ВВОД.</span><span class="sxs-lookup"><span data-stu-id="757b8-151">Typing `=CONTOSO.ADD(10,200)` should produce the result **210** in the cell after you press enter.</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="757b8-152">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="757b8-152">Next steps</span></span>
+
+<span data-ttu-id="757b8-153">Поздравляем, вы успешно создали пользовательскую функцию в надстройке Excel!</span><span class="sxs-lookup"><span data-stu-id="757b8-153">Congratulations, you've successfully created a custom function in an Excel add-in!</span></span> <span data-ttu-id="757b8-154">Затем создайте более сложную надстройку с возможностью потоковой передачи данных.</span><span class="sxs-lookup"><span data-stu-id="757b8-154">Next, build a more complex add-in with streaming data capability.</span></span> <span data-ttu-id="757b8-155">Следующая ссылка поможет вам выполнить следующие действия в руководстве надстройки Excel с пользовательскими функциями.</span><span class="sxs-lookup"><span data-stu-id="757b8-155">The following link takes you through the next steps in the Excel add-in with custom functions tutorial.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="1a9bb-150">Руководство по надстройкам Excel для пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="1a9bb-150">Excel custom functions add-in tutorial</span></span>](../tutorials/excel-tutorial-create-custom-functions.md#create-a-custom-function-that-requests-data-from-the-web
+> [<span data-ttu-id="757b8-156">Руководство по надстройкам Excel для пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="757b8-156">Excel custom functions add-in tutorial</span></span>](../tutorials/excel-tutorial-create-custom-functions.md#create-a-custom-function-that-requests-data-from-the-web
 )
 
-## <a name="see-also"></a><span data-ttu-id="1a9bb-151">См. также</span><span class="sxs-lookup"><span data-stu-id="1a9bb-151">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="757b8-157">См. также</span><span class="sxs-lookup"><span data-stu-id="757b8-157">See also</span></span>
 
-* [<span data-ttu-id="1a9bb-152">Обзор пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="1a9bb-152">Custom functions overview</span></span>](../excel/custom-functions-overview.md)
-* [<span data-ttu-id="1a9bb-153">Метаданные пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="1a9bb-153">Custom functions metadata</span></span>](../excel/custom-functions-json.md)
-* [<span data-ttu-id="1a9bb-154">Среда выполнения для пользовательских функций Excel</span><span class="sxs-lookup"><span data-stu-id="1a9bb-154">Runtime for Excel custom functions</span></span>](../excel/custom-functions-runtime.md)
-* [<span data-ttu-id="1a9bb-155">Рекомендации по пользовательским функциям</span><span class="sxs-lookup"><span data-stu-id="1a9bb-155">Custom functions best practices</span></span>](../excel/custom-functions-best-practices.md)
+* [<span data-ttu-id="757b8-158">Обзор пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="757b8-158">Custom functions overview</span></span>](../excel/custom-functions-overview.md)
+* [<span data-ttu-id="757b8-159">Метаданные пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="757b8-159">Custom functions metadata</span></span>](../excel/custom-functions-json.md)
+* [<span data-ttu-id="757b8-160">Среда выполнения для пользовательских функций Excel</span><span class="sxs-lookup"><span data-stu-id="757b8-160">Runtime for Excel custom functions</span></span>](../excel/custom-functions-runtime.md)
+* [<span data-ttu-id="757b8-161">Рекомендации по пользовательским функциям</span><span class="sxs-lookup"><span data-stu-id="757b8-161">Custom functions best practices</span></span>](../excel/custom-functions-best-practices.md)
