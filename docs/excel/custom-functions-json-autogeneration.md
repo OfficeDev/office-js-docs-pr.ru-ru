@@ -1,18 +1,20 @@
 ---
-ms.date: 04/25/2019
+ms.date: 05/03/2019
 description: Использование тегов JSDOC для динамического создания метаданных JSON пользовательских функций.
-title: Создание метаданных JSON для пользовательских функций (предварительная версия)
+title: Автоматическое генерирование метаданных JSON для пользовательских функций
 localization_priority: Priority
-ms.openlocfilehash: f13c9b2ff0adfd1bda493433761dc74cb9ea37dc
-ms.sourcegitcommit: 7462409209264dc7f8f89f3808a7a6249fcd739e
+ms.openlocfilehash: df1c0114597e2aa98a15db48c515469fb9db6cd9
+ms.sourcegitcommit: ff73cc04e5718765fcbe74181505a974db69c3f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2019
-ms.locfileid: "33353274"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "33628090"
 ---
-# <a name="create-json-metadata-for-custom-functions-preview"></a>Создание метаданных JSON для пользовательских функций (предварительная версия)
+# <a name="autogenerate-json-metadata-for-custom-functions"></a>Автоматическое генерирование метаданных JSON для пользовательских функций
 
 Если пользовательская функция Excel написана в JavaScript или TypeScript, теги JSDoc используются для предоставления дополнительной информации о пользовательской функции. Теги JSDoc используются при сборке для создания [файла метаданных JSON](custom-functions-json.md). Использование тегов JSDoc освобождает вас от необходимости редактировать файл метаданных JSON вручную.
+
+[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
 Добавьте тег `@customfunction` в примечаниях к коду для функции JavaScript или TypeScript, чтобы пометить ее как пользовательскую.
 
@@ -109,7 +111,7 @@ ms.locfileid: "33353274"
 * Используйте необязательный параметр. Пример: `function f(text?: string)`
 * Задайте для параметра значение по умолчанию. Пример: `function f(text: string = "abc")`
 
-Подробное описание @param см. в [JSDoc](http://usejsdoc.org/tags-param.html)
+Подробное описание @param см. в [JSDoc](https://usejsdoc.org/tags-param.html)
 
 > [!NOTE]
 > Значение по умолчанию для дополнительных параметров — `null`.
@@ -183,11 +185,11 @@ ms.locfileid: "33353274"
 
 Любой другой тип будет рассматриваться как ошибка.
 
-## <a name="see-also"></a>См. также
+## <a name="next-steps"></a>Дальнейшие действия
+Узнайте о [соглашениях именования для пользовательских функций](custom-functions-naming.md). Или же узнайте, как [локализовать свои функции](custom-functions-localize.md), для чего нужно [записать файл JSON вручную](custom-functions-json.md).
+
+## <a name="see-also"></a>Дополнительные ресурсы
 
 * [Метаданные пользовательских функций](custom-functions-json.md)
-* [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
 * [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
-* [Журнал изменений пользовательских функций](custom-functions-changelog.md)
-* [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
-* [Отладка пользовательских функций](custom-functions-debugging.md)
+* [Создание пользовательских функций в Excel](custom-functions-overview.md)

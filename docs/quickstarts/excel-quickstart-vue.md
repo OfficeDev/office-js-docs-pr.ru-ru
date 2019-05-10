@@ -1,34 +1,28 @@
 ---
-title: Создание надстройки Excel с помощью Vue
+title: Создание области задач Excel с помощью Vue
 description: ''
-ms.date: 03/19/2019
+ms.date: 05/02/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: b3c65d2594e2d260f3e332fd20cdee2e56b02fcf
-ms.sourcegitcommit: 68872372d181cca5bee37ade73c2250c4a56bab6
+ms.openlocfilehash: 228301b9711f4ac33fb5435e66cfcd0254041e19
+ms.sourcegitcommit: 47b792755e655043d3db2f1fdb9a1eeb7453c636
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "33517053"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "33619596"
 ---
-# <a name="build-an-excel-add-in-using-vue"></a>Создание надстройки Excel с помощью Vue
+# <a name="build-an-excel-task-pane-add-in-using-vue"></a>Создание области задач Excel с помощью Vue
 
-Из этой статье вы узнаете, как создать надстройку Excel, используя Vue и API JavaScript для Excel.
+Из этой статьи вы узнаете, как создать надстройку области Excel, используя Vue и API JavaScript для Excel.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Необходимые условия
 
-- [Node.js](https://nodejs.org)
+[!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
 - Установите [Vue CLI](https://github.com/vuejs/vue-cli) глобально.
 
     ```command&nbsp;line
     npm install -g vue-cli
-    ```
-
-- Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
-
-    ```command&nbsp;line
-    npm install -g yo generator-office
     ```
 
 ## <a name="generate-a-new-vue-app"></a>Создание нового приложения Vue
@@ -63,11 +57,11 @@ vue init webpack my-add-in
     yo office
     ```
 
-    - **Выберите тип проекта:** `Office Add-in containing the manifest only`
+    - **Выберите тип проекта:** `Office Add-in project containing the manifest only`
     - **Как вы хотите назвать надстройку?** `My Office Add-in`
     - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
-    ![Генератор Yeoman](../images/yo-office.png)
+    ![Генератор Yeoman](../images/yo-office-manifest-only-vue.png)
 
     После выполнения указаний мастера генератор создаст файл манифеста.
 
@@ -214,7 +208,7 @@ vue init webpack my-add-in
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Поздравляем, вы успешно создали надстройку Excel с помощью Vue! Чтобы узнать больше о возможностях надстроек Excel и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Excel.
+Поздравляем! Вы успешно создали надстройку области задач Excel с помощью Vue! Чтобы узнать больше о возможностях надстроек Excel и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Excel.
 
 > [!div class="nextstepaction"]
 > [Руководство по надстройкам Excel](../tutorials/excel-tutorial.md)

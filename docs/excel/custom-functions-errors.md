@@ -1,14 +1,14 @@
 ---
-ms.date: 02/08/2019
+ms.date: 05/03/2019
 description: Обработка ошибок в пользовательских функциях Excel.
-title: Обработка ошибок в пользовательских функциях Excel (предварительная версия)
+title: Обработка ошибок в пользовательских функциях Excel
 localization_priority: Priority
-ms.openlocfilehash: 6c1c7f780aea125977510e4eb0e320933cd6ed9c
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 188ece6c77bc2cafad6f22448fb698e0c0370ef8
+ms.sourcegitcommit: ff73cc04e5718765fcbe74181505a974db69c3f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32448324"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "33628160"
 ---
 # <a name="error-handling-within-custom-functions"></a>Обработка ошибок в пользовательских функциях
 
@@ -19,6 +19,11 @@ ms.locfileid: "32448324"
 В следующем примере кода `.catch` будет обрабатывать любые ошибки, возникающие ранее в коде.
 
 ```js
+/**
+ * Gets a comment from the hypothetical contoso.com/comments API.
+ * @customfunction
+ * @param {number} commentID ID of a comment.
+ */
 function getComment(commentID) {
   let url = "https://www.contoso.com/comments/" + x;
 
@@ -35,10 +40,11 @@ function getComment(commentID) {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="next-steps"></a>Дальнейшие действия
+Узнайте, как [устранять проблемы с пользовательскими функциями](custom-functions-troubleshooting.md).
 
-* [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
-* [Метаданные пользовательских функций](custom-functions-json.md)
-* [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
-* [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
-* [Журнал изменений пользовательских функций](custom-functions-changelog.md)
+## <a name="see-also"></a>Дополнительные ресурсы
+
+* [Отладка пользовательских функций](custom-functions-debugging.md)
+* [Требования к настраиваемым функциям](custom-functions-requirements.md)
+* [Создание пользовательских функций в Excel](custom-functions-overview.md)

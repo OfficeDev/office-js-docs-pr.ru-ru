@@ -1,108 +1,77 @@
 ---
-ms.date: 03/21/2019
-description: Создание диалоговых окон пользовательских функций в Excel с помощью JavaScript.
-title: Диалоговые окна пользовательских функций (предварительная версия)
+ms.date: 05/06/2019
+description: Создание диалогового окна пользовательских функций в Excel с помощью JavaScript.
+title: Вызов диалогового окна из пользовательской функции
 localization_priority: Priority
-ms.openlocfilehash: 0f596825a7a32525a68ef45656f1390196146706
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 3d7a657402c319b2394c7331b69314b2e5591890
+ms.sourcegitcommit: ff73cc04e5718765fcbe74181505a974db69c3f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449262"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "33628153"
 ---
-# <a name="display-a-dialog-box-in-custom-functions"></a>Отображение диалогового окна в пользовательских функциях
+# <a name="display-a-dialog-box-from-a-custom-function"></a>Вызов диалогового окна из пользовательской функции
 
-Если пользовательская функция должна взаимодействовать с пользователем, можно создать диалоговое окно с помощью объекта `OfficeRuntime.Dialog`. Распространенным сценарием использования диалогового окна является проверка подлинности пользователя, чтобы пользовательская функция могла обращаться к веб-службе. Дополнительные сведения о проверке подлинности с помощью пользовательских функций см. в статье [Проверка подлинности пользовательских функций](./custom-functions-authentication.md).
+Если пользовательская функция должна взаимодействовать с пользователем, можно создать диалоговое окно с помощью объекта [`Office.Dialog`](/javascript/api/office-runtime/officeruntime.dialog?view=office-js). Распространенным сценарием использования диалогового окна является проверка подлинности пользователя, чтобы пользовательская функция могла обращаться к веб-службе. Дополнительные сведения о проверке подлинности с помощью пользовательских функций см. в статье [Проверка подлинности пользовательских функций](./custom-functions-authentication.md).
 
-Примечание. Объект `OfficeRuntime.Dialog` является частью среды выполнения пользовательских функций. Его нельзя использовать в контексте области задач. Сведения о создании диалогового окна из области задач см. в статье [Dialog API](/office/dev/add-ins/develop/dialog-api-in-office-add-ins).
+[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
-## <a name="dialog-api-example"></a>Пример Dialog API
+>[!NOTE]
+> Объект `Office.Dialog` является частью среды выполнения пользовательских функций. Объект `Dialog` не используется в областях задач. Сведения о создании диалогового окна из области задач см. в статье [Dialog API](/office/dev/add-ins/develop/dialog-api-in-office-add-ins).
 
-В приведенном ниже примере кода функция `getTokenViaDialog` использует функцию `displayWebDialog` Dialog API для отображения диалогового окна.
+## <a name="dialog-box-api-example"></a>Пример API диалогового окна
+
+В приведенном ниже примере кода функция `getTokenViaDialog` использует функцию `Dialog`API`displayWebDialogOptions` для отображения диалогового окна.
 
 ```js
-// Get auth token before calling my service, a hypothetical API that will deliver a stock price based on stock ticker string, such as "MSFT"
-
-function getStock (ticker) {
-  return new Promise(function (resolve, reject) {
-    // Get a token
-    getToken("https://www.contoso.com/auth")
-    .then(function (token) {
-
-      // Use token to get stock price
-      fetch("https://www.contoso.com/?token=token&ticker= + ticker")
-      .then(function (result) {
-
-        // Return stock price to cell
-        resolve(result);
+/**
+ * Function retrieves a cached token or opens a dialog box if there is no saved token. Note that this is not a sufficient example of authentication but is intended to show the capabilities of the Dialog object.
+ * @param {string} url URL for a stored token.
+ */
+function getTokenViaDialog(url) {
+  return new Promise (function (resolve, reject) {
+    if (_dialogOpen) {
+      // Can only have one dialog box open at once, wait for previous dialog box's token
+      let timeout = 5;
+      let count = 0;
+      var intervalId = setInterval(function () {
+        count++;
+        if(_cachedToken) {
+          resolve(_cachedToken);
+          clearInterval(intervalId);
+        }
+        if(count >= timeout) {
+          reject("Timeout while waiting for token");
+          clearInterval(intervalId);
+        }
+      }, 1000);
+    } else {
+      _dialogOpen = true;
+      Office.displayWebDialogOptions(url, {
+        height: '50%',
+        width: '50%',
+        onMessage: function (message, dialog) {
+          _cachedToken = message;
+          resolve(message);
+          dialog.close();
+          return;
+        },
+        onRuntimeError: function(error, dialog) {
+          reject(error);
+        },
+      }).catch(function (e) {
+        reject(e);
       });
-    })
-    .catch(function (error) {
-      reject(error);
-    });
+    }
   });
-  
-  //Helper
-  function getToken(url) {
-    return new Promise(function (resolve,reject) {
-      if(_cachedToken) {
-        resolve(_cachedToken);
-      } else {
-        getTokenViaDialog(url)
-        .then(function (result) {
-          resolve(result);
-        })
-        .catch(function (result) {
-          reject(result);
-        });
-      }
-    });
-  }
-
-  function getTokenViaDialog(url) {
-    return new Promise (function (resolve, reject) {
-      if (_dialogOpen) {
-        // Can only have one dialog open at once, wait for previous dialog's token
-        let timeout = 5;
-        let count = 0;
-        var intervalId = setInterval(function () {
-          count++;
-          if(_cachedToken) {
-            resolve(_cachedToken);
-            clearInterval(intervalId);
-          }
-          if(count >= timeout) {
-            reject("Timeout while waiting for token");
-            clearInterval(intervalId);
-          }
-        }, 1000);
-      } else {
-        _dialogOpen = true;
-        OfficeRuntime.displayWebDialog(url, {
-          height: '50%',
-          width: '50%',
-          onMessage: function (message, dialog) {
-            _cachedToken = message;
-            resolve(message);
-            dialog.close();
-            return;
-          },
-          onRuntimeError: function(error, dialog) {
-            reject(error);
-          },
-        }).catch(function (e) {
-          reject(e);
-        });
-      }
-    });
-  }
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="next-steps"></a>Дальнейшие действия
+Узнайте, как [создавать пользовательские функции, совместимые с функциями XLL, определенными пользователями](make-custom-functions-compatible-with-xll-udf.md).
 
-* [Метаданные пользовательских функций](custom-functions-json.md)
-* [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
-* [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
-* [Журнал изменений пользовательских функций](custom-functions-changelog.md)
-* [Руководство по настраиваемым функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
+## <a name="see-also"></a>Дополнительные ресурсы
+
+* [Проверка подлинности пользовательских функций](custom-functions-authentication.md)
+* [Получение и обработка данных с помощью пользовательских функций](custom-functions-web-reqs.md)
+* [Создание пользовательских функций в Excel](custom-functions-overview.md)

@@ -1,18 +1,20 @@
 ---
-ms.date: 04/20/2019
+ms.date: 05/03/2019
 description: Запрос, потоковая передача и отмена потоковой передачи внешних данных к книге с помощью пользовательских функций в Excel
-title: Обработка веб-запросов и других данных с помощью пользовательских функций (предварительная версия)
+title: Получение и обработка данных с помощью пользовательских функций
 localization_priority: Priority
-ms.openlocfilehash: 2942ec56e46d6eb586b516eedab17c1eeb98d9c8
-ms.sourcegitcommit: 7462409209264dc7f8f89f3808a7a6249fcd739e
+ms.openlocfilehash: 2f70bd5cd5d8e645b47f2bc97dcec3e8bbacef55
+ms.sourcegitcommit: ff73cc04e5718765fcbe74181505a974db69c3f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2019
-ms.locfileid: "33353267"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "33627991"
 ---
-# <a name="receiving-and-handling-data-with-custom-functions"></a>Получение и обработка данных с помощью пользовательских функций
+# <a name="receive-and-handle-data-with-custom-functions"></a>Получение и обработка данных с помощью пользовательских функций
 
-Один из способов, используемых пользовательскими функциями для повышения эффективности Excel, состоит в получении данных из расположений помимо книг, например из Интернета или сервера (через WebSockets). Пользовательские функции могут запрашивать данные с помощью XHR и получать запросы, а также выполнять потоковую передачу этих данных в режиме реального времени.
+Один из способов, используемых пользовательскими функциями для повышения эффективности Excel, состоит в получении данных из расположений помимо книг, например из Интернета или сервера (через WebSockets). Пользовательские функции могут запрашивать данные с помощью XHR и запросов `fetch`, а также выполнять потоковую передачу этих данных в режиме реального времени.
+
+[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
 В документах ниже показаны некоторые примеры веб-запросов, но для создания функции потоковой передачи используйте [Руководство по пользовательским функциям](https://docs.microsoft.com/office/dev/add-ins/tutorials/excel-tutorial-create-custom-functions?tabs=excel-windows).
 
@@ -33,17 +35,22 @@ ms.locfileid: "33353267"
 
 В следующем примере кода функция **getTemperature** вызывает функцию sendWebRequest для получения температуры в определенной области на основе идентификатора термометра. Функция sendWebRequest использует XHR для отправления запроса GET в конечную точку, которая может предоставить данные.
 
-```JavaScript
+```js
+/**
+ * Receives a temperature from an online source.
+ * @customfunction
+ * @param {number} thermometerID Identification number of the thermometer.
+ */
 function getTemperature(thermometerID) {
   return new Promise(function(setResult) {
-      sendWebRequest(thermometerID, function(data){ 
+      sendWebRequest(thermometerID, function(data){
           storeLastTemperature(thermometerID, data.temperature);
           setResult(data.temperature);
       });
   });
 }
 
-// Helper method that uses Office's implementation of XMLHttpRequest in the JavaScript runtime for custom functions  
+// Helper method that uses Office's implementation of XMLHttpRequest in the JavaScript runtime for custom functions.  
 function sendWebRequest(thermometerID, data) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -65,10 +72,16 @@ CustomFunctions.associate("GETTEMPERATURE", getTemperature);
 
 ### <a name="fetch-example"></a>Пример получения данных
 
-В следующем примере функция stockPriceStream использует символ тикера для получения цены акции каждые 1000 миллисекунд. Для получения дополнительных сведений об этом примере и соответствующего файла JSON см. статью [Руководство по пользовательским функциям](https://docs.microsoft.com/office/dev/add-ins/tutorials/excel-tutorial-create-custom-functions?tabs=excel-windows#create-a-streaming-asynchronous-custom-function). 
+В следующем примере функция `stockPriceStream` использует символ тикера для получения цены акции каждые 1000 миллисекунд. Для получения дополнительных сведений об этом примере см. статью [Руководство по пользовательским функциям](https://docs.microsoft.com/office/dev/add-ins/tutorials/excel-tutorial-create-custom-functions?tabs=excel-windows#create-a-streaming-asynchronous-custom-function).
 
-```JavaScript
-function stockPriceStream(ticker, handler) {
+```js
+/**
+ * Streams a stock price.
+ * @customfunction 
+ * @param {string} ticker Stock ticker.
+ * @param {CustomFunctions.StreamingInvocation<number>} invocation Invocation parameter necessary for streaming functions.
+ */
+function stockPriceStream(ticker, invocation) {
     var updateFrequency = 1000 /* milliseconds*/;
     var isPending = false;
 
@@ -86,17 +99,17 @@ function stockPriceStream(ticker, handler) {
                 return response.text();
             })
             .then(function(text) {
-                handler.setResult(parseFloat(text));
+                invocation.setResult(parseFloat(text));
             })
             .catch(function(error) {
-                handler.setResult(error);
+                invocation.setResult(error);
             })
             .then(function() {
                 isPending = false;
             });
     }, updateFrequency);
 
-    handler.onCanceled = () => {
+    invocation.onCanceled = () => {
         clearInterval(timer);
     };
 }
@@ -104,7 +117,7 @@ function stockPriceStream(ticker, handler) {
 CustomFunctions.associate("STOCKPRICESTREAM", stockPriceStream);
 ```
 
-## <a name="receiving-data-via-websockets"></a>Получение данных через WebSockets
+## <a name="receive-data-via-websockets"></a>Получение данных через WebSockets
 
 В пределах пользовательской функции можно использовать WebSockets для обмена данными через постоянное соединение с сервером. С помощью WebSockets ваша пользовательская функция может открыть соединение с сервером, а затем автоматически получать сообщения от сервера при возникновении определенных событий, без необходимости специально запрашивать у сервера данные.
 
@@ -112,11 +125,11 @@ CustomFunctions.associate("STOCKPRICESTREAM", stockPriceStream);
 
 Следующий примера кода устанавливает соединение WebSocket, а затем заносит в журнал каждое входящее сообщение от сервера.
 
-```JavaScript
-var ws = new WebSocket('wss://bundles.office.com');
+```js
+let ws = new WebSocket('wss://bundles.office.com');
 
 ws.onmessage(message) {
-    console.log(`Recieved: ${message}`);
+    console.log(`Received: ${message}`);
 }
 
 ws.onerror(error){
@@ -124,47 +137,64 @@ ws.onerror(error){
 }
 ```
 
-## <a name="streaming-functions"></a>Потоковая передача функций
+## <a name="stream-and-cancel-functions"></a>Потоковая передача и отмена функций
 
-Потоковая передача пользовательских функций позволяет выводить данные в ячейки несколько раз с течением времени, избавляя пользователя от необходимости явным образом запрашивать обновление данных. Следующий пример кода — это пользовательская функция, которая добавляет число к результату каждую секунду. Обратите внимание на следующие особенности этого кода:
+Потоковая передача пользовательских функций позволяет выводить данные в ячейки, которые повторно обновляются, не требуя от пользователя явно что-либо обновлять.
 
-- Excel отображает каждое новое значение автоматически с помощью обратного вызова setResult.
-- Второй параметр ввода (handler) не отображается для конечных пользователей в Excel, когда они выбирают функцию в меню "Автозаполнение".
-- Обратный вызов onCanceled определяет функцию, которая выполняется при отмене функции. Вам необходимо реализовать уведомление об отмене следующим образом для любой функции потоковой передачи. Дополнительные сведения см. в разделе [Отмена функции](#canceling-a-function).
+Отменяемые пользовательские функции позволяют отменять выполнение потоковой пользовательской функции, чтобы уменьшить использование пропускной способности, рабочей памяти и загрузку ЦП.
 
-```JavaScript
-function incrementValue(increment, handler){
-  var result = 0;
-  setInterval(function(){
-    result += increment;
-    handler.setResult(result);
+Чтобы объявить функцию как потоковую или отменяемую, используйте теги комментария JSDOC `@stream` или `@cancelable`.
+
+### <a name="using-an-invocation-parameter"></a>Использование параметра вызова
+
+Параметр `invocation` является по умолчанию последним в любой пользовательской функции. Параметр `invocation` содержит контекст о ячейке (например, ее адрес), а также позволяет использовать способы `setResult` и `onCanceled`. Эти методы определяют, что делает функция во время ее потоковой передачи (`setResult`) или отмены (`onCanceled`).
+
+При использовании TypeScript требуется обработчик вызовов типа `CustomFunctions.StreamingInvocation` или `CustomFunctions.CancelableInvocation`.
+
+### <a name="streaming-and-cancelable-function-example"></a>Пример потоковой и отменяемой функции
+Следующий пример кода — это пользовательская функция, которая добавляет число к результату каждую секунду. Обратите внимание на следующие особенности этого кода:
+
+- Excel отображает каждое новое значение автоматически с помощью метода `setResult`.
+- Второй параметр ввода, вызов, не отображается для конечных пользователей в Excel, когда они выбирают функцию в меню "Автозаполнение".
+- Обратный вызов `onCanceled` определяет функцию, которая выполняется при отмене функции.
+
+```js
+/**
+ * Increments a value once a second.
+ * @customfunction
+ * @param {number} incrementBy Amount to increment.
+ * @param {CustomFunctions.StreamingInvocation<number>} invocation Invocation parameter necessary for streaming functions.
+ */
+function increment(incrementBy, invocation) {
+  let result = 0;
+  const timer = setInterval(() => {
+    result += incrementBy;
+    invocation.setResult(result);
   }, 1000);
 
-  handler.onCanceled = function(){
+  invocation.onCanceled = function(){
     clearInterval(timer);
-  }
+    }
 }
-
-CustomFunctions.associate("INCREMENTVALUE", incrementValue);
+CustomFunctions.associate("INCREMENT", increment);
 ```
 
-Когда вы указываете метаданные для функции потоковой передачи в файле метаданных JSON, это можно автоматически создать с помощью тега комментария JSDOC `@streaming` в файле скрипта функции. Дополнительные сведения см. в статье [Создание метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md).
+>[!NOTE]
+> Excel отменяет выполнение функций в следующих случаях:
+>
+> - Когда пользователь редактирует или удаляет ячейку, ссылающуюся на функцию.
+> - Когда изменяется один из аргументов (входных параметров) функции. В этом случае после отмены выполняется новый вызов функции.
+> - Когда пользователь вручную вызывает пересчет. В этом случае после отмены выполняется новый вызов функции.
 
-## <a name="canceling-a-function"></a>Отмена функции
+## <a name="next-steps"></a>Дальнейшие действия
+Узнайте о [разных типах параметров, которые можно использовать в ваших функциях](custom-functions-parameter-options.md) Узнайте, как [создавать пакеты из нескольких вызовов API](custom-functions-batching.md).
 
-В некоторых случаях может потребоваться отмена выполнения пользовательских функций потоковой передачи, чтобы уменьшить использования пропускной способности, рабочей памяти и загрузку ЦП. Excel отменяет выполнение функций в следующих случаях:
+## <a name="see-also"></a>Дополнительные ресурсы
 
-- Когда пользователь редактирует или удаляет ячейку, ссылающуюся на функцию.
-- Когда изменяется один из аргументов (входных параметров) функции. В этом случае после отмены выполняется новый вызов функции.
-- Когда пользователь вручную вызывает пересчет. В этом случае после отмены выполняется новый вызов функции.
-
-Чтобы сделать функцию отменяемой, нужно реализовать обработчик в коде функции с указанием действий при ее отмене. Также можно использовать тег комментария JSDOC `@cancelable` в файле скрипта функции. Дополнительные сведения см. в статье [Создание метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md).
-
-## <a name="see-also"></a>См. также
-
-* [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
-* [Метаданные пользовательских функций](custom-functions-json.md)
+* [Пересчитываемые значения в функциях](custom-functions-volatile.md)
 * [Создание метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md)
+* [Метаданные пользовательских функций](custom-functions-json.md)
 * [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
 * [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
-* [Журнал изменений пользовательских функций](custom-functions-changelog.md)
+* [Создание пользовательских функций в Excel](custom-functions-overview.md)
+* [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)

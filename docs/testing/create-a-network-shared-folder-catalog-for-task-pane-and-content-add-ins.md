@@ -3,32 +3,29 @@ title: Загрузка неопубликованных надстроек Offi
 description: ''
 ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 79d1bfc9332208e59e750e94a14abd6f1192ebe6
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 24c7719969ddc59d8bb6e525af804515331a51ad
+ms.sourcegitcommit: 47b792755e655043d3db2f1fdb9a1eeb7453c636
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450210"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "33619046"
 ---
 # <a name="sideload-office-add-ins-for-testing"></a>Загрузка неопубликованных надстроек Office для тестирования
 
 Вы можете установить надстройку Office для тестирования в клиенте Office, запущенном в Windows, используя каталог общих папок для публикации манифеста в сетевом файловом ресурсе.
 
 > [!NOTE]
-> Если проект надстройки создан с помощью [инструмента **yo office**](https://github.com/OfficeDev/generator-office), существует альтернативный способ загрузки неопубликованных надстроек, который может вам подойти. Дополнительные сведения см. в статье [Загрузка неопубликованных надстроек Office с помощью специальной команды](sideload-office-addin-using-sideload-command.md).
+> Если проект надстройки был создан с помощью [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office), есть альтернативный способ загрузки неопубликованных надстроек, который может вам подойти. Дополнительные сведения см. в статье [Загрузка неопубликованных надстроек Office с помощью специальной команды](sideload-office-addin-using-sideload-command.md).
 
-Эта статья относится только к тестированию надстроек Word, Excel или PowerPoint в Windows. Для выполнения тестирования на другой платформе или тестирования надстроек Outlook см. одну из указанных ниже тем о загрузке неопубликованных надстроек.
+Эта статья относится только к тестированию надстроек Word, Excel, PowerPoint и Project в Windows. Для выполнения тестирования на другой платформе или тестирования надстроек Outlook см. одну из указанных ниже тем о загрузке неопубликованных надстроек.
 
 - [Загрузка неопубликованных надстроек Office в Office Online для тестирования](sideload-office-add-ins-for-testing.md)
 - [Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования](sideload-an-office-add-in-on-ipad-and-mac.md)
 - [Загрузка неопубликованных надстроек Outlook для тестирования](/outlook/add-ins/sideload-outlook-add-ins-for-testing)
 
-
 В приведенном ниже видео показано, как загрузить неопубликованную надстройку в классическое приложение Office или Office Online с помощью каталога общих папок.  
 
-
 > [!VIDEO https://www.youtube.com/embed/XXsAw2UUiQo]
-
 
 ## <a name="share-a-folder"></a>Общий доступ к папке
 
@@ -50,7 +47,7 @@ ms.locfileid: "32450210"
 
 ## <a name="specify-the-shared-folder-as-a-trusted-catalog"></a>Указание общей папки в качестве доверенного каталога
       
-1. Откройте новый документ в Excel, Word или PowerPoint.
+1. Откройте новый документ в Excel, Word, PowerPoint или Project.
     
 2. Перейдите на вкладку **Файл**, а затем выберите **Параметры**.
     
@@ -81,12 +78,11 @@ ms.locfileid: "32450210"
     > [!IMPORTANT]
     > [!include[HTTPS guidance](../includes/https-guidance.md)]
 
-2. В Excel, Word или PowerPoint откройте на ленте вкладку **Вставка** и выберите **Мои надстройки**.
+2. В Excel, Word или PowerPoint откройте на ленте вкладку **Вставка** и выберите **Мои надстройки**. В Project выберите **Мои надстройки** на вкладке **Project** ленты. 
 
 3. Нажмите **ОБЩАЯ ПАПКА** в верхней части диалогового окна **Надстройки Office**.
 
 4. Выберите имя надстройки и нажмите кнопку **ОК**, чтобы вставить надстройку.
-
 
 ## <a name="see-also"></a>См. также
 

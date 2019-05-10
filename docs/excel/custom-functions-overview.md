@@ -1,39 +1,46 @@
 ---
-ms.date: 04/20/2019
+ms.date: 05/03/2019
 description: Создание пользовательских функций в Excel с помощью JavaScript.
-title: Создание пользовательских функций в Excel (ознакомительная версия)
+title: Создание пользовательских функций в Excel
 localization_priority: Priority
-ms.openlocfilehash: 634b76ed90a30c7aa8252da346ba3f95684967a4
-ms.sourcegitcommit: 7462409209264dc7f8f89f3808a7a6249fcd739e
+ms.openlocfilehash: 53a1ab09075e2b26d0ac0a6f4ac3a5a97081fd07
+ms.sourcegitcommit: ff73cc04e5718765fcbe74181505a974db69c3f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2019
-ms.locfileid: "33353253"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "33628041"
 ---
-# <a name="create-custom-functions-in-excel-preview"></a>Создание пользовательских функций в Excel (ознакомительная версия)
+# <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel 
 
-Пользовательские функции позволяют разработчикам добавлять новые функции в Excel, посредством определения этих функций в JavaScript как части надстройки. Пользователи в Excel могут получить доступ к пользовательским функциям так же, как и к любой встроенной функции в Excel, например `SUM()`. В этой статье описано создание специальных функций в Excel.
+Пользовательские функции позволяют разработчикам добавлять новые функции в Excel путем определения этих функций в JavaScript как части надстройки. Пользователи в Excel могут получить доступ к пользовательским функциям так же, как и к любой встроенной функции в Excel, например `SUM()`. В этой статье описано создание специальных функций в Excel.
 
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
-Ниже продемонстрировано, как конечный пользователь, вставляет настраиваемую функцию в ячейке на листе Excel. Настраиваемая функция `CONTOSO.ADD42` предназначена для добавления 42 к паре чисел, которые пользователь указывает в качестве входных параметров для функции.
+Ниже на анимированном изображении показано, как рабочая книга вызывает функцию, созданную вами с помощью JavaScript или Typescript. В этом примере пользовательская функция `=MYFUNCTION.SPHEREVOLUME` рассчитывает объем сферы.
 
-<img alt="animated image showing an end user inserting the CONTOSO.ADD42 custom function into a cell of an Excel worksheet" src="../images/custom-function.gif" width="579" height="383" />
+<img alt="animated image showing an end user inserting the MYFUNCTION.SPHEREVOLUME custom function into a cell of an Excel worksheet" src="../images/SphereVolume.gif" />
 
-Приведенный ниже код определяет настраиваемую функцию `ADD42`.
+Приведенный ниже код определяет пользовательскую функцию `=MYFUNCTION.SPHEREVOLUME`.
 
 ```js
-function add42(a, b) {
-  return a + b + 42;
+/**
+ * Returns the volume of a sphere. 
+ * @customfunction
+ * @param {number} radius
+ */
+function sphereVolume(radius) {
+  const pi = 3.14159265
+  return Math.pow(radius, 3)*4*pi
 }
+CustomFunctions.associate("SPHEREVOLUME", sphereVolume)
 ```
 
 > [!NOTE]
 > В разделе [Известные проблемы](#known-issues) далее в этой статье определены текущие ограничения для пользовательских функций.
 
-## <a name="components-of-a-custom-functions-add-in-project"></a>Компоненты пользовательские функции для надстройки проекта.
+## <a name="how-a-custom-function-is-defined-in-code"></a>Как определена пользовательская функция в коде
 
-Если вы используете [генератор Yo Office](https://github.com/OfficeDev/generator-office) для создания в Excel проекта с пользовательскими функциями, вы обнаружите, что он создает файлы, управляющие вашими функциями, областью задач и надстройкой в целом. Мы сосредоточимся на файлах, которые важны для пользовательских функций: 
+Если вы используете [генератор Yo Office](https://github.com/OfficeDev/generator-office) для создания в Excel проекта с пользовательскими функциями, вы обнаружите, что он создает файлы, управляющие вашими функциями, областью задач и надстройкой в целом. Мы сосредоточимся на файлах, которые важны для пользовательских функций:
 
 | Файл | Формат файла | Описание |
 |------|-------------|-------------|
@@ -43,18 +50,18 @@ function add42(a, b) {
 
 ### <a name="script-file"></a>Файл скрипта
 
-Файл скрипта (**./src/functions/functions.js** или **./src/functions/functions.ts** в проекте, созданном генератором Yo Office) содержит код, определяющий пользовательские функции, комментарии, определяющие функцию, и сопоставляет имена пользовательских функций с объектами в файле метаданных JSON.
+Файл скрипта (**./src/functions/functions.js** или **./src/functions/functions.ts**) содержит код, определяющий пользовательские функции, комментарии, определяющие функцию, и сопоставляет имена пользовательских функций с объектами в файле метаданных JSON.
 
-Указанный ниже код определяет пользовательскую функцию `add` и указывает информацию о сопоставлении для функции. Дополнительные сведения о сопоставлении функций см. в статье [Рекомендации по пользовательским функциям](custom-functions-best-practices.md#associating-function-names-with-json-metadata).
+Приведенный ниже код определяет пользовательскую функцию `add`. Примечания кода используются для создания файла метаданных JSON с описанием пользовательской функции для Excel. Обязательный комментарий `@customfunction` объявлен первым, чтобы указать, что это пользовательская функция. Вы также увидите два объявленных параметра (`first` и `second`), за которыми следуют их свойства `description`. Наконец, дается описание `returns`. Дополнительные сведения о том, какие комментарии являются обязательными для вашей пользовательской функции, см. в статье [Создание метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md).
 
-В следующем коде также представлены комментарии кода, определяющие функцию. Обязательный комментарий `@customfunction` объявлен первым, чтобы указать, что это пользовательская функция. Вы также увидите два объявленных параметра (`first` и `second`), за которыми следуют их свойства `description`. Наконец, дается описание `returns`. Дополнительные сведения о том, какие комментарии являются обязательными для вашей пользовательской функции, см. в статье [Создание метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md).
+Указанный ниже код также вызывает `CustomFunctions.associate("ADD", add)`, чтобы связать функцию `add()` с ее идентификатором в файле метаданных JSON `ADD`. Дополнительные сведения о сопоставлении функций см. в статье [Рекомендации по пользовательским функциям](custom-functions-best-practices.md#associating-function-names-with-json-metadata).
 
 ```js
 /**
  * Adds two numbers.
  * @customfunction 
- * @param first First number
- * @param second Second number
+ * @param first First number.
+ * @param second Second number.
  * @returns The sum of the two numbers.
  */
 
@@ -64,6 +71,12 @@ function add(first, second){
 
 // associate `id` values in the JSON metadata file to the JavaScript function names
  CustomFunctions.associate("ADD", add);
+```
+
+Обратите внимание, что файл **functions.html**, который регулирует загрузку среды выполнения пользовательских функций, нужно связать с текущим CDN для пользовательских функций. Проекты, подготовленные с текущей версией генератора Yo Office, ссылаются на правильный CDN. При модернизации предыдущего проекта пользовательской функции от марта 2019 года или более раннего нужно скопировать код, приведенный ниже, на страницу **functions.html**.
+
+```HTML
+<script src="https://appsforoffice.microsoft.com/lib/beta/hosted/custom-functions-runtime.js" type="text/javascript"></script>
 ```
 
 ### <a name="manifest-file"></a>Файл манифеста
@@ -127,159 +140,24 @@ XML-файл манифеста для надстройки, который оп
 > [!NOTE]
 > Функции в Excel имеют в начале пространство имен, указанное в XML-файле манифеста. Пространство имен функции предшествует названию функции, и они будут разделены точкой. Например, чтобы вызвать функцию `ADD42` в ячейке на листе Excel, введите `=CONTOSO.ADD42`, так как `CONTOSO` является пространством имен, а `ADD42` — это имя функции, определяемой в JSON-файл. Пространство имен служит в качестве идентификатора для вашей компании или надстройки. Пространство имен может содержать только буквы, цифры и точки.
 
-## <a name="declaring-a-volatile-function"></a>Объявление переменной функции
-
-[Переменные функции](/office/client-developer/excel/excel-recalculation#volatile-and-non-volatile-functions) — это функции, значение которых периодически изменяется, даже если никакой из аргументов функции не меняется. Эти функции пересчитываются при каждом пересчете в Excel. К примеру, представьте себе ячейку, вызывающую функцию `NOW`. При каждом вызове `NOW` она будет автоматически возвращать текущую дату и время.
-
-В Excel есть несколько встроенных переменных функций, таких как `RAND` и `TODAY`. Полный список переменных функций Excel см. в статье [Переменные и постоянные функции](/office/client-developer/excel/excel-recalculation#volatile-and-non-volatile-functions).
-
-Пользовательские функции позволяют создавать собственные переменные функции, которые могут быть полезны при обработке дат, времени, случайных чисел и моделировании. Например, при моделированиях методом Монте-Карло требуется создание случайных входных данных, чтобы определить оптимальное решение.
-
-Чтобы объявить функцию переменной, добавьте `"volatile": true` в объект `options` для функции в файле метаданных JSON, как показано в приведенном ниже примере кода. Обратите внимание, что функция не может одновременно иметь значения `"streaming": true` и `"volatile": true`. Если оба параметра помечены как `true`, параметр переменности будет игнорироваться.
-
-```json
-{
- "id": "TOMORROW",
-  "name": "TOMORROW",
-  "description":  "Returns tomorrow’s date",
-  "helpUrl": "http://www.contoso.com",
-  "result": {
-      "type": "string",
-      "dimensionality": "scalar"
-  },
-  "options": {
-      "volatile": true
-  }
-}
-```
-
-## <a name="saving-and-sharing-state"></a>Состояние сохранения и совместного использования
-
-Пользовательские функции могут сохранять данные в глобальных переменных JavaScript, которые можно использовать в последующих вызовах. Сохраненное состояние полезно, когда пользователи вызывают одни и те же настраиваемые функций из более чем одной ячейки, так как все экземпляры функции могут получить доступ к состоянию. Например, вы можете сохранить данные, возвращенные при вызове веб-ресурса, чтобы не пришлось обеспечивать выполнение дополнительных вызовов.
-
-В приведенном ниже примере кода показана реализация вышеописанной функции передачи температуры, сохраняющей состояние с помощью глобальной переменной. Обратите внимание на следующие особенности этого кода:
-
-- Функция `streamTemperature` обновляет значение температуры, которое отображается в ячейке, каждую секунду и использует переменную `savedTemperatures` как источник данных.
-
-- Так как `streamTemperature` — это функция потоковой передачи, она реализует обработчик отмены, который будет запускаться, если функция была отменена.
-
-- Если пользователь вызывает функцию `streamTemperature` из нескольких ячеек в Excel, функция `streamTemperature` считывает данные из той же самой переменной `savedTemperatures` при каждом запуске. 
-
-- Функция `refreshTemperature` ежесекундно считывает температуру определенного термометра и сохраняет результат в переменной `savedTemperatures`. Так как функция `refreshTemperature` недоступна для конечных пользователей в Excel, ее не нужно регистрировать в JSON-файле.
-
-```js
-var savedTemperatures;
-
-function streamTemperature(thermometerID, handler){
-  if(!savedTemperatures[thermometerID]){
-    refreshTemperature(thermometerID); // starts fetching temperatures if the thermometer hasn't been read yet
-  }
-
-  function getNextTemperature(){
-    handler.setResult(savedTemperatures[thermometerID]); // setResult sends the saved temperature value to Excel.
-    var delayTime = 1000; // Amount of milliseconds to delay a request by.
-    setTimeout(getNextTemperature, delayTime); // Wait 1 second before updating Excel again.
-
-    handler.onCancelled() = function {
-      clearTimeout(delayTime);
-    }
-  }
-  getNextTemperature();
-}
-
-function refreshTemperature(thermometerID){
-  sendWebRequest(thermometerID, function(data){
-    savedTemperatures[thermometerID] = data.temperature;
-  });
-  setTimeout(function(){
-    refreshTemperature(thermometerID);
-  }, 1000); // Wait 1 second before reading the thermometer again, and then update the saved temperature of thermometerID.
-}
-```
-
 ## <a name="coauthoring"></a>Совместное редактирование
 
 Excel Online и Excel для Windows с подпиской на Office 365 позволяют совместно редактировать документы. Эта функция работает с пользовательскими функциями. Если в книге используется пользовательская функция, вашему коллеге будет предложено загрузить надстройку пользовательской функции. Когда вы оба загрузите надстройку, пользовательская функция поделится результатами с помощью совместного редактирования.
 
 Дополнительные сведения о совместном редактировании см. в статье [О совместном редактировании в Excel](/office/vba/excel/concepts/about-coauthoring-in-excel).
 
-## <a name="working-with-ranges-of-data"></a>Работа с диапазонами данных
-
-Ваша пользовательская функция может принимать широкий диапазон данных в виде входных параметров или возвращать широкий диапазон данных. В JavaScript диапазон данных будет иметь вид двумерного массива.
-
-Например, предположим, что функция возвращает второе по величине значение из диапазона значений, хранящихся в Excel. Приведенная ниже функция принимает параметр `values`, относящийся к типу `Excel.CustomFunctionDimensionality.matrix`. Обратите внимание, что в метаданных JSON для данной функции вам следует задать для параметра свойство `type` в `matrix`.
-
-```js
-function secondHighest(values){
-  let highest = values[0][0], secondHighest = values[0][0];
-  for(var i = 0; i < values.length; i++){
-    for(var j = 1; j < values[i].length; j++){
-      if(values[i][j] >= highest){
-        secondHighest = highest;
-        highest = values[i][j];
-      }
-      else if(values[i][j] >= secondHighest){
-        secondHighest = values[i][j];
-      }
-    }
-  }
-  return secondHighest;
-}
-```
-
-## <a name="determine-which-cell-invoked-your-custom-function"></a>Определение того, какая ячейка вызывала пользовательскую функцию
-
-В некоторых случаях вам потребуется получить адрес ячейки, которая вызывала пользовательскую функцию. Это может быть полезно в следующих типах сценариев:
-
-- Форматирование диапазонов: Используйте адрес ячейки в качестве ключа для хранения сведений в [AsyncStorage](/office/dev/add-ins/excel/custom-functions-runtime#storing-and-accessing-data). После этого используйте событие [onCalculated](/javascript/api/excel/excel.worksheet#oncalculated) в Excel, чтобы загрузить ключ из `AsyncStorage`.
-- Отображение кэшированных значений. Если функция используется в автономном режиме, отображайте сохраненные в кэше значения из `AsyncStorage` с помощью `onCalculated`.
-- Сверка: используйте адрес ячейки, чтобы найти исходную ячейку, чтобы упростить сверку при выполнении обработки.
-
-Сведения об адресе ячейки предоставляются только в том случае, если параметру `requiresAddress` присвоено значение `true` в файле метаданных JSON функции. Ниже приведен пример этого при создании JSON-файла вручную. Вы также можете использовать тег `@requiresAddress` при автоматическом создании JSON-файла. Дополнительные сведения см. в статье [Автоматическое создание JSON](custom-functions-json-autogeneration.md).
-
-```JSON
-{
-   "id": "ADDTIME",
-   "name": "ADDTIME",
-   "description": "Display current date and add the amount of hours to it designated by the parameter",
-   "helpUrl": "http://www.contoso.com",
-   "result": {
-      "type": "number",
-      "dimensionality": "scalar"
-   },
-   "parameters": [
-      {
-         "name": "Additional time",
-         "description": "Amount of hours to increase current date by",
-         "type": "number",
-         "dimensionality": "scalar"
-      }
-   ],
-   "options": {
-      "requiresAddress": true
-   }
-}
-```
-
-Чтобы найти адрес ячейки, в файл скрипта (**./src/functions/functions.js** или **./src/functions/functions.ts**) потребуется также добавить функцию `getAddress`. В этой функции можно использовать параметры, как показано в примере ниже в виде `parameter1`. В качестве последнего параметра всегда будет использоваться `invocationContext` — объект, содержащий расположение ячейки, которое передает приложение Excel, если параметру `requiresAddress` присвоено значение `true` в файле метаданных JSON.
-
-```js
-function getAddress(parameter1, invocationContext) {
-    return invocationContext.address;
-}
-```
-
-По умолчанию значения, возвращаемые из функции `getAddress`, соответствуют следующему формату: `SheetName!CellNumber`. Например, если функция вызвана с листа с названием Expenses (Расходы) в ячейке B2, возвращаемым значением будет `Expenses!B2`.
-
 ## <a name="known-issues"></a>Известные проблемы
 
 С известными проблемами можно ознакомиться в нашем [репозитории GitHub, посвященном пользовательским функциям в Excel](https://github.com/OfficeDev/Excel-Custom-Functions/issues).
 
-## <a name="see-also"></a>См. также
+## <a name="next-steps"></a>Дальнейшие действия
 
-* [Метаданные пользовательских функций](custom-functions-json.md)
-* [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
-* [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
-* [Журнал изменений пользовательских функций](custom-functions-changelog.md)
-* [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
-* [Отладка пользовательских функций](custom-functions-debugging.md)
+Хотите попробовать пользовательские функции? Ознакомьтесь с простым [кратким руководством по началу работы с пользовательскими функциями](../quickstarts/excel-custom-functions-quickstart.md) или с более глубоким [руководством по пользовательским функциям](../tutorials/excel-tutorial-create-custom-functions.md), если вы этого еще не сделали.
+
+Готовы узнать больше о возможностях пользовательских функций? Ознакомьтесь с обзором [архитектуры пользовательских функций](custom-functions-architecture.md).
+
+## <a name="see-also"></a>Дополнительные ресурсы 
+* [Требования к настраиваемым функциям](custom-functions-requirements.md)
+* [Рекомендации по именованию](custom-functions-naming.md)
+* [Рекомендации](custom-functions-best-practices.md)
+* [Создание пользовательских функций, совместимых с функциями XLL, определенными пользователями](make-custom-functions-compatible-with-xll-udf.md)
