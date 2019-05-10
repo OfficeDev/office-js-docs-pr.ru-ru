@@ -1,14 +1,14 @@
 ---
-ms.date: 05/03/2019
+ms.date: 05/07/2019
 description: Запрос, потоковая передача и отмена потоковой передачи внешних данных к книге с помощью пользовательских функций в Excel
 title: Получение и обработка данных с помощью пользовательских функций
 localization_priority: Priority
-ms.openlocfilehash: 2f70bd5cd5d8e645b47f2bc97dcec3e8bbacef55
-ms.sourcegitcommit: ff73cc04e5718765fcbe74181505a974db69c3f5
+ms.openlocfilehash: 61f4d0fdaea4277faedddbe075a587fb23842c08
+ms.sourcegitcommit: 5b9c2b39dfe76cabd98bf28d5287d9718788e520
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "33627991"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "33659637"
 ---
 # <a name="receive-and-handle-data-with-custom-functions"></a>Получение и обработка данных с помощью пользовательских функций
 
@@ -187,9 +187,11 @@ CustomFunctions.associate("INCREMENT", increment);
 > - Когда пользователь вручную вызывает пересчет. В этом случае после отмены выполняется новый вызов функции.
 
 ## <a name="next-steps"></a>Дальнейшие действия
-Узнайте о [разных типах параметров, которые можно использовать в ваших функциях](custom-functions-parameter-options.md) Узнайте, как [создавать пакеты из нескольких вызовов API](custom-functions-batching.md).
 
-## <a name="see-also"></a>Дополнительные ресурсы
+* Ознакомьтесь с [разными типами параметров, которые могут использоваться функциями](custom-functions-parameter-options.md).
+* Узнайте, как [пакетно обрабатывать несколько вызовов API](custom-functions-batching.md).
+
+## <a name="see-also"></a>См. также
 
 * [Пересчитываемые значения в функциях](custom-functions-volatile.md)
 * [Создание метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md)
