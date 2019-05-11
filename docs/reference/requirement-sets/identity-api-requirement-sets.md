@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API удостоверений
 description: ''
-ms.date: 04/09/2019
+ms.date: 05/08/2019
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 9229483bcf2916d35bd1fc8961c2c2a73cf9caed
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: c531fd6f7c77a02402bdd70b4f2cb091787a6a52
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451586"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952189"
 ---
 # <a name="identity-api-requirement-sets"></a>Наборы обязательных элементов API удостоверений
 
@@ -17,7 +17,7 @@ ms.locfileid: "32451586"
 
 Надстройки Office работают в нескольких версиях Office. В приведенной ниже таблице перечислены наборы обязательных элементов API удостоверений, ведущие приложения Office, которые их поддерживают, а также номера сборок или версий для этих приложений.
 
-|  Набор обязательных элементов  | Office 2013 или более поздней версии для Windows | Office 365 для Windows   |  Office 365 для iPad  |  Office 365 для Mac  | Office Online  | SharePoint Online | OneDrive.com |Outlook.com и Exchange Online|
+|  Набор обязательных элементов  | Office 2013 или более поздней версии в Windows<br>(одноразовая покупка) | Office в Windows<br>(подключено к Office 365) |  Office для iPad<br>(подключено к Office 365)  |  Office для Mac<br>(подключено к Office 365)  | Office Online  | SharePoint Online | OneDrive.com |Outlook.com и Exchange Online|
 |:-----|-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
 | IdentityAPI 1.1  | Н/Д | Предварительный просмотр<b>*</b> | Скоро | Предварительный просмотр<b>*</b> | Предварительный просмотр<b>*</b> | Предварительный просмотр<b>*</b>| Скоро | Скоро |
 

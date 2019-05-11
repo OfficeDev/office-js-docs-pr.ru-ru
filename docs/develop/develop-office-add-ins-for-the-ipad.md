@@ -1,14 +1,14 @@
 ---
 title: Разработка надстроек Office для iPad
 description: ''
-ms.date: 03/19/2019
+ms.date: 05/08/2019
 localization_priority: Normal
-ms.openlocfilehash: 6fca7948c97f0a12f46742846ed9faca4179f362
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 3ac8f651ccb87b32679a28684f0d08fad53aa773
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449808"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952091"
 ---
 # <a name="develop-office-add-ins-for-the-ipad"></a>Разработка надстроек Office для iPad
 
@@ -38,7 +38,7 @@ ms.locfileid: "32449808"
 
 -  **Создайте надстройку с помощью Visual Studio.**
 
-    При разработке надстройки с помощью Visual Studio можно [задать точки останова и выполнить отладку кода](../develop/create-and-debug-office-add-ins-in-visual-studio.md) в ведущем приложении Office на устройстве с Windows, прежде чем загружать неопубликованную надстройку на iPad или Mac. Так как надстройка, работающая в Office для iOS или Office для Mac, поддерживает те же API-интерфейсы, что и надстройка, работающая в Office для Windows, код надстройки должен работать одинаково на обеих платформах.
+    При разработке надстройки с помощью Visual Studio можно [задать точки останова и выполнить отладку кода](../develop/create-and-debug-office-add-ins-in-visual-studio.md) в ведущем приложении Office на устройстве с Windows, прежде чем загружать неопубликованную надстройку на iPad или Mac. Так как надстройка, работающая в Office для iOS или Office для Mac, поддерживает те же API, что и надстройка в Office в Windows, код надстройки должен выполняться одинаково на обеих платформах.
 
 -  **Укажите требования касательно API в манифесте надстройки или с помощью проверок в среде выполнения.**
 

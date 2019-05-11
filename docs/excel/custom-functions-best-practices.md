@@ -1,14 +1,14 @@
 ---
-ms.date: 05/06/2019
+ms.date: 05/08/2019
 description: Ознакомьтесь с рекомендациями по разработке пользовательских функций в Excel.
 title: Рекомендации в отношении пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: 7369faa463966dd309258bf431eae8719407be38
-ms.sourcegitcommit: ff73cc04e5718765fcbe74181505a974db69c3f5
+ms.openlocfilehash: d825f5a9f14e240ca5af3c3325cb646248d99ca9
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "33628149"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952105"
 ---
 # <a name="custom-functions-best-practices"></a>Рекомендации в отношении пользовательских функций
 
@@ -99,13 +99,13 @@ CustomFunctions.associate("ADD", add);
 
 ## <a name="additional-considerations"></a>Дополнительные рекомендации
 
-Избегайте прямого или косвенного доступа к объектной модели документов (DOM) (например, с помощью jQuery) из пользовательской функции. В Excel для Windows, где пользовательские функции используют [среду выполнения JavaScript](custom-functions-runtime.md), пользовательские функции не могут выполнять доступ к DOM.
+Избегайте прямого или косвенного доступа к объектной модели документов (DOM) (например, с помощью jQuery) из пользовательской функции. В Excel для Windows, где пользовательские функции используют [среду выполнения JavaScript](custom-functions-runtime.md), пользовательские функции не могут получить доступ к модели DOM.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 Узнайте, как [выполнять веб-запросы с пользовательскими функциями](custom-functions-web-reqs.md).
 
 ## <a name="see-also"></a>См. также
 
-* [Автоматически создавать метаданные JSON для пользовательских функций](custom-functions-json-autogeneration.md)
+* [Автоматическое генерирование метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md)
 * [Метаданные пользовательских функций](custom-functions-json.md)
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)

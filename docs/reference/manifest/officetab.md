@@ -1,14 +1,14 @@
 ---
 title: Элемент OfficeTab в файле манифеста
 description: ''
-ms.date: 10/09/2018
+ms.date: 05/08/2019
 localization_priority: Normal
-ms.openlocfilehash: b61c245c000f8bf13eb71c991ec57a125993c2fc
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 1bf9f1d1e08a8147b52f93923229ef8fb8556fcf
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450466"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952273"
 ---
 # <a name="officetab-element"></a>Элемент OfficeTab
 
@@ -20,7 +20,7 @@ ms.locfileid: "32450466"
 |:-----|:-----|:-----|
 |  Группа      | Да |  Определяет группу команд. На вкладке по умолчанию можно добавить только одну группу для каждой надстройки.  |
 
-Ниже приведены допустимые значения `id` для вкладок каждого ведущего приложения. Значения, выделенные **полужирным шрифтом**, поддерживаются классическими и веб-приложениями (например, Word 2016 или более поздней версии для Windows и Word Online).
+Ниже приведены допустимые значения `id` для вкладок каждого ведущего приложения. Значения, **выделенные жирным шрифтом** , поддерживаются как на рабочем столе, так и в Интернете (например, Word 2016 или более поздней версии в Windows и Word Online).
 
 ### <a name="outlook"></a>Outlook
 

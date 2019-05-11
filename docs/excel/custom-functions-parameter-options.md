@@ -1,21 +1,23 @@
 ---
-ms.date: 04/30/2019
+ms.date: 05/09/2019
 description: Узнайте, как использовать различные параметры в пользовательских функциях, таких как диапазоны Excel, необязательные параметры, контекст вызова и многое другое.
-title: Параметры для пользовательских функций Excel (Предварительная версия)
+title: Параметры для пользовательских функций Excel
 localization_priority: Normal
-ms.openlocfilehash: b5dba59431f4c6ec4ee08c563e7cb3affeb06608
-ms.sourcegitcommit: 68872372d181cca5bee37ade73c2250c4a56bab6
+ms.openlocfilehash: ba437f3a49ec3129b72f3396e85fcbd46af82cb7
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "33527324"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952077"
 ---
 # <a name="custom-functions-parameter-options"></a>Параметры параметров пользовательских функций
 
-Настраиваемые функции можно настраивать с помощью различных параметров: 
+Настраиваемые функции можно настраивать с помощью различных параметров:
 - [Необязательные параметры](#custom-functions-optional-parameters)
 - [Параметры Range](#range-parameters)
 - [Параметр контекста вызова](#invocation-parameter)
+
+[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
 ## <a name="custom-functions-optional-parameters"></a>Необязательные параметры настраиваемых функций
 
@@ -74,7 +76,7 @@ function getWeatherReport(zipCode, dayOfWeek)
 /**
  * Returns the second highest value in a matrixed range of values.
  * @customfunction
- * @param {[][]} values Multiple ranges of values.  
+ * @param {number[][]} values Multiple ranges of values.  
  */
 function secondHighest(values){
   let highest = values[0][0], secondHighest = values[0][0];
@@ -118,10 +120,10 @@ CustomFunctions.associate("ADD", add);
 
 ### <a name="addressing-cells-context-parameter"></a>Параметр контекста ячейки адресации
 
-В некоторых случаях необходимо получить адрес ячейки, которая вызвала пользовательскую функцию. Это полезно в следующих типах сценариев:
+В некоторых случаях необходимо получить адрес ячейки, которая вызвала пользовательскую функцию. Это полезно в следующих сценариях:
 
-- Диапазоны форматирования: используйте адрес ячейки в качестве ключа для хранения сведений в [Office. Storage](/office/dev/add-ins/excel/custom-functions-runtime#storing-and-accessing-data). После этого используйте событие [onCalculated](/javascript/api/excel/excel.worksheet#oncalculated) в Excel, чтобы загрузить ключ из `Office.storage`.
-- Отображение кэшированных значений. Если функция используется в автономном режиме, отображайте сохраненные в кэше значения из `Office.storage` с помощью `onCalculated`.
+- Диапазоны форматирования: используйте адрес ячейки в качестве ключа для хранения информации в [оффицерунтиме. Storage](/office/dev/add-ins/excel/custom-functions-runtime#storing-and-accessing-data). После этого используйте событие [onCalculated](/javascript/api/excel/excel.worksheet#oncalculated) в Excel, чтобы загрузить ключ из `OfficeRuntime.storage`.
+- Отображение кэшированных значений. Если функция используется в автономном режиме, отображайте сохраненные в кэше значения из `OfficeRuntime.storage` с помощью `onCalculated`.
 - Сверка: используйте адрес ячейки, чтобы найти исходную ячейку, чтобы упростить сверку при выполнении обработки.
 
 Чтобы запросить контекст ячейки адресации в функции, необходимо использовать функцию для поиска адреса ячейки, например, в приведенном ниже примере. Сведения об адресе ячейки отображаются только в том случае, `@requiresAddress` если она помечена комментариями функции.
@@ -143,10 +145,14 @@ CustomFunctions.associate("GETADDRESS", getAddress);
 
 По умолчанию значения, возвращаемые из функции `getAddress`, соответствуют следующему формату: `SheetName!CellNumber`. Например, если функция вызвана с листа с названием Expenses (Расходы) в ячейке B2, возвращаемым значением будет `Expenses!B2`.
 
+## <a name="next-steps"></a>Дальнейшие действия
+Сведения о том, как [сохранить состояние в пользовательских функциях](custom-functions-save-state.md) или использовать [переменные значения в пользовательских функциях](custom-functions-volatile.md).
+
 ## <a name="see-also"></a>См. также
 
-* [Создание пользовательских функций в Excel](custom-functions-overview.md)
-* [Метаданные пользовательских функций](custom-functions-json.md)
+* [Получение и обработка данных с помощью пользовательских функций](custom-functions-web-reqs.md)
 * [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
-* [Журнал изменений пользовательских функций](custom-functions-changelog.md)
-* [Руководство по настраиваемым функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
+* [Метаданные пользовательских функций](custom-functions-json.md)
+* [Автоматическое генерирование метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md)
+* [Создание пользовательских функций в Excel](custom-functions-overview.md)
+* [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)

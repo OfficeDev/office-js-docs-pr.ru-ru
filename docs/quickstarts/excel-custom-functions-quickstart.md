@@ -1,25 +1,25 @@
 ---
-ms.date: 05/02/2019
+ms.date: 05/08/2019
 description: Разработка настраиваемых функций в кратком руководстве по Excel.
 title: Краткое руководство по настраиваемым функциям
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 8eb2630526ce939273024eebd533bd99fa5e94a1
-ms.sourcegitcommit: 47b792755e655043d3db2f1fdb9a1eeb7453c636
+ms.openlocfilehash: 233e1b608eda4a696b14d833fe4e071b2fcffd67
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "33619899"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952385"
 ---
 # <a name="get-started-developing-excel-custom-functions"></a>Приступая к разработке пользовательских функций Excel
 
 С помощью пользовательских функций разработчики могут добавлять новые функции в Excel, определяя их в JavaScript или typescript как часть надстройки. Пользователи Excel могут получить доступ к пользовательским функциям так же, как и к любой собственной `SUM()`функции в Excel, например.
 
-## <a name="prerequisites"></a>Необходимые условия
+## <a name="prerequisites"></a>Предварительные условия
 
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
-* Excel для Windows (64-разрядная версия 1810 или более поздняя) или Excel Online
+* Excel в Windows (64-разрядная версия 1810 или более поздняя) или Excel Online
 
 * Присоединитесь к [Программе предварительной оценки Office](https://products.office.com/office-insider) (уровень **Участник**; ранее "Предварительная оценка — ранний доступ")
 
@@ -56,11 +56,11 @@ ms.locfileid: "33619899"
 4. Запустите локальный веб-сервер, работающий на Node.js. Вы можете испытать надстройку настраиваемой функции в Excel для Windows или Excel Online. Вам может быть предложено открыть область задач надстройки, хотя это необязательный параметр. Вы можете по-прежнему запускать пользовательские функции, не открывая область задач надстройки.
 
 > [!NOTE]
-> Надстройки Office должны использовать протокол HTTPS, а не HTTP, даже при разработке. Если после запуска `npm run start:desktop`будет предложено установить сертификат, примите приглашение установить сертификат, который предоставляет генератор Yeoman.
+> Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите `npm run start:desktop`, примите предложение установить сертификат от генератора Yeoman.
 
-# <a name="excel-for-windowstabexcel-windows"></a>[Excel для Windows](#tab/excel-windows)
+# <a name="excel-on-windowstabexcel-windows"></a>[Excel в Windows](#tab/excel-windows)
 
-Чтобы протестировать надстройку в Excel для Windows, выполните следующую команду. При выполнении этой команды запустится локальный веб-сервер, и откроется приложение Excel с загруженной надстройкой.
+Чтобы протестировать надстройку в Excel в Windows, выполните следующую команду. При выполнении этой команды запустится локальный веб-сервер, и откроется приложение Excel с загруженной надстройкой.
 
 ```command&nbsp;line
 npm run start:desktop
@@ -68,14 +68,14 @@ npm run start:desktop
 
 # <a name="excel-onlinetabexcel-online"></a>[Excel Online](#tab/excel-online)
 
-Чтобы протестировать надстройку в Excel Online, выполните следующую команду. При выполнении этой команды запустится локальный веб-сервер.
+Чтобы протестировать надстройку в Excel Online, выполните следующую команду. После выполнения этой команды запустится локальный веб-сервер.
 
 ```command&nbsp;line
 npm run start:web
 ```
 
 > [!NOTE]
-> Надстройки Office должны использовать протокол HTTPS, а не HTTP, даже при разработке. Если после запуска `npm run start:web`будет предложено установить сертификат, примите приглашение установить сертификат, который предоставляет генератор Yeoman.
+> Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите `npm run start:web`, примите предложение установить сертификат от генератора Yeoman.
 
 Чтобы использовать надстройку с пользовательскими функциями, откройте новую книгу в Excel Online. В этой книге выполните следующие действия, чтобы Загрузка неопубликованных надстройку.
 
@@ -113,7 +113,7 @@ npm run start:web
 
 ## <a name="see-also"></a>См. также
 
-* [Обзор пользовательских функций](../excel/custom-functions-overview.md)
+* [Обзор настраиваемых функций](../excel/custom-functions-overview.md)
 * [Метаданные пользовательских функций](../excel/custom-functions-json.md)
 * [Среда выполнения для пользовательских функций Excel](../excel/custom-functions-runtime.md)
 * [Рекомендации по пользовательским функциям](../excel/custom-functions-best-practices.md)

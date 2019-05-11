@@ -1,18 +1,18 @@
 ---
-title: Руководство по настраиваемым функциям в Excel (предварительная версия)
+title: Руководство по пользовательским функциям в Excel
 description: Из этого руководства вы узнаете, как создать надстройку, Excel, содержащую пользовательские функции, которые могут выполнять вычисления, запрашивать или передавать веб-данные.
-ms.date: 03/19/2019
+ms.date: 05/08/2019
 ms.prod: excel
 ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: 76f4d88b9da39a4d71927982836ee061b329a9b3
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: ed9f16bdb330aa3f092e7d437ccfad6e056e07d4
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451416"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952196"
 ---
-# <a name="tutorial-create-custom-functions-in-excel-preview"></a>Руководство: создание пользовательских функций в Excel (предварительная версия)
+# <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
 Пользовательские функции позволяют добавлять новые функции в Excel путем определения этих функций в JavaScript как части надстройки. Пользователи в Excel могут получить доступ к пользовательским функциям так же, как и к любой встроенной функции в Excel, например `SUM()`. Вы можете создавать пользовательские функции, которые будут выполнять простые задачи, такие как вычисления, или более сложные задачи, такие как потоковая передача данных в режиме реального времени из Интернета на лист.
 
@@ -23,100 +23,85 @@ ms.locfileid: "32451416"
 > * Создание пользовательской функции, которая получает данные из сети Интернет.
 > * Создание пользовательской функции, которая осуществляет потоковую передачу данных в реальном времени из сети Интернет
 
-[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
-
 ## <a name="prerequisites"></a>Необходимые компоненты
 
-* [Node.js](https://nodejs.org/en/) (версия 8.0.0 или более поздняя)
+[!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
-* [Git Bash](https://git-scm.com/downloads) (или другой клиент Git)
-
-* Последняя версия [Yeoman](https://yeoman.io/) и [генератора Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office). Выполните в командной строке указанную ниже команду, чтобы установить эти инструменты глобально.
-
-    ```
-    npm install -g yo generator-office
-    ```
-
-    > [!NOTE]
-    > Даже если у вас установлен генератор Yeoman, рекомендуется обновить пакет до последней версии из npm.
-
-* Excel для Windows (64-разрядная версия 1810 или более поздняя) или Excel Online
+* Excel в Windows (64-разрядная версия 1810 или более поздняя) или Excel Online
 
 * Присоединитесь к [Программе предварительной оценки Office](https://products.office.com/office-insider) (уровень **Участник**; ранее "Предварительная оценка — ранний доступ")
 
 ## <a name="create-a-custom-functions-project"></a>Создание проекта пользовательских функций
 
- Чтобы начать, вам необходимо создать проект кода для разработки надстройки пользовательской функции. [Генератор Yeoman для надстройки Office](https://www.npmjs.com/package/generator-office) настроит ваш проект с некоторыми начальными пользовательскими функциями, которые вы можете попробовать использовать.
+ Чтобы начать, вам необходимо создать проект кода для разработки надстройки пользовательской функции. [Генератор Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office) настроит проект с помощью некоторых предварительно созданных настраиваемых функций, которые можно испытать. Если вы уже запустили функцию быстрого запуска пользовательских функций и создали проект, продолжайте использовать этот проект и переходите к [этому шагу](#create-a-custom-function-that-requests-data-from-the-web) .
 
 1. Выполните указанную ниже команду и ответьте на вопросы, как показано ниже.
     
-    ```
+    ```command&nbsp;line
     yo office
     ```
     
-    * Выберите тип проекта: `Excel Custom Functions Add-in project (...)`
-    * Выберите тип сценария: `JavaScript`
-    * Как вы хотите назвать свою надстройку? `stock-ticker`
-    
-    ![Генератор Yeoman для надстройки Office, приглашающий к созданию пользовательских функций](../images/12-10-fork-cf-pic.jpg)
-    
-    Генератор Yeoman создает файлы проекта и устанавливает вспомогательные компоненты Node.js.
+    * **Выберите тип проекта:** `Excel Custom Functions Add-in project (...)`
+    * **Выберите тип сценария:** `JavaScript`
+    * **Как вы хотите назвать надстройку?** `stock-ticker`
 
-2. Перейдите в папку проекта.
+    ![Генератор Yeoman для надстройки Office, приглашающий к созданию пользовательских функций](../images/yo-office-excel-cf.png)
     
-    ```
+    Генератор Yeoman создаст файлы проекта и установит вспомогательные компоненты Node.
+
+2. Перейдите к корневой папке проекта.
+    
+    ```command&nbsp;line
     cd stock-ticker
     ```
 
-3. Сделайте доверенным самозаверяющий сертификат, необходимый для выполнения этого проекта. Подробные инструкции для Windows или Mac см. в статье [Добавление самозаверяющих сертификатов в качестве доверенных корневых сертификатов](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md).  
-
-4. Выполните сборку проекта.
+3. Выполните сборку проекта.
     
-    ```
+    ```command&nbsp;line
     npm run build
     ```
 
-5. Запустите локальный веб-сервер, работающий на Node.js. Вы можете попробовать использовать надстройку пользовательской функции в Excel для Windows или в Excel Online.
+4. Запустите локальный веб-сервер, работающий на Node.js. Вы можете испытать надстройку настраиваемой функции в Excel для Windows или Excel Online.
 
-# <a name="excel-for-windowstabexcel-windows"></a>[Excel для Windows](#tab/excel-windows)
+# <a name="excel-on-windowstabexcel-windows"></a>[Excel в Windows](#tab/excel-windows)
 
-Выполните следующую команду.
+Чтобы протестировать надстройку в Excel в Windows, выполните следующую команду. При выполнении этой команды локальный веб-сервер запустится и откроется приложение Excel в Windows с загруженной надстройкой.
 
+```command&nbsp;line
+npm run start:desktop
 ```
-npm start desktop
-```
-
-Эта команда запускает веб-сервер и загружает неопубликованную надстройку пользовательской функции в Excel для Windows.
 
 > [!NOTE]
-> Если надстройка не загружается, проверьте правильность выполнения шага 3. Кроме того, можно включить **[ведение журнала в среде выполнения](../testing/troubleshoot-manifest.md#use-runtime-logging-to-debug-your-add-in)** для устранения неполадок в XML-файле манифеста надстройки, а также при любых проблемах установки или выполнения. Инструкции Write `console.log` в файл журнала в среде выполнения, чтобы помочь найти и устранить проблемы.
+> Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите `npm run start:desktop`, примите предложение установить сертификат от генератора Yeoman.
 
 # <a name="excel-onlinetabexcel-online"></a>[Excel Online](#tab/excel-online)
 
-Выполните следующую команду.
+Чтобы протестировать надстройку в Excel Online, выполните следующую команду. После выполнения этой команды запустится локальный веб-сервер.
 
+```command&nbsp;line
+npm run start:web
 ```
-npm start web
-```
-
-Эта команда запускает веб-сервер. Выполните шаги, описанные ниже, чтобы загрузить неопубликованную надстройку.
-
-<ol type="a">
-   <li>В Excel Online на вкладке <strong>Вставка</strong> выберите пункт <strong>Надстройки</strong>.<br/>
-   <img src="../images/excel-cf-online-register-add-in-1.png" alt="Insert ribbon in Excel Online with the My Add-ins icon highlighted"></li>
-   <li>Выберите пункт <strong>Управление моими надстройками</strong>, а затем выберите <strong>Отправить мою надстройку</strong>.</li> 
-   <li>Выберите <strong>Обзор... </strong> и откройте корневой каталог проекта, созданный генератором Yeoman.</li> 
-   <li>Выберите файл <strong>manifest.xml</strong> и нажмите <strong>Открыть</strong>, а затем выберите <strong>Отправить</strong>.</li>
-</ol>
 
 > [!NOTE]
-> Если надстройка не загружается, проверьте правильность выполнения шага 3.
+> Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите `npm run start:web`, примите предложение установить сертификат от генератора Yeoman.
+
+Чтобы использовать надстройку с пользовательскими функциями, откройте новую книгу в Excel Online. В этой книге выполните следующие действия, чтобы Загрузка неопубликованных надстройку.
+
+1. В Excel Online на вкладке **Вставка** выберите пункт **Надстройки**.
+
+   ![Вставка ленты в Excel Online с выделенным значком "Мои надстройки"](../images/excel-cf-online-register-add-in-1.png)
+   
+2. Выберите пункт **Управление моими надстройками**, а затем выберите **Отправить мою надстройку**.
+
+3. Выберите **Обзор... ** и откройте корневой каталог проекта, созданный генератором Yeoman.
+
+4. Выберите файл **manifest.xml** и нажмите кнопку **Открыть**, затем нажмите кнопку **Отправить**.
 
 --- 
     
 ## <a name="try-out-a-prebuilt-custom-function"></a>Проверка работы готовой пользовательской функции
 
-В проекте пользовательской функции, который вы создали, уже имеются две готовые пользовательские функции с именами ADD (Добавить) и INCREMENT (Увеличить). Код для этих встроенных функций находится в файле **src/functions/functions. js** . Файл **./manifest.xml** указывает, что все пользовательские функции принадлежат пространству имен `CONTOSO`. Вы будете использовать пространство имен CONTOSO для доступа к пользовательским функциям в Excel.
+Созданный проект пользовательских функций содержит некоторые предварительно созданные пользовательские функции, определенные в файле **./СРК/функтионс/функтионс.ЖС** . Файл **./manifest.xml** указывает, что все пользовательские функции принадлежат пространству имен `CONTOSO`. Вы будете использовать пространство имен CONTOSO для доступа к пользовательским функциям в Excel.
 
 Затем вы проверите пользовательскую функцию `ADD`, выполнив описанные ниже действия:
 
@@ -130,11 +115,17 @@ npm start web
 
 Интеграция данных из Интернета — отличный способ расширения функционала Excel через пользовательские функции. Далее необходимо создать пользовательскую функцию под именем `stockPrice`, которая получает котировки акций из Web API и возвращает результат в ячейку на листе. Вы будете использовать API IEX Trading, который предоставляется бесплатно и не требует проверки подлинности.
 
-1. В проекте **Stock-Tick** найдите файл **src/functions/functions. js** и откройте его в редакторе кода.
+1. В проекте **Stocks —** найдите файл **./СРК/функтионс/функтионс.ЖС** и откройте его в редакторе кода.
 
-2. В файле Function **. js**нахождение `increment` функции и добавление следующего кода сразу после этой функции.
+2. В файле Function **. js**нахождение `increment` функции и добавление следующего кода после этой функции.
 
     ```js
+    /**
+    * Fetches current stock price
+    * @customfunction 
+    * @param {string} ticker Stock symbol
+    * @returns {number} The current stock price.
+    */
     function stockPrice(ticker) {
         var url = "https://api.iextrading.com/1.0/stock/" + ticker + "/price";
         return fetch(url)
@@ -148,57 +139,27 @@ npm start web
         // Note: in case of an error, the returned rejected Promise
         //    will be bubbled up to Excel to indicate an error.
     }
-
-> [!NOTE]
-> In the January Insiders 1901 Build, there is a bug preventing fetch calls from executing which will result in #VALUE!.
-> To workaround this please use the [XMLHTTPRequest API](/office/dev/add-ins/excel/custom-functions-runtime#requesting-external-data) to make the web request.
-
-3. In **functions.js**, locate the line `CustomFunctions.associate("INCREMENT", increment);`. Add the following line of code immediately after that line, and save the file.
-
-    ```js
-    CustomFunctions.associate("STOCKPRICE", stockprice);
+    CustomFunctions.associate("STOCKPRICE", stockPrice);
     ```
 
-    Код `CustomFunctions.associate` сопоставляет `id` функции с адресом функции `increment` в JavaScript, чтобы Excel мог вызвать вашу функцию.
+    Код `CustomFunctions.associate` сопоставляет `id` функции с адресом функции `stockPrice` в JavaScript, чтобы Excel мог вызвать вашу функцию.
 
-    Прежде чем Excel сможет использовать вашу пользовательскую функцию, необходимо описать ее с помощью метаданных. Вам нужно определить `id`, используемый в методе `associate` ранее, а также некоторые другие метаданные.
+3. Выполните указанную ниже команду, чтобы повторно собрать проект.
 
-
-4. Откройте файл **src/functions/functions. JSON** . Добавьте указанный ниже объект JSON в массив 'functions' и сохраните файл.
-
-    ```JSON
-    {
-        "id": "STOCKPRICE",
-        "name": "STOCKPRICE",
-        "description": "Fetches current stock price",
-        "helpUrl": "http://www.contoso.com/help",
-        "result": {
-            "type": "number",
-            "dimensionality": "scalar"
-        },  
-        "parameters": [
-            {
-                "name": "ticker",
-                "description": "stock symbol",
-                "type": "string",
-                "dimensionality": "scalar"
-            }
-        ]
-    }
+    ```command&nbsp;line
+    npm run build
     ```
 
-    Этот объект JSON описывает функцию `stockPrice`, ее параметры и тип результатов, который она возвращает.
+4. Выполните следующие действия (для Excel в Windows или Excel Online), чтобы повторно зарегистрировать надстройку в Excel. Прежде чем новая функция станет доступна, необходимо выполнить указанные ниже действия. 
 
-5. Повторно зарегистрируйте надстройку в Excel, чтобы новая функция стала доступной. 
-
-# <a name="excel-for-windowstabexcel-windows"></a>[Excel для Windows](#tab/excel-windows)
+# <a name="excel-on-windowstabexcel-windows"></a>[Excel в Windows](#tab/excel-windows)
 
 1. Закройте Excel, а затем откройте Excel повторно.
 
-2. В Excel выберите вкладку **Вставка**, а затем нажмите стрелку вниз, которая находится справа от пункта **Мои надстройки**. ![Вставьте ленту в Excel для Windows с выделенной стрелкой "Мои надстройки"](../images/excel-cf-register-add-in-1b.png).
+2. В Excel перейдите на вкладку **Вставка** , а затем щелкните стрелку вниз, расположенную справа от **моих надстроек**.  ![Вставка ленты в Excel в Windows с выделенной стрелкой "Мои надстройки"](../images/select-insert.png)
 
 3. В списке доступных надстроек найдите раздел **Надстройки разработчика** и выберите надстройку **stock-ticker**, чтобы зарегистрировать ее.
-    ![Вставка ленты в Excel для Windows с выделенной надстройкой "Пользовательские функции Excel" в списке "Мои надстройки"](../images/excel-cf-register-add-in-2.png).
+    ![Вставка ленты в Excel в Windows с выделенной надстройкой "пользовательские функции Excel" в списке "Мои надстройки"](../images/list-stock-ticker-red.png)
 
 # <a name="excel-onlinetabexcel-online"></a>[Excel Online](#tab/excel-online)
 
@@ -210,9 +171,9 @@ npm start web
 
 4. Выберите файл **manifest.xml** и нажмите **Открыть**, затем нажмите кнопку **Отправить**.
 
---- 
+---
 
-<ol start="6">
+<ol start="5">
 <li> Теперь давайте оценим, как работает новая функция. В ячейке <strong>B1</strong> введите нужный текст <strong>= CONTOSO. STOCKPRICE("MSFT")</strong> и нажмите ВВОД. Вы должны увидеть, что результат в ячейке <strong>B1</strong> является текущей ценой одной акции корпорации Майкрософт.</li>
 </ol>
 
@@ -220,10 +181,16 @@ npm start web
 
 Функция `stockPrice` возвращает цену акции в конкретный момент времени, однако цены на акции всегда меняются. Далее вы создадите пользовательскую функцию с именем `stockPriceStream`, которая получает цену акции каждые 1000 милисекунд.
 
-1. В проекте **Stock-Tick** добавьте следующий код в **src/functions/functions. js** и сохраните файл.
+1. В проекте **Stocks – Tick** добавьте следующий код в файл **./СРК/функтионс/функтионс.ЖС** и сохраните его.
 
     ```js
-    function stockPriceStream(ticker, handler) {
+    /**
+    * Streams real time stock price
+    * @customfunction 
+    * @param {string} ticker Stock symbol
+    * @param {CustomFunctions.StreamingInvocation<number>} invocation
+    */
+    function stockPriceStream(ticker, invocation) {
         var updateFrequency = 1000 /* milliseconds*/;
         var isPending = false;
 
@@ -241,65 +208,41 @@ npm start web
                     return response.text();
                 })
                 .then(function(text) {
-                    handler.setResult(parseFloat(text));
+                    invocation.setResult(parseFloat(text));
                 })
                 .catch(function(error) {
-                    handler.setResult(error);
+                    invocation.setResult(error);
                 })
                 .then(function() {
                     isPending = false;
                 });
         }, updateFrequency);
 
-        handler.onCanceled = () => {
+        invocation.onCanceled = () => {
             clearInterval(timer);
         };
     }
-    
-    CustomFunctions.associate("STOCKPRICESTREAM", stockpricestream);
+    CustomFunctions.associate("STOCKPRICESTREAM", stockPriceStream);
     ```
     
-    Прежде чем Excel сможет использовать вашу пользовательскую функцию, необходимо описать ее с помощью метаданных.
+    Код `CustomFunctions.associate` сопоставляет `id` функции с адресом функции `stockPriceStream` в JavaScript, чтобы Excel мог вызвать вашу функцию.
     
-2. В проекте **Stock-Ticks** добавьте следующий объект в `functions` массив в файле **src/functions/functions. JSON** и сохраните файл.
-    
-    ```json
-    { 
-        "id": "STOCKPRICESTREAM",
-        "name": "STOCKPRICESTREAM",
-        "description": "Streams real time stock price",
-        "helpUrl": "http://www.contoso.com/help",
-        "result": {
-            "type": "number",
-            "dimensionality": "scalar"
-        },  
-        "parameters": [
-            {
-                "name": "ticker",
-                "description": "stock symbol",
-                "type": "string",
-                "dimensionality": "scalar"
-            }
-        ],
-        "options": {
-            "stream": true,
-            "cancelable": true
-        }
-    }
+2. Выполните указанную ниже команду, чтобы повторно собрать проект.
+
+    ```command&nbsp;line
+    npm run build
     ```
 
-    Объект JSON описывает функцию `stockPriceStream`. Для любой функции потоковой передачи свойство `stream` и свойство `cancelable` должны быть заданы как `true` в объекте `options`, как показано в этом примере кода.
+3. Выполните следующие действия (для Excel в Windows или Excel Online), чтобы повторно зарегистрировать надстройку в Excel. Прежде чем новая функция станет доступна, необходимо выполнить указанные ниже действия. 
 
-3. Повторно зарегистрируйте надстройку в Excel, чтобы новая функция стала доступной.
-
-# <a name="excel-for-windowstabexcel-windows"></a>[Excel для Windows](#tab/excel-windows)
+# <a name="excel-on-windowstabexcel-windows"></a>[Excel в Windows](#tab/excel-windows)
 
 1. Закройте Excel, а затем откройте Excel повторно.
 
-2. В Excel выберите вкладку **Вставка**, а затем нажмите стрелку вниз, которая находится справа от пункта **Мои надстройки**. ![Вставьте ленту в Excel для Windows с выделенной стрелкой "Мои надстройки"](../images/excel-cf-register-add-in-1b.png).
+2. В Excel перейдите на вкладку **Вставка** , а затем щелкните стрелку вниз, расположенную справа от **моих надстроек**.  ![Вставка ленты в Excel в Windows с выделенной стрелкой "Мои надстройки"](../images/select-insert.png)
 
 3. В списке доступных надстроек найдите раздел **Надстройки разработчика** и выберите надстройку **stock-ticker**, чтобы зарегистрировать ее.
-    ![Вставка ленты в Excel для Windows с выделенной надстройкой "Пользовательские функции Excel" в списке "Мои надстройки"](../images/excel-cf-register-add-in-2.png).
+    ![Вставка ленты в Excel в Windows с выделенной надстройкой "пользовательские функции Excel" в списке "Мои надстройки"](../images/list-stock-ticker-red.png)
 
 # <a name="excel-onlinetabexcel-online"></a>[Excel Online](#tab/excel-online)
 
@@ -327,5 +270,3 @@ npm start web
 ### <a name="legal-information"></a>Юридические сведения
 
 Данные предоставлены бесплатно компанией [IEX](https://iextrading.com/developer/). Ознакомьтесь с [Условиями использования IEX](https://iextrading.com/api-exhibit-a/). Корпорация Майкрософт использует API компании IEX в этом руководстве исключительно в ознакомительных целях.
-
-

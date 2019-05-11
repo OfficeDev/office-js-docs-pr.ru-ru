@@ -1,14 +1,14 @@
 ---
 title: Совместное редактирование в надстройках Excel
 description: ''
-ms.date: 03/19/2019
+ms.date: 05/08/2019
 localization_priority: Normal
-ms.openlocfilehash: 774eee0c81f9fb99424070be0ee42860e44e46f5
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 281f981bd7248b68c60563f02746ba68d88617b8
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449290"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952049"
 ---
 # <a name="coauthoring-in-excel-add-ins"></a>Совместное редактирование в надстройках Excel  
 
@@ -21,9 +21,9 @@ ms.locfileid: "32449290"
 
 - Excel Online
 - Excel для Android
-- Excel для iOS
-- Excel Mobile для Windows 10
-- Excel для компьютера с Windows для пользователей Office 365 (компьютер с версией Windows сборки 16.0.8326.2076 или выше, доступной для пользователей Current Branch с августа 2017 г.)
+- Excel для iPad
+- Excel Mobile в Windows 10
+- Excel на настольном компьютере с Windows для пользователей Office 365 (Windows Desktop Build 16.0.8326.2076 или более поздней версии, который доступен для пользователей, работающих с текущим каналом, с 2017 августа)
 
 ## <a name="coauthoring-overview"></a>Общие сведения о совместном редактировании
 

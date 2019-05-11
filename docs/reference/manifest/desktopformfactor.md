@@ -1,18 +1,18 @@
 ---
 title: Элемент DesktopFormFactor в файле манифеста
 description: ''
-ms.date: 03/01/2019
+ms.date: 05/08/2019
 localization_priority: Normal
-ms.openlocfilehash: cddf76af01ec9f3016b28a3f7692aa6dfeb9bd60
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: b46536886d59692d03976083412a8b8d2e6ae859
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450557"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952392"
 ---
 # <a name="desktopformfactor-element"></a>Элемент DesktopFormFactor
 
-Указывает параметры для надстройки классического форм-фактора. Классический форм-фактор включает Office для Windows, Office для Mac и Office Online. Он содержит все сведения о надстройке для классического форм-фактора, кроме узла **Resources**.
+Указывает параметры для надстройки классического форм-фактора. На настольных формах есть Office для Windows, Office для Mac и Office Online. Он содержит все сведения о надстройке для классического форм-фактора, кроме узла **Resources**.
 
 В каждом определении DesktopFormFactor есть элемент **FunctionFile**, а также один или несколько элементов **ExtensionPoint**. Дополнительные сведения см. в статьях [Элемент FunctionFile](functionfile.md) и [Элемент ExtensionPoint](extensionpoint.md).
 
