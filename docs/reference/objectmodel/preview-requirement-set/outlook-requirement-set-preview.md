@@ -1,249 +1,249 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: ''
-ms.date: 04/17/2019
+ms.date: 05/08/2019
 localization_priority: Priority
-ms.openlocfilehash: 9a3d09a78a7644b3b26c345ba2588a1fae59c1eb
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: e4627699edad801ab4a3a5a65e6307d40d1b4ac9
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450480"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952357"
 ---
-# <a name="outlook-add-in-api-preview-requirement-set"></a><span data-ttu-id="526db-102">Предварительная версия набора обязательных элементов API для надстройки Outlook</span><span class="sxs-lookup"><span data-stu-id="526db-102">Outlook add-in API Preview requirement set</span></span>
+# <a name="outlook-add-in-api-preview-requirement-set"></a><span data-ttu-id="494f6-102">Предварительная версия набора обязательных элементов API для надстройки Outlook</span><span class="sxs-lookup"><span data-stu-id="494f6-102">Outlook add-in API Preview requirement set</span></span>
 
-<span data-ttu-id="526db-103">Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.</span><span class="sxs-lookup"><span data-stu-id="526db-103">The Outlook add-in API subset of the JavaScript API for Office includes objects, methods, properties, and events that you can use in an Outlook add-in.</span></span>
+<span data-ttu-id="494f6-103">Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.</span><span class="sxs-lookup"><span data-stu-id="494f6-103">The Outlook add-in API subset of the JavaScript API for Office includes objects, methods, properties, and events that you can use in an Outlook add-in.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="526db-104">Эта документация относится к **предварительной версии** [набора обязательных элементов](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets).</span><span class="sxs-lookup"><span data-stu-id="526db-104">This documentation is for a **preview** [requirement set](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets).</span></span> <span data-ttu-id="526db-105">Этот набор обязательных элементов еще не полностью реализован, а клиенты будут неправильно сообщать о его поддержке.</span><span class="sxs-lookup"><span data-stu-id="526db-105">This requirement set is not fully implemented yet, and clients will not accurately report support for it.</span></span> <span data-ttu-id="526db-106">Не следует указывать этот набор обязательных элементов в манифесте надстройки.</span><span class="sxs-lookup"><span data-stu-id="526db-106">You should not specify this requirement set in your add-in manifest.</span></span> <span data-ttu-id="526db-107">Прежде чем использовать методы и свойства, добавленные в этом наборе обязательных элементов, следует отдельно проверять их на доступность.</span><span class="sxs-lookup"><span data-stu-id="526db-107">Methods and properties that are introduced in this requirement set should be individually tested for availability before using them.</span></span> <span data-ttu-id="526db-108">Также может потребоваться присоединение к [программе предварительной оценки Office](https://products.office.com/office-insider).</span><span class="sxs-lookup"><span data-stu-id="526db-108">You may also need to join the [Office Insider program](https://products.office.com/office-insider).</span></span>
+> <span data-ttu-id="494f6-104">Эта документация относится к **предварительной версии** [набора обязательных элементов](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets).</span><span class="sxs-lookup"><span data-stu-id="494f6-104">This documentation is for a **preview** [requirement set](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets).</span></span> <span data-ttu-id="494f6-105">Этот набор обязательных элементов еще не полностью реализован, а клиенты будут неправильно сообщать о его поддержке.</span><span class="sxs-lookup"><span data-stu-id="494f6-105">This requirement set is not fully implemented yet, and clients will not accurately report support for it.</span></span> <span data-ttu-id="494f6-106">Не следует указывать этот набор обязательных элементов в манифесте надстройки.</span><span class="sxs-lookup"><span data-stu-id="494f6-106">You should not specify this requirement set in your add-in manifest.</span></span> <span data-ttu-id="494f6-107">Прежде чем использовать методы и свойства, добавленные в этом наборе обязательных элементов, следует отдельно проверять их на доступность.</span><span class="sxs-lookup"><span data-stu-id="494f6-107">Methods and properties that are introduced in this requirement set should be individually tested for availability before using them.</span></span> <span data-ttu-id="494f6-108">Также может потребоваться присоединение к [программе предварительной оценки Office](https://products.office.com/office-insider).</span><span class="sxs-lookup"><span data-stu-id="494f6-108">You may also need to join the [Office Insider program](https://products.office.com/office-insider).</span></span>
 
-<span data-ttu-id="526db-109">Предварительная версия набора обязательных элементов включает все возможности [набора обязательных элементов 1.7](../requirement-set-1.7/outlook-requirement-set-1.7.md).</span><span class="sxs-lookup"><span data-stu-id="526db-109">The Preview Requirement set includes all of the features of [Requirement set 1.7](../requirement-set-1.7/outlook-requirement-set-1.7.md).</span></span>
+<span data-ttu-id="494f6-109">Предварительная версия набора обязательных элементов включает все возможности [набора обязательных элементов 1.7](../requirement-set-1.7/outlook-requirement-set-1.7.md).</span><span class="sxs-lookup"><span data-stu-id="494f6-109">The Preview Requirement set includes all of the features of [Requirement set 1.7](../requirement-set-1.7/outlook-requirement-set-1.7.md).</span></span>
 
-## <a name="features-in-preview"></a><span data-ttu-id="526db-110">Возможности предварительной версии</span><span class="sxs-lookup"><span data-stu-id="526db-110">Features in preview</span></span>
+## <a name="features-in-preview"></a><span data-ttu-id="494f6-110">Возможности предварительной версии</span><span class="sxs-lookup"><span data-stu-id="494f6-110">Features in preview</span></span>
 
-<span data-ttu-id="526db-111">Ниже перечислены возможности предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="526db-111">The following features are in preview.</span></span>
+<span data-ttu-id="494f6-111">Ниже перечислены возможности предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="494f6-111">The following features are in preview.</span></span>
 
-### <a name="add-in-commands"></a><span data-ttu-id="526db-112">Команды надстроек</span><span class="sxs-lookup"><span data-stu-id="526db-112">Add-in commands</span></span>
+### <a name="add-in-commands"></a><span data-ttu-id="494f6-112">Команды надстроек</span><span class="sxs-lookup"><span data-stu-id="494f6-112">Add-in commands</span></span>
 
-#### <a name="eventcompletedjavascriptapiofficeofficeaddincommandseventcompleted-options-"></a>[<span data-ttu-id="526db-113">Event.completed</span><span class="sxs-lookup"><span data-stu-id="526db-113">Event.completed</span></span>](/javascript/api/office/office.addincommands.event#completed-options-)
+#### <a name="eventcompletedjavascriptapiofficeofficeaddincommandseventcompleted-options-"></a>[<span data-ttu-id="494f6-113">Event.completed</span><span class="sxs-lookup"><span data-stu-id="494f6-113">Event.completed</span></span>](/javascript/api/office/office.addincommands.event#completed-options-)
 
-<span data-ttu-id="526db-114">Добавлен новый необязательный параметр `options`, представляющий собой словарь с одним допустимым значением `allowEvent`.</span><span class="sxs-lookup"><span data-stu-id="526db-114">Added a new optional parameter `options`, which is a dictionary with one valid value `allowEvent`.</span></span> <span data-ttu-id="526db-115">Это значение используется для отмены выполнения события.</span><span class="sxs-lookup"><span data-stu-id="526db-115">This value is used to cancel execution of an event.</span></span>
+<span data-ttu-id="494f6-114">Добавлен новый необязательный параметр `options`, представляющий собой словарь с одним допустимым значением `allowEvent`.</span><span class="sxs-lookup"><span data-stu-id="494f6-114">Added a new optional parameter `options`, which is a dictionary with one valid value `allowEvent`.</span></span> <span data-ttu-id="494f6-115">Это значение используется для отмены выполнения события.</span><span class="sxs-lookup"><span data-stu-id="494f6-115">This value is used to cancel execution of an event.</span></span>
 
-<span data-ttu-id="526db-116">**Доступно в** Outlook в Интернете (классическая версия)</span><span class="sxs-lookup"><span data-stu-id="526db-116">**Available in**: Outlook on the web (Classic)</span></span>
-
----
-
-### <a name="attachments"></a><span data-ttu-id="526db-117">Вложения</span><span class="sxs-lookup"><span data-stu-id="526db-117">Attachments</span></span>
-
-#### <a name="attachmentcontentjavascriptapioutlookofficeattachmentcontent"></a>[<span data-ttu-id="526db-118">AttachmentContent</span><span class="sxs-lookup"><span data-stu-id="526db-118">AttachmentContent</span></span>](/javascript/api/outlook/office.attachmentcontent)
-
-<span data-ttu-id="526db-119">Добавлен новый объект, представляющий содержимое вложения.</span><span class="sxs-lookup"><span data-stu-id="526db-119">Added a new object that represents the content of an attachment.</span></span>
-
-<span data-ttu-id="526db-120">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-120">**Available in**: Outlook for Windows (Office 365)</span></span>
-
-#### <a name="officecontextmailboxitemaddfileattachmentfrombase64asyncofficecontextmailboxitemmdaddfileattachmentfrombase64asyncbase64file-attachmentname-options-callback"></a>[<span data-ttu-id="526db-121">Office.context.mailbox.item.addFileAttachmentFromBase64Async</span><span class="sxs-lookup"><span data-stu-id="526db-121">Office.context.mailbox.item.addFileAttachmentFromBase64Async</span></span>](office.context.mailbox.item.md#addfileattachmentfrombase64asyncbase64file-attachmentname-options-callback)
-
-<span data-ttu-id="526db-122">Добавлен новый метод, который позволяет вложить в сообщение или встречу файл, представленный в виде строки в кодировке base64.</span><span class="sxs-lookup"><span data-stu-id="526db-122">Added a new method that allows you to attach a file represented as a base64 encoded string to a message or appointment.</span></span>
-
-<span data-ttu-id="526db-123">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-123">**Available in**: Outlook for Windows (Office 365)</span></span>
-
-#### <a name="officecontextmailboxitemgetattachmentcontentasyncofficecontextmailboxitemmdgetattachmentcontentasyncattachmentid-options-callback--attachmentcontent"></a>[<span data-ttu-id="526db-124">Office.context.mailbox.item.getAttachmentContentAsync</span><span class="sxs-lookup"><span data-stu-id="526db-124">Office.context.mailbox.item.getAttachmentContentAsync</span></span>](office.context.mailbox.item.md#getattachmentcontentasyncattachmentid-options-callback--attachmentcontent)
-
-<span data-ttu-id="526db-125">Добавлен новый метод, позволяющий получить содержимое определенного вложения.</span><span class="sxs-lookup"><span data-stu-id="526db-125">Added a new method to get the content of a specific attachment.</span></span>
-
-<span data-ttu-id="526db-126">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-126">**Available in**: Outlook for Windows (Office 365)</span></span>
-
-#### <a name="officecontextmailboxitemgetattachmentsasyncofficecontextmailboxitemmdgetattachmentsasyncoptions-callback--arrayattachmentdetails"></a>[<span data-ttu-id="526db-127">Office.context.mailbox.item.getAttachmentsAsync</span><span class="sxs-lookup"><span data-stu-id="526db-127">Office.context.mailbox.item.getAttachmentsAsync</span></span>](office.context.mailbox.item.md#getattachmentsasyncoptions-callback--arrayattachmentdetails)
-
-<span data-ttu-id="526db-128">Добавлен новый метод, который получает вложенные в элемент объекты в режиме создания.</span><span class="sxs-lookup"><span data-stu-id="526db-128">Added a new method that gets an item's attachments in compose mode.</span></span>
-
-<span data-ttu-id="526db-129">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-129">**Available in**: Outlook for Windows (Office 365)</span></span>
-
-#### <a name="officemailboxenumsattachmentcontentformatjavascriptapioutlookofficemailboxenumsattachmentcontentformat"></a>[<span data-ttu-id="526db-130">Office.MailboxEnums.AttachmentContentFormat</span><span class="sxs-lookup"><span data-stu-id="526db-130">Office.MailboxEnums.AttachmentContentFormat</span></span>](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat)
-
-<span data-ttu-id="526db-131">Добавлено новое перечисление, в котором указывается форматирование, применяемое к содержимому вложения.</span><span class="sxs-lookup"><span data-stu-id="526db-131">Added a new enum that specifies the formatting that applies to an attachment's content.</span></span>
-
-<span data-ttu-id="526db-132">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-132">**Available in**: Outlook for Windows (Office 365)</span></span>
-
-#### <a name="officemailboxenumsattachmentstatusjavascriptapioutlookofficemailboxenumsattachmentstatus"></a>[<span data-ttu-id="526db-133">Office.MailboxEnums.AttachmentStatus</span><span class="sxs-lookup"><span data-stu-id="526db-133">Office.MailboxEnums.AttachmentStatus</span></span>](/javascript/api/outlook/office.mailboxenums.attachmentstatus)
-
-<span data-ttu-id="526db-134">Добавлено новое перечисление, в котором указывается, добавлено вложение в элемент или удалено из него.</span><span class="sxs-lookup"><span data-stu-id="526db-134">Added a new enum that specifies whether an attachment was added to or removed from an item.</span></span>
-
-<span data-ttu-id="526db-135">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-135">**Available in**: Outlook for Windows (Office 365)</span></span>
-
-#### <a name="officeeventtypeattachmentschangedjavascriptapiofficeofficeeventtype"></a>[<span data-ttu-id="526db-136">Office.EventType.AttachmentsChanged</span><span class="sxs-lookup"><span data-stu-id="526db-136">Office.EventType.AttachmentsChanged</span></span>](/javascript/api/office/office.eventtype)
-
-<span data-ttu-id="526db-137">Добавлено событие `AttachmentsChanged` в объект `Item`.</span><span class="sxs-lookup"><span data-stu-id="526db-137">Added `AttachmentsChanged` event to `Item`.</span></span>
-
-<span data-ttu-id="526db-138">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-138">**Available in**: Outlook for Windows (Office 365)</span></span>
+<span data-ttu-id="494f6-116">**Доступно в** Outlook в Интернете (классическая версия)</span><span class="sxs-lookup"><span data-stu-id="494f6-116">**Available in**: Outlook on the web (Classic)</span></span>
 
 ---
 
-### <a name="categories"></a><span data-ttu-id="526db-139">Категории</span><span class="sxs-lookup"><span data-stu-id="526db-139">Categories</span></span>
+### <a name="attachments"></a><span data-ttu-id="494f6-117">Вложения</span><span class="sxs-lookup"><span data-stu-id="494f6-117">Attachments</span></span>
 
-<span data-ttu-id="526db-140">В Outlook пользователь может группировать сообщения и встречи, используя категории для выделения их цветом.</span><span class="sxs-lookup"><span data-stu-id="526db-140">In Outlook, a user can group messages and appointments by using a category to color-code them.</span></span> <span data-ttu-id="526db-141">Пользователь определяет категории в главном списке своего почтового ящика.</span><span class="sxs-lookup"><span data-stu-id="526db-141">The user defines categories in a master list on their mailbox.</span></span> <span data-ttu-id="526db-142">Затем он может применить одну или несколько категорий к элементу.</span><span class="sxs-lookup"><span data-stu-id="526db-142">They can then apply one or more categories to an item.</span></span>
+#### <a name="attachmentcontentjavascriptapioutlookofficeattachmentcontent"></a>[<span data-ttu-id="494f6-118">AttachmentContent</span><span class="sxs-lookup"><span data-stu-id="494f6-118">AttachmentContent</span></span>](/javascript/api/outlook/office.attachmentcontent)
+
+<span data-ttu-id="494f6-119">Добавлен новый объект, представляющий содержимое вложения.</span><span class="sxs-lookup"><span data-stu-id="494f6-119">Added a new object that represents the content of an attachment.</span></span>
+
+<span data-ttu-id="494f6-120">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-120">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
+
+#### <a name="officecontextmailboxitemaddfileattachmentfrombase64asyncofficecontextmailboxitemmdaddfileattachmentfrombase64asyncbase64file-attachmentname-options-callback"></a>[<span data-ttu-id="494f6-121">Office.context.mailbox.item.addFileAttachmentFromBase64Async</span><span class="sxs-lookup"><span data-stu-id="494f6-121">Office.context.mailbox.item.addFileAttachmentFromBase64Async</span></span>](office.context.mailbox.item.md#addfileattachmentfrombase64asyncbase64file-attachmentname-options-callback)
+
+<span data-ttu-id="494f6-122">Добавлен новый метод, который позволяет вложить в сообщение или встречу файл, представленный в виде строки в кодировке base64.</span><span class="sxs-lookup"><span data-stu-id="494f6-122">Added a new method that allows you to attach a file represented as a base64 encoded string to a message or appointment.</span></span>
+
+<span data-ttu-id="494f6-123">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-123">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
+
+#### <a name="officecontextmailboxitemgetattachmentcontentasyncofficecontextmailboxitemmdgetattachmentcontentasyncattachmentid-options-callback--attachmentcontent"></a>[<span data-ttu-id="494f6-124">Office.context.mailbox.item.getAttachmentContentAsync</span><span class="sxs-lookup"><span data-stu-id="494f6-124">Office.context.mailbox.item.getAttachmentContentAsync</span></span>](office.context.mailbox.item.md#getattachmentcontentasyncattachmentid-options-callback--attachmentcontent)
+
+<span data-ttu-id="494f6-125">Добавлен новый метод, позволяющий получить содержимое определенного вложения.</span><span class="sxs-lookup"><span data-stu-id="494f6-125">Added a new method to get the content of a specific attachment.</span></span>
+
+<span data-ttu-id="494f6-126">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-126">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
+
+#### <a name="officecontextmailboxitemgetattachmentsasyncofficecontextmailboxitemmdgetattachmentsasyncoptions-callback--arrayattachmentdetails"></a>[<span data-ttu-id="494f6-127">Office.context.mailbox.item.getAttachmentsAsync</span><span class="sxs-lookup"><span data-stu-id="494f6-127">Office.context.mailbox.item.getAttachmentsAsync</span></span>](office.context.mailbox.item.md#getattachmentsasyncoptions-callback--arrayattachmentdetails)
+
+<span data-ttu-id="494f6-128">Добавлен новый метод, который получает вложенные в элемент объекты в режиме создания.</span><span class="sxs-lookup"><span data-stu-id="494f6-128">Added a new method that gets an item's attachments in compose mode.</span></span>
+
+<span data-ttu-id="494f6-129">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-129">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
+
+#### <a name="officemailboxenumsattachmentcontentformatjavascriptapioutlookofficemailboxenumsattachmentcontentformat"></a>[<span data-ttu-id="494f6-130">Office.MailboxEnums.AttachmentContentFormat</span><span class="sxs-lookup"><span data-stu-id="494f6-130">Office.MailboxEnums.AttachmentContentFormat</span></span>](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat)
+
+<span data-ttu-id="494f6-131">Добавлено новое перечисление, в котором указывается форматирование, применяемое к содержимому вложения.</span><span class="sxs-lookup"><span data-stu-id="494f6-131">Added a new enum that specifies the formatting that applies to an attachment's content.</span></span>
+
+<span data-ttu-id="494f6-132">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-132">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
+
+#### <a name="officemailboxenumsattachmentstatusjavascriptapioutlookofficemailboxenumsattachmentstatus"></a>[<span data-ttu-id="494f6-133">Office.MailboxEnums.AttachmentStatus</span><span class="sxs-lookup"><span data-stu-id="494f6-133">Office.MailboxEnums.AttachmentStatus</span></span>](/javascript/api/outlook/office.mailboxenums.attachmentstatus)
+
+<span data-ttu-id="494f6-134">Добавлено новое перечисление, в котором указывается, добавлено вложение в элемент или удалено из него.</span><span class="sxs-lookup"><span data-stu-id="494f6-134">Added a new enum that specifies whether an attachment was added to or removed from an item.</span></span>
+
+<span data-ttu-id="494f6-135">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-135">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
+
+#### <a name="officeeventtypeattachmentschangedjavascriptapiofficeofficeeventtype"></a>[<span data-ttu-id="494f6-136">Office.EventType.AttachmentsChanged</span><span class="sxs-lookup"><span data-stu-id="494f6-136">Office.EventType.AttachmentsChanged</span></span>](/javascript/api/office/office.eventtype)
+
+<span data-ttu-id="494f6-137">Добавлено событие `AttachmentsChanged` в объект `Item`.</span><span class="sxs-lookup"><span data-stu-id="494f6-137">Added `AttachmentsChanged` event to `Item`.</span></span>
+
+<span data-ttu-id="494f6-138">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-138">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
+
+---
+
+### <a name="categories"></a><span data-ttu-id="494f6-139">Категории</span><span class="sxs-lookup"><span data-stu-id="494f6-139">Categories</span></span>
+
+<span data-ttu-id="494f6-140">В Outlook пользователь может группировать сообщения и встречи, используя категории для выделения их цветом.</span><span class="sxs-lookup"><span data-stu-id="494f6-140">In Outlook, a user can group messages and appointments by using a category to color-code them.</span></span> <span data-ttu-id="494f6-141">Пользователь определяет категории в главном списке своего почтового ящика.</span><span class="sxs-lookup"><span data-stu-id="494f6-141">The user defines categories in a master list on their mailbox.</span></span> <span data-ttu-id="494f6-142">Затем он может применить одну или несколько категорий к элементу.</span><span class="sxs-lookup"><span data-stu-id="494f6-142">They can then apply one or more categories to an item.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="526db-143">Эта функция не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="526db-143">This feature is not supported in Outlook for iOS or Outlook for Android.</span></span>
+> <span data-ttu-id="494f6-143">Эта функция не поддерживается в Outlook для iOS или Outlook для Android.</span><span class="sxs-lookup"><span data-stu-id="494f6-143">This feature is not supported in Outlook for iOS or Outlook for Android.</span></span>
 
-#### <a name="categoriesjavascriptapioutlookofficecategories"></a>[<span data-ttu-id="526db-144">Categories</span><span class="sxs-lookup"><span data-stu-id="526db-144">Categories</span></span>](/javascript/api/outlook/office.categories)
+#### <a name="categoriesjavascriptapioutlookofficecategories"></a>[<span data-ttu-id="494f6-144">Categories</span><span class="sxs-lookup"><span data-stu-id="494f6-144">Categories</span></span>](/javascript/api/outlook/office.categories)
 
-<span data-ttu-id="526db-145">Добавлен новый объект, представляющий категории элемента.</span><span class="sxs-lookup"><span data-stu-id="526db-145">Added a new object that represents an item's categories.</span></span>
+<span data-ttu-id="494f6-145">Добавлен новый объект, представляющий категории элемента.</span><span class="sxs-lookup"><span data-stu-id="494f6-145">Added a new object that represents an item's categories.</span></span>
 
-<span data-ttu-id="526db-146">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-146">**Available in**: Outlook for Windows (Office 365)</span></span>
+<span data-ttu-id="494f6-146">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-146">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
 
-#### <a name="categorydetailsjavascriptapioutlookofficecategorydetails"></a>[<span data-ttu-id="526db-147">CategoryDetails</span><span class="sxs-lookup"><span data-stu-id="526db-147">CategoryDetails</span></span>](/javascript/api/outlook/office.categorydetails)
+#### <a name="categorydetailsjavascriptapioutlookofficecategorydetails"></a>[<span data-ttu-id="494f6-147">CategoryDetails</span><span class="sxs-lookup"><span data-stu-id="494f6-147">CategoryDetails</span></span>](/javascript/api/outlook/office.categorydetails)
 
-<span data-ttu-id="526db-148">Добавлен новый объект, представляющий сведения о категории (ее имя и соответствующий цвет).</span><span class="sxs-lookup"><span data-stu-id="526db-148">Added a new object that represents a category's details (its name and associated color).</span></span>
+<span data-ttu-id="494f6-148">Добавлен новый объект, представляющий сведения о категории (ее имя и соответствующий цвет).</span><span class="sxs-lookup"><span data-stu-id="494f6-148">Added a new object that represents a category's details (its name and associated color).</span></span>
 
-<span data-ttu-id="526db-149">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-149">**Available in**: Outlook for Windows (Office 365)</span></span>
+<span data-ttu-id="494f6-149">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-149">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
 
-#### <a name="mastercategoriesjavascriptapioutlookofficemastercategories"></a>[<span data-ttu-id="526db-150">MasterCategories</span><span class="sxs-lookup"><span data-stu-id="526db-150">MasterCategories</span></span>](/javascript/api/outlook/office.mastercategories)
+#### <a name="mastercategoriesjavascriptapioutlookofficemastercategories"></a>[<span data-ttu-id="494f6-150">MasterCategories</span><span class="sxs-lookup"><span data-stu-id="494f6-150">MasterCategories</span></span>](/javascript/api/outlook/office.mastercategories)
 
-<span data-ttu-id="526db-151">Добавлен новый объект, представляющий главный список категорий для почтового ящика.</span><span class="sxs-lookup"><span data-stu-id="526db-151">Added a new object that represents the categories master list on a mailbox.</span></span>
+<span data-ttu-id="494f6-151">Добавлен новый объект, представляющий главный список категорий для почтового ящика.</span><span class="sxs-lookup"><span data-stu-id="494f6-151">Added a new object that represents the categories master list on a mailbox.</span></span>
 
-<span data-ttu-id="526db-152">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-152">**Available in**: Outlook for Windows (Office 365)</span></span>
+<span data-ttu-id="494f6-152">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-152">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
 
-#### <a name="officecontextmailboxmastercategoriesjavascriptapioutlookofficemailboxmastercategories"></a>[<span data-ttu-id="526db-153">Office.context.mailbox.masterCategories</span><span class="sxs-lookup"><span data-stu-id="526db-153">Office.context.mailbox.masterCategories</span></span>](/javascript/api/outlook/office.mailbox#mastercategories)
+#### <a name="officecontextmailboxmastercategoriesjavascriptapioutlookofficemailboxmastercategories"></a>[<span data-ttu-id="494f6-153">Office.context.mailbox.masterCategories</span><span class="sxs-lookup"><span data-stu-id="494f6-153">Office.context.mailbox.masterCategories</span></span>](/javascript/api/outlook/office.mailbox#mastercategories)
 
-<span data-ttu-id="526db-154">Добавлено новое свойство, представляющее главный список категорий для почтового ящика.</span><span class="sxs-lookup"><span data-stu-id="526db-154">Added a new property that represents the categories master list on a mailbox.</span></span>
+<span data-ttu-id="494f6-154">Добавлено новое свойство, представляющее главный список категорий для почтового ящика.</span><span class="sxs-lookup"><span data-stu-id="494f6-154">Added a new property that represents the categories master list on a mailbox.</span></span>
 
-<span data-ttu-id="526db-155">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-155">**Available in**: Outlook for Windows (Office 365)</span></span>
+<span data-ttu-id="494f6-155">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-155">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
 
-#### <a name="officecontextmailboxitemcategoriesjavascriptapioutlookofficeitemcategories"></a>[<span data-ttu-id="526db-156">Office.context.mailbox.item.categories</span><span class="sxs-lookup"><span data-stu-id="526db-156">Office.context.mailbox.item.categories</span></span>](/javascript/api/outlook/office.item#categories)
+#### <a name="officecontextmailboxitemcategoriesjavascriptapioutlookofficeitemcategories"></a>[<span data-ttu-id="494f6-156">Office.context.mailbox.item.categories</span><span class="sxs-lookup"><span data-stu-id="494f6-156">Office.context.mailbox.item.categories</span></span>](/javascript/api/outlook/office.item#categories)
 
-<span data-ttu-id="526db-157">Добавлено новое свойство, представляющее набор категорий для элемента.</span><span class="sxs-lookup"><span data-stu-id="526db-157">Added a new property that represents the set of categories on an item.</span></span>
+<span data-ttu-id="494f6-157">Добавлено новое свойство, представляющее набор категорий для элемента.</span><span class="sxs-lookup"><span data-stu-id="494f6-157">Added a new property that represents the set of categories on an item.</span></span>
 
-<span data-ttu-id="526db-158">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-158">**Available in**: Outlook for Windows (Office 365)</span></span>
+<span data-ttu-id="494f6-158">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-158">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
 
-#### <a name="officemailboxenumscategorycolorjavascriptapioutlookofficemailboxenumscategorycolor"></a>[<span data-ttu-id="526db-159">Office.MailboxEnums.CategoryColor</span><span class="sxs-lookup"><span data-stu-id="526db-159">Office.MailboxEnums.CategoryColor</span></span>](/javascript/api/outlook/office.mailboxenums.categorycolor)
+#### <a name="officemailboxenumscategorycolorjavascriptapioutlookofficemailboxenumscategorycolor"></a>[<span data-ttu-id="494f6-159">Office.MailboxEnums.CategoryColor</span><span class="sxs-lookup"><span data-stu-id="494f6-159">Office.MailboxEnums.CategoryColor</span></span>](/javascript/api/outlook/office.mailboxenums.categorycolor)
 
-<span data-ttu-id="526db-160">Добавлено новое перечисление, указывающее цвета, доступные для сопоставления с категориями.</span><span class="sxs-lookup"><span data-stu-id="526db-160">Added a new enum that specifies the colors available to be associated with categories.</span></span>
+<span data-ttu-id="494f6-160">Добавлено новое перечисление, указывающее цвета, доступные для сопоставления с категориями.</span><span class="sxs-lookup"><span data-stu-id="494f6-160">Added a new enum that specifies the colors available to be associated with categories.</span></span>
 
-<span data-ttu-id="526db-161">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-161">**Available in**: Outlook for Windows (Office 365)</span></span>
-
----
-
-### <a name="delegate-access"></a><span data-ttu-id="526db-162">Делегированный доступ</span><span class="sxs-lookup"><span data-stu-id="526db-162">Delegate access</span></span>
-
-#### <a name="sharedpropertiesjavascriptapioutlookofficesharedproperties"></a>[<span data-ttu-id="526db-163">SharedProperties</span><span class="sxs-lookup"><span data-stu-id="526db-163">SharedProperties</span></span>](/javascript/api/outlook/office.sharedproperties)
-
-<span data-ttu-id="526db-164">Добавлен новый объект, который представляет свойства элемента встречи или сообщения в общей папке, календаре или почтовом ящике.</span><span class="sxs-lookup"><span data-stu-id="526db-164">Added a new object that represents the properties of an appointment or message item in a shared folder, calendar, or mailbox.</span></span>
-
-<span data-ttu-id="526db-165">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-165">**Available in**: Outlook for Windows (Office 365)</span></span>
-
-#### <a name="officecontextmailboxitemgetsharedpropertiesasyncofficecontextmailboxitemmdgetsharedpropertiesasyncoptions-callback"></a>[<span data-ttu-id="526db-166">Office.context.mailbox.item.getSharedPropertiesAsync</span><span class="sxs-lookup"><span data-stu-id="526db-166">Office.context.mailbox.item.getSharedPropertiesAsync</span></span>](office.context.mailbox.item.md#getsharedpropertiesasyncoptions-callback)
-
-<span data-ttu-id="526db-167">Добавлен новый метод, позволяющий получить объект, который представляет свойства sharedProperties элемента встречи или сообщения.</span><span class="sxs-lookup"><span data-stu-id="526db-167">Added a new method that gets an object which represents the sharedProperties of an appointment or message item.</span></span>
-
-<span data-ttu-id="526db-168">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-168">**Available in**: Outlook for Windows (Office 365)</span></span>
-
-#### <a name="officemailboxenumsdelegatepermissionsjavascriptapioutlookofficemailboxenumsdelegatepermissions"></a>[<span data-ttu-id="526db-169">Office.MailboxEnums.DelegatePermissions</span><span class="sxs-lookup"><span data-stu-id="526db-169">Office.MailboxEnums.DelegatePermissions</span></span>](/javascript/api/outlook/office.mailboxenums.delegatepermissions)
-
-<span data-ttu-id="526db-170">Добавлено перечисление нового битового флага, в котором указываются разрешения на делегирование.</span><span class="sxs-lookup"><span data-stu-id="526db-170">Added a new bit flag enum that specifies the delegate permissions.</span></span>
-
-<span data-ttu-id="526db-171">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-171">**Available in**: Outlook for Windows (Office 365)</span></span>
-
-#### <a name="supportssharedfolders-manifest-elementmanifestsupportssharedfoldersmd"></a>[<span data-ttu-id="526db-172">Элемент манифеста SupportsSharedFolders</span><span class="sxs-lookup"><span data-stu-id="526db-172">SupportsSharedFolders manifest element</span></span>](../../manifest/supportssharedfolders.md)
-
-<span data-ttu-id="526db-173">К элементу манифеста [DesktopFormFactor](../../manifest/desktopformfactor.md) добавлен дочерний элемент.</span><span class="sxs-lookup"><span data-stu-id="526db-173">Added a child element to the [DesktopFormFactor](../../manifest/desktopformfactor.md) manifest element.</span></span> <span data-ttu-id="526db-174">Он определяет, доступна ли надстройка в сценариях делегирования.</span><span class="sxs-lookup"><span data-stu-id="526db-174">It defines whether the add-in is available in delegate scenarios.</span></span>
-
-<span data-ttu-id="526db-175">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-175">**Available in**: Outlook for Windows (Office 365)</span></span>
+<span data-ttu-id="494f6-161">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-161">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
 
 ---
 
-### <a name="enhanced-location"></a><span data-ttu-id="526db-176">Расширенные функции расположения</span><span class="sxs-lookup"><span data-stu-id="526db-176">Enhanced location</span></span>
+### <a name="delegate-access"></a><span data-ttu-id="494f6-162">Делегированный доступ</span><span class="sxs-lookup"><span data-stu-id="494f6-162">Delegate access</span></span>
 
-#### <a name="enhancedlocationjavascriptapioutlookofficeenhancedlocation"></a>[<span data-ttu-id="526db-177">EnhancedLocation</span><span class="sxs-lookup"><span data-stu-id="526db-177">EnhancedLocation</span></span>](/javascript/api/outlook/office.enhancedlocation)
+#### <a name="sharedpropertiesjavascriptapioutlookofficesharedproperties"></a>[<span data-ttu-id="494f6-163">SharedProperties</span><span class="sxs-lookup"><span data-stu-id="494f6-163">SharedProperties</span></span>](/javascript/api/outlook/office.sharedproperties)
 
-<span data-ttu-id="526db-178">Добавлен новый объект, представляющий набор расположений для встречи.</span><span class="sxs-lookup"><span data-stu-id="526db-178">Added a new object that represents the set of locations on an appointment.</span></span>
+<span data-ttu-id="494f6-164">Добавлен новый объект, который представляет свойства элемента встречи или сообщения в общей папке, календаре или почтовом ящике.</span><span class="sxs-lookup"><span data-stu-id="494f6-164">Added a new object that represents the properties of an appointment or message item in a shared folder, calendar, or mailbox.</span></span>
 
-<span data-ttu-id="526db-179">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-179">**Available in**: Outlook for Windows (Office 365)</span></span>
+<span data-ttu-id="494f6-165">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-165">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
 
-#### <a name="locationdetailsjavascriptapioutlookofficelocationdetails"></a>[<span data-ttu-id="526db-180">LocationDetails</span><span class="sxs-lookup"><span data-stu-id="526db-180">LocationDetails</span></span>](/javascript/api/outlook/office.locationdetails)
+#### <a name="officecontextmailboxitemgetsharedpropertiesasyncofficecontextmailboxitemmdgetsharedpropertiesasyncoptions-callback"></a>[<span data-ttu-id="494f6-166">Office.context.mailbox.item.getSharedPropertiesAsync</span><span class="sxs-lookup"><span data-stu-id="494f6-166">Office.context.mailbox.item.getSharedPropertiesAsync</span></span>](office.context.mailbox.item.md#getsharedpropertiesasyncoptions-callback)
 
-<span data-ttu-id="526db-181">Добавлен новый объект, представляющий расположение.</span><span class="sxs-lookup"><span data-stu-id="526db-181">Added a new object that represents a location.</span></span> <span data-ttu-id="526db-182">Только для чтения.</span><span class="sxs-lookup"><span data-stu-id="526db-182">Read only.</span></span>
+<span data-ttu-id="494f6-167">Добавлен новый метод, позволяющий получить объект, который представляет свойства sharedProperties элемента встречи или сообщения.</span><span class="sxs-lookup"><span data-stu-id="494f6-167">Added a new method that gets an object which represents the sharedProperties of an appointment or message item.</span></span>
 
-<span data-ttu-id="526db-183">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-183">**Available in**: Outlook for Windows (Office 365)</span></span>
+<span data-ttu-id="494f6-168">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-168">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
 
-#### <a name="locationidentifierjavascriptapioutlookofficelocationidentifier"></a>[<span data-ttu-id="526db-184">LocationIdentifier</span><span class="sxs-lookup"><span data-stu-id="526db-184">LocationIdentifier</span></span>](/javascript/api/outlook/office.locationidentifier)
+#### <a name="officemailboxenumsdelegatepermissionsjavascriptapioutlookofficemailboxenumsdelegatepermissions"></a>[<span data-ttu-id="494f6-169">Office.MailboxEnums.DelegatePermissions</span><span class="sxs-lookup"><span data-stu-id="494f6-169">Office.MailboxEnums.DelegatePermissions</span></span>](/javascript/api/outlook/office.mailboxenums.delegatepermissions)
 
-<span data-ttu-id="526db-185">Добавлен новый объект, представляющий идентификатор расположения.</span><span class="sxs-lookup"><span data-stu-id="526db-185">Added a new object that represents the id of a location.</span></span>
+<span data-ttu-id="494f6-170">Добавлено перечисление нового битового флага, в котором указываются разрешения на делегирование.</span><span class="sxs-lookup"><span data-stu-id="494f6-170">Added a new bit flag enum that specifies the delegate permissions.</span></span>
 
-<span data-ttu-id="526db-186">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-186">**Available in**: Outlook for Windows (Office 365)</span></span>
+<span data-ttu-id="494f6-171">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-171">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
 
-#### <a name="officecontextmailboxitemenhancedlocationofficecontextmailboxitemmdenhancedlocation-enhancedlocation"></a>[<span data-ttu-id="526db-187">Office.context.mailbox.item.enhancedLocation</span><span class="sxs-lookup"><span data-stu-id="526db-187">Office.context.mailbox.item.enhancedLocation</span></span>](office.context.mailbox.item.md#enhancedlocation-enhancedlocation)
+#### <a name="supportssharedfolders-manifest-elementmanifestsupportssharedfoldersmd"></a>[<span data-ttu-id="494f6-172">Элемент манифеста SupportsSharedFolders</span><span class="sxs-lookup"><span data-stu-id="494f6-172">SupportsSharedFolders manifest element</span></span>](../../manifest/supportssharedfolders.md)
 
-<span data-ttu-id="526db-188">Добавлено новое свойство, представляющее набор расположений для встречи.</span><span class="sxs-lookup"><span data-stu-id="526db-188">Added a new property that represents the set of locations on an appointment.</span></span>
+<span data-ttu-id="494f6-173">К элементу манифеста [DesktopFormFactor](../../manifest/desktopformfactor.md) добавлен дочерний элемент.</span><span class="sxs-lookup"><span data-stu-id="494f6-173">Added a child element to the [DesktopFormFactor](../../manifest/desktopformfactor.md) manifest element.</span></span> <span data-ttu-id="494f6-174">Он определяет, доступна ли надстройка в сценариях делегирования.</span><span class="sxs-lookup"><span data-stu-id="494f6-174">It defines whether the add-in is available in delegate scenarios.</span></span>
 
-<span data-ttu-id="526db-189">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-189">**Available in**: Outlook for Windows (Office 365)</span></span>
-
-#### <a name="officemailboxenumslocationtypejavascriptapioutlookofficemailboxenumslocationtype"></a>[<span data-ttu-id="526db-190">Office.MailboxEnums.LocationType</span><span class="sxs-lookup"><span data-stu-id="526db-190">Office.MailboxEnums.LocationType</span></span>](/javascript/api/outlook/office.mailboxenums.locationtype)
-
-<span data-ttu-id="526db-191">Добавлено новое перечисление, которое определяет тип расположения встречи.</span><span class="sxs-lookup"><span data-stu-id="526db-191">Added a new enum that specifies an appointment location's type.</span></span>
-
-<span data-ttu-id="526db-192">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-192">**Available in**: Outlook for Windows (Office 365)</span></span>
-
-#### <a name="officeeventtypeenhancedlocationschangedjavascriptapiofficeofficeeventtype"></a>[<span data-ttu-id="526db-193">Office.EventType.EnhancedLocationsChanged</span><span class="sxs-lookup"><span data-stu-id="526db-193">Office.EventType.EnhancedLocationsChanged</span></span>](/javascript/api/office/office.eventtype)
-
-<span data-ttu-id="526db-194">Добавлено событие `EnhancedLocationsChanged` в объект `Item`.</span><span class="sxs-lookup"><span data-stu-id="526db-194">Added `EnhancedLocationsChanged` event to `Item`.</span></span>
-
-<span data-ttu-id="526db-195">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-195">**Available in**: Outlook for Windows (Office 365)</span></span>
+<span data-ttu-id="494f6-175">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-175">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
 
 ---
 
-### <a name="integration-with-actionable-messages"></a><span data-ttu-id="526db-196">Взаимодействие с интерактивными сообщениями</span><span class="sxs-lookup"><span data-stu-id="526db-196">Integration with actionable messages</span></span>
+### <a name="enhanced-location"></a><span data-ttu-id="494f6-176">Расширенные функции расположения</span><span class="sxs-lookup"><span data-stu-id="494f6-176">Enhanced location</span></span>
 
-#### <a name="officecontextmailboxitemgetinitializationcontextasyncofficecontextmailboxitemmdgetinitializationcontextasyncoptions-callback"></a>[<span data-ttu-id="526db-197">Office.context.mailbox.item.getInitializationContextAsync</span><span class="sxs-lookup"><span data-stu-id="526db-197">Office.context.mailbox.item.getInitializationContextAsync</span></span>](office.context.mailbox.item.md#getinitializationcontextasyncoptions-callback)
+#### <a name="enhancedlocationjavascriptapioutlookofficeenhancedlocation"></a>[<span data-ttu-id="494f6-177">EnhancedLocation</span><span class="sxs-lookup"><span data-stu-id="494f6-177">EnhancedLocation</span></span>](/javascript/api/outlook/office.enhancedlocation)
 
-<span data-ttu-id="526db-198">Добавлена новая функция, которая возвращает данные инициализации, передаваемые при [активации надстройки интерактивным сообщением](/outlook/actionable-messages/invoke-add-in-from-actionable-message).</span><span class="sxs-lookup"><span data-stu-id="526db-198">Added a new function that returns initialization data passed when the add-in is [activated by an actionable message](/outlook/actionable-messages/invoke-add-in-from-actionable-message).</span></span>
+<span data-ttu-id="494f6-178">Добавлен новый объект, представляющий набор расположений для встречи.</span><span class="sxs-lookup"><span data-stu-id="494f6-178">Added a new object that represents the set of locations on an appointment.</span></span>
 
-<span data-ttu-id="526db-199">**Доступно в** Outlook для Windows (Office 365), Outlook в Интернете (классическая версия)</span><span class="sxs-lookup"><span data-stu-id="526db-199">**Available in**: Outlook for Windows (Office 365), Outlook on the web (Classic)</span></span>
+<span data-ttu-id="494f6-179">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-179">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
 
----
+#### <a name="locationdetailsjavascriptapioutlookofficelocationdetails"></a>[<span data-ttu-id="494f6-180">LocationDetails</span><span class="sxs-lookup"><span data-stu-id="494f6-180">LocationDetails</span></span>](/javascript/api/outlook/office.locationdetails)
 
-### <a name="internet-headers"></a><span data-ttu-id="526db-200">Заголовки Интернета</span><span class="sxs-lookup"><span data-stu-id="526db-200">Internet headers</span></span>
+<span data-ttu-id="494f6-181">Добавлен новый объект, представляющий расположение.</span><span class="sxs-lookup"><span data-stu-id="494f6-181">Added a new object that represents a location.</span></span> <span data-ttu-id="494f6-182">Только для чтения.</span><span class="sxs-lookup"><span data-stu-id="494f6-182">Read only.</span></span>
 
-#### <a name="internetheadersjavascriptapioutlookofficeinternetheaders"></a>[<span data-ttu-id="526db-201">InternetHeaders</span><span class="sxs-lookup"><span data-stu-id="526db-201">InternetHeaders</span></span>](/javascript/api/outlook/office.internetheaders)
+<span data-ttu-id="494f6-183">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-183">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
 
-<span data-ttu-id="526db-202">Добавлен новый объект, представляющий заголовки Интернета в элементе сообщения.</span><span class="sxs-lookup"><span data-stu-id="526db-202">Added a new object that represents the internet headers of a message item.</span></span>
+#### <a name="locationidentifierjavascriptapioutlookofficelocationidentifier"></a>[<span data-ttu-id="494f6-184">LocationIdentifier</span><span class="sxs-lookup"><span data-stu-id="494f6-184">LocationIdentifier</span></span>](/javascript/api/outlook/office.locationidentifier)
 
-<span data-ttu-id="526db-203">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-203">**Available in**: Outlook for Windows (Office 365)</span></span>
+<span data-ttu-id="494f6-185">Добавлен новый объект, представляющий идентификатор расположения.</span><span class="sxs-lookup"><span data-stu-id="494f6-185">Added a new object that represents the id of a location.</span></span>
 
-#### <a name="officecontextmailboxiteminternetheadersofficecontextmailboxitemmdinternetheaders-internetheaders"></a>[<span data-ttu-id="526db-204">Office.context.mailbox.item.internetHeaders</span><span class="sxs-lookup"><span data-stu-id="526db-204">Office.context.mailbox.item.internetHeaders</span></span>](office.context.mailbox.item.md#internetheaders-internetheaders)
+<span data-ttu-id="494f6-186">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-186">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
 
-<span data-ttu-id="526db-205">Добавлено новое свойство, представляющее заголовки Интернета в элементе сообщения.</span><span class="sxs-lookup"><span data-stu-id="526db-205">Added a new property that represents the internet headers on a message item.</span></span>
+#### <a name="officecontextmailboxitemenhancedlocationofficecontextmailboxitemmdenhancedlocation-enhancedlocation"></a>[<span data-ttu-id="494f6-187">Office.context.mailbox.item.enhancedLocation</span><span class="sxs-lookup"><span data-stu-id="494f6-187">Office.context.mailbox.item.enhancedLocation</span></span>](office.context.mailbox.item.md#enhancedlocation-enhancedlocation)
 
-<span data-ttu-id="526db-206">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-206">**Available in**: Outlook for Windows (Office 365)</span></span>
+<span data-ttu-id="494f6-188">Добавлено новое свойство, представляющее набор расположений для встречи.</span><span class="sxs-lookup"><span data-stu-id="494f6-188">Added a new property that represents the set of locations on an appointment.</span></span>
 
----
+<span data-ttu-id="494f6-189">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-189">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
 
-### <a name="office-theme"></a><span data-ttu-id="526db-207">Тема Office</span><span class="sxs-lookup"><span data-stu-id="526db-207">Office theme</span></span>
+#### <a name="officemailboxenumslocationtypejavascriptapioutlookofficemailboxenumslocationtype"></a>[<span data-ttu-id="494f6-190">Office.MailboxEnums.LocationType</span><span class="sxs-lookup"><span data-stu-id="494f6-190">Office.MailboxEnums.LocationType</span></span>](/javascript/api/outlook/office.mailboxenums.locationtype)
 
-#### <a name="officecontextmailboxofficethemejavascriptapiofficeofficeofficetheme"></a>[<span data-ttu-id="526db-208">Office.context.mailbox.officeTheme</span><span class="sxs-lookup"><span data-stu-id="526db-208">Office.context.mailbox.officeTheme</span></span>](/javascript/api/office/office.officetheme)
+<span data-ttu-id="494f6-191">Добавлено новое перечисление, которое определяет тип расположения встречи.</span><span class="sxs-lookup"><span data-stu-id="494f6-191">Added a new enum that specifies an appointment location's type.</span></span>
 
-<span data-ttu-id="526db-209">Добавлена возможность получения темы Office.</span><span class="sxs-lookup"><span data-stu-id="526db-209">Added ability to get Office theme.</span></span>
+<span data-ttu-id="494f6-192">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-192">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
 
-<span data-ttu-id="526db-210">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-210">**Available in**: Outlook for Windows (Office 365)</span></span>
+#### <a name="officeeventtypeenhancedlocationschangedjavascriptapiofficeofficeeventtype"></a>[<span data-ttu-id="494f6-193">Office.EventType.EnhancedLocationsChanged</span><span class="sxs-lookup"><span data-stu-id="494f6-193">Office.EventType.EnhancedLocationsChanged</span></span>](/javascript/api/office/office.eventtype)
 
-#### <a name="officeeventtypeofficethemechangedjavascriptapiofficeofficeeventtype"></a>[<span data-ttu-id="526db-211">Office.EventType.OfficeThemeChanged</span><span class="sxs-lookup"><span data-stu-id="526db-211">Office.EventType.OfficeThemeChanged</span></span>](/javascript/api/office/office.eventtype)
+<span data-ttu-id="494f6-194">Добавлено событие `EnhancedLocationsChanged` в объект `Item`.</span><span class="sxs-lookup"><span data-stu-id="494f6-194">Added `EnhancedLocationsChanged` event to `Item`.</span></span>
 
-<span data-ttu-id="526db-212">Добавлено событие `OfficeThemeChanged` в объект `Mailbox`.</span><span class="sxs-lookup"><span data-stu-id="526db-212">Added `OfficeThemeChanged` event to `Mailbox`.</span></span>
-
-<span data-ttu-id="526db-213">**Доступно в** Outlook для Windows (Office 365)</span><span class="sxs-lookup"><span data-stu-id="526db-213">**Available in**: Outlook for Windows (Office 365)</span></span>
+<span data-ttu-id="494f6-195">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-195">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
 
 ---
 
-### <a name="sso"></a><span data-ttu-id="526db-214">Единый вход</span><span class="sxs-lookup"><span data-stu-id="526db-214">SSO</span></span>
+### <a name="integration-with-actionable-messages"></a><span data-ttu-id="494f6-196">Взаимодействие с интерактивными сообщениями</span><span class="sxs-lookup"><span data-stu-id="494f6-196">Integration with actionable messages</span></span>
 
-#### <a name="officecontextauthgetaccesstokenasyncofficedevadd-insdevelopsso-in-office-add-inssso-api-reference"></a>[<span data-ttu-id="526db-215">Office.context.auth.getAccessTokenAsync</span><span class="sxs-lookup"><span data-stu-id="526db-215">Office.context.auth.getAccessTokenAsync</span></span>](/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference)
+#### <a name="officecontextmailboxitemgetinitializationcontextasyncofficecontextmailboxitemmdgetinitializationcontextasyncoptions-callback"></a>[<span data-ttu-id="494f6-197">Office.context.mailbox.item.getInitializationContextAsync</span><span class="sxs-lookup"><span data-stu-id="494f6-197">Office.context.mailbox.item.getInitializationContextAsync</span></span>](office.context.mailbox.item.md#getinitializationcontextasyncoptions-callback)
 
-<span data-ttu-id="526db-216">Добавлена возможность доступа к `getAccessTokenAsync`, что позволяет надстройкам [получать маркер доступа](/outlook/add-ins/authenticate-a-user-with-an-sso-token) для API Microsoft Graph.</span><span class="sxs-lookup"><span data-stu-id="526db-216">Added access to `getAccessTokenAsync`, which allows add-ins to [get an access token](/outlook/add-ins/authenticate-a-user-with-an-sso-token) for the Microsoft Graph API.</span></span>
+<span data-ttu-id="494f6-198">Добавлена новая функция, которая возвращает данные инициализации, передаваемые при [активации надстройки интерактивным сообщением](/outlook/actionable-messages/invoke-add-in-from-actionable-message).</span><span class="sxs-lookup"><span data-stu-id="494f6-198">Added a new function that returns initialization data passed when the add-in is [activated by an actionable message](/outlook/actionable-messages/invoke-add-in-from-actionable-message).</span></span>
 
-<span data-ttu-id="526db-217">**Доступно в** Outlook для Windows (Office 365), Outlook для Mac (Office 365), Outlook в Интернете (Office 365 и Outlook.com), Outlook в Интернете (классическая версия)</span><span class="sxs-lookup"><span data-stu-id="526db-217">**Available in**: Outlook for Windows (Office 365), Outlook for Mac (Office 365), Outlook on the web (Office 365 and Outlook.com), Outlook on the web (Classic)</span></span>
+<span data-ttu-id="494f6-199">**Доступно в** Outlook для Windows (подключенный к Office 365), Outlook в Интернете (классическая версия)</span><span class="sxs-lookup"><span data-stu-id="494f6-199">**Available in**: Outlook for Windows (Office 365), Outlook on the web (Classic)</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="526db-218">См. также</span><span class="sxs-lookup"><span data-stu-id="526db-218">See also</span></span>
+---
 
-- [<span data-ttu-id="526db-219">Надстройки Outlook</span><span class="sxs-lookup"><span data-stu-id="526db-219">Outlook add-ins</span></span>](/outlook/add-ins/)
-- [<span data-ttu-id="526db-220">Примеры кода надстройки Outlook</span><span class="sxs-lookup"><span data-stu-id="526db-220">Outlook add-in code samples</span></span>](https://developer.microsoft.com/outlook/gallery/?filterBy=Outlook,Samples,Add-ins)
-- [<span data-ttu-id="526db-221">Начало работы</span><span class="sxs-lookup"><span data-stu-id="526db-221">Get started</span></span>](/outlook/add-ins/quick-start)
+### <a name="internet-headers"></a><span data-ttu-id="494f6-200">Заголовки Интернета</span><span class="sxs-lookup"><span data-stu-id="494f6-200">Internet headers</span></span>
+
+#### <a name="internetheadersjavascriptapioutlookofficeinternetheaders"></a>[<span data-ttu-id="494f6-201">InternetHeaders</span><span class="sxs-lookup"><span data-stu-id="494f6-201">InternetHeaders</span></span>](/javascript/api/outlook/office.internetheaders)
+
+<span data-ttu-id="494f6-202">Добавлен новый объект, представляющий заголовки Интернета в элементе сообщения.</span><span class="sxs-lookup"><span data-stu-id="494f6-202">Added a new object that represents the internet headers of a message item.</span></span>
+
+<span data-ttu-id="494f6-203">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-203">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
+
+#### <a name="officecontextmailboxiteminternetheadersofficecontextmailboxitemmdinternetheaders-internetheaders"></a>[<span data-ttu-id="494f6-204">Office.context.mailbox.item.internetHeaders</span><span class="sxs-lookup"><span data-stu-id="494f6-204">Office.context.mailbox.item.internetHeaders</span></span>](office.context.mailbox.item.md#internetheaders-internetheaders)
+
+<span data-ttu-id="494f6-205">Добавлено новое свойство, представляющее заголовки Интернета в элементе сообщения.</span><span class="sxs-lookup"><span data-stu-id="494f6-205">Added a new property that represents the internet headers on a message item.</span></span>
+
+<span data-ttu-id="494f6-206">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-206">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
+
+---
+
+### <a name="office-theme"></a><span data-ttu-id="494f6-207">Тема Office</span><span class="sxs-lookup"><span data-stu-id="494f6-207">Office theme</span></span>
+
+#### <a name="officecontextmailboxofficethemejavascriptapiofficeofficeofficetheme"></a>[<span data-ttu-id="494f6-208">Office.context.mailbox.officeTheme</span><span class="sxs-lookup"><span data-stu-id="494f6-208">Office.context.mailbox.officeTheme</span></span>](/javascript/api/office/office.officetheme)
+
+<span data-ttu-id="494f6-209">Добавлена возможность получения темы Office.</span><span class="sxs-lookup"><span data-stu-id="494f6-209">Added ability to get Office theme.</span></span>
+
+<span data-ttu-id="494f6-210">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-210">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
+
+#### <a name="officeeventtypeofficethemechangedjavascriptapiofficeofficeeventtype"></a>[<span data-ttu-id="494f6-211">Office.EventType.OfficeThemeChanged</span><span class="sxs-lookup"><span data-stu-id="494f6-211">Office.EventType.OfficeThemeChanged</span></span>](/javascript/api/office/office.eventtype)
+
+<span data-ttu-id="494f6-212">Добавлено событие `OfficeThemeChanged` в объект `Mailbox`.</span><span class="sxs-lookup"><span data-stu-id="494f6-212">Added `OfficeThemeChanged` event to `Mailbox`.</span></span>
+
+<span data-ttu-id="494f6-213">**Доступно в** Outlook для Windows (подключенный к Office 365)</span><span class="sxs-lookup"><span data-stu-id="494f6-213">**Available in**: Outlook on Windows (connected to Office 365)</span></span>
+
+---
+
+### <a name="sso"></a><span data-ttu-id="494f6-214">Единый вход</span><span class="sxs-lookup"><span data-stu-id="494f6-214">SSO</span></span>
+
+#### <a name="officecontextauthgetaccesstokenasyncofficedevadd-insdevelopsso-in-office-add-inssso-api-reference"></a>[<span data-ttu-id="494f6-215">Office.context.auth.getAccessTokenAsync</span><span class="sxs-lookup"><span data-stu-id="494f6-215">Office.context.auth.getAccessTokenAsync</span></span>](/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference)
+
+<span data-ttu-id="494f6-216">Добавлена возможность доступа к `getAccessTokenAsync`, что позволяет надстройкам [получать маркер доступа](/outlook/add-ins/authenticate-a-user-with-an-sso-token) для API Microsoft Graph.</span><span class="sxs-lookup"><span data-stu-id="494f6-216">Added access to `getAccessTokenAsync`, which allows add-ins to [get an access token](/outlook/add-ins/authenticate-a-user-with-an-sso-token) for the Microsoft Graph API.</span></span>
+
+<span data-ttu-id="494f6-217">**Доступно в** Outlook для Windows (подключенный к Office 365), Outlook для Mac (подключенный к Office 365), Outlook в Интернете (Outlook.com и подключенный к Office 365), Outlook в Интернете (классическая версия)</span><span class="sxs-lookup"><span data-stu-id="494f6-217">**Available in**: Outlook on Windows (connected to Office 365), Outlook for Mac (connected to Office 365), Outlook on the web (Outlook.com and connected to Office 365), Outlook on the web (Classic)</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="494f6-218">См. также</span><span class="sxs-lookup"><span data-stu-id="494f6-218">See also</span></span>
+
+- [<span data-ttu-id="494f6-219">Надстройки Outlook</span><span class="sxs-lookup"><span data-stu-id="494f6-219">Outlook add-ins</span></span>](/outlook/add-ins/)
+- [<span data-ttu-id="494f6-220">Примеры кода надстройки Outlook</span><span class="sxs-lookup"><span data-stu-id="494f6-220">Outlook add-in code samples</span></span>](https://developer.microsoft.com/outlook/gallery/?filterBy=Outlook,Samples,Add-ins)
+- [<span data-ttu-id="494f6-221">Начало работы</span><span class="sxs-lookup"><span data-stu-id="494f6-221">Get started</span></span>](/outlook/add-ins/quick-start)
