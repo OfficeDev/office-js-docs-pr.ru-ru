@@ -1,215 +1,124 @@
 ---
-title: Создание первой надстройки Project
+title: Создание первой надстройки области задач Project
 description: ''
-ms.date: 01/17/2019
+ms.date: 05/08/2019
 ms.prod: project
 localization_priority: Priority
-ms.openlocfilehash: 4d0dfa98d36d6da56fe2b9687922371eea29062a
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: d61f8d83b88dbe69ff0ba9cd4b0afef77a4f03d6
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450790"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952254"
 ---
-# <a name="build-your-first-project-add-in"></a>Создание первой надстройки Project
+# <a name="build-your-first-project-task-pane-add-in"></a>Создание первой надстройки области задач Project
 
-В этой статье мы разберем, как создать надстройку Project, используя jQuery и API JavaScript для Office.
+В этой статье вы ознакомитесь с процессом создания надстройки для области задач Project.
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
-- [Node.js](https://nodejs.org)
+[!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
-- Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
-
-    ```bash
-    npm install -g yo generator-office
-    ```
+- Project 2016 или более поздней версии для Windows
 
 ## <a name="create-the-add-in"></a>Создание надстройки
 
 1. С помощью генератора Yeoman создайте проект надстройки Project. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
-    ```bash
+    ```command&nbsp;line
     yo office
     ```
 
-    - **Выберите тип проекта:** `Office Add-in project using Jquery framework`
+    - **Выберите тип проекта:** `Office Add-in Task Pane project`
     - **Выберите тип сценария:** `Javascript`
     - **Как вы хотите назвать надстройку?** `My Office Add-in`
     - **Какое клиентское приложение Office должно поддерживаться?** `Project`
 
-    ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-project-jquery.png)
+    ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-project.png)
     
     После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
     
 2. Перейдите к корневой папке проекта.
 
-    ```bash
+    ```command&nbsp;line
     cd "My Office Add-in"
     ```
 
+## <a name="explore-the-project"></a>Знакомство с проектом
+
+Проект надстройки, который вы создали с помощью генератора Yeoman, содержит образец кода для простейшей надстройки области задач. 
+
+- Файл **./manifest.xml** в корневом каталоге проекта определяет настройки и возможности надстройки.
+- Файл **./src/taskpane/taskpane.html** содержит разметку HTML для области задач.
+- Файл **./src/taskpane/taskpane.css** содержит код CSS, который применяется к содержимому области задач.
+- Файл **./src/taskpane/taskpane.js** содержит код API JavaScript для Office, который упрощает взаимодействие между областью задач и ведущим приложением Office.
+
 ## <a name="update-the-code"></a>Обновление кода
 
-1. В редакторе кода откройте файл **index.html** из корневой папки проекта. Этот файл содержит HTML-контент, который будет отображаться в области задач надстройки.
+Откройте файл **./src/taskpane/taskpane.js** в редакторе кода и добавьте приведенный ниже код в пределах функции **run**. В этом коде используется API JavaScript для Office, чтобы настроить поле `Name` и поле `Notes` выбранной задачи.
 
-2. Замените элемент `<body>` приведенным ниже исправлением.
+```js
+var taskGuid;
 
-    ```html
-    <body class="ms-font-m ms-welcome">
-        <div id="content-header">
-            <div class="padding">
-                <h1>Welcome</h1>
-            </div>
-        </div>
-        <div id="content-main">
-            <div class="padding">
-                <p>Select a task and then choose the buttons below and observe the output in the <b>Results</b> textbox.</p>
-                <h3>Try it out</h3>
-                <button class="ms-Button" id="get-task-guid">Get Task GUID</button>
-                <br/><br/>
-                <button class="ms-Button" id="get-task">Get Task data</button>
-                <br/>
-                <h4>Results:</h4>
-                <textarea id="result" rows="6" cols="25"></textarea>
-            </div>
-        </div>
-        <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
-        <script type="text/javascript" src="node_modules/office-ui-fabric-js/dist/js/fabric.js"></script>
-    </body>
-    ```
+// Get the GUID of the selected task
+Office.context.document.getSelectedTaskAsync(
+    function (result) {
+        if (result.status === Office.AsyncResultStatus.Succeeded) {
+            taskGuid = result.value;
 
-3. Откройте файл **src/index.js**, чтобы указать скрипт для надстройки. Замените все его содержимое следующим кодом и сохраните файл.
+            // Set the specified fields for the selected task.
+            var targetFields = [Office.ProjectTaskFields.Name, Office.ProjectTaskFields.Notes];
+            var fieldValues = ['New task name', 'Notes for the task.'];
 
-    ```js
-    'use strict';
-
-    (function () {
-
-        var taskGuid;
-
-        Office.onReady(function() {
-            // Office is ready
-            $(document).ready(function () {
-                // The document is ready
-                $('#get-task-guid').click(getTaskGUID);
-                $('#get-task').click(getTask);
-            });
-        });
-
-        function getTaskGUID() {
-            Office.context.document.getSelectedTaskAsync(function (asyncResult) {
-                if (asyncResult.status == Office.AsyncResultStatus.Succeeded) {
-                    result.value = "Task GUID: " + asyncResult.value;
-                    taskGuid = asyncResult.value;
-                }
-                else {
-                    console.log(asyncResult.error.message);
-                }
-            });
-        }
-
-        function getTask() {
-            if (taskGuid != undefined) {
-                Office.context.document.getTaskAsync(
+            // Set the field value. If the call is successful, set the next field.
+            for (var i = 0; i < targetFields.length; i++) {
+                Office.context.document.setTaskFieldAsync(
                     taskGuid,
-                    function (asyncResult) {
-                        if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {
-                            var taskInfo = asyncResult.value;
-                            var taskOutput = "Task name: " + taskInfo.taskName +
-                                            "\nGUID: " + taskGuid +
-                                            "\nWSS Id: " + taskInfo.wssTaskId +
-                                            "\nResource names: " + taskInfo.resourceNames;
-                            result.value = taskOutput;
-                        } else {
-                            console.log(asyncResult.error.message);
+                    targetFields[i],
+                    fieldValues[i],
+                    function (result) {
+                        if (result.status === Office.AsyncResultStatus.Succeeded) {
+                            i++;
+                        }
+                        else {
+                            var err = result.error;
+                            console.log(err.name + ' ' + err.code + ' ' + err.message);
                         }
                     }
                 );
-            } else {
-                result.value = 'Task GUID not valid:\n' + taskGuid;
-            } 
+            }
+        } else {
+            var err = result.error;
+            console.log(err.name + ' ' + err.code + ' ' + err.message);
         }
-    })();
-    ```
-
-4. Откройте файл **app.css** в корневой папке проекта, чтобы указать специальные стили для надстройки. Замените все его содержимое на приведенный ниже код и сохраните файл.
-
-    ```css
-    #content-header {
-        background: #2a8dd4;
-        color: #fff;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 80px; 
-        overflow: hidden;
     }
-
-    #content-main {
-        background: #fff;
-        position: fixed;
-        top: 80px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        overflow: auto; 
-    }
-
-    .padding {
-        padding: 15px;
-    }
-    ```
-
-## <a name="update-the-manifest"></a>Обновление манифеста
-
-1. Откройте файл **manifest.xml**, чтобы определить параметры и возможности надстройки.
-
-2. Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.
-
-3. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его строкой **Надстройка области задач для Project**.
-
-4. Сохраните файл.
-
-    ```xml
-    ...
-    <ProviderName>John Doe</ProviderName>
-    <DefaultLocale>en-US</DefaultLocale>
-    <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
-    <DisplayName DefaultValue="My Office Add-in" />
-    <Description DefaultValue="A task pane add-in for Project"/>
-    ...
-    ```
-
-## <a name="start-the-dev-server"></a>Запуск сервера разработки
-
-[!include[Start server section](../includes/quickstart-yo-start-server.md)] 
+);
+```
 
 ## <a name="try-it-out"></a>Проверка
 
-1. Создайте простой проект Project, содержащий по крайней мере одну задачу.
+1. Запустите локальный веб-сервер, выполнив следующую команду:
 
-2. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Project.
+    ```command&nbsp;line
+    npm start
+    ```
 
-    - [Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-    - [Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-online)
-    - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+    > [!NOTE]
+    > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите `npm start`, примите предложение установить сертификат от генератора Yeoman. 
 
-3. Выберите задачу в Project.
+2. В Project создайте простой план проекта.
 
-    ![Снимок экрана: план проекта в Project с одной выбранной задачей](../images/project_quickstart_addin_1.png)
+3. Загрузите свою надстройку в Project, следуя инструкциям в статье [Загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md).
 
-4. В области задач нажмите кнопку **Get Task GUID**, чтобы записать GUID задачи в поле **Results**.
+4. Выберите отдельную задачу в проекте.
 
-    ![Снимок экрана: план проекта в Project с одной выбранной задачей и GUID в текстовом поле области задач](../images/project_quickstart_addin_2.png)
+5. В нижней части области задач щелкните ссылку **Выполнить**, чтобы переименовать выбранную задачу и добавить к ней примечания.
 
-5. В области задач нажмите кнопку **Get Task data**, чтобы записать несколько свойств выбранной задачи в поле **Results**.
-
-    ![Снимок экрана: план проекта в Project с одной выбранной задачей и несколькими свойствами в текстовом поле области задач](../images/project_quickstart_addin_3.png)
+    ![Снимок экрана: приложение Project с загруженной надстройкой области задач](../images/project-quickstart-addin-1.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Поздравляем, вы успешно создали надстройку Project! Следующим шагом узнайте больше о возможностях надстроек Project и изучите распространенные сценарии.
+Поздравляем! Вы успешно создали надстройку области задач Project! Следующим шагом узнайте больше о возможностях надстроек Project и изучите распространенные сценарии.
 
 > [!div class="nextstepaction"]
 > [Надстройки Project](../project/project-add-ins.md)

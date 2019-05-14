@@ -1,14 +1,14 @@
 ---
-ms.date: 05/03/2019
+ms.date: 05/08/2019
 description: Используйте `OfficeRuntime.storage`, чтобы сохранить состояние с пользовательскими функциями.
 title: Сохранить и передать состояние в пользовательские функции.
 localization_priority: Priority
-ms.openlocfilehash: e7229637705425198d3905c1ff4102022fb99f1e
-ms.sourcegitcommit: 95cf577178c1c88ebbffa77367634658eb7fe925
+ms.openlocfilehash: b1472b0623d15882dabff16f8be3f74756e3b3de
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "33643832"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33951972"
 ---
 ## <a name="save-and-share-state-in-custom-functions"></a>Сохранить и передать состояние в пользовательские функции.
 

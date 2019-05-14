@@ -1,14 +1,14 @@
 ---
-ms.date: 05/03/2019
+ms.date: 05/08/2019
 description: Устранение распространенных проблем в пользовательских функциях Excel.
 title: Устранение проблем в пользовательских функциях
 localization_priority: Priority
-ms.openlocfilehash: 04da6d58c2610130961a1b89d2b9a1101b54bcb2
-ms.sourcegitcommit: ff73cc04e5718765fcbe74181505a974db69c3f5
+ms.openlocfilehash: 999b1fb9b89050ab5c6bcf87e1aac9d2fce13702
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "33628013"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952056"
 ---
 # <a name="troubleshoot-custom-functions"></a>Устранение проблем в пользовательских функциях
 

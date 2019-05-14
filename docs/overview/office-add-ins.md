@@ -1,14 +1,14 @@
 ---
 title: Обзор платформы надстроек Office | Microsoft Docs
 description: Используйте привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений.
-ms.date: 03/19/2019
+ms.date: 05/08/2019
 localization_priority: Priority
-ms.openlocfilehash: 480228c20b20de52a9e1224f6691696b5560986c
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: dc0a7755027e1d6a741e97928f3f2bc25f62f6c3
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32448585"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952350"
 ---
 # <a name="office-add-ins-platform-overview"></a>Обзор платформы надстроек Office
 
@@ -80,7 +80,7 @@ ms.locfileid: "32448585"
 
 #### <a name="custom-buttons-and-menu-commands"></a>Настраиваемые кнопки и команды меню  
 
-Можно добавить настраиваемые кнопки ленты и элементы меню на ленту в Office для Windows Desktop и Office Online. Это упрощает пользователям доступ к надстройке непосредственно из приложения Office. С помощью кнопок можно запускать различные действия, например отображение области задач с пользовательским HTML или выполнение функции JavaScript.  
+Можно добавить настраиваемые кнопки ленты и элементы меню на ленту в Office для настольных компьютеров с Windows и Office Online. Это упрощает пользователям доступ к надстройке непосредственно из приложения Office. С помощью кнопок можно запускать различные действия, например отображение области задач с пользовательским HTML или выполнение функции JavaScript.  
 
 *Рис. 3. Команды надстройки на ленте*
 

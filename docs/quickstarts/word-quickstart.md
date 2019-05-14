@@ -1,21 +1,21 @@
 ---
-title: Создание первой надстройки Word
+title: Создание первой надстройки области задач Word
 description: ''
-ms.date: 03/19/2019
+ms.date: 05/08/2019
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 9da974ff604570367771c98e47d549ecc70eee7b
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: f0fda0c7dcdebdc1fd1b6daf4e35c1794a56e950
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451140"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952266"
 ---
-# <a name="build-your-first-word-add-in"></a>Создание первой надстройки Word
+# <a name="build-your-first-word-task-pane-add-in"></a>Создание первой надстройки области задач Word
 
 _Применяется к: Word 2016 или более поздней версии для Windows, Word для iPad, Word для Mac_
 
-В этой статье мы разберем, как создать надстройку Word, используя jQuery и API JavaScript для Word.
+В этой статье вы ознакомитесь с процессом создания надстройки для области задач Word.
 
 ## <a name="create-the-add-in"></a>Создание надстройки
 
@@ -235,246 +235,71 @@ _Применяется к: Word 2016 или более поздней верс�
 
 # <a name="any-editortabvisual-studio-code"></a>[Любой редактор](#tab/visual-studio-code)
 
-### <a name="prerequisites"></a>Необходимые компоненты
+### <a name="prerequisites"></a>Необходимые условия
 
-- [Node.js](https://nodejs.org)
-
-- Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
-
-    ```bash
-    npm install -g yo generator-office
-    ```
+[!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
 1. С помощью генератора Yeoman создайте проект надстройки Word. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
-    ```bash
+    ```command&nbsp;line
     yo office
     ```
 
-    - **Выберите тип проекта:** `Office Add-in project using Jquery framework`
+    - **Выберите тип проекта:** `Office Add-in Task Pane project`
     - **Выберите тип сценария:** `Javascript`
     - **Как вы хотите назвать надстройку?** `My Office Add-in`
     - **Какое клиентское приложение Office должно поддерживаться?** `Word`
 
-    ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-word-jquery.png)
+    ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-word.png)
 
     После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
 2. Перейдите к корневой папке проекта.
 
-    ```bash
+    ```command&nbsp;line
     cd "My Office Add-in"
     ```
 
-### <a name="update-the-code"></a>Обновление кода
+### <a name="explore-the-project"></a>Знакомство с проектом
 
-1. В редакторе кода откройте файл **index.html** из корневой папки проекта. Этот файл содержит HTML-контент, который будет отображаться в области задач надстройки.
-
-2. Замените элемент `<body>` приведенной ниже разметкой и сохраните файл.
-
-    ```html
-    <body>
-        <div id="content-header">
-            <div class="padding">
-                <h1>Welcome</h1>
-            </div>
-        </div>
-        <div id="content-main">
-            <div class="padding">
-                <p>Choose the buttons below to add boilerplate text to the document by using the Word JavaScript API.</p>
-                <br />
-                <h3>Try it out</h3>
-                <button id="emerson">Add quote from Ralph Waldo Emerson</button>
-                <br /><br />
-                <button id="checkhov">Add quote from Anton Chekhov</button>
-                <br /><br />
-                <button id="proverb">Add Chinese proverb</button>
-            </div>
-        </div>
-        <br />
-        <div id="supportedVersion" />
-        <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
-        <script type="text/javascript" src="node_modules/office-ui-fabric-js/dist/js/fabric.js"></script>
-    </body>
-    ```
-
-3. Откройте файл **src/index.js**, чтобы указать скрипт для надстройки. Замените все его содержимое следующим кодом и сохраните файл. Этот скрипт содержит код инициализации, а также код, вносящий изменения в документ Word, вставляя текст при нажатии кнопки.
-
-    ```js
-    'use strict';
-
-    (function () {
-
-        Office.onReady(function() {
-            // Office is ready
-            $(document).ready(function () {
-                // The document is ready
-                // Use this to check whether the API is supported in the Word client.
-                if (Office.context.requirements.isSetSupported('WordApi', 1.1)) {
-                    // Do something that is only available via the new APIs
-                    $('#emerson').click(insertEmersonQuoteAtSelection);
-                    $('#checkhov').click(insertChekhovQuoteAtTheBeginning);
-                    $('#proverb').click(insertChineseProverbAtTheEnd);
-                    $('#supportedVersion').html('This code is using Word 2016 or later.');
-                }
-                else {
-                    // Just letting you know that this code will not work with your version of Word.
-                    $('#supportedVersion').html('This code requires Word 2016 or later.');
-                }
-            });
-        });
-
-        function insertEmersonQuoteAtSelection() {
-            Word.run(function (context) {
-
-                // Create a proxy object for the document.
-                var thisDocument = context.document;
-
-                // Queue a command to get the current selection.
-                // Create a proxy range object for the selection.
-                var range = thisDocument.getSelection();
-
-                // Queue a command to replace the selected text.
-                range.insertText('"Hitch your wagon to a star."\n', Word.InsertLocation.replace);
-
-                // Synchronize the document state by executing the queued commands,
-                // and return a promise to indicate task completion.
-                return context.sync().then(function () {
-                    console.log('Added a quote from Ralph Waldo Emerson.');
-                });
-            })
-            .catch(function (error) {
-                console.log('Error: ' + JSON.stringify(error));
-                if (error instanceof OfficeExtension.Error) {
-                    console.log('Debug info: ' + JSON.stringify(error.debugInfo));
-                }
-            });
-        }
-
-        function insertChekhovQuoteAtTheBeginning() {
-            Word.run(function (context) {
-
-                // Create a proxy object for the document body.
-                var body = context.document.body;
-
-                // Queue a command to insert text at the start of the document body.
-                body.insertText('"Knowledge is of no value unless you put it into practice."\n', Word.InsertLocation.start);
-
-                // Synchronize the document state by executing the queued commands,
-                // and return a promise to indicate task completion.
-                return context.sync().then(function () {
-                    console.log('Added a quote from Anton Chekhov.');
-                });
-            })
-            .catch(function (error) {
-                console.log('Error: ' + JSON.stringify(error));
-                if (error instanceof OfficeExtension.Error) {
-                    console.log('Debug info: ' + JSON.stringify(error.debugInfo));
-                }
-            });
-        }
-
-        function insertChineseProverbAtTheEnd() {
-            Word.run(function (context) {
-
-                // Create a proxy object for the document body.
-                var body = context.document.body;
-
-                // Queue a command to insert text at the end of the document body.
-                body.insertText('"To know the road ahead, ask those coming back."\n', Word.InsertLocation.end);
-
-                // Synchronize the document state by executing the queued commands,
-                // and return a promise to indicate task completion.
-                return context.sync().then(function () {
-                    console.log('Added a quote from a Chinese proverb.');
-                });
-            })
-            .catch(function (error) {
-                console.log('Error: ' + JSON.stringify(error));
-                if (error instanceof OfficeExtension.Error) {
-                    console.log('Debug info: ' + JSON.stringify(error.debugInfo));
-                }
-            });
-        }
-    })();
-    ```
-
-4. Откройте файл **app.css** в корневой папке проекта, чтобы указать специальные стили для надстройки. Замените все его содержимое на приведенный ниже код и сохраните файл.
-
-    ```css
-    #content-header {
-        background: #2a8dd4;
-        color: #fff;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 80px; 
-        overflow: hidden;
-    }
-
-    #content-main {
-        background: #fff;
-        position: fixed;
-        top: 80px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        overflow: auto;
-    }
-
-    .padding {
-        padding: 15px;
-    }
-    ```
-
-### <a name="update-the-manifest"></a>Обновление манифеста
-
-1. Откройте файл **manifest.xml**, чтобы определить параметры и возможности надстройки.
-
-2. Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.
-
-3. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его строкой **Надстройка области задач для Word**.
-
-4. Сохраните файл.
-
-    ```xml
-    ...
-    <ProviderName>John Doe</ProviderName>
-    <DefaultLocale>en-US</DefaultLocale>
-    <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
-    <DisplayName DefaultValue="My Office Add-in" />
-    <Description DefaultValue="A task pane add-in for Word"/>
-    ...
-    ```
-
-### <a name="start-the-dev-server"></a>Запуск сервера разработки
-
-[!include[Start server section](../includes/quickstart-yo-start-server.md)] 
+[!include[Yeoman generator add-in project components](../includes/yo-task-pane-project-components-js.md)]
 
 ### <a name="try-it-out"></a>Проверка
 
-1. Следуйте инструкциям для нужной платформы, чтобы загрузить неопубликованную надстройку в Word.
+1. Запустите локальный веб-сервер и загрузите неопубликованную надстройку.
 
-    - [Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-    - [Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-online)
-    - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+    > [!NOTE]
+    > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите одну из указанных ниже команд, примите предложение установить сертификат, предоставленный генератором Yeoman. 
 
-2. В Word выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
+    - Чтобы проверить надстройку в Word, выполните следующую команду. Когда вы выполните эту команду, запустится локальный веб-сервер и откроется приложение Word, в котором будет загружена ваша надстройка.
 
-    ![Снимок экрана: приложение Word с выделенной кнопкой "Показать область задач"](../images/word-quickstart-addin-2.png)
+        ```command&nbsp;line
+        npm start
+        ```
 
-3. В области задач нажмите любую кнопку, чтобы добавить стандартный текст в документ.
+    - Чтобы проверить надстройку в Word Online, выполните следующую команду. После выполнения этой команды запустится локальный веб-сервер.
 
-    ![Снимок экрана: приложение Word с загруженной надстройкой, добавляющей стандартный текст.](../images/word-quickstart-addin-1.png)
+        ```command&nbsp;line
+        npm run start:web
+        ```
+
+        Чтобы использовать надстройку, откройте новый документ в Word Online и затем загрузите неопубликованную надстройку, следуя инструкциям в статье [Загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-online).
+
+2. В Word откройте новый документ, выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
+
+    ![Снимок экрана: приложение Word с выделенной кнопкой "Показать область задач"](../images/word-quickstart-addin-2b.png)
+
+3. В нижней части области задач выберите ссылку **Выполнить**, чтобы добавить текст "Hello World" синего цвета в документ.
+
+    ![Снимок экрана: приложение Word с загруженной надстройкой области задач](../images/word-quickstart-addin-1c.png)
 
 ---
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Поздравляем, вы успешно создали надстройку Word с помощью jQuery! Чтобы узнать больше о возможностях надстроек Word и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Word.
+Поздравляем! Вы успешно создали надстройку области задач Word! Чтобы узнать больше о возможностях надстроек Word и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Word.
 
 > [!div class="nextstepaction"]
 > [Руководство по надстройкам Word](../tutorials/word-tutorial.md)

@@ -1,14 +1,14 @@
 ---
 title: Версии Office и наборы обязательных элементов
 description: ''
-ms.date: 04/19/2019
+ms.date: 05/08/2019
 localization_priority: Priority
-ms.openlocfilehash: e1047501cdac8dc88ab9f7778b846e171ee02d44
-ms.sourcegitcommit: 7462409209264dc7f8f89f3808a7a6249fcd739e
+ms.openlocfilehash: 6d0952c32c08c9a4a3e9b07ee8bbcf209084c3d0
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "33440040"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952119"
 ---
 # <a name="office-versions-and-requirement-sets"></a>Версии Office и наборы обязательных элементов
 
@@ -26,7 +26,6 @@ ms.locfileid: "33440040"
 
 ![Проверка версии Office](../images/office-version-number-ui.jpg)
 
-
 ## <a name="office-requirement-sets-availability"></a>Доступность наборов обязательных элементов для Office
 
 Используя наборы обязательных элементов API, надстройки Office могут определять, поддерживает ли ведущее приложение Office необходимые элементы API. Поддержка набора обязательных элементов зависит от ведущего приложения Office и его версии (см. предыдущий раздел).
@@ -37,7 +36,7 @@ ms.locfileid: "33440040"
 
 Надстройка может использовать API только в наборах обязательных элементов, поддерживаемых версией ведущего приложения Office, в которой она работает. Чтобы узнать, какие наборы обязательных элементов доступны для конкретной версии ведущего приложения Office, просмотрите следующие статьи:
 
-- [Наборы обязательных элементов API JavaScript для Excel](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) (ExcelApi)
+- [Наборы обязательных элементов API JavaScript для Excel](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) (ExcelApi, [CustomFunctionsRuntime](../excel/custom-functions-architecture.md))
 - [Наборы обязательных элементов API JavaScript для Word](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) (WordApi)
 - [Наборы обязательных элементов API JavaScript для OneNote](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) (OneNoteApi)
 - [Общие сведения о наборах обязательных элементов API Outlook](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) (MailBox)

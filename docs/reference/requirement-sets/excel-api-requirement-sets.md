@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Excel
 description: ''
-ms.date: 05/06/2019
+ms.date: 05/08/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 1735c01a8c17c31e632432d914770a800846508e
-ms.sourcegitcommit: 5b9c2b39dfe76cabd98bf28d5287d9718788e520
+ms.openlocfilehash: aebb85250743255cbc9c139d59e7e2fa5ef4e442
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "33659644"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952364"
 ---
 # <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
 
@@ -22,7 +22,7 @@ ms.locfileid: "33659644"
 >
 > Сведения об использовании API предварительных версий см. в разделе [Предварительные версии API JavaScript для Excel](#excel-javascript-preview-apis) этой статьи.
 
-|  Набор обязательных элементов  |  Office 365 для Windows  |  Office 365 для iPad  |  Office 365 для Mac  | Office Online  |  Office Online Server  |
+|  Набор обязательных элементов  |  Office для Windows<br>(подключенный к Office 365)  |  Office для iPad<br>(подключенный к Office 365)  |  Office для Mac<br>(подключенный к Office 365)  | Office Online  |  Office Online Server  |
 |:-----|-----|:-----|:-----|:-----|:-----|
 | [Предварительная версия](/javascript/api/excel)  | Применяйте последнюю версию Office для использования предварительных версий API (может потребоваться присоединение к [программе предварительной оценки Office](https://products.office.com/office-insider)) |
 | ExcelApi 1.9  | Версия 1903 (сборка 11425.20204) или более поздняя | 2.24 или более поздняя версия | 16.24 или более поздняя версия | Май 2019 г.       | Скоро |
@@ -42,7 +42,7 @@ ms.locfileid: "33659644"
 
 [Пользовательские функции](../../excel/custom-functions-overview.md) используют отдельный набор обязательных элементов из основных интерфейсов API JavaScript для Excel. В следующей таблице перечислены наборы обязательных элементов для пользовательских функций, поддерживаемые ведущие приложения Office и номера сборок или версий для этих приложений.
 
-|  Набор обязательных элементов  |  Office 365 для Windows  |  Office 365 для iPad  |  Office 365 для Mac  | Office Online | Office Online Server |
+|  Набор обязательных элементов  |  Office для Windows<br>(подключенный к Office 365)  |  Office для iPad<br>(подключенный к Office 365)  |  Office для Mac<br>(подключенный к Office 365)  | Office Online | Office Online Server |
 |:-----|-----|:-----|:-----|:-----|:-----|
 | CustomFunctionsRuntime 1.1 | Версия 1904 (сборка 11601.20144) или более поздняя | Не поддерживается | 16.24 или более поздняя версия | Апрель 2019 г. | Скоро |
 
@@ -1631,7 +1631,7 @@ API включают `getItem()` для получения параметра с
 |[settingsChangedEventArgs](/javascript/api/excel/excel.settingschangedeventargs)|_Связь_ > settingCollection|Получает объект Setting, представляющий привязку, которая вызвала событие SettingsChanged.|1.3|
 |[table](/javascript/api/excel/excel.table)|_Свойство_ > highlightFirstColumn|Указывает, содержит ли первый столбец специальное форматирование.|1.3|
 |[table](/javascript/api/excel/excel.table)|_Свойство_ > highlightLastColumn|Указывает, содержит ли последний столбец специальное форматирование.|1.3|
-|[table](/javascript/api/excel/excel.table)|_Свойство_ > showBandedColumns|Указывает, чередуется ли форматирование четных и нечетных столбцов для более удобного просмотра таблицы.|1.3|
+|[таблица](/javascript/api/excel/excel.table)|_Свойство_ > showBandedColumns|Указывает, чередуется ли форматирование четных и нечетных столбцов для более удобного просмотра таблицы.|1.3|
 |[table](/javascript/api/excel/excel.table)|_Свойство_ > showBandedRows|Указывает, чередуется ли форматирование четных и нечетных строк для более удобного просмотра таблицы.|1.3|
 |[table](/javascript/api/excel/excel.table)|_Свойство_ > showFilterButton|Указывает, видны ли кнопки фильтрации в верхней части заголовков столбцов. Это свойство можно использовать, только если таблица содержит строку заголовков.|1.3|
 |[tableCollection](/javascript/api/excel/excel.tablecollection)|_Метод_ > getItemOrNull(key: number или string)|Получает таблицу по имени или идентификатору. Если таблица не существует, у свойства isNull возвращаемого объекта будет значение true.|1.3|

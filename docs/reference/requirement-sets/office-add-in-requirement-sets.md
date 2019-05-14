@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов общего API для Office
 description: ''
-ms.date: 04/10/2019
+ms.date: 05/08/2019
 ms.prod: non-product-specific
 localization_priority: Priority
-ms.openlocfilehash: 16f77e81d149aa2323760013f64fbf36f4ce7d8f
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 1d7052ec5b790805abdf9a893855919ca685c404
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450109"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952228"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
@@ -49,7 +49,7 @@ ms.locfileid: "32450109"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Веб-приложения Access<br>Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Binding.addHanderAsync<br>Binding.removeHanderAsync|
+| Веб-приложения Access<br>Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Binding.addHandlerAsync<br>Binding.removeHandlerAsync|
 
 ---
 

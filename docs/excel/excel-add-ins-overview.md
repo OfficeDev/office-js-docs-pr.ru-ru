@@ -1,14 +1,14 @@
 ---
 title: Общие сведения о надстройках Excel
 description: ''
-ms.date: 03/19/2019
+ms.date: 05/08/2019
 localization_priority: Priority
-ms.openlocfilehash: 3a6e00ebb5c91af135d709c1ae9f86fc5d2e2924
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: cbeb1fa6ae0d88724b7da3fbcb45f8216b6010a6
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32448355"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33951923"
 ---
 # <a name="excel-add-ins-overview"></a>Общие сведения о надстройках Excel
 
@@ -27,7 +27,7 @@ ms.locfileid: "32448355"
 * **Распространение через AppSource**. Представьте свою надстройку Excel широкой аудитории, опубликовав ее в [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office&page=1&src=office&corrid=53245fad-fcbe-41f8-9f97-b0840264f97c&omexanonuid=4a0102fb-b31a-4b9f-9bb0-39d4cc6b789d).
 
 > [!NOTE]
-> Надстройки Excel отличаются от надстроек COM и VSTO — устаревших решений для интеграции с Office, работающих только в Office для Windows. В отличие от надстроек COM, надстройки Excel не требуют установки какого-либо кода на устройстве пользователя или в Excel. 
+> Надстройки Excel отличаются от надстроек COM и VSTO — устаревших решений для интеграции с Office, работающих только в Office для Windows. В отличие от надстроек COM, надстройки Excel не требуют установки какого-либо кода на устройстве пользователя или в Excel.
 
 ## <a name="components-of-an-excel-add-in"></a>Компоненты надстройки Excel
 

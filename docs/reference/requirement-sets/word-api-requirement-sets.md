@@ -1,28 +1,28 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Word
 description: ''
-ms.date: 03/19/2019
+ms.date: 05/08/2019
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 21bd99dda479c0c2181f546303e79e50f33ded00
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 0f9d17669a8000f5d8d9f0b2d1da04eb0175315c
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451523"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952238"
 ---
 # <a name="word-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Word
 
 Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets).
 
-Надстройки Word работают в нескольких версиях Office, включая Office 2016 для Windows, Office для iPad, Office для Mac и Office Online. В приведенной ниже таблице перечислены наборы требований Word, ведущие приложения Office, которые их поддерживают, а также номера сборок или версий для этих приложений.
+Надстройки Word работают в нескольких версиях Office, включая Office 2016 или более поздней версии для Windows, Office для iPad, Office для Mac и Office Online. В приведенной ниже таблице перечислены наборы требований Word, ведущие приложения Office, которые их поддерживают, а также номера сборок или версий для этих приложений.
 
 > [!NOTE]
 > В случае наборов обязательных элементов, помеченных как таковые для бета-версии, используйте указанную или более позднюю версию программного обеспечения Office и бета-версию библиотеки CDN: https://appsforoffice.microsoft.com/lib/beta/hosted/office.js.
 > 
 > Записи, не помеченные как таковые для бета-версии, общедоступны, и вы можете продолжать использовать библиотеку CDN для рабочей среды: https://appsforoffice.microsoft.com/lib/1/hosted/office.js
 
-|  Набор обязательных элементов  |   Microsoft Office 365 для Windows\*  |  Office 365 для iPad  |  Office 365 для Mac  | Office Online  | Office Online Server  |
+|  Набор обязательных элементов  |   Office для Windows\*<br>(подключенный к Office 365)  |  Office для iPad<br>(подключенный к Office 365)  |  Office для Mac<br>(подключенный к Office 365)  | Office Online  | Office Online Server  |
 |:-----|-----|:-----|:-----|:-----|:-----|
 | WordApi 1.3 | Версия 1612 (сборка 7668.1000) или более поздняя| Март 2017 г., 2.22 или более поздняя | Март 2017 г., 15.32 или более поздняя| Март 2017 г. ||
 | WordApi 1.2  | Обновление за декабрь 2015 г., версия 1601 (сборка 6568.1000) или выше | Январь 2016 г., версия 1.18 или выше | Январь 2016 г., версия 15.19 или выше| Сентябрь 2016 г. | |

@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: ''
-ms.date: 04/17/2019
+ms.date: 05/08/2019
 localization_priority: Priority
-ms.openlocfilehash: 9a3d09a78a7644b3b26c345ba2588a1fae59c1eb
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: e4627699edad801ab4a3a5a65e6307d40d1b4ac9
+ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450480"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "33952357"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -39,43 +39,43 @@ ms.locfileid: "32450480"
 
 Добавлен новый объект, представляющий содержимое вложения.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="officecontextmailboxitemaddfileattachmentfrombase64asyncofficecontextmailboxitemmdaddfileattachmentfrombase64asyncbase64file-attachmentname-options-callback"></a>[Office.context.mailbox.item.addFileAttachmentFromBase64Async](office.context.mailbox.item.md#addfileattachmentfrombase64asyncbase64file-attachmentname-options-callback)
 
 Добавлен новый метод, который позволяет вложить в сообщение или встречу файл, представленный в виде строки в кодировке base64.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="officecontextmailboxitemgetattachmentcontentasyncofficecontextmailboxitemmdgetattachmentcontentasyncattachmentid-options-callback--attachmentcontent"></a>[Office.context.mailbox.item.getAttachmentContentAsync](office.context.mailbox.item.md#getattachmentcontentasyncattachmentid-options-callback--attachmentcontent)
 
 Добавлен новый метод, позволяющий получить содержимое определенного вложения.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="officecontextmailboxitemgetattachmentsasyncofficecontextmailboxitemmdgetattachmentsasyncoptions-callback--arrayattachmentdetails"></a>[Office.context.mailbox.item.getAttachmentsAsync](office.context.mailbox.item.md#getattachmentsasyncoptions-callback--arrayattachmentdetails)
 
 Добавлен новый метод, который получает вложенные в элемент объекты в режиме создания.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="officemailboxenumsattachmentcontentformatjavascriptapioutlookofficemailboxenumsattachmentcontentformat"></a>[Office.MailboxEnums.AttachmentContentFormat](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat)
 
 Добавлено новое перечисление, в котором указывается форматирование, применяемое к содержимому вложения.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="officemailboxenumsattachmentstatusjavascriptapioutlookofficemailboxenumsattachmentstatus"></a>[Office.MailboxEnums.AttachmentStatus](/javascript/api/outlook/office.mailboxenums.attachmentstatus)
 
 Добавлено новое перечисление, в котором указывается, добавлено вложение в элемент или удалено из него.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="officeeventtypeattachmentschangedjavascriptapiofficeofficeeventtype"></a>[Office.EventType.AttachmentsChanged](/javascript/api/office/office.eventtype)
 
 Добавлено событие `AttachmentsChanged` в объект `Item`.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 ---
 
@@ -90,37 +90,37 @@ ms.locfileid: "32450480"
 
 Добавлен новый объект, представляющий категории элемента.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="categorydetailsjavascriptapioutlookofficecategorydetails"></a>[CategoryDetails](/javascript/api/outlook/office.categorydetails)
 
 Добавлен новый объект, представляющий сведения о категории (ее имя и соответствующий цвет).
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="mastercategoriesjavascriptapioutlookofficemastercategories"></a>[MasterCategories](/javascript/api/outlook/office.mastercategories)
 
 Добавлен новый объект, представляющий главный список категорий для почтового ящика.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="officecontextmailboxmastercategoriesjavascriptapioutlookofficemailboxmastercategories"></a>[Office.context.mailbox.masterCategories](/javascript/api/outlook/office.mailbox#mastercategories)
 
 Добавлено новое свойство, представляющее главный список категорий для почтового ящика.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="officecontextmailboxitemcategoriesjavascriptapioutlookofficeitemcategories"></a>[Office.context.mailbox.item.categories](/javascript/api/outlook/office.item#categories)
 
 Добавлено новое свойство, представляющее набор категорий для элемента.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="officemailboxenumscategorycolorjavascriptapioutlookofficemailboxenumscategorycolor"></a>[Office.MailboxEnums.CategoryColor](/javascript/api/outlook/office.mailboxenums.categorycolor)
 
 Добавлено новое перечисление, указывающее цвета, доступные для сопоставления с категориями.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 ---
 
@@ -130,25 +130,25 @@ ms.locfileid: "32450480"
 
 Добавлен новый объект, который представляет свойства элемента встречи или сообщения в общей папке, календаре или почтовом ящике.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="officecontextmailboxitemgetsharedpropertiesasyncofficecontextmailboxitemmdgetsharedpropertiesasyncoptions-callback"></a>[Office.context.mailbox.item.getSharedPropertiesAsync](office.context.mailbox.item.md#getsharedpropertiesasyncoptions-callback)
 
 Добавлен новый метод, позволяющий получить объект, который представляет свойства sharedProperties элемента встречи или сообщения.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="officemailboxenumsdelegatepermissionsjavascriptapioutlookofficemailboxenumsdelegatepermissions"></a>[Office.MailboxEnums.DelegatePermissions](/javascript/api/outlook/office.mailboxenums.delegatepermissions)
 
 Добавлено перечисление нового битового флага, в котором указываются разрешения на делегирование.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="supportssharedfolders-manifest-elementmanifestsupportssharedfoldersmd"></a>[Элемент манифеста SupportsSharedFolders](../../manifest/supportssharedfolders.md)
 
 К элементу манифеста [DesktopFormFactor](../../manifest/desktopformfactor.md) добавлен дочерний элемент. Он определяет, доступна ли надстройка в сценариях делегирования.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 ---
 
@@ -158,37 +158,37 @@ ms.locfileid: "32450480"
 
 Добавлен новый объект, представляющий набор расположений для встречи.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="locationdetailsjavascriptapioutlookofficelocationdetails"></a>[LocationDetails](/javascript/api/outlook/office.locationdetails)
 
 Добавлен новый объект, представляющий расположение. Только для чтения.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="locationidentifierjavascriptapioutlookofficelocationidentifier"></a>[LocationIdentifier](/javascript/api/outlook/office.locationidentifier)
 
 Добавлен новый объект, представляющий идентификатор расположения.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="officecontextmailboxitemenhancedlocationofficecontextmailboxitemmdenhancedlocation-enhancedlocation"></a>[Office.context.mailbox.item.enhancedLocation](office.context.mailbox.item.md#enhancedlocation-enhancedlocation)
 
 Добавлено новое свойство, представляющее набор расположений для встречи.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="officemailboxenumslocationtypejavascriptapioutlookofficemailboxenumslocationtype"></a>[Office.MailboxEnums.LocationType](/javascript/api/outlook/office.mailboxenums.locationtype)
 
 Добавлено новое перечисление, которое определяет тип расположения встречи.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="officeeventtypeenhancedlocationschangedjavascriptapiofficeofficeeventtype"></a>[Office.EventType.EnhancedLocationsChanged](/javascript/api/office/office.eventtype)
 
 Добавлено событие `EnhancedLocationsChanged` в объект `Item`.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 ---
 
@@ -198,7 +198,7 @@ ms.locfileid: "32450480"
 
 Добавлена новая функция, которая возвращает данные инициализации, передаваемые при [активации надстройки интерактивным сообщением](/outlook/actionable-messages/invoke-add-in-from-actionable-message).
 
-**Доступно в** Outlook для Windows (Office 365), Outlook в Интернете (классическая версия)
+**Доступно в** Outlook для Windows (подключенный к Office 365), Outlook в Интернете (классическая версия)
 
 ---
 
@@ -208,13 +208,13 @@ ms.locfileid: "32450480"
 
 Добавлен новый объект, представляющий заголовки Интернета в элементе сообщения.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="officecontextmailboxiteminternetheadersofficecontextmailboxitemmdinternetheaders-internetheaders"></a>[Office.context.mailbox.item.internetHeaders](office.context.mailbox.item.md#internetheaders-internetheaders)
 
 Добавлено новое свойство, представляющее заголовки Интернета в элементе сообщения.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 ---
 
@@ -224,13 +224,13 @@ ms.locfileid: "32450480"
 
 Добавлена возможность получения темы Office.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 #### <a name="officeeventtypeofficethemechangedjavascriptapiofficeofficeeventtype"></a>[Office.EventType.OfficeThemeChanged](/javascript/api/office/office.eventtype)
 
 Добавлено событие `OfficeThemeChanged` в объект `Mailbox`.
 
-**Доступно в** Outlook для Windows (Office 365)
+**Доступно в** Outlook для Windows (подключенный к Office 365)
 
 ---
 
@@ -240,7 +240,7 @@ ms.locfileid: "32450480"
 
 Добавлена возможность доступа к `getAccessTokenAsync`, что позволяет надстройкам [получать маркер доступа](/outlook/add-ins/authenticate-a-user-with-an-sso-token) для API Microsoft Graph.
 
-**Доступно в** Outlook для Windows (Office 365), Outlook для Mac (Office 365), Outlook в Интернете (Office 365 и Outlook.com), Outlook в Интернете (классическая версия)
+**Доступно в** Outlook для Windows (подключенный к Office 365), Outlook для Mac (подключенный к Office 365), Outlook в Интернете (Outlook.com и подключенный к Office 365), Outlook в Интернете (классическая версия)
 
 ## <a name="see-also"></a>См. также
 
