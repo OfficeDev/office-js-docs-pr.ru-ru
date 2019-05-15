@@ -199,7 +199,7 @@
           href: develop/automatically-open-a-task-pane-with-a-document.md
         - name: Ограничения для одной политики происхождения
           href: develop/addressing-same-origin-policy-limitations.md
-        - name: Локализация
+        - name: локализация.
           href: develop/localization.md
         - name: Разработка надстроек с помощью Visual Studio
           items:
@@ -299,7 +299,7 @@
                 - name: Определение эквивалентного XLL
                   href: excel/make-custom-functions-compatible-with-xll-udf.md
                   displayName: Excel
-                - name: Локализация
+                - name: локализация.
                   href: excel/custom-functions-localize.md
                   displayName: Excel
                 - name: Метаданные
@@ -359,7 +359,7 @@
             - name: Формы
               href: excel/excel-add-ins-shapes.md
               displayName: Excel
-            - name: таблицы;
+            - name: Tables
               href: excel/excel-add-ins-tables.md
               displayName: Excel
             - name: Книги
@@ -711,7 +711,9 @@
         - name: Справочные материалы по API Word
           href: /javascript/api/word
     - name: Открытые спецификации API
-      href: reference/openspec.md
+      items:
+        - name: Обзор
+          href: reference/openspec/openspec.md
     - name: Коды ошибок
       href: reference/javascript-api-for-office-error-codes.md
     - name: Справочник по манифесту надстроек Office
@@ -734,7 +736,7 @@
           href: reference/manifest/description.md
         - name: DesktopSettings
           href: reference/manifest/desktopsettings.md
-        - name: Словарь
+        - name: Dictionary
           href: reference/manifest/dictionary.md
         - name: DictionaryHomePage
           href: reference/manifest/dictionaryhomepage.md
@@ -754,7 +756,7 @@
           href: reference/manifest/formsettings.md
         - name: HighResolutionIconUrl
           href: reference/manifest/highresolutioniconurl.md
-        - name: Host (Узел)
+        - name: Узел
           href: reference/manifest/host.md
         - name: Hosts
           href: reference/manifest/hosts.md
