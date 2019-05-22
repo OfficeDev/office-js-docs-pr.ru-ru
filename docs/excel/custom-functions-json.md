@@ -3,12 +3,12 @@ ms.date: 05/03/2019
 description: Определение метаданных для настраиваемых функций в Excel.
 title: Метаданные для пользовательских функций в Excel
 localization_priority: Normal
-ms.openlocfilehash: 92e2b1aaae46d376cc8033b304192d7ce8489fd8
-ms.sourcegitcommit: ff73cc04e5718765fcbe74181505a974db69c3f5
+ms.openlocfilehash: d6cfd61eabc5b27105414082675b35d3ff0ceb41
+ms.sourcegitcommit: b0e71ae0ae09c57b843d4de277081845c108a645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "33628076"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "34337169"
 ---
 # <a name="custom-functions-metadata"></a>Метаданные пользовательских функций
 
@@ -122,7 +122,7 @@ ms.locfileid: "33628076"
 |  Свойство  |  Тип данных  |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|:-----|
 |  `description`  |  string  |  Нет  |  Описание функции, которое отображается пользователям в Excel (например, **преобразует значение по шкале Цельсия в температуру по шкале Фаренгейта**). |
-|  `helpUrl`  |  string  |   Нет  |  URL-адрес, по которому можно получить сведения о функции (отображается в области задач). Пример: **http://contoso.com/help/convertcelsiustofahrenheit.html**. |
+|  `helpUrl`  |  string  |   Нет  |  URL-адрес, по которому можно получить сведения о функции (отображается в области задач). Пример: `http://contoso.com/help/convertcelsiustofahrenheit.html`. |
 | `id`     | string | Да | Уникальный идентификатор для функции. Этот идентификатор может содержать только буквы, цифры и точки и не может изменяться после настройки. |
 |  `name`  |  string  |  Да  |  Имя функции, которое отображается пользователям в Excel. В Excel имя этой функции будет присоединено в качестве префикса пространством имен настраиваемой функции, указанным в XML-файле манифеста. |
 |  `options`  |  объект  |  Нет  |  Позволяет настроить некоторые аспекты того, как и когда Excel выполняет функцию. Дополнительные сведения см. в разделе [options](#options). |
@@ -165,7 +165,7 @@ ms.locfileid: "33628076"
 
 ## <a name="see-also"></a>См. также
 
-* [Автоматически создавать метаданные JSON для пользовательских функций](custom-functions-json-autogeneration.md)
+* [Автоматическое генерирование метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md)
 * [Параметры параметров пользовательских функций](custom-functions-parameter-options.md)
 * [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)

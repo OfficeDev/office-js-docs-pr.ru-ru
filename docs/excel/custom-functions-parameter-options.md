@@ -3,12 +3,12 @@ ms.date: 05/09/2019
 description: Узнайте, как использовать различные параметры в пользовательских функциях, таких как диапазоны Excel, необязательные параметры, контекст вызова и многое другое.
 title: Параметры для пользовательских функций Excel
 localization_priority: Normal
-ms.openlocfilehash: ba437f3a49ec3129b72f3396e85fcbd46af82cb7
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: 7bf195bbae696274518966e2a24bd9819e9c3f4b
+ms.sourcegitcommit: b0e71ae0ae09c57b843d4de277081845c108a645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33952077"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "34337190"
 ---
 # <a name="custom-functions-parameter-options"></a>Параметры параметров пользовательских функций
 
@@ -33,7 +33,7 @@ ms.locfileid: "33952077"
  * @returns {number} The sum of the numbers.
  */
 function add(first, second, third) {
-  if (third === undefined) {
+  if (third !== undefined) {
     return first + second + third;
   }
   return first + second;

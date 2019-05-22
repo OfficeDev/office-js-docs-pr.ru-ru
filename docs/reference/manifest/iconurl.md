@@ -1,14 +1,14 @@
 ---
 title: Элемент IconUrl в файле манифеста
 description: ''
-ms.date: 03/19/2019
+ms.date: 05/20/2019
 localization_priority: Normal
-ms.openlocfilehash: f7eda7ec9e4c5da8ad0b19e5e10649696d4e85c1
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 0f518741f0139c9cb240196592edae22b1b09ee7
+ms.sourcegitcommit: b0e71ae0ae09c57b843d4de277081845c108a645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32452111"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "34337204"
 ---
 # <a name="iconurl-element"></a>Элемент IconUrl
 
@@ -37,3 +37,5 @@ ms.locfileid: "32452111"
 Значок почтовой надстройки отображается в разделе **Файл**  >  **Управление надстройками** (Outlook) или **Параметры**  >  **Управление надстройками** UI (Outlook Web App). Значок надстройки области задач или контентной надстройки отображается в разделе **Вставка**  >  **Надстройки**. В случае всех типов надстроек значок также используется на сайте Магазина Office, если надстройка опубликована там.
 
 Изображение должно быть в формате GIF, JPG, PNG, EXIF, BMP или TIFF. Для приложений области задач и приложений для работы с контентом указанное изображение должно иметь размеры 32 х 32 пикселя. Для почтовых приложений рекомендуется размер изображения 64 х 64 пикселя. Кроме того, следует указать значок, который будет использоваться в ведущих приложениях Office на экранах c высоким DPI, при помощи элемента [HighResolutionIconUrl](highresolutioniconurl.md). Дополнительные сведения см. в разделе _Создание согласованного визуального образа приложения_ статьи [Создание эффективных описаний в AppSource и в Office](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity).
+
+Изменение значения `IconUrl` элемента во время выполнения в настоящее время не поддерживается.
