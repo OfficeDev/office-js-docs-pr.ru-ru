@@ -3,12 +3,12 @@ ms.date: 05/08/2019
 description: Узнайте о требованиях для использования надстройки COM и функций, совместимых с XLL UDF.
 title: Требования к надстройке COM и XLL UDF
 localization_priority: Priority
-ms.openlocfilehash: 977c45d7aeee80a56eb1d251eadea6716733136e
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: a707f5413f05e4f3d65ca039e1ffbc88aecbe252
+ms.sourcegitcommit: adaee1329ae9bb69e49bde7f54a4c0444c9ba642
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33951839"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "34432238"
 ---
 # <a name="com-add-in-and-xll-udf-compatibility-requirements-preview"></a>Требования для совместимости надстройки COM и XLL UDF (предварительный просмотр)
 
@@ -23,8 +23,6 @@ ms.locfileid: "33951839"
 
 ## <a name="excel-on-windows-and-excel-for-mac"></a>Excel для Windows и Excel для Mac
 Чтобы воспользоваться совместимостью надстройки COM и XLL UDF в Excel для Windows или Excel для Mac, вам понадобятся подписка на Office 365, участие в программе [предварительной оценки Office](https://products.office.com/office-insider) (уровень **участника программы предварительной оценки** — раньше он назывался "предварительная оценка — ранний доступ"), и использование достаточно новой сборки Excel (как указано ранее).
-
-При использовании версии Office на настольном компьютере, загруженной из Windows Store, вы должны быть участником программы [предварительной оценки Windows](https://insider.windows.com/) на уровне **участник программы предварительной оценки** (раньше он назывался "предварительная оценка — ранний доступ"), а также работать с версией обновления от апреля 2018 г. или более поздней для совместимости надстройки COM и XLL UDF. Это новое изменение начиная с января 2019 г.
 
 ## <a name="subscribe-to-office-365"></a>Подписка на Office 365
 Если у вас еще нет подписки на Office 365, вы можете оформить ее, присоединившись к [программе для разработчиков Office 365](https://developer.microsoft.com/ru-RU/office/dev-program).
