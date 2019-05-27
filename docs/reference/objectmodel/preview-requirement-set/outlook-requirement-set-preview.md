@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: ''
-ms.date: 05/08/2019
+ms.date: 05/17/2019
 localization_priority: Priority
-ms.openlocfilehash: e4627699edad801ab4a3a5a65e6307d40d1b4ac9
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: d97efe8bbdfdadb252190458960b4356e0c8a564
+ms.sourcegitcommit: b0e71ae0ae09c57b843d4de277081845c108a645
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33952357"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "34337176"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -22,16 +22,6 @@ ms.locfileid: "33952357"
 ## <a name="features-in-preview"></a>Возможности предварительной версии
 
 Ниже перечислены возможности предварительной версии.
-
-### <a name="add-in-commands"></a>Команды надстроек
-
-#### <a name="eventcompletedjavascriptapiofficeofficeaddincommandseventcompleted-options-"></a>[Event.completed](/javascript/api/office/office.addincommands.event#completed-options-)
-
-Добавлен новый необязательный параметр `options`, представляющий собой словарь с одним допустимым значением `allowEvent`. Это значение используется для отмены выполнения события.
-
-**Доступно в** Outlook в Интернете (классическая версия)
-
----
 
 ### <a name="attachments"></a>Вложения
 
@@ -76,6 +66,16 @@ ms.locfileid: "33952357"
 Добавлено событие `AttachmentsChanged` в объект `Item`.
 
 **Доступно в** Outlook для Windows (подключенный к Office 365)
+
+---
+
+### <a name="block-on-send"></a>Блокировка при отправке
+
+#### <a name="eventcompletedjavascriptapiofficeofficeaddincommandseventcompleted-options-"></a>[Event.completed](/javascript/api/office/office.addincommands.event#completed-options-)
+
+Добавлен новый необязательный параметр `options`, представляющий собой словарь с одним допустимым значением `allowEvent`. Это значение используется для отмены выполнения события.
+
+**Доступно в** Outlook в Интернете (классическая версия)
 
 ---
 

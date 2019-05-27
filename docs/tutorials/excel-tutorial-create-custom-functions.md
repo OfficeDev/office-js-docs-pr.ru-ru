@@ -1,16 +1,16 @@
 ---
 title: Руководство по пользовательским функциям в Excel
 description: Из этого руководства вы узнаете, как создать надстройку, Excel, содержащую пользовательские функции, которые могут выполнять вычисления, запрашивать или передавать веб-данные.
-ms.date: 05/08/2019
+ms.date: 05/16/2019
 ms.prod: excel
 ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: ed9f16bdb330aa3f092e7d437ccfad6e056e07d4
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: 63b5728057559e3c7190d1fb9645032a1b7cdc71
+ms.sourcegitcommit: adaee1329ae9bb69e49bde7f54a4c0444c9ba642
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33952196"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "34432273"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -29,8 +29,6 @@ ms.locfileid: "33952196"
 
 * Excel в Windows (64-разрядная версия 1810 или более поздняя) или Excel Online
 
-* Присоединитесь к [Программе предварительной оценки Office](https://products.office.com/office-insider) (уровень **Участник**; ранее "Предварительная оценка — ранний доступ")
-
 ## <a name="create-a-custom-functions-project"></a>Создание проекта пользовательских функций
 
  Чтобы начать, вам необходимо создать проект кода для разработки надстройки пользовательской функции. [Генератор Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office) настроит проект с помощью некоторых предварительно созданных настраиваемых функций, которые можно испытать. Если вы уже запустили функцию быстрого запуска пользовательских функций и создали проект, продолжайте использовать этот проект и переходите к [этому шагу](#create-a-custom-function-that-requests-data-from-the-web) .
@@ -41,11 +39,11 @@ ms.locfileid: "33952196"
     yo office
     ```
     
-    * **Выберите тип проекта:** `Excel Custom Functions Add-in project (...)`
+    * **Выберите тип проекта:** `Excel Custom Functions Add-in project`
     * **Выберите тип сценария:** `JavaScript`
     * **Как вы хотите назвать надстройку?** `stock-ticker`
 
-    ![Генератор Yeoman для надстройки Office, приглашающий к созданию пользовательских функций](../images/yo-office-excel-cf.png)
+    ![Генератор Yeoman для надстройки Office, приглашающий к созданию пользовательских функций](../images/UpdatedYoOfficePrompt.png)
     
     Генератор Yeoman создаст файлы проекта и установит вспомогательные компоненты Node.
 

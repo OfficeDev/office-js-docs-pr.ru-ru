@@ -1,27 +1,25 @@
 ---
-ms.date: 05/08/2019
+ms.date: 05/15/2019
 description: Разработка настраиваемых функций в кратком руководстве по Excel.
 title: Краткое руководство по настраиваемым функциям
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 233e1b608eda4a696b14d833fe4e071b2fcffd67
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: 372e493d85add0a942a8f18ad67f65d08c92f6f2
+ms.sourcegitcommit: adaee1329ae9bb69e49bde7f54a4c0444c9ba642
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33952385"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "34432257"
 ---
 # <a name="get-started-developing-excel-custom-functions"></a>Приступая к разработке пользовательских функций Excel
 
 С помощью пользовательских функций разработчики могут добавлять новые функции в Excel, определяя их в JavaScript или typescript как часть надстройки. Пользователи Excel могут получить доступ к пользовательским функциям так же, как и к любой собственной `SUM()`функции в Excel, например.
 
-## <a name="prerequisites"></a>Предварительные условия
+## <a name="prerequisites"></a>Необходимые условия
 
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
 * Excel в Windows (64-разрядная версия 1810 или более поздняя) или Excel Online
-
-* Присоединитесь к [Программе предварительной оценки Office](https://products.office.com/office-insider) (уровень **Участник**; ранее "Предварительная оценка — ранний доступ")
 
 ## <a name="build-your-first-custom-functions-project"></a>Создание проекта пользовательских функций
 
@@ -33,11 +31,11 @@ ms.locfileid: "33952385"
     yo office
     ```
 
-    - **Выберите тип проекта:** `Excel Custom Functions Add-in project (...)`
+    - **Выберите тип проекта:** `Excel Custom Functions Add-in project`
     - **Выберите тип сценария:** `JavaScript`
     - **Как вы хотите назвать надстройку?** `stock-ticker`
 
-    ![Генератор Yeoman для надстройки Office, приглашающий к созданию пользовательских функций](../images/yo-office-excel-cf.png)
+    ![Генератор Yeoman для надстройки Office, приглашающий к созданию пользовательских функций](../images/UpdatedYoOfficePrompt.png)
 
     Генератор Yeoman создаст файлы проекта и установит вспомогательные компоненты Node.
 
