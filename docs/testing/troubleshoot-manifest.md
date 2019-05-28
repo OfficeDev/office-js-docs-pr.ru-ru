@@ -1,14 +1,14 @@
 ---
 title: Проверка манифеста и устранение связанных с ним неполадок
 description: Используйте эти методы для проверки манифеста надстройки Office.
-ms.date: 11/02/2018
+ms.date: 05/21/2019
 localization_priority: Priority
-ms.openlocfilehash: 921adf6f1f398887d96031790facc1fb1425af2b
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 5b9bd22ad724bac68587a41ad56f4290f3a6edbd
+ms.sourcegitcommit: adaee1329ae9bb69e49bde7f54a4c0444c9ba642
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451158"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "34432266"
 ---
 # <a name="validate-and-troubleshoot-issues-with-your-manifest"></a>Проверка манифеста и устранение связанных с ним неполадок
 
@@ -30,7 +30,7 @@ ms.locfileid: "32451158"
 
 2. Откройте командную строку или терминал от имени администратора и глобально установите средство проверки надстроек, используя следующую команду:
 
-    ```bash
+    ```command&nbsp;line
     npm install -g office-addin-validator
     ```
     
@@ -39,7 +39,7 @@ ms.locfileid: "32451158"
 
 3. Выполните приведенную ниже команду для проверки манифеста. Вместо файла MANIFEST.XML укажите путь к XML-файлу манифеста.
 
-    ```bash
+    ```command&nbsp;line
     validate-office-addin MANIFEST.XML
     ```
 
@@ -55,7 +55,7 @@ ms.locfileid: "32451158"
 
 2.  Выполните указанную ниже команду. Вместо `XSD_FILE` укажите путь к XSD-файлу манифеста, а вместо `XML_FILE` — путь к XML-файлу манифеста.
     
-    ```bash
+    ```command&nbsp;line
     xmllint --noout --schema XSD_FILE XML_FILE
     ```
 
@@ -63,7 +63,7 @@ ms.locfileid: "32451158"
 
 Если вы создали надстройку Office, используя [генератора Yeoman](https://www.npmjs.com/package/generator-office), убедитесь, что файл манифеста соответствует правильной схеме, выполнив следующую команду в корневом каталоге проекта:
 
-```bash
+```command&nbsp;line
 npm run validate
 ```
 
@@ -136,11 +136,13 @@ npm run validate
 
 Если внесенные в манифест изменения (например, имена значков кнопок на ленте или текст команд надстроек) не вступили в силу, попробуйте очистить кэш Office на своем компьютере. 
 
-#### <a name="for-windows"></a>Для Windows:
+#### <a name="for-windows"></a>Для Windows
 Удалите содержимое папки `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\`.
 
 #### <a name="for-mac"></a>Для Mac
-Удалите содержимое папки `/Users/{your_name_on_the_device}/Library/Containers/com.Microsoft.OsfWebHost/Data/`.
+Удалите содержимое папки `~/Library/Containers/com.Microsoft.OsfWebHost/Data/`. 
+
+[!include[additional cache folders on Mac](../includes/mac-cache-folders.md)]
 
 #### <a name="for-ios"></a>Для iOS
 Для принудительной перезагрузки вызовите метод JavaScript `window.location.reload(true)` в надстройке. Вы также можете переустановить Office.

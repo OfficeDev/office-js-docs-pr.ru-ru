@@ -1,14 +1,14 @@
 ---
 title: Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 description: ''
-ms.date: 03/19/2019
+ms.date: 05/21/2019
 localization_priority: Priority
-ms.openlocfilehash: e2f9ee912395e0f54130f0e78109cab4479b6567
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: f666ffee2c7c139ea18859d995384281a31238dd
+ms.sourcegitcommit: adaee1329ae9bb69e49bde7f54a4c0444c9ba642
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449951"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "34432224"
 ---
 # <a name="sideload-office-add-ins-on-ipad-and-mac-for-testing"></a>Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 
@@ -85,8 +85,13 @@ ms.locfileid: "32449951"
     
     ![Надстройка в Office для Mac](../images/lorem-ipsum-wikipedia.png)
     
-    > [!NOTE]
-    > Для повышения производительности надстройки часто кэшируются в Office для Mac. Если вам нужно принудительно перезагрузить надстройку в процессе разработки, очистите папку `Users/<usr>/Library/Containers/com.Microsoft.OsfWebHost/Data/`. Если такой папки не существует, удалите файлы в папке `com.microsoft.Office365ServiceV2/Data/Caches/com.microsoft.Office365ServiceV2/`.
+### <a name="clearing-the-office-applications-cache-on-a-mac"></a>Очистка кэша приложения Office на компьютере Mac
+
+Для повышения производительности надстройки часто кэшируются в Office для Mac. Как правило, для очистки кэша необходимо перезагрузить надстройку. Если в одном документе несколько надстроек, автоматическая очистка кэша может не сработать при перезагрузке.
+
+На компьютере Mac можно очистить кэш вручную, удалив все содержимое папки `~/Library/Containers/com.Microsoft.OsfWebHost/Data/`. 
+
+[!include[additional cache folders on Mac](../includes/mac-cache-folders.md)]
 
 ## <a name="see-also"></a>См. также
 
