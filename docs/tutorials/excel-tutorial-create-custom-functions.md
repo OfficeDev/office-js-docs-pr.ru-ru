@@ -5,12 +5,12 @@ ms.date: 05/16/2019
 ms.prod: excel
 ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: 63b5728057559e3c7190d1fb9645032a1b7cdc71
-ms.sourcegitcommit: adaee1329ae9bb69e49bde7f54a4c0444c9ba642
+ms.openlocfilehash: 7d4d87a6bb3910c1b46698d5a2ff211ea1bbc6dd
+ms.sourcegitcommit: b299b8a5dfffb6102cb14b431bdde4861abfb47f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "34432273"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "34589176"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -53,24 +53,24 @@ ms.locfileid: "34432273"
     cd stock-ticker
     ```
 
-3. Выполните сборку проекта.
+3. Выполните построение проекта.
     
     ```command&nbsp;line
     npm run build
     ```
 
+    > [!NOTE]
+    > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите `npm run build`, примите предложение установить сертификат от генератора Yeoman.
+
 4. Запустите локальный веб-сервер, работающий на Node.js. Вы можете испытать надстройку настраиваемой функции в Excel для Windows или Excel Online.
 
 # <a name="excel-on-windowstabexcel-windows"></a>[Excel в Windows](#tab/excel-windows)
 
-Чтобы протестировать надстройку в Excel в Windows, выполните следующую команду. При выполнении этой команды локальный веб-сервер запустится и откроется приложение Excel в Windows с загруженной надстройкой.
+Чтобы протестировать надстройку в Excel в Windows, выполните следующую команду. При выполнении этой команды запустится локальный веб-сервер, и откроется приложение Excel с загруженной надстройкой.
 
 ```command&nbsp;line
 npm run start:desktop
 ```
-
-> [!NOTE]
-> Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите `npm run start:desktop`, примите предложение установить сертификат от генератора Yeoman.
 
 # <a name="excel-onlinetabexcel-online"></a>[Excel Online](#tab/excel-online)
 
@@ -79,9 +79,6 @@ npm run start:desktop
 ```command&nbsp;line
 npm run start:web
 ```
-
-> [!NOTE]
-> Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите `npm run start:web`, примите предложение установить сертификат от генератора Yeoman.
 
 Чтобы использовать надстройку с пользовательскими функциями, откройте новую книгу в Excel Online. В этой книге выполните следующие действия, чтобы Загрузка неопубликованных надстройку.
 
