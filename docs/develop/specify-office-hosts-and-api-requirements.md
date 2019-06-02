@@ -1,20 +1,20 @@
 ---
 title: Указание ведущих приложений Office и требований к API
 description: ''
-ms.date: 05/08/2019
+ms.date: 05/29/2019
 localization_priority: Priority
-ms.openlocfilehash: 7209998e488e56b66b206d50c7bceb1465fb7206
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: ccff7ba1896c9d1683f9fc9d67cdd79fe52da623
+ms.sourcegitcommit: b299b8a5dfffb6102cb14b431bdde4861abfb47f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33952147"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "34589148"
 ---
 # <a name="specify-office-hosts-and-api-requirements"></a>Указание ведущих приложений Office и требований к API
 
 Работа надстройки Office может зависеть от ведущего приложения Office, набора обязательных элементов, элемента или версии API. Например, надстройка может:
 
-- работать в одном (Word или Excel) или нескольких приложениях Office;
+- работать в одном (например, Word или Excel) или нескольких приложениях Office;
 
 - использовать API JavaScript, доступные только в некоторых версиях Office. Например, можно создать надстройку Excel 2016 на базе новых API JavaScript для Excel;
 
@@ -64,7 +64,7 @@ ms.locfileid: "33952147"
 
 - Чтобы задать минимальный набор обязательных элементов или элементы API, которые должно поддерживать ведущее приложение Office для запуска надстройки, задайте элемент **Requirements** в манифесте. Дополнительные сведения см. в разделе [Задание элемента Requirements в манифесте](#set-the-requirements-element-in-the-manifest).
 
-- Чтобы предоставить дополнительные функции, если определенные наборы обязательных элементов или элементы API доступны в ведущем приложении Office, выполните проверку в среде выполнения для кода JavaScript надстройки. Например, если надстройка выполняется в Excel 2016, используйте элементы нового API JavaScript для Excel, чтобы предоставить дополнительные функции. Дополнительные сведения см. в разделе [Использование проверок в среде выполнения для кода JavaScript](#use-runtime-checks-in-your-javascript-code).
+- Чтобы предоставить дополнительные функции, если определенные наборы обязательных элементов или элементы API доступны в ведущем приложении Office, выполните проверку в среде выполнения для кода JavaScript надстройки. Например, если надстройка выполняется в Excel 2016, используйте элементы нового API JavaScript для Excel, чтобы предоставить дополнительные функции. Дополнительные сведения см. в разделе [Использование проверок в среде выполнения в коде JavaScript](#use-runtime-checks-in-your-javascript-code).
 
 ## <a name="set-the-hosts-element"></a>Задание элемента Hosts
 
@@ -83,14 +83,14 @@ ms.locfileid: "33952147"
 | Имя          | Ведущие приложения Office                                                              |
 |:--------------|:--------------------------------------------------------------------------------------|
 | Database      | Веб-приложения Access                                                                       |
-| Document      | Word для Windows, Word для Mac, Word для iPad и Word Online                         |
-| Mailbox       | Outlook для Windows, Outlook для Mac, Outlook в Интернете и Outlook.com              |
+| Документ      | Word для Windows, Word для Mac, Word для iPad и Word Online                         |
+| почтовый ящик.       | Outlook для Windows, Outlook для Mac, Outlook в Интернете и Outlook.com              |
 | Presentation  | PowerPoint для Windows, PowerPoint для Mac, PowerPoint для iPad и PowerPoint Online |
-| Project       | Project                                                                               |
+| Project       | Project для Windows                                                                    |
 | Workbook      | Excel для Windows, Excel для Mac, Excel для iPad и Excel Online                     |
 
 > [!NOTE]
-> Атрибут `Name` указывает приложение Office, в котором может запускаться ваша надстройка. Приложения Office поддерживаются на разных платформах и работают на настольных ПК, в веб-браузерах, на планшетах и мобильных устройствах. Нельзя указать платформу, на которой можно запускать надстройку. Например, если вы укажете `Mailbox`, то для запуска надстройки можно будет использовать и Outlook, и Outlook Web App. 
+> Атрибут `Name` указывает приложение Office, в котором может запускаться ваша надстройка. Приложения Office поддерживаются на разных платформах и работают на настольных ПК, в веб-браузерах, на планшетах и мобильных устройствах. Нельзя указать платформу, на которой можно запускать надстройку. Например, если вы укажете `Mailbox`, то для запуска надстройки можно будет использовать и Outlook, и Outlook Web App.
 
 
 ## <a name="set-the-requirements-element-in-the-manifest"></a>Указание элемента Requirements в манифесте
@@ -131,14 +131,14 @@ ms.locfileid: "33952147"
 - Элемент **Method** задает отдельный метод, который должно поддерживать ведущее приложение Office, в котором работает надстройка. Атрибут **Name** обязателен и указывает имя метода с его родительским объектом.
 
 
-## <a name="use-runtime-checks-in-your-javascript-code"></a>Использование проверок в среде выполнения для кода JavaScript
+## <a name="use-runtime-checks-in-your-javascript-code"></a>Использование проверок в среде выполнения в коде JavaScript
 
 
-Если ведущее приложение Office поддерживает определенные наборы обязательных элементов, вы можете добавить в надстройку дополнительные функции. Например, если надстройка работает в Word 2016, вы можете использовать в ней новые API JavaScript для Word. Для этого используйте метод **isSetSupported** с именем набора обязательных элементов. В среде выполнения метод **isSetSupported** определяет, поддерживается ли набор обязательных элементов ведущим приложением Office, в котором запущена надстройка. Если он поддерживается, то метод **isSetSupported** возвращает значение **true** и запускает дополнительный код, который использует элементы API из этого набора. Если приложение Office не поддерживает набор обязательных элементов, метод **isSetSupported** возвращает значение **false**, и дополнительный код не запускается. В коде ниже показан синтаксис, который необходимо использовать с методом **isSetSupported**.
+Если ведущее приложение Office поддерживает определенные наборы требований, вы можете добавить в надстройку дополнительные функции. Например, если надстройка работает в Word 2016, вы можете использовать в ней API JavaScript для Word. Для этого используйте метод [isSetSupported](/javascript/api/office/office.requirementsetsupport#issetsupported-name--minversion-) с именем набора обязательных элементов. В среде выполнения метод **isSetSupported** определяет, поддерживает ли приложение Office, в котором запускается надстройка, этот набор требований. Если он поддерживается, то метод **isSetSupported** возвращает значение **true** и запускает дополнительный код, который использует элементы API из этого набора. Если приложение Office не поддерживает набор требований, метод **isSetSupported** возвращает значение **false**, и дополнительный код не запускается. В коде ниже показан синтаксис, который необходимо использовать с методом **isSetSupported**.
 
 
 ```js
-if (Office.context.requirements.isSetSupported(RequirementSetName , VersionNumber))
+if (Office.context.requirements.isSetSupported(RequirementSetName, VersionNumber))
 {
    // Code that uses API members from RequirementSetName.
 }
@@ -148,19 +148,24 @@ if (Office.context.requirements.isSetSupported(RequirementSetName , VersionNumbe
 -  _RequirementSetName_ (обязательный параметр) — это строка, представляющая имя набора обязательных элементов. Дополнительные сведения о доступных наборах обязательных элементов см. в статье [Наборы обязательных элементов для надстроек Office](/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets).
     
 -  _VersionNumber_ (необязательный параметр) — это версия набора обязательных элементов.
-    
-В Excel 2016 или Word 2016 для наборов обязательных элементов **ExcelAPI** или **WordAPI** используйте метод **isSetSupported**. Метод **isSetSupported**, а также наборы обязательных элементов **ExcelAPI** и **WordAPI** доступны в последней версии файла Office.js в CDN. Если вы не используете файл Office.js из CDN, надстройка может создавать исключения, так как метод **isSetSupported** не будет определен. Дополнительные сведения см. в статье [Выбор последней версии библиотеки API JavaScript для Office](#specify-the-latest-javascript-api-for-office-library). 
 
+Используйте метод **isSetSupported** с параметром **RequirementSetName**, связанным с ведущим приложением Office, как показано ниже.
 
-> [!NOTE]
-> Метод **isSetSupported** не работает в Outlook и Outlook Web App. Чтобы использовать проверку в среде выполнения в Outlook или Outlook Web App, используйте способ, описанный в разделе [Проверки в среде выполнения с использованием методов, не входящих в набор обязательных элементов](#runtime-checks-using-methods-not-in-a-requirement-set).
+|Ведущее приложение Office|RequirementSetName|
+|---|---|
+|Excel|ExcelApi|
+|OneNote|OneNoteApi|
+|Outlook|Mailbox|
+|Word|WordApi|
+
+Метод **isSetSupported** и наборы обязательных элементов для этих ведущих приложений доступны в последней версии файла Office.js, размещенного в сети доставки содержимого. Если вы не используете файл Office.js из CDN, надстройка может создавать исключения, так как метод **isSetSupported** не будет определен. Дополнительные сведения см. в статье [Выбор последней версии библиотеки API JavaScript для Office](#specify-the-latest-javascript-api-for-office-library).
 
 В приведенном ниже примере кода показано, как функциональность надстройки может отличаться в ведущих приложениях Office, поддерживающих разные наборы обязательных элементов или элементы API.
 
 ```js
 if (Office.context.requirements.isSetSupported('WordApi', 1.1))
 {
-    // Run code that provides additional functionality using the JavaScript API for Word when the add-in runs in Word 2016.
+    // Run code that provides additional functionality using the Word JavaScript API when the add-in runs in Word 2016 or later.
 }
 else if (Office.context.requirements.isSetSupported('CustomXmlParts'))
 {
@@ -168,7 +173,7 @@ else if (Office.context.requirements.isSetSupported('CustomXmlParts'))
 }
 else
 {
-    // Run additional code when the Office host is not Word 2016, and when the Office host does not support the CustomXmlParts requirement set.
+    // Run additional code when the Office host is not Word 2016 or later and does not support the CustomXmlParts requirement set.
 }
 
 ```
@@ -176,7 +181,7 @@ else
 
 ## <a name="runtime-checks-using-methods-not-in-a-requirement-set"></a>Проверки в среде выполнения с использованием методов, не входящих в набор обязательных элементов
 
-Некоторые элементы API не входят в наборы обязательных элементов. Это относится только к тем элементам API, которые входят в пространства имен [JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office) (все элементы в Office.), и не относится к элементам API, принадлежащим к пространствам имен API JavaScript для Word (все элементы в Word.) или [API JavaScript для надстроек Excel](/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview) (все элементы в Excel.). Если надстройка зависит от метода, не входящего в набор обязательных элементов, вы можете использовать проверку в среде выполнения, чтобы определить, поддерживается ли метод ведущим приложением Office, как показано в примере кода ниже. Список всех методов, не входящих в набор обязательных элементов, см. в статье [Наборы обязательных элементов для надстроек Office](/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets).
+Некоторые элементы API не входят в наборы обязательных элементов. Это относится только к тем элементам API, которые входят в пространства имен [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office) (все элементы в `Office.`, кроме [API почтовых ящиков для Outlook](/javascript/api/outlook)), но не относится к элементам API, принадлежащим к пространствам имен [API JavaScript для Word](/office/dev/add-ins/reference/overview/word-add-ins-reference-overview) (все элементы в `Word.`), [API JavaScript для Excel](/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview) (все элементы в `Excel.`) или [API JavaScript для OneNote](/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference) (все элементы в `OneNote.`). Если надстройка зависит от метода, не входящего в набор обязательных элементов, вы можете использовать проверку в среде выполнения, чтобы определить, поддерживается ли метод ведущим приложением Office, как показано в примере кода ниже. Список всех методов, не входящих в набор обязательных элементов, см. в статье [Наборы обязательных элементов для надстроек Office](/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets#methods-that-arent-part-of-a-requirement-set).
 
 > [!NOTE]
 > Рекомендуем ограничить использование этого типа проверки в среде выполнения в коде надстройки.

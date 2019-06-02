@@ -1,14 +1,14 @@
 ---
 title: Office.context.mailbox.item — набор обязательных элементов 1.5
 description: ''
-ms.date: 04/12/2019
+ms.date: 05/30/2019
 localization_priority: Priority
-ms.openlocfilehash: 2f9394751180296d876d8c577d68adc1b5abb692
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 59e21676e670d8ba4da95319567364948f374790
+ms.sourcegitcommit: b299b8a5dfffb6102cb14b431bdde4861abfb47f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451831"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "34589183"
 ---
 # <a name="item"></a>item
 
@@ -85,9 +85,9 @@ Office.initialize = function () {
 };
 ```
 
-### <a name="members"></a>Элементы
+### <a name="members"></a>Members
 
-#### <a name="attachments-arrayattachmentdetailsjavascriptapioutlook15officeattachmentdetails"></a>attachments :Array.<[AttachmentDetails](/javascript/api/outlook_1_5/office.attachmentdetails)>
+#### <a name="attachments-arrayattachmentdetailsjavascriptapioutlook15officeattachmentdetails"></a>attachments: Array.<[AttachmentDetails](/javascript/api/outlook_1_5/office.attachmentdetails)>
 
 Получает массив вложений для элемента. Только в режиме чтения.
 
@@ -130,7 +130,7 @@ if (item.attachments.length > 0) {
 console.log(outputString);
 ```
 
-####  <a name="bcc-recipientsjavascriptapioutlook15officerecipients"></a>bcc :[Recipients](/javascript/api/outlook_1_5/office.recipients)
+#### <a name="bcc-recipientsjavascriptapioutlook15officerecipients"></a>bcc: [Recipients](/javascript/api/outlook_1_5/office.recipients)
 
 Получает объект, который предоставляет методы для получения или обновления получателей скрытой копии сообщения. Только в режиме создания.
 
@@ -158,7 +158,7 @@ function callback(asyncResult) {
 }
 ```
 
-####  <a name="body-bodyjavascriptapioutlook15officebody"></a>body :[Body](/javascript/api/outlook_1_5/office.body)
+#### <a name="body-bodyjavascriptapioutlook15officebody"></a>body: [Body](/javascript/api/outlook_1_5/office.body)
 
 Получает объект, предоставляющий методы для работы с основным текстом элемента.
 
@@ -198,7 +198,7 @@ Office.context.mailbox.item.body.getAsync(
 }
 ```
 
-####  <a name="cc-arrayemailaddressdetailsjavascriptapioutlook15officeemailaddressdetailsrecipientsjavascriptapioutlook15officerecipients"></a>cc :Array.<[EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook_1_5/office.recipients)
+#### <a name="cc-arrayemailaddressdetailsjavascriptapioutlook15officeemailaddressdetailsrecipientsjavascriptapioutlook15officerecipients"></a>cc: Array.<[EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook_1_5/office.recipients)
 
 Предоставляет доступ к получателям копии сообщения. Тип объекта и уровень доступа зависят от режима текущего элемента.
 
@@ -236,7 +236,7 @@ function callback(asyncResult) {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-####  <a name="nullable-conversationid-string"></a>(nullable) conversationId :String
+#### <a name="nullable-conversationid-string"></a>(nullable) conversationId: String
 
 Получает идентификатор разговора по электронной почте, содержащего конкретное сообщение.
 
@@ -263,7 +263,7 @@ var conversationId = Office.context.mailbox.item.conversationId;
 console.log("conversationId: " + conversationId);
 ```
 
-#### <a name="datetimecreated-date"></a>dateTimeCreated :Date
+#### <a name="datetimecreated-date"></a>dateTimeCreated: Date
 
 Получает дату и время создания элемента. Только в режиме чтения.
 
@@ -286,7 +286,7 @@ var dateTimeCreated = Office.context.mailbox.item.dateTimeCreated;
 console.log("Date and time created: " + dateTimeCreated);
 ```
 
-#### <a name="datetimemodified-date"></a>dateTimeModified :Date
+#### <a name="datetimemodified-date"></a>dateTimeModified: Date
 
 Получает дату и время последнего изменения элемента. Только в режиме чтения.
 
@@ -312,7 +312,7 @@ var dateTimeModified = Office.context.mailbox.item.dateTimeModified;
 console.log("Date and time modified: " + dateTimeModified);
 ```
 
-####  <a name="end-datetimejavascriptapioutlook15officetime"></a>end :Date|[Time](/javascript/api/outlook_1_5/office.time)
+#### <a name="end-datetimejavascriptapioutlook15officetime"></a>end: Date|[Time](/javascript/api/outlook_1_5/office.time)
 
 Получает или задает дату и время окончания встречи.
 
@@ -363,7 +363,7 @@ Office.context.mailbox.item.end.setAsync(endTime, options, function(result) {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-#### <a name="from-emailaddressdetailsjavascriptapioutlook15officeemailaddressdetails"></a>from :[EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)
+#### <a name="from-emailaddressdetailsjavascriptapioutlook15officeemailaddressdetails"></a>from: [EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)
 
 Получает электронный адрес отправителя сообщения. Только в режиме чтения.
 
@@ -391,7 +391,7 @@ var from = Office.context.mailbox.item.from;
 console.log("From " + from);
 ```
 
-#### <a name="internetmessageid-string"></a>internetMessageId :String
+#### <a name="internetmessageid-string"></a>internetMessageId: String
 
 Получает идентификатор интернет-сообщения для электронного сообщения. Только в режиме чтения.
 
@@ -413,7 +413,7 @@ console.log("From " + from);
 var internetMessageId = Office.context.mailbox.item.internetMessageId;
 ```
 
-#### <a name="itemclass-string"></a>itemClass :String
+#### <a name="itemclass-string"></a>itemClass: String
 
 Получает класс элемента веб-служб Exchange для выбранного элемента. Только в режиме чтения.
 
@@ -445,7 +445,7 @@ var itemClass = Office.context.mailbox.item.itemClass;
 console.log("Item class: " + itemClass);
 ```
 
-#### <a name="nullable-itemid-string"></a>(nullable) itemId :String
+#### <a name="nullable-itemid-string"></a>(nullable) itemId: String
 
 Получает идентификатор элемента веб-служб Exchange для текущего элемента. Только в режиме чтения.
 
@@ -479,7 +479,7 @@ if (itemId === null || itemId == undefined) {
 }
 ```
 
-####  <a name="itemtype-officemailboxenumsitemtypejavascriptapioutlook15officemailboxenumsitemtype"></a>itemType :[Office.MailboxEnums.ItemType](/javascript/api/outlook_1_5/office.mailboxenums.itemtype)
+#### <a name="itemtype-officemailboxenumsitemtypejavascriptapioutlook15officemailboxenumsitemtype"></a>itemType: [Office.MailboxEnums.ItemType](/javascript/api/outlook_1_5/office.mailboxenums.itemtype)
 
 Получает тип элемента, который представляет экземпляр.
 
@@ -507,7 +507,7 @@ if (Office.context.mailbox.item.itemType === Office.MailboxEnums.ItemType.Messag
 }
 ```
 
-####  <a name="location-stringlocationjavascriptapioutlook15officelocation"></a>location :String|[Location](/javascript/api/outlook_1_5/office.location)
+#### <a name="location-stringlocationjavascriptapioutlook15officelocation"></a>location: String|[Location](/javascript/api/outlook_1_5/office.location)
 
 Получает или задает место встречи.
 
@@ -546,7 +546,7 @@ function callback(asyncResult) {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-#### <a name="normalizedsubject-string"></a>normalizedSubject :String
+#### <a name="normalizedsubject-string"></a>normalizedSubject: String
 
 Получает тему элемента со всеми удаленными префиксами (включая `RE:` и `FWD:`). Только в режиме чтения.
 
@@ -571,7 +571,7 @@ var normalizedSubject = Office.context.mailbox.item.normalizedSubject;
 console.log("Normalized subject: " + normalizedSubject);
 ```
 
-####  <a name="notificationmessages-notificationmessagesjavascriptapioutlook15officenotificationmessages"></a>notificationMessages :[NotificationMessages](/javascript/api/outlook_1_5/office.notificationmessages)
+#### <a name="notificationmessages-notificationmessagesjavascriptapioutlook15officenotificationmessages"></a>notificationMessages: [NotificationMessages](/javascript/api/outlook_1_5/office.notificationmessages)
 
 Получает сообщения уведомления для элемента.
 
@@ -598,7 +598,7 @@ Office.context.mailbox.item.notificationMessages.getAllAsync(
 );
 ```
 
-####  <a name="optionalattendees-arrayemailaddressdetailsjavascriptapioutlook15officeemailaddressdetailsrecipientsjavascriptapioutlook15officerecipients"></a>optionalAttendees :Array.<[EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook_1_5/office.recipients)
+#### <a name="optionalattendees-arrayemailaddressdetailsjavascriptapioutlook15officeemailaddressdetailsrecipientsjavascriptapioutlook15officerecipients"></a>optionalAttendees: Array.<[EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook_1_5/office.recipients)
 
 Предоставляет доступ к необязательным участникам события. Тип объекта и уровень доступа зависят от режима текущего элемента.
 
@@ -637,7 +637,7 @@ function callback(asyncResult) {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-#### <a name="organizer-emailaddressdetailsjavascriptapioutlook15officeemailaddressdetails"></a>organizer :[EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)
+#### <a name="organizer-emailaddressdetailsjavascriptapioutlook15officeemailaddressdetails"></a>organizer: [EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)
 
 Получает электронный адрес организатора указанного собрания. Только в режиме чтения.
 
@@ -661,7 +661,7 @@ var organizerAddress = Office.context.mailbox.item.organizer.emailAddress;
 console.log("Organizer: " + organizerName + " (" + organizerAddress + ")");
 ```
 
-####  <a name="requiredattendees-arrayemailaddressdetailsjavascriptapioutlook15officeemailaddressdetailsrecipientsjavascriptapioutlook15officerecipients"></a>requiredAttendees :Array.<[EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook_1_5/office.recipients)
+#### <a name="requiredattendees-arrayemailaddressdetailsjavascriptapioutlook15officeemailaddressdetailsrecipientsjavascriptapioutlook15officerecipients"></a>requiredAttendees: Array.<[EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook_1_5/office.recipients)
 
 Предоставляет доступ к обязательным участникам события. Тип объекта и уровень доступа зависят от режима текущего элемента.
 
@@ -701,7 +701,7 @@ function callback(asyncResult) {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-#### <a name="sender-emailaddressdetailsjavascriptapioutlook15officeemailaddressdetails"></a>sender :[EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)
+#### <a name="sender-emailaddressdetailsjavascriptapioutlook15officeemailaddressdetails"></a>sender: [EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)
 
 Получает электронный адрес отправителя электронного сообщения. Только в режиме чтения.
 
@@ -730,7 +730,7 @@ var senderAddress = Office.context.mailbox.item.sender.emailAddress;
 console.log("Sender: " + senderName + " (" + senderAddress + ")");
 ```
 
-####  <a name="start-datetimejavascriptapioutlook15officetime"></a>start :Date|[Time](/javascript/api/outlook_1_5/office.time)
+#### <a name="start-datetimejavascriptapioutlook15officetime"></a>start: Date|[Time](/javascript/api/outlook_1_5/office.time)
 
 Получает или задает дату и время начала встречи.
 
@@ -781,7 +781,7 @@ Office.context.mailbox.item.start.setAsync(startTime, options, function(result) 
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-####  <a name="subject-stringsubjectjavascriptapioutlook15officesubject"></a>subject :String|[Subject](/javascript/api/outlook_1_5/office.subject)
+#### <a name="subject-stringsubjectjavascriptapioutlook15officesubject"></a>subject: String|[Subject](/javascript/api/outlook_1_5/office.subject)
 
 Получает или задает описание, которое отображается в поле темы элемента.
 
@@ -821,7 +821,7 @@ function callback(asyncResult) {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-####  <a name="to-arrayemailaddressdetailsjavascriptapioutlook15officeemailaddressdetailsrecipientsjavascriptapioutlook15officerecipients"></a>to :Array.<[EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook_1_5/office.recipients)
+#### <a name="to-arrayemailaddressdetailsjavascriptapioutlook15officeemailaddressdetailsrecipientsjavascriptapioutlook15officerecipients"></a>to: Array.<[EmailAddressDetails](/javascript/api/outlook_1_5/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook_1_5/office.recipients)
 
 Предоставляет доступ к получателям, указанным в строке **Кому** сообщения. Тип объекта и уровень доступа зависят от режима текущего элемента.
 
@@ -861,7 +861,7 @@ function callback(asyncResult) {
 
 ### <a name="methods"></a>Методы
 
-####  <a name="addfileattachmentasyncuri-attachmentname-options-callback"></a>addFileAttachmentAsync(uri, attachmentName, [options], [callback])
+#### <a name="addfileattachmentasyncuri-attachmentname-options-callback"></a>addFileAttachmentAsync(uri, attachmentName, [options], [callback])
 
 Добавляет файл в сообщение или встречу в качестве вложения.
 
@@ -937,7 +937,7 @@ Office.context.mailbox.item.addFileAttachmentAsync(
   });
 ```
 
-####  <a name="additemattachmentasyncitemid-attachmentname-options-callback"></a>addItemAttachmentAsync(itemId, attachmentName, [options], [callback])
+#### <a name="additemattachmentasyncitemid-attachmentname-options-callback"></a>addItemAttachmentAsync(itemId, attachmentName, [options], [callback])
 
 Добавляет к сообщению элемент Exchange, например сообщение, в виде вложения.
 
@@ -995,7 +995,7 @@ function addAttachment() {
 }
 ```
 
-####  <a name="close"></a>close()
+#### <a name="close"></a>close()
 
 Закрывает текущий создаваемый элемент.
 
@@ -1471,7 +1471,7 @@ var fruits = Office.context.mailbox.item.getRegExMatchesByName("fruits");
 var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");
 ```
 
-####  <a name="getselecteddataasynccoerciontype-options-callback--string"></a>getSelectedDataAsync(coercionType, [options], callback) → {String}
+#### <a name="getselecteddataasynccoerciontype-options-callback--string"></a>getSelectedDataAsync(coercionType, [options], callback) → {String}
 
 Асинхронно возвращает данные, выбранные в теме или тексте сообщения.
 
@@ -1526,7 +1526,7 @@ function setCallback(asyncResult) {
 }
 ```
 
-####  <a name="loadcustompropertiesasynccallback-usercontext"></a>loadCustomPropertiesAsync(callback, [userContext])
+#### <a name="loadcustompropertiesasynccallback-usercontext"></a>loadCustomPropertiesAsync(callback, [userContext])
 
 Асинхронно загружает настраиваемые свойства для надстройки для выбранного элемента.
 
@@ -1574,7 +1574,7 @@ function saveCallback(asyncResult) {
 }
 ```
 
-####  <a name="removeattachmentasyncattachmentid-options-callback"></a>removeAttachmentAsync(attachmentId, [options], [callback])
+#### <a name="removeattachmentasyncattachmentid-options-callback"></a>removeAttachmentAsync(attachmentId, [options], [callback])
 
 Удаляет вложение из сообщения или встречи.
 
@@ -1618,7 +1618,7 @@ Office.context.mailbox.item.removeAttachmentAsync(
 );
 ```
 
-####  <a name="saveasyncoptions-callback"></a>saveAsync([options], callback)
+#### <a name="saveasyncoptions-callback"></a>saveAsync([options], callback)
 
 Асинхронно сохраняет элемент.
 
@@ -1632,7 +1632,7 @@ Office.context.mailbox.item.removeAttachmentAsync(
 > [!NOTE]
 > Следующие клиенты отличаются другим поведением `saveAsync` в отношении встреч в режиме создания:
 >
-> - Outlook для Mac не поддерживает `saveAsync` для собраний в режиме создания. При вызове `saveAsync` для собрания в Outlook для Mac возвращается ошибка.
+> - Outlook для Mac не поддерживает `saveAsync` для собраний в режиме создания. Поэтому вызов `saveAsync` в этом сценарии возвращает ошибку. Временное решение см. в статье [Не удается сохранить встречу как черновик в Outlook для Mac с помощью API JS для Office](https://support.microsoft.com/help/4505745).
 > - Outlook в Интернете всегда отправляет приглашение или обновление при вызове `saveAsync` для встречи в режиме создания.
 
 ##### <a name="parameters"></a>Параметры
@@ -1669,7 +1669,7 @@ Office.context.mailbox.item.saveAsync(
 }
 ```
 
-####  <a name="setselecteddataasyncdata-options-callback"></a>setSelectedDataAsync(data, [options], callback)
+#### <a name="setselecteddataasyncdata-options-callback"></a>setSelectedDataAsync(data, [options], callback)
 
 Асинхронно вставляет данные в текст или тему сообщения.
 

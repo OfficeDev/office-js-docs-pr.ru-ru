@@ -3,12 +3,12 @@ ms.date: 05/03/2019
 description: Использование тегов JSDOC для динамического создания метаданных JSON пользовательских функций.
 title: Автоматическое генерирование метаданных JSON для пользовательских функций
 localization_priority: Priority
-ms.openlocfilehash: df1c0114597e2aa98a15db48c515469fb9db6cd9
-ms.sourcegitcommit: ff73cc04e5718765fcbe74181505a974db69c3f5
+ms.openlocfilehash: 67026e7c19580c3420638b4f37e333e50fce1b44
+ms.sourcegitcommit: b299b8a5dfffb6102cb14b431bdde4861abfb47f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "33628090"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "34589134"
 ---
 # <a name="autogenerate-json-metadata-for-custom-functions"></a>Автоматическое генерирование метаданных JSON для пользовательских функций
 
@@ -61,7 +61,7 @@ ms.locfileid: "33628090"
 
 * Если идентификатор не указан, название функции JavaScript или TypeScript преобразуется в верхний регистр, а недопустимые символы удаляются.
 * Идентификатор должен быть уникальным для всех пользовательских функций.
-* Допустимые символы: A–Z, a–z, 0–9 и точки (.).
+* Допустимые символы: A — Z, a — z, 0–9, символ подчеркивания (\_) и точка (.).
 
 #### <a name="name"></a>name
 

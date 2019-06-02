@@ -1,231 +1,103 @@
 ---
-title: Создание первой надстройки OneNote
+title: Создание первой надстройки области задач OneNote
 description: ''
-ms.date: 03/19/2019
+ms.date: 05/02/2019
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: 378d691d1994a2d22166afc5338007400f7a48af
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 48cd9395b269a83630608c52d972508828c5c007
+ms.sourcegitcommit: b299b8a5dfffb6102cb14b431bdde4861abfb47f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450903"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "34589218"
 ---
-# <a name="build-your-first-onenote-add-in"></a>Создание первой надстройки OneNote
+# <a name="build-your-first-onenote-task-pane-add-in"></a>Создание первой надстройки области задач OneNote
 
-В этой статье мы разберем, как создать надстройку OneNote, используя jQuery и API JavaScript для Office.
+В этой статье вы ознакомитесь с процессом создания надстройки для области задач OneNote.
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
-- [Node.js](https://nodejs.org)
-
-- Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
-
-    ```bash
-    npm install -g yo generator-office
-    ```
+[!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
 ## <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
 1. С помощью генератора Yeoman создайте проект надстройки OneNote. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
-    ```bash
+    ```command&nbsp;line
     yo office
     ```
 
-    - **Выберите тип проекта:** `Office Add-in project using Jquery framework`
+    - **Выберите тип проекта:** `Office Add-in Task Pane project`
     - **Выберите тип сценария:** `Javascript`
     - **Как вы хотите назвать надстройку?** `My Office Add-in`
-    - **Какое клиентское приложение Office должно поддерживаться?** `Onenote`
+    - **Какое клиентское приложение Office должно поддерживаться?** `OneNote`
 
-    ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-onenote-jquery.png)
+    ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-onenote.png)
     
     После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
     
 2. Перейдите к корневой папке проекта.
 
-    ```bash
+    ```command&nbsp;line
     cd "My Office Add-in"
     ```
 
+## <a name="explore-the-project"></a>Знакомство с проектом
+
+Проект надстройки, который вы создали с помощью генератора Yeoman, содержит образец кода для простейшей надстройки области задач. 
+
+- Файл **./manifest.xml** в корневом каталоге проекта определяет настройки и возможности надстройки.
+- Файл **./src/taskpane/taskpane.html** содержит разметку HTML для области задач.
+- Файл **./src/taskpane/taskpane.css** содержит код CSS, который применяется к содержимому области задач.
+- Файл **./src/taskpane/taskpane.js** содержит код API JavaScript для Office, который упрощает взаимодействие между областью задач и ведущим приложением Office.
+
 ## <a name="update-the-code"></a>Обновление кода
 
-1. В редакторе кода откройте файл **index.html** из корневой папки проекта. Этот файл содержит HTML-контент, который будет отображаться в области задач надстройки.
+Откройте файл **./src/taskpane/taskpane.js** в редакторе кода и добавьте приведенный ниже код в пределах функции **run**. В этом коде используется API JavaScript для OneNote, чтобы настроить заголовок страницы и добавить контур к тексту страницы.
 
-2. Замените элемент `<body>` приведенной ниже разметкой и сохраните файл. 
+```js
+try {
+    await OneNote.run(async context => {
 
-    ```html
-    <body class="ms-font-m ms-welcome">
-        <header class="ms-welcome__header ms-bgColor-themeDark ms-u-fadeIn500">
-            <h2 class="ms-fontSize-xxl ms-fontWeight-regular ms-fontColor-white">OneNote Add-in</h1>
-        </header>
-        <main id="app-body" class="ms-welcome__main">
-            <br />
-            <p class="ms-font-m">Enter HTML content here:</p>
-            <div class="ms-TextField ms-TextField--placeholder">
-                <textarea id="textBox" rows="8" cols="30"></textarea>
-            </div>
-            <button id="addOutline" class="ms-Button ms-Button--primary">
-                <span class="ms-Button-label">Add outline</span>
-            </button>
-        </main>
-        <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
-        <script type="text/javascript" src="node_modules/office-ui-fabric-js/dist/js/fabric.js"></script>
-    </body>
-    ```
+        // Get the current page.
+        var page = context.application.getActivePage();
 
-3. Откройте файл **src\index.js**, чтобы указать скрипт для надстройки. Замените все его содержимое следующим кодом и сохраните файл.
+        // Queue a command to set the page title.
+        page.title = "Hello World";
 
-    ```js
-    import * as OfficeHelpers from "@microsoft/office-js-helpers";
+        // Queue a command to add an outline to the page.
+        var html = "<p><ol><li>Item #1</li><li>Item #2</li></ol></p>";
+        page.addOutline(40, 90, html);
 
-    Office.onReady(() => {
-        // Office is ready
-        $(document).ready(() => {
-            // The document is ready
-            $('#addOutline').click(addOutlineToPage);
-        });
+        // Run the queued commands, and return a promise to indicate task completion.
+        return context.sync();
     });
-    
-    async function addOutlineToPage() {
-        try {
-            await OneNote.run(async context => {
-                var html = "<p>" + $("#textBox").val() + "</p>";
-
-                // Get the current page.
-                var page = context.application.getActivePage();
-
-                // Queue a command to load the page with the title property.
-                page.load("title");
-
-                // Add text to the page by using the specified HTML.
-                var outline = page.addOutline(40, 90, html);
-
-                // Run the queued commands, and return a promise to indicate task completion.
-                return context.sync()
-                    .then(function() {
-                        console.log("Added outline to page " + page.title);
-                    })
-                    .catch(function(error) {
-                        app.showNotification("Error: " + error);
-                        console.log("Error: " + error);
-                        if (error instanceof OfficeExtension.Error) {
-                            console.log("Debug info: " + JSON.stringify(error.debugInfo));
-                        }
-                    });
-                });
-        } catch (error) {
-            OfficeHelpers.UI.notify(error);
-            OfficeHelpers.Utilities.log(error);
-        }
-    }
-    ```
-
-4. Откройте файл **app.css**, чтобы указать собственные стили для надстройки. Замените все его содержимое приведенным ниже кодом и сохраните файл.
-
-    ```css
-    html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    ul, p, h1, h2, h3, h4, h5, h6 {
-        margin: 0;
-        padding: 0;
-    }
-
-    .ms-welcome {
-        position: relative;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        -webkit-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-        min-height: 500px;
-        min-width: 320px;
-        overflow: auto;
-        overflow-x: hidden;
-    }
-
-    .ms-welcome__header {
-        min-height: 30px;
-        padding: 0px;
-        padding-bottom: 5px;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        -webkit-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-        -webkit-align-items: center;
-        align-items: center;
-        -webkit-justify-content: flex-end;
-        justify-content: flex-end;
-    }
-
-    .ms-welcome__header > h1 {
-        margin-top: 5px;
-        text-align: center;
-    }
-
-    .ms-welcome__main {
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        -webkit-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-        -webkit-align-items: center;
-        align-items: left;
-        -webkit-flex: 1 0 0;
-        flex: 1 0 0;
-        padding: 30px 20px;
-    }
-
-    .ms-welcome__main > h2 {
-        width: 100%;
-        text-align: left;
-    }
-
-    @media (min-width: 0) and (max-width: 350px) {
-        .ms-welcome__features {
-            width: 100%;
-        }
-    }
-    ```
-
-## <a name="update-the-manifest"></a>Обновление манифеста
-
-1. Откройте файл **manifest.xml**, чтобы определить параметры и возможности надстройки.
-
-2. Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.
-
-3. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его строкой **Надстройка области задач для OneNote**.
-
-4. Сохраните файл.
-
-    ```xml
-    ...
-    <ProviderName>John Doe</ProviderName>
-    <DefaultLocale>en-US</DefaultLocale>
-    <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
-    <DisplayName DefaultValue="My Office Add-in" />
-    <Description DefaultValue="A task pane add-in for OneNote"/>
-    ...
-    ```
-
-## <a name="start-the-dev-server"></a>Запуск сервера разработки
-
-[!include[Start server section](../includes/quickstart-yo-start-server.md)]
+} catch (error) {
+    console.log("Error: " + error);
+}
+```
 
 ## <a name="try-it-out"></a>Проверка
 
-1. Откройте записную книжку в [OneNote Online](https://www.onenote.com/notebooks).
+> [!NOTE]
+> Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите одну из указанных ниже команд, примите предложение установить сертификат, предоставленный генератором Yeoman.
 
-2. Выберите **Вставка > Надстройки Office**. Откроется диалоговое окно "Надстройки Office".
+> [!TIP]
+> Если вы тестируете надстройку на компьютере Mac, перед продолжением выполните указанную ниже команду. После выполнения этой команды запустится локальный веб-сервер.
+>
+> ```command&nbsp;line
+> npm run dev-server
+> ```
+
+1. Выполните следующую команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).
+
+    ```command&nbsp;line
+    npm run start:web
+    ```
+
+2. Откройте записную книжку в [OneNote Online](https://www.onenote.com/notebooks) и создайте страницу.
+
+3. Выберите **Вставка > Надстройки Office**. Откроется диалоговое окно "Надстройки Office".
 
     - Если вы вошли с помощью обычной учетной записи, выберите **Отправить надстройку** на вкладке **МОИ НАДСТРОЙКИ**.
 
@@ -239,36 +111,13 @@ ms.locfileid: "32450903"
 
 4. На вкладке **Главная** ленты нажмите кнопку **Показать область задач**. Область задач надстройки откроется в iFrame рядом со страницей OneNote.
 
-5. Введите указанное ниже HTML-содержимое в области текста и нажмите кнопку **Добавить структуру**.  
+5. В нижней части области задач щелкните ссылку **Выполнить**, чтобы настроить заголовок страницы и добавить контур к тексту страницы.
 
-    ```html
-    <ol>
-    <li>Item #1</li>
-    <li>Item #2</li>
-    <li>Item #3</li>
-    <li>Item #4</li>
-    </ol>
-    ```
-
-    Указанная структура будет добавлена на страницу.
-
-    ![Надстройка OneNote, созданная на основе этого руководства](../images/onenote-first-add-in-3.png)
-
-## <a name="troubleshooting-and-tips"></a>Устранение неполадок и советы
-
-- Для отладки надстройки можно использовать имеющиеся в браузере средства разработчика. При использовании веб-сервера Gulp и отладке в Internet Explorer или Chrome вы можете сохранить внесенные изменения в локальном расположении, а затем просто обновить iFrame надстройки.
-
-- Просматривая объект OneNote, вы увидите, что доступные для использования свойства имеют действительные значения. Свойства, которые необходимо загрузить, имеют значение *undefined*. Разверните узел `_proto_`, чтобы увидеть свойства, которые определены для объекта, но еще не загружены.
-
-   ![Выгруженный объект OneNote в отладчике](../images/onenote-debug.png)
-
-- Если надстройка использует какие-либо HTTP-ресурсы, то вам потребуется включить смешанное содержимое в браузере. Надстройки, которые применяются в рабочей среде, должны использовать только безопасные HTTPS-ресурсы.
-
-- Надстройки области задач можно открыть откуда угодно, но контентные надстройки вставляются только в содержимое стандартной страницы (не в заголовки, изображения, iFrames и т. д.). 
+    ![Надстройка OneNote, созданная на основе этого руководства](../images/onenote-first-add-in-4.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Поздравляем, вы успешно создали надстройку OneNote! Следующим шагом узнайте больше об основных понятиях, связанных с созданием надстроек OneNote.
+Поздравляем! Вы успешно создали надстройку области задач OneNote! Следующим шагом узнайте больше об основных понятиях, связанных с созданием надстроек OneNote.
 
 > [!div class="nextstepaction"]
 > [Обзор API JavaScript для OneNote](../onenote/onenote-add-ins-programming-overview.md)

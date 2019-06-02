@@ -4,12 +4,12 @@ description: ''
 ms.date: 05/08/2019
 ms.prod: project
 localization_priority: Priority
-ms.openlocfilehash: d61f8d83b88dbe69ff0ba9cd4b0afef77a4f03d6
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: 7a7c907eeeb85b2a686c49ebba0558f4ec20568d
+ms.sourcegitcommit: b299b8a5dfffb6102cb14b431bdde4861abfb47f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33952254"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "34589211"
 ---
 # <a name="build-your-first-project-task-pane-add-in"></a>Создание первой надстройки области задач Project
 
@@ -97,14 +97,14 @@ Office.context.document.getSelectedTaskAsync(
 
 ## <a name="try-it-out"></a>Проверка
 
-1. Запустите локальный веб-сервер, выполнив следующую команду:
+> [!NOTE]
+> Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите указанную ниже команду, примите предложение установить сертификат, предоставленный генератором Yeoman.
+
+1. Выполните следующую команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер.
 
     ```command&nbsp;line
     npm start
     ```
-
-    > [!NOTE]
-    > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите `npm start`, примите предложение установить сертификат от генератора Yeoman. 
 
 2. В Project создайте простой план проекта.
 
