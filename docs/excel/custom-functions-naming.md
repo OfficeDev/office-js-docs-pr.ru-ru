@@ -3,12 +3,12 @@ ms.date: 05/03/2019
 description: Узнайте о требованиях к именам пользовательских функций Excel и Избегайте распространенных ловушек именования.
 title: Рекомендации по именованию пользовательских функций в Excel
 localization_priority: Normal
-ms.openlocfilehash: 3abe04eebfa703666b70ecbde1c68ab0c942003c
-ms.sourcegitcommit: ff73cc04e5718765fcbe74181505a974db69c3f5
+ms.openlocfilehash: 64420171a90b29732745891cb691b8cd4309c53d
+ms.sourcegitcommit: 567aa05d6ee6b3639f65c50188df2331b7685857
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "33628048"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "34706080"
 ---
 # <a name="naming-guidelines"></a>Рекомендации по именованию
 
@@ -49,6 +49,7 @@ Excel использует прописные буквы для встроенн
 - Имена функций должны указывать на действие функции, например, `=GETZIPCODE` вместо. `ZIPCODE`
 - Избегайте неоднозначных сокращений в именах функций. Ясности важнее, чем кратко. Выберите имя, `=INCREASETIME` а не `=INC`.
 - Согласованно используйте одни и те же команды для функций, которые выполняют похожие действия. `=DELETEZIPCODE` Например, используйте `=DELETEADDRESS`и, а не `=DELETEZIPCODE` и. `=REMOVEADDRESS`
+- При указании имени потоковой функции рекомендуется добавить заметку к этому результату в описании функции или добавить `STREAM` ее в конец имени функции.
 
 ## <a name="localizing-function-names"></a>Локализация имен функций
 
@@ -62,6 +63,6 @@ Excel использует прописные буквы для встроенн
 ## <a name="see-also"></a>См. также
 
 * [Метаданные пользовательских функций](custom-functions-json.md)
-* [Рекомендации по настраиваемым функциям](custom-functions-best-practices.md)
+* [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
 * [Руководство по настраиваемым функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
 * [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)

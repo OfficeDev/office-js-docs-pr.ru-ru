@@ -1,16 +1,16 @@
 ---
 title: Руководство по пользовательским функциям в Excel
 description: Из этого руководства вы узнаете, как создать надстройку, Excel, содержащую пользовательские функции, которые могут выполнять вычисления, запрашивать или передавать веб-данные.
-ms.date: 05/16/2019
+ms.date: 05/30/2019
 ms.prod: excel
 ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: 7d4d87a6bb3910c1b46698d5a2ff211ea1bbc6dd
-ms.sourcegitcommit: b299b8a5dfffb6102cb14b431bdde4861abfb47f
+ms.openlocfilehash: f167125fcc24e47f0805d6c46e5338455d94b277
+ms.sourcegitcommit: 567aa05d6ee6b3639f65c50188df2331b7685857
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "34589176"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "34706374"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -27,7 +27,7 @@ ms.locfileid: "34589176"
 
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
-* Excel в Windows (64-разрядная версия 1810 или более поздняя) или Excel Online
+* Excel в Windows (версия 1810 или более поздняя) или Excel Online
 
 ## <a name="create-a-custom-functions-project"></a>Создание проекта пользовательских функций
 

@@ -3,12 +3,12 @@ title: Office. Context. Mailbox. Item — набор требований 1,7
 description: ''
 ms.date: 05/30/2019
 localization_priority: Normal
-ms.openlocfilehash: 8895a27938bc6c72d929cf9423a377eaa2cc02a9
-ms.sourcegitcommit: b299b8a5dfffb6102cb14b431bdde4861abfb47f
+ms.openlocfilehash: fd618b766a519c522f323e0a9d43105b3258c421
+ms.sourcegitcommit: 567aa05d6ee6b3639f65c50188df2331b7685857
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "34589190"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "34706315"
 ---
 # <a name="item"></a>item
 
@@ -93,7 +93,7 @@ Office.initialize = function () {
 
 ### <a name="members"></a>Элементы
 
-#### <a name="attachments-arrayattachmentdetailsjavascriptapioutlook17officeattachmentdetails"></a>вложения: Array. _Лт_[AttachmentDetails](/javascript/api/outlook_1_7/office.attachmentdetails)>
+#### <a name="attachments-arrayattachmentdetailsjavascriptapioutlook17officeattachmentdetails"></a>вложения: Array. <[AttachmentDetails](/javascript/api/outlook_1_7/office.attachmentdetails)>
 
 Получает массив вложений для элемента. Только в режиме чтения.
 
@@ -213,7 +213,7 @@ Office.context.mailbox.item.body.getAsync(
 ---
 ---
 
-#### <a name="cc-arrayemailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsrecipientsjavascriptapioutlook17officerecipients"></a>[получатели](/javascript/api/outlook_1_7/office.recipients) CC: Array. _лт_[EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)>|
+#### <a name="cc-arrayemailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsrecipientsjavascriptapioutlook17officerecipients"></a>CC: Array. <[EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)>|[получатели](/javascript/api/outlook_1_7/office.recipients)
 
 Предоставляет доступ к получателям копии сообщения. Тип объекта и уровень доступа зависят от режима текущего элемента.
 
@@ -666,7 +666,7 @@ Office.context.mailbox.item.notificationMessages.getAllAsync(
 ---
 ---
 
-#### <a name="optionalattendees-arrayemailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsrecipientsjavascriptapioutlook17officerecipients"></a>optionalAttendees: Array. _лт_[EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook_1_7/office.recipients)
+#### <a name="optionalattendees-arrayemailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsrecipientsjavascriptapioutlook17officerecipients"></a>optionalAttendees: Array. <[EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)>|[получатели](/javascript/api/outlook_1_7/office.recipients)
 
 Предоставляет доступ к необязательным участникам события. Тип объекта и уровень доступа зависят от режима текущего элемента.
 
@@ -810,7 +810,7 @@ Recurrence = {
 ---
 ---
 
-#### <a name="requiredattendees-arrayemailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsrecipientsjavascriptapioutlook17officerecipients"></a>requiredAttendees: Array. _лт_[EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook_1_7/office.recipients)
+#### <a name="requiredattendees-arrayemailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsrecipientsjavascriptapioutlook17officerecipients"></a>requiredAttendees: Array. <[EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)>|[получатели](/javascript/api/outlook_1_7/office.recipients)
 
 Предоставляет доступ к обязательным участникам события. Тип объекта и уровень доступа зависят от режима текущего элемента.
 
@@ -1023,7 +1023,7 @@ function callback(asyncResult) {
 ---
 ---
 
-#### <a name="to-arrayemailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsrecipientsjavascriptapioutlook17officerecipients"></a>Кому: Array. _лт_[EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook_1_7/office.recipients)
+#### <a name="to-arrayemailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsrecipientsjavascriptapioutlook17officerecipients"></a>Кому: Array. <[EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)>|[получатели](/javascript/api/outlook_1_7/office.recipients)
 
 Предоставляет доступ к получателям, указанным в строке **Кому** сообщения. Тип объекта и уровень доступа зависят от режима текущего элемента.
 
@@ -2036,7 +2036,7 @@ Office.initialize = function (reason) {
 > [!NOTE]
 > Следующие клиенты отличаются другим поведением `saveAsync` в отношении встреч в режиме создания:
 >
-> - Outlook для Mac не поддерживает `saveAsync` собрание в режиме создания. Таким образом, вызов `saveAsync` в этом сценарии возвращает ошибку. Просмотреть [не удается сохранить собрание в виде черновика в Outlook для Mac с помощью API Office JS](https://support.microsoft.com/help/4505745) для обхода.
+> - Outlook для Mac не поддерживает сохранение собраний. `saveAsync` Метод завершается с ошибкой при вызове из собрания в режиме создания. Просмотреть [не удается сохранить собрание в виде черновика в Outlook для Mac с помощью API Office JS](https://support.microsoft.com/help/4505745) для обхода.
 > - Outlook в Интернете всегда отправляет приглашение или обновление при вызове `saveAsync` для встречи в режиме создания.
 
 ##### <a name="parameters"></a>Параметры
