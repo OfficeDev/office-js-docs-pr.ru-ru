@@ -1,14 +1,14 @@
 ---
-ms.date: 05/07/2019
+ms.date: 05/30/2019
 description: Запрос, потоковая передача и отмена потоковой передачи внешних данных к книге с помощью пользовательских функций в Excel
 title: Получение и обработка данных с помощью пользовательских функций
 localization_priority: Priority
-ms.openlocfilehash: 61f4d0fdaea4277faedddbe075a587fb23842c08
-ms.sourcegitcommit: 5b9c2b39dfe76cabd98bf28d5287d9718788e520
+ms.openlocfilehash: add6a3bc91b28ff7dbd0f0b298ed8f38ed5dd1bc
+ms.sourcegitcommit: 567aa05d6ee6b3639f65c50188df2331b7685857
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "33659637"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "34706146"
 ---
 # <a name="receive-and-handle-data-with-custom-functions"></a>Получение и обработка данных с помощью пользовательских функций
 
@@ -25,9 +25,9 @@ ms.locfileid: "33659637"
 1. Возвращать обещание JavaScript в Excel;
 2. Устранять обещание с итоговым значением с помощью функции обратного вызова.
 
-Можно запрашивать внешние данные с помощью такого API, как [`Fetch`](https://developer.mozilla.org/ru-RU/docs/Web/API/Fetch_API), или с помощью `XmlHttpRequest` [(XHR)](https://developer.mozilla.org/ru-RU/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который отправляет HTTP-запросы для взаимодействия с серверами.
+Можно запрашивать внешние данные с помощью такого API, как [`Fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), или с помощью `XmlHttpRequest` [(XHR)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который отправляет HTTP-запросы для взаимодействия с серверами.
 
-В среде выполнения пользовательских функций XHR реализует дополнительные меры по обеспечению безопасности, предъявляя в качестве требования [политику единого домена](https://developer.mozilla.org/ru-RU/docs/Web/Security/Same-origin_policy) и простой запрос [CORS](https://www.w3.org/TR/cors/).
+В среде выполнения пользовательских функций XHR реализует дополнительные меры по обеспечению безопасности, предъявляя в качестве требования [политику единого домена](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) и простой запрос [CORS](https://www.w3.org/TR/cors/).
 
 Обратите внимание, что при реализации простых запросов CORS нельзя использовать файлы cookie и поддерживаются только простые методы (GET, HEAD, POST). Простые запросы CORS принимают простые заголовки с именами полей `Accept`, `Accept-Language`, `Content-Language`. Вы также можете использовать заголовок Content-Type в простом запросе CORS, если используется тип контента `application/x-www-form-urlencoded`, `text/plain` или `multipart/form-data`.
 
@@ -137,13 +137,37 @@ ws.onerror(error){
 }
 ```
 
-## <a name="stream-and-cancel-functions"></a>Потоковая передача и отмена функций
+## <a name="make-a-streaming-function"></a>Создание функции потоковой передачи
 
-Потоковая передача пользовательских функций позволяет выводить данные в ячейки, которые повторно обновляются, не требуя от пользователя явно что-либо обновлять.
+Пользовательские функции потоковой передачи позволяют выводить данные в ячейки, которые повторно обновляются, не требуя от пользователя явно что-либо обновлять. Такие функции (например, функция из [руководства по пользовательским функциям](/tutorials/excel-tutorial-create-custom-functions)) могут быть полезны для проверки данных, обновляемых в реальном времени, из веб-службы.
 
-Отменяемые пользовательские функции позволяют отменять выполнение потоковой пользовательской функции, чтобы уменьшить использование пропускной способности, рабочей памяти и загрузку ЦП.
+Чтобы объявить функцию потоковой передачи, используйте тег комментария JSDoc `@stream`. Чтобы оповестить пользователей о том, что ваша функция может выполнять повторное вычисление с учетом новой информации, рекомендуем указать поток или другие сведения об этом в имени или описании функции.
 
-Чтобы объявить функцию как потоковую или отменяемую, используйте теги комментария JSDOC `@stream` или `@cancelable`.
+В приведенном ниже примере показана функция потоковой передачи, которая увеличивает определенное число каждую секунду на указанное число.
+
+```JS
+/**
+ * Increments a value once a second.
+ * @customfunction INC increment
+ * @param {number} incrementBy Amount to increment
+ * @param {CustomFunctions.StreamingInvocation<number>} invocation
+ */
+function increment(incrementBy, invocation) {
+  let result = 0;
+  const timer = setInterval(() => {
+    result += incrementBy;
+    invocation.setResult(result);
+  }, 1000);
+
+  invocation.onCanceled = () => {
+    clearInterval(timer);
+  };
+}
+CustomFunctions.associate("INC", increment);
+```
+
+>[!NOTE]
+> Обратите внимание, что существует еще одна категория — так называемые отменяемые функции, которые *не* связаны с функциями потоковой передачи. В предыдущих версиях пользовательских функций требовалось объявлять `"cancelable": true` и `"streaming": true` в самостоятельно написанном коде JSON. С тех пор, как появились автоматически генерируемые метаданные, можно отменять только асинхронные пользовательские функции, возвращающие одно значение. Отменяемые функции позволяют прервать выполнение веб-запроса, используя [`CancelableInvocation`](https://docs.microsoft.com/javascript/api/custom-functions-runtime/customfunctions.cancelableinvocation?view=office-js), чтобы решить, что делать после отмены. Для объявления отменяемых функций используется тег `@cancelable`.
 
 ### <a name="using-an-invocation-parameter"></a>Использование параметра вызова
 
