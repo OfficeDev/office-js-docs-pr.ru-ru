@@ -3,14 +3,14 @@ ms.date: 05/08/2019
 description: Используйте `OfficeRuntime.storage`, чтобы сохранить состояние с пользовательскими функциями.
 title: Сохранить и передать состояние в пользовательские функции.
 localization_priority: Priority
-ms.openlocfilehash: b1472b0623d15882dabff16f8be3f74756e3b3de
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: fb73c349a9f1048ccc4e01a0958c8efd41cb2b78
+ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33951972"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "34910352"
 ---
-## <a name="save-and-share-state-in-custom-functions"></a>Сохранить и передать состояние в пользовательские функции.
+# <a name="save-and-share-state-in-custom-functions"></a>Сохранить и передать состояние в пользовательские функции.
 
 Используйте объект `OfficeRuntime.storage`, чтобы сохранить состояние, связанное с пользовательскими функциями, или областью задач в вашей надстройке. Хранилище ограничено объемом 10 МБ на домен (который можно совместно использовать во множественных надстройках). В Excel для Windows объект `storage` представляет собой отдельное местоположение в пределах среды выполнения пользовательских функций, но в Excel Online и Excel для Mac объект `storage` тот же, что и `localStorage` браузера.
 
