@@ -64,8 +64,8 @@
   items:
     - name: Требования к запуску надстроек
       href: concepts/requirements-for-running-office-add-ins.md
-    - name: 'Веб-средства просмотра, используемые надстройками Office'
-      href: concepts/web-viewers-used-by-office-web-add-ins.md
+    - name: 'Браузеры, используемые надстройками Office'
+      href: concepts/browsers-used-by-office-web-add-ins.md
     - name: Рекомендации по разработке надстроек
       href: concepts/add-in-development-best-practices.md
     - name: Жизненный цикл разработки надстроек
@@ -506,7 +506,7 @@
           href: publish/package-your-add-in-using-visual-studio.md
         - name: Публикация надстроек с помощью централизованного развертывания
           href: publish/centralized-deployment.md
-        - name: Публикация надстроек в каталоге SharePoint
+        - name: Публикация надстроек в каталоге приложений SharePoint
           href: publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md
         - name: Публикация надстроек в AppSource
           href: /office/dev/store/submit-to-the-office-store
