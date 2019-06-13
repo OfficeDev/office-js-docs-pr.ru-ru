@@ -7,10 +7,10 @@ metadata:
   author: o365devx
   ms.topic: landing-page
   ms.prod: non-product-specific
-  ms.date: 05/08/2019
+  ms.date: 06/10/2019
   ms.author: o365devx
 abstract:
-  description: '<a href="/office/dev/add-ins/overview/office-add-ins">Платформа надстроек Office</a> позволяет создавать решения, которые расширяют возможности приложений Office и взаимодействуют с содержимым документов Office. В случае надстроек Office можно использовать привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений. Ваше решение может работать в Office на нескольких платформах, в том числе Office для Windows, Office Online, Office для Mac и Office для iPad. Узнайте, как создавать надстройки Office с помощью наших кратких и пошаговых руководств, а также справочной документации по API.<br/><br/><b>Примечание.</b> Сведения о надстройках COM или VSTO см. в <a href="/office/client-developer/office-client-development" target="_blank">документации по разработке клиентов Office</a>.'
+  description: '<a href="/office/dev/add-ins/overview/office-add-ins">Платформа надстроек Office</a> позволяет создавать решения, которые расширяют возможности приложений Office и взаимодействуют с содержимым документов Office. В случае надстроек Office можно использовать привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений. Ваше решение может работать в Office на нескольких платформах, в том числе в Windows, Mac, iPad и в веб-браузере. Узнайте, как создавать надстройки Office с помощью наших кратких и пошаговых руководств, а также справочной документации по API.<br/><br/><b>Примечание.</b> Сведения о надстройках COM или VSTO см. в <a href="/office/client-developer/office-client-development" target="_blank">документации по разработке клиентов Office</a>.'
   aside:
     image:
       alt: null
@@ -21,10 +21,22 @@ abstract:
     href: 'https://channel9.msdn.com/Events/Connect/2017/T192'
     width: 250
 sections:
+  - title: Опробуйте API
+    items:
+      - type: paragraph
+        text: Сведения об API JavaScript для Office путем их попыток.
+      - type: list
+        style: icon48
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/office/dev/add-ins/images/index/ScriptLabLogoColor.svg'
+              alt: Логотип лаборатории для скриптов
+            text: Лаборатория сценария
+            href: 'https://docs.microsoft.com/office/dev/add-ins/overview/explore-with-script-lab'
   - title: 5-минутные краткие руководства
     items:
       - type: paragraph
-        text: 'Узнайте, как создать свою первую надстройку Office:'
+        text: 'Узнайте, как создать свою первую надстройку Office.'
       - type: list
         style: icon48
         items:
@@ -86,4 +98,4 @@ sections:
           - title: API для определенных ведущих приложений (2016)
             html: "<p><a href=\"/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview\" target=\"_blank\">API JavaScript для Excel</a></p><p><a href=\"/office/dev/add-ins/reference/overview/word-add-ins-reference-overview\" target=\"_blank\">API\_JavaScript для Word</a></p><p><a href=\"/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference\" target=\"_blank\">API JavaScript для OneNote</a></p><p><a href=\"/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets\" target=\"_blank\">API JavaScript для Outlook</a></p>"
           - title: Другое
-            html: <p><a href="/office/dev/add-ins/reference/openspec" target="_blank">Открытые спецификации API</a></p><p><a href="/office/dev/add-ins/reference/manifest/allowsnapshot" target="_blank">Манифест надстроек Office</a></p>
+            html: <p><a href="/office/dev/add-ins/reference/openspec/openspec" target="_blank">Открытые спецификации API</a></p><p><a href="/office/dev/add-ins/reference/manifest/allowsnapshot" target="_blank">Манифест надстроек Office</a></p>

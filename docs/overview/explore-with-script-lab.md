@@ -2,14 +2,14 @@
 title: Изучение API JavaScript для Office с помощью сценария Lab
 description: Используйте сценарий "Лаборатория" для изучения API Office JS и прототипов функций.
 ms.topic: article
-ms.date: 05/08/2019
+ms.date: 06/07/2019
 localization_priority: Normal
-ms.openlocfilehash: 968f1c748558ee0d14898a3ad0dbe44bdc7a532a
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: 0bab566b08ba25dd3c01cff72f331b2dc9ce304d
+ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33952230"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "34910192"
 ---
 # <a name="explore-office-javascript-api-using-script-lab"></a>Изучение API JavaScript для Office с помощью сценария Lab
 
@@ -17,7 +17,7 @@ ms.locfileid: "33952230"
 
 ## <a name="what-is-script-lab"></a>Что такое "Лаборатория скриптов"?
 
-Script Lab — это средство для тех, кто хочет научиться разрабатывать надстройки Office с помощью API JavaScript для Office в Excel, Word или PowerPoint. Он предоставляет IntelliSense, чтобы вы могли видеть доступные и созданные на платформе Монако платформы, ту же платформу, которая используется в Visual Studio Code. С помощью сценария Lab можно получить доступ к библиотеке образцов, чтобы быстро испытать функции, или выбрать пример в качестве основы для собственного кода. Вы также можете развернуть учебную библиотеку, добавив фрагменты в репозиторий [Office – JS — фрагменты](https://github.com/OfficeDev/office-js-snippets#office-js-snippets). Еще одна интересная функция лаборатории сценариев — бета-версии или предварительные функции, такие как [пользовательские функции](/office/dev/add-ins/excel/custom-functions-overview) , которые можно попробовать.
+Script Lab — это средство для тех, кто хочет научиться разрабатывать надстройки Office с помощью API JavaScript для Office в Excel, Word или PowerPoint. Он предоставляет IntelliSense, чтобы вы могли видеть доступные и созданные на платформе Монако платформы, ту же платформу, которая используется в Visual Studio Code. С помощью сценария Lab можно получить доступ к библиотеке образцов, чтобы быстро испытать функции, или выбрать пример в качестве основы для собственного кода. Вы также можете развернуть учебную библиотеку, добавив фрагменты в репозиторий [Office – JS — фрагменты](https://github.com/OfficeDev/office-js-snippets#office-js-snippets). Еще одна интересная функция лаборатории сценариев — бета-версия или предварительная версия функции, которую вы можете попробовать.
 
 > [!TIP]
 > Чтобы принять участие в бета-версии или предварительной версии, вам может потребоваться зарегистрироваться в [программе предварительной оценки Office](https://products.office.com/office-insider).
