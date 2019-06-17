@@ -1,16 +1,16 @@
 ---
 title: Руководство по пользовательским функциям в Excel
 description: Из этого руководства вы узнаете, как создать надстройку, Excel, содержащую пользовательские функции, которые могут выполнять вычисления, запрашивать или передавать веб-данные.
-ms.date: 05/30/2019
+ms.date: 06/15/2019
 ms.prod: excel
 ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: f167125fcc24e47f0805d6c46e5338455d94b277
-ms.sourcegitcommit: 567aa05d6ee6b3639f65c50188df2331b7685857
+ms.openlocfilehash: c2eedee19cf4a612c83b7a45f7c5c5dc3b3f6937
+ms.sourcegitcommit: e112a9b29376b1f574ee13b01c818131b2c7889d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34706374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "34997388"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -108,7 +108,10 @@ npm run start:web
 
 ## <a name="create-a-custom-function-that-requests-data-from-the-web"></a>Создание пользовательской функции, которая запрашивает данные из сети Интернет
 
-Интеграция данных из Интернета — отличный способ расширения функционала Excel через пользовательские функции. Далее необходимо создать пользовательскую функцию под именем `stockPrice`, которая получает котировки акций из Web API и возвращает результат в ячейку на листе. Вы будете использовать API IEX Trading, который предоставляется бесплатно и не требует проверки подлинности.
+Интеграция данных из Интернета — отличный способ расширения функционала Excel через пользовательские функции. Далее необходимо создать пользовательскую функцию под именем `stockPrice`, которая получает котировки акций из Web API и возвращает результат в ячейку на листе. 
+
+> [!NOTE]
+> Приведенный ниже код запрашивает котировку акций с помощью API торговых IEX. Перед выполнением кода вам потребуется [создать бесплатную учетную запись с IEX Cloud](https://iexcloud.io/) , чтобы получить маркер API, который требуется в запросе API.  
 
 1. В проекте **Stocks —** найдите файл **./СРК/функтионс/функтионс.ЖС** и откройте его в редакторе кода.
 
@@ -122,7 +125,8 @@ npm run start:web
     * @returns {number} The current stock price.
     */
     function stockPrice(ticker) {
-        var url = "https://api.iextrading.com/1.0/stock/" + ticker + "/price";
+        //Note: In the following line, replace <YOUR_TOKEN_HERE> with the API token that you've obtained through your IEX Cloud account.
+        var url = "https://cloud.iexapis.com/stable/stock/" + ticker + "/quote/latestPrice?token=<YOUR_TOKEN_HERE>"
         return fetch(url)
             .then(function(response) {
                 return response.text();
@@ -195,7 +199,8 @@ npm run start:web
                 return;
             }
 
-            var url = "https://api.iextrading.com/1.0/stock/" + ticker + "/price";
+            //Note: In the following line, replace <YOUR_TOKEN_HERE> with the API token that you've obtained through your IEX Cloud account.
+            var url = "https://cloud.iexapis.com/stable/stock/" + ticker + "/quote/latestPrice?token=<YOUR_TOKEN_HERE>"
             isPending = true;
 
             fetch(url)

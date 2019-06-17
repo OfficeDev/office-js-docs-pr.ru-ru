@@ -1,15 +1,15 @@
 ---
 title: Обзор API JavaScript для Word
 description: ''
-ms.date: 03/19/2019
+ms.date: 06/10/2019
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 19e3b7732fb5372228ea1458c57df5e79b08078a
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 92b66b98776c1ad6b2d824af8bf13b01f2807384
+ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450095"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "34910205"
 ---
 # <a name="word-javascript-api-overview"></a>Обзор API JavaScript для Word
 
@@ -28,8 +28,8 @@ API JavaScript для Word загружается с помощью файла O
 
 Файл Office.js можно получить из указанных ниже расположений.
 
-* https://appsforoffice.microsoft.com/lib/1/hosted/office.js. Используйте этот ресурс для рабочих надстроек.
-* https://appsforoffice.microsoft.com/lib/beta/hosted/office.js. Используйте этот ресурс при испытаниях предварительных версий функций.
+- https://appsforoffice.microsoft.com/lib/1/hosted/office.js. Используйте этот ресурс для рабочих надстроек.
+- https://appsforoffice.microsoft.com/lib/beta/hosted/office.js. Используйте этот ресурс при испытаниях предварительных версий функций.
 
 Если вы используете [Visual Studio](https://www.visualstudio.com/products/free-developer-offers-vs), то, чтобы получить шаблоны проектов, включающие файл Office.js, вы можете скачать [Office Developer Tools](https://www.visualstudio.com/features/office-tools-vs.aspx).  Кроме того, [чтобы получить файл Office.js, вы можете воспользоваться NuGet](https://www.nuget.org/packages/Microsoft.Office.js/).
 
@@ -100,7 +100,6 @@ Word.run(function (context) {
 
 В примере ниже показано, как работает очередь команд. При вызове метода **context.sync()** в Word выполняется команда загрузки основного текста. Затем выполняется команда вставки текста в основной текст в Word. Результаты выполнения команд возвращаются в прокси-объект основного текста. Значение свойства **body.text** в API JavaScript для Word представляет собой значение основного текста документа Word <u>перед тем, как</u> текст был вставлен в документ Word.
 
-
 ```js
 // Run a batch operation against the Word JavaScript API.
 Word.run(function (context) {
@@ -123,10 +122,6 @@ Word.run(function (context) {
 })
 ```
 
-## <a name="word-javascript-api-open-specifications"></a>Открытые спецификации API JavaScript для Word
-
-Мы публикуем новые API для надстроек Word на странице [Открытые спецификации API](../openspec.md), чтобы вы могли делиться своим мнением. Узнайте, над какими функциями API JavaScript для Word мы работаем, и поделитесь своим мнением о проектируемых спецификациях.
-
 ## <a name="word-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Word
 
 Наборы требований — это именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Подробнее о наборах обязательных элементов API JavaScript для Word см. в статье [Наборы требований API JavaScript для Word](../requirement-sets/word-api-requirement-sets.md).
@@ -137,6 +132,7 @@ Word.run(function (context) {
 
 ## <a name="see-also"></a>См. также
 
-* [Обзор надстроек Word](/office/dev/add-ins/word/word-add-ins-programming-overview)
-* [Обзор платформы надстроек Office](/office/dev/add-ins/overview/office-add-ins)
-* [Примеры надстроек Word на сайте GitHub](https://github.com/OfficeDev?utf8=%E2%9C%93&q=Word)
+- [Обзор надстроек Word](/office/dev/add-ins/word/word-add-ins-programming-overview)
+- [Обзор платформы надстроек Office](/office/dev/add-ins/overview/office-add-ins)
+- [Примеры надстроек Word на сайте GitHub](https://github.com/OfficeDev?utf8=%E2%9C%93&q=Word)
+- [Открытые спецификации API](../openspec/openspec.md)

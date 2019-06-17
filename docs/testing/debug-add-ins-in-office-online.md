@@ -3,12 +3,12 @@ title: Отладка надстроек в Office Online
 description: Сведения о том, как тестировать и отлаживать надстройки в Office Online.
 ms.date: 05/16/2019
 localization_priority: Priority
-ms.openlocfilehash: 6d6ab8a6ca85a9f462bfe4e5ae283eb3dccd9425
-ms.sourcegitcommit: b0e71ae0ae09c57b843d4de277081845c108a645
+ms.openlocfilehash: f6cdb1f0b92a8519315bcff272cd1bc235c57653
+ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "34337183"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "34910169"
 ---
 # <a name="debug-add-ins-in-office-online"></a>Отладка надстроек в Office Online
 
@@ -24,7 +24,7 @@ ms.locfileid: "34337183"
   > [!NOTE]
   > Чтобы бесплатно получить подписку разработчика приложений для Office 365, примите участие в нашей [программе для разработчиков приложений Office 365](https://developer.microsoft.com/office/dev-program). Пошаговые инструкции для принятия участия в этой программе, регистрации и настройки подписки см. в [документации по программе для разработчиков приложений для Office 365](/office/developer-program/office-365-developer-program).
      
-- Настройте каталог надстроек в Office 365 (SharePoint Online). Каталог надстроек — это специальное семейство веб-сайтов в SharePoint Online, в котором размещены библиотеки документов для надстроек Office. Если у вас есть сайт SharePoint, вы можете настроить библиотеку документов каталога надстроек. Дополнительные сведения см. в статье [Публикация надстроек области задач и контентных надстроек в каталоге надстроек в SharePoint](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md).
+- Настройте каталог приложений в Office 365 (SharePoint Online). Каталог приложений — это специальное семейство веб-сайтов в SharePoint Online, в котором размещены библиотеки документов для надстроек Office. Если у вас есть сайт SharePoint, вы можете настроить библиотеку документов каталога приложений. Дополнительные сведения см. в статье [Публикация надстроек области задач и контентных надстроек в каталоге приложений в SharePoint](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md).
     
 
 ## <a name="debug-your-add-in-from-excel-online-or-word-online"></a>Отладка надстройки в Excel Online и Word Online
@@ -42,7 +42,7 @@ ms.locfileid: "34337183"
     <SourceLocation DefaultValue="https://localhost:44300/App/Home/Home.html" />
     ```
     
-3. Выложите манифест в библиотеку надстроек Office в каталоге надстроек в SharePoint.
+3. Выложите манифест в библиотеку надстроек Office в каталоге приложений в SharePoint.
     
 4. В Office 365 в средстве запуска приложений запустите Excel Online или Word Online и откройте новый документ.
     

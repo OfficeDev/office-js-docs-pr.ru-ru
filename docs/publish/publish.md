@@ -3,12 +3,12 @@ title: Развертывание и публикация надстройки O
 description: Методы и варианты развертывания надстройки Office для тестирования и распространения.
 ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: eeaf4b61948952ff7e536f3e1a6b38dc46adb93e
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: ba32e0bbe594b8da8fad0d230b818faf59e64ce6
+ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32452062"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "34910156"
 ---
 # <a name="deploy-and-publish-your-office-add-in"></a>Развертывание и публикация надстройки Office
 
@@ -59,9 +59,9 @@ ms.locfileid: "32452062"
 
 Дополнительные сведения см. в разделе [Публикация надстроек Office с помощью централизованного развертывания в Центре администрирования Office 365](centralized-deployment.md).
 
-### <a name="sharepoint-catalog-deployment"></a>Развертывание с использованием каталога SharePoint
+### <a name="sharepoint-app-catalog-deployment"></a>Развертывание с использованием каталога приложений SharePoint
 
-Каталог надстроек SharePoint — это специальный семейство веб-сайтов, в котором можно размещать надстройки Word, Excel и PowerPoint. Та как каталоги SharePoint не поддерживают новые функции надстроек, реализованные в узле `VersionOverrides` манифеста, в том числе команды надстроек, рекомендуем развертывать надстройки в Центре администрирования. Команды надстроек, развернутые с помощью каталога SharePoint, по умолчанию открываются в области задач.
+Каталог приложений SharePoint — это специальное семейство веб-сайтов, в котором можно размещать надстройки Word, Excel и PowerPoint. Так как каталоги SharePoint не поддерживают новые функции надстроек, реализованные в узле `VersionOverrides` манифеста, в том числе команды надстроек, рекомендуем развертывать надстройки в Центре администрирования. Команды надстроек, развернутые с помощью каталога SharePoint, по умолчанию открываются в области задач.
 
 Если вы развертываете надстройки в локальной среде, используйте каталог SharePoint. Дополнительные сведения см. в статье [Публикация надстроек области задач и контентных надстроек в каталоге SharePoint](publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md).
 

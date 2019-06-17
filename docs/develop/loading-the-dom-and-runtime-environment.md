@@ -3,12 +3,12 @@ title: Загрузка модели DOM и среды выполнения
 description: ''
 ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: b1f63d9fe012ed8c8a5cf4a0f7de862ddabcd4d3
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: e975db391276129e453d5001fe0bac8ad36f6080
+ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449848"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "34910219"
 ---
 # <a name="loading-the-dom-and-runtime-environment"></a>Загрузка модели DOM и среды выполнения
 
@@ -24,7 +24,7 @@ ms.locfileid: "32449848"
 
 1. Пользователь открывает документ, который уже содержит надстройку, или вставляет надстройку в документ.
 
-2. Ведущее приложение Office читает XML-манифест надстройки из AppSource, каталога надстроек в SharePoint или каталога общей папки, в зависимости от того, откуда берется надстройка.
+2. Ведущее приложение Office читает XML-манифест надстройки из AppSource, каталога приложений в SharePoint или каталога общей папки, в зависимости от того, откуда берется надстройка.
 
 3. Ведущее приложение Office открывает HTML-страницу надстройки в элементе управления браузера.
 

@@ -3,12 +3,12 @@ title: Жизненный цикл разработки надстроек Offic
 description: ''
 ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 86c384128640d64c47185a290bc224ffe7b59274
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: ec38bb3cfba98153d644431f5e6f23c1d37b0a06
+ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32448366"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "34910168"
 ---
 # <a name="office-add-ins-development-lifecycle"></a>Жизненный цикл разработки надстроек Office
 
@@ -80,7 +80,7 @@ ms.locfileid: "32448366"
 
 ## <a name="7-publish-the-add-in"></a>7. Публикация надстройки
 
-Вы можете отправить надстройку в AppSource, где пользователи смогут ее скачать и установить. Кроме того, надстройки области задач и контентные надстройки можно публиковать в каталоге надстроек личной папки SharePoint или в общей сетевой папке, а надстройку Outlook для вашей организации можно развернуть непосредственно на сервере Exchange Server. Дополнительные сведения см. в статье [Публикация надстройки Office](../publish/publish.md).
+Вы можете отправить надстройку в AppSource, где пользователи смогут ее скачать и установить. Кроме того, надстройки области задач и контентные надстройки можно публиковать в каталоге приложений SharePoint или в общей сетевой папке, а надстройку Outlook для вашей организации можно развернуть непосредственно на сервере Exchange Server. Дополнительные сведения см. в статье [Публикация надстройки Office](../publish/publish.md).
 
 
 ## <a name="8-maintain-the-add-in"></a>8. Обслуживание надстройки

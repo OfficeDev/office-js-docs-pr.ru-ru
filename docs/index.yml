@@ -98,4 +98,4 @@ sections:
           - title: API для определенных ведущих приложений (2016)
             html: "<p><a href=\"/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview\" target=\"_blank\">API JavaScript для Excel</a></p><p><a href=\"/office/dev/add-ins/reference/overview/word-add-ins-reference-overview\" target=\"_blank\">API\_JavaScript для Word</a></p><p><a href=\"/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference\" target=\"_blank\">API JavaScript для OneNote</a></p><p><a href=\"/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets\" target=\"_blank\">API JavaScript для Outlook</a></p>"
           - title: Другое
-            html: <p><a href="/office/dev/add-ins/reference/openspec/openspec" target="_blank">Открытые спецификации API</a></p><p><a href="/office/dev/add-ins/reference/manifest/allowsnapshot" target="_blank">Манифест надстроек Office</a></p>
+            html: <p><a href="/office/dev/add-ins/reference/manifest/allowsnapshot" target="_blank">Манифест надстроек Office</a></p>

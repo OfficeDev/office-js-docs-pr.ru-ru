@@ -4,12 +4,12 @@ description: ''
 ms.date: 05/08/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: aebb85250743255cbc9c139d59e7e2fa5ef4e442
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: 9123714dff894d01475563b4d960c1fad682789a
+ms.sourcegitcommit: e112a9b29376b1f574ee13b01c818131b2c7889d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33952364"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "34997416"
 ---
 # <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
 
@@ -77,30 +77,28 @@ ms.locfileid: "33952364"
 |:---|:---|:---|
 |[Comment](/javascript/api/excel/excel.comment)|[content](/javascript/api/excel/excel.comment#content)|Получает или задает содержимое примечания.|
 ||[delete()](/javascript/api/excel/excel.comment#delete--)|Удаляет цепочку примечаний.|
-||[getLocation()](/javascript/api/excel/excel.comment#getlocation--)|Получает расположение примечания.|
+||[getLocation()](/javascript/api/excel/excel.comment#getlocation--)|Получает ячейку, в которой находится примечание.|
 ||[authorEmail](/javascript/api/excel/excel.comment#authoremail)|Получает электронную почту автора примечания.|
 ||[authorName](/javascript/api/excel/excel.comment#authorname)|Получает имя автора примечания.|
 ||[creationDate](/javascript/api/excel/excel.comment#creationdate)|Получает время создания примечания. Возвращает значение null, если примечание было преобразовано из заметки, так как у примечания нет даты создания.|
 ||[id](/javascript/api/excel/excel.comment#id)|Представляет идентификатор примечания. Только для чтения.|
 ||[replies](/javascript/api/excel/excel.comment#replies)|Представляет коллекцию объектов ответов, связанных с примечанием. Только для чтения.|
-|[CommentCollection](/javascript/api/excel/excel.commentcollection)|[add(content: string, cellAddress: Range \| string, contentType?: "Plain")](/javascript/api/excel/excel.commentcollection#add-content--celladdress--contenttype-)|Создает новое примечание с указанным содержимым в определенной ячейке. Возникает ошибка, сообщающая о недопустимом аргументе, если в указанном диапазоне больше одной ячейки.|
-||[add(content: string, cellAddress: Range \| string, contentType?: Excel.ContentType)](/javascript/api/excel/excel.commentcollection#add-content--celladdress--contenttype-)|Создает новое примечание с указанным содержимым в определенной ячейке. Возникает ошибка, сообщающая о недопустимом аргументе, если в указанном диапазоне больше одной ячейки.|
+|[CommentCollection](/javascript/api/excel/excel.commentcollection)|[add(content: string, cellAddress: Range \| string, contentType?: Excel.ContentType)](/javascript/api/excel/excel.commentcollection#add-content--celladdress--contenttype-)|Создает новое примечание с указанным содержимым в определенной ячейке. Возникает ошибка `InvalidArgument`, если в указанном диапазоне больше одной ячейки.|
 ||[getCount()](/javascript/api/excel/excel.commentcollection#getcount--)|Получает количество примечаний в коллекции.|
 ||[getItem(commentId: string)](/javascript/api/excel/excel.commentcollection#getitem-commentid-)|Получает примечание из коллекции на основе его идентификатора. Только для чтения.|
 ||[getItemAt(index: number)](/javascript/api/excel/excel.commentcollection#getitemat-index-)|Получает примечание из коллекции на основе его позиции.|
 ||[getItemByCell(cellAddress: Range \| string)](/javascript/api/excel/excel.commentcollection#getitembycell-celladdress-)|Получает примечание из указанной ячейки.|
 ||[getItemByReplyId(replyId: string)](/javascript/api/excel/excel.commentcollection#getitembyreplyid-replyid-)|Получает примечание из коллекции с соответствующим идентификатором ответа.|
 ||[items](/javascript/api/excel/excel.commentcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
-|[CommentReply](/javascript/api/excel/excel.commentreply)|[content](/javascript/api/excel/excel.commentreply#content)|Получает или задает содержимое ответа на примечание.|
+|[CommentReply](/javascript/api/excel/excel.commentreply)|[content](/javascript/api/excel/excel.commentreply#content)|Получает или задает содержимое примечания.|
 ||[delete()](/javascript/api/excel/excel.commentreply#delete--)|Удаляет ответ на примечание.|
-||[getLocation()](/javascript/api/excel/excel.commentreply#getlocation--)|Получает расположение ответа на примечание.|
+||[getLocation()](/javascript/api/excel/excel.commentreply#getlocation--)|Получает ячейку, в которой находится ответ на примечание.|
 ||[getParentComment()](/javascript/api/excel/excel.commentreply#getparentcomment--)|Получает родительское примечание для этого ответа.|
 ||[authorEmail](/javascript/api/excel/excel.commentreply#authoremail)|Получает электронную почту автора ответа на примечание.|
 ||[authorName](/javascript/api/excel/excel.commentreply#authorname)|Получает имя автора ответа на примечание.|
 ||[creationDate](/javascript/api/excel/excel.commentreply#creationdate)|Получает время создания ответа на примечание.|
 ||[id](/javascript/api/excel/excel.commentreply#id)|Представляет идентификатор ответа на примечание. Только для чтения.|
-|[CommentReplyCollection](/javascript/api/excel/excel.commentreplycollection)|[add(content: string, contentType?: "Plain")](/javascript/api/excel/excel.commentreplycollection#add-content--contenttype-)|Создает ответ на примечание.|
-||[add(content: string, contentType?: Excel.ContentType)](/javascript/api/excel/excel.commentreplycollection#add-content--contenttype-)|Создает ответ на примечание.|
+|[CommentReplyCollection](/javascript/api/excel/excel.commentreplycollection)|[add(content: string, contentType?: Excel.ContentType)](/javascript/api/excel/excel.commentreplycollection#add-content--contenttype-)|Создает ответ на примечание.|
 ||[getCount()](/javascript/api/excel/excel.commentreplycollection#getcount--)|Получает количество ответов на примечания в коллекции.|
 ||[getItem(commentReplyId: string)](/javascript/api/excel/excel.commentreplycollection#getitem-commentreplyid-)|Возвращает ответ на примечание, определенное по идентификатору. Только для чтения.|
 ||[getItemAt(index: number)](/javascript/api/excel/excel.commentreplycollection#getitemat-index-)|Возвращает ответ на примечание на основе его позиции в коллекции.|
@@ -203,8 +201,7 @@ ms.locfileid: "33952364"
 ||[getItemOrNullObject(имя: строка)](/javascript/api/excel/excel.timelinestylecollection#getitemornullobject-name-)|Получает объект TimelineStyle по имени. Если объект TimelineStyle не существует, возвращает пустой объект.|
 ||[items](/javascript/api/excel/excel.timelinestylecollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 ||[setDefault(newDefaultStyle: TimelineStyle \| string)](/javascript/api/excel/excel.timelinestylecollection#setdefault-newdefaultstyle-)|Задает объект TimelineStyle, используемый по умолчанию в области родительского объекта.|
-|[Workbook](/javascript/api/excel/excel.workbook)|[close(closeBehavior?: "Save" \| "SkipSave")](/javascript/api/excel/excel.workbook#close-closebehavior-)|Закрывает текущую книгу.|
-||[close(closeBehavior?: Excel.CloseBehavior)](/javascript/api/excel/excel.workbook#close-closebehavior-)|Закрывает текущую книгу.|
+|[Workbook](/javascript/api/excel/excel.workbook)|[close(closeBehavior?: Excel.CloseBehavior)](/javascript/api/excel/excel.workbook#close-closebehavior-)|Закрывает текущую книгу.|
 ||[getActiveSlicer()](/javascript/api/excel/excel.workbook#getactiveslicer--)|Получает текущий активный срез в книге. Если активный срез отсутствует, возникает исключение.|
 ||[getActiveSlicerOrNullObject()](/javascript/api/excel/excel.workbook#getactiveslicerornullobject--)|Получает текущий активный срез в книге. Если активный срез отсутствует, возвращается пустой объект.|
 ||[comments](/javascript/api/excel/excel.workbook#comments)|Представляет коллекцию примечаний, связанных с книгой. Только для чтения.|
@@ -213,7 +210,6 @@ ms.locfileid: "33952364"
 ||[slicers](/javascript/api/excel/excel.workbook#slicers)|Представляет коллекцию срезов, связанных с книгой. Только для чтения.|
 ||[tableStyles](/javascript/api/excel/excel.workbook#tablestyles)|Представляет коллекцию объектов TableStyles, связанных с книгой. Только для чтения.|
 ||[timelineStyles](/javascript/api/excel/excel.workbook#timelinestyles)|Представляет коллекцию объектов TimelineStyles, связанных с книгой. Только для чтения.|
-||[save(saveBehavior?: "Save" \| "Prompt")](/javascript/api/excel/excel.workbook#save-savebehavior-)|Сохраняет текущую книгу.|
 ||[save(saveBehavior?: Excel.SaveBehavior)](/javascript/api/excel/excel.workbook#save-savebehavior-)|Сохраняет текущую книгу.|
 ||[use1904DateSystem](/javascript/api/excel/excel.workbook#use1904datesystem)|Значение true, если в книге используется система дат 1904.|
 |[Worksheet](/javascript/api/excel/excel.worksheet)|[comments](/javascript/api/excel/excel.worksheet#comments)|Возвращает коллекцию всех объектов Comments на листе. Только для чтения.|
@@ -222,8 +218,7 @@ ms.locfileid: "33952364"
 ||[onRowSorted](/javascript/api/excel/excel.worksheet#onrowsorted)|Возникает при сортировке по строкам.|
 ||[onSingleClicked](/javascript/api/excel/excel.worksheet#onsingleclicked)|Возникает, когда происходит щелчок левой кнопкой мыши или нажатие на листе.|
 ||[slicers](/javascript/api/excel/excel.worksheet#slicers)|Возвращает коллекцию срезов, имеющихся на листе. Только для чтения.|
-|[WorksheetCollection](/javascript/api/excel/excel.worksheetcollection)|[addFromBase64(base64File: string, sheetNamesToInsert?: string[], positionType?: "None" \| "Before" \| "After" \| "Beginning" \| "End", relativeTo?: Worksheet \| string)](/javascript/api/excel/excel.worksheetcollection#addfrombase64-base64file--sheetnamestoinsert--positiontype--relativeto-)|Вставляет указанные листы книги в текущую книгу.|
-||[addFromBase64(base64File: string, sheetNamesToInsert?: string[], positionType?: Excel.WorksheetPositionType, relativeTo?: Worksheet \| string)](/javascript/api/excel/excel.worksheetcollection#addfrombase64-base64file--sheetnamestoinsert--positiontype--relativeto-)|Вставляет указанные листы книги в текущую книгу.|
+|[WorksheetCollection](/javascript/api/excel/excel.worksheetcollection)|[addFromBase64(base64File: string, sheetNamesToInsert?: string[], positionType?: Excel.WorksheetPositionType, relativeTo?: Worksheet \| string)](/javascript/api/excel/excel.worksheetcollection#addfrombase64-base64file--sheetnamestoinsert--positiontype--relativeto-)|Вставляет указанные листы книги в текущую книгу.|
 ||[onColumnSorted](/javascript/api/excel/excel.worksheetcollection#oncolumnsorted)|Возникает при сортировке по столбцам.|
 ||[onFiltered](/javascript/api/excel/excel.worksheetcollection#onfiltered)|Возникает при применении любого фильтра листа в книге.|
 ||[onRowSorted](/javascript/api/excel/excel.worksheetcollection#onrowsorted)|Возникает при сортировке по строкам.|

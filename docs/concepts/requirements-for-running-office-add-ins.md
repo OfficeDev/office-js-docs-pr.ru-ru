@@ -3,12 +3,12 @@ title: Требования для запуска надстроек Office
 description: ''
 ms.date: 05/14/2019
 localization_priority: Priority
-ms.openlocfilehash: 650f5555eb120cbb541370c2ea5e2b2078c98ad9
-ms.sourcegitcommit: b299b8a5dfffb6102cb14b431bdde4861abfb47f
+ms.openlocfilehash: ed502900916fb2e780725af6f3840c7c2287c1a3
+ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "34589106"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "34910100"
 ---
 # <a name="requirements-for-running-office-add-ins"></a>Требования для запуска надстроек Office
 
@@ -30,7 +30,7 @@ ms.locfileid: "34589106"
 > [!TIP]
 > Когда вы создаете и отлаживаете надстройку в Visual Studio, эта система развертывает и запускает соответствующие файлы веб-страниц локально с помощью IIS Express. Использовать дополнительный веб-сервер не требуется.
 
-Кроме того, требуется [каталог надстроек](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md) в SharePoint, чтобы отправить XML-файл манифеста надстройки (контентной или области задач) в поддерживаемых ведущих приложениях Office — веб-приложениях Access, Word, Excel, PowerPoint и Project.
+Кроме того, требуется [каталог приложений](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md) в SharePoint, чтобы отправить XML-файл манифеста надстройки (контентной или области задач) в поддерживаемых ведущих приложениях Office — веб-приложениях Access, Word, Excel, PowerPoint и Project.
 
 Чтобы тестировать и запускать надстройки Outlook, необходимо разместить учетную запись электронной почты Outlook в Exchange 2013 или более поздней версии, доступ к которой можно получить в Office 365, Exchange Online или в локально установленной версии. Пользователь или администратор устанавливают файлы манифестов надстроек Outlook на соответствующем сервере.
 

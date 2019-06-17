@@ -3,12 +3,12 @@ title: Надстройки области задач для Project
 description: ''
 ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 668e7130d6ef478752f74468130139ca02b1d1e1
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 6f08f45e81fa40a869d07acea066b43c2720876a
+ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450993"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "34910331"
 ---
 # <a name="task-pane-add-ins-for-project"></a>Надстройки области задач для Project
 
@@ -184,7 +184,7 @@ Project стандартный 2013 и Project профессиональный 
 
 ## <a name="distributing-project-add-ins"></a>Распространение надстроек Project
 
-Вы можете распространять надстройки через общую папку, каталог надстроек в библиотеке SharePoint или AppSource. Дополнительные сведения см. в статье [Публикация надстройки Office](../publish/publish.md).
+Вы можете распространять надстройки через общую папку, каталог приложений в библиотеке SharePoint или AppSource. Дополнительные сведения см. в статье [Публикация надстройки Office](../publish/publish.md).
 
 ## <a name="see-also"></a>См. также
 
