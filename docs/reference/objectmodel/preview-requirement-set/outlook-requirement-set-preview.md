@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: ''
-ms.date: 06/03/2019
+ms.date: 06/14/2019
 localization_priority: Priority
-ms.openlocfilehash: 6d7dceba80929c2abace9daec859302c43913f98
-ms.sourcegitcommit: 567aa05d6ee6b3639f65c50188df2331b7685857
+ms.openlocfilehash: 346750557e68508f2a5707433dea122052bc2016
+ms.sourcegitcommit: e112a9b29376b1f574ee13b01c818131b2c7889d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34706353"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "34997374"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -246,9 +246,9 @@ ms.locfileid: "34706353"
 
 Добавлена возможность доступа к `getAccessTokenAsync`, что позволяет надстройкам [получать маркер доступа](/outlook/add-ins/authenticate-a-user-with-an-sso-token) для API Microsoft Graph.
 
-**Доступно в** Outlook для Windows (подключенный к Office 365), Outlook для Mac (подключенный к Office 365), Outlook в Интернете (Outlook.com и подключенный к Office 365), Outlook в Интернете (классическая версия)
+**Доступно в** Outlook для Windows (подключенный к Office 365), Outlook для Mac (подключенный к Office 365), Outlook в Интернете (новая версия), Outlook в Интернете (классическая версия)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные ресурсы
 
 - [Надстройки Outlook](/outlook/add-ins/)
 - [Примеры кода надстройки Outlook](https://developer.microsoft.com/outlook/gallery/?filterBy=Outlook,Samples,Add-ins)
