@@ -1,14 +1,14 @@
 ---
-ms.date: 05/08/2019
+ms.date: 06/17/2019
 description: Устранение распространенных проблем в пользовательских функциях Excel.
 title: Устранение проблем в пользовательских функциях
 localization_priority: Priority
-ms.openlocfilehash: 999b1fb9b89050ab5c6bcf87e1aac9d2fce13702
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: f407e103d8f628710c5f58a9787b3a802dcd39c8
+ms.sourcegitcommit: 4bf5159a3821f4277c07d89e88808c4c3a25ff81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33952056"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "35059904"
 ---
 # <a name="troubleshoot-custom-functions"></a>Устранение проблем в пользовательских функциях
 
@@ -65,6 +65,10 @@ CustomFunctions.associate("ADD", add);
 ### <a name="cant-open-add-in-from-localhost-use-a-local-loopback-exception"></a>Не удается открыть надстройку из узла localhost: используйте исключение локального замыкания на себя
 
 Если отображается ошибка "Не удается открыть эту надстройку из localhost", необходимо включить исключение локального замыкания на себя. Подробные сведения о том, как это сделать, см. в [этой статье службы поддержки Майкрософт](https://support.microsoft.com/ru-RU/help/4490419/local-loopback-exemption-does-not-work).
+
+### <a name="runtime-logging-reports-typeerror-network-request-failed-on-excel-for-windows"></a>В журнале среды выполнения возникает сообщение об ошибке "TypeError: сетевой запрос не выполнен" в Excel для Windows
+
+Если в вашем [журнале среды выполнения](custom-functions-troubleshooting.md#enable-runtime-logging) отображается ошибка "TypeError: сетевой запрос не выполнен" при вызове сервера localhost, требуется включить исключение локального замыкания на себя. Подробные сведения о том, как это сделать, см. в [этой статье службы поддержки Майкрософт](https://support.microsoft.com/ru-RU/help/4490419/local-loopback-exemption-does-not-work).
 
 ### <a name="ensure-promises-return"></a>Проверка возвращения обещаний
 
