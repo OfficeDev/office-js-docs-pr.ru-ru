@@ -1,20 +1,18 @@
 ---
-ms.date: 05/03/2019
+ms.date: 06/17/2019
 description: Узнайте о требованиях к именам пользовательских функций Excel и Избегайте распространенных ловушек именования.
 title: Рекомендации по именованию пользовательских функций в Excel
 localization_priority: Normal
-ms.openlocfilehash: 64420171a90b29732745891cb691b8cd4309c53d
-ms.sourcegitcommit: 567aa05d6ee6b3639f65c50188df2331b7685857
+ms.openlocfilehash: 2c5b78b2ecd1ccdbdc3fcb5bf6601c06193a1ef1
+ms.sourcegitcommit: 4bf5159a3821f4277c07d89e88808c4c3a25ff81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34706080"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "35059830"
 ---
 # <a name="naming-guidelines"></a>Рекомендации по именованию
 
 Настраиваемая функция определяется свойством **ID** и **Name** в файле метаданных JSON.
-
-[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
 - Функция `id` используется для уникальной идентификации пользовательских функций в коде JavaScript. 
 - Функция `name` используется в качестве отображаемого имени, которое отображается для пользователя в Excel. 
@@ -35,7 +33,7 @@ Excel использует прописные буквы для встроенн
 
 - Для ячеек между a1 и XFD1048576 или ячейками между ними между R1048576C16384.
 
-- Любая функция макроса Excel 4,0 (например `RUN`, `ECHO`).  Полный список этих функций представлен в [этой статье](https://www.microsoft.com/en-us/download/details.aspx?id=1465).
+- Любая функция макроса Excel 4,0 (например `RUN`, `ECHO`).  Полный список этих функций представлен в статье справочный [документ по функциям макросов Excel](https://d13ot9o61jdzpp.cloudfront.net/files/Excel%204.0%20Macro%20Functions%20Reference.pdf).
 
 ## <a name="naming-conflicts"></a>Конфликты имен
 

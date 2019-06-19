@@ -1,20 +1,18 @@
 ---
-ms.date: 05/30/2019
+ms.date: 06/17/2019
 description: Определение метаданных для настраиваемых функций в Excel.
 title: Метаданные для пользовательских функций в Excel
 localization_priority: Normal
-ms.openlocfilehash: e51e4e8ee89eb1f345ee0c564e9b2ff8119806b2
-ms.sourcegitcommit: 567aa05d6ee6b3639f65c50188df2331b7685857
+ms.openlocfilehash: a7715bcdd125d44ec887f8b779ac0673b4a12af0
+ms.sourcegitcommit: 4bf5159a3821f4277c07d89e88808c4c3a25ff81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34706125"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "35059862"
 ---
 # <a name="custom-functions-metadata"></a>Метаданные пользовательских функций
 
 При определении [пользовательских функций](custom-functions-overview.md) в надстройке Excel проект надстройки содержит файл метаданных JSON, который предоставляет сведения, необходимые Excel для регистрации настраиваемых функций и предоставления доступа к ним конечным пользователям.
-
-[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
 Этот файл создается следующим образом:
 
@@ -113,7 +111,7 @@ ms.locfileid: "34706125"
 ```
 
 > [!NOTE]
-> Пример готового JSON-файла приводится в репозитории GitHub [OfficeDev/Excel-Custom-Functions](https://github.com/OfficeDev/Excel-Custom-Functions/blob/master/src/functions/functions.json).
+> Полный пример JSON-файла доступен в журнале транзакций [OfficeDev/Excel-Custom-functions](https://github.com/OfficeDev/Excel-Custom-Functions/blob/77760adb1dcc53469183049bea08196734dbc114/config/customfunctions.json) репозитория GitHub. Так как проект был скорректирован для автоматического создания JSON, полный пример рукописного кода JSON доступен только в предыдущих версиях проекта.
 
 ## <a name="functions"></a>functions 
 
