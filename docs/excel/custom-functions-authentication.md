@@ -1,20 +1,18 @@
 ---
-ms.date: 05/03/2019
+ms.date: 06/17/2019
 description: Проверка подлинности пользователей с использованием пользовательских функций в Excel.
 title: Проверка подлинности для пользовательских функций
 localization_priority: Priority
-ms.openlocfilehash: bfb3acde2e03c8fc13d312977a2ab3c85107a42f
-ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
+ms.openlocfilehash: 30ff1b91db8bf7f0183a44f1e7e078a6308c1351
+ms.sourcegitcommit: 4bf5159a3821f4277c07d89e88808c4c3a25ff81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "34910310"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "35059743"
 ---
 # <a name="authentication-for-custom-functions"></a>Проверка подлинности для пользовательских функций
 
 В некоторых случаях пользовательским функциям требуется проверить подлинность пользователя, чтобы получить доступ к защищенным ресурсам. Хотя пользовательские функции не требуют определенного метода проверки подлинности, следует учитывать, что они выполняются в отдельной среде из области задач и других элементов пользовательского интерфейса надстройки. Поэтому между двумя средами выполнения требуется осуществлять обмен данными с помощью объекта `OfficeRuntime.storage` и API диалоговых окон.
-
-[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
 ## <a name="officeruntimestorage-object"></a>Объект OfficeRuntime.storage
 

@@ -1,20 +1,18 @@
 ---
-ms.date: 06/10/2019
+ms.date: 06/17/2019
 description: Использование тегов JSDoc для динамического создания метаданных JSON пользовательских функций.
 title: Автоматическое генерирование метаданных JSON для пользовательских функций
 localization_priority: Priority
-ms.openlocfilehash: 960e1eca1e01aec21967733d802a5fdd48122cbc
-ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
+ms.openlocfilehash: 246cd53c4ff151dce7422e67cf49e0b5508b672c
+ms.sourcegitcommit: 4bf5159a3821f4277c07d89e88808c4c3a25ff81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "34910303"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "35059834"
 ---
 # <a name="autogenerate-json-metadata-for-custom-functions"></a>Автоматическое генерирование метаданных JSON для пользовательских функций
 
 Если пользовательская функция Excel написана в JavaScript или TypeScript, теги JSDoc используются для предоставления дополнительной информации о пользовательской функции. Теги JSDoc используются при сборке для создания [файла метаданных JSON](custom-functions-json.md). Использование тегов JSDoc освобождает вас от необходимости редактировать файл метаданных JSON вручную.
-
-[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
 Добавьте тег `@customfunction` в примечаниях к коду для функции JavaScript или TypeScript, чтобы пометить ее как пользовательскую.
 
@@ -140,7 +138,7 @@ ms.locfileid: "34910303"
 * Используйте необязательный параметр. Пример: `function f(text?: string)`
 * Задайте для параметра значение по умолчанию. Пример: `function f(text: string = "abc")`
 
-Подробное описание @param см. в [JSDoc](https://usejsdoc.org/tags-param.html)
+Подробное описание @param см. в [JSDoc](https://jsdoc.app/tags-param.html)
 
 > [!NOTE]
 > Значение по умолчанию для дополнительных параметров — `null`.

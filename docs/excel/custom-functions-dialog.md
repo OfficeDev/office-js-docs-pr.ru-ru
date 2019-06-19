@@ -1,20 +1,18 @@
 ---
-ms.date: 05/06/2019
+ms.date: 06/17/2019
 description: Создание диалогового окна пользовательских функций в Excel с помощью JavaScript.
 title: Вызов диалогового окна из пользовательской функции
 localization_priority: Priority
-ms.openlocfilehash: 3d7a657402c319b2394c7331b69314b2e5591890
-ms.sourcegitcommit: ff73cc04e5718765fcbe74181505a974db69c3f5
+ms.openlocfilehash: cdbd199e8d8484f317d78a91833088c69db18685
+ms.sourcegitcommit: 4bf5159a3821f4277c07d89e88808c4c3a25ff81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "33628153"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "35059876"
 ---
 # <a name="display-a-dialog-box-from-a-custom-function"></a>Вызов диалогового окна из пользовательской функции
 
 Если пользовательская функция должна взаимодействовать с пользователем, можно создать диалоговое окно с помощью объекта [`Office.Dialog`](/javascript/api/office-runtime/officeruntime.dialog?view=office-js). Распространенным сценарием использования диалогового окна является проверка подлинности пользователя, чтобы пользовательская функция могла обращаться к веб-службе. Дополнительные сведения о проверке подлинности с помощью пользовательских функций см. в статье [Проверка подлинности пользовательских функций](./custom-functions-authentication.md).
-
-[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
 >[!NOTE]
 > Объект `Office.Dialog` является частью среды выполнения пользовательских функций. Объект `Dialog` не используется в областях задач. Сведения о создании диалогового окна из области задач см. в статье [Dialog API](/office/dev/add-ins/develop/dialog-api-in-office-add-ins).
