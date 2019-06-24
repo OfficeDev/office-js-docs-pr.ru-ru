@@ -1,14 +1,14 @@
 ---
 title: Локализация надстроек для Office
 description: Вы можете использовать API JavaScript для Office, чтобы определить языковой стандарт и отображать строки, основываясь на языковом стандарте ведущего приложения, либо интерпретировать или отображать данные на основе языкового стандарта данных.
-ms.date: 03/19/2019
+ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: b01535b76485847783104ce840256949ce17ca26
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 6d2df9ffc3364278e48e2fecc5ff427594764482
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449791"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128117"
 ---
 # <a name="localization-for-office-add-ins"></a>Локализация надстроек Office
 
@@ -98,7 +98,7 @@ API JavaScript для Office предоставляет два свойства,
    without leaving your email client.">
    <Override Locale="fr-fr" Value=
    "Visualisez les vidéos YouTube référencées dans vos courriers 
-   électronique directement depuis Outlook et Outlook Web App."/>
+   électronique directement depuis Outlook."/>
 </Description>
 ```
 

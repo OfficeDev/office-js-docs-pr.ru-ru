@@ -1,18 +1,20 @@
 ---
-ms.date: 06/17/2019
+ms.date: 06/18/2019
 description: Использование тегов JSDoc для динамического создания метаданных JSON пользовательских функций.
 title: Автоматическое генерирование метаданных JSON для пользовательских функций
 localization_priority: Priority
-ms.openlocfilehash: 246cd53c4ff151dce7422e67cf49e0b5508b672c
-ms.sourcegitcommit: 4bf5159a3821f4277c07d89e88808c4c3a25ff81
+ms.openlocfilehash: a02ca5fd67f29e1997579385e04d045f01e63bdb
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "35059834"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127907"
 ---
 # <a name="autogenerate-json-metadata-for-custom-functions"></a>Автоматическое генерирование метаданных JSON для пользовательских функций
 
 Если пользовательская функция Excel написана в JavaScript или TypeScript, теги JSDoc используются для предоставления дополнительной информации о пользовательской функции. Теги JSDoc используются при сборке для создания [файла метаданных JSON](custom-functions-json.md). Использование тегов JSDoc освобождает вас от необходимости редактировать файл метаданных JSON вручную.
+
+[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
 Добавьте тег `@customfunction` в примечаниях к коду для функции JavaScript или TypeScript, чтобы пометить ее как пользовательскую.
 

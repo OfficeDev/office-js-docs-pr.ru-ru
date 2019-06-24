@@ -1,16 +1,16 @@
 ---
 title: Руководство по надстройкам Word
 description: В этом руководстве показано создание надстройки Word, которая вставляет (и заменяет) диапазоны текста, абзацы, изображения, HTML-код, таблицы и элементы управления контентом. Вы также узнаете, как форматировать текст, вставлять и заменять содержимое в элементах управления контентом.
-ms.date: 12/31/2018
+ms.date: 06/20/2019
 ms.prod: word
 ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: 019329db156e63148a047466b9b3770128cb7fbf
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: a9383128569a2cbe9b300ff9fee78d1dcb20e632
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451196"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35126913"
 ---
 # <a name="tutorial-create-a-word-task-pane-add-in"></a>Учебник: Создание надстройки области задач Word
 
@@ -25,7 +25,7 @@ ms.locfileid: "32451196"
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
-Для работы с этим руководством необходимо установить указанные ниже компоненты. 
+Для работы с этим руководством необходимо установить указанные ниже компоненты.
 
 - Word 2016, версия 1711 (сборка 8730.1000 "нажми и работай") или более поздняя. Чтобы установить эту версию, необходимо быть участником программы предварительной оценки Office. [Дополнительные сведения](https://products.office.com/office-insider?tab=tab-1)
 
@@ -43,7 +43,7 @@ ms.locfileid: "32451196"
 
 3. Выполните команду `npm install`, чтобы установить инструменты и библиотеки, указанные в файле package.json. 
 
-4. Сделайте так, чтобы операционная система компьютера разработки доверяла сертификату. Для этого выполните действия, описанные в [этой статье](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md).
+4. Выполните действия, описанные в статье [Установка самозаверяющего сертификата](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md) , чтобы доверять сертификату операционной системы на компьютере разработчика.
 
 ## <a name="insert-a-range-of-text"></a>Вставка диапазона текста
 
@@ -110,7 +110,7 @@ ms.locfileid: "32451196"
 
     ```js
     var docBody = context.document.body;
-    docBody.insertParagraph("Office has several versions, including Office 2016, Office 365 Click-to-Run, and Office Online.",
+    docBody.insertParagraph("Office has several versions, including Office 2016, Office 365 Click-to-Run, and Office on the web.",
                             "Start");
     ```
 
@@ -126,7 +126,7 @@ ms.locfileid: "32451196"
 
     - [Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
 
-    - [Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-online)
+    - Веб-браузер: Загрузка неопубликованных надстройки [Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web)
 
     - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 
@@ -400,7 +400,7 @@ ms.locfileid: "32451196"
 
 Эти три действия должны выполняться каждый раз, когда коду нужно *считывать* данные из документа Office.
 
-1. Замените `TODO2` приведенным ниже кодом.
+1. Замените `TODO2` на приведенный ниже код.
   
     ```js
     originalRange.load("text");
@@ -776,7 +776,7 @@ function insertTextIntoRange() {
     var secondParagraph = context.document.body.paragraphs.getFirst().getNext();
     ```
 
-7. Замените `TODO2` на приведенный ниже код. Обратите внимание:
+7. Замените `TODO2` приведенным ниже кодом. Обратите внимание:
 
    - Первые два параметра метода `insertTable` задают количество строк и столбцов.
 

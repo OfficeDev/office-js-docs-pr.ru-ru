@@ -1,20 +1,20 @@
 ---
 title: Office. Context. Mailbox — набор обязательных элементов 1,2
 description: ''
-ms.date: 03/19/2019
+ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: c7d43b152d3c3c960ed2189e526df3db291d4972
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 879b6440a91f63568d282b6659aafdf49a5cdb37
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451985"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128442"
 ---
 # <a name="mailbox"></a>mailbox
 
 ### <a name="officeofficemdcontextofficecontextmdmailbox"></a>[Office](Office.md)[.context](Office.context.md).mailbox
 
-Предоставляет для Microsoft Outlook и Microsoft Outlook в Интернете доступ к объектной модели надстройки Outlook.
+Предоставляет доступ к объектной модели надстройки Outlook для Microsoft Outlook.
 
 ##### <a name="requirements"></a>Требования
 
@@ -34,12 +34,12 @@ ms.locfileid: "32451985"
 
 ### <a name="members"></a>Элементы
 
-#### <a name="ewsurl-string"></a>ewsUrl :String
+#### <a name="ewsurl-string"></a>ewsUrl: строка
 
 Получает URL-адрес конечной точки веб-служб Exchange (EWS) для этой учетной записи электронной почты. Только в режиме чтения.
 
 > [!NOTE]
-> Этот элемент не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот элемент не поддерживается в Outlook на iOS или Android.
 
 Удаленная служба может использовать значение `ewsUrl`, чтобы выполнять вызовы EWS для почтового ящика пользователя. Например, вы можете создать удаленную службу, чтобы [получить вложения из выбранного элемента](/outlook/add-ins/get-attachments-of-an-outlook-item).
 
@@ -57,13 +57,13 @@ ms.locfileid: "32451985"
 
 ### <a name="methods"></a>Методы
 
-####  <a name="converttolocalclienttimetimevalue--localclienttimejavascriptapioutlook12officelocalclienttime"></a>convertToLocalClientTime(timeValue) → {[LocalClientTime](/javascript/api/outlook_1_2/office.LocalClientTime)}
+#### <a name="converttolocalclienttimetimevalue--localclienttimejavascriptapioutlook12officelocalclienttime"></a>convertToLocalClientTime(timeValue) → {[LocalClientTime](/javascript/api/outlook_1_2/office.LocalClientTime)}
 
 Получает словарь, содержащий сведения о локальном времени клиента.
 
-В случае дат и времени в почтовом приложении для Outlook или Outlook Web App могут использоваться разные часовые пояса. Outlook использует часовой пояс клиентского компьютера. Outlook Web App использует часовой пояс, заданный в Центре администрирования Exchange (EAC). Значения даты и времени должны обрабатываться так, чтобы значения в пользовательском интерфейсе всегда согласовывались с часовым поясом, ожидаемым пользователем.
+Почтовое приложение для Outlook на настольном компьютере или в Интернете может использовать разные часовые пояса для дат и времени. Outlook на рабочем столе использует часовой пояс клиентского компьютера; В Outlook в Интернете используется часовой пояс, установленный в центре администрирования Exchange. Значения даты и времени должны обрабатываться таким образом, чтобы значения, отображаемые в интерфейсе пользователя, всегда согласовывались с часовым поясом, ожидаемым пользователем.
 
-Если почтовое приложение работает в Outlook, метод `convertToLocalClientTime` вернет объект словаря со значениями часового пояса клиентского компьютера. Если почтовое приложение работает в Outlook Web App, метод `convertToLocalClientTime` вернет объект словаря со значениями часового пояса, заданного в Центре администрирования Exchange.
+Если почтовое приложение запущено в Outlook на настольном клиенте `convertToLocalClientTime` , метод возвратит объект Dictionary со значениями, заданными для часового пояса клиентского компьютера. Если почтовое приложение запущено в Outlook в Интернете, `convertToLocalClientTime` метод возвратит объект Dictionary со значениями, заданными в часовом поясе, заданном в центре администрирования Exchange.
 
 ##### <a name="parameters"></a>Параметры
 
@@ -83,7 +83,7 @@ ms.locfileid: "32451985"
 
 Тип: [LocalClientTime](/javascript/api/outlook_1_2/office.LocalClientTime)
 
-####  <a name="converttoutcclienttimeinput--date"></a>convertToUtcClientTime(input) → {Date}
+#### <a name="converttoutcclienttimeinput--date"></a>convertToUtcClientTime(input) → {Date}
 
 Получает объект Date из словаря, содержащего сведения о времени.
 
@@ -115,18 +115,18 @@ ms.locfileid: "32451985"
 
 </dl>
 
-####  <a name="displayappointmentformitemid"></a>displayAppointmentForm(itemId)
+#### <a name="displayappointmentformitemid"></a>displayAppointmentForm(itemId)
 
 Отображает имеющуюся встречу из календаря.
 
 > [!NOTE]
-> Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот метод не поддерживается в Outlook на iOS или Android.
 
 Метод `displayAppointmentForm` открывает новое окно на компьютере или диалоговое окно на мобильном устройстве, содержащее сведения календаря о существующей встрече.
 
-В Outlook для Mac с помощью этого метода можно отобразить одну встречу, которая не является частью повторяющегося ряда, или основную встречу такого ряда, но не экземпляр из него, так как в Outlook для Mac невозможно получить доступ к свойствам экземпляра повторяющегося ряда (в том числе к идентификатору элемента).
+В Outlook на Mac Этот метод можно использовать для отображения одной встречи, которая не является частью повторяющегося ряда, или главной встречи повторяющейся серии, но невозможно отобразить экземпляр ряда. Это связано с тем, что в Outlook на Mac-адресе невозможно получить доступ к свойствам (включая идентификатор элемента) повторяющихся рядов.
 
-В Outlook Web App этот метод открывает указанную форму, только если текст формы содержит символы размером не более 32 КБ.
+В Outlook в Интернете этот метод открывает указанную форму, только если текст формы меньше или равен 32 КБ числу символов.
 
 Если указанный идентификатор элемента не определяет существующую встречу, на клиентском компьютере или устройстве открывается пустая страница, и сообщение об ошибке не возвращается.
 
@@ -134,7 +134,7 @@ ms.locfileid: "32451985"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`itemId`| Строка|Идентификатор веб-служб Exchange для существующей встречи в календаре.|
+|`itemId`| String|Идентификатор веб-служб Exchange для существующей встречи в календаре.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -150,16 +150,16 @@ ms.locfileid: "32451985"
 Office.context.mailbox.displayAppointmentForm(appointmentId);
 ```
 
-####  <a name="displaymessageformitemid"></a>displayMessageForm(itemId)
+#### <a name="displaymessageformitemid"></a>displayMessageForm(itemId)
 
 Отображает имеющееся сообщение.
 
 > [!NOTE]
-> Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот метод не поддерживается в Outlook на iOS или Android.
 
 Метод `displayMessageForm` открывает новое окно на компьютере или диалоговое окно на мобильном устройстве, содержащее существующее сообщение.
 
-В Outlook Web App этот метод открывает указанную форму, только если текст формы содержит символы размером не более 32 КБ.
+В Outlook в Интернете этот метод открывает указанную форму только в том случае, если размер текста формы меньше или равен 32 КБ.
 
 Если указанный идентификатор элемента не определяет существующее сообщение, окно на клиентском компьютере не открывается и сообщение об ошибке не возвращается.
 
@@ -190,11 +190,11 @@ Office.context.mailbox.displayMessageForm(messageId);
 Отображает форму для создания новой встречи в календаре.
 
 > [!NOTE]
-> Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот метод не поддерживается в Outlook на iOS или Android.
 
 Метод `displayNewAppointmentForm` открывает форму, в которой пользователь может создать встречу или собрание. Если параметры заданы, поля формы встречи автоматически заполняются их содержимым.
 
-В Outlook Web App и Outlook Web App для устройств этот метод всегда отображает форму с полем участников. Если вы не укажете участников в качестве входных аргументов, метод отображает форму с кнопкой **Сохранить**. Если вы укажете участников, форма будет включать участников и кнопку **Отправить**.
+В Outlook в Интернете и на мобильных устройствах этот метод всегда отображает форму с полем участников. Если вы не укажете участников в качестве входных аргументов, метод отображает форму с кнопкой **Сохранить**. Если вы укажете участников, форма будет включать участников и кнопку **Отправить**.
 
 Если вы укажете участников или ресурсы с помощью параметра `requiredAttendees`, `optionalAttendees` или `resources` в клиенте Outlook с расширенными возможностями и Outlook RT, этот метод отобразит форму собрания с кнопкой **Отправить**. Если не указать получателей, этот метод отобразит форму встречи с кнопкой **Сохранить и закрыть**.
 
@@ -257,7 +257,7 @@ Office.context.mailbox.displayNewAppointmentForm(
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
 |`callback`| function||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.|
-|`userContext`| Object| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+|`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -279,7 +279,7 @@ function cb(asyncResult) {
 }
 ```
 
-####  <a name="getuseridentitytokenasynccallback-usercontext"></a>getUserIdentityTokenAsync(callback, [userContext])
+#### <a name="getuseridentitytokenasynccallback-usercontext"></a>getUserIdentityTokenAsync(callback, [userContext])
 
 Получает маркер, идентифицирующий пользователя и надстройку Office.
 
@@ -290,7 +290,7 @@ function cb(asyncResult) {
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
 |`callback`| function||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.|
-|`userContext`| Object| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+|`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -312,13 +312,13 @@ function cb(asyncResult) {
 }
 ```
 
-####  <a name="makeewsrequestasyncdata-callback-usercontext"></a>makeEwsRequestAsync(data, callback, [userContext])
+#### <a name="makeewsrequestasyncdata-callback-usercontext"></a>makeEwsRequestAsync(data, callback, [userContext])
 
 Выполняет асинхронный запрос для веб-служб Exchange (EWS) на сервере Exchange Server, на котором размещен почтовый ящик пользователя.
 
 > [!NOTE]
 > Этот метод не поддерживается в следующих сценариях:
-> - В Outlook для iOS или Outlook для Android.
+> - В Outlook на iOS или Android
 > - Если надстройка загружается в почтовый ящик Gmail.
 > 
 > В таких случаях надстройка должна [использовать REST API](/outlook/add-ins/use-rest-api) для доступа к почтовому ящику пользователя.

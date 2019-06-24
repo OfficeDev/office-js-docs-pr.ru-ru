@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для OneNote
 description: ''
-ms.date: 03/19/2019
+ms.date: 06/20/2019
 ms.prod: onenote
 localization_priority: Normal
-ms.openlocfilehash: 287e405955477a98854b1df4a81fe90ec16e5bbc
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 4664cb042a9b641f2439d0979d2bf9947a2689f8
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450102"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127060"
 ---
 # <a name="onenote-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для OneNote
 
@@ -17,7 +17,7 @@ ms.locfileid: "32450102"
 
 В приведенной ниже таблице перечислены наборы обязательных элементов для OneNote, ведущие приложения Office, которые их поддерживают, а также версии сборок или даты выхода.
 
-|  Набор обязательных элементов  |  Office Online | 
+|  Набор обязательных элементов  |  Office в Интернете |
 |:-----|:-----|
 | OneNoteApi 1.1  | Сентябрь 2016 г. |  
 
@@ -25,20 +25,20 @@ ms.locfileid: "32450102"
 
 Сведения о наборах обязательных элементов общего API см. в статье [Наборы обязательных элементов общего API для Office](office-add-in-requirement-sets.md).
 
-## <a name="onenote-javascript-api-11"></a>API JavaScript для OneNote 1.1 
+## <a name="onenote-javascript-api-11"></a>API JavaScript для OneNote 1.1
 
 API JavaScript для OneNote 1.1 — первая версия этого API. Дополнительные сведения об этом API см. в статье [Обзор создания кода с помощью API JavaScript для OneNote](/office/dev/add-ins/onenote/onenote-add-ins-programming-overview).
 
 ## <a name="runtime-requirement-support-check"></a>Проверка поддержки требований в среде выполнения
 
-Во время выполнения кода надстройки могут проверять, поддерживает ли ведущее приложение набор обязательных элементов API, выполняя следующую проверку: 
+Во время выполнения надстройки могут проверять, поддерживает ли конкретный узел набор обязательных элементов API, выполнив следующие действия.
 
 ```js
 if (Office.context.requirements.isSetSupported('OneNoteApi', 1.1) === true) {
-  /// perform actions
+  // Perform actions.
 }
 else {
-  /// provide alternate flow/logic
+  // Provide alternate flow/logic.
 }
 ```
 

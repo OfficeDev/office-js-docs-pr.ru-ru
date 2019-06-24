@@ -1,14 +1,14 @@
 ---
 title: Убедитесь, что надстройка Office совместима с существующей надстройкой COM
 description: Включение совместимости между надстройкой Office и эквивалентной надстройкой COM
-ms.date: 06/19/2019
+ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: a18adb9841a9580d77c5110a0346f365e38e3746
-ms.sourcegitcommit: 4bf5159a3821f4277c07d89e88808c4c3a25ff81
+ms.openlocfilehash: 3577b8fe4b4a26ac5d0af85cc5c2f96a7a8dc010
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "35059722"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128054"
 ---
 # <a name="make-your-office-add-in-compatible-with-an-existing-com-add-in-preview"></a>Обеспечение совместимости надстройки Office с существующей надстройкой COM (Предварительная версия)
 
@@ -48,7 +48,7 @@ ms.locfileid: "35059722"
 - Как запись в диспетчере лент
 
 > [!NOTE]
-> Указание эквивалентной надстройки COM в манифесте не оказывает никакого действия на других платформах, таких как Office в Интернете или Office для Mac.
+> Указание эквивалентной надстройки COM в манифесте не оказывает никакого действия на других платформах, таких как Office в Интернете или Mac.
 
 В следующих сценариях описывается, что происходит в зависимости от того, как пользователь приобретает надстройку Office.
 

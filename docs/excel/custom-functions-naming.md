@@ -1,21 +1,23 @@
 ---
-ms.date: 06/17/2019
+ms.date: 06/18/2019
 description: Узнайте о требованиях к именам пользовательских функций Excel и Избегайте распространенных ловушек именования.
 title: Рекомендации по именованию пользовательских функций в Excel
 localization_priority: Normal
-ms.openlocfilehash: 2c5b78b2ecd1ccdbdc3fcb5bf6601c06193a1ef1
-ms.sourcegitcommit: 4bf5159a3821f4277c07d89e88808c4c3a25ff81
+ms.openlocfilehash: 18858c45224b833c099c021920ff3d568ad2b3c3
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "35059830"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128313"
 ---
 # <a name="naming-guidelines"></a>Рекомендации по именованию
 
 Настраиваемая функция определяется свойством **ID** и **Name** в файле метаданных JSON.
 
-- Функция `id` используется для уникальной идентификации пользовательских функций в коде JavaScript. 
-- Функция `name` используется в качестве отображаемого имени, которое отображается для пользователя в Excel. 
+- Функция `id` используется для уникальной идентификации пользовательских функций в коде JavaScript.
+- Функция `name` используется в качестве отображаемого имени, которое отображается для пользователя в Excel.
+
+[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
 Функция `name` может отличаться от функции `id`, например в целях локализации. Как правило, функция `name` должна оставаться такой же, как и в `id` случае, если у них нет особой причины для их различения.
 

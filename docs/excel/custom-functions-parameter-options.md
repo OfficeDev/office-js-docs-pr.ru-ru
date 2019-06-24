@@ -1,14 +1,14 @@
 ---
-ms.date: 06/17/2019
+ms.date: 06/18/2019
 description: Узнайте, как использовать различные параметры в пользовательских функциях, таких как диапазоны Excel, необязательные параметры, контекст вызова и многое другое.
 title: Параметры для пользовательских функций Excel
 localization_priority: Normal
-ms.openlocfilehash: f20fd00cb751cc1ab258db6442785f67f3460817
-ms.sourcegitcommit: 4bf5159a3821f4277c07d89e88808c4c3a25ff81
+ms.openlocfilehash: dca85df87f0153c03b2ddd027748e16d3ec79924
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "35059883"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128341"
 ---
 # <a name="custom-functions-parameter-options"></a>Параметры параметров пользовательских функций
 
@@ -16,6 +16,8 @@ ms.locfileid: "35059883"
 - [Необязательные параметры](#custom-functions-optional-parameters)
 - [Параметры Range](#range-parameters)
 - [Параметр контекста вызова](#invocation-parameter)
+
+[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
 ## <a name="custom-functions-optional-parameters"></a>Необязательные параметры настраиваемых функций
 

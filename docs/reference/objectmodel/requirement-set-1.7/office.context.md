@@ -1,14 +1,14 @@
 ---
 title: Office. Context — набор обязательных элементов 1,7
 description: ''
-ms.date: 04/12/2019
+ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: dddf0035f52daadc926ca5a707383730a97c1002
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: ff816b3bb51ebb5dc8ef124af8488405fdc3fd39
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450298"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127137"
 ---
 # <a name="context"></a>context
 
@@ -33,11 +33,11 @@ ms.locfileid: "32450298"
 
 ### <a name="namespaces"></a>Пространства имен
 
-[mailbox](office.context.mailbox.md). Предоставляет для Microsoft Outlook и Microsoft Outlook в Интернете доступ к объектной модели надстройки Outlook.
+[почтовый ящик](office.context.mailbox.md): предоставляет доступ к объектной модели надстройки Outlook для Microsoft Outlook.
 
-### <a name="members"></a>Элементы
+### <a name="members"></a>Members
 
-####  <a name="displaylanguage-string"></a>displayLanguage :String
+#### <a name="displaylanguage-string"></a>displayLanguage: строка
 
 Получает определенный пользователем языковой стандарт (язык) в формате обозначений языка RFC 1766 для пользовательского интерфейса ведущего приложения Office.
 
@@ -78,16 +78,16 @@ function write(message){
 ---
 ---
 
-####  <a name="officetheme-object"></a>officeTheme :Object
+#### <a name="officetheme-object"></a>officeTheme: объект
 
 Предоставляет доступ к свойствам цветов темы Office.
 
 > [!NOTE]
-> Этот элемент не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот элемент не поддерживается в Outlook на iOS или Android.
 
-Цвета тем Office позволяют согласовать цветовую схему надстройки с текущей темой Office, которую пользователь выбрал с помощью элементов **Файл > Учетная запись Office > Тема Office** и которая применяется во всех ведущих приложениях Office. Цвета тем Office можно использовать для всех надстроек почты и области задач.
+Using Office theme colors let's you coordinate the color scheme of your add-in with the current Office theme selected by the user with **File > Office Account > Office Theme UI**, which is applied across all Office host applications. Using Office theme colors is appropriate for mail and task pane add-ins.
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   Object
 
@@ -95,9 +95,9 @@ function write(message){
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`bodyBackgroundColor`| Строка|Получает цвет фона текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
-|`bodyForegroundColor`| Строка|Получает цвет переднего плана текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
-|`controlBackgroundColor`| Строка|Получает цвет фона элемента управления для темы Office в виде шестнадцатеричной триады цветов.|
+|`bodyBackgroundColor`| String|Получает цвет фона текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
+|`bodyForegroundColor`| String|Получает цвет переднего плана текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
+|`controlBackgroundColor`| String|Получает цвет фона элемента управления для темы Office в виде шестнадцатеричной триады цветов.|
 |`controlForegroundColor`| String|Получает цвет элемента управления текстом сообщения для темы Office в виде шестнадцатеричной триады цветов.|
 
 ##### <a name="requirements"></a>Требования
@@ -125,13 +125,13 @@ function applyOfficeTheme(){
 ---
 ---
 
-####  <a name="roamingsettings-roamingsettingsjavascriptapioutlook17officeroamingsettings"></a>roamingSettings :[RoamingSettings](/javascript/api/outlook_1_7/office.RoamingSettings)
+#### <a name="roamingsettings-roamingsettingsjavascriptapioutlook17officeroamingsettings"></a>roamingSettings: [roamingSettings](/javascript/api/outlook_1_7/office.RoamingSettings)
 
 Получает объект, представляющий настраиваемые параметры или состояние надстройки почты, сохраненное в почтовом ящике пользователя.
 
 Объект `RoamingSettings` позволяет сохранять данные для надстройки почты, записанные в почтовом ящике пользователя, и получать к ним доступ, таким образом делая их доступными для этой надстройки, когда она запускается из любого клиентского ведущего приложения, используемого для доступа к этому почтовому ящику.
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   [RoamingSettings](/javascript/api/outlook_1_7/office.RoamingSettings)
 

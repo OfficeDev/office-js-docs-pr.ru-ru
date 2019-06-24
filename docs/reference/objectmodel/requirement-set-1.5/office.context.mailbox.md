@@ -1,20 +1,20 @@
 ---
 title: Office.context.mailbox — набор обязательных элементов 1.5
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/24/2019
 localization_priority: Priority
-ms.openlocfilehash: d2b210db9ee8816d8fedf8720d1744da80eeab8d
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: a0c1a45fd3eaa9cf324a6854120d642eb7520132
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451887"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127284"
 ---
 # <a name="mailbox"></a>mailbox
 
 ### <a name="officeofficemdcontextofficecontextmdmailbox"></a>[Office](Office.md)[.context](Office.context.md).mailbox
 
-Предоставляет для Microsoft Outlook и Microsoft Outlook в Интернете доступ к объектной модели надстройки Outlook.
+Предоставляет для Microsoft Outlook доступ к объектной модели надстройки Outlook.
 
 ##### <a name="requirements"></a>Требования
 
@@ -52,14 +52,14 @@ ms.locfileid: "32451887"
 
 [userProfile](Office.context.mailbox.userProfile.md). Предоставляет сведения о пользователе в надстройке Outlook.
 
-### <a name="members"></a>Элементы
+### <a name="members"></a>Members
 
-#### <a name="ewsurl-string"></a>ewsUrl :String
+#### <a name="ewsurl-string"></a>ewsUrl: String
 
 Получает URL-адрес конечной точки веб-служб Exchange (EWS) для этой учетной записи электронной почты. Только в режиме чтения.
 
 > [!NOTE]
-> Этот элемент не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот элемент не поддерживается в Outlook для iOS и Android.
 
 Удаленная служба может использовать значение `ewsUrl`, чтобы выполнять вызовы EWS для почтового ящика пользователя. Например, вы можете создать удаленную службу, чтобы [получить вложения из выбранного элемента](/outlook/add-ins/get-attachments-of-an-outlook-item).
 
@@ -79,7 +79,7 @@ ms.locfileid: "32451887"
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-#### <a name="resturl-string"></a>restUrl :String
+#### <a name="resturl-string"></a>restUrl: String
 
 Возвращает URL-адрес конечной точки REST для этой учетной записи электронной почты.
 
@@ -106,7 +106,7 @@ ms.locfileid: "32451887"
 
 ### <a name="methods"></a>Методы
 
-####  <a name="addhandlerasynceventtype-handler-options-callback"></a>addHandlerAsync(eventType, handler, [options], [callback])
+#### <a name="addhandlerasynceventtype-handler-options-callback"></a>addHandlerAsync(eventType, handler, [options], [callback])
 
 Добавляет обработчик для поддерживаемого события.
 
@@ -149,12 +149,12 @@ function loadNewItem(eventArgs) {
 };
 ```
 
-####  <a name="converttoewsiditemid-restversion--string"></a>convertToEwsId(itemId, restVersion) → {String}
+#### <a name="converttoewsiditemid-restversion--string"></a>convertToEwsId(itemId, restVersion) → {String}
 
 Преобразовывает идентификатор элемента из формата REST в формат EWS.
 
 > [!NOTE]
-> Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот метод не поддерживается в Outlook для iOS и Android.
 
 Формат идентификаторов, извлекаемых через API REST (например, [API Почты Outlook](/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](https://graph.microsoft.io/)), отличается от формата веб-служб Exchange (EWS). Метод `convertToEwsId` преобразовывает идентификатор в формате REST в формат EWS.
 
@@ -187,13 +187,13 @@ var restId = 'AAMkAGVlOTZjNTM3LW...';
 var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.RestVersion.v2_0);
 ```
 
-####  <a name="converttolocalclienttimetimevalue--localclienttimejavascriptapioutlook15officelocalclienttime"></a>convertToLocalClientTime(timeValue) → {[LocalClientTime](/javascript/api/outlook_1_5/office.LocalClientTime)}
+#### <a name="converttolocalclienttimetimevalue--localclienttimejavascriptapioutlook15officelocalclienttime"></a>convertToLocalClientTime(timeValue) → {[LocalClientTime](/javascript/api/outlook_1_5/office.LocalClientTime)}
 
 Получает словарь, содержащий сведения о локальном времени клиента.
 
-В случае дат и времени в почтовом приложении для Outlook или Outlook Web App могут использоваться разные часовые пояса. Outlook использует часовой пояс клиентского компьютера. Outlook Web App использует часовой пояс, заданный в Центре администрирования Exchange (EAC). Значения даты и времени должны обрабатываться так, чтобы значения в пользовательском интерфейсе всегда согласовывались с часовым поясом, ожидаемым пользователем.
+Почтовое приложение для классической версии Outlook или версии в Интернете может использовать разные часовые пояса для дат и времени. Классическое приложение Outlook использует часовой пояс клиентского компьютера. Outlook в Интернете использует часовой пояс, заданный в Центре администрирования Exchange (EAC). Значения даты и времени должны обрабатываться так, чтобы значения в пользовательском интерфейсе всегда согласовывались с часовым поясом, ожидаемым пользователем.
 
-Если почтовое приложение работает в Outlook, метод `convertToLocalClientTime` вернет объект словаря со значениями часового пояса клиентского компьютера. Если почтовое приложение работает в Outlook Web App, метод `convertToLocalClientTime` вернет объект словаря со значениями часового пояса, заданного в Центре администрирования Exchange.
+Если почтовое приложение работает в классическом клиенте Outlook, метод `convertToLocalClientTime` вернет объект словаря со значениями часового пояса клиентского компьютера. Если почтовое приложение работает в Outlook в Интернете, метод `convertToLocalClientTime` вернет объект словаря со значениями часового пояса, заданного в Центре администрирования Exchange.
 
 ##### <a name="parameters"></a>Параметры
 
@@ -213,12 +213,12 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 
 Тип: [LocalClientTime](/javascript/api/outlook_1_5/office.LocalClientTime)
 
-####  <a name="converttorestiditemid-restversion--string"></a>convertToRestId(itemId, restVersion) → {String}
+#### <a name="converttorestiditemid-restversion--string"></a>convertToRestId(itemId, restVersion) → {String}
 
 Преобразовывает идентификатор элемента в формате EWS в формат REST.
 
 > [!NOTE]
-> Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот метод не поддерживается в Outlook для iOS и Android.
 
 Формат идентификаторов, извлекаемых через EWS или свойство `itemId`, отличается от формата API REST (таких как [API Почты Outlook](/previous-versions/office/office-365-api/api/version-2.0/mail-rest-operations) или [Microsoft Graph](https://graph.microsoft.io/)). Метод `convertToRestId` преобразовывает идентификатор в формате EWS в формат REST.
 
@@ -251,7 +251,7 @@ var ewsId = Office.context.mailbox.item.itemId;
 var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.RestVersion.v2_0);
 ```
 
-####  <a name="converttoutcclienttimeinput--date"></a>convertToUtcClientTime(input) → {Date}
+#### <a name="converttoutcclienttimeinput--date"></a>convertToUtcClientTime(input) → {Date}
 
 Получает объект Date из словаря, содержащего сведения о времени.
 
@@ -283,18 +283,18 @@ var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.R
 
 </dl>
 
-####  <a name="displayappointmentformitemid"></a>displayAppointmentForm(itemId)
+#### <a name="displayappointmentformitemid"></a>displayAppointmentForm(itemId)
 
 Отображает имеющуюся встречу из календаря.
 
 > [!NOTE]
-> Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот метод не поддерживается в Outlook для iOS и Android.
 
 Метод `displayAppointmentForm` открывает новое окно на компьютере или диалоговое окно на мобильном устройстве, содержащее сведения календаря о существующей встрече.
 
 В Outlook для Mac с помощью этого метода можно отобразить одну встречу, которая не является частью повторяющегося ряда, или основную встречу такого ряда, но не экземпляр из него, так как в Outlook для Mac невозможно получить доступ к свойствам экземпляра повторяющегося ряда (в том числе к идентификатору элемента).
 
-В Outlook Web App этот метод открывает указанную форму, только если текст формы содержит символы размером не более 32 КБ.
+В Outlook в Интернете этот метод открывает указанную форму, только если текст формы содержит символы размером не более 32 КБ.
 
 Если указанный идентификатор элемента не определяет существующую встречу, на клиентском компьютере или устройстве открывается пустая страница, и сообщение об ошибке не возвращается.
 
@@ -318,16 +318,16 @@ var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.R
 Office.context.mailbox.displayAppointmentForm(appointmentId);
 ```
 
-####  <a name="displaymessageformitemid"></a>displayMessageForm(itemId)
+#### <a name="displaymessageformitemid"></a>displayMessageForm(itemId)
 
 Отображает имеющееся сообщение.
 
 > [!NOTE]
-> Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот метод не поддерживается в Outlook для iOS и Android.
 
 Метод `displayMessageForm` открывает новое окно на компьютере или диалоговое окно на мобильном устройстве, содержащее существующее сообщение.
 
-В Outlook Web App этот метод открывает указанную форму, только если текст формы содержит символы размером не более 32 КБ.
+В Outlook в Интернете этот метод открывает указанную форму, только если текст формы содержит символы размером не более 32 КБ.
 
 Если указанный идентификатор элемента не определяет существующее сообщение, окно на клиентском компьютере не открывается и сообщение об ошибке не возвращается.
 
@@ -358,11 +358,11 @@ Office.context.mailbox.displayMessageForm(messageId);
 Отображает форму для создания новой встречи в календаре.
 
 > [!NOTE]
-> Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот метод не поддерживается в Outlook для iOS и Android.
 
 Метод `displayNewAppointmentForm` открывает форму, в которой пользователь может создать встречу или собрание. Если параметры заданы, поля формы встречи автоматически заполняются их содержимым.
 
-В Outlook Web App и Outlook Web App для устройств этот метод всегда отображает форму с полем участников. Если вы не укажете участников в качестве входных аргументов, метод отображает форму с кнопкой **Сохранить**. Если вы укажете участников, форма будет включать участников и кнопку **Отправить**.
+В Outlook в Интернете и на мобильных устройствах этот метод всегда отображает форму с полем участников. Если вы не укажете участников в качестве входных аргументов, метод отображает форму с кнопкой **Сохранить**. Если вы укажете участников, форма будет включать участников и кнопку **Отправить**.
 
 Если вы укажете участников или ресурсы с помощью параметра `requiredAttendees`, `optionalAttendees` или `resources` в клиенте Outlook с расширенными возможностями и Outlook RT, этот метод отобразит форму собрания с кнопкой **Отправить**. Если не указать получателей, этот метод отобразит форму встречи с кнопкой **Сохранить и закрыть**.
 
@@ -504,7 +504,7 @@ function cb(asyncResult) {
 }
 ```
 
-####  <a name="getuseridentitytokenasynccallback-usercontext"></a>getUserIdentityTokenAsync(callback, [userContext])
+#### <a name="getuseridentitytokenasynccallback-usercontext"></a>getUserIdentityTokenAsync(callback, [userContext])
 
 Получает маркер, идентифицирующий пользователя и надстройку Office.
 
@@ -537,13 +537,13 @@ function cb(asyncResult) {
 }
 ```
 
-####  <a name="makeewsrequestasyncdata-callback-usercontext"></a>makeEwsRequestAsync(data, callback, [userContext])
+#### <a name="makeewsrequestasyncdata-callback-usercontext"></a>makeEwsRequestAsync(data, callback, [userContext])
 
 Выполняет асинхронный запрос для веб-служб Exchange (EWS) на сервере Exchange Server, на котором размещен почтовый ящик пользователя.
 
 > [!NOTE]
 > Этот метод не поддерживается в следующих сценариях:
-> - В Outlook для iOS или Outlook для Android.
+> - В Outlook для iOS и Android
 > - Если надстройка загружается в почтовый ящик Gmail.
 > 
 > В таких случаях надстройка должна [использовать REST API](/outlook/add-ins/use-rest-api) для доступа к почтовому ящику пользователя.
@@ -635,7 +635,7 @@ function callback(asyncResult)  {
 }
 ```
 
-####  <a name="removehandlerasynceventtype-options-callback"></a>removeHandlerAsync(eventType, [options], [callback])
+#### <a name="removehandlerasynceventtype-options-callback"></a>removeHandlerAsync(eventType, [options], [callback])
 
 Удаляет обработчиков для поддерживаемого типа события.
 

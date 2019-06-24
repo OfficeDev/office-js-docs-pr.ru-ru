@@ -1,29 +1,29 @@
 ---
 title: Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 description: ''
-ms.date: 05/21/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: f666ffee2c7c139ea18859d995384281a31238dd
-ms.sourcegitcommit: adaee1329ae9bb69e49bde7f54a4c0444c9ba642
+ms.openlocfilehash: b97da347064fdceda847403785e0bf792846dfaa
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "34432224"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35126969"
 ---
 # <a name="sideload-office-add-ins-on-ipad-and-mac-for-testing"></a>Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 
 Чтобы проверить работу надстройки в Office для iOS, вы можете загрузить манифест неопубликованной надстройки на iPad с помощью iTunes или непосредственно в Office для Mac. Вы не сможете устанавливать точки останова и отлаживать код надстройки во время выполнения, но сможете проверить ее работу и убедиться, что интерфейс отображается правильно и его можно использовать. 
 
-## <a name="prerequisites-for-office-for-ios"></a>Предварительные требования (Office для iOS)
+## <a name="prerequisites-for-office-on-ios"></a>Предварительные требования (Office для iOS)
 
 - Компьютер Windows или Mac, на котором установлено приложение [iTunes](https://www.apple.com/itunes/download/).
     
-- iPad под управлением iOS 8.2 или более поздней версии, на котором установлено приложение [Excel для iPad](https://itunes.apple.com/us/app/microsoft-excel/id586683407?mt=8) и к которому подключен кабель для синхронизации.
+- iPad под управлением iOS 8.2 или более поздней версии, на котором установлено приложение [Excel на iPad](https://itunes.apple.com/us/app/microsoft-excel/id586683407?mt=8) и к которому подключен кабель для синхронизации.
     
 - XML-файл манифеста для надстройки, которую вы хотите протестировать.
     
 
-## <a name="prerequisites-for-office-for-mac"></a>Предварительные требования (Office для Mac)
+## <a name="prerequisites-for-office-on-mac"></a>Предварительные требования (Office для Mac)
 
 - Компьютер Mac под управлением OS X 10.10 Yosemite или более поздней версии с установленным набором [Office для Mac](https://products.office.com/buy/compare-microsoft-office-products?tab=omac).
     
@@ -31,12 +31,12 @@ ms.locfileid: "34432224"
    
 - Excel для Mac версии 15.19 (160206).
 
-- PowerPoint для Mac версии 15.24 (160614).
+- PowerPoint для Mac версии 15.24 (160614)
     
-- XML-файл манифеста для надстройки, которую вы хотите проверить.
+- XML-файл манифеста для надстройки, которую вы хотите протестировать.
     
 
-## <a name="sideload-an-add-in-on-excel-or-word-for-ipad"></a>Загрузка неопубликованной надстройки в Excel или Word для iPad
+## <a name="sideload-an-add-in-on-excel-or-word-on-ipad"></a>Загрузка неопубликованной надстройки в Excel или Word на iPad
 
 1. Подключите iPad к компьютеру с помощью кабеля для синхронизации. Если вы подключаете iPad к компьютеру в первый раз, появится запрос **Доверять этому компьютеру?**. Выберите **Доверять**.
 
@@ -57,10 +57,10 @@ ms.locfileid: "34432224"
     ![Вставка надстроек в приложение Excel](../images/excel-insert-add-in.png)
 
 
-## <a name="sideload-an-add-in-on-office-for-mac"></a>Загрузка неопубликованной надстройки в Office для Mac
+## <a name="sideload-an-add-in-in-office-on-mac"></a>Загрузка неопубликованной надстройки в Office для Mac
 
 > [!NOTE]
-> Инструкции для надстройки Outlook для Mac см. в статье [Загрузка неопубликованных надстроек Outlook для тестирования](/outlook/add-ins/sideload-outlook-add-ins-for-testing).
+> Сведения о загрузке неопубликованной надстройки Outlook для Mac см. в статье [Загрузка неопубликованных надстроек Outlook для тестирования](/outlook/add-ins/sideload-outlook-add-ins-for-testing).
 
 1. Откройте **Терминал** и перейдите в одну из указанных ниже папок, чтобы сохранить в нее файл манифеста надстройки. Если папки `wef` нет на компьютере, создайте ее.
     

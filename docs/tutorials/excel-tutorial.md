@@ -1,16 +1,16 @@
 ---
 title: Руководство по надстройкам Excel
 description: В этом руководстве показана разработка надстройки Excel, которая создает, заполняет, фильтрует и сортирует данные таблиц, создает диаграммы, закрепляет заголовки таблиц, защищает листы и открывает диалоговые окна.
-ms.date: 05/23/2019
+ms.date: 06/20/2019
 ms.prod: excel
 ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: 863c5720c9e23738ba907b722a50a974044cab11
-ms.sourcegitcommit: adaee1329ae9bb69e49bde7f54a4c0444c9ba642
+ms.openlocfilehash: afd5d06e08a899d4441da51fc619d86de45e52d3
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "34432217"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35126990"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -173,9 +173,9 @@ ms.locfileid: "34432217"
 
     - [Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
 
-    - [Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-online)
+    - Веб-браузер: Загрузка неопубликованных надстройки [Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web)
 
-    - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+    - iPad и Mac: [загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 
 5. В меню **Главная** выберите пункт **Показать область задач**.
 
@@ -740,11 +740,11 @@ ms.locfileid: "34432217"
 
 4. Используя новую версию измененного файла манифеста, повторите процесс загрузки неопубликованного приложения с помощью одного из указанных далее методов. *Нужно перезаписать предыдущий экземпляр файла манифеста.*
 
-    - [Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
+    - Windows: [загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
 
-    - [Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-online)
+    - Веб-браузер: Загрузка неопубликованных надстройки [Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web)
 
-    - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+    - iPad и Mac: [загрузка неопубликованных надстроек Office на iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 
 5. Откройте любой лист в Excel.
 

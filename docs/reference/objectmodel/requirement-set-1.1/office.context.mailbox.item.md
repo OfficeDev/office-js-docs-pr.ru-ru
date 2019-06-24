@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox. Item — набор требований 1,1
 description: ''
-ms.date: 03/19/2019
+ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: d3681f369570995c07256171fb6a65482648e85e
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 09956256f856db6a8bea3053ecb64a2ac2a5fcd9
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450382"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128470"
 ---
 # <a name="item"></a>item
 
@@ -44,14 +44,14 @@ Office.initialize = function () {
 
 ### <a name="members"></a>Элементы
 
-#### <a name="attachments-arrayattachmentdetailsjavascriptapioutlook11officeattachmentdetails"></a>attachments :Array.<[AttachmentDetails](/javascript/api/outlook_1_1/office.attachmentdetails)>
+#### <a name="attachments-arrayattachmentdetailsjavascriptapioutlook11officeattachmentdetails"></a>вложения: Array. <[AttachmentDetails](/javascript/api/outlook_1_1/office.attachmentdetails)>
 
 Получает массив вложений для элемента. Только в режиме чтения.
 
 > [!NOTE]
 > Outlook блокирует определенные типы файлов из-за потенциальных проблем с безопасностью, поэтому они не возвращаются. Дополнительные сведения см. в статье [Блокировка вложений в Outlook](https://support.office.com/article/Blocked-attachments-in-Outlook-434752E1-02D3-4E90-9124-8B81E49A8519).
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   Array.<[AttachmentDetails](/javascript/api/outlook_1_1/office.attachmentdetails)>
 
@@ -87,11 +87,11 @@ if (item.attachments.length > 0) {
 console.log(outputString);
 ```
 
-####  <a name="bcc-recipientsjavascriptapioutlook11officerecipients"></a>bcc :[Recipients](/javascript/api/outlook_1_1/office.recipients)
+#### <a name="bcc-recipientsjavascriptapioutlook11officerecipients"></a>СК: [получатели](/javascript/api/outlook_1_1/office.recipients)
 
 Получает объект, который предоставляет методы для получения или обновления получателей скрытой копии сообщения. Только в режиме создания.
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   [Получатели](/javascript/api/outlook_1_1/office.recipients)
 
@@ -115,11 +115,11 @@ function callback(asyncResult) {
 }
 ```
 
-####  <a name="body-bodyjavascriptapioutlook11officebody"></a>body :[Body](/javascript/api/outlook_1_1/office.body)
+#### <a name="body-bodyjavascriptapioutlook11officebody"></a>основной текст: [Body](/javascript/api/outlook_1_1/office.body)
 
 Получает объект, предоставляющий методы для работы с основным текстом элемента.
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   [Body](/javascript/api/outlook_1_1/office.body)
 
@@ -155,7 +155,7 @@ Office.context.mailbox.item.body.getAsync(
 }
 ```
 
-####  <a name="cc-arrayemailaddressdetailsjavascriptapioutlook11officeemailaddressdetailsrecipientsjavascriptapioutlook11officerecipients"></a>cc :Array.<[EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook_1_1/office.recipients)
+#### <a name="cc-arrayemailaddressdetailsjavascriptapioutlook11officeemailaddressdetailsrecipientsjavascriptapioutlook11officerecipients"></a>CC: Array. <[EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)>|[получатели](/javascript/api/outlook_1_1/office.recipients)
 
 Предоставляет доступ к получателям копии сообщения. Тип объекта и уровень доступа зависят от режима текущего элемента.
 
@@ -181,7 +181,7 @@ function callback(asyncResult) {
 }
 ```
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   Array.<[EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook_1_1/office.recipients)
 
@@ -193,7 +193,7 @@ function callback(asyncResult) {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-####  <a name="nullable-conversationid-string"></a>(nullable) conversationId :String
+#### <a name="nullable-conversationid-string"></a>(Nullable) conversationId: строка
 
 Получает идентификатор разговора по электронной почте, содержащего конкретное сообщение.
 
@@ -201,7 +201,7 @@ function callback(asyncResult) {
 
 Это свойство имеет значение NULL для нового элемента в форме создания. Свойство `conversationId` вернет значение, если пользователь задаст тему и сохранит элемент.
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -220,7 +220,7 @@ var conversationId = Office.context.mailbox.item.conversationId;
 console.log("conversationId: " + conversationId);
 ```
 
-#### <a name="datetimecreated-date"></a>dateTimeCreated :Date
+#### <a name="datetimecreated-date"></a>dateTimeCreated: Дата
 
 Получает дату и время создания элемента. Только в режиме чтения.
 
@@ -243,14 +243,14 @@ var dateTimeCreated = Office.context.mailbox.item.dateTimeCreated;
 console.log("Date and time created: " + dateTimeCreated);
 ```
 
-#### <a name="datetimemodified-date"></a>dateTimeModified :Date
+#### <a name="datetimemodified-date"></a>dateTimeModified: Дата
 
 Получает дату и время последнего изменения элемента. Только в режиме чтения.
 
 > [!NOTE]
-> Этот элемент не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот элемент не поддерживается в Outlook на iOS или Android.
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   Дата
 
@@ -269,7 +269,7 @@ var dateTimeModified = Office.context.mailbox.item.dateTimeModified;
 console.log("Date and time modified: " + dateTimeModified);
 ```
 
-####  <a name="end-datetimejavascriptapioutlook11officetime"></a>end :Date|[Time](/javascript/api/outlook_1_1/office.time)
+#### <a name="end-datetimejavascriptapioutlook11officetime"></a>конец: Дата | [Time (время](/javascript/api/outlook_1_1/office.time) )
 
 Получает или задает дату и время окончания встречи.
 
@@ -308,7 +308,7 @@ Office.context.mailbox.item.end.setAsync(endTime, options, function(result) {
 });
 ```
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   Date | [Time](/javascript/api/outlook_1_1/office.time)
 
@@ -320,7 +320,7 @@ Office.context.mailbox.item.end.setAsync(endTime, options, function(result) {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-#### <a name="from-emailaddressdetailsjavascriptapioutlook11officeemailaddressdetails"></a>from :[EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)
+#### <a name="from-emailaddressdetailsjavascriptapioutlook11officeemailaddressdetails"></a>от: [EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)
 
 Получает электронный адрес отправителя сообщения. Только в режиме чтения.
 
@@ -348,11 +348,11 @@ var from = Office.context.mailbox.item.from;
 console.log("From " + from);
 ```
 
-#### <a name="internetmessageid-string"></a>internetMessageId :String
+#### <a name="internetmessageid-string"></a>internetMessageId: строка
 
 Получает идентификатор интернет-сообщения для электронного сообщения. Только в режиме чтения.
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -370,7 +370,7 @@ console.log("From " + from);
 var internetMessageId = Office.context.mailbox.item.internetMessageId;
 ```
 
-#### <a name="itemclass-string"></a>itemClass :String
+#### <a name="itemclass-string"></a>itemClass: строка
 
 Получает класс элемента веб-служб Exchange для выбранного элемента. Только в режиме чтения.
 
@@ -402,14 +402,14 @@ var itemClass = Office.context.mailbox.item.itemClass;
 console.log("Item class: " + itemClass);
 ```
 
-#### <a name="nullable-itemid-string"></a>(nullable) itemId :String
+#### <a name="nullable-itemid-string"></a>(Nullable) itemId: строка
 
 Получает идентификатор элемента веб-служб Exchange для текущего элемента. Только в режиме чтения.
 
 > [!NOTE]
 > Идентификатор, возвращаемый свойством `itemId`, совпадает с идентификатором элемента веб-служб Exchange. Свойство `itemId` не совпадает с идентификатором записи Outlook, а также идентификатором, который используется REST API Outlook. Перед выполнением вызовов API REST, использующих это значение, его `Office.context.mailbox.convertToRestId`необходимо преобразовать с помощью, которое доступно в наборе требований 1,3. Дополнительные сведения см. в статье [Использование REST API Outlook из надстройки Outlook](/outlook/add-ins/use-rest-api#get-the-item-id).
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -434,13 +434,13 @@ if (itemId === null || itemId == undefined) {
 }
 ```
 
-####  <a name="itemtype-officemailboxenumsitemtypejavascriptapioutlook11officemailboxenumsitemtype"></a>itemType :[Office.MailboxEnums.ItemType](/javascript/api/outlook_1_1/office.mailboxenums.itemtype)
+#### <a name="itemtype-officemailboxenumsitemtypejavascriptapioutlook11officemailboxenumsitemtype"></a>itemType: [Office. MailboxEnums. ItemType](/javascript/api/outlook_1_1/office.mailboxenums.itemtype)
 
 Получает тип элемента, который представляет экземпляр.
 
 Свойство `itemType` возвращает одно из значений перечисления `ItemType`, которое указывает, является ли экземпляр объекта `item` сообщением или встречей.
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   [Office.MailboxEnums.ItemType](/javascript/api/outlook_1_1/office.mailboxenums.itemtype)
 
@@ -462,7 +462,7 @@ if (Office.context.mailbox.item.itemType === Office.MailboxEnums.ItemType.Messag
 }
 ```
 
-####  <a name="location-stringlocationjavascriptapioutlook11officelocation"></a>location :String|[Location](/javascript/api/outlook_1_1/office.location)
+#### <a name="location-stringlocationjavascriptapioutlook11officelocation"></a>Местоположение: строка | [Location (расположение](/javascript/api/outlook_1_1/office.location) )
 
 Получает или задает место встречи.
 
@@ -501,13 +501,13 @@ function callback(asyncResult) {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-#### <a name="normalizedsubject-string"></a>normalizedSubject :String
+#### <a name="normalizedsubject-string"></a>normalizedSubject: строка
 
 Получает тему элемента со всеми удаленными префиксами (включая `RE:` и `FWD:`). Только в режиме чтения.
 
 Свойство normalizedSubject получает тему элемента со стандартными префиксами (такими как `RE:` и `FW:`), добавляемыми почтовыми программами. Для получения темы элемента с неизмененными префиксами используйте свойство [`subject`](#subject-stringsubject).
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   String
 
@@ -526,7 +526,7 @@ var normalizedSubject = Office.context.mailbox.item.normalizedSubject;
 console.log("Normalized subject: " + normalizedSubject);
 ```
 
-####  <a name="optionalattendees-arrayemailaddressdetailsjavascriptapioutlook11officeemailaddressdetailsrecipientsjavascriptapioutlook11officerecipients"></a>optionalAttendees :Array.<[EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook_1_1/office.recipients)
+#### <a name="optionalattendees-arrayemailaddressdetailsjavascriptapioutlook11officeemailaddressdetailsrecipientsjavascriptapioutlook11officerecipients"></a>optionalAttendees: Array. <[EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)>|[получатели](/javascript/api/outlook_1_1/office.recipients)
 
 Предоставляет доступ к необязательным участникам события. Тип объекта и уровень доступа зависят от режима текущего элемента.
 
@@ -553,7 +553,7 @@ function callback(asyncResult) {
 }
 ```
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   Array.<[EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook_1_1/office.recipients)
 
@@ -565,11 +565,11 @@ function callback(asyncResult) {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-#### <a name="organizer-emailaddressdetailsjavascriptapioutlook11officeemailaddressdetails"></a>organizer :[EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)
+#### <a name="organizer-emailaddressdetailsjavascriptapioutlook11officeemailaddressdetails"></a>Организатор: [EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)
 
 Получает электронный адрес организатора указанного собрания. Только в режиме чтения.
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   [EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)
 
@@ -589,7 +589,7 @@ var organizerAddress = Office.context.mailbox.item.organizer.emailAddress;
 console.log("Organizer: " + organizerName + " (" + organizerAddress + ")");
 ```
 
-####  <a name="requiredattendees-arrayemailaddressdetailsjavascriptapioutlook11officeemailaddressdetailsrecipientsjavascriptapioutlook11officerecipients"></a>requiredAttendees :Array.<[EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook_1_1/office.recipients)
+#### <a name="requiredattendees-arrayemailaddressdetailsjavascriptapioutlook11officeemailaddressdetailsrecipientsjavascriptapioutlook11officerecipients"></a>requiredAttendees: Array. <[EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)>|[получатели](/javascript/api/outlook_1_1/office.recipients)
 
 Предоставляет доступ к обязательным участникам события. Тип объекта и уровень доступа зависят от режима текущего элемента.
 
@@ -629,7 +629,7 @@ function callback(asyncResult) {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-#### <a name="sender-emailaddressdetailsjavascriptapioutlook11officeemailaddressdetails"></a>sender :[EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)
+#### <a name="sender-emailaddressdetailsjavascriptapioutlook11officeemailaddressdetails"></a>Отправитель: [EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)
 
 Получает электронный адрес отправителя электронного сообщения. Только в режиме чтения.
 
@@ -638,7 +638,7 @@ function callback(asyncResult) {
 > [!NOTE]
 > Свойству `recipientType`, принадлежащему объекту `EmailAddressDetails` в свойстве `from`, задано значение `undefined`.
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   [EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)
 
@@ -658,7 +658,7 @@ var senderAddress = Office.context.mailbox.item.sender.emailAddress;
 console.log("Sender: " + senderName + " (" + senderAddress + ")");
 ```
 
-####  <a name="start-datetimejavascriptapioutlook11officetime"></a>start :Date|[Time](/javascript/api/outlook_1_1/office.time)
+#### <a name="start-datetimejavascriptapioutlook11officetime"></a>Начало: Дата | [Time (время](/javascript/api/outlook_1_1/office.time) )
 
 Получает или задает дату и время начала встречи.
 
@@ -697,7 +697,7 @@ Office.context.mailbox.item.start.setAsync(startTime, options, function(result) 
 });
 ```
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   Date | [Time](/javascript/api/outlook_1_1/office.time)
 
@@ -709,7 +709,7 @@ Office.context.mailbox.item.start.setAsync(startTime, options, function(result) 
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-####  <a name="subject-stringsubjectjavascriptapioutlook11officesubject"></a>subject :String|[Subject](/javascript/api/outlook_1_1/office.subject)
+#### <a name="subject-stringsubjectjavascriptapioutlook11officesubject"></a>Тема: строка | [Subject (тема](/javascript/api/outlook_1_1/office.subject) )
 
 Получает или задает описание, которое отображается в поле темы элемента.
 
@@ -749,7 +749,7 @@ function callback(asyncResult) {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-####  <a name="to-arrayemailaddressdetailsjavascriptapioutlook11officeemailaddressdetailsrecipientsjavascriptapioutlook11officerecipients"></a>to :Array.<[EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)>|[Recipients](/javascript/api/outlook_1_1/office.recipients)
+#### <a name="to-arrayemailaddressdetailsjavascriptapioutlook11officeemailaddressdetailsrecipientsjavascriptapioutlook11officerecipients"></a>Кому: Array. <[EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)>|[получатели](/javascript/api/outlook_1_1/office.recipients)
 
 Предоставляет доступ к получателям, указанным в строке **Кому** сообщения. Тип объекта и уровень доступа зависят от режима текущего элемента.
 
@@ -789,7 +789,7 @@ function callback(asyncResult) {
 
 ### <a name="methods"></a>Методы
 
-####  <a name="addfileattachmentasyncuri-attachmentname-options-callback"></a>addFileAttachmentAsync(uri, attachmentName, [options], [callback])
+#### <a name="addfileattachmentasyncuri-attachmentname-options-callback"></a>addFileAttachmentAsync(uri, attachmentName, [options], [callback])
 
 Добавляет файл в сообщение или встречу в качестве вложения.
 
@@ -801,9 +801,9 @@ function callback(asyncResult) {
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-|`uri`| Строка||Универсальный код ресурса (URI), представляющий расположение файла, который нужно вложить в сообщение или встречу. Максимальная длина — 2048 символов.|
+|`uri`| String||Универсальный код ресурса (URI), представляющий расположение файла, который нужно вложить в сообщение или встречу. Максимальная длина — 2048 символов.|
 |`attachmentName`| String||Имя вложения, которое отображается при передаче вложения. Максимальная длина — 255 символов.|
-|`options`| Object| &lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
+|`options`| Объект| &lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`| Object| &lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
 |`callback`| функция| &lt;необязательно&gt;|После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.<br/>Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.|
 
@@ -843,7 +843,7 @@ function addAttachment() {
 }
 ```
 
-####  <a name="additemattachmentasyncitemid-attachmentname-options-callback"></a>addItemAttachmentAsync(itemId, attachmentName, [options], [callback])
+#### <a name="additemattachmentasyncitemid-attachmentname-options-callback"></a>addItemAttachmentAsync(itemId, attachmentName, [options], [callback])
 
 Добавляет к сообщению элемент Exchange, например сообщение, в виде вложения.
 
@@ -851,16 +851,16 @@ function addAttachment() {
 
 Идентификатор можно использовать с методом [`removeAttachmentAsync`](#removeattachmentasyncattachmentid-options-callback), чтобы удалить вложение, добавленное во время текущего сеанса.
 
-Если ваша надстройка Office выполняется в Outlook Web App, метод `addItemAttachmentAsync` обеспечивает вложение элементов в элементы, отличные от редактируемого. Однако это действие не рекомендуем выполнять, так как оно не поддерживается.
+Если ваша надстройка Office работает в Outlook в Интернете, `addItemAttachmentAsync` метод может присоединять элементы к элементам, отличным от редактируемого элемента; Однако это не поддерживается и не рекомендуется.
 
 ##### <a name="parameters"></a>Параметры
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-|`itemId`| Строка||Идентификатор Exchange для вкладываемого элемента. Максимальная длина — 100 символов.|
+|`itemId`| String||Идентификатор Exchange для вкладываемого элемента. Максимальная длина — 100 символов.|
 |`attachmentName`| String||Тема вкладываемого элемента. Максимальная длина: 255 символов.|
 |`options`| Object| &lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
-|`options.asyncContext`| Object| &lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
+|`options.asyncContext`| Объект| &lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
 |`callback`| функция| &lt;Необязательный&gt;|После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.<br/>Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.|
 
 ##### <a name="errors"></a>Ошибки
@@ -906,9 +906,9 @@ function addAttachment() {
 Отображает форму ответа, включающую отправителя и всех получателей выбранного сообщения или организатора и всех участников выбранной встречи.
 
 > [!NOTE]
-> Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот метод не поддерживается в Outlook на iOS или Android.
 
-В Outlook Web App форма ответа отображается в виде всплывающей формы в представлении с 3 либо 1 или 2 колонками.
+В Outlook в Интернете форма ответа отображается в виде всплывающей формы в представлении из трех столбцов и всплывающей формы в представлении с 2 или 1 столбца.
 
 Если любой строковый параметр превышает указанные для него ограничения, `displayReplyAllForm` возвращает исключение.
 
@@ -973,9 +973,9 @@ Office.context.mailbox.item.displayReplyAllForm(
 Отображает форму ответа, включающую только отправителя выбранного сообщения или организатора выбранной встречи.
 
 > [!NOTE]
-> Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот метод не поддерживается в Outlook на iOS или Android.
 
-В Outlook Web App форма ответа отображается в виде всплывающей формы в представлении с 3 либо 1 или 2 колонками.
+В Outlook в Интернете форма ответа отображается в виде всплывающей формы в представлении из трех столбцов и всплывающей формы в представлении с 2 или 1 столбца.
 
 Если любой строковый параметр превышает указанные для него ограничения, `displayReplyForm` возвращает исключение.
 
@@ -1040,7 +1040,7 @@ Office.context.mailbox.item.displayReplyForm(
 Получает сущности, обнаруженные в теле выбранного элемента.
 
 > [!NOTE]
-> Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот метод не поддерживается в Outlook на iOS или Android.
 
 ##### <a name="requirements"></a>Требования
 
@@ -1067,7 +1067,7 @@ var contacts = Office.context.mailbox.item.getEntities().contacts;
 Получает массив всех сущностей указанного типа, обнаруженных в теле выбранного элемента.
 
 > [!NOTE]
-> Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот метод не поддерживается в Outlook на iOS или Android.
 
 ##### <a name="parameters"></a>Параметры
 
@@ -1125,7 +1125,7 @@ Office.initialize = function () {
 Возвращает известные сущности в выбранном элементе, которые проходят через именованный фильтр, определяемый в XML-файле манифеста.
 
 > [!NOTE]
-> Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот метод не поддерживается в Outlook на iOS или Android.
 
 Метод `getFilteredEntitiesByName` возвращает сущности, соответствующие регулярному выражению, которое определяется в элементе правила [ItemHasKnownEntity](/office/dev/add-ins/reference/manifest/rule#itemhasknownentity-rule) в XML-файле манифеста, с использованием указанного значения элемента `FilterName`.
 
@@ -1133,7 +1133,7 @@ Office.initialize = function () {
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`name`| Строка|Имя элемента правила `ItemHasKnownEntity`, определяющее соответствующий фильтр.|
+|`name`| String|Имя элемента правила `ItemHasKnownEntity`, определяющее соответствующий фильтр.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -1156,7 +1156,7 @@ Office.initialize = function () {
 Возвращает строковые значения в выбранном элементе, которые соответствуют регулярным выражениям, определенным в XML-файле манифеста.
 
 > [!NOTE]
-> Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот метод не поддерживается в Outlook на iOS или Android.
 
 Метод `getRegExMatches` возвращает строки, соответствующие регулярному выражению, которое определяется в каждом элементе правила `ItemHasRegularExpressionMatch` или `ItemHasKnownEntity` в XML-файле манифеста. Для правила `ItemHasRegularExpressionMatch` соответствующую строку должно содержать свойство элемента, указанного этим правилом. Простой тип `PropertyName` определяет поддерживаемые свойства.
 
@@ -1215,7 +1215,7 @@ var veggies = allMatches.veggies;
 Возвращает строковые значения в выбранном элементе, которые соответствуют именованному регулярному выражению, определенному в XML-файле манифеста.
 
 > [!NOTE]
-> Этот метод не поддерживается в Outlook для iOS или Outlook для Android.
+> Этот метод не поддерживается в Outlook на iOS или Android.
 
 Метод `getRegExMatchesByName` возвращает строки, соответствующие регулярному выражению, которое определяется в элементе правила `ItemHasRegularExpressionMatch` в XML-файле манифеста, с использованием указанного значения элемента `RegExName`.
 
@@ -1225,7 +1225,7 @@ var veggies = allMatches.veggies;
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`name`| Строка|Имя элемента правила `ItemHasRegularExpressionMatch`, определяющее соответствующий фильтр.|
+|`name`| String|Имя элемента правила `ItemHasRegularExpressionMatch`, определяющее соответствующий фильтр.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -1254,7 +1254,7 @@ var fruits = Office.context.mailbox.item.getRegExMatchesByName("fruits");
 var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");
 ```
 
-####  <a name="loadcustompropertiesasynccallback-usercontext"></a>loadCustomPropertiesAsync(callback, [userContext])
+#### <a name="loadcustompropertiesasynccallback-usercontext"></a>loadCustomPropertiesAsync(callback, [userContext])
 
 Асинхронно загружает настраиваемые свойства для надстройки для выбранного элемента.
 
@@ -1302,18 +1302,18 @@ function saveCallback(asyncResult) {
 }
 ```
 
-####  <a name="removeattachmentasyncattachmentid-options-callback"></a>removeAttachmentAsync(attachmentId, [options], [callback])
+#### <a name="removeattachmentasyncattachmentid-options-callback"></a>removeAttachmentAsync(attachmentId, [options], [callback])
 
 Удаляет вложение из сообщения или встречи.
 
-Метод `removeAttachmentAsync` удаляет из элемента вложение с указанным идентификатором. Идентификатор вложения рекомендуется использовать для удаления вложения, только если оно добавлено тем же почтовым приложением в ходе текущего сеанса. В Outlook Web App и Outlook Web App для устройств идентификатор вложения действителен только в рамках одного сеанса. Сеанс завершается, когда пользователь закрывает приложение или начинает создавать элемент во встроенной форме, а затем переходит из формы в отдельное окно.
+Метод `removeAttachmentAsync` удаляет из элемента вложение с указанным идентификатором. Идентификатор вложения рекомендуется использовать для удаления вложения, только если оно добавлено тем же почтовым приложением в ходе текущего сеанса. В Outlook в Интернете и мобильных устройствах идентификатор вложения действителен только в рамках одного сеанса. Сеанс завершается, когда пользователь закрывает приложение или начинает создавать элемент во встроенной форме, а затем переходит из формы в отдельное окно.
 
 ##### <a name="parameters"></a>Параметры
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
 |`attachmentId`| String||Идентификатор удаляемого вложения.|
-|`options`| Object| &lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
+|`options`| Объект| &lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`| Объект| &lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
 |`callback`| функция| &lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>Если удалить вложение не удается, свойство `asyncResult.error` содержит код ошибки с указанием ее причины.|
 

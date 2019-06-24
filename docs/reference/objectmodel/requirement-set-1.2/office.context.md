@@ -1,14 +1,14 @@
 ---
 title: Office. Context — набор обязательных элементов 1,2
 description: ''
-ms.date: 03/19/2019
+ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: 8c0c84d4c763e125992b06abfb33985085a56210
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: cdf6b76ca090eb78d31fc1a6f328ce83c606e1f5
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451859"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128428"
 ---
 # <a name="context"></a>context
 
@@ -26,11 +26,11 @@ ms.locfileid: "32451859"
 
 ### <a name="namespaces"></a>Пространства имен
 
-[Mailbox](office.context.mailbox.md) — предоставляет доступ к объектной модели надстройки Outlook для Microsoft Outlook и Microsoft Outlook в Интернете.
+[Mailbox](office.context.mailbox.md) — предоставляет доступ к объектной модели надстройки Outlook для Microsoft Outlook.
 
-### <a name="members"></a>Элементы
+### <a name="members"></a>Members
 
-####  <a name="displaylanguage-string"></a>displayLanguage :String
+#### <a name="displaylanguage-string"></a>displayLanguage: строка
 
 Получает определенный пользователем языковой стандарт (язык) в формате обозначений языка RFC 1766 для пользовательского интерфейса ведущего приложения Office.
 
@@ -68,13 +68,13 @@ function write(message){
 }
 ```
 
-####  <a name="roamingsettings-roamingsettingsjavascriptapioutlook12officeroamingsettings"></a>roamingSettings :[RoamingSettings](/javascript/api/outlook_1_2/office.RoamingSettings)
+#### <a name="roamingsettings-roamingsettingsjavascriptapioutlook12officeroamingsettings"></a>roamingSettings: [roamingSettings](/javascript/api/outlook_1_2/office.RoamingSettings)
 
 Получает объект, представляющий настраиваемые параметры или состояние надстройки почты, сохраненное в почтовом ящике пользователя.
 
 Объект `RoamingSettings` позволяет сохранять данные для надстройки почты, записанные в почтовом ящике пользователя, и получать к ним доступ, таким образом делая их доступными для этой надстройки, когда она запускается из любого клиентского ведущего приложения, используемого для доступа к этому почтовому ящику.
 
-##### <a name="type"></a>Type
+##### <a name="type"></a>Тип
 
 *   [RoamingSettings](/javascript/api/outlook_1_2/office.RoamingSettings)
 

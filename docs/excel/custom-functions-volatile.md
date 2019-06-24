@@ -3,16 +3,18 @@ ms.date: 06/17/2019
 description: Узнайте, как реализовать переменные настраиваемые функции потоковой и автономной работы.
 title: Пересчитываемые значения в функциях
 localization_priority: Normal
-ms.openlocfilehash: 0edf4071ce366c40300663233f1de318a544169b
-ms.sourcegitcommit: 4bf5159a3821f4277c07d89e88808c4c3a25ff81
+ms.openlocfilehash: bcaef092ec386a7d80760c1e2a567b9de1fdad21
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "35059848"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127822"
 ---
 # <a name="volatile-values-in-functions"></a>Пересчитываемые значения в функциях
 
 Функции volatile — это функции, в которых значение изменяется каждый раз при вычислении ячейки. Значение может измениться, даже если ни один из аргументов функции не изменится. Эти функции пересчитываются при каждом пересчете в Excel. К примеру, представьте себе ячейку, вызывающую функцию `NOW`. При каждом вызове `NOW` она будет автоматически возвращать текущую дату и время.
+
+[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
 В Excel есть несколько встроенных переменных функций, таких как `RAND` и `TODAY`. Полный список переменных функций Excel см. в статье [Переменные и постоянные функции](/office/client-developer/excel/excel-recalculation#volatile-and-non-volatile-functions).
 

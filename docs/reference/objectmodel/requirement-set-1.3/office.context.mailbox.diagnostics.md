@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox. Diagnostics — набор обязательных элементов 1,3
 description: ''
-ms.date: 03/19/2019
+ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: a5d8102547c31d9f72177c6fe619f4d8ea9a78fb
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 7e815ba2a390a871f11dfccd394ff5d306fbc0ec
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450445"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127424"
 ---
 # <a name="diagnostics"></a>diagnostics
 
@@ -24,9 +24,9 @@ ms.locfileid: "32450445"
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-### <a name="members"></a>Элементы
+### <a name="members"></a>Members
 
-####  <a name="hostname-string"></a>hostName :String
+#### <a name="hostname-string"></a>Имя узла: строка
 
 Получает строку, представляющую имя ведущего приложения.
 
@@ -44,11 +44,11 @@ ms.locfileid: "32450445"
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-####  <a name="hostversion-string"></a>hostVersion :String
+#### <a name="hostversion-string"></a>hostVersion: строка
 
 Получает строку, которая представляет версию ведущего приложения или Exchange Server.
 
-Если почтовая надстройка запущена в классическом клиенте Outlook или Outlook для iOS, свойство `hostVersion` возвращает версию ведущего приложения, Outlook. В Outlook Web App это свойство возвращает версию Exchange Server. Пример — строка `15.0.468.0`.
+Если почтовая надстройка запущена на клиенте Outlook для настольных ПК или iOS `hostVersion` , свойство возвращает версию ведущего приложения, Outlook. В Outlook в Интернете свойство возвращает версию сервера Exchange. Пример — строка `15.0.468.0`.
 
 ##### <a name="type"></a>Тип
 
@@ -62,19 +62,19 @@ ms.locfileid: "32450445"
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-####  <a name="owaview-string"></a>OWAView :String
+#### <a name="owaview-string"></a>OWAView: строка
 
-Получает строку, отображающую текущее представление Outlook Web App.
+Получает строку, представляющую текущее представление Outlook в Интернете.
 
 Возвращаемая строка может иметь одно из следующих значений: `OneColumn`, `TwoColumns` или `ThreeColumns`.
 
-Если Outlook Web App — не ведущее приложение, при получении доступа к этому свойству будет выдаваться значение `undefined`.
+Если ведущее приложение не является Outlook в Интернете, то при доступе к этому свойству будет получен результат `undefined`.
 
-Outlook Web App включает три представления, которые соответствуют ширине экрана и окна, а также числу отображаемых столбцов.
+В Outlook в Интернете есть три представления, которые соответствуют ширине экрана и окна, а также количество отображаемых столбцов:
 
-*   `OneColumn` используется в случае узкого экрана: Outlook Web App использует этот макет размером в один столбец на экране смартфона.
-*   `TwoColumns` используется при более широком экране: Outlook Web App использует это представление на большинстве планшетных ПК.
-*   `ThreeColumns` используется для полноразмерных экранов. Например, Outlook Web App использует это представление в полноэкранном режиме на настольных компьютерах.
+*   `OneColumn`, который отображается, когда экран сужается. В Outlook в Интернете этот макет с одним столбцом используется на всем экране смартфона.
+*   `TwoColumns`, который отображается, когда экран расширяется. Outlook в Интернете использует это представление на большинстве планшетов.
+*   `ThreeColumns` используется для полноразмерных экранов. Например, в Outlook в Интернете это представление используется в полноэкранном окне на настольном компьютере.
 
 ##### <a name="type"></a>Тип
 

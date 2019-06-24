@@ -3,12 +3,12 @@ title: Создание надстройки Office, в которой испо�
 description: ''
 ms.date: 04/15/2019
 localization_priority: Priority
-ms.openlocfilehash: ebcf5cd72f841f5d97093e3b5f43833e97fa9947
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: a28178fb309450f59435d678c013a7a73bb60978
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450165"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128164"
 ---
 # <a name="create-an-aspnet-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office, в которой используется единый вход, на платформе ASP.NET (предварительная версия)
 
@@ -153,7 +153,7 @@ ms.locfileid: "32450165"
 
         2. Измените имя существующего файла на `MailAppVersionOverridesV1_1.old`.
 
-        3. Скопируйте измененную версию файла в папку: [Измененная схема MailAppVersionOverrides](https://github.com/OfficeDev/outlook-add-in-attachments-demo/blob/sso-conversion/manifest-schema-fix/MailAppVersionOverridesV1_1.xsd)
+        3. Скопируйте измененную версию файла в папку: [Измененная схема MailAppVersionOverrides](https://github.com/OfficeDev/outlook-add-in-attachments-demo/blob/master/manifest-schema-fix/MailAppVersionOverridesV1_1.xsd)
 
 1. Сохраните и закройте главный файл манифеста в Visual Studio.
 
@@ -415,7 +415,7 @@ ms.locfileid: "32450165"
     }
     ```
 
-1. Замените `TODO13B` приведенным ниже кодом. Что нужно знать об этом коде:
+1. Замените `TODO13B` приведенным ниже кодом. Вот что нужно знать об этом коде:
 
     * Ошибка 70011 имеет несколько значений. Главное для этой надстройки — запрашивание недопустимого разрешения, поэтому код проверяет наличие полного описания ошибки, а не только номера.
     * Надстройка должна сообщить об ошибке.

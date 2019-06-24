@@ -1,18 +1,20 @@
 ---
-ms.date: 06/17/2019
+ms.date: 06/20/2019
 description: Определение метаданных для настраиваемых функций в Excel.
 title: Метаданные для пользовательских функций в Excel
 localization_priority: Normal
-ms.openlocfilehash: a7715bcdd125d44ec887f8b779ac0673b4a12af0
-ms.sourcegitcommit: 4bf5159a3821f4277c07d89e88808c4c3a25ff81
+ms.openlocfilehash: f97a339972a8ac134bd30c87b86c4701cb4b5fc4
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "35059862"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127872"
 ---
 # <a name="custom-functions-metadata"></a>Метаданные пользовательских функций
 
 При определении [пользовательских функций](custom-functions-overview.md) в надстройке Excel проект надстройки содержит файл метаданных JSON, который предоставляет сведения, необходимые Excel для регистрации настраиваемых функций и предоставления доступа к ним конечным пользователям.
+
+[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
 Этот файл создается следующим образом:
 
@@ -25,7 +27,7 @@ ms.locfileid: "35059862"
 
 Сведения о других файлах, которые необходимо добавить в проект надстройки для включения настраиваемых функций, см. в статье [Создание пользовательских функций в Excel](custom-functions-overview.md).
 
-Настройки сервера на сервере, на котором размещен JSON-файл, должны включать активацию [CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS), чтобы пользовательские функции сработали надлежащим образом в Excel Online.
+Для правильной работы пользовательских функций в Excel в Интернете параметры сервера на сервере, на котором размещается JSON-файл, должны быть включены [CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS) .
 
 ## <a name="example-metadata"></a>Пример метаданных
 

@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов общего API для Office
 description: ''
-ms.date: 05/08/2019
+ms.date: 06/20/2019
 ms.prod: non-product-specific
 localization_priority: Priority
-ms.openlocfilehash: 1d7052ec5b790805abdf9a893855919ca685c404
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: 71c59331e59ab508cf6a681bc9c594d5b30af9fe
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33952228"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127032"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
@@ -35,7 +35,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac|Document.getActiveViewAsync|
+| PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac|Document.getActiveViewAsync|
 
 ---
 
@@ -49,7 +49,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Веб-приложения Access<br>Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Binding.addHandlerAsync<br>Binding.removeHandlerAsync|
+| Веб-приложения Access<br>Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>Excel для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Binding.addHandlerAsync<br>Binding.removeHandlerAsync|
 
 ---
 
@@ -57,7 +57,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel<br>Excel Online<br>Excel для Mac<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает вывод в формате Office Open XML (OOXML) в виде байтового массива<br>(Office.FileType.Compressed) при использовании метода Document.getFileAsync.|
+| Excel для Windows<br>Excel в Интернете<br>Excel для Mac<br>PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает вывод в формате Office Open XML (OOXML) в виде байтового массива<br>(Office.FileType.Compressed) при использовании метода Document.getFileAsync.|
 
 ---
 
@@ -65,7 +65,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|CustomXmlNode.getNodesAsync<br>CustomXmlNode.getNodeValueAsync<br>CustomXmlNode.getTextAsync<br>CustomXmlNode.getXmlAsync<br>CustomXmlNode.setNodeValueAsync<br>CustomXmlNode.setTextAsync<br>CustomXmlNode.setXmlAsync<br>CustomXmlPart.addHandlerAsync<br>CustomXmlPart.deleteAsync<br>CustomXmlPart.getNodesAsync<br>CustomXmlPart.getXmlAsync<br>CustomXmlPart.removeHandlerAsync<br>CustomXmlParts.addAsync<br>CustomXmlParts.getByIdAsync<br>CustomXmlParts.getByNamespaceAsync<br>CustomXmlPrefixMappings.addNamespaceAsync<br>CustomXmlPrefixMappings.getNamespaceAsync<br>CustomXmlPrefixMappings.getPrefixAsync|
+| Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|CustomXmlNode.getNodesAsync<br>CustomXmlNode.getNodeValueAsync<br>CustomXmlNode.getTextAsync<br>CustomXmlNode.getXmlAsync<br>CustomXmlNode.setNodeValueAsync<br>CustomXmlNode.setTextAsync<br>CustomXmlNode.setXmlAsync<br>CustomXmlPart.addHandlerAsync<br>CustomXmlPart.deleteAsync<br>CustomXmlPart.getNodesAsync<br>CustomXmlPart.getXmlAsync<br>CustomXmlPart.removeHandlerAsync<br>CustomXmlParts.addAsync<br>CustomXmlParts.getByIdAsync<br>CustomXmlParts.getByNamespaceAsync<br>CustomXmlPrefixMappings.addNamespaceAsync<br>CustomXmlPrefixMappings.getNamespaceAsync<br>CustomXmlPrefixMappings.getPrefixAsync|
 
 ---
 
@@ -81,7 +81,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>OneNote Online<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Document.addHandlerAsync<br>Document.removeHandlerAsync|
+| Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>Excel для Mac<br>OneNote в Интернете<br>PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Document.addHandlerAsync<br>Document.removeHandlerAsync|
 
 ---
 
@@ -89,7 +89,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Document.getFileAsync<br>File.closeAsync<br>File.getSliceAsync|
+| Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>Excel для Mac<br>PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Document.getFileAsync<br>File.closeAsync<br>File.getSliceAsync|
 
 ---
 
@@ -97,7 +97,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| OneNote Online<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает приведение в HTML (Office.CoercionType.Html) при чтении и записи данных с использованием методов Document.getSelectedDataAsync,<br>Методы Document.setSelectedDataAsync, Binding.getDataAsync или Binding.setDataAsync.|
+| OneNote в Интернете<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает приведение в HTML (Office.CoercionType.Html) при чтении и записи данных с использованием методов Document.getSelectedDataAsync,<br>Методы Document.setSelectedDataAsync, Binding.getDataAsync или Binding.setDataAsync.|
 
 ---
 
@@ -113,7 +113,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel<br>Excel для iPad<br>Excel для Mac<br>OneNote Online<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает преобразование в изображение (Office.CoercionType.Image) при записи данных с помощью метода Document.setSelectedDataAsync.|
+| Excel для Windows<br>Excel на iPad<br>Excel для Mac<br>OneNote в Интернете<br>PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает преобразование в изображение (Office.CoercionType.Image) при записи данных с помощью метода Document.setSelectedDataAsync.|
 
 ---
 
@@ -121,7 +121,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-|Outlook для Windows<br>Outlook для веб-браузеров<br>Outlook для Android<br>Outlook для Mac<br>Outlook Web App |См. статью [Общие сведения о наборах обязательных элементов API для Outlook](outlook-api-requirement-sets.md).|
+|Outlook для Windows<br>Outlook в Интернете<br>Outlook для Android<br>Outlook для Mac<br>Outlook для iOS|См. статью [Общие сведения о наборах обязательных элементов API для Outlook](outlook-api-requirement-sets.md).|
 
 ---
 
@@ -129,7 +129,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word<br>Word Online<br>Word для iPad<br>Word для Mac|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsync<br>Binding.getDataAsync<br>Binding.setDataAsync|
+| Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>Excel для Mac<br>Word для Windows<br>Word в Интернете<br>Word на iPad<br>Word для Mac|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsync<br>Binding.getDataAsync<br>Binding.setDataAsync|
 
 ---
 
@@ -137,7 +137,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает приведение в структуру данных "матрица" (массив массивов, Office.CoercionType.Matrix) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
+| Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>Excel для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает приведение в структуру данных "матрица" (массив массивов, Office.CoercionType.Matrix) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
 
 ---
 
@@ -145,7 +145,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает приведение в формат Open Office XML (OOXML, Office.CoercionType.Ooxml) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
+| Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает приведение в формат Open Office XML (OOXML, Office.CoercionType.Ooxml) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
 
 ---
 
@@ -161,7 +161,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel для Mac<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает вывод в формате PDF (Office.FileType.Pdf)<br>при использовании метода Document.getFileAsync.|
+| Excel для Mac<br>PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает вывод в формате PDF (Office.FileType.Pdf)<br>при использовании метода Document.getFileAsync.|
 
 ---
 
@@ -169,7 +169,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Project<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Document.getSelectedDataAsync<br>Document.setSelectedDataAsync|
+| Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>Excel для Mac<br>PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac<br>Project для Windows<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Document.getSelectedDataAsync<br>Document.setSelectedDataAsync|
 
 ---
 
@@ -177,7 +177,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Веб-приложения Access<br>Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>OneNote Online<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Settings.get<br>Settings.remove<br>Settings.saveAsync<br>Settings.set|
+| Веб-приложения Access<br>Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>Excel для Mac<br>OneNote в Интернете<br>PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Settings.get<br>Settings.remove<br>Settings.saveAsync<br>Settings.set|
 
 ---
 
@@ -185,7 +185,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Веб-приложения Access<br>Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsync<br>Binding.addColumnsAsync<br>Binding.addRowsAsync<br>Binding.deleteAllDataValuesAsync<br>Binding.getDataAsync<br>Binding.setDataAsync|
+| Веб-приложения Access<br>Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>Excel для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsync<br>Binding.addColumnsAsync<br>Binding.addRowsAsync<br>Binding.deleteAllDataValuesAsync<br>Binding.getDataAsync<br>Binding.setDataAsync|
 
 ---
 
@@ -193,7 +193,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Веб-приложения Access<br>Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает приведение в структуру данных "таблица" (Office.CoercionType.Table) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
+| Веб-приложения Access<br>Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>Excel для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает приведение в структуру данных "таблица" (Office.CoercionType.Table) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
 
 ---
 
@@ -201,7 +201,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel<br>Excel Online<br>Excel для iPad<br>Excel для Mac<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsync<br>Binding.getDataAsync<br>Binding.setDataAsync|
+| Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>Excel для Mac<br>Word 2013 и более поздней версии и Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsync<br>Binding.getDataAsync<br>Binding.setDataAsync|
 
 ---
 
@@ -209,7 +209,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel<br>Excel Online<br>Excel для iPad<br>OneNote Online<br>PowerPoint<br>PowerPoint Online<br>PowerPoint для iPad<br>PowerPoint для Mac<br>Project<br>Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает приведение в текстовый формат (Office.CoercionType.Text) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
+| Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>OneNote в Интернете<br>PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac<br>Project для Windows<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает приведение в текстовый формат (Office.CoercionType.Text) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
 
 ---
 
@@ -217,7 +217,7 @@ ms.locfileid: "33952228"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Word 2013 и более поздних версий<br>Word 2016 для Mac и более поздних версий<br>Word Online<br>Word для iPad|Поддерживает вывод в текстовом формате (Office.FileType.Text) при использовании метода Document.getFileAsync.|
+| Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает вывод в текстовом формате (Office.FileType.Text) при использовании метода Document.getFileAsync.|
 
 ---
 
@@ -227,8 +227,8 @@ ms.locfileid: "33952228"
 
 |**Имя метода**|**Поддержка ведущих приложений Office**|
 |:-----|:-----|
-|Bindings.addFromPromptAsync|Веб-приложения Access, Excel, Excel Online, Excel для iPad и Excel для Mac|
-|Document.getFilePropertiesAsync|Excel, Excel Online, Excel для iPad, Excel для Mac, PowerPoint, PowerPoint Online, PowerPoint для iPad, PowerPoint для Mac, Word, Word Online, Word для iPad и Word для Mac|
+|Bindings.addFromPromptAsync|Веб-приложения Access, Excel для Windows, Excel в Интернете, Excel на iPad и Excel для Mac|
+|Document.getFilePropertiesAsync|Excel для Windows, Excel в Интернете, Excel на iPad, Excel для Mac, PowerPoint для Windows, PowerPoint в Интернете, PowerPoint на iPad, PowerPoint для Mac, Word для Windows, Word в Интернете, Word на iPad и Word для Mac|
 |Document.getProjectFieldAsync|Project стандартный 2013 и Project профессиональный 2013|
 |Document.getResourceFieldAsync|Project стандартный 2013 и Project профессиональный 2013|
 |Document.getSelectedResourceAsync|Project стандартный 2013 и Project профессиональный 2013|
@@ -236,13 +236,13 @@ ms.locfileid: "33952228"
 |Document.getSelectedViewAsync|Project стандартный 2013 и Project профессиональный 2013|
 |Document.getTaskAsync|Project стандартный 2013 и Project профессиональный 2013|
 |Document.getTaskFieldAsync|Project стандартный 2013 и Project профессиональный 2013|
-|Document.goToByIdAsync|Excel, Excel Online, Excel для iPad, Excel для Mac, PowerPoint, PowerPoint Online, PowerPoint для iPad, PowerPoint для Mac, Word, Word Online, Word для iPad и Word для Mac|
-|Settings.addHandlerAsync|Веб-приложения Access и Excel Online|
-|Settings.refreshAsync|Веб-приложения Access, Excel, Excel Online, PowerPoint, PowerPoint Online, Word и Word Online|
-|Settings.removeHandlerAsync|Веб-приложения Access и Excel Online|
-|TableBinding.clearFormatsAsync|Excel, Excel Online, Excel для iPad и Excel для Mac|
-|TableBinding.setFormatsAsync|Excel, Excel Online, Excel для iPad и Excel для Mac|
-|TableBinding.setTableOptionsAsync|Excel, Excel Online, Excel для iPad и Excel для Mac|
+|Document.goToByIdAsync|Excel для Windows, Excel в Интернете, Excel на iPad, Excel для Mac, PowerPoint для Windows, PowerPoint в Интернете, PowerPoint на iPad, PowerPoint для Mac, Word для Windows, Word в Интернете, Word на iPad и Word для Mac|
+|Settings.addHandlerAsync|Веб-приложения Access и Excel в Интернете|
+|Settings.refreshAsync|Веб-приложения Access, Excel для Windows, Excel в Интернете, PowerPoint для Windows, PowerPoint в Интернете, Word и Word в Интернете|
+|Settings.removeHandlerAsync|Веб-приложения Access и Excel в Интернете|
+|TableBinding.clearFormatsAsync|Excel для Windows, Excel в Интернете, Excel на iPad и Excel для Mac|
+|TableBinding.setFormatsAsync|Excel для Windows, Excel в Интернете, Excel на iPad и Excel для Mac|
+|TableBinding.setTableOptionsAsync|Excel для Windows, Excel в Интернете, Excel на iPad и Excel для Mac|
 
 ## <a name="see-also"></a>См. также
 

@@ -1,19 +1,19 @@
 ---
 title: Разработка надстроек Office для iPad
 description: ''
-ms.date: 05/08/2019
+ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: 3ac8f651ccb87b32679a28684f0d08fad53aa773
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: cdc35b83c2cb32984d0dc73d85af250bddfa8c0a
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33952091"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128173"
 ---
 # <a name="develop-office-add-ins-for-the-ipad"></a>Разработка надстроек Office для iPad
 
 
-В приведенной ниже таблице перечислены действия по созданию надстройки Office, которая будет работать в Office для iPad.
+В следующей таблице перечислены задачи, которые необходимо выполнить для разработки надстройки Office, которая будет работать в Office на iPad.
 
 
 |**Задача**|**Описание**|**Ресурсы**|
@@ -38,7 +38,7 @@ ms.locfileid: "33952091"
 
 -  **Создайте надстройку с помощью Visual Studio.**
 
-    При разработке надстройки с помощью Visual Studio можно [задать точки останова и выполнить отладку кода](../develop/create-and-debug-office-add-ins-in-visual-studio.md) в ведущем приложении Office на устройстве с Windows, прежде чем загружать неопубликованную надстройку на iPad или Mac. Так как надстройка, работающая в Office для iOS или Office для Mac, поддерживает те же API, что и надстройка в Office в Windows, код надстройки должен выполняться одинаково на обеих платформах.
+    При разработке надстройки с помощью Visual Studio можно [задать точки останова и выполнить отладку кода](../develop/create-and-debug-office-add-ins-in-visual-studio.md) в ведущем приложении Office на устройстве с Windows, прежде чем загружать неопубликованную надстройку на iPad или Mac. Так как надстройка, работающая в Office на iOS или Mac, поддерживает те же API, что и надстройка в Office в Windows, код надстройки должен выполняться одинаково на обеих платформах.
 
 -  **Укажите требования касательно API в манифесте надстройки или с помощью проверок в среде выполнения.**
 

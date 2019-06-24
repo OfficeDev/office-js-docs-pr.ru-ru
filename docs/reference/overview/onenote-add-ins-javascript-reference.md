@@ -1,19 +1,19 @@
 ---
 title: Обзор API JavaScript для OneNote
 description: ''
-ms.date: 03/19/2019
+ms.date: 06/20/2019
 ms.prod: onenote
 localization_priority: Normal
-ms.openlocfilehash: 53b120fbe2bba3967c1b89699daef6bd452b5c24
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 68ac6f94921ba3b1ea14f364988b57ef86809890
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450256"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127130"
 ---
 # <a name="onenote-javascript-api-overview"></a>Обзор API JavaScript для OneNote
 
-Область применения: OneNote Online
+Область применения: OneNote в Интернете
 
 Ниже приведены ссылки на высокоуровневые объекты OneNote, доступные в API. Каждая ссылка на страницу объекта содержит описание свойств, событий и методов, доступных для объекта. Чтобы узнать больше, перейдите по указанным ниже ссылкам. 
     
@@ -53,7 +53,7 @@ ms.locfileid: "32450256"
 
 ## <a name="onenote-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для OneNote
 
-Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения о наборах обязательных элементов API JavaScript для OneNote см. в статье [Наборы обязательных элементов API JavaScript для OneNote](../requirement-sets/onenote-api-requirement-sets.md).
+Наборы требований — это именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения о наборах обязательных элементов API JavaScript для OneNote см. в статье [Наборы обязательных элементов API JavaScript для OneNote](../requirement-sets/onenote-api-requirement-sets.md).
 
 ## <a name="onenote-javascript-api-reference"></a>Справочник по API JavaScript для OneNote
 

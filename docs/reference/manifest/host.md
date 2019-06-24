@@ -1,14 +1,14 @@
 ---
 title: Элемент Host в файле манифеста
 description: ''
-ms.date: 10/09/2018
+ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: f496e3e0c16f24d20e1d1db76208e61267235131
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: debb4d59f75ce974ffb21d853c6b65a579c4e685
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450508"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127571"
 ---
 # <a name="host-element"></a>Элемент Host
 
@@ -19,7 +19,7 @@ ms.locfileid: "32450508"
 
 ## <a name="basic-manifest"></a>Базовый манифест
 
-Если ведущее приложение задается в базовом манифесте (в разделе [OfficeApp](officeapp.md)), то его тип определяет атрибут `Name`.   
+Если ведущее приложение задается в базовом манифесте (в разделе [OfficeApp](officeapp.md)), то его тип определяет атрибут `Name`.
 
 ### <a name="attributes"></a>Атрибуты
 
@@ -60,7 +60,7 @@ ms.locfileid: "32450508"
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
 |  [DesktopFormFactor](desktopformfactor.md)    |  Да   |  Определяет параметры классического форм-фактора. |
-|  [MobileFormFactor](mobileformfactor.md)    |  Нет   |  Определяет параметры форм-фактора мобильного устройства. **Примечание.** Этот элемент поддерживается только в Outlook для iOS. |
+|  [MobileFormFactor](mobileformfactor.md)    |  Нет   |  Определяет параметры для мобильного конструктивного параметра. **Примечание:** Этот элемент поддерживается только в Outlook в iOS. |
 |  [AllFormFactors](allformfactors.md)    |  Нет   |  Определяет параметры всех форм-факторов. Используется только пользовательскими функциями в Excel. |
 
 ### <a name="xsitype"></a>xsi:type
@@ -68,7 +68,7 @@ ms.locfileid: "32450508"
 Указывает, к какому ведущему приложению Office (Word, Excel, PowerPoint, Outlook, OneNote) применяются содержащиеся параметры. Допустимые значения:
 
 - `Document` (Word)
-- `MailHost` (Outlook)    
+- `MailHost` (Outlook)
 - `Notebook` (OneNote)
 - `Presentation` (PowerPoint)
 - `Workbook` (Excel)

@@ -1,14 +1,14 @@
 ---
 title: Элемент Action в файле манифеста
 description: ''
-ms.date: 05/08/2019
+ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: 58dcbae57ea2c0e55c9e7708b122484b99e956fe
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: 06b0e3aa9c25346135167ea8c34e69344ef9863d
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33952406"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128526"
 ---
 # <a name="action-element"></a>Элемент Action
 
@@ -140,7 +140,7 @@ ms.locfileid: "33952406"
 Элемент необязательный, когда для **xsi:type** задано значение ShowTaskpane. Родительские элементы [VersionOverrides](versionoverrides.md) должны иметь значение атрибута `xsi:type` `VersionOverridesV1_1`. Включите этот элемент со значением `true` для поддержки закрепления области задач. Пользователь сможет закрепить область задач, после чего она будет оставаться открытой при выборе другого элемента. Дополнительные сведения см. в статье [Реализация закрепляемой области задач в Outlook](/outlook/add-ins/pinnable-taskpane).
 
 > [!NOTE]
-> Суппортспиннинг в настоящее время поддерживается только в Outlook 2016 для Windows (сборка 7628,1000 или более поздней версии) и Outlook 2016 для Mac (сборка 16.13.503 или более поздняя).
+> Суппортспиннинг в настоящее время поддерживается только в Outlook 2016 или более поздних версий для Windows (сборка 7628,1000 или более поздней версии) и Outlook 2016 или более поздней версии в Mac (сборка 16.13.503 или более поздняя версия).
 
 ```xml
 <Action xsi:type="ShowTaskpane">
