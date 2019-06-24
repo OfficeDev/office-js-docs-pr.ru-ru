@@ -1,14 +1,14 @@
 ---
 title: Общие сведения об интерфейсе API JavaScript для Office
 description: ''
-ms.date: 03/19/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: c1666745e9ffeb6c0e9ecf763b2a30c97c609b4f
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 45cccadaa3d82f3435579650ae5161b20d7a425a
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449304"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127991"
 ---
 # <a name="understanding-the-javascript-api-for-office"></a>Общие сведения об интерфейсе API JavaScript для Office
 
@@ -179,7 +179,7 @@ Office.initialize = function (reason) {
 |||||||||
 |:-----|:-----|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 ||**Имя узла**|База данных|Книга|Почтовый ящик|Презентация|Документ|Project|
-||**Поддерживаемые** **ведущие приложения**|Веб-приложения Access|Excel,<br/>Excel Online|Outlook,<br/>Outlook Web App,<br/>Outlook Web App для устройств|PowerPoint,<br/>PowerPoint Online|Word|Project|
+||**Поддерживаемые** **ведущие приложения**|Веб-приложения Access|Excel для Windows,<br/>Excel в Интернете|Outlook для Windows,<br/>Outlook в Интернете,<br/>Outlook для Android,<br>Outlook для iOS|PowerPoint для Windows,<br/>PowerPoint в Интернете|Word для Windows|Project для Windows|
 |**Поддерживаемые типы надстроек**|Содержимое|Да|Да||Да|||
 ||Область задач||Да||Да|Да|Да|
 ||Outlook|||Да||||

@@ -1,14 +1,14 @@
 ---
 title: Дополнительные концепции программирования с помощью API JavaScript для Excel
 description: ''
-ms.date: 05/08/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 43d1f79b629b238afd227978e9c6dc90b9a6d992
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: da85bf8ec00134b86fcf6ae561366f9536f21303
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33952161"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127801"
 ---
 # <a name="advanced-programming-concepts-with-the-excel-javascript-api"></a>Дополнительные концепции программирования с помощью API JavaScript для Excel
 
@@ -60,7 +60,7 @@ else {
 ```
 
 > [!NOTE]
-> Чтобы надстройка была доступна на всех платформах ведущего приложения Office, например Excel для Windows, Excel Online и Excel для iPad, рекомендуем проверять поддержку обязательных элементов в среде выполнения, а не определять поддержку набора обязательных элементов в манифесте.
+> Чтобы надстройка была доступна на всех платформах ведущего приложения Office, например интернет-версия Excel, Excel для Windows и для iPad, рекомендуем проверять поддержку обязательных элементов в среде выполнения, а не определять поддержку набора обязательных элементов в манифесте.
 
 ### <a name="requirement-sets-for-the-officejs-common-api"></a>Наборы обязательных элементов общего API JavaScript для Office
 
