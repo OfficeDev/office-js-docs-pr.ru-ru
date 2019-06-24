@@ -1,20 +1,22 @@
 ---
-ms.date: 06/17/2019
+ms.date: 06/18/2019
 description: Обработка ошибок в пользовательских функциях Excel.
 title: Обработка ошибок в пользовательских функциях Excel
 localization_priority: Priority
-ms.openlocfilehash: 5b94d3fc2570eaa310027ebc156aa78c359a56fa
-ms.sourcegitcommit: 4bf5159a3821f4277c07d89e88808c4c3a25ff81
+ms.openlocfilehash: 3818d33121ed26bb7d65c56bf6c504f2fb049c72
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "35059855"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127921"
 ---
-# <a name="error-handling-within-custom-functions"></a><span data-ttu-id="26a9c-103">Обработка ошибок в пользовательских функциях</span><span class="sxs-lookup"><span data-stu-id="26a9c-103">Error handling within custom functions</span></span>
+# <a name="error-handling-within-custom-functions"></a><span data-ttu-id="ac984-103">Обработка ошибок в пользовательских функциях</span><span class="sxs-lookup"><span data-stu-id="ac984-103">Error handling within custom functions</span></span>
 
-<span data-ttu-id="26a9c-104">При создании надстройки, которая определяет пользовательские функции, не забудьте включить логику для обработки ошибок, возникающих в среде выполнения.</span><span class="sxs-lookup"><span data-stu-id="26a9c-104">When you build an add-in that defines custom functions, be sure to include error handling logic to account for runtime errors.</span></span> <span data-ttu-id="26a9c-105">Обработка ошибок для пользовательских функций в значительной степени совпадает с [обработкой ошибок для API JavaScript в Excel](excel-add-ins-error-handling.md).</span><span class="sxs-lookup"><span data-stu-id="26a9c-105">Error handling for custom functions is the same as [error handling for the Excel JavaScript API at large](excel-add-ins-error-handling.md).</span></span>
+<span data-ttu-id="ac984-104">При создании надстройки, которая определяет пользовательские функции, не забудьте включить логику для обработки ошибок, возникающих в среде выполнения.</span><span class="sxs-lookup"><span data-stu-id="ac984-104">When you build an add-in that defines custom functions, be sure to include error handling logic to account for runtime errors.</span></span> <span data-ttu-id="ac984-105">Обработка ошибок для пользовательских функций в значительной степени совпадает с [обработкой ошибок для API JavaScript в Excel](excel-add-ins-error-handling.md).</span><span class="sxs-lookup"><span data-stu-id="ac984-105">Error handling for custom functions is the same as [error handling for the Excel JavaScript API at large](excel-add-ins-error-handling.md).</span></span>
 
-<span data-ttu-id="26a9c-106">В следующем примере кода `.catch` будет обрабатывать любые ошибки, возникающие ранее в коде.</span><span class="sxs-lookup"><span data-stu-id="26a9c-106">In the following code sample, `.catch` will handle any errors that occur previously in the code.</span></span>
+[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
+
+<span data-ttu-id="ac984-106">В следующем примере кода `.catch` будет обрабатывать любые ошибки, возникающие ранее в коде.</span><span class="sxs-lookup"><span data-stu-id="ac984-106">In the following code sample, `.catch` will handle any errors that occur previously in the code.</span></span>
 
 ```js
 /**
@@ -38,11 +40,11 @@ function getComment(commentID) {
 }
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="26a9c-107">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="26a9c-107">Next steps</span></span>
-<span data-ttu-id="26a9c-108">Узнайте, как [устранять проблемы с пользовательскими функциями](custom-functions-troubleshooting.md).</span><span class="sxs-lookup"><span data-stu-id="26a9c-108">Learn how to [troubleshoot problems with your custom functions](custom-functions-troubleshooting.md).</span></span>
+## <a name="next-steps"></a><span data-ttu-id="ac984-107">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="ac984-107">Next steps</span></span>
+<span data-ttu-id="ac984-108">Узнайте, как [устранять проблемы с пользовательскими функциями](custom-functions-troubleshooting.md).</span><span class="sxs-lookup"><span data-stu-id="ac984-108">Learn how to [troubleshoot problems with your custom functions](custom-functions-troubleshooting.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="26a9c-109">Дополнительные ресурсы</span><span class="sxs-lookup"><span data-stu-id="26a9c-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ac984-109">Дополнительные ресурсы</span><span class="sxs-lookup"><span data-stu-id="ac984-109">See also</span></span>
 
-* [<span data-ttu-id="26a9c-110">Отладка пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="26a9c-110">Custom functions debugging</span></span>](custom-functions-debugging.md)
-* [<span data-ttu-id="26a9c-111">Требования к настраиваемым функциям</span><span class="sxs-lookup"><span data-stu-id="26a9c-111">Custom functions requirements</span></span>](custom-functions-requirements.md)
-* [<span data-ttu-id="26a9c-112">Создание пользовательских функций в Excel</span><span class="sxs-lookup"><span data-stu-id="26a9c-112">Create custom functions in Excel</span></span>](custom-functions-overview.md)
+* [<span data-ttu-id="ac984-110">Отладка пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="ac984-110">Custom functions debugging</span></span>](custom-functions-debugging.md)
+* [<span data-ttu-id="ac984-111">Требования к настраиваемым функциям</span><span class="sxs-lookup"><span data-stu-id="ac984-111">Custom functions requirements</span></span>](custom-functions-requirements.md)
+* [<span data-ttu-id="ac984-112">Создание пользовательских функций в Excel</span><span class="sxs-lookup"><span data-stu-id="ac984-112">Create custom functions in Excel</span></span>](custom-functions-overview.md)
