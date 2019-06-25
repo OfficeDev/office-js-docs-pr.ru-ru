@@ -1,14 +1,14 @@
 ---
 title: Создание и отладка надстроек Office в Visual Studio
 description: Используйте Visual Studio для создания и отладки надстроек Office в настольном клиенте Office для Windows
-ms.date: 05/08/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: c60599ed63c327d10b157e642e109542c3cefc47
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: 9cc4d50d9b61daa4b1f55f7dd4c1e1156f8d959c
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33952098"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128187"
 ---
 # <a name="create-and-debug-office-add-ins-in-visual-studio"></a>Создание и отладка надстроек Office в Visual Studio
 
@@ -30,7 +30,7 @@ ms.locfileid: "33952098"
 - Office 2013 или более поздние версии
 
     > [!TIP]
-    > Если вы еще не установили Office, вы можете присоединиться к [программе для разработчиков Office 365](https://developer.microsoft.com/office/dev-program) и получить подписку на Office 365, либо вы можете [зарегистрировать бесплатную пробную подписку на 1 месяц](https://products.office.com/en-US/try?legRedir=true&WT.intid1=ODC_ENUS_FX101785584_XT104056786&CorrelationId=64c762de-7a97-4dd1-bb96-e231d7485735).
+    > Если вы еще не установили Office, вы можете присоединиться к [программе для разработчиков Office 365](https://developer.microsoft.com/office/dev-program) и получить подписку на Office 365, либо вы можете [зарегистрировать бесплатную пробную подписку на 1 месяц](https://products.office.com/ru-RU/try?legRedir=true&WT.intid1=ODC_ENUS_FX101785584_XT104056786&CorrelationId=64c762de-7a97-4dd1-bb96-e231d7485735).
 
 ## <a name="create-the-add-in-project-in-visual-studio"></a>Создание проекта надстройки в Visual Studio
 
@@ -102,7 +102,7 @@ ms.locfileid: "33952098"
 - [Отладка кода для надстройки Outlook](#debug-the-code-for-an-outlook-add-in)
 
 > [!NOTE]
-> Visual Studio нельзя использовать для отладки надстроек Office в Office Online или Office для Mac. Дополнительную информацию по выполнению отладки на данных платформах, см. в статье [Отладка надстроек Office в Office Online](../testing/debug-add-ins-in-office-online.md) или [Отладка надстройки Office для iPad и компьютеров Mac](../testing/debug-office-add-ins-on-ipad-and-mac.md)
+> Visual Studio нельзя использовать для отладки надстроек в Office в Интернете или Office для Mac. Сведения по выполнению отладки на данных платформах см. в статье [Отладка надстроек Office в Office в Интернете](../testing/debug-add-ins-in-office-online.md) или [Отладка надстроек Office для iPad и компьютеров Mac](../testing/debug-office-add-ins-on-ipad-and-mac.md)
 
 ### <a name="review-the-build-and-debug-properties"></a>Просмотр параметров сборки и отладки
 
@@ -125,7 +125,7 @@ ms.locfileid: "33952098"
 |**Веб-проект**|Определяет имя веб-проекта, связанного с надстройкой.|
 |**Адрес электронной почты**<br/>(только для надстроек Outlook)|Указывает адрес электронной почты учетной записи пользователя на сервере Exchange Server или Exchange Online, который вы хотите использовать для проверки надстройки Outlook.|
 |**EWS Url**<br/>(только для надстроек Outlook)|URL-адрес веб-службы Exchange (пример: `https://www.contoso.com/ews/exchange.aspx`). |
-|**URL-адрес OWA**<br/>(только для надстроек Outlook)|URL-адрес Outlook Web App (пример: `https://www.contoso.com/owa`).|
+|**URL-адрес OWA**<br/>(только для надстроек Outlook)|URL-адрес Outlook в Интернете (например, `https://www.contoso.com/owa`).|
 |**Использование многофакторной проверки подлинности**<br/>(только для надстроек Outlook)|Логическое значение, которое определяет, следует ли использовать многофакторную проверку подлинности.|
 |**Имя пользователя**<br/>(только для надстроек Outlook)|Определяет имя учетной записи на сервере Exchange Server или Exchange Online, которое вы хотите использовать для проверки вашей надстройки Outlook.|
 |**Файл проекта **|Задает имя файла, в котором указаны сборка, конфигурация и другие сведения о проекте.|

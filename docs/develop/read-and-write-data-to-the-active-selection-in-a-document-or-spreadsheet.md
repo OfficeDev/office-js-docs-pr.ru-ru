@@ -1,14 +1,14 @@
 ---
 title: Чтение и запись данных в текущую выделенную область документа или электронной таблицы
 description: ''
-ms.date: 03/19/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 2fe847fcc04e3670db294a421388dbd2faad6f2f
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: b831de475a1946d6e0f9f13463e2750efe6cca5b
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449738"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128047"
 ---
 # <a name="read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet"></a>Чтение и запись данных в текущую выделенную область документа или электронной таблицы
 
@@ -74,7 +74,7 @@ function write(message){
 Анонимная функция, которая передается в метод [setSelectedDataAsync](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) в качестве параметра _callback_, выполняется после завершения асинхронного вызова. При записи данных в выделенный фрагмент с помощью метода **setSelectedDataAsync** параметр _asyncResult_ обратного вызова предоставляет доступ только к сведениям о состоянии вызова и к объекту [Error](/javascript/api/office/office.error) в случае сбоя вызова.
 
 > [!NOTE]
-> Начиная с выпуска Excel 2013 с пакетом обновления 1 (SP1) и соответствующей сборки Excel Online вы можете [задать форматирование при записи таблицы в текущую выделенную область](../excel/excel-add-ins-tables.md).
+> Начиная с выпуска Excel 2013 с пакетом обновления 1 (SP1) и соответствующей сборки Excel в Интернете, вы можете [задать форматирование при записи таблицы в текущую выделенную область](../excel/excel-add-ins-tables.md).
 
 
 ## <a name="detect-changes-in-the-selection"></a>Обнаружение изменений в выделенной области
