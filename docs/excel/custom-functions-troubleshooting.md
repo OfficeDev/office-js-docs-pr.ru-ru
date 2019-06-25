@@ -1,14 +1,14 @@
 ---
-ms.date: 06/17/2019
+ms.date: 06/21/2019
 description: Устранение распространенных проблем в пользовательских функциях Excel.
 title: Устранение проблем в пользовательских функциях
 localization_priority: Priority
-ms.openlocfilehash: f407e103d8f628710c5f58a9787b3a802dcd39c8
-ms.sourcegitcommit: 4bf5159a3821f4277c07d89e88808c4c3a25ff81
+ms.openlocfilehash: f42e9e6ac3e2d868f90ab4f5129684308750b8e2
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "35059904"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128285"
 ---
 # <a name="troubleshoot-custom-functions"></a>Устранение проблем в пользовательских функциях
 
@@ -66,9 +66,9 @@ CustomFunctions.associate("ADD", add);
 
 Если отображается ошибка "Не удается открыть эту надстройку из localhost", необходимо включить исключение локального замыкания на себя. Подробные сведения о том, как это сделать, см. в [этой статье службы поддержки Майкрософт](https://support.microsoft.com/ru-RU/help/4490419/local-loopback-exemption-does-not-work).
 
-### <a name="runtime-logging-reports-typeerror-network-request-failed-on-excel-for-windows"></a>В журнале среды выполнения возникает сообщение об ошибке "TypeError: сетевой запрос не выполнен" в Excel для Windows
+### <a name="runtime-logging-reports-typeerror-network-request-failed-on-excel-on-windows"></a>В журнале среды выполнения возникает сообщение об ошибке "TypeError: сетевой запрос не выполнен" в Excel для Windows
 
-Если в вашем [журнале среды выполнения](custom-functions-troubleshooting.md#enable-runtime-logging) отображается ошибка "TypeError: сетевой запрос не выполнен" при вызове сервера localhost, требуется включить исключение локального замыкания на себя. Подробные сведения о том, как это сделать, см. в [этой статье службы поддержки Майкрософт](https://support.microsoft.com/ru-RU/help/4490419/local-loopback-exemption-does-not-work).
+Если в вашем [журнале среды выполнения](custom-functions-troubleshooting.md#enable-runtime-logging) отображается ошибка "TypeError: сетевой запрос не выполнен" при вызове сервера localhost, требуется включить исключение локального замыкания на себя. Дополнительные сведения о том, как это сделать, см. в разделе *Вариант 2* [этой статьи от службы поддержки Майкрософт](https://support.microsoft.com/ru-RU/help/4490419/local-loopback-exemption-does-not-work).
 
 ### <a name="ensure-promises-return"></a>Проверка возвращения обещаний
 

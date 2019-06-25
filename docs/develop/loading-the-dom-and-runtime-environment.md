@@ -1,14 +1,14 @@
 ---
 title: Загрузка модели DOM и среды выполнения
 description: ''
-ms.date: 03/19/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: e975db391276129e453d5001fe0bac8ad36f6080
-ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
+ms.openlocfilehash: 78ddd10e9106e6668e2bb8cd40f58cbdb7b862d9
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "34910219"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128103"
 ---
 # <a name="loading-the-dom-and-runtime-environment"></a>Загрузка модели DOM и среды выполнения
 
@@ -106,7 +106,7 @@ Office.initialize = function () {
 >Office.initialize = function () {};
 >```
 >
-> Если не вызвать **Office.onReady** или не назначить обработчик событий **Office.initialize**, надстройка может выдать ошибку при запуске. Кроме того, если пользователь попробует использовать надстройку с веб-клиентом Office Online, например Excel Online, PowerPoint Online или Outlook Web App, произойдет сбой.
+> Если не вызвать **Office.onReady** или не назначить обработчик событий **Office.initialize**, надстройка может выдать ошибку при запуске. Кроме того, если пользователь попробует использовать надстройку с веб-клиентом Office, например Excel, PowerPoint или Outlook, произойдет сбой.
 >
 > Если надстройка содержит несколько страниц, каждая загружаемая страница должна вызывать  **Office.onReady** или назначать обработчик событий **Office.initialize**.
 

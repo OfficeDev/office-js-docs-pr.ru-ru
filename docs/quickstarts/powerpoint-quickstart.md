@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач PowerPoint
 description: ''
-ms.date: 05/02/2019
+ms.date: 06/20/2019
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: 75b59e576ea0ed1a6012a08ab75e806cc68390f9
-ms.sourcegitcommit: b299b8a5dfffb6102cb14b431bdde4861abfb47f
+ms.openlocfilehash: 5ede96910c9e9b4462fa5eb566ba25bb4d16ba02
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "34589232"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128547"
 ---
 # <a name="build-your-first-powerpoint-task-pane-add-in"></a>Создание первой надстройки области задач PowerPoint
 
@@ -231,13 +231,13 @@ ms.locfileid: "34589232"
         npm start
         ```
 
-    - Чтобы проверить надстройку в PowerPoint Online, выполните следующую команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).
+    - Чтобы проверить надстройку в PowerPoint в браузере, выполните следующую команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).
 
         ```command&nbsp;line
         npm run start:web
         ```
 
-        Чтобы использовать надстройку, откройте новый документ в PowerPoint Online и затем загрузите неопубликованную надстройку, следуя инструкциям в статье [Загрузка неопубликованных надстроек Office в Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-online).
+        Чтобы использовать надстройку, откройте новый документ в PowerPoint в Интернете и затем загрузите неопубликованную надстройку, следуя инструкциям в статье [Загрузка неопубликованных надстроек Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web).
 
 2. В PowerPoint вставьте новый пустой слайд, выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 

@@ -1,14 +1,14 @@
 ---
 title: Области задач в надстройках Office
 description: Области задач предоставляют пользователям доступ к элементам управления интерфейсом, которые выполняют код для изменения документов или сообщений электронной почты, а также для отображения данных из источника данных.
-ms.date: 02/28/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 7720f476333f9fd3ed654574f612bf7da735867f
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 69fc1e2a228aa757613847095c91514264948c65
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32446290"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127697"
 ---
 # <a name="task-panes-in-office-add-ins"></a>Области задач в надстройках Office
  
@@ -50,7 +50,7 @@ ms.locfileid: "32446290"
 - Excel — 350 x 378
 - PowerPoint — 348 x 391
 - Word — 329 x 445
-- Outlook Web App — 320 x 570
+- Outlook (в Интернете) — 320 x 570
 
 ## <a name="personality-menu"></a>Меню личных данных
 

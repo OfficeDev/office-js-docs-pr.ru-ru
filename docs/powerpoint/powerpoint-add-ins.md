@@ -1,18 +1,18 @@
 ---
 title: Надстройки PowerPoint
 description: ''
-ms.date: 04/15/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 6e518d0bfd37291e39ee17e96ded8debb183c19f
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 78430c06757433ee2cce5155565ae57cc078d6eb
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450914"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128596"
 ---
 # <a name="powerpoint-add-ins"></a>Надстройки PowerPoint
 
-С помощью надстроек PowerPoint можно создавать удобные решения, подходящие для использования в презентациях на различных платформах, таких как Windows, iOS, Office Online и Mac. Можно создать два типа надстроек PowerPoint:
+С помощью надстроек PowerPoint можно создавать удобные решения, подходящие для использования в презентациях на различных платформах, таких как Windows, iOS, Mac и браузеры. Можно создать два типа надстроек PowerPoint:
 
 - **Контентные надстройки** позволяют добавлять динамический контент HTML5 в презентации. Например, ознакомьтесь с надстройкой [LucidChart Diagrams for PowerPoint](https://appsource.microsoft.com/product/office/WA104380117), с помощью которой можно добавить интерактивные схемы LucidChart в набор слайдов.
 
@@ -33,7 +33,7 @@ ms.locfileid: "32450914"
 При создании контентной надстройки вам понадобится получить активное представление презентации, а также обработать событие `ActiveViewChanged` в рамках обработчика событий `Office.Initialize`.
 
 > [!NOTE]
-> В PowerPoint Online не удастся запустить событие [Document.ActiveViewChanged](/javascript/api/office/office.document), поскольку режим показа слайдов обрабатывается как новый сеанс. В этом случае надстройке необходимо получить активное представление по загрузке, как показано в примере кода ниже.
+> В PowerPoint в Интернете не удастся запустить событие [Document.ActiveViewChanged](/javascript/api/office/office.document), поскольку режим показа слайдов обрабатывается как новый сеанс. В этом случае надстройке необходимо получить активное представление по загрузке, как показано в примере кода ниже.
 
 В представленном ниже примере кода:
 

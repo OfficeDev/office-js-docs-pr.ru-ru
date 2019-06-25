@@ -1,18 +1,18 @@
 ---
 title: Общие сведения о надстройках Excel
 description: ''
-ms.date: 05/08/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: cbeb1fa6ae0d88724b7da3fbcb45f8216b6010a6
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: 696e1b3dfcab986125eb3f5f1d9f7547a59282e5
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33951923"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128236"
 ---
 # <a name="excel-add-ins-overview"></a>Общие сведения о надстройках Excel
 
-С помощью надстройки Excel можно расширить возможности приложения Excel на различных платформах, в том числе Office для Windows, Office Online, Office для Mac и Office для iPad. Используйте надстройки в книге Excel, чтобы:
+С помощью надстройки Excel можно расширить возможности приложения Excel на различных платформах, в том числе Windows, Mac, iPad и в браузере. Используйте надстройки в книге Excel, чтобы:
 
 - взаимодействовать с объектами Excel, считывать и записывать данные Excel;
 - расширять возможности с помощью области задач или области содержимого;
@@ -21,7 +21,7 @@ ms.locfileid: "33951923"
 
 В качестве основы используется платформа надстроек Office, предоставляющая API JavaScript для Office.js, с помощью которых можно создавать и запускать надстройки Excel. Используя платформу надстроек Office для создания надстройки Excel, вы получаете следующие преимущества:
 
-* **Кроссплатформенная поддержка**. Надстройки Excel работают в Office для Windows, Mac, iOS и Office Online.
+* **Кроссплатформенная поддержка**. Надстройки Excel работают в Office в Интернете, Office для Windows, Office для Mac и Office для iPad.
 * **Централизованное развертывание.** Администраторы могут легко и быстро развертывать надстройки Excel для пользователей в организации.
 * **Использование стандартных веб-технологий**. Создавайте надстройки Excel, используя знакомые веб-технологии — HTML, CSS и JavaScript.
 * **Распространение через AppSource**. Представьте свою надстройку Excel широкой аудитории, опубликовав ее в [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office&page=1&src=office&corrid=53245fad-fcbe-41f8-9f97-b0840264f97c&omexanonuid=4a0102fb-b31a-4b9f-9bb0-39d4cc6b789d).

@@ -1,14 +1,14 @@
 ---
 title: Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 description: ''
-ms.date: 05/21/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 2e03e841253914a8ee1dd23aef201a38b4bea6d1
-ms.sourcegitcommit: adaee1329ae9bb69e49bde7f54a4c0444c9ba642
+ms.openlocfilehash: a82dc05789b4c35a954337a64197d3ac1a190b96
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "34432188"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35126906"
 ---
 # <a name="troubleshoot-user-errors-with-office-add-ins"></a>Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 
@@ -73,7 +73,7 @@ ms.locfileid: "34432188"
 
 |**Браузеры**|**Платформы**|
 |:--------------------|:---------------------|
-|Internet Explorer, Microsoft Edge|Office Online|
+|Internet Explorer, Microsoft Edge|Office в Интернете|
 
 Чтобы решить эту проблему, пользователи или администраторы могут добавить домен надстройки в список надежных сайтов в Internet Explorer или Microsoft Edge.
 
@@ -110,7 +110,7 @@ Office.context.ui.displayDialogAsync(startAddress, {displayInFrame:true}, callba
 
 ## <a name="see-also"></a>См. также
 
-- [Отладка надстроек в Office Online](debug-add-ins-in-office-online.md) 
+- [Отладка надстроек в Office в Интернете](debug-add-ins-in-office-online.md) 
 - [Загрузка неопубликованной надстройки Office на iPad и Mac](sideload-an-office-add-in-on-ipad-and-mac.md)  
 - [Отладка надстроек Office на iPad и Mac](debug-office-add-ins-on-ipad-and-mac.md)  
 - [Проверка манифеста и устранение связанных с ним неполадок](troubleshoot-manifest.md)

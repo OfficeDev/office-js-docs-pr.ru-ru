@@ -1,14 +1,14 @@
 ---
 title: Привязка к областям в документе или электронной таблице
 description: ''
-ms.date: 03/19/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: be633fc99d4a80257a9c8f68b5e9569727ac30a5
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 9f2a201178826e1f049e9e9bd067260741028c84
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32448799"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127620"
 ---
 # <a name="bind-to-regions-in-a-document-or-spreadsheet"></a>Привязка к областям в документе или электронной таблице
 
@@ -335,7 +335,7 @@ myBinding.setDataAsync('Hello World!', function (asyncResult) { });
 Анонимная функция передается функции в качестве параметра callback и выполняется по завершении операции. Функция вызывается с использованием параметра `asyncResult`, содержащего состояние результата.
 
 > [!NOTE]
-> С момента выпуска Excel 2013 с пакетом обновления 1 (SP1) и соответствующей сборки Excel Online можно [задавать форматирование при записи или обновлении данных в связанных таблицах](../excel/excel-add-ins-tables.md).
+> С момента выпуска Excel 2013 с пакетом обновления 1 (SP1) и соответствующей сборки Excel в Интернете можно [задавать форматирование при записи или обновлении данных в связанных таблицах](../excel/excel-add-ins-tables.md).
 
 
 ## <a name="detect-changes-to-data-or-the-selection-in-a-binding"></a>Обнаружение изменений в данных или выделенном фрагменте для привязки

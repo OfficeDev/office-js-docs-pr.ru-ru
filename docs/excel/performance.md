@@ -1,14 +1,14 @@
 ---
 title: Оптимизация производительности API JavaScript для Excel
 description: Оптимизируйте производительность с использованием API JavaScript для Excel
-ms.date: 03/19/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: f48b62b47c4000b128043fe2e01f949af7179e73
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: bd3446b5bb33549002c2ad2325a11ea563c6b7d1
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449157"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128306"
 ---
 # <a name="performance-optimization-using-the-excel-javascript-api"></a>Оптимизация производительности с использованием API JavaScript для Excel
 
@@ -16,7 +16,7 @@ ms.locfileid: "32449157"
 
 ## <a name="minimize-the-number-of-sync-calls"></a>Минимизация количества вызовов sync()
 
-В API JavaScript для Excel ```sync()``` является единственной асинхронной операцией и в некоторых обстоятельствах может выполняться медленно, особенно в случае с Excel Online. Для оптимизации производительности минимизируйте количество вызовов ```sync()```, поставив в очередь максимально возможное количество изменений до ее вызова.
+В API JavaScript для Excel ```sync()``` является единственной асинхронной операцией и в некоторых обстоятельствах может выполняться медленно, особенно в случае с Excel в Интернете. Для оптимизации производительности минимизируйте количество вызовов ```sync()```, поставив в очередь максимально возможное количество изменений до ее вызова.
 
 Примеры кода, использующие этот подход, см. в статье [Основные концепции — sync()](excel-add-ins-core-concepts.md#sync).
 
@@ -127,9 +127,6 @@ Excel.run(async function(ctx) {
 ```
 
 ### <a name="suspend-screen-updating"></a>Приостановка обновления экрана
-
-> [!NOTE]
-> Метод `suspendScreenUpdatingUntilNextSync`, описанный в этой статье, в настоящее время доступен только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
 
 Excel отображает изменения, производимые вашей надстройкой, примерно по мере их выполнения в коде. Для больших циклических наборов данных может не требоваться просмотр хода выполнения на экране в режиме реального времени. Параметр `Application.suspendScreenUpdatingUntilNextSync()` приостанавливает визуальные обновления для Excel до вызова надстройкой метода `context.sync()` или завершения метода `Excel.run` (неявно вызывающего `context.sync`). Необходимо учитывать, что Excel не будет проявлять признаков работы до следующей синхронизации. Ваша надстройка должна либо предоставить пользователям инструкции, оповещающие их об этой задержке, либо отобразить строку состояния, демонстрирующую активность.
 

@@ -1,14 +1,14 @@
 ---
 title: Загрузка неопубликованных надстроек Office для тестирования
 description: ''
-ms.date: 03/19/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 24c7719969ddc59d8bb6e525af804515331a51ad
-ms.sourcegitcommit: 47b792755e655043d3db2f1fdb9a1eeb7453c636
+ms.openlocfilehash: acd16bb8a8d08aa6dd05f0f56921e285ee1e2e1f
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "33619046"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127023"
 ---
 # <a name="sideload-office-add-ins-for-testing"></a>Загрузка неопубликованных надстроек Office для тестирования
 
@@ -19,11 +19,11 @@ ms.locfileid: "33619046"
 
 Эта статья относится только к тестированию надстроек Word, Excel, PowerPoint и Project в Windows. Для выполнения тестирования на другой платформе или тестирования надстроек Outlook см. одну из указанных ниже тем о загрузке неопубликованных надстроек.
 
-- [Загрузка неопубликованных надстроек Office в Office Online для тестирования](sideload-office-add-ins-for-testing.md)
+- [Загрузка неопубликованных надстроек Office в Office в Интернете для тестирования](sideload-office-add-ins-for-testing.md)
 - [Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования](sideload-an-office-add-in-on-ipad-and-mac.md)
 - [Загрузка неопубликованных надстроек Outlook для тестирования](/outlook/add-ins/sideload-outlook-add-ins-for-testing)
 
-В приведенном ниже видео показано, как загрузить неопубликованную надстройку в классическое приложение Office или Office Online с помощью каталога общих папок.  
+В приведенном ниже видео показано, как загрузить неопубликованную надстройку в классическое приложение Office или Office в Интернете с помощью каталога общих папок.  
 
 > [!VIDEO https://www.youtube.com/embed/XXsAw2UUiQo]
 

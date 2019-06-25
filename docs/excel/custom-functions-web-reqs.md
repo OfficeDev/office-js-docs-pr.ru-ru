@@ -1,14 +1,14 @@
 ---
-ms.date: 05/30/2019
+ms.date: 06/21/2019
 description: Запрос, потоковая передача и отмена потоковой передачи внешних данных к книге с помощью пользовательских функций в Excel
 title: Получение и обработка данных с помощью пользовательских функций
 localization_priority: Priority
-ms.openlocfilehash: 22f79c8b4e7e39569d3b955477e9397a053e1a8f
-ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
+ms.openlocfilehash: 39be2f0913e2eee4b1e5e7d5f704a47dee279cf5
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "34910338"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128257"
 ---
 # <a name="receive-and-handle-data-with-custom-functions"></a>Получение и обработка данных с помощью пользовательских функций
 
@@ -74,6 +74,9 @@ CustomFunctions.associate("GETTEMPERATURE", getTemperature);
 
 В следующем примере функция `stockPriceStream` использует символ тикера для получения цены акции каждые 1000 миллисекунд. Для получения дополнительных сведений об этом примере см. статью [Руководство по пользовательским функциям](../tutorials/excel-tutorial-create-custom-functions.md#create-a-streaming-asynchronous-custom-function).
 
+> [!NOTE]
+> Приведенный ниже код запрашивает котировки акций с помощью API IEX Trading. Чтобы запустить этот код, нужно [создать бесплатную учетную запись IEX Cloud](https://iexcloud.io/) и получить токен API, необходимый для запроса API.
+
 ```js
 /**
  * Streams a stock price.
@@ -91,7 +94,8 @@ function stockPriceStream(ticker, invocation) {
             return;
         }
 
-        var url = "https://api.iextrading.com/1.0/stock/" + ticker + "/price";
+        //Note: In the following line, replace <YOUR_TOKEN_HERE> with the API token that you've obtained through your IEX Cloud account.
+        var url = "https://cloud.iexapis.com/stable/stock/" + ticker + "/quote/latestPrice?token=<YOUR_TOKEN_HERE>"
         isPending = true;
 
         fetch(url)

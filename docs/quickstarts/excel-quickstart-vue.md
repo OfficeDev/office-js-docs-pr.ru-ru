@@ -1,15 +1,15 @@
 ---
 title: Создание области задач Excel с помощью Vue
 description: ''
-ms.date: 05/02/2019
+ms.date: 06/20/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 228301b9711f4ac33fb5435e66cfcd0254041e19
-ms.sourcegitcommit: 47b792755e655043d3db2f1fdb9a1eeb7453c636
+ms.openlocfilehash: 8935a22a631699ac0314aac89936fbd8c2552212
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "33619596"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128568"
 ---
 # <a name="build-an-excel-task-pane-add-in-using-vue"></a>Создание области задач Excel с помощью Vue
 
@@ -186,14 +186,14 @@ vue init webpack my-add-in
 
 2. В веб-браузере перейдите по адресу `https://localhost:8080`. Если появится сообщение, что сертификат сайта не является доверенным, сделайте так, чтобы компьютер ему доверял. 
 
-3. После того как браузер загрузит страницу надстройки без ошибок сертификата, вы можете протестировать надстройку. 
+3. После того как браузер загрузит страницу надстройки без ошибок сертификата, вы можете протестировать надстройку.
 
 ## <a name="try-it-out"></a>Проверка
 
 1. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.
 
     - [Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-    - [Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-online)
+    - Веб-браузер: [загрузка неопубликованных надстроек Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web)
     - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 
 2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.

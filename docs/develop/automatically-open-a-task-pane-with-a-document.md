@@ -1,14 +1,14 @@
 ---
 title: Автоматическое открытие области задач с документом
 description: ''
-ms.date: 05/08/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 6e7dbde7c6efbaacb5ba046678cc0df24446d31c
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: de848238979b68192bb8646e0ee6cb8d7c3879be
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33952154"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127613"
 ---
 # <a name="automatically-open-a-task-pane-with-a-document"></a>Автоматическое открытие области задач с документом
 
@@ -29,10 +29,10 @@ ms.locfileid: "33952154"
 
 |**Продукты**|**Платформы**|
 |:-----------|:------------|
-|<ul><li>Word</li><li>Excel</li><li>PowerPoint</li></ul>|Поддерживаемые платформы для всех продуктов:<ul><li>Office для настольных компьютеров с Windows (сборки 16.0.8121.1000 или более поздней)</li><li>Office для Mac (сборки 15.34.17051500 или более поздней)</li><li>Office Online</li></ul>|
+|<ul><li>Word</li><li>Excel</li><li>PowerPoint</li></ul>|Поддерживаемые платформы для всех продуктов:<ul><li>Office для настольных компьютеров с Windows (сборки 16.0.8121.1000 или более поздней)</li><li>Office для Mac, сборка 15.34.17051500 или выше</li><li>Office в Интернете</li></ul>|
 
 
-## <a name="best-practices"></a>Советы и рекомендации
+## <a name="best-practices"></a>Рекомендации
 
 При использовании функции автоматического открытия придерживайтесь указанных рекомендаций.
 

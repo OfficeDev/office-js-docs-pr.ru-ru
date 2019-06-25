@@ -1,14 +1,14 @@
 ---
 title: Тестирование и отладка надстроек Office
 description: ''
-ms.date: 03/19/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: c51823684dab4e85e2cf9e621365ea6230f21b8a
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 3c841608d36f5004a876bec2c899d0e5659d47a7
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451103"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35126920"
 ---
 # <a name="test-and-debug-office-add-ins"></a>Тестирование и отладка надстроек Office
 
@@ -20,7 +20,7 @@ ms.locfileid: "32451103"
 
 - [Загрузка неопубликованных надстроек Office в Windows](create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
 
-- [Загрузка неопубликованных надстроек Office в Office Online](sideload-office-add-ins-for-testing.md)
+- [Загрузка неопубликованных надстроек Office в Office в Интернете](sideload-office-add-ins-for-testing.md)
 
 - [Загрузка неопубликованных надстроек Office на iPad и Mac](sideload-an-office-add-in-on-ipad-and-mac.md)
 
@@ -34,7 +34,7 @@ ms.locfileid: "32451103"
 
 - [Отладка надстроек с помощью средств разработчика F12 в Windows 10](debug-add-ins-using-f12-developer-tools-on-windows-10.md)
 
-- [Отладка надстроек в Office Online](debug-add-ins-in-office-online.md)
+- [Отладка надстроек в Office в Интернете](debug-add-ins-in-office-online.md)
 
 - [Отладка надстроек Office на iPad и Mac](debug-office-add-ins-on-ipad-and-mac.md)
 

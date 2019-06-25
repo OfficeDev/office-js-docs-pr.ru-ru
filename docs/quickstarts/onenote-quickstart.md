@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач OneNote
 description: ''
-ms.date: 05/02/2019
+ms.date: 06/20/2019
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: 48cd9395b269a83630608c52d972508828c5c007
-ms.sourcegitcommit: b299b8a5dfffb6102cb14b431bdde4861abfb47f
+ms.openlocfilehash: ccbfa5ca976da507574821f53e1ea3d0422298c7
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "34589218"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128540"
 ---
 # <a name="build-your-first-onenote-task-pane-add-in"></a>Создание первой надстройки области задач OneNote
 
@@ -95,7 +95,7 @@ try {
     npm run start:web
     ```
 
-2. Откройте записную книжку в [OneNote Online](https://www.onenote.com/notebooks) и создайте страницу.
+2. Откройте записную книжку в [OneNote в Интернете](https://www.onenote.com/notebooks) и создайте страницу.
 
 3. Выберите **Вставка > Надстройки Office**. Откроется диалоговое окно "Надстройки Office".
 

@@ -1,14 +1,14 @@
 ---
 title: Создание надстройки Project, использующей REST с локальной службой OData Project Server
 description: ''
-ms.date: 03/19/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 1e50d90b844e78620866e94e44377c903b169783
-ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
+ms.openlocfilehash: 454ef57095102458be1a2bcaa74342add86c7f16
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "34910359"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128610"
 ---
 # <a name="create-a-project-add-in-that-uses-rest-with-an-on-premises-project-server-odata-service"></a>Создание надстройки Project, использующей REST с локальной службой OData Project Server
 
@@ -29,7 +29,7 @@ ms.locfileid: "34910359"
 
 - Visual Studio 2015 с Инструменты разработчика Office для Visual Studio содержит шаблоны, позволяющие создавать Надстройки Office и SharePoint. Убедитесь, что у вас установлена самая последняя версия Office Developer Tools. См. раздел _Средства_ статьи [Надстройки Office и скачиваемые файлы для SharePoint](https://developer.microsoft.com/office/docs).
 
-- Процедуры и примеры кода, приведенные в этой статье, получают доступ к службе **ProjectData**, предоставляемой Project Server 2013 в локальном домене. Методы jQuery в этой статье не работают с Project Online.
+- Процедуры и примеры кода, приведенные в этой статье, получают доступ к службе **ProjectData**, предоставляемой программой Project Server 2013 на локальном домене. Методы jQuery в этой статье не работают с Project в Интернете.
 
     Убедитесь, что служба **ProjectData** доступна на компьютере разработчика.
 
@@ -369,7 +369,7 @@ ms.locfileid: "34910359"
 3. Добавьте функцию **retrieveOData**, которая объединяет значения для запроса REST и затем вызывает функцию **ajax** в jQuery для получения запрошенных данных из службы **ProjectData**. Переменная **support.cors** позволяет производить межплатформенный обмен ресурсами (CORS) с функцией **ajax**. Если оператор **support.cors** пропущен или имеет значение **false**, функция **ajax** возвращает ошибку **No transport (нет передачи)**.
 
    > [!NOTE]
-   > Приведенный ниже код подходит для локального сервера Project Server 2013. В Project Online можно использовать OAuth для проверки подлинности на основе токенов. Дополнительные сведения см. в статье [Обход ограничений, связанных с принципом одинакового источника, в надстройках Office](../develop/addressing-same-origin-policy-limitations.md).
+   > Приведенный ниже код подходит для локального сервера Project Server 2013. В Project в Интернете можно использовать OAuth для проверки подлинности на основе токенов. Дополнительные сведения см. в статье [Обход ограничений, связанных с принципом одинакового источника, в надстройках Office](../develop/addressing-same-origin-policy-limitations.md).
 
    Для вызова **ajax** можно использовать параметр _headers_ или _beforeSend_. Параметр _complete_ — анонимная функция, поэтому находится в той же области, что и переменные в **retrieveOData**. Функция для параметра _complete_ выводит результаты в элементе управления **odataText**, а также вызывает метод **parseODataResult** для анализа и отображения отклика JSON. Параметр _error_ указывает именованную функцию **getProjectDataErrorHandler**, которая записывает сообщение об ошибке в элемент управления **odataText**, а также выводит всплывающее сообщение с помощью метода **throwError**.
 
@@ -386,7 +386,7 @@ ms.locfileid: "34910359"
         accept.toLocaleLowerCase();
 
         // Enable cross-origin scripting (required by jQuery 1.5 and later).
-        // This does not work with Project Online.
+        // This does not work with Project on the web.
         $.support.cors = true;
 
         $.ajax({
@@ -842,7 +842,7 @@ function retrieveOData() {
     accept.toLocaleLowerCase();
 
     // Enable cross-origin scripting (required by jQuery 1.5 and later).
-    // This does not work with Project Online.
+    // This does not work with Project on the web.
     $.support.cors = true;
 
     $.ajax({

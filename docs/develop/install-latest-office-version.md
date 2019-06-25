@@ -1,14 +1,14 @@
 ---
 title: Установка последней версии Office
 description: Сведения о том, как получать последние сборки Office раньше других.
-ms.date: 03/19/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 345b7ad49bab672b9e9dd3a055bd8bfeed2962e3
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: adfed2e5e35e2ad86295faafc2ffed91cf728bcd
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449898"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128327"
 ---
 # <a name="install-the-latest-version-of-office"></a>Установка последней версии Office
 
@@ -21,7 +21,7 @@ ms.locfileid: "32449898"
 - Если вы подписаны на Office 365 для дома, Office 365 персональный или Office 365 для студентов, [примите участие в программе предварительной оценки Office](https://products.office.com/office-insider).
 - Если вы пользуетесь Office 365 для бизнеса, прочитайте статью [Установка сборки раннего выпуска для клиентов Office 365 для бизнеса](https://support.office.com/article/Install-the-First-Release-build-for-Office-365-for-business-customers-4dd8ba40-73c0-4468-b778-c7b744d03ead).
 - Если вы используете Office для Mac:
-    - Запустите программу Office для Mac.
+    - Запустите приложение Office.
     - Выберите пункт **Проверить наличие обновлений** в меню "Справка".
     - В окне "Автоматическое обновление (Майкрософт)" установите флажок для участия в программе предварительной оценки Office.
 

@@ -1,14 +1,14 @@
 ---
 title: Создание команд надстроек в манифесте для Excel, Word и PowerPoint
 description: Используйте элемент VersionOverrides в манифесте, чтобы определить команды надстроек для Excel, Word и PowerPoint. Используйте команды надстроек, чтобы создать элементы пользовательского интерфейса, добавить кнопки или списки, а также для выполнения действий.
-ms.date: 04/15/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: a85d6a693995c8d0327c1b511e85e2159e51a042
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 9917eaa7b28ea843703a1de566b41277517b20fa
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32448708"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128180"
 ---
 # <a name="create-add-in-commands-in-your-manifest-for-excel-word-and-powerpoint"></a>Создание команд надстроек в манифесте для Excel, Word и PowerPoint
 
@@ -118,7 +118,7 @@ ms.locfileid: "32448708"
 
 Элемент **Hosts** содержит один или несколько элементов **Host**. Элемент **Host** задает конкретный узел Office. Элемент **Host** содержит дочерние элементы, определяющие команды надстройки, которые отображаются после установки надстройки в соответствующем узле Office. Для отображения тех же команд надстройки в нескольких различных узлах Office, необходимо продублировать дочерние элементы в каждом из элементов **Host**.
 
-Элемент **DesktopFormFactor** задает параметры надстройки, которая работает в Office на компьютере с Windows и в Office Online (в браузере).
+Элемент **DesktopFormFactor** задает параметры надстройки, работающей в Office в Интернете (в браузере) и Windows.
 
 Ниже приведены примеры элементов **Hosts**, **Host** и **DesktopFormFactor**.
 

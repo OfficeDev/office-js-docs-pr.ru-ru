@@ -1,21 +1,21 @@
 ---
 title: Версии Office и наборы обязательных элементов
 description: ''
-ms.date: 05/08/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 6d0952c32c08c9a4a3e9b07ee8bbcf209084c3d0
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: 3f63d9f6d6ce62b39fa97efc62ceb964f2b55394
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33952119"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128320"
 ---
 # <a name="office-versions-and-requirement-sets"></a>Версии Office и наборы обязательных элементов
 
 Не все версии Office поддерживают все API в API JavaScript для Office (Office.js). Не всегда можно указать версию Office, с которой должны работать пользователи.  Для таких ситуаций существуют наборы обязательных элементов, которые помогают определить, поддерживает ли ведущее приложение Office необходимые надстройке возможности. 
 
 > [!NOTE]
-> - Office работает на разных платформах, в том числе Office для Windows, Office Online, Office для Mac и Office для iPad.
+> - Office работает на различных платформах, в том числе Windows, в браузере, на компьютерах Mac и на iPad.
 > - Примеры ведущих приложений Office — Excel, Word, PowerPoint, Outlook, OneNote и другие продукты.  
 > - Набор обязательных элементов — это именованная группа элементов API, например, `ExcelApi 1.5`, `WordApi 1.3` и т. д.  
 
