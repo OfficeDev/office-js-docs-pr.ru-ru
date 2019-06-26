@@ -1,14 +1,14 @@
 ---
 title: Требования для запуска надстроек Office
 description: ''
-ms.date: 05/14/2019
+ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: ed502900916fb2e780725af6f3840c7c2287c1a3
-ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
+ms.openlocfilehash: 3a167777068b398c191f41adfa8dfa590d18edc2
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "34910100"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35127704"
 ---
 # <a name="requirements-for-running-office-add-ins"></a>Требования для запуска надстроек Office
 
@@ -58,29 +58,29 @@ ms.locfileid: "34910100"
 
 ## <a name="client-requirements-os-x-desktop"></a>Требования к клиенту: настольный компьютер OS X
 
-Outlook для Mac (входит в состав Office 365) поддерживает надстройки Outlook. При запуске надстроек Outlook в Outlook для Mac применяются те же требования, что и к Outlook для Mac: необходима операционная система OS X Yosemite версии 10.10 или более поздней. Так как Outlook для Mac использует WebKit в качестве обработчика макетов для преобразования страниц надстройки, то эта надстройка не зависит от браузеров.
+Приложение Outlook для Mac, распространяемое в составе Office 365, поддерживает надстройки Outlook. Для запуска надстроек Outlook в Outlook для Mac должны соблюдаться те же требования, что и для самого приложения Outlook для Mac: необходима операционная система OS X 10.10 Yosemite или более поздней версии. Outlook для Mac использует WebKit в качестве обработчика макетов для преобразования страниц надстройки, поэтому дополнительные зависимости от браузеров отсутствуют.
 
 Ниже приведены минимальные версии клиентов Office для Mac, которые поддерживают надстройки Office.
 
-- Word для Mac версии 15.18 (160109);
-- Excel для Mac версии 15.19 (160206);
-- PowerPoint для Mac версии 15.24 (160614).
+- Word версии 15.18 (160109)
+- Excel версии 15.19 (160206)
+- PowerPoint версии 15.24 (160614)
 
-## <a name="client-requirements-browser-support-for-office-online-web-clients-and-sharepoint"></a>Требования к клиенту: поддержка браузеров для веб-клиентов Office Online и SharePoint
+## <a name="client-requirements-browser-support-for-office-web-clients-and-sharepoint"></a>Требования к клиенту: поддержка браузеров для веб-клиентов Office в Интернете и SharePoint
 
-Любой браузер, поддерживающий ECMAScript 5.1, HTML5 и CSS3, например Internet Explorer 11 или последняя версия Microsoft Edge, Chrome, Firefox или Safari (Mac OS).
+Любой браузер, поддерживающий ECMAScript 5.1, HTML5 и CSS3, например Internet Explorer 11 либо последняя версия Microsoft Edge, Chrome, Firefox или Safari (Mac OS).
 
 
 ## <a name="client-requirements-non-windows-smartphone-and-tablet"></a>Требования к клиенту: смартфоны и планшеты под управлением операционных систем, отличных от Windows
 
-Специально для приложения Outlook Web App, работающего в браузере на смартфонах и планшетах под управлением систем, отличных от Windows, для тестирования и запуска надстроек Outlook необходимо следующее программное обеспечение:
+Специально для приложения Outlook, работающего в браузере на смартфонах и планшетах под управлением систем, отличных от Windows, для тестирования и запуска надстроек Outlook необходимо следующее программное обеспечение:
 
 
 | Ведущее приложение | Устройство | Операционная система | Учетная запись Exchange | Мобильный браузер |
 |:-----|:-----|:-----|:-----|:-----|
 |Outlook для Android|Планшеты и смартфоны с Android|Android 4.4 KitKat или более поздней версии|Последнее обновление Office 365 для бизнеса или Exchange Online|Встроенное приложение для Android, браузер не применим|
 |Outlook для iOS|Планшеты iPad, смартфоны iPhone|iOS 11 или более поздняя версия|Последнее обновление Office 365 для бизнеса или Exchange Online|Встроенное приложение для iOS, браузер не применим|
-|Outlook Web App|iPhone 4, iPad 2, iPod Touch 4 или более поздние модели этих устройств|iOS 5 или более поздняя версия|Office 365, Exchange Online либо локальная среда Exchange Server 2013 или более поздней версии|Safari|
+|Outlook в Интернете|iPhone 4, iPad 2, iPod Touch 4 или более поздние модели этих устройств|iOS 5 или более поздняя версия|Office 365, Exchange Online либо локальная среда Exchange Server 2013 или более поздней версии|Safari|
 
 > [!NOTE]
 > Встроенные приложения OWA для Android, OWA для iPad и OWA для iPhone [устарели](https://support.office.com/article/Microsoft-OWA-mobile-apps-are-being-retired-076ec122-4576-4900-bc26-937f84d25a4b) и больше не требуются и не применяются для тестирования надстроек Outlook.

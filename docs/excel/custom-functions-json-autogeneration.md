@@ -1,14 +1,14 @@
 ---
-ms.date: 06/18/2019
+ms.date: 06/21/2019
 description: Использование тегов JSDoc для динамического создания метаданных JSON пользовательских функций.
 title: Автоматическое генерирование метаданных JSON для пользовательских функций
 localization_priority: Priority
-ms.openlocfilehash: a02ca5fd67f29e1997579385e04d045f01e63bdb
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: cc28eca4e1ab1a03186983c81380a00bcf5eb85a
+ms.sourcegitcommit: 6d1cb188c76c09d320025abfcc99db1b16b7e37b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127907"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "35226764"
 ---
 # <a name="autogenerate-json-metadata-for-custom-functions"></a>Автоматическое генерирование метаданных JSON для пользовательских функций
 
@@ -28,9 +28,9 @@ ms.locfileid: "35127907"
 
 В следующем примере фраза "Calculates the volume of a sphere." (Вычисляет объем сферы) является описанием пользовательской функции.
 
-```JS
+```js
 /**
-/* Calculates the volume of a sphere
+/* Calculates the volume of a sphere.
 /* @customfunction VOLUME
 ...
  */
@@ -66,11 +66,21 @@ ms.locfileid: "35127907"
 
 Синтаксис: @customfunction _id_ _name_
 
-Укажите этот тег, чтобы рассматривать функцию JavaScript или TypeScript как пользовательскую функцию Excel.
+Укажите этот тег, чтобы рассматривать функцию JavaScript или TypeScript как пользовательскую функцию Excel. 
 
 Этот тег необходим, чтобы создать метаданные для пользовательской функции.
 
 Кроме того, требуется вызов функции `CustomFunctions.associate("id", functionName);`
+
+В следующем примере показан самый простой способ объявления пользовательской функции.
+
+```js
+/**
+ * Increments a value once a second.
+ * @customfunction
+ * ...
+ */
+```
 
 #### <a name="id"></a>id
 
@@ -79,6 +89,16 @@ ms.locfileid: "35127907"
 * Если `id` не указан, название функции JavaScript или TypeScript преобразуется в верхний регистр, а недопустимые символы удаляются.
 * `id` должен быть уникальным для всех пользовательских функций.
 * Допустимые символы: A — Z, a — z, 0–9, символ подчеркивания (\_) и точка (.).
+
+В следующем примере increment — это параметр `id` и `name` функции.
+
+```js
+/**
+ * Increments a value once a second.
+ * @customfunction INCREMENT
+ * ...
+ */
+```
 
 #### <a name="name"></a>name
 
@@ -89,15 +109,27 @@ ms.locfileid: "35127907"
 * Имя должно начинаться с буквы.
 * Максимальная длина: 128 символов.
 
+В следующем примере INC — это параметр `id` функции, а `increment` — параметр `name`.
+
+```js
+/**
+ * Increments a value once a second.
+ * @customfunction INC INCREMENT
+ * ...
+ */
+```
+
 ### <a name="description"></a>description
 
-Описанию не требуется какой-либо конкретный тег. Создайте описание для пользовательской функции, добавив в комментарии JSDoc фразу, описывающую действие функции. По умолчанию любой текст без тегов в разделе комментариев JSDoc является описанием функции. Описание отображается для пользователей в Excel при вводе функции. В следующем примере фраза "A function that sums two numbers" (Функция, суммирующая два числа) — это описание пользовательской функции со свойством id, имеющим значение `SUM`.
+Описанию не требуется какой-либо конкретный тег. Создайте описание для пользовательской функции, добавив в комментарии JSDoc фразу, описывающую действие функции. По умолчанию любой текст без тегов в разделе комментариев JSDoc является описанием функции. Описание отображается для пользователей в Excel при вводе функции. В следующем примере фраза "A function that adds two numbers" (Функция, складывающая два числа) — это описание пользовательской функции со свойством id, имеющим значение `ADD`.
 
-```JS
+В следующем примере ADD — это параметр `id` и `name` функции с указанным описанием.
+
+```js
 /**
-/* @customfunction SUM
-/* A function that sums two numbers
-...
+ * A function that adds two numbers.
+ * @customfunction ADD
+ * ...
  */
 ```
 
@@ -108,6 +140,17 @@ ms.locfileid: "35127907"
 Синтаксис: @helpurl _url_
 
 Предоставленный _url_-адрес отображается в Excel.
+
+В следующем примере параметр `helpurl` имеет значение www.contoso.com/weatherhelp.
+
+```js
+/**
+ * A function which streams the temperature in a town you specify.
+ * @customfunction getTemperature
+ * @helpurl www.contoso.com/weatherhelp
+ * ...
+ */
+```
 
 ---
 ### <a name="param"></a>@param
@@ -127,6 +170,19 @@ ms.locfileid: "35127907"
 > [!NOTE]
 > Значение по умолчанию для дополнительных параметров — `null`.
 
+В следующем примере показана функция ADD, складывающая два или три числа, где третье число является необязательным параметром.
+
+```js
+/**
+ * A function which sums two, or optionally three, numbers.
+ * @customfunction ADDNUMBERS
+ * @param firstNumber {number} First number to add.
+ * @param secondNumber {number} Second number to add.
+ * @param [thirdNumber] {number} Optional third number you wish to add.
+ * ...
+ */
+```
+
 #### <a name="typescript"></a>TypeScript
 
 Синтаксис TypeScript: @param name _description_
@@ -145,13 +201,28 @@ ms.locfileid: "35127907"
 > [!NOTE]
 > Значение по умолчанию для дополнительных параметров — `null`.
 
+В следующем примере показана функция `add`, складывающая два числа.
+
+```ts
+/**
+ * Adds two numbers.
+ * @customfunction 
+ * @param first First number
+ * @param second Second number
+ * @returns The sum of the two numbers.
+ */
+function add(first: number, second: number): number {
+  return first + second;
+}
+```
+
 ---
 ### <a name="requiresaddress"></a>@requiresAddress
 <a id="requiresAddress"/>
 
-Указывает, что следует предоставлять адрес ячейки, в которой вычисляется функция. 
+Указывает, что следует предоставлять адрес ячейки, в которой вычисляется функция.
 
-Тип последнего параметра функции должен быть `CustomFunctions.Invocation` или производной от него. При вызове функции свойство `address` будет содержать адрес.
+Тип последнего параметра функции должен быть `CustomFunctions.Invocation` или производной от него. При вызове функции свойство `address` будет содержать адрес. Пример функции, использующей тег `@requiresAddress`, см. в разделе [Обращение к параметру контекста ячейки](./custom-functions-parameter-options.md#addressing-cells-context-parameter)
 
 ---
 ### <a name="returns"></a>@returns
@@ -162,6 +233,21 @@ ms.locfileid: "35127907"
 Предоставляет тип для возвращаемого значения.
 
 Если `{type}` не указан, будет использоваться информация о типе TypeScript. Если информация о типе отсутствует, будет использоваться тип `any`.
+
+В следующем примере показана функция `add`, использующая тег `@returns`.
+
+```ts
+/**
+ * Adds two numbers.
+ * @customfunction 
+ * @param first First number
+ * @param second Second number
+ * @returns The sum of the two numbers.
+ */
+function add(first: number, second: number): number {
+  return first + second;
+}
+```
 
 ---
 ### <a name="streaming"></a>@streaming
@@ -174,7 +260,7 @@ ms.locfileid: "35127907"
 
 Потоковые передачи функций непосредственно не возвращают значения, для этого необходимо вызывать `setResult(result: ResultType)` с помощью последнего параметра.
 
-Исключения, которые возникают при потоковой передаче функций, игнорируются. `setResult()` при вызове может вернуть ошибку в качестве результата.
+Исключения, которые возникают при потоковой передаче функций, игнорируются. `setResult()` при вызове может вернуть ошибку в качестве результата. Пример функции потоковой передачи и дополнительные сведения см. в разделе [Создание функции потоковой передачи](./custom-functions-web-reqs.md#make-a-streaming-function).
 
 Потоковые передачи функций невозможно пометить как [@volatile](#volatile).
 
@@ -185,6 +271,19 @@ ms.locfileid: "35127907"
 Переменные функции — это такие функции, чей результат не остается неизменным в каждый период времени, даже если они не содержат аргументов или их аргументы не меняются. Excel повторно проводит вычисления в ячейках, которые содержат переменные функции, вместе со всеми зависимыми функциями при каждом вычислении. По этой причине чрезмерное использование переменных функций может замедлить пересчет, поэтому используйте их умеренно.
 
 Потоковые передачи функций не могут быть переменными.
+
+Следующая функция является переменной и использует тег `@volatile`.
+
+```js
+/**
+ * Simulates rolling a 6-sided dice.
+ * @customfunction
+ * @volatile
+ */
+function roll6sided(): number {
+  return Math.floor(Math.random() * 6) + 1;
+}
+```
 
 ---
 

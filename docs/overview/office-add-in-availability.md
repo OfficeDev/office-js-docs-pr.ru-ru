@@ -1,14 +1,14 @@
 ---
 title: Доступность ведущих приложений и платформ для надстроек Office
-description: Поддерживаемые наборы обязательных элементов для Excel, Word, Outlook, PowerPoint, OneNote и Project.
-ms.date: 05/23/2019
+description: Поддерживаемые наборы обязательных элементов для Excel, OneNote, Outlook, PowerPoint, Project и Word.
+ms.date: 06/13/2019
 localization_priority: Priority
-ms.openlocfilehash: 6fb1f0db839910e91d7a5215f8e21f5b33ff2165
-ms.sourcegitcommit: adaee1329ae9bb69e49bde7f54a4c0444c9ba642
+ms.openlocfilehash: 82c276c802cab66ae4f5443d0d556bc42ee57841
+ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "34432196"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "35128624"
 ---
 # <a name="office-add-in-host-and-platform-availability"></a>Доступность ведущих приложений и платформ для надстроек Office
 
@@ -27,7 +27,7 @@ ms.locfileid: "34432196"
     <th style="width:40%"><a href="/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Общие API</b></a></th>
   </tr>
   <tr>
-    <td>Office Online</td>
+    <td>Office в Интернете</td>
     <td> - Область задач<br>
         - Контент<br>
         - Пользовательские функции<br>
@@ -59,7 +59,7 @@ ms.locfileid: "34432196"
         - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office для Windows<br>(подключенный к Office 365)</td>
+    <td>Office для Windows<br>(версия, подключенная к подписке на Office 365)</td>
     <td> - Область задач<br>
         - Контент<br>
         - Пользовательские функции<br>
@@ -160,7 +160,7 @@ ms.locfileid: "34432196"
         - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office для iPad<br>(подключенный к Office 365)</td>
+    <td>Office для iPad<br>(версия, подключенная к подписке на Office 365)</td>
     <td>- Область задач<br>
         - Контент<br>
         - Пользовательские функции</td>
@@ -188,7 +188,7 @@ ms.locfileid: "34432196"
         - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office для Mac<br>(подключенный к Office 365)</td>
+    <td>Office для Mac<br>(версия, подключенная к подписке на Office 365)</td>
     <td>- Область задач<br>
         - Контент<br>
         - Пользовательские функции<br>
@@ -248,7 +248,7 @@ ms.locfileid: "34432196"
         - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office 2016 для Mac<br>(единовременная покупка)</td>
+    <td>Office 2016 для Mac<br>(единовременная покупка)</td>
     <td>- Область задач<br>
         - Контент</td>
     <td>- <a href="/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">ExcelApi 1.1</a><br>
@@ -282,7 +282,7 @@ ms.locfileid: "34432196"
     <th style="width:40%"><a href="/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Общие API</b></a></th>
   </tr>
   <tr>
-    <td>Office Online</td>
+    <td>Office в Интернете</td>
     <td>
         - Пользовательские функции</td>
     <td>
@@ -291,16 +291,7 @@ ms.locfileid: "34432196"
     </td>
   </tr>
   <tr>
-    <td>Office для Windows<br>(подключенный к Office 365)</td>
-    <td>
-        - Пользовательские функции</td>
-    <td>
-        - <a href="/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets">CustomFunctionsRuntime 1.1</a></td>
-    <td>
-    </td>
-  </tr>
-  <tr>
-    <td>Office для iPad<br>(подключенный к Office 365)</td>
+    <td>Office для Windows<br>(версия, подключенная к подписке на Office 365)</td>
     <td>
         - Пользовательские функции</td>
     <td>
@@ -329,7 +320,7 @@ ms.locfileid: "34432196"
     <th><a href="/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Общие API</b></a></th>
   </tr>
   <tr>
-    <td>Office Online</td>
+    <td>Office в Интернете<br>(новый)</td>
     <td> - Чтение почты<br>
       - Создание сообщения почты<br>
       - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
@@ -343,7 +334,20 @@ ms.locfileid: "34432196"
     <td>Недоступно</td>
   </tr>
   <tr>
-    <td>Office для Windows<br>(подключенный к Office 365)</td>
+    <td>Office в Интернете<br>(классическая версия)</td>
+    <td> - Чтение почты<br>
+      - Создание сообщения почты<br>
+      - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
+    <td> - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
+      - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2">Mailbox 1.2</a><br>
+      - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3">Mailbox 1.3</a><br>
+      - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a><br>
+      - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.5/outlook-requirement-set-1.5">Mailbox 1.5</a><br>
+      - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.6/outlook-requirement-set-1.6">Mailbox 1.6</a></td>
+    <td>Недоступно</td>
+  </tr>
+  <tr>
+    <td>Office для Windows<br>(версия, подключенная к подписке на Office 365)</td>
     <td> - Чтение почты<br>
       - Создание сообщения почты<br>
       - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a><br>
@@ -395,7 +399,7 @@ ms.locfileid: "34432196"
     <td>Недоступно</td>
   </tr>
   <tr>
-    <td>Office для iOS<br>(подключенный к Office 365)</td>
+    <td>Office для iOS<br>(версия, подключенная к подписке на Office 365)</td>
     <td> - Чтение почты<br>
       - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
@@ -406,7 +410,7 @@ ms.locfileid: "34432196"
     <td>Недоступно</td>
   </tr>
   <tr>
-    <td>Office для Mac<br>(подключенный к Office 365)</td>
+    <td>Office для Mac<br>(версия, подключенная к подписке на Office 365)</td>
     <td> - Чтение почты<br>
       - Создание сообщения почты<br>
       - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
@@ -433,7 +437,7 @@ ms.locfileid: "34432196"
     <td>Недоступно</td>
   </tr>
   <tr>
-    <td>Office 2016 для Mac<br>(единовременная покупка)</td>
+    <td>Office 2016 для Mac<br>(единовременная покупка)</td>
     <td> - Чтение почты<br>
       - Создание сообщения почты<br>
       - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
@@ -446,7 +450,7 @@ ms.locfileid: "34432196"
     <td>Недоступно</td>
   </tr>
   <tr>
-    <td>Office для Android<br>(подключенный к Office 365)</td>
+    <td>Office для Android<br>(версия, подключенная к подписке на Office 365)</td>
     <td> - Чтение почты<br>
       - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
@@ -472,7 +476,7 @@ ms.locfileid: "34432196"
     <th><a href="/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Общие API</b></a></th>
   </tr>
   <tr>
-    <td>Office Online</td>
+    <td>Office в Интернете</td>
     <td> - Область задач<br>
          - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
@@ -498,7 +502,7 @@ ms.locfileid: "34432196"
          - TextFile</td>
   </tr>
   <tr>
-    <td>Office для Windows<br>(подключенный к Office 365)</td>
+    <td>Office для Windows<br>(версия, подключенная к подписке на Office 365)</td>
     <td> - Область задач<br>
          - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
@@ -599,7 +603,7 @@ ms.locfileid: "34432196"
          - TextFile</td>
   </tr>
   <tr>
-    <td>Office для iPad<br>(подключенный к Office 365)</td>
+    <td>Office для iPad<br>(версия, подключенная к подписке на Office 365)</td>
     <td> - Область задач</td>
     <td> - <a href="/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
          - <a href="/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.2</a><br>
@@ -626,7 +630,7 @@ ms.locfileid: "34432196"
          - TextFile </td>
   </tr>
   <tr>
-    <td>Office для Mac<br>(подключенный к Office 365)</td>
+    <td>Office для Mac<br>(версия, подключенная к подписке на Office 365)</td>
     <td> - Область задач<br>
          - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
     <td> - <a href="/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
@@ -682,7 +686,7 @@ ms.locfileid: "34432196"
          - TextFile </td>
   </tr>
   <tr>
-    <td>Office 2016 для Mac<br>(единовременная покупка)</td>
+    <td>Office 2016 для Mac<br>(единовременная покупка)</td>
     <td> - Область задач</td>
     <td> - <a href="/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets">WordApi 1.1</a><br>
         - <a href="/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
@@ -721,7 +725,7 @@ ms.locfileid: "34432196"
     <th><a href="/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Общие API</b></a></th>
   </tr>
   <tr>
-    <td>Office Online</td>
+    <td>Office в Интернете</td>
     <td> - Контент<br>
          - Область задач<br>
          - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
@@ -737,7 +741,7 @@ ms.locfileid: "34432196"
          - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office для Windows<br>(подключенный к Office 365)</td>
+    <td>Office для Windows<br>(версия, подключенная к подписке на Office 365)</td>
     <td> - Контент<br>
          - Область задач<br>
          - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
@@ -800,7 +804,7 @@ ms.locfileid: "34432196"
          - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office для iPad<br>(подключенный к Office 365)</td>
+    <td>Office для iPad<br>(версия, подключенная к подписке на Office 365)</td>
     <td> - Контент<br>
          - Область задач</td>
     <td> - <a href="/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a></td>
@@ -815,7 +819,7 @@ ms.locfileid: "34432196"
          - ImageCoercion</td>
   </tr>
   <tr>
-    <td>Office для Mac<br>(подключенный к Office 365)</td>
+    <td>Office для Mac<br>(версия, подключенная к подписке на Office 365)</td>
     <td> - Контент<br>
          - Область задач<br>
          - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
@@ -847,7 +851,7 @@ ms.locfileid: "34432196"
          - TextCoercion</td>
   </tr>
   <tr>
-    <td>Office 2016 для Mac<br>(единовременная покупка)</td>
+    <td>Office 2016 для Mac<br>(единовременная покупка)</td>
     <td> - Контент<br>
          - Область задач</td>
     <td> - <a href="/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets">DialogApi 1.1</a>*</td>
@@ -877,7 +881,7 @@ ms.locfileid: "34432196"
     <th><a href="/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Общие API</b></a></th>
   </tr>
   <tr>
-    <td>Office Online</td>
+    <td>Office в Интернете</td>
     <td> - Контент<br>
          - Область задач<br>
          - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстроек</a></td>
