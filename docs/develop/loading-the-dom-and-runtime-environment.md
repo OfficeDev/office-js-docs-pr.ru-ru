@@ -1,22 +1,22 @@
 ---
 title: Загрузка модели DOM и среды выполнения
 description: ''
-ms.date: 06/20/2019
+ms.date: 07/01/2019
 localization_priority: Priority
-ms.openlocfilehash: 78ddd10e9106e6668e2bb8cd40f58cbdb7b862d9
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: c955df57d09bd7bed0b30a2408e0b65d97afde68
+ms.sourcegitcommit: 90c2d8236c6b30d80ac2b13950028a208ef60973
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128103"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "35454561"
 ---
 # <a name="loading-the-dom-and-runtime-environment"></a>Загрузка модели DOM и среды выполнения
 
-Перед запуском собственной логики надстройка должна проверить, что загружены модель DOM и среда выполнения Надстройки Office. 
+Перед запуском собственной логики надстройка должна проверить, что загружены модель DOM и среда выполнения Надстройки Office.
 
 ## <a name="startup-of-a-content-or-task-pane-add-in"></a>Запуск контентной надстройки или надстройки области задач
 
-На рисунке ниже приведен поток событий, происходящих при запуске контентной надстройки или надстройки области задач в Excel, PowerPoint, Project, Word или Access.
+На рисунке ниже приведен поток событий, происходящих при запуске контентной надстройки или надстройки области задач в Excel, PowerPoint, Project или Word.
 
 ![Поток событий при запуске контентной надстройки или надстройки области задач](../images/office15-app-sdk-loading-dom-agave-runtime.png)
 
