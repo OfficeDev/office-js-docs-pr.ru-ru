@@ -479,7 +479,7 @@
               href: testing/sideload-office-addin-using-sideload-command.md
             - name: Подключение отладчика из области задач
               href: testing/attach-debugger-from-task-pane.md
-            - name: Отладка с помощью средств разработчика F12
+            - name: Отладка с помощью средств разработчика
               href: testing/debug-add-ins-using-f12-developer-tools-on-windows-10.md
         - name: Веб-браузер
           items:
