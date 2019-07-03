@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox. Item — Предварительная версия набора требований
 description: ''
-ms.date: 06/20/2019
+ms.date: 06/25/2019
 localization_priority: Normal
-ms.openlocfilehash: 9e3a969540d84891eba49b98c34b69396ee702a8
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 537ac59649b149d9bb54b09f8e16704adb813f58
+ms.sourcegitcommit: 90c2d8236c6b30d80ac2b13950028a208ef60973
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128498"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "35454904"
 ---
 # <a name="item"></a>item
 
@@ -530,7 +530,7 @@ function callback(asyncResult) {
 
 #### <a name="internetheaders-internetheadersjavascriptapioutlookofficeinternetheaders"></a>Internetheaders:: [internetheaders:](/javascript/api/outlook/office.internetheaders)
 
-Возвращает или задает заголовки Интернета сообщения.
+Возвращает или задает настраиваемые заголовки Интернета для сообщения.
 
 ##### <a name="type"></a>Тип
 

@@ -1,14 +1,14 @@
 ---
 title: Элемент Host в файле манифеста
 description: ''
-ms.date: 06/20/2019
+ms.date: 07/01/2019
 localization_priority: Normal
-ms.openlocfilehash: debb4d59f75ce974ffb21d853c6b65a579c4e685
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: e7b557034f70b03ed57598b7ffb9f43878db7392
+ms.sourcegitcommit: 90c2d8236c6b30d80ac2b13950028a208ef60973
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127571"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "35454897"
 ---
 # <a name="host-element"></a>Элемент Host
 
@@ -28,7 +28,8 @@ ms.locfileid: "35127571"
 | [Name](#name) | string | Обязательный | Имя типа ведущего приложения Office. |
 
 ### <a name="name"></a>Имя
-Определяет тип ведущего приложения, для которого предназначена эта надстройка. Поддерживаются такие значения:
+
+Определяет тип ведущего приложения, для которого предназначена эта надстройка. Значение должно быть одним из следующих.
 
 - `Document` (Word)
 - `Database` (Access)
@@ -38,7 +39,11 @@ ms.locfileid: "35127571"
 - `Project` (Project)
 - `Workbook` (Excel)
 
+> [!IMPORTANT]
+> Больше не рекомендуется создавать и использовать веб-приложения и базы данных Access в SharePoint. В качестве альтернативы рекомендуем использовать [Microsoft PowerApps](https://powerapps.microsoft.com/) для создания бизнес-решений для Интернета и мобильных устройств без написания кода.
+
 ### <a name="example"></a>Пример
+
 ```xml
 <Hosts>
     <Host Name="Mailbox">
@@ -47,6 +52,7 @@ ms.locfileid: "35127571"
 ```
 
 ## <a name="versionoverrides-node"></a>Узел VersionOverrides
+
 Если основной элемент задается в узле [VersionOverrides](versionoverrides.md), его тип определяет атрибут `xsi:type`. 
 
 ### <a name="attributes"></a>Атрибуты
@@ -74,6 +80,7 @@ ms.locfileid: "35127571"
 - `Workbook` (Excel)
 
 ## <a name="host-example"></a>Пример ведущего приложения 
+
 ```xml
 <Hosts>
     <Host xsi:type="MailHost">

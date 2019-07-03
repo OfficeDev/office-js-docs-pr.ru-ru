@@ -1,16 +1,16 @@
 ---
 title: Руководство по пользовательским функциям в Excel
 description: Из этого руководства вы узнаете, как создать надстройку, Excel, содержащую пользовательские функции, которые могут выполнять вычисления, запрашивать или передавать веб-данные.
-ms.date: 06/20/2019
+ms.date: 06/27/2019
 ms.prod: excel
 ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: 3ae7896c082e7a1a45fb153dc69772f206a433de
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 1aa05581d1b0dfb1f5affa019e51b84126c8d199
+ms.sourcegitcommit: 90c2d8236c6b30d80ac2b13950028a208ef60973
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35126983"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "35454734"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -41,16 +41,16 @@ ms.locfileid: "35126983"
     
     * **Выберите тип проекта:** `Excel Custom Functions Add-in project`
     * **Выберите тип сценария:** `JavaScript`
-    * **Как вы хотите назвать надстройку?** `stock-ticker`
+    * **Как вы хотите назвать надстройку?** `starcount`
 
-    ![Генератор Yeoman для надстройки Office, приглашающий к созданию пользовательских функций](../images/UpdatedYoOfficePrompt.png)
+    ![Генератор Yeoman для надстройки Office, приглашающий к созданию пользовательских функций](../images/starcountPrompt.png)
     
     Генератор Yeoman создаст файлы проекта и установит вспомогательные компоненты Node.
 
 2. Перейдите к корневой папке проекта.
     
     ```command&nbsp;line
-    cd stock-ticker
+    cd starcount
     ```
 
 3. Выполните построение проекта.
@@ -108,40 +108,40 @@ npm run start:web
 
 ## <a name="create-a-custom-function-that-requests-data-from-the-web"></a>Создание пользовательской функции, которая запрашивает данные из сети Интернет
 
-Интеграция данных из Интернета — отличный способ расширения функционала Excel через пользовательские функции. Далее необходимо создать пользовательскую функцию под именем `stockPrice`, которая получает котировки акций из Web API и возвращает результат в ячейку на листе. 
+Интеграция данных из Интернета — отличный способ расширения функционала Excel через пользовательские функции. Далее вы создадите пользовательскую функцию с именем `getStarCount` , которая показывает количество звезд, которыми обладает данный репозиторий GitHub.
 
-> [!NOTE]
-> Приведенный ниже код запрашивает котировку акций с помощью API торговых IEX. Перед выполнением кода вам потребуется [создать бесплатную учетную запись с IEX Cloud](https://iexcloud.io/) , чтобы получить маркер API, который требуется в запросе API.  
+1. В проекте **старкаунт** найдите файл **./СРК/функтионс/функтионс.ЖС** и откройте его в редакторе кода. 
 
-1. В проекте **Stocks —** найдите файл **./СРК/функтионс/функтионс.ЖС** и откройте его в редакторе кода.
+2. В файле **Function. js**добавьте следующий код: 
 
-2. В файле Function **. js**нахождение `increment` функции и добавление следующего кода после этой функции.
+```JS
+ /**
+   * Gets the star count for a given Github repository.
+   * @customfunction 
+   * @param {string} userName string name of Github user or organization.
+   * @param {string} repoName string name of the Github repository.
+   * @return {number} number of stars given to a Github repository.
+   */
+    async function getStarCount(userName, repoName) {
+      try {
+        //You can change this URL to any web request you want to work with.
+        const url = "https://api.github.com/repos/" + userName + "/" + repoName;
+        const response = await fetch(url);
+        //Expect that status code is in 200-299 range
+        if (!response.ok) {
+          throw new Error(response.statusText)
+        }
+          const jsonResponse = await response.json();
+          return jsonResponse.watchers_count;
+      }
+      catch (error) {
+        return error;
+      }
+      }
+    CustomFunctions.associate("GETSTARCOUNT", getStarCount);
+```
 
-    ```js
-    /**
-    * Fetches current stock price
-    * @customfunction 
-    * @param {string} ticker Stock symbol
-    * @returns {number} The current stock price.
-    */
-    function stockPrice(ticker) {
-        //Note: In the following line, replace <YOUR_TOKEN_HERE> with the API token that you've obtained through your IEX Cloud account.
-        var url = "https://cloud.iexapis.com/stable/stock/" + ticker + "/quote/latestPrice?token=<YOUR_TOKEN_HERE>"
-        return fetch(url)
-            .then(function(response) {
-                return response.text();
-            })
-            .then(function(text) {
-                return parseFloat(text);
-            });
-
-        // Note: in case of an error, the returned rejected Promise
-        //    will be bubbled up to Excel to indicate an error.
-    }
-    CustomFunctions.associate("STOCKPRICE", stockPrice);
-    ```
-
-    Код `CustomFunctions.associate` сопоставляет `id` функции с адресом функции `stockPrice` в JavaScript, чтобы Excel мог вызвать вашу функцию.
+Код `CustomFunctions.associate` сопоставляет `id` функции с адресом функции `getStarCount` в JavaScript, чтобы Excel мог вызвать вашу функцию.
 
 3. Выполните указанную ниже команду, чтобы повторно собрать проект.
 
@@ -151,14 +151,15 @@ npm run start:web
 
 4. Выполните следующие действия (для Excel в Интернете или Windows), чтобы повторно зарегистрировать надстройку в Excel. Прежде чем новая функция станет доступна, необходимо выполнить указанные ниже действия.
 
-# <a name="excel-on-windowstabexcel-windows"></a>[Excel в Windows](#tab/excel-windows)
+### <a name="excel-on-windowstabexcel-windows"></a>[Excel в Windows](#tab/excel-windows)
 
 1. Закройте Excel, а затем откройте Excel повторно.
 
 2. В Excel перейдите на вкладку **Вставка** , а затем щелкните стрелку вниз, расположенную справа от **моих надстроек**.  ![Вставка ленты в Excel в Windows с выделенной стрелкой "Мои надстройки"](../images/select-insert.png)
 
-3. В списке доступных надстроек найдите раздел **Надстройки разработчика** и выберите надстройку **stock-ticker**, чтобы зарегистрировать ее.
-    ![Вставка ленты в Excel в Windows с выделенной надстройкой "пользовательские функции Excel" в списке "Мои надстройки"](../images/list-stock-ticker-red.png)
+3. В списке доступных надстроек найдите раздел надстройки для **разработчиков** и выберите надстройку **старкаунт** , чтобы зарегистрировать ее.
+    ![Вставка ленты в Excel в Windows с выделенной надстройкой "пользовательские функции Excel" в списке "Мои надстройки"](../images/list-starcount.png)
+
 
 # <a name="excel-on-the-webtabexcel-online"></a>[Excel в Интернете](#tab/excel-online)
 
@@ -173,60 +174,48 @@ npm run start:web
 ---
 
 <ol start="5">
-<li> Теперь давайте оценим, как работает новая функция. В ячейке <strong>B1</strong> введите нужный текст <strong>= CONTOSO. STOCKPRICE("MSFT")</strong> и нажмите ВВОД. Вы должны увидеть, что результат в ячейке <strong>B1</strong> является текущей ценой одной акции корпорации Майкрософт.</li>
+<li> Теперь давайте оценим, как работает новая функция. В ячейке <strong>B1</strong>введите текст <strong>= contoso. ЖЕТСТАРКАУНТ ("OfficeDev", "Excel-Custom-functions")</strong> и нажмите клавишу ВВОД. Вы увидите, что в ячейке <strong>B1</strong> получено текущее число звезд, заданное репозиторием [GitHub Excel-Custom-functions](https://github.com/OfficeDev/Excel-Custom-Functions).</li>
 </ol>
 
 ## <a name="create-a-streaming-asynchronous-custom-function"></a>Создание потоковой асинхронной пользовательской функции
 
-Функция `stockPrice` возвращает цену акции в конкретный момент времени, однако цены на акции всегда меняются. Далее вы создадите пользовательскую функцию с именем `stockPriceStream`, которая получает цену акции каждые 1000 милисекунд.
+`getStarCount` Функция возвращает число звезд, которые репозиторий содержит в определенный момент времени. Пользовательские функции также могут возвращать непрерывно изменяемые данные. Эти функции называются потоковыми функциями. Они должны включать `invocation` параметр, который ссылается на ячейку, в которой была вызвана функция. `invocation` Параметр используется для обновления содержимого ячейки в любое время.  
 
-1. В проекте **Stocks – Tick** добавьте следующий код в файл **./СРК/функтионс/функтионс.ЖС** и сохраните его.
+В приведенном ниже примере кода обратите внимание, что существуют две функции `currentTime` и. `clock` `currentTime` Функция — это статическая функция, которая не использует потоковую передачу. Он возвращает дату в виде строки. `clock` Функция использует `currentTime` функцию, чтобы указать новое время каждую секунду для ячейки в Excel. Он используется `invocation.setResult` для доставки времени в ячейку Excel и `invocation.onCanceled` обработки действий, выполняемых при отмене функции.
 
-    ```js
-    /**
-    * Streams real time stock price
-    * @customfunction 
-    * @param {string} ticker Stock symbol
-    * @param {CustomFunctions.StreamingInvocation<number>} invocation
-    */
-    function stockPriceStream(ticker, invocation) {
-        var updateFrequency = 1000 /* milliseconds*/;
-        var isPending = false;
+1. В проекте **старкаунт** добавьте следующий код в файл **./СРК/функтионс/функтионс.ЖС** и сохраните его.
 
-        var timer = setInterval(function() {
-            // If there is already a pending request, skip this iteration:
-            if (isPending) {
-                return;
-            }
+```JS
+/**
+ * Returns the current time
+ * @returns {string} String with the current time formatted for the current locale.
+ */
+function currentTime() {
+  return new Date().toLocaleTimeString();
+}
 
-            //Note: In the following line, replace <YOUR_TOKEN_HERE> with the API token that you've obtained through your IEX Cloud account.
-            var url = "https://cloud.iexapis.com/stable/stock/" + ticker + "/quote/latestPrice?token=<YOUR_TOKEN_HERE>"
-            isPending = true;
+CustomFunctions.associate("CURRENTTIME", currentTime); 
 
-            fetch(url)
-                .then(function(response) {
-                    return response.text();
-                })
-                .then(function(text) {
-                    invocation.setResult(parseFloat(text));
-                })
-                .catch(function(error) {
-                    invocation.setResult(error);
-                })
-                .then(function() {
-                    isPending = false;
-                });
-        }, updateFrequency);
+ /**
+ * Displays the current time once a second
+ * @customfunction
+ * @param {CustomFunctions.StreamingInvocation<string>} invocation Custom function invocation
+ */
+function clock(invocation) {
+  const timer = setInterval(() => {
+    const time = currentTime();
+    invocation.setResult(time);
+  }, 1000);
 
-        invocation.onCanceled = () => {
-            clearInterval(timer);
-        };
-    }
-    CustomFunctions.associate("STOCKPRICESTREAM", stockPriceStream);
-    ```
-    
-    Код `CustomFunctions.associate` сопоставляет `id` функции с адресом функции `stockPriceStream` в JavaScript, чтобы Excel мог вызвать вашу функцию.
-    
+  invocation.onCanceled = () => {
+    clearInterval(timer);
+  };
+}
+CustomFunctions.associate("CLOCK", clock);
+```
+
+Код `CustomFunctions.associate` сопоставляет `id` функции с адресом функции `CLOCK` в JavaScript, чтобы Excel мог вызвать вашу функцию.
+
 2. Выполните указанную ниже команду, чтобы повторно собрать проект.
 
     ```command&nbsp;line
@@ -241,8 +230,8 @@ npm run start:web
 
 2. В Excel перейдите на вкладку **Вставка** , а затем щелкните стрелку вниз, расположенную справа от **моих надстроек**.  ![Вставка ленты в Excel в Windows с выделенной стрелкой "Мои надстройки"](../images/select-insert.png)
 
-3. В списке доступных надстроек найдите раздел **Надстройки разработчика** и выберите надстройку **stock-ticker**, чтобы зарегистрировать ее.
-    ![Вставка ленты в Excel в Windows с выделенной надстройкой "пользовательские функции Excel" в списке "Мои надстройки"](../images/list-stock-ticker-red.png)
+3. В списке доступных надстроек найдите раздел надстройки для **разработчиков** и выберите надстройку **старкаунт** , чтобы зарегистрировать ее.
+    ![Вставка ленты в Excel в Windows с выделенной надстройкой "пользовательские функции Excel" в списке "Мои надстройки"](../images/list-starcount.png)
 
 # <a name="excel-on-the-webtabexcel-online"></a>[Excel в Интернете](#tab/excel-online)
 
@@ -257,16 +246,12 @@ npm run start:web
 --- 
 
 <ol start="4">
-<li>Теперь давайте оценим, как работает новая функция. В ячейке <strong>C1</strong> введите нужный текст <strong>=CONTOSO.STOCKPRICESTREAM("MSFT")</strong> и нажмите ВВОД. Если рынок ценных бумаг открыт, вы увидите, что результат в ячейке <strong>C1</strong> постоянно обновляется, отражая в режиме реального времени цену одной акции корпорации Майкрософт.</li>
+<li>Теперь давайте оценим, как работает новая функция. В ячейке <strong>C1</strong>введите текст <strong>= contoso. CLOCK ())</strong> и нажмите клавишу ВВОД. Должна отобразиться текущая дата, которая пересылает обновление каждую секунду. Несмотря на то, что часы находятся только в цикле, вы можете использовать ту же идею задания таймера для более сложных функций, которые делают веб-запросы для данных в режиме реального времени.</li>
 </ol>
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Поздравляем! Вы создали новый проект пользовательских функций, попробовали, как работает готовая функция, создали пользовательскую функцию, которая запрашивает данные из Интернета, а также создали пользовательскую функцию, которая осуществляет потоковую передачу данных в реальном времени из сети Интернет. Вы также можете попробовать выполнить отладку этой функции [, используя инструкции по отладке пользовательских функций](../excel/custom-functions-debugging.md). Чтобы узнать больше о пользовательских функции в Excel, перейдите к следующей статье:
+Поздравляем! Вы создали новый проект пользовательских функций, выполнили предварительно составленную функцию, создал пользовательскую функцию, которая запрашивает данные из веб-сайта, и создала пользовательскую функцию, которая пересылает данные. Вы также можете попробовать выполнить отладку этой функции [, используя инструкции по отладке пользовательских функций](../excel/custom-functions-debugging.md). Чтобы узнать больше о пользовательских функции в Excel, перейдите к следующей статье:
 
 > [!div class="nextstepaction"]
 > [Создание пользовательских функций в Excel](../excel/custom-functions-overview.md)
-
-### <a name="legal-information"></a>Юридические сведения
-
-Данные предоставлены бесплатно компанией [IEX](https://iextrading.com/developer/). Ознакомьтесь с [Условиями использования IEX](https://iextrading.com/api-exhibit-a/). Корпорация Майкрософт использует API компании IEX в этом руководстве исключительно в ознакомительных целях.

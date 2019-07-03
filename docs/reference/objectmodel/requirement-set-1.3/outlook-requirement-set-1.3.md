@@ -1,14 +1,14 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.3
 description: ''
-ms.date: 03/19/2019
+ms.date: 06/25/2019
 localization_priority: Normal
-ms.openlocfilehash: 276096870b128896e987bcb303b4cccdb77e0e50
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 6e1c8fade7a95cdac4fbcf5b571f4b9be9092e95
+ms.sourcegitcommit: 90c2d8236c6b30d80ac2b13950028a208ef60973
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450403"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "35454890"
 ---
 # <a name="outlook-add-in-api-requirement-set-13"></a>Набор обязательных элементов API для надстройки Outlook 1.3
 
@@ -31,7 +31,6 @@ ms.locfileid: "32450403"
 
 - Добавлен метод [Body.getAsync](/javascript/api/outlook_1_3/office.body#getasync-coerciontype--options--callback-). Возвращает текущий текст в указанном формате.
 - Добавлен метод [Body.setAsync](/javascript/api/outlook_1_3/office.body#setasync-data--options--callback-). Заменяет весь текст указанным текстом.
-- Добавлено свойство [Office.context.officeTheme](office.context.md#officetheme-object). Предоставляет доступ к цветам темы Office.
 - Добавлен объект [Event](/javascript/api/office/office.addincommands.event). Передается как параметр в функции команд, не требующих пользовательского интерфейса, в надстройке Outlook. Используется для уведомления о завершении обработки.
 - Добавлен метод [Office.context.mailbox.item.close](office.context.mailbox.item.md#close). Закрывает текущий создаваемый элемент.
 - Добавлен метод [Office.context.mailbox.item.saveAsync](office.context.mailbox.item.md#saveasyncoptions-callback). Асинхронно сохраняет элемент.

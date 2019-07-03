@@ -1,14 +1,14 @@
 ---
 title: Office.context — предварительная версия набора обязательных элементов
 description: ''
-ms.date: 06/20/2019
+ms.date: 06/25/2019
 localization_priority: Normal
-ms.openlocfilehash: 7e5d25c4788ec9f35a97f3bd3da6cca6a7314fb4
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 998e752cf2292eec4e05901325a0192e158c0b7f
+ms.sourcegitcommit: 90c2d8236c6b30d80ac2b13950028a208ef60973
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127487"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "35454834"
 ---
 # <a name="context"></a>context
 
@@ -83,9 +83,9 @@ function write(message){
 Предоставляет доступ к свойствам цветов темы Office.
 
 > [!NOTE]
-> Этот элемент не поддерживается в Outlook на iOS или Android.
+> Этот элемент поддерживается только в Outlook для Windows.
 
-Using Office theme colors let's you coordinate the color scheme of your add-in with the current Office theme selected by the user with **File > Office Account > Office Theme UI**, which is applied across all Office host applications. Using Office theme colors is appropriate for mail and task pane add-ins.
+Использование цветов тем Office позволяет координировать цветовую схему надстройки с текущей темой Office, выбранной пользователем с помощью **файла > учетной записи office > пользовательского интерфейса темы**Office, которая применяется ко всем ведущим приложениям Office. Using Office theme colors is appropriate for mail and task pane add-ins.
 
 ##### <a name="type"></a>Тип
 
@@ -104,7 +104,7 @@ Using Office theme colors let's you coordinate the color scheme of your add-in w
 
 |Требование| Значение|
 |---|---|
-|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.3|
+|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| Предварительная версия|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
