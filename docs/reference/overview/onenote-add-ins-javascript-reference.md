@@ -1,67 +1,44 @@
 ---
 title: Обзор API JavaScript для OneNote
 description: ''
-ms.date: 06/20/2019
+ms.date: 07/05/2019
 ms.prod: onenote
 localization_priority: Normal
-ms.openlocfilehash: 68ac6f94921ba3b1ea14f364988b57ef86809890
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: b6e5cd5f083013a84e75dfd57b30af87eabb42e8
+ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127130"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "35575319"
 ---
 # <a name="onenote-javascript-api-overview"></a>Обзор API JavaScript для OneNote
 
-Область применения: OneNote в Интернете
+Надстройка OneNote взаимодействует с объектами в OneNote в Интернете с помощью API JavaScript для Office, который включает две объектные модели JavaScript:
 
-Ниже приведены ссылки на высокоуровневые объекты OneNote, доступные в API. Каждая ссылка на страницу объекта содержит описание свойств, событий и методов, доступных для объекта. Чтобы узнать больше, перейдите по указанным ниже ссылкам. 
-    
-- [Application](/javascript/api/onenote/onenote.application): объект верхнего уровня, используемый для доступа ко всем глобально адресуемым объектам OneNote, таким как активная записная книжка и активный раздел.
+* **API JavaScript для OneNote**: представленный в Office 2016, [API JavaScript для OneNote](/javascript/api/onenote) содержит строго типизированные объекты, которые можно использовать для доступа к объектам в OneNote в Интернете. 
 
-- [Notebook](/javascript/api/onenote/onenote.notebook): записная книжка. Записные книжки содержат группы разделов и разделы.
-    - [NotebookCollection](/javascript/api/onenote/onenote.notebookcollection): представляет коллекцию записных книжек.
+* **Общие API**:, представляемые в Office 2013, [общий API](/javascript/api/office) можно использовать для доступа к таким ФУНКЦИЯМ, как пользовательский интерфейс, диалоговые окна и параметры клиента, которые являются общими для различных типов приложений Office.
 
-- [SectionGroup](/javascript/api/onenote/onenote.sectiongroup): группа разделов. Группы разделов содержат разделы и группы разделов.
-    - [SectionGroupCollection](/javascript/api/onenote/onenote.sectiongroupcollection): коллекция групп разделов.
+Этот раздел документации посвящен API JavaScript для OneNote, который будет использоваться для разработки большинства функциональных возможностей в надстройках, ориентированных на OneNote в Интернете. Сведения об общих API-интерфейсах можно найти в статье [API JavaScript для Office](../javascript-api-for-office.md). 
 
-- [Section](/javascript/api/onenote/onenote.section): раздел. Разделы содержат страницы.
-    - [SectionCollection](/javascript/api/onenote/onenote.sectioncollection): коллекция разделов.
+## <a name="learn-programming-concepts"></a>Общие сведения о программировании
 
-- [Page](/javascript/api/onenote/onenote.page): страница. Страницы содержат объекты PageContent.
-    - [PageCollection](/javascript/api/onenote/onenote.pagecollection): коллекция страниц.
+В следующих статьях представлены сведения о важных концепциях программирования:
 
-- [PageContent](/javascript/api/onenote/onenote.pagecontent): область верхнего уровня на странице, содержащая контент, например типов Outline или Image. Объекту PageContent можно назначить позицию на странице.
-    - [PageContentCollection](/javascript/api/onenote/onenote.pagecontentcollection): коллекция объектов PageContent, представляющая содержимое страницы.
+- [Обзор API JavaScript для OneNote](../../onenote/onenote-add-ins-programming-overview.md)
 
-- [Outline](/javascript/api/onenote/onenote.outline): контейнер для объектов Paragraph. Объект Outline — прямой потомок объекта PageContent.
+- [Работа с содержимым страницы в OneNote](../../onenote/onenote-add-ins-page-content.md)
 
-- [Image](/javascript/api/onenote/onenote.image): объект Image. Объект Image может быть прямым потомком объекта PageContent или объекта Paragraph.
+## <a name="learn-about-api-capabilities"></a>Сведения о возможностях API
 
-- [Paragraph](/javascript/api/onenote/onenote.paragraph): Контейнер для содержимого, отображаемого на странице. Объект Paragraph — прямой потомок объекта Outline.
-    - [ParagraphCollection](/javascript/api/onenote/onenote.paragraphcollection): коллекция объектов Paragraph в объекте Outline.
+Для взаимодействия с контентом в OneNote в Интернете с помощью API JavaScript для OneNote выполните [Краткое руководство по надстройке OneNote](../../quickstarts/onenote-quickstart.md). 
 
-- [RichText](/javascript/api/onenote/onenote.richtext): объект RichText.
-
-- [Table](/javascript/api/onenote/onenote.table): контейнер для объектов TableRow.
-
-- [TableRow](/javascript/api/onenote/onenote.tablerow): контейнер для объектов TableCell.
-    - [TableRowCollection](/javascript/api/onenote/onenote.tablerowcollection): Коллекция объектов TableRow в объекте Table.
- 
-- [TableCell](/javascript/api/onenote/onenote.tablecell): контейнер для объектов Paragraph.
-    - [TableCellCollection](/javascript/api/onenote/onenote.tablecellcollection) коллекция объектов TableCell в объекте TableRow.
-
-## <a name="onenote-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для OneNote
-
-Наборы требований — это именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения о наборах обязательных элементов API JavaScript для OneNote см. в статье [Наборы обязательных элементов API JavaScript для OneNote](../requirement-sets/onenote-api-requirement-sets.md).
-
-## <a name="onenote-javascript-api-reference"></a>Справочник по API JavaScript для OneNote
-
-Дополнительные сведения об API JavaScript для OneNote см. в [справочной документации по API JavaScript для OneNote](/javascript/api/onenote).
+Подробные сведения об объектной модели API JavaScript для OneNote можно найти в [справочной документации по API JavaScript для OneNote](/javascript/api/onenote).
 
 ## <a name="see-also"></a>См. также
 
-- [Обзор API JavaScript для OneNote](/office/dev/add-ins/onenote/onenote-add-ins-programming-overview)
-- [Создание первой надстройки OneNote](../../quickstarts/onenote-quickstart.md)
-- [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
-- [Обзор платформы надстроек Office](/office/dev/add-ins/overview/office-add-ins)
+- [Документация по надстройкам OneNote](../../onenote/index.md)
+- [Общие сведения о надстройках OneNote](../../onenote/onenote-add-ins-programming-overview.md)
+- [Справочник по API JavaScript для OneNote](/javascript/api/onenote)
+- [Доступность ведущих приложений и платформ для надстроек Office](../../overview/office-add-in-availability.md)
+

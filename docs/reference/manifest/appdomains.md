@@ -1,18 +1,18 @@
 ---
 title: Элемент AppDomains в файле манифеста
 description: ''
-ms.date: 12/13/2018
+ms.date: 07/03/2019
 localization_priority: Normal
-ms.openlocfilehash: 65391c9529e7ddaa9726d0b58accf90c5b9babef
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: b6db3d46d004021f25edd5733566544010abb457
+ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450648"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "35575333"
 ---
 # <a name="appdomains-element"></a>Элемент AppDomains
 
-Определяет все домены, кроме указанного в элементе SourceLocation, которые надстройка Office будет использовать для загрузки страниц. Для каждого дополнительного домена укажите элемент AppDomain.
+Перечисляет все домены в дополнение к домену, указанному в `SourceLocation` элементе, который надстройка Office будет использовать для загрузки страниц. Кроме того, выводит список доверенных доменов, из которых можно создавать вызовы API Office. js из IFrame в надстройке. Для каждого дополнительного домена укажите элемент AppDomain.
 
  **Тип надстройки:** контентные и почтовые надстройки, надстройки области задач.
 
