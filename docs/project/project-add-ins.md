@@ -1,14 +1,14 @@
 ---
 title: Надстройки области задач для Project
 description: ''
-ms.date: 06/20/2019
+ms.date: 07/05/2019
 localization_priority: Priority
-ms.openlocfilehash: c04b2d3d2da3f258751585e0d30a9c726af373e6
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 45f04b2404755d67f1c18c2ae9edcddd02ded7c5
+ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128603"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "35575382"
 ---
 # <a name="task-pane-add-ins-for-project"></a>Надстройки области задач для Project
 
@@ -188,6 +188,7 @@ Project стандартный 2013 и Project профессиональный 
 
 ## <a name="see-also"></a>См. также
 
+- [Документация по надстройкам Project](index.md)
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)
 - [XML-манифест надстройки Office](../develop/add-in-manifests.md)
 - [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office)
