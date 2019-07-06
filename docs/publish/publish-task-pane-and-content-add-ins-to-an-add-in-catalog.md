@@ -3,12 +3,12 @@ title: Публикация надстроек области задач и ко
 description: Чтобы предоставить доступ к надстройкам Office пользователям в организации, администраторы могут отправлять файлы манифестов надстроек Office в соответствующий каталог приложений.
 ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 20b97855ce50e3f70e602f511882761c6fd80655
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: af1f96615c74065d9a194f4372e69853caa2c6e3
+ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128561"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "35575305"
 ---
 # <a name="publish-task-pane-and-content-add-ins-to-a-sharepoint-app-catalog"></a>Публикация надстроек области задач и контентных надстроек в каталоге приложений SharePoint
 
@@ -25,13 +25,13 @@ ms.locfileid: "35128561"
 
 ### <a name="to-create-an-app-catalog-for-on-premises-sharepoint-server"></a>Создание каталога приложений в локальном сервере SharePoint Server
 
-Чтобы создать каталог приложений SharePoint, следуйте инструкциям в статье [Настройка сайта каталога приложений для веб-приложения](https://docs.microsoft.com/ru-RU/sharepoint/administration/manage-the-app-catalog).
+Чтобы создать каталог приложений SharePoint, следуйте инструкциям в статье [Настройка сайта каталога приложений для веб-приложения](/sharepoint/administration/manage-the-app-catalog).
 
 После создания каталога приложений выполните инструкции [по публикации надстройки Office](#publish-an-office-add-in).
 
 ### <a name="to-create-an-app-catalog-on-office-365"></a>Создание каталога приложений в Office 365
 
-1. Перейдите в Центр администрирования Microsoft 365. Сведения о том, как найти Центр администрирования, см. в статье [Сведения о Центре администрирования Microsoft 365](https://docs.microsoft.com/office365/admin/admin-overview/about-the-admin-center).
+1. Перейдите в Центр администрирования Microsoft 365. Сведения о том, как найти Центр администрирования, см. в статье [Сведения о Центре администрирования Microsoft 365](/office365/admin/admin-overview/about-the-admin-center).
 
 2. На странице Центра администрирования Microsoft 365 разверните список **центров администрирования** и выберите пункт **SharePoint**.
 
@@ -62,7 +62,7 @@ ms.locfileid: "35128561"
 
 ### <a name="to-publish-an-office-add-in-to-a-sharepoint-app-catalog-on-office-365"></a>Публикация надстройки Office в каталоге приложений SharePoint в Office 365
 
-1. Перейдите в Центр администрирования Microsoft 365. Сведения о том, как найти Центр администрирования, см. в статье [Сведения о Центре администрирования Microsoft 365](https://docs.microsoft.com/office365/admin/admin-overview/about-the-admin-center).
+1. Перейдите в Центр администрирования Microsoft 365. Сведения о том, как найти Центр администрирования, см. в статье [Сведения о Центре администрирования Microsoft 365](/office365/admin/admin-overview/about-the-admin-center).
 2. На странице Центра администрирования Microsoft 365 разверните список **центров администрирования** и выберите пункт **SharePoint**.
     > [!NOTE]
     > Для создания каталога нужно использовать классический Центр администрирования SharePoint. Если вы находитесь в новом Центре администрирования SharePoint, выберите пункт **Классический Центр администрирования SharePoint** в области слева.
