@@ -3,12 +3,12 @@ title: Основные концепции программирования с �
 description: Создание надстроек для Excel с помощью API JavaScript для Excel.
 ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 08d4c22190e1493331397e390dc72b4dae6cf979
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: dad6aadf64b87ec799a17fb8efd0198be5af08b5
+ms.sourcegitcommit: 9c5a836d4464e49846c9795bf44cfe23e9fc8fbe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128215"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "35617039"
 ---
 # <a name="fundamental-programming-concepts-with-the-excel-javascript-api"></a>Основные концепции программирования с помощью API JavaScript для Excel
 
@@ -248,8 +248,8 @@ Excel.run(function (context) {
 
 ## <a name="see-also"></a>См. также
 
-- [Начало работы с надстройками Excel](excel-add-ins-get-started-overview.md)
-- [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples)
+- [Создание первой надстройки Excel](../quickstarts/excel-quickstart-jquery.md)
+- [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
 - [Дополнительные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-advanced-concepts.md)
 - [Оптимизация производительности API JavaScript для Excel](/office/dev/add-ins/excel/performance)
 - [Справочник по API JavaScript для Excel](/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)
