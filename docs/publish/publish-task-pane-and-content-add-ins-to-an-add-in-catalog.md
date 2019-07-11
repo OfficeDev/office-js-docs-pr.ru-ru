@@ -3,12 +3,12 @@ title: Публикация надстроек области задач и ко
 description: Чтобы предоставить доступ к надстройкам Office пользователям в организации, администраторы могут отправлять файлы манифестов надстроек Office в соответствующий каталог приложений.
 ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: af1f96615c74065d9a194f4372e69853caa2c6e3
-ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
+ms.openlocfilehash: 106dfd2b1610be92f1b53dc1644ff3f8c60c0543
+ms.sourcegitcommit: 9c5a836d4464e49846c9795bf44cfe23e9fc8fbe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "35575305"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "35617032"
 ---
 # <a name="publish-task-pane-and-content-add-ins-to-a-sharepoint-app-catalog"></a>Публикация надстроек области задач и контентных надстроек в каталоге приложений SharePoint
 
@@ -112,4 +112,4 @@ ms.locfileid: "35575305"
 4. В диалоговом окне "Надстройки Office" выберите вкладку **МОЯ ОРГАНИЗАЦИЯ**. Отобразится список надстроек Office.
 5. Выберите надстройку Office и нажмите **Добавить**.
 
-Кроме того, администратор может указать каталог приложений в SharePoint с помощью групповой политики. Дополнительные сведения см. в разделе [Использование групповой политики для управления возможностью установки и использования пользователями приложений для Office](/previous-versions/office/office-2013-resource-kit/jj219429(v=office.15)#using-group-policy-to-manage-how-users-can-install-and-use-apps-for-office).
+Кроме того, администратор может указать каталог приложений в SharePoint с помощью групповой политики. Соответствующие параметры политики доступны в [файлах административных шаблонов (ADMX/ADML) для Office 365 профессиональный плюс, Office 2019 и Office 2016](https://www.microsoft.com/download/details.aspx?id=49030) и находятся в папке **User Configuration\Policies\Administrative Templates\Microsoft Office 2016\Security Settings\Trust Center\Trusted Catalogs**.
