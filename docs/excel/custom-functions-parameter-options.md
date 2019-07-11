@@ -1,31 +1,30 @@
 ---
-ms.date: 06/18/2019
+ms.date: 07/01/2019
 description: Узнайте, как использовать различные параметры в пользовательских функциях, таких как диапазоны Excel, необязательные параметры, контекст вызова и многое другое.
 title: Параметры для пользовательских функций Excel
 localization_priority: Normal
-ms.openlocfilehash: dca85df87f0153c03b2ddd027748e16d3ec79924
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 9416653d697bdf36ca698271e00d9742ff0e75a9
+ms.sourcegitcommit: 9c5a836d4464e49846c9795bf44cfe23e9fc8fbe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128341"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "35617046"
 ---
 # <a name="custom-functions-parameter-options"></a>Параметры параметров пользовательских функций
 
-Настраиваемые функции можно настраивать с помощью различных параметров:
-- [Необязательные параметры](#custom-functions-optional-parameters)
-- [Параметры Range](#range-parameters)
-- [Параметр контекста вызова](#invocation-parameter)
+Настраиваемые функции можно настраивать с помощью различных параметров.
 
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
-## <a name="custom-functions-optional-parameters"></a>Необязательные параметры настраиваемых функций
+## <a name="optional-parameters"></a>Необязательные параметры
 
 В то время как обычные параметры являются обязательными, необязательные параметры — нет. Если пользователь вызывает функцию в Excel, необязательные параметры отображаются в квадратных скобках. В приведенном ниже примере функция Add может дополнительно добавить третий номер. Эта функция отображается как `=CONTOSO.ADD(first, second, [third])` в Excel.
 
+#### <a name="javascripttabjavascript"></a>[JavaScript](#tab/javascript)
+
 ```js
 /**
- * Add two numbers
+ * Calculates the sum of the specified numbers
  * @customfunction 
  * @param {number} first First number.
  * @param {number} second Second number.
@@ -33,31 +32,58 @@ ms.locfileid: "35128341"
  * @returns {number} The sum of the numbers.
  */
 function add(first, second, third) {
-  if (third !== undefined) {
-    return first + second + third;
+  if (third === null) {
+    third = 0;
   }
-  return first + second;
+  return first + second + third;
 }
 CustomFunctions.associate("ADD", add);
 ```
 
-Если вы определяете функцию, содержащую один или несколько необязательных параметров, нужно указать, что происходит, когда необязательный параметр не задан. В приведенном ниже примере `zipCode` и `dayOfWeek` являются необязательными параметрами для функции `getWeatherReport`. Если `zipCode` параметр не определен, для `98052`него устанавливается значение по умолчанию. Если параметр `dayOfWeek` не определен, ему присваивается значение Wednesday (Среда).
+#### <a name="typescripttabtypescript"></a>[TypeScript](#tab/typescript)
+
+```typescript
+/**
+ * Calculates the sum of the specified numbers
+ * @customfunction 
+ * @param first First number.
+ * @param second Second number.
+ * @param [third] Third number to add. If omitted, third = 0.
+ * @returns The sum of the numbers.
+ */
+function add(first: number, second: number, third?: number): number {
+  if (third === null) {
+    third = 0;
+  }
+  return first + second + third;
+}
+CustomFunctions.associate("ADD", add);
+```
+
+---
+
+> [!NOTE]
+> Если для необязательного параметра не указано значение, Excel присваивает ему значение `null`. Это означает, что параметры, инициализированные по умолчанию в TypeScript, не будут работать должным образом. Поэтому не следует использовать синтаксис `function add(first:number, second:number, third=0):number` , так как он не инициализируется `third` до 0. Вместо этого используйте синтаксис TypeScript, как показано в предыдущем примере.
+
+При определении функции, которая содержит один или несколько необязательных параметров, следует указать, что происходит, если необязательные параметры имеют значение null. В приведенном ниже примере `zipCode` и `dayOfWeek` являются необязательными параметрами для функции `getWeatherReport`. Если `zipCode` параметр имеет значение null, для `98052`него устанавливается значение по умолчанию. Если `dayOfWeek` параметр имеет значение null, ему присваивается значение среда.
+
+#### <a name="javascripttabjavascript"></a>[JavaScript](#tab/javascript)
 
 ```js
 /**
  * Gets a weather report for a specified zipCode and dayOfWeek
  * @customfunction
- * @param {number} zipCode Zip code. If omitted, zipCode = 98052.
- * @param {string} dayOfWeek Day of the week. If omitted, dayOfWeek = Wednesday.
+ * @param {number} [zipCode] Zip code. If omitted, zipCode = 98052.
+ * @param {string} [dayOfWeek] Day of the week. If omitted, dayOfWeek = Wednesday.
  * @returns {string} Weather report for the day of the week in that zip code.
  */
 function getWeatherReport(zipCode, dayOfWeek)
 {
-  if (zipCode === undefined) {
-      zipCode = "98052";
+  if (zipCode === null) {
+    zipCode = 98052;
   }
 
-  if (dayOfWeek === undefined) {
+  if (dayOfWeek === null) {
     dayOfWeek = "Wednesday";
   }
 
@@ -65,6 +91,33 @@ function getWeatherReport(zipCode, dayOfWeek)
   // ...
 }
 ```
+
+#### <a name="typescripttabtypescript"></a>[TypeScript](#tab/typescript)
+
+```typescript
+/**
+ * Gets a weather report for a specified zipCode and dayOfWeek
+ * @customfunction
+ * @param zipCode Zip code. If omitted, zipCode = 98052.
+ * @param [dayOfWeek] Day of the week. If omitted, dayOfWeek = Wednesday.
+ * @returns Weather report for the day of the week in that zip code.
+ */
+function getWeatherReport(zipCode?: number, dayOfWeek?: string): string
+{
+  if (zipCode === null) {
+    zipCode = 98052;
+  }
+
+  if (dayOfWeek === null) {
+    dayOfWeek = "Wednesday";
+  }
+
+  // Get weather report for specified zipCode and dayOfWeek.
+  // ...
+}
+```
+
+---
 
 ## <a name="range-parameters"></a>Параметры Range
 
