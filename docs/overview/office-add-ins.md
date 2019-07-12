@@ -1,14 +1,14 @@
 ---
 title: Обзор платформы надстроек Office | Microsoft Docs
 description: Используйте привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений.
-ms.date: 06/20/2019
+ms.date: 07/05/2019
 localization_priority: Priority
-ms.openlocfilehash: 600a1655dd9a3cfc40f56f46f0a8956f54883ffa
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: afe9b819cc7834729e0653463c4bd22a36157460
+ms.sourcegitcommit: 9c5a836d4464e49846c9795bf44cfe23e9fc8fbe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128617"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "35617067"
 ---
 # <a name="office-add-ins-platform-overview"></a>Обзор платформы надстроек Office
 
@@ -116,12 +116,12 @@ API JavaScript для Office содержат объекты и элементы
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Чтобы узнать больше о том, как начать создавать надстройки Office, воспользуйтесь [5-минутными краткими руководствами](/office/dev/add-ins/). Сразу же приступить к созданию надстроек можно с помощью Visual Studio или любого другого редактора. 
+Чтобы создать свою первую надстройку Office менее чем за 5 минут, попробуйте воспользоваться кратким руководством для [Excel](../quickstarts/excel-quickstart-jquery.md), [Outlook](/outlook/add-ins/quick-start?context=office/dev/add-ins/context), [Word](../quickstarts/word-quickstart.md), [OneNote](../quickstarts/onenote-quickstart.md), [PowerPoint](../quickstarts/powerpoint-quickstart.md) или [Project](../quickstarts/project-quickstart.md). Сразу же приступить к созданию надстроек можно с помощью Visual Studio или любого другого редактора. 
 
 Чтобы начать планировать создание решений с удобным и привлекательным интерфейсом, ознакомьтесь с [рекомендациями по проектированию](../design/add-in-design.md) и другими [рекомендациями](../concepts/add-in-development-best-practices.md), касающимися надстроек Office.
 
 ## <a name="see-also"></a>См. также
 
-- [Примеры надстроек Office](https://developer.microsoft.com/office/gallery/?filterBy=Samples)
+- [Примеры надстроек Office](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel,Outlook,PowerPoint,Word)
 - [Общие сведения об API JavaScript для Office](../develop/understanding-the-javascript-api-for-office.md)
 - [Доступность ведущих приложений и платформ для надстроек Office](../overview/office-add-in-availability.md)

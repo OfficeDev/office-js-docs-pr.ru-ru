@@ -1,67 +1,22 @@
 ---
 title: Проверка манифеста и устранение связанных с ним неполадок
 description: Используйте эти методы для проверки манифеста надстройки Office.
-ms.date: 05/21/2019
+ms.date: 07/01/2019
 localization_priority: Priority
-ms.openlocfilehash: 5b9bd22ad724bac68587a41ad56f4290f3a6edbd
-ms.sourcegitcommit: adaee1329ae9bb69e49bde7f54a4c0444c9ba642
+ms.openlocfilehash: b6d95f6c5658e33c2f52cc46d7bba686bea5cc44
+ms.sourcegitcommit: 9c5a836d4464e49846c9795bf44cfe23e9fc8fbe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "34432266"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "35617060"
 ---
 # <a name="validate-and-troubleshoot-issues-with-your-manifest"></a>Проверка манифеста и устранение связанных с ним неполадок
 
-Проверить манифест надстройки Office и устранить связанные с ним неполадки можно с помощью указанных ниже методов. 
-
-- [Проверка манифеста с помощью средства проверки надстроек Office](#validate-your-manifest-with-the-office-add-in-validator)   
-- [Проверка манифеста на соответствие схеме XML](#validate-your-manifest-against-the-xml-schema)
-- [Проверка манифеста с помощью генератора Yeoman для надстроек Office](#validate-your-manifest-with-the-yeoman-generator-for-office-add-ins)
-- [Отладка надстройки с помощью журнала среды выполнения](#use-runtime-logging-to-debug-your-add-in)
-
-
-## <a name="validate-your-manifest-with-the-office-add-in-validator"></a>Проверка манифеста с помощью средства проверки надстроек Office
-
-Чтобы убедиться, что файл манифеста правильно и полностью описывает надстройку Office, проверьте его с помощью [средства проверки надстроек Office](https://github.com/OfficeDev/office-addin-validator).
-
-### <a name="to-use-the-office-add-in-validator-to-validate-your-manifest"></a>Как проверить манифест с помощью средства проверки надстроек Office
-
-1. Установите [Node.js](https://nodejs.org/download/). 
-
-2. Откройте командную строку или терминал от имени администратора и глобально установите средство проверки надстроек, используя следующую команду:
-
-    ```command&nbsp;line
-    npm install -g office-addin-validator
-    ```
-    
-    > [!NOTE]
-    > Если у вас уже установлено приложение Yo Office, обновите его до последней версии, при этом средство проверки будет установлено в виде зависимости.
-
-3. Выполните приведенную ниже команду для проверки манифеста. Вместо файла MANIFEST.XML укажите путь к XML-файлу манифеста.
-
-    ```command&nbsp;line
-    validate-office-addin MANIFEST.XML
-    ```
-
-## <a name="validate-your-manifest-against-the-xml-schema"></a>Проверка манифеста на соответствие схеме XML
-
-Проверьте файл манифеста на соответствие правильной схеме, в том числе пространства имен для используемых элементов. Если вы скопировали элементы из других примеров манифеста, еще раз проверьте, **включены ли соответствующие пространства имен**. Вы можете проверить манифест, используя файлы [XML Schema Definition (XSD)](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas). Для этой проверки можно использовать средство проверки на соответствие схеме XML. 
-
-
-
-### <a name="to-use-a-command-line-xml-schema-validation-tool-to-validate-your-manifest"></a>Как проверить манифест на соответствие схеме XML с помощью программы командной строки
-
-1.  Установите [tar](https://www.gnu.org/software/tar/) и [libxml](http://xmlsoft.org/FAQ.html), если вы еще этого не сделали.
-
-2.  Выполните указанную ниже команду. Вместо `XSD_FILE` укажите путь к XSD-файлу манифеста, а вместо `XML_FILE` — путь к XML-файлу манифеста.
-    
-    ```command&nbsp;line
-    xmllint --noout --schema XSD_FILE XML_FILE
-    ```
+Может потребоваться проверить файл манифеста надстройки, чтобы убедиться в его правильности и полноте. Проверка может также выявлять проблемы, которые приводят к появлению ошибки "Манифест надстройки недействителен" при попытке загрузить неопубликованную надстройку. В этой статье описано несколько способов проверки файла манифеста и устранения связанных с надстройкой неполадок.
 
 ## <a name="validate-your-manifest-with-the-yeoman-generator-for-office-add-ins"></a>Проверка манифеста с помощью генератора Yeoman для надстроек Office
 
-Если вы создали надстройку Office, используя [генератора Yeoman](https://www.npmjs.com/package/generator-office), убедитесь, что файл манифеста соответствует правильной схеме, выполнив следующую команду в корневом каталоге проекта:
+Если для создания надстройки использовался [генератор Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office), вы также можете использовать его для проверки файла манифеста проекта. Выполните следующую команду в корневом каталоге своего проекта.
 
 ```command&nbsp;line
 npm run validate
@@ -72,7 +27,33 @@ npm run validate
 > [!NOTE]
 > Для доступа к этой функции проект надстройки должен быть создан с помощью [генератора Yeoman](https://www.npmjs.com/package/generator-office) 1.1.17 или более поздней версии.
 
-## <a name="use-runtime-logging-to-debug-your-add-in"></a>Отладка надстройки с помощью журнала среды выполнения 
+## <a name="validate-your-manifest-with-office-toolbox"></a>Проверка манифеста с помощью office-toolbox
+
+Если для создания надстройки использовался не [генератор Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office), вы можете проверить манифест, используя [office-toolbox](https://www.npmjs.com/package/office-toolbox).
+
+1. Установите [Node.js](https://nodejs.org/download/).
+
+2. Выполните следующую команду в корневом каталоге своего проекта. Замените `MANIFEST_FILE` на имя файла манифеста.
+
+    ```command&nbsp;line
+    npx office-toolbox validate -m MANIFEST_FILE
+    ```
+
+## <a name="validate-your-manifest-against-the-xml-schema"></a>Проверка манифеста на соответствие схеме XML
+
+Вы можете проверить файл манифеста на соответствие файлам [XML Schema Definition (XSD)](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas). Так вы сможете убедиться в том, что файл манифеста соответствует правильной схеме, включая любые пространства имен для используемых элементов. Если вы скопировали элементы из других примеров манифеста, еще раз проверьте, **включены ли соответствующие пространства имен**. Для этой проверки можно использовать средство проверки на соответствие схеме XML.
+
+### <a name="to-use-a-command-line-xml-schema-validation-tool-to-validate-your-manifest"></a>Как проверить манифест на соответствие схеме XML с помощью программы командной строки
+
+1. Установите [tar](https://www.gnu.org/software/tar/) и [libxml](http://xmlsoft.org/FAQ.html), если вы еще этого не сделали.
+
+2. Выполните указанную ниже команду. Вместо `XSD_FILE` укажите путь к XSD-файлу манифеста, а вместо `XML_FILE` — путь к XML-файлу манифеста.
+    
+    ```command&nbsp;line
+    xmllint --noout --schema XSD_FILE XML_FILE
+    ```
+
+## <a name="use-runtime-logging-to-debug-your-add-in"></a>Отладка надстройки с помощью журнала среды выполнения
 
 Вы можете использовать ведение журнала в среде выполнения для отладки манифеста надстройки, а также некоторых ошибок установки. Эта функция может помочь вам определять и устранять проблемы с манифестом, которые не обнаруживаются при проверке схемы XSD, например несоответствие идентификаторов ресурсов. Ведение журнала в среде выполнения особенно полезно для отладки надстроек, которые добавляют команды и пользовательские функции Excel.   
 
@@ -103,7 +84,6 @@ npm run validate
 Ниже показано, как должен выглядеть реестр. Чтобы отключить функцию, удалите из реестра раздел `RuntimeLogging`. 
 
 ![Снимок экрана: редактор реестра с разделом RuntimeLogging](http://i.imgur.com/Sa9TyI6.png)
-
 
 ### <a name="to-troubleshoot-issues-with-your-manifest"></a>Как устранить проблемы с манифестом
 
