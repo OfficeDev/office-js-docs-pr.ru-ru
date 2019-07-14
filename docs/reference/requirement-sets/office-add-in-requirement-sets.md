@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов общего API для Office
 description: ''
-ms.date: 06/20/2019
+ms.date: 07/11/2019
 ms.prod: non-product-specific
 localization_priority: Priority
-ms.openlocfilehash: 71c59331e59ab508cf6a681bc9c594d5b30af9fe
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: e08659908b4634b0d6fef58548fb1557e149759f
+ms.sourcegitcommit: 61f8f02193ce05da957418d938f0d94cb12c468d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127032"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "35630524"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
@@ -29,7 +29,7 @@ ms.locfileid: "35127032"
 
 ## <a name="common-api-requirement-sets"></a>Наборы обязательных элементов общего API
 
-В приведенных ниже разделах указаны наборы обязательных элементов общего API, ведущие приложения Office, которые их поддерживают, и методы в каждом наборе. Все эти наборы обязательных элементов API имеют версию 1.1.
+В приведенных ниже разделах указаны наборы обязательных элементов общего API, ведущие приложения Office, которые их поддерживают, и методы в каждом наборе. Все эти наборы обязательных элементов API относятся к версии 1.1, если не указано иное.
 
 ### <a name="activeview"></a>ActiveView
 
@@ -97,7 +97,7 @@ ms.locfileid: "35127032"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| OneNote в Интернете<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает приведение в HTML (Office.CoercionType.Html) при чтении и записи данных с использованием методов Document.getSelectedDataAsync,<br>Методы Document.setSelectedDataAsync, Binding.getDataAsync или Binding.setDataAsync.|
+| OneNote в Интернете<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word для iPad|Поддерживает приведение в HTML (Office.CoercionType.Html) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
 
 ---
 
@@ -113,11 +113,11 @@ ms.locfileid: "35127032"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel для Windows<br>Excel на iPad<br>Excel для Mac<br>OneNote в Интернете<br>PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает преобразование в изображение (Office.CoercionType.Image) при записи данных с помощью метода Document.setSelectedDataAsync.|
+| См. статью [Наборы требований к приведению изображений](image-coercion-requirement-sets.md). | Метод Document.setSelectedDataAsync|
 
 ---
 
-### <a name="mailbox"></a>почтовый ящик.
+### <a name="mailbox"></a>Mailbox
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
