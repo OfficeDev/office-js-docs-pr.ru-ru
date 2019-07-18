@@ -1,14 +1,14 @@
 ---
-ms.date: 06/17/2019
+ms.date: 07/09/2019
 description: Проверка подлинности пользователей с использованием пользовательских функций в Excel.
 title: Проверка подлинности для пользовательских функций
 localization_priority: Priority
-ms.openlocfilehash: 91755a76751406e87eb8a1f316e4b163ada98b45
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 74e1524eaf9c5328754fee8c225cd5aca83188da
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127984"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771472"
 ---
 # <a name="authentication-for-custom-functions"></a>Проверка подлинности для пользовательских функций
 
@@ -67,8 +67,6 @@ function storeValue(key, value) {
       return "Error: Unable to save item with key '" + key + "' to storage. " + error;
   });
 }
-
-CustomFunctions.associate("STOREVALUE", storeValue);
 ```
 
 Когда области задач требуется маркер доступа, она может извлечь его из объекта `storage`. В следующем примере кода показано, как использовать метод `storage.getItem` чтобы извлечь маркер.
@@ -88,8 +86,6 @@ function receiveTokenFromCustomFunction() {
      tokenSendStatus.value = "Error: Unable to read item with key '" + key + "' from storage. " + error;
   });
 }
-CustomFunctions.associate("GETTOKEN", receiveTokenFromCustomFunction);
-
 ```
 
 ## <a name="general-guidance"></a>Общие рекомендации

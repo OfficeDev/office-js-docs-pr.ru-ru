@@ -4,12 +4,12 @@ description: ''
 ms.date: 06/20/2019
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: ffd6cb33c0b3c21d769b8551d798bed3ab3390fb
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 1d4c703a9a62e316b2bed9d3fcdd631eb4aec81e
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127011"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771893"
 ---
 # <a name="outlook-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Outlook
 
@@ -36,7 +36,7 @@ ms.locfileid: "35127011"
 Чтобы использовать более новые API, разработчики могут проверить, поддерживает ли ведущее приложение набор обязательных элементов, выполнив следующее.
 
 ```js
-if (Office.context.requirements.isSetSupported('Mailbox', 1.3) === true) {
+if (Office.context.requirements.isSetSupported('Mailbox', '1.3') === true) {
   // Perform actions.
 }
 else {

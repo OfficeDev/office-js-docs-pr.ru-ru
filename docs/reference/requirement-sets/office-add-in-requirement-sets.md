@@ -4,12 +4,12 @@ description: ''
 ms.date: 07/11/2019
 ms.prod: non-product-specific
 localization_priority: Priority
-ms.openlocfilehash: e08659908b4634b0d6fef58548fb1557e149759f
-ms.sourcegitcommit: 61f8f02193ce05da957418d938f0d94cb12c468d
+ms.openlocfilehash: bd03113b7a91a4cc713cd00336a9582d2e47db5f
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "35630524"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771900"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
@@ -19,7 +19,7 @@ ms.locfileid: "35630524"
 
 Наборы обязательных элементов API *для конкретных ведущих приложений* см. ниже.
 
-- [Наборы обязательных элементов API JavaScript для Excel](excel-api-requirement-sets.md) (ExcelApi)
+- [Наборы обязательных элементов API JavaScript для Excel](./excel-api-requirement-sets.md) (ExcelApi)
 - [Наборы обязательных элементов API JavaScript для Word](word-api-requirement-sets.md) (WordApi)
 - [Наборы обязательных элементов API JavaScript для OneNote](onenote-api-requirement-sets.md) (OneNoteApi)
 - [Общие сведения о наборах обязательных элементов API Outlook](outlook-api-requirement-sets.md) (MailBox)

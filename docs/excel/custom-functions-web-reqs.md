@@ -1,14 +1,14 @@
 ---
-ms.date: 06/27/2019
+ms.date: 07/10/2019
 description: Запрос, потоковая передача и отмена потоковой передачи внешних данных к книге с помощью пользовательских функций в Excel
 title: Получение и обработка данных с помощью пользовательских функций
 localization_priority: Priority
-ms.openlocfilehash: 42281b8a98b1172ba32b1525176fd8cadd0f094c
-ms.sourcegitcommit: 9c5a836d4464e49846c9795bf44cfe23e9fc8fbe
+ms.openlocfilehash: 1e73898b068ba4ae2d49db7e8de17d5cd8883b24
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "35617053"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771514"
 ---
 # <a name="receive-and-handle-data-with-custom-functions"></a>Получение и обработка данных с помощью пользовательских функций
 
@@ -47,8 +47,6 @@ function webRequest() {
       })
   })
 }
-
-CustomFunctions.associate("WEBREQUEST", webRequest);
 ```
 
 >[!NOTE]
@@ -130,7 +128,6 @@ function increment(incrementBy, invocation) {
     clearInterval(timer);
   };
 }
-CustomFunctions.associate("INC", increment);
 ```
 
 В дополнение к сведениям об обратном вызове `onCanceled` вы также должны учитывать, что Excel отменяет выполнение функции в следующих случаях:
@@ -181,6 +178,5 @@ ws.onerror(error){
 - [Создание метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md)
 - [Метаданные пользовательских функций](custom-functions-json.md)
 - [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
-- [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
 - [Создание пользовательских функций в Excel](custom-functions-overview.md)
 - [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)

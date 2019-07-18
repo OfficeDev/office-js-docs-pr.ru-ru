@@ -1,14 +1,14 @@
 ---
-ms.date: 06/20/2019
+ms.date: 07/10/2019
 description: Используйте `OfficeRuntime.storage`, чтобы сохранить состояние с пользовательскими функциями.
 title: Сохранить и передать состояние в пользовательские функции.
 localization_priority: Priority
-ms.openlocfilehash: c6689393e5d118c779b7b261b0de04ead56aff83
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: a1b70433ef0c00d507175b32fc12603ff3de1e3f
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127837"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771591"
 ---
 # <a name="save-and-share-state-in-custom-functions"></a>Сохранить и передать состояние в пользовательские функции.
 
@@ -37,9 +37,6 @@ function storeValue(key, value) {
 function GetValue(key) {
   return OfficeRuntime.storage.getItem(key);
 }
-
-CustomFunctions.associate("STOREVALUE", StoreValue);
-CustomFunctions.associate("GETVALUE", GetValue);
 ```
 
 [Более подробный пример кода в GitHub](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Excel-custom-functions/AsyncStorage) иллюстрирует, как передать эту информацию в область задач.
@@ -54,6 +51,5 @@ CustomFunctions.associate("GETVALUE", GetValue);
 
 * [Метаданные пользовательских функций](custom-functions-json.md)
 * [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
-* [Рекомендации по настраиваемым функциям](custom-functions-best-practices.md)
 * [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
 * [Отладка пользовательских функций](custom-functions-debugging.md)

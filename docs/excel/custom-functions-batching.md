@@ -1,14 +1,14 @@
 ---
-ms.date: 06/17/2019
+ms.date: 07/10/2019
 description: Объедините пользовательские функции в пакет, чтобы сократить количество обращений к удаленной службе через сеть.
 title: Пакетирование обращений пользовательских функций к удаленной службе
 localization_priority: Priority
-ms.openlocfilehash: aa1b9c956c0f54a4d59e49ca157dd67c8349b143
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 185e6434f963a6dbcc4eefbcb8bbee4d922662e6
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127942"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771399"
 ---
 # <a name="batching-custom-function-calls-for-a-remote-service"></a>Пакетирование обращений пользовательских функций к удаленной службе
 
@@ -56,8 +56,6 @@ function div2(dividend: number, divisor: number) {
     [dividend, divisor]
   );
 }
-
-CustomFunctions.associate("DIV2", div2);
 ```
 
 После этого следует определить пакетный массив, в котором будут храниться все операции, предназначенные для передачи в одном сетевом вызове. В приведенном ниже коде показано, как определить интерфейс, описывающий каждый элемент пакета в массиве. Интерфейс определяет операцию, которая представляет собой строку-имя запускаемой операции. Например, если у вас две пользовательские функции с именами `multiply` и `divide`, их можно использовать как имена операции в элементах пакета. `args` будет содержать аргументы, переданные в пользовательскую функцию из Excel. И, наконец, в `resolve` или `reject` будет храниться обещание с информацией, возвращаемой удаленной службой.
@@ -223,6 +221,5 @@ function pause(ms: number) {
 ## <a name="see-also"></a>Дополнительные ресурсы
 
 * [Пересчитываемые значения в функциях](custom-functions-volatile.md)
-* [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)
 * [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
