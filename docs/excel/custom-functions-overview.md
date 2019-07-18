@@ -1,14 +1,14 @@
 ---
-ms.date: 06/20/2019
+ms.date: 07/10/2019
 description: Создание пользовательских функций в Excel с помощью JavaScript.
 title: Создание пользовательских функций в Excel
 localization_priority: Priority
-ms.openlocfilehash: e8f53919ebd5e44fe04e45dfd05192c77324f3aa
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: c5b31b494d7b22112e36e245603f58748559bed5
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127893"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771406"
 ---
 # <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel 
 
@@ -31,7 +31,6 @@ ms.locfileid: "35127893"
 function sphereVolume(radius) {
   return Math.pow(radius, 3) * 4 * Math.PI / 3;
 }
-CustomFunctions.associate("SPHEREVOLUME", sphereVolume)
 ```
 
 > [!NOTE]
@@ -49,11 +48,9 @@ CustomFunctions.associate("SPHEREVOLUME", sphereVolume)
 
 ### <a name="script-file"></a>Файл скрипта
 
-Файл скрипта (**./src/functions/functions.js** или **./src/functions/functions.ts**) содержит код, определяющий пользовательские функции, комментарии, определяющие функцию, и сопоставляет имена пользовательских функций с объектами в файле метаданных JSON.
+Файл скрипта (**./src/functions/functions.js** или **./src/functions/functions.ts**) содержит код, определяющий пользовательские функции, и комментарии, определяющие функцию.
 
 Приведенный ниже код определяет пользовательскую функцию `add`. Примечания кода используются для создания файла метаданных JSON с описанием пользовательской функции для Excel. Обязательный комментарий `@customfunction` объявлен первым, чтобы указать, что это пользовательская функция. Вы также увидите два объявленных параметра (`first` и `second`), за которыми следуют их свойства `description`. Наконец, дается описание `returns`. Дополнительные сведения о том, какие комментарии являются обязательными для вашей пользовательской функции, см. в статье [Создание метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md).
-
-Указанный ниже код также вызывает `CustomFunctions.associate("ADD", add)`, чтобы связать функцию `add()` с ее идентификатором в файле метаданных JSON `ADD`. Дополнительные сведения о сопоставлении функций см. в статье [Рекомендации по пользовательским функциям](custom-functions-best-practices.md#associating-function-names-with-json-metadata).
 
 ```js
 /**
@@ -67,9 +64,6 @@ CustomFunctions.associate("SPHEREVOLUME", sphereVolume)
 function add(first, second){
   return first + second;
 }
-
-// associate `id` values in the JSON metadata file to the JavaScript function names
- CustomFunctions.associate("ADD", add);
 ```
 
 Обратите внимание, что файл **functions.html**, который регулирует загрузку среды выполнения пользовательских функций, нужно связать с текущим CDN для пользовательских функций. Проекты, подготовленные с текущей версией генератора Yo Office, ссылаются на правильный CDN. При модернизации предыдущего проекта пользовательской функции от марта 2019 года или более раннего нужно скопировать код, приведенный ниже, на страницу **functions.html**.
@@ -80,7 +74,7 @@ function add(first, second){
 
 ### <a name="manifest-file"></a>Файл манифеста
 
-XML-файл манифеста для надстройки, который определяет пользовательские функции (**./manifest.xml** в проекте, который создает генератор Yo Office) и определяет пространство имен для всех пользовательских функций в надстройке, а также расположение файлов JavaScript, JSON и HTML. 
+XML-файл манифеста для надстройки, который определяет пользовательские функции (**./manifest.xml** в проекте, который создает генератор Yo Office) и определяет пространство имен для всех пользовательских функций в надстройке, а также расположение файлов JavaScript, JSON и HTML.
 
 Базовая XML-разметка ниже представляет пример элементов `<ExtensionPoint>` и `<Resources>`, которые необходимо включить в манифест надстройки, чтобы активировать пользовательские функции. Если вы используете генератор Yo Office, созданные файлы пользовательской функции будут содержать более сложный файл манифеста, который можно сравнить в этом [репозитории Github](https://github.com/OfficeDev/Excel-Custom-Functions/blob/master/manifest.xml).
 
@@ -151,14 +145,13 @@ XML-файл манифеста для надстройки, который оп
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Хотите попробовать пользовательские функции? Ознакомьтесь с простым [кратким руководством по началу работы с пользовательскими функциями](../quickstarts/excel-custom-functions-quickstart.md) или с более глубоким [руководством по пользовательским функциям](../tutorials/excel-tutorial-create-custom-functions.md), если вы этого еще не сделали. 
+Хотите попробовать пользовательские функции? Ознакомьтесь с простым [кратким руководством по началу работы с пользовательскими функциями](../quickstarts/excel-custom-functions-quickstart.md) или с более глубоким [руководством по пользовательским функциям](../tutorials/excel-tutorial-create-custom-functions.md), если вы этого еще не сделали.
 
 Еще одно простое средство ознакомления с пользовательскими функциями — [Script Lab](https://appsource.microsoft.com/product/office/WA104380862?src=office&corrid=1ada79ac-6392-438d-bb16-fce6994a2a7e&omexanonuid=f7b03101-ec22-4270-a274-bcf16c762039&referralurl=https%3a%2f%2fgithub.com%2fofficedev%2fscript-lab), надстройка, в которой можно экспериментировать с пользовательскими функциями прямо в Excel. Вы можете попробовать создать собственные пользовательские функции или поиграть с готовыми примерами.
 
 Готовы узнать больше о возможностях пользовательских функций? Ознакомьтесь с обзором [архитектуры пользовательских функций](custom-functions-architecture.md).
 
 ## <a name="see-also"></a>Дополнительные ресурсы 
-* [Требования к настраиваемым функциям](custom-functions-requirements.md)
+* [Требования к настраиваемым функциям](custom-functions-requirement-sets.md)
 * [Рекомендации по именованию](custom-functions-naming.md)
-* [Рекомендации](custom-functions-best-practices.md)
 * [Создание пользовательских функций, совместимых с функциями XLL, определенными пользователями](make-custom-functions-compatible-with-xll-udf.md)

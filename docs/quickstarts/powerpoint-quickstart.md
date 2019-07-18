@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач PowerPoint
-description: ''
-ms.date: 06/20/2019
+description: Узнайте, как создать простую надстройку области задач PowerPoint, используя API JS для Office.
+ms.date: 07/17/2019
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: 5ede96910c9e9b4462fa5eb566ba25bb4d16ba02
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 5b946d1c4ae08a5d0fcd2213f249bd2c7e8b9204
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128547"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771851"
 ---
 # <a name="build-your-first-powerpoint-task-pane-add-in"></a>Создание первой надстройки области задач PowerPoint
 
@@ -19,7 +19,76 @@ ms.locfileid: "35128547"
 
 [!include[Choose your editor](../includes/quickstart-choose-editor.md)]
 
-# <a name="visual-studiotabvisual-studio"></a>[Visual Studio](#tab/visual-studio)
+# <a name="yeoman-generatortabyeomangenerator"></a>[Генератор Yeoman](#tab/yeomangenerator)
+
+### <a name="prerequisites"></a>Необходимые условия
+
+[!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
+
+### <a name="create-the-add-in-project"></a>Создание проекта надстройки
+
+С помощью генератора Yeoman создайте проект надстройки PowerPoint. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
+
+```command&nbsp;line
+yo office
+```
+
+- **Выберите тип проекта:** `Office Add-in Task Pane project`
+- **Выберите тип сценария:** `Javascript`
+- **Как вы хотите назвать надстройку?** `My Office Add-in`
+- **Какое клиентское приложение Office должно поддерживаться?** `PowerPoint`
+
+![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-powerpoint.png)
+
+После завершения работы мастера генератор создает проект и устанавливает вспомогательные компоненты Node.
+
+### <a name="explore-the-project"></a>Знакомство с проектом
+
+[!include[Yeoman generator add-in project components](../includes/yo-task-pane-project-components-js.md)]
+
+### <a name="try-it-out"></a>Проверка
+
+1. Перейдите к корневой папке проекта.
+
+    ```command&nbsp;line
+    cd "My Office Add-in"
+    ```
+
+2. Выполните следующие действия, чтобы запустить локальный веб-сервер и загрузить неопубликованную надстройку.
+
+    > [!NOTE]
+    > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите одну из указанных ниже команд, примите предложение установить сертификат, предоставленный генератором Yeoman.
+
+    > [!TIP]
+    > Если вы тестируете надстройку на компьютере Mac, выполните указанную ниже команду перед тем, как продолжить. После выполнения этой команды запустится локальный веб-сервер.
+    >
+    > ```command&nbsp;line
+    > npm run dev-server
+    > ```
+
+    - Чтобы проверить надстройку в PowerPoint, выполните следующую команду в корневом каталоге своего проекта. При этом запускается локальный веб-сервер (если он еще не запущен) и открывается приложение PowerPoint с загруженной надстройкой.
+
+        ```command&nbsp;line
+        npm start
+        ```
+
+    - Чтобы проверить надстройку в PowerPoint в браузере, выполните следующую команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).
+
+        ```command&nbsp;line
+        npm run start:web
+        ```
+
+        Чтобы использовать надстройку, откройте новый документ в PowerPoint в Интернете и затем загрузите неопубликованную надстройку, следуя инструкциям в статье [Загрузка неопубликованных надстроек Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web).
+
+3. В PowerPoint вставьте новый пустой слайд, выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
+
+    ![Снимок экрана PowerPoint с выделенной кнопкой "Показать область задач"](../images/powerpoint_quickstart_addin_1c.png)
+
+4. В нижней части области задач выберите ссылку **Выполнить**, чтобы вставить текст "Hello World" в текущий слайд.
+
+    ![Снимок экрана PowerPoint с изображением собаки и надписью "Hello World" на слайде](../images/powerpoint_quickstart_addin_3c.png)
+
+# <a name="visual-studiotabvisualstudio"></a>[Visual Studio](#tab/visualstudio)
 
 ### <a name="prerequisites"></a>Необходимые компоненты
 
@@ -177,75 +246,6 @@ ms.locfileid: "35128547"
 4. В области задач нажмите кнопку **Вставить текст**, чтобы добавить текст к выбранному слайду.
 
     ![Снимок экрана PowerPoint с изображением собаки и надписью "Hello World" на слайде](../images/powerpoint_quickstart_addin_3.png)
-
-# <a name="any-editortabvisual-studio-code"></a>[Любой редактор](#tab/visual-studio-code)
-
-### <a name="prerequisites"></a>Необходимые условия
-
-[!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
-
-### <a name="create-the-add-in-project"></a>Создание проекта надстройки
-
-1. С помощью генератора Yeoman создайте проект надстройки PowerPoint. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
-
-    ```command&nbsp;line
-    yo office
-    ```
-
-    - **Выберите тип проекта:** `Office Add-in Task Pane project`
-    - **Выберите тип сценария:** `Javascript`
-    - **Как вы хотите назвать надстройку?** `My Office Add-in`
-    - **Какое клиентское приложение Office должно поддерживаться?** `PowerPoint`
-
-    ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-powerpoint.png)
-    
-    После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
-    
-2. Перейдите к корневой папке проекта.
-
-    ```command&nbsp;line
-    cd "My Office Add-in"
-    ```
-
-### <a name="explore-the-project"></a>Знакомство с проектом
-
-[!include[Yeoman generator add-in project components](../includes/yo-task-pane-project-components-js.md)]
-
-### <a name="try-it-out"></a>Проверка
-
-1. Выполните следующие действия, чтобы запустить локальный веб-сервер и загрузить неопубликованную надстройку.
-
-    > [!NOTE]
-    > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите одну из указанных ниже команд, примите предложение установить сертификат, предоставленный генератором Yeoman.
-
-    > [!TIP]
-    > Если вы тестируете надстройку на компьютере Mac, перед продолжением выполните указанную ниже команду. После выполнения этой команды запустится локальный веб-сервер.
-    >
-    > ```command&nbsp;line
-    > npm run dev-server
-    > ```
-
-    - Чтобы проверить надстройку в PowerPoint, выполните следующую команду в корневом каталоге своего проекта. Когда вы выполните эту команду, запустится локальный веб-сервер (если он еще не запущен) и откроется приложение PowerPoint, в котором будет загружена ваша надстройка.
-
-        ```command&nbsp;line
-        npm start
-        ```
-
-    - Чтобы проверить надстройку в PowerPoint в браузере, выполните следующую команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).
-
-        ```command&nbsp;line
-        npm run start:web
-        ```
-
-        Чтобы использовать надстройку, откройте новый документ в PowerPoint в Интернете и затем загрузите неопубликованную надстройку, следуя инструкциям в статье [Загрузка неопубликованных надстроек Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web).
-
-2. В PowerPoint вставьте новый пустой слайд, выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
-
-    ![Снимок экрана PowerPoint с выделенной кнопкой "Показать область задач"](../images/powerpoint_quickstart_addin_1c.png)
-
-3. В нижней части области задач выберите ссылку **Выполнить**, чтобы вставить текст "Hello World" в текущий слайд.
-
-    ![Снимок экрана PowerPoint с изображением собаки и надписью "Hello World" на слайде](../images/powerpoint_quickstart_addin_3c.png)
 
 ---
 

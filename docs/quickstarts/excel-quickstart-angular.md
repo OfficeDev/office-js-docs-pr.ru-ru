@@ -4,12 +4,12 @@ description: ''
 ms.date: 05/02/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 66c85ba9914b783295e9ed2143dc9ce107f64c4c
-ms.sourcegitcommit: 47b792755e655043d3db2f1fdb9a1eeb7453c636
+ms.openlocfilehash: 6c7baf237c4ca0be0e11428dcb2661b7b86ed39e
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "33619913"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771844"
 ---
 # <a name="build-an-excel-task-pane-add-in-using-angular"></a>Создание области задач Excel с помощью Angular
 
@@ -21,26 +21,21 @@ ms.locfileid: "33619913"
 
 ## <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
-1. Создайте проект надстройки Excel помощью генератора Yeoman. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
+Создайте проект надстройки Excel помощью генератора Yeoman. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
-    ```command&nbsp;line
-    yo office
-    ```
+```command&nbsp;line
+yo office
+```
 
-    - **Выберите тип проекта:** `Office Add-in Task Pane project using Angular framework`
-    - **Выберите тип сценария:** `TypeScript`
-    - **Как вы хотите назвать надстройку?** `My Office Add-in`
-    - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
+- **Выберите тип проекта:** `Office Add-in Task Pane project using Angular framework`
+- **Выберите тип сценария:** `TypeScript`
+- **Как вы хотите назвать надстройку?** `My Office Add-in`
+- **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
-    ![Генератор Yeoman](../images/yo-office-excel-angular-2.png)
+![Генератор Yeoman](../images/yo-office-excel-angular-2.png)
 
-    После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
+После завершения работы мастера генератор создает проект и устанавливает вспомогательные компоненты Node.
 
-2. Перейдите к корневой папке проекта.
-
-    ```command&nbsp;line
-    cd "My Office Add-in"
-    ```
 ## <a name="explore-the-project"></a>Знакомство с проектом
 
 Проект надстройки, который вы создали с помощью генератора Yeoman, содержит образец кода для простейшей надстройки области задач. Если вы хотите ознакомиться с ключевыми компонентами проекта надстройки, откройте проект в редакторе кода и просмотрите файлы, перечисленные ниже. Когда вы будете готовы попробовать собственную надстройку, перейдите к следующему разделу.
@@ -52,15 +47,21 @@ ms.locfileid: "33619913"
 
 ## <a name="try-it-out"></a>Проверка
 
-1. [!include[Start server section](../includes/quickstart-yo-start-server-excel.md)] 
+1. Перейдите к корневой папке проекта.
 
-2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
+    ```command&nbsp;line
+    cd "My Office Add-in"
+    ```
+
+2. [!include[Start server section](../includes/quickstart-yo-start-server-excel.md)] 
+
+3. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
     ![Кнопка надстройки Excel](../images/excel-quickstart-addin-3b.png)
 
-3. Выберите любой диапазон ячеек на листе.
+4. Выберите любой диапазон ячеек на листе.
 
-4. Внизу области задач выберите ссылку **Выполнить**, чтобы задать выбранному диапазону желтый цвет.
+5. Внизу области задач выберите ссылку **Выполнить**, чтобы задать выбранному диапазону желтый цвет.
 
     ![Надстройка Excel](../images/excel-quickstart-addin-3c.png)
 

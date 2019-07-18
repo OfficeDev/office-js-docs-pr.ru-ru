@@ -1,25 +1,72 @@
 ---
-title: Создание первой надстройки Excel с помощью jQuery
-description: ''
-ms.date: 03/19/2019
+title: Создание первой надстройки области задач Excel
+description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office.
+ms.date: 07/17/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: d1783d257b0d46c42f16cf5e1f261407a355a63d
-ms.sourcegitcommit: 68872372d181cca5bee37ade73c2250c4a56bab6
+ms.openlocfilehash: 568f27a596fda77f263a53b551eefebc287e68e3
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "33517081"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771865"
 ---
-# <a name="build-an-excel-add-in-using-jquery"></a>Создание надстройки Excel с помощью jQuery
+# <a name="build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel
 
-В этой статье мы разберем, как создать надстройку Excel, используя jQuery и API JavaScript для Excel. 
+В этой статье вы ознакомитесь с процессом создания надстройки области задач Excel. 
 
 ## <a name="create-the-add-in"></a>Создание надстройки
 
 [!include[Choose your editor](../includes/quickstart-choose-editor.md)]
 
-# <a name="visual-studiotabvisual-studio"></a>[Visual Studio](#tab/visual-studio)
+# <a name="yeoman-generatortabyeomangenerator"></a>[Генератор Yeoman](#tab/yeomangenerator)
+
+### <a name="prerequisites"></a>Необходимые условия
+
+[!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
+
+### <a name="create-the-add-in-project"></a>Создание проекта надстройки
+
+Создайте проект надстройки Excel помощью генератора Yeoman. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
+
+```command&nbsp;line
+yo office
+```
+
+- **Выберите тип проекта:** `Office Add-in Task Pane project`
+- **Выберите тип сценария:** `Javascript`
+- **Как вы хотите назвать надстройку?** `My Office Add-in`
+- **Какое клиентское приложение Office должно поддерживаться?** `Excel`
+
+![Генератор Yeoman](../images/yo-office-excel.png)
+
+После завершения работы мастера генератор создает проект и устанавливает вспомогательные компоненты Node.
+
+### <a name="explore-the-project"></a>Знакомство с проектом
+
+[!include[Yeoman generator add-in project components](../includes/yo-task-pane-project-components-js.md)]
+
+### <a name="try-it-out"></a>Проверка
+
+1. Перейдите к корневой папке проекта.
+
+    ```command&nbsp;line
+    cd "My Office Add-in"
+    ```
+
+2. [!include[Start server section](../includes/quickstart-yo-start-server-excel.md)] 
+
+3. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
+
+    ![Кнопка надстройки Excel](../images/excel-quickstart-addin-3b.png)
+
+4. Выберите любой диапазон ячеек на листе.
+
+5. Внизу области задач выберите ссылку **Выполнить**, чтобы задать выбранному диапазону желтый цвет.
+
+    ![Надстройка Excel](../images/excel-quickstart-addin-3c.png)
+
+# <a name="visual-studiotabvisualstudio"></a>[Visual Studio](#tab/visualstudio)
 
 ### <a name="prerequisites"></a>Необходимые компоненты
 
@@ -159,172 +206,11 @@ ms.locfileid: "33517081"
 
     ![Надстройка Excel](../images/excel-quickstart-addin-2c.png)
 
-# <a name="any-editortabvisual-studio-code"></a>[Любой редактор](#tab/visual-studio-code)
-
-### <a name="prerequisites"></a>Необходимые компоненты
-
-- [Node.js](https://nodejs.org)
-
-- Глобально установите последнюю версию [Yeoman](https://github.com/yeoman/yo) и [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
-    ```command&nbsp;line
-    npm install -g yo generator-office
-    ```
-
-### <a name="create-the-web-app"></a>Создание веб-приложения
-
-1. Создайте проект надстройки Excel помощью генератора Yeoman. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
-
-    ```command&nbsp;line
-    yo office
-    ```
-
-    - **Выберите тип проекта:** `Office Add-in project using Jquery framework`
-    - **Выберите тип сценария:** `Javascript`
-    - **Как вы хотите назвать надстройку?** `My Office Add-in`
-    - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
-
-    ![Генератор Yeoman](../images/yo-office-jquery.png)
-
-    После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
-
-2. Перейдите к корневой папке проекта.
-
-    ```command&nbsp;line
-    cd "My Office Add-in"
-    ```
-
-### <a name="update-the-code"></a>Обновление кода 
-
-1. В редакторе кода откройте файл **index.html** из корневой папки проекта. Этот файл содержит HTML-контент, который будет отображаться в области задач надстройки. 
-
-2. Замените тег `body` в файле **index.html** приведенной ниже разметкой и сохраните файл.
-
-    ```html
-    <body class="ms-font-m ms-welcome">
-        <div id="content-header">
-            <div class="padding">
-                <h1>Welcome</h1>
-            </div>
-        </div>
-        <div id="content-main">
-            <div class="padding">
-                <p>Choose the button below to set the color of the selected range to green.</p>
-                <br />
-                <h3>Try it out</h3>
-                <button class="ms-Button" id="set-color">Set color</button>
-            </div>
-        </div>
-        <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
-        <script type="text/javascript" src="node_modules/office-ui-fabric-js/dist/js/fabric.js"></script>
-    </body>
-    ```
-
-3. Откройте файл **src\index.js**, чтобы указать скрипт для надстройки. Замените все его содержимое следующим кодом и сохраните файл.
-
-    ```js
-    'use strict';
-
-    (function () {
-        Office.onReady(function() {
-            // Office is ready
-            $(document).ready(function () {
-                // The document is ready
-                $('#set-color').click(setColor);
-            });
-        });
-
-        function setColor() {
-            Excel.run(function (context) {
-                var range = context.workbook.getSelectedRange();
-                range.format.fill.color = 'green';
-
-                return context.sync();
-            }).catch(function (error) {
-                console.log("Error: " + error);
-                if (error instanceof OfficeExtension.Error) {
-                    console.log("Debug info: " + JSON.stringify(error.debugInfo));
-                }
-            });
-        }
-    })();
-    ```
-
-4. Откройте файл **app.css**, чтобы указать собственные стили для надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.
-
-    ```css
-    #content-header {
-        background: #2a8dd4;
-        color: #fff;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 80px;
-        overflow: hidden;
-    }
-
-    #content-main {
-        background: #fff;
-        position: fixed;
-        top: 80px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        overflow: auto;
-    }
-
-    .padding {
-        padding: 15px;
-    }
-    ```
-
-### <a name="update-the-manifest"></a>Обновление манифеста
-
-1. Откройте файл **manifest.xml**, чтобы определить параметры и возможности надстройки.
-
-2. Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.
-
-3. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его строкой **Надстройка области задач для Excel**.
-
-4. Сохраните файл.
-
-    ```xml
-    ...
-    <ProviderName>John Doe</ProviderName>
-    <DefaultLocale>en-US</DefaultLocale>
-    <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
-    <DisplayName DefaultValue="My Office Add-in" />
-    <Description DefaultValue="A task pane add-in for Excel"/>
-    ...
-    ```
-
-### <a name="start-the-dev-server"></a>Запуск сервера разработки
-
-[!include[Start server section](../includes/quickstart-yo-start-server.md)] 
-
-### <a name="try-it-out"></a>Проверка
-
-1. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.
-
-    - [Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
-    - [Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-online)
-    - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
-
-2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
-
-    ![Кнопка надстройки Excel](../images/excel-quickstart-addin-2b.png)
-
-3. Выберите любой диапазон ячеек на листе.
-
-4. В области задач нажмите кнопку **Set color** (Задать цвет), чтобы сделать выбранный диапазон зеленым.
-
-    ![Надстройка Excel](../images/excel-quickstart-addin-2c.png)
-
 ---
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Поздравляем, вы успешно создали надстройку Excel с помощью jQuery! Чтобы узнать больше о возможностях надстроек Excel и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Excel.
+Поздравляем! Вы успешно создали надстройку области задач Excel! Чтобы узнать больше о возможностях надстроек Excel и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Excel.
 
 > [!div class="nextstepaction"]
 > [Руководство по надстройкам Excel](../tutorials/excel-tutorial.md)
