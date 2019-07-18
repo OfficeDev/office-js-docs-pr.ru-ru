@@ -1,14 +1,14 @@
 ---
-ms.date: 07/01/2019
+ms.date: 07/15/2019
 description: Узнайте, как использовать различные параметры в пользовательских функциях, таких как диапазоны Excel, необязательные параметры, контекст вызова и многое другое.
 title: Параметры для пользовательских функций Excel
 localization_priority: Normal
-ms.openlocfilehash: 9416653d697bdf36ca698271e00d9742ff0e75a9
-ms.sourcegitcommit: 9c5a836d4464e49846c9795bf44cfe23e9fc8fbe
+ms.openlocfilehash: e5b75b098d64d5998b0393d5995896f0289337fc
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "35617046"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771426"
 ---
 # <a name="custom-functions-parameter-options"></a>Параметры параметров пользовательских функций
 
@@ -25,7 +25,7 @@ ms.locfileid: "35617046"
 ```js
 /**
  * Calculates the sum of the specified numbers
- * @customfunction 
+ * @customfunction
  * @param {number} first First number.
  * @param {number} second Second number.
  * @param {number} [third] Third number to add. If omitted, third = 0.
@@ -37,7 +37,6 @@ function add(first, second, third) {
   }
   return first + second + third;
 }
-CustomFunctions.associate("ADD", add);
 ```
 
 #### <a name="typescripttabtypescript"></a>[TypeScript](#tab/typescript)
@@ -45,7 +44,7 @@ CustomFunctions.associate("ADD", add);
 ```typescript
 /**
  * Calculates the sum of the specified numbers
- * @customfunction 
+ * @customfunction
  * @param first First number.
  * @param second Second number.
  * @param [third] Third number to add. If omitted, third = 0.
@@ -57,7 +56,6 @@ function add(first: number, second: number, third?: number): number {
   }
   return first + second + third;
 }
-CustomFunctions.associate("ADD", add);
 ```
 
 ---
@@ -77,8 +75,7 @@ CustomFunctions.associate("ADD", add);
  * @param {string} [dayOfWeek] Day of the week. If omitted, dayOfWeek = Wednesday.
  * @returns {string} Weather report for the day of the week in that zip code.
  */
-function getWeatherReport(zipCode, dayOfWeek)
-{
+function getWeatherReport(zipCode, dayOfWeek) {
   if (zipCode === null) {
     zipCode = 98052;
   }
@@ -102,8 +99,7 @@ function getWeatherReport(zipCode, dayOfWeek)
  * @param [dayOfWeek] Day of the week. If omitted, dayOfWeek = Wednesday.
  * @returns Weather report for the day of the week in that zip code.
  */
-function getWeatherReport(zipCode?: number, dayOfWeek?: string): string
-{
+function getWeatherReport(zipCode?: number, dayOfWeek?: string): string {
   if (zipCode === null) {
     zipCode = 98052;
   }
@@ -129,25 +125,110 @@ function getWeatherReport(zipCode?: number, dayOfWeek?: string): string
 /**
  * Returns the second highest value in a matrixed range of values.
  * @customfunction
- * @param {number[][]} values Multiple ranges of values.  
+ * @param {number[][]} values Multiple ranges of values.
  */
-function secondHighest(values){
-  let highest = values[0][0], secondHighest = values[0][0];
-  for(var i = 0; i < values.length; i++){
-    for(var j = 0; j < values[i].length; j++){
-      if(values[i][j] >= highest){
+function secondHighest(values) {
+  let highest = values[0][0],
+    secondHighest = values[0][0];
+  for (var i = 0; i < values.length; i++) {
+    for (var j = 0; j < values[i].length; j++) {
+      if (values[i][j] >= highest) {
         secondHighest = highest;
         highest = values[i][j];
-      }
-      else if(values[i][j] >= secondHighest){
+      } else if (values[i][j] >= secondHighest) {
         secondHighest = values[i][j];
       }
     }
   }
   return secondHighest;
 }
-CustomFunctions.associate("SECONDHIGHEST", secondHighest);
 ```
+
+## <a name="repeating-parameters"></a>Повторяющиеся параметры
+
+Повторяющийся параметр позволяет пользователю ввести ряд необязательных аргументов функции. При вызове функции значения задаются в массиве для параметра. Если имя параметра заканчивается числом, каждый аргумент увеличит значение, например `ADD(number1, [number2], [number3],…)`. Это соответствует соглашению, используемому для встроенных функций Excel.
+
+Приведенная ниже функция суммирует сумму чисел, адресов ячеек, а также диапазонов, если они введены.
+
+```TS
+/**
+* The sum of all of the numbers.
+* @customfunction
+* @param operands A number (such as 1 or 3.1415), a cell address (such as A1 or $E$11), or a range of cell addresses (such as B3:F12)
+*/
+
+function ADD(operands: number[][][]): number {
+  let total: number = 0;
+
+  operands.forEach(range => {
+    range.forEach(row => {
+      row.forEach(num => {
+        total += num;
+      });
+    });
+  });
+
+  return total;
+}
+```
+
+Эта функция отображается `=CONTOSO.ADD([operands], [operands]...)` в книге Excel.
+
+<img alt="The ADD custom function being entered into cell of an Excel worksheet" src="../images/operands.png" />
+
+### <a name="repeating-single-value-parameter"></a>Повторяющийся параметр с одним значением
+
+Повторяющийся одиночный параметр значения позволяет передавать несколько отдельных значений. Например, пользователь может ввести ADD (1, B2, 3). В следующем примере показано, как объявить параметр с одним значением.
+
+```JS
+/**
+ * @customfunction
+ * @param {number[]} singleValue An array of numbers that are repeating parameters.
+ */
+function addSingleValue(singleValue) {
+  let total = 0;
+  singleValue.forEach(value => {
+    total += value;
+  })
+
+  return total;
+}
+```
+
+### <a name="single-range-parameter"></a>Один параметр Range
+
+Один параметр диапазона технически не является повторяющимся параметром, но включается здесь, так как объявление очень похоже на повторяющиеся параметры. Она будет выглядеть как ADD (a2: B3), где один диапазон передается из Excel. В следующем примере показано, как объявить один параметр Range.
+
+```JS
+/**
+ * @customfunction
+ * @param {number[][]} singleRange
+ */
+function addSingleRange(singleRange) {
+  let total = 0;
+  singleRange.forEach(setOfSingleValues => {
+    setOfSingleValues.forEach(value => {
+      total += value;
+    })
+  })
+  return total;
+}
+```
+
+### <a name="repeating-range-parameter"></a>Параметр повторяющегося диапазона
+
+Параметр повторяющегося диапазона позволяет передавать несколько диапазонов или номеров. Например, пользователь может ввести ADD (5, B2, C3, 8, No5: E8). Повторяющиеся диапазоны обычно указываются с `number[][][]` типом, так как они представляют собой трехмерные матрицы. Пример приведен в основном примере для повторяющихся параметров (#repeating-Parameters).
+
+
+### <a name="declaring-repeating-parameters"></a>Объявление повторяющихся параметров
+В typescript укажите, что параметр является многомерным. Например, `ADD(values: number[])` указывает на одномерный массив, `ADD(values:number[][])` который указывает на двухмерный массив и т. д.
+
+В JavaScript используйте `@param values {number[]}` одномерные массивы, `@param <name> {number[][]}` для двумерных массивов и т. д. для дополнительных измерений.
+
+Для созданного вручную JSON убедитесь, что параметр указан как `"repeating": true` в файле JSON, а также проверьте, что параметры помечены как. `"dimensionality”: matrix`
+
+>[!NOTE]
+>Функции, содержащие повторяющиеся параметры, автоматически содержат параметр вызова в качестве последнего параметра. Дополнительные сведения о параметрах вызова можно найти в следующем разделе.
 
 ## <a name="invocation-parameter"></a>Параметр вызова
 
@@ -158,7 +239,7 @@ CustomFunctions.associate("SECONDHIGHEST", secondHighest);
 ```js
 /**
  * Add two numbers.
- * @customfunction 
+ * @customfunction
  * @param {number} first First number.
  * @param {number} second Second number.
  * @returns {number} The sum of the two (or optionally three) numbers.
@@ -166,7 +247,6 @@ CustomFunctions.associate("SECONDHIGHEST", secondHighest);
 function add(first, second, invocation) {
   return first + second;
 }
-CustomFunctions.associate("ADD", add);
 ```
 
 Параметр позволяет получить контекст вызывающей ячейки, который может быть полезен в некоторых сценариях, в том числе [Обнаружение адреса ячейки, которая вызывает настраиваемую функцию](#addressing-cells-context-parameter).
@@ -193,18 +273,17 @@ CustomFunctions.associate("ADD", add);
 function getAddress(invocation) {
   return invocation.address;
 }
-CustomFunctions.associate("GETADDRESS", getAddress);
 ```
 
 По умолчанию значения, возвращаемые из функции `getAddress`, соответствуют следующему формату: `SheetName!CellNumber`. Например, если функция вызвана с листа с названием Expenses (Расходы) в ячейке B2, возвращаемым значением будет `Expenses!B2`.
 
 ## <a name="next-steps"></a>Дальнейшие действия
+
 Сведения о том, как [сохранить состояние в пользовательских функциях](custom-functions-save-state.md) или использовать [переменные значения в пользовательских функциях](custom-functions-volatile.md).
 
 ## <a name="see-also"></a>См. также
 
 * [Получение и обработка данных с помощью пользовательских функций](custom-functions-web-reqs.md)
-* [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
 * [Метаданные пользовательских функций](custom-functions-json.md)
 * [Автоматическое генерирование метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md)
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)

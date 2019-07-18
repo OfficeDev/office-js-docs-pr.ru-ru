@@ -3,12 +3,12 @@ ms.date: 05/08/2019
 description: Сведения об основных сценариях при разработке пользовательских функций Excel, которые используют новую среду выполнения JavaScript.
 title: Среда выполнения для пользовательских функций Excel
 localization_priority: Normal
-ms.openlocfilehash: bc8635e370a7b48af07bc169c2d2334ef0fba8ef
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: e0246170bc80ec63705031cb32a36b5033d42f3a
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33951979"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771392"
 ---
 # <a name="runtime-for-excel-custom-functions"></a>Среда выполнения для пользовательских функций Excel
 
@@ -118,7 +118,7 @@ function StoreValue(key, value) {
 Чтобы создать надстройку, которая будет работать на различных платформах (один из основных клиентов надстроек Office), вам не следует выполнять доступ к модели DOM в пользовательских функциях или использовать библиотеки, такие как jQuery, которые используют модель DOM. В Excel для Windows, где пользовательские функции используют среду выполнения JavaScript, пользовательские функции не могут получить доступ к модели DOM.
 
 ## <a name="next-steps"></a>Дальнейшие действия
-Узнайте о важных рекомендациях [для пользовательских функций](custom-functions-best-practices.md).
+Узнайте, как [выполнять веб-запросы с пользовательскими функциями](custom-functions-web-reqs.md).
 
 ## <a name="see-also"></a>См. также
 

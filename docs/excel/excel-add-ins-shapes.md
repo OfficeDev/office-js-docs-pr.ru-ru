@@ -1,21 +1,18 @@
 ---
 title: Работать с фигурами с помощью API JavaScript для Excel
 description: ''
-ms.date: 03/21/2019
+ms.date: 07/19/2019
 localization_priority: Normal
-ms.openlocfilehash: e4d01c387fff01d68cb26369240a1e06e723a54c
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: fb3aa7495efb54332b2ae0bb4dee8b11249afd3a
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32448274"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771683"
 ---
-# <a name="work-with-shapes-using-the-excel-javascript-api-preview"></a>Работать с фигурами с помощью API JavaScript для Excel (Предварительная версия)
+# <a name="work-with-shapes-using-the-excel-javascript-api"></a>Работать с фигурами с помощью API JavaScript для Excel
 
-> [!NOTE]
-> API, обсуждаемые в этой статье, в настоящее время доступны только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
-
-Excel определяет фигуры как объекты, расположенные в графическом слое Excel. Это означает, что все за прев ячейке ячейка является фигурой. В этой статье описывается, как использовать геометрические фигуры, линии и изображения в сочетании с API [Shape]/жаваскрипт/АПИ/ексцел/ексцел.Шапе) и [ShapeCollection](/javascript/api/excel/excel.shapecollection) . [Диаграммы](/javascript/api/excel/excel.chart) рассматриваются в собственной статье [работать с диаграммами с помощью API JavaScript для Excel]] (Excel-Add-ins-Charts.md)).
+Excel определяет фигуры как объекты, расположенные в графическом слое Excel. Это означает, что все за прев ячейке ячейка является фигурой. В этой статье описывается, как использовать геометрические фигуры, линии и изображения в сочетании с API [Shape](/javascript/api/excel/excel.shape) и [ShapeCollection](/javascript/api/excel/excel.shapecollection) . [Диаграммы](/javascript/api/excel/excel.chart) рассматриваются в собственной статье, [работают с диаграммами с помощью API JavaScript для Excel](excel-add-ins-charts.md).
 
 ## <a name="create-shapes"></a>Создание фигур
 
@@ -25,13 +22,13 @@ Excel определяет фигуры как объекты, располож�
 
 | Shape | Добавление метода | Подпись |
 |-------|------------|-----------|
-| ГеоМетрическая фигура | [Адджеометрикшапе](/javascript/api/excel/excel.shapecollection#addgeometricshape-geometricshapetype-) | `addGeometricShape(geometricShapeType: Excel.GeometricShapeType): Excel.Shape` |
+| Геометрическая фигура | [Адджеометрикшапе](/javascript/api/excel/excel.shapecollection#addgeometricshape-geometricshapetype-) | `addGeometricShape(geometricShapeType: Excel.GeometricShapeType): Excel.Shape` |
 | Изображение (JPEG или PNG) | [Аддимаже](/javascript/api/excel/excel.shapecollection#addimage-base64imagestring-) | `addImage(base64ImageString: string): Excel.Shape` |
 | Line | [Аддлине](/javascript/api/excel/excel.shapecollection#addline-startleft--starttop--endleft--endtop--connectortype-) | `addLine(startLeft: number, startTop: number, endLeft: number, endTop: number, connectorType?: Excel.ConnectorType): Excel.Shape` |
 | SVG | [Аддсвг](/javascript/api/excel/excel.shapecollection#addsvg-xml-) | `addSvg(xml: string): Excel.Shape` |
 | Текстовое поле | [Аддтекстбокс](/javascript/api/excel/excel.shapecollection#addtextbox-text-) | `addTextBox(text?: string): Excel.Shape` |
 
-### <a name="geometric-shapes"></a>ГеоМетрические фигуры
+### <a name="geometric-shapes"></a>Геометрические фигуры
 
 Создается геометрическая фигура `ShapeCollection.addGeometricShape`. Этот метод принимает в качестве аргумента перечисление [жеометрикшапетипе](/javascript/api/excel/excel.geometricshapetype) .
 
@@ -138,7 +135,7 @@ Excel.run(function (context) {
 
 ## <a name="text-in-shapes"></a>Текст в фигурах
 
-ГеоМетрические фигуры могут содержать текст. Фигуры имеют `textFrame` свойство типа [TextFrame](/javascript/api/excel/excel.textframe). `TextFrame` Объект управляет параметрами отображения текста (например, поля и переполнение текста). `TextFrame.textRange`— Это объект [TextRange](/javascript/api/excel/excel.textrange) с текстовым контентом и параметрами шрифтов.
+Геометрические фигуры могут содержать текст. Фигуры имеют `textFrame` свойство типа [TextFrame](/javascript/api/excel/excel.textframe). `TextFrame` Объект управляет параметрами отображения текста (например, поля и переполнение текста). `TextFrame.textRange`— Это объект [TextRange](/javascript/api/excel/excel.textrange) с текстовым контентом и параметрами шрифтов.
 
 В примере кода ниже показано, как создать геометрическую фигуру с именем "Wave" и текстом "текст фигуры". Он также настраивает цвета фигуры и текста, а также задает горизонтальное выравнивание текста по центру.
 
@@ -255,4 +252,4 @@ Excel.run(function (context) {
 ## <a name="see-also"></a>См. также
 
 - [Основные концепции программирования с помощью API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
-- [Работа с диаграммами с использованием API JavaScript для Excel](excel-add-ins-charts.md)
+- [Работать с диаграммами с помощью API JavaScript для Excel](excel-add-ins-charts.md)

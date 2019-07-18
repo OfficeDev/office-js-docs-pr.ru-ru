@@ -5,12 +5,12 @@ ms.date: 06/20/2019
 ms.prod: excel
 ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: afd5d06e08a899d4441da51fc619d86de45e52d3
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 9efbd1380587244fae60551fe104f859d22b4aa2
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35126990"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771886"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -69,7 +69,7 @@ ms.locfileid: "35126990"
 5. Замените `TODO1` на приведенный ниже код. Этот код определяет, поддерживает ли установленная у пользователя версия Excel ту версию файла Excel.js, которая включает все API, используемые в этой серии руководств. В рабочей надстройке можно использовать текст условного блока, чтобы скрыть или отключить пользовательский интерфейс, где вызываются неподдерживаемые API. При этом пользователь по-прежнему сможет использовать те части надстройки, которые поддерживаются в его версии Excel.
 
     ```js
-    if (!Office.context.requirements.isSetSupported('ExcelApi', 1.7)) {
+    if (!Office.context.requirements.isSetSupported('ExcelApi', '1.7')) {
         console.log('Sorry. The tutorial add-in uses Excel.js APIs that are not available in your version of Office.');
     }
     ```
@@ -848,7 +848,7 @@ ms.locfileid: "35126990"
 8. Сохраните файл.
 
    > [!NOTE]
-   > Файл Popup. HTML и файл Popup. js, который он загружает, выполняются в полностью отдельном пограничный или в Internet Explorer 11 процесс из области задач надстройки. Если файл popup.js был передан в тот же файл bundle.js, что и файл app.js, надстройка загрузит два экземпляра файла bundle.js, и это отменяет цель объединения. Кроме того, файл Popup. js не содержит JavaScript, не поддерживаемый Internet Explorer 11. По этим двум причинам эта надстройка не передает файл popup.js вообще.
+   > Файл Popup. HTML и загружаемый файл Popup. js выполняются в полностью отдельном процессе Microsoft EDGE или Internet Explorer 11 из области задач надстройки. Если файл popup.js был передан в тот же файл bundle.js, что и файл app.js, надстройка загрузит два экземпляра файла bundle.js, и это отменяет цель объединения. Кроме того, файл Popup. js не содержит JavaScript, не поддерживаемый Internet Explorer 11. По этим двум причинам эта надстройка не передает файл popup.js вообще.
 
 ### <a name="open-the-dialog-from-the-task-pane"></a>Открытие диалогового окна из области задач
 

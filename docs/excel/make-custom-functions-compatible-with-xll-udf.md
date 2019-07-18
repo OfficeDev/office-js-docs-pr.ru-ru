@@ -3,12 +3,12 @@ title: Расширение пользовательских функций с �
 description: Обеспечение совместимости с пользовательскими функциями XLL в Excel, которые имеют эквивалентные функциональные возможности для пользовательских функций (Предварительная версия)
 ms.date: 06/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 8d476ecf777561b79b8bf9c5cf1e4712d7869d0e
-ms.sourcegitcommit: 4bf5159a3821f4277c07d89e88808c4c3a25ff81
+ms.openlocfilehash: fa80597d48859a29bcdbb5b900c251382dc87caa
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "35059694"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771655"
 ---
 # <a name="extend-custom-functions-with-xll-user-defined-functions-preview"></a>Расширение пользовательских функций с помощью определяемых пользователем функций XLL (Предварительная версия)
 
@@ -69,5 +69,4 @@ ms.locfileid: "35059694"
 ## <a name="see-also"></a>См. также
 
 - [Обеспечение совместимости надстройки Excel с существующей надстройкой COM](../develop/make-office-add-in-compatible-with-existing-com-add-in.md)
-- [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
 - [Руководство по настраиваемым функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)

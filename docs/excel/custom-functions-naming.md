@@ -1,14 +1,14 @@
 ---
-ms.date: 06/18/2019
+ms.date: 07/10/2019
 description: Узнайте о требованиях к именам пользовательских функций Excel и Избегайте распространенных ловушек именования.
 title: Рекомендации по именованию пользовательских функций в Excel
 localization_priority: Normal
-ms.openlocfilehash: 18858c45224b833c099c021920ff3d568ad2b3c3
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 79d0bfb069fe5abefeb6d0e88428d0728f3869e3
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128313"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771535"
 ---
 # <a name="naming-guidelines"></a>Рекомендации по именованию
 
@@ -63,6 +63,5 @@ Excel использует прописные буквы для встроенн
 ## <a name="see-also"></a>См. также
 
 * [Метаданные пользовательских функций](custom-functions-json.md)
-* [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
 * [Руководство по настраиваемым функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
 * [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)

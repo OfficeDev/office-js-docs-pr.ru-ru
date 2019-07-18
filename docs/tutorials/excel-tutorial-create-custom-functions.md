@@ -1,16 +1,16 @@
 ---
 title: Руководство по пользовательским функциям в Excel
 description: Из этого руководства вы узнаете, как создать надстройку, Excel, содержащую пользовательские функции, которые могут выполнять вычисления, запрашивать или передавать веб-данные.
-ms.date: 06/27/2019
+ms.date: 07/09/2019
 ms.prod: excel
 ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: 1aa05581d1b0dfb1f5affa019e51b84126c8d199
-ms.sourcegitcommit: 90c2d8236c6b30d80ac2b13950028a208ef60973
+ms.openlocfilehash: 9e1dc93079a3930fc5ebd88ef4d91ef2b899e51c
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "35454734"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771809"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -115,33 +115,30 @@ npm run start:web
 2. В файле **Function. js**добавьте следующий код: 
 
 ```JS
- /**
-   * Gets the star count for a given Github repository.
-   * @customfunction 
-   * @param {string} userName string name of Github user or organization.
-   * @param {string} repoName string name of the Github repository.
-   * @return {number} number of stars given to a Github repository.
-   */
-    async function getStarCount(userName, repoName) {
-      try {
-        //You can change this URL to any web request you want to work with.
-        const url = "https://api.github.com/repos/" + userName + "/" + repoName;
-        const response = await fetch(url);
-        //Expect that status code is in 200-299 range
-        if (!response.ok) {
-          throw new Error(response.statusText)
-        }
-          const jsonResponse = await response.json();
-          return jsonResponse.watchers_count;
+/**
+  * Gets the star count for a given Github repository.
+  * @customfunction 
+  * @param {string} userName string name of Github user or organization.
+  * @param {string} repoName string name of the Github repository.
+  * @return {number} number of stars given to a Github repository.
+  */
+  async function getStarCount(userName, repoName) {
+    try {
+      //You can change this URL to any web request you want to work with.
+      const url = "https://api.github.com/repos/" + userName + "/" + repoName;
+      const response = await fetch(url);
+      //Expect that status code is in 200-299 range
+      if (!response.ok) {
+        throw new Error(response.statusText)
       }
-      catch (error) {
-        return error;
-      }
-      }
-    CustomFunctions.associate("GETSTARCOUNT", getStarCount);
+        const jsonResponse = await response.json();
+        return jsonResponse.watchers_count;
+    }
+    catch (error) {
+      return error;
+    }
+  }
 ```
-
-Код `CustomFunctions.associate` сопоставляет `id` функции с адресом функции `getStarCount` в JavaScript, чтобы Excel мог вызвать вашу функцию.
 
 3. Выполните указанную ниже команду, чтобы повторно собрать проект.
 
@@ -194,8 +191,6 @@ function currentTime() {
   return new Date().toLocaleTimeString();
 }
 
-CustomFunctions.associate("CURRENTTIME", currentTime); 
-
  /**
  * Displays the current time once a second
  * @customfunction
@@ -211,10 +206,7 @@ function clock(invocation) {
     clearInterval(timer);
   };
 }
-CustomFunctions.associate("CLOCK", clock);
 ```
-
-Код `CustomFunctions.associate` сопоставляет `id` функции с адресом функции `CLOCK` в JavaScript, чтобы Excel мог вызвать вашу функцию.
 
 2. Выполните указанную ниже команду, чтобы повторно собрать проект.
 

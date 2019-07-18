@@ -1,14 +1,14 @@
 ---
-ms.date: 06/20/2019
+ms.date: 07/10/2019
 description: Отладка пользовательских функций в Excel.
 title: Отладка пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: d7c7f44ffcb22f66e8dccc58c12e957eefe07524
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 987df4fc638b94b7a5002c99aee6e36642f4e4a4
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128393"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771458"
 ---
 # <a name="custom-functions-debugging"></a>Отладка пользовательских функций
 
@@ -172,6 +172,5 @@ ms.locfileid: "35128393"
 ## <a name="see-also"></a>См. также
 
 * [Устранение неполадок пользовательских функций](custom-functions-troubleshooting.md)
-* [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
 * [Создание пользовательских функций, совместимых с функциями XLL, определенными пользователями](make-custom-functions-compatible-with-xll-udf.md)
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)

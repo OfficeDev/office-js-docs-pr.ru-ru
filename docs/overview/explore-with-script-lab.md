@@ -2,18 +2,18 @@
 title: Изучение API JavaScript для Office с помощью сценария Lab
 description: Используйте сценарий "Лаборатория" для изучения API Office JS и прототипов функций.
 ms.topic: article
-ms.date: 06/20/2019
+ms.date: 07/05/2019
 localization_priority: Normal
-ms.openlocfilehash: b74a7787507aed1970ddcb06d3cb3eb79653615a
-ms.sourcegitcommit: 6d1cb188c76c09d320025abfcc99db1b16b7e37b
+ms.openlocfilehash: f9f4a644c2d7b188c70142f4dcd2fd85dac035a7
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "35226778"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771858"
 ---
 # <a name="explore-office-javascript-api-using-script-lab"></a>Изучение API JavaScript для Office с помощью сценария Lab
 
-Надстройка " [Лаборатория скриптов](https://store.office.com/app.aspx?assetid=WA104380862)", доступная бесплатно из магазина Office, позволяет изучать API JavaScript для Office при работе с программами Office, такими как Excel или Word. Script Lab — удобное средство для добавления в набор средств разработки в качестве прототипа и проверки функциональных возможностей, которые должны быть в надстройке.
+Надстройка " [Лаборатория скриптов](https://appsource.microsoft.com/product/office/WA104380862)", доступная бесплатно из AppSource, позволяет изучать API JavaScript для Office при работе с программами Office, такими как Excel или Word. Script Lab — удобное средство для добавления в набор средств разработки в качестве прототипа и проверки функциональных возможностей, которые должны быть в надстройке.
 
 ## <a name="what-is-script-lab"></a>Что такое "Лаборатория скриптов"?
 
@@ -29,7 +29,7 @@ Script Lab — это средство для тех, кто хочет науч
 
 ### <a name="explore-samples"></a>Обзор примеров
 
-Быстро приступите к работе со статьей встроенных примеров фрагментов, демонстрирующих выполнение определенных задач с помощью API. Вы можете запустить примеры, чтобы сразу увидеть результат в области задач или документе, изучите примеры, чтобы узнать, как работает API, и даже использовать примеры фрагментов в качестве основы для функций создания прототипов в собственной надстройке.
+Быстро приступите к работе со статьей встроенных примеров фрагментов, демонстрирующих выполнение задач с помощью API. Вы можете запустить примеры, чтобы сразу увидеть результат в области задач или документе, изучить примеры, чтобы узнать, как работает API, и даже использовать примеры для создания прототипа собственной надстройки.
 
 ![Примеры](../images/script-lab-samples.jpg)
 
@@ -62,12 +62,14 @@ Script Lab — это средство для тех, кто хочет науч
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
+Чтобы использовать сценарий "Лаборатория" в Excel, Word или PowerPoint, установите [надстройку "Лаборатория скриптов](https://appsource.microsoft.com/product/office/WA104380862) " из AppSource. 
+
 Вы можете развернуть учебную библиотеку в лаборатории сценариев, дополнив новые фрагменты кода в репозиторий GitHub для [Office – JS: Snippets](https://github.com/OfficeDev/office-js-snippets#office-js-snippets) .
 
-Когда вы будете готовы создать надстройку для Office, ознакомьтесь с [5 минутным кратким руководством](/office/dev/add-ins/#5-minute-quick-starts) для предпочитаемого приложения Office.
+Когда вы будете готовы создать свою первую надстройку Office, ознакомьтесь с кратким руководством для [Excel](../quickstarts/excel-quickstart-jquery.md), [Outlook](/outlook/add-ins/quick-start?context=office/dev/add-ins/context), [Word](../quickstarts/word-quickstart.md), [OneNote](../quickstarts/onenote-quickstart.md), [PowerPoint](../quickstarts/powerpoint-quickstart.md)или [Project](../quickstarts/project-quickstart.md).
 
 ## <a name="see-also"></a>См. также
 
-- [Получение лаборатории сценариев](https://store.office.com/app.aspx?assetid=WA104380862)
+- [Получение лаборатории сценариев](https://appsource.microsoft.com/product/office/WA104380862)
 - [Дополнительные сведения о лаборатории сценариев](https://github.com/OfficeDev/script-lab#script-lab-a-microsoft-garage-project)
 - [Регистрация в программе для разработки](https://developer.microsoft.com/office/dev-program)

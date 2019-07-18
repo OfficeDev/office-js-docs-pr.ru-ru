@@ -16,9 +16,9 @@
 
 - Файл XML-манифеста (GetDoc_App.xml) для надстройки, доступный в общей сетевой папке или каталоге надстроек. Файл манифеста должен указывать на расположение HTML-файла, упомянутого ранее.
 
-Вы также можете создать надстройку для PowerPoint или Word, используя [Visual Studio](../quickstarts/powerpoint-quickstart.md?tabs=visual-studio) или [любой редактор](../quickstarts/powerpoint-quickstart.md?tabs=visual-studio-code). 
+Вы также можете создать надстройку для PowerPoint с помощью [Visual Studio](../quickstarts/powerpoint-quickstart.md?tabs=visualstudio) или [генератора Yeoman для надстроек Office](../quickstarts/powerpoint-quickstart.md?tabs=yeomangenerator) или для Word с помощью [Visual Studio](../quickstarts/word-quickstart.md?tabs=visualstudio) или [генератора Yeoman для надстроек Office](../quickstarts/word-quickstart.md?tabs=yeomangenerator).
 
-### <a name="core-concepts-to-know-for-creating-a-task-pane-add-in"></a>Что нужно знать для создания надстроек области задач
+### <a name="core-concepts-to-know-for-creating-a-task-pane-add-in"></a>Основные понятия, позволяющие создавать надстройки области задач
 
 Прежде чем приступать к разработке этой надстройки для PowerPoint или Word, ознакомьтесь с созданием Надстройки Office и работой с HTTP-запросами. В этой статье не рассмотрен способ расшифровки текста из HTTP-запросов на веб-сервере, зашифрованного с помощью Base64. 
 

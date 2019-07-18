@@ -3,12 +3,12 @@ title: Открытые спецификации API JavaScript для Office
 description: ''
 ms.date: 06/10/2019
 localization_priority: Normal
-ms.openlocfilehash: f3212e411363abce0aca824dc82bbb4921b80d1d
-ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
+ms.openlocfilehash: c7681ad307f290819a3f65185855dfb9c234ce38
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "34910268"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771781"
 ---
 # <a name="api-open-specifications"></a>Открытые спецификации API
 
@@ -24,7 +24,7 @@ ms.locfileid: "34910268"
 ## <a name="see-also"></a>См. также
 
 - [Справочные материалы по API предварительной версии Excel](/javascript/api/excel)
-- [Предварительная версия набора обязательных элементов API JavaScript для Excel](../requirement-sets/excel-api-requirement-sets.md#excel-javascript-preview-apis)
+- [Предварительная версия набора обязательных элементов API JavaScript для Excel](../requirement-sets/excel-preview-apis.md)
 - [Справочные материалы по API предварительной версии Outlook](/javascript/api/outlook)
 - [Предварительная версия набора обязательных элементов API JavaScript для Outlook](..//objectmodel/preview-requirement-set/outlook-requirement-set-preview.md)
 - [Справочные материалы по API для предварительной версии Word](/javascript/api/word)

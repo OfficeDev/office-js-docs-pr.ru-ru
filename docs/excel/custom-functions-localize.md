@@ -1,14 +1,14 @@
 ---
-ms.date: 06/18/2019
+ms.date: 07/10/2019
 description: Локализация пользовательских функций Excel.
 title: Локализация пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: 7348562a232f87607d5f9becad85e897f22ad99d
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: cbb8e3bf5bc12e9df6ff77cbede4c9f0a8deca78
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127865"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771570"
 ---
 # <a name="localize-custom-functions"></a>Локализация пользовательских функций
 
@@ -105,5 +105,4 @@ ms.locfileid: "35127865"
 
 * [Метаданные пользовательских функций](custom-functions-json.md)
 * [Автоматическое генерирование метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md)
-* [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)

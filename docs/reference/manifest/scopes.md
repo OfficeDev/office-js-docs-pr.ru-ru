@@ -3,16 +3,16 @@ title: Элемент Scopes в файле манифеста
 description: ''
 ms.date: 10/09/2018
 localization_priority: Normal
-ms.openlocfilehash: 903f7ff68313549234c07926cc63dc7e783ae400
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: cdc9ebeb6fe4167a5ed5e9407f6ecc82d5b8d507
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451943"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771788"
 ---
 # <a name="scopes-element"></a>Элемент Scopes
 
-Содержит разрешения, необходимые надстройке для работы с Microsoft Graph. Магазин Office использует элемент Scopes для создания диалогового окна подтверждения. Когда пользователи устанавливают надстройку из Магазина, им предлагается предоставить ей указанные разрешения на доступ к данным Microsoft Graph.
+Содержит разрешения, необходимые надстройке для работы с Microsoft Graph. AppSource использует элемент scopes для создания диалогового окна согласия. Когда пользователи устанавливают надстройку из Магазина, им предлагается предоставить ей указанные разрешения на доступ к данным Microsoft Graph.
 
 ## <a name="child-elements"></a>Дочерние элементы
 
