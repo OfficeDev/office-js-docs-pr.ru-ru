@@ -1,18 +1,18 @@
 ---
-ms.date: 06/27/2019
+ms.date: 07/15/2019
 description: Использование тегов JSDoc для динамического создания метаданных JSON пользовательских функций.
 title: Автоматическое генерирование метаданных JSON для пользовательских функций
 localization_priority: Priority
-ms.openlocfilehash: 1230e1bfdeead306531a218373c2756b29fa4abe
-ms.sourcegitcommit: 90c2d8236c6b30d80ac2b13950028a208ef60973
+ms.openlocfilehash: afcfb6ff869acf1d508ebda7fc242dd9724bf165
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "35454659"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771321"
 ---
 # <a name="autogenerate-json-metadata-for-custom-functions"></a>Автоматическое генерирование метаданных JSON для пользовательских функций
 
-Если пользовательская функция Excel написана в JavaScript или TypeScript, теги JSDoc используются для предоставления дополнительной информации о пользовательской функции. Теги JSDoc используются при сборке для создания [файла метаданных JSON](custom-functions-json.md). Использование тегов JSDoc освобождает вас от необходимости редактировать файл метаданных JSON вручную.
+Если пользовательская функция Excel написана в JavaScript или TypeScript, [теги JSDoc](https://jsdoc.app/) используются для предоставления дополнительной информации о пользовательской функции. Теги JSDoc используются при сборке для создания [файла метаданных JSON](custom-functions-json.md). Использование тегов JSDoc освобождает вас от необходимости редактировать файл метаданных JSON вручную.
 
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
@@ -66,11 +66,9 @@ ms.locfileid: "35454659"
 
 Синтаксис: @customfunction _id_ _name_
 
-Укажите этот тег, чтобы рассматривать функцию JavaScript или TypeScript как пользовательскую функцию Excel. 
+Укажите этот тег, чтобы рассматривать функцию JavaScript или TypeScript как пользовательскую функцию Excel.
 
 Этот тег необходим, чтобы создать метаданные для пользовательской функции.
-
-Кроме того, требуется вызов функции `CustomFunctions.associate("id", functionName);`
 
 В следующем примере показан самый простой способ объявления пользовательской функции.
 
@@ -222,7 +220,7 @@ function add(first: number, second: number): number {
 
 Указывает, что следует предоставлять адрес ячейки, в которой вычисляется функция.
 
-Тип последнего параметра функции должен быть `CustomFunctions.Invocation` или производной от него. При вызове функции свойство `address` будет содержать адрес. Пример функции, использующей тег `@requiresAddress`, см. в разделе [Обращение к параметру контекста ячейки](./custom-functions-parameter-options.md#addressing-cells-context-parameter)
+Тип последнего параметра функции должен быть `CustomFunctions.Invocation` или производной от него. При вызове функции свойство `address` будет содержать адрес. Пример функции, использующей тег `@requiresAddress`, см. в разделе [Обращение к параметру контекста ячейки](custom-functions-parameter-options.md#addressing-cells-context-parameter)
 
 ---
 ### <a name="returns"></a>@returns
@@ -297,7 +295,7 @@ function roll6sided(): number {
 
 ### <a name="matrix-type"></a>Тип "матрица"
 
-Используйте тип двумерного массива, чтобы параметр или возвращаемое значение представляли собой матрицу значений. Например, тип `number[][]` указывает на матрицу чисел. `string[][]` указывает на матрицу строк. 
+Используйте тип двумерного массива, чтобы параметр или возвращаемое значение представляли собой матрицу значений. Например, тип `number[][]` указывает на матрицу чисел. `string[][]` указывает на матрицу строк.
 
 ### <a name="error-type"></a>Тип "ошибка"
 
@@ -319,5 +317,4 @@ function roll6sided(): number {
 ## <a name="see-also"></a>Дополнительные ресурсы
 
 * [Метаданные пользовательских функций](custom-functions-json.md)
-* [Рекомендации по пользовательским функциям](custom-functions-best-practices.md)
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)
