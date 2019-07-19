@@ -1,43 +1,95 @@
 ---
 title: Использование Office UI Fabric React в надстройках Office
-description: ''
-ms.date: 02/28/2019
+description: Использование Office UI Fabric React в надстройках Office
+ms.date: 07/11/2019
 localization_priority: Priority
-ms.openlocfilehash: 11bb9daf99d85f1c4551363e9f04056870631378
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 7166e9a13c89a1ef2a52659bf31561574f544420
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449031"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771351"
 ---
 # <a name="use-office-ui-fabric-react-in-office-add-ins"></a>Использование Office UI Fabric React в надстройках Office
 
 Office UI Fabric — это интерфейсная платформа JavaScript для построения взаимодействия с пользователем в Office и Office 365. Если вы разрабатываете надстройку с использованием React, пользовательский интерфейс рекомендуется создать с помощью Fabric React. В Fabric предоставлены некоторые компоненты дизайна на основе React, например кнопки и флажки, которые можно использовать в надстройке.
 
-Чтобы использовать компоненты Fabric React в своей надстройке, выполните указанные ниже действия.
+В этой статье объясняется, как создать надстройку с помощью React и использованием компонентов Fabric React. 
 
 > [!NOTE]
-> Если вы выполните действия, описанные в этой статье, в надстройке также будет доступен компонент Fabric Core.
+> В Fabric React используется[Fabric Core](office-ui-fabric.md#use-fabric-core-icons-fonts-colors), поэтому после выполнения вами действий, указанных в этой статье, ваша надстройка будет включать и доступ к Fabric Core.
 
-## <a name="step-1---create-your-project-with-the-yeoman-generator-for-office"></a>Шаг 1. Создание проекта с помощью генератора Yeoman для Office
+## <a name="create-an-add-in-project"></a>Создание проекта надстройки
 
-Чтобы создать надстройку, в которой используется Fabric React, рекомендуется использовать генератор Yeoman для Office. Генератор Yeoman для Office обеспечивает формирование шаблонов для проектов и управление сборкой, необходимые для разработки надстройки Office.
+Чтобы создать надстройку с использованием React, рекомендуется воспользоваться генератором Yeoman для надстроек Office.
 
-Чтобы создать проект, выполните следующие действия, используя **Windows PowerShell** (а не командную строку):
+### <a name="install-the-prerequisites"></a>Установка необходимых компонентов
 
-1. Установите необходимые компоненты.
-2. Запустите `yo office`, чтобы создать файлы проекта для надстройки.
-3. Когда вам будет предложено выбрать клиентское приложение Office, выберите **Word**.
-4. Перейдите к каталогу с файлами проекта и запустите `npm start`. Автоматически откроется окно браузера с вертушкой.
-5. [Загрузите неопубликованный манифест](../testing/test-debug-office-add-ins.md), чтобы просмотреть весь пользовательский интерфейс надстройки.
+[!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
-## <a name="step-2---add-a-fabric-react-component"></a>Шаг 2. Добавление компонента Fabric React
+### <a name="create-the-project"></a>Создание проекта
 
-Теперь добавьте в надстройку компоненты Fabric React. Создайте компонент React под названием `ButtonPrimaryExample`, который состоит из элементов Label и PrimaryButton из Fabric React. Создание `ButtonPrimaryExample`
+С помощью генератора Yeoman создайте проект надстройки Word. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
-1. Откройте папку проекта, созданную генератором Yeoman, и перейдите в раздел **src\components**.
-2. Создайте файл **button.tsx**.
-3. В файле **button.tsx** введите указанный код, чтобы создать компонент `ButtonPrimaryExample`.
+```command&nbsp;line
+yo office
+```
+
+- **Выберите тип проекта:** `Office Add-in Task Pane project using React framework`
+- **Выберите тип сценария:** `TypeScript`
+- **Как вы хотите назвать надстройку?** `My Office Add-in`
+- **Какое клиентское приложение Office должно поддерживаться?** `Word`
+
+![Генератор Yeoman](../images/yo-office-word-react.png)
+
+После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
+
+### <a name="try-it-out"></a>Проверка
+
+1. Перейдите к корневой папке проекта.
+
+    ```command&nbsp;line
+    cd "My Office Add-in"
+    ```
+
+2. Выполните следующие действия, чтобы запустить локальный веб-сервер и загрузить неопубликованную надстройку.
+
+    > [!NOTE]
+    > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите одну из указанных ниже команд, примите предложение установить сертификат, предоставленный генератором Yeoman.
+
+    > [!TIP]
+    > Если вы тестируете надстройку на компьютере Mac, перед тем, как продолжить, выполните приведенную ниже команду. После выполнения этой команды запустится локальный веб-сервер.
+    >
+    > ```command&nbsp;line
+    > npm run dev-server
+    > ```
+
+    - Чтобы проверить надстройку в Word, выполните приведенную ниже команду в корневом каталоге своего проекта. При этом запускается локальный веб-сервер (если он еще не запущен) и открывается приложение Word с загруженной надстройкой.
+
+        ```command&nbsp;line
+        npm start
+        ```
+
+    - Чтобы проверить надстройку в Word в браузере, выполните приведенную ниже команду в корневом каталоге проекта. После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).
+
+        ```command&nbsp;line
+        npm run start:web
+        ```
+
+        Чтобы использовать надстройку, откройте новый документ в Word в Интернете, а затем загрузите неопубликованную надстройку, следуя инструкциям из статьи [Загрузка неопубликованных надстроек Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web).
+
+3. В Word выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки. Обратите внимание на текст по умолчанию и кнопку **Запустить** в нижней части области задач. Следуя этой инструкции до конца, вы переопределите эти текст и кнопку, создав компонент React с использованием компонентов дизайна Fabric React.
+
+    ![Снимок экрана c приложением Word с выделенными кнопками "Показать область задач", "Запустить" и предшествующим текстом в области задач](../images/word-task-pane-yo-default.png)
+
+
+## <a name="create-a-react-component-that-uses-fabric-react"></a>Создание компонента React c использованием Fabric React
+
+На этом этапе вы уже создали самую простую надстройку в области задач c использованием React. Теперь выполните приведенные ниже действия, чтобы создать новый компонент React (`ButtonPrimaryExample`) в проекте надстройки. В этом компоненте будут использованы компоненты `Label` и `PrimaryButton` из Fabric React.
+
+1. Откройте папку проекта, созданную генератором Yeoman, и перейдите в раздел **src\taskpane\components**.
+2. Создайте в этой папке новый файл под названием**Button.tsx**.
+3. Введите в файл **Button.tsx** приведенный ниже код, чтобы определить компонент `ButtonPrimaryExample`.
 
 ```typescript
 import * as React from 'react';
@@ -45,18 +97,18 @@ import { PrimaryButton, IButtonProps } from 'office-ui-fabric-react/lib/Button';
 import { Label } from 'office-ui-fabric-react/lib/Label';
 
 export class ButtonPrimaryExample extends React.Component<IButtonProps, {}> {
-  public constructor() {
-    super();
+  public constructor(props) {
+    super(props);
   }
 
-   insertText = async () => {
-        // In the click event, write text to the document.
-        await Word.run(async (context) => {
-            let body = context.document.body;
-            body.insertParagraph('Hello Office UI Fabric React!', Word.InsertLocation.end);
-            await context.sync();
-        });
-    }
+  insertText = async () => {
+    // In the click event, write text to the document.
+    await Word.run(async (context) => {
+      let body = context.document.body;
+      body.insertParagraph('Hello Office UI Fabric React!', Word.InsertLocation.end);
+      await context.sync();
+    });
+  }
 
   public render() {
     let { disabled } = this.props;
@@ -77,44 +129,57 @@ export class ButtonPrimaryExample extends React.Component<IButtonProps, {}> {
 Этот код выполняет следующие действия:
 
 - Ссылается на библиотеку React с помощью `import * as React from 'react';`.
-- Ссылается на компоненты Fabric (PrimaryButton, IButtonProps, Label), которые используются для создания `ButtonPrimaryExample`.
-- Объявляет и публикует новый компонент `ButtonPrimaryExample` с помощью `export class ButtonPrimaryExample extends React.Component`.
-- Объявляет функцию `insertText` для обработки события `onClick`.
-- Определяет пользовательский интерфейс компонента React в функции `render`. Отрисовка определяет структуру компонента. В `render` для подключения события `onClick` используется `this.insertText`.
+- Ссылается на компоненты Fabric (`PrimaryButton`, `IButtonProps`, `Label`), которые используются для создания `ButtonPrimaryExample`.
+- Объявляет новый компонент `ButtonPrimaryExample` с помощью `export class ButtonPrimaryExample extends React.Component`.
+- Объявляет функцию `insertText` для обработки события кнопки `onClick`.
+- Определяет пользовательский интерфейс компонента React в функции `render`. В HTML-разметке используются компоненты `Label` и `PrimaryButton` из Fabric React и указывается, что при подключения события `onClick` будет запускаться функция `insertText`.
 
-## <a name="step-3---add-the-react-component-to-your-add-in"></a>Шаг 3. Добавление компонента React в надстройку
+## <a name="add-the-react-component-to-your-add-in"></a>Добавление компонента React в надстройку
 
-Добавьте `ButtonPrimaryExample` к своей надстройке. Для этого откройте файл **src\components\app.tsx** и выполните перечисленные действия.
+Добавьте компонент `ButtonPrimaryExample` к своей надстройке. Для этого откройте файл **src\components\App.tsx** и выполните указанные ниже действия.
 
-- Добавьте указанный оператор импорта для ссылки на `ButtonPrimaryExample` из файла **button.tsx**, созданного в шаге 2 (расширение файла не требуется).
+1. Добавьте приведенный ниже оператор импорта для ссылки на `ButtonPrimaryExample` из **Button.tsx**.
 
-  ```typescript
-  import {ButtonPrimaryExample} from './button';
-  ```
+    ```typescript
+    import {ButtonPrimaryExample} from './Button';
+    ```
 
-- Замените функцию `render()` по умолчанию на приведенный ниже код, в котором используется `<ButtonPrimaryExample />`.
+2. Удалите два приведенные ниже оператора импорта.
 
-  ```typescript
-  render() {
+    ```typescript
+    import { Button, ButtonType } from 'office-ui-fabric-react';
+    ...
+    import Progress from './Progress';
+    ```
+
+3. Замените функцию по умолчанию `render()` на приведенный ниже код, в котором используется `ButtonPrimaryExample`.
+
+    ```typescript
+    render() {
       return (
-          <div className="ms-welcome">
-          <Header logo="assets/logo-filled.png" title={this.props.title} message="Welcome" />
-          <HeroList message="Discover what this add-in can do for you today!" items={this.state.listItems} >
-              <ButtonPrimaryExample />
-          </HeroList>
-          </div>
+        <div className="ms-welcome">
+        <Header logo="assets/logo-filled.png" title={this.props.title} message="Welcome" />
+        <HeroList message="Discover what this add-in can do for you today!" items={this.state.listItems} >
+          <ButtonPrimaryExample />
+        </HeroList>
+        </div>
       );
-  }
-  ```
+    }
+    ```
 
-Сохраните изменения. Все открытые экземпляры браузеров, включая надстройку, автоматически обновятся и отобразят компонент React `ButtonPrimaryExample`. Обратите внимание, что текст по умолчанию и кнопка заменяются текстом и основной кнопкой, определенной в `ButtonPrimaryExample`.
+  4. Сохраните изменения, внесенные в **App.tsx**.
 
+## <a name="see-the-result"></a>Результат
 
+После сохранения изменений в **App.tsx** область задач надстройки в Word обновляется автоматически.  Текст по умолчанию и кнопка в нижней части области задач теперь отображают пользовательский интерфейс, определяемый компонентом `ButtonPrimaryExample`. Нажмите кнопку **Вставить текст...** для вставки текста в документ.
+
+![Снимок экрана c приложением Word с выделенными кнопкой "Вставить текст..." и предшествующим текстом](../images/word-task-pane-with-react-component.png)
+
+Поздравляем! Вы успешно создали надстройку области задач с помощью React и Office UI Fabric React! 
 
 ## <a name="see-also"></a>См. также
 
+- [Office UI Fabric в надстройках Office](office-ui-fabric.md)
 - [Office UI Fabric React](https://developer.microsoft.com/fabric)
-- [Конструктивные шаблоны для надстроек Office](../design/ux-design-pattern-templates.md)
+- [Конструктивные шаблоны для надстроек Office](ux-design-pattern-templates.md)
 - [Начало работы с примером кода Fabric React](https://github.com/OfficeDev/Word-Add-in-GettingStartedFabricReact)
-- [Пример пользовательского интерфейса Fabric для надстройки Office (используется Fabric 1.0)](https://github.com/OfficeDev/Office-Add-in-Fabric-UI-Sample)
-- [Генератор Yeoman для Office](https://github.com/OfficeDev/generator-office)

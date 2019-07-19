@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Word
-description: ''
-ms.date: 06/20/2019
+description: Узнайте, как создать простую надстройку области задач Word, используя API JS для Office.
+ms.date: 07/17/2019
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 24b6dd035ae25f97f08e3b8e68154a1f4a1a1769
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 9f3c345257bb222e2fdf1aab0b558442d830e89a
+ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128575"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "35771822"
 ---
 # <a name="build-your-first-word-task-pane-add-in"></a>Создание первой надстройки области задач Word
 
@@ -21,7 +21,76 @@ _Область применения: Word 2016 и более поздних в
 
 [!include[Choose your editor](../includes/quickstart-choose-editor.md)]
 
-# <a name="visual-studiotabvisual-studio"></a>[Visual Studio](#tab/visual-studio)
+# <a name="yeoman-generatortabyeomangenerator"></a>[Генератор Yeoman](#tab/yeomangenerator)
+
+### <a name="prerequisites"></a>Необходимые условия
+
+[!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
+
+### <a name="create-the-add-in-project"></a>Создание проекта надстройки
+
+С помощью генератора Yeoman создайте проект надстройки Word. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
+
+```command&nbsp;line
+yo office
+```
+
+- **Выберите тип проекта:** `Office Add-in Task Pane project`
+- **Выберите тип сценария:** `Javascript`
+- **Как вы хотите назвать надстройку?** `My Office Add-in`
+- **Какое клиентское приложение Office должно поддерживаться?** `Word`
+
+![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-word.png)
+
+После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
+
+### <a name="explore-the-project"></a>Знакомство с проектом
+
+[!include[Yeoman generator add-in project components](../includes/yo-task-pane-project-components-js.md)]
+
+### <a name="try-it-out"></a>Проверка
+
+1. Перейдите к корневой папке проекта.
+
+    ```command&nbsp;line
+    cd "My Office Add-in"
+    ```
+
+2. Выполните указанные ниже действия, чтобы запустить локальный веб-сервер и загрузить неопубликованную надстройку.
+
+    > [!NOTE]
+    > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите одну из указанных ниже команд, примите предложение установить сертификат, предоставленный генератором Yeoman.
+
+    > [!TIP]
+    > Если вы тестируете надстройку на компьютере Mac, перед продолжением выполните приведенную ниже команду. После выполнения этой команды запустится локальный веб-сервер.
+    >
+    > ```command&nbsp;line
+    > npm run dev-server
+    > ```
+
+    - Чтобы проверить надстройку в Word, выполните приведенную ниже команду в корневом каталоге своего проекта. При этом запускается локальный веб-сервер (если он еще не запущен) и открывается приложение Word с загруженной надстройкой.
+
+        ```command&nbsp;line
+        npm start
+        ```
+
+    - Чтобы проверить надстройку в Word в браузере, выполните приведенную ниже команду в корневом каталоге проекта. После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).
+
+        ```command&nbsp;line
+        npm run start:web
+        ```
+
+        Чтобы использовать надстройку, откройте новый документ в Word в Интернете, а затем загрузите неопубликованную надстройку, следуя инструкциям из статьи [Загрузка неопубликованных надстроек Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web).
+
+3. В Word откройте новый документ, выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
+
+    ![Снимок экрана: приложение Word с выделенной кнопкой "Показать область задач"](../images/word-quickstart-addin-2b.png)
+
+4. В нижней части области задач выберите ссылку **Выполнить**, чтобы добавить текст "Hello World" синего цвета в документ.
+
+    ![Снимок экрана: приложение Word с загруженной надстройкой области задач](../images/word-quickstart-addin-1c.png)
+
+# <a name="visual-studiotabvisualstudio"></a>[Visual Studio](#tab/visualstudio)
 
 ### <a name="prerequisites"></a>Необходимые компоненты
 
@@ -81,7 +150,7 @@ _Область применения: Word 2016 и более поздних в
             $(document).ready(function () {
                 // The document is ready
                 // Use this to check whether the API is supported in the Word client.
-                if (Office.context.requirements.isSetSupported('WordApi', 1.1)) {
+                if (Office.context.requirements.isSetSupported('WordApi', '1.1')) {
                     // Do something that is only available via the new APIs
                     $('#emerson').click(insertEmersonQuoteAtSelection);
                     $('#checkhov').click(insertChekhovQuoteAtTheBeginning);
@@ -232,75 +301,6 @@ _Область применения: Word 2016 и более поздних в
 3. В области задач нажмите любую кнопку, чтобы добавить стандартный текст в документ.
 
     ![Снимок экрана: приложение Word с загруженной надстройкой, добавляющей стандартный текст.](../images/word-quickstart-addin-1b.png)
-
-# <a name="any-editortabvisual-studio-code"></a>[Любой редактор](#tab/visual-studio-code)
-
-### <a name="prerequisites"></a>Необходимые условия
-
-[!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
-
-### <a name="create-the-add-in-project"></a>Создание проекта надстройки
-
-1. С помощью генератора Yeoman создайте проект надстройки Word. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
-
-    ```command&nbsp;line
-    yo office
-    ```
-
-    - **Выберите тип проекта:** `Office Add-in Task Pane project`
-    - **Выберите тип сценария:** `Javascript`
-    - **Как вы хотите назвать надстройку?** `My Office Add-in`
-    - **Какое клиентское приложение Office должно поддерживаться?** `Word`
-
-    ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-word.png)
-
-    После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
-
-2. Перейдите к корневой папке проекта.
-
-    ```command&nbsp;line
-    cd "My Office Add-in"
-    ```
-
-### <a name="explore-the-project"></a>Знакомство с проектом
-
-[!include[Yeoman generator add-in project components](../includes/yo-task-pane-project-components-js.md)]
-
-### <a name="try-it-out"></a>Проверка
-
-1. Выполните следующие действия, чтобы запустить локальный веб-сервер и загрузить неопубликованную надстройку.
-
-    > [!NOTE]
-    > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите одну из указанных ниже команд, примите предложение установить сертификат, предоставленный генератором Yeoman.
-
-    > [!TIP]
-    > Если вы тестируете надстройку на компьютере Mac, перед продолжением выполните указанную ниже команду. После выполнения этой команды запустится локальный веб-сервер.
-    >
-    > ```command&nbsp;line
-    > npm run dev-server
-    > ```
-
-    - Чтобы проверить надстройку в Word, выполните следующую команду в корневом каталоге своего проекта. Когда вы выполните эту команду, запустится локальный веб-сервер (если он еще не запущен) и откроется приложение Word, в котором будет загружена ваша надстройка.
-
-        ```command&nbsp;line
-        npm start
-        ```
-
-    - Чтобы проверить надстройку в Word в браузере, выполните приведенную ниже команду в корневом каталоге проекта. После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).
-
-        ```command&nbsp;line
-        npm run start:web
-        ```
-
-        Чтобы использовать надстройку, откройте новый документ в Word в Интернете, а затем загрузите неопубликованную надстройку, следуя инструкциям из статьи [Загрузка неопубликованных надстроек Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web).
-
-2. В Word откройте новый документ, выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
-
-    ![Снимок экрана: приложение Word с выделенной кнопкой "Показать область задач"](../images/word-quickstart-addin-2b.png)
-
-3. В нижней части области задач выберите ссылку **Выполнить**, чтобы добавить текст "Hello World" синего цвета в документ.
-
-    ![Снимок экрана: приложение Word с загруженной надстройкой области задач](../images/word-quickstart-addin-1c.png)
 
 ---
 
