@@ -432,7 +432,7 @@
             - name: API предварительной версии Excel
               href: reference/requirement-sets/excel-preview-apis.md
               displayName: Excel
-            - name: '1,9 ExcelApi требования et'
+            - name: 'Набор требований ExcelApi 1,9'
               href: reference/requirement-sets/excel-api-1-9-requirement-set.md
               displayName: Excel
             - name: 'Набор требований ExcelApi 1,8'
