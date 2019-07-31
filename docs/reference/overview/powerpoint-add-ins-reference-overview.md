@@ -4,18 +4,18 @@ description: ''
 ms.date: 07/05/2019
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: ffb6372500c6f6a8a292d0af93c737b39720c83c
-ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
+ms.openlocfilehash: 045b5ff2af3523930e696f5faa296be7c777fe8b
+ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "35576995"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "35940821"
 ---
 # <a name="javascript-api-for-powerpoint"></a>API JavaScript для PowerPoint
 
 Надстройка PowerPoint взаимодействует с объектами в PowerPoint с помощью API JavaScript для Office, включающего две объектных модели JavaScript.
 
-* **API JavaScript для PowerPoint**. [API JavaScript для PowerPoint](/javascript/api/powerpoint) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к объектам в PowerPoint. 
+* **API JavaScript для PowerPoint**. [API JavaScript для PowerPoint](/javascript/api/powerpoint) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к объектам в PowerPoint.
 
 * **Общие API**. Появившиеся в Office 2013 [общие API](/javascript/api/office) можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office.
 
@@ -25,9 +25,9 @@ ms.locfileid: "35576995"
 
 ## <a name="learn-about-api-capabilities"></a>Сведения о возможностях API
 
-Чтобы непосредственно использовать общий API для взаимодействия с содержимым в PowerPoint, выполните действия из [руководства по надстройке PowerPoint](../../tutorials/powerpoint-tutorial.md). 
+Чтобы непосредственно использовать общий API для взаимодействия с содержимым в PowerPoint, выполните действия из [руководства по надстройке PowerPoint](../../tutorials/powerpoint-tutorial.md).
 
-Дополнительные сведения об объектной модели API JavaScript для PowerPoint см. в [справочной документации по API JavaScript для PowerPoint](/javascript/api/powerpoint). 
+Дополнительные сведения об объектной модели API JavaScript для PowerPoint см. в [справочной документации по API JavaScript для PowerPoint](/javascript/api/powerpoint).
 
 ## <a name="try-out-code-samples-in-script-lab"></a>Опробуйте примеры кода в Script Lab
 

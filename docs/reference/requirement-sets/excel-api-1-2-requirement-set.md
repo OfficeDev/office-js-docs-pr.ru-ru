@@ -1,15 +1,15 @@
 ---
 title: Набор обязательных элементов API JavaScript для Excel 1,2
 description: Сведения о наборе требований ExcelApi 1,2
-ms.date: 07/11/2019
+ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 887c0430feab71b3ff1c644074d35811e544861c
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: b3d4e7a7596ad47a728ffe6c7b6fd6272e8893ad
+ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35772060"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "35940782"
 ---
 # <a name="whats-new-in-excel-javascript-api-12"></a>Новые возможности API JavaScript для Excel 1.2
 
@@ -17,7 +17,7 @@ ExcelApi 1,2 добавлена поддержка фильтрации табл
 
 ## <a name="api-list"></a>Список API
 
-| Класс | Поля | Описание |
+|| Класс | Поля | Описание |
 |:---|:---|:---|
 |[Binding](/javascript/api/excel/excel.binding)|[onDataChanged](/javascript/api/excel/excel.binding#ondatachanged)|Возникает при изменении данных или форматирования в привязке.|
 ||[onSelectionChanged](/javascript/api/excel/excel.binding#onselectionchanged)|Возникает при изменении выбранного содержимого в привязке.|
@@ -27,18 +27,13 @@ ExcelApi 1,2 добавлена поддержка фильтрации табл
 ||[Стро](/javascript/api/excel/excel.bindingselectionchangedeventargs#rowcount)|Получает количество выбранных строк.|
 ||[startColumn](/javascript/api/excel/excel.bindingselectionchangedeventargs#startcolumn)|Получает индекс первого столбца текущего выбора (с отсчетом от нуля).|
 ||[startRow](/javascript/api/excel/excel.bindingselectionchangedeventargs#startrow)|Получает индекс первой строки текущего выбора (с отсчетом от нуля).|
-|[Chart](/javascript/api/excel/excel.chart)|[-Image (Width?: Number, Height?: Number, fittingMode?: "Fit" \| "фитандцентер" \| "Fill")](/javascript/api/excel/excel.chart#getimage-width--height--fittingmode-)|Отрисовывает диаграмму в виде изображения с кодировкой base64, масштабируя ее в соответствии с указанным размером.|
-||[-Image (Width?: Number, Height?: Number, fittingMode?: Excel. Имажефиттингмоде)](/javascript/api/excel/excel.chart#getimage-width--height--fittingmode-)|Отрисовывает диаграмму в виде изображения с кодировкой base64, масштабируя ее в соответствии с указанным размером.|
+|[Chart](/javascript/api/excel/excel.chart)|[-Image (Width?: Number, Height?: Number, fittingMode?: Excel. Имажефиттингмоде)](/javascript/api/excel/excel.chart#getimage-width--height--fittingmode-)|Отрисовывает диаграмму в виде изображения с кодировкой base64, масштабируя ее в соответствии с указанным размером.|
 ||[worksheet](/javascript/api/excel/excel.chart#worksheet)|Лист, содержащий текущую диаграмму. Только для чтения.|
-|[Чартколлектионлоадоптионс](/javascript/api/excel/excel.chartcollectionloadoptions)|[worksheet](/javascript/api/excel/excel.chartcollectionloadoptions#worksheet)|Для каждого элемента в коллекции: лист, содержащий текущую диаграмму.|
-|[Чартлоадоптионс](/javascript/api/excel/excel.chartloadoptions)|[worksheet](/javascript/api/excel/excel.chartloadoptions#worksheet)|Лист, содержащий текущую диаграмму.|
 |[Filter](/javascript/api/excel/excel.filter)|[Apply (условия_отбора: Excel. FilterCriteria)](/javascript/api/excel/excel.filter#apply-criteria-)|Применяет заданные условия фильтра для определенного столбца.|
 ||[applyBottomItemsFilter(count: number)](/javascript/api/excel/excel.filter#applybottomitemsfilter-count-)|Применяет к столбцу фильтр по количеству элементов снизу.|
 ||[applyBottomPercentFilter(percent: number)](/javascript/api/excel/excel.filter#applybottompercentfilter-percent-)|Применяет к столбцу фильтр по проценту элементов снизу.|
 ||[applyCellColorFilter(color: string)](/javascript/api/excel/excel.filter#applycellcolorfilter-color-)|Применяет к столбцу фильтр по цвету ячеек.|
-||[Аппликустомфилтер (Criteria1: строка, criteria2?: строка, oper?: "и" \| "или")](/javascript/api/excel/excel.filter#applycustomfilter-criteria1--criteria2--oper-)|Примените к столбцу фильтр "Icon" для заданной строки условий.|
 ||[Аппликустомфилтер (Criteria1: строка, criteria2?: строка, oper?: Excel. Филтероператор)](/javascript/api/excel/excel.filter#applycustomfilter-criteria1--criteria2--oper-)|Примените к столбцу фильтр "Icon" для заданной строки условий.|
-||[Апплидинамикфилтер (условия: "Unknown" \| "AboveAverage" \| "аллдатесинпериодаприл" \| "аллдатесинпериодаугуст" \| "аллдатесинпериоддецембер" \| "AllDatesInPeriodFebruray" \| " Аллдатесинпериоджануари " \| " аллдатесинпериоджули " \| " аллдатесинпериоджуне " \| " аллдатесинпериодмарч " \| " AllDatesInPeriodMay " \| " AllDatesInPeriodNovember " \| " AllDatesInPeriodOctober " \| "AllDatesInPeriodQuarter1" \| "AllDatesInPeriodQuarter2" \| "AllDatesInPeriodQuarter3" \| "AllDatesInPeriodQuarter4" \| "аллдатесинпериодсептембер" \| "беловавераже" \| " LastMonth " \| " ласткуартер " \| " ластвик " \| " ластеар " \| " некстмонс " \| " нексткуартер " \| " некствик " \| " некстеар " \| " сисмонс " \| " сискуартер " \| " Сисвик " \| " сисеар " \| " сегодня " \| " завтра " \| " еартодате " \| " вчера ")](/javascript/api/excel/excel.filter#applydynamicfilter-criteria-)|Применяет к столбцу динамический фильтр.|
 ||[Апплидинамикфилтер (условия_отбора: Excel. Динамикфилтеркритериа)](/javascript/api/excel/excel.filter#applydynamicfilter-criteria-)|Применяет к столбцу динамический фильтр.|
 ||[applyFontColorFilter(color: string)](/javascript/api/excel/excel.filter#applyfontcolorfilter-color-)|Применяет к столбцу фильтр по цвету шрифта.|
 ||[Аппликонфилтер (Icon: Excel. Icon)](/javascript/api/excel/excel.filter#applyiconfilter-icon-)|Примените к столбцу фильтр "Icon" для данного значка.|
@@ -55,29 +50,12 @@ ExcelApi 1,2 добавлена поддержка фильтрации табл
 ||[icon](/javascript/api/excel/excel.filtercriteria#icon)|Значок, используемый для фильтрации ячеек. Используется с фильтрацией типа "icon".|
 ||[or](/javascript/api/excel/excel.filtercriteria#operator)|Оператор, который используется для объединения критериев 1 и 2 при фильтрации типа "custom".|
 ||[values](/javascript/api/excel/excel.filtercriteria#values)|Набор значений, который используется при фильтрации по значениям.|
-|[Филтердата](/javascript/api/excel/excel.filterdata)|[criteria](/javascript/api/excel/excel.filterdata#criteria)|Текущий фильтр, заданный для определенного столбца. Только для чтения.|
 |[FilterDatetime](/javascript/api/excel/excel.filterdatetime)|[дата](/javascript/api/excel/excel.filterdatetime#date)|Дата в формате ISO8601, используемая для фильтрации данных.|
 ||[specificity](/javascript/api/excel/excel.filterdatetime#specificity)|Точность, с которой производится фильтрация данных на основе даты. Например, если указана дата 2005-04-02, а для свойства specificity задано значение month, после фильтрации останутся все строки, датированные апрелем 2009 г.|
-|[Филтерлоадоптионс](/javascript/api/excel/excel.filterloadoptions)|[$all](/javascript/api/excel/excel.filterloadoptions#$all)||
-||[criteria](/javascript/api/excel/excel.filterloadoptions#criteria)|Текущий фильтр, заданный для определенного столбца. Только для чтения.|
 |[FormatProtection](/javascript/api/excel/excel.formatprotection)|[formulaHidden](/javascript/api/excel/excel.formatprotection#formulahidden)|Указывает, скрывает ли Excel формулу для ячеек в диапазоне. Значение NULL указывает, что для всего диапазона не задан единый параметр скрытия формулы.|
 ||[locked](/javascript/api/excel/excel.formatprotection#locked)|Указывает, блокирует ли Excel ячейки в объекте. Значение NULL указывает, что для всего диапазона не задан единый параметр блокировки.|
-||[Set (Properties: Excel. FormatProtection)](/javascript/api/excel/excel.formatprotection#set-properties-)|Задает одновременно несколько свойств объекта на основе существующего загруженного объекта.|
-||[Set (Properties: interfaces. Форматпротектионупдатедата, Options?: объект officeextension. UpdateOptions)](/javascript/api/excel/excel.formatprotection#set-properties--options-)|Задает одновременно несколько свойств объекта. Можно передать либо простой объект с соответствующими свойствами, либо другой объект API того же типа.|
-|[Форматпротектиондата](/javascript/api/excel/excel.formatprotectiondata)|[formulaHidden](/javascript/api/excel/excel.formatprotectiondata#formulahidden)|Указывает, скрывает ли Excel формулу для ячеек в диапазоне. Значение NULL указывает, что для всего диапазона не задан единый параметр скрытия формулы.|
-||[locked](/javascript/api/excel/excel.formatprotectiondata#locked)|Указывает, блокирует ли Excel ячейки в объекте. Значение NULL указывает, что для всего диапазона не задан единый параметр блокировки.|
-|[Форматпротектионлоадоптионс](/javascript/api/excel/excel.formatprotectionloadoptions)|[$all](/javascript/api/excel/excel.formatprotectionloadoptions#$all)||
-||[formulaHidden](/javascript/api/excel/excel.formatprotectionloadoptions#formulahidden)|Указывает, скрывает ли Excel формулу для ячеек в диапазоне. Значение NULL указывает, что для всего диапазона не задан единый параметр скрытия формулы.|
-||[locked](/javascript/api/excel/excel.formatprotectionloadoptions#locked)|Указывает, блокирует ли Excel ячейки в объекте. Значение NULL указывает, что для всего диапазона не задан единый параметр блокировки.|
-|[Форматпротектионупдатедата](/javascript/api/excel/excel.formatprotectionupdatedata)|[formulaHidden](/javascript/api/excel/excel.formatprotectionupdatedata#formulahidden)|Указывает, скрывает ли Excel формулу для ячеек в диапазоне. Значение NULL указывает, что для всего диапазона не задан единый параметр скрытия формулы.|
-||[locked](/javascript/api/excel/excel.formatprotectionupdatedata#locked)|Указывает, блокирует ли Excel ячейки в объекте. Значение NULL указывает, что для всего диапазона не задан единый параметр блокировки.|
 |[FunctionResult](/javascript/api/excel/excel.functionresult)|[error](/javascript/api/excel/excel.functionresult#error)|Значение ошибки (например, "#DIV/0"), представляющее ошибку. Если строка ошибки не задана, функция успешно выполнена, а ее результат записывается в поле Value. Сообщение об ошибке всегда находится в английской национальной настройке.|
 ||[value](/javascript/api/excel/excel.functionresult#value)|Значение оценки функции. Поле значение будет заполнено только в том случае, если ошибка не задана (например, свойство Error не задано).|
-|[Функтионресултдата](/javascript/api/excel/excel.functionresultdata)|[error](/javascript/api/excel/excel.functionresultdata#error)|Значение ошибки (например, "#DIV/0"), представляющее ошибку. Если строка ошибки не задана, функция успешно выполнена, а ее результат записывается в поле Value. Сообщение об ошибке всегда находится в английской национальной настройке.|
-||[value](/javascript/api/excel/excel.functionresultdata#value)|Значение оценки функции. Поле значение будет заполнено только в том случае, если ошибка не задана (например, свойство Error не задано).|
-|[Функтионресултлоадоптионс](/javascript/api/excel/excel.functionresultloadoptions)|[$all](/javascript/api/excel/excel.functionresultloadoptions#$all)||
-||[error](/javascript/api/excel/excel.functionresultloadoptions#error)|Значение ошибки (например, "#DIV/0"), представляющее ошибку. Если строка ошибки не задана, функция успешно выполнена, а ее результат записывается в поле Value. Сообщение об ошибке всегда находится в английской национальной настройке.|
-||[value](/javascript/api/excel/excel.functionresultloadoptions#value)|Значение оценки функции. Поле значение будет заполнено только в том случае, если ошибка не задана (например, свойство Error не задано).|
 |[Functions](/javascript/api/excel/excel.functions)|[ABS (число: число \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>)](/javascript/api/excel/excel.functions#abs-number-)|Возвращает абсолютное значение числа (число без знака).|
 ||[НАКОПДОХОД (issue: Number \| String \| Boolean \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>, фирстинтерест: Number \| String \| Boolean \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>, дата_согл: Number \| String \| Boolean \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>, Rate: Number \| String \| Boolean \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>, номинал: \| числовая \| строка \| Boolean Excel. \| Range Excel. RangeReference \| Excel. FunctionResult<any>, \| частота: числовая \| строка \| Boolean Excel. \| Range Excel. \| RangeReference Excel.<any>FunctionResult, базис?: Number \| String \| Boolean \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>, калкмесод?: Number \| String \| Boolean \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>)](/javascript/api/excel/excel.functions#accrint-issue--firstinterest--settlement--rate--par--frequency--basis--calcmethod-)|Возвращает накопленный процент для безопасности, который выплачивает периодические выплаты процентов.|
 ||[НАКОПДОХОДПОГАШ (вопрос: номер \| строка \| Boolean \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>, дата_согл: Number \| String \| Boolean \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>, Rate: Number \| String \| Boolean \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>, номинал: Number \|String \| Boolean \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>, базис?: Number \| String \| Boolean \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>)](/javascript/api/excel/excel.functions#accrintm-issue--settlement--rate--par--basis-)|Возвращает накопленный процент по ценным бумагам, который выплачивает процентные выплаты по зрелости.|
@@ -445,7 +423,6 @@ ExcelApi 1,2 добавлена поддержка фильтрации табл
 ||[ДОХОДПОГАШ (дата_согл: Number \| String \| Boolean \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>, дата_вступл_в_силу: Number \| String \| Boolean \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>, Issue: Number \| String \| Boolean \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>, Rate: Number \|String \| Boolean \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>, PR: Number \| String \| Boolean \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>, базис?: номер \| строки \| Boolean \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>)](/javascript/api/excel/excel.functions#yieldmat-settlement--maturity--issue--rate--pr--basis-)|Возвращает годовой доход по ценным бумагам, который выплачивает процентную выплату.|
 ||[З_тест (массив: Number \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>, x: Number \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>, Сигма?: Number \| Excel. Range \| Excel. RangeReference \| Excel. FunctionResult<any>)](/javascript/api/excel/excel.functions#z_test-array--x--sigma-)|Возвращает одностороннее P-значение z-теста.|
 |[Icon](/javascript/api/excel/excel.icon)|[индекс](/javascript/api/excel/excel.icon#index)|Представляет собой индекс значка данного набора.|
-||[set](/javascript/api/excel/excel.icon#set)|Представляет набор, в который входит значок.|
 |[Range](/javascript/api/excel/excel.range)|[columnHidden](/javascript/api/excel/excel.range#columnhidden)|Указывает, скрыты ли все столбцы текущего диапазона.|
 ||[formulasR1C1](/javascript/api/excel/excel.range#formulasr1c1)|Представляет формулу в формате R1C1.|
 ||[Жетколумнсафтер (Count?: число)](/javascript/api/excel/excel.range#getcolumnsafter-count-)|Возвращает определенное количество столбцов справа от текущего объекта Range.|
@@ -459,34 +436,13 @@ ExcelApi 1,2 добавлена поддержка фильтрации табл
 ||[sort](/javascript/api/excel/excel.range#sort)|Представляет порядок сортировки текущего диапазона. Только для чтения.|
 ||[rowHidden](/javascript/api/excel/excel.range#rowhidden)|Указывает, скрыты ли все строки текущего диапазона.|
 ||[unmerge()](/javascript/api/excel/excel.range#unmerge--)|Разъединяет ячейки диапазона на отдельные ячейки.|
-|[Ранжедата](/javascript/api/excel/excel.rangedata)|[columnHidden](/javascript/api/excel/excel.rangedata#columnhidden)|Указывает, скрыты ли все столбцы текущего диапазона.|
-||[formulasR1C1](/javascript/api/excel/excel.rangedata#formulasr1c1)|Представляет формулу в формате R1C1.|
-||[hidden](/javascript/api/excel/excel.rangedata#hidden)|Указывает, скрыты ли все ячейки текущего диапазона. Только для чтения.|
-||[rowHidden](/javascript/api/excel/excel.rangedata#rowhidden)|Указывает, скрыты ли все строки текущего диапазона.|
 |[RangeFormat](/javascript/api/excel/excel.rangeformat)|[Аутофитколумнс ()](/javascript/api/excel/excel.rangeformat#autofitcolumns--)|Изменяет ширину столбцов текущего диапазона на оптимальную с учетом текущих данных в столбцах.|
 ||[Аутофитровс ()](/javascript/api/excel/excel.rangeformat#autofitrows--)|Изменяет высоту строк текущего диапазона на оптимальную с учетом текущих данных в столбцах.|
 ||[columnWidth](/javascript/api/excel/excel.rangeformat#columnwidth)|Возвращает или задает ширину всех столбцов в пределах диапазона. Если столбцы разной ширины, будет возвращено значение NULL.|
 ||[protection](/javascript/api/excel/excel.rangeformat#protection)|Возвращает объект защиты формата для диапазона. Только для чтения.|
 ||[rowHeight](/javascript/api/excel/excel.rangeformat#rowheight)|Возвращает или задает высоту всех строк в диапазоне. Если высота строк не одинакова, возвращается значение null.|
-|[Ранжеформатдата](/javascript/api/excel/excel.rangeformatdata)|[columnWidth](/javascript/api/excel/excel.rangeformatdata#columnwidth)|Возвращает или задает ширину всех столбцов в пределах диапазона. Если столбцы разной ширины, будет возвращено значение NULL.|
-||[protection](/javascript/api/excel/excel.rangeformatdata#protection)|Возвращает объект защиты формата для диапазона. Только для чтения.|
-||[rowHeight](/javascript/api/excel/excel.rangeformatdata#rowheight)|Возвращает или задает высоту всех строк в диапазоне. Если высота строк не одинакова, возвращается значение null.|
-|[Ранжеформатлоадоптионс](/javascript/api/excel/excel.rangeformatloadoptions)|[columnWidth](/javascript/api/excel/excel.rangeformatloadoptions#columnwidth)|Возвращает или задает ширину всех столбцов в пределах диапазона. Если столбцы разной ширины, будет возвращено значение NULL.|
-||[protection](/javascript/api/excel/excel.rangeformatloadoptions#protection)|Возвращает объект защиты формата для диапазона.|
-||[rowHeight](/javascript/api/excel/excel.rangeformatloadoptions#rowheight)|Возвращает или задает высоту всех строк в диапазоне. Если высота строк не одинакова, возвращается значение null.|
-|[Ранжеформатупдатедата](/javascript/api/excel/excel.rangeformatupdatedata)|[columnWidth](/javascript/api/excel/excel.rangeformatupdatedata#columnwidth)|Возвращает или задает ширину всех столбцов в пределах диапазона. Если столбцы разной ширины, будет возвращено значение NULL.|
-||[protection](/javascript/api/excel/excel.rangeformatupdatedata#protection)|Возвращает объект защиты формата для диапазона.|
-||[rowHeight](/javascript/api/excel/excel.rangeformatupdatedata#rowheight)|Возвращает или задает высоту всех строк в диапазоне. Если высота строк не одинакова, возвращается значение null.|
-|[Ранжелоадоптионс](/javascript/api/excel/excel.rangeloadoptions)|[columnHidden](/javascript/api/excel/excel.rangeloadoptions#columnhidden)|Указывает, скрыты ли все столбцы текущего диапазона.|
-||[formulasR1C1](/javascript/api/excel/excel.rangeloadoptions#formulasr1c1)|Представляет формулу в формате R1C1.|
-||[hidden](/javascript/api/excel/excel.rangeloadoptions#hidden)|Указывает, скрыты ли все ячейки текущего диапазона. Только для чтения.|
-||[rowHidden](/javascript/api/excel/excel.rangeloadoptions#rowhidden)|Указывает, скрыты ли все строки текущего диапазона.|
 |[RangeReference](/javascript/api/excel/excel.rangereference)|[address](/javascript/api/excel/excel.rangereference#address)|Получает или задает адрес диапазона; Например, "SheetName! A1: B5 ".|
-|[RangeSort](/javascript/api/excel/excel.rangesort)|[Apply (Fields: Excel. SortField [], matchCase?: Boolean, hasHeaders?: Boolean, Orientation?: "Rows \| " "Columns", Method?: " \| пиньинь" "строкекаунт")](/javascript/api/excel/excel.rangesort#apply-fields--matchcase--hasheaders--orientation--method-)|Выполняет сортировку.|
-||[Apply (Fields: Excel. SortField [], matchCase?: Boolean, hasHeaders?: Boolean, Orientation?: Excel. Сорториентатион, метод?: Excel. Сортмесод)](/javascript/api/excel/excel.rangesort#apply-fields--matchcase--hasheaders--orientation--method-)|Выполняет сортировку.|
-|[Ранжеупдатедата](/javascript/api/excel/excel.rangeupdatedata)|[columnHidden](/javascript/api/excel/excel.rangeupdatedata#columnhidden)|Указывает, скрыты ли все столбцы текущего диапазона.|
-||[formulasR1C1](/javascript/api/excel/excel.rangeupdatedata#formulasr1c1)|Представляет формулу в формате R1C1.|
-||[rowHidden](/javascript/api/excel/excel.rangeupdatedata#rowhidden)|Указывает, скрыты ли все строки текущего диапазона.|
+|[RangeSort](/javascript/api/excel/excel.rangesort)|[Apply (Fields: Excel. SortField [], matchCase?: Boolean, hasHeaders?: Boolean, Orientation?: Excel. Сорториентатион, метод?: Excel. Сортмесод)](/javascript/api/excel/excel.rangesort#apply-fields--matchcase--hasheaders--orientation--method-)|Выполняет сортировку.|
 |[SelectionChangedEventArgs](/javascript/api/excel/excel.selectionchangedeventargs)|[workbook](/javascript/api/excel/excel.selectionchangedeventargs#workbook)|Получает объект книги, который вызвал событие SelectionChanged.|
 |[SortField](/javascript/api/excel/excel.sortfield)|[ascending](/javascript/api/excel/excel.sortfield#ascending)|Указывает, выполняется ли сортировка по возрастанию.|
 ||[color](/javascript/api/excel/excel.sortfield#color)|Представляет цвет, определенный условием, при сортировке по цвету шрифта или ячеек.|
@@ -499,44 +455,20 @@ ExcelApi 1,2 добавлена поддержка фильтрации табл
 ||[sort](/javascript/api/excel/excel.table#sort)|Представляет сортировку для таблицы. Только для чтения.|
 ||[worksheet](/javascript/api/excel/excel.table#worksheet)|Лист, содержащий текущую таблицу. Только для чтения.|
 ||[Реапплифилтерс ()](/javascript/api/excel/excel.table#reapplyfilters--)|Повторно применяет все текущие фильтры к таблице.|
-|[Таблеколлектионлоадоптионс](/javascript/api/excel/excel.tablecollectionloadoptions)|[sort](/javascript/api/excel/excel.tablecollectionloadoptions#sort)|Для каждого элемента в коллекции: представляет сортировку для таблицы.|
-||[worksheet](/javascript/api/excel/excel.tablecollectionloadoptions#worksheet)|Для каждого элемента в коллекции: лист, содержащий текущую таблицу.|
 |[TableColumn](/javascript/api/excel/excel.tablecolumn)|[filter](/javascript/api/excel/excel.tablecolumn#filter)|Возвращает фильтр, применяемый к столбцу. Только для чтения.|
-|[Таблеколумнколлектионлоадоптионс](/javascript/api/excel/excel.tablecolumncollectionloadoptions)|[filter](/javascript/api/excel/excel.tablecolumncollectionloadoptions#filter)|Для каждого элемента в коллекции: получение фильтра, примененного к столбцу.|
-|[Таблеколумндата](/javascript/api/excel/excel.tablecolumndata)|[filter](/javascript/api/excel/excel.tablecolumndata#filter)|Возвращает фильтр, применяемый к столбцу. Только для чтения.|
-|[Таблеколумнлоадоптионс](/javascript/api/excel/excel.tablecolumnloadoptions)|[filter](/javascript/api/excel/excel.tablecolumnloadoptions#filter)|Возвращает фильтр, применяемый к столбцу.|
-|[TableData](/javascript/api/excel/excel.tabledata)|[sort](/javascript/api/excel/excel.tabledata#sort)|Представляет сортировку для таблицы. Только для чтения.|
-|[Таблелоадоптионс](/javascript/api/excel/excel.tableloadoptions)|[sort](/javascript/api/excel/excel.tableloadoptions#sort)|Представляет сортировку для таблицы.|
-||[worksheet](/javascript/api/excel/excel.tableloadoptions#worksheet)|Лист, содержащий текущую таблицу.|
-|[TableSort](/javascript/api/excel/excel.tablesort)|[Apply (Fields: Excel. SortField [], matchCase?: Boolean, Method?: "пиньинь \| " "строкекаунт")](/javascript/api/excel/excel.tablesort#apply-fields--matchcase--method-)|Выполняет сортировку.|
-||[Apply (Fields: Excel. SortField [], matchCase?: Boolean, Method?: Excel. Сортмесод)](/javascript/api/excel/excel.tablesort#apply-fields--matchcase--method-)|Выполняет сортировку.|
+|[TableSort](/javascript/api/excel/excel.tablesort)|[Apply (Fields: Excel. SortField [], matchCase?: Boolean, Method?: Excel. Сортмесод)](/javascript/api/excel/excel.tablesort#apply-fields--matchcase--method-)|Выполняет сортировку.|
 ||[clear()](/javascript/api/excel/excel.tablesort#clear--)|Удаляет текущие параметры сортировки таблицы. При этом сбрасывается состояние кнопок в заголовках, но порядок сортировки таблицы остается неизменным.|
 ||[fields](/javascript/api/excel/excel.tablesort#fields)|Указывает текущие условия, которые использовались при последней сортировке таблицы. Только для чтения.|
 ||[matchCase](/javascript/api/excel/excel.tablesort#matchcase)|Указывает, учитывался ли регистр при последней сортировке таблице. Только для чтения.|
 ||[WebMethod](/javascript/api/excel/excel.tablesort#method)|Указывает метод сортировки китайских символов, который использовался при последней сортировке таблицы. Только для чтения.|
 ||[reapply()](/javascript/api/excel/excel.tablesort#reapply--)|Повторно применяет текущие параметры сортировки к таблице.|
-|[Таблесортдата](/javascript/api/excel/excel.tablesortdata)|[fields](/javascript/api/excel/excel.tablesortdata#fields)|Указывает текущие условия, которые использовались при последней сортировке таблицы. Только для чтения.|
-||[matchCase](/javascript/api/excel/excel.tablesortdata#matchcase)|Указывает, учитывался ли регистр при последней сортировке таблице. Только для чтения.|
-||[WebMethod](/javascript/api/excel/excel.tablesortdata#method)|Указывает метод сортировки китайских символов, который использовался при последней сортировке таблицы. Только для чтения.|
-|[Таблесортлоадоптионс](/javascript/api/excel/excel.tablesortloadoptions)|[$all](/javascript/api/excel/excel.tablesortloadoptions#$all)||
-||[fields](/javascript/api/excel/excel.tablesortloadoptions#fields)|Указывает текущие условия, которые использовались при последней сортировке таблицы. Только для чтения.|
-||[matchCase](/javascript/api/excel/excel.tablesortloadoptions#matchcase)|Указывает, учитывался ли регистр при последней сортировке таблице. Только для чтения.|
-||[WebMethod](/javascript/api/excel/excel.tablesortloadoptions#method)|Указывает метод сортировки китайских символов, который использовался при последней сортировке таблицы. Только для чтения.|
 |[Workbook](/javascript/api/excel/excel.workbook)|[обязанностей](/javascript/api/excel/excel.workbook#functions)|Представляет коллекцию функций листа, которые можно использовать для вычислений. Только для чтения.|
 ||[onSelectionChanged](/javascript/api/excel/excel.workbook#onselectionchanged)|Происходит при изменении выбора в документе.|
 |[Worksheet](/javascript/api/excel/excel.worksheet)|[getUsedRange (valuesOnly?: Boolean)](/javascript/api/excel/excel.worksheet#getusedrange-valuesonly-)|Используемый диапазон — это наименьший диапазон, включающий в себя все ячейки с определенным значением или форматированием. Если лист пуст, эта функция возвратит верхнюю левую ячейку (то есть *не* выдает ошибку).|
 ||[protection](/javascript/api/excel/excel.worksheet#protection)|Возвращает объект защиты листа. Только для чтения.|
-|[Воркшитколлектионлоадоптионс](/javascript/api/excel/excel.worksheetcollectionloadoptions)|[protection](/javascript/api/excel/excel.worksheetcollectionloadoptions#protection)|Для каждого элемента в коллекции: Возвращает объект защиты листа для листа.|
-|[Воркшитдата](/javascript/api/excel/excel.worksheetdata)|[protection](/javascript/api/excel/excel.worksheetdata#protection)|Возвращает объект защиты листа. Только для чтения.|
-|[Воркшитлоадоптионс](/javascript/api/excel/excel.worksheetloadoptions)|[protection](/javascript/api/excel/excel.worksheetloadoptions#protection)|Возвращает объект защиты листа.|
 |[WorksheetProtection](/javascript/api/excel/excel.worksheetprotection)|[Защита (параметры?: Excel. WorksheetProtectionOptions, Password?: строка)](/javascript/api/excel/excel.worksheetprotection#protect-options--password-)|Защищает лист. Завершается с ошибкой, если лист уже защищен.|
 ||[options](/javascript/api/excel/excel.worksheetprotection#options)|Параметры защиты листа. Только для чтения.|
 ||[Защита](/javascript/api/excel/excel.worksheetprotection#protected)|Указывает, защищен ли лист. Только для чтения.|
-|[Воркшитпротектиондата](/javascript/api/excel/excel.worksheetprotectiondata)|[options](/javascript/api/excel/excel.worksheetprotectiondata#options)|Параметры защиты листа. Только для чтения.|
-||[Защита](/javascript/api/excel/excel.worksheetprotectiondata#protected)|Указывает, защищен ли лист. Только для чтения.|
-|[Воркшитпротектионлоадоптионс](/javascript/api/excel/excel.worksheetprotectionloadoptions)|[$all](/javascript/api/excel/excel.worksheetprotectionloadoptions#$all)||
-||[options](/javascript/api/excel/excel.worksheetprotectionloadoptions#options)|Параметры защиты листа. Только для чтения.|
-||[Защита](/javascript/api/excel/excel.worksheetprotectionloadoptions#protected)|Указывает, защищен ли лист. Только для чтения.|
 |[WorksheetProtectionOptions](/javascript/api/excel/excel.worksheetprotectionoptions)|[allowAutoFilter](/javascript/api/excel/excel.worksheetprotectionoptions#allowautofilter)|Представляет параметр защиты листа, разрешающий использовать функцию автофильтра.|
 ||[allowDeleteColumns](/javascript/api/excel/excel.worksheetprotectionoptions#allowdeletecolumns)|Представляет параметр защиты листа, разрешающий удалять столбцы.|
 ||[allowDeleteRows](/javascript/api/excel/excel.worksheetprotectionoptions#allowdeleterows)|Представляет параметр защиты листа, разрешающий удалять строки.|

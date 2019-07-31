@@ -4,12 +4,12 @@ description: ''
 ms.date: 07/17/2019
 ms.prod: onenote
 localization_priority: Normal
-ms.openlocfilehash: c9ea90a8781375d38f191fda63005639c3b8dacf
-ms.sourcegitcommit: 6d9b4820a62a914c50cef13af8b80ce626034c26
+ms.openlocfilehash: e1012b337b3713f57a5d3df7f7c7ccbcf509b5aa
+ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "35804985"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "35940857"
 ---
 # <a name="onenote-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для OneNote
 
@@ -19,11 +19,7 @@ ms.locfileid: "35804985"
 
 |  Набор обязательных элементов  |  Office в Интернете |
 |:-----|:-----|
-| OneNoteApi 1.1  | Сентябрь 2016 г. |  
-
-## <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
-
-Сведения о наборах обязательных элементов общего API см. в статье [Наборы обязательных элементов общего API для Office](office-add-in-requirement-sets.md).
+| OneNoteApi 1.1  | Сентябрь 2016 г. |
 
 ## <a name="onenote-javascript-api-11"></a>API JavaScript для OneNote 1.1
 
@@ -31,7 +27,7 @@ API JavaScript для OneNote 1.1 — первая версия этого API. 
 
 ## <a name="runtime-requirement-support-check"></a>Проверка поддержки требований в среде выполнения
 
-Во время выполнения надстройки могут проверять, поддерживает ли конкретный узел набор обязательных элементов API, выполнив следующие действия.
+В среде выполнения надстройки могут проверять, поддерживает ли конкретный узел набор обязательных элементов API, выполнив следующие действия.
 
 ```js
 if (Office.context.requirements.isSetSupported('OneNoteApi', '1.1') === true) {
@@ -44,7 +40,7 @@ else {
 
 ## <a name="manifest-based-requirement-support-check"></a>Проверка поддержки обязательных элементов в манифесте
 
-Используйте элемент Requirements в манифесте надстройки, чтобы указать ключевые наборы требований или элементы API, которые должна использовать надстройка. Если платформа или ведущее приложение Office не поддерживает наборы требований или элементы API, указанные в элементе Requirements, надстройка не будет работать в этом ведущем приложении или на этой платформе, а также не будет отображаться в разделе "Мои надстройки".
+Используйте `Requirements` элемент в манифесте надстройки, чтобы указать критические наборы требований или элементы API, которые должна использовать надстройка. Если ведущее приложение или платформа Office не поддерживает наборы требований или элементы API, указанные в `Requirements` элементе, надстройка не будет запускаться на этом узле или платформе и не будет отображаться в папке "Мои надстройки".
 
 Ниже показана надстройка, которая загружается во всех ведущих приложениях Office, поддерживающих набор обязательных элементов OneNoteApi версии 1.1.
 
@@ -56,8 +52,13 @@ else {
 </Requirements>
 ```
 
+## <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
+
+Сведения о наборах обязательных элементов общего API см. в статье [Наборы обязательных элементов общего API для Office](office-add-in-requirement-sets.md).
+
 ## <a name="see-also"></a>См. также
 
+- [Справочная документация по API JavaScript для OneNote](/javascript/api/onenote)
 - [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets)
 - [Указание ведущих приложений Office и обязательных элементов API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
 - [XML-манифест надстроек Office](/office/dev/add-ins/develop/add-in-manifests)

@@ -4,12 +4,12 @@ description: Поддержка наборов требований для пр�
 ms.date: 07/11/2019
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 046a3f1f16d8b48cddbd64bddf80a31ed1e50583
-ms.sourcegitcommit: 61f8f02193ce05da957418d938f0d94cb12c468d
+ms.openlocfilehash: bffe6c074d9e0734299d0087f2488524875931ed
+ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "35633993"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "35940855"
 ---
 # <a name="image-coercion-requirement-sets"></a>Наборы требований к приведению изображений
 
@@ -19,7 +19,7 @@ ms.locfileid: "35633993"
 
 ## <a name="imagecoercion-11"></a>Использовать imagecoercion 1,1
 
-Использовать imagecoercion 1,1 обеспечивает преобразование в Image (`Office.CoercionType.Image`) при записи данных с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/document#setselecteddataasync-data--options--callback-) метода. Поддерживаются следующие узлы:
+Использовать imagecoercion 1,1 обеспечивает преобразование в Image (`Office.CoercionType.Image`) при записи данных с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) метода. Поддерживаются следующие узлы:
 
 - Excel 2013 и более поздних версий в Windows
 - Excel 2016 и более поздних версий на компьютерах Mac
@@ -37,7 +37,7 @@ ms.locfileid: "35633993"
 
 ## <a name="imagecoercion-12"></a>Использовать imagecoercion 1,2
 
-Использовать imagecoercion 1,2 обеспечивает преобразование в формат SVG (`Office.CoercionType.XmlSvg`) при записи данных с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/document#setselecteddataasync-data--options--callback-) метода. Поддерживаются следующие узлы:
+Использовать imagecoercion 1,2 обеспечивает преобразование в формат SVG (`Office.CoercionType.XmlSvg`) при записи данных с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) метода. Поддерживаются следующие узлы:
 
 - Excel в Windows (подключен к подписке на Office 365)
 - Excel на Mac (подключен к подписке на Office 365)
