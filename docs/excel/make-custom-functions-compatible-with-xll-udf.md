@@ -1,20 +1,26 @@
 ---
 title: Расширение пользовательских функций с помощью пользовательских функций XLL
-description: Обеспечение совместимости с пользовательскими функциями XLL в Excel, которые имеют эквивалентные функциональные возможности для пользовательских функций (Предварительная версия)
-ms.date: 06/19/2019
+description: Обеспечение совместимости с пользовательскими функциями XLL в Excel, которые имеют эквивалентные функциональные возможности для пользовательских функций
+ms.date: 07/31/2019
 localization_priority: Normal
-ms.openlocfilehash: fa80597d48859a29bcdbb5b900c251382dc87caa
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: 955a286956987615f904e8041a16b3c29cc80461
+ms.sourcegitcommit: d49643c4218ed8ad57575d58170dfcdbaf312d14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35771655"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "36048290"
 ---
-# <a name="extend-custom-functions-with-xll-user-defined-functions-preview"></a>Расширение пользовательских функций с помощью определяемых пользователем функций XLL (Предварительная версия)
+# <a name="extend-custom-functions-with-xll-user-defined-functions"></a>Расширение пользовательских функций с помощью пользовательских функций XLL
 
 Если у вас есть XLL-модули Excel, вы можете создавать эквивалентные пользовательские функции в надстройке Excel, чтобы расширить функциональные возможности решения на другие платформы, такие как Online или macOS. Тем не менее, надстройки Excel не обладают всеми функциями, доступными в XLL. В зависимости от того, какие функции использует ваше решение, XLL может оказаться более эффективным, чем пользовательские функции надстроек Excel в Excel для Windows.
 
-[!include[COM add-in and XLL UDF compatibility note](../includes/xll-compatibility-note.md)]
+> [!NOTE]
+> Совместимость надстроек COM и XLL UDF поддерживается на следующих платформах при подключении к подписке Office 365:
+> - Excel в Интернете
+> - Excel в Windows (версия 1904 или более поздняя)
+> - Excel на Mac (версия 13,329 или более поздняя)
+> 
+> Чтобы использовать надстройку COM и совместимость UDF для XLL в Excel в Интернете, войдите в систему с помощью подписки на Office 365 или [учетной записи Майкрософт](https://account.microsoft.com/account). Если у вас еще нет подписки на Office 365, вы можете оформить ее, присоединившись к [программе для разработчиков Office 365](https://developer.microsoft.com/office/dev-program).
 
 ## <a name="specify-equivalent-xll-in-the-manifest"></a>Указание эквивалентного XLL в манифесте
 
