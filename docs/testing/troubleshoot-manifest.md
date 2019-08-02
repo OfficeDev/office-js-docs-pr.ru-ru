@@ -1,14 +1,14 @@
 ---
 title: Проверка манифеста и устранение связанных с ним неполадок
 description: Используйте эти методы для проверки манифеста надстройки Office.
-ms.date: 07/01/2019
+ms.date: 07/29/2019
 localization_priority: Priority
-ms.openlocfilehash: b6d95f6c5658e33c2f52cc46d7bba686bea5cc44
-ms.sourcegitcommit: 9c5a836d4464e49846c9795bf44cfe23e9fc8fbe
+ms.openlocfilehash: 70ebe8be4b669167d1ba230d9dcbf19cb2289efe
+ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "35617060"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "35940674"
 ---
 # <a name="validate-and-troubleshoot-issues-with-your-manifest"></a>Проверка манифеста и устранение связанных с ним неполадок
 
@@ -120,7 +120,6 @@ npm run validate
 Удалите содержимое папки `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\`.
 
 #### <a name="for-mac"></a>Для Mac
-Удалите содержимое папки `~/Library/Containers/com.Microsoft.OsfWebHost/Data/`. 
 
 [!include[additional cache folders on Mac](../includes/mac-cache-folders.md)]
 

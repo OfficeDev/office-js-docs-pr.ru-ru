@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов общего API для Office
 description: ''
-ms.date: 07/11/2019
+ms.date: 07/17/2019
 ms.prod: non-product-specific
 localization_priority: Priority
-ms.openlocfilehash: bd03113b7a91a4cc713cd00336a9582d2e47db5f
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: bd06b1955d426db4c2c777fe3a370ccaea774bb4
+ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35771900"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "35940831"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
@@ -19,9 +19,10 @@ ms.locfileid: "35771900"
 
 Наборы обязательных элементов API *для конкретных ведущих приложений* см. ниже.
 
-- [Наборы обязательных элементов API JavaScript для Excel](./excel-api-requirement-sets.md) (ExcelApi)
+- [Наборы обязательных элементов API JavaScript для Excel](excel-api-requirement-sets.md) (ExcelApi)
 - [Наборы обязательных элементов API JavaScript для Word](word-api-requirement-sets.md) (WordApi)
 - [Наборы обязательных элементов API JavaScript для OneNote](onenote-api-requirement-sets.md) (OneNoteApi)
+- [Наборы обязательных элементов PowerPoint JavaScript API](powerpoint-api-requirement-sets.md) (PowerPointApi)
 - [Общие сведения о наборах обязательных элементов API Outlook](outlook-api-requirement-sets.md) (MailBox)
 
 > [!IMPORTANT]
@@ -29,7 +30,7 @@ ms.locfileid: "35771900"
 
 ## <a name="common-api-requirement-sets"></a>Наборы обязательных элементов общего API
 
-В приведенных ниже разделах указаны наборы обязательных элементов общего API, ведущие приложения Office, которые их поддерживают, и методы в каждом наборе. Все эти наборы обязательных элементов API относятся к версии 1.1, если не указано иное.
+В приведенных ниже разделах приводится список наборов обязательных элементов общего API, ведущие приложения Office, которые их поддерживают, и методы в каждом наборе. Все эти наборы обязательных элементов API имеют версию 1.1, если не указано иное.
 
 ### <a name="activeview"></a>ActiveView
 

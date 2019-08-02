@@ -1,14 +1,14 @@
 ---
 title: Версии Office и наборы обязательных элементов
 description: ''
-ms.date: 06/20/2019
+ms.date: 07/17/2019
 localization_priority: Priority
-ms.openlocfilehash: 3f63d9f6d6ce62b39fa97efc62ceb964f2b55394
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: cfa72f63fc3e74809b743584b131ee5b1fb57676
+ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128320"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "35940642"
 ---
 # <a name="office-versions-and-requirement-sets"></a>Версии Office и наборы обязательных элементов
 
@@ -18,7 +18,6 @@ ms.locfileid: "35128320"
 > - Office работает на различных платформах, в том числе Windows, в браузере, на компьютерах Mac и на iPad.
 > - Примеры ведущих приложений Office — Excel, Word, PowerPoint, Outlook, OneNote и другие продукты.  
 > - Набор обязательных элементов — это именованная группа элементов API, например, `ExcelApi 1.5`, `WordApi 1.3` и т. д.  
-
 
 ## <a name="how-to-check-your-office-version"></a>Как узнать, какая версия Office используется
 
@@ -39,6 +38,7 @@ ms.locfileid: "35128320"
 - [Наборы обязательных элементов API JavaScript для Excel](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) (ExcelApi, [CustomFunctionsRuntime](../excel/custom-functions-architecture.md))
 - [Наборы обязательных элементов API JavaScript для Word](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) (WordApi)
 - [Наборы обязательных элементов API JavaScript для OneNote](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) (OneNoteApi)
+- [Наборы обязательных элементов PowerPoint JavaScript API](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) (PowerPointApi)
 - [Общие сведения о наборах обязательных элементов API Outlook](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) (MailBox)
 
 Некоторые наборы обязательных элементов содержат API, которые могут использоваться любым ведущим приложением Office. Информацию об этих наборах обязательных элементов см. в следующих статьях:
@@ -55,7 +55,6 @@ ms.locfileid: "35128320"
 ## <a name="specify-office-hosts-and-requirement-sets"></a>Указание ведущих приложений Office и наборов обязательных элементов
 
 Указать необходимые надстройке ведущие приложения Office и наборы обязательных элементов можно разными способами.  Подробные сведения см. в статье [Указание ведущих приложений Office и обязательных элементов API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements).
-
 
 ## <a name="see-also"></a>См. также
 
