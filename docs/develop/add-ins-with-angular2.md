@@ -3,12 +3,12 @@ title: Разработка надстроек Office с помощью Angular
 description: ''
 ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 20e66fe1a7a6cce17428424290d4e4c99995efb2
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 5e71b9f6db78308c1e1d1d237f3f78600c1a99a4
+ms.sourcegitcommit: 68872372d181cca5bee37ade73c2250c4a56bab6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32448989"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "33517368"
 ---
 # <a name="develop-office-add-ins-with-angular"></a>Разработка надстроек Office с помощью Angular
 
@@ -23,7 +23,7 @@ ms.locfileid: "32448989"
 
 Откройте окно nodejs и введите в командной строке следующую команду:
 
-```bash
+```command&nbsp;line
 npm install --save-dev @types/office-js
 ```
 
@@ -152,7 +152,7 @@ const subscription = source.subscribe(
 
 Чтобы использовать компилятор AOT, добавьте `--aot` к команде `ng build` или `ng serve`:
 
-```bash
+```command&nbsp;line
 ng build --aot
 ng serve --aot
 ```
