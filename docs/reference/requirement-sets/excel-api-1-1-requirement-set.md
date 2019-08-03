@@ -4,18 +4,20 @@ description: Сведения о наборе требований ExcelApi 1,1
 ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 90d7ee7cef2e8c48e458b2e14893ba9c13c68a30
-ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
+ms.openlocfilehash: 4668cebd545cdefeb033f5c397afb1ad796e2d04
+ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "35940789"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "36064489"
 ---
 # <a name="excel-javascript-api-requirement-set-11"></a>Набор обязательных элементов API JavaScript для Excel 1,1
 
 API JavaScript для Excel 1,1 — это первая версия API. Это единственный набор обязательных элементов Excel, поддерживаемый Excel 2016.
 
 ## <a name="api-list"></a>Список API
+
+В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Excel 1,1. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых в наборе обязательных элементов API JavaScript для Excel 1,1, обратитесь к разделам [API Excel в наборе требований 1,1](/javascript/api/excel?view=excel-js-1.1).
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
@@ -239,5 +241,5 @@ API JavaScript для Excel 1,1 — это первая версия API. Это
 
 ## <a name="see-also"></a>См. также
 
-- [Справочная документация по API JavaScript для Excel](/javascript/api/excel)
+- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.1)
 - [Наборы обязательных элементов API JavaScript для Excel](./excel-api-requirement-sets.md)

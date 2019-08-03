@@ -3,12 +3,12 @@ title: Office. Context. Mailbox. Item — набор требований 1,7
 description: ''
 ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: ea1c838d622904d76140932bb34e28e79b295c70
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 040da976019cd970c8b28ddd793024b3252c6d76
+ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127235"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "36064580"
 ---
 # <a name="item"></a>item
 
@@ -93,7 +93,7 @@ Office.initialize = function () {
 
 ### <a name="members"></a>Элементы
 
-#### <a name="attachments-arrayattachmentdetailsjavascriptapioutlook17officeattachmentdetails"></a>вложения: Array. <[AttachmentDetails](/javascript/api/outlook_1_7/office.attachmentdetails)>
+#### <a name="attachments-arrayattachmentdetailsjavascriptapioutlookofficeattachmentdetailsviewoutlook-js-17"></a>вложения: Array. <[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails?view=outlook-js-1.7)>
 
 Получает массив вложений для элемента. Только в режиме чтения.
 
@@ -102,7 +102,7 @@ Office.initialize = function () {
 
 ##### <a name="type"></a>Тип
 
-*   Array.<[AttachmentDetails](/javascript/api/outlook_1_7/office.attachmentdetails)>
+*   Array.<[AttachmentDetails](/javascript/api/outlook/office.attachmentdetails?view=outlook-js-1.7)>
 
 ##### <a name="requirements"></a>Требования
 
@@ -139,13 +139,13 @@ console.log(outputString);
 ---
 ---
 
-#### <a name="bcc-recipientsjavascriptapioutlook17officerecipients"></a>СК: [получатели](/javascript/api/outlook_1_7/office.recipients)
+#### <a name="bcc-recipientsjavascriptapioutlookofficerecipientsviewoutlook-js-17"></a>СК: [получатели](/javascript/api/outlook/office.recipients?view=outlook-js-1.7)
 
 Получает объект, который предоставляет методы для получения или обновления получателей скрытой копии сообщения. Только в режиме создания.
 
 ##### <a name="type"></a>Тип
 
-*   [Получатели](/javascript/api/outlook_1_7/office.recipients)
+*   [Получатели](/javascript/api/outlook/office.recipients?view=outlook-js-1.7)
 
 ##### <a name="requirements"></a>Требования
 
@@ -170,13 +170,13 @@ function callback(asyncResult) {
 ---
 ---
 
-#### <a name="body-bodyjavascriptapioutlook17officebody"></a>основной текст: [Body](/javascript/api/outlook_1_7/office.body)
+#### <a name="body-bodyjavascriptapioutlookofficebodyviewoutlook-js-17"></a>основной текст: [Body](/javascript/api/outlook/office.body?view=outlook-js-1.7)
 
 Получает объект, предоставляющий методы для работы с основным текстом элемента.
 
 ##### <a name="type"></a>Тип
 
-*   [Body](/javascript/api/outlook_1_7/office.body)
+*   [Body](/javascript/api/outlook/office.body?view=outlook-js-1.7)
 
 ##### <a name="requirements"></a>Требования
 
@@ -213,7 +213,7 @@ Office.context.mailbox.item.body.getAsync(
 ---
 ---
 
-#### <a name="cc-arrayemailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsrecipientsjavascriptapioutlook17officerecipients"></a>CC: Array. <[EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)>|[получатели](/javascript/api/outlook_1_7/office.recipients)
+#### <a name="cc-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsviewoutlook-js-17recipientsjavascriptapioutlookofficerecipientsviewoutlook-js-17"></a>CC: Array. <[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.7)>|[получатели](/javascript/api/outlook/office.recipients?view=outlook-js-1.7)
 
 Предоставляет доступ к получателям копии сообщения. Тип объекта и уровень доступа зависят от режима текущего элемента.
 
@@ -241,7 +241,7 @@ function callback(asyncResult) {
 
 ##### <a name="type"></a>Тип
 
-*   Array.<[EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook_1_7/office.recipients)
+*   Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.7)> | [Recipients](/javascript/api/outlook/office.recipients?view=outlook-js-1.7)
 
 ##### <a name="requirements"></a>Требования
 
@@ -339,7 +339,7 @@ console.log("Date and time modified: " + dateTimeModified);
 ---
 ---
 
-#### <a name="end-datetimejavascriptapioutlook17officetime"></a>конец: Дата | [Time (время](/javascript/api/outlook_1_7/office.time) )
+#### <a name="end-datetimejavascriptapioutlookofficetimeviewoutlook-js-17"></a>конец: Дата | [Time (время](/javascript/api/outlook/office.time?view=outlook-js-1.7) )
 
 Получает или задает дату и время окончания встречи.
 
@@ -358,9 +358,9 @@ console.log("Appointment end: " + end);
 
 Свойство `end` возвращает объект `Time`.
 
-Если вы задаете время окончания с помощью метода [`Time.setAsync`](/javascript/api/outlook_1_7/office.time#setasync-datetime--options--callback-), необходимо использовать метод [`convertToUtcClientTime`](office.context.mailbox.md#converttoutcclienttimeinput--date) для преобразования местного времени на клиенте в формат UTC для сервера.
+Если вы задаете время окончания с помощью метода [`Time.setAsync`](/javascript/api/outlook/office.time?view=outlook-js-1.7#setasync-datetime--options--callback-), необходимо использовать метод [`convertToUtcClientTime`](office.context.mailbox.md#converttoutcclienttimeinput--date) для преобразования местного времени на клиенте в формат UTC для сервера.
 
-В примере ниже показано, как с помощью метода [`setAsync`](/javascript/api/outlook_1_7/office.time#setasync-datetime--options--callback-) объекта `Time` задать время окончания встречи.
+В примере ниже показано, как с помощью метода [`setAsync`](/javascript/api/outlook/office.time?view=outlook-js-1.7#setasync-datetime--options--callback-) объекта `Time` задать время окончания встречи.
 
 ```javascript
 var endTime = new Date("3/14/2015");
@@ -380,7 +380,7 @@ Office.context.mailbox.item.end.setAsync(endTime, options, function(result) {
 
 ##### <a name="type"></a>Тип
 
-*   Date | [Time](/javascript/api/outlook_1_7/office.time)
+*   Date | [Time](/javascript/api/outlook/office.time?view=outlook-js-1.7)
 
 ##### <a name="requirements"></a>Требования
 
@@ -393,7 +393,7 @@ Office.context.mailbox.item.end.setAsync(endTime, options, function(result) {
 ---
 ---
 
-#### <a name="from-emailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsfromjavascriptapioutlook17officefrom"></a>от: [EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)|[](/javascript/api/outlook_1_7/office.from)
+#### <a name="from-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsviewoutlook-js-17fromjavascriptapioutlookofficefromviewoutlook-js-17"></a>от: [EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.7)|[](/javascript/api/outlook/office.from?view=outlook-js-1.7)
 
 Получает электронный адрес отправителя сообщения.
 
@@ -425,7 +425,7 @@ function callback(asyncResult) {
 
 ##### <a name="type"></a>Тип
 
-*   [EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails) | [из](/javascript/api/outlook_1_7/office.from)
+*   [EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.7) | [из](/javascript/api/outlook/office.from?view=outlook-js-1.7)
 
 ##### <a name="requirements"></a>Требования
 
@@ -535,7 +535,7 @@ if (itemId === null || itemId == undefined) {
 ---
 ---
 
-#### <a name="itemtype-officemailboxenumsitemtypejavascriptapioutlook17officemailboxenumsitemtype"></a>itemType: [Office. MailboxEnums. ItemType](/javascript/api/outlook_1_7/office.mailboxenums.itemtype)
+#### <a name="itemtype-officemailboxenumsitemtypejavascriptapioutlookofficemailboxenumsitemtypeviewoutlook-js-17"></a>itemType: [Office. MailboxEnums. ItemType](/javascript/api/outlook/office.mailboxenums.itemtype?view=outlook-js-1.7)
 
 Получает тип элемента, который представляет экземпляр.
 
@@ -543,7 +543,7 @@ if (itemId === null || itemId == undefined) {
 
 ##### <a name="type"></a>Тип
 
-*   [Office.MailboxEnums.ItemType](/javascript/api/outlook_1_7/office.mailboxenums.itemtype)
+*   [Office.MailboxEnums.ItemType](/javascript/api/outlook/office.mailboxenums.itemtype?view=outlook-js-1.7)
 
 ##### <a name="requirements"></a>Требования
 
@@ -566,7 +566,7 @@ if (Office.context.mailbox.item.itemType === Office.MailboxEnums.ItemType.Messag
 ---
 ---
 
-#### <a name="location-stringlocationjavascriptapioutlook17officelocation"></a>Местоположение: строка | [Location (расположение](/javascript/api/outlook_1_7/office.location) )
+#### <a name="location-stringlocationjavascriptapioutlookofficelocationviewoutlook-js-17"></a>Местоположение: строка | [Location (расположение](/javascript/api/outlook/office.location?view=outlook-js-1.7) )
 
 Получает или задает место встречи.
 
@@ -595,7 +595,7 @@ function callback(asyncResult) {
 
 ##### <a name="type"></a>Тип
 
-*   String | [Location](/javascript/api/outlook_1_7/office.location)
+*   String | [Location](/javascript/api/outlook/office.location?view=outlook-js-1.7)
 
 ##### <a name="requirements"></a>Требования
 
@@ -636,13 +636,13 @@ console.log("Normalized subject: " + normalizedSubject);
 ---
 ---
 
-#### <a name="notificationmessages-notificationmessagesjavascriptapioutlook17officenotificationmessages"></a>notificationMessages: [notificationMessages](/javascript/api/outlook_1_7/office.notificationmessages)
+#### <a name="notificationmessages-notificationmessagesjavascriptapioutlookofficenotificationmessagesviewoutlook-js-17"></a>notificationMessages: [notificationMessages](/javascript/api/outlook/office.notificationmessages?view=outlook-js-1.7)
 
 Получает сообщения уведомления для элемента.
 
 ##### <a name="type"></a>Тип
 
-*   [NotificationMessages](/javascript/api/outlook_1_7/office.notificationmessages)
+*   [NotificationMessages](/javascript/api/outlook/office.notificationmessages?view=outlook-js-1.7)
 
 ##### <a name="requirements"></a>Требования
 
@@ -666,7 +666,7 @@ Office.context.mailbox.item.notificationMessages.getAllAsync(
 ---
 ---
 
-#### <a name="optionalattendees-arrayemailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsrecipientsjavascriptapioutlook17officerecipients"></a>optionalAttendees: Array. <[EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)>|[получатели](/javascript/api/outlook_1_7/office.recipients)
+#### <a name="optionalattendees-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsviewoutlook-js-17recipientsjavascriptapioutlookofficerecipientsviewoutlook-js-17"></a>optionalAttendees: Array. <[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.7)>|[получатели](/javascript/api/outlook/office.recipients?view=outlook-js-1.7)
 
 Предоставляет доступ к необязательным участникам события. Тип объекта и уровень доступа зависят от режима текущего элемента.
 
@@ -695,7 +695,7 @@ function callback(asyncResult) {
 
 ##### <a name="type"></a>Тип
 
-*   Array.<[EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook_1_7/office.recipients)
+*   Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients?view=outlook-js-1.7)
 
 ##### <a name="requirements"></a>Требования
 
@@ -708,13 +708,13 @@ function callback(asyncResult) {
 ---
 ---
 
-#### <a name="organizer-emailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsorganizerjavascriptapioutlook17officeorganizer"></a>Организатор: [EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)|[Организатор](/javascript/api/outlook_1_7/office.organizer)
+#### <a name="organizer-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsviewoutlook-js-17organizerjavascriptapioutlookofficeorganizerviewoutlook-js-17"></a>Организатор: [EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.7)|[Организатор](/javascript/api/outlook/office.organizer?view=outlook-js-1.7)
 
 Получает адрес электронной почты организатора для указанного собрания.
 
 ##### <a name="read-mode"></a>Режим чтения
 
-`organizer` Свойство возвращает объект [EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails) , представляющий организатора собрания.
+`organizer` Свойство возвращает объект [EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.7) , представляющий организатора собрания.
 
 ```javascript
 var organizerName = Office.context.mailbox.item.organizer.displayName;
@@ -724,7 +724,7 @@ console.log("Organizer: " + organizerName + " (" + organizerAddress + ")");
 
 ##### <a name="compose-mode"></a>Режим создания
 
-Свойство возвращает объект организатора, который предоставляет метод для получения значения организатора. [](/javascript/api/outlook_1_7/office.organizer) `organizer`
+Свойство возвращает объект организатора, который предоставляет метод для получения значения организатора. [](/javascript/api/outlook/office.organizer?view=outlook-js-1.7) `organizer`
 
 ```javascript
 Office.context.mailbox.item.organizer.getAsync(
@@ -736,7 +736,7 @@ Office.context.mailbox.item.organizer.getAsync(
 
 ##### <a name="type"></a>Тип
 
-*   [](/javascript/api/outlook_1_7/office.emailaddressdetails) | [Организатор](/javascript/api/outlook_1_7/office.organizer) EmailAddressDetails
+*   [](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.7) | [Организатор](/javascript/api/outlook/office.organizer?view=outlook-js-1.7) EmailAddressDetails
 
 ##### <a name="requirements"></a>Требования
 
@@ -749,11 +749,11 @@ Office.context.mailbox.item.organizer.getAsync(
 ---
 ---
 
-#### <a name="nullable-recurrence-recurrencejavascriptapioutlook17officerecurrence"></a>(Nullable) повторение [](/javascript/api/outlook_1_7/office.recurrence) : повторение
+#### <a name="nullable-recurrence-recurrencejavascriptapioutlookofficerecurrenceviewoutlook-js-17"></a>(Nullable) повторение [](/javascript/api/outlook/office.recurrence?view=outlook-js-1.7) : повторение
 
 Получает или задает шаблон повторения встречи. Получает шаблон повторения приглашения на собрание. Режимы чтения и создания для элементов встречи. Режим чтения для элементов приглашения на собрания.
 
-`recurrence` Свойство возвращает объект [повторения](/javascript/api/outlook_1_7/office.recurrence) для повторяющихся встреч или приглашений на собрания, если элемент представляет собой серию или экземпляр в ряду. `null`возвращается для отдельных встреч и приглашений на собрание для отдельных встреч. `undefined`возвращается для сообщений, которые не являются приглашениями на собрания.
+`recurrence` Свойство возвращает объект [повторения](/javascript/api/outlook/office.recurrence?view=outlook-js-1.7) для повторяющихся встреч или приглашений на собрания, если элемент представляет собой серию или экземпляр в ряду. `null`возвращается для отдельных встреч и приглашений на собрание для отдельных встреч. `undefined`возвращается для сообщений, которые не являются приглашениями на собрания.
 
 > Note: приглашения на `itemClass` собрания имеют значение IPM. Schedule. Meeting. Request.
 
@@ -761,7 +761,7 @@ Office.context.mailbox.item.organizer.getAsync(
 
 ##### <a name="read-mode"></a>Режим чтения
 
-`recurrence` Свойство возвращает объект [повторения](/javascript/api/outlook_1_7/office.recurrence) , представляющий повторение встречи. Оно доступно для встреч и приглашений на собрания.
+`recurrence` Свойство возвращает объект [повторения](/javascript/api/outlook/office.recurrence?view=outlook-js-1.7) , представляющий повторение встречи. Оно доступно для встреч и приглашений на собрания.
 
 ```javascript
 var recurrence = Office.context.mailbox.item.recurrence;
@@ -770,7 +770,7 @@ console.log("Recurrence: " + JSON.stringify(recurrence));
 
 ##### <a name="compose-mode"></a>Режим создания
 
-`recurrence` Свойство возвращает объект [повторения](/javascript/api/outlook_1_7/office.recurrence) , который предоставляет методы для управления повторением встречи. Оно доступно для встреч.
+`recurrence` Свойство возвращает объект [повторения](/javascript/api/outlook/office.recurrence?view=outlook-js-1.7) , который предоставляет методы для управления повторением встречи. Оно доступно для встреч.
 
 ```javascript
 Office.context.mailbox.item.recurrence.getAsync(callback);
@@ -799,7 +799,7 @@ Recurrence = {
 
 ##### <a name="type"></a>Тип
 
-* [Повторения](/javascript/api/outlook_1_7/office.recurrence)
+* [Повторения](/javascript/api/outlook/office.recurrence?view=outlook-js-1.7)
 
 |Требование|Значение|
 |---|---|
@@ -810,7 +810,7 @@ Recurrence = {
 ---
 ---
 
-#### <a name="requiredattendees-arrayemailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsrecipientsjavascriptapioutlook17officerecipients"></a>requiredAttendees: Array. <[EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)>|[получатели](/javascript/api/outlook_1_7/office.recipients)
+#### <a name="requiredattendees-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsviewoutlook-js-17recipientsjavascriptapioutlookofficerecipientsviewoutlook-js-17"></a>requiredAttendees: Array. <[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.7)>|[получатели](/javascript/api/outlook/office.recipients?view=outlook-js-1.7)
 
 Предоставляет доступ к обязательным участникам события. Тип объекта и уровень доступа зависят от режима текущего элемента.
 
@@ -840,7 +840,7 @@ function callback(asyncResult) {
 
 ##### <a name="type"></a>Тип
 
-*   Array.<[EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook_1_7/office.recipients)
+*   Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.7)> | [Recipients](/javascript/api/outlook/office.recipients?view=outlook-js-1.7)
 
 ##### <a name="requirements"></a>Требования
 
@@ -853,7 +853,7 @@ function callback(asyncResult) {
 ---
 ---
 
-#### <a name="sender-emailaddressdetailsjavascriptapioutlook17officeemailaddressdetails"></a>Отправитель: [EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)
+#### <a name="sender-emailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsviewoutlook-js-17"></a>Отправитель: [EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.7)
 
 Получает электронный адрес отправителя электронного сообщения. Только в режиме чтения.
 
@@ -864,7 +864,7 @@ function callback(asyncResult) {
 
 ##### <a name="type"></a>Тип
 
-*   [EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)
+*   [EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.7)
 
 ##### <a name="requirements"></a>Требования
 
@@ -924,7 +924,7 @@ console.log("SeriesId is " + seriesId + " and isSeriesInstance is " + isSeriesIn
 ---
 ---
 
-#### <a name="start-datetimejavascriptapioutlook17officetime"></a>Начало: Дата | [Time (время](/javascript/api/outlook_1_7/office.time) )
+#### <a name="start-datetimejavascriptapioutlookofficetimeviewoutlook-js-17"></a>Начало: Дата | [Time (время](/javascript/api/outlook/office.time?view=outlook-js-1.7) )
 
 Получает или задает дату и время начала встречи.
 
@@ -943,9 +943,9 @@ console.log("Appointment start: " + JSON.stringify(start));
 
 Свойство `start` возвращает объект `Time`.
 
-Если вы задаете время начала с помощью метода [`Time.setAsync`](/javascript/api/outlook_1_7/office.time#setasync-datetime--options--callback-), необходимо использовать метод [`convertToUtcClientTime`](office.context.mailbox.md#converttoutcclienttimeinput--date) для преобразования местного времени на клиенте в формат UTC для сервера.
+Если вы задаете время начала с помощью метода [`Time.setAsync`](/javascript/api/outlook/office.time?view=outlook-js-1.7#setasync-datetime--options--callback-), необходимо использовать метод [`convertToUtcClientTime`](office.context.mailbox.md#converttoutcclienttimeinput--date) для преобразования местного времени на клиенте в формат UTC для сервера.
 
-В примере ниже с помощью метода [`setAsync`](/javascript/api/outlook_1_7/office.time#setasync-datetime--options--callback-) объекта `Time` задается время начала встречи в режиме создания.
+В примере ниже с помощью метода [`setAsync`](/javascript/api/outlook/office.time?view=outlook-js-1.7#setasync-datetime--options--callback-) объекта `Time` задается время начала встречи в режиме создания.
 
 ```javascript
 var startTime = new Date("3/14/2015");
@@ -965,7 +965,7 @@ Office.context.mailbox.item.start.setAsync(startTime, options, function(result) 
 
 ##### <a name="type"></a>Тип
 
-*   Date | [Time](/javascript/api/outlook_1_7/office.time)
+*   Date | [Time](/javascript/api/outlook/office.time?view=outlook-js-1.7)
 
 ##### <a name="requirements"></a>Требования
 
@@ -978,7 +978,7 @@ Office.context.mailbox.item.start.setAsync(startTime, options, function(result) 
 ---
 ---
 
-#### <a name="subject-stringsubjectjavascriptapioutlook17officesubject"></a>Тема: строка | [Subject (тема](/javascript/api/outlook_1_7/office.subject) )
+#### <a name="subject-stringsubjectjavascriptapioutlookofficesubjectviewoutlook-js-17"></a>Тема: строка | [Subject (тема](/javascript/api/outlook/office.subject?view=outlook-js-1.7) )
 
 Получает или задает описание, которое отображается в поле темы элемента.
 
@@ -1010,7 +1010,7 @@ function callback(asyncResult) {
 
 ##### <a name="type"></a>Тип
 
-*   String | [Subject](/javascript/api/outlook_1_7/office.subject)
+*   String | [Subject](/javascript/api/outlook/office.subject?view=outlook-js-1.7)
 
 ##### <a name="requirements"></a>Требования
 
@@ -1023,7 +1023,7 @@ function callback(asyncResult) {
 ---
 ---
 
-#### <a name="to-arrayemailaddressdetailsjavascriptapioutlook17officeemailaddressdetailsrecipientsjavascriptapioutlook17officerecipients"></a>Кому: Array. <[EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)>|[получатели](/javascript/api/outlook_1_7/office.recipients)
+#### <a name="to-arrayemailaddressdetailsjavascriptapioutlookofficeemailaddressdetailsviewoutlook-js-17recipientsjavascriptapioutlookofficerecipientsviewoutlook-js-17"></a>Кому: Array. <[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.7)>|[получатели](/javascript/api/outlook/office.recipients?view=outlook-js-1.7)
 
 Предоставляет доступ к получателям, указанным в строке **Кому** сообщения. Тип объекта и уровень доступа зависят от режима текущего элемента.
 
@@ -1051,7 +1051,7 @@ function callback(asyncResult) {
 
 ##### <a name="type"></a>Тип
 
-*   Array.<[EmailAddressDetails](/javascript/api/outlook_1_7/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook_1_7/office.recipients)
+*   Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.7)> | [Recipients](/javascript/api/outlook/office.recipients?view=outlook-js-1.7)
 
 ##### <a name="requirements"></a>Требования
 
@@ -1509,7 +1509,7 @@ Office.context.mailbox.item.displayReplyForm(
 ---
 ---
 
-#### <a name="getentities--entitiesjavascriptapioutlook17officeentities"></a>getEntities() → {[Entities](/javascript/api/outlook_1_7/office.entities)}
+#### <a name="getentities--entitiesjavascriptapioutlookofficeentitiesviewoutlook-js-17"></a>getEntities() → {[Entities](/javascript/api/outlook/office.entities?view=outlook-js-1.7)}
 
 Получает сущности, обнаруженные в теле выбранного элемента.
 
@@ -1526,7 +1526,7 @@ Office.context.mailbox.item.displayReplyForm(
 
 ##### <a name="returns"></a>Возвращаемое значение:
 
-Тип: [Entities](/javascript/api/outlook_1_7/office.entities)
+Тип: [Entities](/javascript/api/outlook/office.entities?view=outlook-js-1.7)
 
 ##### <a name="example"></a>Пример
 
@@ -1539,7 +1539,7 @@ var contacts = Office.context.mailbox.item.getEntities().contacts;
 ---
 ---
 
-#### <a name="getentitiesbytypeentitytype--nullable-arraystringcontactjavascriptapioutlook17officecontactmeetingsuggestionjavascriptapioutlook17officemeetingsuggestionphonenumberjavascriptapioutlook17officephonenumbertasksuggestionjavascriptapioutlook17officetasksuggestion"></a>getEntitiesByType(entityType) → (nullable) {Array.<(String|[Contact](/javascript/api/outlook_1_7/office.contact)|[MeetingSuggestion](/javascript/api/outlook_1_7/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook_1_7/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook_1_7/office.tasksuggestion))>}
+#### <a name="getentitiesbytypeentitytype--nullable-arraystringcontactjavascriptapioutlookofficecontactviewoutlook-js-17meetingsuggestionjavascriptapioutlookofficemeetingsuggestionviewoutlook-js-17phonenumberjavascriptapioutlookofficephonenumberviewoutlook-js-17tasksuggestionjavascriptapioutlookofficetasksuggestionviewoutlook-js-17"></a>getEntitiesByType(entityType) → (nullable) {Array.<(String|[Contact](/javascript/api/outlook/office.contact?view=outlook-js-1.7)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion?view=outlook-js-1.7)|[PhoneNumber](/javascript/api/outlook/office.phonenumber?view=outlook-js-1.7)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion?view=outlook-js-1.7))>}
 
 Получает массив всех сущностей указанного типа, обнаруженных в теле выбранного элемента.
 
@@ -1550,7 +1550,7 @@ var contacts = Office.context.mailbox.item.getEntities().contacts;
 
 |Имя|Тип|Описание|
 |---|---|---|
-|`entityType`|[Office.MailboxEnums.EntityType](/javascript/api/outlook_1_7/office.mailboxenums.entitytype)|Одно из значений перечисления EntityType.|
+|`entityType`|[Office.MailboxEnums.EntityType](/javascript/api/outlook/office.mailboxenums.entitytype?view=outlook-js-1.7)|Одно из значений перечисления EntityType.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -1576,7 +1576,7 @@ var contacts = Office.context.mailbox.item.getEntities().contacts;
 |`TaskSuggestion`|TaskSuggestion|**ReadItem**|
 |`URL`|String|**Restricted**|
 
-Тип: Array.<(String|[Contact](/javascript/api/outlook_1_7/office.contact)|[MeetingSuggestion](/javascript/api/outlook_1_7/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook_1_7/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook_1_7/office.tasksuggestion))>
+Тип: Array.<(String|[Contact](/javascript/api/outlook/office.contact?view=outlook-js-1.7)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion?view=outlook-js-1.7)|[PhoneNumber](/javascript/api/outlook/office.phonenumber?view=outlook-js-1.7)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion?view=outlook-js-1.7))>
 
 ##### <a name="example"></a>Пример
 
@@ -1599,7 +1599,7 @@ Office.initialize = function () {
 ---
 ---
 
-#### <a name="getfilteredentitiesbynamename--nullable-arraystringcontactjavascriptapioutlook17officecontactmeetingsuggestionjavascriptapioutlook17officemeetingsuggestionphonenumberjavascriptapioutlook17officephonenumbertasksuggestionjavascriptapioutlook17officetasksuggestion"></a>getFilteredEntitiesByName(name) → (nullable) {Array.<(String|[Contact](/javascript/api/outlook_1_7/office.contact)|[MeetingSuggestion](/javascript/api/outlook_1_7/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook_1_7/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook_1_7/office.tasksuggestion))>}
+#### <a name="getfilteredentitiesbynamename--nullable-arraystringcontactjavascriptapioutlookofficecontactviewoutlook-js-17meetingsuggestionjavascriptapioutlookofficemeetingsuggestionviewoutlook-js-17phonenumberjavascriptapioutlookofficephonenumberviewoutlook-js-17tasksuggestionjavascriptapioutlookofficetasksuggestionviewoutlook-js-17"></a>getFilteredEntitiesByName(name) → (nullable) {Array.<(String|[Contact](/javascript/api/outlook/office.contact?view=outlook-js-1.7)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion?view=outlook-js-1.7)|[PhoneNumber](/javascript/api/outlook/office.phonenumber?view=outlook-js-1.7)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion?view=outlook-js-1.7))>}
 
 Возвращает известные сущности в выбранном элементе, которые проходят через именованный фильтр, определяемый в XML-файле манифеста.
 
@@ -1626,7 +1626,7 @@ Office.initialize = function () {
 
 Если в манифесте нет элемента `ItemHasKnownEntity` со значением `FilterName`, соответствующим параметру `name`, метод возвращает `null`. Если параметр `name` соответствует элементу `ItemHasKnownEntity` в манифесте, но при этом в текущем элементе нет соответствующих сущностей, метод возвращает пустой массив.
 
-Тип: Array.<(String|[Contact](/javascript/api/outlook_1_7/office.contact)|[MeetingSuggestion](/javascript/api/outlook_1_7/office.meetingsuggestion)|[PhoneNumber](/javascript/api/outlook_1_7/office.phonenumber)|[TaskSuggestion](/javascript/api/outlook_1_7/office.tasksuggestion))>
+Тип: Array.<(String|[Contact](/javascript/api/outlook/office.contact?view=outlook-js-1.7)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion?view=outlook-js-1.7)|[PhoneNumber](/javascript/api/outlook/office.phonenumber?view=outlook-js-1.7)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion?view=outlook-js-1.7))>
 
 ---
 ---
@@ -1661,7 +1661,7 @@ Office.initialize = function () {
 }
 ```
 
-Если вы указываете правило `ItemHasRegularExpressionMatch` для свойства текста элемента, регулярное выражение должно дальше фильтровать текст, а не пытаться вернуть весь текст элемента. Использование регулярного выражения, такого как `.*`, для получения всего текста элемента не всегда приносит ожидаемые результаты. Лучше используйте метод [`Body.getAsync`](/javascript/api/outlook_1_7/office.body#getasync-coerciontype--options--callback-) для этого.
+Если вы указываете правило `ItemHasRegularExpressionMatch` для свойства текста элемента, регулярное выражение должно дальше фильтровать текст, а не пытаться вернуть весь текст элемента. Использование регулярного выражения, такого как `.*`, для получения всего текста элемента не всегда приносит ожидаемые результаты. Лучше используйте метод [`Body.getAsync`](/javascript/api/outlook/office.body?view=outlook-js-1.7#getasync-coerciontype--options--callback-) для этого.
 
 ##### <a name="requirements"></a>Requirements
 
@@ -1797,7 +1797,7 @@ function setCallback(asyncResult) {
 ---
 ---
 
-#### <a name="getselectedentities--entitiesjavascriptapioutlook17officeentities"></a>getSelectedEntities() → {[Entities](/javascript/api/outlook_1_7/office.entities)}
+#### <a name="getselectedentities--entitiesjavascriptapioutlookofficeentitiesviewoutlook-js-17"></a>getSelectedEntities() → {[Entities](/javascript/api/outlook/office.entities?view=outlook-js-1.7)}
 
 Возвращает сущности, найденные в выделенном совпадении, выбранном пользователем. Выделенные совпадения применяются к [контекстным надстройкам](/outlook/add-ins/contextual-outlook-add-ins).
 
@@ -1814,7 +1814,7 @@ function setCallback(asyncResult) {
 
 ##### <a name="returns"></a>Возвращаемое значение:
 
-Тип: [Entities](/javascript/api/outlook_1_7/office.entities)
+Тип: [Entities](/javascript/api/outlook/office.entities?view=outlook-js-1.7)
 
 ##### <a name="example"></a>Пример
 
@@ -1857,7 +1857,7 @@ var contacts = Office.context.mailbox.item.getSelectedEntities().addresses;
 }
 ```
 
-Если вы указываете правило `ItemHasRegularExpressionMatch` для свойства текста элемента, регулярное выражение должно дальше фильтровать текст, а не пытаться вернуть весь текст элемента. Использование регулярного выражения, такого как `.*`, для получения всего текста элемента не всегда приносит ожидаемые результаты. Лучше используйте метод [`Body.getAsync`](/javascript/api/outlook_1_7/office.body#getasync-coerciontype--options--callback-) для этого.
+Если вы указываете правило `ItemHasRegularExpressionMatch` для свойства текста элемента, регулярное выражение должно дальше фильтровать текст, а не пытаться вернуть весь текст элемента. Использование регулярного выражения, такого как `.*`, для получения всего текста элемента не всегда приносит ожидаемые результаты. Лучше используйте метод [`Body.getAsync`](/javascript/api/outlook/office.body?view=outlook-js-1.7#getasync-coerciontype--options--callback-) для этого.
 
 ##### <a name="requirements"></a>Requirements
 
@@ -1894,7 +1894,7 @@ var veggies = selectedMatches.veggies;
 
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
-|`callback`|function||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Настраиваемые свойства предоставляются в виде объекта [`CustomProperties`](/javascript/api/outlook_1_7/office.customproperties) в свойстве `asyncResult.value`. Этот объект позволяет получить, задать и удалить настраиваемые свойства для элемента, а также сохранить изменения, внесенные в набор настраиваемых свойств, на сервере.|
+|`callback`|function||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Настраиваемые свойства предоставляются в виде объекта [`CustomProperties`](/javascript/api/outlook/office.customproperties?view=outlook-js-1.7) в свойстве `asyncResult.value`. Этот объект позволяет получить, задать и удалить настраиваемые свойства для элемента, а также сохранить изменения, внесенные в набор настраиваемых свойств, на сервере.|
 |`userContext`|Объект|&lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в функции обратного вызова. Доступ к этому объекту можно получить с помощью свойства `asyncResult.asyncContext` в функции обратного вызова.|
 
 ##### <a name="requirements"></a>Требования

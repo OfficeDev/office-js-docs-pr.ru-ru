@@ -3,12 +3,12 @@ title: Office. Context. Mailbox — набор обязательных элем
 description: ''
 ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: 256bd2b992531fa52953098893025e4a006caf08
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 6bbb79af22730dd10ca2c5f1e56a96fb102ab137
+ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127494"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "36064426"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -57,7 +57,7 @@ ms.locfileid: "35127494"
 
 ### <a name="methods"></a>Методы
 
-#### <a name="converttolocalclienttimetimevalue--localclienttimejavascriptapioutlook11officelocalclienttime"></a>convertToLocalClientTime(timeValue) → {[LocalClientTime](/javascript/api/outlook_1_1/office.LocalClientTime)}
+#### <a name="converttolocalclienttimetimevalue--localclienttimejavascriptapioutlookofficelocalclienttimeviewoutlook-js-11"></a>convertToLocalClientTime(timeValue) → {[LocalClientTime](/javascript/api/outlook/office.LocalClientTime?view=outlook-js-1.1)}
 
 Получает словарь, содержащий сведения о локальном времени клиента.
 
@@ -81,7 +81,7 @@ ms.locfileid: "35127494"
 
 ##### <a name="returns"></a>Возвращаемое значение:
 
-Тип: [LocalClientTime](/javascript/api/outlook_1_1/office.LocalClientTime)
+Тип: [LocalClientTime](/javascript/api/outlook/office.LocalClientTime?view=outlook-js-1.1)
 
 #### <a name="converttoutcclienttimeinput--date"></a>convertToUtcClientTime(input) → {Date}
 
@@ -93,7 +93,7 @@ ms.locfileid: "35127494"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`input`| [LocalClientTime](/javascript/api/outlook_1_1/office.LocalClientTime)|Значение локального времени для преобразования.|
+|`input`| [LocalClientTime](/javascript/api/outlook/office.LocalClientTime?view=outlook-js-1.1)|Значение локального времени для преобразования.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -205,8 +205,8 @@ Office.context.mailbox.displayMessageForm(messageId);
 |Имя| Тип| Описание|
 |---|---|---|
 | `parameters` | Object | Словарь параметров, описывающий новую встречу. |
-| `parameters.requiredAttendees` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)&gt; | Массив строк, содержащий электронные адреса, или массив, содержащий объекты `EmailAddressDetails` для каждого из обязательных участников встречи. Массив может включать не более 100 записей. |
-| `parameters.optionalAttendees` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook_1_1/office.emailaddressdetails)&gt; | Массив строк, содержащий электронные адреса, или массив, содержащий объекты `EmailAddressDetails` для каждого из необязательных участников встречи. Массив может включать не более 100 записей. |
+| `parameters.requiredAttendees` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.1)&gt; | Массив строк, содержащий электронные адреса, или массив, содержащий объекты `EmailAddressDetails` для каждого из обязательных участников встречи. Массив может включать не более 100 записей. |
+| `parameters.optionalAttendees` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.1)&gt; | Массив строк, содержащий электронные адреса, или массив, содержащий объекты `EmailAddressDetails` для каждого из необязательных участников встречи. Массив может включать не более 100 записей. |
 | `parameters.start` | Date | Объект `Date`, указывающий дату и время начала встречи. |
 | `parameters.end` | Date | Объект `Date`, указывающий дату и время окончания встречи. |
 | `parameters.location` | Строка | Строка со сведениями о месте встречи. Максимальное количество символов в строке — 255. |

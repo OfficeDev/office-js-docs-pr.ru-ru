@@ -3,12 +3,12 @@ title: Office. Context. Mailbox — набор обязательных элем
 description: ''
 ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: a2bc037d26592ca5b83ccda576314f0f6bfa4e3e
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 373ac1f4361ae94f788a61e49c304a1cfdb90232
+ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127333"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "36064706"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -75,7 +75,7 @@ ms.locfileid: "35127333"
 |Имя| Тип| Описание|
 |---|---|---|
 |`itemId`| String|Идентификатор элемента в формате REST API для Outlook|
-|`restVersion`| [Office.MailboxEnums.RestVersion](/javascript/api/outlook_1_4/office.mailboxenums.restversion)|Значение, определяющее версию REST API для Outlook, которая используется для извлечения идентификатора элемента.|
+|`restVersion`| [Office.MailboxEnums.RestVersion](/javascript/api/outlook/office.mailboxenums.restversion?view=outlook-js-1.4)|Значение, определяющее версию REST API для Outlook, которая используется для извлечения идентификатора элемента.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -99,7 +99,7 @@ var restId = 'AAMkAGVlOTZjNTM3LW...';
 var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.RestVersion.v2_0);
 ```
 
-#### <a name="converttolocalclienttimetimevalue--localclienttimejavascriptapioutlook14officelocalclienttime"></a>convertToLocalClientTime(timeValue) → {[LocalClientTime](/javascript/api/outlook_1_4/office.LocalClientTime)}
+#### <a name="converttolocalclienttimetimevalue--localclienttimejavascriptapioutlookofficelocalclienttimeviewoutlook-js-14"></a>convertToLocalClientTime(timeValue) → {[LocalClientTime](/javascript/api/outlook/office.LocalClientTime?view=outlook-js-1.4)}
 
 Получает словарь, содержащий сведения о локальном времени клиента.
 
@@ -123,7 +123,7 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 
 ##### <a name="returns"></a>Возвращаемое значение:
 
-Тип: [LocalClientTime](/javascript/api/outlook_1_4/office.LocalClientTime)
+Тип: [LocalClientTime](/javascript/api/outlook/office.LocalClientTime?view=outlook-js-1.4)
 
 #### <a name="converttorestiditemid-restversion--string"></a>convertToRestId(itemId, restVersion) → {String}
 
@@ -139,7 +139,7 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 |Имя| Тип| Описание|
 |---|---|---|
 |`itemId`| String|Идентификатор элемента в формате EWS|
-|`restVersion`| [Office.MailboxEnums.RestVersion](/javascript/api/outlook_1_4/office.mailboxenums.restversion)|Значение, определяющее версию REST API для Outlook, с которой будет использоваться преобразованный идентификатор.|
+|`restVersion`| [Office.MailboxEnums.RestVersion](/javascript/api/outlook/office.mailboxenums.restversion?view=outlook-js-1.4)|Значение, определяющее версию REST API для Outlook, с которой будет использоваться преобразованный идентификатор.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -173,7 +173,7 @@ var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.R
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`input`| [LocalClientTime](/javascript/api/outlook_1_6/office.LocalClientTime)|Значение локального времени для преобразования.|
+|`input`| [LocalClientTime](/javascript/api/outlook/office.LocalClientTime?view=outlook-js-1.6)|Значение локального времени для преобразования.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -285,8 +285,8 @@ Office.context.mailbox.displayMessageForm(messageId);
 |Имя| Тип| Описание|
 |---|---|---|
 | `parameters` | Object | Словарь параметров, описывающий новую встречу. |
-| `parameters.requiredAttendees` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook_1_4/office.emailaddressdetails)&gt; | Массив строк, содержащий электронные адреса, или массив, содержащий объекты `EmailAddressDetails` для каждого из обязательных участников встречи. Массив может включать не более 100 записей. |
-| `parameters.optionalAttendees` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook_1_4/office.emailaddressdetails)&gt; | Массив строк, содержащий электронные адреса, или массив, содержащий объекты `EmailAddressDetails` для каждого из необязательных участников встречи. Массив может включать не более 100 записей. |
+| `parameters.requiredAttendees` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.4)&gt; | Массив строк, содержащий электронные адреса, или массив, содержащий объекты `EmailAddressDetails` для каждого из обязательных участников встречи. Массив может включать не более 100 записей. |
+| `parameters.optionalAttendees` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.4)&gt; | Массив строк, содержащий электронные адреса, или массив, содержащий объекты `EmailAddressDetails` для каждого из необязательных участников встречи. Массив может включать не более 100 записей. |
 | `parameters.start` | Date | Объект `Date`, указывающий дату и время начала встречи. |
 | `parameters.end` | Date | Объект `Date`, указывающий дату и время окончания встречи. |
 | `parameters.location` | Строка | Строка со сведениями о месте встречи. Максимальное количество символов в строке — 255. |

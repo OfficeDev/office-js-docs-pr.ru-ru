@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1,6
 ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 1c81a2241d7e82e7fd2146189638c43ec1865296
-ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
+ms.openlocfilehash: c38dd942c3002af05f847846145bc89f1cbbccbe
+ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "35940768"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "36064909"
 ---
 # <a name="whats-new-in-excel-javascript-api-16"></a>Новые возможности API JavaScript для Excel 1.6
 
@@ -31,6 +31,8 @@ ms.locfileid: "35940768"
 * Полное удаление условного форматирование в указанном диапазоне.
 
 ## <a name="api-list"></a>Список API
+
+В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Excel 1,6. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых набором обязательных элементов API JavaScript для Excel 1,6 или более ранней версии, обратитесь к разделам [API Excel в наборе требований 1,6](/javascript/api/excel?view=excel-js-1.6)
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
@@ -147,5 +149,5 @@ ms.locfileid: "35940768"
 
 ## <a name="see-also"></a>См. также
 
-- [Справочная документация по API JavaScript для Excel](/javascript/api/excel)
+- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.6)
 - [Наборы обязательных элементов API JavaScript для Excel](./excel-api-requirement-sets.md)

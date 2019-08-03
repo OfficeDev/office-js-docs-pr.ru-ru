@@ -1,15 +1,15 @@
 ---
 title: Предварительные версии API JavaScript для Excel
 description: Сведения о предстоящих API JavaScript для Excel
-ms.date: 07/11/2019
+ms.date: 07/25/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 2199b7c115a1edd66bb7b1fef86eb3bc7bba473e
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: 200b187b059c1b03ae3713b5afa11b2152aba0da
+ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35771955"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "36064853"
 ---
 # <a name="excel-javascript-preview-apis"></a>Предварительные версии API JavaScript для Excel
 
@@ -30,6 +30,8 @@ ms.locfileid: "35771955"
 | [Вставка книги](../../excel/excel-add-ins-workbooks.md#insert-a-copy-of-an-existing-workbook-into-the-current-one-preview) | Вставка одной книги в другую.  | [Workbook](/javascript/api/excel/excel.worksheetcollection) |
 
 ## <a name="api-list"></a>Список API
+
+В следующей таблице перечислены API JavaScript для Excel, находящиеся в предварительной версии. Чтобы просмотреть полный список всех интерфейсов API JavaScript для Excel (включая предварительные API и ранее выпущенные API), ознакомьтесь со статьями [все API JavaScript для Excel](/javascript/api/excel?view=excel-js-preview).
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
@@ -416,5 +418,5 @@ ms.locfileid: "35771955"
 
 ## <a name="see-also"></a>См. также
 
-- [Справочная документация по API JavaScript для Excel](/javascript/api/excel)
+- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-preview)
 - [Наборы обязательных элементов API JavaScript для Excel](./excel-api-requirement-sets.md)

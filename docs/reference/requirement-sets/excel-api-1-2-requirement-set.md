@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1,2
 ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: b3d4e7a7596ad47a728ffe6c7b6fd6272e8893ad
-ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
+ms.openlocfilehash: 88943ce69154b3ea303bbbafabf144a51ae6e674
+ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "35940782"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "36064482"
 ---
 # <a name="whats-new-in-excel-javascript-api-12"></a>Новые возможности API JavaScript для Excel 1.2
 
@@ -17,11 +17,10 @@ ExcelApi 1,2 добавлена поддержка фильтрации табл
 
 ## <a name="api-list"></a>Список API
 
-|| Класс | Поля | Описание |
+В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Excel 1,2. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых набором обязательных элементов API JavaScript для Excel 1,2 или более ранней версии, обратитесь к разделам [API Excel в наборе требований 1,2](/javascript/api/excel?view=excel-js-1.2)
+
+| Класс | Поля | Описание |
 |:---|:---|:---|
-|[Binding](/javascript/api/excel/excel.binding)|[onDataChanged](/javascript/api/excel/excel.binding#ondatachanged)|Возникает при изменении данных или форматирования в привязке.|
-||[onSelectionChanged](/javascript/api/excel/excel.binding#onselectionchanged)|Возникает при изменении выбранного содержимого в привязке.|
-|[BindingDataChangedEventArgs](/javascript/api/excel/excel.bindingdatachangedeventargs)|[binding](/javascript/api/excel/excel.bindingdatachangedeventargs#binding)|Получает объект Binding, представляющий привязку, которая вызвала событие DataChanged.|
 |[BindingSelectionChangedEventArgs](/javascript/api/excel/excel.bindingselectionchangedeventargs)|[binding](/javascript/api/excel/excel.bindingselectionchangedeventargs#binding)|Получает объект Binding, представляющий привязку, вызвавшую событие SelectionChanged.|
 ||[Число](/javascript/api/excel/excel.bindingselectionchangedeventargs#columncount)|Получает количество выбранных столбцов.|
 ||[Стро](/javascript/api/excel/excel.bindingselectionchangedeventargs#rowcount)|Получает количество выбранных строк.|
@@ -483,5 +482,5 @@ ExcelApi 1,2 добавлена поддержка фильтрации табл
 
 ## <a name="see-also"></a>См. также
 
-- [Справочная документация по API JavaScript для Excel](/javascript/api/excel)
+- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.2)
 - [Наборы обязательных элементов API JavaScript для Excel](./excel-api-requirement-sets.md)

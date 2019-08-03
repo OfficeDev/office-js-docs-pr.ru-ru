@@ -1,14 +1,14 @@
 ---
 title: Пространство имен Office — набор обязательных элементов 1,2
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/24/2019
 localization_priority: Normal
-ms.openlocfilehash: dc98d4c2da6e8f9ca294a6c686cf081478e1bb24
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 9dd492046df6325c5c2cdb04dbd1c8bc331b3471
+ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450312"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "36064398"
 ---
 # <a name="office"></a>Office
 
@@ -25,11 +25,11 @@ ms.locfileid: "32450312"
 
 [context.](office.context.md) Предоставляет общие интерфейсы из контекстного пространства имен API надстроек Office для использования в API надстройки Outlook.
 
-[MailboxEnums.](/javascript/api/outlook_1_2/office.mailboxenums.attachmenttype) Включает перечисления ItemType, EntityType, AttachmentType, RecipientType, ResponseType и ItemNotificationMessageType.
+[MailboxEnums.](/javascript/api/outlook/office.mailboxenums.attachmenttype?view=outlook-js-1.2) Включает перечисления ItemType, EntityType, AttachmentType, RecipientType, ResponseType и ItemNotificationMessageType.
 
 ### <a name="members"></a>Элементы
 
-####  <a name="asyncresultstatus-string"></a>AsyncResultStatus :String
+#### <a name="asyncresultstatus-string"></a>AsyncResultStatus: строка
 
 Указывает результат асинхронного вызова.
 
@@ -41,7 +41,7 @@ ms.locfileid: "32450312"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Succeeded`| Строка|Вызов завершился успешно.|
+|`Succeeded`| String|Вызов завершился успешно.|
 |`Failed`| Для указания|Вызов завершился ошибкой.|
 
 ##### <a name="requirements"></a>Требования
@@ -51,7 +51,7 @@ ms.locfileid: "32450312"
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-####  <a name="coerciontype-string"></a>CoercionType :String
+#### <a name="coerciontype-string"></a>CoercionType: строка
 
 Указывает способ приведения данных, возвращаемых или задаваемых вызванным методом.
 
@@ -63,8 +63,8 @@ ms.locfileid: "32450312"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Html`| Строка|Запрашивает возврат данных в формате HTML.|
-|`Text`| Строка|Запрашивает возврат данных в формате текста.|
+|`Html`| String|Запрашивает возврат данных в формате HTML.|
+|`Text`| String|Запрашивает возврат данных в формате текста.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -73,7 +73,7 @@ ms.locfileid: "32450312"
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-####  <a name="sourceproperty-string"></a>SourceProperty :String
+#### <a name="sourceproperty-string"></a>Перестрока: строка
 
 Указывает источник данных, возвращаемых вызванным методом.
 
@@ -85,8 +85,8 @@ ms.locfileid: "32450312"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Body`| Строка|Источник данных — текст сообщения.|
-|`Subject`| Строка|Источник данных — тема сообщения.|
+|`Body`| String|Источник данных — текст сообщения.|
+|`Subject`| String|Источник данных — тема сообщения.|
 
 ##### <a name="requirements"></a>Требования
 

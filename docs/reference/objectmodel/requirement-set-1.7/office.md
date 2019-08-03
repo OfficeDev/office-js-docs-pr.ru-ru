@@ -1,14 +1,14 @@
 ---
 title: Пространство имен Office — набор обязательных элементов 1,7
 description: ''
-ms.date: 04/12/2019
+ms.date: 04/24/2019
 localization_priority: Normal
-ms.openlocfilehash: 523df189b28fc568ac32e8d17d4a226b52cbd23c
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: b65a9b0dd4523423a52e08a725e652e1740a779b
+ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451621"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "36064461"
 ---
 # <a name="office"></a>Office
 
@@ -34,11 +34,11 @@ ms.locfileid: "32451621"
 
 [context.](office.context.md) Предоставляет общие интерфейсы из контекстного пространства имен API надстроек Office для использования в API надстройки Outlook.
 
-[MailboxEnums.](/javascript/api/outlook_1_7/office.mailboxenums.attachmenttype) Включает перечисления ItemType, EntityType, AttachmentType, RecipientType, ResponseType и ItemNotificationMessageType.
+[MailboxEnums.](/javascript/api/outlook/office.mailboxenums.attachmenttype?view=outlook-js-1.7) Включает перечисления ItemType, EntityType, AttachmentType, RecipientType, ResponseType и ItemNotificationMessageType.
 
 ### <a name="members"></a>Элементы
 
-####  <a name="asyncresultstatus-string"></a>AsyncResultStatus :String
+#### <a name="asyncresultstatus-string"></a>AsyncResultStatus: строка
 
 Указывает результат асинхронного вызова.
 
@@ -50,7 +50,7 @@ ms.locfileid: "32451621"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Succeeded`| Строка|Вызов завершился успешно.|
+|`Succeeded`| String|Вызов завершился успешно.|
 |`Failed`| Для указания|Вызов завершился ошибкой.|
 
 ##### <a name="requirements"></a>Требования
@@ -63,7 +63,7 @@ ms.locfileid: "32451621"
 ---
 ---
 
-####  <a name="coerciontype-string"></a>CoercionType :String
+#### <a name="coerciontype-string"></a>CoercionType: строка
 
 Указывает способ приведения данных, возвращаемых или задаваемых вызванным методом.
 
@@ -75,8 +75,8 @@ ms.locfileid: "32451621"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Html`| Строка|Запрашивает возврат данных в формате HTML.|
-|`Text`| Строка|Запрашивает возврат данных в формате текста.|
+|`Html`| String|Запрашивает возврат данных в формате HTML.|
+|`Text`| String|Запрашивает возврат данных в формате текста.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -88,7 +88,7 @@ ms.locfileid: "32451621"
 ---
 ---
 
-####  <a name="eventtype-string"></a>EventType :String
+#### <a name="eventtype-string"></a>EventType: строка
 
 Указывает событие, связанное с обработчиком.
 
@@ -100,10 +100,10 @@ ms.locfileid: "32451621"
 
 | Имя | Тип | Описание | Набор минимальных требований |
 |---|---|---|---|
-|`AppointmentTimeChanged`| Строка | Дата или время выбранной встречи или ряда изменились. | 1.7 |
-|`ItemChanged`| Строка | Для просмотра выбран другой элемент Outlook, когда область задач закреплена. | 1.5 |
-|`RecipientsChanged`| Строка | Список получателей выбранного элемента или места встречи изменился. | 1.7 |
-|`RecurrenceChanged`| Строка | Шаблон повторения выбранного ряда изменился. | 1.7 |
+|`AppointmentTimeChanged`| String | Дата или время выбранной встречи или ряда изменились. | 1.7 |
+|`ItemChanged`| String | Для просмотра выбран другой элемент Outlook, когда область задач закреплена. | 1.5 |
+|`RecipientsChanged`| String | Список получателей выбранного элемента или места встречи изменился. | 1.7 |
+|`RecurrenceChanged`| String | Шаблон повторения выбранного ряда изменился. | 1.7 |
 
 ##### <a name="requirements"></a>Требования
 
@@ -115,7 +115,7 @@ ms.locfileid: "32451621"
 ---
 ---
 
-####  <a name="sourceproperty-string"></a>SourceProperty :String
+#### <a name="sourceproperty-string"></a>Перестрока: строка
 
 Указывает источник данных, возвращаемых вызванным методом.
 
@@ -127,8 +127,8 @@ ms.locfileid: "32451621"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Body`| Строка|Источник данных — текст сообщения.|
-|`Subject`| Строка|Источник данных — тема сообщения.|
+|`Body`| String|Источник данных — текст сообщения.|
+|`Subject`| String|Источник данных — тема сообщения.|
 
 ##### <a name="requirements"></a>Требования
 

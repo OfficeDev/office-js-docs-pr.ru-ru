@@ -3,12 +3,12 @@ title: Office. Context — набор обязательных элементо�
 description: ''
 ms.date: 06/25/2019
 localization_priority: Normal
-ms.openlocfilehash: 8f21389d40181db0f62a8e13a882aaf4cb9b5072
-ms.sourcegitcommit: 90c2d8236c6b30d80ac2b13950028a208ef60973
+ms.openlocfilehash: b7845450f81d85ca561088a1c944955228c502c3
+ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "35454862"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "36064475"
 ---
 # <a name="context"></a>context
 
@@ -77,7 +77,7 @@ function write(message){
 ---
 ---
 
-#### <a name="roamingsettings-roamingsettingsjavascriptapioutlook17officeroamingsettings"></a>roamingSettings: [roamingSettings](/javascript/api/outlook_1_7/office.RoamingSettings)
+#### <a name="roamingsettings-roamingsettingsjavascriptapioutlookofficeroamingsettingsviewoutlook-js-17"></a>roamingSettings: [roamingSettings](/javascript/api/outlook/office.RoamingSettings?view=outlook-js-1.7)
 
 Получает объект, представляющий настраиваемые параметры или состояние надстройки почты, сохраненное в почтовом ящике пользователя.
 
@@ -85,7 +85,7 @@ function write(message){
 
 ##### <a name="type"></a>Тип
 
-*   [RoamingSettings](/javascript/api/outlook_1_7/office.RoamingSettings)
+*   [RoamingSettings](/javascript/api/outlook/office.RoamingSettings?view=outlook-js-1.7)
 
 ##### <a name="requirements"></a>Требования
 
