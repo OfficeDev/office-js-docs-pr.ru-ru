@@ -3,12 +3,12 @@ title: Конфиденциальность и безопасность надс
 description: ''
 ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 26b9184eb1e52422122288659f068719bd43075b
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 5a930f9c2d4d2c7fe049517ac812c72a8a239b40
+ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127760"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "35575557"
 ---
 # <a name="privacy-and-security-for-office-add-ins"></a>Конфиденциальность и безопасность надстроек Office
 
@@ -249,7 +249,7 @@ Exchange и SharePoint предоставляют прокси-серверы н
 
 В корпоративной среде ИТ-администраторы обладают высшими полномочиями в том, что касается предоставления или запрета доступа к AppSource и каким-либо частным каталогам.
 
-Управление параметрами Office и их внедрение выполняется с помощью параметров групповой политики. Указанные ниже параметры настраиваются с помощью [средства развертывания Office](https://docs.microsoft.com/deployoffice/overview-of-the-office-2016-deployment-tool) совместно с [центром развертывания Office](https://docs.microsoft.com/DeployOffice/overview-of-the-office-customization-tool-for-click-to-run).
+Управление параметрами Office и их внедрение выполняется с помощью параметров групповой политики. Указанные ниже параметры настраиваются с помощью [средства развертывания Office](/deployoffice/overview-of-the-office-2016-deployment-tool) совместно с [центром развертывания Office](/deployoffice/overview-of-the-office-customization-tool-for-click-to-run).
 
 | Имя параметра | Описание |
 |--------------|-------------|
@@ -258,7 +258,7 @@ Exchange и SharePoint предоставляют прокси-серверы н
 | Заблокировать Магазин Office |  Позволяет запрещать пользователям применение или вставку веб-настроек из Магазина Office. |
 
 > [!IMPORTANT]
-> Если в рабочих группах используется несколько выпусков Office, для каждого выпуска нужно настроить параметры групповой политики. Подробные сведения о параметрах групповой политики для Office 2013 см. в разделе [Использование групповой политики для управления возможностью установки и использования пользователями приложений для Office](https://docs.microsoft.com/previous-versions/office/office-2013-resource-kit/jj219429(v=office.15)#using-group-policy-to-manage-how-users-can-install-and-use-apps-for-office) статьи [Обзор приложений для Office 2013](https://docs.microsoft.com/previous-versions/office/office-2013-resource-kit/jj219429(v%3doffice.15))
+> Если в рабочих группах используется несколько выпусков Office, для каждого выпуска нужно настроить параметры групповой политики. Подробные сведения о параметрах групповой политики для Office 2013 см. в разделе [Использование групповой политики для управления возможностью установки и использования пользователями приложений для Office](/previous-versions/office/office-2013-resource-kit/jj219429(v=office.15)#using-group-policy-to-manage-how-users-can-install-and-use-apps-for-office) статьи [Обзор приложений для Office 2013](/previous-versions/office/office-2013-resource-kit/jj219429(v%3doffice.15))
 
 ## <a name="see-also"></a>См. также
 

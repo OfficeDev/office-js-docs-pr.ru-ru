@@ -3,19 +3,19 @@ title: Устранение ошибок единого входа
 description: ''
 ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: f9c69eb937b8931dde3e702cf1f287e0e8c5fdbc
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: e3f496947acf12af942e901bc0f6e4c293db9bdf
+ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128033"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "35575550"
 ---
 # <a name="troubleshoot-error-messages-for-single-sign-on-sso-preview"></a>Устранение ошибок единого входа (предварительная версия)
 
 В этой статье представлено руководство по обеспечению надежной обработки специальных условий и ошибок в надстройках Office, поддерживающих единый вход, а также устранению связанных с единым входом проблем в таких надстройках.
 
 > [!NOTE]
-> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint в тестовом режиме. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets).
+> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint в тестовом режиме. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](../reference/requirement-sets/identity-api-requirement-sets.md).
 > [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
 > Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
