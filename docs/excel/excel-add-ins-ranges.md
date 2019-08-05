@@ -1,14 +1,14 @@
 ---
 title: Работа с диапазонами с использованием API JavaScript для Excel (основные задачи)
 description: ''
-ms.date: 02/20/2019
+ms.date: 04/30/2019
 localization_priority: Priority
-ms.openlocfilehash: bb3971a88b6721206424a62c007ce2bcdbd7d3a0
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: b434042be7328a6598d46716f2b7020e5972823e
+ms.sourcegitcommit: 47b792755e655043d3db2f1fdb9a1eeb7453c636
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449675"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "33620400"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api"></a>Работа с диапазонами с использованием API JavaScript для Excel
 
@@ -23,7 +23,7 @@ ms.locfileid: "32449675"
 
 ### <a name="get-range-by-address"></a>Получение диапазона по адресу
 
-В примере кода ниже показано, как получить диапазон с адресом **B2:B5** с листа **Sample** (Пример), загрузить его свойство **address** и записать сообщение в консоль.
+В примере кода ниже показано, как получить диапазон с адресом **B2:C5** с листа **Sample** (Пример), загрузить его свойство **address** и записать сообщение в консоль.
 
 ```js
 Excel.run(function (context) {
@@ -543,10 +543,7 @@ Excel.run(function (context) {
 
 В диапазонах может применяться форматирование к отдельным ячейкам на основе условий. Дополнительные сведения об этом см. в статье [Применение условного форматирования к диапазонам Excel](excel-add-ins-conditional-formatting.md).
 
-## <a name="find-a-cell-using-string-matching-preview"></a>Поиск ячейки с помощью сопоставления строк (предварительная версия)
-
-> [!NOTE]
-> Функция `find` объекта Range в настоящее время доступна только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+## <a name="find-a-cell-using-string-matching"></a>Поиск ячейки с помощью сопоставления строк
 
 У объекта `Range` есть метод `find` для поиска указанной строки в диапазоне. Он возвращает диапазон первой ячейки с текстом, соответствующим критериям. Приведенный ниже пример кода находит первую ячейку со значением, соответствующим строке **Food** (Еда), и заносит ее адрес в консоль. Обратите внимание, что метод `find` выдает ошибку `ItemNotFound`, если указанной строки не существует в диапазоне. Если ожидается, что указанная строка может отсутствовать в диапазоне, используйте вместо этого метод [findOrNullObject](excel-add-ins-advanced-concepts.md#ornullobject-methods), чтобы ваш код корректно обработал этот сценарий.
 
