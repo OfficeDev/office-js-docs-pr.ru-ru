@@ -1,14 +1,14 @@
 ---
 title: Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 description: ''
-ms.date: 06/20/2019
+ms.date: 07/29/2019
 localization_priority: Priority
-ms.openlocfilehash: b97da347064fdceda847403785e0bf792846dfaa
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 010812cf02bb96f26db64aa89d6e9fd3ce679ea9
+ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35126969"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "35940873"
 ---
 # <a name="sideload-office-add-ins-on-ipad-and-mac-for-testing"></a>Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 
@@ -64,9 +64,9 @@ ms.locfileid: "35126969"
 
 1. Откройте **Терминал** и перейдите в одну из указанных ниже папок, чтобы сохранить в нее файл манифеста надстройки. Если папки `wef` нет на компьютере, создайте ее.
     
-    - Для Word: `/Users/<username>/Library/Containers/com.microsoft.Word/Data/documents/wef`    
-    - Для Excel: `/Users/<username>/Library/Containers/com.microsoft.Excel/Data/documents/wef`
-    - Для PowerPoint: `/Users/<username>/Library/Containers/com.microsoft.Powerpoint/Data/documents/wef`
+    - Для Word: `/Users/<username>/Library/Containers/com.microsoft.Word/Data/Documents/wef`    
+    - Для Excel: `/Users/<username>/Library/Containers/com.microsoft.Excel/Data/Documents/wef`
+    - Для PowerPoint: `/Users/<username>/Library/Containers/com.microsoft.Powerpoint/Data/Documents/wef`
     
 2. Откройте папку в **Finder** с помощью команды `open .` (включая точку). Скопируйте файл манифеста надстройки в эту папку.
     
@@ -86,10 +86,6 @@ ms.locfileid: "35126969"
     ![Надстройка в Office для Mac](../images/lorem-ipsum-wikipedia.png)
     
 ### <a name="clearing-the-office-applications-cache-on-a-mac"></a>Очистка кэша приложения Office на компьютере Mac
-
-Для повышения производительности надстройки часто кэшируются в Office для Mac. Как правило, для очистки кэша необходимо перезагрузить надстройку. Если в одном документе несколько надстроек, автоматическая очистка кэша может не сработать при перезагрузке.
-
-На компьютере Mac можно очистить кэш вручную, удалив все содержимое папки `~/Library/Containers/com.Microsoft.OsfWebHost/Data/`. 
 
 [!include[additional cache folders on Mac](../includes/mac-cache-folders.md)]
 
