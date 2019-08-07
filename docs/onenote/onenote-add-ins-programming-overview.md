@@ -1,14 +1,14 @@
 ---
 title: Обзор создания кода с помощью API JavaScript для OneNote
 description: ''
-ms.date: 06/20/2019
+ms.date: 07/05/2019
 localization_priority: Priority
-ms.openlocfilehash: 852c68bc9edf370d0eef687fb4869b23d4f59fe4
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 223d7cdf6770d21a16272b9a8602201cec77d111
+ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128638"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "35575662"
 ---
 # <a name="onenote-javascript-api-programming-overview"></a>Обзор создания кода с помощью API JavaScript для OneNote
 
@@ -87,6 +87,10 @@ function getPagesInSection() {
 
 Сведения о поддерживаемых объектах и операциях OneNote см. в [справочнике по API](/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference).
 
+#### <a name="onenote-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для OneNote
+
+Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения о наборах обязательных элементов API JavaScript для OneNote см. в статье [Наборы обязательных элементов API JavaScript для OneNote](../reference/requirement-sets/onenote-api-requirement-sets.md).
+
 ### <a name="accessing-the-common-api-through-the-document-object"></a>Получение доступа к общему API с помощью объекта *Document*
 
 Для доступа к общему API, например к методам [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) и [setSelectedDataAsync](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-), используйте объект **Document**. 
@@ -131,6 +135,7 @@ function getSelectionFromPage() {
 
 ## <a name="see-also"></a>См. также
 
+- [Документация по надстройкам OneNote](index.md)
 - [Создание первой надстройки OneNote](../quickstarts/onenote-quickstart.md)
 - [Справочник по API JavaScript для OneNote](/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)

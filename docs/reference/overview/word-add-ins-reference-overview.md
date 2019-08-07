@@ -1,138 +1,46 @@
 ---
 title: Обзор API JavaScript для Word
 description: ''
-ms.date: 06/10/2019
+ms.date: 07/05/2019
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 92b66b98776c1ad6b2d824af8bf13b01f2807384
-ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
+ms.openlocfilehash: fbc9e8293642d1ab8edf32d568a5dab7ef77a8f0
+ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "34910205"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "35575627"
 ---
 # <a name="word-javascript-api-overview"></a>Обзор API JavaScript для Word
 
-Word предоставляет большой набор API. Вы можете использовать эти API для создания надстроек, взаимодействующих с контентом и метаданными документов. С помощью этих API вы сможете создавать привлекательные приложения, интегрируемые с Word и расширяющие возможности этой программы. Вы можете импортировать и экспортировать контент, собирать новые документы на основе различных источников данных, выполнять интеграцию с рабочими процессами документов и создавать пользовательские решения для работы с документами.
+Надстройка Word взаимодействует с объектами в Word с помощью API JavaScript для Office, включающего две объектных модели JavaScript.
 
-Для взаимодействия с объектами и метаданными в документе Word вы можете использовать два указанных ниже API JavaScript.
+* **API JavaScript для Word**. Появившийся в Office 2016 [API JavaScript для Word](/javascript/api/word) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к объектам и метаданным в документе Word. 
 
-- API JavaScript для Word: впервые появился в Office 2016.
-- [API JavaScript для Office](../javascript-api-for-office.md) (Office.js): впервые появился в Office 2013.
+* **Общие API**. Появившиеся в Office 2013 [общие API](/javascript/api/office) можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office.
 
-## <a name="word-javascript-api"></a>API JavaScript для Word
+В этом разделе рассматривается API JavaScript для Word, используемый для разработки большинства функций в надстройках и предназначенный для Word в Интернете, Word 2016 или более поздних версий. Сведения об общем API см. в статье [API JavaScript для Office](../javascript-api-for-office.md). 
 
-API JavaScript для Word загружается с помощью файла Office.js. Этот API изменяет способ взаимодействия с объектами, например с документами и абзацами. Вместо набора отдельных асинхронных API для получения и обновления каждого из этих объектов новый API JavaScript для Word предоставляет прокси-объекты JavaScript, которые соответствуют реальным объектам, выполняемым в Word. Вы можете напрямую взаимодействовать с этими прокси-объектами, синхронно считывая и записывая их свойства, а также вызывая синхронные методы для операций над ними. Эти взаимодействия с прокси-объектами не сразу реализуются в выполняющихся сценариях. Метод **context.sync** синхронизирует состояние запущенного JavaScript и реальных объектов в Office, выполняя поставленные в очередь инструкции и получая свойства загруженных объектов Word для их использования в сценарии.
+## <a name="learn-programming-concepts"></a>Сведения о концепциях, связанных с программированием
 
-## <a name="javascript-api-for-office"></a>API JavaScript для Office
+Сведения о важных концепциях программирования см. в статье [Основные концепции программирования с помощью API JavaScript для Word](../../word/word-add-ins-core-concepts.md).
+ 
+## <a name="learn-about-api-capabilities"></a>Сведения о возможностях API
 
-Файл Office.js можно получить из указанных ниже расположений.
+Используйте другие статьи в этом разделе, чтобы узнать, как [получить весь документ из надстройки](../../word/get-the-whole-document-from-an-add-in-for-word.md), [воспользоваться параметрами поиска, чтобы найти текст в надстройке Word,](../../word/search-option-guidance.md) и т. д. Полный список доступных статей см. в оглавлении.
 
-- https://appsforoffice.microsoft.com/lib/1/hosted/office.js. Используйте этот ресурс для рабочих надстроек.
-- https://appsforoffice.microsoft.com/lib/beta/hosted/office.js. Используйте этот ресурс при испытаниях предварительных версий функций.
+Чтобы получить практический опыт доступа к объектам в Word с помощью API JavaScript для Word, выполните инструкции из [руководства по надстройкам Word](../../tutorials/word-tutorial.md). 
 
-Если вы используете [Visual Studio](https://www.visualstudio.com/products/free-developer-offers-vs), то, чтобы получить шаблоны проектов, включающие файл Office.js, вы можете скачать [Office Developer Tools](https://www.visualstudio.com/features/office-tools-vs.aspx).  Кроме того, [чтобы получить файл Office.js, вы можете воспользоваться NuGet](https://www.nuget.org/packages/Microsoft.Office.js/).
+Дополнительные сведения об объектной модели API JavaScript для Word см. в [справочной документации по API JavaScript для Word](/javascript/api/word).
 
-Если вы используете TypeScript и у вас есть npm, то вы можете получить определения TypeScript, выполнив в интерфейсе командной строки следующую команду: `typings install office-js --ambient`.
+## <a name="try-out-code-samples-in-script-lab"></a>Опробуйте примеры кода в Script Lab
 
-## <a name="running-word-add-ins"></a>Запуск надстроек Word
-
-Чтобы запустить надстройку, воспользуйтесь обработчиком событий Office.initialize. Дополнительные сведения об инициализации надстроек см. в статье [Общие сведения об API](/office/dev/add-ins/develop/understanding-the-javascript-api-for-office).
-
-Надстройки для Word 2016 или более поздней версии выполняются передачей функции в метод **Word.run()**. Функции, передаваемой в метод **run**, обязательно должен быть присвоен контекстный аргумент. Этот [контекстный объект](/javascript/api/word/word.requestcontext) отличается от контекстного объекта, получаемого из объекта Office, но он также используется для взаимодействия со средой выполнения Word. Контекстный объект предоставляет доступ к объектной модели API JavaScript для Word. В приведенном ниже примере показано, как инициализировать и выполнить надстройку Word с помощью метода **Word.run()**.
-
-```js
-(function () {
-    "use strict";
-
-    // The initialize event handler must be run on each page to initialize Office JS.
-    // You can add optional custom initialization code that will run after OfficeJS
-    // has initialized.
-    Office.initialize = function (reason) {
-        // The reason object tells how the add-in was initialized. The values can be:
-        // inserted - the add-in was inserted to an open document.
-        // documentOpened - the add-in was already inserted in to the document and the document was opened.
-
-        // Checks for the DOM to load using the jQuery ready function.
-        $(document).ready(function () {
-            // Set your optional initialization code.
-            // You can also load saved settings from the Office object.
-        });
-    };
-
-    // Run a batch operation against the Word JavaScript API object model.
-    // Use the context argument to get access to the Word document.
-    Word.run(function (context) {
-
-        // Create a proxy object for the document.
-        var thisDocument = context.document;
-        // ...
-    })
-})();
-```
-
-### <a name="synchronizing-word-documents-with-word-javascript-api-proxy-objects"></a>Синхронизация документов Word с помощью прокси-объектов API JavaScript для Word
-
-Объектная модель API JavaScript для Word нестрого связана с объектами в Word. Объекты API JavaScript для Word представляют собой прокси-объекты для объектов в документе Word. Действия, выполняемые над прокси-объектами, не будут реализованы в Word, пока не будет синхронизировано состояние документа. И наоборот, состояние документа Word не будет реализовано в прокси-объектах, пока оно не будет синхронизировано. Чтобы синхронизировать состояние документа, выполните метод **context.sync()**. В примере ниже показано, как создать прокси-объект основного текста и помещенную в очередь команду для загрузки свойства текста в прокси-объекте основного текста и как использовать метод **context.sync()** для синхронизации основного текста документа Word с прокси-объектом основного текста.
-
-```js
-// Run a batch operation against the Word object model.
-Word.run(function (context) {
-
-    // Create a proxy object for the document body.
-    // The body object hasn't been set with any property values.
-    var body = context.document.body;
-
-    // Queue a command to load the text property for the proxy document body object.
-    context.load(body, 'text');
-
-    // Synchronize the document state by executing the queued commands,
-    // and return a promise to indicate task completion.
-    return context.sync().then(function () {
-        console.log("Body contents: " + body.text);
-    });
-})
-```
-
-### <a name="executing-a-batch-of-commands"></a>Выполнение пакета команд
-
-У прокси-объектов Word есть методы для доступа к объектной модели и ее обновления. Эти методы выполняются последовательно в том порядке, в котором они были поставлены в очередь в пакете. При вызове метода context.sync() выполняются все команды, помещенные в очередь в пакете.
-
-В примере ниже показано, как работает очередь команд. При вызове метода **context.sync()** в Word выполняется команда загрузки основного текста. Затем выполняется команда вставки текста в основной текст в Word. Результаты выполнения команд возвращаются в прокси-объект основного текста. Значение свойства **body.text** в API JavaScript для Word представляет собой значение основного текста документа Word <u>перед тем, как</u> текст был вставлен в документ Word.
-
-```js
-// Run a batch operation against the Word JavaScript API.
-Word.run(function (context) {
-
-    // Create a proxy object for the document body.
-    var body = context.document.body;
-
-    // Queue a command to load the text property of the proxy body object.
-    context.load(body, 'text');
-
-    // Queue a command to insert text into the end of the Word document body.
-    body.insertText('This is text inserted after loading the body.text property',
-                    Word.InsertLocation.end);
-
-    // Synchronize the document state by executing the queued commands,
-    // and return a promise to indicate task completion.
-    return context.sync().then(function () {
-        console.log("Body contents: " + body.text);
-    });
-})
-```
-
-## <a name="word-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Word
-
-Наборы требований — это именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Подробнее о наборах обязательных элементов API JavaScript для Word см. в статье [Наборы требований API JavaScript для Word](../requirement-sets/word-api-requirement-sets.md).
-
-## <a name="word-javascript-api-reference"></a>Справочные материалы по API JavaScript для Word
-
-Подробнее об API JavaScript для Word см. в [справочной документации по API JavaScript для Word](/javascript/api/word).
+Используйте [Script Lab](../../overview/explore-with-script-lab.md), чтобы быстро начать работу с коллекцией встроенных примеров, демонстрирующих выполнение задач с помощью API. Вы можете выполнять примеры в Script Lab, чтобы сразу увидеть результат в области задач или документе, изучать примеры, чтобы понять принципы действия API, и даже использовать примеры для создания собственных надстроек.
 
 ## <a name="see-also"></a>См. также
 
-- [Обзор надстроек Word](/office/dev/add-ins/word/word-add-ins-programming-overview)
-- [Обзор платформы надстроек Office](/office/dev/add-ins/overview/office-add-ins)
-- [Примеры надстроек Word на сайте GitHub](https://github.com/OfficeDev?utf8=%E2%9C%93&q=Word)
+- [Документация по надстройкам Word](../../word/index.md)
+- [Обзор надстроек Word](../../word/word-add-ins-programming-overview.md)
+- [Справочник по API JavaScript для Word](/javascript/api/word)
+- [Доступность ведущих приложений и платформ для надстроек Office](../../overview/office-add-in-availability.md)
 - [Открытые спецификации API](../openspec/openspec.md)

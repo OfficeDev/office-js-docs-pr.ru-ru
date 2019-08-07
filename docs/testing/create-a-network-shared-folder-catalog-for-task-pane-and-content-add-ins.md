@@ -3,12 +3,12 @@ title: Загрузка неопубликованных надстроек Offi
 description: ''
 ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: acd16bb8a8d08aa6dd05f0f56921e285ee1e2e1f
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 81b931ab7bc88675ae438edf6d0d05ebb040387e
+ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127023"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "35575690"
 ---
 # <a name="sideload-office-add-ins-for-testing"></a>Загрузка неопубликованных надстроек Office для тестирования
 
@@ -82,7 +82,7 @@ ms.locfileid: "35127023"
 
 3. Нажмите **ОБЩАЯ ПАПКА** в верхней части диалогового окна **Надстройки Office**.
 
-4. Выберите имя надстройки и нажмите кнопку **ОК**, чтобы вставить надстройку.
+4. Выберите имя надстройки и нажмите кнопку **Добавить**, чтобы вставить надстройку.
 
 ## <a name="see-also"></a>См. также
 

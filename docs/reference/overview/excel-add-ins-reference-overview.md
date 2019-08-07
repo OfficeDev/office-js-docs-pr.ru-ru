@@ -1,64 +1,50 @@
 ---
 title: Обзор API JavaScript для Excel
 description: ''
-ms.date: 06/10/2019
+ms.date: 07/05/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: aa9574a93252c0011b211c39e37cc013beb64432
-ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
+ms.openlocfilehash: e6064bf7e7dce6931079fc2d3eb262533da7edf3
+ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "34910149"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "35575634"
 ---
 # <a name="excel-javascript-api-overview"></a>Обзор API JavaScript для Excel
 
-Вы можете использовать API JavaScript для Excel, чтобы создавать надстройки для Excel 2016 и более поздних версий. Ниже перечислены объекты Excel высокого уровня, доступные в API. Каждая ссылка на страницу объекта содержит описание свойств, событий и методов, доступных для объекта. Чтобы узнать больше, перейдите по соответствующим ссылкам в меню.
+Надстройка Excel взаимодействует с объектами в Excel с помощью API JavaScript для Office, включающего две объектных модели JavaScript:
 
-Для удобства ниже перечислены некоторые из основных объектов Excel.
+* **API JavaScript для Excel**. Появившийся в Office 2016 [API JavaScript для Excel](/javascript/api/excel) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к листам, диапазонам, таблицам, диаграммам и другим объектам. 
 
-- [Workbook](/javascript/api/excel/excel.workbook) — объект верхнего уровня, содержащий связанные объекты книг, такие как листы, таблицы, диапазоны и т. д. Его также можно использовать для вывода списка связанных ссылок.
+* **Общие API**. Появившиеся в Office 2013 [общие API](/javascript/api/office) можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office.
 
-- [Worksheet](/javascript/api/excel/excel.worksheet). Представляет лист в книге.
-  - [WorksheetCollection](/javascript/api/excel/excel.worksheetcollection): коллекция объектов **Worksheet** в книге.
-  - [Worksheet Protection](/javascript/api/excel/excel.worksheetprotection): защита объекта **Worksheet**.
+В этом разделе рассматривается API JavaScript для Excel, используемый для разработки большинства функций в надстройках и предназначенный для Excel в Интернете, Excel 2016 или более поздних версий. Сведения об общем API см. в статье [API JavaScript для Office](../javascript-api-for-office.md). 
 
-- [Range](/javascript/api/excel/excel.range): ячейка, строка, столбец или группа ячеек, содержащая один или несколько смежных блоков ячеек.
-  - [ConditionalFormat](/javascript/api/excel/excel.conditionalformat): объект, определяющий правило и формат, которые применяются к диапазону при соблюдении условия правила.
-  - [DataValidation](/javascript/api/excel/excel.datavalidation): объект, ограничивающий вводимые пользователем данные диапазоном, в основе которого лежит ряд условий.
-  - [RangeSort](/javascript/api/excel/excel.rangesort): объект, управляющий операциями сортировки для диапазона.
+## <a name="learn-programming-concepts"></a>Сведения о концепциях, связанных с программированием
 
-- [Table](/javascript/api/excel/excel.table): коллекция упорядоченных ячеек для упрощения управления данными.
-  - [TableCollection](/javascript/api/excel/excel.tablecollection). Коллекция таблиц в книге или на листе.
-  - [TableColumnCollection](/javascript/api/excel/excel.tablecolumncollection). Коллекция всех столбцов в таблице.
-  - [TableRowCollection](/javascript/api/excel/excel.tablerowcollection): коллекция всех строк в таблице.
-  - [TableSort](/javascript/api/excel/excel.tablesort): объект, управляющий операциями сортировки в таблице.
+Сведения о важных концепциях программирования см. в следующих статьях:
+ 
+- [Основные концепции программирования с помощью API JavaScript для Excel](../../excel/excel-add-ins-core-concepts.md)
 
-- [Chart](/javascript/api/excel/excel.chart): объект диаграммы на листе, который является визуальным представлением базовых данных.
-  - [ChartCollection](/javascript/api/excel/excel.chartcollection): коллекция диаграмм на листе.
+- [Дополнительные концепции программирования с помощью API JavaScript для Excel](../../excel/excel-add-ins-advanced-concepts.md)
 
-- [PivotTable](/javascript/api/excel/excel.pivottable): сводная таблица Excel, которая является иерархической группировкой и представлением данных.
-  - [PivotTableCollection](/javascript/api/excel/excel.pivottablecollection): коллекция сводных таблиц на листе.
+## <a name="learn-about-api-capabilities"></a>Сведения о возможностях API
 
-- [Filter](/javascript/api/excel/excel.filter): объект, управляющий фильтрацией столбца таблицы.
+Используйте другие статьи этого раздела, чтобы узнать о работе с [событиями](../../excel/excel-add-ins-events.md), [диаграммами](../../excel/excel-add-ins-charts.md), [диапазонами](../../excel/excel-add-ins-ranges.md), [таблицами](../../excel/excel-add-ins-tables.md), [листами](../../excel/excel-add-ins-worksheets.md) и т. д. Кроме того, в этом разделе содержится руководство по концепциям API JavaScript для Excel, таким как [совместное редактирование в надстройках Excel](../../excel/co-authoring-in-excel-add-ins.md), [проверка данных](../../excel/excel-add-ins-data-validation.md), [обработка ошибок](../../excel/excel-add-ins-error-handling.md) и [оптимизация производительности](../../excel/performance.md). Полный список доступных статей см. в оглавлении.
 
-- [NamedItem](/javascript/api/excel/excel.nameditem): определенное имя для диапазона ячеек или значения.
-  - [NamedItemCollection](/javascript/api/excel/excel.nameditemcollection). Коллекция объектов **NamedItem** в книге.
+Чтобы получить практический опыт доступа к объектам в Excel с помощью API JavaScript для Excel, выполните инструкции из [руководства по надстройкам Excel](../../tutorials/excel-tutorial.md). 
 
-- [Binding](/javascript/api/excel/excel.binding): абстрактный класс, представляющий привязку к разделу книги.
-  - [BindingCollection](/javascript/api/excel/excel.bindingcollection): коллекция объектов **Binding** в книге.
+Дополнительные сведения об объектной модели API JavaScript для Excel см. в [справочной документации по API JavaScript для Excel](/javascript/api/excel).
 
-## <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
+## <a name="try-out-code-samples-in-script-lab"></a>Опробуйте примеры кода в Script Lab
 
-Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительны сведения о наборах обязательных элементов API JavaScript для Excel см. в статье [Наборы требований API JavaScript для Excel](../requirement-sets/excel-api-requirement-sets.md).
-
-## <a name="excel-javascript-api-reference"></a>Справочные материалы по API JavaScript для Excel
-
-Дополнительные сведения об API JavaScript для Excel см. в [справочной документации по API JavaScript для Excel](/javascript/api/excel).
+Используйте [Script Lab](../../overview/explore-with-script-lab.md), чтобы быстро начать работу с коллекцией встроенных примеров, демонстрирующих выполнение задач с помощью API. Вы можете выполнять примеры в Script Lab, чтобы сразу увидеть результат в области задач или листе, изучать примеры, чтобы понять принципы действия API, и даже использовать примеры для создания собственных надстроек.
 
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения о надстройках Excel](/office/dev/add-ins/excel/excel-add-ins-overview)
-- [Обзор платформы надстроек Office](/office/dev/add-ins/overview/office-add-ins)
-- [Примеры надстроек Excel на сайте GitHub](https://github.com/OfficeDev?utf8=%E2%9C%93&q=Excel)
+- [Документация по надстройкам Excel](../../excel/index.md)
+- [Общие сведения о надстройках Excel](../../excel/excel-add-ins-overview.md)
+- [Справочник по API JavaScript для Excel](/javascript/api/excel)
+- [Доступность ведущих приложений и платформ для надстроек Office](../../overview/office-add-in-availability.md)
 - [Открытые спецификации API](../openspec/openspec.md)
