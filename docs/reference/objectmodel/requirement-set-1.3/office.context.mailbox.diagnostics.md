@@ -3,12 +3,12 @@ title: Office. Context. Mailbox. Diagnostics — набор обязательн
 description: ''
 ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: 7e815ba2a390a871f11dfccd394ff5d306fbc0ec
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 46f58490d3f16f2a1bcd4caf0a21734861477e9f
+ms.sourcegitcommit: dc78ee2a89fe3d4cd6f748be1eec9081c1077502
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127424"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36231279"
 ---
 # <a name="diagnostics"></a>diagnostics
 
@@ -48,7 +48,7 @@ ms.locfileid: "35127424"
 
 Получает строку, которая представляет версию ведущего приложения или Exchange Server.
 
-Если почтовая надстройка запущена на клиенте Outlook для настольных ПК или iOS `hostVersion` , свойство возвращает версию ведущего приложения, Outlook. В Outlook в Интернете свойство возвращает версию сервера Exchange. Пример — строка `15.0.468.0`.
+Если почтовая надстройка запущена на клиенте Outlook для настольных ПК или iOS `hostVersion` , свойство возвращает версию ведущего приложения, Outlook. В Outlook в Интернете свойство возвращает версию сервера Exchange. Пример: строка "15.0.468.0".
 
 ##### <a name="type"></a>Тип
 

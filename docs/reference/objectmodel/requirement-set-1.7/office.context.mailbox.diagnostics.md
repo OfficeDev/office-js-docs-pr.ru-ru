@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox. Diagnostics — набор обязательных элементов 1,7
 description: ''
-ms.date: 06/20/2019
+ms.date: 08/05/2019
 localization_priority: Normal
-ms.openlocfilehash: 2a79dbe7d392b809cf0de0b5ee7096473ea3e197
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: e197374267d40056c6cb1dea8808e30f48eef65c
+ms.sourcegitcommit: dc78ee2a89fe3d4cd6f748be1eec9081c1077502
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127193"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36231265"
 ---
 # <a name="diagnostics"></a>diagnostics
 
@@ -38,7 +38,7 @@ ms.locfileid: "35127193"
 
 Получает строку, представляющую имя ведущего приложения.
 
-Строка, которая может иметь одно из следующих значений: `Outlook`, `Mac Outlook`, `OutlookIOS` или `OutlookWebApp`.
+Строка, которая может иметь одно из следующих значений: `Outlook`, `OutlookWebApp`, `OutlookIOS` или `OutlookAndroid`.
 
 ##### <a name="type"></a>Тип
 
@@ -59,7 +59,7 @@ ms.locfileid: "35127193"
 
 Получает строку, которая представляет версию ведущего приложения или Exchange Server.
 
-Если почтовая надстройка запущена на клиенте Outlook для настольных ПК или iOS `hostVersion` , свойство возвращает версию ведущего приложения, Outlook. В Outlook в Интернете свойство возвращает версию сервера Exchange. Пример — строка `15.0.468.0`.
+Если почтовая надстройка запущена на клиенте Outlook для настольных ПК или iOS `hostVersion` , свойство возвращает версию ведущего приложения, Outlook. В Outlook в Интернете свойство возвращает версию сервера Exchange. Пример: строка "15.0.468.0".
 
 ##### <a name="type"></a>Тип
 
