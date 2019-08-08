@@ -1,14 +1,14 @@
 ---
 title: Подключение отладчика из области задач
 description: ''
-ms.date: 05/08/2019
+ms.date: 08/06/2019
 localization_priority: Priority
-ms.openlocfilehash: 03926ea18963b98f44702f7213dd1768e9924265
-ms.sourcegitcommit: a99be9c4771c45f3e07e781646e0e649aa47213f
+ms.openlocfilehash: 4433eccc165d616c7b8ebff428e1426c4b98be49
+ms.sourcegitcommit: dc78ee2a89fe3d4cd6f748be1eec9081c1077502
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "33952280"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36231307"
 ---
 # <a name="attach-a-debugger-from-the-task-pane"></a>Подключение отладчика из области задач
 
@@ -30,7 +30,7 @@ ms.locfileid: "33952280"
 
 > [!NOTE]
 > Если меню "Личные данные" не отображается, отладить надстройку можно с помощью Visual Studio. Убедитесь, что надстройка области задач открыта в Office, и выполните указанные ниже действия.
-
+>
 > 1. В Visual Studio выберите **ОТЛАДКА** > **Присоединиться к процессу**.
 > 2. В окне **Присоединение к процессу** выберите все доступные процессы Iexplore.exe, а затем нажмите кнопку **Присоединиться**.
 
