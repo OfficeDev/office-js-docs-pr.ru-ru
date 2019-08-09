@@ -5,12 +5,12 @@ ms.date: 07/09/2019
 ms.prod: excel
 ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: 9e1dc93079a3930fc5ebd88ef4d91ef2b899e51c
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: 4b74463eafd5ac1b70e59cef6ef1f9f33cf0ffa2
+ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35771809"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "36268182"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -64,9 +64,9 @@ ms.locfileid: "35771809"
 
 4. Запустите локальный веб-сервер, работающий на Node.js. Вы можете испытать надстройку настраиваемой функции в Excel в Интернете или в Windows.
 
-# <a name="excel-on-windowstabexcel-windows"></a>[Excel в Windows](#tab/excel-windows)
+# <a name="excel-on-windows-or-mactabexcel-windows"></a>[Excel в Windows или Mac](#tab/excel-windows)
 
-Чтобы протестировать надстройку в Excel в Windows, выполните следующую команду. При выполнении этой команды запустится локальный веб-сервер, и откроется приложение Excel с загруженной надстройкой.
+Чтобы протестировать надстройку в Excel для Windows или Mac, выполните следующую команду. При выполнении этой команды запустится локальный веб-сервер, и откроется приложение Excel с загруженной надстройкой.
 
 ```command&nbsp;line
 npm run start:desktop
@@ -146,9 +146,9 @@ npm run start:web
     npm run build
     ```
 
-4. Выполните следующие действия (для Excel в Интернете или Windows), чтобы повторно зарегистрировать надстройку в Excel. Прежде чем новая функция станет доступна, необходимо выполнить указанные ниже действия.
+4. Выполните следующие действия (для Excel в Интернете, Windows или Mac), чтобы повторно зарегистрировать надстройку в Excel. Прежде чем новая функция станет доступна, необходимо выполнить указанные ниже действия.
 
-### <a name="excel-on-windowstabexcel-windows"></a>[Excel в Windows](#tab/excel-windows)
+### <a name="excel-on-windows-or-mactabexcel-windows"></a>[Excel в Windows или Mac](#tab/excel-windows)
 
 1. Закройте Excel, а затем откройте Excel повторно.
 
@@ -214,9 +214,9 @@ function clock(invocation) {
     npm run build
     ```
 
-3. Выполните следующие действия (для Excel в Интернете или Windows), чтобы повторно зарегистрировать надстройку в Excel. Прежде чем новая функция станет доступна, необходимо выполнить указанные ниже действия. 
+3. Выполните следующие действия (для Excel в Интернете, Windows или Mac), чтобы повторно зарегистрировать надстройку в Excel. Прежде чем новая функция станет доступна, необходимо выполнить указанные ниже действия. 
 
-# <a name="excel-on-windowstabexcel-windows"></a>[Excel в Windows](#tab/excel-windows)
+# <a name="excel-on-windows-or-mactabexcel-windows"></a>[Excel в Windows или Mac](#tab/excel-windows)
 
 1. Закройте Excel, а затем откройте Excel повторно.
 

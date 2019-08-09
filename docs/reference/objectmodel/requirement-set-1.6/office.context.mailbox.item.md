@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox. Item — набор требований 1,6
 description: ''
-ms.date: 06/20/2019
+ms.date: 08/08/2019
 localization_priority: Normal
-ms.openlocfilehash: e3221ba9cdb8404784f02f75d4f2253432be4f84
-ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
+ms.openlocfilehash: e67664200baea89f14360465b34cdfededa3aa7d
+ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "36064641"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "36268343"
 ---
 # <a name="item"></a>item
 
@@ -62,8 +62,8 @@ ms.locfileid: "36064641"
 | [getRegExMatches](#getregexmatches--object) | Метод |
 | [getRegExMatchesByName](#getregexmatchesbynamename--nullable-array-string-) | Метод |
 | [getSelectedDataAsync](#getselecteddataasynccoerciontype-options-callback--string) | Метод |
-| [Жетселектедентитиес](#getselectedentities--entities) | Метод |
-| [Жетселектедрежексматчес](#getselectedregexmatches--object) | Метод |
+| [жетселектедентитиес](#getselectedentities--entities) | Метод |
+| [жетселектедрежексматчес](#getselectedregexmatches--object) | Метод |
 | [loadCustomPropertiesAsync](#loadcustompropertiesasynccallback-usercontext) | Метод |
 | [removeAttachmentAsync](#removeattachmentasyncattachmentid-options-callback) | Метод |
 | [saveAsync](#saveasyncoptions-callback) | Метод |
@@ -629,7 +629,7 @@ function callback(asyncResult) {
 
 ##### <a name="type"></a>Тип
 
-*   Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients?view=outlook-js-1.6)
+*   Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.6)> | [Recipients](/javascript/api/outlook/office.recipients?view=outlook-js-1.6)
 
 ##### <a name="requirements"></a>Требования
 
@@ -693,7 +693,7 @@ function callback(asyncResult) {
 
 ##### <a name="type"></a>Тип
 
-*   Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients?view=outlook-js-1.6)
+*   Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.6)> | [Recipients](/javascript/api/outlook/office.recipients?view=outlook-js-1.6)
 
 ##### <a name="requirements"></a>Требования
 
@@ -851,7 +851,7 @@ function callback(asyncResult) {
 
 ##### <a name="type"></a>Тип
 
-*   Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)> | [Recipients](/javascript/api/outlook/office.recipients?view=outlook-js-1.6)
+*   Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.6)> | [Recipients](/javascript/api/outlook/office.recipients?view=outlook-js-1.6)
 
 ##### <a name="requirements"></a>Требования
 

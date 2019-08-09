@@ -1,14 +1,14 @@
 ---
 title: Пространство имен Office — набор обязательных элементов 1,1
 description: ''
-ms.date: 04/24/2019
+ms.date: 08/08/2019
 localization_priority: Normal
-ms.openlocfilehash: 01e60e0b01c7ca98bdff2c99dfcbe8944f822b81
-ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
+ms.openlocfilehash: 393804c6e76e74ffdb8f860cddc9b454593f9982
+ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "36064363"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "36268476"
 ---
 # <a name="office"></a>Office
 
@@ -20,6 +20,14 @@ ms.locfileid: "36064363"
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+
+##### <a name="members-and-methods"></a>Элементы и методы
+
+| Элемент | Тип |
+|--------|------|
+| [AsyncResultStatus](#asyncresultstatus-string) | Member |
+| [CoercionType](#coerciontype-string) | Member |
+| [SourceProperty](#sourceproperty-string) | Элемент |
 
 ### <a name="namespaces"></a>Пространства имен
 

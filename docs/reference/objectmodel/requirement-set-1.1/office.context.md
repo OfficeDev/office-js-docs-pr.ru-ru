@@ -1,14 +1,14 @@
 ---
 title: Office. Context — набор обязательных элементов 1,1
 description: ''
-ms.date: 06/20/2019
+ms.date: 08/08/2019
 localization_priority: Normal
-ms.openlocfilehash: 9958f8e7634958806109c73289e8fc4b32b62d94
-ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
+ms.openlocfilehash: 220348dd70caa3277d31a8246deae65c0f8d83af
+ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "36064433"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "36268700"
 ---
 # <a name="context"></a>context
 
@@ -23,6 +23,13 @@ ms.locfileid: "36064433"
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+
+##### <a name="members-and-methods"></a>Элементы и методы
+
+| Элемент | Тип |
+|--------|------|
+| [displayLanguage](#displaylanguage-string) | Member |
+| [roamingSettings](#roamingsettings-roamingsettings) | Элемент |
 
 ### <a name="namespaces"></a>Пространства имен
 

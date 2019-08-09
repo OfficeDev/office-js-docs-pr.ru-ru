@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox — набор обязательных элементов 1,6
 description: ''
-ms.date: 06/20/2019
+ms.date: 08/06/2019
 localization_priority: Normal
-ms.openlocfilehash: 2ddf26fea8c2285bd577a2f6fb6408431016cc59
-ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
+ms.openlocfilehash: f394c23cf9e35e3798de1fe7559bc8083478cc6b
+ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "36064671"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "36268364"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -38,7 +38,7 @@ ms.locfileid: "36064671"
 | [displayAppointmentForm](#displayappointmentformitemid) | Метод |
 | [displayMessageForm](#displaymessageformitemid) | Метод |
 | [displayNewAppointmentForm](#displaynewappointmentformparameters) | Метод |
-| [Дисплайневмессажеформ](#displaynewmessageformparameters) | Метод |
+| [дисплайневмессажеформ](#displaynewmessageformparameters) | Метод |
 | [getCallbackTokenAsync](#getcallbacktokenasyncoptions-callback) | Метод |
 | [getCallbackTokenAsync](#getcallbacktokenasynccallback-usercontext) | Метод |
 | [getUserIdentityTokenAsync](#getuseridentitytokenasynccallback-usercontext) | Метод |
@@ -493,10 +493,18 @@ Office.context.mailbox.displayNewMessageForm(
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-| `options` | Объект | &lt;Необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
+| `options` | Object | &lt;Необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
 | `options.isRest` | Boolean |  &lt;необязательно&gt; | Определяет, будет ли предоставленный маркер использоваться для интерфейсов REST API Outlook или веб-служб Exchange. Значение по умолчанию: `false`. |
 | `options.asyncContext` | Объект |  &lt;необязательно&gt; | Данные о состоянии, передаваемые в асинхронный метод. |
-|`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). Маркер указывается в виде строки в свойстве `asyncResult.value`.|
+|`callback`| function||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.<br><br>При возникновении ошибки свойства `asyncResult.error` и `asyncResult.diagnostics` могут содержать дополнительные сведения.|
+
+##### <a name="errors"></a>Ошибки
+
+|Код ошибки|Описание|
+|------------|-------------|
+|`HTTPRequestFailure`|Запрос не выполнен. Просмотрите объект Diagnostics для кода ошибки HTTP.|
+|`InternalServerError`|Сервер Exchange возвратил ошибку. Дополнительные сведения можно найти в объекте диагностики.|
+|`NetworkError`|Пользователь больше не подключен к сети. Проверьте сетевое подключение и повторите попытку.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -539,14 +547,22 @@ function cb(asyncResult) {
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-|`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). Маркер указывается в виде строки в свойстве `asyncResult.value`.|
+|`callback`| функция||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.<br><br>При возникновении ошибки свойства `asyncResult.error` и `asyncResult.diagnostics` могут содержать дополнительные сведения.|
 |`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+
+##### <a name="errors"></a>Ошибки
+
+|Код ошибки|Описание|
+|------------|-------------|
+|`HTTPRequestFailure`|Запрос не выполнен. Просмотрите объект Diagnostics для кода ошибки HTTP.|
+|`InternalServerError`|Сервер Exchange возвратил ошибку. Дополнительные сведения можно найти в объекте диагностики.|
+|`NetworkError`|Пользователь больше не подключен к сети. Проверьте сетевое подключение и повторите попытку.|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.3|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание и чтение|
 
@@ -572,8 +588,16 @@ function cb(asyncResult) {
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-|`callback`| функция||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.|
-|`userContext`| Object| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+|`callback`| функция||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.<br><br>При возникновении ошибки свойства `asyncResult.error` и `asyncResult.diagnostics` могут содержать дополнительные сведения.|
+|`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+
+##### <a name="errors"></a>Ошибки
+
+|Код ошибки|Описание|
+|------------|-------------|
+|`HTTPRequestFailure`|Запрос не выполнен. Просмотрите объект Diagnostics для кода ошибки HTTP.|
+|`InternalServerError`|Сервер Exchange возвратил ошибку. Дополнительные сведения можно найти в объекте диагностики.|
+|`NetworkError`|Пользователь больше не подключен к сети. Проверьте сетевое подключение и повторите попытку.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -636,7 +660,7 @@ function cb(asyncResult) {
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
 |`data`| String||Запрос EWS.|
-|`callback`| функция||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Результат XML вызова EWS указывается в виде строки в свойстве `asyncResult.value`. Если размер результата превышает 1 МБ, возвращается сообщение об ошибке.|
+|`callback`| function||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Результат XML вызова EWS указывается в виде строки в свойстве `asyncResult.value`. Если размер результата превышает 1 МБ, возвращается сообщение об ошибке.|
 |`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования

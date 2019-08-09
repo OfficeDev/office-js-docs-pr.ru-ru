@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox. userProfile — набор обязательных элементов 1,3
 description: ''
-ms.date: 03/19/2019
+ms.date: 08/08/2019
 localization_priority: Normal
-ms.openlocfilehash: 03cdc13845bff0fbd3855f29f43298cd770e5ad9
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 8924d8b0dfa5bb43be8867cbd0e83ee01ff788cb
+ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451845"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "36268392"
 ---
 # <a name="userprofile"></a>userProfile
 
@@ -22,9 +22,17 @@ ms.locfileid: "32451845"
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-### <a name="members"></a>Элементы
+##### <a name="members-and-methods"></a>Элементы и методы
 
-####  <a name="displayname-string"></a>displayName :String
+| Элемент | Тип |
+|--------|------|
+| [displayName](#displayname-string) | Member |
+| [emailAddress](#emailaddress-string) | Member |
+| [timeZone](#timezone-string) | Member |
+
+### <a name="members"></a>Members
+
+#### <a name="displayname-string"></a>displayName: строка
 
 Получает отображаемое имя пользователя.
 
@@ -47,7 +55,7 @@ ms.locfileid: "32451845"
 console.log(Office.context.mailbox.userProfile.displayName);
 ```
 
-####  <a name="emailaddress-string"></a>emailAddress :String
+#### <a name="emailaddress-string"></a>emailAddress: строка
 
 Получает адрес электронной почты SMTP пользователя.
 
@@ -70,7 +78,7 @@ console.log(Office.context.mailbox.userProfile.displayName);
 console.log(Office.context.mailbox.userProfile.emailAddress);
 ```
 
-####  <a name="timezone-string"></a>timeZone :String
+#### <a name="timezone-string"></a>Часовой пояс: строка
 
 Получает часовой пояс пользователя по умолчанию.
 

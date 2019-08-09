@@ -3,16 +3,16 @@ ms.date: 06/18/2019
 description: Создание диалогового окна пользовательских функций в Excel с помощью JavaScript.
 title: Вызов диалогового окна из пользовательской функции
 localization_priority: Priority
-ms.openlocfilehash: b8a2a6a68f23121fe4d3931c13fd45af6034c7d2
-ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
+ms.openlocfilehash: 67a61bde409d45b2c96118de95f0839e7a73ddfe
+ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "35940635"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "36268154"
 ---
 # <a name="display-a-dialog-box-from-a-custom-function"></a>Вызов диалогового окна из пользовательской функции
 
-Если пользовательская функция должна взаимодействовать с пользователем, можно создать диалоговое окно с помощью объекта [`Office.Dialog`](/javascript/api/office-runtime/officeruntime.dialog?view=office-js). Распространенным сценарием использования диалогового окна является проверка подлинности пользователя, чтобы пользовательская функция могла обращаться к веб-службе. Дополнительные сведения о проверке подлинности с помощью пользовательских функций см. в статье [Проверка подлинности пользовательских функций](./custom-functions-authentication.md).
+Если пользовательская функция должна взаимодействовать с пользователем, можно создать диалоговое окно с помощью объекта [`Office.Dialog`](/javascript/api/office-runtime/officeruntime.dialog). Распространенным сценарием использования диалогового окна является проверка подлинности пользователя, чтобы пользовательская функция могла обращаться к веб-службе. Дополнительные сведения о проверке подлинности с помощью пользовательских функций см. в статье [Проверка подлинности пользовательских функций](./custom-functions-authentication.md).
 
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 

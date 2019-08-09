@@ -1,14 +1,14 @@
 ---
 title: Office.context.mailbox.diagnostics — набор обязательных элементов 1.1
 description: ''
-ms.date: 06/20/2019
+ms.date: 08/08/2019
 localization_priority: Normal
-ms.openlocfilehash: 32c4d7389555bf6dab7cff3822abb4a4edbebe80
-ms.sourcegitcommit: dc78ee2a89fe3d4cd6f748be1eec9081c1077502
+ms.openlocfilehash: a2d54aee0545fb43aea798d799f190519226d185
+ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36231300"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "36268511"
 ---
 # <a name="diagnostics"></a>diagnostics
 
@@ -24,6 +24,14 @@ ms.locfileid: "36231300"
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
+##### <a name="members-and-methods"></a>Элементы и методы
+
+| Элемент | Тип |
+|--------|------|
+| [Сайту](#hostname-string) | Member |
+| [hostVersion](#hostversion-string) | Member |
+| [OWAView](#owaview-string) | Member |
+
 ### <a name="members"></a>Members
 
 #### <a name="hostname-string"></a>Имя узла: строка
@@ -31,6 +39,9 @@ ms.locfileid: "36231300"
 Получает строку, представляющую имя ведущего приложения.
 
 Строка, которая может иметь одно из следующих значений: `Outlook`, `OutlookIOS` или `OutlookWebApp`.
+
+> [!NOTE]
+> `Outlook` Значение возвращается для Outlook на настольных клиентах (например, Windows и Mac).
 
 ##### <a name="type"></a>Тип
 
@@ -46,9 +57,9 @@ ms.locfileid: "36231300"
 
 #### <a name="hostversion-string"></a>hostVersion: строка
 
-Получает строку, которая представляет версию ведущего приложения или Exchange Server.
+Получает строку, представляющую версию ведущего приложения или сервера Exchange (например, "15.0.468.0").
 
-Если почтовая надстройка запущена на клиенте Outlook для настольных ПК или iOS `hostVersion` , свойство возвращает версию ведущего приложения, Outlook. В Outlook в Интернете свойство возвращает версию сервера Exchange. Пример: строка "15.0.468.0".
+Если почтовая надстройка запущена на клиенте Outlook для настольных ПК или iOS `hostVersion` , свойство возвращает версию ведущего приложения, Outlook. В Outlook в Интернете свойство возвращает версию сервера Exchange.
 
 ##### <a name="type"></a>Тип
 

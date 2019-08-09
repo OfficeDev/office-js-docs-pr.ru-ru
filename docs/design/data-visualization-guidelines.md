@@ -3,12 +3,12 @@ title: Рекомендации по выбору стиля визуализа�
 description: ''
 ms.date: 12/04/2017
 localization_priority: Normal
-ms.openlocfilehash: 77e7724725e87ccef60406d00a97d0957059cdd5
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 134153f0705c810e777fd47b27a5a440e2e7bc9e
+ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32447315"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "36268147"
 ---
 # <a name="data-visualization-style-guidelines-for-office-add-ins"></a>Рекомендации по выбору стиля визуализации данных для надстроек Office
 
@@ -59,10 +59,9 @@ ms.locfileid: "32447315"
 
 Рекомендации по использованию цветов при визуализации данных см. в следующих статьях:
 
-
 - [Почему цвета радуги — не лучший вариант для визуализации данных](https://www.poynter.org/2013/why-rainbow-colors-arent-always-the-best-options-for-data-visualizations/224413/)
 - [Color Brewer 2.0: советы по выбору цветов для картографии](http://colorbrewer2.org/)
-- [Как выбрать оттенок](http://tools.medialab.sciences-po.fr/iwanthue/)
+- [Как выбрать оттенок](https://tools.medialab.sciences-po.fr/iwanthue/)
 
 ### <a name="gridlines"></a>Линии сетки
 

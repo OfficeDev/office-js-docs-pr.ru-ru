@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox — Предварительная версия набора обязательных элементов
 description: ''
-ms.date: 06/20/2019
+ms.date: 08/06/2019
 localization_priority: Normal
-ms.openlocfilehash: f2383ea2d2e097b4e2f786bfb1aa8c06ab9eed0e
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 8f7345532e3c65f9945f424520c37f707634bf3b
+ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127599"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "36268721"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -29,7 +29,7 @@ ms.locfileid: "35127599"
 | Элемент | Тип |
 |--------|------|
 | [ewsUrl](#ewsurl-string) | Элемент |
-| [Мастеркатегориес](#mastercategories-mastercategories) | Элемент |
+| [мастеркатегориес](#mastercategories-mastercategories) | Элемент |
 | [restUrl](#resturl-string) | Элемент |
 | [addHandlerAsync](#addhandlerasynceventtype-handler-options-callback) | Метод |
 | [convertToEwsId](#converttoewsiditemid-restversion--string) | Метод |
@@ -39,7 +39,7 @@ ms.locfileid: "35127599"
 | [displayAppointmentForm](#displayappointmentformitemid) | Метод |
 | [displayMessageForm](#displaymessageformitemid) | Метод |
 | [displayNewAppointmentForm](#displaynewappointmentformparameters) | Метод |
-| [Дисплайневмессажеформ](#displaynewmessageformparameters) | Метод |
+| [дисплайневмессажеформ](#displaynewmessageformparameters) | Метод |
 | [getCallbackTokenAsync](#getcallbacktokenasyncoptions-callback) | Метод |
 | [getCallbackTokenAsync](#getcallbacktokenasynccallback-usercontext) | Метод |
 | [getUserIdentityTokenAsync](#getuseridentitytokenasynccallback-usercontext) | Метод |
@@ -561,10 +561,18 @@ Office.context.mailbox.displayNewMessageForm(
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-| `options` | Объект | &lt;Необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
+| `options` | Object | &lt;Необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
 | `options.isRest` | Boolean |  &lt;необязательно&gt; | Определяет, будет ли предоставленный маркер использоваться для интерфейсов REST API Outlook или веб-служб Exchange. Значение по умолчанию: `false`. |
 | `options.asyncContext` | Объект |  &lt;необязательно&gt; | Данные о состоянии, передаваемые в асинхронный метод. |
-|`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). Маркер указывается в виде строки в свойстве `asyncResult.value`.|
+|`callback`| function||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.<br><br>При возникновении ошибки свойства `asyncResult.error` и `asyncResult.diagnostics` могут содержать дополнительные сведения.|
+
+##### <a name="errors"></a>Ошибки
+
+|Код ошибки|Описание|
+|------------|-------------|
+|`HTTPRequestFailure`|Запрос не выполнен. Просмотрите объект Diagnostics для кода ошибки HTTP.|
+|`InternalServerError`|Сервер Exchange возвратил ошибку. Дополнительные сведения можно найти в объекте диагностики.|
+|`NetworkError`|Пользователь больше не подключен к сети. Проверьте сетевое подключение и повторите попытку.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -610,8 +618,16 @@ function cb(asyncResult) {
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-|`callback`| function||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). Маркер указывается в виде строки в свойстве `asyncResult.value`.|
+|`callback`| функция||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.<br><br>При возникновении ошибки свойства `asyncResult.error` и `asyncResult.diagnostics` могут содержать дополнительные сведения.|
 |`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+
+##### <a name="errors"></a>Ошибки
+
+|Код ошибки|Описание|
+|------------|-------------|
+|`HTTPRequestFailure`|Запрос не выполнен. Просмотрите объект Diagnostics для кода ошибки HTTP.|
+|`InternalServerError`|Сервер Exchange возвратил ошибку. Дополнительные сведения можно найти в объекте диагностики.|
+|`NetworkError`|Пользователь больше не подключен к сети. Проверьте сетевое подключение и повторите попытку.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -646,8 +662,16 @@ function cb(asyncResult) {
 
 |Имя| Тип| Атрибуты| Описание|
 |---|---|---|---|
-|`callback`| функция||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.|
-|`userContext`| Object| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+|`callback`| функция||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.<br><br>При возникновении ошибки свойства `asyncResult.error` и `asyncResult.diagnostics` могут содержать дополнительные сведения.|
+|`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+
+##### <a name="errors"></a>Ошибки
+
+|Код ошибки|Описание|
+|------------|-------------|
+|`HTTPRequestFailure`|Запрос не выполнен. Просмотрите объект Diagnostics для кода ошибки HTTP.|
+|`InternalServerError`|Сервер Exchange возвратил ошибку. Дополнительные сведения можно найти в объекте диагностики.|
+|`NetworkError`|Пользователь больше не подключен к сети. Проверьте сетевое подключение и повторите попытку.|
 
 ##### <a name="requirements"></a>Требования
 

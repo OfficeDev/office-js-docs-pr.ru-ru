@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1,9
 ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: b28406f9792278e554ff055a59ef4833be915aba
-ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
+ms.openlocfilehash: e27c4e6a93890c94f759eee451eb5168a30b1817
+ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "36064867"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "36268623"
 ---
 # <a name="whats-new-in-excel-javascript-api-19"></a>Новые возможности API JavaScript для Excel 1,9
 
@@ -336,12 +336,8 @@ ms.locfileid: "36064867"
 ||[hyperlink](/javascript/api/excel/excel.settablecellproperties#hyperlink)|Представляет свойство `hyperlink`.|
 ||[style](/javascript/api/excel/excel.settablecellproperties#style)|Представляет свойство `style`.|
 |[SettableColumnProperties](/javascript/api/excel/excel.settablecolumnproperties)|[columnHidden](/javascript/api/excel/excel.settablecolumnproperties#columnhidden)|Представляет свойство `columnHidden`.|
-||[columnWidth](/javascript/api/excel/excel.settablecolumnproperties#columnwidth)||
-||[Format: Excel. Целлпропертиесформат & {
-            columnWidth?] (/жаваскрипт/АПИ/ексцел/ексцел.сеттаблеколумнпропертиес # Format)|Представляет свойство `format`.|
-|[SettableRowProperties](/javascript/api/excel/excel.settablerowproperties)|[Format: Excel. Целлпропертиесформат & {
-            rowHeight?] (/жаваскрипт/АПИ/ексцел/ексцел.сеттаблеровпропертиес # Format)|Представляет свойство `format`.|
-||[rowHeight](/javascript/api/excel/excel.settablerowproperties#rowheight)||
+||[format: Excel.CellPropertiesFormat](/javascript/api/excel/excel.settablecolumnproperties#format)|Представляет свойство `format`.|
+|[SettableRowProperties](/javascript/api/excel/excel.settablerowproperties)|[format: Excel.CellPropertiesFormat](/javascript/api/excel/excel.settablerowproperties#format)|Представляет свойство `format`.|
 ||[rowHidden](/javascript/api/excel/excel.settablerowproperties#rowhidden)|Представляет свойство `rowHidden`.|
 |[Shape](/javascript/api/excel/excel.shape)|[altTextDescription](/javascript/api/excel/excel.shape#alttextdescription)|Возвращает или задает замещающий текст описания для объекта Shape.|
 ||[altTextTitle](/javascript/api/excel/excel.shape#alttexttitle)|Возвращает или задает замещающий текст заголовка для объекта Shape.|
@@ -461,7 +457,7 @@ ms.locfileid: "36064867"
 ||[onAutoSaveSettingChanged](/javascript/api/excel/excel.workbook#onautosavesettingchanged)|Возникает при изменении параметра автосохранения для книги.|
 ||[previouslySaved](/javascript/api/excel/excel.workbook#previouslysaved)|Указывает, сохранялась ли книга ранее (локально или в Интернете). Только для чтения.|
 ||[usePrecisionAsDisplayed](/javascript/api/excel/excel.workbook#useprecisionasdisplayed)|Значение true, если вычисления в книге выполняются только с той точностью чисел, с которой они отображаются.|
-|[Воркбукаутосавесеттингчанжедевентаргс](/javascript/api/excel/excel.workbookautosavesettingchangedeventargs)|[type](/javascript/api/excel/excel.workbookautosavesettingchangedeventargs#type)|Представляет тип события. Дополнительные сведения см. в статье Excel.EventType.|
+|[воркбукаутосавесеттингчанжедевентаргс](/javascript/api/excel/excel.workbookautosavesettingchangedeventargs)|[type](/javascript/api/excel/excel.workbookautosavesettingchangedeventargs#type)|Представляет тип события. Дополнительные сведения см. в статье Excel.EventType.|
 |[Worksheet](/javascript/api/excel/excel.worksheet)|[enableCalculation](/javascript/api/excel/excel.worksheet#enablecalculation)|Получает или задает свойство enableCalculation для листа.|
 ||[findAll(text: string, criteria: Excel.WorksheetSearchCriteria)](/javascript/api/excel/excel.worksheet#findall-text--criteria-)|Находит все вхождения определенной строки на основе указанных условий и возвращает их в виде объекта RangeAreas, состоящего из одного или нескольких прямоугольных диапазонов.|
 ||[findAllOrNullObject(text: string, criteria: Excel.WorksheetSearchCriteria)](/javascript/api/excel/excel.worksheet#findallornullobject-text--criteria-)|Находит все вхождения определенной строки на основе указанных условий и возвращает их в виде объекта RangeAreas, состоящего из одного или нескольких прямоугольных диапазонов.|
