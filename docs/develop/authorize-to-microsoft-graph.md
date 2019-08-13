@@ -1,16 +1,16 @@
 ---
-title: Авторизация в Microsoft Graph из надстройки Office
+title: Авторизация в Microsoft Graph с помощью единого входа
 description: ''
-ms.date: 03/19/2019
+ms.date: 08/09/2019
 localization_priority: Priority
-ms.openlocfilehash: 5c34e00a2083f3554480f5900929806e10576350
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 98b1219c0fe5459c497a27b915d31108545f14ae
+ms.sourcegitcommit: 1dc1bb0befe06d19b587961da892434bd0512fb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32448813"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "36302562"
 ---
-# <a name="authorize-to-microsoft-graph-in-your-office-add-in-preview"></a>Авторизация в Microsoft Graph из надстройки Office (предварительная версия)
+# <a name="authorize-to-microsoft-graph-with-sso-preview"></a>Авторизация в Microsoft Graph с помощью единого входа (предварительная версия)
 
 Пользователи входят в Office (в Интернете, на мобильных устройствах и настольных компьютерах), используя личную учетную запись Майкрософт либо рабочую или учебную учетную запись (Office 365). Чтобы надстройка Office могла получить авторизованный доступ к [Microsoft Graph](https://developer.microsoft.com/graph/docs), лучше всего использовать учетные данные для входа пользователя в Office. Это позволяет пользователям получить доступ к своим данным Microsoft Graph без необходимости повторного входа. 
 
