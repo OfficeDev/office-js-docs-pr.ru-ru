@@ -1,14 +1,14 @@
 ---
 title: Как определить правильный порядок элементов манифеста
 description: Узнайте, как определить правильный порядок расположения дочерних элементов в родительском элементе.
-ms.date: 11/16/2018
+ms.date: 08/12/2019
 localization_priority: Normal
-ms.openlocfilehash: a7ec2e5b0dee5be651e4670effd86bc4acbac028
-ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
+ms.openlocfilehash: d418f796592a0e4c247e717a5ce75d1c40c18d79
+ms.sourcegitcommit: 1dc1bb0befe06d19b587961da892434bd0512fb5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "36268123"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "36302576"
 ---
 # <a name="how-to-find-the-proper-order-of-manifest-elements"></a>Как определить правильный порядок элементов манифеста
 
@@ -21,37 +21,469 @@ XML-элементы в манифесте надстройки Office долж�
 > [!NOTE]
 > [Средство проверки в Office —](../testing/troubleshoot-manifest.md#validate-your-manifest-with-office-toolbox) использует то же самое сообщение об ошибке, если элемент находится в неупорядоченном виде, если элемент находится в неправильном родительском элементе. В сообщении об ошибке указывается, что для родительского элемента этот дочерний элемент не является допустимым. Если появляется такая ошибка, но при этом в справочной документации указано, что дочерний элемент *является* допустимым для родительского, значит проблема вероятно связана с тем, что дочерний элемент помещен в неправильном порядке.
 
-Чтобы определить правильный порядок дочерних элементов заданного родительского элемента, выполните указанные ниже действия. (Это упрощенный процесс, так как XSD-файлы являются весьма сложными. Полный разбор XSD файлов в этом документе не рассматривается).
+В следующих разделах показаны элементы манифеста в том порядке, в котором они должны отображаться. Существуют небольшие отличия в зависимости от того, `type` имеет ли атрибут `<OfficeApp>` элемента значение `TaskPaneApp`, `ContentApp`или `MailApp`. Чтобы эти разделы не стали слишком громоздкими, строго сложный `<VersionOverrides>` элемент разбивается на отдельные разделы.
 
-1. Откройте вложенную папку в папке [Schemas](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas) для типа создаваемой надстройки. 
-2. Откройте XSD-файл, в котором тип родительского элемента определен как сложный. Если вы не знаете, какой файл содержит такое определение, может потребоваться выполнение действия 3 с несколькими файлами, пока вы его не найдете.
-3. Выполните поиск `<xs:complexType name="PARENT_ELEMENT">`, где PARENT_ELEMENT — это имя родительского элемента.
-4. Внутри определения для PARENT_ELEMENT обычно есть элемент с именем `<xs:sequence>`. Ниже приведено определение для `<SuperTip>` из файла [TaskPaneAppVersionOverridesV1_0.xsd](https://raw.githubusercontent.com/OfficeDev/office-js-docs-pr/master/docs/overview/schemas/taskpane/TaskPaneAppVersionOverridesV1_0.xsd).
+> [!Note]
+> Не все отображаемые элементы являются обязательными. Если `minOccurs` значение элемента равно **0** в [схеме](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas), элемент является необязательным.
 
-```xml
-  <xs:complexType name="Supertip">
-    <xs:annotation>
-      <xs:documentation>
-        Specifies the super tip for this control.
-      </xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element name="Title" type="bt:ShortResourceReference" minOccurs="1" maxOccurs="1" />
-      <xs:element name="Description" type="bt:LongResourceReference" minOccurs="1" maxOccurs="1" />
-    </xs:sequence>
-  </xs:complexType>
+## <a name="basic-task-pane-add-in-element-ordering"></a>Упорядочение элементов базовой области задач
+
+```
+<OfficeApp xsi:type="TaskPaneApp">
+    <Id>
+    <AlternateID>
+    <Version>
+    <ProviderName>
+    <DefaultLocale>
+    <DisplayName>
+        <Override>
+    <Description>
+        <Override>
+    <IconUrl>
+        <Override>
+    <HighResolutionIconUrl>
+        <Override>
+    <SupportUrl>
+    <AppDomains>
+        <AppDomain>
+    <Hosts>
+        <Host>
+    <Requirements>
+        <Sets>
+            <Set>
+        <Methods>
+            <Method>
+    <DefaultSettings>
+        <SourceLocation>
+            <Override>
+    <Permissions>
+    <Dictionary>
+        <TargetDialects>
+        <QueryUri>
+        <CitationText>
+        <DictionaryName>
+        <DictionaryHomePage>
+    <VersionOverrides>*
 ```
 
-Элемент `<xs:sequence>` перечисляет возможные дочерние элементы *в том порядке, в котором они должны располагаться*. Это *не* означает, что все они являются обязательными. Если значение `minOccurs` для дочернего элемента равно **0**, дочерний элемент является необязательным. *Но при его наличии он должен располагаться в порядке, указываемом элементом `<xs:sequence>`*.
+\*Рассмотрите [сортировку элементов надстройки области задач в VersionOverrides](#task-pane-add-in-element-ordering-within-versionoverrides) для упорядочивания дочерних элементов VersionOverrides.
 
-Если элемент `<xs:sequence>` отсутствует или он *имеется*, но в нем не указан нужный дочерний элемент (даже если в справочной документации указано, что дочерний элемент *является* допустимым для родительского), значит определение сложного типа родительского элемента расширено дополнительными дочерними элементами в другом месте XSD-файла. Например, в определении для сложного типа `OfficeApp` не указан элемент `Requirements` в качестве возможного дочернего элемента. Но ниже в файле (в определении для сложного типа `TaskPaneApp`) определение `OfficeApp` расширяется и добавляется `Requirements` в качестве дополнительного допустимого дочернего элемента.
+## <a name="basic-mail-add-in-element-ordering"></a>Упорядочение элементов базовой почтовой надстройки
 
-Чтобы найти расширенные определения, выполните указанные ниже действия.
+```
+<OfficeApp xsi:type="MailApp">
+    <Id>
+    <AlternateId>
+    <Version>
+    <ProviderName>
+    <DefaultLocale>
+    <DisplayName>
+        <Override>
+    <Description>
+        <Override>
+    <IconUrl>
+        <Override>
+    <HighResolutionIconUrl>
+        <Override>
+    <SupportUrl>
+    <AppDomains>
+        <AppDomain>
+    <Hosts>
+        <Host>
+    <Requirements>
+    <Sets>
+        <Set>
+    <FormSettings>
+        <Form>
+        <DesktopSettings>
+            <SourceLocation>
+            <RequestedHeight>
+        <TabletSettings>
+            <SourceLocation>
+            <RequestedHeight>
+        <PhoneSettings>
+            <SourceLocation>
+    <Permissions>
+    <Rule>
+    <DisableEntityHighlighting>
+    <VersionOverrides>*
+```
 
-1. Начиная сверху файла, выполните поиск `<xs:extension base="PARENT_ELEMENT">`, где PARENT_ELEMENT — это имя родительского элемента. Может иметься несколько расширений.
-2. Найдите расширение, соответствующее контексту, в котором вы работаете. Например, сложный тип `OfficeApp` расширяется в сложных типах `ContentApp` и `MailApp`, а также в сложном типе `TaskPaneApp`.
+\*В статье упорядочение [элементов почтовых ящиков в VersionOverrides ver. 1,0](#mail-add-in-element-ordering-within-versionoverrides-ver-10) и почтовых почтовых [элементов надстройки в VersionOverrides ver. 1,1](#mail-add-in-element-ordering-within-versionoverrides-ver-11) для упорядочивания дочерних элементов VersionOverrides.
 
-У каждого элемента `<xs:extension base="PARENT_ELEMENT">` в файле есть собственный элемент `<xs:sequence>`, в котором перечислены дополнительные допустимые дочерние элементы для родительского элемента. В определении сложного типа родительского элемента дочерние элементы из расширенного списка всегда должны располагаться *после* дочерних элементов исходного списка.
+## <a name="basic-content-add-in-element-ordering"></a>Упорядочение элементов базовой надстройки контента
+
+```
+<OfficeApp xsi:type="ContentApp">
+    <Id>
+    <AlternateId>
+    <Version>
+    <ProviderName>
+    <DefaultLocale>
+    <DisplayName>
+        <Override>
+    <Description>
+        <Override>
+    <IconUrl >
+        <Override>
+    <HighResolutionIconUrl>
+        <Override>
+    <SupportUrl>
+    <AppDomains>
+        <AppDomain>
+    <Hosts>
+        <Host>
+    <Requirements>
+    <Sets>
+        <Set>
+    <Methods>
+        <Method>
+    <DefaultSettings>
+        <SourceLocation>
+            <Override>
+    <RequestedWidth>
+    <RequestedHeight>
+    <Permissions>
+    <AllowSnapshot>
+    <VersionOverrides>
+```
+
+## <a name="task-pane-add-in-element-ordering-within-versionoverrides"></a>Упорядочение элементов надстройки области задач в VersionOverrides
+
+```
+<VersionOverrides>
+    <Description>
+    <Requirements>
+        <Sets>
+            <Set>
+      <Hosts>
+        <Host>
+            <AllFormFactors>
+            <ExtensionPoint>
+                <Script>
+                    <SourceLocation>
+                <Page>
+                    <SourceLocation>
+                <Metadata>
+                    <SourceLocation>
+                <Namespace>
+            <DesktopFormFactor>
+            <GetStarted>
+                <Title>
+                <Description>
+                <LearnMoreUrl>
+            <FunctionFile>
+            <ExtensionPoint>
+                <OfficeTab>
+                    <Group>
+                        <Label>
+                        <Icon>
+                            <Image>
+                        <Control>
+                        <Label>
+                        <Supertip>
+                            <Title>
+                            <Description>
+                        <Icon>
+                            <Image>  
+                        <Action>
+                            <TaskpaneId>
+                            <SourceLocation>
+                            <Title>
+                            <FunctionName>
+                        <Items>
+                            <Item>
+                            <Label>
+                            <Supertip>
+                                <Title>
+                                <Description>
+                            <Action>
+                                <TaskpaneId>
+                                <SourceLocation>
+                                <Title>
+                                <FunctionName>
+                <CustomTab>
+                    <Group>
+                        <Label>
+                        <Icon>
+                            <Image>
+                        <Control>
+                        <Label>
+                        <Supertip>
+                            <Title>
+                            <Description>
+                        <Icon>
+                            <Image>  
+                        <Action>
+                            <TaskpaneId>
+                            <SourceLocation>
+                            <Title>
+                            <FunctionName>
+                        <Items>
+                            <Item>
+                                <Label>
+                                <Supertip>
+                                    <Title>
+                                    <Description>
+                                <Action>
+                                    <TaskpaneId>
+                                    <SourceLocation>
+                                    <Title>
+                                    <FunctionName>
+                    <Label>
+                <OfficeMenu>
+                    <Control>
+                        <Label>
+                        <Supertip>
+                            <Title>
+                            <Description>
+                        <Icon>
+                            <Image>  
+                        <Action>
+                            <TaskpaneId>
+                            <SourceLocation>
+                            <Title>
+                            <FunctionName>
+                        <Items>
+                            <Item>
+                                <Label>
+                                <Supertip>
+                                    <Title>
+                                    <Description>
+                                <Action>
+                                    <TaskpaneId>
+                                    <SourceLocation>
+                                    <Title>
+                                    <FunctionName>
+        <Resources>
+            <Images>
+                <Image>
+                    <Override>
+            <Urls>
+                <Url>
+                    <Override>
+            <ShortStrings>
+                <String>
+                    <Override>
+            <LongStrings>
+                <String>
+                    <Override>
+        <WebApplicationInfo>
+            <Id>
+            <MsaId>
+            <Resource>
+            <Scopes>
+                <Scope>
+            <Authorizations>
+                <Authorization>
+                    <Resource>
+                    <Scopes>
+                        <Scope>
+        <EquivalentAddins>
+            <EquivalentAddin>
+                <ProgId>
+                <DisplayName>
+                <FileName>
+                <Type>
+```
+
+## <a name="mail-add-in-element-ordering-within-versionoverrides-ver-10"></a>Упорядочение элементов почтовой надстройки в VersionOverrides ver. 1.0
+
+```
+<VersionOverrides>
+    <Description>
+    <Requirements>
+        <Sets>
+            <Set>
+    <Hosts>
+        <Host>
+            <DesktopFormFactor>
+            <ExtensionPoint>
+                <OfficeTab>
+                    <Group>
+                        <Label>
+                        <Control>
+                            <Label>
+                            <Supertip>
+                                <Title>
+                                <Description>
+                            <Icon>
+                                <Image>
+                            <Action>
+                                <SourceLocation>
+                                <FunctionName>
+                <CustomTab>
+                    <Group>
+                        <Label>
+                        <Icon>
+                            <Image>
+                        <Control>
+                            <Label>
+                            <Supertip>
+                                <Title>
+                                <Description>
+                            <Icon>
+                                <Image>  
+                            <Action>
+                                <TaskpaneId>
+                                <SourceLocation>
+                                <Title>
+                                <FunctionName>
+                            <Items>
+                                <Item>
+                                    <Label>
+                                    <Supertip>
+                                        <Title>
+                                        <Description>
+                                    <Action>
+                                        <TaskpaneId>
+                                        <SourceLocation>
+                                        <Title>
+                                        <FunctionName>
+                    <Label>
+                <OfficeMenu>
+                    <Control>
+                        <Label>
+                        <Supertip>
+                            <Title>
+                            <Description>
+                        <Icon>
+                            <Image>
+                        <Action>
+                            <TaskpaneId>
+                            <SourceLocation>
+                            <Title>
+                            <FunctionName>
+                        <Items>
+                            <Item>
+                                <Label>
+                                <Supertip>
+                                    <Title>
+                                    <Description>
+                                <Action>
+                                    <TaskpaneId>
+                                    <SourceLocation>
+                                    <Title>
+                                    <FunctionName>
+    <Resources>
+        <Images>
+            <Image>
+                <Override>
+        <Urls>
+            <Url>
+                <Override>
+        <ShortStrings>
+            <String>
+                <Override>
+        <LongStrings>
+            <String>
+                <Override>
+    <VersionOverrides>*
+```
+
+\*Объект VersionOverrides со `type` значением `VersionOverridesV1_1`, а не `VersionOverridesV1_0`, может быть вложен в конце внешнего VersionOverrides. Сведения о порядке элементов почтовых ящиков в [VersionOverrides ver. 1,1](#mail-add-in-element-ordering-within-versionoverrides-ver-11) для упорядочивания элементов `VersionOverridesV1_1`в.
+
+## <a name="mail-add-in-element-ordering-within-versionoverrides-ver-11"></a>Упорядочение элементов почтовой надстройки в VersionOverrides ver. 1.1
+
+```
+<VersionOverrides>
+    <Description>
+    <Requirements>
+    <Sets>
+        <Set>
+    <Hosts>
+    <Host>
+        <DesktopFormFactor>
+        <ExtensionPoint>
+            <OfficeTab>
+                <Group>
+                    <Label>
+                    <Control>
+                        <Label>
+                        <Supertip>
+                            <Title>
+                            <Description>
+                        <Icon>
+                            <Image>
+                        <Action>
+                            <SourceLocation>
+                            <FunctionName>
+            <CustomTab>
+                <Group>
+                    <Label>
+                    <Icon>
+                        <Image>
+                    <Control>
+                        <Label>
+                        <Supertip>
+                            <Title>
+                            <Description>
+                        <Icon>
+                            <Image>  
+                        <Action>
+                            <TaskpaneId>
+                            <SourceLocation>
+                            <Title>
+                            <FunctionName>
+                        <Items>
+                            <Item>
+                                <Label>
+                                <Supertip>
+                                    <Title>
+                                    <Description>
+                                <Action>
+                                    <TaskpaneId>
+                                    <SourceLocation>
+                                    <Title>
+                                    <FunctionName>
+                <Label>
+            <OfficeMenu>
+                <Control>
+                    <Label>
+                    <Supertip>
+                        <Title>
+                        <Description>
+                    <Icon>
+                        <Image>  
+                    <Action>
+                        <TaskpaneId>
+                        <SourceLocation>
+                        <Title>
+                        <FunctionName>
+                    <Items>
+                        <Item>
+                            <Label>
+                            <Supertip>
+                                <Title>
+                                <Description>
+                            <Action>
+                                <TaskpaneId>
+                                <SourceLocation>
+                                <Title>
+                                <FunctionName>
+                                <SourceLocation>
+            <SourceLocation>
+            <Label>
+            <CommandSurface>
+    <Resources>
+        <Images>
+            <Image>
+                <Override>
+        <Urls>
+            <Url>
+                <Override>
+        <ShortStrings>
+            <String>
+                <Override>
+        <LongStrings>
+            <String>
+                <Override>
+    <WebApplicationInfo>
+        <Id>
+        <Resource>
+        <Scopes>
+            <Scope>
+```
 
 ## <a name="see-also"></a>См. также
 

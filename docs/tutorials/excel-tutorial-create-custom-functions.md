@@ -5,12 +5,12 @@ ms.date: 07/09/2019
 ms.prod: excel
 ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: 4b74463eafd5ac1b70e59cef6ef1f9f33cf0ffa2
-ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
+ms.openlocfilehash: c7417c284beef787e35850ecbbb93b25ea5e1e87
+ms.sourcegitcommit: 1dc1bb0befe06d19b587961da892434bd0512fb5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "36268182"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "36302611"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -32,6 +32,8 @@ ms.locfileid: "36268182"
 ## <a name="create-a-custom-functions-project"></a>Создание проекта пользовательских функций
 
  Чтобы начать, вам необходимо создать проект кода для разработки надстройки пользовательской функции. [Генератор Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office) настроит проект с помощью некоторых предварительно созданных настраиваемых функций, которые можно испытать. Если вы уже запустили функцию быстрого запуска пользовательских функций и создали проект, продолжайте использовать этот проект и переходите к [этому шагу](#create-a-custom-function-that-requests-data-from-the-web) .
+
+[!include[note about Yeoman generator bug](../includes/note-yeoman-generator-bug-201908.md)]
 
 1. Выполните указанную ниже команду и ответьте на вопросы, как показано ниже.
     

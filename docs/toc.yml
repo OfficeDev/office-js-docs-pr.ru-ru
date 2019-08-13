@@ -106,10 +106,20 @@
           href: develop/addressing-same-origin-policy-limitations.md
         - name: Проверка подлинности и авторизация
           items:
+            - name: Общие сведения о проверке подлинности и авторизации
+              href: develop/overview-authn-authz.md
+            - name: Проверка подлинности и авторизация с помощью API диалоговых окон Office
+              href: develop/auth-with-office-dialog-api.md
+            - name: Авторизация внешних служб
+              href: develop/auth-external-add-ins.md
+            - name: Авторизация в Microsoft Graph без единого входа
+              href: develop/authorize-to-microsoft-graph-without-sso.md
             - name: Включение единого входа в надстройке
               items:
                 - name: Включение единого входа
                   href: develop/sso-in-office-add-ins.md
+                - name: Авторизация в Microsoft Graph с помощью единого входа
+                  href: develop/authorize-to-microsoft-graph.md
                 - name: Создание надстройки единого входа с помощью ASP.NET
                   href: develop/create-sso-office-add-ins-aspnet.md
                 - name: Создание надстройки единого входа с помощью Node. js
@@ -120,10 +130,6 @@
                   href: develop/grant-admin-consent-to-an-add-in.md
                 - name: Устранение ошибок единого входа
                   href: develop/troubleshoot-sso-in-office-add-ins.md
-            - name: Авторизация внешних служб
-              href: develop/auth-external-add-ins.md
-            - name: Авторизация в Microsoft Graph
-              href: develop/authorize-to-microsoft-graph.md
         - name: Автоматическое открытие области задач с документом
           href: develop/automatically-open-a-task-pane-with-a-document.md
         - name: Разработка надстроек для iPad
@@ -269,9 +275,9 @@
               href: reference/manifest/disableentityhighlighting.md
             - name: DisplayName
               href: reference/manifest/displayname.md
-            - name: Екуивалентаддин
+            - name: екуивалентаддин
               href: reference/manifest/equivalentaddin.md
-            - name: Екуивалентаддинс
+            - name: екуивалентаддинс
               href: reference/manifest/equivalentaddins.md
             - name: FileName
               href: reference/manifest/filename.md
