@@ -4,12 +4,12 @@ description: ''
 ms.date: 06/20/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 8935a22a631699ac0314aac89936fbd8c2552212
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: e343e8eec053bb41cc4438ef42ef0a420319be94
+ms.sourcegitcommit: 1dc1bb0befe06d19b587961da892434bd0512fb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128568"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "36302590"
 ---
 # <a name="build-an-excel-task-pane-add-in-using-vue"></a>Создание области задач Excel с помощью Vue
 
@@ -58,7 +58,7 @@ vue init webpack my-add-in
     ```
 
     - **Выберите тип проекта:** `Office Add-in project containing the manifest only`
-    - **Как вы хотите назвать надстройку?** `My Office Add-in`
+    - **Как вы хотите назвать надстройку?** `my-office-add-in`
     - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
     ![Генератор Yeoman](../images/yo-office-manifest-only-vue.png)
@@ -77,7 +77,7 @@ vue init webpack my-add-in
 
 ## <a name="update-the-app"></a>Обновление приложения
 
-1. В редакторе кода откройте папку **My Office Add-in**, созданную Yo Office в корневой папке проекта Vue. В этой папке вы увидите файл манифеста, который определяет параметры надстройки (**manifest.xml**).
+1. В редакторе кода откройте папку **my-office-add-in**, созданную Yo Office в корневой папке проекта Vue. В этой папке вы увидите файл манифеста, который определяет параметры надстройки (**manifest.xml**).
 
 2. Откройте файл манифеста и замените все вхождения `https://localhost:3000`, указав вместо них `https://localhost:8080`, затем сохраните файл.
 

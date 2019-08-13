@@ -3,12 +3,12 @@ title: Использование Office UI Fabric React в надстройка
 description: Использование Office UI Fabric React в надстройках Office
 ms.date: 07/11/2019
 localization_priority: Priority
-ms.openlocfilehash: 7166e9a13c89a1ef2a52659bf31561574f544420
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: c738521b82d0cb8f234fd28dc8bb24740962b817
+ms.sourcegitcommit: 1dc1bb0befe06d19b587961da892434bd0512fb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35771351"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "36302603"
 ---
 # <a name="use-office-ui-fabric-react-in-office-add-ins"></a>Использование Office UI Fabric React в надстройках Office
 
@@ -29,6 +29,8 @@ Office UI Fabric — это интерфейсная платформа JavaScri
 
 ### <a name="create-the-project"></a>Создание проекта
 
+[!include[note about Yeoman generator bug](../includes/note-yeoman-generator-bug-201908.md)]
+
 С помощью генератора Yeoman создайте проект надстройки Word. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
 ```command&nbsp;line
@@ -37,10 +39,8 @@ yo office
 
 - **Выберите тип проекта:** `Office Add-in Task Pane project using React framework`
 - **Выберите тип сценария:** `TypeScript`
-- **Как вы хотите назвать надстройку?** `My Office Add-in`
+- **Как вы хотите назвать надстройку?** `my-office-add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `Word`
-
-![Генератор Yeoman](../images/yo-office-word-react.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -49,16 +49,16 @@ yo office
 1. Перейдите к корневой папке проекта.
 
     ```command&nbsp;line
-    cd "My Office Add-in"
+    cd "my-office-add-in"
     ```
 
-2. Выполните следующие действия, чтобы запустить локальный веб-сервер и загрузить неопубликованную надстройку.
+2. Выполните указанные ниже действия, чтобы запустить локальный веб-сервер и загрузить неопубликованную надстройку.
 
     > [!NOTE]
     > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите одну из указанных ниже команд, примите предложение установить сертификат, предоставленный генератором Yeoman.
 
     > [!TIP]
-    > Если вы тестируете надстройку на компьютере Mac, перед тем, как продолжить, выполните приведенную ниже команду. После выполнения этой команды запустится локальный веб-сервер.
+    > Если вы тестируете надстройку на компьютере Mac, перед продолжением выполните указанную ниже команду. После выполнения этой команды запустится локальный веб-сервер.
     >
     > ```command&nbsp;line
     > npm run dev-server

@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 07/17/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 568f27a596fda77f263a53b551eefebc287e68e3
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: 781e2c3e7cd563e6ebeeaff3e8bf0624b64aec76
+ms.sourcegitcommit: 1dc1bb0befe06d19b587961da892434bd0512fb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35771865"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "36308052"
 ---
 # <a name="build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel
 
@@ -27,6 +27,8 @@ ms.locfileid: "35771865"
 
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
+[!include[note about Yeoman generator bug](../includes/note-yeoman-generator-bug-201908.md)]
+
 Создайте проект надстройки Excel помощью генератора Yeoman. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
 ```command&nbsp;line
@@ -35,12 +37,10 @@ yo office
 
 - **Выберите тип проекта:** `Office Add-in Task Pane project`
 - **Выберите тип сценария:** `Javascript`
-- **Как вы хотите назвать надстройку?** `My Office Add-in`
+- **Как вы хотите назвать надстройку?** `my-office-add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
-![Генератор Yeoman](../images/yo-office-excel.png)
-
-После завершения работы мастера генератор создает проект и устанавливает вспомогательные компоненты Node.
+После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
 ### <a name="explore-the-project"></a>Знакомство с проектом
 
@@ -51,7 +51,7 @@ yo office
 1. Перейдите к корневой папке проекта.
 
     ```command&nbsp;line
-    cd "My Office Add-in"
+    cd "my-office-add-in"
     ```
 
 2. [!include[Start server section](../includes/quickstart-yo-start-server-excel.md)] 

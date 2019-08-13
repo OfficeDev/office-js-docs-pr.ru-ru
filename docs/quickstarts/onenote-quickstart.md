@@ -4,12 +4,12 @@ description: ''
 ms.date: 06/20/2019
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: 65bcbbbece1e56b5c49abb0d8e31221c0b513340
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: 24c8854cb1f9332371f3726409f91f7cdbf53243
+ms.sourcegitcommit: 1dc1bb0befe06d19b587961da892434bd0512fb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35771774"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "36308024"
 ---
 # <a name="build-your-first-onenote-task-pane-add-in"></a>Создание первой надстройки области задач OneNote
 
@@ -21,6 +21,8 @@ ms.locfileid: "35771774"
 
 ## <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
+[!include[note about Yeoman generator bug](../includes/note-yeoman-generator-bug-201908.md)]
+
 С помощью генератора Yeoman создайте проект надстройки OneNote. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
 ```command&nbsp;line
@@ -29,10 +31,8 @@ yo office
 
 - **Выберите тип проекта:** `Office Add-in Task Pane project`
 - **Выберите тип сценария:** `Javascript`
-- **Как вы хотите назвать надстройку?** `My Office Add-in`
+- **Как вы хотите назвать надстройку?** `my-office-add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `OneNote`
-
-![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-onenote.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
     
@@ -76,7 +76,7 @@ try {
 1. Перейдите к корневой папке проекта.
 
     ```command&nbsp;line
-    cd "My Office Add-in"
+    cd "my-office-add-in"
     ```
 
 2. Запустите локальный веб-сервер и загрузите неопубликованную надстройку.

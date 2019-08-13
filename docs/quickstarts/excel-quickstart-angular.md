@@ -4,12 +4,12 @@ description: ''
 ms.date: 05/02/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 6c7baf237c4ca0be0e11428dcb2661b7b86ed39e
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: 5d27b7d70fb013ca15115af3ad550a604ce10bb9
+ms.sourcegitcommit: 1dc1bb0befe06d19b587961da892434bd0512fb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35771844"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "36308038"
 ---
 # <a name="build-an-excel-task-pane-add-in-using-angular"></a>Создание области задач Excel с помощью Angular
 
@@ -21,6 +21,8 @@ ms.locfileid: "35771844"
 
 ## <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
+[!include[note about Yeoman generator bug](../includes/note-yeoman-generator-bug-201908.md)]
+
 Создайте проект надстройки Excel помощью генератора Yeoman. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
 ```command&nbsp;line
@@ -29,12 +31,10 @@ yo office
 
 - **Выберите тип проекта:** `Office Add-in Task Pane project using Angular framework`
 - **Выберите тип сценария:** `TypeScript`
-- **Как вы хотите назвать надстройку?** `My Office Add-in`
+- **Как вы хотите назвать надстройку?** `my-office-add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
-![Генератор Yeoman](../images/yo-office-excel-angular-2.png)
-
-После завершения работы мастера генератор создает проект и устанавливает вспомогательные компоненты Node.
+После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
 ## <a name="explore-the-project"></a>Знакомство с проектом
 
@@ -50,7 +50,7 @@ yo office
 1. Перейдите к корневой папке проекта.
 
     ```command&nbsp;line
-    cd "My Office Add-in"
+    cd "my-office-add-in"
     ```
 
 2. [!include[Start server section](../includes/quickstart-yo-start-server-excel.md)] 
