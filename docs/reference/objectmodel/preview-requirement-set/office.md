@@ -1,14 +1,14 @@
 ---
 title: Пространство имен Office — Предварительная версия набора требований
 description: ''
-ms.date: 04/12/2019
+ms.date: 08/13/2019
 localization_priority: Normal
-ms.openlocfilehash: 7effc930d196aa009c3c779b702e082ae388fada
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: df4b47f57d634f6c99ce862ed1c0e96d87be0425
+ms.sourcegitcommit: 1c7e555733ee6d5a08e444a3c4c16635d998e032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451957"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "36395668"
 ---
 # <a name="office"></a>Office
 
@@ -34,11 +34,11 @@ ms.locfileid: "32451957"
 
 [context.](office.context.md) Предоставляет общие интерфейсы из контекстного пространства имен API надстроек Office для использования в API надстройки Outlook.
 
-[MailboxEnums.](/javascript/api/outlook/office.mailboxenums.attachmenttype) Включает перечисления ItemType, EntityType, AttachmentType, RecipientType, ResponseType и ItemNotificationMessageType.
+[MailboxEnums](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat): `ItemType`включает ряд перечислений, например `EntityType` `AttachmentType` `RecipientType` `ResponseType`,,,,, и `ItemNotificationMessageType`.
 
-### <a name="members"></a>Элементы
+### <a name="members"></a>Members
 
-####  <a name="asyncresultstatus-string"></a>AsyncResultStatus :String
+#### <a name="asyncresultstatus-string"></a>AsyncResultStatus: строка
 
 Указывает результат асинхронного вызова.
 
@@ -50,7 +50,7 @@ ms.locfileid: "32451957"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Succeeded`| Строка|Вызов завершился успешно.|
+|`Succeeded`| String|Вызов завершился успешно.|
 |`Failed`| Для указания|Вызов завершился ошибкой.|
 
 ##### <a name="requirements"></a>Требования
@@ -63,7 +63,7 @@ ms.locfileid: "32451957"
 ---
 ---
 
-####  <a name="coerciontype-string"></a>CoercionType :String
+#### <a name="coerciontype-string"></a>CoercionType: строка
 
 Указывает способ приведения данных, возвращаемых или задаваемых вызванным методом.
 
@@ -75,8 +75,8 @@ ms.locfileid: "32451957"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Html`| Строка|Запрашивает возврат данных в формате HTML.|
-|`Text`| Строка|Запрашивает возврат данных в формате текста.|
+|`Html`| String|Запрашивает возврат данных в формате HTML.|
+|`Text`| String|Запрашивает возврат данных в формате текста.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -88,7 +88,7 @@ ms.locfileid: "32451957"
 ---
 ---
 
-####  <a name="eventtype-string"></a>EventType :String
+#### <a name="eventtype-string"></a>EventType: строка
 
 Указывает событие, связанное с обработчиком.
 
@@ -100,13 +100,13 @@ ms.locfileid: "32451957"
 
 | Имя | Тип | Описание | Набор минимальных требований |
 |---|---|---|---|
-|`AppointmentTimeChanged`| Строка | Дата или время выбранной встречи или ряда изменились. | 1.7 |
-|`AttachmentsChanged`| Строка | Вложение было добавлено или удалено из элемента. | Предварительная версия |
-|`EnhancedLocationsChanged`| Строка | Расположение выбранной встречи изменилось. | Предварительная версия |
-|`ItemChanged`| Строка | Для просмотра выбран другой элемент Outlook, когда область задач закреплена. | 1.5 |
-|`OfficeThemeChanged`| Строка | Тема Office в почтовом ящике изменилась. | Предварительная версия |
-|`RecipientsChanged`| Строка | Список получателей выбранного элемента или места встречи изменился. | 1.7 |
-|`RecurrenceChanged`| Строка | Шаблон повторения выбранного ряда изменился. | 1.7 |
+|`AppointmentTimeChanged`| String | Дата или время выбранной встречи или ряда изменились. | 1.7 |
+|`AttachmentsChanged`| String | Вложение было добавлено или удалено из элемента. | Предварительная версия |
+|`EnhancedLocationsChanged`| String | Расположение выбранной встречи изменилось. | Предварительная версия |
+|`ItemChanged`| String | Для просмотра выбран другой элемент Outlook, когда область задач закреплена. | 1.5 |
+|`OfficeThemeChanged`| String | Тема Office в почтовом ящике изменилась. | Предварительная версия |
+|`RecipientsChanged`| String | Список получателей выбранного элемента или места встречи изменился. | 1.7 |
+|`RecurrenceChanged`| String | Шаблон повторения выбранного ряда изменился. | 1.7 |
 
 ##### <a name="requirements"></a>Требования
 
@@ -118,7 +118,7 @@ ms.locfileid: "32451957"
 ---
 ---
 
-####  <a name="sourceproperty-string"></a>SourceProperty :String
+#### <a name="sourceproperty-string"></a>Перестрока: строка
 
 Указывает источник данных, возвращаемых вызванным методом.
 
@@ -130,8 +130,8 @@ ms.locfileid: "32451957"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Body`| Строка|Источник данных — текст сообщения.|
-|`Subject`| Строка|Источник данных — тема сообщения.|
+|`Body`| String|Источник данных — текст сообщения.|
+|`Subject`| String|Источник данных — тема сообщения.|
 
 ##### <a name="requirements"></a>Требования
 

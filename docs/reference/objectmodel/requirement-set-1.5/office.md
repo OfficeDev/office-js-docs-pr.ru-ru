@@ -1,14 +1,14 @@
 ---
 title: Пространство имен Office — набор обязательных элементов 1,5
 description: ''
-ms.date: 04/24/2019
+ms.date: 08/13/2019
 localization_priority: Normal
-ms.openlocfilehash: 36faf4569ac58693dcc1218c42a19347816d9abd
-ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
+ms.openlocfilehash: 402737f0f6648e42f569906df59be0fa26991146
+ms.sourcegitcommit: 1c7e555733ee6d5a08e444a3c4c16635d998e032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "36064680"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "36395689"
 ---
 # <a name="office"></a>Office
 
@@ -34,9 +34,9 @@ ms.locfileid: "36064680"
 
 [context.](office.context.md) Предоставляет общие интерфейсы из контекстного пространства имен API надстроек Office для использования в API надстройки Outlook.
 
-[MailboxEnums.](/javascript/api/outlook/office.mailboxenums.attachmenttype?view=outlook-js-1.5) Включает перечисления ItemType, EntityType, AttachmentType, RecipientType, ResponseType и ItemNotificationMessageType.
+[MailboxEnums](/javascript/api/outlook/office.mailboxenums.attachmenttype?view=outlook-js-1.5): `ItemType`включает ряд перечислений, например `EntityType` `AttachmentType` `RecipientType` `ResponseType`,,,,, и `ItemNotificationMessageType`.
 
-### <a name="members"></a>Элементы
+### <a name="members"></a>Members
 
 #### <a name="asyncresultstatus-string"></a>AsyncResultStatus: строка
 

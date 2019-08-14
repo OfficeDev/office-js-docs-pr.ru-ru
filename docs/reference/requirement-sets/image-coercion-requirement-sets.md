@@ -1,21 +1,19 @@
 ---
 title: Наборы требований к приведению изображений
 description: Поддержка наборов требований для приведения изображений с надстройками Office в Excel, PowerPoint и Word.
-ms.date: 07/11/2019
+ms.date: 08/13/2019
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: bffe6c074d9e0734299d0087f2488524875931ed
-ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
+ms.openlocfilehash: 9d622c827315f6657cf0fddaace33968bd634d64
+ms.sourcegitcommit: 1c7e555733ee6d5a08e444a3c4c16635d998e032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "35940855"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "36395675"
 ---
 # <a name="image-coercion-requirement-sets"></a>Наборы требований к приведению изображений
 
 Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets).
-
-Надстройки Office работают в нескольких версиях Office. В приведенной ниже таблице перечислены наборы требований к приведению изображений, ведущие приложения Office, которые поддерживают этот набор требований, а также номера сборок или версий приложений Office.
 
 ## <a name="imagecoercion-11"></a>Использовать imagecoercion 1,1
 
@@ -23,7 +21,6 @@ ms.locfileid: "35940855"
 
 - Excel 2013 и более поздних версий в Windows
 - Excel 2016 и более поздних версий на компьютерах Mac
-- Excel в Интернете
 - Excel на iPad
 - OneNote в Интернете
 - PowerPoint 2013 и более поздних версий в Windows
@@ -41,7 +38,6 @@ ms.locfileid: "35940855"
 
 - Excel в Windows (подключен к подписке на Office 365)
 - Excel на Mac (подключен к подписке на Office 365)
-- Excel в Интернете
 - PowerPoint в Windows (подключено к подписке на Office 365)
 - PowerPoint на Mac (с подключением к подписке на Office 365)
 - PowerPoint в Интернете

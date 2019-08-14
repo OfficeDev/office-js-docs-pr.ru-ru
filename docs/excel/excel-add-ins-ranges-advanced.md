@@ -1,14 +1,14 @@
 ---
 title: Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 description: ''
-ms.date: 04/15/2019
+ms.date: 04/30/2019
 localization_priority: Normal
-ms.openlocfilehash: aacbe930e2cf3da4d10b61bfe8f34efe1094c113
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: c8fbe1dcc75080c932b4c3e2946fe62747d35c6b
+ms.sourcegitcommit: 1c7e555733ee6d5a08e444a3c4c16635d998e032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32448425"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "36395598"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api-advanced"></a>Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 
@@ -62,17 +62,11 @@ Excel.run(function (context) {
 
 Вашей надстройке потребуется отформатировать диапазоны, чтобы отобразить даты в более понятной для человека форме. В примере `"[$-409]m/d/yy h:mm AM/PM;@"` время отобразится как "12/3/18 3:57 PM". Дополнительные сведения о форматах чисел даты и времени см. в разделе "Рекомендации по форматам даты и времени" статьи [Рекомендации по настройке числовых форматов](https://support.office.com/article/review-guidelines-for-customizing-a-number-format-c0a1d1fa-d3f4-4018-96b7-9c9354dd99f5).
 
-## <a name="work-with-multiple-ranges-simultaneously-preview"></a>Работа с несколькими диапазонами одновременно (предварительная версия)
-
-> [!NOTE]
-> `RangeAreas` Объект в настоящее время доступен только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+## <a name="work-with-multiple-ranges-simultaneously"></a>Одновременное работу с несколькими диапазонами
 
 Объект `RangeAreas` позволяет вашей надстройке выполнять операции над несколькими диапазонами одновременно. Эти диапазоны могут быть смежными, но это необязательно. Объект `RangeAreas` подробнее рассматривается в статье [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md).
 
-## <a name="find-special-cells-within-a-range-preview"></a>Поиск специальных ячеек в диапазоне (предварительная версия)
-
-> [!NOTE]
-> Методы `getSpecialCells` и `getSpecialCellsOrNullObject` в настоящее время доступны только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+## <a name="find-special-cells-within-a-range"></a>Поиск специальных ячеек в диапазоне
 
 Методы `Range.getSpecialCells()` и `Range.getSpecialCellsOrNullObject()` находят диапазоны с учетом характеристик ячеек и типов значений ячеек. Оба этих метода возвращают объекты `RangeAreas`. Подписи методов из файла типов данных TypeScript:
 
@@ -178,10 +172,7 @@ Excel.run(function (context) {
 })
 ```
 
-## <a name="copy-and-paste-preview"></a>Копирование и вставка (предварительная версия)
-
-> [!NOTE]
-> Функция `Range.copyFrom` в настоящее время доступна только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+## <a name="copy-and-paste"></a>Copy and paste
 
 Функция `copyFrom` диапазона реплицирует поведение копирования и вставки пользовательского интерфейса Excel. Диапазон объекта, который вызывается `copyFrom`, является назначением.
 Источник для копирования передается как диапазон или адрес строки, представляющий диапазон.
@@ -190,7 +181,7 @@ Excel.run(function (context) {
 ```js
 Excel.run(function (context) {
     var sheet = context.workbook.worksheets.getItem("Sample");
-    // copy a range starting at a single cell destination
+    // copy everything from "A1:E1" into "G1" and the cells afterwards ("G1:K1")
     sheet.getRange("G1").copyFrom("A1:E1");
     return context.sync();
 }).catch(errorHandlerFunction);
@@ -242,10 +233,7 @@ Excel.run(function (context) {
 
 ![Данные в Excel после запуска метода копирования диапазона](../images/excel-range-copyfrom-skipblanks-after.png)
 
-## <a name="remove-duplicates-preview"></a>Удаление дубликатов (предварительная версия)
-
-> [!NOTE]
-> Функция `removeDuplicates` объекта Range в настоящее время доступна только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+## <a name="remove-duplicates"></a>Удаление дубликатов
 
 Функция `removeDuplicates` объекта Range удаляет строки с повторяющимися записями в указанных столбцах. Функция проверяет каждую строку в диапазоне от индекса с наименьшим значением до индекса с наибольшим значением (сверху вниз). Строка удаляется, если значение в ее указанном столбце или столбцах уже встречалось в диапазоне. Строки в диапазоне под удаленной строкой сдвигаются вверх. Функция `removeDuplicates` не влияет на положение ячеек вне диапазона.
 
