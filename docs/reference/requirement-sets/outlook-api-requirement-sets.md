@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Outlook
 description: ''
-ms.date: 07/18/2019
+ms.date: 08/13/2019
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: 71cea37784bd3668d3cb44a136ce12e78256f8ec
-ms.sourcegitcommit: 6d9b4820a62a914c50cef13af8b80ce626034c26
+ms.openlocfilehash: 010dd0519ff6b82f29e2ee7c3cdebb9a64106ac9
+ms.sourcegitcommit: 1c7e555733ee6d5a08e444a3c4c16635d998e032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "35804634"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "36395661"
 ---
 # <a name="outlook-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Outlook
 
@@ -28,6 +28,11 @@ ms.locfileid: "35804634"
 Все API-интерфейсы Outlook приведены в `Mailbox`[наборе требований](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements). У набора требований `Mailbox` есть версии, а каждый новый выпускаемый набор API-интерфейсов приведен в наборе более поздней версии. Не все клиенты Outlook поддерживают новейший набор API-интерфейсов, но если для клиента Outlook объявлена поддержка набора требований, то он будет поддерживать все API-интерфейсы в этом наборе.
 
 Задайте версию минимального набора требований в манифесте, чтобы указать клиент Outlook, в котором появится надстройка. Если клиент не поддерживает минимальный набор требований, он не загружает надстройку. Например, если указана версия набора требований 1.3, надстройка не отобразится в каком-либо клиенте Outlook, который не поддерживает версии 1.3. и ниже
+
+> [!NOTE]
+> Чтобы использовать API в любом из нумерованных наборов обязательных элементов, следует ссылаться на **рабочую** библиотеку в сети CDN (https://appsforoffice.microsoft.com/lib/1/hosted/office.js).
+>
+> Сведения об использовании API предварительных версий см. в разделе [Использование предварительных версий API](#using-preview-apis) далее в этой статье.
 
 ## <a name="using-apis-from-later-requirement-sets"></a>Использование API из наборов обязательных элементов более поздних версий
 
