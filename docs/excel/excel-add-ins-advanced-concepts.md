@@ -3,12 +3,12 @@ title: Дополнительные концепции программиров�
 description: ''
 ms.date: 07/17/2019
 localization_priority: Priority
-ms.openlocfilehash: 0270ca30e0add99dadc9fcfaf4a71cdb3fb68f46
-ms.sourcegitcommit: 5e90a90175909e0f4f392f5c98bd1273f444fe49
+ms.openlocfilehash: a4639070ed74f9beb757de7c30d1d7e32a3e63fa
+ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "35851590"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "36477756"
 ---
 # <a name="advanced-programming-concepts-with-the-excel-javascript-api"></a>Дополнительные концепции программирования с помощью API JavaScript для Excel
 
@@ -37,7 +37,7 @@ ms.locfileid: "35851590"
 В приведенном ниже примере кода показано, как определить, поддерживает ли ведущее приложение надстройки указанный набор обязательных элементов API.
 
 ```js
-if (Office.context.requirements.isSetSupported('ExcelApi', '1.3') === true) {
+if (Office.context.requirements.isSetSupported('ExcelApi', '1.3')) {
   /// perform actions
 }
 else {

@@ -1,26 +1,23 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: ''
-ms.date: 08/13/2019
+ms.date: 08/15/2019
 localization_priority: Priority
-ms.openlocfilehash: b563d6cfc279a18a6a61f39c33a5ab42e1bd6984
-ms.sourcegitcommit: 1c7e555733ee6d5a08e444a3c4c16635d998e032
+ms.openlocfilehash: 14f40830bb8f0f0e0232e6ae2305d60e400ca145
+ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "36395710"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "36477894"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
 Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.
 
-> [!NOTE]
-> Эта документация относится к **предварительной версии** [набора обязательных элементов](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets). Этот набор обязательных элементов еще не полностью реализован, а клиенты будут неправильно сообщать о его поддержке. Не следует указывать этот набор обязательных элементов в манифесте надстройки. Прежде чем использовать методы и свойства, добавленные в этом наборе обязательных элементов, следует отдельно проверять их на доступность.
->
-> Чтобы использовать предварительные версии API:
->
-> - Необходимо ссылаться на **бета-версию** библиотеки в сети CDN (https://appsforoffice.microsoft.com/lib/beta/hosted/office.js).
-> - Кроме того, может потребоваться присоединение к [программе предварительной оценки Office](https://products.office.com/office-insider), чтобы получить более новые сборки Office.
+> [!IMPORTANT]
+> Эта документация относится к **предварительной версии** [набора обязательных элементов](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets). Этот набор обязательных элементов еще не полностью реализован, а клиенты будут неправильно сообщать о его поддержке. Не следует указывать этот набор обязательных элементов в манифесте надстройки.
+
+[!INCLUDE [Information about using preview APIs](../../../includes/using-preview-apis-host.md)]
 
 Предварительная версия набора обязательных элементов включает все возможности [набора обязательных элементов 1.7](../requirement-set-1.7/outlook-requirement-set-1.7.md).
 
