@@ -1,21 +1,21 @@
 ---
 title: Загрузка неопубликованных надстроек Office для тестирования
 description: ''
-ms.date: 06/20/2019
+ms.date: 08/15/2019
 localization_priority: Priority
-ms.openlocfilehash: 81b931ab7bc88675ae438edf6d0d05ebb040387e
-ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
+ms.openlocfilehash: 19cd599ea743fc577a5139d3f278dd3f993ec5b1
+ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "35575690"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "36477931"
 ---
 # <a name="sideload-office-add-ins-for-testing"></a>Загрузка неопубликованных надстроек Office для тестирования
 
 Вы можете установить надстройку Office для тестирования в клиенте Office, запущенном в Windows, используя каталог общих папок для публикации манифеста в сетевом файловом ресурсе.
 
 > [!NOTE]
-> Если проект надстройки был создан с помощью [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office), есть альтернативный способ загрузки неопубликованных надстроек, который может вам подойти. Дополнительные сведения см. в статье [Загрузка неопубликованных надстроек Office с помощью специальной команды](sideload-office-addin-using-sideload-command.md).
+> Если проект надстройки создан с помощью достаточно новой версии [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office), неопубликованная надстройка автоматически загружается в классический клиент Office, когда вы запускаете команду `npm start`.
 
 Эта статья относится только к тестированию надстроек Word, Excel, PowerPoint и Project в Windows. Для выполнения тестирования на другой платформе или тестирования надстроек Outlook см. одну из указанных ниже тем о загрузке неопубликованных надстроек.
 

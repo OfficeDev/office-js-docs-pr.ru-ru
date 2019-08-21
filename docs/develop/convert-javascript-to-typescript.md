@@ -1,14 +1,14 @@
 ---
 title: Преобразование проекта надстройки Office в Visual Studio в TypeScript
 description: ''
-ms.date: 07/17/2019
+ms.date: 08/14/2019
 localization_priority: Priority
-ms.openlocfilehash: 7c51479c1a5d1df5d9b0622dbae4fe9f01ad0c2c
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: 29305df541a39ad76655a0f8a848138a369bbf39
+ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35771308"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "36477770"
 ---
 # <a name="convert-an-office-add-in-project-in-visual-studio-to-typescript"></a>Преобразование проекта надстройки Office в Visual Studio в TypeScript
 
@@ -93,13 +93,7 @@ ms.locfileid: "35771308"
         ...
     ```
 
-13. В файле **Home.ts** замените **'1.1'** на **1.1** (то есть удалите кавычки) в приведенной ниже строке:
-
-    ```typescript
-    if (!Office.context.requirements.isSetSupported('ExcelApi', '1.1')) {
-    ```
-
-14. В файле **Home.ts** найдите функцию `displaySelectedCells`, замените всю функцию приведенным ниже кодом и сохраните файл:
+13. В файле **Home.ts** найдите функцию `displaySelectedCells`, замените всю функцию приведенным ниже кодом и сохраните файл:
 
     ```typescript
     function displaySelectedCells() {
@@ -165,7 +159,7 @@ declare var fabric: any;
             loadSampleData();
 
             // Add a click event handler for the highlight button.
-            $('#highlight-button').click(hightlightHighestValue);
+            $('#highlight-button').click(highlightHighestValue);
         });
     };
 
@@ -189,7 +183,7 @@ declare var fabric: any;
         .catch(errorHandler);
     }
 
-    function hightlightHighestValue() {
+    function highlightHighestValue() {
         // Run a batch operation against the Excel object model
         Excel.run(function (ctx) {
             // Create a proxy object for the selected range and load its properties

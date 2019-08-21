@@ -1,14 +1,14 @@
 ---
 title: Проверка манифеста и устранение связанных с ним неполадок
 description: Используйте эти методы для проверки манифеста надстройки Office.
-ms.date: 07/29/2019
+ms.date: 08/15/2019
 localization_priority: Priority
-ms.openlocfilehash: 70ebe8be4b669167d1ba230d9dcbf19cb2289efe
-ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
+ms.openlocfilehash: bf70aca68135073ed92d2e4d2c176b944836c7ad
+ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "35940674"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "36477924"
 ---
 # <a name="validate-and-troubleshoot-issues-with-your-manifest"></a>Проверка манифеста и устранение связанных с ним неполадок
 
@@ -27,17 +27,22 @@ npm run validate
 > [!NOTE]
 > Для доступа к этой функции проект надстройки должен быть создан с помощью [генератора Yeoman](https://www.npmjs.com/package/generator-office) 1.1.17 или более поздней версии.
 
-## <a name="validate-your-manifest-with-office-toolbox"></a>Проверка манифеста с помощью office-toolbox
+## <a name="validate-your-manifest-with-office-addin-manifest"></a>Проверка манифеста с помощью office-addin-manifest
 
-Если для создания надстройки использовался не [генератор Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office), вы можете проверить манифест, используя [office-toolbox](https://www.npmjs.com/package/office-toolbox).
+Если для создания надстройки использовался не [генератор Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office), вы можете проверить манифест, используя [office-addin-manifest](https://www.npmjs.com/package/office-addin-manifest).
 
 1. Установите [Node.js](https://nodejs.org/download/).
 
 2. Выполните следующую команду в корневом каталоге своего проекта. Замените `MANIFEST_FILE` на имя файла манифеста.
 
     ```command&nbsp;line
-    npx office-toolbox validate -m MANIFEST_FILE
+    npx office-addin-manifest validate MANIFEST_FILE
     ```
+
+    > [!NOTE]
+    > Если эта команда приводит к появлению сообщения об ошибке "Недопустимый синтаксис команды" (так как команда `validate` не распознается), выполните следующую команду для проверки манифеста (заменив `MANIFEST_FILE` именем файла манифеста): 
+    > 
+    > `npx --ignore-existing office-addin-manifest validate MANIFEST_FILE`
 
 ## <a name="validate-your-manifest-against-the-xml-schema"></a>Проверка манифеста на соответствие схеме XML
 

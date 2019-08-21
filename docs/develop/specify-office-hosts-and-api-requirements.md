@@ -1,14 +1,14 @@
 ---
 title: Указание ведущих приложений Office и требований к API
 description: ''
-ms.date: 07/18/2019
+ms.date: 08/14/2019
 localization_priority: Priority
-ms.openlocfilehash: 9699379d39e4c1a9f4e1380cf6360eaf027f05f0
-ms.sourcegitcommit: 6d9b4820a62a914c50cef13af8b80ce626034c26
+ms.openlocfilehash: bd70f33952b4306b906896b6f4c8e00e0d768265
+ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "35804620"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "36477777"
 ---
 # <a name="specify-office-hosts-and-api-requirements"></a>Указание ведущих приложений Office и требований к API
 
@@ -133,24 +133,24 @@ ms.locfileid: "35804620"
 
 - Элемент **Method** задает отдельный метод, который должно поддерживать ведущее приложение Office, в котором работает надстройка. Атрибут **Name** обязателен и указывает имя метода с его родительским объектом.
 
-
 ## <a name="use-runtime-checks-in-your-javascript-code"></a>Использование проверок в среде выполнения в коде JavaScript
-
 
 Если ведущее приложение Office поддерживает определенные наборы требований, вы можете добавить в надстройку дополнительные функции. Например, если надстройка работает в Word 2016, вы можете использовать в ней API JavaScript для Word. Для этого используйте метод [isSetSupported](/javascript/api/office/office.requirementsetsupport#issetsupported-name--minversion-) с именем набора обязательных элементов. В среде выполнения метод **isSetSupported** определяет, поддерживает ли приложение Office, в котором запускается надстройка, этот набор требований. Если он поддерживается, то метод **isSetSupported** возвращает значение **true** и запускает дополнительный код, который использует элементы API из этого набора. Если приложение Office не поддерживает набор требований, метод **isSetSupported** возвращает значение **false**, и дополнительный код не запускается. В коде ниже показан синтаксис, который необходимо использовать с методом **isSetSupported**.
 
-
 ```js
-if (Office.context.requirements.isSetSupported(RequirementSetName, VersionNumber))
+if (Office.context.requirements.isSetSupported(RequirementSetName, MinimumVersion))
 {
    // Code that uses API members from RequirementSetName.
 }
 
 ```
 
--  _RequirementSetName_ (обязательный параметр) — это строка, представляющая имя набора обязательных элементов. Дополнительные сведения о доступных наборах обязательных элементов см. в статье [Наборы обязательных элементов для надстроек Office](/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets).
-    
--  _VersionNumber_ (необязательный параметр) — это версия набора обязательных элементов.
+- _RequirementSetName_ (обязательный параметр) — это строка, представляющая имя набора обязательных элементов (например, "**ExcelApi**", "**Mailbox**" и т. д.). Дополнительные сведения о доступных наборах обязательных элементов см. в статье [Наборы обязательных элементов для надстроек Office](/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets).
+- _MinimumVersion_ (необязательный параметр) — это строка, указывающая минимальную версию набора обязательных элементов, которая должна поддерживаться ведущим приложением, чтобы выполнять код в операторе `if` (например, "**1.9**").
+
+> [!WARNING]
+> При вызове метода **isSetSupported** значение параметра `MinimumVersion` (если указано) должно быть строковым. Это обусловлено тем, что средство синтаксического анализа JavaScript не может различить числовые значения, например 1.1 и 1.10, но может различать строковые значения, например "1.1" и "1.10".
+> Перегрузка оператора `number` не рекомендуется.
 
 Используйте метод **isSetSupported** с параметром **RequirementSetName**, связанным с ведущим приложением Office, как показано ниже.
 
@@ -180,7 +180,6 @@ else
 }
 
 ```
-
 
 ## <a name="runtime-checks-using-methods-not-in-a-requirement-set"></a>Проверки в среде выполнения с использованием методов, не входящих в набор обязательных элементов
 
