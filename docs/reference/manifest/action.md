@@ -3,12 +3,12 @@ title: Элемент Action в файле манифеста
 description: ''
 ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: 06b0e3aa9c25346135167ea8c34e69344ef9863d
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: db05538fdb3f655a61050e0eeafa0b5ceb0dfd18
+ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128526"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "36477938"
 ---
 # <a name="action-element"></a>Элемент Action
 
@@ -104,35 +104,27 @@ ms.locfileid: "35128526"
 
 Элемент необязательный, когда для  **xsi:type** задано значение ShowTaskpane. Определяет заголовок области задач для этого действия.
 
-В приведенных ниже примерах показаны два действия, для которых используется элемент **Title**.
+В приведенном ниже примере показано действие, в котором используется элемент **Title** . Обратите внимание, что **заголовок** не назначается строке напрямую. Вместо этого ему назначается идентификатор ресурса (Resid), который определяется в разделе Resources ( **ресурсы** ) манифеста.
 
 ```xml
 <Action xsi:type="ShowTaskpane">
-<TaskpaneId>Office.AutoShowTaskpaneWithDocument</TaskpaneId>
-<SourceLocation resid="PG.Code.Url" />
-<Title resid="PG.CodeCommand.Title" />
+    <TaskpaneId>Office.AutoShowTaskpaneWithDocument</TaskpaneId>
+    <SourceLocation resid="PG.Code.Url" />
+    <Title resid="PG.CodeCommand.Title" />
 </Action>
-```
 
-```xml
-<Action xsi:type="ShowTaskpane">
-<SourceLocation resid="PG.Run.Url" />
-<Title resid="PG.RunCommand.Title" />
-</Action>
-```
-
-```xml
-<bt:Urls>
-<bt:Url id="PG.Code.Url" DefaultValue="https://localhost:3000?commands=1" />
-<bt:Url id="PG.Run.Url" DefaultValue="https://localhost:3000/run.html" />
-</bt:Urls>
-```
-
-```xml
-<bt:ShortStrings>
-<bt:String id="PG.CodeCommand.Title" DefaultValue="Code" />
-<bt:String id="PG.RunCommand.Title" DefaultValue="Run" />
-</bt:ShortStrings>
+ ... Other markup omitted ...
+<Resources>
+    <bt:Images> ...
+    </bt:Images>
+    <bt:Urls>
+        <bt:Url id="PG.Code.Url" DefaultValue="https://localhost:3000?commands=1" />
+    </bt:Urls>
+    <bt:ShortStrings>
+        <bt:String id="PG.CodeCommand.Title" DefaultValue="Code" />
+    </bt:ShortStrings>
+ ... Other markup omitted ...
+</Resources>
 ```
 
 ## <a name="supportspinning"></a>SupportsPinning

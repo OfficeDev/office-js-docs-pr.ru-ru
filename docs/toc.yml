@@ -188,8 +188,6 @@
           items:
             - name: Загрузка неопубликованных надстроек Office в Windows
               href: testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md
-            - name: Загрузка неопубликованных надстроек Office с помощью специальной команды
-              href: testing/sideload-office-addin-using-sideload-command.md
             - name: Подключение отладчика из области задач
               href: testing/attach-debugger-from-task-pane.md
             - name: Отладка с помощью средств разработчика
@@ -351,10 +349,18 @@
                   href: reference/manifest/action.md
                 - name: AllFormFactors
                   href: reference/manifest/allformfactors.md
+                - name: Авторизация
+                  href: reference/manifest/authorization.md
+                - name: Авторизации
+                  href: reference/manifest/authorizations.md
                 - name: Control
                   href: reference/manifest/control.md
                 - name: CustomTab
                   href: reference/manifest/customtab.md
+                - name: екуивалентаддин
+                  href: reference/manifest/equivalentaddin.md
+                - name: екуивалентаддинс
+                  href: reference/manifest/equivalentaddins.md
                 - name: Событие
                   href: reference/manifest/event.md
                 - name: ExtensionPoint

@@ -1,14 +1,14 @@
 ---
 title: Элемент VersionOverrides в файле манифеста
 description: ''
-ms.date: 01/29/2019
+ms.date: 08/12/2019
 localization_priority: Normal
-ms.openlocfilehash: 897c2203ef6ae84911b7f269ee8a2c88aec36bd0
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: ce65cdced1b3cf885cee09732c2cda0081a53cfc
+ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32452069"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "36477882"
 ---
 # <a name="versionoverrides-element"></a>Элемент VersionOverrides
 
@@ -29,11 +29,13 @@ ms.locfileid: "32452069"
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
 |  **Описание**    |  НЕТ   |  Описывает надстройку. Переопределяет элемент `Description` в любой родительской части манифеста. Текст описания содержится в дочернем элементе **LongString**, включенном в элемент [Resources](./resources.md). Для атрибута `resid` элемента **Description** задано значение атрибута `id` элемента `String`, который содержит текст.|
+| **екуивалентаддинс** | Нет | Задает обратную совместимость с эквивалентной надстройкой COM, XLL или и тем, и другими. |
 |  **Requirements**  |  Нет   |  Задает минимальные набор требований и версию библиотеки Office.js, необходимые надстройке. Переопределяет элемент `Requirements` в родительской части манифеста.|
 |  [Hosts](./hosts.md)                |  Да  |  Задает набор узлов Office. Дочерний элемент Hosts переопределяет элемент Hosts в родительской части манифеста.  |
 |  [Resources](./resources.md)    |  Да  | Определяет коллекцию ресурсов (строк, URL-адресов и изображений), на которые ссылаются другие элементы манифеста.|
+|  [екуивалентаддинс](./equivalentaddins.md)    |  Нет  | Задает встроенные надстройки (COM/XLL), эквивалентные веб-надстройке. Веб-надстройка не активируется, если установлена эквивалентная собственная встроенная надстройка.|
 |  **VersionOverrides**    |  Нет  | Определяет команды надстроек в новой версии схемы. Подробные сведения см. в разделе [Реализация нескольких версий](#implementing-multiple-versions). |
-|  **WebApplicationInfo**    |  Нет  | Указывает сведения о связанном с надстройкой веб-приложении. |
+|  [WebApplicationInfo](./webapplicationinfo.md)    |  Нет  | Задает сведения о регистрации надстройки с помощью надежных поставщиков маркеров, таких как Azure Active Directory 2.0. |
 
 ### <a name="versionoverrides-example"></a>Пример VersionOverrides
 

@@ -1,24 +1,26 @@
 ---
 title: Элемент Scopes в файле манифеста
 description: ''
-ms.date: 10/09/2018
+ms.date: 08/12/2019
 localization_priority: Normal
-ms.openlocfilehash: cdc9ebeb6fe4167a5ed5e9407f6ecc82d5b8d507
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: 1e36bdcd0cdcaa8c842e924c2543d56bdc4e26a7
+ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35771788"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "36477735"
 ---
 # <a name="scopes-element"></a>Элемент Scopes
 
-Содержит разрешения, необходимые надстройке для работы с Microsoft Graph. AppSource использует элемент scopes для создания диалогового окна согласия. Когда пользователи устанавливают надстройку из Магазина, им предлагается предоставить ей указанные разрешения на доступ к данным Microsoft Graph.
+Содержит разрешения, необходимые надстройке для внешнего ресурса, например Microsoft Graph. Когда Microsoft Graph является ресурсом, AppSource использует элемент scopes для создания диалогового окна согласия. Когда пользователи устанавливают надстройку из Магазина, им предлагается предоставить ей указанные разрешения на доступ к данным Microsoft Graph.
+
+**Области** — это дочерний элемент элементов [WebApplicationInfo](webapplicationinfo.md) и [authorization](authorization.md) в манифесте.
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-|  Элемент |  Тип  |  Описание  |
+|  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  **Scope**                |  string     |   Имя разрешения на доступ к Microsoft Graph (например, Files.Read.All). |
+|  **Scope**                |  Да     |   Имя разрешения; Например, Files. Read. ALL или Profile. |
 
 ## <a name="example"></a>Пример
 

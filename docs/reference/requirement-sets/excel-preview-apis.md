@@ -1,15 +1,15 @@
 ---
 title: Предварительные версии API JavaScript для Excel
 description: Сведения о предстоящих API JavaScript для Excel
-ms.date: 08/06/2019
+ms.date: 08/15/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 4362a5e13e0031408236f34c718f0fcb3c4527e2
-ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
+ms.openlocfilehash: c0b0a5757df2f5766f0e29b599e3e9b36dfd3983
+ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "36268735"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "36477910"
 ---
 # <a name="excel-javascript-preview-apis"></a>Предварительные версии API JavaScript для Excel
 
@@ -17,10 +17,7 @@ ms.locfileid: "36268735"
 
 В первой таблице представлен краткий обзор API, а в последующей таблице приведен подробный список.
 
-> [!NOTE]
-> API предварительной версии могут быть изменены и не предназначены для использования в рабочей среде. Рекомендуется использовать их только в тестовой среде и среде разработки. Не используйте API предварительной версии в рабочей среде или в важных деловых документах.
->
-> Чтобы использовать API предварительной версии, нужно сослаться на **бета-версию** библиотеки в сети CDN (https://appsforoffice.microsoft.com/lib/beta/hosted/office.js), и также может потребоваться присоединение к программе предварительной оценки Office для получения последней сборки Office.
+[!INCLUDE [Information about using preview APIs](../../includes/using-preview-apis-host.md)]
 
 | Функциональная область | Описание | Соответствующие объекты |
 |:--- |:--- |:--- |

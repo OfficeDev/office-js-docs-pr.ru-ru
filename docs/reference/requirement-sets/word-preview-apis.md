@@ -1,24 +1,21 @@
 ---
 title: API предварительного просмотра для Word JavaScript
 description: Сведения о предстоящих API JavaScript для Word
-ms.date: 07/25/2019
+ms.date: 08/15/2019
 ms.prod: word
 localization_priority: Normal
-ms.openlocfilehash: 584b6ade9e4ae2d28b13eb717027361d85c4aa45
-ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
+ms.openlocfilehash: 1bc6cf2f4b8d8bf876d0b28ead9643f14c81fde1
+ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "36064846"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "36477906"
 ---
 # <a name="word-javascript-preview-apis"></a>API предварительного просмотра для Word JavaScript
 
 Новые API JavaScript для Word впервые представлены в слове Preview и далее становятся частью определенного набора обязательных требований после выполнения тестирования и получения отзывов пользователей.
 
-> [!NOTE]
-> API предварительной версии могут быть изменены и не предназначены для использования в рабочей среде. Рекомендуется использовать их только в тестовой среде и среде разработки. Не используйте API предварительной версии в рабочей среде или в важных деловых документах.
->
-> Чтобы использовать API предварительной версии, нужно сослаться на **бета-версию** библиотеки в сети CDN (https://appsforoffice.microsoft.com/lib/beta/hosted/office.js), и также может потребоваться присоединение к программе предварительной оценки Office для получения последней сборки Office.
+[!INCLUDE [Information about using preview APIs](../../includes/using-preview-apis-host.md)]
 
 ## <a name="api-list"></a>Список API
 
@@ -29,7 +26,7 @@ ms.locfileid: "36064846"
 |[ContentControl](/javascript/api/word/word.contentcontrol)|[onDataChanged](/javascript/api/word/word.contentcontrol#ondatachanged)|Возникает при изменении данных в элементе управления содержимым. Чтобы получить новый текст, загрузите этот элемент управления содержимым в обработчике. Чтобы получить старый текст, не загружайте его.|
 ||[onDeleted](/javascript/api/word/word.contentcontrol#ondeleted)|Возникает при удалении элемента управления содержимым. Не загружайте этот элемент управления содержимым в обработчике, иначе вы не сможете получить исходные свойства.|
 ||[onSelectionChanged](/javascript/api/word/word.contentcontrol#onselectionchanged)|Возникает при изменении выделенного фрагмента в элементе управления содержимым.|
-|[Контентконтролевентаргс](/javascript/api/word/word.contentcontroleventargs)|[contentControl](/javascript/api/word/word.contentcontroleventargs#contentcontrol)|Объект, который вызвал событие. Загрузите этот объект, чтобы получить его свойства.|
+|[контентконтролевентаргс](/javascript/api/word/word.contentcontroleventargs)|[contentControl](/javascript/api/word/word.contentcontroleventargs#contentcontrol)|Объект, который вызвал событие. Загрузите этот объект, чтобы получить его свойства.|
 ||[eventType](/javascript/api/word/word.contentcontroleventargs#eventtype)|Тип события. Дополнительные сведения см. в Word. EventType.|
 |[CustomXmlPart](/javascript/api/word/word.customxmlpart)|[delete()](/javascript/api/word/word.customxmlpart#delete--)|Удаляет пользовательскую XML-часть.|
 ||[Делетеаттрибуте (XPath: строка, Намеспацемаппингс: Any, Name: строка)](/javascript/api/word/word.customxmlpart#deleteattribute-xpath--namespacemappings--name-)|Удаляет атрибут с указанным именем из элемента, указанного с помощью XPath.|
@@ -49,7 +46,7 @@ ms.locfileid: "36064846"
 ||[getItem(id: string)](/javascript/api/word/word.customxmlpartcollection#getitem-id-)|Получает пользовательскую XML-часть по идентификатору. Только для чтения.|
 ||[getItemOrNullObject(id: строка)](/javascript/api/word/word.customxmlpartcollection#getitemornullobject-id-)|Получает пользовательскую XML-часть по идентификатору. Возвращает нулевой объект, если CustomXmlPart не существует.|
 ||[items](/javascript/api/word/word.customxmlpartcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
-|[Кустомксмлпартскопедколлектион](/javascript/api/word/word.customxmlpartscopedcollection)|[getCount()](/javascript/api/word/word.customxmlpartscopedcollection#getcount--)|Возвращает число элементов в коллекции.|
+|[кустомксмлпартскопедколлектион](/javascript/api/word/word.customxmlpartscopedcollection)|[getCount()](/javascript/api/word/word.customxmlpartscopedcollection#getcount--)|Возвращает число элементов в коллекции.|
 ||[getItem(id: string)](/javascript/api/word/word.customxmlpartscopedcollection#getitem-id-)|Получает пользовательскую XML-часть по идентификатору. Только для чтения.|
 ||[getItemOrNullObject(id: строка)](/javascript/api/word/word.customxmlpartscopedcollection#getitemornullobject-id-)|Получает пользовательскую XML-часть по идентификатору. Возвращает нулевой объект, если CustomXmlPart не существует в коллекции.|
 ||[Жетонлитем ()](/javascript/api/word/word.customxmlpartscopedcollection#getonlyitem--)|Если коллекция содержит ровно один элемент, этот метод возвращает его. В противном случае этот метод выдает ошибку.|
@@ -59,14 +56,14 @@ ms.locfileid: "36064846"
 ||[Жетбукмаркранже (имя: строка)](/javascript/api/word/word.document#getbookmarkrange-name-)|Возвращает диапазон закладок. Вызывается, если закладка не существует.|
 ||[Жетбукмаркранжеорнуллобжект (имя: строка)](/javascript/api/word/word.document#getbookmarkrangeornullobject-name-)|Возвращает диапазон закладок. Возвращает нулевой объект, если закладка не существует.|
 ||[customXmlParts](/javascript/api/word/word.document#customxmlparts)|Возвращает пользовательские XML-части в документе. Только для чтения.|
-||[Онконтентконтроладдед](/javascript/api/word/word.document#oncontentcontroladded)|Возникает при добавлении элемента управления содержимым. Выполните context. Sync () в обработчике, чтобы получить свойства нового элемента управления содержимым.|
+||[онконтентконтроладдед](/javascript/api/word/word.document#oncontentcontroladded)|Возникает при добавлении элемента управления содержимым. Выполните context. Sync () в обработчике, чтобы получить свойства нового элемента управления содержимым.|
 ||[settings](/javascript/api/word/word.document#settings)|Получает параметры надстройки в документе. Только для чтения.|
 |[DocumentCreated](/javascript/api/word/word.documentcreated)|[Делетебукмарк (имя: строка)](/javascript/api/word/word.documentcreated#deletebookmark-name-)|Удаляет закладку, если она существует, из документа.|
 ||[Жетбукмаркранже (имя: строка)](/javascript/api/word/word.documentcreated#getbookmarkrange-name-)|Возвращает диапазон закладок. Вызывается, если закладка не существует.|
 ||[Жетбукмаркранжеорнуллобжект (имя: строка)](/javascript/api/word/word.documentcreated#getbookmarkrangeornullobject-name-)|Возвращает диапазон закладок. Возвращает нулевой объект, если закладка не существует.|
 ||[customXmlParts](/javascript/api/word/word.documentcreated#customxmlparts)|Возвращает пользовательские XML-части в документе. Только для чтения.|
 ||[settings](/javascript/api/word/word.documentcreated#settings)|Получает параметры надстройки в документе. Только для чтения.|
-|[InlinePicture](/javascript/api/word/word.inlinepicture)|[Имажеформат](/javascript/api/word/word.inlinepicture#imageformat)|Получает формат встроенного изображения. Только для чтения.|
+|[InlinePicture](/javascript/api/word/word.inlinepicture)|[имажеформат](/javascript/api/word/word.inlinepicture#imageformat)|Получает формат встроенного изображения. Только для чтения.|
 |[List](/javascript/api/word/word.list)|[Жетлевелфонт (Level: число)](/javascript/api/word/word.list#getlevelfont-level-)|Получает или задает значение, указывающее, указаны ли в списке.|
 ||[Жетлевелпиктуре (Level: число)](/javascript/api/word/word.list#getlevelpicture-level-)|Получает строковое представление изображения в кодировке Base64 на указанном уровне в списке.|
 ||[Ресетлевелфонт (Level: число, Ресетфонтнаме?: Boolean)](/javascript/api/word/word.list#resetlevelfont-level--resetfontname-)|Сбрасывает шрифт маркера, номера или изображения на указанном уровне списка.|

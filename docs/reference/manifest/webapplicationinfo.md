@@ -1,14 +1,14 @@
 ---
 title: Элемент WebApplicationInfo в файле манифеста
 description: ''
-ms.date: 03/19/2019
+ms.date: 08/12/2019
 localization_priority: Normal
-ms.openlocfilehash: bdd327f942009e255dd2515fb926d294212ecec8
-ms.sourcegitcommit: 3f84b2caa73d7fe1eb0d15e32ea4dec459e2ff53
+ms.openlocfilehash: e10aee1bf3fb99099d282acd428fa0348229701c
+ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "34910322"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "36477868"
 ---
 # <a name="webapplicationinfo-element"></a>Элемент WebApplicationInfo
 
@@ -27,11 +27,10 @@ ms.locfileid: "34910322"
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
 |  **Id**    |  Да   |  **Идентификатор** связанной с надстройкой службы, зарегистрированный в конечной точке Azure Active Directory 2.0.|
+|  **мсаид**    |  Нет   |  Идентификатор клиента веб-приложения надстройки для MSA, зарегистрированного в msm.live.com.|
 |  **Resource**  |  Да   |  Указывает **URI идентификатора** надстройки, зарегистрированный в конечной точке Azure Active Directory 2.0.|
-|  [Scopes](scopes.md)                |  Нет  |  Указывает разрешения, необходимые надстройке для работы с Microsoft Graph.  |
-
-> [!NOTE] 
-> В настоящее время необходимо, чтобы ресурс надстройки соответствовал ее ведущему приложению. Office запрашивает маркер для надстройки, только если может подтвердить право собственности. В настоящее время для этого необходимо, чтобы надстройка размещалась под полным доменным именем ресурса.
+|  [Scopes](scopes.md)                |  Да  |  Задает разрешения, необходимые надстройке для ресурса, например Microsoft Graph.  |
+|  [Авторизации](authorizations.md)  |  Нет   | Указывает внешние ресурсы, к которым веб-приложению надстройки требуется авторизация, и необходимые разрешения.|
 
 ## <a name="webapplicationinfo-example"></a>Пример WebApplicationInfo
 
@@ -47,8 +46,16 @@ ms.locfileid: "34910322"
         <Scope>Files.Read.All</Scope>
         <Scope>offline_access</Scope>
         <Scope>openid</Scope>
-        <Scope>profile</Scope>        
+        <Scope>profile</Scope>
       </Scopes>
+      <Authorizations>
+        <Authorization>
+          <Resource>https://api.contoso.com</Resource>
+            <Scopes>
+              <Scope>profile</Scope>
+          </Scopes>
+        </Authorization>
+      </Authorizations>
     </WebApplicationInfo>
   </VersionOverrides>
 ...
