@@ -1,14 +1,14 @@
 ---
 title: Элемент ExtensionPoint в файле манифеста
 description: ''
-ms.date: 03/11/2018
+ms.date: 08/23/2019
 localization_priority: Priority
-ms.openlocfilehash: 4473790a0dd0daeae8042f8ba15421b8e3f9dc64
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 4f6a6347ac61e48f5bdefb7759d8bddbca64ea7e
+ms.sourcegitcommit: 49af31060aa56c1e1ec1e08682914d3cbefc3f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450487"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "36672798"
 ---
 # <a name="extensionpoint-element"></a>Элемент ExtensionPoint
 
@@ -272,7 +272,7 @@ ms.locfileid: "32450487"
 В соответствующем элементе [VersionOverrides](versionoverrides.md) для атрибута `xsi:type` должно быть задано значение `VersionOverridesV1_1`.
 
 > [!NOTE]
-> Этот тип элемента поддерживается только в Outlook в Интернете из Office 365.
+> Этот тип элемента доступен в [клиентах Outlook, поддерживающих наборы обязательных требований 1.6 и более поздних версий.](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets#clients)
 
 |  Элемент |  Описание  |
 |:-----|:-----|
