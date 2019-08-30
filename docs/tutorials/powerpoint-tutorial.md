@@ -3,54 +3,53 @@ title: Руководство по надстройкам PowerPoint
 description: Из этого руководства вы узнаете, как создать надстройку PowerPoint, которая вставляет изображение и текст, получает метаданные слайда и выполняет переход между слайдами.
 ms.date: 12/31/2018
 ms.prod: powerpoint
-ms.topic: tutorial
 localization_priority: Normal
-ms.openlocfilehash: 9f5e30929c0881c0216b7ca77fbfa4b989fabc6e
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: a004a510a4cc874ecaab8260862b7379efaf9cf2
+ms.sourcegitcommit: 49af31060aa56c1e1ec1e08682914d3cbefc3f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451712"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "36672889"
 ---
-# <a name="tutorial-create-a-powerpoint-task-pane-add-in"></a><span data-ttu-id="72f1b-103">Учебник: Создание надстройки области задач PowerPoint</span><span class="sxs-lookup"><span data-stu-id="72f1b-103">Tutorial: Create a PowerPoint task pane add-in</span></span>
+# <a name="tutorial-create-a-powerpoint-task-pane-add-in"></a><span data-ttu-id="4fdad-103">Учебник: Создание надстройки области задач PowerPoint</span><span class="sxs-lookup"><span data-stu-id="4fdad-103">Tutorial: Create a PowerPoint task pane add-in</span></span>
 
-<span data-ttu-id="72f1b-104">В этом учебнике вы будете использовать Visual Studio для создания надстройки области задачи PowerPoint, которая:</span><span class="sxs-lookup"><span data-stu-id="72f1b-104">In this tutorial, you'll use Visual Studio to create an PowerPoint task pane add-in that:</span></span>
+<span data-ttu-id="4fdad-104">В этом учебнике вы будете использовать Visual Studio для создания надстройки области задачи PowerPoint, которая:</span><span class="sxs-lookup"><span data-stu-id="4fdad-104">In this tutorial, you'll use Visual Studio to create an PowerPoint task pane add-in that:</span></span>
 
 > [!div class="checklist"]
-> * <span data-ttu-id="72f1b-105">Добавляет фотографию дня из [Bing](https://www.bing.com) на слайд</span><span class="sxs-lookup"><span data-stu-id="72f1b-105">Adds the [Bing](https://www.bing.com) photo of the day to a slide</span></span>
-> * <span data-ttu-id="72f1b-106">Добавляет текст на слайд</span><span class="sxs-lookup"><span data-stu-id="72f1b-106">Adds text to a slide</span></span>
-> * <span data-ttu-id="72f1b-107">Получает метаданные слайды</span><span class="sxs-lookup"><span data-stu-id="72f1b-107">Gets slide metadata</span></span>
-> * <span data-ttu-id="72f1b-108">Выполняет переходы между слайдами</span><span class="sxs-lookup"><span data-stu-id="72f1b-108">Navigates between slides</span></span>
+> * <span data-ttu-id="4fdad-105">Добавляет фотографию дня из [Bing](https://www.bing.com) на слайд</span><span class="sxs-lookup"><span data-stu-id="4fdad-105">Adds the [Bing](https://www.bing.com) photo of the day to a slide</span></span>
+> * <span data-ttu-id="4fdad-106">Добавляет текст на слайд</span><span class="sxs-lookup"><span data-stu-id="4fdad-106">Adds text to a slide</span></span>
+> * <span data-ttu-id="4fdad-107">Получает метаданные слайды</span><span class="sxs-lookup"><span data-stu-id="4fdad-107">Gets slide metadata</span></span>
+> * <span data-ttu-id="4fdad-108">Выполняет переходы между слайдами</span><span class="sxs-lookup"><span data-stu-id="4fdad-108">Navigates between slides</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="72f1b-109">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="72f1b-109">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="4fdad-109">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="4fdad-109">Prerequisites</span></span>
 
 [!include[Quick Start prerequisites](../includes/quickstart-vs-prerequisites.md)]
 
-## <a name="create-your-add-in-project"></a><span data-ttu-id="72f1b-110">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="72f1b-110">Create your add-in project</span></span>
+## <a name="create-your-add-in-project"></a><span data-ttu-id="4fdad-110">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="4fdad-110">Create your add-in project</span></span>
 
-<span data-ttu-id="72f1b-111">Выполните указанные ниже действия, чтобы создать проект надстройки PowerPoint с помощью Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="72f1b-111">Complete the following steps to create a PowerPoint add-in project using Visual Studio.</span></span>
+<span data-ttu-id="4fdad-111">Выполните указанные ниже действия, чтобы создать проект надстройки PowerPoint с помощью Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="4fdad-111">Complete the following steps to create a PowerPoint add-in project using Visual Studio.</span></span>
 
-1. <span data-ttu-id="72f1b-112">В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.</span><span class="sxs-lookup"><span data-stu-id="72f1b-112">On the Visual Studio menu bar, choose  **File** > **New** > **Project**.</span></span>
+1. <span data-ttu-id="4fdad-112">В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.</span><span class="sxs-lookup"><span data-stu-id="4fdad-112">On the Visual Studio menu bar, choose  **File** > **New** > **Project**.</span></span>
     
-2. <span data-ttu-id="72f1b-113">В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, затем выберите **Надстройки** > **Веб-надстройка PowerPoint**.</span><span class="sxs-lookup"><span data-stu-id="72f1b-113">In the list of project types under **Visual C#** or **Visual Basic**, expand  **Office/SharePoint**, choose **Add-ins**, and then choose **PowerPoint Web Add-in** as the project type.</span></span> 
+2. <span data-ttu-id="4fdad-113">В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, затем выберите **Надстройки** > **Веб-надстройка PowerPoint**.</span><span class="sxs-lookup"><span data-stu-id="4fdad-113">In the list of project types under **Visual C#** or **Visual Basic**, expand  **Office/SharePoint**, choose **Add-ins**, and then choose **PowerPoint Web Add-in** as the project type.</span></span> 
 
-3. <span data-ttu-id="72f1b-114">Назовите проект **HelloWorld** и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="72f1b-114">Name the project **HelloWorld**, and then choose the **OK** button.</span></span>
+3. <span data-ttu-id="4fdad-114">Назовите проект **HelloWorld** и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="4fdad-114">Name the project **HelloWorld**, and then choose the **OK** button.</span></span>
 
-4. <span data-ttu-id="72f1b-115">В диалоговом окне **Создание надстройки Office** выберите **Добавить новые функции в PowerPoint** и нажмите кнопку **Готово**, чтобы создать проект.</span><span class="sxs-lookup"><span data-stu-id="72f1b-115">In the **Create Office Add-in** dialog window, choose **Add new functionalities to PowerPoint**, and then choose **Finish** to create the project.</span></span>
+4. <span data-ttu-id="4fdad-115">В диалоговом окне **Создание надстройки Office** выберите **Добавить новые функции в PowerPoint**, а затем нажмите кнопку **Готово**, чтобы создать проект.</span><span class="sxs-lookup"><span data-stu-id="4fdad-115">In the **Create Office Add-in** dialog window, choose **Add new functionalities to PowerPoint**, and then choose **Finish** to create the project.</span></span>
 
-5. <span data-ttu-id="72f1b-p101">Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p101">Visual Studio creates a solution and its two projects appear in **Solution Explorer**. The **Home.html** file opens in Visual Studio.</span></span>
+5. <span data-ttu-id="4fdad-p101">Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p101">Visual Studio creates a solution and its two projects appear in **Solution Explorer**. The **Home.html** file opens in Visual Studio.</span></span>
 
      ![Руководство по PowerPoint: окно обозревателя решений Visual Studio с двумя проектами в решении HelloWorld](../images/powerpoint-tutorial-solution-explorer.png)
 
-### <a name="explore-the-visual-studio-solution"></a><span data-ttu-id="72f1b-119">Обзор решения Visual Studio</span><span class="sxs-lookup"><span data-stu-id="72f1b-119">Explore the Visual Studio solution</span></span>
+### <a name="explore-the-visual-studio-solution"></a><span data-ttu-id="4fdad-119">Обзор решения Visual Studio</span><span class="sxs-lookup"><span data-stu-id="4fdad-119">Explore the Visual Studio solution</span></span>
 
 [!include[Description of Visual Studio projects](../includes/quickstart-vs-solution.md)]
 
-### <a name="update-code"></a><span data-ttu-id="72f1b-120">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="72f1b-120">Update code</span></span> 
+### <a name="update-code"></a><span data-ttu-id="4fdad-120">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="4fdad-120">Update code</span></span> 
 
-<span data-ttu-id="72f1b-121">Измените код надстройки, как указано ниже, чтобы создать платформу для реализации функций надстройки, следуя инструкциям в следующих разделах этого руководства.</span><span class="sxs-lookup"><span data-stu-id="72f1b-121">Edit the add-in code as follows to create the framework that you'll use to implement add-in functionality in subsequent steps of this tutorial.</span></span>
+<span data-ttu-id="4fdad-121">Измените код надстройки, как указано ниже, чтобы создать платформу для реализации функций надстройки, следуя инструкциям в следующих разделах этого руководства.</span><span class="sxs-lookup"><span data-stu-id="4fdad-121">Edit the add-in code as follows to create the framework that you'll use to implement add-in functionality in subsequent steps of this tutorial.</span></span>
 
-1. <span data-ttu-id="72f1b-122">Файл **Home.html** содержит HTML-контент, который будет отображаться в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="72f1b-122">**Home.html** specifies the HTML that will be rendered in the add-in's task pane.</span></span> <span data-ttu-id="72f1b-123">В файле **Home.html** найдите раздел **div** с `id="content-main"`, замените весь этот раздел приведенным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="72f1b-123">In **Home.html**, find the **div** with `id="content-main"`, replace that entire **div** with the following markup, and save the file.</span></span>
+1. <span data-ttu-id="4fdad-122">Файл **Home.html** содержит HTML-контент, который будет отображаться в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="4fdad-122">**Home.html** specifies the HTML that will be rendered in the add-in's task pane.</span></span> <span data-ttu-id="4fdad-123">В файле **Home.html** найдите раздел **div** с `id="content-main"`, замените весь этот раздел приведенным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="4fdad-123">In **Home.html**, find the **div** with `id="content-main"`, replace that entire **div** with the following markup, and save the file.</span></span>
 
     ```html
     <!-- TODO2: Create the content-header div. -->
@@ -64,7 +63,7 @@ ms.locfileid: "32451712"
     </div>
     ```
 
-2. <span data-ttu-id="72f1b-p103">Откройте файл **Home.js** в корневой папке проекта веб-приложения. Этот файл содержит скрипт надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p103">Open the file **Home.js** in the root of the web application project. This file specifies the script for the add-in. Replace the entire contents with the following code and save the file.</span></span>
+2. <span data-ttu-id="4fdad-p103">Откройте файл **Home.js** в корневой папке проекта веб-приложения. Этот файл содержит скрипт надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p103">Open the file **Home.js** in the root of the web application project. This file specifies the script for the add-in. Replace the entire contents with the following code and save the file.</span></span>
 
     ```javascript
     (function () {
@@ -106,21 +105,21 @@ ms.locfileid: "32451712"
     })();
     ```
 
-## <a name="insert-an-image"></a><span data-ttu-id="72f1b-127">Вставка изображения</span><span class="sxs-lookup"><span data-stu-id="72f1b-127">Insert an image</span></span>
+## <a name="insert-an-image"></a><span data-ttu-id="4fdad-127">Вставка изображения</span><span class="sxs-lookup"><span data-stu-id="4fdad-127">Insert an image</span></span>
 
-<span data-ttu-id="72f1b-128">Выполните указанные ниже действия, чтобы добавить код, который извлекает фотографию дня в [Bing](https://www.bing.com) и вставляет данное изображение на слайд.</span><span class="sxs-lookup"><span data-stu-id="72f1b-128">Complete the following steps to add code that retrieves the [Bing](https://www.bing.com) photo of the day and inserts that image into a slide.</span></span>
+<span data-ttu-id="4fdad-128">Выполните указанные ниже действия, чтобы добавить код, который извлекает фотографию дня в [Bing](https://www.bing.com) и вставляет данное изображение на слайд.</span><span class="sxs-lookup"><span data-stu-id="4fdad-128">Complete the following steps to add code that retrieves the [Bing](https://www.bing.com) photo of the day and inserts that image into a slide.</span></span>
 
-1. <span data-ttu-id="72f1b-129">Используя обозреватель решений, добавьте новую папку **Controllers** в проект **HelloWorldWeb**.</span><span class="sxs-lookup"><span data-stu-id="72f1b-129">Using Solution Explorer, add a new folder named **Controllers** to the **HelloWorldWeb** project.</span></span>
+1. <span data-ttu-id="4fdad-129">Используя обозреватель решений, добавьте новую папку **Controllers** в проект **HelloWorldWeb**.</span><span class="sxs-lookup"><span data-stu-id="4fdad-129">Using Solution Explorer, add a new folder named **Controllers** to the **HelloWorldWeb** project.</span></span>
 
     ![Руководство по PowerPoint: окно обозревателя решений Visual Studio с выделенной папкой Controllers в проекте HelloWorldWeb](../images/powerpoint-tutorial-solution-explorer-controllers.png)
 
-2. <span data-ttu-id="72f1b-131">Щелкните правой кнопкой мыши папку **Controllers** и выберите **Добавить > Создать шаблонный элемент**.</span><span class="sxs-lookup"><span data-stu-id="72f1b-131">Right-click the **Controllers** folder and select **Add > New Scaffolded Item...**.</span></span>
+2. <span data-ttu-id="4fdad-131">Щелкните правой кнопкой мыши папку **Controllers** и выберите **Добавить > Создать шаблонный элемент**.</span><span class="sxs-lookup"><span data-stu-id="4fdad-131">Right-click the **Controllers** folder and select **Add > New Scaffolded Item...**.</span></span>
 
-3. <span data-ttu-id="72f1b-132">В диалоговом окне **Добавление шаблона** выберите **Контроллер Web API 2 — пустой** и нажмите кнопку **Добавить**.</span><span class="sxs-lookup"><span data-stu-id="72f1b-132">In the **Add Scaffold** dialog window, select **Web API 2 Controller - Empty** and choose the **Add** button.</span></span> 
+3. <span data-ttu-id="4fdad-132">В диалоговом окне **Добавление шаблона** выберите **Контроллер Web API 2 — пустой** и нажмите кнопку **Добавить**.</span><span class="sxs-lookup"><span data-stu-id="4fdad-132">In the **Add Scaffold** dialog window, select **Web API 2 Controller - Empty** and choose the **Add** button.</span></span> 
 
-4. <span data-ttu-id="72f1b-p104">В диалоговом окне **Добавление контроллера** введите имя **PhotoController** и нажмите кнопку **Добавить**. Visual Studio создаст и откроет файл **PhotoController.cs**.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p104">In the **Add Controller** dialog window, enter **PhotoController** as the controller name and choose the **Add** button. Visual Studio creates and opens the **PhotoController.cs** file.</span></span>
+4. <span data-ttu-id="4fdad-p104">В диалоговом окне **Добавление контроллера** введите имя **PhotoController** и нажмите кнопку **Добавить**. Visual Studio создаст и откроет файл **PhotoController.cs**.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p104">In the **Add Controller** dialog window, enter **PhotoController** as the controller name and choose the **Add** button. Visual Studio creates and opens the **PhotoController.cs** file.</span></span>
 
-5. <span data-ttu-id="72f1b-p105">Замените все содержимое файла **PhotoController.cs** приведенным ниже кодом, который вызывает службу Bing для получения фотографии дня в виде строки в кодировке Base64. Когда для вставки изображения в документ используется API JavaScript для Office, данные изображения должны быть закодированы в формате Base64.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p105">Replace the entire contents of the **PhotoController.cs** file with the following code that calls the Bing service to retrieve the photo of the day as a Base64 encoded string. When you use the Office JavaScript API to insert an image into a document, the image data must be specified as a Base64 encoded string.</span></span>
+5. <span data-ttu-id="4fdad-p105">Замените все содержимое файла **PhotoController.cs** приведенным ниже кодом, который вызывает службу Bing для получения фотографии дня в виде строки в кодировке Base64. Когда для вставки изображения в документ используется API JavaScript для Office, данные изображения должны быть закодированы в формате Base64.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p105">Replace the entire contents of the **PhotoController.cs** file with the following code that calls the Bing service to retrieve the photo of the day as a Base64 encoded string. When you use the Office JavaScript API to insert an image into a document, the image data must be specified as a Base64 encoded string.</span></span>
 
     ```csharp
     using System;
@@ -168,7 +167,7 @@ ms.locfileid: "32451712"
     }
     ```
 
-6. <span data-ttu-id="72f1b-p106">В файле **Home.html** замените `TODO1` приведенным ниже кодом. Этот код определяет кнопку **Insert Image** (Вставить изображение), которая появится в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p106">In the **Home.html** file, replace `TODO1` with the following markup. This markup defines the **Insert Image** button that will appear within the add-in's task pane.</span></span>
+6. <span data-ttu-id="4fdad-p106">В файле **Home.html** замените `TODO1` приведенным ниже кодом. Этот код определяет кнопку **Insert Image** (Вставить изображение), которая появится в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p106">In the **Home.html** file, replace `TODO1` with the following markup. This markup defines the **Insert Image** button that will appear within the add-in's task pane.</span></span>
 
     ```html
     <button class="ms-Button ms-Button--primary" id="insert-image">
@@ -178,13 +177,13 @@ ms.locfileid: "32451712"
     </button>
     ```
 
-7. <span data-ttu-id="72f1b-139">В файле **Home.js** замените `TODO1` приведенным ниже кодом, чтобы назначить обработчик событий для кнопки **Insert Image** (Вставить изображение).</span><span class="sxs-lookup"><span data-stu-id="72f1b-139">In the **Home.js** file, replace `TODO1` with the following code to assign the event handler for the **Insert Image** button.</span></span>
+7. <span data-ttu-id="4fdad-139">В файле **Home.js** замените `TODO1` приведенным ниже кодом, чтобы назначить обработчик событий для кнопки **Insert Image** (Вставить изображение).</span><span class="sxs-lookup"><span data-stu-id="4fdad-139">In the **Home.js** file, replace `TODO1` with the following code to assign the event handler for the **Insert Image** button.</span></span>
 
     ```javascript
     $('#insert-image').click(insertImage);
     ```
 
-8. <span data-ttu-id="72f1b-p107">В файле **Home.js** замените `TODO2` приведенным ниже кодом, чтобы определить функцию **insertImage**. Эта функция извлекает изображение из веб-службы Bing, а затем вызывает функцию `insertImageFromBase64String`, чтобы вставить его в документ.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p107">In the **Home.js** file, replace `TODO2` with the following code to define the **insertImage** function. This function fetches the image from the Bing web service and then calls the `insertImageFromBase64String` function to insert that image into the document.</span></span>
+8. <span data-ttu-id="4fdad-p107">В файле **Home.js** замените `TODO2` приведенным ниже кодом, чтобы определить функцию **insertImage**. Эта функция извлекает изображение из веб-службы Bing, а затем вызывает функцию `insertImageFromBase64String`, чтобы вставить его в документ.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p107">In the **Home.js** file, replace `TODO2` with the following code to define the **insertImage** function. This function fetches the image from the Bing web service and then calls the `insertImageFromBase64String` function to insert that image into the document.</span></span>
 
     ```javascript
     function insertImage() {
@@ -199,11 +198,11 @@ ms.locfileid: "32451712"
     }
     ```
 
-9. <span data-ttu-id="72f1b-p108">В файле **Home.js** замените `TODO3` приведенным ниже кодом, чтобы определить функцию `insertImageFromBase64String`. Эта функция использует API JavaScript для Office, чтобы вставить изображение в документ. Примечание.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p108">In the **Home.js** file, replace `TODO3` with the following code to define the `insertImageFromBase64String` function. This function uses the Office JavaScript API to insert the image into the document. Note:</span></span> 
+9. <span data-ttu-id="4fdad-p108">В файле **Home.js** замените `TODO3` приведенным ниже кодом, чтобы определить функцию `insertImageFromBase64String`. Эта функция использует API JavaScript для Office, чтобы вставить изображение в документ. Примечание.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p108">In the **Home.js** file, replace `TODO3` with the following code to define the `insertImageFromBase64String` function. This function uses the Office JavaScript API to insert the image into the document. Note:</span></span> 
 
-    - <span data-ttu-id="72f1b-145">`coercionType`, второй параметр запроса `setSelectedDataAsyc`, определяет тип вставляемых данных.</span><span class="sxs-lookup"><span data-stu-id="72f1b-145">The `coercionType` option that's specified as the second parameter of the `setSelectedDataAsyc` request indicates the type of data being inserted.</span></span> 
+    - <span data-ttu-id="4fdad-145">`coercionType`, второй параметр запроса `setSelectedDataAsyc`, определяет тип вставляемых данных.</span><span class="sxs-lookup"><span data-stu-id="4fdad-145">The `coercionType` option that's specified as the second parameter of the `setSelectedDataAsyc` request indicates the type of data being inserted.</span></span> 
 
-    - <span data-ttu-id="72f1b-146">Объект `asyncResult` инкапсулирует результат запроса `setSelectedDataAsync`, включая сведения о состоянии и ошибке, если запрос завершился ошибкой.</span><span class="sxs-lookup"><span data-stu-id="72f1b-146">The `asyncResult` object encapsulates the result of the `setSelectedDataAsync` request, including status and error information if the request failed.</span></span>
+    - <span data-ttu-id="4fdad-146">Объект `asyncResult` инкапсулирует результат запроса `setSelectedDataAsync`, включая сведения о состоянии и ошибке, если запрос завершился ошибкой.</span><span class="sxs-lookup"><span data-stu-id="4fdad-146">The `asyncResult` object encapsulates the result of the `setSelectedDataAsync` request, including status and error information if the request failed.</span></span>
 
     ```javascript
     function insertImageFromBase64String(image) {
@@ -219,31 +218,31 @@ ms.locfileid: "32451712"
     }
     ```
 
-### <a name="test-the-add-in"></a><span data-ttu-id="72f1b-147">Тестирование надстройки</span><span class="sxs-lookup"><span data-stu-id="72f1b-147">Test the add-in</span></span>
+### <a name="test-the-add-in"></a><span data-ttu-id="4fdad-147">Тестирование надстройки</span><span class="sxs-lookup"><span data-stu-id="4fdad-147">Test the add-in</span></span>
 
-1. <span data-ttu-id="72f1b-p109">Протестируйте новую надстройку PowerPoint с помощью Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить PowerPoint с кнопкой надстройки **Показать область задач** на ленте. Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p109">Using Visual Studio, test the newly created PowerPoint add-in by pressing **F5** or choosing the **Start** button to launch PowerPoint with the **Show Taskpane** add-in button displayed in the ribbon. The add-in will be hosted locally on IIS.</span></span>
+1. <span data-ttu-id="4fdad-p109">Протестируйте новую надстройку PowerPoint с помощью Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить PowerPoint с кнопкой надстройки **Показать область задач** на ленте. Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p109">Using Visual Studio, test the newly created PowerPoint add-in by pressing **F5** or choosing the **Start** button to launch PowerPoint with the **Show Taskpane** add-in button displayed in the ribbon. The add-in will be hosted locally on IIS.</span></span>
 
     ![Снимок экрана: Visual Studio с выделенной кнопкой "Запустить"](../images/powerpoint-tutorial-start.png)
 
-2. <span data-ttu-id="72f1b-151">В PowerPoint нажмите кнопку **Show Taskpane** (Показать область задач) на ленте, чтобы открыть надстройку области задач.</span><span class="sxs-lookup"><span data-stu-id="72f1b-151">In PowerPoint, select the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
+2. <span data-ttu-id="4fdad-151">В PowerPoint нажмите кнопку **Show Taskpane** (Показать область задач) на ленте, чтобы открыть надстройку области задач.</span><span class="sxs-lookup"><span data-stu-id="4fdad-151">In PowerPoint, select the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
 
     ![Снимок экрана: Visual Studio с выделенной кнопкой "Show Taskpane" (Показать область задач) на ленте "Главная"](../images/powerpoint-tutorial-show-taskpane-button.png)
 
-3. <span data-ttu-id="72f1b-153">В области задач нажмите кнопку **Insert Image** (Вставить изображение), чтобы добавить фотографию дня Bing на текущий слайд.</span><span class="sxs-lookup"><span data-stu-id="72f1b-153">In the task pane, choose the **Insert Image** button to add the Bing photo of the day to the current slide.</span></span>
+3. <span data-ttu-id="4fdad-153">В области задач нажмите кнопку **Insert Image** (Вставить изображение), чтобы добавить фотографию дня Bing на текущий слайд.</span><span class="sxs-lookup"><span data-stu-id="4fdad-153">In the task pane, choose the **Insert Image** button to add the Bing photo of the day to the current slide.</span></span>
 
     ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Insert Image" (Вставить изображение)](../images/powerpoint-tutorial-insert-image-button.png)
 
-4. <span data-ttu-id="72f1b-155">В Visual Studio остановите работу надстройки, нажав клавиши **Shift + F5** или кнопку **Остановить**.</span><span class="sxs-lookup"><span data-stu-id="72f1b-155">In Visual Studio, stop the add-in by pressing **Shift + F5** or choosing the **Stop** button.</span></span> <span data-ttu-id="72f1b-156">PowerPoint автоматически закроется при остановке надстройки.</span><span class="sxs-lookup"><span data-stu-id="72f1b-156">PowerPoint will automatically close when the add-in is stopped.</span></span>
+4. <span data-ttu-id="4fdad-155">В Visual Studio остановите работу надстройки, нажав клавиши **Shift + F5** или кнопку **Остановить**.</span><span class="sxs-lookup"><span data-stu-id="4fdad-155">In Visual Studio, stop the add-in by pressing **Shift + F5** or choosing the **Stop** button.</span></span> <span data-ttu-id="4fdad-156">PowerPoint автоматически закроется при остановке надстройки.</span><span class="sxs-lookup"><span data-stu-id="4fdad-156">PowerPoint will automatically close when the add-in is stopped.</span></span>
 
     ![Снимок экрана: Visual Studio с выделенной кнопкой "Остановить"](../images/powerpoint-tutorial-stop.png)
 
-## <a name="customize-user-interface-ui-elements"></a><span data-ttu-id="72f1b-158">Настройка элементов пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="72f1b-158">Customize User Interface (UI) elements</span></span>
+## <a name="customize-user-interface-ui-elements"></a><span data-ttu-id="4fdad-158">Настройка элементов пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="4fdad-158">Customize User Interface (UI) elements</span></span>
 
-<span data-ttu-id="72f1b-159">Выполните указанные ниже действия, чтобы добавить разметку, которая будет изменять область задач пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="72f1b-159">Complete the following steps to add markup that customizes the task pane UI.</span></span>
+<span data-ttu-id="4fdad-159">Выполните указанные ниже действия, чтобы добавить разметку, которая будет изменять область задач пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="4fdad-159">Complete the following steps to add markup that customizes the task pane UI.</span></span>
 
-1. <span data-ttu-id="72f1b-p111">В файле **Home.html** замените `TODO2` приведенным ниже кодом, чтобы добавить раздел верхнего колонтитула и заголовок в область задач. Примечание.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p111">In the **Home.html** file, replace `TODO2` with the following markup to add a header section and title to the task pane. Note:</span></span>
+1. <span data-ttu-id="4fdad-p111">В файле **Home.html** замените `TODO2` приведенным ниже кодом, чтобы добавить раздел верхнего колонтитула и заголовок в область задач. Примечание.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p111">In the **Home.html** file, replace `TODO2` with the following markup to add a header section and title to the task pane. Note:</span></span>
 
-    - <span data-ttu-id="72f1b-p112">Стили, которые начинаются с `ms-`, относятся к стилям [Office UI Fabric](../design/office-ui-fabric.md), интерфейсной платформы JavaScript для создания функциональных возможностей Office и Office 365. Файл **Home.html** включает ссылку на таблицу стилей Fabric.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p112">The styles that begin with `ms-` are defined by [Office UI Fabric](../design/office-ui-fabric.md), a JavaScript front-end framework for building user experiences for Office and Office 365. The **Home.html** file includes a reference to the Fabric stylesheet.</span></span>
+    - <span data-ttu-id="4fdad-p112">Стили, которые начинаются с `ms-`, относятся к стилям [Office UI Fabric](../design/office-ui-fabric.md), интерфейсной платформы JavaScript для создания функциональных возможностей Office и Office 365. Файл **Home.html** включает ссылку на таблицу стилей Fabric.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p112">The styles that begin with `ms-` are defined by [Office UI Fabric](../design/office-ui-fabric.md), a JavaScript front-end framework for building user experiences for Office and Office 365. The **Home.html** file includes a reference to the Fabric stylesheet.</span></span>
 
     ```html
     <div id="content-header">
@@ -255,31 +254,31 @@ ms.locfileid: "32451712"
     </div>
     ```
 
-2. <span data-ttu-id="72f1b-164">В файле **Home.html** найдите раздел **div** с `class="footer"` и удалите весь раздел **div**, чтобы удалить раздел нижнего колонтитула из области задач.</span><span class="sxs-lookup"><span data-stu-id="72f1b-164">In the **Home.html** file, find the **div** with `class="footer"` and delete that entire **div** to remove the footer section from the task pane.</span></span>
+2. <span data-ttu-id="4fdad-164">В файле **Home.html** найдите раздел **div** с `class="footer"` и удалите весь раздел **div**, чтобы удалить раздел нижнего колонтитула из области задач.</span><span class="sxs-lookup"><span data-stu-id="4fdad-164">In the **Home.html** file, find the **div** with `class="footer"` and delete that entire **div** to remove the footer section from the task pane.</span></span>
 
-### <a name="test-the-add-in"></a><span data-ttu-id="72f1b-165">Тестирование надстройки</span><span class="sxs-lookup"><span data-stu-id="72f1b-165">Test the add-in</span></span>
+### <a name="test-the-add-in"></a><span data-ttu-id="4fdad-165">Тестирование надстройки</span><span class="sxs-lookup"><span data-stu-id="4fdad-165">Test the add-in</span></span>
 
-1. <span data-ttu-id="72f1b-166">Испытайте надстройку PowerPoint с помощью Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить PowerPoint с кнопкой надстройки **Показать область задач** на ленте.</span><span class="sxs-lookup"><span data-stu-id="72f1b-166">Using Visual Studio, test the PowerPoint add-in by pressing **F5** or choosing the **Start** button to launch PowerPoint with the **Show Taskpane** add-in button displayed in the ribbon.</span></span> <span data-ttu-id="72f1b-167">Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="72f1b-167">The add-in will be hosted locally on IIS.</span></span>
+1. <span data-ttu-id="4fdad-166">Испытайте надстройку PowerPoint с помощью Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить PowerPoint с кнопкой надстройки **Показать область задач** на ленте.</span><span class="sxs-lookup"><span data-stu-id="4fdad-166">Using Visual Studio, test the PowerPoint add-in by pressing **F5** or choosing the **Start** button to launch PowerPoint with the **Show Taskpane** add-in button displayed in the ribbon.</span></span> <span data-ttu-id="4fdad-167">Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="4fdad-167">The add-in will be hosted locally on IIS.</span></span>
 
     ![Снимок экрана: Visual Studio с выделенной кнопкой "Запустить"](../images/powerpoint-tutorial-start.png)
 
-2. <span data-ttu-id="72f1b-169">В PowerPoint нажмите кнопку **Show Taskpane** (Показать область задач) на ленте, чтобы открыть надстройку области задач.</span><span class="sxs-lookup"><span data-stu-id="72f1b-169">In PowerPoint, select the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
+2. <span data-ttu-id="4fdad-169">В PowerPoint нажмите кнопку **Show Taskpane** (Показать область задач) на ленте, чтобы открыть надстройку области задач.</span><span class="sxs-lookup"><span data-stu-id="4fdad-169">In PowerPoint, select the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
 
     ![Снимок экрана: Visual Studio с выделенной кнопкой "Show Taskpane" (Показать область задач) на ленте "Главная"](../images/powerpoint-tutorial-show-taskpane-button.png)
 
-3. <span data-ttu-id="72f1b-171">Обратите внимание на то, что область задач теперь содержит раздел верхнего колонтитула и заголовок и больше не содержит раздел нижнего колонтитула.</span><span class="sxs-lookup"><span data-stu-id="72f1b-171">Notice that the task pane now contains a header section and title, and no longer contains a footer section.</span></span>
+3. <span data-ttu-id="4fdad-171">Обратите внимание на то, что область задач теперь содержит раздел верхнего колонтитула и заголовок и больше не содержит раздел нижнего колонтитула.</span><span class="sxs-lookup"><span data-stu-id="4fdad-171">Notice that the task pane now contains a header section and title, and no longer contains a footer section.</span></span>
 
     ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Insert Image" (Вставить изображение)](../images/powerpoint-tutorial-new-task-pane-ui.png)
 
-4. <span data-ttu-id="72f1b-173">В Visual Studio остановите работу надстройки, нажав клавиши **Shift + F5** или кнопку **Остановить**.</span><span class="sxs-lookup"><span data-stu-id="72f1b-173">In Visual Studio, stop the add-in by pressing **Shift + F5** or choosing the **Stop** button.</span></span> <span data-ttu-id="72f1b-174">PowerPoint автоматически закроется при остановке надстройки.</span><span class="sxs-lookup"><span data-stu-id="72f1b-174">PowerPoint will automatically close when the add-in is stopped.</span></span>
+4. <span data-ttu-id="4fdad-173">В Visual Studio остановите работу надстройки, нажав клавиши **Shift + F5** или кнопку **Остановить**.</span><span class="sxs-lookup"><span data-stu-id="4fdad-173">In Visual Studio, stop the add-in by pressing **Shift + F5** or choosing the **Stop** button.</span></span> <span data-ttu-id="4fdad-174">PowerPoint автоматически закроется при остановке надстройки.</span><span class="sxs-lookup"><span data-stu-id="4fdad-174">PowerPoint will automatically close when the add-in is stopped.</span></span>
 
     ![Снимок экрана: Visual Studio с выделенной кнопкой "Остановить"](../images/powerpoint-tutorial-stop.png)
 
-## <a name="insert-text"></a><span data-ttu-id="72f1b-176">Вставка текста</span><span class="sxs-lookup"><span data-stu-id="72f1b-176">Insert text</span></span>
+## <a name="insert-text"></a><span data-ttu-id="4fdad-176">Вставка текста</span><span class="sxs-lookup"><span data-stu-id="4fdad-176">Insert text</span></span>
 
-<span data-ttu-id="72f1b-177">Выполните указанные ниже действия, чтобы добавить код, который вставляет текст в слайд, который содержит фотографию дня из [Bing](https://www.bing.com).</span><span class="sxs-lookup"><span data-stu-id="72f1b-177">Complete the following steps to add code that inserts text into the title slide which contains the [Bing](https://www.bing.com) photo of the day.</span></span>
+<span data-ttu-id="4fdad-177">Выполните указанные ниже действия, чтобы добавить код, который вставляет текст в слайд, который содержит фотографию дня из [Bing](https://www.bing.com).</span><span class="sxs-lookup"><span data-stu-id="4fdad-177">Complete the following steps to add code that inserts text into the title slide which contains the [Bing](https://www.bing.com) photo of the day.</span></span>
 
-1. <span data-ttu-id="72f1b-p115">В файле **Home.html** замените `TODO3` приведенным ниже кодом. Этот код определяет кнопку **Insert Text** (Вставить текст), которая появится в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p115">In the **Home.html** file, replace `TODO3` with the following markup. This markup defines the **Insert Text** button that will appear within the add-in's task pane.</span></span>
+1. <span data-ttu-id="4fdad-p115">В файле **Home.html** замените `TODO3` приведенным ниже кодом. Этот код определяет кнопку **Insert Text** (Вставить текст), которая появится в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p115">In the **Home.html** file, replace `TODO3` with the following markup. This markup defines the **Insert Text** button that will appear within the add-in's task pane.</span></span>
 
     ```html
         <br /><br />
@@ -290,13 +289,13 @@ ms.locfileid: "32451712"
         </button>
     ```
 
-2. <span data-ttu-id="72f1b-180">В файле **Home.js** замените `TODO4` приведенным ниже кодом, чтобы назначить обработчик событий для кнопки **Insert Text** (Вставить текст).</span><span class="sxs-lookup"><span data-stu-id="72f1b-180">In the **Home.js** file, replace `TODO4` with the following code to assign the event handler for the **Insert Text** button.</span></span>
+2. <span data-ttu-id="4fdad-180">В файле **Home.js** замените `TODO4` приведенным ниже кодом, чтобы назначить обработчик событий для кнопки **Insert Text** (Вставить текст).</span><span class="sxs-lookup"><span data-stu-id="4fdad-180">In the **Home.js** file, replace `TODO4` with the following code to assign the event handler for the **Insert Text** button.</span></span>
 
     ```javascript
     $('#insert-text').click(insertText);
     ```
 
-3. <span data-ttu-id="72f1b-p116">В файле **Home.js** замените `TODO5` приведенным ниже кодом, чтобы определить функцию **insertText**. Эта функция вставляет текст в текущий слайд.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p116">In the **Home.js** file, replace `TODO5` with the following code to define the **insertText** function. This function inserts text into the current slide.</span></span>
+3. <span data-ttu-id="4fdad-p116">В файле **Home.js** замените `TODO5` приведенным ниже кодом, чтобы определить функцию **insertText**. Эта функция вставляет текст в текущий слайд.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p116">In the **Home.js** file, replace `TODO5` with the following code to define the **insertText** function. This function inserts text into the current slide.</span></span>
 
     ```javascript
     function insertText() {
@@ -309,34 +308,34 @@ ms.locfileid: "32451712"
     }
     ```
 
-### <a name="test-the-add-in"></a><span data-ttu-id="72f1b-183">Тестирование надстройки</span><span class="sxs-lookup"><span data-stu-id="72f1b-183">Test the add-in</span></span>
+### <a name="test-the-add-in"></a><span data-ttu-id="4fdad-183">Тестирование надстройки</span><span class="sxs-lookup"><span data-stu-id="4fdad-183">Test the add-in</span></span>
 
-1. <span data-ttu-id="72f1b-184">Испытайте надстройку с помощью Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить PowerPoint с кнопкой надстройки **Показать область задач** на ленте.</span><span class="sxs-lookup"><span data-stu-id="72f1b-184">Using Visual Studio, test the add-in by pressing **F5** or choosing the **Start** button to launch PowerPoint with the **Show Taskpane** add-in button displayed in the ribbon.</span></span> <span data-ttu-id="72f1b-185">Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="72f1b-185">The add-in will be hosted locally on IIS.</span></span>
+1. <span data-ttu-id="4fdad-184">Испытайте надстройку с помощью Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить PowerPoint с кнопкой надстройки **Показать область задач** на ленте.</span><span class="sxs-lookup"><span data-stu-id="4fdad-184">Using Visual Studio, test the add-in by pressing **F5** or choosing the **Start** button to launch PowerPoint with the **Show Taskpane** add-in button displayed in the ribbon.</span></span> <span data-ttu-id="4fdad-185">Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="4fdad-185">The add-in will be hosted locally on IIS.</span></span>
 
     ![Снимок экрана: Visual Studio с выделенной кнопкой "Запустить"](../images/powerpoint-tutorial-start.png)
 
-2. <span data-ttu-id="72f1b-187">В PowerPoint нажмите кнопку **Show Taskpane** (Показать область задач) на ленте, чтобы открыть надстройку области задач.</span><span class="sxs-lookup"><span data-stu-id="72f1b-187">In PowerPoint, select the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
+2. <span data-ttu-id="4fdad-187">В PowerPoint нажмите кнопку **Show Taskpane** (Показать область задач) на ленте, чтобы открыть надстройку области задач.</span><span class="sxs-lookup"><span data-stu-id="4fdad-187">In PowerPoint, select the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
 
     ![Снимок экрана: Visual Studio с выделенной кнопкой "Show Taskpane" (Показать область задач) на ленте "Главная"](../images/powerpoint-tutorial-show-taskpane-button.png)
 
-3. <span data-ttu-id="72f1b-189">В области задач нажмите кнопку **Insert Image** (Вставить изображение), чтобы добавить фотографию дня Bing на текущий слайд, и выберите макет слайда с текстовым полем для заголовка.</span><span class="sxs-lookup"><span data-stu-id="72f1b-189">In the task pane, choose the **Insert Image** button to add the Bing photo of the day to the current slide and choose a design for the slide that contains a text box for the title.</span></span>
+3. <span data-ttu-id="4fdad-189">В области задач нажмите кнопку **Insert Image** (Вставить изображение), чтобы добавить фотографию дня Bing на текущий слайд, и выберите макет слайда с текстовым полем для заголовка.</span><span class="sxs-lookup"><span data-stu-id="4fdad-189">In the task pane, choose the **Insert Image** button to add the Bing photo of the day to the current slide and choose a design for the slide that contains a text box for the title.</span></span>
 
     ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Insert Image" (Вставить изображение)](../images/powerpoint-tutorial-insert-image-slide-design.png)
 
-4. <span data-ttu-id="72f1b-191">Установите курсор в текстовом поле на заглавном слайде и нажмите кнопку **Insert Text** (Вставить текст) в области задач, чтобы добавить текст.</span><span class="sxs-lookup"><span data-stu-id="72f1b-191">Put your cursor in the text box on the title slide and then in the task pane, choose the **Insert Text** button to add text to the slide.</span></span>
+4. <span data-ttu-id="4fdad-191">Установите курсор в текстовом поле на заглавном слайде и нажмите кнопку **Insert Text** (Вставить текст) в области задач, чтобы добавить текст.</span><span class="sxs-lookup"><span data-stu-id="4fdad-191">Put your cursor in the text box on the title slide and then in the task pane, choose the **Insert Text** button to add text to the slide.</span></span>
 
     ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Insert Text" (Вставить текст)](../images/powerpoint-tutorial-insert-text.png)
 
 
-5. <span data-ttu-id="72f1b-193">В Visual Studio остановите работу надстройки, нажав клавиши **Shift + F5** или кнопку **Остановить**.</span><span class="sxs-lookup"><span data-stu-id="72f1b-193">In Visual Studio, stop the add-in by pressing **Shift + F5** or choosing the **Stop** button.</span></span> <span data-ttu-id="72f1b-194">PowerPoint автоматически закроется при остановке надстройки.</span><span class="sxs-lookup"><span data-stu-id="72f1b-194">PowerPoint will automatically close when the add-in is stopped.</span></span>
+5. <span data-ttu-id="4fdad-193">В Visual Studio остановите работу надстройки, нажав клавиши **Shift + F5** или кнопку **Остановить**.</span><span class="sxs-lookup"><span data-stu-id="4fdad-193">In Visual Studio, stop the add-in by pressing **Shift + F5** or choosing the **Stop** button.</span></span> <span data-ttu-id="4fdad-194">PowerPoint автоматически закроется при остановке надстройки.</span><span class="sxs-lookup"><span data-stu-id="4fdad-194">PowerPoint will automatically close when the add-in is stopped.</span></span>
 
     ![Снимок экрана: Visual Studio с выделенной кнопкой "Остановить"](../images/powerpoint-tutorial-stop.png)
 
-## <a name="get-slide-metadata"></a><span data-ttu-id="72f1b-196">Получение метаданных слайда</span><span class="sxs-lookup"><span data-stu-id="72f1b-196">Get slide metadata</span></span>
+## <a name="get-slide-metadata"></a><span data-ttu-id="4fdad-196">Получение метаданных слайда</span><span class="sxs-lookup"><span data-stu-id="4fdad-196">Get slide metadata</span></span>
 
-<span data-ttu-id="72f1b-197">Выполните указанные ниже действия, чтобы добавить код, который извлекает метаданные для выбранного слайда.</span><span class="sxs-lookup"><span data-stu-id="72f1b-197">Complete the following steps to add code that retrieves metadata for the selected slide.</span></span>
+<span data-ttu-id="4fdad-197">Выполните указанные ниже действия, чтобы добавить код, который извлекает метаданные для выбранного слайда.</span><span class="sxs-lookup"><span data-stu-id="4fdad-197">Complete the following steps to add code that retrieves metadata for the selected slide.</span></span>
 
-1. <span data-ttu-id="72f1b-p119">В файле **Home.html** замените `TODO4` приведенным ниже кодом. Этот код определяет кнопку **Get Slide Metadata** (Получить метаданные слайда), которая появится в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p119">In the **Home.html** file, replace `TODO4` with the following markup. This markup defines the **Get Slide Metadata** button that will appear within the add-in's task pane.</span></span>
+1. <span data-ttu-id="4fdad-p119">В файле **Home.html** замените `TODO4` приведенным ниже кодом. Этот код определяет кнопку **Get Slide Metadata** (Получить метаданные слайда), которая появится в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p119">In the **Home.html** file, replace `TODO4` with the following markup. This markup defines the **Get Slide Metadata** button that will appear within the add-in's task pane.</span></span>
 
     ```html
     <br /><br />
@@ -347,13 +346,13 @@ ms.locfileid: "32451712"
     </button>
     ```
 
-2. <span data-ttu-id="72f1b-200">В файле **Home.js** замените `TODO6` приведенным ниже кодом, чтобы назначить обработчик событий для кнопки **Get Slide Metadata** (Получить метаданные слайда).</span><span class="sxs-lookup"><span data-stu-id="72f1b-200">In the **Home.js** file, replace `TODO6` with the following code to assign the event handler for the **Get Slide Metadata** button.</span></span>
+2. <span data-ttu-id="4fdad-200">В файле **Home.js** замените `TODO6` приведенным ниже кодом, чтобы назначить обработчик событий для кнопки **Get Slide Metadata** (Получить метаданные слайда).</span><span class="sxs-lookup"><span data-stu-id="4fdad-200">In the **Home.js** file, replace `TODO6` with the following code to assign the event handler for the **Get Slide Metadata** button.</span></span>
 
     ```javascript
     $('#get-slide-metadata').click(getSlideMetadata);
     ```
 
-3. <span data-ttu-id="72f1b-p120">В файле **Home.js** замените `TODO7` приведенным ниже кодом, чтобы определить функцию **getSlideMetadata**. Эта функция извлекает метаданные выбранных слайдов и записывает их во всплывающее диалоговое окно в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p120">In the **Home.js** file, replace `TODO7` with the following code to define the **getSlideMetadata** function. This function retrieves metadata for the selected slide(s) and writes it to a popup dialog window within the add-in task pane.</span></span>
+3. <span data-ttu-id="4fdad-p120">В файле **Home.js** замените `TODO7` приведенным ниже кодом, чтобы определить функцию **getSlideMetadata**. Эта функция извлекает метаданные выбранных слайдов и записывает их во всплывающее диалоговое окно в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p120">In the **Home.js** file, replace `TODO7` with the following code to define the **getSlideMetadata** function. This function retrieves metadata for the selected slide(s) and writes it to a popup dialog window within the add-in task pane.</span></span>
 
     ```javascript
     function getSlideMetadata() {
@@ -369,29 +368,29 @@ ms.locfileid: "32451712"
     }
     ```
 
-### <a name="test-the-add-in"></a><span data-ttu-id="72f1b-203">Тестирование надстройки</span><span class="sxs-lookup"><span data-stu-id="72f1b-203">Test the add-in</span></span>
+### <a name="test-the-add-in"></a><span data-ttu-id="4fdad-203">Тестирование надстройки</span><span class="sxs-lookup"><span data-stu-id="4fdad-203">Test the add-in</span></span>
 
-1. <span data-ttu-id="72f1b-204">Испытайте надстройку с помощью Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить PowerPoint с кнопкой надстройки **Показать область задач** на ленте.</span><span class="sxs-lookup"><span data-stu-id="72f1b-204">Using Visual Studio, test the add-in by pressing **F5** or choosing the **Start** button to launch PowerPoint with the **Show Taskpane** add-in button displayed in the ribbon.</span></span> <span data-ttu-id="72f1b-205">Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="72f1b-205">The add-in will be hosted locally on IIS.</span></span>
+1. <span data-ttu-id="4fdad-204">Испытайте надстройку с помощью Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить PowerPoint с кнопкой надстройки **Показать область задач** на ленте.</span><span class="sxs-lookup"><span data-stu-id="4fdad-204">Using Visual Studio, test the add-in by pressing **F5** or choosing the **Start** button to launch PowerPoint with the **Show Taskpane** add-in button displayed in the ribbon.</span></span> <span data-ttu-id="4fdad-205">Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="4fdad-205">The add-in will be hosted locally on IIS.</span></span>
 
     ![Снимок экрана: Visual Studio с выделенной кнопкой "Запустить"](../images/powerpoint-tutorial-start.png)
 
-2. <span data-ttu-id="72f1b-207">В PowerPoint нажмите кнопку **Show Taskpane** (Показать область задач) на ленте, чтобы открыть надстройку области задач.</span><span class="sxs-lookup"><span data-stu-id="72f1b-207">In PowerPoint, select the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
+2. <span data-ttu-id="4fdad-207">В PowerPoint нажмите кнопку **Show Taskpane** (Показать область задач) на ленте, чтобы открыть надстройку области задач.</span><span class="sxs-lookup"><span data-stu-id="4fdad-207">In PowerPoint, select the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
 
     ![Снимок экрана: Visual Studio с выделенной кнопкой "Show Taskpane" (Показать область задач) на ленте "Главная"](../images/powerpoint-tutorial-show-taskpane-button.png)
 
-3. <span data-ttu-id="72f1b-p122">В области задач нажмите кнопку **Get Slide Metadata** (Получить метаданные слайда), чтобы получить метаданные выбранного слайда. Метаданные слайда записываются во всплывающее диалоговое окно в нижней части области задач. В этом случае массив `slides` в метаданных JSON содержит один объект, в котором указаны свойства `id`, `title` и `index` выбранного слайда. Если при извлечении метаданных будет выбрано несколько слайдов, массив `slides` в метаданных JSON будет содержать один объект для каждого выбранного слайда.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p122">In the task pane, choose the **Get Slide Metadata** button to get the metadata for the selected slide. The slide metadata is written to the popup dialog window at the bottom of the task pane. In this case, the `slides` array within the JSON metadata contains one object that specifies the `id`, `title`, and `index` of the selected slide. If multiple slides had been selected when you retrieved slide metadata, the `slides` array within the JSON metadata would contain one object for each selected slide.</span></span>
+3. <span data-ttu-id="4fdad-p122">В области задач нажмите кнопку **Get Slide Metadata** (Получить метаданные слайда), чтобы получить метаданные выбранного слайда. Метаданные слайда записываются во всплывающее диалоговое окно в нижней части области задач. В этом случае массив `slides` в метаданных JSON содержит один объект, в котором указаны свойства `id`, `title` и `index` выбранного слайда. Если при извлечении метаданных будет выбрано несколько слайдов, массив `slides` в метаданных JSON будет содержать один объект для каждого выбранного слайда.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p122">In the task pane, choose the **Get Slide Metadata** button to get the metadata for the selected slide. The slide metadata is written to the popup dialog window at the bottom of the task pane. In this case, the `slides` array within the JSON metadata contains one object that specifies the `id`, `title`, and `index` of the selected slide. If multiple slides had been selected when you retrieved slide metadata, the `slides` array within the JSON metadata would contain one object for each selected slide.</span></span>
 
     ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Get Slide Metadata" (Получить метаданные слайда)](../images/powerpoint-tutorial-get-slide-metadata.png)
 
-4. <span data-ttu-id="72f1b-214">В Visual Studio остановите работу надстройки, нажав клавиши **Shift + F5** или кнопку **Остановить**.</span><span class="sxs-lookup"><span data-stu-id="72f1b-214">In Visual Studio, stop the add-in by pressing **Shift + F5** or choosing the **Stop** button.</span></span> <span data-ttu-id="72f1b-215">PowerPoint автоматически закроется при остановке надстройки.</span><span class="sxs-lookup"><span data-stu-id="72f1b-215">PowerPoint will automatically close when the add-in is stopped.</span></span>
+4. <span data-ttu-id="4fdad-214">В Visual Studio остановите работу надстройки, нажав клавиши **Shift + F5** или кнопку **Остановить**.</span><span class="sxs-lookup"><span data-stu-id="4fdad-214">In Visual Studio, stop the add-in by pressing **Shift + F5** or choosing the **Stop** button.</span></span> <span data-ttu-id="4fdad-215">PowerPoint автоматически закроется при остановке надстройки.</span><span class="sxs-lookup"><span data-stu-id="4fdad-215">PowerPoint will automatically close when the add-in is stopped.</span></span>
 
     ![Снимок экрана: Visual Studio с выделенной кнопкой "Остановить"](../images/powerpoint-tutorial-stop.png)
 
-## <a name="navigate-between-slides"></a><span data-ttu-id="72f1b-217">Переход между слайдами</span><span class="sxs-lookup"><span data-stu-id="72f1b-217">Navigate between slides</span></span>
+## <a name="navigate-between-slides"></a><span data-ttu-id="4fdad-217">Переход между слайдами</span><span class="sxs-lookup"><span data-stu-id="4fdad-217">Navigate between slides</span></span>
 
-<span data-ttu-id="72f1b-218">Выполните указанные ниже действия, чтобы добавить код, который выполняет переход между слайдами документа.</span><span class="sxs-lookup"><span data-stu-id="72f1b-218">Complete the following steps to add code that navigates between the slides of a document.</span></span>
+<span data-ttu-id="4fdad-218">Выполните указанные ниже действия, чтобы добавить код, который выполняет переход между слайдами документа.</span><span class="sxs-lookup"><span data-stu-id="4fdad-218">Complete the following steps to add code that navigates between the slides of a document.</span></span>
 
-1. <span data-ttu-id="72f1b-p124">В файле **Home.html** замените `TODO5` приведенным ниже кодом. Этот код определяет четыре кнопки навигации, которые появятся в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p124">In the **Home.html** file, replace `TODO5` with the following markup. This markup defines the four navigation buttons that will appear within the add-in's task pane.</span></span>
+1. <span data-ttu-id="4fdad-p124">В файле **Home.html** замените `TODO5` приведенным ниже кодом. Этот код определяет четыре кнопки навигации, которые появятся в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p124">In the **Home.html** file, replace `TODO5` with the following markup. This markup defines the four navigation buttons that will appear within the add-in's task pane.</span></span>
 
     ```html
     <br /><br />
@@ -420,7 +419,7 @@ ms.locfileid: "32451712"
     </button>
     ```
 
-2. <span data-ttu-id="72f1b-221">В файле **Home.js** замените `TODO8` приведенным ниже кодом, чтобы назначить обработчик событий для четырех кнопок навигации.</span><span class="sxs-lookup"><span data-stu-id="72f1b-221">In the **Home.js** file, replace `TODO8` with the following code to assign the event handlers for the four navigation buttons.</span></span>
+2. <span data-ttu-id="4fdad-221">В файле **Home.js** замените `TODO8` приведенным ниже кодом, чтобы назначить обработчик событий для четырех кнопок навигации.</span><span class="sxs-lookup"><span data-stu-id="4fdad-221">In the **Home.js** file, replace `TODO8` with the following code to assign the event handlers for the four navigation buttons.</span></span>
 
     ```javascript
     $('#go-to-first-slide').click(goToFirstSlide);
@@ -429,7 +428,7 @@ ms.locfileid: "32451712"
     $('#go-to-last-slide').click(goToLastSlide);
     ```
 
-3. <span data-ttu-id="72f1b-222">В файле **Home.js** замените `TODO9` приведенным ниже кодом, чтобы определить функции навигации.</span><span class="sxs-lookup"><span data-stu-id="72f1b-222">In the **Home.js** file, replace `TODO9` with the following code to define the navigation functions.</span></span> <span data-ttu-id="72f1b-223">Каждая из этих функций использует функцию `goToByIdAsync` для выбора слайда с учетом его позиции в документе (первый, последний, предыдущий, следующий).</span><span class="sxs-lookup"><span data-stu-id="72f1b-223">Each of these functions uses the `goToByIdAsync` function to select a slide based upon its position in the document (first, last, previous, and next).</span></span>
+3. <span data-ttu-id="4fdad-222">В файле **Home.js** замените `TODO9` приведенным ниже кодом, чтобы определить функции навигации.</span><span class="sxs-lookup"><span data-stu-id="4fdad-222">In the **Home.js** file, replace `TODO9` with the following code to define the navigation functions.</span></span> <span data-ttu-id="4fdad-223">Каждая из этих функций использует функцию `goToByIdAsync` для выбора слайда с учетом его позиции в документе (первый, последний, предыдущий, следующий).</span><span class="sxs-lookup"><span data-stu-id="4fdad-223">Each of these functions uses the `goToByIdAsync` function to select a slide based upon its position in the document (first, last, previous, and next).</span></span>
 
     ```javascript
     function goToFirstSlide() {
@@ -469,42 +468,42 @@ ms.locfileid: "32451712"
     }
     ```
 
-### <a name="test-the-add-in"></a><span data-ttu-id="72f1b-224">Тестирование надстройки</span><span class="sxs-lookup"><span data-stu-id="72f1b-224">Test the add-in</span></span>
+### <a name="test-the-add-in"></a><span data-ttu-id="4fdad-224">Тестирование надстройки</span><span class="sxs-lookup"><span data-stu-id="4fdad-224">Test the add-in</span></span>
 
-1. <span data-ttu-id="72f1b-225">Испытайте надстройку с помощью Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить PowerPoint с кнопкой надстройки **Показать область задач** на ленте.</span><span class="sxs-lookup"><span data-stu-id="72f1b-225">Using Visual Studio, test the add-in by pressing **F5** or choosing the **Start** button to launch PowerPoint with the **Show Taskpane** add-in button displayed in the ribbon.</span></span> <span data-ttu-id="72f1b-226">Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="72f1b-226">The add-in will be hosted locally on IIS.</span></span>
+1. <span data-ttu-id="4fdad-225">Испытайте надстройку с помощью Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить PowerPoint с кнопкой надстройки **Показать область задач** на ленте.</span><span class="sxs-lookup"><span data-stu-id="4fdad-225">Using Visual Studio, test the add-in by pressing **F5** or choosing the **Start** button to launch PowerPoint with the **Show Taskpane** add-in button displayed in the ribbon.</span></span> <span data-ttu-id="4fdad-226">Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="4fdad-226">The add-in will be hosted locally on IIS.</span></span>
 
     ![Снимок экрана: Visual Studio с выделенной кнопкой "Запустить"](../images/powerpoint-tutorial-start.png)
 
-2. <span data-ttu-id="72f1b-228">В PowerPoint нажмите кнопку **Show Taskpane** (Показать область задач) на ленте, чтобы открыть надстройку области задач.</span><span class="sxs-lookup"><span data-stu-id="72f1b-228">In PowerPoint, select the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
+2. <span data-ttu-id="4fdad-228">В PowerPoint нажмите кнопку **Show Taskpane** (Показать область задач) на ленте, чтобы открыть надстройку области задач.</span><span class="sxs-lookup"><span data-stu-id="4fdad-228">In PowerPoint, select the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
 
     ![Снимок экрана: Visual Studio с выделенной кнопкой "Show Taskpane" (Показать область задач) на ленте "Главная"](../images/powerpoint-tutorial-show-taskpane-button.png)
 
 
-3. <span data-ttu-id="72f1b-230">Нажмите кнопку **Создать слайд** на ленте вкладки **Главная**, чтобы добавить в документ два новых слайда.</span><span class="sxs-lookup"><span data-stu-id="72f1b-230">Use the **New Slide** button in the ribbon of the **Home** tab to add two new slides to the document.</span></span> 
+3. <span data-ttu-id="4fdad-230">Нажмите кнопку **Создать слайд** на ленте вкладки **Главная**, чтобы добавить в документ два новых слайда.</span><span class="sxs-lookup"><span data-stu-id="4fdad-230">Use the **New Slide** button in the ribbon of the **Home** tab to add two new slides to the document.</span></span> 
 
-4. <span data-ttu-id="72f1b-p127">В области задач нажмите кнопку **Go to First Slide** (Перейти к первому слайду). Будет выбран и показан первый слайд в документе.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p127">In the task pane, choose the **Go to First Slide** button. The first slide in the document is selected and displayed.</span></span>
+4. <span data-ttu-id="4fdad-p127">В области задач нажмите кнопку **Go to First Slide** (Перейти к первому слайду). Будет выбран и показан первый слайд в документе.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p127">In the task pane, choose the **Go to First Slide** button. The first slide in the document is selected and displayed.</span></span>
 
     ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Go to First Slide" (Перейти к первому слайду)](../images/powerpoint-tutorial-go-to-first-slide.png)
 
-5. <span data-ttu-id="72f1b-p128">В области задач нажмите кнопку **Go to Next Slide** (Перейти к следующему слайду). Будет выбран и показан следующий слайд в документе.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p128">In the task pane, choose the **Go to Next Slide** button. The next slide in the document is selected and displayed.</span></span>
+5. <span data-ttu-id="4fdad-p128">В области задач нажмите кнопку **Go to Next Slide** (Перейти к следующему слайду). Будет выбран и показан следующий слайд в документе.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p128">In the task pane, choose the **Go to Next Slide** button. The next slide in the document is selected and displayed.</span></span>
 
     ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Go to Next Slide" (Перейти к следующему слайду)](../images/powerpoint-tutorial-go-to-next-slide.png)
 
-6. <span data-ttu-id="72f1b-p129">В области задач нажмите кнопку **Go to Previous Slide** (Перейти к предыдущему слайду). Будет выбран и показан предыдущий слайд в документе.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p129">In the task pane, choose the **Go to Previous Slide** button. The previous slide in the document is selected and displayed.</span></span>
+6. <span data-ttu-id="4fdad-p129">В области задач нажмите кнопку **Go to Previous Slide** (Перейти к предыдущему слайду). Будет выбран и показан предыдущий слайд в документе.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p129">In the task pane, choose the **Go to Previous Slide** button. The previous slide in the document is selected and displayed.</span></span>
 
     ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Go to Previous Slide" (Перейти к предыдущему слайду)](../images/powerpoint-tutorial-go-to-previous-slide.png)
 
-7. <span data-ttu-id="72f1b-p130">В области задач нажмите кнопку **Go to Last Slide** (Перейти к последнему слайду). Будет выбран и показан последний слайд в документе.</span><span class="sxs-lookup"><span data-stu-id="72f1b-p130">In the task pane, choose the **Go to Last Slide** button. The last slide in the document is selected and displayed.</span></span>
+7. <span data-ttu-id="4fdad-p130">В области задач нажмите кнопку **Go to Last Slide** (Перейти к последнему слайду). Будет выбран и показан последний слайд в документе.</span><span class="sxs-lookup"><span data-stu-id="4fdad-p130">In the task pane, choose the **Go to Last Slide** button. The last slide in the document is selected and displayed.</span></span>
 
     ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Go to Last Slide" (Перейти к последнему слайду)](../images/powerpoint-tutorial-go-to-last-slide.png)
 
-8. <span data-ttu-id="72f1b-243">В Visual Studio остановите работу надстройки, нажав клавиши **Shift + F5** или кнопку **Остановить**.</span><span class="sxs-lookup"><span data-stu-id="72f1b-243">In Visual Studio, stop the add-in by pressing **Shift + F5** or choosing the **Stop** button.</span></span> <span data-ttu-id="72f1b-244">PowerPoint автоматически закроется при остановке надстройки.</span><span class="sxs-lookup"><span data-stu-id="72f1b-244">PowerPoint will automatically close when the add-in is stopped.</span></span>
+8. <span data-ttu-id="4fdad-243">В Visual Studio остановите работу надстройки, нажав клавиши **Shift + F5** или кнопку **Остановить**.</span><span class="sxs-lookup"><span data-stu-id="4fdad-243">In Visual Studio, stop the add-in by pressing **Shift + F5** or choosing the **Stop** button.</span></span> <span data-ttu-id="4fdad-244">PowerPoint автоматически закроется при остановке надстройки.</span><span class="sxs-lookup"><span data-stu-id="4fdad-244">PowerPoint will automatically close when the add-in is stopped.</span></span>
 
     ![Снимок экрана: Visual Studio с выделенной кнопкой "Остановить"](../images/powerpoint-tutorial-stop.png)
 
-## <a name="next-steps"></a><span data-ttu-id="72f1b-246">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="72f1b-246">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="4fdad-246">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="4fdad-246">Next steps</span></span>
 
-<span data-ttu-id="72f1b-247">Из этого руководства вы узнали, как создать надстройку PowerPoint, которая вставляет изображение и текст, получает метаданные слайда и выполняет переход между слайдами.</span><span class="sxs-lookup"><span data-stu-id="72f1b-247">In this tutorial, you've created a PowerPoint add-in that inserts an image, inserts text, gets slide metadata, and navigates between slides.</span></span> <span data-ttu-id="72f1b-248">Чтобы узнать больше о создании надстроек PowerPoint, перейдите к следующей статье:</span><span class="sxs-lookup"><span data-stu-id="72f1b-248">To learn more about building PowerPoint add-ins, continue to the following article:</span></span>
+<span data-ttu-id="4fdad-247">Из этого руководства вы узнали, как создать надстройку PowerPoint, которая вставляет изображение и текст, получает метаданные слайда и выполняет переход между слайдами.</span><span class="sxs-lookup"><span data-stu-id="4fdad-247">In this tutorial, you've created a PowerPoint add-in that inserts an image, inserts text, gets slide metadata, and navigates between slides.</span></span> <span data-ttu-id="4fdad-248">Чтобы узнать больше о создании надстроек PowerPoint, перейдите к следующей статье:</span><span class="sxs-lookup"><span data-stu-id="4fdad-248">To learn more about building PowerPoint add-ins, continue to the following article:</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="72f1b-249">Общие сведения о надстройках PowerPoint</span><span class="sxs-lookup"><span data-stu-id="72f1b-249">PowerPoint add-ins overview</span></span>](../powerpoint/powerpoint-add-ins.md)
+> [<span data-ttu-id="4fdad-249">Общие сведения о надстройках PowerPoint</span><span class="sxs-lookup"><span data-stu-id="4fdad-249">PowerPoint add-ins overview</span></span>](../powerpoint/powerpoint-add-ins.md)
