@@ -3,12 +3,12 @@ title: Пространство имен Office — Предварительна
 description: ''
 ms.date: 08/13/2019
 localization_priority: Normal
-ms.openlocfilehash: df4b47f57d634f6c99ce862ed1c0e96d87be0425
-ms.sourcegitcommit: 1c7e555733ee6d5a08e444a3c4c16635d998e032
+ms.openlocfilehash: eb8ff0a755c1908d7b96438f96386056cc16b24f
+ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "36395668"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "36696437"
 ---
 # <a name="office"></a>Office
 
@@ -60,6 +60,8 @@ ms.locfileid: "36395668"
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
+<br>
+
 ---
 ---
 
@@ -76,7 +78,7 @@ ms.locfileid: "36395668"
 |Имя| Тип| Описание|
 |---|---|---|
 |`Html`| String|Запрашивает возврат данных в формате HTML.|
-|`Text`| String|Запрашивает возврат данных в формате текста.|
+|`Text`| String.|Запрашивает возврат данных в формате текста.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -84,6 +86,8 @@ ms.locfileid: "36395668"
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+
+<br>
 
 ---
 ---
@@ -100,13 +104,13 @@ ms.locfileid: "36395668"
 
 | Имя | Тип | Описание | Набор минимальных требований |
 |---|---|---|---|
-|`AppointmentTimeChanged`| String | Дата или время выбранной встречи или ряда изменились. | 1.7 |
-|`AttachmentsChanged`| String | Вложение было добавлено или удалено из элемента. | Предварительная версия |
-|`EnhancedLocationsChanged`| String | Расположение выбранной встречи изменилось. | Предварительная версия |
-|`ItemChanged`| String | Для просмотра выбран другой элемент Outlook, когда область задач закреплена. | 1.5 |
-|`OfficeThemeChanged`| String | Тема Office в почтовом ящике изменилась. | Предварительная версия |
-|`RecipientsChanged`| String | Список получателей выбранного элемента или места встречи изменился. | 1.7 |
-|`RecurrenceChanged`| String | Шаблон повторения выбранного ряда изменился. | 1.7 |
+|`AppointmentTimeChanged`| String. | Дата или время выбранной встречи или ряда изменились. | 1.7 |
+|`AttachmentsChanged`| String. | Вложение было добавлено или удалено из элемента. | Предварительная версия |
+|`EnhancedLocationsChanged`| String. | Расположение выбранной встречи изменилось. | Предварительная версия |
+|`ItemChanged`| String. | Для просмотра выбран другой элемент Outlook, когда область задач закреплена. | 1.5 |
+|`OfficeThemeChanged`| String. | Тема Office в почтовом ящике изменилась. | Предварительная версия |
+|`RecipientsChanged`| String. | Список получателей выбранного элемента или места встречи изменился. | 1.7 |
+|`RecurrenceChanged`| String. | Шаблон повторения выбранного ряда изменился. | 1.7 |
 
 ##### <a name="requirements"></a>Требования
 
@@ -114,6 +118,8 @@ ms.locfileid: "36395668"
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.5 |
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение |
+
+<br>
 
 ---
 ---
@@ -131,7 +137,7 @@ ms.locfileid: "36395668"
 |Имя| Тип| Описание|
 |---|---|---|
 |`Body`| String|Источник данных — текст сообщения.|
-|`Subject`| String|Источник данных — тема сообщения.|
+|`Subject`| String.|Источник данных — тема сообщения.|
 
 ##### <a name="requirements"></a>Требования
 

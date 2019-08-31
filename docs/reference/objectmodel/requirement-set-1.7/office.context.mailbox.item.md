@@ -3,12 +3,12 @@ title: Office. Context. Mailbox. Item — набор требований 1,7
 description: ''
 ms.date: 08/08/2019
 localization_priority: Normal
-ms.openlocfilehash: 3c2f991137441e5e425a050eeeba146c2ed540a3
-ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
+ms.openlocfilehash: ec990b79ef1f1daaa0bdedc77688a927c1a87e23
+ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "36268728"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "36695975"
 ---
 # <a name="item"></a>item
 
@@ -77,7 +77,7 @@ ms.locfileid: "36268728"
 
 В примере кода JavaScript, приведенном ниже, показано, как получить доступ к свойству `subject` текущего элемента в Outlook.
 
-```javascript
+```js
 // The initialize function is required for all apps.
 Office.initialize = function () {
   // Checks for the DOM to load using the jQuery ready function.
@@ -116,7 +116,7 @@ Office.initialize = function () {
 
 С помощью приведенного ниже кода можно создать HTML-строку с подробными сведениями обо всех вложениях для текущего элемента.
 
-```javascript
+```js
 var item = Office.context.mailbox.item;
 var outputString = "";
 
@@ -135,6 +135,8 @@ if (item.attachments.length > 0) {
 
 console.log(outputString);
 ```
+
+<br>
 
 ---
 ---
@@ -157,7 +159,7 @@ console.log(outputString);
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 Office.context.mailbox.item.bcc.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
 Office.context.mailbox.item.bcc.addAsync( ['jason@contoso.com'] );
 Office.context.mailbox.item.bcc.getAsync(callback);
@@ -166,6 +168,8 @@ function callback(asyncResult) {
   var arrayOfBccRecipients = asyncResult.value;
 }
 ```
+
+<br>
 
 ---
 ---
@@ -190,7 +194,7 @@ function callback(asyncResult) {
 
 В этом примере возвращается текст сообщения в формате обычного текста.
 
-```javascript
+```js
 Office.context.mailbox.item.body.getAsync(
   "text",
   { asyncContext: "This is passed to the callback" },
@@ -210,6 +214,8 @@ Office.context.mailbox.item.body.getAsync(
 }
 ```
 
+<br>
+
 ---
 ---
 
@@ -221,7 +227,7 @@ Office.context.mailbox.item.body.getAsync(
 
 Свойство `cc` возвращает массив, который содержит объект `EmailAddressDetails` для каждого получателя, указанного в строке **Копия** сообщения. Коллекция может включать не более 100 элементов.
 
-```javascript
+```js
 console.log(JSON.stringify(Office.context.mailbox.item.cc));
 ```
 
@@ -229,7 +235,7 @@ console.log(JSON.stringify(Office.context.mailbox.item.cc));
 
 Свойство `cc` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Копия** сообщения.
 
-```javascript
+```js
 Office.context.mailbox.item.cc.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
 Office.context.mailbox.item.cc.addAsync( ['jason@contoso.com'] );
 Office.context.mailbox.item.cc.getAsync(callback);
@@ -250,6 +256,8 @@ function callback(asyncResult) {
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)|Создание или чтение|
+
+<br>
 
 ---
 ---
@@ -276,10 +284,12 @@ function callback(asyncResult) {
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 var conversationId = Office.context.mailbox.item.conversationId;
 console.log("conversationId: " + conversationId);
 ```
+
+<br>
 
 ---
 ---
@@ -302,10 +312,12 @@ console.log("conversationId: " + conversationId);
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 var dateTimeCreated = Office.context.mailbox.item.dateTimeCreated;
 console.log("Date and time created: " + dateTimeCreated);
 ```
+
+<br>
 
 ---
 ---
@@ -331,10 +343,12 @@ console.log("Date and time created: " + dateTimeCreated);
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 var dateTimeModified = Office.context.mailbox.item.dateTimeModified;
 console.log("Date and time modified: " + dateTimeModified);
 ```
+
+<br>
 
 ---
 ---
@@ -349,7 +363,7 @@ console.log("Date and time modified: " + dateTimeModified);
 
 Свойство `end` возвращает объект `Date`.
 
-```javascript
+```js
 var end = Office.context.mailbox.item.end;
 console.log("Appointment end: " + end);
 ```
@@ -362,7 +376,7 @@ console.log("Appointment end: " + end);
 
 В примере ниже показано, как с помощью метода [`setAsync`](/javascript/api/outlook/office.time?view=outlook-js-1.7#setasync-datetime--options--callback-) объекта `Time` задать время окончания встречи.
 
-```javascript
+```js
 var endTime = new Date("3/14/2015");
 var options = {
   // Pass information that can be used in the callback.
@@ -390,6 +404,8 @@ Office.context.mailbox.item.end.setAsync(endTime, options, function(result) {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)|Создание или чтение|
 
+<br>
+
 ---
 ---
 
@@ -406,7 +422,7 @@ Office.context.mailbox.item.end.setAsync(endTime, options, function(result) {
 
 `from` Свойство возвращает `EmailAddressDetails` объект.
 
-```javascript
+```js
 var from = Office.context.mailbox.item.from;
 console.log("From " + from);
 ```
@@ -415,7 +431,7 @@ console.log("From " + from);
 
 `from` Свойство возвращает `From` объект, который предоставляет метод для получения значения From.
 
-```javascript
+```js
 Office.context.mailbox.item.from.getAsync(callback);
 
 function callback(asyncResult) {
@@ -434,6 +450,8 @@ function callback(asyncResult) {
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|1.7|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|ReadWriteItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)|Чтение|Создание|
+
+<br>
 
 ---
 ---
@@ -456,9 +474,11 @@ function callback(asyncResult) {
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 var internetMessageId = Office.context.mailbox.item.internetMessageId;
 ```
+
+<br>
 
 ---
 ---
@@ -490,10 +510,12 @@ var internetMessageId = Office.context.mailbox.item.internetMessageId;
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 var itemClass = Office.context.mailbox.item.itemClass;
 console.log("Item class: " + itemClass);
 ```
+
+<br>
 
 ---
 ---
@@ -523,7 +545,7 @@ console.log("Item class: " + itemClass);
 
 Указанный ниже код проверяет наличие идентификатора элемента. Если свойство `itemId` возвращает значение `null` или `undefined`, элемент будет сохранен в хранилище, а из асинхронного результата будет получен идентификатор элемента.
 
-```javascript
+```js
 var itemId = Office.context.mailbox.item.itemId;
 if (itemId === null || itemId == undefined) {
   Office.context.mailbox.item.saveAsync(function(result) {
@@ -531,6 +553,8 @@ if (itemId === null || itemId == undefined) {
   });
 }
 ```
+
+<br>
 
 ---
 ---
@@ -555,13 +579,15 @@ if (itemId === null || itemId == undefined) {
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 if (Office.context.mailbox.item.itemType === Office.MailboxEnums.ItemType.Message) {
   // Do something.
 } else {
   // Do something else.
 }
 ```
+
+<br>
 
 ---
 ---
@@ -574,7 +600,7 @@ if (Office.context.mailbox.item.itemType === Office.MailboxEnums.ItemType.Messag
 
 Свойство `location` возвращает строку, содержащую сведения о месте встречи.
 
-```javascript
+```js
 var location = Office.context.mailbox.item.location;
 console.log("location: " + location);
 ```
@@ -583,7 +609,7 @@ console.log("location: " + location);
 
 Свойство `location` возвращает объект `Location`, предоставляющий методы, которые используются для получения и задания места встречи.
 
-```javascript
+```js
 var userContext = { value : 1 };
 Office.context.mailbox.item.location.getAsync( { context: userContext}, callback);
 
@@ -604,6 +630,8 @@ function callback(asyncResult) {
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)|Создание или чтение|
+
+<br>
 
 ---
 ---
@@ -628,10 +656,12 @@ function callback(asyncResult) {
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 var normalizedSubject = Office.context.mailbox.item.normalizedSubject;
 console.log("Normalized subject: " + normalizedSubject);
 ```
+
+<br>
 
 ---
 ---
@@ -654,7 +684,7 @@ console.log("Normalized subject: " + normalizedSubject);
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 // Get all notifications.
 Office.context.mailbox.item.notificationMessages.getAllAsync(
   function (asyncResult) {
@@ -662,6 +692,8 @@ Office.context.mailbox.item.notificationMessages.getAllAsync(
   }
 );
 ```
+
+<br>
 
 ---
 ---
@@ -674,7 +706,7 @@ Office.context.mailbox.item.notificationMessages.getAllAsync(
 
 Свойство `optionalAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого необязательного участника собрания.
 
-```javascript
+```js
 var optionalAttendees = Office.context.mailbox.item.optionalAttendees;
 console.log("Optional attendees: " + JSON.stringify(optionalAttendees));
 ```
@@ -683,7 +715,7 @@ console.log("Optional attendees: " + JSON.stringify(optionalAttendees));
 
 Свойство `optionalAttendees` возвращает объект `Recipients`, который предоставляет методы для получения или обновления необязательных участников собрания.
 
-```javascript
+```js
 Office.context.mailbox.item.optionalAttendees.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
 Office.context.mailbox.item.optionalAttendees.addAsync( ['jason@contoso.com'] );
 Office.context.mailbox.item.optionalAttendees.getAsync(callback);
@@ -705,6 +737,8 @@ function callback(asyncResult) {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)|Создание или чтение|
 
+<br>
+
 ---
 ---
 
@@ -716,7 +750,7 @@ function callback(asyncResult) {
 
 `organizer` Свойство возвращает объект [EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.7) , представляющий организатора собрания.
 
-```javascript
+```js
 var organizerName = Office.context.mailbox.item.organizer.displayName;
 var organizerAddress = Office.context.mailbox.item.organizer.emailAddress;
 console.log("Organizer: " + organizerName + " (" + organizerAddress + ")");
@@ -726,7 +760,7 @@ console.log("Organizer: " + organizerName + " (" + organizerAddress + ")");
 
 Свойство возвращает объект организатора, который предоставляет метод для получения значения организатора. [](/javascript/api/outlook/office.organizer?view=outlook-js-1.7) `organizer`
 
-```javascript
+```js
 Office.context.mailbox.item.organizer.getAsync(
   function(asyncResult) {
     console.log(JSON.stringify(asyncResult));
@@ -746,6 +780,8 @@ Office.context.mailbox.item.organizer.getAsync(
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|ReadWriteItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)|Чтение|Создание|
 
+<br>
+
 ---
 ---
 
@@ -763,7 +799,7 @@ Office.context.mailbox.item.organizer.getAsync(
 
 `recurrence` Свойство возвращает объект [повторения](/javascript/api/outlook/office.recurrence?view=outlook-js-1.7) , представляющий повторение встречи. Оно доступно для встреч и приглашений на собрания.
 
-```javascript
+```js
 var recurrence = Office.context.mailbox.item.recurrence;
 console.log("Recurrence: " + JSON.stringify(recurrence));
 ```
@@ -772,7 +808,7 @@ console.log("Recurrence: " + JSON.stringify(recurrence));
 
 `recurrence` Свойство возвращает объект [повторения](/javascript/api/outlook/office.recurrence?view=outlook-js-1.7) , который предоставляет методы для управления повторением встречи. Оно доступно для встреч.
 
-```javascript
+```js
 Office.context.mailbox.item.recurrence.getAsync(callback);
 
 function callback(asyncResult) {
@@ -807,6 +843,8 @@ Recurrence = {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)|Создание или чтение|
 
+<br>
+
 ---
 ---
 
@@ -818,7 +856,7 @@ Recurrence = {
 
 Свойство `requiredAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого обязательного участника собрания.
 
-```javascript
+```js
 var requiredAttendees = Office.context.mailbox.item.requiredAttendees;
 console.log("Required attendees: " + JSON.stringify(requiredAttendees));
 ```
@@ -827,7 +865,7 @@ console.log("Required attendees: " + JSON.stringify(requiredAttendees));
 
 Свойство `requiredAttendees` возвращает объект `Recipients`, предоставляющий методы, с помощью которых можно получить или обновить сведения об обязательных участниках собрания.
 
-```javascript
+```js
 Office.context.mailbox.item.requiredAttendees.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
 Office.context.mailbox.item.requiredAttendees.addAsync( ['jason@contoso.com'] );
 Office.context.mailbox.item.requiredAttendees.getAsync(callback);
@@ -849,6 +887,8 @@ function callback(asyncResult) {
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)|Создание или чтение|
+
+<br>
 
 ---
 ---
@@ -876,11 +916,13 @@ function callback(asyncResult) {
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 var senderName = Office.context.mailbox.item.sender.displayName;
 var senderAddress = Office.context.mailbox.item.sender.emailAddress;
 console.log("Sender: " + senderName + " (" + senderAddress + ")");
 ```
+
+<br>
 
 ---
 ---
@@ -910,7 +952,7 @@ console.log("Sender: " + senderName + " (" + senderAddress + ")");
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 var seriesId = Office.context.mailbox.item.seriesId;
 
 // The seriesId property returns null for items that do
@@ -920,6 +962,8 @@ var seriesId = Office.context.mailbox.item.seriesId;
 var isSeriesInstance = (seriesId != null);
 console.log("SeriesId is " + seriesId + " and isSeriesInstance is " + isSeriesInstance);
 ```
+
+<br>
 
 ---
 ---
@@ -934,7 +978,7 @@ console.log("SeriesId is " + seriesId + " and isSeriesInstance is " + isSeriesIn
 
 Свойство `start` возвращает объект `Date`.
 
-```javascript
+```js
 var start = Office.context.mailbox.item.start;
 console.log("Appointment start: " + JSON.stringify(start));
 ```
@@ -947,7 +991,7 @@ console.log("Appointment start: " + JSON.stringify(start));
 
 В примере ниже с помощью метода [`setAsync`](/javascript/api/outlook/office.time?view=outlook-js-1.7#setasync-datetime--options--callback-) объекта `Time` задается время начала встречи в режиме создания.
 
-```javascript
+```js
 var startTime = new Date("3/14/2015");
 var options = {
   // Pass information that can be used in the callback.
@@ -975,6 +1019,8 @@ Office.context.mailbox.item.start.setAsync(startTime, options, function(result) 
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)|Создание или чтение|
 
+<br>
+
 ---
 ---
 
@@ -990,7 +1036,7 @@ Office.context.mailbox.item.start.setAsync(startTime, options, function(result) 
 
 В примере кода JavaScript, приведенном ниже, показано, как получить доступ к свойству `subject` текущего элемента в Outlook.
 
-```javascript
+```js
 var subject = Office.context.mailbox.item.subject;
 console.log(subject);
 ```
@@ -999,7 +1045,7 @@ console.log(subject);
 
 Свойство `subject` возвращает объект `Subject`, который предоставляет методы для получения и задания темы.
 
-```javascript
+```js
 Office.context.mailbox.item.subject.getAsync(callback);
 
 function callback(asyncResult) {
@@ -1020,6 +1066,8 @@ function callback(asyncResult) {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)|Создание или чтение|
 
+<br>
+
 ---
 ---
 
@@ -1031,7 +1079,7 @@ function callback(asyncResult) {
 
 Свойство `to` возвращает массив, содержащий объект `EmailAddressDetails` для каждого получателя в строке **Кому** сообщения. Коллекция может включать не более 100 элементов.
 
-```javascript
+```js
 console.log(JSON.stringify(Office.context.mailbox.item.to));
 ```
 
@@ -1039,7 +1087,7 @@ console.log(JSON.stringify(Office.context.mailbox.item.to));
 
 Свойство `to` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Кому** сообщения.
 
-```javascript
+```js
 Office.context.mailbox.item.to.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
 Office.context.mailbox.item.to.addAsync( ['jason@contoso.com'] );
 Office.context.mailbox.item.to.getAsync(callback);
@@ -1099,7 +1147,7 @@ function callback(asyncResult) {
 
 ##### <a name="examples"></a>Примеры
 
-```javascript
+```js
 function callback(result) {
   if (result.error) {
     console.log(result.error);
@@ -1119,7 +1167,7 @@ function addAttachment() {
 
 В приведенном ниже примере файл изображения добавляется в качестве встроенного вложения, а ссылка на вложение добавляется в текст сообщения.
 
-```javascript
+```js
 Office.context.mailbox.item.addFileAttachmentAsync(
   "http://i.imgur.com/WJXklif.png",
   "cute_bird.png",
@@ -1137,6 +1185,8 @@ Office.context.mailbox.item.addFileAttachmentAsync(
       });
   });
 ```
+
+<br>
 
 ---
 ---
@@ -1167,7 +1217,7 @@ Office.context.mailbox.item.addFileAttachmentAsync(
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 function myHandlerFunction(eventarg) {
   if (eventarg.attachmentStatus === Office.MailboxEnums.AttachmentStatus.Added) {
     var attachment = eventarg.attachmentDetails;
@@ -1178,6 +1228,8 @@ function myHandlerFunction(eventarg) {
 
 Office.context.mailbox.item.addHandlerAsync(Office.EventType.AttachmentsChanged, myHandlerFunction, myCallback);
 ```
+
+<br>
 
 ---
 ---
@@ -1220,7 +1272,7 @@ Office.context.mailbox.item.addHandlerAsync(Office.EventType.AttachmentsChanged,
 
 В следующем примере существующий элемент Outlook добавляется в виде вложения с именем `My Attachment`.
 
-```javascript
+```js
 function callback(result) {
   if (result.error) {
     console.log(result.error);
@@ -1239,6 +1291,8 @@ function addAttachment() {
   Office.context.mailbox.item.addItemAttachmentAsync(itemId, "My Attachment", options, callback);
 }
 ```
+
+<br>
 
 ---
 ---
@@ -1262,6 +1316,8 @@ function addAttachment() {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)|С ограничениями|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)|Создание|
 
+<br>
+
 ---
 ---
 
@@ -1283,9 +1339,9 @@ function addAttachment() {
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
 |`formData`|String &#124; Object||Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.<br/>**ИЛИ**<br/>Объект, который содержит текст или данные вложения и функцию обратного вызова. Ниже представлено определение этого объекта.|
-|`formData.htmlBody`|String|&lt;необязательно&gt;|Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.
+|`formData.htmlBody`|String.|&lt;необязательно&gt;|Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.
 |`formData.attachments`|Array.&lt;Object&gt;|&lt;необязательно&gt;|Массив объектов JSON, представляющих собой вложенные файлы или элементы.|
-|`formData.attachments.type`|String||Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента.|
+|`formData.attachments.type`|String.||Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента.|
 |`formData.attachments.name`|Строка||Строка, содержащая имя вложения, длиной до 255 символов.|
 |`formData.attachments.url`|Строка||Используется, только если свойству `type` задано значение `file`. URI расположения файла.|
 |`formData.attachments.isInline`|Логический||Используется, только если свойству `type` задано значение `file`. Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.|
@@ -1304,20 +1360,20 @@ function addAttachment() {
 
 Приведенный ниже код передает строку в функцию `displayReplyAllForm`.
 
-```javascript
+```js
 Office.context.mailbox.item.displayReplyAllForm('hello there');
 Office.context.mailbox.item.displayReplyAllForm('<b>hello there</b>');
 ```
 
 Ответ с пустым текстом сообщения.
 
-```javascript
+```js
 Office.context.mailbox.item.displayReplyAllForm({});
 ```
 
 Ответ только с текстом сообщения.
 
-```javascript
+```js
 Office.context.mailbox.item.displayReplyAllForm(
 {
   'htmlBody' : 'hi'
@@ -1326,7 +1382,7 @@ Office.context.mailbox.item.displayReplyAllForm(
 
 Ответ с текстом сообщения и вложенным файлом.
 
-```javascript
+```js
 Office.context.mailbox.item.displayReplyAllForm(
 {
   'htmlBody' : 'hi',
@@ -1343,7 +1399,7 @@ Office.context.mailbox.item.displayReplyAllForm(
 
 Ответ с текстом сообщения и вложенным элементом.
 
-```javascript
+```js
 Office.context.mailbox.item.displayReplyAllForm(
 {
   'htmlBody' : 'hi',
@@ -1360,7 +1416,7 @@ Office.context.mailbox.item.displayReplyAllForm(
 
 Ответ с текстом сообщения, вложенным файлом, вложенным элементом и обратным вызовом.
 
-```javascript
+```js
 Office.context.mailbox.item.displayReplyAllForm(
 {
   'htmlBody' : 'hi',
@@ -1383,6 +1439,8 @@ Office.context.mailbox.item.displayReplyAllForm(
   }
 });
 ```
+
+<br>
 
 ---
 ---
@@ -1405,7 +1463,7 @@ Office.context.mailbox.item.displayReplyAllForm(
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
 |`formData`|String &#124; Object||Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.<br/>**ИЛИ**<br/>Объект, который содержит текст или данные вложения и функцию обратного вызова. Ниже представлено определение этого объекта.|
-|`formData.htmlBody`|String|&lt;необязательно&gt;|Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.
+|`formData.htmlBody`|String.|&lt;необязательно&gt;|Строка, содержащая текст и HTML-код, представляющие собой основной текст формы ответа. Максимальный размер строки — 32 КБ.
 |`formData.attachments`|Array.&lt;Object&gt;|&lt;необязательно&gt;|Массив объектов JSON, представляющих собой вложенные файлы или элементы.|
 |`formData.attachments.type`|String||Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента.|
 |`formData.attachments.name`|Строка||Строка, содержащая имя вложения, длиной до 255 символов.|
@@ -1426,20 +1484,20 @@ Office.context.mailbox.item.displayReplyAllForm(
 
 Приведенный ниже код передает строку в функцию `displayReplyForm`.
 
-```javascript
+```js
 Office.context.mailbox.item.displayReplyForm('hello there');
 Office.context.mailbox.item.displayReplyForm('<b>hello there</b>');
 ```
 
 Ответ с пустым текстом сообщения.
 
-```javascript
+```js
 Office.context.mailbox.item.displayReplyForm({});
 ```
 
 Ответ только с текстом сообщения.
 
-```javascript
+```js
 Office.context.mailbox.item.displayReplyForm(
 {
   'htmlBody' : 'hi'
@@ -1448,7 +1506,7 @@ Office.context.mailbox.item.displayReplyForm(
 
 Ответ с текстом сообщения и вложенным файлом.
 
-```javascript
+```js
 Office.context.mailbox.item.displayReplyForm(
 {
   'htmlBody' : 'hi',
@@ -1465,7 +1523,7 @@ Office.context.mailbox.item.displayReplyForm(
 
 Ответ с текстом сообщения и вложенным элементом.
 
-```javascript
+```js
 Office.context.mailbox.item.displayReplyForm(
 {
   'htmlBody' : 'hi',
@@ -1482,7 +1540,7 @@ Office.context.mailbox.item.displayReplyForm(
 
 Ответ с текстом сообщения, вложенным файлом, вложенным элементом и обратным вызовом.
 
-```javascript
+```js
 Office.context.mailbox.item.displayReplyForm(
 {
   'htmlBody' : 'hi',
@@ -1505,6 +1563,8 @@ Office.context.mailbox.item.displayReplyForm(
   }
 });
 ```
+
+<br>
 
 ---
 ---
@@ -1532,9 +1592,11 @@ Office.context.mailbox.item.displayReplyForm(
 
 Ниже приведен пример получения доступа к сущностям контактов в теле текущего элемента.
 
-```javascript
+```js
 var contacts = Office.context.mailbox.item.getEntities().contacts;
 ```
+
+<br>
 
 ---
 ---
@@ -1582,7 +1644,7 @@ var contacts = Office.context.mailbox.item.getEntities().contacts;
 
 В примере ниже показано, как получить доступ к массиву строк, которые представляют собой почтовые адреса в теле текущего элемента.
 
-```javascript
+```js
 // The initialize function is required for all apps.
 Office.initialize = function () {
   // Checks for the DOM to load using the jQuery ready function.
@@ -1595,6 +1657,8 @@ Office.initialize = function () {
   });
 }
 ```
+
+<br>
 
 ---
 ---
@@ -1627,6 +1691,8 @@ Office.initialize = function () {
 Если в манифесте нет элемента `ItemHasKnownEntity` со значением `FilterName`, соответствующим параметру `name`, метод возвращает `null`. Если параметр `name` соответствует элементу `ItemHasKnownEntity` в манифесте, но при этом в текущем элементе нет соответствующих сущностей, метод возвращает пустой массив.
 
 Тип: Array.<(String|[Contact](/javascript/api/outlook/office.contact?view=outlook-js-1.7)|[MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion?view=outlook-js-1.7)|[PhoneNumber](/javascript/api/outlook/office.phonenumber?view=outlook-js-1.7)|[TaskSuggestion](/javascript/api/outlook/office.tasksuggestion?view=outlook-js-1.7))>
+
+<br>
 
 ---
 ---
@@ -1675,19 +1741,19 @@ Office.initialize = function () {
 
 Объект, содержащий массив строк, которые соответствуют регулярным выражениям, определяемым в XML-файле манифеста. Имя каждого массива равно соответствующему значению атрибута `RegExName` подходящего правила `ItemHasRegularExpressionMatch` или атрибута `FilterName` соответствующего правила `ItemHasKnownEntity`.
 
-<dl class="param-type">Тип:<dd>Object</dd>
-
-</dl>
+Тип: Object
 
 ##### <a name="example"></a>Пример
 
 В приведенном ниже примере показано, как получить доступ к массиву совпадений с элементами `fruits` и `veggies` правил активации регулярных выражений, указанными в манифесте.
 
-```javascript
+```js
 var allMatches = Office.context.mailbox.item.getRegExMatches();
 var fruits = allMatches.fruits;
 var veggies = allMatches.veggies;
 ```
+
+<br>
 
 ---
 ---
@@ -1721,20 +1787,16 @@ var veggies = allMatches.veggies;
 
 Массив строк, соответствующих регулярному выражению, определяемому в XML-файле манифеста.
 
-<dl class="param-type">
-
-<dt>Тип</dt>
-
-<dd>Array.< String ></dd>
-
-</dl>
+Тип: Array. < String >
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 var fruits = Office.context.mailbox.item.getRegExMatchesByName("fruits");
 var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");
 ```
+
+<br>
 
 ---
 ---
@@ -1766,17 +1828,11 @@ var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");
 
 Выбранные данные в виде строки с форматом, определенным в параметре `coercionType`.
 
-<dl class="param-type">
-
-<dt>Тип</dt>
-
-<dd>String</dd>
-
-</dl>
+Тип: String
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 // Get selected data.
 Office.initialize = function () {
   Office.context.mailbox.item.getSelectedDataAsync(Office.CoercionType.Text, {}, getCallback);
@@ -1793,6 +1849,8 @@ function setCallback(asyncResult) {
   // Check for errors.
 }
 ```
+
+<br>
 
 ---
 ---
@@ -1820,9 +1878,11 @@ function setCallback(asyncResult) {
 
 В приведенном ниже примере показано, как получить доступ к сущностям адресов в выделенном совпадении, выбранном пользователем.
 
-```javascript
+```js
 var contacts = Office.context.mailbox.item.getSelectedEntities().addresses;
 ```
+
+<br>
 
 ---
 ---
@@ -1875,11 +1935,13 @@ var contacts = Office.context.mailbox.item.getSelectedEntities().addresses;
 
 В приведенном ниже примере показано, как получить доступ к массиву совпадений с элементами `fruits` и `veggies` правил активации регулярных выражений, указанными в манифесте.
 
-```javascript
+```js
 var selectedMatches = Office.context.mailbox.item.getSelectedRegExMatches();
 var fruits = selectedMatches.fruits;
 var veggies = selectedMatches.veggies;
 ```
+
+<br>
 
 ---
 ---
@@ -1909,7 +1971,7 @@ var veggies = selectedMatches.veggies;
 
 Приведенный ниже пример кода показывает, как асинхронно загружать настраиваемые свойства, характерные для текущего элемента, с помощью метода `loadCustomPropertiesAsync`. Этот пример также показывает, как сохранять эти свойства на сервере с помощью метода `CustomProperties.saveAsync`. После загрузки настраиваемых свойств в этом примере кода метод `CustomProperties.get` используется для считывания настраиваемого свойства `myProp`, метод `CustomProperties.set` — для записи настраиваемого свойства `otherProp`, а метод `saveAsync` — для сохранения настраиваемых свойств.
 
-```javascript
+```js
 // The initialize function is required for all add-ins.
 Office.initialize = function () {
   // Checks for the DOM to load using the jQuery ready function.
@@ -1931,6 +1993,8 @@ function customPropsCallback(asyncResult) {
 function saveCallback(asyncResult) {
 }
 ```
+
+<br>
 
 ---
 ---
@@ -1968,7 +2032,7 @@ function saveCallback(asyncResult) {
 
 Указанный ниже код удаляет вложение с идентификатором "0".
 
-```javascript
+```js
 Office.context.mailbox.item.removeAttachmentAsync(
   '0',
   { asyncContext : null },
@@ -1978,6 +2042,8 @@ Office.context.mailbox.item.removeAttachmentAsync(
   }
 );
 ```
+
+<br>
 
 ---
 ---
@@ -2007,7 +2073,7 @@ Office.context.mailbox.item.removeAttachmentAsync(
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 Office.initialize = function (reason) {
   $(document).ready(function () {
     Office.context.mailbox.item.removeHandlerAsync(Office.EventType.RecurrenceChanged, function (result) {
@@ -2018,6 +2084,8 @@ Office.initialize = function (reason) {
   });
 };
 ```
+
+<br>
 
 ---
 ---
@@ -2043,7 +2111,7 @@ Office.initialize = function (reason) {
 
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
-|`options`|Object|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
+|`options`|Объект|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Объект|&lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
 |`callback`|функция||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>После успешного выполнения идентификатор элемента будет предоставлен в свойстве `asyncResult.value`.|
 
@@ -2057,7 +2125,7 @@ Office.initialize = function (reason) {
 
 ##### <a name="examples"></a>Примеры
 
-```javascript
+```js
 Office.context.mailbox.item.saveAsync(
   function callback(result) {
     // Process the result.
@@ -2072,6 +2140,8 @@ Office.context.mailbox.item.saveAsync(
   "status":"succeeded"
 }
 ```
+
+<br>
 
 ---
 ---
@@ -2088,7 +2158,7 @@ Office.context.mailbox.item.saveAsync(
 |---|---|---|---|
 |`data`|String||Вставляемые данные. Объем данных не должен превышать 1 000 000 символов. Если передано больше 1 000 000 символов, возвращается исключение `ArgumentOutOfRange`.|
 |`options`|Object|&lt;необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
-|`options.asyncContext`|Объект|&lt;необязательно&gt;|В методе обратного вызова разработчики могут указать любой объект, к которому необходимо получить доступ.|
+|`options.asyncContext`|Object|&lt;необязательно&gt;|В методе обратного вызова разработчики могут указать любой объект, к которому необходимо получить доступ.|
 |`options.coercionType`|[Office.CoercionType](office.md#coerciontype-string)|&lt;необязательный&gt;|Если `text`текущий стиль применяется в Outlook для веб-клиентов и клиентов для настольных ПК. Если поле представляет собой редактор HTML, вставляются только текстовые данные, даже если они имеют формат HTML.<br/><br/>Если `html` и поле поддерживает HTML (тема не используется), текущий стиль применяется в Outlook в Интернете, а в настольных клиентах Outlook применяется стиль по умолчанию. Если поле является текстовым, возвращается ошибка `InvalidDataFormat`.<br/><br/>Если свойство `coercionType` не задано, результат зависит от поля: если поле имеет формат HTML, используется текст в формате HTML, а если поле текстовое, применяется обычный текст.|
 |`callback`|функция||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).|
 
@@ -2102,7 +2172,7 @@ Office.context.mailbox.item.saveAsync(
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 Office.context.mailbox.item.setSelectedDataAsync("Hello World!");
 Office.context.mailbox.item.setSelectedDataAsync("<b>Hello World!</b>", { coercionType : "html" });
 ```

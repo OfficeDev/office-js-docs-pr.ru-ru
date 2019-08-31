@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox — набор обязательных элементов 1,6
 description: ''
-ms.date: 08/06/2019
+ms.date: 08/30/2019
 localization_priority: Normal
-ms.openlocfilehash: f394c23cf9e35e3798de1fe7559bc8083478cc6b
-ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
+ms.openlocfilehash: 82a7039602c1896488e6a2358cf345bc157b79de
+ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "36268364"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "36695982"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -80,6 +80,11 @@ ms.locfileid: "36268364"
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
+<br>
+
+---
+---
+
 #### <a name="resturl-string"></a>Рестурл: строка
 
 Возвращает URL-адрес конечной точки REST для этой учетной записи электронной почты.
@@ -130,7 +135,7 @@ ms.locfileid: "36268364"
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 Office.initialize = function (reason) {
   $(document).ready(function () {
     Office.context.mailbox.addHandlerAsync(Office.EventType.ItemChanged, loadNewItem, function (result) {
@@ -146,6 +151,11 @@ function loadNewItem(eventArgs) {
   loadProps(Office.context.mailbox.item);
 };
 ```
+
+<br>
+
+---
+---
 
 #### <a name="converttoewsiditemid-restversion--string"></a>convertToEwsId(itemId, restVersion) → {String}
 
@@ -177,13 +187,18 @@ function loadNewItem(eventArgs) {
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 // Get an item's ID from a REST API.
 var restId = 'AAMkAGVlOTZjNTM3LW...';
 
 // Treat restId as coming from the v2.0 version of the Outlook Mail API.
 var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.RestVersion.v2_0);
 ```
+
+<br>
+
+---
+---
 
 #### <a name="converttolocalclienttimetimevalue--localclienttimejavascriptapioutlookofficelocalclienttimeviewoutlook-js-16"></a>convertToLocalClientTime(timeValue) → {[LocalClientTime](/javascript/api/outlook/office.LocalClientTime?view=outlook-js-1.6)}
 
@@ -210,6 +225,11 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 ##### <a name="returns"></a>Возвращаемое значение:
 
 Тип: [LocalClientTime](/javascript/api/outlook/office.LocalClientTime?view=outlook-js-1.6)
+
+<br>
+
+---
+---
 
 #### <a name="converttorestiditemid-restversion--string"></a>convertToRestId(itemId, restVersion) → {String}
 
@@ -241,13 +261,18 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 // Get the currently selected item's ID.
 var ewsId = Office.context.mailbox.item.itemId;
 
 // Convert to a REST ID for the v2.0 version of the Outlook Mail API.
 var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.RestVersion.v2_0);
 ```
+
+<br>
+
+---
+---
 
 #### <a name="converttoutcclienttimeinput--date"></a>convertToUtcClientTime(input) → {Date}
 
@@ -273,13 +298,34 @@ var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.R
 
 Объект Date со временем в формате UTC.
 
-<dl class="param-type">
+Тип: Date
 
-<dt>Тип</dt>
+##### <a name="example"></a>Пример
 
-<dd>Date</dd>
+```js
+// Represents 3:37 PM PDT on Monday, August 26, 2019.
+var input = {
+  date: 26,
+  hours: 15,
+  milliseconds: 2,
+  minutes: 37,
+  month: 7,
+  seconds: 2,
+  timezoneOffset: -420,
+  year: 2019
+};
 
-</dl>
+// result should be a Date object.
+var result = Office.context.mailbox.convertToUtcClientTime(input);
+
+// Output should be "2019-08-26T22:37:02.002Z".
+console.log(result.toISOString());
+```
+
+<br>
+
+---
+---
 
 #### <a name="displayappointmentformitemid"></a>displayAppointmentForm(itemId)
 
@@ -312,9 +358,14 @@ var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.R
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 Office.context.mailbox.displayAppointmentForm(appointmentId);
 ```
+
+<br>
+
+---
+---
 
 #### <a name="displaymessageformitemid"></a>displayMessageForm(itemId)
 
@@ -347,9 +398,14 @@ Office.context.mailbox.displayAppointmentForm(appointmentId);
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 Office.context.mailbox.displayMessageForm(messageId);
 ```
+
+<br>
+
+---
+---
 
 #### <a name="displaynewappointmentformparameters"></a>displayNewAppointmentForm(parameters)
 
@@ -378,7 +434,7 @@ Office.context.mailbox.displayMessageForm(messageId);
 | `parameters.optionalAttendees` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.6)&gt; | Массив строк, содержащий электронные адреса, или массив, содержащий объекты `EmailAddressDetails` для каждого из необязательных участников встречи. Массив может включать не более 100 записей. |
 | `parameters.start` | Date | Объект `Date`, указывающий дату и время начала встречи. |
 | `parameters.end` | Date | Объект `Date`, указывающий дату и время окончания встречи. |
-| `parameters.location` | String | Строка со сведениями о месте встречи. Максимальное количество символов в строке — 255. |
+| `parameters.location` | String. | Строка со сведениями о месте встречи. Максимальное количество символов в строке — 255. |
 | `parameters.resources` | Array.&lt;String&gt; | Массив строк, содержащий необходимые для встречи ресурсы. Массив может включать не более 100 записей. |
 | `parameters.subject` | String | Строка с темой встречи. Максимальное количество символов в строке — 255. |
 | `parameters.body` | String | Текст сообщения о встрече. Максимальный размер содержимого сообщения — 32 КБ. |
@@ -393,7 +449,7 @@ Office.context.mailbox.displayMessageForm(messageId);
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 var start = new Date();
 var end = new Date();
 end.setHours(start.getHours() + 1);
@@ -410,6 +466,11 @@ Office.context.mailbox.displayNewAppointmentForm(
     body: 'Hello World!'
   });
 ```
+
+<br>
+
+---
+---
 
 #### <a name="displaynewmessageformparameters"></a>Дисплайневмессажеформ (Parameters)
 
@@ -430,12 +491,12 @@ Office.context.mailbox.displayNewAppointmentForm(
 | `parameters.toRecipients` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.6)&gt; | Массив строк, содержащий адреса электронной почты или массив, содержащий `EmailAddressDetails` объект для каждого из получателей в строке "Кому". Массив может включать не более 100 записей. |
 | `parameters.ccRecipients` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.6)&gt; | Массив строк, содержащий адреса электронной почты или массив, содержащий `EmailAddressDetails` объект для каждого получателя в строке "копия". Массив может включать не более 100 записей. |
 | `parameters.bccRecipients` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.6)&gt; | Массив строк, содержащий адреса электронной почты или массив, содержащий `EmailAddressDetails` объект для каждого из получателей, указанных в строке "СК". Массив может включать не более 100 записей. |
-| `parameters.subject` | String | Строка, содержащая тему сообщения. Максимальное количество символов в строке — 255. |
-| `parameters.htmlBody` | String | Текст сообщения в формате HTML. Максимальный размер содержимого сообщения — 32 КБ. |
+| `parameters.subject` | String. | Строка, содержащая тему сообщения. Максимальное количество символов в строке — 255. |
+| `parameters.htmlBody` | String. | Текст сообщения в формате HTML. Максимальный размер содержимого сообщения — 32 КБ. |
 | `parameters.attachments` | Array.&lt;Object&gt; | Массив объектов JSON, представляющих собой вложенные файлы или элементы. |
-| `parameters.attachments.type` | String | Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента. |
+| `parameters.attachments.type` | String. | Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента. |
 | `parameters.attachments.name` | Строка | Строка, содержащая имя вложения, длиной до 255 символов.|
-| `parameters.attachments.url` | String | Используется, только если свойству `type` задано значение `file`. URI расположения файла. |
+| `parameters.attachments.url` | String. | Используется, только если свойству `type` задано значение `file`. URI расположения файла. |
 | `parameters.attachments.isInline` | Логический | Используется, только если свойству `type` задано значение `file`. Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений. |
 | `parameters.attachments.itemId` | Строка | Используется, только если свойству `type` присвоено значение `item`. Идентификатор элемента EWS существующего сообщения электронной почты, которое необходимо присоединить к новому сообщению. Это строка длиной до 100 символов. |
 
@@ -450,7 +511,7 @@ Office.context.mailbox.displayNewAppointmentForm(
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 Office.context.mailbox.displayNewMessageForm(
   {
     toRecipients: Office.context.mailbox.item.to, // Copy the To line from current item
@@ -467,6 +528,11 @@ Office.context.mailbox.displayNewMessageForm(
     ]
   });
 ```
+
+<br>
+
+---
+---
 
 #### <a name="getcallbacktokenasyncoptions-callback"></a>getCallbackTokenAsync([options], callback)
 
@@ -516,7 +582,7 @@ Office.context.mailbox.displayNewMessageForm(
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 function getCallbackToken() {
   var options = {
     isRest: true,
@@ -530,6 +596,11 @@ function cb(asyncResult) {
   var token = asyncResult.value;
 }
 ```
+
+<br>
+
+---
+---
 
 #### <a name="getcallbacktokenasynccallback-usercontext"></a>getCallbackTokenAsync(callback, [userContext])
 
@@ -568,7 +639,7 @@ function cb(asyncResult) {
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 function getCallbackToken() {
   Office.context.mailbox.getCallbackTokenAsync(cb);
 }
@@ -577,6 +648,11 @@ function cb(asyncResult) {
   var token = asyncResult.value;
 }
 ```
+
+<br>
+
+---
+---
 
 #### <a name="getuseridentitytokenasynccallback-usercontext"></a>getUserIdentityTokenAsync(callback, [userContext])
 
@@ -609,7 +685,7 @@ function cb(asyncResult) {
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 function getIdentityToken() {
   Office.context.mailbox.getUserIdentityTokenAsync(cb);
 }
@@ -618,6 +694,11 @@ function cb(asyncResult) {
   var token = asyncResult.value;
 }
 ```
+
+<br>
+
+---
+---
 
 #### <a name="makeewsrequestasyncdata-callback-usercontext"></a>makeEwsRequestAsync(data, callback, [userContext])
 
@@ -675,7 +756,7 @@ function cb(asyncResult) {
 
 В приведенном ниже примере вызывается `makeEwsRequestAsync` для получения темы элемента с помощью операции `GetItem`.
 
-```javascript
+```js
 function getSubjectRequest(id) {
   // Return a GetItem operation request for the subject of the specified item.
   var request =
@@ -716,6 +797,11 @@ function callback(asyncResult)  {
   // Process the returned response here.
 }
 ```
+
+<br>
+
+---
+---
 
 #### <a name="removehandlerasynceventtype-options-callback"></a>removeHandlerAsync(eventType, [options], [callback])
 

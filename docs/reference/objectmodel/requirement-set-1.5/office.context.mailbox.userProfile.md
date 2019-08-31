@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox. userProfile — набор обязательных элементов 1,5
 description: ''
-ms.date: 03/19/2019
+ms.date: 04/24/2019
 localization_priority: Normal
-ms.openlocfilehash: fc20497cc8df8d091ba0195f7dca9b283ff4d1c2
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 993fad674fcc616483ac927619e7ca64d81b7326
+ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451824"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "36696094"
 ---
 # <a name="userprofile"></a>userProfile
 
@@ -30,9 +30,9 @@ ms.locfileid: "32451824"
 | [emailAddress](#emailaddress-string) | Member |
 | [timeZone](#timezone-string) | Member |
 
-### <a name="members"></a>Элементы
+### <a name="members"></a>Members
 
-####  <a name="displayname-string"></a>displayName :String
+#### <a name="displayname-string"></a>displayName: строка
 
 Получает отображаемое имя пользователя.
 
@@ -50,12 +50,17 @@ ms.locfileid: "32451824"
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 // Example: Allie Bellew
 console.log(Office.context.mailbox.userProfile.displayName);
 ```
 
-####  <a name="emailaddress-string"></a>emailAddress :String
+<br>
+
+---
+---
+
+#### <a name="emailaddress-string"></a>emailAddress: строка
 
 Получает адрес электронной почты SMTP пользователя.
 
@@ -73,12 +78,17 @@ console.log(Office.context.mailbox.userProfile.displayName);
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 // Example: allieb@contoso.com
 console.log(Office.context.mailbox.userProfile.emailAddress);
 ```
 
-####  <a name="timezone-string"></a>timeZone :String
+<br>
+
+---
+---
+
+#### <a name="timezone-string"></a>Часовой пояс: строка
 
 Получает часовой пояс пользователя по умолчанию.
 
@@ -96,7 +106,7 @@ console.log(Office.context.mailbox.userProfile.emailAddress);
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 // Example: Pacific Standard Time
 console.log(Office.context.mailbox.userProfile.timeZone);
 ```

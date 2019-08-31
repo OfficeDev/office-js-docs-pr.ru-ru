@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox — набор обязательных элементов 1,2
 description: ''
-ms.date: 08/08/2019
+ms.date: 08/30/2019
 localization_priority: Normal
-ms.openlocfilehash: 7e5bbe4e5769cf92de8073d439c3d3472b5c3899
-ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
+ms.openlocfilehash: 2002b7784d0d7295762d1f692e7a0115f1f97059
+ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "36268420"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "36696346"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -83,7 +83,7 @@ ms.locfileid: "36268420"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`timeValue`| Дата|Объект Date|
+|`timeValue`| Date|Объект Date|
 
 ##### <a name="requirements"></a>Требования
 
@@ -96,6 +96,11 @@ ms.locfileid: "36268420"
 ##### <a name="returns"></a>Возвращаемое значение:
 
 Тип: [LocalClientTime](/javascript/api/outlook/office.LocalClientTime?view=outlook-js-1.2)
+
+<br>
+
+---
+---
 
 #### <a name="converttoutcclienttimeinput--date"></a>convertToUtcClientTime(input) → {Date}
 
@@ -121,13 +126,34 @@ ms.locfileid: "36268420"
 
 Объект Date со временем в формате UTC.
 
-<dl class="param-type">
+Тип: Date
 
-<dt>Тип</dt>
+##### <a name="example"></a>Пример
 
-<dd>Date</dd>
+```js
+// Represents 3:37 PM PDT on Monday, August 26, 2019.
+var input = {
+  date: 26,
+  hours: 15,
+  milliseconds: 2,
+  minutes: 37,
+  month: 7,
+  seconds: 2,
+  timezoneOffset: -420,
+  year: 2019
+};
 
-</dl>
+// result should be a Date object.
+var result = Office.context.mailbox.convertToUtcClientTime(input);
+
+// Output should be "2019-08-26T22:37:02.002Z".
+console.log(result.toISOString());
+```
+
+<br>
+
+---
+---
 
 #### <a name="displayappointmentformitemid"></a>displayAppointmentForm(itemId)
 
@@ -160,9 +186,14 @@ ms.locfileid: "36268420"
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 Office.context.mailbox.displayAppointmentForm(appointmentId);
 ```
+
+<br>
+
+---
+---
 
 #### <a name="displaymessageformitemid"></a>displayMessageForm(itemId)
 
@@ -195,9 +226,14 @@ Office.context.mailbox.displayAppointmentForm(appointmentId);
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 Office.context.mailbox.displayMessageForm(messageId);
 ```
+
+<br>
+
+---
+---
 
 #### <a name="displaynewappointmentformparameters"></a>displayNewAppointmentForm(parameters)
 
@@ -238,7 +274,7 @@ Office.context.mailbox.displayMessageForm(messageId);
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 var start = new Date();
 var end = new Date();
 end.setHours(start.getHours() + 1);
@@ -255,6 +291,11 @@ Office.context.mailbox.displayNewAppointmentForm(
     body: 'Hello World!'
   });
 ```
+
+<br>
+
+---
+---
 
 #### <a name="getcallbacktokenasynccallback-usercontext"></a>getCallbackTokenAsync(callback, [userContext])
 
@@ -291,7 +332,7 @@ Office.context.mailbox.displayNewAppointmentForm(
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 function getCallbackToken() {
   Office.context.mailbox.getCallbackTokenAsync(cb);
 }
@@ -300,6 +341,11 @@ function cb(asyncResult) {
   var token = asyncResult.value;
 }
 ```
+
+<br>
+
+---
+---
 
 #### <a name="getuseridentitytokenasynccallback-usercontext"></a>getUserIdentityTokenAsync(callback, [userContext])
 
@@ -332,7 +378,7 @@ function cb(asyncResult) {
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 function getIdentityToken() {
   Office.context.mailbox.getUserIdentityTokenAsync(cb);
 }
@@ -341,6 +387,11 @@ function cb(asyncResult) {
   var token = asyncResult.value;
 }
 ```
+
+<br>
+
+---
+---
 
 #### <a name="makeewsrequestasyncdata-callback-usercontext"></a>makeEwsRequestAsync(data, callback, [userContext])
 
@@ -398,7 +449,7 @@ function cb(asyncResult) {
 
 В приведенном ниже примере вызывается `makeEwsRequestAsync` для получения темы элемента с помощью операции `GetItem`.
 
-```javascript
+```js
 function getSubjectRequest(id) {
   // Return a GetItem operation request for the subject of the specified item.
   var request =

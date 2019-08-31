@@ -3,12 +3,12 @@ title: Предварительная версия набора обязател
 description: ''
 ms.date: 08/15/2019
 localization_priority: Priority
-ms.openlocfilehash: 14f40830bb8f0f0e0232e6ae2305d60e400ca145
-ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
+ms.openlocfilehash: aa3f46c505e8c87508699f6e84194272ee4d13bb
+ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "36477894"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "36696458"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -69,6 +69,8 @@ ms.locfileid: "36477894"
 
 **Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365), Outlook в Интернете (современная версия), Outlook для Mac (версия, подключенная к подписке на Office 365)
 
+<br>
+
 ---
 
 ### <a name="block-on-send"></a>Блокировка при отправке
@@ -78,6 +80,8 @@ ms.locfileid: "36477894"
 Добавлен новый необязательный параметр `options`, представляющий собой словарь с одним допустимым значением `allowEvent`. Это значение используется для отмены выполнения события.
 
 **Доступно в** Outlook в Интернете (классическая версия), Outlook для Windows (версия, подключенная к подписке на Office 365), Outlook для Mac (версия, подключенная к подписке на Office 365)
+
+<br>
 
 ---
 
@@ -124,6 +128,8 @@ ms.locfileid: "36477894"
 
 **Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365), Outlook для Mac (версия, подключенная к подписке на Office 365)
 
+<br>
+
 ---
 
 ### <a name="delegate-access"></a>Делегированный доступ
@@ -157,6 +163,8 @@ ms.locfileid: "36477894"
 К элементу манифеста [DesktopFormFactor](../../manifest/desktopformfactor.md) добавлен дочерний элемент. Он определяет, доступна ли надстройка в сценариях делегирования.
 
 **Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365), Outlook в Интернете (современная версия), Outlook для Mac (версия, подключенная к подписке на Office 365)
+
+<br>
 
 ---
 
@@ -198,6 +206,8 @@ ms.locfileid: "36477894"
 
 **Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365), Outlook в Интернете (современная версия), Outlook для Mac (версия, подключенная к подписке на Office 365)
 
+<br>
+
 ---
 
 ### <a name="integration-with-actionable-messages"></a>Взаимодействие с интерактивными сообщениями
@@ -207,6 +217,8 @@ ms.locfileid: "36477894"
 Добавлена новая функция, которая возвращает данные инициализации, передаваемые при [активации надстройки интерактивным сообщением](/outlook/actionable-messages/invoke-add-in-from-actionable-message).
 
 **Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365), Outlook в Интернете (классическая версия)
+
+<br>
 
 ---
 
@@ -224,6 +236,8 @@ ms.locfileid: "36477894"
 
 **Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365), Outlook для Mac (версия, подключенная к подписке на Office 365)
 
+<br>
+
 ---
 
 ### <a name="office-theme"></a>Тема Office
@@ -239,6 +253,8 @@ ms.locfileid: "36477894"
 Добавлено событие `OfficeThemeChanged` для объекта `Mailbox`.
 
 **Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+
+<br>
 
 ---
 

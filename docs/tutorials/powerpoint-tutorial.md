@@ -4,12 +4,12 @@ description: Из этого руководства вы узнаете, как 
 ms.date: 12/31/2018
 ms.prod: powerpoint
 localization_priority: Normal
-ms.openlocfilehash: a004a510a4cc874ecaab8260862b7379efaf9cf2
-ms.sourcegitcommit: 49af31060aa56c1e1ec1e08682914d3cbefc3f1c
+ms.openlocfilehash: 0ffd3eedf0cb1d3a118edd0a22b3066cc396d320
+ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "36672889"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "36696031"
 ---
 # <a name="tutorial-create-a-powerpoint-task-pane-add-in"></a>Учебник: Создание надстройки области задач PowerPoint
 
@@ -65,7 +65,7 @@ ms.locfileid: "36672889"
 
 2. Откройте файл **Home.js** в корневой папке проекта веб-приложения. Этот файл содержит скрипт надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.
 
-    ```javascript
+    ```js
     (function () {
         "use strict";
 
@@ -179,13 +179,13 @@ ms.locfileid: "36672889"
 
 7. В файле **Home.js** замените `TODO1` приведенным ниже кодом, чтобы назначить обработчик событий для кнопки **Insert Image** (Вставить изображение).
 
-    ```javascript
+    ```js
     $('#insert-image').click(insertImage);
     ```
 
 8. В файле **Home.js** замените `TODO2` приведенным ниже кодом, чтобы определить функцию **insertImage**. Эта функция извлекает изображение из веб-службы Bing, а затем вызывает функцию `insertImageFromBase64String`, чтобы вставить его в документ.
 
-    ```javascript
+    ```js
     function insertImage() {
         // Get image from from web service (as a Base64 encoded string).
         $.ajax({
@@ -204,7 +204,7 @@ ms.locfileid: "36672889"
 
     - Объект `asyncResult` инкапсулирует результат запроса `setSelectedDataAsync`, включая сведения о состоянии и ошибке, если запрос завершился ошибкой.
 
-    ```javascript
+    ```js
     function insertImageFromBase64String(image) {
         // Call Office.js to insert the image into the document.
         Office.context.document.setSelectedDataAsync(image, {
@@ -291,13 +291,13 @@ ms.locfileid: "36672889"
 
 2. В файле **Home.js** замените `TODO4` приведенным ниже кодом, чтобы назначить обработчик событий для кнопки **Insert Text** (Вставить текст).
 
-    ```javascript
+    ```js
     $('#insert-text').click(insertText);
     ```
 
 3. В файле **Home.js** замените `TODO5` приведенным ниже кодом, чтобы определить функцию **insertText**. Эта функция вставляет текст в текущий слайд.
 
-    ```javascript
+    ```js
     function insertText() {
         Office.context.document.setSelectedDataAsync('Hello World!',
             function (asyncResult) {
@@ -348,13 +348,13 @@ ms.locfileid: "36672889"
 
 2. В файле **Home.js** замените `TODO6` приведенным ниже кодом, чтобы назначить обработчик событий для кнопки **Get Slide Metadata** (Получить метаданные слайда).
 
-    ```javascript
+    ```js
     $('#get-slide-metadata').click(getSlideMetadata);
     ```
 
 3. В файле **Home.js** замените `TODO7` приведенным ниже кодом, чтобы определить функцию **getSlideMetadata**. Эта функция извлекает метаданные выбранных слайдов и записывает их во всплывающее диалоговое окно в области задач надстройки.
 
-    ```javascript
+    ```js
     function getSlideMetadata() {
         Office.context.document.getSelectedDataAsync(Office.CoercionType.SlideRange,
             function (asyncResult) {
@@ -421,7 +421,7 @@ ms.locfileid: "36672889"
 
 2. В файле **Home.js** замените `TODO8` приведенным ниже кодом, чтобы назначить обработчик событий для четырех кнопок навигации.
 
-    ```javascript
+    ```js
     $('#go-to-first-slide').click(goToFirstSlide);
     $('#go-to-next-slide').click(goToNextSlide);
     $('#go-to-previous-slide').click(goToPreviousSlide);
@@ -430,7 +430,7 @@ ms.locfileid: "36672889"
 
 3. В файле **Home.js** замените `TODO9` приведенным ниже кодом, чтобы определить функции навигации. Каждая из этих функций использует функцию `goToByIdAsync` для выбора слайда с учетом его позиции в документе (первый, последний, предыдущий, следующий).
 
-    ```javascript
+    ```js
     function goToFirstSlide() {
         Office.context.document.goToByIdAsync(Office.Index.First, Office.GoToType.Index,
             function (asyncResult) {

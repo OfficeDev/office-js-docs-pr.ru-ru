@@ -3,12 +3,12 @@ title: Оптимизация производительности API JavaScrip
 description: Оптимизируйте производительность с использованием API JavaScript для Excel
 ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: bd3446b5bb33549002c2ad2325a11ea563c6b7d1
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 7ffca45d1d7f6619fa1d942befed1856f77934d9
+ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128306"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "36695849"
 ---
 # <a name="performance-optimization-using-the-excel-javascript-api"></a>Оптимизация производительности с использованием API JavaScript для Excel
 
@@ -24,7 +24,7 @@ ms.locfileid: "35128306"
 
 Избегайте повторного создания одного и того же прокси-объекта. Вместо этого, если вам нужен одинаковый прокси-объект для нескольких операций, создайте его один раз и назначьте его переменной, а затем используйте эту переменную в своем коде.
 
-```javascript
+```js
 // BAD: repeated calls to .getRange() to create the same proxy object
 worksheet.getRange("A1").format.fill.color = "red";
 worksheet.getRange("A1").numberFormat = "0.00%";

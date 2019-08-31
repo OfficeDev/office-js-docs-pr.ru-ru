@@ -3,12 +3,12 @@ title: Создание надстройки Office на платформе Node
 description: ''
 ms.date: 08/21/2019
 localization_priority: Priority
-ms.openlocfilehash: a5f607ce582408307165e3bc03eeeaf48d3587e3
-ms.sourcegitcommit: 70c6dcecfa2ff7a0dd89987084dc1c8e36ee85fc
+ms.openlocfilehash: 65efb7b4423a2764bcc07e3105dfb87292895297
+ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "36564597"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "36695800"
 ---
 # <a name="create-a-nodejs-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office на платформе Node.js с использованием единого входа (предварительная версия)
 
@@ -122,7 +122,7 @@ ms.locfileid: "36564597"
     * При обработке ошибок в надстройке иногда автоматически выполняется еще одна попытка получить маркер доступа с помощью другого набора параметров. Переменная счетчика `timesGetOneDriveFilesHasRun`, переменные флага `triedWithoutForceConsent` и `timesMSGraphErrorReceived` используются, чтобы для пользователя не повторялись циклически неудачные попытки получить маркер.
     * Метод `getDataWithToken` создается на следующем шаге. Обратите внимание на то, что он присваивает параметру `forceConsent` значение `false`. Дополнительные сведения см. в описании следующего шага.
 
-    ```javascript
+    ```js
     var timesGetOneDriveFilesHasRun = 0;
     var triedWithoutForceConsent = false;
     var timesMSGraphErrorReceived = false;
@@ -141,7 +141,7 @@ ms.locfileid: "36564597"
     * Параметр настроек задает для `forceConsent` значение `false`, поэтому пользователю не будет предлагаться разрешить ведущему приложению Office доступ к надстройке при каждом ее использовании. При первом запуске надстройки вызов `getAccessTokenAsync` не будет выполнен, но логика обработки ошибок, которую вы добавите на следующем этапе, автоматически выполнит повторный вызов, при этом параметру `forceConsent` будет задано значение `true`, и пользователю будет предложено согласиться. Такая процедура выполняется только в первый раз.
     * Вы создадите метод `handleClientSideErrors` позже.
 
-    ```javascript
+    ```js
     function getDataWithToken(options) {
     Office.context.auth.getAccessTokenAsync(options,
         function (result) {
@@ -157,7 +157,7 @@ ms.locfileid: "36564597"
 
 1. Замените строку TODO1 на приведенные ниже строки. Метод `getData` и серверный маршрут /api/values создаются позже. Для конечной точки используется относительный URL-адрес, так как она должна размещаться на том же домене, что и надстройка.
 
-    ```javascript
+    ```js
     accessToken = result.value;
     getData("/api/values", accessToken);
     ```
@@ -167,7 +167,7 @@ ms.locfileid: "36564597"
     * Этот метод вызывает указанную конечную точку веб-API и передает ей тот же маркер доступа, который ведущее приложение Office использовало для доступа к надстройке. На стороне сервера этот маркер доступа будет использоваться в потоке "от имени" для получения маркера доступа к Microsoft Graph.
     * Вы создадите метод `handleServerSideErrors` позже.
 
-    ```javascript
+    ```js
     function getData(relativeUrl, accessToken) {
         $.ajax({
             url: relativeUrl,
@@ -187,7 +187,7 @@ ms.locfileid: "36564597"
 
 1. Под методом `getData` добавьте приведенный ниже метод. Этот метод будет обрабатывать ошибки в клиенте надстройки, когда ведущее приложение Office не сможет получить маркер доступа к веб-службе надстройки. Сообщения о таких ошибках содержат код ошибки, поэтому данный метод различает их с помощью оператора `switch`.
 
-    ```javascript
+    ```js
     function handleClientSideErrors(result) {
 
         switch (result.error.code) {
@@ -220,7 +220,7 @@ ms.locfileid: "36564597"
 
 1. Замените `TODO2` приведенным ниже кодом. Ошибка 13001 возникает, если пользователь не выполнил вход или без отклика отменил запрос на предоставление 2-го фактора проверки подлинности. В обоих случаях код повторно выполняет метод `getDataWithToken` и задает параметр для принудительного запрашивания входа.
 
-    ```javascript
+    ```js
     case 13001:
         getDataWithToken({ forceAddAccount: true });
         break;
@@ -228,7 +228,7 @@ ms.locfileid: "36564597"
 
 1. Замените `TODO3` приведенным ниже кодом. Ошибка 13002 возникает, когда вход или предоставление разрешений прерывается. Попросите пользователя повторить попытку, но не более одного раза.
 
-    ```javascript
+    ```js
     case 13002:
         if (timesGetOneDriveFilesHasRun < 2) {
             showResult(['Your sign-in or consent was aborted before completion. Please try that operation again.']);
@@ -240,7 +240,7 @@ ms.locfileid: "36564597"
 
 1. Замените `TODO4` приведенным ниже кодом. Ошибка 13003 возникает, когда пользователь входит под учетной записью, отличной от рабочей, учебной или личной учетной записи Майкрософт. Попросите пользователя выйти, а затем войти с помощью учетной записи поддерживаемого типа.
 
-    ```javascript
+    ```js
     case 13003:
         showResult(['Please sign out of Office and sign in again with a work or school account, or Microsoft Account. Other kinds of accounts, like corporate domain accounts do not work.']);
         break;
@@ -251,7 +251,7 @@ ms.locfileid: "36564597"
 
 1. Замените `TODO5` приведенным ниже кодом. Ошибка 13005 возникает, когда Office не имеет разрешение на использование надстройки веб-службы, либо пользователь не предоставил разрешение на использование службы для `profile`.
 
-    ```javascript
+    ```js
     case 13005:
         getDataWithToken({ forceConsent: true });
         break;
@@ -259,7 +259,7 @@ ms.locfileid: "36564597"
 
 1. Замените `TODO6` приведенным ниже кодом. Ошибка 13006 возникает, если происходит неопределенная ошибка ведущего приложения Office, которая может свидетельствовать о его нестабильном состоянии. Попросите пользователя перезапустить Office.
 
-    ```javascript
+    ```js
     case 13006:
         showResult(['Please save your work, sign out of Office, close all Office applications, and restart this Office application.']);
         break;
@@ -267,7 +267,7 @@ ms.locfileid: "36564597"
 
 1. Замените `TODO7` приведенным ниже кодом. Ошибка 13007 возникает, когда нарушается взаимодействие ведущего приложения Office с AAD, из-за чего это приложение не может получить маркер доступа к веб-службе/приложению надстройки. Это может быть из-за временного сбоя сети. Попросите пользователя повторить попытку позже.
 
-    ```javascript
+    ```js
     case 13007:
         showResult(['That operation cannot be done at this time. Please try again later.']);
         break;
@@ -275,7 +275,7 @@ ms.locfileid: "36564597"
 
 1. Замените `TODO8` приведенным ниже кодом. Ошибка 13008 возникает, когда пользователь запускает операцию, которая вызывает `getAccessTokenAsync`, до завершения предыдущего вызова.
 
-    ```javascript
+    ```js
     case 13008:
         showResult(['Please try that operation again after the current operation has finished.']);
         break;
@@ -283,7 +283,7 @@ ms.locfileid: "36564597"
 
 1. Замените `TODO9` указанным ниже кодом. Ошибка 13009 возникает, если надстройка не поддерживает принудительное запрашивание разрешения, но выполняется вызов `getAccessTokenAsync` с установкой для параметра `forceConsent` значения `true`. Обычно в таком случае код должен автоматически повторно запустить метод `getAccessTokenAsync` с параметром, имеющим значение `false`. Но в некоторых случаях вызов метода с установкой для параметра `forceConsent` значения `true` сам по себе является автоматическим откликом на ошибку вызова метода с установкой для параметра значения `false`. В этом случае код должен не повторять попытку, а предложить пользователю выйти и войти заново.
 
-    ```javascript
+    ```js
     case 13009:
         if (triedWithoutForceConsent) {
             showResult(['Please sign out of Office and sign in again with a work or school account, or Microsoft Account.']);
@@ -295,7 +295,7 @@ ms.locfileid: "36564597"
 
 1. Replace `TODO10` with the following code.
 
-    ```javascript
+    ```js
     default:
         logError(result);
         break;
@@ -303,7 +303,7 @@ ms.locfileid: "36564597"
 
 1. Под методом `handleClientSideErrors` добавьте приведенный ниже метод. Этот метод обрабатывает ошибки в веб-службе надстройки при неправильном выполнении потока "от имени" или получении данных от Microsoft Graph.
 
-    ```javascript
+    ```js
     function handleServerSideErrors(result) {
 
         // TODO11: Handle the case where AAD asks for an additional form of authentication.
@@ -327,7 +327,7 @@ ms.locfileid: "36564597"
     * Существуют конфигурации Azure Active Directory, согласно которым пользователю необходимо предоставить дополнительные факторы проверки подлинности для доступа к некоторым целевым объектам Microsoft Graph (например, OneDrive), даже если пользователь может войти в Office, указав всего лишь пароль. В таком случае AAD отправит отклик, содержащий номер ошибки 50076 со свойством `Claims`.
     * Ведущее приложение Office должно получить новый маркер со значением **Claims** в качестве параметра `authChallenge`. Так AAD получит команду отобразить для пользователя запрос на прохождение всех форм проверки подлинности.
 
-    ```javascript
+    ```js
     if (result.responseJSON.error.innerError
             && result.responseJSON.error.innerError.error_codes
             && result.responseJSON.error.innerError.error_codes[0] === 50076){
@@ -340,7 +340,7 @@ ms.locfileid: "36564597"
     * Ошибка 65001 означает, что доступ к Microsoft Graph не был предоставлен (или был отозван) для одного или нескольких разрешений.
     * Надстройка должна получить новый маркер (параметру `forceConsent` должно быть задано значение `true`).
 
-    ```javascript
+    ```js
     else if (result.responseJSON.error.innerError
             && result.responseJSON.error.innerError.error_codes
             && result.responseJSON.error.innerError.error_codes[0] === 65001){
@@ -353,7 +353,7 @@ ms.locfileid: "36564597"
     * Ошибка 70011 означает, что запрошена недопустимая область (разрешение). Надстройка должна сообщить об ошибке.
     * Код регистрирует любую другую ошибку с номером ошибки AAD.
 
-    ```javascript
+    ```js
     else if (result.responseJSON.error.innerError
             && result.responseJSON.error.innerError.error_codes
             && result.responseJSON.error.innerError.error_codes[0] === 70011){
@@ -366,7 +366,7 @@ ms.locfileid: "36564597"
     * Код на стороне сервера, который вы создадите на более позднем этапе, отправит сообщение, заканчивающееся на `... expected access_as_user`, если область (разрешение) `access_as_user` будет отсутствовать в маркере доступа, отправляемом клиентом надстройки в AAD для использования в потоке "от имени".
     * Надстройка должна сообщить об ошибке.
 
-    ```javascript
+    ```js
     else if (result.responseJSON.error.name
             && result.responseJSON.error.name.indexOf('expected access_as_user') !== -1){
         showResult(['Microsoft Office does not have permission to get Microsoft Graph data on behalf of the current user.']);
@@ -379,7 +379,7 @@ ms.locfileid: "36564597"
     * В этом случае надстройка должна начать заново весь процесс проверки подлинности, сбросив счетчик `timesGetOneDriveFilesHasRun` и переменные флага `timesGetOneDriveFilesHasRun`, а затем повторно вызвать метод обработчика кнопок. Но она должна сделать это только один раз. Если ситуация повторится, надстройка должна просто зарегистрировать ошибку.
     * Код зарегистрирует ошибку, если она повторится два раза подряд.
 
-    ```javascript
+    ```js
     else if (result.responseJSON.error.name
             && result.responseJSON.error.name.indexOf('Microsoft Graph error') !== -1) {
         if (!timesMSGraphErrorReceived) {
@@ -395,7 +395,7 @@ ms.locfileid: "36564597"
 
 1. Замените `TODO16` приведенным ниже кодом *непосредственно под последней закрывающей фигурной скобкой кода, который вы добавили на предыдущем этапе*.
 
-    ```javascript
+    ```js
     else {
         logError(result);
     }

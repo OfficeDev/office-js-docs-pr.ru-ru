@@ -3,12 +3,12 @@ title: Создание команд надстроек в манифесте д
 description: Используйте элемент VersionOverrides в манифесте, чтобы определить команды надстроек для Excel, Word и PowerPoint. Используйте команды надстроек, чтобы создать элементы пользовательского интерфейса, добавить кнопки или списки, а также для выполнения действий.
 ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 9917eaa7b28ea843703a1de566b41277517b20fa
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: a614d2786652058c42dbcca726546575e71f12ef
+ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128180"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "36695898"
 ---
 # <a name="create-add-in-commands-in-your-manifest-for-excel-word-and-powerpoint"></a>Создание команд надстроек в манифесте для Excel, Word и PowerPoint
 
@@ -166,7 +166,7 @@ JavaScript должен вызывать `Office.initialize` в HTML-файле,
 
 Приведенный ниже пример кода показывает, как внедрить функцию, используемую элементом **FunctionName**.
 
-```javascript
+```js
 
 <script>
     // The initialize function must be run each time a new page is loaded.

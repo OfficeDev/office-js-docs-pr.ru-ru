@@ -3,12 +3,12 @@ title: Пространство имен Office — набор обязател�
 description: ''
 ms.date: 08/13/2019
 localization_priority: Normal
-ms.openlocfilehash: 84e8fa49e1d4dce4239525badafaa051325bb3ec
-ms.sourcegitcommit: 1c7e555733ee6d5a08e444a3c4c16635d998e032
+ms.openlocfilehash: ae764e8cda2b3f14e33b883d054379db7b37a687
+ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "36395640"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "36696003"
 ---
 # <a name="office"></a>Office
 
@@ -60,6 +60,9 @@ ms.locfileid: "36395640"
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
+<br>
+
+---
 ---
 
 #### <a name="coerciontype-string"></a>CoercionType: строка
@@ -75,7 +78,7 @@ ms.locfileid: "36395640"
 |Имя| Тип| Описание|
 |---|---|---|
 |`Html`| String|Запрашивает возврат данных в формате HTML.|
-|`Text`| String|Запрашивает возврат данных в формате текста.|
+|`Text`| String.|Запрашивает возврат данных в формате текста.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -84,6 +87,9 @@ ms.locfileid: "36395640"
 |[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
+<br>
+
+---
 ---
 
 #### <a name="eventtype-string"></a>EventType: строка
@@ -107,6 +113,9 @@ ms.locfileid: "36395640"
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.5 |
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение |
 
+<br>
+
+---
 ---
 
 #### <a name="sourceproperty-string"></a>Перестрока: строка
@@ -122,7 +131,7 @@ ms.locfileid: "36395640"
 |Имя| Тип| Описание|
 |---|---|---|
 |`Body`| String|Источник данных — текст сообщения.|
-|`Subject`| String|Источник данных — тема сообщения.|
+|`Subject`| String.|Источник данных — тема сообщения.|
 
 ##### <a name="requirements"></a>Требования
 

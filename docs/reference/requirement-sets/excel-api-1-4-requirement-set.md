@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1,4
 ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 8dd672dc8ff30a47f7858934d995d809070eb3cf
-ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
+ms.openlocfilehash: b0f74d4de5ec867e21e4bec1cd9ab1983a87bab1
+ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "36064741"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "36695835"
 ---
 # <a name="whats-new-in-excel-javascript-api-14"></a>Новые возможности API JavaScript для Excel 1.4
 
@@ -42,7 +42,7 @@ ms.locfileid: "36064741"
 * `range.getColumnsAfter(count: number)` и `range.getColumnsBefore(count: number)`, чтобы вернуть определенное количество столбцов справа/слева от текущего объекта Range.
 * [Функция "получить элемент" или "null Object](../../excel/excel-add-ins-advanced-concepts.md#ornullobject-methods)": Эта функция позволяет получать объект с помощью ключа. Если объект не существует, `isNullObject` свойство возвращаемого объекта будет иметь значение true. Это позволяет разработчикам проверять, существует ли объект, но не обрабатывать его с помощью обработки исключений. `*OrNullObject` Метод доступен для большинства объектов Collection.
 
-```javascript
+```js
 worksheet.getItemOrNullObject("itemName")
 ```
 

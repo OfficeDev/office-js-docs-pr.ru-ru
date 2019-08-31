@@ -3,12 +3,12 @@ title: Office. Context. Mailbox. userProfile — набор обязательн
 description: ''
 ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: 3ca06925dcd37d8e68f086daf4705b10fb936623
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: b05a1560c14a3a08fb5ddf30a0bd326a7898a0f9
+ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127207"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "36695989"
 ---
 # <a name="userprofile"></a>userProfile
 
@@ -61,9 +61,14 @@ ms.locfileid: "35127207"
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 console.log(Office.context.mailbox.userProfile.accountType);
 ```
+
+<br>
+
+---
+---
 
 #### <a name="displayname-string"></a>displayName: строка
 
@@ -83,10 +88,15 @@ console.log(Office.context.mailbox.userProfile.accountType);
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 // Example: Allie Bellew
 console.log(Office.context.mailbox.userProfile.displayName);
 ```
+
+<br>
+
+---
+---
 
 #### <a name="emailaddress-string"></a>emailAddress: строка
 
@@ -106,10 +116,15 @@ console.log(Office.context.mailbox.userProfile.displayName);
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 // Example: allieb@contoso.com
 console.log(Office.context.mailbox.userProfile.emailAddress);
 ```
+
+<br>
+
+---
+---
 
 #### <a name="timezone-string"></a>Часовой пояс: строка
 
@@ -129,7 +144,7 @@ console.log(Office.context.mailbox.userProfile.emailAddress);
 
 ##### <a name="example"></a>Пример
 
-```javascript
+```js
 // Example: Pacific Standard Time
 console.log(Office.context.mailbox.userProfile.timeZone);
 ```

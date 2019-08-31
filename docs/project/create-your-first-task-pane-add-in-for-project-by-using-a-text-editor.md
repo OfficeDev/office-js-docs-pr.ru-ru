@@ -3,12 +3,12 @@ title: Создание первой надстройки области зад�
 description: ''
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 84e08c1851312f6ecca6d7c779d0b594666922b4
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 8c6a961881ca80bc61c75c78405d9f80f8a9420b
+ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451015"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "36695772"
 ---
 # <a name="create-your-first-task-pane-add-in-for-microsoft-project-by-using-a-text-editor"></a>Создание первой надстройки области задач для Microsoft Project с помощью текстового редактора
 
@@ -109,7 +109,7 @@ ms.locfileid: "32451015"
 
    Переменная **\_projDoc** инициализируется с объектом **ProjectDocument**. Код включает функции обработки простых ошибок, а также функцию **getContextValues**, которая получает контекст приложения и свойства контекста для документа проекта. Дополнительные сведения об объектной модели JavaScript для Project см. в статье [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office).
 
-    ```javascript
+    ```js
     /*
     * JavaScript functions for the Project OM Test example app
     * in the Project 2013 SDK.
@@ -193,7 +193,7 @@ ms.locfileid: "32451015"
 
    Все функции в коде ниже содержат анонимную функцию, которую определяет `function (asyncResult)`обратная функция, получающая асинхронный результат. Вместо анонимных можно использовать именованные функции. Благодаря этому будет удобней обеспечивать поддержку сложных надстроек.
 
-    ```javascript
+    ```js
     // Get the data in the selected cells of the grid in the active view.
     function getSelectedDataAsync() {
         _projDoc.getSelectedDataAsync(
@@ -550,7 +550,7 @@ ms.locfileid: "32451015"
 
    С помощью функций **manageTaskEventHandler**, **manageResourceEventHandler** и **manageViewEventHandler** можно добавлять и удалять обработчики событий в соответствии с параметром _docMethod_.
 
-    ```javascript
+    ```js
     // Task selection changed event handler.
     function onTaskSelectionChanged(eventArgs) {
         text.value = "In task selection change event handler";
@@ -904,7 +904,7 @@ ms.locfileid: "32451015"
 
 В качестве простого примера, вывод ошибки в следующем коде включает переменную **actionMessage**, указывающую действие, которое следует предпринять, чтобы избежать ошибки в функции **getSelectedResourceAsync**.
 
-```javascript
+```js
 function logError(errorText) {
     text.value = "Error in " + errorText;
 }
@@ -935,7 +935,7 @@ function getSelectedResourceAsync() {
 
 Приведенный ниже код, который содержится в файле SurfaceErrors.js, включает функцию **throwError**, создающую объект **Toast**.
 
-```javascript
+```js
 /*
  * Show error messages in a "toast" notification.
  */
@@ -1072,7 +1072,7 @@ var Toast = {
 
 <br/>
 
-```javascript
+```js
 function logMethodError(methodName, errorName, errorMessage, actionMessage) {
     logError(methodName + " method.\nError name: " + errorName
         + "\nMessage: " + errorMessage
