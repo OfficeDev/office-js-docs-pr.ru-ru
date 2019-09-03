@@ -11,108 +11,108 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 08/13/2019
 ms.locfileid: "36308045"
 ---
-# <a name="build-your-first-word-task-pane-add-in"></a><span data-ttu-id="d5e0c-103">Создание первой надстройки области задач Word</span><span class="sxs-lookup"><span data-stu-id="d5e0c-103">Build your first Word task pane add-in</span></span>
+# <a name="build-your-first-word-task-pane-add-in"></a><span data-ttu-id="8a3e4-103">Создание первой надстройки области задач Word</span><span class="sxs-lookup"><span data-stu-id="8a3e4-103">Build your first Word task pane add-in</span></span>
 
-<span data-ttu-id="d5e0c-104">_Область применения: Word 2016 и более поздних версий для Windows, а также Word для iPad и Word для Mac_</span><span class="sxs-lookup"><span data-stu-id="d5e0c-104">_Applies to: Word 2016 or later on Windows, Word for iPad, Word for Mac_</span></span>
+<span data-ttu-id="8a3e4-104">_Область применения: Word 2016 и более поздних версий для Windows, а также Word для iPad и Word для Mac_</span><span class="sxs-lookup"><span data-stu-id="8a3e4-104">_Applies to: Word 2016 or later on Windows, Word for iPad, Word for Mac_</span></span>
 
-<span data-ttu-id="d5e0c-105">В этой статье вы ознакомитесь с процессом создания надстройки для области задач Word.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-105">In this article, you'll walk through the process of building a Word task pane add-in.</span></span>
+<span data-ttu-id="8a3e4-105">В этой статье вы ознакомитесь с процессом создания надстройки для области задач Word.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-105">In this article, you'll walk through the process of building a Word task pane add-in.</span></span>
 
-## <a name="create-the-add-in"></a><span data-ttu-id="d5e0c-106">Создание надстройки</span><span class="sxs-lookup"><span data-stu-id="d5e0c-106">Create the add-in</span></span>
+## <a name="create-the-add-in"></a><span data-ttu-id="8a3e4-106">Создание надстройки</span><span class="sxs-lookup"><span data-stu-id="8a3e4-106">Create the add-in</span></span>
 
 [!include[Choose your editor](../includes/quickstart-choose-editor.md)]
 
-# <a name="yeoman-generatortabyeomangenerator"></a>[<span data-ttu-id="d5e0c-107">Генератор Yeoman</span><span class="sxs-lookup"><span data-stu-id="d5e0c-107">Yeoman generator</span></span>](#tab/yeomangenerator)
+# <a name="yeoman-generatortabyeomangenerator"></a>[<span data-ttu-id="8a3e4-107">Генератор Yeoman</span><span class="sxs-lookup"><span data-stu-id="8a3e4-107">Yeoman generator</span></span>](#tab/yeomangenerator)
 
-### <a name="prerequisites"></a><span data-ttu-id="d5e0c-108">Необходимые условия</span><span class="sxs-lookup"><span data-stu-id="d5e0c-108">Prerequisites</span></span>
+### <a name="prerequisites"></a><span data-ttu-id="8a3e4-108">Необходимые условия</span><span class="sxs-lookup"><span data-stu-id="8a3e4-108">Prerequisites</span></span>
 
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
-### <a name="create-the-add-in-project"></a><span data-ttu-id="d5e0c-109">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="d5e0c-109">Create the add-in project</span></span>
+### <a name="create-the-add-in-project"></a><span data-ttu-id="8a3e4-109">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="8a3e4-109">Create the add-in project</span></span>
 
 [!include[note about Yeoman generator bug](../includes/note-yeoman-generator-bug-201908.md)]
 
-<span data-ttu-id="d5e0c-110">С помощью генератора Yeoman создайте проект надстройки Word.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-110">Use the Yeoman generator to create a Word add-in project.</span></span> <span data-ttu-id="d5e0c-111">Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-111">Run the following command and then answer the prompts as follows:</span></span>
+<span data-ttu-id="8a3e4-110">С помощью генератора Yeoman создайте проект надстройки Word.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-110">Use the Yeoman generator to create a Word add-in project.</span></span> <span data-ttu-id="8a3e4-111">Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-111">Run the following command and then answer the prompts as follows:</span></span>
 
 ```command&nbsp;line
 yo office
 ```
 
-- <span data-ttu-id="d5e0c-112">**Выберите тип проекта:** `Office Add-in Task Pane project`</span><span class="sxs-lookup"><span data-stu-id="d5e0c-112">**Choose a project type:** `Office Add-in Task Pane project`</span></span>
-- <span data-ttu-id="d5e0c-113">**Выберите тип сценария:** `Javascript`</span><span class="sxs-lookup"><span data-stu-id="d5e0c-113">**Choose a script type:** `Javascript`</span></span>
-- <span data-ttu-id="d5e0c-114">**Как вы хотите назвать надстройку?**</span><span class="sxs-lookup"><span data-stu-id="d5e0c-114">**What do you want to name your add-in?**</span></span> `my-office-add-in`
-- <span data-ttu-id="d5e0c-115">**Какое клиентское приложение Office должно поддерживаться?**</span><span class="sxs-lookup"><span data-stu-id="d5e0c-115">**Which Office client application would you like to support?**</span></span> `Word`
+- <span data-ttu-id="8a3e4-112">**Выберите тип проекта:** `Office Add-in Task Pane project`</span><span class="sxs-lookup"><span data-stu-id="8a3e4-112">**Choose a project type:** `Office Add-in Task Pane project`</span></span>
+- <span data-ttu-id="8a3e4-113">**Выберите тип сценария:** `Javascript`</span><span class="sxs-lookup"><span data-stu-id="8a3e4-113">**Choose a script type:** `Javascript`</span></span>
+- <span data-ttu-id="8a3e4-114">**Как вы хотите назвать надстройку?**</span><span class="sxs-lookup"><span data-stu-id="8a3e4-114">**What do you want to name your add-in?**</span></span> `my-office-add-in`
+- <span data-ttu-id="8a3e4-115">**Какое клиентское приложение Office должно поддерживаться?**</span><span class="sxs-lookup"><span data-stu-id="8a3e4-115">**Which Office client application would you like to support?**</span></span> `Word`
 
-<span data-ttu-id="d5e0c-116">После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-116">After you complete the wizard, the generator will create the project and install supporting Node components.</span></span>
+<span data-ttu-id="8a3e4-116">После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-116">After you complete the wizard, the generator will create the project and install supporting Node components.</span></span>
 
-### <a name="explore-the-project"></a><span data-ttu-id="d5e0c-117">Знакомство с проектом</span><span class="sxs-lookup"><span data-stu-id="d5e0c-117">Explore the project</span></span>
+### <a name="explore-the-project"></a><span data-ttu-id="8a3e4-117">Знакомство с проектом</span><span class="sxs-lookup"><span data-stu-id="8a3e4-117">Explore the project</span></span>
 
 [!include[Yeoman generator add-in project components](../includes/yo-task-pane-project-components-js.md)]
 
-### <a name="try-it-out"></a><span data-ttu-id="d5e0c-118">Проверка</span><span class="sxs-lookup"><span data-stu-id="d5e0c-118">Try it out</span></span>
+### <a name="try-it-out"></a><span data-ttu-id="8a3e4-118">Проверка</span><span class="sxs-lookup"><span data-stu-id="8a3e4-118">Try it out</span></span>
 
-1. <span data-ttu-id="d5e0c-119">Перейдите к корневой папке проекта.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-119">Navigate to the root folder of the project.</span></span>
+1. <span data-ttu-id="8a3e4-119">Перейдите к корневой папке проекта.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-119">Navigate to the root folder of the project.</span></span>
 
     ```command&nbsp;line
     cd "my-office-add-in"
     ```
 
-2. <span data-ttu-id="d5e0c-120">Выполните указанные ниже действия, чтобы запустить локальный веб-сервер и загрузить неопубликованную надстройку.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-120">Complete the following steps to start the local web server and sideload your add-in.</span></span>
+2. <span data-ttu-id="8a3e4-120">Выполните указанные ниже действия, чтобы запустить локальный веб-сервер и загрузить неопубликованную надстройку.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-120">Complete the following steps to start the local web server and sideload your add-in.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="d5e0c-121">Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-121">Office Add-ins should use HTTPS, not HTTP, even when you are developing.</span></span> <span data-ttu-id="d5e0c-122">Если вам будет предложено установить сертификат после того, как вы запустите одну из указанных ниже команд, примите предложение установить сертификат, предоставленный генератором Yeoman.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-122">If you are prompted to install a certificate after you run one of the following commands, accept the prompt to install the certificate that the Yeoman generator provides.</span></span>
+    > <span data-ttu-id="8a3e4-121">Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-121">Office Add-ins should use HTTPS, not HTTP, even when you are developing.</span></span> <span data-ttu-id="8a3e4-122">Если вам будет предложено установить сертификат после того, как вы запустите одну из указанных ниже команд, примите предложение установить сертификат, предоставленный генератором Yeoman.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-122">If you are prompted to install a certificate after you run one of the following commands, accept the prompt to install the certificate that the Yeoman generator provides.</span></span>
 
     > [!TIP]
-    > <span data-ttu-id="d5e0c-123">Если вы тестируете надстройку на компьютере Mac, перед продолжением выполните указанную ниже команду.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-123">If you're testing your add-in on Mac, run the following command before proceeding.</span></span> <span data-ttu-id="d5e0c-124">После выполнения этой команды запустится локальный веб-сервер.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-124">When you run this command, the local web server will start.</span></span>
+    > <span data-ttu-id="8a3e4-123">Если вы тестируете надстройку на компьютере Mac, перед продолжением выполните указанную ниже команду.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-123">If you're testing your add-in on Mac, run the following command before proceeding.</span></span> <span data-ttu-id="8a3e4-124">После выполнения этой команды запустится локальный веб-сервер.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-124">When you run this command, the local web server will start.</span></span>
     >
     > ```command&nbsp;line
     > npm run dev-server
     > ```
 
-    - <span data-ttu-id="d5e0c-125">Чтобы проверить надстройку в Word, выполните приведенную ниже команду в корневом каталоге своего проекта.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-125">To test your add-in in Word, run the following command in the root directory of your project.</span></span> <span data-ttu-id="d5e0c-126">При этом запускается локальный веб-сервер (если он еще не запущен) и открывается приложение Word с загруженной надстройкой.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-126">This starts the local web server (if it's not already running) and opens Word with your add-in loaded.</span></span>
+    - <span data-ttu-id="8a3e4-125">Чтобы проверить надстройку в Word, выполните приведенную ниже команду в корневом каталоге своего проекта.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-125">To test your add-in in Word, run the following command in the root directory of your project.</span></span> <span data-ttu-id="8a3e4-126">При этом запускается локальный веб-сервер (если он еще не запущен) и открывается приложение Word с загруженной надстройкой.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-126">This starts the local web server (if it's not already running) and opens Word with your add-in loaded.</span></span>
 
         ```command&nbsp;line
         npm start
         ```
 
-    - <span data-ttu-id="d5e0c-127">Чтобы проверить надстройку в Word в браузере, выполните приведенную ниже команду в корневом каталоге проекта.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-127">To test your add-in in Word on a browser, run the following command in the root directory of your project.</span></span> <span data-ttu-id="d5e0c-128">После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).</span><span class="sxs-lookup"><span data-stu-id="d5e0c-128">When you run this command, the local web server will start.</span></span>
+    - <span data-ttu-id="8a3e4-127">Чтобы проверить надстройку в Word в браузере, выполните приведенную ниже команду в корневом каталоге проекта.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-127">To test your add-in in Word on a browser, run the following command in the root directory of your project.</span></span> <span data-ttu-id="8a3e4-128">После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).</span><span class="sxs-lookup"><span data-stu-id="8a3e4-128">When you run this command, the local web server will start.</span></span>
 
         ```command&nbsp;line
         npm run start:web
         ```
 
-        <span data-ttu-id="d5e0c-129">Чтобы использовать надстройку, откройте новый документ в Word в Интернете, а затем загрузите неопубликованную надстройку, следуя инструкциям из статьи [Загрузка неопубликованных надстроек Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web).</span><span class="sxs-lookup"><span data-stu-id="d5e0c-129">To use your add-in, open a new document in Word Online and then sideload your add-in by following the instructions in [Sideload Office Add-ins in Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web).</span></span>
+        <span data-ttu-id="8a3e4-129">Чтобы использовать надстройку, откройте новый документ в Word в Интернете, а затем загрузите неопубликованную надстройку, следуя инструкциям из статьи [Загрузка неопубликованных надстроек Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web).</span><span class="sxs-lookup"><span data-stu-id="8a3e4-129">To use your add-in, open a new document in Word Online and then sideload your add-in by following the instructions in [Sideload Office Add-ins in Office Online](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web).</span></span>
 
-3. <span data-ttu-id="d5e0c-130">В Word откройте новый документ, выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-130">In Word, open a new document, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
+3. <span data-ttu-id="8a3e4-130">В Word откройте новый документ, выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-130">In Word, open a new document, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
 
     ![Снимок экрана: приложение Word с выделенной кнопкой "Показать область задач"](../images/word-quickstart-addin-2b.png)
 
-4. <span data-ttu-id="d5e0c-132">В нижней части области задач выберите ссылку **Выполнить**, чтобы добавить текст "Hello World" синего цвета в документ.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-132">At the bottom of the task pane, choose the **Run** link to add the text "Hello World" to the document in blue font.</span></span>
+4. <span data-ttu-id="8a3e4-132">В нижней части области задач выберите ссылку **Выполнить**, чтобы добавить текст "Hello World" синего цвета в документ.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-132">At the bottom of the task pane, choose the **Run** link to add the text "Hello World" to the document in blue font.</span></span>
 
     ![Снимок экрана: приложение Word с загруженной надстройкой области задач](../images/word-quickstart-addin-1c.png)
 
-# <a name="visual-studiotabvisualstudio"></a>[<span data-ttu-id="d5e0c-134">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d5e0c-134">Visual Studio</span></span>](#tab/visualstudio)
+# <a name="visual-studiotabvisualstudio"></a>[<span data-ttu-id="8a3e4-134">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="8a3e4-134">Visual Studio</span></span>](#tab/visualstudio)
 
-### <a name="prerequisites"></a><span data-ttu-id="d5e0c-135">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="d5e0c-135">Prerequisites</span></span>
+### <a name="prerequisites"></a><span data-ttu-id="8a3e4-135">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="8a3e4-135">Prerequisites</span></span>
 
 [!include[Quick Start prerequisites](../includes/quickstart-vs-prerequisites.md)]
 
-### <a name="create-the-add-in-project"></a><span data-ttu-id="d5e0c-136">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="d5e0c-136">Create the add-in project</span></span>
+### <a name="create-the-add-in-project"></a><span data-ttu-id="8a3e4-136">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="8a3e4-136">Create the add-in project</span></span>
 
-1. <span data-ttu-id="d5e0c-137">В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-137">On the Visual Studio menu bar, choose  **File** > **New** > **Project**.</span></span>
+1. <span data-ttu-id="8a3e4-137">В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-137">On the Visual Studio menu bar, choose  **File** > **New** > **Project**.</span></span>
 
-2. <span data-ttu-id="d5e0c-138">В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, а затем выберите **Надстройки** > **Веб-надстройка Word**.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-138">In the list of project types under **Visual C#** or **Visual Basic**, expand  **Office/SharePoint**, choose **Add-ins**, and then choose **Word Web Add-in** as the project type.</span></span> 
+2. <span data-ttu-id="8a3e4-138">В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, а затем выберите **Надстройки** > **Веб-надстройка Word**.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-138">In the list of project types under **Visual C#** or **Visual Basic**, expand  **Office/SharePoint**, choose **Add-ins**, and then choose **Word Web Add-in** as the project type.</span></span> 
 
-3. <span data-ttu-id="d5e0c-139">Укажите имя проекта и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-139">Name the project, and then choose **OK**.</span></span>
+3. <span data-ttu-id="8a3e4-139">Укажите имя проекта и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-139">Name the project, and then choose **OK**.</span></span>
 
-4. <span data-ttu-id="d5e0c-p106">Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-p106">Visual Studio creates a solution and its two projects appear in **Solution Explorer**. The **Home.html** file opens in Visual Studio.</span></span>
+4. <span data-ttu-id="8a3e4-p106">Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-p106">Visual Studio creates a solution and its two projects appear in **Solution Explorer**. The **Home.html** file opens in Visual Studio.</span></span>
 
-### <a name="explore-the-visual-studio-solution"></a><span data-ttu-id="d5e0c-142">Обзор решения Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d5e0c-142">Explore the Visual Studio solution</span></span>
+### <a name="explore-the-visual-studio-solution"></a><span data-ttu-id="8a3e4-142">Обзор решения Visual Studio</span><span class="sxs-lookup"><span data-stu-id="8a3e4-142">Explore the Visual Studio solution</span></span>
 
 [!include[Description of Visual Studio projects](../includes/quickstart-vs-solution.md)]
 
-### <a name="update-the-code"></a><span data-ttu-id="d5e0c-143">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="d5e0c-143">Update the code</span></span>
+### <a name="update-the-code"></a><span data-ttu-id="8a3e4-143">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="8a3e4-143">Update the code</span></span>
 
-1. <span data-ttu-id="d5e0c-p107">Файл **Home.html** содержит HTML-контент, который будет отображаться в области задач надстройки. В файле **Home.html** замените элемент `<body>` на приведенную ниже часть кода и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-p107">**Home.html** specifies the HTML that will be rendered in the add-in's task pane. In **Home.html**, replace the `<body>` element with the following markup and save the file.</span></span>
+1. <span data-ttu-id="8a3e4-p107">Файл **Home.html** содержит HTML-контент, который будет отображаться в области задач надстройки. В файле **Home.html** замените элемент `<body>` на приведенную ниже часть кода и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-p107">**Home.html** specifies the HTML that will be rendered in the add-in's task pane. In **Home.html**, replace the `<body>` element with the following markup and save the file.</span></span>
 
     ```html
     <body>
@@ -138,7 +138,7 @@ yo office
     </body>
     ```
 
-2. <span data-ttu-id="d5e0c-p108">Откройте файл **Home.js** в корневой папке проекта веб-приложения. Этот файл содержит скрипт надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-p108">Open the file **Home.js** in the root of the web application project. This file specifies the script for the add-in. Replace the entire contents with the following code and save the file.</span></span>
+2. <span data-ttu-id="8a3e4-p108">Откройте файл **Home.js** в корневой папке проекта веб-приложения. Этот файл содержит скрипт надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-p108">Open the file **Home.js** in the root of the web application project. This file specifies the script for the add-in. Replace the entire contents with the following code and save the file.</span></span>
 
     ```js
     'use strict';
@@ -239,7 +239,7 @@ yo office
     })();
     ```
 
-3. <span data-ttu-id="d5e0c-p109">Откройте файл **Home.css** в корневой папке проекта веб-приложения. Этот файл определяет специальные стили надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-p109">Open the file **Home.css** in the root of the web application project. This file specifies the custom styles for the add-in. Replace the entire contents with the following code and save the file.</span></span>
+3. <span data-ttu-id="8a3e4-p109">Откройте файл **Home.css** в корневой папке проекта веб-приложения. Этот файл определяет специальные стили надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-p109">Open the file **Home.css** in the root of the web application project. This file specifies the custom styles for the add-in. Replace the entire contents with the following code and save the file.</span></span>
 
     ```css
     #content-header {
@@ -268,17 +268,17 @@ yo office
     }
     ```
 
-### <a name="update-the-manifest"></a><span data-ttu-id="d5e0c-152">Обновление манифеста</span><span class="sxs-lookup"><span data-stu-id="d5e0c-152">Update the manifest</span></span>
+### <a name="update-the-manifest"></a><span data-ttu-id="8a3e4-152">Обновление манифеста</span><span class="sxs-lookup"><span data-stu-id="8a3e4-152">Update the manifest</span></span>
 
-1. <span data-ttu-id="d5e0c-153">Откройте XML-файл манифеста в проекте надстройки.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-153">Open the XML manifest file in the add-in project.</span></span> <span data-ttu-id="d5e0c-154">Этот файл определяет параметры и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-154">This file defines the add-in's settings and capabilities.</span></span>
+1. <span data-ttu-id="8a3e4-153">Откройте XML-файл манифеста в проекте надстройки.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-153">Open the XML manifest file in the add-in project.</span></span> <span data-ttu-id="8a3e4-154">Этот файл определяет параметры и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-154">This file defines the add-in's settings and capabilities.</span></span>
 
-2. <span data-ttu-id="d5e0c-p111">Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-p111">The `ProviderName` element has a placeholder value. Replace it with your name.</span></span>
+2. <span data-ttu-id="8a3e4-p111">Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-p111">The `ProviderName` element has a placeholder value. Replace it with your name.</span></span>
 
-3. <span data-ttu-id="d5e0c-p112">Атрибут `DefaultValue` элемента `DisplayName` содержит заполнитель. Замените его на строку **Моя надстройка Office**.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-p112">The `DefaultValue` attribute of the `DisplayName` element has a placeholder. Replace it with **My Office Add-in**.</span></span>
+3. <span data-ttu-id="8a3e4-p112">Атрибут `DefaultValue` элемента `DisplayName` содержит заполнитель. Замените его на строку **Моя надстройка Office**.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-p112">The `DefaultValue` attribute of the `DisplayName` element has a placeholder. Replace it with **My Office Add-in**.</span></span>
 
-4. <span data-ttu-id="d5e0c-p113">Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его строкой **Надстройка области задач для Word**.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-p113">The `DefaultValue` attribute of the `Description` element has a placeholder. Replace it with **A task pane add-in for Word**.</span></span>
+4. <span data-ttu-id="8a3e4-p113">Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его строкой **Надстройка области задач для Word**.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-p113">The `DefaultValue` attribute of the `Description` element has a placeholder. Replace it with **A task pane add-in for Word**.</span></span>
 
-5. <span data-ttu-id="d5e0c-161">Сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-161">Save the file.</span></span>
+5. <span data-ttu-id="8a3e4-161">Сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-161">Save the file.</span></span>
 
     ```xml
     ...
@@ -290,30 +290,29 @@ yo office
     ...
     ```
 
-### <a name="try-it-out"></a><span data-ttu-id="d5e0c-162">Проверка</span><span class="sxs-lookup"><span data-stu-id="d5e0c-162">Try it out</span></span>
+### <a name="try-it-out"></a><span data-ttu-id="8a3e4-162">Проверка</span><span class="sxs-lookup"><span data-stu-id="8a3e4-162">Try it out</span></span>
 
-1. <span data-ttu-id="d5e0c-p114">Протестируйте новую надстройку Word в Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить Word с кнопкой надстройки **Show Taskpane** (Показать область задач) на ленте. Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-p114">Using Visual Studio, test the newly created Word add-in by pressing **F5** or choosing the **Start** button to launch Word with the **Show Taskpane** add-in button displayed in the ribbon. The add-in will be hosted locally on IIS.</span></span>
+1. <span data-ttu-id="8a3e4-p114">Протестируйте новую надстройку Word в Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить Word с кнопкой надстройки **Show Taskpane** (Показать область задач) на ленте. Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-p114">Using Visual Studio, test the newly created Word add-in by pressing **F5** or choosing the **Start** button to launch Word with the **Show Taskpane** add-in button displayed in the ribbon. The add-in will be hosted locally on IIS.</span></span>
 
-2. <span data-ttu-id="d5e0c-165">В Word выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-165">In Word, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span> <span data-ttu-id="d5e0c-166">(Если вы используете единовременно приобретенную версию Office, а не версию Office 365, пользовательские кнопки не поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-166">(If you are using the one-time purchase version of Office, instead of the Office 365 version, then custom buttons are not supported.</span></span> <span data-ttu-id="d5e0c-167">Сразу откроется область задач.)</span><span class="sxs-lookup"><span data-stu-id="d5e0c-167">Instead, the task pane will open immediately.)</span></span>
+2. <span data-ttu-id="8a3e4-165">В Word выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-165">In Word, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span> <span data-ttu-id="8a3e4-166">(Если вы используете единовременно приобретенную версию Office, а не версию Office 365, пользовательские кнопки не поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-166">(If you are using the one-time purchase version of Office, instead of the Office 365 version, then custom buttons are not supported.</span></span> <span data-ttu-id="8a3e4-167">Сразу откроется область задач.)</span><span class="sxs-lookup"><span data-stu-id="8a3e4-167">Instead, the task pane will open immediately.)</span></span>
 
     ![Снимок экрана: приложение Word с выделенной кнопкой "Показать область задач"](../images/word-quickstart-addin-0.png)
 
-3. <span data-ttu-id="d5e0c-169">В области задач нажмите любую кнопку, чтобы добавить стандартный текст в документ.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-169">In the task pane, choose any of the buttons to add boilerplate text to the document.</span></span>
+3. <span data-ttu-id="8a3e4-169">В области задач нажмите любую кнопку, чтобы добавить стандартный текст в документ.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-169">In the task pane, choose any of the buttons to add boilerplate text to the document.</span></span>
 
     ![Снимок экрана: приложение Word с загруженной надстройкой, добавляющей стандартный текст.](../images/word-quickstart-addin-1b.png)
 
 ---
 
-## <a name="next-steps"></a><span data-ttu-id="d5e0c-171">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="d5e0c-171">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="8a3e4-171">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="8a3e4-171">Next steps</span></span>
 
-<span data-ttu-id="d5e0c-172">Поздравляем! Вы успешно создали надстройку области задач Word!</span><span class="sxs-lookup"><span data-stu-id="d5e0c-172">Congratulations, you've successfully created a Word task pane add-in!</span></span> <span data-ttu-id="d5e0c-173">Чтобы узнать больше о возможностях надстроек Word и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Word.</span><span class="sxs-lookup"><span data-stu-id="d5e0c-173">Next, learn more about the capabilities of a Word add-in and build a more complex add-in by following along with the Word add-in tutorial.</span></span>
+<span data-ttu-id="8a3e4-172">Поздравляем! Вы успешно создали надстройку области задач Word!</span><span class="sxs-lookup"><span data-stu-id="8a3e4-172">Congratulations, you've successfully created a Word task pane add-in!</span></span> <span data-ttu-id="8a3e4-173">Чтобы узнать больше о возможностях надстроек Word и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Word.</span><span class="sxs-lookup"><span data-stu-id="8a3e4-173">Next, learn more about the capabilities of a Word add-in and build a more complex add-in by following along with the Word add-in tutorial.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="d5e0c-174">Руководство по надстройкам Word</span><span class="sxs-lookup"><span data-stu-id="d5e0c-174">Word add-in tutorial</span></span>](../tutorials/word-tutorial.md)
+> [<span data-ttu-id="8a3e4-174">Руководство по надстройкам Word</span><span class="sxs-lookup"><span data-stu-id="8a3e4-174">Word add-in tutorial</span></span>](../tutorials/word-tutorial.md)
 
-## <a name="see-also"></a><span data-ttu-id="d5e0c-175">См. также</span><span class="sxs-lookup"><span data-stu-id="d5e0c-175">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8a3e4-175">См. также</span><span class="sxs-lookup"><span data-stu-id="8a3e4-175">See also</span></span>
 
-* [<span data-ttu-id="d5e0c-176">Обзор надстроек Word</span><span class="sxs-lookup"><span data-stu-id="d5e0c-176">Word add-ins overview</span></span>](../word/word-add-ins-programming-overview.md)
-* <span data-ttu-id="d5e0c-177">
-  [Примеры кода надстроек Word](https://developer.microsoft.com/ru-RU/office/gallery/?filterBy=Samples,Word)</span><span class="sxs-lookup"><span data-stu-id="d5e0c-177">[Word add-in code samples](https://developer.microsoft.com/en-us/office/gallery/?filterBy=Samples,Word)</span></span>
-* [<span data-ttu-id="d5e0c-178">Справочник по API JavaScript для Word</span><span class="sxs-lookup"><span data-stu-id="d5e0c-178">Word JavaScript API reference</span></span>](/office/dev/add-ins/reference/overview/word-add-ins-reference-overview)
+* [<span data-ttu-id="8a3e4-176">Обзор надстроек Word</span><span class="sxs-lookup"><span data-stu-id="8a3e4-176">Word add-ins overview</span></span>](../word/word-add-ins-programming-overview.md)
+* [<span data-ttu-id="8a3e4-177">Примеры кода надстроек Word</span><span class="sxs-lookup"><span data-stu-id="8a3e4-177">Word add-in code samples</span></span>](https://developer.microsoft.com/ru-RU/office/gallery/?filterBy=Samples,Word)
+* [<span data-ttu-id="8a3e4-178">Справочник по API JavaScript для Word</span><span class="sxs-lookup"><span data-stu-id="8a3e4-178">Word JavaScript API reference</span></span>](/office/dev/add-ins/reference/overview/word-add-ins-reference-overview)
