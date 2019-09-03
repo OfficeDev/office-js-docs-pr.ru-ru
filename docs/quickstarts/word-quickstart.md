@@ -314,6 +314,5 @@ yo office
 ## <a name="see-also"></a>См. также
 
 * [Обзор надстроек Word](../word/word-add-ins-programming-overview.md)
-* 
-  [Примеры кода надстроек Word](https://developer.microsoft.com/ru-RU/office/gallery/?filterBy=Samples,Word)
+* [Примеры кода надстроек Word](https://developer.microsoft.com/ru-RU/office/gallery/?filterBy=Samples,Word)
 * [Справочник по API JavaScript для Word](/office/dev/add-ins/reference/overview/word-add-ins-reference-overview)
