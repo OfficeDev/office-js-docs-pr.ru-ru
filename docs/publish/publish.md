@@ -1,14 +1,14 @@
 ---
 title: Развертывание и публикация надстройки Office | Документация Майкрософт
 description: Методы и варианты развертывания надстройки Office для тестирования и распространения.
-ms.date: 06/20/2019
+ms.date: 09/05/2019
 localization_priority: Priority
-ms.openlocfilehash: 9515157f0e6f3d294d381013442f958c903a63c0
-ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
+ms.openlocfilehash: c47f8743edeed1fd366d948d781c97da1c97958a
+ms.sourcegitcommit: d34aa0b282cc76ffff579da2a7945efd12fb7340
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "35575648"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "36769556"
 ---
 # <a name="deploy-and-publish-your-office-add-in"></a>Развертывание и публикация надстройки Office
 
@@ -16,7 +16,7 @@ ms.locfileid: "35575648"
 
 |**Способ**|**Применение**|
 |:---------|:------------|
-|[Загрузка неопубликованного приложения](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)|При разработке для проверки работы надстройки в Windows, iPad, Mac или в браузере.|
+|[Загрузка неопубликованного приложения](../testing/test-debug-office-add-ins.md#sideload-an-office-add-in-for-testing)|При разработке для проверки работы надстройки в Windows, iPad, Mac или в браузере.|
 |[Централизованное развертывание](centralized-deployment.md)|В облачном или гибридном развертывании для распространения надстройки в организации с помощью Центра администрирования Office 365.|
 |[Каталог SharePoint](publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md)|В локальной среде для распространения надстройки в организации.|
 |[AppSource](/office/dev/store/submit-to-the-office-store)|Для распространения надстройки среди всех пользователей.|
