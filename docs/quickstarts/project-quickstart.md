@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Project
 description: ''
-ms.date: 05/08/2019
+ms.date: 09/06/2019
 ms.prod: project
 localization_priority: Priority
-ms.openlocfilehash: 466c8354a047c8e36741711881ad1b0e2993ddaf
-ms.sourcegitcommit: 1dc1bb0befe06d19b587961da892434bd0512fb5
+ms.openlocfilehash: 0a7684f3d1bd4f404ba42a798908bb9d2ba2f8d2
+ms.sourcegitcommit: ce7e7087a4550b9c090dc565fee5eac08a2985a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "36308010"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "36782284"
 ---
 # <a name="build-your-first-project-task-pane-add-in"></a>Создание первой надстройки области задач Project
 
@@ -23,8 +23,6 @@ ms.locfileid: "36308010"
 
 ## <a name="create-the-add-in"></a>Создание надстройки
 
-[!include[note about Yeoman generator bug](../includes/note-yeoman-generator-bug-201908.md)]
-
 С помощью генератора Yeoman создайте проект надстройки Project. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
 ```command&nbsp;line
@@ -33,8 +31,10 @@ yo office
 
 - **Выберите тип проекта:** `Office Add-in Task Pane project`
 - **Выберите тип сценария:** `Javascript`
-- **Как вы хотите назвать надстройку?** `my-office-add-in`
+- **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `Project`
+
+![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-project.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -94,7 +94,7 @@ Office.context.document.getSelectedTaskAsync(
 1. Перейдите к корневой папке проекта.
 
     ```command&nbsp;line
-    cd "my-office-add-in"
+    cd "My Office Add-in"
     ```
 
 2. Запустите локальный веб-сервер.

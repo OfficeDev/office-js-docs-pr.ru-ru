@@ -1,15 +1,15 @@
 ---
 title: Создание области задач Excel с помощью React
 description: ''
-ms.date: 05/02/2019
+ms.date: 09/06/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 1c0f2f4af1ee14aaf7d581509733e26013657590
-ms.sourcegitcommit: 1dc1bb0befe06d19b587961da892434bd0512fb5
+ms.openlocfilehash: 40ecd0f29ab37df56a8d4456ced0b13f8fdc837b
+ms.sourcegitcommit: ce7e7087a4550b9c090dc565fee5eac08a2985a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "36308031"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "36782277"
 ---
 # <a name="build-an-excel-task-pane-add-in-using-react"></a>Создание области задач Excel с помощью React
 
@@ -21,8 +21,6 @@ ms.locfileid: "36308031"
 
 ## <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
-[!include[note about Yeoman generator bug](../includes/note-yeoman-generator-bug-201908.md)]
-
 Создайте проект надстройки Excel помощью генератора Yeoman. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
 ```command&nbsp;line
@@ -31,8 +29,10 @@ yo office
 
 - **Выберите тип проекта:** `Office Add-in Task Pane project using React framework`
 - **Выберите тип сценария:** `TypeScript`
-- **Как вы хотите назвать надстройку?** `my-office-add-in`
+- **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
+
+![Генератор Yeoman](../images/yo-office-excel-react-2.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -50,7 +50,7 @@ yo office
 1. Перейдите к корневой папке проекта.
 
     ```command&nbsp;line
-    cd "my-office-add-in"
+    cd "My Office Add-in"
     ```
 
 2. [!include[Start server section](../includes/quickstart-yo-start-server-excel.md)] 

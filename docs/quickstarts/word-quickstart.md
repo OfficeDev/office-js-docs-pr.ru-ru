@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Word
 description: Узнайте, как создать простую надстройку области задач Word, используя API JS для Office.
-ms.date: 07/17/2019
+ms.date: 09/06/2019
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 5b65d20a10b98dc3a4ba1e95c4ef52ff91647e97
-ms.sourcegitcommit: 1dc1bb0befe06d19b587961da892434bd0512fb5
+ms.openlocfilehash: 98fbd61296ef56397241e402830eb8baaeebe577
+ms.sourcegitcommit: ce7e7087a4550b9c090dc565fee5eac08a2985a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "36308045"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "36782242"
 ---
 # <a name="build-your-first-word-task-pane-add-in"></a>Создание первой надстройки области задач Word
 
@@ -29,8 +29,6 @@ _Область применения: Word 2016 и более поздних в
 
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
-[!include[note about Yeoman generator bug](../includes/note-yeoman-generator-bug-201908.md)]
-
 С помощью генератора Yeoman создайте проект надстройки Word. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
 ```command&nbsp;line
@@ -39,8 +37,10 @@ yo office
 
 - **Выберите тип проекта:** `Office Add-in Task Pane project`
 - **Выберите тип сценария:** `Javascript`
-- **Как вы хотите назвать надстройку?** `my-office-add-in`
+- **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `Word`
+
+![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-word.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -53,7 +53,7 @@ yo office
 1. Перейдите к корневой папке проекта.
 
     ```command&nbsp;line
-    cd "my-office-add-in"
+    cd "My Office Add-in"
     ```
 
 2. Выполните указанные ниже действия, чтобы запустить локальный веб-сервер и загрузить неопубликованную надстройку.
