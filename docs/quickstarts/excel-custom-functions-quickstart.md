@@ -1,15 +1,15 @@
 ---
-ms.date: 07/10/2019
+ms.date: 09/06/2019
 description: Разработка настраиваемых функций в кратком руководстве по Excel.
 title: Краткое руководство по настраиваемым функциям
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 59f0b0483befda8646d823c50295d035ab7e64c6
-ms.sourcegitcommit: 1dc1bb0befe06d19b587961da892434bd0512fb5
+ms.openlocfilehash: b3344b19ec29b24407c83bb043dcbaa613d5e8ec
+ms.sourcegitcommit: ce7e7087a4550b9c090dc565fee5eac08a2985a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "36308017"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "36782235"
 ---
 # <a name="get-started-developing-excel-custom-functions"></a>Приступая к разработке пользовательских функций Excel
 
@@ -28,8 +28,6 @@ ms.locfileid: "36308017"
 ## <a name="build-your-first-custom-functions-project"></a>Создание проекта пользовательских функций
 
 Чтобы начать работу, создайте проект пользовательских функций с помощью генератора Yeoman. Это позволит настроить для проекта правильную структуру папок, исходные файлы и зависимости, чтобы начать написание кода пользовательских функций.
-
-[!include[note about Yeoman generator bug](../includes/note-yeoman-generator-bug-201908.md)]
 
 1. В выбранной папке выполните следующую команду, а затем ответьте на приглашение следующим образом.
 
@@ -80,7 +78,7 @@ npm run start:web
 
 Чтобы использовать надстройку с пользовательскими функциями, откройте новую книгу в Excel в браузере. В этой книге выполните следующие действия, чтобы Загрузка неопубликованных надстройку.
 
-1. В Excel перейдите на вкладку **Вставка** , а затем выберите **** пункт надстройки.
+1. В Excel перейдите на вкладку **Вставка** , а затем выберите **пункт**надстройки.
 
    ![Вставка ленты в Excel в Интернете с выделенным значком "Мои надстройки"](../images/excel-cf-online-register-add-in-1.png)
    
