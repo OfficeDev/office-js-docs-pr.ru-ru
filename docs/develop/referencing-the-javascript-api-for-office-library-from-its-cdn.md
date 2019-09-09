@@ -3,17 +3,17 @@ title: Добавление ссылок на библиотеку JavaScript AP
 description: ''
 ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 249d367c7a7032d8ec165661da1d182df4047199
-ms.sourcegitcommit: 68872372d181cca5bee37ade73c2250c4a56bab6
+ms.openlocfilehash: 6945cb9e2e93209c1568575d8c393cf00ae47431
+ms.sourcegitcommit: d34aa0b282cc76ffff579da2a7945efd12fb7340
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "33517389"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "36769584"
 ---
 # <a name="referencing-the-javascript-api-for-office-library-from-its-content-delivery-network-cdn"></a>Добавление ссылок на библиотеку JavaScript API для Office из сети доставки содержимого (CDN)
 
 > [!NOTE]
-> Помимо действий, описанных в этой статье, если необходимо использовать TypeScript, для получения Intellisense потребуется запустить указанную ниже команду в системном приглашении с поддержкой Node (или в окне Git Bash) из корневой папки проекта. У вас должен быть установлен [Node.js](https://nodejs.org) (содержащий npm).
+> Помимо действий, описанных в этой статье, если необходимо использовать TypeScript, для получения IntelliSense потребуется запустить указанную ниже команду в системном приглашении с поддержкой Node (или в окне Git Bash) из корневой папки проекта. У вас должен быть установлен [Node.js](https://nodejs.org) (содержащий npm).
 > 
 > ```command&nbsp;line
 > npm install --save-dev @types/office-js

@@ -1,14 +1,14 @@
 ---
 title: Элемент ExtensionPoint в файле манифеста
 description: ''
-ms.date: 08/23/2019
+ms.date: 09/05/2019
 localization_priority: Priority
-ms.openlocfilehash: 4f6a6347ac61e48f5bdefb7759d8bddbca64ea7e
-ms.sourcegitcommit: 49af31060aa56c1e1ec1e08682914d3cbefc3f1c
+ms.openlocfilehash: ed26c5e81a2c8229faad2c8af6b1edaff2f288e5
+ms.sourcegitcommit: d34aa0b282cc76ffff579da2a7945efd12fb7340
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "36672798"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "36769591"
 ---
 # <a name="extensionpoint-element"></a>Элемент ExtensionPoint
 
@@ -251,7 +251,7 @@ ms.locfileid: "36672798"
 Эта точка расширения добавляет обработчик для указанного события.
 
 > [!NOTE]
-> Этот тип элемента поддерживается только в Outlook в Интернете из Office 365.
+> Этот тип элемента поддерживается классической версией Outlook в Интернете, доступен в [предварительной версии](../objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) для Windows и Mac, а также современной версии Outlook в Интернете. Также требуется подписка на Office 365.
 
 | Элемент | Описание  |
 |:-----|:-----|
@@ -260,9 +260,9 @@ ms.locfileid: "36672798"
 #### <a name="itemsend-event-example"></a>Пример события ItemSend
 
 ```xml
-<ExtensionPoint xsi:type="Events"> 
-  <Event Type="ItemSend" FunctionExecution="synchronous" FunctionName="itemSendHandler" /> 
-</ExtensionPoint> 
+<ExtensionPoint xsi:type="Events">
+  <Event Type="ItemSend" FunctionExecution="synchronous" FunctionName="itemSendHandler" />
+</ExtensionPoint>
 ```
 
 ### <a name="detectedentity"></a>DetectedEntity
@@ -272,7 +272,7 @@ ms.locfileid: "36672798"
 В соответствующем элементе [VersionOverrides](versionoverrides.md) для атрибута `xsi:type` должно быть задано значение `VersionOverridesV1_1`.
 
 > [!NOTE]
-> Этот тип элемента доступен в [клиентах Outlook, поддерживающих наборы обязательных требований 1.6 и более поздних версий.](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets#clients)
+> Этот тип элемента доступен в [клиентах Outlook, поддерживающих наборы обязательных требований 1.6 и более поздних версий.](../requirement-sets/outlook-api-requirement-sets.md#clients)
 
 |  Элемент |  Описание  |
 |:-----|:-----|
