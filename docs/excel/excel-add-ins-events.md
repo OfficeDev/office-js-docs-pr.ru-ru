@@ -1,14 +1,14 @@
 ---
 title: Работа с событиями при помощи API JavaScript для Excel
 description: ''
-ms.date: 06/20/2019
+ms.date: 09/09/2019
 localization_priority: Priority
-ms.openlocfilehash: 3757b4e094bae29bc02f2b360144513fbc7ad1ab
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 338085b297e760057987fd94d7caf96b5134ce6a
+ms.sourcegitcommit: 24303ca235ebd7144a1d913511d8e4fb7c0e8c0d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127788"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "36838482"
 ---
 # <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями при помощи API JavaScript для Excel
 
@@ -39,7 +39,11 @@ ms.locfileid: "35127788"
 
 | Событие | Описание | Поддерживаемые объекты |
 |:---------------|:-------------|:-----------|
+| `onColumnSorted` | Возникает при сортировке одного или нескольких столбцов. Происходит в результате операции сортировки слева направо. | [**Worksheet**](/javascript/api/excel/excel.worksheet), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection) |
 | `onFiltered` | Возникает при применении фильтра к объекту. | [**Table**](/javascript/api/excel/excel.table), [**TableCollection**](/javascript/api/excel/excel.tablecollection), [**Worksheet**](/javascript/api/excel/excel.worksheet), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection) |
+| `onRowHiddenChanged` | Возникает при изменении состояния скрытия строки на определенном листе. | [**Worksheet**](/javascript/api/excel/excel.worksheet), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection) |
+| `onRowSorted` | Возникает при сортировке одной или нескольких строк. Происходит в результате операции сортировки сверху вниз. | [**Worksheet**](/javascript/api/excel/excel.worksheet), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection) |
+| `onSingleClicked` | Возникает, когда происходит щелчок левой кнопкой мыши или нажатие на листе. | [**Worksheet**](/javascript/api/excel/excel.worksheet), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection) |
 
 ### <a name="event-triggers"></a>Триггеры событий
 
