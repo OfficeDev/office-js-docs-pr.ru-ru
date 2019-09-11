@@ -1,14 +1,14 @@
 ---
 title: Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 description: ''
-ms.date: 07/29/2019
+ms.date: 09/09/2019
 localization_priority: Priority
-ms.openlocfilehash: d6ede08411d9f6c69fa9fb31256ab377682fbca0
-ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
+ms.openlocfilehash: 8c1a39e4574f7e8ea60cdf32ff3139d9b929fe5d
+ms.sourcegitcommit: 24303ca235ebd7144a1d913511d8e4fb7c0e8c0d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "35940866"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "36838531"
 ---
 # <a name="troubleshoot-user-errors-with-office-add-ins"></a>Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 
@@ -40,7 +40,7 @@ ms.locfileid: "35940866"
 
 ## <a name="outlook-add-in-doesnt-work-correctly"></a>Надстройка Outlook работает неправильно
 
-Если надстройка Outlook в Windows работает неправильно, попробуйте включить отладку сценариев в Internet Explorer. 
+Если надстройка Outlook в Windows и [в Internet Explorer](../concepts/browsers-used-by-office-web-add-ins.md) работает неправильно, попробуйте включить отладку сценариев в Internet Explorer. 
 
 
 - Откройте меню "Сервис" >  **Свойства браузера** > **Дополнительно**.
@@ -88,7 +88,7 @@ ms.locfileid: "35940866"
 
 Чтобы добавить URL-адрес в список надежных сайтов:
 
-1. В Internet Explorer нажмите кнопку "Сервис" и перейдите в раздел **Свойства браузера** > **Безопасность**.
+1. На **панели управления** перейдите в раздел **Свойства браузера** > **Безопасность**.
 2. Выберите зону **Надежные сайты** и нажмите кнопку **Сайты**.
 3. Введите URL-адрес из сообщения об ошибке и нажмите кнопку **Добавить**.
 4. Запустите надстройку снова. Если проблема не исчезла, проверьте параметры для других зон безопасности и убедитесь, что домен надстройки находится в той же зоне, что и URL-адрес, отображаемый в адресной строке приложения Office.

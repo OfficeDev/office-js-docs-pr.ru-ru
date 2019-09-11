@@ -1,14 +1,14 @@
 ---
 title: Подключение отладчика из области задач
 description: ''
-ms.date: 08/06/2019
+ms.date: 09/09/2019
 localization_priority: Priority
-ms.openlocfilehash: 4433eccc165d616c7b8ebff428e1426c4b98be49
-ms.sourcegitcommit: dc78ee2a89fe3d4cd6f748be1eec9081c1077502
+ms.openlocfilehash: 39d952cc1162107881f6f6860a36be45c7eb4d30
+ms.sourcegitcommit: 24303ca235ebd7144a1d913511d8e4fb7c0e8c0d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36231307"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "36838475"
 ---
 # <a name="attach-a-debugger-from-the-task-pane"></a>Подключение отладчика из области задач
 
@@ -32,13 +32,14 @@ ms.locfileid: "36231307"
 > Если меню "Личные данные" не отображается, отладить надстройку можно с помощью Visual Studio. Убедитесь, что надстройка области задач открыта в Office, и выполните указанные ниже действия.
 >
 > 1. В Visual Studio выберите **ОТЛАДКА** > **Присоединиться к процессу**.
-> 2. В окне **Присоединение к процессу** выберите все доступные процессы Iexplore.exe, а затем нажмите кнопку **Присоединиться**.
+> 2. В разделе **Доступные процессы** выберите *либо* все доступные процессы `Iexplore.exe`, *либо* все доступные процессы `MicrosoftEdge*.exe`, в зависимости от того, [использует ли ваша надстройка Internet Explorer или Microsoft Edge](../concepts/browsers-used-by-office-web-add-ins.md), а затем нажмите кнопку **Присоединиться**.
 
 Дополнительные сведения об отладке в Visual Studio см. в следующих статьях:
 
 -   Дополнительные сведения о запуске и использовании Проводника DOM в Visual Studio приведены в совете № 4 в разделе [Советы и рекомендации](https://blogs.msdn.microsoft.com/officeapps/2013/04/16/building-great-looking-apps-for-office-using-the-new-project-templates/#tips_tricks) записи в блоге [Создание отличных приложений для Office с помощью новых шаблонов проекта](https://blogs.msdn.microsoft.com/officeapps/2013/04/16/building-great-looking-apps-for-office-using-the-new-project-templates).
 -   Как задать точки останова, можно узнать в статье [Использование точек останова](/visualstudio/debugger/using-breakpoints?view=vs-2015).
 -   Сведения об использовании F12 см. в статье [Использование средств разработчика F12](/previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v=vs.85)).
+-   Сведения об использовании средств разработчика в Microsoft Edge см. на странице [Microsoft Edge DevTools](https://www.microsoft.com/p/microsoft-edge-devtools-preview/9mzbfrmz0mnj?activetab=pivot%3Aoverviewtab).
 
 ## <a name="see-also"></a>См. также
 

@@ -1,16 +1,16 @@
 ---
 title: Надстройки области задач для Project
 description: ''
-ms.date: 07/05/2019
+ms.date: 09/09/2019
 ms.topic: overview
 scenarios: getting-started
 localization_priority: Priority
-ms.openlocfilehash: 290693da0a9b73fe00798b22d957373120bd7589
-ms.sourcegitcommit: 49af31060aa56c1e1ec1e08682914d3cbefc3f1c
+ms.openlocfilehash: d2d4019fc5f47e05ea3918d2077006468afc4bec
+ms.sourcegitcommit: 24303ca235ebd7144a1d913511d8e4fb7c0e8c0d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "36672847"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "36838538"
 ---
 # <a name="task-pane-add-ins-for-project"></a>Надстройки области задач для Project
 
@@ -145,7 +145,7 @@ Project стандартный 2013 и Project профессиональный 
 Общая папка может содержать несколько XML-файлов манифестов и несколько подкаталогов. Вы можете добавлять и удалять каталоги для хранения манифестов с помощью вкладки  **Надежные каталоги надстроек** диалогового окна **Центр управления безопасностью** в Project 2013. Для отображения надстройки в Project элемент **SourceLocation** в манифесте должен указывать на существующий веб-сайт или исходный HTML-файл.
 
 > [!NOTE]
-> Требуется установленный браузер Internet Explorer 9 (или более поздней версии), который может и не использоваться по умолчанию. Приложениям Надстройки Office необходимы компоненты Internet Explorer 9. В качестве браузера по умолчанию может выступать Internet Explorer 9, Safari 5.0.6, Firefox 5, Chrome 13 или один из этих браузеров более поздней версии.
+> Если вы занимаетесь разработкой на компьютере с Windows, необходимо установить Internet Explorer или Microsoft Edge. Дополнительные сведения см. в статье [Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md).
 
 В процедуре 2 надстройка поиска Bing устанавливается на локальный компьютер с установленным Project 2013. Однако из-за того, что инфраструктура надстроек не использует локальные пути для файлов, такие как  `C:\Project\AppManifests`, вы можете создать на локальном компьютере сетевую папку. При необходимости вы можете создать общую папку на удаленном компьютере.
 

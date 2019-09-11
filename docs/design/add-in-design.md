@@ -33,7 +33,6 @@ ms.locfileid: "35127676"
 - **Поддержка всех платформ и способов ввода**. Надстройки предназначены для работы на всех платформах, поддерживаемых Office, поэтому интерфейс вашей надстройки должен быть оптимизирован для различных платформ и форм-факторов. Реализуйте поддержку клавиатуры, мыши и сенсорных устройств ввода, а также убедитесь, что пользовательский интерфейс на основе HTML адаптируется к разным форм-факторам. Дополнительные сведения см. в статье [Сенсорный ввод](../concepts/add-in-development-best-practices.md#optimize-for-touch). 
 
 ## <a name="see-also"></a>См. также
-- 
-  [Office UI Fabric](https://developer.microsoft.com/ru-RU/fabric) 
+- [Office UI Fabric](https://developer.microsoft.com/ru-RU/fabric) 
 - [Рекомендации по разработке надстроек](../concepts/add-in-development-best-practices.md)
 

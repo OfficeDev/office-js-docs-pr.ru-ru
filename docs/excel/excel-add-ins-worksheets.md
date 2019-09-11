@@ -1,14 +1,14 @@
 ---
 title: Работа с листами с использованием API JavaScript для Excel
 description: ''
-ms.date: 06/20/2019
+ms.date: 09/09/2019
 localization_priority: Priority
-ms.openlocfilehash: 7fd6821797269b13ad7fb1900b2024035e27d37b
-ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
+ms.openlocfilehash: 3c06e3660c2c8d6bf362b38185b96c8012dc4b90
+ms.sourcegitcommit: 24303ca235ebd7144a1d913511d8e4fb7c0e8c0d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "35940740"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "36838577"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
@@ -298,6 +298,56 @@ function onWorksheetChanged(eventArgs) {
         return context.sync();
     });
 }
+```
+
+## <a name="handle-sorting-events-preview"></a>Обработка событий сортировки (предварительная версия)
+
+> [!NOTE]
+> API для этих событий, связанных с сортировкой, в настоящее время доступны только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+
+События `onColumnSorted` и `onRowSorted` указывают на сортировку любых данных на листе. Эти события связаны с индивидуальными объектами `Worksheet` и с `WorkbookCollection` книги. Они срабатывают при выполнении сортировки (программным образом или вручную с помощью пользовательского интерфейса Excel).
+
+> [!NOTE]
+> Событие `onColumnSorted` срабатывает при сортировке столбцов в результате операции сортировки слева направо. Событие `onRowSorted` срабатывает при сортировке строк в результате операции сортировки сверху вниз. Сортировка таблицы с помощью раскрывающегося меню в заголовке столбца приводит к срабатыванию события `onRowSorted`. Событие соответствует перемещаемым данным, а не критериям сортировки.
+
+События `onColumnSorted` и `onRowSorted` реализуют функции обратного вызова соответственно с помощью объектов [WorksheetColumnSortedEventArgs](/javascript/api/excel/excel.worksheetcolumnsortedeventargs) и [WorksheetRowSortedEventArgs](/javascript/api/excel/excel.worksheetrowsortedeventargs). Эти объекты предоставляют более подробную информацию о событии. В частности, оба `EventArgs` обладают свойством `address`, которое представляет строки или столбцы, перемещенные в результате операции сортировки. Включаются все ячейки, содержимое которых было отсортировано, даже если значение ячейки не входит в состав критериев сортировки.
+
+На приведенных ниже рисунках показаны диапазоны, возвращенные свойством `address` для событий сортировки. Вот образец данных до сортировки:
+
+![Данные из таблицы в Excel до сортировки](../images/excel-sort-event-before.png)
+
+Если выполнить сортировку сверху вниз для "**Q1**" (значения в "**B**"), `WorksheetRowSortedEventArgs.address` возвращает следующие выделенные строки:
+
+![Данные из таблицы в Excel после сортировки сверху вниз. Выделены перемещенные строки.](../images/excel-sort-event-after-row.png)
+
+Если выполнить сортировку слева направо для "**Quinces**" (значения в "**4**") в исходных данных, `WorksheetColumnsSortedEventArgs.address` возвращает следующие выделенные столбцы:
+
+![Данные из таблицы в Excel после сортировки слева направо. Выделены перемещенные столбцы.](../images/excel-sort-event-after-column.png)
+
+В приведенном ниже примере кода показано, как зарегистрировать обработчик событий для события `Worksheet.onRowSorted`. Обратный вызов обработчика очищает цвет заливки для диапазона, затем применяет заливку к ячейкам перемещенных строк.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+
+    // This will fire whenever a row has been moved as the result of a sort action.
+    sheet.onRowSorted.add(function (event) {
+        return Excel.run(function (context) {
+            console.log("Row sorted: " + event.address);
+            var sheet = context.workbook.worksheets.getActiveWorksheet();
+
+            // Clear formatting for section, then highlight the sorted area.
+            sheet.getRange("A1:E5").format.fill.clear();
+            if (event.address !== "") {
+                sheet.getRanges(event.address).format.fill.color = "yellow";
+            }
+
+            return context.sync();
+        });
+    });
+
+    return context.sync();
+}).catch(errorHandlerFunction);
 ```
 
 ## <a name="find-all-cells-with-matching-text"></a>Поиск всех ячеек с соответствующим текстом
