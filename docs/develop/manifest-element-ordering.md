@@ -3,12 +3,12 @@ title: Как определить правильный порядок элем�
 description: Узнайте, как определить правильный порядок расположения дочерних элементов в родительском элементе.
 ms.date: 08/22/2019
 localization_priority: Normal
-ms.openlocfilehash: c1b8e981b9348e015e14a29131eadff3a5cb08ea
-ms.sourcegitcommit: 4f039614f42ae26a1290ed025fdabb7f6b62cc8a
+ms.openlocfilehash: c8ee9f2f32f7124c4914131e68c9742f87567715
+ms.sourcegitcommit: 24303ca235ebd7144a1d913511d8e4fb7c0e8c0d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "36642833"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "36838503"
 ---
 # <a name="how-to-find-the-proper-order-of-manifest-elements"></a>Как определить правильный порядок элементов манифеста
 
@@ -28,7 +28,7 @@ XML-элементы в манифесте надстройки Office долж�
 
 ## <a name="basic-task-pane-add-in-element-ordering"></a>Упорядочение элементов базовой области задач
 
-```
+```xml
 <OfficeApp xsi:type="TaskPaneApp">
     <Id>
     <AlternateID>
@@ -70,7 +70,7 @@ XML-элементы в манифесте надстройки Office долж�
 
 ## <a name="basic-mail-add-in-element-ordering"></a>Упорядочение элементов базовой почтовой надстройки
 
-```
+```xml
 <OfficeApp xsi:type="MailApp">
     <Id>
     <AlternateId>
@@ -109,11 +109,11 @@ XML-элементы в манифесте надстройки Office долж�
     <VersionOverrides>*
 ```
 
-\*В статье упорядочение [элементов почтовых ящиков в VersionOverrides ver. 1,0](#mail-add-in-element-ordering-within-versionoverrides-ver-10) и почтовых почтовых [элементов надстройки в VersionOverrides ver. 1,1](#mail-add-in-element-ordering-within-versionoverrides-ver-11) для упорядочивания дочерних элементов VersionOverrides.
+\*В статье упорядочение [элементов почтовых ящиков в VersionOverrides ver. 1,0](#mail-add-in-element-ordering-within-versionoverrides-ver-10) и [почтовых почтовых элементов надстройки в VersionOverrides ver. 1,1](#mail-add-in-element-ordering-within-versionoverrides-ver-11) для упорядочивания дочерних элементов VersionOverrides.
 
 ## <a name="basic-content-add-in-element-ordering"></a>Упорядочение элементов базовой надстройки контента
 
-```
+```xml
 <OfficeApp xsi:type="ContentApp">
     <Id>
     <AlternateId>
@@ -152,7 +152,7 @@ XML-элементы в манифесте надстройки Office долж�
 
 ## <a name="task-pane-add-in-element-ordering-within-versionoverrides"></a>Упорядочение элементов надстройки области задач в VersionOverrides
 
-```
+```xml
 <VersionOverrides>
     <Description>
     <Requirements>
@@ -291,7 +291,7 @@ XML-элементы в манифесте надстройки Office долж�
 
 ## <a name="mail-add-in-element-ordering-within-versionoverrides-ver-10"></a>Упорядочение элементов почтовой надстройки в VersionOverrides ver. 1.0
 
-```
+```xml
 <VersionOverrides>
     <Description>
     <Requirements>
@@ -383,11 +383,11 @@ XML-элементы в манифесте надстройки Office долж�
     <VersionOverrides>*
 ```
 
-\*Объект VersionOverrides со `type` значением `VersionOverridesV1_1`, а не `VersionOverridesV1_0`, может быть вложен в конце внешнего VersionOverrides. Сведения о порядке элементов почтовых ящиков в [VersionOverrides ver. 1,1](#mail-add-in-element-ordering-within-versionoverrides-ver-11) для упорядочивания элементов `VersionOverridesV1_1`в.
+\*Объект VersionOverrides со `type` значением `VersionOverridesV1_1`, а не `VersionOverridesV1_0`, может быть вложен в конце внешнего VersionOverrides. Сведения о порядке элементов [почтовых ящиков в VersionOverrides ver. 1,1](#mail-add-in-element-ordering-within-versionoverrides-ver-11) для упорядочивания элементов `VersionOverridesV1_1`в.
 
 ## <a name="mail-add-in-element-ordering-within-versionoverrides-ver-11"></a>Упорядочение элементов почтовой надстройки в VersionOverrides ver. 1.1
 
-```
+```xml
 <VersionOverrides>
     <Description>
     <Requirements>
@@ -489,7 +489,7 @@ XML-элементы в манифесте надстройки Office долж�
 
 ## <a name="content-add-in-element-ordering-within-versionoverrides"></a>Упорядочение элементов контентной надстройки в VersionOverrides
 
-```
+```xml
 <VersionOverrides>
     <WebApplicationInfo>
         <Id>
