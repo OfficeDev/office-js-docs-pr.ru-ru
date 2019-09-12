@@ -1,14 +1,14 @@
 ---
 title: Работа с таблицами с использованием API JavaScript для Excel
 description: ''
-ms.date: 07/18/2019
+ms.date: 09/09/2019
 localization_priority: Priority
-ms.openlocfilehash: 826afb9444fbb83e032f59316de00100cfdb2402
-ms.sourcegitcommit: 6d9b4820a62a914c50cef13af8b80ce626034c26
+ms.openlocfilehash: 7803690b4a20aa89908a20cf557f8076f5fea70a
+ms.sourcegitcommit: 24303ca235ebd7144a1d913511d8e4fb7c0e8c0d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "35804641"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "36838552"
 ---
 # <a name="work-with-tables-using-the-excel-javascript-api"></a>Работа с таблицами с использованием API JavaScript для Excel
 
@@ -284,6 +284,8 @@ Excel.run(function (context) {
 **Данные таблицы, отсортированные по столбцу Amount (Сумма) в порядке убывания**
 
 ![Данные из таблицы в Excel](../images/excel-tables-sort.png)
+
+При сортировке данных на листе создается уведомление о событии. Дополнительные сведения о событиях, связанных с сортировкой, и о регистрации обработчиков событий надстройкой в ответ на такие события см. в статье [Обработка событий сортировки (предварительная версия)](excel-add-ins-worksheets.md#handle-sorting-events-preview).
 
 ## <a name="apply-filters-to-a-table"></a>Применение фильтров к таблице
 
