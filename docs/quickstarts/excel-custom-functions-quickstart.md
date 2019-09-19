@@ -1,15 +1,15 @@
 ---
-ms.date: 09/06/2019
+ms.date: 09/18/2019
 description: Разработка настраиваемых функций в кратком руководстве по Excel.
 title: Краткое руководство по настраиваемым функциям
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: b3344b19ec29b24407c83bb043dcbaa613d5e8ec
-ms.sourcegitcommit: ce7e7087a4550b9c090dc565fee5eac08a2985a2
+ms.openlocfilehash: f34a8817a7c8ef2679fc8ce0a6ad17cec600531b
+ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "36782235"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "37035331"
 ---
 # <a name="get-started-developing-excel-custom-functions"></a>Приступая к разработке пользовательских функций Excel
 
@@ -29,11 +29,7 @@ ms.locfileid: "36782235"
 
 Чтобы начать работу, создайте проект пользовательских функций с помощью генератора Yeoman. Это позволит настроить для проекта правильную структуру папок, исходные файлы и зависимости, чтобы начать написание кода пользовательских функций.
 
-1. В выбранной папке выполните следующую команду, а затем ответьте на приглашение следующим образом.
-
-    ```command&nbsp;line
-    yo office
-    ```
+1. [!include[Yeoman generator create project guidance](../includes/yo-office-command-guidance.md)]
 
     - **Выберите тип проекта:** `Excel Custom Functions Add-in project`
     - **Выберите тип сценария:** `JavaScript`

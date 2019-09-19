@@ -1,15 +1,15 @@
 ---
 title: Руководство по надстройкам Word
 description: В этом руководстве показано создание надстройки Word, которая вставляет (и заменяет) диапазоны текста, абзацы, изображения, HTML-код, таблицы и элементы управления контентом. Вы также узнаете, как форматировать текст, вставлять и заменять содержимое в элементах управления контентом.
-ms.date: 07/17/2019
+ms.date: 09/18/2019
 ms.prod: word
 localization_priority: Normal
-ms.openlocfilehash: b689dc8993ad61045dac54c1024b3fbd1e1a19ad
-ms.sourcegitcommit: 49af31060aa56c1e1ec1e08682914d3cbefc3f1c
+ms.openlocfilehash: 24b0ab5cecf9cfbc493da4488a71ac34dff61b47
+ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "36672868"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "37035376"
 ---
 # <a name="tutorial-create-a-word-task-pane-add-in"></a>Учебник: Создание надстройки области задач Word
 
@@ -22,27 +22,27 @@ ms.locfileid: "36672868"
 > * Вставляет изображения, HTML-код и таблицы
 > * Создает и обновляет элементы управления содержимым 
 
+> [!TIP]
+> Если вы уже завершили [Создание первой надстройки области задач Word](../quickstarts/word-quickstart.md) и хотите использовать этот проект в качестве отправной точки для этого руководства, перейдите непосредственно к разделу [Вставка диапазона текста](#insert-a-range-of-text) для запуска этого руководства.
+
 ## <a name="prerequisites"></a>Необходимые компоненты
 
-Для работы с этим руководством необходимо установить указанные ниже компоненты.
-
-- Word 2016, версия 1711 (сборка 8730.1000 "нажми и работай") или более поздняя. Чтобы установить эту версию, необходимо быть участником программы предварительной оценки Office. [Дополнительные сведения](https://products.office.com/office-insider?tab=tab-1)
-
-- [Node](https://nodejs.org/en/) 
-
-- [Git Bash](https://git-scm.com/downloads) (или другой клиент Git)
+[!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
 ## <a name="create-your-add-in-project"></a>Создание проекта надстройки
 
-Выполните указанные ниже действия для создания проекта надстройки Word, который будет использоваться в качестве основы для этого учебника.
+[!include[Yeoman generator create project guidance](../includes/yo-office-command-guidance.md)]
 
-1. Клонируйте репозиторий GitHub [Word-Add-in-Tutorial](https://github.com/OfficeDev/Word-Add-in-Tutorial).
+- **Выберите тип проекта:** `Office Add-in Task Pane project`
+- **Выберите тип сценария:** `Javascript`
+- **Как вы хотите назвать надстройку?** `My Office Add-in`
+- **Какое клиентское приложение Office должно поддерживаться?** `Word`
 
-2. Откройте окно Git Bash или системную командную строку с поддержкой Node.JS и перейдите к папке **Start** проекта.
+![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-word.png)
 
-3. Выполните команду `npm install`, чтобы установить инструменты и библиотеки, указанные в файле package.json. 
+После завершения работы мастера генератор создает проект и устанавливает вспомогательные компоненты узла.
 
-4. Выполните действия, описанные в статье [Установка самозаверяющего сертификата](https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md) , чтобы доверять сертификату операционной системы на компьютере разработчика.
+[!include[Yeoman generator next steps](../includes/yo-office-next-steps.md)]
 
 ## <a name="insert-a-range-of-text"></a>Вставка диапазона текста
 
@@ -52,31 +52,40 @@ ms.locfileid: "36672868"
 
 1. Откройте проект в редакторе кода.
 
-2. Откройте файл index.html.
+2. Откройте файл **./src/TaskPane/TaskPane.HTML**. Этот файл содержит разметку HTML для области задач.
 
-3. Замените `TODO1` на следующую разметку:
+3. Нахождение `<main>` элемента и удаление всех строк, которые отображаются после открывающего `<main>` тега и перед закрывающим `</main>` тегом.
+
+4. Добавьте следующую разметку сразу после открывающего `<main>` тега:
 
     ```html
-    <button class="ms-Button" id="insert-paragraph">Insert Paragraph</button>
+    <button class="ms-Button" id="insert-paragraph">Insert Paragraph</button><br/><br/>
     ```
 
-4. Откройте файл app.js.
+5. Откройте файл **./СРК/таскпане/таскпане.ЖС**. Этот файл содержит код API JavaScript для Office, который упрощает взаимодействие между областью задач и ведущим приложением Office.
 
-5. Замените `TODO1` на приведенный ниже код. Этот код определяет, поддерживает ли установленная у пользователя версия Word ту версию файла Word.js, которая включает все API, используемые на всех этапах данного руководства. В рабочей надстройке можно использовать текст условного блока, чтобы скрыть или отключить пользовательский интерфейс, где вызываются неподдерживаемые API. При этом пользователь по-прежнему сможет использовать те части надстройки, которые поддерживаются в его версии Word.
+6. Удалите все ссылки на `run` кнопку и `run()` функцию, выполнив следующие действия:
+
+    - Откройте и удалите строку `document.getElementById("run").onclick = run;`.
+
+    - Искать и удалить функцию целиком `run()` .
+
+7. В вызове `Office.onReady` метода откройте строку `if (info.host === Office.HostType.Word) {` и добавьте следующий код сразу после этой строки. Примечание.
+
+    - Первая часть этого кода определяет, поддерживает ли версия Word для пользователя версию файла Word. js, которая включает все API, используемые на всех этапах этого руководства. В рабочей надстройке можно использовать текст условного блока, чтобы скрыть или отключить пользовательский интерфейс, где вызываются неподдерживаемые API. При этом пользователь по-прежнему сможет использовать те части надстройки, которые поддерживаются в его версии Word.
+    - Во второй части этого кода добавляется обработчик событий для `insert-paragraph` кнопки.
 
     ```js
+    // Determine if the user's version of Office supports all the Office.js APIs that are used in the tutorial.
     if (!Office.context.requirements.isSetSupported('WordApi', '1.3')) {
         console.log('Sorry. The tutorial add-in uses Word.js APIs that are not available in your version of Office.');
     }
+
+    // Assign event handlers and other initialization logic.
+    document.getElementById("insert-paragraph").onclick = insertParagraph;
     ```
 
-6. Замените `TODO2` на следующий код:
-
-    ```js
-    $('#insert-paragraph').click(insertParagraph);
-    ```
-
-7. Замените `TODO3` приведенным ниже кодом. Примечание.
+8. Добавьте указанную ниже функцию в конец файла. Примечание.
 
    - Бизнес-логика Word.js будет добавлена в функцию, передаваемую методу `Word.run`. Эта логика выполняется не сразу. Вместо этого она добавляется в очередь ожидания команд.
 
@@ -88,7 +97,7 @@ ms.locfileid: "36672868"
     function insertParagraph() {
         Word.run(function (context) {
 
-            // TODO4: Queue commands to insert a paragraph into the document.
+            // TODO1: Queue commands to insert a paragraph into the document.
 
             return context.sync();
         })
@@ -101,7 +110,7 @@ ms.locfileid: "36672868"
     }
     ```
 
-8. Замените `TODO4` на приведенный ниже код. Примечание:
+9. Замените `TODO1` в `insertParagraph()` функции приведенный ниже код. Обратите внимание:
 
    - Первый параметр метода `insertParagraph`— это текст нового абзаца.
 
@@ -113,31 +122,47 @@ ms.locfileid: "36672868"
                             "Start");
     ```
 
+10. Убедитесь, что вы сохранили все изменения, внесенные в проект.
+
 ### <a name="test-the-add-in"></a>Тестирование надстройки
 
-1. Откройте окно Git Bash или системную командную строку с поддержкой Node.JS и перейдите к папке **Start** проекта.
+1. Выполните следующие действия для запуска локального веб-сервера и Загрузка неопубликованных надстройки.
 
-2. Выполните команду `npm run build`, чтобы преобразовать исходный код ES6 в более раннюю версию JavaScript, поддерживаемую всеми ведущими приложениями, в которых могут работать надстройки Office.
+    > [!NOTE]
+    > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите одну из указанных ниже команд, примите предложение установить сертификат, предоставленный генератором Yeoman.
 
-3. Выполните команду `npm start`, чтобы запустить веб-сервер, работающий на localhost.
+    > [!TIP]
+    > Если вы тестируете надстройку на Mac, выполните следующую команду в корневом каталоге проекта, прежде чем продолжить. При выполнении этой команды запустится локальный веб-сервер.
+    >
+    > ```command&nbsp;line
+    > npm run dev-server
+    > ```
 
-4. Загрузите неопубликованную надстройку одним из следующих способов:
+    - Чтобы протестировать надстройку в Word, выполните следующую команду в корневом каталоге проекта. При этом запустится локальный веб-сервер (если он еще не запущен) и будет открыто приложение Word с загруженной надстройкой.
 
-    - [Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
+        ```command&nbsp;line
+        npm start
+        ```
 
-    - Веб-браузер: Загрузка неопубликованных надстройки [Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web)
+    - Чтобы протестировать надстройку в Word в Интернете, выполните следующую команду в корневом каталоге проекта. При выполнении этой команды запустится локальный веб-сервер (если он еще не запущен).
 
-    - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
+        ```command&nbsp;line
+        npm run start:web
+        ```
 
-5. В меню **Главная** в Word выберите пункт **Показать область задач**.
+        Чтобы использовать надстройку, откройте новый документ в Word в Интернете и затем Загрузка неопубликованных свою надстройку, следуя инструкциям в статье [Загрузка неопубликованных Office Add-ins in Office in Web](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web).
 
-6. В области задач нажмите кнопку **Insert Paragraph** (Вставить абзац).
+2. В Word выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
-7. Внесите изменение в абзац.
+    ![Снимок экрана: приложение Word с выделенной кнопкой "Показать область задач"](../images/word-quickstart-addin-2b.png)
 
-8. Снова нажмите кнопку **Insert Paragraph**. Обратите внимание, что новый абзац находится над предыдущим, так как метод `insertParagraph` вставляет текст в начале основного текста документа.
+3. В области задач нажмите кнопку **Вставить абзац** .
 
-    ![Руководство по Word: вставка абзаца](../images/word-tutorial-insert-paragraph.png)
+4. Внесите изменение в абзац.
+
+5. Снова нажмите кнопку **Вставить абзац** . Обратите внимание, что новый абзац находится над предыдущим, `insertParagraph` так как метод вставляется в начало тела документа.
+
+    ![Руководство по Word: вставка абзаца](../images/word-tutorial-insert-paragraph-2.png)
 
 ## <a name="format-text"></a>Форматирование текста
 
@@ -145,27 +170,23 @@ ms.locfileid: "36672868"
 
 ### <a name="apply-a-built-in-style-to-text"></a>Применение встроенного стиля к тексту
 
-1. Откройте проект в редакторе кода. 
+1. Откройте файл **./src/TaskPane/TaskPane.HTML**.
 
-2. Откройте файл index.html.
-
-3. Под элементом `div`, содержащим кнопку `insert-paragraph`, добавьте следующую разметку:
+2. Нахождение `<button>` элемента для `insert-paragraph` кнопки и добавление приведенной ниже разметки после этой строки:
 
     ```html
-    <div class="padding">            
-        <button class="ms-Button" id="apply-style">Apply Style</button>            
-    </div>
+    <button class="ms-Button" id="apply-style">Apply Style</button><br/><br/>
     ```
 
-4. Откройте файл app.js.
+3. Откройте файл **./СРК/таскпане/таскпане.ЖС**.
 
-5. Под строкой, назначающей обработчик нажатия кнопки `insert-paragraph`, добавьте следующий код:
+4. В вызове `Office.onReady` метода укажите строку, которая назначает обработчик нажатия `insert-paragraph` кнопки, и добавьте следующий код после этой строки:
 
     ```js
-    $('#apply-style').click(applyStyle);
+    document.getElementById("apply-style").onclick = applyStyle;
     ```
 
-6. Под функцией `insertParagraph` добавьте следующую функцию:
+5. Добавьте указанную ниже функцию в конец файла:
 
     ```js
     function applyStyle() {
@@ -184,7 +205,7 @@ ms.locfileid: "36672868"
     }
     ``` 
 
-7. Замените `TODO1` на приведенный ниже код. Обратите внимание, что этот код применяет стиль к абзацу, но стили также можно применять к диапазонам текста.
+6. Замените `TODO1` в `applyStyle()` функции приведенный ниже код. Обратите внимание, что этот код применяет стиль к абзацу, но стили также можно применять к диапазонам текста.
 
     ```js
     var firstParagraph = context.document.body.paragraphs.getFirst();
@@ -193,25 +214,23 @@ ms.locfileid: "36672868"
 
 ### <a name="apply-a-custom-style-to-text"></a>Применение пользовательского стиля к тексту
 
-1. Откройте файл index.html.
+1. Откройте файл **./src/TaskPane/TaskPane.HTML**.
 
-2. Под элементом `div`, содержащим кнопку `apply-style`, добавьте следующую разметку:
+2. Нахождение `<button>` элемента для `apply-style` кнопки и добавление приведенной ниже разметки после этой строки: 
 
     ```html
-    <div class="padding">            
-        <button class="ms-Button" id="apply-custom-style">Apply Custom Style</button>            
-    </div>
+    <button class="ms-Button" id="apply-custom-style">Apply Custom Style</button><br/><br/>
     ```
 
-3. Откройте файл app.js.
+3. Откройте файл **./СРК/таскпане/таскпане.ЖС**.
 
-4. Под строкой, назначающей обработчик нажатия кнопки `apply-style`, добавьте следующий код:
+4. В вызове `Office.onReady` метода укажите строку, которая назначает обработчик нажатия `apply-style` кнопки, и добавьте следующий код после этой строки:
 
     ```js
-    $('#apply-custom-style').click(applyCustomStyle);
+    document.getElementById("apply-custom-style").onclick = applyCustomStyle;
     ```
 
-5. Добавьте приведенную ниже функцию под функцией `applyStyle`.
+5. Добавьте указанную ниже функцию в конец файла:
 
     ```js
     function applyCustomStyle() {
@@ -230,34 +249,34 @@ ms.locfileid: "36672868"
     }
     ``` 
 
-6. Замените `TODO1` на приведенный ниже код. Обратите внимание, что этот код применяет пользовательский стиль, который еще не существует. Мы создадим стиль с именем **MyCustomStyle** во время [тестирования настройки](#test-the-add-in).
+6. Замените `TODO1` в `applyCustomStyle()` функции приведенный ниже код. Обратите внимание, что этот код применяет пользовательский стиль, который еще не существует. Мы создадим стиль с именем **MyCustomStyle** во время [тестирования настройки](#test-the-add-in-1).
 
     ```js
     var lastParagraph = context.document.body.paragraphs.getLast();
     lastParagraph.style = "MyCustomStyle";
     ``` 
 
+7. Убедитесь, что вы сохранили все изменения, внесенные в проект.
+
 ### <a name="change-the-font-of-text"></a>Изменение шрифта для текста
 
-1. Откройте файл index.html.
+1. Откройте файл **./src/TaskPane/TaskPane.HTML**.
 
-2. Под элементом `div`, содержащим кнопку `apply-custom-style`, добавьте следующую разметку:
+2. Нахождение `<button>` элемента для `apply-custom-style` кнопки и добавление приведенной ниже разметки после этой строки: 
 
     ```html
-    <div class="padding">            
-        <button class="ms-Button" id="change-font">Change Font</button>            
-    </div>
+    <button class="ms-Button" id="change-font">Change Font</button><br/><br/>
     ```
 
-3. Откройте файл app.js.
+3. Откройте файл **./СРК/таскпане/таскпане.ЖС**.
 
-4. Под строкой, назначающей обработчик нажатия кнопки `apply-custom-style`, добавьте следующий код:
+4. В вызове `Office.onReady` метода укажите строку, которая назначает обработчик нажатия `apply-custom-style` кнопки, и добавьте следующий код после этой строки:
 
     ```js
-    $('#change-font').click(changeFont);
+    document.getElementById("change-font").onclick = changeFont;
     ```
 
-5. Добавьте приведенную ниже функцию под функцией `applyCustomStyle`.
+5. Добавьте указанную ниже функцию в конец файла:
 
     ```js
     function changeFont() {
@@ -276,7 +295,7 @@ ms.locfileid: "36672868"
     }
     ``` 
 
-6. Замените `TODO1` на приведенный ниже код. Обратите внимание, что этот код получает ссылку на второй абзац с помощью метода `ParagraphCollection.getFirst`, привязанного к методу `Paragraph.getNext`.
+6. Замените `TODO1` в `changeFont()` функции приведенный ниже код. Обратите внимание, что этот код получает ссылку на второй абзац с помощью метода `ParagraphCollection.getFirst`, привязанного к методу `Paragraph.getNext`.
 
     ```js
     var secondParagraph = context.document.body.paragraphs.getFirst().getNext();
@@ -287,30 +306,25 @@ ms.locfileid: "36672868"
         });
     ``` 
 
+7. Убедитесь, что вы сохранили все изменения, внесенные в проект.
+
 ### <a name="test-the-add-in"></a>Тестирование надстройки
 
-1. Если окно Git Bash или системная командная строка с поддержкой Node.JS, открытые на предыдущем этапе руководства, все еще открыты, дважды нажмите клавиши Ctrl+C, чтобы остановить работу веб-сервера. Если они закрыты, откройте окно Git Bash или системную командную строку с поддержкой Node.JS и перейдите к папке **Start** проекта.
+1. [!include[Start server and sideload add-in instructions](../includes/tutorial-word-start-server.md)]
 
-     > [!NOTE]
-     > Хотя сервер синхронизации браузера будет повторно загружать надстройку в области задач при каждом изменении любого файла (в том числе app.js), он не передает повторно код JavaScript, поэтому нужно будет снова выполнить команду сборки, чтобы изменения, внесенные в файл app.js, вступили в силу. Для этого необходимо завершить процесс сервера, чтобы появился запрос и вы могли ввести команду сборки. После сборки необходимо перезапустить сервер. Для этого выполните указанные ниже действия.
+2. Если область задач надстройки еще не открыта в Word, перейдите на вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть ее.
 
-2. Выполните команду `npm run build`, чтобы преобразовать исходный код ES6 в более раннюю версию JavaScript, поддерживаемую всеми ведущими приложениями, в которых могут работать надстройки Office.
+3. Убедитесь, что в тексте есть по крайней мере три абзаца. Вы можете нажать кнопку **Вставить абзац** три раза. *Внимательно проверьте, нет ли в конце документа пустого абзаца. Если он есть, удалите его.*
 
-3. Выполните команду `npm start`, чтобы запустить веб-сервер, работающий на localhost.   
+4. В Word создайте [настраиваемый стиль](https://support.office.com/article/Customize-or-create-new-styles-d38d6e47-f6fc-48eb-a607-1eb120dec563) с именем "микустомстиле". Его форматирование может быть любым.
 
-4. Перезагрузите область задач. Для этого закройте ее, а затем выберите в меню **Главная** пункт **Показать область задач**, чтобы заново открыть надстройку.
+5. Нажмите кнопку **Apply Style** (Применить стиль). К первому абзацу будет применен встроенный стиль **Сильная ссылка**.
 
-5. Убедитесь, что в тексте есть по крайней мере три абзаца. Вы можете три раза нажать кнопку **Insert Paragraph** (Вставить абзац). *Внимательно проверьте, нет ли в конце документа пустого абзаца. Если он есть, удалите его.*
+6. Нажмите кнопку **Apply Custom Style** (Применить пользовательский стиль). К последнему абзацу будет применен созданный вами стиль. Если ничего не происходит, возможно, последний абзац пуст. Если это так, добавьте в него какой-нибудь текст.
 
-6. В Word создайте пользовательский стиль с именем "MyCustomStyle". Его форматирование может быть любым.
+7. Нажмите кнопку **Change Font** (Изменить шрифт). Шрифт второго абзаца изменится на полужирный Courier New с размером 18.
 
-7. Нажмите кнопку **Apply Style** (Применить стиль). К первому абзацу будет применен встроенный стиль **Сильная ссылка**.
-
-8. Нажмите кнопку **Apply Custom Style** (Применить пользовательский стиль). К последнему абзацу будет применен созданный вами стиль. Если ничего не происходит, возможно, последний абзац пуст. Если это так, добавьте в него какой-нибудь текст.
-
-9. Нажмите кнопку **Change Font** (Изменить шрифт). Шрифт второго абзаца изменится на полужирный Courier New с размером 18.
-
-    ![Руководство по Word: применение стилей и шрифта](../images/word-tutorial-apply-styles-and-font.png)
+    ![Руководство по Word: применение стилей и шрифта](../images/word-tutorial-apply-styles-and-font-2.png)
 
 ## <a name="replace-text-and-insert-text"></a>Замена текста и добавление текста
 
@@ -318,27 +332,22 @@ ms.locfileid: "36672868"
 
 ### <a name="add-text-inside-a-range"></a>Добавление текста в диапазон
 
-1. Откройте проект в редакторе кода.
+1. Откройте файл **./src/TaskPane/TaskPane.HTML**.
 
-2. Откройте файл index.html.
-
-3. Под элементом `div`, содержащим кнопку `change-font`, добавьте следующую разметку:
+2. Нахождение `<button>` элемента для `change-font` кнопки и добавление приведенной ниже разметки после этой строки: 
 
     ```html
-    <div class="padding">
-        <button class="ms-Button" id="insert-text-into-range">Insert Abbreviation</button>
-    </div>
+    <button class="ms-Button" id="insert-text-into-range">Insert Abbreviation</button><br/><br/>
     ```
 
-4. Откройте файл app.js.
+3. Откройте файл **./СРК/таскпане/таскпане.ЖС**.
 
-5. Под строкой, назначающей обработчик нажатия кнопки `change-font`, добавьте следующий код:
+4. В вызове `Office.onReady` метода укажите строку, которая назначает обработчик нажатия `change-font` кнопки, и добавьте следующий код после этой строки:
 
     ```js
-    $('#insert-text-into-range').click(insertTextIntoRange);
+    document.getElementById("insert-text-into-range").onclick = insertTextIntoRange;
     ```
-
-6. Добавьте приведенную ниже функцию под функцией `changeFont`.
+5. Добавьте указанную ниже функцию в конец файла:
 
     ```js
     function insertTextIntoRange() {
@@ -363,7 +372,7 @@ ms.locfileid: "36672868"
     }
     ``` 
 
-7. Замените `TODO1` приведенным ниже кодом. Обратите внимание:
+6. Замените `TODO1` в `insertTextIntoRange()` функции приведенный ниже код. Примечание.
 
    - Этот метод призван вставить аббревиатуру ["(C2R)"] в конце диапазона с текстом "Click-to-Run". Для простоты предполагается, что такая строка существует и пользователь выделил ее.
 
@@ -381,7 +390,7 @@ ms.locfileid: "36672868"
     originalRange.insertText(" (C2R)", "End");
     ```
 
-8. Пропустим заполнитель `TODO2` до следующего этапа. Замените `TODO3` на приведенный ниже код. Он похож на код, созданный на первом этапе руководства, но теперь мы вставляем новый абзац в конце, а не в начале документа. Новый абзац покажет, что новый текст теперь входит в исходный диапазон.
+7. Пропустим заполнитель `TODO2` до следующего этапа. Замените `TODO3` в `insertTextIntoRange()` функции приведенный ниже код. Он похож на код, созданный на первом этапе руководства, но теперь мы вставляем новый абзац в конце, а не в начале документа. Новый абзац покажет, что новый текст теперь входит в исходный диапазон.
 
     ```js
     doc.body.insertParagraph("Original range: " + originalRange.text, "End");
@@ -389,7 +398,7 @@ ms.locfileid: "36672868"
 
 ### <a name="add-code-to-fetch-document-properties-into-the-task-panes-script-objects"></a>Добавление кода для получения свойств документа в объекты скриптов области задач
 
-В случае всех предыдущих функций из этой серии руководств вы ставили в очередь команды для *записи* данных в документ Office. Каждая функция заканчивалась вызовом метода `context.sync()`, который отправляет поставленные в очередь команды документу для выполнения. Но код, который вы добавили на последнем этапе, вызывает свойство `originalRange.text`, и в этом заключается существенное отличие от ранее написанных функций, так как `originalRange` является лишь объектом прокси, существующим в скрипте вашей области задач. В нем нет сведений о фактическом тексте диапазона в документе, поэтому его свойство `text` может не содержать настоящего значения. Необходимо сначала получить из документа текстовое значение диапазона, а затем задать с его помощью значение для свойства `originalRange.text`. Только после этого можно будет вызвать метод `originalRange.text` без исключения. Процесс получения делится на три этапа:
+Во всех предыдущих функциях этой серии учебников вы наставили в очередь команды для *записи* в документ Office. Каждая функция заканчивалась вызовом метода `context.sync()`, который отправляет поставленные в очередь команды документу для выполнения. Но код, который вы добавили на последнем этапе, вызывает свойство `originalRange.text`, и в этом заключается существенное отличие от ранее написанных функций, так как `originalRange` является лишь объектом прокси, существующим в скрипте вашей области задач. В нем нет сведений о фактическом тексте диапазона в документе, поэтому его свойство `text` может не содержать настоящего значения. Необходимо сначала получить из документа текстовое значение диапазона, а затем задать с его помощью значение для свойства `originalRange.text`. Только после этого можно будет вызвать метод `originalRange.text` без исключения. Процесс получения делится на три этапа:
 
    1. Добавление в очередь команды для загрузки (т. е. получения) свойств, которые должен прочесть ваш код.
 
@@ -399,20 +408,17 @@ ms.locfileid: "36672868"
 
 Эти три действия должны выполняться каждый раз, когда коду нужно *считывать* данные из документа Office.
 
-1. Замените `TODO2` на приведенный ниже код.
+1. Замените `TODO2` в `insertTextIntoRange()` функции приведенный ниже код.
   
     ```js
     originalRange.load("text");
     return context.sync()
         .then(function() {
-
-                // TODO4: Move the doc.body.insertParagraph line here.
-
-            }
-        )
-            // TODO5: Move the final call of context.sync here and ensure
-            //        that it does not run until the insertParagraph has
-            //        been queued.
+            // TODO4: Move the doc.body.insertParagraph line here.
+        })
+        // TODO5: Move the final call of context.sync here and ensure
+        //        that it does not run until the insertParagraph has
+        //        been queued.
     ```
 
 2. Для двух операторов `return` не может использоваться один путь кода, который не разветвляется, поэтому удалите последнюю строку `return context.sync();` в конце метода `Word.run`. Последний метод `context.sync` будет добавлен позже в этом руководстве.
@@ -423,7 +429,7 @@ ms.locfileid: "36672868"
 
    - Передача метода `sync` в функцию `then` гарантирует, что он не будет выполняться, пока логика `insertParagraph` не будет поставлена в очередь.
 
-   - Метод `then` вызывает любую функцию, которая ему передана. Не нужно вызывать `sync` дважды, поэтому уберите "()" в конце вызова context.sync.
+   - `then` Метод вызывает любую функцию, которая передается в нее, и вы не `sync` хотите вызывать ее дважды, поэтому не следует опускать "()" в конце context. Sync.
 
     ```js
     .then(context.sync);
@@ -442,10 +448,8 @@ function insertTextIntoRange() {
         originalRange.load("text");
         return context.sync()
             .then(function() {
-                        doc.body.insertParagraph("Current text of original range: " + originalRange.text,
-                                                "End");
-                }
-            )
+                doc.body.insertParagraph("Current text of original range: " + originalRange.text, "End");
+            })
             .then(context.sync);
     })
     .catch(function (error) {
@@ -459,25 +463,23 @@ function insertTextIntoRange() {
 
 ### <a name="add-text-between-ranges"></a>Добавление текста между диапазонами
 
-1. Откройте файл index.html.
+1. Откройте файл **./src/TaskPane/TaskPane.HTML**.
 
-2. Под элементом `div`, содержащим кнопку `insert-text-into-range`, добавьте следующую разметку:
+2. Нахождение `<button>` элемента для `insert-text-into-range` кнопки и добавление приведенной ниже разметки после этой строки: 
 
     ```html
-    <div class="padding">
-        <button class="ms-Button" id="insert-text-outside-range">Add Version Info</button>
-    </div>
+    <button class="ms-Button" id="insert-text-outside-range">Add Version Info</button><br/><br/>
     ```
 
-3. Откройте файл app.js.
+3. Откройте файл **./СРК/таскпане/таскпане.ЖС**.
 
-4. Под строкой, назначающей обработчик нажатия кнопки `insert-text-into-range`, добавьте следующий код:
+4. В вызове `Office.onReady` метода укажите строку, которая назначает обработчик нажатия `insert-text-into-range` кнопки, и добавьте следующий код после этой строки:
 
     ```js
-    $('#insert-text-outside-range').click(insertTextBeforeRange);
+    document.getElementById("insert-text-outside-range").onclick = insertTextBeforeRange;
     ```
 
-5. Добавьте приведенную ниже функцию под функцией `insertTextIntoRange`.
+5. Добавьте указанную ниже функцию в конец файла:
 
     ```js
     function insertTextBeforeRange() {
@@ -499,7 +501,7 @@ function insertTextIntoRange() {
     }
     ```
 
-6. Замените `TODO1` на приведенный ниже код. Обратите внимание:
+6. Замените `TODO1` в `insertTextBeforeRange()` функции приведенный ниже код. Обратите внимание:
 
    - Этот метод предназначен для добавления диапазона с текстом "Office 2019, " перед диапазоном с текстом "Office 365". Для простоты предполагается, что такая строка существует и пользователь выделил ее.
 
@@ -513,29 +515,24 @@ function insertTextIntoRange() {
     originalRange.insertText("Office 2019, ", "Before");
     ```
 
-7. Замените `TODO2` на приведенный ниже код.
+7. Замените `TODO2` в `insertTextBeforeRange()` функции приведенный ниже код.
 
      ```js
     originalRange.load("text");
     return context.sync()
         .then(function() {
-
-                // TODO3: Queue commands to insert the original range as a
-                //        paragraph at the end of the document.
-
-                }
-            )
-
-            // TODO4: Make a final call of context.sync here and ensure
-            //        that it does not run until the insertParagraph has
-            //        been queued.
+            // TODO3: Queue commands to insert the original range as a
+            //        paragraph at the end of the document.
+        })
+        // TODO4: Make a final call of context.sync here and ensure
+        //        that it does not run until the insertParagraph has
+        //        been queued.
     ```
 
 8. Замените `TODO3` на приведенный ниже код. Этот абзац покажет, что новый текст ***не*** входит в исходный выделенный диапазон. Исходный диапазон по-прежнему содержит такой же текст, как и когда он был выделен.
 
     ```js
-    doc.body.insertParagraph("Current text of original range: " + originalRange.text,
-                             "End");
+    doc.body.insertParagraph("Current text of original range: " + originalRange.text, "End");
     ```
 
 9. Замените `TODO4` на приведенный ниже код.
@@ -546,25 +543,23 @@ function insertTextIntoRange() {
 
 ### <a name="replace-the-text-of-a-range"></a>Замена текста диапазона
 
-1. Откройте файл index.html.
+1. Откройте файл **./src/TaskPane/TaskPane.HTML**.
 
-2. Под элементом `div`, содержащим кнопку `insert-text-outside-range`, добавьте следующую разметку:
+2. Нахождение `<button>` элемента для `insert-text-outside-range` кнопки и добавление приведенной ниже разметки после этой строки: 
 
     ```html
-    <div class="padding">
-        <button class="ms-Button" id="replace-text">Change Quantity Term</button>
-    </div>
+    <button class="ms-Button" id="replace-text">Change Quantity Term</button><br/><br/>
     ```
 
-3. Откройте файл app.js.
+3. Откройте файл **./СРК/таскпане/таскпане.ЖС**.
 
-4. Под строкой, назначающей обработчик нажатия кнопки `insert-text-outside-range`, добавьте следующий код:
+4. В вызове `Office.onReady` метода укажите строку, которая назначает обработчик нажатия `insert-text-outside-range` кнопки, и добавьте следующий код после этой строки:
 
     ```js
-    $('#replace-text').click(replaceText);
+    document.getElementById("replace-text").onclick = replaceText;
     ```
 
-5. Добавьте приведенную ниже функцию под функцией `insertTextBeforeRange`.
+5. Добавьте указанную ниже функцию в конец файла:
 
     ```js
     function replaceText() {
@@ -583,7 +578,7 @@ function insertTextIntoRange() {
     }
     ```
 
-6. Замените `TODO1` на приведенный ниже код. Обратите внимание, что этот метод предназначен для замены строки "several" на строку "many". Для простоты предполагается, что такая строка существует и пользователь выделил ее.
+6. Замените `TODO1` в `replaceText()` функции приведенный ниже код. Обратите внимание, что этот метод предназначен для замены строки "several" на строку "many". Для простоты предполагается, что такая строка существует и пользователь выделил ее.
 
     ```js
     var doc = context.document;
@@ -591,68 +586,72 @@ function insertTextIntoRange() {
     originalRange.insertText("many", "Replace");
     ```
 
+7. Убедитесь, что вы сохранили все изменения, внесенные в проект.
+
 ### <a name="test-the-add-in"></a>Тестирование надстройки
 
-1. Если окно Git Bash или системная командная строка с поддержкой Node.JS, открытые на предыдущем этапе руководства, все еще открыты, дважды нажмите клавиши CTRL+C, чтобы остановить работу веб-сервера. Если они закрыты, откройте окно Git Bash или системную командную строку с поддержкой Node.JS и перейдите к папке **Start** проекта.
+1. [!include[Start server and sideload add-in instructions](../includes/tutorial-word-start-server.md)]
 
-     > [!NOTE]
-     > Хотя сервер синхронизации браузера будет повторно загружать надстройку в области задач при каждом изменении любого файла (в том числе app.js), он не передает повторно код JavaScript, поэтому нужно будет снова выполнить команду сборки, чтобы изменения, внесенные в файл app.js, вступили в силу. Для этого необходимо завершить процесс сервера, чтобы появился запрос и вы могли ввести команду сборки. После сборки перезапустите сервер. Для этого выполните указанные ниже действия.
+2. Если область задач надстройки еще не открыта в Word, перейдите на вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть ее.
 
-2. Выполните команду `npm run build`, чтобы преобразовать исходный код ES6 в более раннюю версию JavaScript, поддерживаемую всеми ведущими приложениями, в которых могут работать надстройки Office.
+3. В области задач нажмите кнопку **Вставить абзац** , чтобы убедиться, что в начале документа есть абзац.
 
-3. Выполните команду `npm start`, чтобы запустить веб-сервер, работающий на localhost.
+4. В документе выберите фразу "нажми и работай". *Следите за тем, чтобы не включать предыдущее пространство или запятые в выделенном фрагменте.*
 
-4. Перезагрузите область задач. Для этого закройте ее, а затем выберите в меню **Главная** пункт **Показать область задач**, чтобы заново открыть надстройку.
+5. Нажмите кнопку **Insert Abbreviation** (Вставить аббревиатуру). Обратите внимание на добавленную строку " (C2R)". Кроме того, обратите внимание, что в конце документа добавлен новый абзац со всем развернутым текстом, так как новая строка была добавлена к имеющемуся диапазону.
 
-5. В области задач нажмите кнопку **Insert Paragraph** (Вставить абзац), чтобы убедиться, что в начале документа есть абзац.
+6. В документе выберите фразу "Office 365". *Будьте осторожны, чтобы не выделить пробел в начале или конце фразы.*
 
-6. Выделите какой-нибудь текст. Лучше всего выбрать фразу "Click-to-Run". *Будьте осторожны, чтобы не выделить пробел в начале или конце фразы.*
+7. Нажмите кнопку **Add Version Info** (Добавить сведения о версии). Обратите внимание, что между строками "Office 2016" и "Office 365" вставлена строка "Office 2019, ". Кроме того, обратите внимание, что в конце документа появился новый абзац, содержащий только изначально выделенный текст, так как новая строка стала новым диапазоном, а не была добавлена к существующему.
 
-7. Нажмите кнопку **Insert Abbreviation** (Вставить аббревиатуру). Обратите внимание на добавленную строку " (C2R)". Кроме того, обратите внимание, что в конце документа добавлен новый абзац со всем развернутым текстом, так как новая строка была добавлена к имеющемуся диапазону.
+8. В документе выберите слово "несколько". *Будьте осторожны, чтобы не выделить пробел в начале или конце фразы.*
 
-8. Выделите какой-нибудь текст. Лучше всего выбрать фразу "Office 365". *Будьте осторожны, чтобы не выделить пробел в начале или конце фразы.*
+9. Нажмите кнопку **Change Quantity Term** (Изменить числительное). Обратите внимание, что слово "many" заменило выделенный текст.
 
-9. Нажмите кнопку **Add Version Info** (Добавить сведения о версии). Обратите внимание, что между строками "Office 2016" и "Office 365" вставлена строка "Office 2019, ". Кроме того, обратите внимание, что в конце документа появился новый абзац, содержащий только изначально выделенный текст, так как новая строка стала новым диапазоном, а не была добавлена к существующему.
-
-10. Выделите какой-нибудь текст. Лучше всего выделить слово "several". *Будьте осторожны, чтобы не выделить пробел в начале или конце фразы.*
-
-11. Нажмите кнопку **Change Quantity Term** (Изменить числительное). Обратите внимание, что слово "many" заменило выделенный текст.
-
-    ![Руководство по Word: добавленный и замененный текст](../images/word-tutorial-text-replace.png)
+    ![Руководство по Word: добавленный и замененный текст](../images/word-tutorial-text-replace-2.png)
 
 ## <a name="insert-images-html-and-tables"></a>Вставка изображений, HTML-кода и таблиц
 
 На этом этапе руководства мы рассмотрим вставку изображений, HTML-кода и таблиц в документ.
 
+### <a name="define-an-image"></a>Определение изображения
+
+Выполните указанные ниже действия, чтобы определить изображение, которое будет вставлено в документ в следующей части этого руководства. 
+
+1. В корне проекта создайте новый файл с именем **base64Image. js**.
+
+2. Откройте файл **base64Image. js** и добавьте приведенный ниже код, чтобы указать строку в кодировке Base64, представляющую изображение.
+
+    ```js
+    export const base64Image =
+        "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";
+    ```
+
 ### <a name="insert-an-image"></a>Вставка изображения
 
-1. Откройте проект в редакторе кода.
+1. Откройте файл **./src/TaskPane/TaskPane.HTML**.
 
-2. Откройте файл index.html.
-
-3. Под элементом `div`, содержащим кнопку `replace-text`, добавьте следующую разметку:
+2. Нахождение `<button>` элемента для `replace-text` кнопки и добавление приведенной ниже разметки после этой строки: 
 
     ```html
-    <div class="padding">
-        <button class="ms-Button" id="insert-image">Insert Image</button>
-    </div>
+    <button class="ms-Button" id="insert-image">Insert Image</button><br/><br/>
     ```
 
-4. Откройте файл app.js.
+3. Откройте файл **./СРК/таскпане/таскпане.ЖС**.
 
-5. Добавьте приведенную ниже строку сразу под строкой use-strict в верхней части файла. Эта строка импортирует переменную из другого файла. Переменная представляет собой строку с кодировкой Base 64, кодирующую изображение. Чтобы просмотреть закодированную строку, откройте файл base64Image.js в корневой папке проекта.
+4. Нахождение `Office.onReady` вызова метода в верхней части файла и добавление следующего кода непосредственно перед этой строкой. Этот код импортирует переменную, определенную ранее в файле file **./base64Image.js**.
 
     ```js
-    import { base64Image } from "./base64Image";
+    import { base64Image } from "../../base64Image";
     ```
 
-6. Под строкой, назначающей обработчик нажатия кнопки `replace-text`, добавьте следующий код:
+5. В вызове `Office.onReady` метода укажите строку, которая назначает обработчик нажатия `replace-text` кнопки, и добавьте следующий код после этой строки:
 
     ```js
-    $('#insert-image').click(insertImage);
+    document.getElementById("insert-image").onclick = insertImage;
     ```
 
-7. Добавьте приведенную ниже функцию под функцией `replaceText`.
+6. Добавьте указанную ниже функцию в конец файла:
 
     ```js
     function insertImage() {
@@ -671,7 +670,7 @@ function insertTextIntoRange() {
     }
     ```
 
-8. Замените `TODO1` на приведенный ниже код. Обратите внимание, что эта строка вставляет изображение с кодировкой Base 64 в конце документа. У объекта `Paragraph` также есть метод `insertInlinePictureFromBase64` и другие методы `insert*`. Пример представлен в следующем разделе, посвященном вставке HTML.
+7. Замените `TODO1` в `insertImage()` функции приведенный ниже код. Обратите внимание, что эта строка вставляет изображение с кодировкой Base 64 в конце документа. У объекта `Paragraph` также есть метод `insertInlinePictureFromBase64` и другие методы `insert*`. Пример представлен в следующем разделе, посвященном вставке HTML.
 
     ```js
     context.document.body.insertInlinePictureFromBase64(base64Image, "End");
@@ -679,25 +678,22 @@ function insertTextIntoRange() {
 
 ### <a name="insert-html"></a>Вставка HTML
 
-1. Откройте файл index.html.
+1. Откройте файл **./src/TaskPane/TaskPane.HTML**.
 
-2. Под элементом `div`, содержащим кнопку `insert-image`, добавьте следующую разметку:
+2. Нахождение `<button>` элемента для `insert-image` кнопки и добавление приведенной ниже разметки после этой строки: 
 
     ```html
-    <div class="padding">
-        <button class="ms-Button" id="insert-html">Insert HTML</button>
-    </div>
+    <button class="ms-Button" id="insert-html">Insert HTML</button><br/><br/>
     ```
 
-3. Откройте файл app.js.
+3. Откройте файл **./СРК/таскпане/таскпане.ЖС**.
 
-4. Под строкой, назначающей обработчик нажатия кнопки `insert-image`, добавьте следующий код:
+4. В вызове `Office.onReady` метода укажите строку, которая назначает обработчик нажатия `insert-image` кнопки, и добавьте следующий код после этой строки:
 
     ```js
-    $('#insert-html').click(insertHTML);
+    document.getElementById("insert-html").onclick = insertHTML;
     ```
-
-5. Добавьте приведенную ниже функцию под функцией `insertImage`.
+5. Добавьте указанную ниже функцию в конец файла:
 
     ```js
     function insertHTML() {
@@ -716,7 +712,7 @@ function insertTextIntoRange() {
     }
     ```
 
-6. Замените `TODO1` приведенным ниже кодом. Обратите внимание:
+6. Замените `TODO1` в `insertHTML()` функции приведенный ниже код. Примечание.
 
    - Первая строка добавляет пустой абзац в конце документа. 
 
@@ -729,25 +725,23 @@ function insertTextIntoRange() {
 
 ### <a name="insert-a-table"></a>Вставка таблицы
 
-1. Откройте файл index.html.
+1. Откройте файл **./src/TaskPane/TaskPane.HTML**.
 
-2. Под элементом `div`, содержащим кнопку `insert-html`, добавьте следующую разметку:
+2. Нахождение `<button>` элемента для `insert-html` кнопки и добавление приведенной ниже разметки после этой строки: 
 
     ```html
-    <div class="padding">
-        <button class="ms-Button" id="insert-table">Insert Table</button>
-    </div>
+    <button class="ms-Button" id="insert-table">Insert Table</button><br/><br/>
     ```
 
-3. Откройте файл app.js.
+3. Откройте файл **./СРК/таскпане/таскпане.ЖС**.
 
-4. Под строкой, назначающей обработчик нажатия кнопки `insert-html`, добавьте следующий код:
+4. В вызове `Office.onReady` метода укажите строку, которая назначает обработчик нажатия `insert-html` кнопки, и добавьте следующий код после этой строки:
 
     ```js
-    $('#insert-table').click(insertTable);
+    document.getElementById("insert-table").onclick = insertTable;
     ```
 
-5. Добавьте приведенную ниже функцию под функцией `insertHTML`.
+5. Добавьте указанную ниже функцию в конец файла:
 
     ```js
     function insertTable() {
@@ -769,13 +763,13 @@ function insertTextIntoRange() {
     }
     ```
 
-6. Замените `TODO1` на приведенный ниже код. Обратите внимание, что в этой строке используется метод `ParagraphCollection.getFirst`, чтобы получить ссылку на первый абзац, а затем — метод `Paragraph.getNext`, чтобы получить ссылку на второй абзац.
+6. Замените `TODO1` в `insertTable()` функции приведенный ниже код. Обратите внимание, что в этой строке используется метод `ParagraphCollection.getFirst`, чтобы получить ссылку на первый абзац, а затем — метод `Paragraph.getNext`, чтобы получить ссылку на второй абзац.
 
     ```js
     var secondParagraph = context.document.body.paragraphs.getFirst().getNext();
     ```
 
-7. Замените `TODO2` приведенным ниже кодом. Обратите внимание:
+7. Замените `TODO2` в `insertTable()` функции приведенный ниже код. Примечание.
 
    - Первые два параметра метода `insertTable` задают количество строк и столбцов.
 
@@ -794,61 +788,51 @@ function insertTextIntoRange() {
     secondParagraph.insertTable(3, 3, "After", tableData);
     ```
 
+8. Убедитесь, что вы сохранили все изменения, внесенные в проект.
+
 ### <a name="test-the-add-in"></a>Тестирование надстройки
 
-1. Если окно Git Bash или системная командная строка с поддержкой Node.JS, открытые на предыдущем этапе руководства, все еще открыты, дважды нажмите клавиши CTRL+C, чтобы остановить работу веб-сервера. Если они закрыты, откройте окно Git Bash или системную командную строку с поддержкой Node.JS и перейдите к папке **Start** проекта.
+1. [!include[Start server and sideload add-in instructions](../includes/tutorial-word-start-server.md)]
 
-     > [!NOTE]
-     > Хотя сервер синхронизации браузера будет повторно загружать надстройку в области задач при каждом изменении любого файла (в том числе app.js), он не передает повторно код JavaScript, поэтому нужно будет снова выполнить команду сборки, чтобы изменения, внесенные в файл app.js, вступили в силу. Для этого необходимо завершить процесс сервера, чтобы появился запрос и вы могли ввести команду сборки. После сборки перезапустите сервер. Для этого выполните указанные ниже действия.
+2. Если область задач надстройки еще не открыта в Word, перейдите на вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть ее.
 
-2. Выполните команду `npm run build`, чтобы преобразовать исходный код ES6 в более раннюю версию JavaScript, поддерживаемую всеми ведущими приложениями, в которых могут работать надстройки Office.
+3. В области задач нажмите кнопку **Вставить абзац** по крайней мере три раза, чтобы убедиться в наличии нескольких абзацев в документе.
 
-3. Выполните команду `npm start`, чтобы запустить веб-сервер, работающий на localhost.
+4. Нажмите кнопку **Insert Image** (Вставить изображение) и обратите внимание, что изображение вставляется в конце документа.
 
-4. Перезагрузите область задач. Для этого закройте ее, а затем выберите в меню **Главная** пункт **Показать область задач**, чтобы заново открыть надстройку.
+5. Нажмите кнопку **Insert HTML** (Вставить HTML) и обратите внимание, что в конце документа вставляются два абзаца, в первом из которых используется шрифт Verdana.
 
-5. В области задач нажмите кнопку **Insert Paragraph** (Вставить абзац) не менее трех раз, чтобы убедиться, что в документе есть несколько абзацев.
+6. Нажмите кнопку **Insert Table** (Вставить таблицу) и обратите внимание, что после второго абзаца вставляется таблица.
 
-6. Нажмите кнопку **Insert Image** (Вставить изображение) и обратите внимание, что изображение вставляется в конце документа.
-
-7. Нажмите кнопку **Insert HTML** (Вставить HTML) и обратите внимание, что в конце документа вставляются два абзаца, в первом из которых используется шрифт Verdana.
-
-8. Нажмите кнопку **Insert Table** (Вставить таблицу) и обратите внимание, что после второго абзаца вставляется таблица.
-
-    ![Руководство по Word: вставка изображения, HTML-кода и таблицы](../images/word-tutorial-insert-image-html-table.png)
+    ![Руководство по Word: вставка изображения, HTML-кода и таблицы](../images/word-tutorial-insert-image-html-table-2.png)
 
 ## <a name="create-and-update-content-controls"></a>Создание и обновление элементов управления содержимым
 
 На этом этапе руководства мы рассмотрим создание элементов управления форматированным текстом в документе, а также вставку и замену содержимого этих элементов.
 
 > [!NOTE]
-> Существует несколько типов элементов управления содержимым, которые можно добавить в документ Word через пользовательский интерфейс. Однако в настоящее время Word.js поддерживает только элементы управления форматированным текстом.
+> Существует несколько типов элементов управления содержимым, которые можно добавить в документ Word через пользовательский интерфейс, но в настоящее время Word. js поддерживает только элементы управления содержимым "форматированный текст".
 >
 > Прежде чем приступать к этому этапу руководства, рекомендуем создать элементы управления форматированным текстом и управлять ими через пользовательский интерфейс Word, чтобы получить представление об этих элементах и их свойствах. Дополнительные сведения см. в статье [Создание форм, предназначенных для заполнения или печати в приложении Word](https://support.office.com/article/create-forms-that-users-complete-or-print-in-word-040c5cc1-e309-445b-94ac-542f732c8c8b).
 
 ### <a name="create-a-content-control"></a>Создание элемента управления содержимым
 
-1. Откройте проект в редакторе кода.
+1. Откройте файл **./src/TaskPane/TaskPane.HTML**.
 
-2. Откройте файл index.html.
-
-3. Под элементом `div`, содержащим кнопку `replace-text`, добавьте следующую разметку:
+2. Нахождение `<button>` элемента для `insert-table` кнопки и добавление приведенной ниже разметки после этой строки: 
 
     ```html
-    <div class="padding">
-        <button class="ms-Button" id="create-content-control">Create Content Control</button>
-    </div>
+    <button class="ms-Button" id="create-content-control">Create Content Control</button><br/><br/>
     ```
 
-4. Откройте файл app.js.
+3. Откройте файл **./СРК/таскпане/таскпане.ЖС**.
 
-5. Под строкой, назначающей обработчик нажатия кнопки `insert-table`, добавьте следующий код:
+4. В вызове `Office.onReady` метода укажите строку, которая назначает обработчик нажатия `insert-table` кнопки, и добавьте следующий код после этой строки:
 
     ```js
-    $('#create-content-control').click(createContentControl);
+    document.getElementById("create-content-control").onclick = createContentControl;
     ```
-
-6. Добавьте приведенную ниже функцию под функцией `insertTable`.
+5. Добавьте указанную ниже функцию в конец файла:
 
     ```js
     function createContentControl() {
@@ -867,7 +851,7 @@ function insertTextIntoRange() {
     }
     ```
 
-7. Замените `TODO1` приведенным ниже кодом. Обратите внимание:
+6. Замените `TODO1` в `createContentControl()` функции приведенный ниже код. Обратите внимание:
 
    - Этот код заключает фразу "Office 365" в элемент управления содержимым. Для простоты предполагается, что такая строка существует и пользователь выделил ее.
 
@@ -890,25 +874,23 @@ function insertTextIntoRange() {
 
 ### <a name="replace-the-content-of-the-content-control"></a>Замена содержимого элемента управления
 
-1. Откройте файл index.html.
+1. Откройте файл **./src/TaskPane/TaskPane.HTML**.
 
-2. Под элементом `div`, содержащим кнопку `create-content-control`, добавьте следующую разметку:
+2. Нахождение `<button>` элемента для `create-content-control` кнопки и добавление приведенной ниже разметки после этой строки: 
 
     ```html
-    <div class="padding">
-        <button class="ms-Button" id="replace-content-in-control">Rename Service</button>
-    </div>
+    <button class="ms-Button" id="replace-content-in-control">Rename Service</button><br/><br/>
     ```
 
-3. Откройте файл app.js.
+3. Откройте файл **./СРК/таскпане/таскпане.ЖС**.
 
-4. Под строкой, назначающей обработчик нажатия кнопки `create-content-control`, добавьте следующий код:
+4. В вызове `Office.onReady` метода укажите строку, которая назначает обработчик нажатия `create-content-control` кнопки, и добавьте следующий код после этой строки:
 
     ```js
-    $('#replace-content-in-control').click(replaceContentInControl);
+    document.getElementById("replace-content-in-control").onclick = replaceContentInControl;
     ```
 
-5. Добавьте приведенную ниже функцию под функцией `createContentControl`.
+5. Добавьте указанную ниже функцию в конец файла:
 
     ```js
     function replaceContentInControl() {
@@ -928,7 +910,7 @@ function insertTextIntoRange() {
     }
     ```
 
-6. Замените `TODO1` приведенным ниже кодом. Обратите внимание:
+6. Замените `TODO1` в `replaceContentInControl()` функции приведенный ниже код. Примечание.
 
     - Метод `ContentControlCollection.getByTag` возвращает значение `ContentControlCollection` для всех элементов управления контентом указанного тега. Чтобы получить ссылку на нужный элемент управления, используйте `getFirst`.
 
@@ -937,26 +919,21 @@ function insertTextIntoRange() {
     serviceNameContentControl.insertText("Fabrikam Online Productivity Suite", "Replace");
     ```
 
+7. Убедитесь, что вы сохранили все изменения, внесенные в проект.
+
 ### <a name="test-the-add-in"></a>Тестирование надстройки
 
-1. Если окно Git Bash или системная командная строка с поддержкой Node.JS, открытые на предыдущем этапе руководства, все еще открыты, дважды нажмите клавиши CTRL+C, чтобы остановить работу веб-сервера. Если они закрыты, откройте окно Git Bash или системную командную строку с поддержкой Node.JS и перейдите к папке **Start** проекта.
+1. [!include[Start server and sideload add-in instructions](../includes/tutorial-word-start-server.md)]
 
-     > [!NOTE]
-     > Хотя сервер синхронизации браузера будет повторно загружать надстройку в области задач при каждом изменении любого файла (в том числе app.js), он не передает повторно код JavaScript, поэтому нужно будет снова выполнить команду сборки, чтобы изменения, внесенные в файл app.js, вступили в силу. Для этого необходимо завершить процесс сервера, чтобы появился запрос и вы могли ввести команду сборки. После сборки перезапустите сервер. Для этого выполните указанные ниже действия.
+2. Если область задач надстройки еще не открыта в Word, перейдите на вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть ее.
 
-2. Выполните команду `npm run build`, чтобы преобразовать исходный код ES6 в более раннюю версию JavaScript, поддерживаемую всеми ведущими приложениями, в которых могут работать надстройки Office.
+3. В области задач нажмите кнопку **Вставить абзац** , чтобы убедиться, что в верхней части документа есть абзац с "Office 365".
 
-3. Выполните команду `npm start`, чтобы запустить веб-сервер, работающий на localhost.
-
-4. Перезагрузите область задач. Для этого закройте ее, а затем выберите в меню **Главная** пункт **Показать область задач**, чтобы заново открыть надстройку.
-
-5. В области задач нажмите кнопку **Insert Paragraph** (Вставить абзац), чтобы убедиться, что в начале документа есть абзац с фразой "Office 365".
-
-6. Выделите фразу "Office 365" в добавленном абзаце, а затем нажмите кнопку **Create Content Control** (Создать элемент управления содержимым). Обратите внимание, что фраза заключена в теги с меткой Service Name.
+4. В документе выберите текст "Office 365", а затем нажмите кнопку **создать элемент управления содержимым** . Обратите внимание, что фраза заключена в теги с меткой Service Name.
 
 7. Нажмите кнопку **Rename Service** (Переименовать службу) и обратите внимание, что текст элемента управления содержимым меняется на "Fabrikam Online Productivity Suite".
 
-    ![Руководство по Word: создание элемента управления содержимым и изменение его текста](../images/word-tutorial-content-control.png)
+    ![Руководство по Word: создание элемента управления содержимым и изменение его текста](../images/word-tutorial-content-control-2.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

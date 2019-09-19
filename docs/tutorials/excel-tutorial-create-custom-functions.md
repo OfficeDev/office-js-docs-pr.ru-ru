@@ -1,15 +1,15 @@
 ---
 title: Руководство по пользовательским функциям в Excel
 description: Из этого руководства вы узнаете, как создать надстройку, Excel, содержащую пользовательские функции, которые могут выполнять вычисления, запрашивать или передавать веб-данные.
-ms.date: 09/06/2019
+ms.date: 09/18/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: d7af566d228c3b4da87be2d3d8bfba049f8b5509
-ms.sourcegitcommit: ce7e7087a4550b9c090dc565fee5eac08a2985a2
+ms.openlocfilehash: 4481d63cc167c2ce05ec70331ccd7fd472d7846b
+ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "36782270"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "37035450"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -32,11 +32,7 @@ ms.locfileid: "36782270"
 
  Чтобы начать, вам необходимо создать проект кода для разработки надстройки пользовательской функции. [Генератор Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office) настроит проект с помощью некоторых предварительно созданных настраиваемых функций, которые можно испытать. Если вы уже запустили функцию быстрого запуска пользовательских функций и создали проект, продолжайте использовать этот проект и переходите к [этому шагу](#create-a-custom-function-that-requests-data-from-the-web) .
 
-1. Выполните указанную ниже команду и ответьте на вопросы, как показано ниже.
-    
-    ```command&nbsp;line
-    yo office
-    ```
+1. [!include[Yeoman generator create project guidance](../includes/yo-office-command-guidance.md)]
     
     * **Выберите тип проекта:** `Excel Custom Functions Add-in project`
     * **Выберите тип сценария:** `JavaScript`
@@ -45,6 +41,8 @@ ms.locfileid: "36782270"
     ![Генератор Yeoman для надстройки Office, приглашающий к созданию пользовательских функций](../images/starcountPrompt.png)
     
     Генератор Yeoman создаст файлы проекта и установит вспомогательные компоненты Node.
+
+    [!include[Yeoman generator next steps](../includes/yo-office-next-steps.md)]
 
 2. Перейдите к корневой папке проекта.
     
