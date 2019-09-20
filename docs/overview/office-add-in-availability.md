@@ -3,12 +3,12 @@ title: Доступность ведущих приложений и платф�
 description: Поддерживаемые наборы обязательных элементов для Excel, OneNote, Outlook, PowerPoint, Project и Word.
 ms.date: 08/13/2019
 localization_priority: Priority
-ms.openlocfilehash: 1e368fe21a1bcdb2a7f44c88ce8e881605fa96f2
-ms.sourcegitcommit: 1c7e555733ee6d5a08e444a3c4c16635d998e032
+ms.openlocfilehash: a3c580f32ad7cd384309a9b53e55ea488a470a90
+ms.sourcegitcommit: f781d7cfd980cd866d6d1d00c5b9d16c8a4b7f9b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "36395654"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "37053328"
 ---
 # <a name="office-add-in-host-and-platform-availability"></a>Доступность ведущих приложений и платформ для надстроек Office
 
@@ -164,8 +164,7 @@ ms.locfileid: "36395654"
   <tr>
     <td>Office для iPad<br>(версия, подключенная к подписке на Office 365)</td>
     <td>- Область задач<br>
-        - Контент<br>
-        - Пользовательские функции</td>
+        - Контент</td>
     <td>- <a href="/office/dev/add-ins/reference/requirement-sets/excel-api-1-1-requirement-set">ExcelApi 1.1</a><br>
         - <a href="/office/dev/add-ins/reference/requirement-sets/excel-api-1-2-requirement-set">ExcelApi 1.2</a><br>
         - <a href="/office/dev/add-ins/reference/requirement-sets/excel-api-1-3-requirement-set">ExcelApi 1.3</a><br>
