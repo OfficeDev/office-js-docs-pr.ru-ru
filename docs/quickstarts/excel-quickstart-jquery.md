@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Excel
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office.
-ms.date: 09/06/2019
+ms.date: 09/18/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 855db6f41b895f0be985a352d4a1cdcb72bf3394
-ms.sourcegitcommit: ce7e7087a4550b9c090dc565fee5eac08a2985a2
+ms.openlocfilehash: 6f5b78e1ffb154eb014bb4bb0ef8cb7135b2012f
+ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "36782291"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "37035324"
 ---
 # <a name="build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel
 
@@ -27,11 +27,7 @@ ms.locfileid: "36782291"
 
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
-Создайте проект надстройки Excel помощью генератора Yeoman. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
-
-```command&nbsp;line
-yo office
-```
+[!include[Yeoman generator create project guidance](../includes/yo-office-command-guidance.md)]
 
 - **Выберите тип проекта:** `Office Add-in Task Pane project`
 - **Выберите тип сценария:** `Javascript`
@@ -41,6 +37,8 @@ yo office
 ![Генератор Yeoman](../images/yo-office-excel.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
+
+[!include[Yeoman generator next steps](../includes/yo-office-next-steps.md)]
 
 ### <a name="explore-the-project"></a>Знакомство с проектом
 

@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач PowerPoint
 description: Узнайте, как создать простую надстройку области задач PowerPoint, используя API JS для Office.
-ms.date: 09/06/2019
+ms.date: 09/18/2019
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: 93ce98921ea429778505577575eef0f992be93f1
-ms.sourcegitcommit: ce7e7087a4550b9c090dc565fee5eac08a2985a2
+ms.openlocfilehash: 62e11129a35a802b8f4088a93687d631c0af2ff4
+ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "36782249"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "37035318"
 ---
 # <a name="build-your-first-powerpoint-task-pane-add-in"></a>Создание первой надстройки области задач PowerPoint
 
@@ -27,11 +27,7 @@ ms.locfileid: "36782249"
 
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
-С помощью генератора Yeoman создайте проект надстройки PowerPoint. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
-
-```command&nbsp;line
-yo office
-```
+[!include[Yeoman generator create project guidance](../includes/yo-office-command-guidance.md)]
 
 - **Выберите тип проекта:** `Office Add-in Task Pane project`
 - **Выберите тип сценария:** `Javascript`
@@ -41,6 +37,8 @@ yo office
 ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-powerpoint.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
+
+[!include[Yeoman generator next steps](../includes/yo-office-next-steps.md)]
 
 ### <a name="explore-the-project"></a>Знакомство с проектом
 

@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач OneNote
 description: ''
-ms.date: 09/06/2019
+ms.date: 09/18/2019
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: 7e31933b5d38cede00983d6f3f31a284043bb769
-ms.sourcegitcommit: ce7e7087a4550b9c090dc565fee5eac08a2985a2
+ms.openlocfilehash: dd4e16edc2dc3fa4046e3e587b3d1a1aba058e30
+ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "36782263"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "37035268"
 ---
 # <a name="build-your-first-onenote-task-pane-add-in"></a>Создание первой надстройки области задач OneNote
 
@@ -21,11 +21,7 @@ ms.locfileid: "36782263"
 
 ## <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
-С помощью генератора Yeoman создайте проект надстройки OneNote. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
-
-```command&nbsp;line
-yo office
-```
+[!include[Yeoman generator create project guidance](../includes/yo-office-command-guidance.md)]
 
 - **Выберите тип проекта:** `Office Add-in Task Pane project`
 - **Выберите тип сценария:** `Javascript`
@@ -35,7 +31,9 @@ yo office
 ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-onenote.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
-    
+
+[!include[Yeoman generator next steps](../includes/yo-office-next-steps.md)]
+
 ## <a name="explore-the-project"></a>Знакомство с проектом
 
 Проект надстройки, который вы создали с помощью генератора Yeoman, содержит образец кода для простейшей надстройки области задач. 
