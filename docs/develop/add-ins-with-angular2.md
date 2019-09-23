@@ -1,14 +1,14 @@
 ---
 title: Разработка надстроек Office с помощью Angular
 description: ''
-ms.date: 03/19/2019
+ms.date: 09/18/2019
 localization_priority: Priority
-ms.openlocfilehash: 5e71b9f6db78308c1e1d1d237f3f78600c1a99a4
-ms.sourcegitcommit: 68872372d181cca5bee37ade73c2250c4a56bab6
+ms.openlocfilehash: 6687cb5a661217e3bc6b240ce550edd082e565c7
+ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "33517368"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "37035219"
 ---
 # <a name="develop-office-add-ins-with-angular"></a>Разработка надстроек Office с помощью Angular
 
@@ -79,7 +79,13 @@ export class AppRoutingModule { }
 
 ## <a name="consider-wrapping-fabric-components-with-angular-components"></a>Советуем разместить компоненты Fabric в компонентах Angular
 
-Рекомендуем использовать в надстройке стили [Office UI Fabric](https://developer.microsoft.com/fabric#/fabric-js). Fabric включает компоненты, для которых предусмотрено несколько версий, в том числе версии [на основе TypeScript](https://github.com/OfficeDev/office-ui-fabric-js). Советуем использовать компоненты Fabric в надстройке, размещая их в компонентах Angular. Пример см. в статье [Надстройка проверки стиля в программе Word на основе Angular](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker). Обратите внимание, например, как компонент Angular, определенный в [fabric.textfield.wrapper](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker/blob/master/app/shared/office-fabric-component-wrappers/fabric.textfield.wrapper.component.ts), импортирует файл TextField.ts Fabric, где определен компонент Fabric. 
+Рекомендуем использовать в надстройке стили [UI Fabric](https://developer.microsoft.com/fabric#). Стиль UI Fabric для Интернета представлен в двух вариантах: 
+
+- [Fabric React](https://developer.microsoft.com/fabric#/controls/web) предоставляет надежные, современные и доступные компоненты с широкими возможностями настройки.
+
+- [Fabric Core](https://developer.microsoft.com/fabric#/styles/web) — это коллекция классов CSS и примесей Sass, обеспечивающих доступ к цветам, анимации, шрифтам, значкам и сетке Fabric.
+
+Советуем использовать компоненты Fabric в надстройке, размещая их в компонентах Angular. Пример см. в статье [Надстройка проверки стиля в программе Word на основе Angular](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker). Обратите внимание, например, как компонент Angular, определенный в [fabric.textfield.wrapper](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker/blob/master/app/shared/office-fabric-component-wrappers/fabric.textfield.wrapper.component.ts), импортирует файл TextField.ts Fabric, где определен компонент Fabric. 
 
 
 ## <a name="using-the-office-dialog-api-with-angular"></a>Использование API диалоговых окон Office с Angular

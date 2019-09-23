@@ -1,15 +1,15 @@
 ---
 title: Создание области задач Excel с помощью Vue
 description: ''
-ms.date: 09/04/2019
+ms.date: 09/18/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 9947852a586570345ba9f3dfe09340af6d01ace6
-ms.sourcegitcommit: 78998a9f0ebb81c4dd2b77574148b16fe6725cfc
+ms.openlocfilehash: bcd4f84ce6d09db813c643d2cac8fcc5ce5f76c3
+ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "36715634"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "37035303"
 ---
 # <a name="build-an-excel-task-pane-add-in-using-vue"></a>Создание области задач Excel с помощью Vue
 
@@ -41,23 +41,31 @@ vue create my-add-in
 
 1. Перейдите к папке приложения.
 
-   ```command&nbsp;line
-   cd my-add-in
-   ```
+    ```command&nbsp;line
+    cd my-add-in
+    ```
 
-2. Используя генератор Yeoman, создайте файл манифеста для надстройки. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
+2. С помощью генератора Yeoman создайте файл манифеста для надстройки, выполнив следующую команду:
 
-   ```command&nbsp;line
-   yo office
-   ```
+    ```command&nbsp;line
+    yo office
+    ```
 
-   ![Генератор Yeoman](../images/yo-office-manifest-only-vue.png)
+    > [!NOTE]
+    > При выполнении команды `yo office` может появиться запрос о политиках сбора данных генератора Yeoman и средств CLI надстройки Office. Используйте предоставленные сведения, чтобы ответить на запросы подходящим образом. Если в ответ на второй запрос выбран вариант **Выход**, потребуется снова выполнить команду `yo office`, когда вы будете готовы создать проект надстройки.
 
-   - **Выберите тип проекта:** `Office Add-in project containing the manifest only`
-   - **Как вы хотите назвать надстройку?** `my-office-add-in`
-   - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
+    При появлении запроса предоставьте следующую информацию для создания проекта надстройки:
+
+    - **Выберите тип проекта:** `Office Add-in project containing the manifest only`
+    - **Как вы хотите назвать надстройку?** `my-office-add-in`
+    - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
+
+    ![Генератор Yeoman](../images/yo-office-manifest-only-vue.png)
 
 После завершения работы мастера создается папка `my-office-add-in`, содержащая файл `manifest.xml`. В конце краткого руководства вам потребуется использовать манифест для загрузки без публикации и тестирования вашей надстройки.
+
+> [!TIP]
+> Вы можете игнорировать инструкции по *дальнейшим действиям*, предоставляемые генератором Yeoman после создания проекта надстройки. Пошаговые инструкции этой статьи содержат все сведения, необходимые для завершения этого учебного курса.
 
 ## <a name="secure-the-app"></a>Защита приложения
 

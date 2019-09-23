@@ -1,14 +1,14 @@
 ---
 title: Использование Office UI Fabric React в надстройках Office
 description: Использование Office UI Fabric React в надстройках Office
-ms.date: 09/06/2019
+ms.date: 09/18/2019
 localization_priority: Priority
-ms.openlocfilehash: e0f552cbb6471fbafbc25e53b5e786038adea83d
-ms.sourcegitcommit: ce7e7087a4550b9c090dc565fee5eac08a2985a2
+ms.openlocfilehash: 5c266a7b7f87e431f5a1dc4660a5026a7a163d5a
+ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "36782228"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "37035252"
 ---
 # <a name="use-office-ui-fabric-react-in-office-add-ins"></a>Использование Office UI Fabric React в надстройках Office
 
@@ -29,11 +29,7 @@ Office UI Fabric — это интерфейсная платформа JavaScri
 
 ### <a name="create-the-project"></a>Создание проекта
 
-С помощью генератора Yeoman создайте проект надстройки Word. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
-
-```command&nbsp;line
-yo office
-```
+[!include[Yeoman generator create project guidance](../includes/yo-office-command-guidance.md)]
 
 - **Выберите тип проекта:** `Office Add-in Task Pane project using React framework`
 - **Выберите тип сценария:** `TypeScript`
@@ -43,6 +39,8 @@ yo office
 ![Генератор Yeoman](../images/yo-office-word-react.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
+
+[!include[Yeoman generator next steps](../includes/yo-office-next-steps.md)]
 
 ### <a name="try-it-out"></a>Проверка
 

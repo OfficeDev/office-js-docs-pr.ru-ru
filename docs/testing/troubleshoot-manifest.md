@@ -1,14 +1,14 @@
 ---
 title: Проверка манифеста и устранение связанных с ним неполадок
 description: Используйте эти методы для проверки манифеста надстройки Office.
-ms.date: 08/15/2019
+ms.date: 09/18/2019
 localization_priority: Priority
-ms.openlocfilehash: bf70aca68135073ed92d2e4d2c176b944836c7ad
-ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
+ms.openlocfilehash: c320c05b944bba9e24a4d3c0e5ef514ac13cc3c6
+ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "36477924"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "37035338"
 ---
 # <a name="validate-and-troubleshoot-issues-with-your-manifest"></a>Проверка манифеста и устранение связанных с ним неполадок
 
@@ -65,12 +65,10 @@ npm run validate
 > [!NOTE]
 > В настоящее время функция ведения журнала в среде выполнения доступна для классических приложений Office 2016.
 
-### <a name="to-turn-on-runtime-logging"></a>Как включить ведение журнала в среде выполнения
-
 > [!IMPORTANT]
-> Ведение журнала в среде выполнения снижает производительность. Включайте его, только когда нужно исправить ошибки в манифесте надстройки.
+> Ведение журнала в среде выполнения сказывается на производительности. Включайте его, только если требуется устранить неполадки, связанные с манифестом надстройки.
 
-Чтобы включить ведение журнала в среде выполнения:
+### <a name="runtime-logging-on-windows"></a>Ведение журнала в среде выполнения в Windows
 
 1. Убедитесь, что у вас установлена сборка Office 2016 **16.0.7019** или выше. 
 
@@ -89,6 +87,47 @@ npm run validate
 Ниже показано, как должен выглядеть реестр. Чтобы отключить функцию, удалите из реестра раздел `RuntimeLogging`. 
 
 ![Снимок экрана: редактор реестра с разделом RuntimeLogging](http://i.imgur.com/Sa9TyI6.png)
+
+### <a name="runtime-logging-on-mac"></a>Ведение журнала в среде выполнения на компьютере Mac
+
+1. Убедитесь, что у вас установлена классическая сборка Office 2016 **16.27** (19071500) или более поздней версии.
+
+2. Откройте приложение **Терминал** и настройте параметры ведения журнала в среде выполнения с помощью команды `defaults`:
+    
+    ```command&nbsp;line
+    defaults write <bundle id> CEFRuntimeLoggingFile -string <file_name>
+    ```
+
+    `<bundle id>` указывает, для какого узла требуется включить ведение журнала в среде выполнения. `<file_name>` — это имя текстового файла, в который будет записан журнал.
+
+    Чтобы включить ведение журнала в среде выполнения для соответствующего узла, присвойте параметру `<bundle id>` одно из следующих значений:
+
+    - `com.microsoft.Word`
+    - `com.microsoft.Excel`
+    - `com.microsoft.Powerpoint`
+    - `com.microsoft.Outlook`
+
+В следующем примере включается ведение журнала в среде выполнения в Word, а затем открывается файл журнала:
+
+```command&nbsp;line
+defaults write com.microsoft.Word CEFRuntimeLoggingFile -string "runtime_logs.txt"
+open ~/library/Containers/com.microsoft.Word/Data/runtime_logs.txt
+```
+
+> [!NOTE] 
+> Чтобы включить ведение журнала в среде выполнения, потребуется перезапустить Office после выполнения команды `defaults`.
+
+Чтобы отключить ведение журнала в среде выполнения, используйте команду `defaults delete`:
+
+```command&nbsp;line
+defaults delete <bundle id> CEFRuntimeLoggingFile
+```
+
+В следующем примере отключается ведение журнала в среде выполнения для Word.
+
+```command&nbsp;line
+defaults delete com.microsoft.Word CEFRuntimeLoggingFile
+```
 
 ### <a name="to-troubleshoot-issues-with-your-manifest"></a>Как устранить проблемы с манифестом
 
