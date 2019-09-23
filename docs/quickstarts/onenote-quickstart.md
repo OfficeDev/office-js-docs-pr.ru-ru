@@ -1,53 +1,51 @@
 ---
 title: Создание первой надстройки области задач OneNote
 description: ''
-ms.date: 09/06/2019
+ms.date: 09/18/2019
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: 7e31933b5d38cede00983d6f3f31a284043bb769
-ms.sourcegitcommit: ce7e7087a4550b9c090dc565fee5eac08a2985a2
+ms.openlocfilehash: dd4e16edc2dc3fa4046e3e587b3d1a1aba058e30
+ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "36782263"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "37035268"
 ---
-# <a name="build-your-first-onenote-task-pane-add-in"></a><span data-ttu-id="76c46-102">Создание первой надстройки области задач OneNote</span><span class="sxs-lookup"><span data-stu-id="76c46-102">Build your first Word task pane add-in</span></span>
+# <a name="build-your-first-onenote-task-pane-add-in"></a><span data-ttu-id="08f36-102">Создание первой надстройки области задач OneNote</span><span class="sxs-lookup"><span data-stu-id="08f36-102">Build your first Word task pane add-in</span></span>
 
-<span data-ttu-id="76c46-103">В этой статье вы ознакомитесь с процессом создания надстройки для области задач OneNote.</span><span class="sxs-lookup"><span data-stu-id="76c46-103">In this article, you'll walk through the process of building a Project task pane add-in.</span></span>
+<span data-ttu-id="08f36-103">В этой статье вы ознакомитесь с процессом создания надстройки для области задач OneNote.</span><span class="sxs-lookup"><span data-stu-id="08f36-103">In this article, you'll walk through the process of building a Project task pane add-in.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="76c46-104">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="76c46-104">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="08f36-104">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="08f36-104">Prerequisites</span></span>
 
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
-## <a name="create-the-add-in-project"></a><span data-ttu-id="76c46-105">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="76c46-105">Create the add-in project</span></span>
+## <a name="create-the-add-in-project"></a><span data-ttu-id="08f36-105">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="08f36-105">Create the add-in project</span></span>
 
-<span data-ttu-id="76c46-106">С помощью генератора Yeoman создайте проект надстройки OneNote.</span><span class="sxs-lookup"><span data-stu-id="76c46-106">Use the Yeoman generator to create a OneNote add-in project.</span></span> <span data-ttu-id="76c46-107">Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="76c46-107">Run the following command and then answer the prompts as follows:</span></span>
+[!include[Yeoman generator create project guidance](../includes/yo-office-command-guidance.md)]
 
-```command&nbsp;line
-yo office
-```
-
-- <span data-ttu-id="76c46-108">**Выберите тип проекта:** `Office Add-in Task Pane project`</span><span class="sxs-lookup"><span data-stu-id="76c46-108">**Choose a project type:** `Office Add-in Task Pane project`</span></span>
-- <span data-ttu-id="76c46-109">**Выберите тип сценария:** `Javascript`</span><span class="sxs-lookup"><span data-stu-id="76c46-109">**Choose a script type:** `Javascript`</span></span>
-- <span data-ttu-id="76c46-110">**Как вы хотите назвать надстройку?**</span><span class="sxs-lookup"><span data-stu-id="76c46-110">**What do you want to name your add-in?**</span></span> `My Office Add-in`
-- <span data-ttu-id="76c46-111">**Какое клиентское приложение Office должно поддерживаться?**</span><span class="sxs-lookup"><span data-stu-id="76c46-111">**Which Office client application would you like to support?**</span></span> `OneNote`
+- <span data-ttu-id="08f36-106">**Выберите тип проекта:** `Office Add-in Task Pane project`</span><span class="sxs-lookup"><span data-stu-id="08f36-106">**Choose a project type:** `Office Add-in Task Pane project`</span></span>
+- <span data-ttu-id="08f36-107">**Выберите тип сценария:** `Javascript`</span><span class="sxs-lookup"><span data-stu-id="08f36-107">**Choose a script type:** `Javascript`</span></span>
+- <span data-ttu-id="08f36-108">**Как вы хотите назвать надстройку?**</span><span class="sxs-lookup"><span data-stu-id="08f36-108">**What do you want to name your add-in?**</span></span> `My Office Add-in`
+- <span data-ttu-id="08f36-109">**Какое клиентское приложение Office должно поддерживаться?**</span><span class="sxs-lookup"><span data-stu-id="08f36-109">**Which Office client application would you like to support?**</span></span> `OneNote`
 
 ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-onenote.png)
 
-<span data-ttu-id="76c46-113">После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.</span><span class="sxs-lookup"><span data-stu-id="76c46-113">After you complete the wizard, the generator will create the project and install supporting Node components.</span></span>
-    
-## <a name="explore-the-project"></a><span data-ttu-id="76c46-114">Знакомство с проектом</span><span class="sxs-lookup"><span data-stu-id="76c46-114">Explore the project</span></span>
+<span data-ttu-id="08f36-111">После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.</span><span class="sxs-lookup"><span data-stu-id="08f36-111">After you complete the wizard, the generator will create the project and install supporting Node components.</span></span>
 
-<span data-ttu-id="76c46-115">Проект надстройки, который вы создали с помощью генератора Yeoman, содержит образец кода для простейшей надстройки области задач.</span><span class="sxs-lookup"><span data-stu-id="76c46-115">The add-in project that you've created with the Yeoman generator contains sample code for a very basic task pane add-in.</span></span> 
+[!include[Yeoman generator next steps](../includes/yo-office-next-steps.md)]
 
-- <span data-ttu-id="76c46-116">Файл **./manifest.xml** в корневом каталоге проекта определяет настройки и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="76c46-116">The **./manifest.xml** file in the root directory of the project defines the settings and capabilities of the add-in.</span></span>
-- <span data-ttu-id="76c46-117">Файл **./src/taskpane/taskpane.html** содержит разметку HTML для области задач.</span><span class="sxs-lookup"><span data-stu-id="76c46-117">The **./src/taskpane/taskpane.html** file contains the HTML markup for the task pane.</span></span>
-- <span data-ttu-id="76c46-118">Файл **./src/taskpane/taskpane.css** содержит код CSS, который применяется к содержимому области задач.</span><span class="sxs-lookup"><span data-stu-id="76c46-118">The **./src/taskpane/taskpane.css** file contains the CSS that's applied to content in the task pane.</span></span>
-- <span data-ttu-id="76c46-119">Файл **./src/taskpane/taskpane.js** содержит код API JavaScript для Office, который упрощает взаимодействие между областью задач и ведущим приложением Office.</span><span class="sxs-lookup"><span data-stu-id="76c46-119">The **./src/taskpane/taskpane.js** file contains the Office JavaScript API code that facilitates interaction between the task pane and the Office host application.</span></span>
+## <a name="explore-the-project"></a><span data-ttu-id="08f36-112">Знакомство с проектом</span><span class="sxs-lookup"><span data-stu-id="08f36-112">Explore the project</span></span>
 
-## <a name="update-the-code"></a><span data-ttu-id="76c46-120">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="76c46-120">Update the code</span></span>
+<span data-ttu-id="08f36-113">Проект надстройки, который вы создали с помощью генератора Yeoman, содержит образец кода для простейшей надстройки области задач.</span><span class="sxs-lookup"><span data-stu-id="08f36-113">The add-in project that you've created with the Yeoman generator contains sample code for a very basic task pane add-in.</span></span> 
 
-<span data-ttu-id="76c46-121">Откройте файл **./src/taskpane/taskpane.js** в редакторе кода и добавьте приведенный ниже код в пределах функции **run**.</span><span class="sxs-lookup"><span data-stu-id="76c46-121">In your code editor, open the file **./src/taskpane/taskpane.js** and add the following code within the **run** function.</span></span> <span data-ttu-id="76c46-122">В этом коде используется API JavaScript для OneNote, чтобы настроить заголовок страницы и добавить контур к тексту страницы.</span><span class="sxs-lookup"><span data-stu-id="76c46-122">This code uses the OneNote JavaScript API to set the page title and add an outline to the body of the page.</span></span>
+- <span data-ttu-id="08f36-114">Файл **./manifest.xml** в корневом каталоге проекта определяет настройки и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="08f36-114">The **./manifest.xml** file in the root directory of the project defines the settings and capabilities of the add-in.</span></span>
+- <span data-ttu-id="08f36-115">Файл **./src/taskpane/taskpane.html** содержит разметку HTML для области задач.</span><span class="sxs-lookup"><span data-stu-id="08f36-115">The **./src/taskpane/taskpane.html** file contains the HTML markup for the task pane.</span></span>
+- <span data-ttu-id="08f36-116">Файл **./src/taskpane/taskpane.css** содержит код CSS, который применяется к содержимому области задач.</span><span class="sxs-lookup"><span data-stu-id="08f36-116">The **./src/taskpane/taskpane.css** file contains the CSS that's applied to content in the task pane.</span></span>
+- <span data-ttu-id="08f36-117">Файл **./src/taskpane/taskpane.js** содержит код API JavaScript для Office, который упрощает взаимодействие между областью задач и ведущим приложением Office.</span><span class="sxs-lookup"><span data-stu-id="08f36-117">The **./src/taskpane/taskpane.js** file contains the Office JavaScript API code that facilitates interaction between the task pane and the Office host application.</span></span>
+
+## <a name="update-the-code"></a><span data-ttu-id="08f36-118">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="08f36-118">Update the code</span></span>
+
+<span data-ttu-id="08f36-119">Откройте файл **./src/taskpane/taskpane.js** в редакторе кода и добавьте приведенный ниже код в пределах функции **run**.</span><span class="sxs-lookup"><span data-stu-id="08f36-119">In your code editor, open the file **./src/taskpane/taskpane.js** and add the following code within the **run** function.</span></span> <span data-ttu-id="08f36-120">В этом коде используется API JavaScript для OneNote, чтобы настроить заголовок страницы и добавить контур к тексту страницы.</span><span class="sxs-lookup"><span data-stu-id="08f36-120">This code uses the OneNote JavaScript API to set the page title and add an outline to the body of the page.</span></span>
 
 ```js
 try {
@@ -71,63 +69,63 @@ try {
 }
 ```
 
-## <a name="try-it-out"></a><span data-ttu-id="76c46-123">Проверка</span><span class="sxs-lookup"><span data-stu-id="76c46-123">Try it out</span></span>
+## <a name="try-it-out"></a><span data-ttu-id="08f36-121">Проверка</span><span class="sxs-lookup"><span data-stu-id="08f36-121">Try it out</span></span>
 
-1. <span data-ttu-id="76c46-124">Перейдите к корневой папке проекта.</span><span class="sxs-lookup"><span data-stu-id="76c46-124">Navigate to the root folder of the project.</span></span>
+1. <span data-ttu-id="08f36-122">Перейдите к корневой папке проекта.</span><span class="sxs-lookup"><span data-stu-id="08f36-122">Navigate to the root folder of the project.</span></span>
 
     ```command&nbsp;line
     cd "My Office Add-in"
     ```
 
-2. <span data-ttu-id="76c46-125">Запустите локальный веб-сервер и загрузите неопубликованную надстройку.</span><span class="sxs-lookup"><span data-stu-id="76c46-125">Start the local web server and sideload your add-in.</span></span>
+2. <span data-ttu-id="08f36-123">Запустите локальный веб-сервер и загрузите неопубликованную надстройку.</span><span class="sxs-lookup"><span data-stu-id="08f36-123">Start the local web server and sideload your add-in.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="76c46-126">Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки.</span><span class="sxs-lookup"><span data-stu-id="76c46-126">Office Add-ins should use HTTPS, not HTTP, even when you are developing.</span></span> <span data-ttu-id="76c46-127">Если вам будет предложено установить сертификат после того, как вы запустите одну из указанных ниже команд, примите предложение установить сертификат, предоставленный генератором Yeoman.</span><span class="sxs-lookup"><span data-stu-id="76c46-127">If you are prompted to install a certificate after you run one of the following commands, accept the prompt to install the certificate that the Yeoman generator provides.</span></span>
+    > <span data-ttu-id="08f36-124">Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки.</span><span class="sxs-lookup"><span data-stu-id="08f36-124">Office Add-ins should use HTTPS, not HTTP, even when you are developing.</span></span> <span data-ttu-id="08f36-125">Если вам будет предложено установить сертификат после того, как вы запустите одну из указанных ниже команд, примите предложение установить сертификат, предоставленный генератором Yeoman.</span><span class="sxs-lookup"><span data-stu-id="08f36-125">If you are prompted to install a certificate after you run one of the following commands, accept the prompt to install the certificate that the Yeoman generator provides.</span></span>
 
     > [!TIP]
-    > <span data-ttu-id="76c46-128">Если вы тестируете надстройку на компьютере Mac, перед продолжением выполните указанную ниже команду.</span><span class="sxs-lookup"><span data-stu-id="76c46-128">If you're testing your add-in on Mac, run the following command before proceeding.</span></span> <span data-ttu-id="76c46-129">После выполнения этой команды запустится локальный веб-сервер.</span><span class="sxs-lookup"><span data-stu-id="76c46-129">When you run this command, the local web server will start.</span></span>
+    > <span data-ttu-id="08f36-126">Если вы тестируете надстройку на компьютере Mac, перед продолжением выполните указанную ниже команду.</span><span class="sxs-lookup"><span data-stu-id="08f36-126">If you're testing your add-in on Mac, run the following command before proceeding.</span></span> <span data-ttu-id="08f36-127">После выполнения этой команды запустится локальный веб-сервер.</span><span class="sxs-lookup"><span data-stu-id="08f36-127">When you run this command, the local web server will start.</span></span>
     >
     > ```command&nbsp;line
     > npm run dev-server
     > ```
 
-    <span data-ttu-id="76c46-130">Выполните указанную ниже команду в корневом каталоге своего проекта.</span><span class="sxs-lookup"><span data-stu-id="76c46-130">Run the following command in the root directory of your project.</span></span> <span data-ttu-id="76c46-131">После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).</span><span class="sxs-lookup"><span data-stu-id="76c46-131">When you run this command, the local web server will start.</span></span>
+    <span data-ttu-id="08f36-128">Выполните указанную ниже команду в корневом каталоге своего проекта.</span><span class="sxs-lookup"><span data-stu-id="08f36-128">Run the following command in the root directory of your project.</span></span> <span data-ttu-id="08f36-129">После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).</span><span class="sxs-lookup"><span data-stu-id="08f36-129">When you run this command, the local web server will start.</span></span>
 
     ```command&nbsp;line
     npm run start:web
     ```
 
-3. <span data-ttu-id="76c46-132">Откройте записную книжку в [OneNote в Интернете](https://www.onenote.com/notebooks) и создайте страницу.</span><span class="sxs-lookup"><span data-stu-id="76c46-132">In [OneNote on the web](https://www.onenote.com/notebooks), open a notebook and create a new page.</span></span>
+3. <span data-ttu-id="08f36-130">Откройте записную книжку в [OneNote в Интернете](https://www.onenote.com/notebooks) и создайте страницу.</span><span class="sxs-lookup"><span data-stu-id="08f36-130">In [OneNote on the web](https://www.onenote.com/notebooks), open a notebook and create a new page.</span></span>
 
-4. <span data-ttu-id="76c46-133">Выберите **Вставка > Надстройки Office**. Откроется диалоговое окно "Надстройки Office".</span><span class="sxs-lookup"><span data-stu-id="76c46-133">Choose **Insert > Office Add-ins** to open the Office Add-ins dialog.</span></span>
+4. <span data-ttu-id="08f36-131">Выберите **Вставка > Надстройки Office**. Откроется диалоговое окно "Надстройки Office".</span><span class="sxs-lookup"><span data-stu-id="08f36-131">Choose **Insert > Office Add-ins** to open the Office Add-ins dialog.</span></span>
 
-    - <span data-ttu-id="76c46-134">Если вы вошли с помощью обычной учетной записи, выберите **Отправить надстройку** на вкладке **МОИ НАДСТРОЙКИ**.</span><span class="sxs-lookup"><span data-stu-id="76c46-134">If you're signed in with your consumer account, select the **MY ADD-INS** tab, and then choose **Upload My Add-in**.</span></span>
+    - <span data-ttu-id="08f36-132">Если вы вошли с помощью обычной учетной записи, выберите **Отправить надстройку** на вкладке **МОИ НАДСТРОЙКИ**.</span><span class="sxs-lookup"><span data-stu-id="08f36-132">If you're signed in with your consumer account, select the **MY ADD-INS** tab, and then choose **Upload My Add-in**.</span></span>
 
-    - <span data-ttu-id="76c46-135">Если вы вошли с помощью рабочей или учебной учетной записи, выберите **Отправить надстройку** на вкладке **МОЯ ОРГАНИЗАЦИЯ**.</span><span class="sxs-lookup"><span data-stu-id="76c46-135">If you're signed in with your work or school account, select the **MY ORGANIZATION** tab, and then select **Upload My Add-in**.</span></span> 
+    - <span data-ttu-id="08f36-133">Если вы вошли с помощью рабочей или учебной учетной записи, выберите **Отправить надстройку** на вкладке **МОЯ ОРГАНИЗАЦИЯ**.</span><span class="sxs-lookup"><span data-stu-id="08f36-133">If you're signed in with your work or school account, select the **MY ORGANIZATION** tab, and then select **Upload My Add-in**.</span></span> 
 
-    <span data-ttu-id="76c46-136">На следующем изображении показана вкладка **МОИ НАДСТРОЙКИ** для обычных записных книжек.</span><span class="sxs-lookup"><span data-stu-id="76c46-136">The following image shows the **MY ADD-INS** tab for consumer notebooks.</span></span>
+    <span data-ttu-id="08f36-134">На следующем изображении показана вкладка **МОИ НАДСТРОЙКИ** для обычных записных книжек.</span><span class="sxs-lookup"><span data-stu-id="08f36-134">The following image shows the **MY ADD-INS** tab for consumer notebooks.</span></span>
 
     <img alt="The Office Add-ins dialog showing the MY ADD-INS tab" src="../images/onenote-office-add-ins-dialog.png" width="500">
 
-5. <span data-ttu-id="76c46-137">В диалоговом окне "Отправить надстройку" выберите **manifest.xml** в папке проекта и нажмите кнопку **Отправить**.</span><span class="sxs-lookup"><span data-stu-id="76c46-137">In the Upload Add-in dialog, browse to **manifest.xml** in your project folder, and then choose **Upload**.</span></span> 
+5. <span data-ttu-id="08f36-135">В диалоговом окне "Отправить надстройку" выберите **manifest.xml** в папке проекта и нажмите кнопку **Отправить**.</span><span class="sxs-lookup"><span data-stu-id="08f36-135">In the Upload Add-in dialog, browse to **manifest.xml** in your project folder, and then choose **Upload**.</span></span> 
 
-6. <span data-ttu-id="76c46-138">На вкладке **Главная** ленты нажмите кнопку **Показать область задач**.</span><span class="sxs-lookup"><span data-stu-id="76c46-138">From the **Home** tab, choose the **Show Taskpane** button in the ribbon.</span></span> <span data-ttu-id="76c46-139">Область задач надстройки откроется в iFrame рядом со страницей OneNote.</span><span class="sxs-lookup"><span data-stu-id="76c46-139">The add-in task pane opens in an iFrame next to the OneNote page.</span></span>
+6. <span data-ttu-id="08f36-136">На вкладке **Главная** ленты нажмите кнопку **Показать область задач**.</span><span class="sxs-lookup"><span data-stu-id="08f36-136">From the **Home** tab, choose the **Show Taskpane** button in the ribbon.</span></span> <span data-ttu-id="08f36-137">Область задач надстройки откроется в iFrame рядом со страницей OneNote.</span><span class="sxs-lookup"><span data-stu-id="08f36-137">The add-in task pane opens in an iFrame next to the OneNote page.</span></span>
 
-7. <span data-ttu-id="76c46-140">В нижней части области задач щелкните ссылку **Выполнить**, чтобы настроить заголовок страницы и добавить контур к тексту страницы.</span><span class="sxs-lookup"><span data-stu-id="76c46-140">At the bottom of the task pane, choose the **Run** link to set the page title and add an outline to the body of the page.</span></span>
+7. <span data-ttu-id="08f36-138">В нижней части области задач щелкните ссылку **Выполнить**, чтобы настроить заголовок страницы и добавить контур к тексту страницы.</span><span class="sxs-lookup"><span data-stu-id="08f36-138">At the bottom of the task pane, choose the **Run** link to set the page title and add an outline to the body of the page.</span></span>
 
     ![Надстройка OneNote, созданная на основе этого руководства](../images/onenote-first-add-in-4.png)
 
-## <a name="next-steps"></a><span data-ttu-id="76c46-142">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="76c46-142">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="08f36-140">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="08f36-140">Next steps</span></span>
 
-<span data-ttu-id="76c46-143">Поздравляем! Вы успешно создали надстройку области задач OneNote!</span><span class="sxs-lookup"><span data-stu-id="76c46-143">Congratulations, you've successfully created a Word task pane add-in!</span></span> <span data-ttu-id="76c46-144">Следующим шагом узнайте больше об основных понятиях, связанных с созданием надстроек OneNote.</span><span class="sxs-lookup"><span data-stu-id="76c46-144">Next, learn more about the core concepts of building OneNote add-ins.</span></span>
+<span data-ttu-id="08f36-141">Поздравляем! Вы успешно создали надстройку области задач OneNote!</span><span class="sxs-lookup"><span data-stu-id="08f36-141">Congratulations, you've successfully created a Word task pane add-in!</span></span> <span data-ttu-id="08f36-142">Следующим шагом узнайте больше об основных понятиях, связанных с созданием надстроек OneNote.</span><span class="sxs-lookup"><span data-stu-id="08f36-142">Next, learn more about the core concepts of building OneNote add-ins.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="76c46-145">Обзор API JavaScript для OneNote</span><span class="sxs-lookup"><span data-stu-id="76c46-145">OneNote JavaScript API programming overview</span></span>](../onenote/onenote-add-ins-programming-overview.md)
+> [<span data-ttu-id="08f36-143">Обзор API JavaScript для OneNote</span><span class="sxs-lookup"><span data-stu-id="08f36-143">OneNote JavaScript API programming overview</span></span>](../onenote/onenote-add-ins-programming-overview.md)
 
-## <a name="see-also"></a><span data-ttu-id="76c46-146">См. также</span><span class="sxs-lookup"><span data-stu-id="76c46-146">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="08f36-144">См. также</span><span class="sxs-lookup"><span data-stu-id="08f36-144">See also</span></span>
 
-- [<span data-ttu-id="76c46-147">Обзор API JavaScript для OneNote</span><span class="sxs-lookup"><span data-stu-id="76c46-147">OneNote JavaScript API programming overview</span></span>](../onenote/onenote-add-ins-programming-overview.md)
-- [<span data-ttu-id="76c46-148">Справочник по API JavaScript для OneNote</span><span class="sxs-lookup"><span data-stu-id="76c46-148">OneNote JavaScript API reference</span></span>](/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference)
-- [<span data-ttu-id="76c46-149">Пример надстройки Rubric Grader</span><span class="sxs-lookup"><span data-stu-id="76c46-149">Rubric Grader sample</span></span>](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
-- [<span data-ttu-id="76c46-150">Обзор платформы надстроек Office</span><span class="sxs-lookup"><span data-stu-id="76c46-150">Office Add-ins platform overview</span></span>](../overview/office-add-ins.md)
+- [<span data-ttu-id="08f36-145">Обзор API JavaScript для OneNote</span><span class="sxs-lookup"><span data-stu-id="08f36-145">OneNote JavaScript API programming overview</span></span>](../onenote/onenote-add-ins-programming-overview.md)
+- [<span data-ttu-id="08f36-146">Справочник по API JavaScript для OneNote</span><span class="sxs-lookup"><span data-stu-id="08f36-146">OneNote JavaScript API reference</span></span>](/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference)
+- [<span data-ttu-id="08f36-147">Пример надстройки Rubric Grader</span><span class="sxs-lookup"><span data-stu-id="08f36-147">Rubric Grader sample</span></span>](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
+- [<span data-ttu-id="08f36-148">Обзор платформы надстроек Office</span><span class="sxs-lookup"><span data-stu-id="08f36-148">Office Add-ins platform overview</span></span>](../overview/office-add-ins.md)
 
