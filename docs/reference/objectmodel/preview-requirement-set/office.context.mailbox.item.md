@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox. Item — Предварительная версия набора требований
 description: ''
-ms.date: 08/30/2019
+ms.date: 09/23/2019
 localization_priority: Normal
-ms.openlocfilehash: 9939d939e7b1de7af71d7b5532dcf306330e5b6e
-ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
+ms.openlocfilehash: 4a209ebde75a2857f4caa6d246c83adbd2cf7c10
+ms.sourcegitcommit: 3c84fe6302341668c3f9f6dd64e636a97d03023c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "36696500"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "37167377"
 ---
 # <a name="item"></a>item
 
@@ -885,7 +885,7 @@ console.log("Organizer: " + organizerName + " (" + organizerAddress + ")");
 
 ##### <a name="compose-mode"></a>Режим создания
 
-Свойство возвращает объект организатора, который предоставляет метод для получения значения организатора. [](/javascript/api/outlook/office.organizer) `organizer`
+`organizer` Свойство возвращает объект [организатора](/javascript/api/outlook/office.organizer) , который предоставляет метод для получения значения организатора.
 
 ```js
 Office.context.mailbox.item.organizer.getAsync(
@@ -912,7 +912,7 @@ Office.context.mailbox.item.organizer.getAsync(
 ---
 ---
 
-#### <a name="nullable-recurrence-recurrencejavascriptapioutlookofficerecurrence"></a>(Nullable) повторение [](/javascript/api/outlook/office.recurrence) : повторение
+#### <a name="nullable-recurrence-recurrencejavascriptapioutlookofficerecurrence"></a>(Nullable) повторение: [повторение](/javascript/api/outlook/office.recurrence)
 
 Получает или задает шаблон повторения встречи. Получает шаблон повторения приглашения на собрание. Режимы чтения и создания для элементов встречи. Режим чтения для элементов приглашения на собрания.
 
@@ -2245,7 +2245,7 @@ var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");
 |Требование|Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.2|
-|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadWriteItem|
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)|Создание|
 
 ##### <a name="returns"></a>Возвращаемое значение:
