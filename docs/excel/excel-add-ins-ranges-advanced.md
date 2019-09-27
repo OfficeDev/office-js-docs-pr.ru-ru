@@ -1,14 +1,14 @@
 ---
 title: Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 description: ''
-ms.date: 04/30/2019
+ms.date: 09/18/2019
 localization_priority: Normal
-ms.openlocfilehash: c8fbe1dcc75080c932b4c3e2946fe62747d35c6b
-ms.sourcegitcommit: 1c7e555733ee6d5a08e444a3c4c16635d998e032
+ms.openlocfilehash: d260ee6140d0153b426e530304e95025dc235b74
+ms.sourcegitcommit: c8914ce0f48a0c19bbfc3276a80d090bb7ce68e1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "36395598"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "37235332"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api-advanced"></a>Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 
@@ -64,11 +64,11 @@ Excel.run(function (context) {
 
 ## <a name="work-with-multiple-ranges-simultaneously"></a>Одновременное работу с несколькими диапазонами
 
-Объект `RangeAreas` позволяет вашей надстройке выполнять операции над несколькими диапазонами одновременно. Эти диапазоны могут быть смежными, но это необязательно. Объект `RangeAreas` подробнее рассматривается в статье [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md).
+Объект [RangeAreas](/javascript/api/excel/excel.rangeareas) позволяет надстройке выполнять операции над несколькими диапазонами одновременно. Эти диапазоны могут быть смежными, но это необязательно. Объект `RangeAreas` подробнее рассматривается в статье [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md).
 
 ## <a name="find-special-cells-within-a-range"></a>Поиск специальных ячеек в диапазоне
 
-Методы `Range.getSpecialCells()` и `Range.getSpecialCellsOrNullObject()` находят диапазоны с учетом характеристик ячеек и типов значений ячеек. Оба этих метода возвращают объекты `RangeAreas`. Подписи методов из файла типов данных TypeScript:
+Методы [Range. жетспеЦиалцеллс](/javascript/api/excel/excel.range#getspecialcells-celltype--cellvaluetype-) и [Range. жетспеЦиалцеллсорнуллобжект](/javascript/api/excel/excel.range#getspecialcellsornullobject-celltype--cellvaluetype-) находят диапазоны на основе характеристик их ячеек и типов значений их ячеек. Оба этих метода возвращают объекты `RangeAreas`. Подписи методов из файла типов данных TypeScript:
 
 ```typescript
 getSpecialCells(cellType: Excel.SpecialCellType, cellValueType?: Excel.SpecialCellValueType): Excel.RangeAreas;
@@ -94,7 +94,7 @@ Excel.run(function (context) {
 })
 ```
 
-Если в диапазоне нет ячеек с целевыми характеристиками, метод `getSpecialCells` выдает ошибку **ItemNotFound**. Это приведет к переадресации потока управления к блоку `catch`, если таковой существует. Если блок `catch` отсутствует, ошибка останавливает исполнение функции.
+Если в диапазоне нет ячеек с целевыми характеристиками, метод `getSpecialCells` выдает ошибку **ItemNotFound**. Это приведет к переадресации потока управления к блоку `catch`, если таковой существует. Если `catch` блок отсутствует, то ошибка приостанавливается для метода.
 
 Если ожидается, что всегда должны существовать ячейки с целевыми характеристиками, скорее всего вы захотите, чтобы код выдавал ошибку при их отсутствии. Если отсутствие соответствующих ячеек является допустимым сценарием, ваш код должен проверить наличие такой возможности и корректно выполнить действие без выдачи ошибки. Добиться такого поведения можно с помощью метода `getSpecialCellsOrNullObject` и возвращаемого им свойства `isNullObject`. Этот шаблон используется в приведенном ниже примере. Вот что нужно знать об этом коде:
 
@@ -174,8 +174,8 @@ Excel.run(function (context) {
 
 ## <a name="copy-and-paste"></a>Copy and paste
 
-Функция `copyFrom` диапазона реплицирует поведение копирования и вставки пользовательского интерфейса Excel. Диапазон объекта, который вызывается `copyFrom`, является назначением.
-Источник для копирования передается как диапазон или адрес строки, представляющий диапазон.
+Метод [Range. copyFrom](/javascript/api/excel/excel.range#copyfrom-sourcerange--copytype--skipblanks--transpose-) реплицирует поведение копирования и вставки пользовательского интерфейса Excel. Диапазон объекта, который вызывается `copyFrom`, является назначением. Источник для копирования передается как диапазон или адрес строки, представляющий диапазон.
+
 В следующем примере кода копируются данные из **A1:E1** в диапазон, начиная с **G1** (который заканчивается вставкой в **G1:K1**).
 
 ```js
@@ -235,11 +235,11 @@ Excel.run(function (context) {
 
 ## <a name="remove-duplicates"></a>Удаление дубликатов
 
-Функция `removeDuplicates` объекта Range удаляет строки с повторяющимися записями в указанных столбцах. Функция проверяет каждую строку в диапазоне от индекса с наименьшим значением до индекса с наибольшим значением (сверху вниз). Строка удаляется, если значение в ее указанном столбце или столбцах уже встречалось в диапазоне. Строки в диапазоне под удаленной строкой сдвигаются вверх. Функция `removeDuplicates` не влияет на положение ячеек вне диапазона.
+Метод [Range. removeDuplicates](/javascript/api/excel/excel.range#removeduplicates-columns--includesheader-) удаляет строки с повторяющимися записями в указанных столбцах. Метод проходит через каждую строку в диапазоне от самого низкого значения до индекса с максимальным значением в диапазоне (сверху вниз). Строка удаляется, если значение в ее указанном столбце или столбцах уже встречалось в диапазоне. Строки в диапазоне под удаленной строкой сдвигаются вверх. Функция `removeDuplicates` не влияет на положение ячеек вне диапазона.
 
-Функция `removeDuplicates` использует параметр `number[]`, представляющий индексы столбцов, которые проверяются на наличие дубликатов. Этот массив отсчитывается от нуля относительно диапазона, а не листа. Функция также использует логический параметр, который определяет, является ли первая строка заголовком. При значении **true** верхняя строка игнорируется при поиске дубликатов. Функция `removeDuplicates` возвращает объект `RemoveDuplicatesResult`, указывающий количество удаленных строк и количество оставшихся уникальных строк.
+Функция `removeDuplicates` использует параметр `number[]`, представляющий индексы столбцов, которые проверяются на наличие дубликатов. Этот массив отсчитывается от нуля относительно диапазона, а не листа. Метод также использует логический параметр, указывающий, является ли первая строка заголовком. При значении **true** верхняя строка игнорируется при поиске дубликатов. `removeDuplicates` Метод возвращает `RemoveDuplicatesResult` объект, указывающий количество удаленных строк и количество оставшихся уникальных строк.
 
-При использовании функции `removeDuplicates` диапазона, учитывайте следующее:
+При использовании `removeDuplicates` метода диапазона учитывайте следующее:
 
 - Функция `removeDuplicates` рассматривает значения ячеек, а не результаты функций. Если две разные функции вычисляют одинаковый результат, значения ячеек не считаются повторяющимися.
 - Пустые ячейки не игнорируются функцией `removeDuplicates`. Значение пустой ячейки обрабатывается как любое другое значение. Это означает, что пустые строки, содержащиеся в диапазоне, будут включены в объект `RemoveDuplicatesResult`.
@@ -247,7 +247,7 @@ Excel.run(function (context) {
 В приведенном ниже примере показано удаление записей с повторяющимися значениями в первом столбце.
 
 ```js
-Excel.run(async (context) => {
+Excel.run(function (context) {
     var sheet = context.workbook.worksheets.getItem("Sample");
     var range = sheet.getRange("B2:D11");
 
@@ -268,6 +268,48 @@ Excel.run(async (context) => {
 *После запуска предыдущей функции.*
 
 ![Данные в Excel после запуска метода удаления дубликатов](../images/excel-ranges-remove-duplicates-after.png)
+
+## <a name="group-data-for-an-outline"></a>Группирование данных для структуры
+
+> [!NOTE]
+> API структуры для группирования строк и столбцов в настоящее время доступны только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+
+Строки или столбцы диапазона можно объединять для создания [структуры](https://support.office.com/article/Outline-group-data-in-a-worksheet-08CE98C4-0063-4D42-8AC7-8278C49E9AFF). Эти группы можно сворачивать и разворачивать для скрытия и отображения соответствующих ячеек. Это упрощает быстрый анализ данных в верхней строке. Используйте [Range. Group](/javascript/api/excel/excel.range#group-groupoption-) , чтобы сделать эти группы структуры.
+
+Структура может иметь иерархию, где небольшие группы вложены в крупные группы. Это позволяет просматривать структуру на разных уровнях. Изменение видимого уровня структуры можно выполнить программным способом с помощью метода [Range. шоваутлинелевелс](/javascript/api/excel/excel.range#showOutlineLevels-rowLevels--columnLevels-) . Обратите внимание, что Excel поддерживает только восемь уровней групп структуры.
+
+В приведенном ниже примере кода показано, как создать структуру с двумя уровнями групп для строк и столбцов. На следующем изображении показаны группирования этой структуры. Обратите внимание, что в примере кода сгруппированные диапазоны не включают строку или столбец элемента управления структуры (итоговые значения для этого примера). Группа определяет, что будет свернуто, а не как строка или столбец с элементом управления.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+
+    // Group the larger, main level. Note that the outline controls
+    // will be on row 10, meaning 4-9 will collapse and expand.
+    sheet.getRange("4:9").group(Excel.GroupOption.byRows);
+
+    // Group the smaller, sublevels. Note that the outline controls
+    // will be on rows 6 and 9, meaning 4-5 and 7-8 will collapse and expand.
+    sheet.getRange("4:5").group(Excel.GroupOption.byRows);
+    sheet.getRange("7:8").group(Excel.GroupOption.byRows);
+
+    // Group the larger, main level. Note that the outline controls
+    // will be on column R, meaning C-Q will collapse and expand.
+    sheet.getRange("C:Q").group(Excel.GroupOption.byColumns);
+
+    // Group the smaller, sublevels. Note that the outline controls
+    // will be on columns G, L, and R, meaning C-F, H-K, and M-P will collapse and expand.
+    sheet.getRange("C:F").group(Excel.GroupOption.byColumns);
+    sheet.getRange("H:K").group(Excel.GroupOption.byColumns);
+    sheet.getRange("M:P").group(Excel.GroupOption.byColumns);
+    return context.sync();
+}).catch(errorHandlerFunction);
+
+```
+
+![Диапазон с двумя уровнями структуры с двумя измерениями](../images/excel-outline.png)
+
+Чтобы разгруппировать группу строк или столбцов, используйте метод [Range. Group](/javascript/api/excel/excel.range#ungroup-groupoption-) . Это приведет к удалению внешнего уровня структуры. Если несколько групп одного и того же типа строк или столбцов находятся на одном уровне в пределах указанного диапазона, все эти группы размещаются в разгруппировании.
 
 ## <a name="see-also"></a>См. также
 
