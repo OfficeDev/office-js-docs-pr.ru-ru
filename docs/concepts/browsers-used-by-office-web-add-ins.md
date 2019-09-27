@@ -1,14 +1,14 @@
 ---
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
-ms.date: 06/20/2019
+ms.date: 09/25/2019
 localization_priority: Priority
-ms.openlocfilehash: 56b74c0e43c8e9709ecd03a8c60a89d3869e44f8
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: b5d7198e556f020bccdf7ba1e0a0fcffa3a9171b
+ms.sourcegitcommit: c8914ce0f48a0c19bbfc3276a80d090bb7ce68e1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128110"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "37235297"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -50,6 +50,21 @@ ms.locfileid: "35128110"
 > 1. Перейдите по ссылке [Программа предварительной оценки Office](https://insider.office.com/join).
 > 2. Выполните приведенные на странице инструкции, чтобы стать участником. Когда появится запрос на указание канала, выберите "Участник программы предварительной оценки".
 
-## <a name="see-also"></a>Дополнительные ресурсы
+## <a name="troubleshooting-microsoft-edge-issues"></a>Устранение проблем с Microsoft Edge
+
+### <a name="scroll-bar-does-not-appear-in-task-pane"></a>В области задач не отображается полоса прокрутки
+
+По умолчанию полосы прокрутки в Microsoft Edge скрыты до наведения указателя мыши. Чтобы полоса прокрутки отображалась постоянно, стиль CSS, применяемый к элементу `<body>` страниц в области задач, должен содержать свойство [-ms-overflow-style](https://developer.mozilla.org/docs/Web/CSS/-ms-overflow-style) со значением `scrollbar`. 
+
+### <a name="when-debugging-with-the-microsoft-edge-devtools-the-add-in-crashes-or-reloads"></a>При отладке с помощью Microsoft Edge DevTools надстройка аварийно завершает работу или перезагружается
+
+Настроенные точки останова в [Microsoft Edge DevTools](https://www.microsoft.com/p/microsoft-edge-devtools-preview/9mzbfrmz0mnj?rtc=1&activetab=pivot%3Aoverviewtab) приложение Office может воспринимать как зависание надстройки. В этом случае выполняется автоматическая перезагрузка надстройки. Чтобы избежать этого, добавьте следующий раздел реестра и значение на компьютере разработчика: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\16.0\Wef]"AlertInterval"=dword:00000000`.
+
+### <a name="when-the-add-in-tries-to-open-get-add-in-error-we-cant-open-this-add-in-from-the-localhost-error"></a>При попытке открытия надстройки появляется сообщение "ОШИБКА НАДСТРОЙКИ. Не удается открыть эту надстройку из localhost"
+
+Одной из известных причин является требование Microsoft Edge, чтобы для localhost предоставлялось исключение замыкания на себя. Следуйте инструкциям из статьи [Не удается открыть надстройку из localhost](/office/troubleshoot/error-messages/cannot-open-add-in-from-localhost).
+
+
+## <a name="see-also"></a>См. также
 
 - [Требования для запуска надстроек Office](requirements-for-running-office-add-ins.md)
