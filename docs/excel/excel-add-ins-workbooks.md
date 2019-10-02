@@ -1,14 +1,14 @@
 ---
 title: Работа с книгами с использованием API JavaScript для Excel
 description: ''
-ms.date: 09/03/2019
+ms.date: 09/26/2019
 localization_priority: Priority
-ms.openlocfilehash: eb2313203e770e173d4db12d2bbc03048a08acaa
-ms.sourcegitcommit: 78998a9f0ebb81c4dd2b77574148b16fe6725cfc
+ms.openlocfilehash: 66e531a382d467326e5132e60f06c98d414dbb16
+ms.sourcegitcommit: 528577145b2cf0a42bc64c56145d661c4d019fb8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "36715622"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "37353876"
 ---
 # <a name="work-with-workbooks-using-the-excel-javascript-api"></a>Работа с книгами с использованием API JavaScript для Excel
 
@@ -267,16 +267,16 @@ context.application.suspendApiCalculationUntilNextSync();
 > [!NOTE]
 > API примечаний в настоящее время доступны только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
 
-Все [примечания](https://support.office.com/article/insert-comments-and-notes-in-excel-bdcc9f5d-38e2-45b4-9a92-0b2b5c7bf6f8) в книге отслеживаются свойством `Workbook.comments`. Это касается примечаний, созданных пользователями, а также примечаний, созданных вашей надстройкой. Это свойство `Workbook.comments` является объектом [CommentCollection](/javascript/api/excel/excel.commentcollection), содержащим коллекцию объектов [Comment](/javascript/api/excel/excel.comment).
+Все [примечания](https://support.office.com/article/insert-comments-and-notes-in-excel-bdcc9f5d-38e2-45b4-9a92-0b2b5c7bf6f8) в книге отслеживаются свойством `Workbook.comments`. Это касается примечаний, созданных пользователями, а также примечаний, созданных вашей надстройкой. Свойство `Workbook.comments` является объектом [CommentCollection](/javascript/api/excel/excel.commentcollection), содержащим коллекцию объектов [Comment](/javascript/api/excel/excel.comment).
 
-Чтобы добавить примечания в книгу, используйте метод `CommentCollection.add`, передающий текст примечания в виде строки, а ячейку, в которую будет добавлено примечание, — в виде строки или объекта [Range](/javascript/api/excel/excel.range). В следующем примере кода добавляется примечание в ячейку **A2**.
+Чтобы добавить примечания в книгу, используйте метод `CommentCollection.add`, передающий ячейку, в которую будет добавлено примечание, в виде строки или объекта [Range](/javascript/api/excel/excel.range), а текст примечания — в виде строки. В следующем примере кода добавляется примечание в ячейку **A2**.
 
 ```js
 Excel.run(function (context) {
     var comments = context.workbook.comments;
 
     // Note that an InvalidArgument error will be thrown if multiple cells passed to `Comment.add`.
-    comments.add("TODO: add data.", "A2");
+    comments.add("A2", "TODO: add data.");
     return context.sync();
 });
 ```
