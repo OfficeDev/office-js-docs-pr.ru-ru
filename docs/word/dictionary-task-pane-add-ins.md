@@ -1,73 +1,73 @@
 ---
 title: Создание надстройки области задач словаря
 description: ''
-ms.date: 03/19/2019
+ms.date: 09/26/2019
 localization_priority: Normal
-ms.openlocfilehash: a7d819ea1fd424ce9d83f8437ef722593cf6efe8
-ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
+ms.openlocfilehash: 10eb66c224a7c40346669d630d4316f300d55dcc
+ms.sourcegitcommit: 528577145b2cf0a42bc64c56145d661c4d019fb8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "36695919"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "37353904"
 ---
-# <a name="create-a-dictionary-task-pane-add-in"></a><span data-ttu-id="8422a-102">Создание надстройки области задач словаря</span><span class="sxs-lookup"><span data-stu-id="8422a-102">Create a dictionary task pane add-in</span></span>
+# <a name="create-a-dictionary-task-pane-add-in"></a><span data-ttu-id="1e8f7-102">Создание надстройки области задач словаря</span><span class="sxs-lookup"><span data-stu-id="1e8f7-102">Create a dictionary task pane add-in</span></span>
 
 
-<span data-ttu-id="8422a-103">В этой статье представлены пример надстройки области задач и соответствующая веб-служба, которая предоставляет словарные статьи определений или синонимов из тезауруса к слову, выбранному пользователем в документе Word 2013.</span><span class="sxs-lookup"><span data-stu-id="8422a-103">This article shows you an example of a task pane add-in with an accompanying web service that provides dictionary definitions or thesaurus synonyms for the user's current selection in a Word 2013 document.</span></span> 
+<span data-ttu-id="1e8f7-103">В этой статье представлены пример надстройки области задач и соответствующая веб-служба, которая предоставляет словарные статьи определений или синонимов из тезауруса к слову, выбранному пользователем в документе Word 2013.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-103">This article shows you an example of a task pane add-in with an accompanying web service that provides dictionary definitions or thesaurus synonyms for the user's current selection in a Word 2013 document.</span></span> 
 
-<span data-ttu-id="8422a-104">Надстройка словаря Office базируется на стандартной надстройке области задач с дополнительными функциональными возможностями поддержки запросов и отображения определений из словарной веб-службы XML в дополнительных расположениях пользовательского интерфейса приложения Office.</span><span class="sxs-lookup"><span data-stu-id="8422a-104">A dictionary Office Add-in is based on the standard task pane add-in with additional features to support querying and displaying definitions from a dictionary XML web service in additional places in the Office application's UI.</span></span> 
+<span data-ttu-id="1e8f7-104">Надстройка словаря Office базируется на стандартной надстройке области задач с дополнительными функциональными возможностями поддержки запросов и отображения определений из словарной веб-службы XML в дополнительных расположениях пользовательского интерфейса приложения Office.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-104">A dictionary Office Add-in is based on the standard task pane add-in with additional features to support querying and displaying definitions from a dictionary XML web service in additional places in the Office application's UI.</span></span> 
 
-<span data-ttu-id="8422a-p101">В обычной надстройке области задач словаря пользователь выбирает слово или фразу в документе, после чего логика JavaScript надстройки передает выделенный фрагмент в XML-веб-службу поставщика словаря. Затем веб-страница этого поставщика обновляется, чтобы показать пользователю определения выделенного фрагмента. Компонент XML-веб-службы возвращает до трех определений в формате, определенном схемой XML OfficeDefinitions. Эти определения отображаются в ведущем приложении Office (в разных местах его пользовательского интерфейса). На рисунке 1 показано выделение фрагмента и отображение результатов при использовании надстройки словаря Bing, запущенной в Word 2013.</span><span class="sxs-lookup"><span data-stu-id="8422a-p101">In a typical dictionary task pane add-in, a user selects a word or phrase in their document, and the JavaScript logic behind the add-in passes this selection to the dictionary provider's XML web service. The dictionary provider's webpage then updates to show the definitions for the selection to the user. The XML web service component returns up to three definitions in the format defined by the OfficeDefinitions XML schema, which are then displayed to the user in other places in the hosting Office application's UI. Figure 1 shows the selection and display experience for a Bing-branded dictionary add-in that is running in Word 2013.</span></span>
+<span data-ttu-id="1e8f7-p101">В обычной надстройке области задач словаря пользователь выбирает слово или фразу в документе, после чего логика JavaScript надстройки передает выделенный фрагмент в XML-веб-службу поставщика словаря. Затем веб-страница этого поставщика обновляется, чтобы показать пользователю определения выделенного фрагмента. Компонент XML-веб-службы возвращает до трех определений в формате, определенном схемой XML OfficeDefinitions. Эти определения отображаются в ведущем приложении Office (в разных местах его пользовательского интерфейса). На рисунке 1 показано выделение фрагмента и отображение результатов при использовании надстройки словаря Bing, запущенной в Word 2013.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p101">In a typical dictionary task pane add-in, a user selects a word or phrase in their document, and the JavaScript logic behind the add-in passes this selection to the dictionary provider's XML web service. The dictionary provider's webpage then updates to show the definitions for the selection to the user. The XML web service component returns up to three definitions in the format defined by the OfficeDefinitions XML schema, which are then displayed to the user in other places in the hosting Office application's UI. Figure 1 shows the selection and display experience for a Bing-branded dictionary add-in that is running in Word 2013.</span></span>
 
-<span data-ttu-id="8422a-109">*Рисунок 1. Надстройка словаря, отображающая определения выбранного слова*</span><span class="sxs-lookup"><span data-stu-id="8422a-109">*Figure 1. Dictionary add-in displaying definitions for the selected word*</span></span>
+<span data-ttu-id="1e8f7-109">*Рисунок 1. Надстройка словаря, отображающая определения выбранного слова*</span><span class="sxs-lookup"><span data-stu-id="1e8f7-109">*Figure 1. Dictionary add-in displaying definitions for the selected word*</span></span>
 
 ![Приложение словаря, в котором отображается определение](../images/dictionary-agave-01.jpg)
 
-<span data-ttu-id="8422a-p102">Вы выбираете, что отображается при переходе по ссылке **Подробнее** в пользовательском интерфейсе HTML надстройки словаря: дополнительные сведения в области задач либо полная веб-страница для выделенного слова или фразы в отдельном окне браузера. На рисунке 2 приведена команда контекстного меню **Определение**, которая позволяет быстро запустить установленные словари. На рисунках 3–5 перечислены все расположения в пользовательском интерфейсе Office, в которых словарные XML-службы предоставляют определения в Word 2013.</span><span class="sxs-lookup"><span data-stu-id="8422a-p102">It is up to you to determine if clicking the  **See More** link in the dictionary add-in's HTML UI displays more information within the task pane or opens a separate browser window to the full webpage for the selected word or phrase. Figure 2 shows the  **Define** context menu command that enables users to quickly launch installed dictionaries. Figures 3 through 5 show the places in the Office UI where the dictionary XML services are used to provide definitions in Word 2013.</span></span>
+<span data-ttu-id="1e8f7-p102">Вы выбираете, что отображается при переходе по ссылке **Подробнее** в пользовательском интерфейсе HTML надстройки словаря: дополнительные сведения в области задач либо полная веб-страница для выделенного слова или фразы в отдельном окне браузера. На рисунке 2 приведена команда контекстного меню **Определение**, которая позволяет быстро запустить установленные словари. На рисунках 3–5 перечислены все расположения в пользовательском интерфейсе Office, в которых словарные XML-службы предоставляют определения в Word 2013.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p102">It is up to you to determine if clicking the  **See More** link in the dictionary add-in's HTML UI displays more information within the task pane or opens a separate browser window to the full webpage for the selected word or phrase. Figure 2 shows the  **Define** context menu command that enables users to quickly launch installed dictionaries. Figures 3 through 5 show the places in the Office UI where the dictionary XML services are used to provide definitions in Word 2013.</span></span>
 
-<span data-ttu-id="8422a-114">*Рисунок 2. Команда определения в контекстном меню*</span><span class="sxs-lookup"><span data-stu-id="8422a-114">*Figure 2. Define command in the context menu*</span></span>
+<span data-ttu-id="1e8f7-114">*Рисунок 2. Команда определения в контекстном меню*</span><span class="sxs-lookup"><span data-stu-id="1e8f7-114">*Figure 2. Define command in the context menu*</span></span>
 
 ![Меню определения контекста](../images/dictionary-agave-02.jpg)
 
 
-<span data-ttu-id="8422a-116">*Рис. 3. Определения в областях проверки правописания*</span><span class="sxs-lookup"><span data-stu-id="8422a-116">*Figure 3. Definitions in the Spelling and Grammar panes*</span></span>
+<span data-ttu-id="1e8f7-116">*Рис. 3. Определения в областях проверки правописания*</span><span class="sxs-lookup"><span data-stu-id="1e8f7-116">*Figure 3. Definitions in the Spelling and Grammar panes*</span></span>
 
 ![Определения в областях проверки правописания](../images/dictionary-agave-03.jpg)
 
 
-<span data-ttu-id="8422a-118">*Рис. 4. Определения в области "Тезаурус"*</span><span class="sxs-lookup"><span data-stu-id="8422a-118">*Figure 4. Definitions in the Thesaurus pane*</span></span>
+<span data-ttu-id="1e8f7-118">*Рис. 4. Определения в области "Тезаурус"*</span><span class="sxs-lookup"><span data-stu-id="1e8f7-118">*Figure 4. Definitions in the Thesaurus pane*</span></span>
 
 ![Определения в области "Тезаурус"](../images/dictionary-agave-04.jpg)
 
 
-<span data-ttu-id="8422a-120">*Рис. 5. Определения в режиме чтения*</span><span class="sxs-lookup"><span data-stu-id="8422a-120">*Figure 5. Definitions in Reading Mode*</span></span>
+<span data-ttu-id="1e8f7-120">*Рис. 5. Определения в режиме чтения*</span><span class="sxs-lookup"><span data-stu-id="1e8f7-120">*Figure 5. Definitions in Reading Mode*</span></span>
 
 ![Определения в режиме чтения](../images/dictionary-agave-05.jpg)
 
-<span data-ttu-id="8422a-122">Чтобы создать надстройку области задач, которая выполняет поиск в словаре, необходимо создать два основных компонента:</span><span class="sxs-lookup"><span data-stu-id="8422a-122">To create a task pane add-in that provides a dictionary lookup, you create two main components:</span></span> 
+<span data-ttu-id="1e8f7-122">Чтобы создать надстройку области задач, которая выполняет поиск в словаре, необходимо создать два основных компонента:</span><span class="sxs-lookup"><span data-stu-id="1e8f7-122">To create a task pane add-in that provides a dictionary lookup, you create two main components:</span></span> 
 
 
-- <span data-ttu-id="8422a-123">веб-службу XML, которая ищет определения в словарной службе, а затем возвращает результаты в формате XML, которые могут быть отображены в надстройке словаря;</span><span class="sxs-lookup"><span data-stu-id="8422a-123">An XML web service that looks up definitions from a dictionary service, and then returns those values in an XML format that can be consumed and displayed by the dictionary add-in.</span></span>
+- <span data-ttu-id="1e8f7-123">веб-службу XML, которая ищет определения в словарной службе, а затем возвращает результаты в формате XML, которые могут быть отображены в надстройке словаря;</span><span class="sxs-lookup"><span data-stu-id="1e8f7-123">An XML web service that looks up definitions from a dictionary service, and then returns those values in an XML format that can be consumed and displayed by the dictionary add-in.</span></span>
     
-- <span data-ttu-id="8422a-124">надстройку области задач, которая отправляет выбранное пользователем слово или фразу в словарную веб-службу, отображает определения и может вставить эти значения в документ.</span><span class="sxs-lookup"><span data-stu-id="8422a-124">A task pane add-in that submits the user's current selection to the dictionary web service, displays definitions, and can optionally insert those values into the document.</span></span>
+- <span data-ttu-id="1e8f7-124">надстройку области задач, которая отправляет выбранное пользователем слово или фразу в словарную веб-службу, отображает определения и может вставить эти значения в документ.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-124">A task pane add-in that submits the user's current selection to the dictionary web service, displays definitions, and can optionally insert those values into the document.</span></span>
     
-<span data-ttu-id="8422a-125">В следующих разделах приведены примеры создания этих компонентов.</span><span class="sxs-lookup"><span data-stu-id="8422a-125">The following sections provide examples of how to create these components.</span></span>
+<span data-ttu-id="1e8f7-125">В следующих разделах приведены примеры создания этих компонентов.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-125">The following sections provide examples of how to create these components.</span></span>
 
-## <a name="creating-a-dictionary-xml-web-service"></a><span data-ttu-id="8422a-126">Создание словарной веб-службы XML</span><span class="sxs-lookup"><span data-stu-id="8422a-126">Creating a dictionary XML web service</span></span>
-
-
-<span data-ttu-id="8422a-p103">Веб-служба XML должна возвращать запросы веб-служб в виде XML-кода, который соответствует XML-схеме OfficeDefinitions. В двух следующих разделах описывается XML-схема OfficeDefinitions и предоставлен пример возможности кодирования веб-службы XML, возвращающей запросы в этом формате XML.</span><span class="sxs-lookup"><span data-stu-id="8422a-p103">The XML web service must return queries to the web service as XML that conforms to the OfficeDefinitions XML schema. The following two sections describe the OfficeDefinitions XML schema, and provide an example of how to code an XML web service that returns queries in that XML format.</span></span>
+## <a name="creating-a-dictionary-xml-web-service"></a><span data-ttu-id="1e8f7-126">Создание словарной веб-службы XML</span><span class="sxs-lookup"><span data-stu-id="1e8f7-126">Creating a dictionary XML web service</span></span>
 
 
-### <a name="officedefinitions-xml-schema"></a><span data-ttu-id="8422a-129">XML-схема OfficeDefinitions</span><span class="sxs-lookup"><span data-stu-id="8422a-129">OfficeDefinitions XML schema</span></span>
+<span data-ttu-id="1e8f7-p103">Веб-служба XML должна возвращать запросы веб-служб в виде XML-кода, который соответствует XML-схеме OfficeDefinitions. В двух следующих разделах описывается XML-схема OfficeDefinitions и предоставлен пример возможности кодирования веб-службы XML, возвращающей запросы в этом формате XML.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p103">The XML web service must return queries to the web service as XML that conforms to the OfficeDefinitions XML schema. The following two sections describe the OfficeDefinitions XML schema, and provide an example of how to code an XML web service that returns queries in that XML format.</span></span>
 
-<span data-ttu-id="8422a-130">В следующем коде отображается XSD для XML-схемы OfficeDefinitions.</span><span class="sxs-lookup"><span data-stu-id="8422a-130">The following code shows the XSD for the OfficeDefinitions XML Schema.</span></span>
+
+### <a name="officedefinitions-xml-schema"></a><span data-ttu-id="1e8f7-129">XML-схема OfficeDefinitions</span><span class="sxs-lookup"><span data-stu-id="1e8f7-129">OfficeDefinitions XML schema</span></span>
+
+<span data-ttu-id="1e8f7-130">В следующем коде отображается XSD для XML-схемы OfficeDefinitions.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-130">The following code shows the XSD for the OfficeDefinitions XML Schema.</span></span>
 
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema
-  xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xs="https://www.w3.org/2001/XMLSchema"
   targetNamespace="http://schemas.microsoft.com/NLG/2011/OfficeDefinitions"
   xmlns="http://schemas.microsoft.com/NLG/2011/OfficeDefinitions">
@@ -93,7 +93,7 @@ ms.locfileid: "36695919"
 </xs:schema>
 ```
 
-<span data-ttu-id="8422a-p104">Возвращенный XML-код, который соответствует схеме OfficeDefinitions, состоит из корневого элемента **Result**, содержащего элемент **Definitions** с дочерними элементами **Definition** в количестве от нуля до трех. Каждый из этих дочерних элементов содержит определения, длина которых не превышает 400 символов. Кроме того, URL-адрес полной страницы на сайте словаря должен быть предоставлен в элементе **SeeMoreURL**. В примере ниже показана структура возвращенного XML-кода, соответствующего схеме OfficeDefinitions.</span><span class="sxs-lookup"><span data-stu-id="8422a-p104">Returned XML that conforms to the OfficeDefinitions schema consists of a root  **Result** element that contains a **Definitions** element with from zero to three **Definition** child elements, each of which contains definitions that are no more than 400 characters in length. Additionally, the URL to the full page on the dictionary site must be provided in the **SeeMoreURL** element. The following example shows the structure of returned XML that conforms to the OfficeDefinitions schema.</span></span>
+<span data-ttu-id="1e8f7-p104">Возвращенный XML-код, который соответствует схеме OfficeDefinitions, состоит из корневого элемента **Result**, содержащего элемент **Definitions** с дочерними элементами **Definition** в количестве от нуля до трех. Каждый из этих дочерних элементов содержит определения, длина которых не превышает 400 символов. Кроме того, URL-адрес полной страницы на сайте словаря должен быть предоставлен в элементе **SeeMoreURL**. В примере ниже показана структура возвращенного XML-кода, соответствующего схеме OfficeDefinitions.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p104">Returned XML that conforms to the OfficeDefinitions schema consists of a root  **Result** element that contains a **Definitions** element with from zero to three **Definition** child elements, each of which contains definitions that are no more than 400 characters in length. Additionally, the URL to the full page on the dictionary site must be provided in the **SeeMoreURL** element. The following example shows the structure of returned XML that conforms to the OfficeDefinitions schema.</span></span>
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -109,9 +109,9 @@ ms.locfileid: "36695919"
 ```
 
 
-### <a name="sample-dictionary-xml-web-service"></a><span data-ttu-id="8422a-134">Пример словарной веб-службы XML</span><span class="sxs-lookup"><span data-stu-id="8422a-134">Sample dictionary XML web service</span></span>
+### <a name="sample-dictionary-xml-web-service"></a><span data-ttu-id="1e8f7-134">Пример словарной веб-службы XML</span><span class="sxs-lookup"><span data-stu-id="1e8f7-134">Sample dictionary XML web service</span></span>
 
-<span data-ttu-id="8422a-135">Приведенный ниже код C# предоставляет простой пример написания кода для веб-службы XML, которая возвращает результат запроса словаря в XML-формате OfficeDefinitions.</span><span class="sxs-lookup"><span data-stu-id="8422a-135">The following C# code provides a simple example of how to write code for an XML web service that returns the result of a dictionary query in the OfficeDefinitions XML format.</span></span>
+<span data-ttu-id="1e8f7-135">Приведенный ниже код C# предоставляет простой пример написания кода для веб-службы XML, которая возвращает результат запроса словаря в XML-формате OfficeDefinitions.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-135">The following C# code provides a simple example of how to write code for an XML web service that returns the result of a dictionary query in the OfficeDefinitions XML format.</span></span>
 
 
 ```cs
@@ -181,27 +181,27 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-## <a name="creating-the-components-of-a-dictionary-add-in"></a><span data-ttu-id="8422a-136">Создание компонентов надстройки словаря</span><span class="sxs-lookup"><span data-stu-id="8422a-136">Creating the components of a dictionary add-in</span></span>
+## <a name="creating-the-components-of-a-dictionary-add-in"></a><span data-ttu-id="1e8f7-136">Создание компонентов надстройки словаря</span><span class="sxs-lookup"><span data-stu-id="1e8f7-136">Creating the components of a dictionary add-in</span></span>
 
 
-<span data-ttu-id="8422a-137">Надстройка словаря состоит из трех основных файлов компонентов.</span><span class="sxs-lookup"><span data-stu-id="8422a-137">A dictionary add-in consists of three main component files:</span></span>
+<span data-ttu-id="1e8f7-137">Надстройка словаря состоит из трех основных файлов компонентов.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-137">A dictionary add-in consists of three main component files:</span></span>
 
 
-- <span data-ttu-id="8422a-138">XML-файл манифеста, который описывает надстройку.</span><span class="sxs-lookup"><span data-stu-id="8422a-138">An XML manifest file that describes the add-in.</span></span>
+- <span data-ttu-id="1e8f7-138">XML-файл манифеста, который описывает надстройку.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-138">An XML manifest file that describes the add-in.</span></span>
     
-- <span data-ttu-id="8422a-139">HTML-файл, который предоставляет пользовательский интерфейс надстройки.</span><span class="sxs-lookup"><span data-stu-id="8422a-139">An HTML file that provides the add-in's UI.</span></span>
+- <span data-ttu-id="1e8f7-139">HTML-файл, который предоставляет пользовательский интерфейс надстройки.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-139">An HTML file that provides the add-in's UI.</span></span>
     
-- <span data-ttu-id="8422a-140">Файл JavaScript, который содержит логику для получения выделенного пользователем фрагмента из документа, отправки выбранного слова или фразы в веб-службу и отображения возвращенных результатов в пользовательском интерфейсе надстройки.</span><span class="sxs-lookup"><span data-stu-id="8422a-140">A JavaScript file that provides logic to get the user's selection from the document, sends the selection as a query to the web service, and then displays returned results in the add-in's UI.</span></span>
+- <span data-ttu-id="1e8f7-140">Файл JavaScript, который содержит логику для получения выделенного пользователем фрагмента из документа, отправки выбранного слова или фразы в веб-службу и отображения возвращенных результатов в пользовательском интерфейсе надстройки.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-140">A JavaScript file that provides logic to get the user's selection from the document, sends the selection as a query to the web service, and then displays returned results in the add-in's UI.</span></span>
     
 
-### <a name="creating-a-dictionary-add-ins-manifest-file"></a><span data-ttu-id="8422a-141">Создание файла манифеста надстройки словаря</span><span class="sxs-lookup"><span data-stu-id="8422a-141">Creating a dictionary add-in's manifest file</span></span>
+### <a name="creating-a-dictionary-add-ins-manifest-file"></a><span data-ttu-id="1e8f7-141">Создание файла манифеста надстройки словаря</span><span class="sxs-lookup"><span data-stu-id="1e8f7-141">Creating a dictionary add-in's manifest file</span></span>
 
-<span data-ttu-id="8422a-142">Ниже приведен пример файла манифеста для надстройки словаря.</span><span class="sxs-lookup"><span data-stu-id="8422a-142">The following is an example manifest file for a dictionary add-in.</span></span>
+<span data-ttu-id="1e8f7-142">Ниже приведен пример файла манифеста для надстройки словаря.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-142">The following is an example manifest file for a dictionary add-in.</span></span>
 
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
-<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:type="TaskPaneApp">
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TaskPaneApp">
   <Id>7164e750-dc86-49c0-b548-1bac57abdc7c</Id>
   <Version>15.0</Version>
   <ProviderName>Microsoft Office Demo Dictionary</ProviderName>
@@ -212,6 +212,7 @@ public class WebService : System.Web.Services.WebService {
   <Description DefaultValue="The Microsoft Office Demo Dictionary is an example built to demonstrate how a publisher could create a dictionary that integrates with Office. It does not return real definitions." />
   <!--IconUrl is the URI for the icon that will appear in the user's list of applications.-->
   <IconUrl DefaultValue="http://officeimg.vo.msecnd.net/_layouts/images/general/office_logo.jpg" />
+  <SupportUrl DefaultValue="[Insert the URL of a page that provides support information for the app]" />
   <!--Capabilities specifies the kind of host application your dictionary add-in will support. You shouldn't have to modify this area.-->
   <Capabilities>
     <Capability Name="Workbook"/>
@@ -256,45 +257,45 @@ public class WebService : System.Web.Services.WebService {
 </OfficeApp>
 ```
 
-<span data-ttu-id="8422a-p105">Элемент **Dictionary** и его дочерние элементы, относящиеся непосредственно к созданию файла манифеста надстройки словаря, приведены в разделах ниже. Сведения о других элементах в файле манифеста см. в статье [XML-манифест надстроек для Office](../develop/add-in-manifests.md).</span><span class="sxs-lookup"><span data-stu-id="8422a-p105">The  **Dictionary** element and its child elements that are specific to creating a dictionary add-in's manifest file are described in the following sections. For information about the other elements in the manifest file, see [Office Add-ins XML manifest](../develop/add-in-manifests.md).</span></span>
+<span data-ttu-id="1e8f7-p105">Элемент **Dictionary** и его дочерние элементы, относящиеся непосредственно к созданию файла манифеста надстройки словаря, приведены в разделах ниже. Сведения о других элементах в файле манифеста см. в статье [XML-манифест надстроек для Office](../develop/add-in-manifests.md).</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p105">The  **Dictionary** element and its child elements that are specific to creating a dictionary add-in's manifest file are described in the following sections. For information about the other elements in the manifest file, see [Office Add-ins XML manifest](../develop/add-in-manifests.md).</span></span>
 
 
-### <a name="dictionary-element"></a><span data-ttu-id="8422a-145">Элемент Dictionary</span><span class="sxs-lookup"><span data-stu-id="8422a-145">Dictionary element</span></span>
+### <a name="dictionary-element"></a><span data-ttu-id="1e8f7-145">Элемент Dictionary</span><span class="sxs-lookup"><span data-stu-id="1e8f7-145">Dictionary element</span></span>
 
 
-<span data-ttu-id="8422a-146">Определяет параметры надстроек словаря.</span><span class="sxs-lookup"><span data-stu-id="8422a-146">Specifies settings for dictionary add-ins.</span></span>
+<span data-ttu-id="1e8f7-146">Определяет параметры надстроек словаря.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-146">Specifies settings for dictionary add-ins.</span></span>
 
- <span data-ttu-id="8422a-147">**Родительский элемент**</span><span class="sxs-lookup"><span data-stu-id="8422a-147">**Parent element**</span></span>
+ <span data-ttu-id="1e8f7-147">**Родительский элемент**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-147">**Parent element**</span></span>
 
  `<OfficeApp>`
 
- <span data-ttu-id="8422a-148">**Дочерние элементы**</span><span class="sxs-lookup"><span data-stu-id="8422a-148">**Child elements**</span></span>
+ <span data-ttu-id="1e8f7-148">**Дочерние элементы**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-148">**Child elements**</span></span>
 
- <span data-ttu-id="8422a-149">`<TargetDialects>`,  `<QueryUri>`,  `<CitationText>`,  `<DictionaryName>`,  `<DictionaryHomePage>`</span><span class="sxs-lookup"><span data-stu-id="8422a-149"></span></span>
+ <span data-ttu-id="1e8f7-149">`<TargetDialects>`,  `<QueryUri>`,  `<CitationText>`,  `<DictionaryName>`,  `<DictionaryHomePage>`</span><span class="sxs-lookup"><span data-stu-id="1e8f7-149"></span></span>
 
- <span data-ttu-id="8422a-150">**Замечания**</span><span class="sxs-lookup"><span data-stu-id="8422a-150">**Remarks**</span></span>
+ <span data-ttu-id="1e8f7-150">**Замечания**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-150">**Remarks**</span></span>
 
-<span data-ttu-id="8422a-151">Элемент **Dictionary** и его дочерние элементы добавляются в манифест надстройки области задач при создании надстройки словаря.</span><span class="sxs-lookup"><span data-stu-id="8422a-151">The  **Dictionary** element and its child elements are added to the manifest of a task pane add-in when you create a dictionary add-in.</span></span>
-
-
-#### <a name="targetdialects-element"></a><span data-ttu-id="8422a-152">Элемент TargetDialects</span><span class="sxs-lookup"><span data-stu-id="8422a-152">TargetDialects element</span></span>
+<span data-ttu-id="1e8f7-151">Элемент **Dictionary** и его дочерние элементы добавляются в манифест надстройки области задач при создании надстройки словаря.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-151">The  **Dictionary** element and its child elements are added to the manifest of a task pane add-in when you create a dictionary add-in.</span></span>
 
 
-<span data-ttu-id="8422a-p106">Определяет региональные языки, которые поддерживает этот словарь. Обязательный для надстроек словаря.</span><span class="sxs-lookup"><span data-stu-id="8422a-p106">Specifies the regional languages that this dictionary supports. Required for dictionary add-ins.</span></span>
+#### <a name="targetdialects-element"></a><span data-ttu-id="1e8f7-152">Элемент TargetDialects</span><span class="sxs-lookup"><span data-stu-id="1e8f7-152">TargetDialects element</span></span>
 
- <span data-ttu-id="8422a-155">**Родительский элемент**</span><span class="sxs-lookup"><span data-stu-id="8422a-155">**Parent element**</span></span>
+
+<span data-ttu-id="1e8f7-p106">Определяет региональные языки, которые поддерживает этот словарь. Обязательный для надстроек словаря.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p106">Specifies the regional languages that this dictionary supports. Required for dictionary add-ins.</span></span>
+
+ <span data-ttu-id="1e8f7-155">**Родительский элемент**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-155">**Parent element**</span></span>
 
  `<Dictionary>`
 
- <span data-ttu-id="8422a-156">**Дочерний элемент**</span><span class="sxs-lookup"><span data-stu-id="8422a-156">**Child element**</span></span>
+ <span data-ttu-id="1e8f7-156">**Дочерний элемент**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-156">**Child element**</span></span>
 
  `<TargetDialect>`
 
- <span data-ttu-id="8422a-157">**Замечания**</span><span class="sxs-lookup"><span data-stu-id="8422a-157">**Remarks**</span></span>
+ <span data-ttu-id="1e8f7-157">**Замечания**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-157">**Remarks**</span></span>
 
-<span data-ttu-id="8422a-p107">Элемент **TargetDialects** и его дочерние элементы определяют региональные языки, слова которых содержит словарь. Например, если словарь применяется к испанскому языку, на котором разговаривают в Мексике и Перу, но не в Испании, это можно указать в данном элементе. Не указывайте в этом манифесте более одного языка (например, испанский и английский). Публикуйте разные языки для отдельных словарей.</span><span class="sxs-lookup"><span data-stu-id="8422a-p107">The  **TargetDialects** element and its child elements specify the set of regional languages your dictionary contains. For example, if your dictionary applies to both Spanish (Mexico) and Spanish (Peru), but not Spanish (Spain), you can specify that in this element. Do not specify more than one language (e.g., Spanish and English) in this manifest. Publish separate languages as separate dictionaries.</span></span>
+<span data-ttu-id="1e8f7-p107">Элемент **TargetDialects** и его дочерние элементы определяют региональные языки, слова которых содержит словарь. Например, если словарь применяется к испанскому языку, на котором разговаривают в Мексике и Перу, но не в Испании, это можно указать в данном элементе. Не указывайте в этом манифесте более одного языка (например, испанский и английский). Публикуйте разные языки для отдельных словарей.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p107">The  **TargetDialects** element and its child elements specify the set of regional languages your dictionary contains. For example, if your dictionary applies to both Spanish (Mexico) and Spanish (Peru), but not Spanish (Spain), you can specify that in this element. Do not specify more than one language (e.g., Spanish and English) in this manifest. Publish separate languages as separate dictionaries.</span></span>
 
- <span data-ttu-id="8422a-162">**Пример**</span><span class="sxs-lookup"><span data-stu-id="8422a-162">**Example**</span></span>
+ <span data-ttu-id="1e8f7-162">**Пример**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-162">**Example**</span></span>
 
 ```XML
 <TargetDialects>
@@ -320,20 +321,20 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-#### <a name="targetdialect-element"></a><span data-ttu-id="8422a-163">Элемент TargetDialect</span><span class="sxs-lookup"><span data-stu-id="8422a-163">TargetDialect element</span></span>
+#### <a name="targetdialect-element"></a><span data-ttu-id="1e8f7-163">Элемент TargetDialect</span><span class="sxs-lookup"><span data-stu-id="1e8f7-163">TargetDialect element</span></span>
 
 
-<span data-ttu-id="8422a-p108">Определяет региональный язык, который поддерживает этот словарь. Обязательный для надстроек словаря.</span><span class="sxs-lookup"><span data-stu-id="8422a-p108">Specifies a regional language that this dictionary supports. Required for dictionary add-ins.</span></span>
+<span data-ttu-id="1e8f7-p108">Определяет региональный язык, который поддерживает этот словарь. Обязательный для надстроек словаря.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p108">Specifies a regional language that this dictionary supports. Required for dictionary add-ins.</span></span>
 
- <span data-ttu-id="8422a-166">**Родительский элемент**</span><span class="sxs-lookup"><span data-stu-id="8422a-166">**Parent element**</span></span>
+ <span data-ttu-id="1e8f7-166">**Родительский элемент**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-166">**Parent element**</span></span>
 
  `<TargetDialects>`
 
- <span data-ttu-id="8422a-167">**Примечания**</span><span class="sxs-lookup"><span data-stu-id="8422a-167">**Remarks**</span></span>
+ <span data-ttu-id="1e8f7-167">**Примечания**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-167">**Remarks**</span></span>
 
-<span data-ttu-id="8422a-168">Укажите значение регионального языка в формате тегов `language` RFC1766, например EN-US.</span><span class="sxs-lookup"><span data-stu-id="8422a-168">Specify the value for a regional language in the RFC1766  `language` tag format, such as EN-US.</span></span>
+<span data-ttu-id="1e8f7-168">Укажите значение регионального языка в формате тегов `language` RFC1766, например EN-US.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-168">Specify the value for a regional language in the RFC1766  `language` tag format, such as EN-US.</span></span>
 
- <span data-ttu-id="8422a-169">**Пример**</span><span class="sxs-lookup"><span data-stu-id="8422a-169">**Example**</span></span>
+ <span data-ttu-id="1e8f7-169">**Пример**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-169">**Example**</span></span>
 
 
 ```XML
@@ -341,20 +342,20 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-#### <a name="queryuri-element"></a><span data-ttu-id="8422a-170">Элемент QueryUri</span><span class="sxs-lookup"><span data-stu-id="8422a-170">QueryUri element</span></span>
+#### <a name="queryuri-element"></a><span data-ttu-id="1e8f7-170">Элемент QueryUri</span><span class="sxs-lookup"><span data-stu-id="1e8f7-170">QueryUri element</span></span>
 
 
-<span data-ttu-id="8422a-p109">Определяет конечную точку службы запросов словаря. Обязательный элемент для надстроек словаря.</span><span class="sxs-lookup"><span data-stu-id="8422a-p109">Specifies the endpoint for the dictionary query service. Required for dictionary add-ins.</span></span>
+<span data-ttu-id="1e8f7-p109">Определяет конечную точку службы запросов словаря. Обязательный элемент для надстроек словаря.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p109">Specifies the endpoint for the dictionary query service. Required for dictionary add-ins.</span></span>
 
- <span data-ttu-id="8422a-173">**Родительский элемент**</span><span class="sxs-lookup"><span data-stu-id="8422a-173">**Parent element**</span></span>
+ <span data-ttu-id="1e8f7-173">**Родительский элемент**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-173">**Parent element**</span></span>
 
  `<Dictionary>`
 
- <span data-ttu-id="8422a-174">**Замечания**</span><span class="sxs-lookup"><span data-stu-id="8422a-174">**Remarks**</span></span>
+ <span data-ttu-id="1e8f7-174">**Замечания**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-174">**Remarks**</span></span>
 
-<span data-ttu-id="8422a-p110">Это универсальный код ресурса (URI) XML-веб-службы поставщика словаря. К этому URI добавляется строка запроса с надлежащими escape-символами.</span><span class="sxs-lookup"><span data-stu-id="8422a-p110">This is the URI of the XML web service for the dictionary provider. The properly escaped query will be appended to this URI.</span></span> 
+<span data-ttu-id="1e8f7-p110">Это универсальный код ресурса (URI) XML-веб-службы поставщика словаря. К этому URI добавляется строка запроса с надлежащими escape-символами.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p110">This is the URI of the XML web service for the dictionary provider. The properly escaped query will be appended to this URI.</span></span> 
 
- <span data-ttu-id="8422a-177">**Пример**</span><span class="sxs-lookup"><span data-stu-id="8422a-177">**Example**</span></span>
+ <span data-ttu-id="1e8f7-177">**Пример**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-177">**Example**</span></span>
 
 
 ```XML
@@ -362,22 +363,22 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-#### <a name="citationtext-element"></a><span data-ttu-id="8422a-178">Элемент CitationText</span><span class="sxs-lookup"><span data-stu-id="8422a-178">CitationText element</span></span>
+#### <a name="citationtext-element"></a><span data-ttu-id="1e8f7-178">Элемент CitationText</span><span class="sxs-lookup"><span data-stu-id="1e8f7-178">CitationText element</span></span>
 
 
-<span data-ttu-id="8422a-p111">Определяет текст, который будет использоваться в ссылках. Обязательный элемент для надстроек словаря.</span><span class="sxs-lookup"><span data-stu-id="8422a-p111">Specifies the text to use in citations. Required for dictionary add-ins.</span></span>
+<span data-ttu-id="1e8f7-p111">Определяет текст, который будет использоваться в ссылках. Обязательный элемент для надстроек словаря.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p111">Specifies the text to use in citations. Required for dictionary add-ins.</span></span>
 
- <span data-ttu-id="8422a-181">**Родительский элемент**</span><span class="sxs-lookup"><span data-stu-id="8422a-181">**Parent element**</span></span>
+ <span data-ttu-id="1e8f7-181">**Родительский элемент**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-181">**Parent element**</span></span>
 
  `<Dictionary>`
 
- <span data-ttu-id="8422a-182">**Замечания**</span><span class="sxs-lookup"><span data-stu-id="8422a-182">**Remarks**</span></span>
+ <span data-ttu-id="1e8f7-182">**Замечания**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-182">**Remarks**</span></span>
 
-<span data-ttu-id="8422a-183">В этом элементе указывается начальный текст ссылки, который будет отображаться в строке под контентом, возвращенным из веб-службы (например, "Источник:" или "Предоставлено:").</span><span class="sxs-lookup"><span data-stu-id="8422a-183">This element specifies the beginning of the citation text that will be displayed on a line below the content that is returned from the web service (for example, "Results by: " or "Powered by: ").</span></span>
+<span data-ttu-id="1e8f7-183">В этом элементе указывается начальный текст ссылки, который будет отображаться в строке под контентом, возвращенным из веб-службы (например, "Источник:" или "Предоставлено:").</span><span class="sxs-lookup"><span data-stu-id="1e8f7-183">This element specifies the beginning of the citation text that will be displayed on a line below the content that is returned from the web service (for example, "Results by: " or "Powered by: ").</span></span>
 
-<span data-ttu-id="8422a-p112">Для этого элемента можно указать значения в других языковых стандартах, используя для этого элемент **Override**. Например, если пользователь использует версию Office на испанском языке, но задействует английский словарь, то в строке ссылки будет написано "Resultados por: Bing", а не "Results by: Bing". Чтобы узнать, как указывать значения с использованием других языковых стандартов, см. раздел "Параметры для разных языковых стандартов" в статье [XML-манифест надстроек для Office](../develop/add-in-manifests.md).</span><span class="sxs-lookup"><span data-stu-id="8422a-p112">For this element, you can specify values for additional locales by using the  **Override** element. For example, if a user is running the Spanish SKU of Office, but using an English dictionary, this allows the citation line to read "Resultados por: Bing" rather than "Results by: Bing". For more information about how to specify values for additional locales, see the section "Providing settings for different locales" in [Office Add-ins XML manifest](../develop/add-in-manifests.md).</span></span>
+<span data-ttu-id="1e8f7-p112">Для этого элемента можно указать значения в других языковых стандартах, используя для этого элемент **Override**. Например, если пользователь использует версию Office на испанском языке, но задействует английский словарь, то в строке ссылки будет написано "Resultados por: Bing", а не "Results by: Bing". Чтобы узнать, как указывать значения с использованием других языковых стандартов, см. раздел "Параметры для разных языковых стандартов" в статье [XML-манифест надстроек для Office](../develop/add-in-manifests.md).</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p112">For this element, you can specify values for additional locales by using the  **Override** element. For example, if a user is running the Spanish SKU of Office, but using an English dictionary, this allows the citation line to read "Resultados por: Bing" rather than "Results by: Bing". For more information about how to specify values for additional locales, see the section "Providing settings for different locales" in [Office Add-ins XML manifest](../develop/add-in-manifests.md).</span></span>
 
- <span data-ttu-id="8422a-187">**Пример**</span><span class="sxs-lookup"><span data-stu-id="8422a-187">**Example**</span></span>
+ <span data-ttu-id="1e8f7-187">**Пример**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-187">**Example**</span></span>
 
 
 ```XML
@@ -385,44 +386,44 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-#### <a name="dictionaryname-element"></a><span data-ttu-id="8422a-188">Элемент DictionaryName</span><span class="sxs-lookup"><span data-stu-id="8422a-188">DictionaryName element</span></span>
+#### <a name="dictionaryname-element"></a><span data-ttu-id="1e8f7-188">Элемент DictionaryName</span><span class="sxs-lookup"><span data-stu-id="1e8f7-188">DictionaryName element</span></span>
 
 
-<span data-ttu-id="8422a-p113">Определяет имя этого словаря. Обязательный элемент для надстроек словаря.</span><span class="sxs-lookup"><span data-stu-id="8422a-p113">Specifies the name of this dictionary. Required for dictionary add-ins.</span></span>
+<span data-ttu-id="1e8f7-p113">Определяет имя этого словаря. Обязательный элемент для надстроек словаря.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p113">Specifies the name of this dictionary. Required for dictionary add-ins.</span></span>
 
- <span data-ttu-id="8422a-191">**Родительский элемент**</span><span class="sxs-lookup"><span data-stu-id="8422a-191">**Parent element**</span></span>
+ <span data-ttu-id="1e8f7-191">**Родительский элемент**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-191">**Parent element**</span></span>
 
  `<Dictionary>`
 
- <span data-ttu-id="8422a-192">**Замечания**</span><span class="sxs-lookup"><span data-stu-id="8422a-192">**Remarks**</span></span>
+ <span data-ttu-id="1e8f7-192">**Замечания**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-192">**Remarks**</span></span>
 
-<span data-ttu-id="8422a-p114">В этом элементе указывается текст ссылки на источник. Текст ссылки на источник отображается в строчке под контентом, возвращенным веб-службой.</span><span class="sxs-lookup"><span data-stu-id="8422a-p114">This element specifies the link text in the citation text. Citation text is displayed on a line below the content that is returned from the web service.</span></span>
+<span data-ttu-id="1e8f7-p114">В этом элементе указывается текст ссылки на источник. Текст ссылки на источник отображается в строчке под контентом, возвращенным веб-службой.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p114">This element specifies the link text in the citation text. Citation text is displayed on a line below the content that is returned from the web service.</span></span>
 
-<span data-ttu-id="8422a-195">В этом элементе можно задать значения для дополнительных языковых стандартов.</span><span class="sxs-lookup"><span data-stu-id="8422a-195">For this element, you can specify values for additional locales.</span></span>
+<span data-ttu-id="1e8f7-195">В этом элементе можно задать значения для дополнительных языковых стандартов.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-195">For this element, you can specify values for additional locales.</span></span>
 
- <span data-ttu-id="8422a-196">**Пример**</span><span class="sxs-lookup"><span data-stu-id="8422a-196">**Example**</span></span>
+ <span data-ttu-id="1e8f7-196">**Пример**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-196">**Example**</span></span>
 
 ```XML
 <DictionaryName DefaultValue="Bing Dictionary" />
 ```
 
 
-#### <a name="dictionaryhomepage-element"></a><span data-ttu-id="8422a-197">Элемент DictionaryHomePage</span><span class="sxs-lookup"><span data-stu-id="8422a-197">DictionaryHomePage element</span></span>
+#### <a name="dictionaryhomepage-element"></a><span data-ttu-id="1e8f7-197">Элемент DictionaryHomePage</span><span class="sxs-lookup"><span data-stu-id="1e8f7-197">DictionaryHomePage element</span></span>
 
 
-<span data-ttu-id="8422a-p115">Определяет URL-адрес домашней страницы словаря. Обязательный элемент для надстроек словаря.</span><span class="sxs-lookup"><span data-stu-id="8422a-p115">Specifies the URL of the home page for the dictionary. Required for dictionary add-ins.</span></span>
+<span data-ttu-id="1e8f7-p115">Определяет URL-адрес домашней страницы словаря. Обязательный элемент для надстроек словаря.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p115">Specifies the URL of the home page for the dictionary. Required for dictionary add-ins.</span></span>
 
- <span data-ttu-id="8422a-200">**Родительский элемент**</span><span class="sxs-lookup"><span data-stu-id="8422a-200">**Parent element**</span></span>
+ <span data-ttu-id="1e8f7-200">**Родительский элемент**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-200">**Parent element**</span></span>
 
  `<Dictionary>`
 
- <span data-ttu-id="8422a-201">**Замечания**</span><span class="sxs-lookup"><span data-stu-id="8422a-201">**Remarks**</span></span>
+ <span data-ttu-id="1e8f7-201">**Замечания**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-201">**Remarks**</span></span>
 
-<span data-ttu-id="8422a-p116">В этом элементе указывается URL-адрес источника. Текст ссылки на источник отображается в строчке под контентом, возвращенным веб-службой.</span><span class="sxs-lookup"><span data-stu-id="8422a-p116">This element specifies the link URL in the citation text. Citation text is displayed on a line below the content that is returned from the web service.</span></span>
+<span data-ttu-id="1e8f7-p116">В этом элементе указывается URL-адрес источника. Текст ссылки на источник отображается в строчке под контентом, возвращенным веб-службой.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p116">This element specifies the link URL in the citation text. Citation text is displayed on a line below the content that is returned from the web service.</span></span>
 
-<span data-ttu-id="8422a-204">В этом элементе можно задать значения для дополнительных языковых стандартов.</span><span class="sxs-lookup"><span data-stu-id="8422a-204">For this element, you can specify values for additional locales.</span></span>
+<span data-ttu-id="1e8f7-204">В этом элементе можно задать значения для дополнительных языковых стандартов.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-204">For this element, you can specify values for additional locales.</span></span>
 
- <span data-ttu-id="8422a-205">**Пример**</span><span class="sxs-lookup"><span data-stu-id="8422a-205">**Example**</span></span>
+ <span data-ttu-id="1e8f7-205">**Пример**</span><span class="sxs-lookup"><span data-stu-id="1e8f7-205">**Example**</span></span>
 
 
 ```XML
@@ -430,9 +431,9 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-### <a name="creating-a-dictionary-add-ins-html-user-interface"></a><span data-ttu-id="8422a-206">Создание пользовательского интерфейса HTML для надстройки словаря</span><span class="sxs-lookup"><span data-stu-id="8422a-206">Creating a dictionary add-in's HTML user interface</span></span>
+### <a name="creating-a-dictionary-add-ins-html-user-interface"></a><span data-ttu-id="1e8f7-206">Создание пользовательского интерфейса HTML для надстройки словаря</span><span class="sxs-lookup"><span data-stu-id="1e8f7-206">Creating a dictionary add-in's HTML user interface</span></span>
 
-<span data-ttu-id="8422a-p117">В двух следующих примерах показаны HTML- и CSS-файлы для пользовательского интерфейса демонстрационной надстройки словаря. Чтобы просмотреть, как отображается пользовательский интерфейс в надстройке области задач, изучите рис. 6, который приведен сразу после кода. Чтобы узнать, как реализация JavaScript в файле Dictionary.js предоставляет логику программирования для этого пользовательского интерфейса HTML, см. раздел "Составление реализации JavaScript" ниже.</span><span class="sxs-lookup"><span data-stu-id="8422a-p117">The following two examples show the HTML and CSS files for the UI of the Demo Dictionary add-in. To view how the UI is displayed in the add-in's task pane, see Figure 6 following the code. To see how the implementation of the JavaScript in the Dictionary.js file provides programming logic for this HTML UI, see "Writing the JavaScript implementation" immediately following this section.</span></span>
+<span data-ttu-id="1e8f7-p117">В двух следующих примерах показаны HTML- и CSS-файлы для пользовательского интерфейса демонстрационной надстройки словаря. Чтобы просмотреть, как отображается пользовательский интерфейс в надстройке области задач, изучите рис. 6, который приведен сразу после кода. Чтобы узнать, как реализация JavaScript в файле Dictionary.js предоставляет логику программирования для этого пользовательского интерфейса HTML, см. раздел "Составление реализации JavaScript" ниже.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p117">The following two examples show the HTML and CSS files for the UI of the Demo Dictionary add-in. To view how the UI is displayed in the add-in's task pane, see Figure 6 following the code. To see how the implementation of the JavaScript in the Dictionary.js file provides programming logic for this HTML UI, see "Writing the JavaScript implementation" immediately following this section.</span></span>
 
 ```HTML
 <!DOCTYPE html>
@@ -473,7 +474,7 @@ public class WebService : System.Web.Services.WebService {
 </html>
 ```
 
-<span data-ttu-id="8422a-210">В приведенном ниже примере показано содержание Style.css.</span><span class="sxs-lookup"><span data-stu-id="8422a-210">The following example shows the contents of Style.css.</span></span>
+<span data-ttu-id="1e8f7-210">В приведенном ниже примере показано содержание Style.css.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-210">The following example shows the contents of Style.css.</span></span>
 
 ```CSS
 #mainContainer
@@ -514,30 +515,30 @@ a:hover, a:active
 }
 ```
 
-<span data-ttu-id="8422a-211">*Рис. 6. Демонстрационный пользовательский интерфейс словаря*</span><span class="sxs-lookup"><span data-stu-id="8422a-211">*Figure 6. Demo dictionary UI*</span></span>
+<span data-ttu-id="1e8f7-211">*Рис. 6. Демонстрационный пользовательский интерфейс словаря*</span><span class="sxs-lookup"><span data-stu-id="1e8f7-211">*Figure 6. Demo dictionary UI*</span></span>
 
 ![Пользовательский интерфейс демоверсии словаря](../images/dictionary-agave-06.jpg)
 
 
-### <a name="writing-the-javascript-implementation"></a><span data-ttu-id="8422a-213">Реализация JavaScript</span><span class="sxs-lookup"><span data-stu-id="8422a-213">Writing the JavaScript implementation</span></span>
+### <a name="writing-the-javascript-implementation"></a><span data-ttu-id="1e8f7-213">Реализация JavaScript</span><span class="sxs-lookup"><span data-stu-id="1e8f7-213">Writing the JavaScript implementation</span></span>
 
 
-<span data-ttu-id="8422a-p118">В приведенном ниже примере показана реализация JavaScript в файле Dictionary.js, которая вызывается с HTML-страницы надстройки и предоставляет программную логику для надстройки Demo Dictionary. В этом сценарии используется вышеописанная XML-веб-служба. Если поместить сценарий в тот же каталог, что и пример веб-службы, он будет получать определения из этой службы. Его можно использовать с общедоступной XML-веб-службой, соответствующей схеме OfficeDefinitions. Для этого измените переменную `xmlServiceURL` в начале файла, а затем замените ключ API Bing для произношений на правильно зарегистрированный.</span><span class="sxs-lookup"><span data-stu-id="8422a-p118">The following example shows the JavaScript implementation in the Dictionary.js file that is called from the add-in's HTML page to provide the programming logic for the Demo Dictionary add-in. This script reuses the XML web service described previously. When placed in the same directory as the example web service, the script will get definitions from that service. It can be used with a public OfficeDefinitions-conforming XML web service by modifying the  `xmlServiceURL` variable at the top of the file, and then replacing the Bing API key for pronunciations with a properly registered one.</span></span>
+<span data-ttu-id="1e8f7-p118">В приведенном ниже примере показана реализация JavaScript в файле Dictionary.js, которая вызывается с HTML-страницы надстройки и предоставляет программную логику для надстройки Demo Dictionary. В этом сценарии используется вышеописанная XML-веб-служба. Если поместить сценарий в тот же каталог, что и пример веб-службы, он будет получать определения из этой службы. Его можно использовать с общедоступной XML-веб-службой, соответствующей схеме OfficeDefinitions. Для этого измените переменную `xmlServiceURL` в начале файла, а затем замените ключ API Bing для произношений на правильно зарегистрированный.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p118">The following example shows the JavaScript implementation in the Dictionary.js file that is called from the add-in's HTML page to provide the programming logic for the Demo Dictionary add-in. This script reuses the XML web service described previously. When placed in the same directory as the example web service, the script will get definitions from that service. It can be used with a public OfficeDefinitions-conforming XML web service by modifying the  `xmlServiceURL` variable at the top of the file, and then replacing the Bing API key for pronunciations with a properly registered one.</span></span>
 
-<span data-ttu-id="8422a-218">Ниже приведены основные элементы API JavaScript для Office (Office.js), которые вызываются в реализованном коде.</span><span class="sxs-lookup"><span data-stu-id="8422a-218">The primary members of the JavaScript API for Office (Office.js) that are called from this implementation are as follows:</span></span>
+<span data-ttu-id="1e8f7-218">Ниже приведены основные элементы API JavaScript для Office (Office.js), которые вызываются в реализованном коде.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-218">The primary members of the JavaScript API for Office (Office.js) that are called from this implementation are as follows:</span></span>
 
 
-- <span data-ttu-id="8422a-219">Событие [initialize](/javascript/api/office) объекта **Office**, возникающее при инициализации контекста надстройки и предоставляющее доступ к объекту [Document](/javascript/api/office/office.document), представляющему собой документ, с которым взаимодействует надстройка.</span><span class="sxs-lookup"><span data-stu-id="8422a-219">The [initialize](/javascript/api/office) event of the **Office** object, which is raised when the add-in context is initialized, and provides access to a [Document](/javascript/api/office/office.document) object instance that represents the document the add-in is interacting with.</span></span>
+- <span data-ttu-id="1e8f7-219">Событие [initialize](/javascript/api/office) объекта **Office**, возникающее при инициализации контекста надстройки и предоставляющее доступ к объекту [Document](/javascript/api/office/office.document), представляющему собой документ, с которым взаимодействует надстройка.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-219">The [initialize](/javascript/api/office) event of the **Office** object, which is raised when the add-in context is initialized, and provides access to a [Document](/javascript/api/office/office.document) object instance that represents the document the add-in is interacting with.</span></span>
     
-- <span data-ttu-id="8422a-220">Метод [addHandlerAsync](/javascript/api/office/office.document#addhandlerasync-eventtype--handler--options--callback-) объекта **Document**, который вызывается в функции **initialize** для добавления обработчика события [SelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) документа с целью прослушивания изменений, внесенных в выделенный пользователем фрагмент.</span><span class="sxs-lookup"><span data-stu-id="8422a-220">The [addHandlerAsync](/javascript/api/office/office.document#addhandlerasync-eventtype--handler--options--callback-) method of the **Document** object, which is called in the **initialize** function to add an event handler for the [SelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) event of the document to listen for user selection changes.</span></span>
+- <span data-ttu-id="1e8f7-220">Метод [addHandlerAsync](/javascript/api/office/office.document#addhandlerasync-eventtype--handler--options--callback-) объекта **Document**, который вызывается в функции **initialize** для добавления обработчика события [SelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) документа с целью прослушивания изменений, внесенных в выделенный пользователем фрагмент.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-220">The [addHandlerAsync](/javascript/api/office/office.document#addhandlerasync-eventtype--handler--options--callback-) method of the **Document** object, which is called in the **initialize** function to add an event handler for the [SelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) event of the document to listen for user selection changes.</span></span>
     
-- <span data-ttu-id="8422a-221">Метод [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) объекта **Document**, который вызывается в функции `tryUpdatingSelectedWord()` при включении обработчика событий **SelectionChanged** для получения слова или фразы по выбору пользователя, приведения их в обычный текст и выполнения асинхронной функции обратного вызова `selectedTextCallback`.</span><span class="sxs-lookup"><span data-stu-id="8422a-221">The [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) method of the **Document** object, which is called in the `tryUpdatingSelectedWord()` function when the **SelectionChanged** event handler is raised to get the word or phrase the user selected, coerce it to plain text, and then execute the `selectedTextCallback` asynchronous callback function.</span></span>
+- <span data-ttu-id="1e8f7-221">Метод [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) объекта **Document**, который вызывается в функции `tryUpdatingSelectedWord()` при включении обработчика событий **SelectionChanged** для получения слова или фразы по выбору пользователя, приведения их в обычный текст и выполнения асинхронной функции обратного вызова `selectedTextCallback`.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-221">The [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) method of the **Document** object, which is called in the `tryUpdatingSelectedWord()` function when the **SelectionChanged** event handler is raised to get the word or phrase the user selected, coerce it to plain text, and then execute the `selectedTextCallback` asynchronous callback function.</span></span>
     
-- <span data-ttu-id="8422a-p119">При выполнении асинхронной функции обратного вызова `selectTextCallback`, которая передается как аргумент _callback_ метода **getSelectedDataAsync**, возвращается значение выделенного текста. Эта функция считывает значение из аргумента _selectedText_ (имеющего тип [AsyncResult](/javascript/api/office/office.asyncresult)) с помощью свойства [value](/javascript/api/office/office.asyncresult#status) возвращенного объекта **AsyncResult**.</span><span class="sxs-lookup"><span data-stu-id="8422a-p119">When the  `selectTextCallback` asynchronous callback function that is passed as the _callback_ argument of the **getSelectedDataAsync** method executes, it gets the value of the selected text when the callback returns. It gets that value from the callback's _selectedText_ argument (which is of type [AsyncResult](/javascript/api/office/office.asyncresult)) by using the [value](/javascript/api/office/office.asyncresult#status) property of the returned **AsyncResult** object.</span></span>
+- <span data-ttu-id="1e8f7-p119">При выполнении асинхронной функции обратного вызова `selectTextCallback`, которая передается как аргумент _callback_ метода **getSelectedDataAsync**, возвращается значение выделенного текста. Эта функция считывает значение из аргумента _selectedText_ (имеющего тип [AsyncResult](/javascript/api/office/office.asyncresult)) с помощью свойства [value](/javascript/api/office/office.asyncresult#status) возвращенного объекта **AsyncResult**.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p119">When the  `selectTextCallback` asynchronous callback function that is passed as the _callback_ argument of the **getSelectedDataAsync** method executes, it gets the value of the selected text when the callback returns. It gets that value from the callback's _selectedText_ argument (which is of type [AsyncResult](/javascript/api/office/office.asyncresult)) by using the [value](/javascript/api/office/office.asyncresult#status) property of the returned **AsyncResult** object.</span></span>
     
-- <span data-ttu-id="8422a-p120">Остальной код функции `selectedTextCallback` отправляет XML-веб-службе запрос на определения. Кроме того, он вызывает API-интерфейсы Microsoft Translator для получения URL-адреса WAV-файла с произношением выделенного слова.</span><span class="sxs-lookup"><span data-stu-id="8422a-p120">The rest of the code in the  `selectedTextCallback` function queries the XML web service for definitions. It also calls into the Microsoft Translator APIs to provide the URL of a .wav file that has the selected word's pronunciation.</span></span>
+- <span data-ttu-id="1e8f7-p120">Остальной код функции `selectedTextCallback` отправляет XML-веб-службе запрос на определения. Кроме того, он вызывает API-интерфейсы Microsoft Translator для получения URL-адреса WAV-файла с произношением выделенного слова.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-p120">The rest of the code in the  `selectedTextCallback` function queries the XML web service for definitions. It also calls into the Microsoft Translator APIs to provide the URL of a .wav file that has the selected word's pronunciation.</span></span>
     
-- <span data-ttu-id="8422a-226">Остальной код в файле Dictionary.js служит для отображения списка определений и ссылок на произношения в пользовательском интерфейсе HTML надстройки.</span><span class="sxs-lookup"><span data-stu-id="8422a-226">The remaining code in Dictionary.js displays the list of definitions and the pronunciation link in the add-in's HTML UI.</span></span>
+- <span data-ttu-id="1e8f7-226">Остальной код в файле Dictionary.js служит для отображения списка определений и ссылок на произношения в пользовательском интерфейсе HTML надстройки.</span><span class="sxs-lookup"><span data-stu-id="1e8f7-226">The remaining code in Dictionary.js displays the list of definitions and the pronunciation link in the add-in's HTML UI.</span></span>
     
 
 
