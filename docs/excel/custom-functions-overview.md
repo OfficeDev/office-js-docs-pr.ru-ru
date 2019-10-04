@@ -5,12 +5,12 @@ title: Создание пользовательских функций в Excel
 ms.topic: overview
 scenarios: getting-started
 localization_priority: Priority
-ms.openlocfilehash: aeff31dfce62aa9983f9a4ff2d766e127314d967
-ms.sourcegitcommit: 528577145b2cf0a42bc64c56145d661c4d019fb8
+ms.openlocfilehash: 49c388f7b1464ba5688ed1d7855a16c5e1ca848f
+ms.sourcegitcommit: 3159f4ed9fd8fa631300d15501912ba6293740c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "37353869"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "37391243"
 ---
 # <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel 
 
@@ -71,7 +71,7 @@ function add(first, second){
 Обратите внимание, что файл **functions.html**, который регулирует загрузку среды выполнения пользовательских функций, нужно связать с текущим CDN для пользовательских функций. Проекты, подготовленные с текущей версией генератора Yo Office, ссылаются на правильный CDN. При модернизации предыдущего проекта пользовательской функции от марта 2019 года или более раннего нужно скопировать код, приведенный ниже, на страницу **functions.html**.
 
 ```HTML
-<script src="https://appsforoffice.microsoft.com/lib/beta/hosted/custom-functions-runtime.js" type="text/javascript"></script>
+<script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/custom-functions-runtime.js" type="text/javascript"></script>
 ```
 
 ### <a name="manifest-file"></a>Файл манифеста
