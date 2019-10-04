@@ -5,15 +5,15 @@
     - name: Сведения о надстройках Office
       href: overview/index.md
       displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
-    - name: Обзор
+    - name: Общие сведения
       items:
         - name: Обзор платформы надстроек Office
           href: overview/office-add-ins.md
           displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
-        - name: Доступность узла и платформы
+        - name: Доступность ведущих приложений и платформ
           href: overview/office-add-in-availability.md
           displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
-        - name: Изучение API Office JS с помощью сценария Lab
+        - name: Изучение API JS для Office с помощью Lab Script
           href: overview/explore-with-script-lab.md
           displayName: 'Excel, Word, PowerPoint'
         - name: Требования к запуску надстроек
@@ -42,9 +42,9 @@
         - name: Конфиденциальность и безопасность
           href: concepts/privacy-and-security.md
           displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
-    - name: Пользовательский интерфейс
+    - name: Интерфейс пользователя
       items:
-        - name: Обзор
+        - name: Общие сведения
           href: design/add-in-design.md
         - name: Рекомендации
           items:
@@ -52,25 +52,25 @@
               href: design/accessibility-guidelines.md
             - name: Визуализация данных
               href: design/data-visualization-guidelines.md
-            - name: Голосовые вызовы
+            - name: Голос
               href: design/voice-guidelines.md
-        - name: Язык проектирования
+        - name: Язык дизайна
           items:
-            - name: Обзор
+            - name: Общие сведения
               href: design/add-in-design-language.md
             - name: Цвет
               href: design/add-in-color.md
             - name: Значки
               href: design/add-in-icons.md
-            - name: Макет
+            - name: Структура
               href: design/add-in-layout.md
-            - name: шрифтовое оформление;
+            - name: Шрифтовое оформление
               href: design/add-in-typography.md
             - name: Использование движения
               href: design/using-motion-office-addins.md
         - name: Элементы интерфейса
           items:
-            - name: Обзор
+            - name: Общие сведения
               href: design/interface-elements.md
             - name: Команды надстроек
               href: design/add-in-commands.md
@@ -80,15 +80,15 @@
               href: design/content-add-ins.md
             - name: Области задач
               href: design/task-pane-add-ins.md
-        - name: Шаблоны оформления UX
+        - name: Шаблоны оформления
           items:
-            - name: Обзор
+            - name: Общие сведения
               href: design/ux-design-pattern-templates.md
             - name: Проверка подлинности
               href: design/authentication-patterns.md
-            - name: Фирменная символика
+            - name: Брендирование
               href: design/branding-patterns.md
-            - name: первый запуск;
+            - name: Первый запуск
               href: design/first-run-experience-patterns.md
             - name: Навигация
               href: design/navigation-patterns.md
@@ -102,13 +102,13 @@
               href: design/office-ui-fabric.md
     - name: Разработка
       items:
-        - name: Ограничения для одной политики происхождения
+        - name: 'Обход ограничений, связанных с политикой единого домена'
           href: develop/addressing-same-origin-policy-limitations.md
-        - name: Проверка подлинности и авторизация
+        - name: Проверка подлинности и авторизация.
           items:
-            - name: Общие сведения о проверке подлинности и авторизации
+            - name: Обзор проверки подлинности и авторизации
               href: develop/overview-authn-authz.md
-            - name: Проверка подлинности и авторизация с помощью API диалоговых окон Office
+            - name: Проверка подлинности и авторизация с помощью Dialog API для Office
               href: develop/auth-with-office-dialog-api.md
             - name: Авторизация внешних служб
               href: develop/auth-external-add-ins.md
@@ -116,15 +116,15 @@
               href: develop/authorize-to-microsoft-graph-without-sso.md
             - name: Включение единого входа в надстройке
               items:
-                - name: Включение единого входа
+                - name: Активация единого входа
                   href: develop/sso-in-office-add-ins.md
                 - name: Авторизация в Microsoft Graph с помощью единого входа
                   href: develop/authorize-to-microsoft-graph.md
-                - name: Создание надстройки единого входа с помощью ASP.NET
+                - name: Создание надстройки с единым входом с помощью ASP.NET
                   href: develop/create-sso-office-add-ins-aspnet.md
-                - name: Создание надстройки единого входа с помощью Node. js
+                - name: Создание надстройки с поддержкой единого входа при помощи Node.js
                   href: develop/create-sso-office-add-ins-nodejs.md
-                - name: 'Регистрация надстройки Office, использующей единый вход, с помощью Azure AD 2.0'
+                - name: 'Регистрация надстройки Office, использующей единый вход, в Azure AD 2.0'
                   href: develop/register-sso-add-in-aad-v2.md
                 - name: Предоставление надстройке разрешений администратора
                   href: develop/grant-admin-consent-to-an-add-in.md
@@ -134,19 +134,19 @@
           href: develop/automatically-open-a-task-pane-with-a-document.md
         - name: Разработка надстроек для iPad
           href: develop/develop-office-add-ins-for-the-ipad.md
-        - name: Разработка надстроек с помощью угловой
+        - name: Разработка надстроек с помощью Angular
           href: develop/add-ins-with-angular2.md
         - name: Разработка надстроек с помощью Visual Studio
           items:
             - name: Создание и отладка надстроек Office в Visual Studio
               href: develop/create-and-debug-office-add-ins-in-visual-studio.md
-            - name: Получение IntelliSense для JavaScript в Visual Studio
+            - name: Использование IntelliSense для JavaScript в Visual Studio
               href: develop/get-javascript-intellisense-in-visual-studio.md
             - name: Преобразование JavaScript в TypeScript
               href: develop/convert-javascript-to-typescript.md
         - name: API диалоговых окон
           href: develop/dialog-api-in-office-add-ins.md
-        - name: локализация.
+        - name: Локализация
           href: develop/localization.md
         - name: Манифест
           items:
@@ -154,15 +154,15 @@
               href: develop/add-in-manifests.md
             - name: Создание команд надстройки
               href: develop/create-addin-commands.md
-            - name: Поиск надлежащего порядка элементов манифеста
+            - name: Определение правильного порядка элементов манифеста
               href: develop/manifest-element-ordering.md
-            - name: Определение эквивалентной надстройки COM
+            - name: Определение аналогичной надстройки COM
               href: develop/make-office-add-in-compatible-with-existing-com-add-in.md
-            - name: Запрос разрешений на использование API в контентных надстройках и надстройках области задач
+            - name: Запрашивание разрешений на использование API в контентных надстройках и надстройках области задач
               href: develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md
             - name: Указание ведущих приложений Office
               href: develop/specify-office-hosts-and-api-requirements.md
-            - name: API обновления и версия манифеста
+            - name: Обновление версии манифеста и API
               href: develop/update-your-javascript-api-for-office-and-manifest-schema-version.md
         - name: API JavaScript для Office
           items:
@@ -170,23 +170,23 @@
               href: develop/understanding-the-javascript-api-for-office.md
             - name: Поддержка надстроек области задач и контентных надстроек
               href: develop/support-for-task-pane-and-content-add-ins.md
-            - name: Ссылка на Office. js
+            - name: Добавление ссылок на Office.js
               href: develop/referencing-the-javascript-api-for-office-library-from-its-cdn.md
-            - name: Загрузка Office. js
+            - name: Загрузка Office.js
               href: develop/loading-the-dom-and-runtime-environment.md
             - name: Объектная модель API JavaScript для Office
               href: develop/office-javascript-api-object-model.md
-            - name: Асинхронное программирование в случае надстроек Office
+            - name: Асинхронное программирование в надстройках для Office
               href: develop/asynchronous-programming-in-office-add-ins.md
             - name: Сохранение состояния и параметров
               href: develop/persisting-add-in-state-and-settings.md
     - name: Тестирование и отладка
       items:
-        - name: Обзор
+        - name: Общие сведения
           href: testing/test-debug-office-add-ins.md
         - name: Windows
           items:
-            - name: Загрузка неопубликованных надстроек Office в Windows
+            - name: Загрузка неопубликованных надстроек Office на Windows
               href: testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md
             - name: Подключение отладчика из области задач
               href: testing/attach-debugger-from-task-pane.md
@@ -194,7 +194,7 @@
               href: testing/debug-add-ins-using-f12-developer-tools-on-windows-10.md
         - name: Веб-браузер
           items:
-            - name: Загрузка неопубликованных надстройки в Office в Интернете
+            - name: Загрузка неопубликованных надстроек в Office в Интернете
               href: testing/sideload-office-add-ins-for-testing.md
             - name: Отладка в Office в Интернете
               href: testing/debug-add-ins-in-office-online.md
@@ -202,7 +202,7 @@
           items:
             - name: Загрузка неопубликованных надстроек Office на iPad и Mac
               href: testing/sideload-an-office-add-in-on-ipad-and-mac.md
-            - name: Отладка на Mac
+            - name: Отладка на компьютере Mac
               href: testing/debug-office-add-ins-on-ipad-and-mac.md
         - name: 'Устранение ошибок, с которыми сталкиваются пользователи'
           href: testing/testing-and-troubleshooting.md
@@ -212,11 +212,11 @@
           href: testing/troubleshoot-manifest.md
     - name: Публикация
       items:
-        - name: Обзор
+        - name: Общие сведения
           href: publish/publish.md
         - name: Размещение надстройки Office в Microsoft Azure
           href: publish/host-an-office-add-in-on-microsoft-azure.md
-        - name: Упаковка надстройки с помощью Visual Studio
+        - name: Упаковывание надстройки с помощью Visual Studio
           href: publish/package-your-add-in-using-visual-studio.md
         - name: Публикация надстроек в AppSource
           href: /office/dev/store/submit-to-the-office-store
@@ -226,12 +226,12 @@
           href: publish/centralized-deployment.md
         - name: Публикация надстроек в каталоге приложений SharePoint
           href: publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md
-    - name: Справочные материалы
+    - name: Справочник
       items:
-        - name: Общие сведения об API JavaScript для Office
+        - name: Обзор API JavaScript для Office
           href: reference/javascript-api-for-office.md
           displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
-        - name: Наборы обязательных элементов API (Общие)
+        - name: Наборы обязательных элементов API (общие)
           items:
             - name: Наборы обязательных элементов для команд надстроек
               href: reference/requirement-sets/add-in-commands-requirement-sets.md
@@ -239,13 +239,13 @@
               href: reference/requirement-sets/dialog-api-requirement-sets.md
             - name: Наборы обязательных элементов API удостоверений
               href: reference/requirement-sets/identity-api-requirement-sets.md
-            - name: Наборы требований к приведению изображений
+            - name: Наборы обязательных элементов для приведения изображений
               href: reference/requirement-sets/image-coercion-requirement-sets.md
             - name: Наборы обязательных элементов общего API для Office
               href: reference/requirement-sets/office-add-in-requirement-sets.md
-        - name: Справочные материалы по API (Общие сведения)
+        - name: Справочные материалы по API (общие)
           href: reference/common-api-reference.md
-        - name: Справочник по манифесту надстроек Office
+        - name: Справочные материалы по манифесту надстройки Office
           items:
             - name: AllowSnapshot
               href: reference/manifest/allowsnapshot.md
@@ -261,7 +261,7 @@
               href: reference/manifest/defaultlocale.md
             - name: DefaultSettings
               href: reference/manifest/defaultsettings.md
-            - name: Описание
+            - name: Description
               href: reference/manifest/description.md
             - name: DesktopSettings
               href: reference/manifest/desktopsettings.md
@@ -273,9 +273,9 @@
               href: reference/manifest/disableentityhighlighting.md
             - name: DisplayName
               href: reference/manifest/displayname.md
-            - name: екуивалентаддин
+            - name: EquivalentAddin
               href: reference/manifest/equivalentaddin.md
-            - name: екуивалентаддинс
+            - name: EquivalentAddins
               href: reference/manifest/equivalentaddins.md
             - name: FileName
               href: reference/manifest/filename.md
@@ -285,7 +285,7 @@
               href: reference/manifest/formsettings.md
             - name: HighResolutionIconUrl
               href: reference/manifest/highresolutioniconurl.md
-            - name: Узел
+            - name: Host
               href: reference/manifest/host.md
             - name: Hosts
               href: reference/manifest/hosts.md
@@ -293,19 +293,19 @@
               href: reference/manifest/iconurl.md
             - name: Id
               href: reference/manifest/id.md
-            - name: Метаданные
+            - name: Metadata
               href: reference/manifest/metadata.md
-            - name: Метод
+            - name: Method
               href: reference/manifest/method.md
-            - name: Методы
+            - name: Methods
               href: reference/manifest/methods.md
-            - name: Пространство имен
+            - name: Namespace
               href: reference/manifest/namespace.md
             - name: OfficeApp
               href: reference/manifest/officeapp.md
-            - name: Переопределение
+            - name: Override
               href: reference/manifest/override.md
-            - name: Разрешения
+            - name: Permissions
               href: reference/manifest/permissions.md
             - name: PhoneSettings
               href: reference/manifest/phonesettings.md
@@ -319,9 +319,9 @@
               href: reference/manifest/requestedheight.md
             - name: RequestedWidth
               href: reference/manifest/requestedwidth.md
-            - name: Требования
+            - name: Requirements
               href: reference/manifest/requirements.md
-            - name: Правило
+            - name: Rule
               href: reference/manifest/rule.md
             - name: Set
               href: reference/manifest/set.md
@@ -349,17 +349,17 @@
                   href: reference/manifest/action.md
                 - name: AllFormFactors
                   href: reference/manifest/allformfactors.md
-                - name: Авторизация
+                - name: Authorization
                   href: reference/manifest/authorization.md
-                - name: Авторизации
+                - name: Authorizations
                   href: reference/manifest/authorizations.md
-                - name: Control
+                - name: Элемент управления
                   href: reference/manifest/control.md
                 - name: CustomTab
                   href: reference/manifest/customtab.md
-                - name: екуивалентаддин
+                - name: EquivalentAddin
                   href: reference/manifest/equivalentaddin.md
-                - name: екуивалентаддинс
+                - name: EquivalentAddins
                   href: reference/manifest/equivalentaddins.md
                 - name: Событие
                   href: reference/manifest/event.md
@@ -371,11 +371,11 @@
                   href: reference/manifest/functionfile.md
                 - name: GetStarted
                   href: reference/manifest/getstarted.md
-                - name: Группа
+                - name: Group
                   href: reference/manifest/group.md
                 - name: Hosts
                   href: reference/manifest/hosts.md
-                - name: Значок
+                - name: Icon
                   href: reference/manifest/icon.md
                 - name: MobileFormFactor
                   href: reference/manifest/mobileformfactor.md
@@ -385,9 +385,9 @@
                   href: reference/manifest/officetab.md
                 - name: Page
                   href: reference/manifest/page.md
-                - name: Ресурсы
+                - name: Resources
                   href: reference/manifest/resources.md
-                - name: Области
+                - name: Scopes
                   href: reference/manifest/scopes.md
                 - name: Script
                   href: reference/manifest/script.md
@@ -411,21 +411,21 @@
     - name: Документация по надстройкам Excel
       href: excel/index.md
       displayName: Excel
-    - name: Обзор
+    - name: Общие сведения
       href: excel/excel-add-ins-overview.md
       displayName: Excel
     - name: Создание первой надстройки Excel
       items:
-        - name: Для области задач
+        - name: Область задач
           href: quickstarts/excel-quickstart-jquery.md
           displayName: Excel
-        - name: Область задач (радиально)
+        - name: Область задач (Angular)
           href: quickstarts/excel-quickstart-angular.md
           displayName: Excel
-        - name: Область задач (реагирует)
+        - name: Область задач (React)
           href: quickstarts/excel-quickstart-react.md
           displayName: Excel
-        - name: Область задач (VUE)
+        - name: Область задач (Vue)
           href: quickstarts/excel-quickstart-vue.md
           displayName: Excel
     - name: Руководство по надстройкам Excel
@@ -433,42 +433,42 @@
       displayName: Excel
     - name: API JavaScript для Excel
       items:
-        - name: Обзор
+        - name: Общие сведения
           href: reference/overview/excel-add-ins-reference-overview.md
           displayName: Excel
         - name: Наборы обязательных элементов API
           items:
-            - name: Обзор
+            - name: Общие сведения
               href: reference/requirement-sets/excel-api-requirement-sets.md
               displayName: Excel
-            - name: API предварительной версии Excel
+            - name: Предварительные версии API для Excel
               href: reference/requirement-sets/excel-preview-apis.md
               displayName: Excel
-            - name: 'Набор требований ExcelApi 1,9'
+            - name: Набор обязательных элементов ExcelApi 1.9
               href: reference/requirement-sets/excel-api-1-9-requirement-set.md
               displayName: Excel
-            - name: 'Набор требований ExcelApi 1,8'
+            - name: Набор обязательных элементов ExcelApi 1.8
               href: reference/requirement-sets/excel-api-1-8-requirement-set.md
               displayName: Excel
-            - name: 'Набор требований ExcelApi 1,7'
+            - name: Набор обязательных элементов ExcelApi 1.7
               href: reference/requirement-sets/excel-api-1-7-requirement-set.md
               displayName: Excel
-            - name: 'Набор требований ExcelApi 1,6'
+            - name: Набор обязательных элементов ExcelApi 1.6
               href: reference/requirement-sets/excel-api-1-6-requirement-set.md
               displayName: Excel
-            - name: 'Набор требований ExcelApi 1,5'
+            - name: Набор обязательных элементов ExcelApi 1.5
               href: reference/requirement-sets/excel-api-1-5-requirement-set.md
               displayName: Excel
-            - name: 'Набор требований ExcelApi 1,4'
+            - name: Набор обязательных элементов ExcelApi 1.4
               href: reference/requirement-sets/excel-api-1-4-requirement-set.md
               displayName: Excel
-            - name: 'Набор требований ExcelApi 1,3'
+            - name: Набор обязательных элементов ExcelApi 1.3
               href: reference/requirement-sets/excel-api-1-3-requirement-set.md
               displayName: Excel
-            - name: 'Набор требований ExcelApi 1,2'
+            - name: Набор обязательных элементов ExcelApi 1.2
               href: reference/requirement-sets/excel-api-1-2-requirement-set.md
               displayName: Excel
-            - name: 'Набор требований ExcelApi 1,1'
+            - name: Набор обязательных элементов ExcelApi 1.1
               href: reference/requirement-sets/excel-api-1-1-requirement-set.md
               displayName: Excel
         - name: Справочные материалы по API
@@ -477,7 +477,7 @@
         - name: Основные концепции программирования
           href: excel/excel-add-ins-core-concepts.md
           displayName: Excel
-        - name: Расширенные концепции программирования
+        - name: Дополнительные концепции программирования
           href: excel/excel-add-ins-advanced-concepts.md
           displayName: Excel
         - name: Вызов встроенных функций
@@ -510,16 +510,16 @@
         - name: Сводные таблицы
           href: excel/excel-add-ins-pivottables.md
           displayName: Excel
-        - name: Диапазоны (основные сведения)
+        - name: Диапазоны (основные)
           href: excel/excel-add-ins-ranges.md
           displayName: Excel
-        - name: Диапазоны (дополнительно)
+        - name: Диапазоны (дополнительные)
           href: excel/excel-add-ins-ranges-advanced.md
           displayName: Excel
-        - name: Формы
+        - name: Фигуры
           href: excel/excel-add-ins-shapes.md
           displayName: Excel
-        - name: Tables
+        - name: Таблицы
           href: excel/excel-add-ins-tables.md
           displayName: Excel
         - name: Книги
@@ -530,13 +530,13 @@
           displayName: Excel
     - name: Пользовательские функции
       items:
-        - name: Обзор
+        - name: Общие сведения
           href: excel/custom-functions-overview.md
           displayName: 'Excel, Custom Functions'
-        - name: Приступая к работе с пользовательскими функциями Excel
+        - name: Начало работы с пользовательскими функциями Excel
           href: quickstarts/excel-custom-functions-quickstart.md
           displayName: 'Excel, Custom Functions'
-        - name: Руководство по настраиваемым функциям
+        - name: Руководство по пользовательским функциям
           href: tutorials/excel-tutorial-create-custom-functions.md
           displayName: 'Excel, Custom Functions'
         - name: Архитектура
@@ -545,22 +545,22 @@
         - name: Проверка подлинности
           href: excel/custom-functions-authentication.md
           displayName: 'Excel, Custom Functions'
-        - name: Совмещение
+        - name: Пакетная обработка
           href: excel/custom-functions-batching.md
           displayName: 'Excel, Custom Functions'
         - name: Отладка
           href: excel/custom-functions-debugging.md
           displayName: 'Excel, Custom Functions'
-        - name: Диалогов
+        - name: Диалоговое окно
           href: excel/custom-functions-dialog.md
           displayName: 'Excel, Custom Functions'
         - name: Обработка ошибок
           href: excel/custom-functions-errors.md
           displayName: 'Excel, Custom Functions'
-        - name: Определение эквивалентного XLL
+        - name: Определение аналогичной функции XLL
           href: excel/make-custom-functions-compatible-with-xll-udf.md
           displayName: 'Excel, Custom Functions'
-        - name: локализация.
+        - name: Локализация
           href: excel/custom-functions-localize.md
           displayName: 'Excel, Custom Functions'
         - name: Метаданные
@@ -572,16 +572,16 @@
         - name: Рекомендации по именованию
           href: excel/custom-functions-naming.md
           displayName: 'Excel, Custom Functions'
-        - name: Параметры параметров
+        - name: Варианты параметров
           href: excel/custom-functions-parameter-options.md
           displayName: 'Excel, Custom Functions'
         - name: Наборы требований
           href: excel/custom-functions-requirement-sets.md
           displayName: 'Excel, Custom Functions'
-        - name: Полняющего
+        - name: Среда выполнения
           href: excel/custom-functions-runtime.md
           displayName: 'Excel, Custom Functions'
-        - name: Сохранение и общий доступ к состоянию
+        - name: Сохранение состояния и общий доступ к нему
           href: excel/custom-functions-save-state.md
           displayName: 'Excel, Custom Functions'
         - name: Устранение неполадок
@@ -598,7 +598,7 @@
     - name: Документация по надстройкам OneNote
       href: onenote/index.md
       displayName: OneNote
-    - name: Обзор
+    - name: Общие сведения
       href: onenote/onenote-add-ins-programming-overview.md
       displayName: OneNote
     - name: Создание первой надстройки OneNote
@@ -606,7 +606,7 @@
       displayName: OneNote
     - name: API JavaScript для OneNote
       items:
-        - name: Обзор
+        - name: Общие сведения
           href: reference/overview/onenote-add-ins-javascript-reference.md
           displayName: OneNote
         - name: Наборы обязательных элементов API
@@ -623,21 +623,21 @@
     - name: Документация по надстройкам Outlook
       href: outlook/index.md
       displayName: Outlook
-    - name: Обзор
+    - name: Общие сведения
       href: /outlook/add-ins/index?context=office/dev/add-ins/context
       displayName: Outlook
     - name: Создание первой надстройки Outlook
       href: /outlook/add-ins/quick-start?context=office/dev/add-ins/context
       displayName: Outlook
-    - name: Руководство по надстройкам Outlook
+    - name: Руководство по надстройке Outlook
       href: /outlook/add-ins/addin-tutorial?context=office/dev/add-ins/context
       displayName: Outlook
-    - name: Общие сведения о надстройках Outlook
+    - name: Основные понятия надстроек Outlook
       href: /outlook/add-ins/outlook-addin-design
     - name: API JavaScript для Outlook
       displayName: Outlook
       items:
-        - name: Обзор
+        - name: Общие сведения
           href: /outlook/add-ins/apis?context=office/dev/add-ins/context
           displayName: Outlook
         - name: Наборы обязательных элементов API
@@ -648,13 +648,13 @@
           displayName: Outlook
         - name: Объектная модель API
           items:
-            - name: Предварительная версия набора требований
+            - name: Набор обязательных элементов Preview
               items:
-                - name: Обзор
+                - name: Общие сведения
                   href: reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md
                 - name: Office
                   href: reference/objectmodel/preview-requirement-set/office.md
-                - name: Office. Context
+                - name: Office.context
                   href: reference/objectmodel/preview-requirement-set/Office.context.md
                 - name: Office.context.mailbox
                   href: reference/objectmodel/preview-requirement-set/Office.context.mailbox.md
@@ -664,15 +664,15 @@
                   href: reference/objectmodel/preview-requirement-set/Office.context.mailbox.item.md
                 - name: Office.context.mailbox.userProfile
                   href: reference/objectmodel/preview-requirement-set/Office.context.mailbox.userProfile.md
-                - name: Справочные материалы по API предварительной версии Outlook
+                - name: Справочные материалы по API Outlook Preview
                   href: reference/outlook-api-reference-preview.md
-            - name: 'Набор требований 1,7'
+            - name: Набор обязательных элементов 1.7
               items:
-                - name: Обзор
+                - name: Общие сведения
                   href: reference/objectmodel/requirement-set-1.7/outlook-requirement-set-1.7.md
                 - name: Office
                   href: reference/objectmodel/requirement-set-1.7/office.md
-                - name: Office. Context
+                - name: Office.context
                   href: reference/objectmodel/requirement-set-1.7/Office.context.md
                 - name: Office.context.mailbox
                   href: reference/objectmodel/requirement-set-1.7/Office.context.mailbox.md
@@ -682,15 +682,15 @@
                   href: reference/objectmodel/requirement-set-1.7/Office.context.mailbox.item.md
                 - name: Office.context.mailbox.userProfile
                   href: reference/objectmodel/requirement-set-1.7/Office.context.mailbox.userProfile.md
-                - name: 'Справочник по API для Outlook 1,7'
+                - name: Справочные материалы по API Outlook 1.7
                   href: reference/outlook-api-reference-1-7.md
-            - name: 'Набор требований 1,6'
+            - name: Набор обязательных элементов 1.6
               items:
-                - name: Обзор
+                - name: Общие сведения
                   href: reference/objectmodel/requirement-set-1.6/outlook-requirement-set-1.6.md
                 - name: Office
                   href: reference/objectmodel/requirement-set-1.6/office.md
-                - name: Office. Context
+                - name: Office.context
                   href: reference/objectmodel/requirement-set-1.6/Office.context.md
                 - name: Office.context.mailbox
                   href: reference/objectmodel/requirement-set-1.6/Office.context.mailbox.md
@@ -700,15 +700,15 @@
                   href: reference/objectmodel/requirement-set-1.6/Office.context.mailbox.item.md
                 - name: Office.context.mailbox.userProfile
                   href: reference/objectmodel/requirement-set-1.6/Office.context.mailbox.userProfile.md
-                - name: 'Справочник по API для Outlook 1,6'
+                - name: Справочные материалы по API Outlook 1.6
                   href: reference/outlook-api-reference-1-6.md
-            - name: 'Набор требований 1,5'
+            - name: Набор обязательных элементов 1.5
               items:
-                - name: Обзор
+                - name: Общие сведения
                   href: reference/objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md
                 - name: Office
                   href: reference/objectmodel/requirement-set-1.5/office.md
-                - name: Office. Context
+                - name: Office.context
                   href: reference/objectmodel/requirement-set-1.5/Office.context.md
                 - name: Office.context.mailbox
                   href: reference/objectmodel/requirement-set-1.5/Office.context.mailbox.md
@@ -718,15 +718,15 @@
                   href: reference/objectmodel/requirement-set-1.5/Office.context.mailbox.item.md
                 - name: Office.context.mailbox.userProfile
                   href: reference/objectmodel/requirement-set-1.5/Office.context.mailbox.userProfile.md
-                - name: 'Справочник по API для Outlook 1,5'
+                - name: Справочные материалы по API Outlook 1.5
                   href: reference/outlook-api-reference-1-5.md
-            - name: 'Набор требований 1,4'
+            - name: Набор обязательных элементов 1.4
               items:
-                - name: Обзор
+                - name: Общие сведения
                   href: reference/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4.md
                 - name: Office
                   href: reference/objectmodel/requirement-set-1.4/office.md
-                - name: Office. Context
+                - name: Office.context
                   href: reference/objectmodel/requirement-set-1.4/Office.context.md
                 - name: Office.context.mailbox
                   href: reference/objectmodel/requirement-set-1.4/Office.context.mailbox.md
@@ -736,15 +736,15 @@
                   href: reference/objectmodel/requirement-set-1.4/Office.context.mailbox.item.md
                 - name: Office.context.mailbox.userProfile
                   href: reference/objectmodel/requirement-set-1.4/Office.context.mailbox.userProfile.md
-                - name: 'Справочник по API для Outlook 1,4'
+                - name: Справочные материалы по API Outlook 1.4
                   href: reference/outlook-api-reference-1-4.md
-            - name: 'Набор требований 1,3'
+            - name: Набор обязательных элементов 1.3
               items:
-                - name: Обзор
+                - name: Общие сведения
                   href: reference/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3.md
                 - name: Office
                   href: reference/objectmodel/requirement-set-1.3/office.md
-                - name: Office. Context
+                - name: Office.context
                   href: reference/objectmodel/requirement-set-1.3/Office.context.md
                 - name: Office.context.mailbox
                   href: reference/objectmodel/requirement-set-1.3/Office.context.mailbox.md
@@ -754,15 +754,15 @@
                   href: reference/objectmodel/requirement-set-1.3/Office.context.mailbox.item.md
                 - name: Office.context.mailbox.userProfile
                   href: reference/objectmodel/requirement-set-1.3/Office.context.mailbox.userProfile.md
-                - name: 'Справочник по API для Outlook 1,3'
+                - name: Справочные материалы по API Outlook 1.3
                   href: reference/outlook-api-reference-1-3.md
-            - name: 'Набор требований 1,2'
+            - name: Набор обязательных элементов 1.2
               items:
-                - name: Обзор
+                - name: Общие сведения
                   href: reference/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2.md
                 - name: Office
                   href: reference/objectmodel/requirement-set-1.2/office.md
-                - name: Office. Context
+                - name: Office.context
                   href: reference/objectmodel/requirement-set-1.2/Office.context.md
                 - name: Office.context.mailbox
                   href: reference/objectmodel/requirement-set-1.2/Office.context.mailbox.md
@@ -772,15 +772,15 @@
                   href: reference/objectmodel/requirement-set-1.2/Office.context.mailbox.item.md
                 - name: Office.context.mailbox.userProfile
                   href: reference/objectmodel/requirement-set-1.2/Office.context.mailbox.userProfile.md
-                - name: 'Справочник по API для Outlook 1,2'
+                - name: Справочные материалы по API Outlook 1.2
                   href: reference/outlook-api-reference-1-2.md
-            - name: 'Набор требований 1,1'
+            - name: Набор обязательных элементов 1.1
               items:
-                - name: Обзор
+                - name: Общие сведения
                   href: reference/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1.md
                 - name: Office
                   href: reference/objectmodel/requirement-set-1.1/office.md
-                - name: Office. Context
+                - name: Office.context
                   href: reference/objectmodel/requirement-set-1.1/Office.context.md
                 - name: Office.context.mailbox
                   href: reference/objectmodel/requirement-set-1.1/Office.context.mailbox.md
@@ -790,14 +790,14 @@
                   href: reference/objectmodel/requirement-set-1.1/Office.context.mailbox.item.md
                 - name: Office.context.mailbox.userProfile
                   href: reference/objectmodel/requirement-set-1.1/Office.context.mailbox.userProfile.md
-                - name: 'Справочник по API для Outlook 1,1'
+                - name: Справочные материалы по API Outlook 1.1
                   href: reference/outlook-api-reference-1-1.md
 - name: Надстройки PowerPoint
   items:
     - name: Документация по надстройкам PowerPoint
       href: powerpoint/index.md
       displayName: PowerPoint
-    - name: Обзор
+    - name: Общие сведения
       href: powerpoint/powerpoint-add-ins.md
       displayName: PowerPoint
     - name: Создание первой надстройки PowerPoint
@@ -808,7 +808,7 @@
       displayName: PowerPoint
     - name: API JavaScript для PowerPoint
       items:
-        - name: Обзор
+        - name: Общие сведения
           href: reference/overview/powerpoint-add-ins-reference-overview.md
           displayName: PowerPoint
         - name: Наборы обязательных элементов API
@@ -825,10 +825,10 @@
           displayName: PowerPoint
 - name: Надстройки Project
   items:
-    - name: Документация по надстройкам проектов
+    - name: Документация по надстройкам Project
       href: project/index.md
       displayName: Project
-    - name: Обзор
+    - name: Общие сведения
       href: project/project-add-ins.md
       displayName: Project
     - name: Создание первой надстройки Project
@@ -836,7 +836,7 @@
       displayName: Project
     - name: API JavaScript для Project
       items:
-        - name: Обзор
+        - name: Общие сведения
           href: reference/overview/project-add-ins-reference-overview.md
           displayName: Project
         - name: 'Создание надстройки Project, использующей REST с локальной службой OData'
@@ -850,7 +850,7 @@
     - name: Документация по надстройкам Visio
       href: visio/index.md
       displayName: Visio
-    - name: Обзор
+    - name: Общие сведения
       href: reference/overview/visio-javascript-reference-overview.md
       displayName: Visio
     - name: Справочные материалы по API
@@ -861,7 +861,7 @@
     - name: Документация по надстройкам Word
       href: word/index.md
       displayName: Word
-    - name: Обзор
+    - name: Общие сведения
       href: word/word-add-ins-programming-overview.md
       displayName: Word
     - name: Создание первой надстройки Word
@@ -872,24 +872,24 @@
       displayName: Word
     - name: "API\_JavaScript для Word"
       items:
-        - name: Обзор
+        - name: Общие сведения
           href: reference/overview/word-add-ins-reference-overview.md
           displayName: Word
         - name: Наборы обязательных элементов API
           items:
-            - name: Обзор
+            - name: Общие сведения
               href: reference/requirement-sets/word-api-requirement-sets.md
               displayName: Word
-            - name: API предварительной версии Word
+            - name: Предварительные версии API для Word
               href: reference/requirement-sets/word-preview-apis.md
               displayName: Word
-            - name: 'Набор требований WordApi 1,3'
+            - name: Набор обязательных элементов WordApi 1.3
               href: reference/requirement-sets/word-api-1-3-requirement-set.md
               displayName: Word
-            - name: 'Набор требований WordApi 1,2'
+            - name: Набор обязательных элементов WordApi 1.2
               href: reference/requirement-sets/word-api-1-2-requirement-set.md
               displayName: Word
-            - name: 'Набор требований WordApi 1,1'
+            - name: Набор обязательных элементов WordApi 1.1
               href: reference/requirement-sets/word-api-1-1-requirement-set.md
               displayName: Word
         - name: Справочные материалы по API
