@@ -1,14 +1,14 @@
 ---
 title: Доступность ведущих приложений и платформ для надстроек Office
 description: Поддерживаемые наборы обязательных элементов для Excel, OneNote, Outlook, PowerPoint, Project и Word.
-ms.date: 08/13/2019
+ms.date: 10/09/2019
 localization_priority: Priority
-ms.openlocfilehash: a3c580f32ad7cd384309a9b53e55ea488a470a90
-ms.sourcegitcommit: f781d7cfd980cd866d6d1d00c5b9d16c8a4b7f9b
+ms.openlocfilehash: 28d63866a03bcae99829d3a6b6c6198059a92bdc
+ms.sourcegitcommit: 4d9f3e177b0bcd62804d5045f52b03e441af244f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "37053328"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "37440152"
 ---
 # <a name="office-add-in-host-and-platform-availability"></a>Доступность ведущих приложений и платформ для надстроек Office
 
@@ -465,6 +465,9 @@ ms.locfileid: "37053328"
 </table>
 
 *&ast; - Добавлены обновления после выпуска.*
+
+> [!IMPORTANT]
+> Поддержка клиентами набора обязательных элементов может ограничиваться поддержкой сервера Exchange. Подробные сведения о диапазоне наборов обязательных элементов, поддерживаемых сервером Exchange и клиентами Outlook, см. в статье [Наборы обязательных элементов API JavaScript для Outlook](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients).
 
 <br/>
 
@@ -946,10 +949,10 @@ ms.locfileid: "37053328"
 ## <a name="see-also"></a>См. также
 
 - [Обзор платформы надстроек Office](office-add-ins.md)
-- [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets)
-- [Наборы обязательных элементов общего API](/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets)
-- [Наборы обязательных элементов для команд надстроек](/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets)
-- [Справка по API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office)
+- [Версии Office и наборы обязательных элементов](../develop/office-versions-and-requirement-sets.md)
+- [Наборы обязательных элементов общего API](../reference/requirement-sets/office-add-in-requirement-sets.md)
+- [Наборы обязательных элементов для команд надстроек](../reference/requirement-sets/add-in-commands-requirement-sets.md)
+- [Справка по API JavaScript для Office](../reference/javascript-api-for-office.md)
 - [Журнал обновлений для Office 365 профессиональный плюс](/officeupdates/update-history-office365-proplus-by-date)
 - [Журнал обновлений Office 2016 и 2019 ("нажми и работай")](/officeupdates/update-history-office-2019)
 - [Журнал обновлений Office 2013 ("нажми и работай")](/officeupdates/update-history-office-2013)
