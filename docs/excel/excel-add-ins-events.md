@@ -1,14 +1,14 @@
 ---
 title: Работа с событиями при помощи API JavaScript для Excel
 description: ''
-ms.date: 09/09/2019
+ms.date: 10/11/2019
 localization_priority: Priority
-ms.openlocfilehash: 338085b297e760057987fd94d7caf96b5134ce6a
-ms.sourcegitcommit: 24303ca235ebd7144a1d913511d8e4fb7c0e8c0d
+ms.openlocfilehash: 1838ddf2016d5c0d4651991ce569fd98d6ac960e
+ms.sourcegitcommit: 78bbbd6cb5a270164b26038675a222defc3be55e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "36838482"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "37471355"
 ---
 # <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями при помощи API JavaScript для Excel
 
@@ -31,6 +31,15 @@ ms.locfileid: "36838482"
 | `onFormatChanged` | Возникает при изменении формата на листе. | [**Worksheet**](/javascript/api/excel/excel.worksheet), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection) |
 | `onSelectionChanged` | Возникает при изменении активной ячейки или выбранного диапазона. | [**Binding**](/javascript/api/excel/excel.binding), [**Table**](/javascript/api/excel/excel.table),  [**Worksheet**](/javascript/api/excel/excel.worksheet), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection) |
 | `onSettingsChanged` | Возникает при изменении параметров в документе. | [**SettingCollection**](/javascript/api/excel/excel.settingcollection) |
+
+> [!WARNING]
+> Событие `onSelectionChanged` в настоящее время нестабильно. Существует временное решение для надежного использования `onSelectionChanged`. Добавьте следующий код в раздел `<head>` своей главной страницы HTML:
+>
+> ```HTML
+> <script> MutationObserver=null; </script>
+> ```
+>
+> Полное обсуждение проблемы находится в [репозитории GitHub office-js](https://github.com/OfficeDev/office-js/issues/533).
 
 ### <a name="events-in-preview"></a>События в предварительной версии
 
