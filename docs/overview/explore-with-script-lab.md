@@ -2,19 +2,19 @@
 title: Изучение API JavaScript для Office с помощью сценария Lab
 description: Используйте сценарий "Лаборатория" для изучения API Office JS и прототипов функций.
 ms.date: 07/05/2019
-ms.topic: overview
-scenarios: getting-started
+ms.topic: conceptual
+ms.custom: scenarios:getting-started
 localization_priority: Normal
-ms.openlocfilehash: 908d27cdb5c8a7d4bc080c266cdb4d604114c42f
-ms.sourcegitcommit: 49af31060aa56c1e1ec1e08682914d3cbefc3f1c
+ms.openlocfilehash: fcd1863e71bdfa6923ccd598b49879a77e629b4c
+ms.sourcegitcommit: 7d4d721fc3d246ef8a2464bc714659cd84d6faab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "36672840"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "37468793"
 ---
 # <a name="explore-office-javascript-api-using-script-lab"></a>Изучение API JavaScript для Office с помощью сценария Lab
 
-Надстройка " [Лаборатория скриптов](https://appsource.microsoft.com/product/office/WA104380862)", доступная бесплатно из AppSource, позволяет изучать API JavaScript для Office при работе с программами Office, такими как Excel или Word. Script Lab — удобное средство для добавления в набор средств разработки в качестве прототипа и проверки функциональных возможностей, которые должны быть в надстройке.
+[Надстройка "Лаборатория скриптов](https://appsource.microsoft.com/product/office/WA104380862)", доступная бесплатно из AppSource, позволяет изучать API JavaScript для Office при работе с программами Office, такими как Excel или Word. Script Lab — удобное средство для добавления в набор средств разработки в качестве прототипа и проверки функциональных возможностей, которые должны быть в надстройке.
 
 ## <a name="what-is-script-lab"></a>Что такое "Лаборатория скриптов"?
 
@@ -32,7 +32,7 @@ Script Lab — это средство для тех, кто хочет науч
 
 Быстро приступите к работе со статьей встроенных примеров фрагментов, демонстрирующих выполнение задач с помощью API. Вы можете запустить примеры, чтобы сразу увидеть результат в области задач или документе, изучить примеры, чтобы узнать, как работает API, и даже использовать примеры для создания прототипа собственной надстройки.
 
-![Примеры](../images/script-lab-samples.jpg)
+![Образцы](../images/script-lab-samples.jpg)
 
 ### <a name="code-and-style"></a>Код и стиль
 
