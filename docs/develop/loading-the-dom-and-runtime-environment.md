@@ -3,12 +3,12 @@ title: Загрузка модели DOM и среды выполнения
 description: ''
 ms.date: 07/01/2019
 localization_priority: Priority
-ms.openlocfilehash: c955df57d09bd7bed0b30a2408e0b65d97afde68
-ms.sourcegitcommit: 90c2d8236c6b30d80ac2b13950028a208ef60973
+ms.openlocfilehash: 077c83253da97811fc0431511b8634ce96fb6ea1
+ms.sourcegitcommit: 7d4d721fc3d246ef8a2464bc714659cd84d6faab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "35454561"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "37468779"
 ---
 # <a name="loading-the-dom-and-runtime-environment"></a>Загрузка модели DOM и среды выполнения
 
@@ -32,7 +32,7 @@ ms.locfileid: "35454561"
 
 4. Элемент управления браузера загружает модель DOM и основной текст HTML, а также вызывает обработчик для события **window.onload**.
 
-5. Ведущее приложение Office загружает среду выполнения, которая загружает и кэширует API JavaScript для файлов библиотеки JavaScript с сервера сети доставки содержимого, а затем вызывает обработчик события [инициализации](/javascript/api/office#office-initialize) объекта [Office](/javascript/api/office), если ему назначен обработчик. В это время также проверяется, выполнялась ли передача (или связывание) любых обратных вызовов (или связанных функций `then()`) обработчику `Office.onReady`. Дополнительные сведения о различии между `Office.initialize` и `Office.onReady` см. в статье [Инициализация надстройки](/office/dev/add-ins/develop/understanding-the-javascript-api-for-office#initializing-your-add-in).
+5. Ведущее приложение Office загружает среду выполнения, которая загружает и кэширует API JavaScript для файлов библиотеки JavaScript с сервера сети доставки содержимого, а затем вызывает обработчик события [инициализации](/javascript/api/office#office-initialize-reason-) объекта [Office](/javascript/api/office), если ему назначен обработчик. В это время также проверяется, выполнялась ли передача (или связывание) любых обратных вызовов (или связанных функций `then()`) обработчику `Office.onReady`. Дополнительные сведения о различии между `Office.initialize` и `Office.onReady` см. в статье [Инициализация надстройки](/office/dev/add-ins/develop/understanding-the-javascript-api-for-office#initializing-your-add-in).
 
 6. После завершения загрузки DOM и основного текста HTML и инициализации надстройки запускается основная функция надстройки.
 
@@ -55,7 +55,7 @@ ms.locfileid: "35454561"
 
 5. Элемент управления браузером загружает DOM и основной текст HTML и вызывает обработчик события **onload**.
 
-6. Outlook загружает среду выполнения, которая загружает и кэширует API JavaScript для файлов библиотеки JavaScript с сервера сети доставки содержимого, а затем вызывает обработчик события [инициализации](/javascript/api/office#office-initialize) объекта [Office](/javascript/api/office) надстройки, если ему назначен обработчик. В это время также проверяется, выполнялась ли передача (или связывание) любых обратных вызовов (или связанных функций `then()`) обработчику `Office.onReady`. Дополнительные сведения о различии между `Office.initialize` и `Office.onReady` см. в статье [Инициализация надстройки](/office/dev/add-ins/develop/understanding-the-javascript-api-for-office#initializing-your-add-in).
+6. Outlook загружает среду выполнения, которая загружает и кэширует API JavaScript для файлов библиотеки JavaScript с сервера сети доставки содержимого, а затем вызывает обработчик события [инициализации](/javascript/api/office#office-initialize-reason-) объекта [Office](/javascript/api/office) надстройки, если ему назначен обработчик. В это время также проверяется, выполнялась ли передача (или связывание) любых обратных вызовов (или связанных функций `then()`) обработчику `Office.onReady`. Дополнительные сведения о различии между `Office.initialize` и `Office.onReady` см. в статье [Инициализация надстройки](/office/dev/add-ins/develop/understanding-the-javascript-api-for-office#initializing-your-add-in).
 
 7. После завершения загрузки DOM и основного текста HTML и инициализации надстройки запускается основная функция надстройки.
 
