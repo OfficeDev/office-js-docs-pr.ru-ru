@@ -3,12 +3,12 @@ title: Указание ведущих приложений Office и требо
 description: ''
 ms.date: 09/26/2019
 localization_priority: Priority
-ms.openlocfilehash: 1d5c922787192263e5290d2a428c352ab32378b0
-ms.sourcegitcommit: 528577145b2cf0a42bc64c56145d661c4d019fb8
+ms.openlocfilehash: c3f1979eb216d20f6c409010e84c1388d2069489
+ms.sourcegitcommit: b3996b1444e520b44cf752e76eef50908386ca26
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "37353841"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "37524271"
 ---
 # <a name="specify-office-hosts-and-api-requirements"></a>Указание ведущих приложений Office и требований к API
 
@@ -51,7 +51,7 @@ ms.locfileid: "37353841"
 Если вы используете проверки в среде выполнения, то вам необходимо ссылаться на последнюю версию библиотеки API JavaScript для Office из сети доставки содержимого. Для этого добавьте указанный ниже тег `script` в HTML-код. Чтобы всегда ссылаться на последнюю версию файла Office.js, используйте `/1/` в URL-адресе сети доставки содержимого.
 
 ```HTML
-<script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script>
+<script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
 ```
 
 ## <a name="options-to-specify-office-hosts-or-api-requirements"></a>Параметры для задания ведущих приложений Office или требований к API

@@ -3,12 +3,12 @@ title: Общие сведения об интерфейсе API JavaScript дл
 description: ''
 ms.date: 06/21/2019
 localization_priority: Priority
-ms.openlocfilehash: afbb24cd056d3a11c8d19f9a4316caeaafc7f066
-ms.sourcegitcommit: 6d1cb188c76c09d320025abfcc99db1b16b7e37b
+ms.openlocfilehash: 1954457b477472b8940841bb1ffe5954e49e01ec
+ms.sourcegitcommit: b3996b1444e520b44cf752e76eef50908386ca26
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "35226743"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "37524236"
 ---
 # <a name="understanding-the-javascript-api-for-office"></a>Общие сведения об интерфейсе API JavaScript для Office
 
@@ -22,7 +22,7 @@ ms.locfileid: "35226743"
 Библиотека [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office) состоит из файла Office.js и связанных JS-файлов ведущего приложения, например Excel-15.js и Outlook-15.js. Простейший способ сослаться на API — использовать нашу сеть доставки содержимого (CDN), добавив следующий код `<script>` в тег `<head>` страницы:  
 
 ```html
-<script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script>
+<script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
 ```
 
 Это приведет к скачиванию и кэшированию файлов JavaScript API для Office при первой загрузке надстройки, чтобы убедиться, что она использует актуальную реализацию Office.js и сопутствующих файлов для указанной версии.
