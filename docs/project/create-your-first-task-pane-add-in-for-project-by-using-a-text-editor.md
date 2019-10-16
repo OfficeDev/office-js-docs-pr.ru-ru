@@ -3,12 +3,12 @@ title: Создание первой надстройки области зад�
 description: ''
 ms.date: 09/26/2019
 localization_priority: Normal
-ms.openlocfilehash: 4ed9c03082b139ad42bc7bef263a735fde4d9af2
-ms.sourcegitcommit: 528577145b2cf0a42bc64c56145d661c4d019fb8
+ms.openlocfilehash: 36e2688240ad348669e7d6845f371997cd3c3ec2
+ms.sourcegitcommit: b3996b1444e520b44cf752e76eef50908386ca26
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "37353897"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "37524278"
 ---
 # <a name="create-your-first-task-pane-add-in-for-microsoft-project-by-using-a-text-editor"></a>Создание первой надстройки области задач для Microsoft Project с помощью текстового редактора
 
@@ -84,8 +84,8 @@ ms.locfileid: "37353897"
             <script type="text/javascript" src="MicrosoftAjax.js"></script>
 
             <!-- Use the CDN reference to office.js when deploying your add-in. -->
-            <!-- <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js"></script> -->
-            <script type="text/javascript" src="Office.js"></script>
+            <!-- <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script> -->
+            <script type="text/javascript" src="office.js"></script>
             <script type="text/javascript" src="JSOM_Sample.js"></script>
         </head>
         <body>
@@ -830,8 +830,8 @@ ms.locfileid: "37353897"
         <script type="text/javascript" src="MicrosoftAjax.js"></script>
 
         <!-- Use the CDN reference to office.js when deploying your add-in. -->
-        <!-- <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js"></script> -->
-        <script type="text/javascript" src="Office.js"></script>
+        <!-- <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script> -->
+        <script type="text/javascript" src="office.js"></script>
         <script type="text/javascript" src="JSOM_Sample.js"></script>
 
         <style type="text/css">
@@ -1060,8 +1060,8 @@ var Toast = {
     <script type="text/javascript" src="MicrosoftAjax.js"></script>
 
     <!-- Use the CDN reference to Office.js and jQuery when deploying your add-in. -->
-    <!-- <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js"></script> -->
-    <script type="text/javascript" src="Office.js"></script>
+    <!-- <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script> -->
+    <script type="text/javascript" src="office.js"></script>
     <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.9.0.min.js"></script>
 
     <script type="text/javascript" src="JSOM_Sample.js"></script>

@@ -1,5 +1,3 @@
-# <a name="get-the-whole-document-from-an-add-in-for-powerpoint-or-word"></a>Получение всего документа из надстройки для PowerPoint или Word
-
 Можно создать Надстройка Office для отправки или публикации одним щелчком документа Word 2013 или PowerPoint 2013 в удаленное расположение. В данной статье показано, как создать простую надстройку области задач для PowerPoint 2013, которая получает все представление в виде объекта данных и отправляет эти данные на веб-сервер через запрос HTTP.
 
 ## <a name="prerequisites-for-creating-an-add-in-for-powerpoint-or-word"></a>Необходимые условия создания надстройки для PowerPoint или Word
