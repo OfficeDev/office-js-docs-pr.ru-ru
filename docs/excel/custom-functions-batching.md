@@ -80,7 +80,7 @@ let _isBatchedRequestScheduled = false;
 
 В данном коде также проверяется, является ли пакет плановым. В этом примере выполнение пакете планируется каждые 100 мс. При необходимости этот интервал можно изменить. Чем значение выше, тем больше размер пакета, отправляемого в удаленную службу, и тем дольше пользователь должен ждать результатов. При низком значении в удаленную службу отправляется больше пакетов, но зато время ожидания снижается.
 
-### <a name="add-the-pushoperation-function-to-functionsts"></a>Добавление функции `_pushOperation` в functions.ts
+### <a name="add-the-_pushoperation-function-to-functionsts"></a>Добавление функции `_pushOperation` в functions.ts
 
 ```typescript
 function _pushOperation(op: string, args: any[]) {
@@ -118,7 +118,7 @@ function _pushOperation(op: string, args: any[]) {
 
 Цель функции `_makeRemoteRequest` – передать пакет операций в удаленную службу, а затем возвратить результаты в каждую пользовательскую функцию. Сначала она создает копию пакетного массива. Это позволит сразу же начинать включение параллельных вызовов пользовательской функции из Excel в новый массив. Затем копия преобразуется в более простой массив, который не содержит информацию обещания. Не имеет смысла передавать обещания в удаленную службу, так как они не будут работать. Метод `_makeRemoteRequest` будет отклонять или выполнять каждое обещание в зависимости от того, что возвратит удаленная служба.
 
-### <a name="add-the-following-makeremoterequest-method-to-functionsts"></a>Добавление следующего метода `_makeRemoteRequest` в functions.ts
+### <a name="add-the-following-_makeremoterequest-method-to-functionsts"></a>Добавление следующего метода `_makeRemoteRequest` в functions.ts
 
 ```typescript
 function _makeRemoteRequest() {
@@ -150,7 +150,7 @@ function _makeRemoteRequest() {
 }
 ```
 
-### <a name="modify-makeremoterequest-for-your-own-solution"></a>Переделка `_makeRemoteRequest` для вашего собственного решения
+### <a name="modify-_makeremoterequest-for-your-own-solution"></a>Переделка `_makeRemoteRequest` для вашего собственного решения
 
 Функция `_makeRemoteRequest` вызывает метод `_fetchFromRemoteService`, который, как будет видно позже, всего лишь имитирует удаленную службу. Это упрощает изучение и выполнение кода в данной статье. Но если вы хотите использовать этот код для реальной удаленной службы, в него необходимо внести следующие изменения.
 
@@ -161,7 +161,7 @@ function _makeRemoteRequest() {
 
 Последний шаг – это выполнение пакетного вызова в удаленной службе. В следующем примере кода показана функция `_fetchFromRemoteService`. Эта функция распаковывает каждую операцию, выполняет указанную операцию и возвращает результат. Для учебных целей в данной статье применяется функция `_fetchFromRemoteService`, которая запускается в вашей веб-надстройке и имитирует удаленную службу. Этот код можно добавить в файл **functions.ts**, чтобы изучать и запускать его, не создавая настоящую удаленную службу.
 
-### <a name="add-the-following-fetchfromremoteservice-function-to-functionsts"></a>Добавление следующей функции `_fetchFromRemoteService` в functions.ts
+### <a name="add-the-following-_fetchfromremoteservice-function-to-functionsts"></a>Добавление следующей функции `_fetchFromRemoteService` в functions.ts
 
 ```typescript
 async function _fetchFromRemoteService(
@@ -204,7 +204,7 @@ function pause(ms: number) {
 }
 ```
 
-### <a name="modify-fetchfromremoteservice-for-your-live-remote-service"></a>Переделка `_fetchFromRemoteService` для действующей удаленной службы
+### <a name="modify-_fetchfromremoteservice-for-your-live-remote-service"></a>Переделка `_fetchFromRemoteService` для действующей удаленной службы
 
 Чтобы переделать функцию `_fetchFromRemoteService` для выполнения в действующей удаленной службе, внесите следующие изменения.
 
