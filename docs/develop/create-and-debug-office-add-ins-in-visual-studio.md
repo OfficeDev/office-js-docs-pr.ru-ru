@@ -30,7 +30,7 @@ ms.locfileid: "35128187"
 - Office 2013 или более поздние версии
 
     > [!TIP]
-    > Если вы еще не установили Office, вы можете присоединиться к [программе для разработчиков Office 365](https://developer.microsoft.com/office/dev-program) и получить подписку на Office 365, либо вы можете [зарегистрировать бесплатную пробную подписку на 1 месяц](https://products.office.com/ru-RU/try?legRedir=true&WT.intid1=ODC_ENUS_FX101785584_XT104056786&CorrelationId=64c762de-7a97-4dd1-bb96-e231d7485735).
+    > Если вы еще не установили Office, вы можете присоединиться к [программе для разработчиков Office 365](https://developer.microsoft.com/office/dev-program) и получить подписку на Office 365, либо вы можете [зарегистрировать бесплатную пробную подписку на 1 месяц](https://products.office.com/en-US/try?legRedir=true&WT.intid1=ODC_ENUS_FX101785584_XT104056786&CorrelationId=64c762de-7a97-4dd1-bb96-e231d7485735).
 
 ## <a name="create-the-add-in-project-in-visual-studio"></a>Создание проекта надстройки в Visual Studio
 
