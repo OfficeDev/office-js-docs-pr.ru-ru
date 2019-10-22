@@ -1,14 +1,14 @@
 ---
 title: Элемент Екуивалентаддинс в файле манифеста
 description: ''
-ms.date: 04/22/2019
+ms.date: 05/03/2019
 localization_priority: Normal
-ms.openlocfilehash: ac323968456735a1abd007745381a190a9a25f38
-ms.sourcegitcommit: 7462409209264dc7f8f89f3808a7a6249fcd739e
+ms.openlocfilehash: 1c3ac281561dd5abf234ca53049e0768872fa0dd
+ms.sourcegitcommit: b3996b1444e520b44cf752e76eef50908386ca26
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2019
-ms.locfileid: "33356920"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "33628237"
 ---
 # <a name="equivalentaddins-element"></a>Элемент Екуивалентаддинс
 
@@ -30,9 +30,9 @@ ms.locfileid: "33356920"
 
 ## <a name="must-contain"></a>Должен содержать
 
-[Екуивалентаддин](equivalentaddin.md)
+[EquivalentAddin](equivalentaddin.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные ресурсы
 
-- [Обеспечение совместимости пользовательских функций с пользовательскими функциями XLL](../../excel/make-custom-functions-compatible-with-xll-udf.md)
-- [Обеспечение совместимости надстройки Office с существующей надстройкой COM](../../develop/make-office-add-in-compatible-with-existing-com-add-in.md)
+- [Создание пользовательских функций, совместимых с функциями XLL, определенными пользователями](../../excel/make-custom-functions-compatible-with-xll-udf.md)
+- [Обеспечение совместимости надстройки Excel с существующей надстройкой COM](../../develop/make-office-add-in-compatible-with-existing-com-add-in.md)

@@ -1,21 +1,18 @@
 ---
 title: Работа с несколькими диапазонами одновременно в надстройках Excel
 description: ''
-ms.date: 02/20/2019
+ms.date: 04/30/2019
 localization_priority: Normal
-ms.openlocfilehash: d284f3cb12153b1c05cff0b7f7a66bbf98961443
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: a327b6c379884107f5e00c0663ecfa6c71b8097f
+ms.sourcegitcommit: b3996b1444e520b44cf752e76eef50908386ca26
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449241"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "33620047"
 ---
-# <a name="work-with-multiple-ranges-simultaneously-in-excel-add-ins-preview"></a>Работа с несколькими диапазонами одновременно в надстройках Excel (предварительная версия)
+# <a name="work-with-multiple-ranges-simultaneously-in-excel-add-ins"></a>Работа с несколькими диапазонами одновременно в надстройках Excel
 
 Библиотека JavaScript для Excel позволяет вашей надстройке выполнять операции и устанавливать свойства одновременно для нескольких диапазонов. Диапазоны необязательно должны быть смежными. Этот способ установки свойства не только упрощает код, но и выполняется намного быстрее, чем установка одинакового свойства отдельно для каждого диапазона.
-
-> [!NOTE]
-> Для работы с API-интерфейсами, описанными в этой статье, требуется **Office 2016 "нажми и работай" версии 1809 сборки 10820.20000** или более поздней версии (Возможно, вам потребуется присоединиться к [программе предварительНой оценки Office](https://products.office.com/office-insider) для получения соответствующей сборки.)[!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
 
 ## <a name="rangeareas"></a>RangeAreas
 
@@ -40,43 +37,41 @@ ms.locfileid: "32449241"
 
 Ознакомьтесь со статьей [Чтение свойств RangeAreas](#read-properties-of-rangeareas) перед написанием кода, считывающего любое из перечисленных свойств. Возвращаемое значение зависит от ряда факторов.
 
-- address
-- addressLocal
-- cellCount
-- conditionalFormats
-- context
-- dataValidation
-- format
-- isEntireColumn
-- isEntireRow
-- style
-- worksheet
+- `address`
+- `addressLocal`
+- `cellCount`
+- `conditionalFormats`
+- `context`
+- `dataValidation`
+- `format`
+- `isEntireColumn`
+- `isEntireRow`
+- `style`
+- `worksheet`
 
 ##### <a name="methods"></a>Методы
 
-Методы Range в предварительной версии помечены.
-
-- calculate()
-- clear()
-- convertDataTypeToText() (предварительная версия)
-- convertToLinkedDataType() (предварительная версия)
-- copyFrom() (предварительная версия)
-- getEntireColumn()
-- getEntireRow()
-- getIntersection()
-- getIntersectionOrNullObject()
-- getOffsetRange() (называется getOffsetRangeAreas в объекте RangeAreas)
-- getSpecialCells() (предварительная версия)
-- getSpecialCellsOrNullObject() (предварительная версия)
-- getTables() (предварительная версия)
-- getUsedRange() (называется getUsedRangeAreas в объекте RangeAreas)
-- getUsedRangeOrNullObject() (называется getUsedRangeAreasOrNullObject в объекте RangeAreas)
-- load()
-- set()
-- setDirty() (предварительная версия)
-- toJSON()
-- track()
-- untrack()
+- `calculate()`
+- `clear()`
+- `convertDataTypeToText()`
+- `convertToLinkedDataType()`
+- `copyFrom()`
+- `getEntireColumn()`
+- `getEntireRow()`
+- `getIntersection()`
+- `getIntersectionOrNullObject()`
+- `getOffsetRange()`(с `getOffsetRangeAreas` именем для `RangeAreas` объекта)
+- `getSpecialCells()`
+- `getSpecialCellsOrNullObject()`
+- `getTables()`
+- `getUsedRange()`(с `getUsedRangeAreas` именем для `RangeAreas` объекта)
+- `getUsedRangeOrNullObject()`(с `getUsedRangeAreasOrNullObject` именем для `RangeAreas` объекта)
+- `load()`
+- `set()`
+- `setDirty()`
+- `toJSON()`
+- `track()`
+- `untrack()`
 
 ### <a name="rangearea-specific-properties-and-methods"></a>Свойства и методы, характерные для объекта RangeArea
 
@@ -124,7 +119,7 @@ Excel.run(function (context) {
 
 ## <a name="get-special-cells-from-multiple-ranges"></a>Получение специальных ячеек из нескольких диапазонов
 
-Методы `getSpecialCells` и `getSpecialCellsOrNullObject` для объекта `RangeAreas` действуют аналогично методам с теми же названиями для объекта `Range`. Эти методы возвращают ячейки с указанными характеристиками из всех диапазонов в коллекции `RangeAreas.areas`. Дополнительные сведения о специальных ячейках см. в разделе [Поиск специальных ячеек в диапазоне](excel-add-ins-ranges-advanced.md#find-special-cells-within-a-range-preview).
+Методы `getSpecialCells` и `getSpecialCellsOrNullObject` для объекта `RangeAreas` действуют аналогично методам с теми же названиями для объекта `Range`. Эти методы возвращают ячейки с указанными характеристиками из всех диапазонов в коллекции `RangeAreas.areas`. Дополнительные сведения о специальных ячейках см. в разделе [Поиск специальных ячеек в диапазоне](excel-add-ins-ranges-advanced.md#find-special-cells-within-a-range).
 
 При вызове метода `getSpecialCells` или `getSpecialCellsOrNullObject` для объекта `RangeAreas`:
 

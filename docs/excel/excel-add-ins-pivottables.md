@@ -1,22 +1,23 @@
 ---
 title: Работать со сводными таблицами с помощью API JavaScript для Excel
 description: Используйте API JavaScript для Excel, чтобы создавать сводные таблицы и взаимодействовать с их компонентами.
-ms.date: 03/21/2019
+ms.date: 05/01/2019
 localization_priority: Normal
-ms.openlocfilehash: b53d734e676417a6438f1008bac720a38a244d1f
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 4a60b820d6e50dd44a193dd08df69817330c636d
+ms.sourcegitcommit: b3996b1444e520b44cf752e76eef50908386ca26
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449386"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "33620201"
 ---
 # <a name="work-with-pivottables-using-the-excel-javascript-api"></a>Работать со сводными таблицами с помощью API JavaScript для Excel
 
 Сводные таблицы упрощают работу с большими наборами данных. Они позволяют быстро управлять группированием данных. API JavaScript для Excel позволяет надстройке создавать сводные таблицы и взаимодействовать с их компонентами.
 
-Если вы не знакомы с функциями сводных таблиц, рассмотрите возможность их изучения в качестве конечного пользователя. Ознакомьтесь со статьей [Создание сводной таблицы, чтобы проанализировать данные листа](https://support.office.com/en-us/article/Import-and-analyze-data-ccd3c4a6-272f-4c97-afbb-d3f27407fcde#ID0EAABAAA=PivotTables) для хорошего учебника по этим средствам. 
+Если вы не знакомы с функциями сводных таблиц, рассмотрите возможность их изучения в качестве конечного пользователя.
+Ознакомьтесь со статьей [Создание сводной таблицы, чтобы проанализировать данные листа](https://support.office.com/article/Import-and-analyze-data-ccd3c4a6-272f-4c97-afbb-d3f27407fcde#ID0EAABAAA=PivotTables) для хорошего учебника по этим средствам.
 
-В этой статье приведены примеры кода для распространенных сценариев. Подробнее об API сводных таблиц можно узнать в статье [**PivotTable**](/javascript/api/excel/excel.pivottable) and [**PivotTableCollection**](/javascript/api/excel/excel.pivottable).
+В этой статье приведены примеры кода для распространенных сценариев. Подробнее об API сводных таблиц можно узнать в статье [**PivotTable**](/javascript/api/excel/excel.pivottable) and [**PivotTableCollection**](/javascript/api/excel/excel.pivottablecollection).
 
 > [!IMPORTANT]
 > Сводные таблицы, созданные с помощью OLAP, в настоящее время не поддерживаются. Кроме того, отсутствует поддержка Power Pivot.
@@ -27,72 +28,74 @@ ms.locfileid: "32449386"
 
 ![Коллекция продаж фруктов различных типов из различных ферм.](../images/excel-pivots-raw-data.png)
 
-Эти данные имеют пять иерархий: **ферм**, **типов**, **классификаций**, ящиков, **проданных в ферме**, и ящики, продаваемые **оптовой торговлей**. Каждая иерархия может существовать только в одной из четырех категорий. Если **тип** добавляется к иерархиям столбцов и затем добавляется к иерархиям строк, он остается только последним.
+Эти данные имеют пять иерархий: **ферм**, **типов**, **классификаций**, **ящиков, проданных в ферме**, и **ящики, продаваемые оптовой торговлей**. Каждая иерархия может существовать только в одной из четырех категорий. Если **тип** добавляется к иерархиям столбцов и затем добавляется к иерархиям строк, он остается только последним.
 
 Иерархии строк и столбцов определяют, как группируются данные. Например, иерархия **ферм фермы** объединяет все наборы данных из одной фермы. Выбор между строкой и иерархией столбцов определяет ориентацию сводной таблицы.
 
 Иерархии данных — это значения, которые должны быть объединены на основе иерархий строк и столбцов. Сводная таблица с иерархией **ферм** и иерархией данных для ящиков, проданных в **оптовой торговле** , показывает общую сумму (по умолчанию) всех различных Fruits для каждой фермы.
 
-Иерархии фильтров включают или исключают данные из сводной таблицы на основе значений в этом типе фильтрации. Иерархия фильтров **классификации** с типом "не **** только выбранные" показывает только данные для придля себя фруктов.
+Иерархии фильтров включают или исключают данные из сводной таблицы на основе значений в этом типе фильтрации. Иерархия фильтров **классификации** **с типом "** не только выбранные" показывает только данные для придля себя фруктов.
 
-Далее представлены данные фермы, вместе со сводной таблицей. В сводной таблице используется **ферма** и **тип** в качестве иерархий строк, ящики, проданные **на ферме** и ящики, проданные по **оптовой торговле** в виде иерархий данных (с статистической функцией статистической обработки по умолчанию Sum), а **классификация** — как фильтр. иерархия ( **** с выделенным параметром). 
+Далее представлены данные фермы, вместе со сводной таблицей. В сводной таблице используется **ферма** и **тип** в качестве иерархий строк, **ящики** , проданные на ферме и ящики, проданные по **оптовой торговле** в виде иерархий данных (с статистической функцией статистической обработки по умолчанию Sum), а **классификация** — как фильтр. иерархия ( **с** выделенным параметром). 
 
 ![Выбор данных о продажах для фруктов рядом со сводной таблицей со строками, данными и иерархиями фильтров.](../images/excel-pivot-table-and-data.png)
 
-Эту сводную таблицу можно создать с помощью API JavaScript или ПОЛЬЗОВАТЕЛЬСКОГО интерфейса Excel. Оба варианта позволяют осуществлять дальнейшую обработку надстроек.
+Эту сводную таблицу можно создать с помощью API JavaScript или пользовательского интерфейса Excel. Оба варианта позволяют осуществлять дальнейшую обработку надстроек.
 
 ## <a name="create-a-pivottable"></a>Создание сводной таблицы
 
-Для сводных таблиц требуются имя, источник и назначение. Источником может быть адрес диапазона или имя таблицы (передается как тип `Range`, `string`или `Table` тип). Назначение является адресом диапазона ( `Range` или `string`). В следующих примерах показаны различные методы создания сводных таблиц.
+Для сводных таблиц требуются имя, источник и назначение. Источником может быть адрес диапазона или имя таблицы (передается как тип `Range`, `string`или `Table` тип). Назначение является адресом диапазона ( `Range` или `string`).
+В следующих примерах показаны различные методы создания сводных таблиц.
 
 ### <a name="create-a-pivottable-with-range-addresses"></a>Создание сводной таблицы с адресами диапазона
 
-```typescript
-await Excel.run(async (context) => {
-    // creating a PivotTable named "Farm Sales" on the current worksheet at cell A22 with data from the range A1:E21
-    context.workbook.worksheets.getActiveWorksheet().pivotTables.add("Farm Sales", "A1:E21", "A22");
+```js
+Excel.run(function (context) {
+    // Create a PivotTable named "Farm Sales" on the current worksheet at cell
+    // A22 with data from the range A1:E21.
+    context.workbook.worksheets.getActiveWorksheet().pivotTables.add(
+      "Farm Sales", "A1:E21", "A22");
 
-    await context.sync();
+    return context.sync();
 });
 ```
 
 ### <a name="create-a-pivottable-with-range-objects"></a>Создание сводной таблицы с объектами Range
 
-```typescript
-await Excel.run(async (context) => {
-    // creating a PivotTable named "Farm Sales" on a worksheet called "PivotWorksheet" at cell A2
-    // the data comes from the worksheet "DataWorksheet" across the range A1:E21
-    const rangeToAnalyze = context.workbook.worksheets.getItem("DataWorksheet").getRange("A1:E21");
-    const rangeToPlacePivot = context.workbook.worksheets.getItem("PivotWorksheet").getRange("A2");
+```js
+Excel.run(function (context) {
+    // Create a PivotTable named "Farm Sales" on a worksheet called "PivotWorksheet" at cell A2
+    // the data comes from the worksheet "DataWorksheet" across the range A1:E21.
+    var rangeToAnalyze = context.workbook.worksheets.getItem("DataWorksheet").getRange("A1:E21");
+    var rangeToPlacePivot = context.workbook.worksheets.getItem("PivotWorksheet").getRange("A2");
     context.workbook.worksheets.getItem("PivotWorksheet").pivotTables.add(
-        "Farm Sales", rangeToAnalyze, rangeToPlacePivot);
+      "Farm Sales", rangeToAnalyze, rangeToPlacePivot);
 
-    await context.sync();
+    return context.sync();
 });
 ```
 
 ### <a name="create-a-pivottable-at-the-workbook-level"></a>Создание сводной таблицы на уровне книги
 
-```typescript
-await Excel.run(async (context) => {
-    // creating a PivotTable named "Farm Sales" on a worksheet called "PivotWorksheet" at cell A2
-    // the data is from the worksheet "DataWorksheet" across the range A1:E21
-    context.workbook.pivotTables.add("Farm Sales", "DataWorksheet!A1:E21", "PivotWorksheet!A2");
+```js
+Excel.run(function (context) {
+    // Create a PivotTable named "Farm Sales" on a worksheet called "PivotWorksheet" at cell A2
+    // the data is from the worksheet "DataWorksheet" across the range A1:E21.
+    context.workbook.pivotTables.add(
+        "Farm Sales", "DataWorksheet!A1:E21", "PivotWorksheet!A2");
 
-    await context.sync();
+    return context.sync();
 });
 ```
 
 ## <a name="use-an-existing-pivottable"></a>Использование существующей сводной таблицы
 
-Вы также можете получить доступ к сводным таблицам, созданным вручную, с помощью сводной таблицы книги или отдельных листов. 
+Вы также можете получить доступ к сводным таблицам, созданным вручную, с помощью сводной таблицы книги или отдельных листов. В следующем коде показано получение сводной таблицы с именем **My Pivot** из книги.
 
-Приведенный ниже код получает первую сводную таблицу в книге. Затем имя таблицы придается имени для упрощения справочных материалов.
-
-```typescript
-await Excel.run(async (context) => {
-    const pivotTable = context.workbook.pivotTables.getItem("My Pivot");
-    await context.sync();
+```js
+Excel.run(function (context) {
+    var pivotTable = context.workbook.pivotTables.getItem("My Pivot");
+    return context.sync();
 });
 ```
 
@@ -104,54 +107,145 @@ await Excel.run(async (context) => {
 
 ![Сводная таблица со столбцами фермы, а также строками типов и классификации.](../images/excel-pivots-table-rows-and-columns.png)
 
-```typescript
-await Excel.run(async (context) => {
-    const pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
+```js
+Excel.run(function (context) {
+    var pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
 
     pivotTable.rowHierarchies.add(pivotTable.hierarchies.getItem("Type"));
     pivotTable.rowHierarchies.add(pivotTable.hierarchies.getItem("Classification"));
 
     pivotTable.columnHierarchies.add(pivotTable.hierarchies.getItem("Farm"));
 
-    await context.sync();
+    return context.sync();
 });
 ```
 
 Кроме того, можно создать сводную таблицу, используя только строки или столбцы.
 
-```typescript
-await Excel.run(async (context) => {
-    const pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
+```js
+Excel.run(function (context) {
+    var pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
     pivotTable.rowHierarchies.add(pivotTable.hierarchies.getItem("Farm"));
     pivotTable.rowHierarchies.add(pivotTable.hierarchies.getItem("Type"));
     pivotTable.rowHierarchies.add(pivotTable.hierarchies.getItem("Classification"));
 
-    await context.sync();
+    return context.sync();
 });
 ```
 
 ## <a name="add-data-hierarchies-to-the-pivottable"></a>Добавление иерархий данных в сводную таблицу
 
-Иерархии данных заполняют сводную таблицу со сведениями, которые необходимо объединить в зависимости от строк и столбцов. Добавление иерархий данных ящиков, проданных **в ферме** и ящиков, продаваемых в **оптовой торговле** , приводит к суммированию этих значений для каждой строки и столбца. 
+Иерархии данных заполняют сводную таблицу со сведениями, которые необходимо объединить в зависимости от строк и столбцов. Добавление иерархий данных ящиков, проданных **в ферме** и **ящиков, продаваемых в оптовой торговле** , приводит к суммированию этих значений для каждой строки и столбца.
 
-В этом примере **ферма** и **тип** представляют собой строки, в которых продажи ящиков являются данными. 
+В этом примере **ферма** и **тип** представляют собой строки, в которых продажи ящиков являются данными.
 
 ![Сводная таблица, в которой показаны общие продажи разных фруктов на основе фермы, из которой они получены.](../images/excel-pivots-data-hierarchy.png)
 
-```typescript
-await Excel.run(async (context) => {
-    const pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
+```js
+Excel.run(function (context) {
+    var pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
 
-    // "Farm" and "Type" are the hierarchies on which the aggregation is based
+    // "Farm" and "Type" are the hierarchies on which the aggregation is based.
     pivotTable.rowHierarchies.add(pivotTable.hierarchies.getItem("Farm"));
     pivotTable.rowHierarchies.add(pivotTable.hierarchies.getItem("Type"));
 
     // "Crates Sold at Farm" and "Crates Sold Wholesale" are the hierarchies
-    // that will have their data aggregated (summed in this case)
+    // that will have their data aggregated (summed in this case).
     pivotTable.dataHierarchies.add(pivotTable.hierarchies.getItem("Crates Sold at Farm"));
     pivotTable.dataHierarchies.add(pivotTable.hierarchies.getItem("Crates Sold Wholesale"));
 
-    await context.sync();
+    return context.sync();
+});
+```
+
+## <a name="slicers-preview"></a>Срезы (Предварительная версия)
+
+> [!NOTE]
+> API среза в настоящее время доступны только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+
+[Срезы](/javascript/api/excel/excel.slicer) позволяют фильтровать данные из сводной таблицы или таблицы Excel. Срез использует значения из указанного столбца или PivotField для фильтрации соответствующих строк. Эти значения хранятся в виде объектов [SlicerItem](/javascript/api/excel/excel.sliceritem) в `Slicer`. Надстройка может настраивать эти фильтры, как это могут делать пользователи ([через пользовательский интерфейс Excel](https://support.office.com/article/Use-slicers-to-filter-data-249f966b-a9d5-4b0f-b31a-12651785d29d)). Срез располагается вверху листа в графическом слое, как показано на следующем снимке экрана.
+
+![Фильтрация данных среза в сводной таблице.](../images/excel-slicer.png)
+
+> [!NOTE]
+> Методы, описанные в этом разделе, касаются использования срезов, подключенных к сводным таблицам. Те же методы применяются и для использования срезов, подключенных к таблицам.
+
+### <a name="create-a-slicer"></a>Создание среза
+
+Вы можете создать срез в книге или листе с помощью `Workbook.slicers.add` метода или `Worksheet.slicers.add` метода. Это приведет к добавлению среза в [слицерколлектион](/javascript/api/excel/excel.slicercollection) указанного `Workbook` или `Worksheet` объекта. `SlicerCollection.add` Метод имеет три параметра:
+
+- `slicerSource`: Источник данных, на котором основан новый срез. `PivotTable`Это может быть `Table`, или строка, представляющая имя или идентификатор `PivotTable` или. `Table`
+- `sourceField`: Поле в источнике данных, с помощью которого выполняется фильтрация. `PivotField`Это может быть `TableColumn`, или строка, представляющая имя или идентификатор `PivotField` или. `TableColumn`
+- `slicerDestination`: Лист, на котором будет создан новый срез. Это может быть `Worksheet` объект или имя или идентификатор объекта `Worksheet`. Этот параметр не является обязательным при `SlicerCollection` доступе к `Worksheet.slicers`. В этом случае лист коллекции используется в качестве назначения.
+
+В приведенном ниже примере кода в **сводную** таблицу добавляется новый срез. Источник среза — это сводная таблица и фильтры **продаж фермы** с использованием данных **типа** . Срез также называется **срезом фруктов** для дальнейшего использования.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Pivot");
+    var slicer = sheet.slicers.add(
+        "Farm Sales" /* The slicer data source. For PivotTables, this can be the PivotTable object reference or name. */,
+        "Type" /* The field in the data to filter by. For PivotTables, this can be a PivotField object reference or ID. */
+    );
+    slicer.name = "Fruit Slicer";
+    return context.sync();
+});
+```
+
+### <a name="filter-items-with-a-slicer"></a>Фильтрация элементов с помощью среза
+
+Срез фильтрует сводную таблицу с элементами из `sourceField`. `Slicer.selectItems` Метод задает элементы, остающиеся в срезе. Эти элементы передаются в метод как объект `string[]`, представляющий ключи элементов. Все строки, содержащие эти элементы, сохраняются в статистической обработке сводной таблицы. Последующие вызовы `selectItems` задают для списка ключи, указанные в этих вызовах.
+
+> [!NOTE]
+> Если `Slicer.selectItems` передается элемент, который не находится в источнике данных, `InvalidArgument` возникает ошибка. Содержимое можно проверить с помощью `Slicer.slicerItems` свойства, которое является [слицеритемколлектион](/javascript/api/excel/excel.sliceritemcollection).
+
+В приведенном ниже примере кода показаны три выбранных для среза элементов: **Лемон**, **травяной**и **оранжевый**.
+
+```js
+Excel.run(function (context) {
+    var slicer = context.workbook.slicers.getItem("Fruit Slicer");
+    // Anything other than the following three values will be filtered out of the PivotTable for display and aggregation.
+    slicer.selectItems(["Lemon", "Lime", "Orange"]);
+    return context.sync();
+});
+```
+
+Чтобы удалить все фильтры из среза, используйте `Slicer.clearFilters` метод, как показано в следующем примере.
+
+```js
+Excel.run(function (context) {
+    var slicer = context.workbook.slicers.getItem("Fruit Slicer");
+    slicer.clearFilters();
+    return context.sync();
+});
+```
+
+### <a name="style-and-format-a-slicer"></a>Стиль и форматирование среза
+
+Надстройка может настраивать параметры отображения среза с помощью `Slicer` свойств. В приведенном ниже примере кода для стиля задается значение **SlicerStyleLight6**, в верхней части среза задается **Тип фруктов**, помещается срез в позицию **(395, 15)** на уровне рисунка и задается размер среза **135x150** пикселей.
+
+```js
+Excel.run(function (context) {
+    var slicer = context.workbook.slicers.getItem("Fruit Slicer");
+    slicer.caption = "Fruit Types";
+    slicer.left = 395;
+    slicer.top = 15;
+    slicer.height = 135;
+    slicer.width = 150;
+    slicer.style = "SlicerStyleLight6";
+    return context.sync();
+});
+```
+
+### <a name="delete-a-slicer"></a>Удаление среза
+
+Чтобы удалить срез, вызовите `Slicer.delete` метод. В примере кода ниже показано, как удалить первый срез из текущего листа.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+    sheet.slicers.getItemAt(0).delete();
+    return context.sync();
 });
 ```
 
@@ -163,16 +257,17 @@ await Excel.run(async (context) => {
 
 В приведенных ниже примерах кода статистическая схема изменяется для средних значений данных.
 
-```typescript
-await Excel.run(async (context) => {
-    const pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
+```js
+Excel.run(function (context) {
+    var pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
     pivotTable.dataHierarchies.load("no-properties-needed");
-    await context.sync();
+    return context.sync().then(function() {
 
-    // changing the aggregation from the default sum to an average of all the values in the hierarchy
-    pivotTable.dataHierarchies.items[0].summarizeBy = Excel.AggregationFunction.average;
-    pivotTable.dataHierarchies.items[1].summarizeBy = Excel.AggregationFunction.average;
-    await context.sync();
+        // Change the aggregation from the default sum to an average of all the values in the hierarchy.
+        pivotTable.dataHierarchies.items[0].summarizeBy = Excel.AggregationFunction.average;
+        pivotTable.dataHierarchies.items[1].summarizeBy = Excel.AggregationFunction.average;
+        return context.sync();
+    });
 });
 ```
 
@@ -182,30 +277,29 @@ await Excel.run(async (context) => {
 
 У `ShowAsRule` объекта есть три свойства:
 
--   `calculation`: Тип относительного вычисления, применяемого к иерархии данных (значение по умолчанию — `none`).
--   `baseField`: Поле в иерархии, содержащее базовые данные перед применением вычисления. [PivotField](/javascript/api/excel/excel.pivotfield) обычно имеет то же имя, что и его родительская иерархия.
--   `baseItem`: Отдельные [PivotItem](/javascript/api/excel/excel.pivotitem) по сравнению со значениями базовых полей на основе типа вычисления. Для этого поля требуется не все вычисления.
+- `calculation`: Тип относительного вычисления, применяемого к иерархии данных (значение по умолчанию — `none`).
+- `baseField`: Поле в иерархии, содержащее базовые данные перед применением вычисления. [PivotField](/javascript/api/excel/excel.pivotfield) обычно имеет то же имя, что и его родительская иерархия.
+- `baseItem`: Отдельные [PivotItem](/javascript/api/excel/excel.pivotitem) по сравнению со значениями базовых полей на основе типа вычисления. Для этого поля требуется не все вычисления.
 
 В следующем примере показана настройка вычисления **суммы ящиков, проданных в** иерархии данных фермы, в процентах от общей суммы по столбцу. Мы по-прежнему хотим, чтобы гранулярность была расширена до уровня типа фруктов, поэтому мы будем использовать иерархию **типов** строк и базовое поле. В примере также используется **ферма** в качестве первой иерархии строк, поэтому записи итоговой фермы отображаются в процентах, ответственных за изготовление.
 
 ![Сводная таблица, в которой показаны процентные доли продаж фруктов относительно общего итога для отдельных ферм и отдельных типов фруктов в каждой ферме.](../images/excel-pivots-showas-percentage.png)
 
-``` TypeScript
-await Excel.run(async (context) => {
-    const pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
-    const farmDataHierarchy = pivotTable.dataHierarchies.getItem("Sum of Crates Sold at Farm");
+```js
+Excel.run(function (context) {
+    var pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
+    var farmDataHierarchy = pivotTable.dataHierarchies.getItem("Sum of Crates Sold at Farm");
 
     farmDataHierarchy.load("showAs");
-    await context.sync();
+    return context.sync().then(function () {
 
-    // show the crates of each fruit type sold at the farm as a percentage of the column's total
-    let farmShowAs = farmDataHierarchy.showAs;
-    farmShowAs.calculation = Excel.ShowAsCalculation.percentOfColumnTotal;
-    farmShowAs.baseField = pivotTable.rowHierarchies.getItem("Type").fields.getItem("Type");
-    farmDataHierarchy.showAs = farmShowAs; 
-    farmDataHierarchy.name = "Percentage of Total Farm Sales";
-
-    await context.sync();
+        // Show the crates of each fruit type sold at the farm as a percentage of the column's total.
+        var farmShowAs = farmDataHierarchy.showAs;
+        farmShowAs.calculation = Excel.ShowAsCalculation.percentOfColumnTotal;
+        farmShowAs.baseField = pivotTable.rowHierarchies.getItem("Type").fields.getItem("Type");
+        farmDataHierarchy.showAs = farmShowAs;
+        farmDataHierarchy.name = "Percentage of Total Farm Sales";
+    });
 });
 ```
 
@@ -216,23 +310,22 @@ await Excel.run(async (context) => {
 
 ![Сводная таблица, в которой показаны различия продаж фруктов между "фермами" и другими. В этом примере показана разница в общем объеме продаж фруктов ферм и продаж на различных типах фруктов. Если "фермы" не продают определенный тип фруктов, отображается "#N/A".](../images/excel-pivots-showas-differencefrom.png)
 
-``` TypeScript
-await Excel.run(async (context) => {
-    const pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
-    const farmDataHierarchy = pivotTable.dataHierarchies.getItem("Sum of Crates Sold at Farm");
+```js
+Excel.run(function (context) {
+    var pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
+    var farmDataHierarchy = pivotTable.dataHierarchies.getItem("Sum of Crates Sold at Farm");
 
     farmDataHierarchy.load("showAs");
-    await context.sync();
-
-    // show the difference between crate sales of the "A Farms" and the other farms
-    // this difference is both aggregated and shown for individual fruit types (where applicable)
-    let farmShowAs = farmDataHierarchy.showAs;
-    farmShowAs.calculation = Excel.ShowAsCalculation.differenceFrom;
-    farmShowAs.baseField = pivotTable.rowHierarchies.getItem("Farm").fields.getItem("Farm");
-    farmShowAs.baseItem = pivotTable.rowHierarchies.getItem("Farm").fields.getItem("Farm").items.getItem("A Farms");
-    farmDataHierarchy.showAs = farmShowAs;
-    farmDataHierarchy.name = "Difference from A Farms";
-    await context.sync();
+    return context.sync().then(function () {
+        // Show the difference between crate sales of the "A Farms" and the other farms.
+        // This difference is both aggregated and shown for individual fruit types (where applicable).
+        var farmShowAs = farmDataHierarchy.showAs;
+        farmShowAs.calculation = Excel.ShowAsCalculation.differenceFrom;
+        farmShowAs.baseField = pivotTable.rowHierarchies.getItem("Farm").fields.getItem("Farm");
+        farmShowAs.baseItem = pivotTable.rowHierarchies.getItem("Farm").fields.getItem("Farm").items.getItem("A Farms");
+        farmDataHierarchy.showAs = farmShowAs;
+        farmDataHierarchy.name = "Difference from A Farms";
+    });
 });
 ```
 
@@ -246,24 +339,23 @@ await Excel.run(async (context) => {
 
 В приведенном ниже коде показано, как получить последнюю строку данных сводной таблицы, прополнив макет. Затем эти значения суммируются вместе для общего итога.
 
-```typescript
-await Excel.run(async (context) => {
-    const pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
+```js
+Excel.run(function (context) {
+    var pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
 
-    // get the totals for each data hierarchy from the layout
-    const range = pivotTable.layout.getDataBodyRange();
-    const grandTotalRange = range.getLastRow();
+    // Get the totals for each data hierarchy from the layout.
+    var range = pivotTable.layout.getDataBodyRange();
+    var grandTotalRange = range.getLastRow();
     grandTotalRange.load("address");
-    await context.sync();
-
-    // sum the totals from the PivotTable data hierarchies and place them in a new range
-    const masterTotalRange = context.workbook.worksheets.getActiveWorksheet().getRange("B27:C27");
-    masterTotalRange.formulas = [["All Crates", "=SUM(" + grandTotalRange.address + ")"]];
-    await context.sync();
+    return context.sync().then(function () {
+        // Sum the totals from the PivotTable data hierarchies and place them in a new range.
+        var masterTotalRange = context.workbook.worksheets.getActiveWorksheet().getRange("B27:C27");
+        masterTotalRange.formulas = [["All Crates", "=SUM(" + grandTotalRange.address + ")"]];
+    });
 });
 ```
 
-В сводных таблицах есть три стиля макета: компактный, структурированный и табличный. В предыдущих примерах показан стиль "Компактный". 
+В сводных таблицах есть три стиля макета: компактный, структурированный и табличный. В предыдущих примерах показан стиль "Компактный".
 
 В приведенных ниже примерах используются структурированные и табличные стили соответственно. В примере кода показано, как циклически переключаться между различными макетами.
 
@@ -279,17 +371,16 @@ await Excel.run(async (context) => {
 
 Поля иерархии можно редактировать. В приведенном ниже коде показано, как изменить отображаемые имена двух иерархий данных.
 
-```typescript
-await Excel.run(async (context) => {
-    const dataHierarchies = context.workbook.worksheets.getActiveWorksheet()
+```js
+Excel.run(function (context) {
+    var dataHierarchies = context.workbook.worksheets.getActiveWorksheet()
         .pivotTables.getItem("Farm Sales").dataHierarchies;
     dataHierarchies.load("no-properties-needed");
-    await context.sync();
-
-    // changing the displayed names of these entries
-    dataHierarchies.items[0].name = "Farm Sales";
-    dataHierarchies.items[1].name = "Wholesale";
-    await context.sync();
+    return context.sync().then(function () {
+        // changing the displayed names of these entries
+        dataHierarchies.items[0].name = "Farm Sales";
+        dataHierarchies.items[1].name = "Wholesale";
+    });
 });
 ```
 
@@ -297,11 +388,10 @@ await Excel.run(async (context) => {
 
 Сводные таблицы удаляются с использованием их имени.
 
-```typescript
-await Excel.run(async (context) => {
+```js
+Excel.run(function (context) {
     context.workbook.worksheets.getItem("Pivot").pivotTables.getItem("Farm Sales").delete();
-
-    await context.sync();
+    return context.sync();
 });
 ```
 
