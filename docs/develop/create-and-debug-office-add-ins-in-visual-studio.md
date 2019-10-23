@@ -1,18 +1,18 @@
 ---
 title: Создание и отладка надстроек Office в Visual Studio
 description: Используйте Visual Studio для создания и отладки надстроек Office в настольном клиенте Office для Windows
-ms.date: 06/20/2019
+ms.date: 10/11/2019
 localization_priority: Priority
-ms.openlocfilehash: 9cc4d50d9b61daa4b1f55f7dd4c1e1156f8d959c
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 878cd308747ac7049ca37b21a9fcb2282a4bf60d
+ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35128187"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "37626833"
 ---
 # <a name="create-and-debug-office-add-ins-in-visual-studio"></a>Создание и отладка надстроек Office в Visual Studio
 
-В этой статье описано создание надстройки Office для Excel, Word, PowerPoint или Outlook и отладка надстройки и в настольном клиенте Office для Windows с помощью Visual Studio 2017. Если вы используете другую версию Visual Studio, используемые действия могут немного отличаться.
+В этой статье описано создание надстройки Office для Excel, Word, PowerPoint или Outlook и отладка надстройки в настольном клиенте Office для Windows с помощью Visual Studio 2019. Если вы используете другую версию Visual Studio, используемые действия могут немного отличаться.
 
 > [!NOTE]
 > Visual Studio не поддерживает создание надстроек Office для OneNote или проекта, но вы можете использовать [Yeoman генератор для надстроек Office ](https://github.com/OfficeDev/generator-office) для создания данных типов надстроек.
@@ -20,12 +20,12 @@ ms.locfileid: "35128187"
 >
 > - Чтобы начать работу с надстройкой для проекта, ознакомьтесь со статьей [Создание вашей первой надстройки для проекта](../quickstarts/project-quickstart.md).
 
-## <a name="prerequisites"></a>Обязательные условия
+## <a name="prerequisites"></a>Предварительные требования
 
-- [Visual Studio 2017](https://www.visualstudio.com/vs/) с установленной рабочей нагрузкой **Разработка надстроек для Office и SharePoint**
+- [Visual Studio 2019](https://www.visualstudio.com/vs/) с установленной рабочей нагрузкой **Разработка надстроек для Office и SharePoint**
 
     > [!TIP]
-    > Если вы уже установили Visual Studio 2017, [используйте Visual Studio Installer](/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**. Если эта рабочая нагрузка еще не установлена, используйте установщик Visual Studio Installer, чтобы [установить ее](/visualstudio/install/modify-visual-studio?view=vs-2017#modify-workloads).
+    > Если вы уже установили Visual Studio 2019, [используйте установщик Visual Studio](/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**. Если эта рабочая нагрузка еще не установлена, используйте установщик Visual Studio, чтобы [установить ее](/visualstudio/install/modify-visual-studio?view=vs-2019#modify-workloads).
 
 - Office 2013 или более поздние версии
 
@@ -36,19 +36,19 @@ ms.locfileid: "35128187"
 
 Начните с выполнения этих трех шагов, а затем выполните действия, описанные в следующем разделе, которые соответствуют типу надстройки, который вы создаете. 
 
-1. Откройте Visual Studio и в строке меню выберите **Файл** > **Создать** > **Проект**.
+1. Откройте Visual Studio и в строке меню выберите **Создать проект**.
 
-2. В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, выберите **Надстройки**, а затем выберите тип проекта надстройки, который вы хотите создать. 
+2. Используя поле поиска, введите **Надстройки** и выберите тип проекта надстройки, который нужно создать.
 
 3. Укажите имя проекта и нажмите кнопку **ОК**.
 
 ### <a name="word-web-add-in-or-outlook-web-add-in"></a>Надстройка Word Web или надстройка Outlook Web 
 
-Если вы выбрали вариант создания **надстройки Word Web** или **надстройки Outlook Web**, Visual Studio создает решение, а два его проекта отображаются в **обозревателе решений**. После этого вы можете [просматривать решение Visual Studio](#explore-the-visual-studio-solution). 
+Если вы выбрали вариант создания **надстройки Word Web** или **надстройки Outlook Web**, Visual Studio создает решение, а два его проекта отображаются в **обозревателе решений**. После этого вы можете [просматривать решение Visual Studio](#explore-the-visual-studio-solution).
 
 ### <a name="powerpoint-web-add-in"></a>Веб-надстройка PowerPoint
 
-Если вы выбрали вариант создания **веб-надстройки PowerPoint**, будет отображено диалоговое окно**Создание надстройки Office**. 
+Если вы выбрали вариант создания **веб-надстройки PowerPoint**, будет отображено диалоговое окно**Создание надстройки Office**.
 
 - Чтобы создать надстройку области задач, выберите **Добавить новые функциональные возможности для PowerPoint** и нажмите кнопку **Готово**, чтобы создать решение Visual Studio.
 
@@ -200,7 +200,7 @@ ms.locfileid: "35128187"
 
 3. Открывает хост-приложение.
 
-Visual Studio не отображает ошибки проверки в окне **ВЫХОДНЫЕ ДАННЫЕ** при сборке проекта. Visual Studio генерирует ошибки и предупреждения в окне **СПИСОК ОШИБОК** при их появлении. Visual Studio также генерирует отчеты об ошибках проверки, отображая волнистые линии (называется волнистой линией) различных цветов в редакторе кода и текста. Эти отметки уведомляют о проблемах, которые Visual Studio обнаружил в вашем коде. Дополнительные сведения см. в статье [Редактор кода и текста](https://msdn.microsoft.com/library/se2f663y(v=vs.140).aspx). Дополнительные сведения о том, как включить или отключить проверку см. в статье [Параметры, текстовый редактор, JavaScript, IntelliSense](/visualstudio/ide/reference/options-text-editor-javascript-intellisense?view=vs-2017).
+Visual Studio не отображает ошибки проверки в окне **ВЫХОДНЫЕ ДАННЫЕ** при сборке проекта. Visual Studio генерирует ошибки и предупреждения в окне **СПИСОК ОШИБОК** при их появлении. Visual Studio также генерирует отчеты об ошибках проверки, отображая волнистые линии (называется волнистой линией) различных цветов в редакторе кода и текста. Эти отметки уведомляют о проблемах, которые Visual Studio обнаружил в вашем коде. Дополнительные сведения о том, как включить или отключить проверку см. в статье [Параметры, текстовый редактор, JavaScript, IntelliSense](/visualstudio/ide/reference/options-text-editor-javascript-intellisense?view=vs-2019).
 
 Чтобы просмотреть правила проверки XML-файла манифеста проекта, ознакомьтесь с разделом [XML-манифест надстройки для Office](../develop/add-in-manifests.md).
 

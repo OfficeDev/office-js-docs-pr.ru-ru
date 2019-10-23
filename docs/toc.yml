@@ -489,6 +489,9 @@
         - name: Совместное редактирование в надстройках Excel
           href: excel/co-authoring-in-excel-add-ins.md
           displayName: Excel
+        - name: Комментарии
+          href: excel/excel-add-ins-comments.md
+          displayName: Excel
         - name: Условное форматирование диапазонов
           href: excel/excel-add-ins-conditional-formatting.md
           displayName: Excel
