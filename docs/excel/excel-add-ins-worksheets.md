@@ -1,25 +1,25 @@
 ---
 title: Работа с листами с использованием API JavaScript для Excel
 description: ''
-ms.date: 09/09/2019
+ms.date: 10/16/2019
 localization_priority: Priority
-ms.openlocfilehash: 3c06e3660c2c8d6bf362b38185b96c8012dc4b90
-ms.sourcegitcommit: 24303ca235ebd7144a1d913511d8e4fb7c0e8c0d
+ms.openlocfilehash: ea8dad58bdd1ce3875751661806293e9aa1222fb
+ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "36838577"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "37626847"
 ---
-# <a name="work-with-worksheets-using-the-excel-javascript-api"></a><span data-ttu-id="a74a5-102">Работа с листами с использованием API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="a74a5-102">Work with worksheets using the Excel JavaScript API</span></span>
+# <a name="work-with-worksheets-using-the-excel-javascript-api"></a><span data-ttu-id="04052-102">Работа с листами с использованием API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="04052-102">Work with worksheets using the Excel JavaScript API</span></span>
 
-<span data-ttu-id="a74a5-p101">В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для листов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Worksheet** и **WorksheetCollection**, см. в статьях [Объект Worksheet (API JavaScript для Excel)](/javascript/api/excel/excel.worksheet) и [Объект WorksheetCollection (API JavaScript для Excel)](/javascript/api/excel/excel.worksheetcollection).</span><span class="sxs-lookup"><span data-stu-id="a74a5-p101">This article provides code samples that show how to perform common tasks with worksheets using the Excel JavaScript API. For the complete list of properties and methods that the **Worksheet** and **WorksheetCollection** objects support, see [Worksheet Object (JavaScript API for Excel)](/javascript/api/excel/excel.worksheet) and [WorksheetCollection Object (JavaScript API for Excel)](/javascript/api/excel/excel.worksheetcollection).</span></span>
+<span data-ttu-id="04052-p101">В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для листов с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами `Worksheet` и `WorksheetCollection`, см. в статьях [Объект Worksheet (API JavaScript для Excel)](/javascript/api/excel/excel.worksheet) и [Объект WorksheetCollection (API JavaScript для Excel)](/javascript/api/excel/excel.worksheetcollection).</span><span class="sxs-lookup"><span data-stu-id="04052-p101">This article provides code samples that show how to perform common tasks with worksheets using the Excel JavaScript API. For the complete list of properties and methods that the `Worksheet` and `WorksheetCollection` objects support, see [Worksheet Object (JavaScript API for Excel)](/javascript/api/excel/excel.worksheet) and [WorksheetCollection Object (JavaScript API for Excel)](/javascript/api/excel/excel.worksheetcollection).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="a74a5-105">Сведения в этой статье применимы только к обычным листам, а не к листам диаграмм или макросов.</span><span class="sxs-lookup"><span data-stu-id="a74a5-105">The information in this article applies only to regular worksheets; it does not apply to "chart" sheets or "macro" sheets.</span></span>
+> <span data-ttu-id="04052-105">Сведения в этой статье применимы только к обычным листам, а не к листам диаграмм или макросов.</span><span class="sxs-lookup"><span data-stu-id="04052-105">The information in this article applies only to regular worksheets; it does not apply to "chart" sheets or "macro" sheets.</span></span>
 
-## <a name="get-worksheets"></a><span data-ttu-id="a74a5-106">Получение листов</span><span class="sxs-lookup"><span data-stu-id="a74a5-106">Get worksheets</span></span>
+## <a name="get-worksheets"></a><span data-ttu-id="04052-106">Получение листов</span><span class="sxs-lookup"><span data-stu-id="04052-106">Get worksheets</span></span>
 
-<span data-ttu-id="a74a5-107">В примере ниже показано, как возвратить коллекцию листов, загрузить свойство **name** каждого листа и записать сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="a74a5-107">The following code sample gets the collection of worksheets, loads the **name** property of each worksheet, and writes a message to the console.</span></span>
+<span data-ttu-id="04052-107">В примере кода ниже показано, как возвратить коллекцию листов, загрузить свойство `name` каждого листа и записать сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="04052-107">The following code sample gets the collection of worksheets, loads the `name` property of each worksheet, and writes a message to the console.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -41,11 +41,11 @@ Excel.run(function (context) {
 ```
 
 > [!NOTE]
-> <span data-ttu-id="a74a5-p102">Свойство **id** листа уникальным образом идентифицирует лист в конкретной книге, и его значение не изменяется даже при переименовании или перемещении листа. При удалении листа из книги в Excel для Mac **идентификатор** удаленного листа можно назначить новому листу (созданному после удаления).</span><span class="sxs-lookup"><span data-stu-id="a74a5-p102">The **id** property of a worksheet uniquely identifies the worksheet in a given workbook and its value will remain the same even when the worksheet is renamed or moved. When a worksheet is deleted from a workbook in Excel for Mac, the **id** of the deleted worksheet may be reassigned to a new worksheet that is subsequently created.</span></span>
+> <span data-ttu-id="04052-p102">Свойство `id` листа уникальным образом идентифицирует лист в конкретной книге, и его значение не изменяется даже при переименовании или перемещении листа. При удалении листа из книги в Excel для Mac `id` удаленного листа можно назначить новому листу (созданному после удаления).</span><span class="sxs-lookup"><span data-stu-id="04052-p102">The `id` property of a worksheet uniquely identifies the worksheet in a given workbook and its value will remain the same even when the worksheet is renamed or moved. When a worksheet is deleted from a workbook in Excel on Mac, the `id` of the deleted worksheet may be reassigned to a new worksheet that is subsequently created.</span></span>
 
-## <a name="get-the-active-worksheet"></a><span data-ttu-id="a74a5-110">Получение активного листа</span><span class="sxs-lookup"><span data-stu-id="a74a5-110">Get the active worksheet</span></span>
+## <a name="get-the-active-worksheet"></a><span data-ttu-id="04052-110">Получение активного листа</span><span class="sxs-lookup"><span data-stu-id="04052-110">Get the active worksheet</span></span>
 
-<span data-ttu-id="a74a5-111">В примере кода ниже показано, как получить активный лист, загрузить его свойство **name** и записать сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="a74a5-111">The following code sample gets the active worksheet, loads its **name** property, and writes a message to the console.</span></span>
+<span data-ttu-id="04052-111">В примере кода ниже показано, как получить активный лист, загрузить его свойство `name` и записать сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="04052-111">The following code sample gets the active worksheet, loads its `name` property, and writes a message to the console.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -59,9 +59,9 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="set-the-active-worksheet"></a><span data-ttu-id="a74a5-112">Задание активного листа</span><span class="sxs-lookup"><span data-stu-id="a74a5-112">Set the active worksheet</span></span>
+## <a name="set-the-active-worksheet"></a><span data-ttu-id="04052-112">Задание активного листа</span><span class="sxs-lookup"><span data-stu-id="04052-112">Set the active worksheet</span></span>
 
-<span data-ttu-id="a74a5-p103">В примере кода ниже показано, как задать лист **Sample** (Пример) в качестве активного, загрузить его свойство **name** и записать сообщение в консоль. Если нет листа с таким именем, метод **activate()** создаст ошибку **ItemNotFound**.</span><span class="sxs-lookup"><span data-stu-id="a74a5-p103">The following code sample sets the active worksheet to the worksheet named **Sample**, loads its **name** property, and writes a message to the console. If there is no worksheet with that name, the **activate()** method throws an **ItemNotFound** error.</span></span>
+<span data-ttu-id="04052-p103">В примере кода ниже показано, как задать лист **Sample** (Пример) в качестве активного, загрузить его свойство `name` и записать сообщение в консоль. Если нет листа с таким именем, метод `activate()` создаст ошибку `ItemNotFound`.</span><span class="sxs-lookup"><span data-stu-id="04052-p103">The following code sample sets the active worksheet to the worksheet named **Sample**, loads its `name` property, and writes a message to the console. If there is no worksheet with that name, the `activate()` method throws an `ItemNotFound` error.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -76,13 +76,13 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="reference-worksheets-by-relative-position"></a><span data-ttu-id="a74a5-115">Ссылка на листы по их относительным положениям</span><span class="sxs-lookup"><span data-stu-id="a74a5-115">Reference worksheets by relative position</span></span>
+## <a name="reference-worksheets-by-relative-position"></a><span data-ttu-id="04052-115">Ссылка на листы по их относительным положениям</span><span class="sxs-lookup"><span data-stu-id="04052-115">Reference worksheets by relative position</span></span>
 
-<span data-ttu-id="a74a5-116">В примерах ниже показано, как ссылаться на лист по его относительному положению.</span><span class="sxs-lookup"><span data-stu-id="a74a5-116">These examples show how to reference a worksheet by its relative position.</span></span>
+<span data-ttu-id="04052-116">В примерах ниже показано, как ссылаться на лист по его относительному положению.</span><span class="sxs-lookup"><span data-stu-id="04052-116">These examples show how to reference a worksheet by its relative position.</span></span>
 
-### <a name="get-the-first-worksheet"></a><span data-ttu-id="a74a5-117">Получение первого листа</span><span class="sxs-lookup"><span data-stu-id="a74a5-117">Get the first worksheet</span></span>
+### <a name="get-the-first-worksheet"></a><span data-ttu-id="04052-117">Получение первого листа</span><span class="sxs-lookup"><span data-stu-id="04052-117">Get the first worksheet</span></span>
 
-<span data-ttu-id="a74a5-118">В примере кода ниже показано, как получить первый лист в книге, загрузить его свойство **name** и записать сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="a74a5-118">The following code sample gets the first worksheet in the workbook, loads its **name** property, and writes a message to the console.</span></span>
+<span data-ttu-id="04052-118">В примере кода ниже показано, как получить первый лист в книге, загрузить его свойство `name` и записать сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="04052-118">The following code sample gets the first worksheet in the workbook, loads its `name` property, and writes a message to the console.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -96,9 +96,9 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-### <a name="get-the-last-worksheet"></a><span data-ttu-id="a74a5-119">Получение последнего листа</span><span class="sxs-lookup"><span data-stu-id="a74a5-119">Get the last worksheet</span></span>
+### <a name="get-the-last-worksheet"></a><span data-ttu-id="04052-119">Получение последнего листа</span><span class="sxs-lookup"><span data-stu-id="04052-119">Get the last worksheet</span></span>
 
-<span data-ttu-id="a74a5-120">В примере кода ниже показано, как получить последний лист в книге, загрузить его свойство **name** и записать сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="a74a5-120">The following code sample gets the last worksheet in the workbook, loads its **name** property, and writes a message to the console.</span></span>
+<span data-ttu-id="04052-120">В примере кода ниже показано, как получить последний лист в книге, загрузить его свойство `name` и записать сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="04052-120">The following code sample gets the last worksheet in the workbook, loads its `name` property, and writes a message to the console.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -112,9 +112,9 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-### <a name="get-the-next-worksheet"></a><span data-ttu-id="a74a5-121">Получение следующего листа</span><span class="sxs-lookup"><span data-stu-id="a74a5-121">Get the next worksheet</span></span>
+### <a name="get-the-next-worksheet"></a><span data-ttu-id="04052-121">Получение следующего листа</span><span class="sxs-lookup"><span data-stu-id="04052-121">Get the next worksheet</span></span>
 
-<span data-ttu-id="a74a5-p104">В примере кода ниже показано, как получить лист, следующий за активным листом, в книге, загрузить его свойство **name** и записать сообщение в консоль. Если нет листа после активного листа, метод **getNext()** создаст ошибку **ItemNotFound**.</span><span class="sxs-lookup"><span data-stu-id="a74a5-p104">The following code sample gets the worksheet that follows the active worksheet in the workbook, loads its **name** property, and writes a message to the console. If there is no worksheet after the active worksheet, the **getNext()** method throws an **ItemNotFound** error.</span></span>
+<span data-ttu-id="04052-p104">В примере кода ниже показано, как получить лист, следующий за активным листом, в книге, загрузить его свойство `name` и записать сообщение в консоль. Если нет листа после активного листа, метод `getNext()` создаст ошибку `ItemNotFound`.</span><span class="sxs-lookup"><span data-stu-id="04052-p104">The following code sample gets the worksheet that follows the active worksheet in the workbook, loads its `name` property, and writes a message to the console. If there is no worksheet after the active worksheet, the `getNext()` method throws an `ItemNotFound` error.</span></span>
 
 ```js
  Excel.run(function (context) {
@@ -129,9 +129,9 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-### <a name="get-the-previous-worksheet"></a><span data-ttu-id="a74a5-124">Получение предыдущего листа</span><span class="sxs-lookup"><span data-stu-id="a74a5-124">Get the previous worksheet</span></span>
+### <a name="get-the-previous-worksheet"></a><span data-ttu-id="04052-124">Получение предыдущего листа</span><span class="sxs-lookup"><span data-stu-id="04052-124">Get the previous worksheet</span></span>
 
-<span data-ttu-id="a74a5-p105">В примере кода ниже показано, как получить лист, предшествующий активному листу, в книге, загрузить его свойство **name** и записать сообщение в консоль. Если нет листа перед активным листом, метод **getPrevious()** создаст ошибку **ItemNotFound**.</span><span class="sxs-lookup"><span data-stu-id="a74a5-p105">The following code sample gets the worksheet that precedes the active worksheet in the workbook, loads its **name** property, and writes a message to the console. If there is no worksheet before the active worksheet, the **getPrevious()** method throws an **ItemNotFound** error.</span></span>
+<span data-ttu-id="04052-p105">В примере кода ниже показано, как получить лист, предшествующий активному листу, в книге, загрузить его свойство `name` и записать сообщение в консоль. Если нет листа перед активным листом, метод `getPrevious()` создаст ошибку `ItemNotFound`.</span><span class="sxs-lookup"><span data-stu-id="04052-p105">The following code sample gets the worksheet that precedes the active worksheet in the workbook, loads its `name` property, and writes a message to the console. If there is no worksheet before the active worksheet, the `getPrevious()` method throws an `ItemNotFound` error.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -146,9 +146,9 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="add-a-worksheet"></a><span data-ttu-id="a74a5-127">Добавление листа</span><span class="sxs-lookup"><span data-stu-id="a74a5-127">Add a worksheet</span></span>
+## <a name="add-a-worksheet"></a><span data-ttu-id="04052-127">Добавление листа</span><span class="sxs-lookup"><span data-stu-id="04052-127">Add a worksheet</span></span>
 
-<span data-ttu-id="a74a5-p106">В примере кода ниже показано, как добавить лист **Sample** (Пример) в рабочую книгу, загрузить его свойства **name** и **position** и записать сообщение в консоль. Новый лист будет следовать за всеми остальными.</span><span class="sxs-lookup"><span data-stu-id="a74a5-p106">The following code sample adds a new worksheet named **Sample** to the workbook, loads its **name** and **position** properties, and writes a message to the console. The new worksheet is added after all existing worksheets.</span></span>
+<span data-ttu-id="04052-p106">В примере кода ниже показано, как добавить лист **Sample** (Пример) в рабочую книгу, загрузить его свойства `name` и `position` и записать сообщение в консоль. Новый лист будет следовать за всеми остальными.</span><span class="sxs-lookup"><span data-stu-id="04052-p106">The following code sample adds a new worksheet named **Sample** to the workbook, loads its `name` and `position` properties, and writes a message to the console. The new worksheet is added after all existing worksheets.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -164,9 +164,27 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="delete-a-worksheet"></a><span data-ttu-id="a74a5-130">Удаление листа</span><span class="sxs-lookup"><span data-stu-id="a74a5-130">Delete a worksheet</span></span>
+### <a name="copy-an-existing-worksheet"></a><span data-ttu-id="04052-130">Копирование существующего листа</span><span class="sxs-lookup"><span data-stu-id="04052-130">Copy an existing worksheet</span></span>
 
-<span data-ttu-id="a74a5-131">В примере кода ниже показано, как удалить последний лист в книге (если это не единственный лист в книге) и записать сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="a74a5-131">The following code sample deletes the final worksheet in the workbook (as long as it's not the only sheet in the workbook) and writes a message to the console.</span></span>
+<span data-ttu-id="04052-131">`Worksheet.copy` добавляет новый лист, являющийся копией существующего листа.</span><span class="sxs-lookup"><span data-stu-id="04052-131">`Worksheet.copy` adds a new worksheet that is a copy of an existing worksheet.</span></span> <span data-ttu-id="04052-132">Имя нового листа будет содержать номер в конце по аналогии с копированием листов в пользовательском интерфейсе Excel (например, **МойЛист (2)**).</span><span class="sxs-lookup"><span data-stu-id="04052-132">The new worksheet's name will have a number appended to the end, in a manner consistent with copying a worksheet through the Excel UI (for example, **MySheet (2)**).</span></span> <span data-ttu-id="04052-133">`Worksheet.copy` может принимать два необязательных параметра:</span><span class="sxs-lookup"><span data-stu-id="04052-133">`Worksheet.copy` can take two parameters, both of which are optional:</span></span>
+
+- <span data-ttu-id="04052-134">`positionType` — перечисление [WorksheetPositionType](/javascript/api/excel/excel.worksheetpositiontype), указывающее, где в книге нужно добавить новый лист.</span><span class="sxs-lookup"><span data-stu-id="04052-134">`positionType` - A [WorksheetPositionType](/javascript/api/excel/excel.worksheetpositiontype) enum specifying where in the workbook the new worksheet is to be added.</span></span>
+- <span data-ttu-id="04052-135">`relativeTo` — если параметру `positionType` присвоено значение `Before` или `After`, требуется указать лист, относительно которого нужно добавить новый лист (этот параметр отвечает на вопрос "До или после чего?").</span><span class="sxs-lookup"><span data-stu-id="04052-135">`relativeTo` - If the `positionType` is `Before` or `After`, you need to specify a worksheet relative to which the new sheet is to be added (this parameter answers the question "Before or after what?").</span></span>
+
+<span data-ttu-id="04052-136">В примере кода ниже показано, как скопировать текущий лист и вставить новый лист непосредственно после текущего.</span><span class="sxs-lookup"><span data-stu-id="04052-136">The following code sample copies the current worksheet and inserts the new sheet directly after the current worksheet.</span></span>
+
+```js
+Excel.run(function (context) {
+    var myWorkbook = context.workbook;
+    var sampleSheet = myWorkbook.worksheets.getActiveWorksheet();
+    var copiedSheet = sampleSheet.copy(Excel.WorksheetPositionType.after, sampleSheet);
+    return context.sync();
+});
+```
+
+## <a name="delete-a-worksheet"></a><span data-ttu-id="04052-137">Удаление листа</span><span class="sxs-lookup"><span data-stu-id="04052-137">Delete a worksheet</span></span>
+
+<span data-ttu-id="04052-138">В примере кода ниже показано, как удалить последний лист в книге (если это не единственный лист в книге) и записать сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="04052-138">The following code sample deletes the final worksheet in the workbook (as long as it's not the only sheet in the workbook) and writes a message to the console.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -190,11 +208,11 @@ Excel.run(function (context) {
 ```
 
 > [!NOTE]
-> <span data-ttu-id="a74a5-132">Лист с уровнем скрытия "[надежно скрыт](/javascript/api/excel/excel.sheetvisibility)" невозможно удалить с помощью метода `delete`.</span><span class="sxs-lookup"><span data-stu-id="a74a5-132">A worksheet with a visibility of "[Very Hidden](/javascript/api/excel/excel.sheetvisibility)" cannot be deleted with the `delete` method.</span></span> <span data-ttu-id="a74a5-133">Чтобы удалить лист, нужно сперва изменить его уровень скрытия.</span><span class="sxs-lookup"><span data-stu-id="a74a5-133">If you wish to delete the worksheet anyway, you must first change the visibility.</span></span>
+> <span data-ttu-id="04052-139">Лист с уровнем скрытия "[надежно скрыт](/javascript/api/excel/excel.sheetvisibility)" невозможно удалить с помощью метода `delete`.</span><span class="sxs-lookup"><span data-stu-id="04052-139">A worksheet with a visibility of "[Very Hidden](/javascript/api/excel/excel.sheetvisibility)" cannot be deleted with the `delete` method.</span></span> <span data-ttu-id="04052-140">Чтобы удалить лист, нужно сперва изменить его уровень скрытия.</span><span class="sxs-lookup"><span data-stu-id="04052-140">If you wish to delete the worksheet anyway, you must first change the visibility.</span></span>
 
-## <a name="rename-a-worksheet"></a><span data-ttu-id="a74a5-134">Переименование листа</span><span class="sxs-lookup"><span data-stu-id="a74a5-134">Rename a worksheet</span></span>
+## <a name="rename-a-worksheet"></a><span data-ttu-id="04052-141">Переименование листа</span><span class="sxs-lookup"><span data-stu-id="04052-141">Rename a worksheet</span></span>
 
-<span data-ttu-id="a74a5-135">В примере ниже показано, как изменить имя активного листа на **New Name** (Новое имя).</span><span class="sxs-lookup"><span data-stu-id="a74a5-135">The following code sample changes the name of the active worksheet to **New Name**.</span></span>
+<span data-ttu-id="04052-142">В примере ниже показано, как изменить имя активного листа на **New Name** (Новое имя).</span><span class="sxs-lookup"><span data-stu-id="04052-142">The following code sample changes the name of the active worksheet to **New Name**.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -205,9 +223,9 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="move-a-worksheet"></a><span data-ttu-id="a74a5-136">Перемещение листа</span><span class="sxs-lookup"><span data-stu-id="a74a5-136">Move a worksheet</span></span>
+## <a name="move-a-worksheet"></a><span data-ttu-id="04052-143">Перемещение листа</span><span class="sxs-lookup"><span data-stu-id="04052-143">Move a worksheet</span></span>
 
-<span data-ttu-id="a74a5-137">В примере ниже показано, как переместить лист из последней позиции в книге на первую.</span><span class="sxs-lookup"><span data-stu-id="a74a5-137">The following code sample moves a worksheet from the last position in the workbook to the first position in the workbook.</span></span>
+<span data-ttu-id="04052-144">В примере ниже показано, как переместить лист из последней позиции в книге на первую.</span><span class="sxs-lookup"><span data-stu-id="04052-144">The following code sample moves a worksheet from the last position in the workbook to the first position in the workbook.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -224,13 +242,13 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="set-worksheet-visibility"></a><span data-ttu-id="a74a5-138">Настройка видимости листа</span><span class="sxs-lookup"><span data-stu-id="a74a5-138">Set worksheet visibility</span></span>
+## <a name="set-worksheet-visibility"></a><span data-ttu-id="04052-145">Настройка видимости листа</span><span class="sxs-lookup"><span data-stu-id="04052-145">Set worksheet visibility</span></span>
 
-<span data-ttu-id="a74a5-139">В примерах ниже показано, как настроить видимость листа.</span><span class="sxs-lookup"><span data-stu-id="a74a5-139">These examples show how to set the visibility of a worksheet.</span></span>
+<span data-ttu-id="04052-146">В примерах ниже показано, как настроить видимость листа.</span><span class="sxs-lookup"><span data-stu-id="04052-146">These examples show how to set the visibility of a worksheet.</span></span>
 
-### <a name="hide-a-worksheet"></a><span data-ttu-id="a74a5-140">Скрытие листа</span><span class="sxs-lookup"><span data-stu-id="a74a5-140">Hide a worksheet</span></span>
+### <a name="hide-a-worksheet"></a><span data-ttu-id="04052-147">Скрытие листа</span><span class="sxs-lookup"><span data-stu-id="04052-147">Hide a worksheet</span></span>
 
-<span data-ttu-id="a74a5-141">В примере кода ниже показано, как сделать лист **Sample** (Пример) скрытым, загрузить его свойство **name** и записать сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="a74a5-141">The following code sample sets the visibility of worksheet named **Sample** to hidden, loads its **name** property, and writes a message to the console.</span></span>
+<span data-ttu-id="04052-148">В примере кода ниже показано, как сделать лист **Sample** (Пример) скрытым, загрузить его свойство `name` и записать сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="04052-148">The following code sample sets the visibility of worksheet named **Sample** to hidden, loads its `name` property, and writes a message to the console.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -245,9 +263,9 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-### <a name="unhide-a-worksheet"></a><span data-ttu-id="a74a5-142">Отмена скрытия листа</span><span class="sxs-lookup"><span data-stu-id="a74a5-142">Unhide a worksheet</span></span>
+### <a name="unhide-a-worksheet"></a><span data-ttu-id="04052-149">Отмена скрытия листа</span><span class="sxs-lookup"><span data-stu-id="04052-149">Unhide a worksheet</span></span>
 
-<span data-ttu-id="a74a5-143">В примере кода ниже показано, как сделать лист **Sample** (Пример), загрузить его свойство **name** и записать сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="a74a5-143">The following code sample sets the visibility of worksheet named **Sample** to visible, loads its **name** property, and writes a message to the console.</span></span>
+<span data-ttu-id="04052-150">В примере кода ниже показано, как сделать лист **Sample** (Пример) видимым, загрузить его свойство `name` и записать сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="04052-150">The following code sample sets the visibility of worksheet named **Sample** to visible, loads its `name` property, and writes a message to the console.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -262,9 +280,9 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="get-a-single-cell-within-a-worksheet"></a><span data-ttu-id="a74a5-144">Получение одной ячейки листа</span><span class="sxs-lookup"><span data-stu-id="a74a5-144">Get a single cell within a worksheet</span></span>
+## <a name="get-a-single-cell-within-a-worksheet"></a><span data-ttu-id="04052-151">Получение одной ячейки листа</span><span class="sxs-lookup"><span data-stu-id="04052-151">Get a single cell within a worksheet</span></span>
 
-<span data-ttu-id="a74a5-145">В примере кода ниже показано, как получить ячейку, расположенную в строке 2 и столбце 5 листа **Sample** (Пример), загрузить его свойства **address** и **values** и записать сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="a74a5-145">The following code sample gets the cell that is located in row 2, column 5 of the worksheet named **Sample**, loads its **address** and **values** properties, and writes a message to the console.</span></span> <span data-ttu-id="a74a5-146">Значения, передаваемые в метод `getCell(row: number, column:number)`, представляют собой индексируемые с нуля номера строк и столбцов получаемой ячейки.</span><span class="sxs-lookup"><span data-stu-id="a74a5-146">The values that are passed into the `getCell(row: number, column:number)` method are the zero-indexed row number and column number for the cell that is being retrieved.</span></span>
+<span data-ttu-id="04052-152">В примере кода ниже показано, как получить ячейку, расположенную в строке 2 и столбце 5 листа **Sample** (Пример), загрузить его свойства `address` и `values` и записать сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="04052-152">The following code sample gets the cell that is located in row 2, column 5 of the worksheet named **Sample**, loads its `address` and `values` properties, and writes a message to the console.</span></span> <span data-ttu-id="04052-153">Значения, передаваемые в метод `getCell(row: number, column:number)`, представляют собой индексируемые с нуля номера строк и столбцов получаемой ячейки.</span><span class="sxs-lookup"><span data-stu-id="04052-153">The values that are passed into the `getCell(row: number, column:number)` method are the zero-indexed row number and column number for the cell that is being retrieved.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -279,11 +297,11 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="detect-data-changes"></a><span data-ttu-id="a74a5-147">Обнаружение изменений данных</span><span class="sxs-lookup"><span data-stu-id="a74a5-147">Detect data changes</span></span>
+## <a name="detect-data-changes"></a><span data-ttu-id="04052-154">Обнаружение изменений данных</span><span class="sxs-lookup"><span data-stu-id="04052-154">Detect data changes</span></span>
 
-<span data-ttu-id="a74a5-148">Возможно, надстройке потребуется реагировать на изменения пользователями данных в листе.</span><span class="sxs-lookup"><span data-stu-id="a74a5-148">Your add-in may need to react to users changing the data in a worksheet.</span></span> <span data-ttu-id="a74a5-149">Чтобы обнаружить эти изменения, можно [зарегистрировать обработчик событий](excel-add-ins-events.md#register-an-event-handler) для события `onChanged` листа.</span><span class="sxs-lookup"><span data-stu-id="a74a5-149">To detect these changes, you can [register an event handler](excel-add-ins-events.md#register-an-event-handler) for the `onChanged` event of a worksheet.</span></span> <span data-ttu-id="a74a5-150">Обработчики события `onChanged` получают объект [WorksheetChangedEventArgs](/javascript/api/excel/excel.worksheetchangedeventargs) при возникновении события.</span><span class="sxs-lookup"><span data-stu-id="a74a5-150">Event handlers for the `onChanged` event receive a [WorksheetChangedEventArgs](/javascript/api/excel/excel.worksheetchangedeventargs) object when the event fires.</span></span>
+<span data-ttu-id="04052-155">Возможно, надстройке потребуется реагировать на изменения пользователями данных в листе.</span><span class="sxs-lookup"><span data-stu-id="04052-155">Your add-in may need to react to users changing the data in a worksheet.</span></span> <span data-ttu-id="04052-156">Чтобы обнаружить эти изменения, можно [зарегистрировать обработчик событий](excel-add-ins-events.md#register-an-event-handler) для события `onChanged` листа.</span><span class="sxs-lookup"><span data-stu-id="04052-156">To detect these changes, you can [register an event handler](excel-add-ins-events.md#register-an-event-handler) for the `onChanged` event of a worksheet.</span></span> <span data-ttu-id="04052-157">Обработчики события `onChanged` получают объект [WorksheetChangedEventArgs](/javascript/api/excel/excel.worksheetchangedeventargs) при возникновении события.</span><span class="sxs-lookup"><span data-stu-id="04052-157">Event handlers for the `onChanged` event receive a [WorksheetChangedEventArgs](/javascript/api/excel/excel.worksheetchangedeventargs) object when the event fires.</span></span>
 
-<span data-ttu-id="a74a5-151">Объект `WorksheetChangedEventArgs` предоставляет сведения об изменениях и источнике.</span><span class="sxs-lookup"><span data-stu-id="a74a5-151">The `WorksheetChangedEventArgs` object provides information about the changes and the source.</span></span> <span data-ttu-id="a74a5-152">Так как событие `onChanged` возникает при изменении формата или значения данных, может быть полезно, чтобы надстройка проверяла, действительно ли значения изменились.</span><span class="sxs-lookup"><span data-stu-id="a74a5-152">Since `onChanged` fires when either the format or value of the data changes, it can be useful to have your add-in check if the values have actually changed.</span></span> <span data-ttu-id="a74a5-153">Свойство `details` объединяет эти сведения в виде интерфейса [ChangedEventDetail](/javascript/api/excel/excel.changedeventdetail).</span><span class="sxs-lookup"><span data-stu-id="a74a5-153">The `details` property encapsulates this information as a [ChangedEventDetail](/javascript/api/excel/excel.changedeventdetail).</span></span> <span data-ttu-id="a74a5-154">В следующем примере кода показано, как отобразить значения и типы измененной ячейки до и после изменения.</span><span class="sxs-lookup"><span data-stu-id="a74a5-154">The following code sample shows how to display the before and after values and types of a cell that has been changed.</span></span>
+<span data-ttu-id="04052-158">Объект `WorksheetChangedEventArgs` предоставляет сведения об изменениях и источнике.</span><span class="sxs-lookup"><span data-stu-id="04052-158">The `WorksheetChangedEventArgs` object provides information about the changes and the source.</span></span> <span data-ttu-id="04052-159">Так как событие `onChanged` возникает при изменении формата или значения данных, может быть полезно, чтобы надстройка проверяла, действительно ли значения изменились.</span><span class="sxs-lookup"><span data-stu-id="04052-159">Since `onChanged` fires when either the format or value of the data changes, it can be useful to have your add-in check if the values have actually changed.</span></span> <span data-ttu-id="04052-160">Свойство `details` объединяет эти сведения в виде интерфейса [ChangedEventDetail](/javascript/api/excel/excel.changedeventdetail).</span><span class="sxs-lookup"><span data-stu-id="04052-160">The `details` property encapsulates this information as a [ChangedEventDetail](/javascript/api/excel/excel.changedeventdetail).</span></span> <span data-ttu-id="04052-161">В следующем примере кода показано, как отобразить значения и типы измененной ячейки до и после изменения.</span><span class="sxs-lookup"><span data-stu-id="04052-161">The following code sample shows how to display the before and after values and types of a cell that has been changed.</span></span>
 
 ```js
 // This function would be used as an event handler for the Worksheet.onChanged event.
@@ -300,31 +318,31 @@ function onWorksheetChanged(eventArgs) {
 }
 ```
 
-## <a name="handle-sorting-events-preview"></a><span data-ttu-id="a74a5-155">Обработка событий сортировки (предварительная версия)</span><span class="sxs-lookup"><span data-stu-id="a74a5-155">Handle sorting events (preview)</span></span>
+## <a name="handle-sorting-events-preview"></a><span data-ttu-id="04052-162">Обработка событий сортировки (предварительная версия)</span><span class="sxs-lookup"><span data-stu-id="04052-162">Handle sorting events (preview)</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="a74a5-156">API для этих событий, связанных с сортировкой, в настоящее время доступны только в общедоступной предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="a74a5-156">The APIs for these sort-related events are currently available only in public preview.</span></span> [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+> <span data-ttu-id="04052-163">API для этих событий, связанных с сортировкой, в настоящее время доступны только в общедоступной предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="04052-163">The APIs for these sort-related events are currently available only in public preview.</span></span> [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
 
-<span data-ttu-id="a74a5-157">События `onColumnSorted` и `onRowSorted` указывают на сортировку любых данных на листе.</span><span class="sxs-lookup"><span data-stu-id="a74a5-157">The `onColumnSorted` and `onRowSorted` events indicate when any worksheet data is sorted.</span></span> <span data-ttu-id="a74a5-158">Эти события связаны с индивидуальными объектами `Worksheet` и с `WorkbookCollection` книги.</span><span class="sxs-lookup"><span data-stu-id="a74a5-158">These events are connected to individual `Worksheet` objects and to the workbook's `WorkbookCollection`.</span></span> <span data-ttu-id="a74a5-159">Они срабатывают при выполнении сортировки (программным образом или вручную с помощью пользовательского интерфейса Excel).</span><span class="sxs-lookup"><span data-stu-id="a74a5-159">They fire whether the sorting is done programmatically or manually through the Excel user interface.</span></span>
+<span data-ttu-id="04052-164">События `onColumnSorted` и `onRowSorted` указывают на сортировку любых данных на листе.</span><span class="sxs-lookup"><span data-stu-id="04052-164">The `onColumnSorted` and `onRowSorted` events indicate when any worksheet data is sorted.</span></span> <span data-ttu-id="04052-165">Эти события связаны с индивидуальными объектами `Worksheet` и с `WorkbookCollection` книги.</span><span class="sxs-lookup"><span data-stu-id="04052-165">These events are connected to individual `Worksheet` objects and to the workbook's `WorkbookCollection`.</span></span> <span data-ttu-id="04052-166">Они срабатывают при выполнении сортировки (программным образом или вручную с помощью пользовательского интерфейса Excel).</span><span class="sxs-lookup"><span data-stu-id="04052-166">They fire whether the sorting is done programmatically or manually through the Excel user interface.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="a74a5-160">Событие `onColumnSorted` срабатывает при сортировке столбцов в результате операции сортировки слева направо.</span><span class="sxs-lookup"><span data-stu-id="a74a5-160">`onColumnSorted` fires when columns are sorted as the result of a left-to-right sort operation.</span></span> <span data-ttu-id="a74a5-161">Событие `onRowSorted` срабатывает при сортировке строк в результате операции сортировки сверху вниз.</span><span class="sxs-lookup"><span data-stu-id="a74a5-161">`onRowSorted` fires when rows are sorted as the result of a top-to-bottom sort operation.</span></span> <span data-ttu-id="a74a5-162">Сортировка таблицы с помощью раскрывающегося меню в заголовке столбца приводит к срабатыванию события `onRowSorted`.</span><span class="sxs-lookup"><span data-stu-id="a74a5-162">Sorting a table using the drop-down menu on a column header results in an `onRowSorted` event.</span></span> <span data-ttu-id="a74a5-163">Событие соответствует перемещаемым данным, а не критериям сортировки.</span><span class="sxs-lookup"><span data-stu-id="a74a5-163">The event corresponds with what is moving, not what is being considered as the sorting criteria.</span></span>
+> <span data-ttu-id="04052-167">Событие `onColumnSorted` срабатывает при сортировке столбцов в результате операции сортировки слева направо.</span><span class="sxs-lookup"><span data-stu-id="04052-167">`onColumnSorted` fires when columns are sorted as the result of a left-to-right sort operation.</span></span> <span data-ttu-id="04052-168">Событие `onRowSorted` срабатывает при сортировке строк в результате операции сортировки сверху вниз.</span><span class="sxs-lookup"><span data-stu-id="04052-168">`onRowSorted` fires when rows are sorted as the result of a top-to-bottom sort operation.</span></span> <span data-ttu-id="04052-169">Сортировка таблицы с помощью раскрывающегося меню в заголовке столбца приводит к срабатыванию события `onRowSorted`.</span><span class="sxs-lookup"><span data-stu-id="04052-169">Sorting a table using the drop-down menu on a column header results in an `onRowSorted` event.</span></span> <span data-ttu-id="04052-170">Событие соответствует перемещаемым данным, а не критериям сортировки.</span><span class="sxs-lookup"><span data-stu-id="04052-170">The event corresponds with what is moving, not what is being considered as the sorting criteria.</span></span>
 
-<span data-ttu-id="a74a5-164">События `onColumnSorted` и `onRowSorted` реализуют функции обратного вызова соответственно с помощью объектов [WorksheetColumnSortedEventArgs](/javascript/api/excel/excel.worksheetcolumnsortedeventargs) и [WorksheetRowSortedEventArgs](/javascript/api/excel/excel.worksheetrowsortedeventargs).</span><span class="sxs-lookup"><span data-stu-id="a74a5-164">The `onColumnSorted` and `onRowSorted` events provide their callbacks with [WorksheetColumnSortedEventArgs](/javascript/api/excel/excel.worksheetcolumnsortedeventargs) or [WorksheetRowSortedEventArgs](/javascript/api/excel/excel.worksheetrowsortedeventargs), respectively.</span></span> <span data-ttu-id="a74a5-165">Эти объекты предоставляют более подробную информацию о событии.</span><span class="sxs-lookup"><span data-stu-id="a74a5-165">These give more details about the event.</span></span> <span data-ttu-id="a74a5-166">В частности, оба `EventArgs` обладают свойством `address`, которое представляет строки или столбцы, перемещенные в результате операции сортировки.</span><span class="sxs-lookup"><span data-stu-id="a74a5-166">In particular, both `EventArgs` have an `address` property that represents the rows or columns moved as a result of the sort operation.</span></span> <span data-ttu-id="a74a5-167">Включаются все ячейки, содержимое которых было отсортировано, даже если значение ячейки не входит в состав критериев сортировки.</span><span class="sxs-lookup"><span data-stu-id="a74a5-167">Any cell with sorted content is included, even if that cell's value was not part of the sorting criteria.</span></span>
+<span data-ttu-id="04052-171">События `onColumnSorted` и `onRowSorted` реализуют функции обратного вызова соответственно с помощью объектов [WorksheetColumnSortedEventArgs](/javascript/api/excel/excel.worksheetcolumnsortedeventargs) и [WorksheetRowSortedEventArgs](/javascript/api/excel/excel.worksheetrowsortedeventargs).</span><span class="sxs-lookup"><span data-stu-id="04052-171">The `onColumnSorted` and `onRowSorted` events provide their callbacks with [WorksheetColumnSortedEventArgs](/javascript/api/excel/excel.worksheetcolumnsortedeventargs) or [WorksheetRowSortedEventArgs](/javascript/api/excel/excel.worksheetrowsortedeventargs), respectively.</span></span> <span data-ttu-id="04052-172">Эти объекты предоставляют более подробную информацию о событии.</span><span class="sxs-lookup"><span data-stu-id="04052-172">These give more details about the event.</span></span> <span data-ttu-id="04052-173">В частности, оба `EventArgs` обладают свойством `address`, которое представляет строки или столбцы, перемещенные в результате операции сортировки.</span><span class="sxs-lookup"><span data-stu-id="04052-173">In particular, both `EventArgs` have an `address` property that represents the rows or columns moved as a result of the sort operation.</span></span> <span data-ttu-id="04052-174">Включаются все ячейки, содержимое которых было отсортировано, даже если значение ячейки не входит в состав критериев сортировки.</span><span class="sxs-lookup"><span data-stu-id="04052-174">Any cell with sorted content is included, even if that cell's value was not part of the sorting criteria.</span></span>
 
-<span data-ttu-id="a74a5-168">На приведенных ниже рисунках показаны диапазоны, возвращенные свойством `address` для событий сортировки.</span><span class="sxs-lookup"><span data-stu-id="a74a5-168">The following images show the ranges returned by the `address` property for sort events.</span></span> <span data-ttu-id="a74a5-169">Вот образец данных до сортировки:</span><span class="sxs-lookup"><span data-stu-id="a74a5-169">First, here is the sample data before sorting:</span></span>
+<span data-ttu-id="04052-175">На приведенных ниже рисунках показаны диапазоны, возвращенные свойством `address` для событий сортировки.</span><span class="sxs-lookup"><span data-stu-id="04052-175">The following images show the ranges returned by the `address` property for sort events.</span></span> <span data-ttu-id="04052-176">Вот образец данных до сортировки:</span><span class="sxs-lookup"><span data-stu-id="04052-176">First, here is the sample data before sorting:</span></span>
 
 ![Данные из таблицы в Excel до сортировки](../images/excel-sort-event-before.png)
 
-<span data-ttu-id="a74a5-171">Если выполнить сортировку сверху вниз для "**Q1**" (значения в "**B**"), `WorksheetRowSortedEventArgs.address` возвращает следующие выделенные строки:</span><span class="sxs-lookup"><span data-stu-id="a74a5-171">If a top-to-bottom sort is performed on "**Q1**" (the values in "**B**"), the following highlighted rows are returned by `WorksheetRowSortedEventArgs.address`:</span></span>
+<span data-ttu-id="04052-178">Если выполнить сортировку сверху вниз для "**Q1**" (значения в "**B**"), `WorksheetRowSortedEventArgs.address` возвращает следующие выделенные строки:</span><span class="sxs-lookup"><span data-stu-id="04052-178">If a top-to-bottom sort is performed on "**Q1**" (the values in "**B**"), the following highlighted rows are returned by `WorksheetRowSortedEventArgs.address`:</span></span>
 
 ![Данные из таблицы в Excel после сортировки сверху вниз.](../images/excel-sort-event-after-row.png)
 
-<span data-ttu-id="a74a5-174">Если выполнить сортировку слева направо для "**Quinces**" (значения в "**4**") в исходных данных, `WorksheetColumnsSortedEventArgs.address` возвращает следующие выделенные столбцы:</span><span class="sxs-lookup"><span data-stu-id="a74a5-174">If a left-to-right sort is performed on "**Quinces**" (the values in "**4**") on the original data, the following highlighted columns are returned by `WorksheetColumnsSortedEventArgs.address`:</span></span>
+<span data-ttu-id="04052-181">Если выполнить сортировку слева направо для "**Quinces**" (значения в "**4**") в исходных данных, `WorksheetColumnsSortedEventArgs.address` возвращает следующие выделенные столбцы:</span><span class="sxs-lookup"><span data-stu-id="04052-181">If a left-to-right sort is performed on "**Quinces**" (the values in "**4**") on the original data, the following highlighted columns are returned by `WorksheetColumnsSortedEventArgs.address`:</span></span>
 
 ![Данные из таблицы в Excel после сортировки слева направо.](../images/excel-sort-event-after-column.png)
 
-<span data-ttu-id="a74a5-177">В приведенном ниже примере кода показано, как зарегистрировать обработчик событий для события `Worksheet.onRowSorted`.</span><span class="sxs-lookup"><span data-stu-id="a74a5-177">The following code sample shows how to register an event handler for the `Worksheet.onRowSorted` event.</span></span> <span data-ttu-id="a74a5-178">Обратный вызов обработчика очищает цвет заливки для диапазона, затем применяет заливку к ячейкам перемещенных строк.</span><span class="sxs-lookup"><span data-stu-id="a74a5-178">The handler's callback clears the fill color for the range, then fills the cells of the moved rows.</span></span>
+<span data-ttu-id="04052-184">В приведенном ниже примере кода показано, как зарегистрировать обработчик событий для события `Worksheet.onRowSorted`.</span><span class="sxs-lookup"><span data-stu-id="04052-184">The following code sample shows how to register an event handler for the `Worksheet.onRowSorted` event.</span></span> <span data-ttu-id="04052-185">Обратный вызов обработчика очищает цвет заливки для диапазона, затем применяет заливку к ячейкам перемещенных строк.</span><span class="sxs-lookup"><span data-stu-id="04052-185">The handler's callback clears the fill color for the range, then fills the cells of the moved rows.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -350,9 +368,9 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="find-all-cells-with-matching-text"></a><span data-ttu-id="a74a5-179">Поиск всех ячеек с соответствующим текстом</span><span class="sxs-lookup"><span data-stu-id="a74a5-179">Find all cells with matching text (preview)</span></span>
+## <a name="find-all-cells-with-matching-text"></a><span data-ttu-id="04052-186">Поиск всех ячеек с соответствующим текстом</span><span class="sxs-lookup"><span data-stu-id="04052-186">Find all cells with matching text</span></span>
 
-<span data-ttu-id="a74a5-180">У объекта `Worksheet` есть метод `find` для поиска указанной строки в листе.</span><span class="sxs-lookup"><span data-stu-id="a74a5-180">The `Worksheet` object has a `find` method to search for a specified string within the worksheet.</span></span> <span data-ttu-id="a74a5-181">Он возвращает объект `RangeAreas`, являющийся коллекцией объектов `Range`, которые можно отредактировать все сразу.</span><span class="sxs-lookup"><span data-stu-id="a74a5-181">It returns a `RangeAreas` object, which is a collection of `Range` objects that can be edited all at once.</span></span> <span data-ttu-id="a74a5-182">Приведенный ниже пример кода находит все ячейки со значениями, соответствующими строке **Complete** (Завершено), и окрашивает их зеленым цветом.</span><span class="sxs-lookup"><span data-stu-id="a74a5-182">The following code sample finds all cells with values equal to the string **Complete** and colors them green.</span></span> <span data-ttu-id="a74a5-183">Обратите внимание, что метод `findAll` выдаст ошибку `ItemNotFound`, если указанной строки не существует в листе.</span><span class="sxs-lookup"><span data-stu-id="a74a5-183">Note that `findAll` will throw an `ItemNotFound` error if the specified string doesn't exist in the worksheet.</span></span> <span data-ttu-id="a74a5-184">Если ожидается, что указанная строка может отсутствовать в листе, используйте вместо этого метод [findAllOrNullObject](excel-add-ins-advanced-concepts.md#ornullobject-methods), чтобы ваш код корректно обработал этот сценарий.</span><span class="sxs-lookup"><span data-stu-id="a74a5-184">If you expect that the specified string may not exist in the worksheet, use the [findAllOrNullObject](excel-add-ins-advanced-concepts.md#ornullobject-methods) method instead, so your code gracefully handles that scenario.</span></span>
+<span data-ttu-id="04052-187">У объекта `Worksheet` есть метод `find` для поиска указанной строки в листе.</span><span class="sxs-lookup"><span data-stu-id="04052-187">The `Worksheet` object has a `find` method to search for a specified string within the worksheet.</span></span> <span data-ttu-id="04052-188">Он возвращает объект `RangeAreas`, являющийся коллекцией объектов `Range`, которые можно отредактировать все сразу.</span><span class="sxs-lookup"><span data-stu-id="04052-188">It returns a `RangeAreas` object, which is a collection of `Range` objects that can be edited all at once.</span></span> <span data-ttu-id="04052-189">Приведенный ниже пример кода находит все ячейки со значениями, соответствующими строке **Complete** (Завершено), и окрашивает их зеленым цветом.</span><span class="sxs-lookup"><span data-stu-id="04052-189">The following code sample finds all cells with values equal to the string **Complete** and colors them green.</span></span> <span data-ttu-id="04052-190">Обратите внимание, что метод `findAll` выдаст ошибку `ItemNotFound`, если указанной строки не существует в листе.</span><span class="sxs-lookup"><span data-stu-id="04052-190">Note that `findAll` will throw an `ItemNotFound` error if the specified string doesn't exist in the worksheet.</span></span> <span data-ttu-id="04052-191">Если ожидается, что указанная строка может отсутствовать в листе, используйте вместо этого метод [findAllOrNullObject](excel-add-ins-advanced-concepts.md#ornullobject-methods), чтобы ваш код корректно обработал этот сценарий.</span><span class="sxs-lookup"><span data-stu-id="04052-191">If you expect that the specified string may not exist in the worksheet, use the [findAllOrNullObject](excel-add-ins-advanced-concepts.md#ornullobject-methods) method instead, so your code gracefully handles that scenario.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -370,20 +388,20 @@ Excel.run(function (context) {
 ```
 
 > [!NOTE]
-> <span data-ttu-id="a74a5-185">В этом разделе описано, как найти ячейки и диапазоны с помощью функций объекта `Worksheet`.</span><span class="sxs-lookup"><span data-stu-id="a74a5-185">This section describes how to find cells and ranges using the `Worksheet` object's functions.</span></span> <span data-ttu-id="a74a5-186">Дополнительные сведения об извлечении диапазонов можно найти в статьях о конкретных объектах.</span><span class="sxs-lookup"><span data-stu-id="a74a5-186">More range retrieval information can be found in object-specific articles.</span></span>
-> - <span data-ttu-id="a74a5-187">Примеры, в которых показано, как получить диапазон в листе с помощью объекта `Range`, см. в статье [Работа с диапазонами с использованием API JavaScript для Excel](excel-add-ins-ranges.md).</span><span class="sxs-lookup"><span data-stu-id="a74a5-187">For examples that show how to get a range within a worksheet using the `Range` object, see [Work with ranges using the Excel JavaScript API](excel-add-ins-ranges.md).</span></span>
-> - <span data-ttu-id="a74a5-188">Примеры, в которых показано, как получить диапазоны из объекта `Table`, см. в статье [Работа с таблицами с использованием API JavaScript для Excel](excel-add-ins-tables.md).</span><span class="sxs-lookup"><span data-stu-id="a74a5-188">For examples that show how to get ranges from a `Table` object, see [Work with tables using the Excel JavaScript API](excel-add-ins-tables.md).</span></span>
-> - <span data-ttu-id="a74a5-189">Примеры, в которых показано, как выполнять поиск большого диапазона для нескольких поддиапазонов с учетом характеристик ячеек, см. в статье [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md).</span><span class="sxs-lookup"><span data-stu-id="a74a5-189">For examples that show how to search a large range for multiple sub-ranges based on cell characteristics, see [Work with multiple ranges simultaneously in Excel add-ins](excel-add-ins-multiple-ranges.md).</span></span>
+> <span data-ttu-id="04052-192">В этом разделе описано, как найти ячейки и диапазоны с помощью функций объекта `Worksheet`.</span><span class="sxs-lookup"><span data-stu-id="04052-192">This section describes how to find cells and ranges using the `Worksheet` object's functions.</span></span> <span data-ttu-id="04052-193">Дополнительные сведения об извлечении диапазонов можно найти в статьях о конкретных объектах.</span><span class="sxs-lookup"><span data-stu-id="04052-193">More range retrieval information can be found in object-specific articles.</span></span>
+> - <span data-ttu-id="04052-194">Примеры, в которых показано, как получить диапазон в листе с помощью объекта `Range`, см. в статье [Работа с диапазонами с использованием API JavaScript для Excel](excel-add-ins-ranges.md).</span><span class="sxs-lookup"><span data-stu-id="04052-194">For examples that show how to get a range within a worksheet using the `Range` object, see [Work with ranges using the Excel JavaScript API](excel-add-ins-ranges.md).</span></span>
+> - <span data-ttu-id="04052-195">Примеры, в которых показано, как получить диапазоны из объекта `Table`, см. в статье [Работа с таблицами с использованием API JavaScript для Excel](excel-add-ins-tables.md).</span><span class="sxs-lookup"><span data-stu-id="04052-195">For examples that show how to get ranges from a `Table` object, see [Work with tables using the Excel JavaScript API](excel-add-ins-tables.md).</span></span>
+> - <span data-ttu-id="04052-196">Примеры, в которых показано, как выполнять поиск большого диапазона для нескольких поддиапазонов с учетом характеристик ячеек, см. в статье [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md).</span><span class="sxs-lookup"><span data-stu-id="04052-196">For examples that show how to search a large range for multiple sub-ranges based on cell characteristics, see [Work with multiple ranges simultaneously in Excel add-ins](excel-add-ins-multiple-ranges.md).</span></span>
 
-## <a name="filter-data"></a><span data-ttu-id="a74a5-190">Фильтрация данных</span><span class="sxs-lookup"><span data-stu-id="a74a5-190">Filter data</span></span>
+## <a name="filter-data"></a><span data-ttu-id="04052-197">Фильтрация данных</span><span class="sxs-lookup"><span data-stu-id="04052-197">Filter data</span></span>
 
-<span data-ttu-id="a74a5-191">Объект [AutoFilter](/javascript/api/excel/excel.autofilter) применяет фильтры данных в диапазоне на листе.</span><span class="sxs-lookup"><span data-stu-id="a74a5-191">An [AutoFilter](/javascript/api/excel/excel.autofilter) applies data filters across a range within the worksheet.</span></span> <span data-ttu-id="a74a5-192">Он создается с помощью метода `Worksheet.autoFilter.apply`, содержащего следующие параметры:</span><span class="sxs-lookup"><span data-stu-id="a74a5-192">This is created with `Worksheet.autoFilter.apply`, which has the following parameters:</span></span>
+<span data-ttu-id="04052-198">Объект [AutoFilter](/javascript/api/excel/excel.autofilter) применяет фильтры данных в диапазоне на листе.</span><span class="sxs-lookup"><span data-stu-id="04052-198">An [AutoFilter](/javascript/api/excel/excel.autofilter) applies data filters across a range within the worksheet.</span></span> <span data-ttu-id="04052-199">Он создается с помощью метода `Worksheet.autoFilter.apply`, содержащего следующие параметры:</span><span class="sxs-lookup"><span data-stu-id="04052-199">This is created with `Worksheet.autoFilter.apply`, which has the following parameters:</span></span>
 
-- <span data-ttu-id="a74a5-193">`range`: диапазон, к которому применяется фильтр, указанный в виде объекта `Range` или строки.</span><span class="sxs-lookup"><span data-stu-id="a74a5-193">`range`: The range to which the filter is applied, specified as either a `Range` object or a string.</span></span>
-- <span data-ttu-id="a74a5-194">`columnIndex`: отсчитываемый от нуля индекс столбца, по которому оценивается условие фильтра.</span><span class="sxs-lookup"><span data-stu-id="a74a5-194">`columnIndex`: The zero-based column index against which the filter criteria is evaluated.</span></span>
-- <span data-ttu-id="a74a5-195">`criteria`: объект [FilterCriteria](/javascript/api/excel/excel.filtercriteria), определяющий, какие строки следует фильтровать на основе ячейки столбца.</span><span class="sxs-lookup"><span data-stu-id="a74a5-195">`criteria`: A [FilterCriteria](/javascript/api/excel/excel.filtercriteria) object determining which rows should be filtered based on the column's cell.</span></span>
+- <span data-ttu-id="04052-200">`range`: диапазон, к которому применяется фильтр, указанный в виде объекта `Range` или строки.</span><span class="sxs-lookup"><span data-stu-id="04052-200">`range`: The range to which the filter is applied, specified as either a `Range` object or a string.</span></span>
+- <span data-ttu-id="04052-201">`columnIndex`: отсчитываемый от нуля индекс столбца, по которому оценивается условие фильтра.</span><span class="sxs-lookup"><span data-stu-id="04052-201">`columnIndex`: The zero-based column index against which the filter criteria is evaluated.</span></span>
+- <span data-ttu-id="04052-202">`criteria`: объект [FilterCriteria](/javascript/api/excel/excel.filtercriteria), определяющий, какие строки следует фильтровать на основе ячейки столбца.</span><span class="sxs-lookup"><span data-stu-id="04052-202">`criteria`: A [FilterCriteria](/javascript/api/excel/excel.filtercriteria) object determining which rows should be filtered based on the column's cell.</span></span>
 
-<span data-ttu-id="a74a5-196">В первом примере кода показано, как добавить фильтр в используемый диапазон на листе.</span><span class="sxs-lookup"><span data-stu-id="a74a5-196">The first code sample shows how to add a filter to the worksheet's used range.</span></span> <span data-ttu-id="a74a5-197">Этот фильтр скрывает записи, не входящие в верхние 25 %, на основе значений в столбце **3**.</span><span class="sxs-lookup"><span data-stu-id="a74a5-197">This filter will hide entries that are not in the top 25%, based on the values in column **3**.</span></span>
+<span data-ttu-id="04052-203">В первом примере кода показано, как добавить фильтр в используемый диапазон на листе.</span><span class="sxs-lookup"><span data-stu-id="04052-203">The first code sample shows how to add a filter to the worksheet's used range.</span></span> <span data-ttu-id="04052-204">Этот фильтр скрывает записи, не входящие в верхние 25 %, на основе значений в столбце **3**.</span><span class="sxs-lookup"><span data-stu-id="04052-204">This filter will hide entries that are not in the top 25%, based on the values in column **3**.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -396,7 +414,7 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a74a5-198">В следующем примере кода показано, как обновить автофильтр, используя метод `reapply`.</span><span class="sxs-lookup"><span data-stu-id="a74a5-198">The next code sample shows how to refresh the auto-filter using the `reapply` method.</span></span> <span data-ttu-id="a74a5-199">Это следует выполнять при изменении данных в диапазоне.</span><span class="sxs-lookup"><span data-stu-id="a74a5-199">This should be done when the data in the range changes.</span></span>
+<span data-ttu-id="04052-205">В следующем примере кода показано, как обновить автофильтр, используя метод `reapply`.</span><span class="sxs-lookup"><span data-stu-id="04052-205">The next code sample shows how to refresh the auto-filter using the `reapply` method.</span></span> <span data-ttu-id="04052-206">Это следует выполнять при изменении данных в диапазоне.</span><span class="sxs-lookup"><span data-stu-id="04052-206">This should be done when the data in the range changes.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -406,7 +424,7 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a74a5-200">В последнем примере кода автофильтра показано, как удалить автофильтр с листа с помощью метода `remove`.</span><span class="sxs-lookup"><span data-stu-id="a74a5-200">The final auto-filter code sample shows how to remove the auto-filter from the worksheet with the `remove` method.</span></span>
+<span data-ttu-id="04052-207">В последнем примере кода автофильтра показано, как удалить автофильтр с листа с помощью метода `remove`.</span><span class="sxs-lookup"><span data-stu-id="04052-207">The final auto-filter code sample shows how to remove the auto-filter from the worksheet with the `remove` method.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -416,11 +434,11 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a74a5-201">Объект `AutoFilter` также можно применять к отдельным таблицам.</span><span class="sxs-lookup"><span data-stu-id="a74a5-201">An `AutoFilter` can also be applied to individual tables.</span></span> <span data-ttu-id="a74a5-202">Дополнительные сведения см. в статье [Работа с таблицами с использованием API JavaScript для Excel](excel-add-ins-tables.md#autofilter).</span><span class="sxs-lookup"><span data-stu-id="a74a5-202">See [Work with tables using the Excel JavaScript API](excel-add-ins-tables.md#autofilter) for more information.</span></span>
+<span data-ttu-id="04052-208">Объект `AutoFilter` также можно применять к отдельным таблицам.</span><span class="sxs-lookup"><span data-stu-id="04052-208">An `AutoFilter` can also be applied to individual tables.</span></span> <span data-ttu-id="04052-209">Дополнительные сведения см. в статье [Работа с таблицами с использованием API JavaScript для Excel](excel-add-ins-tables.md#autofilter).</span><span class="sxs-lookup"><span data-stu-id="04052-209">See [Work with tables using the Excel JavaScript API](excel-add-ins-tables.md#autofilter) for more information.</span></span>
 
-## <a name="data-protection"></a><span data-ttu-id="a74a5-203">Защита данных</span><span class="sxs-lookup"><span data-stu-id="a74a5-203">Data protection</span></span>
+## <a name="data-protection"></a><span data-ttu-id="04052-210">Защита данных</span><span class="sxs-lookup"><span data-stu-id="04052-210">Data protection</span></span>
 
-<span data-ttu-id="a74a5-204">Надстройка может управлять возможностью пользователя по изменению данных на листе.</span><span class="sxs-lookup"><span data-stu-id="a74a5-204">Your add-in can control a user's ability to edit data in a worksheet.</span></span> <span data-ttu-id="a74a5-205">Свойство `protection` листа является объектом [WorksheetProtection](/javascript/api/excel/excel.worksheetprotection) с методом `protect()`.</span><span class="sxs-lookup"><span data-stu-id="a74a5-205">The worksheet's `protection` property is a [WorksheetProtection](/javascript/api/excel/excel.worksheetprotection) object with a `protect()` method.</span></span> <span data-ttu-id="a74a5-206">В приведенном ниже примере показан основной сценарий переключения полной защиты активного листа.</span><span class="sxs-lookup"><span data-stu-id="a74a5-206">The following example shows a basic scenario toggling the complete protection of the active worksheet.</span></span>
+<span data-ttu-id="04052-211">Надстройка может управлять возможностью пользователя по изменению данных на листе.</span><span class="sxs-lookup"><span data-stu-id="04052-211">Your add-in can control a user's ability to edit data in a worksheet.</span></span> <span data-ttu-id="04052-212">Свойство `protection` листа является объектом [WorksheetProtection](/javascript/api/excel/excel.worksheetprotection) с методом `protect()`.</span><span class="sxs-lookup"><span data-stu-id="04052-212">The worksheet's `protection` property is a [WorksheetProtection](/javascript/api/excel/excel.worksheetprotection) object with a `protect()` method.</span></span> <span data-ttu-id="04052-213">В приведенном ниже примере показан основной сценарий переключения полной защиты активного листа.</span><span class="sxs-lookup"><span data-stu-id="04052-213">The following example shows a basic scenario toggling the complete protection of the active worksheet.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -435,18 +453,18 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a74a5-207">Метод `protect` содержит два необязательных параметра:</span><span class="sxs-lookup"><span data-stu-id="a74a5-207">The `protect` method has two optional parameters:</span></span>
+<span data-ttu-id="04052-214">Метод `protect` содержит два необязательных параметра:</span><span class="sxs-lookup"><span data-stu-id="04052-214">The `protect` method has two optional parameters:</span></span>
 
-- <span data-ttu-id="a74a5-208">`options`: объект [WorksheetProtectionOptions](/javascript/api/excel/excel.worksheetprotectionoptions), определяющий конкретные ограничения на редактирование.</span><span class="sxs-lookup"><span data-stu-id="a74a5-208">`options`: A [WorksheetProtectionOptions](/javascript/api/excel/excel.worksheetprotectionoptions) object defining specific editing restrictions.</span></span>
-- <span data-ttu-id="a74a5-209">`password`: строка, представляющая пароль, необходимый пользователю для обхода защиты и редактирования листа.</span><span class="sxs-lookup"><span data-stu-id="a74a5-209">`password`: A string representing the password needed for a user to bypass protection and edit the worksheet.</span></span>
+- <span data-ttu-id="04052-215">`options`: объект [WorksheetProtectionOptions](/javascript/api/excel/excel.worksheetprotectionoptions), определяющий конкретные ограничения на редактирование.</span><span class="sxs-lookup"><span data-stu-id="04052-215">`options`: A [WorksheetProtectionOptions](/javascript/api/excel/excel.worksheetprotectionoptions) object defining specific editing restrictions.</span></span>
+- <span data-ttu-id="04052-216">`password`: строка, представляющая пароль, необходимый пользователю для обхода защиты и редактирования листа.</span><span class="sxs-lookup"><span data-stu-id="04052-216">`password`: A string representing the password needed for a user to bypass protection and edit the worksheet.</span></span>
 
-<span data-ttu-id="a74a5-210">В статье [Защита листа](https://support.office.com/article/protect-a-worksheet-3179efdb-1285-4d49-a9c3-f4ca36276de6) содержатся дополнительные сведения о защите листа и ее изменении с помощью пользовательского интерфейса Excel.</span><span class="sxs-lookup"><span data-stu-id="a74a5-210">The article [Protect a worksheet](https://support.office.com/article/protect-a-worksheet-3179efdb-1285-4d49-a9c3-f4ca36276de6) has more information about worksheet protection and how to change it through the Excel UI.</span></span>
+<span data-ttu-id="04052-217">В статье [Защита листа](https://support.office.com/article/protect-a-worksheet-3179efdb-1285-4d49-a9c3-f4ca36276de6) содержатся дополнительные сведения о защите листа и ее изменении с помощью пользовательского интерфейса Excel.</span><span class="sxs-lookup"><span data-stu-id="04052-217">The article [Protect a worksheet](https://support.office.com/article/protect-a-worksheet-3179efdb-1285-4d49-a9c3-f4ca36276de6) has more information about worksheet protection and how to change it through the Excel UI.</span></span>
 
-## <a name="page-layout-and-print-settings"></a><span data-ttu-id="a74a5-211">Параметры разметки страницы и печати</span><span class="sxs-lookup"><span data-stu-id="a74a5-211">Page layout and print settings</span></span>
+## <a name="page-layout-and-print-settings"></a><span data-ttu-id="04052-218">Параметры разметки страницы и печати</span><span class="sxs-lookup"><span data-stu-id="04052-218">Page layout and print settings</span></span>
 
-<span data-ttu-id="a74a5-212">Надстройкам доступны параметры разметки страницы на уровне листа.</span><span class="sxs-lookup"><span data-stu-id="a74a5-212">Add-ins have access to page layout settings at a worksheet level.</span></span> <span data-ttu-id="a74a5-213">Они управляют печатью листа.</span><span class="sxs-lookup"><span data-stu-id="a74a5-213">These control how the sheet is printed.</span></span> <span data-ttu-id="a74a5-214">У объекта `Worksheet` есть три связанных с разметкой свойства: `horizontalPageBreaks`, `verticalPageBreaks`, `pageLayout`.</span><span class="sxs-lookup"><span data-stu-id="a74a5-214">A `Worksheet` object has three layout-related properties: `horizontalPageBreaks`, `verticalPageBreaks`, `pageLayout`.</span></span>
+<span data-ttu-id="04052-219">Надстройкам доступны параметры разметки страницы на уровне листа.</span><span class="sxs-lookup"><span data-stu-id="04052-219">Add-ins have access to page layout settings at a worksheet level.</span></span> <span data-ttu-id="04052-220">Они управляют печатью листа.</span><span class="sxs-lookup"><span data-stu-id="04052-220">These control how the sheet is printed.</span></span> <span data-ttu-id="04052-221">У объекта `Worksheet` есть три связанных с разметкой свойства: `horizontalPageBreaks`, `verticalPageBreaks`, `pageLayout`.</span><span class="sxs-lookup"><span data-stu-id="04052-221">A `Worksheet` object has three layout-related properties: `horizontalPageBreaks`, `verticalPageBreaks`, `pageLayout`.</span></span>
 
-<span data-ttu-id="a74a5-215">`Worksheet.horizontalPageBreaks` и `Worksheet.verticalPageBreaks` относятся к [PageBreakCollections](/javascript/api/excel/excel.pagebreakcollection).</span><span class="sxs-lookup"><span data-stu-id="a74a5-215">`Worksheet.horizontalPageBreaks` and `Worksheet.verticalPageBreaks` are [PageBreakCollections](/javascript/api/excel/excel.pagebreakcollection).</span></span> <span data-ttu-id="a74a5-216">Это коллекции объектов [PageBreak](/javascript/api/excel/excel.pagebreak), указывающих диапазоны вставки разрывов страниц, добавляемых вручную.</span><span class="sxs-lookup"><span data-stu-id="a74a5-216">These are collections of [PageBreaks](/javascript/api/excel/excel.pagebreak), which specify ranges where manual page breaks are inserted.</span></span> <span data-ttu-id="a74a5-217">В следующем примере кода добавляется горизонтальный разрыв страницы над строкой **21**.</span><span class="sxs-lookup"><span data-stu-id="a74a5-217">The following code sample adds a horizontal page break above row **21**.</span></span>
+<span data-ttu-id="04052-222">`Worksheet.horizontalPageBreaks` и `Worksheet.verticalPageBreaks` относятся к [PageBreakCollections](/javascript/api/excel/excel.pagebreakcollection).</span><span class="sxs-lookup"><span data-stu-id="04052-222">`Worksheet.horizontalPageBreaks` and `Worksheet.verticalPageBreaks` are [PageBreakCollections](/javascript/api/excel/excel.pagebreakcollection).</span></span> <span data-ttu-id="04052-223">Это коллекции объектов [PageBreak](/javascript/api/excel/excel.pagebreak), указывающих диапазоны вставки разрывов страниц, добавляемых вручную.</span><span class="sxs-lookup"><span data-stu-id="04052-223">These are collections of [PageBreaks](/javascript/api/excel/excel.pagebreak), which specify ranges where manual page breaks are inserted.</span></span> <span data-ttu-id="04052-224">В следующем примере кода добавляется горизонтальный разрыв страницы над строкой **21**.</span><span class="sxs-lookup"><span data-stu-id="04052-224">The following code sample adds a horizontal page break above row **21**.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -456,9 +474,9 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a74a5-218">`Worksheet.pageLayout` является объектом [PageLayout](/javascript/api/excel/excel.pagelayout).</span><span class="sxs-lookup"><span data-stu-id="a74a5-218">`Worksheet.pageLayout` is a [PageLayout](/javascript/api/excel/excel.pagelayout) object.</span></span> <span data-ttu-id="a74a5-219">Этот объект содержит параметры разметки и печати, не зависящие от применения конкретного принтера.</span><span class="sxs-lookup"><span data-stu-id="a74a5-219">This object contains layout and print settings that are not dependant any printer-specific implementation.</span></span> <span data-ttu-id="a74a5-220">Эти параметры включают поля, ориентацию, нумерацию страницы, строки заголовков и область печати.</span><span class="sxs-lookup"><span data-stu-id="a74a5-220">These settings include margins, orientation, page numbering, title rows, and print area.</span></span>
+<span data-ttu-id="04052-225">`Worksheet.pageLayout` является объектом [PageLayout](/javascript/api/excel/excel.pagelayout).</span><span class="sxs-lookup"><span data-stu-id="04052-225">`Worksheet.pageLayout` is a [PageLayout](/javascript/api/excel/excel.pagelayout) object.</span></span> <span data-ttu-id="04052-226">Этот объект содержит параметры разметки и печати, не зависящие от применения конкретного принтера.</span><span class="sxs-lookup"><span data-stu-id="04052-226">This object contains layout and print settings that are not dependent any printer-specific implementation.</span></span> <span data-ttu-id="04052-227">Эти параметры включают поля, ориентацию, нумерацию страницы, строки заголовков и область печати.</span><span class="sxs-lookup"><span data-stu-id="04052-227">These settings include margins, orientation, page numbering, title rows, and print area.</span></span>
 
-<span data-ttu-id="a74a5-221">В следующем примере кода страница выравнивается по центру (по вертикали и горизонтали), устанавливается строка заголовка, которая печатается в верхней части каждой страницы, и задается подраздел листа в качестве области печати.</span><span class="sxs-lookup"><span data-stu-id="a74a5-221">The following code sample centers the page (both vertically and horizontally), sets a title row that will be printed at the top of every page, and sets the printed area to a subsection of the worksheet.</span></span>
+<span data-ttu-id="04052-228">В следующем примере кода страница выравнивается по центру (по вертикали и горизонтали), устанавливается строка заголовка, которая печатается в верхней части каждой страницы, и задается подраздел листа в качестве области печати.</span><span class="sxs-lookup"><span data-stu-id="04052-228">The following code sample centers the page (both vertically and horizontally), sets a title row that will be printed at the top of every page, and sets the printed area to a subsection of the worksheet.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -478,6 +496,6 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="see-also"></a><span data-ttu-id="a74a5-222">См. также</span><span class="sxs-lookup"><span data-stu-id="a74a5-222">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="04052-229">См. также</span><span class="sxs-lookup"><span data-stu-id="04052-229">See also</span></span>
 
-- [<span data-ttu-id="a74a5-223">Основные концепции программирования с помощью API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="a74a5-223">Fundamental programming concepts with the Excel JavaScript API</span></span>](excel-add-ins-core-concepts.md)
+- [<span data-ttu-id="04052-230">Основные концепции программирования с помощью API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="04052-230">Fundamental programming concepts with the Excel JavaScript API</span></span>](excel-add-ins-core-concepts.md)
