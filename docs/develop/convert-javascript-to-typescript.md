@@ -1,127 +1,112 @@
 ---
 title: Преобразование проекта надстройки Office в Visual Studio в TypeScript
 description: ''
-ms.date: 08/14/2019
+ms.date: 10/11/2019
 localization_priority: Priority
-ms.openlocfilehash: 29305df541a39ad76655a0f8a848138a369bbf39
-ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
+ms.openlocfilehash: 0a828a3f11a1fcaf71e277bdb667f866ea4ae06a
+ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "36477770"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "37626805"
 ---
-# <a name="convert-an-office-add-in-project-in-visual-studio-to-typescript"></a><span data-ttu-id="375c5-102">Преобразование проекта надстройки Office в Visual Studio в TypeScript</span><span class="sxs-lookup"><span data-stu-id="375c5-102">Convert an Office Add-in project in Visual Studio to TypeScript</span></span>
+# <a name="convert-an-office-add-in-project-in-visual-studio-to-typescript"></a><span data-ttu-id="de828-102">Преобразование проекта надстройки Office в Visual Studio в TypeScript</span><span class="sxs-lookup"><span data-stu-id="de828-102">Convert an Office Add-in project in Visual Studio to TypeScript</span></span>
 
-<span data-ttu-id="375c5-103">Вы можете использовать шаблон надстройки Office в Visual Studio, чтобы создать надстройку с использованием JavaScript, а затем преобразовать этот проект в TypeScript.</span><span class="sxs-lookup"><span data-stu-id="375c5-103">You can use the Office Add-in template in Visual Studio to create an add-in that uses JavaScript, and then convert that add-in project to TypeScript.</span></span> <span data-ttu-id="375c5-104">В этой статье описан процесс преобразования для надстройки Excel.</span><span class="sxs-lookup"><span data-stu-id="375c5-104">This article describes this conversion process for an Excel add-in.</span></span> <span data-ttu-id="375c5-105">Таким же образом в Visual Studio можно преобразовывать и другие проекты надстроек Office из JavaScript в TypeScript.</span><span class="sxs-lookup"><span data-stu-id="375c5-105">You can use the same process to convert other types of Office Add-in projects from JavaScript to TypeScript in Visual Studio.</span></span>
+<span data-ttu-id="de828-103">Вы можете использовать шаблон надстройки Office в Visual Studio, чтобы создать надстройку с использованием JavaScript, а затем преобразовать этот проект в TypeScript.</span><span class="sxs-lookup"><span data-stu-id="de828-103">You can use the Office Add-in template in Visual Studio to create an add-in that uses JavaScript, and then convert that add-in project to TypeScript.</span></span> <span data-ttu-id="de828-104">В этой статье описан процесс преобразования для надстройки Excel.</span><span class="sxs-lookup"><span data-stu-id="de828-104">This article describes this conversion process for an Excel add-in.</span></span> <span data-ttu-id="de828-105">Таким же образом в Visual Studio можно преобразовывать и другие проекты надстроек Office из JavaScript в TypeScript.</span><span class="sxs-lookup"><span data-stu-id="de828-105">You can use the same process to convert other types of Office Add-in projects from JavaScript to TypeScript in Visual Studio.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="375c5-106">Чтобы создать проект надстройки Office на TypeScript без использования Visual Studio, следуйте указаниям из раздела "Генератор Yeoman" любого [5-минутного руководства по началу работы](../index.md) и выберите `TypeScript` по соответствующему запросу [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).</span><span class="sxs-lookup"><span data-stu-id="375c5-106">To create an Office Add-in TypeScript project without using Visual Studio, follow the instructions in the "Any editor" section of any [5-minute quick start](../index.md) and choose `TypeScript` when prompted by the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office).</span></span>
+> <span data-ttu-id="de828-106">Чтобы создать проект надстройки Office на TypeScript без использования Visual Studio, следуйте указаниям из раздела "Генератор Yeoman" любого [5-минутного руководства по началу работы](../index.md) и выберите `TypeScript` по соответствующему запросу [генератора Yeoman для надстроек Office](https://github.com/officedev/generator-office).</span><span class="sxs-lookup"><span data-stu-id="de828-106">To create an Office Add-in TypeScript project without using Visual Studio, follow the instructions in the "Yeoman generator" section of any [5-minute quick start](../index.md) and choose `TypeScript` when prompted by the [Yeoman generator for Office Add-ins](https://github.com/officedev/generator-office).</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="375c5-107">Необходимые условия</span><span class="sxs-lookup"><span data-stu-id="375c5-107">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="de828-107">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="de828-107">Prerequisites</span></span>
 
-- <span data-ttu-id="375c5-108">[Visual Studio 2017](https://www.visualstudio.com/vs/) с установленной рабочей нагрузкой **Разработка надстроек для Office и SharePoint**</span><span class="sxs-lookup"><span data-stu-id="375c5-108">[Visual Studio 2017](https://www.visualstudio.com/vs/) with the **Office/SharePoint development** workload installed</span></span>
-
-    > [!TIP]
-    > <span data-ttu-id="375c5-109">Если вы уже установили Visual Studio 2017, [используйте Visual Studio Installer](/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**.</span><span class="sxs-lookup"><span data-stu-id="375c5-109">If you've previously installed Visual Studio 2017, [use the Visual Studio Installer](/visualstudio/install/modify-visual-studio) to ensure that the **Office/SharePoint development** workload is installed.</span></span> <span data-ttu-id="375c5-110">Если эта рабочая нагрузка еще не установлена, используйте установщик Visual Studio, чтобы [установить ее](/visualstudio/install/modify-visual-studio?view=vs-2017#modify-workloads).</span><span class="sxs-lookup"><span data-stu-id="375c5-110">If this workload is not yet installed, use the Visual Studio Installer to [install it](/visualstudio/install/modify-visual-studio?view=vs-2017#modify-workloads).</span></span>
-
-- <span data-ttu-id="375c5-111">Пакет SDK для TypeScript версии 2.3 или более поздней (для Visual Studio 2017)</span><span class="sxs-lookup"><span data-stu-id="375c5-111">TypeScript SDK version 2.3 or later (for Visual Studio 2017)</span></span>
+- <span data-ttu-id="de828-108">[Visual Studio 2019](https://www.visualstudio.com/vs/) с установленной рабочей нагрузкой **Разработка надстроек для Office и SharePoint**</span><span class="sxs-lookup"><span data-stu-id="de828-108">[Visual Studio 2017](https://www.visualstudio.com/vs/) with the **Office/SharePoint development** workload installed</span></span>
 
     > [!TIP]
-    > <span data-ttu-id="375c5-112">В [установщике Visual Studio](/visualstudio/install/modify-visual-studio) выберите вкладку **Отдельные компоненты** и прокрутите вниз до раздела **Пакеты SDK, библиотеки и платформы**.</span><span class="sxs-lookup"><span data-stu-id="375c5-112">In the [Visual Studio Installer](/visualstudio/install/modify-visual-studio), select the **Individual components** tab and then scroll down to the **SDKs, libraries, and frameworks** section.</span></span> <span data-ttu-id="375c5-113">Убедитесь, что в этом разделе выбран хотя бы один из компонентов **Пакет SDK для TypeScript** (версии 2.3 или более поздней).</span><span class="sxs-lookup"><span data-stu-id="375c5-113">Within that section, ensure that at least one of the **TypeScript SDK** components (version 2.3 or later) is selected.</span></span> <span data-ttu-id="375c5-114">Если не выбран ни один из компонентов **Пакет для TypeScript**, выберите последнюю доступную версию пакета SDK и нажмите кнопку **Изменить**, чтобы [установить этот отдельный компонент](/visualstudio/install/modify-visual-studio?view=vs-2017#modify-individual-components).</span><span class="sxs-lookup"><span data-stu-id="375c5-114">If none of the **TypeScript SDK** components are selected, select the latest available version of the SDK and then choose the **Modify** button to [install that individual component](/visualstudio/install/modify-visual-studio?view=vs-2017#modify-individual-components).</span></span> 
+    > <span data-ttu-id="de828-109">Если вы уже установили Visual Studio 2019, [используйте установщик Visual Studio](/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**.</span><span class="sxs-lookup"><span data-stu-id="de828-109">If you've previously installed Visual Studio 2017, [use the Visual Studio Installer](/visualstudio/install/modify-visual-studio) to ensure that the **Office/SharePoint development** workload is installed.</span></span> <span data-ttu-id="de828-110">Если эта рабочая нагрузка еще не установлена, используйте установщик Visual Studio, чтобы [установить ее](/visualstudio/install/modify-visual-studio?view=vs-2019#modify-workloads).</span><span class="sxs-lookup"><span data-stu-id="de828-110">If this workload is not yet installed, use the Visual Studio Installer to [install it](/visualstudio/install/modify-visual-studio?view=vs-2019#modify-workloads).</span></span>
 
-- <span data-ttu-id="375c5-115">Excel 2016 или более поздней версии</span><span class="sxs-lookup"><span data-stu-id="375c5-115">Excel 2016 or later</span></span>
+- <span data-ttu-id="de828-111">Пакет SDK для TypeScript версии 2.3 или более поздней (для Visual Studio 2019)</span><span class="sxs-lookup"><span data-stu-id="de828-111">TypeScript SDK version 2.3 or later (for Visual Studio 2017)</span></span>
 
-## <a name="create-the-add-in-project"></a><span data-ttu-id="375c5-116">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="375c5-116">Create the add-in project</span></span>
+    > [!TIP]
+    > <span data-ttu-id="de828-112">В [установщике Visual Studio](/visualstudio/install/modify-visual-studio) выберите вкладку **Отдельные компоненты** и прокрутите вниз до раздела **Пакеты SDK, библиотеки и платформы**.</span><span class="sxs-lookup"><span data-stu-id="de828-112">In the [Visual Studio Installer](/visualstudio/install/modify-visual-studio), select the **Individual components** tab and then scroll down to the **SDKs, libraries, and frameworks** section.</span></span> <span data-ttu-id="de828-113">Убедитесь, что в этом разделе выбран хотя бы один из компонентов **Пакет SDK для TypeScript** (версии 2.3 или более поздней).</span><span class="sxs-lookup"><span data-stu-id="de828-113">Within that section, ensure that at least one of the **TypeScript SDK** components (version 2.3 or later) is selected.</span></span> <span data-ttu-id="de828-114">Если не выбран ни один из компонентов **Пакет для TypeScript**, выберите последнюю доступную версию пакета SDK и нажмите кнопку **Изменить**, чтобы [установить этот отдельный компонент](/visualstudio/install/modify-visual-studio?view=vs-2019#modify-individual-components).</span><span class="sxs-lookup"><span data-stu-id="de828-114">If none of the **TypeScript SDK** components are selected, select the latest available version of the SDK and then choose the **Modify** button to [install that individual component](/visualstudio/install/modify-visual-studio?view=vs-2019#modify-individual-components).</span></span> 
 
-1. <span data-ttu-id="375c5-117">Откройте Visual Studio и в строке меню выберите **Файл** > **Создать** > **Проект**.</span><span class="sxs-lookup"><span data-stu-id="375c5-117">Open Visual Studio and on the Visual Studio menu bar, choose  **File** > **New** > **Project**.</span></span>
+- <span data-ttu-id="de828-115">Excel 2016 или более поздней версии</span><span class="sxs-lookup"><span data-stu-id="de828-115">Excel 2016 or later</span></span>
 
-2. <span data-ttu-id="375c5-118">В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, затем выберите **Надстройки** > **Веб-надстройка Excel**.</span><span class="sxs-lookup"><span data-stu-id="375c5-118">In the list of project types under **Visual C#** or **Visual Basic**, expand  **Office/SharePoint**, choose **Add-ins**, and then choose **Excel Web Add-in** as the project type.</span></span> 
+## <a name="create-the-add-in-project"></a><span data-ttu-id="de828-116">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="de828-116">Create the add-in project</span></span>
 
-3. <span data-ttu-id="375c5-119">Укажите имя проекта и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="375c5-119">Name the project, and then choose **OK**.</span></span>
+1. <span data-ttu-id="de828-117">В Visual Studio выберите пункт **Создать проект**.</span><span class="sxs-lookup"><span data-stu-id="de828-117">In Visual Studio, choose **Create a new project**.</span></span>
 
-4. <span data-ttu-id="375c5-120">В диалоговом окне **Создание надстройки Office** выберите **Добавить новые функции в Excel**, а затем нажмите кнопку **Готово**, чтобы создать проект.</span><span class="sxs-lookup"><span data-stu-id="375c5-120">In the **Create Office Add-in** dialog window, choose **Add new functionalities to Excel**, and then choose **Finish** to create the project.</span></span>
+2. <span data-ttu-id="de828-118">Используя поле поиска, введите **надстройка**.</span><span class="sxs-lookup"><span data-stu-id="de828-118">Using the search box, enter **add-in**.</span></span> <span data-ttu-id="de828-119">Выберите вариант **Веб-надстройка Excel** и нажмите кнопку **Далее**.</span><span class="sxs-lookup"><span data-stu-id="de828-119">Choose **Excel Web Add-in**, then select **Next**.</span></span>
 
-5. <span data-ttu-id="375c5-p104">Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.</span><span class="sxs-lookup"><span data-stu-id="375c5-p104">Visual Studio creates a solution and its two projects appear in **Solution Explorer**. The **Home.html** file opens in Visual Studio.</span></span>
+3. <span data-ttu-id="de828-120">Присвойте проекту имя и нажмите кнопку **Создать**.</span><span class="sxs-lookup"><span data-stu-id="de828-120">Name your project and select **Create**.</span></span>
 
-## <a name="convert-the-add-in-project-to-typescript"></a><span data-ttu-id="375c5-123">Преобразование проекта надстройки в TypeScript</span><span class="sxs-lookup"><span data-stu-id="375c5-123">Convert the add-in project to TypeScript</span></span>
+4. <span data-ttu-id="de828-121">В диалоговом окне **Создание надстройки Office** выберите **Добавить новые функции в Excel**, а затем нажмите кнопку **Готово**, чтобы создать проект.</span><span class="sxs-lookup"><span data-stu-id="de828-121">In the **Create Office Add-in** dialog window, choose **Add new functionalities to Excel**, and then choose **Finish** to create the project.</span></span>
 
-1. <span data-ttu-id="375c5-124">В **обозревателе решений** измените имя файла**Home.js** на **Home.ts**.</span><span class="sxs-lookup"><span data-stu-id="375c5-124">In **Solution Explorer**, rename the **Home.js** file to **Home.ts**.</span></span>
+5. <span data-ttu-id="de828-p105">Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.</span><span class="sxs-lookup"><span data-stu-id="de828-p105">Visual Studio creates a solution and its two projects appear in **Solution Explorer**. The **Home.html** file opens in Visual Studio.</span></span>
+
+## <a name="convert-the-add-in-project-to-typescript"></a><span data-ttu-id="de828-124">Преобразование проекта надстройки в TypeScript</span><span class="sxs-lookup"><span data-stu-id="de828-124">Convert the add-in project to TypeScript</span></span>
+
+1. <span data-ttu-id="de828-125">Найдите файл **Home.js** и переименуйте его в **Home.ts**.</span><span class="sxs-lookup"><span data-stu-id="de828-125">Find the **Home.js** file and rename it to **Home.ts**.</span></span>
+
+2. <span data-ttu-id="de828-126">На вкладке **Средства** выберите **Диспетчер пакетов NuGet** и щелкните пункт **Управление пакетами NuGet для решения...**.</span><span class="sxs-lookup"><span data-stu-id="de828-126">From the **Tools** tab, choose **NuGet Package Manager** and then select **Manage NuGet Packages for Solution...**.</span></span>
+
+3. <span data-ttu-id="de828-127">Выбрав вкладку **Обзор**, введите **office-js.TypeScript.DefinitelyTyped** в поле поиска.</span><span class="sxs-lookup"><span data-stu-id="de828-127">With the **Browse** tab selected, enter **office-js.TypeScript.DefinitelyTyped** into the search box.</span></span> <span data-ttu-id="de828-128">Установите или обновите этот пакет, если он уже установлен.</span><span class="sxs-lookup"><span data-stu-id="de828-128">Install or update this package if it is already installed.</span></span> <span data-ttu-id="de828-129">В проект будут добавлены определения типа TypeScript для библиотеки Office.js.</span><span class="sxs-lookup"><span data-stu-id="de828-129">This will add the TypeScript type definitions for the Office.js library to your project.</span></span>
+
+4. <span data-ttu-id="de828-130">В этом же поле поиска введите **jquery.TypeScript.DefinitelyTyped**.</span><span class="sxs-lookup"><span data-stu-id="de828-130">In the same search box, enter **jquery.TypeScript.DefinitelyTyped**.</span></span> <span data-ttu-id="de828-131">Установите или обновите этот пакет, если он уже установлен.</span><span class="sxs-lookup"><span data-stu-id="de828-131">Install or update this package if it is already installed.</span></span> <span data-ttu-id="de828-132">В проект будут добавлены определения TypeScript jQuery.</span><span class="sxs-lookup"><span data-stu-id="de828-132">This will add the jQuery TypeScript definitions into your project.</span></span> <span data-ttu-id="de828-133">Пакеты для jQuery и Office.js теперь будут отображаться в новом файле, созданном Visual Studio, с именем **packages.config**.</span><span class="sxs-lookup"><span data-stu-id="de828-133">The packages for both jQuery and Office.js will now appear in a new file generated by Visual Studio, called **packages.config**.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="375c5-p105">В проекте TypeScript могут быть как файлы TypeScript, так и файлы JavaScript, это не повлияет на компиляцию. Потому что TypeScript — это типизированная расширенная версия языка JavaScript. Код TypeScript компилируется в JavaScript.</span><span class="sxs-lookup"><span data-stu-id="375c5-p105">In your TypeScript project, you can have a mix of TypeScript and JavaScript files and your project will compile. This is because TypeScript is a typed superset of JavaScript that compiles JavaScript.</span></span> 
+    > <span data-ttu-id="de828-p108">В проекте TypeScript могут быть как файлы TypeScript, так и файлы JavaScript, это не повлияет на компиляцию. Потому что TypeScript — это типизированная расширенная версия языка JavaScript. Код TypeScript компилируется в JavaScript.</span><span class="sxs-lookup"><span data-stu-id="de828-p108">In your TypeScript project, you can have a mix of TypeScript and JavaScript files and your project will compile. This is because TypeScript is a typed superset of JavaScript that compiles JavaScript.</span></span>
 
-2. <span data-ttu-id="375c5-127">Нажмите **Да**, чтобы подтвердить изменение расширения имени файла.</span><span class="sxs-lookup"><span data-stu-id="375c5-127">Select **Yes** when prompted to confirm that you want to change file name extension.</span></span>
+5. <span data-ttu-id="de828-136">Откройте файл **Home.ts** и добавьте в его начале следующее объявление:</span><span class="sxs-lookup"><span data-stu-id="de828-136">Open the **Home.ts** file and add the following declaration at the top of the file:</span></span>
 
-3. <span data-ttu-id="375c5-128">Создайте файл с именем **Office.d.ts** в корне проекта веб-приложения.</span><span class="sxs-lookup"><span data-stu-id="375c5-128">Create a new file named **Office.d.ts** in the root of the web application project.</span></span>
-
-4. <span data-ttu-id="375c5-p106">В веб-браузере откройте [файл определений типов для Office.js](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js/index.d.ts). Скопируйте содержимое этого файла в буфер обмена.</span><span class="sxs-lookup"><span data-stu-id="375c5-p106">In a web browser, open the [type definitions file for Office.js](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js/index.d.ts). Copy the contents of this file to your clipboard.</span></span>
-
-5. <span data-ttu-id="375c5-131">В Visual Studio откройте файл **Office.d.ts**, вставьте в него содержимое буфера обмена и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="375c5-131">In Visual Studio, open the **Office.d.ts** file, paste the contents of your clipboard into this file, and save the file.</span></span>
-
-6. <span data-ttu-id="375c5-132">Создайте файл с именем **jQuery.d.ts** в корне проекта веб-приложения.</span><span class="sxs-lookup"><span data-stu-id="375c5-132">Create a new file named **jQuery.d.ts** in the root of the web application project.</span></span>
-
-7. <span data-ttu-id="375c5-p107">В веб-браузере откройте [файл определений типов для jQuery](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/jquery/misc.d.ts). Скопируйте содержимое этого файла в буфер обмена.</span><span class="sxs-lookup"><span data-stu-id="375c5-p107">In a web browser, open the [type definitions file for jQuery](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/jquery/misc.d.ts). Copy the contents of this file to your clipboard.</span></span>
-
-8. <span data-ttu-id="375c5-135">В Visual Studio откройте файл **jQuery.d.ts**, вставьте в него содержимое буфера обмена и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="375c5-135">In Visual Studio, open the **jQuery.d.ts** file, paste the contents of your clipboard into this file, and save the file.</span></span>
-
-9. <span data-ttu-id="375c5-136">В Visual Studio создайте файл с именем **tsconfig.json** в корне проекта веб-приложения.</span><span class="sxs-lookup"><span data-stu-id="375c5-136">In Visual Studio, create a new file named **tsconfig.json** in the root of the web application project.</span></span>
-
-10. <span data-ttu-id="375c5-137">Откройте файл **tsconfig.json**, добавьте в него приведенное ниже содержимое и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="375c5-137">Open the **tsconfig.json** file, add the following content to the file, and save the file:</span></span>
-
-    ```json
-    {
-        "compilerOptions": {
-            "skipLibCheck": true,
-            "lib": [ "es5", "dom", "es2015.promise" ],
-            "sourceMap": true
-        }
-    }
-    ```
-
-11. <span data-ttu-id="375c5-138">Откройте файл **Home.ts** и добавьте в его начале следующее объявление:</span><span class="sxs-lookup"><span data-stu-id="375c5-138">Open the **Home.ts** file and add the following declaration at the top of the file:</span></span>
-
-    ```typescript
+    ```TypeScript
     declare var fabric: any;
     ```
 
-12. <span data-ttu-id="375c5-139">В файле **Home.ts** найдите строку `Office.initialize = function (reason) {` и добавьте строку сразу после нее для полизаполнения глобального объекта `window.Promise`, как показано здесь:</span><span class="sxs-lookup"><span data-stu-id="375c5-139">In the **Home.ts** file, find the line `Office.initialize = function (reason) {` and add a line immediately after it to polyfill the global `window.Promise`, as shown here:</span></span>
+6. <span data-ttu-id="de828-137">В файле **Home.ts** удалите строку `if(!Office.context.requirements.isSetSupported('ExcelApi', '1.1') {` и замените ее указанным ниже кодом:</span><span class="sxs-lookup"><span data-stu-id="de828-137">In **Home.ts**, delete the line `if(!Office.context.requirements.isSetSupported('ExcelApi', '1.1') {` and replace with the following:</span></span>
 
-    ```typescript
+    ```TypeScript
+    if(!Office.context.requirements.isSetSupported('ExcelApi', 1.1) {
+    ```
+
+7. <span data-ttu-id="de828-138">В файле **Home.ts** найдите строку `Office.initialize = function (reason) {` и добавьте строку сразу после нее для полизаполнения глобального объекта `window.Promise`, как показано здесь:</span><span class="sxs-lookup"><span data-stu-id="de828-138">In the **Home.ts** file, find the line `Office.initialize = function (reason) {` and add a line immediately after it to polyfill the global `window.Promise`, as shown here:</span></span>
+
+    ```TypeScript
     Office.initialize = function (reason) {
         // add the following line
         (window as any).Promise = OfficeExtension.Promise;
         ...
     ```
 
-13. <span data-ttu-id="375c5-140">В файле **Home.ts** найдите функцию `displaySelectedCells`, замените всю функцию приведенным ниже кодом и сохраните файл:</span><span class="sxs-lookup"><span data-stu-id="375c5-140">In the **Home.ts** file, find the `displaySelectedCells` function, replace the entire function with the following code, and save the file:</span></span>
+8. <span data-ttu-id="de828-139">В файле **Home.ts** найдите функцию `displaySelectedCells`, замените всю функцию приведенным ниже кодом и сохраните файл:</span><span class="sxs-lookup"><span data-stu-id="de828-139">In the **Home.ts** file, find the `displaySelectedCells` function, replace the entire function with the following code, and save the file:</span></span>
 
-    ```typescript
-    function displaySelectedCells() {
-        Office.context.document.getSelectedDataAsync(Office.CoercionType.Text,
-            null,
-            function (result) {
-                if (result.status === Office.AsyncResultStatus.Succeeded) {
-                    showNotification('The selected text is:', '"' + result.value + '"');
-                } else {
-                    showNotification('Error', result.error.message);
-                }
-            });
-    }
-    ```
+```TypeScript
+function displaySelectedCells() {
+    Office.context.document.getSelectedDataAsync(
+        Office.CoercionType.Text,
+        null,
+        function (result) {
+            if (result.status === Office.AsyncResultStatus.Succeeded) {
+                showNotification('The selected text is:', '"' + result.value + '"');
+            } else {
+                showNotification('Error', result.error.message);
+            }
+        });
+}
+```
 
-## <a name="run-the-converted-add-in-project"></a><span data-ttu-id="375c5-141">Запуск преобразованного проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="375c5-141">Run the converted add-in project</span></span>
+## <a name="run-the-converted-add-in-project"></a><span data-ttu-id="de828-140">Запуск преобразованного проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="de828-140">Run the converted add-in project</span></span>
 
-1. <span data-ttu-id="375c5-p108">В Visual Studio нажмите клавишу **F5** или кнопку **Запустить**, чтобы запустить Excel с кнопкой **Показать область задач** на ленте. Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="375c5-p108">In Visual Studio, press **F5** or choose the **Start** button to launch Excel with the **Show Taskpane** add-in button displayed in the ribbon. The add-in will be hosted locally on IIS.</span></span>
+1. <span data-ttu-id="de828-p109">В Visual Studio нажмите клавишу **F5** или кнопку **Запустить**, чтобы запустить Excel с кнопкой **Показать область задач** на ленте. Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="de828-p109">In Visual Studio, press **F5** or choose the **Start** button to launch Excel with the **Show Taskpane** add-in button displayed in the ribbon. The add-in will be hosted locally on IIS.</span></span>
 
-2. <span data-ttu-id="375c5-144">В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="375c5-144">In Excel, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
+2. <span data-ttu-id="de828-143">В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="de828-143">In Excel, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
 
-3. <span data-ttu-id="375c5-145">Выберите на листе девять ячеек, содержащих числа.</span><span class="sxs-lookup"><span data-stu-id="375c5-145">In the worksheet, select the nine cells that contain numbers.</span></span>
+3. <span data-ttu-id="de828-144">Выберите на листе девять ячеек, содержащих числа.</span><span class="sxs-lookup"><span data-stu-id="de828-144">In the worksheet, select the nine cells that contain numbers.</span></span>
 
-4. <span data-ttu-id="375c5-146">Нажмите кнопку **Highlight** (Выделить) в области задач, чтобы выделить в выбранном диапазоне ячейку, содержащую самое большое значение.</span><span class="sxs-lookup"><span data-stu-id="375c5-146">Press the **Highlight** button on the task pane to highlight the cell in the selected range that contains the highest value.</span></span>
+4. <span data-ttu-id="de828-145">Нажмите кнопку **Highlight** (Выделить) в области задач, чтобы выделить в выбранном диапазоне ячейку, содержащую самое большое значение.</span><span class="sxs-lookup"><span data-stu-id="de828-145">Press the **Highlight** button on the task pane to highlight the cell in the selected range that contains the highest value.</span></span>
 
-## <a name="homets-code-file"></a><span data-ttu-id="375c5-147">Файл с кодом Home.ts</span><span class="sxs-lookup"><span data-stu-id="375c5-147">Home.ts code file</span></span>
+## <a name="homets-code-file"></a><span data-ttu-id="de828-146">Файл с кодом Home.ts</span><span class="sxs-lookup"><span data-stu-id="de828-146">Home.ts code file</span></span>
 
-<span data-ttu-id="375c5-p109">Для справки в приведенном ниже фрагменте кода показано содержимое файла **Home.ts** после применения вышеописанных изменений. Этот код включает минимальное количество изменений, необходимое для запуска надстройки.</span><span class="sxs-lookup"><span data-stu-id="375c5-p109">For your reference, the following code snippet shows the contents of the **Home.ts** file after the previously described changes have been applied. This code includes the minimum number of changes needed in order for your add-in to run.</span></span>
+<span data-ttu-id="de828-p110">Для справки в приведенном ниже фрагменте кода показано содержимое файла **Home.ts** после применения вышеописанных изменений. Этот код включает минимальное количество изменений, необходимое для запуска надстройки.</span><span class="sxs-lookup"><span data-stu-id="de828-p110">For your reference, the following code snippet shows the contents of the **Home.ts** file after the previously described changes have been applied. This code includes the minimum number of changes needed in order for your add-in to run.</span></span>
 
 ```typescript
 declare var fabric: any;
@@ -252,7 +237,7 @@ declare var fabric: any;
 })();
 ```
 
-## <a name="see-also"></a><span data-ttu-id="375c5-150">См. также</span><span class="sxs-lookup"><span data-stu-id="375c5-150">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de828-149">См. также</span><span class="sxs-lookup"><span data-stu-id="de828-149">See also</span></span>
 
-* [<span data-ttu-id="375c5-151">Обсуждение реализации обещаний на сайте StackOverflow</span><span class="sxs-lookup"><span data-stu-id="375c5-151">Promise implementation discussion on StackOverflow</span></span>](https://stackoverflow.com/questions/44461312/office-addins-file-in-its-typescript-version-doesnt-work)
-* [<span data-ttu-id="375c5-152">Примеры надстроек Office на сайте GitHub</span><span class="sxs-lookup"><span data-stu-id="375c5-152">Office Add-in samples on GitHub</span></span>](https://github.com/officedev)
+* [<span data-ttu-id="de828-150">Обсуждение реализации обещаний на сайте StackOverflow</span><span class="sxs-lookup"><span data-stu-id="de828-150">Promise implementation discussion on StackOverflow</span></span>](https://stackoverflow.com/questions/44461312/office-addins-file-in-its-typescript-version-doesnt-work)
+* [<span data-ttu-id="de828-151">Примеры надстроек Office на сайте GitHub</span><span class="sxs-lookup"><span data-stu-id="de828-151">Office Add-in samples on GitHub</span></span>](https://github.com/officedev)
