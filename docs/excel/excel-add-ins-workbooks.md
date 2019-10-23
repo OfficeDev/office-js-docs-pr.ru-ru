@@ -1,14 +1,14 @@
 ---
 title: Работа с книгами с использованием API JavaScript для Excel
 description: ''
-ms.date: 09/26/2019
+ms.date: 10/21/2019
 localization_priority: Priority
-ms.openlocfilehash: 66e531a382d467326e5132e60f06c98d414dbb16
-ms.sourcegitcommit: 528577145b2cf0a42bc64c56145d661c4d019fb8
+ms.openlocfilehash: 76f1a82b22fabaab63f5dc791656720ce82250c9
+ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "37353876"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "37626826"
 ---
 # <a name="work-with-workbooks-using-the-excel-javascript-api"></a>Работа с книгами с использованием API JavaScript для Excel
 
@@ -75,7 +75,7 @@ reader.readAsDataURL(myFile.files[0]);
 ### <a name="insert-a-copy-of-an-existing-workbook-into-the-current-one-preview"></a>Вставьте копию существующей книги в текущую (предварительная версия)
 
 > [!NOTE]
-> Метод `WorksheetCollection.addFromBase64` в настоящее время доступен только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+> В настоящее время метод `WorksheetCollection.addFromBase64` доступен только в общедоступной предварительной версии и только в Office для Windows и Mac. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
 
 В предыдущем примере показана новая книга, которая была создана из существующей книги. Вы также можете скопировать отдельные части или всю существующую книгу целиком в книгу, привязанную в настоящее время к вашей надстройке. [WorksheetCollection](/javascript/api/excel/excel.worksheetcollection) для книги имеет метод `addFromBase64` для вставки копий листов целевой книги в саму книгу. Файл другой книги передается в виде строки в кодировке base64, как и вызов `Excel.createWorkbook`.
 
@@ -261,54 +261,6 @@ API Excel также позволяет надстройкам отключит�
 ```js
 context.application.suspendApiCalculationUntilNextSync();
 ```
-
-## <a name="comments-preview"></a>Примечания (предварительная версия)
-
-> [!NOTE]
-> API примечаний в настоящее время доступны только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
-
-Все [примечания](https://support.office.com/article/insert-comments-and-notes-in-excel-bdcc9f5d-38e2-45b4-9a92-0b2b5c7bf6f8) в книге отслеживаются свойством `Workbook.comments`. Это касается примечаний, созданных пользователями, а также примечаний, созданных вашей надстройкой. Свойство `Workbook.comments` является объектом [CommentCollection](/javascript/api/excel/excel.commentcollection), содержащим коллекцию объектов [Comment](/javascript/api/excel/excel.comment).
-
-Чтобы добавить примечания в книгу, используйте метод `CommentCollection.add`, передающий ячейку, в которую будет добавлено примечание, в виде строки или объекта [Range](/javascript/api/excel/excel.range), а текст примечания — в виде строки. В следующем примере кода добавляется примечание в ячейку **A2**.
-
-```js
-Excel.run(function (context) {
-    var comments = context.workbook.comments;
-
-    // Note that an InvalidArgument error will be thrown if multiple cells passed to `Comment.add`.
-    comments.add("A2", "TODO: add data.");
-    return context.sync();
-});
-```
-
-Каждое примечание содержит метаданные о его создании, например автора и дату создания. Автором примечаний, созданных вашей надстройкой, считается текущий пользователь. В следующем примере показано, как отобразить электронную почту автора, имя автора и дату создания примечания в ячейке **A2**.
-
-```js
-Excel.run(function (context) {
-    // Get the comment at cell A2.
-    var comment = context.workbook.comments.getItemByCell("Comments!A2");
-    comment.load(["authorEmail", "authorName", "creationDate"]);
-    return context.sync().then(function () {
-        console.log(`${comment.creationDate.toDateString()}: ${comment.authorName} (${comment.authorEmail})`);
-    });
-});
-```
-
-Каждое примечание содержит ноль или больше ответов. Объекты `Comment` содержат свойство `replies`, являющееся коллекцией [CommentReplyCollection](/javascript/api/excel/excel.commentreplycollection), содержащей объекты [CommentReply](/javascript/api/excel/excel.commentreply). Чтобы добавить ответ на примечание, используйте метод `CommentReplyCollection.add`, передающий текст ответа. Ответы отображаются в порядке их добавления. В следующем примере кода добавляется ответ к первому примечанию в книге.
-
-```js
-Excel.run(function (context) {
-    // Get the first comment added to the workbook.
-    var comment = context.workbook.comments.getItemAt(0);
-    comment.replies.add("Thanks for the reminder!");
-    return context.sync();
-});
-```
-
-Чтобы изменить примечание или ответ на примечание, настройте его свойство `Comment.content` или `CommentReply.content`. Чтобы удалить примечание или ответ на примечание, используйте метод `Comment.delete` или `CommentReply.delete`. Удаление примечания также удаляет все ответы, связанные с ним.
-
-> [!TIP]
-> Примечаниями также можно управлять на уровне [листа](/javascript/api/excel/excel.worksheet), используя аналогичные способы.
 
 ## <a name="save-the-workbook-preview"></a>Сохранение книги (предварительная версия)
 
