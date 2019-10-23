@@ -1,14 +1,14 @@
 ---
 title: Локализация надстроек для Office
 description: Вы можете использовать API JavaScript для Office, чтобы определить языковой стандарт и отображать строки, основываясь на языковом стандарте ведущего приложения, либо интерпретировать или отображать данные на основе языкового стандарта данных.
-ms.date: 06/20/2019
+ms.date: 10/11/2019
 localization_priority: Normal
-ms.openlocfilehash: de0037c687e49b79acb90ff59f1babc9da1f13f5
-ms.sourcegitcommit: b3996b1444e520b44cf752e76eef50908386ca26
+ms.openlocfilehash: c2404177f2188a505522d972d5bdfdf323394eba
+ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "35575564"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "37626770"
 ---
 # <a name="localization-for-office-add-ins"></a>Локализация надстроек Office
 
@@ -172,7 +172,7 @@ API JavaScript для Office предоставляет два свойства,
 В этом разделе представлены примеры того, как локализовать описание, отображаемое имя и пользовательский интерфейс Надстройка Office. 
 
 > [!NOTE]
-> Чтобы скачать Visual Studio 2017, перейдите на [страницу интегрированной среды разработки Visual Studio](https://visualstudio.microsoft.com/vs/). Во время установки потребуется выбрать рабочую нагрузку разработки Office и SharePoint.
+> Чтобы скачать Visual Studio 2019, посетите [страницу Visual Studio IDE](https://visualstudio.microsoft.com/vs/). Во время установки потребуется выбрать рабочую нагрузку разработки для Office и SharePoint.
 
 ### <a name="configure-office-to-use-additional-languages-for-display-or-editing"></a>Настройка Office на использование дополнительных языков для отображения или редактирования
 
@@ -184,15 +184,19 @@ API JavaScript для Office предоставляет два свойства,
 
 ### <a name="create-an-office-add-in-project"></a>Создание проекта надстройки Office
 
-Необходимо создать проект надстройки Office в Visual Studio 2017.
+Вам потребуется создать проект надстройки Office для Visual Studio 2019.
 
 > [!NOTE]
-> Если вы еще не установили Visual Studio 2017, см. инструкции по скачиванию на [странице интегрированной среды разработки Visual Studio](https://visualstudio.microsoft.com/vs/). Во время установки потребуется выбрать рабочую нагрузку разработки для Office и SharePoint. Если вы уже установили Visual Studio 2017, [используйте установщик Visual Studio](/visualstudio/install/modify-visual-studio/), чтобы убедиться, что также установлена рабочая нагрузка разработки для Office и SharePoint.
+> Если вы не установили Visual Studio 2019, посетите [страницу IDE Visual Studio](https://visualstudio.microsoft.com/vs/) , чтобы получить инструкции по загрузке. Во время установки потребуется выбрать рабочую нагрузку разработки Office и SharePoint. Если вы уже установили Visual Studio 2019, [Используйте установщик Visual Studio](/visualstudio/install/modify-visual-studio/) , чтобы убедиться в том, что Рабочая нагрузка разработки Office и SharePoint установлена.
 
+1. Выберите **создать новый проект**.
 
-1. В Visual Studio выберите команду **Файл** > **Создать проект**.
-2. В диалоговом окне **Создание проекта** разверните узел  **Visual Basic** или **Visual C#**, узел **Office/SharePoint**, а затем выберите **Надстройки**.
-3. Выберите **Надстройка Word** и присвойте надстройке имя **WorldReadyAddIn**. Нажмите кнопку **ОК**.
+2. В поле Поиск введите **надстройка**. Выберите пункт **веб-надстройка Word**, а затем нажмите кнопку **Далее**.
+
+3. Назовите проект **WorldReadyAddIn** и нажмите кнопку **создать**.
+
+4. Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.
+
 
 ### <a name="localize-the-text-used-in-your-add-in"></a>Локализация текста, используемого в вашей надстройке
 

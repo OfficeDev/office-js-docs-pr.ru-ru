@@ -1,15 +1,15 @@
 ---
 title: Руководство по надстройкам PowerPoint
 description: Из этого руководства вы узнаете, как создать надстройку PowerPoint, которая вставляет изображение и текст, получает метаданные слайда и выполняет переход между слайдами.
-ms.date: 12/31/2018
+ms.date: 10/17/2019
 ms.prod: powerpoint
 localization_priority: Normal
-ms.openlocfilehash: 0ffd3eedf0cb1d3a118edd0a22b3066cc396d320
-ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
+ms.openlocfilehash: 8f1b67341c2d796ff9213682e7ee759995f915f2
+ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "36696031"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "37627113"
 ---
 # <a name="tutorial-create-a-powerpoint-task-pane-add-in"></a>Учебник: Создание надстройки области задач PowerPoint
 
@@ -29,11 +29,11 @@ ms.locfileid: "36696031"
 
 Выполните указанные ниже действия, чтобы создать проект надстройки PowerPoint с помощью Visual Studio.
 
-1. В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.
-    
-2. В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, затем выберите **Надстройки** > **Веб-надстройка PowerPoint**. 
+1. Выберите **создать новый проект**.
 
-3. Назовите проект **HelloWorld** и нажмите кнопку **ОК**.
+2. В поле Поиск введите **надстройка**. Выберите **веб-Надстройка PowerPoint**, а затем нажмите кнопку **Далее**.
+
+3. Назовите проект и нажмите кнопку **создать**.
 
 4. В диалоговом окне **Создание надстройки Office** выберите **Добавить новые функции в PowerPoint**, а затем нажмите кнопку **Готово**, чтобы создать проект.
 

@@ -1,14 +1,14 @@
 ---
 title: Создание первой надстройки области задач для Microsoft Project с помощью текстового редактора
 description: ''
-ms.date: 09/26/2019
+ms.date: 10/11/2019
 localization_priority: Normal
-ms.openlocfilehash: 36e2688240ad348669e7d6845f371997cd3c3ec2
-ms.sourcegitcommit: b3996b1444e520b44cf752e76eef50908386ca26
+ms.openlocfilehash: 4834567d88369fdc9b67a5a7e62a996384b131e5
+ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "37524278"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "37626994"
 ---
 # <a name="create-your-first-task-pane-add-in-for-microsoft-project-by-using-a-text-editor"></a>Создание первой надстройки области задач для Microsoft Project с помощью текстового редактора
 
@@ -71,7 +71,7 @@ ms.locfileid: "37524278"
 
 1. Создайте HTML-файл с именем, указанным в элементе **SourceLocation** манифеста JSOM_SimpleOMCalls.xml. 
 
-   Например, создайте файл JSOMCall.html в каталоге `C:\Project\AppSource`. Хотя вы можете создавать исходные файлы с помощью простого текстового редактора, проще использовать такой инструмент, как Visual Studio Code, который работает с определенными типами документов (например, HTML и JavaScript) и содержит различные вспомогательные компоненты, упрощающие редактирование. Если вы еще не создавали пример с поиском Bing, описанный в статье [Надстройки области задач для Project](../project/project-add-ins.md), просмотрите процедуру 3, чтобы узнать, как создавать общую папку `\\ServerName\AppSource`, на которую указывает манифест.
+   Например, создайте файл JSOMCall.html в каталоге `C:\Project\AppSource`. Несмотря на то что вы можете использовать простой текстовый редактор для создания исходных файлов, проще использовать такие средства, как Visual Studio Code, которые работают с определенными типами документов (например, HTML и JavaScript), и с другими вспомогательными средствами редактирования. Если вы еще не создавали пример с поиском Bing, описанный в статье [Надстройки области задач для Project](../project/project-add-ins.md), просмотрите процедуру 3, чтобы узнать, как создавать общую папку `\\ServerName\AppSource`, на которую указывает манифест.
 
    Файл JSOMCall.html использует общий файл MicrosoftAjax.js для функций AJAX, а файл Office.js — для функций надстройки в приложениях Microsoft Office 2013.
 

@@ -1,7 +1,7 @@
-- [Visual Studio 2017](https://www.visualstudio.com/vs/) с установленной рабочей нагрузкой **Разработка надстроек для Office и SharePoint**
+- [Visual Studio 2019](https://www.visualstudio.com/vs/) с установленной рабочей нагрузкой **Office/SharePoint**
 
     > [!NOTE]
-    > Если вы уже установили Visual Studio 2017, [используйте установщик Visual Studio](/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**. 
+    > Если вы уже установили Visual Studio 2019, [Используйте установщик Visual Studio](/visualstudio/install/modify-visual-studio) , чтобы убедиться в том, что Рабочая нагрузка **разработки Office и SharePoint** установлена. 
 
 - Office 2016 или более поздние версии
 
