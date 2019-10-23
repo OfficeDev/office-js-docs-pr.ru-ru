@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Excel
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office.
-ms.date: 09/18/2019
+ms.date: 10/17/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 6f5b78e1ffb154eb014bb4bb0ef8cb7135b2012f
-ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
+ms.openlocfilehash: 3ade0eb77f525ebd593a475736ab81742d915b94
+ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "37035324"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "37626973"
 ---
 # <a name="build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel
 
@@ -72,11 +72,12 @@ ms.locfileid: "37035324"
 
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
-1. В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.
 
-2. В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, затем выберите **Надстройки** > **Веб-надстройка Excel**. 
+1. В Visual Studio выберите пункт **Создать проект**.
 
-3. Укажите имя проекта и нажмите кнопку **ОК**.
+2. Используя поле поиска, введите **надстройка**. Выберите вариант **Веб-надстройка Excel** и нажмите кнопку **Далее**.
+
+3. Присвойте проекту имя и нажмите кнопку **Создать**.
 
 4. В диалоговом окне **Создание надстройки Office** выберите **Добавить новые функции в Excel**, а затем нажмите кнопку **Готово**, чтобы создать проект.
 

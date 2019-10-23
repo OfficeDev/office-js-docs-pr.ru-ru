@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Word
 description: Узнайте, как создать простую надстройку области задач Word, используя API JS для Office.
-ms.date: 09/18/2019
+ms.date: 10/17/2019
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 1648e6ee50d45fa4811766a56ad55896267d66f8
-ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
+ms.openlocfilehash: 87f2e4d46748328461529fd41ea11b109fe4785e
+ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "37035310"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "37626873"
 ---
 # <a name="build-your-first-word-task-pane-add-in"></a>Создание первой надстройки области задач Word
 
@@ -96,11 +96,12 @@ _Область применения: Word 2016 и более поздних в
 
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
-1. В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.
 
-2. В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, а затем выберите **Надстройки** > **Веб-надстройка Word**. 
+1. В Visual Studio выберите пункт **Создать проект**.
 
-3. Укажите имя проекта и нажмите кнопку **ОК**.
+2. Используя поле поиска, введите **надстройка**. Выберите вариант **Веб-надстройка Word** и нажмите кнопку **Далее**.
+
+3. Присвойте проекту имя и нажмите кнопку **Создать**.
 
 4. Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.
 

@@ -1,14 +1,14 @@
 ---
 title: Office.context.mailbox — набор обязательных элементов 1.5
 description: ''
-ms.date: 08/30/2019
+ms.date: 10/21/2019
 localization_priority: Priority
-ms.openlocfilehash: 62834db09742f2f11eb73d571f22c7a249f36763
-ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
+ms.openlocfilehash: bb63d8186d41d072aa62b180b16958d61ce9a66c
+ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "36696101"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "37627015"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -478,7 +478,11 @@ Office.context.mailbox.displayNewAppointmentForm(
 Метод `getCallbackTokenAsync` совершает асинхронный вызов, чтобы получить непрозрачный маркер с сервера Exchange Server, на котором размещен почтовый ящик пользователя. Время существования маркера обратного вызова составляет 5 минут.
 
 > [!NOTE]
-> Рекомендуем сделать так, чтобы по мере возможности надстройки использовали интерфейсы REST API, а не веб-службы Exchange. 
+> Рекомендуем сделать так, чтобы по мере возможности надстройки использовали интерфейсы REST API, а не веб-службы Exchange.
+
+Для вызова метода `getCallbackTokenAsync` в режиме чтения требуется минимальный уровень разрешения **ReadItem**.
+
+Для вызова `getCallbackTokenAsync` в режиме создания сообщения требуется сохранить элемент. Для метода [`saveAsync`](Office.context.mailbox.item.md#saveasyncoptions-callback) требуется минимальный уровень разрешения **ReadWriteItem**.
 
 **Маркеры REST**
 
@@ -491,6 +495,8 @@ Office.context.mailbox.displayNewAppointmentForm(
 Если запрашивается маркер EWS (`options.isRest = false`), полученный маркер не подойдет для проверки подлинности при вызовах REST API. Область действия маркера будет ограничена доступом к текущему элементу.
 
 С помощью свойства `ewsUrl` надстройка должна определить правильный URL-адрес для вызовов EWS.
+
+Вы можете передать сторонней системе маркер и идентификатор вложения или элемента. Сторонняя система использует этот маркер как маркер авторизации, чтобы вызвать операцию [GetAttachment](/exchange/client-developer/web-service-reference/getattachment-operation) или [GetItem](/exchange/client-developer/web-service-reference/getitem-operation) веб-служб Exchange для возврата вложения или элемента. Например, вы можете создать удаленную службу, чтобы [получить вложения из выбранного элемента](/outlook/add-ins/get-attachments-of-an-outlook-item).
 
 ##### <a name="parameters"></a>Параметры
 
@@ -547,9 +553,9 @@ function cb(asyncResult) {
 
 Вы можете передать сторонней системе маркер и идентификатор вложения или элемента. Сторонняя система использует этот маркер как маркер авторизации, чтобы вызвать операцию [GetAttachment](/exchange/client-developer/web-service-reference/getattachment-operation) или [GetItem](/exchange/client-developer/web-service-reference/getitem-operation) веб-служб Exchange для возврата вложения или элемента. Например, вы можете создать удаленную службу, чтобы [получить вложения из выбранного элемента](/outlook/add-ins/get-attachments-of-an-outlook-item).
 
-Для вызова метода `getCallbackTokenAsync` в режиме чтения манифесте приложения должно быть указано разрешение **ReadItem**.
+Для вызова метода `getCallbackTokenAsync` в режиме чтения требуется минимальный уровень разрешения **ReadItem**.
 
-Чтобы получить идентификатор элемента для передачи в метод `getCallbackTokenAsync`, в режиме создания необходимо вызвать метод [`saveAsync`](Office.context.mailbox.item.md#saveasyncoptions-callback). Для вызова метода `saveAsync` приложение должно иметь разрешения **ReadWriteItem**.
+Для вызова `getCallbackTokenAsync` в режиме создания сообщения требуется сохранить элемент. Для метода [`saveAsync`](Office.context.mailbox.item.md#saveasyncoptions-callback) требуется минимальный уровень разрешения **ReadWriteItem**.
 
 ##### <a name="parameters"></a>Параметры
 
@@ -568,11 +574,11 @@ function cb(asyncResult) {
 
 ##### <a name="requirements"></a>Требования
 
-|Требование| Значение|
-|---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание и чтение|
+|Требование|||
+|---|---|---|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0 | 1.3 |
+|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem | ReadItem |
+|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение | Создание |
 
 ##### <a name="example"></a>Пример
 

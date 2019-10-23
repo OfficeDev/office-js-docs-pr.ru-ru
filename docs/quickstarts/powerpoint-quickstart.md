@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач PowerPoint
 description: Узнайте, как создать простую надстройку области задач PowerPoint, используя API JS для Office.
-ms.date: 09/18/2019
+ms.date: 10/17/2019
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: 62e11129a35a802b8f4088a93687d631c0af2ff4
-ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
+ms.openlocfilehash: f5fed49632a5e71075cd71e53a74290fdca05614
+ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "37035318"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "37626903"
 ---
 # <a name="build-your-first-powerpoint-task-pane-add-in"></a>Создание первой надстройки области задач PowerPoint
 
@@ -94,11 +94,11 @@ ms.locfileid: "37035318"
 
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
-1. В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.
-    
-2. В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, затем выберите **Надстройки** > **Веб-надстройка PowerPoint**. 
+1. В Visual Studio выберите пункт **Создать проект**.
 
-3. Укажите имя проекта и нажмите кнопку **OK**.
+2. Используя поле поиска, введите **надстройка**. Выберите вариант **Веб-надстройка PowerPoint** и нажмите кнопку **Далее**.
+
+3. Присвойте проекту имя и нажмите кнопку **Создать**.
 
 4. В диалоговом окне **Создание надстройки Office** выберите **Добавить новые функции в PowerPoint**, а затем нажмите кнопку **Готово**, чтобы создать проект.
 
