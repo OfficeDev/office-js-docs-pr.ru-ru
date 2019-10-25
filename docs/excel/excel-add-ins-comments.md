@@ -1,19 +1,16 @@
 ---
-title: Работать с комментариями с помощью API JavaScript для Excel (Предварительная версия)
+title: Работайте с комментариями с помощью API JavaScript для Excel
 description: ''
-ms.date: 10/16/2019
+ms.date: 10/22/2019
 localization_priority: Normal
-ms.openlocfilehash: f289808245b64de34f03f4d105dd363c2aa84bc7
-ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
+ms.openlocfilehash: d79f99d1922def58fe2c8887d01ec5a2b173220a
+ms.sourcegitcommit: 5ba325cc88183a3f230cd89d615fd49c695addcf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "37627039"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "37681916"
 ---
-# <a name="work-with-comments-using-the-excel-javascript-api-preview"></a>Работать с комментариями с помощью API JavaScript для Excel (Предварительная версия)
-
-> [!NOTE]
-> API примечаний в настоящее время доступны только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+# <a name="work-with-comments-using-the-excel-javascript-api"></a>Работайте с комментариями с помощью API JavaScript для Excel
 
 В этой статье описывается, как добавлять, читать, изменять и удалять комментарии в книге с помощью API JavaScript для Excel. Дополнительные сведения о функции комментариев можно узнать в статье [INSERT Comments and notess in Excel](https://support.office.com/article/insert-comments-and-notes-in-excel-bdcc9f5d-38e2-45b4-9a92-0b2b5c7bf6f8) .
 
@@ -28,8 +25,8 @@ ms.locfileid: "37627039"
 Используйте `CommentCollection.add` метод, чтобы добавить комментарии в книгу. Этот метод занимает до трех параметров:
 
 - `cellAddress`: Ячейка, в которую добавляется комментарий. Это может быть объект String или [Range](/javascript/api/excel/excel.range) . Диапазон должен быть одной ячейкой.
-- `content`: Контент комментария. Используйте строку для примечаний в виде обычного текста. Используйте объект [комментричконтент](/javascript/api/excel/excel.commentrichcontent) для комментариев с [упоминаниями](#mentions).
-- `contentType`: Перечисление [ContentType](/javascript/api/excel/excel.contenttype) , определяющее тип контента. Значение по умолчанию — `ContentType.plain`. 
+- `content`: Контент комментария. Используйте строку для примечаний в виде обычного текста. Используйте объект [комментричконтент](/javascript/api/excel/excel.commentrichcontent) для комментариев с [упоминаниями](#mentions-preview).
+- `contentType`: Перечисление [ContentType](/javascript/api/excel/excel.contenttype) , определяющее тип контента. Значение по умолчанию — `ContentType.plain`.
 
 В следующем примере кода добавляется примечание в ячейку **A2**.
 
@@ -172,7 +169,10 @@ Excel.run(function (context) {
 });
 ```
 
-## <a name="mentions"></a>Упоминания
+## <a name="mentions-preview"></a>Упоминание (Предварительная версия)
+
+> [!NOTE]
+> API упомянутых комментариев в настоящее время доступны только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
 
 > [!IMPORTANT]
 > Упоминание комментариев в настоящее время поддерживается только для Excel в Интернете.

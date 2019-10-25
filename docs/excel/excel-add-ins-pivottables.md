@@ -1,14 +1,14 @@
 ---
 title: Работать со сводными таблицами с помощью API JavaScript для Excel
 description: Используйте API JavaScript для Excel, чтобы создавать сводные таблицы и взаимодействовать с их компонентами.
-ms.date: 05/01/2019
+ms.date: 10/22/2019
 localization_priority: Normal
-ms.openlocfilehash: 4a60b820d6e50dd44a193dd08df69817330c636d
-ms.sourcegitcommit: b3996b1444e520b44cf752e76eef50908386ca26
+ms.openlocfilehash: 5fc70437ce61a49ac5dcd359214b3cca79c71ac1
+ms.sourcegitcommit: 5ba325cc88183a3f230cd89d615fd49c695addcf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "33620201"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "37681958"
 ---
 # <a name="work-with-pivottables-using-the-excel-javascript-api"></a>Работать со сводными таблицами с помощью API JavaScript для Excel
 
@@ -158,10 +158,7 @@ Excel.run(function (context) {
 });
 ```
 
-## <a name="slicers-preview"></a>Срезы (Предварительная версия)
-
-> [!NOTE]
-> API среза в настоящее время доступны только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+## <a name="slicers"></a>Срезы
 
 [Срезы](/javascript/api/excel/excel.slicer) позволяют фильтровать данные из сводной таблицы или таблицы Excel. Срез использует значения из указанного столбца или PivotField для фильтрации соответствующих строк. Эти значения хранятся в виде объектов [SlicerItem](/javascript/api/excel/excel.sliceritem) в `Slicer`. Надстройка может настраивать эти фильтры, как это могут делать пользователи ([через пользовательский интерфейс Excel](https://support.office.com/article/Use-slicers-to-filter-data-249f966b-a9d5-4b0f-b31a-12651785d29d)). Срез располагается вверху листа в графическом слое, как показано на следующем снимке экрана.
 

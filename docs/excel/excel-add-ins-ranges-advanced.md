@@ -1,14 +1,14 @@
 ---
 title: Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 description: ''
-ms.date: 09/18/2019
+ms.date: 10/22/2019
 localization_priority: Normal
-ms.openlocfilehash: 90dff45ee01197a9a6f4d35fb9ab3379adf129b9
-ms.sourcegitcommit: 78bbbd6cb5a270164b26038675a222defc3be55e
+ms.openlocfilehash: 96f001e7c7e51a9685a52d0a07309beed2f1fe4b
+ms.sourcegitcommit: 5ba325cc88183a3f230cd89d615fd49c695addcf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "37471362"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "37681937"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api-advanced"></a>Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 
@@ -270,9 +270,6 @@ Excel.run(function (context) {
 ![Данные в Excel после запуска метода удаления дубликатов](../images/excel-ranges-remove-duplicates-after.png)
 
 ## <a name="group-data-for-an-outline"></a>Группирование данных для структуры
-
-> [!NOTE]
-> API структуры для группирования строк и столбцов в настоящее время доступны только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
 
 Строки или столбцы диапазона можно объединять для создания [структуры](https://support.office.com/article/Outline-group-data-in-a-worksheet-08CE98C4-0063-4D42-8AC7-8278C49E9AFF). Эти группы можно сворачивать и разворачивать для скрытия и отображения соответствующих ячеек. Это упрощает быстрый анализ данных в верхней строке. Используйте [Range. Group](/javascript/api/excel/excel.range#group-groupoption-) , чтобы сделать эти группы структуры.
 
