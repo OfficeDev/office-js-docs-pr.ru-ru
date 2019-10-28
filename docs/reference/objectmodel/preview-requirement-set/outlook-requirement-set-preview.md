@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: ''
-ms.date: 08/15/2019
+ms.date: 10/18/2019
 localization_priority: Priority
-ms.openlocfilehash: aa3f46c505e8c87508699f6e84194272ee4d13bb
-ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
+ms.openlocfilehash: 40bf17a6bfcc429b3de013a1b232a7c054b22768
+ms.sourcegitcommit: 5ba325cc88183a3f230cd89d615fd49c695addcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "36696458"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "37682531"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -226,15 +226,21 @@ ms.locfileid: "36696458"
 
 #### <a name="internetheadersjavascriptapioutlookofficeinternetheaders"></a>[InternetHeaders](/javascript/api/outlook/office.internetheaders)
 
-Добавлен новый объект, представляющий пользовательские заголовки Интернета в элементе сообщения.
+Добавлен новый объект, представляющий пользовательские заголовки Интернета в элементе сообщения. Только в режиме создания.
 
 **Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365), Outlook для Mac (версия, подключенная к подписке на Office 365)
 
-#### <a name="officecontextmailboxiteminternetheadersofficecontextmailboxitemmdinternetheaders-internetheaders"></a>[Office.context.mailbox.item.internetHeaders](office.context.mailbox.item.md#internetheaders-internetheaders)
+#### <a name="officecontextmailboxiteminternetheadersjavascriptapioutlookofficemessagecomposeinternetheaders"></a>[Office.context.mailbox.item.internetHeaders](/javascript/api/outlook/office.messagecompose#internetheaders)
 
-Добавлено новое свойство, представляющее пользовательские заголовки Интернета в элементе сообщения.
+Добавлено новое свойство, представляющее пользовательские заголовки Интернета в элементе сообщения. Только в режиме создания.
 
 **Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365), Outlook для Mac (версия, подключенная к подписке на Office 365)
+
+#### <a name="officecontextmailboxitemgetallinternetheadersasyncjavascriptapioutlookofficemessagereadgetallinternetheadersasync-options--callback-"></a>[Office.context.mailbox.item.getAllInternetHeadersAsync](/javascript/api/outlook/office.messageread#getallinternetheadersasync-options--callback-)
+
+Добавлен новый метод, получающий все заголовки Интернета для элемента сообщения. Только в режиме чтения.
+
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
 
 <br>
 

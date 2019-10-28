@@ -1,14 +1,14 @@
 ---
 title: Office.context.mailbox.item — набор обязательных элементов 1.5
 description: ''
-ms.date: 09/23/2019
+ms.date: 10/23/2019
 localization_priority: Priority
-ms.openlocfilehash: a76440c2353483d0754aa0ba2fed98f051bc1c6f
-ms.sourcegitcommit: 3c84fe6302341668c3f9f6dd64e636a97d03023c
+ms.openlocfilehash: 7d585d3fd60d51b68d86b632701e8ac512fe708c
+ms.sourcegitcommit: 5ba325cc88183a3f230cd89d615fd49c695addcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "37167370"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "37682524"
 ---
 # <a name="item"></a>item
 
@@ -139,6 +139,11 @@ console.log(outputString);
 
 Получает объект, который предоставляет методы для получения или обновления получателей скрытой копии сообщения. Только в режиме создания.
 
+Коллекция может включать не более 100 элементов по умолчанию. Однако для компьютеров с Windows и Mac OS действуют указанные ниже ограничения.
+
+- Максимальное количество элементов — 500.
+- Установить ограничение количества элементов на вызов — не более 100, общего количества — не более 500.
+
 ##### <a name="type"></a>Тип
 
 *   [Получатели](/javascript/api/outlook/office.recipients?view=outlook-js-1.5)
@@ -219,7 +224,7 @@ Office.context.mailbox.item.body.getAsync(
 
 ##### <a name="read-mode"></a>Режим чтения
 
-Свойство `cc` возвращает массив, который содержит объект `EmailAddressDetails` для каждого получателя, указанного в строке **Копия** сообщения. Коллекция может включать не более 100 элементов.
+Свойство `cc` возвращает массив, который содержит объект `EmailAddressDetails` для каждого получателя, указанного в строке **Копия** сообщения. Коллекция может включать не более 100 элементов по умолчанию. Однако на компьютерах с Windows и Mac OS может быть до 500 элементов.
 
 ```js
 console.log(JSON.stringify(Office.context.mailbox.item.cc));
@@ -227,7 +232,10 @@ console.log(JSON.stringify(Office.context.mailbox.item.cc));
 
 ##### <a name="compose-mode"></a>Режим создания
 
-Свойство `cc` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Копия** сообщения.
+Свойство `cc` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Копия** сообщения. Коллекция может включать не более 100 элементов по умолчанию. Однако для компьютеров с Windows и Mac OS действуют указанные ниже ограничения.
+
+- Максимальное количество элементов — 500.
+- Установить ограничение количества элементов на вызов — не более 100, общего количества — не более 500.
 
 ```js
 Office.context.mailbox.item.cc.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
@@ -684,7 +692,7 @@ Office.context.mailbox.item.notificationMessages.getAllAsync(
 
 ##### <a name="read-mode"></a>Режим чтения
 
-Свойство `optionalAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого необязательного участника собрания.
+Свойство `optionalAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого необязательного участника собрания. Коллекция может включать не более 100 элементов по умолчанию. Однако на компьютерах с Windows и Mac OS может быть до 500 элементов.
 
 ```js
 var optionalAttendees = Office.context.mailbox.item.optionalAttendees;
@@ -693,7 +701,10 @@ console.log("Optional attendees: " + JSON.stringify(optionalAttendees));
 
 ##### <a name="compose-mode"></a>Режим создания
 
-Свойство `optionalAttendees` возвращает объект `Recipients`, который предоставляет методы для получения или обновления необязательных участников собрания.
+Свойство `optionalAttendees` возвращает объект `Recipients`, который предоставляет методы для получения или обновления необязательных участников собрания. Коллекция может включать не более 100 элементов по умолчанию. Однако для компьютеров с Windows и Mac OS действуют указанные ниже ограничения.
+
+- Максимальное количество элементов — 500.
+- Установить ограничение количества элементов на вызов — не более 100, общего количества — не более 500.
 
 ```js
 Office.context.mailbox.item.optionalAttendees.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
@@ -757,7 +768,7 @@ console.log("Organizer: " + organizerName + " (" + organizerAddress + ")");
 
 ##### <a name="read-mode"></a>Режим чтения
 
-Свойство `requiredAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого обязательного участника собрания.
+Свойство `requiredAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого обязательного участника собрания. Коллекция может включать не более 100 элементов по умолчанию. Однако на компьютерах с Windows и Mac OS может быть до 500 элементов.
 
 ```js
 var requiredAttendees = Office.context.mailbox.item.requiredAttendees;
@@ -766,7 +777,10 @@ console.log("Required attendees: " + JSON.stringify(requiredAttendees));
 
 ##### <a name="compose-mode"></a>Режим создания
 
-Свойство `requiredAttendees` возвращает объект `Recipients`, предоставляющий методы, с помощью которых можно получить или обновить сведения об обязательных участниках собрания.
+Свойство `requiredAttendees` возвращает объект `Recipients`, предоставляющий методы, с помощью которых можно получить или обновить сведения об обязательных участниках собрания. Коллекция может включать не более 100 элементов по умолчанию. Однако для компьютеров с Windows и Mac OS действуют указанные ниже ограничения.
+
+- Максимальное количество элементов — 500.
+- Установить ограничение количества элементов на вызов — не более 100, общего количества — не более 500.
 
 ```js
 Office.context.mailbox.item.requiredAttendees.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
@@ -937,7 +951,7 @@ function callback(asyncResult) {
 
 ##### <a name="read-mode"></a>Режим чтения
 
-Свойство `to` возвращает массив, содержащий объект `EmailAddressDetails` для каждого получателя в строке **Кому** сообщения. Коллекция может включать не более 100 элементов.
+Свойство `to` возвращает массив, содержащий объект `EmailAddressDetails` для каждого получателя в строке **Кому** сообщения. Коллекция может включать не более 100 элементов по умолчанию. Однако на компьютерах с Windows и Mac OS может быть до 500 элементов.
 
 ```js
 console.log(JSON.stringify(Office.context.mailbox.item.to));
@@ -945,7 +959,10 @@ console.log(JSON.stringify(Office.context.mailbox.item.to));
 
 ##### <a name="compose-mode"></a>Режим создания
 
-Свойство `to` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Кому** сообщения.
+Свойство `to` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Кому** сообщения. Коллекция может включать не более 100 элементов по умолчанию. Однако для компьютеров с Windows и Mac OS действуют указанные ниже ограничения.
+
+- Максимальное количество элементов — 500.
+- Установить ограничение количества элементов на вызов — не более 100, общего количества — не более 500.
 
 ```js
 Office.context.mailbox.item.to.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
