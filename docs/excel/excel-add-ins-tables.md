@@ -3,12 +3,12 @@ title: Работа с таблицами с использованием API Ja
 description: ''
 ms.date: 09/09/2019
 localization_priority: Priority
-ms.openlocfilehash: 7803690b4a20aa89908a20cf557f8076f5fea70a
-ms.sourcegitcommit: 24303ca235ebd7144a1d913511d8e4fb7c0e8c0d
+ms.openlocfilehash: d3109d28a4eb8a1a16ff1919a201284024f10c38
+ms.sourcegitcommit: 5ba325cc88183a3f230cd89d615fd49c695addcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "36838552"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "37681979"
 ---
 # <a name="work-with-tables-using-the-excel-javascript-api"></a>Работа с таблицами с использованием API JavaScript для Excel
 
@@ -285,7 +285,7 @@ Excel.run(function (context) {
 
 ![Данные из таблицы в Excel](../images/excel-tables-sort.png)
 
-При сортировке данных на листе создается уведомление о событии. Дополнительные сведения о событиях, связанных с сортировкой, и о регистрации обработчиков событий надстройкой в ответ на такие события см. в статье [Обработка событий сортировки (предварительная версия)](excel-add-ins-worksheets.md#handle-sorting-events-preview).
+При сортировке данных на листе создается уведомление о событии. Дополнительные сведения о событиях, связанных с сортировкой, и о регистрации обработчиков событий надстройкой в ответ на такие события см. в статье [Обработка событий сортировки](excel-add-ins-worksheets.md#handle-sorting-events).
 
 ## <a name="apply-filters-to-a-table"></a>Применение фильтров к таблице
 
