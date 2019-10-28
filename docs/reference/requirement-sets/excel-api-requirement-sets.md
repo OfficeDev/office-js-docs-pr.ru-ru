@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Excel
 description: Сведения о наборе обязательных элементов надстройки Office для сборок Excel
-ms.date: 07/11/2019
+ms.date: 10/22/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: ec49cbdadf65b653170f9b5cbcafa6aaf0fa5177
-ms.sourcegitcommit: 6d9b4820a62a914c50cef13af8b80ce626034c26
+ms.openlocfilehash: 11fcf917b5dddb4a366465f11362c93660881597
+ms.sourcegitcommit: 5ba325cc88183a3f230cd89d615fd49c695addcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "35804978"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "37681944"
 ---
 # <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
 
@@ -27,6 +27,7 @@ ms.locfileid: "35804978"
 |  Набор обязательных элементов  |  Office для Windows<br>(версия, подключенная к подписке на Office 365)  |  Office для iPad<br>(версия, подключенная к подписке на Office 365)  |  Office для Mac<br>(версия, подключенная к подписке на Office 365)  | Office в Интернете |
 |:-----|-----|:-----|:-----|:-----|:-----|
 | [Предварительная версия](excel-preview-apis.md)  | Применяйте последнюю версию Office для использования предварительных версий API (может потребоваться присоединение к [программе предварительной оценки Office](https://products.office.com/office-insider)) |
+| [ExcelApi 1.10](excel-api-1-10-requirement-set.md) | Версия 1907 (сборка 11929.20306) или более поздняя | 2.30 или более поздняя версия | 16.30 или более поздняя версия | Октябрь 2019 г. |
 | [ExcelApi 1.9](excel-api-1-9-requirement-set.md)  | Версия 1903 (сборка 11425.20204) или более поздняя | 2.24 или более поздняя версия | 16.24 или более поздняя версия | Май 2019 г. |
 | [ExcelApi 1.8](excel-api-1-8-requirement-set.md)  | Версия 1808 (сборка 10730.20102) или более поздняя | 2.17 или более поздняя | 16.17 или более поздняя | Сентябрь 2018 г. |
 | [ExcelApi 1.7](excel-api-1-7-requirement-set.md)  | Версия 1801 (сборка 9001.2171) или более поздняя   | 2.9 или более поздняя  | 16.9 или более поздняя  | Апрель 2018 г. |
