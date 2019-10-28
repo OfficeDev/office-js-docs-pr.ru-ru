@@ -444,6 +444,9 @@
             - name: Предварительные версии API для Excel
               href: reference/requirement-sets/excel-preview-apis.md
               displayName: Excel
+            - name: Набор обязательных элементов ExcelApi 1.10
+              href: reference/requirement-sets/excel-api-1-10-requirement-set.md
+              displayName: Excel
             - name: Набор обязательных элементов ExcelApi 1.9
               href: reference/requirement-sets/excel-api-1-9-requirement-set.md
               displayName: Excel
