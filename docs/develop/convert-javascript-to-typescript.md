@@ -1,14 +1,14 @@
 ---
 title: Преобразование проекта надстройки Office в Visual Studio в TypeScript
 description: ''
-ms.date: 10/11/2019
+ms.date: 10/29/2019
 localization_priority: Priority
-ms.openlocfilehash: 0a828a3f11a1fcaf71e277bdb667f866ea4ae06a
-ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
+ms.openlocfilehash: dc9384aff605db31ded4197ad00d1a7823f2de6f
+ms.sourcegitcommit: 818036a7163b1513d047e66a20434060415df241
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "37626805"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "37775293"
 ---
 # <a name="convert-an-office-add-in-project-in-visual-studio-to-typescript"></a>Преобразование проекта надстройки Office в Visual Studio в TypeScript
 
@@ -47,28 +47,31 @@ ms.locfileid: "37626805"
 
 1. Найдите файл **Home.js** и переименуйте его в **Home.ts**.
 
-2. На вкладке **Средства** выберите **Диспетчер пакетов NuGet** и щелкните пункт **Управление пакетами NuGet для решения...**.
+2. Найдите файл **./Functions/FunctionFile.js** и переименуйте его в **FunctionFile.ts**.
 
-3. Выбрав вкладку **Обзор**, введите **office-js.TypeScript.DefinitelyTyped** в поле поиска. Установите или обновите этот пакет, если он уже установлен. В проект будут добавлены определения типа TypeScript для библиотеки Office.js.
+3. Найдите файл **./Scripts/MessageBanner.js** и переименуйте его в **MessageBanner.ts**.
 
-4. В этом же поле поиска введите **jquery.TypeScript.DefinitelyTyped**. Установите или обновите этот пакет, если он уже установлен. В проект будут добавлены определения TypeScript jQuery. Пакеты для jQuery и Office.js теперь будут отображаться в новом файле, созданном Visual Studio, с именем **packages.config**.
+4. На вкладке **Средства** выберите **Диспетчер пакетов NuGet** и щелкните пункт **Управление пакетами NuGet для решения...**.
+
+5. Выбрав вкладку **Обзор**, введите **office-js.TypeScript.DefinitelyTyped** в поле поиска. Установите или обновите этот пакет, если он уже установлен. В проект будут добавлены определения типа TypeScript для библиотеки Office.js.
+
+6. В этом же поле поиска введите **jquery.TypeScript.DefinitelyTyped**. Установите или обновите этот пакет, если он уже установлен. В проект будут добавлены определения TypeScript jQuery. Пакеты для jQuery и Office.js теперь будут отображаться в новом файле, созданном Visual Studio, с именем **packages.config**.
 
     > [!NOTE]
     > В проекте TypeScript могут быть как файлы TypeScript, так и файлы JavaScript, это не повлияет на компиляцию. Потому что TypeScript — это типизированная расширенная версия языка JavaScript. Код TypeScript компилируется в JavaScript.
 
-5. Откройте файл **Home.ts** и добавьте в его начале следующее объявление:
+7. В файле **Home.ts** найдите строку `if(!Office.context.requirements.isSetSupported('ExcelApi', '1.1') {` и замените ее указанным ниже кодом:
 
     ```TypeScript
-    declare var fabric: any;
+    if(!Office.context.requirements.isSetSupported('ExcelApi', 1.1)) {
     ```
 
-6. В файле **Home.ts** удалите строку `if(!Office.context.requirements.isSetSupported('ExcelApi', '1.1') {` и замените ее указанным ниже кодом:
+    > [!NOTE]
+    > Теперь для успешной компиляции проекта после его преобразования в TypeScript необходимо указать версию набора требований в виде числового значения, как показано в предыдущем фрагменте кода. К сожалению, это означает, что вы не сможете использовать `isSetSupported`, чтобы проверить, поддерживается ли набор требований `1.10`, так как числовое значение `1.10` равно `1.1` во время выполнения. 
+    > 
+    > Эта проблема вызвана тем, что пакет NuGet **office-js.TypeScript.DefinitelyTyped** является устаревшим, в связи с чем у вашего проекта нет доступа к последним определениям TypeScript для Office.js. Эта проблема находится в процессе рассмотрения, и эта статья будет обновлена после ее устранения.
 
-    ```TypeScript
-    if(!Office.context.requirements.isSetSupported('ExcelApi', 1.1) {
-    ```
-
-7. В файле **Home.ts** найдите строку `Office.initialize = function (reason) {` и добавьте строку сразу после нее для полизаполнения глобального объекта `window.Promise`, как показано здесь:
+8. В **Home.ts** найдите строку `Office.initialize = function (reason) {` и добавьте строку сразу после нее для полизаполнения глобального объекта `window.Promise`, как показано здесь:
 
     ```TypeScript
     Office.initialize = function (reason) {
@@ -77,22 +80,28 @@ ms.locfileid: "37626805"
         ...
     ```
 
-8. В файле **Home.ts** найдите функцию `displaySelectedCells`, замените всю функцию приведенным ниже кодом и сохраните файл:
+9. В **Home.ts** найдите функцию `displaySelectedCells`, замените всю функцию приведенным ниже кодом и сохраните файл:
 
-```TypeScript
-function displaySelectedCells() {
-    Office.context.document.getSelectedDataAsync(
-        Office.CoercionType.Text,
-        null,
-        function (result) {
-            if (result.status === Office.AsyncResultStatus.Succeeded) {
-                showNotification('The selected text is:', '"' + result.value + '"');
-            } else {
-                showNotification('Error', result.error.message);
-            }
-        });
-}
-```
+    ```TypeScript
+    function displaySelectedCells() {
+        Office.context.document.getSelectedDataAsync(
+            Office.CoercionType.Text,
+            null,
+            function (result) {
+                if (result.status === Office.AsyncResultStatus.Succeeded) {
+                    showNotification('The selected text is:', '"' + result.value + '"');
+                } else {
+                    showNotification('Error', result.error.message);
+                }
+            });
+    }
+    ```
+
+10. В **./Scripts/MessageBanner.ts** найдите строку `_onResize(null);` и замените ее указанным ниже кодом:
+
+    ```TypeScript
+    _onResize();
+    ```
 
 ## <a name="run-the-converted-add-in-project"></a>Запуск преобразованного проекта надстройки
 
@@ -109,8 +118,6 @@ function displaySelectedCells() {
 Для справки в приведенном ниже фрагменте кода показано содержимое файла **Home.ts** после применения вышеописанных изменений. Этот код включает минимальное количество изменений, необходимое для запуска надстройки.
 
 ```typescript
-declare var fabric: any;
-
 (function () {
     "use strict";
 
@@ -120,15 +127,14 @@ declare var fabric: any;
     // The initialize function must be run each time a new page is loaded.
     Office.initialize = function (reason) {
         (window as any).Promise = OfficeExtension.Promise;
-
         $(document).ready(function () {
-            // Initialize the FabricUI notification mechanism and hide it
-            var element = document.querySelector('.ms-MessageBanner');
-            messageBanner = new fabric.MessageBanner(element);
+            // Initialize the notification mechanism and hide it
+            var element = document.querySelector('.MessageBanner');
+            messageBanner = new components.MessageBanner(element);
             messageBanner.hideBanner();
-
+            
             // If not using Excel 2016, use fallback logic.
-            if (!Office.context.requirements.isSetSupported('ExcelApi', '1.1')) {
+            if (!Office.context.requirements.isSetSupported('ExcelApi', 1.1)) {
                 $("#template-description").text("This sample will display the value of the cells that you have selected in the spreadsheet.");
                 $('#button-text').text("Display!");
                 $('#button-desc').text("Display the selection");
@@ -140,7 +146,7 @@ declare var fabric: any;
             $("#template-description").text("This sample highlights the highest value from the cells you have selected in the spreadsheet.");
             $('#button-text').text("Highlight!");
             $('#button-desc').text("Highlights the largest number.");
-
+                
             loadSampleData();
 
             // Add a click event handler for the highlight button.
@@ -206,7 +212,8 @@ declare var fabric: any;
     }
 
     function displaySelectedCells() {
-        Office.context.document.getSelectedDataAsync(Office.CoercionType.Text,
+        Office.context.document.getSelectedDataAsync(
+            Office.CoercionType.Text,
             null,
             function (result) {
                 if (result.status === Office.AsyncResultStatus.Succeeded) {
@@ -239,5 +246,5 @@ declare var fabric: any;
 
 ## <a name="see-also"></a>См. также
 
-* [Обсуждение реализации обещаний на сайте StackOverflow](https://stackoverflow.com/questions/44461312/office-addins-file-in-its-typescript-version-doesnt-work)
-* [Примеры надстроек Office на сайте GitHub](https://github.com/officedev)
+- [Обсуждение реализации обещаний на сайте StackOverflow](https://stackoverflow.com/questions/44461312/office-addins-file-in-its-typescript-version-doesnt-work)
+- [Примеры надстроек Office на сайте GitHub](https://github.com/officedev)
