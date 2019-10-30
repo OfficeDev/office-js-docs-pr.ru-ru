@@ -1,15 +1,15 @@
 ---
 title: Руководство по надстройкам PowerPoint
 description: Из этого руководства вы узнаете, как создать надстройку PowerPoint, которая вставляет изображение и текст, получает метаданные слайда и выполняет переход между слайдами.
-ms.date: 10/17/2019
+ms.date: 10/29/2019
 ms.prod: powerpoint
 localization_priority: Normal
-ms.openlocfilehash: 8f1b67341c2d796ff9213682e7ee759995f915f2
-ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
+ms.openlocfilehash: 73d7e041a10a3991d2ba87b420eece191603983a
+ms.sourcegitcommit: 818036a7163b1513d047e66a20434060415df241
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "37627113"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "37775300"
 ---
 # <a name="tutorial-create-a-powerpoint-task-pane-add-in"></a>Учебник: Создание надстройки области задач PowerPoint
 
@@ -29,11 +29,11 @@ ms.locfileid: "37627113"
 
 Выполните указанные ниже действия, чтобы создать проект надстройки PowerPoint с помощью Visual Studio.
 
-1. Выберите **создать новый проект**.
+1. Выберите **Создание нового проекта**.
 
-2. В поле Поиск введите **надстройка**. Выберите **веб-Надстройка PowerPoint**, а затем нажмите кнопку **Далее**.
+2. Используя поле поиска, введите **надстройка**. Выберите вариант **Веб-надстройка PowerPoint** и нажмите кнопку **Далее**.
 
-3. Назовите проект и нажмите кнопку **создать**.
+3. Назовите проект `HelloWorld`и нажмите кнопку **создать**.
 
 4. В диалоговом окне **Создание надстройки Office** выберите **Добавить новые функции в PowerPoint**, а затем нажмите кнопку **Готово**, чтобы создать проект.
 
@@ -71,11 +71,11 @@ ms.locfileid: "37627113"
 
         var messageBanner;
 
-        Office.initialize = function (reason) {
+        Office.onReady(function () {
             $(document).ready(function () {
                 // Initialize the FabricUI notification mechanism and hide it
-                var element = document.querySelector('.ms-MessageBanner');
-                messageBanner = new fabric.MessageBanner(element);
+                var element = document.querySelector('.MessageBanner');
+                messageBanner = new components.MessageBanner(element);
                 messageBanner.hideBanner();
 
                 // TODO1: Assign event handler for insert-image button.
@@ -83,7 +83,7 @@ ms.locfileid: "37627113"
                 // TODO6: Assign event handler for get-slide-metadata button.
                 // TODO8: Assign event handlers for the four navigation buttons.
             });
-        };
+        });
 
         // TODO2: Define the insertImage function. 
 
@@ -170,10 +170,10 @@ ms.locfileid: "37627113"
 6. В файле **Home.html** замените `TODO1` приведенным ниже кодом. Этот код определяет кнопку **Insert Image** (Вставить изображение), которая появится в области задач надстройки.
 
     ```html
-    <button class="ms-Button ms-Button--primary" id="insert-image">
-        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
-        <span class="ms-Button-label">Insert Image</span>
-        <span class="ms-Button-description">Gets the photo of the day that shows on the Bing home page and adds it to the slide.</span>
+    <button class="Button Button--primary" id="insert-image">
+        <span class="Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+        <span class="Button-label">Insert Image</span>
+        <span class="Button-description">Gets the photo of the day that shows on the Bing home page and adds it to the slide.</span>
     </button>
     ```
 
@@ -282,10 +282,10 @@ ms.locfileid: "37627113"
 
     ```html
         <br /><br />
-        <button class="ms-Button ms-Button--primary" id="insert-text">
-            <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
-            <span class="ms-Button-label">Insert Text</span>
-            <span class="ms-Button-description">Inserts text into the slide.</span>
+        <button class="Button Button--primary" id="insert-text">
+            <span class="Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+            <span class="Button-label">Insert Text</span>
+            <span class="Button-description">Inserts text into the slide.</span>
         </button>
     ```
 
@@ -339,10 +339,10 @@ ms.locfileid: "37627113"
 
     ```html
     <br /><br />
-    <button class="ms-Button ms-Button--primary" id="get-slide-metadata">
-        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
-        <span class="ms-Button-label">Get Slide Metadata</span>
-        <span class="ms-Button-description">Gets metadata for the selected slide(s).</span>
+    <button class="Button Button--primary" id="get-slide-metadata">
+        <span class="Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+        <span class="Button-label">Get Slide Metadata</span>
+        <span class="Button-description">Gets metadata for the selected slide(s).</span>
     </button>
     ```
 
@@ -394,28 +394,28 @@ ms.locfileid: "37627113"
 
     ```html
     <br /><br />
-    <button class="ms-Button ms-Button--primary" id="go-to-first-slide">
-        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
-        <span class="ms-Button-label">Go to First Slide</span>
-        <span class="ms-Button-description">Go to the first slide.</span>
+    <button class="Button Button--primary" id="go-to-first-slide">
+        <span class="Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+        <span class="Button-label">Go to First Slide</span>
+        <span class="Button-description">Go to the first slide.</span>
     </button>
     <br /><br />
-    <button class="ms-Button ms-Button--primary" id="go-to-next-slide">
-        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
-        <span class="ms-Button-label">Go to Next Slide</span>
-        <span class="ms-Button-description">Go to the next slide.</span>
+    <button class="Button Button--primary" id="go-to-next-slide">
+        <span class="Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+        <span class="Button-label">Go to Next Slide</span>
+        <span class="Button-description">Go to the next slide.</span>
     </button>
     <br /><br />
-    <button class="ms-Button ms-Button--primary" id="go-to-previous-slide">
-        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
-        <span class="ms-Button-label">Go to Previous Slide</span>
-        <span class="ms-Button-description">Go to the previous slide.</span>
+    <button class="Button Button--primary" id="go-to-previous-slide">
+        <span class="Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+        <span class="Button-label">Go to Previous Slide</span>
+        <span class="Button-description">Go to the previous slide.</span>
     </button>
     <br /><br />
-    <button class="ms-Button ms-Button--primary" id="go-to-last-slide">
-        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
-        <span class="ms-Button-label">Go to Last Slide</span>
-        <span class="ms-Button-description">Go to the last slide.</span>
+    <button class="Button Button--primary" id="go-to-last-slide">
+        <span class="Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+        <span class="Button-label">Go to Last Slide</span>
+        <span class="Button-description">Go to the last slide.</span>
     </button>
     ```
 
