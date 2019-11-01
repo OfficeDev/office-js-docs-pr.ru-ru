@@ -1,14 +1,14 @@
 ---
-title: Пространство имен Office — Предварительная версия набора требований
+title: Пространство имен Office — набор обязательных элементов 1,8
 description: ''
-ms.date: 10/30/2019
+ms.date: 10/31/2019
 localization_priority: Normal
-ms.openlocfilehash: eae6f99d166695f24f4a94e89ea4b876bea080ef
+ms.openlocfilehash: 91a0bef2a8280a068763c98b17644bd9268e2fb4
 ms.sourcegitcommit: e989096f3d19761bf8477c585cde20b3f8e0b90d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/31/2019
-ms.locfileid: "37902104"
+ms.locfileid: "37902210"
 ---
 # <a name="office"></a>Office
 
@@ -34,7 +34,7 @@ ms.locfileid: "37902104"
 
 [context.](office.context.md) Предоставляет общие интерфейсы из контекстного пространства имен API надстроек Office для использования в API надстройки Outlook.
 
-[MailboxEnums](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat): `ItemType`включает ряд перечислений, например `EntityType` `AttachmentType` `RecipientType` `ResponseType`,,,,, и `ItemNotificationMessageType`.
+[MailboxEnums](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat?view=outlook-js-1.8): `ItemType`включает ряд перечислений, например `EntityType` `AttachmentType` `RecipientType` `ResponseType`,,,,, и `ItemNotificationMessageType`.
 
 ### <a name="members"></a>Members
 
@@ -108,7 +108,6 @@ ms.locfileid: "37902104"
 |`AttachmentsChanged`| Строка | Вложение было добавлено или удалено из элемента. | 1.8 |
 |`EnhancedLocationsChanged`| Строка | Расположение выбранной встречи изменилось. | 1.8 |
 |`ItemChanged`| Строка | Для просмотра выбран другой элемент Outlook, когда область задач закреплена. | 1.5 |
-|`OfficeThemeChanged`| Строка | Тема Office в почтовом ящике изменилась. | Предварительная версия |
 |`RecipientsChanged`| Строка | Список получателей выбранного элемента или места встречи изменился. | 1.7 |
 |`RecurrenceChanged`| Строка | Шаблон повторения выбранного ряда изменился. | 1.7 |
 

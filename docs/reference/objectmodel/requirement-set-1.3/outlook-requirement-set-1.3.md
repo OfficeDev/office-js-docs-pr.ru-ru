@@ -1,14 +1,14 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.3
 description: ''
-ms.date: 06/25/2019
+ms.date: 10/30/2019
 localization_priority: Normal
-ms.openlocfilehash: 83d15038aedeeae2ce873207f17fe61dd1d3b3a7
-ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
+ms.openlocfilehash: 2138edcfdd85815bd43133fcbd58793a6dd1fefd
+ms.sourcegitcommit: e989096f3d19761bf8477c585cde20b3f8e0b90d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "36064699"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "37902090"
 ---
 # <a name="outlook-add-in-api-requirement-set-13"></a>Набор обязательных элементов API для надстройки Outlook 1.3
 
@@ -47,3 +47,4 @@ ms.locfileid: "36064699"
 - [Надстройки Outlook](/outlook/add-ins/)
 - [Примеры кода надстройки Outlook](https://developer.microsoft.com/outlook/gallery/?filterBy=Outlook,Samples,Add-ins)
 - [Начало работы](/outlook/add-ins/quick-start)
+- [Наборы обязательных элементов и поддерживаемые клиенты](../../requirement-sets/outlook-api-requirement-sets.md)
