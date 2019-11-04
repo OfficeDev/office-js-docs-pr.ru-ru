@@ -1,18 +1,51 @@
 ---
 title: Распространенные проблемы кодирования и неожиданное поведение платформы
 description: Список проблем платформы API JavaScript для Office, часто встречающихся разработчиками.
-ms.date: 10/29/2019
+ms.date: 10/31/2019
 localization_priority: Normal
-ms.openlocfilehash: 8cea95e3214585ba8e0b77535916f9c564dde9df
-ms.sourcegitcommit: e989096f3d19761bf8477c585cde20b3f8e0b90d
+ms.openlocfilehash: d39c379961833cdb924628becf2c2da3f7e271b9
+ms.sourcegitcommit: 59d29d01bce7543ebebf86e5a86db00cf54ca14a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "37902200"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "37924796"
 ---
 # <a name="common-coding-issues-and-unexpected-platform-behaviors"></a>Распространенные проблемы кодирования и неожиданное поведение платформы
 
 В этой статье описываются аспекты API JavaScript для Office, которые могут привести к непредвиденному поведению или требуют определенных шаблонов кодирования для достижения желаемого результата. Если возникла проблема, связанная с этим списком, сообщите нам об этом с помощью формы отзыва в нижней части статьи.
+
+## <a name="common-apis-and-outlook-apis-are-not-promise-based"></a>Общие API и API Outlook не основаны на обещаниях
+
+[Общие API](/javascript/api/office) (которые не привязаны к определенному ведущему приложению Office) и [API Outlook](/javascript/api/outlook) используют модель программирования на основе обратных вызовов. Для взаимодействия с базовым документом Office требуется асинхронный вызов чтения или записи, указывающий обратный вызов, который должен выполняться при завершении операции. Пример этого шаблона приведен в статье [Document. getFileAsync](/javascript/api/office/office.document#getfileasync-filetype--options--callback-).
+
+Эти общие API и методы API Outlook не возвращают [обещаний](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise). Таким образом, вы не можете использовать параметр [await](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await) , чтобы приостановить выполнение до завершения асинхронной операции. Если требуется `await` поведение, можно создать оболочку вызова метода в явно созданном обещании.
+
+```js
+readDocumentFileAsync(): Promise<any> {
+    return new Promise((resolve, reject) => {
+        const chunkSize = 65536;
+        const self = this;
+
+        Office.context.document.getFileAsync(Office.FileType.Compressed, { sliceSize: chunkSize }, (asyncResult) => {
+            if (asyncResult.status === Office.AsyncResultStatus.Failed) {
+                reject(asyncResult.error);
+            } else {
+                // `getAllSlices` is a Promise-wrapped implementation of File.getSliceAsync.
+                self.getAllSlices(asyncResult.value).then(result => {
+                    if (result.IsSuccess) {
+                        resolve(result.Data);
+                    } else {
+                        reject(asyncResult.error);
+                    }
+                });
+            }
+        });
+    });
+}
+```
+
+> [!NOTE]
+> Справочная документация содержит реализацию [файла. getSliceAsync](/javascript/api/office/office.file#getsliceasync-sliceindex--callback-)в оболочке для обещания.
 
 ## <a name="some-properties-must-be-set-with-json-structs"></a>Некоторые свойства должны быть заданы с помощью структуры JSON
 
@@ -39,6 +72,17 @@ range.format.font.size = 10;
 
 - Свойство только для чтения: вложенные свойства можно задать с помощью навигации.
 - Записываемое свойство: вложенные свойства должны быть заданы с помощью структуры JSON (и не могут быть заданы с помощью навигации).
+
+## <a name="excel-range-limits"></a>Пределы диапазона Excel
+
+Если вы создаете надстройку Excel, использующую диапазоны, учитывайте следующие ограничения размера:
+
+- В Excel в Интернете действует ограничение в 5 МБ на размер полезных данных запросов и откликов. При превышении этого ограничения возникает ошибка `RichAPI.Error`.
+- Диапазон ограничен 5 000 000 ячейками для операций Set.
+
+Если ожидается, что вводимые пользователем данные превышают эти ограничения, обязательно проверьте данные и разделите диапазоны на несколько объектов. Кроме того, вам потребуется выполнить несколько `context.sync()` вызовов, чтобы избежать появления меньших диапазонов в пакетном режиме.
+
+Надстройка может использовать [RangeAreas](/javascript/api/excel/excel.rangeareas) для стратегических обновлений ячеек в пределах большого диапазона. Для получения дополнительных сведений просмотрите [работу с несколькими диапазонами в](../excel/excel-add-ins-multiple-ranges.md) надстройках Excel.
 
 ## <a name="setting-read-only-properties"></a>Установка свойств, предназначенных только для чтения
 
