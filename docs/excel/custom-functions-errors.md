@@ -1,32 +1,84 @@
 ---
-ms.date: 06/18/2019
-description: Обработка ошибок в пользовательских функциях Excel.
-title: Обработка ошибок в пользовательских функциях Excel
+ms.date: 11/04/2019
+description: 'Обработка и возврат таких ошибок, как #ПУСТО!, из пользовательской функции'
+title: Обработка и возврат ошибок из пользовательской функции (предварительная версия)
 localization_priority: Priority
-ms.openlocfilehash: 30c83ea930b16e717b48b9c02ffa0e278eb78b36
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: b04da2f3023e65a4a8b1d8f9a7b8f753322e8b46
+ms.sourcegitcommit: 42bcf9059327a8d71a7ab223805aea68be9ed6b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35771577"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "37962019"
 ---
-# <a name="error-handling-within-custom-functions"></a>Обработка ошибок в пользовательских функциях
+# <a name="handle-and-return-errors-from-your-custom-function-preview"></a>Обработка и возврат ошибок из пользовательской функции (предварительная версия)
 
-При создании надстройки, которая определяет пользовательские функции, не забудьте включить логику для обработки ошибок, возникающих в среде выполнения. Обработка ошибок для пользовательских функций в значительной степени совпадает с [обработкой ошибок для API JavaScript в Excel](excel-add-ins-error-handling.md).
+> [!NOTE]
+> Возможности, описанные в этой статье, в настоящее время доступны в предварительной версии и могут изменяться. В настоящее время их нельзя использовать в рабочих средах. Вам нужно быть [участником предварительной оценки Office](https://insider.office.com/ru-RU/join), чтобы ознакомиться с предварительными возможностями.  Для использования предварительных возможностей рекомендуется использовать подписку на Office 365. Если у вас еще нет подписки на Office 365, вы можете оформить ее, присоединившись к [программе для разработчиков Office 365](https://developer.microsoft.com/office/dev-program).
 
-[!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
+Если при выполнении пользовательской функции возникает ошибка, потребуется возвратить сообщение об ошибке, чтобы уведомить пользователя. Если у вас есть конкретные требования к параметрам, например применение только положительных чисел, нужно протестировать параметры и вернуть ошибку, если они неверны. Можно также использовать блок `try`-`catch`, чтобы отслеживать любые ошибки, возникающие при выполнении пользовательской функции.
 
-В следующем примере кода `.catch` будет обрабатывать любые ошибки, возникающие ранее в коде.
+## <a name="detect-and-throw-an-error"></a>Обнаружение и возвращение ошибки
 
-```js
+Рассмотрим случай, в котором нужно убедиться в правильном формате параметра почтового индекса для пользовательской функции. В следующей пользовательской функции используется регулярное выражение для проверки почтового индекса. Если он правильный, будет подставлен город (в другой функции) и вернется значение. В противном случае в ячейке возвращается ошибка `#VALUE!`.
+
+```typescript
+/**
+* Gets a city name for the given U.S. zip code.
+* @customfunction
+* @param {string} zipCode
+* @returns The city of the zip code.
+*/
+function getCity(zipCode: string): string {
+  let isValidZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(zipCode);
+  if (isValidZip) return cityLookup(zipCode);
+  let error = new CustomFunctions.Error(CustomFunctions.ErrorCode.invalidValue, "Please provide a valid U.S. zip code.");
+  throw error;
+}
+```
+
+## <a name="the-customfunctionserror-object"></a>Объект CustomFunctions.Error
+
+Объект `CustomFunctions.Error` используется для возвращения ошибки в ячейку. При создании объекта укажите, какую ошибку нужно использовать, применив одно из следующих значений перечисления `ErrorCode`.
+
+
+|Значение перечисления ErrorCode  |Значение ячейки Excel  |Смысл  |
+|---------------|---------|---------|
+|`invalidValue`   | `#VALUE!` | В формуле используется значение неправильного типа. |
+|`notAvailable`   | `#N/A`    | Функция или служба недоступна. |
+|`divisionByZero` | `#DIV/0`  | Обратите внимание, что JavaScript позволяет делить на нуль, поэтому при создании обработчика ошибок нужно внимательно определить это условие. |
+|`invalidNumber`  | `#NUM!`   | Обнаружена проблема с числом, используемым в формуле |
+|`nullReference`  | `#NULL!`  | Диапазоны формулы не пересекаются. |
+
+В следующем примере кода показано, как создать и вернуть ошибку для неверного числа (`#NUM!`).
+
+```typescript
+let error = new CustomFunctions.Error(CustomFunctions.ErrorCode.invalidNumber);
+throw error;
+```
+
+При возврате ошибки `#VALUE!` также можно включить настраиваемое сообщение, отображаемое во всплывающем окне, когда пользователь наводит на ячейку указатель мыши. В следующем примере показано, как вернуть настраиваемое сообщение об ошибке.
+
+```typescript
+// You can only return a custom error message with the #VALUE! error
+let error = new CustomFunctions.Error(CustomFunctions.ErrorCode.invalidValue, “The parameter can only contain lowercase characters.”);
+throw error;
+```
+
+## <a name="use-try-catch-blocks"></a>Использование блоков try-catch
+
+Как правило, для отслеживания любых возможных ошибок следует использовать блоки `try`-`catch` в пользовательской функции. Если в коде не обрабатываются исключения, они будут возвращаться в Excel. По умолчанию Excel возвращает `#VALUE!` для необработанного исключения.
+
+В следующем примере кода пользовательская функция создает запрос fetch в службу REST. Возможно, что вызов завершится сбоем (например, если служба REST возвращает ошибку или не работает сеть). В этом случае пользовательская функция возвращает `#N/A`, чтобы указать на сбой веб-вызова.
+
+
+```typescript
 /**
  * Gets a comment from the hypothetical contoso.com/comments API.
  * @customfunction
  * @param {number} commentID ID of a comment.
  */
 function getComment(commentID) {
-  let url = "https://www.contoso.com/comments/" + x;
-
+  let url = "https://www.contoso.com/comments/" + commentID;
   return fetch(url)
     .then(function (data) {
       return data.json();
@@ -35,12 +87,13 @@ function getComment(commentID) {
       return json.body;
     })
     .catch(function (error) {
-      throw error;
+      throw new CustomFunctions.Error(CustomFunctions.ErrorCode.notAvailable);
     })
 }
 ```
 
 ## <a name="next-steps"></a>Дальнейшие действия
+
 Узнайте, как [устранять проблемы с пользовательскими функциями](custom-functions-troubleshooting.md).
 
 ## <a name="see-also"></a>Дополнительные ресурсы
