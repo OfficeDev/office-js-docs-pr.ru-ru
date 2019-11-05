@@ -3,12 +3,12 @@ ms.date: 07/10/2019
 description: Отладка пользовательских функций в Excel.
 title: Отладка пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: 987df4fc638b94b7a5002c99aee6e36642f4e4a4
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: 823f261af5dd50e8b965a421998234ceddd3551c
+ms.sourcegitcommit: 42bcf9059327a8d71a7ab223805aea68be9ed6b5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35771458"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "37962026"
 ---
 # <a name="custom-functions-debugging"></a>Отладка пользовательских функций
 
@@ -27,9 +27,9 @@ ms.locfileid: "35771458"
 - [Командная строка](#use-the-command-line-tools-to-debug)
 
 > [!NOTE]
-> Для простоты в этой статье показана Отладка в контексте использования Visual Studio Code для редактирования, запуска задач и в некоторых случаях использования представления отладки. Если вы используете другой редактор или средство командной строки, ознакомьтесь с инструкциями по использованию [командной строки](#commands-for-building-and-running-your-add-in) в конце этой статьи.
+> Для простоты в этой статье показана Отладка в контексте использования Visual Studio Code для редактирования, запуска задач и в некоторых случаях использования представления отладки. Если вы используете другой редактор или средство командной строки, ознакомьтесь с [инструкциями по использованию командной строки](#commands-for-building-and-running-your-add-in) в конце этой статьи.
 
-## <a name="requirements"></a>Требования
+## <a name="requirements"></a>Requirements
 
 Перед началом отладки следует использовать [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office) , чтобы создать проект пользовательских функций. Руководство по созданию проекта пользовательских функций представлено в [руководстве Custom functions](../tutorials/excel-tutorial-create-custom-functions.md).
 
@@ -54,7 +54,7 @@ ms.locfileid: "35771458"
 
 ### <a name="start-debugging"></a>Начало отладки
 
-1. В коде VS откройте файл сценария исходного кода (Functions **. js** или **functions. TS**).
+1. В коде VS откройте файл сценария исходного кода (**functions. js** или **functions. TS**).
 2. [Задайте точку останова](https://code.visualstudio.com/Docs/editor/debugging#_breakpoints) в исходном коде пользовательской функции.
 3. В книге Excel введите формулу, использующую пользовательскую функцию.
 
@@ -81,7 +81,7 @@ ms.locfileid: "35771458"
 
 ### <a name="sideload-your-add-in"></a>Загрузка неопубликованной надстройки
 
-1. Перейдите на вкладку **Вставка** на ленте и в разделе надстройки выберите надстройки **Office**. ****
+1. Перейдите на вкладку **Вставка** на ленте и **в разделе надстройки выберите надстройки** **Office**.
 2. В диалоговом окне **Надстройки Office** откройте вкладку **МОИ НАДСТРОЙКИ** и выберите **Управление моими надстройками** > **Отправить надстройку**.
     
     ![Диалоговое окно "Надстройки Office" с раскрывающимся меню в правом верхнем углу, в котором выделен пункт "Управление моими надстройками", а под ним — раскрывающийся список с пунктом "Отправить надстройку"](../images/office-add-ins-my-account.png)
@@ -92,7 +92,7 @@ ms.locfileid: "35771458"
 
 
 ### <a name="set-breakpoints"></a>Задание точек останова
-1. В коде VS откройте файл сценария исходного кода (Functions **. js** или **functions. TS**).
+1. В коде VS откройте файл сценария исходного кода (**functions. js** или **functions. TS**).
 2. [Задайте точку останова](https://code.visualstudio.com/Docs/editor/debugging#_breakpoints) в исходном коде пользовательской функции.
 3. В книге Excel введите формулу, использующую пользовательскую функцию.
 
@@ -172,5 +172,6 @@ ms.locfileid: "35771458"
 ## <a name="see-also"></a>См. также
 
 * [Устранение неполадок пользовательских функций](custom-functions-troubleshooting.md)
+* [Обработка ошибок в пользовательских функциях Excel](custom-functions-errors.md)
 * [Создание пользовательских функций, совместимых с функциями XLL, определенными пользователями](make-custom-functions-compatible-with-xll-udf.md)
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)
