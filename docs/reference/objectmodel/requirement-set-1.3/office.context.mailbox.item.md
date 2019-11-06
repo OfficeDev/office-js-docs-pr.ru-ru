@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox. Item — набор требований 1,3
 description: ''
-ms.date: 10/23/2019
+ms.date: 11/05/2019
 localization_priority: Normal
-ms.openlocfilehash: e2e91dc196e0c67eed3a358e9f0d864885a01945
-ms.sourcegitcommit: 5ba325cc88183a3f230cd89d615fd49c695addcf
+ms.openlocfilehash: 0c493f6461431b08cd928bfe1824328e5c60e2e5
+ms.sourcegitcommit: 21aa084875c9e07a300b3bbe8852b3e5dd163e1d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "37682650"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "38001602"
 ---
 # <a name="item"></a>item
 
@@ -139,10 +139,10 @@ console.log(outputString);
 
 Получает объект, который предоставляет методы для получения или обновления получателей скрытой копии сообщения. Только в режиме создания.
 
-По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac применяются следующие пределы.
+Коллекция может включать не более 100 элементов по умолчанию. Однако для компьютеров с Windows и Mac OS действуют указанные ниже ограничения.
 
-- Максимальное число участников для получения 500.
-- Задайте не более 100 членов для каждого вызова, до 500 всего членов.
+- Максимальное количество элементов — 500.
+- Установить ограничение количества элементов на вызов — не более 100, общего количества — не более 500.
 
 ##### <a name="type"></a>Тип
 
@@ -224,7 +224,7 @@ Office.context.mailbox.item.body.getAsync(
 
 ##### <a name="read-mode"></a>Режим чтения
 
-Свойство `cc` возвращает массив, который содержит объект `EmailAddressDetails` для каждого получателя, указанного в строке **Копия** сообщения. По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac вы можете получить максимум 500 членов.
+Свойство `cc` возвращает массив, который содержит объект `EmailAddressDetails` для каждого получателя, указанного в строке **Копия** сообщения. Коллекция может включать не более 100 элементов по умолчанию. Однако на компьютерах с Windows и Mac OS может быть до 500 элементов.
 
 ```js
 console.log(JSON.stringify(Office.context.mailbox.item.cc));
@@ -232,10 +232,10 @@ console.log(JSON.stringify(Office.context.mailbox.item.cc));
 
 ##### <a name="compose-mode"></a>Режим создания
 
-Свойство `cc` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Копия** сообщения. По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac применяются следующие пределы.
+Свойство `cc` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Копия** сообщения. Коллекция может включать не более 100 элементов по умолчанию. Однако для компьютеров с Windows и Mac OS действуют указанные ниже ограничения.
 
-- Максимальное число участников для получения 500.
-- Задайте не более 100 членов для каждого вызова, до 500 всего членов.
+- Максимальное количество элементов — 500.
+- Установить ограничение количества элементов на вызов — не более 100, общего количества — не более 500.
 
 ```js
 Office.context.mailbox.item.cc.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
@@ -260,7 +260,7 @@ function callback(asyncResult) {
 
 |Требование| Значение|
 |---|---|
-|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
@@ -285,7 +285,7 @@ function callback(asyncResult) {
 
 |Требование| Значение|
 |---|---|
-|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
@@ -313,7 +313,7 @@ console.log("conversationId: " + conversationId);
 
 |Требование| Значение|
 |---|---|
-|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
@@ -344,7 +344,7 @@ console.log("Date and time created: " + dateTimeCreated);
 
 |Требование| Значение|
 |---|---|
-|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
@@ -515,10 +515,10 @@ console.log("Item class: " + itemClass);
 
 #### <a name="nullable-itemid-string"></a>(nullable) itemId: String
 
-Получает идентификатор элемента веб-служб Exchange для текущего элемента. Только в режиме чтения.
+Получает [идентификатор элемента веб-служб Exchange](/exchange/client-developer/exchange-web-services/ews-identifiers-in-exchange) для текущего элемента. Только режим чтения.
 
 > [!NOTE]
-> Идентификатор, возвращаемый свойством `itemId`, совпадает с идентификатором элемента веб-служб Exchange. Свойство `itemId` не совпадает с идентификатором записи Outlook, а также идентификатором, который используется REST API Outlook. Прежде чем совершать вызовы REST API, используя это значение, его необходимо преобразовать с помощью [Office.context.mailbox.convertToRestId](office.context.mailbox.md#converttorestiditemid-restversion--string). Дополнительные сведения см. в статье [Использование REST API Outlook из надстройки Outlook](/outlook/add-ins/use-rest-api#get-the-item-id).
+> Идентификатор, возвращаемый `itemId` свойством, совпадает с [идентификатором элемента веб-служб Exchange](/exchange/client-developer/exchange-web-services/ews-identifiers-in-exchange). Свойство `itemId` не совпадает с идентификатором записи Outlook, а также идентификатором, который используется REST API Outlook. Прежде чем совершать вызовы REST API, используя это значение, его необходимо преобразовать с помощью [Office.context.mailbox.convertToRestId](office.context.mailbox.md#converttorestiditemid-restversion--string). Дополнительные сведения см. в статье [Использование REST API Outlook из надстройки Outlook](/outlook/add-ins/use-rest-api#get-the-item-id).
 
 Свойство `itemId` недоступно в режиме создания. Если требуется идентификатор элемента, с помощью метода [`saveAsync`](#saveasyncoptions-callback) можно сохранить элемент в хранилище. При этом в параметре [`AsyncResult.value`](/javascript/api/office/office.asyncresult) функции обратного вызова возвращается идентификатор элемента.
 
@@ -697,7 +697,7 @@ Office.context.mailbox.item.notificationMessages.getAllAsync(
 
 ##### <a name="read-mode"></a>Режим чтения
 
-Свойство `optionalAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого необязательного участника собрания. По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac вы можете получить максимум 500 членов.
+Свойство `optionalAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого необязательного участника собрания. Коллекция может включать не более 100 элементов по умолчанию. Однако на компьютерах с Windows и Mac OS может быть до 500 элементов.
 
 ```js
 var optionalAttendees = Office.context.mailbox.item.optionalAttendees;
@@ -706,10 +706,10 @@ console.log("Optional attendees: " + JSON.stringify(optionalAttendees));
 
 ##### <a name="compose-mode"></a>Режим создания
 
-Свойство `optionalAttendees` возвращает объект `Recipients`, который предоставляет методы для получения или обновления необязательных участников собрания. По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac применяются следующие пределы.
+Свойство `optionalAttendees` возвращает объект `Recipients`, который предоставляет методы для получения или обновления необязательных участников собрания. Коллекция может включать не более 100 элементов по умолчанию. Однако для компьютеров с Windows и Mac OS действуют указанные ниже ограничения.
 
-- Максимальное число участников для получения 500.
-- Задайте не более 100 членов для каждого вызова, до 500 всего членов.
+- Максимальное количество элементов — 500.
+- Установить ограничение количества элементов на вызов — не более 100, общего количества — не более 500.
 
 ```js
 Office.context.mailbox.item.optionalAttendees.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
@@ -773,7 +773,7 @@ console.log("Organizer: " + organizerName + " (" + organizerAddress + ")");
 
 ##### <a name="read-mode"></a>Режим чтения
 
-Свойство `requiredAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого обязательного участника собрания. По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac вы можете получить максимум 500 членов.
+Свойство `requiredAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого обязательного участника собрания. Коллекция может включать не более 100 элементов по умолчанию. Однако на компьютерах с Windows и Mac OS может быть до 500 элементов.
 
 ```js
 var requiredAttendees = Office.context.mailbox.item.requiredAttendees;
@@ -782,10 +782,10 @@ console.log("Required attendees: " + JSON.stringify(requiredAttendees));
 
 ##### <a name="compose-mode"></a>Режим создания
 
-Свойство `requiredAttendees` возвращает объект `Recipients`, предоставляющий методы, с помощью которых можно получить или обновить сведения об обязательных участниках собрания. По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac применяются следующие пределы.
+Свойство `requiredAttendees` возвращает объект `Recipients`, предоставляющий методы, с помощью которых можно получить или обновить сведения об обязательных участниках собрания. Коллекция может включать не более 100 элементов по умолчанию. Однако для компьютеров с Windows и Mac OS действуют указанные ниже ограничения.
 
-- Максимальное число участников для получения 500.
-- Задайте не более 100 членов для каждого вызова, до 500 всего членов.
+- Максимальное количество элементов — 500.
+- Установить ограничение количества элементов на вызов — не более 100, общего количества — не более 500.
 
 ```js
 Office.context.mailbox.item.requiredAttendees.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
@@ -956,7 +956,7 @@ function callback(asyncResult) {
 
 ##### <a name="read-mode"></a>Режим чтения
 
-Свойство `to` возвращает массив, содержащий объект `EmailAddressDetails` для каждого получателя в строке **Кому** сообщения. По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac вы можете получить максимум 500 членов.
+Свойство `to` возвращает массив, содержащий объект `EmailAddressDetails` для каждого получателя в строке **Кому** сообщения. Коллекция может включать не более 100 элементов по умолчанию. Однако на компьютерах с Windows и Mac OS может быть до 500 элементов.
 
 ```js
 console.log(JSON.stringify(Office.context.mailbox.item.to));
@@ -964,10 +964,10 @@ console.log(JSON.stringify(Office.context.mailbox.item.to));
 
 ##### <a name="compose-mode"></a>Режим создания
 
-Свойство `to` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Кому** сообщения. По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac применяются следующие пределы.
+Свойство `to` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Кому** сообщения. Коллекция может включать не более 100 элементов по умолчанию. Однако для компьютеров с Windows и Mac OS действуют указанные ниже ограничения.
 
-- Максимальное число участников для получения 500.
-- Задайте не более 100 членов для каждого вызова, до 500 всего членов.
+- Максимальное количество элементов — 500.
+- Установить ограничение количества элементов на вызов — не более 100, общего количества — не более 500.
 
 ```js
 Office.context.mailbox.item.to.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
@@ -1007,9 +1007,9 @@ function callback(asyncResult) {
 |---|---|---|---|
 |`uri`| String||Универсальный код ресурса (URI), представляющий расположение файла, который нужно вложить в сообщение или встречу. Максимальная длина — 2048 символов.|
 |`attachmentName`| String||Имя вложения, которое отображается при передаче вложения. Максимальная длина — 255 символов.|
-|`options`| Object| &lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
-|`options.asyncContext`| Object| &lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
-|`callback`| функция| &lt;необязательно&gt;|После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.<br/>Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.|
+|`options`| Object| &lt;необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
+|`options.asyncContext`| Object| &lt;необязательно&gt;|В методе обратного вызова разработчики могут указать любой объект, к которому необходимо получить доступ.|
+|`callback`| функция| &lt;Необязательный&gt;|После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.<br/>Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.|
 
 ##### <a name="errors"></a>Ошибки
 
@@ -1019,7 +1019,7 @@ function callback(asyncResult) {
 | `FileTypeNotSupported` | Расширение вложения не поддерживается. |
 | `NumberOfAttachmentsExceeded` | Сообщение или встреча содержат слишком много вложений. |
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -1078,7 +1078,7 @@ function addAttachment() {
 |------------|-------------|
 | `NumberOfAttachmentsExceeded` | Сообщение или встреча содержат слишком много вложений. |
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -1126,7 +1126,7 @@ function addAttachment() {
 
 Если в клиенте Outlook для настольных ПК сообщение представляет собой ответ в тексте, метод `close` не работает.
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -1169,7 +1169,7 @@ function addAttachment() {
 
 |Требование| Значение|
 |---|---|
-|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Чтение|
 
@@ -1288,7 +1288,7 @@ Office.context.mailbox.item.displayReplyAllForm(
 | `formData.attachments.itemId` | String | | Используется, только если свойству `type` задано значение `item`. Идентификатор вложения EWS. Это строка длиной до 100 символов. |
 | `callback` | function | &lt;Необязательный&gt; | По завершении работы метода функция, переданная параметру `callback`, вызывается с помощью одного параметра `asyncResult`, представляющего собой объект [AsyncResult](/javascript/api/office/office.asyncresult). |
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -1430,7 +1430,7 @@ var contacts = Office.context.mailbox.item.getEntities().contacts;
 |---|---|---|
 |`entityType`| [Office.MailboxEnums.EntityType](/javascript/api/outlook/office.mailboxenums.entitytype?view=outlook-js-1.3)|Одно из значений перечисления EntityType.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -1494,7 +1494,7 @@ Office.initialize = function () {
 |---|---|---|
 |`name`| String|Имя элемента правила `ItemHasKnownEntity`, определяющее соответствующий фильтр.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -1591,7 +1591,7 @@ var veggies = allMatches.veggies;
 |---|---|---|
 |`name`| String|Имя элемента правила `ItemHasRegularExpressionMatch`, определяющее соответствующий фильтр.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -1622,6 +1622,11 @@ var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");
 Асинхронно возвращает данные, выбранные в теме или тексте сообщения.
 
 Если выделенный фрагмент отсутствует, но курсор находится в тексте или теме, метод возвращает значение NULL для выбранных данных. Если выбраны не текст и не тема, метод возвращает ошибку `InvalidSelection`.
+
+> [!NOTE]
+> В Outlook в Интернете метод возвращает строку "null", если текст не выбран, но курсор находится в теле. Чтобы проверить эту ситуацию, добавьте код, подобный приведенному ниже:
+>
+> `var selectedText = (asyncResult.value.endPosition === asyncResult.value.startPosition) ? "" : asyncResult.value.data;`
 
 ##### <a name="parameters"></a>Параметры
 
@@ -1684,7 +1689,7 @@ function setCallback(asyncResult) {
 |`callback`| function||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Настраиваемые свойства предоставляются в виде объекта [`CustomProperties`](/javascript/api/outlook/office.customproperties?view=outlook-js-1.3) в свойстве `asyncResult.value`. Этот объект позволяет получить, задать и удалить настраиваемые свойства для элемента, а также сохранить изменения, внесенные в набор настраиваемых свойств, на сервере.|
 |`userContext`| Объект| &lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в функции обратного вызова. Доступ к этому объекту можно получить с помощью свойства `asyncResult.asyncContext` в функции обратного вызова.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -1745,7 +1750,7 @@ function saveCallback(asyncResult) {
 |------------|-------------|
 | `InvalidAttachmentId` | Идентификатор вложения не существует. |
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|

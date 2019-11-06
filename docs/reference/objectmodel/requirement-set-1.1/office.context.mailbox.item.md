@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox. Item — набор требований 1,1
 description: ''
-ms.date: 10/23/2019
+ms.date: 11/05/2019
 localization_priority: Normal
-ms.openlocfilehash: 3d0b9783ea7fd235f4f989182ced04e0bce735ff
-ms.sourcegitcommit: 5ba325cc88183a3f230cd89d615fd49c695addcf
+ms.openlocfilehash: 5cbf942ea9b1351e0f945a9ca5534a9ba090b79b
+ms.sourcegitcommit: 21aa084875c9e07a300b3bbe8852b3e5dd163e1d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "37682657"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "38001616"
 ---
 # <a name="item"></a>item
 
@@ -28,26 +28,26 @@ ms.locfileid: "37682657"
 
 | Элемент	 | Тип |
 |--------|------|
-| [attachments](#attachments-arrayattachmentdetails) | Элемент |
-| [bcc](#bcc-recipients) | Элемент |
-| [body](#body-body) | Элемент |
-| [cc](#cc-arrayemailaddressdetailsrecipients) | Элемент |
-| [conversationId](#nullable-conversationid-string) | Элемент |
-| [dateTimeCreated](#datetimecreated-date) | Элемент |
-| [dateTimeModified](#datetimemodified-date) | Элемент |
-| [end](#end-datetime) | Элемент |
-| [from](#from-emailaddressdetails) | Элемент |
-| [internetMessageId](#internetmessageid-string) | Элемент |
-| [itemClass](#itemclass-string) | Элемент |
-| [itemId](#nullable-itemid-string) | Элемент |
-| [itemType](#itemtype-officemailboxenumsitemtype) | Элемент |
-| [location](#location-stringlocation) | Элемент |
-| [normalizedSubject](#normalizedsubject-string) | Элемент |
-| [optionalAttendees](#optionalattendees-arrayemailaddressdetailsrecipients) | Элемент |
-| [organizer](#organizer-emailaddressdetails) | Элемент |
+| [attachments](#attachments-arrayattachmentdetails) | Member |
+| [bcc](#bcc-recipients) | Member |
+| [body](#body-body) | Member |
+| [cc](#cc-arrayemailaddressdetailsrecipients) | Member |
+| [conversationId](#nullable-conversationid-string) | Member |
+| [dateTimeCreated](#datetimecreated-date) | Member |
+| [dateTimeModified](#datetimemodified-date) | Member |
+| [end](#end-datetime) | Member |
+| [from](#from-emailaddressdetails) | Member |
+| [internetMessageId](#internetmessageid-string) | Member |
+| [itemClass](#itemclass-string) | Member |
+| [itemId](#nullable-itemid-string) | Member |
+| [itemType](#itemtype-officemailboxenumsitemtype) | Member |
+| [location](#location-stringlocation) | Member |
+| [normalizedSubject](#normalizedsubject-string) | Member |
+| [optionalAttendees](#optionalattendees-arrayemailaddressdetailsrecipients) | Member |
+| [organizer](#organizer-emailaddressdetails) | Member |
 | [requiredAttendees](#requiredattendees-arrayemailaddressdetailsrecipients) | Member |
-| [sender](#sender-emailaddressdetails) | Элемент |
-| [start](#start-datetime) | Элемент |
+| [sender](#sender-emailaddressdetails) | Member |
+| [start](#start-datetime) | Member |
 | [subject](#subject-stringsubject) | Элемент |
 | [to](#to-arrayemailaddressdetailsrecipients) | Элемент |
 | [addFileAttachmentAsync](#addfileattachmentasyncuri-attachmentname-options-callback) | Метод |
@@ -134,16 +134,16 @@ console.log(outputString);
 
 Получает объект, который предоставляет методы для получения или обновления получателей скрытой копии сообщения. Только в режиме создания.
 
-По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac применяются следующие пределы.
+Коллекция может включать не более 100 элементов по умолчанию. Однако для компьютеров с Windows и Mac OS действуют указанные ниже ограничения.
 
-- Максимальное число участников для получения 500.
-- Задайте не более 100 членов для каждого вызова, до 500 всего членов.
+- Максимальное количество элементов — 500.
+- Установить ограничение количества элементов на вызов — не более 100, общего количества — не более 500.
 
 ##### <a name="type"></a>Тип
 
 *   [Получатели](/javascript/api/outlook/office.recipients?view=outlook-js-1.1)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -176,7 +176,7 @@ function callback(asyncResult) {
 
 *   [Body](/javascript/api/outlook/office.body?view=outlook-js-1.1)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -219,7 +219,7 @@ Office.context.mailbox.item.body.getAsync(
 
 ##### <a name="read-mode"></a>Режим чтения
 
-Свойство `cc` возвращает массив, который содержит объект `EmailAddressDetails` для каждого получателя, указанного в строке **Копия** сообщения. По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac вы можете получить максимум 500 членов.
+Свойство `cc` возвращает массив, который содержит объект `EmailAddressDetails` для каждого получателя, указанного в строке **Копия** сообщения. Коллекция может включать не более 100 элементов по умолчанию. Однако на компьютерах с Windows и Mac OS может быть до 500 элементов.
 
 ```js
 console.log(JSON.stringify(Office.context.mailbox.item.cc));
@@ -227,10 +227,10 @@ console.log(JSON.stringify(Office.context.mailbox.item.cc));
 
 ##### <a name="compose-mode"></a>Режим создания
 
-Свойство `cc` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Копия** сообщения. По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac применяются следующие пределы.
+Свойство `cc` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Копия** сообщения. Коллекция может включать не более 100 элементов по умолчанию. Однако для компьютеров с Windows и Mac OS действуют указанные ниже ограничения.
 
-- Максимальное число участников для получения 500.
-- Задайте не более 100 членов для каждого вызова, до 500 всего членов.
+- Максимальное количество элементов — 500.
+- Установить ограничение количества элементов на вызов — не более 100, общего количества — не более 500.
 
 ```js
 Office.context.mailbox.item.cc.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
@@ -246,7 +246,7 @@ function callback(asyncResult) {
 
 *   Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.1)> | [Recipients](/javascript/api/outlook/office.recipients?view=outlook-js-1.1)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -271,7 +271,7 @@ function callback(asyncResult) {
 
 *   String
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -393,7 +393,7 @@ Office.context.mailbox.item.end.setAsync(endTime, options, function(result) {
 
 *   Date | [Time](/javascript/api/outlook/office.time?view=outlook-js-1.1)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -419,7 +419,7 @@ Office.context.mailbox.item.end.setAsync(endTime, options, function(result) {
 
 *   [EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.1)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -447,7 +447,7 @@ console.log("From " + from);
 
 *   String
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -483,7 +483,7 @@ var internetMessageId = Office.context.mailbox.item.internetMessageId;
 
 *   String
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -505,16 +505,16 @@ console.log("Item class: " + itemClass);
 
 #### <a name="nullable-itemid-string"></a>(nullable) itemId: String
 
-Получает идентификатор элемента веб-служб Exchange для текущего элемента. Только в режиме чтения.
+Получает [идентификатор элемента веб-служб Exchange](/exchange/client-developer/exchange-web-services/ews-identifiers-in-exchange) для текущего элемента. Только в режиме чтения.
 
 > [!NOTE]
-> Идентификатор, возвращаемый свойством `itemId`, совпадает с идентификатором элемента веб-служб Exchange. Свойство `itemId` не совпадает с идентификатором записи Outlook, а также идентификатором, который используется REST API Outlook. Перед выполнением вызовов API REST, использующих это значение, его `Office.context.mailbox.convertToRestId`необходимо преобразовать с помощью, которое доступно в наборе требований 1,3. Дополнительные сведения см. в статье [Использование REST API Outlook из надстройки Outlook](/outlook/add-ins/use-rest-api#get-the-item-id).
+> Идентификатор, возвращаемый `itemId` свойством, совпадает с [идентификатором элемента веб-служб Exchange](/exchange/client-developer/exchange-web-services/ews-identifiers-in-exchange). Свойство `itemId` не совпадает с идентификатором записи Outlook, а также идентификатором, который используется REST API Outlook. Перед выполнением вызовов API REST, использующих это значение, его `Office.context.mailbox.convertToRestId`необходимо преобразовать с помощью, которое доступно в наборе требований 1,3. Дополнительные сведения см. в статье [Использование REST API Outlook из надстройки Outlook](/outlook/add-ins/use-rest-api#get-the-item-id).
 
 ##### <a name="type"></a>Тип
 
 *   String
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -627,7 +627,7 @@ function callback(asyncResult) {
 
 *   String
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -653,7 +653,7 @@ console.log("Normalized subject: " + normalizedSubject);
 
 ##### <a name="read-mode"></a>Режим чтения
 
-Свойство `optionalAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого необязательного участника собрания. По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac вы можете получить максимум 500 членов.
+Свойство `optionalAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого необязательного участника собрания. Коллекция может включать не более 100 элементов по умолчанию. Однако на компьютерах с Windows и Mac OS может быть до 500 элементов.
 
 ```js
 var optionalAttendees = Office.context.mailbox.item.optionalAttendees;
@@ -662,10 +662,10 @@ console.log("Optional attendees: " + JSON.stringify(optionalAttendees));
 
 ##### <a name="compose-mode"></a>Режим создания
 
-Свойство `optionalAttendees` возвращает объект `Recipients`, который предоставляет методы для получения или обновления необязательных участников собрания. По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac применяются следующие пределы.
+Свойство `optionalAttendees` возвращает объект `Recipients`, который предоставляет методы для получения или обновления необязательных участников собрания. Коллекция может включать не более 100 элементов по умолчанию. Однако для компьютеров с Windows и Mac OS действуют указанные ниже ограничения.
 
-- Максимальное число участников для получения 500.
-- Задайте не более 100 членов для каждого вызова, до 500 всего членов.
+- Максимальное количество элементов — 500.
+- Установить ограничение количества элементов на вызов — не более 100, общего количества — не более 500.
 
 ```js
 Office.context.mailbox.item.optionalAttendees.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
@@ -681,7 +681,7 @@ function callback(asyncResult) {
 
 *   Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.1)> | [Recipients](/javascript/api/outlook/office.recipients?view=outlook-js-1.1)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -702,7 +702,7 @@ function callback(asyncResult) {
 
 *   [EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.1)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -729,7 +729,7 @@ console.log("Organizer: " + organizerName + " (" + organizerAddress + ")");
 
 ##### <a name="read-mode"></a>Режим чтения
 
-Свойство `requiredAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого обязательного участника собрания. По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac вы можете получить максимум 500 членов.
+Свойство `requiredAttendees` возвращает массив, содержащий объект `EmailAddressDetails` для каждого обязательного участника собрания. Коллекция может включать не более 100 элементов по умолчанию. Однако на компьютерах с Windows и Mac OS может быть до 500 элементов.
 
 ```js
 var requiredAttendees = Office.context.mailbox.item.requiredAttendees;
@@ -738,10 +738,10 @@ console.log("Required attendees: " + JSON.stringify(requiredAttendees));
 
 ##### <a name="compose-mode"></a>Режим создания
 
-Свойство `requiredAttendees` возвращает объект `Recipients`, предоставляющий методы, с помощью которых можно получить или обновить сведения об обязательных участниках собрания. По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac применяются следующие пределы.
+Свойство `requiredAttendees` возвращает объект `Recipients`, предоставляющий методы, с помощью которых можно получить или обновить сведения об обязательных участниках собрания. Коллекция может включать не более 100 элементов по умолчанию. Однако для компьютеров с Windows и Mac OS действуют указанные ниже ограничения.
 
-- Максимальное число участников для получения 500.
-- Задайте не более 100 членов для каждого вызова, до 500 всего членов.
+- Максимальное количество элементов — 500.
+- Установить ограничение количества элементов на вызов — не более 100, общего количества — не более 500.
 
 ```js
 Office.context.mailbox.item.requiredAttendees.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
@@ -758,7 +758,7 @@ function callback(asyncResult) {
 
 *   Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.1)> | [Recipients](/javascript/api/outlook/office.recipients?view=outlook-js-1.1)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -784,7 +784,7 @@ function callback(asyncResult) {
 
 *   [EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.1)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -848,7 +848,7 @@ Office.context.mailbox.item.start.setAsync(startTime, options, function(result) 
 
 *   Date | [Time](/javascript/api/outlook/office.time?view=outlook-js-1.1)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -893,7 +893,7 @@ function callback(asyncResult) {
 
 *   String | [Subject](/javascript/api/outlook/office.subject?view=outlook-js-1.1)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -912,7 +912,7 @@ function callback(asyncResult) {
 
 ##### <a name="read-mode"></a>Режим чтения
 
-Свойство `to` возвращает массив, содержащий объект `EmailAddressDetails` для каждого получателя в строке **Кому** сообщения. По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac вы можете получить максимум 500 членов.
+Свойство `to` возвращает массив, содержащий объект `EmailAddressDetails` для каждого получателя в строке **Кому** сообщения. Коллекция может включать не более 100 элементов по умолчанию. Однако на компьютерах с Windows и Mac OS может быть до 500 элементов.
 
 ```js
 console.log(JSON.stringify(Office.context.mailbox.item.to));
@@ -920,10 +920,10 @@ console.log(JSON.stringify(Office.context.mailbox.item.to));
 
 ##### <a name="compose-mode"></a>Режим создания
 
-Свойство `to` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Кому** сообщения. По умолчанию коллекция ограничена максимум 100 членами. Однако в Windows и Mac применяются следующие пределы.
+Свойство `to` возвращает объект `Recipients`, предоставляющий методы для получения или обновления получателей, которые указаны в строке **Кому** сообщения. Коллекция может включать не более 100 элементов по умолчанию. Однако для компьютеров с Windows и Mac OS действуют указанные ниже ограничения.
 
-- Максимальное число участников для получения 500.
-- Задайте не более 100 членов для каждого вызова, до 500 всего членов.
+- Максимальное количество элементов — 500.
+- Установить ограничение количества элементов на вызов — не более 100, общего количества — не более 500.
 
 ```js
 Office.context.mailbox.item.to.setAsync( ['alice@contoso.com', 'bob@contoso.com'] );
@@ -939,7 +939,7 @@ function callback(asyncResult) {
 
 *   Array.<[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails?view=outlook-js-1.1)> | [Recipients](/javascript/api/outlook/office.recipients?view=outlook-js-1.1)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -1034,7 +1034,7 @@ function addAttachment() {
 |------------|-------------|
 | `NumberOfAttachmentsExceeded` | Сообщение или встреча содержат слишком много вложений. |
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -1260,7 +1260,7 @@ var contacts = Office.context.mailbox.item.getEntities().contacts;
 |---|---|---|
 |`entityType`| [Office.MailboxEnums.EntityType](/javascript/api/outlook/office.MailboxEnums.entitytype?view=outlook-js-1.1)|Одно из значений перечисления EntityType.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -1325,7 +1325,7 @@ Office.initialize = function () {
 |---|---|---|
 |`name`| String|Имя элемента правила `ItemHasKnownEntity`, определяющее соответствующий фильтр.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -1379,7 +1379,7 @@ Office.initialize = function () {
 > [!NOTE]
 > Если вы указываете правило `ItemHasRegularExpressionMatch` для свойства текста элемента, регулярное выражение должно дальше фильтровать текст, а не пытаться вернуть весь текст элемента. Использование регулярного выражения, такого как `.*`, для получения всего текста элемента не всегда приносит ожидаемые результаты.
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -1425,7 +1425,7 @@ var veggies = allMatches.veggies;
 |---|---|---|
 |`name`| String|Имя элемента правила `ItemHasRegularExpressionMatch`, определяющее соответствующий фильтр.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -1464,7 +1464,7 @@ var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");
 |`callback`| function||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Настраиваемые свойства предоставляются в виде объекта [`CustomProperties`](/javascript/api/outlook/office.customproperties?view=outlook-js-1.1) в свойстве `asyncResult.value`. Этот объект позволяет получить, задать и удалить настраиваемые свойства для элемента, а также сохранить изменения, внесенные в набор настраиваемых свойств, на сервере.|
 |`userContext`| Объект| &lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в функции обратного вызова. Доступ к этому объекту можно получить с помощью свойства `asyncResult.asyncContext` в функции обратного вызова.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
