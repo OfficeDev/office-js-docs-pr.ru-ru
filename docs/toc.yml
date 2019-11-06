@@ -547,6 +547,9 @@
         - name: Руководство по пользовательским функциям
           href: tutorials/excel-tutorial-create-custom-functions.md
           displayName: 'Excel, Custom Functions'
+        - name: Руководство по обмену данными между пользовательскими функциями и областью задач
+          href: tutorials/share-data-and-events-between-custom-functions-and-the-task-pane-tutorial.md
+          displayName: 'Excel, Custom Functions'
         - name: Архитектура
           href: excel/custom-functions-architecture.md
           displayName: 'Excel, Custom Functions'
