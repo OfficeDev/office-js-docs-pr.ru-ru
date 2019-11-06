@@ -1,14 +1,14 @@
 ---
 title: Обзор проверки подлинности и авторизации в надстройках Office
 description: ''
-ms.date: 08/09/2019
+ms.date: 11/05/2019
 localization_priority: Priority
-ms.openlocfilehash: dab5eec14a95aea9c27e1d26151b121ac2ed82ac
-ms.sourcegitcommit: 24303ca235ebd7144a1d913511d8e4fb7c0e8c0d
+ms.openlocfilehash: 7960e47b615828bb844660565804db9ec7e4e1db
+ms.sourcegitcommit: 21aa084875c9e07a300b3bbe8852b3e5dd163e1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "36838510"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "38001467"
 ---
 # <a name="overview-of-authentication-and-authorization-in-office-add-ins"></a>Обзор проверки подлинности и авторизации в надстройках Office
 
@@ -37,18 +37,20 @@ ms.locfileid: "36838510"
 
 ## <a name="user-authentication-with-sso"></a>Проверка подлинности пользователей с помощью единого входа
 
-Чтобы использовать единый вход для проверки подлинности пользователей, код в области задач или файл функции вызывает метод [getAccessTokenAsync](/javascript/api/office/office.auth#getaccesstokenasync-options--callback-). Если пользователь не вошел в Office, откроется диалоговое окно и будет выполнен переход к странице входа в Azure Active Directory. После входа пользователя метод возвращает маркер доступа, являющийся маркером начальной загрузки в потоке **От имени**. (См. раздел [Доступ к Microsoft Graph с помощью единого входа](#access-to-microsoft-graph-with-sso).) Однако его также можно использовать в качестве маркера идентификации, так как он содержит несколько утверждений, уникальных для текущего пользователя, включая `preferred_username`, `name`, `sub` и `oid`. Инструкции о том, какое свойство использовать в качестве конечного идентификатора пользователя, см. в статье [Маркеры доступа платформы удостоверений Майкрософт](https://docs.microsoft.com/ru-RU/azure/active-directory/develop/access-tokens#payload-claims). Пример одного из этих маркеров см. в статье с [примером маркера доступа](sso-in-office-add-ins.md#example-access-token).
+Чтобы использовать единый вход для проверки подлинности пользователей, код в области задач или файл функции вызывает метод [getAccessToken](/javascript/api/office/officeruntime.auth#getAccessToken-options--callback-). Если пользователь не вошел в Office, откроется диалоговое окно и будет выполнен переход к странице входа в Azure Active Directory. После входа пользователя метод возвращает маркер доступа, являющийся маркером начальной загрузки в потоке **От имени**. (См. раздел [Доступ к Microsoft Graph с помощью единого входа](#access-to-microsoft-graph-with-sso).) Однако его также можно использовать в качестве маркера идентификации, так как он содержит несколько утверждений, уникальных для текущего пользователя, включая `preferred_username`, `name`, `sub` и `oid`. Инструкции о том, какое свойство использовать в качестве конечного идентификатора пользователя, см. в статье [Маркеры доступа платформы удостоверений Майкрософт](https://docs.microsoft.com/azure/active-directory/develop/access-tokens#payload-claims). Пример одного из этих маркеров см. в статье с [примером маркера доступа](sso-in-office-add-ins.md#example-access-token).
 
 После извлечения кодом нужного утверждения из маркера он использует это значение для поиска пользователя в таблице пользователей или вашей базе данных пользователей. Используйте базу данных для хранения сведений, относящихся к пользователям, например параметров пользователя или состояния учетной записи пользователя. Так как вы используете единый вход, пользователи не входят отдельно в вашу надстройку, поэтому вам не нужно хранить пароли для пользователей.
 
 Перед началом внедрения проверки подлинности пользователей с помощью единого входа внимательно ознакомьтесь со статьей [Включение единого входа для надстроек Office](sso-in-office-add-ins.md). Также обратите внимание на следующие примеры:
 
-- [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO), особенно на файл [auth.ts](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO/blob/master/Completed/src/auth.ts), использующий библиотеку [jswebtoken](https://github.com/auth0/node-jsonwebtoken) для декодирования и анализа маркера. (Однако в этом примере маркер не используется в качестве маркера идентификации. Он используется для получения доступа к Microsoft Graph с потоком **От имени**.)
-- [Единый вход с использованием ASP.NET для надстройки Office](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO), особенно на файл [ValuesController.ts](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO/blob/master/Complete/Office-Add-in-ASPNET-SSO-WebAPI/Controllers/ValuesController.cs), использующий класс [System.Security.Claims.ClaimsPrincipal](https://docs.microsoft.com/dotnet/api/system.security.claims.claimsprincipal) библиотеки для извлечения утверждений из маркера. (Однако в этом примере маркер не используется в качестве маркера идентификации. Он извлекает утверждение `scope` из маркера и использует его для получения доступа к Microsoft Graph с потоком **От имени**.)
+- [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO), особенно на файл [ssoAuthES6.js](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO/blob/master/Complete/src/auth.ts). 
+- [Единый вход с использованием ASP.NET для надстройки Office](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO). 
+
+Однако в этих примерах маркер не используется в качестве маркера идентификации. Он используется для получения доступа к Microsoft Graph с потоком **от имени**.
 
 ## <a name="access-to-microsoft-graph-with-sso"></a>Доступ к Microsoft Graph с помощью единого входа
 
-Чтобы использовать единый вход для получения доступа к Microsoft Graph, ваша надстройка в области задач или файл функции вызывает метод [getAccessTokenAsync](/javascript/api/office/office.auth#getaccesstokenasync-options--callback-). Если пользователь не вошел в Office, откроется диалоговое окно и будет выполнен переход к странице входа в Azure Active Directory. После входа пользователя метод возвращает маркер доступа, являющийся маркером начальной загрузки в потоке **От имени**. В частности он содержит утверждение `scope` со значением `access_as_user`. Руководство по утверждениям в маркере см. в статье [Маркеры доступа платформы удостоверений Майкрософт](https://docs.microsoft.com/ru-RU/azure/active-directory/develop/access-tokens#payload-claims). Пример одного из этих маркеров см. в статье с [примером маркера доступа](sso-in-office-add-ins.md#example-access-token).
+Чтобы использовать единый вход для получения доступа к Microsoft Graph, ваша надстройка в области задач или файл функции вызывает метод [getAccessToken](/javascript/api/office/officeruntime.auth#getAccessToken-options--callback-). Если пользователь не вошел в Office, откроется диалоговое окно и будет выполнен переход к странице входа в Azure Active Directory. После входа пользователя метод возвращает маркер доступа, являющийся маркером начальной загрузки в потоке **От имени**. В частности он содержит утверждение `scope` со значением `access_as_user`. Руководство по утверждениям в маркере см. в статье [Маркеры доступа платформы удостоверений Майкрософт](https://docs.microsoft.com/azure/active-directory/develop/access-tokens#payload-claims). Пример одного из этих маркеров см. в статье с [примером маркера доступа](sso-in-office-add-ins.md#example-access-token).
 
 После получения маркера кодом он используется в потоке **От имени**, чтобы получить второй маркер: маркер доступа к Microsoft Graph.
 
@@ -73,4 +75,3 @@ ms.locfileid: "36838510"
 
 > [!IMPORTANT]
 > Перед началом создания кода выясните, позволяет ли источник данных открывать экран входа в элементе iFrame. При работе с надстройкой Office в *Office в Интернете* область задач является элементом iFrame. Если источник данных не позволяет открывать экран входа в элементе iFrame, вам потребуется открыть экран входа в диалоговом окне, вызываемом с помощью Dialog API для Office. Дополнительные сведения см. в статье [Проверка подлинности с помощью Dialog API для Office](auth-with-office-dialog-api.md).
-
