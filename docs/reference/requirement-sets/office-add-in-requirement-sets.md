@@ -4,12 +4,12 @@ description: ''
 ms.date: 07/17/2019
 ms.prod: non-product-specific
 localization_priority: Priority
-ms.openlocfilehash: bd06b1955d426db4c2c777fe3a370ccaea774bb4
-ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
+ms.openlocfilehash: 574c15054c5d1c241d5a4c3ad11bfc8b0a451f64
+ms.sourcegitcommit: 21aa084875c9e07a300b3bbe8852b3e5dd163e1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "35940831"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "38001476"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
@@ -106,7 +106,7 @@ ms.locfileid: "35940831"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| См. статью [Наборы обязательных элементов API удостоверений](identity-api-requirement-sets.md). | Auth.getAccessTokenAsync |
+| См. статью [Наборы обязательных элементов API удостоверений](identity-api-requirement-sets.md). | Auth.getAccessToken |
 
 ---
 
