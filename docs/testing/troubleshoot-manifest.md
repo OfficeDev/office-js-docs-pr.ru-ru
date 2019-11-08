@@ -1,14 +1,14 @@
 ---
 title: Проверка манифеста и устранение связанных с ним неполадок
 description: Используйте эти методы для проверки манифеста надстройки Office.
-ms.date: 09/18/2019
+ms.date: 10/29/2019
 localization_priority: Priority
-ms.openlocfilehash: c320c05b944bba9e24a4d3c0e5ef514ac13cc3c6
-ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
+ms.openlocfilehash: c1af6308a975bf9204a519e21f828454d286aa19
+ms.sourcegitcommit: 59d29d01bce7543ebebf86e5a86db00cf54ca14a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "37035338"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "37924810"
 ---
 # <a name="validate-and-troubleshoot-issues-with-your-manifest"></a>Проверка манифеста и устранение связанных с ним неполадок
 
@@ -68,6 +68,38 @@ npm run validate
 > [!IMPORTANT]
 > Ведение журнала в среде выполнения сказывается на производительности. Включайте его, только если требуется устранить неполадки, связанные с манифестом надстройки.
 
+### <a name="use-runtime-logging-from-the-command-line"></a>Использование журнала в среде выполнения с помощью командной строки
+
+Самый быстрый способ приступить к использованию этого средства ведения журнала — включить ведение журнала в среде выполнения с помощью командной строки. При этом используется npx (обычно поставляется как часть npm версии 5.2.0 и новее). Если у вас более ранняя версия [npm](https://www.npmjs.com/), попробуйте воспользоваться инструкциями [Ведение журнала в среде выполнения Windows](#runtime-logging-on-windows) или [Ведение журнала в среде выполнения на компьютере Mac](#runtime-logging-on-mac) либо [установите npx](https://www.npmjs.com/package/npx).
+
+- Включение ведения журнала в среде выполнения:
+    ```command&nbsp;line
+    npx office-addin-dev-settings runtime-log --enable
+    ```
+- Чтобы включить ведение журнала в среде выполнения только для определенного файла, используйте ту же команду с именем файла:
+
+    ```command&nbsp;line
+    npx office-addin-dev-settings runtime-log --enable [filename.txt]
+    ```
+
+- Отключение ведения журнала в среде выполнения:
+
+    ```command&nbsp;line
+    npx office-addin-dev-settings runtime-log --disable
+    ```
+
+- Определение, включено ли ведение журнала в среде выполнения:
+
+    ```command&nbsp;line
+    npx office-addin-dev-settings runtime-log
+    ```
+
+- Отображение справки в командной строке для ведения журнала в среде выполнения:
+
+    ```command&nbsp;line
+    npx office-addin-dev-settings runtime-log --help
+    ```
+
 ### <a name="runtime-logging-on-windows"></a>Ведение журнала в среде выполнения в Windows
 
 1. Убедитесь, что у вас установлена сборка Office 2016 **16.0.7019** или выше. 
@@ -79,7 +111,7 @@ npm run validate
     > 1. Щелкните правой кнопкой мыши ключ (папку) **WEF** и выберите **Создать** > **Ключ**.
     > 2. Назовите новый ключ **Разработчик**.
 
-3. В качестве значения по умолчанию задайте полный путь к файлу, в который будет записываться журнал. Пример приведен в архиве [EnableRuntimeLogging.zip](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/raw/master/Tools/RuntimeLogging/EnableRuntimeLogging.zip). 
+3. В качестве значения параметра **RuntimeLogging** по умолчанию задайте полный путь к файлу, в который будет записываться журнал. Пример приведен в архиве [EnableRuntimeLogging.zip](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/raw/master/Tools/RuntimeLogging/EnableRuntimeLogging.zip). 
 
     > [!NOTE]
     > Необходим готовый каталог, в котором будет создан файл журнала, и соответствующее разрешение на запись. 
