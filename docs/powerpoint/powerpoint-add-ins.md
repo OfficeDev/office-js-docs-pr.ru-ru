@@ -1,30 +1,30 @@
 ---
 title: Надстройки PowerPoint
 description: ''
-ms.date: 09/03/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 86f05a70478652c546f0015e6f69e71bf3dacec0
-ms.sourcegitcommit: 7d4d721fc3d246ef8a2464bc714659cd84d6faab
+ms.openlocfilehash: d2ae12765beedd37892c84a84607b00e33b8703f
+ms.sourcegitcommit: 08c0b9ff319c391922fa43d3c2e9783cf6b53b1b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "37468744"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38066286"
 ---
 # <a name="powerpoint-add-ins"></a>Надстройки PowerPoint
 
-С помощью надстроек PowerPoint можно создавать удобные решения, подходящие для использования в презентациях на различных платформах, таких как Windows, iOS, Mac и браузеры. Можно создать два типа надстроек PowerPoint:
+С помощью надстроек PowerPoint можно создавать удобные решения, подходящие для использования в презентациях на различных платформах, таких как Windows, iPad, Mac и браузеры. Можно создать два типа надстроек PowerPoint:
 
 - **Контентные надстройки** позволяют добавлять динамический контент HTML5 в презентации. Например, ознакомьтесь с надстройкой [LucidChart Diagrams for PowerPoint](https://appsource.microsoft.com/product/office/WA104380117), с помощью которой можно добавить интерактивные схемы LucidChart в набор слайдов.
 
-- **Надстройки области задач** позволяют добавлять справочные сведения или данные в презентацию с помощью службы. Например, используя надстройку [Pixton Comic Characters](https://appsource.microsoft.com/product/office/WA104380907), вы можете вставить профессиональные фотографии в свою презентацию. 
+- **Надстройки области задач** позволяют добавлять справочные сведения или данные в презентацию с помощью службы. Например, используя надстройку [Pixton Comic Characters](https://appsource.microsoft.com/product/office/WA104380907), вы можете вставить профессиональные фотографии в свою презентацию.
 
 ## <a name="powerpoint-add-in-scenarios"></a>Сценарии надстроек PowerPoint
 
 В приведенных в этой статье примерах кода показаны основные задачи по разработке надстроек для PowerPoint. Обратите внимание на следующее:
 
-- При отображении сведений эти примеры используют функцию `app.showNotification`, включенную в шаблоны проектов надстроек Office в Visual Studio. Если для разработки надстройки вы не используете Visual Studio, замените функцию `showNotification` собственным кодом. 
+- При отображении сведений эти примеры используют функцию `app.showNotification`, включенную в шаблоны проектов надстроек Office в Visual Studio. Если для разработки надстройки вы не используете Visual Studio, замените функцию `showNotification` собственным кодом.
 
 - Некоторые из этих примеров также используют объект `Globals`, объявленный за пределами указанных функций как `var Globals = {activeViewHandler:0, firstSlideId:0};`.
 
