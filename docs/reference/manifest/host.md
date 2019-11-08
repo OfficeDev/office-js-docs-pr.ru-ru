@@ -1,20 +1,20 @@
 ---
 title: Элемент Host в файле манифеста
 description: ''
-ms.date: 07/01/2019
+ms.date: 11/05/2019
 localization_priority: Normal
-ms.openlocfilehash: e7b557034f70b03ed57598b7ffb9f43878db7392
-ms.sourcegitcommit: 90c2d8236c6b30d80ac2b13950028a208ef60973
+ms.openlocfilehash: 824cc6ae51eb9db713a0a9a768e3ec48e3271e95
+ms.sourcegitcommit: 08c0b9ff319c391922fa43d3c2e9783cf6b53b1b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "35454897"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38066279"
 ---
 # <a name="host-element"></a>Элемент Host
 
 Определяет тип приложения Office, в котором следует активировать надстройку.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Синтаксис элемента **Host** зависит от того, задается ли элемент в [базовом манифесте](#basic-manifest) или в узле [VersionOverrides](#versionoverrides-node). Функциональность в обоих случаях одинакова.  
 
 ## <a name="basic-manifest"></a>Базовый манифест
@@ -53,7 +53,7 @@ ms.locfileid: "35454897"
 
 ## <a name="versionoverrides-node"></a>Узел VersionOverrides
 
-Если основной элемент задается в узле [VersionOverrides](versionoverrides.md), его тип определяет атрибут `xsi:type`. 
+Если основной элемент задается в узле [VersionOverrides](versionoverrides.md), его тип определяет атрибут `xsi:type`.
 
 ### <a name="attributes"></a>Атрибуты
 
@@ -66,7 +66,7 @@ ms.locfileid: "35454897"
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
 |  [DesktopFormFactor](desktopformfactor.md)    |  Да   |  Определяет параметры классического форм-фактора. |
-|  [MobileFormFactor](mobileformfactor.md)    |  Нет   |  Определяет параметры для мобильного конструктивного параметра. **Примечание:** Этот элемент поддерживается только в Outlook в iOS. |
+|  [MobileFormFactor](mobileformfactor.md)    |  Нет   |  Определяет параметры для мобильного конструктивного параметра. **Примечание:** Этот элемент поддерживается только в Outlook на iOS и Android. |
 |  [AllFormFactors](allformfactors.md)    |  Нет   |  Определяет параметры всех форм-факторов. Используется только пользовательскими функциями в Excel. |
 
 ### <a name="xsitype"></a>xsi:type
@@ -79,7 +79,7 @@ ms.locfileid: "35454897"
 - `Presentation` (PowerPoint)
 - `Workbook` (Excel)
 
-## <a name="host-example"></a>Пример ведущего приложения 
+## <a name="host-example"></a>Пример ведущего приложения
 
 ```xml
 <Hosts>

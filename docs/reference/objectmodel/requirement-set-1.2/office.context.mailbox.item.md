@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox. Item — набор требований 1,2
 description: ''
-ms.date: 11/05/2019
+ms.date: 11/06/2019
 localization_priority: Normal
-ms.openlocfilehash: 97fa271f500e89c6ce69d82b95a0818f6d5bc7d4
-ms.sourcegitcommit: 21aa084875c9e07a300b3bbe8852b3e5dd163e1d
+ms.openlocfilehash: 50cc2bcf338d2fb2fee5e32e0cd408c72c138214
+ms.sourcegitcommit: 08c0b9ff319c391922fa43d3c2e9783cf6b53b1b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "38001609"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38066272"
 ---
 # <a name="item"></a>item
 
@@ -28,26 +28,26 @@ ms.locfileid: "38001609"
 
 | Элемент	 | Тип |
 |--------|------|
-| [attachments](#attachments-arrayattachmentdetails) | Member |
-| [bcc](#bcc-recipients) | Member |
-| [body](#body-body) | Member |
-| [cc](#cc-arrayemailaddressdetailsrecipients) | Member |
-| [conversationId](#nullable-conversationid-string) | Member |
-| [dateTimeCreated](#datetimecreated-date) | Member |
-| [dateTimeModified](#datetimemodified-date) | Member |
-| [end](#end-datetime) | Member |
-| [from](#from-emailaddressdetails) | Member |
-| [internetMessageId](#internetmessageid-string) | Member |
-| [itemClass](#itemclass-string) | Member |
-| [itemId](#nullable-itemid-string) | Member |
-| [itemType](#itemtype-officemailboxenumsitemtype) | Member |
-| [location](#location-stringlocation) | Member |
-| [normalizedSubject](#normalizedsubject-string) | Member |
-| [optionalAttendees](#optionalattendees-arrayemailaddressdetailsrecipients) | Member |
-| [organizer](#organizer-emailaddressdetails) | Member |
+| [attachments](#attachments-arrayattachmentdetails) | Элемент |
+| [bcc](#bcc-recipients) | Элемент |
+| [body](#body-body) | Элемент |
+| [cc](#cc-arrayemailaddressdetailsrecipients) | Элемент |
+| [conversationId](#nullable-conversationid-string) | Элемент |
+| [dateTimeCreated](#datetimecreated-date) | Элемент |
+| [dateTimeModified](#datetimemodified-date) | Элемент |
+| [end](#end-datetime) | Элемент |
+| [from](#from-emailaddressdetails) | Элемент |
+| [internetMessageId](#internetmessageid-string) | Элемент |
+| [itemClass](#itemclass-string) | Элемент |
+| [itemId](#nullable-itemid-string) | Элемент |
+| [itemType](#itemtype-officemailboxenumsitemtype) | Элемент |
+| [location](#location-stringlocation) | Элемент |
+| [normalizedSubject](#normalizedsubject-string) | Элемент |
+| [optionalAttendees](#optionalattendees-arrayemailaddressdetailsrecipients) | Элемент |
+| [organizer](#organizer-emailaddressdetails) | Элемент |
 | [requiredAttendees](#requiredattendees-arrayemailaddressdetailsrecipients) | Member |
-| [sender](#sender-emailaddressdetails) | Member |
-| [start](#start-datetime) | Member |
+| [sender](#sender-emailaddressdetails) | Элемент |
+| [start](#start-datetime) | Элемент |
 | [subject](#subject-stringsubject) | Элемент |
 | [to](#to-arrayemailaddressdetailsrecipients) | Элемент |
 | [addFileAttachmentAsync](#addfileattachmentasyncuri-attachmentname-options-callback) | Метод |
@@ -510,7 +510,7 @@ console.log("Item class: " + itemClass);
 Получает [идентификатор элемента веб-служб Exchange](/exchange/client-developer/exchange-web-services/ews-identifiers-in-exchange) для текущего элемента. Только в режиме чтения.
 
 > [!NOTE]
-> Идентификатор, возвращаемый `itemId` свойством, совпадает с [идентификатором элемента веб-служб Exchange](/exchange/client-developer/exchange-web-services/ews-identifiers-in-exchange). Свойство `itemId` не совпадает с идентификатором записи Outlook, а также идентификатором, который используется REST API Outlook. Перед выполнением вызовов API REST, использующих это значение, его `Office.context.mailbox.convertToRestId`необходимо преобразовать с помощью, которое доступно в наборе требований 1,3. Дополнительные сведения см. в статье [Использование REST API Outlook из надстройки Outlook](/outlook/add-ins/use-rest-api#get-the-item-id).
+> Идентификатор, возвращаемый свойством `itemId`, совпадает с [идентификатором элемента веб-служб Exchange](/exchange/client-developer/exchange-web-services/ews-identifiers-in-exchange). Свойство `itemId` не совпадает с идентификатором записи Outlook, а также идентификатором, который используется REST API Outlook. Перед выполнением вызовов API REST, использующих это значение, его `Office.context.mailbox.convertToRestId`необходимо преобразовать с помощью, которое доступно в наборе требований 1,3. Дополнительные сведения см. в статье [Использование REST API Outlook из надстройки Outlook](/outlook/add-ins/use-rest-api#get-the-item-id).
 
 ##### <a name="type"></a>Тип
 
@@ -853,7 +853,7 @@ Office.context.mailbox.item.start.setAsync(startTime, options, function(result) 
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
@@ -898,7 +898,7 @@ function callback(asyncResult) {
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
@@ -944,7 +944,7 @@ function callback(asyncResult) {
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
@@ -1555,12 +1555,10 @@ var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");
 
 Асинхронно возвращает данные, выбранные в теме или тексте сообщения.
 
-Если выделенный фрагмент отсутствует, но курсор находится в тексте или теме, метод возвращает значение NULL для выбранных данных. Если выбраны не текст и не тема, метод возвращает ошибку `InvalidSelection`.
+Если выделенный фрагмент отсутствует, но курсор находится в основном тексте или теме, метод возвращает пустую строку для выбранных данных. Если выбраны не текст и не тема, метод возвращает ошибку `InvalidSelection`.
 
 > [!NOTE]
-> В Outlook в Интернете метод возвращает строку "null", если текст не выбран, но курсор находится в теле. Чтобы проверить эту ситуацию, добавьте код, подобный приведенному ниже:
->
-> `var selectedText = (asyncResult.value.endPosition === asyncResult.value.startPosition) ? "" : asyncResult.value.data;`
+> В Outlook в Интернете метод возвращает строку null, если текст не выделен, но курсор находится в тексте. Чтобы проверить эту ситуацию, ознакомьтесь с приведенным далее в этом разделе.
 
 ##### <a name="parameters"></a>Параметры
 
@@ -1597,11 +1595,13 @@ function getCallback(asyncResult) {
   var text = asyncResult.value.data;
   var prop = asyncResult.value.sourceProperty;
 
-  Office.context.mailbox.item.setSelectedDataAsync('Setting ' + prop + ': ' + text, {}, setCallback);
-}
+  // Handle where Outlook on the web erroneously returns "null" instead of empty string.
+  if (Office.context.mailbox.diagnostics.hostName === 'OutlookWebApp'
+      && asyncResult.value.endPosition === asyncResult.value.startPosition) {
+    text = "";
+  }
 
-function setCallback(asyncResult) {
-  // Check for errors.
+  console.log("Selected text in " + prop + ": " + text);
 }
 ```
 
