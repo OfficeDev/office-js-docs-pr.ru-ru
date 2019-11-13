@@ -1,14 +1,14 @@
 ---
 title: Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 description: ''
-ms.date: 09/09/2019
+ms.date: 11/05/2019
 localization_priority: Priority
-ms.openlocfilehash: 8c1a39e4574f7e8ea60cdf32ff3139d9b929fe5d
-ms.sourcegitcommit: 24303ca235ebd7144a1d913511d8e4fb7c0e8c0d
+ms.openlocfilehash: 321b2cfedea659ce783f63097fbb3ddabf93a38d
+ms.sourcegitcommit: 88d81aa2d707105cf0eb55d9774b2e7cf468b03a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "36838531"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "38301983"
 ---
 # <a name="troubleshoot-user-errors-with-office-add-ins"></a>Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 
@@ -113,10 +113,34 @@ Office.context.ui.displayDialogAsync(startAddress, {displayInFrame:true}, callba
 #### <a name="for-ios"></a>Для iOS
 Для принудительной перезагрузки вызовите метод JavaScript `window.location.reload(true)` в надстройке. Вы также можете переустановить Office.
 
+## <a name="changes-to-static-files-such-as-javascript-html-and-css-do-not-take-effect"></a>Изменения статических файлов, таких как JavaScript, HTML и CSS, не отображаются.
+
+Браузер может кэшировать эти файлы. Чтобы избежать этого, отключите кэширование на стороне клиента при разработке. Сведения будут зависеть от того, какой тип сервера вы используете. В большинстве случаев необходимо добавить определенные заголовки в HTTP-ответы. Мы предлагаем следующий набор заголовков:
+
+- Cache-Control: "private, no-cache, no-store"
+- Pragma: "No-cache"
+- Expires: "-1"
+
+Пример использования на сервере Node.JS Express см. в [этом файле app.js](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO/blob/master/Complete/app.js). Пример использования в проекте ASP.NET см. в [этом файле cshtml](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO/blob/master/src/Office-Add-in-ASPNET-SSO-WebAPI/Views/Shared/_Layout.cshtml).
+
+Если надстройка размещена на сервере Internet Information Server (IIS), можно также добавить указанные сведения в файл web.config.
+
+```xml
+<system.webServer>
+  <staticContent>
+    <clientCache cacheControlMode="UseMaxAge" cacheControlMaxAge="0.00:00:00" cacheControlCustom="must-revalidate" />
+  </staticContent>
+```
+
+Если сначала эти действия безуспешны, вам, возможно, потребуется очистить кэш браузера. Сделайте это в интерфейсе браузера. Иногда очистить кэш браузера Microsoft Edge, используя пользовательский интерфейс, не удается. В таком случае выполните следующую команду в командной строке Windows.
+
+```bash
+del /s /f /q %LOCALAPPDATA%\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\AC\#!123\INetCache\
+```
+
 ## <a name="see-also"></a>См. также
 
 - [Отладка надстроек в Office в Интернете](debug-add-ins-in-office-online.md) 
 - [Загрузка неопубликованной надстройки Office на iPad и Mac](sideload-an-office-add-in-on-ipad-and-mac.md)  
 - [Отладка надстроек Office на iPad и Mac](debug-office-add-ins-on-ipad-and-mac.md)  
 - [Проверка манифеста и устранение связанных с ним неполадок](troubleshoot-manifest.md)
-    
