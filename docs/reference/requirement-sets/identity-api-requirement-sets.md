@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API удостоверений
 description: ''
-ms.date: 06/20/2019
+ms.date: 11/11/2019
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: a2992569f6807499156ef13aa6663267839e1853
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 96f5c305f4ecfe0fdc0ee89aed6955e090f87b02
+ms.sourcegitcommit: 88d81aa2d707105cf0eb55d9774b2e7cf468b03a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127081"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "38301927"
 ---
 # <a name="identity-api-requirement-sets"></a>Наборы обязательных элементов API удостоверений
 
@@ -17,11 +17,13 @@ ms.locfileid: "35127081"
 
 Надстройки Office работают в нескольких версиях Office. В приведенной ниже таблице перечислены наборы обязательных элементов API удостоверений, ведущие приложения Office, которые их поддерживают, а также номера сборок или версий для этих приложений.
 
-|  Набор обязательных элементов  | Office 2013 или более поздней версии в Windows<br>(единовременная покупка) | Office для Windows<br>(подключено к подписке Office 365) |  Office на iPad<br>(подключено к подписке Office 365)  |  Office на Mac<br>(подключено к подписке Office 365)  | Office в Интернете  | SharePoint Online | OneDrive.com |Outlook.com и Exchange Online|
+|  Набор обязательных элементов  | Office 2013 или более поздней версии в Windows<br>(единовременная покупка) | Office для Windows<br>(версия, подключенная к подписке на Office 365) |  Office для iPad<br>(версия, подключенная к подписке на Office 365)  |  Office для Mac<br>(версия, подключенная к подписке на Office 365)  | Office в Интернете  | SharePoint Online | OneDrive.com |Outlook.com и Exchange Online|
 |:-----|-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-| IdentityAPI 1.1  | Н/Д | Предварительный просмотр<b>*</b> | Скоро | Предварительный просмотр<b>*</b> | Предварительный просмотр<b>*</b> | Предварительный просмотр<b>*</b>| Скоро | Скоро |
+| Предварительный просмотр IdentityAPI  | Недоступно | Предварительный просмотр<b>*</b> | Скоро | Предварительный просмотр<b>*</b> | Предварительный просмотр<b>* &#8224;</b> | Предварительный просмотр<b>* &#8224;</b>| Скоро | Скоро |
 
 > **&#42;** На этапе предварительной версии для API удостоверений требуется Office 365 (версия подписки Office). Следует использовать последнюю версию для текущего месяца и сборку из канала для участников программы предварительной оценки. Чтобы получить эту версию, необходимо быть участником программы предварительной оценки Office. Дополнительные сведения см. на странице [Примите участие в программе предварительной оценки Office](https://products.office.com/office-insider?tab=tab-1). Обратите внимание на то, что когда сборка будет готова для выпуска на канале Semi-annual channel, поддержка функций предварительного просмотра, включая единый вход, отключается для этой сборки.
+>
+> **&#8224;** Надстройки, использующие API единого входа на этих платформах, будут работать только в том случае, если администратор клиента предоставил согласие на надстройку. Пользователь не может предоставить согласие даже в свой профиль Azure AD.
 
 Статьи и разделы с дополнительными сведениями о версиях, номерах сборок и Office Online Server:
 
@@ -34,9 +36,9 @@ ms.locfileid: "35127081"
 
 Сведения о наборах обязательных элементов общего API см. в статье [Наборы обязательных элементов общего API для Office](office-add-in-requirement-sets.md).
 
-## <a name="identityapi-11"></a>IdentityAPI 1.1
+## <a name="identityapi-preview"></a>Предварительный просмотр IdentityAPI
 
-IdentityAPI 1.1 для единого входа — это первая версия API. Дополнительные сведения об этом API см. в разделе [Справочные материалы по API единого входа](/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference) статьи [Включение единого входа в надстройке](/office/dev/add-ins/develop/sso-in-office-add-ins).
+Подробнее об этом API можно узнать в версии, использующей обещания в [getAccessToken](/javascript/api/office-runtime/officeruntime.auth#getaccesstoken-options-) , или в версии, использующей функции обратного вызова по адресу [getAccessTokenAsync](/javascript/api/office/office.auth#getaccesstokenasync-options--callback-).
 
 ## <a name="see-also"></a>См. также
 
