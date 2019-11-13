@@ -1,14 +1,14 @@
 ---
 title: Авторизация в Microsoft Graph с помощью единого входа
 description: ''
-ms.date: 11/05/2019
+ms.date: 11/11/2019
 localization_priority: Priority
-ms.openlocfilehash: 03fa2b862d397ea9a28589d6d1aa9b1030a0b6c5
-ms.sourcegitcommit: 21aa084875c9e07a300b3bbe8852b3e5dd163e1d
+ms.openlocfilehash: 44abb05c49786f4b7e050feb7e8eaf8c535f8de8
+ms.sourcegitcommit: 88d81aa2d707105cf0eb55d9774b2e7cf468b03a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "38001441"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "38301955"
 ---
 # <a name="authorize-to-microsoft-graph-with-sso-preview"></a>Авторизация в Microsoft Graph с помощью единого входа (предварительная версия)
 
@@ -29,7 +29,7 @@ ms.locfileid: "38001441"
 
 ![Схема единого входа](../images/sso-access-to-microsoft-graph.png)
 
-1. Код JavaScript надстройки вызывает новый API Office.js — [getAccessToken](/javascript/api/office/officeruntime.auth#getaccesstoken-options--callback-). Он указывает ведущему приложению Office, что необходимо получить маркер доступа к надстройке. (Далее он будет называться **маркером доступа к начальной загрузке**, поскольку в этом процессе он позже будет заменен вторым маркером. Пример раскодированного маркера доступа к начальной загрузке см. в разделе [Пример маркера доступа](sso-in-office-add-ins.md#example-access-token)).
+1. Код JavaScript надстройки вызывает новый API Office.js — [getAccessToken](/javascript/api/office-runtime/officeruntime.auth#getaccesstoken-options-). Он указывает ведущему приложению Office, что необходимо получить маркер доступа к надстройке. (Далее он будет называться **маркером доступа к начальной загрузке**, поскольку в этом процессе он позже будет заменен вторым маркером. Пример раскодированного маркера доступа к начальной загрузке см. в разделе [Пример маркера доступа](sso-in-office-add-ins.md#example-access-token)).
 1. Если вход в Office не выполнен, в ведущем приложении открывается всплывающее окно, в котором пользователю предлагается войти.
 1. Если пользователь запускает надстройку в первый раз, ему предлагается дать согласие.
 1. Ведущее приложение Office запрашивает **маркер доступа к начальной загрузке** у конечной точки Azure AD версии 2.0 для текущего пользователя.
