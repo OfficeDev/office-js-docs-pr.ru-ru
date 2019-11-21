@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Excel
 description: Сведения о наборе обязательных элементов надстройки Office для сборок Excel
-ms.date: 10/22/2019
+ms.date: 11/15/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 11fcf917b5dddb4a366465f11362c93660881597
-ms.sourcegitcommit: 5ba325cc88183a3f230cd89d615fd49c695addcf
+ms.openlocfilehash: 459f77ac474513699515e9bffe0a3e1115c525eb
+ms.sourcegitcommit: e56bd8f1260c73daf33272a30dc5af242452594f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "37681944"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "38757480"
 ---
 # <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
 
@@ -20,13 +20,14 @@ ms.locfileid: "37681944"
 Надстройки Excel работают в нескольких версиях Office, включая Office 2016 или более поздние версии для Windows, а также Office в Интернете, Office для Mac и Office для iPad. В приведенной ниже таблице перечислены наборы обязательных элементов для Excel, ведущие приложения Office, которые поддерживают все наборы обязательных инструментов, а также номера сборок или версий для этих приложений.
 
 > [!NOTE]
-> Чтобы использовать API в любом из нумерованных наборов обязательных элементов, следует ссылаться на **рабочую** библиотеку в сети CDN: https://appsforoffice.microsoft.com/lib/1/hosted/office.js.
+> Чтобы использовать API в любом из нумерованных наборов обязательных элементов или `ExcelApiOnline`, следует ссылаться на **рабочую** библиотеку в сети CDN https://appsforoffice.microsoft.com/lib/1/hosted/office.js.
 >
 > Сведения об использовании API предварительных версий см. в статье [Предварительные версии API JavaScript для Excel](./excel-preview-apis.md).
 
 |  Набор обязательных элементов  |  Office для Windows<br>(версия, подключенная к подписке на Office 365)  |  Office для iPad<br>(версия, подключенная к подписке на Office 365)  |  Office для Mac<br>(версия, подключенная к подписке на Office 365)  | Office в Интернете |
 |:-----|-----|:-----|:-----|:-----|:-----|
 | [Предварительная версия](excel-preview-apis.md)  | Применяйте последнюю версию Office для использования предварительных версий API (может потребоваться присоединение к [программе предварительной оценки Office](https://products.office.com/office-insider)) |
+| [ExcelApiOnline](excel-api-online-requirement-set.md) | Н/Д | Н/Д | Н/Д | Последние (см. [набор обязательных элементов, стр.](./excel-api-online-requirement-set.md)) |
 | [ExcelApi 1.10](excel-api-1-10-requirement-set.md) | Версия 1907 (сборка 11929.20306) или более поздняя | 2.30 или более поздняя версия | 16.30 или более поздняя версия | Октябрь 2019 г. |
 | [ExcelApi 1.9](excel-api-1-9-requirement-set.md)  | Версия 1903 (сборка 11425.20204) или более поздняя | 2.24 или более поздняя версия | 16.24 или более поздняя версия | Май 2019 г. |
 | [ExcelApi 1.8](excel-api-1-8-requirement-set.md)  | Версия 1808 (сборка 10730.20102) или более поздняя | 2.17 или более поздняя | 16.17 или более поздняя | Сентябрь 2018 г. |
