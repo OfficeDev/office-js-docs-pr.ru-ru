@@ -1,20 +1,20 @@
 ---
 title: Office. Context. Mailbox. userProfile — Предварительная версия набора требований
 description: ''
-ms.date: 06/20/2019
+ms.date: 11/25/2019
 localization_priority: Normal
-ms.openlocfilehash: 5941c4e1276535091a3ffcf5b2fb6aa972ed8c4d
-ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
+ms.openlocfilehash: 4afc64f247155576ab3f0024d1929a29a0f7dc0c
+ms.sourcegitcommit: 05a883a7fd89136301ce35aabc57638e9f563288
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "36696472"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "39629260"
 ---
 # <a name="userprofile"></a>userProfile
 
 ### <a name="officeofficemdcontextofficecontextmdmailboxofficecontextmailboxmduserprofile"></a>[Office](Office.md)[.context](Office.context.md)[.mailbox](Office.context.mailbox.md).userProfile
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -22,16 +22,16 @@ ms.locfileid: "36696472"
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-##### <a name="members-and-methods"></a>Элементы и методы
+##### <a name="properties"></a>Свойства
 
-| Элемент | Тип |
-|--------|------|
-| [accountType](#accounttype-string) | Member |
-| [displayName](#displayname-string) | Member |
-| [emailAddress](#emailaddress-string) | Member |
-| [timeZone](#timezone-string) | Member |
+| Свойство | Минимальные<br>уровень разрешения | Способов | Тип возвращаемых данных | Минимальные<br>набор требований |
+|---|---|---|---|---|
+| [accountType](#accounttype-string) | ReadItem | Создание<br>Чтение | String | 1.6 |
+| [displayName](#displayname-string) | ReadItem | Создание<br>Чтение | String | 1.0 |
+| [emailAddress](#emailaddress-string) | ReadItem | Создание<br>Чтение | String | 1.0 |
+| [timeZone](#timezone-string) | ReadItem | Создание<br>Чтение | String | 1.0 |
 
-### <a name="members"></a>Members
+## <a name="property-details"></a>Сведения о свойстве
 
 #### <a name="accounttype-string"></a>accountType: строка
 

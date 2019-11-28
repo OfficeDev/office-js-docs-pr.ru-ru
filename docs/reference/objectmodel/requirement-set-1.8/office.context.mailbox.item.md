@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox. Item — набор требований 1,8
 description: ''
-ms.date: 11/06/2019
+ms.date: 11/25/2019
 localization_priority: Normal
-ms.openlocfilehash: fe55299acc6fb10c6e0e6a4536c300c84a53664e
-ms.sourcegitcommit: 08c0b9ff319c391922fa43d3c2e9783cf6b53b1b
+ms.openlocfilehash: bb100dd4408099789d26268743264b00d3b988ac
+ms.sourcegitcommit: 05a883a7fd89136301ce35aabc57638e9f563288
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38066202"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "39629667"
 ---
 # <a name="item"></a>item
 
@@ -31,7 +31,7 @@ ms.locfileid: "38066202"
 | [attachments](#attachments-arrayattachmentdetails) | Элемент |
 | [bcc](#bcc-recipients) | Элемент |
 | [body](#body-body) | Элемент |
-| [разделов](#categories-categories) | Элемент |
+| [categories](#categories-categories) | Элемент |
 | [cc](#cc-arrayemailaddressdetailsrecipients) | Элемент |
 | [conversationId](#nullable-conversationid-string) | Элемент |
 | [dateTimeCreated](#datetimecreated-date) | Элемент |
@@ -51,9 +51,9 @@ ms.locfileid: "38066202"
 | [organizer](#organizer-emailaddressdetailsorganizer) | Элемент |
 | [recurrence](#nullable-recurrence-recurrence) | Элемент |
 | [requiredAttendees](#requiredattendees-arrayemailaddressdetailsrecipients) | Элемент |
-| [sender](#sender-emailaddressdetails) | Элемент |
-| [seriesId](#nullable-seriesid-string) | Элемент |
-| [start](#start-datetime) | Элемент |
+| [sender](#sender-emailaddressdetails) | Member |
+| [seriesId](#nullable-seriesid-string) | Member |
+| [start](#start-datetime) | Member |
 | [subject](#subject-stringsubject) | Элемент |
 | [to](#to-arrayemailaddressdetailsrecipients) | Элемент |
 | [addFileAttachmentAsync](#addfileattachmentasyncuri-attachmentname-options-callback) | Метод |
@@ -1267,7 +1267,7 @@ function callback(asyncResult) {
 |---|---|---|---|
 |`uri`|String||Универсальный код ресурса (URI), представляющий расположение файла, который нужно вложить в сообщение или встречу. Максимальная длина — 2048 символов.|
 |`attachmentName`|String||Имя вложения, которое отображается при передаче вложения. Максимальная длина — 255 символов.|
-|`options`|Object|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
+|`options`|Объект|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Object|&lt;необязательно&gt;|В методе обратного вызова разработчики могут указать любой объект, к которому необходимо получить доступ.|
 |`options.isInline`|Boolean|&lt;Необязательный&gt;|Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.|
 |`callback`|function|&lt;необязательно&gt;|После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.<br/>Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.|
@@ -1348,7 +1348,7 @@ Office.context.mailbox.item.addFileAttachmentAsync(
 |---|---|---|---|
 |`base64File`|String||Содержимое изображения или файла в кодировке Base64, которое добавляется в сообщение электронной почты или событие.|
 |`attachmentName`|String||Имя вложения, которое отображается при передаче вложения. Максимальная длина — 255 символов.|
-|`options`|Object|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
+|`options`|Объект|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Object|&lt;Необязательно&gt;|В методе обратного вызова разработчики могут указать любой объект, к которому необходимо получить доступ.|
 |`options.isInline`|Boolean|&lt;необязательно&gt;|Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений.|
 |`callback`|function|&lt;необязательно&gt;|После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.<br/>Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.|
@@ -1455,7 +1455,7 @@ Office.context.mailbox.item.addHandlerAsync(Office.EventType.AttachmentsChanged,
 |`itemId`|String||Идентификатор Exchange для вкладываемого элемента. Максимальная длина — 100 символов.|
 |`attachmentName`|String||Тема вкладываемого элемента. Максимальная длина: 255 символов.|
 |`options`|Object|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
-|`options.asyncContext`|Object|&lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
+|`options.asyncContext`|Объект|&lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
 |`callback`|функция|&lt;Необязательный&gt;|После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>После успешного выполнения идентификатор вложения будет представлен в свойстве `asyncResult.value`.<br/>Если добавить вложение не удастся, объект `asyncResult` будет содержать объект `Error` с описанием ошибки.|
 
 ##### <a name="errors"></a>Ошибки
@@ -1782,7 +1782,7 @@ Office.context.mailbox.item.displayReplyForm(
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
 |`options`|Object|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
-|`options.asyncContext`|Object|&lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
+|`options.asyncContext`|Объект|&lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
 |`callback`|функция|&lt;Необязательный&gt;|По завершении работы метода функция, переданная параметру `callback`, вызывается с помощью одного параметра `asyncResult`, представляющего собой объект [AsyncResult](/javascript/api/office/office.asyncresult). В случае успешного выполнения данные заголовков Интернета предоставляются в свойстве asyncResult. Value в виде String. Сведения о форматировании возвращаемого строкового значения приведены в [RFC 2183](https://tools.ietf.org/html/rfc2183) . Если происходит сбой вызова, свойство asyncResult. Error будет содержать код ошибки с причиной сбоя.|
 
 ##### <a name="requirements"></a>Requirements
@@ -1835,8 +1835,8 @@ Office.context.mailbox.item.getAllInternetHeadersAsync(
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
 |`attachmentId`|String||Идентификатор вложения, которое требуется получить.|
-|`options`|Object|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
-|`options.asyncContext`|Object|&lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
+|`options`|Объект|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
+|`options.asyncContext`|Объект|&lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
 |`callback`|функция|&lt;Необязательный&gt;|По завершении работы метода функция, переданная параметру `callback`, вызывается с помощью одного параметра `asyncResult`, представляющего собой объект [AsyncResult](/javascript/api/office/office.asyncresult).|
 
 ##### <a name="requirements"></a>Требования
@@ -1902,7 +1902,7 @@ function handleAttachmentsCallback(result) {
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
 |`options`|Object|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
-|`options.asyncContext`|Object|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
+|`options.asyncContext`|Объект|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
 |`callback`|функция|&lt;Необязательный&gt;|По завершении работы метода функция, переданная параметру `callback`, вызывается с помощью одного параметра `asyncResult`, представляющего собой объект [AsyncResult](/javascript/api/office/office.asyncresult).|
 
 ##### <a name="requirements"></a>Requirements
@@ -2088,7 +2088,7 @@ Office.initialize = function () {
 
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
-|`options`|Object|&lt;необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
+|`options`|Объект|&lt;необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
 |`options.asyncContext`|Объект|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
 |`callback`|функция||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>После успешного выполнения идентификатор элемента будет предоставлен в свойстве `asyncResult.value`.|
 
@@ -2243,10 +2243,7 @@ var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");
 
 Асинхронно возвращает данные, выбранные в теме или тексте сообщения.
 
-Если выделенный фрагмент отсутствует, но курсор находится в основном тексте или теме, метод возвращает пустую строку для выбранных данных. Если выбраны не текст и не тема, метод возвращает ошибку `InvalidSelection`.
-
-> [!NOTE]
-> В Outlook в Интернете метод возвращает строку null, если текст не выделен, но курсор находится в тексте. Чтобы проверить эту ситуацию, ознакомьтесь с приведенным далее в этом разделе.
+Если выделенный фрагмент отсутствует, но курсор находится в тексте или теме, метод возвращает пустую строку для выбранных данных. Если выбраны не текст и не тема, метод возвращает ошибку `InvalidSelection`.
 
 ##### <a name="parameters"></a>Параметры
 
@@ -2254,7 +2251,7 @@ var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");
 |---|---|---|---|
 |`coercionType`|[Office.CoercionType](office.md#coerciontype-string)||Запрашивает формат данных. Если задано значение Text, метод возвращает обычный текст как строку, удаляя все имеющиеся HTML-теги. Если задано значение HTML, метод возвращает выделенный текст (обычный текст или HTML).|
 |`options`|Объект|&lt;необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
-|`options.asyncContext`|Object|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
+|`options.asyncContext`|Объект|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
 |`callback`|функция||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Чтобы получить доступ к выбранным данным из метода обратного вызова, вызовите `asyncResult.value.data`. Для доступа к исходному свойству, представляющему собой источник выбранных данных, вызовите параметр `asyncResult.value.sourceProperty`, который может иметь значение `body` или `subject`.|
 
 ##### <a name="requirements"></a>Requirements
@@ -2282,12 +2279,6 @@ Office.initialize = function () {
 function getCallback(asyncResult) {
   var text = asyncResult.value.data;
   var prop = asyncResult.value.sourceProperty;
-
-  // Handle where Outlook on the web erroneously returns "null" instead of empty string.
-  if (Office.context.mailbox.diagnostics.hostName === 'OutlookWebApp'
-      && asyncResult.value.endPosition === asyncResult.value.startPosition) {
-    text = "";
-  }
 
   console.log("Selected text in " + prop + ": " + text);
 }
@@ -2398,7 +2389,7 @@ var veggies = selectedMatches.veggies;
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
 |`options`|Object|&lt;необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
-|`options.asyncContext`|Object|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
+|`options.asyncContext`|Объект|&lt;необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
 |`callback`|функция||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Общие свойства предоставляются в виде [`SharedProperties`](/javascript/api/outlook/office.sharedproperties?view=outlook-js-1.8) объекта в `asyncResult.value` свойстве. Этот объект можно использовать для получения общих свойств элемента.|
 
 ##### <a name="requirements"></a>Requirements
@@ -2442,7 +2433,7 @@ function callback (asyncResult) {
 
 |Требование|Значение|
 |---|---|
-|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
+|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)|1.0|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)|ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)|Создание или чтение|
 
@@ -2489,8 +2480,8 @@ function saveCallback(asyncResult) {
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
 |`attachmentId`|String||Идентификатор удаляемого вложения.|
-|`options`|Object|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
-|`options.asyncContext`|Object|&lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
+|`options`|Объект|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
+|`options.asyncContext`|Объект|&lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
 |`callback`|функция|&lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult). <br/>Если удалить вложение не удается, свойство `asyncResult.error` содержит код ошибки с указанием ее причины.|
 
 ##### <a name="errors"></a>Ошибки
@@ -2539,7 +2530,7 @@ Office.context.mailbox.item.removeAttachmentAsync(
 |---|---|---|---|
 | `eventType` | [Office.EventType](office.md#eventtype-string) || Событие, которое должно отменить обработчик. |
 | `options` | Объект | &lt;Необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
-| `options.asyncContext` | Object | &lt;Необязательно&gt; | Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова. |
+| `options.asyncContext` | Объект | &lt;Необязательно&gt; | Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова. |
 | `callback` | функция| &lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).|
 
 ##### <a name="requirements"></a>Требования
@@ -2577,7 +2568,7 @@ Office.context.mailbox.item.removeAttachmentAsync(
 |Имя|Тип|Атрибуты|Описание|
 |---|---|---|---|
 |`options`|Object|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
-|`options.asyncContext`|Object|&lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
+|`options.asyncContext`|Объект|&lt;Необязательно&gt;|Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова.|
 |`callback`|функция||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>После успешного выполнения идентификатор элемента будет предоставлен в свойстве `asyncResult.value`.|
 
 ##### <a name="requirements"></a>Requirements
@@ -2623,7 +2614,7 @@ Office.context.mailbox.item.saveAsync(
 |---|---|---|---|
 |`data`|String||Вставляемые данные. Объем данных не должен превышать 1 000 000 символов. Если передано больше 1 000 000 символов, возвращается исключение `ArgumentOutOfRange`.|
 |`options`|Object|&lt;Необязательно&gt;|Объектный литерал, содержащий одно или несколько из указанных ниже свойств.|
-|`options.asyncContext`|Object|&lt;Необязательно&gt;|В методе обратного вызова разработчики могут указать любой объект, к которому необходимо получить доступ.|
+|`options.asyncContext`|Объект|&lt;Необязательно&gt;|В методе обратного вызова разработчики могут указать любой объект, к которому необходимо получить доступ.|
 |`options.coercionType`|[Office.CoercionType](office.md#coerciontype-string)|&lt;необязательно&gt;|Если задано значение `text`, текущий стиль применяется в Outlook в Интернете и классических клиентах. Если поле представляет собой редактор HTML, вставляются только текстовые данные, даже если они имеют формат HTML.<br/><br/>Если задано значение `html` и поле (не тема) поддерживает HTML, в Outlook в Интернете применяется текущий стиль, а в классических клиентах Outlook — стиль по умолчанию. Если поле является текстовым, возвращается ошибка `InvalidDataFormat`.<br/><br/>Если свойство `coercionType` не задано, результат зависит от поля: если поле имеет формат HTML, используется текст в формате HTML, а если поле текстовое, применяется обычный текст.|
 |`callback`|функция||После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).|
 

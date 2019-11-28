@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox. Diagnostics — Предварительная версия набора требований
 description: ''
-ms.date: 08/08/2019
+ms.date: 11/25/2019
 localization_priority: Normal
-ms.openlocfilehash: 47949fb26629b6619514bbd0d7f760cfa31d5839
-ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
+ms.openlocfilehash: 492e292737417854adfaf98feb2b67788933d874
+ms.sourcegitcommit: 05a883a7fd89136301ce35aabc57638e9f563288
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "36696493"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "39629204"
 ---
 # <a name="diagnostics"></a>diagnostics
 
@@ -16,7 +16,7 @@ ms.locfileid: "36696493"
 
 Предоставляет надстройке Outlook диагностические сведения.
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -24,15 +24,15 @@ ms.locfileid: "36696493"
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-##### <a name="members-and-methods"></a>Элементы и методы
+##### <a name="properties"></a>Свойства
 
-| Элемент | Тип |
-|--------|------|
-| [Сайту](#hostname-string) | Member |
-| [hostVersion](#hostversion-string) | Member |
-| [OWAView](#owaview-string) | Member |
+| Свойство | Минимальные<br>уровень разрешения | Способов | Тип возвращаемых данных | Минимальные<br>набор требований |
+|---|---|---|---|---|
+| [Сайту](#hostname-string) | ReadItem | Создание<br>Чтение | String | 1.0 |
+| [hostVersion](#hostversion-string) | ReadItem | Создание<br>Чтение | String | 1.0 |
+| [OWAView](#owaview-string) | ReadItem | Создание<br>Чтение | String | 1.0 |
 
-### <a name="members"></a>Members
+## <a name="property-details"></a>Сведения о свойстве
 
 #### <a name="hostname-string"></a>Имя узла: строка
 
@@ -64,7 +64,7 @@ ms.locfileid: "36696493"
 
 Получает строку, представляющую версию ведущего приложения или сервера Exchange (например, "15.0.468.0").
 
-Если почтовая надстройка работает в клиенте Outlook для настольного компьютера или в iOS `hostVersion` , свойство возвращает версию ведущего приложения, Outlook. В Outlook в Интернете свойство возвращает версию сервера Exchange.
+Если почтовая надстройка запущена на настольном клиенте Outlook или мобильном клиенте, `hostVersion` свойство возвращает версию ведущего приложения, Outlook. В Outlook в Интернете свойство возвращает версию сервера Exchange.
 
 ##### <a name="type"></a>Тип
 

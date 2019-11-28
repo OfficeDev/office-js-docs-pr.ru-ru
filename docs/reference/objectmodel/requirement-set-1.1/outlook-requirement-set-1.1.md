@@ -1,25 +1,25 @@
 ---
 title: Набор требований к API надстройки Outlook 1.1
 description: ''
-ms.date: 10/30/2019
+ms.date: 11/26/2019
 localization_priority: Normal
-ms.openlocfilehash: 312d40d499531eb6f93d3b1555bfb057cd4651d6
-ms.sourcegitcommit: e989096f3d19761bf8477c585cde20b3f8e0b90d
+ms.openlocfilehash: 1c2e8ea26cac7ff630961b176391ef1adf2249fd
+ms.sourcegitcommit: 05a883a7fd89136301ce35aabc57638e9f563288
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "37901957"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "39629239"
 ---
 # <a name="outlook-add-in-api-requirement-set-11"></a>Набор обязательных элементов API для надстройки Outlook 1.1
 
-Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.
+Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook. API JavaScript для Outlook 1,1 (почтовый ящик 1,1) — это первая версия API.
 
 > [!NOTE]
-> В этой документации рассматривается не последняя версия [набора обязательных элементов](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets). 
+> В этой документации рассматривается не последняя версия [набора обязательных элементов](../../requirement-sets/outlook-api-requirement-sets.md).
 
 ## <a name="whats-new-in-11"></a>Новые возможности в версии 1.1
 
-Набор обязательных элементов 1.1 включает все возможности набора обязательных элементов версии 1.0. В нем надстройки получили возможность доступа к тексту сообщений и встреч, а также возможность изменения текущего элемента.
+Набор требований 1,1 включает все [Общие наборы требований API](../../requirement-sets/office-add-in-requirement-sets.md) , поддерживаемые в Outlook. В нем надстройки получили возможность доступа к тексту сообщений и встреч, а также возможность изменения текущего элемента.
 
 ### <a name="change-log"></a>Журнал изменений
 

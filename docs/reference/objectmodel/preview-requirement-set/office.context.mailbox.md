@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox — Предварительная версия набора обязательных элементов
 description: ''
-ms.date: 10/30/2019
+ms.date: 11/25/2019
 localization_priority: Normal
-ms.openlocfilehash: ff649029713984b32e817bbeaf7c59a48cc5b023
-ms.sourcegitcommit: e989096f3d19761bf8477c585cde20b3f8e0b90d
+ms.openlocfilehash: 8c67f7cf9231dd1c0db0d9a8d4ae9fb48e458435
+ms.sourcegitcommit: 05a883a7fd89136301ce35aabc57638e9f563288
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "37902111"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "39629197"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -24,27 +24,41 @@ ms.locfileid: "37902111"
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-##### <a name="members-and-methods"></a>Элементы и методы
+##### <a name="properties"></a>Свойства
 
-| Элемент | Тип |
-|--------|------|
-| [ewsUrl](#ewsurl-string) | Элемент |
-| [мастеркатегориес](#mastercategories-mastercategories) | Элемент |
-| [restUrl](#resturl-string) | Элемент |
-| [addHandlerAsync](#addhandlerasynceventtype-handler-options-callback) | Метод |
-| [convertToEwsId](#converttoewsiditemid-restversion--string) | Метод |
-| [convertToLocalClientTime](#converttolocalclienttimetimevalue--localclienttime) | Метод |
-| [convertToRestId](#converttorestiditemid-restversion--string) | Метод |
-| [convertToUtcClientTime](#converttoutcclienttimeinput--date) | Метод |
-| [displayAppointmentForm](#displayappointmentformitemid) | Метод |
-| [displayMessageForm](#displaymessageformitemid) | Метод |
-| [displayNewAppointmentForm](#displaynewappointmentformparameters) | Метод |
-| [дисплайневмессажеформ](#displaynewmessageformparameters) | Метод |
-| [getCallbackTokenAsync](#getcallbacktokenasyncoptions-callback) | Метод |
-| [getCallbackTokenAsync](#getcallbacktokenasynccallback-usercontext) | Метод |
-| [getUserIdentityTokenAsync](#getuseridentitytokenasynccallback-usercontext) | Метод |
-| [makeEwsRequestAsync](#makeewsrequestasyncdata-callback-usercontext) | Метод |
-| [removeHandlerAsync](#removehandlerasynceventtype-options-callback) | Метод |
+| Свойство | Минимальные<br>уровень разрешения | Способов | Тип возвращаемых данных | Минимальные<br>набор требований |
+|---|---|---|---|---|
+| [ewsUrl](#ewsurl-string) | ReadItem | Создание<br>Чтение | String | 1.0 |
+| [мастеркатегориес](#mastercategories-mastercategories) | ReadWriteMailbox | Создание<br>Чтение | [MasterCategories](/javascript/api/outlook/office.mastercategories) | Предварительная версия |
+| [restUrl](#resturl-string) | ReadItem | Создание<br>Чтение | String | 1.5 |
+
+##### <a name="methods"></a>Методы
+
+| Метод | Минимальные<br>уровень разрешения | Способов | Минимальные<br>набор требований |
+|---|---|---|---|
+| [addHandlerAsync](#addhandlerasynceventtype-handler-options-callback) | ReadItem | Создание<br>Чтение | 1.5 |
+| [convertToEwsId](#converttoewsiditemid-restversion--string) | С ограничениями | Создание<br>Чтение | 1.3 |
+| [convertToLocalClientTime](#converttolocalclienttimetimevalue--localclienttime) | ReadItem | Создание<br>Чтение | 1.0 |
+| [convertToRestId](#converttorestiditemid-restversion--string) | С ограничениями | Создание<br>Чтение | 1.3 |
+| [convertToUtcClientTime](#converttoutcclienttimeinput--date) | ReadItem | Создание<br>Чтение | 1.0 |
+| [displayAppointmentForm](#displayappointmentformitemid) | ReadItem | Создание<br>Чтение | 1.0 |
+| [displayMessageForm](#displaymessageformitemid) | ReadItem | Создание<br>Чтение | 1.0 |
+| [displayNewAppointmentForm](#displaynewappointmentformparameters) | ReadItem | Чтение | 1.0 |
+| [дисплайневмессажеформ](#displaynewmessageformparameters) | ReadItem | Создание<br>Чтение | 1.6 |
+| [getCallbackTokenAsync](#getcallbacktokenasyncoptions-callback) | ReadItem | Создание<br>Чтение | 1.5 |
+| [getCallbackTokenAsync](#getcallbacktokenasynccallback-usercontext) | ReadItem | Создание<br>Чтение | 1.3<br>1.0 |
+| [getUserIdentityTokenAsync](#getuseridentitytokenasynccallback-usercontext) | ReadItem | Создание<br>Чтение | 1.0 |
+| [makeEwsRequestAsync](#makeewsrequestasyncdata-callback-usercontext) | ReadWriteMailbox | Создание<br>Чтение | 1.0 |
+| [removeHandlerAsync](#removehandlerasynceventtype-options-callback) | ReadItem | Создание<br>Чтение | 1.5 |
+
+##### <a name="events"></a>События
+
+Вы можете подписаться на следующие события и отписаться на них, используя [addHandlerAsync](#addhandlerasynceventtype-handler-options-callback) и [removeHandlerAsync](#removehandlerasynceventtype-options-callback) соответственно.
+
+| Событие | Описание | Минимальные<br>набор требований |
+|---|---|---|
+|`ItemChanged`| Для просмотра выбран другой элемент Outlook, когда область задач закреплена. | 1.5 |
+|`OfficeThemeChanged`| Тема Office в почтовом ящике изменилась. | Предварительная версия |
 
 ### <a name="namespaces"></a>Пространства имен
 
@@ -54,7 +68,7 @@ ms.locfileid: "37902111"
 
 [userProfile](Office.context.mailbox.userProfile.md). Предоставляет сведения о пользователе в надстройке Outlook.
 
-### <a name="members"></a>Members
+## <a name="property-details"></a>Сведения о свойстве
 
 #### <a name="ewsurl-string"></a>ewsUrl: String
 
@@ -73,7 +87,7 @@ ms.locfileid: "37902111"
 
 *   String
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -97,7 +111,7 @@ ms.locfileid: "37902111"
 
 *   [MasterCategories](/javascript/api/outlook/office.mastercategories)
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -130,15 +144,11 @@ Office.context.mailbox.masterCategories.getAsync(function (asyncResult) {
 
 С помощью значения `restUrl` можно выполнять вызовы [REST API](/outlook/rest/) для почтового ящика пользователя.
 
-Чтобы вызвать элемент `restUrl` в режиме чтения, в манифесте приложения необходимо указать разрешение **ReadItem**.
-
-Перед использованием элемента `restUrl` в режиме создания необходимо вызвать метод [`saveAsync`](Office.context.mailbox.item.md#saveasyncoptions-callback). Для вызова метода `saveAsync` приложение должно иметь разрешения **ReadWriteItem**.
-
 ##### <a name="type"></a>Тип
 
 *   String
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -146,7 +156,7 @@ Office.context.mailbox.masterCategories.getAsync(function (asyncResult) {
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-### <a name="methods"></a>Методы
+## <a name="method-details"></a>Сведения о методе
 
 #### <a name="addhandlerasynceventtype-handler-options-callback"></a>addHandlerAsync(eventType, handler, [options], [callback])
 
@@ -209,10 +219,10 @@ function loadNewItem(eventArgs) {
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`itemId`| Строка|Идентификатор элемента в формате REST API для Outlook|
+|`itemId`| String|Идентификатор элемента в формате REST API для Outlook|
 |`restVersion`| [Office.MailboxEnums.RestVersion](/javascript/api/outlook/office.mailboxenums.restversion)|Значение, определяющее версию REST API для Outlook, которая используется для извлечения идентификатора элемента.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -253,7 +263,7 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 |---|---|---|
 |`timeValue`| Date|Объект Date|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -283,10 +293,10 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`itemId`| Строка|Идентификатор элемента в формате EWS|
+|`itemId`| String|Идентификатор элемента в формате EWS|
 |`restVersion`| [Office.MailboxEnums.RestVersion](/javascript/api/outlook/office.mailboxenums.restversion)|Значение, определяющее версию REST API для Outlook, с которой будет использоваться преобразованный идентификатор.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -325,7 +335,7 @@ var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.R
 |---|---|---|
 |`input`| [LocalClientTime](/javascript/api/outlook/office.LocalClientTime)|Значение локального времени для преобразования.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -425,9 +435,9 @@ Office.context.mailbox.displayAppointmentForm(appointmentId);
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`itemId`| Строка|Идентификатор веб-служб Exchange для существующего сообщения.|
+|`itemId`| String|Идентификатор веб-служб Exchange для существующего сообщения.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -473,7 +483,7 @@ Office.context.mailbox.displayMessageForm(messageId);
 | `parameters.optionalAttendees` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)&gt; | Массив строк, содержащий электронные адреса, или массив, содержащий объекты `EmailAddressDetails` для каждого из необязательных участников встречи. Массив может включать не более 100 записей. |
 | `parameters.start` | Date | Объект `Date`, указывающий дату и время начала встречи. |
 | `parameters.end` | Date | Объект `Date`, указывающий дату и время окончания встречи. |
-| `parameters.location` | Строка | Строка со сведениями о месте встречи. Максимальное количество символов в строке — 255. |
+| `parameters.location` | String | Строка со сведениями о месте встречи. Максимальное количество символов в строке — 255. |
 | `parameters.resources` | Array.&lt;String&gt; | Массив строк, содержащий необходимые для встречи ресурсы. Массив может включать не более 100 записей. |
 | `parameters.subject` | String | Строка с темой встречи. Максимальное количество символов в строке — 255. |
 | `parameters.body` | String | Текст сообщения о встрече. Максимальный размер содержимого сообщения — 32 КБ. |
@@ -530,17 +540,17 @@ Office.context.mailbox.displayNewAppointmentForm(
 | `parameters.toRecipients` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)&gt; | Массив строк, содержащий адреса электронной почты или массив, содержащий `EmailAddressDetails` объект для каждого из получателей в строке "Кому". Массив может включать не более 100 записей. |
 | `parameters.ccRecipients` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)&gt; | Массив строк, содержащий адреса электронной почты или массив, содержащий `EmailAddressDetails` объект для каждого получателя в строке "копия". Массив может включать не более 100 записей. |
 | `parameters.bccRecipients` | Array.&lt;String&gt; &#124; Array.&lt;[EmailAddressDetails](/javascript/api/outlook/office.emailaddressdetails)&gt; | Массив строк, содержащий адреса электронной почты или массив, содержащий `EmailAddressDetails` объект для каждого из получателей, указанных в строке "СК". Массив может включать не более 100 записей. |
-| `parameters.subject` | Строка | Строка, содержащая тему сообщения. Максимальное количество символов в строке — 255. |
+| `parameters.subject` | String | Строка, содержащая тему сообщения. Максимальное количество символов в строке — 255. |
 | `parameters.htmlBody` | String | Текст сообщения в формате HTML. Максимальный размер содержимого сообщения — 32 КБ. |
 | `parameters.attachments` | Array.&lt;Object&gt; | Массив объектов JSON, представляющих собой вложенные файлы или элементы. |
-| `parameters.attachments.type` | Строка | Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента. |
+| `parameters.attachments.type` | String | Указывает тип вложения. Допустимые значения: `file` для вложенного файла и `item` для вложенного элемента. |
 | `parameters.attachments.name` | Строка | Строка, содержащая имя вложения, длиной до 255 символов.|
-| `parameters.attachments.url` | Строка | Используется, только если свойству `type` задано значение `file`. URI расположения файла. |
+| `parameters.attachments.url` | String | Используется, только если свойству `type` задано значение `file`. URI расположения файла. |
 | `parameters.attachments.isInline` | Логический | Используется, только если свойству `type` задано значение `file`. Значение `true` указывает на то, что вложение будет встроено в текст сообщения и не должно отображаться в списке вложений. |
 | `parameters.attachments.itemId` | Строка | Используется, только если свойству `type` присвоено значение `item`. Идентификатор элемента EWS существующего сообщения электронной почты, которое необходимо присоединить к новому сообщению. Это строка длиной до 100 символов. |
 
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -607,7 +617,7 @@ Office.context.mailbox.displayNewMessageForm(
 |---|---|---|---|
 | `options` | Object | &lt;Необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
 | `options.isRest` | Boolean |  &lt;необязательно&gt; | Определяет, будет ли предоставленный маркер использоваться для интерфейсов REST API Outlook или веб-служб Exchange. Значение по умолчанию: `false`. |
-| `options.asyncContext` | Object |  &lt;необязательно&gt; | Данные о состоянии, передаваемые в асинхронный метод. |
+| `options.asyncContext` | Объект |  &lt;необязательно&gt; | Данные о состоянии, передаваемые в асинхронный метод. |
 |`callback`| функция||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.<br><br>При наличии ошибки свойства `asyncResult.error` и `asyncResult.diagnostics` могут предоставлять дополнительные сведения.|
 
 ##### <a name="errors"></a>Ошибки
@@ -788,9 +798,9 @@ function cb(asyncResult) {
 |---|---|---|---|
 |`data`| String||Запрос EWS.|
 |`callback`| function||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Результат XML вызова EWS указывается в виде строки в свойстве `asyncResult.value`. Если размер результата превышает 1 МБ, возвращается сообщение об ошибке.|
-|`userContext`| Object| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+|`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -860,11 +870,11 @@ function callback(asyncResult)  {
 | Имя | Тип | Атрибуты | Описание |
 |---|---|---|---|
 | `eventType` | [Office.EventType](office.md#eventtype-string) || Событие, которое должно отменить обработчик. |
-| `options` | Object | &lt;Необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
+| `options` | Объект | &lt;Необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
 | `options.asyncContext` | Object | &lt;Необязательно&gt; | Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова. |
 | `callback` | функция| &lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|

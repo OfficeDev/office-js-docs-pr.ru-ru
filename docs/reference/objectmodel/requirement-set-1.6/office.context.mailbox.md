@@ -1,14 +1,14 @@
 ---
 title: Office. Context. Mailbox — набор обязательных элементов 1,6
 description: ''
-ms.date: 10/21/2019
+ms.date: 11/27/2019
 localization_priority: Normal
-ms.openlocfilehash: b4bc64aa1ff836408a8b8b1efdaed7ddc8ce5725
-ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
+ms.openlocfilehash: 09c3930daf6f26edbc38b01f515ee5b1830ce802
+ms.sourcegitcommit: 05a883a7fd89136301ce35aabc57638e9f563288
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "37627085"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "39629695"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -72,7 +72,7 @@ ms.locfileid: "37627085"
 
 *   String
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -91,15 +91,11 @@ ms.locfileid: "37627085"
 
 С помощью значения `restUrl` можно выполнять вызовы [REST API](/outlook/rest/) для почтового ящика пользователя.
 
-Чтобы вызвать элемент `restUrl` в режиме чтения, в манифесте приложения необходимо указать разрешение **ReadItem**.
-
-Перед использованием элемента `restUrl` в режиме создания необходимо вызвать метод [`saveAsync`](Office.context.mailbox.item.md#saveasyncoptions-callback). Для вызова метода `saveAsync` приложение должно иметь разрешения **ReadWriteItem**.
-
 ##### <a name="type"></a>Тип
 
 *   String
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -125,7 +121,7 @@ ms.locfileid: "37627085"
 | `options.asyncContext` | Object | &lt;Необязательно&gt; | Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова. |
 | `callback` | функция| &lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -214,7 +210,7 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 |---|---|---|
 |`timeValue`| Date|Объект Date|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -247,7 +243,7 @@ var ewsId = Office.context.mailbox.convertToEwsId(restId, Office.MailboxEnums.Re
 |`itemId`| String|Идентификатор элемента в формате EWS|
 |`restVersion`| [Office.MailboxEnums.RestVersion](/javascript/api/outlook/office.mailboxenums.restversion?view=outlook-js-1.6)|Значение, определяющее версию REST API для Outlook, с которой будет использоваться преобразованный идентификатор.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -286,7 +282,7 @@ var restId = Office.context.mailbox.convertToRestId(ewsId, Office.MailboxEnums.R
 |---|---|---|
 |`input`| [LocalClientTime](/javascript/api/outlook/office.LocalClientTime?view=outlook-js-1.6)|Значение локального времени для преобразования.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -348,7 +344,7 @@ console.log(result.toISOString());
 |---|---|---|
 |`itemId`| String|Идентификатор веб-служб Exchange для существующей встречи в календаре.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -501,7 +497,7 @@ Office.context.mailbox.displayNewAppointmentForm(
 | `parameters.attachments.itemId` | Строка | Используется, только если свойству `type` присвоено значение `item`. Идентификатор элемента EWS существующего сообщения электронной почты, которое необходимо присоединить к новому сообщению. Это строка длиной до 100 символов. |
 
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
@@ -543,9 +539,9 @@ Office.context.mailbox.displayNewMessageForm(
 > [!NOTE]
 > Рекомендуем сделать так, чтобы по мере возможности надстройки использовали интерфейсы REST API, а не веб-службы Exchange.
 
-Для вызова `getCallbackTokenAsync` метода в режиме чтения требуется минимальный уровень разрешений **ReadItem**.
+Для вызова метода `getCallbackTokenAsync` в режиме чтения требуется минимальный уровень разрешения **ReadItem**.
 
-Для `getCallbackTokenAsync` вызова в режиме создания необходимо сохранить элемент. [`saveAsync`](Office.context.mailbox.item.md#saveasyncoptions-callback) Метод требует наличия минимального уровня разрешений **ReadWriteItem**.
+Для вызова `getCallbackTokenAsync` в режиме создания сообщения требуется сохранить элемент. Для метода [`saveAsync`](Office.context.mailbox.item.md#saveasyncoptions-callback) требуется минимальный уровень разрешения **ReadWriteItem**.
 
 **Маркеры REST**
 
@@ -559,7 +555,7 @@ Office.context.mailbox.displayNewMessageForm(
 
 С помощью свойства `ewsUrl` надстройка должна определить правильный URL-адрес для вызовов EWS.
 
-Можно передать как маркер, так и идентификатор вложения или идентификатор элемента в систему стороннего производителя. Третья система использует маркер в качестве маркера авторизации носителя, чтобы вызвать операцию [GetAttachment](/exchange/client-developer/web-service-reference/getattachment-operation) [или GetItem](/exchange/client-developer/web-service-reference/getitem-operation) веб-служб Exchange (EWS) для возврата вложения или элемента. Например, вы можете создать удаленную службу, чтобы [получить вложения из выбранного элемента](/outlook/add-ins/get-attachments-of-an-outlook-item).
+Вы можете передать сторонней системе маркер и идентификатор вложения или элемента. Сторонняя система использует этот маркер как маркер авторизации, чтобы вызвать операцию [GetAttachment](/exchange/client-developer/web-service-reference/getattachment-operation) или [GetItem](/exchange/client-developer/web-service-reference/getitem-operation) веб-служб Exchange для возврата вложения или элемента. Например, вы можете создать удаленную службу, чтобы [получить вложения из выбранного элемента](/outlook/add-ins/get-attachments-of-an-outlook-item).
 
 ##### <a name="parameters"></a>Параметры
 
@@ -567,7 +563,7 @@ Office.context.mailbox.displayNewMessageForm(
 |---|---|---|---|
 | `options` | Object | &lt;Необязательно&gt; | Объектный литерал, содержащий одно или несколько из указанных ниже свойств. |
 | `options.isRest` | Boolean |  &lt;необязательно&gt; | Определяет, будет ли предоставленный маркер использоваться для интерфейсов REST API Outlook или веб-служб Exchange. Значение по умолчанию: `false`. |
-| `options.asyncContext` | Object |  &lt;необязательно&gt; | Данные о состоянии, передаваемые в асинхронный метод. |
+| `options.asyncContext` | Объект |  &lt;необязательно&gt; | Данные о состоянии, передаваемые в асинхронный метод. |
 |`callback`| функция||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Маркер указывается в виде строки в свойстве `asyncResult.value`.<br><br>При наличии ошибки свойства `asyncResult.error` и `asyncResult.diagnostics` могут предоставлять дополнительные сведения.|
 
 ##### <a name="errors"></a>Ошибки
@@ -614,11 +610,11 @@ function cb(asyncResult) {
 
 Метод `getCallbackTokenAsync` совершает асинхронный вызов, чтобы получить непрозрачный маркер с сервера Exchange Server, на котором размещен почтовый ящик пользователя. Время существования маркера обратного вызова составляет 5 минут.
 
-Можно передать как маркер, так и идентификатор вложения или идентификатор элемента в систему стороннего производителя. Третья система использует маркер в качестве маркера авторизации носителя, чтобы вызвать операцию [GetAttachment](/exchange/client-developer/web-service-reference/getattachment-operation) [или GetItem](/exchange/client-developer/web-service-reference/getitem-operation) веб-служб Exchange (EWS) для возврата вложения или элемента. Например, вы можете создать удаленную службу, чтобы [получить вложения из выбранного элемента](/outlook/add-ins/get-attachments-of-an-outlook-item).
+Вы можете передать сторонней системе маркер и идентификатор вложения или элемента. Сторонняя система использует этот маркер как маркер авторизации, чтобы вызвать операцию [GetAttachment](/exchange/client-developer/web-service-reference/getattachment-operation) или [GetItem](/exchange/client-developer/web-service-reference/getitem-operation) веб-служб Exchange для возврата вложения или элемента. Например, вы можете создать удаленную службу, чтобы [получить вложения из выбранного элемента](/outlook/add-ins/get-attachments-of-an-outlook-item).
 
-Для вызова `getCallbackTokenAsync` метода в режиме чтения требуется минимальный уровень разрешений **ReadItem**.
+Для вызова метода `getCallbackTokenAsync` в режиме чтения требуется минимальный уровень разрешения **ReadItem**.
 
-Для `getCallbackTokenAsync` вызова в режиме создания необходимо сохранить элемент. [`saveAsync`](Office.context.mailbox.item.md#saveasyncoptions-callback) Метод требует наличия минимального уровня разрешений **ReadWriteItem**.
+Для вызова `getCallbackTokenAsync` в режиме создания сообщения требуется сохранить элемент. Для метода [`saveAsync`](Office.context.mailbox.item.md#saveasyncoptions-callback) требуется минимальный уровень разрешения **ReadWriteItem**.
 
 ##### <a name="parameters"></a>Параметры
 
@@ -685,7 +681,7 @@ function cb(asyncResult) {
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
@@ -748,7 +744,7 @@ function cb(asyncResult) {
 |---|---|---|---|
 |`data`| String||Запрос EWS.|
 |`callback`| function||После выполнения метода функция, переданная в параметре `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).<br/><br/>Результат XML вызова EWS указывается в виде строки в свойстве `asyncResult.value`. Если размер результата превышает 1 МБ, возвращается сообщение об ошибке.|
-|`userContext`| Object| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
+|`userContext`| Объект| &lt;необязательно&gt;|Данные о состоянии, передаваемые в асинхронный метод.|
 
 ##### <a name="requirements"></a>Требования
 
@@ -824,7 +820,7 @@ function callback(asyncResult)  {
 | `options.asyncContext` | Object | &lt;Необязательно&gt; | Разработчики могут указать любой объект, к которому необходимо получить доступ, в методе обратного вызова. |
 | `callback` | функция| &lt;необязательно&gt;|После применения метода функция, переданная в параметр `callback`, вызывается с помощью параметра `asyncResult`, который представляет собой объект [`AsyncResult`](/javascript/api/office/office.asyncresult).|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
