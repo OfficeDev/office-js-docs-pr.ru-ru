@@ -1,14 +1,14 @@
 ---
 title: Office.context.mailbox.item — набор обязательных элементов 1.5
 description: ''
-ms.date: 11/06/2019
+ms.date: 11/25/2019
 localization_priority: Priority
-ms.openlocfilehash: c5ab134c91e156368c21722726d7ee502397b99e
-ms.sourcegitcommit: 08c0b9ff319c391922fa43d3c2e9783cf6b53b1b
+ms.openlocfilehash: f52f6bfa510d5949da5b1b542ca2a0f6e6f22750
+ms.sourcegitcommit: 05a883a7fd89136301ce35aabc57638e9f563288
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38066258"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "39629709"
 ---
 # <a name="item"></a>item
 
@@ -1642,9 +1642,6 @@ var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");
 
 Если выделенный фрагмент отсутствует, но курсор находится в тексте или теме, метод возвращает пустую строку для выбранных данных. Если выбраны не текст и не тема, метод возвращает ошибку `InvalidSelection`.
 
-> [!NOTE]
-> В Outlook в Интернете метод возвращает строку null, если текст не выделен, но курсор находится в тексте. Чтобы ознакомиться с этим сценарием, см. пример далее в этом разделе.
-
 ##### <a name="parameters"></a>Параметры
 
 |Имя| Тип| Атрибуты| Описание|
@@ -1679,12 +1676,6 @@ Office.initialize = function () {
 function getCallback(asyncResult) {
   var text = asyncResult.value.data;
   var prop = asyncResult.value.sourceProperty;
-
-  // Handle where Outlook on the web erroneously returns "null" instead of empty string.
-  if (Office.context.mailbox.diagnostics.hostName === 'OutlookWebApp'
-      && asyncResult.value.endPosition === asyncResult.value.startPosition) {
-    text = "";
-  }
 
   console.log("Selected text in " + prop + ": " + text);
 }

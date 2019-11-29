@@ -1,14 +1,14 @@
 ---
 title: Office.context.mailbox — набор обязательных элементов 1.5
 description: ''
-ms.date: 10/21/2019
+ms.date: 11/27/2019
 localization_priority: Priority
-ms.openlocfilehash: bb63d8186d41d072aa62b180b16958d61ce9a66c
-ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
+ms.openlocfilehash: eefeab2cf6fbe78451afae7e588640fe7f50dba4
+ms.sourcegitcommit: 05a883a7fd89136301ce35aabc57638e9f563288
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "37627015"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "39629688"
 ---
 # <a name="mailbox"></a>mailbox
 
@@ -89,10 +89,6 @@ ms.locfileid: "37627015"
 Возвращает URL-адрес конечной точки REST для этой учетной записи электронной почты.
 
 С помощью значения `restUrl` можно выполнять вызовы [REST API](/outlook/rest/) для почтового ящика пользователя.
-
-Чтобы вызвать элемент `restUrl` в режиме чтения, в манифесте приложения необходимо указать разрешение **ReadItem**.
-
-Перед использованием элемента `restUrl` в режиме создания необходимо вызвать метод [`saveAsync`](Office.context.mailbox.item.md#saveasyncoptions-callback). Для вызова метода `saveAsync` приложение должно иметь разрешения **ReadWriteItem**.
 
 > [!NOTE]
 > Клиенты Outlook, подключенные к локальным установленным версиям Exchange 2016 или более поздним с пользовательским URL-адресом REST, возвращают недопустимое значение `restUrl`.
