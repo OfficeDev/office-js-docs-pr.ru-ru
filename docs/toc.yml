@@ -136,6 +136,8 @@
           href: develop/develop-office-add-ins-for-the-ipad.md
         - name: Разработка надстроек с помощью Angular
           href: develop/add-ins-with-angular2.md
+        - name: Разработка надстроек с помощью Visual Studio Code
+          href: develop/develop-add-ins-vscode.md
         - name: Разработка надстроек с помощью Visual Studio
           items:
             - name: Создание и отладка надстроек Office в Visual Studio
@@ -214,12 +216,16 @@
           href: testing/troubleshoot-manifest.md
     - name: Публикация
       items:
-        - name: Общие сведения
+        - name: Обзор
           href: publish/publish.md
-        - name: Размещение надстройки Office в Microsoft Azure
-          href: publish/host-an-office-add-in-on-microsoft-azure.md
-        - name: Упаковывание надстройки с помощью Visual Studio
-          href: publish/package-your-add-in-using-visual-studio.md
+        - name: Публикация надстройки (VS Code)
+          href: publish/publish-add-in-vs-code.md
+        - name: Visual Studio
+          items:
+            - name: Публикация надстройки (Visual Studio)
+              href: publish/package-your-add-in-using-visual-studio.md
+            - name: Размещение надстройки Office в Microsoft Azure
+              href: publish/host-an-office-add-in-on-microsoft-azure.md
         - name: Публикация надстроек в AppSource
           href: /office/dev/store/submit-to-the-office-store
         - name: Политики проверки AppSource
