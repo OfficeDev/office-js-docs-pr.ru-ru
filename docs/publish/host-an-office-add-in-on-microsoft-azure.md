@@ -3,12 +3,12 @@ title: Размещение надстройки Office в Microsoft Azure | Д�
 description: Сведения о развертывании веб-приложения надстройки в Azure и загрузке неопубликованной надстройки для тестирования в клиентском приложении Office.
 ms.date: 10/16/2019
 localization_priority: Priority
-ms.openlocfilehash: 0cfddacf48bda9ed7b63d4018e3ae0437f15bcd9
-ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
+ms.openlocfilehash: 106c775fa74b83d85111922f5488477772018b90
+ms.sourcegitcommit: 44f1a4a3e1ae3c33d7d5fabcee14b84af94e03da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "37626980"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "39670183"
 ---
 # <a name="host-an-office-add-in-on-microsoft-azure"></a>Размещение надстройки Office в Microsoft Azure
 
@@ -26,12 +26,12 @@ ms.locfileid: "37626980"
 2. Установите Office.
 
     > [!NOTE]
-    > Если у вас еще нет Office, можете [оформить бесплатную пробную подписку на 1 месяц](https://products.office.com/en-US/try?legRedir=true&WT.intid1=ODC_ENUS_FX101785584_XT104056786&CorrelationId=64c762de-7a97-4dd1-bb96-e231d7485735).
+    > Если у вас еще нет Office, можете [оформить бесплатную пробную подписку на 1 месяц](https://products.office.com/try?legRedir=true&WT.intid1=ODC_ENUS_FX101785584_XT104056786&CorrelationId=64c762de-7a97-4dd1-bb96-e231d7485735).
 
 3. Подпишитесь на Azure.
 
     > [!NOTE]
-    > Если у вас еще нет подписки на Azure, вы можете [получить ее в рамках своей подписки на Visual Studio](https://azure.microsoft.com/ru-RU/pricing/member-offers/visual-studio-subscriptions/) или [зарегистрировать бесплатную учетную запись](https://azure.microsoft.com/pricing/free-trial). 
+    > Если у вас еще нет подписки на Azure, вы можете [получить ее в рамках своей подписки на Visual Studio](https://azure.microsoft.com/pricing/member-offers/visual-studio-subscriptions/) или [зарегистрировать бесплатную учетную запись](https://azure.microsoft.com/pricing/free-trial). 
 
 ## <a name="step-1-create-a-shared-folder-to-host-your-add-in-xml-manifest-file"></a>Шаг 1. Создание общей папки для размещения XML-файла манифеста надстройки
 
@@ -162,4 +162,4 @@ Visual Studio создаст базовую надстройку Word, кото�
 ## <a name="see-also"></a>См. также
 
 - [Публикация надстройки Office](../publish/publish.md)
-- [Упаковка надстройки с помощью Visual Studio для публикации](../publish/package-your-add-in-using-visual-studio.md)
+- [Публикация надстройки с помощью Visual Studio](../publish/package-your-add-in-using-visual-studio.md)

@@ -1,18 +1,21 @@
 ---
-title: Упаковка надстройки с помощью Visual Studio для публикации
+title: Публикация надстройки с помощью Visual Studio
 description: Способ развертывания веб-проекта и упаковки надстройки с помощью Visual Studio 2019.
-ms.date: 10/14/2019
+ms.date: 12/02/2019
 localization_priority: Priority
-ms.openlocfilehash: 784741cffa0e3015caaa9c70fbb56f4b70df9462
-ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
+ms.openlocfilehash: 5da7fc643eb517f777325658d01889f3e51906bd
+ms.sourcegitcommit: 44f1a4a3e1ae3c33d7d5fabcee14b84af94e03da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "37626966"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "39670197"
 ---
-# <a name="package-your-add-in-using-visual-studio-to-prepare-for-publishing"></a>Упаковка надстройки с помощью Visual Studio для публикации
+# <a name="publish-your-add-in-using-visual-studio"></a>Публикация надстройки с помощью Visual Studio
 
 Пакет надстройки Office содержит [XML-файл манифеста](../develop/add-in-manifests.md), который будет использоваться для публикации надстройки. Файлы веб-приложения из проекта потребуется публиковать отдельно. В этой статье описано развертывание веб-проекта и упаковка надстройки с помощью Visual Studio 2019.
+
+> [!NOTE]
+> Сведения о публикации надстройки Office, созданной с помощью генератора Yeoman и разработанной в Visual Studio Code или любом другом редакторе, см. в статье [Публикация надстройки, разработанной с помощью Visual Studio Code](publish-add-in-vs-code.md).
 
 ## <a name="to-deploy-your-web-project-using-visual-studio-2019"></a>Развертывание веб-проекта с помощью Visual Studio 2019
 
