@@ -3,12 +3,12 @@ title: Оформление надстроек Office
 description: ''
 ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 766110b9b1ff9d22a783f592f1e38eb848b8b737
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: 1b2f6a57ddea385ec676a4981e4576c155d93886
+ms.sourcegitcommit: 44f1a4a3e1ae3c33d7d5fabcee14b84af94e03da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127676"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "39670148"
 ---
 # <a name="design-your-office-add-ins"></a>Оформление надстроек Office
 
@@ -33,6 +33,6 @@ ms.locfileid: "35127676"
 - **Поддержка всех платформ и способов ввода**. Надстройки предназначены для работы на всех платформах, поддерживаемых Office, поэтому интерфейс вашей надстройки должен быть оптимизирован для различных платформ и форм-факторов. Реализуйте поддержку клавиатуры, мыши и сенсорных устройств ввода, а также убедитесь, что пользовательский интерфейс на основе HTML адаптируется к разным форм-факторам. Дополнительные сведения см. в статье [Сенсорный ввод](../concepts/add-in-development-best-practices.md#optimize-for-touch). 
 
 ## <a name="see-also"></a>См. также
-- [Office UI Fabric](https://developer.microsoft.com/ru-RU/fabric) 
+- [Office UI Fabric](https://developer.microsoft.com/fabric) 
 - [Рекомендации по разработке надстроек](../concepts/add-in-development-best-practices.md)
 

@@ -3,12 +3,12 @@ title: Создание и отладка надстроек Office в Visual St
 description: Используйте Visual Studio для создания и отладки надстроек Office в настольном клиенте Office для Windows
 ms.date: 10/11/2019
 localization_priority: Priority
-ms.openlocfilehash: 878cd308747ac7049ca37b21a9fcb2282a4bf60d
-ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
+ms.openlocfilehash: 8274022a6a3af6e1b5d82c9d7105142d5a49e905
+ms.sourcegitcommit: 44f1a4a3e1ae3c33d7d5fabcee14b84af94e03da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "37626833"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "39670169"
 ---
 # <a name="create-and-debug-office-add-ins-in-visual-studio"></a>Создание и отладка надстроек Office в Visual Studio
 
@@ -30,7 +30,7 @@ ms.locfileid: "37626833"
 - Office 2013 или более поздние версии
 
     > [!TIP]
-    > Если вы еще не установили Office, вы можете присоединиться к [программе для разработчиков Office 365](https://developer.microsoft.com/office/dev-program) и получить подписку на Office 365, либо вы можете [зарегистрировать бесплатную пробную подписку на 1 месяц](https://products.office.com/en-US/try?legRedir=true&WT.intid1=ODC_ENUS_FX101785584_XT104056786&CorrelationId=64c762de-7a97-4dd1-bb96-e231d7485735).
+    > Если вы еще не установили Office, вы можете присоединиться к [программе для разработчиков Office 365](https://developer.microsoft.com/office/dev-program) и получить подписку на Office 365, либо вы можете [зарегистрировать бесплатную пробную подписку на 1 месяц](https://products.office.com/try?legRedir=true&WT.intid1=ODC_ENUS_FX101785584_XT104056786&CorrelationId=64c762de-7a97-4dd1-bb96-e231d7485735).
 
 ## <a name="create-the-add-in-project-in-visual-studio"></a>Создание проекта надстройки в Visual Studio
 
