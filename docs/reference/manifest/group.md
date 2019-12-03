@@ -1,14 +1,14 @@
 ---
 title: Элемент Group в файле манифеста
 description: ''
-ms.date: 10/09/2018
+ms.date: 12/02/2019
 localization_priority: Normal
-ms.openlocfilehash: 7cc1f4c398eeb013eb6033b207b395466f7d72ca
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: ad1a566e259188ed20032bc5a3004736474e1f01
+ms.sourcegitcommit: 44f1a4a3e1ae3c33d7d5fabcee14b84af94e03da
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450711"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "39670134"
 ---
 # <a name="group-element"></a>Элемент Group
 
@@ -35,7 +35,7 @@ ms.locfileid: "32450711"
 Обязательный элемент. Метка группы. Атрибуту **resid** нужно присвоить значение атрибута **id** элемента **String** в элементе **ShortStrings**, вложенном в элемент [Resources](resources.md).
 
 ### <a name="control"></a>Control
-В группе должен быть по крайней мере один элемент управления.
+В группе должен быть по крайней мере один элемент управления. Дополнительные сведения о поддерживаемых типах элементов управления приведены в элементе [Control](control.md) .
 
 ```xml
 <Group id="msgreadCustomTab.grp1">
