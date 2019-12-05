@@ -3,12 +3,12 @@ title: Разработка надстроек Office для iPad
 description: ''
 ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: 1b6d17fd264249dbc8000fe1b1f63605e68fd904
-ms.sourcegitcommit: 6d1cb188c76c09d320025abfcc99db1b16b7e37b
+ms.openlocfilehash: 3fbe065e111519f81c39d2255b452eab9491fa9d
+ms.sourcegitcommit: 960ceaf6776ec3ed41a8f5b7bf70b3c95c43386a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "35226750"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "39830190"
 ---
 # <a name="develop-office-add-ins-for-the-ipad"></a>Разработка надстроек Office для iPad
 
@@ -18,13 +18,13 @@ ms.locfileid: "35226750"
 
 |**Задача**|**Описание**|**Ресурсы**|
 |:-----|:-----|:-----|
-|Обновление надстройки для поддержки Office.js версии 1.1.|Обновите до версии 1.1. файлы JavaScript (Office.js и JS-файлы приложения) и файл проверки манифеста надстройки, которые используете в проекте надстройки Office.|[API обновления и версия манифеста](update-your-javascript-api-for-office-and-manifest-schema-version.md)|
+|Обновление надстройки для поддержки Office.js версии 1.1.|Обновите до версии 1.1. файлы JavaScript (Office.js и JS-файлы приложения) и файл проверки манифеста надстройки, которые используете в проекте надстройки Office.|[Обновление версии манифеста и API](update-your-javascript-api-for-office-and-manifest-schema-version.md)|
 |Следуйте рекомендациям по оформлению пользовательского интерфейса.|Органично интегрируйте в iOS пользовательский интерфейс надстройки.|[Разработка для iOS](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/)|
 |Следуйте рекомендациям по оформлению надстройки.|Убедитесь, что ваша надстройка интересная, полезная и стабильно работает.|[Рекомендации по разработке надстроек Office](../concepts/add-in-development-best-practices.md)|
 |Оптимизируйте надстройку для сенсорного ввода.|Сделайте так, чтобы пользовательский интерфейс поддерживал не только клавиатуру и мышь, но и сенсорный ввод.|[Принципы разработки пользовательского интерфейса](../concepts/add-in-development-best-practices.md#apply-ux-design-principles)|
 |Сделайте надстройку бесплатной.|Office на iPad — это канал, через который вы можете привлекать пользователей и рекламировать свои службы. Эти пользователи могут стать вашими клиентами.|[Политика проверки 10.8](/office/dev/store/validation-policies#10-apps-and-add-ins-utilize-supported-capabilities)|
 |Сделайте надстройку некоммерческой.|У надстройки не должно быть пробных версий, она не должна содержать платных возможностей, рекламы платных версий или ссылок на интернет-магазины, в которых пользователи могут приобрести другой контент, приложения или надстройки. На страницах с политикой конфиденциальности и условиями использования также не должно быть рекламы и ссылок на AppSource.|[Политика проверки 3.4](/office/dev/store/validation-policies#3-apps-and-add-ins-can-sell-additional-features-or-content-through-purchases-within-the-app-or-add-in)|
-|Отправьте свою надстройку в AppSource еще раз.|В службе "Панель мониторинга продаж" установите флажок **Включить эту надстройку в каталог надстроек Office для iPad** и укажите свой идентификатор разработчика Apple в поле "Идентификатор Apple ID". Просмотрите [соглашение с поставщиком приложений](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/en-US/Office_Store_Seller_Agreement_20120927.htm).|[Сделайте свои решения доступными в AppSource и Office](/office/dev/store/submit-to-the-office-store)|
+|Отправьте свою надстройку в AppSource еще раз.|В центре партнеров на странице " **Настройка продукта** " установите флажок **сделать продукт доступным в iOS и Android (если это необходимо)** и укажите идентификатор разработчика Apple в параметрах учетной записи. Изучите [соглашение с поставщиком приложения](https://go.microsoft.com/fwlink/?linkid=715691) , чтобы убедиться в том, что вы знакомы с условиями.|[Сделайте свои решения доступными в AppSource и Office](/office/dev/store/submit-to-appsource-via-partner-center)|
 
 Для других платформ надстройку Office можно оставить без изменений. Кроме того, у надстройки может быть различный интерфейс в зависимости от браузера или устройства. Чтобы определить, запущена ли надстройка на iPad, можно использовать следующие API:
 - var isTouchEnabled = [Office.context.touchEnabled](/javascript/api/office/office.context#touchenabled)
