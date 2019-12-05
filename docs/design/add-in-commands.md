@@ -3,12 +3,12 @@ title: Команды надстроек для Excel, Word и PowerPoint
 description: ''
 ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: cbdc01a439bf34b089806faf20fffa12c916fea1
-ms.sourcegitcommit: 382e2735a1295da914f2bfc38883e518070cec61
+ms.openlocfilehash: f0c829e24780dbbb69c35b6ca05d31a51d342ad0
+ms.sourcegitcommit: 960ceaf6776ec3ed41a8f5b7bf70b3c95c43386a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "35127739"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "39830183"
 ---
 # <a name="add-in-commands-for-excel-word-and-powerpoint"></a>Команды надстроек для Excel, Word и PowerPoint
 
@@ -17,7 +17,7 @@ ms.locfileid: "35127739"
 Обзор этой функции приведен в видео, посвященном [командам надстроек на ленте Office](https://channel9.msdn.com/events/Build/2016/P551).
 
 > [!NOTE]
-> В каталогах SharePoint не поддерживаются команды надстроек. Последние можно развернуть с помощью компонента [централизованного развертывания](../publish/centralized-deployment.md) или [AppSource](/office/dev/store/submit-to-the-office-store). Чтобы развернуть команду надстройки для тестирования, выполните [загрузку неопубликованного приложения](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md). 
+> В каталогах SharePoint не поддерживаются команды надстроек. Последние можно развернуть с помощью компонента [централизованного развертывания](../publish/centralized-deployment.md) или [AppSource](/office/dev/store/submit-to-appsource-via-partner-center). Чтобы развернуть команду надстройки для тестирования, выполните [загрузку неопубликованного приложения](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md). 
 
 *Рисунок 1. Надстройка с командами, работающая в классическом приложении Excel*
 

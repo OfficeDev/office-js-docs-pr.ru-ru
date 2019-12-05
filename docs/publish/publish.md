@@ -3,12 +3,12 @@ title: Развертывание и публикация надстройки O
 description: Методы и варианты развертывания надстройки Office для тестирования и распространения.
 ms.date: 09/05/2019
 localization_priority: Priority
-ms.openlocfilehash: c47f8743edeed1fd366d948d781c97da1c97958a
-ms.sourcegitcommit: d34aa0b282cc76ffff579da2a7945efd12fb7340
+ms.openlocfilehash: 2948e558ddd063ff36ebbfdd2edcb8c986a1445a
+ms.sourcegitcommit: 960ceaf6776ec3ed41a8f5b7bf70b3c95c43386a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "36769556"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "39830204"
 ---
 # <a name="deploy-and-publish-your-office-add-in"></a>Развертывание и публикация надстройки Office
 
@@ -19,7 +19,7 @@ ms.locfileid: "36769556"
 |[Загрузка неопубликованного приложения](../testing/test-debug-office-add-ins.md#sideload-an-office-add-in-for-testing)|При разработке для проверки работы надстройки в Windows, iPad, Mac или в браузере.|
 |[Централизованное развертывание](centralized-deployment.md)|В облачном или гибридном развертывании для распространения надстройки в организации с помощью Центра администрирования Office 365.|
 |[Каталог SharePoint](publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md)|В локальной среде для распространения надстройки в организации.|
-|[AppSource](/office/dev/store/submit-to-the-office-store)|Для распространения надстройки среди всех пользователей.|
+|[AppSource](/office/dev/store/submit-to-appsource-via-partner-center)|Для распространения надстройки среди всех пользователей.|
 |[Сервер Exchange Server](#outlook-add-in-deployment)|В локальной или облачной среде для распространения надстроек Outlook.|
 |[Общая сетевая папка](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)|На том расположенном в сети компьютере с Windows, где должна размещаться надстройка, перейдите к родительской папке или диску с папкой, которую требуется использовать в качестве каталога общих папок.|
 
@@ -87,5 +87,5 @@ ms.locfileid: "36769556"
 - [Создание эффективных описаний в AppSource](/office/dev/store/create-effective-office-store-listings)
 - [Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office](../testing/testing-and-troubleshooting.md)
 
-[AppSource]: /office/dev/store/submit-to-the-office-store
+[AppSource]: /office/dev/store/submit-to-appsource-via-partner-center
 [Office Add-in host and platform availability]: ../overview/office-add-in-availability
