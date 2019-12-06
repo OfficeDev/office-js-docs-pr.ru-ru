@@ -5,12 +5,12 @@ ms.date: 07/05/2019
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: c4c60482e557f85edf044ab8e68e6b96f9e860ab
-ms.sourcegitcommit: 7d4d721fc3d246ef8a2464bc714659cd84d6faab
+ms.openlocfilehash: 7d68dd52575f3b706ffac2751d68ea4019faaa8c
+ms.sourcegitcommit: 960ceaf6776ec3ed41a8f5b7bf70b3c95c43386a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "37468786"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "39830225"
 ---
 # <a name="excel-add-ins-overview"></a>Общие сведения о надстройках Excel
 
@@ -51,7 +51,7 @@ ms.locfileid: "37468786"
 * способ интеграции надстройки с Excel, включая настраиваемый пользовательский интерфейс, создаваемый надстройкой (кнопки ленты, контекстные меню и т. д.);
 * разрешения, необходимые надстройке, например чтение и запись документа.
 
-Чтобы пользователи могли устанавливать и использовать надстройку Excel, необходимо опубликовать ее манифест в AppSource или каталоге надстроек. 
+Чтобы пользователи могли устанавливать и использовать надстройку Excel, необходимо опубликовать ее манифест в AppSource или каталоге надстроек. Дополнительные сведения о публикации в AppSource см. в статье [Публикация решений в AppSource и в Office](/office/dev/store/submit-to-appsource-via-partner-center).
 
 ## <a name="capabilities-of-an-excel-add-in"></a>Возможности надстройки Excel
 
