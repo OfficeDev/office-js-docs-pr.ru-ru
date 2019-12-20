@@ -3,12 +3,12 @@ title: Конфиденциальность и безопасность надс
 description: ''
 ms.date: 09/26/2019
 localization_priority: Priority
-ms.openlocfilehash: c26f1f97382b8e8b1807a3eeeaa63cb6b553cb1e
-ms.sourcegitcommit: 528577145b2cf0a42bc64c56145d661c4d019fb8
+ms.openlocfilehash: bf71bfdba331f3726445c5095bd7dba1e4c5d39e
+ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "37353855"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40814035"
 ---
 # <a name="privacy-and-security-for-office-add-ins"></a>Конфиденциальность и безопасность надстроек Office
 
@@ -33,9 +33,6 @@ ms.locfileid: "37353855"
 Кроме того, вы можете управлять тем, как надстройки Office используют память, ЦП и сетевые ресурсы. Это позволяет поддерживать надлежащую производительность и надежность.
 
 В следующих разделах вкратце описывается поддержка архитектурой среды выполнения надстроек, работающих в клиентах Office на устройствах под управлением Windows, устройствах Mac с OS X и в веб-браузерах.
-
-> [!NOTE]
-> Сведения об использовании Windows Information Protection и Intune с надстройками Office см. в статье [Защита корпоративных данных с помощью WIP и Intune в документах, для которых используются надстройки Office](/microsoft-365/enterprise/office-add-ins-wip).
 
 ### <a name="clients-on-windows-and-os-x-devices"></a>Клиенты на устройствах с Windows и OS X
 

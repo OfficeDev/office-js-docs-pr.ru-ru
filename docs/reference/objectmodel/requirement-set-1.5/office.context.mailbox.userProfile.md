@@ -1,112 +1,33 @@
 ---
 title: Office. Context. Mailbox. userProfile — набор обязательных элементов 1,5
 description: ''
-ms.date: 04/24/2019
+ms.date: 12/16/2019
 localization_priority: Normal
-ms.openlocfilehash: 993fad674fcc616483ac927619e7ca64d81b7326
-ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
+ms.openlocfilehash: 6b5229c1bc300d11714f3aa2cf8fa8ff2465667c
+ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "36696094"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40814782"
 ---
 # <a name="userprofile"></a>userProfile
 
-### <a name="officeofficemdcontextofficecontextmdmailboxofficecontextmailboxmduserprofile"></a>[Office](Office.md)[.context](Office.context.md)[.mailbox](Office.context.mailbox.md).userProfile
+### <a name="officeofficemdcontextofficecontextmdmailboxofficecontextmailboxmduserprofile"></a>[Office](office.md)[.context](office.context.md)[.mailbox](office.context.mailbox.md).userProfile
+
+Предоставляет сведения о пользователе в надстройке Outlook.
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
 |[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-##### <a name="members-and-methods"></a>Элементы и методы
+## <a name="properties"></a>Свойства
 
-| Элемент | Тип |
-|--------|------|
-| [displayName](#displayname-string) | Member |
-| [emailAddress](#emailaddress-string) | Member |
-| [timeZone](#timezone-string) | Member |
-
-### <a name="members"></a>Members
-
-#### <a name="displayname-string"></a>displayName: строка
-
-Получает отображаемое имя пользователя.
-
-##### <a name="type"></a>Тип
-
-*   String
-
-##### <a name="requirements"></a>Требования
-
-|Требование| Значение|
-|---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
-
-##### <a name="example"></a>Пример
-
-```js
-// Example: Allie Bellew
-console.log(Office.context.mailbox.userProfile.displayName);
-```
-
-<br>
-
----
----
-
-#### <a name="emailaddress-string"></a>emailAddress: строка
-
-Получает адрес электронной почты SMTP пользователя.
-
-##### <a name="type"></a>Тип
-
-*   String
-
-##### <a name="requirements"></a>Требования
-
-|Требование| Значение|
-|---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
-
-##### <a name="example"></a>Пример
-
-```js
-// Example: allieb@contoso.com
-console.log(Office.context.mailbox.userProfile.emailAddress);
-```
-
-<br>
-
----
----
-
-#### <a name="timezone-string"></a>Часовой пояс: строка
-
-Получает часовой пояс пользователя по умолчанию.
-
-##### <a name="type"></a>Тип
-
-*   String
-
-##### <a name="requirements"></a>Требования
-
-|Требование| Значение|
-|---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
-|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| ReadItem|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
-
-##### <a name="example"></a>Пример
-
-```js
-// Example: Pacific Standard Time
-console.log(Office.context.mailbox.userProfile.timeZone);
-```
+| Свойство | Минимальные<br>уровень разрешения | Способов | Тип возвращаемых данных | Минимальные<br>набор требований |
+|---|---|---|---|:---:|
+| [displayName](/javascript/api/outlook/office.userprofile?view=outlook-js-1.5#displayname) | ReadItem | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [emailAddress](/javascript/api/outlook/office.userprofile?view=outlook-js-1.5#emailaddress) | ReadItem | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [timeZone](/javascript/api/outlook/office.userprofile?view=outlook-js-1.5#timezone) | ReadItem | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |

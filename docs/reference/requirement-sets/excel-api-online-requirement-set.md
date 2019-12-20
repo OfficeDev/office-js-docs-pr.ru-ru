@@ -1,15 +1,15 @@
 ---
 title: Набор обязательных элементов API JavaScript для Excel Online
 description: Сведения о наборе требований Ексцелапионлине
-ms.date: 11/19/2019
+ms.date: 12/05/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: e583c9832f04e17dc1c82d38d056fe2749888a77
-ms.sourcegitcommit: e56bd8f1260c73daf33272a30dc5af242452594f
+ms.openlocfilehash: ad2a3cd627552baeb449397fa917fe10e86ebbaf
+ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "38757494"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40814154"
 ---
 # <a name="excel-javascript-api-online-only-requirement-set"></a>Набор обязательных элементов API JavaScript для Excel Online
 
@@ -40,7 +40,23 @@ if (Office.context.requirements.isSetSupported("ExcelApiOnline", "1.1")) {
 
 ## <a name="api-list"></a>Список API
 
-В настоящее время интерфейсы API, доступные только в Интернете, отсутствуют. Возврат к последующим добавлению новых компонентов в Excel в Интернете и поддержка API JavaScript для Office.
+В данный момент в наборе обязательных элементов `ExcelApiOnline 1.1` API для Excel в Интернете доступны следующие API.
+
+| Класс | Поля | Описание |
+|:---|:---|:---|
+|[Comment](/javascript/api/excel/excel.comment)|[mentions](/javascript/api/excel/excel.comment#mentions)|Получает объекты (например, людей), которые упоминаются в комментариях.|
+||[ричконтент](/javascript/api/excel/excel.comment#richcontent)|Получает форматированный текст комментария (например, упоминания в комментариях). Эта строка не предназначена для отображения конечным пользователям. Надстройка должна использовать эту надстройку только для анализа форматированного содержимого комментариев.|
+||[Упдатементионс (Контентвисментионс: Excel. Комментричконтент)](/javascript/api/excel/excel.comment#updatementions-contentwithmentions-)|Обновляет содержимое комментария с помощью специально отформатированной строки и списка упоминаний.|
+|[комментментион](/javascript/api/excel/excel.commentmention)|[email](/javascript/api/excel/excel.commentmention#email)|Получает или задает адрес электронной почты объекта, который упоминается в примечании.|
+||[id](/javascript/api/excel/excel.commentmention#id)|Получает или задает идентификатор объекта. Это соответствует одному из идентификаторов в `CommentRichContent.richContent`файле.|
+||[name](/javascript/api/excel/excel.commentmention#name)|Получает или задает имя объекта, упоминаемого в примечании.|
+|[CommentReply](/javascript/api/excel/excel.commentreply)|[mentions](/javascript/api/excel/excel.commentreply#mentions)|Получает объекты (например, людей), которые упоминаются в комментариях.|
+||[ричконтент](/javascript/api/excel/excel.commentreply#richcontent)|Получает форматированный текст комментария (например, упоминания в комментариях). Эта строка не предназначена для отображения конечным пользователям. Надстройка должна использовать эту надстройку только для анализа форматированного содержимого комментариев.|
+||[Упдатементионс (Контентвисментионс: Excel. Комментричконтент)](/javascript/api/excel/excel.commentreply#updatementions-contentwithmentions-)|Обновляет содержимое комментария с помощью специально отформатированной строки и списка упоминаний.|
+|[комментричконтент](/javascript/api/excel/excel.commentrichcontent)|[mentions](/javascript/api/excel/excel.commentrichcontent#mentions)|Массив, содержащий все сущности (например, люди), упомянутые в комментарии.|
+||[ричконтент](/javascript/api/excel/excel.commentrichcontent#richcontent)||
+|[Range](/javascript/api/excel/excel.range)|[moveTo (Дестинатионранже: строка \| Range)](/javascript/api/excel/excel.range#moveto-destinationrange-)|Перемещает значения ячеек, форматирование и формулы из текущего диапазона в конечный диапазон, заменяя старые сведения в этих ячейках.|
+|[RangeFormat](/javascript/api/excel/excel.rangeformat)|[Аджустиндент (Amount: число)](/javascript/api/excel/excel.rangeformat#adjustindent-amount-)|Настраивает отступ для форматирования диапазона. Значение отступа лежит в диапазоне от 0 до 250 и измеряется в символах.|
 
 ## <a name="see-also"></a>См. также
 

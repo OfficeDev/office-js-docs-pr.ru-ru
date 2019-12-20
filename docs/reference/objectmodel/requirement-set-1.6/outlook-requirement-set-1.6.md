@@ -1,14 +1,14 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.6
 description: ''
-ms.date: 10/30/2019
+ms.date: 12/17/2019
 localization_priority: Normal
-ms.openlocfilehash: 46d1b4eeb260c2b0f3b94999a7f02a1384b71942
-ms.sourcegitcommit: e989096f3d19761bf8477c585cde20b3f8e0b90d
+ms.openlocfilehash: 22702448b82a108c401f9f81d3b8a321e14ead63
+ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "37902083"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40814663"
 ---
 # <a name="outlook-add-in-api-requirement-set-16"></a>Набор обязательных элементов API для надстройки Outlook 1.6
 
@@ -27,10 +27,10 @@ ms.locfileid: "37902083"
 
 ### <a name="change-log"></a>Журнал изменений
 
-- Добавлен объект [Office.context.mailbox.item.getSelectedEntities](office.context.mailbox.item.md#getselectedentities--entities). Добавляет новую функцию, которая возвращает объекты, найденные в выделенном совпадении. Выделенные совпадения применяются к контекстным надстройкам.
-- Добавлен объект [Office.context.mailbox.item.getSelectedRegExMatches](office.context.mailbox.item.md#getselectedregexmatches--object). Добавляет новую функцию, которая возвращает строковые значения в выделенном совпадении, соответствующие регулярным выражениям, определенным в XML-файле манифеста. Выделенные совпадения применяются к контекстным надстройкам.
-- Добавлен объект [Office.context.mailbox.displayNewMessageForm](office.context.mailbox.md#displaynewmessageformparameters). Добавляет новую функцию, которая открывает новую форму сообщения.
-- Добавлен объект [Office.context.mailbox.userProfile.accountType](office.context.mailbox.userprofile.md#accounttype-string). Добавляет новый элемент в профиль пользователя, указывающий тип учетной записи пользователя.
+- Добавлен объект [Office.context.mailbox.item.getSelectedEntities](office.context.mailbox.item.md#methods). Добавляет новую функцию, которая возвращает объекты, найденные в выделенном совпадении. Выделенные совпадения применяются к контекстным надстройкам.
+- Добавлен объект [Office.context.mailbox.item.getSelectedRegExMatches](office.context.mailbox.item.md#methods). Добавляет новую функцию, которая возвращает строковые значения в выделенном совпадении, соответствующие регулярным выражениям, определенным в XML-файле манифеста. Выделенные совпадения применяются к контекстным надстройкам.
+- Добавлен объект [Office.context.mailbox.displayNewMessageForm](office.context.mailbox.md#methods). Добавляет новую функцию, которая открывает новую форму сообщения.
+- Добавлен объект [Office.context.mailbox.userProfile.accountType](office.context.mailbox.userprofile.md#properties). Добавляет новый элемент в профиль пользователя, указывающий тип учетной записи пользователя.
 
 ## <a name="see-also"></a>См. также
 

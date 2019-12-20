@@ -1,14 +1,14 @@
 ---
 title: Пространство имен Office — набор обязательных элементов 1,6
 description: ''
-ms.date: 08/13/2019
+ms.date: 12/16/2019
 localization_priority: Normal
-ms.openlocfilehash: ae764e8cda2b3f14e33b883d054379db7b37a687
-ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
+ms.openlocfilehash: e15f01db9423a9df38608f18098d2c808f5d944b
+ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "36696003"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40814670"
 ---
 # <a name="office"></a>Office
 
@@ -18,25 +18,29 @@ ms.locfileid: "36696003"
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
-##### <a name="members-and-methods"></a>Элементы и методы
+##### <a name="properties"></a>Properties
 
-| Элемент | Тип |
-|--------|------|
-| [AsyncResultStatus](#asyncresultstatus-string) | Member |
-| [CoercionType](#coerciontype-string) | Member |
-| [EventType](#eventtype-string) | Member |
-| [SourceProperty](#sourceproperty-string) | Элемент |
+| Свойство | Способов | Тип возвращаемых данных | Минимальные<br>набор требований |
+|---|---|---|:---:|
+| [контекст](office.context.md) | Создание<br>Чтение | [Context](/javascript/api/office/office.context?view=outlook-js-1.6) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+
+##### <a name="enumerations"></a>Перечисления
+
+| Перечисление | Способов | Тип возвращаемых данных | Минимальные<br>набор требований |
+|---|---|---|:---:|
+| [AsyncResultStatus](#asyncresultstatus-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [CoercionType](#coerciontype-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [EventType](#eventtype-string) | Создание<br>Чтение | String | [1,5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
+| [SourceProperty](#sourceproperty-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
 ### <a name="namespaces"></a>Пространства имен
 
-[context.](office.context.md) Предоставляет общие интерфейсы из контекстного пространства имен API надстроек Office для использования в API надстройки Outlook.
+[MailboxEnums](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat?view=outlook-js-1.6): `ItemType`включает ряд специфических перечислений Outlook, например `EntityType` `AttachmentType` `RecipientType` `ResponseType`,,,,, и `ItemNotificationMessageType`.
 
-[MailboxEnums](/javascript/api/outlook/office.mailboxenums.attachmenttype?view=outlook-js-1.6): `ItemType`включает ряд перечислений, например `EntityType` `AttachmentType` `RecipientType` `ResponseType`,,,,, и `ItemNotificationMessageType`.
-
-### <a name="members"></a>Members
+## <a name="enumeration-details"></a>Сведения о перечислении
 
 #### <a name="asyncresultstatus-string"></a>AsyncResultStatus: строка
 
@@ -57,7 +61,7 @@ ms.locfileid: "36696003"
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 <br>
@@ -78,13 +82,13 @@ ms.locfileid: "36696003"
 |Имя| Тип| Описание|
 |---|---|---|
 |`Html`| String|Запрашивает возврат данных в формате HTML.|
-|`Text`| String.|Запрашивает возврат данных в формате текста.|
+|`Text`| String|Запрашивает возврат данных в формате текста.|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
 
 <br>
@@ -102,15 +106,15 @@ ms.locfileid: "36696003"
 
 ##### <a name="properties"></a>Свойства:
 
-| Имя | Тип | Описание |
-|---|---|---|
-|`ItemChanged`| String | Для просмотра выбран другой элемент Outlook, когда область задач закреплена. |
+| Имя | Тип | Описание | Набор минимальных требований |
+|---|---|---|:---:|
+|`ItemChanged`| String | Для просмотра выбран другой элемент Outlook, когда область задач закреплена. | 1.5 |
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Минимальная версия набора обязательных элементов для почтового ящика](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.5 |
+|[Минимальная версия набора обязательных элементов для почтового ящика](../../requirement-sets/outlook-api-requirement-sets.md)| 1.5 |
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение |
 
 <br>
@@ -131,11 +135,11 @@ ms.locfileid: "36696003"
 |Имя| Тип| Описание|
 |---|---|---|
 |`Body`| String|Источник данных — текст сообщения.|
-|`Subject`| String.|Источник данных — тема сообщения.|
+|`Subject`| String|Источник данных — тема сообщения.|
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
-|[Версия минимального набора требований к почтовому ящику](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| 1.0|
+|[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
 |[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|

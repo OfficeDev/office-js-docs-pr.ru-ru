@@ -1,14 +1,14 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.7
 description: ''
-ms.date: 03/20/2019
+ms.date: 12/17/2019
 localization_priority: Priority
-ms.openlocfilehash: 0f804ba44ab15749d868104719f88ecac5286480
-ms.sourcegitcommit: e989096f3d19761bf8477c585cde20b3f8e0b90d
+ms.openlocfilehash: 2041f6550fe5ea1fe17ee7d2779ba7ce2d7c0a4a
+ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "37902069"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40814579"
 ---
 # <a name="outlook-add-in-api-requirement-set-17"></a>Набор обязательных элементов API для надстройки Outlook 1.7
 
@@ -32,12 +32,12 @@ ms.locfileid: "37902069"
 - Добавлен объект [Recurrence](/javascript/api/outlook/office.recurrence?view=outlook-js-1.7). Добавляет новый объект, предоставляющий методы получения и установки расписания повторения встреч и методы получения расписания повторения сообщений с приглашением на собрание.
 - Добавлен объект [RecurrenceTimeZone](/javascript/api/outlook/office.recurrencetimezone?view=outlook-js-1.7). Добавляет новый объект, представляющий настройку часового пояса расписания повторения.
 - Добавлен объект [SeriesTime](/javascript/api/outlook/office.seriestime?view=outlook-js-1.7). Добавляет новый объект, предоставляющий методы получения и установки даты и времени встреч в повторяющемся ряду и методы получения даты и времени приглашений на собрание в повторяющемся ряду.
-- Добавлен объект [Office.context.mailbox.item.addHandlerAsync](office.context.mailbox.item.md#addhandlerasynceventtype-handler-options-callback). Добавляет новый метод, добавляющий обработчик для поддерживаемого события.
-- Изменен объект [Office.context.mailbox.item.from](office.context.mailbox.item.md#from-emailaddressdetailsfrom). Добавляет возможность получения значения отправителя в режиме создания.
-- Изменен объект [Office.context.mailbox.item.organizer](office.context.mailbox.item.md#organizer-emailaddressdetailsorganizer). Добавляет возможность получения значения организатора в режиме создания.
-- Добавлен объект [Office.context.mailbox.item.recurrence](office.context.mailbox.item.md#nullable-recurrence-recurrence). Добавляет новое свойство, которое получает или задает объект, предоставляющий методы управления расписанием повторения встреч. Это свойство можно также использовать для получения расписания повторения приглашения на собрание.
-- Добавлен объект [Office.context.mailbox.item.removeHandlerAsync](office.context.mailbox.item.md#removehandlerasynceventtype-options-callback). Добавляет новый метод, удаляющий обработчиков событий для поддерживаемого типа события. 
-- Добавлен объект [Office.context.mailbox.item.seriesId](office.context.mailbox.item.md#nullable-seriesid-string). Добавляет новое свойство, получающее идентификатор ряда, к которому относится событие.
+- Добавлен объект [Office.context.mailbox.item.addHandlerAsync](office.context.mailbox.item.md#methods). Добавляет новый метод, добавляющий обработчик для поддерживаемого события.
+- Изменен объект [Office.context.mailbox.item.from](office.context.mailbox.item.md#properties). Добавляет возможность получения значения отправителя в режиме создания.
+- Изменен объект [Office.context.mailbox.item.organizer](office.context.mailbox.item.md#properties). Добавляет возможность получения значения организатора в режиме создания.
+- Добавлен объект [Office.context.mailbox.item.recurrence](office.context.mailbox.item.md#properties). Добавляет новое свойство, которое получает или задает объект, предоставляющий методы управления расписанием повторения встреч. Это свойство можно также использовать для получения расписания повторения приглашения на собрание.
+- Добавлен объект [Office.context.mailbox.item.removeHandlerAsync](office.context.mailbox.item.md#methods). Добавляет новый метод, удаляющий обработчиков событий для поддерживаемого типа события. 
+- Добавлен объект [Office.context.mailbox.item.seriesId](office.context.mailbox.item.md#properties). Добавляет новое свойство, получающее идентификатор ряда, к которому относится событие.
 - Добавлен объект [Office.MailboxEnums.Days](/javascript/api/outlook/office.mailboxenums.days?view=outlook-js-1.7). Добавляет новое перечисление, указывающее день недели или тип дня.
 - Добавлен объект [Office.MailboxEnums.Month](/javascript/api/outlook/office.mailboxenums.month?view=outlook-js-1.7). Добавляет новое перечисление, указывающее месяц.
 - Добавлен объект [Office.MailboxEnums.RecurrenceTimeZone](/javascript/api/outlook/office.mailboxenums.recurrencetimezone?view=outlook-js-1.7). Добавляет новое перечисление, указывающее часовой пояс повторения.

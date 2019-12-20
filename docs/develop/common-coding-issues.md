@@ -1,14 +1,14 @@
 ---
 title: Распространенные проблемы кодирования и неожиданное поведение платформы
 description: Список проблем платформы API JavaScript для Office, часто встречающихся разработчиками.
-ms.date: 11/06/2019
+ms.date: 12/05/2019
 localization_priority: Normal
-ms.openlocfilehash: a4d7a09c1645bea181060157d933036d1924044f
-ms.sourcegitcommit: 88d81aa2d707105cf0eb55d9774b2e7cf468b03a
+ms.openlocfilehash: 4271db2a9c61de419dd36fb0277574ffe0929c58
+ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "38301934"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40814014"
 ---
 # <a name="common-coding-issues-and-unexpected-platform-behaviors"></a>Распространенные проблемы кодирования и неожиданное поведение платформы
 
@@ -86,11 +86,27 @@ range.format.font.size = 10;
 
 ## <a name="setting-read-only-properties"></a>Установка свойств, предназначенных только для чтения
 
-[Определения TypeScript](/referencing-the-javascript-api-for-office-library-from-its-cdn.md) для Office JS указывают, какие свойства объекта доступны только для чтения. Если вы попытаетесь установить свойство, доступное только для чтения, операция записи завершится с ошибкой без уведомления и не выдается сообщение об ошибке. В следующем примере ошибочно попытаются задать свойство, доступное только для чтения, [Chart.ID](/javascript/api/excel/excel.chart#id).
+[Определения TypeScript](referencing-the-javascript-api-for-office-library-from-its-cdn.md) для Office JS указывают, какие свойства объекта доступны только для чтения. Если вы попытаетесь установить свойство, доступное только для чтения, операция записи завершится с ошибкой без уведомления и не выдается сообщение об ошибке. В следующем примере ошибочно попытаются задать свойство, доступное только для чтения, [Chart.ID](/javascript/api/excel/excel.chart#id).
 
 ```js
 // This will do nothing, since `id` is a read-only property.
 myChart.id = "5";
+```
+
+## <a name="removing-event-handlers"></a>Удаление обработчиков событий
+
+Обработчики событий должны быть удалены с использованием `RequestContext` того же, в котором они были добавлены. Если надстройка должна удалить обработчик события во время выполнения, необходимо сохранить объект контекста, используемый для добавления обработчика.
+
+```js
+Excel.run(async (context) => {
+    [...]
+
+    // To later remove an event handler, store the context somewhere accessible to the handler removal function.
+    // You may find it helpful to also store the event handler object and associate it with the context.
+    selectionChangedHandler = myWorksheet.onSelectionChanged.add(callback);
+    savedContext = currentContext;
+    return context.sync();
+}
 ```
 
 ## <a name="see-also"></a>См. также

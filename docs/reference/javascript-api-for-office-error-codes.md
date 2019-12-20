@@ -3,12 +3,12 @@ title: Коды ошибок API JavaScript для Office
 description: ''
 ms.date: 08/06/2019
 localization_priority: Normal
-ms.openlocfilehash: b5a5480b620f6ba9869a1faa40af0cd0faa3fcfc
-ms.sourcegitcommit: 21aa084875c9e07a300b3bbe8852b3e5dd163e1d
+ms.openlocfilehash: 45882cedf28f47be6bf2e20f9e6f6bf3cb9e816e
+ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "38001944"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40815076"
 ---
 # <a name="javascript-api-for-office-error-codes"></a>Коды ошибок API JavaScript для Office
 
@@ -89,7 +89,7 @@ ms.locfileid: "38001944"
 |12006|||Диалоговое окно закрыто. Скорее всего, пользователь нажал кнопку **X**. Появляется в диалоговом окне и запускает событие `DialogEventReceived` на странице ведущего приложения.|
 |12007|||Диалоговое окно уже открыто из этого главного окна. Для окна ведущего приложения (например, области задач) невозможно открыть сразу несколько диалоговых окон. Появляется при вызове `displayDialogAsync`.|
 |12009|||Пользователь проигнорировал диалоговое окно. Эта ошибка может возникнуть в веб-версиях Office, где пользователи могут не разрешить надстройке открыть диалоговое окно. Появляется при вызове `displayDialogAsync`.|
-|13000–13010|||Просмотр [причин и обработки ошибок из getAccessToken](/office/dev/add-ins/develop/troubleshoot-sso-in-office-add-ins#causes-and-handling-of-errors-from-getAccessToken).|
+|13000–13010|||Просмотр [причин и обработки ошибок из getAccessToken](../develop/troubleshoot-sso-in-office-add-ins.md#causes-and-handling-of-errors-from-getaccesstoken).|
 
 ## <a name="binding-creation-error-conditions"></a>Условия ошибок создания привязки
 

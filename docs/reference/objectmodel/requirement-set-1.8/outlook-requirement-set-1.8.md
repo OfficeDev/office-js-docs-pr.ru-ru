@@ -1,14 +1,14 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.8
 description: ''
-ms.date: 10/31/2019
+ms.date: 12/17/2019
 localization_priority: Priority
-ms.openlocfilehash: 1e1420bd355c16941c7cb4ce66ecdca56e1c8927
-ms.sourcegitcommit: e989096f3d19761bf8477c585cde20b3f8e0b90d
+ms.openlocfilehash: 1a542a0b00bd04674c4da4c45909ff03a152983c
+ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "37902201"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40814161"
 ---
 # <a name="outlook-add-in-api-requirement-set-18"></a>Набор обязательных элементов API для надстройки Outlook 1.8
 
@@ -34,16 +34,16 @@ ms.locfileid: "37902201"
 - Добавлен объект [MasterCategories](/javascript/api/outlook/office.mastercategories?view=outlook-js-1.8). Добавляет новый объект, представляющий главный список категорий для почтового ящика.
 - Добавлен объект [SharedProperties](/javascript/api/outlook/office.sharedproperties?view=outlook-js-1.8). Добавляет новый объект, представляющий свойства элемента встречи или сообщения в общей папке, календаре или почтовом ящике.
 - Добавлен [элемент манифеста SupportsSharedFolders](../../manifest/supportssharedfolders.md). Добавляет дочерний элемент к элементу манифеста [DesktopFormFactor](../../manifest/desktopformfactor.md). Он определяет, доступна ли надстройка в сценариях делегирования.
-- Добавлен объект [Office.context.mailbox.masterCategories](/javascript/api/outlook/office.mailbox?view=outlook-js-1.8#mastercategories). Добавляет новое свойство, представляющее главный список категорий для почтового ящика.
-- Добавлен объект [Office.context.mailbox.item.categories](/javascript/api/outlook/office.item?view=outlook-js-1.8#categories). Добавляет новое свойство, представляющее набор категорий для элемента.
-- Добавлен объект [Office.context.mailbox.item.addFileAttachmentFromBase64Async](office.context.mailbox.item.md#addfileattachmentfrombase64asyncbase64file-attachmentname-options-callback). Добавляет новый метод, позволяющий вложить в сообщение или встречу файл, представленный в виде строки в кодировке base64.
-- Добавлен объект [Office.context.mailbox.item.enhancedLocation](office.context.mailbox.item.md#enhancedlocation-enhancedlocation). Добавляет новое свойство, представляющее набор местоположений для встречи.
-- Добавлен объект [Office.context.mailbox.item.getAllInternetHeadersAsync](/javascript/api/outlook/office.messageread?view=outlook-js-1.8#getallinternetheadersasync-options--callback-). Добавляет новый метод, получающий заголовки Интернета для элемента сообщения. Только в режиме чтения.
-- Добавлен объект [Office.context.mailbox.item.getAttachmentContentAsync](office.context.mailbox.item.md#getattachmentcontentasyncattachmentid-options-callback--attachmentcontent). Добавляет новый метод, позволяющий получить содержимое определенного вложения.
-- Добавлен объект [Office.context.mailbox.item.getAttachmentsAsync](office.context.mailbox.item.md#getattachmentsasyncoptions-callback--arrayattachmentdetails). Добавляет новый метод, получающий вложенные в элемент объекты в режиме создания.
-- Добавлен объект [Office.context.mailbox.item.getItemIdAsync](office.context.mailbox.item.md#getitemidasyncoptions-callback). Добавляет новый метод, получающий идентификатор сохраненного элемента встречи или сообщения.
-- Добавлен объект [Office.context.mailbox.item.getSharedPropertiesAsync](office.context.mailbox.item.md#getsharedpropertiesasyncoptions-callback). Добавляет новый метод, позволяющий получить объект, представляющий свойства sharedProperties элемента встречи или сообщения.
-- Добавлен объект [Office.context.mailbox.item.internetHeaders](/javascript/api/outlook/office.messagecompose?view=outlook-js-1.8#internetheaders). Добавляет новое свойство, представляющее настраиваемые заголовки Интернета в элементе сообщения. Только в режиме создания.
+- Добавлен объект [Office.context.mailbox.masterCategories](office.context.mailbox.md#properties). Добавляет новое свойство, представляющее главный список категорий для почтового ящика.
+- Добавлен объект [Office.context.mailbox.item.categories](office.context.mailbox.item.md#properties). Добавляет новое свойство, представляющее набор категорий для элемента.
+- Добавлен объект [Office.context.mailbox.item.addFileAttachmentFromBase64Async](office.context.mailbox.item.md#methods). Добавляет новый метод, позволяющий вложить в сообщение или встречу файл, представленный в виде строки в кодировке base64.
+- Добавлен объект [Office.context.mailbox.item.enhancedLocation](office.context.mailbox.item.md#properties). Добавляет новое свойство, представляющее набор местоположений для встречи.
+- Добавлен объект [Office.context.mailbox.item.getAllInternetHeadersAsync](office.context.mailbox.item.md#methods). Добавляет новый метод, получающий заголовки Интернета для элемента сообщения. Только в режиме чтения.
+- Добавлен объект [Office.context.mailbox.item.getAttachmentContentAsync](office.context.mailbox.item.md#methods). Добавляет новый метод, позволяющий получить содержимое определенного вложения.
+- Добавлен объект [Office.context.mailbox.item.getAttachmentsAsync](office.context.mailbox.item.md#methods). Добавляет новый метод, получающий вложенные в элемент объекты в режиме создания.
+- Добавлен объект [Office.context.mailbox.item.getItemIdAsync](office.context.mailbox.item.md#methods). Добавляет новый метод, получающий идентификатор сохраненного элемента встречи или сообщения.
+- Добавлен объект [Office.context.mailbox.item.getSharedPropertiesAsync](office.context.mailbox.item.md#methods). Добавляет новый метод, позволяющий получить объект, представляющий свойства sharedProperties элемента встречи или сообщения.
+- Добавлен объект [Office.context.mailbox.item.internetHeaders](office.context.mailbox.item.md#properties). Добавляет новое свойство, представляющее настраиваемые заголовки Интернета в элементе сообщения. Только в режиме создания.
 - Изменен объект [Event.completed](/javascript/api/office/office.addincommands.event#completed-options-). Добавляет новый необязательный параметр `options`, представляющий собой словарь с одним допустимым значением (`allowEvent`). Это значение используется для отмены выполнения события.
 - Добавлен объект [Office.MailboxEnums.AttachmentContentFormat](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat?view=outlook-js-1.8). Добавляет новое перечисление, указывающее форматирование, применяемое к содержимому вложения.
 - Добавлен объект [Office.MailboxEnums.AttachmentStatus](/javascript/api/outlook/office.mailboxenums.attachmentstatus?view=outlook-js-1.8). Добавляет новое перечисление, в котором указывается, добавлено вложение в элемент или удалено из него.
