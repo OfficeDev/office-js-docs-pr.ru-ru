@@ -1,14 +1,14 @@
 ---
 title: Загрузка неопубликованных надстроек Office для тестирования
 description: ''
-ms.date: 08/15/2019
+ms.date: 12/06/2019
 localization_priority: Priority
-ms.openlocfilehash: 19cd599ea743fc577a5139d3f278dd3f993ec5b1
-ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
+ms.openlocfilehash: bb926b09d9381574d22e7634a578adac141e1f8f
+ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "36477931"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40814481"
 ---
 # <a name="sideload-office-add-ins-for-testing"></a>Загрузка неопубликованных надстроек Office для тестирования
 
@@ -45,7 +45,9 @@ ms.locfileid: "36477931"
 
 6. Нажмите кнопку **Закрыть**, чтобы закрыть диалоговое окно **Свойства**.
 
-## <a name="specify-the-shared-folder-as-a-trusted-catalog"></a>Указание общей папки в качестве доверенного каталога
+## <a name="specify-the-shared-folder-as-a-trusted-catalog"></a>Указание общей папки в качестве доверенного каталога 
+
+### <a name="configure-the-trust-manually"></a>Настройка доверия вручную
       
 1. Откройте новый документ в Excel, Word, PowerPoint или Project.
     
@@ -68,10 +70,43 @@ ms.locfileid: "36477931"
 8. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Параметры Word**.
 
 9. Закройте и снова откройте приложение Office, чтобы изменения вступили в силу.
+
+### <a name="configure-the-trust-with-a-registry-script"></a>Настройка доверия с помощью сценария реестра
+
+1. В текстовом редакторе создайте файл с именем TrustNetworkShareCatalog.reg. 
+
+2. Добавьте следующее содержимое в файл:
+
+    ```
+    Windows Registry Editor Version 5.00
     
+    [HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\WEF\TrustedCatalogs\{-random-GUID-here-}]
+    "Id"="{-random-GUID-here-}"
+    "Url"="\\\\-share-\\-folder-"
+    "Flags"=dword:00000001
+    ```
+3. Используйте одно из многочисленных средств создания GUID в Интернете, например [Генератор GUID](https://guidgenerator.com/), для создания случайного GUID и в файле TrustNetworkShareCatalog.reg замените строку "-random-GUID-here-" *в обоих местах* идентификатором GUID. (Символы `{}` должны сохраняться.)
+
+4. Замените значение `Url` полным сетевым путем к папке, к которой вы ранее предоставили [общий доступ](#share-a-folder). (Обратите внимание, что все знаки `\` в URL-адресе должны дублироваться.) Если вы не записали полный сетевой путь к папке при предоставлении к ней общего доступа, его можно получить в диалоговом окне **Свойства** папки, как показано на снимке экрана ниже. 
+
+    ![диалоговое окно "Свойства" папки с выделенной вкладкой "Доступ" и сетевым путем](../images/sideload-windows-properties-dialog-2.png)
+    
+5. Файл теперь должен выглядеть так, как показано ниже. Сохраните его.
+
+    ```
+    Windows Registry Editor Version 5.00
+    
+    [HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\WEF\TrustedCatalogs\{01234567-89ab-cedf-0123-456789abcedf}]
+    "Id"="{01234567-89ab-cedf-0123-456789abcedf}"
+    "Url"="\\\\TestServer\\OfficeAddinManifests"
+    "Flags"=dword:00000001
+    ```
+
+6. Закройте *все* приложения Office.
+
+7. Запустите файл TrustNetworkShareCatalog.reg как любой исполняемый файл, например, дважды щелкнув его.
 
 ## <a name="sideload-your-add-in"></a>Загрузка неопубликованной надстройки
-
 
 1. XML-файл манифеста тестируемой надстройки необходимо поместить в каталог общих папок. Обратите внимание, что вы развертываете веб-приложение непосредственно на веб-сервере. Не забудьте указать URL-адрес в элементе **SourceLocation** файла манифеста.
 

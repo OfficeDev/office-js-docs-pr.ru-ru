@@ -1,30 +1,33 @@
 ---
 title: Отладка надстроек с помощью средств разработчика в Windows 10
-description: ''
-ms.date: 07/01/2019
+description: Отладка надстроек с помощью средств разработчика Microsoft Edge в Windows 10
+ms.date: 12/16/2019
 localization_priority: Priority
-ms.openlocfilehash: 2e6f3c10aa7e1e08aa6c4bb1b4a7724cc9e6531d
-ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
+ms.openlocfilehash: dd0f078b1cad0621dc99269b745a326adb69f7d6
+ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "35575676"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40814474"
 ---
 # <a name="debug-add-ins-using-developer-tools-on-windows-10"></a>Отладка надстроек с помощью средств разработчика в Windows 10
 
 Для помощи в отладке надстроек в Windows 10 доступны инструменты для разработчиков, не входящие в интегрированные среды разработки. Эти инструменты полезны, если нужно изучить проблемы при запуске надстройки вне интегрированной среды разработки.
 
-Используемый инструмент зависит от того, где работает надстройка: в Microsoft Edge или в Internet Explorer. Это, в свою очередь, зависит от версий Windows 10 и Office, установленных на компьютере. Сведения об определении браузера, используемого на компьютере разработки, см. в статье [Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md). 
-
+Используемый инструмент зависит от того, где работает надстройка: в Microsoft Edge или в Internet Explorer. Это, в свою очередь, зависит от версий Windows 10 и Office, установленных на компьютере. Сведения об определении браузера, используемого на компьютере разработки, см. в статье [Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md).
 
 > [!NOTE]
 > Инструкции, представленные в этой статье, нельзя применять для отладки надстройки Outlook, использующей функции Execute. Для отладки надстройки Outlook, использующей функции Execute, рекомендуется прикрепить ее к Visual Studio в режиме сценария или к другому отладчику сценариев.
 
 ## <a name="when-the-add-in-is-running-in-microsoft-edge"></a>Если надстройка работает в Microsoft Edge
 
-Если надстройка работает в Microsoft Edge, можно использовать [Microsoft Edge DevTools](https://www.microsoft.com/p/microsoft-edge-devtools-preview/9mzbfrmz0mnj?activetab=pivot%3Aoverviewtab). 
+[!include[Enable debugging on Microsoft Edge DevTools](../includes/enable-debugging-on-edge-devtools.md)]
 
-1. Запустите надстройку. 
+### <a name="debug-using-microsoft-edge-devtools"></a>Отладка с помощью Microsoft Edge DevTools
+
+Если надстройка работает в Microsoft Edge, можно использовать [Microsoft Edge DevTools](https://www.microsoft.com/p/microsoft-edge-devtools-preview/9mzbfrmz0mnj?activetab=pivot%3Aoverviewtab).
+
+1. Запустите надстройку.
 
 2. Запустите Microsoft Edge DevTools.
 

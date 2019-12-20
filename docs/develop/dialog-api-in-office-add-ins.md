@@ -3,12 +3,12 @@ title: Использование Dialog API в надстройках Office
 description: ''
 ms.date: 08/07/2019
 localization_priority: Priority
-ms.openlocfilehash: 5cafb2396c92576bd5ac6d6d52105e0bb5ee579d
-ms.sourcegitcommit: 1dc1bb0befe06d19b587961da892434bd0512fb5
+ms.openlocfilehash: 88c7afca2f1e800391443458e0c6f6b930288c44
+ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "36302583"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40814112"
 ---
 # <a name="use-the-dialog-api-in-your-office-add-ins"></a>Использование Dialog API в надстройках Office
 
@@ -329,7 +329,10 @@ function processDialogEvent(arg) {
 Иногда главной странице нужно передать данные в диалоговое окно. Есть два основных способа обеспечить эту возможность:
 
 - Добавьте параметры запроса в URL-адрес, который передается в метод `displayDialogAsync`.
-- Храните информацию в месте, доступном как для главного, так и для диалогового окна. У всех окон есть отдельное хранилище сеанса, но *если для них используется один домен* (включая номер порта), у них общее [локальное хранилище](https://www.w3schools.com/html/html5_webstorage.asp).
+- Храните информацию в месте, доступном как для главного, так и для диалогового окна. У всех окон есть отдельное хранилище сеанса, но *если для них используется один домен* (включая номер порта), у них общее [локальное хранилище](https://www.w3schools.com/html/html5_webstorage.asp).\*
+
+> [!NOTE]
+> \* Существует ошибка, влияющая на вашу стратегию обработки маркеров. Если надстройка работает в **Office в Интернете** с использованием браузера Safari или Microsoft Edge, у диалогового окна и области задач нет одного общего локального хранилища, поэтому его нельзя использовать для связи между ними.
 
 ### <a name="use-local-storage"></a>Использование локального хранилища
 

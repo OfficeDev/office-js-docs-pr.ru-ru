@@ -4,12 +4,12 @@ title: Руководство по обмену данными и события
 ms.prod: excel
 description: Осуществляйте обмен данными и событиями между пользовательскими функциями и областью задач в Excel.
 localization_priority: Priority
-ms.openlocfilehash: 714e2645d78293b683a4824b58cb2b9b0b72ebb8
-ms.sourcegitcommit: 44f1a4a3e1ae3c33d7d5fabcee14b84af94e03da
+ms.openlocfilehash: 16affeb29bd5950198f81f85e44adaf812067829
+ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "39670204"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40814133"
 ---
 # <a name="tutorial-share-data-and-events-between-excel-custom-functions-and-the-task-pane-preview"></a>Руководство по обмену данными и событиями между пользовательскими функциями и областью задач в Excel (предварительная версия)
 
@@ -204,5 +204,5 @@ yo office
 После запуска Excel можно использовать кнопки области задач для хранения или получения общих данных. Введите `=CONTOSO.GETVALUE()` в ячейку, чтобы пользовательская функция получила те же общие данные. Можно также использовать `=CONTOSO.STOREVALUE(“new value”)` для изменения значения общих данных.
 
 > [!NOTE]
-> Как показано в этой статье, при настройке проекта пользовательские функции и область задач совместно используют контекст. Вызов API Office из пользовательских функций не поддерживается. При работе с документом выполните вызов API Office для [события onCalculated](https://docs.microsoft.com/javascript/api/excel/excel.worksheet?view=excel-js-preview#event-details).
+> Как показано в этой статье, при настройке проекта пользовательские функции и область задач совместно используют контекст. Вызов API Office из пользовательских функций не поддерживается в предварительной версии.
 

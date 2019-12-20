@@ -1,14 +1,14 @@
 ---
 title: Создание и отладка надстроек Office в Visual Studio
 description: Используйте Visual Studio для создания и отладки надстроек Office в настольном клиенте Office для Windows
-ms.date: 10/11/2019
+ms.date: 12/16/2019
 localization_priority: Priority
-ms.openlocfilehash: 8274022a6a3af6e1b5d82c9d7105142d5a49e905
-ms.sourcegitcommit: 44f1a4a3e1ae3c33d7d5fabcee14b84af94e03da
+ms.openlocfilehash: 2a32075420355e1b70c91c676baf00bc202b18b1
+ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "39670169"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40814126"
 ---
 # <a name="create-and-debug-office-add-ins-in-visual-studio"></a>Создание и отладка надстроек Office в Visual Studio
 
@@ -95,6 +95,7 @@ ms.locfileid: "39670169"
 
 Вы можете использовать Visual Studio для отладки надстройки в настольном клиенте Office для Windows, как описано в следующих разделах:
 
+- [Включение отладки для команд надстроек и кода без пользовательского интерфейса](#enable-debugging-for-add-in-commands-and-ui-less-code)
 - [Просмотр свойств, связанных с построением и отладкой](#review-the-build-and-debug-properties)
 - [Использование существующего документа для отладки надстройки](#use-an-existing-document-to-debug-the-add-in)
 - [Запуск проекта](#start-the-project)
@@ -103,6 +104,12 @@ ms.locfileid: "39670169"
 
 > [!NOTE]
 > Visual Studio нельзя использовать для отладки надстроек в Office в Интернете или Office для Mac. Сведения по выполнению отладки на данных платформах см. в статье [Отладка надстроек Office в Office в Интернете](../testing/debug-add-ins-in-office-online.md) или [Отладка надстроек Office для iPad и компьютеров Mac](../testing/debug-office-add-ins-on-ipad-and-mac.md)
+
+### <a name="enable-debugging-for-add-in-commands-and-ui-less-code"></a>Включение отладки для команд надстроек и кода без пользовательского интерфейса
+
+Когда Visual Studio выполняет отладку Office для Windows, надстройка размещается в экземпляре браузера Microsoft Internet Explorer или Microsoft Edge. Сведения об определении браузера, используемого на компьютере разработки, см. в статье [Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md).
+
+[!include[Enable debugging on Microsoft Edge DevTools](../includes/enable-debugging-on-edge-devtools.md)]
 
 ### <a name="review-the-build-and-debug-properties"></a>Просмотр параметров сборки и отладки
 

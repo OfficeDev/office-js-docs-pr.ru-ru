@@ -1,14 +1,14 @@
 ---
 title: Проверка подлинности и авторизация с помощью Dialog API для Office
 description: ''
-ms.date: 08/07/2019
+ms.date: 12/06/2019
 localization_priority: Priority
-ms.openlocfilehash: 3d61c82f28fd5780176b356e1ab4d394e5fbf8bd
-ms.sourcegitcommit: 1dc1bb0befe06d19b587961da892434bd0512fb5
+ms.openlocfilehash: 7c8e012c2ef74e8a8e92203817b4f5f2eb60bd01
+ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "36302967"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40814028"
 ---
 # <a name="authenticate-and-authorize-with-the-office-dialog-api"></a>Проверка подлинности и авторизация с помощью Dialog API для Office
 
@@ -74,7 +74,10 @@ ms.locfileid: "36302967"
 
 Кроме того, библиотека обычно предоставляет как интерактивные, так и автоматические методы для получения маркера. Если вы выполняете проверку подлинности и звонки для передачи данных в ресурс в одном экземпляре браузера, код вызывает автоматический метод, чтобы получить маркер непосредственно перед добавлением его в звонок для передачи данных. Автоматический метод проверяет, есть ли в кэше действительный маркер, и возвращает его. В противном случае автоматический метод вызывает интерактивный метод, который перенаправляет на вход в STS. После входа в систему интерактивный метод возвращает маркер, а также кэширует его в памяти. Но если используется Dialog API для Office, звонки для передачи данных в ресурс, которые должны вызывать автоматический метод, осуществляются в экземпляре браузера в области задач. Кэш маркеров библиотеки не существует в этом экземпляре.
 
-В качестве альтернативы экземпляр браузера в диалоговом окне надстройки может прямо вызывать интерактивный метод. Если этот метод возвращает маркер, код должен явным образом сохранить маркер в определенном расположении, таком как локальное хранилище или база данных на стороне сервера, откуда экземпляр браузера в области задач может извлечь его.   Кроме того, можно передать маркер в область задач, используя `messageParent` метод. Это можно сделать только в том случае, если интерактивный метод сохранил маркер доступа в таком расположении, в котором код может прочитать его. Иногда интерактивный метод работы библиотеки сохраняет маркер в частном свойстве объекта, недоступном для вашего кода.
+В качестве альтернативы экземпляр браузера в диалоговом окне надстройки может прямо вызывать интерактивный метод. Если этот метод возвращает маркер, код должен явным образом сохранить маркер в определенном расположении, таком как локальное хранилище\* или база данных на стороне сервера, откуда экземпляр браузера в области задач может извлечь его. Кроме того, можно передать маркер в область задач, используя `messageParent` метод. Это можно сделать только в том случае, если интерактивный метод сохранил маркер доступа в таком расположении, в котором код может прочитать его. Иногда интерактивный метод работы библиотеки сохраняет маркер в частном свойстве объекта, недоступном для вашего кода.
+
+> [!NOTE]
+> \* Существует ошибка, влияющая на вашу стратегию обработки маркеров. Если надстройка работает в **Office в Интернете** с использованием браузера Safari или Microsoft Edge, у диалогового окна и области задач нет одного общего локального хранилища, поэтому его нельзя использовать для связи между ними.
 
 ### <a name="you-usually-cannot-use-the-librarys-auth-context-object"></a>Как правило, невозможно использовать объект библиотеки в контексте проверки подлинности.
 
@@ -84,16 +87,17 @@ ms.locfileid: "36302967"
 
 ### <a name="how-you-can-use-libraries-with-the-office-dialog-api"></a>Использование библиотек с помощью Dialog API для Office
 
-Большинство библиотек в дополнение к монолитным объектам в контексте проверки подлинности или вместо них обеспечивает API более низкого уровня абстракции, разрешая коду создавать менее монолитные вспомогательные объекты. Например, [MSAL.NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki#conceptual-documentation) версии 3.x.x имеет API для создания URL-адреса входа и еще один API, который создает объект AuthResult, содержащий маркер доступа в свойстве, доступном для вашего кода. Примеры MSAL.NET в надстройке Office см. в статьях [Надстройка Office в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET) и [Надстройка Outlook в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET).
+Большинство библиотек в дополнение к монолитным объектам в контексте проверки подлинности или вместо них обеспечивает API более низкого уровня абстракции, разрешая коду создавать менее монолитные вспомогательные объекты. Например, [MSAL.NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki#conceptual-documentation) версии 3.x.x имеет API для создания URL-адреса входа и еще один API, который создает объект AuthResult, содержащий маркер доступа в свойстве, доступном для вашего кода. Примеры MSAL.NET в надстройке Office см. в статьях [Надстройка Office в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET) и [Надстройка Outlook в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET). Пример использования [msal.js](https://github.com/AzureAD/microsoft-authentication-library-for-js) в надстройке см. в статье [Надстройка Office в Microsoft Graph React](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-React).
 
 Дополнительные сведения о библиотеках проверки подлинности и авторизации см. в статье[Microsoft Graph — Рекомендуемые библиотеки](authorize-to-microsoft-graph-without-sso.md#recommended-libraries-and-samples) и [Другие внешние службы: библиотеки](auth-external-add-ins.md#libraries).
 
 ## <a name="samples"></a>Примеры
 
-- [Надстройка Office в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET) — это надстройка на основе ASP.NET (Excel, Word или PowerPoint), использующая библиотеку MSAL.NET для входа и получения маркера доступа к данным Microsoft Graph.
+- [Надстройка Office в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET) — это надстройка на основе ASP.NET (Excel, Word или PowerPoint), использующая библиотеку MSAL.NET и поток кода авторизации для входа и получения маркера доступа к данным Microsoft Graph.
 - [Надстройка Outlook в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET) — это такая же надстройка, как описано выше, но относящаяся к приложению Outlook.
+- [Надстройка Office в Microsoft Graph React](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-React) — это надстройка на основе NodeJS (Excel, Word или PowerPoint), использующая библиотеку msal.js и неявный поток для входа и получения маркера доступа к данным Microsoft Graph.
 
-Дополнительные сведения см. в следующих статьях:
+
+Дополнительные сведения см. в указанных ниже статьях.
 - [Авторизация внешних служб в надстройке Office](auth-external-add-ins.md)
 - [Использование Dialog API в надстройках Office](dialog-api-in-office-add-ins.md)
-
