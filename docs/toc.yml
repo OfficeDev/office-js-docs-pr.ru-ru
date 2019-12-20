@@ -61,8 +61,14 @@
             - name: Цвет
               href: design/add-in-color.md
             - name: Значки
-              href: design/add-in-icons.md
-            - name: Структура
+              items:
+                - name: Рекомендации по созданию значков
+                  href: design/add-in-icons.md
+                - name: Стиль "Свежий"
+                  href: design/add-in-icons-fresh.md
+                - name: Стиль "Монолинейный"
+                  href: design/add-in-icons-monoline.md
+            - name: Макет
               href: design/add-in-layout.md
             - name: Шрифтовое оформление
               href: design/add-in-typography.md
