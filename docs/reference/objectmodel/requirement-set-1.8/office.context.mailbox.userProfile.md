@@ -1,150 +1,34 @@
 ---
 title: Office. Context. Mailbox. userProfile — набор обязательных элементов 1,8
 description: ''
-ms.date: 10/30/2019
+ms.date: 12/16/2019
 localization_priority: Normal
-ms.openlocfilehash: 39a833a81eab22c70d89cdfc61784555312b23d6
-ms.sourcegitcommit: e989096f3d19761bf8477c585cde20b3f8e0b90d
+ms.openlocfilehash: e16e9b956fcb5267450ec65959a490eb287a14ae
+ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "37902212"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40814537"
 ---
-# <a name="userprofile"></a><span data-ttu-id="bea39-102">userProfile</span><span class="sxs-lookup"><span data-stu-id="bea39-102">userProfile</span></span>
+# <a name="userprofile"></a><span data-ttu-id="64c74-102">userProfile</span><span class="sxs-lookup"><span data-stu-id="64c74-102">userProfile</span></span>
 
-### <a name="officeofficemdcontextofficecontextmdmailboxofficecontextmailboxmduserprofile"></a><span data-ttu-id="bea39-103">[Office](Office.md)[.context](Office.context.md)[.mailbox](Office.context.mailbox.md).userProfile</span><span class="sxs-lookup"><span data-stu-id="bea39-103">[Office](Office.md)[.context](Office.context.md)[.mailbox](Office.context.mailbox.md).userProfile</span></span>
+### <a name="officeofficemdcontextofficecontextmdmailboxofficecontextmailboxmduserprofile"></a><span data-ttu-id="64c74-103">[Office](office.md)[.context](office.context.md)[.mailbox](office.context.mailbox.md).userProfile</span><span class="sxs-lookup"><span data-stu-id="64c74-103">[Office](office.md)[.context](office.context.md)[.mailbox](office.context.mailbox.md).userProfile</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="bea39-104">Требования</span><span class="sxs-lookup"><span data-stu-id="bea39-104">Requirements</span></span>
+<span data-ttu-id="64c74-104">Предоставляет сведения о пользователе в надстройке Outlook.</span><span class="sxs-lookup"><span data-stu-id="64c74-104">Provides information about the user in an Outlook add-in.</span></span>
 
-|<span data-ttu-id="bea39-105">Требование</span><span class="sxs-lookup"><span data-stu-id="bea39-105">Requirement</span></span>| <span data-ttu-id="bea39-106">Значение</span><span class="sxs-lookup"><span data-stu-id="bea39-106">Value</span></span>|
+##### <a name="requirements"></a><span data-ttu-id="64c74-105">Требования</span><span class="sxs-lookup"><span data-stu-id="64c74-105">Requirements</span></span>
+
+|<span data-ttu-id="64c74-106">Требование</span><span class="sxs-lookup"><span data-stu-id="64c74-106">Requirement</span></span>| <span data-ttu-id="64c74-107">Значение</span><span class="sxs-lookup"><span data-stu-id="64c74-107">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="bea39-107">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="bea39-107">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="bea39-108">1.0</span><span class="sxs-lookup"><span data-stu-id="bea39-108">1.0</span></span>|
-|[<span data-ttu-id="bea39-109">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="bea39-109">Minimum permission level</span></span>](/outlook/add-ins/understanding-outlook-add-in-permissions)| <span data-ttu-id="bea39-110">ReadItem</span><span class="sxs-lookup"><span data-stu-id="bea39-110">ReadItem</span></span>|
-|[<span data-ttu-id="bea39-111">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="bea39-111">Applicable Outlook mode</span></span>](/outlook/add-ins/#extension-points)| <span data-ttu-id="bea39-112">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="bea39-112">Compose or Read</span></span>|
+|[<span data-ttu-id="64c74-108">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="64c74-108">Minimum mailbox requirement set version</span></span>](../../requirement-sets/outlook-api-requirement-sets.md)| <span data-ttu-id="64c74-109">1.1</span><span class="sxs-lookup"><span data-stu-id="64c74-109">1.1</span></span>|
+|[<span data-ttu-id="64c74-110">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="64c74-110">Minimum permission level</span></span>](/outlook/add-ins/understanding-outlook-add-in-permissions)| <span data-ttu-id="64c74-111">ReadItem</span><span class="sxs-lookup"><span data-stu-id="64c74-111">ReadItem</span></span>|
+|[<span data-ttu-id="64c74-112">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="64c74-112">Applicable Outlook mode</span></span>](/outlook/add-ins/#extension-points)| <span data-ttu-id="64c74-113">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="64c74-113">Compose or Read</span></span>|
 
-##### <a name="members-and-methods"></a><span data-ttu-id="bea39-113">Элементы и методы</span><span class="sxs-lookup"><span data-stu-id="bea39-113">Members and methods</span></span>
+## <a name="properties"></a><span data-ttu-id="64c74-114">Свойства</span><span class="sxs-lookup"><span data-stu-id="64c74-114">Properties</span></span>
 
-| <span data-ttu-id="bea39-114">Элемент</span><span class="sxs-lookup"><span data-stu-id="bea39-114">Member</span></span> | <span data-ttu-id="bea39-115">Тип</span><span class="sxs-lookup"><span data-stu-id="bea39-115">Type</span></span> |
-|--------|------|
-| [<span data-ttu-id="bea39-116">accountType</span><span class="sxs-lookup"><span data-stu-id="bea39-116">accountType</span></span>](#accounttype-string) | <span data-ttu-id="bea39-117">Member</span><span class="sxs-lookup"><span data-stu-id="bea39-117">Member</span></span> |
-| [<span data-ttu-id="bea39-118">displayName</span><span class="sxs-lookup"><span data-stu-id="bea39-118">displayName</span></span>](#displayname-string) | <span data-ttu-id="bea39-119">Member</span><span class="sxs-lookup"><span data-stu-id="bea39-119">Member</span></span> |
-| [<span data-ttu-id="bea39-120">emailAddress</span><span class="sxs-lookup"><span data-stu-id="bea39-120">emailAddress</span></span>](#emailaddress-string) | <span data-ttu-id="bea39-121">Member</span><span class="sxs-lookup"><span data-stu-id="bea39-121">Member</span></span> |
-| [<span data-ttu-id="bea39-122">timeZone</span><span class="sxs-lookup"><span data-stu-id="bea39-122">timeZone</span></span>](#timezone-string) | <span data-ttu-id="bea39-123">Member</span><span class="sxs-lookup"><span data-stu-id="bea39-123">Member</span></span> |
-
-### <a name="members"></a><span data-ttu-id="bea39-124">Members</span><span class="sxs-lookup"><span data-stu-id="bea39-124">Members</span></span>
-
-#### <a name="accounttype-string"></a><span data-ttu-id="bea39-125">accountType: строка</span><span class="sxs-lookup"><span data-stu-id="bea39-125">accountType: String</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="bea39-126">В настоящее время этот элемент поддерживается только в Outlook 2016 или более поздней версии в Mac (сборка 16.9.1212 или более поздняя).</span><span class="sxs-lookup"><span data-stu-id="bea39-126">This member is currently only supported in Outlook 2016 or later on Mac (build 16.9.1212 or later).</span></span>
-
-<span data-ttu-id="bea39-127">Возвращает тип учетной записи пользователя, связанного с почтовым ящиком.</span><span class="sxs-lookup"><span data-stu-id="bea39-127">Gets the account type of the user associated with the mailbox.</span></span> <span data-ttu-id="bea39-128">Возможные значения перечислены в приведенной ниже таблице.</span><span class="sxs-lookup"><span data-stu-id="bea39-128">The possible values are listed in the following table.</span></span>
-
-| <span data-ttu-id="bea39-129">Значение</span><span class="sxs-lookup"><span data-stu-id="bea39-129">Value</span></span> | <span data-ttu-id="bea39-130">Описание</span><span class="sxs-lookup"><span data-stu-id="bea39-130">Description</span></span> |
-|-------|-------------|
-| `enterprise` | <span data-ttu-id="bea39-131">Почтовый ящик находится на локальном сервере Exchange.</span><span class="sxs-lookup"><span data-stu-id="bea39-131">The mailbox is on an on-premises Exchange server.</span></span> |
-| `gmail` | <span data-ttu-id="bea39-132">Почтовый ящик связан с учетной записью Gmail.</span><span class="sxs-lookup"><span data-stu-id="bea39-132">The mailbox is associated with a Gmail account.</span></span> |
-| `office365` | <span data-ttu-id="bea39-133">Почтовый ящик связан с рабочей или учебной учетной записью Office 365.</span><span class="sxs-lookup"><span data-stu-id="bea39-133">The mailbox is associated with an Office 365 work or school account.</span></span> |
-| `outlookCom` | <span data-ttu-id="bea39-134">Почтовый ящик связан с личной учетной записью Outlook.com.</span><span class="sxs-lookup"><span data-stu-id="bea39-134">The mailbox is associated with a personal Outlook.com account.</span></span> |
-
-##### <a name="type"></a><span data-ttu-id="bea39-135">Тип</span><span class="sxs-lookup"><span data-stu-id="bea39-135">Type</span></span>
-
-*   <span data-ttu-id="bea39-136">String</span><span class="sxs-lookup"><span data-stu-id="bea39-136">String</span></span>
-
-##### <a name="requirements"></a><span data-ttu-id="bea39-137">Требования</span><span class="sxs-lookup"><span data-stu-id="bea39-137">Requirements</span></span>
-
-|<span data-ttu-id="bea39-138">Требование</span><span class="sxs-lookup"><span data-stu-id="bea39-138">Requirement</span></span>| <span data-ttu-id="bea39-139">Значение</span><span class="sxs-lookup"><span data-stu-id="bea39-139">Value</span></span>|
-|---|---|
-|[<span data-ttu-id="bea39-140">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="bea39-140">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="bea39-141">1.6</span><span class="sxs-lookup"><span data-stu-id="bea39-141">1.6</span></span> |
-|[<span data-ttu-id="bea39-142">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="bea39-142">Minimum permission level</span></span>](/outlook/add-ins/understanding-outlook-add-in-permissions)| <span data-ttu-id="bea39-143">ReadItem</span><span class="sxs-lookup"><span data-stu-id="bea39-143">ReadItem</span></span>|
-|[<span data-ttu-id="bea39-144">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="bea39-144">Applicable Outlook mode</span></span>](/outlook/add-ins/#extension-points)| <span data-ttu-id="bea39-145">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="bea39-145">Compose or Read</span></span>|
-
-##### <a name="example"></a><span data-ttu-id="bea39-146">Пример</span><span class="sxs-lookup"><span data-stu-id="bea39-146">Example</span></span>
-
-```js
-console.log(Office.context.mailbox.userProfile.accountType);
-```
-
-<br>
-
----
----
-
-#### <a name="displayname-string"></a><span data-ttu-id="bea39-147">displayName: строка</span><span class="sxs-lookup"><span data-stu-id="bea39-147">displayName: String</span></span>
-
-<span data-ttu-id="bea39-148">Получает отображаемое имя пользователя.</span><span class="sxs-lookup"><span data-stu-id="bea39-148">Gets the user's display name.</span></span>
-
-##### <a name="type"></a><span data-ttu-id="bea39-149">Тип</span><span class="sxs-lookup"><span data-stu-id="bea39-149">Type</span></span>
-
-*   <span data-ttu-id="bea39-150">String</span><span class="sxs-lookup"><span data-stu-id="bea39-150">String</span></span>
-
-##### <a name="requirements"></a><span data-ttu-id="bea39-151">Требования</span><span class="sxs-lookup"><span data-stu-id="bea39-151">Requirements</span></span>
-
-|<span data-ttu-id="bea39-152">Требование</span><span class="sxs-lookup"><span data-stu-id="bea39-152">Requirement</span></span>| <span data-ttu-id="bea39-153">Значение</span><span class="sxs-lookup"><span data-stu-id="bea39-153">Value</span></span>|
-|---|---|
-|[<span data-ttu-id="bea39-154">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="bea39-154">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="bea39-155">1.0</span><span class="sxs-lookup"><span data-stu-id="bea39-155">1.0</span></span>|
-|[<span data-ttu-id="bea39-156">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="bea39-156">Minimum permission level</span></span>](/outlook/add-ins/understanding-outlook-add-in-permissions)| <span data-ttu-id="bea39-157">ReadItem</span><span class="sxs-lookup"><span data-stu-id="bea39-157">ReadItem</span></span>|
-|[<span data-ttu-id="bea39-158">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="bea39-158">Applicable Outlook mode</span></span>](/outlook/add-ins/#extension-points)| <span data-ttu-id="bea39-159">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="bea39-159">Compose or Read</span></span>|
-
-##### <a name="example"></a><span data-ttu-id="bea39-160">Пример</span><span class="sxs-lookup"><span data-stu-id="bea39-160">Example</span></span>
-
-```js
-// Example: Allie Bellew
-console.log(Office.context.mailbox.userProfile.displayName);
-```
-
-<br>
-
----
----
-
-#### <a name="emailaddress-string"></a><span data-ttu-id="bea39-161">emailAddress: строка</span><span class="sxs-lookup"><span data-stu-id="bea39-161">emailAddress: String</span></span>
-
-<span data-ttu-id="bea39-162">Получает адрес электронной почты SMTP пользователя.</span><span class="sxs-lookup"><span data-stu-id="bea39-162">Gets the user's SMTP email address.</span></span>
-
-##### <a name="type"></a><span data-ttu-id="bea39-163">Тип</span><span class="sxs-lookup"><span data-stu-id="bea39-163">Type</span></span>
-
-*   <span data-ttu-id="bea39-164">String</span><span class="sxs-lookup"><span data-stu-id="bea39-164">String</span></span>
-
-##### <a name="requirements"></a><span data-ttu-id="bea39-165">Требования</span><span class="sxs-lookup"><span data-stu-id="bea39-165">Requirements</span></span>
-
-|<span data-ttu-id="bea39-166">Требование</span><span class="sxs-lookup"><span data-stu-id="bea39-166">Requirement</span></span>| <span data-ttu-id="bea39-167">Значение</span><span class="sxs-lookup"><span data-stu-id="bea39-167">Value</span></span>|
-|---|---|
-|[<span data-ttu-id="bea39-168">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="bea39-168">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="bea39-169">1.0</span><span class="sxs-lookup"><span data-stu-id="bea39-169">1.0</span></span>|
-|[<span data-ttu-id="bea39-170">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="bea39-170">Minimum permission level</span></span>](/outlook/add-ins/understanding-outlook-add-in-permissions)| <span data-ttu-id="bea39-171">ReadItem</span><span class="sxs-lookup"><span data-stu-id="bea39-171">ReadItem</span></span>|
-|[<span data-ttu-id="bea39-172">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="bea39-172">Applicable Outlook mode</span></span>](/outlook/add-ins/#extension-points)| <span data-ttu-id="bea39-173">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="bea39-173">Compose or Read</span></span>|
-
-##### <a name="example"></a><span data-ttu-id="bea39-174">Пример</span><span class="sxs-lookup"><span data-stu-id="bea39-174">Example</span></span>
-
-```js
-// Example: allieb@contoso.com
-console.log(Office.context.mailbox.userProfile.emailAddress);
-```
-
-<br>
-
----
----
-
-#### <a name="timezone-string"></a><span data-ttu-id="bea39-175">Часовой пояс: строка</span><span class="sxs-lookup"><span data-stu-id="bea39-175">timeZone: String</span></span>
-
-<span data-ttu-id="bea39-176">Получает часовой пояс пользователя по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="bea39-176">Gets the user's default time zone.</span></span>
-
-##### <a name="type"></a><span data-ttu-id="bea39-177">Тип</span><span class="sxs-lookup"><span data-stu-id="bea39-177">Type</span></span>
-
-*   <span data-ttu-id="bea39-178">String</span><span class="sxs-lookup"><span data-stu-id="bea39-178">String</span></span>
-
-##### <a name="requirements"></a><span data-ttu-id="bea39-179">Требования</span><span class="sxs-lookup"><span data-stu-id="bea39-179">Requirements</span></span>
-
-|<span data-ttu-id="bea39-180">Требование</span><span class="sxs-lookup"><span data-stu-id="bea39-180">Requirement</span></span>| <span data-ttu-id="bea39-181">Значение</span><span class="sxs-lookup"><span data-stu-id="bea39-181">Value</span></span>|
-|---|---|
-|[<span data-ttu-id="bea39-182">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="bea39-182">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="bea39-183">1.0</span><span class="sxs-lookup"><span data-stu-id="bea39-183">1.0</span></span>|
-|[<span data-ttu-id="bea39-184">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="bea39-184">Minimum permission level</span></span>](/outlook/add-ins/understanding-outlook-add-in-permissions)| <span data-ttu-id="bea39-185">ReadItem</span><span class="sxs-lookup"><span data-stu-id="bea39-185">ReadItem</span></span>|
-|[<span data-ttu-id="bea39-186">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="bea39-186">Applicable Outlook mode</span></span>](/outlook/add-ins/#extension-points)| <span data-ttu-id="bea39-187">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="bea39-187">Compose or Read</span></span>|
-
-##### <a name="example"></a><span data-ttu-id="bea39-188">Пример</span><span class="sxs-lookup"><span data-stu-id="bea39-188">Example</span></span>
-
-```js
-// Example: Pacific Standard Time
-console.log(Office.context.mailbox.userProfile.timeZone);
-```
+| <span data-ttu-id="64c74-115">Свойство</span><span class="sxs-lookup"><span data-stu-id="64c74-115">Property</span></span> | <span data-ttu-id="64c74-116">Минимальные</span><span class="sxs-lookup"><span data-stu-id="64c74-116">Minimum</span></span><br><span data-ttu-id="64c74-117">уровень разрешения</span><span class="sxs-lookup"><span data-stu-id="64c74-117">permission level</span></span> | <span data-ttu-id="64c74-118">Способов</span><span class="sxs-lookup"><span data-stu-id="64c74-118">Modes</span></span> | <span data-ttu-id="64c74-119">Тип возвращаемых данных</span><span class="sxs-lookup"><span data-stu-id="64c74-119">Return type</span></span> | <span data-ttu-id="64c74-120">Минимальные</span><span class="sxs-lookup"><span data-stu-id="64c74-120">Minimum</span></span><br><span data-ttu-id="64c74-121">набор требований</span><span class="sxs-lookup"><span data-stu-id="64c74-121">requirement set</span></span> |
+|---|---|---|---|:---:|
+| [<span data-ttu-id="64c74-122">accountType</span><span class="sxs-lookup"><span data-stu-id="64c74-122">accountType</span></span>](/javascript/api/outlook/office.userprofile?view=outlook-js-1.8#accounttype) | <span data-ttu-id="64c74-123">ReadItem</span><span class="sxs-lookup"><span data-stu-id="64c74-123">ReadItem</span></span> | <span data-ttu-id="64c74-124">Создание</span><span class="sxs-lookup"><span data-stu-id="64c74-124">Compose</span></span><br><span data-ttu-id="64c74-125">Чтение</span><span class="sxs-lookup"><span data-stu-id="64c74-125">Read</span></span> | <span data-ttu-id="64c74-126">String</span><span class="sxs-lookup"><span data-stu-id="64c74-126">String</span></span> | [<span data-ttu-id="64c74-127">1,6</span><span class="sxs-lookup"><span data-stu-id="64c74-127">1.6</span></span>](../requirement-set-1.6/outlook-requirement-set-1.6.md) |
+| [<span data-ttu-id="64c74-128">displayName</span><span class="sxs-lookup"><span data-stu-id="64c74-128">displayName</span></span>](/javascript/api/outlook/office.userprofile?view=outlook-js-1.8#displayname) | <span data-ttu-id="64c74-129">ReadItem</span><span class="sxs-lookup"><span data-stu-id="64c74-129">ReadItem</span></span> | <span data-ttu-id="64c74-130">Создание</span><span class="sxs-lookup"><span data-stu-id="64c74-130">Compose</span></span><br><span data-ttu-id="64c74-131">Чтение</span><span class="sxs-lookup"><span data-stu-id="64c74-131">Read</span></span> | <span data-ttu-id="64c74-132">String</span><span class="sxs-lookup"><span data-stu-id="64c74-132">String</span></span> | [<span data-ttu-id="64c74-133">1.1</span><span class="sxs-lookup"><span data-stu-id="64c74-133">1.1</span></span>](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [<span data-ttu-id="64c74-134">emailAddress</span><span class="sxs-lookup"><span data-stu-id="64c74-134">emailAddress</span></span>](/javascript/api/outlook/office.userprofile?view=outlook-js-1.8#emailaddress) | <span data-ttu-id="64c74-135">ReadItem</span><span class="sxs-lookup"><span data-stu-id="64c74-135">ReadItem</span></span> | <span data-ttu-id="64c74-136">Создание</span><span class="sxs-lookup"><span data-stu-id="64c74-136">Compose</span></span><br><span data-ttu-id="64c74-137">Чтение</span><span class="sxs-lookup"><span data-stu-id="64c74-137">Read</span></span> | <span data-ttu-id="64c74-138">String</span><span class="sxs-lookup"><span data-stu-id="64c74-138">String</span></span> | [<span data-ttu-id="64c74-139">1.1</span><span class="sxs-lookup"><span data-stu-id="64c74-139">1.1</span></span>](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [<span data-ttu-id="64c74-140">timeZone</span><span class="sxs-lookup"><span data-stu-id="64c74-140">timeZone</span></span>](/javascript/api/outlook/office.userprofile?view=outlook-js-1.8#timezone) | <span data-ttu-id="64c74-141">ReadItem</span><span class="sxs-lookup"><span data-stu-id="64c74-141">ReadItem</span></span> | <span data-ttu-id="64c74-142">Создание</span><span class="sxs-lookup"><span data-stu-id="64c74-142">Compose</span></span><br><span data-ttu-id="64c74-143">Чтение</span><span class="sxs-lookup"><span data-stu-id="64c74-143">Read</span></span> | <span data-ttu-id="64c74-144">String</span><span class="sxs-lookup"><span data-stu-id="64c74-144">String</span></span> | [<span data-ttu-id="64c74-145">1.1</span><span class="sxs-lookup"><span data-stu-id="64c74-145">1.1</span></span>](../requirement-set-1.1/outlook-requirement-set-1.1.md) |

@@ -1,110 +1,33 @@
 ---
 title: Office. Context. Mailbox. Diagnostics — набор обязательных элементов 1,2
 description: ''
-ms.date: 08/08/2019
+ms.date: 12/16/2019
 localization_priority: Normal
-ms.openlocfilehash: 713e51f86145944a9618fa819239e35394b6dd04
-ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
+ms.openlocfilehash: dad9d35c397351938944d89bf98e450427cb74a3
+ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "36696409"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40814985"
 ---
-# <a name="diagnostics"></a><span data-ttu-id="503b9-102">diagnostics</span><span class="sxs-lookup"><span data-stu-id="503b9-102">diagnostics</span></span>
+# <a name="diagnostics"></a><span data-ttu-id="a5028-102">diagnostics</span><span class="sxs-lookup"><span data-stu-id="a5028-102">diagnostics</span></span>
 
-### <a name="officeofficemdcontextofficecontextmdmailboxofficecontextmailboxmddiagnostics"></a><span data-ttu-id="503b9-103">[Office](Office.md)[.context](Office.context.md)[.mailbox](Office.context.mailbox.md).diagnostics</span><span class="sxs-lookup"><span data-stu-id="503b9-103">[Office](Office.md)[.context](Office.context.md)[.mailbox](Office.context.mailbox.md).diagnostics</span></span>
+### <a name="officeofficemdcontextofficecontextmdmailboxofficecontextmailboxmddiagnostics"></a><span data-ttu-id="a5028-103">[Office](office.md)[.context](office.context.md)[.mailbox](office.context.mailbox.md).diagnostics</span><span class="sxs-lookup"><span data-stu-id="a5028-103">[Office](office.md)[.context](office.context.md)[.mailbox](office.context.mailbox.md).diagnostics</span></span>
 
-<span data-ttu-id="503b9-104">Предоставляет надстройке Outlook диагностические сведения.</span><span class="sxs-lookup"><span data-stu-id="503b9-104">Provides diagnostic information to an Outlook add-in.</span></span>
+<span data-ttu-id="a5028-104">Предоставляет надстройке Outlook диагностические сведения.</span><span class="sxs-lookup"><span data-stu-id="a5028-104">Provides diagnostic information to an Outlook add-in.</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="503b9-105">Требования</span><span class="sxs-lookup"><span data-stu-id="503b9-105">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="a5028-105">Требования</span><span class="sxs-lookup"><span data-stu-id="a5028-105">Requirements</span></span>
 
-|<span data-ttu-id="503b9-106">Требование</span><span class="sxs-lookup"><span data-stu-id="503b9-106">Requirement</span></span>| <span data-ttu-id="503b9-107">Значение</span><span class="sxs-lookup"><span data-stu-id="503b9-107">Value</span></span>|
+|<span data-ttu-id="a5028-106">Требование</span><span class="sxs-lookup"><span data-stu-id="a5028-106">Requirement</span></span>| <span data-ttu-id="a5028-107">Значение</span><span class="sxs-lookup"><span data-stu-id="a5028-107">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="503b9-108">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="503b9-108">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="503b9-109">1.0</span><span class="sxs-lookup"><span data-stu-id="503b9-109">1.0</span></span>|
-|[<span data-ttu-id="503b9-110">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="503b9-110">Minimum permission level</span></span>](/outlook/add-ins/understanding-outlook-add-in-permissions)| <span data-ttu-id="503b9-111">ReadItem</span><span class="sxs-lookup"><span data-stu-id="503b9-111">ReadItem</span></span>|
-|[<span data-ttu-id="503b9-112">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="503b9-112">Applicable Outlook mode</span></span>](/outlook/add-ins/#extension-points)| <span data-ttu-id="503b9-113">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="503b9-113">Compose or Read</span></span>|
+|[<span data-ttu-id="a5028-108">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="a5028-108">Minimum mailbox requirement set version</span></span>](../../requirement-sets/outlook-api-requirement-sets.md)| <span data-ttu-id="a5028-109">1.1</span><span class="sxs-lookup"><span data-stu-id="a5028-109">1.1</span></span>|
+|[<span data-ttu-id="a5028-110">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="a5028-110">Minimum permission level</span></span>](/outlook/add-ins/understanding-outlook-add-in-permissions)| <span data-ttu-id="a5028-111">ReadItem</span><span class="sxs-lookup"><span data-stu-id="a5028-111">ReadItem</span></span>|
+|[<span data-ttu-id="a5028-112">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="a5028-112">Applicable Outlook mode</span></span>](/outlook/add-ins/#extension-points)| <span data-ttu-id="a5028-113">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="a5028-113">Compose or Read</span></span>|
 
-##### <a name="members-and-methods"></a><span data-ttu-id="503b9-114">Элементы и методы</span><span class="sxs-lookup"><span data-stu-id="503b9-114">Members and methods</span></span>
+## <a name="properties"></a><span data-ttu-id="a5028-114">Свойства</span><span class="sxs-lookup"><span data-stu-id="a5028-114">Properties</span></span>
 
-| <span data-ttu-id="503b9-115">Элемент</span><span class="sxs-lookup"><span data-stu-id="503b9-115">Member</span></span> | <span data-ttu-id="503b9-116">Тип</span><span class="sxs-lookup"><span data-stu-id="503b9-116">Type</span></span> |
-|--------|------|
-| [<span data-ttu-id="503b9-117">Сайту</span><span class="sxs-lookup"><span data-stu-id="503b9-117">hostName</span></span>](#hostname-string) | <span data-ttu-id="503b9-118">Member</span><span class="sxs-lookup"><span data-stu-id="503b9-118">Member</span></span> |
-| [<span data-ttu-id="503b9-119">hostVersion</span><span class="sxs-lookup"><span data-stu-id="503b9-119">hostVersion</span></span>](#hostversion-string) | <span data-ttu-id="503b9-120">Member</span><span class="sxs-lookup"><span data-stu-id="503b9-120">Member</span></span> |
-| [<span data-ttu-id="503b9-121">OWAView</span><span class="sxs-lookup"><span data-stu-id="503b9-121">OWAView</span></span>](#owaview-string) | <span data-ttu-id="503b9-122">Member</span><span class="sxs-lookup"><span data-stu-id="503b9-122">Member</span></span> |
-
-### <a name="members"></a><span data-ttu-id="503b9-123">Members</span><span class="sxs-lookup"><span data-stu-id="503b9-123">Members</span></span>
-
-#### <a name="hostname-string"></a><span data-ttu-id="503b9-124">Имя узла: строка</span><span class="sxs-lookup"><span data-stu-id="503b9-124">hostName: String</span></span>
-
-<span data-ttu-id="503b9-125">Получает строку, представляющую имя ведущего приложения.</span><span class="sxs-lookup"><span data-stu-id="503b9-125">Gets a string that represents the name of the host application.</span></span>
-
-<span data-ttu-id="503b9-126">Строка, которая может иметь одно из следующих значений: `Outlook`, `OutlookIOS` или `OutlookWebApp`.</span><span class="sxs-lookup"><span data-stu-id="503b9-126">A string that can be one of the following values: `Outlook`, `OutlookIOS`, or `OutlookWebApp`.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="503b9-127">`Outlook` Значение возвращается для Outlook на настольных клиентах (например, Windows и Mac).</span><span class="sxs-lookup"><span data-stu-id="503b9-127">The `Outlook` value is returned for Outlook on desktop clients (i.e., Windows and Mac).</span></span>
-
-##### <a name="type"></a><span data-ttu-id="503b9-128">Тип</span><span class="sxs-lookup"><span data-stu-id="503b9-128">Type</span></span>
-
-*   <span data-ttu-id="503b9-129">String</span><span class="sxs-lookup"><span data-stu-id="503b9-129">String</span></span>
-
-##### <a name="requirements"></a><span data-ttu-id="503b9-130">Требования</span><span class="sxs-lookup"><span data-stu-id="503b9-130">Requirements</span></span>
-
-|<span data-ttu-id="503b9-131">Требование</span><span class="sxs-lookup"><span data-stu-id="503b9-131">Requirement</span></span>| <span data-ttu-id="503b9-132">Значение</span><span class="sxs-lookup"><span data-stu-id="503b9-132">Value</span></span>|
-|---|---|
-|[<span data-ttu-id="503b9-133">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="503b9-133">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="503b9-134">1.0</span><span class="sxs-lookup"><span data-stu-id="503b9-134">1.0</span></span>|
-|[<span data-ttu-id="503b9-135">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="503b9-135">Minimum permission level</span></span>](/outlook/add-ins/understanding-outlook-add-in-permissions)| <span data-ttu-id="503b9-136">ReadItem</span><span class="sxs-lookup"><span data-stu-id="503b9-136">ReadItem</span></span>|
-|[<span data-ttu-id="503b9-137">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="503b9-137">Applicable Outlook mode</span></span>](/outlook/add-ins/#extension-points)| <span data-ttu-id="503b9-138">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="503b9-138">Compose or Read</span></span>|
-
-<br>
-
----
----
-
-#### <a name="hostversion-string"></a><span data-ttu-id="503b9-139">hostVersion: строка</span><span class="sxs-lookup"><span data-stu-id="503b9-139">hostVersion: String</span></span>
-
-<span data-ttu-id="503b9-140">Получает строку, представляющую версию ведущего приложения или сервера Exchange (например, "15.0.468.0").</span><span class="sxs-lookup"><span data-stu-id="503b9-140">Gets a string that represents the version of either the host application or the Exchange Server (e.g., "15.0.468.0").</span></span>
-
-<span data-ttu-id="503b9-141">Если почтовая надстройка запущена на клиенте Outlook для настольных ПК или iOS `hostVersion` , свойство возвращает версию ведущего приложения, Outlook.</span><span class="sxs-lookup"><span data-stu-id="503b9-141">If the mail add-in is running on the Outlook desktop client or iOS, the `hostVersion` property returns the version of the host application, Outlook.</span></span> <span data-ttu-id="503b9-142">В Outlook в Интернете свойство возвращает версию сервера Exchange.</span><span class="sxs-lookup"><span data-stu-id="503b9-142">In Outlook on the web, the property returns the version of the Exchange Server.</span></span>
-
-##### <a name="type"></a><span data-ttu-id="503b9-143">Тип</span><span class="sxs-lookup"><span data-stu-id="503b9-143">Type</span></span>
-
-*   <span data-ttu-id="503b9-144">String</span><span class="sxs-lookup"><span data-stu-id="503b9-144">String</span></span>
-
-##### <a name="requirements"></a><span data-ttu-id="503b9-145">Требования</span><span class="sxs-lookup"><span data-stu-id="503b9-145">Requirements</span></span>
-
-|<span data-ttu-id="503b9-146">Требование</span><span class="sxs-lookup"><span data-stu-id="503b9-146">Requirement</span></span>| <span data-ttu-id="503b9-147">Значение</span><span class="sxs-lookup"><span data-stu-id="503b9-147">Value</span></span>|
-|---|---|
-|[<span data-ttu-id="503b9-148">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="503b9-148">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="503b9-149">1.0</span><span class="sxs-lookup"><span data-stu-id="503b9-149">1.0</span></span>|
-|[<span data-ttu-id="503b9-150">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="503b9-150">Minimum permission level</span></span>](/outlook/add-ins/understanding-outlook-add-in-permissions)| <span data-ttu-id="503b9-151">ReadItem</span><span class="sxs-lookup"><span data-stu-id="503b9-151">ReadItem</span></span>|
-|[<span data-ttu-id="503b9-152">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="503b9-152">Applicable Outlook mode</span></span>](/outlook/add-ins/#extension-points)| <span data-ttu-id="503b9-153">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="503b9-153">Compose or Read</span></span>|
-
-<br>
-
----
----
-
-#### <a name="owaview-string"></a><span data-ttu-id="503b9-154">OWAView: строка</span><span class="sxs-lookup"><span data-stu-id="503b9-154">OWAView: String</span></span>
-
-<span data-ttu-id="503b9-155">Получает строку, представляющую текущее представление Outlook в Интернете.</span><span class="sxs-lookup"><span data-stu-id="503b9-155">Gets a string that represents the current view of Outlook on the web.</span></span>
-
-<span data-ttu-id="503b9-156">Возвращаемая строка может иметь одно из следующих значений: `OneColumn`, `TwoColumns` или `ThreeColumns`.</span><span class="sxs-lookup"><span data-stu-id="503b9-156">The returned string can be one of the following values: `OneColumn`, `TwoColumns`, or `ThreeColumns`.</span></span>
-
-<span data-ttu-id="503b9-157">Если ведущее приложение не является Outlook в Интернете, то при доступе к этому свойству будет получен результат `undefined`.</span><span class="sxs-lookup"><span data-stu-id="503b9-157">If the host application is not Outlook on the web, then accessing this property results in `undefined`.</span></span>
-
-<span data-ttu-id="503b9-158">В Outlook в Интернете есть три представления, которые соответствуют ширине экрана и окна, а также количество отображаемых столбцов:</span><span class="sxs-lookup"><span data-stu-id="503b9-158">Outlook on the web has three views that correspond to the width of the screen and the window, and the number of columns that can be displayed:</span></span>
-
-*   <span data-ttu-id="503b9-159">`OneColumn`, который отображается, когда экран сужается.</span><span class="sxs-lookup"><span data-stu-id="503b9-159">`OneColumn`, which is displayed when the screen is narrow.</span></span> <span data-ttu-id="503b9-160">В Outlook в Интернете этот макет с одним столбцом используется на всем экране смартфона.</span><span class="sxs-lookup"><span data-stu-id="503b9-160">Outlook on the web uses this single-column layout on the entire screen of a smartphone.</span></span>
-*   <span data-ttu-id="503b9-161">`TwoColumns`, который отображается, когда экран расширяется.</span><span class="sxs-lookup"><span data-stu-id="503b9-161">`TwoColumns`, which is displayed when the screen is wider.</span></span> <span data-ttu-id="503b9-162">Outlook в Интернете использует это представление на большинстве планшетов.</span><span class="sxs-lookup"><span data-stu-id="503b9-162">Outlook on the web uses this view on most tablets.</span></span>
-*   <span data-ttu-id="503b9-163">`ThreeColumns` используется для полноразмерных экранов.</span><span class="sxs-lookup"><span data-stu-id="503b9-163">`ThreeColumns`, which is displayed when the screen is wide.</span></span> <span data-ttu-id="503b9-164">Например, в Outlook в Интернете это представление используется в полноэкранном окне на настольном компьютере.</span><span class="sxs-lookup"><span data-stu-id="503b9-164">For example, Outlook on the web uses this view in a full screen window on a desktop computer.</span></span>
-
-##### <a name="type"></a><span data-ttu-id="503b9-165">Тип</span><span class="sxs-lookup"><span data-stu-id="503b9-165">Type</span></span>
-
-*   <span data-ttu-id="503b9-166">String</span><span class="sxs-lookup"><span data-stu-id="503b9-166">String</span></span>
-
-##### <a name="requirements"></a><span data-ttu-id="503b9-167">Требования</span><span class="sxs-lookup"><span data-stu-id="503b9-167">Requirements</span></span>
-
-|<span data-ttu-id="503b9-168">Требование</span><span class="sxs-lookup"><span data-stu-id="503b9-168">Requirement</span></span>| <span data-ttu-id="503b9-169">Значение</span><span class="sxs-lookup"><span data-stu-id="503b9-169">Value</span></span>|
-|---|---|
-|[<span data-ttu-id="503b9-170">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="503b9-170">Minimum mailbox requirement set version</span></span>](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)| <span data-ttu-id="503b9-171">1.0</span><span class="sxs-lookup"><span data-stu-id="503b9-171">1.0</span></span>|
-|[<span data-ttu-id="503b9-172">Минимальный уровень разрешений</span><span class="sxs-lookup"><span data-stu-id="503b9-172">Minimum permission level</span></span>](/outlook/add-ins/understanding-outlook-add-in-permissions)| <span data-ttu-id="503b9-173">ReadItem</span><span class="sxs-lookup"><span data-stu-id="503b9-173">ReadItem</span></span>|
-|[<span data-ttu-id="503b9-174">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="503b9-174">Applicable Outlook mode</span></span>](/outlook/add-ins/#extension-points)| <span data-ttu-id="503b9-175">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="503b9-175">Compose or Read</span></span>|
+| <span data-ttu-id="a5028-115">Свойство</span><span class="sxs-lookup"><span data-stu-id="a5028-115">Property</span></span> | <span data-ttu-id="a5028-116">Минимальные</span><span class="sxs-lookup"><span data-stu-id="a5028-116">Minimum</span></span><br><span data-ttu-id="a5028-117">уровень разрешения</span><span class="sxs-lookup"><span data-stu-id="a5028-117">permission level</span></span> | <span data-ttu-id="a5028-118">Способов</span><span class="sxs-lookup"><span data-stu-id="a5028-118">Modes</span></span> | <span data-ttu-id="a5028-119">Тип возвращаемых данных</span><span class="sxs-lookup"><span data-stu-id="a5028-119">Return type</span></span> | <span data-ttu-id="a5028-120">Минимальные</span><span class="sxs-lookup"><span data-stu-id="a5028-120">Minimum</span></span><br><span data-ttu-id="a5028-121">набор требований</span><span class="sxs-lookup"><span data-stu-id="a5028-121">requirement set</span></span> |
+|---|---|---|---|:---:|
+| [<span data-ttu-id="a5028-122">Сайту</span><span class="sxs-lookup"><span data-stu-id="a5028-122">hostName</span></span>](/javascript/api/outlook/office.diagnostics?view=outlook-js-1.2#hostname) | <span data-ttu-id="a5028-123">ReadItem</span><span class="sxs-lookup"><span data-stu-id="a5028-123">ReadItem</span></span> | <span data-ttu-id="a5028-124">Создание</span><span class="sxs-lookup"><span data-stu-id="a5028-124">Compose</span></span><br><span data-ttu-id="a5028-125">Чтение</span><span class="sxs-lookup"><span data-stu-id="a5028-125">Read</span></span> | <span data-ttu-id="a5028-126">String</span><span class="sxs-lookup"><span data-stu-id="a5028-126">String</span></span> | [<span data-ttu-id="a5028-127">1.1</span><span class="sxs-lookup"><span data-stu-id="a5028-127">1.1</span></span>](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [<span data-ttu-id="a5028-128">hostVersion</span><span class="sxs-lookup"><span data-stu-id="a5028-128">hostVersion</span></span>](/javascript/api/outlook/office.diagnostics?view=outlook-js-1.2#hostversion) | <span data-ttu-id="a5028-129">ReadItem</span><span class="sxs-lookup"><span data-stu-id="a5028-129">ReadItem</span></span> | <span data-ttu-id="a5028-130">Создание</span><span class="sxs-lookup"><span data-stu-id="a5028-130">Compose</span></span><br><span data-ttu-id="a5028-131">Чтение</span><span class="sxs-lookup"><span data-stu-id="a5028-131">Read</span></span> | <span data-ttu-id="a5028-132">String</span><span class="sxs-lookup"><span data-stu-id="a5028-132">String</span></span> | [<span data-ttu-id="a5028-133">1.1</span><span class="sxs-lookup"><span data-stu-id="a5028-133">1.1</span></span>](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [<span data-ttu-id="a5028-134">OWAView</span><span class="sxs-lookup"><span data-stu-id="a5028-134">OWAView</span></span>](/javascript/api/outlook/office.diagnostics?view=outlook-js-1.2#owaview) | <span data-ttu-id="a5028-135">ReadItem</span><span class="sxs-lookup"><span data-stu-id="a5028-135">ReadItem</span></span> | <span data-ttu-id="a5028-136">Создание</span><span class="sxs-lookup"><span data-stu-id="a5028-136">Compose</span></span><br><span data-ttu-id="a5028-137">Чтение</span><span class="sxs-lookup"><span data-stu-id="a5028-137">Read</span></span> | <span data-ttu-id="a5028-138">String</span><span class="sxs-lookup"><span data-stu-id="a5028-138">String</span></span> | [<span data-ttu-id="a5028-139">1.1</span><span class="sxs-lookup"><span data-stu-id="a5028-139">1.1</span></span>](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
