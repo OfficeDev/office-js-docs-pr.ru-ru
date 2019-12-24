@@ -4,12 +4,12 @@ description: В этом руководстве показана разрабо�
 ms.date: 11/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: c0a3df72d600acb34008ff574ec2ab2eee070e2e
-ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
+ms.openlocfilehash: 48f4decc0cadddecd5669b960238ddd3381f0932
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "40814217"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851420"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -1015,3 +1015,10 @@ ms.locfileid: "40814217"
 
 > [!div class="nextstepaction"]
 > [Общие сведения о надстройках Excel](../excel/excel-add-ins-overview.md)
+
+## <a name="see-also"></a>См. также
+
+* [Обзор платформы надстроек Office](../overview/office-add-ins.md)
+* [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
+* [Разработка надстроек Office](../develop/develop-overview.md)
+* [Основные концепции программирования с помощью API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)

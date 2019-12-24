@@ -1,16 +1,16 @@
 ---
-title: Запрос разрешений на использование API в контентных надстройках и надстройках области задач
+title: Запрос разрешений на использование API в надстройках
 description: ''
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 56eef177c69b8cdbd62dd630b5e1b5133b0eed86
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: aae5359dce57ffdaf3db324475f6417f2bec63d8
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449233"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851273"
 ---
-# <a name="requesting-permissions-for-api-use-in-content-and-task-pane-add-ins"></a>Запрос разрешений на использование API в контентных надстройках и надстройках области задач
+# <a name="requesting-permissions-for-api-use-in-add-ins"></a>Запрос разрешений на использование API в надстройках
 
 В этой статье описываются различные уровни разрешений, которые можно объявить в манифесте контентной надстройки или надстройки области задач, чтобы указать уровень доступа JavaScript API, необходимый вашей надстройке. 
 
@@ -42,4 +42,4 @@ ms.locfileid: "32449233"
 
 ## <a name="see-also"></a>См. также
 
-- [Конфиденциальность и безопасность надстроек для Office](../concepts/privacy-and-security.md)
+- [Конфиденциальность и безопасность надстроек Office](../concepts/privacy-and-security.md)

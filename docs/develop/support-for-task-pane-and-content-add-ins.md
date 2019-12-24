@@ -3,12 +3,12 @@ title: Поддержка API JavaScript для Office для контентны
 description: ''
 ms.date: 09/26/2019
 localization_priority: Normal
-ms.openlocfilehash: 017542766fc6fb03cd7d4038de0cf3091d74857e
-ms.sourcegitcommit: 528577145b2cf0a42bc64c56145d661c4d019fb8
+ms.openlocfilehash: b9a6d1f81cb86cb84c0f825394d14e8559017d11
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "37353792"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851385"
 ---
 # <a name="office-javascript-api-support-for-content-and-task-pane-add-ins-in-office-2013"></a>Поддержка API JavaScript для Office для контентных надстроек и надстроек области задач в Office 2013
 
@@ -160,7 +160,7 @@ Office.context.document.settings.set('themeColor', 'green');
 
 ```
 
-Дополнительные сведения см. в статье [Запрос разрешений на использование API в контентных надстройках и надстройках области задач](requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md).
+Дополнительные сведения см в статье [запрашивание разрешений для использования API в](requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md)надстройках.
 
 
 ## <a name="see-also"></a>См. также

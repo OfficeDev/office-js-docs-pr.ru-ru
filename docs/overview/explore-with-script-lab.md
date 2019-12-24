@@ -1,18 +1,18 @@
 ---
-title: Изучение API JavaScript для Office с помощью сценария Lab
+title: Изучение API JavaScript для Office с помощью Script Lab
 description: Используйте сценарий "Лаборатория" для изучения API Office JS и прототипов функций.
 ms.date: 07/05/2019
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Normal
-ms.openlocfilehash: fcd1863e71bdfa6923ccd598b49879a77e629b4c
-ms.sourcegitcommit: 7d4d721fc3d246ef8a2464bc714659cd84d6faab
+ms.openlocfilehash: fbefd205ac929579cea1120b8398a53146bca19c
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "37468793"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851518"
 ---
-# <a name="explore-office-javascript-api-using-script-lab"></a>Изучение API JavaScript для Office с помощью сценария Lab
+# <a name="explore-office-javascript-api-using-script-lab"></a>Изучение API JavaScript для Office с помощью Script Lab
 
 [Надстройка "Лаборатория скриптов](https://appsource.microsoft.com/product/office/WA104380862)", доступная бесплатно из AppSource, позволяет изучать API JavaScript для Office при работе с программами Office, такими как Excel или Word. Script Lab — удобное средство для добавления в набор средств разработки в качестве прототипа и проверки функциональных возможностей, которые должны быть в надстройке.
 
@@ -22,7 +22,7 @@ Script Lab — это средство для тех, кто хочет науч
 
 Звучит хорошо? Просмотрите этот видеоролик в виде одной минуты, чтобы увидеть Лаборатория сценариев в действии.
 
-[![Предварительный просмотр видео, в котором показана Лаборатория скриптов, работающая в Excel, Word и PowerPoint.] (../images/screenshot-wide-youtube.png 'Видеоролик о предварительном просмотре в лаборатории сценариев')](https://aka.ms/scriptlabvideo)
+[![Предварительный просмотр видео, в котором показана Лаборатория скриптов, работающая в Excel, Word и PowerPoint.](../images/screenshot-wide-youtube.png 'Видеоролик о предварительном просмотре в лаборатории сценариев')](https://aka.ms/scriptlabvideo)
 
 ## <a name="key-features"></a>Основные возможности
 
@@ -32,7 +32,7 @@ Script Lab — это средство для тех, кто хочет науч
 
 Быстро приступите к работе со статьей встроенных примеров фрагментов, демонстрирующих выполнение задач с помощью API. Вы можете запустить примеры, чтобы сразу увидеть результат в области задач или документе, изучить примеры, чтобы узнать, как работает API, и даже использовать примеры для создания прототипа собственной надстройки.
 
-![Образцы](../images/script-lab-samples.jpg)
+![Примеры](../images/script-lab-samples.jpg)
 
 ### <a name="code-and-style"></a>Код и стиль
 
@@ -74,3 +74,4 @@ Script Lab — это средство для тех, кто хочет науч
 - [Получение лаборатории сценариев](https://appsource.microsoft.com/product/office/WA104380862)
 - [Дополнительные сведения о лаборатории сценариев](https://github.com/OfficeDev/script-lab#script-lab-a-microsoft-garage-project)
 - [Регистрация в программе для разработки](https://developer.microsoft.com/office/dev-program)
+- [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)

@@ -1,15 +1,15 @@
 ---
 title: Руководство по надстройкам PowerPoint
 description: Из этого руководства вы узнаете, как создать надстройку PowerPoint, которая вставляет изображение и текст, получает метаданные слайда и выполняет переход между слайдами.
-ms.date: 10/29/2019
+ms.date: 12/24/2019
 ms.prod: powerpoint
 localization_priority: Normal
-ms.openlocfilehash: 73d7e041a10a3991d2ba87b420eece191603983a
-ms.sourcegitcommit: 818036a7163b1513d047e66a20434060415df241
+ms.openlocfilehash: 524c6727e8a1b8e4bb42156a5cec9fead45fd45c
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "37775300"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851427"
 ---
 # <a name="tutorial-create-a-powerpoint-task-pane-add-in"></a>Учебник: Создание надстройки области задач PowerPoint
 
@@ -507,3 +507,9 @@ ms.locfileid: "37775300"
 
 > [!div class="nextstepaction"]
 > [Общие сведения о надстройках PowerPoint](../powerpoint/powerpoint-add-ins.md)
+
+## <a name="see-also"></a>См. также
+
+* [Обзор платформы надстроек Office](../overview/office-add-ins.md)
+* [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
+* [Разработка надстроек Office](../develop/develop-overview.md)

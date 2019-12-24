@@ -1,14 +1,14 @@
 ---
 title: Элементы пользовательского интерфейса Office для надстроек Office
 description: ''
-ms.date: 12/04/2017
+ms.date: 12/24/2019
 localization_priority: Priority
-ms.openlocfilehash: 444aca7b75e35ef502075876a7d1324fcdca0603
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 1f680d93c995d306717c7b5a81af073f378b0fbd
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32446238"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851244"
 ---
 # <a name="office-ui-elements-for-office-add-ins"></a>Элементы пользовательского интерфейса Office для надстроек Office
 
@@ -16,7 +16,7 @@ ms.locfileid: "32446238"
 
 На рисунке ниже приведены типы элементов пользовательского интерфейса Office, которые можно создать.
 
-![Изображение с командами надстроек на ленте, областью задач и диалоговым окном в документе Office](../images/overview-with-app-interface-elements.png)
+![Изображение с командами надстроек на ленте, областью задач и диалоговым окном в документе Office](../images/add-in-ui-elements.png)
 
 ## <a name="add-in-commands"></a>Команды надстроек
 

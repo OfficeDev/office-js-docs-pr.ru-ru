@@ -4,12 +4,12 @@ description: ''
 ms.date: 07/05/2019
 ms.prod: onenote
 localization_priority: Normal
-ms.openlocfilehash: b6e5cd5f083013a84e75dfd57b30af87eabb42e8
-ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
+ms.openlocfilehash: 3bd90f1bea7c9b3e7f6689341247d66801357f85
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "35575319"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851525"
 ---
 # <a name="onenote-javascript-api-overview"></a>Обзор API JavaScript для OneNote
 
@@ -17,13 +17,13 @@ ms.locfileid: "35575319"
 
 * **API JavaScript для OneNote**: представленный в Office 2016, [API JavaScript для OneNote](/javascript/api/onenote) содержит строго типизированные объекты, которые можно использовать для доступа к объектам в OneNote в Интернете. 
 
-* **Общие API**:, представляемые в Office 2013, [общий API](/javascript/api/office) можно использовать для доступа к таким ФУНКЦИЯМ, как пользовательский интерфейс, диалоговые окна и параметры клиента, которые являются общими для различных типов приложений Office.
+* **Общие API**. Появившиеся в Office 2013 [общие API](/javascript/api/office) можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office.
 
-Этот раздел документации посвящен API JavaScript для OneNote, который будет использоваться для разработки большинства функциональных возможностей в надстройках, ориентированных на OneNote в Интернете. Сведения об общих API-интерфейсах можно найти в статье [API JavaScript для Office](../javascript-api-for-office.md). 
+Этот раздел документации посвящен API JavaScript для OneNote, который будет использоваться для разработки большинства функциональных возможностей в надстройках, ориентированных на OneNote в Интернете. Сведения об общих API-интерфейсах можно найти в статье [объектная модель API JavaScript для Office](../../develop/office-javascript-api-object-model.md). 
 
-## <a name="learn-programming-concepts"></a>Общие сведения о программировании
+## <a name="learn-programming-concepts"></a>Сведения о концепциях, связанных с программированием
 
-В следующих статьях представлены сведения о важных концепциях программирования:
+Сведения о важных концепциях программирования см. в следующих статьях:
 
 - [Обзор API JavaScript для OneNote](../../onenote/onenote-add-ins-programming-overview.md)
 
