@@ -1,45 +1,137 @@
 ---
-title: API JavaScript для Office
-description: ''
-ms.date: 05/13/2019
+layout: LandingPage
+ms.topic: landing-page
+title: Справочная документация по API JavaScript для Office
+description: Узнайте об API-интерфейсах JavaScript для Office.
+ms.date: 12/24/2019
 localization_priority: Priority
-ms.openlocfilehash: 8d834aee4c21448210d9619fedd42d5ebb79e09d
-ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
+ms.openlocfilehash: c10eeb5c89a74b28e9af44bf72b20a7ad610738b
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "35575326"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851553"
 ---
-# <a name="javascript-api-for-office"></a><span data-ttu-id="5453c-102">API JavaScript для Office</span><span class="sxs-lookup"><span data-stu-id="5453c-102">JavaScript API for Office</span></span>
+# <a name="api-reference-documentation"></a>Справочная документация по API
 
-<span data-ttu-id="5453c-103">API JavaScript для Office позволяет создавать веб-приложения, взаимодействующие с объектными моделями в ведущих приложениях Office.</span><span class="sxs-lookup"><span data-stu-id="5453c-103">The JavaScript API for Office enables you to create web applications that interact with the object models in Office host applications.</span></span> <span data-ttu-id="5453c-104">Ваше приложение будет ссылаться на библиотеку office.js, которая загружает скрипты.</span><span class="sxs-lookup"><span data-stu-id="5453c-104">Your application will reference the office.js library, which is a script loader.</span></span> <span data-ttu-id="5453c-105">Библиотека office.js загружает объектные модели, подходящие для приложения Office, в котором запущена надстройка.</span><span class="sxs-lookup"><span data-stu-id="5453c-105">The office.js library loads the object models that are applicable to the Office application that is running the add-in.</span></span> <span data-ttu-id="5453c-106">Вы можете использовать следующие объектные модели JavaScript:</span><span class="sxs-lookup"><span data-stu-id="5453c-106">You can use the following JavaScript object models:</span></span>
+Надстройка может использовать API-интерфейсы JavaScript для Office для взаимодействия с объектами в ведущих приложениях Office. 
 
-- <span data-ttu-id="5453c-107">**Общие интерфейсы API**, представленные в **Office 2013**.</span><span class="sxs-lookup"><span data-stu-id="5453c-107">**Common APIs** - APIs that were introduced with **Office 2013**.</span></span> <span data-ttu-id="5453c-108">Модель загружается для **всех ведущих приложений Office** и подключает надстройку к клиентскому приложению Office.</span><span class="sxs-lookup"><span data-stu-id="5453c-108">This is loaded for **all Office host applications** and connects your add-in application with the Office client application.</span></span> <span data-ttu-id="5453c-109">Объектная модель содержит API, предназначенные для определенных клиентов Office, а также API, которые подходят для нескольких ведущих клиентских приложений Office.</span><span class="sxs-lookup"><span data-stu-id="5453c-109">The object model contains APIs that are specific to Office clients, and APIs that are applicable to multiple Office client host applications.</span></span> <span data-ttu-id="5453c-110">Все это содержимое находится в разделе **Общий API**.</span><span class="sxs-lookup"><span data-stu-id="5453c-110">All of this content is under **Common API**.</span></span> <span data-ttu-id="5453c-111">Эта объектная модель использует обратные вызовы.</span><span class="sxs-lookup"><span data-stu-id="5453c-111">This object model uses callbacks.</span></span> 
+<ul>
+    <li><b>Специализированные</b> API-интерфейсы для конкретных ведущих приложений предоставляют объекты со строгой типизацией, которые можно использовать для взаимодействия с собственными объектами определенных приложений Office.</li>
+    <li><b>Общие</b> API-интерфейсы можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office.</li>
+</ul>
 
-  <span data-ttu-id="5453c-112">**Outlook** также использует синтаксис общих API.</span><span class="sxs-lookup"><span data-stu-id="5453c-112">**Outlook** also uses the Common API syntax.</span></span> <span data-ttu-id="5453c-113">Все, к чему относится псевдоним Office, содержит объекты, которые можно использовать для написания скриптов надстроек Office, взаимодействующих с содержимым документов, листов, презентаций, почтовых элементов и проектов Office. Нужно использовать общие API, если надстройка предназначена для Office 2013 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="5453c-113">Everything under the alias Office contains objects you can use to write scripts that interact with content in Office documents, worksheets, presentations, mail items, and projects from your Office Add-ins. You must use these Common APIs if your add-in will target Office 2013 and later.</span></span> <span data-ttu-id="5453c-114">Эта объектная модель использует обратные вызовы.</span><span class="sxs-lookup"><span data-stu-id="5453c-114">This object model uses callbacks.</span></span>
+Во всех возможных случаях следует использовать специализированные API-интерфейсы для конкретных ведущих приложений. Общие API следует применять только в сценариях, которые не поддерживаются API-интерфейсами для конкретных ведущих приложений. Более подробные сведения об этих двух моделях API-интерфейсов см. в статье <a href="../overview/office-add-ins-fundamentals.md#api-models">Создание надстроек Office</a>.
 
-- <span data-ttu-id="5453c-115">**API для конкретных ведущих приложений**, представленные в **Office 2016**.</span><span class="sxs-lookup"><span data-stu-id="5453c-115">**Host-specific APIs** - APIs that were introduced with **Office 2016**.</span></span> <span data-ttu-id="5453c-116">Эта объектная модель предусматривает использование строго типизированных объектов, предназначенных для конкретных ведущих приложений. Эти объекты соответствуют уже известным объектам, отображающимся при использовании клиентов Office, и будут применяться впредь в API JavaScript для Office.</span><span class="sxs-lookup"><span data-stu-id="5453c-116">This object model provides host-specific strongly-typed objects that correspond to familiar objects that you see when you use Office clients, and represents the future of Office JavaScript APIs.</span></span> <span data-ttu-id="5453c-117">API JavaScript для определенных ведущих приложений в настоящее время доступны для Excel, OneNote, PowerPoint и Word.</span><span class="sxs-lookup"><span data-stu-id="5453c-117">Host-specific JavaScript APIs are currently available for Excel, OneNote, PowerPoint, and Word.</span></span>
+<h2>Справочные материалы по API</h2>
 
-## <a name="supported-host-applications"></a><span data-ttu-id="5453c-118">Поддерживаемые ведущие приложения</span><span class="sxs-lookup"><span data-stu-id="5453c-118">Supported host applications</span></span>
+<ul class="panelContent cardsF cols cols3">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="/javascript/api/excel"><img src="../images/index/logo-excel.svg" alt="Excel API reference docs" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Справочные материалы по API Excel</h3>
+                        <p><a href="/javascript/api/excel">API-интерфейсы JavaScript для создания надстроек Excel.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="/javascript/api/outlook"><img src="../images/index/logo-outlook.svg" alt="Outlook API reference docs" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Справочные материалы по API-интерфейсам Outlook</h3>
+                        <p><a href="/javascript/api/outlook">API-интерфейсы JavaScript для создания надстроек Outlook.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="/javascript/api/word"><img src="../images/index/logo-word.svg" alt="Word API reference docs" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Справочные материалы по API-интерфейсам Word</h3>
+                        <p><a href="/javascript/api/word">API-интерфейсы JavaScript для создания надстроек Word.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="/javascript/api/powerpoint"><img src="../images/index/logo-powerpoint.svg" alt="PowerPoint API reference docs" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Справочные материалы по API-интерфейсам PowerPoint</h3>
+                        <p><a href="/javascript/api/powerpoint">API-интерфейсы JavaScript для создания надстроек PowerPoint.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="/javascript/api/onenote"><img src="../images/index/logo-onenote.svg" alt="OneNote API reference docs" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Справочные материалы по API-интерфейсам OneNote</h3>
+                        <p><a href="/javascript/api/onenote">API-интерфейсы JavaScript для создания надстроек OneNote.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="/javascript/api/office"><img src="../images/index-landing-page/i_code-blocks.svg" alt="reference docs" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Справочные материалы по общим API-интерфейсам</h3>
+                        <p><a href="/javascript/api/office">API-интерфейсы JavaScript, которые можно использовать для любых надстроек Office.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
 
-- [<span data-ttu-id="5453c-119">Excel</span><span class="sxs-lookup"><span data-stu-id="5453c-119">Excel</span></span>](overview/excel-add-ins-reference-overview.md)
-- [<span data-ttu-id="5453c-120">OneNote</span><span class="sxs-lookup"><span data-stu-id="5453c-120">OneNote</span></span>](overview/onenote-add-ins-javascript-reference.md)
-- [<span data-ttu-id="5453c-121">Outlook</span><span class="sxs-lookup"><span data-stu-id="5453c-121">Outlook</span></span>](requirement-sets/outlook-api-requirement-sets.md)
-- [<span data-ttu-id="5453c-122">PowerPoint</span><span class="sxs-lookup"><span data-stu-id="5453c-122">PowerPoint</span></span>](overview/powerpoint-add-ins-reference-overview.md)
-- [<span data-ttu-id="5453c-123">Project</span><span class="sxs-lookup"><span data-stu-id="5453c-123">Project</span></span>](overview/project-add-ins-reference-overview.md)
-- [<span data-ttu-id="5453c-124">Visio</span><span class="sxs-lookup"><span data-stu-id="5453c-124">Visio</span></span>](overview/visio-javascript-reference-overview.md)
-- [<span data-ttu-id="5453c-125">Word</span><span class="sxs-lookup"><span data-stu-id="5453c-125">Word</span></span>](overview/word-add-ins-reference-overview.md)
-- [<span data-ttu-id="5453c-126">Общий API</span><span class="sxs-lookup"><span data-stu-id="5453c-126">Common API</span></span>](requirement-sets/office-add-in-requirement-sets.md)
+<b>Примечание</b>. В настоящее время не существует специализированных API-интерфейсов для Project, поэтому при создании надстроек Project следует использовать общие API. Кроме того, набор специализированных API-интерфейсов для PowerPoint крайне ограничен, поэтому для создания надстроек PowerPoint используются главным образом общие API.
 
-> [!NOTE] 
-> <span data-ttu-id="5453c-127">[Project](overview/project-add-ins-reference-overview.md) поддерживает надстройки, созданные с помощью API JavaScript, но в настоящее время отсутствует API JavaScript, предназначенный специально для взаимодействия с Project.</span><span class="sxs-lookup"><span data-stu-id="5453c-127">[Project](overview/project-add-ins-reference-overview.md) supports add-ins made with the JavaScript API, but there's currently no JavaScript API designed specifically for interacting with Project.</span></span> <span data-ttu-id="5453c-128">Можно использовать общий API для создания надстроек Project.</span><span class="sxs-lookup"><span data-stu-id="5453c-128">You can use the Common API to create Project add-ins.</span></span>
+<h2>Открытые спецификации API</h2>
 
-<span data-ttu-id="5453c-129">Дополнительные сведения о [поддерживаемых ведущих приложениях и других требованиях](../concepts/requirements-for-running-office-add-ins.md).</span><span class="sxs-lookup"><span data-stu-id="5453c-129">Learn more about [supported hosts and other requirements](../concepts/requirements-for-running-office-add-ins.md).</span></span>
-
-## <a name="open-api-specifications"></a><span data-ttu-id="5453c-130">Открытые спецификации API</span><span class="sxs-lookup"><span data-stu-id="5453c-130">Open API specifications</span></span>
-
-<span data-ttu-id="5453c-p106">Мы публикуем новые API для надстроек Office на странице [Открытые спецификации API](openspec/openspec.md), чтобы вы могли делиться своим мнением. Узнайте, над какими функциями мы работаем, и поделитесь своим мнением о создаваемых спецификациях.</span><span class="sxs-lookup"><span data-stu-id="5453c-p106">As we design and develop new APIs for Office Add-ins, we'll make them available for your feedback on our [Open API specifications](openspec/openspec.md) page. Find out what new features are in the pipeline, and provide your input on our design specifications.</span></span>
-
-## <a name="see-also"></a><span data-ttu-id="5453c-133">См. также</span><span class="sxs-lookup"><span data-stu-id="5453c-133">See also</span></span>
-
-- [<span data-ttu-id="5453c-134">Справочник по API JavaScript для Office</span><span class="sxs-lookup"><span data-stu-id="5453c-134">Office JavaScript API reference</span></span>](/javascript/api/overview/office)
+Мы публикуем новые API для надстроек Office на странице [Открытые спецификации API](openspec/openspec.md), чтобы вы могли делиться своим мнением. Узнайте, над какими функциями мы работаем, и поделитесь своим мнением о создаваемых спецификациях.
