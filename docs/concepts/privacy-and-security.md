@@ -3,12 +3,12 @@ title: Конфиденциальность и безопасность надс
 description: ''
 ms.date: 09/26/2019
 localization_priority: Priority
-ms.openlocfilehash: bf71bfdba331f3726445c5095bd7dba1e4c5d39e
-ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
+ms.openlocfilehash: b40b10a0f2475a9013eb4186c852e07bfb60154f
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "40814035"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851301"
 ---
 # <a name="privacy-and-security-for-office-add-ins"></a>Конфиденциальность и безопасность надстроек Office
 
@@ -138,7 +138,7 @@ ms.locfileid: "40814035"
 </OfficeApp>
 ```
 
-Дополнительные сведения о разрешениях для надстроек области задач и контентных надстроек см. в статье [Запрос разрешений на использование API в контентных надстройках и надстройках области задач](/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins).
+Дополнительные сведения о разрешениях для надстроек области задач и контентных надстроек см. в статье [Запрос разрешений на использование API в надстройках](/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins).
 
 Дополнительные сведения о разрешениях для надстроек Outlook см. в следующих статьях:
 
@@ -259,7 +259,7 @@ Exchange и SharePoint предоставляют прокси-серверы н
 
 ## <a name="see-also"></a>См. также
 
-- [Запрос разрешений на использование API в контентных надстройках и надстройках области задач](/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins)
+- [Запрос разрешений на использование API в надстройках](/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins)
 - [Конфиденциальность, разрешения и безопасность для надстроек Outlook](/outlook/add-ins/privacy-and-security)
 - [Общие сведения о разрешениях для надстройки Outlook](/outlook/add-ins/understanding-outlook-add-in-permissions)
 - [Ограничения активации и API JavaScript для надстроек Outlook](/outlook/add-ins/limits-for-activation-and-javascript-api-for-outlook-add-ins)

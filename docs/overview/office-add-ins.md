@@ -1,16 +1,16 @@
 ---
 title: Обзор платформы надстроек Office | Microsoft Docs
 description: Используйте привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений.
-ms.date: 07/05/2019
+ms.date: 12/24/2019
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: daedbc655c62bfb2ce0e363f795a632ec425acdb
-ms.sourcegitcommit: 7d4d721fc3d246ef8a2464bc714659cd84d6faab
+ms.openlocfilehash: bb3a2005679e82134d6dd045878349847ee6d916
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "37468800"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851364"
 ---
 # <a name="office-add-ins-platform-overview"></a>Обзор платформы надстроек Office
 
@@ -116,14 +116,15 @@ ms.locfileid: "37468800"
 
 API JavaScript для Office содержат объекты и элементы для создания надстроек и взаимодействия с содержимым Office и веб-службами. В Excel, Outlook, Word, PowerPoint, OneNote и Project используется общая объектная модель. Кроме того, существуют расширенные объектные модели для Excel и Word. Эти API предоставляют доступ к известным объектам, таким как абзацы и книги, что упрощает создание надстройки для определенного ведущего приложения.  
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие действия:
 
-Чтобы создать свою первую надстройку Office менее чем за 5 минут, попробуйте воспользоваться кратким руководством для [Excel](../quickstarts/excel-quickstart-jquery.md), [Outlook](/outlook/add-ins/quick-start?context=office/dev/add-ins/context), [Word](../quickstarts/word-quickstart.md), [OneNote](../quickstarts/onenote-quickstart.md), [PowerPoint](../quickstarts/powerpoint-quickstart.md) или [Project](../quickstarts/project-quickstart.md). Сразу же приступить к созданию надстроек можно с помощью Visual Studio или любого другого редактора. 
-
-Чтобы начать планировать создание решений с удобным и привлекательным интерфейсом, ознакомьтесь с [рекомендациями по проектированию](../design/add-in-design.md) и другими [рекомендациями](../concepts/add-in-development-best-practices.md), касающимися надстроек Office.
+Дополнительные вводные сведения о разработке надстроек Office см. в статье [Создание надстроек Office](../overview/office-add-ins-fundamentals.md).
 
 ## <a name="see-also"></a>См. также
 
-- [Примеры надстроек Office](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel,Outlook,PowerPoint,Word)
-- [Общие сведения об API JavaScript для Office](../develop/understanding-the-javascript-api-for-office.md)
-- [Доступность ведущих приложений и платформ для надстроек Office](../overview/office-add-in-availability.md)
+- [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
+- [Основные принципы надстроек Office](../overview/core-concepts-office-add-ins.md)
+- [Разработка надстроек Office](../develop/develop-overview.md)
+- [Проектирование надстроек Office](../design/add-in-design.md)
+- [Тестирование и отладка надстроек Office](../testing/test-debug-office-add-ins.md)
+- [Публикация надстроек Office](../publish/publish.md)

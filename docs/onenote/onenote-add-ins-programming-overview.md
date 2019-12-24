@@ -5,12 +5,12 @@ ms.date: 07/05/2019
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 9b74a6fe9d54218a8ec114a624d085bd68ba6e2c
-ms.sourcegitcommit: 7d4d721fc3d246ef8a2464bc714659cd84d6faab
+ms.openlocfilehash: 9724de8c25a535884c4700a165e661028aee6608
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "37468814"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851511"
 ---
 # <a name="onenote-javascript-api-programming-overview"></a>Обзор создания кода с помощью API JavaScript для OneNote
 
@@ -125,7 +125,7 @@ function getSelectionFromPage() {
 | [Office.context.document.settings.set(имя, значение);](/javascript/api/office/office.settings#set-name--value-) | Параметры поддерживаются только контентными надстройками | 
 | [Office.EventType.DocumentSelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) ||
 
-Обычно общий API следует использовать только тогда, когда необходимые возможности не поддерживаются в API для определенных ведущих приложений. Дополнительные сведения об использовании общего API см. в [документации](../overview/office-add-ins.md) и [справочнике](../reference/javascript-api-for-office.md) по надстройкам Office.
+Обычно общий API следует использовать, когда необходимые возможности не поддерживаются в API для определенных ведущих приложений. Дополнительные сведения об использовании общего API см. в статье [Объектная модель API JavaScript для Office](../develop/office-javascript-api-object-model.md).
 
 
 <a name="om-diagram"></a>
@@ -137,7 +137,7 @@ function getSelectionFromPage() {
 
 ## <a name="see-also"></a>См. также
 
-- [Документация по надстройкам OneNote](index.md)
+- [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
 - [Создание первой надстройки OneNote](../quickstarts/onenote-quickstart.md)
 - [Справочник по API JavaScript для OneNote](/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)

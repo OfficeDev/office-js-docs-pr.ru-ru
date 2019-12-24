@@ -1,16 +1,16 @@
 ---
-title: Оформление надстроек Office
+title: Разработка надстроек для Office
 description: ''
 ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 1b2f6a57ddea385ec676a4981e4576c155d93886
-ms.sourcegitcommit: 44f1a4a3e1ae3c33d7d5fabcee14b84af94e03da
+ms.openlocfilehash: 5d8cf0cb56a4a77eb54ea7df68350773ead352d2
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "39670148"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851266"
 ---
-# <a name="design-your-office-add-ins"></a>Оформление надстроек Office
+# <a name="design-office-add-ins"></a>Разработка надстроек для Office
 
 Надстройки Office расширяют возможности Office, предоставляя контекстные функции, с которыми пользователи могут работать в клиентах Office. Надстройки предоставляют доступ к сторонним функциям в Office без необходимости переключаться на другие приложения, что отнимает много времени. 
 

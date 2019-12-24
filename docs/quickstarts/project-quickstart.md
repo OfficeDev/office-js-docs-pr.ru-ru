@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Project
 description: ''
-ms.date: 09/18/2019
+ms.date: 12/24/2019
 ms.prod: project
 localization_priority: Priority
-ms.openlocfilehash: 78712a1fec9af2c45f6e42825740364a7cd23987
-ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
+ms.openlocfilehash: 3de9df0dbca53e244fe2431bfa2884694e6ac232
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "37035289"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851315"
 ---
 # <a name="build-your-first-project-task-pane-add-in"></a>Создание первой надстройки области задач Project
 
@@ -123,3 +123,8 @@ Office.context.document.getSelectedTaskAsync(
 > [!div class="nextstepaction"]
 > [Надстройки Project](../project/project-add-ins.md)
 
+## <a name="see-also"></a>См. также
+
+- [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
+- [Основные принципы надстроек Office](../overview/core-concepts-office-add-ins.md)
+- [Разработка надстроек Office](../develop/develop-overview.md)
