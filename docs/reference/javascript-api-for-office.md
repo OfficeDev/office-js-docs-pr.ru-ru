@@ -1,45 +1,137 @@
 ---
-title: API JavaScript для Office
-description: ''
-ms.date: 05/13/2019
+layout: LandingPage
+ms.topic: landing-page
+title: Справочная документация по API JavaScript для Office
+description: Узнайте об API-интерфейсах JavaScript для Office.
+ms.date: 12/24/2019
 localization_priority: Priority
-ms.openlocfilehash: 8d834aee4c21448210d9619fedd42d5ebb79e09d
-ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
+ms.openlocfilehash: c10eeb5c89a74b28e9af44bf72b20a7ad610738b
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "35575326"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851553"
 ---
-# <a name="javascript-api-for-office"></a>API JavaScript для Office
+# <a name="api-reference-documentation"></a>Справочная документация по API
 
-API JavaScript для Office позволяет создавать веб-приложения, взаимодействующие с объектными моделями в ведущих приложениях Office. Ваше приложение будет ссылаться на библиотеку office.js, которая загружает скрипты. Библиотека office.js загружает объектные модели, подходящие для приложения Office, в котором запущена надстройка. Вы можете использовать следующие объектные модели JavaScript:
+Надстройка может использовать API-интерфейсы JavaScript для Office для взаимодействия с объектами в ведущих приложениях Office. 
 
-- **Общие интерфейсы API**, представленные в **Office 2013**. Модель загружается для **всех ведущих приложений Office** и подключает надстройку к клиентскому приложению Office. Объектная модель содержит API, предназначенные для определенных клиентов Office, а также API, которые подходят для нескольких ведущих клиентских приложений Office. Все это содержимое находится в разделе **Общий API**. Эта объектная модель использует обратные вызовы. 
+<ul>
+    <li><b>Специализированные</b> API-интерфейсы для конкретных ведущих приложений предоставляют объекты со строгой типизацией, которые можно использовать для взаимодействия с собственными объектами определенных приложений Office.</li>
+    <li><b>Общие</b> API-интерфейсы можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office.</li>
+</ul>
 
-  **Outlook** также использует синтаксис общих API. Все, к чему относится псевдоним Office, содержит объекты, которые можно использовать для написания скриптов надстроек Office, взаимодействующих с содержимым документов, листов, презентаций, почтовых элементов и проектов Office. Нужно использовать общие API, если надстройка предназначена для Office 2013 и более поздних версий. Эта объектная модель использует обратные вызовы.
+Во всех возможных случаях следует использовать специализированные API-интерфейсы для конкретных ведущих приложений. Общие API следует применять только в сценариях, которые не поддерживаются API-интерфейсами для конкретных ведущих приложений. Более подробные сведения об этих двух моделях API-интерфейсов см. в статье <a href="../overview/office-add-ins-fundamentals.md#api-models">Создание надстроек Office</a>.
 
-- **API для конкретных ведущих приложений**, представленные в **Office 2016**. Эта объектная модель предусматривает использование строго типизированных объектов, предназначенных для конкретных ведущих приложений. Эти объекты соответствуют уже известным объектам, отображающимся при использовании клиентов Office, и будут применяться впредь в API JavaScript для Office. API JavaScript для определенных ведущих приложений в настоящее время доступны для Excel, OneNote, PowerPoint и Word.
+<h2>Справочные материалы по API</h2>
 
-## <a name="supported-host-applications"></a>Поддерживаемые ведущие приложения
+<ul class="panelContent cardsF cols cols3">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="/javascript/api/excel"><img src="../images/index/logo-excel.svg" alt="Excel API reference docs" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Справочные материалы по API Excel</h3>
+                        <p><a href="/javascript/api/excel">API-интерфейсы JavaScript для создания надстроек Excel.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="/javascript/api/outlook"><img src="../images/index/logo-outlook.svg" alt="Outlook API reference docs" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Справочные материалы по API-интерфейсам Outlook</h3>
+                        <p><a href="/javascript/api/outlook">API-интерфейсы JavaScript для создания надстроек Outlook.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="/javascript/api/word"><img src="../images/index/logo-word.svg" alt="Word API reference docs" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Справочные материалы по API-интерфейсам Word</h3>
+                        <p><a href="/javascript/api/word">API-интерфейсы JavaScript для создания надстроек Word.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="/javascript/api/powerpoint"><img src="../images/index/logo-powerpoint.svg" alt="PowerPoint API reference docs" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Справочные материалы по API-интерфейсам PowerPoint</h3>
+                        <p><a href="/javascript/api/powerpoint">API-интерфейсы JavaScript для создания надстроек PowerPoint.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="/javascript/api/onenote"><img src="../images/index/logo-onenote.svg" alt="OneNote API reference docs" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Справочные материалы по API-интерфейсам OneNote</h3>
+                        <p><a href="/javascript/api/onenote">API-интерфейсы JavaScript для создания надстроек OneNote.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <a href="/javascript/api/office"><img src="../images/index-landing-page/i_code-blocks.svg" alt="reference docs" /></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Справочные материалы по общим API-интерфейсам</h3>
+                        <p><a href="/javascript/api/office">API-интерфейсы JavaScript, которые можно использовать для любых надстроек Office.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
 
-- [Excel](overview/excel-add-ins-reference-overview.md)
-- [OneNote](overview/onenote-add-ins-javascript-reference.md)
-- [Outlook](requirement-sets/outlook-api-requirement-sets.md)
-- [PowerPoint](overview/powerpoint-add-ins-reference-overview.md)
-- [Project](overview/project-add-ins-reference-overview.md)
-- [Visio](overview/visio-javascript-reference-overview.md)
-- [Word](overview/word-add-ins-reference-overview.md)
-- [Общий API](requirement-sets/office-add-in-requirement-sets.md)
+<b>Примечание</b>. В настоящее время не существует специализированных API-интерфейсов для Project, поэтому при создании надстроек Project следует использовать общие API. Кроме того, набор специализированных API-интерфейсов для PowerPoint крайне ограничен, поэтому для создания надстроек PowerPoint используются главным образом общие API.
 
-> [!NOTE] 
-> [Project](overview/project-add-ins-reference-overview.md) поддерживает надстройки, созданные с помощью API JavaScript, но в настоящее время отсутствует API JavaScript, предназначенный специально для взаимодействия с Project. Можно использовать общий API для создания надстроек Project.
-
-Дополнительные сведения о [поддерживаемых ведущих приложениях и других требованиях](../concepts/requirements-for-running-office-add-ins.md).
-
-## <a name="open-api-specifications"></a>Открытые спецификации API
+<h2>Открытые спецификации API</h2>
 
 Мы публикуем новые API для надстроек Office на странице [Открытые спецификации API](openspec/openspec.md), чтобы вы могли делиться своим мнением. Узнайте, над какими функциями мы работаем, и поделитесь своим мнением о создаваемых спецификациях.
-
-## <a name="see-also"></a>См. также
-
-- [Справочник по API JavaScript для Office](/javascript/api/overview/office)

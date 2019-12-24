@@ -3,12 +3,12 @@ title: Доступность ведущих приложений и платф�
 description: Поддерживаемые наборы обязательных элементов для Excel, OneNote, Outlook, PowerPoint, Project и Word.
 ms.date: 11/15/2019
 localization_priority: Priority
-ms.openlocfilehash: ecb906e595c08b973b5146416a5317d59547ed39
-ms.sourcegitcommit: e56bd8f1260c73daf33272a30dc5af242452594f
+ms.openlocfilehash: 956ee6b8a9e990a3d6d942ee4a65a1e9275ea025
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "38757487"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851371"
 ---
 # <a name="office-add-in-host-and-platform-availability"></a>Доступность ведущих приложений и платформ для надстроек Office
 
@@ -960,10 +960,11 @@ ms.locfileid: "38757487"
 - [Версии Office и наборы обязательных элементов](../develop/office-versions-and-requirement-sets.md)
 - [Наборы обязательных элементов общего API](../reference/requirement-sets/office-add-in-requirement-sets.md)
 - [Наборы обязательных элементов для команд надстроек](../reference/requirement-sets/add-in-commands-requirement-sets.md)
-- [Справка по API JavaScript для Office](../reference/javascript-api-for-office.md)
+- [Справочная документация по API](../reference/javascript-api-for-office.md)
 - [Журнал обновлений для Office 365 профессиональный плюс](/officeupdates/update-history-office365-proplus-by-date)
 - [Журнал обновлений Office 2016 и 2019 ("нажми и работай")](/officeupdates/update-history-office-2019)
 - [Журнал обновлений Office 2013 ("нажми и работай")](/officeupdates/update-history-office-2013)
 - [Журнал обновлений Office 2010, 2013 и 2016 (MSI)](/officeupdates/office-updates-msi)
 - [Журнал обновлений Outlook 2010, 2013 и 2016 (MSI)](/officeupdates/outlook-updates-msi)
 - [Журнал обновлений Office для Mac](/officeupdates/update-history-office-for-mac)
+- [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)

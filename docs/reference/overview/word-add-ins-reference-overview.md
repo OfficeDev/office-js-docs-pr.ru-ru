@@ -4,12 +4,12 @@ description: ''
 ms.date: 07/05/2019
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: fbc9e8293642d1ab8edf32d568a5dab7ef77a8f0
-ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
+ms.openlocfilehash: 6728c7491d84f2bc044f7e5a3199ad6d90979628
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "35575627"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851259"
 ---
 # <a name="word-javascript-api-overview"></a>Обзор API JavaScript для Word
 
@@ -19,7 +19,7 @@ ms.locfileid: "35575627"
 
 * **Общие API**. Появившиеся в Office 2013 [общие API](/javascript/api/office) можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office.
 
-В этом разделе рассматривается API JavaScript для Word, используемый для разработки большинства функций в надстройках и предназначенный для Word в Интернете, Word 2016 или более поздних версий. Сведения об общем API см. в статье [API JavaScript для Office](../javascript-api-for-office.md). 
+В этом разделе рассматривается API JavaScript для Word, используемый для разработки большинства функций в надстройках и предназначенный для Word в Интернете, Word 2016 или более поздних версий. Сведения об общем API см. в статье [Объектная модель API JavaScript для Office](../../develop/office-javascript-api-object-model.md). 
 
 ## <a name="learn-programming-concepts"></a>Сведения о концепциях, связанных с программированием
 

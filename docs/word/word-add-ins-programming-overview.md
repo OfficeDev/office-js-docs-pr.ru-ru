@@ -5,12 +5,12 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: bb4ca1de1b99ca66b716810dedf01506fb60ebe7
-ms.sourcegitcommit: 21aa084875c9e07a300b3bbe8852b3e5dd163e1d
+ms.openlocfilehash: c8b0953655039556936c631926ed2713bdb62c57
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "38001497"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851399"
 ---
 # <a name="word-add-ins-overview"></a>Обзор надстроек Word
 
@@ -58,7 +58,7 @@ API JavaScript для Word предоставляют приложению до�
 
 Второй — [API JavaScript для Word](/javascript/api/word). Это строго типизированная объектная модель, с помощью которой можно создавать надстройки Word, предназначенные для Word 2016 для Mac и Windows. Эта объектная модель использует обещания и предоставляет доступ к объектам Word, в частности [Body](/javascript/api/word/word.body), [ContentControl](/javascript/api/word/word.contentcontrol), [InlinePicture](/javascript/api/word/word.inlinepicture) и [Paragraph](/javascript/api/word/word.paragraph). API JavaScript для Word включает определения TypeScript и файлы vsdoc, чтобы вы могли получать подсказки кода в своей интегрированной среде разработки.
 
-В настоящее время все клиенты Word поддерживают общий API JavaScript для Office, а большинство из них поддерживают и API JavaScript для Word. Дополнительные сведения о поддерживаемых клиентах см. в статье [Обзор API JavaScript для Office](../reference/javascript-api-for-office.md).
+В настоящее время все клиенты Word поддерживают общий API JavaScript для Office, а большинство из них поддерживают и API JavaScript для Word. Дополнительные сведения о поддерживаемых клиентах см. в статье [Доступность ведущих приложений и платформ для надстроек Office](../overview/office-add-in-availability.md).
 
 Рекомендуем начать с API JavaScript для Word, так как с объектной моделью проще работать. Используйте API JavaScript для Word, если вам нужно:
 
@@ -84,6 +84,6 @@ API JavaScript для Word предоставляют приложению до�
 
 ## <a name="see-also"></a>См. также
 
-* [Документация по надстройкам Word](index.md)
+* [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
 * [Обзор платформы надстроек Office](../overview/office-add-ins.md)
 * [Справочные материалы по API JavaScript для Word](/office/dev/add-ins/reference/overview/word-add-ins-reference-overview)

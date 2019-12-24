@@ -1,15 +1,15 @@
 ---
 title: Создание области задач Excel с помощью Angular
 description: ''
-ms.date: 09/18/2019
+ms.date: 12/24/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 4c2cfb061dff9b5eb24642facdcb9996432d873b
-ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
+ms.openlocfilehash: c2565c305833335e589a53655397bcb68654d22a
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "37035275"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851560"
 ---
 # <a name="build-an-excel-task-pane-add-in-using-angular"></a>Создание области задач Excel с помощью Angular
 
@@ -72,7 +72,9 @@ ms.locfileid: "37035275"
 
 ## <a name="see-also"></a>См. также
 
-* [Руководство по надстройкам Excel](../tutorials/excel-tutorial-create-table.md)
+* [Обзор платформы надстроек Office](../overview/office-add-ins.md)
+* [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
+* [Разработка надстроек Office](../develop/develop-overview.md)
 * [Основные концепции программирования с помощью API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
 * [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
 * [Справочник по API JavaScript для Excel](/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)

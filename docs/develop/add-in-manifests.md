@@ -3,12 +3,12 @@ title: XML-манифест надстроек Office
 description: ''
 ms.date: 09/26/2019
 localization_priority: Priority
-ms.openlocfilehash: 9a3081c13756bee668081e1fb9d04cf5458320d4
-ms.sourcegitcommit: 88d81aa2d707105cf0eb55d9774b2e7cf468b03a
+ms.openlocfilehash: 07c8a563eb04ac4b707357f1e7ff43d9a8f2e761
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "38301976"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851280"
 ---
 # <a name="office-add-ins-xml-manifest"></a>XML-манифест надстроек Office
 
@@ -500,10 +500,14 @@ _\*\* SupportUrl требуется только для надстроек ра�
 
 ## <a name="see-also"></a>См. также
 
+* [Определение правильного порядка элементов манифеста](manifest-element-ordering.md)
 * [Создание команд надстройки в манифесте][команды надстройки]
 * [Указание ведущих приложений Office и обязательных элементов API](specify-office-hosts-and-api-requirements.md)
 * [Локализация надстроек для Office](localization.md)
 * [Справочная схема по манифестам надстроек для Office](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas)
+* [Обновление API и версии манифеста](update-your-javascript-api-for-office-and-manifest-schema-version.md)
+* [Определение аналогичной надстройки COM](make-office-add-in-compatible-with-existing-com-add-in.md)
+* [Запрос разрешений на использование API в надстройках](requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md)
 * [Проверка манифеста и устранение связанных с ним неполадок](../testing/troubleshoot-manifest.md)
 
 [команды надстройки]: create-addin-commands.md

@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач OneNote
 description: ''
-ms.date: 09/18/2019
+ms.date: 12/24/2019
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: dd4e16edc2dc3fa4046e3e587b3d1a1aba058e30
-ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
+ms.openlocfilehash: 2e8c560aa02de690fa4e6abae25d0625379e26ad
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "37035268"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851567"
 ---
 # <a name="build-your-first-onenote-task-pane-add-in"></a>Создание первой надстройки области задач OneNote
 
@@ -124,8 +124,10 @@ try {
 
 ## <a name="see-also"></a>См. также
 
+* [Обзор платформы надстроек Office](../overview/office-add-ins.md)
+* [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
+* [Разработка надстроек Office](../develop/develop-overview.md)
 - [Обзор API JavaScript для OneNote](../onenote/onenote-add-ins-programming-overview.md)
 - [Справочник по API JavaScript для OneNote](/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
-- [Обзор платформы надстроек Office](../overview/office-add-ins.md)
 

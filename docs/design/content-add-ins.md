@@ -3,12 +3,12 @@ title: Контентные надстройки Office
 description: Контентные надстройки — это рабочие области, которые можно внедрять прямо в документы Excel или PowerPoint, что предоставляет пользователям доступ к элементам управления интерфейсом, которые выполняют код для изменения документов или отображения данных.
 ms.date: 03/19/2019
 localization_priority: Priority
-ms.openlocfilehash: 46268f963545c3f5b7f45b9b590dc772ba37292f
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: f3dec371d1500d85125c8762bbc5e80f0cdfb571
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32447113"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851287"
 ---
 # <a name="content-office-add-ins"></a>Контентные надстройки Office
 
@@ -58,5 +58,5 @@ ms.locfileid: "32447113"
 
 - [Сведения о доступности элементов для надстроек Office, представленные с учетом ведущих приложений и платформ](/office/dev/add-ins/overview/office-add-in-availability)
 - [Office UI Fabric в надстройках Office](/office/dev/add-ins/design/office-ui-fabric)
-- [Шаблоны проектирования взаимодействия для надстроек Office](/office/dev/add-ins/design/ux-design-pattern-templates)
-- [Запрашивание разрешений на использование API в контентных надстройках и надстройках области задач](/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins)
+- [Конструктивные шаблоны для надстроек Office](/office/dev/add-ins/design/ux-design-pattern-templates)
+- [Запрос разрешений на использование API в надстройках](/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins)

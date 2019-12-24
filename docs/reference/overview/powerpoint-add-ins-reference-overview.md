@@ -4,12 +4,12 @@ description: ''
 ms.date: 07/05/2019
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: 045b5ff2af3523930e696f5faa296be7c777fe8b
-ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
+ms.openlocfilehash: c08e5af14c43d92a677e28d47b26014fd27f700e
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "35940821"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851504"
 ---
 # <a name="javascript-api-for-powerpoint"></a>API JavaScript для PowerPoint
 
@@ -39,5 +39,4 @@ ms.locfileid: "35940821"
 - [Обзор надстроек PowerPoint](../../powerpoint/powerpoint-add-ins.md)
 - [Справочник по API JavaScript для PowerPoint](/javascript/api/powerpoint)
 - [Доступность ведущих приложений и платформ для надстроек Office](../../overview/office-add-in-availability.md)
-- [API JavaScript для Office](../javascript-api-for-office.md)
-- [Справочные материалы по общему API](/javascript/api/office)
+- [Справочная документация по API](../javascript-api-for-office.md)

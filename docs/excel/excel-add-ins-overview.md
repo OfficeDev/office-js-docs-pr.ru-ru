@@ -5,12 +5,12 @@ ms.date: 07/05/2019
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 7d68dd52575f3b706ffac2751d68ea4019faaa8c
-ms.sourcegitcommit: 960ceaf6776ec3ed41a8f5b7bf70b3c95c43386a
+ms.openlocfilehash: c529dc88f310466c5aaae8c6a0ea4e7d0ea6e287
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "39830225"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851392"
 ---
 # <a name="excel-add-ins-overview"></a>Общие сведения о надстройках Excel
 
@@ -121,9 +121,7 @@ ms.locfileid: "39830225"
 
 ## <a name="see-also"></a>См. также
 
-- [Документация по надстройкам Excel](index.md)
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)
-- [Рекомендации по разработке надстроек Office](../concepts/add-in-development-best-practices.md)
-- [Рекомендации по проектированию надстроек Office](../design/add-in-design.md)
+- [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
 - [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
-- [Справочник по API JavaScript для Excel](/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)
+- [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)

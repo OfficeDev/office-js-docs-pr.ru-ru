@@ -1,16 +1,16 @@
 ---
-title: Развертывание и публикация надстройки Office | Документация Майкрософт
+title: Развертывание и публикация надстроек Office
 description: Методы и варианты развертывания надстройки Office для тестирования и распространения.
 ms.date: 09/05/2019
 localization_priority: Priority
-ms.openlocfilehash: 2948e558ddd063ff36ebbfdd2edcb8c986a1445a
-ms.sourcegitcommit: 960ceaf6776ec3ed41a8f5b7bf70b3c95c43386a
+ms.openlocfilehash: a00119254f53f6dbf0e6ebc2279e0a0b70af1270
+ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "39830204"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "40851546"
 ---
-# <a name="deploy-and-publish-your-office-add-in"></a>Развертывание и публикация надстройки Office
+# <a name="deploy-and-publish-office-add-ins"></a>Развертывание и публикация надстроек Office
 
 Для тестирования или распространения надстройки Office можно использовать один из указанных ниже способов.
 
