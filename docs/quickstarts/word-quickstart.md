@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Word
 description: Узнайте, как создать простую надстройку области задач Word, используя API JS для Office.
-ms.date: 12/24/2019
+ms.date: 12/31/2019
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 039348503d75746bf30da253e84402e128006497
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
+ms.openlocfilehash: 7a253f884f509cc933b02c86d4d3d6d16c0ca114
+ms.sourcegitcommit: d5ac9284d1e96dc91a9168d7641e44d88535e1a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851336"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "40914925"
 ---
 # <a name="build-your-first-word-task-pane-add-in"></a>Создание первой надстройки области задач Word
 
@@ -87,6 +87,10 @@ _Область применения: Word 2016 и более поздних в
 4. В нижней части области задач выберите ссылку **Выполнить**, чтобы добавить текст "Hello World" синего цвета в документ.
 
     ![Снимок экрана: приложение Word с загруженной надстройкой области задач](../images/word-quickstart-addin-1c.png)
+
+### <a name="next-steps"></a>Дальнейшие действия
+
+Поздравляем! Вы успешно создали надстройку области задач Word! Теперь воспользуйтесь [руководством по надстройкам Word](../tutorials/word-tutorial.md), чтобы узнать больше о возможностях надстроек Word и создать более сложную надстройку.
 
 # <a name="visual-studiotabvisualstudio"></a>[Visual Studio](#tab/visualstudio)
 
@@ -301,14 +305,11 @@ _Область применения: Word 2016 и более поздних в
 
     ![Снимок экрана: приложение Word с загруженной надстройкой, добавляющей стандартный текст.](../images/word-quickstart-addin-1b.png)
 
+### <a name="next-steps"></a>Дальнейшие действия
+
+Поздравляем! Вы успешно создали надстройку области задач Word! Теперь изучите дополнительные сведения о [разработке надстроек Office с помощью Visual Studio](../develop/develop-add-ins-visual-studio.md).
+
 ---
-
-## <a name="next-steps"></a>Дальнейшие действия
-
-Поздравляем! Вы успешно создали надстройку области задач Word! Чтобы узнать больше о возможностях надстроек Word и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Word.
-
-> [!div class="nextstepaction"]
-> [Руководство по надстройкам Word](../tutorials/word-tutorial.md)
 
 ## <a name="see-also"></a>См. также
 
