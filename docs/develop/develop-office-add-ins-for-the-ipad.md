@@ -3,12 +3,12 @@ title: Разработка надстроек Office для iPad
 description: ''
 ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: 3fbe065e111519f81c39d2255b452eab9491fa9d
-ms.sourcegitcommit: 960ceaf6776ec3ed41a8f5b7bf70b3c95c43386a
+ms.openlocfilehash: 410e42623438e872ee61f2befbc8eb0d0196bbbd
+ms.sourcegitcommit: d5ac9284d1e96dc91a9168d7641e44d88535e1a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "39830190"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "40914876"
 ---
 # <a name="develop-office-add-ins-for-the-ipad"></a>Разработка надстроек Office для iPad
 
@@ -18,7 +18,7 @@ ms.locfileid: "39830190"
 
 |**Задача**|**Описание**|**Ресурсы**|
 |:-----|:-----|:-----|
-|Обновление надстройки для поддержки Office.js версии 1.1.|Обновите до версии 1.1. файлы JavaScript (Office.js и JS-файлы приложения) и файл проверки манифеста надстройки, которые используете в проекте надстройки Office.|[Обновление версии манифеста и API](update-your-javascript-api-for-office-and-manifest-schema-version.md)|
+|Обновление надстройки для поддержки Office.js версии 1.1.|Обновите до версии 1.1. файлы JavaScript (Office.js и JS-файлы приложения) и файл проверки манифеста надстройки, которые используете в проекте надстройки Office.|[Обновление API и версии манифеста](update-your-javascript-api-for-office-and-manifest-schema-version.md)|
 |Следуйте рекомендациям по оформлению пользовательского интерфейса.|Органично интегрируйте в iOS пользовательский интерфейс надстройки.|[Разработка для iOS](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/)|
 |Следуйте рекомендациям по оформлению надстройки.|Убедитесь, что ваша надстройка интересная, полезная и стабильно работает.|[Рекомендации по разработке надстроек Office](../concepts/add-in-development-best-practices.md)|
 |Оптимизируйте надстройку для сенсорного ввода.|Сделайте так, чтобы пользовательский интерфейс поддерживал не только клавиатуру и мышь, но и сенсорный ввод.|[Принципы разработки пользовательского интерфейса](../concepts/add-in-development-best-practices.md#apply-ux-design-principles)|
@@ -38,7 +38,7 @@ ms.locfileid: "39830190"
 
 -  **Создайте надстройку с помощью Visual Studio.**
 
-    При разработке надстройки с помощью Visual Studio можно [задать точки останова и выполнить отладку кода](../develop/create-and-debug-office-add-ins-in-visual-studio.md) в ведущем приложении Office на устройстве с Windows, прежде чем загружать неопубликованную надстройку на iPad или Mac. Так как надстройка, работающая в Office на iOS или Mac, поддерживает те же API, что и надстройка в Office в Windows, код надстройки должен выполняться одинаково на обеих платформах.
+    При разработке надстройки с помощью Visual Studio можно [задать точки останова и выполнить отладку кода](../develop/debug-office-add-ins-in-visual-studio.md) в ведущем приложении Office на устройстве с Windows, прежде чем загружать неопубликованную надстройку на iPad или Mac. Так как надстройка, работающая в Office на iOS или Mac, поддерживает те же API, что и надстройка в Office в Windows, код надстройки должен выполняться одинаково на обеих платформах.
 
 -  **Укажите требования касательно API в манифесте надстройки или с помощью проверок в среде выполнения.**
 
