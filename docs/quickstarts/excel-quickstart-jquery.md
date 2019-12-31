@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Excel
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office.
-ms.date: 12/24/2019
+ms.date: 12/31/2019
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 12eb48fc5f44b506bbce39d01e9bce4ca2a2b5e6
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
+ms.openlocfilehash: 5b437791cea2b3f3d534b8c9053224e381f36a9e
+ms.sourcegitcommit: d5ac9284d1e96dc91a9168d7641e44d88535e1a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851357"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "40914953"
 ---
 # <a name="build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel
 
@@ -64,6 +64,10 @@ ms.locfileid: "40851357"
 
     ![Надстройка Excel](../images/excel-quickstart-addin-3c.png)
 
+### <a name="next-steps"></a>Дальнейшие действия
+
+Поздравляем! Вы успешно создали надстройку области задач Excel! Теперь воспользуйтесь [руководством по надстройкам Excel](../tutorials/excel-tutorial.md), чтобы узнать больше о возможностях надстроек Excel и создать более сложную надстройку.
+
 # <a name="visual-studiotabvisualstudio"></a>[Visual Studio](#tab/visualstudio)
 
 ### <a name="prerequisites"></a>Необходимые компоненты
@@ -71,7 +75,6 @@ ms.locfileid: "40851357"
 [!include[Quick Start prerequisites](../includes/quickstart-vs-prerequisites.md)]
 
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
-
 
 1. В Visual Studio выберите пункт **Создать проект**.
 
@@ -205,14 +208,11 @@ ms.locfileid: "40851357"
 
     ![Надстройка Excel](../images/excel-quickstart-addin-2c.png)
 
+### <a name="next-steps"></a>Дальнейшие действия
+
+Поздравляем! Вы успешно создали надстройку области задач Excel! Теперь изучите дополнительные сведения о [разработке надстроек Office с помощью Visual Studio](../develop/develop-add-ins-visual-studio.md).
+
 ---
-
-## <a name="next-steps"></a>Дальнейшие действия
-
-Поздравляем! Вы успешно создали надстройку области задач Excel! Чтобы узнать больше о возможностях надстроек Excel и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Excel.
-
-> [!div class="nextstepaction"]
-> [Руководство по надстройкам Excel](../tutorials/excel-tutorial.md)
 
 ## <a name="see-also"></a>См. также
 

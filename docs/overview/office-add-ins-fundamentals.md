@@ -3,12 +3,12 @@ title: Создание надстроек Office
 description: Общие сведения о разработке надстроек Office.
 ms.date: 12/24/2019
 localization_priority: Priority
-ms.openlocfilehash: e8e0b3b1ff5578ce75b56534f90be39d4b63d9f5
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
+ms.openlocfilehash: e0deeebb3a1c8761217a9fe33a3ef04a945b2cff
+ms.sourcegitcommit: d5ac9284d1e96dc91a9168d7641e44d88535e1a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851725"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "40915023"
 ---
 # <a name="building-office-add-ins"></a>Создание надстроек Office
 
@@ -33,11 +33,11 @@ ms.locfileid: "40851725"
 - Word
 - Пользовательские функции Excel
 
-Проект можно создать с помощью HTML, CSS и JavaScript или с помощью Angular или React. Для любой платформы можно также выбирать между JavaScript и Typescript. Каждое [5-минутное краткое руководство](../index.md) содержит пошаговые инструкции по созданию надстройки Office с помощью генератора Yeoman.
+Проект можно создать с помощью HTML, CSS и JavaScript или с помощью Angular или React. Для любой платформы можно также выбирать между JavaScript и Typescript. Дополнительные сведения о создании надстроек с помощью генератора Yeoman см. в статье [Разработка надстроек Office с помощью Visual Studio Code](../develop/develop-add-ins-vscode.md).
 
 ### <a name="visual-studio"></a>Visual Studio
 
-С помощью Visual Studio можно создавать надстройки Office для Excel, Word, PowerPoint и Outlook. Проект надстройки Office создается в рамках решения Visual Studio и использует HTML, CSS и JavaScript. [5-минутные краткие руководства](../index.md) для Excel, Word, PowerPoint и Outlook содержат пошаговые инструкции по созданию надстройки Office с помощью Visual Studio. 
+С помощью Visual Studio можно создавать надстройки Office для Excel, Outlook, Word и PowerPoint. Проект надстройки Office создается в рамках решения Visual Studio и использует HTML, CSS и JavaScript. Дополнительные сведения о создании надстроек с помощью Visual Studio см. в статье [Разработка надстроек Office с помощью Visual Studio](../develop/develop-add-ins-visual-studio.md).
 
 [!include[Yeoman vs Visual Studio comparision](../includes/yeoman-generator-recommendation.md)]
 
@@ -164,6 +164,8 @@ API JavaScript для Office включают две различные моде
 - [Обзор платформы надстроек Office](office-add-ins.md)
 - [Основные принципы надстроек Office](../overview/core-concepts-office-add-ins.md)
 - [Разработка надстроек Office](../develop/develop-overview.md)
+- [Разработка надстроек Office с помощью Visual Studio Code](../develop/develop-add-ins-vscode.md)
+- [Разработка надстроек Office с помощью Visual Studio](../develop/develop-add-ins-visual-studio.md)
 - [Проектирование надстроек Office](../design/add-in-design.md)
 - [Тестирование и отладка надстроек Office](../testing/test-debug-office-add-ins.md)
 - [Публикация надстроек Office](../publish/publish.md)

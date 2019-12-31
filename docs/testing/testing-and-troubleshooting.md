@@ -1,14 +1,14 @@
 ---
 title: Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 description: ''
-ms.date: 11/26/2019
+ms.date: 12/31/2019
 localization_priority: Priority
-ms.openlocfilehash: fed23cfde1380e7c5728c78c995d3b89d44451f2
-ms.sourcegitcommit: 05a883a7fd89136301ce35aabc57638e9f563288
+ms.openlocfilehash: 76bb71cebb3c6027ac86e046e1fcfe579b7031c9
+ms.sourcegitcommit: d5ac9284d1e96dc91a9168d7641e44d88535e1a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "39629737"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "40915016"
 ---
 # <a name="troubleshoot-user-errors-with-office-add-ins"></a>Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 
@@ -66,7 +66,7 @@ ms.locfileid: "39629737"
 
 ## <a name="add-in-doesnt-load-in-task-pane-or-other-issues-with-the-add-in-manifest"></a>Надстройка не загружается в область задач или возникают другие проблемы с манифестом надстройки
 
-Сведения об устранении проблем, связанных с манифестом надстройки, см. в статье [Проверка манифеста и устранение связанных с ним неполадок](troubleshoot-manifest.md).
+Сведения об отладке проблем с манифестом см. в статьях [Проверка манифеста надстройки Office](troubleshoot-manifest.md) и [Отладка надстройки с помощью журнала среды выполнения](runtime-logging.md).
 
 
 ## <a name="add-in-dialog-box-cannot-be-displayed"></a>Не отображается диалоговое окно надстройки
@@ -143,4 +143,5 @@ del /s /f /q %LOCALAPPDATA%\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\AC
 - [Отладка надстроек в Office в Интернете](debug-add-ins-in-office-online.md) 
 - [Загрузка неопубликованной надстройки Office на iPad и Mac](sideload-an-office-add-in-on-ipad-and-mac.md)  
 - [Отладка надстроек Office на iPad и Mac](debug-office-add-ins-on-ipad-and-mac.md)  
-- [Проверка манифеста и устранение связанных с ним неполадок](troubleshoot-manifest.md)
+- [Проверка манифеста надстройки Office](troubleshoot-manifest.md)
+- [Отладка надстройки с помощью журнала среды выполнения](runtime-logging.md)

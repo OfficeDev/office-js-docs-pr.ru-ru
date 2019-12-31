@@ -3,12 +3,12 @@ title: Подключение отладчика из области задач
 description: ''
 ms.date: 09/09/2019
 localization_priority: Priority
-ms.openlocfilehash: 39d952cc1162107881f6f6860a36be45c7eb4d30
-ms.sourcegitcommit: 24303ca235ebd7144a1d913511d8e4fb7c0e8c0d
+ms.openlocfilehash: 0b0cbfc2ba86368d0bdfbaa835ce6d904cc31081
+ms.sourcegitcommit: d5ac9284d1e96dc91a9168d7641e44d88535e1a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "36838475"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "40914911"
 ---
 # <a name="attach-a-debugger-from-the-task-pane"></a>Подключение отладчика из области задач
 
@@ -43,5 +43,5 @@ ms.locfileid: "36838475"
 
 ## <a name="see-also"></a>См. также
 
-- [Создание и отладка надстроек Office в Visual Studio](../develop/create-and-debug-office-add-ins-in-visual-studio.md)
+- [Отладка надстроек Office в Visual Studio](../develop/debug-office-add-ins-in-visual-studio.md)
 - [Публикация надстройки Office](../publish/publish.md)

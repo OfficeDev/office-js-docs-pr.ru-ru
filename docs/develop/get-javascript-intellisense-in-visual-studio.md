@@ -3,12 +3,12 @@ title: Использование IntelliSense для JavaScript в Visual Studi
 description: ''
 ms.date: 10/11/2019
 localization_priority: Priority
-ms.openlocfilehash: afe2890015c853c2b70a00d94ea1b6a49296a14a
-ms.sourcegitcommit: 499bf49b41205f8034c501d4db5fe4b02dab205e
+ms.openlocfilehash: 26fd5b4bff2e244d84f2f8c40e3da7049189aadf
+ms.sourcegitcommit: d5ac9284d1e96dc91a9168d7641e44d88535e1a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "37626784"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "40914890"
 ---
 # <a name="get-javascript-intellisense-in-visual-studio-2019"></a>Использование IntelliSense для JavaScript в Visual Studio 2019
 
@@ -84,4 +84,5 @@ function myFunc() {
 
 ## <a name="see-also"></a>См. также
 
-- [Создание и отладка надстроек в Visual Studio](create-and-debug-office-add-ins-in-visual-studio.md)
+- [Разработка надстроек Office с помощью Visual Studio](develop-add-ins-visual-studio.md)
+- [Отладка надстроек Office в Visual Studio](debug-office-add-ins-in-visual-studio.md)

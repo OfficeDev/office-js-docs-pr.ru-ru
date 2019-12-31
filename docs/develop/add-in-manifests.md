@@ -1,14 +1,14 @@
 ---
 title: XML-манифест надстроек Office
 description: ''
-ms.date: 09/26/2019
+ms.date: 12/31/2019
 localization_priority: Priority
-ms.openlocfilehash: 07c8a563eb04ac4b707357f1e7ff43d9a8f2e761
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
+ms.openlocfilehash: 1d130d041819ce7e65046b9cda84fc645bed2c51
+ms.sourcegitcommit: d5ac9284d1e96dc91a9168d7641e44d88535e1a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851280"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "40914995"
 ---
 # <a name="office-add-ins-xml-manifest"></a>XML-манифест надстроек Office
 
@@ -494,9 +494,9 @@ _\*\* SupportUrl требуется только для надстроек ра�
 
 ---
 
-## <a name="validate-and-troubleshoot-issues-with-your-manifest"></a>Проверка манифеста и устранение связанных с ним неполадок
+## <a name="validate-an-office-add-ins-manifest"></a>Проверка манифеста надстройки Office
 
-Сведения об устранении проблем, связанных с манифестом надстройки, см. в статье [Проверка манифеста и устранение связанных с ним неполадок](../testing/troubleshoot-manifest.md). Там указано, как проверить манифест согласно [XSD](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas), а также как отладить манифест с помощью ведения журнала в среде выполнения.
+Сведения о проверке манифеста с помощью [определения схемы XML (XSD)](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas) см. в статье [Проверка манифеста надстройки Office](../testing/troubleshoot-manifest.md).
 
 ## <a name="see-also"></a>См. также
 
@@ -508,6 +508,6 @@ _\*\* SupportUrl требуется только для надстроек ра�
 * [Обновление API и версии манифеста](update-your-javascript-api-for-office-and-manifest-schema-version.md)
 * [Определение аналогичной надстройки COM](make-office-add-in-compatible-with-existing-com-add-in.md)
 * [Запрос разрешений на использование API в надстройках](requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md)
-* [Проверка манифеста и устранение связанных с ним неполадок](../testing/troubleshoot-manifest.md)
+* [Проверка манифеста надстройки Office](../testing/troubleshoot-manifest.md)
 
 [команды надстройки]: create-addin-commands.md

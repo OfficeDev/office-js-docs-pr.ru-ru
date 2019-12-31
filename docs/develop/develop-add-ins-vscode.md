@@ -1,23 +1,23 @@
 ---
 title: Разработка надстроек Office с помощью Visual Studio Code
 description: Как разрабатывать надстройки Office с помощью Visual Studio Code
-ms.date: 12/02/2019
+ms.date: 12/31/2019
 localization_priority: Priority
-ms.openlocfilehash: a18d8a74ff269b32e83c836b06629850873e507b
-ms.sourcegitcommit: 44f1a4a3e1ae3c33d7d5fabcee14b84af94e03da
+ms.openlocfilehash: d6c6cafb28c12b2beb07f0b0cc30d8159e1df1b2
+ms.sourcegitcommit: d5ac9284d1e96dc91a9168d7641e44d88535e1a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "39670500"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "40914868"
 ---
 # <a name="develop-office-add-ins-with-visual-studio-code"></a>Разработка надстроек Office с помощью Visual Studio Code
 
 В этой статье описано, как разработать надстройку Office с помощью [Visual Studio Code (VS Code)](https://code.visualstudio.com).
 
 > [!NOTE]
-> Сведения о создании надстройки Office с помощью Visual Studio см. в статье [Создание и отладка надстроек Office в Visual Studio](create-and-debug-office-add-ins-in-visual-studio.md).
+> Сведения об использовании Visual Studio для создания надстроек Office см. в статье [Разработка надстроек Office в Visual Studio](develop-add-ins-visual-studio.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Необходимые компоненты
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -48,7 +48,9 @@ ms.locfileid: "39670500"
 
 ## <a name="see-also"></a>См. также
 
-- [5-минутные краткие руководства](../index.md)
-- [Изучение API JavaScript для Office с помощью Script Lab](../overview/explore-with-script-lab.md)
+- [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
+- [Основные принципы надстроек Office](../overview/core-concepts-office-add-ins.md)
+- [Разработка надстроек Office](../develop/develop-overview.md)
+- [Проектирование надстроек Office](../design/add-in-design.md)
 - [Тестирование и отладка надстроек Office](../testing/test-debug-office-add-ins.md)
-- [Развертывание и публикация надстройки Office](../publish/publish.md)
+- [Публикация надстроек Office](../publish/publish.md)

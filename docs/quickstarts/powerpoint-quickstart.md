@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач PowerPoint
 description: Узнайте, как создать простую надстройку области задач PowerPoint, используя API JS для Office.
-ms.date: 12/24/2019
+ms.date: 12/31/2019
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: fbf8ca6c52bd5a71f3db24d9661d7cce5f6004d2
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
+ms.openlocfilehash: 56168749b907cdde3b9ea235d55805e1084f020c
+ms.sourcegitcommit: d5ac9284d1e96dc91a9168d7641e44d88535e1a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851350"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "40914946"
 ---
 # <a name="build-your-first-powerpoint-task-pane-add-in"></a>Создание первой надстройки области задач PowerPoint
 
@@ -85,6 +85,10 @@ ms.locfileid: "40851350"
 4. В нижней части области задач выберите ссылку **Выполнить**, чтобы вставить текст "Hello World" в текущий слайд.
 
     ![Снимок экрана PowerPoint с изображением собаки и надписью "Hello World" на слайде](../images/powerpoint_quickstart_addin_3c.png)
+
+### <a name="next-steps"></a>Дальнейшие действия
+
+Поздравляем! Вы успешно создали надстройку области задач PowerPoint! Теперь воспользуйтесь [руководством по надстройкам PowerPoint](../tutorials/powerpoint-tutorial.md), чтобы узнать больше о возможностях надстроек PowerPoint и создать более сложную надстройку.
 
 # <a name="visual-studiotabvisualstudio"></a>[Visual Studio](#tab/visualstudio)
 
@@ -245,14 +249,11 @@ ms.locfileid: "40851350"
 
     ![Снимок экрана PowerPoint с изображением собаки и надписью "Hello World" на слайде](../images/powerpoint_quickstart_addin_3.png)
 
+### <a name="next-steps"></a>Дальнейшие действия
+
+Поздравляем! Вы успешно создали надстройку области задач PowerPoint! Теперь изучите дополнительные сведения о [разработке надстроек Office с помощью Visual Studio](../develop/develop-add-ins-visual-studio.md).
+
 ---
-
-## <a name="next-steps"></a>Дальнейшие действия
-
-Поздравляем! Вы успешно создали надстройку области задач PowerPoint! Чтобы узнать больше о возможностях надстроек PowerPoint и создать более сложную надстройку, воспользуйтесь руководством по надстройкам PowerPoint.
-
-> [!div class="nextstepaction"]
-> [Руководство по надстройкам PowerPoint](../tutorials/powerpoint-tutorial.md)
 
 ## <a name="see-also"></a>См. также
 
