@@ -119,8 +119,11 @@
               href: develop/develop-add-ins-vscode.md
             - name: Разработка надстроек с помощью Visual Studio
               items:
-                - name: Создание и отладка надстроек Office в Visual Studio
-                  href: develop/create-and-debug-office-add-ins-in-visual-studio.md
+                - name: Обзор
+                  href: develop/develop-add-ins-visual-studio.md
+                  displayName: Visual Studio
+                - name: Отладка надстроек Office в Visual Studio
+                  href: develop/debug-office-add-ins-in-visual-studio.md
                 - name: Использование IntelliSense для JavaScript в Visual Studio
                   href: develop/get-javascript-intellisense-in-visual-studio.md
                 - name: Преобразование JavaScript в TypeScript
@@ -236,11 +239,15 @@
               href: testing/sideload-an-office-add-in-on-ipad-and-mac.md
             - name: Отладка на компьютере Mac
               href: testing/debug-office-add-ins-on-ipad-and-mac.md
+        - name: Очистка кэша Office
+          href: testing/clear-cache.md
+        - name: Отладка с помощью журнала среды выполнения
+          href: testing/runtime-logging.md
         - name: 'Устранение ошибок, с которыми сталкиваются пользователи'
           href: testing/testing-and-troubleshooting.md
         - name: Тестирование удобства использования
           href: develop/usability-testing.md
-        - name: Проверка манифеста надстройки и устранение неполадок
+        - name: Проверка манифеста надстройки
           href: testing/troubleshoot-manifest.md
     - name: Публикация
       items:
