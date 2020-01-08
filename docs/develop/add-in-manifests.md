@@ -1,14 +1,14 @@
 ---
 title: XML-манифест надстроек Office
 description: ''
-ms.date: 12/31/2019
+ms.date: 01/06/2020
 localization_priority: Priority
-ms.openlocfilehash: 1d130d041819ce7e65046b9cda84fc645bed2c51
-ms.sourcegitcommit: d5ac9284d1e96dc91a9168d7641e44d88535e1a7
+ms.openlocfilehash: 90fef1186db6411290daf9b6aef14d8d81d7a13e
+ms.sourcegitcommit: abe8188684b55710261c69e206de83d3a6bd2ed3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "40914995"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "40970095"
 ---
 # <a name="office-add-ins-xml-manifest"></a>XML-манифест надстроек Office
 
@@ -30,6 +30,8 @@ XML-файл манифеста надстройки Office описывает �
 
 > [!NOTE]
 > Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в интерфейсе Office, убедитесь, что она соответствует [политикам проверки AppSource](/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка должна работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице со сведениями о доступности и ведущих приложениях для надстроек Office](../overview/office-add-in-availability.md).
+
+[!include[manifest guidance](../includes/manifest-guidance.md)]
 
 ## <a name="required-elements"></a>Обязательные элементы
 

@@ -1,16 +1,16 @@
 ---
-ms.date: 09/26/2019
+ms.date: 12/28/2019
 description: Создание пользовательских функций в Excel с помощью JavaScript.
 title: Создание пользовательских функций в Excel
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 252ff1badd935dda161f474bb7fefa8e782fd1c4
-ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
+ms.openlocfilehash: 331fe37bdeed55123cb1530f235fc31c00735548
+ms.sourcegitcommit: abe8188684b55710261c69e206de83d3a6bd2ed3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "40814467"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "40969554"
 ---
 # <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel 
 
@@ -136,6 +136,8 @@ XML-файл манифеста для надстройки, который оп
 
 > [!NOTE]
 > Функции в Excel имеют в начале пространство имен, указанное в XML-файле манифеста. Пространство имен функции предшествует названию функции, и они будут разделены точкой. Например, чтобы вызвать функцию `ADD42` в ячейке на листе Excel, введите `=CONTOSO.ADD42`, так как `CONTOSO` является пространством имен, а `ADD42` — это имя функции, определяемой в JSON-файл. Пространство имен служит в качестве идентификатора для вашей компании или надстройки. Пространство имен может содержать только буквы, цифры и точки.
+
+[!include[manifest guidance](../includes/manifest-guidance.md)]
 
 ## <a name="coauthoring"></a>Совместное редактирование
 

@@ -1,14 +1,14 @@
 ---
-ms.date: 07/10/2019
+ms.date: 12/28/2019
 description: Узнайте о требованиях к именам пользовательских функций Excel и Избегайте распространенных ловушек именования.
 title: Рекомендации по именованию пользовательских функций в Excel
 localization_priority: Normal
-ms.openlocfilehash: 79d0bfb069fe5abefeb6d0e88428d0728f3869e3
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: 547d1edd1a8103afce8b233f77085296cd85642b
+ms.sourcegitcommit: abe8188684b55710261c69e206de83d3a6bd2ed3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35771535"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "40969518"
 ---
 # <a name="naming-guidelines"></a>Рекомендации по именованию
 
@@ -35,7 +35,7 @@ Excel использует прописные буквы для встроенн
 
 - Для ячеек между a1 и XFD1048576 или ячейками между ними между R1048576C16384.
 
-- Любая функция макроса Excel 4,0 (например `RUN`, `ECHO`).  Полный список этих функций представлен в статье справочный [документ по функциям макросов Excel](https://d13ot9o61jdzpp.cloudfront.net/files/Excel%204.0%20Macro%20Functions%20Reference.pdf).
+- Любая функция макроса Excel 4,0 (например `RUN`, `ECHO`).  Полный список этих функций представлен в статье [справочный документ по функциям макросов Excel](https://d13ot9o61jdzpp.cloudfront.net/files/Excel%204.0%20Macro%20Functions%20Reference.pdf).
 
 ## <a name="naming-conflicts"></a>Конфликты имен
 
@@ -51,6 +51,8 @@ Excel использует прописные буквы для встроенн
 - Согласованно используйте одни и те же команды для функций, которые выполняют похожие действия. `=DELETEZIPCODE` Например, используйте `=DELETEADDRESS`и, а не `=DELETEZIPCODE` и. `=REMOVEADDRESS`
 - При указании имени потоковой функции рекомендуется добавить заметку к этому результату в описании функции или добавить `STREAM` ее в конец имени функции.
 
+[!include[manifest guidance](../includes/manifest-guidance.md)]
+
 ## <a name="localizing-function-names"></a>Локализация имен функций
 
 Вы можете локализовать имена функций для разных языков с помощью отдельных файлов JSON и переопределить значения в файле манифеста надстройки. Рекомендуется избегать использования функций `id` `name` , встроенных в Excel, на другом языке, так как это может конфликтовать с локализованными функциями.
@@ -63,5 +65,5 @@ Excel использует прописные буквы для встроенн
 ## <a name="see-also"></a>См. также
 
 * [Метаданные пользовательских функций](custom-functions-json.md)
-* [Руководство по настраиваемым функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
+* [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
 * [Среда выполнения для пользовательских функций Excel](custom-functions-runtime.md)
