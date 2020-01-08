@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Word
 description: Сведения о наборе обязательных элементов надстройки Office для сборок Word
-ms.date: 07/17/2019
+ms.date: 01/06/2020
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 4af7a9c14489d148ffdc06a68ad6c26bf326abc5
-ms.sourcegitcommit: 6d9b4820a62a914c50cef13af8b80ce626034c26
+ms.openlocfilehash: c90daafe46d301b404ee902b38bb7417562adc44
+ms.sourcegitcommit: abe8188684b55710261c69e206de83d3a6bd2ed3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "35804627"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "40969533"
 ---
 # <a name="word-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Word
 
@@ -32,7 +32,10 @@ ms.locfileid: "35804627"
 | [WordApi 1.1](word-api-1-1-requirement-set.md) | Версия 1509 (сборка 4266.1001) или более поздняя| Январь 2016 г., версия 1.18 или выше | Январь 2016 г., версия 15.19 или выше| Сентябрь 2016 г. |
 
 > [!NOTE]
-> Номер сборки Office 2016, установленной с помощью MSI, — 16.0.4266.1001. Эта версия содержит только набор требований WordApi 1.1.
+> Бессрочные версии Office поддерживают следующие наборы обязательных элементов:
+>
+> - Office 2019 поддерживает WordApi 1.3 и более ранние версии.
+> - Office 2016 поддерживает только набор обязательных элементов WordApi 1.1.
 
 ## <a name="office-versions-and-build-numbers"></a>Номера версий и сборок Office
 

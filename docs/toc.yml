@@ -631,6 +631,9 @@
         - name: Наборы требований
           href: excel/custom-functions-requirement-sets.md
           displayName: 'Excel, Custom Functions'
+        - name: Возвращение динамического массива
+          href: excel/custom-functions-dynamic-arrays.md
+          displayName: 'Excel, Custom Functions'
         - name: Среда выполнения
           href: excel/custom-functions-runtime.md
           displayName: 'Excel, Custom Functions'

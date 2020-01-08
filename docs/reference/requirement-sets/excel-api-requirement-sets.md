@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Excel
 description: Сведения о наборе обязательных элементов надстройки Office для сборок Excel
-ms.date: 12/24/2019
+ms.date: 01/06/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: ce3a51c37128627765b587d1baef35d051c52917
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
+ms.openlocfilehash: 742c2e925ed7b1be8e1449cd9021c6cf03519d7b
+ms.sourcegitcommit: abe8188684b55710261c69e206de83d3a6bd2ed3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851378"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "40969526"
 ---
 # <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
 
@@ -40,7 +40,10 @@ ms.locfileid: "40851378"
 | [ExcelApi 1.1](excel-api-1-1-requirement-set.md)  | Версия 1509 (сборка 4266.1001) или более поздняя   | 1.19 или более поздняя | 15.20 или более поздняя | Январь 2016 г. |
 
 > [!NOTE]
-> Номер сборки Office 2016, установленной с помощью MSI, — 16.0.4266.1001. Эта версия содержит только набор обязательных элементов ExcelApi 1.1.
+> Бессрочные версии Office поддерживают следующие наборы обязательных элементов:
+>
+> - Office 2019 поддерживает ExcelApi 1.8 и более ранние версии.
+> - Office 2016 поддерживает только набор обязательных элементов ExcelApi 1.1.
 
 ## <a name="office-versions-and-build-numbers"></a>Номера версий и сборок Office
 
