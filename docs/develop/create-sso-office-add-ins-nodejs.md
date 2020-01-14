@@ -1,25 +1,25 @@
 ---
 title: Создание надстройки Office на платформе Node.js с использованием единого входа
 description: Узнайте, как создать надстройку на основе Node.js, использующую единый вход Office
-ms.date: 11/20/2019
+ms.date: 01/13/2020
 localization_priority: Priority
-ms.openlocfilehash: 362ca4a534800a683284b049e6e53776b1aa7f38
-ms.sourcegitcommit: 013886c1b08ef2b378cf80bb88bc73ec56c3e869
+ms.openlocfilehash: 140a18628ae03d842482721394d976207cb7fa37
+ms.sourcegitcommit: 0dacbe7c80ed387099e3ec21e151f8990b181ede
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "39191741"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "41111069"
 ---
 # <a name="create-a-nodejs-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office на платформе Node.js с использованием единого входа (предварительная версия)
 
 Ваша веб-надстройка Office может использовать процедуру входа в Office для авторизации пользователей в надстройке и Microsoft Graph. При этом им не потребуется входить повторно. Общие сведения см. в статье [Включение единого входа в надстройке Office](sso-in-office-add-ins.md).
 
-Из этой статьи вы узнаете, как включить единый вход в надстройке, созданной с помощью Node.js и Express.
+Из этой статьи вы узнаете, как включить единый вход в надстройке, созданной с помощью Node.js и Express. Аналогичная статья, посвященная надстройке на основе ASP.NET, — [Создание надстройки Office на платформе ASP.NET с использованием единого входа](create-sso-office-add-ins-aspnet.md).
 
 > [!NOTE]
-> Аналогичная статья, посвященная надстройке на основе ASP.NET, — [Создание надстройки Office на платформе ASP.NET с использованием единого входа](create-sso-office-add-ins-aspnet.md).
+> В качестве альтернативы выполнения действий, описанных в этой статье, для создания надстройки Office на платформе Node.js с использованием единого входа можно использовать генератор Yeoman. Генератор Yeoman упрощает процесс создания надстройки с использованием единого входа, автоматизируя действия, необходимые для настройки единого входа в Azure, и создавая код, необходимый для его использования в надстройке. Дополнительные сведения см. в статье [Краткое руководство по использованию единого входа (SSO)](../quickstarts/sso-quickstart.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Необходимые компоненты
 
 * [Node и npm](https://nodejs.org/) версии 10.15.0 или более поздней.
 
@@ -33,7 +33,7 @@ ms.locfileid: "39191741"
 
 * Несколько файлов и папок, сохраненных в OneDrive для бизнеса в составе подписки на Office 365.
 
-* Клиент Microsoft Azure. Эта надстройка требует наличия Azure Active Directory (AD). В Azure AD доступны службы идентификации, которые приложения используют для проверки подлинности и авторизации. Пробную подписку можно получить на сайте [Microsoft Azure](https://account.windowsazure.com/SignUp).
+* Подписка на Microsoft Azure. Эта надстройка требует наличия Azure Active Directory (AD). В Azure AD доступны службы идентификации, которые приложения используют для проверки подлинности и авторизации. Пробную подписку можно получить на сайте [Microsoft Azure](https://account.windowsazure.com/SignUp).
 
 ## <a name="set-up-the-starter-project"></a>Настройка начального проекта
 

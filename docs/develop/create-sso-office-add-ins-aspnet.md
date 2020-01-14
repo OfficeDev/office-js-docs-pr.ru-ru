@@ -3,12 +3,12 @@ title: Создание надстройки Office, в которой испо�
 description: ''
 ms.date: 12/04/2019
 localization_priority: Priority
-ms.openlocfilehash: dac45fd713de8787bd6e51f68d139915d3f572f9
-ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
+ms.openlocfilehash: ed648b82804d6658f3b92c5cba8d636e6dddf34b
+ms.sourcegitcommit: 0dacbe7c80ed387099e3ec21e151f8990b181ede
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "40814105"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "41111062"
 ---
 # <a name="create-an-aspnet-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office, в которой используется единый вход, на платформе ASP.NET (предварительная версия)
 
@@ -28,7 +28,7 @@ ms.locfileid: "40814105"
 
 * Несколько файлов и папок, сохраненных в OneDrive для бизнеса в составе подписки на Office 365.
 
-* Клиент Microsoft Azure. Эта надстройка требует наличия Azure Active Directory (AD). В Azure AD доступны службы идентификации, которые приложения используют для проверки подлинности и авторизации. Пробную подписку можно получить на сайте [Microsoft Azure](https://account.windowsazure.com/SignUp).
+* Подписка на Microsoft Azure. Эта надстройка требует наличия Azure Active Directory (AD). В Azure AD доступны службы идентификации, которые приложения используют для проверки подлинности и авторизации. Пробную подписку можно получить на сайте [Microsoft Azure](https://account.windowsazure.com/SignUp).
 
 ## <a name="set-up-the-starter-project"></a>Настройка начального проекта
 
