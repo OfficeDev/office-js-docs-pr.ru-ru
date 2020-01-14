@@ -8,12 +8,12 @@ ms.author: o365devx
 ms.prod: non-product-specific
 ms.date: 12/24/2019
 localization_priority: Normal
-ms.openlocfilehash: 09e07d8fff865969f03f2b0547f04dddb130df6f
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
+ms.openlocfilehash: 2e0e8932214f398169f8483b4ca8bf1a65ec16a5
+ms.sourcegitcommit: 0dacbe7c80ed387099e3ec21e151f8990b181ede
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851406"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "41111013"
 ---
 # <a name="office-add-ins-documentation"></a>Документация по надстройкам Office
 
@@ -84,6 +84,7 @@ ms.locfileid: "40851406"
                             <li><a style="font-size: 1rem;" href="quickstarts/powerpoint-quickstart.md">Краткое руководство по надстройкам PowerPoint</a></li>
                             <li><a style="font-size: 1rem;" href="quickstarts/project-quickstart.md">Краткое руководство по надстройке Project</a></li>
                             <li><a style="font-size: 1rem;" href="quickstarts/word-quickstart.md">Краткое руководство по надстройкам Word</a></li>
+                            <li><a style="font-size: 1rem;" href="quickstarts/sso-quickstart.md">Краткое руководство по единому входу (SSO)</a></li>
                         </ul>
                     </div>
                 </div>
@@ -152,7 +153,7 @@ ms.locfileid: "40851406"
                 </div>
             </div>
             <div class="cardText">
-                <h3>Основные принципы</h3>
+                <h3>Основные понятия</h3>
                 <p>Сведения о платформе и важных понятиях, которые применяются при создании любой надстройки Office.</p>
             </div>
         </a>
