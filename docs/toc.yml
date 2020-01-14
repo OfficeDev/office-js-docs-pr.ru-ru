@@ -24,6 +24,8 @@
           href: quickstarts/project-quickstart.md
         - name: Надстройка Word
           href: quickstarts/word-quickstart.md
+        - name: Единый вход (SSO)
+          href: quickstarts/sso-quickstart-redirect.md
     - name: Изучение API JS для Office с помощью Script Lab
       href: overview/explore-with-script-lab.md
       displayName: 'Excel, Word, PowerPoint'
@@ -76,6 +78,8 @@
               items:
                 - name: Активация единого входа
                   href: develop/sso-in-office-add-ins.md
+                - name: Краткое руководство по единому входу
+                  href: quickstarts/sso-quickstart.md
                 - name: Авторизация в Microsoft Graph с помощью единого входа
                   href: develop/authorize-to-microsoft-graph.md
                 - name: Создание надстройки с единым входом с помощью ASP.NET
@@ -364,6 +368,10 @@
               href: reference/manifest/requirements.md
             - name: Rule
               href: reference/manifest/rule.md
+            - name: Runtime
+              href: reference/manifest/runtime.md
+            - name: Runtimes
+              href: reference/manifest/runtimes.md
             - name: Set
               href: reference/manifest/set.md
             - name: Sets
