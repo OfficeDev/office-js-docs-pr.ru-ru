@@ -3,12 +3,12 @@ title: Конфиденциальность и безопасность надс
 description: ''
 ms.date: 09/26/2019
 localization_priority: Priority
-ms.openlocfilehash: b40b10a0f2475a9013eb4186c852e07bfb60154f
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
+ms.openlocfilehash: 88f03bed084484a98d4719fb9caacf174b13acda
+ms.sourcegitcommit: 0dacbe7c80ed387099e3ec21e151f8990b181ede
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851301"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "41110936"
 ---
 # <a name="privacy-and-security-for-office-add-ins"></a>Конфиденциальность и безопасность надстроек Office
 
@@ -168,7 +168,7 @@ function loadVideoDetails(videoIndex) {
 }
 ```
 
-Exchange и SharePoint предоставляют прокси-серверы на стороне клиента, чтобы обеспечить междоменный доступ. В общем случае в интрасетях действуют более мягкие политики единого домена, чем в Интернете. Дополнительные сведения см. в статьях [Политика единого домена. Часть 1: без просмотра](https://blogs.msdn.com/b/ieinternals/archive/2009/08/28/explaining-same-origin-policy-part-1-deny-read.aspx) и [Решение вопросов, которые связаны с ограничениями, накладываемыми политикой единого домена, в надстройках Office](../develop/addressing-same-origin-policy-limitations.md).
+Exchange и SharePoint предоставляют прокси-серверы на стороне клиента, чтобы обеспечить междоменный доступ. В общем случае в интрасетях действуют более мягкие политики единого домена, чем в Интернете. Дополнительные сведения см. в статьях [Политика единого домена. Часть 1: без просмотра](/archive/blogs/ieinternals/same-origin-policy-part-1-no-peeking) и [Решение вопросов, которые связаны с ограничениями, накладываемыми политикой единого домена, в надстройках Office](../develop/addressing-same-origin-policy-limitations.md).
 
 ### <a name="tips-to-prevent-malicious-cross-site-scripting"></a>Советы по предотвращению вредоносных межсайтовых сценариев
 
@@ -265,6 +265,6 @@ Exchange и SharePoint предоставляют прокси-серверы н
 - [Ограничения активации и API JavaScript для надстроек Outlook](/outlook/add-ins/limits-for-activation-and-javascript-api-for-outlook-add-ins)
 - [Работа с ограничениями по принципу одинакового источника в надстройках Office](/office/dev/add-ins/develop/addressing-same-origin-policy-limitations)
 - [Принцип одинакового источника](https://www.w3.org/Security/wiki/Same_Origin_Policy)
-- [Принцип одинакового источника. Часть 1. Без просмотра](https://blogs.msdn.com/b/ieinternals/archive/2009/08/28/explaining-same-origin-policy-part-1-deny-read.aspx)
+- [Принцип одинакового источника. Часть 1. Без просмотра](/archive/blogs/ieinternals/same-origin-policy-part-1-no-peeking)
 - [Принцип одинакового источника для JavaScript](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy)
 - [Защищенный режим Internet Explorer](https://support.microsoft.com/help/2761180/apps-for-office-don-t-start-if-you-disable-protected-mode-for-the-restricted-sites-zone-in-internet-explorer)
