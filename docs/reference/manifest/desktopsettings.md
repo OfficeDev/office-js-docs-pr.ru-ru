@@ -1,30 +1,45 @@
 ---
 title: Элемент DesktopSettings в файле манифеста
 description: ''
-ms.date: 10/09/2018
+ms.date: 01/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 50c5356798151c04132ed1873180b91f40321f11
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 6dfa69d407e267a1cbcfdeaad0bdf9cdf75c1465
+ms.sourcegitcommit: dc42e0276007f8ab006028b9cd0cc1526c1bd100
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450599"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "41120644"
 ---
-# <a name="desktopsettings-element"></a><span data-ttu-id="293a4-102">Элемент DesktopSettings</span><span class="sxs-lookup"><span data-stu-id="293a4-102">DesktopSettings element</span></span>
+# <a name="desktopsettings-element"></a><span data-ttu-id="b1d9c-102">Элемент DesktopSettings</span><span class="sxs-lookup"><span data-stu-id="b1d9c-102">DesktopSettings element</span></span>
 
-<span data-ttu-id="293a4-103">Задает исходное расположение и параметры элемента управления, которые применяются при использовании почтовой надстройки на настольном компьютере.</span><span class="sxs-lookup"><span data-stu-id="293a4-103">Specifies source location and control settings that apply when your mail add-in is used on a desktop computer.</span></span>
+<span data-ttu-id="b1d9c-103">Задает исходное расположение и параметры элемента управления, которые применяются при использовании почтовой надстройки на настольном компьютере.</span><span class="sxs-lookup"><span data-stu-id="b1d9c-103">Specifies source location and control settings that apply when your mail add-in is used on a desktop computer.</span></span>
 
-<span data-ttu-id="293a4-104">**Тип надстройки:** почтовая</span><span class="sxs-lookup"><span data-stu-id="293a4-104">**Add-in type:** Mail</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="b1d9c-104">`DesktopSettings` Элемент доступен только в классическом приложении Outlook в Интернете (как правило, подключенный к старым версиям локального сервера Exchange Server) и Outlook 2013 в Windows.</span><span class="sxs-lookup"><span data-stu-id="b1d9c-104">The `DesktopSettings` element is available only in classic Outlook on the web (usually connected to older versions of on-premises Exchange server) and Outlook 2013 on Windows.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="293a4-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="293a4-105">Syntax</span></span>
+<span data-ttu-id="b1d9c-105">**Тип надстройки:** почтовая</span><span class="sxs-lookup"><span data-stu-id="b1d9c-105">**Add-in type:** Mail</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="b1d9c-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b1d9c-106">Syntax</span></span>
 
 ```XML
-<DesktopSettings>
-   ...
-</DesktopSettings>
+<Form xsi:type="ItemRead">
+   <!--website.html is a placeholder for your own add-in website.-->
+   <DesktopSettings>
+      <SourceLocation DefaultValue="https://website.html" />
+      <!--RequestedHeight must be between 240px to 800px, inclusive.-->
+      <RequestedHeight>360</RequestedHeight>
+   </DesktopSettings>
+   <TabletSettings>
+      <SourceLocation DefaultValue="https://website.html" />
+      <!--RequestedHeight must be between 240px to 800px, inclusive.-->
+      <RequestedHeight>360</RequestedHeight>
+   </TabletSettings>
+   <PhoneSettings>
+      <SourceLocation DefaultValue="https://website.html" />
+   </PhoneSettings>
+</Form>
 ```
 
-## <a name="contained-in"></a><span data-ttu-id="293a4-106">Содержится в</span><span class="sxs-lookup"><span data-stu-id="293a4-106">Contained in</span></span>
+## <a name="contained-in"></a><span data-ttu-id="b1d9c-107">Содержится в</span><span class="sxs-lookup"><span data-stu-id="b1d9c-107">Contained in</span></span>
 
-[<span data-ttu-id="293a4-107">Form</span><span class="sxs-lookup"><span data-stu-id="293a4-107">Form</span></span>](form.md)
-
+[<span data-ttu-id="b1d9c-108">Form</span><span class="sxs-lookup"><span data-stu-id="b1d9c-108">Form</span></span>](form.md)
