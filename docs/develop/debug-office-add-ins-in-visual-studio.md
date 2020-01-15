@@ -3,12 +3,12 @@ title: Отладка надстроек Office в Visual Studio
 description: Используйте Visual Studio для отладки надстроек Office в настольном клиенте Office для Windows
 ms.date: 12/31/2019
 localization_priority: Priority
-ms.openlocfilehash: 15121834dc53e31c8872b8ff87ce6a1a58608a6f
-ms.sourcegitcommit: d5ac9284d1e96dc91a9168d7641e44d88535e1a7
+ms.openlocfilehash: bf8e20891709f8d9d4d4e786976730c58406b803
+ms.sourcegitcommit: dc42e0276007f8ab006028b9cd0cc1526c1bd100
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "40915081"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "41120630"
 ---
 # <a name="debug-office-add-ins-in-visual-studio"></a>Отладка надстроек Office в Visual Studio
 
@@ -20,6 +20,8 @@ ms.locfileid: "40915081"
 ## <a name="enable-debugging-for-add-in-commands-and-ui-less-code"></a>Включение отладки для команд надстроек и кода без пользовательского интерфейса
 
 Когда Visual Studio выполняет отладку Office для Windows, надстройка размещается в экземпляре браузера Microsoft Internet Explorer или Microsoft Edge. Сведения об определении браузера, используемого на компьютере разработки, см. в статье [Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md).
+> [!NOTE]
+> В следующей процедуре переменная среды JS_Debug больше не требуется. Дополнительные сведения см. в статье [Действия отладки в веб-надстройках Office](https://developercommunity.visualstudio.com/content/problem/740413/office-development-inconsistent-script-debugging-b.html) на форуме технической поддержки сообщества разработчиков Майкрософт.
 
 [!include[Enable debugging on Microsoft Edge DevTools](../includes/enable-debugging-on-edge-devtools.md)]
 

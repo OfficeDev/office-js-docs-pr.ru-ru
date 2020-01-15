@@ -1,22 +1,18 @@
 ---
 title: Среда выполнения в файле манифеста
 description: ''
-ms.date: 01/06/2020
+ms.date: 01/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 68def44ba74733934198ac3b32fa1fe649156766
-ms.sourcegitcommit: 0dacbe7c80ed387099e3ec21e151f8990b181ede
+ms.openlocfilehash: 945a30527632b23a594d7bfb82cec94e74754249
+ms.sourcegitcommit: dc42e0276007f8ab006028b9cd0cc1526c1bd100
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "41111172"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "41120637"
 ---
 # <a name="runtime-element"></a>Элемент среды выполнения
 
-Эта функция доступна предварительная версия. Дочерний элемент [`<Runtimes>`](runtime.md) элемента. Этот элемент упрощает совместное использование глобальных данных и вызовов функций между пользовательскими функциями Excel и областью задач надстройки. 
-
-## <a name="contained-in"></a>Содержится в
-
--[Сред выполнения](runtimes.md)
+Эта функция доступна предварительная версия. Дочерний элемент [`<Runtimes>`](runtime.md) элемента. Этот элемент упрощает совместное использование глобальных данных и вызовов функций между пользовательскими функциями Excel и областью задач надстройки.
 
 **Тип надстройки:** надстройки области задач
 
@@ -27,6 +23,10 @@ ms.locfileid: "41111172"
     <Runtime resid="TaskPaneAndCustomFunction.Url" lifetime="long" />
 </Runtimes>
 ```
+
+## <a name="contained-in"></a>Содержится в
+
+-[Сред выполнения](runtimes.md)
 
 ## <a name="attributes"></a>Атрибуты
 
