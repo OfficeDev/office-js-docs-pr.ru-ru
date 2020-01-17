@@ -1,28 +1,30 @@
 ---
-ms.date: 07/15/2019
+ms.date: 01/14/2020
 description: Узнайте, как реализовать переменные настраиваемые функции потоковой и автономной работы.
 title: Пересчитываемые значения в функциях
 localization_priority: Normal
-ms.openlocfilehash: 92d61aff4c3f4b4cbc79a3981db12ed1ce0ffb9d
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: 57a41578f400b10806fc169fed09db7d7a66ce84
+ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35771648"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "41217050"
 ---
-# <a name="volatile-values-in-functions"></a><span data-ttu-id="8f8cd-103">Пересчитываемые значения в функциях</span><span class="sxs-lookup"><span data-stu-id="8f8cd-103">Volatile values in functions</span></span>
+# <a name="volatile-values-in-functions"></a><span data-ttu-id="b5cd0-103">Пересчитываемые значения в функциях</span><span class="sxs-lookup"><span data-stu-id="b5cd0-103">Volatile values in functions</span></span>
 
-<span data-ttu-id="8f8cd-104">Функции volatile — это функции, в которых значение изменяется каждый раз при вычислении ячейки.</span><span class="sxs-lookup"><span data-stu-id="8f8cd-104">Volatile functions are functions in which the value changes each time the cell is calculated.</span></span> <span data-ttu-id="8f8cd-105">Значение может измениться, даже если ни один из аргументов функции не изменится.</span><span class="sxs-lookup"><span data-stu-id="8f8cd-105">The value can change even if none of the function's arguments change.</span></span> <span data-ttu-id="8f8cd-106">Эти функции пересчитываются при каждом пересчете в Excel.</span><span class="sxs-lookup"><span data-stu-id="8f8cd-106">These functions recalculate every time Excel recalculates.</span></span> <span data-ttu-id="8f8cd-107">К примеру, представьте себе ячейку, вызывающую функцию `NOW`.</span><span class="sxs-lookup"><span data-stu-id="8f8cd-107">For example, imagine a cell that calls the function `NOW`.</span></span> <span data-ttu-id="8f8cd-108">При каждом вызове `NOW` она будет автоматически возвращать текущую дату и время.</span><span class="sxs-lookup"><span data-stu-id="8f8cd-108">Every time `NOW` is called, it will automatically return the current date and time.</span></span>
+<span data-ttu-id="b5cd0-104">Функции volatile — это функции, в которых значение изменяется каждый раз при вычислении ячейки.</span><span class="sxs-lookup"><span data-stu-id="b5cd0-104">Volatile functions are functions in which the value changes each time the cell is calculated.</span></span> <span data-ttu-id="b5cd0-105">Значение может измениться, даже если ни один из аргументов функции не изменится.</span><span class="sxs-lookup"><span data-stu-id="b5cd0-105">The value can change even if none of the function's arguments change.</span></span> <span data-ttu-id="b5cd0-106">Эти функции пересчитываются при каждом пересчете в Excel.</span><span class="sxs-lookup"><span data-stu-id="b5cd0-106">These functions recalculate every time Excel recalculates.</span></span> <span data-ttu-id="b5cd0-107">К примеру, представьте себе ячейку, вызывающую функцию `NOW`.</span><span class="sxs-lookup"><span data-stu-id="b5cd0-107">For example, imagine a cell that calls the function `NOW`.</span></span> <span data-ttu-id="b5cd0-108">При каждом вызове `NOW` она будет автоматически возвращать текущую дату и время.</span><span class="sxs-lookup"><span data-stu-id="b5cd0-108">Every time `NOW` is called, it will automatically return the current date and time.</span></span>
 
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
-<span data-ttu-id="8f8cd-109">В Excel есть несколько встроенных переменных функций, таких как `RAND` и `TODAY`.</span><span class="sxs-lookup"><span data-stu-id="8f8cd-109">Excel contains several built-in volatile functions, such as `RAND` and `TODAY`.</span></span> <span data-ttu-id="8f8cd-110">Полный список переменных функций Excel см. в статье [Переменные и постоянные функции](/office/client-developer/excel/excel-recalculation#volatile-and-non-volatile-functions).</span><span class="sxs-lookup"><span data-stu-id="8f8cd-110">For a comprehensive list of Excel’s volatile functions, see [Volatile and Non-Volatile Functions](/office/client-developer/excel/excel-recalculation#volatile-and-non-volatile-functions).</span></span>
+<span data-ttu-id="b5cd0-109">В Excel есть несколько встроенных переменных функций, таких как `RAND` и `TODAY`.</span><span class="sxs-lookup"><span data-stu-id="b5cd0-109">Excel contains several built-in volatile functions, such as `RAND` and `TODAY`.</span></span> <span data-ttu-id="b5cd0-110">Полный список переменных функций Excel см. в статье [Переменные и постоянные функции](/office/client-developer/excel/excel-recalculation#volatile-and-non-volatile-functions).</span><span class="sxs-lookup"><span data-stu-id="b5cd0-110">For a comprehensive list of Excel’s volatile functions, see [Volatile and Non-Volatile Functions](/office/client-developer/excel/excel-recalculation#volatile-and-non-volatile-functions).</span></span>
 
-<span data-ttu-id="8f8cd-111">Пользовательские функции позволяют создавать собственные переменные функции, которые могут быть удобны при обработке дат, времени, случайных чисел и моделирования.</span><span class="sxs-lookup"><span data-stu-id="8f8cd-111">Custom functions allow you to create your own volatile functions, which may be useful when handling dates, times, random numbers, and modeling.</span></span> <span data-ttu-id="8f8cd-112">Например, для определения оптимального решения для [имитации Монте Карло](https://en.wikipedia.org/wiki/Monte_Carlo_method) требуется создание случайных входных данных.</span><span class="sxs-lookup"><span data-stu-id="8f8cd-112">For example, [Monte Carlo simulations](https://en.wikipedia.org/wiki/Monte_Carlo_method) require the generation of random inputs to determine an optimal solution.</span></span>
+<span data-ttu-id="b5cd0-111">Пользовательские функции позволяют создавать собственные переменные функции, которые могут быть удобны при обработке дат, времени, случайных чисел и моделирования.</span><span class="sxs-lookup"><span data-stu-id="b5cd0-111">Custom functions allow you to create your own volatile functions, which may be useful when handling dates, times, random numbers, and modeling.</span></span> <span data-ttu-id="b5cd0-112">Например, для определения оптимального решения для [имитации Монте Карло](https://en.wikipedia.org/wiki/Monte_Carlo_method) требуется создание случайных входных данных.</span><span class="sxs-lookup"><span data-stu-id="b5cd0-112">For example, [Monte Carlo simulations](https://en.wikipedia.org/wiki/Monte_Carlo_method) require the generation of random inputs to determine an optimal solution.</span></span>
 
-<span data-ttu-id="8f8cd-113">При выборе автоматического создания JSON файла объявите переменную с помощью тега `@volatile`жсдок Comment.</span><span class="sxs-lookup"><span data-stu-id="8f8cd-113">If choosing to autogenerate your JSON file, declare a volatile function with the JSDoc comment tag `@volatile`.</span></span> <span data-ttu-id="8f8cd-114">Дополнительные сведения об автоформировании приведены в статье [Создание МЕТАДАННЫХ JSON для пользовательских функций](custom-functions-json-autogeneration.md).</span><span class="sxs-lookup"><span data-stu-id="8f8cd-114">From more information on autogeneration, see [Create JSON metadata for custom functions](custom-functions-json-autogeneration.md).</span></span>
+<span data-ttu-id="b5cd0-113">При выборе автоматического создания JSON файла объявите переменную с помощью тега `@volatile`жсдок Comment.</span><span class="sxs-lookup"><span data-stu-id="b5cd0-113">If choosing to autogenerate your JSON file, declare a volatile function with the JSDoc comment tag `@volatile`.</span></span> <span data-ttu-id="b5cd0-114">Дополнительные сведения об автоформировании приведены в статье [Создание МЕТАДАННЫХ JSON для пользовательских функций](custom-functions-json-autogeneration.md).</span><span class="sxs-lookup"><span data-stu-id="b5cd0-114">From more information on autogeneration, see [Create JSON metadata for custom functions](custom-functions-json-autogeneration.md).</span></span>
 
-<span data-ttu-id="8f8cd-115">Ниже приведен пример временного настраиваемой функции, которая имитирует пошаговое описание шести костей.</span><span class="sxs-lookup"><span data-stu-id="8f8cd-115">An example of a volatile custom function follows, which simulates rolling a six-sided dice.</span></span>
+<span data-ttu-id="b5cd0-115">Ниже приведен пример временного настраиваемой функции, которая имитирует пошаговое описание шести костей.</span><span class="sxs-lookup"><span data-stu-id="b5cd0-115">An example of a volatile custom function follows, which simulates rolling a six-sided dice.</span></span>
+
+![GIF-файл, в котором показана пользовательская функция, возвращающая случайное значение для имитации шести двусторонних костей](../images/six-sided-die.gif)
 
 ```JS
 /**
@@ -30,16 +32,16 @@ ms.locfileid: "35771648"
  * @customfunction
  * @volatile
  */
-function roll6sided(): number {
+function roll6sided() {
   return Math.floor(Math.random() * 6) + 1;
 }
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="8f8cd-116">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="8f8cd-116">Next steps</span></span>
-<span data-ttu-id="8f8cd-117">Сведения о том, как [сохранить состояние в пользовательских функциях](custom-functions-save-state.md).</span><span class="sxs-lookup"><span data-stu-id="8f8cd-117">Learn how to [save state in your custom functions](custom-functions-save-state.md).</span></span>
+## <a name="next-steps"></a><span data-ttu-id="b5cd0-117">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="b5cd0-117">Next steps</span></span>
+<span data-ttu-id="b5cd0-118">Сведения о том, как [сохранить состояние в пользовательских функциях](custom-functions-save-state.md).</span><span class="sxs-lookup"><span data-stu-id="b5cd0-118">Learn how to [save state in your custom functions](custom-functions-save-state.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="8f8cd-118">См. также</span><span class="sxs-lookup"><span data-stu-id="8f8cd-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b5cd0-119">См. также</span><span class="sxs-lookup"><span data-stu-id="b5cd0-119">See also</span></span>
 
-* [<span data-ttu-id="8f8cd-119">Параметры параметров пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="8f8cd-119">Custom functions parameter options</span></span>](custom-functions-parameter-options.md)
-* [<span data-ttu-id="8f8cd-120">Метаданные пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="8f8cd-120">Custom functions metadata</span></span>](custom-functions-json.md)
-* [<span data-ttu-id="8f8cd-121">Создание пользовательских функций в Excel</span><span class="sxs-lookup"><span data-stu-id="8f8cd-121">Create custom functions in Excel</span></span>](custom-functions-overview.md)
+* [<span data-ttu-id="b5cd0-120">Параметры параметров пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="b5cd0-120">Custom functions parameter options</span></span>](custom-functions-parameter-options.md)
+* [<span data-ttu-id="b5cd0-121">Метаданные пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="b5cd0-121">Custom functions metadata</span></span>](custom-functions-json.md)
+* [<span data-ttu-id="b5cd0-122">Создание пользовательских функций в Excel</span><span class="sxs-lookup"><span data-stu-id="b5cd0-122">Create custom functions in Excel</span></span>](custom-functions-overview.md)
