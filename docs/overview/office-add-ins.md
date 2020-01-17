@@ -1,18 +1,20 @@
 ---
 title: Обзор платформы надстроек Office | Microsoft Docs
 description: Используйте привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений.
-ms.date: 12/24/2019
+ms.date: 01/14/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: bb3a2005679e82134d6dd045878349847ee6d916
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
+ms.openlocfilehash: 3ecca3e36108b831899e9488459687cb2acc3c98
+ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851364"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "41216993"
 ---
 # <a name="office-add-ins-platform-overview"></a>Обзор платформы надстроек Office
+
+![Изображение расширяемости надстроек Office](../images/addins-overview.png)
 
 Платформу надстроек Office можно использовать для создания решений, которые расширяют возможности приложений Office и взаимодействуют с содержимым документов Office. В случае надстроек Office можно использовать привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений. Ваше решение может работать в Office на нескольких платформах, включая Windows, Mac, iPad и браузеры.
 
@@ -25,6 +27,8 @@ ms.locfileid: "40851364"
 ## <a name="how-are-office-add-ins-different-from-com-and-vsto-add-ins"></a>Чем надстройки Office отличаются от надстроек COM и VSTO?
 
 Надстройки COM и VSTO представляют собой более ранние решения для интеграции Office, которые работают только в Office для Windows. В отличие от надстроек COM, надстройкам Office не требуется код, который выполняется на устройстве пользователя или в клиенте Office. В надстройках Office ведущее приложение, например Excel, считывает манифест надстройки и подключает настраиваемые кнопки ленты и команды меню надстройки в пользовательском интерфейсе. При необходимости оно загружает JavaScript и HTML-код надстройки, который выполняется в "песочнице" в контексте браузера.
+
+![Изображение причин использования надстроек Office](../images/why.png)
 
 Преимущества надстроек Office над надстройками, созданными с помощью VBA, модели COM или VSTO:
 
@@ -39,10 +43,6 @@ ms.locfileid: "40851364"
 ## <a name="components-of-an-office-add-in"></a>Компоненты надстройки Office
 
 Надстройка Office включает в себя два основных компонента — XML-файл манифеста и веб-приложение. Манифест определяет различные параметры, включая способ интеграции надстройки с клиентами Office. Веб-приложение должно быть размещено на веб-сервере или в службе веб-хостинга, например в Microsoft Azure.
-
-*Рис. 1. Манифест надстройки (XML) + веб-страница (HTML, JS) = надстройка Office*
-
-![Манифест + веб-страница = надстройка Office](../images/about-addins-manifestwebpage.png)
 
 ### <a name="manifest"></a>Манифест
 

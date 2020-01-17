@@ -3,12 +3,12 @@ title: Создание надстройки Office на платформе Node
 description: Узнайте, как создать надстройку на основе Node.js, использующую единый вход Office
 ms.date: 01/13/2020
 localization_priority: Priority
-ms.openlocfilehash: 140a18628ae03d842482721394d976207cb7fa37
-ms.sourcegitcommit: 0dacbe7c80ed387099e3ec21e151f8990b181ede
+ms.openlocfilehash: a3ff47f26e0db06c1c79a4f80bd814b05e80b3a3
+ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "41111069"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "41217101"
 ---
 # <a name="create-a-nodejs-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office на платформе Node.js с использованием единого входа (предварительная версия)
 
@@ -27,7 +27,7 @@ ms.locfileid: "41111069"
 
 * TypeScript версии 3.6.2 или более поздней.
 
-* Учетная запись Office 365 (версия Office с подпиской), которую получают участники [программы для разработчиков Office 365](https://aka.ms/devprogramsignup), предоставляется вместе с бесплатной годичной подпиской на Office 365. Чтобы получить эту версию, следует использовать последнюю ежемесячную версию и сборку из канала программы предварительной оценки, при этом необходимо быть участником программы предварительной оценки Office. Дополнительные сведения см. на странице [Примите участие в программе предварительной оценки Office](https://products.office.com/office-insider?tab=tab-1). Обратите внимание на то, что когда сборка будет готова для выпуска на канале Semi-annual channel, поддержка функций предварительного просмотра, включая единый вход, отключается для этой сборки.
+[!include[additional prerequisites](../includes/sso-tutorial-prereqs.md)]
 
 * Редактор кода. Рекомендуется использовать Visual Studio Code.
 

@@ -3,12 +3,12 @@ title: Отладка надстроек Office на Mac
 description: ''
 ms.date: 11/26/2019
 localization_priority: Priority
-ms.openlocfilehash: 4a14638a6db4e1b3edb9de62a8977885547ad8e3
-ms.sourcegitcommit: 05a883a7fd89136301ce35aabc57638e9f563288
+ms.openlocfilehash: d7609ef3952a68afc4db18100e24b3c1b3947dac
+ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "39629751"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "41217325"
 ---
 # <a name="debug-office-add-ins-on-a-mac"></a>Отладка надстроек Office на Mac
 
@@ -18,7 +18,7 @@ ms.locfileid: "39629751"
 
 Если у вас есть надстройка, которая отображает пользовательский интерфейс в области задач или контентной надстройке, вы можете отлаживать надстройку Office с помощью Safari Web Inspector.
 
-Отладку надстроек Office на компьютере Mac можно выполнить, только если на нем установлена система Mac OS High Sierra И Office для Mac версии 16.9.1 (сборка 18012504) или более поздней. Если у вас нет сборки Office для Mac, вы можете получить ее, присоединившись к [программе для разработчиков Office 365](https://aka.ms/o365devprogram).
+Отладку надстроек Office на компьютере Mac можно выполнить, только если на нем установлена система Mac OS High Sierra И Office для Mac версии 16.9.1 (сборка 18012504) или более поздней. Если у вас нет сборки Office для Mac, вы можете получить ее, присоединившись к [программе для разработчиков Office 365](https://developer.microsoft.com/office/dev-program).
 
 Для этого откройте терминал и установите свойство `OfficeWebAddinDeveloperExtras` для соответствующего приложения Office следующим образом:
 

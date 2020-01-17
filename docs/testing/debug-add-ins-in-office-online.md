@@ -3,12 +3,12 @@ title: Отладка надстроек в Office в Интернете
 description: Сведения о том, как тестировать и отлаживать надстройки в Office в Интернете.
 ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: ebc1296c0d6f13d5327f666e72907e016fbe8c6e
-ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
+ms.openlocfilehash: cf2461184f5163463f3e4fbf93f2cc7a0b70a249
+ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "35575683"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "41217332"
 ---
 # <a name="debug-add-ins-in-office-on-the-web"></a>Отладка надстроек в Office в Интернете
 
@@ -22,7 +22,7 @@ ms.locfileid: "35575683"
 - Получите учетную запись разработчика приложений для Office 365 (если у вас еще нет ее) или доступ к сайту SharePoint.
 
   > [!NOTE]
-  > Чтобы бесплатно получить подписку разработчика приложений для Office 365, примите участие в нашей [программе для разработчиков приложений Office 365](https://developer.microsoft.com/office/dev-program). Пошаговые инструкции для принятия участия в этой программе, регистрации и настройки подписки см. в [документации по программе для разработчиков приложений для Office 365](/office/developer-program/office-365-developer-program).
+  > Чтобы получить бесплатную возобновляемую подписку разработчика приложений для Office 365 на 90 дней, примите участие в нашей [программе для разработчиков Office 365](https://developer.microsoft.com/office/dev-program). Пошаговые инструкции для присоединения к этой программе и настройки подписки см. в [документации по программе для разработчиков Office 365](/office/developer-program/office-365-developer-program).
 
 - Настройте каталог приложений в Office 365 (SharePoint Online). Каталог приложений — это специальное семейство веб-сайтов в SharePoint Online, в котором размещены библиотеки документов для надстроек Office. Если у вас есть сайт SharePoint, вы можете настроить библиотеку документов каталога приложений. Дополнительные сведения см. в статье [Публикация надстроек области задач и контентных надстроек в каталоге приложений SharePoint](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md).
 

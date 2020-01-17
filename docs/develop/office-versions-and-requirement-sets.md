@@ -1,14 +1,14 @@
 ---
 title: Версии Office и наборы обязательных элементов
 description: ''
-ms.date: 07/17/2019
+ms.date: 01/14/2020
 localization_priority: Priority
-ms.openlocfilehash: cfa72f63fc3e74809b743584b131ee5b1fb57676
-ms.sourcegitcommit: cb5e1726849aff591f19b07391198a96d5749243
+ms.openlocfilehash: 3b9bcbef47cdc27ad77b6bdce2b5c69f25fa6d62
+ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "35940642"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "41217316"
 ---
 # <a name="office-versions-and-requirement-sets"></a>Версии Office и наборы обязательных элементов
 
@@ -23,7 +23,7 @@ ms.locfileid: "35940642"
 
 Чтобы определить используемую версию Office, в приложении Office откройте меню **Файл** и выберите **Учетная запись**. Версия Office будет указана в разделе **Сведения о продукте**. Например, на следующем снимке экрана указана версия Office 1802 (сборка 9026.1000):
 
-![Проверка версии Office](../images/office-version-number-ui.jpg)
+![Проверка версии Office](../images/office-version.png)
 
 ## <a name="office-requirement-sets-availability"></a>Доступность наборов обязательных элементов для Office
 

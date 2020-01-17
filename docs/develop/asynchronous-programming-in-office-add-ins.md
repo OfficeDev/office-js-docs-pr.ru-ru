@@ -1,14 +1,14 @@
 ---
 title: Асинхронное программирование в случае надстроек Office
 description: ''
-ms.date: 06/20/2019
+ms.date: 01/14/2020
 localization_priority: Priority
-ms.openlocfilehash: 9a653f85a368688bdf2690ab6c564352f2ee611a
-ms.sourcegitcommit: 0dacbe7c80ed387099e3ec21e151f8990b181ede
+ms.openlocfilehash: 009f8e37cc8a6eb2e808278df88f3bfdc5b0d1b1
+ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "41110908"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "41217247"
 ---
 # <a name="asynchronous-programming-in-office-add-ins"></a>Асинхронное программирование в случае надстроек Office
 
@@ -20,7 +20,7 @@ ms.locfileid: "41110908"
 
 *Рис. 1. Процесс выполнения при асинхронном программировании*
 
-![Процесс выполнения асинхронного программирования](../images/office15-app-async-prog-fig01.png)
+![Процесс выполнения асинхронного программирования](../images/office-addins-asynchronous-programming-flow.png)
 
 Поддержка этой асинхронной конструкции как в полнофункциональных, так и в веб-клиентах предусмотрена в рамках стратегии проектирования "однократное написание — запуск на нескольких платформах" модели разработки надстроек Office. Например, вы можете создать надстройку области задач или контентную надстройку на единой базе кода, которая будет работать как в Excel 2013, так и в Excel в Интернете.
 

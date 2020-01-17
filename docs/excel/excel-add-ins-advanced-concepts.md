@@ -1,14 +1,14 @@
 ---
 title: Дополнительные концепции программирования с помощью API JavaScript для Excel
 description: ''
-ms.date: 07/17/2019
+ms.date: 01/14/2020
 localization_priority: Priority
-ms.openlocfilehash: 8755b479543d48fcbbbf2bfa1ea93fb40af87ecf
-ms.sourcegitcommit: 5ba325cc88183a3f230cd89d615fd49c695addcf
+ms.openlocfilehash: 76308b6ce04dfcaa09e9006373caf07744572112
+ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "37681930"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "41217345"
 ---
 # <a name="advanced-programming-concepts-with-the-excel-javascript-api"></a>Дополнительные концепции программирования с помощью API JavaScript для Excel
 
@@ -28,7 +28,11 @@ ms.locfileid: "37681930"
 
 - [Document](/javascript/api/office/office.document). Объект **Document** предоставляет метод `getFileAsync()`, позволяющий скачать файл Excel, в котором работает надстройка.
 
-## <a name="requirement-sets"></a>Наборы требований
+На рисунке ниже показано, когда можно использовать API JavaScript для Excel или общие API.
+
+![Изображение различий между API JS для Excel и общими API](../images/excel-js-api-common-api.png)
+
+## <a name="requirement-sets"></a>Наборы обязательных элементов
 
 Наборы обязательных элементов — это именованные группы элементов API. Надстройка Office может выполнить проверку в среде выполнения или использовать указанные в манифесте наборы обязательных элементов, чтобы определить, поддерживает ли ведущее приложение Office необходимые надстройке API. Сведения о том, какие именно наборы обязательных элементов доступны на каждой поддерживаемой платформе, см. в статье [Наборы обязательных элементов API JavaScript для Excel](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets).
 

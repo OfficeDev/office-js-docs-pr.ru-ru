@@ -1,14 +1,14 @@
 ---
 title: Обзор проверки подлинности и авторизации в надстройках Office
 description: ''
-ms.date: 11/11/2019
+ms.date: 01/07/2020
 localization_priority: Priority
-ms.openlocfilehash: 20b947607623ee6a8fa08995a5c08918a6fd5d87
-ms.sourcegitcommit: 88d81aa2d707105cf0eb55d9774b2e7cf468b03a
+ms.openlocfilehash: 5086095c711bbf6df98e457092f825690d43229e
+ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "38301948"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "41217281"
 ---
 # <a name="overview-of-authentication-and-authorization-in-office-add-ins"></a>Обзор проверки подлинности и авторизации в надстройках Office
 
@@ -23,7 +23,7 @@ ms.locfileid: "38301948"
 
 На следующей блок-схеме показаны решения, которые нужно принять разработчику надстройки. Подробные сведения см. далее в этой статье.
 
-![Изображение с блок-схемой решений для включения проверки подлинности и авторизации в надстройках Office](../images/auth-decisions-flowchart.gif)
+![Изображение с блок-схемой решений для включения проверки подлинности и авторизации в надстройках Office](../images/authflowchart.png)
 
 ## <a name="user-authentication-without-sso"></a>Проверка подлинности пользователей без единого входа
 
