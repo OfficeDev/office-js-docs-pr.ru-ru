@@ -5,12 +5,12 @@ ms.date: 07/05/2019
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Normal
-ms.openlocfilehash: fbefd205ac929579cea1120b8398a53146bca19c
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
+ms.openlocfilehash: 3212aec08cdf4e0185ae5856ae522b1d81e28ea1
+ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851518"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "41216975"
 ---
 # <a name="explore-office-javascript-api-using-script-lab"></a>Изучение API JavaScript для Office с помощью Script Lab
 
@@ -22,7 +22,7 @@ Script Lab — это средство для тех, кто хочет науч
 
 Звучит хорошо? Просмотрите этот видеоролик в виде одной минуты, чтобы увидеть Лаборатория сценариев в действии.
 
-[![Предварительный просмотр видео, в котором показана Лаборатория скриптов, работающая в Excel, Word и PowerPoint.](../images/screenshot-wide-youtube.png 'Видеоролик о предварительном просмотре в лаборатории сценариев')](https://aka.ms/scriptlabvideo)
+[![Ознакомительное видео, демонстрирующее работу Script Lab в Excel, Word и PowerPoint.](../images/screenshot-wide-youtube.png 'Ознакомительное видео о Script Lab')](https://aka.ms/scriptlabvideo)
 
 ## <a name="key-features"></a>Основные возможности
 
@@ -73,5 +73,5 @@ Script Lab — это средство для тех, кто хочет науч
 
 - [Получение лаборатории сценариев](https://appsource.microsoft.com/product/office/WA104380862)
 - [Дополнительные сведения о лаборатории сценариев](https://github.com/OfficeDev/script-lab#script-lab-a-microsoft-garage-project)
-- [Регистрация в программе для разработки](https://developer.microsoft.com/office/dev-program)
+- [Присоединяйтесь к программе для разработчиков Office 365](https://developer.microsoft.com/office/dev-program)
 - [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)

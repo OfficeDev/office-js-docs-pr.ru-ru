@@ -1,14 +1,14 @@
 ---
-ms.date: 07/15/2019
+ms.date: 01/14/2020
 description: Узнайте, как реализовать переменные настраиваемые функции потоковой и автономной работы.
 title: Пересчитываемые значения в функциях
 localization_priority: Normal
-ms.openlocfilehash: 92d61aff4c3f4b4cbc79a3981db12ed1ce0ffb9d
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: 57a41578f400b10806fc169fed09db7d7a66ce84
+ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35771648"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "41217050"
 ---
 # <a name="volatile-values-in-functions"></a>Пересчитываемые значения в функциях
 
@@ -24,13 +24,15 @@ ms.locfileid: "35771648"
 
 Ниже приведен пример временного настраиваемой функции, которая имитирует пошаговое описание шести костей.
 
+![GIF-файл, в котором показана пользовательская функция, возвращающая случайное значение для имитации шести двусторонних костей](../images/six-sided-die.gif)
+
 ```JS
 /**
  * Simulates rolling a 6-sided dice.
  * @customfunction
  * @volatile
  */
-function roll6sided(): number {
+function roll6sided() {
   return Math.floor(Math.random() * 6) + 1;
 }
 ```

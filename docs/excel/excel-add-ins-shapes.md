@@ -1,18 +1,21 @@
 ---
 title: Работать с фигурами с помощью API JavaScript для Excel
 description: ''
-ms.date: 09/03/2019
+ms.date: 01/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 2461416bcd7e64c2ea300d98e504ff27edcb14ac
-ms.sourcegitcommit: 78998a9f0ebb81c4dd2b77574148b16fe6725cfc
+ms.openlocfilehash: 54362baecc44f8761f2f69d21e465caa5f1c85b7
+ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "36715608"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "41217233"
 ---
 # <a name="work-with-shapes-using-the-excel-javascript-api"></a>Работать с фигурами с помощью API JavaScript для Excel
 
 Excel определяет фигуры как объекты, расположенные в графическом слое Excel. Это означает, что все за прев ячейке ячейка является фигурой. В этой статье описывается, как использовать геометрические фигуры, линии и изображения в сочетании с API [Shape](/javascript/api/excel/excel.shape) и [ShapeCollection](/javascript/api/excel/excel.shapecollection) . [Диаграммы](/javascript/api/excel/excel.chart) рассматриваются в собственной статье, [работают с диаграммами с помощью API JavaScript для Excel](excel-add-ins-charts.md).
+
+На приведенном ниже изображении показаны фигуры, которые формируют термометр.
+![Изображение термометра, созданного как фигура Excel](../images/excel-shapes.png)
 
 ## <a name="create-shapes"></a>Создание фигур
 
@@ -24,7 +27,7 @@ Excel определяет фигуры как объекты, располож�
 |-------|------------|-----------|
 | Геометрическая фигура | [адджеометрикшапе](/javascript/api/excel/excel.shapecollection#addgeometricshape-geometricshapetype-) | `addGeometricShape(geometricShapeType: Excel.GeometricShapeType): Excel.Shape` |
 | Изображение (JPEG или PNG) | [аддимаже](/javascript/api/excel/excel.shapecollection#addimage-base64imagestring-) | `addImage(base64ImageString: string): Excel.Shape` |
-| Line | [аддлине](/javascript/api/excel/excel.shapecollection#addline-startleft--starttop--endleft--endtop--connectortype-) | `addLine(startLeft: number, startTop: number, endLeft: number, endTop: number, connectorType?: Excel.ConnectorType): Excel.Shape` |
+| Линия | [аддлине](/javascript/api/excel/excel.shapecollection#addline-startleft--starttop--endleft--endtop--connectortype-) | `addLine(startLeft: number, startTop: number, endLeft: number, endTop: number, connectorType?: Excel.ConnectorType): Excel.Shape` |
 | SVG | [аддсвг](/javascript/api/excel/excel.shapecollection#addsvg-xml-) | `addSvg(xml: string): Excel.Shape` |
 | Текстовое поле | [аддтекстбокс](/javascript/api/excel/excel.shapecollection#addtextbox-text-) | `addTextBox(text?: string): Excel.Shape` |
 
@@ -252,4 +255,4 @@ Excel.run(function (context) {
 ## <a name="see-also"></a>См. также
 
 - [Основные концепции программирования с помощью API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
-- [Работать с диаграммами с помощью API JavaScript для Excel](excel-add-ins-charts.md)
+- [Работа с диаграммами с использованием API JavaScript для Excel](excel-add-ins-charts.md)
