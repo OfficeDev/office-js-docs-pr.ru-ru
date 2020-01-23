@@ -1,15 +1,15 @@
 ---
 title: Создание надстройки Office, в которой используется единый вход (предварительная версия), с помощью генератора Yeoman
 description: Создание надстройки Office на платформе Node.js с использованием единого входа (предварительная версия) с помощью генератора Yeoman.
-ms.date: 01/13/2020
+ms.date: 01/16/2020
 ms.prod: non-product-specific
 localization_priority: Priority
-ms.openlocfilehash: 1f02f03fec0d6be32fc7a0d6b98fce30e19c28e2
-ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
+ms.openlocfilehash: becc0a03a87dcfd5b37b5ab65f45dd6516bf105a
+ms.sourcegitcommit: 8bce9c94540ed484d0749f07123dc7c72a6ca126
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "41217367"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "41265594"
 ---
 # <a name="use-the-yeoman-generator-to-create-an-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office, в которой используется единый вход (предварительная версия), с помощью генератора Yeoman
 
@@ -22,7 +22,7 @@ ms.locfileid: "41217367"
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
-* [Node.js](https://nodejs.org) (версия 10.15.0 или более поздняя)
+* [Node.js](https://nodejs.org) (последняя версия [LTS](https://nodejs.org/about/releases))
 
 * Последняя версия [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office). Выполните в командной строке указанную ниже команду, чтобы установить эти инструменты глобально.
 
