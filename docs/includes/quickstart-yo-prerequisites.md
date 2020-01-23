@@ -1,6 +1,4 @@
-- [Node.js](https://nodejs.org) (версия 8.0.0 или более поздняя)
-
-- [Git](https://git-scm.com/downloads)
+- [Node. js](https://nodejs.org) (последняя версия [LTS](https://nodejs.org/about/releases) )
 
 - Последняя версия [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office). Выполните в командной строке указанную ниже команду, чтобы установить эти инструменты глобально.
 

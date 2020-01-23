@@ -1,21 +1,21 @@
 ---
-ms.date: 09/18/2019
+ms.date: 01/16/2020
 description: Разработка настраиваемых функций в кратком руководстве по Excel.
 title: Краткое руководство по настраиваемым функциям
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: f34a8817a7c8ef2679fc8ce0a6ad17cec600531b
-ms.sourcegitcommit: a0257feabcfe665061c14b8bdb70cf82f7aca414
+ms.openlocfilehash: 7446de52832a70b30bbe39c71b37e80e006dc62f
+ms.sourcegitcommit: 8bce9c94540ed484d0749f07123dc7c72a6ca126
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "37035331"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "41265566"
 ---
 # <a name="get-started-developing-excel-custom-functions"></a>Приступая к разработке пользовательских функций Excel
 
 С помощью пользовательских функций разработчики могут добавлять новые функции в Excel, определяя их в JavaScript или typescript как часть надстройки. Пользователи Excel могут получить доступ к пользовательским функциям так же, как и к любой собственной `SUM()`функции в Excel, например.
 
-## <a name="prerequisites"></a>Необходимые условия
+## <a name="prerequisites"></a>Необходимые компоненты
 
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
@@ -56,7 +56,7 @@ ms.locfileid: "37035331"
 
 4. Запустите локальный веб-сервер, работающий на Node.js. Вы можете испытать надстройку настраиваемой функции в Excel в Интернете или в Windows. Вам может быть предложено открыть область задач надстройки, хотя это необязательный параметр. Вы можете по-прежнему запускать пользовательские функции, не открывая область задач надстройки.
 
-# <a name="excel-on-windowstabexcel-windows"></a>[Excel в Windows](#tab/excel-windows)
+# <a name="excel-on-windowstabexcel-windows"></a>[Excel для Windows](#tab/excel-windows)
 
 Чтобы протестировать надстройку в Excel в Windows, выполните следующую команду. При выполнении этой команды запустится локальный веб-сервер, и откроется приложение Excel с загруженной надстройкой.
 
