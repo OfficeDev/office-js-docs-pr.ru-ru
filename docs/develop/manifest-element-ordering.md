@@ -3,12 +3,12 @@ title: Как определить правильный порядок элем�
 description: Узнайте, как определить правильный порядок расположения дочерних элементов в родительском элементе.
 ms.date: 08/22/2019
 localization_priority: Normal
-ms.openlocfilehash: 6e88ee4f6eac09d4af8bc79a53f5faf890551a15
-ms.sourcegitcommit: 0dacbe7c80ed387099e3ec21e151f8990b181ede
+ms.openlocfilehash: ae09fa90345188a80c910c6bad69fbbc7ad85c5b
+ms.sourcegitcommit: 413f163729183994de61a8281685184b377ef76c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "41111055"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "41571385"
 ---
 # <a name="how-to-find-the-proper-order-of-manifest-elements"></a>Как определить правильный порядок элементов манифеста
 
@@ -160,6 +160,8 @@ XML-элементы в манифесте надстройки Office долж�
             <Set>
       <Hosts>
         <Host>
+            <Runtimes>
+                <Runtime>
             <AllFormFactors>
             <ExtensionPoint>
                 <Script>
@@ -257,8 +259,6 @@ XML-элементы в манифесте надстройки Office долж�
                                     <SourceLocation>
                                     <Title>
                                     <FunctionName>
-        <Runtimes>
-            <Runtime>
         <Resources>
             <Images>
                 <Image>

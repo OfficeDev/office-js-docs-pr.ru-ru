@@ -1,14 +1,14 @@
 ---
 title: Очистка кэша Office
 description: Узнайте, как очищать кэш Office на компьютере.
-ms.date: 12/31/2019
+ms.date: 01/21/2020
 localization_priority: Priority
-ms.openlocfilehash: 3744d8125a5165569c262dc28622614853798c6f
-ms.sourcegitcommit: d5ac9284d1e96dc91a9168d7641e44d88535e1a7
+ms.openlocfilehash: 68e5c022671844ee44bf8ca8ac00bc5af6564bad
+ms.sourcegitcommit: 43166612e9b4bf7a73312a572663c8696353dbc6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "40915080"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "41580971"
 ---
 # <a name="clear-the-office-cache"></a>Очистка кэша Office
 
@@ -18,7 +18,37 @@ ms.locfileid: "40915080"
 
 ## <a name="clear-the-office-cache-on-windows"></a>Очистка кэша Office в Windows
 
-Чтобы очистить кэш Office в Windows, удалите содержимое папки `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\`.
+### <a name="excel-word-and-powerpoint"></a>Excel, Word и PowerPoint 
+
+Чтобы очистить кэш Office в Windows для Excel, Word и PowerPoint, удалите содержимое папки `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\`.
+
+### <a name="outlook-windows-10"></a>Outlook (Windows 10)
+
+Чтобы очистить кэш Outlook в Windows 10, когда надстройка работает в Microsoft Edge, можно использовать Microsoft Edge DevTools.
+
+> [!TIP]
+> Если вы хотите только загрузить неопубликованную надстройку, чтобы отразить последние изменения в ее исходных файлах HTML или JavaScript, не нужно использовать описанные ниже действия, чтобы очистить кэш. Вместо этого просто переместите фокус в область задач надстройки (щелкнув в любом месте области задач) и нажмите клавишу **F5**, чтобы перезагрузить надстройку. 
+
+> [!NOTE]
+> Чтобы очистить кэш Outlook с помощью следующих действий, в вашей надстройке должна быть область задач. Если в вашей надстройке нет пользовательского интерфейса (например, она использует функцию [проверки при отправке](/outlook/add-ins/outlook-on-send-addins)), потребуется добавить в надстройку область задач, использующую такой же домен для [SourceLocation](../reference/manifest/sourcelocation.md), прежде чем вы сможете использовать указанные ниже действия для очистки кэша.
+
+1. Установите [Microsoft Edge DevTools](https://www.microsoft.com/p/microsoft-edge-devtools-preview/9mzbfrmz0mnj).
+
+2. Откройте свою надстройку в Outlook.
+
+3. Запустите Microsoft Edge DevTools.
+
+4. В Microsoft Edge DevTools перейдите на вкладку **Локальные**. Имя вашей надстройки будет указано в списке.
+
+5. Выберите имя надстройки, чтобы присоединить отладчик к надстройке. Откроется новое окно Microsoft Edge DevTools, когда отладчик присоединяется к надстройке.
+
+6. На вкладке **Сеть** в новом окне нажмите кнопку **Очистить кэш**.
+
+    ![Снимок экрана Microsoft Edge DevTools с выделенной кнопкой "Очистить кэш"](../images/edge-devtools-clear-cache.png)
+
+7. Если эти действия не привели к нужному результату, вы также можете нажать кнопку **Всегда обновлять с сервера**.
+
+    ![Снимок экрана Microsoft Edge DevTools с выделенной кнопкой "Всегда обновлять с сервера"](../images/edge-devtools-refresh-from-server.png)
 
 ## <a name="clear-the-office-cache-on-mac"></a>Очистка кэша Office на компьютерах Mac
 
@@ -30,8 +60,9 @@ ms.locfileid: "40915080"
 
 ## <a name="see-also"></a>См. также
 
-- [XML-манифест надстройки Office](../develop/add-in-manifests.md)
-- [Проверка манифеста надстройки Office](troubleshoot-manifest.md)
+- [Отладка надстроек Office](debug-add-ins-using-f12-developer-tools-on-windows-10.md)
 - [Отладка надстройки с помощью журнала среды выполнения](runtime-logging.md)
 - [Загрузка неопубликованных надстроек Office для тестирования](sideload-office-add-ins-for-testing.md)
-- [Отладка надстроек Office](debug-add-ins-using-f12-developer-tools-on-windows-10.md)
+- [XML-манифест надстроек Office](../develop/add-in-manifests.md)
+- [Проверка манифеста надстройки Office](troubleshoot-manifest.md)
+

@@ -3,12 +3,12 @@ title: Создание надстройки Office, в которой испо�
 description: ''
 ms.date: 12/04/2019
 localization_priority: Priority
-ms.openlocfilehash: a5a05c8299f22bbc1a7593eebc9bde60f52b2b84
-ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
+ms.openlocfilehash: 6306616880138574ede8a127b7fd3c2a65061191
+ms.sourcegitcommit: 43166612e9b4bf7a73312a572663c8696353dbc6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "41217009"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "41580982"
 ---
 # <a name="create-an-aspnet-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office, в которой используется единый вход, на платформе ASP.NET (предварительная версия)
 
@@ -88,7 +88,7 @@ ms.locfileid: "41217009"
     - `d3590ed6-52b3-4102-aeff-aad2292ab01c` (Microsoft Office).
     - `ea5a67f6-b6f3-4338-b240-c655ddc3cc8e` (Microsoft Office).
     - `57fb890c-0dab-4253-a5e0-7188c88b2bb4` (Office в Интернете).
-    - `bc59ab01-8403-45c6-8796-ac3ef710b3e3` (Office в Интернете).
+    - `bc59ab01-8403-45c6-8796-ac3ef710b3e3` (Outlook в Интернете).
 
     Для каждого идентификатора сделайте следующее:
 
