@@ -68,7 +68,7 @@
           items:
             - name: Обзор проверки подлинности и авторизации
               href: develop/overview-authn-authz.md
-            - name: Проверка подлинности и авторизация с помощью Dialog API для Office
+            - name: Проверка подлинности и авторизация с помощью Office Dialog API
               href: develop/auth-with-office-dialog-api.md
             - name: Авторизация внешних служб
               href: develop/auth-external-add-ins.md
@@ -139,8 +139,16 @@
               displayName: manifest
             - name: Локализация
               href: develop/localization.md
-            - name: Открытие диалогового окна
-              href: develop/dialog-api-in-office-add-ins.md
+            - name: Диалоговые окна
+              items:
+                - name: Использование Office Dialog API в надстройках Office
+                  href: develop/dialog-api-in-office-add-ins.md
+                - name: Рекомендации и правила Office dialog API
+                  href: develop/dialog-best-practices.md
+                - name: Обработка ошибок и событий в диалоговом окне "Office"
+                  href: develop/dialog-handle-errors-events.md
+                - name: Используйте диалоговое окно "Office" для воспроизведения видео
+                  href: develop/dialog-video.md
             - name: Производительность
               href: concepts/resource-limits-and-performance-optimization.md
             - name: Конфиденциальность и безопасность
@@ -606,9 +614,6 @@
         - name: Проверка подлинности
           href: excel/custom-functions-authentication.md
           displayName: 'Excel, Custom Functions'
-        - name: Пакетная обработка
-          href: excel/custom-functions-batching.md
-          displayName: 'Excel, Custom Functions'
         - name: Отладка
           href: excel/custom-functions-debugging.md
           displayName: 'Excel, Custom Functions'
@@ -998,3 +1003,16 @@
         - name: Поиск текста в надстройке Word
           href: word/search-option-guidance.md
           displayName: Word
+- name: Шаблоны и рекомендации
+  items:
+    - name: Поделиться кодом из надстройки VSTO в надстройку Office
+      href: tutorials/migrate-vsto-to-office-add-in-shared-code-library-tutorial.md
+    - name: Пакетная обработка пользовательских функций в удаленных вызовов
+      href: excel/custom-functions-batching.md
+      displayName: 'Excel, Custom Functions'
+    - name: Проверка подлинности
+      href: develop/authentication-pnp.md
+    - name: Сохранить и поделиться состоянием в пользовательских функциях
+      href: excel/custom-functions-save-state-redirect.md
+    - name: Обработка высокого разрешения и масштабирования в решении для Office
+      href: develop/dynamic-dpi.md
