@@ -1,15 +1,15 @@
 ---
 title: Создание надстройки Office, в которой используется единый вход (предварительная версия), с помощью генератора Yeoman
 description: Создание надстройки Office на платформе Node.js с использованием единого входа (предварительная версия) с помощью генератора Yeoman.
-ms.date: 01/27/2020
+ms.date: 01/30/2020
 ms.prod: non-product-specific
 localization_priority: Priority
-ms.openlocfilehash: d3a78a99574c92d0066003f0e39e835563f473cd
-ms.sourcegitcommit: 413f163729183994de61a8281685184b377ef76c
+ms.openlocfilehash: 263a84a9084f7f75beb13b4336b61027de0bf907
+ms.sourcegitcommit: 4c9e02dac6f8030efc7415e699370753ec9415c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "41571403"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "41650028"
 ---
 # <a name="use-the-yeoman-generator-to-create-an-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office, в которой используется единый вход (предварительная версия), с помощью генератора Yeoman
 
@@ -33,6 +33,8 @@ ms.locfileid: "41571403"
     [!include[note to update Yeoman generator](../includes/note-yeoman-generator-update.md)]
 
 [!include[additional prerequisites](../includes/sso-tutorial-prereqs.md)]
+
+* Если вы используете компьютер Mac, на котором не установлено приложение Azure CLI, необходимо установить [Homebrew](https://brew.sh/). Сценарий конфигурации единого входа, который вы запустите во время этого быстрого запуска, будет использовать Homebrew для установки Azure CLI, а затем будет использовать Azure CLI для настройки единого входа в Azure.
 
 ## <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
