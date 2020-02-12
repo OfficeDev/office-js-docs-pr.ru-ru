@@ -2,26 +2,26 @@
 layout: LandingPage
 ms.topic: landing-page
 title: Документация по надстройкам Office
-description: Узнайте, как создавать надстройки Office.
+description: Сведения о создании надстроек Office.
 author: o365devx
 ms.author: o365devx
 ms.prod: non-product-specific
 ms.date: 12/24/2019
-localization_priority: Normal
-ms.openlocfilehash: 2e0e8932214f398169f8483b4ca8bf1a65ec16a5
-ms.sourcegitcommit: 0dacbe7c80ed387099e3ec21e151f8990b181ede
-ms.translationtype: MT
+localization_priority: Priority
+ms.openlocfilehash: 4a2134fec212b75abff95d225f6238bd1f888c3b
+ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "41111013"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41950763"
 ---
 # <a name="office-add-ins-documentation"></a>Документация по надстройкам Office
 
-Используйте платформу надстроек Office для создания решений, которые расширяют возможности приложений Office и взаимодействуют с содержимым документов Office. С помощью надстроек Office можно использовать привычные веб-технологии, такие как HTML, CSS и JavaScript, для создания решений, которые могут работать в Office в Windows, Mac, iPad и в Интернете.
+Используйте платформу надстроек Office для создания решений, которые расширяют возможности приложений Office и взаимодействуют с содержимым документов Office. С помощью надстроек Office можно использовать привычные веб-технологии, такие как HTML, CSS и JavaScript, для создания решений, которые можно запускать в Office в Windows, на Mac, на iPad и в Интернете.
 
 <h2>Начало работы</h2>
 
-<p>Впервые создаете надстройку Office? Начните с изучения платформы надстроек Office и создания надстроек Office:</p>
+<p>Впервые создаете надстройку Office? Ознакомьтесь с платформой надстроек Office и принципами создания надстроек Office:</p>
 
 <ul class="panelContent cardsF cols cols3">
     <li>
@@ -52,7 +52,7 @@ ms.locfileid: "41111013"
                     </div>
                     <div class="cardText">
                         <h3>Создание надстроек Office</h3>
-                        <p><a href="overview/office-add-ins-fundamentals.md">Узнайте, как создавать надстройки Office.</a></p>
+                        <p><a href="overview/office-add-ins-fundamentals.md">Сведения о создании надстроек Office.</a></p>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@ ms.locfileid: "41111013"
     </li>
 </ul>
 
-<p>Затем воспользуйтесь быстрыми запусками, учебниками и лабораториями скриптов, чтобы получить опыт создания надстроек Office.</p>
+<p>Воспользуйтесь краткими руководствами, учебниками и решением Script Lab, чтобы набраться опыта в создании надстроек Office.</p>
 
 <ul class="cardsK panelContent cols cols3">
     <li>
@@ -73,17 +73,17 @@ ms.locfileid: "41111013"
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>5 минут быстрого запуска</h3>
-                        <p>Создайте первую надстройку Office в течение 5 минут!</p>
+                        <h3>5-минутные краткие руководства</h3>
+                        <p>Создайте свою первую надстройку Office всего за несколько минут!</p>
                         <br/>
                         <ul>
-                            <li><a style="font-size: 1rem;" href="quickstarts/excel-quickstart-jquery.md">Краткое руководство по надстройкам Excel</a></li>
-                            <li><a style="font-size: 1rem;" href="quickstarts/excel-custom-functions-quickstart.md">Краткий старт пользовательских функций Excel</a></li>
-                            <li><a style="font-size: 1rem;" href="quickstarts/onenote-quickstart.md">Краткое руководство по надстройкам OneNote</a></li>
-                            <li><a style="font-size: 1rem;" href="/outlook/add-ins/quick-start?context=office/dev/add-ins/context">Краткое руководство по надстройкам Outlook</a></li>
-                            <li><a style="font-size: 1rem;" href="quickstarts/powerpoint-quickstart.md">Краткое руководство по надстройкам PowerPoint</a></li>
-                            <li><a style="font-size: 1rem;" href="quickstarts/project-quickstart.md">Краткое руководство по надстройке Project</a></li>
-                            <li><a style="font-size: 1rem;" href="quickstarts/word-quickstart.md">Краткое руководство по надстройкам Word</a></li>
+                            <li><a style="font-size: 1rem;" href="quickstarts/excel-quickstart-jquery.md">Краткое руководство надстройкам Excel</a></li>
+                            <li><a style="font-size: 1rem;" href="quickstarts/excel-custom-functions-quickstart.md">Краткое руководство по пользовательским функциям в Excel</a></li>
+                            <li><a style="font-size: 1rem;" href="quickstarts/onenote-quickstart.md">Краткое руководство надстройкам OneNote</a></li>
+                            <li><a style="font-size: 1rem;" href="/outlook/add-ins/quick-start?context=office/dev/add-ins/context">Краткое руководство надстройкам Outlook</a></li>
+                            <li><a style="font-size: 1rem;" href="quickstarts/powerpoint-quickstart.md">Краткое руководство надстройкам PowerPoint</a></li>
+                            <li><a style="font-size: 1rem;" href="quickstarts/project-quickstart.md">Краткое руководство надстройкам Project</a></li>
+                            <li><a style="font-size: 1rem;" href="quickstarts/word-quickstart.md">Краткое руководство надстройкам Word</a></li>
                             <li><a style="font-size: 1rem;" href="quickstarts/sso-quickstart.md">Краткое руководство по единому входу (SSO)</a></li>
                         </ul>
                     </div>
@@ -101,15 +101,15 @@ ms.locfileid: "41111013"
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Учебники</h3>
-                        <p>Чтобы узнать больше о возможностях надстройки, выполните руководство.</p>
+                        <h3>Учебные материалы</h3>
+                        <p>Ознакомьтесь с руководством для получения дополнительных сведений о возможностях надстройки.</p>
                         <br/>
                         <ul>
                             <li><a style="font-size: 1rem;" href="tutorials/excel-tutorial.md">Руководство по надстройкам Excel</a></li>
                             <li><a style="font-size: 1rem;" href="tutorials/excel-tutorial-create-custom-functions.md">Руководство по пользовательским функциям в Excel</a></li>
-                            <li><a style="font-size: 1rem;" href="/outlook/add-ins/addin-tutorial?context=office/dev/add-ins/context">Руководство по надстройкам Outlook</a></li>
-                            <li><a style="font-size: 1rem;" href="tutorials/powerpoint-tutorial.md">Руководство по надстройкам PowerPoint</a></li>
-                            <li><a style="font-size: 1rem;" href="tutorials/word-tutorial.md">Руководство по надстройкам Word</a></li>
+                            <li><a style="font-size: 1rem;" href="/outlook/add-ins/addin-tutorial?context=office/dev/add-ins/context">Руководство по надстройкам Outlook </a></li>
+                            <li><a style="font-size: 1rem;" href="tutorials/powerpoint-tutorial.md">Руководство по надстройкам PowerPoint </a></li>
+                            <li><a style="font-size: 1rem;" href="tutorials/word-tutorial.md">Руководство по надстройкам Word </a></li>
                         </ul>
                     </div>
                 </div>
@@ -127,7 +127,7 @@ ms.locfileid: "41111013"
                     </div>
                     <div class="cardText">
                         <h3>Script Lab</h3>
-                        <p>Попробуйте использовать API JavaScript для Office для Excel, Word и PowerPoint в лаборатории сценариев.</p>
+                        <p>Попробуйте использовать API JavaScript для Office для Excel, Word и PowerPoint в решении Script Lab.</p>
                         <br/>
                         <ul style="list-style: none!important;">
                         
@@ -154,7 +154,7 @@ ms.locfileid: "41111013"
             </div>
             <div class="cardText">
                 <h3>Основные понятия</h3>
-                <p>Сведения о платформе и важных понятиях, которые применяются при создании любой надстройки Office.</p>
+                <p>Ознакомьтесь с принципами работы платформы и важными понятиями, применимыми к созданию любых надстроек Office.</p>
             </div>
         </a>
     </li>
@@ -254,7 +254,7 @@ ms.locfileid: "41111013"
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="overview/explore-with-script-lab.md"><h3>Изучение API<br/>с помощью сценария Lab</h3></a>
+                        <a href="overview/explore-with-script-lab.md"><h3>Изучение API<br/>с помощью Script Lab</h3></a>
                     </div>
                 </div>
             </div>
@@ -270,7 +270,7 @@ ms.locfileid: "41111013"
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="https://stackoverflow.com/questions/tagged/office-js" target="_blank"><h3>Задавайте вопросы</h3></a>
+                        <a href="https://stackoverflow.com/questions/tagged/office-js" target="_blank"><h3>Задать вопрос</h3></a>
                     </div>
                 </div>
             </div>
@@ -286,7 +286,7 @@ ms.locfileid: "41111013"
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="https://github.com/officedev/office-js/issues" target="_blank"><h3>Отчеты о проблемах</h3></a>
+                        <a href="https://github.com/officedev/office-js/issues" target="_blank"><h3>Сообщить о проблеме</h3></a>
                     </div>
                 </div>
             </div>
@@ -302,11 +302,11 @@ ms.locfileid: "41111013"
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="https://officespdev.uservoice.com/" target="_blank"><h3>Функции запросов</h3></a>
+                        <a href="https://officespdev.uservoice.com/" target="_blank"><h3>Предложить функцию</h3></a>
                     </div>
                 </div>
             </div>
         </div>
     </li>
 </ul>
-<p><b>Примечание.</b> Сведения о надстройках COM или VSTO см. в <a href="/office/client-developer/office-client-development" target="_blank">документации по разработке клиентов Office</a>.</p>
+<p><b>Примечание.</b> Сведения о надстройках COM и VSTO см. в <a href="/office/client-developer/office-client-development" target="_blank">документации по разработке клиентов Office</a>.</p>

@@ -1,77 +1,77 @@
 ---
 title: Изучение API JavaScript для Office с помощью Script Lab
-description: Используйте сценарий "Лаборатория" для изучения API Office JS и прототипов функций.
+description: Используйте Script Lab для изучения API JS Office и использования функциональности работы с прототипами.
 ms.date: 07/05/2019
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
-localization_priority: Normal
-ms.openlocfilehash: 3212aec08cdf4e0185ae5856ae522b1d81e28ea1
-ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
-ms.translationtype: MT
+localization_priority: Priority
+ms.openlocfilehash: 6b8e344460d11cbd85b44fb9a2ab52ef4785cd18
+ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "41216975"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41950756"
 ---
 # <a name="explore-office-javascript-api-using-script-lab"></a>Изучение API JavaScript для Office с помощью Script Lab
 
-[Надстройка "Лаборатория скриптов](https://appsource.microsoft.com/product/office/WA104380862)", доступная бесплатно из AppSource, позволяет изучать API JavaScript для Office при работе с программами Office, такими как Excel или Word. Script Lab — удобное средство для добавления в набор средств разработки в качестве прототипа и проверки функциональных возможностей, которые должны быть в надстройке.
+[Надстройка Script Lab](https://appsource.microsoft.com/product/office/WA104380862), бесплатно доступная в AppSource, дает возможность изучать API JavaScript для Office при работе в приложениях Office, таких как Excel или Word. Script Lab — удобный инструмент, который целесообразно добавить в набор средств разработки при работе с прототипами и при проверке нужной функциональности надстроек.
 
-## <a name="what-is-script-lab"></a>Что такое "Лаборатория скриптов"?
+## <a name="what-is-script-lab"></a>Что такое Script Lab?
 
-Script Lab — это средство для тех, кто хочет научиться разрабатывать надстройки Office с помощью API JavaScript для Office в Excel, Word или PowerPoint. Он предоставляет IntelliSense, чтобы вы могли видеть доступные и созданные на платформе Монако платформы, ту же платформу, которая используется в Visual Studio Code. С помощью сценария Lab вы можете получить доступ к библиотеке образцов, чтобы быстро испытать функции, или вы можете использовать пример в качестве отправной точки для собственного кода. Вы также можете воспользоваться лабораториями скриптов для предварительной версии API.
+Script Lab — это инструмент для всех, кто хочет научиться разрабатывать надстройки Office с помощью API JavaScript для Office в Excel, Word и  PowerPoint. Благодаря поддержке IntelliSense можно видеть доступные возможности. Этот инструмент построен на платформе Monaco, которая используется решением Visual Studio Code. С помощью Script Lab можно получить доступ к библиотеке примеров, чтобы быстро опробовать доступные функции. Также можно использовать пример в качестве отправной точки для разработки собственного кода. Можно даже использовать Script Lab для предварительного ознакомления с API.
 
-Звучит хорошо? Просмотрите этот видеоролик в виде одной минуты, чтобы увидеть Лаборатория сценариев в действии.
+Звучит неплохо? Посмотрите этот минутный видеоролик, чтобы увидеть Script Lab в действии.
 
 [![Ознакомительное видео, демонстрирующее работу Script Lab в Excel, Word и PowerPoint.](../images/screenshot-wide-youtube.png 'Ознакомительное видео о Script Lab')](https://aka.ms/scriptlabvideo)
 
 ## <a name="key-features"></a>Основные возможности
 
-В разделе script Lab предусмотрен ряд функций, которые помогут вам изучить функциональные возможности API JavaScript для Office и прототипа надстройки.
+В Script Lab доступен ряд функций, которые помогут изучить API JavaScript для Office и функциональность прототипов надстроек.
 
-### <a name="explore-samples"></a>Обзор примеров
+### <a name="explore-samples"></a>Изучите примеры
 
-Быстро приступите к работе со статьей встроенных примеров фрагментов, демонстрирующих выполнение задач с помощью API. Вы можете запустить примеры, чтобы сразу увидеть результат в области задач или документе, изучить примеры, чтобы узнать, как работает API, и даже использовать примеры для создания прототипа собственной надстройки.
+Встроенные примеры фрагментов кода, демонстрирующие выполнение задач с помощью API, помогут быстро начать работу. Можно запускать примеры, чтобы сразу видеть результат в области задач или документе, изучать примеры, чтобы понять принципы действия API, и даже использовать примеры для создания прототипов собственных надстроек.
 
 ![Примеры](../images/script-lab-samples.jpg)
 
 ### <a name="code-and-style"></a>Код и стиль
 
-В дополнение к коду JavaScript или TypeScript, вызывающему API Office JS, каждый фрагмент также содержит HTML-разметку, определяющую содержимое области задач и CSS, определяющую внешний вид области задач. Вы можете настроить HTML-разметку и CSS, чтобы поэкспериментировать с размещением элементов и стилизацией при создании прототипа области задач для собственной надстройки.
+В дополнение к коду JavaScript или TypeScript, который вызывает API JS для Office, каждый фрагмент также содержит разметку HTML, определяющую содержимое области задач, и таблицы стилей CSS, определяющие внешний вид области задач. Можно настроить разметку HTML и  CSS, чтобы поэкспериментировать с размещением и стилем элементов при создании прототипа дизайна панели задач для вашей собственной надстройки.
 
 > [!TIP]
-> Чтобы вызывать API предварительного просмотра внутри фрагмента, вам потребуется обновить библиотеки фрагментов кода, чтобы использовать бета-версию CDN`https://appsforoffice.microsoft.com/lib/beta/hosted/office.js`() и определения `@types/office-js-preview`типов предварительного просмотра. Кроме того, некоторые API предварительной версии доступны только в том случае, если вы зарегистрировались в [программе предварительной оценки Office](https://products.office.com/office-insider) и у вас установлена сборка Office для участников.
+> Чтобы вызвать API предварительной версии во фрагменте кода, потребуется обновить библиотеки фрагмента кода для использования сети доставки содержимого бета-версии (`https://appsforoffice.microsoft.com/lib/beta/hosted/office.js`) и определения типов предварительной версии `@types/office-js-preview`. Кроме того, некоторые API предварительной версии доступны только при наличии регистрации в [программе предварительной оценки Office](https://products.office.com/office-insider) и используете сборку Office, предназначенную для участников этой программы.
 
-### <a name="save-and-share-snippets"></a>Сохранение и совместное использование фрагментов
+### <a name="save-and-share-snippets"></a>Сохранение фрагментов кода и общий доступ к ним
 
-По умолчанию фрагменты кода, открываемые в лаборатории сценариев, будут сохранены в кэше браузера. Для окончательного сохранения фрагмента его можно экспортировать в [GitHub](https://gist.github.com). Создайте секретный объект, чтобы сохранить фрагмент исключительно для собственного использования, или создайте общедоступного пользователя, если вы планируете поделиться им с другими пользователями.
+Фрагменты кода, которые вы открываете в Script Lab, по умолчанию сохраняются в кэше браузера. Чтобы навсегда сохранить фрагмент кода, можно экспортировать его в [gist GitHub](https://gist.github.com). Можно создать секретный gist, чтобы сохранить фрагмент кода только для собственного использования, или создать общедоступный gist, если вы планируете поделиться этим фрагментом кода с другими пользователями.
 
-![Параметры общего доступа](../images/script-lab-share.jpg)
+![Возможности общего доступа](../images/script-lab-share.jpg)
 
 ### <a name="import-snippets"></a>Импорт фрагментов кода
 
-Вы можете импортировать фрагмент в тестовый сценарий, указав URL-адрес общедоступного [GitHub](https://gist.github.com) , в котором ХРАНИТСЯ фрагмент ямл, или ВСТАВИВ полный ямл для фрагмента. Эта функция может быть полезна в тех случаях, когда кто-то другой предоставил доступ к своему фрагменту, опубликовав его в GitHub или предоставляя свой фрагмент кода ЯМЛ.
+Можно импортировать фрагмент кода в Script Lab, указав URL-адрес общедоступного [gist GitHub](https://gist.github.com), в котором хранится YAML этого фрагмента кода, или вставить полный код YAML этого фрагмента кода. Эта функция может оказаться полезной в случае, если кто-то другой поделился с вами своим фрагментом кода, опубликовав его в gist GitHub или предоставив YAML этого фрагмента кода.
 
-![Параметр "импортировать фрагмент"](../images/script-lab-import-snippet.jpg)
+![Возможность импорта фрагментов кода](../images/script-lab-import-snippet.jpg)
 
 ## <a name="supported-clients"></a>Поддерживаемые клиенты
 
-Лаборатория скриптов поддерживается для Excel, Word и PowerPoint на следующих клиентах.
+Script Lab поддерживается для Excel, Word и  PowerPoint в следующих клиентах.
 
-- Office 2013 или более поздней версии в Windows
-- Office 2016 или более поздней версии на компьютерах Mac
+- Office 2013 или более поздней версии для Windows
+- Office 2016 или более поздней версии для Mac
 - Office в Интернете
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Чтобы использовать сценарий "Лаборатория" в Excel, Word или PowerPoint, установите [надстройку "Лаборатория скриптов](https://appsource.microsoft.com/product/office/WA104380862) " из AppSource. 
+Чтобы использовать Script Lab в Excel, Word или  PowerPoint, установите [надстройку Script Lab](https://appsource.microsoft.com/product/office/WA104380862) из AppSource. 
 
-Вы можете развернуть учебную библиотеку в лаборатории сценариев, дополнив новые фрагменты кода в репозиторий GitHub для [Office – JS: Snippets](https://github.com/OfficeDev/office-js-snippets#office-js-snippets) .
+Вы можете пополнить библиотеку примеров в Script Lab, добавив новые фрагменты кода в репозиторий GitHub [office-js-snippets](https://github.com/OfficeDev/office-js-snippets#office-js-snippets).
 
-Когда вы будете готовы создать свою первую надстройку Office, ознакомьтесь с кратким руководством для [Excel](../quickstarts/excel-quickstart-jquery.md), [Outlook](/outlook/add-ins/quick-start?context=office/dev/add-ins/context), [Word](../quickstarts/word-quickstart.md), [OneNote](../quickstarts/onenote-quickstart.md), [PowerPoint](../quickstarts/powerpoint-quickstart.md)или [Project](../quickstarts/project-quickstart.md).
+Когда вы будете готовы приступить к созданию своей первой надстройки Office, ознакомьтесь с кратким руководством для [Excel](../quickstarts/excel-quickstart-jquery.md), [Outlook](/outlook/add-ins/quick-start?context=office/dev/add-ins/context), [Word](../quickstarts/word-quickstart.md), [OneNote](../quickstarts/onenote-quickstart.md), [PowerPoint](../quickstarts/powerpoint-quickstart.md) или [Project](../quickstarts/project-quickstart.md).
 
 ## <a name="see-also"></a>См. также
 
-- [Получение лаборатории сценариев](https://appsource.microsoft.com/product/office/WA104380862)
-- [Дополнительные сведения о лаборатории сценариев](https://github.com/OfficeDev/script-lab#script-lab-a-microsoft-garage-project)
+- [Получить Script Lab](https://appsource.microsoft.com/product/office/WA104380862)
+- [Подробнее о Script Lab](https://github.com/OfficeDev/script-lab#script-lab-a-microsoft-garage-project)
 - [Присоединяйтесь к программе для разработчиков Office 365](https://developer.microsoft.com/office/dev-program)
 - [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
