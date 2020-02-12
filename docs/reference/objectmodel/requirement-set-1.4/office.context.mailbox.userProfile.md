@@ -1,14 +1,14 @@
 ---
-title: Office. Context. Mailbox. userProfile — набор обязательных элементов 1,5
+title: Office.context.mailbox.userProfile — набор обязательных элементов 1.4
 description: ''
 ms.date: 12/16/2019
 localization_priority: Normal
-ms.openlocfilehash: 6b5229c1bc300d11714f3aa2cf8fa8ff2465667c
-ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
+ms.openlocfilehash: 0532a9971a05412d37334f4c5a4b6b12654f61f3
+ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "40814266"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41950994"
 ---
 # <a name="userprofile"></a>userProfile
 
@@ -16,7 +16,7 @@ ms.locfileid: "40814266"
 
 Предоставляет сведения о пользователе в надстройке Outlook.
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|

@@ -2,13 +2,13 @@
 ms.date: 07/09/2019
 description: Проверка подлинности пользователей с использованием пользовательских функций в Excel.
 title: Проверка подлинности для пользовательских функций
-localization_priority: Priority
-ms.openlocfilehash: f746947122da7ef3d54a0dd3b4f90dd059e5830f
-ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: aa966aeb8d8161339bab0161b4cc329a9b495d08
+ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "36268140"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41950686"
 ---
 # <a name="authentication-for-custom-functions"></a>Проверка подлинности для пользовательских функций
 
@@ -45,7 +45,7 @@ ms.locfileid: "36268140"
 4. После этого пользовательская функция устанавливает этот маркер доступа в объекте `storage`.
 5. Область задач надстройки получает доступ к маркеру из объекта `storage`.
 
-![Схема пользовательской функции, использующей API диалоговых окон для получения маркера доступа, с последующим предоставлением маркера для области задач с помощью API OfficeRuntime.storage. ](../images/authentication-diagram.png "Схема проверки подлинности.")
+![Схема пользовательской функции с помощью API диалога для получения маркера доступа, а затем совместного использования маркера с областью задач с помощью API Оффицерунтиме. Storage.](../images/authentication-diagram.png "Схема проверки подлинности.")
 
 ## <a name="storing-the-token"></a>Хранение маркера
 

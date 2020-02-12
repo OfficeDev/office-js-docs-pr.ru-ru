@@ -2,13 +2,13 @@
 title: Загрузка неопубликованных надстроек Office в Office в Интернете для тестирования
 description: Тестирование неопубликованной надстройки Office в Office в Интернете путем ее загрузки
 ms.date: 06/20/2019
-localization_priority: Priority
-ms.openlocfilehash: 6a61a8bfb4860ac31803c40d8ecea1b550f79368
-ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: b26128a912aff5a89ad839b8240f18959891d299
+ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "35575606"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41950910"
 ---
 # <a name="sideload-office-add-ins-in-office-on-the-web-for-testing"></a>Загрузка неопубликованных надстроек Office в Office в Интернете для тестирования
 

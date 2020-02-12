@@ -2,13 +2,13 @@
 title: Создание команд надстроек в манифесте для Excel, Word и PowerPoint
 description: Используйте элемент VersionOverrides в манифесте, чтобы определить команды надстроек для Excel, Word и PowerPoint. Используйте команды надстроек, чтобы создать элементы пользовательского интерфейса, добавить кнопки или списки, а также для выполнения действий.
 ms.date: 09/26/2019
-localization_priority: Priority
-ms.openlocfilehash: cf3329df845d206452b1b29ae46de4a3888a1a49
-ms.sourcegitcommit: 528577145b2cf0a42bc64c56145d661c4d019fb8
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: 34dc614ea5189849e7ba16cb75ef86a66a36e968
+ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "37353827"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41950581"
 ---
 # <a name="create-add-in-commands-in-your-manifest-for-excel-word-and-powerpoint"></a>Создание команд надстроек в манифесте для Excel, Word и PowerPoint
 

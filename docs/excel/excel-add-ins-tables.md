@@ -2,13 +2,13 @@
 title: Работа с таблицами с использованием API JavaScript для Excel
 description: ''
 ms.date: 09/09/2019
-localization_priority: Priority
-ms.openlocfilehash: d3109d28a4eb8a1a16ff1919a201284024f10c38
-ms.sourcegitcommit: 5ba325cc88183a3f230cd89d615fd49c695addcf
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: e368447d50400d81953762bcdccfb174edbbdf22
+ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "37681979"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41950861"
 ---
 # <a name="work-with-tables-using-the-excel-javascript-api"></a>Работа с таблицами с использованием API JavaScript для Excel
 

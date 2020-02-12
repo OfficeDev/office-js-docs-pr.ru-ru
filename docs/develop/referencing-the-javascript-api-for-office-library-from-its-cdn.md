@@ -2,13 +2,13 @@
 title: Добавление ссылок на библиотеку JavaScript API для Office из сети доставки содержимого (CDN)
 description: ''
 ms.date: 03/19/2019
-localization_priority: Priority
-ms.openlocfilehash: 6b9512d5d0969e185902d7ab9d3227e820c4d0dc
-ms.sourcegitcommit: 528577145b2cf0a42bc64c56145d661c4d019fb8
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: 49fd83af4f5467cb4c612191e9fec235606fc05f
+ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "37353820"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41950791"
 ---
 # <a name="referencing-the-javascript-api-for-office-library-from-its-content-delivery-network-cdn"></a>Добавление ссылок на библиотеку JavaScript API для Office из сети доставки содержимого (CDN)
 

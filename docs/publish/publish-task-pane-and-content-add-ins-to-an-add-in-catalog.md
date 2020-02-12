@@ -2,13 +2,13 @@
 title: Публикация надстроек области задач и контентных надстроек в каталоге приложений SharePoint
 description: Чтобы предоставить доступ к надстройкам Office пользователям в организации, администраторы могут отправлять файлы манифестов надстроек Office в соответствующий каталог приложений.
 ms.date: 06/20/2019
-localization_priority: Priority
-ms.openlocfilehash: 106dfd2b1610be92f1b53dc1644ff3f8c60c0543
-ms.sourcegitcommit: 9c5a836d4464e49846c9795bf44cfe23e9fc8fbe
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: fe97cdb1af0cbf75eb6f1d99f81aef430e362c8e
+ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "35617032"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41950714"
 ---
 # <a name="publish-task-pane-and-content-add-ins-to-a-sharepoint-app-catalog"></a>Публикация надстроек области задач и контентных надстроек в каталоге приложений SharePoint
 

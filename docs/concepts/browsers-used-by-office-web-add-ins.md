@@ -2,13 +2,13 @@
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
 ms.date: 12/13/2019
-localization_priority: Priority
-ms.openlocfilehash: 3709157449634dfb49805e2247e47debe60f468f
-ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: 37d001d7feb170b11edc4f6a233f6fdc15cf3438
+ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "40813986"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41950364"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -38,6 +38,10 @@ ms.locfileid: "40813986"
 > Internet Explorer 11 не поддерживает версии JavaScript, более поздние, чем ES5. Если какой-либо пользователь вашей надстройки применяет платформы с Internet Explorer 11, для применения синтаксиса и возможностей ECMAScript 2015 или более поздних версий вам нужно либо транскомпилировать свой код JavaScript в ES5, либо использовать полизаполнение. Кроме того, Internet Explorer 11 не поддерживает некоторые элементы HTML5, в частности медиа, запись и местоположение.
 
 ## <a name="troubleshooting-microsoft-edge-issues"></a>Устранение проблем с Microsoft Edge
+
+### <a name="chromium-based-edge-is-installed-on-my-development-computer-but-my-add-in-does-not-use-it"></a>На моем компьютере разработчика установлен граничный сервер чромиум, но надстройка не использует ее
+
+Базовый браузер в [Microsoft Edge](https://support.microsoft.com/help/4501095/download-the-new-microsoft-edge-based-on-chromium) изменился на чромиум. Старая база, называемая Еджехтмл, не удаляется при установке пограничного сервера на основе Чромиум. Office по-прежнему будет использовать базу Еджехтмл для надстроек до тех пор, пока не будет установлена сборка Office 365, поддерживающая Чромиум на компьютере. Мы ожидаем, что эти сборки поставляются в 2020. Скорее всего, они будут отображаться в канале "предварительные сотрудники" в первой половине года.
 
 ### <a name="scroll-bar-does-not-appear-in-task-pane"></a>В области задач не отображается полоса прокрутки
 

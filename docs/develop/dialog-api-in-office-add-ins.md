@@ -2,13 +2,13 @@
 title: Использование Office Dialog API в вашей надстройках Office
 description: Изучите основы создания диалогового окна в надстройке Office
 ms.date: 01/29/2020
-localization_priority: Priority
-ms.openlocfilehash: 13badafd0d3a6bb3fdf656b5caf93c9f514921d9
-ms.sourcegitcommit: 4c9e02dac6f8030efc7415e699370753ec9415c8
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: 18ea221618e2a674266784517be3aa31d029c612
+ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41650007"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41950665"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
