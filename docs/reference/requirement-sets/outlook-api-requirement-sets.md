@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Outlook
 description: ''
-ms.date: 01/14/2020
+ms.date: 02/11/2020
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: bd6b20e9f0ddb5141f2f889a4e99af2c042a10ab
-ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
+ms.openlocfilehash: 7ea6be0cb1879ba583eaa64a7611899bf5adb73f
+ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "41217374"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41950546"
 ---
 # <a name="outlook-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Outlook
 
@@ -66,7 +66,7 @@ if (item.somePropertyOrFunction !== undefined) {
 
 ## <a name="requirement-sets-supported-by-exchange-servers-and-outlook-clients"></a>Наборы обязательных элементов, поддерживаемые серверами Exchange и клиентами Outlook
 
-В этом разделе указан диапазон наборов обязательных элементов, поддерживаемых сервером Exchange и клиентами Outlook.
+В этом разделе указан диапазон наборов обязательных элементов, поддерживаемых сервером Exchange и клиентами Outlook. Сведения о требованиях к серверу и клиенту для запуска надстроек Outlook см. в статье [Требования надстроек Outlook](/outlook/add-ins/add-in-requirements).
 
 > [!IMPORTANT]
 > Если целевой сервер Exchange и клиент Outlook поддерживают разные наборы обязательных элементов, вы ограничены применением более низкой версии набора обязательных элементов. Например, если надстройка работает в Outlook 2016 для Mac (максимальная версия набора обязательных элементов: 1.6) с использованием Exchange 2013 (максимальная версия набора обязательных элементов: 1.1), ваша надстройка ограничивается применением набора обязательных элементов 1.1.
