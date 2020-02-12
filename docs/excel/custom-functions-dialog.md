@@ -2,26 +2,26 @@
 ms.date: 06/18/2019
 description: Создание диалогового окна пользовательских функций в Excel с помощью JavaScript.
 title: Вызов диалогового окна из пользовательской функции
-localization_priority: Priority
-ms.openlocfilehash: 67a61bde409d45b2c96118de95f0839e7a73ddfe
-ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: 8db5034cf9079ac5cd05654614087882ed1a8d52
+ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "36268154"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41950770"
 ---
-# <a name="display-a-dialog-box-from-a-custom-function"></a><span data-ttu-id="629a5-103">Вызов диалогового окна из пользовательской функции</span><span class="sxs-lookup"><span data-stu-id="629a5-103">Display a dialog box from a custom function</span></span>
+# <a name="display-a-dialog-box-from-a-custom-function"></a><span data-ttu-id="6febd-103">Вызов диалогового окна из пользовательской функции</span><span class="sxs-lookup"><span data-stu-id="6febd-103">Display a dialog box from a custom function</span></span>
 
-<span data-ttu-id="629a5-104">Если пользовательская функция должна взаимодействовать с пользователем, можно создать диалоговое окно с помощью объекта [`Office.Dialog`](/javascript/api/office-runtime/officeruntime.dialog).</span><span class="sxs-lookup"><span data-stu-id="629a5-104">If your custom function needs to interact with the user, you can create a dialog box using the [`Office.Dialog` object](/javascript/api/office-runtime/officeruntime.dialog).</span></span> <span data-ttu-id="629a5-105">Распространенным сценарием использования диалогового окна является проверка подлинности пользователя, чтобы пользовательская функция могла обращаться к веб-службе.</span><span class="sxs-lookup"><span data-stu-id="629a5-105">A common scenario for using the dialog box is to authenticate a user so that your custom function can access a web service.</span></span> <span data-ttu-id="629a5-106">Дополнительные сведения о проверке подлинности с помощью пользовательских функций см. в статье [Проверка подлинности пользовательских функций](./custom-functions-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="629a5-106">For more details about authentication with custom functions, see [Custom functions authentication](./custom-functions-authentication.md).</span></span>
+<span data-ttu-id="6febd-104">Если пользовательская функция должна взаимодействовать с пользователем, можно создать диалоговое окно с помощью объекта [`Office.Dialog`](/javascript/api/office-runtime/officeruntime.dialog).</span><span class="sxs-lookup"><span data-stu-id="6febd-104">If your custom function needs to interact with the user, you can create a dialog box using the [`Office.Dialog` object](/javascript/api/office-runtime/officeruntime.dialog).</span></span> <span data-ttu-id="6febd-105">Распространенным сценарием использования диалогового окна является проверка подлинности пользователя, чтобы пользовательская функция могла обращаться к веб-службе.</span><span class="sxs-lookup"><span data-stu-id="6febd-105">A common scenario for using the dialog box is to authenticate a user so that your custom function can access a web service.</span></span> <span data-ttu-id="6febd-106">Дополнительные сведения о проверке подлинности с помощью пользовательских функций см. в статье [Проверка подлинности пользовательских функций](./custom-functions-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="6febd-106">For more details about authentication with custom functions, see [Custom functions authentication](./custom-functions-authentication.md).</span></span>
 
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
 >[!NOTE]
-> <span data-ttu-id="629a5-107">Объект `Office.Dialog` является частью среды выполнения пользовательских функций.</span><span class="sxs-lookup"><span data-stu-id="629a5-107">The `Office.Dialog` object is part of the custom functions runtime.</span></span> <span data-ttu-id="629a5-108">Объект `Dialog` не используется в областях задач.</span><span class="sxs-lookup"><span data-stu-id="629a5-108">Task panes don't use the `Dialog` object.</span></span> <span data-ttu-id="629a5-109">Сведения о создании диалогового окна из области задач см. в статье [Dialog API](/office/dev/add-ins/develop/dialog-api-in-office-add-ins).</span><span class="sxs-lookup"><span data-stu-id="629a5-109">To create a dialog box from a task pane, see [Dialog API](/office/dev/add-ins/develop/dialog-api-in-office-add-ins).</span></span>
+> <span data-ttu-id="6febd-107">Объект `Office.Dialog` является частью среды выполнения пользовательских функций.</span><span class="sxs-lookup"><span data-stu-id="6febd-107">The `Office.Dialog` object is part of the custom functions runtime.</span></span> <span data-ttu-id="6febd-108">Объект `Dialog` не используется в областях задач.</span><span class="sxs-lookup"><span data-stu-id="6febd-108">Task panes don't use the `Dialog` object.</span></span> <span data-ttu-id="6febd-109">Сведения о создании диалогового окна из области задач см. в статье [Dialog API](/office/dev/add-ins/develop/dialog-api-in-office-add-ins).</span><span class="sxs-lookup"><span data-stu-id="6febd-109">To create a dialog box from a task pane, see [Dialog API](/office/dev/add-ins/develop/dialog-api-in-office-add-ins).</span></span>
 
-## <a name="dialog-box-api-example"></a><span data-ttu-id="629a5-110">Пример API диалогового окна</span><span class="sxs-lookup"><span data-stu-id="629a5-110">dialog box API example</span></span>
+## <a name="dialog-box-api-example"></a><span data-ttu-id="6febd-110">Пример API диалогового окна</span><span class="sxs-lookup"><span data-stu-id="6febd-110">dialog box API example</span></span>
 
-<span data-ttu-id="629a5-111">В приведенном ниже примере кода функция `getTokenViaDialog` использует функцию `Dialog`API`displayWebDialogOptions` для отображения диалогового окна.</span><span class="sxs-lookup"><span data-stu-id="629a5-111">In the following code sample, the function `getTokenViaDialog` uses the `Dialog` API’s `displayWebDialogOptions` function to display a dialog box.</span></span>
+<span data-ttu-id="6febd-111">В приведенном ниже примере кода функция `getTokenViaDialog` использует функцию `Dialog`API`displayWebDialogOptions` для отображения диалогового окна.</span><span class="sxs-lookup"><span data-stu-id="6febd-111">In the following code sample, the function `getTokenViaDialog` uses the `Dialog` API’s `displayWebDialogOptions` function to display a dialog box.</span></span>
 
 ```js
 /**
@@ -67,11 +67,11 @@ function getTokenViaDialog(url) {
 }
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="629a5-112">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="629a5-112">Next steps</span></span>
-<span data-ttu-id="629a5-113">Узнайте, как [создавать пользовательские функции, совместимые с функциями XLL, определенными пользователями](make-custom-functions-compatible-with-xll-udf.md).</span><span class="sxs-lookup"><span data-stu-id="629a5-113">Learn how to [make your custom functions compatible with XLL user-defined functions](make-custom-functions-compatible-with-xll-udf.md).</span></span>
+## <a name="next-steps"></a><span data-ttu-id="6febd-112">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="6febd-112">Next steps</span></span>
+<span data-ttu-id="6febd-113">Узнайте, как [создавать пользовательские функции, совместимые с функциями XLL, определенными пользователями](make-custom-functions-compatible-with-xll-udf.md).</span><span class="sxs-lookup"><span data-stu-id="6febd-113">Learn how to [make your custom functions compatible with XLL user-defined functions](make-custom-functions-compatible-with-xll-udf.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="629a5-114">Дополнительные ресурсы</span><span class="sxs-lookup"><span data-stu-id="629a5-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6febd-114">Дополнительные ресурсы</span><span class="sxs-lookup"><span data-stu-id="6febd-114">See also</span></span>
 
-* [<span data-ttu-id="629a5-115">Проверка подлинности пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="629a5-115">Custom functions authentication</span></span>](custom-functions-authentication.md)
-* [<span data-ttu-id="629a5-116">Получение и обработка данных с помощью пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="629a5-116">Receive and handle data with custom functions</span></span>](custom-functions-web-reqs.md)
-* [<span data-ttu-id="629a5-117">Создание пользовательских функций в Excel</span><span class="sxs-lookup"><span data-stu-id="629a5-117">Create custom functions in Excel</span></span>](custom-functions-overview.md)
+* [<span data-ttu-id="6febd-115">Проверка подлинности пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="6febd-115">Custom functions authentication</span></span>](custom-functions-authentication.md)
+* [<span data-ttu-id="6febd-116">Получение и обработка данных с помощью пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="6febd-116">Receive and handle data with custom functions</span></span>](custom-functions-web-reqs.md)
+* [<span data-ttu-id="6febd-117">Создание пользовательских функций в Excel</span><span class="sxs-lookup"><span data-stu-id="6febd-117">Create custom functions in Excel</span></span>](custom-functions-overview.md)
