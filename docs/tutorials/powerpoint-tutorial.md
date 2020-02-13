@@ -3,13 +3,13 @@ title: Руководство по надстройкам PowerPoint
 description: Из этого руководства вы узнаете, как создать надстройку PowerPoint, которая вставляет изображение и текст, получает метаданные слайда и выполняет переход между слайдами.
 ms.date: 12/24/2019
 ms.prod: powerpoint
-localization_priority: Normal
-ms.openlocfilehash: 524c6727e8a1b8e4bb42156a5cec9fead45fd45c
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
-ms.translationtype: MT
+localization_priority: Priority
+ms.openlocfilehash: aace13a3dba55abcac258b48ceb852fed746adcc
+ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851427"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41950889"
 ---
 # <a name="tutorial-create-a-powerpoint-task-pane-add-in"></a>Учебник: Создание надстройки области задач PowerPoint
 
@@ -33,7 +33,7 @@ ms.locfileid: "40851427"
 
 2. Используя поле поиска, введите **надстройка**. Выберите вариант **Веб-надстройка PowerPoint** и нажмите кнопку **Далее**.
 
-3. Назовите проект `HelloWorld`и нажмите кнопку **создать**.
+3. Назовите проект `HelloWorld` и нажмите кнопку **Создать**.
 
 4. В диалоговом окне **Создание надстройки Office** выберите **Добавить новые функции в PowerPoint**, а затем нажмите кнопку **Готово**, чтобы создать проект.
 
@@ -506,7 +506,7 @@ ms.locfileid: "40851427"
 Из этого руководства вы узнали, как создать надстройку PowerPoint, которая вставляет изображение и текст, получает метаданные слайда и выполняет переход между слайдами. Чтобы узнать больше о создании надстроек PowerPoint, перейдите к следующей статье:
 
 > [!div class="nextstepaction"]
-> [Общие сведения о надстройках PowerPoint](../powerpoint/powerpoint-add-ins.md)
+> [Обзор надстроек PowerPoint](../powerpoint/powerpoint-add-ins.md)
 
 ## <a name="see-also"></a>См. также
 
