@@ -2,17 +2,17 @@
 ms.date: 01/14/2020
 description: Запрос, потоковая передача и отмена потоковой передачи внешних данных к книге с помощью пользовательских функций в Excel
 title: Получение и обработка данных с помощью пользовательских функций
-localization_priority: Priority
-ms.openlocfilehash: e57ffb43bfa58e0ff5219aa7fdbcae5fb30f5479
-ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: c59133389311721c4d0507337a17b346af97e690
+ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "41217048"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41949717"
 ---
 # <a name="receive-and-handle-data-with-custom-functions"></a>Получение и обработка данных с помощью пользовательских функций
 
-Один из способов, используемых пользовательскими функциями для повышения эффективности Excel, состоит в получении данных из расположений помимо книг, например из Интернета или сервера (через WebSockets). Можно запрашивать внешние данные с помощью такого API, как [`Fetch`](https://developer.mozilla.org/ru-RU/docs/Web/API/Fetch_API), или с помощью `XmlHttpRequest` [(XHR)](https://developer.mozilla.org/ru-RU/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который отправляет HTTP-запросы для взаимодействия с серверами.
+Один из способов, используемых пользовательскими функциями для повышения эффективности Excel, состоит в получении данных из расположений помимо книг, например из Интернета или сервера (через WebSockets). Можно запрашивать внешние данные с помощью такого API, как [`Fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), или с помощью `XmlHttpRequest` [(XHR)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который отправляет HTTP-запросы для взаимодействия с серверами.
 
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
@@ -56,7 +56,7 @@ function webRequest() {
 
 ### <a name="xhr-example"></a>Пример XHR
 
-В среде выполнения пользовательских функций XHR реализует дополнительные меры по обеспечению безопасности, предъявляя в качестве требования [политику единого домена](https://developer.mozilla.org/ru-RU/docs/Web/Security/Same-origin_policy) и простой запрос [CORS](https://www.w3.org/TR/cors/).
+В среде выполнения пользовательских функций XHR реализует дополнительные меры по обеспечению безопасности, предъявляя в качестве требования [политику единого домена](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) и простой запрос [CORS](https://www.w3.org/TR/cors/).
 
 Обратите внимание, что при реализации простых запросов CORS нельзя использовать файлы cookie и поддерживаются только простые методы (GET, HEAD, POST). Простые запросы CORS принимают простые заголовки с именами полей `Accept`, `Accept-Language`, `Content-Language`. Вы также можете использовать заголовок Content-Type в простом запросе CORS, если используется тип контента `application/x-www-form-urlencoded`, `text/plain` или `multipart/form-data`.
 

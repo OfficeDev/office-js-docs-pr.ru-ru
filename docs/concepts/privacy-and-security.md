@@ -2,13 +2,13 @@
 title: Конфиденциальность и безопасность надстроек Office
 description: ''
 ms.date: 09/26/2019
-localization_priority: Priority
-ms.openlocfilehash: 88f03bed084484a98d4719fb9caacf174b13acda
-ms.sourcegitcommit: 0dacbe7c80ed387099e3ec21e151f8990b181ede
-ms.translationtype: HT
+localization_priority: Normal
+ms.openlocfilehash: c4f2ea5413ff1fa404c242bc729c59f9feedaca3
+ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "41110936"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41949719"
 ---
 # <a name="privacy-and-security-for-office-add-ins"></a>Конфиденциальность и безопасность надстроек Office
 
@@ -187,7 +187,7 @@ Exchange и SharePoint предоставляют прокси-серверы н
 
 - Если вы используете jQuery, то вместо метода [.html()](https://api.jquery.com/text/) воспользуйтесь методом [.text()](https://api.jquery.com/html/).
 
-- С помощью метода [toStaticHTML](https://developer.mozilla.org/ru-RU/docs/Web/HTML/Reference) перед отправкой введенных пользователем данных в свойство **innerHTML** можно удалить из них любые динамические элементы и атрибуты HTML.
+- С помощью метода [toStaticHTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference) перед отправкой введенных пользователем данных в свойство **innerHTML** можно удалить из них любые динамические элементы и атрибуты HTML.
 
 - С помощью функции [encodeURIComponent](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/encodeuricomponent) или [encodeURI](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/encodeuri) можно закодировать текст, который будет использоваться в качестве URL-адреса, введенного пользователем или содержащего введенные пользователем данные.
 
