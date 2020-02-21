@@ -3,12 +3,12 @@ title: Конфиденциальность и безопасность надс
 description: ''
 ms.date: 09/26/2019
 localization_priority: Normal
-ms.openlocfilehash: c4f2ea5413ff1fa404c242bc729c59f9feedaca3
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 30ebae88d40795b4be36628a60539397fb1deb29
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41949719"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42162806"
 ---
 # <a name="privacy-and-security-for-office-add-ins"></a>Конфиденциальность и безопасность надстроек Office
 
@@ -97,7 +97,7 @@ ms.locfileid: "41949719"
 
   - Выполнение в элементе управления браузера позволяет надстройке совершать практически любые операции, доступные обычной странице в браузере, и в то же время принуждает ее соблюдать политику единого домена для обеспечения изоляции доменов и зон безопасности.
 
-Надстройки Outlook позволяют использовать дополнительные функции обеспечения безопасности и производительности. Для этого отслеживается потребление определенных ресурсов надстройками Outlook. Дополнительные сведения см. в разделе [Конфиденциальность, разрешения и безопасность для надстроек Outlook](/outlook/add-ins/privacy-and-security).
+Надстройки Outlook позволяют использовать дополнительные функции обеспечения безопасности и производительности. Для этого отслеживается потребление определенных ресурсов надстройками Outlook. Дополнительные сведения см. в разделе [Конфиденциальность, разрешения и безопасность для надстроек Outlook](../outlook/privacy-and-security.md).
 
 ### <a name="developer-guidelines-to-handle-pii"></a>Рекомендации разработчикам по обработке персональных данных
 
@@ -138,13 +138,13 @@ ms.locfileid: "41949719"
 </OfficeApp>
 ```
 
-Дополнительные сведения о разрешениях для надстроек области задач и контентных надстроек см. в статье [Запрос разрешений на использование API в надстройках](/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins).
+Дополнительные сведения о разрешениях для надстроек области задач и контентных надстроек см. в статье [Запрос разрешений на использование API в надстройках](../develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md).
 
 Дополнительные сведения о разрешениях для надстроек Outlook см. в следующих статьях:
 
-- [Конфиденциальность, разрешения и безопасность для надстроек Outlook](/outlook/add-ins/privacy-and-security)
+- [Конфиденциальность, разрешения и безопасность для надстроек Outlook](../outlook/privacy-and-security.md)
 
-- [Общие сведения о разрешениях для надстройки Outlook](/outlook/add-ins/understanding-outlook-add-in-permissions)
+- [Общие сведения о разрешениях для надстройки Outlook](../outlook/understanding-outlook-add-in-permissions.md)
 
 ### <a name="same-origin-policy"></a>Политика единого домена
 
@@ -240,7 +240,7 @@ Exchange и SharePoint предоставляют прокси-серверы н
   - создать заявление, прописывающее соответствующую требованиям политику конфиденциальности;
   - подготовиться к подписанию контрактного соглашения при отправке надстройки.
 
-Помимо соблюдения правил использования ресурсов разработчики надстроек Outlook должны проверять, что их надстройки соблюдают ограничения по заданию правил активации и использованию API JavaScript. Дополнительные сведения см. в статье [Ограничения для активации и API JavaScript для надстроек Outlook](/outlook/add-ins/limits-for-activation-and-javascript-api-for-outlook-add-ins).
+Помимо соблюдения правил использования ресурсов разработчики надстроек Outlook должны проверять, что их надстройки соблюдают ограничения по заданию правил активации и использованию API JavaScript. Дополнительные сведения см. в статье [Ограничения для активации и API JavaScript для надстроек Outlook](../outlook/limits-for-activation-and-javascript-api-for-outlook-add-ins.md).
 
 ## <a name="it-administrators-control"></a>Полномочия ИТ-администраторов
 
@@ -259,11 +259,11 @@ Exchange и SharePoint предоставляют прокси-серверы н
 
 ## <a name="see-also"></a>См. также
 
-- [Запрос разрешений на использование API в надстройках](/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins)
-- [Конфиденциальность, разрешения и безопасность для надстроек Outlook](/outlook/add-ins/privacy-and-security)
-- [Общие сведения о разрешениях для надстройки Outlook](/outlook/add-ins/understanding-outlook-add-in-permissions)
-- [Ограничения активации и API JavaScript для надстроек Outlook](/outlook/add-ins/limits-for-activation-and-javascript-api-for-outlook-add-ins)
-- [Работа с ограничениями по принципу одинакового источника в надстройках Office](/office/dev/add-ins/develop/addressing-same-origin-policy-limitations)
+- [Запрос разрешений на использование API в надстройках](../develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md)
+- [Конфиденциальность, разрешения и безопасность для надстроек Outlook](../outlook/privacy-and-security.md)
+- [Общие сведения о разрешениях для надстройки Outlook](../outlook/understanding-outlook-add-in-permissions.md)
+- [Ограничения активации и API JavaScript для надстроек Outlook](../outlook/limits-for-activation-and-javascript-api-for-outlook-add-ins.md)
+- [Работа с ограничениями по принципу одинакового источника в надстройках Office](../develop/addressing-same-origin-policy-limitations.md)
 - [Принцип одинакового источника](https://www.w3.org/Security/wiki/Same_Origin_Policy)
 - [Принцип одинакового источника. Часть 1. Без просмотра](/archive/blogs/ieinternals/same-origin-policy-part-1-no-peeking)
 - [Принцип одинакового источника для JavaScript](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy)

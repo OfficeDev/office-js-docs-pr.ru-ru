@@ -3,12 +3,12 @@ title: Ограничения ресурсов и оптимизация про�
 description: ''
 ms.date: 09/09/2019
 localization_priority: Normal
-ms.openlocfilehash: 9cd64943e3ec612fa2cb21adcd500c6522d451a2
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 332ea72e9c96ff7a9b61a4fb0249284ca44079ac
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950378"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42162792"
 ---
 # <a name="resource-limits-and-performance-optimization-for-office-add-ins"></a>Ограничения ресурсов и оптимизация производительности надстроек Office
 
@@ -107,5 +107,5 @@ Office предоставляет журнал телеметрии, котор�
 ## <a name="see-also"></a>См. также
 
 - [Конфиденциальность и безопасность надстроек Office](../concepts/privacy-and-security.md)
-- [Ограничения активации и API JavaScript для надстроек Outlook](/outlook/add-ins/limits-for-activation-and-javascript-api-for-outlook-add-ins)
+- [Ограничения активации и API JavaScript для надстроек Outlook](../outlook/limits-for-activation-and-javascript-api-for-outlook-add-ins.md)
 - [Оптимизация производительности с использованием API JavaScript для Excel](../excel/performance.md)

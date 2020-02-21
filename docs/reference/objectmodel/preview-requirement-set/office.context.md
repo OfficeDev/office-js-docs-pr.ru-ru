@@ -3,16 +3,16 @@ title: Office.context — предварительная версия набор
 description: ''
 ms.date: 12/16/2019
 localization_priority: Normal
-ms.openlocfilehash: 08f26de89624e6e06bc57382afe8e02b018029ca
-ms.sourcegitcommit: 0dacbe7c80ed387099e3ec21e151f8990b181ede
+ms.openlocfilehash: 9c2c661ce870e2007bd891aee040c6b3564f7b9e
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "41111153"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42165519"
 ---
 # <a name="context"></a>context
 
-### <a name="officeofficemdcontext"></a>[Office](office.md).context
+### <a name="officecontext"></a>[Office](office.md).context
 
 Office. context предоставляет общие интерфейсы, которые используются надстройками во всех приложениях Office. В этом листинге документируется только те интерфейсы, которые используются надстройками Outlook. Полный список пространств имен Office. Context представлен в статье [Справочник по Office. Context в общем API](/javascript/api/office/office.context?view=outlook-js-preview).
 
@@ -21,7 +21,7 @@ Office. context предоставляет общие интерфейсы, ко
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
 ##### <a name="properties"></a>Свойства
 
@@ -41,9 +41,9 @@ Office. context предоставляет общие интерфейсы, ко
 
 ## <a name="property-details"></a>Сведения о свойстве
 
-#### <a name="auth-authjavascriptapiofficeofficeauth"></a>Проверка подлинности: [AUTH](/javascript/api/office/office.auth)
+#### <a name="auth-auth"></a>Проверка подлинности: [AUTH](/javascript/api/office/office.auth)
 
-Поддерживает [единый вход (SSO)](/outlook/add-ins/authenticate-a-user-with-an-sso-token) , предоставляя метод, позволяющий ведущему приложению Office получать маркер доступа к веб-приложению надстройки. Косвенно это также дает возможность надстройке получать доступ к данным Microsoft Graph пользователя, вошедшего в систему, не требуя от пользователя еще раз выполнить вход в систему.
+Поддерживает [единый вход (SSO)](../../../outlook/authenticate-a-user-with-an-sso-token.md) , предоставляя метод, позволяющий ведущему приложению Office получать маркер доступа к веб-приложению надстройки. Косвенно это также дает возможность надстройке получать доступ к данным Microsoft Graph пользователя, вошедшего в систему, не требуя от пользователя еще раз выполнить вход в систему.
 
 ##### <a name="type"></a>Тип
 
@@ -54,7 +54,7 @@ Office. context предоставляет общие интерфейсы, ко
 |Требование| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](../../requirement-sets/outlook-api-requirement-sets.md)| Предварительная версия|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -89,7 +89,7 @@ Office.context.auth.getAccessTokenAsync(function(result) {
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -117,7 +117,7 @@ function write(message){
 ---
 ---
 
-#### <a name="diagnostics-contextinformationjavascriptapiofficeofficecontextinformation"></a>Диагностика: [контекстинформатион](/javascript/api/office/office.contextinformation)
+#### <a name="diagnostics-contextinformation"></a>Диагностика: [контекстинформатион](/javascript/api/office/office.contextinformation)
 
 Получает сведения о среде, в которой выполняется надстройка.
 
@@ -130,7 +130,7 @@ function write(message){
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -158,7 +158,7 @@ The `displayLanguage` value reflects the current **Display Language** setting sp
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -186,7 +186,7 @@ function write(message){
 ---
 ---
 
-#### <a name="host-hosttypejavascriptapiofficeofficehosttype"></a>узел: [HostType](/javascript/api/office/office.hosttype)
+#### <a name="host-hosttype"></a>узел: [HostType](/javascript/api/office/office.hosttype)
 
 Получает узел приложений Office, в котором работает надстройка.
 
@@ -199,7 +199,7 @@ function write(message){
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -212,7 +212,7 @@ console.log(JSON.stringify(Office.context.host));
 ---
 ---
 
-#### <a name="officetheme-officethemejavascriptapiofficeofficeofficetheme"></a>officeTheme: [officeTheme](/javascript/api/office/office.officetheme)
+#### <a name="officetheme-officetheme"></a>officeTheme: [officeTheme](/javascript/api/office/office.officetheme)
 
 Предоставляет доступ к свойствам цветов темы Office.
 
@@ -239,7 +239,7 @@ console.log(JSON.stringify(Office.context.host));
 |Требование| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](../../requirement-sets/outlook-api-requirement-sets.md)| Предварительная версия|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -261,7 +261,7 @@ function applyOfficeTheme(){
 ---
 ---
 
-#### <a name="platform-platformtypejavascriptapiofficeofficeplatformtype"></a>Платформа: [PlatformType](/javascript/api/office/office.platformtype)
+#### <a name="platform-platformtype"></a>Платформа: [PlatformType](/javascript/api/office/office.platformtype)
 
 Предоставляет платформу, на которой работает надстройка.
 
@@ -274,7 +274,7 @@ function applyOfficeTheme(){
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -287,7 +287,7 @@ console.log(JSON.stringify(Office.context.platform));
 ---
 ---
 
-#### <a name="requirements-requirementsetsupportjavascriptapiofficeofficerequirementsetsupport"></a>требования: [рекуирементсетсуппорт](/javascript/api/office/office.requirementsetsupport)
+#### <a name="requirements-requirementsetsupport"></a>требования: [рекуирементсетсуппорт](/javascript/api/office/office.requirementsetsupport)
 
 Предоставляет метод для определения наборов требований, поддерживаемых на текущем узле и платформе.
 
@@ -300,7 +300,7 @@ console.log(JSON.stringify(Office.context.platform));
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
 ##### <a name="example"></a>Пример
 
@@ -313,7 +313,7 @@ console.log(JSON.stringify(Office.context.requirements.isSetSupported("mailbox",
 ---
 ---
 
-#### <a name="roamingsettings-roamingsettingsjavascriptapioutlookofficeroamingsettings"></a>roamingSettings: [roamingSettings](/javascript/api/outlook/office.roamingsettings)
+#### <a name="roamingsettings-roamingsettings"></a>roamingSettings: [roamingSettings](/javascript/api/outlook/office.roamingsettings)
 
 Получает объект, представляющий настраиваемые параметры или состояние надстройки почты, сохраненное в почтовом ящике пользователя.
 
@@ -328,15 +328,15 @@ console.log(JSON.stringify(Office.context.requirements.isSetSupported("mailbox",
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
-|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](../../../outlook/understanding-outlook-add-in-permissions.md)| С ограничениями|
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
 <br>
 
 ---
 ---
 
-#### <a name="ui-uijavascriptapiofficeofficeui"></a>Пользовательский интерфейс: [Пользовательский интерфейс](/javascript/api/office/office.ui)
+#### <a name="ui-ui"></a>Пользовательский интерфейс: [Пользовательский интерфейс](/javascript/api/office/office.ui)
 
 Предоставляет объекты и методы, которые можно использовать для создания компонентов пользовательского интерфейса, например диалоговых окон, в надстройках Office и управления ими.
 
@@ -349,4 +349,4 @@ console.log(JSON.stringify(Office.context.requirements.isSetSupported("mailbox",
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|

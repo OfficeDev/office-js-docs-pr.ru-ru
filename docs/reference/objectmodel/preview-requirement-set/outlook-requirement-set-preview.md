@@ -3,12 +3,12 @@ title: Предварительная версия набора обязател
 description: ''
 ms.date: 12/17/2019
 localization_priority: Normal
-ms.openlocfilehash: 5dec8ae4f3a5f8320cf7503e81a9ea9cc8bb3a90
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: c297904ff8343fd4c958c80b41170c5f2e93c739
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41951001"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42165505"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -27,7 +27,7 @@ ms.locfileid: "41951001"
 
 ### <a name="integration-with-actionable-messages"></a>Взаимодействие с интерактивными сообщениями
 
-#### <a name="officecontextmailboxitemgetinitializationcontextasyncofficecontextmailboxitemmdmethods"></a>[Office.context.mailbox.item.getInitializationContextAsync](office.context.mailbox.item.md#methods)
+#### <a name="officecontextmailboxitemgetinitializationcontextasync"></a>[Office.context.mailbox.item.getInitializationContextAsync](office.context.mailbox.item.md#methods)
 
 Добавлена новая функция, которая возвращает данные инициализации, передаваемые при [активации надстройки интерактивным сообщением](/outlook/actionable-messages/invoke-add-in-from-actionable-message).
 
@@ -41,13 +41,13 @@ ms.locfileid: "41951001"
 
 ### <a name="office-theme"></a>Тема Office
 
-#### <a name="officecontextofficethemejavascriptapiofficeofficecontextofficetheme"></a>[Office.context.officeTheme](/javascript/api/office/office.context#officetheme)
+#### <a name="officecontextofficetheme"></a>[Office.context.officeTheme](/javascript/api/office/office.context#officetheme)
 
 Добавлена возможность получения темы Office.
 
 **Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
 
-#### <a name="officeeventtypeofficethemechangedjavascriptapiofficeofficeeventtype"></a>[Office.EventType.OfficeThemeChanged](/javascript/api/office/office.eventtype)
+#### <a name="officeeventtypeofficethemechanged"></a>[Office.EventType.OfficeThemeChanged](/javascript/api/office/office.eventtype)
 
 Добавлено событие `OfficeThemeChanged` для объекта `Mailbox`.
 
@@ -59,15 +59,15 @@ ms.locfileid: "41951001"
 
 ### <a name="sso"></a>Единый вход
 
-#### <a name="officeruntimeauthgetaccesstokenofficedevadd-insdevelopsso-in-office-add-inssso-api-reference"></a>[OfficeRuntime.auth.getAccessToken](/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference)
+#### <a name="officeruntimeauthgetaccesstoken"></a>[OfficeRuntime.auth.getAccessToken](/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference)
 
-Добавлена возможность доступа к `getAccessToken`, что позволяет надстройкам [получать маркер доступа](/outlook/add-ins/authenticate-a-user-with-an-sso-token) для API Microsoft Graph.
+Добавлена возможность доступа к `getAccessToken`, что позволяет надстройкам [получать маркер доступа](../../../outlook/authenticate-a-user-with-an-sso-token.md) для API Microsoft Graph.
 
 **Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365), Outlook для Mac (версия, подключенная к подписке на Office 365), Outlook в Интернете (современная версия), Outlook в Интернете (классическая версия)
 
 ## <a name="see-also"></a>См. также
 
-- [Надстройки Outlook](/outlook/add-ins/)
+- [Надстройки Outlook](../../../outlook/outlook-add-ins-overview.md)
 - [Примеры кода надстройки Outlook](https://developer.microsoft.com/outlook/gallery/?filterBy=Outlook,Samples,Add-ins)
-- [Начало работы](/outlook/add-ins/quick-start)
+- [Начало работы](../../../quickstarts/outlook-quickstart.md)
 - [Наборы обязательных элементов и поддерживаемые клиенты](../../requirement-sets/outlook-api-requirement-sets.md)

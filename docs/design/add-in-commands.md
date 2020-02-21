@@ -3,12 +3,12 @@ title: Команды надстроек для Excel, Word и PowerPoint
 description: ''
 ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: f57e5465e503d936b7e8a404c9acf59ef897b4ac
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 92e9b23eaf23aa9c6e0a2eda048dc34e3942f4ed
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950413"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42162841"
 ---
 # <a name="add-in-commands-for-excel-word-and-powerpoint"></a>Команды надстроек для Excel, Word и PowerPoint
 
@@ -94,4 +94,4 @@ ms.locfileid: "41950413"
 
 Лучший способ начать работу с командами надстроек Office — ознакомиться с [примерами](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/) на сайте GitHub.
 
-Дополнительные сведения об указании команд надстройки в манифесте см. в статье [Создание команд надстроек в манифесте](../develop/create-addin-commands.md) и справочных материалах по [VersionOverrides](/office/dev/add-ins/reference/manifest/versionoverrides).
+Дополнительные сведения об указании команд надстройки в манифесте см. в статье [Создание команд надстроек в манифесте](../develop/create-addin-commands.md) и справочных материалах по [VersionOverrides](../reference/manifest/versionoverrides.md).

@@ -4,18 +4,18 @@ description: ''
 ms.date: 06/20/2019
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 0d2385f32c314fccb60335d721dd8db3bb30393a
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: c6c71e01dff2c8bc595d662e5897a4c98692a216
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950973"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42163957"
 ---
 # <a name="add-in-commands-requirement-sets"></a>Наборы обязательных элементов для команд надстроек
 
 Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets).
 
-Команды надстроек — это элементы, которые расширяют пользовательский интерфейс Office и запускают действия в надстройке. Команды надстроек можно использовать для добавления кнопки на ленту или элемента в контекстное меню. Дополнительные сведения см. в статьях [Команды надстроек для Excel, Word и PowerPoint](/office/dev/add-ins/design/add-in-commands) и [Команды надстроек Outlook](/outlook/add-ins/add-in-commands-for-outlook).
+Команды надстроек — это элементы, которые расширяют пользовательский интерфейс Office и запускают действия в надстройке. Команды надстроек можно использовать для добавления кнопки на ленту или элемента в контекстное меню. Дополнительные сведения см. в статьях [Команды надстроек для Excel, Word и PowerPoint](/office/dev/add-ins/design/add-in-commands) и [Команды надстроек Outlook](../../outlook/add-in-commands-for-outlook.md).
 
 У первого выпуска команд надстроек нет соответствующего набора обязательных элементов (то есть набора обязательных элементов AddInCommands 1.0 не существует). В приведенной ниже таблице указаны ведущие приложения Office, которые поддерживают первый выпуск, а также их номера версии или сборки.  
 

@@ -1,0 +1,98 @@
+---
+title: Ограничения на активацию и использование API в надстройках Outlook
+description: Обратите внимание на определенные правила активации и использования API и учитывайте эти ограничения при реализации своих надстроек.
+ms.date: 10/31/2019
+localization_priority: Normal
+ms.openlocfilehash: 15fba6d0be2f638bfa4ffd531da5876a4ccbc876
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42166752"
+---
+# <a name="limits-for-activation-and-javascript-api-for-outlook-add-ins"></a>Ограничения на активацию и API JavaScript для надстроек Outlook
+
+Чтобы предоставить пользователям удобные возможности работы в надстройках Outlook, следует помнить об определенных рекомендациях по активации и использованию интерфейса API и разрабатывать надстройки в соответствии с ними. Эти рекомендации созданы для того, чтобы отдельная надстройка не могла отнимать у Exchange Server или Outlook слишком много времени для обработки правил активации или вызовов API JavaScript для Office, что может повлиять на общую работу Outlook и других надстроек. Эти ограничения относятся к созданию правил активации в манифесте надстройки, а также к использованию настраиваемых свойств, параметров перемещения, получателей, запросов и ответов Веб-службы Exchange (EWS) и асинхронных вызовов.
+
+> [!NOTE]
+> Если ваша надстройка работает в полнофункциональном клиенте Outlook, то необходимо также убедиться, что она при этом учитываются ограничения на используемые ресурсы.
+
+## <a name="limits-on-where-add-ins-activate"></a>Где активируются надстройки
+
+Надстройки активируются только в основном почтовом ящике пользователя. Надстройки не активируются в общих почтовых ящиках, папках из почтовых ящиков других пользователей, открытых с использованием доступа делегата, архивных почтовых ящиках и общедоступных папках.
+
+## <a name="limits-for-activation-rules"></a>Ограничения для правил активации
+
+При разработке правил активации надстроек Outlook придерживайтесь следующих рекомендаций.
+
+- Размер манифеста не должен превышать 256 КБ. Если это ограничение будет превышено, установить надстройку Outlook для почтового ящика Exchange будет невозможно.
+
+- Задавайте не более 15 правил активации для надстройки. Если это ограничение будет превышено, установить надстройку не удастся.
+
+- Если правило [ItemHasKnownEntity](../reference/manifest/rule.md#itemhasknownentity-rule) применяется к тексту сообщения выбранного элемента, следует ожидать, что полнофункциональный клиент Outlook будет применять его только к первому мегабайту текста сообщения, а не ко всему тексту, если его объем превышает это ограничение. Надстройка не будет активирована, если соответствия присутствуют только после первого мегабайта текста сообщения. Если вы считаете такой сценарий вероятным, измените условия активации.
+
+- Если вы используете регулярные выражения в правилах **ItemHasKnownEntity** и [ItemHasRegularExpressionMatch](../reference/manifest/rule.md#itemhasregularexpressionmatch-rule), помните о следующих ограничениях и рекомендациях, которые обычно применяются к любому ведущему приложению Outlook, а также ограничениях, описанных в таблицах 1, 2 и 3, которые зависят от ведущего приложения:
+   - Задавайте не более пяти регулярных выражений в правилах активации для надстройки. В противном случае вам не удастся установить надстройку.
+   - Задавайте регулярные выражения таким образом, чтобы ожидаемые результаты возвращались в первых 50 совпадениях, с помощью вызова метода **getRegExMatches**.
+   - Может указывать утверждения с просмотром вперед, но не поддерживает утверждения с просмотром назад `(?<=text)` и отрицательные утверждения с просмотром назад `(?<!text)` в регулярных выражениях.
+
+В таблице 1 перечислены эти пределы и описаны различия в поддержке регулярных выражений между расширенным клиентом Outlook и Outlook в Интернете или на мобильных устройствах. Поддержка не зависит от типа устройства и основного текста элемента.
+
+**Таблица 1. Основные различия в поддержке регулярных выражений**
+
+|Полнофункциональный клиент Outlook|Outlook в Интернете или на мобильных устройствах|
+|:-----|:-----|
+|Использует обработчик регулярных выражений C++, который предоставляется как часть библиотеки стандартных шаблонов Visual Studio. Этот обработчик выполняет компиляцию в соответствии со стандартами ECMAScript 5. |Использует оценку регулярных выражений, которая является частью JavaScript, предоставляется браузером и поддерживает расширенный набор стандартов ECMAScript 5.|
+|Из-за различных обработчиков регулярных выражений, предполагается, что регулярное выражение, включающее пользовательский класс символов на основе предопределенных классов символов, может возвращать разные результаты в расширенном клиенте Outlook, чем в Outlook в Интернете или на мобильных устройствах.<br/><br/>Например, регулярное выражение `[\s\S]{0,100}` соответствует любому количеству (от 0 до 100) символов, включая пробелы. Это регулярное выражение возвращает разные результаты в расширенном клиенте Outlook, чем Outlook в Интернете и на мобильных устройствах.<br/><br/>Чтобы обойти эту проблему, следует переписать его в виде `(\s\|\S){0,100}`. Такое регулярное выражение соответствует любому количеству символов (от 0 до 100), включая пробелы.<br/><br/>Тщательно проверьте каждое регулярное выражение в каждом ведущем приложении Outlook. Если обнаружатся разные результаты, перепишите соответствующее регулярное выражение. |Тщательно проверьте каждое регулярное выражение в каждом ведущем приложении Outlook. Если обнаружатся разные результаты, перепишите соответствующее регулярное выражение.|
+|По умолчанию продолжительность оценки всех регулярных выражений для надстройки ограничивается 1 секундой. При превышении этого ограничения выполняется повторная оценка до 3 раз. Полнофункциональный клиент Outlook не только ограничивает повторную оценку, но и отключает запуск надстройки для одного и того же почтового ящика во всех ведущих приложениях Outlook.<br/><br/>Администраторы могут переопределить эти ограничения в разделах реестра **OutlookActivationAlertThreshold** и **OutlookActivationManagerRetryLimit**.|Не поддерживаются такие же параметры реестра и мониторинга ресурсов, как в полнофункциональном клиенте Outlook. Однако надстройки с регулярными выражениями, для оценки которых требуется слишком много времени в полнофункциональном клиенте Outlook, отключаются для одного и того же почтового ящика во всех ведущих приложениях Outlook.|
+
+В таблице 2 перечислены ограничения и описаны различия частей основного текста элемента, к которым каждое приложение Outlook применяет регулярные выражения. Некоторые из этих ограничений зависят от типа устройства и основного текста элемента, если регулярное выражение применяется к основному тексту элемента.
+
+**Таблица 2. Ограничения на размер оцениваемого содержания элемента**
+
+||Полнофункциональный клиент Outlook|Outlook на мобильных устройствах|Outlook в Интернете|
+|:-----|:-----|:-----|:-----|
+|Форм-фактор|Любое поддерживаемое устройство|Смартфоны Android, iPad или iPhone|Все поддерживаемые устройства, кроме смартфонов Android, iPad и iPhone|
+|Основной текст элемента в виде обычного текста|Регулярное выражение применяется к первому мегабайту данных в основном тексте. К остальной части основного текста свыше этого ограничения регулярное выражение не применяется.|Надстройка активируется, только если основной текст сообщения содержит < 16 000 символов.|Надстройка активируется, только если основной текст сообщения содержит < 500 000 символов.|
+|Основной текст элемента в формате HTML|Регулярное выражение применяется к первым 512 КБ данных в основном тексте. К остальной части основного текста свыше этого ограничения регулярное выражение не применяется. (Фактическое количество знаков зависит от кодировки, в которой может использоваться от 1 до 4 байтов на каждый знак.)|Регулярное выражение применяется к первым 64 000 знаков (включая знаки HTML-тегов). К остальной части основного текста свыше этого ограничения регулярное выражение не применяется.|Надстройка активируется, только если основной текст сообщения содержит < 500 000 символов.|
+
+В таблице 3 перечислены ограничения и описаны различия в соответствиях, которые каждое ведущее приложение Outlook возвращают после оценки регулярного выражения. Поддержка не зависит от конкретного типа устройства, но может зависеть от типа основного текста элемента, если регулярное выражение применяется к основному тексту элемента.
+
+**Таблица 3. Ограничения на возвращаемые соответствия**
+
+||Полнофункциональный клиент Outlook|Outlook в Интернете или на мобильных устройствах|
+|:-----|:-----|:-----|
+|Порядок возвращаемых соответствий|Предполагается, что **getRegExMatches** возвращает совпадения для того же регулярного выражения, применяемого к тому же элементу, в расширенном клиенте Outlook, а не в Outlook в Интернете или на мобильных устройствах.|Предположим, что **getRegExMatches** возвращает совпадения в расширенном клиенте Outlook, а не в Outlook в Интернете или на мобильных устройствах.|
+|Основной текст элемента в виде обычного текста|**getRegExMatches** возвращает не более 50 соответствий длиной до 1536 символов (1,5 КБ).<br/><br/>**Примечание**. Метод **getRegExMatches** не возвращает соответствия в определенном порядке. Как правило, предположим, что порядок совпадений в расширенном клиенте Outlook для одного и того же регулярного выражения, применяемого к тому же элементу, отличается от того, который используется в Outlook в Интернете и на мобильных устройствах.|**getRegExMatches** возвращает не более 50 соответствий длиной до 3072 символов (3 КБ).|
+|Основной текст элемента в формате HTML|**getRegExMatches** возвращает не более 50 соответствий длиной до 3072 символов (3 КБ).<br/> <br/> **Примечание**. Метод **getRegExMatches** не возвращает соответствия в определенном порядке. Как правило, предположим, что порядок совпадений в расширенном клиенте Outlook для одного и того же регулярного выражения, применяемого к тому же элементу, отличается от того, который используется в Outlook в Интернете и на мобильных устройствах.|**getRegExMatches** возвращает не более 50 соответствий длиной до 3072 символов (3 КБ).|
+
+## <a name="limits-for-javascript-api"></a>Ограничения для API JavaScript
+
+Помимо указанных выше рекомендаций для правил активации, все ведущие приложения Outlook требуют соблюдения определенных ограничений в объектной модели JavaScript, как описано в таблице 4.
+
+**Таблица 4. Ограничения при получении или записи определенных данных с помощью API JavaScript для Office**
+
+|Функция|Ограничение|Связанный API|Описание|
+|:-----|:-----|:-----|:-----|
+|Настраиваемые свойства|2500 символов|Объект [CustomProperties](/javascript/api/outlook/office.CustomProperties)<br/> <br/>Метод [item.loadCustomPropertiesAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)|Ограничение для всех настраиваемых свойств элемента встречи или сообщения. Все ведущие приложения Outlook возвращают ошибку, если общий размер всех настраиваемых свойств надстройки превышает это ограничение.|
+|Параметры перемещения|32 КБ символов|Объект [RoamingSettings](/javascript/api/outlook/office.RoamingSettings)<br/><br/> Свойство [context.roamingSettings](../reference/objectmodel/preview-requirement-set/office.context.md#properties)|Ограничение для всех параметров перемещения надстройки. Все ведущие приложения Outlook возвращают ошибку, если параметры превышают это ограничение.|
+|Извлечение известных сущностей|2000 символов|Метод [item.getEntities](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)<br/> <br/>Метод [item.getEntitiesByType](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)<br/> <br/>Метод [item.getFilteredEntitiesByName](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)|Ограничение для Exchange Server для извлечения известных сущностей в основном тексте элемента. Exchange Server игнорирует сущности сверх этого ограничения. Обратите внимание, что это ограничение не зависит от того, использует ли надстройка правило **ItemHasKnownEntity**.|
+|Веб-службы Exchange|1 МБ символов|Метод [mailbox.makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)|Ограничение для запроса или ответа на вызов **Mailbox.makeEwsRequestAsync**.|
+|Получатели|100 получателей|Свойство [item.requiredAttendees](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties)<br/> <br/>Свойство [item.optionalAttendees](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties)<br/> <br/>Свойство [item.to](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties)<br/> <br/>Свойство [item.cc](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties)<br/> <br/>Метод [Recipients.addAsync](/javascript/api/outlook/office.Recipients#addasync-recipients--options--callback-)<br/> <br/>Метод [Recipient.getAsync](/javascript/api/outlook/office.Recipients#getasync-options--callback-)<br/> <br/>Метод [Recipient.setAsync](/javascript/api/outlook/office.Recipients#setasync-recipients--options--callback-)|Ограничение для получателей, указанных в каждом свойстве.|
+|Отображаемое имя|255 символов|Свойство [EmailAddressDetails.displayName](/javascript/api/outlook/office.emailaddressdetails#displayname)<br/><br/> Объект [Recipients](/javascript/api/outlook/office.Recipients)<br/><br/> Свойство **item.requiredAttendees**<br/><br/> Свойство **item.optionalAttendees** <br/><br/>Свойство **item.to** <br/><br/>Свойство **item.cc**|Ограничение длины отображаемого имени в сообщении или встрече.|
+|Настройка темы|255 символов|Метод [mailbox.displayNewAppointmentForm](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)<br/><br/> Метод [Subject.setAsync](/javascript/api/outlook/office.Subject#setasync-subject--options--callback-)|Ограничение для темы в форме новой встречи или для настройки темы встречи или сообщения.|
+|Установка расположения|255 символов|Метод [Location.setAsync](/javascript/api/outlook/office.Location#setasync-location--options--callback-)|Ограничение для установки расположении встречи или приглашения на собрание.|
+|Текст в форме новой встречи|32 КБ символов|Метод **Mailbox.displayNewAppointmentForm**|Ограничение текста в форме новой встречи.|
+|Отображение текста существующего элемента|32 КБ символов|Метод [mailbox.displayAppointmentForm](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)<br/><br/> Метод [mailbox.displayMessageForm](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)|Для Outlook в Интернете и мобильных устройствах: ограничения для основного текста в существующей форме встречи или сообщения.|
+|Настройка текста|1 МБ символов|Метод [Body.prependAsync](/javascript/api/outlook/office.Body#prependasync-data--options--callback-)<br/> <br/>[Body.setAsync](/javascript/api/outlook/office.Body#setasync-data--options--callback-)<br/><br/>Метод [Body.setSelectedDataAsync](/javascript/api/outlook/office.Body#setselecteddataasync-data--options--callback-)|Ограничение для установки текста элемента встречи или сообщения.|
+|Число вложений|499 файлов в Outlook в Интернете и на мобильных устройствах|Метод [item.addFileAttachmentAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)|Ограничение количества файлов, которые можно вложить в отправляемый элемент. Outlook в Интернете и мобильных устройствах обычно ограничивает подключение до 499 файлов с помощью пользовательского интерфейса и **addFileAttachmentAsync**. В полнофункциональном клиенте Outlook нет определенного ограничения на количество вложенных файлов. Однако все ведущие приложения Outlook соблюдают ограничение на размер вложений, заданное на сервере Exchange Server пользователя. См. следующую строку — "Размер вложений".|
+|Размер вложений|В зависимости от Exchange Server|Метод **item.addFileAttachmentAsync**|Существует ограничение на размер всех вложений элемента, которое администратор может настроить на сервере Exchange Server для почтового ящика пользователя. В полнофункциональном клиенте Outlook это ограничивает количество вложений в элементе. Для Outlook в Интернете и мобильных устройствах меньшее количество двух ограничений — количество вложений и размер всех вложений — ограничиваются фактическими вложениями для элемента.|
+|Имя файла вложения|255 символов|Метод **item.addFileAttachmentAsync**|Ограничение длины имени файла вложения, добавляемого в элемент.|
+|URI вложения|2048 символов|Метод **item.addFileAttachmentAsync**|Ограничение URI имени файла, добавляемого в элемент как вложение.|
+|Идентификатор вложения|100 символов|Метод [item.addItemAttachmentAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)<br/><br/> Метод [item.removeAttachmentAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)|Ограничение длины идентификатора вложения, добавляемого в элемент или удаляемого из него.|
+|Асинхронные вызовы|3 вызова|Метод **item.addFileAttachmentAsync**<br/><br/>Метод **item.addItemAttachmentAsync**<br/><br/><br/>Метод **item.removeAttachmentAsync**<br/><br/> Метод [Body.getTypeAsync](/javascript/api/outlook/office.Body#gettypeasync-options--callback-)<br/><br/>Метод **Body.prependAsync**<br/><br/>Метод **Body.setSelectedDataAsync**<br/><br/> Метод [CustomProperties.saveAsync](/javascript/api/outlook/office.CustomProperties#saveasync-callback--asynccontext-)<br/><br/><br/> Метод [item.LoadCustomPropertiesAysnc](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)<br/><br/><br/> Метод [Location.getAsync](/javascript/api/outlook/office.Location#getasync-options--callback-)<br/><br/>Метод **Location.setAsync**<br/><br/> Метод [mailbox.getCallbackTokenAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)<br/><br/> Метод [mailbox.getUserIdentityTokenAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)<br/><br/> Метод [mailbox.makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)<br/><br/>Метод **Recipients.addAsync**<br/><br/> Метод [Recipients.getAsync](/javascript/api/outlook/office.Recipients#getasync-options--callback-)<br/><br/>Метод **Recipients.setAsync**<br/><br/> Метод [RoamingSettings.saveAsync](/javascript/api/outlook/office.RoamingSettings#saveasync-callback-)<br/><br/> Метод [Subject.getAsync](/javascript/api/outlook/office.Subject#getasync-options--callback-)<br/><br/>Метод **Subject.setAsync**<br/><br/> Метод [Time.getAsync](/javascript/api/outlook/office.Time#getasync-options--callback-)<br/><br/> Метод [Time.setAsync](/javascript/api/outlook/office.Time#setasync-datetime--options--callback-)|Для Outlook в Интернете или на мобильных устройствах: ограничение числа одновременных асинхронных вызовов в любой момент, так как браузеры допускают ограниченное число асинхронных вызовов серверов. |
+
+## <a name="see-also"></a>См. также
+
+- [Развертывание и установка надстроек Outlook для тестирования](testing-and-tips.md)
+- [Конфиденциальность, разрешения и безопасность для надстроек Outlook](../develop/privacy-and-security.md)

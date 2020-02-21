@@ -1,14 +1,14 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.6
 description: ''
-ms.date: 12/17/2019
+ms.date: 02/19/2020
 localization_priority: Normal
-ms.openlocfilehash: 22702448b82a108c401f9f81d3b8a321e14ead63
-ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
+ms.openlocfilehash: aedfa635c5208ddb8a0972e880fafe50ddc0b3d6
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "40814663"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42165365"
 ---
 # <a name="outlook-add-in-api-requirement-set-16"></a>Набор обязательных элементов API для надстройки Outlook 1.6
 
@@ -30,11 +30,11 @@ ms.locfileid: "40814663"
 - Добавлен объект [Office.context.mailbox.item.getSelectedEntities](office.context.mailbox.item.md#methods). Добавляет новую функцию, которая возвращает объекты, найденные в выделенном совпадении. Выделенные совпадения применяются к контекстным надстройкам.
 - Добавлен объект [Office.context.mailbox.item.getSelectedRegExMatches](office.context.mailbox.item.md#methods). Добавляет новую функцию, которая возвращает строковые значения в выделенном совпадении, соответствующие регулярным выражениям, определенным в XML-файле манифеста. Выделенные совпадения применяются к контекстным надстройкам.
 - Добавлен объект [Office.context.mailbox.displayNewMessageForm](office.context.mailbox.md#methods). Добавляет новую функцию, которая открывает новую форму сообщения.
-- Добавлен объект [Office.context.mailbox.userProfile.accountType](office.context.mailbox.userprofile.md#properties). Добавляет новый элемент в профиль пользователя, указывающий тип учетной записи пользователя.
+- Добавлен объект [Office.context.mailbox.userProfile.accountType](/javascript/api/outlook/office.userprofile?view=outlook-js-1.6#accounttype). Добавляет новый элемент в профиль пользователя, указывающий тип учетной записи пользователя.
 
 ## <a name="see-also"></a>См. также
 
-- [Надстройки Outlook](/outlook/add-ins/)
+- [Надстройки Outlook](../../../outlook/outlook-add-ins-overview.md)
 - [Примеры кода надстройки Outlook](https://developer.microsoft.com/outlook/gallery/?filterBy=Outlook,Samples,Add-ins)
-- [Начало работы](/outlook/add-ins/quick-start)
+- [Начало работы](../../../quickstarts/outlook-quickstart.md)
 - [Наборы обязательных элементов и поддерживаемые клиенты](../../requirement-sets/outlook-api-requirement-sets.md)

@@ -4,12 +4,12 @@ description: ''
 ms.date: 02/11/2020
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: 7ea6be0cb1879ba583eaa64a7611899bf5adb73f
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: ad83a9627aba29c6b2877d83f1d359ec1f7dd3a5
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950546"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42163612"
 ---
 # <a name="outlook-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Outlook
 
@@ -66,7 +66,7 @@ if (item.somePropertyOrFunction !== undefined) {
 
 ## <a name="requirement-sets-supported-by-exchange-servers-and-outlook-clients"></a>Наборы обязательных элементов, поддерживаемые серверами Exchange и клиентами Outlook
 
-В этом разделе указан диапазон наборов обязательных элементов, поддерживаемых сервером Exchange и клиентами Outlook. Сведения о требованиях к серверу и клиенту для запуска надстроек Outlook см. в статье [Требования надстроек Outlook](/outlook/add-ins/add-in-requirements).
+В этом разделе указан диапазон наборов обязательных элементов, поддерживаемых сервером Exchange и клиентами Outlook. Сведения о требованиях к серверу и клиенту для запуска надстроек Outlook см. в статье [Требования надстроек Outlook](../../outlook/add-in-requirements.md).
 
 > [!IMPORTANT]
 > Если целевой сервер Exchange и клиент Outlook поддерживают разные наборы обязательных элементов, вы ограничены применением более низкой версии набора обязательных элементов. Например, если надстройка работает в Outlook 2016 для Mac (максимальная версия набора обязательных элементов: 1.6) с использованием Exchange 2013 (максимальная версия набора обязательных элементов: 1.1), ваша надстройка ограничивается применением набора обязательных элементов 1.1.
@@ -108,11 +108,11 @@ if (item.somePropertyOrFunction !== undefined) {
 >
 > **современная версия**
 >
-> ![снимок части экрана с изображением панели инструментов современной версии Outlook](https://docs.microsoft.com/outlook/add-ins/images/outlook-on-the-web-new-toolbar.png)
+> ![снимок части экрана с изображением панели инструментов современной версии Outlook](../../images/outlook-on-the-web-new-toolbar.png)
 >
 > **классическая версия**
 >
-> ![снимок части экрана с изображением панели инструментов классической версии Outlook](https://docs.microsoft.com/outlook/add-ins/images/outlook-on-the-web-classic-toolbar.png)
+> ![снимок части экрана с изображением панели инструментов классической версии Outlook](../../images/outlook-on-the-web-classic-toolbar.png)
 
 ## <a name="using-preview-apis"></a>Использование предварительных версий API
 

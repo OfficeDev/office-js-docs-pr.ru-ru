@@ -1,16 +1,16 @@
 ---
-title: Объектная модель API JavaScript для Office
+title: Общая объектная модель API JavaScript
 description: ''
-ms.date: 03/19/2019
+ms.date: 02/18/2020
 localization_priority: Normal
-ms.openlocfilehash: cc34d6ee9424c00bfc49762f779605f66bc9f36b
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 98e53140beb99d557391e332569e594250d37fca
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950777"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42163502"
 ---
-# <a name="office-javascript-api-object-model"></a>Объектная модель API JavaScript для Office
+# <a name="common-javascript-api-object-model"></a>Общая объектная модель API JavaScript
 
 Надстройки JavaScript для Office предоставляют доступ к базовым функциям ведущего приложения. В основном такой доступ осуществляется при помощи нескольких значимых объектов. Объект [Context](#context-object) предоставляет доступ к среде выполнения после инициализации. Объект [Document](#document-object) предоставляет пользователю управление документом Excel, PowerPoint или Word. Объект [Mailbox](#mailbox-object) предоставляет надстройкам Outlook доступ к сообщениям и профилям пользователей. Связи между этими объектами высокого уровня — это основа надстроек JavaScript.
 
@@ -168,4 +168,4 @@ var item = Office.context.mailbox.item;
 
 -  Объект **RoamingSettings** для сохранения пользовательских свойств, относящихся к надстройке Outlook, в почтовом ящике пользователя, в котором установлено приложение.
 
-Сведения об использовании JavaScript в надстройках Outlook см. в статье [Надстройки Outlook](/outlook/add-ins/).
+Сведения об использовании JavaScript в надстройках Outlook см. в статье [Надстройки Outlook](../outlook/outlook-add-ins-overview.md).

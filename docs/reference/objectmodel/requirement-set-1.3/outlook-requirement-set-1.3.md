@@ -3,12 +3,12 @@ title: Набор обязательных элементов API для над�
 description: ''
 ms.date: 12/17/2019
 localization_priority: Normal
-ms.openlocfilehash: ba74102d70d2f2c38e96cb833b779d3381595f0f
-ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
+ms.openlocfilehash: 375fc5d7cce8592b8e4a270713c1f611129cc7d0
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "40814866"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42165428"
 ---
 # <a name="outlook-add-in-api-requirement-set-13"></a>Набор обязательных элементов API для надстройки Outlook 1.3
 
@@ -21,7 +21,7 @@ ms.locfileid: "40814866"
 
 Набор обязательных элементов 1.3 включает все возможности [набора обязательных элементов версии 1.2](../requirement-set-1.2/outlook-requirement-set-1.2.md). В нем добавлены перечисленные ниже возможности.
 
-- Добавлена поддержка [команд надстроек](/outlook/add-ins/add-in-commands-for-outlook).
+- Добавлена поддержка [команд надстроек](../../../outlook/add-in-commands-for-outlook.md).
 - Добавлена возможность сохранять и закрывать создаваемый элемент.
 - Расширенный объект [Body](/javascript/api/outlook/office.body?view=outlook-js-1.3) , позволяющий надстройкам получать или задавать текст целиком.
 - Добавлены методы для преобразования идентификаторов из формата EWS в формат REST и наоборот.
@@ -44,7 +44,7 @@ ms.locfileid: "40814866"
 
 ## <a name="see-also"></a>См. также
 
-- [Надстройки Outlook](/outlook/add-ins/)
+- [Надстройки Outlook](../../../outlook/outlook-add-ins-overview.md)
 - [Примеры кода надстройки Outlook](https://developer.microsoft.com/outlook/gallery/?filterBy=Outlook,Samples,Add-ins)
-- [Начало работы](/outlook/add-ins/quick-start)
+- [Начало работы](../../../quickstarts/outlook-quickstart.md)
 - [Наборы обязательных элементов и поддерживаемые клиенты](../../requirement-sets/outlook-api-requirement-sets.md)

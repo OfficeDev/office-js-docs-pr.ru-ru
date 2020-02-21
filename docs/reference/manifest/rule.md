@@ -3,12 +3,12 @@ title: Элемент Rule в файле манифеста
 description: ''
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 07037c43c111f735a7354a048066e4c4a88f7637
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 78fb38d8fb18c276bfe2eed1bd5b52659cadcaa3
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450473"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42165533"
 ---
 # <a name="rule-element"></a>Элемент Rule
 
@@ -45,7 +45,7 @@ ms.locfileid: "32450473"
 |:-----|:-----|:-----|
 | **ItemType** | Да | Указывает сопоставляемый тип элемента. Допустимые значения: `Message` и `Appointment`. К типу элементов `Message` относятся электронные письма, приглашения на собрания, ответы на них и уведомления об их отмене. |
 | **FormType** | Нет (в [ExtensionPoint](extensionpoint.md)), да (в [OfficeApp](officeapp.md)) | Указывает, должно ли приложение отображаться в форме чтения или редактирования элемента. Допустимые значения: `Read`, `Edit`, `ReadOrEdit`. Для объекта `Rule` в `ExtensionPoint` НЕОБХОДИМО использовать значение `Read`. |
-| **ItemClass** | Нет | Указывает сопоставляемый специализированный класс сообщений. Дополнительные сведения см. в статье [Активация почтовой надстройки в Outlook для определенного класса сообщений](/outlook/add-ins/activation-rules). |
+| **ItemClass** | Нет | Указывает сопоставляемый специализированный класс сообщений. Дополнительные сведения см. в статье [Активация почтовой надстройки в Outlook для определенного класса сообщений](../../outlook/activation-rules.md). |
 | **IncludeSubClasses** | Нет | Указывает, должно ли правило оцениваться как истинное (true), если элемент принадлежит к подклассу указанного класса сообщений; по умолчанию используется значение `false`. |
 
 ### <a name="example"></a>Пример
@@ -127,6 +127,6 @@ ms.locfileid: "32450473"
 
 ## <a name="see-also"></a>См. также
 
-- [Правила активации для надстроек Outlook](/outlook/add-ins/activation-rules)
-- [Сопоставление строк в элементе Outlook как известных сущностей](/outlook/add-ins/match-strings-in-an-item-as-well-known-entities)    
-- [Использование регулярных правил активации выражений для отображения надстройки Outlook](/outlook/add-ins/use-regular-expressions-to-show-an-outlook-add-in)
+- [Правила активации для надстроек Outlook](../../outlook/activation-rules.md)
+- [Сопоставление строк в элементе Outlook как известных сущностей](../../outlook/match-strings-in-an-item-as-well-known-entities.md)    
+- [Использование регулярных правил активации выражений для отображения надстройки Outlook](../../outlook/use-regular-expressions-to-show-an-outlook-add-in.md)

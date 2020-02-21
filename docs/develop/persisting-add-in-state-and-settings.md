@@ -3,12 +3,12 @@ title: Сохранение состояния и параметров надс�
 description: ''
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 915cf5d1d1747f16a9067bff25fbf89d35882d25
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 69fc0b1316a1a4eb0dfe0ebea01ffdbfe88dcd8c
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950784"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42163509"
 ---
 # <a name="persisting-add-in-state-and-settings"></a>Сохранение состояния и параметров надстройки
 
@@ -334,5 +334,5 @@ function saveCallback(asyncResult) {
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения об интерфейсе API JavaScript для Office](understanding-the-javascript-api-for-office.md)
-- [Надстройки Outlook](/outlook/add-ins/)
+- [Надстройки Outlook](../outlook/outlook-add-ins-overview.md)
 - [Excel-Add-in-JavaScript-PersistCustomSettings](https://github.com/OfficeDev/Excel-Add-in-JavaScript-PersistCustomSettings)

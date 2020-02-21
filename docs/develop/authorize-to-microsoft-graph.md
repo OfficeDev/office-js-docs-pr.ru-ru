@@ -3,12 +3,12 @@ title: Авторизация в Microsoft Graph с помощью единог�
 description: ''
 ms.date: 01/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 77dec8eda1c630bef6277008bef4b129e29a8dae
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 06605ab54dc0565aaa5632abd911c68e29aba33f
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41949690"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42162799"
 ---
 # <a name="authorize-to-microsoft-graph-with-sso-preview"></a>Авторизация в Microsoft Graph с помощью единого входа (предварительная версия)
 
@@ -62,4 +62,4 @@ ms.locfileid: "41949690"
 
 * [Создание надстройки Office на платформе Node.js с использованием единого входа](create-sso-office-add-ins-nodejs.md)
 * [Создание надстройки Office на платформе ASP.NET с использованием единого входа](create-sso-office-add-ins-aspnet.md)
-* [Сценарий: реализация единого входа для службы в надстройке Outlook](/outlook/add-ins/implement-sso-in-outlook-add-in)
+* [Сценарий: реализация единого входа для службы в надстройке Outlook](../outlook/implement-sso-in-outlook-add-in.md)

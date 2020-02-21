@@ -3,12 +3,12 @@ title: Рекомендации по разработке аутентифика
 description: ''
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: c8d61d42eabca0a57e1a09dda95ee8c0572d5ecb
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: fb50809139334d4fbbcae67a02b07b3d49734210
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449200"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42162848"
 ---
 # <a name="authentication-patterns"></a>Шаблоны аутентификации
 
@@ -49,7 +49,7 @@ ms.locfileid: "32449200"
 ## <a name="single-sign-on-authentication-flow-preview"></a>Последовательность аутентификации при едином входе (предварительная версия)
 
 > [!NOTE]
-> В настоящее время API единого входа поддерживается в тестовом режиме для Word, Excel, Outlook и PowerPoint. Дополнительную информацию о поддержке единого входа см. в статье  [Наборы требований IdentityAPI](/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Информацию о том, как это сделать, см. в статье  [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> В настоящее время API единого входа поддерживается в тестовом режиме для Word, Excel, Outlook и PowerPoint. Дополнительную информацию о поддержке единого входа см. в статье  [Наборы требований IdentityAPI](../reference/requirement-sets/identity-api-requirement-sets.md). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Информацию о том, как это сделать, см. в статье  [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 Когда единый вход будет доступен для производственных надстроек, используйте его, чтобы сделать надстройку удобнее для конечных пользователей. Для входа в надстройку используется учетная запись пользователя в Office (учетная запись Майкрософт или удостоверение Office 365). В результате пользователь входит только один раз. Это упрощает начало работы для пользователей.
 
@@ -62,4 +62,4 @@ ms.locfileid: "32449200"
 
 ## <a name="see-also"></a>См. также
 
-- Узнайте больше о [разработке надстроек с единым входом (предварительная версия)](/office/dev/add-ins/develop/sso-in-office-add-ins)
+- Узнайте больше о [разработке надстроек с единым входом (предварительная версия)](../develop/sso-in-office-add-ins.md)

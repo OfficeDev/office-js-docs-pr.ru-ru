@@ -3,12 +3,12 @@ title: Набор обязательных элементов API для над�
 description: ''
 ms.date: 10/30/2019
 localization_priority: Normal
-ms.openlocfilehash: ded3aa8cdcde1132f074f55356e64bb4468919ff
-ms.sourcegitcommit: e989096f3d19761bf8477c585cde20b3f8e0b90d
+ms.openlocfilehash: cb4c8eecd63604aa633ade1a40eb5391b3a62ef2
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "37901943"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42165407"
 ---
 # <a name="outlook-add-in-api-requirement-set-14"></a>Набор обязательных элементов API для надстройки Outlook 1.4
 
@@ -29,7 +29,7 @@ ms.locfileid: "37901943"
 
 ## <a name="see-also"></a>См. также
 
-- [Надстройки Outlook](/outlook/add-ins/)
+- [Надстройки Outlook](../../../outlook/outlook-add-ins-overview.md)
 - [Примеры кода надстройки Outlook](https://developer.microsoft.com/outlook/gallery/?filterBy=Outlook,Samples,Add-ins)
-- [Начало работы](/outlook/add-ins/quick-start)
+- [Начало работы](../../../quickstarts/outlook-quickstart.md)
 - [Наборы обязательных элементов и поддерживаемые клиенты](../../requirement-sets/outlook-api-requirement-sets.md)

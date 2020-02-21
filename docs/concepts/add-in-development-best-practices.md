@@ -3,12 +3,12 @@ title: Рекомендации по разработке надстроек Off
 description: ''
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 6fc1a12e1f6fca44c137aec1ac17d71d76156e1a
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: bbf32369e45f126d22c09270459eaaa015a6c0e1
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41949714"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42162778"
 ---
 # <a name="best-practices-for-developing-office-add-ins"></a>Рекомендации по разработке надстроек Office
 
@@ -50,7 +50,7 @@ ms.locfileid: "41949714"
 
 - Избегайте всплывающих окон. Если вам необходимо их использовать, помогите пользователю включить всплывающее окно.
 
-Шаблоны, которые можно применять при разработке для первого запуска, представлены в статье [Конструктивные шаблоны для надстроек Office](/office/dev/add-ins/design/first-run-experience-patterns).
+Шаблоны, которые можно применять при разработке для первого запуска, представлены в статье [Конструктивные шаблоны для надстроек Office](../design/first-run-experience-patterns.md).
 
 ## <a name="use-add-in-commands"></a>Команды надстроек
 

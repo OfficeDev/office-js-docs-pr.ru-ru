@@ -3,12 +3,12 @@ title: Разработка надстроек Office с помощью Visual S
 description: Разработка надстроек Office с помощью Visual Studio
 ms.date: 12/31/2019
 localization_priority: Priority
-ms.openlocfilehash: 2acafc08dcbb8e1fde439f2be289afff3185272c
-ms.sourcegitcommit: d5ac9284d1e96dc91a9168d7641e44d88535e1a7
+ms.openlocfilehash: 9f250078a4da80dea3276c51a2183a072da44f81
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "40915079"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42162813"
 ---
 # <a name="develop-office-add-ins-with-visual-studio"></a>Разработка надстроек Office с помощью Visual Studio
 
@@ -22,7 +22,7 @@ ms.locfileid: "40915079"
 С помощью Visual Studio можно создавать надстройки Office для Excel, Outlook, Word и PowerPoint. Проект надстройки Office создается в рамках решения Visual Studio и использует HTML, CSS и JavaScript. Чтобы создать надстройку Office с помощью Visual Studio, следуйте указаниям из краткого руководства, соответствующего типу надстройки, которую нужно создать.
 
 - [Краткое руководство по началу работы с Excel](../quickstarts/excel-quickstart-jquery.md?tabs=visualstudio)
-- [Краткое руководство по началу работы с Outlook](/outlook/add-ins/quick-start?context=office/dev/add-ins/context&tabs=visualstudio)
+- [Краткое руководство по началу работы с Outlook](../quickstarts/outlook-quickstart.md?tabs=visualstudio)
 - [Краткое руководство по началу работы с Word](../quickstarts/word-quickstart.md?tabs=visualstudio)
 - [Краткое руководство по началу работы с PowerPoint](../quickstarts/powerpoint-quickstart.md?tabs=visualstudio)
 

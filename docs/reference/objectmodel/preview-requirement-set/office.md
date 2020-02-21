@@ -3,23 +3,23 @@ title: Пространство имен Office — Предварительна
 description: ''
 ms.date: 12/16/2019
 localization_priority: Normal
-ms.openlocfilehash: ef9634058fcdc633e9ad3a0adb74c4abebf8038b
-ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
+ms.openlocfilehash: 2cd04cc6d333439a679803e39357e4d19c550f95
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "40815062"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42165512"
 ---
 # <a name="office"></a>Office
 
 Пространство имен Office содержит общие интерфейсы, которые используются надстройками всех приложений Office. В этот список входят только интерфейсы, используемые надстройками Outlook. Полный список интерфейсов пространства имен Office см. в статье [Общий API](/javascript/api/office).
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
 ##### <a name="properties"></a>Properties
 
@@ -57,12 +57,12 @@ ms.locfileid: "40815062"
 |`Succeeded`| String|Вызов завершился успешно.|
 |`Failed`| Для указания|Вызов завершился ошибкой.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
 <br>
 
@@ -84,12 +84,12 @@ ms.locfileid: "40815062"
 |`Html`| String|Запрашивает возврат данных в формате HTML.|
 |`Text`| String|Запрашивает возврат данных в формате текста.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
 <br>
 
@@ -116,12 +116,12 @@ ms.locfileid: "40815062"
 |`RecipientsChanged`| String | Список получателей выбранного элемента или места встречи изменился. | 1.7 |
 |`RecurrenceChanged`| String | Шаблон повторения выбранного ряда изменился. | 1.7 |
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](../../requirement-sets/outlook-api-requirement-sets.md)| 1.5 |
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение |
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
 <br>
 
@@ -143,9 +143,9 @@ ms.locfileid: "40815062"
 |`Body`| String|Источник данных — текст сообщения.|
 |`Subject`| String|Источник данных — тема сообщения.|
 
-##### <a name="requirements"></a>Требования
+##### <a name="requirements"></a>Requirements
 
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|

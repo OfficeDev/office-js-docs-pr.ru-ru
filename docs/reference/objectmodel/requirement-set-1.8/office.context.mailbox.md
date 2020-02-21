@@ -1,18 +1,18 @@
 ---
 title: Office. Context. Mailbox — набор обязательных элементов 1,8
 description: ''
-ms.date: 12/16/2019
+ms.date: 02/19/2020
 localization_priority: Normal
-ms.openlocfilehash: fb0841f19a5b72b3dd3445e5708611c71b4e72a4
-ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
+ms.openlocfilehash: 9bf71808b538f3048b6cc5f74a1bb0b9f88bea68
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "40814189"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42163635"
 ---
 # <a name="mailbox"></a>mailbox
 
-### <a name="officeofficemdcontextofficecontextmdmailbox"></a>[Office](office.md)[.context](office.context.md).mailbox
+### <a name="officecontextmailbox"></a>[Office](office.md)[.context](office.context.md).mailbox
 
 Предоставляет для Microsoft Outlook доступ к объектной модели надстройки Outlook.
 
@@ -21,28 +21,28 @@ ms.locfileid: "40814189"
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
-|[Минимальный уровень разрешений](/outlook/add-ins/understanding-outlook-add-in-permissions)| С ограничениями|
-|[Применимый режим Outlook](/outlook/add-ins/#extension-points)| Создание или чтение|
+|[Минимальный уровень разрешений](../../../outlook/understanding-outlook-add-in-permissions.md)| С ограничениями|
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
 ## <a name="properties"></a>Свойства
 
 | Свойство | Минимальные<br>уровень разрешения | Способов | Тип возвращаемых данных | Минимальные<br>набор требований |
 |---|---|---|---|:---:|
-| [diagnostics](office.context.mailbox.diagnostics.md) | ReadItem | Создание<br>Чтение | [Диагностики](/javascript/api/outlook/office.diagnostics?view=outlook-js-1.8) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [diagnostics](/javascript/api/outlook/office.mailbox?view=outlook-js-1.8#diagnostics) | ReadItem | Создание<br>Чтение | [Диагностики](/javascript/api/outlook/office.diagnostics?view=outlook-js-1.8) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [ewsUrl](/javascript/api/outlook/office.mailbox?view=outlook-js-1.8#ewsurl) | ReadItem | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [элемента](office.context.mailbox.item.md) | С ограничениями | Создание<br>Чтение | [Элемент](/javascript/api/outlook/office.item?view=outlook-js-1.8) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [элемента](office.context.mailbox.item.md) | Restricted | Создание<br>Чтение | [Элемент](/javascript/api/outlook/office.item?view=outlook-js-1.8) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [мастеркатегориес](/javascript/api/outlook/office.mailbox?view=outlook-js-1.8#mastercategories) | ReadWriteMailbox | Создание<br>Чтение | [MasterCategories](/javascript/api/outlook/office.mastercategories?view=outlook-js-1.8) | [1,8](../requirement-set-1.8/outlook-requirement-set-1.8.md) |
 | [restUrl](/javascript/api/outlook/office.mailbox?view=outlook-js-1.8#resturl) | ReadItem | Создание<br>Чтение | String | [1,5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
-| [userProfile](office.context.mailbox.userProfile.md) | ReadItem | Создание<br>Чтение | [UserProfile](/javascript/api/outlook/office.userprofile?view=outlook-js-1.8) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [userProfile](/javascript/api/outlook/office.mailbox?view=outlook-js-1.8#userprofile) | ReadItem | Создание<br>Чтение | [UserProfile](/javascript/api/outlook/office.userprofile?view=outlook-js-1.8) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
 ## <a name="methods"></a>Методы
 
 | Метод | Минимальные<br>уровень разрешения | Способов | Минимальные<br>набор требований |
 |---|---|---|:---:|
 | [addHandlerAsync](/javascript/api/outlook/office.mailbox?view=outlook-js-1.8#addhandlerasync-eventtype--handler--options--callback-) | ReadItem | Создание<br>Чтение | [1,5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
-| [convertToEwsId](/javascript/api/outlook/office.mailbox?view=outlook-js-1.8#converttoewsid-itemid--restversion-) | С ограничениями | Создание<br>Чтение | [1.3](../requirement-set-1.3/outlook-requirement-set-1.3.md) |
+| [convertToEwsId](/javascript/api/outlook/office.mailbox?view=outlook-js-1.8#converttoewsid-itemid--restversion-) | Restricted | Создание<br>Чтение | [1.3](../requirement-set-1.3/outlook-requirement-set-1.3.md) |
 | [convertToLocalClientTime](/javascript/api/outlook/office.mailbox?view=outlook-js-1.8#converttolocalclienttime-timevalue-) | ReadItem | Создание<br>Чтение | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [convertToRestId](/javascript/api/outlook/office.mailbox?view=outlook-js-1.8#converttorestid-itemid--restversion-) | С ограничениями | Создание<br>Чтение | [1.3](../requirement-set-1.3/outlook-requirement-set-1.3.md) |
+| [convertToRestId](/javascript/api/outlook/office.mailbox?view=outlook-js-1.8#converttorestid-itemid--restversion-) | Restricted | Создание<br>Чтение | [1.3](../requirement-set-1.3/outlook-requirement-set-1.3.md) |
 | [convertToUtcClientTime](/javascript/api/outlook/office.mailbox?view=outlook-js-1.8#converttoutcclienttime-input-) | ReadItem | Создание<br>Чтение | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [displayAppointmentForm](/javascript/api/outlook/office.mailbox?view=outlook-js-1.8#displayappointmentform-itemid-) | ReadItem | Создание<br>Чтение | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [displayMessageForm](/javascript/api/outlook/office.mailbox?view=outlook-js-1.8#displaymessageform-itemid-) | ReadItem | Создание<br>Чтение | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
