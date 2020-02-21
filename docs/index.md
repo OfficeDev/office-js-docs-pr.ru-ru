@@ -8,12 +8,12 @@ ms.author: o365devx
 ms.prod: non-product-specific
 ms.date: 12/24/2019
 localization_priority: Priority
-ms.openlocfilehash: 4a2134fec212b75abff95d225f6238bd1f888c3b
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 2ebef8254d264442f3f57c6e19b015a7ef18a829
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950763"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42165610"
 ---
 # <a name="office-add-ins-documentation"></a>Документация по надстройкам Office
 
@@ -80,7 +80,7 @@ ms.locfileid: "41950763"
                             <li><a style="font-size: 1rem;" href="quickstarts/excel-quickstart-jquery.md">Краткое руководство надстройкам Excel</a></li>
                             <li><a style="font-size: 1rem;" href="quickstarts/excel-custom-functions-quickstart.md">Краткое руководство по пользовательским функциям в Excel</a></li>
                             <li><a style="font-size: 1rem;" href="quickstarts/onenote-quickstart.md">Краткое руководство надстройкам OneNote</a></li>
-                            <li><a style="font-size: 1rem;" href="/outlook/add-ins/quick-start?context=office/dev/add-ins/context">Краткое руководство надстройкам Outlook</a></li>
+                            <li><a style="font-size: 1rem;" href="quickstarts/outlook-quickstart.md">Краткое руководство надстройкам Outlook</a></li>
                             <li><a style="font-size: 1rem;" href="quickstarts/powerpoint-quickstart.md">Краткое руководство надстройкам PowerPoint</a></li>
                             <li><a style="font-size: 1rem;" href="quickstarts/project-quickstart.md">Краткое руководство надстройкам Project</a></li>
                             <li><a style="font-size: 1rem;" href="quickstarts/word-quickstart.md">Краткое руководство надстройкам Word</a></li>
@@ -107,7 +107,7 @@ ms.locfileid: "41950763"
                         <ul>
                             <li><a style="font-size: 1rem;" href="tutorials/excel-tutorial.md">Руководство по надстройкам Excel</a></li>
                             <li><a style="font-size: 1rem;" href="tutorials/excel-tutorial-create-custom-functions.md">Руководство по пользовательским функциям в Excel</a></li>
-                            <li><a style="font-size: 1rem;" href="/outlook/add-ins/addin-tutorial?context=office/dev/add-ins/context">Руководство по надстройкам Outlook </a></li>
+                            <li><a style="font-size: 1rem;" href="tutorials/outlook-tutorial.md">Руководство по надстройкам Outlook </a></li>
                             <li><a style="font-size: 1rem;" href="tutorials/powerpoint-tutorial.md">Руководство по надстройкам PowerPoint </a></li>
                             <li><a style="font-size: 1rem;" href="tutorials/word-tutorial.md">Руководство по надстройкам Word </a></li>
                         </ul>
