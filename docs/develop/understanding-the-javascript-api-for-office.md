@@ -3,12 +3,12 @@ title: Общие сведения об интерфейсе API JavaScript дл
 description: ''
 ms.date: 06/21/2019
 localization_priority: Priority
-ms.openlocfilehash: 1954457b477472b8940841bb1ffe5954e49e01ec
-ms.sourcegitcommit: b3996b1444e520b44cf752e76eef50908386ca26
+ms.openlocfilehash: a82437fc82d9c9a31e75d448579f37d440784aa2
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "37524236"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42163516"
 ---
 # <a name="understanding-the-javascript-api-for-office"></a>Общие сведения об интерфейсе API JavaScript для Office
 
@@ -169,4 +169,4 @@ Office.initialize = function (reason) {
 
 ## <a name="office-javascript-api-object-model"></a>Объектная модель API JavaScript для Office
 
-После инициализации надстройка может взаимодействовать с хостом (например, Excel, Outlook). Страница [объектной модели Office JavaScript API](office-javascript-api-object-model.md) содержит дополнительную информацию об определенных способах использования. Также существует подробная справочная документация для [общих API](/office/dev/add-ins/reference/javascript-api-for-office) и API для определенных ведущих приложений.
+После инициализации надстройка может взаимодействовать с хостом (например, Excel, Outlook). Страница [общей объектной модели API JavaScript](office-javascript-api-object-model.md) содержит дополнительную информацию об определенных способах использования. Также существует подробная справочная документация для [общих API](/office/dev/add-ins/reference/javascript-api-for-office) и API для определенных ведущих приложений.

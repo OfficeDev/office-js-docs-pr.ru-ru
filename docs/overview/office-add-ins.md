@@ -1,22 +1,22 @@
 ---
 title: Обзор платформы надстроек Office | Microsoft Docs
 description: Используйте привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений.
-ms.date: 01/14/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 3ecca3e36108b831899e9488459687cb2acc3c98
-ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
+ms.openlocfilehash: fd69f3e93b18d2d17ef7ba1b213bfb39b86b74f4
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "41216993"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42165575"
 ---
 # <a name="office-add-ins-platform-overview"></a>Обзор платформы надстроек Office
 
-![Изображение расширяемости надстроек Office](../images/addins-overview.png)
-
 Платформу надстроек Office можно использовать для создания решений, которые расширяют возможности приложений Office и взаимодействуют с содержимым документов Office. В случае надстроек Office можно использовать привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений. Ваше решение может работать в Office на нескольких платформах, включая Windows, Mac, iPad и браузеры.
+
+![Изображение расширяемости надстроек Office](../images/addins-overview.png)
 
 Надстройки Office могут делать почти все, на что способна веб-страница в браузере. Платформу надстроек Office можно использовать для следующих целей:
 
@@ -102,7 +102,7 @@ ms.locfileid: "41216993"
 
 Надстройки Outlook могут получать доступ к зависящей от контекста информации, предоставляемой элементом, например к адресу или идентификатору для отслеживания, а затем использовать эти данные для доступа к дополнительным сведениям на сервере и в веб-службах с целью повышения удобства работы пользователей. В большинстве случаев надстройка Outlook может без изменений работать в ведущем приложении Outlook, обеспечивая согласованность интерфейса на компьютерах, в Интернете, на планшетах и на мобильных устройствах.
 
-Обзор надстроек Outlook см. в статье [Общие сведения о надстройках Outlook](/outlook/add-ins/).
+Обзор надстроек Outlook см. в статье [Общие сведения о надстройках Outlook](../outlook/outlook-add-ins-overview.md).
 
 ### <a name="create-new-objects-in-office-documents"></a>Создание новых объектов в документах Office
 

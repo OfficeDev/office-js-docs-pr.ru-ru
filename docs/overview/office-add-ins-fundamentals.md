@@ -1,14 +1,14 @@
 ---
 title: Создание надстроек Office
 description: Общие сведения о разработке надстроек Office.
-ms.date: 12/24/2019
+ms.date: 02/19/2020
 localization_priority: Priority
-ms.openlocfilehash: e0deeebb3a1c8761217a9fe33a3ef04a945b2cff
-ms.sourcegitcommit: d5ac9284d1e96dc91a9168d7641e44d88535e1a7
+ms.openlocfilehash: 95a930f89c3ce6c2c4fc894c61bd4337851a8614
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "40915023"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42163873"
 ---
 # <a name="building-office-add-ins"></a>Создание надстроек Office
 
@@ -115,7 +115,7 @@ API JavaScript для Office включают две различные моде
 
 - **Зависящие от ведущего приложения** API предоставляют объекты со строгой типизацией, которые можно использовать для взаимодействия с собственными объектами определенных приложений Office. Например, вы можете использовать API JavaScript для Excel с целью доступа к листам, диапазонам, таблицам, диаграммам и т. д. API, зависящие от ведущего приложения, в настоящее время доступны для [Excel](../reference/overview/excel-add-ins-reference-overview.md), [Word](../reference/overview/word-add-ins-reference-overview.md) и [OneNote](../reference/overview/onenote-add-ins-javascript-reference.md). Эта модель API использует [обещания](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) и позволяет указывать несколько операций в каждом запросе, отправляемом на узел Office. Подобные пакетные операции могут значительно повысить производительность надстройки в Office для веб-приложений. API, зависящие от ведущего приложения, появились в Office 2016, и их нельзя использовать для работы с Office 2013.
 
-- **Общие** API можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office. Эта модель API использует [обратные вызовы](https://developer.mozilla.org/docs/Glossary/Callback_function), в которых можно указать только одну операцию в каждом запросе, отправляемом на узел Office. Общие API появились в Office 2013, и их нельзя использовать для работы с Office 2013 или более поздними версиями. Подробные сведения об объектной модели общих API, включающей API для взаимодействия с Outlook и PowerPoint, см. в статье [Объектная модель API JavaScript для Office](../develop/office-javascript-api-object-model.md).
+- **Общие** API можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office. Эта модель API использует [обратные вызовы](https://developer.mozilla.org/docs/Glossary/Callback_function), в которых можно указать только одну операцию в каждом запросе, отправляемом на узел Office. Общие API появились в Office 2013, и их нельзя использовать для работы с Office 2013 или более поздними версиями. Подробные сведения об объектной модели общих API, включающей API для взаимодействия с Outlook и PowerPoint, см. в статье [Общая объектная модель API JavaScript](../develop/office-javascript-api-object-model.md).
 
 > [!NOTE]
 > Пользовательские функции Excel работают в уникальной среде выполнения, приоритетом которой является осуществление вычислений, поэтому в ней используется немного другая модель программирования. Подробные сведения см. в статье [Архитектура пользовательских функций](../excel/custom-functions-architecture.md).

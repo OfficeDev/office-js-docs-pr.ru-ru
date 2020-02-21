@@ -1,15 +1,15 @@
 ---
 title: Обзор API JavaScript для OneNote
 description: ''
-ms.date: 07/05/2019
+ms.date: 02/19/2020
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: 3ad992bd59c33d9d8b724893db49a6e623fd1ee3
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 27d6770ae64a6f2259e7dbbf38b756d54fe7cec2
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950980"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42165322"
 ---
 # <a name="onenote-javascript-api-overview"></a>Обзор API JavaScript для OneNote
 
@@ -19,7 +19,7 @@ ms.locfileid: "41950980"
 
 * **Общие API**. Появившиеся в Office 2013 [общие API](/javascript/api/office) можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office.
 
-В этом разделе рассматривается API JavaScript для OneNote, используемый для разработки большинства функций в надстройках и предназначенный для OneNote в Интернете. Сведения об общем API см. в статье [Объектная модель API JavaScript для Office](../../develop/office-javascript-api-object-model.md). 
+В этом разделе рассматривается API JavaScript для OneNote, используемый для разработки большинства функций в надстройках и предназначенный для OneNote в Интернете. Сведения об общем API см. в статье [Общая объектная модель API JavaScript](../../develop/office-javascript-api-object-model.md). 
 
 ## <a name="learn-programming-concepts"></a>Сведения о концепциях, связанных с программированием
 
