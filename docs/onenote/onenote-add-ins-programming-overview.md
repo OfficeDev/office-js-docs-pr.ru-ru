@@ -1,16 +1,16 @@
 ---
 title: Обзор создания кода с помощью API JavaScript для OneNote
 description: ''
-ms.date: 07/05/2019
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 9724de8c25a535884c4700a165e661028aee6608
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
+ms.openlocfilehash: 2023daa422bd9078271f4b989f824101dc8b85f9
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851511"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42165568"
 ---
 # <a name="onenote-javascript-api-programming-overview"></a>Обзор создания кода с помощью API JavaScript для OneNote
 
@@ -125,7 +125,7 @@ function getSelectionFromPage() {
 | [Office.context.document.settings.set(имя, значение);](/javascript/api/office/office.settings#set-name--value-) | Параметры поддерживаются только контентными надстройками | 
 | [Office.EventType.DocumentSelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) ||
 
-Обычно общий API следует использовать, когда необходимые возможности не поддерживаются в API для определенных ведущих приложений. Дополнительные сведения об использовании общего API см. в статье [Объектная модель API JavaScript для Office](../develop/office-javascript-api-object-model.md).
+Обычно общий API следует использовать, когда необходимые возможности не поддерживаются в API для определенных ведущих приложений. Дополнительные сведения об использовании общего API см. в статье [Общая объектная модель API JavaScript](../develop/office-javascript-api-object-model.md).
 
 
 <a name="om-diagram"></a>

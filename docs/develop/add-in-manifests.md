@@ -3,12 +3,12 @@ title: XML-манифест надстроек Office
 description: ''
 ms.date: 01/06/2020
 localization_priority: Priority
-ms.openlocfilehash: 90fef1186db6411290daf9b6aef14d8d81d7a13e
-ms.sourcegitcommit: abe8188684b55710261c69e206de83d3a6bd2ed3
+ms.openlocfilehash: abc228fda18b432ddd16d04cce95a8d5af17dd8d
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "40970095"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42162834"
 ---
 # <a name="office-add-ins-xml-manifest"></a>XML-манифест надстроек Office
 
@@ -165,9 +165,9 @@ _\*\* SupportUrl требуется только для надстроек ра�
 
 Ниже показаны примеры XML-файлов манифеста версии 1.1 для надстроек области задач, контентных надстроек и надстроек Outlook.
 
-# <a name="task-panetabtabid-1"></a>[Области задач](#tab/tabid-1)
+# <a name="task-pane"></a>[Области задач](#tab/tabid-1)
 
-[Схема манифеста приложения области задач](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas/taskpane)
+[Схемы манифестов надстроек](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8)
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -363,9 +363,9 @@ _\*\* SupportUrl требуется только для надстроек ра�
 </OfficeApp>
 ```
 
-# <a name="contenttabtabid-2"></a>[Контентная](#tab/tabid-2)
+# <a name="content"></a>[Контент](#tab/tabid-2)
 
-[Схема манифеста контентного приложения](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas/content)
+[Схемы манифестов надстроек](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8)
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -403,9 +403,9 @@ _\*\* SupportUrl требуется только для надстроек ра�
 </OfficeApp>
 ```
 
-# <a name="mailtabtabid-3"></a>[Почтовая](#tab/tabid-3)
+# <a name="mail"></a>[почта](#tab/tabid-3);
 
-[Схема манифеста почтового приложения](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas/mail)
+[Схемы манифестов надстроек](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8)
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -498,7 +498,7 @@ _\*\* SupportUrl требуется только для надстроек ра�
 
 ## <a name="validate-an-office-add-ins-manifest"></a>Проверка манифеста надстройки Office
 
-Сведения о проверке манифеста с помощью [определения схемы XML (XSD)](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas) см. в статье [Проверка манифеста надстройки Office](../testing/troubleshoot-manifest.md).
+Сведения о проверке манифеста с помощью [определения схемы XML (XSD)](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8) см. в статье [Проверка манифеста надстройки Office](../testing/troubleshoot-manifest.md).
 
 ## <a name="see-also"></a>См. также
 
@@ -506,7 +506,7 @@ _\*\* SupportUrl требуется только для надстроек ра�
 * [Создание команд надстройки в манифесте][команды надстройки]
 * [Указание ведущих приложений Office и обязательных элементов API](specify-office-hosts-and-api-requirements.md)
 * [Локализация надстроек для Office](localization.md)
-* [Справочная схема по манифестам надстроек для Office](https://github.com/OfficeDev/office-js-docs-pr/tree/master/docs/overview/schemas)
+* [Справочная схема по манифестам надстроек для Office](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8)
 * [Обновление API и версии манифеста](update-your-javascript-api-for-office-and-manifest-schema-version.md)
 * [Определение аналогичной надстройки COM](make-office-add-in-compatible-with-existing-com-add-in.md)
 * [Запрос разрешений на использование API в надстройках](requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md)

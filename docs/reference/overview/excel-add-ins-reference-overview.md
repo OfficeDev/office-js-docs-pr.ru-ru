@@ -1,15 +1,15 @@
 ---
 title: Обзор API JavaScript для Excel
 description: ''
-ms.date: 07/05/2019
+ms.date: 02/19/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 0c07bb7ce964708a9fef737fabebb13939e357f0
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
+ms.openlocfilehash: aa0e18025e539f747851f5dc9f5a25197761c5c8
+ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851532"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "42163621"
 ---
 # <a name="excel-javascript-api-overview"></a>Обзор API JavaScript для Excel
 
@@ -19,7 +19,7 @@ ms.locfileid: "40851532"
 
 * **Общие API**. Появившиеся в Office 2013 [общие API](/javascript/api/office) можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office.
 
-В этом разделе рассматривается API JavaScript для Excel, используемый для разработки большинства функций в надстройках и предназначенный для Excel в Интернете, Excel 2016 или более поздних версий. Сведения об общем API см. в статье [Объектная модель API JavaScript для Office](../../develop/office-javascript-api-object-model.md). 
+В этом разделе рассматривается API JavaScript для Excel, используемый для разработки большинства функций в надстройках и предназначенный для Excel в Интернете, Excel 2016 или более поздних версий. Сведения об общем API см. в статье [Общая объектная модель API JavaScript](../../develop/office-javascript-api-object-model.md). 
 
 ## <a name="learn-programming-concepts"></a>Сведения о концепциях, связанных с программированием
 
