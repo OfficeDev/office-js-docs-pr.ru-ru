@@ -80,6 +80,8 @@
                   href: develop/sso-in-office-add-ins.md
                 - name: Краткое руководство по единому входу
                   href: quickstarts/sso-quickstart.md
+                - name: Настройка надстройки с поддержкой единого входа
+                  href: quickstarts/sso-quickstart-customize.md
                 - name: Авторизация в Microsoft Graph с помощью единого входа
                   href: develop/authorize-to-microsoft-graph.md
                 - name: Создание надстройки с единым входом с помощью ASP.NET
@@ -559,6 +561,9 @@
         - name: Условное форматирование диапазонов
           href: excel/excel-add-ins-conditional-formatting.md
           displayName: Excel
+        - name: Настройка надстройки для использования общей среды выполнения
+          href: excel/configure-your-add-in-to-use-a-shared-runtime.md
+          displayName: Excel
         - name: Проверка данных
           href: excel/excel-add-ins-data-validation.md
           displayName: Excel
@@ -583,6 +588,9 @@
         - name: Диапазоны (дополнительные)
           href: excel/excel-add-ins-ranges-advanced.md
           displayName: Excel
+        - name: Выполнение кода при открытии документа
+          href: excel/run-code-on-document-open.md
+          displayName: Excel
         - name: Фигуры
           href: excel/excel-add-ins-shapes.md
           displayName: Excel
@@ -605,9 +613,6 @@
           displayName: 'Excel, Custom Functions'
         - name: Руководство по пользовательским функциям
           href: tutorials/excel-tutorial-create-custom-functions.md
-          displayName: 'Excel, Custom Functions'
-        - name: Руководство по обмену данными между пользовательскими функциями и областью задач
-          href: tutorials/share-data-and-events-between-custom-functions-and-the-task-pane-tutorial.md
           displayName: 'Excel, Custom Functions'
         - name: Архитектура
           href: excel/custom-functions-architecture.md
@@ -657,6 +662,17 @@
         - name: Устранение неполадок
           href: excel/custom-functions-troubleshooting.md
           displayName: 'Excel, Custom Functions'
+        - name: Использование общей среды выполнения
+          items:
+            - name: Обзор использования общей среды выполнения
+              href: excel/custom-functions-shared-overview.md
+              displayName: 'Excel, Custom Functions'
+            - name: Учебник по обмену данными между пользовательской функцией и областью задач
+              href: tutorials/share-data-and-events-between-custom-functions-and-the-task-pane-tutorial.md
+              displayName: 'Excel, Custom Functions'
+            - name: Вызов API JS для Excel из пользовательской функции
+              href: excel/call-excel-apis-from-custom-function.md
+              displayName: 'Excel, Custom Functions'
         - name: Переменные функции
           href: excel/custom-functions-volatile.md
           displayName: 'Excel, Custom Functions'
