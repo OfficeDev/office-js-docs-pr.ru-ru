@@ -1,28 +1,27 @@
 ---
-ms.date: 11/04/2019
+ms.date: 02/20/2020
 title: Руководство по обмену данными и событиями между пользовательскими функциями и областью задач в Excel (предварительная версия)
 ms.prod: excel
 description: Осуществляйте обмен данными и событиями между пользовательскими функциями и областью задач в Excel.
 localization_priority: Priority
-ms.openlocfilehash: d86b5bb59dd0da51d5b5472288fa802823d658ce
-ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
+ms.openlocfilehash: 13ef4c199f7cb1de84e58f0ada554c851aee0cad
+ms.sourcegitcommit: dd6d00202f6466c27418247dad7bd136555a6036
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "41217360"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "42283893"
 ---
 # <a name="tutorial-share-data-and-events-between-excel-custom-functions-and-the-task-pane-preview"></a>Руководство по обмену данными и событиями между пользовательскими функциями и областью задач в Excel (предварительная версия)
 
-Пользовательские функции и область задач в Excel совместно используют глобальные данные и могут вызывать функции друг друга. Следуя инструкциям, приведенным в этой статье, настройте проект таким образом, чтобы пользовательские функции могли работать с областью задач.
+[!include[Running custom functions in browser runtime note](../includes/excel-shared-runtime-preview-note.md)]
 
-> [!NOTE]
-> Возможности, описанные в этой статье, в настоящее время доступны в предварительной версии и могут изменяться. Сейчас они не поддерживаются для использования в рабочих средах. Возможности предварительной версии, приведенные в этой статье, доступны только в Excel для Windows. Чтобы ознакомиться с ними, вам нужно [присоединиться к программе предварительной оценки Office](https://insider.office.com/join).  Хороший способ ознакомиться с такими возможностями — использование подписки на Office 365. Если у вас еще нет подписки на Office 365, вы можете оформить бесплатную возобновляемую подписку на Office 365 на 90 дней, присоединившись к [программе для разработчиков Office 365](https://developer.microsoft.com/office/dev-program).
+Вы можете настроить свою надстройку Excel для использования общей среды выполнения. Это позволит предоставлять общий доступ к глобальным данным или отправлять события между областью задач и пользовательскими функциями.
 
 ## <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
 Создайте проект надстройки Excel помощью генератора Yeoman. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
-```command&nbsp;line
+```command line
 yo office
 ```
 
@@ -38,75 +37,65 @@ yo office
 
 1. Запустите Visual Studio Code и откройте проект **Моя надстройка Office**.
 2. Откройте файл **manifest.xml**.
-3. Измените раздел `<Requirements>`, чтобы использовать **CustomFunctionsRuntime** версии **1.2**, как показано в приведенном ниже примере кода.
-    
-    ```xml
-    <Requirements>
-    <Sets DefaultMinVersion="1.1">
-    <Set Name="CustomFunctionsRuntime" MinVersion="1.2"/>
-    </Sets>
-    </Requirements>
-    ```
-    
-4. Найдите раздел `<VersionOverrides>` и добавьте следующий раздел `<Runtimes>`. Время существования должно быть **длительным**, чтобы пользовательские функции могли работать даже после закрытия области задач.
-    
-    ```xml
-    <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
-      <Hosts>
-        <Host xsi:type="Workbook">
-        <Runtimes>
-          <Runtime resid="TaskPaneAndCustomFunction.Url" lifetime="long" />
-        </Runtimes>
-        <AllFormFactors>
-    ```
-    
-5. В элементе `<Page>` измените расположение источника с **Functions.Page.Url** на **TaskPaneAndCustomFunction.Url**.
+3. Найдите раздел `<VersionOverrides>` и добавьте следующий раздел `<Runtimes>`. Время существования должно быть **длительным**, чтобы пользовательские функции могли работать даже после закрытия области задач.
 
-    ```xml
-    <AllFormFactors>
-    ...
-    <Page>
-    <SourceLocation resid="TaskPaneAndCustomFunction.Url"/>
-    </Page>
-    ...
-    ```
+   ```xml
+   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+     <Hosts>
+       <Host xsi:type="Workbook">
+         <Runtimes>
+           <Runtime resid="ContosoAddin.Url" lifetime="long" />
+         </Runtimes>
+       <AllFormFactors>
+   ```
 
-6. В разделе `<DesktopFormFactor>` измените расположение **FunctionFile** с **Commands.Url** на **TaskPaneAndCustomFunction.Url**.
-    
-    ```xml
-    <DesktopFormFactor>
-    <GetStarted>
-    ...
-    </GetStarted>
-    <FunctionFile resid="TaskPaneAndCustomFunction.Url"/>
-    ```
-    
-7. В разделе `<Action>` измените расположение источника с **Taskpane.Url** на **TaskPaneAndCustomFunction.Url**.
-    
-    ```xml
-    <Action xsi:type="ShowTaskpane">
-    <TaskpaneId>ButtonId1</TaskpaneId>
-    <SourceLocation resid="TaskPaneAndCustomFunction.Url"/>
-    </Action>
-    ```
-    
-8. Добавьте новый **Url-идентификатор** для **TaskPaneAndCustomFunction.Url**, указывающий на **taskpane.html**.
-     
-    ```xml
-    <bt:Urls>
-    <bt:Url id="Functions.Script.Url" DefaultValue="https://localhost:3000/dist/functions.js"/>
-    ...
-    <bt:Url id="TaskPaneAndCustomFunction.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
-    ...
-    ```
-    
-9. Сохраните изменения и перестройте проект.
-    
-    ```command&nbsp;line
-    npm run build
-    ```
+4. В элементе `<Page>` измените расположение источника с **Functions.Page.Url** на **ContosoAddin.Url**.
 
-## <a name="share-state-between-custom-function-and-task-pane-code"></a>Общий доступ к состоянию для пользовательской функции и кода области задач 
+   ```xml
+   <AllFormFactors>
+   ...
+   <Page>
+   <SourceLocation resid="ContosoAddin.Url"/>
+   </Page>
+   ...
+   ```
+
+5. В разделе `<DesktopFormFactor>` измените **FunctionFile** с **Commands.Url** на **ContosoAddin.Url**.
+
+   ```xml
+   <DesktopFormFactor>
+   <GetStarted>
+   ...
+   </GetStarted>
+   <FunctionFile resid="ContosoAddin.Url"/>
+   ```
+
+6. В разделе `<Action>` измените расположение источника с **Taskpane.Url** на **ContosoAddin.Url**.
+
+   ```xml
+   <Action xsi:type="ShowTaskpane">
+   <TaskpaneId>ButtonId1</TaskpaneId>
+   <SourceLocation resid="ContosoAddin.Url"/>
+   </Action>
+   ```
+
+7. Добавьте новый **Url-идентификатор** для **ContosoAddin.Url**, указывающий на **taskpane.html**.
+
+   ```xml
+   <bt:Urls>
+   <bt:Url id="Functions.Script.Url" DefaultValue="https://localhost:3000/dist/functions.js"/>
+   ...
+   <bt:Url id="ContosoAddin.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
+   ...
+   ```
+
+8. Сохраните изменения и перестройте проект.
+
+   ```command line
+   npm run build
+   ```
+
+## <a name="share-state-between-custom-function-and-task-pane-code"></a>Общий доступ к состоянию для пользовательской функции и кода области задач
 
 Теперь пользовательские функции выполняются в том же контексте, что и код области задач, и они могут получить общий доступ к состоянию, не используя объект **Storage**. В приведенных ниже инструкциях показано, как предоставить общий доступ к глобальной переменной для пользовательской функции и кода области задач.
 
@@ -114,103 +103,111 @@ yo office
 
 1. В Visual Studio Code откройте файл **src/functions/functions.js**.
 2. В строке 1 в самом верху вставьте следующий код. При этом будет инициализирована глобальная переменная **sharedState**.
-    
-    ```js
-    window.sharedState = "empty";
-    ```
-    
+
+   ```js
+   window.sharedState = "empty";
+   ```
+
 3. Добавьте следующий код, чтобы создать пользовательскую функцию, которая сохранит значения переменной **sharedState**.
-    
-    ```js
-    /**
+
+   ```js
+   /**
     * Saves a string value to shared state with the task pane
     * @customfunction STOREVALUE
     * @param {string} value String to write to shared state with task pane.
     * @return {string} A success value
     */
-    function storeValue(sharedValue) {
-    window.sharedState = sharedValue;
-    return "value stored";
-    }
-    ```
-    
+   function storeValue(sharedValue) {
+     window.sharedState = sharedValue;
+     return "value stored";
+   }
+   ```
+
 4. Добавьте следующий код, чтобы создать пользовательскую функцию, которая получит текущее значение переменной **sharedState**.
 
-    ```js
-    /**
+   ```js
+   /**
     * Gets a string value from shared state with the task pane
     * @customfunction GETVALUE
     * @returns {string} String value of the shared state with task pane.
     */
-    function getValue() {
-    return window.sharedState;
-    }
-    ```
-    
+   function getValue() {
+     return window.sharedState;
+   }
+   ```
+
 5. Сохраните файл.
 
-### <a name="create-task-pane-controls-to-work-with-global-data"></a>Создание элементов управления области задач для работы с глобальными данными 
+### <a name="create-task-pane-controls-to-work-with-global-data"></a>Создание элементов управления области задач для работы с глобальными данными
 
 1. Откройте файл **src/taskpane/taskpane.html**.
 2. Добавьте следующий элемент скрипта непосредственно перед элементом `</head>`.
 
-    ```html
-    <script src="functions.js"></script>
-    ```
+   ```html
+   <script src="functions.js"></script>
+   ```
 
 3. После закрытия элемента `</main>` добавьте следующий HTML-код. С помощью HTML будут созданы два текстовых поля и кнопки для получения и хранения глобальных данных.
 
-    ```html
-    <ol>
-    <li>Enter a value to send to the custom function and select <strong>Store</strong>.</li>
-    <li>Enter <strong>=CONTOSO.GETVALUE()</strong>strong> into a cell to retrieve it.</li>
-    <li>To send data to the task pane, in a cell, enter <strong>=CONTOSO.STOREVALUE("new value")</strong></li>
-    <li>Select <strong>Get</strong> to display the value in the task pane.</li>
-    </ol>
-    <p>Store new value to shared state</p>
-    <div>
-    <input type="text" id="storeBox" />
-    <button onclick="storeSharedValue()">Store</button>
-    </div>
-     
-    <p>Get shared state value</p>
-    <div>
-    <input type="text" id="getBox" />
-    <button onclick="getSharedValue()">Get</button>
-    </div>
-    ```
-    
+   ```html
+   <ol>
+     <li>
+       Enter a value to send to the custom function and select
+       <strong>Store</strong>.
+     </li>
+     <li>
+       Enter <strong>=CONTOSO.GETVALUE()</strong>strong> into a cell to retrieve
+       it.
+     </li>
+     <li>
+       To send data to the task pane, in a cell, enter
+       <strong>=CONTOSO.STOREVALUE("new value")</strong>
+     </li>
+     <li>Select <strong>Get</strong> to display the value in the task pane.</li>
+   </ol>
+   <p>Store new value to shared state</p>
+   <div>
+     <input type="text" id="storeBox" />
+     <button onclick="storeSharedValue()">Store</button>
+   </div>
+
+   <p>Get shared state value</p>
+   <div>
+     <input type="text" id="getBox" />
+     <button onclick="getSharedValue()">Get</button>
+   </div>
+   ```
+
 4. Перед элементом `<body>` добавьте приведенный ниже сценарий. Этот код обрабатывает события нажатия кнопки, когда пользователь хочет сохранить или получить глобальные данные.
-    
-    ```js
-    <script>
-    function storeSharedValue() {
-    let sharedValue = document.getElementById('storeBox').value;
-    window.sharedState = sharedValue;
-    }
-    
-    function getSharedValue() {
-    document.getElementById('getBox').value = window.sharedState;
-    }</script>
-    ```
-    
+
+   ```js
+   <script>
+   function storeSharedValue() {
+   let sharedValue = document.getElementById('storeBox').value;
+   window.sharedState = sharedValue;
+   }
+
+   function getSharedValue() {
+   document.getElementById('getBox').value = window.sharedState;
+   }</script>
+   ```
+
 5. Сохраните файл.
 6. Построение проекта
-    
-    ```command&nbsp;line
-    npm run build 
-    ```
+
+   ```command line
+   npm run build
+   ```
 
 ### <a name="try-sharing-data-between-the-custom-functions-and-task-pane"></a>Обмен данными между пользовательскими функциями и областью задач
 
 - Запустите проект, выполнив приведенную ниже команду.
 
-    ```command&nbsp;line
-    npm run start
-    ```
+  ```command line
+  npm run start
+  ```
 
 После запуска Excel можно использовать кнопки области задач для хранения или получения общих данных. Введите `=CONTOSO.GETVALUE()` в ячейку, чтобы пользовательская функция получила те же общие данные. Можно также использовать `=CONTOSO.STOREVALUE(“new value”)` для изменения значения общих данных.
 
 > [!NOTE]
 > Как показано в этой статье, при настройке проекта пользовательские функции и область задач совместно используют контекст. Вызов API Office из пользовательских функций не поддерживается в предварительной версии.
-

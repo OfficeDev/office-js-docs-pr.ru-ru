@@ -1,15 +1,15 @@
 ---
 title: Создание надстройки Office, в которой используется единый вход (предварительная версия), с помощью генератора Yeoman
 description: Создание надстройки Office на платформе Node.js с использованием единого входа (предварительная версия) с помощью генератора Yeoman.
-ms.date: 01/30/2020
+ms.date: 02/20/2020
 ms.prod: non-product-specific
 localization_priority: Priority
-ms.openlocfilehash: db3567a17a01af76c9db5f859a35dba46fd4858d
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: fb543516eb371b422fdd7aa91001aa9ca21ba576
+ms.sourcegitcommit: dd6d00202f6466c27418247dad7bd136555a6036
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42163880"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "42283921"
 ---
 # <a name="use-the-yeoman-generator-to-create-an-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office, в которой используется единый вход (предварительная версия), с помощью генератора Yeoman
 
@@ -22,7 +22,7 @@ ms.locfileid: "42163880"
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
-* [Node.js](https://nodejs.org) (последняя версия [LTS](https://nodejs.org/about/releases))
+* [Node.js](https://nodejs.org) (последняя версия [LTS](https://nodejs.org/about/releases)).
 
 * Последняя версия [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office). Выполните в командной строке указанную ниже команду, чтобы установить эти инструменты глобально.
 
@@ -58,21 +58,7 @@ ms.locfileid: "42163880"
 
 Проект надстройки, который вы создали с помощью генератора Yeoman, содержит код для надстройки области задач с использованием единого входа.
 
-- Файл **./manifest.xml** в корневом каталоге проекта определяет настройки и возможности надстройки.
-
-- Файл **./src/taskpane/taskpane.html** содержит разметку HTML для области задач.
-- Файл **./src/taskpane/taskpane.css** содержит код CSS, который применяется к содержимому области задач.
-- Файл **./src/taskpane/taskpane.js** содержит код API JavaScript для Office, который упрощает взаимодействие между областью задач и ведущим приложением Office.
-
-- Файл **./src/helpers/documentHelper.js**использует библиотеку Office JavaScript для добавления данных из Microsoft Graph в документ Office.
-- Файл **./src/helpers/fallbackauthdialog.html** — это страница без пользовательского интерфейса, которая загружает JavaScript резервного метода проверки подлинности.
-- Файл **./src/helpers/fallbackauthdialog.js** содержит сценарий JavaScript резервного метода проверки подлинности, который выполняется во время входа пользователя с помощью MSAL.js.
-- Файл **./src/helpers/fallbackauthhelper.js** содержит JavaScript области задач, вызывающий резервный метод проверки подлинности при выполнении сценариев, если проверка подлинности на основе единого входа не поддерживается. 
-- Файл **./src/helpers/ssoauthhelper.js** содержит вызов JavaScript для API единого входа, `getAccessToken`, получает маркер начальной загрузки, инициирует его замену на маркер доступа для Microsoft Graph и вызывает данные Microsoft Graph.
-
-- Файл **./ENV** в корневом каталоге проекта определяет константы, используемые в проекте надстройки. 
-    > [!NOTE]
-    > Некоторые константы, определяемые в этом файле, используются для упрощения процесса единого входа. Вам может потребоваться обновить значения в этом файле в соответствии с конкретным сценарием. Например, вы можете обновить значение области, если для надстройки требуется не `User.Read`, а другое разрешение.
+[!include[project structure for an SSO-enabled add-in created with the Yeoman generator](../includes/sso-yeoman-project-structure.md)]
 
 ## <a name="configure-sso"></a>Настройка единого входа
 
@@ -172,10 +158,11 @@ ms.locfileid: "42163880"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Поздравляем! Вы успешно создали надстройку области задач, в которой используется единый вход, когда это возможно, и альтернативный метод проверки подлинности пользователей, если единый вход не поддерживается. Дополнительные сведения об этапах настройки единого входа, которые генератор Yeoman выполняет автоматически, и коде, который упрощает процесс единого входа, см. в статье [Создание надстройки Office на платформе Node.js с использованием единого входа](../develop/create-sso-office-add-ins-nodejs.md).
+Поздравляем! Вы успешно создали надстройку области задач, в которой используется единый вход, когда это возможно, и альтернативный метод проверки подлинности пользователей, если единый вход не поддерживается. Сведения о настройке надстройки для добавления новых функций, требующих другие разрешения, см. в статье [Настройка надстройки Node.js с поддержкой единого входа](sso-quickstart-customize.md).
 
 ## <a name="see-also"></a>См. также
 
 - [Включение единого входа для надстроек Office](../develop/sso-in-office-add-ins.md)
+- [Настройка надстройки Node.js с поддержкой единого входа](sso-quickstart-customize.md)
 - [Создание надстройки Office на платформе Node.js с использованием единого входа](../develop/create-sso-office-add-ins-nodejs.md)
 - [Устранение ошибок единого входа](../develop/troubleshoot-sso-in-office-add-ins.md)
