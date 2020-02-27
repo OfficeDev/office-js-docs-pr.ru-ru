@@ -1,26 +1,31 @@
 ---
-title: Среда выполнения в файле манифеста
+title: Среда выполнения в файле манифеста (Предварительная версия)
 description: ''
-ms.date: 01/24/2020
+ms.date: 02/21/2020
 localization_priority: Normal
-ms.openlocfilehash: 8fbad8276b3e1d64a6c443cf57d498597d729282
-ms.sourcegitcommit: 72d719165cc2b64ac9d3c51fb8be277dfde7d2eb
+ms.openlocfilehash: 26702896604f9ecf4c69296e5110efe5cdf4218b
+ms.sourcegitcommit: dd6d00202f6466c27418247dad7bd136555a6036
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2020
-ms.locfileid: "41554001"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "42283886"
 ---
-# <a name="runtime-element"></a>Элемент среды выполнения
+# <a name="runtime-element-preview"></a>Элемент среды выполнения (Предварительная версия)
 
-Эта функция доступна предварительная версия. Дочерний элемент [`<Runtimes>`](runtimes.md) элемента. Этот элемент упрощает совместное использование глобальных данных и вызовов функций между пользовательскими функциями Excel и областью задач надстройки.
+[!include[Running custom functions in browser runtime note](../../includes/excel-shared-runtime-preview-note.md)]
+
+Дочерний элемент [`<Runtimes>`](runtimes.md) элемента. Этот элемент настраивает надстройку, чтобы использовать общую среду выполнения JavaScript, чтобы Ваша лента, область задач и пользовательские функции выполнялись в одной среде выполнения. Дополнительные сведения можно найти в статье [Настройка надстройки Excel для использования общей среды выполнения JavaScript](../../excel/configure-your-add-in-to-use-a-shared-runtime.md).
 
 **Тип надстройки:** надстройки области задач
+
+> [!IMPORTANT]
+В настоящее время общедоступная среда выполнения <<<<<<< для ГОЛОВного общего доступа доступна только в Excel для Windows. Для ознакомления с предварительными возможностями необходимо присоединиться к [программе предварительной оценки Office](https://insider.office.com/).
 
 ## <a name="syntax"></a>Синтаксис
 
 ```XML
 <Runtimes>
-    <Runtime resid="TaskPaneAndCustomFunction.Url" lifetime="long" />
+    <Runtime resid="ContosoAddin.Url" lifetime="long" />
 </Runtimes>
 ```
 
@@ -32,8 +37,8 @@ ms.locfileid: "41554001"
 
 |  Атрибут  |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  **время жизни = "Long"**  |  Да  | Всегда должен быть указан как длинное, если вы хотите, чтобы пользовательские функции Excel работали, когда область задач надстройки закрыта. |
-|  **resid**  |  Да  | Если используется для пользовательских функций Excel, `resid` необходимо указать значение. `TaskPaneAndCustomFunction.Url` |
+|  **время жизни = "Long"**  |  Да  | Всегда следует использовать `long` , если вы хотите использовать общую среду выполнения для надстройки Excel. |
+|  **resid**  |  Да  | Указывает URL-адрес HTML-страницы для надстройки. `resid` Должен сопоставляться с `id` атрибутом `Url` элемента в `Resources` элементе. |
 
 ## <a name="see-also"></a>См. также
 

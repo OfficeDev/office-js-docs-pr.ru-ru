@@ -1,14 +1,14 @@
 ---
 title: Общие сведения о разрешениях для надстроек Outlook
 description: Надстройки Outlook указывают требуемый уровень разрешений в своем манифесте, который включает Restricted, ReadItem, ReadWriteItem, or ReadWriteMailbox.
-ms.date: 12/10/2019
+ms.date: 02/19/2020
 localization_priority: Normal
-ms.openlocfilehash: 58d21a33034475b8c33b8449ece24c9dafc84e2b
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: d3e5ac55619460e39c3853ea1a0a05c30d767bfd
+ms.sourcegitcommit: dd6d00202f6466c27418247dad7bd136555a6036
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42166636"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "42283907"
 ---
 # <a name="understanding-outlook-add-in-permissions"></a>Общие сведения о разрешениях для надстроек Outlook
 
@@ -31,7 +31,7 @@ ms.locfileid: "42166636"
 
 ### <a name="cant-do"></a>Не разрешено
 
-- Использовать правило [ItemHasKnownEntity](../reference/manifest/rule.md#itemhasknownentity-rule) для контакта, электронного адреса, предложения о собрании или объекта предложения о задаче.
+- Используйте правило [ItemHasKnownEntity](../reference/manifest/rule.md#itemhasknownentity-rule) для контакта, адрес электронной почты, предложение о собрании или сущность предложения по задаче.
 
 - Использовать правило [ItemHasAttachment](../reference/manifest/rule.md#itemhasattachment-rule) или [ItemHasRegularExpressionMatch](../reference/manifest/rule.md#itemhasregularexpressionmatch-rule).
 
