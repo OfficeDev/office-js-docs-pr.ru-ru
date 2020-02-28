@@ -5,12 +5,12 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: c8b0953655039556936c631926ed2713bdb62c57
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
+ms.openlocfilehash: c542f5c751615019dd06a650a02a072383ab2d45
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851399"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42324689"
 ---
 # <a name="word-add-ins-overview"></a>Обзор надстроек Word
 
