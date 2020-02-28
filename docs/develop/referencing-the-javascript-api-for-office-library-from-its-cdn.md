@@ -1,41 +1,54 @@
 ---
-title: Добавление ссылок на библиотеку JavaScript API для Office из сети доставки содержимого (CDN)
-description: ''
-ms.date: 03/19/2019
+title: Создание ссылок на библиотеку API JavaScript для Office
+description: Узнайте, как ссылаться на библиотеку API JavaScript для Office и определение типов в надстройке.
+ms.date: 02/27/2020
 localization_priority: Normal
-ms.openlocfilehash: 49fd83af4f5467cb4c612191e9fec235606fc05f
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 9f7753b24e0a5861778b09ea93fecdc26fd2ca96
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950791"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325159"
 ---
-# <a name="referencing-the-javascript-api-for-office-library-from-its-content-delivery-network-cdn"></a><span data-ttu-id="9dd80-102">Добавление ссылок на библиотеку JavaScript API для Office из сети доставки содержимого (CDN)</span><span class="sxs-lookup"><span data-stu-id="9dd80-102">Referencing the JavaScript API for Office library from its content delivery network (CDN)</span></span>
+# <a name="referencing-the-office-javascript-api-library"></a><span data-ttu-id="bd2ea-103">Создание ссылок на библиотеку API JavaScript для Office</span><span class="sxs-lookup"><span data-stu-id="bd2ea-103">Referencing the Office JavaScript API library</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="9dd80-103">Помимо действий, описанных в этой статье, если необходимо использовать TypeScript, для получения IntelliSense потребуется запустить указанную ниже команду в системном приглашении с поддержкой Node (или в окне Git Bash) из корневой папки проекта.</span><span class="sxs-lookup"><span data-stu-id="9dd80-103">In addition to the steps described in this article, if you want to use TypeScript, then to get IntelliSense you will need run the following command in a Node-enabled system prompt (or git bash window) from the root of your project folder.</span></span> <span data-ttu-id="9dd80-104">У вас должен быть установлен [Node.js](https://nodejs.org) (содержащий npm).</span><span class="sxs-lookup"><span data-stu-id="9dd80-104">You must have [Node.js](https://nodejs.org) installed (which includes npm).</span></span>
-> 
-> ```command&nbsp;line
-> npm install --save-dev @types/office-js
-> ```
-
-<span data-ttu-id="9dd80-105">Библиотека [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office) состоит из файла Office.js и связанных JS-файлов ведущего приложения, например Excel-15.js и Outlook-15.js.</span><span class="sxs-lookup"><span data-stu-id="9dd80-105">The [JavaScript API for Office](/office/dev/add-ins/reference/javascript-api-for-office) library consists of the Office.js file and associated host application-specific .js files, such as Excel-15.js and Outlook-15.js.</span></span> 
-
-
-<span data-ttu-id="9dd80-106">Простейший способ добавить ссылку на API — использовать нашу сеть доставки содержимого (CDN), добавив следующий код `<script>` в тег `<head>` страницы:</span><span class="sxs-lookup"><span data-stu-id="9dd80-106">The simplest way to reference the API is to use our CDN by adding the following `<script>` to your page's `<head>` tag:</span></span>  
+<span data-ttu-id="bd2ea-104">Библиотека [API JavaScript для Office](../reference/javascript-api-for-office.md) предоставляет API, которые надстройка может использовать для взаимодействия с ведущим приложением Office.</span><span class="sxs-lookup"><span data-stu-id="bd2ea-104">The [Office JavaScript API](../reference/javascript-api-for-office.md) library provides the APIs that your add-in can use to interact with the Office host.</span></span> <span data-ttu-id="bd2ea-105">Самый простой способ добавить ссылку на библиотеку — использовать сеть доставки содержимого (CDN), добавив следующий `<script>` тег в `<head>` раздел страницы HTML:</span><span class="sxs-lookup"><span data-stu-id="bd2ea-105">The simplest way to reference the library is to use the content delivery network (CDN) by adding the following `<script>` tag within the `<head>` section of your HTML page:</span></span>  
 
 ```html
-<script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+<head>
+    ...
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+</head>
 ```
 
-<span data-ttu-id="9dd80-p102">`/1/` перед `office.js` в URL-адресе CDN указывает, что необходимо использовать последний добавочный выпуск файла Office.js версии 1. Так как API JavaScript для Office обеспечивает обратную совместимость, в последнем выпуске будут и дальше поддерживаться элементы API, представленные ранее в версии 1. Если вам нужно обновить существующий проект, см. статью [Обновление версии API JavaScript для Office и файлов схемы манифеста](update-your-javascript-api-for-office-and-manifest-schema-version.md).</span><span class="sxs-lookup"><span data-stu-id="9dd80-p102">The  `/1/` in front of `office.js` in the CDN URL specifies the latest incremental release within version 1 of Office.js. Because the JavaScript API for Office maintains backward compatibility, the latest release will continue to support API members that were introduced earlier in version 1. If you need to upgrade an existing project, see [Update the version of your JavaScript API for Office and manifest schema files](update-your-javascript-api-for-office-and-manifest-schema-version.md).</span></span> 
-
-<span data-ttu-id="9dd80-p103">Если вы планируете опубликовать свою надстройку Office из AppSource, необходимо использовать эту ссылку на сеть CDN. Локальные ссылки подходят только для внутренних сценариев, а также сценариев разработки и отладки.</span><span class="sxs-lookup"><span data-stu-id="9dd80-p103">If you plan to publish your Office Add-in from AppSource, you must use this CDN reference. Local references are only appropriate for internal, development, and debugging scenarios.</span></span>
+<span data-ttu-id="bd2ea-106">Это приведет к скачиванию и кэшированию файлов API JavaScript для Office при первом запуске надстройки, чтобы убедиться в том, что используется самая последняя реализация Office. js и связанных с ней файлов для указанной версии.</span><span class="sxs-lookup"><span data-stu-id="bd2ea-106">This will download and cache the Office JavaScript API files the first time your add-in loads to make sure that it is using the most up-to-date implementation of Office.js and its associated files for the specified version.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="9dd80-p104">Разрабатывая надстройку для ведущего приложения Office, ссылайтесь на API JavaScript для Office из раздела `<head>` страницы. Это гарантирует, что API полностью инициализируется раньше всех элементов основного текста. Ведущим приложениям Office необходимо, чтобы надстройки инициализировались в течение 5 секунд после активации. Если надстройка не активируется в течение этого срока, будет считаться, что она не отвечает, и пользователь увидит сообщение об ошибке.</span><span class="sxs-lookup"><span data-stu-id="9dd80-p104">When you develop an add-in for any Office host application, reference the JavaScript API for Office from inside the `<head>` section of the page. This ensures that the API is fully initialized prior to any body elements. Office hosts require that add-ins initialize within 5 seconds of activation. If your add-in doesn't activate within this threshold, it will be declared unresponsive and an error message will be displayed to the user.</span></span>
+> <span data-ttu-id="bd2ea-107">Необходимо ссылаться на API JavaScript для Office из `<head>` раздела страницы, чтобы убедиться, что API полностью инициализирован до элементов основного текста.</span><span class="sxs-lookup"><span data-stu-id="bd2ea-107">You must reference the Office JavaScript API from inside the `<head>` section of the page to ensure that the API is fully initialized prior to any body elements.</span></span> <span data-ttu-id="bd2ea-108">Ведущим приложениям Office необходимо, чтобы надстройки инициализировались в течение 5 секунд после активации.</span><span class="sxs-lookup"><span data-stu-id="bd2ea-108">Office hosts require that add-ins initialize within 5 seconds of activation.</span></span> <span data-ttu-id="bd2ea-109">Если надстройка не активируется в этом пороговом значении, она будет объявлена без ответа, а пользователю будет выведено сообщение об ошибке.</span><span class="sxs-lookup"><span data-stu-id="bd2ea-109">If your add-in doesn't activate within this threshold, it will be declared unresponsive and an error message will be displayed to the user.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="9dd80-116">См. также</span><span class="sxs-lookup"><span data-stu-id="9dd80-116">See also</span></span>
+## <a name="api-versioning-and-backward-compatibility"></a><span data-ttu-id="bd2ea-110">Управление версиями и обратная совместимость API</span><span class="sxs-lookup"><span data-stu-id="bd2ea-110">API versioning and backward compatibility</span></span>
 
-- [<span data-ttu-id="9dd80-117">Общие сведения об API JavaScript для Office</span><span class="sxs-lookup"><span data-stu-id="9dd80-117">Understanding the JavaScript API for Office</span></span>](understanding-the-javascript-api-for-office.md)
-- [<span data-ttu-id="9dd80-118">API JavaScript для Office</span><span class="sxs-lookup"><span data-stu-id="9dd80-118">JavaScript API for Office</span></span>](/office/dev/add-ins/reference/javascript-api-for-office)
+<span data-ttu-id="bd2ea-111">В предыдущем фрагменте кода HTML ( `/1/` перед `office.js` в URL-адресе CDN) указывает последний добавочный выпуск в версии 1 файла Office. js.</span><span class="sxs-lookup"><span data-stu-id="bd2ea-111">In the previous HTML snippet, the `/1/` in front of `office.js` in the CDN URL specifies the latest incremental release within version 1 of Office.js.</span></span> <span data-ttu-id="bd2ea-112">Так как API JavaScript для Office поддерживает обратную совместимость, последний выпуск по-прежнему будет поддерживать элементы API, представленные ранее в версии 1.</span><span class="sxs-lookup"><span data-stu-id="bd2ea-112">Because the Office JavaScript API maintains backward compatibility, the latest release will continue to support API members that were introduced earlier in version 1.</span></span> <span data-ttu-id="bd2ea-113">Если вам нужно обновить существующий проект, ознакомьтесь со статьей [Обновление версии API JavaScript для Office и файлов схемы манифеста](update-your-javascript-api-for-office-and-manifest-schema-version.md).</span><span class="sxs-lookup"><span data-stu-id="bd2ea-113">If you need to upgrade an existing project, see [Update the version of your Office JavaScript API and manifest schema files](update-your-javascript-api-for-office-and-manifest-schema-version.md).</span></span> 
+
+<span data-ttu-id="bd2ea-p104">Если вы планируете опубликовать свою надстройку Office из AppSource, необходимо использовать эту ссылку на сеть CDN. Локальные ссылки подходят только для внутренних сценариев, а также сценариев разработки и отладки.</span><span class="sxs-lookup"><span data-stu-id="bd2ea-p104">If you plan to publish your Office Add-in from AppSource, you must use this CDN reference. Local references are only appropriate for internal, development, and debugging scenarios.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="bd2ea-116">Чтобы использовать предварительные API-интерфейсы, сослаться на предварительную версию библиотеки API JavaScript для `https://appsforoffice.microsoft.com/lib/beta/hosted/office.js`Office в сети CDN:.</span><span class="sxs-lookup"><span data-stu-id="bd2ea-116">To use preview APIs, reference the preview version of the Office JavaScript API library on the CDN: `https://appsforoffice.microsoft.com/lib/beta/hosted/office.js`.</span></span>
+
+## <a name="enabling-intellisense-for-a-typescript-project"></a><span data-ttu-id="bd2ea-117">Включение IntelliSense для проекта TypeScript</span><span class="sxs-lookup"><span data-stu-id="bd2ea-117">Enabling Intellisense for a TypeScript project</span></span>
+
+<span data-ttu-id="bd2ea-118">Кроме ссылки на API JavaScript для Office, как описано выше, можно также включить функцию IntelliSense для проекта надстройки TypeScript, используя определения типов из [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js).</span><span class="sxs-lookup"><span data-stu-id="bd2ea-118">In addition to referencing the Office JavaScript API as described previously, you can also enable Intellisense for TypeScript add-in project by using the type definitions from [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js).</span></span> <span data-ttu-id="bd2ea-119">Для этого выполните следующую команду в командной строке с поддержкой узлов (или в окне Bash Git) из корневого каталога папки проекта.</span><span class="sxs-lookup"><span data-stu-id="bd2ea-119">To do so, run the following command in a Node-enabled system prompt (or git bash window) from the root of your project folder.</span></span> <span data-ttu-id="bd2ea-120">У вас должен быть установлен [Node.js](https://nodejs.org) (содержащий npm).</span><span class="sxs-lookup"><span data-stu-id="bd2ea-120">You must have [Node.js](https://nodejs.org) installed (which includes npm).</span></span>
+
+```command&nbsp;line
+npm install --save-dev @types/office-js
+```
+
+> [!NOTE]
+> <span data-ttu-id="bd2ea-121">Чтобы включить IntelliSense для предварительной версии API, используйте следующие команды в корневой папке проекта, [выполнив следующую](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview) команду:</span><span class="sxs-lookup"><span data-stu-id="bd2ea-121">To enable Intellisense for preview APIs, use the preview type definitions from [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview) by running the following command in the root of your project folder:</span></span> 
+>
+> `npm install --save-dev @types/office-js-preview`
+
+## <a name="see-also"></a><span data-ttu-id="bd2ea-122">См. также</span><span class="sxs-lookup"><span data-stu-id="bd2ea-122">See also</span></span>
+
+- [<span data-ttu-id="bd2ea-123">Общие сведения об интерфейсе API JavaScript для Office</span><span class="sxs-lookup"><span data-stu-id="bd2ea-123">Understanding the Office JavaScript API</span></span>](understanding-the-javascript-api-for-office.md)
+- [<span data-ttu-id="bd2ea-124">API JavaScript для Office</span><span class="sxs-lookup"><span data-stu-id="bd2ea-124">Office JavaScript API</span></span>](/office/dev/add-ins/reference/javascript-api-for-office)

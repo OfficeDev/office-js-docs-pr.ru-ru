@@ -3,50 +3,50 @@ title: Элемент Resources в файле манифеста
 description: ''
 ms.date: 10/09/2018
 localization_priority: Normal
-ms.openlocfilehash: e29e7e36585be8fd728eb46128d7ead538ea8069
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 7e1cd9fcb383fa4d5881917b3dd8d6dec3bbe4f8
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32452055"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42324829"
 ---
-# <a name="resources-element"></a><span data-ttu-id="f25c3-102">Элемент Resources</span><span class="sxs-lookup"><span data-stu-id="f25c3-102">Resources element</span></span>
+# <a name="resources-element"></a><span data-ttu-id="55b77-102">Элемент Resources</span><span class="sxs-lookup"><span data-stu-id="55b77-102">Resources element</span></span>
 
-<span data-ttu-id="f25c3-p101">Содержит значки, строки и URL-адреса для узла [VersionOverrides](versionoverrides.md). Элемент манифеста указывает ресурс с помощью атрибута **id**. Это позволяет сократить размер манифеста, особенно когда имеются версии ресурсов для разных языковых стандартов. Атрибут **id** должен быть уникальным в пределах манифеста и не может быть длиннее 32 символов.</span><span class="sxs-lookup"><span data-stu-id="f25c3-p101">Contains icons, strings, and URLs for the [VersionOverrides](versionoverrides.md) node. A manifest element specifies a resource by using the **id** of the resource. This helps to keep the size of the manifest manageable, especially when resources have versions for different locales. An **id** must be unique within the manifest and can have a maximum of 32 characters.</span></span>
+<span data-ttu-id="55b77-p101">Содержит значки, строки и URL-адреса для узла [VersionOverrides](versionoverrides.md). Элемент манифеста указывает ресурс с помощью атрибута **id**. Это позволяет сократить размер манифеста, особенно когда имеются версии ресурсов для разных языковых стандартов. Атрибут **id** должен быть уникальным в пределах манифеста и не может быть длиннее 32 символов.</span><span class="sxs-lookup"><span data-stu-id="55b77-p101">Contains icons, strings, and URLs for the [VersionOverrides](versionoverrides.md) node. A manifest element specifies a resource by using the **id** of the resource. This helps to keep the size of the manifest manageable, especially when resources have versions for different locales. An **id** must be unique within the manifest and can have a maximum of 32 characters.</span></span>
 
-<span data-ttu-id="f25c3-107">Каждый ресурс может иметь один или несколько дочерних элементов **Override**, позволяющих указать другой ресурс для определенного языкового стандарта.</span><span class="sxs-lookup"><span data-stu-id="f25c3-107">Each resource can have one or more **Override** child elements to define a different resource for a specific locale.</span></span>
+<span data-ttu-id="55b77-107">Каждый ресурс может иметь один или несколько дочерних элементов **Override**, позволяющих указать другой ресурс для определенного языкового стандарта.</span><span class="sxs-lookup"><span data-stu-id="55b77-107">Each resource can have one or more **Override** child elements to define a different resource for a specific locale.</span></span>
 
-## <a name="child-elements"></a><span data-ttu-id="f25c3-108">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="f25c3-108">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="55b77-108">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="55b77-108">Child elements</span></span>
 
-|  <span data-ttu-id="f25c3-109">Элемент</span><span class="sxs-lookup"><span data-stu-id="f25c3-109">Element</span></span> |  <span data-ttu-id="f25c3-110">Тип</span><span class="sxs-lookup"><span data-stu-id="f25c3-110">Type</span></span>  |  <span data-ttu-id="f25c3-111">Описание</span><span class="sxs-lookup"><span data-stu-id="f25c3-111">Description</span></span>  |
+|  <span data-ttu-id="55b77-109">Элемент</span><span class="sxs-lookup"><span data-stu-id="55b77-109">Element</span></span> |  <span data-ttu-id="55b77-110">Тип</span><span class="sxs-lookup"><span data-stu-id="55b77-110">Type</span></span>  |  <span data-ttu-id="55b77-111">Описание</span><span class="sxs-lookup"><span data-stu-id="55b77-111">Description</span></span>  |
 |:-----|:-----|:-----|
-|  [<span data-ttu-id="f25c3-112">Images</span><span class="sxs-lookup"><span data-stu-id="f25c3-112">Images</span></span>](#images)            |  <span data-ttu-id="f25c3-113">image</span><span class="sxs-lookup"><span data-stu-id="f25c3-113">image</span></span>   |  <span data-ttu-id="f25c3-114">Предоставляет URL-адрес HTTPS изображения значка.</span><span class="sxs-lookup"><span data-stu-id="f25c3-114">Provides the HTTPS URL to an image for an icon.</span></span> |
-|  <span data-ttu-id="f25c3-115">**Urls**</span><span class="sxs-lookup"><span data-stu-id="f25c3-115">**Urls**</span></span>                |  <span data-ttu-id="f25c3-116">url</span><span class="sxs-lookup"><span data-stu-id="f25c3-116">url</span></span>     |  <span data-ttu-id="f25c3-p102">Предоставляет URL-адрес HTTPS расположения. URL-адрес не может быть длиннее 2048 символов.</span><span class="sxs-lookup"><span data-stu-id="f25c3-p102">Provides an HTTPS URL location. A URL can have a maximum of 2048 characters.</span></span> |
-|  <span data-ttu-id="f25c3-119">**ShortStrings**</span><span class="sxs-lookup"><span data-stu-id="f25c3-119">**ShortStrings**</span></span> |  <span data-ttu-id="f25c3-120">string</span><span class="sxs-lookup"><span data-stu-id="f25c3-120">string</span></span>  |  <span data-ttu-id="f25c3-p103">Текст для элементов **Label** и **Title**. Каждая **строка** содержит не более 125 символов.</span><span class="sxs-lookup"><span data-stu-id="f25c3-p103">The text for **Label** and **Title** elements. Each **String** contains a maximum of 125 characters.</span></span>|
-|  <span data-ttu-id="f25c3-123">**LongStrings**</span><span class="sxs-lookup"><span data-stu-id="f25c3-123">**LongStrings**</span></span>  |  <span data-ttu-id="f25c3-124">string</span><span class="sxs-lookup"><span data-stu-id="f25c3-124">string</span></span>  | <span data-ttu-id="f25c3-p104">Текст для атрибутов **Description**. Каждая**строка** содержит не более 250 символов.</span><span class="sxs-lookup"><span data-stu-id="f25c3-p104">The text for **Description** attributes. Each **String** contains a maximum of 250 characters.</span></span>|
+|  [<span data-ttu-id="55b77-112">Images</span><span class="sxs-lookup"><span data-stu-id="55b77-112">Images</span></span>](#images)            |  <span data-ttu-id="55b77-113">image</span><span class="sxs-lookup"><span data-stu-id="55b77-113">image</span></span>   |  <span data-ttu-id="55b77-114">Предоставляет URL-адрес HTTPS изображения значка.</span><span class="sxs-lookup"><span data-stu-id="55b77-114">Provides the HTTPS URL to an image for an icon.</span></span> |
+|  <span data-ttu-id="55b77-115">**Urls**</span><span class="sxs-lookup"><span data-stu-id="55b77-115">**Urls**</span></span>                |  <span data-ttu-id="55b77-116">url</span><span class="sxs-lookup"><span data-stu-id="55b77-116">url</span></span>     |  <span data-ttu-id="55b77-p102">Предоставляет URL-адрес HTTPS расположения. URL-адрес не может быть длиннее 2048 символов.</span><span class="sxs-lookup"><span data-stu-id="55b77-p102">Provides an HTTPS URL location. A URL can have a maximum of 2048 characters.</span></span> |
+|  <span data-ttu-id="55b77-119">**ShortStrings**</span><span class="sxs-lookup"><span data-stu-id="55b77-119">**ShortStrings**</span></span> |  <span data-ttu-id="55b77-120">string</span><span class="sxs-lookup"><span data-stu-id="55b77-120">string</span></span>  |  <span data-ttu-id="55b77-p103">Текст для элементов **Label** и **Title**. Каждая **строка** содержит не более 125 символов.</span><span class="sxs-lookup"><span data-stu-id="55b77-p103">The text for **Label** and **Title** elements. Each **String** contains a maximum of 125 characters.</span></span>|
+|  <span data-ttu-id="55b77-123">**LongStrings**</span><span class="sxs-lookup"><span data-stu-id="55b77-123">**LongStrings**</span></span>  |  <span data-ttu-id="55b77-124">string</span><span class="sxs-lookup"><span data-stu-id="55b77-124">string</span></span>  | <span data-ttu-id="55b77-p104">Текст для атрибутов **Description**. Каждая**строка** содержит не более 250 символов.</span><span class="sxs-lookup"><span data-stu-id="55b77-p104">The text for **Description** attributes. Each **String** contains a maximum of 250 characters.</span></span>|
 
 > [!NOTE]
-> <span data-ttu-id="f25c3-127">Для всех URL-адресов в элементах **Image** и **Url** необходимо использовать протокол SSL.</span><span class="sxs-lookup"><span data-stu-id="f25c3-127">You must use Secure Sockets Layer (SSL) for all URLs in the  **Image** and **Url** elements.</span></span>
+> <span data-ttu-id="55b77-127">Для всех URL-адресов в элементах **Image** и **Url** необходимо использовать протокол SSL.</span><span class="sxs-lookup"><span data-stu-id="55b77-127">You must use Secure Sockets Layer (SSL) for all URLs in the **Image** and **Url** elements.</span></span>
 
-### <a name="images"></a><span data-ttu-id="f25c3-128">Images</span><span class="sxs-lookup"><span data-stu-id="f25c3-128">Images</span></span>
-<span data-ttu-id="f25c3-129">У каждого значка должно быть три элемента **Images**, по одному на каждый из трех обязательных размеров:</span><span class="sxs-lookup"><span data-stu-id="f25c3-129">Each icon must have three  **Images** elements, one for each of the three mandatory sizes:</span></span>
+### <a name="images"></a><span data-ttu-id="55b77-128">Изображения</span><span class="sxs-lookup"><span data-stu-id="55b77-128">Images</span></span>
+<span data-ttu-id="55b77-129">У каждого значка должно быть три элемента **Images** , по одному для каждого из трех обязательных размеров:</span><span class="sxs-lookup"><span data-stu-id="55b77-129">Each icon must have three **Images** elements, one for each of the three mandatory sizes:</span></span>
 
-- <span data-ttu-id="f25c3-130">16 x 16</span><span class="sxs-lookup"><span data-stu-id="f25c3-130">16x16</span></span>
-- <span data-ttu-id="f25c3-131">32x32</span><span class="sxs-lookup"><span data-stu-id="f25c3-131">32x32</span></span>
-- <span data-ttu-id="f25c3-132">80x80</span><span class="sxs-lookup"><span data-stu-id="f25c3-132">80x80</span></span>
+- <span data-ttu-id="55b77-130">16 x 16</span><span class="sxs-lookup"><span data-stu-id="55b77-130">16x16</span></span>
+- <span data-ttu-id="55b77-131">32x32</span><span class="sxs-lookup"><span data-stu-id="55b77-131">32x32</span></span>
+- <span data-ttu-id="55b77-132">80x80</span><span class="sxs-lookup"><span data-stu-id="55b77-132">80x80</span></span>
 
-<span data-ttu-id="f25c3-133">Кроме того, поддерживаются (но не требуются) указанные ниже дополнительные размеры.</span><span class="sxs-lookup"><span data-stu-id="f25c3-133">The following additional sizes are also supported, but not required:</span></span>
+<span data-ttu-id="55b77-133">Кроме того, поддерживаются (но не требуются) указанные ниже дополнительные размеры.</span><span class="sxs-lookup"><span data-stu-id="55b77-133">The following additional sizes are also supported, but not required:</span></span>
 
-- <span data-ttu-id="f25c3-134">20x20</span><span class="sxs-lookup"><span data-stu-id="f25c3-134">20x20</span></span>
-- <span data-ttu-id="f25c3-135">24x24</span><span class="sxs-lookup"><span data-stu-id="f25c3-135">24x24</span></span>
-- <span data-ttu-id="f25c3-136">40x40</span><span class="sxs-lookup"><span data-stu-id="f25c3-136">40x40</span></span>
-- <span data-ttu-id="f25c3-137">48x48</span><span class="sxs-lookup"><span data-stu-id="f25c3-137">48x48</span></span>
-- <span data-ttu-id="f25c3-138">64x64</span><span class="sxs-lookup"><span data-stu-id="f25c3-138">64x64</span></span>
+- <span data-ttu-id="55b77-134">20x20</span><span class="sxs-lookup"><span data-stu-id="55b77-134">20x20</span></span>
+- <span data-ttu-id="55b77-135">24x24</span><span class="sxs-lookup"><span data-stu-id="55b77-135">24x24</span></span>
+- <span data-ttu-id="55b77-136">40x40</span><span class="sxs-lookup"><span data-stu-id="55b77-136">40x40</span></span>
+- <span data-ttu-id="55b77-137">48x48</span><span class="sxs-lookup"><span data-stu-id="55b77-137">48x48</span></span>
+- <span data-ttu-id="55b77-138">64x64</span><span class="sxs-lookup"><span data-stu-id="55b77-138">64x64</span></span>
 
 > [!IMPORTANT] 
-> <span data-ttu-id="f25c3-139">Для оптимальной работы Outlook требуется кэшировать ресурсы изображений.</span><span class="sxs-lookup"><span data-stu-id="f25c3-139">Outlook requires the ability to cache image resources for performance purposes.</span></span> <span data-ttu-id="f25c3-140">Поэтому сервер, на котором размещен ресурс изображения, не должен добавлять директивы CACHE-CONTROL в заголовок ответа.</span><span class="sxs-lookup"><span data-stu-id="f25c3-140">For this reason, the server hosting an image resource must not add any CACHE-CONTROL directives to the response header.</span></span> <span data-ttu-id="f25c3-141">Это приведет к тому, что Outlook автоматически заменит универсальное или стандартное изображение.</span><span class="sxs-lookup"><span data-stu-id="f25c3-141">This will result in Outlook automatically substituting a generic or default image.</span></span>    
+> <span data-ttu-id="55b77-139">Для оптимальной работы Outlook требуется кэшировать ресурсы изображений.</span><span class="sxs-lookup"><span data-stu-id="55b77-139">Outlook requires the ability to cache image resources for performance purposes.</span></span> <span data-ttu-id="55b77-140">Поэтому сервер, на котором размещен ресурс изображения, не должен добавлять директивы CACHE-CONTROL в заголовок ответа.</span><span class="sxs-lookup"><span data-stu-id="55b77-140">For this reason, the server hosting an image resource must not add any CACHE-CONTROL directives to the response header.</span></span> <span data-ttu-id="55b77-141">Это приведет к тому, что Outlook автоматически заменит универсальное или стандартное изображение.</span><span class="sxs-lookup"><span data-stu-id="55b77-141">This will result in Outlook automatically substituting a generic or default image.</span></span>    
 
-## <a name="resources-examples"></a><span data-ttu-id="f25c3-142">Примеры ресурсов</span><span class="sxs-lookup"><span data-stu-id="f25c3-142">Resources examples</span></span> 
+## <a name="resources-examples"></a><span data-ttu-id="55b77-142">Примеры ресурсов</span><span class="sxs-lookup"><span data-stu-id="55b77-142">Resources examples</span></span> 
 
 ```XML
 <Resources>
