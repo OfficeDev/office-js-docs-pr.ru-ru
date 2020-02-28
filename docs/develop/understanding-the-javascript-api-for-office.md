@@ -1,172 +1,37 @@
 ---
-title: Общие сведения об интерфейсе API JavaScript для Office
-description: ''
-ms.date: 06/21/2019
+title: Общие сведения об API JavaScript для Office
+description: Введение в API JavaScript для Office
+ms.date: 02/27/2020
 localization_priority: Priority
-ms.openlocfilehash: a82437fc82d9c9a31e75d448579f37d440784aa2
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 28aac00cd801019d95b2d4b487bfdf8e2187af95
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42163516"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42324701"
 ---
-# <a name="understanding-the-javascript-api-for-office"></a>Общие сведения об интерфейсе API JavaScript для Office
+# <a name="understanding-the-office-javascript-api"></a>Общие сведения об API JavaScript для Office
 
-В этой статье можно узнать об интерфейсе API JavaScript для Office и о том, как его использовать. Справочные сведения см. в разделе [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office). О том, как обновить файлы проекта Visual Studio до последней версии API JavaScript для Office, см. в статье [Обновление версии API JavaScript для Office и файлов схемы манифеста](update-your-javascript-api-for-office-and-manifest-schema-version.md).
+Надстройка Office может использовать API JavaScript для Office, чтобы взаимодействовать с содержимым документа Office, в котором запущена надстройка.
+
+## <a name="accessing-the-office-javascript-api-library"></a>Доступ к библиотеке API JavaScript для Office
+
+[!include[information about accessing the Office JS API library](../includes/office-js-access-library.md)]
+
+## <a name="api-models"></a>Модели API
+
+[!include[information about the Office JS API models](../includes/office-js-api-models.md)]
+
+## <a name="api-requirement-sets"></a>Наборы обязательных элементов API
+
+[!include[information about the Office JS API requirement sets](../includes/office-js-requirement-sets.md)]
 
 > [!NOTE]
 > Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в интерфейсе Office, убедитесь, что она соответствует [политикам проверки AppSource](/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице со сведениями о доступности и ведущих приложениях для надстроек Office](../overview/office-add-in-availability.md). 
 
-## <a name="referencing-the-javascript-api-for-office-library-in-your-add-in"></a>Ссылки на библиотеку API JavaScript для Office в надстройке
+## <a name="see-also"></a>См. также
 
-Библиотека [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office) состоит из файла Office.js и связанных JS-файлов ведущего приложения, например Excel-15.js и Outlook-15.js. Простейший способ сослаться на API — использовать нашу сеть доставки содержимого (CDN), добавив следующий код `<script>` в тег `<head>` страницы:  
-
-```html
-<script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
-```
-
-Это приведет к скачиванию и кэшированию файлов JavaScript API для Office при первой загрузке надстройки, чтобы убедиться, что она использует актуальную реализацию Office.js и сопутствующих файлов для указанной версии.
-
-Подробные сведения о CDN Office.js, включая способы управления версиями и обратной совместимостью, см. в статье [Указание ссылок на библиотеку API JavaScript для Office из сети доставки содержимого (CDN)](referencing-the-javascript-api-for-office-library-from-its-cdn.md).
-
-## <a name="initializing-your-add-in"></a>Инициализация надстройки
-
-**Область применения:** все типы надстроек
-
-Надстройки Office часто поддерживают логику запуска для выполнения следующих действий:
-
-- Проверьте, что пользовательская версия Office будет поддерживать все API Office, которые вызывает ваш код.
-
-- Убедитесь в наличии определенных артефактов, таких как лист с заданным именем.
-
-- Попросите пользователя выделить некоторые ячейки в Excel, а затем вставить диаграмму с инициализацией этих выделенных значений.
-
-- Установите привязки.
-
-- Используйте API для диалогового окна Office, чтобы запрашивать у пользователя значения по умолчанию для параметров надстроек.
-
-Но ваш код запуска не должен вызывать любой API Office.js, пока библиотека не будет загружена. Существует два способа, с помощью которых ваш код может проверять, загружена ли библиотека. Они описаны в следующих разделах: 
-
-- [Инициализация с использованием Office.onReady()](#initialize-with-officeonready)
-- [Инициализация с использованием Office.initialize](#initialize-with-officeinitialize)
-
-> [!TIP]
-> Рекомендуется использовать `Office.onReady()` вместо `Office.initialize`. Хотя `Office.initialize` по-прежнему поддерживается, использование `Office.onReady()` обеспечивает дополнительную гибкость. Вы можете назначить только один обработчик для `Office.initialize`, который будет вызываться только один раз инфраструктурой Office, но вы можете вызывать `Office.onReady()` в разных местах вашего кода и использовать разные обратные вызовы.
-> 
-> Сведения о различиях описанных ниже приемов см. в статье [Основные различия между Office.initialize и Office.onReady()](#major-differences-between-officeinitialize-and-officeonready).
-
-Дополнительные сведения о последовательности событий при инициализации надстройки см. в статье [Загрузка модели DOM и среды выполнения](loading-the-dom-and-runtime-environment.md).
-
-### <a name="initialize-with-officeonready"></a>Инициализация с использованием Office.onReady()
-
-`Office.onReady()` — это асинхронный метод, который возвращает объект Promise во время проверки загрузки библиотеки Office.js. Когда библиотека будет загружена, объект Promise сопоставляется в качестве объекта, определяющего ведущее приложение Office, с числовым значением `Office.HostType` (`Excel`, `Word` и т. д.), а платформа — с числовым значением `Office.PlatformType` (`PC`, `Mac`, `OfficeOnline` и т. д.). Объект Promise сопоставляется незамедлительно, если библиотека уже загружена, когда вызывается `Office.onReady()`.
-
-Один из способов вызова `Office.onReady()` состоит в передаче ему метода обратного вызова. Пример:
-
-```js
-Office.onReady(function(info) {
-    if (info.host === Office.HostType.Excel) {
-        // Do Excel-specific initialization (for example, make add-in task pane's
-        // appearance compatible with Excel "green").
-    }
-    if (info.platform === Office.PlatformType.PC) {
-        // Make minor layout changes in the task pane.
-    }
-    console.log(`Office.js is now ready in ${info.host} on ${info.platform}`);
-});
-```
-
-Кроме того, вы можете привязать метод `then()` к вызову `Office.onReady()`, вместо того чтобы использовать обратный вызов. Например приведенный ниже код проверяет, поддерживает ли версия Excel пользователя использование API, которые может вызывать надстройка.
-
-```js
-Office.onReady()
-    .then(function() {
-        if (!Office.context.requirements.isSetSupported('ExcelApi', '1.7')) {
-            console.log("Sorry, this add-in only works with newer versions of Excel.");
-        }
-    });
-```
-
-Вот аналогичный же пример, использующий ключевые слова `async` и `await` в TypeScript:
-
-```typescript
-(async () => {
-    await Office.onReady();
-    if (!Office.context.requirements.isSetSupported('ExcelApi', '1.7')) {
-        console.log("Sorry, this add-in only works with newer versions of Excel.");
-    }
-})();
-```
-
-При использовании дополнительных платформ JavaScript, включающих собственный обработчик событий инициализации или тесты, они, *как правило*, должны размещаться внутри ответа для `Office.onReady()`. Например, ссылка на [JQuery](https://jquery.com) функция `$(document).ready()` должна выглядеть следующим образом:
-
-```js
-Office.onReady(function() {
-    // Office is ready
-    $(document).ready(function () {
-        // The document is ready
-    });
-});
-```
-
-Однако существуют исключения для таких случаев. Предположим, например, что вы хотите открыть в браузере вашу надстройку (вместо того чтобы загружать ее в хост Office) для отладки вашего пользовательского интерфейса с помощью инструментов браузера. Так как Office.js не загружается в браузер, `onReady` не будет работать, а `$(document).ready` не будет работать при вызове внутри Office `onReady`. Другое исключение: вам потребуется индикатор выполнения, который должен отображаться в области задач при загрузке надстройки. В данном сценарии ваш код должен вызывать jQuery `ready` и использовать ее обратный вызов для отображения индикатора выполнения. Затем обратный вызов `onReady` Office может заменять индикатор выполнения на окончательный пользовательский интерфейс  
-
-### <a name="initialize-with-officeinitialize"></a>Инициализация с использованием Office.initialize
-
-Событие инициализации запускается, когда библиотека Office.js будет загружена и готова к взаимодействию с пользователем. Вы можете назначить обработчик `Office.initialize` для реализации вашей логики инициализации. Например, приведенный ниже код проверяет, поддерживает ли версия Excel пользователя использование API, которые может вызывать надстройка.
-
-```js
-Office.initialize = function () {
-    if (!Office.context.requirements.isSetSupported('ExcelApi', '1.7')) {
-        console.log("Sorry, this add-in only works with newer versions of Excel.");
-    }
-};
-```
-
-При использовании дополнительных платформ JavaScript, включающих собственные обработчики событий инициализации или тесты, они, *как правило*, должны размещаться внутри события `Office.initialize`. (Исключения, описанные в разделе**Инициализация с помощью Office.onReady()** ранее действуют и в этом случае). Например, на [ JQuery](https://jquery.com) функцию `$(document).ready()` нужно сослаться следующим образом:
-
-```js
-Office.initialize = function () {
-    // Office is ready
-    $(document).ready(function () {
-        // The document is ready
-    });
-  };
-```
-
-Для надстроек области задач и контентных надстроек `Office.initialize` предоставляет дополнительный параметр _reason_. Этот параметр определяет порядок добавления надстройки в текущий документ. Это поможет обеспечить разную логику в тех случаях, когда надстройка вставляется впервые или когда она уже существует в документе.
-
-```js
-Office.initialize = function (reason) {
-    $(document).ready(function () {
-        switch (reason) {
-            case 'inserted': console.log('The add-in was just inserted.');
-            case 'documentOpened': console.log('The add-in is already part of the document.');
-        }
-    });
- };
-```
-
-Дополнительные сведения см. в статьях [Событие Office.initialize](/javascript/api/office) и [Перечисление InitializationReason](/javascript/api/office/office.initializationreason).
-
-### <a name="major-differences-between-officeinitialize-and-officeonready"></a>Основные различия между Office.initialize и Office.onReady
-
-- Вы можете назначить только один обработчик для `Office.initialize`, который будет вызываться только один раз инфраструктурой Office, но вы можете вызывать `Office.onReady()` в разных местах вашего кода и использовать разные обратные вызовы. Например, ваш код может вызвать `Office.onReady()` сразу после загрузки настраиваемого скрипта с обратным вызовом, запускающим логику инициализации. В коде также может применяться кнопка в области задач, чей скрипт вызывает `Office.onReady()` с другим обратным вызовом. В этом случае второй обратный вызов запускается при нажатии кнопки.
-
-- Событие `Office.initialize` запускается в конце выполнения внутренних процессов, когда Office.js инициализирует собственное выполнение. И оно срабатывает *сразу же* после окончания внутренних процессов. Если код, в котором вы назначаете обработчик события, выполняется слишком долго после запуска события, тогда обработчик не запускается. Например если вы используете диспетчер задач WebPack, он может настроить домашнюю страницу надстройки для загрузки файлов полизаполнения сразу после загрузки Office.js, но перед загрузкой вашего настраиваемого скрипта JavaScript. К тому моменту, когда ваш скрипт загружается и назначает обработчика, инициализации события уже выполнена. Но никогда не «поздно» выполнить вызов `Office.onReady()`. Если инициализация события уже произошла, обратный вызов выполняется немедленно.
-
-> [!NOTE]
-> Даже если отсутствует логика запуска, следует вызвать `Office.onReady()` или назначить пустую функцию для `Office.initialize`, когда ваша надстройка загружает JavaScript. Некоторые ведущие приложения Office и сочетания платформ не загружают область задач, пока не произойдет одно из этих событий. Эти два способа показаны в приведенных ниже примерах.
->
->```js  
->Office.onReady();
->```
->
->
->```js
->Office.initialize = function () {};
->```
-
-## <a name="office-javascript-api-object-model"></a>Объектная модель API JavaScript для Office
-
-После инициализации надстройка может взаимодействовать с хостом (например, Excel, Outlook). Страница [общей объектной модели API JavaScript](office-javascript-api-object-model.md) содержит дополнительную информацию об определенных способах использования. Также существует подробная справочная документация для [общих API](/office/dev/add-ins/reference/javascript-api-for-office) и API для определенных ведущих приложений.
+- [Справочник по API JavaScript для Office](../reference/javascript-api-for-office.md)
+- [Загрузка модели DOM и среды выполнения](loading-the-dom-and-runtime-environment.md)
+- [Ссылки на библиотеку API JavaScript для Office ](referencing-the-javascript-api-for-office-library-from-its-cdn.md)
+- [Инициализация надстройки Office](initialize-add-in.md)

@@ -4,12 +4,12 @@ ms.prod: non-product-specific
 description: Руководство по обмену кодом между надстройкой VSTO и надстройкой Office.
 title: Руководство. Обмен кодом между надстройкой VSTO и надстройкой Office с использованием общей библиотеки кода
 localization_priority: Priority
-ms.openlocfilehash: c0d90f0f808bb5a7f96f546f0f82a90815676df7
-ms.sourcegitcommit: 4c9e02dac6f8030efc7415e699370753ec9415c8
+ms.openlocfilehash: 87f34c04ce3ac475c82fbb2673d0a4b3e95f04a2
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41650124"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42324745"
 ---
 # <a name="tutorial-share-code-between-both-a-vsto-add-in-and-an-office-add-in-with-a-shared-code-library"></a>Руководство. Обмен кодом между надстройкой VSTO и надстройкой Office с помощью общей библиотеки кода
 
@@ -333,7 +333,7 @@ public class CellOperations
     ```
     
     > [!NOTE]
-    > Оставьте `/` в конце URL-адреса, если вы используете его в методе **builder.WithOrigins**. Он должен выглядеть примерно так: `https://localhost:44000`. В противном случае возникнет ошибка CORS во время выполнения.
+    > Оставьте `/` в конце URL-адреса, если вы используете его в методе `builder.WithOrigins`. Он должен выглядеть примерно так: `https://localhost:44000`. В противном случае возникнет ошибка CORS во время выполнения.
     
 6. Добавьте в класс `Startup` следующее поле:
     

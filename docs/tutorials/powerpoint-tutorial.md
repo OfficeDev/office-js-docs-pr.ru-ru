@@ -4,12 +4,12 @@ description: Из этого руководства вы узнаете, как 
 ms.date: 12/24/2019
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: aace13a3dba55abcac258b48ceb852fed746adcc
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: e45fe0a4d7561329b22f4d29ec295dabb2e2ee0f
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950889"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42324738"
 ---
 # <a name="tutorial-create-a-powerpoint-task-pane-add-in"></a>Учебник: Создание надстройки области задач PowerPoint
 
@@ -183,7 +183,7 @@ ms.locfileid: "41950889"
     $('#insert-image').click(insertImage);
     ```
 
-8. В файле **Home.js** замените `TODO2` приведенным ниже кодом, чтобы определить функцию **insertImage**. Эта функция извлекает изображение из веб-службы Bing, а затем вызывает функцию `insertImageFromBase64String`, чтобы вставить его в документ.
+8. В файле **Home.js** замените `TODO2` приведенным ниже кодом, чтобы определить функцию `insertImage`. Эта функция извлекает изображение из веб-службы Bing, а затем вызывает функцию `insertImageFromBase64String`, чтобы вставить его в документ.
 
     ```js
     function insertImage() {
@@ -295,7 +295,7 @@ ms.locfileid: "41950889"
     $('#insert-text').click(insertText);
     ```
 
-3. В файле **Home.js** замените `TODO5` приведенным ниже кодом, чтобы определить функцию **insertText**. Эта функция вставляет текст в текущий слайд.
+3. В файле **Home.js** замените `TODO5` на следующий код, чтобы определить функцию `insertText`. Эта функция вставляет текст в текущий слайд.
 
     ```js
     function insertText() {
@@ -352,7 +352,7 @@ ms.locfileid: "41950889"
     $('#get-slide-metadata').click(getSlideMetadata);
     ```
 
-3. В файле **Home.js** замените `TODO7` приведенным ниже кодом, чтобы определить функцию **getSlideMetadata**. Эта функция извлекает метаданные выбранных слайдов и записывает их во всплывающее диалоговое окно в области задач надстройки.
+3. В файле **Home.js** замените `TODO7` приведенным ниже кодом, чтобы определить функцию `getSlideMetadata`. Эта функция извлекает метаданные выбранных слайдов и записывает их во всплывающее диалоговое окно в области задач надстройки.
 
     ```js
     function getSlideMetadata() {

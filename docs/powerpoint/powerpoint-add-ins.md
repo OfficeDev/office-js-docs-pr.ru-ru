@@ -5,12 +5,12 @@ ms.date: 11/07/2019
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 798e7c8357f2f2f021a76c0b88b0617764428c8c
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
+ms.openlocfilehash: a6535808a3e59723556efa3133c44767a52a250e
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851343"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42324928"
 ---
 # <a name="powerpoint-add-ins"></a>Надстройки PowerPoint
 
@@ -90,7 +90,7 @@ function registerActiveViewChanged() {
 
 ## <a name="navigate-to-a-particular-slide-in-the-presentation"></a>Переход к определенному слайду презентации
 
-В приведенном ниже примере кода функция `getSelectedRange` вызывает метод [Document.getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-), чтобы получить возвращаемый свойством `asyncResult.value` объект JSON, содержащий массив с именем **slides**. Массив **slides** содержит идентификаторы, заголовки и индексы выбранного диапазона слайдов (или текущего слайда, если не выбрано несколько слайдов). Кроме того, он сохраняет идентификатор первого слайда в выбранном диапазоне в глобальной переменной.
+В следующем примере кода функция `getSelectedRange` вызывает метод [Document.getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) для получения объекта JSON, возвращаемого свойством `asyncResult.value`. Этот объект содержит массив с именем `slides`. Массив `slides` содержит идентификаторы, заголовки и индексы выбранного диапазона слайдов (или текущего слайда, если не выбрано несколько слайдов). Кроме того, он сохраняет идентификатор первого слайда в выбранном диапазоне в глобальной переменной.
 
 ```js
 function getSelectedRange() {
@@ -126,7 +126,7 @@ function goToFirstSlide() {
 
 ## <a name="navigate-between-slides-in-the-presentation"></a>Переход между слайдами презентации
 
-В приведенном ниже примере кода функция `goToSlideByIndex` вызывает метод **Document.goToByIdAsync** для перехода к следующему слайду в презентации.
+В следующем примере кода функция `goToSlideByIndex` вызывает метод `Document.goToByIdAsync` для перехода к следующему слайду презентации.
 
 ```js
 function goToSlideByIndex() {
