@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 12/28/2019
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: 9a9835caf4ca729999a0f85a7947b82115841372
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 6c50ed57cd9fa809081060662c13af662b475ed2
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42166627"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325293"
 ---
 # <a name="build-your-first-outlook-add-in"></a>Создание первой надстройки Outlook
 
@@ -81,7 +81,7 @@ ms.locfileid: "42166627"
     </main>
     ```
 
-1. Откройте файл **./src/taskpane/taskpane.js** в редакторе кода и добавьте приведенный ниже код в пределах функции **run**. В этом коде используется API JavaScript для Office для получения ссылки на текущее сообщение и записи его свойства `subject` в область задач.
+1. Откройте файл **./src/taskpane/taskpane.js** в редакторе кода и добавьте следующий код в функцию `run`. В этом коде используется API JavaScript для Office для получения ссылки на текущее сообщение и записи его свойства `subject` в область задач.
 
     ```js
     // Get a reference to the current message

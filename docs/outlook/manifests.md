@@ -3,12 +3,12 @@ title: Манифесты надстройки Outlook
 description: В манифесте описывается, как выполняется интеграция надстройки Outlook с клиентами Outlook, включая пример.
 ms.date: 10/31/2019
 localization_priority: Priority
-ms.openlocfilehash: 79751ea0f3b7baab28ada8ac44d71e5f4124b74a
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: f4d60919db15c4f470ecccac634abee94973bb6c
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42166673"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42324942"
 ---
 # <a name="outlook-add-in-manifests"></a>Манифесты надстройки Outlook
 
@@ -238,7 +238,7 @@ ms.locfileid: "42166673"
 
 |Версия|Описание|
 |:-----|:-----|
-|v1.0|Поддерживает версию 1.0 API JavaScript для Office. Для надстроек Outlook поддерживается форма чтения. |
+|1.0|Поддерживает версию 1.0 API JavaScript для Office. Для надстроек Outlook поддерживается форма чтения. |
 |1.1|Поддерживает версии 1.1 API JavaScript для Office и **VersionOverrides**. Для надстроек Outlook поддерживается форма создания.|
 |**VersionOverrides** 1.0|Поддерживает более поздние версии API JavaScript для Office. Поддерживаются команды надстроек.|
 |**VersionOverrides** 1.1|Поддерживает более поздние версии API JavaScript для Office. Поддерживает команды надстроек и добавляет поддержку новых функций, таких как [закрепляемые области задач](pinnable-taskpane.md) и мобильные надстройки.|

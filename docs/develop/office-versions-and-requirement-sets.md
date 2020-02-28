@@ -3,12 +3,12 @@ title: Версии Office и наборы обязательных элемен
 description: ''
 ms.date: 01/14/2020
 localization_priority: Priority
-ms.openlocfilehash: 3b9bcbef47cdc27ad77b6bdce2b5c69f25fa6d62
-ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
+ms.openlocfilehash: 946068681070e8f482a8501639f40de4e13a7513
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "41217316"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325138"
 ---
 # <a name="office-versions-and-requirement-sets"></a>Версии Office и наборы обязательных элементов
 
@@ -50,7 +50,7 @@ ms.locfileid: "41217316"
 
 Номер версии набора обязательных элементов, например "1.1" в `ExcelApi 1.1`, указывается относительно ведущего приложения Office. Номер версии набора обязательных элементов (например, `ExcelApi 1.1`) не соответствует номеру версии Office.js или наборам обязательных элементов для других ведущих приложений Office (например, Word, Outlook и т. д.).  Наборы обязательных элементов для разных ведущих приложений Office выпускаются с разной скоростью и интервалом. Например, набор обязательных элементов `ExcelApi 1.5` был выпущен до набора обязательных элементов `WordApi 1.3`.
 
-Библиотека API JavaScript для Office (Office.js) включает все доступные наборы обязательных элементов. Наборы обязательных элементов `ExcelApi 1.3` и `WordApi 1.3` существуют, но набора обязательных элементов `Office.js 1.3` нет. Доступ к последней версии Office.js осуществляется через единую конечную точку Office, интегрированную в сеть доставки содержимого (CDN). Дополнительные сведения о CDN Office.js, в том числе об управлении версиями и обратной совместимостью, см. в статье [Общие сведения об интерфейсе API JavaScript для Office](/office/dev/add-ins/develop/understanding-the-javascript-api-for-office).
+Библиотека API JavaScript для Office (Office.js) включает все доступные наборы обязательных элементов. Наборы обязательных элементов `ExcelApi 1.3` и `WordApi 1.3` существуют, но набора обязательных элементов `Office.js 1.3` нет. Доступ к последней версии Office.js осуществляется через единую конечную точку Office, интегрированную в сеть доставки содержимого (CDN). Дополнительные сведения о CDN Office.js, в том числе об управлении версиями и обратной совместимости, см. в статье [Общие сведения об интерфейсе API JavaScript для Office](/office/dev/add-ins/develop/understanding-the-javascript-api-for-office).
 
 ## <a name="specify-office-hosts-and-requirement-sets"></a>Указание ведущих приложений Office и наборов обязательных элементов
 

@@ -4,16 +4,16 @@ description: ''
 ms.date: 02/19/2020
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 90dd7c787086a67dd8607479bbc46c957192d5c3
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 6f560b759d08fa2da239fd7bebe92bb8f58345a7
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42163971"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325180"
 ---
 # <a name="word-javascript-api-overview"></a>Обзор API JavaScript для Word
 
-Надстройка Word взаимодействует с объектами в Word с помощью API JavaScript для Office, включающего две объектных модели JavaScript.
+Надстройка Word взаимодействует с объектами в Word с помощью API JavaScript для Office, включающего две указанных ниже объектных модели JavaScript.
 
 * **API JavaScript для Word**. Появившийся в Office 2016 [API JavaScript для Word](/javascript/api/word) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к объектам и метаданным в документе Word. 
 

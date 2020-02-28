@@ -5,12 +5,12 @@ ms.date: 07/05/2019
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: c529dc88f310466c5aaae8c6a0ea4e7d0ea6e287
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
+ms.openlocfilehash: 6f2e319c5de310df5bd30a1161332d03344f0021
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851392"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325103"
 ---
 # <a name="excel-add-ins-overview"></a>Общие сведения о надстройках Excel
 
@@ -109,7 +109,7 @@ ms.locfileid: "40851392"
 
 ## <a name="javascript-apis-to-interact-with-workbook-content"></a>API JavaScript для взаимодействия с содержимым книги
 
-Надстройка Excel взаимодействует с объектами в Excel с помощью [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office), включающего две объектных модели JavaScript.
+Надстройка Excel взаимодействует с объектами в Excel с помощью [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office), включающего две объектных модели JavaScript:
 
 * **API JavaScript для Excel**. Появившийся в Office 2016 [API JavaScript для Excel](/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к листам, диапазонам, таблицам, диаграммам и другим объектам. 
 

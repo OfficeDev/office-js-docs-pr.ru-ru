@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 01/16/2020
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: 6098e3859103b5869072edfa133fb6ad39d4da8b
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: cdf1dbd3f234b77bd406a66927b8fad3d5ef4859
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950640"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325300"
 ---
 # <a name="build-your-first-onenote-task-pane-add-in"></a>Создание первой надстройки области задач OneNote
 
@@ -45,7 +45,7 @@ ms.locfileid: "41950640"
 
 ## <a name="update-the-code"></a>Обновление кода
 
-Откройте файл **./src/taskpane/taskpane.js** в редакторе кода и добавьте приведенный ниже код в пределах функции **run**. В этом коде используется API JavaScript для OneNote, чтобы настроить заголовок страницы и добавить контур к тексту страницы.
+Откройте файл **./src/taskpane/taskpane.js** в редакторе кода и добавьте следующий код в функцию `run`. В этом коде используется API JavaScript для OneNote, чтобы настроить заголовок страницы и добавить контур к тексту страницы.
 
 ```js
 try {
