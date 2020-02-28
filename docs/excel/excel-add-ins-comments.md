@@ -1,14 +1,14 @@
 ---
 title: Работайте с комментариями с помощью API JavaScript для Excel
-description: ''
-ms.date: 10/22/2019
+description: Сведения об использовании API для добавления, удаления и редактирования комментариев и потоков комментариев.
+ms.date: 02/11/2020
 localization_priority: Normal
-ms.openlocfilehash: d79f99d1922def58fe2c8887d01ec5a2b173220a
-ms.sourcegitcommit: 5ba325cc88183a3f230cd89d615fd49c695addcf
+ms.openlocfilehash: d6be0f07e0d3bb134385f0a08c20ce00da4de892
+ms.sourcegitcommit: d85efbf41a3382ca7d3ab08f2c3f0664d4b26c53
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "37681916"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "42327784"
 ---
 # <a name="work-with-comments-using-the-excel-javascript-api"></a>Работайте с комментариями с помощью API JavaScript для Excel
 
@@ -20,12 +20,12 @@ ms.locfileid: "37681916"
 
 Комментарии в книге отслеживаются `Workbook.comments` свойством. Это касается примечаний, созданных пользователями, а также примечаний, созданных вашей надстройкой. Свойство `Workbook.comments` является объектом [CommentCollection](/javascript/api/excel/excel.commentcollection), содержащим коллекцию объектов [Comment](/javascript/api/excel/excel.comment). Комментарии также доступны на уровне [листа](/javascript/api/excel/excel.worksheet) . Примеры, приведенные в этой статье, работают с комментариями на уровне книги, но их можно легко изменить, `Worksheet.comments` чтобы использовать свойство.
 
-## <a name="add-comments"></a>Добавление комментариев
+## <a name="add-comments"></a>Добавление примечаний
 
 Используйте `CommentCollection.add` метод, чтобы добавить комментарии в книгу. Этот метод занимает до трех параметров:
 
 - `cellAddress`: Ячейка, в которую добавляется комментарий. Это может быть объект String или [Range](/javascript/api/excel/excel.range) . Диапазон должен быть одной ячейкой.
-- `content`: Контент комментария. Используйте строку для примечаний в виде обычного текста. Используйте объект [комментричконтент](/javascript/api/excel/excel.commentrichcontent) для комментариев с [упоминаниями](#mentions-preview).
+- `content`: Контент комментария. Используйте строку для примечаний в виде обычного текста. Используйте объект [комментричконтент](/javascript/api/excel/excel.commentrichcontent) для комментариев с [упоминаниями](#mentions-online-only). 
 - `contentType`: Перечисление [ContentType](/javascript/api/excel/excel.contenttype) , определяющее тип контента. Значение по умолчанию — `ContentType.plain`.
 
 В следующем примере кода добавляется примечание в ячейку **A2**.
@@ -111,7 +111,7 @@ Excel.run(function (context) {
 });
 ```
 
-## <a name="resolve-comment-threads"></a>Разрешение потоков комментариев
+## <a name="resolve-comment-threads-preview"></a>Разрешение потоков комментариев ([Предварительная версия](../reference/requirement-sets/excel-preview-apis.md)) 
 
 Поток комментариев имеет настраиваемое логическое значение `resolved`, которое указывает, разрешено ли оно. Значение `true` означает, что поток комментариев разрешается. Значение `false` означает, что поток комментариев является либо новым, либо повторно открытым.
 
@@ -169,7 +169,7 @@ Excel.run(function (context) {
 });
 ```
 
-## <a name="mentions-preview"></a>Упоминание (Предварительная версия)
+## <a name="mentions-online-only"></a>Упоминания ([только в Интернете](../reference/requirement-sets/excel-api-online-requirement-set.md)) 
 
 > [!NOTE]
 > API упомянутых комментариев в настоящее время доступны только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]

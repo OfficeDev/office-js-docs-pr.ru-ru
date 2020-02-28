@@ -3,16 +3,16 @@ title: Извлечение строк сущности из элемента Ou
 description: Узнайте, как извлечь строки сущностей из элемента Outlook в надстройке Outlook.
 ms.date: 10/31/2019
 localization_priority: Normal
-ms.openlocfilehash: 95f88b6bcd47cbfd85de89a3de89d9a9e2fe571f
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 0a9a41d0b479420c0754c0e0d283982082a1452f
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42166694"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325456"
 ---
 # <a name="extract-entity-strings-from-an-outlook-item"></a>Извлечение строк сущностей из элемента Outlook
 
-В этой статье рассказано, как создать надстройку Outlook **для отображения сущностей**, которая извлекает экземпляры строк поддерживаемых известных сущностей в теме и основном тексте выбранного элемента Outlook. Этим элементом может быть встреча, электронное сообщение, приглашение на собрание, ответ на такое приглашение или отказ от него. 
+В этой статье рассказано, как создать надстройку Outlook **для отображения сущностей**, которая извлекает экземпляры строк поддерживаемых известных сущностей в теме и основном тексте выбранного элемента Outlook. Этим элементом может быть встреча, электронное сообщение, приглашение на собрание, ответ на такое приглашение или отказ от него.
 
 Поддерживаемые сущности:
 
@@ -205,7 +205,7 @@ div#meeting_suggestions
 
 ## <a name="extracting-entities-upon-initialization"></a>Извлечение сущностей при инициализации
 
-Когда происходит событие [Office.initialize](/javascript/api/office#office-initialize-reason-), надстройка для работы с сущностями вызывает метод [getEntities](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods) текущего элемента. Метод **getEntities** возвращает глобальную переменную `_MyEntities`, представляющую собой массив экземпляров поддерживаемых сущностей. Ниже представлен соответствующий код JavaScript.
+Когда происходит событие [Office.initialize](/javascript/api/office#office-initialize-reason-), надстройка для работы с сущностями вызывает метод [getEntities](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods) текущего элемента. `getEntities` Метод возвращает глобальную переменную `_MyEntities` в виде массива экземпляров поддерживаемых сущностей. Ниже представлен соответствующий код JavaScript.
 
 
 ```js
@@ -373,9 +373,9 @@ function myGetEmailAddresses() {
 
 
  > [!NOTE]
- > Тип сущности **MeetingSuggestion** поддерживается только сообщениями, а встречи его не поддерживают.
+ > Тип объекта поддерживается только сообщениями, `MeetingSuggestion` но не встречами.
 
-Каждое извлеченное приглашение на собрание сохраняется в массиве в качестве объекта [MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion). Обработчик событий `myGetMeetingSuggestions` получает дополнительные данные о каждом приглашении на собрание.
+Каждое извлеченное приглашение на собрание хранится в виде объекта [MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion) в массиве. Обработчик событий `myGetMeetingSuggestions` получает дополнительные данные о каждом приглашении на собрание:
 
 
 - Приглашение на собрание из свойства [MeetingSuggestion.meetingString](/javascript/api/outlook/office.meetingsuggestion#meetingstring).

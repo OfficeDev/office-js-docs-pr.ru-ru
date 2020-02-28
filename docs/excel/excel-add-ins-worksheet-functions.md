@@ -3,12 +3,12 @@ title: Вызов встроенных функций листов Excel с по
 description: ''
 ms.date: 12/19/2019
 localization_priority: Normal
-ms.openlocfilehash: a2c98d21b36a88777e58d85c14169ffc2d67ae59
-ms.sourcegitcommit: d5ac9284d1e96dc91a9168d7641e44d88535e1a7
+ms.openlocfilehash: c5b725f09c4bd6be8d6061f08fe7fbf84ff30762
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "40915002"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325152"
 ---
 # <a name="call-built-in-excel-worksheet-functions"></a>Вызов встроенных функций листов Excel
 
@@ -19,7 +19,7 @@ ms.locfileid: "40915002"
 
 ## <a name="calling-a-worksheet-function"></a>Вызов функции листа
 
-В приведенном ниже фрагменте кода показано, как вызвать функцию листа, где `sampleFunction()`— это заполнитель, который следует заменить на имя вызываемой функции и необходимые ей входные параметры. Свойство **value** объекта **FunctionResult**, возвращаемого функцией листа, содержит результат выполнения указанной функции. Как показано в этом примере, необходимо выполнить операцию `load` со свойством **value** объекта **FunctionResult**, прежде чем считывать его. В этом примере результат выполнения функции просто записывается в консоль.
+В приведенном ниже фрагменте кода показано, как вызвать функцию листа, где `sampleFunction()`— это заполнитель, который следует заменить на имя вызываемой функции и необходимые ей входные параметры. `value` Свойство `FunctionResult` объекта, возвращаемого функцией листа, содержит результат указанной функции. Как показано в этом примере, необходимо `load` , `value` чтобы свойство `FunctionResult` объекта было доступно для чтения. В этом примере результат выполнения функции просто записывается в консоль.
 
 ```js
 var functionResult = context.workbook.functions.sampleFunction();

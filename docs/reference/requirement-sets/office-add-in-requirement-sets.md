@@ -4,12 +4,12 @@ description: ''
 ms.date: 07/17/2019
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: b37adca116c60b465e11858cb813e9a7f9247ed3
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 77ebd486f35a75f693941749a958cd122916fcfd
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950553"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325173"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
@@ -182,11 +182,19 @@ ms.locfileid: "41950553"
 
 ---
 
+### <a name="sharedruntime"></a>шаредрунтиме
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| Ознакомьтесь с [общими наборами требований среды выполнения](shared-runtime-requirement-sets.md). | Office. AddIn. Жетстартупбехавиор<br>Office. AddIn. Hide<br>Office. AddIn. Онвисибилитимодечанжед<br>Office. AddIn. Сетстартупбехавиор<br>Office. AddIn. Шовастаскпане<br> |
+
+---
+
 ### <a name="tablebindings"></a>TableBindings
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Веб-приложения Access<br>Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>Excel для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsync<br>Binding.addColumnsAsync<br>Binding.addRowsAsync<br>Binding.deleteAllDataValuesAsync<br>Binding.getDataAsync<br>Binding.setDataAsync|
+| Веб-приложения Access<br>Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>Excel для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word для iPad|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsync<br>Binding.addColumnsAsync<br>Binding.addRowsAsync<br>Binding.deleteAllDataValuesAsync<br>Binding.getDataAsync<br>Binding.setDataAsync|
 
 ---
 
@@ -194,7 +202,7 @@ ms.locfileid: "41950553"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Веб-приложения Access<br>Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>Excel для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает приведение в структуру данных "таблица" (Office.CoercionType.Table) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
+| Веб-приложения Access<br>Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>Excel для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word для iPad|Поддерживает приведение в структуру данных "таблица" (Office.CoercionType.Table) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
 
 ---
 
@@ -202,7 +210,7 @@ ms.locfileid: "41950553"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>Excel для Mac<br>Word 2013 и более поздней версии и Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsync<br>Binding.getDataAsync<br>Binding.setDataAsync|
+| Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>Excel для Mac<br>Word 2013 и более поздней версии и Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word для iPad|Bindings.addFromNamedItemAsync<br>Bindings.addFromSelectionAsync<br>Bindings.getAllAsync<br>Bindings.getByIdAsync<br>Bindings.releaseByIdAsync<br>Binding.getDataAsync<br>Binding.setDataAsync|
 
 ---
 
@@ -210,7 +218,7 @@ ms.locfileid: "41950553"
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>OneNote в Интернете<br>PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac<br>Project для Windows<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает приведение в текстовый формат (Office.CoercionType.Text) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
+| Excel для Windows<br>Excel в Интернете<br>Excel на iPad<br>OneNote в Интернете<br>PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac<br>Project для Windows<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word для iPad|Поддерживает приведение в текстовый формат (Office.CoercionType.Text) при чтении и записи данных с использованием методов Document.getSelectedDataAsync, Document.setSelectedDataAsync, Binding.getDataAsync и Binding.setDataAsync.|
 
 ---
 
@@ -224,7 +232,7 @@ ms.locfileid: "41950553"
 
 ## <a name="methods-that-arent-part-of-a-requirement-set"></a>Методы, отсутствующие в наборе требований
 
-Указанные ниже методы API JavaScript для Office не входят в состав набора обязательных элементов. Если вашей надстройке необходимы какие-либо из этих методов, используйте элементы **Methods** и **Method** в манифесте надстройки, чтобы объявить их обязательными, или выполняйте проверку в среде выполнения с использованием оператора `if`. Дополнительные сведения см. в статье [Указание ведущих приложений Office и обязательных элементов API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements).
+Следующие методы в API JavaScript для Office не входят в набор требований. Если вашей надстройке необходимы какие-либо из этих методов, используйте элементы **Methods** и **Method** в манифесте надстройки, чтобы объявить их обязательными, или выполняйте проверку в среде выполнения с использованием оператора `if`. Дополнительные сведения см. в статье [Указание ведущих приложений Office и обязательных элементов API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements).
 
 |**Имя метода**|**Поддержка ведущих приложений Office**|
 |:-----|:-----|

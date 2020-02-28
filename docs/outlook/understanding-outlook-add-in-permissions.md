@@ -3,12 +3,12 @@ title: Общие сведения о разрешениях для надстр
 description: Надстройки Outlook указывают требуемый уровень разрешений в своем манифесте, который включает Restricted, ReadItem, ReadWriteItem, or ReadWriteMailbox.
 ms.date: 02/19/2020
 localization_priority: Normal
-ms.openlocfilehash: d3e5ac55619460e39c3853ea1a0a05c30d767bfd
-ms.sourcegitcommit: dd6d00202f6466c27418247dad7bd136555a6036
+ms.openlocfilehash: 60b65416585b5215ed565a3689c1e7f398e001a5
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42283907"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325328"
 ---
 # <a name="understanding-outlook-add-in-permissions"></a>Общие сведения о разрешениях для надстроек Outlook
 
@@ -136,7 +136,7 @@ ms.locfileid: "42283907"
 
 - [Добавлять или удалять вложения](add-and-remove-attachments-to-an-item-in-a-compose-form.md) для такого элемента.
 
-- Использовать все остальные элементы API JavaScript для Office, применимые к почтовым надстройкам, за исключением **Mailbox.makeEWSRequestAsync**.
+- Используйте все остальные элементы API JavaScript для Office, которые относятся к почтовым надстройкам, за исключением **Mailbox. makeEWSRequestAsync**.
 
 ### <a name="cant-do"></a>Не разрешено
 

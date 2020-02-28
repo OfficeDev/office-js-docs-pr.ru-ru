@@ -3,12 +3,12 @@ title: Элемент IconUrl в файле манифеста
 description: ''
 ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: 44992a3c5f9ceba55b09f4b14e36b5b2935ee669
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: 858f399ed36bfed60c3e091b26ac7400ff901179
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35771802"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325264"
 ---
 # <a name="iconurl-element"></a>Элемент IconUrl
 

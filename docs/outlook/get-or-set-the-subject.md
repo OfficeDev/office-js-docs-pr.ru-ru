@@ -3,16 +3,16 @@ title: Просмотр или изменение темы в надстройк
 description: Узнайте, как просмотреть и изменить тему сообщения или встречи в надстройке Outlook.
 ms.date: 04/15/2019
 localization_priority: Normal
-ms.openlocfilehash: b27f6011b1754fa68a1af87f57034e95fd0d54e0
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 93864aee005af61d9648c39402a843d9105bb021
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42166683"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325442"
 ---
 # <a name="get-or-set-the-subject-when-composing-an-appointment-or-message-in-outlook"></a>Просмотр или изменение темы при создании встречи или сообщения в Outlook
 
-API JavaScript для Office предоставляет асинхронные методы ([subject.getAsync](/javascript/api/outlook/office.Subject#getasync-options--callback-) и [subject.setAsync](/javascript/api/outlook/office.Subject#setasync-subject--options--callback-)), чтобы получать и задавать тему встречи или сообщения, создаваемого пользователем. Эти методы доступны только для надстроек создания. Чтобы использовать их, необходимо настроить манифест для активации надстройки в формах создания Outlook.
+API JavaScript для Office предоставляет асинхронные методы ([subject. Async](/javascript/api/outlook/office.Subject#getasync-options--callback-) и [subject. setAsync](/javascript/api/outlook/office.Subject#setasync-subject--options--callback-)) для получения и задания темы встречи или сообщения, создаваемого пользователем. Эти асинхронные методы доступны только для создания надстроек. Чтобы использовать эти методы, убедитесь, что вы правильно настроили манифест надстройки в Outlook для активации надстройки в формах создания.
 
 Свойство **subject** доступно для чтения в формах создания и формах чтения встреч и сообщений. В форме чтения доступ к свойству можно получить напрямую из родительского объекта, например:
 
@@ -28,7 +28,7 @@ item.subject.getAsync
 
 Свойство **subject** доступно для записи только в формах создания, но не в формах чтения.
 
-Как и большинство асинхронных методов в API JavaScript для Office, методы **getAsync** и **setAsync** принимают необязательные входные параметры. Дополнительные сведения об указании этих параметров см. в разделе "Передача дополнительных параметров в асинхронные методы" статьи [Асинхронное программирование в надстройках для Office](../develop/asynchronous-programming-in-office-add-ins.md).
+Как и в случае с большинством асинхронных методов в API JavaScript для Office, методы SetAsync и- **Async** и **** принимают необязательные входные параметры. Дополнительные сведения об указании этих дополнительных входных параметров можно найти в разделе "Передача необязательных параметров асинхронным методам" в надстройках [Office в асинхронном программировании](../develop/asynchronous-programming-in-office-add-ins.md).
 
 
 ## <a name="get-the-subject"></a>Получение темы

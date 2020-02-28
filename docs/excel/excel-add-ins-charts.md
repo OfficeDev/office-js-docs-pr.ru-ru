@@ -3,16 +3,16 @@ title: Работа с диаграммами с использованием AP
 description: ''
 ms.date: 07/17/2019
 localization_priority: Normal
-ms.openlocfilehash: b89e8dffc45eb2a740b5e26373d92cc8cf4bed3e
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 2b55fee9689af03e9dbfbdb7133d2482f7ca6852
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950882"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42323856"
 ---
 # <a name="work-with-charts-using-the-excel-javascript-api"></a>Работа с диаграммами с использованием API JavaScript для Excel
 
-В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диаграмм с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектами **Chart** и **ChartCollection**, см. в статьях [Объект Chart (API JavaScript для Excel)](/javascript/api/excel/excel.chart) и [Объект ChartCollection (API JavaScript для Excel)](/javascript/api/excel/excel.chartcollection).
+В этой статье приведены примеры кода, демонстрирующие выполнение типовых задач с диаграммами с помощью API JavaScript для Excel. Полный список свойств и методов, поддерживаемых `Chart` объектами и `ChartCollection` поддерживаемых объектами, представлен в статье [объект диаграммы (API JavaScript для Excel)](/javascript/api/excel/excel.chart) и [объект коллекции диаграмм (API JavaScript для Excel)](/javascript/api/excel/excel.chartcollection).
 
 ## <a name="create-a-chart"></a>Создание диаграммы
 
@@ -127,7 +127,7 @@ Excel.run(function (context) {
 
 ## <a name="set-visibility-of-gridlines-in-a-chart"></a>Настройка видимости линий сетки на диаграмме
 
-В примере ниже показано, как скрыть основные линии сетки для оси значений первой диаграммы на листе. Вы можете отобразить основные линии сетки для оси значений диаграммы, задав для свойства `chart.axes.valueAxis.majorGridlines.visible` значение **true**.
+В приведенном ниже примере кода скрываются основные линии сетки для оси значений первой диаграммы на листе. Вы можете показать основные линии сетки для оси значений диаграммы, задав `chart.axes.valueAxis.majorGridlines.visible` значение. `true`
 
 ```js
 Excel.run(function (context) {
@@ -168,7 +168,7 @@ Excel.run(function (context) {
 
 ### <a name="update-a-trendline"></a>Изменение линии тренда
 
-В примере кода ниже показано, как задать для линии тренда тип **Linear** (Линейная) для первого ряда первой диаграммы на листе **Sample** (Пример).
+В приведенном ниже примере кода линия тренда `Linear` задается для ввода первого ряда в первой диаграмме на листе с именем **Sample**.
 
 ```js
 Excel.run(function (context) {

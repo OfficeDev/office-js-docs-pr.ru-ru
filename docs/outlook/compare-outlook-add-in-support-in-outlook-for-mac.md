@@ -3,16 +3,16 @@ title: Сравнение поддержки надстроек Outlook в Outlo
 description: Узнайте, как сравнить надстройки в Outlook для Mac с другими ведущими приложениями Outlook.
 ms.date: 11/26/2019
 localization_priority: Normal
-ms.openlocfilehash: 337938b9bb2e8f0e9b9343841a8240e46741eed9
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: ec5e9934249ddc1a90240890d7f0201d23599446
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42166693"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325463"
 ---
 # <a name="compare-outlook-add-in-support-in-outlook-on-mac-with-other-outlook-hosts"></a>Сравнение поддержки надстроек Outlook в Outlook в Mac с другими ведущими приложениями Outlook
 
-Вы можете создавать и запускать надстройку Outlook так же, как и в других узлах, в том числе в Outlook в Интернете, Windows, iOS и Android, без настройки JavaScript для каждого узла. Одинаковые вызовы из надстройки к API JavaScript для Office обычно работают так же, за исключением областей, описанных в приведенной ниже таблице.
+Вы можете создавать и запускать надстройку Outlook так же, как и в других узлах, в том числе в Outlook в Интернете, Windows, iOS и Android, без настройки JavaScript для каждого узла. Те же вызовы из надстройки в API JavaScript для Office обычно работают так же, за исключением областей, описанных в следующей таблице.
 
 Дополнительные сведения см. в статье [Развертывание и установка надстроек Outlook для тестирования](testing-and-tips.md).
 

@@ -3,12 +3,12 @@ title: Разработка надстроек Office с помощью Angular
 description: ''
 ms.date: 01/27/2020
 localization_priority: Normal
-ms.openlocfilehash: 09092880efcf4d86f38b6559ce5e556a5e5416ce
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 0e78a2e000016e28f2012902e0e8db487b80d930
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950455"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42324640"
 ---
 # <a name="develop-office-add-ins-with-angular"></a>Разработка надстроек Office с помощью Angular
 
@@ -29,7 +29,7 @@ npm install --save-dev @types/office-js
 
 ## <a name="bootstrapping-must-be-inside-officeinitialize"></a>Начальная загрузка должна определяться в методе Office.initialize
 
-На любой странице, которая вызывает интерфейсы API JavaScript для Office, Word или Excel, в коде сначала нужно назначить метод для свойства `Office.initialize`. (Если у вас нет кода инициализации, тело метода может состоять из пустых символов "`{}`", но свойство `Office.initialize` должно быть определено. Дополнительные сведения см. в разделе [Инициализация надстройки](understanding-the-javascript-api-for-office.md#initializing-your-add-in).) Office вызывает этот метод сразу же после того, как инициализирует библиотеки JavaScript для Office.
+На любой странице, которая вызывает API JavaScript для Office, Word или Excel, код должен сначала назначить метод `Office.initialize` свойству. (Если код инициализации отсутствует, тело метода может быть просто пустым символом "`{}`", но не следует оставлять `Office.initialize` свойство неопределенным. Дополнительные сведения см. [в статье Initialize Your надстройка Office](initialize-add-in.md). Office вызывает этот метод сразу после инициализации библиотек JavaScript для Office.
 
 **Вызов кода начальной загрузки на основе Angular необходимо задать в методе, который назначен `Office.initialize`**, чтобы сначала выполнялась инициализация библиотек JavaScript для Office. Вот простой пример, в котором показано, как это сделать. Этот код должен находиться в файле main.ts проекта.
 

@@ -1,16 +1,16 @@
 ---
-title: Распространенные проблемы кодирования и неожиданное поведение платформы
+title: Рекомендации по написанию кода для распространенных проблем и непредвиденных поведений платформы
 description: Список проблем платформы API JavaScript для Office, часто встречающихся разработчиками.
-ms.date: 01/02/2020
+ms.date: 02/27/2020
 localization_priority: Normal
-ms.openlocfilehash: fa33451550ab02f76a8b41ebf682e6a73d2a3a96
-ms.sourcegitcommit: abe8188684b55710261c69e206de83d3a6bd2ed3
+ms.openlocfilehash: da6986149172238963a06b3296d9fdd7c2411d9d
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "40969495"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42324612"
 ---
-# <a name="common-coding-issues-and-unexpected-platform-behaviors"></a>Распространенные проблемы кодирования и неожиданное поведение платформы
+# <a name="coding-guidance-for-common-issues-and-unexpected-platform-behaviors"></a>Рекомендации по написанию кода для распространенных проблем и непредвиденных поведений платформы
 
 В этой статье описываются аспекты API JavaScript для Office, которые могут привести к непредвиденному поведению или требуют определенных шаблонов кодирования для достижения желаемого результата. Если возникла проблема, связанная с этим списком, сообщите нам об этом с помощью формы отзыва в нижней части статьи.
 

@@ -3,12 +3,12 @@ title: Элемент Action в файле манифеста
 description: ''
 ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: 3b0a82362988d4e64c1a376e0bd774e84e4a8fa3
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: b05da08f4995c7d8f7270e7fba6f416c9903b066
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42165561"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42324893"
 ---
 # <a name="action-element"></a>Элемент Action
 
@@ -50,7 +50,7 @@ ms.locfileid: "42165561"
 
 ## <a name="sourcelocation"></a>SourceLocation
 
-Обязательный элемент, если атрибуту **xsi:type** присвоено значение ShowTaskpane. Указывает расположение исходного файла для этого действия. Атрибуту **resid** должно быть присвоено значение атрибута **id** элемента **Url** в элементе **Urls**, включенном в элемент [Resources](resources.md).
+Обязательный элемент, если **xsi: Type** — "ShowTaskpane". Указывает расположение исходного файла для этого действия. Атрибуту **resid** должно быть присвоено значение атрибута **id** элемента **Url** в элементе **Urls**, включенном в элемент [Resources](resources.md).
 
 ```xml
 <Action xsi:type="ShowTaskpane">

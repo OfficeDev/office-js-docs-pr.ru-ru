@@ -3,19 +3,19 @@ title: Обработка ошибок
 description: ''
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 87401773ad4a27bf0a30bc80b229d2879dd5234f
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: e3732af26aeaa6129a4b98d6cbb8e3caf501141f
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32448163"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325110"
 ---
 # <a name="error-handling"></a>Обработка ошибок
 
 При создании надстройки с использованием API JavaScript для Excel не забудьте включить логику для обработки ошибок, возникающих в среде выполнения. Это очень важно из-за асинхронного характера API.
 
 > [!NOTE]
-> Дополнительные сведения о методе **sync()** и асинхронном характере API JavaScript для Excel см. в статье [Основные понятия программирования с использованием API JavaScript для Excel](excel-add-ins-core-concepts.md).
+> Для получения дополнительных сведений о `sync()` методе и асинхронной природе API JavaScript для Excel ознакомьтесь [с основными концепциями программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md).
 
 ## <a name="best-practices"></a>Рекомендации
 

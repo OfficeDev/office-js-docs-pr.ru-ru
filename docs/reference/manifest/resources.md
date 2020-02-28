@@ -3,12 +3,12 @@ title: Элемент Resources в файле манифеста
 description: ''
 ms.date: 10/09/2018
 localization_priority: Normal
-ms.openlocfilehash: e29e7e36585be8fd728eb46128d7ead538ea8069
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 7e1cd9fcb383fa4d5881917b3dd8d6dec3bbe4f8
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32452055"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42324829"
 ---
 # <a name="resources-element"></a>Элемент Resources
 
@@ -28,8 +28,8 @@ ms.locfileid: "32452055"
 > [!NOTE]
 > Для всех URL-адресов в элементах **Image** и **Url** необходимо использовать протокол SSL.
 
-### <a name="images"></a>Images
-У каждого значка должно быть три элемента **Images**, по одному на каждый из трех обязательных размеров:
+### <a name="images"></a>Изображения
+У каждого значка должно быть три элемента **Images** , по одному для каждого из трех обязательных размеров:
 
 - 16 x 16
 - 32x32

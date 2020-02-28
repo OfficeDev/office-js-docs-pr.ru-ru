@@ -3,16 +3,16 @@ title: Просмотр и изменение повторения в надст
 description: В этой статье показано, как использовать API JavaScript для Office, чтобы просматривать и изменять различные свойства повторения элемента в надстройке Outlook.
 ms.date: 01/14/2020
 localization_priority: Normal
-ms.openlocfilehash: cc7160ed8fe82a02ced9c03bab181df57e66bb54
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 850fd49721dbb0e3835a44148d03f5687726c58c
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42166795"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42324977"
 ---
 # <a name="get-and-set-recurrence"></a>Просмотр и изменение повторения
 
-Иногда требуется создать или обновить повторяющуюся встречу, например еженедельное собрание, посвященное ходу выполнения командного проекта, или ежегодное напоминание о дне рождения. Управлять расписаниями повторений для рядов встреч в надстройке можно с помощью API JavaScript для Office.
+Иногда требуется создать или обновить повторяющуюся встречу, например еженедельное собрание, посвященное ходу выполнения командного проекта, или ежегодное напоминание о дне рождения. Вы можете использовать API JavaScript для Office для управления шаблонами повторения ряда встреч в надстройке.
 
 > [!NOTE]
 > Поддержка этой функции появилась в наборе требований 1,7. См [клиенты и платформы](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.

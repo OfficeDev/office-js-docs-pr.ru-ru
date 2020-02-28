@@ -3,12 +3,12 @@ title: Элемент SupportsSharedFolders в файле манифеста
 description: ''
 ms.date: 01/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 4ce78d9ece901d8cd6f8639ce7a286f70893a2b4
-ms.sourcegitcommit: dc42e0276007f8ab006028b9cd0cc1526c1bd100
+ms.openlocfilehash: e76d17b618e2aaf15724f15ee6695a932172bba3
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "41120609"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325229"
 ---
 # <a name="supportssharedfolders-element"></a>Элемент SupportsSharedFolders
 
@@ -19,7 +19,7 @@ ms.locfileid: "41120609"
 >
 > Поддержка этого элемента была введена в наборе требований 1,8. См [клиенты и платформы](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
-Ниже приведен пример элемента  **SupportsSharedFolders**.
+Ниже приведен пример элемента **SupportsSharedFolders** .
 
 ```XML
 ...

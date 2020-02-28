@@ -3,12 +3,12 @@ title: Отладка надстроек в Office в Интернете
 description: Сведения о том, как тестировать и отлаживать надстройки в Office в Интернете.
 ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: d28ffc7cba6d7029799bc8d5931c873bf8390d21
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 76f26a58cca2e89e50547188b99259ee250b550d
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950931"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325166"
 ---
 # <a name="debug-add-ins-in-office-on-the-web"></a>Отладка надстроек в Office в Интернете
 

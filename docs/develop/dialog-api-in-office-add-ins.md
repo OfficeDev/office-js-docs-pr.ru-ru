@@ -3,12 +3,12 @@ title: Использование Office Dialog API в вашей надстро
 description: Изучите основы создания диалогового окна в надстройке Office
 ms.date: 01/29/2020
 localization_priority: Normal
-ms.openlocfilehash: 18ea221618e2a674266784517be3aa31d029c612
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: ed77173f57c8a16344d469585610917a08d3dcad
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950665"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42324682"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
@@ -86,7 +86,7 @@ Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 
 Диалоговое окно может взаимодействовать с главной страницей в области задач, если:
 
 - Текущая страница в диалоговом окне не находится в том же домене, что и главная страница.
-- Библиотека JavaScript для Office не загружена на странице. (Как и любая страница, которая использует библиотеку JavaScript для Office, сценарий для страницы должен назначить метод свойству `Office.initialize`. Метод может быть пустой. Дополнительные сведения см. в разделе [Инициализация надстройки](understanding-the-javascript-api-for-office.md#initializing-your-add-in).)
+- На странице загружается библиотека API JavaScript для Office. (Как и любая страница, использующая библиотеку API JavaScript для Office, сценарий для страницы должен назначить метод `Office.initialize` свойству, хотя это может быть пустой метод. Дополнительные сведения см. [в статье Initialize Your надстройка Office](initialize-add-in.md).
 
 Код в диалоговом окне использует функцию [messageParent](/javascript/api/office/office.ui#messageparent-message-), чтобы отправить на главную страницу логическое значение или строковое сообщение. Строка может быть словом, предложением, большим двоичным объектом XML, преобразованными данными JSON или любыми другими объектами, которые можно сериализовать в строку. Ниже приведен пример.
 

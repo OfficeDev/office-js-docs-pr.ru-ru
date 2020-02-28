@@ -3,16 +3,16 @@ title: Элемент Requirements в файле манифеста
 description: ''
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 364ab7c943895e1acecedba7970e54da331a2e6f
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 3c4cb81ebd6a38ea311e8fcacfa6d5fcd3b26f68
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450564"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325250"
 ---
 # <a name="requirements-element"></a>Элемент Requirements
 
-Указывает минимальный набор элементов API JavaScript для Office ([набор требований](/office/dev/add-ins/develop/office-versions-and-requirement-sets#specify-office-hosts-and-requirement-sets) и/или методов), необходимых для активации надстройки Office.
+Указывает минимальный набор требований к API JavaScript для Office ([набор требований](/office/dev/add-ins/develop/office-versions-and-requirement-sets#specify-office-hosts-and-requirement-sets) и/или методов), которые должна активировать надстройка Office.
 
 **Тип надстройки:** контентные и почтовые надстройки, надстройки области задач
 

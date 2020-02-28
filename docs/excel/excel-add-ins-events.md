@@ -1,14 +1,14 @@
 ---
 title: Работа с событиями при помощи API JavaScript для Excel
-description: ''
-ms.date: 10/22/2019
+description: Список событий для объектов JavaScript Excel. Сюда входят сведения об использовании обработчиков событий и связанных с ними шаблонов.
+ms.date: 02/11/2020
 localization_priority: Normal
-ms.openlocfilehash: 5c3a31af310edb63561fae1913a1f5541244092c
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: f1a1faf9acc370e7183a078aeeba34019e54900f
+ms.sourcegitcommit: d85efbf41a3382ca7d3ab08f2c3f0664d4b26c53
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950868"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "42327777"
 ---
 # <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями при помощи API JavaScript для Excel
 
@@ -111,7 +111,7 @@ function handleChange(event)
 
 ## <a name="remove-an-event-handler"></a>Удаление обработчика события
 
-В приведенном ниже примере кода регистрируется обработчик событий `onSelectionChanged` на листе под названием **Sample** и определяется функция `handleSelectionChange`, которая будет выполняться при возникновении события. В нем также определяется функция `remove()`, которую можно впоследствии вызвать для удаления обработчика событий.
+В приведенном ниже примере кода регистрируется обработчик событий `onSelectionChanged` на листе под названием **Sample** и определяется функция `handleSelectionChange`, которая будет выполняться при возникновении события. В нем также определяется функция `remove()`, которую можно впоследствии вызвать для удаления обработчика событий. Обратите внимание `RequestContext` , что для удаления обработчика событий необходимо, чтобы он использовался для создания обработчика событий. 
 
 ```js
 var eventResult;

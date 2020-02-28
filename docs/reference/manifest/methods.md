@@ -3,16 +3,16 @@ title: Элемент Methods в файле манифеста
 description: ''
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 0d295c2657ef03451c26a324410a684490a180fb
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 52e12de0fde9fa1ede4687c3f27707d1dc3dce5f
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32452097"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325257"
 ---
 # <a name="methods-element"></a>Элемент Methods
 
-Указывает список методов из API JavaScript для Office, необходимых для активации надстройки Office.
+Указывает список методов API JavaScript для Office, необходимых для активации надстройки Office.
 
 **Тип надстройки:** контентные надстройки и надстройки области задач
 
@@ -32,7 +32,7 @@ ms.locfileid: "32452097"
 
 [Метод](method.md)
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 
-Элементы **Methods** и **Method** не поддерживаются в почтовых надстройках. Дополнительные сведения о наборах обязательных элементов см. в статье [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets).
+Элементы **** **Methods и Method** не поддерживаются в почтовых надстройках. Дополнительные сведения о наборах требований: [версии и наборы](/office/dev/add-ins/develop/office-versions-and-requirement-sets)обязательных элементов для Office.
 

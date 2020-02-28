@@ -3,12 +3,12 @@ title: Элемент Group в файле манифеста
 description: ''
 ms.date: 12/02/2019
 localization_priority: Normal
-ms.openlocfilehash: 35db4829b40078e97fbfc007e2fb552e00875f9c
-ms.sourcegitcommit: 164b11b1e9d2ae20b3d816092025b32a9070450f
+ms.openlocfilehash: 27a168ea17352482e955e7a0d1f8267c7d6b17d8
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "39818729"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42324864"
 ---
 # <a name="group-element"></a>Элемент Group
 
@@ -33,7 +33,7 @@ ms.locfileid: "39818729"
 
 ### <a name="label"></a>Label 
 
-Обязательный элемент. Метка группы. Атрибуту **resid** нужно присвоить значение атрибута **id** элемента **String** в элементе **ShortStrings**, вложенном в элемент [Resources](resources.md).
+Обязательный. Метка группы. Атрибуту **Resid** должно быть присвоено значение атрибута **ID** элемента **String** в элементе **ShortStrings** элемента [Resources](resources.md) .
 
 ### <a name="icon"></a>Icon
 

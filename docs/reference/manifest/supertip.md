@@ -3,12 +3,12 @@ title: Элемент Supertip в файле манифеста
 description: ''
 ms.date: 05/07/2019
 localization_priority: Normal
-ms.openlocfilehash: 269a3723db6f98cdb25c61e5a88608c5fb5f3191
-ms.sourcegitcommit: 5b9c2b39dfe76cabd98bf28d5287d9718788e520
+ms.openlocfilehash: ab280ec550a58f85082c36a24f5f7c3b4112a214
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "33659658"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325236"
 ---
 # <a name="supertip"></a>Supertip
 
@@ -23,11 +23,11 @@ ms.locfileid: "33659658"
 
 ### <a name="title"></a>Название
 
-Обязательный элемент. Текст суперподсказки. Атрибуту **resid** должно быть присвоено значение атрибута **id** элемента **String** в элементе **ShortStrings**, вложенном в элемент [Resources](resources.md).
+Обязательное. Текст суперподсказки. Атрибуту **Resid** должно быть присвоено значение атрибута **ID** элемента **String** в элементе **ShortStrings** элемента [Resources](resources.md) .
 
 ### <a name="description"></a>Описание
 
-Обязательный элемент. Описание суперподсказки. Атрибуту **resid** должно быть присвоено значение атрибута **id** элемента **String** в элементе **LongStrings**, вложенном в элемент [Resources](resources.md).
+Обязательный. Описание суперподсказки. Атрибуту **Resid** должно быть присвоено значение атрибута **ID** элемента **String** в элементе **LongStrings** элемента [Resources](resources.md) .
 
 > [!NOTE]
 > В Outlook только клиенты Windows и Mac поддерживают элемент **Description** .

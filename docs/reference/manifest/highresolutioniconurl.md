@@ -3,12 +3,12 @@ title: Элемент HighResolutionIconUrl в файле манифеста
 description: ''
 ms.date: 12/04/2018
 localization_priority: Normal
-ms.openlocfilehash: 5264fc969bda30a9b2212996800b984533a3188c
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 41008be6b60d260bef78808af2b8dee1fbd0864a
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32452090"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325271"
 ---
 # <a name="highresolutioniconurl-element"></a>Элемент HighResolutionIconUrl
 
@@ -34,6 +34,6 @@ ms.locfileid: "32452090"
 
 ## <a name="remarks"></a>Замечания
 
-Значок почтовой надстройки отображается в разделе **Файл**  >  **Управление надстройками**. Значок надстройки области задач или контентной надстройки отображается в разделе **Вставка**  >  **Надстройки**.
+Для почтовой надстройки значок **отображается в** > пользовательском интерфейсе**Управление надстройками** . Значок надстройки области задач или контентной надстройки отображается в разделе **Вставка** > **Надстройки**.
 
 Изображение должно быть в формате GIF, JPG, PNG, EXIF, BMP или TIFF. Для приложений области задач и приложений для работы с контентом рекомендуется размер изображения 64 х 64 пикселя. Для почтовых приложений изображение должно иметь размер 128 x 128 пикселей. Дополнительные сведения см. в разделе _Создание согласованного визуального образа приложения_ статьи [Создание эффективных описаний в AppSource и в Office](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity).

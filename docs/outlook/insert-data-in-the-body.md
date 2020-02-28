@@ -3,12 +3,12 @@ title: Вставка данных в текст в надстройке Outlook
 description: Узнайте, как вставить данные в текст сообщения или встречи в надстройке Outlook.
 ms.date: 04/15/2019
 localization_priority: Normal
-ms.openlocfilehash: 082b3c5ebf4f8c93a485d438d55a5587f51a405e
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: e092a67f8794c2821167ced84bede70a601c77e1
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42166763"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42324956"
 ---
 # <a name="insert-data-in-the-body-when-composing-an-appointment-or-message-in-outlook"></a>Вставка данных в текст при создании встречи или сообщения в Outlook
 
@@ -29,7 +29,7 @@ ms.locfileid: "42166763"
 
 2.  Если вставляются данные HTML, а метод **getTypeAsync** возвращает текстовый тип, преобразуйте данные в текст и вставьте их, используя **Office.MailboxEnums.BodyType.Text** в качестве _coercionType_. Если просто вставить данные HTML с помощью типа приведения text, узел отобразит HTML-теги в виде текста. Если вы попытаетесь вставить данные HTML, используя **Office.MailboxEnums.BodyType.Html** в качестве _coercionType_, возвратится ошибка.
 
-Как и большинство асинхронных методов в API JavaScript для Office, _coercionType_, **getTypeAsync** и **prependAsync** принимают кроме параметра **setSelectedDataAsync** другие входные параметры (необязательные). Дополнительные сведения об указании последних см. в разделе [Передача дополнительных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-inline) статьи [Асинхронное программирование в надстройках для Office](../develop/asynchronous-programming-in-office-add-ins.md).
+В дополнение к _coercionType_, как и для большинства асинхронных методов в API JavaScript для Office, **getTypeAsync**, **prependAsync** и **setSelectedDataAsync** принимают другие необязательные входные параметры. Дополнительные сведения об указании дополнительных входных параметров приведены в статье [Передача необязательных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-inline) в [асинхронном программировании в](../develop/asynchronous-programming-in-office-add-ins.md)надстройках Office.
 
 
 ## <a name="insert-data-at-the-current-cursor-position"></a>Вставка данных в текущей позиции курсора
