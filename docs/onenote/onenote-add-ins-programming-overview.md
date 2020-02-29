@@ -5,12 +5,12 @@ ms.date: 02/19/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 2023daa422bd9078271f4b989f824101dc8b85f9
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 0ea7273b15ad430d2d19d91ff5d8f57fe64c675a
+ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42165568"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42325491"
 ---
 # <a name="onenote-javascript-api-programming-overview"></a>Обзор создания кода с помощью API JavaScript для OneNote
 
@@ -33,27 +33,27 @@ ms.locfileid: "42165568"
 
 ## <a name="using-the-javascript-api"></a>Использование API JavaScript
 
-Для доступа к API JavaScript надстройки используют контекст среды выполнения ведущего приложения. API состоит из двух указанных ниже уровней. 
+Для доступа к API JavaScript надстройки используют контекст среды выполнения ведущего приложения. API состоит из двух указанных ниже уровней.
 
-- **API для определенных ведущих приложений** для связанных с OneNote операций, доступ к которому осуществляется с помощью объекта **Application**.
-- **Общий API**, используемый приложениями Office, доступ к которому осуществляется с помощью объекта **Document**.
+- **API для определенных ведущих приложений** для связанных с OneNote операций, доступ к которому осуществляется с помощью объекта `Application`.
+- **Общий API**, используемый приложениями Office, доступ к которому осуществляется с помощью объекта `Document`.
 
 ### <a name="accessing-the-host-specific-api-through-the-application-object"></a>Доступ к API для определенных ведущих приложений с помощью объекта *Application*
 
-Для доступа к объектам OneNote, например к объектам **Notebook**, **Section** и **Page**, используйте объект **Application**. С помощью API для определенных ведущих приложений вы можете запустить пакетные операции на прокси-объектах. Основной процесс выглядит примерно так, как указано ниже. 
+Для доступа к объектам OneNote, например к объектам **Notebook**, **Section** и **Page**, используйте объект `Application`. С помощью API для определенных ведущих приложений вы можете запустить пакетные операции на прокси-объектах. Основной процесс выглядит примерно так, как указано ниже.
 
 1. Получение экземпляра приложения из контекста.
 
 2. Создание прокси-объекта, представляющего объект OneNote, с которым вам необходимо работать. Для синхронного взаимодействия с прокси-объектами можно считывать и записывать их свойства и вызывать имеющиеся в них методы.
 
-3. Вызовите метод **load** прокси-объекта, чтобы указать для него значения свойств, указанные в параметре. Этот вызов будет добавлен в очередь команд.
+3. Вызовите метод `load` прокси-объекта, чтобы указать для него значения свойств, указанные в параметре. Этот вызов будет добавлен в очередь команд.
 
    > [!NOTE]
    > Вызовы, которые методы совершают к API (например, `context.application.getActiveSection().pages;`), также добавляются в очередь.
 
-4. Чтобы запустить все поставленные в очередь команды в том порядке, в котором они находятся в очереди, вызовите метод **context.sync**. Этот метод синхронизирует состояния выполняющихся сценариев и реальных объектов, а также получает свойства загруженных объектов OneNote, которые необходимо использовать в сценарии. Вы можете использовать возвращенный объект обещания для связывания дополнительных действий в цепочку.
+4. Чтобы запустить все поставленные в очередь команды в том порядке, в котором они находятся в очереди, вызовите метод `context.sync`. Этот метод синхронизирует состояния выполняющихся сценариев и реальных объектов, а также получает свойства загруженных объектов OneNote, которые необходимо использовать в сценарии. Вы можете использовать возвращенный объект обещания для связывания дополнительных действий в цепочку.
 
-Примеры:
+Например:
 
 ```js
 function getPagesInSection() {
@@ -95,10 +95,10 @@ function getPagesInSection() {
 
 ### <a name="accessing-the-common-api-through-the-document-object"></a>Получение доступа к общему API с помощью объекта *Document*
 
-Для доступа к общему API, например к методам [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) и [setSelectedDataAsync](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-), используйте объект **Document**. 
+Для доступа к общему API, например к методам [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) и [setSelectedDataAsync](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-), используйте объект `Document`.
 
 
-Пример:  
+Например:  
 
 ```js
 function getSelectionFromPage() {
@@ -119,8 +119,8 @@ function getSelectionFromPage() {
 
 | API | Примечания |
 |:------|:------|
-| [Office.context.document.getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) | Только **Office.CoercionType.Text** и **Office.CoercionType.Matrix** |
-| [Office.context.document.setSelectedDataAsync](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) | Только **Office.CoercionType.Text**, **Office.CoercionType.Image** и **Office.CoercionType.Html** | 
+| [Office.context.document.getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) | Только `Office.CoercionType.Text` и `Office.CoercionType.Matrix` |
+| [Office.context.document.setSelectedDataAsync](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) | Только `Office.CoercionType.Text`, `Office.CoercionType.Image` и `Office.CoercionType.Html` | 
 | [var mySetting = Office.context.document.settings.get(имя);](/javascript/api/office/office.settings#get-name-) | Параметры поддерживаются только контентными надстройками | 
 | [Office.context.document.settings.set(имя, значение);](/javascript/api/office/office.settings#set-name--value-) | Параметры поддерживаются только контентными надстройками | 
 | [Office.EventType.DocumentSelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) ||
