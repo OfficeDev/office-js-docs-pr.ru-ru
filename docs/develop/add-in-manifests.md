@@ -3,12 +3,12 @@ title: XML-манифест надстроек Office
 description: ''
 ms.date: 01/06/2020
 localization_priority: Priority
-ms.openlocfilehash: abc228fda18b432ddd16d04cce95a8d5af17dd8d
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 2e31286026dedc0c8b67beb6ff6eabfe6d5f8f59
+ms.sourcegitcommit: 6c7c98f085dd20f827e0c388e672993412944851
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42162834"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "42413750"
 ---
 # <a name="office-add-ins-xml-manifest"></a>XML-манифест надстроек Office
 
@@ -227,9 +227,9 @@ _\*\* SupportUrl требуется только для надстроек ра�
                   <!-- Sample Todo: Each size needs its own icon resource or it will look distorted when resized -->
                   <!--Icons. Required sizes: 16, 32, 80; optional: 20, 24, 40, 48, 64. You should provide as many sizes as possible for a great user experience. -->
                   <!--Use PNG icons and remember that all URLs on the resources section must use HTTPS -->
-                  <bt:Image size="16" resid="Contoso.TaskpaneButton.Icon" />
-                  <bt:Image size="32" resid="Contoso.TaskpaneButton.Icon" />
-                  <bt:Image size="80" resid="Contoso.TaskpaneButton.Icon" />
+                  <bt:Image size="16" resid="Contoso.TaskpaneButton.Icon16" />
+                  <bt:Image size="32" resid="Contoso.TaskpaneButton.Icon32" />
+                  <bt:Image size="80" resid="Contoso.TaskpaneButton.Icon80" />
                 </Icon>
 
                 <!--Control. It can be of type "Button" or "Menu" -->
@@ -243,9 +243,9 @@ _\*\* SupportUrl требуется только для надстроек ра�
                     <Description resid="Contoso.FunctionButton.Tooltip" />
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="Contoso.FunctionButton.Icon" />
-                    <bt:Image size="32" resid="Contoso.FunctionButton.Icon" />
-                    <bt:Image size="80" resid="Contoso.FunctionButton.Icon" />
+                    <bt:Image size="16" resid="Contoso.FunctionButton.Icon16" />
+                    <bt:Image size="32" resid="Contoso.FunctionButton.Icon32" />
+                    <bt:Image size="80" resid="Contoso.FunctionButton.Icon80" />
                   </Icon>
                   <!--This is what happens when the command is triggered (E.g. click on the Ribbon). Supported actions are ExecuteFunction or ShowTaskpane-->
                   <!--Look at the FunctionFile.html page for reference on how to implement the function -->
@@ -262,9 +262,9 @@ _\*\* SupportUrl требуется только для надстроек ра�
                     <Description resid="Contoso.TaskpaneButton.Tooltip" />
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="Contoso.TaskpaneButton.Icon" />
-                    <bt:Image size="32" resid="Contoso.TaskpaneButton.Icon" />
-                    <bt:Image size="80" resid="Contoso.TaskpaneButton.Icon" />
+                    <bt:Image size="16" resid="Contoso.TaskpaneButton.Icon16" />
+                    <bt:Image size="32" resid="Contoso.TaskpaneButton.Icon32" />
+                    <bt:Image size="80" resid="Contoso.TaskpaneButton.Icon80" />
                   </Icon>
                   <Action xsi:type="ShowTaskpane">
                     <TaskpaneId>Button2Id1</TaskpaneId>
@@ -280,9 +280,9 @@ _\*\* SupportUrl требуется только для надстроек ра�
                     <Description resid="Contoso.Dropdown.Tooltip" />
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="Contoso.TaskpaneButton.Icon" />
-                    <bt:Image size="32" resid="Contoso.TaskpaneButton.Icon" />
-                    <bt:Image size="80" resid="Contoso.TaskpaneButton.Icon" />
+                    <bt:Image size="16" resid="Contoso.TaskpaneButton.Icon16" />
+                    <bt:Image size="32" resid="Contoso.TaskpaneButton.Icon32" />
+                    <bt:Image size="80" resid="Contoso.TaskpaneButton.Icon80" />
                   </Icon>
                   <Items>
                     <Item id="Contoso.Menu.Item1">
@@ -292,9 +292,9 @@ _\*\* SupportUrl требуется только для надстроек ра�
                         <Description resid="Contoso.Item1.Tooltip" />
                       </Supertip>
                       <Icon>
-                        <bt:Image size="16" resid="Contoso.TaskpaneButton.Icon" />
-                        <bt:Image size="32" resid="Contoso.TaskpaneButton.Icon" />
-                        <bt:Image size="80" resid="Contoso.TaskpaneButton.Icon" />
+                        <bt:Image size="16" resid="Contoso.TaskpaneButton.Icon16" />
+                        <bt:Image size="32" resid="Contoso.TaskpaneButton.Icon32" />
+                        <bt:Image size="80" resid="Contoso.TaskpaneButton.Icon80" />
                       </Icon>
                       <Action xsi:type="ShowTaskpane">
                         <TaskpaneId>MyTaskPaneID1</TaskpaneId>
@@ -309,9 +309,9 @@ _\*\* SupportUrl требуется только для надстроек ра�
                         <Description resid="Contoso.Item2.Tooltip" />
                       </Supertip>
                       <Icon>
-                        <bt:Image size="16" resid="Contoso.TaskpaneButton.Icon" />
-                        <bt:Image size="32" resid="Contoso.TaskpaneButton.Icon" />
-                        <bt:Image size="80" resid="Contoso.TaskpaneButton.Icon" />
+                        <bt:Image size="16" resid="Contoso.TaskpaneButton.Icon16" />
+                        <bt:Image size="32" resid="Contoso.TaskpaneButton.Icon32" />
+                        <bt:Image size="80" resid="Contoso.TaskpaneButton.Icon80" />
                       </Icon>
                       <Action xsi:type="ShowTaskpane">
                         <TaskpaneId>MyTaskPaneID2</TaskpaneId>
@@ -334,7 +334,9 @@ _\*\* SupportUrl требуется только для надстроек ра�
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Contoso.TaskpaneButton.Icon" DefaultValue="https://i.imgur.com/FkSShX9.png" />
+        <bt:Image id="Contoso.TaskpaneButton.Icon16" DefaultValue="https://myCDN/Images/Button16x16.png" />
+        <bt:Image id="Contoso.TaskpaneButton.Icon32" DefaultValue="https://myCDN/Images/Button32x32.png" />
+        <bt:Image id="Contoso.TaskpaneButton.Icon80" DefaultValue="https://myCDN/Images/Button80x80.png" />
         <bt:Image id="Contoso.FunctionButton.Icon" DefaultValue="https://i.imgur.com/qDujiX0.png" />
       </bt:Images>
       <bt:Urls>

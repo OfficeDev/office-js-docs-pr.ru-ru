@@ -1,14 +1,14 @@
 ---
 title: Элемент Action в файле манифеста
 description: ''
-ms.date: 06/20/2019
+ms.date: 02/28/2020
 localization_priority: Normal
-ms.openlocfilehash: b05da08f4995c7d8f7270e7fba6f416c9903b066
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: f7bd577fea1672f592f2b1bac2823d96f0e8a134
+ms.sourcegitcommit: 6c7c98f085dd20f827e0c388e672993412944851
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42324893"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "42413771"
 ---
 # <a name="action-element"></a>Элемент Action
 
@@ -131,8 +131,11 @@ ms.locfileid: "42324893"
 
 Элемент необязательный, когда для **xsi:type** задано значение ShowTaskpane. Родительские элементы [VersionOverrides](versionoverrides.md) должны иметь значение атрибута `xsi:type` `VersionOverridesV1_1`. Включите этот элемент со значением `true` для поддержки закрепления области задач. Пользователь сможет закрепить область задач, после чего она будет оставаться открытой при выборе другого элемента. Дополнительные сведения см. в статье [Реализация закрепляемой области задач в Outlook](../../outlook/pinnable-taskpane.md).
 
-> [!NOTE]
-> Суппортспиннинг в настоящее время поддерживается только в Outlook 2016 или более поздних версий для Windows (сборка 7628,1000 или более поздней версии) и Outlook 2016 или более поздней версии в Mac (сборка 16.13.503 или более поздняя версия).
+> [!IMPORTANT]
+> Хотя `SupportsPinning` элемент был введен в [наборе требований 1,5](../objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md), в настоящее время он поддерживается только для подписчиков Office 365 с помощью следующих компонентов.
+> - Outlook 2016 или более поздняя версия в Windows (сборка 7628,1000 или более поздняя)
+> - Outlook 2016 или более поздней версии в Mac (сборка 16.13.503 или более поздняя)
+> - Современная версия Outlook в Интернете
 
 ```xml
 <Action xsi:type="ShowTaskpane">
