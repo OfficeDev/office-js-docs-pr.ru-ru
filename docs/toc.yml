@@ -600,6 +600,9 @@
         - name: Фигуры
           href: excel/excel-add-ins-shapes.md
           displayName: Excel
+        - name: Отображение и скрытие надстройки Office в общей среде выполнения
+          href: excel/show-hide-add-in.md
+          displayName: Excel
         - name: Таблицы
           href: excel/excel-add-ins-tables.md
           displayName: Excel
@@ -653,7 +656,7 @@
         - name: Варианты параметров
           href: excel/custom-functions-parameter-options.md
           displayName: 'Excel, Custom Functions'
-        - name: Наборы требований
+        - name: Наборы обязательных элементов
           href: excel/custom-functions-requirement-sets.md
           displayName: 'Excel, Custom Functions'
         - name: Возвращение динамического массива
