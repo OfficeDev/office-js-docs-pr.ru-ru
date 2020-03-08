@@ -151,6 +151,8 @@
                   href: develop/dialog-api-in-office-add-ins.md
                 - name: Рекомендации и правила Office dialog API
                   href: develop/dialog-best-practices.md
+                - name: Отправка данных со страницы узла в диалоговое окно
+                  href: develop/parent-to-dialog.md
                 - name: Обработка ошибок и событий в диалоговом окне "Office"
                   href: develop/dialog-handle-errors-events.md
                 - name: Используйте диалоговое окно "Office" для воспроизведения видео
