@@ -1,14 +1,14 @@
 ---
 title: Элемент Control в файле манифеста
 description: ''
-ms.date: 10/09/2018
+ms.date: 01/10/2020
 localization_priority: Normal
-ms.openlocfilehash: ed76cc46c624d1b97d43e4270944b8ef4dc63723
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: ccf7c3065db13a311825498292713b619f1cd745
+ms.sourcegitcommit: 153576b1efd0234c6252433e22db213238573534
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42323800"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "42562016"
 ---
 # <a name="control-element"></a>Элемент Control
 
@@ -36,8 +36,11 @@ ms.locfileid: "42323800"
 |  [Supertip](supertip.md)  | Да |  Суперподсказка для кнопки.    |
 |  [Icon](icon.md)      | Да |  Изображение для кнопки.         |
 |  [Action](action.md)    | Да |  Указание действия, которое предстоит выполнить.  |
+|  [Enabled](enabled.md)    | Нет |  Указывает, включен ли элемент управления при запуске надстройки.  |
 
 ### <a name="executefunction-button-example"></a>Пример кнопки ExecuteFunction
+
+В следующем примере кнопка отключается при запуске надстройки. Его можно включить программным способом. Дополнительные сведения можно найти [в статье Включение и отключение команд надстроек](/office/dev/add-ins/design/disable-add-in-commands).
 
 ```xml
 <Control xsi:type="Button" id="msgReadFunctionButton">
@@ -54,6 +57,7 @@ ms.locfileid: "42323800"
   <Action xsi:type="ExecuteFunction">
     <FunctionName>getSubject</FunctionName>
   </Action>
+  <Enabled>false</Enabled>
 </Control>
 ```
 

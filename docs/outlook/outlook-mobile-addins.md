@@ -1,14 +1,14 @@
 ---
 title: Надстройки Outlook для Outlook Mobile
 description: Надстройки Outlook Mobile поддерживаются во всех коммерческих учетных записях Office 365, Outlook.com. Скоро их можно будет использовать и в учетных записях Gmail.
-ms.date: 10/31/2019
+ms.date: 02/28/2020
 localization_priority: Normal
-ms.openlocfilehash: 7ede3165f40e644715dc488214e047f00dafbede
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 7fc4ac511fe7e101775334cad6d4b000f7dc24ae
+ms.sourcegitcommit: 153576b1efd0234c6252433e22db213238573534
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42166744"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "42561802"
 ---
 # <a name="add-ins-for-outlook-mobile"></a>Надстройки для Outlook Mobile
 
@@ -25,6 +25,9 @@ ms.locfileid: "42166744"
 **Пример области задач в Outlook для Android**
 
 ![Снимок экрана с областью задач в Outlook для Android](../images/outlook-mobile-addin-taskpane-android.png)
+
+> [!IMPORTANT]
+> Надстройки не работают в современной версии Outlook в браузере мобильного устройства. Дополнительные сведения см. [в статье Outlook в браузере мобильного устройства](https://techcommunity.microsoft.com/t5/outlook-blog/outlook-on-your-mobile-browser-is-being-upgraded/ba-p/1125816).
 
 ## <a name="whats-different-on-mobile"></a>Чем отличаются надстройки для мобильных устройств?
 
