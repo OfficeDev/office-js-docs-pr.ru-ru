@@ -207,7 +207,11 @@
             - name: Общие сведения
               href: design/interface-elements.md
             - name: Команды надстроек
-              href: design/add-in-commands.md
+              items:
+                - name: Основные концепции для команд надстроек
+                  href: design/add-in-commands.md
+                - name: Включение и отключение команд надстроек
+                  href: design/disable-add-in-commands.md
             - name: Диалоговые окна
               href: design/dialog-boxes.md
             - name: Контентные надстройки
@@ -307,6 +311,8 @@
               href: reference/requirement-sets/image-coercion-requirement-sets.md
             - name: Наборы обязательных элементов общего API для Office
               href: reference/requirement-sets/office-add-in-requirement-sets.md
+            - name: Наборы обязательных элементов API ленты
+              href: reference/requirement-sets/ribbon-api-requirement-sets.md
             - name: Наборы обязательных элементов в среде выполнения
               href: reference/requirement-sets/shared-runtime-requirement-sets.md
         - name: Справочные материалы по манифесту надстройки Office
@@ -425,6 +431,8 @@
                   href: reference/manifest/control.md
                 - name: CustomTab
                   href: reference/manifest/customtab.md
+                - name: Включено
+                  href: reference/manifest/enabled.md
                 - name: EquivalentAddin
                   href: reference/manifest/equivalentaddin.md
                 - name: EquivalentAddins
