@@ -1,14 +1,14 @@
 ---
 title: Как определить правильный порядок элементов манифеста
 description: Узнайте, как определить правильный порядок расположения дочерних элементов в родительском элементе.
-ms.date: 08/22/2019
+ms.date: 01/10/2020
 localization_priority: Normal
-ms.openlocfilehash: 5cd755c69093267ad6ea87d5b1f0676169e7a672
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 5f6364d8403fccfd9dbb9c2c200a2c2a24a90230
+ms.sourcegitcommit: 0e7ed44019d6564c79113639af831ea512fa0a13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42162785"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "42566161"
 ---
 # <a name="how-to-find-the-proper-order-of-manifest-elements"></a>Как определить правильный порядок элементов манифеста
 
@@ -158,7 +158,7 @@ XML-элементы в манифесте надстройки Office долж�
     <Requirements>
         <Sets>
             <Set>
-      <Hosts>
+    <Hosts>
         <Host>
             <Runtimes>
                 <Runtime>
@@ -195,6 +195,7 @@ XML-элементы в манифесте надстройки Office долж�
                                 <SourceLocation>
                                 <Title>
                                 <FunctionName>
+                            <Enabled>
                             <Items>
                                 <Item>
                                 <Label>
@@ -223,6 +224,7 @@ XML-элементы в манифесте надстройки Office долж�
                                 <SourceLocation>
                                 <Title>
                                 <FunctionName>
+                            <Enabled>
                             <Items>
                                 <Item>
                                     <Label>
@@ -248,6 +250,7 @@ XML-элементы в манифесте надстройки Office долж�
                                 <SourceLocation>
                                 <Title>
                                 <FunctionName>
+                            <Enabled>
                             <Items>
                                 <Item>
                                     <Label>
