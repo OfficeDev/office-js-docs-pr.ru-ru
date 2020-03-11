@@ -1,14 +1,14 @@
 ---
-title: Команды надстроек для Excel, Word и PowerPoint
-description: ''
-ms.date: 06/20/2019
-localization_priority: Normal
-ms.openlocfilehash: 92e9b23eaf23aa9c6e0a2eda048dc34e3942f4ed
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
-ms.translationtype: MT
+title: Основные концепции команд надстроек
+description: Узнайте, как добавить настраиваемые кнопки ленты и элементы меню в Office в составе веб-надстройки Office.
+ms.date: 02/11/2020
+localization_priority: Priority
+ms.openlocfilehash: 11636838feb384cdb0761bd17a3c1c0e0f42f8ce
+ms.sourcegitcommit: 0e7ed44019d6564c79113639af831ea512fa0a13
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42162841"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "42566154"
 ---
 # <a name="add-in-commands-for-excel-word-and-powerpoint"></a>Команды надстроек для Excel, Word и PowerPoint
 
@@ -34,20 +34,27 @@ ms.locfileid: "42162841"
 > [!NOTE]
 > Контентные надстройки на данный момент не поддерживают команды.
 
-**Точки расширения**
+### <a name="extension-points"></a>Точки расширения
 
 - Вкладки ленты: расширение возможностей встроенных вкладок или создание пользовательской вкладки.
 - Контекстные меню: расширение возможностей выбранных контекстных меню.
 
-**Типы элементов управления**
+### <a name="control-types"></a>Типы элементов управления
 
 - Простые кнопки, запускающие определенные действия.
 - Простые раскрывающиеся меню с кнопками, которые запускают действия.
 
-**Действия**
+### <a name="actions"></a>Действия
 
 - ShowTaskpane: отображает одну или несколько областей, в которые можно загрузить пользовательские HTML-страницы.
 - ExecuteFunction загружает невидимую HTML-страницу, а затем выполняет содержащуюся в ней функцию JavaScript. Для показа ошибок, хода выполнения или дополнительных данных функции можно использовать API [displayDialog](/javascript/api/office/office.ui).  
+
+### <a name="default-enabled-or-disabled-status-preview"></a>Состояние по умолчанию: "Включено" или "Отключено" (предварительная версия)
+
+Вы можете указать, включена или отключена команда при запуске надстройки, а также изменять параметр программными средствами. 
+
+> [!NOTE]
+> Эта возможность доступна в предварительной версии и поддерживается не всеми узлами и сценариями. Дополнительные сведения см. в статье о [Включение и отключение команд надстроек](disable-add-in-commands.md).
 
 ## <a name="supported-platforms"></a>Поддерживаемые платформы
 
@@ -59,8 +66,6 @@ ms.locfileid: "42162841"
 - Office для Mac (сборка 15.33+, подключенная к подписке на Office 365)
 - Office 2019 для Mac
 - Office в Интернете
-
-Скоро можно будет использовать другие платформы.
 
 ## <a name="debugging"></a>Отладка
 
