@@ -1,19 +1,19 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Word
 description: Сведения о наборе обязательных элементов надстройки Office для сборок Word
-ms.date: 01/06/2020
+ms.date: 03/11/2020
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: c90daafe46d301b404ee902b38bb7417562adc44
-ms.sourcegitcommit: abe8188684b55710261c69e206de83d3a6bd2ed3
+ms.openlocfilehash: 41cb1189bba31c83958c1c1284f347b615a5a220
+ms.sourcegitcommit: 05b73cdec5f4db7f0b8d48a5a552ee296a0332ca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "40969533"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42600713"
 ---
 # <a name="word-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Word
 
-Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets).
+Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md).
 
 ## <a name="requirement-set-availability"></a>Доступность набора обязательных элементов
 
@@ -41,13 +41,11 @@ ms.locfileid: "40969533"
 
 Дополнительные сведения о номерах версий и сборок Office см. в следующих статьях:
 
-- [Номера версий и сборок выпусков из канала обновления для клиентов Office 365](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7);
-- [Какая у меня версия Office](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19);
-- [Где можно найти номера версии и сборки клиентского приложения Office 365](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7);
+[!INCLUDE [Links to get Office versions and how to find Office client version](../../includes/links-get-office-versions-builds.md)]
 
 ## <a name="see-also"></a>См. также
 
 - [Справочная документация по API JavaScript для Word](/javascript/api/word)
-- [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets)
-- [Указание ведущих приложений Office и обязательных элементов API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
-- [XML-манифест надстроек Office](/office/dev/add-ins/develop/add-in-manifests)
+- [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md)
+- [Указание ведущих приложений Office и обязательных элементов API](../../develop/specify-office-hosts-and-api-requirements.md)
+- [XML-манифест надстроек Office](../../develop/add-in-manifests.md)

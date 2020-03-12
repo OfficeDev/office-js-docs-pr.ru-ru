@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 01/16/2020
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 2206f18cd752bb1723d303d3fc862c72907d0afb
-ms.sourcegitcommit: 8bce9c94540ed484d0749f07123dc7c72a6ca126
+ms.openlocfilehash: 90416db9847f5f78b38fb1c22c4a6751bf95d5e0
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "41265673"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596825"
 ---
 # <a name="build-your-first-word-task-pane-add-in"></a>Создание первой надстройки области задач Word
 
@@ -21,7 +21,7 @@ _Область применения: Word 2016 и более поздних в
 
 [!include[Choose your editor](../includes/quickstart-choose-editor.md)]
 
-# <a name="yeoman-generatortabyeomangenerator"></a>[Генератор Yeoman](#tab/yeomangenerator)
+# <a name="yeoman-generator"></a>[Генератор Yeoman](#tab/yeomangenerator)
 
 [!include[Redirect to the single sign-on (SSO) quick start](../includes/sso-quickstart-reference.md)]
 
@@ -94,7 +94,7 @@ _Область применения: Word 2016 и более поздних в
 
 Поздравляем! Вы успешно создали надстройку области задач Word! Теперь воспользуйтесь [руководством по надстройкам Word](../tutorials/word-tutorial.md), чтобы узнать больше о возможностях надстроек Word и создать более сложную надстройку.
 
-# <a name="visual-studiotabvisualstudio"></a>[Visual Studio](#tab/visualstudio)
+# <a name="visual-studio"></a>[Visual Studio](#tab/visualstudio)
 
 ### <a name="prerequisites"></a>Необходимые компоненты
 
@@ -320,4 +320,4 @@ _Область применения: Word 2016 и более поздних в
 * [Разработка надстроек Office](../develop/develop-overview.md)
 * [Обзор надстроек Word](../word/word-add-ins-programming-overview.md)
 * [Примеры кода надстроек Word](https://developer.microsoft.com/en-us/office/gallery/?filterBy=Samples,Word)
-* [Справочник по API JavaScript для Word](/office/dev/add-ins/reference/overview/word-add-ins-reference-overview)
+* [Справочник по API JavaScript для Word](../reference/overview/word-add-ins-reference-overview.md)

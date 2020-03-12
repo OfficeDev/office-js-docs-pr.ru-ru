@@ -5,12 +5,12 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: c542f5c751615019dd06a650a02a072383ab2d45
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: f894ee0274d39bc8b508436949e557bcc1e785b5
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42324689"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596916"
 ---
 # <a name="word-add-ins-overview"></a>Обзор надстроек Word
 
@@ -86,4 +86,4 @@ API JavaScript для Word предоставляют приложению до�
 
 * [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
 * [Обзор платформы надстроек Office](../overview/office-add-ins.md)
-* [Справочные материалы по API JavaScript для Word](/office/dev/add-ins/reference/overview/word-add-ins-reference-overview)
+* [Справочные материалы по API JavaScript для Word](../reference/overview/word-add-ins-reference-overview.md)

@@ -1,19 +1,19 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Excel
 description: Сведения о наборе обязательных элементов надстройки Office для сборок Excel
-ms.date: 01/06/2020
+ms.date: 03/11/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 742c2e925ed7b1be8e1449cd9021c6cf03519d7b
-ms.sourcegitcommit: abe8188684b55710261c69e206de83d3a6bd2ed3
+ms.openlocfilehash: b6e1570d7487e552197201d12f9a783f18a30fe3
+ms.sourcegitcommit: 05b73cdec5f4db7f0b8d48a5a552ee296a0332ca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "40969526"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42600706"
 ---
 # <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
 
-Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets).
+Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md).
 
 ## <a name="requirement-set-availability"></a>Доступность набора обязательных элементов
 
@@ -22,7 +22,7 @@ ms.locfileid: "40969526"
 > [!NOTE]
 > Чтобы использовать API в любом из нумерованных наборов обязательных элементов или `ExcelApiOnline`, следует ссылаться на **рабочую** библиотеку в сети CDN https://appsforoffice.microsoft.com/lib/1/hosted/office.js.
 >
-> Сведения об использовании API предварительных версий см. в статье [Предварительные версии API JavaScript для Excel](./excel-preview-apis.md).
+> Сведения об использовании API предварительных версий см. в статье [Предварительные версии API JavaScript для Excel](excel-preview-apis.md).
 
 |  Набор обязательных элементов  |  Office для Windows<br>(версия, подключенная к подписке на Office 365)  |  Office для iPad<br>(версия, подключенная к подписке на Office 365)  |  Office для Mac<br>(версия, подключенная к подписке на Office 365)  | Office в Интернете |
 |:-----|-----|:-----|:-----|:-----|:-----|
@@ -49,14 +49,12 @@ ms.locfileid: "40969526"
 
 Дополнительные сведения о номерах версий и сборок Office см. в следующих статьях:
 
-- [Номера версий и сборок выпусков из канала обновления для клиентов Office 365](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7);
-- [Какая у меня версия Office](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19);
-- [Где можно найти номера версии и сборки клиентского приложения Office 365](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7);
+[!INCLUDE [Links to get Office versions and how to find Office client version](../../includes/links-get-office-versions-builds.md)]
 
 ## <a name="see-also"></a>См. также
 
 - [Справочная документация по API JavaScript для Excel](/javascript/api/excel)
-- [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets)
-- [Указание ведущих приложений Office и обязательных элементов API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
-- [XML-манифест надстроек Office](/office/dev/add-ins/develop/add-in-manifests)
+- [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md)
+- [Указание ведущих приложений Office и обязательных элементов API](../../develop/specify-office-hosts-and-api-requirements.md)
+- [XML-манифест надстроек Office](../../develop/add-in-manifests.md)
 - [Обзор Office Online Server](/officeonlineserver/office-online-server-overview)

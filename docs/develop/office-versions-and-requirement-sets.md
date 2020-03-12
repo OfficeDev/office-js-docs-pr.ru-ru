@@ -3,12 +3,12 @@ title: Версии Office и наборы обязательных элемен
 description: ''
 ms.date: 01/14/2020
 localization_priority: Priority
-ms.openlocfilehash: 946068681070e8f482a8501639f40de4e13a7513
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: 95c647b3362fb98402c5d8d20c0975580ae45131
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42325138"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596741"
 ---
 # <a name="office-versions-and-requirement-sets"></a>Версии Office и наборы обязательных элементов
 
@@ -35,30 +35,30 @@ ms.locfileid: "42325138"
 
 Надстройка может использовать API только в наборах обязательных элементов, поддерживаемых версией ведущего приложения Office, в которой она работает. Чтобы узнать, какие наборы обязательных элементов доступны для конкретной версии ведущего приложения Office, просмотрите следующие статьи:
 
-- [Наборы обязательных элементов API JavaScript для Excel](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets) (ExcelApi, [CustomFunctionsRuntime](../excel/custom-functions-architecture.md))
-- [Наборы обязательных элементов API JavaScript для Word](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets) (WordApi)
-- [Наборы обязательных элементов API JavaScript для OneNote](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets) (OneNoteApi)
-- [Наборы обязательных элементов PowerPoint JavaScript API](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets) (PowerPointApi)
-- [Общие сведения о наборах обязательных элементов API Outlook](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets) (MailBox)
+- [Наборы обязательных элементов API JavaScript для Excel](../reference/requirement-sets/excel-api-requirement-sets.md) (ExcelApi, [CustomFunctionsRuntime](../excel/custom-functions-architecture.md))
+- [Наборы обязательных элементов API JavaScript для Word](../reference/requirement-sets/word-api-requirement-sets.md) (WordApi)
+- [Наборы обязательных элементов API JavaScript для OneNote](../reference/requirement-sets/onenote-api-requirement-sets.md) (OneNoteApi)
+- [Наборы обязательных элементов PowerPoint JavaScript API](../reference/requirement-sets/powerpoint-api-requirement-sets.md) (PowerPointApi)
+- [Общие сведения о наборах обязательных элементов API Outlook](../reference/requirement-sets/outlook-api-requirement-sets.md) (MailBox)
 
 Некоторые наборы обязательных элементов содержат API, которые могут использоваться любым ведущим приложением Office. Информацию об этих наборах обязательных элементов см. в следующих статьях:
 
-- [Общие наборы обязательных элементов для Office](/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets)
-- [Наборы обязательных элементов для команд надстроек](/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets)
-- [Наборы обязательных элементов API диалоговых окон](/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets)
-- [Наборы обязательных элементов API идентификации](/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets)
+- [Общие наборы обязательных элементов для Office](../reference/requirement-sets/office-add-in-requirement-sets.md)
+- [Наборы обязательных элементов для команд надстроек](../reference/requirement-sets/add-in-commands-requirement-sets.md)
+- [Наборы обязательных элементов API диалоговых окон](../reference/requirement-sets/dialog-api-requirement-sets.md)
+- [Наборы обязательных элементов API идентификации](../reference/requirement-sets/identity-api-requirement-sets.md)
 
 Номер версии набора обязательных элементов, например "1.1" в `ExcelApi 1.1`, указывается относительно ведущего приложения Office. Номер версии набора обязательных элементов (например, `ExcelApi 1.1`) не соответствует номеру версии Office.js или наборам обязательных элементов для других ведущих приложений Office (например, Word, Outlook и т. д.).  Наборы обязательных элементов для разных ведущих приложений Office выпускаются с разной скоростью и интервалом. Например, набор обязательных элементов `ExcelApi 1.5` был выпущен до набора обязательных элементов `WordApi 1.3`.
 
-Библиотека API JavaScript для Office (Office.js) включает все доступные наборы обязательных элементов. Наборы обязательных элементов `ExcelApi 1.3` и `WordApi 1.3` существуют, но набора обязательных элементов `Office.js 1.3` нет. Доступ к последней версии Office.js осуществляется через единую конечную точку Office, интегрированную в сеть доставки содержимого (CDN). Дополнительные сведения о CDN Office.js, в том числе об управлении версиями и обратной совместимости, см. в статье [Общие сведения об интерфейсе API JavaScript для Office](/office/dev/add-ins/develop/understanding-the-javascript-api-for-office).
+Библиотека API JavaScript для Office (Office.js) включает все доступные наборы обязательных элементов. Наборы обязательных элементов `ExcelApi 1.3` и `WordApi 1.3` существуют, но набора обязательных элементов `Office.js 1.3` нет. Доступ к последней версии Office.js осуществляется через единую конечную точку Office, интегрированную в сеть доставки содержимого (CDN). Дополнительные сведения о CDN Office.js, в том числе об управлении версиями и обратной совместимости, см. в статье [Общие сведения об интерфейсе API JavaScript для Office](../develop/understanding-the-javascript-api-for-office.md).
 
 ## <a name="specify-office-hosts-and-requirement-sets"></a>Указание ведущих приложений Office и наборов обязательных элементов
 
-Указать необходимые надстройке ведущие приложения Office и наборы обязательных элементов можно разными способами.  Подробные сведения см. в статье [Указание ведущих приложений Office и обязательных элементов API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements).
+Указать необходимые надстройке ведущие приложения Office и наборы обязательных элементов можно разными способами.  Подробные сведения см. в статье [Указание ведущих приложений Office и обязательных элементов API](../develop/specify-office-hosts-and-api-requirements.md).
 
 ## <a name="see-also"></a>См. также
 
-- [Указание ведущих приложений Office и обязательных элементов API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
-- [Установка последней версии Office](/office/dev/add-ins/develop/install-latest-office-version)
+- [Указание ведущих приложений Office и обязательных элементов API](../develop/specify-office-hosts-and-api-requirements.md)
+- [Установка последней версии Office](../develop/install-latest-office-version.md)
 - [Обзор каналов обновления Office 365 профессиональный плюс](/deployoffice/overview-of-update-channels-for-office-365-proplus)
 - [Получите максимум от наших продуктов благодаря Office 365](https://products.office.com/compare-all-microsoft-office-products?tab=2)

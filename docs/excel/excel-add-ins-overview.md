@@ -5,12 +5,12 @@ ms.date: 07/05/2019
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 6f2e319c5de310df5bd30a1161332d03344f0021
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: 645011e7600240e7f4947e8f4495e55383839a42
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42325103"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596545"
 ---
 # <a name="excel-add-ins-overview"></a>Общие сведения о надстройках Excel
 
@@ -36,7 +36,7 @@ ms.locfileid: "42325103"
 
 Надстройка Excel включает два основных компонента: веб-приложение и файл конфигурации, называемый файлом манифеста. 
 
-Веб-приложение использует [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office) для взаимодействия с объектами в Excel, а также может упрощать работу с ресурсами в Интернете. Например, надстройка может выполнять следующие действия:
+Веб-приложение использует [API JavaScript для Office](../reference/javascript-api-for-office.md) для взаимодействия с объектами в Excel, а также может упрощать работу с ресурсами в Интернете. Например, надстройка может выполнять следующие действия:
 
 * создавать, читать, обновлять и удалять данные в книге (листы, диапазоны, таблицы, диаграммы, именованные элементы и т. д.);
 * выполнять авторизацию пользователя в веб-службе с помощью стандартного потока OAuth 2.0;
@@ -109,9 +109,9 @@ ms.locfileid: "42325103"
 
 ## <a name="javascript-apis-to-interact-with-workbook-content"></a>API JavaScript для взаимодействия с содержимым книги
 
-Надстройка Excel взаимодействует с объектами в Excel с помощью [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office), включающего две объектных модели JavaScript:
+Надстройка Excel взаимодействует с объектами в Excel с помощью [API JavaScript для Office](../reference/javascript-api-for-office.md), включающего две объектных модели JavaScript:
 
-* **API JavaScript для Excel**. Появившийся в Office 2016 [API JavaScript для Excel](/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к листам, диапазонам, таблицам, диаграммам и другим объектам. 
+* **API JavaScript для Excel**. Появившийся в Office 2016 [API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к листам, диапазонам, таблицам, диаграммам и другим объектам. 
 
 * **Общие API**. Появившиеся в Office 2013 общие API позволяют получать доступ к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office. Общий API предоставляет ограниченные возможности по взаимодействию с Excel, поэтому его можно использовать, если надстройка должна работать в Excel 2013.
 

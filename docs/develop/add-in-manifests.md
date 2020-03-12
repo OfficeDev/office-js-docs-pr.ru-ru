@@ -3,12 +3,12 @@ title: XML-манифест надстроек Office
 description: ''
 ms.date: 01/06/2020
 localization_priority: Priority
-ms.openlocfilehash: 2e31286026dedc0c8b67beb6ff6eabfe6d5f8f59
-ms.sourcegitcommit: 6c7c98f085dd20f827e0c388e672993412944851
+ms.openlocfilehash: e3a74f3047017b8aa7b5daac1cb50fe484c99ed1
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "42413750"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596706"
 ---
 # <a name="office-add-ins-xml-manifest"></a>XML-манифест надстроек Office
 
@@ -80,61 +80,61 @@ _\*\* SupportUrl требуется только для надстроек ра�
 
 <!-- Links for above table -->
 
-[officeapp]: /office/dev/add-ins/reference/manifest/officeapp
-[id]: /office/dev/add-ins/reference/manifest/id
-[version]: /office/dev/add-ins/reference/manifest/version
-[providername]: /office/dev/add-ins/reference/manifest/providername
-[defaultlocale]: /office/dev/add-ins/reference/manifest/defaultlocale
-[displayname]: /office/dev/add-ins/reference/manifest/displayname
-[description]: /office/dev/add-ins/reference/manifest/description
-[iconurl]: /office/dev/add-ins/reference/manifest/iconurl
-[supporturl]: /office/dev/add-ins/reference/manifest/supporturl
-[defaultsettings (contentapp)]: /office/dev/add-ins/reference/manifest/defaultsettings
-[defaultsettings (taskpaneapp)]: /office/dev/add-ins/reference/manifest/defaultsettings
-[sourcelocation (contentapp)]: /office/dev/add-ins/reference/manifest/sourcelocation
-[sourcelocation (taskpaneapp)]: /office/dev/add-ins/reference/manifest/sourcelocation
-[desktopsettings]: https://msdn.microsoft.com/library/da9fd085-b8cc-2be0-d329-2aa1ef5d3f1c(Office.15).aspx
-[sourcelocation (mailapp)]: https://msdn.microsoft.com/library/3792d389-bebd-d19a-9d90-35b7a0bfc623%28Office.15%29.aspx
-[permissions (contentapp)]: /office/dev/add-ins/reference/manifest/permissions
-[permissions (taskpaneapp)]: /office/dev/add-ins/reference/manifest/permissions
-[permissions (mailapp)]: /office/dev/add-ins/reference/manifest/permissions
-[rule (rulecollection)]: /office/dev/add-ins/reference/manifest/rule
-[rule (mailapp)]: /office/dev/add-ins/reference/manifest/rule
-[requirements (mailapp)*]: /office/dev/add-ins/reference/manifest/requirements
-[set*]: /office/dev/add-ins/reference/manifest/set
-[sets (mailapprequirements)*]: /office/dev/add-ins/reference/manifest/sets
-[form*]: /office/dev/add-ins/reference/manifest/form
-[formsettings*]: /office/dev/add-ins/reference/manifest/formsettings
-[sets (requirements)*]: /office/dev/add-ins/reference/manifest/sets
-[hosts*]: /office/dev/add-ins/reference/manifest/hosts
+[officeapp]: ../reference/manifest/officeapp.md
+[id]: ../reference/manifest/id.md
+[version]: ../reference/manifest/version.md
+[providername]: ../reference/manifest/providername.md
+[defaultlocale]: ../reference/manifest/defaultlocale.md
+[displayname]: ../reference/manifest/displayname.md
+[description]: ../reference/manifest/description.md
+[iconurl]: ../reference/manifest/iconurl.md
+[supporturl]: ../reference/manifest/supporturl.md
+[defaultsettings (contentapp)]: ../reference/manifest/defaultsettings.md
+[defaultsettings (taskpaneapp)]: ../reference/manifest/defaultsettings.md
+[sourcelocation (contentapp)]: ../reference/manifest/sourcelocation.md
+[sourcelocation (taskpaneapp)]: ../reference/manifest/sourcelocation.md
+[desktopsettings]: /previous-versions/office/fp179684%28v=office.15%29
+[sourcelocation (mailapp)]: /previous-versions/office/fp123668%28v=office.15%29
+[permissions (contentapp)]: ../reference/manifest/permissions.md
+[permissions (taskpaneapp)]: ../reference/manifest/permissions.md
+[permissions (mailapp)]: ../reference/manifest/permissions.md
+[rule (rulecollection)]: ../reference/manifest/rule.md
+[rule (mailapp)]: ../reference/manifest/rule.md
+[requirements (mailapp)*]: ../reference/manifest/requirements.md
+[set*]: ../reference/manifest/set.md
+[sets (mailapprequirements)*]: ../reference/manifest/sets.md
+[form*]: ../reference/manifest/form.md
+[formsettings*]: ../reference/manifest/formsettings.md
+[sets (requirements)*]: ../reference/manifest/sets.md
+[hosts*]: ../reference/manifest/hosts.md
 
 ## <a name="hosting-requirements"></a>Требования к размещению
 
 Все URI изображений, в частности используемые для [команд надстройки][], должны поддерживать кэширование. Сервер с изображением не должен возвращать заголовок `Cache-Control`, содержащий `no-cache`, `no-store` или подобные параметры в ответе HTTP.
 
-Все URL-адреса, например адреса исходных файлов, указанные в элементе [SourceLocation](/office/dev/add-ins/reference/manifest/sourcelocation), должны быть **защищены с помощью SSL (HTTPS)**. [!include[HTTPS guidance](../includes/https-guidance.md)]
+Все URL-адреса, например адреса исходных файлов, указанные в элементе [SourceLocation](../reference/manifest/sourcelocation.md), должны быть **защищены с помощью SSL (HTTPS)**. [!include[HTTPS guidance](../includes/https-guidance.md)]
 
 ## <a name="best-practices-for-submitting-to-appsource"></a>Рекомендации по отправке решений в AppSource
 
 Убедитесь, что идентификатор надстройки представляет собой допустимый и уникальный GUID. В Интернете доступно множество генераторов, с помощью которых можно создать уникальный GUID.
 
-Надстройки, отправляемые в AppSource, также должны включать элемент [SupportUrl](/office/dev/add-ins/reference/manifest/supporturl). Дополнительные сведения см. в статье [Политики проверки для приложений и надстроек, отправляемых в AppSource](/office/dev/store/validation-policies).
+Надстройки, отправляемые в AppSource, также должны включать элемент [SupportUrl](../reference/manifest/supporturl.md). Дополнительные сведения см. в статье [Политики проверки для приложений и надстроек, отправляемых в AppSource](/office/dev/store/validation-policies).
 
-Чтобы указать домены, отличные от указанного в элементе [SourceLocation](/office/dev/add-ins/reference/manifest/sourcelocation) для сценариев проверки подлинности, используйте только элемент [AppDomains](/office/dev/add-ins/reference/manifest/appdomains).
+Чтобы указать домены, отличные от указанного в элементе [SourceLocation](../reference/manifest/sourcelocation.md) для сценариев проверки подлинности, используйте только элемент [AppDomains](../reference/manifest/appdomains.md).
 
 ## <a name="specify-domains-you-want-to-open-in-the-add-in-window"></a>Укажите домены, которые необходимо открыть в окне надстройки
 
-В Office в Интернете область задач может открывать любой URL-адрес. Однако, на платформах для настольных компьютеров в области надстроек ведущего приложения Office открываются только URL-адреса в домене, где размещена начальная страница (указанная в элементе [SourceLocation](/office/dev/add-ins/reference/manifest/sourcelocation) файла манифеста).
+В Office в Интернете область задач может открывать любой URL-адрес. Однако, на платформах для настольных компьютеров в области надстроек ведущего приложения Office открываются только URL-адреса в домене, где размещена начальная страница (указанная в элементе [SourceLocation](../reference/manifest/sourcelocation.md) файла манифеста).
 
-Чтобы переопределить это поведение, укажите все домены, которые должны открываться в окне надстройки, в списке доменов в элементе [AppDomains](/office/dev/add-ins/reference/manifest/appdomains) файла манифеста. URL-адреса в доменах из списка будут открываться в области задач как в классическом Office, так и в Office в Интернете. URL-адреса в доменах не из списка будут открываться в новом окне браузера (не в области надстроек) в классическом Office.
+Чтобы переопределить это поведение, укажите все домены, которые должны открываться в окне надстройки, в списке доменов в элементе [AppDomains](../reference/manifest/appdomains.md) файла манифеста. URL-адреса в доменах из списка будут открываться в области задач как в классическом Office, так и в Office в Интернете. URL-адреса в доменах не из списка будут открываться в новом окне браузера (не в области надстроек) в классическом Office.
 
 > [!NOTE]
 > Из этого правила есть два исключения:
-> 
+>
 > - Это относится только к корневой области надстройки. Если в страницу надстройки внедрен iframe, его можно перенаправить на любой URL-адрес, независимо от того, указан ли он в элементе **AppDomains**, даже в классической версии Office.
-> - Если диалоговое окно открыто с помощью API [displayDialogAsync](/javascript/api/office/office.ui?view=common-js#displaydialogasync-startaddress--options--callback-), URL-адрес, передаваемый методу, должен находиться в том же домене, что и надстройка. Затем диалоговое окно можно перенаправить на любой URL-адрес, независимо от того, указан ли он в элементе **AppDomains**, даже в классической версии Office. 
+> - Если диалоговое окно открыто с помощью API [displayDialogAsync](/javascript/api/office/office.ui?view=common-js#displaydialogasync-startaddress--options--callback-), URL-адрес, передаваемый методу, должен находиться в том же домене, что и надстройка. Затем диалоговое окно можно перенаправить на любой URL-адрес, независимо от того, указан ли он в элементе **AppDomains**, даже в классической версии Office.
 
-В приведенном ниже примере XML-манифеста главная страница надстройки размещена в домене `https://www.contoso.com`, указанном в элементе **SourceLocation**. В нем также указан домен `https://www.northwindtraders.com` с помощью элемента [AppDomain](/office/dev/add-ins/reference/manifest/appdomain) из списка **AppDomains**. Страница в домене www.northwindtraders.com будет открываться в области надстроек даже в классической версии Office.
+В приведенном ниже примере XML-манифеста главная страница надстройки размещена в домене `https://www.contoso.com`, указанном в элементе **SourceLocation**. В нем также указан домен `https://www.northwindtraders.com` с помощью элемента [AppDomain](../reference/manifest/appdomain.md) из списка **AppDomains**. Страница в домене www.northwindtraders.com будет открываться в области надстроек даже в классической версии Office.
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -159,7 +159,7 @@ _\*\* SupportUrl требуется только для надстроек ра�
 
 ## <a name="specify-domains-from-which-officejs-api-calls-are-made"></a>Указание доменов, из которых выполняются вызовы API Office.js
 
-Ваша надстройка может выполнять вызовы API Office.js из домена, указанного в элементе [SourceLocation](/office/dev/add-ins/reference/manifest/sourcelocation) файла манифеста. Если в вашей надстройке есть другие блоки IFrame, которым требуется доступ к API Office.js, добавьте домен этого исходного URL-адреса в список, указанный в элементе [AppDomains](/office/dev/add-ins/reference/manifest/appdomains) файла манифеста. Если блок IFrame с источником, не содержащимся в списке `AppDomains`, попытается выполнить вызов API Office.js, надстройка получит [ошибку об отказе в разрешении](../reference/javascript-api-for-office-error-codes.md). 
+Ваша надстройка может выполнять вызовы API Office.js из домена, указанного в элементе [SourceLocation](../reference/manifest/sourcelocation.md) файла манифеста. Если в вашей надстройке есть другие блоки IFrame, которым требуется доступ к API Office.js, добавьте домен этого исходного URL-адреса в список, указанный в элементе [AppDomains](../reference/manifest/appdomains.md) файла манифеста. Если блок IFrame с источником, не содержащимся в списке `AppDomains`, попытается выполнить вызов API Office.js, надстройка получит [ошибку об отказе в разрешении](../reference/javascript-api-for-office-error-codes.md).
 
 ## <a name="manifest-v11-xml-file-examples-and-schemas"></a>XML-файлы манифеста версии 1.1: примеры и схемы
 

@@ -5,12 +5,12 @@ ms.date: 02/19/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 0ea7273b15ad430d2d19d91ff5d8f57fe64c675a
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: a4e060570f4eccc3fff9017042ff6bf278714ed6
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42325491"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596853"
 ---
 # <a name="onenote-javascript-api-programming-overview"></a>Обзор создания кода с помощью API JavaScript для OneNote
 
@@ -87,7 +87,7 @@ function getPagesInSection() {
 }
 ```
 
-Сведения о поддерживаемых объектах и операциях OneNote см. в [справочнике по API](/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference).
+Сведения о поддерживаемых объектах и операциях OneNote см. в [справочнике по API](../reference/overview/onenote-add-ins-javascript-reference.md).
 
 #### <a name="onenote-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для OneNote
 
@@ -139,6 +139,6 @@ function getSelectionFromPage() {
 
 - [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
 - [Создание первой надстройки OneNote](../quickstarts/onenote-quickstart.md)
-- [Справочник по API JavaScript для OneNote](/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference)
+- [Справочник по API JavaScript для OneNote](../reference/overview/onenote-add-ins-javascript-reference.md)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)

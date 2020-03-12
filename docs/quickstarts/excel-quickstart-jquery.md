@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 01/16/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 71253cbc5b50f6d36c8c04b25573c1ed328f9df6
-ms.sourcegitcommit: 8bce9c94540ed484d0749f07123dc7c72a6ca126
+ms.openlocfilehash: cdd4de9cad88c09ec33e2cb1566b0a64afdf7745
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "41265708"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596622"
 ---
 # <a name="build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel
 
@@ -19,7 +19,7 @@ ms.locfileid: "41265708"
 
 [!include[Choose your editor](../includes/quickstart-choose-editor.md)]
 
-# <a name="yeoman-generatortabyeomangenerator"></a>[Генератор Yeoman](#tab/yeomangenerator)
+# <a name="yeoman-generator"></a>[Генератор Yeoman](#tab/yeomangenerator)
 
 [!include[Redirect to the single sign-on (SSO) quick start](../includes/sso-quickstart-reference.md)]
 
@@ -70,7 +70,7 @@ ms.locfileid: "41265708"
 
 Поздравляем! Вы успешно создали надстройку области задач Excel! Теперь воспользуйтесь [руководством по надстройкам Excel](../tutorials/excel-tutorial.md), чтобы узнать больше о возможностях надстроек Excel и создать более сложную надстройку.
 
-# <a name="visual-studiotabvisualstudio"></a>[Visual Studio](#tab/visualstudio)
+# <a name="visual-studio"></a>[Visual Studio](#tab/visualstudio)
 
 ### <a name="prerequisites"></a>Необходимые компоненты
 
@@ -223,4 +223,4 @@ ms.locfileid: "41265708"
 * [Разработка надстроек Office](../develop/develop-overview.md)
 * [Основные концепции программирования с помощью API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
 * [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
-* [Справочник по API JavaScript для Excel](/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview)
+* [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
