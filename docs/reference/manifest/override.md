@@ -3,12 +3,12 @@ title: Элемент Override в файле манифеста
 description: ''
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 020ae490dacbb9b8c493dc022c23d0ebf311a1b9
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: a1e11257e28d015d6fca9c9a1868e75989616e16
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450452"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596881"
 ---
 # <a name="override-element"></a>Элемент Override
 
@@ -46,5 +46,4 @@ ms.locfileid: "32450452"
 
 ## <a name="see-also"></a>См. также
 
-- [Локализация надстроек для Office](/office/dev/add-ins/develop/localization)
-    
+- [Локализация надстроек для Office](../../develop/localization.md)

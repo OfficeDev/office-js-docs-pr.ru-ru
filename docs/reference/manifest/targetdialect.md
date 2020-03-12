@@ -3,12 +3,12 @@ title: Элемент TargetDialect в файле манифеста
 description: ''
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: bfdeac9d2533bc95c2e17d0275728e234d193914
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 8ee97d0851c82bcd8763152a6d0cf4331e0f0bdb
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451929"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596874"
 ---
 # <a name="targetdialect-element"></a>Элемент TargetDialect
 
@@ -34,5 +34,4 @@ ms.locfileid: "32451929"
 
 ## <a name="see-also"></a>См. также
 
-- [Создание надстройки области задач словаря](/office/dev/add-ins/word/dictionary-task-pane-add-ins)
-    
+- [Создание надстройки области задач словаря](../../word/dictionary-task-pane-add-ins.md)

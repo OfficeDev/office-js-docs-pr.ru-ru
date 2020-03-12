@@ -1,16 +1,16 @@
 ---
-title: Создание ссылок на библиотеку API JavaScript для Office
+title: 'Ссылки на библиотеку API JavaScript для Office '
 description: Узнайте, как ссылаться на библиотеку API JavaScript для Office и определение типов в надстройке.
 ms.date: 02/27/2020
 localization_priority: Normal
-ms.openlocfilehash: 9f7753b24e0a5861778b09ea93fecdc26fd2ca96
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: 5e26d5b0454a6833c593ff60c1577d24583dcc51
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42325159"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596720"
 ---
-# <a name="referencing-the-office-javascript-api-library"></a>Создание ссылок на библиотеку API JavaScript для Office
+# <a name="referencing-the-office-javascript-api-library"></a>Ссылки на библиотеку API JavaScript для Office 
 
 Библиотека [API JavaScript для Office](../reference/javascript-api-for-office.md) предоставляет API, которые надстройка может использовать для взаимодействия с ведущим приложением Office. Самый простой способ добавить ссылку на библиотеку — использовать сеть доставки содержимого (CDN), добавив следующий `<script>` тег в `<head>` раздел страницы HTML:  
 
@@ -33,7 +33,7 @@ ms.locfileid: "42325159"
 Если вы планируете опубликовать свою надстройку Office из AppSource, необходимо использовать эту ссылку на сеть CDN. Локальные ссылки подходят только для внутренних сценариев, а также сценариев разработки и отладки.
 
 > [!NOTE]
-> Чтобы использовать предварительные API-интерфейсы, сослаться на предварительную версию библиотеки API JavaScript для `https://appsforoffice.microsoft.com/lib/beta/hosted/office.js`Office в сети CDN:.
+> Чтобы использовать API предварительных версий, требуется указать ссылку на предварительную версию библиотеки API JavaScript для Office в сети CDN: `https://appsforoffice.microsoft.com/lib/beta/hosted/office.js`.
 
 ## <a name="enabling-intellisense-for-a-typescript-project"></a>Включение IntelliSense для проекта TypeScript
 
@@ -50,5 +50,5 @@ npm install --save-dev @types/office-js
 
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения об интерфейсе API JavaScript для Office](understanding-the-javascript-api-for-office.md)
-- [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office)
+- [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)
+- [API JavaScript для Office](../reference/javascript-api-for-office.md)

@@ -3,12 +3,12 @@ title: Элемент AppDomain в файле манифеста
 description: ''
 ms.date: 07/03/2019
 localization_priority: Normal
-ms.openlocfilehash: 2f65302d1ac3d85f2867cd13501bc67606cd00b5
-ms.sourcegitcommit: b3996b1444e520b44cf752e76eef50908386ca26
+ms.openlocfilehash: da28b3b4dec5d669462a781db3c0628bd32c7182
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "35575641"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596790"
 ---
 # <a name="appdomain-element"></a>Элемент AppDomain
 
@@ -32,4 +32,4 @@ ms.locfileid: "35575641"
 
 ## <a name="remarks"></a>Примечания
 
-Элементы **AppDomain** следует использовать для указания дополнительных доменов, отличных от указанного в [элементе SourceLocation](sourcelocation.md). Дополнительные сведения см. в статье [XML-манифест надстроек Office](/office/dev/add-ins/develop/add-in-manifests).
+Элементы **AppDomain** следует использовать для указания дополнительных доменов, отличных от указанного в [элементе SourceLocation](sourcelocation.md). Дополнительные сведения см. в статье [XML-манифест надстроек Office](../../develop/add-in-manifests.md).

@@ -3,19 +3,19 @@ title: Управление состоянием и параметрами дл�
 description: Сведения о том, как хранить состояние и параметры надстройки для надстройки Outlook.
 ms.date: 02/27/2020
 localization_priority: Normal
-ms.openlocfilehash: 7a76da625faab98de1f6ef6d32e0274056dba9f2
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: 7d981107da68c329d209834059bfac494d6ccae4
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42325349"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596650"
 ---
 # <a name="manage-state-and-settings-for-an-outlook-add-in"></a>Управление состоянием и параметрами для надстройки Outlook
 
 > [!NOTE]
 > Перед прочтением этой статьи ознакомьтесь с разделом [Сохранение состояния надстройки и параметров](../develop/persisting-add-in-state-and-settings.md) в разделе **Основные понятия** этой документации.
 
-Для надстроек Outlook API JavaScript для Office предоставляет объекты [roamingSettings](/javascript/api/outlook/office.roamingsettings) и [CustomProperties](/javascript/api/outlook/office.customproperties) для сохранения состояния надстройки во всех сеансах, как описано в следующей таблице. Во всех случаях сохраненные значения параметров связаны с [Id](/office/dev/add-ins/reference/manifest/id) создавшей их надстройки.
+Для надстроек Outlook API JavaScript для Office предоставляет объекты [roamingSettings](/javascript/api/outlook/office.roamingsettings) и [CustomProperties](/javascript/api/outlook/office.customproperties) для сохранения состояния надстройки во всех сеансах, как описано в следующей таблице. Во всех случаях сохраненные значения параметров связаны с [Id](../reference/manifest/id.md) создавшей их надстройки.
 
 |**Object**|**Расположение хранилища**|
 |:-----|:-----|:-----|

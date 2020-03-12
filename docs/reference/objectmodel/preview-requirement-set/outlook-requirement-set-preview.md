@@ -1,21 +1,21 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: ''
-ms.date: 12/17/2019
+ms.date: 03/04/2020
 localization_priority: Normal
-ms.openlocfilehash: 87c15ac889a955412e6a8350baaed8611fdb5164
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: 4365dab3d8dd1ddb876536b3030926d68a89ac49
+ms.sourcegitcommit: a0262ea40cd23f221e69bcb0223110f011265d13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42325222"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "42605675"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
 Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.
 
 > [!IMPORTANT]
-> Эта документация относится к **предварительной версии** [набора обязательных элементов](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets). Этот набор обязательных элементов еще не полностью реализован, а клиенты будут неправильно сообщать о его поддержке. Не следует указывать этот набор обязательных элементов в манифесте надстройки.
+> Эта документация относится к **предварительной версии** [набора обязательных элементов](../../requirement-sets/outlook-api-requirement-sets.md). Этот набор обязательных элементов еще не полностью реализован, а клиенты будут неправильно сообщать о его поддержке. Не следует указывать этот набор обязательных элементов в манифесте надстройки.
 
 [!INCLUDE [Information about using preview APIs](../../../includes/using-preview-apis-host.md)]
 
@@ -24,6 +24,26 @@ ms.locfileid: "42325222"
 ## <a name="features-in-preview"></a>Возможности предварительной версии
 
 Ниже перечислены возможности предварительной версии.
+
+### <a name="append-on-send"></a>Добавление при отправке
+
+#### <a name="officebodyappendonsendasync"></a>[Office. Body. Аппендонсендасинк](/javascript/api/outlook/office.body?view=outlook-js-preview#appendonsendasync-data--options--callback-)
+
+Добавлена новая функция для `Body` объекта, который добавляет данные в конец тела элемента в режиме создания.
+
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+
+#### <a name="extendedpermissions"></a>[екстендедпермиссионс](../../manifest/extendedpermissions.md)
+
+Добавлен новый элемент в манифест, где `AppendOnSend` расширенное разрешение должно быть включено в коллекцию расширенных разрешений.
+
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+
+<br>
+
+---
+
+---
 
 ### <a name="integration-with-actionable-messages"></a>Взаимодействие с интерактивными сообщениями
 
@@ -59,7 +79,7 @@ ms.locfileid: "42325222"
 
 ### <a name="sso"></a>Единый вход
 
-#### <a name="officeruntimeauthgetaccesstoken"></a>[OfficeRuntime.auth.getAccessToken](/office/dev/add-ins/develop/sso-in-office-add-ins#sso-api-reference)
+#### <a name="officeruntimeauthgetaccesstoken"></a>[OfficeRuntime.auth.getAccessToken](../../../develop/sso-in-office-add-ins.md#sso-api-reference)
 
 Добавлена возможность доступа к `getAccessToken`, что позволяет надстройкам [получать маркер доступа](../../../outlook/authenticate-a-user-with-an-sso-token.md) для API Microsoft Graph.
 

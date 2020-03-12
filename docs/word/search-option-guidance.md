@@ -3,12 +3,12 @@ title: Поиск текста в надстройке Word
 description: ''
 ms.date: 09/27/2019
 localization_priority: Normal
-ms.openlocfilehash: 213853af31ae7ae15ad3f6386da70f22698d421d
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 9f90771ebb7e6f70f2f27081ea0409e0f29b0e2d
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950483"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596762"
 ---
 # <a name="use-search-options-to-find-text-in-your-word-add-in"></a>Поиск текста в надстройке Word
 
@@ -19,7 +19,7 @@ ms.locfileid: "41950483"
 
 Параметры поиска представляют собой коллекцию логических значений, определяющих способ обработки параметра поиска.
 
-| Свойство     | Описание|
+| Свойство       | Описание|
 |:---------------|:----|
 |ignorePunct|Возвращает или задает значение, которое указывает, следует ли пропустить все знаки препинания между словами. Соответствует установленному флажку "Не учитывать знаки препинания" в диалоговом окне "Найти и заменить".|
 |ignoreSpace|Возвращает или задает значение, которое указывает, следует ли пропустить все пробелы между словами. Соответствует установленному флажку "Не учитывать пробелы" в диалоговом окне "Найти и заменить".|
@@ -204,4 +204,4 @@ Word.run(function (context) {
 });
 ```
 
-Дополнительные сведения можно найти в [Справочнике по API JavaScript для Word](/office/dev/add-ins/reference/overview/word-add-ins-reference-overview).
+Дополнительные сведения можно найти в [Справочнике по API JavaScript для Word](../reference/overview/word-add-ins-reference-overview.md).

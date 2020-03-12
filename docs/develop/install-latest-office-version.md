@@ -3,12 +3,12 @@ title: Установка последней версии Office
 description: Сведения о том, как получать последние сборки Office раньше других.
 ms.date: 01/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 1f08595ec5d4b7821bf0f2954b306108b0c449bb
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: ff573a13a6621e5c9bfa5c2dfd704bb64b731372
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950672"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596608"
 ---
 # <a name="install-the-latest-version-of-office"></a>Установка последней версии Office
 
@@ -45,10 +45,10 @@ ms.locfileid: "41950672"
 
 Сведения о минимальных сборках продуктов для каждой платформы см. в следующих статьях:
 
-- [Наборы обязательных элементов API JavaScript для Excel](/office/dev/add-ins/reference/requirement-sets/excel-api-requirement-sets)
-- [Наборы обязательных элементов API JavaScript для OneNote](/office/dev/add-ins/reference/requirement-sets/onenote-api-requirement-sets)
-- [Наборы обязательных элементов API JavaScript для Outlook](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets)
-- [Наборы обязательных элементов API JavaScript для PowerPoint](/office/dev/add-ins/reference/requirement-sets/powerpoint-api-requirement-sets)
-- [Наборы обязательных элементов API JavaScript для Word](/office/dev/add-ins/reference/requirement-sets/word-api-requirement-sets)
-- [Наборы обязательных элементов API диалоговых окон](/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets)
-- [Наборы обязательных элементов общего API для Office](/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets)
+- [Наборы обязательных элементов API JavaScript для Excel](../reference/requirement-sets/excel-api-requirement-sets.md)
+- [Наборы обязательных элементов API JavaScript для OneNote](../reference/requirement-sets/onenote-api-requirement-sets.md)
+- [Наборы обязательных элементов API JavaScript для Outlook](../reference/requirement-sets/outlook-api-requirement-sets.md)
+- [Наборы обязательных элементов API JavaScript для PowerPoint](../reference/requirement-sets/powerpoint-api-requirement-sets.md)
+- [Наборы обязательных элементов API JavaScript для Word](../reference/requirement-sets/word-api-requirement-sets.md)
+- [Наборы обязательных элементов API диалоговых окон](../reference/requirement-sets/dialog-api-requirement-sets.md)
+- [Наборы обязательных элементов общего API для Office](../reference/requirement-sets/office-add-in-requirement-sets.md)

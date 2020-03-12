@@ -3,12 +3,12 @@ title: Оптимизация производительности API JavaScrip
 description: Оптимизируйте производительность с использованием API JavaScript для Excel
 ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: d041356129ad5e5db8c990daaafee4e583de1dfa
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: 843a8fffbe916003b81ac974db12e3128efb7997
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42325054"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42597000"
 ---
 # <a name="performance-optimization-using-the-excel-javascript-api"></a>Оптимизация производительности с использованием API JavaScript для Excel
 
@@ -72,10 +72,10 @@ object.load({ loadOption });
 
 _Где:_
 
-* `properties` — это список свойств для загрузки, указанных как строки с разделителями-запятыми или как массив имен. Дополнительные сведения приведены в статье методы `load()` , определенные для объектов в [справочнике по API JavaScript для Excel](/office/dev/add-ins/reference/overview/excel-add-ins-reference-overview).
+* `properties` — это список свойств для загрузки, указанных как строки с разделителями-запятыми или как массив имен. Дополнительные сведения приведены в статье методы `load()` , определенные для объектов в [справочнике по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md).
 * `loadOption` указывает объект, описывающий параметры "выбрать", "развернуть", "сверху" и "пропустить". Дополнительные сведения см. в статье, посвященной [параметрам](/javascript/api/office/officeextension.loadoption) загрузки объектов.
 
-Имейте в виду, что некоторые "свойства" объекта могут совпадать с именем другого объекта. Например, `format` — это свойство объекта range, но также имеется и объект `format`. Поэтому если вы, например, вызываете `range.load("format")`, это эквивалентно `range.format.load()`, являющемуся пустым вызовом load(), который может стать причиной проблем с производительностью, как описано ранее. Чтобы избежать этого, ваш код должен загружать только "конечные узлы" в дереве объектов. 
+Обратите внимание, что некоторые "Свойства" в объекте могут иметь такое же имя, что и другой объект. Например, `format` — это свойство объекта range, но также имеется и объект `format`. Поэтому если вы, например, вызываете `range.load("format")`, это эквивалентно `range.format.load()`, являющемуся пустым вызовом load(), который может стать причиной проблем с производительностью, как описано ранее. Чтобы избежать этого, код должен загружать только "конечные узлы" в дереве объектов. 
 
 ## <a name="suspend-excel-processes-temporarily"></a>Временная приостановка процессов Excel
 

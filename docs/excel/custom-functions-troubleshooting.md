@@ -3,12 +3,12 @@ ms.date: 12/31/2019
 description: Устранение распространенных проблем в пользовательских функциях Excel.
 title: Устранение проблем в пользовательских функциях
 localization_priority: Normal
-ms.openlocfilehash: 10e1e3ec934d16806aa137a6468bbdada3fc1db2
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: f574bdbb385c840fb20de4ab64705b167cd51e05
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950833"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596559"
 ---
 # <a name="troubleshoot-custom-functions"></a>Устранение проблем в пользовательских функциях
 
@@ -76,7 +76,7 @@ function add(first, second) {
 CustomFunctions.associate("ADD", add);
 ```
 
-Дополнительные сведения об этом процессе см. в статье [Сопоставление имен функций с метаданными JSON](/office/dev/add-ins/excel/custom-functions-json#associating-function-names-with-json-metadata).
+Дополнительные сведения об этом процессе см. в статье [Сопоставление имен функций с метаданными JSON](../excel/custom-functions-json.md#associating-function-names-with-json-metadata).
 
 ## <a name="reporting-feedback"></a>Обратная связь
 

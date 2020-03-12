@@ -1,23 +1,23 @@
 ---
 title: Наборы обязательных элементов API удостоверений
 description: ''
-ms.date: 11/11/2019
+ms.date: 03/11/2020
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 96f5c305f4ecfe0fdc0ee89aed6955e090f87b02
-ms.sourcegitcommit: 88d81aa2d707105cf0eb55d9774b2e7cf468b03a
+ms.openlocfilehash: 6460516c32f70995d43ae64b213c93153a015bff
+ms.sourcegitcommit: 05b73cdec5f4db7f0b8d48a5a552ee296a0332ca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "38301927"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42600692"
 ---
 # <a name="identity-api-requirement-sets"></a>Наборы обязательных элементов API удостоверений
 
-Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets).
+Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md).
 
 Надстройки Office работают в нескольких версиях Office. В приведенной ниже таблице перечислены наборы обязательных элементов API удостоверений, ведущие приложения Office, которые их поддерживают, а также номера сборок или версий для этих приложений.
 
-|  Набор обязательных элементов  | Office 2013 или более поздней версии в Windows<br>(единовременная покупка) | Office для Windows<br>(версия, подключенная к подписке на Office 365) |  Office для iPad<br>(версия, подключенная к подписке на Office 365)  |  Office для Mac<br>(версия, подключенная к подписке на Office 365)  | Office в Интернете  | SharePoint Online | OneDrive.com |Outlook.com и Exchange Online|
+|  Набор обязательных элементов  | Office 2013 или более поздней версии для Windows<br>(единовременная покупка) | Office для Windows<br>(версия, подключенная к подписке на Office 365) |  Office для iPad<br>(версия, подключенная к подписке на Office 365)  |  Office для Mac<br>(версия, подключенная к подписке на Office 365)  | Office в Интернете  | SharePoint Online | OneDrive.com |Outlook.com и Exchange Online|
 |:-----|-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
 | Предварительный просмотр IdentityAPI  | Недоступно | Предварительный просмотр<b>*</b> | Скоро | Предварительный просмотр<b>*</b> | Предварительный просмотр<b>* &#8224;</b> | Предварительный просмотр<b>* &#8224;</b>| Скоро | Скоро |
 
@@ -25,11 +25,11 @@ ms.locfileid: "38301927"
 >
 > **&#8224;** Надстройки, использующие API единого входа на этих платформах, будут работать только в том случае, если администратор клиента предоставил согласие на надстройку. Пользователь не может предоставить согласие даже в свой профиль Azure AD.
 
+## <a name="office-versions-and-build-numbers"></a>Номера версий и сборок Office
+
 Статьи и разделы с дополнительными сведениями о версиях, номерах сборок и Office Online Server:
 
-- [Номера версий и сборок выпусков из канала обновления для клиентов Office 365](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7);
-- [Какая у меня версия Office](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19);
-- [Где можно найти номера версии и сборки клиентского приложения Office 365](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7);
+[!INCLUDE [Links to get Office versions and how to find Office client version](../../includes/links-get-office-versions-builds.md)]
 - [Обзор Office Online Server](/officeonlineserver/office-online-server-overview)
 
 ## <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
@@ -42,6 +42,6 @@ ms.locfileid: "38301927"
 
 ## <a name="see-also"></a>См. также
 
-- [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets)
-- [Указание ведущих приложений Office и обязательных элементов API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
-- [XML-манифест надстроек Office](/office/dev/add-ins/develop/add-in-manifests)
+- [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md)
+- [Указание ведущих приложений Office и обязательных элементов API](../../develop/specify-office-hosts-and-api-requirements.md)
+- [XML-манифест надстроек Office](../../develop/add-in-manifests.md)

@@ -3,12 +3,12 @@ title: Работа с содержимым страницы в OneNote
 description: ''
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: f60cdee7eb549acc0f2c84a1aa9acea7fe77274a
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 94c12815823e2860615fc731f460f08a468756e6
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32448443"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596860"
 ---
 # <a name="work-with-onenote-page-content"></a>Работа с содержимым страницы в OneNote
 
@@ -61,6 +61,6 @@ ms.locfileid: "32448443"
 ## <a name="see-also"></a>См. также
 
 - [Обзор API JavaScript для OneNote](onenote-add-ins-programming-overview.md)
-- [Справочник по API JavaScript для OneNote](/office/dev/add-ins/reference/overview/onenote-add-ins-javascript-reference)
+- [Справочник по API JavaScript для OneNote](../reference/overview/onenote-add-ins-javascript-reference.md)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)

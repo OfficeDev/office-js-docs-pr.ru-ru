@@ -3,12 +3,12 @@ title: Элемент WebApplicationInfo в файле манифеста
 description: ''
 ms.date: 08/12/2019
 localization_priority: Normal
-ms.openlocfilehash: e10aee1bf3fb99099d282acd428fa0348229701c
-ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
+ms.openlocfilehash: b6cf82776f683929845df83c642b28ad024d665a
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "36477868"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596734"
 ---
 # <a name="webapplicationinfo-element"></a>Элемент WebApplicationInfo
 
@@ -18,7 +18,7 @@ ms.locfileid: "36477868"
 - *Клиент* OAuth 2.0, которому могут потребоваться разрешения для Microsoft Graph.
 
 > [!NOTE]
-> В настоящее время API единого входа поддерживается в тестовом режиме для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API удостоверений](/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить современную проверку подлинности для клиента](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> В настоящее время API единого входа поддерживается в тестовом режиме для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API удостоверений](../requirement-sets/identity-api-requirement-sets.md). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить современную проверку подлинности для клиента](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 **WebApplicationInfo** — дочерний элемент элемента [VersionOverrides](versionoverrides.md) в манифесте.  
 
@@ -30,7 +30,7 @@ ms.locfileid: "36477868"
 |  **мсаид**    |  Нет   |  Идентификатор клиента веб-приложения надстройки для MSA, зарегистрированного в msm.live.com.|
 |  **Resource**  |  Да   |  Указывает **URI идентификатора** надстройки, зарегистрированный в конечной точке Azure Active Directory 2.0.|
 |  [Scopes](scopes.md)                |  Да  |  Задает разрешения, необходимые надстройке для ресурса, например Microsoft Graph.  |
-|  [Авторизации](authorizations.md)  |  Нет   | Указывает внешние ресурсы, к которым веб-приложению надстройки требуется авторизация, и необходимые разрешения.|
+|  [Authorizations](authorizations.md)  |  Нет   | Указывает внешние ресурсы, к которым веб-приложению надстройки требуется авторизация, и необходимые разрешения.|
 
 ## <a name="webapplicationinfo-example"></a>Пример WebApplicationInfo
 

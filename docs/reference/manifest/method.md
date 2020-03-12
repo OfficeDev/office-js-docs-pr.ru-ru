@@ -3,12 +3,12 @@ title: Элемент Method в файле манифеста
 description: ''
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 2bcc24abf269f5d6c44c03e738bac480fd05d5ca
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: 74b7a8b3d0f8511d21eb0df150500850e8b93fe9
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42324850"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596895"
 ---
 # <a name="method-element"></a>Элемент Method
 
@@ -32,10 +32,9 @@ ms.locfileid: "42324850"
 |:-----|:-----|:-----|:-----|
 |Имя|string|Обязательный|Указывает имя необходимого метода, соответствующее его родительскому объекту. Например, чтобы указать `getSelectedDataAsync` метод, необходимо указать. `"Document.getSelectedDataAsync"`|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-Элементы `Methods` и `Method` не поддерживаются почтовыми надстройками. Дополнительные сведения о наборах требований: [версии и наборы](/office/dev/add-ins/develop/office-versions-and-requirement-sets)обязательных элементов для Office.
+Элементы `Methods` и `Method` не поддерживаются почтовыми надстройками. Дополнительные сведения о наборах требований: [версии и наборы](../../develop/office-versions-and-requirement-sets.md)обязательных элементов для Office.
 
-> [!IMPORTANT] 
-> Минимальную версию невозможно указать для отдельных методов. Чтобы убедиться, что метод доступен в среде выполнения, при вызове этого метода в сценарии надстройки следует также использовать оператор **if**. Дополнительные сведения о том, как это сделать, можно узнать в статье Общие сведения об [API JavaScript для Office](/office/dev/add-ins/develop/understanding-the-javascript-api-for-office).
-
+> [!IMPORTANT]
+> Минимальную версию невозможно указать для отдельных методов. Чтобы убедиться, что метод доступен в среде выполнения, при вызове этого метода в сценарии надстройки следует также использовать оператор **if**. Дополнительные сведения о том, как это сделать, можно узнать в статье Общие сведения об [API JavaScript для Office](../../develop/understanding-the-javascript-api-for-office.md).

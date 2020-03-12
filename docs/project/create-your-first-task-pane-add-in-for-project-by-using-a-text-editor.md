@@ -3,12 +3,12 @@ title: Создание первой надстройки области зад�
 description: ''
 ms.date: 10/11/2019
 localization_priority: Normal
-ms.openlocfilehash: 821c2922bd51657f89a82a58f388f8c4616de45f
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: 9c742374dec8db92e076f05d8c65712d62c72a42
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42324907"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596818"
 ---
 # <a name="create-your-first-task-pane-add-in-for-microsoft-project-by-using-a-text-editor"></a>Создание первой надстройки области задач для Microsoft Project с помощью текстового редактора
 
@@ -109,7 +109,7 @@ ms.locfileid: "42324907"
 
    Следующий код позволяет получить контекст приложения и сведения о документе с помощью функций в файле Office.js. `text` Объект — это идентификатор `textarea` элемента управления в HTML-файле.
 
-   Переменная ** \_прождок** инициализируется с помощью `ProjectDocument` объекта. Код включает некоторые простые функции обработки ошибок и `getContextValues` функцию, которая получает контекст приложения и свойства контекста документа проекта. For more information about the JavaScript object model for Project, see [JavaScript API for Office](/office/dev/add-ins/reference/javascript-api-for-office).
+   Переменная ** \_прождок** инициализируется с помощью `ProjectDocument` объекта. Код включает некоторые простые функции обработки ошибок и `getContextValues` функцию, которая получает контекст приложения и свойства контекста документа проекта. For more information about the JavaScript object model for Project, see [JavaScript API for Office](../reference/javascript-api-for-office.md).
 
 
     ```js
@@ -172,7 +172,7 @@ ms.locfileid: "42324907"
     }
     ```
 
-   Сведения о функциях в файле Office. Debug. js можно найти в статье [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office). Например, `getDocumentUrl` функция возвращает URL-адрес или путь к файлу открытого проекта.
+   Сведения о функциях в файле Office. Debug. js можно найти в статье [API JavaScript для Office](../reference/javascript-api-for-office.md). Например, `getDocumentUrl` функция возвращает URL-адрес или путь к файлу открытого проекта.
 
 3. Добавьте функции JavaScript, которые вызывают асинхронные функции из файлов Office.js и Project-15.js для получения выбранных данных.
 
@@ -1096,6 +1096,6 @@ function logMethodError(methodName, errorName, errorMessage, actionMessage) {
 
 - [Надстройки области задач для Project](../project/project-add-ins.md)
 - [Общие сведения об API JavaScript для надстроек](../develop/understanding-the-javascript-api-for-office.md)
-- [Надстройки API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office)
+- [Надстройки API JavaScript для Office](../reference/javascript-api-for-office.md)
 - [Справка по схеме для манифестов надстроек Office (версия 1.1)](../develop/add-in-manifests.md)
 - [Загрузка пакета SDK для Project 2013](https://www.microsoft.com/download/details.aspx?id=30435%20)

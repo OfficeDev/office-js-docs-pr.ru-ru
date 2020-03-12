@@ -3,12 +3,12 @@ title: Обновление схемы манифеста надстройки A
 description: Обновление до версии 1.1 файлов JavaScript (Office.js и JS-файлов приложения) и файла проверки манифеста надстройки в проекте надстройки Office.
 ms.date: 10/11/2019
 localization_priority: Normal
-ms.openlocfilehash: a8f1193d571278531eae169b12bc56e0e560e62e
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: ccb6dade39850a656326482c3abc824ecfb6637e
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42324654"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596587"
 ---
 # <a name="update-to-the-latest-office-javascript-api-library-and-version-11-add-in-manifest-schema"></a>Обновление схемы манифеста надстройки API JavaScript для Office и версии 1,1 до последней версии
 
@@ -75,7 +75,7 @@ ms.locfileid: "42324654"
 ```
 
 > [!NOTE]
-> После обновления версии схемы манифеста надстройки до 1,1 необходимо удалить элементы **capabilities** и **capability** и заменить их на элементы [hosts](/office/dev/add-ins/reference/manifest/hosts) и [Host](/office/dev/add-ins/reference/manifest/host) , а также [элементы требований и требований](specify-office-hosts-and-api-requirements.md).
+> После обновления версии схемы манифеста надстройки до 1,1 необходимо удалить элементы **capabilities** и **capability** и заменить их на элементы [hosts](../reference/manifest/hosts.md) и [Host](../reference/manifest/host.md) , а также [элементы требований и требований](specify-office-hosts-and-api-requirements.md).
 
 ## <a name="updating-an-office-add-in-project-created-with-a-text-editor-or-other-ide"></a>Обновление проекта надстройки Office, созданного с помощью текстового редактора или другой среды IDE
 
@@ -118,11 +118,11 @@ ms.locfileid: "42324654"
 ```
 
 > [!NOTE]
-> После обновления версии схемы манифеста надстройки до 1,1 необходимо удалить элементы **capabilities** и **capability** и заменить их на элементы [hosts](/office/dev/add-ins/reference/manifest/hosts) и [Host](/office/dev/add-ins/reference/manifest/host) , а также [элементы требований и требований](specify-office-hosts-and-api-requirements.md).
+> После обновления версии схемы манифеста надстройки до 1,1 необходимо удалить элементы **capabilities** и **capability** и заменить их на элементы [hosts](../reference/manifest/hosts.md) и [Host](../reference/manifest/host.md) , а также [элементы требований и требований](specify-office-hosts-and-api-requirements.md).
 
 ## <a name="see-also"></a>См. также
 
 - [Указание ведущих приложений Office и требований к API](specify-office-hosts-and-api-requirements.md) ]
-- [Общие сведения об интерфейсе API JavaScript для Office](understanding-the-javascript-api-for-office.md)
-- [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office)
+- [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)
+- [API JavaScript для Office](../reference/javascript-api-for-office.md)
 - [Справка по схеме для манифестов надстроек Office (версия 1.1)](../develop/add-in-manifests.md)

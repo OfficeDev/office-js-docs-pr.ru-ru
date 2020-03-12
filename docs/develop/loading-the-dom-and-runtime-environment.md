@@ -1,14 +1,14 @@
 ---
 title: Загрузка модели DOM и среды выполнения
 description: ''
-ms.date: 07/01/2019
+ms.date: 03/10/2020
 localization_priority: Normal
-ms.openlocfilehash: 06b3e9d65d29b257d34d2f4bdad81f464056e558
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: 15e2b94275d6a4d4de689ce9524b2731f044d425
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42325124"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596671"
 ---
 # <a name="loading-the-dom-and-runtime-environment"></a>Загрузка модели DOM и среды выполнения
 
@@ -32,7 +32,7 @@ ms.locfileid: "42325124"
 
 4. Элемент управления браузером загружает DOM и основной текст HTML и вызывает обработчик события для `window.onload` события.
 
-5. Ведущее приложение Office загружает среду выполнения, которая загружает и кэширует API JavaScript для файлов библиотеки JavaScript с сервера сети доставки содержимого, а затем вызывает обработчик события [инициализации](/javascript/api/office#office-initialize-reason-) объекта [Office](/javascript/api/office), если ему назначен обработчик. В это время также проверяется, выполнялась ли передача (или связывание) любых обратных вызовов (или связанных функций `then()`) обработчику `Office.onReady`. Дополнительные сведения о различии между `Office.initialize` и `Office.onReady` см. в статье [Инициализация надстройки](/office/dev/add-ins/develop/understanding-the-javascript-api-for-office#initializing-your-add-in).
+5. Ведущее приложение Office загружает среду выполнения, которая загружает и кэширует API JavaScript для файлов библиотеки JavaScript с сервера сети доставки содержимого, а затем вызывает обработчик события [инициализации](/javascript/api/office#office-initialize-reason-) объекта [Office](/javascript/api/office), если ему назначен обработчик. В это время также проверяется, выполнялась ли передача (или связывание) любых обратных вызовов (или связанных функций `then()`) обработчику `Office.onReady`. Для получения дополнительных сведений о различии `Office.initialize` между `Office.onReady`и см [.](initialize-add-in.md)
 
 6. После завершения загрузки DOM и основного текста HTML и инициализации надстройки запускается основная функция надстройки.
 
@@ -55,7 +55,7 @@ ms.locfileid: "42325124"
 
 5. Элемент управления браузером загружает DOM и основной текст HTML и вызывает обработчик события для `onload` события.
 
-6. Outlook загружает среду выполнения, которая загружает и кэширует API JavaScript для файлов библиотеки JavaScript с сервера сети доставки содержимого, а затем вызывает обработчик события [инициализации](/javascript/api/office#office-initialize-reason-) объекта [Office](/javascript/api/office) надстройки, если ему назначен обработчик. В это время также проверяется, выполнялась ли передача (или связывание) любых обратных вызовов (или связанных функций `then()`) обработчику `Office.onReady`. Дополнительные сведения о различии между `Office.initialize` и `Office.onReady` см. в статье [Инициализация надстройки](/office/dev/add-ins/develop/understanding-the-javascript-api-for-office#initializing-your-add-in).
+6. Outlook загружает среду выполнения, которая загружает и кэширует API JavaScript для файлов библиотеки JavaScript с сервера сети доставки содержимого, а затем вызывает обработчик события [инициализации](/javascript/api/office#office-initialize-reason-) объекта [Office](/javascript/api/office) надстройки, если ему назначен обработчик. В это время также проверяется, выполнялась ли передача (или связывание) любых обратных вызовов (или связанных функций `then()`) обработчику `Office.onReady`. Для получения дополнительных сведений о различии `Office.initialize` между `Office.onReady`и см [.](initialize-add-in.md)
 
 7. После завершения загрузки DOM и основного текста HTML и инициализации надстройки запускается основная функция надстройки.
 
@@ -93,7 +93,7 @@ Office.initialize = function () {
 
 Этот же метод можно использовать в обработчиках `onReady` или `initialize` в обработчиках любой надстройки Office.
 
-В примере надстройки Outlook "Телефон" показан несколько другой подход, использующий только JavaScript для проверки тех же условий. 
+В примере надстройки Outlook "Телефон" показан несколько другой подход, использующий только JavaScript для проверки тех же условий.
 
 > [!IMPORTANT]
 > Даже если у надстройки нет задач инициализации, необходимо включить по крайней мере вызов `Office.onReady` или назначить минимальную `Office.initialize` функцию обработчика событий, как показано в следующих примерах.
@@ -112,5 +112,5 @@ Office.initialize = function () {
 
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения об интерфейсе API JavaScript для Office](understanding-the-javascript-api-for-office.md)
+- [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)
 - [Инициализация надстройки Office](initialize-add-in.md)

@@ -3,12 +3,12 @@ title: Поддержка API JavaScript для Office для контентны
 description: ''
 ms.date: 02/27/2020
 localization_priority: Normal
-ms.openlocfilehash: a9eb67ca78f89888860ff3ed11ae1632ff62b690
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: 043ce34b05b3b158dcf4162fb49cfe94a791dad1
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42323824"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596657"
 ---
 # <a name="office-javascript-api-support-for-content-and-task-pane-add-ins-in-office-2013"></a>Поддержка API JavaScript для Office для контентных надстроек и надстроек области задач в Office 2013
 
@@ -18,7 +18,7 @@ ms.locfileid: "42323824"
 
 1. **Общие объекты, которые используются совместно с другими надстройками Office.** К этим объектам относятся [Office](/javascript/api/office), [context](/javascript/api/office/office.context)и [asyncResult](/javascript/api/office/office.asyncresult). `Office` Объект является корневым объектом API JavaScript для Office. `Context` Объект представляет среду выполнения надстройки. Оба `Office` и `Context` являются основными объектами для любой надстройки Office. `AsyncResult` Объект представляет результаты асинхронной операции, например данные, возвращенные в `getSelectedDataAsync` метод, который считывает сведения о том, что пользователь выбрал в документе.
 
-2. **Объект Document.** Большей частью API, доступной для контентных надстроек и надстроек области задач, можно воспользоваться с помощью методов, свойств и событий объекта [Document](/javascript/api/office/office.document). Контентная надстройка или надстройка области задач может использовать свойство [Office.context.document](/javascript/api/office/office.context#document) для доступа к объекту **Document** и с его помощью получать доступ к ключевым компонентам API для работы с данными в документах, например к объектам [Bindings](/javascript/api/office/office.bindings) и [CustomXmlParts](/javascript/api/office/office.customxmlparts) и методам [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-), [setSelectedDataAsync](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-)и [getFileAsync](/javascript/api/office/office.document#getfileasync-filetype--options--callback-). Объект также предоставляет свойство [mode](/javascript/api/office/office.document#mode) для определения того, является ли документ предназначен только для чтения или находится в режиме редактирования, свойство [URL](/javascript/api/office/office.document#url) для получения URL-адреса текущего документа и доступа к объекту Settings. [](/javascript/api/office/office.settings) `Document` `Document` Объект также поддерживает добавление обработчиков событий для события [SelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) , чтобы можно было обнаружить, когда пользователь изменяет свой выбор в документе.
+2. **Объект Document.** Большей частью API, доступной для контентных надстроек и надстроек области задач, можно воспользоваться с помощью методов, свойств и событий объекта [Document](/javascript/api/office/office.document). Контентная надстройка или надстройка области задач может использовать свойство [Office.context.document](/javascript/api/office/office.context#document) для доступа к объекту **Document** и с его помощью получать доступ к ключевым компонентам API для работы с данными в документах, например к объектам [Bindings](/javascript/api/office/office.bindings) и [CustomXmlParts](/javascript/api/office/office.customxmlparts) и методам [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-), [setSelectedDataAsync](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-)и [getFileAsync](/javascript/api/office/office.document#getfileasync-filetype--options--callback-). Объект также предоставляет свойство [mode](/javascript/api/office/office.document#mode) для определения того, является ли документ предназначен только для чтения или находится в режиме редактирования, свойство [URL](/javascript/api/office/office.document#url) для получения URL-адреса текущего документа и доступа к объекту Settings. [Settings](/javascript/api/office/office.settings) `Document` `Document` Объект также поддерживает добавление обработчиков событий для события [SelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) , чтобы можно было обнаружить, когда пользователь изменяет свой выбор в документе.
 
    Надстройка области задач или контентная надстройка может получать `Document` доступ к объекту только после загрузки модели DOM и среды выполнения, обычно в обработчике события для события [Office. Initialize](/javascript/api/office) . Сведения о потоке событий при инициализации надстройки и проверке успешности загрузки модели DOM и среды выполнения см. в разделе [Loading the DOM and runtime environment](loading-the-dom-and-runtime-environment.md).
 
@@ -67,7 +67,7 @@ function write(message){
 
 ## <a name="binding-to-a-region-in-a-document-or-spreadsheet"></a>Привязка к областям в документе или электронной таблице
 
-Можно использовать методы `getSelectedDataAsync` и `setSelectedDataAsync` для чтения или записи в выделенный фрагмент пользователя в ** документе, электронной таблице или презентации. Тем не менее если вам необходимо обращаться к одной области документа в различных сеансах запущенной надстройки, не принуждая пользователя делать выбор, сначала потребуется создать привязку к этой области. Вы также сможете подписаться на события изменения данных и выделения только для этой привязанной области.
+Можно использовать методы `getSelectedDataAsync` и `setSelectedDataAsync` для чтения или записи в выделенный фрагмент пользователя в *current* документе, электронной таблице или презентации. Тем не менее если вам необходимо обращаться к одной области документа в различных сеансах запущенной надстройки, не принуждая пользователя делать выбор, сначала потребуется создать привязку к этой области. Вы также сможете подписаться на события изменения данных и выделения только для этой привязанной области.
 
 Привязку можно добавить с помощью методов [addFromNamedItemAsync](/javascript/api/office/office.bindings#addfromnameditemasync-itemname--bindingtype--options--callback-), [addFromPromptAsync](/javascript/api/office/office.bindings#addfrompromptasync-bindingtype--options--callback-) или [addFromSelectionAsync](/javascript/api/office/office.bindings#addfromselectionasync-bindingtype--options--callback-) объекта [Bindings](/javascript/api/office/office.bindings). Они возвращают идентификатор, который можно использовать для доступа к данным в привязке или для подписки на события изменения данных или выделения в привязанной области.
 
@@ -165,6 +165,6 @@ Office.context.document.settings.set('themeColor', 'green');
 
 ## <a name="see-also"></a>См. также
 
-- [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office)
+- [API JavaScript для Office](../reference/javascript-api-for-office.md)
 - [Справочная схема по манифестам надстроек для Office](../develop/add-in-manifests.md)
 - [Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office](../testing/testing-and-troubleshooting.md)

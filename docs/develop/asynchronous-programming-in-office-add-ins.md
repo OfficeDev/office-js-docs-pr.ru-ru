@@ -3,12 +3,12 @@ title: Асинхронное программирование в случае �
 description: ''
 ms.date: 02/27/2020
 localization_priority: Normal
-ms.openlocfilehash: fc39bddbe050f8253769a0013be2d48b26dcb599
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: 931ef17115885c8f96d41bf00143b3269a515d56
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42324647"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596692"
 ---
 # <a name="asynchronous-programming-in-office-add-ins"></a>Асинхронное программирование в случае надстроек Office
 
@@ -398,5 +398,5 @@ function write(message){
 
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения об интерфейсе API JavaScript для Office](understanding-the-javascript-api-for-office.md)
-- [API JavaScript для Office](/office/dev/add-ins/reference/javascript-api-for-office)
+- [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)
+- [API JavaScript для Office](../reference/javascript-api-for-office.md)

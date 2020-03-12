@@ -3,12 +3,12 @@ title: Контентные надстройки Office
 description: Контентные надстройки — это рабочие области, которые можно внедрять прямо в документы Excel или PowerPoint, что предоставляет пользователям доступ к элементам управления интерфейсом, которые выполняют код для изменения документов или отображения данных.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 53b61e5ba97e54a54ccd225745cdc2ce9086ebf8
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 7de031de864eadcd3d71fc66fcc9e59d00d3abb6
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950399"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596699"
 ---
 # <a name="content-office-add-ins"></a>Контентные надстройки Office
 
@@ -50,13 +50,13 @@ ms.locfileid: "41950399"
 
 ## <a name="support-considerations"></a>Что касается поддержки
 
-- Проверьте, будет ли ваша надстройка Office работать на [конкретной платформе Office](/office/dev/add-ins/overview/office-add-in-availability). 
-- Чтобы надстройка могла читать и записывать данные в Excel или PowerPoint, может потребоваться добавление в список доверенных. Вы можете объявить нужный [уровень разрешений](/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins) для пользователя в манифесте надстройки.  
+- Проверьте, будет ли ваша надстройка Office работать на [конкретной платформе Office](../overview/office-add-in-availability.md).
+- Чтобы надстройка могла читать и записывать данные в Excel или PowerPoint, может потребоваться добавление в список доверенных. Вы можете объявить нужный [уровень разрешений](../develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md) для пользователя в манифесте надстройки.  
 - Контентные надстройки поддерживаются в Excel и PowerPoint в Office 2013 и более поздних версий. Если вы откроете надстройку в версии Office, которая не поддерживает веб-надстройки, вместо надстройки будет показано изображение.
 
 ## <a name="see-also"></a>См. также
 
-- [Сведения о доступности элементов для надстроек Office, представленные с учетом ведущих приложений и платформ](/office/dev/add-ins/overview/office-add-in-availability)
-- [Office UI Fabric в надстройках Office](/office/dev/add-ins/design/office-ui-fabric)
-- [Конструктивные шаблоны для надстроек Office](/office/dev/add-ins/design/ux-design-pattern-templates)
-- [Запрос разрешений на использование API в надстройках](/office/dev/add-ins/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins)
+- [Сведения о доступности элементов для надстроек Office, представленные с учетом ведущих приложений и платформ](../overview/office-add-in-availability.md)
+- [Office UI Fabric в надстройках Office](../design/office-ui-fabric.md)
+- [Конструктивные шаблоны для надстроек Office](../design/ux-design-pattern-templates.md)
+- [Запрос разрешений на использование API в надстройках](../develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md)

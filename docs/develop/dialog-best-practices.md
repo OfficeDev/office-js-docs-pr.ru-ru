@@ -1,16 +1,16 @@
 ---
-title: Рекомендации и правила для API диалоговых окон Office
+title: Рекомендации и правила Office dialog API
 description: Содержит правила и рекомендации для API диалоговых окон Office, такие как рекомендации для одностраничного приложения (SPA)
 ms.date: 01/29/2020
 localization_priority: Normal
-ms.openlocfilehash: 7a38337ca9a263df1f8405f2883fa4481c342e6b
-ms.sourcegitcommit: 4c9e02dac6f8030efc7415e699370753ec9415c8
+ms.openlocfilehash: e684c56768cd2ca7c9b14788206c925808c90b63
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41650119"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42596601"
 ---
-# <a name="best-practices-and-rules-for-the-office-dialog-api"></a>Рекомендации и правила для API диалоговых окон Office
+# <a name="best-practices-and-rules-for-the-office-dialog-api"></a>Рекомендации и правила Office dialog API
 
 В этой статье представлены правила, проблемы и рекомендации для API диалоговых окон Office, в том числе рекомендации по разработке пользовательского интерфейса диалогового окна и использованию API в приложении с одной страницей (SPA)
 
@@ -19,11 +19,11 @@ ms.locfileid: "41650119"
 > 
 > [В диалоговом окне Office доступны также методы обработки ошибок и событий](dialog-handle-errors-events.md).
 
-## <a name="rules-and-gotchas"></a>Правила и проблемы
+## <a name="rules-and-gotchas"></a>Правила и подсказки
 
 - Диалоговое окно может только перемещаться по URL-адресам HTTPS, а не HTTP.
 - URL-адрес, передаваемый в метод [displayDialogAsync](/javascript/api/office/office.ui) , должен находиться в том же домене, что и сама надстройка. Он не может быть поддоменом. Но страница, которая передается на нее, может выполнять перенаправление на страницу в другом домене.
-- Ведущее окно, которое может быть областью задач или [файлом функции](/office/dev/add-ins/reference/manifest/functionfile) без пользовательского интерфейса команды надстройки, может одновременно открыть только одно диалоговое окно.
+- Ведущее окно, которое может быть областью задач или [файлом функции](../reference/manifest/functionfile.md) без пользовательского интерфейса команды надстройки, может одновременно открыть только одно диалоговое окно.
 - В диалоговом окне можно вызывать только два интерфейса API Office:
   - Функция [messageParent](/javascript/api/office/office.ui#messageparent-message-) .
   - `Office.context.requirements.isSetSupported`(Дополнительные сведения см. в разделе [Указание ведущих приложений Office и требований к API](specify-office-hosts-and-api-requirements.md).)
@@ -33,7 +33,7 @@ ms.locfileid: "41650119"
 
 ### <a name="avoid-overusing-dialog-boxes"></a>Избегайте переиспользования диалоговых окон
 
-Так как перекрывающиеся элементы интерфейса пользователя не рекомендуются, не открывайте диалоговое окно из области задач, если это не требуется для вашего сценария. При планировании контактной зоны помните, что в области задач можно использовать вкладки. Например, как в [надстройке SalesTracker на JavaScript для Excel](https://github.com/OfficeDev/Excel-Add-in-JavaScript-SalesTracker).
+Поскольку перекрывающиеся элементы пользовательского интерфейса не приветствуются, избегайте открытия диалогового окна на панели задач, если это не требуется в сценарий. При планировании контактной зоны помните, что в области задач можно использовать вкладки. Например, как в [надстройке JavaScript SalesTracker для Excel](https://github.com/OfficeDev/Excel-Add-in-JavaScript-SalesTracker).
 
 ### <a name="designing-a-dialog-box-ui"></a>Разработка пользовательского интерфейса диалогового окна
 

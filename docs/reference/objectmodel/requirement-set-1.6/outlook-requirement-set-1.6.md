@@ -3,19 +3,19 @@ title: Набор обязательных элементов API для над�
 description: ''
 ms.date: 02/19/2020
 localization_priority: Normal
-ms.openlocfilehash: 624d693eab54eea96f93d4ec8301cfb2d4c50c8b
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: 759286abe16e5bc32d6fd9ba1bb0e344d9d0a91c
+ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42325194"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42597035"
 ---
 # <a name="outlook-add-in-api-requirement-set-16"></a>Набор обязательных элементов API для надстройки Outlook 1.6
 
 Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.
 
 > [!NOTE]
-> В этой документации рассматривается не последняя версия [набора обязательных элементов](/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets).
+> В этой документации рассматривается не последняя версия [набора обязательных элементов](../../requirement-sets/outlook-api-requirement-sets.md).
 
 ## <a name="whats-new-in-16"></a>Новые возможности в версии 1.6
 

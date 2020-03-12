@@ -4,11 +4,11 @@ description: Области задач предоставляют пользов
 ms.date: 01/14/2020
 localization_priority: Normal
 ms.openlocfilehash: 048c6a508a9d8106d129469880396a564b26aea4
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.sourcegitcommit: 6c7c98f085dd20f827e0c388e672993412944851
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950469"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "42554680"
 ---
 # <a name="task-panes-in-office-add-ins"></a>Области задач в надстройках Office
  
