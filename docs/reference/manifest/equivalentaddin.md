@@ -1,14 +1,14 @@
 ---
 title: Элемент Екуивалентаддин в файле манифеста
-description: ''
+description: Задает обратную совместимость для эквивалентной надстройки COM или XLL.
 ms.date: 06/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 33cfb8b73e050fad7e392e0234962d346e903713
-ms.sourcegitcommit: 4bf5159a3821f4277c07d89e88808c4c3a25ff81
+ms.openlocfilehash: 425b926901b7325665eeede04263f74e4b854d50
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "35059925"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42718288"
 ---
 # <a name="equivalentaddin-element"></a>Элемент Екуивалентаддин
 
@@ -34,7 +34,7 @@ ms.locfileid: "35059925"
 
 ## <a name="can-contain"></a>Может содержать
 
-[](progid.md)
+[ProgId](progid.md)
 [Имя файла](filename.md) ProgID
 
 ## <a name="remarks"></a>Примечания

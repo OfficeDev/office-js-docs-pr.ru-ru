@@ -1,14 +1,14 @@
 ---
 title: Элемент FileName в файле манифеста
-description: ''
+description: Указывает имя файла эквивалентного XLL для настраиваемых функций в веб-надстройке.
 ms.date: 05/03/2019
 localization_priority: Normal
-ms.openlocfilehash: 691f57e99d93c35bdf65bd673f131eab15464450
-ms.sourcegitcommit: ff73cc04e5718765fcbe74181505a974db69c3f5
+ms.openlocfilehash: a2a4dac08038a30d69fd8818f3f030adebe0728b
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "33628062"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42718218"
 ---
 # <a name="filename-element"></a>Элемент FileName
 
@@ -27,7 +27,7 @@ ms.locfileid: "33628062"
 [Екуивалентадд](equivalentaddin.md)
 
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительные ресурсы
 
-- [Обеспечение совместимости пользовательских функций с пользовательскими функциями XLL](../../excel/make-custom-functions-compatible-with-xll-udf.md)
+- [Создание пользовательских функций, совместимых с функциями XLL, определенными пользователями](../../excel/make-custom-functions-compatible-with-xll-udf.md)
 - [Обеспечение совместимости надстройки Excel с существующей надстройкой COM](../../develop/make-office-add-in-compatible-with-existing-com-add-in.md)

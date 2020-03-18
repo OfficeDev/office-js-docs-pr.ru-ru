@@ -1,14 +1,14 @@
 ---
 title: Элемент Event в файле манифеста
-description: ''
+description: Определяет обработчик событий в надстройке.
 ms.date: 10/09/2018
 localization_priority: Normal
-ms.openlocfilehash: 51bbcd5a3d5abe60b850e88e4063e6bbc2da37bc
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 02037a54ad4b7e91a3697b53b04fa30e8a4909a9
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450592"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42718232"
 ---
 # <a name="event-element"></a>Элемент Event
 
@@ -21,8 +21,8 @@ ms.locfileid: "32450592"
 
 |  Атрибут  |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  [Type](#type-attribute)  |  Да  | Задает обрабатываемое событие. |
-|  [Функтионексекутион](#functionexecution-attribute)  |  Да  | Задает способ выполнения обработчика событий (асинхронное или синхронное). В настоящее время поддерживаются только синхронные обработчики событий. |
+|  [Тип](#type-attribute)  |  Да  | Задает обрабатываемое событие. |
+|  [функтионексекутион](#functionexecution-attribute)  |  Да  | Задает способ выполнения обработчика событий (асинхронное или синхронное). В настоящее время поддерживаются только синхронные обработчики событий. |
 |  [FunctionName](#functionname-attribute)  |  Да  | Задает имя функции для обработчика событий. |
 
 ### <a name="type-attribute"></a>Атрибут Type

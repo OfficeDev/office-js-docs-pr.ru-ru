@@ -1,14 +1,14 @@
 ---
 title: Элемент Екстендедпермиссионс в файле манифеста
-description: ''
+description: Определяет коллекцию расширенных разрешений, необходимых надстройке для доступа к связанным API или функциям.
 ms.date: 03/05/2020
 localization_priority: Normal
-ms.openlocfilehash: 966378b8bbed66960d7a99c4a82df75ace1c9161
-ms.sourcegitcommit: a0262ea40cd23f221e69bcb0223110f011265d13
+ms.openlocfilehash: 86d898052af6ba0e6f6bc8b341fff9f0f8408967
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "42605814"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42718225"
 ---
 # <a name="extendedpermissions-element"></a>Элемент Екстендедпермиссионс
 
@@ -21,7 +21,7 @@ ms.locfileid: "42605814"
 
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----:|:-----|
-|  [екстендедпермиссион](extendedpermission.md)    |  Нет   | Определяет расширенное разрешение, необходимое надстройке для доступа к связанному API или функции. |
+|  [ExtendedPermission](extendedpermission.md)    |  Нет   | Определяет расширенное разрешение, необходимое надстройке для доступа к связанному API или функции. |
 
 ## <a name="extendedpermissions-example"></a>`ExtendedPermissions`Примеры
 
@@ -61,4 +61,4 @@ ms.locfileid: "42605814"
 
 ## <a name="can-contain"></a>Может содержать
 
-[екстендедпермиссион](extendedpermission.md)
+[ExtendedPermission](extendedpermission.md)
