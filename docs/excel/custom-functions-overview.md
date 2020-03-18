@@ -1,16 +1,16 @@
 ---
 ms.date: 12/28/2019
-description: Создание пользовательских функций в Excel с помощью JavaScript.
+description: Создайте пользовательскую функцию Excel для своей надстройки Office
 title: Создание пользовательских функций в Excel
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 331fe37bdeed55123cb1530f235fc31c00735548
-ms.sourcegitcommit: abe8188684b55710261c69e206de83d3a6bd2ed3
+ms.openlocfilehash: f82e99f943b446e546e995f41d104252f8ee6295
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "40969554"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42719492"
 ---
 # <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel 
 
