@@ -3,12 +3,12 @@ ms.date: 07/15/2019
 description: Узнайте, как использовать различные параметры в пользовательских функциях, таких как диапазоны Excel, необязательные параметры, контекст вызова и многое другое.
 title: Параметры для пользовательских функций Excel
 localization_priority: Normal
-ms.openlocfilehash: e5b75b098d64d5998b0393d5995896f0289337fc
-ms.sourcegitcommit: bb44c9694f88cde32ffbb642689130db44456964
+ms.openlocfilehash: 1b4097e1190c5d9dc284393d1321c8e2d6c1a8a4
+ms.sourcegitcommit: a0262ea40cd23f221e69bcb0223110f011265d13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "35771426"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42689070"
 ---
 # <a name="custom-functions-parameter-options"></a>Параметры параметров пользовательских функций
 
@@ -20,7 +20,7 @@ ms.locfileid: "35771426"
 
 В то время как обычные параметры являются обязательными, необязательные параметры — нет. Если пользователь вызывает функцию в Excel, необязательные параметры отображаются в квадратных скобках. В приведенном ниже примере функция Add может дополнительно добавить третий номер. Эта функция отображается как `=CONTOSO.ADD(first, second, [third])` в Excel.
 
-#### <a name="javascripttabjavascript"></a>[JavaScript](#tab/javascript)
+#### <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 ```js
 /**
@@ -39,7 +39,7 @@ function add(first, second, third) {
 }
 ```
 
-#### <a name="typescripttabtypescript"></a>[TypeScript](#tab/typescript)
+#### <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 /**
@@ -65,7 +65,7 @@ function add(first: number, second: number, third?: number): number {
 
 При определении функции, которая содержит один или несколько необязательных параметров, следует указать, что происходит, если необязательные параметры имеют значение null. В приведенном ниже примере `zipCode` и `dayOfWeek` являются необязательными параметрами для функции `getWeatherReport`. Если `zipCode` параметр имеет значение null, для `98052`него устанавливается значение по умолчанию. Если `dayOfWeek` параметр имеет значение null, ему присваивается значение среда.
 
-#### <a name="javascripttabjavascript"></a>[JavaScript](#tab/javascript)
+#### <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 ```js
 /**
@@ -89,7 +89,7 @@ function getWeatherReport(zipCode, dayOfWeek) {
 }
 ```
 
-#### <a name="typescripttabtypescript"></a>[TypeScript](#tab/typescript)
+#### <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 /**
@@ -225,7 +225,7 @@ function addSingleRange(singleRange) {
 
 В JavaScript используйте `@param values {number[]}` одномерные массивы, `@param <name> {number[][]}` для двумерных массивов и т. д. для дополнительных измерений.
 
-Для созданного вручную JSON убедитесь, что параметр указан как `"repeating": true` в файле JSON, а также проверьте, что параметры помечены как. `"dimensionality”: matrix`
+Для созданного вручную JSON убедитесь, что параметр указан как `"repeating": true` в файле JSON, а также проверьте, что параметры помечены как. `"dimensionality": matrix`
 
 >[!NOTE]
 >Функции, содержащие повторяющиеся параметры, автоматически содержат параметр вызова в качестве последнего параметра. Дополнительные сведения о параметрах вызова можно найти в следующем разделе.
@@ -255,7 +255,7 @@ function add(first, second, invocation) {
 
 В некоторых случаях необходимо получить адрес ячейки, которая вызвала пользовательскую функцию. Это полезно в следующих сценариях:
 
-- Диапазоны форматирования: используйте адрес ячейки в качестве ключа для хранения информации в [оффицерунтиме. Storage](/office/dev/add-ins/excel/custom-functions-runtime#storing-and-accessing-data). После этого используйте событие [onCalculated](/javascript/api/excel/excel.worksheet#oncalculated) в Excel, чтобы загрузить ключ из `OfficeRuntime.storage`.
+- Диапазоны форматирования: используйте адрес ячейки в качестве ключа для хранения информации в [оффицерунтиме. Storage](../excel/custom-functions-runtime.md#storing-and-accessing-data). После этого используйте событие [onCalculated](/javascript/api/excel/excel.worksheet#oncalculated) в Excel, чтобы загрузить ключ из `OfficeRuntime.storage`.
 - Отображение кэшированных значений. Если функция используется в автономном режиме, отображайте сохраненные в кэше значения из `OfficeRuntime.storage` с помощью `onCalculated`.
 - Сверка: используйте адрес ячейки, чтобы найти исходную ячейку, чтобы упростить сверку при выполнении обработки.
 

@@ -5,11 +5,11 @@ ms.date: 01/16/2020
 ms.prod: excel
 localization_priority: Priority
 ms.openlocfilehash: 9c8cfedd5f8219f2105456597d43201068b4c21e
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.sourcegitcommit: a0262ea40cd23f221e69bcb0223110f011265d13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950504"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42689062"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -61,7 +61,7 @@ ms.locfileid: "41950504"
 
 4. Запустите локальный веб-сервер, работающий на Node.js. Вы можете попробовать использовать надстройку пользовательской функции в Excel в Интернете или для Windows.
 
-# <a name="excel-on-windows-or-mactabexcel-windows"></a>[Excel для Windows или Mac](#tab/excel-windows)
+# <a name="excel-on-windows-or-mac"></a>[Excel для Windows или Mac](#tab/excel-windows)
 
 Чтобы проверить надстройку в Excel для Windows или Mac, выполните следующую команду. Когда вы выполните эту команду, запустится локальный веб-сервер и откроется приложение Excel, в котором будет загружена ваша надстройка.
 
@@ -69,7 +69,7 @@ ms.locfileid: "41950504"
 npm run start:desktop
 ```
 
-# <a name="excel-on-the-webtabexcel-online"></a>[Excel в Интернете](#tab/excel-online)
+# <a name="excel-on-the-web"></a>[Excel в Интернете](#tab/excel-online)
 
 Чтобы проверить надстройку в Excel в браузере, выполните следующую команду. После выполнения этой команды запустится локальный веб-сервер.
 
@@ -145,7 +145,7 @@ npm run start:web
 
 4. Чтобы повторно зарегистрировать надстройку в Excel, выполните указанные ниже действия (для Excel в Интернете, для Windows или для Mac). Выполните описанные ниже действия, чтобы новая функция стала доступной.
 
-### <a name="excel-on-windows-or-mactabexcel-windows"></a>[Excel для Windows или Mac](#tab/excel-windows)
+### <a name="excel-on-windows-or-mac"></a>[Excel для Windows или Mac](#tab/excel-windows)
 
 1. Закройте Excel, а затем откройте Excel повторно.
 
@@ -155,7 +155,7 @@ npm run start:web
     ![Вставьте ленту в Excel для Windows с выделенной надстройкой «Пользовательские функции Excel» в списке «Мои надстройки»](../images/list-starcount.png).
 
 
-# <a name="excel-on-the-webtabexcel-online"></a>[Excel в Интернете](#tab/excel-online)
+# <a name="excel-on-the-web"></a>[Excel в Интернете](#tab/excel-online)
 
 1. В Excel выберите вкладку **Вставка**, а затем выберите **Надстройки**. ![Вставьте ленту в Excel для Интернета с выделенным значком «Мои надстройки»](../images/excel-cf-online-register-add-in-1.png)
 
@@ -213,7 +213,7 @@ function clock(invocation) {
 
 3. Чтобы повторно зарегистрировать надстройку в Excel, выполните указанные ниже действия (для Excel в Интернете, для Windows или для Mac). Выполните описанные ниже действия, чтобы новая функция стала доступной. 
 
-# <a name="excel-on-windows-or-mactabexcel-windows"></a>[Excel для Windows или Mac](#tab/excel-windows)
+# <a name="excel-on-windows-or-mac"></a>[Excel для Windows или Mac](#tab/excel-windows)
 
 1. Закройте Excel, а затем откройте Excel повторно.
 
@@ -222,7 +222,7 @@ function clock(invocation) {
 3. В списке доступных надстроек найдите раздел **Надстройки разработчика** и выберите вашу надстройку **starcount**, чтобы ее зарегистрировать.
     ![Вставьте ленту в Excel для Windows с выделенной надстройкой «Пользовательские функции Excel» в списке «Мои надстройки»](../images/list-starcount.png).
 
-# <a name="excel-on-the-webtabexcel-online"></a>[Excel в Интернете](#tab/excel-online)
+# <a name="excel-on-the-web"></a>[Excel в Интернете](#tab/excel-online)
 
 1. В Excel выберите вкладку **Вставка**, а затем выберите **Надстройки**. ![Вставьте ленту в Excel для Интернета с выделенным значком «Мои надстройки»](../images/excel-cf-online-register-add-in-1.png)
 

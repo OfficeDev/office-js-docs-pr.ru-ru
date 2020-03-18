@@ -4,11 +4,11 @@ description: Запрос, потоковая передача и отмена �
 title: Получение и обработка данных с помощью пользовательских функций
 localization_priority: Normal
 ms.openlocfilehash: ca1353fcc8c9fcd79db273f0cb1d7bf3d7d58a70
-ms.sourcegitcommit: 6c7c98f085dd20f827e0c388e672993412944851
+ms.sourcegitcommit: a0262ea40cd23f221e69bcb0223110f011265d13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "42554855"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42689059"
 ---
 # <a name="receive-and-handle-data-with-custom-functions"></a>Получение и обработка данных с помощью пользовательских функций
 

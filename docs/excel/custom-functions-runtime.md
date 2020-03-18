@@ -4,11 +4,11 @@ description: Сведения об основных сценариях при р
 title: Среда выполнения для пользовательских функций Excel
 localization_priority: Normal
 ms.openlocfilehash: bb73ab2f20eadbac3f5fc97e272d69fe8bb983cd
-ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
+ms.sourcegitcommit: a0262ea40cd23f221e69bcb0223110f011265d13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "36695863"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42689018"
 ---
 # <a name="runtime-for-excel-custom-functions"></a>Среда выполнения для пользовательских функций Excel
 
@@ -125,4 +125,4 @@ function StoreValue(key, value) {
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)
 * [Архитектура пользовательских функций](custom-functions-architecture.md)
 * [Отображение диалогового окна в пользовательских функциях](custom-functions-dialog.md)
-* [Руководство по настраиваемым функциям](../tutorials/excel-tutorial-create-custom-functions.md)
+* [Руководство по пользовательским функциям](../tutorials/excel-tutorial-create-custom-functions.md)
