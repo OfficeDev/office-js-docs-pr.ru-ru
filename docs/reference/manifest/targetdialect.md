@@ -1,22 +1,22 @@
 ---
 title: Элемент TargetDialect в файле манифеста
-description: ''
+description: Элемент TargetDialect определяет региональный язык, поддерживаемый этим словарем, представленный в виде строки имени языка и региональных параметров.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 8ee97d0851c82bcd8763152a6d0cf4331e0f0bdb
-ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
+ms.openlocfilehash: ba5c43b6471f11d7599da8542c30618ea1de78e0
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42596874"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42720332"
 ---
-# <a name="targetdialect-element"></a><span data-ttu-id="851e9-102">Элемент TargetDialect</span><span class="sxs-lookup"><span data-stu-id="851e9-102">TargetDialect element</span></span>
+# <a name="targetdialect-element"></a><span data-ttu-id="603f5-103">Элемент TargetDialect</span><span class="sxs-lookup"><span data-stu-id="603f5-103">TargetDialect element</span></span>
 
-<span data-ttu-id="851e9-103">Задает поддерживаемый этим словарем региональный язык в виде строки с названием языка и региональных параметров.</span><span class="sxs-lookup"><span data-stu-id="851e9-103">Defines a regional language supported by this dictionary, represented as a culture name string.</span></span>
+<span data-ttu-id="603f5-104">Задает поддерживаемый этим словарем региональный язык в виде строки с названием языка и региональных параметров.</span><span class="sxs-lookup"><span data-stu-id="603f5-104">Defines a regional language supported by this dictionary, represented as a culture name string.</span></span>
 
-<span data-ttu-id="851e9-104">**Тип надстройки:** надстройки области задач</span><span class="sxs-lookup"><span data-stu-id="851e9-104">**Add-in type:** Task pane</span></span>
+<span data-ttu-id="603f5-105">**Тип надстройки:** надстройки области задач</span><span class="sxs-lookup"><span data-stu-id="603f5-105">**Add-in type:** Task pane</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="851e9-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="851e9-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="603f5-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="603f5-106">Syntax</span></span>
 
 ```XML
 <TargetDialect>
@@ -24,14 +24,14 @@ ms.locfileid: "42596874"
 </TargetDialect>
 ```
 
-## <a name="contained-in"></a><span data-ttu-id="851e9-106">Содержится в</span><span class="sxs-lookup"><span data-stu-id="851e9-106">Contained in</span></span>
+## <a name="contained-in"></a><span data-ttu-id="603f5-107">Содержится в</span><span class="sxs-lookup"><span data-stu-id="603f5-107">Contained in</span></span>
 
-[<span data-ttu-id="851e9-107">TargetDialects</span><span class="sxs-lookup"><span data-stu-id="851e9-107">TargetDialects</span></span>](targetdialects.md)
+[<span data-ttu-id="603f5-108">TargetDialects</span><span class="sxs-lookup"><span data-stu-id="603f5-108">TargetDialects</span></span>](targetdialects.md)
 
-## <a name="remarks"></a><span data-ttu-id="851e9-108">Замечания</span><span class="sxs-lookup"><span data-stu-id="851e9-108">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="603f5-109">Замечания</span><span class="sxs-lookup"><span data-stu-id="603f5-109">Remarks</span></span>
 
-<span data-ttu-id="851e9-109">Укажите значение в формате языковых тегов BCP 47, например `en-US`.</span><span class="sxs-lookup"><span data-stu-id="851e9-109">Specify the value in the BCP 47 language tag format, such as  `en-US`.</span></span>
+<span data-ttu-id="603f5-110">Укажите значение в формате языковых тегов BCP 47, например `en-US`.</span><span class="sxs-lookup"><span data-stu-id="603f5-110">Specify the value in the BCP 47 language tag format, such as  `en-US`.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="851e9-110">См. также</span><span class="sxs-lookup"><span data-stu-id="851e9-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="603f5-111">См. также</span><span class="sxs-lookup"><span data-stu-id="603f5-111">See also</span></span>
 
-- [<span data-ttu-id="851e9-111">Создание надстройки области задач словаря</span><span class="sxs-lookup"><span data-stu-id="851e9-111">Create a dictionary task pane add-in</span></span>](../../word/dictionary-task-pane-add-ins.md)
+- [<span data-ttu-id="603f5-112">Создание надстройки области задач словаря</span><span class="sxs-lookup"><span data-stu-id="603f5-112">Create a dictionary task pane add-in</span></span>](../../word/dictionary-task-pane-add-ins.md)

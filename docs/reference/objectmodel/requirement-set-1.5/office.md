@@ -1,145 +1,145 @@
 ---
 title: Пространство имен Office — набор обязательных элементов 1,5
-description: ''
+description: Объектная модель для пространства имен верхнего уровня API надстроек Outlook (версия API почтовых ящиков 1,5).
 ms.date: 12/16/2019
 localization_priority: Normal
-ms.openlocfilehash: 7cc8e6acc60c28b44ec7a2b91bb5e388b2618a31
-ms.sourcegitcommit: 6c7c98f085dd20f827e0c388e672993412944851
+ms.openlocfilehash: ed65472de4acbe4f610e0355cc5de734938149ef
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "42554726"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42720024"
 ---
-# <a name="office"></a><span data-ttu-id="f9da7-102">Office</span><span class="sxs-lookup"><span data-stu-id="f9da7-102">Office</span></span>
+# <a name="office"></a><span data-ttu-id="3ac64-103">Office</span><span class="sxs-lookup"><span data-stu-id="3ac64-103">Office</span></span>
 
-<span data-ttu-id="f9da7-p101">Пространство имен Office содержит общие интерфейсы, которые используются надстройками всех приложений Office. В этот список входят только интерфейсы, используемые надстройками Outlook. Полный список интерфейсов пространства имен Office см. в статье [Общий API](/javascript/api/office).</span><span class="sxs-lookup"><span data-stu-id="f9da7-p101">The Office namespace provides shared interfaces that are used by add-ins in all of the Office apps. This listing documents only those interfaces that are used by Outlook add-ins. For a full listing of the Office namespace, see the [Common API](/javascript/api/office).</span></span>
+<span data-ttu-id="3ac64-p101">Пространство имен Office содержит общие интерфейсы, которые используются надстройками всех приложений Office. В этот список входят только интерфейсы, используемые надстройками Outlook. Полный список интерфейсов пространства имен Office см. в статье [Общий API](/javascript/api/office).</span><span class="sxs-lookup"><span data-stu-id="3ac64-p101">The Office namespace provides shared interfaces that are used by add-ins in all of the Office apps. This listing documents only those interfaces that are used by Outlook add-ins. For a full listing of the Office namespace, see the [Common API](/javascript/api/office).</span></span>
 
-##### <a name="requirements"></a><span data-ttu-id="f9da7-105">Requirements</span><span class="sxs-lookup"><span data-stu-id="f9da7-105">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="3ac64-106">Requirements</span><span class="sxs-lookup"><span data-stu-id="3ac64-106">Requirements</span></span>
 
-|<span data-ttu-id="f9da7-106">Требование</span><span class="sxs-lookup"><span data-stu-id="f9da7-106">Requirement</span></span>| <span data-ttu-id="f9da7-107">Значение</span><span class="sxs-lookup"><span data-stu-id="f9da7-107">Value</span></span>|
+|<span data-ttu-id="3ac64-107">Требование</span><span class="sxs-lookup"><span data-stu-id="3ac64-107">Requirement</span></span>| <span data-ttu-id="3ac64-108">Значение</span><span class="sxs-lookup"><span data-stu-id="3ac64-108">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="f9da7-108">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="f9da7-108">Minimum mailbox requirement set version</span></span>](../../requirement-sets/outlook-api-requirement-sets.md)| <span data-ttu-id="f9da7-109">1.1</span><span class="sxs-lookup"><span data-stu-id="f9da7-109">1.1</span></span>|
-|[<span data-ttu-id="f9da7-110">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="f9da7-110">Applicable Outlook mode</span></span>](../../../outlook/outlook-add-ins-overview.md#extension-points)| <span data-ttu-id="f9da7-111">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="f9da7-111">Compose or Read</span></span>|
+|[<span data-ttu-id="3ac64-109">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="3ac64-109">Minimum mailbox requirement set version</span></span>](../../requirement-sets/outlook-api-requirement-sets.md)| <span data-ttu-id="3ac64-110">1.1</span><span class="sxs-lookup"><span data-stu-id="3ac64-110">1.1</span></span>|
+|[<span data-ttu-id="3ac64-111">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="3ac64-111">Applicable Outlook mode</span></span>](../../../outlook/outlook-add-ins-overview.md#extension-points)| <span data-ttu-id="3ac64-112">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="3ac64-112">Compose or Read</span></span>|
 
-##### <a name="properties"></a><span data-ttu-id="f9da7-112">Properties</span><span class="sxs-lookup"><span data-stu-id="f9da7-112">Properties</span></span>
+##### <a name="properties"></a><span data-ttu-id="3ac64-113">Properties</span><span class="sxs-lookup"><span data-stu-id="3ac64-113">Properties</span></span>
 
-| <span data-ttu-id="f9da7-113">Свойство</span><span class="sxs-lookup"><span data-stu-id="f9da7-113">Property</span></span> | <span data-ttu-id="f9da7-114">Способов</span><span class="sxs-lookup"><span data-stu-id="f9da7-114">Modes</span></span> | <span data-ttu-id="f9da7-115">Тип возвращаемых данных</span><span class="sxs-lookup"><span data-stu-id="f9da7-115">Return type</span></span> | <span data-ttu-id="f9da7-116">Минимальные</span><span class="sxs-lookup"><span data-stu-id="f9da7-116">Minimum</span></span><br><span data-ttu-id="f9da7-117">набор требований</span><span class="sxs-lookup"><span data-stu-id="f9da7-117">requirement set</span></span> |
+| <span data-ttu-id="3ac64-114">Свойство</span><span class="sxs-lookup"><span data-stu-id="3ac64-114">Property</span></span> | <span data-ttu-id="3ac64-115">Способов</span><span class="sxs-lookup"><span data-stu-id="3ac64-115">Modes</span></span> | <span data-ttu-id="3ac64-116">Тип возвращаемых данных</span><span class="sxs-lookup"><span data-stu-id="3ac64-116">Return type</span></span> | <span data-ttu-id="3ac64-117">Минимальные</span><span class="sxs-lookup"><span data-stu-id="3ac64-117">Minimum</span></span><br><span data-ttu-id="3ac64-118">набор требований</span><span class="sxs-lookup"><span data-stu-id="3ac64-118">requirement set</span></span> |
 |---|---|---|:---:|
-| [<span data-ttu-id="f9da7-118">контекст</span><span class="sxs-lookup"><span data-stu-id="f9da7-118">context</span></span>](office.context.md) | <span data-ttu-id="f9da7-119">Создание</span><span class="sxs-lookup"><span data-stu-id="f9da7-119">Compose</span></span><br><span data-ttu-id="f9da7-120">Чтение</span><span class="sxs-lookup"><span data-stu-id="f9da7-120">Read</span></span> | [<span data-ttu-id="f9da7-121">Context</span><span class="sxs-lookup"><span data-stu-id="f9da7-121">Context</span></span>](/javascript/api/office/office.context?view=outlook-js-1.5) | [<span data-ttu-id="f9da7-122">1.1</span><span class="sxs-lookup"><span data-stu-id="f9da7-122">1.1</span></span>](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [<span data-ttu-id="3ac64-119">контекст</span><span class="sxs-lookup"><span data-stu-id="3ac64-119">context</span></span>](office.context.md) | <span data-ttu-id="3ac64-120">Создание</span><span class="sxs-lookup"><span data-stu-id="3ac64-120">Compose</span></span><br><span data-ttu-id="3ac64-121">Чтение</span><span class="sxs-lookup"><span data-stu-id="3ac64-121">Read</span></span> | [<span data-ttu-id="3ac64-122">Context</span><span class="sxs-lookup"><span data-stu-id="3ac64-122">Context</span></span>](/javascript/api/office/office.context?view=outlook-js-1.5) | [<span data-ttu-id="3ac64-123">1.1</span><span class="sxs-lookup"><span data-stu-id="3ac64-123">1.1</span></span>](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
-##### <a name="enumerations"></a><span data-ttu-id="f9da7-123">Перечисления</span><span class="sxs-lookup"><span data-stu-id="f9da7-123">Enumerations</span></span>
+##### <a name="enumerations"></a><span data-ttu-id="3ac64-124">Перечисления</span><span class="sxs-lookup"><span data-stu-id="3ac64-124">Enumerations</span></span>
 
-| <span data-ttu-id="f9da7-124">Перечисление</span><span class="sxs-lookup"><span data-stu-id="f9da7-124">Enumeration</span></span> | <span data-ttu-id="f9da7-125">Способов</span><span class="sxs-lookup"><span data-stu-id="f9da7-125">Modes</span></span> | <span data-ttu-id="f9da7-126">Тип возвращаемых данных</span><span class="sxs-lookup"><span data-stu-id="f9da7-126">Return type</span></span> | <span data-ttu-id="f9da7-127">Минимальные</span><span class="sxs-lookup"><span data-stu-id="f9da7-127">Minimum</span></span><br><span data-ttu-id="f9da7-128">набор требований</span><span class="sxs-lookup"><span data-stu-id="f9da7-128">requirement set</span></span> |
+| <span data-ttu-id="3ac64-125">Перечисление</span><span class="sxs-lookup"><span data-stu-id="3ac64-125">Enumeration</span></span> | <span data-ttu-id="3ac64-126">Способов</span><span class="sxs-lookup"><span data-stu-id="3ac64-126">Modes</span></span> | <span data-ttu-id="3ac64-127">Тип возвращаемых данных</span><span class="sxs-lookup"><span data-stu-id="3ac64-127">Return type</span></span> | <span data-ttu-id="3ac64-128">Минимальные</span><span class="sxs-lookup"><span data-stu-id="3ac64-128">Minimum</span></span><br><span data-ttu-id="3ac64-129">набор требований</span><span class="sxs-lookup"><span data-stu-id="3ac64-129">requirement set</span></span> |
 |---|---|---|:---:|
-| [<span data-ttu-id="f9da7-129">AsyncResultStatus</span><span class="sxs-lookup"><span data-stu-id="f9da7-129">AsyncResultStatus</span></span>](#asyncresultstatus-string) | <span data-ttu-id="f9da7-130">Создание</span><span class="sxs-lookup"><span data-stu-id="f9da7-130">Compose</span></span><br><span data-ttu-id="f9da7-131">Чтение</span><span class="sxs-lookup"><span data-stu-id="f9da7-131">Read</span></span> | <span data-ttu-id="f9da7-132">String</span><span class="sxs-lookup"><span data-stu-id="f9da7-132">String</span></span> | [<span data-ttu-id="f9da7-133">1.1</span><span class="sxs-lookup"><span data-stu-id="f9da7-133">1.1</span></span>](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [<span data-ttu-id="f9da7-134">CoercionType</span><span class="sxs-lookup"><span data-stu-id="f9da7-134">CoercionType</span></span>](#coerciontype-string) | <span data-ttu-id="f9da7-135">Создание</span><span class="sxs-lookup"><span data-stu-id="f9da7-135">Compose</span></span><br><span data-ttu-id="f9da7-136">Чтение</span><span class="sxs-lookup"><span data-stu-id="f9da7-136">Read</span></span> | <span data-ttu-id="f9da7-137">String</span><span class="sxs-lookup"><span data-stu-id="f9da7-137">String</span></span> | [<span data-ttu-id="f9da7-138">1.1</span><span class="sxs-lookup"><span data-stu-id="f9da7-138">1.1</span></span>](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [<span data-ttu-id="f9da7-139">EventType</span><span class="sxs-lookup"><span data-stu-id="f9da7-139">EventType</span></span>](#eventtype-string) | <span data-ttu-id="f9da7-140">Создание</span><span class="sxs-lookup"><span data-stu-id="f9da7-140">Compose</span></span><br><span data-ttu-id="f9da7-141">Чтение</span><span class="sxs-lookup"><span data-stu-id="f9da7-141">Read</span></span> | <span data-ttu-id="f9da7-142">String</span><span class="sxs-lookup"><span data-stu-id="f9da7-142">String</span></span> | [<span data-ttu-id="f9da7-143">1,5</span><span class="sxs-lookup"><span data-stu-id="f9da7-143">1.5</span></span>](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
-| [<span data-ttu-id="f9da7-144">SourceProperty</span><span class="sxs-lookup"><span data-stu-id="f9da7-144">SourceProperty</span></span>](#sourceproperty-string) | <span data-ttu-id="f9da7-145">Создание</span><span class="sxs-lookup"><span data-stu-id="f9da7-145">Compose</span></span><br><span data-ttu-id="f9da7-146">Чтение</span><span class="sxs-lookup"><span data-stu-id="f9da7-146">Read</span></span> | <span data-ttu-id="f9da7-147">String</span><span class="sxs-lookup"><span data-stu-id="f9da7-147">String</span></span> | [<span data-ttu-id="f9da7-148">1.1</span><span class="sxs-lookup"><span data-stu-id="f9da7-148">1.1</span></span>](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [<span data-ttu-id="3ac64-130">AsyncResultStatus</span><span class="sxs-lookup"><span data-stu-id="3ac64-130">AsyncResultStatus</span></span>](#asyncresultstatus-string) | <span data-ttu-id="3ac64-131">Создание</span><span class="sxs-lookup"><span data-stu-id="3ac64-131">Compose</span></span><br><span data-ttu-id="3ac64-132">Чтение</span><span class="sxs-lookup"><span data-stu-id="3ac64-132">Read</span></span> | <span data-ttu-id="3ac64-133">String</span><span class="sxs-lookup"><span data-stu-id="3ac64-133">String</span></span> | [<span data-ttu-id="3ac64-134">1.1</span><span class="sxs-lookup"><span data-stu-id="3ac64-134">1.1</span></span>](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [<span data-ttu-id="3ac64-135">CoercionType</span><span class="sxs-lookup"><span data-stu-id="3ac64-135">CoercionType</span></span>](#coerciontype-string) | <span data-ttu-id="3ac64-136">Создание</span><span class="sxs-lookup"><span data-stu-id="3ac64-136">Compose</span></span><br><span data-ttu-id="3ac64-137">Чтение</span><span class="sxs-lookup"><span data-stu-id="3ac64-137">Read</span></span> | <span data-ttu-id="3ac64-138">String</span><span class="sxs-lookup"><span data-stu-id="3ac64-138">String</span></span> | [<span data-ttu-id="3ac64-139">1.1</span><span class="sxs-lookup"><span data-stu-id="3ac64-139">1.1</span></span>](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [<span data-ttu-id="3ac64-140">EventType</span><span class="sxs-lookup"><span data-stu-id="3ac64-140">EventType</span></span>](#eventtype-string) | <span data-ttu-id="3ac64-141">Создание</span><span class="sxs-lookup"><span data-stu-id="3ac64-141">Compose</span></span><br><span data-ttu-id="3ac64-142">Чтение</span><span class="sxs-lookup"><span data-stu-id="3ac64-142">Read</span></span> | <span data-ttu-id="3ac64-143">String</span><span class="sxs-lookup"><span data-stu-id="3ac64-143">String</span></span> | [<span data-ttu-id="3ac64-144">1,5</span><span class="sxs-lookup"><span data-stu-id="3ac64-144">1.5</span></span>](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
+| [<span data-ttu-id="3ac64-145">SourceProperty</span><span class="sxs-lookup"><span data-stu-id="3ac64-145">SourceProperty</span></span>](#sourceproperty-string) | <span data-ttu-id="3ac64-146">Создание</span><span class="sxs-lookup"><span data-stu-id="3ac64-146">Compose</span></span><br><span data-ttu-id="3ac64-147">Чтение</span><span class="sxs-lookup"><span data-stu-id="3ac64-147">Read</span></span> | <span data-ttu-id="3ac64-148">String</span><span class="sxs-lookup"><span data-stu-id="3ac64-148">String</span></span> | [<span data-ttu-id="3ac64-149">1.1</span><span class="sxs-lookup"><span data-stu-id="3ac64-149">1.1</span></span>](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
-### <a name="namespaces"></a><span data-ttu-id="f9da7-149">Пространства имен</span><span class="sxs-lookup"><span data-stu-id="f9da7-149">Namespaces</span></span>
+### <a name="namespaces"></a><span data-ttu-id="3ac64-150">Пространства имен</span><span class="sxs-lookup"><span data-stu-id="3ac64-150">Namespaces</span></span>
 
-<span data-ttu-id="f9da7-150">[MailboxEnums](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat?view=outlook-js-1.5): `ItemType`включает ряд специфических перечислений Outlook, например `EntityType` `AttachmentType` `RecipientType` `ResponseType`,,,,, и `ItemNotificationMessageType`.</span><span class="sxs-lookup"><span data-stu-id="f9da7-150">[MailboxEnums](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat?view=outlook-js-1.5): Includes a number of Outlook-specific enumerations, for example, `ItemType`, `EntityType`, `AttachmentType`, `RecipientType`, `ResponseType`, and `ItemNotificationMessageType`.</span></span>
+<span data-ttu-id="3ac64-151">[MailboxEnums](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat?view=outlook-js-1.5): `ItemType`включает ряд специфических перечислений Outlook, например `EntityType` `AttachmentType` `RecipientType` `ResponseType`,,,,, и `ItemNotificationMessageType`.</span><span class="sxs-lookup"><span data-stu-id="3ac64-151">[MailboxEnums](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat?view=outlook-js-1.5): Includes a number of Outlook-specific enumerations, for example, `ItemType`, `EntityType`, `AttachmentType`, `RecipientType`, `ResponseType`, and `ItemNotificationMessageType`.</span></span>
 
-## <a name="enumeration-details"></a><span data-ttu-id="f9da7-151">Сведения о перечислении</span><span class="sxs-lookup"><span data-stu-id="f9da7-151">Enumeration details</span></span>
+## <a name="enumeration-details"></a><span data-ttu-id="3ac64-152">Сведения о перечислении</span><span class="sxs-lookup"><span data-stu-id="3ac64-152">Enumeration details</span></span>
 
-#### <a name="asyncresultstatus-string"></a><span data-ttu-id="f9da7-152">AsyncResultStatus: строка</span><span class="sxs-lookup"><span data-stu-id="f9da7-152">AsyncResultStatus: String</span></span>
+#### <a name="asyncresultstatus-string"></a><span data-ttu-id="3ac64-153">AsyncResultStatus: строка</span><span class="sxs-lookup"><span data-stu-id="3ac64-153">AsyncResultStatus: String</span></span>
 
-<span data-ttu-id="f9da7-153">Указывает результат асинхронного вызова.</span><span class="sxs-lookup"><span data-stu-id="f9da7-153">Specifies the result of an asynchronous call.</span></span>
+<span data-ttu-id="3ac64-154">Указывает результат асинхронного вызова.</span><span class="sxs-lookup"><span data-stu-id="3ac64-154">Specifies the result of an asynchronous call.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="f9da7-154">Тип</span><span class="sxs-lookup"><span data-stu-id="f9da7-154">Type</span></span>
+##### <a name="type"></a><span data-ttu-id="3ac64-155">Тип</span><span class="sxs-lookup"><span data-stu-id="3ac64-155">Type</span></span>
 
-*   <span data-ttu-id="f9da7-155">String</span><span class="sxs-lookup"><span data-stu-id="f9da7-155">String</span></span>
+*   <span data-ttu-id="3ac64-156">String</span><span class="sxs-lookup"><span data-stu-id="3ac64-156">String</span></span>
 
-##### <a name="properties"></a><span data-ttu-id="f9da7-156">Свойства:</span><span class="sxs-lookup"><span data-stu-id="f9da7-156">Properties:</span></span>
+##### <a name="properties"></a><span data-ttu-id="3ac64-157">Свойства:</span><span class="sxs-lookup"><span data-stu-id="3ac64-157">Properties:</span></span>
 
-|<span data-ttu-id="f9da7-157">Имя</span><span class="sxs-lookup"><span data-stu-id="f9da7-157">Name</span></span>| <span data-ttu-id="f9da7-158">Тип</span><span class="sxs-lookup"><span data-stu-id="f9da7-158">Type</span></span>| <span data-ttu-id="f9da7-159">Описание</span><span class="sxs-lookup"><span data-stu-id="f9da7-159">Description</span></span>|
+|<span data-ttu-id="3ac64-158">Имя</span><span class="sxs-lookup"><span data-stu-id="3ac64-158">Name</span></span>| <span data-ttu-id="3ac64-159">Тип</span><span class="sxs-lookup"><span data-stu-id="3ac64-159">Type</span></span>| <span data-ttu-id="3ac64-160">Описание</span><span class="sxs-lookup"><span data-stu-id="3ac64-160">Description</span></span>|
 |---|---|---|
-|`Succeeded`| <span data-ttu-id="f9da7-160">String</span><span class="sxs-lookup"><span data-stu-id="f9da7-160">String</span></span>|<span data-ttu-id="f9da7-161">Вызов завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="f9da7-161">The call succeeded.</span></span>|
-|`Failed`| <span data-ttu-id="f9da7-162">Для указания</span><span class="sxs-lookup"><span data-stu-id="f9da7-162">String</span></span>|<span data-ttu-id="f9da7-163">Вызов завершился ошибкой.</span><span class="sxs-lookup"><span data-stu-id="f9da7-163">The call failed.</span></span>|
+|`Succeeded`| <span data-ttu-id="3ac64-161">String</span><span class="sxs-lookup"><span data-stu-id="3ac64-161">String</span></span>|<span data-ttu-id="3ac64-162">Вызов завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="3ac64-162">The call succeeded.</span></span>|
+|`Failed`| <span data-ttu-id="3ac64-163">Для указания</span><span class="sxs-lookup"><span data-stu-id="3ac64-163">String</span></span>|<span data-ttu-id="3ac64-164">Вызов завершился ошибкой.</span><span class="sxs-lookup"><span data-stu-id="3ac64-164">The call failed.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="f9da7-164">Requirements</span><span class="sxs-lookup"><span data-stu-id="f9da7-164">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="3ac64-165">Requirements</span><span class="sxs-lookup"><span data-stu-id="3ac64-165">Requirements</span></span>
 
-|<span data-ttu-id="f9da7-165">Требование</span><span class="sxs-lookup"><span data-stu-id="f9da7-165">Requirement</span></span>| <span data-ttu-id="f9da7-166">Значение</span><span class="sxs-lookup"><span data-stu-id="f9da7-166">Value</span></span>|
+|<span data-ttu-id="3ac64-166">Требование</span><span class="sxs-lookup"><span data-stu-id="3ac64-166">Requirement</span></span>| <span data-ttu-id="3ac64-167">Значение</span><span class="sxs-lookup"><span data-stu-id="3ac64-167">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="f9da7-167">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="f9da7-167">Minimum mailbox requirement set version</span></span>](../../requirement-sets/outlook-api-requirement-sets.md)| <span data-ttu-id="f9da7-168">1.1</span><span class="sxs-lookup"><span data-stu-id="f9da7-168">1.1</span></span>|
-|[<span data-ttu-id="f9da7-169">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="f9da7-169">Applicable Outlook mode</span></span>](../../../outlook/outlook-add-ins-overview.md#extension-points)| <span data-ttu-id="f9da7-170">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="f9da7-170">Compose or Read</span></span>|
+|[<span data-ttu-id="3ac64-168">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="3ac64-168">Minimum mailbox requirement set version</span></span>](../../requirement-sets/outlook-api-requirement-sets.md)| <span data-ttu-id="3ac64-169">1.1</span><span class="sxs-lookup"><span data-stu-id="3ac64-169">1.1</span></span>|
+|[<span data-ttu-id="3ac64-170">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="3ac64-170">Applicable Outlook mode</span></span>](../../../outlook/outlook-add-ins-overview.md#extension-points)| <span data-ttu-id="3ac64-171">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="3ac64-171">Compose or Read</span></span>|
 
 <br>
 
 ---
 ---
 
-#### <a name="coerciontype-string"></a><span data-ttu-id="f9da7-171">CoercionType: строка</span><span class="sxs-lookup"><span data-stu-id="f9da7-171">CoercionType: String</span></span>
+#### <a name="coerciontype-string"></a><span data-ttu-id="3ac64-172">CoercionType: строка</span><span class="sxs-lookup"><span data-stu-id="3ac64-172">CoercionType: String</span></span>
 
-<span data-ttu-id="f9da7-172">Указывает способ приведения данных, возвращаемых или задаваемых вызванным методом.</span><span class="sxs-lookup"><span data-stu-id="f9da7-172">Specifies how to coerce data returned or set by the invoked method.</span></span>
+<span data-ttu-id="3ac64-173">Указывает способ приведения данных, возвращаемых или задаваемых вызванным методом.</span><span class="sxs-lookup"><span data-stu-id="3ac64-173">Specifies how to coerce data returned or set by the invoked method.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="f9da7-173">Тип</span><span class="sxs-lookup"><span data-stu-id="f9da7-173">Type</span></span>
+##### <a name="type"></a><span data-ttu-id="3ac64-174">Тип</span><span class="sxs-lookup"><span data-stu-id="3ac64-174">Type</span></span>
 
-*   <span data-ttu-id="f9da7-174">String</span><span class="sxs-lookup"><span data-stu-id="f9da7-174">String</span></span>
+*   <span data-ttu-id="3ac64-175">String</span><span class="sxs-lookup"><span data-stu-id="3ac64-175">String</span></span>
 
-##### <a name="properties"></a><span data-ttu-id="f9da7-175">Свойства:</span><span class="sxs-lookup"><span data-stu-id="f9da7-175">Properties:</span></span>
+##### <a name="properties"></a><span data-ttu-id="3ac64-176">Свойства:</span><span class="sxs-lookup"><span data-stu-id="3ac64-176">Properties:</span></span>
 
-|<span data-ttu-id="f9da7-176">Имя</span><span class="sxs-lookup"><span data-stu-id="f9da7-176">Name</span></span>| <span data-ttu-id="f9da7-177">Тип</span><span class="sxs-lookup"><span data-stu-id="f9da7-177">Type</span></span>| <span data-ttu-id="f9da7-178">Описание</span><span class="sxs-lookup"><span data-stu-id="f9da7-178">Description</span></span>|
+|<span data-ttu-id="3ac64-177">Имя</span><span class="sxs-lookup"><span data-stu-id="3ac64-177">Name</span></span>| <span data-ttu-id="3ac64-178">Тип</span><span class="sxs-lookup"><span data-stu-id="3ac64-178">Type</span></span>| <span data-ttu-id="3ac64-179">Описание</span><span class="sxs-lookup"><span data-stu-id="3ac64-179">Description</span></span>|
 |---|---|---|
-|`Html`| <span data-ttu-id="f9da7-179">String</span><span class="sxs-lookup"><span data-stu-id="f9da7-179">String</span></span>|<span data-ttu-id="f9da7-180">Запрашивает возврат данных в формате HTML.</span><span class="sxs-lookup"><span data-stu-id="f9da7-180">Requests the data be returned in HTML format.</span></span>|
-|`Text`| <span data-ttu-id="f9da7-181">String</span><span class="sxs-lookup"><span data-stu-id="f9da7-181">String</span></span>|<span data-ttu-id="f9da7-182">Запрашивает возврат данных в формате текста.</span><span class="sxs-lookup"><span data-stu-id="f9da7-182">Requests the data be returned in text format.</span></span>|
+|`Html`| <span data-ttu-id="3ac64-180">String</span><span class="sxs-lookup"><span data-stu-id="3ac64-180">String</span></span>|<span data-ttu-id="3ac64-181">Запрашивает возврат данных в формате HTML.</span><span class="sxs-lookup"><span data-stu-id="3ac64-181">Requests the data be returned in HTML format.</span></span>|
+|`Text`| <span data-ttu-id="3ac64-182">String</span><span class="sxs-lookup"><span data-stu-id="3ac64-182">String</span></span>|<span data-ttu-id="3ac64-183">Запрашивает возврат данных в формате текста.</span><span class="sxs-lookup"><span data-stu-id="3ac64-183">Requests the data be returned in text format.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="f9da7-183">Requirements</span><span class="sxs-lookup"><span data-stu-id="f9da7-183">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="3ac64-184">Requirements</span><span class="sxs-lookup"><span data-stu-id="3ac64-184">Requirements</span></span>
 
-|<span data-ttu-id="f9da7-184">Требование</span><span class="sxs-lookup"><span data-stu-id="f9da7-184">Requirement</span></span>| <span data-ttu-id="f9da7-185">Значение</span><span class="sxs-lookup"><span data-stu-id="f9da7-185">Value</span></span>|
+|<span data-ttu-id="3ac64-185">Требование</span><span class="sxs-lookup"><span data-stu-id="3ac64-185">Requirement</span></span>| <span data-ttu-id="3ac64-186">Значение</span><span class="sxs-lookup"><span data-stu-id="3ac64-186">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="f9da7-186">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="f9da7-186">Minimum mailbox requirement set version</span></span>](../../requirement-sets/outlook-api-requirement-sets.md)| <span data-ttu-id="f9da7-187">1.1</span><span class="sxs-lookup"><span data-stu-id="f9da7-187">1.1</span></span>|
-|[<span data-ttu-id="f9da7-188">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="f9da7-188">Applicable Outlook mode</span></span>](../../../outlook/outlook-add-ins-overview.md#extension-points)| <span data-ttu-id="f9da7-189">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="f9da7-189">Compose or Read</span></span>|
+|[<span data-ttu-id="3ac64-187">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="3ac64-187">Minimum mailbox requirement set version</span></span>](../../requirement-sets/outlook-api-requirement-sets.md)| <span data-ttu-id="3ac64-188">1.1</span><span class="sxs-lookup"><span data-stu-id="3ac64-188">1.1</span></span>|
+|[<span data-ttu-id="3ac64-189">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="3ac64-189">Applicable Outlook mode</span></span>](../../../outlook/outlook-add-ins-overview.md#extension-points)| <span data-ttu-id="3ac64-190">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="3ac64-190">Compose or Read</span></span>|
 
 <br>
 
 ---
 ---
 
-#### <a name="eventtype-string"></a><span data-ttu-id="f9da7-190">EventType: строка</span><span class="sxs-lookup"><span data-stu-id="f9da7-190">EventType: String</span></span>
+#### <a name="eventtype-string"></a><span data-ttu-id="3ac64-191">EventType: строка</span><span class="sxs-lookup"><span data-stu-id="3ac64-191">EventType: String</span></span>
 
-<span data-ttu-id="f9da7-191">Указывает событие, связанное с обработчиком.</span><span class="sxs-lookup"><span data-stu-id="f9da7-191">Specifies the event associated with an event handler.</span></span>
+<span data-ttu-id="3ac64-192">Указывает событие, связанное с обработчиком.</span><span class="sxs-lookup"><span data-stu-id="3ac64-192">Specifies the event associated with an event handler.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="f9da7-192">Тип</span><span class="sxs-lookup"><span data-stu-id="f9da7-192">Type</span></span>
+##### <a name="type"></a><span data-ttu-id="3ac64-193">Тип</span><span class="sxs-lookup"><span data-stu-id="3ac64-193">Type</span></span>
 
-*   <span data-ttu-id="f9da7-193">String</span><span class="sxs-lookup"><span data-stu-id="f9da7-193">String</span></span>
+*   <span data-ttu-id="3ac64-194">String</span><span class="sxs-lookup"><span data-stu-id="3ac64-194">String</span></span>
 
-##### <a name="properties"></a><span data-ttu-id="f9da7-194">Свойства:</span><span class="sxs-lookup"><span data-stu-id="f9da7-194">Properties:</span></span>
+##### <a name="properties"></a><span data-ttu-id="3ac64-195">Свойства:</span><span class="sxs-lookup"><span data-stu-id="3ac64-195">Properties:</span></span>
 
-| <span data-ttu-id="f9da7-195">Имя</span><span class="sxs-lookup"><span data-stu-id="f9da7-195">Name</span></span> | <span data-ttu-id="f9da7-196">Тип</span><span class="sxs-lookup"><span data-stu-id="f9da7-196">Type</span></span> | <span data-ttu-id="f9da7-197">Описание</span><span class="sxs-lookup"><span data-stu-id="f9da7-197">Description</span></span> | <span data-ttu-id="f9da7-198">Набор минимальных требований</span><span class="sxs-lookup"><span data-stu-id="f9da7-198">Minimum requirement set</span></span> |
+| <span data-ttu-id="3ac64-196">Имя</span><span class="sxs-lookup"><span data-stu-id="3ac64-196">Name</span></span> | <span data-ttu-id="3ac64-197">Тип</span><span class="sxs-lookup"><span data-stu-id="3ac64-197">Type</span></span> | <span data-ttu-id="3ac64-198">Описание</span><span class="sxs-lookup"><span data-stu-id="3ac64-198">Description</span></span> | <span data-ttu-id="3ac64-199">Набор минимальных требований</span><span class="sxs-lookup"><span data-stu-id="3ac64-199">Minimum requirement set</span></span> |
 |---|---|---|:---:|
-|`ItemChanged`| <span data-ttu-id="f9da7-199">String</span><span class="sxs-lookup"><span data-stu-id="f9da7-199">String</span></span> | <span data-ttu-id="f9da7-200">Для просмотра выбран другой элемент Outlook, когда область задач закреплена.</span><span class="sxs-lookup"><span data-stu-id="f9da7-200">A different Outlook item is selected for viewing while the task pane is pinned.</span></span> | <span data-ttu-id="f9da7-201">1.5</span><span class="sxs-lookup"><span data-stu-id="f9da7-201">1.5</span></span> |
+|`ItemChanged`| <span data-ttu-id="3ac64-200">String</span><span class="sxs-lookup"><span data-stu-id="3ac64-200">String</span></span> | <span data-ttu-id="3ac64-201">Для просмотра выбран другой элемент Outlook, когда область задач закреплена.</span><span class="sxs-lookup"><span data-stu-id="3ac64-201">A different Outlook item is selected for viewing while the task pane is pinned.</span></span> | <span data-ttu-id="3ac64-202">1.5</span><span class="sxs-lookup"><span data-stu-id="3ac64-202">1.5</span></span> |
 
-##### <a name="requirements"></a><span data-ttu-id="f9da7-202">Requirements</span><span class="sxs-lookup"><span data-stu-id="f9da7-202">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="3ac64-203">Requirements</span><span class="sxs-lookup"><span data-stu-id="3ac64-203">Requirements</span></span>
 
-|<span data-ttu-id="f9da7-203">Требование</span><span class="sxs-lookup"><span data-stu-id="f9da7-203">Requirement</span></span>| <span data-ttu-id="f9da7-204">Значение</span><span class="sxs-lookup"><span data-stu-id="f9da7-204">Value</span></span>|
+|<span data-ttu-id="3ac64-204">Требование</span><span class="sxs-lookup"><span data-stu-id="3ac64-204">Requirement</span></span>| <span data-ttu-id="3ac64-205">Значение</span><span class="sxs-lookup"><span data-stu-id="3ac64-205">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="f9da7-205">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="f9da7-205">Minimum mailbox requirement set version</span></span>](../../requirement-sets/outlook-api-requirement-sets.md)| <span data-ttu-id="f9da7-206">1.5</span><span class="sxs-lookup"><span data-stu-id="f9da7-206">1.5</span></span> |
-|[<span data-ttu-id="f9da7-207">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="f9da7-207">Applicable Outlook mode</span></span>](../../../outlook/outlook-add-ins-overview.md#extension-points)| <span data-ttu-id="f9da7-208">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="f9da7-208">Compose or Read</span></span> |
+|[<span data-ttu-id="3ac64-206">Минимальная версия набора обязательных элементов для почтового ящика</span><span class="sxs-lookup"><span data-stu-id="3ac64-206">Minimum mailbox requirement set version</span></span>](../../requirement-sets/outlook-api-requirement-sets.md)| <span data-ttu-id="3ac64-207">1.5</span><span class="sxs-lookup"><span data-stu-id="3ac64-207">1.5</span></span> |
+|[<span data-ttu-id="3ac64-208">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="3ac64-208">Applicable Outlook mode</span></span>](../../../outlook/outlook-add-ins-overview.md#extension-points)| <span data-ttu-id="3ac64-209">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="3ac64-209">Compose or Read</span></span> |
 
 <br>
 
 ---
 ---
 
-#### <a name="sourceproperty-string"></a><span data-ttu-id="f9da7-209">Перестрока: строка</span><span class="sxs-lookup"><span data-stu-id="f9da7-209">SourceProperty: String</span></span>
+#### <a name="sourceproperty-string"></a><span data-ttu-id="3ac64-210">Перестрока: строка</span><span class="sxs-lookup"><span data-stu-id="3ac64-210">SourceProperty: String</span></span>
 
-<span data-ttu-id="f9da7-210">Указывает источник данных, возвращаемых вызванным методом.</span><span class="sxs-lookup"><span data-stu-id="f9da7-210">Specifies the source of the data returned by the invoked method.</span></span>
+<span data-ttu-id="3ac64-211">Указывает источник данных, возвращаемых вызванным методом.</span><span class="sxs-lookup"><span data-stu-id="3ac64-211">Specifies the source of the data returned by the invoked method.</span></span>
 
-##### <a name="type"></a><span data-ttu-id="f9da7-211">Тип</span><span class="sxs-lookup"><span data-stu-id="f9da7-211">Type</span></span>
+##### <a name="type"></a><span data-ttu-id="3ac64-212">Тип</span><span class="sxs-lookup"><span data-stu-id="3ac64-212">Type</span></span>
 
-*   <span data-ttu-id="f9da7-212">String</span><span class="sxs-lookup"><span data-stu-id="f9da7-212">String</span></span>
+*   <span data-ttu-id="3ac64-213">String</span><span class="sxs-lookup"><span data-stu-id="3ac64-213">String</span></span>
 
-##### <a name="properties"></a><span data-ttu-id="f9da7-213">Свойства:</span><span class="sxs-lookup"><span data-stu-id="f9da7-213">Properties:</span></span>
+##### <a name="properties"></a><span data-ttu-id="3ac64-214">Свойства:</span><span class="sxs-lookup"><span data-stu-id="3ac64-214">Properties:</span></span>
 
-|<span data-ttu-id="f9da7-214">Имя</span><span class="sxs-lookup"><span data-stu-id="f9da7-214">Name</span></span>| <span data-ttu-id="f9da7-215">Тип</span><span class="sxs-lookup"><span data-stu-id="f9da7-215">Type</span></span>| <span data-ttu-id="f9da7-216">Описание</span><span class="sxs-lookup"><span data-stu-id="f9da7-216">Description</span></span>|
+|<span data-ttu-id="3ac64-215">Имя</span><span class="sxs-lookup"><span data-stu-id="3ac64-215">Name</span></span>| <span data-ttu-id="3ac64-216">Тип</span><span class="sxs-lookup"><span data-stu-id="3ac64-216">Type</span></span>| <span data-ttu-id="3ac64-217">Описание</span><span class="sxs-lookup"><span data-stu-id="3ac64-217">Description</span></span>|
 |---|---|---|
-|`Body`| <span data-ttu-id="f9da7-217">String</span><span class="sxs-lookup"><span data-stu-id="f9da7-217">String</span></span>|<span data-ttu-id="f9da7-218">Источник данных — текст сообщения.</span><span class="sxs-lookup"><span data-stu-id="f9da7-218">The source of the data is from the body of a message.</span></span>|
-|`Subject`| <span data-ttu-id="f9da7-219">String</span><span class="sxs-lookup"><span data-stu-id="f9da7-219">String</span></span>|<span data-ttu-id="f9da7-220">Источник данных — тема сообщения.</span><span class="sxs-lookup"><span data-stu-id="f9da7-220">The source of the data is from the subject of a message.</span></span>|
+|`Body`| <span data-ttu-id="3ac64-218">String</span><span class="sxs-lookup"><span data-stu-id="3ac64-218">String</span></span>|<span data-ttu-id="3ac64-219">Источник данных — текст сообщения.</span><span class="sxs-lookup"><span data-stu-id="3ac64-219">The source of the data is from the body of a message.</span></span>|
+|`Subject`| <span data-ttu-id="3ac64-220">String</span><span class="sxs-lookup"><span data-stu-id="3ac64-220">String</span></span>|<span data-ttu-id="3ac64-221">Источник данных — тема сообщения.</span><span class="sxs-lookup"><span data-stu-id="3ac64-221">The source of the data is from the subject of a message.</span></span>|
 
-##### <a name="requirements"></a><span data-ttu-id="f9da7-221">Requirements</span><span class="sxs-lookup"><span data-stu-id="f9da7-221">Requirements</span></span>
+##### <a name="requirements"></a><span data-ttu-id="3ac64-222">Requirements</span><span class="sxs-lookup"><span data-stu-id="3ac64-222">Requirements</span></span>
 
-|<span data-ttu-id="f9da7-222">Требование</span><span class="sxs-lookup"><span data-stu-id="f9da7-222">Requirement</span></span>| <span data-ttu-id="f9da7-223">Значение</span><span class="sxs-lookup"><span data-stu-id="f9da7-223">Value</span></span>|
+|<span data-ttu-id="3ac64-223">Требование</span><span class="sxs-lookup"><span data-stu-id="3ac64-223">Requirement</span></span>| <span data-ttu-id="3ac64-224">Значение</span><span class="sxs-lookup"><span data-stu-id="3ac64-224">Value</span></span>|
 |---|---|
-|[<span data-ttu-id="f9da7-224">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="f9da7-224">Minimum mailbox requirement set version</span></span>](../../requirement-sets/outlook-api-requirement-sets.md)| <span data-ttu-id="f9da7-225">1.1</span><span class="sxs-lookup"><span data-stu-id="f9da7-225">1.1</span></span>|
-|[<span data-ttu-id="f9da7-226">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="f9da7-226">Applicable Outlook mode</span></span>](../../../outlook/outlook-add-ins-overview.md#extension-points)| <span data-ttu-id="f9da7-227">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="f9da7-227">Compose or Read</span></span>|
+|[<span data-ttu-id="3ac64-225">Версия минимального набора требований к почтовому ящику</span><span class="sxs-lookup"><span data-stu-id="3ac64-225">Minimum mailbox requirement set version</span></span>](../../requirement-sets/outlook-api-requirement-sets.md)| <span data-ttu-id="3ac64-226">1.1</span><span class="sxs-lookup"><span data-stu-id="3ac64-226">1.1</span></span>|
+|[<span data-ttu-id="3ac64-227">Применимый режим Outlook</span><span class="sxs-lookup"><span data-stu-id="3ac64-227">Applicable Outlook mode</span></span>](../../../outlook/outlook-add-ins-overview.md#extension-points)| <span data-ttu-id="3ac64-228">Создание или чтение</span><span class="sxs-lookup"><span data-stu-id="3ac64-228">Compose or Read</span></span>|
