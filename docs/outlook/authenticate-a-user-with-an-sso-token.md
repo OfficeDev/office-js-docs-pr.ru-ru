@@ -3,12 +3,12 @@ title: Проверка подлинности пользователя с по�
 description: Узнайте, как реализовать единый вход в службе с помощью маркера единого входа, предоставляемого надстройкой Outlook.
 ms.date: 11/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 13babbb417618005f55e965d54e5b497d35bf6af
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 9ee3ece5929df602a35ddd9883c08e25164d8a22
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42166790"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42721032"
 ---
 # <a name="authenticate-a-user-with-a-single-sign-on-token-in-an-outlook-add-in-preview"></a>Проверка подлинности пользователя с помощью маркера единого входа в надстройке Outlook (предварительная версия)
 

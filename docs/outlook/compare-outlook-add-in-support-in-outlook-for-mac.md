@@ -3,12 +3,12 @@ title: Сравнение поддержки надстроек Outlook в Outlo
 description: Узнайте, как сравнить надстройки в Outlook для Mac с другими ведущими приложениями Outlook.
 ms.date: 11/26/2019
 localization_priority: Normal
-ms.openlocfilehash: ec5e9934249ddc1a90240890d7f0201d23599446
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: 452a162a05a44477c85a99417b3a8cefbf49e515
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42325463"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42720829"
 ---
 # <a name="compare-outlook-add-in-support-in-outlook-on-mac-with-other-outlook-hosts"></a>Сравнение поддержки надстроек Outlook в Outlook в Mac с другими ведущими приложениями Outlook
 

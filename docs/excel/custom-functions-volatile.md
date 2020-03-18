@@ -3,12 +3,12 @@ ms.date: 01/14/2020
 description: Узнайте, как реализовать переменные настраиваемые функции потоковой и автономной работы.
 title: Пересчитываемые значения в функциях
 localization_priority: Normal
-ms.openlocfilehash: 57a41578f400b10806fc169fed09db7d7a66ce84
-ms.sourcegitcommit: 212c810f3480a750df779777c570159a7f76054a
+ms.openlocfilehash: 617599a2687696a96240c4f162f9b02788a215f4
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "41217050"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42717210"
 ---
 # <a name="volatile-values-in-functions"></a>Пересчитываемые значения в функциях
 

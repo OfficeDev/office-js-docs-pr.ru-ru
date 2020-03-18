@@ -1,14 +1,14 @@
 ---
 title: Регистрация надстройки Office, использующей единый вход, в конечной точке Azure AD версии 2.0
-description: ''
+description: Узнайте, как зарегистрировать надстройку Office с помощью конечной точки Azure AD версии 2.0.
 ms.date: 04/10/2019
 localization_priority: Normal
-ms.openlocfilehash: 3594b1e1b22f7a4341b5fd9a5b6774f3d21d8c26
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 45465cf39243ac8d7704a7d66b483a7716c0898f
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41949700"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42718848"
 ---
 # <a name="register-an-office-add-in-that-uses-sso-with-the-azure-ad-v20-endpoint"></a>Регистрация надстройки Office, использующей единый вход, в конечной точке Azure AD версии 2.0
 

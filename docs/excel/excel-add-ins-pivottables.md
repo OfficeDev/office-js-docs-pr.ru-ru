@@ -3,12 +3,12 @@ title: Работать со сводными таблицами с помощь
 description: Используйте API JavaScript для Excel, чтобы создавать сводные таблицы и взаимодействовать с их компонентами.
 ms.date: 01/22/2020
 localization_priority: Normal
-ms.openlocfilehash: ec7d7ccd7f040185e31b59693827c31d5dab8372
-ms.sourcegitcommit: a0262ea40cd23f221e69bcb0223110f011265d13
+ms.openlocfilehash: 5899959b108ace2da35950655ff9313cd94243d3
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 03/17/2020
-ms.locfileid: "42689026"
+ms.locfileid: "42717105"
 ---
 # <a name="work-with-pivottables-using-the-excel-javascript-api"></a>Работать со сводными таблицами с помощью API JavaScript для Excel
 

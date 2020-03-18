@@ -1,14 +1,14 @@
 ---
 title: Элемент SupportUrl в файле манифеста
-description: ''
+description: Элемент SupportUrl указывает URL-адрес страницы, предоставляющей сведения о поддержке надстройки.
 ms.date: 10/09/2018
 localization_priority: Normal
-ms.openlocfilehash: 18b9b7c4df9def70ab42ae213066188ac04c07a7
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: e38030062c48936f925126e896cd74e660164a5d
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450417"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42720346"
 ---
 # <a name="supporturl-element"></a>Элемент SupportUrl
 

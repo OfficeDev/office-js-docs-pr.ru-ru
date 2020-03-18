@@ -1,14 +1,14 @@
 ---
 title: Элемент TargetDialects в файле манифеста
-description: ''
+description: Элемент TargetDialects определяет региональные языки, поддерживаемые этим словарем.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 6ef418a36fdd2f922e2a9d7b60f0f3b5528e564c
-ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
+ms.openlocfilehash: 77544b8dfe917d3bca8ab8fcc7bd4e055b94fe54
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42596867"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42720325"
 ---
 # <a name="targetdialects-element"></a>Элемент TargetDialects
 

@@ -1,14 +1,14 @@
 ---
 title: Среды выполнения в файле манифеста (Предварительная версия)
-description: ''
+description: Элемент Runtimes указывает среду выполнения надстройки.
 ms.date: 02/21/2020
 localization_priority: Normal
-ms.openlocfilehash: 17e53b53d55ea9547cdfc5c4f89f8f4c3a7ab75e
-ms.sourcegitcommit: dd6d00202f6466c27418247dad7bd136555a6036
+ms.openlocfilehash: 5797aa78ae3667461de48de481ff44f14c307ced
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42283879"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42720423"
 ---
 # <a name="runtimes-element-preview"></a>Элемент среды выполнения (Предварительная версия)
 

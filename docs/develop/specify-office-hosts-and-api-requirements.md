@@ -1,14 +1,14 @@
 ---
 title: Указание ведущих приложений Office и требований к API
-description: ''
+description: Узнайте, как указать приложения Office и требования к API для надстройки, чтобы она работала должным образом.
 ms.date: 09/26/2019
 localization_priority: Normal
-ms.openlocfilehash: bf5c263da57224036aa12ec652a1cb38f73e31c0
-ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
+ms.openlocfilehash: ab9b97f3d3232339010179097e1fd03dbeb86aa2
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42596496"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42718813"
 ---
 # <a name="specify-office-hosts-and-api-requirements"></a>Указание ведущих приложений Office и требований к API
 
@@ -36,11 +36,11 @@ ms.locfileid: "42596496"
 
 ## <a name="before-you-begin"></a>Подготовка
 
-Надстройка должна использовать самую последнюю версию схемы манифеста надстройки. Если вы используете проверки среды выполнения в вашей надстройке, убедитесь, что вы используете последнюю библиотеку API JavaScript для Office (Office. js).
+Надстройка должна использовать последнюю версию схемы манифеста надстройки. Если вы используете проверки среды выполнения в вашей надстройке, убедитесь, что вы используете последнюю библиотеку API JavaScript для Office (Office. js).
 
 ### <a name="specify-the-latest-add-in-manifest-schema"></a>Выбор последней версии схема манифестов надстроек
 
-В манифесте надстройки должна использоваться схема манифеста надстройки версии 1,1. Задайте `OfficeApp` элемент в манифесте надстройки следующим образом.
+Ваша надстройка должна использовать схему манифеста 1.1. Задайте `OfficeApp` элемент в манифесте надстройки следующим образом.
 
 ```XML
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TaskPaneApp">
@@ -48,7 +48,7 @@ ms.locfileid: "42596496"
 
 ### <a name="specify-the-latest-office-javascript-api-library"></a>Указание последней версии библиотеки API JavaScript для Office
 
-Если вы используете проверки среды выполнения, укажите самую последнюю версию библиотеки API JavaScript для Office из сети доставки содержимого (CDN). Для этого добавьте следующий `script` тег в HTML-код. Использование `/1/` в URL-адресе CDN гарантирует ссылку на последнюю версию файла Office. js.
+Если вы используете проверки среды выполнения, укажите самую последнюю версию библиотеки API JavaScript для Office из сети доставки содержимого (CDN). Для этого добавьте указанный ниже тег `script` в HTML-код. Чтобы всегда ссылаться на последнюю версию файла Office.js, используйте `/1/` в URL-адресе сети доставки содержимого.
 
 ```HTML
 <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
@@ -60,7 +60,7 @@ ms.locfileid: "42596496"
 
 ![Выбор самого подходящего варианта указания ведущих приложений Office или элементов API для надстройки](../images/options-for-office-hosts.png)
 
-- Если надстройка работает на одном узле Office, задайте `Hosts` элемент в манифесте. Дополнительные сведения см. в разделе [Установка элемента hosts](#set-the-hosts-element).
+- Если надстройка работает на одном узле Office, задайте `Hosts` элемент в манифесте. Дополнительные сведения см. в разделе [Задание элемента Hosts](#set-the-hosts-element).
 
 - Чтобы задать минимальный набор требований или элементы API, которые ведущее приложение Office должно поддерживать для запуска надстройки, задайте `Requirements` элемент в манифесте. Дополнительные сведения см. [в разделе Set The требований element в манифесте](#set-the-requirements-element-in-the-manifest).
 
@@ -125,7 +125,7 @@ ms.locfileid: "42596496"
 
 - `Requirements` Элемент содержит `Sets` `Methods` дочерние элементы.
 
-- `Sets` Элемент может содержать один или несколько `Set` элементов. `DefaultMinVersion` задает значение по `MinVersion` умолчанию для всех `Set` дочерних элементов.
+- `Sets` Элемент может содержать один или несколько `Set` элементов. `DefaultMinVersion`задает значение по `MinVersion` умолчанию для всех `Set` дочерних элементов.
 
 - `Set` Элемент указывает наборы требований, которые ведущее приложение Office должно поддерживать для запуска надстройки. `Name` Атрибут указывает имя набора требований. `MinVersion` Указывает минимальную версию набора обязательных элементов. `MinVersion`переопределяет значение `DefaultMinVersion` для получения дополнительных сведений о наборах требований и версиях набора требований, к которым относятся элементы API, ознакомьтесь со статьей " [наборы требований для надстроек Office](../reference/requirement-sets/office-add-in-requirement-sets.md)".
 

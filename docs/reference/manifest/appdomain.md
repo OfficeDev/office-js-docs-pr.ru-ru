@@ -1,14 +1,14 @@
 ---
 title: Элемент AppDomain в файле манифеста
-description: ''
+description: Задает дополнительные домены, которые загружают страницы в окне надстройки.
 ms.date: 07/03/2019
 localization_priority: Normal
-ms.openlocfilehash: da28b3b4dec5d669462a781db3c0628bd32c7182
-ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
+ms.openlocfilehash: 6990f759df806f24b1d617c036bc1a452e6da38f
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42596790"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42718456"
 ---
 # <a name="appdomain-element"></a>Элемент AppDomain
 

@@ -1,14 +1,14 @@
 ---
 title: Разработка надстроек Office с помощью Angular
-description: ''
+description: Получите рекомендации по использованию элемента "Радиальный" для создания надстройки Office в виде одностраничного приложения.
 ms.date: 01/27/2020
 localization_priority: Normal
-ms.openlocfilehash: 0e78a2e000016e28f2012902e0e8db487b80d930
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: b3796b16c8e5ddc74a172ab427866bfe8e842cae
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42324640"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42719212"
 ---
 # <a name="develop-office-add-ins-with-angular"></a>Разработка надстроек Office с помощью Angular
 

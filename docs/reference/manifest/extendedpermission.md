@@ -1,14 +1,14 @@
 ---
 title: Элемент Екстендедпермиссион в файле манифеста
-description: ''
+description: Определяет расширенное разрешение, необходимое надстройке для доступа к связанному API или функции.
 ms.date: 03/05/2020
 localization_priority: Normal
-ms.openlocfilehash: 6c41684fc922f5845559250311edd8182788cfc5
-ms.sourcegitcommit: a0262ea40cd23f221e69bcb0223110f011265d13
+ms.openlocfilehash: 7ff17312ae487d20f4d7af0ed4405cedd8820253
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "42605811"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42720605"
 ---
 # <a name="extendedpermission-element"></a>`ExtendedPermission`элементами
 
@@ -21,7 +21,7 @@ ms.locfileid: "42605811"
 
 Ниже приведены доступные значения.
 
-|Доступное значение|Описание|Hosts|
+|Доступное значение|Описание|Узлы|
 |---|---|---|
 |`AppendOnSend`|Объявляет, что надстройка использует API [Office. Body. аппендонсендасинк](/javascript/api/outlook/office.body?view=outlook-js-preview#appendonsendasync-data--options--callback-) .|Outlook|
 
@@ -59,4 +59,4 @@ ms.locfileid: "42605811"
 
 ## <a name="contained-in"></a>Содержится в
 
-[екстендедпермиссионс](extendedpermissions.md)
+[ExtendedPermissions](extendedpermissions.md)

@@ -3,12 +3,12 @@ ms.date: 07/15/2019
 description: Узнайте, как использовать различные параметры в пользовательских функциях, таких как диапазоны Excel, необязательные параметры, контекст вызова и многое другое.
 title: Параметры для пользовательских функций Excel
 localization_priority: Normal
-ms.openlocfilehash: 1b4097e1190c5d9dc284393d1321c8e2d6c1a8a4
-ms.sourcegitcommit: a0262ea40cd23f221e69bcb0223110f011265d13
+ms.openlocfilehash: 66e873117b82ed7258b5965a6e964f4b9e01df21
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 03/17/2020
-ms.locfileid: "42689070"
+ms.locfileid: "42719485"
 ---
 # <a name="custom-functions-parameter-options"></a>Параметры параметров пользовательских функций
 

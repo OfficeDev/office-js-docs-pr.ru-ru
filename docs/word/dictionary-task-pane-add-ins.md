@@ -1,14 +1,14 @@
 ---
 title: Создание надстройки области задач словаря
-description: ''
+description: Узнайте, как создать надстройку области задач словаря
 ms.date: 09/26/2019
 localization_priority: Normal
-ms.openlocfilehash: 4145727ef092bd56117dfd5d6c89e976a3aaa11a
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: e72ef049c355e756a3bd8a843fc6075a59c3c8a6
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42324724"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42719695"
 ---
 # <a name="create-a-dictionary-task-pane-add-in"></a>Создание надстройки области задач словаря
 

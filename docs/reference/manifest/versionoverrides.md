@@ -1,14 +1,14 @@
 ---
 title: Элемент VersionOverrides в файле манифеста
-description: ''
+description: Справочная документация по элементу VersionOverrides для файлов манифеста надстроек Office (XML).
 ms.date: 03/05/2020
 localization_priority: Normal
-ms.openlocfilehash: 5dc1013f24ef6e0cc4f000128b6f5d28ccae4432
-ms.sourcegitcommit: a0262ea40cd23f221e69bcb0223110f011265d13
+ms.openlocfilehash: 055a796d269ffb230293639a7f69b2dde4e36eee
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "42605682"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42717854"
 ---
 # <a name="versionoverrides-element"></a>Элемент VersionOverrides
 
@@ -45,7 +45,7 @@ ms.locfileid: "42605682"
 |  [EquivalentAddins](equivalentaddins.md)    |  Нет  | Задает встроенные надстройки (COM/XLL), эквивалентные веб-надстройке. Веб-надстройка не активируется, если установлена эквивалентная собственная встроенная надстройка.|
 |  **VersionOverrides**    |  Нет  | Определяет команды надстроек в новой версии схемы. Подробные сведения см. в разделе [Реализация нескольких версий](#implementing-multiple-versions). |
 |  [WebApplicationInfo](webapplicationinfo.md)    |  Нет  | Задает сведения о регистрации надстройки с помощью надежных поставщиков маркеров, таких как Azure Active Directory 2.0. |
-|  [екстендедпермиссионс](extendedpermissions.md) |  Нет  |  Задает коллекцию расширенных разрешений.<br><br>**Важно!** поскольку API [Office. Body. аппендонсендасинк](/javascript/api/outlook/office.body?view=outlook-js-preview#appendonsendasync-data--options--callback-) в настоящее время находится в режиме предварительной версии, надстройки `ExtendedPermissions` , использующие этот элемент, не могут быть опубликованы в AppSource или развернуты с помощью централизованного развертывания. |
+|  [ExtendedPermissions](extendedpermissions.md) |  Нет  |  Задает коллекцию расширенных разрешений.<br><br>**Важно!** поскольку API [Office. Body. аппендонсендасинк](/javascript/api/outlook/office.body?view=outlook-js-preview#appendonsendasync-data--options--callback-) в настоящее время находится в режиме предварительной версии, надстройки `ExtendedPermissions` , использующие этот элемент, не могут быть опубликованы в AppSource или развернуты с помощью централизованного развертывания. |
 
 ### <a name="versionoverrides-example"></a>Пример VersionOverrides
 

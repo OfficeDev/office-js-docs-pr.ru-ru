@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
-description: ''
+description: Функции и API, которые в настоящее время находятся в предварительной версии для надстроек Outlook и API JavaScript для Office.
 ms.date: 03/04/2020
 localization_priority: Normal
-ms.openlocfilehash: 4365dab3d8dd1ddb876536b3030926d68a89ac49
-ms.sourcegitcommit: a0262ea40cd23f221e69bcb0223110f011265d13
+ms.openlocfilehash: c87ce8472becc072702f58e7d8c21665904673d2
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "42605675"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42717812"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -33,7 +33,7 @@ ms.locfileid: "42605675"
 
 **Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
 
-#### <a name="extendedpermissions"></a>[екстендедпермиссионс](../../manifest/extendedpermissions.md)
+#### <a name="extendedpermissions"></a>[ExtendedPermissions](../../manifest/extendedpermissions.md)
 
 Добавлен новый элемент в манифест, где `AppendOnSend` расширенное разрешение должно быть включено в коллекцию расширенных разрешений.
 

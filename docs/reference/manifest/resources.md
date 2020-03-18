@@ -1,14 +1,14 @@
 ---
 title: Элемент Resources в файле манифеста
-description: ''
+description: В элементе Resources находятся значки, строки и URL-адреса для узла VersionOverrides.
 ms.date: 10/09/2018
 localization_priority: Normal
-ms.openlocfilehash: 7e1cd9fcb383fa4d5881917b3dd8d6dec3bbe4f8
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: 9efd1f370ff842c9df2d911c64217f489284e767
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42324829"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42717966"
 ---
 # <a name="resources-element"></a>Элемент Resources
 

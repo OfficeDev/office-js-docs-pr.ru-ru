@@ -3,12 +3,12 @@ ms.date: 06/18/2019
 description: Создание диалогового окна пользовательских функций в Excel с помощью JavaScript.
 title: Вызов диалогового окна из пользовательской функции
 localization_priority: Normal
-ms.openlocfilehash: 54648e87cfdcb314c3d9d3ba3a4e0dbe3c708859
-ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
+ms.openlocfilehash: a2ef005f4c1519228f114dbd671d689807e5914c
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42596636"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42718749"
 ---
 # <a name="display-a-dialog-box-from-a-custom-function"></a>Вызов диалогового окна из пользовательской функции
 

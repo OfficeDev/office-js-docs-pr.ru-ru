@@ -1,14 +1,14 @@
 ---
 title: Элемент IconUrl в файле манифеста
-description: ''
+description: Элемент IconUrl указывает URL-адрес изображения, которое представляет надстройку Office в пользовательском интерфейсе вставки и магазине Office.
 ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: 858f399ed36bfed60c3e091b26ac7400ff901179
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: a345971e32e64557005c8d01519589f4be5fb7d7
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42325264"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42718085"
 ---
 # <a name="iconurl-element"></a>Элемент IconUrl
 

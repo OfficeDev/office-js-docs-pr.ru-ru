@@ -1,14 +1,14 @@
 ---
 title: Office.context — предварительная версия набора обязательных элементов
-description: ''
+description: Объектная модель для объекта контекста Outlook в API надстроек Outlook (Предварительная версия API почтовых ящиков).
 ms.date: 12/16/2019
 localization_priority: Normal
-ms.openlocfilehash: 9c2c661ce870e2007bd891aee040c6b3564f7b9e
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 409f0a5b46eba667f79228f45081c160c3c3ce7f
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42165519"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42717805"
 ---
 # <a name="context"></a>context
 

@@ -1,18 +1,18 @@
 ---
 title: Элемент Action в файле манифеста
-description: ''
+description: Этот элемент указывает действие, выполняемое при выборе пользователем элемента управления "Кнопка" или "меню".
 ms.date: 02/28/2020
 localization_priority: Normal
-ms.openlocfilehash: f7bd577fea1672f592f2b1bac2823d96f0e8a134
-ms.sourcegitcommit: 6c7c98f085dd20f827e0c388e672993412944851
+ms.openlocfilehash: 75ad0d6a0eab81b7526acadb6079824d5a98fd5b
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "42554918"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42720969"
 ---
 # <a name="action-element"></a>Элемент Action
 
-Указывает действие, которое необходимо выполнить, когда пользователь выбирает элемент управления [Button](control.md#button-control) или [Menu](control.md#menu-dropdown-button-controls).
+Задает действие, выполняемое при выборе пользователем элемента управления ["Кнопка" или "](control.md#button-control) [меню](control.md#menu-dropdown-button-controls) ".
 
 ## <a name="attributes"></a>Атрибуты
 

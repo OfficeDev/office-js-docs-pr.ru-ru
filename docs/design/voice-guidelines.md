@@ -1,14 +1,14 @@
 ---
 title: Рекомендации по стилю надстроек Office
-description: ''
+description: Ознакомьтесь с рекомендациями по написанию справки пользователя и других строк для надстроек Office.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 2982c8a09ba1f2f1265681dfb5850c3a324d704c
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 6f39c17687b176ca015bfe7d3df0173266a7798c
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32449017"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42719226"
 ---
 # <a name="voice-guidelines"></a>Рекомендации по стилю
 

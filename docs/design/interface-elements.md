@@ -1,14 +1,14 @@
 ---
 title: Элементы пользовательского интерфейса Office для надстроек Office
-description: ''
+description: Получите обзор различных типов элементов пользовательского интерфейса в надстройке Office.
 ms.date: 12/24/2019
 localization_priority: Normal
-ms.openlocfilehash: f805926894a33f74914fbd315245c93c826d5fc0
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: e4bcc3badd58b3ab73b091bdb3c06eaa130dfc3e
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950427"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42718645"
 ---
 # <a name="office-ui-elements-for-office-add-ins"></a>Элементы пользовательского интерфейса Office для надстроек Office
 

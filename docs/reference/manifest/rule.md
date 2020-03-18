@@ -1,18 +1,18 @@
 ---
 title: Элемент Rule в файле манифеста
-description: ''
-ms.date: 03/19/2019
+description: Элемент Rule указывает правила активации, которые должны оцениваться для этой контекстной почтовой надстройки.
+ms.date: 03/16/2020
 localization_priority: Normal
-ms.openlocfilehash: 78fb38d8fb18c276bfe2eed1bd5b52659cadcaa3
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 06d9985615617e50567dcf614268d9181989f2a1
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42165533"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42720437"
 ---
 # <a name="rule-element"></a>Элемент Rule
 
-Указывает правила активации, которые следует оценивать для этой контекстной почтовой надстройки.
+Задает правила активации, которые должны оцениваться для этой контекстной почтовой надстройки.
 
 **Тип надстройки:** контекстная почтовая надстройка
 

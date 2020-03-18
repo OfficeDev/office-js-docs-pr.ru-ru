@@ -1,14 +1,14 @@
 ---
 title: Открытые спецификации API JavaScript для Office
-description: ''
+description: Открытые спецификации API
 ms.date: 07/17/2019
 localization_priority: Normal
-ms.openlocfilehash: ee4b8ce52eefe0419dbbc04124b865d5c20fea4c
-ms.sourcegitcommit: 6d9b4820a62a914c50cef13af8b80ce626034c26
+ms.openlocfilehash: bc06e93f0cae2ea630f23d1524d2c7cc8c03c784
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "35804999"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42719975"
 ---
 # <a name="api-open-specifications"></a>Открытые спецификации API
 

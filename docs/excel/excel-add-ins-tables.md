@@ -1,18 +1,18 @@
 ---
 title: Работа с таблицами с использованием API JavaScript для Excel
-description: ''
+description: Примеры кода, демонстрирующие выполнение типовых задач с таблицами с помощью API JavaScript для Excel.
 ms.date: 09/09/2019
 localization_priority: Normal
-ms.openlocfilehash: 4bc1b86f84b2002ad199174ffb37c3c080d51add
-ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
+ms.openlocfilehash: b6000773a70c74d115643f3353658287b6d66235
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42596580"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42717140"
 ---
 # <a name="work-with-tables-using-the-excel-javascript-api"></a>Работа с таблицами с использованием API JavaScript для Excel
 
-В этой статье приведены примеры кода, в которых показано, как выполнять распространенные задачи с таблицами с помощью API JavaScript для Excel. Полный список свойств и методов, поддерживаемых `Table` объектами and `TableCollection` , представлен в статье [объект Table (API JavaScript для Excel)](/javascript/api/excel/excel.table) и [объект TableCollection (API JavaScript для Excel)](/javascript/api/excel/excel.tablecollection).
+В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для таблиц с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых `Table` объектами and `TableCollection` , представлен в статье [объект Table (API JavaScript для Excel)](/javascript/api/excel/excel.table) и [объект TableCollection (API JavaScript для Excel)](/javascript/api/excel/excel.tablecollection).
 
 ## <a name="create-a-table"></a>Создание таблицы
 
@@ -340,7 +340,7 @@ Excel.run(function (context) {
 
 ## <a name="get-the-visible-range-from-a-filtered-table"></a>Получение отображаемого диапазона из отфильтрованной таблицы
 
-В примере кода ниже показано, как получить диапазон, содержащий данные только для тех ячеек, которые в настоящее время видны в указанной таблице, а затем записывает значения этого диапазона в консоль. Вы можете использовать `getVisibleView()` метод, как показано ниже, чтобы получить видимое содержимое таблицы при применении фильтров столбцов.
+В примере кода ниже показано, как получить диапазон, содержащий данные только из тех ячеек, которые в данный момент отображаются в указанной таблице, и записать значения из этого диапазона в консоль. Вы можете использовать `getVisibleView()` метод, как показано ниже, чтобы получить видимое содержимое таблицы при применении фильтров столбцов.
 
 ```js
 Excel.run(function (context) {

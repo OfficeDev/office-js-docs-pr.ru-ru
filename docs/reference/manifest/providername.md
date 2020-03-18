@@ -1,14 +1,14 @@
 ---
 title: Элемент ProviderName в файле манифеста
-description: ''
+description: Элементы ProviderName указывают имена отдельных компаний или компаний, которые разработали эту надстройку Office.
 ms.date: 10/09/2018
 localization_priority: Normal
-ms.openlocfilehash: c198c25aa4d882d6e73307d9ca1fea6d7e18343d
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: 51a9b8febd6f9a08d93722e9aab8026d5ef7b130
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32450431"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42720465"
 ---
 # <a name="providername-element"></a>Элемент ProviderName
 

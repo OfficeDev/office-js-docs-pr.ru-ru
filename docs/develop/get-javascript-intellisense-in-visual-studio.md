@@ -1,14 +1,14 @@
 ---
 title: Использование IntelliSense для JavaScript в Visual Studio 2019
-description: ''
+description: Узнайте, как использовать Жсдок для создания IntelliSense для переменных JavaScript, объектов, параметров и возвращаемых значений.
 ms.date: 10/11/2019
 localization_priority: Normal
-ms.openlocfilehash: a099d43cc798bb96078825930450dcad954c7418
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 88453151ffced0efcae8569ceb19c4556177fdea
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950679"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42718988"
 ---
 # <a name="get-javascript-intellisense-in-visual-studio-2019"></a>Использование IntelliSense для JavaScript в Visual Studio 2019
 

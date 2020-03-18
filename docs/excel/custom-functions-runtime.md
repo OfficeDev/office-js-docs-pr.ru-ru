@@ -3,12 +3,12 @@ ms.date: 05/08/2019
 description: Сведения об основных сценариях при разработке пользовательских функций Excel, которые используют новую среду выполнения JavaScript.
 title: Среда выполнения для пользовательских функций Excel
 localization_priority: Normal
-ms.openlocfilehash: bb73ab2f20eadbac3f5fc97e272d69fe8bb983cd
-ms.sourcegitcommit: a0262ea40cd23f221e69bcb0223110f011265d13
+ms.openlocfilehash: 2cb950cd6f5f78ed76b19a1fa443720d7cfb86a2
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 03/17/2020
-ms.locfileid: "42689018"
+ms.locfileid: "42719499"
 ---
 # <a name="runtime-for-excel-custom-functions"></a>Среда выполнения для пользовательских функций Excel
 

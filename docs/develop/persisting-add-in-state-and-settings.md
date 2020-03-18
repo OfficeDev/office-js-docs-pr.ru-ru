@@ -1,14 +1,14 @@
 ---
 title: Сохранение состояния и параметров надстройки
-description: ''
+description: Сведения о том, как хранить данные в веб-приложениях надстройки Office, работающих в среде без сохранения состояния элемента управления браузера.
 ms.date: 02/27/2020
 localization_priority: Normal
-ms.openlocfilehash: 99b645d27ff094e50ae4ad52a1a7f96aac07b9ed
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: 7d66a8693c18dbc7f2be59b2799db7429681a57f
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42325145"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42719394"
 ---
 # <a name="persisting-add-in-state-and-settings"></a>Сохранение состояния и параметров надстройки
 
@@ -26,7 +26,7 @@ ms.locfileid: "42325145"
 
 ## <a name="persisting-add-in-state-and-settings-with-the-office-javascript-api"></a>Сохранение состояния и параметров надстройки с помощью API JavaScript для Office
 
-API JavaScript для Office предоставляет объекты [параметров](/javascript/api/office/office.settings), [roamingSettings](/javascript/api/outlook/office.roamingsettings)и [CustomProperties](/javascript/api/outlook/office.customproperties) для сохранения состояния надстройки во всех сеансах, как описано в следующей таблице. Во всех случаях сохраненные значения параметров связаны с [идентификатором](/office/dev/add-ins/reference/manifest/id) надстройки, в которой они были созданы.
+API JavaScript для Office предоставляет объекты [параметров](/javascript/api/office/office.settings), [roamingSettings](/javascript/api/outlook/office.roamingsettings)и [CustomProperties](/javascript/api/outlook/office.customproperties) для сохранения состояния надстройки во всех сеансах, как описано в следующей таблице. Во всех случаях сохраненные значения параметров связаны с [Id](../reference/manifest/id.md) создавшей их надстройки.
 
 |**Объект**|**Поддерживаемый тип надстроек**|**Расположение хранилища**|**Поддержка ведущих приложений Office**|
 |:-----|:-----|:-----|:-----|
@@ -59,10 +59,10 @@ API JavaScript для Office предоставляет объекты [пара
 > Для сохранения добавлений, обновлений или удалений, внесенных в текущем сеансе надстройки, в место хранения необходимо вызвать `saveAsync` метод соответствующего объекта, который используется для работы с этими параметрами. Методы `get`, `set`и `remove` , Кроме того, работают только в копии контейнера свойств параметров, нашедшегося в памяти. Если ваша надстройка закрывается без вызова `saveAsync`, любые изменения, внесенные в параметры во время этого сеанса, будут потеряны.
 
 
-## <a name="how-to-save-add-in-state-and-settings-per-document-for-content-and-task-pane-add-ins"></a>Сохранение состояния надстройки и параметров документа для надстроек области задач и контентных надстроек
+## <a name="how-to-save-add-in-state-and-settings-per-document-for-content-and-task-pane-add-ins"></a>Сохранение состояния надстройки и параметров документа для контентных надстроек и надстроек области задач
 
 
-Для сохранения состояния или настраиваемых параметров контента или надстройки области задач для Word, Excel или PowerPoint используется объект [Settings](/javascript/api/office/office.settings) и его методы. Контейнер свойств, созданный с помощью методов `Settings` объекта, доступен только для экземпляра созданной и созданной надстройкой области задач и только из документа, в котором она сохранена.
+Чтобы сохранить состояние или пользовательские параметры в контентной надстройке или надстройке области задач в Word, Excel или PowerPoint, следует использовать объект [Settings](/javascript/api/office/office.settings) и его методы. Контейнер свойств, созданный с помощью методов `Settings` объекта, доступен только для экземпляра созданной и созданной надстройкой области задач и только из документа, в котором она сохранена.
 
 `Settings` Объект автоматически загружается как часть объекта [Document](/javascript/api/office/office.document) и становится доступным при активации надстройки области задач или контентной надстройки. После создания `Document` экземпляра объекта можно получить доступ к `Settings` объекту с помощью свойства [Settings](/javascript/api/office/office.document#settings) `Document` объекта. Во время существования сеанса можно просто использовать методы `Settings.get`, `Settings.set`и и `Settings.remove` для чтения, записи или удаления сохраненных параметров и состояния надстройки из копии контейнера свойств в памяти.
 
@@ -78,12 +78,12 @@ API JavaScript для Office предоставляет объекты [пара
 Office.context.document.settings.set('themeColor', 'green');
 ```
 
- Параметр с указанным именем создается, если он еще не существует, или его значение обновляется, если оно существует. Используйте `Settings.saveAsync` метод для сохранения новых или обновленных параметров в документе.
+ Создается параметр с указанным именем, если таковой еще не существует или обновляется значение, если параметр существует. Используйте `Settings.saveAsync` метод для сохранения новых или обновленных параметров в документе.
 
 
 ### <a name="getting-the-value-of-a-setting"></a>Получение значения параметра
 
-В приведенном ниже примере показано, как использовать метод [Settings. Get](/javascript/api/office/office.settings#get-name-) , чтобы получить значение параметра с именем "themeColor". Единственный параметр `get` метода — это _имя_ параметра с учетом регистра.
+В следующем примере показано, как использовать метод [Settings.get](/javascript/api/office/office.settings#get-name-) для получения значения параметра "themeColor". Единственный параметр `get` метода — это _имя_ параметра с учетом регистра.
 
 
 ```js
@@ -95,12 +95,12 @@ function write(message){
 }
 ```
 
- `get` Метод возвращает значение, сохраненное ранее для _имени_ параметра, которое было передано. Если параметр не существует, метод возвращает **значение NULL**.
+ `get` Метод возвращает значение, сохраненное ранее для _имени_ параметра, которое было передано. Если параметр не существует, метод возвращает **null**.
 
 
 ### <a name="removing-a-setting"></a>Удаление параметра
 
-В приведенном ниже примере показано, как с помощью метода [Settings.](/javascript/api/office/office.settings#remove-name-) Remove удалить параметр с именем "themeColor". Единственный параметр `remove` метода — это _имя_ параметра с учетом регистра.
+В следующем примере показано, как использовать метод [Settings.remove](/javascript/api/office/office.settings#remove-name-) для удаления параметра с именем "themeColor". Единственный параметр `remove` метода — это _имя_ параметра с учетом регистра.
 
 
 ```js
@@ -112,7 +112,7 @@ Office.context.document.settings.remove('themeColor');
 
 ### <a name="saving-your-settings"></a>Сохранение параметров
 
-Для сохранения добавлений, изменений или удалений, внесенных в копию контейнера свойств параметров в памяти в текущем сеансе, необходимо вызвать метод [Settings. saveAsync](/javascript/api/office/office.settings#saveasync-options--callback-) , чтобы сохранить их в документе. Единственный параметр `saveAsync` метода — _обратный вызов_, который является функцией обратного вызова с одним параметром. 
+Чтобы сохранить любые добавления, изменения или удаления, внесенные надстройкой в копию контейнера свойств параметров, хранящуюся в памяти, во время текущего сеанса надстройки, необходимо вызвать метод [Settings.saveAsync](/javascript/api/office/office.settings#saveasync-options--callback-) для их сохранения в документе. Единственный параметр `saveAsync` метода — _обратный вызов_, который является функцией обратного вызова с одним параметром. 
 
 
 ```js
@@ -192,7 +192,7 @@ function getReviewers() {
 
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения об интерфейсе API JavaScript для Office](understanding-the-javascript-api-for-office.md)
+- [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)
 - [Надстройки Outlook](../outlook/outlook-add-ins-overview.md)
 - [Управление состоянием и параметрами для надстройки Outlook](../outlook/manage-state-and-settings-outlook.md)
 - [Excel-Add-in-JavaScript-PersistCustomSettings](https://github.com/OfficeDev/Excel-Add-in-JavaScript-PersistCustomSettings)

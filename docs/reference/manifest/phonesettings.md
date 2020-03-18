@@ -1,14 +1,14 @@
 ---
 title: Элемент PhoneSettings в файле манифеста
-description: ''
+description: Элемент PhoneSettings указывает исходное расположение и параметры управления, которые применяются при использовании почтовой надстройки на телефоне.
 ms.date: 01/13/2020
 localization_priority: Normal
-ms.openlocfilehash: 4614c86af865e5242657f47e21e6786545a616b6
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 581a3ae71a58cd05aac52129a6f4395a60c20cef
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42165540"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42720479"
 ---
 # <a name="phonesettings-element"></a>Элемент PhoneSettings
 

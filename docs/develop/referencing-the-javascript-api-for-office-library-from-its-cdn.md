@@ -3,12 +3,12 @@ title: 'Ссылки на библиотеку API JavaScript для Office '
 description: Узнайте, как ссылаться на библиотеку API JavaScript для Office и определение типов в надстройке.
 ms.date: 02/27/2020
 localization_priority: Normal
-ms.openlocfilehash: 5e26d5b0454a6833c593ff60c1577d24583dcc51
-ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
+ms.openlocfilehash: 3b468ae9286eb53ffd5d3c0199c14045131105f3
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42596720"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42719352"
 ---
 # <a name="referencing-the-office-javascript-api-library"></a>Ссылки на библиотеку API JavaScript для Office 
 

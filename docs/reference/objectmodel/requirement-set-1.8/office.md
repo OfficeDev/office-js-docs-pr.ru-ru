@@ -1,14 +1,14 @@
 ---
 title: Пространство имен Office — набор обязательных элементов 1,8
-description: ''
+description: Пространство имен Office предоставляет общие интерфейсы для надстроек Outlook Office (набор требований 1,8)
 ms.date: 12/16/2019
 localization_priority: Normal
-ms.openlocfilehash: c5c431f7a958f1c2a956f36e90ad0f3a205c6669
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 0bbe212b0b8e5dc1348cb5cdc03509c44a716d1a
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42163628"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42717505"
 ---
 # <a name="office"></a>Office
 

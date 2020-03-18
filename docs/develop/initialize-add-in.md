@@ -3,12 +3,12 @@ title: Инициализация надстройки Office
 description: Узнайте, как инициализировать надстройку Office.
 ms.date: 02/27/2020
 localization_priority: Normal
-ms.openlocfilehash: 5adce84867a96917135ca379bbd032fcc3bc824a
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: ca7b21c35fc82011c673cb83d077a89cc29f56eb
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42325012"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42718939"
 ---
 # <a name="initialize-your-office-add-in"></a>Инициализация надстройки Office
 
@@ -139,7 +139,7 @@ Office.initialize = function (reason) {
 > [!NOTE]
 > Даже если отсутствует логика запуска, следует вызвать `Office.onReady()` или назначить пустую функцию для `Office.initialize`, когда ваша надстройка загружает JavaScript. Некоторые ведущие приложения Office и сочетания платформ не загружают область задач, пока не произойдет одно из этих событий. Эти два способа показаны в приведенных ниже примерах.
 >
->```js  
+>```js    
 >Office.onReady();
 >```
 >
@@ -150,5 +150,5 @@ Office.initialize = function (reason) {
 
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения об интерфейсе API JavaScript для Office](understanding-the-javascript-api-for-office.md)
+- [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)
 - [Загрузка модели DOM и среды выполнения](loading-the-dom-and-runtime-environment.md)

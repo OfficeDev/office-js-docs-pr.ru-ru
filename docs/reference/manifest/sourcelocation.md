@@ -1,18 +1,18 @@
 ---
 title: Элемент SourceLocation в файле манифеста
-description: ''
-ms.date: 10/09/2018
+description: Элемент SourceLocation указывает расположение исходных файлов для надстройки Office.
+ms.date: 03/16/2020
 localization_priority: Normal
-ms.openlocfilehash: 7544e2bae480b9431c8912533ea1b761132a355e
-ms.sourcegitcommit: 9e7b4daa8d76c710b9d9dd4ae2e3c45e8fe07127
+ms.openlocfilehash: fcca051b0d85c98cb011d5b886981c543ef8e3b0
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "32451978"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42717903"
 ---
 # <a name="sourcelocation-element"></a>Элемент SourceLocation
 
-Указывает расположения исходного файла для надстройки Office как URL-адреса длиной от 1 до 2018 символов. В качестве источника необходимо указать адрес HTTPS, а не путь к файлу.
+Указывает расположение исходных файлов для надстройки Office в виде URL-адреса длиной от 1 до 2018 символов. В качестве источника необходимо указать адрес HTTPS, а не путь к файлу.
 
 **Тип надстройки:** контентные и почтовые надстройки, надстройки области задач
 
