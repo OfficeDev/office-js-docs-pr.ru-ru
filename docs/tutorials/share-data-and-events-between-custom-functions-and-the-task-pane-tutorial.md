@@ -1,15 +1,15 @@
 ---
-ms.date: 02/20/2020
 title: Руководство по обмену данными и событиями между пользовательскими функциями и областью задач в Excel (предварительная версия)
-ms.prod: excel
 description: Осуществляйте обмен данными и событиями между пользовательскими функциями и областью задач в Excel.
+ms.date: 02/20/2020
+ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 13ef4c199f7cb1de84e58f0ada554c851aee0cad
-ms.sourcegitcommit: dd6d00202f6466c27418247dad7bd136555a6036
+ms.openlocfilehash: 34f2f1006a592c3ee7ab63fdc643648ca26cd01f
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42283893"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42719730"
 ---
 # <a name="tutorial-share-data-and-events-between-excel-custom-functions-and-the-task-pane-preview"></a>Руководство по обмену данными и событиями между пользовательскими функциями и областью задач в Excel (предварительная версия)
 
@@ -207,7 +207,7 @@ yo office
   npm run start
   ```
 
-После запуска Excel можно использовать кнопки области задач для хранения или получения общих данных. Введите `=CONTOSO.GETVALUE()` в ячейку, чтобы пользовательская функция получила те же общие данные. Можно также использовать `=CONTOSO.STOREVALUE(“new value”)` для изменения значения общих данных.
+После запуска Excel можно использовать кнопки области задач для хранения или получения общих данных. Введите `=CONTOSO.GETVALUE()` в ячейку, чтобы пользовательская функция получила те же общие данные. Можно также использовать `=CONTOSO.STOREVALUE("new value")` для изменения значения общих данных.
 
 > [!NOTE]
 > Как показано в этой статье, при настройке проекта пользовательские функции и область задач совместно используют контекст. Вызов API Office из пользовательских функций не поддерживается в предварительной версии.

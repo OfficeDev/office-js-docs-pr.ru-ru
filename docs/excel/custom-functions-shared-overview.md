@@ -3,12 +3,12 @@ ms.date: 02/13/2020
 description: Узнайте, как запускать пользовательские функции, кнопки ленты и код области задач в одной и той же среде выполнения JavaScript для координации сценариев в вашей надстройке.
 title: Запуск кода надстройки в общей среде выполнения JavaScript (предварительная версия)
 localization_priority: Priority
-ms.openlocfilehash: d9d73a5ae2ff1da09d1a5fd7d02514cb28be0e2d
-ms.sourcegitcommit: dd6d00202f6466c27418247dad7bd136555a6036
+ms.openlocfilehash: 774990a9452d450bd5c4d968027bc64ebee858af
+ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42284161"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "42719534"
 ---
 # <a name="overview-run-your-add-in-code-in-a-shared-javascript-runtime-preview"></a>Обзор: запуск кода надстройки в общей среде выполнения JavaScript (предварительная версия)
 
