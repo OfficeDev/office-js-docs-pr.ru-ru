@@ -5,12 +5,12 @@ title: Справочная документация по API JavaScript для 
 description: Узнайте об API-интерфейсах JavaScript для Office.
 ms.date: 12/24/2019
 localization_priority: Priority
-ms.openlocfilehash: 5622146d9663881eea0a97cafa5e793aa0381932
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 99c42103d8e6d7b18d6082bfdafe1da0dad8397d
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42720745"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42890902"
 ---
 # <a name="api-reference-documentation"></a>Справочная документация по API
 
@@ -131,7 +131,3 @@ ms.locfileid: "42720745"
 </ul>
 
 <b>Примечание</b>. В настоящее время не существует специализированных API-интерфейсов для Project, поэтому при создании надстроек Project следует использовать общие API. Кроме того, набор специализированных API-интерфейсов для PowerPoint крайне ограничен, поэтому для создания надстроек PowerPoint используются главным образом общие API.
-
-<h2>Открытые спецификации API</h2>
-
-Мы публикуем новые API для надстроек Office на странице [Открытые спецификации API](openspec/openspec.md), чтобы вы могли делиться своим мнением. Узнайте, над какими функциями мы работаем, и поделитесь своим мнением о создаваемых спецификациях.

@@ -4,12 +4,12 @@ description: Обзор Word JavaScript API
 ms.date: 02/19/2020
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: dfc87a8f9f5c7048262d9c2889ae68eb38c0ed30
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: b53b3324105b3bac2521ebefdca3860745a1071b
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719891"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42891168"
 ---
 # <a name="word-javascript-api-overview"></a>Обзор API JavaScript для Word
 
@@ -43,4 +43,3 @@ ms.locfileid: "42719891"
 - [Обзор надстроек Word](../../word/word-add-ins-programming-overview.md)
 - [Справочник по API JavaScript для Word](/javascript/api/word)
 - [Доступность ведущих приложений и платформ для надстроек Office](../../overview/office-add-in-availability.md)
-- [Открытые спецификации API](../openspec/openspec.md)

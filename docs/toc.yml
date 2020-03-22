@@ -289,7 +289,7 @@
         - name: Публикация надстроек в AppSource
           href: /office/dev/store/submit-to-the-office-store
         - name: Политики проверки AppSource
-          href: /office/dev/store/validation-policies
+          href: /legal/marketplace/certification-policies
         - name: Публикация надстроек с помощью централизованного развертывания
           href: publish/centralized-deployment.md
         - name: Публикация надстроек в каталоге приложений SharePoint
@@ -477,8 +477,6 @@
                   href: reference/manifest/supportssharedfolders.md
                 - name: WebApplicationInfo
                   href: reference/manifest/webapplicationinfo.md
-        - name: Открытые спецификации API
-          href: reference/openspec/openspec.md
         - name: Коды ошибок
           href: reference/javascript-api-for-office-error-codes.md
     - name: Ресурсы
@@ -1125,4 +1123,4 @@
     - name: Сохранить и поделиться состоянием в пользовательских функциях
       href: excel/custom-functions-save-state-redirect.md
     - name: Обработка высокого разрешения и масштабирования в решении для Office
-      href: develop/dynamic-dpi.md
+      href: /office/client-developer/ddpi/handle-high-dpi-and-dpi-scaling-in-your-office-solution

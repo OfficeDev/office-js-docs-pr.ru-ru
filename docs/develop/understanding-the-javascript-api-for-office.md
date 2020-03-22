@@ -1,14 +1,14 @@
 ---
 title: Общие сведения об API JavaScript для Office
 description: Введение в API JavaScript для Office
-ms.date: 02/27/2020
+ms.date: 03/18/2020
 localization_priority: Priority
-ms.openlocfilehash: 67ee9459aab3065466ac8f52f2f835ca1e94bfc3
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 66f7343e42d3cb8aa602e4a807216c33eb72dcf7
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42718792"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42890390"
 ---
 # <a name="understanding-the-office-javascript-api"></a>Общие сведения об API JavaScript для Office
 
@@ -26,8 +26,7 @@ ms.locfileid: "42718792"
 
 [!include[information about the Office JS API requirement sets](../includes/office-js-requirement-sets.md)]
 
-> [!NOTE]
-> Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в интерфейсе Office, убедитесь, что она соответствует [политикам проверки AppSource](/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице со сведениями о доступности и ведущих приложениях для надстроек Office](../overview/office-add-in-availability.md). 
+[!INCLUDE [publish policies note](../includes/note-publish-policies.md)]
 
 ## <a name="see-also"></a>См. также
 

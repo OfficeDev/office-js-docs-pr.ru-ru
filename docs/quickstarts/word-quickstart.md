@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Word
 description: Узнайте, как создать простую надстройку области задач Word, используя API JS для Office.
-ms.date: 01/16/2020
+ms.date: 03/19/2020
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 90416db9847f5f78b38fb1c22c4a6751bf95d5e0
-ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
+ms.openlocfilehash: 495fcc84ceb7705cf04be7a371c14b776eb0e560
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42596825"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42890942"
 ---
 # <a name="build-your-first-word-task-pane-add-in"></a>Создание первой надстройки области задач Word
 
@@ -306,6 +306,8 @@ _Область применения: Word 2016 и более поздних в
 3. В области задач нажмите любую кнопку, чтобы добавить стандартный текст в документ.
 
     ![Снимок экрана: приложение Word с загруженной надстройкой, добавляющей стандартный текст.](../images/word-quickstart-addin-1b.png)
+
+[!include[Console tool note](../includes/console-tool-note.md)]
 
 ### <a name="next-steps"></a>Дальнейшие действия
 

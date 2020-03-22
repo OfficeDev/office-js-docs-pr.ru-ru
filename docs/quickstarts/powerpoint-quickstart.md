@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач PowerPoint
 description: Узнайте, как создать простую надстройку области задач PowerPoint, используя API JS для Office.
-ms.date: 01/16/2020
+ms.date: 03/19/2020
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: 67af5529596f6659b331379dffcea838397a5bad
-ms.sourcegitcommit: 8bce9c94540ed484d0749f07123dc7c72a6ca126
+ms.openlocfilehash: 1056dcfbeb49b4f0e2b8142de1a4e66ebb0dcca5
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "41265694"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42891406"
 ---
 # <a name="build-your-first-powerpoint-task-pane-add-in"></a>Создание первой надстройки области задач PowerPoint
 
@@ -19,7 +19,7 @@ ms.locfileid: "41265694"
 
 [!include[Choose your editor](../includes/quickstart-choose-editor.md)]
 
-# <a name="yeoman-generatortabyeomangenerator"></a>[Генератор Yeoman](#tab/yeomangenerator)
+# <a name="yeoman-generator"></a>[Генератор Yeoman](#tab/yeomangenerator)
 
 [!include[Redirect to the single sign-on (SSO) quick start](../includes/sso-quickstart-reference.md)]
 
@@ -92,7 +92,7 @@ ms.locfileid: "41265694"
 
 Поздравляем! Вы успешно создали надстройку области задач PowerPoint! Теперь воспользуйтесь [руководством по надстройкам PowerPoint](../tutorials/powerpoint-tutorial.md), чтобы узнать больше о возможностях надстроек PowerPoint и создать более сложную надстройку.
 
-# <a name="visual-studiotabvisualstudio"></a>[Visual Studio](#tab/visualstudio)
+# <a name="visual-studio"></a>[Visual Studio](#tab/visualstudio)
 
 ### <a name="prerequisites"></a>Необходимые компоненты
 
@@ -250,6 +250,8 @@ ms.locfileid: "41265694"
 4. В области задач нажмите кнопку **Вставить текст**, чтобы добавить текст к выбранному слайду.
 
     ![Снимок экрана PowerPoint с изображением собаки и надписью "Hello World" на слайде](../images/powerpoint_quickstart_addin_3.png)
+
+[!include[Console tool note](../includes/console-tool-note.md)]
 
 ### <a name="next-steps"></a>Дальнейшие действия
 

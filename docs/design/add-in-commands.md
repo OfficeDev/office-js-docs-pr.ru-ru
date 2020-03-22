@@ -3,12 +3,12 @@ title: Основные концепции команд надстроек
 description: Узнайте, как добавить настраиваемые кнопки ленты и элементы меню в Office в составе веб-надстройки Office.
 ms.date: 02/11/2020
 localization_priority: Priority
-ms.openlocfilehash: 11636838feb384cdb0761bd17a3c1c0e0f42f8ce
-ms.sourcegitcommit: 0e7ed44019d6564c79113639af831ea512fa0a13
+ms.openlocfilehash: 6395b087ea191b37e9398096038dacfd66ed263c
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2020
-ms.locfileid: "42566154"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42890558"
 ---
 # <a name="add-in-commands-for-excel-word-and-powerpoint"></a>Команды надстроек для Excel, Word и PowerPoint
 
@@ -85,7 +85,7 @@ ms.locfileid: "42566154"
     - Не добавляйте избыточные кнопки, чтобы надстройка занимала больше места на экране.
 
      > [!NOTE]
-     > Надстройки, которые занимают слишком много места, могут не пройти [проверку в AppSource](/office/dev/store/validation-policies).
+     > Надстройки, которые занимают слишком много места, могут не пройти [проверку в AppSource](/legal/marketplace/certification-policies).
 
 - [Руководство по оформлению значков](add-in-icons.md) подходит для всех значков.
 - Предоставьте версию надстройки, которая работает в ведущих приложениях, не поддерживающих команды. Один манифест надстройки может работать в ведущих приложениях независимо от того, поддерживают ли они команды.

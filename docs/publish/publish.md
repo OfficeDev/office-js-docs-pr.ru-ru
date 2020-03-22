@@ -1,14 +1,14 @@
 ---
 title: Развертывание и публикация надстроек Office
 description: Методы и варианты развертывания надстройки Office для тестирования и распространения.
-ms.date: 09/05/2019
+ms.date: 03/18/2020
 localization_priority: Priority
-ms.openlocfilehash: a00119254f53f6dbf0e6ebc2279e0a0b70af1270
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
+ms.openlocfilehash: a21535a637ceb54d0e84a36b2a0610873d408e1c
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851546"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42890986"
 ---
 # <a name="deploy-and-publish-office-add-ins"></a>Развертывание и публикация надстроек Office
 
@@ -23,8 +23,7 @@ ms.locfileid: "40851546"
 |[Сервер Exchange Server](#outlook-add-in-deployment)|В локальной или облачной среде для распространения надстроек Outlook.|
 |[Общая сетевая папка](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)|На том расположенном в сети компьютере с Windows, где должна размещаться надстройка, перейдите к родительской папке или диску с папкой, которую требуется использовать в качестве каталога общих папок.|
 
-> [!NOTE]
-> Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в интерфейсе Office, убедитесь, что она соответствует [политикам проверки AppSource](/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка должна работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице со сведениями о доступности и ведущих приложениях для надстроек Office](../overview/office-add-in-availability.md).
+[!INCLUDE [publish policies note](../includes/note-publish-policies.md)]
 
 ## <a name="deployment-options-by-office-host"></a>Варианты развертывания для различных ведущих приложений Office
 
