@@ -1,16 +1,16 @@
 ---
 title: Office. Context — набор обязательных элементов 1,7
-description: Объектная модель для Office. Context (набор обязательных элементов 1,7)
-ms.date: 03/16/2020
+description: Элементы объекта Office. Context, доступные для надстроек Outlook с помощью набора требований API почтовых ящиков 1,7.
+ms.date: 03/18/2020
 localization_priority: Normal
-ms.openlocfilehash: ca40efef7bc841bbec7f84d112076b1a196895e8
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 357f8f6923730eeddeb9379279bb90fbbc64143b
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42717600"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42891273"
 ---
-# <a name="context"></a>context
+# <a name="context-mailbox-requirement-set-17"></a>контекст (набор требований для почтового ящика 1,7)
 
 ### <a name="officecontext"></a>[Office](office.md).context
 

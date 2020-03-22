@@ -1,16 +1,16 @@
 ---
 title: Пространство имен Office — набор обязательных элементов 1,2
-description: Объектная модель для пространства имен верхнего уровня API надстроек Outlook (версия API почтовых ящиков 1,2).
-ms.date: 12/16/2019
+description: Элементы пространства имен Office, доступные для надстроек Outlook с помощью набора требований API почтовых ящиков 1,2.
+ms.date: 03/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 10445204d3007d816ebed74ede9eeab5d3dfd83c
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: fb935fce1b17fa7909341f7a4926c86f3c220cf2
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42720164"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42890734"
 ---
-# <a name="office"></a>Office
+# <a name="office-mailbox-requirement-set-12"></a>Office (набор требований для почтового ящика 1,2)
 
 Пространство имен Office содержит общие интерфейсы, которые используются надстройками всех приложений Office. В этот список входят только интерфейсы, используемые надстройками Outlook. Полный список интерфейсов пространства имен Office см. в статье [Общий API](/javascript/api/office).
 

@@ -1,21 +1,20 @@
 ---
 title: Требования для запуска надстроек Office
 description: Узнайте о требованиях к клиенту и серверу, которые конечный пользователь должен запускать надстройки Office.
-ms.date: 07/01/2019
+ms.date: 03/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 858a951322a34543277b1d7000ca01df12cca7bb
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: c387d3d7ca9be1d47fa9ff4033fe492ae0e0fb3a
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42718638"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42890506"
 ---
 # <a name="requirements-for-running-office-add-ins"></a>Требования для запуска надстроек Office
 
 В этой статье описаны требования к программному обеспечению и устройствам для запуска надстроек Office.
 
-> [!NOTE]
-> Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в интерфейсе Office, убедитесь, что она соответствует [политикам проверки AppSource](/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка должна работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице со сведениями о доступности и ведущих приложениях для надстроек Office](../overview/office-add-in-availability.md).
+[!INCLUDE [publish policies note](../includes/note-publish-policies.md)]
 
 Общие сведения о том, на каких платформах поддерживаются надстройки Office, см. в статье [Доступность ведущих приложений и платформ для надстроек Office](../overview/office-add-in-availability.md).
 

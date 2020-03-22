@@ -3,12 +3,12 @@ title: Оптимизация производительности API JavaScrip
 description: Оптимизируйте производительность с использованием API JavaScript для Excel
 ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: 843a8fffbe916003b81ac974db12e3128efb7997
-ms.sourcegitcommit: a0262ea40cd23f221e69bcb0223110f011265d13
+ms.openlocfilehash: a09b01c698a09bbb25d60518069f6e26fe5acaf1
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42689023"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42891014"
 ---
 # <a name="performance-optimization-using-the-excel-javascript-api"></a>Оптимизация производительности с использованием API JavaScript для Excel
 
@@ -211,5 +211,4 @@ Excel.run(async (context) => {
 - [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
 - [Дополнительные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-advanced-concepts.md)
 - [Ограничения ресурсов и оптимизация производительности надстроек Office](../concepts/resource-limits-and-performance-optimization.md)
-- [Открытая спецификация по API JavaScript для Excel](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_OpenSpec)
 - [Объект Worksheet Functions (API JavaScript для Excel)](/javascript/api/excel/excel.functions)

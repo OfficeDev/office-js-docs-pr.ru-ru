@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: Функции и API, которые в настоящее время находятся в предварительной версии для надстроек Outlook и API JavaScript для Office.
-ms.date: 03/04/2020
+ms.date: 03/17/2020
 localization_priority: Normal
-ms.openlocfilehash: c87ce8472becc072702f58e7d8c21665904673d2
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 437629687972e030a7b34f035db5d2a2f8a5eba1
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42717812"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42890874"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -27,7 +27,7 @@ ms.locfileid: "42717812"
 
 ### <a name="append-on-send"></a>Добавление при отправке
 
-#### <a name="officebodyappendonsendasync"></a>[Office. Body. Аппендонсендасинк](/javascript/api/outlook/office.body?view=outlook-js-preview#appendonsendasync-data--options--callback-)
+#### <a name="officecontextmailboxitembodyappendonsendasync"></a>[Office. Context. Mailbox. Item. Body. Аппендонсендасинк](/javascript/api/outlook/office.body?view=outlook-js-preview#appendonsendasync-data--options--callback-)
 
 Добавлена новая функция для `Body` объекта, который добавляет данные в конец тела элемента в режиме создания.
 
@@ -59,6 +59,44 @@ ms.locfileid: "42717812"
 
 ---
 
+### <a name="mail-signature"></a>Подпись почты
+
+#### <a name="officecontextmailboxitembodysetsignatureasync"></a>[Office. Context. Mailbox. Item. Body. Сетсигнатуреасинк](/javascript/api/outlook/office.body?view=outlook-js-preview#setsignatureasync-data--options--callback-)
+
+Добавлена новая функция для `Body` объекта, который добавляет или заменяет подпись в теле элемента в режиме создания.
+
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+
+#### <a name="officecontextmailboxitemdisableclientsignatureasync"></a>[Office. Context. Mailbox. Item. Дисаблеклиентсигнатуреасинк](office.context.mailbox.item.md#methods)
+
+Добавлена новая функция, которая отключает подпись клиента для отправляющего почтового ящика в режиме создания.
+
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+
+#### <a name="officecontextmailboxitemgetcomposetypeasync"></a>[Office. Context. Mailbox. Item. Жеткомпосетипеасинк](/javascript/api/outlook/office.messagecompose?view=outlook-js-preview#getcomposetypeasync-options--callback-)
+
+Добавлена новая функция, которая получает тип сообщения "создание" в режиме создания.
+
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+
+#### <a name="officecontextmailboxitemisclientsignatureenabledasync"></a>[Office. Context. Mailbox. Item. Исклиентсигнатуринабледасинк](office.context.mailbox.item.md#methods)
+
+Добавлена новая функция, проверяющая, включена ли подпись клиента для элемента в режиме создания.
+
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+
+#### <a name="officemailboxenumscomposetype"></a>[Office. MailboxEnums. Компосетипе](/javascript/api/outlook/office.mailboxenums.composetype?view=outlook-js-preview)
+
+Добавлено новое перечисление `ComposeType` , доступное в режиме создания.
+
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+
+<br>
+
+---
+
+---
+
 ### <a name="office-theme"></a>Тема Office
 
 #### <a name="officecontextofficetheme"></a>[Office.context.officeTheme](/javascript/api/office/office.context#officetheme)
@@ -74,6 +112,8 @@ ms.locfileid: "42717812"
 **Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
 
 <br>
+
+---
 
 ---
 

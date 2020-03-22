@@ -1,20 +1,20 @@
 ---
 title: Работайте с комментариями с помощью API JavaScript для Excel
 description: Сведения об использовании API для добавления, удаления и редактирования комментариев и потоков комментариев.
-ms.date: 02/11/2020
+ms.date: 03/17/2020
 localization_priority: Normal
-ms.openlocfilehash: d6be0f07e0d3bb134385f0a08c20ce00da4de892
-ms.sourcegitcommit: d85efbf41a3382ca7d3ab08f2c3f0664d4b26c53
+ms.openlocfilehash: 275828915730d3438101315ee28bf76aa8b8bf3f
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "42327784"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42890572"
 ---
 # <a name="work-with-comments-using-the-excel-javascript-api"></a>Работайте с комментариями с помощью API JavaScript для Excel
 
 В этой статье описывается, как добавлять, читать, изменять и удалять комментарии в книге с помощью API JavaScript для Excel. Дополнительные сведения о функции комментариев можно узнать в статье [INSERT Comments and notess in Excel](https://support.office.com/article/insert-comments-and-notes-in-excel-bdcc9f5d-38e2-45b4-9a92-0b2b5c7bf6f8) .
 
-В API JavaScript для Excel комментарий — это начальная заметка и связанное обсуждение. Он привязан к отдельной ячейке. Любой пользователь, просматривающий книгу с достаточными разрешениями, может ответить на комментарий. Объект [comment](/javascript/api/excel/excel.comment) хранит эти ответы как объекты [комментрепли](/javascript/api/excel/excel.commentreply) . Обратите внимание на то, что комментарий является потоком и что поток должен иметь специальную запись в качестве отправной точки.
+В API JavaScript для Excel комментарий включает один начальный комментарий и подключенное обсуждение. Он привязан к отдельной ячейке. Любой пользователь, просматривающий книгу с достаточными разрешениями, может ответить на комментарий. Объект [comment](/javascript/api/excel/excel.comment) хранит эти ответы как объекты [комментрепли](/javascript/api/excel/excel.commentreply) . Обратите внимание на то, что комментарий является потоком и что поток должен иметь специальную запись в качестве отправной точки.
 
 ![Комментарий Excel с пометкой "Comment" с двумя ответами, помеченными как "Comment. ответы [0]" и "Comment. ответы [1].](../images/excel-comments.png)
 

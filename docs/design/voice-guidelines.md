@@ -3,12 +3,12 @@ title: Рекомендации по стилю надстроек Office
 description: Ознакомьтесь с рекомендациями по написанию справки пользователя и других строк для надстроек Office.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 6f39c17687b176ca015bfe7d3df0173266a7798c
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 3621a13a2ec24a9f2f761012f331e245f95df31e
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719226"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42890513"
 ---
 # <a name="voice-guidelines"></a>Рекомендации по стилю
 
@@ -28,4 +28,4 @@ ms.locfileid: "42719226"
 - Рекомендации по [стилю для всех пользователей без исключения](/style-guide/accessibility/writing-all-abilities)
 - [10 лучших советов по стилю корпорации Майкрософт](/style-guide/top-10-tips-style-voice)
 - Рекомендации по [выбору слов](/style-guide/word-choice/)
-- [Политики проверки](/office/dev/store/validation-policies) надстройки Office
+- [Политики проверки](/legal/marketplace/certification-policies) надстройки Office

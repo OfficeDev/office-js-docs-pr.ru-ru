@@ -1,14 +1,14 @@
 ---
 title: Работа с книгами с использованием API JavaScript для Excel
-description: Примеры кода, демонстрирующие выполнение типовых задач с книгами с помощью API JavaScript для Excel.
-ms.date: 10/21/2019
+description: Примеры кода, в которых показано, как выполнять распространенные задачи с книгами или функциями уровня приложения с помощью API JavaScript для Excel.
+ms.date: 03/19/2020
 localization_priority: Normal
-ms.openlocfilehash: 0f86278cdb52edc16e5c43323d874d985564de3a
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: aa30f888bf6de1926d2a36522febf0001e1e6130
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719625"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42891028"
 ---
 # <a name="work-with-workbooks-using-the-excel-javascript-api"></a>Работа с книгами с использованием API JavaScript для Excel
 
@@ -51,7 +51,7 @@ Excel.createWorkbook();
 
 С помощью метода `createWorkbook` также можно создать копию существующей книги. Метод принимает в качестве необязательного параметра строковое представление XLSX-файла в кодировке base64. Полученная книга будет копией этого файла, предполагая, что строковый аргумент является допустимым XLSX-файлом.
 
-Текущую книгу надстройки можно получить в виде строки в кодировке base64 с помощью [среза файла](/javascript/api/office/office.document#getfileasync-filetype--options--callback-). Преобразование файла в нужную строку в кодировке base64 можно выполнить с помощью класса [FileReader](https://developer.mozilla.org/docs/Web/API/FileReader), как показано в приведенном ниже примере.
+Вы можете получить текущую книгу надстройки в виде строки в кодировке Base64 с помощью [фрагментирования файлов](/javascript/api/office/office.document#getfileasync-filetype--options--callback-). Преобразование файла в нужную строку в кодировке base64 можно выполнить с помощью класса [FileReader](https://developer.mozilla.org/docs/Web/API/FileReader), как показано в приведенном ниже примере.
 
 ```js
 var myFile = document.getElementById("file");
@@ -184,6 +184,41 @@ Excel.run(function (context) {
         console.log("Workbook needs review : " + needsReview.value);
     });
 }).catch(errorHandlerFunction);
+```
+
+## <a name="access-application-culture-settings-preview"></a>Параметры культуры приложения Access (Предварительная версия)
+
+Книга содержит параметры языка и региональных параметров, которые влияют на отображение определенных данных. Эти параметры могут помочь локализовать данные, когда пользователи надстройки совместно работают с книгами на различных языках и региональных параметрах. Надстройка может использовать синтаксический анализ строк для локализации формата чисел, дат и времени на основе параметров языковых параметров системы, чтобы каждый пользователь видел данные в формате языка и региональных параметров.
+
+`Application.cultureInfo`Определяет параметры языка и региональных параметров системы в виде объекта [CultureInfo](/javascript/api/excel/excel.cultureinfo) . Содержит такие параметры, как числовой десятичный разделитель или формат даты.
+
+Некоторые параметры культуры можно [изменить с помощью пользовательского интерфейса Excel](https://support.office.com/article/Change-the-character-used-to-separate-thousands-or-decimals-c093b545-71cb-4903-b205-aebb9837bd1e). Параметры системы сохраняются в `CultureInfo` объекте. Все локальные изменения хранятся в виде свойств уровня [приложения](/javascript/api/excel/excel.application), например `Application.decimalSeparator`.
+
+В примере ниже показано, как изменить символ десятичного разделителя в числовой строке с "," на символ, используемый параметрами системы.
+
+```js
+// This will convert a number like "14,37" to "14.37"
+// (assuming the system decimal separator is ".").
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+    var decimalSource = sheet.getRange("B2");
+    decimalSource.load("values");
+    context.application.cultureInfo.numberFormat.load("numberDecimalSeparator");
+
+    return context.sync().then(function() {
+        var systemDecimalSeparator =
+            context.application.cultureInfo.numberFormat.numberDecimalSeparator;
+        var oldDecimalString = decimalSource.values[0][0];
+
+        // This assumes the input column is standardized to use "," as the decimal separator.
+        var newDecimalString = oldDecimalString.replace(",", systemDecimalSeparator);
+
+        var resultRange = sheet.getRange("C2");
+        resultRange.values = [[newDecimalString]];
+        resultRange.format.autofitColumns();
+        return context.sync();
+    });
+});
 ```
 
 ## <a name="add-custom-xml-data-to-the-workbook"></a>Добавление настраиваемых XML-данных в книгу

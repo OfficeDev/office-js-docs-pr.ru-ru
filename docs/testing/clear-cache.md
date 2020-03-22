@@ -3,12 +3,12 @@ title: Очистка кэша Office
 description: Узнайте, как очищать кэш Office на компьютере.
 ms.date: 01/29/2020
 localization_priority: Normal
-ms.openlocfilehash: c0cf6350cb77a83791f5810c8b98034792fdfd0e
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: a73a8d276f0d6301644005cf87f44f4d7606d26d
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719856"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42891133"
 ---
 # <a name="clear-the-office-cache"></a>Очистка кэша Office
 
@@ -18,9 +18,13 @@ ms.locfileid: "42719856"
 
 ## <a name="clear-the-office-cache-on-windows"></a>Очистка кэша Office в Windows
 
-Чтобы удалить все сторонние надстройки из Excel, Word и PowerPoint, удалите содержимое папки `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\`.
+Чтобы удалить все надстройки неопубликованные из Excel, Word и PowerPoint, удалите содержимое папки:
 
-Чтобы удалить сторонние надстройки из Outlook, выполните действия, описанные в статье [Сторонние надстройки Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md), чтобы найти надстройку в разделе **Настраиваемые надстройки** диалогового окна, в котором перечислены ваши установленные надстройки. Щелкните многоточие (`...`) для надстройки, а затем выберите **Удалить**, чтобы удалить определенную надстройку.
+```
+%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\
+```
+
+Чтобы удалить надстройку неопубликованные из Outlook, выполните действия, описанные в статье [Загрузка неопубликованных Outlook Add-ins for test](../outlook/sideload-outlook-add-ins-for-testing.md) , чтобы найти надстройку в разделе " **Настраиваемые** надстройки" диалогового окна со списком установленных надстроек. Нажмите кнопку с многоточием (`...`) для надстройки, а затем выберите **Удалить** , чтобы удалить эту надстройку.
 
 Чтобы очистить кэш в Office на Windows 10, когда надстройка работает в Microsoft Edge, вы можете использовать Microsoft Edge DevTools.
 

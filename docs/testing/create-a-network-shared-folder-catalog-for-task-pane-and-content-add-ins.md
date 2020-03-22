@@ -1,14 +1,14 @@
 ---
 title: Загрузка неопубликованных надстроек Office для тестирования
 description: Сведения о том, как Загрузка неопубликованных надстройку Office для тестирования
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 localization_priority: Normal
-ms.openlocfilehash: d8e1b0e1078ee534445baf275f386d85d68675c0
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 0cfb1060ead27f7f034880361c51f8a1d0ec87dc
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42717406"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42891126"
 ---
 # <a name="sideload-office-add-ins-for-testing"></a>Загрузка неопубликованных надстроек Office для тестирования
 
@@ -77,7 +77,7 @@ ms.locfileid: "42717406"
 
 2. Добавьте следующее содержимое в файл:
 
-    ```
+    ```text
     Windows Registry Editor Version 5.00
 
     [HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\WEF\TrustedCatalogs\{-random-GUID-here-}]
@@ -93,7 +93,7 @@ ms.locfileid: "42717406"
 
 5. Файл теперь должен выглядеть так, как показано ниже. Сохраните его.
 
-    ```
+    ```text
     Windows Registry Editor Version 5.00
 
     [HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\WEF\TrustedCatalogs\{01234567-89ab-cedf-0123-456789abcedf}]

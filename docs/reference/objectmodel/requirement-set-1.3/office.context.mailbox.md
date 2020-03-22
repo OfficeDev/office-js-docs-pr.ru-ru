@@ -1,16 +1,16 @@
 ---
 title: Office. Context. Mailbox — набор обязательных элементов 1,3
-description: Объектная модель для объекта почтового ящика Outlook в API надстроек Outlook (версия API почтовых ящиков 1,3).
-ms.date: 03/06/2020
+description: Набор требований API почтового ящика Outlook 1,3 версия объектной модели почтового ящика.
+ms.date: 03/18/2020
 localization_priority: Normal
-ms.openlocfilehash: a1e4b429a27a3d04f780b10ab86f5df1f5117554
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: d5fa6a3c6348c862a4fdf84bf17790c50daa71a8
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42717770"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42890706"
 ---
-# <a name="mailbox"></a>mailbox
+# <a name="mailbox-requirement-set-13"></a>Mailbox (набор требований 1,3)
 
 ### <a name="officecontextmailbox"></a>[Office](office.md)[.context](office.context.md).mailbox
 
