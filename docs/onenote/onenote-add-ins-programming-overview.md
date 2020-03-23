@@ -1,23 +1,22 @@
 ---
 title: Обзор создания кода с помощью API JavaScript для OneNote
 description: Узнайте об API OneNote JavaScript для надстроек OneNote в Интернете.
-ms.date: 02/19/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 0e551b75d55da77d383e1335c27724834bfb2df0
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: ae88c2bba6c23a2c3ec3358db121a2ca3630f09d
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42720899"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42891056"
 ---
 # <a name="onenote-javascript-api-programming-overview"></a>Обзор создания кода с помощью API JavaScript для OneNote
 
 В OneNote представлен API JavaScript для надстроек OneNote в Интернете. Вы можете создавать надстройки области задач, контентные надстройки и команды надстроек, которые взаимодействуют с объектами OneNote и подключаются к веб-службам или другим веб-ресурсам.
 
-> [!NOTE]
-> Если вы планируете [опубликовать](../publish/publish.md) надстройку в AppSource и сделать ее доступной в интерфейсе Office, убедитесь, что она соответствует [политикам проверки AppSource](/office/dev/store/validation-policies). Например, чтобы пройти проверку, надстройка должна работать на всех платформах, поддерживающих определенные вами методы. Дополнительные сведения см. в [разделе 4.12](/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably) и на [странице со сведениями о доступности и ведущих приложениях для надстроек Office](../overview/office-add-in-availability.md).
+[!INCLUDE [publish policies note](../includes/note-publish-policies.md)]
 
 ## <a name="components-of-an-office-add-in"></a>Компоненты надстройки Office
 
