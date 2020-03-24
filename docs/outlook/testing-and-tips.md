@@ -1,14 +1,14 @@
 ---
 title: Развертывание и установка надстроек Outlook для тестирования
 description: Создайте файл манифеста, разверните файл пользовательского интерфейса надстройки на веб-сервере, установите надстройку в своем почтовом ящике, а затем протестируйте ее.
-ms.date: 11/06/2019
+ms.date: 03/18/2020
 localization_priority: Priority
-ms.openlocfilehash: 521199a87282b58c3bf10553886174e8be26cacf
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 76688ad3e1eca2dda832a94c3a9ae815e37678bc
+ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42166641"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42890979"
 ---
 # <a name="deploy-and-install-outlook-add-ins-for-testing"></a>Развертывание и установка надстроек Outlook для тестирования
 
@@ -76,11 +76,11 @@ New-App -URL:"http://<fully-qualified URL">
 
 - Если вы разрабатываете надстройку для частного использования или только для членов организации, важно протестировать версии Outlook, используемые в компании. Обратите внимание, что некоторые пользователи могут использовать Outlook в Интернете, поэтому также важно протестировать версии стандартного браузера компании.
 
-- Если вы разрабатываете надстройку для размещения в [AppSource](https://appsource.microsoft.com), необходимо протестировать версии, указанные в [политиках проверки AppSource 4.12.1](/office/dev/store/validation-policies#4-apps-and-add-ins-behave-predictably), в том числе:
+- Если вы разрабатываете надстройку для размещения в [AppSource](https://appsource.microsoft.com), необходимо протестировать версии, указанные в [политиках сертификации коммерческой платформы Marketplace 1120.3](/legal/marketplace/certification-policies#11203-functionality), в том числе:
     - Последнюю и предпоследнюю версии Outlook для Windows.
     - Последнюю версию Outlook для Mac.
     - Последнюю версию Outlook для iOS и Android (если надстройка [поддерживает мобильный формат](add-mobile-support.md)).
-    - Версии браузеров, указанные в политике проверки AppSource 4.12.1.
+    - Версии браузеров, указанные в политике проверки коммерческой платформы Marketplace 1120.3.
 
 > [!NOTE]
 > Если ваша надстройка не поддерживает один из указанных выше клиентов, так как [запрашивает набор обязательных элементов API](apis.md), не поддерживаемый клиентом, его тестировать не нужно.
