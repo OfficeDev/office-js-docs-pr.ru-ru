@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: Функции и API, которые в настоящее время находятся в предварительной версии для надстроек Outlook и API JavaScript для Office.
-ms.date: 03/17/2020
+ms.date: 03/26/2020
 localization_priority: Normal
-ms.openlocfilehash: 437629687972e030a7b34f035db5d2a2f8a5eba1
-ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
+ms.openlocfilehash: 55de284932a53d2226258a15c86ead4f05361c30
+ms.sourcegitcommit: 315a648cce38609c3e1c92bd4a339e268f8a2e1d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42890874"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "42978622"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -65,13 +65,13 @@ ms.locfileid: "42890874"
 
 Добавлена новая функция для `Body` объекта, который добавляет или заменяет подпись в теле элемента в режиме создания.
 
-**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современный)
 
 #### <a name="officecontextmailboxitemdisableclientsignatureasync"></a>[Office. Context. Mailbox. Item. Дисаблеклиентсигнатуреасинк](office.context.mailbox.item.md#methods)
 
 Добавлена новая функция, которая отключает подпись клиента для отправляющего почтового ящика в режиме создания.
 
-**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современный)
 
 #### <a name="officecontextmailboxitemgetcomposetypeasync"></a>[Office. Context. Mailbox. Item. Жеткомпосетипеасинк](/javascript/api/outlook/office.messagecompose?view=outlook-js-preview#getcomposetypeasync-options--callback-)
 
@@ -83,13 +83,13 @@ ms.locfileid: "42890874"
 
 Добавлена новая функция, проверяющая, включена ли подпись клиента для элемента в режиме создания.
 
-**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современный)
 
 #### <a name="officemailboxenumscomposetype"></a>[Office. MailboxEnums. Компосетипе](/javascript/api/outlook/office.mailboxenums.composetype?view=outlook-js-preview)
 
 Добавлено новое перечисление `ComposeType` , доступное в режиме создания.
 
-**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современный)
 
 <br>
 
