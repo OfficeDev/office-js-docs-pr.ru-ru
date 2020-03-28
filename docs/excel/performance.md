@@ -1,14 +1,14 @@
 ---
 title: Оптимизация производительности API JavaScript для Excel
 description: Оптимизируйте производительность с использованием API JavaScript для Excel
-ms.date: 06/20/2019
+ms.date: 03/27/2020
 localization_priority: Normal
-ms.openlocfilehash: a09b01c698a09bbb25d60518069f6e26fe5acaf1
-ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
+ms.openlocfilehash: a202776569cdfc31a1221e3de1a356f0dafa2bfb
+ms.sourcegitcommit: 559a7e178e84947e830cc00dfa01c5c6e398ddc2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42891014"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "43030833"
 ---
 # <a name="performance-optimization-using-the-excel-javascript-api"></a>Оптимизация производительности с использованием API JavaScript для Excel
 
@@ -75,7 +75,7 @@ _Где:_
 * `properties` — это список свойств для загрузки, указанных как строки с разделителями-запятыми или как массив имен. Дополнительные сведения приведены в статье методы `load()` , определенные для объектов в [справочнике по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md).
 * `loadOption` указывает объект, описывающий параметры "выбрать", "развернуть", "сверху" и "пропустить". Дополнительные сведения см. в статье, посвященной [параметрам](/javascript/api/office/officeextension.loadoption) загрузки объектов.
 
-Обратите внимание, что некоторые "Свойства" в объекте могут иметь такое же имя, что и другой объект. Например, `format` — это свойство объекта range, но также имеется и объект `format`. Поэтому если вы, например, вызываете `range.load("format")`, это эквивалентно `range.format.load()`, являющемуся пустым вызовом load(), который может стать причиной проблем с производительностью, как описано ранее. Чтобы избежать этого, код должен загружать только "конечные узлы" в дереве объектов. 
+Обратите внимание, что некоторые "Свойства" в объекте могут иметь такое же имя, что и другой объект. Например, `format` — это свойство объекта range, но также имеется и объект `format`. Поэтому если вы, например, вызываете `range.load("format")`, это эквивалентно `range.format.load()`, являющемуся пустым вызовом load(), который может стать причиной проблем с производительностью, как описано ранее. Чтобы избежать этого, код должен загружать только "конечные узлы" в дереве объектов.
 
 ## <a name="suspend-excel-processes-temporarily"></a>Временная приостановка процессов Excel
 
@@ -129,6 +129,9 @@ Excel.run(async function(ctx) {
 ### <a name="suspend-screen-updating"></a>Приостановка обновления экрана
 
 Excel отображает изменения, производимые вашей надстройкой, примерно по мере их выполнения в коде. Для больших циклических наборов данных может не требоваться просмотр хода выполнения на экране в режиме реального времени. Параметр `Application.suspendScreenUpdatingUntilNextSync()` приостанавливает визуальные обновления для Excel до вызова надстройкой метода `context.sync()` или завершения метода `Excel.run` (неявно вызывающего `context.sync`). Необходимо учитывать, что Excel не будет проявлять признаков работы до следующей синхронизации. Ваша надстройка должна либо предоставить пользователям инструкции, оповещающие их об этой задержке, либо отобразить строку состояния, демонстрирующую активность.
+
+> [!NOTE]
+> Не вызывайте `suspendScreenUpdatingUntilNextSync` их повторно (например, в цикле). Повторные вызовы приведут к мерцанию окна Excel.
 
 ### <a name="enable-and-disable-events"></a>Включение и отключение событий
 
@@ -191,7 +194,7 @@ Excel.run(async (context) => {
     var largeRange = context.workbook.getSelectedRange();
     largeRange.load(["rowCount", "columnCount"]);
     await context.sync();
-    
+
     for (var i = 0; i < largeRange.rowCount; i++) {
         for (var j = 0; j < largeRange.columnCount; j++) {
             var cell = largeRange.getCell(i, j);
