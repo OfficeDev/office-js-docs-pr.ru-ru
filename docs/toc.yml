@@ -56,7 +56,7 @@
               href: develop/initialize-add-in.md
             - name: Руководство по написанию кода для распространенных проблем
               href: develop/common-coding-issues.md
-            - name: Общие элементы API (Office 2013+)
+            - name: Общие API
               items:
                 - name: Общая объектная модель API JavaScript
                   href: develop/office-javascript-api-object-model.md
