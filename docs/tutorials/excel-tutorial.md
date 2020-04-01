@@ -1,15 +1,15 @@
 ---
 title: Руководство по надстройкам Excel
 description: В этом руководстве вы создадите надстройку Excel, которая создает, заполняет, фильтрует и сортирует таблицу, создает диаграмму, замораживает заголовок таблицы, защищает лист и открывает диалоговое окно.
-ms.date: 01/16/2020
+ms.date: 03/30/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 8d16369908f5885e20c145581c021ba69855e968
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: bc14027600a108f47cdf4766a51ebf2437b6f976
+ms.sourcegitcommit: 73a3df90a51acf13416d6a049bddcd9aabc32441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719793"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "43069318"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -163,7 +163,7 @@ ms.locfileid: "42719793"
     - Напоследок он обеспечивает достаточные ширину столбцов и высоту строк для размещения самого длинного (или самого высокого) элемента данных. Обратите внимание, что код должен привести объекты `Range` к нужному формату. У объектов `TableColumn` и `TableRow` нет свойств формата.
 
     ```js
-    expensesTable.columns.getItemAt(3).getRange().numberFormat = [['&euro;#,##0.00']];
+    expensesTable.columns.getItemAt(3).getRange().numberFormat = [['\u20AC#,##0.00']];
     expensesTable.getRange().format.autofitColumns();
     expensesTable.getRange().format.autofitRows();
     ```
