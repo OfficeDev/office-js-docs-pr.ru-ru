@@ -1,15 +1,15 @@
 ---
 title: Создание области задач Excel с помощью React
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office и React.
-ms.date: 01/16/2020
+ms.date: 04/03/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: d98d3145a092b18bdfa60f29aa5dda885b9168ed
-ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
+ms.openlocfilehash: 5a7401fd68100dc4bea1d094a4b1510a7c031f61
+ms.sourcegitcommit: c3bfea0818af1f01e71a1feff707fb2456a69488
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42596846"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "43185570"
 ---
 # <a name="build-an-excel-task-pane-add-in-using-react"></a>Создание области задач Excel с помощью React
 
@@ -17,6 +17,7 @@ ms.locfileid: "42596846"
 
 ## <a name="prerequisites"></a>Необходимые условия
 
+[!include[Set up requirements](../includes/set-up-dev-environment-beforehand.md)]
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
 ## <a name="create-the-add-in-project"></a>Создание проекта надстройки

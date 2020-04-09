@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Word
 description: Узнайте, как создать простую надстройку области задач Word, используя API JS для Office.
-ms.date: 03/19/2020
+ms.date: 04/03/2020
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 495fcc84ceb7705cf04be7a371c14b776eb0e560
-ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
+ms.openlocfilehash: 3c3482747817e26ea6c85687cca54bc1133eb17a
+ms.sourcegitcommit: c3bfea0818af1f01e71a1feff707fb2456a69488
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42890942"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "43185493"
 ---
 # <a name="build-your-first-word-task-pane-add-in"></a>Создание первой надстройки области задач Word
 
@@ -27,6 +27,7 @@ _Область применения: Word 2016 и более поздних в
 
 ### <a name="prerequisites"></a>Необходимые условия
 
+[!include[Set up requirements](../includes/set-up-dev-environment-beforehand.md)]
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки

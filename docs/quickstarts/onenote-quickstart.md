@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 01/16/2020
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: d95cdca487b8f69ac8251cf007a92b99a6069885
-ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
+ms.openlocfilehash: 8903e2142ebccef2285d7dd6f12cc8a01ef3ce70
+ms.sourcegitcommit: c3bfea0818af1f01e71a1feff707fb2456a69488
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42596615"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "43185486"
 ---
 # <a name="build-your-first-onenote-task-pane-add-in"></a>Создание первой надстройки области задач OneNote
 
@@ -17,6 +17,7 @@ ms.locfileid: "42596615"
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
+[!include[Set up requirements](../includes/set-up-dev-environment-beforehand.md)]
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
 ## <a name="create-the-add-in-project"></a>Создание проекта надстройки
