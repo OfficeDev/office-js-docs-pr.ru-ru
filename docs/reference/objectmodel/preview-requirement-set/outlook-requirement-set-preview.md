@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: Функции и API, которые в настоящее время находятся в предварительной версии для надстроек Outlook и API JavaScript для Office.
-ms.date: 03/27/2020
+ms.date: 04/08/2020
 localization_priority: Normal
-ms.openlocfilehash: 3d8eaac1b665d4bd65d5cf0383e53d6f6fb70324
-ms.sourcegitcommit: 559a7e178e84947e830cc00dfa01c5c6e398ddc2
+ms.openlocfilehash: acc19c81f929596b0bd5622e696c1988cf31ee5c
+ms.sourcegitcommit: c3bfea0818af1f01e71a1feff707fb2456a69488
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "43030819"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "43185416"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -69,13 +69,13 @@ ms.locfileid: "43030819"
 
 Добавлена новая функция для `Body` объекта, который добавляет данные в конец тела элемента в режиме создания.
 
-**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современный)
 
 #### <a name="extendedpermissions"></a>[ExtendedPermissions](../../manifest/extendedpermissions.md)
 
 Добавлен новый элемент в манифест, где `AppendOnSend` расширенное разрешение должно быть включено в коллекцию расширенных разрешений.
 
-**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современный)
 
 <br>
 
@@ -103,13 +103,13 @@ ms.locfileid: "43030819"
 
 Добавлена новая функция для `Body` объекта, который добавляет или заменяет подпись в теле элемента в режиме создания.
 
-**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современный)
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
 
 #### <a name="officecontextmailboxitemdisableclientsignatureasync"></a>[Office. Context. Mailbox. Item. Дисаблеклиентсигнатуреасинк](office.context.mailbox.item.md#methods)
 
 Добавлена новая функция, которая отключает подпись клиента для отправляющего почтового ящика в режиме создания.
 
-**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современный)
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
 
 #### <a name="officecontextmailboxitemgetcomposetypeasync"></a>[Office. Context. Mailbox. Item. Жеткомпосетипеасинк](/javascript/api/outlook/office.messagecompose?view=outlook-js-preview#getcomposetypeasync-options--callback-)
 
@@ -121,13 +121,13 @@ ms.locfileid: "43030819"
 
 Добавлена новая функция, проверяющая, включена ли подпись клиента для элемента в режиме создания.
 
-**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современный)
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
 
 #### <a name="officemailboxenumscomposetype"></a>[Office. MailboxEnums. Компосетипе](/javascript/api/outlook/office.mailboxenums.composetype?view=outlook-js-preview)
 
 Добавлено новое перечисление `ComposeType` , доступное в режиме создания.
 
-**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современный)
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
 
 <br>
 
@@ -148,6 +148,20 @@ ms.locfileid: "43030819"
 Добавлено событие `OfficeThemeChanged` для объекта `Mailbox`.
 
 **Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+
+<br>
+
+---
+
+---
+
+### <a name="online-meeting-provider-integration"></a>Интеграция поставщика собраний по сети
+
+#### <a name="mobileonlinemeetingcommandsurface-extension-point"></a>[Точка расширения Мобилеонлинемитингкоммандсурфаце](../../manifest/extensionpoint.md#mobileonlinemeetingcommandsurface-preview)
+
+Добавлена `MobileOnlineMeetingCommandSurface` точка расширения для манифеста. Он определяет интеграцию собраний по сети.
+
+**Доступно в**: Outlook на Android (подключено к подписке Office 365)
 
 <br>
 

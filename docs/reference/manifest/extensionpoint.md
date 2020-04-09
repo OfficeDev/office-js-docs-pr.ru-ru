@@ -1,18 +1,18 @@
 ---
 title: Элемент ExtensionPoint в файле манифеста
 description: Определяет, где доступны функции надстройки в пользовательском интерфейсе Office.
-ms.date: 09/05/2019
+ms.date: 04/07/2020
 localization_priority: Normal
-ms.openlocfilehash: c945875140fdbdb7ba6aaeed7bb0a7bf5d06e050
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 7cdcb96fbd0766b6751917ec84c5bea9a86b0ce1
+ms.sourcegitcommit: c3bfea0818af1f01e71a1feff707fb2456a69488
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42720570"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "43185430"
 ---
 # <a name="extensionpoint-element"></a>Элемент ExtensionPoint
 
- Определяет, где доступны функции надстройки в пользовательском интерфейсе Office. Элемент **ExtensionPoint** является дочерним для элемента [AllFormFactors](allformfactors.md), [DesktopFormFactor](desktopformfactor.md) или [MobileFormFactor](mobileformfactor.md). 
+ Определяет, где доступны функции надстройки в пользовательском интерфейсе Office. Элемент **ExtensionPoint** является дочерним для элемента [AllFormFactors](allformfactors.md), [DesktopFormFactor](desktopformfactor.md) или [MobileFormFactor](mobileformfactor.md).
 
 ## <a name="attributes"></a>Атрибуты
 
@@ -33,7 +33,7 @@ ms.locfileid: "42720570"
 
 В приведенных ниже примерах показано, как применять элемент **ExtensionPoint** со значениями атрибута **PrimaryCommandSurface** и **ContextMenu**, и какие дочерние элементы использовать с каждым из них.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Для элементов, которые содержат атрибут ID, обязательно предоставляйте уникальный идентификатор. Мы рекомендуем использовать название вашей компании и личный идентификатор. Пример формата приведен ниже. <CustomTab id="mycompanyname.mygroupname">
 
 ```XML
@@ -86,16 +86,18 @@ ms.locfileid: "42720570"
 
 ## <a name="extension-points-for-outlook"></a>Точки расширения для Outlook
 
-- [MessageReadCommandSurface](#messagereadcommandsurface) 
-- [MessageComposeCommandSurface](#messagecomposecommandsurface) 
-- [AppointmentOrganizerCommandSurface](#appointmentorganizercommandsurface) 
+- [MessageReadCommandSurface](#messagereadcommandsurface)
+- [MessageComposeCommandSurface](#messagecomposecommandsurface)
+- [AppointmentOrganizerCommandSurface](#appointmentorganizercommandsurface)
 - [AppointmentAttendeeCommandSurface](#appointmentattendeecommandsurface)
 - [Module](#module) (можно использовать только в [DesktopFormFactor](desktopformfactor.md))
 - [MobileMessageReadCommandSurface](#mobilemessagereadcommandsurface)
+- [мобилеонлинемитингкоммандсурфаце](#mobileonlinemeetingcommandsurface-preview)
 - [Events](#events)
 - [DetectedEntity](#detectedentity)
 
 ### <a name="messagereadcommandsurface"></a>MessageReadCommandSurface
+
 Эта точка расширения помещает кнопки на панель команд для представления чтения почты. В классической версии Outlook эта панель отображается на ленте.
 
 #### <a name="child-elements"></a>Дочерние элементы
@@ -106,6 +108,7 @@ ms.locfileid: "42720570"
 |  [CustomTab](customtab.md) |  Добавляет команды на специальную вкладку ленты.  |
 
 #### <a name="officetab-example"></a>Пример элемента OfficeTab
+
 ```xml
 <ExtensionPoint xsi:type="MessageReadCommandSurface">
   <OfficeTab id="TabDefault">
@@ -115,6 +118,7 @@ ms.locfileid: "42720570"
 ```
 
 #### <a name="customtab-example"></a>Пример элемента CustomTab
+
 ```xml
 <ExtensionPoint xsi:type="MessageReadCommandSurface">
   <CustomTab id="TabCustom1">
@@ -124,6 +128,7 @@ ms.locfileid: "42720570"
 ```
 
 ### <a name="messagecomposecommandsurface"></a>MessageComposeCommandSurface
+
 Эта точка расширения добавляет кнопки на ленту для надстроек, использующих форму создания сообщения. 
 
 #### <a name="child-elements"></a>Дочерние элементы
@@ -134,6 +139,7 @@ ms.locfileid: "42720570"
 |  [CustomTab](customtab.md) |  Добавляет команды на специальную вкладку ленты.  |
 
 #### <a name="officetab-example"></a>Пример элемента OfficeTab
+
 ```xml
 <ExtensionPoint xsi:type="MessageComposeCommandSurface">
   <OfficeTab id="TabDefault">
@@ -164,6 +170,7 @@ ms.locfileid: "42720570"
 |  [CustomTab](customtab.md) |  Добавляет команды на специальную вкладку ленты.  |
 
 #### <a name="officetab-example"></a>Пример элемента OfficeTab
+
 ```xml
 <ExtensionPoint xsi:type="AppointmentOrganizerCommandSurface">
   <OfficeTab id="TabDefault">
@@ -173,6 +180,7 @@ ms.locfileid: "42720570"
 ```
 
 #### <a name="customtab-example"></a>Пример элемента CustomTab
+
 ```xml
 <ExtensionPoint xsi:type="AppointmentOrganizerCommandSurface">
   <CustomTab id="TabCustom1">
@@ -193,6 +201,7 @@ ms.locfileid: "42720570"
 |  [CustomTab](customtab.md) |  Добавляет команды на специальную вкладку ленты.  |
 
 #### <a name="officetab-example"></a>Пример элемента OfficeTab
+
 ```xml
 <ExtensionPoint xsi:type="AppointmentAttendeeCommandSurface">
   <OfficeTab id="TabDefault">
@@ -202,6 +211,7 @@ ms.locfileid: "42720570"
 ```
 
 #### <a name="customtab-example"></a>Пример элемента CustomTab
+
 ```xml
 <ExtensionPoint xsi:type="AppointmentAttendeeCommandSurface">
   <CustomTab id="TabCustom1">
@@ -212,7 +222,7 @@ ms.locfileid: "42720570"
 
 ### <a name="module"></a>Module
 
-Эта точка расширения добавляет кнопки на ленту для расширения модуля. 
+Эта точка расширения добавляет кнопки на ленту для расширения модуля.
 
 #### <a name="child-elements"></a>Дочерние элементы
 
@@ -222,6 +232,7 @@ ms.locfileid: "42720570"
 |  [CustomTab](customtab.md) |  Добавляет команды на специальную вкладку ленты.  |
 
 ### <a name="mobilemessagereadcommandsurface"></a>MobileMessageReadCommandSurface
+
 Эта точка расширения помещает кнопки на панель команд для чтения почты в форм-факторе мобильного устройства.
 
 #### <a name="child-elements"></a>Дочерние элементы
@@ -235,6 +246,7 @@ ms.locfileid: "42720570"
 Для атрибута **xsi:type** элементов **Control**, содержащихся в этой точке расширения, должно быть назначено значение `MobileButton`.
 
 #### <a name="example"></a>Пример
+
 ```xml
 <ExtensionPoint xsi:type="MobileMessageReadCommandSurface">
   <Group id="mobileGroupID">
@@ -246,12 +258,50 @@ ms.locfileid: "42720570"
 </ExtensionPoint>
 ```
 
+### <a name="mobileonlinemeetingcommandsurface-preview"></a>Мобилеонлинемитингкоммандсурфаце (Предварительная версия)
+
+> [!NOTE]
+> Эта точка расширения поддерживается только в [предварительной версии](../objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) для Android с подпиской на Office 365.
+
+Эта точка расширения помещает переключатель, подходящий для режима, на поверхности команды для встречи в мобильном конструктивном параметре. Организатор собрания может создать собрание по сети. Затем участник может присоединиться к собранию по сети.
+
+#### <a name="child-elements"></a>Дочерние элементы
+
+|  Элемент |  Описание  |
+|:-----|:-----|
+|  [Control](control.md) |  Добавляет кнопку на поверхность команды.  |
+
+У элементов **ExtensionPoint** этого типа может быть только один дочерний элемент: элемент **Control** .
+
+Элемент **Control** , содержащийся в этой точке расширения, должен иметь атрибут **xsi: Type** со `MobileButton`значением.
+
+#### <a name="example"></a>Пример
+
+```xml
+<ExtensionPoint xsi:type="MobileOnlineMeetingCommandSurface">
+  <Control xsi:type="MobileButton" id="onlineMeetingFunctionButton">
+    <Label resid="residUILessButton0Name" />
+    <Icon>
+      <bt:Image resid="UiLessIcon" size="25" scale="1" />
+      <bt:Image resid="UiLessIcon" size="25" scale="2" />
+      <bt:Image resid="UiLessIcon" size="25" scale="3" />
+      <bt:Image resid="UiLessIcon" size="32" scale="1" />
+      <bt:Image resid="UiLessIcon" size="32" scale="2" />
+      <bt:Image resid="UiLessIcon" size="32" scale="2" />
+      <bt:Image resid="UiLessIcon" size="48" scale="1" />
+      <bt:Image resid="UiLessIcon" size="48" scale="2" />
+      <bt:Image resid="UiLessIcon" size="48" scale="3" />
+    </Icon>
+    <Action xsi:type="ExecuteFunction">
+      <FunctionName>UiLessInsertMeetingLink</FunctionName>
+    </Action>
+  </Control>
+</ExtensionPoint>
+```
+
 ### <a name="events"></a>События
 
 Эта точка расширения добавляет обработчик для указанного события.
-
-> [!NOTE]
-> Этот тип элемента поддерживается классической версией Outlook в Интернете, доступен в [предварительной версии](../objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) для Windows и Mac, а также современной версии Outlook в Интернете. Также требуется подписка на Office 365.
 
 | Элемент | Описание  |
 |:-----|:-----|
@@ -306,5 +356,5 @@ ms.locfileid: "42720570"
     <Rule xsi:type="ItemHasKnownEntity" EntityType="MeetingSuggestion" Highlight="all" />
     <Rule xsi:type="ItemHasKnownEntity" EntityType="Address" Highlight="none" />
   </Rule>
-</ExtensionPoint> 
+</ExtensionPoint>
 ```

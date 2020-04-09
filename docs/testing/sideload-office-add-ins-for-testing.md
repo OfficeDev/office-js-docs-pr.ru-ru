@@ -3,12 +3,12 @@ title: Загрузка неопубликованных надстроек Offi
 description: Тестирование неопубликованной надстройки Office в Office в Интернете путем ее загрузки
 ms.date: 02/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 43dafda913516119ba1aadaae24701865596205f
-ms.sourcegitcommit: 6c7c98f085dd20f827e0c388e672993412944851
+ms.openlocfilehash: 2b3082eeae35a36f320ad8d1477d99f24b3fce40
+ms.sourcegitcommit: c3bfea0818af1f01e71a1feff707fb2456a69488
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "42554687"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "43185409"
 ---
 # <a name="sideload-office-add-ins-in-office-on-the-web-for-testing"></a>Загрузка неопубликованных надстроек Office в Office в Интернете для тестирования
 
@@ -46,7 +46,7 @@ ms.locfileid: "42554687"
 >
 > - В командной строке Windows выполните следующую строку: `CheckNetIsolation LoopbackExempt -a -n="Microsoft.MicrosoftEdge_8wekyb3d8bbwe"`
 >
-> - Введите **about:flags** в панели поиска Microsoft Edge, чтобы открыть раздел "Параметры разработчика".  Установите флажок **Разрешить замыкание на себя для localhost** и перезапустите Microsoft Edge.
+> - Введите "**about: flags**" в панели поиска Microsoft EDGE, чтобы открыть раздел Параметры для разработчиков.  Установите флажок "**Разрешить замыкание на себя для localhost**" и перезапустите Microsoft Edge.
 
 >    ![Параметр "Разрешить замыкание на себя для localhost" в Microsoft Edge с установленным флажком.](../images/allow-localhost-loopback.png)
 

@@ -1,14 +1,14 @@
 ---
 title: Функция проверки при отправке для надстроек Outlook
 description: Позволяет надстройке настраивать те или иные параметры при отправке, а также обрабатывать элемент и запрещать пользователям выполнять определенные действия.
-ms.date: 03/30/2020
+ms.date: 04/06/2020
 localization_priority: Normal
-ms.openlocfilehash: 59d633169fa74687032691bef65fb7f0b114822a
-ms.sourcegitcommit: 73a3df90a51acf13416d6a049bddcd9aabc32441
+ms.openlocfilehash: 017759628cd9b3716c3992f7c6631911491ca246
+ms.sourcegitcommit: c3bfea0818af1f01e71a1feff707fb2456a69488
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "43069311"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "43185640"
 ---
 # <a name="on-send-feature-for-outlook-add-ins"></a>Функция проверки при отправке для надстроек Outlook
 
@@ -18,7 +18,7 @@ ms.locfileid: "43069311"
 - добавить определенного получателя в строку "Копия" в сообщениях или в строку "Необязательные получатели" в собраниях.
 
 > [!NOTE]
-> Функция проверки при отправке в настоящее время поддерживается для Outlook в Интернете в Exchange Online (Office 365), локальной среде Exchange 2016 (накопительный пакет обновления 6 или более поздняя версия) и локальной среде Exchange 2019 (накопительный пакет обновления 1 или более поздняя версия). Эта функция также доступна в последних сборках Outlook для Windows и Mac, подключенных к Exchange Online (Office 365). Эта функция появилась в наборе требований 1,8 ([Текущая поддержка сервера и клиента](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients)).
+> Функция проверки при отправке в настоящее время поддерживается для Outlook в Интернете в Exchange Online (Office 365), локальной среде Exchange 2016 (накопительный пакет обновления 6 или более поздняя версия) и локальной среде Exchange 2019 (накопительный пакет обновления 1 или более поздняя версия). Эта функция также доступна в последних сборках Outlook для Windows и Mac, подключенных к Exchange Online (Office 365). Эта функция появилась в наборе требований 1,8 (Дополнительные сведения см. в статье [Current Server and Client Support](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients) ).
 
 > [!IMPORTANT]
 > Надстройки, использующие функцию отправки при отправке, не разрешены в [AppSource](https://appsource.microsoft.com).
