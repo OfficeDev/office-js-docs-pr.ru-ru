@@ -3,16 +3,16 @@ title: Элемент RequestedHeight в файле манифеста
 description: Элемент RequestedHeight указывает начальную высоту (в пикселях) надстройки для работы с контентом или почтовой надстройкой.
 ms.date: 10/09/2018
 localization_priority: Normal
-ms.openlocfilehash: 853d12baf290167f3e6a635201e8b5d1d0e35a51
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 5f4c3ca1ff39cc3150249fbc824b0db76f6b8a85
+ms.sourcegitcommit: c6e3bfd3deb77982d0b7082afd6a48678e96e1c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42720458"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43215042"
 ---
 # <a name="requestedheight-element"></a>Элемент RequestedHeight
 
-Указывает исходную высоту окна (в пикселях) контентной или почтовой надстройки 
+Указывает исходную высоту окна (в пикселях) контентной или почтовой надстройки
 
 **Тип надстройки**: контентная, почтовая
 

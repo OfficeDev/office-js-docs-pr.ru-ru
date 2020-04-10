@@ -1,20 +1,20 @@
 ---
 title: Элемент RequestedWidth в файле манифеста
 description: Элемент RequestedWidth указывает исходную ширину (в пикселях) контентной надстройки.
-ms.date: 11/13/2018
+ms.date: 04/09/2020
 localization_priority: Normal
-ms.openlocfilehash: 94ea78574b14178523b4d065c829c4b46a54de9e
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 2272d998a30ee1ac4ca2763b1b640551d2e0c69b
+ms.sourcegitcommit: c6e3bfd3deb77982d0b7082afd6a48678e96e1c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42717952"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43215056"
 ---
 # <a name="requestedwidth-element"></a>Элемент RequestedWidth
 
-Указывает исходную ширину окна контентной надстройки в пикселях (от 32 до 1000).
+Задает начальную ширину (в пикселях) контентной надстройки.
 
-**Тип надстройки**: контентная, почтовая
+**Тип надстройки:** контентная
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -22,3 +22,6 @@ ms.locfileid: "42717952"
 <RequestedWidth>integer</RequestedWidth>
 ```
 
+## <a name="contained-in"></a>Содержится в
+
+- [DefaultSettings](defaultsettings.md) (контентные надстройки) со значением в диапазоне от 32 до 1000

@@ -3,12 +3,12 @@ title: Загрузка неопубликованных надстроек Offi
 description: Сведения о том, как Загрузка неопубликованных надстройку Office для тестирования
 ms.date: 03/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 0cfb1060ead27f7f034880361c51f8a1d0ec87dc
-ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
+ms.openlocfilehash: dbadf9f7f692e1e71dd9696f531ed79bfc84f786
+ms.sourcegitcommit: c6e3bfd3deb77982d0b7082afd6a48678e96e1c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42891126"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43215063"
 ---
 # <a name="sideload-office-add-ins-for-testing"></a>Загрузка неопубликованных надстроек Office для тестирования
 
@@ -67,7 +67,7 @@ ms.locfileid: "42891126"
 
     ![Диалоговое окно "Центр управления безопасностью" с выбранным каталогом](../images/sideload-windows-trust-center-dialog.png)
 
-8. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Параметры Word**.
+8. Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно **Параметры** .
 
 9. Закройте и снова откройте приложение Office, чтобы изменения вступили в силу.
 
