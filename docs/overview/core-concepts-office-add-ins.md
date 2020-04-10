@@ -2,17 +2,17 @@
 layout: LandingPage
 ms.topic: landing-page
 title: Основные принципы надстроек Office
-description: Информация, применимая ко всем надстройкам Office.
+description: Дополнительные сведения о платформе надстроек Office.
 ms.date: 12/24/2019
 localization_priority: Priority
-ms.openlocfilehash: 47849cdca24d66e53a98e30b6b62ef7c08a669a4
-ms.sourcegitcommit: 350f5c6954dec3e9384e2030cd3265aaba7ae904
+ms.openlocfilehash: 9ee2f8704ae1c2e625a95c4822cd75eb76f56704
+ms.sourcegitcommit: c3bfea0818af1f01e71a1feff707fb2456a69488
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "40851727"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "43185633"
 ---
-# <a name="core-concepts"></a>Основные принципы
+# <a name="core-concepts"></a>Основные понятия
 
 <p>Все надстройки Office построены на базе платформы надстроек Office. Они используют общую структуру, с помощью которой можно реализовать определенные возможности. Это означает, что в любых создаваемых надстройках, будь то для Excel, для Outlook или для других приложений Office, можно реализовать такие функции как диалоговые окна, команды надстроек, области задач и единый вход.</p>
 

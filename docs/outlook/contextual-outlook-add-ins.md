@@ -1,14 +1,14 @@
 ---
 title: Контекстные надстройки Outlook
 description: Инициируют задачи, связанные с сообщением, не выходя из самого сообщения, что обеспечивает большее удобство и богатый пользовательский опыт
-ms.date: 10/09/2019
+ms.date: 04/09/2020
 localization_priority: Normal
-ms.openlocfilehash: 84ea058e031fd2334706145bcdf8ca8e530c2c38
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: b7fa034eaafb60fb3328cabfe8c39106b8f71c51
+ms.sourcegitcommit: c6e3bfd3deb77982d0b7082afd6a48678e96e1c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42720808"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43215098"
 ---
 # <a name="contextual-outlook-add-ins"></a>Контекстные надстройки Outlook
 
@@ -28,13 +28,15 @@ ms.locfileid: "42720808"
 
 ## <a name="how-to-make-a-contextual-add-in"></a>Создание контекстной надстройки
 
-Манифест контекстной надстройки должен содержать элемент [ExtensionPoint](../reference/manifest/extensionpoint.md), для атрибута `xsi:type` которого задано значение `DetectedEntity`. В элементе **ExtensionPoint** надстройка задает сущности или регулярное выражение, которые могут активировать ее. Если указывается сущность, это может быть любое из свойств объекта [Entities](/javascript/api/outlook/office.entities).
+Манифест контекстной надстройки должен содержать элемент [ExtensionPoint](../reference/manifest/extensionpoint.md#detectedentity), для атрибута `xsi:type` которого задано значение `DetectedEntity`. В элементе **ExtensionPoint** надстройка задает сущности или регулярное выражение, которые могут активировать ее. Если указывается сущность, это может быть любое из свойств объекта [Entities](/javascript/api/outlook/office.entities).
 
 Следовательно, манифест надстройки должен содержать правило типа **ItemHasKnownEntity** или **ItemHasRegularExpressionMatch**. В примере ниже показано, как указать, что надстройка активируется с помощью сообщений, содержащих обнаруженный объект (т. е. номер телефона):
 
 ```XML
 <ExtensionPoint xsi:type="DetectedEntity">
   <Label resid="contextLabel" />
+  <!--If you opt to include RequestedHeight, it must be between 140px to 450px, inclusive.-->
+  <!--<RequestedHeight>360</RequestedHeight>-->
   <SourceLocation resid="detectedEntityURL" />
   <Rule xsi:type="RuleCollection" Mode="And">
     <Rule xsi:type="ItemIs" ItemType="Message" />

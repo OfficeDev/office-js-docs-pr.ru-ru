@@ -29,6 +29,9 @@
     - name: Изучение API JS для Office с помощью Script Lab
       href: overview/explore-with-script-lab.md
       displayName: 'Excel, Word, PowerPoint'
+    - name: Настройка среды разработки
+      href: overview/set-up-your-dev-environment.md
+      displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
 - name: Основные понятия
   items:
     - name: Обзор
