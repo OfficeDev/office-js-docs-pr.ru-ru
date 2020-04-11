@@ -1,14 +1,14 @@
 ---
 title: Добавление поддержки мобильных устройств в надстройку Outlook
 description: Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.
-ms.date: 12/10/2019
+ms.date: 04/10/2020
 localization_priority: Normal
-ms.openlocfilehash: 31f58102129ae207da55839f7b48cc8a060645ad
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: de5f1209527c853afb2d0bf2061bd3e3cfa8d3e0
+ms.sourcegitcommit: 76552b3e5725d9112c772595971b922c295e6b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42720857"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43225668"
 ---
 # <a name="add-support-for-add-in-commands-for-outlook-mobile"></a>Добавление поддержки команд надстроек для Outlook Mobile
 
@@ -84,7 +84,7 @@ ms.locfileid: "42720857"
 
 ### <a name="compose-mode-and-appointments"></a>Режим создания и встречи
 
-В настоящее время надстройки Outlook Mobile поддерживают активацию только при просмотре сообщений. Надстройки не активируются при создании сообщений, а также при просмотре и создании встреч.
+В настоящее время надстройки Outlook Mobile поддерживают активацию только при просмотре сообщений. Надстройки не активируются при создании сообщений, а также при просмотре и создании встреч. Однако интегрированные надстройки поставщика собраний по сети можно активировать в режиме организатора встреч. Дополнительные сведения об этом исключении вы найдете в статье [Создание надстройки Outlook для мобильных устройств для поставщика собраний по сети](online-meeting.md) .
 
 ### <a name="unsupported-apis"></a>Неподдерживаемые интерфейсы API
 

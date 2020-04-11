@@ -1,14 +1,14 @@
 ---
 title: Преобразование проекта надстройки Office в Visual Studio в TypeScript
 description: Сведения о том, как преобразовать проект надстройки Office в Visual Studio для использования TypeScript.
-ms.date: 10/29/2019
+ms.date: 04/09/2020
 localization_priority: Normal
-ms.openlocfilehash: 1dbb3503a521f1a7c3e71764a50f02708b667a11
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 4c26c6a04d2f6d3eb91701a1856e2c31c8d00ca0
+ms.sourcegitcommit: 76552b3e5725d9112c772595971b922c295e6b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719044"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43225654"
 ---
 # <a name="convert-an-office-add-in-project-in-visual-studio-to-typescript"></a>Преобразование проекта надстройки Office в Visual Studio в TypeScript
 
@@ -53,25 +53,12 @@ ms.locfileid: "42719044"
 
 4. На вкладке **Средства** выберите **Диспетчер пакетов NuGet** и щелкните пункт **Управление пакетами NuGet для решения...**.
 
-5. Выбрав вкладку **Обзор**, введите **office-js.TypeScript.DefinitelyTyped** в поле поиска. Установите или обновите этот пакет, если он уже установлен. В проект будут добавлены определения типа TypeScript для библиотеки Office.js.
-
-6. В этом же поле поиска введите **jquery.TypeScript.DefinitelyTyped**. Установите или обновите этот пакет, если он уже установлен. В проект будут добавлены определения TypeScript jQuery. Пакеты для jQuery и Office.js теперь будут отображаться в новом файле, созданном Visual Studio, с именем **packages.config**.
+5. После выбора вкладки **Обзор** введите **jQuery. TypeScript. DefinitelyTyped**. Установите этот пакет или обновите его, если он уже установлен. Это обеспечит включение определений TypeScript для jQuery в проект. Пакеты для jQuery отображаются в файле, созданном Visual Studio, называемом **Packages. config**.
 
     > [!NOTE]
     > В проекте TypeScript могут быть как файлы TypeScript, так и файлы JavaScript, это не повлияет на компиляцию. Потому что TypeScript — это типизированная расширенная версия языка JavaScript. Код TypeScript компилируется в JavaScript.
 
-7. В файле **Home.ts** найдите строку `if(!Office.context.requirements.isSetSupported('ExcelApi', '1.1') {` и замените ее указанным ниже кодом:
-
-    ```TypeScript
-    if(!Office.context.requirements.isSetSupported('ExcelApi', 1.1)) {
-    ```
-
-    > [!NOTE]
-    > Теперь для успешной компиляции проекта после его преобразования в TypeScript необходимо указать версию набора требований в виде числового значения, как показано в предыдущем фрагменте кода. К сожалению, это означает, что вы не сможете использовать `isSetSupported`, чтобы проверить, поддерживается ли набор требований `1.10`, так как числовое значение `1.10` равно `1.1` во время выполнения. 
-    > 
-    > Эта проблема вызвана тем, что пакет NuGet **office-js.TypeScript.DefinitelyTyped** является устаревшим, в связи с чем у вашего проекта нет доступа к последним определениям TypeScript для Office.js. Эта проблема находится в процессе рассмотрения, и эта статья будет обновлена после ее устранения.
-
-8. В **Home.ts** найдите строку `Office.initialize = function (reason) {` и добавьте строку сразу после нее для полизаполнения глобального объекта `window.Promise`, как показано здесь:
+6. В **Home.ts** найдите строку `Office.initialize = function (reason) {` и добавьте строку сразу после нее для полизаполнения глобального объекта `window.Promise`, как показано здесь:
 
     ```TypeScript
     Office.initialize = function (reason) {
@@ -80,7 +67,7 @@ ms.locfileid: "42719044"
         ...
     ```
 
-9. В **Home.ts** найдите функцию `displaySelectedCells`, замените всю функцию приведенным ниже кодом и сохраните файл:
+7. В **Home.ts** найдите функцию `displaySelectedCells`, замените всю функцию приведенным ниже кодом и сохраните файл:
 
     ```TypeScript
     function displaySelectedCells() {
@@ -97,7 +84,7 @@ ms.locfileid: "42719044"
     }
     ```
 
-10. В **./Scripts/MessageBanner.ts** найдите строку `_onResize(null);` и замените ее указанным ниже кодом:
+8. В **./Scripts/MessageBanner.ts** найдите строку `_onResize(null);` и замените ее указанным ниже кодом:
 
     ```TypeScript
     _onResize();
@@ -132,9 +119,9 @@ ms.locfileid: "42719044"
             var element = document.querySelector('.MessageBanner');
             messageBanner = new components.MessageBanner(element);
             messageBanner.hideBanner();
-            
-            // If not using Excel 2016, use fallback logic.
-            if (!Office.context.requirements.isSetSupported('ExcelApi', 1.1)) {
+
+            // If you're using Excel 2013, use fallback logic.
+            if (!Office.context.requirements.isSetSupported('ExcelApi', '1.1')) {
                 $("#template-description").text("This sample will display the value of the cells that you have selected in the spreadsheet.");
                 $('#button-text').text("Display!");
                 $('#button-desc').text("Display the selection");
@@ -146,7 +133,7 @@ ms.locfileid: "42719044"
             $("#template-description").text("This sample highlights the highest value from the cells you have selected in the spreadsheet.");
             $('#button-text').text("Highlight!");
             $('#button-desc').text("Highlights the largest number.");
-                
+
             loadSampleData();
 
             // Add a click event handler for the highlight button.

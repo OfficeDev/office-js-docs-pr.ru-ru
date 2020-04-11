@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: Функции и API, которые в настоящее время находятся в предварительной версии для надстроек Outlook и API JavaScript для Office.
-ms.date: 04/08/2020
+ms.date: 04/10/2020
 localization_priority: Normal
-ms.openlocfilehash: acc19c81f929596b0bd5622e696c1988cf31ee5c
-ms.sourcegitcommit: c3bfea0818af1f01e71a1feff707fb2456a69488
+ms.openlocfilehash: f8ef7b8c37dbd7539c30457c4922c1c16262381c
+ms.sourcegitcommit: 76552b3e5725d9112c772595971b922c295e6b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "43185416"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43225675"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -156,6 +156,8 @@ ms.locfileid: "43185416"
 ---
 
 ### <a name="online-meeting-provider-integration"></a>Интеграция поставщика собраний по сети
+
+Добавлена поддержка интеграции собраний в Интернете в надстройки Outlook Mobile. Чтобы узнать больше, ознакомьтесь со статьей [Создание надстройки Outlook для мобильных устройств для поставщика веб-собраний](../../../outlook/online-meeting.md) .
 
 #### <a name="mobileonlinemeetingcommandsurface-extension-point"></a>[Точка расширения Мобилеонлинемитингкоммандсурфаце](../../manifest/extensionpoint.md#mobileonlinemeetingcommandsurface-preview)
 

@@ -1,14 +1,14 @@
 ---
 title: Обработка ошибок
 description: Изучите логику обработки ошибок API JavaScript для Excel, чтобы учитывать ошибки времени выполнения.
-ms.date: 03/19/2019
+ms.date: 04/10/2020
 localization_priority: Normal
-ms.openlocfilehash: bee5824d8854a55d5ac4041be1335ce239b31a9e
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 85fcd580828a2db95cd8e021dec3611ca6591e1c
+ms.sourcegitcommit: 76552b3e5725d9112c772595971b922c295e6b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42717168"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43225730"
 ---
 # <a name="error-handling"></a>Обработка ошибок
 
@@ -53,25 +53,25 @@ Excel.run(function (context) {
 
 |error.code | error.message |
 |:----------|:--------------|
-|InvalidArgument |Аргумент недопустим, отсутствует или имеет неправильный формат.|
-|InvalidRequest  |Не удается обработать запрос.|
-|InvalidReference|Эта ссылка недопустима для текущей операции.|
-|InvalidBinding  |Эта привязка объектов недопустима из-за предыдущих обновлений.|
-|InvalidSelection|Выбранный фрагмент недопустим для этой операции.|
-|Unauthenticated |Требуемые сведения о проверке подлинности отсутствуют или недопустимы.|
-|AccessDenied |Вы не можете выполнить запрашиваемую операцию.|
-|ItemNotFound |Запрашиваемый ресурс не существует.|
-|ActivityLimitReached|Достигнут предел действий.|
-|GeneralException|При обработке запроса возникла внутренняя ошибка.|
-|NotImplemented  |Запрашиваемая функция не реализована.|
-|ServiceNotAvailable|Служба недоступна.|
-|Conflict|Запрос не удалось обработать из-за конфликта.|
-|ItemAlreadyExists|Создаваемый ресурс уже существует.|
-|UnsupportedOperation|Выполняемая операция не поддерживается.|
-|RequestAborted|Запрос прерван во время выполнения.|
-|ApiNotAvailable|Запрашиваемый интерфейс API недоступен.|
-|InsertDeleteConflict|Операция вставки или удаления привела к конфликту.|
-|InvalidOperation|Выполняемая операция недопустима для этого объекта.|
+|`AccessDenied` |Вы не можете выполнить запрашиваемую операцию.|
+|`ActivityLimitReached`|Достигнут предел действий.|
+|`ApiNotAvailable`|Запрашиваемый интерфейс API недоступен.|
+|`Conflict`|Запрос не удалось обработать из-за конфликта.|
+|`GeneralException`|При обработке запроса возникла внутренняя ошибка.|
+|`InsertDeleteConflict`|Операция вставки или удаления привела к конфликту.|
+|`InvalidArgument` |Аргумент недопустим, отсутствует или имеет неправильный формат.|
+|`InvalidBinding`  |Эта привязка объектов недопустима из-за предыдущих обновлений.|
+|`InvalidOperation`|Выполняемая операция недопустима для этого объекта.|
+|`InvalidReference`|Эта ссылка недопустима для текущей операции.|
+|`InvalidRequest`  |Не удается обработать запрос.|
+|`InvalidSelection`|Выбранный фрагмент недопустим для этой операции.|
+|`ItemAlreadyExists`|Создаваемый ресурс уже существует.|
+|`ItemNotFound` |Запрашиваемый ресурс не существует.|
+|`NotImplemented`  |Запрашиваемая функция не реализована.|
+|`RequestAborted`|Запрос прерван во время выполнения.|
+|`ServiceNotAvailable`|Служба недоступна.|
+|`Unauthenticated` |Требуемые сведения о проверке подлинности отсутствуют или недопустимы.|
+|`UnsupportedOperation`|Выполняемая операция не поддерживается.|
 
 ## <a name="see-also"></a>См. также
 
