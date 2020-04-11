@@ -161,7 +161,11 @@
                 - name: Используйте диалоговое окно "Office" для воспроизведения видео
                   href: develop/dialog-video.md
             - name: Производительность
-              href: concepts/resource-limits-and-performance-optimization.md
+              items:
+                - name: Избегайте использования метода context.sync в циклах
+                  href: concepts/correlated-objects-pattern.md
+                - name: Ограничения ресурсов и оптимизация производительности надстроек Office
+                  href: concepts/resource-limits-and-performance-optimization.md
             - name: Конфиденциальность и безопасность
               href: concepts/privacy-and-security.md
             - name: Запрос разрешений на использование API в надстройках
@@ -956,6 +960,8 @@
               href: outlook/get-or-set-the-time-of-an-appointment.md
             - name: Просмотр и изменение расположения
               href: outlook/get-or-set-the-location-of-an-appointment.md
+            - name: Настроить онлайн-встречу (предварительный просмотр)
+              href: outlook/online-meeting.md
         - name: Конфиденциальность и безопасность
           items:
             - name: Общие сведения
