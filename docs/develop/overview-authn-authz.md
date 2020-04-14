@@ -1,14 +1,14 @@
 ---
 title: Обзор проверки подлинности и авторизации в надстройках Office
 description: Требовать от пользователей аутентификации при входе в веб-приложения и надстройки Office.
-ms.date: 01/25/2020
+ms.date: 04/13/2020
 localization_priority: Priority
-ms.openlocfilehash: 79734cf0ee67c2e01db80934b2699da18a686034
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 25dbe38497e3f375bab8ec60f541d2610753576d
+ms.sourcegitcommit: 118e8bcbcfb73c93e2053bda67fe8dd20799b170
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719436"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "43241065"
 ---
 # <a name="overview-of-authentication-and-authorization-in-office-add-ins"></a>Обзор проверки подлинности и авторизации в надстройках Office
 
@@ -43,8 +43,8 @@ ms.locfileid: "42719436"
 
 Перед началом внедрения проверки подлинности пользователей с помощью единого входа внимательно ознакомьтесь со статьей [Включение единого входа для надстроек Office](sso-in-office-add-ins.md). Также обратите внимание на следующие примеры:
 
-- [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO), особенно на файл [ssoAuthES6.js](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO/blob/master/Complete/src/auth.ts). 
-- [Единый вход с использованием ASP.NET для надстройки Office](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO). 
+- [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO), особенно на файл [ssoAuthES6.js](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO/blob/master/Complete/public/javascripts/ssoAuthES6.js).
+- [Единый вход с использованием ASP.NET для надстройки Office](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO).
 
 Однако в этих примерах маркер не используется в качестве маркера идентификации. Он используется для получения доступа к Microsoft Graph с потоком **от имени**.
 
