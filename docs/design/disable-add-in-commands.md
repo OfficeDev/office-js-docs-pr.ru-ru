@@ -1,14 +1,14 @@
 ---
 title: Включение и отключение команд надстроек
 description: Узнайте, как изменить состояние ("Включено" или "Отключено") настраиваемых кнопок ленты и элементов меню в веб-надстройке Office.
-ms.date: 03/09/2020
+ms.date: 04/11/2020
 localization_priority: Priority
-ms.openlocfilehash: dbe895a121a5d10d687c9a599b85234ae62919f5
-ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
+ms.openlocfilehash: a0436a07ef5c7ec64ad391747da69061e1a7b0f0
+ms.sourcegitcommit: 231e23d72e04e0536480d6b16df95113f1eff738
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42596685"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "43238229"
 ---
 # <a name="enable-and-disable-add-in-commands-preview"></a>Включение и отключение команд надстроек (предварительная версия)
 
@@ -42,13 +42,13 @@ API и разметка манифеста надстройки, описанн�
 2. В разделе [Resources.Urls](../reference/manifest/resources.md) манифеста добавьте следующий дочерний элемент:`<bt:Url id="Contoso.SharedRuntime.Url" DefaultValue="https://{MyDomain}/{path-to-start-page}" />`, где `{MyDomain}` домен надстройки и `{path-to-start-page}`путь к начальной странице надстройки; например: `<bt:Url id="Contoso.SharedRuntime.Url" DefaultValue="https://localhost:3000/index.html" />`.
 3. В зависимости от того, есть ли в вашей надстройке область задач, файл функций или настраиваемая функция Excel, необходимо выполнить одно или несколько из описанных ниже трех действий.
 
-    - Если надстройка содержит область задач, установите значение `Contoso.SharedRuntime.Url` для атрибута `resid` элемента [Action](../reference/manifest/action.md).[SourceLocation](../reference/manifest/sourcelocation.md). Элемент должен выглядеть следующим образом:`<SourceLocation resid="Contoso.SharedRuntime.Url"/>`.
-    - Если надстройка содержит настраиваемую функцию Excel, установите значение `Contoso.SharedRuntime.Url` для атрибута `resid` элемента [Page](../reference/manifest/page.md).[SourceLocation](../reference/manifest/sourcelocation.md). Элемент должен выглядеть следующим образом:`<SourceLocation resid="Contoso.SharedRuntime.Url"/>`.
-    - Если надстройка содержит файл функций, установите значение `Contoso.SharedRuntime.Url` для атрибута `resid` элемента [FunctionFile](../reference/manifest/functionfile.md). Элемент должен выглядеть следующим образом:`<FunctionFile resid="Contoso.SharedRuntime.Url"/>`.
+    - Если в надстройке есть область задач, задайте атрибут `resid` элемента [Action](../reference/manifest/action.md).[SourceLocation](../reference/manifest/sourcelocation.md)точно так же, как в `resid` элемента `<Runtime>` на шаге 1; например `Contoso.SharedRuntime.Url`. Элемент должен выглядеть следующим образом:`<SourceLocation resid="Contoso.SharedRuntime.Url"/>`.
+    - Если в настройке есть настраиваемая функция Excel, установите атрибут `resid` элемента [Page](../reference/manifest/page.md).[SourceLocation](../reference/manifest/sourcelocation.md) так же, как для `resid` элемента `<Runtime>` на шаге 1; например `Contoso.SharedRuntime.Url`. Элемент должен выглядеть следующим образом:`<SourceLocation resid="Contoso.SharedRuntime.Url"/>`.
+    - Если в настройке есть файл функций, установите атрибут `resid` элемента [FunctionFile](../reference/manifest/functionfile.md) точно так же, как для `resid` элемента `<Runtime>` на шаге 1; например `Contoso.SharedRuntime.Url`. Элемент должен выглядеть следующим образом:`<FunctionFile resid="Contoso.SharedRuntime.Url"/>`.
 
 ## <a name="set-the-default-state-to-disabled"></a>Установка состояния "Отключено" по умолчанию
 
-По умолчанию при запуске приложения Office любая команда надстройки включается. Если вы хотите, чтобы при запуске приложения Office настраиваемая кнопка или элемент меню были отключены, укажите это в манифесте. Просто добавьте элемент [Enabled](../reference/manifest/enabled.md) (со значением `false`) сразу под элементом [Action](../reference/manifest/action.md) в объявлении элемента управления. Ниже показана базовая структура.
+По умолчанию при запуске приложения Office любая команда надстройки включается. Если вы хотите, чтобы при запуске приложения Office настраиваемая кнопка или элемент меню были отключены, укажите это в манифесте. Просто добавьте элемент [Enabled](../reference/manifest/enabled.md) (со значением`false`) сразу *под* (не внутри) элемента [Action](../reference/manifest/action.md) в объявлении элемента управления. Ниже показана базовая структура.
 
 ```xml
 <OfficeApp ...>
@@ -77,52 +77,25 @@ API и разметка манифеста надстройки, описанн�
 Ниже приведены основные действия по изменению состояния "Включено" команды надстройки.
 
 1. Создайте объект [RibbonUpdaterData](/javascript/api/office-runtime/officeruntime.ribbonupdaterdata), в котором (1) указаны идентификаторы команды и ее родительской вкладки в соответствии с манифестом и (2) указано состояние команды ("Включено" или "Отключено").
-2. Перенесите объект **RibbonUpdaterData** в метод [OfficeRuntime.Ribbon.requestUpdate()](/javascript/api/office-runtime/officeruntime.ribbon#requestupdate-input-).
+2. Перенесите объект **RibbonUpdaterData** в метод [Office.ribbon.requestUpdate()](/javascript/api/office/office.ribbon?view=common-js#requestupdate-input-).
 
 Ниже приведен простой пример. Обратите внимание, что "MyButton" и "OfficeAddinTab1" скопированы из манифеста.
 
 ```javascript
 function enableButton() {
-    OfficeRuntime.ui.getRibbon()
-        .then(function (ribbon) {
-            ribbon.requestUpdate({
-                tabs: [
-                    {
-                        id: "OfficeAppTab1",
-                        controls: [
-                        {
-                            id: "MyButton",
-                            enabled: true
-                        }
-                    ]}
-                ]});
-        });
+    Office.ribbon.requestUpdate({
+        tabs: [
+            {
+                id: "OfficeAppTab1", 
+                controls: [
+                {
+                    id: "MyButton", 
+                    enabled: true
+                }
+            ]}
+        ]});
 }
 ```
-
-> [!NOTE]
-> Мы предварительно планируем упростить API в апреле 2020 г. двумя способами:
->
-> - API будут перемещены из пространства имен `OfficeRuntime` в пространство имен `Office`.
-> - Вам не нужно будет вызывать метод `getRibbon()`. Объект `Ribbon` будет свойством Singleton объекта `Office`.
->
-> Например, предыдущий код будет переписан следующим образом:
->
-> ```javascript
-> function enableButton() {
->    Office.ribbon.requestUpdate({
->        tabs: [
->            {
->                id: "OfficeAppTab1", 
->                controls: [
->                {
->                    id: "MyButton", 
->                    enabled: true
->                }
->            ]}
->        ]});
-> }
-> ```
 
 Кроме того, мы предоставляем несколько интерфейсов (типов) для упрощения создания объекта **RibbonUpdateData**. Ниже приводится аналогичный пример в TypeScript, в котором используются эти типы.
 
@@ -131,8 +104,7 @@ const enableButton = async () => {
     const button: Control = {id: "MyButton", enabled: true};
     const parentTab: Tab = {id: "OfficeAddinTab1", controls: [button]};
     const ribbonUpdater: RibbonUpdaterData = { tabs: [parentTab]};
-    const ribbon: Ribbon = await OfficeRuntime.ui.getRibbon();
-    await ribbon.requestUpdate(ribbonUpdater);
+    await Office.ribbon.requestUpdate(ribbonUpdater);
 }
 ```
 
@@ -163,13 +135,10 @@ Office.onReady(async () => {
 
 ```javascript
 function enableChartFormat() {
-    OfficeRuntime.ui.getRibbon()
-        .then(function (ribbon) {
-            var button = {id: "ChartFormatButton", enabled: true};
-            var parentTab = {id: "CustomChartTab", controls: [button]};
-            var ribbonUpdater = {tabs: [parentTab]};
-            await ribbon.requestUpdate(ribbonUpdater);
-        });
+    var button = {id: "ChartFormatButton", enabled: true};
+    var parentTab = {id: "CustomChartTab", controls: [button]};
+    var ribbonUpdater = {tabs: [parentTab]};
+    await Office.ribbon.requestUpdate(ribbonUpdater);
 }
 ```
 
@@ -186,15 +155,12 @@ function enableChartFormat() {
 
 ```javascript
 function disableChartFormat() {
-    OfficeRuntime.ui.getRibbon()
-        .then(function (ribbon) {
-            var button = {id: "ChartFormatButton", enabled: false};
-            var parentTab = {id: "CustomChartTab", controls: [button]};
-            var ribbonUpdater = {tabs: [parentTab]};
-            await ribbon.requestUpdate(ribbonUpdater);
+    var button = {id: "ChartFormatButton", enabled: false};
+    var parentTab = {id: "CustomChartTab", controls: [button]};
+    var ribbonUpdater = {tabs: [parentTab]};
+    await Office.ribbon.requestUpdate(ribbonUpdater);
 
-            chartFormatButtonEnabled = false;
-        });
+    chartFormatButtonEnabled = false;
 }
 ```
 
@@ -220,20 +186,19 @@ function chartFormatButtonHandler() {
 
 ```javascript
 function disableChartFormat() {
-    OfficeRuntime.ui.getRibbon()
-        .then(function (ribbon) {
-            var button = {id: "ChartFormatButton", enabled: false};
-            var parentTab = {id: "CustomChartTab", controls: [button]};
-            var ribbonUpdater = {tabs: [parentTab]};
-            await ribbon.requestUpdate(ribbonUpdater);
+    try {
+        var button = {id: "ChartFormatButton", enabled: false};
+        var parentTab = {id: "CustomChartTab", controls: [button]};
+        var ribbonUpdater = {tabs: [parentTab]};
+        await Office.ribbon.requestUpdate(ribbonUpdater);
 
-            chartFormatButtonEnabled = false;
-        })
-        .catch(function (error){
-            if (error.code == "HostRestartNeeded"){
-                reportError("Contoso Awesome Add-in has been upgraded. Please save your work, close the Office application, and restart it.");
-            }
-        });
+        chartFormatButtonEnabled = false;
+    }
+    catch(error) {
+        if (error.code == "HostRestartNeeded"){
+            reportError("Contoso Awesome Add-in has been upgraded. Please save your work, close the Office application, and restart it.");
+        }
+    }
 }
 ```
 
@@ -241,6 +206,6 @@ function disableChartFormat() {
 
 Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](../develop/office-versions-and-requirement-sets.md).
 
-Для включения или отключения API требуется поддержка следующих наборов обязательных элементов:
+Для включения или отключения API требуется поддержка следующего набора обязательных элементов:
 
 - [AddinCommands 1.1](../reference/requirement-sets/add-in-commands-requirement-sets.md)
