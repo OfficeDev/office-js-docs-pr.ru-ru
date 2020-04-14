@@ -2,14 +2,14 @@
 title: Создание надстройки Outlook Mobile для поставщика собраний в Интернете (Предварительная версия)
 description: Сведения о том, как настроить надстройку Outlook Mobile для поставщика услуг по подключению к интерактивному собранию.
 ms.topic: article
-ms.date: 04/10/2020
+ms.date: 04/13/2020
 localization_priority: Normal
-ms.openlocfilehash: 841200d8db1dc4c7a89c953737f0bc5b74edf7ea
-ms.sourcegitcommit: 76552b3e5725d9112c772595971b922c295e6b4c
+ms.openlocfilehash: 6a9d484bb74f238c0c62e689c66afaeb284eec2d
+ms.sourcegitcommit: 118e8bcbcfb73c93e2053bda67fe8dd20799b170
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43226056"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "43241093"
 ---
 # <a name="create-an-outlook-mobile-add-in-for-an-online-meeting-provider-preview"></a>Создание надстройки Outlook Mobile для поставщика собраний в Интернете (Предварительная версия)
 
@@ -138,7 +138,7 @@ function updateBody(event, existingBody) {
 
 Как организатор собрания, при создании собрания должны отображаться растры, аналогичные следующим трем изображениям.
 
-снимок экрана: "Создание экрана собрания" на странице "Создание экрана" на странице "Создание экрана с перекрестным экраном Contoso [ ![](../images/outlook-android-create-online-meeting-load.png)](../images/outlook-android-create-online-meeting-load-expanded.png#lightbox) [ ![" на странице "Создание собрания" на](../images/outlook-android-create-online-meeting-off.png)](../images/outlook-android-create-online-meeting-off-expanded.png#lightbox) [ ![странице "Создание собрания](../images/outlook-android-create-online-meeting-on.png)](../images/outlook-android-create-online-meeting-on-expanded.png#lightbox) " на Android
+снимок экрана: " [Создание экрана собрания" на странице "переключить снимок экрана" на странице "Создание собрания" на странице "Создание собрания" на странице "Создание собрания" на странице "Создание собрания" на панели Android/Contoso ![](../images/outlook-android-create-online-meeting-off.png)](../images/outlook-android-create-online-meeting-off-expanded.png#lightbox) [ ![](../images/outlook-android-create-online-meeting-load.png)](../images/outlook-android-create-online-meeting-load-expanded.png#lightbox) [ ![](../images/outlook-android-create-online-meeting-on.png)](../images/outlook-android-create-online-meeting-on-expanded.png#lightbox)
 
 ### <a name="join-meeting-ui"></a>Пользовательский интерфейс присоединения к собранию
 
@@ -156,7 +156,6 @@ function updateBody(event, existingBody) {
   - [Office. Context. Mailbox. Item. end](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview#end) ([время](/javascript/api/outlook/office.time?view=outlook-js-preview))
   - [Office. Context. Mailbox. Item. Location](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview#location) ([Location](/javascript/api/outlook/office.location?view=outlook-js-preview))
   - [Office. Context. Mailbox. Item. optionalAttendees](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview#optionalattendees) ([Recipients](/javascript/api/outlook/office.recipients?view=outlook-js-preview))
-  - [Office. Context. Mailbox. Item. Organizer](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview#organizer) ([Организатор](/javascript/api/outlook/office.organizer?view=outlook-js-preview))
   - [Office. Context. Mailbox. Item. requiredAttendees](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview#requiredattendees) ([Recipients](/javascript/api/outlook/office.recipients?view=outlook-js-preview))
   - [Office. Context. Mailbox. Item. Body](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview#body) ([Body. onasync](/javascript/api/outlook/office.body?view=outlook-js-preview#getasync-coerciontype--options--callback-), [Body. setAsync](/javascript/api/outlook/office.body?view=outlook-js-preview#setasync-data--options--callback-))
   - [Office. Context. Mailbox. Item. loadCustomPropertiesAsync](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview#loadcustompropertiesasync-callback--usercontext-) ([CustomProperties](/javascript/api/outlook/office.customproperties?view=outlook-js-preview))

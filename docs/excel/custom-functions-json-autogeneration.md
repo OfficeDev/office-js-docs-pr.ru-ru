@@ -1,14 +1,14 @@
 ---
-ms.date: 07/15/2019
+ms.date: 04/13/2020
 description: Использование тегов JSDoc для динамического создания метаданных JSON пользовательских функций.
 title: Автоматическое генерирование метаданных JSON для пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: e346392a5d2f643b1484de52a9bddb3e3be52f2f
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: d62def1d107d4472d2e89623c4f10b5cd012f28c
+ms.sourcegitcommit: 118e8bcbcfb73c93e2053bda67fe8dd20799b170
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719457"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "43241072"
 ---
 # <a name="autogenerate-json-metadata-for-custom-functions"></a>Автоматическое генерирование метаданных JSON для пользовательских функций
 
@@ -103,7 +103,7 @@ ms.locfileid: "42719457"
 Предоставляет отображаемый параметр `name` для пользовательской функции.
 
 * Если имя не указано, идентификатор также используется как имя.
-* Допустимые символы: буквы [буквенные символы Юникод](https://www.unicode.org/reports/tr44/tr44-22.html#Alphabetic), числа, точки (.) и подчеркивания (\_).
+* Допустимые символы: буквы [буквенные символы Юникод](http://www.unicode.org/reports/tr44/tr44-22.html#Alphabetic), числа, точки (.) и подчеркивания (\_).
 * Имя должно начинаться с буквы.
 * Максимальная длина: 128 символов.
 
@@ -139,7 +139,7 @@ ms.locfileid: "42719457"
 
 Предоставленный _url_-адрес отображается в Excel.
 
-В следующем примере параметр `helpurl` имеет значение www.contoso.com/weatherhelp.
+В следующем примере `helpurl` используется `www.contoso.com/weatherhelp`значение.
 
 ```js
 /**

@@ -3,12 +3,12 @@ title: Элемент ExtensionPoint в файле манифеста
 description: Определяет, где доступны функции надстройки в пользовательском интерфейсе Office.
 ms.date: 04/09/2020
 localization_priority: Normal
-ms.openlocfilehash: 89040ff84afd7e4c33bea8af04255ef19a8e0f50
-ms.sourcegitcommit: c6e3bfd3deb77982d0b7082afd6a48678e96e1c3
+ms.openlocfilehash: 40b5ab8c2dcae01238854f5a3bfcc599f6b01a9b
+ms.sourcegitcommit: 118e8bcbcfb73c93e2053bda67fe8dd20799b170
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43215091"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "43241037"
 ---
 # <a name="extensionpoint-element"></a>Элемент ExtensionPoint
 
@@ -263,7 +263,7 @@ ms.locfileid: "43215091"
 > [!NOTE]
 > Эта точка расширения поддерживается только в [предварительной версии](../objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) для Android с подпиской на Office 365.
 
-Эта точка расширения помещает переключатель, подходящий для режима, на поверхности команды для встречи в мобильном конструктивном параметре. Организатор собрания может создать собрание по сети. Затем участник может присоединиться к собранию по сети.
+Эта точка расширения помещает переключатель, подходящий для режима, на поверхности команды для встречи в мобильном конструктивном параметре. Организатор собрания может создать собрание по сети. Затем участник может присоединиться к собранию по сети. Чтобы узнать больше об этом сценарии, ознакомьтесь со статьей [Создание надстройки Outlook Mobile для веб-службы "поставщик собраний](../../outlook/online-meeting.md) ".
 
 #### <a name="child-elements"></a>Дочерние элементы
 
@@ -271,9 +271,11 @@ ms.locfileid: "43215091"
 |:-----|:-----|
 |  [Control](control.md) |  Добавляет кнопку на поверхность команды.  |
 
-У элементов **ExtensionPoint** этого типа может быть только один дочерний элемент: элемент **Control** .
+`ExtensionPoint`у элементов этого типа может быть только один дочерний элемент `Control` : element.
 
-Элемент **Control** , содержащийся в этой точке расширения, должен иметь атрибут **xsi: Type** со `MobileButton`значением.
+Атрибуту `Control` элемента, содержащегося в этой точке расширения `xsi:type` , должен быть `MobileButton`присвое значение.
+
+`Icon` Изображения должны быть в градациях серого с `#919191` использованием шестнадцатеричного кода или его эквивалента в [других цветовых форматах](https://convertingcolors.com/hex-color-919191.html).
 
 #### <a name="example"></a>Пример
 
@@ -293,7 +295,7 @@ ms.locfileid: "43215091"
       <bt:Image resid="UiLessIcon" size="48" scale="3" />
     </Icon>
     <Action xsi:type="ExecuteFunction">
-      <FunctionName>UiLessInsertMeetingLink</FunctionName>
+      <FunctionName>insertContosoMeeting</FunctionName>
     </Action>
   </Control>
 </ExtensionPoint>

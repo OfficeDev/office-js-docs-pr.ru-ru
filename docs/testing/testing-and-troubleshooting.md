@@ -1,14 +1,14 @@
 ---
 title: Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 description: Узнайте, как устранять ошибки пользователей в надстройках Office.
-ms.date: 12/31/2019
+ms.date: 04/13/2020
 localization_priority: Normal
-ms.openlocfilehash: 6050b05a39a49ff5bd504b68635388a8ceb3fc65
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 81ca9eac89fb949bd2c1f7f63861d8a4f5295a79
+ms.sourcegitcommit: 118e8bcbcfb73c93e2053bda67fe8dd20799b170
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719765"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "43241051"
 ---
 # <a name="troubleshoot-user-errors-with-office-add-ins"></a>Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 
@@ -121,7 +121,7 @@ Office.context.ui.displayDialogAsync(startAddress, {displayInFrame:true}, callba
 - Pragma: "No-cache"
 - Expires: "-1"
 
-Пример использования на сервере Node.JS Express см. в [этом файле app.js](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO/blob/master/Complete/app.js). Пример использования в проекте ASP.NET см. в [этом файле cshtml](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO/blob/master/src/Office-Add-in-ASPNET-SSO-WebAPI/Views/Shared/_Layout.cshtml).
+Пример использования на сервере Node.JS Express см. в [этом файле app.js](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO/blob/master/Complete/app.js). Пример использования в проекте ASP.NET см. в [этом файле cshtml](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO/blob/master/Complete/Office-Add-in-ASPNET-SSO-WebAPI/Views/Shared/_Layout.cshtml).
 
 Если надстройка размещена на сервере Internet Information Server (IIS), можно также добавить указанные сведения в файл web.config.
 
