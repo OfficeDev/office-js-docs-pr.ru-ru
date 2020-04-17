@@ -1,15 +1,15 @@
 ---
 title: Создание области задач Excel с помощью Vue
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office и Vue.
-ms.date: 01/16/2020
+ms.date: 04/14/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: aff58bf3021be2efed0aef14a505dab8433d92a3
-ms.sourcegitcommit: c3bfea0818af1f01e71a1feff707fb2456a69488
+ms.openlocfilehash: ef20d56181d3b0f6c865e81de9c8500ef9906c83
+ms.sourcegitcommit: 90c5830a5f2973a9ccd5c803b055e1b98d83f099
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "43185563"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "43529122"
 ---
 # <a name="build-an-excel-task-pane-add-in-using-vue"></a>Создание области задач Excel с помощью Vue
 
@@ -58,12 +58,12 @@ vue create my-add-in
     При появлении запроса предоставьте следующую информацию для создания проекта надстройки:
 
     - **Выберите тип проекта:** `Office Add-in project containing the manifest only`
-    - **Как вы хотите назвать надстройку?** `my-office-add-in`
+    - **Как вы хотите назвать надстройку?** `My Office Add-in`
     - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
     ![Генератор Yeoman](../images/yo-office-manifest-only-vue.png)
 
-После завершения работы мастера создается папка `my-office-add-in`, содержащая файл `manifest.xml`. В конце краткого руководства вам потребуется использовать манифест для загрузки без публикации и тестирования вашей надстройки.
+После завершения работы мастера создается папка `My Office Add-in`, содержащая файл `manifest.xml`. В конце краткого руководства вам потребуется использовать манифест для загрузки без публикации и тестирования вашей надстройки.
 
 > [!TIP]
 > Вы можете игнорировать инструкции по *дальнейшим действиям*, предоставляемые генератором Yeoman после создания проекта надстройки. Пошаговые инструкции этой статьи содержат все сведения, необходимые для завершения этого учебного курса.
@@ -72,16 +72,29 @@ vue create my-add-in
 
 [!include[HTTPS guidance](../includes/https-guidance.md)]
 
-Чтобы включить HTTPS для своего приложения, создайте файл `vue.config.js` в корневой папке проекта Vue со следующим содержанием:
+1. Чтобы включить HTTPS для своего приложения, создайте файл `vue.config.js` в корневой папке проекта Vue со следующим содержанием:
 
-```js
-module.exports = {
-  devServer: {
-    port: 3000,
-    https: true
-  }
-};
-```
+    ```js
+    var fs = require("fs");
+    var path = require("path");
+    var homedir = require('os').homedir()
+  
+    module.exports = {
+      devServer: {
+        port: 3000,
+        https: true,
+        key: fs.readFileSync(path.resolve(`${homedir}/.office-addin-dev-certs/localhost.key`)),
+        cert: fs.readFileSync(path.resolve(`${homedir}/.office-addin-dev-certs/localhost.crt`)),
+        ca: fs.readFileSync(path.resolve(`${homedir}/.office-addin-dev-certs/ca.crt`))
+      }
+    }
+    ```
+
+2. В терминале выполните следующую команду, чтобы установить сертификаты надстройки.
+
+   ```command&nbsp;line
+   npx office-addin-dev-certs install
+   ```
 
 ## <a name="update-the-app"></a>Обновление приложения
 
@@ -183,9 +196,7 @@ module.exports = {
    npm run serve
    ```
 
-2. В веб-браузере перейдите по адресу `https://localhost:3000` (обратите внимание на `https`). Если появится сообщение, что сертификат сайта не является доверенным, [сделайте так, чтобы компьютер ему доверял](https://github.com/OfficeDev/generator-office/blob/fd600bbe00747e64aa5efb9846295a3f66d428aa/src/docs/ssl.md#add-certification-file-through-ie).
-
-3. Если страница на сайте `https://localhost:3000` пуста, при этом нет ошибок сертификата, значит она работает. Приложение Vue подключается после запуска Office, поэтому в нем отображаются только элементы из среды Excel.
+2. В веб-браузере перейдите по адресу `https://localhost:3000` (обратите внимание на `https`). Если страница `https://localhost:3000` пуста и не содержит ошибок сертификата, значит, она работает. Приложение Vue подключается после запуска Office, поэтому в нем отображаются только элементы из среды Excel.
 
 ## <a name="try-it-out"></a>Проверка
 
