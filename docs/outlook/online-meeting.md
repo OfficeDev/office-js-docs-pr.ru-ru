@@ -2,14 +2,14 @@
 title: Создание надстройки Outlook Mobile для поставщика собраний в Интернете (Предварительная версия)
 description: Сведения о том, как настроить надстройку Outlook Mobile для поставщика услуг по подключению к интерактивному собранию.
 ms.topic: article
-ms.date: 04/13/2020
+ms.date: 04/15/2020
 localization_priority: Normal
-ms.openlocfilehash: 6a9d484bb74f238c0c62e689c66afaeb284eec2d
-ms.sourcegitcommit: 118e8bcbcfb73c93e2053bda67fe8dd20799b170
+ms.openlocfilehash: ed89205962bf4662096167eb78388b475fffdf91
+ms.sourcegitcommit: 90c5830a5f2973a9ccd5c803b055e1b98d83f099
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "43241093"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "43529115"
 ---
 # <a name="create-an-outlook-mobile-add-in-for-an-online-meeting-provider-preview"></a>Создание надстройки Outlook Mobile для поставщика собраний в Интернете (Предварительная версия)
 
@@ -144,7 +144,7 @@ function updateBody(event, existingBody) {
 
 При просмотре собрания в качестве участника собрания должен отображаться экран, аналогичный следующему изображению.
 
-[![снимок экрана с экраном "присоединение к собранию" на Android](../images/outlook-android-join-online-meeting-view.png)](../images/outlook-android-join-online-meeting-view-expanded.png#lightbox)
+[![снимок экрана с экраном "присоединение к собранию" на Android](../images/outlook-android-join-online-meeting-view-1.png)](../images/outlook-android-join-online-meeting-view-1-expanded.png#lightbox)
 
 ## <a name="available-apis"></a>Доступные API
 
