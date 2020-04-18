@@ -1,14 +1,14 @@
 ---
 title: Установка последней версии Office
 description: Сведения о том, как получать последние сборки Office раньше других.
-ms.date: 01/14/2020
+ms.date: 04/16/2020
 localization_priority: Normal
-ms.openlocfilehash: ad956135bea0ffccc18fc07f455af5597d0e2341
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: b9428cc67160e0680bab5a36438bc1a0dbb3ac17
+ms.sourcegitcommit: 803587b324fc8038721709d7db5664025cf03c6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42718925"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43547066"
 ---
 # <a name="install-the-latest-version-of-office"></a>Установка последней версии Office
 
@@ -18,7 +18,7 @@ ms.locfileid: "42718925"
 
 Чтобы получать последние сборки Office раньше других:
 
-- Если вы подписаны на Office 365 для дома, Office 365 персональный или Office 365 для студентов, [примите участие в программе предварительной оценки Office](https://products.office.com/office-insider).
+- Если вы подписаны на Office 365 для дома, Office 365 персональный или Office 365 для студентов, [примите участие в программе предварительной оценки Office](https://insider.office.com).
 - Если вы пользуетесь Office 365 для бизнеса, прочитайте статью [Установка сборки раннего выпуска для клиентов Office 365 для бизнеса](https://support.office.com/article/Install-the-First-Release-build-for-Office-365-for-business-customers-4dd8ba40-73c0-4468-b778-c7b744d03ead).
 - Если вы используете Office для Mac:
   - Запустите приложение Office.

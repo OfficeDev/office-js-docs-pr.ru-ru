@@ -4,4 +4,4 @@
 > Для использования API предварительной версии:
 >
 > - Необходимо ссылаться на **бета-** библиотеку в сети CDN (https://appsforoffice.microsoft.com/lib/beta/hosted/office.js). [Файл определения типа](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts) для компиляции TypeScript и IntelliSense находится в сети CDN и [DefinitelyTyped](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js-preview/index.d.ts). Вы можете установить эти типы с `npm install --save-dev @types/office-js-preview`помощью.
-> - Вам может потребоваться присоединиться к [программе предварительной оценки Office](https://products.office.com/office-insider) для получения доступа к более последним сборкам Office.
+> - Вам может потребоваться присоединиться к [программе предварительной оценки Office](https://insider.office.com) для получения доступа к более последним сборкам Office.

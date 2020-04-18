@@ -1,14 +1,14 @@
 ---
 title: Проверка манифеста надстройки Office
 description: Узнайте, как проверить манифест надстройки Office с помощью XML-схемы и других средств.
-ms.date: 12/31/2019
+ms.date: 04/16/2020
 localization_priority: Normal
-ms.openlocfilehash: bb24cdca34ac92fa1ca9f292bc1f52b5fbd01688
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: a6c33603f278e092d5b2b1c85879e03ee10031e3
+ms.sourcegitcommit: 803587b324fc8038721709d7db5664025cf03c6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719751"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43547235"
 ---
 # <a name="validate-an-office-add-ins-manifest"></a>Проверка манифеста надстройки Office
 
@@ -36,16 +36,18 @@ npm run validate
 
 1. Установите [Node.js](https://nodejs.org/download/).
 
-2. Выполните следующую команду в корневом каталоге своего проекта. Замените `MANIFEST_FILE` на имя файла манифеста.
+2. Выполните следующую команду в корневом каталоге своего проекта. 
 
     ```command&nbsp;line
-    npx office-addin-manifest validate MANIFEST_FILE
+    npm run validate
     ```
 
     > [!NOTE]
-    > Если эта команда приводит к появлению сообщения об ошибке "Недопустимый синтаксис команды" (так как команда `validate` не распознается), выполните следующую команду для проверки манифеста (заменив `MANIFEST_FILE` именем файла манифеста): 
+    > Если эта команда недоступна или не работает, выполните следующую команду, чтобы принудительно использовать последнюю версию средства Office-ADDIN-MANIFEST (замените `MANIFEST_FILE` на имя файла манифеста):
     >
-    > `npx --ignore-existing office-addin-manifest validate MANIFEST_FILE`
+    > ```command&nbsp;line
+    > npx --ignore-existing office-addin-manifest validate MANIFEST_FILE
+    > ```
 
 ## <a name="validate-your-manifest-against-the-xml-schema"></a>Проверка манифеста на соответствие схеме XML
 
