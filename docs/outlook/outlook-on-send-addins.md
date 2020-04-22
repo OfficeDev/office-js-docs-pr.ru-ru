@@ -1,14 +1,14 @@
 ---
 title: Функция проверки при отправке для надстроек Outlook
 description: Позволяет надстройке настраивать те или иные параметры при отправке, а также обрабатывать элемент и запрещать пользователям выполнять определенные действия.
-ms.date: 04/06/2020
+ms.date: 04/15/2020
 localization_priority: Normal
-ms.openlocfilehash: 017759628cd9b3716c3992f7c6631911491ca246
-ms.sourcegitcommit: c3bfea0818af1f01e71a1feff707fb2456a69488
+ms.openlocfilehash: d882bf988473e71de2621c144964f6116afe962c
+ms.sourcegitcommit: 79c55e59294e220bd21a5006080f72acf3ec0a3f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "43185640"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "43581934"
 ---
 # <a name="on-send-feature-for-outlook-add-ins"></a>Функция проверки при отправке для надстроек Outlook
 
@@ -199,9 +199,26 @@ New-App -OrganizationApp -FileData $Data -DefaultStateForUser Enabled
 > [!NOTE]
 > Сведения о том, как подключиться к Exchange Online с помощью удаленного сеанса PowerShell, см. в статье [Подключение к Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell).
 
+#### <a name="disable-the-on-send-policy"></a>Отключение политики проверки при отправке
+
+По умолчанию политика включена для отправки включена. Чтобы отключить политику проверки при отправке для пользователя или назначить политику почтовых ящиков Outlook в Интернете, в которой не включен соответствующий флаг, выполните приведенные ниже командлеты. В этом примере используется политика почтовых ящиков *ContosoCorpOWAPolicy*.
+
+```powershell
+Get-CASMailbox joe@contoso.com | Set-CASMailbox –OWAMailboxPolicy "ContosoCorpOWAPolicy"
+```
+
+> [!NOTE]
+> Дополнительные сведения о том, как настроить существующие политики почтовых ящиков Outlook в Интернете с помощью командлета **Set-OwaMailboxPolicy**, см. в статье [Set-OwaMailboxPolicy](/powershell/module/exchange/client-access/Set-OwaMailboxPolicy).
+
+Чтобы отключить политику проверки при отправке для всех пользователей, которым назначена определенная политика почтовых ящиков Outlook в Интернете, выполните приведенные ниже командлеты.
+
+```powershell
+Get-OWAMailboxPolicy OWAOnSendAddinAllUserPolicy | Set-OWAMailboxPolicy –OnSendAddinsEnabled:$false
+```
+
 #### <a name="enable-the-on-send-policy"></a>Включение политики проверки при отправке
 
-По умолчанию политика проверки при отправке отключена. Администраторы могут включать эту функцию с помощью командлетов Exchange Online PowerShell.
+Администраторы могут включать эту функцию с помощью командлетов Exchange Online PowerShell.
 
 Чтобы для всех пользователей включить надстройки, поддерживающие проверку сообщений при отправке, сделайте следующее:
 
@@ -254,23 +271,6 @@ New-App -OrganizationApp -FileData $Data -DefaultStateForUser Enabled
 
 > [!NOTE]
 > Дождитесь вступления политики в силу (это может занять до 60 минут) или перезапустите службы IIS. Когда политика вступит в силу, для группы будет внедрена функция проверки при отправке.
-
-#### <a name="disable-the-on-send-policy"></a>Отключение политики проверки при отправке
-
-Чтобы отключить политику проверки при отправке для пользователя или назначить политику почтовых ящиков Outlook в Интернете, в которой не включен соответствующий флаг, выполните приведенные ниже командлеты. В этом примере используется политика почтовых ящиков *ContosoCorpOWAPolicy*.
-
-```powershell
-Get-CASMailbox joe@contoso.com | Set-CASMailbox –OWAMailboxPolicy "ContosoCorpOWAPolicy"
-```
-
-> [!NOTE]
-> Дополнительные сведения о том, как настроить существующие политики почтовых ящиков Outlook в Интернете с помощью командлета **Set-OwaMailboxPolicy**, см. в статье [Set-OwaMailboxPolicy](/powershell/module/exchange/client-access/Set-OwaMailboxPolicy).
-
-Чтобы отключить политику проверки при отправке для всех пользователей, которым назначена определенная политика почтовых ящиков Outlook в Интернете, выполните приведенные ниже командлеты.
-
-```powershell
-Get-OWAMailboxPolicy OWAOnSendAddinAllUserPolicy | Set-OWAMailboxPolicy –OnSendAddinsEnabled:$false
-```
 
 ### <a name="windows"></a>[Windows](#tab/windows)
 

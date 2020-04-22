@@ -1,14 +1,14 @@
 ---
 title: Office UI Fabric в надстройках Office 
 description: Общие сведения о том, как использовать компоненты Office UI Fabric в надстройках Office.
-ms.date: 12/04/2017
+ms.date: 04/20/2020
 localization_priority: Normal
-ms.openlocfilehash: 3e65e123d6195fc435b12c477985a10a3a2b0399
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 5c504de14ee97ff740a80dc7608ae636ff8080ca
+ms.sourcegitcommit: 79c55e59294e220bd21a5006080f72acf3ec0a3f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42718708"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "43581913"
 ---
 # <a name="office-ui-fabric-in-office-add-ins"></a>Office UI Fabric в надстройках Office 
 
@@ -66,4 +66,4 @@ Fabric Core содержит основные элементы языка диз
 |**Платформа**|**Пример**|
 |:------------|:----------|
 |**React**|[Использование Office UI Fabric React в надстройках Office](using-office-ui-fabric-react.md )|
-|**Angular**| См. проект сообщества [ngOfficeUIFabric](http://ngofficeuifabric.com/) с директивами Angular 1.5 и раздел [Обдумайте размещение компонентов Fabric в компонентах Angular 2](../develop/add-ins-with-angular2.md#consider-wrapping-fabric-components-with-angular-components)|
+|**Angular**| [Рассмотрите оболочку компонентов Fabric с помощью компонентов радиального 2](../develop/add-ins-with-angular2.md#consider-wrapping-fabric-components-with-angular-components)|

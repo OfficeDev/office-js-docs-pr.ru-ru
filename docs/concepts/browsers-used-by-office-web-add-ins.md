@@ -1,14 +1,14 @@
 ---
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
-ms.date: 03/09/2020
+ms.date: 04/21/2020
 localization_priority: Normal
-ms.openlocfilehash: d53ea0da29c9d2cc1177d233eed9e3ee62a891f2
-ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
+ms.openlocfilehash: 9ef4b6d4c09140fc6d6bb04eca51d845b79b6dc7
+ms.sourcegitcommit: 3355c6bd64ecb45cea4c0d319053397f11bc9834
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42596468"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "43744854"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -29,10 +29,12 @@ ms.locfileid: "42596468"
 |Android|Chrome|
 |Windows / Office 2013 или более поздней версии без подписки|Internet Explorer 11|
 |Windows 10 версии ниже 1903 / Office 365|Internet Explorer 11|
-|Windows 10 версии 1903 или выше / Office 365 версии ниже 16.0.11629|Internet Explorer 11|
-|Windows 10 версии 1903 или выше / Office 365 версии 16.0.11629 или выше|Microsoft Edge\*|
+|Windows 10 версии >= 1903/Office 365 ver < 16.0.11629<sup>1</sup>|Internet Explorer 11|
+|Windows 10 версии >= 1903/Office 365 ver >= 16.0.11629<sup>1</sup>|Microsoft Edge<sup>2</sup>|
 
-\* Если используется Microsoft Edge, экранный диктор Windows 10 (его иногда называют "читатель экрана") считывает тег `<title>` на странице, которая открывается в области задач. Когда используется Internet Explorer 11, экранный диктор читает панель заголовка области задач, полученный от значения `<DisplayName>` в манифесте надстройки.
+<sup>1</sup> ознакомьтесь со [страницей "журнал обновлений](/officeupdates/update-history-office365-proplus-by-date) " и Узнайте, как [найти версию клиента Office и канал обновления](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19) для получения дополнительных сведений.
+
+<sup>2</sup> при использовании Microsoft Edge экранный диктор Windows 10 (иногда называется "средство чтения с экрана") считывает `<title>` тег на странице, которая открывается в области задач. Когда используется Internet Explorer 11, экранный диктор читает панель заголовка области задач, полученный от значения `<DisplayName>` в манифесте надстройки.
 
 > [!IMPORTANT]
 > Internet Explorer 11 не поддерживает версии JavaScript, более поздние, чем ES5. Если какой-либо пользователь вашей надстройки применяет платформы с Internet Explorer 11, для применения синтаксиса и возможностей ECMAScript 2015 или более поздних версий вам нужно либо транскомпилировать свой код JavaScript в ES5, либо использовать полизаполнение. Кроме того, Internet Explorer 11 не поддерживает некоторые элементы HTML5, в частности медиа, запись и местоположение.
@@ -59,6 +61,9 @@ ms.locfileid: "42596468"
 
 Одной из известных причин является требование Microsoft Edge, чтобы для localhost предоставлялось исключение замыкания на себя. Следуйте инструкциям из статьи [Не удается открыть надстройку из localhost](/office/troubleshoot/error-messages/cannot-open-add-in-from-localhost).
 
+### <a name="get-errors-trying-to-download-a-pdf-file"></a>Получение сообщений об ошибках при попытке загрузить PDF-файл
+
+Непосредственная загрузка больших двоичных объектов как PDF-файлов в надстройке не поддерживается, если пограничный сервер — браузер. Чтобы устранить эту проблемы, создайте простое веб-приложение, которое загружает большие двоичные объекты как PDF-файлы. В надстройке вызовите `Office.context.ui.openBrowserWindow(url)` метод и передайте URL-адрес веб-приложения. Это приведет к открытию веб-приложения в окне браузера вне Office.
 
 ## <a name="see-also"></a>См. также
 

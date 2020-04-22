@@ -1,14 +1,14 @@
 ---
 title: Работать со сводными таблицами с помощью API JavaScript для Excel
 description: Используйте API JavaScript для Excel, чтобы создавать сводные таблицы и взаимодействовать с их компонентами.
-ms.date: 01/22/2020
+ms.date: 04/20/2020
 localization_priority: Normal
-ms.openlocfilehash: 5899959b108ace2da35950655ff9313cd94243d3
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: f89e945f717982163a967971aaeff90ec0125545
+ms.sourcegitcommit: 79c55e59294e220bd21a5006080f72acf3ec0a3f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42717105"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "43581941"
 ---
 # <a name="work-with-pivottables-using-the-excel-javascript-api"></a>Работать со сводными таблицами с помощью API JavaScript для Excel
 
@@ -25,7 +25,8 @@ ms.locfileid: "42717105"
 [Сводная таблица](/javascript/api/excel/excel.pivottable) является центральным объектом для сводных ТАБЛИЦ в API JavaScript для Office.
 
 - `Workbook.pivotTables`и `Worksheet.pivotTables` — это [пивоттаблеколлектионс](/javascript/api/excel/excel.pivottablecollection) , которые содержат [Сводные таблицы](/javascript/api/excel/excel.pivottable) в книге и листе соответственно.
-- [Сводная таблица](/javascript/api/excel/excel.pivottable) содержит [Пивоттаблеколлектионс](/javascript/api/excel/excel.pivottablecollection) с несколькими [пивосиерарчиес](/javascript/api/excel/excel.pivothierarchy).
+- [Сводная таблица](/javascript/api/excel/excel.pivottable) содержит [Пивосиерарчиколлектион](/javascript/api/excel/excel.pivothierarchycollection) с несколькими [пивосиерарчиес](/javascript/api/excel/excel.pivothierarchy).
+- Эти [пивосиерарчиес](/javascript/api/excel/excel.pivothierarchy) можно добавить в конкретные коллекции иерархий, чтобы определить, как данные будут сведены в сводную таблицу (как описано в [следующем разделе](#hierarchies)).
 - [PivotHierarchy](/javascript/api/excel/excel.pivothierarchy) содержит [пивотфиелдколлектион](/javascript/api/excel/excel.pivotfieldcollection) , в котором есть ровно один [PivotField](/javascript/api/excel/excel.pivotfield). Если проект разворачивается для включения сводных таблиц OLAP, это может измениться.
 - [PivotField](/javascript/api/excel/excel.pivotfield) содержит [Пивотитемколлектион](/javascript/api/excel/excel.pivotitemcollection) с несколькими [PivotItems](/javascript/api/excel/excel.pivotitem).
 - [Сводная таблица](/javascript/api/excel/excel.pivottable) содержит объект [PivotLayout](/javascript/api/excel/excel.pivotlayout) , определяющий, где на листе отображаются [PivotFields](/javascript/api/excel/excel.pivotfield) и [PivotItems](/javascript/api/excel/excel.pivotitem) .
@@ -166,6 +167,61 @@ Excel.run(function (context) {
     pivotTable.dataHierarchies.add(pivotTable.hierarchies.getItem("Crates Sold at Farm"));
     pivotTable.dataHierarchies.add(pivotTable.hierarchies.getItem("Crates Sold Wholesale"));
 
+    return context.sync();
+});
+```
+
+## <a name="pivottable-layouts-and-getting-pivoted-data"></a>Макеты сводных таблиц и извлечение сведенных данных
+
+[PivotLayout](/javascript/api/excel/excel.pivotlayout) определяет размещение иерархий и их данных. Вы можете получить доступ к макету, чтобы определить диапазоны, в которых хранятся данные.
+
+На следующей схеме показано, какие вызовы функций макета соответствуют какому диапазону сводной таблицы.
+
+![Схема, на которой показано, какие разделы сводной таблицы возвращаются функциями диапазона получения в макете.](../images/excel-pivots-layout-breakdown.png)
+
+### <a name="get-data-from-the-pivottable"></a>Получение данных из сводной таблицы
+
+Макет определяет способ отображения сводной таблицы на листе. Это означает, `PivotLayout` что объект управляет диапазонами, используемыми для элементов сводной таблицы. Используйте диапазоны, предоставленные макетом, для получения данных, собранных и агрегированных сводной таблицей. В частности, используйте `PivotLayout.getDataBodyRange` для доступа к тем, что делает Сводная таблица.
+
+В приведенном ниже коде показано, как получить последнюю строку данных сводной таблицы, посвященную макету ( **общему** количеству **ящиков, проданных в ферме** , и **сумме ящиков, проданных** в одной колонке в предыдущем примере). Затем эти значения суммируются вместе для итогового итога, который отображается в ячейке **E30** (вне сводной таблицы).
+
+```js
+Excel.run(function (context) {
+    var pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
+
+    // Get the totals for each data hierarchy from the layout.
+    var range = pivotTable.layout.getDataBodyRange();
+    var grandTotalRange = range.getLastRow();
+    grandTotalRange.load("address");
+    return context.sync().then(function () {
+        // Sum the totals from the PivotTable data hierarchies and place them in a new range, outside of the PivotTable.
+        var masterTotalRange = context.workbook.worksheets.getActiveWorksheet().getRange("E30");
+        masterTotalRange.formulas = [["=SUM(" + grandTotalRange.address + ")"]];
+    });
+});
+```
+
+### <a name="layout-types"></a>Типы макетов
+
+В сводных таблицах есть три стиля макета: компактный, структурированный и табличный. В предыдущих примерах показан стиль "Компактный".
+
+В приведенных ниже примерах используются структурированные и табличные стили соответственно. В примере кода показано, как циклически переключаться между различными макетами.
+
+#### <a name="outline-layout"></a>Макет структуры
+
+![Сводная таблица с использованием структуры.](../images/excel-pivots-outline-layout.png)
+
+#### <a name="tabular-layout"></a>Табличный макет
+
+![Сводная таблица с использованием табличного макета.](../images/excel-pivots-tabular-layout.png)
+
+## <a name="delete-a-pivottable"></a>Удаление сводной таблицы
+
+Сводные таблицы удаляются с использованием их имени.
+
+```js
+Excel.run(function (context) {
+    context.workbook.worksheets.getItem("Pivot").pivotTables.getItem("Farm Sales").delete();
     return context.sync();
 });
 ```
@@ -340,44 +396,6 @@ Excel.run(function (context) {
 });
 ```
 
-## <a name="pivottable-layouts"></a>Макеты сводных таблиц
-
-[PivotLayout](/javascript/api/excel/excel.pivotlayout) определяет размещение иерархий и их данных. Вы можете получить доступ к макету, чтобы определить диапазоны, в которых хранятся данные.
-
-На следующей схеме показано, какие вызовы функций макета соответствуют какому диапазону сводной таблицы.
-
-![Схема, на которой показано, какие разделы сводной таблицы возвращаются функциями диапазона получения в макете.](../images/excel-pivots-layout-breakdown.png)
-
-В приведенном ниже коде показано, как получить последнюю строку данных сводной таблицы, прополнив макет. Затем эти значения суммируются вместе для общего итога.
-
-```js
-Excel.run(function (context) {
-    var pivotTable = context.workbook.worksheets.getActiveWorksheet().pivotTables.getItem("Farm Sales");
-
-    // Get the totals for each data hierarchy from the layout.
-    var range = pivotTable.layout.getDataBodyRange();
-    var grandTotalRange = range.getLastRow();
-    grandTotalRange.load("address");
-    return context.sync().then(function () {
-        // Sum the totals from the PivotTable data hierarchies and place them in a new range.
-        var masterTotalRange = context.workbook.worksheets.getActiveWorksheet().getRange("B27:C27");
-        masterTotalRange.formulas = [["All Crates", "=SUM(" + grandTotalRange.address + ")"]];
-    });
-});
-```
-
-В сводных таблицах есть три стиля макета: компактный, структурированный и табличный. В предыдущих примерах показан стиль "Компактный".
-
-В приведенных ниже примерах используются структурированные и табличные стили соответственно. В примере кода показано, как циклически переключаться между различными макетами.
-
-### <a name="outline-layout"></a>Макет структуры
-
-![Сводная таблица с использованием структуры.](../images/excel-pivots-outline-layout.png)
-
-### <a name="tabular-layout"></a>Табличный макет
-
-![Сводная таблица с использованием табличного макета.](../images/excel-pivots-tabular-layout.png)
-
 ## <a name="change-hierarchy-names"></a>Изменение имен иерархий
 
 Поля иерархии можно редактировать. В приведенном ниже коде показано, как изменить отображаемые имена двух иерархий данных.
@@ -392,17 +410,6 @@ Excel.run(function (context) {
         dataHierarchies.items[0].name = "Farm Sales";
         dataHierarchies.items[1].name = "Wholesale";
     });
-});
-```
-
-## <a name="delete-a-pivottable"></a>Удаление сводной таблицы
-
-Сводные таблицы удаляются с использованием их имени.
-
-```js
-Excel.run(function (context) {
-    context.workbook.worksheets.getItem("Pivot").pivotTables.getItem("Farm Sales").delete();
-    return context.sync();
 });
 ```
 
