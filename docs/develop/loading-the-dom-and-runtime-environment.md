@@ -1,14 +1,14 @@
 ---
 title: Загрузка модели DOM и среды выполнения
 description: Загрузка среды выполнения надстроек DOM и надстроек Office
-ms.date: 07/01/2019
+ms.date: 04/22/2020
 localization_priority: Normal
-ms.openlocfilehash: 2ea5f1fdc42fe1ffde30f8145fd0c24599c7e702
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 7248f5b09a54552c3f16a9bc97bd4eae9795c8cd
+ms.sourcegitcommit: 9da68c00ecc00a2f307757e0f5a903a8e31b7769
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42718918"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "43785719"
 ---
 # <a name="loading-the-dom-and-runtime-environment"></a>Загрузка модели DOM и среды выполнения
 
@@ -62,7 +62,7 @@ ms.locfileid: "42718918"
 
 ## <a name="checking-the-load-status"></a>Проверка состояния загрузки
 
-Одним из способов проверки завершения загрузки DOM и среды выполнения надстроек является использование функции [.ready()](https://api.jquery.com/ready/) jQuery — `$(document).ready()`. Например, следующий `onReady` обработчик событий гарантирует, что модель DOM сначала загружается, прежде чем будет запущен код, предназначенный для инициализации надстройки. Затем `onReady` обработчик продолжает использовать свойство [Mailbox. Item](/javascript/api/outlook/office.mailbox) для получения выбранного в данный момент элемента в Outlook и вызывает основную функцию надстройки `initDialer`.
+Одним из способов проверки завершения загрузки DOM и среды выполнения надстроек является использование функции [.ready()](https://api.jquery.com/ready/) jQuery — `$(document).ready()`. Например, следующий `onReady` обработчик событий гарантирует, что модель DOM сначала загружается, прежде чем будет запущен код, предназначенный для инициализации надстройки. Затем `onReady` обработчик продолжает использовать свойство [Mailbox. Item](/javascript/api/outlook/office.mailbox#item) для получения выбранного в данный момент элемента в Outlook и вызывает основную функцию надстройки `initDialer`.
 
 ```js
 Office.onReady()

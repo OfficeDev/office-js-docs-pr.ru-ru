@@ -2,14 +2,14 @@
 title: Создание надстройки Outlook Mobile для поставщика собраний в Интернете (Предварительная версия)
 description: Сведения о том, как настроить надстройку Outlook Mobile для поставщика услуг по подключению к интерактивному собранию.
 ms.topic: article
-ms.date: 04/15/2020
+ms.date: 04/21/2020
 localization_priority: Normal
-ms.openlocfilehash: ed89205962bf4662096167eb78388b475fffdf91
-ms.sourcegitcommit: 90c5830a5f2973a9ccd5c803b055e1b98d83f099
+ms.openlocfilehash: 5fd0b28a661f6d2e8f3084427920c1a31053ae5b
+ms.sourcegitcommit: 3355c6bd64ecb45cea4c0d319053397f11bc9834
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "43529115"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "43744861"
 ---
 # <a name="create-an-outlook-mobile-add-in-for-an-online-meeting-provider-preview"></a>Создание надстройки Outlook Mobile для поставщика собраний в Интернете (Предварительная версия)
 
@@ -24,7 +24,10 @@ ms.locfileid: "43529115"
 
 Чтобы позволить пользователям создавать собрания по сети с надстройкой, необходимо настроить точку `MobileOnlineMeetingCommandSurface` расширения в манифесте под родительским элементом. `MobileFormFactor` Другие конструктивные параметры не поддерживаются.
 
-В приведенном ниже примере показан пример манифеста, включающего `MobileFormFactor` элемент и `MobileOnlineMeetingCommandSurface` точку расширения.
+В следующем примере показан фрагмент манифеста, включающий `MobileFormFactor` элемент и `MobileOnlineMeetingCommandSurface` точку расширения.
+
+> [!TIP]
+> Чтобы узнать больше о манифестах для надстроек Outlook, ознакомьтесь с разделом [манифесты надстроек Outlook](manifests.md) и [добавьте поддержку команд надстроек для Outlook Mobile](add-mobile-support.md).
 
 ```xml
 ...

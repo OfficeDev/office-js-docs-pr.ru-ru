@@ -1,14 +1,14 @@
 ---
 title: Управление состоянием и параметрами для надстройки Outlook
 description: Сведения о том, как хранить состояние и параметры надстройки для надстройки Outlook.
-ms.date: 02/27/2020
+ms.date: 04/22/2020
 localization_priority: Normal
-ms.openlocfilehash: 7d981107da68c329d209834059bfac494d6ccae4
-ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
+ms.openlocfilehash: 3cb4f7d6e31fd4d37e01939f743682f60f24f959
+ms.sourcegitcommit: 9da68c00ecc00a2f307757e0f5a903a8e31b7769
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42596650"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "43785783"
 ---
 # <a name="manage-state-and-settings-for-an-outlook-add-in"></a>Управление состоянием и параметрами для надстройки Outlook
 
@@ -65,7 +65,7 @@ function saveMyAppSettingsCallback(asyncResult) {
 }
 ```
 
-Метод **saveAsync** сохраняет параметры перемещения асинхронно и получает дополнительную функцию обратного вызова. Данный пример кода передает функцию обратного вызова `saveMyAppSettingsCallback` в метод **saveAsync**. После возврата асинхронного вызова параметр _asyncResult_ функции `saveMyAppSettingsCallback` предоставляет доступ к объекту [AsyncResult](/javascript/api/outlook), который можно использовать для определения успешного или неудачного выполнения операции при помощи свойства **AsyncResult.status**.
+Метод **saveAsync** сохраняет параметры перемещения асинхронно и получает дополнительную функцию обратного вызова. Данный пример кода передает функцию обратного вызова `saveMyAppSettingsCallback` в метод **saveAsync**. После возврата асинхронного вызова параметр _asyncResult_ функции `saveMyAppSettingsCallback` предоставляет доступ к объекту [AsyncResult](/javascript/api/office/office.asyncresult), который можно использовать для определения успешного или неудачного выполнения операции при помощи свойства **AsyncResult.status**.
 
 ### <a name="removing-a-roaming-setting"></a>Удаление параметра перемещения
 

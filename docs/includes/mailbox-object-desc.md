@@ -1,4 +1,4 @@
-Надстройки Outlook в основном используют API, предоставляемые через объект [Mailbox](/javascript/api/outlook/Office.mailbox) . Чтобы получить объекты и члены специально для использования в надстройках Outlook, такие как объект [Item](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md), используйте свойство [mailbox](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md) объекта **Context** для получения доступа к объекту **Mailbox**, как показано в следующей строке кода.
+Надстройки Outlook в основном используют API, предоставляемые через объект [Mailbox](/javascript/api/outlook/office.mailbox) . Чтобы получить объекты и члены специально для использования в надстройках Outlook, такие как объект [Item](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md), используйте свойство [mailbox](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md) объекта **Context** для получения доступа к объекту **Mailbox**, как показано в следующей строке кода.
 
 ```js
 // Access the Item object.
