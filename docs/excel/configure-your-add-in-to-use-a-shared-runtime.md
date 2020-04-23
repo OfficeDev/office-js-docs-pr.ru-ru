@@ -1,15 +1,15 @@
 ---
-ms.date: 02/20/2020
+ms.date: 04/16/2020
 title: Настройте надстройку Excel, чтобы предоставить общий доступ к среде выполнения браузера (ознакомительная версия)
 ms.prod: excel
 description: Настройте надстройку Excel, чтобы предоставить общий доступ к среде выполнения браузера и запускать код ленты, области задач и пользовательских функций в одной и той же среде выполнения.
 localization_priority: Priority
-ms.openlocfilehash: 7fad97039d5a463978ca9a2d450af9bb698b49b5
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: f84de010787921eeb13205935b733ec36b2c3d37
+ms.sourcegitcommit: 803587b324fc8038721709d7db5664025cf03c6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719331"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43547250"
 ---
 # <a name="configure-your-excel-add-in-to-use-a-shared-javascript-runtime-preview"></a>Настройте свою надстройку Excel, чтобы использовать общую среду выполнения JavaScript (ознакомительная версия)
 
@@ -117,9 +117,8 @@ yo office
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Опробуйте некоторые функции общей среды выполнения, ознакомившись с приведенными ниже статьями.
-
-- [Вызов API Excel из пользовательской функции](call-excel-apis-from-custom-function.md)
+- Подробные сведения об использовании API JavaScript для Excel и пользовательских функций Excel в общей среде выполнения см. в статье [Вызов API Excel из пользовательской функции](call-excel-apis-from-custom-function.md).
+- Изучите пример PnP [Управление интерфейсом ленты и области задач, а также запуск кода при открытии документа](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/excel-shared-runtime-scenario), чтобы ознакомиться с масштабным примером работы общей среды выполнения JavaScript.
 
 ## <a name="see-also"></a>См. также
 

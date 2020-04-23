@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Excel
-description: Сведения о наборе обязательных элементов надстройки Office для сборок Excel
-ms.date: 03/11/2020
+description: Сведения о наборе обязательных элементов надстройки Office для сборок Excel.
+ms.date: 04/16/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: b6e1570d7487e552197201d12f9a783f18a30fe3
-ms.sourcegitcommit: 05b73cdec5f4db7f0b8d48a5a552ee296a0332ca
+ms.openlocfilehash: 6da9e34359521157e809764907c3a6c3a62ae76c
+ms.sourcegitcommit: 803587b324fc8038721709d7db5664025cf03c6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42600706"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43547232"
 ---
 # <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
 
@@ -26,7 +26,7 @@ ms.locfileid: "42600706"
 
 |  Набор обязательных элементов  |  Office для Windows<br>(версия, подключенная к подписке на Office 365)  |  Office для iPad<br>(версия, подключенная к подписке на Office 365)  |  Office для Mac<br>(версия, подключенная к подписке на Office 365)  | Office в Интернете |
 |:-----|-----|:-----|:-----|:-----|:-----|
-| [Предварительная версия](excel-preview-apis.md)  | Применяйте последнюю версию Office для использования предварительных версий API (может потребоваться присоединение к [программе предварительной оценки Office](https://products.office.com/office-insider)) |
+| [Предварительная версия](excel-preview-apis.md)  | Применяйте последнюю версию Office для использования предварительных версий API (может потребоваться присоединение к [программе предварительной оценки Office](https://insider.office.com)) |
 | [ExcelApiOnline](excel-api-online-requirement-set.md) | Н/Д | Н/Д | Н/Д | Последние (см. [набор обязательных элементов, стр.](./excel-api-online-requirement-set.md)) |
 | [ExcelApi 1.10](excel-api-1-10-requirement-set.md) | Версия 1907 (сборка 11929.20306) или более поздняя | 2.30 или более поздняя версия | 16.30 или более поздняя версия | Октябрь 2019 г. |
 | [ExcelApi 1.9](excel-api-1-9-requirement-set.md)  | Версия 1903 (сборка 11425.20204) или более поздняя | 2.24 или более поздняя версия | 16.24 или более поздняя версия | Май 2019 г. |

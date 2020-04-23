@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Word
-description: Сведения о наборе обязательных элементов надстройки Office для сборок Word
-ms.date: 03/11/2020
+description: Сведения о наборе обязательных элементов надстройки Office для сборок Word.
+ms.date: 04/16/2020
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 41cb1189bba31c83958c1c1284f347b615a5a220
-ms.sourcegitcommit: 05b73cdec5f4db7f0b8d48a5a552ee296a0332ca
+ms.openlocfilehash: 69addff587b026ab717a438e204b1258b06266b6
+ms.sourcegitcommit: 803587b324fc8038721709d7db5664025cf03c6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42600713"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43547222"
 ---
 # <a name="word-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Word
 
@@ -26,7 +26,7 @@ ms.locfileid: "42600713"
 
 |  Набор обязательных элементов  |   Office для Windows\*<br>(версия, подключенная к подписке на Office 365)  |  Office для iPad<br>(версия, подключенная к подписке на Office 365)  |  Office для Mac<br>(версия, подключенная к подписке на Office 365)  | Office в Интернете  |
 |:-----|-----|:-----|:-----|:-----|
-| [Предварительная версия](word-preview-apis.md) | Применяйте последнюю версию Office для использования предварительных версий API (может потребоваться присоединение к [программе предварительной оценки Office](https://products.office.com/office-insider)) |
+| [Предварительная версия](word-preview-apis.md) | Применяйте последнюю версию Office для использования предварительных версий API (может потребоваться присоединение к [программе предварительной оценки Office](https://insider.office.com)) |
 | [WordApi 1.3](word-api-1-3-requirement-set.md) | Версия 1612 (сборка 7668.1000) или более поздняя| Март 2017 г., 2.22 или более поздняя | Март 2017 г., 15.32 или более поздняя| Март 2017 г. |
 | [WordApi 1.2](word-api-1-2-requirement-set.md) | Обновление за декабрь 2015 г., версия 1601 (сборка 6568.1000) или выше | Январь 2016 г., версия 1.18 или выше | Январь 2016 г., версия 15.19 или выше| Сентябрь 2016 г. |
 | [WordApi 1.1](word-api-1-1-requirement-set.md) | Версия 1509 (сборка 4266.1001) или более поздняя| Январь 2016 г., версия 1.18 или выше | Январь 2016 г., версия 15.19 или выше| Сентябрь 2016 г. |

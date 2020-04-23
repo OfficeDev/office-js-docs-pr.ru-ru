@@ -4,12 +4,12 @@ description: В этом руководстве вы создадите надс
 ms.date: 01/16/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 83568d7bb3ec1706fb9a2fb373be75b0774d9d94
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: d7f6f30bde7b56b1dec1abb55d01e6b65f8d3c7e
+ms.sourcegitcommit: 803587b324fc8038721709d7db5664025cf03c6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42717371"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43547080"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -235,7 +235,7 @@ function clock(invocation) {
 --- 
 
 <ol start="4">
-<li>Теперь давайте оценим, как работает новая функция. В ячейке <strong>C1</strong> введите текст <strong>=CONTOSO.CLOCK())</strong> и нажмите ВВОД. Должна отобразиться текущая дата, которая потоком обновляется каждую секунду. Хотя эти часы являются просто таймером в цикле, однако можно использовать аналогичную идею настройки таймера для более сложных функций, которые выполняют веб-запросы в режиме реального времени.</li>
+<li>Теперь давайте оценим, как работает новая функция. В ячейке <strong>C1</strong> введите текст <strong>=CONTOSO.CLOCK()</strong> и нажмите ВВОД. Должна отобразиться текущая дата, которая потоком обновляется каждую секунду. Хотя эти часы являются просто таймером в цикле, однако можно использовать аналогичную идею настройки таймера для более сложных функций, которые выполняют веб-запросы в режиме реального времени.</li>
 </ol>
 
 ## <a name="next-steps"></a>Дальнейшие действия
