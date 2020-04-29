@@ -1,14 +1,14 @@
 ---
 title: Проверка подлинности пользователя с помощью маркера единого входа
 description: Узнайте, как реализовать единый вход в службе с помощью маркера единого входа, предоставляемого надстройкой Outlook.
-ms.date: 11/19/2019
+ms.date: 04/28/2020
 localization_priority: Normal
-ms.openlocfilehash: 9ee3ece5929df602a35ddd9883c08e25164d8a22
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 588979159446b2ceb0b1bce834d72e6853cef5ee
+ms.sourcegitcommit: 0fdb78cefa669b727b817614a4147a46d249a0ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42721032"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43930304"
 ---
 # <a name="authenticate-a-user-with-a-single-sign-on-token-in-an-outlook-add-in-preview"></a>Проверка подлинности пользователя с помощью маркера единого входа в надстройке Outlook (предварительная версия)
 
@@ -22,7 +22,7 @@ ms.locfileid: "42721032"
 Общие сведения о едином входе в надстройках Office см. в статье [Включение единого входа для надстроек Office (тестовый режим)](../develop/sso-in-office-add-ins.md) и [Авторизация для Microsoft Graph в надстройке Office](../develop/authorize-to-microsoft-graph.md).
 
 > [!NOTE]
-> Чтобы использовать единый вход, вам необходимо загрузить бета-версию библиотеки JavaScript Office из https://appsforoffice.microsoft.com/lib/beta/hosted/office.js на страницу подготовки HTML для надстройки.
+> Чтобы использовать единый вход, вам необходимо загрузить бета-версию библиотеки JavaScript Office из https://appsforoffice.microsoft.com/lib/beta/hosted/office.js на страницу подготовки HTML для надстройки. Однако в производственных надстройках **не** следует использовать бета-версии API.
 
 ## <a name="enable-modern-authentication-in-your-office-365-tenancy"></a>Включение современной проверки подлинности в клиенте Office 365
 

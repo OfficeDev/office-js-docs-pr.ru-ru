@@ -1,14 +1,14 @@
 ---
 title: Рекомендации по разработке надстроек Office
 description: Применяйте рекомендации при разработке для создания надстроек Office.
-ms.date: 04/09/2020
+ms.date: 04/22/2020
 localization_priority: Normal
-ms.openlocfilehash: aa544abaaa9f730bb751d6640e9157d7292c2608
-ms.sourcegitcommit: 76552b3e5725d9112c772595971b922c295e6b4c
+ms.openlocfilehash: 422e0ae57480481590a15f695e5942f712961cc1
+ms.sourcegitcommit: 0fdb78cefa669b727b817614a4147a46d249a0ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225682"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43930282"
 ---
 # <a name="best-practices-for-developing-office-add-ins"></a>Рекомендации по разработке надстроек Office
 
@@ -134,6 +134,10 @@ ms.locfileid: "43225682"
 - Опишите преимущества надстройки в названии и описании. Не полагайтесь на свою торговую марку.
 
 - Создайте веб-сайт, который поможет пользователям найти и использовать вашу надстройку.
+
+## <a name="use-javascript-that-supports-internet-explorer"></a>Использование JavaScript, поддерживающего Internet Explorer
+
+[!INCLUDE [How to support IE](../includes/es5-support.md)]
 
 ## <a name="see-also"></a>См. также
 
