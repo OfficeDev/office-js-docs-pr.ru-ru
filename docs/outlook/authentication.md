@@ -1,34 +1,36 @@
 ---
 title: Варианты проверки подлинности в надстройках Outlook
 description: Надстройки Outlook предоставляют несколько различных способов проверки подлинности для разных сценариев.
-ms.date: 11/05/2019
+ms.date: 04/28/2020
 localization_priority: Priority
-ms.openlocfilehash: c7fc3f72dd04b2a64f6f5ce34732885a1a917001
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: dacd4677161def3f1580d1cbc953f73a7158ac9d
+ms.sourcegitcommit: 0fdb78cefa669b727b817614a4147a46d249a0ed
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42720843"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43930297"
 ---
 # <a name="authentication-options-in-outlook-add-ins"></a>Варианты проверки подлинности в надстройках Outlook
 
 Надстройка Outlook может получать доступ к данным из любого расположения в Интернете с сервера, на котором размещается надстройка, из внутренней сети или из другого места в облаке. Если эти сведения защищены, то надстройке нужен способ проверки подлинности пользователя. Надстройки Outlook предоставляют несколько различных способов проверки подлинности для разных сценариев.
 
-## <a name="single-sign-on-access-token"></a>Маркер доступа для единого входа
+## <a name="single-sign-on-access-token-preview"></a>Маркер доступа для единого входа (предварительная версия)
 
 Маркеры доступа для единого входа упрощают проверку подлинности надстройки и получение маркеров доступа для вызова [API Microsoft Graph](/graph/overview). Эта возможность повышает удобство работы, так как пользователю не требуется вводить свои учетные данные.
 
 > [!NOTE]
-> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint в тестовом режиме. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](../reference/requirement-sets/identity-api-requirement-sets.md).
+> В настоящий момент API единого входа поддерживается в предварительной версии для Word, Excel, Outlook и PowerPoint. Его **не** следует использовать для рабочих надстроек. Дополнительные сведения о том, где в настоящий момент поддерживается API единого входа, см. в статье [Наборы требований к API удостоверений](../reference/requirement-sets/identity-api-requirement-sets.md).
+>
 > Чтобы использовать единый вход, вам необходимо загрузить бета-версию библиотеки JavaScript Office из https://appsforoffice.microsoft.com/lib/beta/hosted/office.js на страницу подготовки HTML для надстройки.
+>
 > Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 Рекомендуем использовать маркеры единого входа в таких случаях:
 
 - В основном надстройку применяют пользователи Office 365.
 - Надстройке требуется доступ к следующему:
-    - службам Майкрософт, предоставляемым в составе Microsoft Graph;
-    - сторонней службе, которой управляете вы.
+  - службам Майкрософт, предоставляемым в составе Microsoft Graph;
+  - сторонней службе, которой управляете вы.
 
 Метод проверки подлинности для единого входа использует [поток "от имени" OAuth2, предоставленный службой Azure Active Directory](/azure/active-directory/develop/active-directory-v2-protocols-oauth-on-behalf-of). Для этого необходимо, чтобы надстройка была зарегистрирована на [портале регистрации приложений](https://apps.dev.microsoft.com/), а в ее манифесте были указаны необходимые области Microsoft Graph.
 
