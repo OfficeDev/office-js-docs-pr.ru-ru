@@ -10,19 +10,19 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/17/2020
 ms.locfileid: "42720661"
 ---
-# <a name="authorizations-element"></a><span data-ttu-id="9deaf-103">Элемент authorizations</span><span class="sxs-lookup"><span data-stu-id="9deaf-103">Authorizations element</span></span>
+# <a name="authorizations-element"></a><span data-ttu-id="778a1-103">Элемент authorizations</span><span class="sxs-lookup"><span data-stu-id="778a1-103">Authorizations element</span></span>
 
-<span data-ttu-id="9deaf-104">Указывает внешние ресурсы, к которым веб-приложению надстройки требуется авторизация, и необходимые разрешения.</span><span class="sxs-lookup"><span data-stu-id="9deaf-104">Specifies the external resources that the add-in's web application needs authorization to and the required permissions.</span></span>
+<span data-ttu-id="778a1-104">Указывает внешние ресурсы, к которым веб-приложению надстройки требуется авторизация, и необходимые разрешения.</span><span class="sxs-lookup"><span data-stu-id="778a1-104">Specifies the external resources that the add-in's web application needs authorization to and the required permissions.</span></span>
 
-<span data-ttu-id="9deaf-105">**Авторизация** является дочерним элементом элемента [WebApplicationInfo](webapplicationinfo.md) в манифесте.</span><span class="sxs-lookup"><span data-stu-id="9deaf-105">**Authorizations** is a child element of the [WebApplicationInfo](webapplicationinfo.md) element in the manifest.</span></span>
+<span data-ttu-id="778a1-105">**Авторизация** является дочерним элементом элемента [WebApplicationInfo](webapplicationinfo.md) в манифесте.</span><span class="sxs-lookup"><span data-stu-id="778a1-105">**Authorizations** is a child element of the [WebApplicationInfo](webapplicationinfo.md) element in the manifest.</span></span>
 
-## <a name="child-elements"></a><span data-ttu-id="9deaf-106">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="9deaf-106">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="778a1-106">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="778a1-106">Child elements</span></span>
 
-|  <span data-ttu-id="9deaf-107">Элемент</span><span class="sxs-lookup"><span data-stu-id="9deaf-107">Element</span></span> |  <span data-ttu-id="9deaf-108">Обязательный</span><span class="sxs-lookup"><span data-stu-id="9deaf-108">Required</span></span>  |  <span data-ttu-id="9deaf-109">Описание</span><span class="sxs-lookup"><span data-stu-id="9deaf-109">Description</span></span>  |
+|  <span data-ttu-id="778a1-107">Элемент</span><span class="sxs-lookup"><span data-stu-id="778a1-107">Element</span></span> |  <span data-ttu-id="778a1-108">Обязательный</span><span class="sxs-lookup"><span data-stu-id="778a1-108">Required</span></span>  |  <span data-ttu-id="778a1-109">Описание</span><span class="sxs-lookup"><span data-stu-id="778a1-109">Description</span></span>  |
 |:-----|:-----|:-----|
-|  [<span data-ttu-id="9deaf-110">Authorization</span><span class="sxs-lookup"><span data-stu-id="9deaf-110">Authorization</span></span>](authorization.md)                |  <span data-ttu-id="9deaf-111">Да</span><span class="sxs-lookup"><span data-stu-id="9deaf-111">Yes</span></span>     |   <span data-ttu-id="9deaf-112">Определяет внешний ресурс, на который веб-приложение надстройки должно выполнять авторизацию, и необходимые области (разрешения).</span><span class="sxs-lookup"><span data-stu-id="9deaf-112">Identifies an external resource that the add-in's web application needs authorization to, and the scopes (permissions) that it needs.</span></span> |
+|  [<span data-ttu-id="778a1-110">Авторизация</span><span class="sxs-lookup"><span data-stu-id="778a1-110">Authorization</span></span>](authorization.md)                |  <span data-ttu-id="778a1-111">Да</span><span class="sxs-lookup"><span data-stu-id="778a1-111">Yes</span></span>     |   <span data-ttu-id="778a1-112">Определяет внешний ресурс, на который веб-приложение надстройки должно выполнять авторизацию, и необходимые области (разрешения).</span><span class="sxs-lookup"><span data-stu-id="778a1-112">Identifies an external resource that the add-in's web application needs authorization to, and the scopes (permissions) that it needs.</span></span> |
 
-## <a name="example"></a><span data-ttu-id="9deaf-113">Пример</span><span class="sxs-lookup"><span data-stu-id="9deaf-113">Example</span></span>
+## <a name="example"></a><span data-ttu-id="778a1-113">Пример</span><span class="sxs-lookup"><span data-stu-id="778a1-113">Example</span></span>
 
 ```xml
 <OfficeApp>
