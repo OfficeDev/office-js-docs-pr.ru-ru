@@ -31,10 +31,10 @@ ms.locfileid: "42890860"
 
 | Перечисление | Способов | Тип возвращаемых данных | Минимальные<br>набор требований |
 |---|---|---|:---:|
-| [AsyncResultStatus](#asyncresultstatus-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [CoercionType](#coerciontype-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [EventType](#eventtype-string) | Создание<br>Чтение | String | [1,5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
-| [SourceProperty](#sourceproperty-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [AsyncResultStatus](#asyncresultstatus-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [CoercionType](#coerciontype-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [EventType](#eventtype-string) | Создание<br>Чтение | Строка | [1,5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
+| [SourceProperty](#sourceproperty-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
 ### <a name="namespaces"></a>Пространства имен
 
@@ -54,7 +54,7 @@ ms.locfileid: "42890860"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Succeeded`| String|Вызов завершился успешно.|
+|`Succeeded`| Строка|Вызов завершился успешно.|
 |`Failed`| Для указания|Вызов завершился ошибкой.|
 
 ##### <a name="requirements"></a>Requirements
@@ -81,8 +81,8 @@ ms.locfileid: "42890860"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Html`| String|Запрашивает возврат данных в формате HTML.|
-|`Text`| String|Запрашивает возврат данных в формате текста.|
+|`Html`| Строка|Запрашивает возврат данных в формате HTML.|
+|`Text`| Строка|Запрашивает возврат данных в формате текста.|
 
 ##### <a name="requirements"></a>Requirements
 
@@ -108,13 +108,13 @@ ms.locfileid: "42890860"
 
 | Имя | Тип | Описание | Набор минимальных требований |
 |---|---|---|:---:|
-|`AppointmentTimeChanged`| String | Дата или время выбранной встречи или ряда изменились. | 1.7 |
-|`AttachmentsChanged`| String | Вложение было добавлено или удалено из элемента. | 1.8 |
-|`EnhancedLocationsChanged`| String | Расположение выбранной встречи изменилось. | 1.8 |
-|`ItemChanged`| String | Для просмотра выбран другой элемент Outlook, когда область задач закреплена. | 1.5 |
-|`OfficeThemeChanged`| String | Тема Office в почтовом ящике изменилась. | Предварительная версия |
-|`RecipientsChanged`| String | Список получателей выбранного элемента или места встречи изменился. | 1.7 |
-|`RecurrenceChanged`| String | Шаблон повторения выбранного ряда изменился. | 1.7 |
+|`AppointmentTimeChanged`| Строка | Дата или время выбранной встречи или ряда изменились. | 1.7 |
+|`AttachmentsChanged`| Строка | Вложение было добавлено или удалено из элемента. | 1.8 |
+|`EnhancedLocationsChanged`| Строка | Расположение выбранной встречи изменилось. | 1.8 |
+|`ItemChanged`| Строка | Для просмотра выбран другой элемент Outlook, когда область задач закреплена. | 1.5 |
+|`OfficeThemeChanged`| Строка | Тема Office в почтовом ящике изменилась. | Предварительная версия |
+|`RecipientsChanged`| Строка | Список получателей выбранного элемента или места встречи изменился. | 1.7 |
+|`RecurrenceChanged`| Строка | Шаблон повторения выбранного ряда изменился. | 1.7 |
 
 ##### <a name="requirements"></a>Requirements
 
@@ -140,8 +140,8 @@ ms.locfileid: "42890860"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Body`| String|Источник данных — текст сообщения.|
-|`Subject`| String|Источник данных — тема сообщения.|
+|`Body`| Строка|Источник данных — текст сообщения.|
+|`Subject`| Строка|Источник данных — тема сообщения.|
 
 ##### <a name="requirements"></a>Requirements
 

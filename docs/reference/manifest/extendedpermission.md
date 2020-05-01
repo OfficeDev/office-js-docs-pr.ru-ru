@@ -21,7 +21,7 @@ ms.locfileid: "42720605"
 
 Ниже приведены доступные значения.
 
-|Доступное значение|Описание|Узлы|
+|Доступное значение|Описание|Hosts|
 |---|---|---|
 |`AppendOnSend`|Объявляет, что надстройка использует API [Office. Body. аппендонсендасинк](/javascript/api/outlook/office.body?view=outlook-js-preview#appendonsendasync-data--options--callback-) .|Outlook|
 

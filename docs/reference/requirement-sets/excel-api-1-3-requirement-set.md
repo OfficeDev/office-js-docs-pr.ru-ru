@@ -38,9 +38,9 @@ ExcelApi 1,3 добавлена поддержка привязки данных
 ||[getRange()](/javascript/api/excel/excel.rangeview#getrange--)|Получает родительский диапазон, сопоставленный с текущим объектом RangeView.|
 ||[numberFormat](/javascript/api/excel/excel.rangeview#numberformat)|Представляет код в числовом формате Excel для данной ячейки.|
 ||[cellAddresses](/javascript/api/excel/excel.rangeview#celladdresses)|Представляет адреса ячеек RangeView. Только для чтения.|
-||[Число](/javascript/api/excel/excel.rangeview#columncount)|Возвращает количество видимых столбцов. Только для чтения.|
-||[индекс](/javascript/api/excel/excel.rangeview#index)|Возвращает значение, представляющее индекс RangeView. Только для чтения.|
-||[Стро](/javascript/api/excel/excel.rangeview#rowcount)|Возвращает количество видимых строк. Только для чтения.|
+||[columnCount](/javascript/api/excel/excel.rangeview#columncount)|Возвращает количество видимых столбцов. Только для чтения.|
+||[index](/javascript/api/excel/excel.rangeview#index)|Возвращает значение, представляющее индекс RangeView. Только для чтения.|
+||[rowCount](/javascript/api/excel/excel.rangeview#rowcount)|Возвращает количество видимых строк. Только для чтения.|
 ||[строки](/javascript/api/excel/excel.rangeview#rows)|Представляет коллекцию видимых ячеек в диапазоне, сопоставленных с указанным диапазоном. Только для чтения.|
 ||[text](/javascript/api/excel/excel.rangeview#text)|Текстовые значения указанного диапазона. Текстовое значение не зависит от ширины ячейки. Замена знака #, которая происходит в пользовательском интерфейсе Excel, не повлияет на текстовое значение, возвращаемое API. Только для чтения.|
 ||[valueTypes](/javascript/api/excel/excel.rangeview#valuetypes)|Представляет тип данных каждой ячейки. Только для чтения.|

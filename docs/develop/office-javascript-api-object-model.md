@@ -1,14 +1,14 @@
 ---
 title: Общая объектная модель API JavaScript
 description: Сведения об объектной модели общего API JavaScript для Office
-ms.date: 04/22/2020
+ms.date: 04/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 4f1f3e0de81e2422c43a9777b108783bb7810c3b
-ms.sourcegitcommit: 9da68c00ecc00a2f307757e0f5a903a8e31b7769
+ms.openlocfilehash: 4bfe027b09fc806021212d00c895527bd661f3a6
+ms.sourcegitcommit: 99b41e8b90f2df6dafcc12b3883e83751de9facd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "43785707"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "43952257"
 ---
 # <a name="common-javascript-api-object-model"></a>Общая объектная модель API JavaScript
 
@@ -22,9 +22,9 @@ ms.locfileid: "43785707"
 
 Когда надстройка [инициализирована](initialize-add-in.md), она содержит множество различных объектов, с которыми она может взаимодействовать в среде выполнения. Контекст среды выполнения надстройки представлен в API объектом [Context](/javascript/api/office/office.context). Объект **Context** — это основной объект, предоставляющий доступ к наиболее важным объектам API, таким как [Document](/javascript/api/office/office.document) и [Mailbox](/javascript/api/outlook/office.mailbox), которые в свою очередь предоставляют доступ к документу и содержимому почтового ящика.
 
-Например, в надстройках области задач или контентных надстройках можно использовать свойство [document](/javascript/api/office/office.context#document) объекта **Context** для получения доступа к свойствам и методам объекта **Document**, чтобы взаимодействовать с содержимым документов Word, электронными таблицами Excel или расписаниями Project. Аналогично этому в надстройках Outlook можно использовать свойство [mailbox](/javascript/api/outlook/office.mailbox) объекта **Context** для получения доступа к свойствам и методам объекта **Mailbox**, чтобы взаимодействовать с контентом сообщений, запросов на собрание или встреч.
+Например, в надстройках области задач или контентных надстройках можно использовать свойство [document](/javascript/api/office/office.context#document) объекта **Context** для получения доступа к свойствам и методам объекта **Document**, чтобы взаимодействовать с содержимым документов Word, электронными таблицами Excel или расписаниями Project. Аналогично этому в надстройках Outlook можно использовать свойство [mailbox](/javascript/api/office/office.context#mailbox) объекта **Context** для получения доступа к свойствам и методам объекта **Mailbox**, чтобы взаимодействовать с контентом сообщений, запросов на собрание или встреч.
 
-Объект **Context** также предоставляет доступ к свойствам [contentLanguage](/javascript/api/office/office.context#contentlanguage) и [displayLanguage](/javascript/api/office/office.context#displaylanguage), которые позволяют задать языковые параметры, используемые в документе, элементе или ведущем приложении. Свойство [roamingSettings](/javascript/api/office/office.context#roamingsettings) позволяет получить доступ к элементам объекта [RoamingSettings](/javascript/api/office/office.context#roamingsettings), в котором хранятся настройки, специфичные для надстроек почтовых ящиков отдельных пользователей. Наконец, объект **Context** предоставляет свойство [ui](/javascript/api/office/office.ui), позволяющее надстройке открывать всплывающие диалоговые окна.
+Объект **Context** также предоставляет доступ к свойствам [contentLanguage](/javascript/api/office/office.context#contentlanguage) и [displayLanguage](/javascript/api/office/office.context#displaylanguage), которые позволяют задать языковые параметры, используемые в документе, элементе или ведущем приложении. Свойство [roamingSettings](/javascript/api/office/office.context#roamingsettings) позволяет получить доступ к элементам объекта [RoamingSettings](/javascript/api/office/office.context#roamingsettings), в котором хранятся настройки, специфичные для надстроек почтовых ящиков отдельных пользователей. Наконец, объект **Context** предоставляет свойство [ui](/javascript/api/office/office.context#ui), позволяющее надстройке открывать всплывающие диалоговые окна.
 
 
 ## <a name="document-object"></a>Объект Document
@@ -154,7 +154,7 @@ ms.locfileid: "43785707"
 
 **Область применения:** надстройки Outlook
 
-Надстройки Outlook, в основном, используют набор API, предоставляемый через объект [Mailbox](/javascript/api/outlook/office.mailbox). Чтобы получить объекты и члены специально для использования в надстройках Outlook, такие как объект [Item](/javascript/api/outlook/office.item), используйте свойство [mailbox](/javascript/api/outlook/office.context#mailbox) объекта **Context** для получения доступа к объекту **Mailbox**, как показано в следующей строке кода.
+Надстройки Outlook, в основном, используют набор API, предоставляемый через объект [Mailbox](/javascript/api/outlook/office.mailbox). Чтобы получить объекты и члены специально для использования в надстройках Outlook, такие как объект [Item](/javascript/api/outlook/office.item), используйте свойство [mailbox](/javascript/api/office/office.context#mailbox) объекта **Context** для получения доступа к объекту **Mailbox**, как показано в следующей строке кода.
 
 ```js
 // Access the Item object.

@@ -31,9 +31,9 @@ ms.locfileid: "42891392"
 
 | Перечисление | Способов | Тип возвращаемых данных | Минимальные<br>набор требований |
 |---|---|---|:---:|
-| [AsyncResultStatus](#asyncresultstatus-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [CoercionType](#coerciontype-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [SourceProperty](#sourceproperty-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [AsyncResultStatus](#asyncresultstatus-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [CoercionType](#coerciontype-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [SourceProperty](#sourceproperty-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
 ### <a name="namespaces"></a>Пространства имен
 
@@ -53,7 +53,7 @@ ms.locfileid: "42891392"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Succeeded`| String|Вызов завершился успешно.|
+|`Succeeded`| Строка|Вызов завершился успешно.|
 |`Failed`| Для указания|Вызов завершился ошибкой.|
 
 ##### <a name="requirements"></a>Requirements
@@ -80,8 +80,8 @@ ms.locfileid: "42891392"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Html`| String|Запрашивает возврат данных в формате HTML.|
-|`Text`| String|Запрашивает возврат данных в формате текста.|
+|`Html`| Строка|Запрашивает возврат данных в формате HTML.|
+|`Text`| Строка|Запрашивает возврат данных в формате текста.|
 
 ##### <a name="requirements"></a>Requirements
 
@@ -107,8 +107,8 @@ ms.locfileid: "42891392"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Body`| String|Источник данных — текст сообщения.|
-|`Subject`| String|Источник данных — тема сообщения.|
+|`Body`| Строка|Источник данных — текст сообщения.|
+|`Subject`| Строка|Источник данных — тема сообщения.|
 
 ##### <a name="requirements"></a>Requirements
 

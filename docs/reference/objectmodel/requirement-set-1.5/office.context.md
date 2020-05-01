@@ -27,9 +27,9 @@ Office. context предоставляет общие интерфейсы, ко
 
 | Свойство | Способов | Тип возвращаемых данных | Минимальные<br>набор требований |
 |---|---|---|:---:|
-| [contentLanguage](#contentlanguage-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [contentLanguage](#contentlanguage-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [diagnostics](#diagnostics-contextinformation) | Создание<br>Чтение | [контекстинформатион](/javascript/api/office/office.contextinformation?view=outlook-js-1.5) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [displayLanguage](#displaylanguage-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [displayLanguage](#displaylanguage-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [размещать](#host-hosttype) | Создание<br>Чтение | [HostType](/javascript/api/office/office.hosttype?view=outlook-js-1.5) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [mailbox](office.context.mailbox.md) | Создание<br>Чтение | [Mailbox](/javascript/api/outlook/office.mailbox?view=outlook-js-1.5) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [управляем](#platform-platformtype) | Создание<br>Чтение | [PlatformType](/javascript/api/office/office.platformtype?view=outlook-js-1.5) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
@@ -86,7 +86,7 @@ function write(message){
 
 Получает сведения о среде, в которой выполняется надстройка.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [контекстинформатион](/javascript/api/office/office.contextinformation)
 
@@ -155,7 +155,7 @@ function write(message){
 
 Получает узел приложений Office, в котором работает надстройка.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [HostType](/javascript/api/office/office.hosttype)
 
@@ -181,7 +181,7 @@ console.log(JSON.stringify(Office.context.host));
 
 Предоставляет платформу, на которой работает надстройка.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [PlatformType](/javascript/api/office/office.platformtype)
 
@@ -207,7 +207,7 @@ console.log(JSON.stringify(Office.context.platform));
 
 Предоставляет метод для определения наборов требований, поддерживаемых на текущем узле и платформе.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [рекуирементсетсуппорт](/javascript/api/office/office.requirementsetsupport)
 
@@ -235,7 +235,7 @@ console.log(JSON.stringify(Office.context.requirements.isSetSupported("mailbox",
 
 Объект `RoamingSettings` позволяет сохранять данные для надстройки почты, записанные в почтовом ящике пользователя, и получать к ним доступ, таким образом делая их доступными для этой надстройки, когда она запускается из любого клиентского ведущего приложения, используемого для доступа к этому почтовому ящику.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [RoamingSettings](/javascript/api/outlook/office.RoamingSettings)
 
@@ -256,7 +256,7 @@ console.log(JSON.stringify(Office.context.requirements.isSetSupported("mailbox",
 
 Предоставляет объекты и методы, которые можно использовать для создания компонентов пользовательского интерфейса, например диалоговых окон, в надстройках Office и управления ими.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [UI](/javascript/api/office/office.ui)
 

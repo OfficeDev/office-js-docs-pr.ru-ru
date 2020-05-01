@@ -1,5 +1,5 @@
 ---
-title: Избегайте использования метода Context. Sync в циклах
+title: Избегайте использования метода context.sync в циклах
 description: Узнайте, как использовать шаблоны "разделить" и "коррелированные объекты", чтобы избежать контекстного вызова. Синхронизация в цикле.
 ms.date: 04/09/2020
 localization_priority: Normal
@@ -10,7 +10,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 04/10/2020
 ms.locfileid: "43226014"
 ---
-# <a name="avoid-using-the-contextsync-method-in-loops"></a>Избегайте использования метода Context. Sync в циклах
+# <a name="avoid-using-the-contextsync-method-in-loops"></a>Избегайте использования метода context.sync в циклах
 
 > [!NOTE]
 > В этой статье предполагается, что вы выходите с первого этапа работы по крайней мере с одним из четырех специфических API&mdash;JavaScript для Office для Excel, Word, OneNote&mdash;и Visio, которые используют пакетную систему для взаимодействия с документом Office. В частности, необходимо знать, что `context.sync` делает вызов, и следует знать, что такое объект Collection. Если вы не находитесь на этой стадии, начните с [понимания API JavaScript для Office](../develop/understanding-the-javascript-api-for-office.md) и документации, связанной с узлом "зависящий от узла" в этой статье.

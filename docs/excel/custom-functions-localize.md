@@ -96,7 +96,7 @@ ms.locfileid: "35771570"
 </Resources>
 ```
 
-Дополнительные сведения о процессе локализации надстройки приведены в разделе локализация надстроек [Office](../develop/localization.md#control-localization-from-the-manifest).
+Дополнительные сведения о процессе локализации надстройки приведены в разделе [Локализация надстроек Office](../develop/localization.md#control-localization-from-the-manifest).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 Сведения о [соглашениях об именовании для пользовательских функций](custom-functions-naming.md) или о том, как найти [рекомендации по обработке ошибок](custom-functions-errors.md).

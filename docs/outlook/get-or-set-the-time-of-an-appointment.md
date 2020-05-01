@@ -38,7 +38,7 @@ item.start.getAsync
 item.end.getAsync
 ```
 
-Как и в случае с большинством асинхронных методов в API JavaScript для Office, методы SetAsync и- **Async** и **** принимают необязательные входные параметры. Дополнительные сведения об указании последних см. в разделе [Передача дополнительных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-inline) статьи [Asynchronous programming in Office Add-ins](../develop/asynchronous-programming-in-office-add-ins.md).
+Как и в случае с большинством асинхронных методов в API JavaScript для Office, методы SetAsync и- **Async** и **setAsync** принимают необязательные входные параметры. Дополнительные сведения об указании последних см. в разделе [Передача дополнительных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-inline) статьи [Asynchronous programming in Office Add-ins](../develop/asynchronous-programming-in-office-add-ins.md).
 
 
 ## <a name="get-the-start-or-end-time"></a>Получение времени начала или окончания

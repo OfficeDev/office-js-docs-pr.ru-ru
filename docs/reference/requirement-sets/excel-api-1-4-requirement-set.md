@@ -90,7 +90,7 @@ worksheet.getItemOrNullObject("itemName")
 |[TableRowCollection](/javascript/api/excel/excel.tablerowcollection)|[getCount()](/javascript/api/excel/excel.tablerowcollection#getcount--)|Получает количество строк в таблице.|
 |[Workbook](/javascript/api/excel/excel.workbook)|[settings](/javascript/api/excel/excel.workbook#settings)|Представляет коллекцию параметров, сопоставленных с книгой. Только для чтения.|
 |[Worksheet](/javascript/api/excel/excel.worksheet)|[getUsedRangeOrNullObject (valuesOnly?: Boolean)](/javascript/api/excel/excel.worksheet#getusedrangeornullobject-valuesonly-)|Используемый диапазон — это наименьший диапазон, включающий в себя все ячейки, которые содержат значение или форматирование. Если весь лист пустой, эта функция возвращает пустой объект.|
-||[псевдоним](/javascript/api/excel/excel.worksheet#names)|Коллекция имен, относящих к текущему листу. Только для чтения.|
+||[names](/javascript/api/excel/excel.worksheet#names)|Коллекция имен, относящих к текущему листу. Только для чтения.|
 |[WorksheetCollection](/javascript/api/excel/excel.worksheetcollection)|[NOCOUNT (visibleOnly?: Boolean)](/javascript/api/excel/excel.worksheetcollection#getcount-visibleonly-)|Получает количество листов в коллекции.|
 ||[getItemOrNullObject(key: string)](/javascript/api/excel/excel.worksheetcollection#getitemornullobject-key-)|Получает объект листа по его имени или ИД. Если лист не существует, возвращает пустой объект.|
 

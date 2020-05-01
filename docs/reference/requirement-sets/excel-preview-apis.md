@@ -71,7 +71,7 @@ ms.locfileid: "42891203"
 ||[установлен](/javascript/api/excel/excel.pivotlabelfilter#condition)|Указывает условие фильтра, которое определяет необходимые критерии фильтрации.|
 ||[применим](/javascript/api/excel/excel.pivotlabelfilter#exclusive)|Если задано значение true, фильтр *исключает* элементы, соответствующие условиям. По умолчанию используется значение false (Filter для включения элементов, соответствующих условиям).|
 ||[ловербаунд](/javascript/api/excel/excel.pivotlabelfilter#lowerbound)|Нижняя граница диапазона между условиями фильтра.|
-||[substring](/javascript/api/excel/excel.pivotlabelfilter#substring)|Подстрока, `BeginsWith` `EndsWith`используемая для условий `Contains` фильтра и.|
+||[подстроку](/javascript/api/excel/excel.pivotlabelfilter#substring)|Подстрока, `BeginsWith` `EndsWith`используемая для условий `Contains` фильтра и.|
 ||[уппербаунд](/javascript/api/excel/excel.pivotlabelfilter#upperbound)|Верхняя граница диапазона между условиями фильтра.|
 |[PivotLayout](/javascript/api/excel/excel.pivotlayout)|[getCell(dataHierarchy: DataPivotHierarchy \| string, rowItems: Array<PivotItem \| string>, columnItems: Array<PivotItem \| string>)](/javascript/api/excel/excel.pivotlayout#getcell-datahierarchy--rowitems--columnitems-)|Получает уникальную ячейку в сводной таблице на основе иерархии данных и элементов строк и столбцов соответствующих иерархий. Возвращаемая ячейка находится на пересечении указанной строки и столбца, содержащего данные из заданной иерархии. Этот метод является обратным вызову методов getPivotItems и getDataHierarchy для конкретной ячейки.|
 ||[пивотстиле](/javascript/api/excel/excel.pivotlayout#pivotstyle)|Стиль, примененный к сводной таблице.|

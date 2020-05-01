@@ -28,9 +28,9 @@ Office. context предоставляет общие интерфейсы, ко
 | Свойство | Способов | Тип возвращаемых данных | Минимальные<br>набор требований |
 |---|---|---|:---:|
 | [auth](#auth-auth) | Создание<br>Чтение | [Auth](/javascript/api/office/office.auth?view=outlook-js-preview) | [Предварительная версия](../preview-requirement-set/outlook-requirement-set-preview.md) |
-| [contentLanguage](#contentlanguage-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [contentLanguage](#contentlanguage-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [diagnostics](#diagnostics-contextinformation) | Создание<br>Чтение | [контекстинформатион](/javascript/api/office/office.contextinformation?view=outlook-js-preview) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [displayLanguage](#displaylanguage-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [displayLanguage](#displaylanguage-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [размещать](#host-hosttype) | Создание<br>Чтение | [HostType](/javascript/api/office/office.hosttype?view=outlook-js-preview) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [mailbox](office.context.mailbox.md) | Создание<br>Чтение | [Mailbox](/javascript/api/outlook/office.mailbox?view=outlook-js-preview) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 | [officeTheme](#officetheme-officetheme) | Создание<br>Чтение | [OfficeTheme](/javascript/api/office/office.officetheme?view=outlook-js-preview) | [Предварительная версия](../preview-requirement-set/outlook-requirement-set-preview.md) |
@@ -45,7 +45,7 @@ Office. context предоставляет общие интерфейсы, ко
 
 Поддерживает [единый вход (SSO)](../../../outlook/authenticate-a-user-with-an-sso-token.md) , предоставляя метод, позволяющий ведущему приложению Office получать маркер доступа к веб-приложению надстройки. Косвенно это также дает возможность надстройке получать доступ к данным Microsoft Graph пользователя, вошедшего в систему, не требуя от пользователя еще раз выполнить вход в систему.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [Auth](/javascript/api/office/office.auth)
 
@@ -121,7 +121,7 @@ function write(message){
 
 Получает сведения о среде, в которой выполняется надстройка.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [контекстинформатион](/javascript/api/office/office.contextinformation)
 
@@ -190,7 +190,7 @@ function write(message){
 
 Получает узел приложений Office, в котором работает надстройка.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [HostType](/javascript/api/office/office.hosttype)
 
@@ -221,7 +221,7 @@ console.log(JSON.stringify(Office.context.host));
 
 Использование цветов тем Office позволяет координировать цветовую схему надстройки с текущей темой Office, выбранной пользователем с помощью **файла > учетной записи office > пользовательского интерфейса темы**Office, которая применяется ко всем ведущим приложениям Office. Using Office theme colors is appropriate for mail and task pane add-ins.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [OfficeTheme](/javascript/api/office/office.officetheme)
 
@@ -229,9 +229,9 @@ console.log(JSON.stringify(Office.context.host));
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`bodyBackgroundColor`| String|Получает цвет фона текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
-|`bodyForegroundColor`| String|Получает цвет переднего плана текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
-|`controlBackgroundColor`| String|Получает цвет фона элемента управления для темы Office в виде шестнадцатеричной триады цветов.|
+|`bodyBackgroundColor`| Строка|Получает цвет фона текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
+|`bodyForegroundColor`| Строка|Получает цвет переднего плана текста сообщения для темы Office в виде шестнадцатеричной триады цветов.|
+|`controlBackgroundColor`| Строка|Получает цвет фона элемента управления для темы Office в виде шестнадцатеричной триады цветов.|
 |`controlForegroundColor`| String|Получает цвет элемента управления текстом сообщения для темы Office в виде шестнадцатеричной триады цветов.|
 
 ##### <a name="requirements"></a>Requirements
@@ -265,7 +265,7 @@ function applyOfficeTheme(){
 
 Предоставляет платформу, на которой работает надстройка.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [PlatformType](/javascript/api/office/office.platformtype)
 
@@ -291,7 +291,7 @@ console.log(JSON.stringify(Office.context.platform));
 
 Предоставляет метод для определения наборов требований, поддерживаемых на текущем узле и платформе.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [рекуирементсетсуппорт](/javascript/api/office/office.requirementsetsupport)
 
@@ -319,7 +319,7 @@ console.log(JSON.stringify(Office.context.requirements.isSetSupported("mailbox",
 
 Объект `RoamingSettings` позволяет сохранять данные для надстройки почты, записанные в почтовом ящике пользователя, и получать к ним доступ, таким образом делая их доступными для этой надстройки, когда она запускается из любого клиентского ведущего приложения, используемого для доступа к этому почтовому ящику.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [RoamingSettings](/javascript/api/outlook/office.RoamingSettings)
 
@@ -340,7 +340,7 @@ console.log(JSON.stringify(Office.context.requirements.isSetSupported("mailbox",
 
 Предоставляет объекты и методы, которые можно использовать для создания компонентов пользовательского интерфейса, например диалоговых окон, в надстройках Office и управления ими.
 
-##### <a name="type"></a>Тип
+##### <a name="type"></a>Type
 
 *   [UI](/javascript/api/office/office.ui)
 

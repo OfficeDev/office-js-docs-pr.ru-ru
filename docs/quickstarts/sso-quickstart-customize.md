@@ -1,5 +1,5 @@
 ---
-title: Настройка надстройки с поддержкой единого входа для узла. js
+title: Настройка надстройки Node.js с поддержкой единого входа
 description: Сведения о настройке надстройки с поддержкой единого входа, созданной с помощью генератора Yeoman.
 ms.date: 02/20/2020
 ms.prod: non-product-specific
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 02/26/2020
 ms.locfileid: "42284169"
 ---
-# <a name="customize-your-nodejs-sso-enabled-add-in"></a>Настройка надстройки с поддержкой единого входа для узла. js
+# <a name="customize-your-nodejs-sso-enabled-add-in"></a>Настройка надстройки Node.js с поддержкой единого входа
 
 > [!IMPORTANT]
 > Эта статья основана на надстройке с поддержкой единого входа, которая создается с помощью краткого руководства по выполнению [единого входа (SSO)](sso-quickstart.md). Прежде чем приступить к чтению этой статьи, заполните краткое руководство.
@@ -24,7 +24,7 @@ ms.locfileid: "42284169"
 
 * Несколько файлов и папок, сохраненных в OneDrive для бизнеса в составе подписки на Office 365.
 
-* [Node. js](https://nodejs.org) (последняя версия [LTS](https://nodejs.org/about/releases) ).
+* [Node.js](https://nodejs.org) (последняя версия [LTS](https://nodejs.org/about/releases)).
 
 [!include[additional prerequisites](../includes/sso-tutorial-prereqs.md)]
 
@@ -73,7 +73,7 @@ ms.locfileid: "42284169"
 
     а. В разделе **файлы**выберите **файлы. Read. ALL**.
 
-    б. Нажмите кнопку **Добавить разрешения** в нижней части панели, чтобы сохранить изменения этих разрешений.
+    б) Нажмите кнопку **Добавить разрешения** в нижней части панели, чтобы сохранить изменения этих разрешений.
 
 12. Нажмите кнопку **предоставить согласие администратора для пользователя [имя клиента]** .
 
@@ -99,7 +99,7 @@ ms.locfileid: "42284169"
 
     а. Замените `GRAPH_URL_SEGMENT=/me` на следующий:`GRAPH_URL_SEGMENT=/me/drive/root/children`
 
-    б. Замените `QUERY_PARAM_SEGMENT=` на следующий:`QUERY_PARAM_SEGMENT=?$select=name&$top=10`
+    б) Замените `QUERY_PARAM_SEGMENT=` на следующий:`QUERY_PARAM_SEGMENT=?$select=name&$top=10`
 
     в. Замените `SCOPE=User.Read` на следующий:`SCOPE=Files.Read.All`
 

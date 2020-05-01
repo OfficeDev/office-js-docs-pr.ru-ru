@@ -21,7 +21,7 @@ WordApi 1,1 является первым набором требований AP
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
-|[Body](/javascript/api/word/word.body)|[clear()](/javascript/api/word/word.body#clear--)|Очищает объект содержимого. Пользователь может отменить операцию очищения для содержимого.|
+|[Основной текст](/javascript/api/word/word.body)|[clear()](/javascript/api/word/word.body#clear--)|Очищает объект содержимого. Пользователь может отменить операцию очищения для содержимого.|
 ||[getHtml()](/javascript/api/word/word.body#gethtml--)|Возвращает HTML-представление объекта Body. При отображении на веб-странице или в средстве просмотра HTML форматирование будет близким, но не точным, соответствующим формату документа. Этот метод не возвращает точно такой же HTML-код для одного и того же документа на различных платформах (Windows, Mac и т. д.). Если вам нужна точная точность или согласованность на различных платформах `Body.getOoxml()` , используйте и преобразуйте возвращенный XML в HTML.|
 ||[getOoxml()](/javascript/api/word/word.body#getooxml--)|Возвращает OOXML-представление (Office Open XML) объекта содержимого.|
 ||[insertBreak (breakType: Word. BreakType, insertLocation: Word. InsertLocation)](/javascript/api/word/word.body#insertbreak-breaktype--insertlocation-)|Вставляет разрыв в указанном расположении в основном документе. Возможные значения InsertLocation: Start или End.|
