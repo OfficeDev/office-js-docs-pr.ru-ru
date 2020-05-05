@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: Функции и API, которые в настоящее время находятся в режиме предварительной версии для надстроек Outlook.
-ms.date: 04/10/2020
+ms.date: 05/04/2020
 localization_priority: Normal
-ms.openlocfilehash: 94104a9fcb239d991d585abcebdd07bcab6e315f
-ms.sourcegitcommit: 3355c6bd64ecb45cea4c0d319053397f11bc9834
+ms.openlocfilehash: 433abf5ea15cfe9ee7cefa579b1ad965fdeb93cf
+ms.sourcegitcommit: 800dacf0399465318489c9d949e259b5cf0f81ca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "43744868"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "44022185"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -69,13 +69,13 @@ ms.locfileid: "43744868"
 
 Добавлена новая функция для `Body` объекта, который добавляет данные в конец тела элемента в режиме создания.
 
-**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современный)
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
 
 #### <a name="extendedpermissions"></a>[ExtendedPermissions](../../manifest/extendedpermissions.md)
 
 Добавлен новый элемент в манифест, где `AppendOnSend` расширенное разрешение должно быть включено в коллекцию расширенных разрешений.
 
-**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современный)
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
 
 <br>
 
