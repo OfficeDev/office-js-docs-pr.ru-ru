@@ -3,12 +3,12 @@ title: Работайте с комментариями с помощью API Ja
 description: Сведения об использовании API для добавления, удаления и редактирования комментариев и потоков комментариев.
 ms.date: 03/17/2020
 localization_priority: Normal
-ms.openlocfilehash: 275828915730d3438101315ee28bf76aa8b8bf3f
-ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
+ms.openlocfilehash: 971e0a830c0a34aea3e79b13fcd9fb869f971d2c
+ms.sourcegitcommit: 735bf94ac3c838f580a992e7ef074dbc8be2b0ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42890572"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "44170823"
 ---
 # <a name="work-with-comments-using-the-excel-javascript-api"></a>Работайте с комментариями с помощью API JavaScript для Excel
 
@@ -25,7 +25,7 @@ ms.locfileid: "42890572"
 Используйте `CommentCollection.add` метод, чтобы добавить комментарии в книгу. Этот метод занимает до трех параметров:
 
 - `cellAddress`: Ячейка, в которую добавляется комментарий. Это может быть объект String или [Range](/javascript/api/excel/excel.range) . Диапазон должен быть одной ячейкой.
-- `content`: Контент комментария. Используйте строку для примечаний в виде обычного текста. Используйте объект [комментричконтент](/javascript/api/excel/excel.commentrichcontent) для комментариев с [упоминаниями](#mentions-online-only). 
+- `content`: Контент комментария. Используйте строку для примечаний в виде обычного текста. Используйте объект [комментричконтент](/javascript/api/excel/excel.commentrichcontent) для комментариев с [упоминаниями](#mentions).
 - `contentType`: Перечисление [ContentType](/javascript/api/excel/excel.contenttype) , определяющее тип контента. Значение по умолчанию — `ContentType.plain`.
 
 В следующем примере кода добавляется примечание в ячейку **A2**.
@@ -111,7 +111,7 @@ Excel.run(function (context) {
 });
 ```
 
-## <a name="resolve-comment-threads-preview"></a>Разрешение потоков комментариев ([Предварительная версия](../reference/requirement-sets/excel-preview-apis.md)) 
+## <a name="resolve-comment-threads"></a>Разрешение потоков комментариев
 
 Поток комментариев имеет настраиваемое логическое значение `resolved`, которое указывает, разрешено ли оно. Значение `true` означает, что поток комментариев разрешается. Значение `false` означает, что поток комментариев является либо новым, либо повторно открытым.
 
@@ -169,13 +169,7 @@ Excel.run(function (context) {
 });
 ```
 
-## <a name="mentions-online-only"></a>Упоминания ([только в Интернете](../reference/requirement-sets/excel-api-online-requirement-set.md)) 
-
-> [!NOTE]
-> API упомянутых комментариев в настоящее время доступны только в общедоступной предварительной версии. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
-
-> [!IMPORTANT]
-> Упоминание комментариев в настоящее время поддерживается только для Excel в Интернете.
+## <a name="mentions"></a>Упоминания
 
 [Упоминания](https://support.office.com/article/use-mention-in-comments-to-tag-someone-for-feedback-644bf689-31a0-4977-a4fb-afe01820c1fd) используются для обозначения коллег в комментарии. При этом уведомления отправляются с содержимым комментария. Ваша надстройка может создавать эти упоминания от вашего имени.
 

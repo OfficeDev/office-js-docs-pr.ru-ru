@@ -1,14 +1,14 @@
 ---
 title: Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 description: Расширенные функции и сценарии объектов Range, такие как специальные ячейки, удаление дубликатов и работа с датами.
-ms.date: 02/11/2020
+ms.date: 05/06/2020
 localization_priority: Normal
-ms.openlocfilehash: ed5f946c58b14f7f09b1bdc6fb0815430849f0bd
-ms.sourcegitcommit: a0262ea40cd23f221e69bcb0223110f011265d13
+ms.openlocfilehash: eb25ae3f4bbe1231cfdf49f7535490b39c7a419e
+ms.sourcegitcommit: 735bf94ac3c838f580a992e7ef074dbc8be2b0ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42689034"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "44170816"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api-advanced"></a>Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 
@@ -172,11 +172,11 @@ Excel.run(function (context) {
 })
 ```
 
-## <a name="cut-copy-and-paste"></a>Команды "Вырезать", "Копировать" и "Вставить" 
+## <a name="cut-copy-and-paste"></a>Команды "Вырезать", "Копировать" и "Вставить"
 
-### <a name="copy-and-paste"></a>Copy and paste 
+### <a name="copy-and-paste"></a>Copy and paste
 
-Метод [Range. copyFrom](/javascript/api/excel/excel.range#copyfrom-sourcerange--copytype--skipblanks--transpose-) реплицирует действия **копирования** и **вставки** пользовательского интерфейса Excel. Диапазон объекта, который вызывается `copyFrom`, является назначением. Источник для копирования передается как диапазон или адрес строки, представляющий диапазон. 
+Метод [Range. copyFrom](/javascript/api/excel/excel.range#copyfrom-sourcerange--copytype--skipblanks--transpose-) реплицирует действия **копирования** и **вставки** пользовательского интерфейса Excel. Диапазон объекта, который вызывается `copyFrom`, является назначением. Источник для копирования передается как диапазон или адрес строки, представляющий диапазон.
 
 В следующем примере кода копируются данные из **A1:E1** в диапазон, начиная с **G1** (который заканчивается вставкой в **G1:K1**).
 
@@ -235,22 +235,22 @@ Excel.run(function (context) {
 
 ![Данные в Excel после запуска метода копирования диапазона](../images/excel-range-copyfrom-skipblanks-after.png)
 
-### <a name="cut-and-paste-move-cells-online-only"></a>Вырезание и вставка (перемещение) ячеек ([только в сети](../reference/requirement-sets/excel-api-online-requirement-set.md)) 
+### <a name="cut-and-paste-move-cells"></a>Вырезание и вставка (перемещение) ячеек
 
-Метод [Range. moveTo](/javascript/api/excel/excel.range#moveto-destinationrange-) перемещает ячейки в новое расположение в книге. Поведение перемещения ячейки работает так же, как при перемещении ячеек, [перетаскивая границу диапазона](https://support.office.com/article/Move-or-copy-cells-and-cell-contents-803d65eb-6a3e-4534-8c6f-ff12d1c4139e) или при выполнении действий по **вырезанию** и **вставке** . Форматирование и значения диапазона перемещаются в расположение, указанное в качестве `destinationRange` параметра. 
+Метод [Range. moveTo](/javascript/api/excel/excel.range#moveto-destinationrange-) перемещает ячейки в новое расположение в книге. Поведение перемещения ячейки работает так же, как при перемещении ячеек, [перетаскивая границу диапазона](https://support.office.com/article/Move-or-copy-cells-and-cell-contents-803d65eb-6a3e-4534-8c6f-ff12d1c4139e) или при выполнении действий по **вырезанию** и **вставке** . Форматирование и значения диапазона перемещаются в расположение, указанное в качестве `destinationRange` параметра.
 
-В следующем примере кода показан диапазон, перемещенный с `Range.moveTo` методом. Обратите внимание, что если конечный диапазон меньше исходного, он будет развернут, чтобы охватывать исходное содержимое. 
+В следующем примере кода показан диапазон, перемещенный с `Range.moveTo` методом. Обратите внимание, что если конечный диапазон меньше исходного, он будет развернут, чтобы охватывать исходное содержимое.
 
-```js 
-Excel.run(function (context) { 
-    var sheet = context.workbook.worksheets.getActiveWorksheet(); 
-    sheet.getRange("F1").values = [["Moved Range"]]; 
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+    sheet.getRange("F1").values = [["Moved Range"]];
 
-    // Move the cells "A1:E1" to "G1" (which fills the range "G1:K1"). 
-    sheet.getRange("A1:E1").moveTo("G1"); 
-    return context.sync(); 
-}); 
-``` 
+    // Move the cells "A1:E1" to "G1" (which fills the range "G1:K1").
+    sheet.getRange("A1:E1").moveTo("G1");
+    return context.sync();
+});
+```
 
 ## <a name="remove-duplicates"></a>Удаление дубликатов
 

@@ -1,15 +1,15 @@
 ---
 title: Набор обязательных элементов API JavaScript для Excel Online
 description: Сведения о наборе требований Ексцелапионлине
-ms.date: 12/05/2019
+ms.date: 05/06/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: ad2a3cd627552baeb449397fa917fe10e86ebbaf
-ms.sourcegitcommit: 8c5c5a1bd3fe8b90f6253d9850e9352ed0b283ee
+ms.openlocfilehash: f177e0107de7172c350f94c3a022cb3e0db5c6f5
+ms.sourcegitcommit: 735bf94ac3c838f580a992e7ef074dbc8be2b0ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "40814154"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "44170788"
 ---
 # <a name="excel-javascript-api-online-only-requirement-set"></a>Набор обязательных элементов API JavaScript для Excel Online
 
@@ -44,19 +44,13 @@ if (Office.context.requirements.isSetSupported("ExcelApiOnline", "1.1")) {
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
-|[Comment](/javascript/api/excel/excel.comment)|[mentions](/javascript/api/excel/excel.comment#mentions)|Получает объекты (например, людей), которые упоминаются в комментариях.|
-||[ричконтент](/javascript/api/excel/excel.comment#richcontent)|Получает форматированный текст комментария (например, упоминания в комментариях). Эта строка не предназначена для отображения конечным пользователям. Надстройка должна использовать эту надстройку только для анализа форматированного содержимого комментариев.|
-||[Упдатементионс (Контентвисментионс: Excel. Комментричконтент)](/javascript/api/excel/excel.comment#updatementions-contentwithmentions-)|Обновляет содержимое комментария с помощью специально отформатированной строки и списка упоминаний.|
-|[комментментион](/javascript/api/excel/excel.commentmention)|[email](/javascript/api/excel/excel.commentmention#email)|Получает или задает адрес электронной почты объекта, который упоминается в примечании.|
-||[id](/javascript/api/excel/excel.commentmention#id)|Получает или задает идентификатор объекта. Это соответствует одному из идентификаторов в `CommentRichContent.richContent`файле.|
-||[name](/javascript/api/excel/excel.commentmention#name)|Получает или задает имя объекта, упоминаемого в примечании.|
-|[CommentReply](/javascript/api/excel/excel.commentreply)|[mentions](/javascript/api/excel/excel.commentreply#mentions)|Получает объекты (например, людей), которые упоминаются в комментариях.|
-||[ричконтент](/javascript/api/excel/excel.commentreply#richcontent)|Получает форматированный текст комментария (например, упоминания в комментариях). Эта строка не предназначена для отображения конечным пользователям. Надстройка должна использовать эту надстройку только для анализа форматированного содержимого комментариев.|
-||[Упдатементионс (Контентвисментионс: Excel. Комментричконтент)](/javascript/api/excel/excel.commentreply#updatementions-contentwithmentions-)|Обновляет содержимое комментария с помощью специально отформатированной строки и списка упоминаний.|
-|[комментричконтент](/javascript/api/excel/excel.commentrichcontent)|[mentions](/javascript/api/excel/excel.commentrichcontent#mentions)|Массив, содержащий все сущности (например, люди), упомянутые в комментарии.|
-||[ричконтент](/javascript/api/excel/excel.commentrichcontent#richcontent)||
-|[Range](/javascript/api/excel/excel.range)|[moveTo (Дестинатионранже: строка \| Range)](/javascript/api/excel/excel.range#moveto-destinationrange-)|Перемещает значения ячеек, форматирование и формулы из текущего диапазона в конечный диапазон, заменяя старые сведения в этих ячейках.|
-|[RangeFormat](/javascript/api/excel/excel.rangeformat)|[Аджустиндент (Amount: число)](/javascript/api/excel/excel.rangeformat#adjustindent-amount-)|Настраивает отступ для форматирования диапазона. Значение отступа лежит в диапазоне от 0 до 250 и измеряется в символах.|
+|[ChartAxisTitle](/javascript/api/excel/excel.chartaxistitle)|[textOrientation](/javascript/api/excel/excel.chartaxistitle#textorientation)|Задает угол, по которому текст будет ориентирован на название оси диаграммы. Значение должно быть целым числом от – 90 до 90 или целым числом 180 для вертикально ориентированного текста.|
+|[пивоттаблескопедколлектион](/javascript/api/excel/excel.pivottablescopedcollection)|[getCount()](/javascript/api/excel/excel.pivottablescopedcollection#getcount--)|Получает количество сводных таблиц в коллекции.|
+||[getFirst()](/javascript/api/excel/excel.pivottablescopedcollection#getfirst--)|Получает первую сводную таблицу в коллекции. Сводные таблицы в коллекции сортируются сверху вниз и слева направо, так как первая сводная таблица в коллекции является верхней левой.|
+||[getItem(key: string)](/javascript/api/excel/excel.pivottablescopedcollection#getitem-key-)|Получает сводную таблицу по имени.|
+||[getItemOrNullObject(имя: строка)](/javascript/api/excel/excel.pivottablescopedcollection#getitemornullobject-name-)|Получает сводную таблицу по имени. Если сводная таблица не существует, возвращает пустой объект.|
+||[items](/javascript/api/excel/excel.pivottablescopedcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
+|[Range](/javascript/api/excel/excel.range)|[PivotTable (Фулликонтаинед?: Boolean)](/javascript/api/excel/excel.range#getpivottables-fullycontained-)|Возвращает ограниченную коллекцию сводных таблиц, которые перекрывают диапазон.|
 
 ## <a name="see-also"></a>См. также
 
