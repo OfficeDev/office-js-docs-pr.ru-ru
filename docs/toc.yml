@@ -8,6 +8,9 @@
     - name: Начните отсюда! Руководство для начинающих
       href: overview/learning-path-beginner.md
       displayName: develop
+    - name: Выполните переход! Руководство для разработчиков надстроек VSTO
+      href: overview/learning-path-transition.md
+      displayName: develop
     - name: Создание надстроек Office
       href: overview/office-add-ins-fundamentals.md
       displayName: develop
@@ -405,10 +408,6 @@
               href: reference/manifest/requirements.md
             - name: Rule
               href: reference/manifest/rule.md
-            - name: Runtime
-              href: reference/manifest/runtime.md
-            - name: Runtimes
-              href: reference/manifest/runtimes.md
             - name: Set
               href: reference/manifest/set.md
             - name: Sets
@@ -473,8 +472,12 @@
                   href: reference/manifest/officetab.md
                 - name: Page
                   href: reference/manifest/page.md
-                - name: Resources
+                - name: Ресурсы
                   href: reference/manifest/resources.md
+                - name: Runtime
+                  href: reference/manifest/runtime.md
+                - name: Runtimes
+                  href: reference/manifest/runtimes.md
                 - name: Scopes
                   href: reference/manifest/scopes.md
                 - name: Script
@@ -532,6 +535,9 @@
               displayName: Excel
             - name: Набор обязательных элементов ExcelApi (только в сети)
               href: reference/requirement-sets/excel-api-online-requirement-set.md
+              displayName: Excel
+            - name: Набор обязательных элементов ExcelApi 1.11
+              href: reference/requirement-sets/excel-api-1-11-requirement-set.md
               displayName: Excel
             - name: Набор обязательных элементов ExcelApi 1.10
               href: reference/requirement-sets/excel-api-1-10-requirement-set.md
