@@ -1,18 +1,16 @@
 ---
 title: Вызов API Microsoft Excel из настраиваемой функции
 description: Узнайте, какие API Microsoft Excel вы можете вызывать из пользовательской функции.
-ms.date: 02/06/2020
+ms.date: 05/11/2020
 localization_priority: Normal
-ms.openlocfilehash: e22ed897e95a74707bd0d8bded3f8dca724731d1
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: a24cdfba2d79b6e2ad165765d22cd77743047d34
+ms.sourcegitcommit: 682d18c9149b1153f9c38d28e2a90384e6a261dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719345"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "44217881"
 ---
 # <a name="call-microsoft-excel-apis-from-a-custom-function"></a>Вызов API Microsoft Excel из настраиваемой функции
-
-[!include[Running custom functions in a shared runtime note](../includes/excel-shared-runtime-preview-note.md)]
 
 Вызовите API Office. js Excel из пользовательских функций, чтобы получить данные диапазона и получить дополнительный контекст для вычислений.
 
