@@ -3,12 +3,12 @@ title: Развертывание и публикация надстроек Off
 description: Методы и варианты развертывания надстройки Office для тестирования и распространения.
 ms.date: 05/06/2020
 localization_priority: Priority
-ms.openlocfilehash: b4ee2dab2fec0237ad06776861678c4c23da6ca8
-ms.sourcegitcommit: 1e3d7051ba7c8c0ccfd6607099d90469fc8141e2
+ms.openlocfilehash: e7bcd3a1de0c81d0626cf0f59569acb0a8a1d09e
+ms.sourcegitcommit: 682d18c9149b1153f9c38d28e2a90384e6a261dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "44066090"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "44218000"
 ---
 # <a name="deploy-and-publish-office-add-ins"></a>Развертывание и публикация надстроек Office
 
@@ -50,9 +50,9 @@ ms.locfileid: "44066090"
 
 Указанные ниже разделы содержат дополнительные сведения о методах развертывания, которые чаще всего используются для распространения надстроек Office в организации.
 
-Сведения о том, как пользователи приобретают, вставляют и запускают надстройки, см. в статье [Начало работы с надстройкой Office](https://support.office.com/en-ie/article/Start-using-your-Office-Add-in-82e665c4-6700-4b56-a3f3-ef5441996862?ui=en-US&rs=en-IE&ad=IE).
+Сведения о том, как пользователи приобретают, вставляют и запускают надстройки, см. в статье [Начало работы с надстройкой Office](https://support.office.com/article/start-using-your-office-add-in-82e665c4-6700-4b56-a3f3-ef5441996862).
 
-### <a name="centralized-deployment-via-the-office-365-admin-center"></a>Централизованное развертывание в Центре администрирования Office 365 
+### <a name="centralized-deployment-via-the-office-365-admin-center"></a>Централизованное развертывание в Центре администрирования Office 365
 
 С помощью Центра администрирования Office 365 администраторы могут с легкостью развертывать надстройки Office для пользователей и групп в организации. В этом случае надстройки становятся доступны в приложениях Office сразу. Настраивать клиенты не требуется. Используя централизованное развертывание, можно развертывать как внутренние надстройки, так и те, что предоставляются независимыми поставщиками программного обеспечения.
 
