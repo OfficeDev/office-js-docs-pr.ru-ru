@@ -1,14 +1,14 @@
 ---
 title: Обработка ошибок
 description: Изучите логику обработки ошибок API JavaScript для Excel, чтобы учитывать ошибки времени выполнения.
-ms.date: 04/10/2020
+ms.date: 05/13/2020
 localization_priority: Normal
-ms.openlocfilehash: 85fcd580828a2db95cd8e021dec3611ca6591e1c
-ms.sourcegitcommit: 76552b3e5725d9112c772595971b922c295e6b4c
+ms.openlocfilehash: aaadcf41f03258bdf85d9796cc611a1c05478549
+ms.sourcegitcommit: 110a7f247ce83c7434ea32098497d2864e28e096
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225730"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "44227407"
 ---
 # <a name="error-handling"></a>Обработка ошибок
 
@@ -76,4 +76,4 @@ Excel.run(function (context) {
 ## <a name="see-also"></a>См. также
 
 - [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
-- [Объект OfficeExtension.Error (API JavaScript для Excel)](/javascript/api/office/officeextension.error)
+- [Объект OfficeExtension.Error (API JavaScript для Excel)](/javascript/api/office/officeextension.error?view=excel-js-preview)
