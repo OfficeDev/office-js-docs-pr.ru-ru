@@ -1,25 +1,25 @@
 ---
 title: Элемент Rule в файле манифеста
 description: Элемент Rule указывает правила активации, которые должны оцениваться для этой контекстной почтовой надстройки.
-ms.date: 03/16/2020
+ms.date: 05/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 06d9985615617e50567dcf614268d9181989f2a1
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: c1f2be3371333bfd87e0693d02a9a5984c18317b
+ms.sourcegitcommit: b634bfe9a946fbd95754e87f070a904ed57586ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42720437"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "44253623"
 ---
 # <a name="rule-element"></a>Элемент Rule
 
 Задает правила активации, которые должны оцениваться для этой контекстной почтовой надстройки.
 
-**Тип надстройки:** контекстная почтовая надстройка
+**Тип надстройки:** Почта (контекстная)
 
 ## <a name="contained-in"></a>Содержится в
 
 - [OfficeApp](officeapp.md)
-- [ExtensionPoint](extensionpoint.md)
+- [ExtensionPoint](extensionpoint.md) ([**кустомпане** (устаревшее)](https://developer.microsoft.com/outlook/blogs/make-your-add-ins-available-in-the-office-ribbon/), [**DetectedEntity**](extensionpoint.md#detectedentity))
 
 ## <a name="attributes"></a>Атрибуты
 

@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: Функции и API, которые в настоящее время находятся в режиме предварительной версии для надстроек Outlook.
-ms.date: 05/04/2020
+ms.date: 05/15/2020
 localization_priority: Normal
-ms.openlocfilehash: 433abf5ea15cfe9ee7cefa579b1ad965fdeb93cf
-ms.sourcegitcommit: 800dacf0399465318489c9d949e259b5cf0f81ca
+ms.openlocfilehash: c2b4d31fdb545afdc695c5aef84856aeaebdbf28
+ms.sourcegitcommit: b634bfe9a946fbd95754e87f070a904ed57586ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "44022185"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "44253630"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -18,6 +18,11 @@ ms.locfileid: "44022185"
 > Эта документация относится к **предварительной версии** [набора обязательных элементов](../../requirement-sets/outlook-api-requirement-sets.md). Этот набор обязательных элементов еще не полностью реализован, а клиенты будут неправильно сообщать о его поддержке. Не следует указывать этот набор обязательных элементов в манифесте надстройки.
 
 [!INCLUDE [Information about using preview APIs](../../../includes/using-preview-apis-host.md)]
+
+> [!TIP]
+> Вы можете предварительно просмотреть функции в Outlook в Интернете, [настроив целевой выпуск на клиенте Microsoft 365](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide#set-up-the-release-option-in-the-admin-center). "Настройка предварительного доступа" отмечено на этой странице в соответствующих возможностях.
+>
+> Для других функций вы можете запросить доступ к предварительной версии BITS для Outlook в Интернете, используя свою учетную запись Microsoft 365, заполнив и отправив [эту форму](https://aka.ms/OWAPreview). В этих функциях указано "запросить доступ".
 
 Предварительная версия набора обязательных элементов включает все возможности [набора обязательных элементов 1.8](../requirement-set-1.8/outlook-requirement-set-1.8.md).
 
@@ -69,13 +74,13 @@ ms.locfileid: "44022185"
 
 Добавлена новая функция для `Body` объекта, который добавляет данные в конец тела элемента в режиме создания.
 
-**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современная, [Настройка предварительного доступа](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide#set-up-the-release-option-in-the-admin-center))
 
 #### <a name="extendedpermissions"></a>[ExtendedPermissions](../../manifest/extendedpermissions.md)
 
 Добавлен новый элемент в манифест, где `AppendOnSend` расширенное разрешение должно быть включено в коллекцию расширенных разрешений.
 
-**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современная, [Настройка предварительного доступа](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide#set-up-the-release-option-in-the-admin-center))
 
 <br>
 
@@ -103,31 +108,31 @@ ms.locfileid: "44022185"
 
 Добавлена новая функция для `Body` объекта, который добавляет или заменяет подпись в теле элемента в режиме создания.
 
-**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современная, [Настройка предварительного доступа](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide#set-up-the-release-option-in-the-admin-center))
 
 #### <a name="officecontextmailboxitemdisableclientsignatureasync"></a>[Office. Context. Mailbox. Item. Дисаблеклиентсигнатуреасинк](office.context.mailbox.item.md#methods)
 
 Добавлена новая функция, которая отключает подпись клиента для отправляющего почтового ящика в режиме создания.
 
-**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современная, [Настройка предварительного доступа](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide#set-up-the-release-option-in-the-admin-center))
 
 #### <a name="officecontextmailboxitemgetcomposetypeasync"></a>[Office. Context. Mailbox. Item. Жеткомпосетипеасинк](/javascript/api/outlook/office.messagecompose?view=outlook-js-preview#getcomposetypeasync-options--callback-)
 
 Добавлена новая функция, которая получает тип сообщения "создание" в режиме создания.
 
-**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современная, [Настройка предварительного доступа](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide#set-up-the-release-option-in-the-admin-center))
 
 #### <a name="officecontextmailboxitemisclientsignatureenabledasync"></a>[Office. Context. Mailbox. Item. Исклиентсигнатуринабледасинк](office.context.mailbox.item.md#methods)
 
 Добавлена новая функция, проверяющая, включена ли подпись клиента для элемента в режиме создания.
 
-**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современная, [Настройка предварительного доступа](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide#set-up-the-release-option-in-the-admin-center))
 
 #### <a name="officemailboxenumscomposetype"></a>[Office. MailboxEnums. Компосетипе](/javascript/api/outlook/office.mailboxenums.composetype?view=outlook-js-preview)
 
 Добавлено новое перечисление `ComposeType` , доступное в режиме создания.
 
-**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современная, [Настройка предварительного доступа](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide#set-up-the-release-option-in-the-admin-center))
 
 <br>
 
