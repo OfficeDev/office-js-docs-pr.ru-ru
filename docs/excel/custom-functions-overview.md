@@ -1,20 +1,20 @@
 ---
-ms.date: 12/28/2019
+ms.date: 05/17/2020
 description: Создайте пользовательскую функцию Excel для своей надстройки Office
 title: Создание пользовательских функций в Excel
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: f82e99f943b446e546e995f41d104252f8ee6295
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
-ms.translationtype: HT
+ms.openlocfilehash: dabb196bc4b55bd4852f9c857767dcabd3063045
+ms.sourcegitcommit: 54e2892c0c26b9ad1e4dba8aba48fea39f853b6c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719492"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "44276010"
 ---
-# <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel 
+# <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel
 
-Пользовательские функции позволяют разработчикам добавлять новые функции в Excel путем определения этих функций в JavaScript как части надстройки. Пользователи в Excel могут получить доступ к пользовательским функциям так же, как и к любой встроенной функции в Excel, например `SUM()`. В этой статье описано создание специальных функций в Excel.
+Пользовательские функции позволяют разработчикам добавлять новые функции в Excel путем определения этих функций в JavaScript как части надстройки. Пользователи в Excel могут получить доступ к пользовательским функциям так же, как и к любой встроенной функции в Excel, например `SUM()`.
 
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
@@ -26,7 +26,7 @@ ms.locfileid: "42719492"
 
 ```js
 /**
- * Returns the volume of a sphere. 
+ * Returns the volume of a sphere.
  * @customfunction
  * @param {number} radius
  */
@@ -40,19 +40,19 @@ function sphereVolume(radius) {
 
 ## <a name="how-a-custom-function-is-defined-in-code"></a>Как определена пользовательская функция в коде
 
-Если вы используете [генератор Yo Office](https://github.com/OfficeDev/generator-office) для создания в Excel проекта с пользовательскими функциями, вы обнаружите, что он создает файлы, управляющие вашими функциями, областью задач и надстройкой в целом. Мы сосредоточимся на файлах, которые важны для пользовательских функций:
+Если вы используете [генератор Yo Office](https://github.com/OfficeDev/generator-office) для создания проекта надстройки пользовательских функций Excel, он создает файлы, которые контролируют функции и область задач. Мы сосредоточимся на файлах, которые важны для пользовательских функций:
 
 | Файл | Формат файла | Описание |
 |------|-------------|-------------|
 | **./src/functions/functions.js**<br/>или<br/>**./src/functions/functions.ts** | JavaScript<br/>или<br/>TypeScript | Содержит код, который определяет пользовательские функции. |
 | **./src/functions/functions.html** | HTML | Предоставляет &lt;скрипт&gt; со ссылкой на файл JavaScript, который определяет пользовательские функции. |
-| **./manifest.xml** | XML | Определяет пространство имен для всех пользовательских функций в надстройке и расположение JavaScript и HTML-файлов, которые указаны ранее в этой таблице. Он также перечисляет расположения других файлов, которые могут использоваться надстройкой, например файлы области задач и командные файлы. |
+| **./manifest.xml** | XML | Задает расположение нескольких файлов, используемых настраиваемыми функциями, таких как пользовательские функции, файлы JavaScript, JSON и HTML. В нем также указаны расположения файлов области задач, командные файлы и указывается, какая среда выполнения должна использоваться вашими пользовательскими функциями. |
 
 ### <a name="script-file"></a>Файл скрипта
 
 Файл скрипта (**./src/functions/functions.js** или **./src/functions/functions.ts**) содержит код, определяющий пользовательские функции, и комментарии, определяющие функцию.
 
-Приведенный ниже код определяет пользовательскую функцию `add`. Примечания кода используются для создания файла метаданных JSON с описанием пользовательской функции для Excel. Обязательный комментарий `@customfunction` объявлен первым, чтобы указать, что это пользовательская функция. Вы также увидите два объявленных параметра (`first` и `second`), за которыми следуют их свойства `description`. Наконец, дается описание `returns`. Дополнительные сведения о том, какие комментарии являются обязательными для вашей пользовательской функции, см. в статье [Создание метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md).
+Приведенный ниже код определяет пользовательскую функцию `add`. Примечания кода используются для создания файла метаданных JSON с описанием пользовательской функции для Excel. Обязательный комментарий `@customfunction` объявлен первым, чтобы указать, что это пользовательская функция. Затем объявляются два параметра, `first` а `second` затем их `description` Свойства. Наконец, дается описание `returns`. Дополнительные сведения о том, какие комментарии являются обязательными для вашей пользовательской функции, см. в статье [Создание метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md).
 
 ```js
 /**
@@ -68,80 +68,23 @@ function add(first, second){
 }
 ```
 
-Обратите внимание, что файл **functions.html**, который регулирует загрузку среды выполнения пользовательских функций, нужно связать с текущим CDN для пользовательских функций. Проекты, подготовленные с текущей версией генератора Yo Office, ссылаются на правильный CDN. При модернизации предыдущего проекта пользовательской функции от марта 2019 года или более раннего нужно скопировать код, приведенный ниже, на страницу **functions.html**.
-
-```HTML
-<script src="https://appsforoffice.microsoft.com/lib/1/hosted/custom-functions-runtime.js" type="text/javascript"></script>
-```
-
 ### <a name="manifest-file"></a>Файл манифеста
 
-XML-файл манифеста для надстройки, который определяет пользовательские функции (**./manifest.xml** в проекте, который создает генератор Yo Office) и определяет пространство имен для всех пользовательских функций в надстройке, а также расположение файлов JavaScript, JSON и HTML.
+XML-файл манифеста для надстройки, который определяет пользовательские функции (**/манифест.ксмл** в проекте, созданном генератором Yo Office), выполняет несколько задач:
 
-Базовая XML-разметка ниже представляет пример элементов `<ExtensionPoint>` и `<Resources>`, которые необходимо включить в манифест надстройки, чтобы активировать пользовательские функции. Если вы используете генератор Yo Office, созданные файлы пользовательской функции будут содержать более сложный файл манифеста, который можно сравнить в этом [репозитории Github](https://github.com/OfficeDev/Excel-Custom-Functions/blob/master/manifest.xml).
+- Определяет пространство имен для пользовательских функций. Пространство имен добавляется к своим пользовательским функциям, чтобы помочь клиентам определить функции в рамках надстройки.
+- Использование `<ExtensionPoint>` и `<Resources>` элементы, которые являются уникальными для манифеста пользовательских функций. Эти элементы содержат сведения о расположении файлов JavaScript, JSON и HTML.
+- Указывает, какую среду выполнения использовать для пользовательской функции. Рекомендуется всегда использовать общую среду выполнения, если у вас нет особой необходимости в другой среде выполнения, так как общая среда выполнения позволяет совместно использовать данные между функциями и областью задач.
 
-> [!NOTE] 
-> URL-адреса, указанные в файле манифеста для пользовательских функций файлов JavaScript, JSON и HTML, должны быть общедоступными и иметь один поддомен.
+Если для создания файлов используется генератор Yo Office, рекомендуется настроить манифест для использования общей среды выполнения, так как это значение по умолчанию не используется для этих файлов. Чтобы изменить манифест, следуйте инструкциям в статье [Настройка надстройки Excel, чтобы использовать общую среду выполнения JavaScript](./configure-your-add-in-to-use-a-shared-runtime.md).
 
-```xml
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
-  <!--IMPORTANT! Id must be unique for each add-in. If you copy this manifest ensure that you change this id to your own GUID. -->
-  <Id>6f4e46e8-07a8-4644-b126-547d5b539ece</Id>
-  <Version>1.0.0.0</Version>
-  <ProviderName>Contoso</ProviderName>
-  <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="helloworld"/>
-  <Description DefaultValue="Samples to test custom functions"/>
-  <SupportUrl DefaultValue="[Insert the URL of a page that provides support information for the app]" />
-  <Hosts>
-    <Host Name="Workbook"/>
-  </Hosts>
-  <DefaultSettings>
-    <SourceLocation DefaultValue="https://localhost:8081/index.html"/>
-  </DefaultSettings>
-  <Permissions>ReadWriteDocument</Permissions>
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
-    <Hosts>
-      <Host xsi:type="Workbook">
-        <AllFormFactors>
-          <ExtensionPoint xsi:type="CustomFunctions">
-            <Script>
-              <SourceLocation resid="JS-URL"/>
-            </Script>
-            <Page>
-              <SourceLocation resid="HTML-URL"/>
-            </Page>
-            <Metadata>
-              <SourceLocation resid="JSON-URL"/>
-            </Metadata>
-            <Namespace resid="namespace"/>
-          </ExtensionPoint>
-        </AllFormFactors>
-      </Host>
-    </Hosts>
-    <Resources>
-      <bt:Urls>
-        <bt:Url id="JSON-URL" DefaultValue="https://subdomain.contoso.com/config/customfunctions.json"/>
-        <bt:Url id="JS-URL" DefaultValue="https://subdomain.contoso.com/dist/win32/ship/index.win32.bundle"/>
-        <bt:Url id="HTML-URL" DefaultValue="https://subdomain.contoso.com/index.html"/>
-      </bt:Urls>
-      <bt:ShortStrings>
-        <bt:String id="namespace" DefaultValue="CONTOSO"/>
-      </bt:ShortStrings>
-    </Resources>
-  </VersionOverrides>
-</OfficeApp>
-```
-
-> [!NOTE]
-> Функции в Excel имеют в начале пространство имен, указанное в XML-файле манифеста. Пространство имен функции предшествует названию функции, и они будут разделены точкой. Например, чтобы вызвать функцию `ADD42` в ячейке на листе Excel, введите `=CONTOSO.ADD42`, так как `CONTOSO` является пространством имен, а `ADD42` — это имя функции, определяемой в JSON-файл. Пространство имен служит в качестве идентификатора для вашей компании или надстройки. Пространство имен может содержать только буквы, цифры и точки.
+Чтобы просмотреть полный рабочий манифест примера надстройки, обратитесь к [репозиторию GitHub](https://github.com/OfficeDev/PnP-OfficeAddins/blob/master/Samples/excel-shared-runtime-global-state/manifest.xml).
 
 [!include[manifest guidance](../includes/manifest-guidance.md)]
 
 ## <a name="coauthoring"></a>Совместное редактирование
 
-Интернет-версия Excel и Excel для Windows с подпиской на Office 365 позволяют совместно редактировать документы. Эта функция работает с пользовательскими функциями. Если в книге используется пользовательская функция, вашему коллеге будет предложено загрузить надстройку пользовательской функции. Когда вы оба загрузите надстройку, пользовательская функция поделится результатами с помощью совместного редактирования.
+Excel в Интернете и Windows, подключенные к подписке Office 365, позволяют совместно редактировать в Excel. Если ваша книга использует настраиваемую функцию, коллеге соавтору предлагается загрузить надстройку пользовательской функции. После того как вы загрузили надстройку, настраиваемая функция использует общий доступ к результатам через совместное редактирование.
 
 Дополнительные сведения о совместном редактировании см. в статье [О совместном редактировании в Excel](/office/vba/excel/concepts/about-coauthoring-in-excel).
 
@@ -154,8 +97,6 @@ XML-файл манифеста для надстройки, который оп
 Хотите попробовать пользовательские функции? Ознакомьтесь с простым [кратким руководством по началу работы с пользовательскими функциями](../quickstarts/excel-custom-functions-quickstart.md) или с более глубоким [руководством по пользовательским функциям](../tutorials/excel-tutorial-create-custom-functions.md), если вы этого еще не сделали.
 
 Еще одно простое средство ознакомления с пользовательскими функциями — [Script Lab](https://appsource.microsoft.com/product/office/WA104380862?src=office&corrid=1ada79ac-6392-438d-bb16-fce6994a2a7e&omexanonuid=f7b03101-ec22-4270-a274-bcf16c762039&referralurl=https%3a%2f%2fgithub.com%2fofficedev%2fscript-lab), надстройка, в которой можно экспериментировать с пользовательскими функциями прямо в Excel. Вы можете попробовать создать собственные пользовательские функции или поиграть с готовыми примерами.
-
-Готовы узнать больше о возможностях пользовательских функций? Ознакомьтесь с обзором [архитектуры пользовательских функций](custom-functions-architecture.md).
 
 ## <a name="see-also"></a>Дополнительные ресурсы 
 * [Требования к настраиваемым функциям](custom-functions-requirement-sets.md)
