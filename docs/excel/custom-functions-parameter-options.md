@@ -1,26 +1,26 @@
 ---
-ms.date: 07/15/2019
+ms.date: 04/29/2020
 description: Узнайте, как использовать различные параметры в пользовательских функциях, таких как диапазоны Excel, необязательные параметры, контекст вызова и многое другое.
 title: Параметры для пользовательских функций Excel
 localization_priority: Normal
-ms.openlocfilehash: 66e873117b82ed7258b5965a6e964f4b9e01df21
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 9f785002b90b7cb242d33a8756690c751f358d37
+ms.sourcegitcommit: 54e2892c0c26b9ad1e4dba8aba48fea39f853b6c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719485"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "44276003"
 ---
-# <a name="custom-functions-parameter-options"></a><span data-ttu-id="9307b-103">Параметры параметров пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="9307b-103">Custom functions parameter options</span></span>
+# <a name="custom-functions-parameter-options"></a><span data-ttu-id="03e47-103">Параметры параметров пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="03e47-103">Custom functions parameter options</span></span>
 
-<span data-ttu-id="9307b-104">Настраиваемые функции можно настраивать с помощью различных параметров.</span><span class="sxs-lookup"><span data-stu-id="9307b-104">Custom functions are configurable with many different options for parameters.</span></span>
+<span data-ttu-id="03e47-104">Настраиваемые функции можно настраивать с помощью множества различных параметров.</span><span class="sxs-lookup"><span data-stu-id="03e47-104">Custom functions are configurable with many different parameter options.</span></span>
 
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
-## <a name="optional-parameters"></a><span data-ttu-id="9307b-105">Необязательные параметры</span><span class="sxs-lookup"><span data-stu-id="9307b-105">Optional parameters</span></span>
+## <a name="optional-parameters"></a><span data-ttu-id="03e47-105">Необязательные параметры</span><span class="sxs-lookup"><span data-stu-id="03e47-105">Optional parameters</span></span>
 
-<span data-ttu-id="9307b-106">В то время как обычные параметры являются обязательными, необязательные параметры — нет.</span><span class="sxs-lookup"><span data-stu-id="9307b-106">Whereas regular parameters are required, optional parameters are not.</span></span> <span data-ttu-id="9307b-107">Если пользователь вызывает функцию в Excel, необязательные параметры отображаются в квадратных скобках.</span><span class="sxs-lookup"><span data-stu-id="9307b-107">When a user invokes a function in Excel, optional parameters appear in brackets.</span></span> <span data-ttu-id="9307b-108">В приведенном ниже примере функция Add может дополнительно добавить третий номер.</span><span class="sxs-lookup"><span data-stu-id="9307b-108">In the following sample, the add function can optionally add a third number.</span></span> <span data-ttu-id="9307b-109">Эта функция отображается как `=CONTOSO.ADD(first, second, [third])` в Excel.</span><span class="sxs-lookup"><span data-stu-id="9307b-109">This function appears as `=CONTOSO.ADD(first, second, [third])` in Excel.</span></span>
+<span data-ttu-id="03e47-106">Если пользователь вызывает функцию в Excel, необязательные параметры отображаются в квадратных скобках.</span><span class="sxs-lookup"><span data-stu-id="03e47-106">When a user invokes a function in Excel, optional parameters appear in brackets.</span></span> <span data-ttu-id="03e47-107">В приведенном ниже примере функция Add может дополнительно добавить третий номер.</span><span class="sxs-lookup"><span data-stu-id="03e47-107">In the following sample, the add function can optionally add a third number.</span></span> <span data-ttu-id="03e47-108">Эта функция отображается как `=CONTOSO.ADD(first, second, [third])` в Excel.</span><span class="sxs-lookup"><span data-stu-id="03e47-108">This function appears as `=CONTOSO.ADD(first, second, [third])` in Excel.</span></span>
 
-#### <a name="javascript"></a>[<span data-ttu-id="9307b-110">JavaScript</span><span class="sxs-lookup"><span data-stu-id="9307b-110">JavaScript</span></span>](#tab/javascript)
+#### <a name="javascript"></a>[<span data-ttu-id="03e47-109">JavaScript</span><span class="sxs-lookup"><span data-stu-id="03e47-109">JavaScript</span></span>](#tab/javascript)
 
 ```js
 /**
@@ -39,7 +39,7 @@ function add(first, second, third) {
 }
 ```
 
-#### <a name="typescript"></a>[<span data-ttu-id="9307b-111">TypeScript</span><span class="sxs-lookup"><span data-stu-id="9307b-111">TypeScript</span></span>](#tab/typescript)
+#### <a name="typescript"></a>[<span data-ttu-id="03e47-110">TypeScript</span><span class="sxs-lookup"><span data-stu-id="03e47-110">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 /**
@@ -61,11 +61,11 @@ function add(first: number, second: number, third?: number): number {
 ---
 
 > [!NOTE]
-> <span data-ttu-id="9307b-112">Если для необязательного параметра не указано значение, Excel присваивает ему значение `null`.</span><span class="sxs-lookup"><span data-stu-id="9307b-112">When no value is specified for an optional parameter, Excel assigns it the value `null`.</span></span> <span data-ttu-id="9307b-113">Это означает, что параметры, инициализированные по умолчанию в TypeScript, не будут работать должным образом.</span><span class="sxs-lookup"><span data-stu-id="9307b-113">This means default-initialized parameters in TypeScript will not work as expected.</span></span> <span data-ttu-id="9307b-114">Поэтому не следует использовать синтаксис `function add(first:number, second:number, third=0):number` , так как он не инициализируется `third` до 0.</span><span class="sxs-lookup"><span data-stu-id="9307b-114">Therefore, don't use the syntax `function add(first:number, second:number, third=0):number` because it will not initialize `third` to 0.</span></span> <span data-ttu-id="9307b-115">Вместо этого используйте синтаксис TypeScript, как показано в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="9307b-115">Instead use the TypeScript syntax as shown in the previous example.</span></span>
+> <span data-ttu-id="03e47-111">Если для необязательного параметра не указано значение, Excel присваивает ему значение `null` .</span><span class="sxs-lookup"><span data-stu-id="03e47-111">When no value is specified for an optional parameter, Excel assigns it the value `null`.</span></span> <span data-ttu-id="03e47-112">Это означает, что параметры, инициализированные по умолчанию в TypeScript, не будут работать должным образом.</span><span class="sxs-lookup"><span data-stu-id="03e47-112">This means default-initialized parameters in TypeScript will not work as expected.</span></span> <span data-ttu-id="03e47-113">Не следует использовать синтаксис, `function add(first:number, second:number, third=0):number` так как он не инициализируется `third` до 0.</span><span class="sxs-lookup"><span data-stu-id="03e47-113">Don't use the syntax `function add(first:number, second:number, third=0):number` because it will not initialize `third` to 0.</span></span> <span data-ttu-id="03e47-114">Вместо этого используйте синтаксис TypeScript, как показано в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="03e47-114">Instead use the TypeScript syntax as shown in the previous example.</span></span>
 
-<span data-ttu-id="9307b-116">При определении функции, которая содержит один или несколько необязательных параметров, следует указать, что происходит, если необязательные параметры имеют значение null.</span><span class="sxs-lookup"><span data-stu-id="9307b-116">When you define a function that contains one or more optional parameters, you should specify what happens when the optional parameters are null.</span></span> <span data-ttu-id="9307b-117">В приведенном ниже примере `zipCode` и `dayOfWeek` являются необязательными параметрами для функции `getWeatherReport`.</span><span class="sxs-lookup"><span data-stu-id="9307b-117">In the following example, `zipCode` and `dayOfWeek` are both optional parameters for the `getWeatherReport` function.</span></span> <span data-ttu-id="9307b-118">Если `zipCode` параметр имеет значение null, для `98052`него устанавливается значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="9307b-118">If the `zipCode` parameter is null, the default value is set to `98052`.</span></span> <span data-ttu-id="9307b-119">Если `dayOfWeek` параметр имеет значение null, ему присваивается значение среда.</span><span class="sxs-lookup"><span data-stu-id="9307b-119">If the `dayOfWeek` parameter is null, it is set to Wednesday.</span></span>
+<span data-ttu-id="03e47-115">При определении функции, которая содержит один или несколько необязательных параметров, укажите, что происходит, если необязательные параметры имеют значение null.</span><span class="sxs-lookup"><span data-stu-id="03e47-115">When you define a function that contains one or more optional parameters, specify what happens when the optional parameters are null.</span></span> <span data-ttu-id="03e47-116">В приведенном ниже примере `zipCode` и `dayOfWeek` являются необязательными параметрами для функции `getWeatherReport`.</span><span class="sxs-lookup"><span data-stu-id="03e47-116">In the following example, `zipCode` and `dayOfWeek` are both optional parameters for the `getWeatherReport` function.</span></span> <span data-ttu-id="03e47-117">Если `zipCode` параметр имеет значение null, для него устанавливается значение по умолчанию `98052` .</span><span class="sxs-lookup"><span data-stu-id="03e47-117">If the `zipCode` parameter is null, the default value is set to `98052`.</span></span> <span data-ttu-id="03e47-118">Если `dayOfWeek` параметр имеет значение null, ему присваивается значение среда.</span><span class="sxs-lookup"><span data-stu-id="03e47-118">If the `dayOfWeek` parameter is null, it's set to Wednesday.</span></span>
 
-#### <a name="javascript"></a>[<span data-ttu-id="9307b-120">JavaScript</span><span class="sxs-lookup"><span data-stu-id="9307b-120">JavaScript</span></span>](#tab/javascript)
+#### <a name="javascript"></a>[<span data-ttu-id="03e47-119">JavaScript</span><span class="sxs-lookup"><span data-stu-id="03e47-119">JavaScript</span></span>](#tab/javascript)
 
 ```js
 /**
@@ -89,7 +89,7 @@ function getWeatherReport(zipCode, dayOfWeek) {
 }
 ```
 
-#### <a name="typescript"></a>[<span data-ttu-id="9307b-121">TypeScript</span><span class="sxs-lookup"><span data-stu-id="9307b-121">TypeScript</span></span>](#tab/typescript)
+#### <a name="typescript"></a>[<span data-ttu-id="03e47-120">TypeScript</span><span class="sxs-lookup"><span data-stu-id="03e47-120">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 /**
@@ -115,11 +115,11 @@ function getWeatherReport(zipCode?: number, dayOfWeek?: string): string {
 
 ---
 
-## <a name="range-parameters"></a><span data-ttu-id="9307b-122">Параметры Range</span><span class="sxs-lookup"><span data-stu-id="9307b-122">Range parameters</span></span>
+## <a name="range-parameters"></a><span data-ttu-id="03e47-121">Параметры Range</span><span class="sxs-lookup"><span data-stu-id="03e47-121">Range parameters</span></span>
 
-<span data-ttu-id="9307b-123">Настраиваемая функция может принимать диапазон данных ячейки в качестве входного параметра.</span><span class="sxs-lookup"><span data-stu-id="9307b-123">Your custom function may accept a range of cell data as an input parameter.</span></span> <span data-ttu-id="9307b-124">Функция также может возвращать диапазон данных.</span><span class="sxs-lookup"><span data-stu-id="9307b-124">A function can also return a range of data.</span></span> <span data-ttu-id="9307b-125">Excel передает диапазон данных ячейки в виде двумерного массива.</span><span class="sxs-lookup"><span data-stu-id="9307b-125">Excel will pass a range of cell data as a two-dimensional array.</span></span>
+<span data-ttu-id="03e47-122">Настраиваемая функция может принимать диапазон данных ячейки в качестве входного параметра.</span><span class="sxs-lookup"><span data-stu-id="03e47-122">Your custom function may accept a range of cell data as an input parameter.</span></span> <span data-ttu-id="03e47-123">Функция также может возвращать диапазон данных.</span><span class="sxs-lookup"><span data-stu-id="03e47-123">A function can also return a range of data.</span></span> <span data-ttu-id="03e47-124">Excel передает диапазон данных ячейки в виде двумерного массива.</span><span class="sxs-lookup"><span data-stu-id="03e47-124">Excel will pass a range of cell data as a two-dimensional array.</span></span>
 
-<span data-ttu-id="9307b-126">Например, предположим, что функция возвращает второе по величине значение из диапазона значений, хранящихся в Excel.</span><span class="sxs-lookup"><span data-stu-id="9307b-126">For example, suppose that your function returns the second highest value from a range of numbers stored in Excel.</span></span> <span data-ttu-id="9307b-127">Приведенная ниже функция принимает параметр `values`, относящийся к типу `Excel.CustomFunctionDimensionality.matrix`.</span><span class="sxs-lookup"><span data-stu-id="9307b-127">The following function accepts the parameter `values`, which is of type `Excel.CustomFunctionDimensionality.matrix`.</span></span> <span data-ttu-id="9307b-128">Обратите внимание, что в метаданных JSON для этой функции для `type` свойства параметра задано значение `matrix`.</span><span class="sxs-lookup"><span data-stu-id="9307b-128">Note that in the JSON metadata for this function, the parameter's `type` property is set to `matrix`.</span></span>
+<span data-ttu-id="03e47-125">Например, предположим, что функция возвращает второе по величине значение из диапазона значений, хранящихся в Excel.</span><span class="sxs-lookup"><span data-stu-id="03e47-125">For example, suppose that your function returns the second highest value from a range of numbers stored in Excel.</span></span> <span data-ttu-id="03e47-126">Приведенная ниже функция принимает параметр `values`, относящийся к типу `Excel.CustomFunctionDimensionality.matrix`.</span><span class="sxs-lookup"><span data-stu-id="03e47-126">The following function accepts the parameter `values`, which is of type `Excel.CustomFunctionDimensionality.matrix`.</span></span> <span data-ttu-id="03e47-127">Обратите внимание, что в метаданных JSON для этой функции для `type` Свойства параметра задано значение `matrix` .</span><span class="sxs-lookup"><span data-stu-id="03e47-127">Note that in the JSON metadata for this function, the parameter's `type` property is set to `matrix`.</span></span>
 
 ```js
 /**
@@ -144,11 +144,11 @@ function secondHighest(values) {
 }
 ```
 
-## <a name="repeating-parameters"></a><span data-ttu-id="9307b-129">Повторяющиеся параметры</span><span class="sxs-lookup"><span data-stu-id="9307b-129">Repeating parameters</span></span>
+## <a name="repeating-parameters"></a><span data-ttu-id="03e47-128">Повторяющиеся параметры</span><span class="sxs-lookup"><span data-stu-id="03e47-128">Repeating parameters</span></span>
 
-<span data-ttu-id="9307b-130">Повторяющийся параметр позволяет пользователю ввести ряд необязательных аргументов функции.</span><span class="sxs-lookup"><span data-stu-id="9307b-130">A repeating parameter allows a user to enter a series of optional of arguments to a function.</span></span> <span data-ttu-id="9307b-131">При вызове функции значения задаются в массиве для параметра.</span><span class="sxs-lookup"><span data-stu-id="9307b-131">When the function is called, the values are provided in an array for the parameter.</span></span> <span data-ttu-id="9307b-132">Если имя параметра заканчивается числом, каждый аргумент увеличит значение, например `ADD(number1, [number2], [number3],…)`.</span><span class="sxs-lookup"><span data-stu-id="9307b-132">If the parameter name ends with a number, each argument will increment the number, such as `ADD(number1, [number2], [number3],…)`.</span></span> <span data-ttu-id="9307b-133">Это соответствует соглашению, используемому для встроенных функций Excel.</span><span class="sxs-lookup"><span data-stu-id="9307b-133">This matches the convention used for built-in Excel functions.</span></span>
+<span data-ttu-id="03e47-129">Повторяющийся параметр позволяет пользователю ввести ряд необязательных аргументов функции.</span><span class="sxs-lookup"><span data-stu-id="03e47-129">A repeating parameter allows a user to enter a series of optional arguments to a function.</span></span> <span data-ttu-id="03e47-130">При вызове функции значения задаются в массиве для параметра.</span><span class="sxs-lookup"><span data-stu-id="03e47-130">When the function is called, the values are provided in an array for the parameter.</span></span> <span data-ttu-id="03e47-131">Если имя параметра заканчивается числом, каждый номер аргумента будет увеличиваться инкрементно, например `ADD(number1, [number2], [number3],…)` .</span><span class="sxs-lookup"><span data-stu-id="03e47-131">If the parameter name ends with a number, each argument's number will increase incrementally, such as `ADD(number1, [number2], [number3],…)`.</span></span> <span data-ttu-id="03e47-132">Это соответствует соглашению, используемому для встроенных функций Excel.</span><span class="sxs-lookup"><span data-stu-id="03e47-132">This matches the convention used for built-in Excel functions.</span></span>
 
-<span data-ttu-id="9307b-134">Приведенная ниже функция суммирует сумму чисел, адресов ячеек, а также диапазонов, если они введены.</span><span class="sxs-lookup"><span data-stu-id="9307b-134">The following function sums the total of numbers, cell addresses, as well as ranges, if entered.</span></span>
+<span data-ttu-id="03e47-133">Приведенная ниже функция суммирует сумму чисел, адресов ячеек, а также диапазонов, если они введены.</span><span class="sxs-lookup"><span data-stu-id="03e47-133">The following function sums the total of numbers, cell addresses, as well as ranges, if entered.</span></span>
 
 ```TS
 /**
@@ -172,13 +172,13 @@ function ADD(operands: number[][][]): number {
 }
 ```
 
-<span data-ttu-id="9307b-135">Эта функция отображается `=CONTOSO.ADD([operands], [operands]...)` в книге Excel.</span><span class="sxs-lookup"><span data-stu-id="9307b-135">This function shows `=CONTOSO.ADD([operands], [operands]...)` in the Excel workbook.</span></span>
+<span data-ttu-id="03e47-134">Эта функция отображается `=CONTOSO.ADD([operands], [operands]...)` в книге Excel.</span><span class="sxs-lookup"><span data-stu-id="03e47-134">This function shows `=CONTOSO.ADD([operands], [operands]...)` in the Excel workbook.</span></span>
 
 <img alt="The ADD custom function being entered into cell of an Excel worksheet" src="../images/operands.png" />
 
-### <a name="repeating-single-value-parameter"></a><span data-ttu-id="9307b-136">Повторяющийся параметр с одним значением</span><span class="sxs-lookup"><span data-stu-id="9307b-136">Repeating single value parameter</span></span>
+### <a name="repeating-single-value-parameter"></a><span data-ttu-id="03e47-135">Повторяющийся параметр с одним значением</span><span class="sxs-lookup"><span data-stu-id="03e47-135">Repeating single value parameter</span></span>
 
-<span data-ttu-id="9307b-137">Повторяющийся одиночный параметр значения позволяет передавать несколько отдельных значений.</span><span class="sxs-lookup"><span data-stu-id="9307b-137">A repeating single value parameter allows multiple single values to be passed.</span></span> <span data-ttu-id="9307b-138">Например, пользователь может ввести ADD (1, B2, 3).</span><span class="sxs-lookup"><span data-stu-id="9307b-138">For example, the user could enter ADD(1,B2,3).</span></span> <span data-ttu-id="9307b-139">В следующем примере показано, как объявить параметр с одним значением.</span><span class="sxs-lookup"><span data-stu-id="9307b-139">The following sample shows how to declare a single value parameter.</span></span>
+<span data-ttu-id="03e47-136">Повторяющийся одиночный параметр значения позволяет передавать несколько отдельных значений.</span><span class="sxs-lookup"><span data-stu-id="03e47-136">A repeating single value parameter allows multiple single values to be passed.</span></span> <span data-ttu-id="03e47-137">Например, пользователь может ввести ADD (1, B2, 3).</span><span class="sxs-lookup"><span data-stu-id="03e47-137">For example, the user could enter ADD(1,B2,3).</span></span> <span data-ttu-id="03e47-138">В следующем примере показано, как объявить параметр с одним значением.</span><span class="sxs-lookup"><span data-stu-id="03e47-138">The following sample shows how to declare a single value parameter.</span></span>
 
 ```JS
 /**
@@ -195,9 +195,9 @@ function addSingleValue(singleValue) {
 }
 ```
 
-### <a name="single-range-parameter"></a><span data-ttu-id="9307b-140">Один параметр Range</span><span class="sxs-lookup"><span data-stu-id="9307b-140">Single range parameter</span></span>
+### <a name="single-range-parameter"></a><span data-ttu-id="03e47-139">Один параметр Range</span><span class="sxs-lookup"><span data-stu-id="03e47-139">Single range parameter</span></span>
 
-<span data-ttu-id="9307b-141">Один параметр диапазона технически не является повторяющимся параметром, но включается здесь, так как объявление очень похоже на повторяющиеся параметры.</span><span class="sxs-lookup"><span data-stu-id="9307b-141">A single range parameter is not technically a repeating parameter, but is included here because the declaration is very similar to repeating parameters.</span></span> <span data-ttu-id="9307b-142">Она будет выглядеть как ADD (a2: B3), где один диапазон передается из Excel.</span><span class="sxs-lookup"><span data-stu-id="9307b-142">It would appear to the user as ADD(A2:B3) where a single range is passed from Excel.</span></span> <span data-ttu-id="9307b-143">В следующем примере показано, как объявить один параметр Range.</span><span class="sxs-lookup"><span data-stu-id="9307b-143">The following sample shows how to declare a single range parameter.</span></span>
+<span data-ttu-id="03e47-140">Один параметр range технически не является повторяющимся параметром, но он включен здесь, так как объявление очень похоже на повторяющиеся параметры.</span><span class="sxs-lookup"><span data-stu-id="03e47-140">A single range parameter isn't technically a repeating parameter, but is included here because the declaration is very similar to repeating parameters.</span></span> <span data-ttu-id="03e47-141">Она будет выглядеть как ADD (a2: B3), где один диапазон передается из Excel.</span><span class="sxs-lookup"><span data-stu-id="03e47-141">It would appear to the user as ADD(A2:B3) where a single range is passed from Excel.</span></span> <span data-ttu-id="03e47-142">В следующем примере показано, как объявить один параметр Range.</span><span class="sxs-lookup"><span data-stu-id="03e47-142">The following sample shows how to declare a single range parameter.</span></span>
 
 ```JS
 /**
@@ -215,26 +215,23 @@ function addSingleRange(singleRange) {
 }
 ```
 
-### <a name="repeating-range-parameter"></a><span data-ttu-id="9307b-144">Параметр повторяющегося диапазона</span><span class="sxs-lookup"><span data-stu-id="9307b-144">Repeating range parameter</span></span>
+### <a name="repeating-range-parameter"></a><span data-ttu-id="03e47-143">Параметр повторяющегося диапазона</span><span class="sxs-lookup"><span data-stu-id="03e47-143">Repeating range parameter</span></span>
 
-<span data-ttu-id="9307b-145">Параметр повторяющегося диапазона позволяет передавать несколько диапазонов или номеров.</span><span class="sxs-lookup"><span data-stu-id="9307b-145">A repeating range parameter allows multiple ranges or numbers to be passed.</span></span> <span data-ttu-id="9307b-146">Например, пользователь может ввести ADD (5, B2, C3, 8, No5: E8).</span><span class="sxs-lookup"><span data-stu-id="9307b-146">For example, the user could enter ADD(5,B2,C3,8,E5:E8).</span></span> <span data-ttu-id="9307b-147">Повторяющиеся диапазоны обычно указываются с `number[][][]` типом, так как они представляют собой трехмерные матрицы.</span><span class="sxs-lookup"><span data-stu-id="9307b-147">Repeating ranges are usually specified with the type `number[][][]` as they are three-dimensional matrices.</span></span> <span data-ttu-id="9307b-148">Пример приведен в основном примере для повторяющихся параметров (#repeating-Parameters).</span><span class="sxs-lookup"><span data-stu-id="9307b-148">For a sample, see the main sample listed for repeating parameters(#repeating-parameters).</span></span>
+<span data-ttu-id="03e47-144">Параметр повторяющегося диапазона позволяет передавать несколько диапазонов или номеров.</span><span class="sxs-lookup"><span data-stu-id="03e47-144">A repeating range parameter allows multiple ranges or numbers to be passed.</span></span> <span data-ttu-id="03e47-145">Например, пользователь может ввести ADD (5, B2, C3, 8, No5: E8).</span><span class="sxs-lookup"><span data-stu-id="03e47-145">For example, the user could enter ADD(5,B2,C3,8,E5:E8).</span></span> <span data-ttu-id="03e47-146">Повторяющиеся диапазоны обычно указываются с типом, `number[][][]` так как они представляют собой трехмерные матрицы.</span><span class="sxs-lookup"><span data-stu-id="03e47-146">Repeating ranges are usually specified with the type `number[][][]` as they are three-dimensional matrices.</span></span> <span data-ttu-id="03e47-147">Пример приведен в основном примере для повторяющихся параметров (#repeating-Parameters).</span><span class="sxs-lookup"><span data-stu-id="03e47-147">For a sample, see the main sample listed for repeating parameters(#repeating-parameters).</span></span>
 
 
-### <a name="declaring-repeating-parameters"></a><span data-ttu-id="9307b-149">Объявление повторяющихся параметров</span><span class="sxs-lookup"><span data-stu-id="9307b-149">Declaring repeating parameters</span></span>
-<span data-ttu-id="9307b-150">В typescript укажите, что параметр является многомерным.</span><span class="sxs-lookup"><span data-stu-id="9307b-150">In Typescript, indicate that the parameter is multi-dimensional.</span></span> <span data-ttu-id="9307b-151">Например, `ADD(values: number[])` указывает на одномерный массив, `ADD(values:number[][])` который указывает на двухмерный массив и т. д.</span><span class="sxs-lookup"><span data-stu-id="9307b-151">For example,  `ADD(values: number[])` would indicate a one-dimensional array, `ADD(values:number[][])` would indicate a two-dimensional array, and so on.</span></span>
+### <a name="declaring-repeating-parameters"></a><span data-ttu-id="03e47-148">Объявление повторяющихся параметров</span><span class="sxs-lookup"><span data-stu-id="03e47-148">Declaring repeating parameters</span></span>
+<span data-ttu-id="03e47-149">В typescript укажите, что параметр является многомерным.</span><span class="sxs-lookup"><span data-stu-id="03e47-149">In Typescript, indicate that the parameter is multi-dimensional.</span></span> <span data-ttu-id="03e47-150">Например, `ADD(values: number[])` указывает на одномерный массив, который указывает на `ADD(values:number[][])` двухмерный массив и т. д.</span><span class="sxs-lookup"><span data-stu-id="03e47-150">For example,  `ADD(values: number[])` would indicate a one-dimensional array, `ADD(values:number[][])` would indicate a two-dimensional array, and so on.</span></span>
 
-<span data-ttu-id="9307b-152">В JavaScript используйте `@param values {number[]}` одномерные массивы, `@param <name> {number[][]}` для двумерных массивов и т. д. для дополнительных измерений.</span><span class="sxs-lookup"><span data-stu-id="9307b-152">In JavaScript, use `@param values {number[]}` for one-dimensional arrays, `@param <name> {number[][]}` for two-dimensional arrays, and so on for more dimensions.</span></span>
+<span data-ttu-id="03e47-151">В JavaScript используйте одномерные `@param values {number[]}` массивы, `@param <name> {number[][]}` для двумерных массивов и т. д. для дополнительных измерений.</span><span class="sxs-lookup"><span data-stu-id="03e47-151">In JavaScript, use `@param values {number[]}` for one-dimensional arrays, `@param <name> {number[][]}` for two-dimensional arrays, and so on for more dimensions.</span></span>
 
-<span data-ttu-id="9307b-153">Для созданного вручную JSON убедитесь, что параметр указан как `"repeating": true` в файле JSON, а также проверьте, что параметры помечены как. `"dimensionality": matrix`</span><span class="sxs-lookup"><span data-stu-id="9307b-153">For hand-authored JSON, ensure your parameter is specified as `"repeating": true` in your JSON file, as well as check that your parameters are marked as `"dimensionality": matrix`.</span></span>
+<span data-ttu-id="03e47-152">Для созданного вручную JSON убедитесь, что параметр указан как `"repeating": true` в файле JSON, а также проверьте, что параметры помечены как `"dimensionality": matrix` .</span><span class="sxs-lookup"><span data-stu-id="03e47-152">For hand-authored JSON, ensure your parameter is specified as `"repeating": true` in your JSON file, as well as check that your parameters are marked as `"dimensionality": matrix`.</span></span>
 
->[!NOTE]
-><span data-ttu-id="9307b-154">Функции, содержащие повторяющиеся параметры, автоматически содержат параметр вызова в качестве последнего параметра.</span><span class="sxs-lookup"><span data-stu-id="9307b-154">Functions containing repeating parameters automatically contain an invocation parameter as the last parameter.</span></span> <span data-ttu-id="9307b-155">Дополнительные сведения о параметрах вызова можно найти в следующем разделе.</span><span class="sxs-lookup"><span data-stu-id="9307b-155">For more information on invocation parameters, see the following section.</span></span>
+## <a name="invocation-parameter"></a><span data-ttu-id="03e47-153">Параметр вызова</span><span class="sxs-lookup"><span data-stu-id="03e47-153">Invocation parameter</span></span>
 
-## <a name="invocation-parameter"></a><span data-ttu-id="9307b-156">Параметр вызова</span><span class="sxs-lookup"><span data-stu-id="9307b-156">Invocation parameter</span></span>
+<span data-ttu-id="03e47-154">Каждая пользовательская функция автоматически передает `invocation` аргумент в качестве последнего аргумента.</span><span class="sxs-lookup"><span data-stu-id="03e47-154">Every custom function is automatically passed an `invocation` argument as the last argument.</span></span> <span data-ttu-id="03e47-155">Этот аргумент можно использовать для получения дополнительного контекста, например адреса вызывающей ячейки.</span><span class="sxs-lookup"><span data-stu-id="03e47-155">This argument can be used to retrieve additional context, such as the address of the calling cell.</span></span> <span data-ttu-id="03e47-156">Или его можно использовать для отправки в Excel данных, например обработчика функции для [отмены функции](custom-functions-web-reqs.md#make-a-streaming-function).</span><span class="sxs-lookup"><span data-stu-id="03e47-156">Or it can be used to send information to Excel, such as a function handler for [canceling a function](custom-functions-web-reqs.md#make-a-streaming-function).</span></span> <span data-ttu-id="03e47-157">Даже если вы не объявили параметры, у настраиваемой функции есть этот параметр.</span><span class="sxs-lookup"><span data-stu-id="03e47-157">Even if you declare no parameters, your custom function has this parameter.</span></span> <span data-ttu-id="03e47-158">Этот аргумент не отображается для пользователя в Excel.</span><span class="sxs-lookup"><span data-stu-id="03e47-158">This argument doesn't appear for a user in Excel.</span></span> <span data-ttu-id="03e47-159">Если вы хотите использовать `invocation` пользовательскую функцию, объявите ее в качестве последнего параметра.</span><span class="sxs-lookup"><span data-stu-id="03e47-159">If you want to use `invocation` in your custom function, declare it as the last parameter.</span></span>
 
-<span data-ttu-id="9307b-157">Каждая пользовательская функция автоматически передает `invocation` аргумент в качестве последнего аргумента.</span><span class="sxs-lookup"><span data-stu-id="9307b-157">Every custom function is automatically passed an `invocation` argument as the last argument.</span></span> <span data-ttu-id="9307b-158">Этот аргумент можно использовать для получения дополнительного контекста, например адреса вызывающей ячейки.</span><span class="sxs-lookup"><span data-stu-id="9307b-158">This argument can be used to retrieve additional context, such as the address of the calling cell.</span></span> <span data-ttu-id="9307b-159">Или его можно использовать для отправки в Excel данных, например обработчика функции для [отмены функции](custom-functions-web-reqs.md#make-a-streaming-function).</span><span class="sxs-lookup"><span data-stu-id="9307b-159">Or it can be used to send information to Excel, such as a function handler for [canceling a function](custom-functions-web-reqs.md#make-a-streaming-function).</span></span> <span data-ttu-id="9307b-160">Даже если вы не объявили параметры, у настраиваемой функции есть этот параметр.</span><span class="sxs-lookup"><span data-stu-id="9307b-160">Even if you declare no parameters, your custom function has this parameter.</span></span> <span data-ttu-id="9307b-161">Этот аргумент не отображается для пользователя в Excel.</span><span class="sxs-lookup"><span data-stu-id="9307b-161">This argument doesn't appear for a user in Excel.</span></span> <span data-ttu-id="9307b-162">Если вы хотите использовать `invocation` пользовательскую функцию, объявите ее в качестве последнего параметра.</span><span class="sxs-lookup"><span data-stu-id="9307b-162">If you want to use `invocation` in your custom function, declare it as the last parameter.</span></span>
-
-<span data-ttu-id="9307b-163">В следующем примере кода `invocation` контекст явно указывается для ссылки.</span><span class="sxs-lookup"><span data-stu-id="9307b-163">In the following code sample, the `invocation` context is explicitly stated for your reference.</span></span>
+<span data-ttu-id="03e47-160">В следующем примере кода `invocation` контекст явно указывается для ссылки.</span><span class="sxs-lookup"><span data-stu-id="03e47-160">In the following code sample, the `invocation` context is explicitly stated for your reference.</span></span>
 
 ```js
 /**
@@ -249,42 +246,14 @@ function add(first, second, invocation) {
 }
 ```
 
-<span data-ttu-id="9307b-164">Параметр позволяет получить контекст вызывающей ячейки, который может быть полезен в некоторых сценариях, в том числе [Обнаружение адреса ячейки, которая вызывает настраиваемую функцию](#addressing-cells-context-parameter).</span><span class="sxs-lookup"><span data-stu-id="9307b-164">The parameter allows you to get the context of the invoking cell, which can be helpful in some scenarios including [discovering the address of a cell which invoke a custom function](#addressing-cells-context-parameter).</span></span>
+## <a name="next-steps"></a><span data-ttu-id="03e47-161">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="03e47-161">Next steps</span></span>
 
-### <a name="addressing-cells-context-parameter"></a><span data-ttu-id="9307b-165">Параметр контекста ячейки адресации</span><span class="sxs-lookup"><span data-stu-id="9307b-165">Addressing cell's context parameter</span></span>
+<span data-ttu-id="03e47-162">Сведения о том, как использовать [переменные значения в пользовательских функциях](custom-functions-volatile.md).</span><span class="sxs-lookup"><span data-stu-id="03e47-162">Learn how to use [volatile values in your custom functions](custom-functions-volatile.md).</span></span>
 
-<span data-ttu-id="9307b-166">В некоторых случаях необходимо получить адрес ячейки, которая вызвала пользовательскую функцию.</span><span class="sxs-lookup"><span data-stu-id="9307b-166">In some cases you need to get the address of the cell that invoked your custom function.</span></span> <span data-ttu-id="9307b-167">Это полезно в следующих сценариях:</span><span class="sxs-lookup"><span data-stu-id="9307b-167">This is useful in the following scenarios:</span></span>
+## <a name="see-also"></a><span data-ttu-id="03e47-163">См. также</span><span class="sxs-lookup"><span data-stu-id="03e47-163">See also</span></span>
 
-- <span data-ttu-id="9307b-168">Диапазоны форматирования: используйте адрес ячейки в качестве ключа для хранения информации в [оффицерунтиме. Storage](../excel/custom-functions-runtime.md#storing-and-accessing-data).</span><span class="sxs-lookup"><span data-stu-id="9307b-168">Formatting ranges: Use the cell's address as the key to store information in [OfficeRuntime.storage](../excel/custom-functions-runtime.md#storing-and-accessing-data).</span></span> <span data-ttu-id="9307b-169">После этого используйте событие [onCalculated](/javascript/api/excel/excel.worksheet#oncalculated) в Excel, чтобы загрузить ключ из `OfficeRuntime.storage`.</span><span class="sxs-lookup"><span data-stu-id="9307b-169">Then, use [onCalculated](/javascript/api/excel/excel.worksheet#oncalculated) in Excel to load the key from `OfficeRuntime.storage`.</span></span>
-- <span data-ttu-id="9307b-170">Отображение кэшированных значений. Если функция используется в автономном режиме, отображайте сохраненные в кэше значения из `OfficeRuntime.storage` с помощью `onCalculated`.</span><span class="sxs-lookup"><span data-stu-id="9307b-170">Displaying cached values: If your function is used offline, display stored cached values from `OfficeRuntime.storage` using `onCalculated`.</span></span>
-- <span data-ttu-id="9307b-171">Сверка: используйте адрес ячейки, чтобы найти исходную ячейку, чтобы упростить сверку при выполнении обработки.</span><span class="sxs-lookup"><span data-stu-id="9307b-171">Reconciliation: Use the cell's address to discover an origin cell to help you reconcile where processing is occurring.</span></span>
-
-<span data-ttu-id="9307b-172">Чтобы запросить контекст ячейки адресации в функции, необходимо использовать функцию для поиска адреса ячейки, например, в приведенном ниже примере.</span><span class="sxs-lookup"><span data-stu-id="9307b-172">To request an addressing cell's context in a function, you need to use a function to find the cell's address, such as the one in the following example.</span></span> <span data-ttu-id="9307b-173">Сведения об адресе ячейки отображаются только в том случае, `@requiresAddress` если она помечена комментариями функции.</span><span class="sxs-lookup"><span data-stu-id="9307b-173">The information about a cell's address is exposed only if `@requiresAddress` is tagged in the function's comments.</span></span>
-
-```js
-/**
- * Function that gets the address of a cell.
- * @customfunction
- * @param {CustomFunctions.Invocation} invocation Uses the invocation parameter present in each cell.
- * @requiresAddress
- * @returns {string} Returns address of cell.
- */
-
-function getAddress(invocation) {
-  return invocation.address;
-}
-```
-
-<span data-ttu-id="9307b-174">По умолчанию значения, возвращаемые из функции `getAddress`, соответствуют следующему формату: `SheetName!CellNumber`.</span><span class="sxs-lookup"><span data-stu-id="9307b-174">By default, values returned from a `getAddress` function follow the following format: `SheetName!CellNumber`.</span></span> <span data-ttu-id="9307b-175">Например, если функция вызвана с листа с названием Expenses (Расходы) в ячейке B2, возвращаемым значением будет `Expenses!B2`.</span><span class="sxs-lookup"><span data-stu-id="9307b-175">For example, if a function was called from a sheet called Expenses in cell B2, the returned value would be `Expenses!B2`.</span></span>
-
-## <a name="next-steps"></a><span data-ttu-id="9307b-176">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="9307b-176">Next steps</span></span>
-
-<span data-ttu-id="9307b-177">Сведения о том, как [сохранить состояние в пользовательских функциях](custom-functions-save-state.md) или использовать [переменные значения в пользовательских функциях](custom-functions-volatile.md).</span><span class="sxs-lookup"><span data-stu-id="9307b-177">Learn how to [save state in your custom functions](custom-functions-save-state.md) or use [volatile values in your custom functions](custom-functions-volatile.md).</span></span>
-
-## <a name="see-also"></a><span data-ttu-id="9307b-178">См. также</span><span class="sxs-lookup"><span data-stu-id="9307b-178">See also</span></span>
-
-* [<span data-ttu-id="9307b-179">Получение и обработка данных с помощью пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="9307b-179">Receive and handle data with custom functions</span></span>](custom-functions-web-reqs.md)
-* [<span data-ttu-id="9307b-180">Метаданные пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="9307b-180">Custom functions metadata</span></span>](custom-functions-json.md)
-* [<span data-ttu-id="9307b-181">Автоматическое генерирование метаданных JSON для пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="9307b-181">Autogenerate JSON metadata for custom functions</span></span>](custom-functions-json-autogeneration.md)
-* [<span data-ttu-id="9307b-182">Создание пользовательских функций в Excel</span><span class="sxs-lookup"><span data-stu-id="9307b-182">Create custom functions in Excel</span></span>](custom-functions-overview.md)
-* [<span data-ttu-id="9307b-183">Руководство по пользовательским функциям в Excel</span><span class="sxs-lookup"><span data-stu-id="9307b-183">Excel custom functions tutorial</span></span>](../tutorials/excel-tutorial-create-custom-functions.md)
+* [<span data-ttu-id="03e47-164">Получение и обработка данных с помощью пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="03e47-164">Receive and handle data with custom functions</span></span>](custom-functions-web-reqs.md)
+* [<span data-ttu-id="03e47-165">Метаданные пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="03e47-165">Custom functions metadata</span></span>](custom-functions-json.md)
+* [<span data-ttu-id="03e47-166">Автоматическое генерирование метаданных JSON для пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="03e47-166">Autogenerate JSON metadata for custom functions</span></span>](custom-functions-json-autogeneration.md)
+* [<span data-ttu-id="03e47-167">Создание пользовательских функций в Excel</span><span class="sxs-lookup"><span data-stu-id="03e47-167">Create custom functions in Excel</span></span>](custom-functions-overview.md)
+* [<span data-ttu-id="03e47-168">Руководство по пользовательским функциям в Excel</span><span class="sxs-lookup"><span data-stu-id="03e47-168">Excel custom functions tutorial</span></span>](../tutorials/excel-tutorial-create-custom-functions.md)

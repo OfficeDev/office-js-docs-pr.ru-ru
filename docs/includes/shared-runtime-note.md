@@ -1,0 +1,2 @@
+>[!NOTE]
+> <span data-ttu-id="0c950-101">Если вы не хотите использовать функцию без пользовательского интерфейса, рекомендуется использовать пользовательские функции [совместно с общедоступной средой выполнения](../excel/configure-your-add-in-to-use-a-shared-runtime.md).</span><span class="sxs-lookup"><span data-stu-id="0c950-101">Unless you have a specific reason to use a UI-less function, we recommend using custom functions with a [shared runtime](../excel/configure-your-add-in-to-use-a-shared-runtime.md).</span></span>
