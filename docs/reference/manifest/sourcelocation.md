@@ -1,14 +1,14 @@
 ---
 title: Элемент SourceLocation в файле манифеста
 description: Элемент SourceLocation указывает расположение исходных файлов для надстройки Office.
-ms.date: 03/16/2020
+ms.date: 05/12/2020
 localization_priority: Normal
-ms.openlocfilehash: fcca051b0d85c98cb011d5b886981c543ef8e3b0
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 642780c3231523ea579ca548b3f3f984b2856666
+ms.sourcegitcommit: f62d9630de69c5c070e3d4048205f5cc654db7e4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42717903"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "44278401"
 ---
 # <a name="sourcelocation-element"></a>Элемент SourceLocation
 
@@ -26,7 +26,7 @@ ms.locfileid: "42717903"
 
 - [DefaultSettings](defaultsettings.md) (надстройки области задач и контентные надстройки)
 - [FormSettings](formsettings.md) (почтовые надстройки)
-- [ExtensionPoint](extensionpoint.md) (контекстные почтовые надстройки)
+- [ExtensionPoint](extensionpoint.md) (контекстные и лаунчевент (Предварительная версия) почтовые надстройки)
 
 ## <a name="can-contain"></a>Может содержать
 

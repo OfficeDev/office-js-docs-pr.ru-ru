@@ -3,12 +3,12 @@ ms.date: 01/14/2020
 description: Узнайте, как реализовать переменные настраиваемые функции потоковой и автономной работы.
 title: Пересчитываемые значения в функциях
 localization_priority: Normal
-ms.openlocfilehash: 617599a2687696a96240c4f162f9b02788a215f4
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 7545d9928eaeb3779a8f7e04c87d0d5f33a7a131
+ms.sourcegitcommit: 54e2892c0c26b9ad1e4dba8aba48fea39f853b6c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42717210"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "44275779"
 ---
 # <a name="volatile-values-in-functions"></a>Пересчитываемые значения в функциях
 
@@ -20,7 +20,7 @@ ms.locfileid: "42717210"
 
 Пользовательские функции позволяют создавать собственные переменные функции, которые могут быть удобны при обработке дат, времени, случайных чисел и моделирования. Например, для определения оптимального решения для [имитации Монте Карло](https://en.wikipedia.org/wiki/Monte_Carlo_method) требуется создание случайных входных данных.
 
-При выборе автоматического создания JSON файла объявите переменную с помощью тега `@volatile`жсдок Comment. Дополнительные сведения об автоформировании приведены в статье [Создание МЕТАДАННЫХ JSON для пользовательских функций](custom-functions-json-autogeneration.md).
+При выборе автоматического создания JSON файла объявите переменную с помощью тега Жсдок Comment `@volatile` . Дополнительные сведения об автоформировании приведены в статье [Создание МЕТАДАННЫХ JSON для пользовательских функций](custom-functions-json-autogeneration.md).
 
 Ниже приведен пример временного настраиваемой функции, которая имитирует пошаговое описание шести костей.
 
@@ -38,10 +38,9 @@ function roll6sided() {
 ```
 
 ## <a name="next-steps"></a>Дальнейшие действия
-Сведения о том, как [сохранить состояние в пользовательских функциях](custom-functions-save-state.md).
+* Сведения о [параметрах настраиваемых функций](custom-functions-parameter-options.md).
 
 ## <a name="see-also"></a>См. также
 
-* [Параметры параметров пользовательских функций](custom-functions-parameter-options.md)
 * [Метаданные пользовательских функций](custom-functions-json.md)
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)

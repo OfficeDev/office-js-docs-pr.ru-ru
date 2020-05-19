@@ -1,14 +1,14 @@
 ---
 title: Сравнение поддержки надстроек Outlook в Outlook на компьютерах Mac
 description: Узнайте, как сравнить надстройки в Outlook для Mac с другими ведущими приложениями Outlook.
-ms.date: 11/26/2019
+ms.date: 05/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 452a162a05a44477c85a99417b3a8cefbf49e515
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: fd03141fbcaecb88db358101a00681c8a85af382
+ms.sourcegitcommit: 71a44405e42b4798a8354f7f96d84548ae7a00f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42720829"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "44280354"
 ---
 # <a name="compare-outlook-add-in-support-in-outlook-on-mac-with-other-outlook-hosts"></a>Сравнение поддержки надстроек Outlook в Outlook в Mac с другими ведущими приложениями Outlook
 
@@ -18,7 +18,7 @@ ms.locfileid: "42720829"
 
 | Область | Outlook в Интернете, Windows и мобильных устройствах | Outlook для Mac |
 |:-----|:-----|:-----|
-| Поддерживаемые версии файла office.js и схемы манифеста Надстройки Office | Все API в файле office.js и схема версии 1.1. | Все API в файле office.js и схема версии 1.1.<br><br>**Note**: Outlook в Mac не поддерживает сохранение собрания. Метод `saveAsync` не работает при вызове из собрания в режиме создания. Временное решение представлено в статье [Не удается сохранить встречу как черновик в Outlook для Mac с помощью API JS для Office](https://support.microsoft.com/help/4505745). |
+| Поддерживаемые версии файла office.js и схемы манифеста Надстройки Office | Все API в файле office.js и схема версии 1.1. | Все API в файле office.js и схема версии 1.1.<br><br>**Примечание**: в Outlook на Mac-адресе только построение 16.35.308 или более поздней версии поддерживает сохранение собрания. В противном случае `saveAsync` метод завершается с ошибкой при вызове из собрания в режиме создания. Временное решение представлено в статье [Не удается сохранить встречу как черновик в Outlook для Mac с помощью API JS для Office](https://support.microsoft.com/help/4505745). |
 | Экземпляры серии повторяющихся встреч | <ul><li>Можно получить идентификатор элемента и другие свойства основной встречи или экземпляра встречи из серии повторяющихся встреч.</li><li>Можно использовать [mailbox.displayAppointmentForm](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods), чтобы вывести на экран экземпляр или основную встречу их серии.</li></ul> | <ul><li>Можно получить идентификатор элемента и другие свойства основной встречи, но не экземпляра серии повторяющихся встреч.</li><li>Можно отобразить основную встречу из серии повторяющихся встреч. Без идентификатора элемента экземпляр серии повторяющихся встреч отобразить невозможно.</li></ul> |
 | Тип получателя участника встречи | С помощью [EmailAddressDetails.recipientType](/javascript/api/outlook/office.emailaddressdetails#recipienttype) можно определить тип получателя участника. | `EmailAddressDetails.recipientType` возвращает `undefined` для участников встречи. |
 | Строка версии ведущего приложения | Формат строки версии, возвращаемой [diagnostics.hostVersion](/javascript/api/outlook/office.diagnostics#hostversion), зависит от фактического типа ведущего приложения. Пример:<ul><li>Outlook в Windows:`15.0.4454.1002`</li><li>Outlook в Интернете:`15.0.918.2`</li></ul> |Пример строки версии, возвращаемой `Diagnostics.hostVersion` в Outlook для Mac:`15.0 (140325)` |

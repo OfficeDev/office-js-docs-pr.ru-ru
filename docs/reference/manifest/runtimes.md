@@ -1,25 +1,29 @@
 ---
-title: Среды выполнения в файле манифеста (Предварительная версия)
+title: Среды выполнения в файле манифеста
 description: Элемент Runtimes указывает среду выполнения надстройки.
-ms.date: 02/21/2020
+ms.date: 05/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 5797aa78ae3667461de48de481ff44f14c307ced
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 22156a171ca2f423024efb1b3d2a6fdae07dfef6
+ms.sourcegitcommit: f62d9630de69c5c070e3d4048205f5cc654db7e4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42720423"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "44278366"
 ---
-# <a name="runtimes-element-preview"></a>Элемент среды выполнения (Предварительная версия)
+# <a name="runtimes-element"></a>Элемент среды выполнения
 
-[!include[Running custom functions in browser runtime note](../../includes/excel-shared-runtime-preview-note.md)]
+Задает среду выполнения надстройки. Дочерний [`<Host>`](host.md) элемент.
 
-Указывает среду выполнения надстройки и позволяет использовать пользовательские функции, кнопки ленты и область задач для использования одной и той же среды выполнения JavaScript. Дочерний `<Host>` элемент элемента в файле манифеста. Дополнительные сведения можно найти в статье [Настройка надстройки Excel для использования общей среды выполнения JavaScript](../../excel/configure-your-add-in-to-use-a-shared-runtime.md).
+В Excel этот элемент позволяет использовать одну и ту же среду выполнения для ленты, области задач и пользовательских функций. Дополнительные сведения можно найти в статье [Настройка надстройки Excel для использования общей среды выполнения JavaScript](../../excel/configure-your-add-in-to-use-a-shared-runtime.md).
 
-**Тип надстройки:** надстройки области задач
+В Outlook этот элемент включает активацию надстройки на основе событий. Дополнительные сведения см. [в разделе Настройка надстройки Outlook для активации на основе событий](../../outlook/autolaunch.md).
+
+**Тип надстройки:** Область задач, почта
 
 > [!IMPORTANT]
-> Общедоступная среда выполнения в настоящее время находится в режиме предварительной версии и доступна только в Excel для Windows. Для ознакомления с предварительными возможностями необходимо присоединиться к [программе предварительной оценки Office](https://insider.office.com/).
+> **Excel**: общая среда выполнения в настоящее время находится в режиме предварительной версии и доступна только в Excel для Windows. Для ознакомления с предварительными возможностями необходимо присоединиться к [программе предварительной оценки Office](https://insider.office.com/).
+>
+> **Outlook**: функция активации на основе событий в настоящее время находится [в предварительной версии](../../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) и доступна только в Outlook в Интернете. Дополнительные сведения см. [в статье Просмотр функции активации на основе событий](../../outlook/autolaunch.md#how-to-preview-the-event-based-activation-feature).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,14 +33,15 @@ ms.locfileid: "42720423"
 </Runtimes>
 ```
 
-## <a name="contained-in"></a>Содержится в 
-[Host](./host.md)
+## <a name="contained-in"></a>Содержится в
+
+[Host](host.md) (Узел)
 
 ## <a name="child-elements"></a>Дочерние элементы
 
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  **Среда выполнения**     | Да |  Среда выполнения надстройки.
+| [Среда выполнения](runtime.md) | Да |  Среда выполнения надстройки. |
 
 ## <a name="see-also"></a>См. также
 

@@ -1,14 +1,14 @@
 ---
 title: Элемент ExtensionPoint в файле манифеста
 description: Определяет, где доступны функции надстройки в пользовательском интерфейсе Office.
-ms.date: 05/04/2020
+ms.date: 05/18/2020
 localization_priority: Normal
-ms.openlocfilehash: ede99ad73beb1e4a46c9b08188ca79efb556acb0
-ms.sourcegitcommit: 800dacf0399465318489c9d949e259b5cf0f81ca
+ms.openlocfilehash: 41d4ede1ef4198430d888891e3eedda4e050456f
+ms.sourcegitcommit: f62d9630de69c5c070e3d4048205f5cc654db7e4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "44022178"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "44278422"
 ---
 # <a name="extensionpoint-element"></a>Элемент ExtensionPoint
 
@@ -93,6 +93,7 @@ ms.locfileid: "44022178"
 - [Module](#module) (можно использовать только в [DesktopFormFactor](desktopformfactor.md))
 - [MobileMessageReadCommandSurface](#mobilemessagereadcommandsurface)
 - [мобилеонлинемитингкоммандсурфаце](#mobileonlinemeetingcommandsurface-preview)
+- [лаунчевент](#launchevent-preview)
 - [Events](#events)
 - [DetectedEntity](#detectedentity)
 
@@ -271,11 +272,11 @@ ms.locfileid: "44022178"
 |:-----|:-----|
 |  [Control](control.md) |  Добавляет кнопку на поверхность команды.  |
 
-`ExtensionPoint`у элементов этого типа может быть только один дочерний элемент `Control` : element.
+`ExtensionPoint`у элементов этого типа может быть только один дочерний элемент: `Control` element.
 
-Атрибуту `Control` элемента, содержащегося в этой точке расширения `xsi:type` , должен быть `MobileButton`присвое значение.
+`Control`Атрибуту элемента, содержащегося в этой точке расширения, должен быть `xsi:type` присвое значение `MobileButton` .
 
-`Icon` Изображения должны быть в градациях серого с `#919191` использованием шестнадцатеричного кода или его эквивалента в [других цветовых форматах](https://convertingcolors.com/hex-color-919191.html).
+`Icon`Изображения должны быть в градациях серого с использованием шестнадцатеричного кода `#919191` или его эквивалента в [других цветовых форматах](https://convertingcolors.com/hex-color-919191.html).
 
 #### <a name="example"></a>Пример
 
@@ -301,9 +302,36 @@ ms.locfileid: "44022178"
 </ExtensionPoint>
 ```
 
+### <a name="launchevent-preview"></a>Лаунчевент (Предварительная версия)
+
+> [!NOTE]
+> Эта точка расширения поддерживается только в [предварительном просмотре](../objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) в Outlook в Интернете с подпиской на Office 365.
+
+Эта точка расширения позволяет активировать надстройку на основе поддерживаемых событий на настольных формах. В настоящее время единственными поддерживаемыми событиями являются `OnNewMessageCompose` и `OnNewAppointmentOrganizer` . Чтобы узнать больше об этом сценарии, ознакомьтесь со статьей [Настройка надстройки Outlook для активации на основе событий](../../outlook/autolaunch.md) .
+
+#### <a name="child-elements"></a>Дочерние элементы
+
+|  Элемент |  Описание  |
+|:-----|:-----|
+| [лаунчевентс](launchevents.md) |  Список [лаунчевент](launchevent.md) для активации на основе событий.  |
+| [SourceLocation](sourcelocation.md) |  Расположение исходного файла JavaScript.  |
+
+#### <a name="example"></a>Пример
+
+```xml
+<ExtensionPoint xsi:type="LaunchEvent">
+  <LaunchEvents>
+    <LaunchEvent Type="OnNewMessageCompose" FunctionName="onMessageComposeHandler"/>
+    <LaunchEvent Type="OnNewAppointmentOrganizer" FunctionName="onAppointmentComposeHandler"/>
+  </LaunchEvents>
+  <!-- Identifies the runtime to be used (also referenced by the Runtime element). -->
+  <SourceLocation resid="WebViewRuntime.Url"/>
+</ExtensionPoint>
+```
+
 ### <a name="events"></a>События
 
-Эта точка расширения добавляет обработчик для указанного события.
+Эта точка расширения добавляет обработчик для указанного события. Для получения дополнительных сведений об использовании этой точки расширения, ознакомьтесь со статьей [функция On Send для надстроек Outlook](../../outlook/outlook-on-send-addins.md).
 
 | Элемент | Описание  |
 |:-----|:-----|

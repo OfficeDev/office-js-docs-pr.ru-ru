@@ -1,20 +1,22 @@
 ---
-ms.date: 07/10/2019
-description: Отладка пользовательских функций в Excel.
-title: Отладка пользовательских функций
+ms.date: 05/17/2020
+description: Узнайте, как отладить пользовательские функции Excel, не использующие область задач.
+title: Отладка пользовательских функций без пользовательского интерфейса
 localization_priority: Normal
-ms.openlocfilehash: 4abd5f3da58c35485004b17f92b334b133cabd27
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 6de7dda2e22195096f75cd2bd475ee0e49f4461d
+ms.sourcegitcommit: f62d9630de69c5c070e3d4048205f5cc654db7e4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719310"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "44278387"
 ---
-# <a name="custom-functions-debugging"></a>Отладка пользовательских функций
+# <a name="ui-less-custom-functions-debugging"></a>Отладка пользовательских функций без пользовательского интерфейса
 
-Отладка настраиваемых функций может осуществляться несколькими способами, в зависимости от используемой платформы.
+Отладка настраиваемых функций, не использующих область задач или другие элементы пользовательского интерфейса (пользовательские функции без ПОЛЬЗОВАТЕЛЬСКОГО интерфейса), может быть выполнена несколькими способами в зависимости от используемой платформы.
 
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
+
+[!include[Shared runtime note](../includes/shared-runtime-note.md)]
 
 В Windows:
 - [Отладчик Excel для настольных ПК и Visual Studio Code (VS Code)](#use-the-vs-code-debugger-for-excel-desktop)
@@ -35,7 +37,7 @@ ms.locfileid: "42719310"
 
 ## <a name="use-the-vs-code-debugger-for-excel-desktop"></a>Использование отладчика кода VS для классической версии Excel
 
-Вы можете использовать код VS для отладки настраиваемых функций в Office Excel на настольном компьютере.
+Вы можете использовать код VS для отладки пользовательских функций без пользовательского интерфейса в Office Excel на настольном компьютере.
 
 > [!NOTE]
 > Отладка на рабочем столе для Mac недоступна, но ее можно получить [с помощью средств браузера и командной строки для отладки Excel в Интернете](#use-the-command-line-tools-to-debug)).
@@ -62,7 +64,7 @@ ms.locfileid: "42719310"
 
 ## <a name="use-the-vs-code-debugger-for-excel-in-microsoft-edge"></a>Использование отладчика кода VS для Excel в Microsoft Edge
 
-Вы можете использовать код VS для отладки настраиваемых функций в Excel в браузере Microsoft Edge. Чтобы использовать код VS с Microsoft EDGE, необходимо установить [отладчик для расширения Microsoft Edge](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge) .
+Вы можете использовать код VS для отладки пользовательских функций без пользовательского интерфейса в Excel в браузере Microsoft Edge. Чтобы использовать код VS с Microsoft EDGE, необходимо установить [отладчик для расширения Microsoft Edge](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge) .
 
 ### <a name="run-your-add-in-from-vs-code"></a>Запуск надстройки из кода VS
 
@@ -98,7 +100,7 @@ ms.locfileid: "42719310"
 
 ## <a name="use-the-browser-developer-tools-to-debug-custom-functions-in-excel-on-the-web"></a>Использование средств разработчика браузера для отладки настраиваемых функций в Excel в Интернете
 
-Средства разработчика браузера можно использовать для отладки настраиваемых функций в Excel в Интернете. Следующие действия работают как для Windows, так и для macOS.
+Средства разработчика браузера можно использовать для отладки пользовательских функций, не отличных от интерфейса пользователя, в Excel в Интернете. Следующие действия работают как для Windows, так и для macOS.
 
 ### <a name="run-your-add-in-from-visual-studio-code"></a>Запуск надстройки из Visual Studio Code
 
@@ -167,11 +169,10 @@ ms.locfileid: "42719310"
 - `npm run stop`: Остановка Excel и отладка.
 
 ## <a name="next-steps"></a>Дальнейшие действия
-Узнайте о [методиках проверки подлинности в пользовательских функциях](custom-functions-authentication.md). Или просмотрите [уникальную архитектуру пользовательской функции](custom-functions-architecture.md).
+Сведения о методах [проверки подлинности для пользовательских функций без пользовательского интерфейса](custom-functions-authentication.md).
 
 ## <a name="see-also"></a>См. также
 
 * [Устранение неполадок пользовательских функций](custom-functions-troubleshooting.md)
 * [Обработка ошибок в пользовательских функциях Excel](custom-functions-errors.md)
-* [Создание пользовательских функций, совместимых с функциями XLL, определенными пользователями](make-custom-functions-compatible-with-xll-udf.md)
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)

@@ -3,12 +3,12 @@ title: Вызов API Microsoft Excel из настраиваемой функц
 description: Узнайте, какие API Microsoft Excel вы можете вызывать из пользовательской функции.
 ms.date: 05/11/2020
 localization_priority: Normal
-ms.openlocfilehash: a24cdfba2d79b6e2ad165765d22cd77743047d34
-ms.sourcegitcommit: 682d18c9149b1153f9c38d28e2a90384e6a261dc
+ms.openlocfilehash: 0cdae939b70211367bee6317b9d5234d5b153c95
+ms.sourcegitcommit: 54e2892c0c26b9ad1e4dba8aba48fea39f853b6c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "44217881"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "44276024"
 ---
 # <a name="call-microsoft-excel-apis-from-a-custom-function"></a>Вызов API Microsoft Excel из настраиваемой функции
 
@@ -18,8 +18,6 @@ ms.locfileid: "44217881"
 
 - Перед вычислением пользовательская функция должна получить сведения из Excel. Эти сведения могут включать в себя свойства документов, форматы диапазонов, пользовательские XML-части, имя книги или другие сведения, относящиеся к Excel.
 - Настраиваемая функция будет задавать числовой формат ячейки для возвращаемых значений после вычисления.
-
-[!include[Excel shared runtime note](../includes/note-requires-shared-runtime.md)]
 
 ## <a name="code-sample"></a>Пример кода
 

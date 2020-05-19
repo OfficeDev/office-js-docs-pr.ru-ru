@@ -1,21 +1,21 @@
 ---
 title: Элемент Event в файле манифеста
 description: Определяет обработчик событий в надстройке.
-ms.date: 10/09/2018
+ms.date: 05/15/2020
 localization_priority: Normal
-ms.openlocfilehash: 02037a54ad4b7e91a3697b53b04fa30e8a4909a9
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 80f21d1819e3d7e335389070ccac0db583026045
+ms.sourcegitcommit: 54e2892c0c26b9ad1e4dba8aba48fea39f853b6c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42718232"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "44275709"
 ---
 # <a name="event-element"></a>Элемент Event
 
 Определяет обработчик событий в надстройке.
 
-> [!NOTE] 
-> В `Event` настоящее время элемент поддерживается только в Outlook в Интернете в Office 365.
+> [!NOTE]
+> Сведения о поддержке и использовании можно найти [в статье функция отправки почты для надстроек Outlook](../../outlook/outlook-on-send-addins.md).
 
 ## <a name="attributes"></a>Атрибуты
 
@@ -42,5 +42,5 @@ ms.locfileid: "42718232"
 Обязательный. Задает имя функции для обработчика событий. Это значение должно совпадать с именем функции в [файле функции](functionfile.md) надстройки.
 
 ```xml
-<Event Type="ItemSend" FunctionExecution="synchronous" FunctionName="itemSendHandler" /> 
+<Event Type="ItemSend" FunctionExecution="synchronous" FunctionName="itemSendHandler" />
 ```
