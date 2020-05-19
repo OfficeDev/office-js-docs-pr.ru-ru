@@ -3,12 +3,12 @@ title: Версии Office и наборы обязательных элемен
 description: Поддерживаемые платформы Office.js с использованием JavaScript API
 ms.date: 01/14/2020
 localization_priority: Priority
-ms.openlocfilehash: aa3beb7177c2d6019dd85cdab5a0f4b7277506a4
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 37456e32dc6111e2b4aa40f0c2240b17916c3778
+ms.sourcegitcommit: 54e2892c0c26b9ad1e4dba8aba48fea39f853b6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42718897"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "44276031"
 ---
 # <a name="office-versions-and-requirement-sets"></a>Версии Office и наборы обязательных элементов
 
@@ -35,7 +35,7 @@ ms.locfileid: "42718897"
 
 Надстройка может использовать API только в наборах обязательных элементов, поддерживаемых версией ведущего приложения Office, в которой она работает. Чтобы узнать, какие наборы обязательных элементов доступны для конкретной версии ведущего приложения Office, просмотрите следующие статьи:
 
-- [Наборы обязательных элементов API JavaScript для Excel](../reference/requirement-sets/excel-api-requirement-sets.md) (ExcelApi, [CustomFunctionsRuntime](../excel/custom-functions-architecture.md))
+- [Наборы обязательных элементов API JavaScript для Excel](../reference/requirement-sets/excel-api-requirement-sets.md) (ExcelApi)
 - [Наборы обязательных элементов API JavaScript для Word](../reference/requirement-sets/word-api-requirement-sets.md) (WordApi)
 - [Наборы обязательных элементов API JavaScript для OneNote](../reference/requirement-sets/onenote-api-requirement-sets.md) (OneNoteApi)
 - [Наборы обязательных элементов PowerPoint JavaScript API](../reference/requirement-sets/powerpoint-api-requirement-sets.md) (PowerPointApi)
