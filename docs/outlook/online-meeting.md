@@ -1,28 +1,28 @@
 ---
-title: Создание надстройки Outlook Mobile для поставщика собраний в Интернете (Предварительная версия)
+title: Создание надстройки Outlook Mobile для поставщика собраний в Интернете
 description: Сведения о том, как настроить надстройку Outlook Mobile для поставщика услуг по подключению к интерактивному собранию.
 ms.topic: article
-ms.date: 04/23/2020
+ms.date: 05/19/2020
 localization_priority: Normal
-ms.openlocfilehash: 8a54ddf96ca2b5e697198b4bc69b2ec5abee10d1
-ms.sourcegitcommit: 0fdb78cefa669b727b817614a4147a46d249a0ed
+ms.openlocfilehash: 1d42ec82e12e9f34f0211ca9926f5ae8b92c7804
+ms.sourcegitcommit: 8499a4247d1cb1e96e99c17cb520f4a8a41667e3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43930325"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "44292289"
 ---
-# <a name="create-an-outlook-mobile-add-in-for-an-online-meeting-provider-preview"></a>Создание надстройки Outlook Mobile для поставщика собраний в Интернете (Предварительная версия)
+# <a name="create-an-outlook-mobile-add-in-for-an-online-meeting-provider"></a>Создание надстройки Outlook Mobile для поставщика собраний в Интернете
 
 Настройка собрания по сети — это основной интерфейс для пользователя Outlook, который позволяет легко [создать собрание Teams с помощью Outlook](/microsoftteams/teams-add-in-for-outlook) Mobile. Однако создание собрания по сети в Outlook со службой, отличной от Майкрософт, может быть утомительным. Реализуя эту функцию, поставщики услуг могут упростить процесс создания собраний по сети для пользователей надстроек Outlook.
 
-> [!NOTE]
-> Эта функция поддерживается только в [предварительной версии](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) на Android с подпиской на Office 365.
+> [!IMPORTANT]
+> Эта функция поддерживается только в Android с подпиской на Office 365.
 
 В этой статье вы узнаете, как настроить надстройку Outlook Mobile, чтобы позволить пользователям упорядочивать и присоединяться к собранию с помощью службы собраний по сети. В этой статье мы будем использовать фиктивный поставщик услуг по подключению к собраниям, "contoso".
 
 ## <a name="configure-the-manifest"></a>Настройка манифеста
 
-Чтобы позволить пользователям создавать собрания по сети с надстройкой, необходимо настроить точку `MobileOnlineMeetingCommandSurface` расширения в манифесте под родительским элементом. `MobileFormFactor` Другие конструктивные параметры не поддерживаются.
+Чтобы позволить пользователям создавать собрания по сети с надстройкой, необходимо настроить `MobileOnlineMeetingCommandSurface` точку расширения в манифесте под родительским элементом `MobileFormFactor` . Другие конструктивные параметры не поддерживаются.
 
 В следующем примере показан фрагмент манифеста, включающий `MobileFormFactor` элемент и `MobileOnlineMeetingCommandSurface` точку расширения.
 
@@ -87,7 +87,7 @@ const newBody = '<br>' +
     '<br><br>';
 ```
 
-В приведенном ниже примере показано, как определить функцию без пользовательского интерфейса `insertContosoMeeting` , именуемую ссылкой в манифесте, чтобы обновить текст собрания, используя сведения о собрании по сети.
+В приведенном ниже примере показано, как определить функцию без пользовательского интерфейса, именуемую `insertContosoMeeting` ссылкой в манифесте, чтобы обновить текст собрания, используя сведения о собрании по сети.
 
 ```js
 var mailboxItem;
@@ -141,7 +141,7 @@ function updateBody(event, existingBody) {
 
 Как организатор собрания, при создании собрания должны отображаться растры, аналогичные следующим трем изображениям.
 
-снимок экрана: " [Создание экрана собрания" на странице "переключить снимок экрана" на странице "Создание собрания" на странице "Создание собрания" на странице "Создание собрания" на странице "Создание собрания" на панели Android/Contoso ![](../images/outlook-android-create-online-meeting-off.png)](../images/outlook-android-create-online-meeting-off-expanded.png#lightbox) [ ![](../images/outlook-android-create-online-meeting-load.png)](../images/outlook-android-create-online-meeting-load-expanded.png#lightbox) [ ![](../images/outlook-android-create-online-meeting-on.png)](../images/outlook-android-create-online-meeting-on-expanded.png#lightbox)
+снимок экрана: " [ ![ Создание экрана собрания" на странице "переключить](../images/outlook-android-create-online-meeting-off.png)](../images/outlook-android-create-online-meeting-off-expanded.png#lightbox) снимок экрана" на [ ![ странице "Создание собрания" на странице "Создание собрания" на](../images/outlook-android-create-online-meeting-load.png)](../images/outlook-android-create-online-meeting-load-expanded.png#lightbox) странице "Создание собрания" на странице " [ ![ Создание собрания](../images/outlook-android-create-online-meeting-on.png)](../images/outlook-android-create-online-meeting-on-expanded.png#lightbox) " на панели Android/contoso
 
 ### <a name="join-meeting-ui"></a>Пользовательский интерфейс присоединения к собранию
 
@@ -171,10 +171,9 @@ function updateBody(event, existingBody) {
 Применяются некоторые ограничения.
 
 - Применяется только к поставщикам услуг для собраний по сети.
-- В настоящее время эта функция не должна использоваться в производственных надстройках.
 - В настоящее время Android является единственным поддерживаемым клиентом. Поддержка iOS скоро будет доступна.
 - Только надстройки, установленные администратором, будут отображаться на экране создания собрания, заменив параметры группы по умолчанию или Skype. Надстройки, установленные пользователем, не будут активированы.
-- Значок надстройки должен быть в оттенках серого с использованием `#919191` шестнадцатеричного кода или его эквивалента в [других цветовых форматах](https://convertingcolors.com/hex-color-919191.html).
+- Значок надстройки должен быть в оттенках серого с использованием шестнадцатеричного кода `#919191` или его эквивалента в [других цветовых форматах](https://convertingcolors.com/hex-color-919191.html).
 - В режиме организатора встречи (создания) поддерживается только одна команда без пользовательского интерфейса.
 
 ## <a name="see-also"></a>См. также

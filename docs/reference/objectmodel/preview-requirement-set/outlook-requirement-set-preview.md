@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: Функции и API, которые в настоящее время находятся в режиме предварительной версии для надстроек Outlook.
-ms.date: 05/18/2020
+ms.date: 05/19/2020
 localization_priority: Normal
-ms.openlocfilehash: 893c90dc7344adba86a8a92b86063ed2419eae34
-ms.sourcegitcommit: f62d9630de69c5c070e3d4048205f5cc654db7e4
+ms.openlocfilehash: 3183c81a9af99f480c2dbecc787695501380cea7
+ms.sourcegitcommit: 8499a4247d1cb1e96e99c17cb520f4a8a41667e3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "44278345"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "44292296"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -188,23 +188,7 @@ ms.locfileid: "44278345"
 
 ---
 
-### <a name="online-meeting-provider-integration"></a>Интеграция поставщика собраний по сети
-
-Добавлена поддержка интеграции собраний в Интернете в надстройки Outlook Mobile. Чтобы узнать больше, ознакомьтесь со статьей [Создание надстройки Outlook для мобильных устройств для поставщика веб-собраний](../../../outlook/online-meeting.md) .
-
-#### <a name="mobileonlinemeetingcommandsurface-extension-point"></a>[Точка расширения Мобилеонлинемитингкоммандсурфаце](../../manifest/extensionpoint.md#mobileonlinemeetingcommandsurface-preview)
-
-Добавлена `MobileOnlineMeetingCommandSurface` точка расширения для манифеста. Он определяет интеграцию собраний по сети.
-
-**Доступно в**: Outlook на Android (подключено к подписке Office 365)
-
-<br>
-
----
-
----
-
-### <a name="sso"></a>Единый вход
+### <a name="single-sign-on-sso"></a>Единый вход (SSO)
 
 #### <a name="officeruntimeauthgetaccesstoken"></a>[OfficeRuntime.auth.getAccessToken](../../../develop/sso-in-office-add-ins.md#sso-api-reference)
 
