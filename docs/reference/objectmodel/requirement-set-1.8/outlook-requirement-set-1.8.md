@@ -1,14 +1,14 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.8
 description: Набор требований 1,8 для API надстроек Outlook
-ms.date: 12/17/2019
+ms.date: 05/20/2020
 localization_priority: Normal
-ms.openlocfilehash: ca107a13080e8b25ed76bcae4bf4afe1bec9938f
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 1e6a903a9e627f3344eee9283e051ac84b5abf10
+ms.sourcegitcommit: b6fd04b55cb1f39b316bcb0b3f3e1e33800b1d36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719996"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "44326878"
 ---
 # <a name="outlook-add-in-api-requirement-set-18"></a>Набор обязательных элементов API для надстройки Outlook 1.8
 
@@ -20,11 +20,12 @@ ms.locfileid: "42719996"
 
 - Добавлены новые API для вложений, категорий, делегирования доступа, расширенного расположения, заголовков Интернета и функций блокирования при отправке.
 - Добавлен необязательный параметр `options` для метода Event.completed.
-- Добавлена поддержка событий AttachmentsChanged и EnhancedLocationsChanged.
+- Добавлена поддержка `AttachmentsChanged` и `EnhancedLocationsChanged` события.
 
 ### <a name="change-log"></a>Журнал изменений
 
 - Добавлен объект [AttachmentContent](/javascript/api/outlook/office.attachmentcontent?view=outlook-js-1.8). Добавляет новый объект, представляющий содержимое вложения.
+- Добавлена [аттачментдетаилскомпосе](/javascript/api/outlook/office.attachmentdetailscompose?view=outlook-js-1.8): добавляет новый объект, представляющий сведения о вложении в режиме создания.
 - Добавлен объект [Categories](/javascript/api/outlook/office.categories?view=outlook-js-1.8). Добавляет новый объект, представляющий категории элемента.
 - Добавлен объект [CategoryDetails](/javascript/api/outlook/office.categorydetails?view=outlook-js-1.8). Добавляет новый объект, представляющий сведения о категории (ее имя и соответствующий цвет).
 - Добавлен объект [EnhancedLocation](/javascript/api/outlook/office.enhancedlocation?view=outlook-js-1.8). Добавляет новый объект, представляющий набор местоположений для встречи.
