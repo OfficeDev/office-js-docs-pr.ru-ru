@@ -906,12 +906,12 @@
           href: outlook/online-meeting.md
         - name: 'Надстройки, поддерживающие проверку сообщений при отправке'
           href: outlook/outlook-on-send-addins.md
+        - name: Активация на основе событий (предварительная версия)
+          href: outlook/autolaunch.md
         - name: Закрепляемая область задач
           href: outlook/pinnable-taskpane.md
         - name: Делегированный доступ
           href: outlook/delegate-access.md
-        - name: Настроить активацию на основе событий (предварительный просмотр)
-          href: outlook/autolaunch.md
         - name: Манифесты
           items:
             - name: Манифесты надстройки Outlook
