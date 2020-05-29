@@ -1,14 +1,14 @@
 ---
 title: Надстройки Outlook для Outlook Mobile
 description: Надстройки Outlook Mobile поддерживаются во всех коммерческих учетных записях Office 365, Outlook.com. Скоро их можно будет использовать и в учетных записях Gmail.
-ms.date: 04/13/2020
+ms.date: 05/27/2020
 localization_priority: Normal
-ms.openlocfilehash: 4b6341ac1b340ebc46c616ae4274bfdf1e2d0672
-ms.sourcegitcommit: 118e8bcbcfb73c93e2053bda67fe8dd20799b170
+ms.openlocfilehash: 6cc91bd021640988b2f216dda258b185748b2e40
+ms.sourcegitcommit: 77617f6ad06e07f5ff8078b26301748f73e2ee01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "43241086"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "44413212"
 ---
 # <a name="add-ins-for-outlook-mobile"></a>Надстройки для Outlook Mobile
 
@@ -69,7 +69,7 @@ ms.locfileid: "43241086"
 
 Подготовив надстройку к работе, протестируйте ее на экранах различных размеров, в том числе на телефонах и планшетах. Убедитесь, что она соответствует требованиям к специальным возможностям: контрастности, размеру шрифта, а также возможности работы со средствами чтения с экрана, такими как VoiceOver в iOS и TalkBack в Android.
 
-Устранять неполадки на мобильных устройствах может быть сложно, так как в вашем распоряжении может не оказаться привычных инструментов. Один из вариантов устранения неполадок — [использование Vorlon.js](../testing/debug-office-add-ins-on-ipad-and-mac.md). А если вы уже использовали Fiddler, ознакомьтесь с [этим руководством по его использованию с устройствами iOS](https://www.telerik.com/blogs/using-fiddler-with-apple-ios-devices).
+Устранение неполадок на мобильных устройствах может быть очень сложно, так как у вас могут отсутствовать средства, которые вы используете. Тем не менее, одним из вариантов устранения неполадок в iOS является использование Fiddler (изучите [это руководство по использованию устройства с iOS](https://www.telerik.com/blogs/using-fiddler-with-apple-ios-devices)).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

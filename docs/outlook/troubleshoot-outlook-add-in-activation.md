@@ -1,14 +1,14 @@
 ---
 title: Устранение неполадок при активации контекстных надстроек Outlook
 description: Если ваша надстройка не активируется надлежащим образом, это может быть вызвано указанными ниже причинами.
-ms.date: 10/31/2019
+ms.date: 05/27/2020
 localization_priority: Normal
-ms.openlocfilehash: cfc5595257b6f8413aa3c1452fb5752e83ece631
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 555ae2a45bf49d74d1fd439258fd87035644e86a
+ms.sourcegitcommit: 77617f6ad06e07f5ff8078b26301748f73e2ee01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42166638"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "44413184"
 ---
 # <a name="troubleshoot-outlook-add-in-activation"></a>Устранение неполадок при активации надстроек Outlook
 
@@ -81,10 +81,17 @@ ms.locfileid: "42166638"
 Этот сценарий применим только к Outlook для Windows. Обычно при установке надстройки Outlook для почтового ящика Exchange Server копирует манифест надстройки из указанного вами расположения в почтовый ящик в Exchange Server. При каждом запуске Outlook считывает все манифесты, установленные для этого почтового ящика, во временный кэш в следующей папке:
 
 ```text
-%LocalAppData%\Microsoft\Office\15.0\WEF
+%LocalAppData%\Microsoft\Office\16.0\WEF
 ```
 
-Например, для пользователя John кэш может находиться в папке C:\Users\john\AppData\Local\Microsoft\Office\15.0\WEF.
+Например, для пользователя John кэш может находиться на сайте C:\Users\john\AppData\Local\Microsoft\Office\16.0\WEF.
+
+> [!IMPORTANT]
+> Для Outlook 2013 в Windows используйте 15,0 вместо 16,0, чтобы это расположение было бы следующим:
+>
+> ```text
+> %LocalAppData%\Microsoft\Office\15.0\WEF
+> ```
 
 Если надстройка не активируется для каких-либо элементов, возможно, манифест неправильно установлен в Exchange Server или Outlook не прочитал этот манифест должным образом при запуске. С помощью Центра администрирования Exchange убедитесь, что надстройка установлена и включена для этого почтового ящика, и при необходимости перезагрузите Exchange Server.
 
@@ -103,7 +110,7 @@ ms.locfileid: "42166638"
 1. Если Outlook не активирует надстройку, проверьте, есть ли у Outlook кэшированная копия манифеста надстройки. Поищите ее по следующему пути:
 
     ```text
-    %LocalAppData%\Microsoft\Office\15.0\WEF
+    %LocalAppData%\Microsoft\Office\16.0\WEF
     ```
 
     Манифест можно найти в следующей вложенной папке:
@@ -116,7 +123,7 @@ ms.locfileid: "42166638"
     > Пример пути к манифесту, установленному для почтового ящика пользователя John:
     >
     > ```text
-    > C:\Users\john\appdata\Local\Microsoft\Office\15.0\WEF\{8D8445A4-80E4-4D6B-B7AC-D4E6AF594E73}\GoRshCWa7vW8+jhKmyiDhA==\Manifests\b3d7d9d5-6f57-437d-9830-94e2aaccef16_1.2
+    > C:\Users\john\appdata\Local\Microsoft\Office\16.0\WEF\{8D8445A4-80E4-4D6B-B7AC-D4E6AF594E73}\GoRshCWa7vW8+jhKmyiDhA==\Manifests\b3d7d9d5-6f57-437d-9830-94e2aaccef16_1.2
     > ```
 
     Проверьте, есть ли манифест тестируемой надстройки в кэше.
@@ -140,7 +147,7 @@ ms.locfileid: "42166638"
 1. Если манифест не был прочитан, закройте Outlook и удалите все манифесты в следующей папке:
 
     ```text
-    %LocalAppData%\Microsoft\Office\15.0\WEF\<insert your guid>\<insert base 64 hash>\Manifests\
+    %LocalAppData%\Microsoft\Office\16.0\WEF\<insert your guid>\<insert base 64 hash>\Manifests\
     ```
 
     Запустите Outlook и проверьте, активирует ли Outlook надстройку.
