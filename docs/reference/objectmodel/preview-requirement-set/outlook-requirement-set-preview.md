@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: Функции и API, которые в настоящее время находятся в режиме предварительной версии для надстроек Outlook.
-ms.date: 05/19/2020
+ms.date: 05/29/2020
 localization_priority: Normal
-ms.openlocfilehash: 3183c81a9af99f480c2dbecc787695501380cea7
-ms.sourcegitcommit: 8499a4247d1cb1e96e99c17cb520f4a8a41667e3
+ms.openlocfilehash: 5a53b1b5f477a420c9aaafbf8d778e1e58a7fe88
+ms.sourcegitcommit: 3a72d13c82b3d627691f4712d0d24b9e71bae9dc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "44292296"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "44415879"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -69,6 +69,8 @@ ms.locfileid: "44292296"
 ---
 
 ### <a name="append-on-send"></a>Добавление при отправке
+
+Для получения сведений об использовании функции "присоединение к отправке", ознакомьтесь со статьей [Реализация добавления при отправке в надстройке Outlook](../../../outlook/append-on-send.md).
 
 #### <a name="officecontextmailboxitembodyappendonsendasync"></a>[Office. Context. Mailbox. Item. Body. Аппендонсендасинк](/javascript/api/outlook/office.body?view=outlook-js-preview#appendonsendasync-data--options--callback-)
 
@@ -188,7 +190,7 @@ ms.locfileid: "44292296"
 
 ---
 
-### <a name="single-sign-on-sso"></a>Единый вход (SSO)
+### <a name="single-sign-on-sso"></a>Единый вход
 
 #### <a name="officeruntimeauthgetaccesstoken"></a>[OfficeRuntime.auth.getAccessToken](../../../develop/sso-in-office-add-ins.md#sso-api-reference)
 
