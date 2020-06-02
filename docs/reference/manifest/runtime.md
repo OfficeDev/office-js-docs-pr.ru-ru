@@ -1,14 +1,14 @@
 ---
 title: Среда выполнения в файле манифеста
 description: Элемент среды выполнения настраивает надстройку для использования общей среды выполнения JavaScript для различных компонентов, например ленты, области задач, настраиваемых функций.
-ms.date: 05/18/2020
+ms.date: 05/29/2020
 localization_priority: Normal
-ms.openlocfilehash: c2c404bcaad6e24af58f5c0ed8835343abb97e5f
-ms.sourcegitcommit: f62d9630de69c5c070e3d4048205f5cc654db7e4
+ms.openlocfilehash: a463b72f22b41f74e2fe98acca467762bb00cf39
+ms.sourcegitcommit: 09a8683ff29cf06d0d1d822be83cf0798f1ccdf9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "44278415"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "44471340"
 ---
 # <a name="runtime-element-preview"></a>Элемент среды выполнения (Предварительная версия)
 
@@ -21,7 +21,7 @@ ms.locfileid: "44278415"
 **Тип надстройки:** Область задач, почта
 
 > [!IMPORTANT]
-> **Excel**: общая среда выполнения в настоящее время находится в режиме предварительной версии и доступна только в Excel для Windows. Для ознакомления с предварительными возможностями необходимо присоединиться к [программе предварительной оценки Office](https://insider.office.com/).
+> **Excel**: общая среда выполнения в настоящее время доступна только в Excel для Windows.
 >
 > **Outlook**: Активация на основе событий в настоящее время находится [в предварительной версии](../../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) и доступна только в Outlook в Интернете. Дополнительные сведения см. [в статье Просмотр функции активации на основе событий](../../outlook/autolaunch.md#how-to-preview-the-event-based-activation-feature).
 

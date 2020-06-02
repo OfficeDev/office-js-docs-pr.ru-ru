@@ -3,12 +3,12 @@ title: Предварительная версия набора обязател
 description: Функции и API, которые в настоящее время находятся в режиме предварительной версии для надстроек Outlook.
 ms.date: 05/29/2020
 localization_priority: Normal
-ms.openlocfilehash: 5a53b1b5f477a420c9aaafbf8d778e1e58a7fe88
-ms.sourcegitcommit: 3a72d13c82b3d627691f4712d0d24b9e71bae9dc
+ms.openlocfilehash: 600aad32c394d35e62f4024808b185e8a9abe5e8
+ms.sourcegitcommit: 09a8683ff29cf06d0d1d822be83cf0798f1ccdf9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "44415879"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "44471347"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -118,6 +118,20 @@ ms.locfileid: "44415879"
 
 ---
 
+### <a name="get-all-custom-properties"></a>Получение всех настраиваемых свойств
+
+#### <a name="custompropertiesgetall"></a>[CustomProperties. Жеталл](/javascript/api/outlook/office.customproperties?view=outlook-js-preview#getall--)
+
+Добавлена новая функция для `CustomProperties` объекта, который получает все настраиваемые свойства.
+
+**Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современная), Outlook на Mac (подключено к подписке на Office 365), Outlook на Android, Outlook на iOS
+
+<br>
+
+---
+
+---
+
 ### <a name="integration-with-actionable-messages"></a>Взаимодействие с интерактивными сообщениями
 
 #### <a name="officecontextmailboxitemgetinitializationcontextasync"></a>[Office.context.mailbox.item.getInitializationContextAsync](office.context.mailbox.item.md#methods)
@@ -190,7 +204,7 @@ ms.locfileid: "44415879"
 
 ---
 
-### <a name="single-sign-on-sso"></a>Единый вход
+### <a name="single-sign-on-sso"></a>Единый вход (SSO)
 
 #### <a name="officeruntimeauthgetaccesstoken"></a>[OfficeRuntime.auth.getAccessToken](../../../develop/sso-in-office-add-ins.md#sso-api-reference)
 

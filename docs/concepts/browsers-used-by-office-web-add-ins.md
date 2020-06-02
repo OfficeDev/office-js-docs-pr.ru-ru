@@ -1,14 +1,14 @@
 ---
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
-ms.date: 04/21/2020
+ms.date: 05/29/2020
 localization_priority: Normal
-ms.openlocfilehash: 9ef4b6d4c09140fc6d6bb04eca51d845b79b6dc7
-ms.sourcegitcommit: 3355c6bd64ecb45cea4c0d319053397f11bc9834
+ms.openlocfilehash: 0f553b0fe6a94577af438a2cb29dafc644f02960
+ms.sourcegitcommit: 09a8683ff29cf06d0d1d822be83cf0798f1ccdf9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "43744854"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "44471333"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -38,6 +38,9 @@ ms.locfileid: "43744854"
 
 > [!IMPORTANT]
 > Internet Explorer 11 не поддерживает версии JavaScript, более поздние, чем ES5. Если какой-либо пользователь вашей надстройки применяет платформы с Internet Explorer 11, для применения синтаксиса и возможностей ECMAScript 2015 или более поздних версий вам нужно либо транскомпилировать свой код JavaScript в ES5, либо использовать полизаполнение. Кроме того, Internet Explorer 11 не поддерживает некоторые элементы HTML5, в частности медиа, запись и местоположение.
+
+>[!NOTE]
+> Если ваша надстройка включает `Runtimes` элемент в манифест, то по умолчанию он будет использовать Internet Explorer 11. Дополнительные [сведения см.](../reference/manifest/runtimes.md)
 
 ## <a name="troubleshooting-microsoft-edge-issues"></a>Устранение проблем с Microsoft Edge
 
