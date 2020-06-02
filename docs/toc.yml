@@ -907,7 +907,7 @@
         - name: 'Надстройки, поддерживающие проверку сообщений при отправке'
           href: outlook/outlook-on-send-addins.md
         - name: Добавление при отправке (предварительная версия)
-          href: outlook/outlook-on-send-addins.md
+          href: outlook/append-on-send.md
         - name: Активация на основе событий (предварительная версия)
           href: outlook/autolaunch.md
         - name: Закрепляемая область задач
