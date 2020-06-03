@@ -1,14 +1,14 @@
 ---
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
-ms.date: 05/29/2020
+ms.date: 06/01/2020
 localization_priority: Normal
-ms.openlocfilehash: 0f553b0fe6a94577af438a2cb29dafc644f02960
-ms.sourcegitcommit: 09a8683ff29cf06d0d1d822be83cf0798f1ccdf9
+ms.openlocfilehash: 0d94e66c9854a349758a2ed737524eb5d54fea29
+ms.sourcegitcommit: 9229102c16a1864e3a8724aaf9b0dc68b1428094
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "44471333"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "44520376"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -30,17 +30,16 @@ ms.locfileid: "44471333"
 |Windows / Office 2013 или более поздней версии без подписки|Internet Explorer 11|
 |Windows 10 версии ниже 1903 / Office 365|Internet Explorer 11|
 |Windows 10 версии >= 1903/Office 365 ver < 16.0.11629<sup>1</sup>|Internet Explorer 11|
-|Windows 10 версии >= 1903/Office 365 ver >= 16.0.11629<sup>1</sup>|Microsoft Edge<sup>2</sup>|
+|Windows 10 версии >= 1903/Office 365 ver >= 16.0.11629<sup>1</sup>|Microsoft Edge<sup>2, 3</sup>|
 
 <sup>1</sup> ознакомьтесь со [страницей "журнал обновлений](/officeupdates/update-history-office365-proplus-by-date) " и Узнайте, как [найти версию клиента Office и канал обновления](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19) для получения дополнительных сведений.
 
 <sup>2</sup> при использовании Microsoft Edge экранный диктор Windows 10 (иногда называется "средство чтения с экрана") считывает `<title>` тег на странице, которая открывается в области задач. Когда используется Internet Explorer 11, экранный диктор читает панель заголовка области задач, полученный от значения `<DisplayName>` в манифесте надстройки.
 
+<sup>3</sup> если надстройка содержит `Runtimes` элемент в манифесте, он использует Internet Explorer 11 независимо от версии Windows или Office 365. Дополнительные [сведения см.](../reference/manifest/runtimes.md)
+
 > [!IMPORTANT]
 > Internet Explorer 11 не поддерживает версии JavaScript, более поздние, чем ES5. Если какой-либо пользователь вашей надстройки применяет платформы с Internet Explorer 11, для применения синтаксиса и возможностей ECMAScript 2015 или более поздних версий вам нужно либо транскомпилировать свой код JavaScript в ES5, либо использовать полизаполнение. Кроме того, Internet Explorer 11 не поддерживает некоторые элементы HTML5, в частности медиа, запись и местоположение.
-
->[!NOTE]
-> Если ваша надстройка включает `Runtimes` элемент в манифест, то по умолчанию он будет использовать Internet Explorer 11. Дополнительные [сведения см.](../reference/manifest/runtimes.md)
 
 ## <a name="troubleshooting-microsoft-edge-issues"></a>Устранение проблем с Microsoft Edge
 

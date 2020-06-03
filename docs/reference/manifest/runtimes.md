@@ -1,18 +1,21 @@
 ---
 title: Среды выполнения в файле манифеста
 description: Элемент Runtimes указывает среду выполнения надстройки.
-ms.date: 05/29/2020
+ms.date: 06/01/2020
 localization_priority: Normal
-ms.openlocfilehash: a8598a8f926e6d6905c147f5c554f1d40a692ad9
-ms.sourcegitcommit: 09a8683ff29cf06d0d1d822be83cf0798f1ccdf9
+ms.openlocfilehash: 95549d88df24a7d7c54cf27c92c15693491bdf29
+ms.sourcegitcommit: 9229102c16a1864e3a8724aaf9b0dc68b1428094
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "44471326"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "44520341"
 ---
 # <a name="runtimes-element"></a>Элемент среды выполнения
 
-Задает среду выполнения надстройки. Дочерний [`<Host>`](host.md) элемент. Если `Runtimes` элемент присутствует в манифесте, надстройка по умолчанию будет использовать браузер Internet Explorer 11.
+Задает среду выполнения надстройки. Дочерний [`<Host>`](host.md) элемент.
+
+> [!NOTE]
+> При работе в Office в Windows надстройка использует браузер Internet Explorer 11.
 
 В Excel этот элемент позволяет использовать одну и ту же среду выполнения для ленты, области задач и пользовательских функций. Дополнительные сведения можно найти в статье [Настройка надстройки Excel для использования общей среды выполнения JavaScript](../../excel/configure-your-add-in-to-use-a-shared-runtime.md).
 
