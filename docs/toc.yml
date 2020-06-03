@@ -326,6 +326,8 @@
               href: reference/requirement-sets/image-coercion-requirement-sets.md
             - name: Наборы обязательных элементов общего API для Office
               href: reference/requirement-sets/office-add-in-requirement-sets.md
+            - name: Наборы обязательных элементов API ленты
+              href: reference/requirement-sets/ribbon-api-requirement-sets.md
             - name: Наборы обязательных элементов в среде выполнения
               href: reference/requirement-sets/shared-runtime-requirement-sets.md
         - name: Справочные материалы по манифесту надстройки Office
