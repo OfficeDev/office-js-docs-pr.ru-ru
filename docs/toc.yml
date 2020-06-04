@@ -258,7 +258,7 @@
           displayName: 'test, debug'
         - name: Windows
           items:
-            - name: Загрузка неопубликованных надстроек Office на Windows
+            - name: Загрузка неопубликованных надстроек Office на Windows из сетевой папки
               href: testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md
             - name: Подключение отладчика из области задач
               href: testing/attach-debugger-from-task-pane.md
