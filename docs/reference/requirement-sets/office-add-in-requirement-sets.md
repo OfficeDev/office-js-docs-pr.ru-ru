@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов общего API для Office
 description: Дополнительные сведения о наборах требований для общих API Office
-ms.date: 07/17/2019
+ms.date: 06/03/2020
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 5905e655f5af437cd516bd58163c8a49d0c8aab2
-ms.sourcegitcommit: 77617f6ad06e07f5ff8078b26301748f73e2ee01
+ms.openlocfilehash: cedf2a54d0582739b5c9ed13a3c859d0eaf90acf
+ms.sourcegitcommit: c00db2625d6c222ac09b5845095c21e5cbad81d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "44413240"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "44561898"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
@@ -17,13 +17,14 @@ ms.locfileid: "44413240"
 
 Сведения о поддержке надстроек ведущим приложением Office см. в статье [Доступность ведущих приложений и платформ для надстроек Office](../../overview/office-add-in-availability.md).
 
-Наборы обязательных элементов API *для конкретных ведущих приложений* см. ниже.
-
-- [Наборы обязательных элементов API JavaScript для Excel](excel-api-requirement-sets.md) (ExcelApi)
-- [Наборы обязательных элементов API JavaScript для Word](word-api-requirement-sets.md) (WordApi)
-- [Наборы обязательных элементов API JavaScript для OneNote](onenote-api-requirement-sets.md) (OneNoteApi)
-- [Наборы обязательных элементов PowerPoint JavaScript API](powerpoint-api-requirement-sets.md) (PowerPointApi)
-- [Общие сведения о наборах обязательных элементов API Outlook](outlook-api-requirement-sets.md) (MailBox)
+> [!TIP]
+> Наборы обязательных элементов API *для конкретных ведущих приложений* см. ниже.
+>
+> - [Наборы обязательных элементов API JavaScript для Excel](excel-api-requirement-sets.md) (ExcelApi)
+> - [Наборы обязательных элементов API JavaScript для Word](word-api-requirement-sets.md) (WordApi)
+> - [Наборы обязательных элементов API JavaScript для OneNote](onenote-api-requirement-sets.md) (OneNoteApi)
+> - [Наборы обязательных элементов PowerPoint JavaScript API](powerpoint-api-requirement-sets.md) (PowerPointApi)
+> - [Общие сведения о наборах обязательных элементов API Outlook](outlook-api-requirement-sets.md) (MailBox)
 
 > [!IMPORTANT]
 > Больше не рекомендуется создавать и использовать веб-приложения и базы данных Access в SharePoint. В качестве альтернативы рекомендуем использовать [Microsoft PowerApps](https://powerapps.microsoft.com/) для создания бизнес-решений для Интернета и мобильных устройств без написания кода.

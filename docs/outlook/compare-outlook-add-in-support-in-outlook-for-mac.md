@@ -1,20 +1,22 @@
 ---
 title: Сравнение поддержки надстроек Outlook в Outlook на компьютерах Mac
 description: Узнайте, как сравнить надстройки в Outlook для Mac с другими ведущими приложениями Outlook.
-ms.date: 05/18/2020
+ms.date: 06/04/2020
 localization_priority: Normal
-ms.openlocfilehash: fd03141fbcaecb88db358101a00681c8a85af382
-ms.sourcegitcommit: 71a44405e42b4798a8354f7f96d84548ae7a00f0
+ms.openlocfilehash: 553d9bada0fb66a5319c998ff1c262f8815e2f7d
+ms.sourcegitcommit: c00db2625d6c222ac09b5845095c21e5cbad81d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "44280354"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "44561874"
 ---
 # <a name="compare-outlook-add-in-support-in-outlook-on-mac-with-other-outlook-hosts"></a>Сравнение поддержки надстроек Outlook в Outlook в Mac с другими ведущими приложениями Outlook
 
 Вы можете создавать и запускать надстройку Outlook так же, как и в других узлах, в том числе в Outlook в Интернете, Windows, iOS и Android, без настройки JavaScript для каждого узла. Те же вызовы из надстройки в API JavaScript для Office обычно работают так же, за исключением областей, описанных в следующей таблице.
 
 Дополнительные сведения см. в статье [Развертывание и установка надстроек Outlook для тестирования](testing-and-tips.md).
+
+Сведения о поддержке пользовательского интерфейса для Mac можно найти в статье [Создание Outlook на Mac](#new-outlook-on-mac-preview).
 
 | Область | Outlook в Интернете, Windows и мобильных устройствах | Outlook для Mac |
 |:-----|:-----|:-----|
@@ -27,3 +29,26 @@ ms.locfileid: "44280354"
 | Строка, представляющая часовой пояс в свойствах `dateTimeCreated` и `dateTimeModified` |Пример: `Thu Mar 13 2014 14:09:11 GMT+0800 (China Standard Time)` | Пример: `Thu Mar 13 2014 14:09:11 GMT+0800 (CST)` |
 | Точность времени в свойствах `dateTimeCreated` и `dateTimeModified` | Если в надстройке используется приведенный ниже код, то обеспечивается точность до миллисекунд:<br/>`JSON.stringify(Office.context.mailbox.item, null, 4);`| Точность только до секунд. |
 
+## <a name="new-outlook-on-mac-preview"></a>Новые Outlook на Mac (Предварительная версия)
+
+Теперь надстройки Outlook поддерживаются в новом пользовательском интерфейсе Mac, вплоть до набора требований 1,6. Однако следующие наборы требований и функции пока **не** поддерживаются.
+
+1. Наборы обязательных элементов API 1,7 и 1,8
+1. Область задач закрепляемая, `ItemChanged` событие
+1. Контекстные надстройки
+1. On — Send
+1. Поддержка общих папок
+1. `saveAsync`При создании собрания
+1. Единый вход (SSO)
+
+Мы рекомендуем предварительно просмотреть новый Outlook в Mac, который доступен в версии 16.38.506. Для получения дополнительных сведений о том, как испытать, ознакомьтесь [с разметкой Outlook для Mac-релизов для быстрых построений](https://support.microsoft.com/office/d6347358-5613-433e-a49e-a9a0e8e0462a).
+
+Вы можете определить, какую версию пользовательского интерфейса вы используете, выполнив указанные ниже инструкции.
+
+**Текущий пользовательский интерфейс**
+
+&nbsp;&nbsp;&nbsp;&nbsp;![Текущий пользовательский интерфейс на Mac](../images/outlook-on-mac-classic.png)
+
+**Новый пользовательский интерфейс (Предварительная версия)**
+
+&nbsp;&nbsp;&nbsp;&nbsp;![Новый пользовательский интерфейс в предварительной версии на Mac](../images/outlook-on-mac-new.png)
