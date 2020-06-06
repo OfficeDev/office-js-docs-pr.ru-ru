@@ -3,12 +3,12 @@ ms.date: 05/06/2020
 description: Использование тегов JSDoc для динамического создания метаданных JSON пользовательских функций.
 title: Автоматическое генерирование метаданных JSON для пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: bad11e6ce8e58dc7970bc920e2619ab4732ebc34
-ms.sourcegitcommit: 54e2892c0c26b9ad1e4dba8aba48fea39f853b6c
+ms.openlocfilehash: 97cd9a06a53019c4065c4be29e46908da766ea71
+ms.sourcegitcommit: 0300165295fcbd4226aa048be2fad660892d35ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "44275982"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44591132"
 ---
 # <a name="autogenerate-json-metadata-for-custom-functions"></a>Автоматическое генерирование метаданных JSON для пользовательских функций
 
@@ -101,7 +101,7 @@ ms.locfileid: "44275982"
 Предоставляет отображаемый параметр `name` для пользовательской функции.
 
 * Если имя не указано, идентификатор также используется как имя.
-* Допустимые символы: буквы [буквенные символы Юникод](http://www.unicode.org/reports/tr44/tr44-22.html#Alphabetic), числа, точки (.) и подчеркивания (\_).
+* Допустимые символы: буквы [буквенные символы Юникод](https://www.unicode.org/reports/tr44/tr44-22.html#Alphabetic), числа, точки (.) и подчеркивания (\_).
 * Имя должно начинаться с буквы.
 * Максимальная длина: 128 символов.
 

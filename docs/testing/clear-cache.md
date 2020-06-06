@@ -3,12 +3,12 @@ title: Очистка кэша Office
 description: Узнайте, как очищать кэш Office на компьютере.
 ms.date: 05/22/2020
 localization_priority: Normal
-ms.openlocfilehash: fb08cd3838cf9c1d12df2fc8d37453776a05c768
-ms.sourcegitcommit: d88b3dcfe13ba06f821b55db2de46aed152a378d
+ms.openlocfilehash: 22778aaa3459f9ea955e112dc63102062bd430ba
+ms.sourcegitcommit: 0300165295fcbd4226aa048be2fad660892d35ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "44347653"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44591146"
 ---
 # <a name="clear-the-office-cache"></a>Очистка кэша Office
 
@@ -20,7 +20,7 @@ ms.locfileid: "44347653"
 
 Чтобы удалить все надстройки неопубликованные из Excel, Word и PowerPoint, удалите содержимое папки:
 
-```
+```text
 %LOCALAPPDATA%\Microsoft\Office\16.0\Wef\
 ```
 
