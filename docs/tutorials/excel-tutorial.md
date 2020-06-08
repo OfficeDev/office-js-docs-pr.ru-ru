@@ -1,15 +1,15 @@
 ---
 title: Руководство по надстройкам Excel
 description: В этом руководстве вы создадите надстройку Excel, которая создает, заполняет, фильтрует и сортирует таблицу, создает диаграмму, замораживает заголовок таблицы, защищает лист и открывает диалоговое окно.
-ms.date: 03/30/2020
+ms.date: 06/05/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: bc14027600a108f47cdf4766a51ebf2437b6f976
-ms.sourcegitcommit: 73a3df90a51acf13416d6a049bddcd9aabc32441
+ms.openlocfilehash: 42ce837bd03d3b8fd9be35e812b8e87e66a5e35d
+ms.sourcegitcommit: 0300165295fcbd4226aa048be2fad660892d35ea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "43069318"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44591153"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -734,6 +734,7 @@ ms.locfileid: "43069318"
         >    - `~/Library/Containers/com.microsoft.{host}/Data/Library/Caches/`, где `{host}` — ведущее приложение Office (например, `Excel`)
         >    - `~/Library/Containers/com.microsoft.{host}/Data/Library/Application Support/Microsoft/Office/16.0/Wef/`, где `{host}` — ведущее приложение Office (например, `Excel`)
         >    - `com.microsoft.Office365ServiceV2/Data/Caches/com.microsoft.Office365ServiceV2/`
+        >    - `com.microsoft.Office365ServiceV2/Data/Library/Caches/com.microsoft.Office365ServiceV2/`
 
 3. Если локальный веб-сервер уже запущен, остановите его, закрыв окно команды узла.
 
