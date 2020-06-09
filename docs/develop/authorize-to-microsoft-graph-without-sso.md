@@ -3,12 +3,12 @@ title: Авторизация в Microsoft Graph без единого вход�
 description: Узнайте, как осуществлять авторизацию в Microsoft Graph без единого входа
 ms.date: 01/29/2020
 localization_priority: Normal
-ms.openlocfilehash: 828779a766c41088435ff5fdfa693e1d9939c710
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 99f515a038952e1eaae828c49de99d0bbd0d5bfb
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41949663"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44608413"
 ---
 # <a name="authorize-to-microsoft-graph-without-sso"></a>Авторизация в Microsoft Graph без единого входа
 

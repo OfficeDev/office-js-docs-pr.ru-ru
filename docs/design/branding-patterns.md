@@ -3,12 +3,12 @@ title: Рекомендации по разработке шаблонов фи�
 description: Узнайте, как настроить фирменную символику для надстройки Office, чтобы обеспечить совместимость с визуальным дизайном Office.
 ms.date: 06/26/2018
 localization_priority: Normal
-ms.openlocfilehash: d2f492f5f1654c6bd6448db4c2d1707c26b42af9
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: a02d5be7081112f98e2e7bdf9de434e9c84c979f
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42717252"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44607647"
 ---
 # <a name="branding-patterns"></a>Шаблоны фирменной символики
 

@@ -3,12 +3,12 @@ title: 'Сценарий: реализация единого входа для 
 description: Узнайте, как реализовать единый вход в службе с помощью маркера единого входа и маркера удостоверения Exchange, предоставляемых надстройкой Outlook.
 ms.date: 04/15/2019
 localization_priority: Normal
-ms.openlocfilehash: 933387e941d4fb3f4d749b319abb01f1c931c4e2
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 22d18397b0a643e9f70599f4d1f904ce5a8b17b6
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42166679"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44609120"
 ---
 # <a name="scenario-implement-single-sign-on-to-your-service-in-an-outlook-add-in"></a>Сценарий: реализация единого входа для службы в надстройке Outlook
 

@@ -3,12 +3,12 @@ title: Извлечение строк сущности из элемента Ou
 description: Узнайте, как извлечь строки сущностей из элемента Outlook в надстройке Outlook.
 ms.date: 10/31/2019
 localization_priority: Normal
-ms.openlocfilehash: 0a9a41d0b479420c0754c0e0d283982082a1452f
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: b15ad23427f79a333ae8ae9d342acdf28e6d010c
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42325456"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44608945"
 ---
 # <a name="extract-entity-strings-from-an-outlook-item"></a>Извлечение строк сущностей из элемента Outlook
 
@@ -205,7 +205,7 @@ div#meeting_suggestions
 
 ## <a name="extracting-entities-upon-initialization"></a>Извлечение сущностей при инициализации
 
-Когда происходит событие [Office.initialize](/javascript/api/office#office-initialize-reason-), надстройка для работы с сущностями вызывает метод [getEntities](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods) текущего элемента. `getEntities` Метод возвращает глобальную переменную `_MyEntities` в виде массива экземпляров поддерживаемых сущностей. Ниже представлен соответствующий код JavaScript.
+Когда происходит событие [Office.initialize](/javascript/api/office#office-initialize-reason-), надстройка для работы с сущностями вызывает метод [getEntities](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods) текущего элемента. `getEntities`Метод возвращает глобальную переменную в `_MyEntities` виде массива экземпляров поддерживаемых сущностей. Ниже представлен соответствующий код JavaScript.
 
 
 ```js
@@ -373,7 +373,7 @@ function myGetEmailAddresses() {
 
 
  > [!NOTE]
- > Тип объекта поддерживается только сообщениями, `MeetingSuggestion` но не встречами.
+ > Тип объекта поддерживается только сообщениями, но не встречами `MeetingSuggestion` .
 
 Каждое извлеченное приглашение на собрание хранится в виде объекта [MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion) в массиве. Обработчик событий `myGetMeetingSuggestions` получает дополнительные данные о каждом приглашении на собрание:
 

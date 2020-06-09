@@ -3,12 +3,12 @@ title: Добавление поддержки мобильных устройс
 description: Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.
 ms.date: 04/10/2020
 localization_priority: Normal
-ms.openlocfilehash: de5f1209527c853afb2d0bf2061bd3e3cfa8d3e0
-ms.sourcegitcommit: 76552b3e5725d9112c772595971b922c295e6b4c
+ms.openlocfilehash: a4fb02fee8bb429d0193903ba03fcee17b7ede48
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225668"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44607619"
 ---
 # <a name="add-support-for-add-in-commands-for-outlook-mobile"></a>Добавление поддержки команд надстроек для Outlook Mobile
 
@@ -20,7 +20,7 @@ ms.locfileid: "43225668"
 
 Этот элемент содержит все данные для загрузки надстройки в мобильных клиентах. Это позволяет определять совершенно другие элементы пользовательского интерфейса и файлы JavaScript для мобильной версии.
 
-В приведенном ниже примере показана одна кнопка области задач `MobileFormFactor` в элементе.
+В приведенном ниже примере показана одна кнопка области задач в `MobileFormFactor` элементе.
 
 ```xml
 <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">

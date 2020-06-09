@@ -3,12 +3,12 @@ title: Ограничения ресурсов и оптимизация про�
 description: Сведения об ограничении ресурсов платформы надстройки Office, в том числе ЦП и памяти.
 ms.date: 04/09/2020
 localization_priority: Normal
-ms.openlocfilehash: 68f0bae8514a5f5769e648d6b74ffc3bdbccc194
-ms.sourcegitcommit: 76552b3e5725d9112c772595971b922c295e6b4c
+ms.openlocfilehash: be4727ba12fa8f9b3ee8133026d9de94a612a9fc
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225661"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44608008"
 ---
 # <a name="resource-limits-and-performance-optimization-for-office-add-ins"></a>Ограничения ресурсов и оптимизация производительности надстроек Office
 

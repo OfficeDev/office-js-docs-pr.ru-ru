@@ -4,12 +4,12 @@ description: Сведения о настройке надстройки с по
 ms.date: 02/20/2020
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: c02e0f74a8ea3f3f8f831b65aa403ce49655953b
-ms.sourcegitcommit: dd6d00202f6466c27418247dad7bd136555a6036
+ms.openlocfilehash: d71206d6b03b8a92e50b316cc75c401866be5334
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42284169"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44608833"
 ---
 # <a name="customize-your-nodejs-sso-enabled-add-in"></a>Настройка надстройки Node.js с поддержкой единого входа
 
@@ -18,7 +18,7 @@ ms.locfileid: "42284169"
 
 [Быстрый запуск единого входа](sso-quickstart.md) создает надстройку с включенной поддержкой единого входа, которая получает данные профиля пользователя, выполнившего вход, и записывает их в документ или сообщение. В этой статье описывается процесс обновления надстройки, созданной с помощью генератора Yeoman в быстром запуске единого входа, для добавления новых функциональных возможностей, требующих других разрешений.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Предварительные требования
 
 * Надстройка Office, созданная в соответствии с инструкциями, приведенными в [кратком](sso-quickstart.md)руководстве по SSO.
 
@@ -71,7 +71,7 @@ ms.locfileid: "42284169"
 
 11. На панели **разрешений API запроса** выполните следующие действия:
 
-    а. В разделе **файлы**выберите **файлы. Read. ALL**.
+    а) В разделе **файлы**выберите **файлы. Read. ALL**.
 
     б) Нажмите кнопку **Добавить разрешения** в нижней части панели, чтобы сохранить изменения этих разрешений.
 
@@ -97,15 +97,15 @@ ms.locfileid: "42284169"
 
 1. В файле **./. ENV** :
 
-    а. Замените `GRAPH_URL_SEGMENT=/me` на следующий:`GRAPH_URL_SEGMENT=/me/drive/root/children`
+    а) Замените `GRAPH_URL_SEGMENT=/me` на следующий:`GRAPH_URL_SEGMENT=/me/drive/root/children`
 
     б) Замените `QUERY_PARAM_SEGMENT=` на следующий:`QUERY_PARAM_SEGMENT=?$select=name&$top=10`
 
-    в. Замените `SCOPE=User.Read` на следующий:`SCOPE=Files.Read.All`
+    c. Замените `SCOPE=User.Read` на следующий:`SCOPE=Files.Read.All`
 
-2. В **/манифест.ксмл**найдите строку `<Scope>User.Read</Scope>` около конца файла и замените ее на строку `<Scope>Files.Read.All</Scope>`.
+2. В **/манифест.ксмл**найдите строку `<Scope>User.Read</Scope>` около конца файла и замените ее на строку `<Scope>Files.Read.All</Scope>` .
 
-3. В файле **./СРК/Хелперс/фаллбаккаусдиалог.ЖС** (или **в/СРК/Хелперс/фаллбаккаусдиалог.ТС** для проекта TypeScript) найдите `https://graph.microsoft.com/User.Read` строку и замените ее строкой `https://graph.microsoft.com/Files.Read.All`, которая `requestObj` определяется следующим образом:
+3. В файле **./СРК/Хелперс/фаллбаккаусдиалог.ЖС** (или в **/СРК/Хелперс/фаллбаккаусдиалог.ТС** для проекта TypeScript) найдите строку `https://graph.microsoft.com/User.Read` и замените ее строкой `https://graph.microsoft.com/Files.Read.All` , которая `requestObj` определяется следующим образом:
 
     ```javascript
     var requestObj = {
@@ -129,7 +129,7 @@ ms.locfileid: "42284169"
     </section>
     ```
 
-5. В файле **./src/TaskPane/TaskPane.HTML**найдите и замените все вхождения строки `Get My User Profile Information` строкой. `Read my OneDrive for Business`
+5. В файле **./src/TaskPane/TaskPane.HTML**найдите и замените все вхождения строки `Get My User Profile Information` строкой `Read my OneDrive for Business` .
 
     ```html
     <li class="ms-ListItem">
@@ -146,7 +146,7 @@ ms.locfileid: "42284169"
     </p>
     ```
 
-6. В файле **./src/TaskPane/TaskPane.HTML**найдите и замените строку `Your user profile information will be displayed in the document.` строкой. `The names of the top 10 files and folders in your OneDrive for Business will be displayed in the document or message.`
+6. В файле **./src/TaskPane/TaskPane.HTML**найдите и замените строку `Your user profile information will be displayed in the document.` строкой `The names of the top 10 files and folders in your OneDrive for Business will be displayed in the document or message.` .
 
     ```html
     <li class="ms-ListItem">

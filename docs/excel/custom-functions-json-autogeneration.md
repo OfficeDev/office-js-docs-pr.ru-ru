@@ -3,12 +3,12 @@ ms.date: 05/06/2020
 description: Использование тегов JSDoc для динамического создания метаданных JSON пользовательских функций.
 title: Автоматическое генерирование метаданных JSON для пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: 97cd9a06a53019c4065c4be29e46908da766ea71
-ms.sourcegitcommit: 0300165295fcbd4226aa048be2fad660892d35ea
+ms.openlocfilehash: f09fbbfcd028d773b9e9e25eb5eb43eb1d5a93cd
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44591132"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44609312"
 ---
 # <a name="autogenerate-json-metadata-for-custom-functions"></a>Автоматическое генерирование метаданных JSON для пользовательских функций
 

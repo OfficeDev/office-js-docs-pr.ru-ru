@@ -3,16 +3,16 @@ title: Работа с таблицами с использованием API Ja
 description: Примеры кода, демонстрирующие выполнение типовых задач с таблицами с помощью API JavaScript для Excel.
 ms.date: 09/09/2019
 localization_priority: Normal
-ms.openlocfilehash: b6000773a70c74d115643f3353658287b6d66235
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 6d76edb5e13623a479a74cf69b5b87e2bbe86e3f
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42717140"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44609213"
 ---
 # <a name="work-with-tables-using-the-excel-javascript-api"></a>Работа с таблицами с использованием API JavaScript для Excel
 
-В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для таблиц с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых `Table` объектами and `TableCollection` , представлен в статье [объект Table (API JavaScript для Excel)](/javascript/api/excel/excel.table) и [объект TableCollection (API JavaScript для Excel)](/javascript/api/excel/excel.tablecollection).
+В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для таблиц с использованием API JavaScript для Excel. Полный список свойств и методов, `Table` `TableCollection` поддерживаемых объектами and, представлен в статье [объект Table (API JavaScript для Excel)](/javascript/api/excel/excel.table) и [объект TableCollection (API JavaScript для Excel)](/javascript/api/excel/excel.tablecollection).
 
 ## <a name="create-a-table"></a>Создание таблицы
 
@@ -59,7 +59,7 @@ Excel.run(function (context) {
 В примере ниже показано, как добавить семь новых строк в таблицу **ExpensesTable** (Таблица расходов) на листе **Sample** (Пример). Новые строки будут добавлены в конец таблицы. Если ведущее приложение Excel, в котором выполняется этот код, поддерживает [набор обязательных элементов](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, то ширина столбцов и высота строк будет задана так, чтобы наилучшим образом разместить текущие данные в таблице.
 
 > [!NOTE]
-> `index` Свойство объекта [TableRow](/javascript/api/excel/excel.tablerow) указывает номер индекса строки в коллекции Rows таблицы. `TableRow` Объект не содержит `id` свойство, которое можно использовать в качестве уникального ключа для идентификации строки.
+> `index`Свойство объекта [TableRow](/javascript/api/excel/excel.tablerow) указывает номер индекса строки в коллекции Rows таблицы. `TableRow`Объект не содержит `id` свойство, которое можно использовать в качестве уникального ключа для идентификации строки.
 
 ```js
 Excel.run(function (context) {

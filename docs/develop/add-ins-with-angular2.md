@@ -3,12 +3,12 @@ title: Разработка надстроек Office с помощью Angular
 description: Получите рекомендации по использованию элемента "Радиальный" для создания надстройки Office в виде одностраничного приложения.
 ms.date: 01/27/2020
 localization_priority: Normal
-ms.openlocfilehash: b3796b16c8e5ddc74a172ab427866bfe8e842cae
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 2cd90a51f49adfd03c0096d55399012e88da1da0
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719212"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44608987"
 ---
 # <a name="develop-office-add-ins-with-angular"></a>Разработка надстроек Office с помощью Angular
 
@@ -29,7 +29,7 @@ npm install --save-dev @types/office-js
 
 ## <a name="bootstrapping-must-be-inside-officeinitialize"></a>Начальная загрузка должна определяться в методе Office.initialize
 
-На любой странице, которая вызывает API JavaScript для Office, Word или Excel, код должен сначала назначить метод `Office.initialize` свойству. (Если код инициализации отсутствует, тело метода может быть просто пустым символом "`{}`", но не следует оставлять `Office.initialize` свойство неопределенным. Дополнительные сведения см. [в статье Initialize Your надстройка Office](initialize-add-in.md). Office вызывает этот метод сразу после инициализации библиотек JavaScript для Office.
+На любой странице, которая вызывает API JavaScript для Office, Word или Excel, код должен сначала назначить метод `Office.initialize` свойству. (Если код инициализации отсутствует, тело метода может быть просто пустым `{}` символом "", но не следует оставлять `Office.initialize` свойство неопределенным. Дополнительные сведения см. [в статье Initialize Your надстройка Office](initialize-add-in.md). Office вызывает этот метод сразу после инициализации библиотек JavaScript для Office.
 
 **Вызов кода начальной загрузки на основе Angular необходимо задать в методе, который назначен `Office.initialize`**, чтобы сначала выполнялась инициализация библиотек JavaScript для Office. Вот простой пример, в котором показано, как это сделать. Этот код должен находиться в файле main.ts проекта.
 

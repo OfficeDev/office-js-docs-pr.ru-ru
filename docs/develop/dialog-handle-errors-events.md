@@ -3,12 +3,12 @@ title: Обработка ошибок и событий в диалоговом
 description: Описывает перехват и обработку ошибок при открытии и использовании диалогового окна "Office"
 ms.date: 01/29/2020
 localization_priority: Normal
-ms.openlocfilehash: a35131a46dc9f5edc18df37495abe5d8c2c5ad2a
-ms.sourcegitcommit: 4c9e02dac6f8030efc7415e699370753ec9415c8
+ms.openlocfilehash: d83d5c4627f68c3f4b1c196cf543d01bf981abbe
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41650121"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44608176"
 ---
 # <a name="handling-errors-and-events-in-the-office-dialog-box"></a>Обработка ошибок и событий в диалоговом окне "Office"
 
@@ -26,7 +26,7 @@ ms.locfileid: "41650121"
 
 ## <a name="errors-from-displaydialogasync"></a>Ошибки метода displayDialogAsync
 
-В дополнение к общим ошибкам платформы и системы, четыре ошибки относятся к вызову `displayDialogAsync`.
+В дополнение к общим ошибкам платформы и системы, четыре ошибки относятся к вызову `displayDialogAsync` .
 
 |Цифровой код|Значение|
 |:-----|:-----|
@@ -35,7 +35,7 @@ ms.locfileid: "41650121"
 |<span id="12007">12007</span><!-- The span is needed because office-js-helpers has an error message that links to this table row. -->|Диалоговое окно уже открыто из этого главного окна. Для главного окна, например области задач, невозможно открыть сразу несколько диалоговых окон.|
 |12009|Пользователь проигнорировал диалоговое окно. Эта ошибка может возникать в Office в Интернете, где пользователи могут отказаться от того, чтобы надстройка не могла показать диалоговое окно. Дополнительные сведения см в разделе [Обработка блокирования всплывающих окон с помощью Office в Интернете](dialog-best-practices.md#handling-pop-up-blockers-with-office-on-the-web).|
 
-Когда `displayDialogAsync` вызывается, объект [asyncResult](/javascript/api/office/office.asyncresult) передается в функцию обратного вызова. При успешном вызове открывается диалоговое окно, и `value` свойство `AsyncResult` объекта является объектом [диалогового окна](/javascript/api/office/office.dialog) . Например, в [диалоговом окне "отправить сведения" на страницу узла](dialog-api-in-office-add-ins.md#send-information-from-the-dialog-box-to-the-host-page). Когда вызов завершается `displayDialogAsync` с ошибкой, диалоговое окно не создается `status` , свойству `AsyncResult` объекта присваивается значение `Office.AsyncResultStatus.Failed`, и `error` свойство объекта заполняется. Всегда следует предоставлять обратный вызов, который проверяет `status` и отвечает на сообщение об ошибке. Пример, в котором сообщается о сообщении об ошибке независимо от его кода, представлен в приведенном ниже коде. ( `showNotification` Функция, не определенная в этой статье, либо отображает ошибку, либо заносит ее в журнал. Пример реализации этой функции в надстройке приведен в статье [Пример использования API диалоговых окон надстроек Office](https://github.com/OfficeDev/Office-Add-in-Dialog-API-Simple-Example).
+Когда `displayDialogAsync` вызывается, объект [asyncResult](/javascript/api/office/office.asyncresult) передается в функцию обратного вызова. При успешном вызове открывается диалоговое окно, и `value` свойство `AsyncResult` объекта является объектом [диалогового окна](/javascript/api/office/office.dialog) . Например, в [диалоговом окне "отправить сведения" на страницу узла](dialog-api-in-office-add-ins.md#send-information-from-the-dialog-box-to-the-host-page). Когда вызов `displayDialogAsync` завершается с ошибкой, диалоговое окно не создается, `status` свойству `AsyncResult` объекта присваивается значение `Office.AsyncResultStatus.Failed` , и `error` свойство объекта заполняется. Всегда следует предоставлять обратный вызов, который проверяет `status` и отвечает на сообщение об ошибке. Пример, в котором сообщается о сообщении об ошибке независимо от его кода, представлен в приведенном ниже коде. ( `showNotification` Функция, не определенная в этой статье, либо отображает ошибку, либо заносит ее в журнал. Пример реализации этой функции в надстройке приведен в статье [Пример использования API диалоговых окон надстроек Office](https://github.com/OfficeDev/Office-Add-in-Dialog-API-Simple-Example).
 
 ```js
 var dialog;

@@ -3,12 +3,12 @@ title: Инициализация надстройки Office
 description: Узнайте, как инициализировать надстройку Office.
 ms.date: 02/27/2020
 localization_priority: Normal
-ms.openlocfilehash: ca7b21c35fc82011c673cb83d077a89cc29f56eb
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 8310c5efb803391f7f0d4b01fda70dc0df537b21
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42718939"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44608141"
 ---
 # <a name="initialize-your-office-add-in"></a>Инициализация надстройки Office
 
@@ -26,11 +26,11 @@ ms.locfileid: "42718939"
 
 Однако Надстройка Office не может вызывать все API JavaScript для Office, пока библиотека не будет загружена. В этой статье описываются два способа, позволяющие коду убедиться в том, что библиотека загружена:
 
-- Инициализация `Office.onReady()`с помощью.
-- Инициализация `Office.initialize`с помощью.
+- Инициализация с помощью `Office.onReady()` .
+- Инициализация с помощью `Office.initialize` .
 
 > [!TIP]
-> Рекомендуется использовать `Office.onReady()` вместо `Office.initialize`. Хотя `Office.initialize` все еще поддерживаются `Office.onReady()` , обеспечивается большая гибкость. В `Office.initialize` инфраструктуре Office можно назначить только один обработчик, и он будет вызываться только один раз. Вы можете звонить `Office.onReady()` в различных местах кода и использовать разные обратные вызовы.
+> Рекомендуется использовать `Office.onReady()` вместо `Office.initialize`. Хотя `Office.initialize` все еще поддерживаются, `Office.onReady()` обеспечивается большая гибкость. В инфраструктуре Office можно назначить только один обработчик, `Office.initialize` и он будет вызываться только один раз. Вы можете звонить `Office.onReady()` в различных местах кода и использовать разные обратные вызовы.
 > 
 > Сведения о различиях описанных ниже приемов см. в статье [Основные различия между Office.initialize и Office.onReady()](#major-differences-between-officeinitialize-and-officeonready).
 

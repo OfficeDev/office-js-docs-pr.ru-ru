@@ -3,12 +3,12 @@ title: Элемент Script в файле манифеста
 description: Элемент script определяет параметры скрипта, используемые пользовательской функцией в Excel.
 ms.date: 10/09/2018
 localization_priority: Normal
-ms.openlocfilehash: f05fc85bd0454c340f4352bb73f299b9e7730224
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 791f49f15673a029b982e40946f8cc90f02ba887
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42720416"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44608092"
 ---
 # <a name="script-element"></a>Элемент Script
 

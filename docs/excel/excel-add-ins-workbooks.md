@@ -3,16 +3,16 @@ title: Работа с книгами с использованием API JavaSc
 description: Примеры кода, в которых показано, как выполнять распространенные задачи с книгами или функциями уровня приложения с помощью API JavaScript для Excel.
 ms.date: 05/06/2020
 localization_priority: Normal
-ms.openlocfilehash: 4fec6a217a2764eaf664463943ca384b3a2d847b
-ms.sourcegitcommit: 735bf94ac3c838f580a992e7ef074dbc8be2b0ea
+ms.openlocfilehash: 16c091c3f01ffba144cf28c4f6e2bf4889872194
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "44170767"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44609206"
 ---
 # <a name="work-with-workbooks-using-the-excel-javascript-api"></a>Работа с книгами с использованием API JavaScript для Excel
 
-В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для книг с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых `Workbook` объектом, представлен в статье [объект Workbook (API JavaScript для Excel)](/javascript/api/excel/excel.workbook). В этой статье также рассматриваются действия на уровне книги, выполняемые с помощью объекта [Application](/javascript/api/excel/excel.application).
+В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для книг с использованием API JavaScript для Excel. Полный список свойств и методов, `Workbook` поддерживаемых объектом, представлен в статье [объект WORKBOOK (API JavaScript для Excel)](/javascript/api/excel/excel.workbook). В этой статье также рассматриваются действия на уровне книги, выполняемые с помощью объекта [Application](/javascript/api/excel/excel.application).
 
 Объект Workbook — это точка входа для вашей надстройки для взаимодействия с Excel. Он поддерживает коллекции листов, таблиц, сводных таблиц и других элементов, через которые выполняется доступ и изменение данных Excel. Объект [WorksheetCollection](/javascript/api/excel/excel.worksheetcollection) предоставляет надстройке доступ ко всем данным книги с помощью отдельных листов. В частности, он позволяет надстройке добавлять листы, перемещаться между ними и назначать обработчиков событий листа. В статье [Работа с листами с использованием API JavaScript для Excel](excel-add-ins-worksheets.md) описывается способ доступа к листам и их изменение.
 
@@ -136,7 +136,7 @@ Excel.run(function (context) {
 
 ## <a name="access-document-properties"></a>Доступ к свойствам документов
 
-Объекты Workbook имеют доступ к метаданным файлов Office, называемым [свойствами документов](https://support.office.com/article/View-or-change-the-properties-for-an-Office-file-21D604C2-481E-4379-8E54-1DD4622C6B75). Свойство `properties` объекта Workbook является объектом [DocumentProperties](/javascript/api/excel/excel.documentproperties), содержащим эти значения метаданных. В приведенном ниже примере показано, как `author` задать свойство.
+Объекты Workbook имеют доступ к метаданным файлов Office, называемым [свойствами документов](https://support.office.com/article/View-or-change-the-properties-for-an-Office-file-21D604C2-481E-4379-8E54-1DD4622C6B75). Свойство `properties` объекта Workbook является объектом [DocumentProperties](/javascript/api/excel/excel.documentproperties), содержащим эти значения метаданных. В приведенном ниже примере показано, как задать `author` свойство.
 
 ```js
 Excel.run(function (context) {
@@ -192,7 +192,7 @@ Excel.run(function (context) {
 
 `Application.cultureInfo`Определяет параметры языка и региональных параметров системы в виде объекта [CultureInfo](/javascript/api/excel/excel.cultureinfo) . Содержит такие параметры, как числовой десятичный разделитель или формат даты.
 
-Некоторые параметры культуры можно [изменить с помощью пользовательского интерфейса Excel](https://support.office.com/article/Change-the-character-used-to-separate-thousands-or-decimals-c093b545-71cb-4903-b205-aebb9837bd1e). Параметры системы сохраняются в `CultureInfo` объекте. Все локальные изменения хранятся в виде свойств уровня [приложения](/javascript/api/excel/excel.application), например `Application.decimalSeparator`.
+Некоторые параметры культуры можно [изменить с помощью пользовательского интерфейса Excel](https://support.office.com/article/Change-the-character-used-to-separate-thousands-or-decimals-c093b545-71cb-4903-b205-aebb9837bd1e). Параметры системы сохраняются в `CultureInfo` объекте. Все локальные изменения хранятся в виде свойств уровня [приложения](/javascript/api/excel/excel.application), например `Application.decimalSeparator` .
 
 В примере ниже показано, как изменить символ десятичного разделителя в числовой строке с "," на символ, используемый параметрами системы.
 
