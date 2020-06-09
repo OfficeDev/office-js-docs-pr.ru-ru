@@ -3,41 +3,41 @@ title: Надстройки Outlook с расширением модуля
 description: Создают приложения, которые запускаются внутри Outlook и с помощью которых пользователи могут легко получать доступ к бизнес-информации и средствам повышения производительности, не выходя из Outlook.
 ms.date: 05/27/2020
 localization_priority: Normal
-ms.openlocfilehash: 5c5c57b28f63665ac0cac1dfc443651a0d830f5f
-ms.sourcegitcommit: 77617f6ad06e07f5ff8078b26301748f73e2ee01
+ms.openlocfilehash: ba25a10e0f6e8c8b3b14df7e98ff200e00717136
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "44413205"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611647"
 ---
-# <a name="module-extension-outlook-add-ins"></a><span data-ttu-id="6b8a6-103">Надстройки Outlook с расширением модуля</span><span class="sxs-lookup"><span data-stu-id="6b8a6-103">Module extension Outlook add-ins</span></span>
+# <a name="module-extension-outlook-add-ins"></a><span data-ttu-id="1aacc-103">Надстройки Outlook с расширением модуля</span><span class="sxs-lookup"><span data-stu-id="1aacc-103">Module extension Outlook add-ins</span></span>
 
-<span data-ttu-id="6b8a6-104">Надстройки с расширением модуля отображаются на панели навигации Outlook рядом с почтой, задачами и календарями.</span><span class="sxs-lookup"><span data-stu-id="6b8a6-104">Module extension add-ins appear in the Outlook navigation bar, right alongside mail, tasks, and calendars.</span></span> <span data-ttu-id="6b8a6-105">Расширение модуля может использовать не только сведения о почте и встречах.</span><span class="sxs-lookup"><span data-stu-id="6b8a6-105">A module extension is not limited to using mail and appointment information.</span></span> <span data-ttu-id="6b8a6-106">Вы можете создать приложения, с помощью которых пользователи могут получать доступ к бизнес-информации и средствам повышения производительности, не выходя из Outlook.</span><span class="sxs-lookup"><span data-stu-id="6b8a6-106">You can create applications that run inside Outlook to make it easy for your users to access business information and productivity tools without ever leaving Outlook.</span></span>
+<span data-ttu-id="1aacc-104">Надстройки с расширением модуля отображаются на панели навигации Outlook рядом с почтой, задачами и календарями.</span><span class="sxs-lookup"><span data-stu-id="1aacc-104">Module extension add-ins appear in the Outlook navigation bar, right alongside mail, tasks, and calendars.</span></span> <span data-ttu-id="1aacc-105">Расширение модуля может использовать не только сведения о почте и встречах.</span><span class="sxs-lookup"><span data-stu-id="1aacc-105">A module extension is not limited to using mail and appointment information.</span></span> <span data-ttu-id="1aacc-106">Вы можете создать приложения, с помощью которых пользователи могут получать доступ к бизнес-информации и средствам повышения производительности, не выходя из Outlook.</span><span class="sxs-lookup"><span data-stu-id="1aacc-106">You can create applications that run inside Outlook to make it easy for your users to access business information and productivity tools without ever leaving Outlook.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="6b8a6-107">Расширения модуля поддерживаются только в Outlook 2016 или более поздних версиях для Windows.</span><span class="sxs-lookup"><span data-stu-id="6b8a6-107">Module extensions are only supported by Outlook 2016 or later on Windows.</span></span>  
+> <span data-ttu-id="1aacc-107">Расширения модуля поддерживаются только в Outlook 2016 или более поздних версиях для Windows.</span><span class="sxs-lookup"><span data-stu-id="1aacc-107">Module extensions are only supported by Outlook 2016 or later on Windows.</span></span>  
 
-## <a name="open-a-module-extension"></a><span data-ttu-id="6b8a6-108">Открытие расширения модуля</span><span class="sxs-lookup"><span data-stu-id="6b8a6-108">Open a module extension</span></span>
+## <a name="open-a-module-extension"></a><span data-ttu-id="1aacc-108">Открытие расширения модуля</span><span class="sxs-lookup"><span data-stu-id="1aacc-108">Open a module extension</span></span>
 
-<span data-ttu-id="6b8a6-p102">Чтобы открыть расширение модуля, пользователю необходимо щелкнуть имя или значок модуля на панели навигации Outlook. Если пользователь выбрал компактный режим панели навигации, то на ней будет отображаться значок, показывающий, что расширение загружено.</span><span class="sxs-lookup"><span data-stu-id="6b8a6-p102">To open a module extension, users click on the module's name or icon in the Outlook navigation bar. If the user has compact navigation selected, the navigation bar has an icon that shows an extension is loaded.</span></span>
+<span data-ttu-id="1aacc-p102">Чтобы открыть расширение модуля, пользователю необходимо щелкнуть имя или значок модуля на панели навигации Outlook. Если пользователь выбрал компактный режим панели навигации, то на ней будет отображаться значок, показывающий, что расширение загружено.</span><span class="sxs-lookup"><span data-stu-id="1aacc-p102">To open a module extension, users click on the module's name or icon in the Outlook navigation bar. If the user has compact navigation selected, the navigation bar has an icon that shows an extension is loaded.</span></span>
 
 ![Показана компактная панель навигации, когда расширение модуля загружено в Outlook.](../images/outlook-module-navigationbar-compact.png)
 
-<span data-ttu-id="6b8a6-112">Если пользователь не используют компактную навигацию, то для панели навигации доступно два представления.</span><span class="sxs-lookup"><span data-stu-id="6b8a6-112">If the user is not using compact navigation, the navigation bar has two looks.</span></span> <span data-ttu-id="6b8a6-113">Если загружено одно расширение, отображается название надстройки.</span><span class="sxs-lookup"><span data-stu-id="6b8a6-113">With one extension loaded, it shows the name of the add-in.</span></span>
+<span data-ttu-id="1aacc-112">Если пользователь не используют компактную навигацию, то для панели навигации доступно два представления.</span><span class="sxs-lookup"><span data-stu-id="1aacc-112">If the user is not using compact navigation, the navigation bar has two looks.</span></span> <span data-ttu-id="1aacc-113">Если загружено одно расширение, отображается название надстройки.</span><span class="sxs-lookup"><span data-stu-id="1aacc-113">With one extension loaded, it shows the name of the add-in.</span></span>
 
 ![Показана развернутая панель навигации, когда в Outlook загружено одно расширение модуля.](../images/outlook-module-navigationbar-one.png)
 
-<span data-ttu-id="6b8a6-115">Если загружено несколько надстроек, отображается слово **Надстройки**. В обоих вариантах при нажатии откроется пользовательский интерфейс расширения.</span><span class="sxs-lookup"><span data-stu-id="6b8a6-115">When more than one add-in is loaded, it shows the word **Add-ins**. Clicking either will open the extension's user interface.</span></span>
+<span data-ttu-id="1aacc-115">Если загружено несколько надстроек, отображается слово **Надстройки**. В обоих вариантах при нажатии откроется пользовательский интерфейс расширения.</span><span class="sxs-lookup"><span data-stu-id="1aacc-115">When more than one add-in is loaded, it shows the word **Add-ins**. Clicking either will open the extension's user interface.</span></span>
 
 ![Показана развернутая панель навигации, когда в Outlook загружено несколько расширений модуля.](../images/outlook-module-navigationbar-more.png)
 
-<span data-ttu-id="6b8a6-117">Когда вы щелкаете расширение, Outlook заменяет встроенный модуль на специальный, чтобы пользователи могли взаимодействовать с надстройкой.</span><span class="sxs-lookup"><span data-stu-id="6b8a6-117">When you click on an extension, Outlook replaces the built-in module with your custom module so that your users can interact with the add-in.</span></span> <span data-ttu-id="6b8a6-118">Вы можете использовать все функции API JavaScript для Outlook в надстройке и создавать кнопки на ленте Outlook, которые будут взаимодействовать с содержимым надстройки.</span><span class="sxs-lookup"><span data-stu-id="6b8a6-118">You can use all of the features of the Outlook JavaScript API in your add-in, and can create command buttons in the Outlook ribbon that will interact with the add-in content.</span></span> <span data-ttu-id="6b8a6-119">Ниже показана интегрированная в панель навигации Outlook надстройка с кнопками на ленте, которые обновляют ее содержимое.</span><span class="sxs-lookup"><span data-stu-id="6b8a6-119">The following screenshot shows an add-in that is integrated in the Outlook navigation bar and has ribbon commands that will update the content of the add-in.</span></span>
+<span data-ttu-id="1aacc-117">Когда вы щелкаете расширение, Outlook заменяет встроенный модуль на специальный, чтобы пользователи могли взаимодействовать с надстройкой.</span><span class="sxs-lookup"><span data-stu-id="1aacc-117">When you click on an extension, Outlook replaces the built-in module with your custom module so that your users can interact with the add-in.</span></span> <span data-ttu-id="1aacc-118">Вы можете использовать все функции API JavaScript для Outlook в надстройке и создавать кнопки на ленте Outlook, которые будут взаимодействовать с содержимым надстройки.</span><span class="sxs-lookup"><span data-stu-id="1aacc-118">You can use all of the features of the Outlook JavaScript API in your add-in, and can create command buttons in the Outlook ribbon that will interact with the add-in content.</span></span> <span data-ttu-id="1aacc-119">Ниже показана интегрированная в панель навигации Outlook надстройка с кнопками на ленте, которые обновляют ее содержимое.</span><span class="sxs-lookup"><span data-stu-id="1aacc-119">The following screenshot shows an add-in that is integrated in the Outlook navigation bar and has ribbon commands that will update the content of the add-in.</span></span>
 
 ![Пользовательский интерфейс расширения модуля](../images/outlook-module-extension.png)
 
-## <a name="example"></a><span data-ttu-id="6b8a6-121">Пример</span><span class="sxs-lookup"><span data-stu-id="6b8a6-121">Example</span></span>
+## <a name="example"></a><span data-ttu-id="1aacc-121">Пример</span><span class="sxs-lookup"><span data-stu-id="1aacc-121">Example</span></span>
 
-<span data-ttu-id="6b8a6-122">Ниже показан раздел файла манифеста, который определяет расширение модуля.</span><span class="sxs-lookup"><span data-stu-id="6b8a6-122">The following is a section of a manifest file that defines a module extension.</span></span>
+<span data-ttu-id="1aacc-122">Ниже показан раздел файла манифеста, который определяет расширение модуля.</span><span class="sxs-lookup"><span data-stu-id="1aacc-122">The following is a section of a manifest file that defines a module extension.</span></span>
 
 ```xml
 <!-- Add Outlook module extension point -->
@@ -147,8 +147,8 @@ ms.locfileid: "44413205"
 </VersionOverrides>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="6b8a6-123">См. также</span><span class="sxs-lookup"><span data-stu-id="6b8a6-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1aacc-123">См. также</span><span class="sxs-lookup"><span data-stu-id="1aacc-123">See also</span></span>
 
-- [<span data-ttu-id="6b8a6-124">Манифесты надстроек Outlook</span><span class="sxs-lookup"><span data-stu-id="6b8a6-124">Outlook add-in manifests</span></span>](manifests.md)
-- [<span data-ttu-id="6b8a6-125">Команды надстроек Outlook</span><span class="sxs-lookup"><span data-stu-id="6b8a6-125">Add-in commands for Outlook</span></span>](add-in-commands-for-outlook.md)
-- [<span data-ttu-id="6b8a6-126">Пример расширений модуля Outlook для расчета оплачиваемых часов</span><span class="sxs-lookup"><span data-stu-id="6b8a6-126">Outlook module extensions Billable hours sample</span></span>](https://github.com/OfficeDev/Outlook-Add-in-JavaScript-ModuleExtension)
+- [<span data-ttu-id="1aacc-124">Манифесты надстроек Outlook</span><span class="sxs-lookup"><span data-stu-id="1aacc-124">Outlook add-in manifests</span></span>](manifests.md)
+- [<span data-ttu-id="1aacc-125">Команды надстроек Outlook</span><span class="sxs-lookup"><span data-stu-id="1aacc-125">Add-in commands for Outlook</span></span>](add-in-commands-for-outlook.md)
+- [<span data-ttu-id="1aacc-126">Пример расширений модуля Outlook для расчета оплачиваемых часов</span><span class="sxs-lookup"><span data-stu-id="1aacc-126">Outlook module extensions Billable hours sample</span></span>](https://github.com/OfficeDev/Outlook-Add-in-JavaScript-ModuleExtension)
