@@ -5,12 +5,12 @@ title: Документация по надстройкам Word
 description: Учебные ресурсы по надстройкам Word.
 ms.date: 07/05/2019
 localization_priority: Priority
-ms.openlocfilehash: 28cb42194e3de42634cd3b026e5924c03cd51b43
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 0267f85530e99a2b541bb1740da48ba6b769e480
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719660"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44608629"
 ---
 # <a name="word-add-ins-documentation"></a>Документация по надстройкам Word
 

@@ -5,12 +5,12 @@ title: Документация по надстройкам Outlook
 description: Учебные ресурсы по надстройкам Outlook.
 ms.date: 07/05/2019
 localization_priority: Priority
-ms.openlocfilehash: b9d7c7ff05dddda3e3ae3235e90400c6913f1f49
-ms.sourcegitcommit: a3ddfdb8a95477850148c4177e20e56a8673517c
+ms.openlocfilehash: 30c3370fb609a1bcf8646c2bd9a797bab9938af4
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "42165554"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44609113"
 ---
 # <a name="outlook-add-ins-documentation"></a>Документация по надстройкам Outlook
 

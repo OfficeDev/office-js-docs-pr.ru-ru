@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 04/03/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 5a7401fd68100dc4bea1d094a4b1510a7c031f61
-ms.sourcegitcommit: c3bfea0818af1f01e71a1feff707fb2456a69488
+ms.openlocfilehash: a893ea78943f7a2687d005e6e1e24a9528c730ce
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "43185570"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44612335"
 ---
 # <a name="build-an-excel-task-pane-add-in-using-react"></a>Создание области задач Excel с помощью React
 

@@ -4,12 +4,12 @@ ms.prod: non-product-specific
 description: Руководство по обмену кодом между надстройкой VSTO и надстройкой Office.
 title: Руководство. Обмен кодом между надстройкой VSTO и надстройкой Office с использованием общей библиотеки кода
 localization_priority: Priority
-ms.openlocfilehash: 87f34c04ce3ac475c82fbb2673d0a4b3e95f04a2
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: f4306e4a23483b58d1503c1ee257194b430b31ef
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42324745"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611066"
 ---
 # <a name="tutorial-share-code-between-both-a-vsto-add-in-and-an-office-add-in-with-a-shared-code-library"></a>Руководство. Обмен кодом между надстройкой VSTO и надстройкой Office с помощью общей библиотеки кода
 

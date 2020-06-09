@@ -3,12 +3,12 @@ title: Разработка надстроек Office с помощью Visual S
 description: Как разрабатывать надстройки Office с помощью Visual Studio Code
 ms.date: 01/16/2020
 localization_priority: Priority
-ms.openlocfilehash: 0f594466fe8db0d88c104f6a641d6b5a0fc25730
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 0aef01c5b892a0cf08254ca8ffd9dd751b993139
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719051"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44608319"
 ---
 # <a name="develop-office-add-ins-with-visual-studio-code"></a>Разработка надстроек Office с помощью Visual Studio Code
 

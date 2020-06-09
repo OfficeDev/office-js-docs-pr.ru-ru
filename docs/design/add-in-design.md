@@ -3,12 +3,12 @@ title: Разработка надстроек для Office
 description: Изучите лучшие методики визуального проектирования надстроек Office.
 ms.date: 06/20/2019
 localization_priority: Priority
-ms.openlocfilehash: 5ed68b81cb4e3edfbecd56733ab213716bce6401
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: a2965c2ee148c82708b9c61edd853f112adcf93c
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42718589"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44607682"
 ---
 # <a name="design-office-add-ins"></a>Разработка надстроек для Office
 
