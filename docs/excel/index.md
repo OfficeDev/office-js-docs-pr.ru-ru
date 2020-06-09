@@ -5,12 +5,12 @@ title: Документация по надстройкам Excel
 description: Учебные ресурсы по надстройкам Excel.
 ms.date: 07/05/2019
 localization_priority: Priority
-ms.openlocfilehash: 7886af5cf832e1d1869f02f690ac4fabb4681808
-ms.sourcegitcommit: c3673cc693fa7070e1b397922bd735ba3f9342f3
+ms.openlocfilehash: c921ef67e65eeefbd5a13e2cd505a3d2dfb69973
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "35576987"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44610373"
 ---
 # <a name="excel-add-ins-documentation"></a>Документация по надстройкам Excel
 

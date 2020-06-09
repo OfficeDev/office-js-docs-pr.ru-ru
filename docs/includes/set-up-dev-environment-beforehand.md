@@ -1,2 +1,2 @@
 >[!NOTE]
-> <span data-ttu-id="7376e-101">Если вы не знакомы с Node.js или NPM, начните с [настройки среды разработки](../overview/set-up-your-dev-environment.md).</span><span class="sxs-lookup"><span data-stu-id="7376e-101">If you aren't familiar with Node.js or npm, you should start by [setting up your development environment](../overview/set-up-your-dev-environment.md).</span></span>
+> <span data-ttu-id="21355-101">Если вы не знакомы с Node.js или NPM, начните с [настройки среды разработки](../overview/set-up-your-dev-environment.md).</span><span class="sxs-lookup"><span data-stu-id="21355-101">If you aren't familiar with Node.js or npm, you should start by [setting up your development environment](../overview/set-up-your-dev-environment.md).</span></span>

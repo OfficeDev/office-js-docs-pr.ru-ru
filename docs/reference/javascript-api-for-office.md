@@ -5,12 +5,12 @@ title: Справочная документация по API JavaScript для 
 description: Узнайте об API-интерфейсах JavaScript для Office.
 ms.date: 12/24/2019
 localization_priority: Priority
-ms.openlocfilehash: 99c42103d8e6d7b18d6082bfdafe1da0dad8397d
-ms.sourcegitcommit: 6c381634c77d316f34747131860db0a0bced2529
+ms.openlocfilehash: 78e222c7cdc618d707678dc73dd4a0e5dab123de
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42890902"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44608819"
 ---
 # <a name="api-reference-documentation"></a>Справочная документация по API
 
