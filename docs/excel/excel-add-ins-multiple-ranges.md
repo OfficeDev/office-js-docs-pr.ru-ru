@@ -3,12 +3,12 @@ title: Работа с несколькими диапазонами однов�
 description: Узнайте, как библиотека JavaScript для Excel позволяет надстройке выполнять операции, а также задавать свойства для нескольких диапазонов одновременно.
 ms.date: 04/30/2019
 localization_priority: Normal
-ms.openlocfilehash: 97481b4b8ab76f7bbc5bd10378d4cc6512bc7b6a
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 6a508d8481d9851c7f7ae98ec959fcec9663972c
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42717070"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44609771"
 ---
 # <a name="work-with-multiple-ranges-simultaneously-in-excel-add-ins"></a>Работа с несколькими диапазонами одновременно в надстройках Excel
 
@@ -49,7 +49,7 @@ ms.locfileid: "42717070"
 - `style`
 - `worksheet`
 
-##### <a name="methods"></a>Методы
+##### <a name="methods"></a>Methods
 
 - `calculate()`
 - `clear()`
@@ -60,12 +60,12 @@ ms.locfileid: "42717070"
 - `getEntireRow()`
 - `getIntersection()`
 - `getIntersectionOrNullObject()`
-- `getOffsetRange()`(с `getOffsetRangeAreas` именем для `RangeAreas` объекта)
+- `getOffsetRange()`(с именем `getOffsetRangeAreas` для `RangeAreas` объекта)
 - `getSpecialCells()`
 - `getSpecialCellsOrNullObject()`
 - `getTables()`
-- `getUsedRange()`(с `getUsedRangeAreas` именем для `RangeAreas` объекта)
-- `getUsedRangeOrNullObject()`(с `getUsedRangeAreasOrNullObject` именем для `RangeAreas` объекта)
+- `getUsedRange()`(с именем `getUsedRangeAreas` для `RangeAreas` объекта)
+- `getUsedRangeOrNullObject()`(с именем `getUsedRangeAreasOrNullObject` для `RangeAreas` объекта)
 - `load()`
 - `set()`
 - `setDirty()`

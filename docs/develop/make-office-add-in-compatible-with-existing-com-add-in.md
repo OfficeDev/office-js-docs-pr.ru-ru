@@ -3,12 +3,12 @@ title: Убедитесь, что надстройка Office совместим
 description: Включение совместимости между надстройкой Office и эквивалентной надстройкой COM
 ms.date: 07/31/2019
 localization_priority: Normal
-ms.openlocfilehash: cfe39dcecafc23bd0813251f7c883aa7a8810273
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: ff47b75e8e560bc891c84dc839b7eceffb2400be
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42718904"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44609424"
 ---
 # <a name="make-your-office-add-in-compatible-with-an-existing-com-add-in"></a>Убедитесь, что надстройка Office совместима с существующей надстройкой COM
 

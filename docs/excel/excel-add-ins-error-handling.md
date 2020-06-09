@@ -3,12 +3,12 @@ title: Обработка ошибок
 description: Изучите логику обработки ошибок API JavaScript для Excel, чтобы учитывать ошибки времени выполнения.
 ms.date: 05/13/2020
 localization_priority: Normal
-ms.openlocfilehash: aaadcf41f03258bdf85d9796cc611a1c05478549
-ms.sourcegitcommit: 110a7f247ce83c7434ea32098497d2864e28e096
+ms.openlocfilehash: ff6336e4d76e84ddc708d65eda70f5f2e172fde7
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "44227407"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44609610"
 ---
 # <a name="error-handling"></a>Обработка ошибок
 

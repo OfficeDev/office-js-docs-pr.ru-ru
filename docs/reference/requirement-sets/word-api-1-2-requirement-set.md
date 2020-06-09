@@ -4,12 +4,12 @@ description: Сведения о наборе требований WordApi 1,2
 ms.date: 07/25/2019
 ms.prod: word
 localization_priority: Normal
-ms.openlocfilehash: f6fce3994daa77cb556ebcea6cad7d38a48c2da5
-ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
+ms.openlocfilehash: 6fd2672462037d445c854bbc0c533c4dc5404b86
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "36064888"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611304"
 ---
 # <a name="whats-new-in-word-javascript-api-12"></a>Новые возможности API JavaScript для Word 1.2
 

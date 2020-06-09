@@ -3,12 +3,12 @@ ms.date: 05/16/2020
 description: Протестируйте надстройку Office с помощью Internet Explorer 11.
 title: Тестирование Internet Explorer 11
 localization_priority: Normal
-ms.openlocfilehash: 697c87d90df9aa70a7b20da5cd4c91d4445fb850
-ms.sourcegitcommit: 54e2892c0c26b9ad1e4dba8aba48fea39f853b6c
+ms.openlocfilehash: 4ea2b4da153e2908f928086cd4997502c194e578
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "44275950"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611206"
 ---
 # <a name="test-your-office-add-in-using-internet-explorer-11"></a>Тестирование надстройки Office с помощью Internet Explorer 11
 
@@ -47,7 +47,7 @@ office-add-dev-settings webview manifest.xml ie
 
 - Explorer
 - кромки
-- умолчани
+- Значение  по умолчанию
 
 ## <a name="see-also"></a>См. также
 * [Тестирование и отладка надстроек Office](test-debug-office-add-ins.md)

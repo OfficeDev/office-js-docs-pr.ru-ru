@@ -3,12 +3,12 @@ title: Лаунчевент в файле манифеста (Предварит
 description: Элемент Лаунчевент настраивает надстройку для активации на основе поддерживаемых событий.
 ms.date: 05/15/2020
 localization_priority: Normal
-ms.openlocfilehash: a4f5208ec7f735d926c3a878cae34973c3992cf9
-ms.sourcegitcommit: f62d9630de69c5c070e3d4048205f5cc654db7e4
+ms.openlocfilehash: 4874b9f4c14e3a999f41ec3fa20a15393b031ea6
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "44278558"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611780"
 ---
 # <a name="launchevent-element-preview"></a>Элемент Лаунчевент (Preview)
 
@@ -34,7 +34,7 @@ ms.locfileid: "44278558"
 
 ## <a name="contained-in"></a>Содержится в
 
-- [лаунчевентс](launchevents.md)
+- [LaunchEvents](launchevents.md)
 
 ## <a name="attributes"></a>Атрибуты
 
@@ -45,4 +45,4 @@ ms.locfileid: "44278558"
 
 ## <a name="see-also"></a>См. также
 
-- [лаунчевентс](launchevents.md)
+- [LaunchEvents](launchevents.md)

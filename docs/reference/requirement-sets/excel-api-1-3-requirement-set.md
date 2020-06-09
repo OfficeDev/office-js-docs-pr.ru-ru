@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1,3
 ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: d0ab1e0a1c41d6da0104c03355f64f5f5abbb3b2
-ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
+ms.openlocfilehash: 482d04a951acc48d34838a758834adfba273bd19
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "36064734"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611437"
 ---
 # <a name="whats-new-in-excel-javascript-api-13"></a>Новые возможности API JavaScript для Excel 1.3
 
@@ -22,7 +22,7 @@ ExcelApi 1,3 добавлена поддержка привязки данных
 | Класс | Поля | Описание |
 |:---|:---|:---|
 |[Binding](/javascript/api/excel/excel.binding)|[delete()](/javascript/api/excel/excel.binding#delete--)|Удаляет привязку.|
-|[BindingCollection](/javascript/api/excel/excel.bindingcollection)|[Add (Range: строка \| Range, BindingType: Excel. bindingType, ID: строка)](/javascript/api/excel/excel.bindingcollection#add-range--bindingtype--id-)|Добавляет привязку к определенному объекту Range.|
+|[BindingCollection](/javascript/api/excel/excel.bindingcollection)|[Add (Range: \| строка Range, bindingType: Excel. bindingType, ID: строка)](/javascript/api/excel/excel.bindingcollection#add-range--bindingtype--id-)|Добавляет привязку к определенному объекту Range.|
 ||[Аддфромнамедитем (имя: строка, bindingType: Excel. BindingType, ID: строка)](/javascript/api/excel/excel.bindingcollection#addfromnameditem-name--bindingtype--id-)|Добавляет новую привязку с учетом именованного элемента в книге.|
 ||[Аддфромселектион (bindingType: Excel. BindingType, ID: String)](/javascript/api/excel/excel.bindingcollection#addfromselection-bindingtype--id-)|Добавляет новую привязку с учетом выделенного в настоящий момент фрагмента.|
 |[PivotTable](/javascript/api/excel/excel.pivottable)|[name](/javascript/api/excel/excel.pivottable#name)|Имя сводной таблицы.|
@@ -38,9 +38,9 @@ ExcelApi 1,3 добавлена поддержка привязки данных
 ||[getRange()](/javascript/api/excel/excel.rangeview#getrange--)|Получает родительский диапазон, сопоставленный с текущим объектом RangeView.|
 ||[numberFormat](/javascript/api/excel/excel.rangeview#numberformat)|Представляет код в числовом формате Excel для данной ячейки.|
 ||[cellAddresses](/javascript/api/excel/excel.rangeview#celladdresses)|Представляет адреса ячеек RangeView. Только для чтения.|
-||[columnCount](/javascript/api/excel/excel.rangeview#columncount)|Возвращает количество видимых столбцов. Только для чтения.|
+||[Число](/javascript/api/excel/excel.rangeview#columncount)|Возвращает количество видимых столбцов. Только для чтения.|
 ||[index](/javascript/api/excel/excel.rangeview#index)|Возвращает значение, представляющее индекс RangeView. Только для чтения.|
-||[rowCount](/javascript/api/excel/excel.rangeview#rowcount)|Возвращает количество видимых строк. Только для чтения.|
+||[Стро](/javascript/api/excel/excel.rangeview#rowcount)|Возвращает количество видимых строк. Только для чтения.|
 ||[строки](/javascript/api/excel/excel.rangeview#rows)|Представляет коллекцию видимых ячеек в диапазоне, сопоставленных с указанным диапазоном. Только для чтения.|
 ||[text](/javascript/api/excel/excel.rangeview#text)|Текстовые значения указанного диапазона. Текстовое значение не зависит от ширины ячейки. Замена знака #, которая происходит в пользовательском интерфейсе Excel, не повлияет на текстовое значение, возвращаемое API. Только для чтения.|
 ||[valueTypes](/javascript/api/excel/excel.rangeview#valuetypes)|Представляет тип данных каждой ячейки. Только для чтения.|

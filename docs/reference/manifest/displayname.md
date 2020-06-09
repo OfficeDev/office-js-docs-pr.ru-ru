@@ -3,12 +3,12 @@ title: Элемент DisplayName в файле манифеста
 description: Указывает имя надстройки Office как строки длиной до 125 символов.
 ms.date: 10/09/2018
 localization_priority: Normal
-ms.openlocfilehash: 7f7ba9dfa4ac203c5e8b0239e24db2291e03b2e6
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 194af15d3ac68d87859304021b61cd975c9989b3
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42718344"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44612250"
 ---
 # <a name="displayname-element"></a>Элемент DisplayName
 

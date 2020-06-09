@@ -3,12 +3,12 @@ title: Публикация надстроек Office с использован�
 description: Узнайте, как с помощью централизованного развертывания развертывать внутренние надстройки, а также надстройки, предоставляемые поставщиками программного обеспечения.
 ms.date: 03/24/2020
 localization_priority: Normal
-ms.openlocfilehash: 4c19a272e448e38bb5e895cd0bc2a53707a172ad
-ms.sourcegitcommit: 682d18c9149b1153f9c38d28e2a90384e6a261dc
+ms.openlocfilehash: cfb9a2b33a558e2df16b30bb955f477f9c5749e1
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "44217776"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611878"
 ---
 # <a name="publish-office-add-ins-using-centralized-deployment-via-the-office-365-admin-center"></a>Публикация надстроек Office с использованием централизованного развертывания в Центре администрирования Office 365
 

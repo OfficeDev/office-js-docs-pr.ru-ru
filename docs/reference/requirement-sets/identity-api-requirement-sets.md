@@ -4,12 +4,12 @@ description: Сведения о наборе требований API удос�
 ms.date: 04/16/2020
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 4552626d692b08bab65f866ab406988f5e88945a
-ms.sourcegitcommit: 803587b324fc8038721709d7db5664025cf03c6b
+ms.openlocfilehash: 1979f4ba27840885ac17ff21d81cbca3715c78bf
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "43547243"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611367"
 ---
 # <a name="identity-api-requirement-sets"></a>Наборы обязательных элементов API удостоверений
 

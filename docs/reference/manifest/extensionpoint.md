@@ -3,12 +3,12 @@ title: Элемент ExtensionPoint в файле манифеста
 description: Определяет, где доступны функции надстройки в пользовательском интерфейсе Office.
 ms.date: 05/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 41d4ede1ef4198430d888891e3eedda4e050456f
-ms.sourcegitcommit: f62d9630de69c5c070e3d4048205f5cc654db7e4
+ms.openlocfilehash: 56a7365f986060a225cc0d20c89a310deb4a52b3
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "44278422"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611871"
 ---
 # <a name="extensionpoint-element"></a>Элемент ExtensionPoint
 
@@ -93,7 +93,7 @@ ms.locfileid: "44278422"
 - [Module](#module) (можно использовать только в [DesktopFormFactor](desktopformfactor.md))
 - [MobileMessageReadCommandSurface](#mobilemessagereadcommandsurface)
 - [мобилеонлинемитингкоммандсурфаце](#mobileonlinemeetingcommandsurface-preview)
-- [лаунчевент](#launchevent-preview)
+- [LaunchEvent](#launchevent-preview)
 - [Events](#events)
 - [DetectedEntity](#detectedentity)
 
@@ -313,7 +313,7 @@ ms.locfileid: "44278422"
 
 |  Элемент |  Описание  |
 |:-----|:-----|
-| [лаунчевентс](launchevents.md) |  Список [лаунчевент](launchevent.md) для активации на основе событий.  |
+| [LaunchEvents](launchevents.md) |  Список [лаунчевент](launchevent.md) для активации на основе событий.  |
 | [SourceLocation](sourcelocation.md) |  Расположение исходного файла JavaScript.  |
 
 #### <a name="example"></a>Пример

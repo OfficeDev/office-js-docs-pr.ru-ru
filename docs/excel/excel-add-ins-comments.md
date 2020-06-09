@@ -3,12 +3,12 @@ title: Работайте с комментариями с помощью API Ja
 description: Сведения об использовании API для добавления, удаления и редактирования комментариев и потоков комментариев.
 ms.date: 03/17/2020
 localization_priority: Normal
-ms.openlocfilehash: 971e0a830c0a34aea3e79b13fcd9fb869f971d2c
-ms.sourcegitcommit: 735bf94ac3c838f580a992e7ef074dbc8be2b0ea
+ms.openlocfilehash: a0ea156c8599b98800d03d2238451c7935d6466f
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "44170823"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44609778"
 ---
 # <a name="work-with-comments-using-the-excel-javascript-api"></a>Работайте с комментариями с помощью API JavaScript для Excel
 
@@ -18,7 +18,7 @@ ms.locfileid: "44170823"
 
 ![Комментарий Excel с пометкой "Comment" с двумя ответами, помеченными как "Comment. ответы [0]" и "Comment. ответы [1].](../images/excel-comments.png)
 
-Комментарии в книге отслеживаются `Workbook.comments` свойством. Это касается примечаний, созданных пользователями, а также примечаний, созданных вашей надстройкой. Свойство `Workbook.comments` является объектом [CommentCollection](/javascript/api/excel/excel.commentcollection), содержащим коллекцию объектов [Comment](/javascript/api/excel/excel.comment). Комментарии также доступны на уровне [листа](/javascript/api/excel/excel.worksheet) . Примеры, приведенные в этой статье, работают с комментариями на уровне книги, но их можно легко изменить, `Worksheet.comments` чтобы использовать свойство.
+Комментарии в книге отслеживаются `Workbook.comments` свойством. Это касается примечаний, созданных пользователями, а также примечаний, созданных вашей надстройкой. Свойство `Workbook.comments` является объектом [CommentCollection](/javascript/api/excel/excel.commentcollection), содержащим коллекцию объектов [Comment](/javascript/api/excel/excel.comment). Комментарии также доступны на уровне [листа](/javascript/api/excel/excel.worksheet) . Примеры, приведенные в этой статье, работают с комментариями на уровне книги, но их можно легко изменить, чтобы использовать `Worksheet.comments` свойство.
 
 ## <a name="add-comments"></a>Добавление примечаний
 
@@ -46,7 +46,7 @@ Excel.run(function (context) {
 
 ### <a name="add-comment-replies"></a>Добавление ответов на комментарии
 
-`Comment` Объект — это поток комментариев, который содержит ноль или больше ответов. Объекты `Comment` содержат свойство `replies`, являющееся коллекцией [CommentReplyCollection](/javascript/api/excel/excel.commentreplycollection), содержащей объекты [CommentReply](/javascript/api/excel/excel.commentreply). Чтобы добавить ответ на примечание, используйте метод `CommentReplyCollection.add`, передающий текст ответа. Ответы отображаются в порядке их добавления. Они также применяют атрибуты к текущему пользователю надстройки.
+`Comment`Объект — это поток комментариев, который содержит ноль или больше ответов. Объекты `Comment` содержат свойство `replies`, являющееся коллекцией [CommentReplyCollection](/javascript/api/excel/excel.commentreplycollection), содержащей объекты [CommentReply](/javascript/api/excel/excel.commentreply). Чтобы добавить ответ на примечание, используйте метод `CommentReplyCollection.add`, передающий текст ответа. Ответы отображаются в порядке их добавления. Они также применяют атрибуты к текущему пользователю надстройки.
 
 В следующем примере кода добавляется ответ к первому примечанию в книге.
 
@@ -88,7 +88,7 @@ Excel.run(function (context) {
 
 ## <a name="delete-comments"></a>Удалять комментарии.
 
-Чтобы удалить комментарий, `Comment.delete` используйте метод. При удалении комментария также удаляются ответы, связанные с этим комментарием.
+Чтобы удалить комментарий, используйте `Comment.delete` метод. При удалении комментария также удаляются ответы, связанные с этим комментарием.
 
 ```js
 Excel.run(function (context) {
@@ -113,7 +113,7 @@ Excel.run(function (context) {
 
 ## <a name="resolve-comment-threads"></a>Разрешение потоков комментариев
 
-Поток комментариев имеет настраиваемое логическое значение `resolved`, которое указывает, разрешено ли оно. Значение `true` означает, что поток комментариев разрешается. Значение `false` означает, что поток комментариев является либо новым, либо повторно открытым.
+Поток комментариев имеет настраиваемое логическое значение, `resolved` которое указывает, разрешено ли оно. Значение означает, `true` что поток комментариев разрешается. Значение означает, `false` что поток комментариев является либо новым, либо повторно открытым.
 
 ```js
 Excel.run(function (context) {
@@ -123,7 +123,7 @@ Excel.run(function (context) {
 });
 ```
 
-Ответы на комментарии имеют свойство `resolved` ReadOnly. Его значение всегда равно значению остальной части потока.
+Ответы на комментарии имеют `resolved` свойство ReadOnly. Его значение всегда равно значению остальной части потока.
 
 ## <a name="comment-metadata"></a>Метаданные Comment
 
@@ -173,7 +173,7 @@ Excel.run(function (context) {
 
 [Упоминания](https://support.office.com/article/use-mention-in-comments-to-tag-someone-for-feedback-644bf689-31a0-4977-a4fb-afe01820c1fd) используются для обозначения коллег в комментарии. При этом уведомления отправляются с содержимым комментария. Ваша надстройка может создавать эти упоминания от вашего имени.
 
-Комментарии с упоминанием следует создавать с помощью объектов [комментричконтент](/javascript/api/excel/excel.commentrichcontent) . Вызов `CommentCollection.add` с `CommentRichContent` указанием одного или нескольких упоминаний и указанием `ContentType.mention` в `contentType` качестве параметра. `content` Строку также необходимо отформатировать, чтобы вставить упоминание в текст. Формат для упоминания: `<at id="{replyIndex}">{mentionName}</at>`.
+Комментарии с упоминанием следует создавать с помощью объектов [комментричконтент](/javascript/api/excel/excel.commentrichcontent) . Вызов `CommentCollection.add` с `CommentRichContent` указанием одного или нескольких упоминаний и указанием в `ContentType.mention` качестве `contentType` параметра. `content`Строку также необходимо отформатировать, чтобы вставить упоминание в текст. Формат для упоминания: `<at id="{replyIndex}">{mentionName}</at>` .
 
 > НОТЕ В настоящее время в качестве текста ссылки на упоминание можно использовать только точное имя упоминания. Поддержка сокращенных версий имени будет добавлена позже.
 

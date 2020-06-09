@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1,1
 ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 4668cebd545cdefeb033f5c397afb1ad796e2d04
-ms.sourcegitcommit: 3f5d7f4794e3d3c8bc3a79fa05c54157613b9376
+ms.openlocfilehash: 0b1c1cc6cb6b21609a716210c832b4b1cb325438
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "36064489"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44612110"
 ---
 # <a name="excel-javascript-api-requirement-set-11"></a>Набор обязательных элементов API JavaScript для Excel 1,1
 
@@ -22,7 +22,7 @@ API JavaScript для Excel 1,1 — это первая версия API. Это
 | Класс | Поля | Описание |
 |:---|:---|:---|
 |[Application](/javascript/api/excel/excel.application)|[Calculate (Калкулатионтипе: Excel. Калкулатионтипе)](/javascript/api/excel/excel.application#calculate-calculationtype-)|Пересчитывает данные во всех открытых в текущий момент книгах Excel.|
-||[калкулатионмоде](/javascript/api/excel/excel.application#calculationmode)|Возвращает режим вычислений, используемый в книге в соответствии с константами в Excel. Калкулатионмоде. Возможные значения: `Automatic`, где Excel управляет пересчетом; `AutomaticExceptTables`, где Excel контролирует пересчет, но игнорирует изменения в таблицах; `Manual`, где выполняется расчет, когда пользователь запрашивает его.|
+||[калкулатионмоде](/javascript/api/excel/excel.application#calculationmode)|Возвращает режим вычислений, используемый в книге в соответствии с константами в Excel. Калкулатионмоде. Допустимые значения: `Automatic` , где элементы управления Excel пересчета `AutomaticExceptTables` , а также в том случае, когда Excel контролирует пересчет, но игнорирует изменения в таблицах `Manual` , где выполняется вычисление по запросу пользователя.|
 |[Binding](/javascript/api/excel/excel.binding)|[getRange()](/javascript/api/excel/excel.binding#getrange--)|Возвращает представленный привязкой диапазон. Если тип привязки неправильный, выдается ошибка.|
 ||[getTable()](/javascript/api/excel/excel.binding#gettable--)|Возвращает представленную привязкой таблицу. Если тип привязки неправильный, выдается ошибка.|
 ||[getText()](/javascript/api/excel/excel.binding#gettext--)|Возвращает представленный привязкой текст. Если тип привязки неправильный, выдается ошибка.|
@@ -43,7 +43,7 @@ API JavaScript для Excel 1,1 — это первая версия API. Это
 ||[series](/javascript/api/excel/excel.chart#series)|Представляет один ряд данных или коллекцию рядов данных в диаграмме. Только для чтения.|
 ||[заголовок](/javascript/api/excel/excel.chart#title)|Представляет заголовок указанной диаграммы, включая его текст, видимость, положение и форматирование. Только для чтения.|
 ||[setData (sourceData: Range, seriesBy?: Excel. Чартсериесби)](/javascript/api/excel/excel.chart#setdata-sourcedata--seriesby-)|Сбрасывает исходные данные для диаграммы.|
-||[setPosition (startCell: строка \| диапазона, endCell?: строка \| диапазона)](/javascript/api/excel/excel.chart#setposition-startcell--endcell-)|Располагает диаграмму относительно ячеек на листе.|
+||[setPosition (startCell: \| строка диапазона, endCell?: \| строка диапазона)](/javascript/api/excel/excel.chart#setposition-startcell--endcell-)|Располагает диаграмму относительно ячеек на листе.|
 ||[top](/javascript/api/excel/excel.chart#top)|Представляет расстояние в пунктах от верхнего края объекта до верхнего края первой строки (на листе) или до верхнего края области диаграммы (на диаграмме).|
 ||[width](/javascript/api/excel/excel.chart#width)|Представляет ширину объекта диаграммы (в пунктах).|
 |[ChartAreaFormat](/javascript/api/excel/excel.chartareaformat)|[fill](/javascript/api/excel/excel.chartareaformat#fill)|Представляет формат заливки объекта, включая сведения о форматировании фона. Только для чтения.|
@@ -131,12 +131,12 @@ API JavaScript для Excel 1,1 — это первая версия API. Это
 ||[Delete (Shift: Excel. Делетешифтдиректион)](/javascript/api/excel/excel.range#delete-shift-)|Удаляет ячейки, связанные с диапазоном.|
 ||[formulas](/javascript/api/excel/excel.range#formulas)|Представляет формулу в формате A1.|
 ||[formulasLocal](/javascript/api/excel/excel.range#formulaslocal)|Представляет формулу в нотации стиля A1 на языке пользователя и в соответствии с его языковым стандартом. Например, английская формула =SUM(A1, 1.5) превратится в "=СУММ(A1; 1,5)" на русском языке.|
-||[getBoundingRect (anotherRange: строка \| Range)](/javascript/api/excel/excel.range#getboundingrect-anotherrange-)|Возвращает наименьший объект диапазона, включающий в себя заданные диапазоны. Например, GetBoundingRect для "B2:C5" и "D10:E15" возвращает значение "B2:E15".|
+||[getBoundingRect (anotherRange: \| строка Range)](/javascript/api/excel/excel.range#getboundingrect-anotherrange-)|Возвращает наименьший объект диапазона, включающий в себя заданные диапазоны. Например, GetBoundingRect для "B2:C5" и "D10:E15" возвращает значение "B2:E15".|
 ||[getCell(row: number, column: number)](/javascript/api/excel/excel.range#getcell-row--column-)|Получает объект диапазона, содержащий одну ячейку, по номеру строки и столбца. Ячейка может находиться вне границ родительского диапазона, пока она остается в сетке листа. Возвращаемая ячейка располагается относительно верхней левой ячейки диапазона.|
 ||[getColumn(column: number)](/javascript/api/excel/excel.range#getcolumn-column-)|Возвращает столбец в диапазоне.|
-||[getEntireColumn()](/javascript/api/excel/excel.range#getentirecolumn--)|Получает объект, представляющий весь столбец диапазона (например, если текущий диапазон представляет ячейки "B4: E11", а `getEntireColumn` — диапазон, представляющий столбцы "б:е").|
-||[getEntireRow()](/javascript/api/excel/excel.range#getentirerow--)|Получает объект, представляющий всю строку диапазона (например, если текущий диапазон представляет ячейки "B4: E11", а `GetEntireRow` — диапазон, представляющий строки "4:11").|
-||[пересечение (anotherRange: строка \| Range)](/javascript/api/excel/excel.range#getintersection-anotherrange-)|Возвращает объект диапазона, представляющий собой прямоугольное пересечение заданных диапазонов.|
+||[getEntireColumn()](/javascript/api/excel/excel.range#getentirecolumn--)|Получает объект, представляющий весь столбец диапазона (например, если текущий диапазон представляет ячейки "B4: E11", `getEntireColumn` а — диапазон, представляющий столбцы "б:е").|
+||[getEntireRow()](/javascript/api/excel/excel.range#getentirerow--)|Получает объект, представляющий всю строку диапазона (например, если текущий диапазон представляет ячейки "B4: E11", `GetEntireRow` а — диапазон, представляющий строки "4:11").|
+||[пересечение (anotherRange: \| строка Range)](/javascript/api/excel/excel.range#getintersection-anotherrange-)|Возвращает объект диапазона, представляющий собой прямоугольное пересечение заданных диапазонов.|
 ||[Жетластцелл ()](/javascript/api/excel/excel.range#getlastcell--)|Возвращает последнюю ячейку в диапазоне. Например, последняя ячейка диапазона B2:D5 — D5.|
 ||[Жетластколумн ()](/javascript/api/excel/excel.range#getlastcolumn--)|Возвращает последний столбец в диапазоне. Например, последний столбец диапазона B2:D5 — D2:D5.|
 ||[Жетластров ()](/javascript/api/excel/excel.range#getlastrow--)|Возвращает последнюю строку в диапазоне. Например, последняя строка в диапазоне "B2:D5" — "B5:D5".|
@@ -147,10 +147,10 @@ API JavaScript для Excel 1,1 — это первая версия API. Это
 ||[address](/javascript/api/excel/excel.range#address)|Представляет ссылку на диапазон в стиле A1. Значение Address будет содержать ссылку на лист (например, "Лист1! A1: B4). Только для чтения.|
 ||[addressLocal](/javascript/api/excel/excel.range#addresslocal)|Представляет ссылку на указанный диапазон на языке пользователя. Только для чтения.|
 ||[cellCount](/javascript/api/excel/excel.range#cellcount)|Количество ячеек в диапазоне. Этот API возвращает значение -1, если количество ячеек превышает 2^31-1 (2,147,483,647). Только для чтения.|
-||[columnCount](/javascript/api/excel/excel.range#columncount)|Представляет общее количество столбцов в диапазоне. Только для чтения.|
+||[Число](/javascript/api/excel/excel.range#columncount)|Представляет общее количество столбцов в диапазоне. Только для чтения.|
 ||[columnIndex](/javascript/api/excel/excel.range#columnindex)|Представляет номер столбца первой ячейки диапазона. Используется нулевой индекс. Только для чтения.|
 ||[format](/javascript/api/excel/excel.range#format)|Возвращает объект формата, в который включены шрифт, заливка, границы, выравнивание и другие свойства диапазона. Только для чтения.|
-||[rowCount](/javascript/api/excel/excel.range#rowcount)|Возвращает общее количество строк в диапазоне. Только для чтения.|
+||[Стро](/javascript/api/excel/excel.range#rowcount)|Возвращает общее количество строк в диапазоне. Только для чтения.|
 ||[rowIndex](/javascript/api/excel/excel.range#rowindex)|Возвращает номер строки первой ячейки диапазона. Используется нулевой индекс. Только для чтения.|
 ||[text](/javascript/api/excel/excel.range#text)|Текстовые значения указанного диапазона. Текстовое значение не зависит от ширины ячейки. Замена знака #, которая происходит в пользовательском интерфейсе Excel, не повлияет на текстовое значение, возвращаемое API. Только для чтения.|
 ||[valueTypes](/javascript/api/excel/excel.range#valuetypes)|Представляет тип данных каждой ячейки. Только для чтения.|
@@ -188,10 +188,10 @@ API JavaScript для Excel 1,1 — это первая версия API. Это
 ||[columns](/javascript/api/excel/excel.table#columns)|Представляет коллекцию всех столбцов в таблице. Только для чтения.|
 ||[id](/javascript/api/excel/excel.table#id)|Возвращает значение, однозначно идентифицирующее таблицу в данной книге. Значение идентификатора остается прежним, даже если переименовать таблицу. Только для чтения.|
 ||[строки](/javascript/api/excel/excel.table#rows)|Представляет коллекцию всех строк в таблице. Только для чтения.|
-||[showHeaders](/javascript/api/excel/excel.table#showheaders)|Указывает, отображается ли строка заголовков. Можно задать это значение, чтобы отобразить или скрыть строку заголовков.|
-||[showTotals](/javascript/api/excel/excel.table#showtotals)|Указывает, отображается ли строка итогов. Можно задать это значение, чтобы отобразить или скрыть строку итогов.|
+||[шовхеадерс](/javascript/api/excel/excel.table#showheaders)|Указывает, отображается ли строка заголовков. Можно задать это значение, чтобы отобразить или скрыть строку заголовков.|
+||[шовтоталс](/javascript/api/excel/excel.table#showtotals)|Указывает, отображается ли строка итогов. Можно задать это значение, чтобы отобразить или скрыть строку итогов.|
 ||[style](/javascript/api/excel/excel.table#style)|Постоянное значение, представляющее стиль таблицы. Возможные значения: от TableStyleLight1 до TableStyleLight21, от TableStyleMedium1 до TableStyleMedium28, от TableStyleStyleDark1 до TableStyleStyleDark11. Также можно указать настраиваемый пользовательский стиль, имеющийся в книге.|
-|[TableCollection](/javascript/api/excel/excel.tablecollection)|[Add (Address: строка \| диапазона, hasHeaders: Boolean)](/javascript/api/excel/excel.tablecollection#add-address--hasheaders-)|Создание таблицы. Объект или исходный адрес диапазона определяет лист, на который будет добавлена таблица. Если добавить таблицу не удается (например, если адрес недействителен или одна таблица будет перекрываться другой), выводится сообщение об ошибке.|
+|[TableCollection](/javascript/api/excel/excel.tablecollection)|[Add (Address: \| строка диапазона, hasHeaders: Boolean)](/javascript/api/excel/excel.tablecollection#add-address--hasheaders-)|Создание таблицы. Объект или исходный адрес диапазона определяет лист, на который будет добавлена таблица. Если добавить таблицу не удается (например, если адрес недействителен или одна таблица будет перекрываться другой), выводится сообщение об ошибке.|
 ||[getItem(key: string)](/javascript/api/excel/excel.tablecollection#getitem-key-)|Получает таблицу по имени или идентификатору.|
 ||[getItemAt(index: number)](/javascript/api/excel/excel.tablecollection#getitemat-index-)|Получает таблицу на основании ее позиции в коллекции.|
 ||[count](/javascript/api/excel/excel.tablecollection#count)|Возвращает количество таблиц в книге. Только для чтения.|
@@ -205,7 +205,7 @@ API JavaScript для Excel 1,1 — это первая версия API. Это
 ||[id](/javascript/api/excel/excel.tablecolumn#id)|Возвращает уникальный ключ, идентифицирующий столбец в таблице. Только для чтения.|
 ||[index](/javascript/api/excel/excel.tablecolumn#index)|Возвращает номер индекса столбца в коллекции столбцов таблицы. Используется нулевой индекс. Только для чтения.|
 ||[values](/javascript/api/excel/excel.tablecolumn#values)|Представляет необработанные значения указанного диапазона. Могут возвращаться строковые и числовые данные, а также логические значения. Ячейки, содержащие ошибку, вернут строку ошибки.|
-|[TableColumnCollection](/javascript/api/excel/excel.tablecolumncollection)|[Add (index?: число, Values?: массив<массив<логический \| номер \| строки>> \| логический \| номер \| строки, Name?: строка)](/javascript/api/excel/excel.tablecolumncollection#add-index--values--name-)|Добавляет новый столбец в таблицу.|
+|[TableColumnCollection](/javascript/api/excel/excel.tablecolumncollection)|[Add (index?: число, Values?: массив<массив<логический \| \| номер строки>> \| логический \| \| номер строки, Name?: строка)](/javascript/api/excel/excel.tablecolumncollection#add-index--values--name-)|Добавляет новый столбец в таблицу.|
 ||[GetItem (ключ: число \| строка)](/javascript/api/excel/excel.tablecolumncollection#getitem-key-)|Возвращает объект column по имени или идентификатору.|
 ||[getItemAt(index: number)](/javascript/api/excel/excel.tablecolumncollection#getitemat-index-)|Возвращает столбец на основании его позиции в коллекции.|
 ||[count](/javascript/api/excel/excel.tablecolumncollection#count)|Возвращает количество столбцов в таблице. Только для чтения.|
@@ -214,7 +214,7 @@ API JavaScript для Excel 1,1 — это первая версия API. Это
 ||[getRange()](/javascript/api/excel/excel.tablerow#getrange--)|Получает объект диапазона, связанный со всей строкой.|
 ||[index](/javascript/api/excel/excel.tablerow#index)|Возвращает номер индекса строки в коллекции строк таблицы. Используется нулевой индекс. Только для чтения.|
 ||[values](/javascript/api/excel/excel.tablerow#values)|Представляет необработанные значения указанного диапазона. Могут возвращаться строковые и числовые данные, а также логические значения. Ячейки, содержащие ошибку, вернут строку ошибки.|
-|[TableRowCollection](/javascript/api/excel/excel.tablerowcollection)|[Add (index?: число, Values?: массив<массив<логический \| номер \| строки>> \| логический \| номер \| строки)](/javascript/api/excel/excel.tablerowcollection#add-index--values-)|Добавляет одну или несколько строк в таблицу. Возвращается объект, находящийся над новыми строками.|
+|[TableRowCollection](/javascript/api/excel/excel.tablerowcollection)|[Add (index?: число, Values?: массив<массив<логический номер \| строки \|>> \| логический \| \| номер строки)](/javascript/api/excel/excel.tablerowcollection#add-index--values-)|Добавляет одну или несколько строк в таблицу. Возвращается объект, находящийся над новыми строками.|
 ||[getItemAt(index: number)](/javascript/api/excel/excel.tablerowcollection#getitemat-index-)|Получает строку на основании ее позиции в коллекции.|
 ||[count](/javascript/api/excel/excel.tablerowcollection#count)|Возвращает количество строк в таблице. Только для чтения.|
 ||[items](/javascript/api/excel/excel.tablerowcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|

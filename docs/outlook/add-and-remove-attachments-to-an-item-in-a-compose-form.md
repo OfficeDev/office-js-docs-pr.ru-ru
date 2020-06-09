@@ -3,12 +3,12 @@ title: Добавление и удаление вложений в надстр
 description: Можно использовать различные API вложений для управления файлами или элементами Outlook, связанными с элементом, создаваемым пользователем.
 ms.date: 10/31/2019
 localization_priority: Normal
-ms.openlocfilehash: bb966ff80bae37fbaa781b5a428f6e26391aa9f4
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: d162ae4c0fa8059376a3c55463080e38679d9a01
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42720885"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611675"
 ---
 # <a name="manage-an-items-attachments-in-a-compose-form-in-outlook"></a>Управление вложениями элемента в форме создания в Outlook
 
@@ -84,7 +84,7 @@ function write(message){
 
 Вы можете прикрепить элемент Outlook (например, электронное сообщение, элемент календаря или контакт) к сообщению или встрече в форме создания, указав идентификатор элемента в веб-службах Exchange (EWS) и вызвав метод `addItemAttachmentAsync`. Вы можете получить идентификатор EWS для элемента сообщения, календаря, контакта или задачи в почтовом ящике пользователя, вызвав метод [mailbox.makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods) и используя операцию EWS [FindItem](/exchange/client-developer/web-service-reference/finditem-operation). Свойство [item.itemId](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties) также предоставляет идентификатор EWS существующего элемента в форме чтения.
 
-Приведенная ниже функция `addItemAttachment`JavaScript, которая расширяет первый пример выше и добавляет элемент в качестве вложения в создаваемую электронную почту или встречу. В качестве параметра функция принимает идентификатор EWS прикрепляемого элемента. В случае успешного присоединения он получает идентификатор вложения для дальнейшей обработки, включая удаление этого вложения в том же сеансе.
+Приведенная ниже функция JavaScript, `addItemAttachment` которая расширяет первый пример выше и добавляет элемент в качестве вложения в создаваемую электронную почту или встречу. В качестве параметра функция принимает идентификатор EWS прикрепляемого элемента. В случае успешного присоединения он получает идентификатор вложения для дальнейшей обработки, включая удаление этого вложения в том же сеансе.
 
 ```js
 // Adds the specified item as an attachment to the composed item.
@@ -122,7 +122,7 @@ function addItemAttachment(itemId) {
 
 Чтобы получить содержимое вложения, можно использовать метод [жетаттачментконтентасинк](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods) . Поддерживаемые форматы перечислены в перечислении [аттачментконтентформат](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat) .
 
-Необходимо предоставить метод обратного вызова для проверки состояния и любой ошибки с помощью объекта `AsyncResult` Output Parameter. Кроме того, можно передать дополнительные параметры в метод обратного вызова, используя необязательный `asyncContext` параметр.
+Необходимо предоставить метод обратного вызова для проверки состояния и любой ошибки с помощью `AsyncResult` объекта Output Parameter. Кроме того, можно передать дополнительные параметры в метод обратного вызова, используя необязательный `asyncContext` параметр.
 
 В приведенном ниже примере JavaScript показано, как получить вложения и настроить индивидуальную обработку для каждого поддерживаемого формата вложений.
 
@@ -162,9 +162,9 @@ function handleAttachmentsCallback(result) {
 
 ## <a name="remove-an-attachment"></a>Удаление вложения
 
-Вы можете удалить вложение из элемента сообщения или встречи в форме создания, указав соответствующий идентификатор вложения и вызвав метод [removeAttachmentAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods). Удалять можно только вложения, добавленные одной и той же надстройкой в одном сеансе. Аналогично `addFileAttachmentAsync` методам `addItemAttachmentAsync` и, `removeAttachmentAsync` — это асинхронный метод. Необходимо предоставить метод обратного вызова для проверки состояния и любой ошибки с помощью объекта `AsyncResult` Output Parameter. Кроме того, можно передать дополнительные параметры в метод обратного вызова, используя необязательный `asyncContext` параметр.
+Вы можете удалить вложение из элемента сообщения или встречи в форме создания, указав соответствующий идентификатор вложения и вызвав метод [removeAttachmentAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods). Удалять можно только вложения, добавленные одной и той же надстройкой в одном сеансе. Аналогично `addFileAttachmentAsync` `addItemAttachmentAsync` методам и, `removeAttachmentAsync` — это асинхронный метод. Необходимо предоставить метод обратного вызова для проверки состояния и любой ошибки с помощью `AsyncResult` объекта Output Parameter. Кроме того, можно передать дополнительные параметры в метод обратного вызова, используя необязательный `asyncContext` параметр.
 
-Приведенная ниже функция `removeAttachment`JavaScript продолжает расширять приведенные выше примеры и удаляет указанное вложение из создаваемого сообщения электронной почты или встречи. В качестве аргумента функция принимает идентификатор вложения, которое требуется удалить. Вы можете получить идентификатор `addFileAttachmentAsync`вложения после успешного `addFileAttachmentFromBase64Async`вызова, или `addItemAttachmentAsync` вызова метода и сохранить его для последующего `removeAttachmentAsync` вызова метода.
+Приведенная ниже функция JavaScript `removeAttachment` продолжает расширять приведенные выше примеры и удаляет указанное вложение из создаваемого сообщения электронной почты или встречи. В качестве аргумента функция принимает идентификатор вложения, которое требуется удалить. Вы можете получить идентификатор вложения после успешного `addFileAttachmentAsync` `addFileAttachmentFromBase64Async` вызова, или `addItemAttachmentAsync` вызова метода и сохранить его для последующего `removeAttachmentAsync` вызова метода.
 
 ```js
 // Removes the specified attachment from the composed item.

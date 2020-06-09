@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1,8
 ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 4a512b10dd23b2165d72226d9df27d5f9454c24e
-ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
+ms.openlocfilehash: e5d40df0ec9e6b5fb307f834c239c7fa895af42e
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42597007"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611402"
 ---
 # <a name="whats-new-in-excel-javascript-api-18"></a>Новые возможности API JavaScript для Excel 1,8
 
@@ -68,7 +68,7 @@ ms.locfileid: "42597007"
 ||[textOrientation](/javascript/api/excel/excel.chartaxis#textorientation)|Представляет ориентацию текста для метки делений оси. Значение должно быть целым числом от -90 до 90 или 180 для вертикально-ориентированного текста.|
 |[ChartAxisFormat](/javascript/api/excel/excel.chartaxisformat)|[fill](/javascript/api/excel/excel.chartaxisformat#fill)|Представляет форматирование заливки диаграммы. Только для чтения.|
 |[ChartAxisTitle](/javascript/api/excel/excel.chartaxistitle)|[Сетформула (формула: строка)](/javascript/api/excel/excel.chartaxistitle#setformula-formula-)|Строковое значение, представляющее формулу заголовка оси диаграммы с использованием нотации стиля A1.|
-|[ChartAxisTitleFormat](/javascript/api/excel/excel.chartaxistitleformat)|[граница](/javascript/api/excel/excel.chartaxistitleformat#border)|Представляет формат границы, включающий цвет, тип линии и толщину.|
+|[ChartAxisTitleFormat](/javascript/api/excel/excel.chartaxistitleformat)|[вокруг](/javascript/api/excel/excel.chartaxistitleformat#border)|Представляет формат границы, включающий цвет, тип линии и толщину.|
 ||[fill](/javascript/api/excel/excel.chartaxistitleformat#fill)|Представляет форматирование заливки диаграммы.|
 |[ChartBorder](/javascript/api/excel/excel.chartborder)|[clear()](/javascript/api/excel/excel.chartborder#clear--)|Очищает формат границы элемента диаграммы.|
 |[ChartCollection](/javascript/api/excel/excel.chartcollection)|[onActivated](/javascript/api/excel/excel.chartcollection#onactivated)|Возникает при активации диаграммы.|
@@ -87,7 +87,7 @@ ms.locfileid: "42597007"
 ||[textOrientation](/javascript/api/excel/excel.chartdatalabel#textorientation)|Представляет ориентацию текста для метки данных диаграммы. Значение должно быть целым числом от -90 до 90 или 180 для вертикально-ориентированного текста.|
 ||[top](/javascript/api/excel/excel.chartdatalabel#top)|Представляет расстояние от верхнего края метки данных диаграммы до верха области диаграммы (в пунктах). Значение NULL, если метка данных диаграммы не отображается.|
 ||[verticalAlignment](/javascript/api/excel/excel.chartdatalabel#verticalalignment)|Представляет вертикальное выравнивание для метки данных диаграммы. Дополнительные сведения см. в статье Excel. Чарттекствертикалалигнмент.|
-|[ChartDataLabelFormat](/javascript/api/excel/excel.chartdatalabelformat)|[граница](/javascript/api/excel/excel.chartdatalabelformat#border)|Представляет формат границы, включающий цвет, тип линии и толщину. Только для чтения.|
+|[ChartDataLabelFormat](/javascript/api/excel/excel.chartdatalabelformat)|[вокруг](/javascript/api/excel/excel.chartdatalabelformat#border)|Представляет формат границы, включающий цвет, тип линии и толщину. Только для чтения.|
 |[ChartDataLabels](/javascript/api/excel/excel.chartdatalabels)|[Элемента](/javascript/api/excel/excel.chartdatalabels#autotext)|Указывает, генерируют ли метки данных автоматически соответствующий текст на основе контекста.|
 ||[horizontalAlignment](/javascript/api/excel/excel.chartdatalabels#horizontalalignment)|Представляет горизонтальное выравнивание для метки данных диаграммы. Дополнительные сведения см. в статье Excel. Чарттекссоризонталалигнмент.|
 ||[numberFormat](/javascript/api/excel/excel.chartdatalabels#numberformat)|Представляет код формата для меток данных.|
@@ -105,7 +105,7 @@ ms.locfileid: "42597007"
 ||[left](/javascript/api/excel/excel.chartlegendentry#left)|Представляет левую часть объекта legendEntry диаграммы.|
 ||[top](/javascript/api/excel/excel.chartlegendentry#top)|Представляет верхнюю часть объекта legendEntry диаграммы.|
 ||[width](/javascript/api/excel/excel.chartlegendentry#width)|Представляет ширину объекта legendEntry в условных обозначениях диаграммы.|
-|[ChartLegendFormat](/javascript/api/excel/excel.chartlegendformat)|[граница](/javascript/api/excel/excel.chartlegendformat#border)|Представляет формат границы, включающий цвет, тип линии и толщину. Только для чтения.|
+|[ChartLegendFormat](/javascript/api/excel/excel.chartlegendformat)|[вокруг](/javascript/api/excel/excel.chartlegendformat#border)|Представляет формат границы, включающий цвет, тип линии и толщину. Только для чтения.|
 |[чартплотареа](/javascript/api/excel/excel.chartplotarea)|[height](/javascript/api/excel/excel.chartplotarea#height)|Представляет значение высоты plotArea.|
 ||[insideHeight](/javascript/api/excel/excel.chartplotarea#insideheight)|Представляет значение insideHeight для plotArea.|
 ||[insideLeft](/javascript/api/excel/excel.chartplotarea#insideleft)|Представляет значение insideLeft для plotArea.|
@@ -116,7 +116,7 @@ ms.locfileid: "42597007"
 ||[format](/javascript/api/excel/excel.chartplotarea#format)|Представляет форматирование для plotArea диаграммы.|
 ||[top](/javascript/api/excel/excel.chartplotarea#top)|Представляет верхнее значение plotArea.|
 ||[width](/javascript/api/excel/excel.chartplotarea#width)|Представляет значение ширины plotArea.|
-|[чартплотареаформат](/javascript/api/excel/excel.chartplotareaformat)|[граница](/javascript/api/excel/excel.chartplotareaformat#border)|Представляет атрибуты границы для plotArea диаграммы.|
+|[чартплотареаформат](/javascript/api/excel/excel.chartplotareaformat)|[вокруг](/javascript/api/excel/excel.chartplotareaformat#border)|Представляет атрибуты границы для plotArea диаграммы.|
 ||[fill](/javascript/api/excel/excel.chartplotareaformat#fill)|Представляет формат заливки объекта, включая сведения о форматировании фона.|
 |[ChartSeries](/javascript/api/excel/excel.chartseries)|[axisGroup](/javascript/api/excel/excel.chartseries#axisgroup)|Возвращает или задает группу для указанного ряда. Чтение и запись|
 ||[развертывани](/javascript/api/excel/excel.chartseries#explosion)|Возвращает или задает значение развертывания для сектора круговой или кольцевой диаграммы. Возвращает нуль (0) при отсутствии развертывания (верхушка сектора — в центре круговой диаграммы). Для чтения и записи.|
@@ -144,7 +144,7 @@ ms.locfileid: "42597007"
 ||[textOrientation](/javascript/api/excel/excel.charttrendlinelabel#textorientation)|Представляет ориентацию текста для подписи линии тренда диаграммы. Значение должно быть целым числом от -90 до 90 или 180 для вертикально-ориентированного текста.|
 ||[top](/javascript/api/excel/excel.charttrendlinelabel#top)|Представляет расстояние от верхнего края подписи линии тренда диаграммы до верха области диаграммы (в пунктах). Значение NULL, если подпись линии тренда диаграммы не отображается.|
 ||[verticalAlignment](/javascript/api/excel/excel.charttrendlinelabel#verticalalignment)|Представляет вертикальное выравнивание для подписи линии тренда диаграммы. Дополнительные сведения см. в статье Excel. Чарттекствертикалалигнмент.|
-|[чарттрендлинелабелформат](/javascript/api/excel/excel.charttrendlinelabelformat)|[граница](/javascript/api/excel/excel.charttrendlinelabelformat#border)|Представляет формат границы, включающий цвет, тип линии и толщину.|
+|[чарттрендлинелабелформат](/javascript/api/excel/excel.charttrendlinelabelformat)|[вокруг](/javascript/api/excel/excel.charttrendlinelabelformat#border)|Представляет формат границы, включающий цвет, тип линии и толщину.|
 ||[fill](/javascript/api/excel/excel.charttrendlinelabelformat#fill)|Представляет формат заливки для текущей подписи линии тренда диаграммы.|
 ||[font](/javascript/api/excel/excel.charttrendlinelabelformat#font)|Представляет атрибуты шрифта (имя, размер, цвет и т. д.) для подписи линии тренда диаграммы.|
 |[кустомдатавалидатион](/javascript/api/excel/excel.customdatavalidation)|[formula](/javascript/api/excel/excel.customdatavalidation#formula)|Формула проверки настраиваемых данных. При этом создаются специальные правила ввода, такие как предотвращение дублирования или ограничение суммы в диапазоне ячеек.|
@@ -179,7 +179,7 @@ ms.locfileid: "42597007"
 |[датавалидатионруле](/javascript/api/excel/excel.datavalidationrule)|[собственный](/javascript/api/excel/excel.datavalidationrule#custom)|Условия проверки настраиваемых данных.|
 ||[дата](/javascript/api/excel/excel.datavalidationrule#date)|Условия проверки данных даты.|
 ||[числе](/javascript/api/excel/excel.datavalidationrule#decimal)|Условия проверки десятичных данных.|
-||[list](/javascript/api/excel/excel.datavalidationrule#list)|Условия проверки данных списка.|
+||[списка](/javascript/api/excel/excel.datavalidationrule#list)|Условия проверки данных списка.|
 ||[textLength](/javascript/api/excel/excel.datavalidationrule#textlength)|Условия проверки данных TextLength.|
 ||[time](/javascript/api/excel/excel.datavalidationrule#time)|Условия проверки данных времени.|
 ||[wholeNumber](/javascript/api/excel/excel.datavalidationrule#wholenumber)|Условия проверки данных WholeNumber.|
@@ -241,7 +241,7 @@ ms.locfileid: "42597007"
 ||[иерархии](/javascript/api/excel/excel.pivottable#hierarchies)|Иерархии сводного документа сводной таблицы.|
 ||[макет](/javascript/api/excel/excel.pivottable#layout)|PivotLayout, описывающий макет и визуальную структуру сводной таблицы.|
 ||[ровхиерарчиес](/javascript/api/excel/excel.pivottable#rowhierarchies)|Иерархии сводных строк сводной таблицы.|
-|[PivotTableCollection](/javascript/api/excel/excel.pivottablecollection)|[Add (имя: строка, источник: таблица \| строк \| диапазона, назначение: строка \| диапазона)](/javascript/api/excel/excel.pivottablecollection#add-name--source--destination-)|Добавление сводной таблицы на основе указанных исходных данных и вставка ее в верхнюю левую ячейку конечного диапазона.|
+|[PivotTableCollection](/javascript/api/excel/excel.pivottablecollection)|[Add (имя: строка, источник: \| Таблица строк диапазона \| , назначение: \| строка диапазона)](/javascript/api/excel/excel.pivottablecollection#add-name--source--destination-)|Добавление сводной таблицы на основе указанных исходных данных и вставка ее в верхнюю левую ячейку конечного диапазона.|
 |[Range](/javascript/api/excel/excel.range)|[dataValidation](/javascript/api/excel/excel.range#datavalidation)|Возвращает объект проверки данных.|
 |[RowColumnPivotHierarchy](/javascript/api/excel/excel.rowcolumnpivothierarchy)|[name](/javascript/api/excel/excel.rowcolumnpivothierarchy#name)|Имя RowColumnPivotHierarchy.|
 ||[position](/javascript/api/excel/excel.rowcolumnpivothierarchy#position)|Положение RowColumnPivotHierarchy.|
@@ -254,7 +254,7 @@ ms.locfileid: "42597007"
 ||[getItemOrNullObject(имя: строка)](/javascript/api/excel/excel.rowcolumnpivothierarchycollection#getitemornullobject-name-)|Получает RowColumnPivotHierarchy по имени. Если RowColumnPivotHierarchy не существует, возвращает пустой объект.|
 ||[items](/javascript/api/excel/excel.rowcolumnpivothierarchycollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 ||[Remove (rowColumnPivotHierarchy: Excel. RowColumnPivotHierarchy)](/javascript/api/excel/excel.rowcolumnpivothierarchycollection#remove-rowcolumnpivothierarchy-)|Удаляет PivotHierarchy из текущей оси.|
-|[Среда выполнения](/javascript/api/excel/excel.runtime)|[enableEvents](/javascript/api/excel/excel.runtime#enableevents)|Включение событий JavaScript в текущей области задач или контентной надстройке.|
+|[Время выполнения](/javascript/api/excel/excel.runtime)|[enableEvents](/javascript/api/excel/excel.runtime#enableevents)|Включение событий JavaScript в текущей области задач или контентной надстройке.|
 |[шовасруле](/javascript/api/excel/excel.showasrule)|[baseField](/javascript/api/excel/excel.showasrule#basefield)|Базовое сводное поле для обоснования расчета ShowAs, если применимо на основе типа ShowAsCalculation, в противном случае значение будет пустым.|
 ||[baseItem](/javascript/api/excel/excel.showasrule#baseitem)|Базовый элемент для обоснования расчета ShowAs, если применимо на основе типа ShowAsCalculation, в противном случае значение будет пустым.|
 ||[пересчет](/javascript/api/excel/excel.showasrule#calculation)|Расчет ShowAs для использования в сводном поле данных. Дополнительные сведения см. в статье Excel. ShowAsCalculation.|

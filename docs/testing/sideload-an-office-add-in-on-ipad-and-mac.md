@@ -3,12 +3,12 @@ title: Загрузка неопубликованных надстроек Offi
 description: Тестирование надстройки Office на iPad и Mac с помощью неопубликованных приложений
 ms.date: 02/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 4863a55d21ab37411e76810a744f103cc364f7c1
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 092207898547969a361b10d72fad106311563907
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719779"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611142"
 ---
 # <a name="sideload-office-add-ins-on-ipad-and-mac-for-testing"></a>Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 
@@ -71,7 +71,7 @@ ms.locfileid: "42719779"
 
 3. Запустите Word и откройте документ. Если приложение Word уже запущено, перезапустите его.
 
-4. В Word выберите **Вставить** > **Add-ins** > надстройки в**папку Мои** надстройки (раскрывающееся меню), а затем выберите свою надстройку.
+4. В Word выберите **Вставить**надстройки в  >  **Add-ins**  >  **папку Мои** надстройки (раскрывающееся меню), а затем выберите свою надстройку.
 
     ![Мои надстройки в Office для Mac](../images/my-add-ins-wikipedia.png)
 

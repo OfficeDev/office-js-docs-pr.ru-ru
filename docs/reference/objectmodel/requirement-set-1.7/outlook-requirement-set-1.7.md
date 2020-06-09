@@ -3,12 +3,12 @@ title: Набор обязательных элементов API для над�
 description: Обзор API надстройки Outlook (набор обязательных элементов 1,7)
 ms.date: 12/17/2019
 localization_priority: Normal
-ms.openlocfilehash: b573842e70e194cd202d2ffc8b2bf8e05a252fad
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 5af422db674eb882bef97181fbc58ae7ebd644d6
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42717539"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44612194"
 ---
 # <a name="outlook-add-in-api-requirement-set-17"></a>Набор обязательных элементов API для надстройки Outlook 1.7
 

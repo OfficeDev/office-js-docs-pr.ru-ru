@@ -3,19 +3,19 @@ title: Элемент Form в файле манифеста
 description: Параметры взаимодействия с пользователем для форм, которые почтовая надстройка будет использовать при работе на определенном устройства (настольном компьютере, планшете или телефоне).
 ms.date: 04/09/2020
 localization_priority: Normal
-ms.openlocfilehash: 3e8d60c13a72a50090075d7cd16a0719498c4982
-ms.sourcegitcommit: c6e3bfd3deb77982d0b7082afd6a48678e96e1c3
+ms.openlocfilehash: c9cd1d9104fc51edc84149ef677c4308dfb1a9f5
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43215070"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611857"
 ---
 # <a name="form-element"></a>Элемент Form
 
 Параметры взаимодействия с пользователем для форм, которые почтовая надстройка будет использовать при работе на определенном устройства (настольном компьютере, планшете или телефоне).
 
 > [!IMPORTANT]
-> Элементы `DesktopSettings`, `TabletSettings`и `PhoneSettings` , Кроме того, доступны только в классическом приложении Outlook в Интернете (как правило, подключаются к предыдущим версиям локального сервера Exchange Server) и Outlook 2013 в Windows.
+> `DesktopSettings`Элементы, `TabletSettings` и, Кроме того, `PhoneSettings` доступны только в классическом приложении Outlook в Интернете (как правило, подключаются к предыдущим версиям локального сервера Exchange Server) и Outlook 2013 в Windows.
 
 **Тип надстройки:** почтовая
 

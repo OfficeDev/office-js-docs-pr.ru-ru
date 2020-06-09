@@ -3,12 +3,12 @@ title: Расширение пользовательских функций с �
 description: Обеспечение совместимости с пользовательскими функциями XLL в Excel, которые имеют эквивалентные функциональные возможности для пользовательских функций
 ms.date: 04/29/2020
 localization_priority: Normal
-ms.openlocfilehash: 82f4dba3bd82743efd84a2fe88c893042c061461
-ms.sourcegitcommit: 54e2892c0c26b9ad1e4dba8aba48fea39f853b6c
+ms.openlocfilehash: 06a776678c60a4b66494097385f304ddac9a4ce0
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "44275772"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44610363"
 ---
 # <a name="extend-custom-functions-with-xll-user-defined-functions"></a>Расширение пользовательских функций с помощью пользовательских функций XLL
 

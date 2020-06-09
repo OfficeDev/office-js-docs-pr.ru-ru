@@ -3,19 +3,19 @@ title: Элемент PhoneSettings в файле манифеста
 description: Элемент PhoneSettings указывает исходное расположение и параметры управления, которые применяются при использовании почтовой надстройки на телефоне.
 ms.date: 04/09/2020
 localization_priority: Normal
-ms.openlocfilehash: cfdf8efc262c1a75142eb06dd71383579598a86f
-ms.sourcegitcommit: c6e3bfd3deb77982d0b7082afd6a48678e96e1c3
+ms.openlocfilehash: d7957e23a77a0f837366e5cedc0e0f350b5635c8
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43215049"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611486"
 ---
 # <a name="phonesettings-element"></a>Элемент PhoneSettings
 
 Задает исходное расположение и параметры элемента управления, которые применяются при использовании почтовой надстройки на телефоне.
 
 > [!IMPORTANT]
-> `PhoneSettings` Элемент доступен только в классическом приложении Outlook в Интернете (как правило, подключенный к старым версиям локального сервера Exchange Server) и Outlook 2013 в Windows. Для поддержки Outlook в Android и iOS, ознакомьтесь со статьей надстройки [для Outlook Mobile](../../outlook/outlook-mobile-addins.md).
+> `PhoneSettings`Элемент доступен только в классическом приложении Outlook в Интернете (как правило, подключенный к старым версиям локального сервера Exchange Server) и Outlook 2013 в Windows. Для поддержки Outlook в Android и iOS, ознакомьтесь со статьей надстройки [для Outlook Mobile](../../outlook/outlook-mobile-addins.md).
 
 **Тип надстройки:** почтовая
 

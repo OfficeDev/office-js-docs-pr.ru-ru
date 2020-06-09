@@ -3,12 +3,12 @@ title: Элемент CustomTab в файле манифеста
 description: На ленте можно указать вкладку и группу для команд надстройки.
 ms.date: 01/24/2020
 localization_priority: Normal
-ms.openlocfilehash: 8db29f166b5a5238a7ecf121ba5e5adca66ebe94
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: a81b64a17eeeb463d55024e189b09048b2eb96ac
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42718428"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44612306"
 ---
 # <a name="customtab-element"></a>Элемент CustomTab
 
@@ -34,7 +34,7 @@ ms.locfileid: "42718428"
 
 ### <a name="label-tab"></a>Label (Tab)
 
-Обязательный. Метка настраиваемой вкладки. Атрибуту **Resid** должно быть присвоено значение атрибута **ID** элемента **String** в элементе **ShortStrings** элемента [Resources](resources.md) .
+Обязательный элемент. Метка настраиваемой вкладки. Атрибуту **Resid** должно быть присвоено значение атрибута **ID** элемента **String** в элементе **ShortStrings** элемента [Resources](resources.md) .
 
 
 ## <a name="customtab-example"></a>Пример элемента CustomTab

@@ -4,12 +4,12 @@ description: Указывает, какие платформы и сборки O
 ms.date: 05/28/2020
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 3f7498dbb495df71126623205bf42a19b6c51442
-ms.sourcegitcommit: 9229102c16a1864e3a8724aaf9b0dc68b1428094
+ms.openlocfilehash: 6625dbb0612b3ee79c5b97c0fd3aa28f214258a3
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "44520393"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611325"
 ---
 # <a name="ribbon-api-requirement-sets"></a>Наборы обязательных элементов API ленты
 

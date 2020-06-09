@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1,7
 ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 5a39b961e8cce97be3bb74e4032914f60c366ffb
-ms.sourcegitcommit: 4079903c3cc45b7d8c041509a44e9fc38da399b1
+ms.openlocfilehash: 2e7c2fb053aa16479091a2085b38b760fa86db4a
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42596993"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611409"
 ---
 # <a name="whats-new-in-excel-javascript-api-17"></a>Новые возможности API JavaScript для Excel 1.7
 
@@ -72,7 +72,7 @@ API событий Excel предоставляют разнообразные �
 |[Chart](/javascript/api/excel/excel.chart)|[chartType](/javascript/api/excel/excel.chart#charttype)|Представляет тип диаграммы. Дополнительные сведения см. в статье Excel. ChartType.|
 ||[id](/javascript/api/excel/excel.chart#id)|Уникальный идентификатор диаграммы. Только для чтения.|
 ||[showAllFieldButtons](/javascript/api/excel/excel.chart#showallfieldbuttons)|Указывает, следует ли отображать все кнопки полей в сводной диаграмме.|
-|[ChartAreaFormat](/javascript/api/excel/excel.chartareaformat)|[граница](/javascript/api/excel/excel.chartareaformat#border)|Представляет формат границы области диаграммы, включающий цвет, lineStyle и толщину. Только для чтения.|
+|[ChartAreaFormat](/javascript/api/excel/excel.chartareaformat)|[вокруг](/javascript/api/excel/excel.chartareaformat#border)|Представляет формат границы области диаграммы, включающий цвет, lineStyle и толщину. Только для чтения.|
 |[ChartAxes](/javascript/api/excel/excel.chartaxes)|[GetItem (тип: Excel. Чартаксистипе, Group?: Excel. Чартаксисграуп)](/javascript/api/excel/excel.chartaxes#getitem-type--group-)|Возвращает указанную ось, определенную по типу и группе.|
 |[ChartAxis](/javascript/api/excel/excel.chartaxis)|[басетимеунит](/javascript/api/excel/excel.chartaxis#basetimeunit)|Возвращает или задает базовую единицу измерений для указанной оси категории.|
 ||[categoryType](/javascript/api/excel/excel.chartaxis#categorytype)|Возвращает или задает тип оси категории.|
@@ -146,7 +146,7 @@ API событий Excel предоставляют разнообразные �
 ||[markerSize](/javascript/api/excel/excel.chartpoint#markersize)|Представляет размер маркера точки данных.|
 ||[markerStyle](/javascript/api/excel/excel.chartpoint#markerstyle)|Представляет стиль маркера точки данных диаграммы. Дополнительные сведения см. в статье Excel. Чартмаркерстиле.|
 ||[dataLabel](/javascript/api/excel/excel.chartpoint#datalabel)|Возвращает метку данных точки диаграммы. Только для чтения.|
-|[ChartPointFormat](/javascript/api/excel/excel.chartpointformat)|[граница](/javascript/api/excel/excel.chartpointformat#border)|Представляет формат границы точки данных диаграммы, включающий сведения о цвете, стиле и весу. Только для чтения.|
+|[ChartPointFormat](/javascript/api/excel/excel.chartpointformat)|[вокруг](/javascript/api/excel/excel.chartpointformat#border)|Представляет формат границы точки данных диаграммы, включающий сведения о цвете, стиле и весу. Только для чтения.|
 |[ChartSeries](/javascript/api/excel/excel.chartseries)|[chartType](/javascript/api/excel/excel.chartseries#charttype)|Представляет тип диаграммы для ряда. Дополнительные сведения см. в статье Excel. ChartType.|
 ||[delete()](/javascript/api/excel/excel.chartseries#delete--)|Удаляет ряд диаграммы.|
 ||[doughnutHoleSize](/javascript/api/excel/excel.chartseries#doughnutholesize)|Представляет размер отверстия ряда кольцевой диаграммы.  Допустимо только в doughnutExploded и кольцевых диаграммах.|
@@ -176,7 +176,7 @@ API событий Excel предоставляют разнообразные �
 ||[textOrientation](/javascript/api/excel/excel.charttitle#textorientation)|Представляет ориентацию текста для заголовка диаграммы. Значение должно быть целым числом от -90 до 90 или 180 для вертикально-ориентированного текста.|
 ||[top](/javascript/api/excel/excel.charttitle#top)|Представляет расстояние от верхнего края заголовка диаграммы до верха области диаграммы (в пунктах). Значение null, если заголовок диаграммы не отображается.|
 ||[verticalAlignment](/javascript/api/excel/excel.charttitle#verticalalignment)|Представляет вертикальное выравнивание для заголовка диаграммы. Дополнительные сведения см. в статье Excel. Чарттекствертикалалигнмент.|
-|[ChartTitleFormat](/javascript/api/excel/excel.charttitleformat)|[граница](/javascript/api/excel/excel.charttitleformat#border)|Представляет формат границы заголовка диаграммы, включающий цвет, lineStyle и толщину. Только для чтения.|
+|[ChartTitleFormat](/javascript/api/excel/excel.charttitleformat)|[вокруг](/javascript/api/excel/excel.charttitleformat#border)|Представляет формат границы заголовка диаграммы, включающий цвет, lineStyle и толщину. Только для чтения.|
 |[чарттрендлине](/javascript/api/excel/excel.charttrendline)|[бакквардпериод](/javascript/api/excel/excel.charttrendline#backwardperiod)|Представляет число периодов, на которые линия тренда расширяется назад.|
 ||[delete()](/javascript/api/excel/excel.charttrendline#delete--)|Удаляет объект линии тренда.|
 ||[форвардпериод](/javascript/api/excel/excel.charttrendline#forwardperiod)|Представляет число периодов, на которые линия тренда расширяется вперед.|
@@ -320,7 +320,7 @@ API событий Excel предоставляют разнообразные �
 |[воркшитделетедевентаргс](/javascript/api/excel/excel.worksheetdeletedeventargs)|[source](/javascript/api/excel/excel.worksheetdeletedeventargs#source)|Получает источник события. Дополнительные сведения см. в статье Excel.EventSource.|
 ||[type](/javascript/api/excel/excel.worksheetdeletedeventargs#type)|Получает тип события. Дополнительные сведения см. в статье Excel.EventType.|
 ||[worksheetId](/javascript/api/excel/excel.worksheetdeletedeventargs#worksheetid)|Получает идентификатор листа, удаляемого из книги.|
-|[воркшитфризепанес](/javascript/api/excel/excel.worksheetfreezepanes)|[Фризеат (Фрозенранже: строка \| Range)](/javascript/api/excel/excel.worksheetfreezepanes#freezeat-frozenrange-)|Задает закрепленные ячейки в представлении активного листа.|
+|[воркшитфризепанес](/javascript/api/excel/excel.worksheetfreezepanes)|[Фризеат (Фрозенранже: \| строка Range)](/javascript/api/excel/excel.worksheetfreezepanes#freezeat-frozenrange-)|Задает закрепленные ячейки в представлении активного листа.|
 ||[Фризеколумнс (Count?: число)](/javascript/api/excel/excel.worksheetfreezepanes#freezecolumns-count-)|Закрепляет первый столбец (или столбцы) листа на месте.|
 ||[Фризеровс (Count?: число)](/javascript/api/excel/excel.worksheetfreezepanes#freezerows-count-)|Закрепляет верхнюю строку (или строки) листа на месте.|
 ||[getLocation()](/javascript/api/excel/excel.worksheetfreezepanes#getlocation--)|Получает диапазон, описывающий закрепленные ячейки в представлении активного листа.|

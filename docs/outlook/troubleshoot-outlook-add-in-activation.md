@@ -3,12 +3,12 @@ title: Устранение неполадок при активации кон�
 description: Если ваша надстройка не активируется надлежащим образом, это может быть вызвано указанными ниже причинами.
 ms.date: 05/27/2020
 localization_priority: Normal
-ms.openlocfilehash: 555ae2a45bf49d74d1fd439258fd87035644e86a
-ms.sourcegitcommit: 77617f6ad06e07f5ff8078b26301748f73e2ee01
+ms.openlocfilehash: cb8640dc2381a79bc5c0ed90da3a2f03938a0d05
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "44413184"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611633"
 ---
 # <a name="troubleshoot-outlook-add-in-activation"></a>Устранение неполадок при активации надстроек Outlook
 

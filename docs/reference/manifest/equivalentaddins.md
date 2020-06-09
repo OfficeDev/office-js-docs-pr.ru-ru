@@ -3,12 +3,12 @@ title: Элемент Екуивалентаддинс в файле маниф�
 description: Задает обратную совместимость с эквивалентной надстройкой COM, XLL или и тем, и другими.
 ms.date: 05/03/2019
 localization_priority: Normal
-ms.openlocfilehash: cbc7fd5ec60fb9d43b17586d755a2ea5f85e251b
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: df854bd6bf7b7be0328235726e3adfc9fc44c5b4
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42718295"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611556"
 ---
 # <a name="equivalentaddins-element"></a>Элемент Екуивалентаддинс
 

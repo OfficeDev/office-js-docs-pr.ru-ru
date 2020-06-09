@@ -3,12 +3,12 @@ title: 'Ссылки на библиотеку API JavaScript для Office '
 description: Узнайте, как ссылаться на библиотеку API JavaScript для Office и определение типов в надстройке.
 ms.date: 02/27/2020
 localization_priority: Normal
-ms.openlocfilehash: 3b468ae9286eb53ffd5d3c0199c14045131105f3
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 8bd011c140ce61581ad4b1d06a43b04ad437f5c7
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719352"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44609389"
 ---
 # <a name="referencing-the-office-javascript-api-library"></a>Ссылки на библиотеку API JavaScript для Office 
 
@@ -28,7 +28,7 @@ ms.locfileid: "42719352"
 
 ## <a name="api-versioning-and-backward-compatibility"></a>Управление версиями и обратная совместимость API
 
-В предыдущем фрагменте кода HTML ( `/1/` перед `office.js` в URL-адресе CDN) указывает последний добавочный выпуск в версии 1 файла Office. js. Так как API JavaScript для Office поддерживает обратную совместимость, последний выпуск по-прежнему будет поддерживать элементы API, представленные ранее в версии 1. Если вам нужно обновить существующий проект, ознакомьтесь со статьей [Обновление версии API JavaScript для Office и файлов схемы манифеста](update-your-javascript-api-for-office-and-manifest-schema-version.md). 
+В предыдущем фрагменте кода HTML ( `/1/` перед в `office.js` URL-адресе CDN) указывает последний добавочный выпуск в версии 1 файла Office. js. Так как API JavaScript для Office поддерживает обратную совместимость, последний выпуск по-прежнему будет поддерживать элементы API, представленные ранее в версии 1. Если вам нужно обновить существующий проект, ознакомьтесь со статьей [Обновление версии API JavaScript для Office и файлов схемы манифеста](update-your-javascript-api-for-office-and-manifest-schema-version.md). 
 
 Если вы планируете опубликовать свою надстройку Office из AppSource, необходимо использовать эту ссылку на сеть CDN. Локальные ссылки подходят только для внутренних сценариев, а также сценариев разработки и отладки.
 

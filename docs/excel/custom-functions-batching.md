@@ -3,12 +3,12 @@ ms.date: 07/10/2019
 description: Объедините пользовательские функции в пакет, чтобы сократить количество обращений к удаленной службе через сеть.
 title: Пакетирование обращений пользовательских функций к удаленной службе
 localization_priority: Normal
-ms.openlocfilehash: 5e48488b323e53e35698b2f64724b78da6abc599
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: ffafd8fee0beea2776bb7b0a0b79839e43876cc1
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42718748"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44609659"
 ---
 # <a name="batching-custom-function-calls-for-a-remote-service"></a>Пакетирование обращений пользовательских функций к удаленной службе
 

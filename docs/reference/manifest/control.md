@@ -3,12 +3,12 @@ title: Элемент Control в файле манифеста
 description: Определяет функцию JavaScript, которая выполняет действие или открывает область задач.
 ms.date: 01/10/2020
 localization_priority: Normal
-ms.openlocfilehash: 0d13fc4fd30f32b4998d385058cff941d3f72353
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 55faa52e5020691967e65b33c2d975535405b2a4
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42720675"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44612321"
 ---
 # <a name="control-element"></a>Элемент Control
 

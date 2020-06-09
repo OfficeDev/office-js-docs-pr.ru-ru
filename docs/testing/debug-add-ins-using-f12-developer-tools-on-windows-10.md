@@ -3,12 +3,12 @@ title: Отладка надстроек с помощью средств раз
 description: Отладка надстроек с помощью средств разработчика Microsoft Edge в Windows 10
 ms.date: 12/16/2019
 localization_priority: Normal
-ms.openlocfilehash: 16964b69f144d30c4ac5a9616ee4fdba2d536fd3
-ms.sourcegitcommit: d15bca2c12732f8599be2ec4b2adc7c254552f52
+ms.openlocfilehash: 4888ef07f214611666b1c8d8de8dc5a467ca2db1
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41950525"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611234"
 ---
 # <a name="debug-add-ins-using-developer-tools-on-windows-10"></a>Отладка надстроек с помощью средств разработчика в Windows 10
 

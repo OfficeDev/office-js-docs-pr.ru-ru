@@ -4,12 +4,12 @@ description: Сведения о наборе требований WordApi 1,1
 ms.date: 07/25/2019
 ms.prod: word
 localization_priority: Normal
-ms.openlocfilehash: 30a4378a74b0d2848a5a913cbafd4f6eb780f519
-ms.sourcegitcommit: 654ac1a0c477413662b48cffc0faee5cb65fc25f
+ms.openlocfilehash: 9f7efdd0ce8f67a05d8197ec3005b2d6e9049409
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "36268574"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611311"
 ---
 # <a name="whats-new-in-word-javascript-api-11"></a>Новые возможности API JavaScript для Word 1,1
 
@@ -21,8 +21,8 @@ WordApi 1,1 является первым набором требований AP
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
-|[Основной текст](/javascript/api/word/word.body)|[clear()](/javascript/api/word/word.body#clear--)|Очищает объект содержимого. Пользователь может отменить операцию очищения для содержимого.|
-||[getHtml()](/javascript/api/word/word.body#gethtml--)|Возвращает HTML-представление объекта Body. При отображении на веб-странице или в средстве просмотра HTML форматирование будет близким, но не точным, соответствующим формату документа. Этот метод не возвращает точно такой же HTML-код для одного и того же документа на различных платформах (Windows, Mac и т. д.). Если вам нужна точная точность или согласованность на различных платформах `Body.getOoxml()` , используйте и преобразуйте возвращенный XML в HTML.|
+|[Body](/javascript/api/word/word.body)|[clear()](/javascript/api/word/word.body#clear--)|Очищает объект содержимого. Пользователь может отменить операцию очищения для содержимого.|
+||[getHtml()](/javascript/api/word/word.body#gethtml--)|Возвращает HTML-представление объекта Body. При отображении на веб-странице или в средстве просмотра HTML форматирование будет близким, но не точным, соответствующим формату документа. Этот метод не возвращает точно такой же HTML-код для одного и того же документа на различных платформах (Windows, Mac и т. д.). Если вам нужна точная точность или согласованность на различных платформах, используйте `Body.getOoxml()` и преобразуйте возвращенный XML в HTML.|
 ||[getOoxml()](/javascript/api/word/word.body#getooxml--)|Возвращает OOXML-представление (Office Open XML) объекта содержимого.|
 ||[insertBreak (breakType: Word. BreakType, insertLocation: Word. InsertLocation)](/javascript/api/word/word.body#insertbreak-breaktype--insertlocation-)|Вставляет разрыв в указанном расположении в основном документе. Возможные значения InsertLocation: Start или End.|
 ||[insertContentControl()](/javascript/api/word/word.body#insertcontentcontrol--)|Включает объект содержимого в элемент управления форматированным текстом.|
@@ -46,7 +46,7 @@ WordApi 1,1 является первым набором требований AP
 ||[clear()](/javascript/api/word/word.contentcontrol#clear--)|Очищает содержимое элемента управления содержимым. Пользователь может отменить операцию для очищенного содержимого.|
 ||[color](/javascript/api/word/word.contentcontrol#color)|Возвращает или задает цвет элемента управления содержимым. Цвет задается в формате "#RRGGBB" или с помощью имени цвета.|
 ||[Delete (Кипконтент: Boolean)](/javascript/api/word/word.contentcontrol#delete-keepcontent-)|Удаляет элемент управления содержимым и его содержимое. Если параметру keepContent присвоено значение true, содержимое не удаляется.|
-||[getHtml()](/javascript/api/word/word.contentcontrol#gethtml--)|Возвращает HTML-представление объекта элемента управления содержимым. При отображении на веб-странице или в средстве просмотра HTML форматирование будет близким, но не точным, соответствующим формату документа. Этот метод не возвращает точно такой же HTML-код для одного и того же документа на различных платформах (Windows, Mac и т. д.). Если вам нужна точная точность или согласованность на различных платформах `ContentControl.getOoxml()` , используйте и преобразуйте возвращенный XML в HTML.|
+||[getHtml()](/javascript/api/word/word.contentcontrol#gethtml--)|Возвращает HTML-представление объекта элемента управления содержимым. При отображении на веб-странице или в средстве просмотра HTML форматирование будет близким, но не точным, соответствующим формату документа. Этот метод не возвращает точно такой же HTML-код для одного и того же документа на различных платформах (Windows, Mac и т. д.). Если вам нужна точная точность или согласованность на различных платформах, используйте `ContentControl.getOoxml()` и преобразуйте возвращенный XML в HTML.|
 ||[getOoxml()](/javascript/api/word/word.contentcontrol#getooxml--)|Возвращает OOXML-представление объекта элемента управления содержимым.|
 ||[insertBreak (breakType: Word. BreakType, insertLocation: Word. InsertLocation)](/javascript/api/word/word.contentcontrol#insertbreak-breaktype--insertlocation-)|Вставляет разрыв в указанном расположении в основном документе. Значение insertLocation может быть "Start", "End", "Before" или "After". Этот метод не может использоваться с элементами управления содержимым "Ричтексттабле", "Ричтексттаблеров" и "Ричтексттаблецелл".|
 ||[insertFileFromBase64 (base64File: строка, insertLocation: Word. InsertLocation)](/javascript/api/word/word.contentcontrol#insertfilefrombase64-base64file--insertlocation-)|Вставляет документ в элемент управления содержимым в указанном расположении. Возможные значения insertLocation: Replace, Start и End.|
@@ -105,7 +105,7 @@ WordApi 1,1 является первым набором требований AP
 ||[clear()](/javascript/api/word/word.paragraph#clear--)|Очищает содержимое объекта абзаца. Пользователь может отменить операцию для очищенного содержимого.|
 ||[delete()](/javascript/api/word/word.paragraph#delete--)|Удаляет абзац и его содержимое из документа.|
 ||[фирстлинеиндент](/javascript/api/word/word.paragraph#firstlineindent)|Возвращает или задает значение отступа первой строки или выступа в пунктах. Для установки отступа первой строки укажите положительное значение и используйте отрицательное значение, чтобы задать выступ.|
-||[getHtml()](/javascript/api/word/word.paragraph#gethtml--)|Возвращает HTML-представление объекта абзаца. При отображении на веб-странице или в средстве просмотра HTML форматирование будет близким, но не точным, соответствующим формату документа. Этот метод не возвращает точно такой же HTML-код для одного и того же документа на различных платформах (Windows, Mac и т. д.). Если вам нужна точная точность или согласованность на различных платформах `Paragraph.getOoxml()` , используйте и преобразуйте возвращенный XML в HTML.|
+||[getHtml()](/javascript/api/word/word.paragraph#gethtml--)|Возвращает HTML-представление объекта абзаца. При отображении на веб-странице или в средстве просмотра HTML форматирование будет близким, но не точным, соответствующим формату документа. Этот метод не возвращает точно такой же HTML-код для одного и того же документа на различных платформах (Windows, Mac и т. д.). Если вам нужна точная точность или согласованность на различных платформах, используйте `Paragraph.getOoxml()` и преобразуйте возвращенный XML в HTML.|
 ||[getOoxml()](/javascript/api/word/word.paragraph#getooxml--)|Возвращает OOXML-представление объекта абзаца.|
 ||[insertBreak (breakType: Word. BreakType, insertLocation: Word. InsertLocation)](/javascript/api/word/word.paragraph#insertbreak-breaktype--insertlocation-)|Вставляет разрыв в указанном расположении в основном документе. Возможные значения insertLocation: Before и After.|
 ||[insertContentControl()](/javascript/api/word/word.paragraph#insertcontentcontrol--)|Включает объект абзаца в элемент управления содержимым форматированного текста.|
@@ -134,7 +134,7 @@ WordApi 1,1 является первым набором требований AP
 |[ParagraphCollection](/javascript/api/word/word.paragraphcollection)|[items](/javascript/api/word/word.paragraphcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 |[Range](/javascript/api/word/word.range)|[clear()](/javascript/api/word/word.range#clear--)|Очищает содержимое объекта диапазона. Пользователь может отменить операцию для очищенного содержимого.|
 ||[delete()](/javascript/api/word/word.range#delete--)|Удаляет диапазон и его содержимое из документа.|
-||[getHtml()](/javascript/api/word/word.range#gethtml--)|Возвращает HTML-представление объекта Range. При отображении на веб-странице или в средстве просмотра HTML форматирование будет близким, но не точным, соответствующим формату документа. Этот метод не возвращает точно такой же HTML-код для одного и того же документа на различных платформах (Windows, Mac и т. д.). Если вам нужна точная точность или согласованность на различных платформах `Range.getOoxml()` , используйте и преобразуйте возвращенный XML в HTML.|
+||[getHtml()](/javascript/api/word/word.range#gethtml--)|Возвращает HTML-представление объекта Range. При отображении на веб-странице или в средстве просмотра HTML форматирование будет близким, но не точным, соответствующим формату документа. Этот метод не возвращает точно такой же HTML-код для одного и того же документа на различных платформах (Windows, Mac и т. д.). Если вам нужна точная точность или согласованность на различных платформах, используйте `Range.getOoxml()` и преобразуйте возвращенный XML в HTML.|
 ||[getOoxml()](/javascript/api/word/word.range#getooxml--)|Возвращает OOXML-представление объекта диапазона.|
 ||[insertBreak (breakType: Word. BreakType, insertLocation: Word. InsertLocation)](/javascript/api/word/word.range#insertbreak-breaktype--insertlocation-)|Вставляет разрыв в указанном расположении в основном документе. Возможные значения insertLocation: Before и After.|
 ||[insertContentControl()](/javascript/api/word/word.range#insertcontentcontrol--)|Включает объект диапазона в элемент управления содержимым форматированного текста.|

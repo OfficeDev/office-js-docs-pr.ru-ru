@@ -3,12 +3,12 @@ ms.date: 04/29/2020
 description: Запрос, потоковая передача и отмена потоковой передачи внешних данных к книге с помощью пользовательских функций в Excel
 title: Получение и обработка данных с помощью пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: 1ae1baa912c914c3a508f1bbf6bd5d9fa6044f7b
-ms.sourcegitcommit: 9229102c16a1864e3a8724aaf9b0dc68b1428094
+ms.openlocfilehash: c53ad94c798f787447ab353201a245cd4f20d463
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "44275749"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44610463"
 ---
 # <a name="receive-and-handle-data-with-custom-functions"></a>Получение и обработка данных с помощью пользовательских функций
 

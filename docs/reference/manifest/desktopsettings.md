@@ -3,19 +3,19 @@ title: Элемент DesktopSettings в файле манифеста
 description: Задает исходное расположение и параметры элемента управления, которые применяются при использовании почтовой надстройки на настольном компьютере.
 ms.date: 04/09/2020
 localization_priority: Normal
-ms.openlocfilehash: 574e04ec577f831e17184cf4f801dae22441bca2
-ms.sourcegitcommit: c6e3bfd3deb77982d0b7082afd6a48678e96e1c3
+ms.openlocfilehash: 50201080d8be3c8943d16730c34a4bac236d7b90
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43215077"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44612278"
 ---
 # <a name="desktopsettings-element"></a>Элемент DesktopSettings
 
 Задает исходное расположение и параметры элемента управления, которые применяются при использовании почтовой надстройки на настольном компьютере.
 
 > [!IMPORTANT]
-> `DesktopSettings` Элемент доступен только в классическом приложении Outlook в Интернете (как правило, подключенный к старым версиям локального сервера Exchange Server) и Outlook 2013 в Windows.
+> `DesktopSettings`Элемент доступен только в классическом приложении Outlook в Интернете (как правило, подключенный к старым версиям локального сервера Exchange Server) и Outlook 2013 в Windows.
 
 **Тип надстройки:** почтовая
 

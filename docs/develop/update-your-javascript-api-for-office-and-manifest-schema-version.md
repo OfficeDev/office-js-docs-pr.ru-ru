@@ -3,12 +3,12 @@ title: Обновление схемы манифеста надстройки A
 description: Обновление до версии 1.1 файлов JavaScript (Office.js и JS-файлов приложения) и файла проверки манифеста надстройки в проекте надстройки Office.
 ms.date: 10/11/2019
 localization_priority: Normal
-ms.openlocfilehash: 74d940c1dfd885e1f48935776481bd5ab3bbda16
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 1c088c27319817c466e1ed9b928806c88e0f89c8
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719338"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44609666"
 ---
 # <a name="update-to-the-latest-office-javascript-api-library-and-version-11-add-in-manifest-schema"></a>Обновление схемы манифеста надстройки API JavaScript для Office и версии 1,1 до последней версии
 
@@ -44,7 +44,7 @@ ms.locfileid: "42719338"
 Приведенные ниже действия приведут к обновлению файлов библиотеки Office. js до последней версии. В этом разделе описано, как использовать Visual Studio 2019, но они аналогичны предыдущим версиям Visual Studio.
 
 1. В Visual Studio 2019 откройте или создайте новый проект **надстройки Office** .
-2. Выберите **инструменты** > **Диспетчер** > пакетов NuGet**Управление пакетами NuGet для решения**.
+2. Выберите **инструменты**  >  **Диспетчер пакетов NuGet**  >  **Управление пакетами NuGet для решения**.
 3. Выберите вкладку **Обновления**.
 4. Выберите Microsoft.Office.js. Убедитесь, что источник пакета находится в **NuGet.org**.
 5. В левой области выберите **установить** и завершить процесс обновления пакета.

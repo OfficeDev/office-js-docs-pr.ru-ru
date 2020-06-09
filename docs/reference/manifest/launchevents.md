@@ -3,12 +3,12 @@ title: Лаунчевентс в файле манифеста (Предвари
 description: Элемент Лаунчевентс настраивает надстройку для активации на основе поддерживаемых событий.
 ms.date: 05/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 2e1ad56d405fca0f85fad500a113fba7d0448caf
-ms.sourcegitcommit: f62d9630de69c5c070e3d4048205f5cc654db7e4
+ms.openlocfilehash: 92416f8c646326410a8cd9ee7831e17a5c5f1ffc
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "44278557"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611773"
 ---
 # <a name="launchevents-element-preview"></a>Элемент Лаунчевентс (Preview)
 
@@ -40,8 +40,8 @@ ms.locfileid: "44278557"
 
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-| [лаунчевент](launchevent.md) | Да |  Сопоставление поддерживаемого события с функцией в файле JavaScript для активации надстройки. |
+| [LaunchEvent](launchevent.md) | Да |  Сопоставление поддерживаемого события с функцией в файле JavaScript для активации надстройки. |
 
 ## <a name="see-also"></a>См. также
 
-- [лаунчевент](launchevent.md)
+- [LaunchEvent](launchevent.md)

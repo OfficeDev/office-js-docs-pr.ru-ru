@@ -3,12 +3,12 @@ ms.date: 05/17/2020
 description: Общие сведения о пользовательских функциях Excel, не использующих область задач и определенную среду выполнения JavaScript.
 title: Среда выполнения для пользовательских функций Excel без пользовательского интерфейса
 localization_priority: Normal
-ms.openlocfilehash: 31044d4569d230e252c05a39785fc7d47b802e37
-ms.sourcegitcommit: f62d9630de69c5c070e3d4048205f5cc654db7e4
+ms.openlocfilehash: 5cb9aa480d6923d31434d58a9683e9a9f5d48458
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "44278359"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44609645"
 ---
 # <a name="runtime-for-ui-less-excel-custom-functions"></a>Среда выполнения для пользовательских функций Excel без пользовательского интерфейса
 
@@ -64,7 +64,7 @@ function StoreValue(key, value) {
 }
 ```
 
-## <a name="additional-considerations"></a>Дополнительные сведения
+## <a name="additional-considerations"></a>Дополнительные рекомендации
 
 Если надстройка использует только пользовательские функции без пользовательского интерфейса, обратите внимание на то, что вы не можете получить доступ к объектной модели документов (DOM) с пользовательскими функциями без пользовательского интерфейса или использовать библиотеки, такие как jQuery, которые используют модель DOM.
 

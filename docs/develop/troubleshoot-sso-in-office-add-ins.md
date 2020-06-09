@@ -3,12 +3,12 @@ title: Устранение ошибок единого входа
 description: Руководство по устранению неполадок с единым входом (SSO) в надстройках Office и обработке специальных условий или ошибок.
 ms.date: 04/13/2020
 localization_priority: Normal
-ms.openlocfilehash: 33826558b9b145433adbe96005e60db97fc067f7
-ms.sourcegitcommit: 118e8bcbcfb73c93e2053bda67fe8dd20799b170
+ms.openlocfilehash: da42b3b3d9b5cf1fede999a18bbe36c5532bd866
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "43241079"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44609701"
 ---
 # <a name="troubleshoot-error-messages-for-single-sign-on-sso-preview"></a>Устранение ошибок единого входа (предварительная версия)
 
@@ -108,7 +108,7 @@ ms.locfileid: "43241079"
 
 ### <a name="13013"></a>13013
 
-`getAccessToken` Слишком много раз вызвано слишком много раз в течение короткого промежутка времени, поэтому Office регулирует последний вызов. Обычно это вызвано бесконечным циклом вызовов метода. В некоторых случаях рекомендуется перезвонить методу. Однако код должен использовать счетчик или переменную флага, чтобы метод не вызывался повторно. Если один и тот же путь к коду повторной попытки выполняется повторно, код должен вернуться в альтернативную систему проверки подлинности пользователя. В примере кода показано, как использовать `retryGetAccessToken` переменную в файле [HomeES6. js](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO/blob/master/Complete/Office-Add-in-ASPNET-SSO-WebAPI/Scripts/HomeES6.js) или [ssoAuthES6. js](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO/blob/master/Complete/public/javascripts/ssoAuthES6.js).
+`getAccessToken`Слишком много раз вызвано слишком много раз в течение короткого промежутка времени, поэтому Office регулирует последний вызов. Обычно это вызвано бесконечным циклом вызовов метода. В некоторых случаях рекомендуется перезвонить методу. Однако код должен использовать счетчик или переменную флага, чтобы метод не вызывался повторно. Если один и тот же путь к коду повторной попытки выполняется повторно, код должен вернуться в альтернативную систему проверки подлинности пользователя. В примере кода показано, как `retryGetAccessToken` использовать переменную в файле [HomeES6. js](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO/blob/master/Complete/Office-Add-in-ASPNET-SSO-WebAPI/Scripts/HomeES6.js) или [ssoAuthES6. js](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO/blob/master/Complete/public/javascripts/ssoAuthES6.js).
 
 ### <a name="50001"></a>50001
 

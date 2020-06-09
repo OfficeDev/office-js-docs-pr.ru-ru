@@ -3,12 +3,12 @@ title: Устранение ошибок, с которыми сталкиваю
 description: Узнайте, как устранять ошибки пользователей в надстройках Office.
 ms.date: 05/15/2020
 localization_priority: Normal
-ms.openlocfilehash: 1ef805f4a35431d3bd7611054963ff6adfa53de0
-ms.sourcegitcommit: 54e2892c0c26b9ad1e4dba8aba48fea39f853b6c
+ms.openlocfilehash: 859cf5019d40d05dbb3ad211d4d2934b309f3ccd
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "44275723"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44612075"
 ---
 # <a name="troubleshoot-user-errors-with-office-add-ins"></a>Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 

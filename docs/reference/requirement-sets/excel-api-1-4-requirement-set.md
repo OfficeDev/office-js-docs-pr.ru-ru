@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1,4
 ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: b0f74d4de5ec867e21e4bec1cd9ab1983a87bab1
-ms.sourcegitcommit: 1fb99b1b4e63868a0e81a928c69a34c42bf7e209
+ms.openlocfilehash: 1bd6d913bf069e4b8774b8eb65ea147992f98b9b
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "36695835"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611430"
 ---
 # <a name="whats-new-in-excel-javascript-api-14"></a>Новые возможности API JavaScript для Excel 1.4
 
@@ -32,7 +32,7 @@ ms.locfileid: "36695835"
 
 Объект [Setting](/javascript/api/excel/excel.setting) представляет пару "ключ-значение" для параметра, хранящегося в документе. Функциональные возможности объекта `Excel.Setting` аналогичны `Office.Settings`, но он использует пакетный синтаксис API, а не модель обратного вызова общего API.
 
-Интерфейсы API `getItem()` включают в себя получение записи параметров с помощью `add()` ключа и добавление указанной записи параметра key: value в книгу.
+Интерфейсы API включают `getItem()` в себя получение записи параметров с помощью ключа и `add()` Добавление указанной записи параметра key: value в книгу.
 
 ## <a name="others"></a>Другие
 
@@ -40,7 +40,7 @@ ms.locfileid: "36695835"
 * Добавление столбца таблицы в конец таблицы.
 * Добавление нескольких строк в таблицу за раз.
 * `range.getColumnsAfter(count: number)` и `range.getColumnsBefore(count: number)`, чтобы вернуть определенное количество столбцов справа/слева от текущего объекта Range.
-* [Функция "получить элемент" или "null Object](../../excel/excel-add-ins-advanced-concepts.md#ornullobject-methods)": Эта функция позволяет получать объект с помощью ключа. Если объект не существует, `isNullObject` свойство возвращаемого объекта будет иметь значение true. Это позволяет разработчикам проверять, существует ли объект, но не обрабатывать его с помощью обработки исключений. `*OrNullObject` Метод доступен для большинства объектов Collection.
+* [Функция "получить элемент" или "null Object](../../excel/excel-add-ins-advanced-concepts.md#ornullobject-methods)": Эта функция позволяет получать объект с помощью ключа. Если объект не существует, свойство возвращаемого объекта `isNullObject` будет иметь значение true. Это позволяет разработчикам проверять, существует ли объект, но не обрабатывать его с помощью обработки исключений. `*OrNullObject`Метод доступен для большинства объектов Collection.
 
 ```js
 worksheet.getItemOrNullObject("itemName")
@@ -64,19 +64,19 @@ worksheet.getItemOrNullObject("itemName")
 ||[scope](/javascript/api/excel/excel.nameditem#scope)|Указывает, относится ли имя к книге или определенному листу. Возможные значения: лист, книга. Только для чтения.|
 ||[worksheet](/javascript/api/excel/excel.nameditem#worksheet)|Возвращает лист, к которому относится именованный элемент. Выдает ошибку, если элемент находится в области действия книги.|
 ||[worksheetOrNullObject](/javascript/api/excel/excel.nameditem#worksheetornullobject)|Возвращает лист, к которому относится именованный элемент. Возвращает пустой объект, если элемент относится к книге.|
-|[NamedItemCollection](/javascript/api/excel/excel.nameditemcollection)|[Add (имя: строка, ссылка: строка \| диапазона, комментарий?: строка)](/javascript/api/excel/excel.nameditemcollection#add-name--reference--comment-)|Добавляет новое имя в определенную коллекцию.|
+|[NamedItemCollection](/javascript/api/excel/excel.nameditemcollection)|[Add (имя: строка, ссылка: \| строка диапазона, комментарий?: строка)](/javascript/api/excel/excel.nameditemcollection#add-name--reference--comment-)|Добавляет новое имя в определенную коллекцию.|
 ||[addFormulaLocal (имя: строка, формула: строка, Примечание?: строка)](/javascript/api/excel/excel.nameditemcollection#addformulalocal-name--formula--comment-)|Добавляет новое имя в определенную коллекцию, используя языковой стандарт пользователя для формулы.|
 ||[getCount()](/javascript/api/excel/excel.nameditemcollection#getcount--)|Получает количество именованных элементов в коллекции.|
 ||[getItemOrNullObject(имя: строка)](/javascript/api/excel/excel.nameditemcollection#getitemornullobject-name-)|Возвращает объект NamedItem, используя его имя. Если объект nameditem не существует, возвращает пустой объект.|
 |[PivotTableCollection](/javascript/api/excel/excel.pivottablecollection)|[getCount()](/javascript/api/excel/excel.pivottablecollection#getcount--)|Получает количество сводных таблиц в коллекции.|
 ||[getItemOrNullObject(имя: строка)](/javascript/api/excel/excel.pivottablecollection#getitemornullobject-name-)|Получает сводную таблицу по имени. Если сводная таблица не существует, возвращает пустой объект.|
-|[Range](/javascript/api/excel/excel.range)|[getIntersectionOrNullObject (anotherRange: строка \| Range)](/javascript/api/excel/excel.range#getintersectionornullobject-anotherrange-)|Возвращает объект диапазона, представляющий прямоугольное пересечение заданных диапазонов. Если пересечение не найдено, возвращает пустой объект.|
+|[Range](/javascript/api/excel/excel.range)|[getIntersectionOrNullObject (anotherRange: \| строка Range)](/javascript/api/excel/excel.range#getintersectionornullobject-anotherrange-)|Возвращает объект диапазона, представляющий прямоугольное пересечение заданных диапазонов. Если пересечение не найдено, возвращает пустой объект.|
 ||[getUsedRangeOrNullObject (valuesOnly?: Boolean)](/javascript/api/excel/excel.range#getusedrangeornullobject-valuesonly-)|Возвращает используемый диапазон заданного объекта диапазона. Если в диапазоне нет используемых ячеек, эта функция возвращает пустой объект.|
 |[RangeViewCollection](/javascript/api/excel/excel.rangeviewcollection)|[getCount()](/javascript/api/excel/excel.rangeviewcollection#getcount--)|Получает количество объектов RangeView в коллекции.|
 |[Параметр](/javascript/api/excel/excel.setting)|[delete()](/javascript/api/excel/excel.setting#delete--)|Удаляет параметр.|
 ||[key](/javascript/api/excel/excel.setting#key)|Возвращает ключ, представляющий идентификатор setting. Только для чтения.|
 ||[value](/javascript/api/excel/excel.setting#value)|Представляет значение, сохраненное для этого параметра.|
-|[SettingCollection](/javascript/api/excel/excel.settingcollection)|[Add (ключ: строка, значение: строка \| Number \| Boolean \| массив \| <any> \| дат Any)](/javascript/api/excel/excel.settingcollection#add-key--value-)|Задает или добавляет указанный параметр в книгу.|
+|[SettingCollection](/javascript/api/excel/excel.settingcollection)|[Add (ключ: строка, значение: строка \| Number \| Boolean \| \| массив дат <any> \| Any)](/javascript/api/excel/excel.settingcollection#add-key--value-)|Задает или добавляет указанный параметр в книгу.|
 ||[getCount()](/javascript/api/excel/excel.settingcollection#getcount--)|Получает количество параметров в коллекции.|
 ||[getItem(key: string)](/javascript/api/excel/excel.settingcollection#getitem-key-)|Получает запись Setting по ключу.|
 ||[getItemOrNullObject(key: string)](/javascript/api/excel/excel.settingcollection#getitemornullobject-key-)|Возвращает объект Setting по ключу. Если параметр не существует, возвращает пустой объект.|
@@ -90,7 +90,7 @@ worksheet.getItemOrNullObject("itemName")
 |[TableRowCollection](/javascript/api/excel/excel.tablerowcollection)|[getCount()](/javascript/api/excel/excel.tablerowcollection#getcount--)|Получает количество строк в таблице.|
 |[Workbook](/javascript/api/excel/excel.workbook)|[settings](/javascript/api/excel/excel.workbook#settings)|Представляет коллекцию параметров, сопоставленных с книгой. Только для чтения.|
 |[Worksheet](/javascript/api/excel/excel.worksheet)|[getUsedRangeOrNullObject (valuesOnly?: Boolean)](/javascript/api/excel/excel.worksheet#getusedrangeornullobject-valuesonly-)|Используемый диапазон — это наименьший диапазон, включающий в себя все ячейки, которые содержат значение или форматирование. Если весь лист пустой, эта функция возвращает пустой объект.|
-||[names](/javascript/api/excel/excel.worksheet#names)|Коллекция имен, относящих к текущему листу. Только для чтения.|
+||[псевдоним](/javascript/api/excel/excel.worksheet#names)|Коллекция имен, относящих к текущему листу. Только для чтения.|
 |[WorksheetCollection](/javascript/api/excel/excel.worksheetcollection)|[NOCOUNT (visibleOnly?: Boolean)](/javascript/api/excel/excel.worksheetcollection#getcount-visibleonly-)|Получает количество листов в коллекции.|
 ||[getItemOrNullObject(key: string)](/javascript/api/excel/excel.worksheetcollection#getitemornullobject-key-)|Получает объект листа по его имени или ИД. Если лист не существует, возвращает пустой объект.|
 

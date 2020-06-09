@@ -3,12 +3,12 @@ title: Элемент Екуивалентаддин в файле манифе�
 description: Задает обратную совместимость для эквивалентной надстройки COM или XLL.
 ms.date: 06/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 425b926901b7325665eeede04263f74e4b854d50
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: e14fe91bf7a5fe321019acf205ddb1753fedd569
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42718288"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611563"
 ---
 # <a name="equivalentaddin-element"></a>Элемент Екуивалентаддин
 
@@ -34,8 +34,8 @@ ms.locfileid: "42718288"
 
 ## <a name="can-contain"></a>Может содержать
 
-[ProgId](progid.md)
-[Имя файла](filename.md) ProgID
+[ProgID](progid.md) 
+ [Имя файла](filename.md)
 
 ## <a name="remarks"></a>Примечания
 

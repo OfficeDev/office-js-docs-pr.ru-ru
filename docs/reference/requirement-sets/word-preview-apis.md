@@ -4,12 +4,12 @@ description: Сведения о предстоящих API JavaScript для Wo
 ms.date: 08/15/2019
 ms.prod: word
 localization_priority: Normal
-ms.openlocfilehash: 1bc6cf2f4b8d8bf876d0b28ead9643f14c81fde1
-ms.sourcegitcommit: da8e6148f4bd9884ab9702db3033273a383d15f0
+ms.openlocfilehash: bde7ff45c8352277b9aec38ecccb41333544172a
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "36477906"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611276"
 ---
 # <a name="word-javascript-preview-apis"></a>API предварительного просмотра для Word JavaScript
 

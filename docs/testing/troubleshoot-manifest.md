@@ -3,12 +3,12 @@ title: Проверка манифеста надстройки Office
 description: Узнайте, как проверить манифест надстройки Office с помощью XML-схемы и других средств.
 ms.date: 04/16/2020
 localization_priority: Normal
-ms.openlocfilehash: a6c33603f278e092d5b2b1c85879e03ee10031e3
-ms.sourcegitcommit: 803587b324fc8038721709d7db5664025cf03c6b
+ms.openlocfilehash: fee4fd048092734eb479f1993c69fcf99c153c79
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "43547235"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44611101"
 ---
 # <a name="validate-an-office-add-ins-manifest"></a>Проверка манифеста надстройки Office
 
@@ -43,7 +43,7 @@ npm run validate
     ```
 
     > [!NOTE]
-    > Если эта команда недоступна или не работает, выполните следующую команду, чтобы принудительно использовать последнюю версию средства Office-ADDIN-MANIFEST (замените `MANIFEST_FILE` на имя файла манифеста):
+    > Если эта команда недоступна или не работает, выполните следующую команду, чтобы принудительно использовать последнюю версию средства Office-ADDIN-MANIFEST (замените на `MANIFEST_FILE` имя файла манифеста):
     >
     > ```command&nbsp;line
     > npx --ignore-existing office-addin-manifest validate MANIFEST_FILE
