@@ -3,12 +3,12 @@ title: Считывание и запись данных элемента в ф�
 description: Просматривайте и устанавливайте различные свойства элемента в надстройке Outlook при сценарии создания, такие как сведения о получателях, тема, текст, а также место и время встречи.
 ms.date: 12/10/2019
 localization_priority: Normal
-ms.openlocfilehash: 3b82f418ffa2820e5f8cf04805a62b0d85691420
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: bf311458ef28422d7b9de3995288c05de97fca18
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42325449"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44606464"
 ---
 # <a name="get-and-set-item-data-in-a-compose-form-in-outlook"></a>Просмотр и изменение данных элемента в форме создания элементов Outlook
 

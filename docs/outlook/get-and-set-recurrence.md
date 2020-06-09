@@ -3,12 +3,12 @@ title: Просмотр и изменение повторения в надст
 description: В этой статье показано, как использовать API JavaScript для Office, чтобы просматривать и изменять различные свойства повторения элемента в надстройке Outlook.
 ms.date: 01/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 850fd49721dbb0e3835a44148d03f5687726c58c
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: 6a50ba5eab39145d8e50a5a888a6ed0900200bc4
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42324977"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44606457"
 ---
 # <a name="get-and-set-recurrence"></a>Просмотр и изменение повторения
 

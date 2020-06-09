@@ -3,12 +3,12 @@ title: Элемент VersionOverrides в файле манифеста
 description: Справочная документация по элементу VersionOverrides для файлов манифеста надстроек Office (XML).
 ms.date: 03/05/2020
 localization_priority: Normal
-ms.openlocfilehash: 055a796d269ffb230293639a7f69b2dde4e36eee
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: cb23a78c336be891cdfa30262713ee3c80b9160f
+ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42717854"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "44604503"
 ---
 # <a name="versionoverrides-element"></a>Элемент VersionOverrides
 
@@ -18,21 +18,21 @@ ms.locfileid: "42717854"
 
 |  Атрибут  |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  **xmlns**       |  Да  |  Пространство имен схемы VersionOverrides. Допустимые значения зависят от значения `<VersionOverrides>` **xsi: Type** этого элемента и значения **xsi: Type** родительского `<OfficeApp>` элемента. Ниже приведены [значения пространств имен](#namespace-values) .|
+|  **xmlns**       |  Да  |  Пространство имен схемы VersionOverrides. Допустимые значения зависят от `<VersionOverrides>` значения **xsi: Type** этого элемента и значения **xsi: Type** родительского `<OfficeApp>` элемента. Ниже приведены [значения пространств имен](#namespace-values) .|
 |  **xsi:type**  |  Да  | Версия схемы. В настоящее время допускаются только значения `VersionOverridesV1_0` и `VersionOverridesV1_1`. |
 
 ### <a name="namespace-values"></a>Значения пространств имен
 
 Ниже приведен список требуемого значения **xmlns** в зависимости от значения **xsi: Type** родительского `<OfficeApp>` элемента.
 
-- **TaskPaneApp** поддерживает только версию 1,0 VersionOverrides, а **xmlns** — значение `http://schemas.microsoft.com/office/taskpaneappversionoverrides`.
-- **ContentApp** поддерживает только версию 1,0 VersionOverrides, а **xmlns** — значение `http://schemas.microsoft.com/office/contentappversionoverrides`.
-- **MailApp** поддерживает версии 1,0 и 1,1 для VersionOverrides, поэтому значение **xmlns** зависит от значения **xsi: Type** этого `<VersionOverrides>` элемента:
-    - Если **xsi: Type** , `VersionOverridesV1_0`то **xmlns** должен быть `http://schemas.microsoft.com/office/mailappversionoverrides`.
-    - Если **xsi: Type** , `VersionOverridesV1_1`то **xmlns** должен быть `http://schemas.microsoft.com/office/mailappversionoverrides/1.1`.
+- **TaskPaneApp** поддерживает только версию 1,0 VersionOverrides, а **xmlns** — значение `http://schemas.microsoft.com/office/taskpaneappversionoverrides` .
+- **ContentApp** поддерживает только версию 1,0 VersionOverrides, а **xmlns** — значение `http://schemas.microsoft.com/office/contentappversionoverrides` .
+- **MailApp** поддерживает версии 1,0 и 1,1 для VersionOverrides, поэтому значение **xmlns** зависит от `<VersionOverrides>` значения **xsi: Type** этого элемента:
+    - Если **xsi: Type** `VersionOverridesV1_0` , то **xmlns** должен быть `http://schemas.microsoft.com/office/mailappversionoverrides` .
+    - Если **xsi: Type** `VersionOverridesV1_1` , то **xmlns** должен быть `http://schemas.microsoft.com/office/mailappversionoverrides/1.1` .
 
 > [!NOTE]
-> В настоящее время только Outlook 2016 или более поздней версии поддерживает схему VersionOverrides `VersionOverridesV1_1` 1.1 и тип.
+> В настоящее время только Outlook 2016 или более поздней версии поддерживает схему VersionOverrides 1.1 и `VersionOverridesV1_1` тип.
 
 ## <a name="child-elements"></a>Дочерние элементы
 
@@ -45,7 +45,7 @@ ms.locfileid: "42717854"
 |  [EquivalentAddins](equivalentaddins.md)    |  Нет  | Задает встроенные надстройки (COM/XLL), эквивалентные веб-надстройке. Веб-надстройка не активируется, если установлена эквивалентная собственная встроенная надстройка.|
 |  **VersionOverrides**    |  Нет  | Определяет команды надстроек в новой версии схемы. Подробные сведения см. в разделе [Реализация нескольких версий](#implementing-multiple-versions). |
 |  [WebApplicationInfo](webapplicationinfo.md)    |  Нет  | Задает сведения о регистрации надстройки с помощью надежных поставщиков маркеров, таких как Azure Active Directory 2.0. |
-|  [ExtendedPermissions](extendedpermissions.md) |  Нет  |  Задает коллекцию расширенных разрешений.<br><br>**Важно!** поскольку API [Office. Body. аппендонсендасинк](/javascript/api/outlook/office.body?view=outlook-js-preview#appendonsendasync-data--options--callback-) в настоящее время находится в режиме предварительной версии, надстройки `ExtendedPermissions` , использующие этот элемент, не могут быть опубликованы в AppSource или развернуты с помощью централизованного развертывания. |
+|  [ExtendedPermissions](extendedpermissions.md) |  Нет  |  Задает коллекцию расширенных разрешений.<br><br>**Важно!** поскольку API [Office. Body. аппендонсендасинк](/javascript/api/outlook/office.body?view=outlook-js-preview#appendonsendasync-data--options--callback-) в настоящее время находится в режиме предварительной версии, надстройки, использующие этот `ExtendedPermissions` элемент, не могут быть опубликованы в AppSource или развернуты с помощью централизованного развертывания. |
 
 ### <a name="versionoverrides-example"></a>Пример VersionOverrides
 
