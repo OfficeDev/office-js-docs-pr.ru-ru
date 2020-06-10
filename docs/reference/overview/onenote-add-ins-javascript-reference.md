@@ -4,12 +4,12 @@ description: Узнайте больше об API OneNote JavaScript
 ms.date: 02/19/2020
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: 78569926fe656405e9159e5935606e53ade50ba7
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: c73d784cb2ca724b02b22b68bbf0b75c8e3640bf
+ms.sourcegitcommit: 19312a54f47a17988ffa86359218a504713f9f09
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44612159"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "44679285"
 ---
 # <a name="onenote-javascript-api-overview"></a>Обзор API JavaScript для OneNote
 
@@ -37,7 +37,7 @@ ms.locfileid: "44612159"
 
 ## <a name="see-also"></a>См. также
 
-- [Документация по надстройкам OneNote](../../onenote/index.md)
+- [Документация по надстройкам OneNote](../../onenote/index.yml)
 - [Обзор надстроек OneNote](../../onenote/onenote-add-ins-programming-overview.md)
 - [Справочник по API JavaScript для OneNote](/javascript/api/onenote)
 - [Доступность ведущих приложений и платформ для надстроек Office](../../overview/office-add-in-availability.md)

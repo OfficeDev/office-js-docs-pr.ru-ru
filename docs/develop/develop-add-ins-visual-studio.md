@@ -3,12 +3,12 @@ title: Разработка надстроек Office с помощью Visual S
 description: Разработка надстроек Office с помощью Visual Studio
 ms.date: 12/31/2019
 localization_priority: Priority
-ms.openlocfilehash: 198a277d56d499b2b2cfef84667ceefccec81a72
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: cf8ed9d47840115f22641d0c4b6c6426e3a01a11
+ms.sourcegitcommit: 19312a54f47a17988ffa86359218a504713f9f09
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608329"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "44679260"
 ---
 # <a name="develop-office-add-ins-with-visual-studio"></a>Разработка надстроек Office с помощью Visual Studio
 
@@ -35,7 +35,7 @@ ms.locfileid: "44608329"
 > [!TIP]
 > Надстройка Office представляет собой веб-приложение, поэтому для изменения надстройки требуются базовые навыки веб-разработки. Если вы впервые работаете с JavaScript, рекомендуем прочесть [учебник Mozilla по JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
 
-Чтобы настроить надстройку, потребуется понять принципы, описанные в разделе [Основные принципы > Разработка](develop-overview.md) этой документации, а также принципы, описанные в соответствующем разделе документации ведущего приложения, для которого вы создаете надстройку (например, [Excel](../excel/index.md)). 
+Чтобы настроить надстройку, потребуется понять принципы, описанные в разделе [Основные принципы > Разработка](develop-overview.md) этой документации, а также принципы, описанные в соответствующем разделе документации ведущего приложения, для которого вы создаете надстройку (например, [Excel](../excel/index.yml)). 
 
 ## <a name="test-and-debug-the-add-in"></a>Тестирование и отладка надстройки
 
