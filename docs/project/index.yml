@@ -1,0 +1,63 @@
+### YamlMime:Landing
+title: Документация по надстройкам Project
+summary: С помощью надстроек Project можно использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript, для создания решения, работающего в Project для Windows. Узнайте, как создавать, тестировать, отлаживать и публиковать надстройки Project.
+metadata:
+  title: Документация по надстройкам Project
+  description: Учебные ресурсы по надстройкам Project.
+  ms.prod: project
+  ms.topic: landing-page
+  ms.date: 06/08/2020
+  localization_priority: Priority
+  ms.openlocfilehash: 77a49026234bf1c2e8487a7b56af0940ead6813f
+  ms.sourcegitcommit: 19312a54f47a17988ffa86359218a504713f9f09
+  ms.translationtype: MT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 06/10/2020
+  ms.locfileid: "44679475"
+landingContent:
+- title: Сведения о надстройках Project
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Что такое надстройки Project?
+      url: project-add-ins.md
+    - text: API JavaScript для Project
+      url: ../reference/overview/project-add-ins-reference-overview.md
+  - linkListType: quickstart
+    links:
+    - text: Создание первой надстройки Project
+      url: ../quickstarts/project-quickstart.md
+  - linkListType: how-to-guide
+    links:
+    - text: Тестирование и отладка надстроек проекта
+      url: ../testing/test-debug-office-add-ins.md
+    - text: Развертывание и публикация надстроек проекта
+      url: ../publish/publish.md
+- title: Основные понятия, связанные с надстройками Office
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Обзор платформы надстроек Office
+      url: ../overview/office-add-ins.md
+  - linkListType: get-started
+    links:
+    - text: Создание надстроек Office
+      url: ../overview/office-add-ins-fundamentals.md
+    - text: Основные принципы надстроек Office
+      url: ../overview/core-concepts-office-add-ins.md
+    - text: Разработка надстроек для Office
+      url: ../design/add-in-design.md
+    - text: Разработка надстроек Office
+      url: ../develop/develop-overview.md
+- title: Ресурсы
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Задать вопрос
+      url: https://stackoverflow.com/questions/tagged/office-js
+    - text: Предложить функцию
+      url: https://officespdev.uservoice.com/
+    - text: Сообщить о проблеме
+      url: https://github.com/officedev/office-js/issues
+    - text: 'Надстройки Office: дополнительные ресурсы'
+      url: ../resources/resources-links-help.md

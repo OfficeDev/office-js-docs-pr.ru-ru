@@ -1,0 +1,65 @@
+### YamlMime:Landing
+title: Документация по надстройкам Outlook
+summary: С помощью надстроек Outlook вы можете использовать привычные веб-технологии, например HTML, CSS и JavaScript, для создания решения, которое может работать в Outlook на нескольких платформах, в том числе в Интернете, Windows, Mac и iOS. Узнайте, как создавать, тестировать, отлаживать и публиковать надстройки Outlook.
+metadata:
+  title: Документация по надстройкам Outlook
+  description: Учебные ресурсы по надстройкам Outlook.
+  ms.prod: outlook
+  ms.topic: landing-page
+  ms.date: 06/08/2020
+  localization_priority: Priority
+  ms.openlocfilehash: 785265171dfe7d7c214ad8b731ba0a1aefdeb282
+  ms.sourcegitcommit: 19312a54f47a17988ffa86359218a504713f9f09
+  ms.translationtype: MT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 06/10/2020
+  ms.locfileid: "44679481"
+landingContent:
+- title: Сведения о надстройках Outlook
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Что такое надстройки Outlook?
+      url: outlook-add-ins-overview.md
+  - linkListType: quickstart
+    links:
+    - text: Создание первой надстройки Outlook
+      url: ../quickstarts/outlook-quickstart.md
+    - text: Изучение API JavaScript для Office с помощью Script Lab
+      url: ../overview/explore-with-script-lab.md
+  - linkListType: how-to-guide
+    links:
+    - text: Использование API JavaScript для Outlook для взаимодействия с объектами
+      url: apis.md
+    - text: Тестирование и отладка надстройки Outlook
+      url: ../testing/test-debug-office-add-ins.md
+    - text: Развертывание и публикация надстройки Outlook
+      url: ../publish/publish.md
+- title: Основные понятия, связанные с надстройками Office
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Обзор платформы надстроек Office
+      url: ../overview/office-add-ins.md
+  - linkListType: concept
+    links:
+    - text: Создание надстроек Office
+      url: ../overview/office-add-ins-fundamentals.md
+    - text: Основные принципы надстроек Office
+      url: ../overview/core-concepts-office-add-ins.md
+    - text: Разработка надстроек для Office
+      url: ../design/add-in-design.md
+    - text: Разработка надстроек Office
+      url: ../develop/develop-overview.md
+- title: Ресурсы
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Задать вопрос
+      url: https://stackoverflow.com/questions/tagged/office-js
+    - text: Предложить функцию
+      url: https://officespdev.uservoice.com/
+    - text: Сообщить о проблеме
+      url: https://github.com/officedev/office-js/issues
+    - text: 'Надстройки Office: дополнительные ресурсы'
+      url: ../resources/resources-links-help.md
