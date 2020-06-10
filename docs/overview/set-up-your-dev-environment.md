@@ -3,12 +3,12 @@ title: Настройка среды разработки
 description: Настройка среды разработки для создания надстроек Office
 ms.date: 04/03/2020
 localization_priority: Normal
-ms.openlocfilehash: 6c3f533b56cafc8300837cc835b26361490afedb
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: f44f8e48aec402f0ffa6327732613a902ea0cfe6
+ms.sourcegitcommit: 19312a54f47a17988ffa86359218a504713f9f09
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611956"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "44679355"
 ---
 # <a name="set-up-your-development-environment"></a>Настройка среды разработки
 
@@ -63,7 +63,7 @@ npm -v
 
 ### <a name="create-an-office-add-in"></a>Создание надстройки Office
 
-Вы можете быстро создать простую надстройку для Excel, OneNote, Outlook, PowerPoint, Project или Word с помощью [5-минутного краткого руководства по началу работы](../index.md). Если вы уже ознакомились с кратким руководством и хотите создать более сложную надстройку, воспользуйтесь [учебником](../index.md).
+Вы можете быстро создать простую надстройку для Excel, OneNote, Outlook, PowerPoint, Project или Word с помощью [5-минутного краткого руководства по началу работы](/office/dev/add-ins/). Если вы уже ознакомились с кратким руководством и хотите создать более сложную надстройку, воспользуйтесь [учебником](/office/dev/add-ins/).
 
 ### <a name="explore-the-apis-with-script-lab"></a>Изучение API с помощью Script Lab
 

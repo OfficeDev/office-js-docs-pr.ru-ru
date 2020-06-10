@@ -1,0 +1,67 @@
+### YamlMime:Landing
+title: Документация по надстройкам Excel
+summary: С помощью надстроек Excel можно использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript, для создания решения, работающего в Excel на различных платформах, включая Windows, Mac, iPad и веб-браузер. Узнайте, как создавать, тестировать, отлаживать и публиковать надстройки Excel.
+metadata:
+  title: Документация по надстройкам Excel
+  description: Учебные ресурсы по надстройкам Excel.
+  ms.prod: excel
+  ms.topic: landing-page
+  ms.date: 06/09/2020
+  localization_priority: Priority
+  ms.openlocfilehash: c2bbe9e007111beed49d33eaaeff3dd6c7a38aae
+  ms.sourcegitcommit: 19312a54f47a17988ffa86359218a504713f9f09
+  ms.translationtype: MT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 06/10/2020
+  ms.locfileid: "44679505"
+landingContent:
+- title: Сведения о надстройках Excel
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Что такое надстройки Excel?
+      url: excel-add-ins-overview.md
+  - linkListType: quickstart
+    links:
+    - text: Создание первой надстройки Excel
+      url: ../quickstarts/excel-quickstart-jquery.md
+    - text: Изучение API с помощью сценария Lab
+      url: ../overview/explore-with-script-lab.md
+  - linkListType: how-to-guide
+    links:
+    - text: Использование API JavaScript для Excel для взаимодействия с объектами и контентом книги
+      url: ../reference/overview/excel-add-ins-reference-overview.md
+    - text: Добавление пользовательских функций в Excel
+      url: custom-functions-overview.md
+    - text: Тестирование и отладка надстройки Excel
+      url: ../testing/test-debug-office-add-ins.md
+    - text: Развертывание и публикация надстройки Excel
+      url: ../publish/publish.md
+- title: Основные понятия, связанные с надстройками Office
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Обзор платформы надстроек Office
+      url: ../overview/office-add-ins.md
+  - linkListType: concept
+    links:
+    - text: Создание надстроек Office
+      url: ../overview/office-add-ins-fundamentals.md
+    - text: Основные принципы надстроек Office
+      url: ../overview/core-concepts-office-add-ins.md
+    - text: Разработка надстроек для Office
+      url: ../design/add-in-design.md
+    - text: Разработка надстроек Office
+      url: ../develop/develop-overview.md
+- title: Ресурсы
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Задать вопрос
+      url: https://stackoverflow.com/questions/tagged/office-js
+    - text: Предложить функцию
+      url: https://officespdev.uservoice.com/
+    - text: Сообщить о проблеме
+      url: https://github.com/officedev/office-js/issues
+    - text: 'Надстройки Office: дополнительные ресурсы'
+      url: ../resources/resources-links-help.md

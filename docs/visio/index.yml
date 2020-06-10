@@ -1,0 +1,43 @@
+### YamlMime:Landing
+title: Документация по Visio
+summary: С помощью API JavaScript для Visio вы можете внедрять схемы Visio в SharePoint Online. Узнайте, как использовать API JavaScript для Visio с Visio в Интернете, чтобы создавать решения для SharePoint Online.
+metadata:
+  title: Документация по Visio
+  description: Материалы по внедрению схем Visio в SharePoint.
+  ms.prod: visio
+  ms.topic: landing-page
+  ms.date: 06/09/2020
+  localization_priority: Priority
+  ms.openlocfilehash: a58aedff61bd2edf52b6b2b3a748c7206c8af9c3
+  ms.sourcegitcommit: 19312a54f47a17988ffa86359218a504713f9f09
+  ms.translationtype: MT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 06/10/2020
+  ms.locfileid: "44679469"
+landingContent:
+- title: Сведения об API JavaScript для Visio
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Что такое API JavaScript для Visio?
+      url: ../reference/overview/visio-javascript-reference-overview.md
+  - linkListType: get-started
+    links:
+    - text: Создание скрипта, отображающего текст фигуры выбранной фигуры
+      url: ../reference/overview/visio-javascript-reference-overview.md#get-started
+  - linkListType: reference
+    links:
+    - text: Знакомство с API JavaScript для Visio
+      url: /javascript/api/visio
+- title: Ресурсы
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Задать вопрос
+      url: https://stackoverflow.com/questions/tagged/office-js
+    - text: Предложить функцию
+      url: https://officespdev.uservoice.com/
+    - text: Сообщить о проблеме
+      url: https://github.com/officedev/office-js/issues
+    - text: 'Надстройки Office: дополнительные ресурсы'
+      url: ../resources/resources-links-help.md
