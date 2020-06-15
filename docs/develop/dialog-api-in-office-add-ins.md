@@ -1,14 +1,14 @@
 ---
 title: Использование Office Dialog API в вашей надстройках Office
-description: Изучите основы создания диалогового окна в надстройке Office
-ms.date: 01/29/2020
+description: Общие сведения о создании диалогового окна в надстройке Office.
+ms.date: 06/10/2020
 localization_priority: Normal
-ms.openlocfilehash: 96ed3169e7909e700bde894a4caf03348d039b74
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 749fd6041c2ef60a4d766e865e25d53e97298d01
+ms.sourcegitcommit: 449a728118db88dea22a44f83728d21604d6ee8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608280"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "44719072"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
@@ -96,9 +96,10 @@ if (loginSuccess) {
 }
 ```
 
-> [!NOTE]
-> - Функция `messageParent` — это один из *двух* API Office, которые можно вызывать в диалоговом окне. Другой — `Office.context.requirements.isSetSupported`. Дополнительные сведения см. в статье [Указание ведущих приложений Office и требований к API](specify-office-hosts-and-api-requirements.md).
+> [!IMPORTANT]
 > - Функцию `messageParent` можно вызывать только на странице, которая относится к тому же домену (включая протокол и порт), что и главная страница.
+> - `messageParent`Функция является одним из двух *only* API Office JS, которые можно вызывать в диалоговом окне. 
+> - Другой API JS, который может вызываться в диалоговом окне, — это `Office.context.requirements.isSetSupported` . Сведения о нем: [Указание ведущих приложений Office и требований к API](specify-office-hosts-and-api-requirements.md). Однако в диалоговом окне этот API не поддерживается в Outlook 2016 1-Time Purchase (версия MSI).
 
 В следующем примере `googleProfile` — это строковое представление профиля Google пользователя.
 

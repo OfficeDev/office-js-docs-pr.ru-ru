@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API диалоговых окон
-description: Дополнительные сведения о наборах требований API диалоговых окон
-ms.date: 03/11/2020
+description: Узнайте больше о наборах обязательных элементов API диалоговых окон.
+ms.date: 06/10/2020
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 7987a1617125f218ba883e834cb892fa9d5e2d9b
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: aa591a1b37c94a4db621d19786857303bb6ac473
+ms.sourcegitcommit: 449a728118db88dea22a44f83728d21604d6ee8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44612117"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "44719065"
 ---
 # <a name="dialog-api-requirement-sets"></a>Наборы обязательных элементов API диалоговых окон
 
@@ -40,6 +40,7 @@ Dialog API 1.1 — это первая версия этого API. Дополн
 
 ## <a name="see-also"></a>См. также
 
+- [Использование Office Dialog API в надстройках Office](../../develop/dialog-api-in-office-add-ins.md)
 - [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md)
 - [Указание ведущих приложений Office и обязательных элементов API](../../develop/specify-office-hosts-and-api-requirements.md)
 - [XML-манифест надстроек Office](../../develop/add-in-manifests.md)
