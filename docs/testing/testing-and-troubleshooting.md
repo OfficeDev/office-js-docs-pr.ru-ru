@@ -1,18 +1,18 @@
 ---
 title: Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 description: Узнайте, как устранять ошибки пользователей в надстройках Office.
-ms.date: 05/15/2020
+ms.date: 06/17/2020
 localization_priority: Normal
-ms.openlocfilehash: 859cf5019d40d05dbb3ad211d4d2934b309f3ccd
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 1dbc8cc18e0c9b12ccff605b655dd7c8629fb9cf
+ms.sourcegitcommit: b939312ffdeb6e0a0dfe085db7efe0ff143ef873
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44612075"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "44810851"
 ---
 # <a name="troubleshoot-user-errors-with-office-add-ins"></a>Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 
-Иногда при работе с вашими надстройками Office пользователи могут столкнуться с определенными проблемами. Например, надстройка может не загружаться или быть недоступной. Эта статья поможет вам устранить распространенные проблемы, с которыми сталкиваются пользователи при работе с вашими надстройками Office. 
+At times your users might encounter issues with Office Add-ins that you develop. For example, an add-in fails to load or is inaccessible. Use the information in this article to help resolve common issues that your users encounter with your Office Add-in. 
 
 Для выявления и устранения проблем с надстройками также можно использовать [Fiddler](https://www.telerik.com/fiddler).
 
@@ -24,10 +24,10 @@ ms.locfileid: "44612075"
 
 |**Сообщение об ошибке**|**Решение**|
 |:-----|:-----|
-|Ошибка приложения: не удалось подключиться к каталогу|Проверьте настройки брандмауэра. Под каталогом понимается AppSource. Это сообщение означает, что пользователь не может получить доступ к AppSource.|
-|ОШИБКА ПРИЛОЖЕНИЯ: Нам не удалось запустить это приложение. Чтобы проигнорировать проблему, закройте данное окно. Чтобы попробовать еще раз, нажмите "Перезапустить".|Убедитесь, что установлены последние обновления Office, или скачайте [обновление для Office 2013](https://support.microsoft.com/kb/2986156/).|
+|Ошибка приложения: не удалось подключиться к каталогу|Verify firewall settings."Catalog" refers to AppSource. This message indicates that the user cannot access AppSource.|
+|APP ERROR: This app could not be started. Close this dialog to ignore the problem or click "Restart" to try again.|Убедитесь, что установлены последние обновления Office, или скачайте [обновление для Office 2013](https://support.microsoft.com/kb/2986156/).|
 |Ошибка: объект не поддерживает свойство или метод 'defineProperty'|Убедитесь, что Internet Explorer не работает в режиме совместимости. Откройте меню "Сервис" > **Параметры просмотра в режиме совместимости**.|
-|К сожалению, нам не удалось загрузить приложение, так как ваша версия браузера не поддерживается. Щелкните здесь, чтобы открыть список поддерживаемых версий браузера.|Убедитесь, что браузер поддерживает локальное хранилище HTML5, или сбросьте параметры Internet Explorer. Сведения о поддерживаемых браузерах см. в разделе [Требования к запуску надстроек для Office](../concepts/requirements-for-running-office-add-ins.md).|
+|Sorry, we couldn't load the app because your browser version is not supported. Click here for a list of supported browser versions.|Make sure that the browser supports HTML5 local storage, or reset your Internet Explorer settings. For information about supported browsers, see [Requirements for running Office Add-ins](../concepts/requirements-for-running-office-add-ins.md).|
 
 ## <a name="when-installing-an-add-in-you-see-error-loading-add-in-in-the-status-bar"></a>При установке надстройки в строке состояния появляется сообщение "Ошибка при загрузке надстройки"
 
@@ -47,7 +47,7 @@ ms.locfileid: "44612075"
     
 - В разделе **Обзор**, снимите флажки **Отключить отладку сценариев (Internet Explorer)** и **Отключить отладку сценариев (другие)**.
     
-Снимать эти флажки рекомендуется только для устранения неполадки. Если они сняты, то при использовании браузера будут появляться соответствующие сообщения. После устранения проблемы снова установите флажки **Отключить отладку сценариев (Internet Explorer)** и **Отключить отладку сценариев (другие)**.
+We recommend that you uncheck these settings only to troubleshoot the issue. If you leave them unchecked, you will get prompts when you browse. After the issue is resolved, check **Disable script debugging (Internet Explorer)** and **Disable script debugging (Other)** again.
 
 
 ## <a name="add-in-doesnt-activate-in-office-2013"></a>Надстройка не активируется в Office 2013
@@ -71,9 +71,9 @@ ms.locfileid: "44612075"
 
 ## <a name="add-in-dialog-box-cannot-be-displayed"></a>Не отображается диалоговое окно надстройки
 
-При открытии надстройки Office пользователю будет предложено разрешить отображение диалогового окна. Пользователь выбирает **Разрешить**, и появляется следующее сообщение об ошибке:
+When using an Office Add-in, the user is asked to allow a dialog box to be displayed. The user chooses **Allow**, and the following error message occurs:
 
-"Параметры безопасности браузера не позволили создать диалоговое окно. Используйте другой браузер или настройте браузер так, чтобы [URL-адрес] и домен, отображаемый в адресной строке браузера, находились в одной зоне безопасности."
+"The security settings in your browser prevent us from creating a dialog box. Try a different browser, or configure your browser so that [URL] and the domain shown in your address bar are in the same security zone."
 
 ![Снимок экрана: сообщение об ошибке](http://i.imgur.com/3mqmlgE.png)
 
@@ -81,7 +81,7 @@ ms.locfileid: "44612075"
 |:--------------------|:---------------------|
 |Internet Explorer, Microsoft Edge|Office в Интернете|
 
-Чтобы решить эту проблему, пользователи или администраторы могут добавить домен надстройки в список надежных сайтов в Internet Explorer или Microsoft Edge.
+To resolve the issue, end users or administrators can add the domain of the add-in to the list of trusted sites in Internet Explorer. Use the same procedure whether you're using the Internet Explorer or Microsoft Edge browser.
 
 > [!IMPORTANT]
 > Не добавляйте URL-адрес надстройки в список надежных сайтов, если вы не доверяете надстройке.
@@ -91,9 +91,9 @@ ms.locfileid: "44612075"
 1. На **панели управления** перейдите в раздел **Свойства браузера** > **Безопасность**.
 2. Выберите зону **Надежные сайты** и нажмите кнопку **Сайты**.
 3. Введите URL-адрес из сообщения об ошибке и нажмите кнопку **Добавить**.
-4. Запустите надстройку снова. Если проблема не исчезла, проверьте параметры для других зон безопасности и убедитесь, что домен надстройки находится в той же зоне, что и URL-адрес, отображаемый в адресной строке приложения Office.
+4. Try to use the add-in again. If the problem persists, verify the settings for the other security zones and ensure that the add-in domain is in the same zone as the URL that is displayed in the address bar of the Office application.
 
-Эта проблема возникает при использовании Dialog API в режиме всплывающих окон. Чтобы эта проблема не возникала, используйте флажок [displayInFrame](/javascript/api/office/office.ui). Для этого страница должна поддерживать отображение в окнах iframe. В приведенном ниже примере показано, как использовать флажок.
+This issue occurs when the Dialog API is used in pop-up mode. To prevent this issue from occurring, use the [displayInFrame](/javascript/api/office/office.ui) flag. This requires that your page support display within an iframe. The following example shows how to use the flag.
 
 ```js
 Office.context.ui.displayDialogAsync(startAddress, {displayInIFrame:true}, callback);
@@ -111,7 +111,7 @@ Office.context.ui.displayDialogAsync(startAddress, {displayInIFrame:true}, callb
 [!include[additional cache folders on Mac](../includes/mac-cache-folders.md)]
 
 #### <a name="for-ios"></a>Для iOS
-Для принудительной перезагрузки вызовите метод JavaScript `window.location.reload(true)` в надстройке. Вы также можете переустановить Office.
+Call `window.location.reload(true)` from JavaScript in the add-in to force a reload. Alternatively, you can reinstall Office.
 
 ## <a name="changes-to-static-files-such-as-javascript-html-and-css-do-not-take-effect"></a>Изменения статических файлов, таких как JavaScript, HTML и CSS, не отображаются.
 
@@ -143,5 +143,6 @@ del /s /f /q %LOCALAPPDATA%\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\AC
 - [Отладка надстроек в Office в Интернете](debug-add-ins-in-office-online.md) 
 - [Загрузка неопубликованной надстройки Office на iPad и Mac](sideload-an-office-add-in-on-ipad-and-mac.md)  
 - [Отладка надстроек Office на iPad и Mac](debug-office-add-ins-on-ipad-and-mac.md)  
+- [Расширение отладчика надстроек Microsoft Office для Visual Studio Code](./debug-with-vs-extension.md)
 - [Проверка манифеста надстройки Office](troubleshoot-manifest.md)
 - [Отладка надстройки с помощью журнала среды выполнения](runtime-logging.md)

@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: Функции и API, которые в настоящее время находятся в режиме предварительной версии для надстроек Outlook.
-ms.date: 05/29/2020
+ms.date: 06/17/2020
 localization_priority: Normal
-ms.openlocfilehash: a8026448f32d29de36684eb6a6d9fa0826de5f5b
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: d165d6ff82edf66034bb90ea40d522a23f919191
+ms.sourcegitcommit: 9eed5201a3ef556f77ba3b6790f007358188d57d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608085"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "44778664"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -83,6 +83,50 @@ ms.locfileid: "44608085"
 Добавлен новый элемент в манифест, где `AppendOnSend` расширенное разрешение должно быть включено в коллекцию расширенных разрешений.
 
 **Доступно в**: Outlook в Windows (подключено к подписке Office 365), Outlook в Интернете (современная, [Настройка предварительного доступа](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide#set-up-the-release-option-in-the-admin-center))
+
+<br>
+
+---
+
+---
+
+### <a name="async-versions-of-display-apis"></a>Асинхронные версии `display` API
+
+#### <a name="officecontextmailboxdisplayappointmentformasync"></a>[Office. Context. Mailbox. Дисплайаппоинтментформасинк](/javascript/api/outlook/office.mailbox?view=outlook-js-preview#displayappointmentformasync-itemid--options--callback-)
+
+Добавлена новая функция для `Mailbox` объекта, отображающего существующую встречу. Это асинхронная версия `displayAppointmentForm` метода.
+
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+
+#### <a name="officecontextmailboxdisplaymessageformasync"></a>[Office. Context. Mailbox. Дисплаймессажеформасинк](/javascript/api/outlook/office.mailbox?view=outlook-js-preview#displaymessageformasync-itemid--options--callback-)
+
+Добавлена новая функция для `Mailbox` объекта, отображающего существующее сообщение. Это асинхронная версия `displayMessageForm` метода.
+
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+
+#### <a name="officecontextmailboxdisplaynewappointmentformasync"></a>[Office. Context. Mailbox. Дисплайневаппоинтментформасинк](/javascript/api/outlook/office.mailbox?view=outlook-js-preview#displaynewappointmentformasync-parameters--options--callback-)
+
+Добавлена новая функция для `Mailbox` объекта, отображающего новую форму встречи. Это асинхронная версия `displayNewAppointmentForm` метода.
+
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+
+#### <a name="officecontextmailboxdisplaynewmessageformasync"></a>[Office. Context. Mailbox. Дисплайневмессажеформасинк](/javascript/api/outlook/office.mailbox?view=outlook-js-preview#displaynewmessageformasync-parameters--options--callback-)
+
+Добавлена новая функция для `Mailbox` объекта, отображающего форму нового сообщения. Это асинхронная версия `displayNewMessageForm` метода.
+
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+
+#### <a name="officecontextmailboxitemdisplayreplyallformasync"></a>[Office. Context. Mailbox. Item. Дисплайрепляллформасинк](office.context.mailbox.item.md#methods)
+
+Добавлена новая функция для `Item` объекта, отображающего форму "ответить всем" в режиме чтения. Это асинхронная версия `displayReplyAllForm` метода.
+
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
+
+#### <a name="officecontextmailboxitemdisplayreplyformasync"></a>[Office. Context. Mailbox. Item. Дисплайреплиформасинк](office.context.mailbox.item.md#methods)
+
+Добавлена новая функция для `Item` объекта, отображающего форму "Reply" в режиме чтения. Это асинхронная версия `displayReplyForm` метода.
+
+**Доступно в** Outlook для Windows (версия, подключенная к подписке на Office 365)
 
 <br>
 
