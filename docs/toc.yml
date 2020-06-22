@@ -283,6 +283,8 @@
           displayName: 'uninstall, sideload'
         - name: Отладка с помощью журнала среды выполнения
           href: testing/runtime-logging.md
+        - name: "Расширение отладчика для Visual\_Studio\_Code"
+          href: testing/debug-with-vs-extension.md
         - name: 'Устранение ошибок, с которыми сталкиваются пользователи'
           href: testing/testing-and-troubleshooting.md
         - name: Тестирование удобства использования
