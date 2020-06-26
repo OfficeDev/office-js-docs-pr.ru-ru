@@ -1,14 +1,14 @@
 ---
 title: 'Ссылки на библиотеку API JavaScript для Office '
 description: Узнайте, как ссылаться на библиотеку API JavaScript для Office и определение типов в надстройке.
-ms.date: 02/27/2020
+ms.date: 06/23/2020
 localization_priority: Normal
-ms.openlocfilehash: 8bd011c140ce61581ad4b1d06a43b04ad437f5c7
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 3f90b0798b14b66fe6d01f62eca3802fce179bec
+ms.sourcegitcommit: a4873c3525c7d30ef551545d27eb2c0a16b4eb50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609389"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44888133"
 ---
 # <a name="referencing-the-office-javascript-api-library"></a>Ссылки на библиотеку API JavaScript для Office 
 
@@ -21,16 +21,16 @@ ms.locfileid: "44609389"
 </head>
 ```
 
-Это приведет к скачиванию и кэшированию файлов API JavaScript для Office при первом запуске надстройки, чтобы убедиться в том, что используется самая последняя реализация Office. js и связанных с ней файлов для указанной версии.
+Это приведет к скачиванию и кэшированию файлов API JavaScript для Office при первом запуске надстройки, чтобы убедиться, что она использует самую актуальную реализацию Office.js и связанные с ней файлы для указанной версии.
 
 > [!IMPORTANT]
 > Необходимо ссылаться на API JavaScript для Office из `<head>` раздела страницы, чтобы убедиться, что API полностью инициализирован до элементов основного текста. Ведущим приложениям Office необходимо, чтобы надстройки инициализировались в течение 5 секунд после активации. Если надстройка не активируется в этом пороговом значении, она будет объявлена без ответа, а пользователю будет выведено сообщение об ошибке.
 
 ## <a name="api-versioning-and-backward-compatibility"></a>Управление версиями и обратная совместимость API
 
-В предыдущем фрагменте кода HTML ( `/1/` перед в `office.js` URL-адресе CDN) указывает последний добавочный выпуск в версии 1 файла Office. js. Так как API JavaScript для Office поддерживает обратную совместимость, последний выпуск по-прежнему будет поддерживать элементы API, представленные ранее в версии 1. Если вам нужно обновить существующий проект, ознакомьтесь со статьей [Обновление версии API JavaScript для Office и файлов схемы манифеста](update-your-javascript-api-for-office-and-manifest-schema-version.md). 
+В предыдущем фрагменте кода HTML ( `/1/` перед в `office.js` URL-адресе CDN) указывает последний добавочный выпуск в версии 1 Office.js. Так как API JavaScript для Office поддерживает обратную совместимость, последний выпуск по-прежнему будет поддерживать элементы API, представленные ранее в версии 1. Если вам нужно обновить существующий проект, ознакомьтесь со статьей [Обновление версии API JavaScript для Office и файлов схемы манифеста](update-your-javascript-api-for-office-and-manifest-schema-version.md). 
 
-Если вы планируете опубликовать свою надстройку Office из AppSource, необходимо использовать эту ссылку на сеть CDN. Локальные ссылки подходят только для внутренних сценариев, а также сценариев разработки и отладки.
+If you plan to publish your Office Add-in from AppSource, you must use this CDN reference. Local references are only appropriate for internal, development, and debugging scenarios.
 
 > [!NOTE]
 > Чтобы использовать API предварительных версий, требуется указать ссылку на предварительную версию библиотеки API JavaScript для Office в сети CDN: `https://appsforoffice.microsoft.com/lib/beta/hosted/office.js`.
@@ -43,10 +43,11 @@ ms.locfileid: "44609389"
 npm install --save-dev @types/office-js
 ```
 
-> [!NOTE]
-> Чтобы включить IntelliSense для предварительной версии API, используйте следующие команды в корневой папке проекта, [выполнив следующую](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview) команду: 
->
-> `npm install --save-dev @types/office-js-preview`
+## <a name="preview-apis"></a>Предварительный просмотр API
+
+Новые API JavaScript впервые появляются в "предварительной версии", а затем становятся частью определенного нумерованного набора требований после выполнения достаточного тестирования и необходимости отзыва пользователей.
+
+[!INCLUDE [Information about using preview APIs](../includes/using-preview-apis-host.md)]
 
 ## <a name="see-also"></a>См. также
 
