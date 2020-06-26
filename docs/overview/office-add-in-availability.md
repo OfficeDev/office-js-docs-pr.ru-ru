@@ -1,14 +1,14 @@
 ---
 title: Доступность ведущих приложений и платформ для надстроек Office
 description: Поддерживаемые наборы обязательных элементов для Excel, OneNote, Outlook, PowerPoint, Project и Word.
-ms.date: 05/11/2020
+ms.date: 06/23/2020
 localization_priority: Priority
-ms.openlocfilehash: 8c3c187d8f9b70f40a35e3773a2267dc76decbd0
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 979c873b1c5f2d1d7847414f037d5c75737aa33d
+ms.sourcegitcommit: a4873c3525c7d30ef551545d27eb2c0a16b4eb50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611984"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44888161"
 ---
 # <a name="office-add-in-host-and-platform-availability"></a>Доступность ведущих приложений и платформ для надстроек Office
 
@@ -154,7 +154,6 @@ ms.locfileid: "44611984"
           - <a href="/office/dev/add-ins/reference/requirement-sets/image-coercion-requirement-sets#imagecoercion-11">ImageCoercion 1.1</a></td>
     <td>
         - BindingEvents<br>
-        - CompressedFile<br>
         - DocumentEvents<br>
         - File<br>
         - MatrixBindings<br>
