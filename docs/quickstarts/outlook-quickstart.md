@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки Outlook
 description: Узнайте, как создать простую надстройку для области задач Outlook, используя API JS для Office.
-ms.date: 03/04/2020
+ms.date: 06/23/2020
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: ba2177e16a73ba626a201105f3f7a187a372a6b7
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 07f4eeae8cfd4a1962c15640555b2283a8d9fa3b
+ms.sourcegitcommit: a4873c3525c7d30ef551545d27eb2c0a16b4eb50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608910"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44888154"
 ---
 # <a name="build-your-first-outlook-add-in"></a>Создание первой надстройки Outlook
 
@@ -153,7 +153,7 @@ ms.locfileid: "44608910"
 |**Проект**|**Описание**|
 |:-----|:-----|
 |Проект надстройки|Содержит только XML-файл манифеста со всеми параметрами надстройки. Эти параметры помогают ведущему приложению Office определить условия активации и место отображения надстройки. Visual Studio создает этот файл автоматически, чтобы вы могли сразу запускать проект и использовать надстройку. Вы можете изменить эти параметры в любой момент, отредактировав XML-файл.|
-|Проект веб-приложения|Содержит страницы контента надстройки, включающие все файлы и ссылки на файлы, необходимые для разработки страниц HTML и JavaScript с поддержкой Office. При разработке надстройки Visual Studio размещает веб-приложение на локальном сервере IIS. Для публикации надстройки этот проект веб-приложения нужно развернуть на веб-сервере.|
+|Проект веб-приложения|Contains the content pages of your add-in, including all the files and file references that you need to develop Office-aware HTML and JavaScript pages. While you develop your add-in, Visual Studio hosts the web application on your local IIS server. When you're ready to publish the add-in, you'll need to deploy this web application project to a web server.|
 
 ### <a name="update-the-code"></a>Обновление кода
 
@@ -240,9 +240,9 @@ ms.locfileid: "44608910"
 
 ### <a name="update-the-manifest"></a>Обновление манифеста
 
-1. Откройте XML-файл манифеста в проекте надстройки. Этот файл определяет параметры и возможности надстройки.
+1. Open the XML manifest file in the Add-in project. This file defines the add-in's settings and capabilities.
 
-1. Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.
+1. The `ProviderName` element has a placeholder value. Replace it with your name.
 
 1. Атрибут `DefaultValue` элемента `DisplayName` содержит заполнитель. Замените его на текст `My Office Add-in`.
 
@@ -252,7 +252,7 @@ ms.locfileid: "44608910"
 
     ```xml
     ...
-    <ProviderName>Northwind Traders</ProviderName>
+    <ProviderName>John Doe</ProviderName>
     <DefaultLocale>en-US</DefaultLocale>
     <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
     <DisplayName DefaultValue="My Office Add-in" />
