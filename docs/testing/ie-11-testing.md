@@ -3,12 +3,12 @@ ms.date: 05/16/2020
 description: Протестируйте надстройку Office с помощью Internet Explorer 11.
 title: Тестирование Internet Explorer 11
 localization_priority: Normal
-ms.openlocfilehash: 4ea2b4da153e2908f928086cd4997502c194e578
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 1d6852d08308088a020e86ce7f5ab9cfdb9ab978
+ms.sourcegitcommit: 065bf4f8e0d26194cee9689f7126702b391340cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611206"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "45006439"
 ---
 # <a name="test-your-office-add-in-using-internet-explorer-11"></a>Тестирование надстройки Office с помощью Internet Explorer 11
 
@@ -31,7 +31,7 @@ ms.locfileid: "44611206"
 2. В корневой папке нового проекта выполните в командной строке следующую команду:
 
 ```command&nbsp;line
-office-add-dev-settings webview manifest.xml ie
+npx office-addin-dev-settings webview manifest.xml ie
 ```
 В командной строке должно появиться примечание о том, что в качестве типа представления веб-сайта теперь задано значение IE.
 
@@ -41,7 +41,7 @@ office-add-dev-settings webview manifest.xml ie
 
 Если у вас есть другой путь манифеста, укажите его в команде, как показано в следующем примере:
 
-`office-add-dev-settings webview [path to your manifest] ie`
+`npx office-addin-dev-settings webview [path to your manifest] ie`
 
 `office-addin-dev-settings webview`Кроме того, в качестве аргументов команды можно использовать ряд сред выполнения:
 

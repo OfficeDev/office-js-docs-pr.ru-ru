@@ -1,14 +1,14 @@
 ---
 title: Включение сценариев делегирования доступа в надстройке Outlook
 description: В кратко описывается доступ представителя и описывается настройка поддержки надстройки.
-ms.date: 01/14/2020
+ms.date: 06/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 68b9e09afbe2bcd5cfc302d6714b1c22fd945047
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: a5b4581783ca65bfe858dcf6638287418a3dcfe2
+ms.sourcegitcommit: 065bf4f8e0d26194cee9689f7126702b391340cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "45006418"
 ---
 # <a name="enable-delegate-access-scenarios-in-an-outlook-add-in"></a>Включение сценариев делегирования доступа в надстройке Outlook
 
@@ -25,7 +25,7 @@ ms.locfileid: "44608952"
 
 |Permission|Значение|Описание|
 |---|---:|---|
-|Read|1 (000001)|Возможность чтения элементов.|
+|Чтение|1 (000001)|Возможность чтения элементов.|
 |Write|2 (000010)|Может создавать элементы.|
 |делетеовн|4 (000100)|Можно удалять только созданные ими элементы.|
 |DeleteAll|8 (001000)|Может удалять все элементы.|
@@ -41,11 +41,16 @@ ms.locfileid: "44608952"
 
 Обновление делегата почтового ящика владельца обычно синхронизируется в почтовых ящиках немедленно.
 
-Тем не менее, если надстройка использует операции REST или EWS для задания расширенного свойства элемента, такие изменения могут занять несколько часов. Мы рекомендуем вместо этого использовать объект [CustomProperties](/javascript/api/outlook/office.customproperties) и связанные с ним API, чтобы избежать такой задержки. Чтобы узнать больше, ознакомьтесь с [разделом Настраиваемые свойства](metadata-for-an-outlook-add-in.md#custom-data-per-item-in-a-mailbox-custom-properties) статьи "получение и Настройка метаданных в надстройке Outlook".
+Тем не менее, если для задания расширенного свойства элемента использовались операции REST или Exchange Web Services (EWS), такие изменения могут занять несколько часов. Мы рекомендуем вместо этого использовать объект [CustomProperties](/javascript/api/outlook/office.customproperties) и связанные с ним API, чтобы избежать такой задержки. Чтобы узнать больше, ознакомьтесь с [разделом Настраиваемые свойства](metadata-for-an-outlook-add-in.md#custom-data-per-item-in-a-mailbox-custom-properties) статьи "получение и Настройка метаданных в надстройке Outlook".
+
+> [!IMPORTANT]
+> В сценарии делегата EWS невозможно использовать с маркерами, которые в настоящее время предоставляются office.js API.
 
 ## <a name="configure-the-manifest"></a>Настройка манифеста
 
 Чтобы включить сценарии делегирования доступа в надстройке, необходимо задать элемент [SupportsSharedFolders](../reference/manifest/supportssharedfolders.md) `true` в манифесте под родительским элементом `DesktopFormFactor` . В настоящее время другие конструктивные параметры не поддерживаются.
+
+Чтобы обеспечить поддержку вызовов REST от делегата, задайте для узла [Permissions](../reference/manifest/permissions.md) в манифесте значение `ReadWriteMailbox` .
 
 В приведенном ниже примере показано, как `SupportsSharedFolders` задать элемент `true` в разделе манифеста.
 
@@ -77,6 +82,9 @@ ms.locfileid: "44608952"
 ## <a name="perform-an-operation-as-delegate"></a>Выполнение операции в качестве делегата
 
 Вы можете получить общие свойства элемента в режиме создания или чтения, вызвав метод [Item. жетшаредпропертиесасинк](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods) . Возвращает объект [шаредпропертиес](/javascript/api/outlook/office.sharedproperties) , который в настоящее время предоставляет разрешения делегата, адрес электронной почты владельца, базовый URL-адрес REST API и целевой почтовый ящик.
+
+> [!IMPORTANT]
+> В сценарии делегирования надстройка может использовать REST, но не EWS, а разрешение надстройки должно быть настроено на разрешение `ReadWriteMailbox` REST доступа к почтовому ящику владельца.
 
 В приведенном ниже примере показано, как получить общие свойства сообщения или встречи, проверить, есть ли у делегата разрешение на **запись** , и СОВЕРШИТЬ вызов REST.
 
@@ -128,6 +136,9 @@ function performOperation() {
   );
 }
 ```
+
+> [!TIP]
+> Как представитель вы можете использовать REST для [получения содержимого сообщения Outlook, присоединенного к элементу Outlook или записи группы](/graph/outlook-get-mime-message#get-mime-content-of-an-outlook-message-attached-to-an-outlook-item-or-group-post).
 
 ## <a name="see-also"></a>См. также
 

@@ -1,14 +1,14 @@
 ---
 title: Элемент Permissions в файле манифеста
 description: Элемент Permissions определяет уровень доступа к API для надстройки Office.
-ms.date: 03/19/2019
+ms.date: 06/26/2020
 localization_priority: Normal
-ms.openlocfilehash: 603494b61ef126b35cb5cdff8c5f5b911bd25840
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: bc4cc2713d5a781c3407385470acd762910d17fd
+ms.sourcegitcommit: 065bf4f8e0d26194cee9689f7126702b391340cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611493"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "45006460"
 ---
 # <a name="permissions-element"></a>Элемент Permissions
 
@@ -24,7 +24,7 @@ ms.locfileid: "44611493"
  <Permissions> [Restricted | ReadDocument | ReadAllDocument | WriteDocument | ReadWriteDocument]</Permissions>
 ```
 
-Для почтовых надстроек
+Для почтовых надстроек:
 
 ```XML
  <Permissions>[Restricted | ReadItem | ReadWriteItem | ReadWriteMailbox]</Permissions>
@@ -36,4 +36,4 @@ ms.locfileid: "44611493"
 
 ## <a name="remarks"></a>Замечания
 
-Более подробную информацию можно узнать [в статье запрос разрешений для использования API в](../../develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md) надстройках и [Общие сведения о разрешениях для надстроек Outlook](../../outlook/understanding-outlook-add-in-permissions.md).
+Дополнительные сведения см в статье [запрашивание разрешений для использования API в контентных](../../develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md) надстройках и надстройках области задач и [Общие сведения о разрешениях для надстроек Outlook](../../outlook/understanding-outlook-add-in-permissions.md).

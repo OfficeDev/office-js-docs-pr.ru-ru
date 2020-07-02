@@ -1,23 +1,22 @@
 ---
 title: Загрузка неопубликованных надстроек Outlook для тестирования
 description: Используйте загрузку неопубликованных надстроек, чтобы установить надстройку Outlook для тестирования, не размещая ее в каталоге надстроек.
-ms.date: 06/24/2019
+ms.date: 06/29/2020
 localization_priority: Normal
-ms.openlocfilehash: 3543eeb58f441819edb2c129e6e14206e26de524
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: b99b72dbf4691d6a27ac9405c88f2cc642baaadd
+ms.sourcegitcommit: 065bf4f8e0d26194cee9689f7126702b391340cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44605327"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "45006481"
 ---
 # <a name="sideload-outlook-add-ins-for-testing"></a>Загрузка неопубликованных надстроек Outlook для тестирования
 
 Вы можете использовать загрузку неопубликованных надстроек, чтобы установить надстройку Outlook для тестирования, не размещая ее в каталоге надстроек.
 
+## <a name="sideload-an-add-in-in-outlook-on-the-web"></a>Загрузка неопубликованной надстройки в Outlook в Интернете
 
-## <a name="sideload-an-add-in-in-outlook-in-office-365"></a>Загрузка неопубликованной надстройки в Outlook в Office 365
-
-Процесс загрузки неопубликованных надстроек в Outlook в Office 365 зависит от того, используете ли вы новую веб-версию Outlook или классическую версии Outlook в Интернете.
+Процесс загрузки неопубликованной надстройки в Outlook в Интернете зависит от того, используется ли новая или классическая версия.
 
 - Если ваша панель инструментов почтового ящика выглядит так, как показано на изображении ниже, см. статью [Загрузка неопубликованных надстроек в новой веб-версии Outlook](#sideload-an-add-in-in-the-new-outlook-on-the-web).
 
@@ -34,7 +33,7 @@ ms.locfileid: "44605327"
 
 1. Перейдите к [Outlook в Office 365](https://outlook.office.com).
 
-1. Создайте новое сообщение в веб-версии Outlook.   
+1. Создайте новое сообщение в веб-версии Outlook.
 
 1. Выберите **... ** в нижней части нового сообщения, а затем выберите **Получить надстройки** в появившемся меню.
 
@@ -48,7 +47,7 @@ ms.locfileid: "44605327"
 
     ![Снимок экрана: управление надстройками с указанием параметра "Добавить из файла"](../images/outlook-sideload-desktop-add-from-file.png)
 
-1. Найдите файл манифеста для своей надстройки и установите его, подтверждая все запросы.
+1. Locate the manifest file for your custom add-in and install it. Accept all prompts during the installation.
 
 ### <a name="sideload-an-add-in-in-classic-outlook-on-the-web"></a>Загрузка неопубликованной надстройки в классической веб-версии Outlook
 
@@ -66,11 +65,13 @@ ms.locfileid: "44605327"
 
     ![Снимок экрана: управление надстройками с указанием параметра "Добавить из файла"](../images/outlook-sideload-desktop-add-from-file.png)
 
-1. Найдите файл манифеста для своей надстройки и установите его, подтверждая все запросы.
+1. Locate the manifest file for your custom add-in and install it. Accept all prompts during the installation.
 
 ## <a name="sideload-an-add-in-in-outlook-on-the-desktop"></a>Загрузка неопубликованной надстройки в классической версии Outlook
 
-1. Откройте Outlook 2013 или более позднюю версию для Windows или Outlook 2016 или более позднюю версию для Mac.
+### <a name="outlook-2016-or-later"></a>Outlook 2016 или более поздней версии
+
+1. Откройте Outlook 2016 или более поздней версии в Windows или Mac.
 
 1. Нажмите кнопку **Получить надстройки** на ленте.
 
@@ -87,7 +88,15 @@ ms.locfileid: "44605327"
 
     ![Снимок экрана: магазин с параметром "Добавить из файла"](../images/outlook-sideload-desktop-add-from-file.png)
 
-1. Найдите файл манифеста для своей надстройки и установите его, подтверждая все запросы.
+1. Locate the manifest file for your custom add-in and install it. Accept all prompts during the installation.
+
+#### <a name="outlook-2013"></a>Outlook 2013
+
+1. Откройте Outlook 2013 в Windows.
+
+1. Выберите меню **файл** , а затем нажмите кнопку **Управление надстройками** на вкладке **сведения** . Outlook откроет браузер.
+
+1. Выполните действия, описанные в разделе [Загрузка неопубликованных надстройка в Outlook в Интернете,](#sideload-an-add-in-in-outlook-on-the-web) в соответствии с вашей версией Outlook в Интернете.
 
 ## <a name="remove-a-sideloaded-add-in"></a>Удаление надстройки неопубликованные
 
