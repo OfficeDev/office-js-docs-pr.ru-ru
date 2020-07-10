@@ -1,21 +1,19 @@
 ---
 title: Наборы обязательных элементов общего API для Office
-description: Дополнительные сведения о наборах требований для общих API Office
-ms.date: 06/23/2020
+description: Узнайте больше о наборах требований к общим API для Office.
+ms.date: 07/07/2020
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: b4ed3f203cf5c50ab5a49c0278755d35d6826536
-ms.sourcegitcommit: a4873c3525c7d30ef551545d27eb2c0a16b4eb50
+ms.openlocfilehash: b0f2fa05a5db94614257b51f6b2867705a0a5520
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44888147"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094359"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
 Requirement sets are named groups of API members. Office Add-ins use requirement sets specified in the manifest or use a runtime check to determine whether an Office host supports APIs that an add-in needs. For more information, see [Office versions and requirement sets](../../develop/office-versions-and-requirement-sets.md).
-
-Сведения о поддержке надстроек ведущим приложением Office см. в статье [Доступность ведущих приложений и платформ для надстроек Office](../../overview/office-add-in-availability.md).
 
 > [!TIP]
 > Наборы обязательных элементов API *для конкретных ведущих приложений* см. ниже.
@@ -32,6 +30,9 @@ Requirement sets are named groups of API members. Office Add-ins use requirement
 ## <a name="common-api-requirement-sets"></a>Наборы обязательных элементов общего API
 
 В приведенных ниже разделах приводится список наборов обязательных элементов общего API, ведущие приложения Office, которые их поддерживают, и методы в каждом наборе. Все эти наборы обязательных элементов API имеют версию 1.1, если не указано иное.
+
+> [!TIP]
+> Необходима информация о том, какие надстройки и наборы обязательных элементов поддерживаются ведущим приложением и версией Office? см. в статье [Доступность ведущих приложений и платформ для надстроек Office](../../overview/office-add-in-availability.md).
 
 ### <a name="activeview"></a>ActiveView
 

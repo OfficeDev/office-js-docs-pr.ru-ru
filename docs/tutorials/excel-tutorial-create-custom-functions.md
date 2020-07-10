@@ -4,12 +4,12 @@ description: В этом руководстве вы создадите надс
 ms.date: 01/16/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 4e2ad0276690d0b427a6788adc89ba09a274e203
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 7f8dcfa792b1bbce36055b865d6cc67fcb55d68a
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611087"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094269"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -26,7 +26,7 @@ ms.locfileid: "44611087"
 
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
-* Excel для Windows (версия 1904 или более поздняя, подключенная к подписке на Office 365) или в Интернете
+* Excel в Windows (версия 1904 или более поздняя версия, подключенная к подписке Microsoft 365) или в Интернете
 
 ## <a name="create-a-custom-functions-project"></a>Создание проекта пользовательских функций
 

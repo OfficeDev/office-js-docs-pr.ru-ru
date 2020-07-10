@@ -3,12 +3,12 @@ title: Создание надстройки Office на платформе Node
 description: Узнайте, как создать надстройку на основе Node.js, использующую единый вход Office
 ms.date: 06/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 34356f1870c612990194358dbd2a0b97ab9495da
-ms.sourcegitcommit: b939312ffdeb6e0a0dfe085db7efe0ff143ef873
+ms.openlocfilehash: 580e7ecaa44529f2e6415fbec638370028e2a1af
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "44810837"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45093694"
 ---
 # <a name="create-a-nodejs-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office на платформе Node.js с использованием единого входа (предварительная версия)
 
@@ -31,7 +31,7 @@ Users can sign in to Office, and your Office Web Add-in can take advantage of th
 
 * Редактор кода. Рекомендуется использовать Visual Studio Code.
 
-* Несколько файлов и папок, сохраненных в OneDrive для бизнеса в составе подписки на Office 365.
+* По крайней мере несколько файлов и папок хранятся в OneDrive для бизнеса в вашей подписке на Microsoft 365.
 
 * Подписка на Microsoft Azure. Эта надстройка требует наличия Azure Active Directory (AD). В Azure AD доступны службы идентификации, которые приложения используют для проверки подлинности и авторизации. Пробную подписку можно получить на сайте [Microsoft Azure](https://account.windowsazure.com/SignUp).
 
@@ -55,7 +55,7 @@ Users can sign in to Office, and your Office Web Add-in can take advantage of th
 
 1. Перейдите на страницу [регистрации приложений портала Azure](https://go.microsoft.com/fwlink/?linkid=2083908), чтобы зарегистрировать свое приложение.
 
-1. Войдите в клиент Office 365, используя учетные данные ***администратора***. Пример: MyName@contoso.onmicrosoft.com.
+1. Выполните вход с учетными данными ***администратора*** в клиенте Microsoft 365. Пример: MyName@contoso.onmicrosoft.com.
 
 1. Выберите **Новая регистрация**. На странице**Зарегистрировать приложение** задайте необходимые значения следующим образом.
 
@@ -210,7 +210,7 @@ Users can sign in to Office, and your Office Web Add-in can take advantage of th
 
 1. Замените `TODO 3` приведенным ниже кодом. Вот что нужно знать об этом коде: 
 
-    - Если клиент Office 365 настроен на обязательное применение многофакторной проверки подлинности, в параметр `exchangeResponse` будет включено свойство `claims` со сведениями о дополнительных обязательных факторах. В этом случае следует снова вызвать `OfficeRuntime.auth.getAccessToken` с присвоением параметру `authChallenge` значения свойства утверждений. В результате AAD предложит пользователю пройти все необходимые проверки подлинности.
+    - Если клиент Microsoft 365 настроен так, что требуется многофакторная проверка подлинности, то `exchangeResponse` включает `claims` свойство со сведениями о дополнительных необходимых факторах. В этом случае следует снова вызвать `OfficeRuntime.auth.getAccessToken` с присвоением параметру `authChallenge` значения свойства утверждений. В результате AAD предложит пользователю пройти все необходимые проверки подлинности.
 
     ```javascript
     if (exchangeResponse.claims) {
@@ -292,8 +292,8 @@ Users can sign in to Office, and your Office Web Add-in can take advantage of th
         showMessage("You can use many of the add-ins functions even though you have not granted consent. If you want to grant consent, press the Get OneDrive File Names button again."); 
         break;
     case 13006:
-        // Only seen in Office on the Web.
-        showMessage("Office on the Web is experiencing a problem. Please sign out of Office, close the browser, and then start again."); 
+        // Only seen in Office on the web.
+        showMessage("Office on the web is experiencing a problem. Please sign out of Office, close the browser, and then start again."); 
         break;
     case 13008:
         // The OfficeRuntime.auth.getAccessToken method has already been called and 
@@ -481,7 +481,7 @@ Users can sign in to Office, and your Office Web Add-in can take advantage of th
 
 1. Замените `TODO 14` приведенным ниже кодом, дополняющим блок `else`. Вот что нужно знать об этом коде:
 
-    - Константе `tenant` присвоено значение 'common', так как вы сделали надстройку мультитенатной при ее регистрации в Azure AD; в частности, когда назначили параметру **Поддерживаемые типы учетных записей** значение **Учетные записи в любом каталоге организации и персональные учетные записи Майкрософт (например, Skype, Xbox, Outlook.com)**. Если вы решили поддерживать учетные записи только в том клиенте Office 365, где зарегистрирована надстройка, в этом коде `tenant` будет указан идентификатор GUID клиента. 
+    - Константе `tenant` присвоено значение 'common', так как вы сделали надстройку мультитенатной при ее регистрации в Azure AD; в частности, когда назначили параметру **Поддерживаемые типы учетных записей** значение **Учетные записи в любом каталоге организации и персональные учетные записи Майкрософт (например, Skype, Xbox, Outlook.com)**. Если вы выбрали поддержку только учетных записей в той же организации Microsoft 365, в которой зарегистрирована надстройка, то в этом коде будет `tenant` задан идентификатор GUID клиента. 
     - Если при запросе POST не возникает ошибка, ответ от Azure AD преобразуется в формат JSON и отправляется клиенту. Этот объект JSON содержит свойство `access_token`, которому служба Azure AD назначила маркер доступа в Microsoft Graph.
 
     ```javascript
@@ -571,7 +571,7 @@ Users can sign in to Office, and your Office Web Add-in can take advantage of th
 
 1. В приложении Office на вкладке ленты **Главная** нажмите кнопку **Показать надстройку** в группе **Единый вход Node.js**, чтобы открыть надстройку области задач.
 
-1. Нажмите кнопку **Получить имена файлов OneDrive**. Если вы выполнили вход в Office с помощью рабочей или учебной (Office 365) учетной записи либо учетной записи Майкрософт и единый вход работает надлежащим образом, первые 10 имен файлов и папок из OneDrive для бизнеса вставляются в документ. (В первый раз это может занять до 15 секунд.) Если вы не выполнили вход или используете сценарий, не поддерживающий единый вход, или единый вход не работает по какой-то причине, появится запрос на вход. После входа в систему отобразятся имена файлов и папок.
+1. Нажмите кнопку **Получить имена файлов OneDrive**. Если вы выполнили вход в Office с помощью учетной записи Microsoft 365 для образовательных учреждений или рабочей учетной записи Майкрософт, а единый вход работает должным образом, первые 10 имен файлов и папок в OneDrive для бизнеса вставляются в документ. (В первый раз это может занять до 15 секунд.) Если вы не выполнили вход или используете сценарий, не поддерживающий единый вход, или единый вход не работает по какой-то причине, появится запрос на вход. После входа в систему отобразятся имена файлов и папок.
 
 > [!NOTE]
 > Если вы ранее выполняли вход в Office с использованием другого идентификатора и все еще не закрыли некоторые из открытых тогда приложений Office, Office может не сменить идентификатор (даже если кажется, что это сделано). Если это произойдет, возможен сбой при вызове Microsoft Graph или возврат данных для другого идентификатора. Чтобы избежать этого, *закройте все приложения Office*, прежде чем нажимать кнопку **Получить имена файлов OneDrive**.

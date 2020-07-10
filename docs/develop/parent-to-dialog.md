@@ -1,14 +1,14 @@
 ---
 title: Передача данных и сообщений в диалоговое окно с главной страницы
 description: Узнайте, как передавать данные в диалоговое окно с главной страницы с помощью API Мессажечилд и Диалогпарентмессажерецеивед.
-ms.date: 04/16/2020
+ms.date: 07/07/2020
 localization_priority: Normal
-ms.openlocfilehash: 3bef98294b15c2787b707cee4861cc9932f98166
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 05220fa4cecad4fe412a5590605f774f92ef8f61
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609410"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45093576"
 ---
 # <a name="passing-data-and-messages-to-a-dialog-box-from-its-host-page-preview"></a>Передача данных и сообщений в диалоговое окно с главной страницы (Предварительная версия)
 
@@ -17,7 +17,7 @@ ms.locfileid: "44609410"
 > [!Important]
 >
 > - API, описанные в этой статье, доступны в предварительной версии. Они доступны разработчикам для экспериментов; но его не следует использовать в рабочей надстройке. Пока этот API не будет выпущен, используйте методы, описанные в статье [Передача сведений в диалоговое окно](dialog-api-in-office-add-ins.md#pass-information-to-the-dialog-box) для рабочих надстроек.
-> - Для интерфейсов API, описанных в этой статье, требуется Office 365 (версия подписки Office). Следует использовать последнюю версию для текущего месяца и сборку из канала для участников программы предварительной оценки. Чтобы получить эту версию, необходимо быть участником программы предварительной оценки Office. Дополнительные сведения см. на странице [Примите участие в программе предварительной оценки Office](https://insider.office.com). Обратите внимание на то, что при построении градуатес к производственному каналу поддержка предварительных функций для этой сборки отключена.
+> - Для интерфейсов API, описанных в этой статье, требуется подписка на Microsoft 365. Следует использовать последнюю версию для текущего месяца и сборку из канала для участников программы предварительной оценки. Чтобы получить эту версию, необходимо быть участником программы предварительной оценки Office. Дополнительные сведения см. на странице [Примите участие в программе предварительной оценки Office](https://insider.office.com). Обратите внимание на то, что при построении градуатес к производственному каналу поддержка предварительных функций для этой сборки отключена.
 > - На начальном этапе предварительной версии API поддерживаются в Excel, PowerPoint и Word; но не в Outlook.
 >
 > [!INCLUDE [Information about using preview APIs](../includes/using-preview-apis.md)]
@@ -60,7 +60,7 @@ function sheetPropertiesChanged() {
 
 ## <a name="handle-dialogparentmessagereceived-in-the-dialog-box"></a>Обработка Диалогпарентмессажерецеивед в диалоговом окне
 
-В JavaScript диалогового окна Зарегистрируйте обработчик для `DialogParentMessageReceived` события с помощью метода [UI. addHandlerAsync](/javascript/api/office/office.ui#addhandlerasync-eventtype--handler--options--callback-) . Как правило, это выполняется в [методах Office. onread или Office. Initialize](initialize-add-in.md). Ниже приведен пример.
+В JavaScript диалогового окна Зарегистрируйте обработчик для `DialogParentMessageReceived` события с помощью метода [UI. addHandlerAsync](/javascript/api/office/office.ui#addhandlerasync-eventtype--handler--options--callback-) . Обычно это выполняется в [методах Office. onread или Office.iniтиализе](initialize-add-in.md). Ниже приведен пример.
 
 ```javascript
 Office.onReady()

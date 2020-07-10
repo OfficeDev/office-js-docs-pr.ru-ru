@@ -1,45 +1,46 @@
 ---
 title: Создание команд надстройки в манифесте для Excel, PowerPoint и Word
-description: Используйте VersionOverrides в манифесте, чтобы определить команды надстройки для Excel, PowerPoint и Word. Используйте команды надстроек для создания элементов пользовательского интерфейса, добавления кнопок или списков, а также для выполнения действий.
+description: Use VersionOverrides in your manifest to define add-in commands for Excel, PowerPoint, and Word. Use add-in commands to create UI elements, add buttons or lists, and perform actions.
 ms.date: 05/27/2020
 localization_priority: Normal
-ms.openlocfilehash: 1bf8d850da4ea15bb46f65b1d4459c5220828f9c
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 3bcd3c6e07cdb9899601403e68e80e8d609d2e6e
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608371"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45093716"
 ---
 # <a name="create-add-in-commands-in-your-manifest-for-excel-powerpoint-and-word"></a>Создание команд надстройки в манифесте для Excel, PowerPoint и Word
 
-Используйте **[VersionOverrides](../reference/manifest/versionoverrides.md)** в манифесте, чтобы определить команды надстройки для Excel, PowerPoint и Word. Команды надстроек обеспечивают простой способ настройки пользовательского интерфейса Office по умолчанию с указанными элементами пользовательского интерфейса, которые выполняют действия. С помощью команд надстройки можно:
+Use **[VersionOverrides](../reference/manifest/versionoverrides.md)** in your manifest to define add-in commands for Excel, PowerPoint, and Word. Add-in commands provide an easy way to customize the default Office user interface (UI) with specified UI elements that perform actions. You can use add-in commands to:
 
 - Создавать элементы пользовательского интерфейса или точки входа, которые упрощают использование функций надстройки.
 - Добавлять кнопки или раскрывающийся список кнопок на ленту.
 - Добавлять отдельные элементы меню, каждый из которых может содержать необязательное подменю, к определенным контекстным меню.
-- Выполнять действия при выборе команды надстройки. Варианты действий:
-  - Показать пользователю одну или несколько надстроек области задач. В надстройке области задач может отображаться код HTML, использующий Office UI Fabric для создания пользовательского интерфейса.
+- Perform actions when your add-in command is chosen. You can:
+  - Show one or more task pane add-ins for users to interact with. Inside your task pane add-in, you can display HTML that uses Office UI Fabric to create a custom UI.
 
      *или*
 
   - Запустить код JavaScript, который обычно выполняется без отображения пользовательского интерфейса.
 
-В этой статье описывается, как отредактировать манифест, чтобы задать команды надстройки. На следующей схеме показана иерархия элементов, используемых для задания команд надстройки. Эти элементы подробнее рассматриваются в этой статье.
+This article describes how to edit your manifest to define add-in commands. The following diagram shows the hierarchy of elements used to define add-in commands. These elements are described in more detail in this article.
 
 > [!NOTE]
 > В Outlook также поддерживаются команды надстроек. Дополнительные сведения см в разделе [команды надстроек Outlook](../outlook/add-in-commands-for-outlook.md)
 
-На приведенном ниже изображении представлен обзор элементов команд надстройки в манифесте. ![Обзор элементов команд надстройки в манифесте](../images/version-overrides.png)
+The following image is an overview of add-in commands elements in the manifest.
+![Overview of add-in commands elements in the manifest](../images/version-overrides.png)
 
 ## <a name="step-1-start-from-a-sample"></a>Этап 1. Ознакомление с примером
 
-Настоятельно рекомендуем сначала ознакомиться с одним из примеров, доступных на [странице с примерами команд для надстроек Office](https://github.com/OfficeDev/Office-Add-in-Command-Sample). При необходимости вы можете создать свой манифест, следуя приведенным в руководстве инструкциям. Проверить манифест можно с использованием XSD-файла на сайте с примерами команд для надстроек Office. Прежде чем приступать к использованию команд надстроек, прочтите статью [Команды надстроек для Excel, Word и PowerPoint](../design/add-in-commands.md).
+We strongly recommend that you start from one of the samples we provide in  [Office Add-in Commands Samples](https://github.com/OfficeDev/Office-Add-in-Command-Sample). Optionally, you can create your own manifest by following the steps in this guide. You can validate your manifest using the XSD file in the Office Add-in Commands Samples site. Ensure that you have read  [Add-in commands for Excel, Word and PowerPoint](../design/add-in-commands.md) before using add-in commands.
 
 ## <a name="step-2-create-a-task-pane-add-in"></a>Этап 2. Создание надстройки области задач
 
-Чтобы приступить к использованию команд надстройки, сначала необходимо создать надстройку области задач, а затем изменить ее манифест, как описано в этой статье. Команды надстроек невозможно использовать с контентными надстройками. Если вы обновляете существующий манифест, добавьте в манифест нужные **пространства имен XML**, а также элемент **VersionOverrides**, как описано в разделе [Шаг 3. Добавление элемента VersionOverrides](#step-3-add-versionoverrides-element).
+To start using add-in commands, you must first create a task pane add-in, and then modify the add-in's manifest as described in this article. You can't use add-in commands with content add-ins. If you're updating an existing manifest, you must add the appropiate **XML namespaces** as well as add the **VersionOverrides** element to the manifest as described in [Step 3: Add VersionOverrides element](#step-3-add-versionoverrides-element).
 
-Ниже приведен пример манифеста надстройки Office 2013. В этом манифесте нет команд надстройки, так как здесь отсутствует элемент **VersionOverrides**. Office 2013 не поддерживает команды надстройки, но при добавлении элемента **VersionOverrides** в этот манифест надстройка будет работать как в Office 2013, так и в Office 2016. В Office 2013, надстройка не отображает команды и использует значение **SourceLocation** для запуска надстройки в виде единой области задач. В Office 2016, если элемент **VersionOverrides** не включен, для запуска надстройки используется элемент **SourceLocation**. Однако при включении элемента **VersionOverrides** надстройка отображает только команды, но не отображает надстройку в виде единой области задач.
+The following example shows an Office 2013 add-in's manifest. There are no add-in commands in this manifest because there is no **VersionOverrides** element. Office 2013 doesn't support add-in commands, but by adding **VersionOverrides** to this manifest, your add-in will run in both Office 2013 and Office 2016. In Office 2013, your add-in won't display add-in commands, and uses the value of **SourceLocation** to run your add-in as a single task pane add-in. In Office 2016, if no **VersionOverrides** element is included, **SourceLocation** is used to run your add-in. If you include **VersionOverrides**, however, your add-in displays the add-in commands only, and doesn't display your add-in as a single task pane add-in.
   
 ```xml
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
@@ -72,21 +73,21 @@ ms.locfileid: "44608371"
 
 ## <a name="step-3-add-versionoverrides-element"></a>Этап 3. Добавление элемента VersionOverrides
 
-Элемент **VersionOverrides** — это корневой элемент, содержащий определение команды надстройки. Элемент манифеста **VersionOverrides** является дочерним для элемента **OfficeApp**. В приведенной ниже таблице перечислены атрибуты элемента **VersionOverrides**.
+The **VersionOverrides** element is the root element that contains the definition of your add-in command. **VersionOverrides** is a child element of the **OfficeApp** element in the manifest. The following table lists the attributes of the **VersionOverrides** element.
 
 |**Атрибут**|**Описание**|
 |:-----|:-----|
 |**xmlns** <br/> | Обязательный. Расположение схемы. Необходимое значение — `http://schemas.microsoft.com/office/taskpaneappversionoverrides`. <br/> |
-|**xsi:type** <br/> |Обязательный атрибут. Версия схемы. В этой статье описывается версия VersionOverridesV1_0.  <br/> |
+|**xsi:type** <br/> |Required. The schema version. The version described in this article is "VersionOverridesV1_0".  <br/> |
 
 В приведенной ниже таблице показаны дочерние элементы **VersionOverrides**.
   
 |**Элемент**|**Описание**|
 |:-----|:-----|
-|**Description** <br/> |Необязательный параметр. Описывает надстройку. Дочерний элемент **Description** переопределяет предыдущий элемент **Description** в родительской части манифеста. Атрибут **resid** для элемента **Description** задан как **id** элемента **String**. Элемент **String** содержит текст для элемента **Description**. <br/> |
-|**Requirements** <br/> |Необязательный параметр. Задает минимальные набор требований и версию библиотеки Office.js, необходимые надстройке. Дочерний элемент **Requirements** переопределяет элемент **Requirements** в родительской части манифеста. Дополнительные сведения см. в статье [Указание требований касательно API и узлов Office](../develop/specify-office-hosts-and-api-requirements.md).  <br/> |
-|**Hosts** <br/> |Обязательный. Задает набор узлов Office. Дочерний элемент **Hosts** переопределяет элемент **Hosts** в родительской части манифеста. Необходимо включить атрибут **xsi:type**, для которого задано значение "Книга" или "Документ". <br/> |
-|**Resources** <br/> |Определяет коллекцию ресурсов (строк, URL-адресов и изображений), на которые ссылаются другие элементы манифеста. Например, значение элемента **Description** ссылается на дочерний элемент в элементе **Resources**. Элемент **Resources** описан в разделе [Этап 7. Добавление элемента Resources](#step-7-add-the-resources-element) далее в этой статье. <br/> |
+|**Description** <br/> |Optional. Describes the add-in. This child **Description** element overrides a previous **Description** element in the parent portion of the manifest. The **resid** attribute for this **Description** element is set to the **id** of a **String** element. The **String** element contains the text for **Description**. <br/> |
+|**Requirements** <br/> |Optional. Specifies the minimum requirement set and version of Office.js that the add-in requires. This child **Requirements** element overrides the **Requirements** element in the parent portion of the manifest. For more information, see [Specify Office hosts and API requirements](../develop/specify-office-hosts-and-api-requirements.md).  <br/> |
+|**Hosts** <br/> |Required. Specifies a collection of Office hosts. The child **Hosts** element overrides the **Hosts** element in the parent portion of the manifest. You must include a **xsi:type** attribute set to "Workbook" or "Document". <br/> |
+|**Resources** <br/> |Defines a collection of resources (strings, URLs, and images) that other manifest elements reference. For example, the **Description** element's value refers to a child element in **Resources**. The **Resources** element is described in [Step 7: Add the Resources element](#step-7-add-the-resources-element) later in this article. <br/> |
 
 В приведенном ниже примере показано, как использовать элемент **VersionOverrides** и его дочерние элементы.
 
@@ -116,7 +117,7 @@ ms.locfileid: "44608371"
 
 ## <a name="step-4-add-hosts-host-and-desktopformfactor-elements"></a>Этап 4. Добавление элементов Hosts, Host и DesktopFormFactor
 
-Элемент **Hosts** содержит один или несколько элементов **Host**. Элемент **Host** задает конкретный узел Office. Элемент **Host** содержит дочерние элементы, определяющие команды надстройки, которые отображаются после установки надстройки в соответствующем узле Office. Для отображения тех же команд надстройки в нескольких различных узлах Office, необходимо продублировать дочерние элементы в каждом из элементов **Host**.
+The **Hosts** element contains one or more **Host** elements. A **Host** element specifies a particular Office host. The **Host** element contains child elements that specify the add-in commands to display after your add-in is installed in that Office host. To show the same add-in commands in two or more different Office hosts, you must duplicate the child elements in each **Host**.
 
 Элемент **DesktopFormFactor** задает параметры надстройки, работающей в Office в Интернете (в браузере) и Windows.
 
@@ -144,7 +145,7 @@ ms.locfileid: "44608371"
 
 ## <a name="step-5-add-the-functionfile-element"></a>Этап 5. Добавление элемента FunctionFile
 
-Элемент **FunctionFile** задает файл, который содержит код JavaScript, выполняемый, когда команда надстройки использует действие **ExecuteFunction** (описание см. в разделе [Элементы управления "Кнопка"](../reference/manifest/control.md#button-control)). В атрибуте **resid** элемента **FunctionFile** указан HTML-файл, включающий все файлы JavaScript, необходимые командам надстройки. Ссылаться непосредственно на файл JavaScript невозможно. Вы можете сослаться только на HTML-файл. Имя файла задано в дочернем элементе **Url** элемента **Resources**.
+The **FunctionFile** element specifies a file that contains JavaScript code to run when an add-in command uses the **ExecuteFunction** action (see [Button controls](../reference/manifest/control.md#button-control) for a description). The **FunctionFile** element's **resid** attribute is set to a HTML file that includes all the JavaScript files your add-in commands require. You can't link directly to a JavaScript file. You can only link to an HTML file. The file name is specified as a **Url** element in the **Resources** element.
 
 Ниже приведен пример элемента **FunctionFile**.
   
@@ -162,7 +163,7 @@ ms.locfileid: "44608371"
 > [!IMPORTANT]
 > Убедитесь, что код JavaScript вызывает `Office.initialize`.
 
-JavaScript должен вызывать `Office.initialize` в HTML-файле, на который ссылается элемент **FunctionFile**. Элемент **FunctionName** (описание см. в разделе [Элементы управления "Кнопка"](../reference/manifest/control.md#button-control)) использует функции в элементе **FunctionFile**.
+The JavaScript in the HTML file referenced by the **FunctionFile** element must call `Office.initialize`. The **FunctionName** element (see [Button controls](../reference/manifest/control.md#button-control) for a description) uses the functions in **FunctionFile**.
 
 Приведенный ниже пример кода показывает, как внедрить функцию, используемую элементом **FunctionName**.
 
@@ -197,11 +198,11 @@ JavaScript должен вызывать `Office.initialize` в HTML-файле,
 ```
 
 > [!IMPORTANT]
-> Вызов **event.completed** свидетельствует, что событие успешно обработано. Если функция вызывается несколько раз, например при выборе одной команды надстройки несколько раз, все события автоматически помещаются в очередь. Первое событие запускается автоматически, тогда как остальные ожидают в очереди. Как только функция вызывает **event.completed**, для нее запускается следующий вызов из очереди. Если объект **event.completed** не реализован, функция не запускается.
+> The call to **event.completed** signals that you have successfully handled the event. When a function is called multiple times, such as multiple clicks on the same add-in command, all events are automatically queued. The first event runs automatically, while the other events remain on the queue. When your function calls **event.completed**, the next queued call to that function runs. You must implement **event.completed**, otherwise your function will not run.
 
 ## <a name="step-6-add-extensionpoint-elements"></a>Этап 6. Добавление элементов ExtensionPoint
 
-Элемент **ExtensionPoint** определяет, где в пользовательском интерфейсе Office должны появиться команды надстройки. Вы можете определить элементы **ExtensionPoint** по этим значениям **xsi:type**:
+The **ExtensionPoint** element defines where add-in commands should appear in the Office UI. You can define **ExtensionPoint** elements with these **xsi:type** values:
 
 - **PrimaryCommandSurface**, которое обозначает ленту в Office.
 
@@ -210,7 +211,7 @@ JavaScript должен вызывать `Office.initialize` в HTML-файле,
 В приведенных ниже примерах показано, как применять элемент **ExtensionPoint** со значениями атрибута **PrimaryCommandSurface** и **ContextMenu**, и какие дочерние элементы использовать с каждым из них.
 
 > [!IMPORTANT]
-> Для элементов, содержащих атрибут идентификатора, необходимо предоставить уникальный идентификатор. Рекомендуем указать название компании с идентификатором. Используйте, например, формат `<CustomTab id="mycompanyname.mygroupname">`. 
+> For elements that contain an ID attribute, make sure you provide a unique ID. We recommend that you use your company's name along with your ID. For example, use the following format: `<CustomTab id="mycompanyname.mygroupname">`. 
   
 ```xml
 <ExtensionPoint xsi:type="PrimaryCommandSurface">
@@ -246,18 +247,18 @@ JavaScript должен вызывать `Office.initialize` в HTML-файле,
 
 |**Элемент**|**Описание**|
 |:-----|:-----|
-|**CustomTab** <br/> |Обязательный, если требуется добавить пользовательскую вкладку в ленту (с помощью элемента **PrimaryCommandSurface**). Невозможно использовать элементы **CustomTab** и **OfficeTab** одновременно. Атрибут **id** является обязательным. <br/> |
-|**OfficeTab** <br/> |Обязательный, если требуется расширить стандартную вкладку ленты Office (с помощью элемента **PrimaryCommandSurface**). Невозможно использовать элементы **OfficeTab** и **CustomTab** одновременно. <br/> Дополнительные значения, которые можно использовать с атрибутом **id**, см. в разделе [Значения для стандартных вкладок Office](../reference/manifest/officetab.md).  <br/> |
-|**OfficeMenu** <br/> | Обязательный при добавлении команд надстройки в контекстное меню по умолчанию (с помощью элемента **ContextMenu**). Для атрибута **id** необходимо задать следующее значение: <br/> **ContextMenuText** для Excel или Word. Отображает элемент в контекстном меню, когда пользователь щелкает выделенный текст правой кнопкой мыши.<br/> **ContextMenuCell** для Excel. Отображает элемент в контекстном меню, когда пользователь щелкает ячейку электронной таблицы правой кнопкой мыши. <br/> |
-|**Group** <br/> |Группа точек расширения интерфейса пользователя на вкладке. В группе может быть до шести элементов управления. Атрибут **id** является обязательным. Это строка длиной до 125 символов. <br/> |
-|**Label** <br/> |Обязательный. Метка группы. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **String**. **String** — это дочерний элемент **ShortStrings**, который в свою очередь является дочерним для элемента **Resources**. <br/> |
-|**Icon** <br/> |Обязательный. Определяет значок группы для использования на устройствах с малым форм-фактором или в случаях, когда отображается слишком много кнопок. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **Image**. **Image** — это дочерний элемент **Images**, который в свою очередь является дочерним для элемента **Resources**. Атрибут **size** определяет размер изображения в пикселях. Обязательными являются три размера изображения: 16, 32 и 80. Кроме того, поддерживаются пять необязательных размеров: 20, 24, 40, 48 и 64. <br/> |
-|**Tooltip** <br/> |Необязательный параметр. Всплывающая подсказка группы. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **String**. **String** — это дочерний элемент **LongStrings**, который в свою очередь является дочерним для элемента **Resources**. <br/> |
-|**Control** <br/> |Для каждой группы требуется хотя бы один элемент управления. Элемент **Control** может иметь значение **Button** или **Menu**. Укажите **Menu**, чтобы задать раскрывающийся список элементов управления "Кнопка". В настоящий момент поддерживаются только кнопки и меню. Дополнительные сведения см. в разделах [Элементы управления "Кнопка"](../reference/manifest/control.md#button-control) и [Элементы управления "Меню"](../reference/manifest/control.md#menu-dropdown-button-controls).<br/>**Примечание.** Чтобы упростить устранение неполадок, рекомендуем добавлять элемент **Control** и соответствующие дочерние элементы **Resources** по одному.          |
+|**CustomTab** <br/> |Required if you want to add a custom tab to the ribbon (using **PrimaryCommandSurface**). If you use the **CustomTab** element, you can't use the **OfficeTab** element. The **id** attribute is required. <br/> |
+|**OfficeTab** <br/> |Является обязательным, если вы хотите расширить вкладку ленты приложения Office по умолчанию (с помощью **PrimaryCommandSurface**). Невозможно использовать элементы **OfficeTab** и **CustomTab** одновременно. <br/> Для получения дополнительных значений табуляции, используемых с атрибутом **ID** , ознакомьтесь со [значениями вкладок для вкладок приложений Office по умолчанию](../reference/manifest/officetab.md).  <br/> |
+|**OfficeMenu** <br/> | Required if you're adding add-in commands to a default context menu (using **ContextMenu**). The **id** attribute must be set to: <br/> **ContextMenuText** for Excel or Word. Displays the item on the context menu when text is selected and then the user right-clicks on the selected text. <br/> **ContextMenuCell** for Excel. Displays the item on the context menu when the user right-clicks on a cell on the spreadsheet. <br/> |
+|**Group** <br/> |A group of user interface extension points on a tab. A group can have up to six controls. The **id** attribute is required. It's a string with a maximum of 125 characters. <br/> |
+|**Label** <br/> |Required. The label of the group. The **resid** attribute must be set to the value of the **id** attribute of a **String** element. The **String** element is a child element of the **ShortStrings** element, which is a child element of the **Resources** element. <br/> |
+|**Icon** <br/> |Required. Specifies the group's icon to be used on small form factor devices, or when too many buttons are displayed. The **resid** attribute must be set to the value of the **id** attribute of an **Image** element. The **Image** element is a child element of the **Images** element, which is a child element of the **Resources** element. The **size** attribute gives the size, in pixels, of the image. Three image sizes are required: 16, 32, and 80. Five optional sizes are also supported: 20, 24, 40, 48, and 64. <br/> |
+|**Tooltip** <br/> |Optional. The tooltip of the group. The **resid** attribute must be set to the value of the **id** attribute of a **String** element. The **String** element is a child element of the **LongStrings** element, which is a child element of the **Resources** element. <br/> |
+|**Control** <br/> |Each group requires at least one control. A **Control** element can be either a **Button** or a **Menu**. Use **Menu** to specify a drop-down list of button controls. Currently, only buttons and menus are supported. See the  [Button controls](../reference/manifest/control.md#button-control) and [Menu controls](../reference/manifest/control.md#menu-dropdown-button-controls) sections for more information. <br/>**Примечание.** Чтобы упростить устранение неполадок, рекомендуем добавлять элемент **Control** и соответствующие дочерние элементы **Resources** по одному.          |
 
 ### <a name="button-controls"></a>Элементы управления "Кнопка"
 
-Когда пользователь нажимает кнопку, она выполняет одно действие. Она может выполнять функцию JavaScript или отображать область задач. В приведенном ниже примере показано, как определить две кнопки. Первая кнопка выполняет функцию JavaScript без отображения пользовательского интерфейса, а вторая отображает область задач. В элементе **Control**:
+A button performs a single action when the user selects it. It can either execute a JavaScript function or show a task pane. The following example shows how to define two buttons. The first button runs a JavaScript function without showing a UI, and the second button shows a task pane. In the **Control** element:
 
 - атрибут **type** является обязательным и должен иметь значение **Button**;
 
@@ -303,11 +304,11 @@ JavaScript должен вызывать `Office.initialize` в HTML-файле,
 
 |**Элементы**|**Description**|
 |:-----|:-----|
-|**Label** <br/> |Обязательный. Текст для кнопки. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **String**. **String** — это дочерний элемент **ShortStrings**, который в свою очередь является дочерним для элемента **Resources**. <br/> |
-|**Tooltip** <br/> |Необязательный параметр. Всплывающая подсказка для кнопки. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **String**. **String** — это дочерний элемент **LongStrings**, который в свою очередь является дочерним для элемента **Resources**. <br/> |
-|**Supertip** <br/> | Обязательный элемент. Суперподсказка для кнопки, определяемая указанными ниже элементами. <br/> **Title** <br/>  Обязательный. Текст суперподсказки. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **String**. **String** — это дочерний элемент **ShortStrings**, который в свою очередь является дочерним для элемента **Resources**. <br/> **Описание** <br/>  Обязательный. Описание суперподсказки. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **String**. **String** — это дочерний элемент **LongStrings**, который в свою очередь является дочерним для элемента **Resources**. <br/> |
-|**Icon** <br/> | Обязательный. Содержит элементы **Image** для кнопки. Файлы изображений должны быть в формате PNG. <br/> **Image** <br/>  Определяет изображение для кнопки. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **Image**. **Image** — это дочерний элемент **Images**, который в свою очередь является дочерним для элемента **Resources**. Атрибут **size** определяет размер изображения в пикселях. Обязательными являются три размера изображения: 16, 32 и 80. Кроме того, поддерживаются пять необязательных размеров: 20, 24, 40, 48 и 64. <br/> |
-|**Действие** <br/> | Обязательный. Указывает действие, которое необходимо выполнить, когда пользователь нажимает кнопку. Для этого атрибута **xsi:type** можно указать следующие значения: <br/> **ExecuteFunction.** Вызывает функцию JavaScript, расположенную в файле, на который ссылается элемент **FunctionFile**. **ExecuteFunction** не отображает пользовательский интерфейс. Дочерний элемент **FunctionName** задает имя выполняемой функции.<br/> **ShowTaskPane.** Отображает надстройку области задач. Дочерний элемент **SourceLocation** задает расположение исходного файла отображаемой надстройки области задач. Для атрибута **resid** должно быть задано значение атрибута **id** элемента **Url** в элементе **Urls**, включенном в элемент **Resources**. <br/> |
+|**Label** <br/> |Required. The text for the button. The **resid** attribute must be set to the value of the **id** attribute of a **String** element. The **String** element is a child element of the **ShortStrings** element, which is a child element of the **Resources** element. <br/> |
+|**Tooltip** <br/> |Optional. The tooltip for the button. The **resid** attribute must be set to the value of the **id** attribute of a **String** element. The **String** element is a child element of the **LongStrings** element, which is a child element of the **Resources** element. <br/> |
+|**Supertip** <br/> | Required. The supertip for this button, which is defined by the following: <br/> **Title** <br/>  Required. The text for the supertip. The **resid** attribute must be set to the value of the **id** attribute of a **String** element. The **String** element is a child element of the **ShortStrings** element, which is a child element of the **Resources** element. <br/> **Описание** <br/>  Required. The description for the supertip. The **resid** attribute must be set to the value of the **id** attribute of a **String** element. The **String** element is a child element of the **LongStrings** element, which is a child element of the **Resources** element. <br/> |
+|**Icon** <br/> | Required. Contains the **Image** elements for the button. Image files must be .png format. <br/> **Image** <br/>  Defines an image to display on the button. The **resid** attribute must be set to the value of the **id** attribute of an **Image** element. The **Image** element is a child element of the **Images** element, which is a child element of the **Resources** element. The **size** attribute indicates the size, in pixels, of the image. Three image sizes are required: 16, 32, and 80. Five optional sizes are also supported: 20, 24, 40, 48, and 64. <br/> |
+|**Действие** <br/> | Required. Specifies the action to perform when the user selects the button. You can specify one of the following values for the **xsi:type** attribute: <br/> **ExecuteFunction**, which runs a JavaScript function located in the file referenced by **FunctionFile**. **ExecuteFunction** does not display a UI. The **FunctionName** child element specifies the name of the function to execute. <br/> **ShowTaskPane**, which shows a task pane add-in. The **SourceLocation** child element specifies the source file location of the task pane add-in to display. The **resid** attribute must be set to the value of the **id** attribute of a **Url** element in the **Urls** element in the **Resources** element. <br/> |
 
 ### <a name="menu-controls"></a>Элементы управления "Меню"
 
@@ -316,9 +317,9 @@ JavaScript должен вызывать `Office.initialize` в HTML-файле,
 - элемент меню корневого уровня;
 - список элементов подменю.
 
-При использовании совместно с элементом **PrimaryCommandSurface**, корневой элемент меню отображается в виде кнопки на ленте. При выборе кнопки отображается подменю в виде раскрывающегося списка. При использовании совместно с элементом **ContextMenu**, элемент меню с подменю вставляется в контекстное меню. В обоих случаях индивидуальные элементы подменю могут выполнять функцию JavaScript или отображать область задач. В настоящее время поддерживается только один уровень подменю.
+When used with **PrimaryCommandSurface**, the root menu item displays as a button on the ribbon. When the button is selected, the submenu displays as a drop-down list. When used with **ContextMenu**, a menu item with a submenu is inserted on the context menu. In both cases, individual submenu items can either execute a JavaScript function or show a task pane. Only one level of submenus is supported at this time.
 
-В приведенном ниже примере показано, как определить элемент меню с двумя элементами подменю. Первый элемент подменю показывает область задач, а второй запускает функцию JavaScript. В элементе **Control**:
+The following example shows how to define a menu item with two submenu items. The first submenu item shows a task pane, and the second submenu item runs a JavaScript function. In the **Control** element:
 
 - атрибут **xsi:type** является обязательным и должен иметь значение **Menu**;
 - атрибут **id** — это строка длиной до 125 символов.
@@ -374,17 +375,17 @@ JavaScript должен вызывать `Office.initialize` в HTML-файле,
 
 |**Элементы**|**Description**|
 |:-----|:-----|
-|**Label** <br/> |Обязательный. Текст корневого элемента меню. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **String**. **String** — это дочерний элемент **ShortStrings**, который в свою очередь является дочерним для элемента **Resources**. <br/> |
-|**Tooltip** <br/> |Необязательный параметр. Всплывающая подсказка для меню. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **String**. **String** — это дочерний элемент **LongStrings**, который в свою очередь является дочерним для элемента **Resources**. <br/> |
-|**SuperTip** <br/> | Обязательный элемент. Суперподсказка для меню, определяемая указанными ниже элементами. <br/> **Title** <br/>  Обязательный. Текст суперподсказки. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **String**. **String** — это дочерний элемент **ShortStrings**, который в свою очередь является дочерним для элемента **Resources**. <br/> **Описание** <br/>  Обязательный. Описание суперподсказки. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **String**. **String** — это дочерний элемент **LongStrings**, который в свою очередь является дочерним для элемента **Resources**. <br/> |
-|**Icon** <br/> | Обязательный. Содержит элементы **Image** для меню. Файлы изображений должны быть в формате PNG. <br/> **Image** <br/>  Изображение для меню. Для атрибута **resid** должно быть задано значение атрибута **id**, принадлежащего элементу **Image**. **Image** — это дочерний элемент **Images**, который в свою очередь является дочерним для элемента **Resources**. Атрибут **size** определяет размер изображения в пикселях. Обязательными являются три размера изображения в пикселях: 16, 32 и 80. Кроме того, поддерживаются пять необязательных размеров в пикселях: 20, 24, 40, 48 и 64. <br/> |
-|**Items** <br/> |Обязательный. Содержит элементы **Item** для каждого элемента подменю. Каждый элемент **Item** содержит те же дочерние элементы, что и [Элементы управления ''Кнопка''](../reference/manifest/control.md#button-control).  <br/> |
+|**Label** <br/> |Required. The text of the root menu item. The **resid** attribute must be set to the value of the **id** attribute of a **String** element. The **String** element is a child element of the **ShortStrings** element, which is a child element of the **Resources** element. <br/> |
+|**Tooltip** <br/> |Optional. The tooltip for the menu. The **resid** attribute must be set to the value of the **id** attribute of a **String** element. The **String** element is a child element of the **LongStrings** element, which is a child element of the **Resources** element. <br/> |
+|**SuperTip** <br/> | Required. The supertip for the menu, which is defined by the following: <br/> **Title** <br/>  Required. The text of the supertip. The **resid** attribute must be set to the value of the **id** attribute of a **String** element. The **String** element is a child element of the **ShortStrings** element, which is a child element of the **Resources** element. <br/> **Описание** <br/>  Required. The description for the supertip. The **resid** attribute must be set to the value of the **id** attribute of a **String** element. The **String** element is a child element of the **LongStrings** element, which is a child element of the **Resources** element. <br/> |
+|**Icon** <br/> | Required. Contains the **Image** elements for the menu. Image files must be .png format. <br/> **Image** <br/>  An image for the menu. The **resid** attribute must be set to the value of the **id** attribute of an **Image** element. The **Image** element is a child element of the **Images** element, which is a child element of the **Resources** element. The **size** attribute indicates the size in pixels of the image. Three image sizes, in pixels, are required: 16, 32, and 80. Five optional sizes, in pixels, are also supported: 20, 24, 40, 48, and 64. <br/> |
+|**Items** <br/> |Required. Contains the **Item** elements for each submenu item. Each **Item** element contains the same child elements as [Button controls](../reference/manifest/control.md#button-control).  <br/> |
 
 ## <a name="step-7-add-the-resources-element"></a>Этап 7. Добавление элемента Resources
 
-Элемент **Resources** содержит ресурсы, используемые различными дочерними элементами элемента **VersionOverrides**. Ресурсы включают значки, строки и URL-адреса. Элемент манифеста может использовать ресурс, ссылаясь на его **id**. Использование **id** помогает упорядочить манифест, особенно если для разных языковых стандартов используются разные версии ресурса. **id** может содержать до 32 знаков.
+The **Resources** element contains resources used by the different child elements of the **VersionOverrides** element. Resources include icons, strings, and URLs. An element in the manifest can use a resource by referencing the **id** of the resource. Using the **id** helps organize the manifest, especially when there are different versions of the resource for different locales. An **id** has a maximum of 32 characters.
   
-Ниже приведен пример использования элемента **Resources**. Каждый ресурс может иметь один или несколько дочерних элементов **Override**, позволяющих указать другой ресурс для определенного языкового стандарта.
+The following shows an example of how to use the **Resources** element. Each resource can have one or more **Override** child elements to define a different resource for a specific locale.
 
 ```xml
 <Resources>
@@ -419,17 +420,17 @@ JavaScript должен вызывать `Office.initialize` в HTML-файле,
 
 |**Ресурс**|**Описание**|
 |:-----|:-----|
-|**Images**/ **Image** <br/> | Предоставляет URL-адрес файла изображения по протоколу HTTPS. Каждое изображение должно быть определено в трех обязательных размерах: <br/>  16×16 <br/>  32×32 <br/>  80×80 <br/>  Кроме того, поддерживаются следующие необязательные размеры: <br/>  20×20 <br/>  24×24 <br/>  40×40 <br/>  48×48 <br/>  64×64 <br/> |
-|**Urls**/ **Url** <br/> |Предоставляет URL-адрес с префиксом HTTPS. URL-адрес может включать до 2048 символов.  <br/> |
-|**ShortStrings**/ **String** <br/> |Текст для элементов **Label** и **Title**. Каждая **строка** содержит не более 125 символов. <br/> |
-|**LongStrings**/ **String** <br/> |Текст для элементов **Tooltip** и **Description**. Каждый элемент **String** содержит не более 250 символов.<br/> |
+|**Images**/ **Image** <br/> | Provides the HTTPS URL to an image file. Each image must define the three required image sizes: <br/>  16×16 <br/>  32×32 <br/>  80×80 <br/>  Кроме того, поддерживаются следующие необязательные размеры: <br/>  20×20 <br/>  24×24 <br/>  40×40 <br/>  48×48 <br/>  64×64 <br/> |
+|**Urls**/ **Url** <br/> |Provides an HTTPS URL location. A URL can be a maximum of 2048 characters.  <br/> |
+|**ShortStrings**/ **String** <br/> |The text for **Label** and **Title** elements. Each **String** contains a maximum of 125 characters. <br/> |
+|**LongStrings**/ **String** <br/> |The text for **Tooltip** and **Description** elements. Each **String** contains a maximum of 250 characters. <br/> |
 
 > [!NOTE]
 > Для всех URL-адресов в элементах **Image** и **Url** необходимо использовать протокол SSL.
 
-### <a name="tab-values-for-default-office-ribbon-tabs"></a>Значения для стандартных вкладок ленты Office
+### <a name="tab-values-for-default-office-app-ribbon-tabs"></a>Значения табуляции на вкладках ленты приложения Office по умолчанию
 
-В Excel и Word вы можете добавить команды надстройки на ленту с помощью стандартных вкладок пользовательского интерфейса Office. В приведенной ниже таблице перечислены значения, которые можно использовать для атрибута **id** элемента **OfficeTab**. Значения вкладок указываются с учетом регистра.
+In Excel and Word, you can add your add-in commands to the ribbon by using the default Office UI tabs. The following table lists the values that you can use for the **id** attribute of the **OfficeTab** element. The tab values are case sensitive.
 
 |**Ведущее приложение Office**|**Значения вкладок**|
 |:-----|:-----|

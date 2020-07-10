@@ -3,22 +3,22 @@ title: Отладка надстроек Office на Mac
 description: Узнайте, как использовать Mac для отладки надстроек Office
 ms.date: 11/26/2019
 localization_priority: Normal
-ms.openlocfilehash: bcdf16a858fa613a3248a728b45d68d02cf41a5e
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 12785a195c336e0de8c619379a3839bd15079b2c
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611223"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094129"
 ---
 # <a name="debug-office-add-ins-on-a-mac"></a>Отладка надстроек Office на Mac
 
-Так как надстройки создаются с помощью кода HTML и JavaScript, они рассчитаны на работу на многих платформах, но отрисовка HTML в разных браузерах может слегка отличаться. В этой статье описывается отладка надстроек на компьютере Mac.
+Because add-ins are developed using HTML and JavaScript, they are designed to work across platforms, but there might be subtle differences in how different browsers render the HTML. This article describes how to debug add-ins running on a Mac.
 
 ## <a name="debugging-with-safari-web-inspector-on-a-mac"></a>Отладка с помощью Safari Web Inspector на компьютере Mac
 
 Если у вас есть надстройка, которая отображает пользовательский интерфейс в области задач или контентной надстройке, вы можете отлаживать надстройку Office с помощью Safari Web Inspector.
 
-Отладку надстроек Office на компьютере Mac можно выполнить, только если на нем установлена система Mac OS High Sierra И Office для Mac версии 16.9.1 (сборка 18012504) или более поздней. Если у вас нет сборки Office для Mac, вы можете получить ее, присоединившись к [программе для разработчиков Office 365](https://developer.microsoft.com/office/dev-program).
+Отладку надстроек Office на компьютере Mac можно выполнить, только если на нем установлена система Mac OS High Sierra И Office для Mac версии 16.9.1 (сборка 18012504) или более поздней. Если у вас нет сборки Office Mac, вы можете получить ее, присоединяясь к [программе для разработчиков Microsoft 365](https://developer.microsoft.com/office/dev-program).
 
 Для этого откройте терминал и установите свойство `OfficeWebAddinDeveloperExtras` для соответствующего приложения Office следующим образом:
 

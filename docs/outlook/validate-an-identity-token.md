@@ -1,14 +1,14 @@
 ---
 title: Проверка маркера удостоверения надстройки Outlook
 description: Надстройка Outlook может отправить вам маркер удостоверения пользователя Exchange, но прежде чем обращаться с запросом как с доверенным, нужно проверить, поступил ли маркер с ожидаемого сервера Exchange Server.
-ms.date: 05/08/2020
+ms.date: 07/07/2020
 localization_priority: Normal
-ms.openlocfilehash: 89be659085dbf35b4ad6644eba3b5bf3acd24a9d
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 6ad5f99093530528ec83cfc7a6e3a2571e0df491
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44604582"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094108"
 ---
 # <a name="validate-an-exchange-identity-token"></a>Проверка маркера удостоверения Exchange
 
@@ -40,7 +40,7 @@ ms.locfileid: "44604582"
     - `x5t`присутствует утверждение.
 
 - Проверьте полезную нагрузку и убедитесь, что:
-    - `amurl`в параметре Claims in the `appctx` указывается расположение подписанного файла манифеста подписанного маркера. Например, ожидаемое `amurl` значение для Office 365: https://outlook.office365.com:443/autodiscover/metadata/json/1 . В следующем разделе [проверяйте домен](#verify-the-domain) на наличие дополнительной информации.
+    - `amurl`в параметре Claims in the `appctx` указывается расположение подписанного файла манифеста подписанного маркера. Например, ожидаемое `amurl` значение для Microsoft 365 — https://outlook.office365.com:443/autodiscover/metadata/json/1 . В следующем разделе [проверяйте домен](#verify-the-domain) на наличие дополнительной информации.
     - Текущее время находится в промежутке между значениями, указанными в `nbf` `exp` утверждениях и. В утверждении `nbf` указано время, с которого начинается срок действия маркера, а в утверждении `exp` — время его окончания. Рекомендуем допускать небольшие различия в заданном времени на разных серверах.
     - `aud`Claim — это ожидаемый URL-адрес надстройки.
     - `version`для утверждения в `appctx` утверждении задано значение `ExIdTok.V1` .
@@ -109,7 +109,7 @@ ms.locfileid: "44604582"
 Существует ряд библиотек, способных выполнять общие задачи анализа и проверки JWT. Корпорация Майкрософт предоставляет `System.IdentityModel.Tokens.Jwt` библиотеку, которая может использоваться для проверки маркеров удостоверения пользователей Exchange.
 
 > [!IMPORTANT]
-> Мы не рекомендуем использовать управляемый API веб-служб Exchange, так как файл Microsoft. Exchange. WebServices. auth. dll, несмотря на то, что он все еще доступен, теперь устарел и использует неподдерживаемые библиотеки, такие как Microsoft. IdentityModel. Extensions. dll.
+> Мы не рекомендуем использовать управляемый API веб-служб Exchange, так как Microsoft.Exchange.WebServices.Auth.dll, несмотря на то, что он по-прежнему доступен, теперь устарел и полагается на Неподдерживаемые библиотеки, такие как Microsoft.IdentityModel.Extensions.dll.
 
 ### <a name="systemidentitymodeltokensjwt"></a>System.IdentityModel.Tokens.Jwt
 

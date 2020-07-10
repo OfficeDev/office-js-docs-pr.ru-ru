@@ -1,14 +1,14 @@
 ---
 title: Загрузка неопубликованных надстроек Outlook для тестирования
 description: Используйте загрузку неопубликованных надстроек, чтобы установить надстройку Outlook для тестирования, не размещая ее в каталоге надстроек.
-ms.date: 06/29/2020
+ms.date: 07/09/2020
 localization_priority: Normal
-ms.openlocfilehash: b99b72dbf4691d6a27ac9405c88f2cc642baaadd
-ms.sourcegitcommit: 065bf4f8e0d26194cee9689f7126702b391340cc
+ms.openlocfilehash: 9b44b988ddd6552d5f7d14088a0b6f3ae1e410ed
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "45006481"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45093884"
 ---
 # <a name="sideload-outlook-add-ins-for-testing"></a>Загрузка неопубликованных надстроек Outlook для тестирования
 
@@ -90,7 +90,7 @@ ms.locfileid: "45006481"
 
 1. Locate the manifest file for your custom add-in and install it. Accept all prompts during the installation.
 
-#### <a name="outlook-2013"></a>Outlook 2013
+### <a name="outlook-2013"></a>Outlook 2013
 
 1. Откройте Outlook 2013 в Windows.
 

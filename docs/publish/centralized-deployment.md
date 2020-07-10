@@ -1,20 +1,20 @@
 ---
-title: Публикация надстроек Office с использованием централизованного развертывания в Центре администрирования Office 365
+title: Публикация надстроек Office с помощью централизованного развертывания с помощью центра администрирования Microsoft 365
 description: Узнайте, как с помощью централизованного развертывания развертывать внутренние надстройки, а также надстройки, предоставляемые поставщиками программного обеспечения.
-ms.date: 06/15/2020
+ms.date: 07/07/2020
 localization_priority: Normal
-ms.openlocfilehash: 1410409fbd86be13da4551b2f140bd41fdaebbbf
-ms.sourcegitcommit: 9eed5201a3ef556f77ba3b6790f007358188d57d
+ms.openlocfilehash: 0e99742be87b477b7c78295d08539de924f02466
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "44778678"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094255"
 ---
-# <a name="publish-office-add-ins-using-centralized-deployment-via-the-office-365-admin-center"></a>Публикация надстроек Office с использованием централизованного развертывания в Центре администрирования Office 365
+# <a name="publish-office-add-ins-using-centralized-deployment-via-the-microsoft-365-admin-center"></a>Публикация надстроек Office с помощью централизованного развертывания с помощью центра администрирования Microsoft 365
 
-The Office 365 admin center makes it easy for an administrator to deploy Office Add-ins to users and groups within their organization. Add-ins deployed via the admin center are available to users in their Office applications right away, with no client configuration required. You can use Centralized Deployment to deploy internal add-ins as well as add-ins provided by ISVs.
+Центр администрирования Microsoft 365 позволяет администратору развертывать надстройки Office для пользователей и групп в своей организации. Надстройки становятся доступны в приложениях Office сразу, настраивать клиенты не требуется. С помощью централизованного развертывания можно развертывать внутренние надстройки, а также надстройки, предоставляемые поставщиками программного обеспечения.
 
-В настоящее время центр администрирования Office 365 поддерживает следующие сценарии.
+В настоящее время центр администрирования Microsoft 365 поддерживает следующие сценарии.
 
 - Централизованное развертывание новых и обновленных надстроек для отдельных пользователей, групп или организации.
 - Развертывание на нескольких клиентских платформах, в том числе Windows, Mac и Интернет. Для Outlook также поддерживается развертывание в iOS и Android. (Тем **не** менее, при установке надстроек Excel, Outlook, Word и PowerPoint на iPad не поддерживается централизованное развертывание для iPad.)
@@ -25,10 +25,10 @@ The Office 365 admin center makes it easy for an administrator to deploy Office 
 - Автоматическая установка надстройки для пользователей при запуске приложения Office.
 - Автоматическое удаление надстройки для пользователей, если администратор отключит или удалит ее либо пользователь будет удален из службы Azure Active Directory или группы, в которой была развернута надстройка.
 
-Централизованное развертывание — рекомендуемый для администраторов Office 365 способ развертывания надстроек Office в организации при условии, что организация отвечает всем требованиям для использования централизованного развертывания. Сведения о том, как определить, можно ли использовать централизованное развертывание в вашей организации, см. в статье [Оценка соответствия организации Office 365 требованиям для централизованного развертывания надстроек](/office365/admin/manage/centralized-deployment-of-add-ins).
+Централизованное развертывание — это рекомендуемый способ развертывания надстроек Office в Организации администратором Microsoft 365 при условии, что организация отвечает всем требованиям для использования централизованного развертывания. Сведения о том, как определить, может ли Организация использовать централизованное развертывание, можно узнать [в статье определение того, работает ли централизованное развертывание надстроек для вашей организации Microsoft 365](/office365/admin/manage/centralized-deployment-of-add-ins).
 
 > [!NOTE]
-> In an on-premises environment with no connection to Office 365, or to deploy SharePoint add-ins or Office Add-ins that target Office 2013, use a [SharePoint app catalog](publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md). To deploy COM/VSTO add-ins, use ClickOnce or Windows Installer, as described in [Deploying an Office solution](/visualstudio/vsto/deploying-an-office-solution).
+> В локальной среде без подключения к Microsoft 365, а также для развертывания надстроек SharePoint или надстроек Office, предназначенных для Office 2013, используйте [Каталог приложений SharePoint](publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md). Для развертывания надстроек COM и VSTO используйте ClickOnce или установщик Windows, как описано в статье [Развертывание решения Office](/visualstudio/vsto/deploying-an-office-solution).
 
 ## <a name="recommended-approach-for-deploying-office-add-ins"></a>Рекомендуемый подход к развертыванию надстроек Office
 
@@ -44,14 +44,14 @@ Consider deploying Office Add-ins in a phased approach to help ensure that the d
 
 ## <a name="publish-an-office-add-in-via-centralized-deployment"></a>Публикация надстройки Office путем централизованного развертывания
 
-Прежде чем приступать к работе, убедитесь, что организация отвечает всем требованиям для использования централизованного развертывания, как описано в статье [Оценка соответствия организации Office 365 требованиям для централизованного развертывания надстроек](/microsoft-365/admin/manage/centralized-deployment-of-add-ins).
+Прежде чем приступать к работе, убедитесь, что ваша организация отвечает всем требованиям для использования централизованного развертывания, как описано в разделе [Определение того, работает ли централизованное развертывание надстроек для вашей организации Microsoft 365](/microsoft-365/admin/manage/centralized-deployment-of-add-ins).
 
 Если организация отвечает всем требованиям, выполните указанные ниже действия, чтобы опубликовать надстройку Office путем централизованного развертывания.
 
-1. Войдите в Office 365 с рабочей или учебной учетной записью.
+1. Войдите в Microsoft 365 с помощью рабочей или учебной учетной записи.
 2. В левом верхнем углу щелкните значок средства запуска приложений и выберите **Администратор**.
 3. В меню навигации нажмите **Больше**, а затем выберите **Параметры** > **Службы и надстройки**.
-4. Если в верхней части страницы появится сообщение о новом Центре администрирования Office 365, нажмите его, чтобы перейти к ознакомительной версии центра администрирования (см. статью [О Центре администрирования Office 365](/microsoft-365/admin/admin-overview/about-the-admin-center)).
+4. Если в верхней части страницы отображается сообщение с сообщением о новом центре администрирования Microsoft 365, выберите сообщение, которое нужно перейти к предварительной версии центра администрирования (см. раздел [о центре администрирования microsoft 365](/microsoft-365/admin/admin-overview/about-the-admin-center)).
 5. В верхней части страницы выберите **Развернуть надстройку**.
 6. Просмотрев требования, нажмите кнопку **Далее**.
 7. На странице **Централизованное развертывание** выберите один из следующих вариантов:
@@ -60,22 +60,22 @@ Consider deploying Office Add-ins in a phased approach to help ensure that the d
     - **I have the manifest file (.xml) on this device.** For this option, choose **Browse** to locate the manifest file (.xml) that you want to use.
     - **I have a URL for the manifest file.** For this option, type the manifest's URL in the field provided.
 
-    ![Диалоговое окно создания надстройки в Центре администрирования Office 365](../images/new-add-in.png)
+    ![Диалоговое окно создания надстройки в центре администрирования Microsoft 365](../images/new-add-in.png)
 
 8. Если добавляется надстройка из Магазина Office, выберите ее. Вы можете просматривать доступные надстройки по категориям **Рекомендуемое**, **Оценка** и **Имя**. Из Магазина Office можно добавлять только бесплатные надстройки. Добавление платных надстроек сейчас не поддерживается.
 
     > [!NOTE]
     > Если выбран вариант с Магазином Office, то обновления и улучшения надстройки автоматически предоставляются пользователям без вашего участия.
 
-    ![Выбор диалогового окна надстройки в центре администрирования Office 365](../images/select-an-add-in.png)
+    ![Выбор диалогового окна надстройки в центре администрирования Microsoft 365](../images/select-an-add-in.png)
 
 9. Нажмите кнопку **Continue (продолжить** ) после просмотра сведений о надстройках, политики конфиденциальности и условий лицензионного соглашения.
 
-    ![Выбранная страница надстройки в центре администрирования Office 365](../images/selected-add-in-admin-center.png)
+    ![Выбранная страница надстройки в центре администрирования Microsoft 365](../images/selected-add-in-admin-center.png)
 
 10. На странице **Назначение пользователей** выберите **все**, **конкретные пользователи/группы**или **только я**. С помощью поля поиска найдите пользователей и группы, для которых нужно развернуть надстройку. Для надстроек Outlook также можно выбрать метод развертывания **fixed**, **Available**или **Optional**.
 
-    ![Управление пользователями, у которых есть метод доступа и развертывания в центре администрирования Office 365](../images/manage-users-deployment-admin-center.png)
+    ![Управление пользователями, у которых есть метод доступа и развертывания в центре администрирования Microsoft 365](../images/manage-users-deployment-admin-center.png)
 
     > [!NOTE]
     > Система [единого входа](../develop/sso-in-office-add-ins.md) для надстроек сейчас доступна в предварительной версии. Ее не следует использовать для рабочих надстроек. При развертывании надстройки с помощью единого входа назначенным пользователям и группам также предоставляется доступ к надстройкам, использующим тот же идентификатор приложения Azure. Все изменения, касающиеся назначений пользователей, также применяются к этим надстройкам. На этой странице отображаются связанные надстройки. На этой странице приводится список разрешений Microsoft Graph, необходимых надстройке (только для надстроек с поддержкой единого входа).
@@ -85,7 +85,7 @@ Consider deploying Office Add-ins in a phased approach to help ensure that the d
     > [!NOTE]
     > Когда администратор выбирает **развертывание**, согласие предоставляется всем пользователям.
 
-    ![Список приложений в Центре администрирования Office 365](../images/citations.png)
+    ![Список приложений в центре администрирования Microsoft 365](../images/citations.png)
 
 > [!TIP]
 > При развертывании новой надстройки для пользователей и/или групп в организации рекомендуем отправлять им электронные сообщения с указаниями по использованию надстройки и ссылками на соответствующие разделы справки, часто задаваемые вопросы и другие вспомогательные ресурсы.
@@ -98,7 +98,7 @@ Admins can assign an add-in to everyone in the organization or to specific users
 
 - **Users**: If you assign an add-in to individual users, you'll need to update the Central Deployment settings for the add-in each time you want to assign it additional users. Likewise, you'll need to update the Central Deployment settings for the add-in each time you want to remove a user's access to the add-in.
 
-- **Groups**: If you assign an add-in to a group, users who are added to the group will automatically be assigned the add-in. Likewise, when a user is removed from a group, the user automatically loses access to the add-in. In either case, no additional action is required from the Office 365 admin.
+- **Группы**. Если назначить надстройку группе, члены этой группы автоматически получат доступ к ней. При удалении пользователя из группы он автоматически теряет доступ к надстройке. В любом случае никаких дополнительных действий от администратора Microsoft 365 не нужно.
 
 In general, for ease of maintenance, we recommend assigning add-ins by using groups whenever possible. However, in situations where you want to restrict add-in access to a very small number of users, it may be more practical to assign the add-in to specific users.
 
@@ -116,14 +116,14 @@ In general, for ease of maintenance, we recommend assigning add-ins by using gro
 
 After an Office Add-in has been published via Centralized Deployment, any changes made to the add-in's web application will automatically be available to all users as soon as those changes are implemented in the web application. Changes made to an add-in's [XML manifest file](../develop/add-in-manifests.md), for example, to update the add-in's icon, text, or add-in commands, happen as follows:
 
-- **Line-of-business add-in**: If an admin explicitly uploaded a manifest file when implementing Centralized Deployment via the Office 365 admin center, the admin must upload a new manifest file that contains the desired changes. After the updated manifest file has been uploaded, the next time the relevant Office applications start, the add-in will update.
+- **Бизнес-надстройка**: если администратор явно отправил файл манифеста при реализации централизованного развертывания с помощью центра администрирования Microsoft 365, администратор должен отправить новый файл манифеста, который содержит нужные изменения. После отправки обновленного файла манифеста надстройка обновится при следующем запуске соответствующего приложения Office.
 
   > [!NOTE]
   > Администратору не нужно удалять бизнес-надстройку, чтобы выполнить обновление. В разделе надстройки администратор может просто выбрать бизнес-надстройку и вызвать эту функцию, нажав кнопку **обновить надстройку** в правом нижнем углу.
   > 
-  > ![На снимке экрана отображается диалоговое окно обновления надстройки в центре администрирования Office 365](../images/update-add-in-admin-center.png)
+  > ![На снимке экрана отображается диалоговое окно обновления надстройки в центре администрирования Microsoft 365](../images/update-add-in-admin-center.png)
 
-- **Надстройка из Магазина Office**. Если администратор выбрал надстройку из Магазина Office во время реализации централизованного развертывания в Центре администрирования Office 365, а надстройка в Магазине Office обновилась, то она будет обновлена позже с использованием централизованного развертывания. Надстройка обновится при следующем запуске соответствующего приложения Office.
+- **Надстройка магазина Office**: если администратор выбрал надстройку в магазине Office при реализации централизованного развертывания с помощью центра администрирования Microsoft 365 и обновления надстройки в магазине Office, надстройка будет обновлена позже с помощью централизованного развертывания. Надстройка обновится при следующем запуске соответствующего приложения Office.
 
 ## <a name="end-user-experience-with-add-ins"></a>Работа пользователей с надстройками
 
@@ -131,7 +131,7 @@ After an Office Add-in has been published via Centralized Deployment, any change
 
 If the add-in supports add-in commands, the commands will appear on the Office application ribbon for all users to whom the add-in is deployed. In the following example, the command **Search Citation** appears in the ribbon for the **Citations** add-in.
 
-![Снимок экрана с разделом ленты Office, где выделена команда Search Citation (Поиск ссылки) для надстройки Citations (Ссылки)](../images/search-citation.png)
+![Снимок экрана, на котором показан раздел ленты приложения Office с выделенной в надстройке "ссылки" командой "Поиск ссылок"](../images/search-citation.png)
 
 Если команды надстройки не поддерживаются, пользователи могут добавить надстройку в свое приложение Office, сделав вот что:
 
@@ -151,4 +151,4 @@ If the add-in supports add-in commands, the commands will appear on the Office a
 
 ## <a name="see-also"></a>См. также
 
-- [Определение пригодности централизованного развертывания надстроек для вашей организации Office 365](/office365/admin/manage/centralized-deployment-of-add-ins)
+- [Определение работы централизованного развертывания надстроек для вашей организации Microsoft 365](/office365/admin/manage/centralized-deployment-of-add-ins)

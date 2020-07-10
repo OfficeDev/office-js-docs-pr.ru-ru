@@ -1,22 +1,22 @@
 ---
 title: Публикация надстроек области задач и контентных надстроек в каталоге приложений SharePoint
 description: Чтобы предоставить доступ к надстройкам Office пользователям в организации, администраторы могут отправлять файлы манифестов надстроек Office в соответствующий каталог приложений.
-ms.date: 06/20/2019
+ms.date: 07/07/2020
 localization_priority: Normal
-ms.openlocfilehash: 5557dd31e829fac2c2dbd421200da46a5c3b9b99
-ms.sourcegitcommit: c3bfea0818af1f01e71a1feff707fb2456a69488
+ms.openlocfilehash: eabb60be927dc7fb274a0187a86f0c75592870bf
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "43185591"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094220"
 ---
 # <a name="publish-task-pane-and-content-add-ins-to-a-sharepoint-app-catalog"></a>Публикация надстроек области задач и контентных надстроек в каталоге приложений SharePoint
 
-Каталог приложений — это отдельное семейство веб-сайтов в веб-приложении SharePoint или клиенте SharePoint Online, в котором размещены библиотеки документов для надстроек Office и SharePoint. Администраторы могут отправлять в него файлы манифестов надстроек Office, чтобы пользователи в организации могли получить доступ к этим надстройкам. Когда администратор зарегистрирует каталог приложений как доверенный, пользователи смогут вставлять надстройки в клиентском приложении Office.
+An app catalog is a dedicated site collection in a SharePoint web application or SharePoint Online tenancy that hosts document libraries for Office and SharePoint Add-ins. To make Office Add-ins accessible to users within their organization, administrators can upload Office Add-ins manifest files to the app catalog for their organization. When an administrator registers an app catalog as a trusted catalog, users can insert the add-in from the insertion UI in an Office client application.
 
 > [!IMPORTANT]
 > - Каталоги приложений в SharePoint не поддерживают функции надстроек, реализованные в узле `VersionOverrides` [манифеста надстройки](../develop/add-in-manifests.md), такие как команды надстроек.
-> - Чтобы публиковать надстройки для облачной или гибридной среды, рекомендуем использовать [централизованное развертывание через Центр администрирования Office 365](../publish/centralized-deployment.md).
+> - Если вы нацелены на облачную или гибридную среду, мы рекомендуем [использовать централизованное развертывание через центр администрирования Microsoft 365](../publish/centralized-deployment.md) для публикации надстроек.
 > - Каталоги приложений SharePoint не поддерживаются в Office для Mac. Для развертывания надстроек Office на клиентах Mac необходимо отправить их в [AppSource](/office/dev/store/submit-to-the-office-store).
 
 ## <a name="create-an-app-catalog"></a>Создание каталога приложений
@@ -29,20 +29,20 @@ ms.locfileid: "43185591"
 
 После создания каталога приложений выполните инструкции [по публикации надстройки Office](#publish-an-office-add-in).
 
-### <a name="to-create-an-app-catalog-on-office-365"></a>Создание каталога приложений в Office 365
+### <a name="to-create-an-app-catalog-on-microsoft-365"></a>Создание каталога приложений в Microsoft 365
 
 Чтобы создать каталог приложений SharePoint, следуйте инструкциям на странице [Создание семейства веб-сайтов каталога приложений](/sharepoint/use-app-catalog#step-1-create-the-app-catalog-site-collection). После создания каталога приложений выполните действия, описанные в следующем разделе, чтобы опубликовать надстройку Office.
 
 ## <a name="publish-an-office-add-in"></a>Публикация надстройки Office
 
-Выполните действия, описанные в одном из указанных ниже разделов, чтобы опубликовать надстройку Office в каталоге приложений в Office 365 или локальном сервере SharePoint Server.
+Выполните действия, описанные в одном из следующих разделов, чтобы опубликовать надстройку Office в каталоге приложений на сервере Microsoft 365 или локальном сервере SharePoint.
 
-### <a name="to-publish-an-office-add-in-to-a-sharepoint-app-catalog-on-office-365"></a>Публикация надстройки Office в каталоге приложений SharePoint в Office 365
+### <a name="to-publish-an-office-add-in-to-a-sharepoint-app-catalog-on-microsoft-365"></a>Публикация надстройки Office в каталоге приложений SharePoint в Microsoft 365
 
 1. Перейдите на страницу ["Активные сайты" в новом Центре администрирования SharePoint](https://admin.microsoft.com/sharepoint?page=siteManagement&modern=true) и войдите, используя учетную запись с [правами администратора](/sharepoint/sharepoint-admin-role) в вашей организации.
 
 >[!NOTE]
->Если вы используете Office 365 Germany, [войдите в Центр администрирования Microsoft 365](https://go.microsoft.com/fwlink/p/?linkid=848041), затем перейдите в Центр администрирования SharePoint и откройте страницу "Дополнительные функции". <br>Если вы систему Office 365, предоставляемую оператором 21Vianet (Китай), [войдите в Центр администрирования Microsoft 365](https://go.microsoft.com/fwlink/p/?linkid=850627), затем перейдите в Центр администрирования SharePoint и откройте страницу "Дополнительные функции".
+>Если у вас есть Microsoft 365 Германии, [Войдите в центр администрирования microsoft 365](https://go.microsoft.com/fwlink/p/?linkid=848041), а затем перейдите в центр администрирования SharePoint и откройте страницу дополнительные возможности. <br>Если у вас установлена служба Microsoft 365 под управлением 21Vianet (Китай), [Войдите в центр администрирования microsoft 365](https://go.microsoft.com/fwlink/p/?linkid=850627), а затем перейдите в центр администрирования SharePoint и откройте страницу дополнительные возможности.
  
 2. Откройте сайт каталога приложений, выбрав его URL-адрес в столбце URL-адрес. 
 
@@ -88,9 +88,9 @@ ms.locfileid: "43185591"
     
     Укажите только URL-адрес родительского семейства веб-сайтов:
     - `https://<domain>/sites/<AddinCatalogSiteCollection>`
-4. Закройте приложение Office и снова запустите его. 
+4. Закройте приложение Office и снова запустите его.
 5. Выберите **Вставка** > **Получить надстройки**.
 4. В диалоговом окне "Надстройки Office" выберите вкладку **МОЯ ОРГАНИЗАЦИЯ**. Отобразится список надстроек Office.
 5. Выберите надстройку Office и нажмите **Добавить**.
 
-Кроме того, администратор может указать каталог приложений в SharePoint с помощью групповой политики. Соответствующие параметры политики доступны в [файлах административных шаблонов (ADMX/ADML) для Office 365 профессиональный плюс, Office 2019 и Office 2016](https://www.microsoft.com/download/details.aspx?id=49030) и находятся в папке **User Configuration\Policies\Administrative Templates\Microsoft Office 2016\Security Settings\Trust Center\Trusted Catalogs**.
+Кроме того, администратор может указать каталог приложений в SharePoint с помощью групповой политики. Релевантные параметры политики доступны в [файлах административных шаблонов (ADMX/ADML) для приложений Microsoft 365, office 2019 и office 2016](https://www.microsoft.com/download/details.aspx?id=49030) и находятся в разделе **Конфигурация пользователя \ административные шаблоны \ Microsoft Office 2016 \ безопасность \ надежные каталогов**.

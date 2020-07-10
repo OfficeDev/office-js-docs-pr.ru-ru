@@ -1,18 +1,18 @@
 ---
 title: Области задач в надстройках Office
 description: Области задач предоставляют пользователям доступ к элементам управления интерфейсом, которые выполняют код для изменения документов или сообщений электронной почты, а также для отображения данных из источника данных.
-ms.date: 01/14/2020
+ms.date: 07/07/2020
 localization_priority: Normal
-ms.openlocfilehash: 429042db7e30f5fefe48c9648e6ad5410f6594c4
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 39a96f4d5aa63d55f4dcb30d9aeb9e680357aa09
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608497"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45093758"
 ---
 # <a name="task-panes-in-office-add-ins"></a>Области задач в надстройках Office
  
-Области задач — это области интерфейса, которые обычно отображаются в правой части окна Word, PowerPoint, Excel и Outlook. Элементы области задач выполняют код для изменения документов или писем, а также для отображения данных. Используйте области задач, когда вам не нужно внедрять функции прямо в документ.
+Task panes are interface surfaces that typically appear on the right side of the window within Word, PowerPoint, Excel, and Outlook. Task panes give users access to interface controls that run code to modify documents or emails, or display data from a data source. Use task panes when you don't need to embed functionality directly into the document.
 
 *Рис. 1. Типичный макет области задач*
 
@@ -30,7 +30,7 @@ ms.locfileid: "44608497"
 
 ## <a name="variants"></a>Варианты
 
-На изображениях ниже приведены области задач разных размеров с лентой Office при разрешении 1366 x 768. Чтобы вставить строку формул в Excel, требуется дополнительное пространство по вертикали.  
+The following images show the various task pane sizes with the Office app ribbon at a 1366x768 resolution. For Excel, additional vertical space is required to accommodate the formula bar.  
 
 *Рис. 2. Размеры области задач в классических приложениях Office 2016*
 
@@ -43,7 +43,7 @@ ms.locfileid: "44608497"
 
 <br/>
 
-*Рис. 3. Размеры области задач в Office 365*
+*Рис. 3. Размеры областей задач Office*
 
 ![Размеры области задач в классических приложениях при разрешении 1366 x 768](../images/office-365-taskpane-sizes.png)
 
@@ -54,7 +54,7 @@ ms.locfileid: "44608497"
 
 ## <a name="personality-menu"></a>Меню личных данных
 
-Меню личных данных могут перекрывать элементы навигации и управления, расположенные в правой верхней части надстройки. Ниже указаны текущие размеры меню личных данных в Windows и Mac.
+Personality menus can obstruct navigational and commanding elements located near the top right of the add-in. The following are the current dimensions of the personality menu on Windows and Mac.
 
 Меню личных данных в Windows имеет размер 12 x 32 пикселей, как показано ниже.
 

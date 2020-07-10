@@ -1,14 +1,14 @@
 ---
 title: Контентные надстройки Office
 description: Контентные надстройки — это рабочие области, которые можно внедрять прямо в документы Excel или PowerPoint, что предоставляет пользователям доступ к элементам управления интерфейсом, которые выполняют код для изменения документов или отображения данных.
-ms.date: 03/19/2019
+ms.date: 07/07/2020
 localization_priority: Normal
-ms.openlocfilehash: 6494da1a5de8f217483e2df385305c3c6583a511
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: f228ae8e7cca0426b0b43e31e38454029e4c7614
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44607640"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45093849"
 ---
 # <a name="content-office-add-ins"></a>Контентные надстройки Office
 
@@ -25,11 +25,11 @@ ms.locfileid: "44607640"
 
 ## <a name="variants"></a>Варианты
 
-Размеры контентных надстроек для Excel и PowerPoint в Office для настольных систем и Office 365 указывает пользователь.
+Размеры контентных надстроек для Excel и PowerPoint в Office для настольных ПК и Microsoft 365 указаны пользователем.
 
 ## <a name="personality-menu"></a>Меню личных данных
 
-Меню личных данных могут перекрывать элементы навигации и управления, расположенные в правой верхней части надстройки. Ниже указаны текущие размеры меню личных данных в Windows и Mac.
+Personality menus can obstruct navigational and commanding elements located near the top right of the add-in. The following are the current dimensions of the personality menu on Windows and Mac.
 
 В Windows меню личных данных имеет размер 12 x 32 пикселей, как показано на изображении.
 
@@ -52,7 +52,7 @@ ms.locfileid: "44607640"
 
 - Проверьте, будет ли ваша надстройка Office работать на [конкретной платформе Office](../overview/office-add-in-availability.md).
 - Чтобы надстройка могла читать и записывать данные в Excel или PowerPoint, может потребоваться добавление в список доверенных. Вы можете объявить нужный [уровень разрешений](../develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md) для пользователя в манифесте надстройки.  
-- Контентные надстройки поддерживаются в Excel и PowerPoint в Office 2013 и более поздних версий. Если вы откроете надстройку в версии Office, которая не поддерживает веб-надстройки, вместо надстройки будет показано изображение.
+- Content add-ins are supported in Excel and PowerPoint in Office 2013 version and later. If you open an add-in in a version of Office that doesn't support Office web add-ins, the add-in will be displayed as an image.
 
 ## <a name="see-also"></a>См. также
 

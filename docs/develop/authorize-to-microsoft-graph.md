@@ -1,21 +1,22 @@
 ---
 title: Авторизация в Microsoft Graph с помощью единого входа
 description: Узнайте, как пользователи надстройки Office могут использовать единый вход (SSO) для получения данных из Microsoft Graph.
-ms.date: 01/14/2020
+ms.date: 07/07/2020
 localization_priority: Normal
-ms.openlocfilehash: c04026324c71bcfbef978106aecf607d46d55fc3
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 809dc4f07c6d2afba4ea47cdee0eb7466dfb9635
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608406"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45093730"
 ---
 # <a name="authorize-to-microsoft-graph-with-sso-preview"></a>Авторизация в Microsoft Graph с помощью единого входа (предварительная версия)
 
-Пользователи входят в Office (в Интернете, на мобильных устройствах и настольных компьютерах), используя личную учетную запись Майкрософт либо рабочую или учебную учетную запись (Office 365). Чтобы надстройка Office могла получить авторизованный доступ к [Microsoft Graph](https://developer.microsoft.com/graph/docs), лучше всего использовать учетные данные для входа пользователя в Office. Это позволяет пользователям получить доступ к своим данным Microsoft Graph без необходимости повторного входа. 
+Пользователи входят в Office (Интернет-, мобильные и Настольные платформы) с помощью личной учетной записи Майкрософт или учетной записи Microsoft 365 для образовательных или рабочих учетных записей. Чтобы надстройка Office могла получить авторизованный доступ к [Microsoft Graph](https://developer.microsoft.com/graph/docs), лучше всего использовать учетные данные для входа пользователя в Office. Это позволяет пользователям получить доступ к своим данным Microsoft Graph без необходимости повторного входа.
 
 > [!NOTE]
-> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint в тестовом режиме. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](../reference/requirement-sets/identity-api-requirement-sets.md). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Инструкции см. в [этой статье](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint в тестовом режиме. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](../reference/requirement-sets/identity-api-requirement-sets.md).
+> Если вы работаете с надстройкой Outlook, обязательно включите современная проверка подлинности для клиента Microsoft 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 ## <a name="add-in-architecture-for-sso-and-microsoft-graph"></a>Архитектура надстройки для единого входа и Microsoft Graph
 

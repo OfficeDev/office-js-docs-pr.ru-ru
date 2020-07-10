@@ -3,21 +3,21 @@ title: Авторизация внешних служб в надстройке 
 description: Получение авторизации для сторонних источников данных (отличных от Майкрософт), например Google, Facebook, LinkedIn, SalesForce и GitHub, с помощью OAuth 2.0, кода авторизации и неявных потоков.
 ms.date: 08/07/2019
 localization_priority: Normal
-ms.openlocfilehash: 55f46a4cb381bc3f87434893d065f9ebf8147814
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: fd180e11106e7e1e2f20f539746535c4310ad81e
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608434"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45093744"
 ---
 # <a name="authorize-external-services-in-your-office-add-in"></a>Авторизация внешних служб в надстройке Office
 
-С помощью популярных веб-служб, в том числе Office 365, Google, Facebook, LinkedIn, SalesForce и GitHub, разработчики могут предоставлять пользователям доступ к их учетным записям в других приложениях. Благодаря этому вы можете включать эти службы в свои надстройки Office.
+Popular online services, including Microsoft 365, Google, Facebook, LinkedIn, SalesForce, and GitHub, let developers give users access to their accounts in other applications. This gives you the ability to include these services in your Office Add-in.
 
 > [!NOTE]
-> В оставшейся части этой статьи рассматривается доступ к сторонним службам (отличным от Майкрософт). Сведения о доступе к Microsoft Graph (включая Office 365) см. в разделах [Доступ к Microsoft Graph с помощью единого входа](overview-authn-authz.md#access-to-microsoft-graph-with-sso) и [Доступ к Microsoft Graph без единого входа](overview-authn-authz.md#access-to-microsoft-graph-without-sso).
+> В оставшейся части этой статьи рассматривается доступ к сторонним службам (отличным от Майкрософт). Сведения о доступе к Microsoft Graph (в том числе Microsoft 365) можно найти в [статье доступ к Microsoft Graph с помощью единого входа](overview-authn-authz.md#access-to-microsoft-graph-with-sso) и [доступа к Microsoft Graph без единого входа](overview-authn-authz.md#access-to-microsoft-graph-without-sso).
 
-Стандартная платформа, позволяющая обеспечить доступ веб-приложения к веб-службе, — **OAuth 2.0**. В большинстве ситуаций не обязательно знать абсолютно все о работе платформы, чтобы использовать ее в своей надстройке. Доступно множество библиотек, упрощающих работу с платформой.
+The industry standard framework for enabling web application access to an online service is **OAuth 2.0**. In most situations, you don't need to know the details of how the framework works to use it in your add-in. Many libraries are available that simplify the details for you.
 
 Основной принцип работы OAuth заключается в том, что приложение может быть [субъектом безопасности](/windows/security/identity-protection/access-control/security-principals) для самого себя (как пользователь или группа) и использовать собственное удостоверение и набор разрешений. В большинстве типичных сценариев, когда пользователь выполняет действие в надстройке Office, требующее вовлечения веб-службы, надстройка отправляет службе запрос на получение определенного набора разрешений для учетной записи пользователя. Затем служба предлагает пользователю предоставить надстройке эти разрешения. После предоставления разрешений служба отправляет надстройке небольшой зашифрованный *маркер доступа*. Надстройка может использовать службу, включая этот маркер во все свои запросы к API-интерфейсам службы. Но надстройка может действовать только в рамках разрешений, предоставленных ей пользователем. Кроме того, срок действия маркера ограничен указанным периодом времени.
 
@@ -31,7 +31,7 @@ ms.locfileid: "44608434"
 Дополнительные сведения о преимуществах и недостатках неявного потока и потока кода авторизации см. в разделах [Код авторизации](https://tools.ietf.org/html/rfc6749#section-1.3.1) и [Неявный поток](https://tools.ietf.org/html/rfc6749#section-1.3.2).
 
 > [!NOTE]
-> Вы также можете использовать службу-посредник, которая будет выполнять авторизацию и передавать маркер доступа надстройке. Подробная информация об этом сценарии приведена в разделе **Службы-посредники** далее в этой статье.
+> You also have the option of using a middleman service to perform authorization and pass the access token to your add-in. For details about this scenario, see the **Middleman services** section later in this article.
 
 ## <a name="using-the-implicit-flow-in-office-add-ins"></a>Использование неявного потока в надстройках Office
 
@@ -41,24 +41,24 @@ ms.locfileid: "44608434"
 
 ## <a name="using-the-authorization-code-flow-in-office-add-ins"></a>Использование потока кода авторизации в надстройках Office
 
-Доступно множество библиотек, позволяющих реализовать поток кода авторизации на различных языках и платформах. Дополнительные сведения о некоторых из этих библиотек см. в разделе **Библиотеки** далее в этой статье.
+Many libraries are available for implementing the Authorization Code flow in various languages and frameworks. For more information about some of these libraries, see the **Libraries** section later in this article.
 
 ## <a name="libraries"></a>Библиотеки
 
-Библиотеки доступны для многих языков и платформ, как для неявного потока, так и для потока кода авторизации. Одни из них универсальны, а другие предназначены для определенных веб-служб.
+Libraries are available for many languages and platforms, for both the Implicit flow and the Authorization Code flow. Some libraries are general purpose, while others are for specific online services.
 
-Если вы используете **Google**, выполните на странице [GitHub.com/Google](https://github.com/google) поиск по запросу "auth" или названию языка. Имена почти всех соответствующих репозиториев представлены в формате `google-auth-library-[name of language]`.
+**Google**: Search [GitHub.com/Google](https://github.com/google) for "auth" or the name of your language. Most of the relevant repos are named `google-auth-library-[name of language]`.
 
 Если вы используете **Facebook**, выполните на сайте [Facebook для разработчиков](https://developers.facebook.com) поиск по запросу "library" или "sdk".
 
-Если вы ищете **общие библиотеки OAuth 2.0**, откройте страницу [Код OAuth](https://oauth.net/code/), которую обновляет рабочая группа IETF по OAuth. Эта страница содержит ссылки на библиотеки, рассчитанные на более десятка языков. Обратите внимание, что некоторые из этих библиотек предназначены для реализации службы, поддерживающей OAuth. На этой странице библиотеки, представляющие интерес для разработчиков надстроек, называются *клиентскими* библиотеками, так как веб-сервер является клиентом службы, поддерживающей OAuth.
+**General OAuth 2.0**: A page of links to libraries for over a dozen languages is maintained by the IETF OAuth Working Group at: [OAuth Code](https://oauth.net/code/). Note that some of these libraries are for implementing an OAuth compliant service. The libraries of interest to you as a an add-in developer are called *client* libraries on this page because your web server is a client of the OAuth compliant service.
 
 ## <a name="middleman-services"></a>Службы-посредники
 
-Ваша надстройка также может использовать для авторизации службу-посредник, например [OAuth.io](https://oauth.io) или [Auth0](https://auth0.com). Служба-посредник может либо предоставлять маркеры доступа для популярных веб-служб, либо упрощать процесс входа в надстройку через социальные сети. Благодаря минимуму кода надстройка может подключаться к службе-посреднику с помощью клиентского скрипта или серверного кода, чтобы та отправила надстройке необходимые токены для веб-службы. Весь код, реализующий авторизацию, находится в службе-посреднике. 
+Your add-in can use a middleman service such as [OAuth.io](https://oauth.io) or [Auth0](https://auth0.com) to perform authorization. A middleman service may either provide access tokens for popular online services or simplify the process of enabling social login for your add-in, or both. With very little code, your add-in can use either client-side script or server-side code to connect to the middleman service and it will send your add-in any required tokens for the online service. All of the authorization implementation code is in the middleman service. 
 
 Рекомендуем сделать так, чтобы надстройка при проверке подлинности или авторизации использовала наши Dialog API для открытия страницы входа. Дополнительные сведения см. в статье [Использование Dialog API в потоке проверки подлинности](dialog-api-in-office-add-ins.md#use-the-dialog-apis-in-an-authentication-flow). Когда вы открываете диалоговое окно Office так, оно открывается в совершенно новом экземпляре браузера. При этом используется модуль JavaScript из экземпляра на родительской странице (например, область задач надстройки, FunctionFile). Токен и другие данные, которые можно преобразовать в строку, передается на родительскую страницу с помощью API под названием `messageParent`. Затем родительская страница может использовать этот токен для авторизованных вызовов ресурса. Из-за особенностей архитектуры те API, которые предоставляет служба-посредник, следует использовать с осторожностью. Часто служба предоставляет набор API, в котором ваш код создает определенный объект контекста, получающий токен и использующий его для последующих вызовов ресурса. Часто у службы есть один метод API, который делает начальный вызов *и* создает объект контекста. Подобный объект невозможно полностью преобразовать в строку, поэтому его нельзя передать из диалогового окна Office на родительскую страницу. Как правило, служба-посредник предоставляет второй набор API с более низким уровнем абстракции (например, REST API). Этот второй набор содержит API, который получает токен из службы, и другие API, которые передают токен службе при использовании для авторизованного доступа к ресурсу. Вам нужно работать с API на этом нижнем уровне абстракции, чтобы можно было получить токен в диалоговом окне Office, а затем использовать `messageParent` для его передачи на родительскую страницу. 
 
 ## <a name="what-is-cors"></a>Что такое CORS?
 
-CORS расшифровывается как [общий доступ к ресурсам независимо от источника](https://developer.mozilla.org/docs/Web/HTTP/Access_control_CORS) (Cross Origin Resource Sharing). Сведения об использовании CORS в надстройках см. в статье [Устранение в надстройках Office ограничений, вызванных принципом одинакового источника](addressing-same-origin-policy-limitations.md).
+CORS stands for [Cross Origin Resource Sharing](https://developer.mozilla.org/docs/Web/HTTP/Access_control_CORS). For information about how to use CORS inside add-ins, see [Addressing same-origin policy limitations in Office Add-ins](addressing-same-origin-policy-limitations.md).

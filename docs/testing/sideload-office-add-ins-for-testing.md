@@ -1,23 +1,23 @@
 ---
 title: Загрузка неопубликованных надстроек Office в Office в Интернете для тестирования
 description: Тестирование неопубликованной надстройки Office в Office в Интернете путем ее загрузки
-ms.date: 02/18/2020
+ms.date: 07/07/2020
 localization_priority: Normal
-ms.openlocfilehash: 5e6352f63959dce54b3a67c79c522446913e0c38
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 60b7e4f1d598e4f5ec09307d58294f54123112ad
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611135"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094122"
 ---
 # <a name="sideload-office-add-ins-in-office-on-the-web-for-testing"></a>Загрузка неопубликованных надстроек Office в Office в Интернете для тестирования
 
-Загрузка неопубликованной надстройки Office позволит быстро установить ее для тестирования, не размещая в каталоге надстроек. Загрузить неопубликованную надстройку можно в Office 365 или Office в Интернете. Эта процедура слегка различается для каждой из двух платформ.
+Загрузка неопубликованной надстройки Office позволит быстро установить ее для тестирования, не размещая в каталоге надстроек. Для загрузки неопубликованных приложений можно использовать как Microsoft 365, так и Office в Интернете. Эта процедура слегка различается для каждой из двух платформ.
 
 При загрузке неопубликованной надстройки ее манифест хранится в локальном хранилище браузера. Поэтому если очистить кэш браузера или поменять браузер, процедуру придется повторить.
 
 > [!NOTE]
-> Загрузка неопубликованных надстроек, описанная в этой статье, поддерживается в Word, Excel и PowerPoint. Соответствующие действия касательно надстройки Outlook приведены в статье [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md).
+> Sideloading as described in this article is supported on Word, Excel, and PowerPoint. To sideload an Outlook add-in, see [Sideload Outlook add-ins for testing](../outlook/sideload-outlook-add-ins-for-testing.md).
 
 В видео ниже показано, как загрузить неопубликованную надстройку в Office в Интернете или классическое приложение.
 
@@ -39,7 +39,7 @@ ms.locfileid: "44611135"
 
     ![Диалоговое окно отправки надстройки с кнопками "Обзор", "Отправить" и "Отмена"](../images/upload-add-in.png)
 
-6. Убедитесь, что надстройка установлена. Например, если надстройка вызывается командой, эта команда должна появиться на ленте или в контекстном меню. Если же у вас надстройка области задач, должна появиться область.
+6. Verify that your add-in is installed. For example, if it is an add-in command, it should appear on either the ribbon or the context menu. If it is a task pane add-in, the pane should appear.
 
 > [!NOTE]
 >Чтобы протестировать надстройку Office с помощью Microsoft Edge, требуется выполнить два действия по настройке: 
@@ -52,7 +52,7 @@ ms.locfileid: "44611135"
 
 ## <a name="sideload-an-office-add-in-in-office-365"></a>Загрузка неопубликованной надстройки Office в Office 365
 
-1. Войдите в свою учетную запись Office 365.
+1. Войдите в свою учетную запись Microsoft 365.
 
 2. Откройте средство запуска приложений в левой части панели инструментов и выберите **Excel**, **Word**или **PowerPoint**, а затем создайте новый документ.
 

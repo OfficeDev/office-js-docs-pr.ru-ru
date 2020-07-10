@@ -1,14 +1,14 @@
 ---
 title: Элемент Action в файле манифеста
 description: Этот элемент указывает действие, выполняемое при выборе пользователем элемента управления "Кнопка" или "меню".
-ms.date: 02/28/2020
+ms.date: 07/07/2020
 localization_priority: Normal
-ms.openlocfilehash: c542cec38b400100014c51c978c8fcd71a546f2a
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 92c783a15d104aba0adb722ab887391b4511ebed
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608805"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094451"
 ---
 # <a name="action-element"></a>Элемент Action
 
@@ -33,14 +33,14 @@ ms.locfileid: "44608805"
 
 ## <a name="xsitype"></a>xsi:type
 
-Этот атрибут указывает действие, которое выполняется, когда пользователь нажимает кнопку. Допустимые значения:
+This attribute specifies the kind of action performed when the user selects the button. It can be one of the following:
 
 - `ExecuteFunction`
 - `ShowTaskpane`
 
 ## <a name="functionname"></a>FunctionName
 
-Обязательный элемент, если атрибуту **xsi:type** присвоено значение ExecuteFunction. Указывает имя выполняемой функции. Функция содержится в файле, указанном в элементе [FunctionFile](functionfile.md).
+Required element when **xsi:type** is "ExecuteFunction". Specifies the name of the function to execute. The function is contained in the file specified in the [FunctionFile](functionfile.md) element.
 
 ```xml
 <Action xsi:type="ExecuteFunction">
@@ -79,7 +79,7 @@ ms.locfileid: "44608805"
 </Action>
 ```  
 
-В следующих примерах показаны два действия, использующие другой элемент **TaskpaneId**. Чтобы увидеть эти примеры в контексте, ознакомьтесь с [примером команд простых надстроек](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Simple/Manifest/SimpleAddin.xml).
+The following examples show two actions that use a different **TaskpaneId**. To see these examples in context, see [Simple Add-in Commands Sample](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Simple/Manifest/SimpleAddin.xml).
 
 ```xml
 <Action xsi:type="ShowTaskpane">
@@ -132,7 +132,7 @@ ms.locfileid: "44608805"
 Элемент необязательный, когда для **xsi:type** задано значение ShowTaskpane. Родительские элементы [VersionOverrides](versionoverrides.md) должны иметь значение атрибута `xsi:type` `VersionOverridesV1_1`. Включите этот элемент со значением `true` для поддержки закрепления области задач. Пользователь сможет закрепить область задач, после чего она будет оставаться открытой при выборе другого элемента. Дополнительные сведения см. в статье [Реализация закрепляемой области задач в Outlook](../../outlook/pinnable-taskpane.md).
 
 > [!IMPORTANT]
-> Хотя `SupportsPinning` элемент был введен в [наборе требований 1,5](../objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md), в настоящее время он поддерживается только для подписчиков Office 365 с помощью следующих компонентов.
+> Хотя `SupportsPinning` элемент был введен в [наборе требований 1,5](../objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md), в настоящее время он поддерживается только для подписчиков Microsoft 365 с помощью следующих компонентов.
 > - Outlook 2016 или более поздняя версия в Windows (сборка 7628,1000 или более поздняя)
 > - Outlook 2016 или более поздней версии в Mac (сборка 16.13.503 или более поздняя)
 > - Современная версия Outlook в Интернете

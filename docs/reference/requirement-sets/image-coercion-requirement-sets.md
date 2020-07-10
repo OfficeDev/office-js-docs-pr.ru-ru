@@ -4,16 +4,16 @@ description: Поддержка наборов требований для пр�
 ms.date: 08/13/2019
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: f2baf8115d6a43c6b713e9acfeb5928f8549c583
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 59f6891182f47bed1b7e3b6aa69a30e941bce7cb
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611360"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094357"
 ---
 # <a name="image-coercion-requirement-sets"></a>Наборы обязательных элементов для приведения изображений
 
-Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md).
+Requirement sets are named groups of API members. Office Add-ins use requirement sets specified in the manifest or use a runtime check to determine whether an Office host supports APIs that an add-in needs. For more information, see [Office versions and requirement sets](../../develop/office-versions-and-requirement-sets.md).
 
 ## <a name="imagecoercion-11"></a>ImageCoercion 1.1
 
@@ -36,13 +36,13 @@ ms.locfileid: "44611360"
 
 Использовать imagecoercion 1,2 обеспечивает преобразование в формат SVG ( `Office.CoercionType.XmlSvg` ) при записи данных с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) метода. Поддерживаются следующие узлы:
 
-- Excel в Windows (подключен к подписке на Office 365)
-- Excel на Mac (подключен к подписке на Office 365)
-- PowerPoint в Windows (подключено к подписке на Office 365)
-- PowerPoint на Mac (с подключением к подписке на Office 365)
+- Excel в Windows (подключено к подписке Microsoft 365)
+- Excel на Mac (подключено к подписке Microsoft 365)
+- PowerPoint в Windows (подключено к подписке Microsoft 365)
+- PowerPoint на Mac (с подключением к подписке Microsoft 365)
 - PowerPoint в Интернете
-- Word в Windows (подключен к подписке на Office 365)
-- Word на Mac (подключен к подписке на Office 365)
+- Word в Windows (подключены к подписке Microsoft 365)
+- Word на Mac (подключено к подписке Microsoft 365)
 - Word в Интернете
 
 ## <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office

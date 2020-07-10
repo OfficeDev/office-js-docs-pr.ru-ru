@@ -1,17 +1,16 @@
 ---
 title: Отладка надстроек в Office в Интернете
 description: Сведения о том, как тестировать и отлаживать надстройки в Office в Интернете.
-ms.date: 06/20/2019
+ms.date: 07/07/2020
 localization_priority: Normal
-ms.openlocfilehash: 4f2aa498e5d9f49fcdf306ac2c4c80ea6fbd496c
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: f7ef3fa3d6389629e28b428b9bdbe3b128896b1f
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611241"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094493"
 ---
 # <a name="debug-add-ins-in-office-on-the-web"></a>Отладка надстроек в Office в Интернете
-
 
 Вы можете создавать надстройки и выполнять их отладку на компьютере, на котором нет Windows или классического клиента Office (например, если вы создаете надстройку на компьютере Mac). В этой статье описано, как использовать Office а Интернете для тестирования и отладки надстроек. 
 
@@ -19,12 +18,12 @@ ms.locfileid: "44611241"
 
 Чтобы приступить к работе, выполните указанные ниже действия.
 
-- Получите учетную запись разработчика приложений для Office 365 (если у вас еще нет ее) или доступ к сайту SharePoint.
+- Получите учетную запись разработчика Microsoft 365, если у вас еще нет доступа к сайту SharePoint.
 
   > [!NOTE]
-  > Чтобы получить бесплатную возобновляемую подписку разработчика приложений для Office 365 на 90 дней, примите участие в нашей [программе для разработчиков Office 365](https://developer.microsoft.com/office/dev-program). Пошаговые инструкции для присоединения к этой программе и настройки подписки см. в [документации по программе для разработчиков Office 365](/office/developer-program/office-365-developer-program).
+  > To get a free, 90-day renewable Microsoft 365 developer subscription, join our [Microsoft 365 developer program](https://developer.microsoft.com/office/dev-program). See the [Microsoft 365 developer program documentation](/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Microsoft 365 developer program and configure your subscription.
 
-- Настройте каталог приложений в Office 365 (SharePoint Online). Каталог приложений — это специальное семейство веб-сайтов в SharePoint Online, в котором размещены библиотеки документов для надстроек Office. Если у вас есть сайт SharePoint, вы можете настроить библиотеку документов каталога приложений. Дополнительные сведения см. в статье [Публикация надстроек области задач и контентных надстроек в каталоге приложений SharePoint](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md).
+- Set up an app catalog on SharePoint Online. An app catalog is a dedicated site collection in SharePoint Online that hosts document libraries for Office Add-ins. If you have your own SharePoint site, you can set up an app catalog document library. For more information, see [Publish task pane and content add-ins to an app catalog on SharePoint](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md).
 
 
 ## <a name="debug-your-add-in-from-excel-or-word-on-the-web"></a>Отладка надстройки в Excel и Word в Интернете
@@ -36,7 +35,7 @@ ms.locfileid: "44611241"
     > [!NOTE]
     > Рекомендуем использовать [генератор Yeoman](https://github.com/OfficeDev/generator-office) для создания и размещения надстройки.
 
-2. В [файле манифеста надстройки](../develop/add-in-manifests.md) измените значение элемента **SourceLocation** так, чтобы оно включало абсолютный URL-адрес, а не относительный. Пример:
+2. In your [add-in manifest file](../develop/add-in-manifests.md), update the **SourceLocation** element value to include an absolute, rather than a relative, URI. For example:
 
     ```xml
     <SourceLocation DefaultValue="https://localhost:44300/App/Home/Home.html" />
@@ -44,7 +43,7 @@ ms.locfileid: "44611241"
 
 3. Отправьте манифест в библиотеку надстроек Office в каталоге приложений SharePoint.
 
-4. В Office 365 с помощью средства запуска приложений запустите Excel или Word в Интернете и откройте новый документ.
+4. Запустите Excel или Word в Интернете из средства запуска приложений в Microsoft 365 и откройте новый документ.
 
 5. Чтобы добавить вашу надстройку и протестировать ее в приложении, на вкладке "Вставка" выберите **Мои надстройки** или **Надстройки Office**.
 

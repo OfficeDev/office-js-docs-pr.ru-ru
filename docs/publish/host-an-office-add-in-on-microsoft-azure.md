@@ -1,18 +1,18 @@
 ---
 title: Размещение надстройки Office в Microsoft Azure | Документация Майкрософт
 description: Сведения о развертывании веб-приложения надстройки в Azure и загрузке неопубликованной надстройки для тестирования в клиентском приложении Office.
-ms.date: 10/16/2019
+ms.date: 07/07/2020
 localization_priority: Normal
-ms.openlocfilehash: a546e53d03bb08dd216c04eab9b684f651f9c5de
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: a30f1a8219501a68e6f46f013ef46640a59fe4e9
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44612061"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094234"
 ---
 # <a name="host-an-office-add-in-on-microsoft-azure"></a>Размещение надстройки Office в Microsoft Azure
 
-Самая простая надстройка Office состоит из XML-файла манифеста и HTML-страницы. В XML-файле манифеста описаны характеристики надстройки, например ее имя, сведения о том, в каких клиентах Office можно запускать надстройку, а также URL-адрес HTML-страницы надстройки. HTML-страница содержится в веб-приложении, с которым пользователь взаимодействует, когда устанавливает и запускает надстройку в клиентском приложении Office. Вы можете разместить веб-приложение надстройки Office на любой платформе веб-хостинга, включая Azure.
+The simplest Office Add-in is made up of an XML manifest file and an HTML page. The XML manifest file describes the add-in's characteristics, such as its name, what Office desktop applications it can run in, and the URL for the add-in's HTML page. The HTML page is contained in a web app that users interact with when they install and run your add-in within an Office client application. You can host the web app of an Office Add-in on any web hosting platform, including Azure.
 
 В этой статье рассказывается, как развернуть веб-приложение надстройки в Azure и [загрузить неопубликованную надстройку](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md) для тестирования в клиентском приложении Office.
 
@@ -46,7 +46,7 @@ ms.locfileid: "44612061"
 5. В окне **Общий доступ к файлам** щелкните стрелку раскрывающегося списка и выберите **Все** > **Добавить** > **Общий доступ**.
 
 > [!NOTE]
-> В этом руководстве для хранения XML-файла манифеста надстройки используется общая локальная папка. Для решения практических задач вы можете [развернуть XML-файл манифеста в каталоге SharePoint](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md) или [опубликовать надстройку в AppSource](/office/dev/store/submit-to-appsource-via-partner-center).
+> In this walkthrough, you're using a local file share as a trusted catalog where you'll store the add-in XML manifest file. In a real-world scenario, you might instead choose to [deploy the XML manifest file to a SharePoint catalog](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md) or [publish the add-in to AppSource](/office/dev/store/submit-to-appsource-via-partner-center).
 
 ## <a name="step-2-add-the-file-share-to-the-trusted-add-ins-catalog"></a>Шаг 2. Добавление общей папки в доверенный каталог надстроек
 
@@ -59,7 +59,7 @@ ms.locfileid: "44612061"
 
 3. В диалоговом окне **Параметры Word** щелкните **Центр управления безопасностью**, а затем — **Параметры центра управления безопасностью**.
 
-4. В диалоговом окне **Trust Center** выберите **Доверенные каталоги надстроек**. Введите UNC-путь для файлового ресурса, который вы создали ранее, в виде **URL-адреса каталога** (например, \\\YourMachineName\AddinManifests), а затем щелкните **Добавить каталог**. 
+4. In the **Trust Center** dialog box, choose **Trusted Add-in Catalogs**. Enter the universal naming convention (UNC) path for the file share you created earlier as the **Catalog URL** (for example, \\\YourMachineName\AddinManifests), and then choose **Add catalog**. 
 
 5. Установите флажок **Показывать в меню**.
 
@@ -80,7 +80,7 @@ ms.locfileid: "44612061"
 
       - Выберите **подписку**, которую необходимо использовать для создания сайта.
       
-      - Выберите **группу ресурсов** для своего сайта. Если вы создадите группу, вам потребуется присвоить ей имя.
+      - Choose the **Resource Group** for your site. If you create a new group, you also need to name it.
       
       - Введите уникальное **имя приложения** для своего сайта. Azure проверит уникальность имени сайта в домене azureweb apps.net.
 
@@ -119,7 +119,7 @@ Visual Studio создаст базовую надстройку Word, кото�
 
 1. Не закрывая проект вашей надстройки в Visual Studio, разверните узел решения в **Обозревателе решений**, затем выберите **Служба приложений**.
 
-2. Щелкните правой кнопкой мыши веб-проект и выберите пункт **Опубликовать**. Веб-проект содержит файлы веб-приложения надстройки Office, так что это именно тот проект, который вы публикуете в Azure.
+2. Right-click the web project and then choose **Publish**. The web project contains Office Add-in web app files so this is the project that you publish to Azure.
 
 3. На вкладке **Публикация** выполните указанные ниже действия.
 
@@ -129,7 +129,7 @@ Visual Studio создаст базовую надстройку Word, кото�
 
       - Щелкните **Опубликовать**.
 
-4. Visual Studio опубликует веб-проект надстройки Office в вашем веб-приложении Azure. Когда Visual Studio завершит публикацию веб-проекта, откроется браузер, в котором отобразится веб-страница с текстом "Приложение службы приложений создано". Это текущая страница, используемая по умолчанию, для веб-приложения.
+4. Visual Studio publishes the web project for your Office Add-in to your Azure web app. When Visual Studio finishes publishing the web project, your browser opens and shows a webpage with the text "Your App Service app has been created." This is the current default page for the web app.
 
 5. Скопируйте URL-адрес корня (пример: https://YourDomain.azurewebsites.net); он потребуется, когда вы будете редактировать файл манифеста надстройки далее в этой статье.
 
@@ -137,9 +137,9 @@ Visual Studio создаст базовую надстройку Word, кото�
 
 1. В Visual Studio (с примером надстройки Office, открытом в **обозревателе решений**) разверните решение так, чтобы отображались оба проекта.
 
-2. Разверните проект надстройки Office (например, WordWebAddIn), щелкните правой кнопкой мыши папку манифеста, а затем нажмите кнопку **Открыть**. Откроется XML-файл манифеста надстройки.
+2. Expand the Office Add-in project (for example WordWebAddIn), right-click the manifest folder, and then choose **Open**. The add-in XML manifest file opens.
 
-3. В XML-файле манифеста найдите и замените все фрагменты ~remoteAppUrl URL-адресом корня веб-приложения надстройки в Azure. Это URL-адрес, который вы скопировали ранее после публикации веб-приложения надстройки в Azure (пример: https://YourDomain.azurewebsites.net). 
+3. In the XML manifest file, find and replace all instances of "~remoteAppUrl" with the root URL of the add-in web app on Azure. This is the URL that you copied earlier after you published the add-in web app to Azure (for example: https://YourDomain.azurewebsites.net). 
 
 4. Щелкните **Файл** и выберите пункт **Сохранить все**. Затем скопируйте XML-файл манифеста надстройки (например, WordWebAddIn.xml).
 
@@ -151,13 +151,13 @@ Visual Studio создаст базовую надстройку Word, кото�
 
 2. На ленте щелкните **Вставка** > **Мои надстройки**.
 
-3. В диалоговом окне **Надстройки Office** выберите **ОБЩАЯ ПАПКА**. Word выполнит сканирование папки, которую вы указали в качестве надежного каталога надстроек (в [действии 2 "Добавление файлового ресурса в надежный каталог надстроек"](../publish/host-an-office-add-in-on-microsoft-azure.md#step-2-add-the-file-share-to-the-trusted-add-ins-catalog)) и отобразит надстройки в диалоговом окне. Должен отобразиться значок для вашего примера надстройки.
+3. In the **Office Add-ins** dialog box, choose **SHARED FOLDER**. Word scans the folder that you listed as a trusted add-ins catalog (in [Step 2: Add the file share to the Trusted Add-ins catalog](../publish/host-an-office-add-in-on-microsoft-azure.md#step-2-add-the-file-share-to-the-trusted-add-ins-catalog)) and shows the add-ins in the dialog box. You should see an icon for your sample add-in.
 
-4. Щелкните значок своей надстройки и нажмите кнопку **Добавить**. На ленту будет добавлена кнопка **Показать область задач** для вашей надстройки.
+4. Choose the icon for your add-in and then choose **Add**. A **Show Taskpane** button for your add-in is added to the ribbon.
 
-5. На ленте вкладки **Главная** нажмите кнопку **Показать область задач**. Надстройка откроется в области задач справа от текущего документа.
+5. On the ribbon of the **Home** tab, choose the **Show Taskpane** button. The add-in opens in a task pane to the right of the current document.
 
-6. Убедитесь, что надстройка работает, выбрав любой текст в документе и нажав кнопку **Highlight!** (Выделить!) в области задач.
+6. Verify that the add-in works by selecting some text in the document and choosing the **Highlight!** button in the task pane.
 
 ## <a name="see-also"></a>См. также
 

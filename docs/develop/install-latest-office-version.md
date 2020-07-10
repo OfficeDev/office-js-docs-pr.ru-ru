@@ -1,14 +1,14 @@
 ---
 title: Установка последней версии Office
 description: Сведения о том, как получать последние сборки Office раньше других.
-ms.date: 04/16/2020
+ms.date: 07/07/2020
 localization_priority: Normal
-ms.openlocfilehash: bd76a0a36f12f2aa6add1d63c20a466b2036f805
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: df10d64d69b64283321bbad79aca7f7f6d482dd1
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608134"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45093618"
 ---
 # <a name="install-the-latest-version-of-office"></a>Установка последней версии Office
 
@@ -18,8 +18,8 @@ ms.locfileid: "44608134"
 
 Чтобы получать последние сборки Office раньше других:
 
-- Если вы подписаны на Office 365 для дома, Office 365 персональный или Office 365 для студентов, [примите участие в программе предварительной оценки Office](https://insider.office.com).
-- Если вы пользуетесь Office 365 для бизнеса, прочитайте статью [Установка сборки раннего выпуска для клиентов Office 365 для бизнеса](https://support.office.com/article/Install-the-First-Release-build-for-Office-365-for-business-customers-4dd8ba40-73c0-4468-b778-c7b744d03ead).
+- Если вы являетесь участником семьи, персональным или университетом Microsoft 365, ознакомьтесь [со статьей "Предварительная](https://insider.office.com)подписка на Office".
+- Если вы используете приложения Microsoft 365 для бизнеса, ознакомьтесь со статьей [Установка сборки первого выпуска для приложений microsoft 365 для бизнеса](https://support.office.com/article/Install-the-First-Release-build-for-Office-365-for-business-customers-4dd8ba40-73c0-4468-b778-c7b744d03ead).
 - Если вы используете Office для Mac:
   - Запустите приложение Office.
   - Выберите пункт **Проверить наличие обновлений** в меню "Справка".
@@ -30,7 +30,7 @@ ms.locfileid: "44608134"
 Чтобы получить последнюю сборку Office:
 
 1. Скачайте [средство развертывания Office](https://www.microsoft.com/download/details.aspx?id=49117).
-2. Запустите это средство. Будут извлечены два файла: Setup.exe и configuration.xml.
+2. Run the tool. This extracts the following two files: Setup.exe and configuration.xml.
 3. Замените файл configuration.xml [файлом конфигурации первого выпуска](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-Commands-Samples/master/Tools/FirstReleaseConfig/configuration.xml).
 4. Выполните следующую команду от имени администратора: `setup.exe /configure configuration.xml`
 

@@ -3,12 +3,12 @@ title: Элемент WebApplicationInfo в файле манифеста
 description: Справочная документация по элементу VersionOverrides для файлов манифеста надстроек Office (XML).
 ms.date: 08/12/2019
 localization_priority: Normal
-ms.openlocfilehash: 1bbb3cc9b3db792b2d24ab2fd4003be6093fa837
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 5be75c6e202e40d60961a1b930ef43e583dee240
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44604481"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094409"
 ---
 # <a name="webapplicationinfo-element"></a>Элемент WebApplicationInfo
 
@@ -18,7 +18,7 @@ ms.locfileid: "44604481"
 - *Клиент* OAuth 2.0, которому могут потребоваться разрешения для Microsoft Graph.
 
 > [!NOTE]
-> В настоящее время API единого входа поддерживается в тестовом режиме для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API удостоверений](../requirement-sets/identity-api-requirement-sets.md). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить современную проверку подлинности для клиента](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> В настоящее время API единого входа поддерживается в тестовом режиме для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API удостоверений](../requirement-sets/identity-api-requirement-sets.md). Если вы работаете с надстройкой Outlook, обязательно включите современная проверка подлинности для клиента Microsoft 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить современную проверку подлинности для клиента](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 **WebApplicationInfo** — дочерний элемент элемента [VersionOverrides](versionoverrides.md) в манифесте.  
 

@@ -4,20 +4,20 @@ description: Узнайте больше о наборах обязательн�
 ms.date: 06/10/2020
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: aa591a1b37c94a4db621d19786857303bb6ac473
-ms.sourcegitcommit: 449a728118db88dea22a44f83728d21604d6ee8c
+ms.openlocfilehash: d50c30fd769777c8dd3c168a9289dfb60012bbbd
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "44719065"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094430"
 ---
 # <a name="dialog-api-requirement-sets"></a>Наборы обязательных элементов API диалоговых окон
 
-Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md).
+Requirement sets are named groups of API members. Office Add-ins use requirement sets specified in the manifest or use a runtime check to determine whether an Office host supports APIs that an add-in needs. For more information, see [Office versions and requirement sets](../../develop/office-versions-and-requirement-sets.md).
 
-Надстройки Office работают в нескольких версиях Office. В приведенной ниже таблице перечислены наборы обязательных элементов Dialog API, ведущие приложения Office, которые их поддерживают, а также номера сборок или версий для этих приложений.
+Office Add-ins run across multiple versions of Office. The following table lists the Dialog API requirement sets, the Office host applications that support that requirement set, and the build or version numbers for the Office application.
 
-|  Набор обязательных элементов  | Office 2013 для Windows\*<br>(единовременная покупка) | Office 2016 или более поздней версии в Windows\*<br>(единовременная покупка)   | Office для Windows<br>(версия, подключенная к подписке на Office 365) |  Office для iPad<br>(версия, подключенная к подписке на Office 365)  |  Office для Mac<br>(версия, подключенная к подписке на Office 365)  | Office в Интернете  |  Office Online Server  |
+|  Набор обязательных элементов  | Office 2013 для Windows\*<br>(единовременная покупка) | Office 2016 или более поздней версии в Windows\*<br>(единовременная покупка)   | Office для Windows<br>(подключено к подписке Microsoft 365) |  Office для iPad<br>(подключено к подписке Microsoft 365)  |  Office для Mac<br>(подключено к подписке Microsoft 365)  | Office в Интернете  |  Office Online Server  |
 |:-----|-----|:-----|:-----|:-----|:-----|:-----|:-----|
 | DialogApi 1.1  | Сборка 15.0.4855.1000 или более поздняя | Сборка 16.0.4390.1000 или более поздняя | Версия 1602 (сборка 6741.0000) или более поздняя | 1.22 или более поздняя | 15.20 или более поздняя| Январь 2017 г. | Версия 1608 (сборка 7601.6800) или более поздняя|
 

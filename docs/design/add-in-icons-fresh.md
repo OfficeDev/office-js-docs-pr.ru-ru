@@ -3,16 +3,16 @@ title: Новые рекомендации по значкам стилей дл
 description: Ознакомьтесь с рекомендациями по использованию новых значков значков стилей в надстройках Office.
 ms.date: 12/09/2019
 localization_priority: Normal
-ms.openlocfilehash: 1cad9035b1aaa732c84c9079bbfcb425b4fffcd3
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 7f29de70712448e9ee7458db864fb40746412153
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44607689"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45093933"
 ---
 # <a name="fresh-style-icon-guidelines-for-office-add-ins"></a>Новые рекомендации по значкам стилей для надстроек Office
 
-В версиях Office для Office 2013 + (не подписке) используется значки в стиле Microsoft Office. Если вы предпочитаете, чтобы значки выглядели как однострочный стиль Office 365, ознакомьтесь с разделом [стиль стильных значков для надстроек Office](add-in-icons-monoline.md).
+В версиях Office для Office 2013 + (не подписке) используется значки в стиле Microsoft Office. Если вы предпочитаете, чтобы значки выглядели как однострочный стиль Microsoft 365, ознакомьтесь с [разделом стиль стильных значков для надстроек Office](add-in-icons-monoline.md).
 
 ## <a name="office-fresh-visual-style"></a>Новый визуальный стиль Office
 
@@ -25,10 +25,10 @@ ms.locfileid: "44607689"
 |Правильно|Неправильно|
 |:---|:---|
 |Сохраняйте визуальные элементы простыми и понятными, чтобы сосредоточиться на ключевых элементах общения.| Не используйте артефакты, которые визуально искажают изображение значка.|
-|Используйте язык значков Office для представления поведения или концепций.|Не используйте глифы Office UI Fabric для команд надстроек на ленте Office или в контекстных меню. Значки Fabric имеют собственный стиль, поэтому отличаются от остальных.|
+|Используйте язык значков Office для представления поведения или концепций.|Не изменяйте глифы Office UI Fabric для команд надстройки на ленте приложений Office или контекстных меню. Значки Fabric отличаются по стилю, поэтому не будут совпадать.|
 |Повторно используйте общие визуальные метафоры Office, например кисть для форматирования или увеличительное стекло для поиска.|Не используйте повторно визуальные метафоры для различных команд. Добавление одинаковых значков для различных действий и концепций может привести к путанице. |
 |Перерисуйте свои значки, чтобы уменьшить или увеличить их. Перерисуйте контуры, углы и скругленные края, чтобы повысить четкость линий. |Не изменяйте размеры значков, сжимая или растягивая их. Это может привести к ухудшению визуального качества и непонятному изображению действий. Сложные значки, созданные в большем размере, могут потерять четкость при их уменьшении без перерисовки. |
-|Используйте белую заливку для лучшего восприятия. Для большинства объектов, используемых в значках, необходим белый фон, чтобы они легко читались в темах пользовательского интерфейса Office, а также в режимах высокой контрастности.  |Ваш логотип или торговая марка могут и не указывать на функции определенной команды надстройки. Торговые знаки не всегда можно легко узнать, если они обозначены значками меньшего размера, а также когда к ним применены модификаторы. Торговые знаки часто не соответствуют стилям значков ленты Office, поэтому по-разному привлекают внимание пользователей в среде, где существует множество различных товарных знаков. |
+|Use a white fill for accessibility. Most objects in your icons will require a white background to be legible across Office UI themes and in high-contrast modes.  |Ваш логотип или торговая марка могут и не указывать на функции определенной команды надстройки. Торговые знаки не всегда можно легко узнать, если они обозначены значками меньшего размера, а также когда к ним применены модификаторы. Метки торговых марок часто конфликтуют с стилями значков ленты приложения Office и могут конкурировать за пользовательское вмешательство в насыщенной среде. |
 |Используйте формат PNG с прозрачным фоном. ||
 |Избегайте использования в значках локализуемого содержимого, а также типографских символов, индикаторов абзацев без выравнивания и вопросительных знаков. ||
 
@@ -78,9 +78,9 @@ The following table lists the locations for certain icon sizes.
 
 ## <a name="icon-anatomy-and-layout"></a>Структура и схема значка
 
-Значки Office обычно состоят из базового элемента с модификаторами действия и концептуальными модификаторами. Модификаторы действия представляют такие понятия, как "добавить", "открыть", "создать" или "закрыть". Концептуальные модификаторы представляют состояние, изменение или описание значка.
+Office icons are typically comprised of a base element with action and conceptual modifiers overlayed. Action modifiers represent concepts such as add, open, new, or close. Conceptual modifiers represent status, alteration, or a description of the icon.
 
-Чтобы создать команды, соответствующие пользовательскому интерфейсу Office, следуйте рекомендациям по схеме расположения базовых элементов и модификаторов. Благодаря этому ваши команды будут выглядеть профессионально, а надстройка — надежно. Если вы не соблюдаете каких-либо рекомендаций, у вас на то должны быть веские основания.
+To create commands that align with the Office UI, follow layout guidelines for the base element and modifiers. This ensures that your commands look professional and that your customers will trust your add-in. If you make exceptions to these guidelines, do so intentionally.
 
 На следующем изображении показана схема расположения базовых элементов и модификаторов для значка Office.
 
@@ -89,7 +89,7 @@ The following table lists the locations for certain icon sizes.
 - Размещайте базовые элементы в центре пиксельной рамки, оставляя немного места по краям.
 - Модификаторы действия располагайте в верхнем левом углу.
 - Концептуальные модификаторы размещайте в нижнем правом углу.
-- Ограничивайте количество элементов в значках. В значках с размером 32 пк не добавляйте более двух модификаторов. В значках с размером 16 пк не добавляйте более одного модификатора.
+- Limit the number of elements in your icons. At 32px, limit the number of modifiers to a maximum of two. At 16px, limit the number of modifiers to one.
 
 ### <a name="base-element-padding"></a>Отступ вокруг базового элемента
 
@@ -97,7 +97,7 @@ The following table lists the locations for certain icon sizes.
 
 ### <a name="modifiers"></a>Модификаторы
 
-У всех модификаторов должен быть прозрачный контур (1 пк), граничащий с каждым элементом, включая фон. Элементы не должны сильно перекрывать друг друга. Создайте пустое пространство между метками и границами. Размеры модификаторов могут немного отличаться, но используйте указанные ниже числа в качестве отправной точки.
+All modifiers should have a 1px transparent cutout between each element, including the background. Elements should not directly overlap. Create whitespace between rules and edges. Modifiers can vary slightly in size, but use these dimensions as a starting point.
 
 |**Размер значка**|**Отступ вокруг базового элемента**|**Размер модификатора**|
 |:---|:---|:---|
@@ -115,11 +115,11 @@ The following table lists the locations for certain icon sizes.
 > [!NOTE]
 > Эти руководства по цветам применяются к значкам ленты, используемым в [командах надстроек](add-in-commands.md). Эти значки не отрисовываются с помощью Microsoft UI Fabric, и цветовая палитра отличается от палитры, описанной на странице [Microsoft UI Fabric | Colors | Shared](https://fluentfabric.azurewebsites.net/#/color/shared).
 
-Значки Office имеют ограниченную цветовую палитру. Чтобы обеспечить хорошую интеграцию значков в пользовательский интерфейс Office, используйте цвета, перечисленные в приведенной ниже таблице. Рекомендации по использованию цветов:
+Office icons have a limited color palette. Use the colors listed in the following table to guarantee seamless integration with the Office UI. Apply the following guidelines to the use of color:
 
-- Используйте цвет, чтобы передать значение, а не для украшения. Цвет должен выделять или подчеркивать действие, состояние или элемент, которые явно отличают метку. 
-- По возможности используйте только один дополнительный цвет кроме серого. Применяйте не больше двух дополнительных цветов.
-- Используйте цвета единообразно для всех размеров значков. Цветовые палитры для значков Office незначительно отличаются в зависимости от размера значков. Значки с размером 16 пк и меньше немного темнее, а значки с размером 32 пк и больше — ярче. Если не учитывать эти незначительные корректировки, цвета могут варьироваться в зависимости от размеров значка.
+- Use color to communicate meaning rather than for embellishment. It should highlight or emphasize an action, status, or an element that explicitly differentiates the mark. 
+- If possible, use only one additional color beyond gray. Limit additional colors to two at the most.
+- Colors should have a consistent appearance in all icon sizes. Office icons have slightly different color palettes for different icon sizes. 16px and smaller icons are slightly darker and more vibrant than 32px and larger icons. Without these subtle adjustments, colors appear to vary across sizes.
 
 |**Название цвета**|**RGB**|**Шестнадцатеричный код**|**Цвет**|**Категория**|
 |:---|:---|:---|:---|:---|
@@ -146,7 +146,7 @@ The following table lists the locations for certain icon sizes.
 
 ## <a name="icons-in-high-contrast-modes"></a>Значки в режимах высокой контрастности
 
-Значки Office предназначены для использования в режимах высокой контрастности. Элементы переднего плана хорошо различимы на фоновых изображениях, что улучшает читаемость текста и позволяет применять перекрашивание. В режимах высокой контрастности в Office все пиксели красного, зеленого и синего цвета со значением менее 190 в значке перекрашиваются в черный цвет. Все остальные пиксели отображаются белыми. Другими словами, оцениваются все каналы RGB, в которых значения 0–189 отображаются черным цветом, а значения 190–255 — белым. В других темах с высокой контрастностью используемое пороговое значение также равно 190, но применяются другие правила. Например, в белой теме с высокой контрастностью все пиксели со значением больше 190 становятся непрозрачными, тогда как остальные пиксели остаются прозрачными. Чтобы улучшить читаемость при использовании параметров высокой контрастности, следуйте приведенным рекомендациям:
+Office icons are designed to render well in high contrast modes. Foreground elements are well differentiated from backgrounds to maximize legibility and enable recoloring. In high contrast modes, Office will recolor any pixel of your icon with a red, green, or blue value less than 190 to full black. All other pixels will be white. In other words, each RGB channel is assessed where 0-189 values are black and 190-255 values are white. Other high-contrast themes recolor using the same 190 value threshold but with different rules. For example, the high-contrast white theme will recolor all pixels greater than 190 opaque but all other pixels as transparent. Apply the following guidelines to maximize legibility in high-contrast settings:
 
 - Старайтесь разграничивать элементы переднего и заднего планов с учетом порогового значения 190.
 - Следуйте стилям оформления значков Office.

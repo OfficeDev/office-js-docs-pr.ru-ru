@@ -3,12 +3,12 @@ title: Требования для запуска надстроек Office
 description: Узнайте о требованиях к клиенту и серверу, которые конечный пользователь должен запускать надстройки Office.
 ms.date: 03/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 1c135b362516bef35cab2fa50e9ceeefdaf74015
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: fa01decddcc7cc59945ad92912fabab90cc505f7
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608022"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45093485"
 ---
 # <a name="requirements-for-running-office-add-ins"></a>Требования для запуска надстроек Office
 
@@ -31,7 +31,7 @@ ms.locfileid: "44608022"
 
 Кроме того, требуется [каталог приложений](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md) в SharePoint, чтобы отправить XML-файл манифеста надстройки (контентной или области задач) в поддерживаемых приложениях Office — Excel, PowerPoint, Project и Word.
 
-Чтобы тестировать и запускать надстройки Outlook, необходимо разместить учетную запись электронной почты Outlook в Exchange 2013 или более поздней версии, доступ к которой можно получить в Office 365, Exchange Online или в локально установленной версии. Пользователь или администратор устанавливают файлы манифестов надстроек Outlook на соответствующем сервере.
+Чтобы протестировать и запустить надстройку Outlook, учетная запись электронной почты Outlook должна находиться в Exchange 2013 или более поздней версии, доступной в Microsoft 365, Exchange Online или в локальной установке. Пользователь или администратор устанавливают файлы манифестов надстроек Outlook на соответствующем сервере.
 
 > [!NOTE]
 > Учетные записи POP и IMAP в Outlook не поддерживают надстройки Office.
@@ -43,9 +43,9 @@ ms.locfileid: "44608022"
 
 - Для настольных компьютеров под управлением 32- и 64-разрядных версий Windows, а также таких планшетов, как Surface Pro:
     - 32- или 64-разрядная версия Office 2013 или более поздняя версия в Windows 7 или более поздней версии.
-    - Excel 2013, Outlook 2013, PowerPoint 2013, Project профессиональный 2013, Project 2013 с пакетом обновления 1 (SP1), Word 2013 или более поздняя версия клиента Office, если надстройка Office тестируется или запускается специально для одного из этих клиентов Office. Клиенты Office для настольных ПК можно устанавливать локально или на клиентском компьютере с помощью технологии "нажми и работай".
+    - Excel 2013, Outlook 2013, PowerPoint 2013, Project Professional 2013, Project 2013 SP1, Word 2013, or a later version of the Office client, if you are testing or running an Office Add-in specifically for one of these Office desktop clients. Office desktop clients can be installed on premises or via Click-to-Run on the client computer.
 
-  Если у вас не установлен клиент Office, но есть подписка на Office 365, вы можете [скачать и установить последнюю версию Office](https://support.office.com/article/download-and-install-or-reinstall-office-365-or-office-2019-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658).
+  Если у вас есть действительная подписка на Microsoft 365 и у вас нет доступа к клиенту Office, вы можете [скачать и установить последнюю версию Office](https://support.office.com/article/download-and-install-or-reinstall-office-365-or-office-2019-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658).
 
 - Браузер Internet Explorer 11 или Microsoft Edge (в зависимости от версий Windows и Office) должен быть установлен, но может не использоваться по умолчанию. Для поддержки надстроек Office клиент Office, выступающий в роли ведущего приложения, использует компоненты браузера, которые входят в состав Internet Explorer 11 или Microsoft Edge. Дополнительные сведения см. в статье [Браузеры, используемые надстройками Office](browsers-used-by-office-web-add-ins.md).
 
@@ -57,7 +57,7 @@ ms.locfileid: "44608022"
 
 ## <a name="client-requirements-os-x-desktop"></a>Требования к клиенту: настольный компьютер OS X
 
-Приложение Outlook для Mac, распространяемое в составе Office 365, поддерживает надстройки Outlook. Для запуска надстроек Outlook в Outlook для Mac должны соблюдаться те же требования, что и для самого приложения Outlook для Mac: необходима операционная система OS X 10.10 Yosemite или более поздней версии. Outlook для Mac использует WebKit в качестве обработчика макетов для преобразования страниц надстройки, поэтому дополнительные зависимости от браузеров отсутствуют.
+Outlook в Mac, распространяемый в составе Microsoft 365, поддерживает надстройки Outlook. Запуск надстроек Outlook в Outlook в Mac имеет те же требования, что и Outlook в MAC-адресе: операционная система должна быть не ниже OS X версии 10.10 "Yosemite". Outlook для Mac использует WebKit в качестве обработчика макетов для преобразования страниц надстройки, поэтому дополнительные зависимости от браузеров отсутствуют.
 
 Ниже приведены минимальные версии клиентов Office для Mac, которые поддерживают надстройки Office.
 
@@ -77,9 +77,9 @@ ms.locfileid: "44608022"
 
 | Ведущее приложение | Устройство | Операционная система | Учетная запись Exchange | Мобильный браузер |
 |:-----|:-----|:-----|:-----|:-----|
-|Outlook для Android|Планшеты и смартфоны с Android|Android 4.4 KitKat или более поздней версии|Последнее обновление Office 365 для бизнеса или Exchange Online|Встроенное приложение для Android, браузер не применим|
-|Outlook для iOS|Планшеты iPad, смартфоны iPhone|iOS 11 или более поздняя версия|Последнее обновление Office 365 для бизнеса или Exchange Online|Встроенное приложение для iOS, браузер не применим|
-|Outlook в Интернете|iPhone 4, iPad 2, iPod Touch 4 или более поздние модели этих устройств|iOS 5 или более поздняя версия|Office 365, Exchange Online либо локальная среда Exchange Server 2013 или более поздней версии|Safari|
+|Outlook для Android|Планшеты и смартфоны с Android|Android 4.4 KitKat или более поздней версии|Последние обновления приложений Microsoft 365 для бизнеса или Exchange Online|Встроенное приложение для Android, браузер не применим|
+|Outlook для iOS|Планшеты iPad, смартфоны iPhone|iOS 11 или более поздняя версия|Последние обновления приложений Microsoft 365 для бизнеса или Exchange Online|Встроенное приложение для iOS, браузер не применим|
+|Outlook в Интернете|iPhone 4, iPad 2, iPod Touch 4 или более поздние модели этих устройств|iOS 5 или более поздняя версия|В Microsoft 365, Exchange Online или локально на сервере Exchange Server 2013 или более поздней версии|Safari|
 
 > [!NOTE]
 > Встроенные приложения OWA для Android, OWA для iPad и OWA для iPhone [устарели](https://support.office.com/article/Microsoft-OWA-mobile-apps-are-being-retired-076ec122-4576-4900-bc26-937f84d25a4b) и больше не требуются и не применяются для тестирования надстроек Outlook.
