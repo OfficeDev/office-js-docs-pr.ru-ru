@@ -1,24 +1,24 @@
 ---
 title: Надстройки PowerPoint
-description: Узнайте, как использовать надстройки PowerPoint для создания привлекательных решений для презентаций на разных платформах, включая Windows, iPad, Mac и в браузере.
-ms.date: 11/07/2019
+description: Узнайте, как использовать надстройки PowerPoint для создания удобных решений для презентаций на разных платформах, включая Windows, iPad, Mac и в браузере.
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: f5ec2375729574a48fcf61e766312a3c65c970ba
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 314b441f3d4b6d2188ed630fe2b254aec42a86bc
+ms.sourcegitcommit: 065bf4f8e0d26194cee9689f7126702b391340cc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "45006453"
 ---
 # <a name="powerpoint-add-ins"></a>Надстройки PowerPoint
 
 С помощью надстроек PowerPoint можно создавать удобные решения, подходящие для использования в презентациях на различных платформах, таких как Windows, iPad, Mac и браузеры. Можно создать два типа надстроек PowerPoint:
 
-- **Контентные надстройки** позволяют добавлять динамический контент HTML5 в презентации. Например, ознакомьтесь с надстройкой [LucidChart Diagrams for PowerPoint](https://appsource.microsoft.com/product/office/WA104380117), с помощью которой можно добавить интерактивные схемы LucidChart в набор слайдов.
+- Use **content add-ins** to add dynamic HTML5 content to your presentations. For example, see the [LucidChart Diagrams for PowerPoint](https://appsource.microsoft.com/product/office/wa104380117) add-in, which you can use to inject an interactive diagram from LucidChart into your deck.
 
-- **Надстройки области задач** позволяют добавлять справочные сведения или данные в презентацию с помощью службы. Например, используя надстройку [Pixton Comic Characters](https://appsource.microsoft.com/product/office/WA104380907), вы можете вставить профессиональные фотографии в свою презентацию.
+- **Надстройки области задач** позволяют добавлять справочные сведения или данные в презентацию с помощью службы. Например, используя надстройку [Pexels - Free Stock Photos](https://appsource.microsoft.com/product/office/wa104379997), вы можете вставить профессиональные фотографии в свою презентацию.
 
 ## <a name="powerpoint-add-in-scenarios"></a>Сценарии надстроек PowerPoint
 
