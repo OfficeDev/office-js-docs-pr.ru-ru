@@ -4,16 +4,16 @@ description: Сведения о наборе обязательных элем�
 ms.date: 05/06/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 0cb70dada7fe77ff47a70a8179c96b28799950c6
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: e77bcb25437e082ce0fbf1b8a695db20ae9f14f1
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611381"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094388"
 ---
 # <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
 
-Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md).
+Requirement sets are named groups of API members. Office Add-ins use requirement sets specified in the manifest or use a runtime check to determine whether an Office host supports APIs that an add-in needs. For more information, see [Office versions and requirement sets](../../develop/office-versions-and-requirement-sets.md).
 
 ## <a name="requirement-set-availability"></a>Доступность набора обязательных элементов
 
@@ -24,7 +24,7 @@ ms.locfileid: "44611381"
 >
 > Сведения об использовании API предварительных версий см. в статье [Предварительные версии API JavaScript для Excel](excel-preview-apis.md).
 
-|  Набор обязательных элементов  |  Office для Windows<br>(версия, подключенная к подписке на Office 365)  |  Office для iPad<br>(версия, подключенная к подписке на Office 365)  |  Office для Mac<br>(версия, подключенная к подписке на Office 365)  | Office в Интернете |
+|  Набор обязательных элементов  |  Office для Windows<br>(подключено к подписке на Microsoft 365)  |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac<br>(подключено к подписке на Microsoft 365)  | Office в Интернете |
 |:-----|-----|:-----|:-----|:-----|:-----|
 | [Предварительная версия](excel-preview-apis.md)  | Применяйте последнюю версию Office для использования предварительных версий API (может потребоваться присоединение к [программе предварительной оценки Office](https://insider.office.com)) |
 | [ExcelApiOnline](excel-api-online-requirement-set.md) | Н/Д | Н/Д | Н/Д | Последние (см. [набор обязательных элементов, стр.](./excel-api-online-requirement-set.md)) |
