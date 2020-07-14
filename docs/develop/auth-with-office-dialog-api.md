@@ -1,18 +1,18 @@
 ---
 title: Проверка подлинности и авторизация с помощью Dialog API для Office
 description: Узнайте, как использовать диалоговый API-интерфейс Office, чтобы пользователи могли входить в Google, Facebook, Microsoft 365 и другие службы, защищенные платформой Microsoft Identity.
-ms.date: 01/25/2020
+ms.date: 07/07/2020
 localization_priority: Priority
-ms.openlocfilehash: e7dd0778e840c2cbfd415534d04f5b014f58fafc
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: b119d27c0b4ca7bc91004ce8c1df7ac8f4830122
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608427"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45093737"
 ---
 # <a name="authenticate-and-authorize-with-the-office-dialog-api"></a>Проверка подлинности и авторизация с помощью Dialog API для Office
 
-Многие удостоверяющие центры, которые также называются службами маркеров безопасности (STS), не разрешают открывать свою страницу входа в элементе iframe. К ним относятся Google, Facebook и службы, защищенные платформой удостоверений Майкрософт (прежнее название — Azure AD 2.0), такие как учетная запись Майкрософт и Office 365 (рабочая или учебная учетная запись). При этом возникает проблема с надстройками Office, потому что при работе с надстройкой в **Office в Интернете** область задач является элементом iframe. Пользователи надстройки могут войти только в одну из этих служб, если она открывает полностью отдельный экземпляр браузера. Вот почему Office предоставляет [Dialog API для Office](dialog-api-in-office-add-ins.md), а именно метод [displayDialogAsync](/javascript/api/office/office.ui).
+Многие удостоверяющие центры, которые также называются службами маркеров безопасности (STS), не разрешают открывать свою страницу входа в элементе iframe. К ним относятся Google, Facebook и службы, защищенные платформой удостоверений Майкрософт (прежнее название — Azure AD 2.0), например учетная запись Майкрософт, Microsoft 365 для образования или рабочая учетная запись. При этом возникает проблема с надстройками Office, потому что при работе с надстройкой в **Office в Интернете** область задач является элементом iframe. Пользователи надстройки могут войти только в одну из этих служб, если она открывает полностью отдельный экземпляр браузера. Вот почему Office предоставляет [Dialog API для Office](dialog-api-in-office-add-ins.md), а именно метод [displayDialogAsync](/javascript/api/office/office.ui).
 
 > [!NOTE]
 > В данной статье предполагается, что вы знакомы с [использованием Dialog API для Office в надстройках Office](dialog-api-in-office-add-ins.md).
@@ -46,16 +46,16 @@ ms.locfileid: "44608427"
 
 #### <a name="support-multiple-identity-providers"></a>Поддержка нескольких поставщиков удостоверений
 
-Если пользователь может выбрать поставщика для входа в надстройку, например учетную запись Майкрософт, Google или Facebook, первой должна открываться локальная страница со списком поставщиков (см. предыдущий раздел). После выбора поставщика происходит создание URL-адреса входа и перенаправление на него.
+If your add-in gives the user a choice of providers, such as Microsoft Account, Google, or Facebook, you need a local first page (see preceding section) that provides a UI for the user to select a provider. Selection triggers the construction of the sign-in URL and redirection to it.
 
 #### <a name="authorization-of-the-add-in-to-an-external-resource"></a>Авторизация надстройки через внешний ресурс
 
-В современном Интернете пользователи и веб-приложения являются субъектами безопасности.  У приложений есть свои удостоверения и разрешения для онлайн-ресурсов, таких как Office 365, Google+, Facebook и LinkedIn. Перед развертыванием приложение регистрируется у поставщика ресурса. Регистрация включает:
+В современном Интернете пользователи и веб-приложения являются субъектами безопасности.  У приложений есть свои удостоверения и разрешения для онлайн-ресурсов, таких как Microsoft 365, Google+, Facebook и LinkedIn. Перед развертыванием приложение регистрируется у поставщика ресурса. Регистрация включает:
 
 - Список разрешений, которые нужны приложению.
 - URL-адрес, на который служба ресурса должна возвращать маркер доступа, когда приложение получает доступ к службе.  
 
-Когда пользователь вызывает функцию в приложении, которое получает доступ к его данным в службе ресурса, пользователю будет предложено войти в службу, а затем предоставить приложению необходимые разрешения. Служба затем перенаправляет пользователя на зарегистрированный URL-адрес и передает маркер доступа. Приложение использует маркер доступа для доступа к ресурсам пользователя.
+When a user invokes a function in the application that accesses the user's data in the resource service, they are prompted to sign in to the service and then prompted to grant the application the permissions it needs to the user's resources. The service then redirects the sign-in window to the previously registered URL and passes the access token. The application uses the access token to access the user's resources.
 
 Вы можете управлять этим процессом с помощью Dialog API для Office, используя поток, похожий на тот, который обеспечивает возможность входа пользователей. Отличия:
 

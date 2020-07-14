@@ -1,21 +1,21 @@
 ---
 title: Обзор надстроек Outlook
 description: Надстройки Outlook — это встраиваемые в Outlook решения от сторонних разработчиков, использующие нашу веб-платформу.
-ms.date: 10/09/2019
+ms.date: 07/07/2020
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 82778f7118166f7ed566fc175599efd7049b9d3a
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 1275f7cae6211d6f6c006b7230b316ffd288a4ec
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609029"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45093905"
 ---
 # <a name="outlook-add-ins-overview"></a>Обзор надстроек Outlook
 
 Надстройки Outlook — это встраиваемые в Outlook решения от сторонних разработчиков, использующие нашу веб-платформу. Три ключевых аспекта надстроек Outlook:
 
-- В классических приложениях (Outlook для Windows и Mac), веб-приложениях (Office 365 и Outlook.com) и мобильных решениях используются одинаковые логика надстроек и бизнес-логика.
+- В классических приложениях (Outlook для Windows и Mac), веб-приложениях (Microsoft 365 и Outlook.com) и мобильных решениях используются одинаковые логика надстроек и бизнес-логика.
 - Надстройка Outlook состоит из манифеста, в котором описан способ интеграции надстройки с Outlook (например, при помощи кнопки или области задач), и кода JavaScript или HTML, который составляет пользовательский интерфейс и бизнес-логику надстройки.
 - Пользователи и администраторы могут получать надстройки Outlook из [AppSource](https://appsource.microsoft.com) или [загружать их в неопубликованном виде](sideload-outlook-add-ins-for-testing.md).
 
@@ -27,29 +27,28 @@ ms.locfileid: "44609029"
 
 ## <a name="extension-points"></a>Точки расширения
 
-Надстройка использует точки расширения для интеграции с Outlook. Это можно сделать следующими способами:
+Extension points are the ways that add-ins integrate with Outlook. The following are the ways this can be done:
 
-- Надстройки могут объявлять кнопки, которые отображаются на панелях команд в сообщениях и встречах. Дополнительные сведения см. в статье [Команды надстроек Outlook](add-in-commands-for-outlook.md).
+- Add-ins can declare buttons that appear in command surfaces across messages and appointments. For more information, see [Add-in commands for Outlook](add-in-commands-for-outlook.md).
 
     **Надстройка с кнопками на ленте**
 
     ![Команда надстройки для фигуры без интерфейса](../images/uiless-command-shape.png)
 
-- Надстройки могут активироваться по совпадениям с регулярными выражениями или обнаруженным сущностям в сообщениях и встречах. Дополнительные сведения см. в статье [Контекстно-зависимые надстройки Outlook](contextual-outlook-add-ins.md).
+- Add-ins can link off regular expression matches or detected entities in messages and appointments. For more information, see [Contextual Outlook add-ins](contextual-outlook-add-ins.md).
 
     **Контекстная надстройка для выделенной сущности (адреса)**
 
     ![Показывает контекстное приложение на карточке](../images/outlook-detected-entity-card.png)
-
 
 > [!NOTE]
 > Поскольку [настраиваемые области устарели](https://developer.microsoft.com/outlook/blogs/make-your-add-ins-available-in-the-office-ribbon/), следует убедиться, что вы используете поддерживаемую точку расширения.
 
 ## <a name="mailbox-items-available-to-add-ins"></a>Элементы почтовых ящиков, доступные надстройкам
 
-Надстройки Outlook доступны при создании или просмотре сообщений или встреч. Outlook не активирует надстройки, если текущий элемент сообщения в форме создания или просмотра имеет одну из следующих особенностей:
+Outlook add-ins are available on messages or appointments while composing or reading, but not other item types. Outlook does not activate add-ins if the current message item, in a compose or read form, is one of the following:
 
-- Защищен управлением правами на доступ к данным (IRM) или зашифрован каким-либо другим способом. Один из примеров — сообщение, подписанное цифровой подписью, так как в этом случае используется один из указанных выше механизмов.
+- Protected by Information Rights Management (IRM) or encrypted in other ways for protection. A digitally signed message is an example since digital signing relies on one of these mechanisms.
 
 - Отчет или уведомление о доставке имеет класс сообщения IPM.Report.*, включая отчеты о доставке, о недоставке, а также уведомления о прочтении, о непрочтении и о задержке.
 
@@ -67,7 +66,7 @@ ms.locfileid: "44609029"
 
 ## <a name="supported-hosts"></a>Поддерживаемые ведущие приложения
 
-Надстройки Outlook поддерживают Outlook 2013 или более поздней версии для Windows, Outlook 2016 или более поздней версии для Mac, Outlook в Интернете для локальной версии Exchange 2013 и более поздних версий, Outlook для iOS, Outlook для Android, Outlook в Интернете в Office 365 и Outlook.com. Не все новые функции поддерживаются сразу всеми [клиентами](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients). Просмотрите статьи и справочные материалы по API для этих функций, чтобы узнать, в каких ведущих приложениях они поддерживаются.
+Надстройки Outlook поддерживают Outlook 2013 или более поздней версии для Windows, Outlook 2016 или более поздней версии для Mac, Outlook в Интернете для локальной версии Exchange 2013 и более поздних версий, Outlook для iOS, Outlook для Android, Outlook в Интернете и Outlook.com. Не все новые функции поддерживаются сразу всеми [клиентами](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients). Просмотрите статьи и справочные материалы по API для этих функций, чтобы узнать, в каких ведущих приложениях они поддерживаются.
 
 
 ## <a name="get-started-building-outlook-add-ins"></a>Знакомство с разработкой надстроек Outlook

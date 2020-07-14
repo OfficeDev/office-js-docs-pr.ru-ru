@@ -5,44 +5,44 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: cf5ef2eb6ad0fd8052484bed198bf7bb9597a059
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 6b162a166bda0c988f5fbbaade3b0bef4b650984
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611963"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094073"
 ---
 # <a name="office-add-ins-platform-overview"></a>Обзор платформы надстроек Office
 
-Платформу надстроек Office можно использовать для создания решений, которые расширяют возможности приложений Office и взаимодействуют с содержимым документов Office. В случае надстроек Office можно использовать привычные веб-технологии, например HTML, CSS и JavaScript, для взаимодействия с Word, Excel, PowerPoint, OneNote, Project и Outlook, а также для расширения возможностей этих приложений. Ваше решение может работать в Office на нескольких платформах, включая Windows, Mac, iPad и браузеры.
+You can use the Office Add-ins platform to build solutions that extend Office applications and interact with content in Office documents. With Office Add-ins, you can use familiar web technologies such as HTML, CSS, and JavaScript to extend and interact with Word, Excel, PowerPoint, OneNote, Project, and Outlook. Your solution can run in Office across multiple platforms, including Windows, Mac, iPad, and in a browser.
 
 ![Изображение расширяемости надстроек Office](../images/addins-overview.png)
 
-Надстройки Office могут делать почти все, на что способна веб-страница в браузере. Платформу надстроек Office можно использовать для следующих целей:
+Office Add-ins can do almost anything a webpage can do inside a browser. Use the Office Add-ins platform to:
 
--  **Добавление новых возможностей к клиентам Office.** Подключайте внешние данные к Office, автоматизируйте обработку документов Office, добавляйте в клиенты Office функции сторонних решений и многое другое. Например, с помощью API Microsoft Graph можно подключаться к данным, повышая производительность.
+-  **Add new functionality to Office clients** - Bring external data into Office, automate Office documents, expose third-party functionality in Office clients, and more. For example, use Microsoft Graph API to connect to data that drives productivity.
 
 -  **Создание оснащенных различными функциями интерактивных объектов, которые можно внедрить в документы Office.** Внедряйте карты, диаграммы и интерактивные визуализации, которые пользователи могут добавлять в свои электронные таблицы Excel и презентации PowerPoint.
 
 ## <a name="how-are-office-add-ins-different-from-com-and-vsto-add-ins"></a>Чем надстройки Office отличаются от надстроек COM и VSTO?
 
-Надстройки COM и VSTO представляют собой более ранние решения для интеграции Office, которые работают только в Office для Windows. В отличие от надстроек COM, надстройкам Office не требуется код, который выполняется на устройстве пользователя или в клиенте Office. В надстройках Office ведущее приложение, например Excel, считывает манифест надстройки и подключает настраиваемые кнопки ленты и команды меню надстройки в пользовательском интерфейсе. При необходимости оно загружает JavaScript и HTML-код надстройки, который выполняется в "песочнице" в контексте браузера.
+COM or VSTO add-ins are earlier Office integration solutions that run only on Office on Windows. Unlike COM add-ins, Office Add-ins don't involve code that runs on the user's device or in the Office client. For an Office Add-in, the host application, for example Excel, reads the add-in manifest and hooks up the add-in’s custom ribbon buttons and menu commands in the UI. When needed, it loads the add-in's JavaScript and HTML code, which executes in the context of a browser in a sandbox.
 
 ![Изображение причин использования надстроек Office](../images/why.png)
 
 Преимущества надстроек Office над надстройками, созданными с помощью VBA, модели COM или VSTO:
 
-- Кроссплатформенная поддержка. Надстройки Office работают в Office в Интернете, Office для Windows, Office для Mac и Office для iPad.
+- Cross-platform support. Office Add-ins run in Office on the web, Windows, Mac, and iPad.
 
-- Централизованное развертывание и распространение. Администраторы могут централизованно развертывать надстройки Office в организации.
+- Centralized deployment and distribution. Admins can deploy Office Add-ins centrally across an organization.
 
-- Легкий доступ через AppSource. Вы можете сделать свое решение доступным широкой аудитории, отправив его в AppSource.
+- Easy access via AppSource. You can make your solution available to a broad audience by submitting it to AppSource.
 
-- Стандартная веб-технология. Вы можете использовать любую библиотеку для создания надстроек Office.
+- Based on standard web technology. You can use any library you like to build Office Add-ins.
 
 ## <a name="components-of-an-office-add-in"></a>Компоненты надстройки Office
 
-Надстройка Office включает в себя два основных компонента — XML-файл манифеста и веб-приложение. Манифест определяет различные параметры, включая способ интеграции надстройки с клиентами Office. Веб-приложение должно быть размещено на веб-сервере или в службе веб-хостинга, например в Microsoft Azure.
+An Office Add-in includes two basic components: an XML manifest file, and your own web application. The manifest defines various settings, including how your add-in integrates with Office clients. Your web application needs to be hosted on a web server, or web hosting service, such as Microsoft Azure.
 
 ### <a name="manifest"></a>Манифест
 
@@ -56,7 +56,7 @@ ms.locfileid: "44611963"
 
 ### <a name="web-app"></a>Веб-приложение
 
-Самая простая надстройка Office представляет собой статическую HTML-страницу, которая отображается в приложении Office, но не взаимодействует ни с документом Office, ни с каким-либо другим ресурсом в Интернете. Для создания кода, который взаимодействует с документами Office или позволяет пользователю взаимодействовать с веб-ресурсами из ведущего приложения Office, можно применять любые технологии, как клиентские, так и серверные, которые поддерживает ваш поставщик услуг размещения (например, ASP.NET, PHP или Node.js). Для взаимодействия с клиентами и документами Office можно использовать интерфейсы API JavaScript Office.js.
+The most basic Office Add-in consists of a static HTML page that is displayed inside an Office application, but that doesn't interact with either the Office document or any other Internet resource. However, to create an experience that interacts with Office documents or allows the user to interact with online resources from an Office host application, you can use any technologies, both client and server side, that your hosting provider supports (such as ASP.NET, PHP, or Node.js). To interact with Office clients and documents, you use the Office.js JavaScript APIs.
 
 *Рисунок 2. Компоненты надстройки Hello World для Office*
 
@@ -82,7 +82,7 @@ ms.locfileid: "44611963"
 
 #### <a name="custom-buttons-and-menu-commands"></a>Настраиваемые кнопки и команды меню  
 
-Вы можете добавлять настраиваемые кнопки ленты и элементы меню на ленту в Office в Интернете и Office для Windows. Благодаря этому пользователям будет проще получать доступ к надстройке непосредственно из приложения Office. С помощью кнопок можно выполнять различные действия, например отображение области задач с пользовательским HTML или выполнение функции JavaScript.  
+You can add custom ribbon buttons and menu items to the ribbon in Office on the web and Windows. This makes it easy for users to access your add-in directly from their Office application. Command buttons can launch different actions such as showing a task pane with custom HTML or executing a JavaScript function.  
 
 *Рис. 3. Команды надстройки на ленте*
 
@@ -90,7 +90,7 @@ ms.locfileid: "44611963"
 
 #### <a name="task-panes"></a>Области задач  
 
-Для работы с решением пользователи могут использовать не только команды надстройки, но и области задач. В клиентах, не поддерживающих команды надстроек (Office 2013 и Office для iPad), надстройка запускается в виде области задач. Пользователи запускают надстройки области задач с помощью кнопки **Мои надстройки** на вкладке **Вставка**.
+You can use task panes in addition to add-in commands to enable users to interact with your solution. Clients that do not support add-in commands (Office 2013 and Office on iPad) run your add-in as a task pane. Users launch task pane add-ins via the **My Add-ins** button on the **Insert** tab.
 
 *Рис. 4. Область задач*
 
@@ -98,15 +98,15 @@ ms.locfileid: "44611963"
 
 ### <a name="extend-outlook-functionality"></a>Расширение возможностей Outlook
 
-Надстройки Outlook могут расширять функциональные возможности ленты Office и в зависимости от контекста отображаться рядом с просматриваемым или создаваемым элементом Outlook. Они могут взаимодействовать с письмами, приглашениями на собрания, ответами на приглашения на собрания, сообщениями об отмене собраний или данными о встречах, когда пользователь просматривает полученный элемент, отвечает на него или создает новый. 
+Outlook add-ins can extend the Office app ribbon and also display contextually next to an Outlook item when you're viewing or composing it. They can work with an email message, meeting request, meeting response, meeting cancellation, or appointment when a user is viewing a received item or replying or creating a new item. 
 
-Надстройки Outlook могут получать доступ к зависящей от контекста информации, предоставляемой элементом, например к адресу или идентификатору для отслеживания, а затем использовать эти данные для доступа к дополнительным сведениям на сервере и в веб-службах с целью повышения удобства работы пользователей. В большинстве случаев надстройка Outlook может без изменений работать в ведущем приложении Outlook, обеспечивая согласованность интерфейса на компьютерах, в Интернете, на планшетах и на мобильных устройствах.
+Outlook add-ins can access contextual information from the item, such as an address or tracking ID, and then use that data to access additional information on the server and from web services to create compelling user experiences. In most cases, an Outlook add-in runs without modification in the Outlook host application to provide a seamless experience on the desktop, web, and tablet and mobile devices.
 
 Обзор надстроек Outlook см. в статье [Общие сведения о надстройках Outlook](../outlook/outlook-add-ins-overview.md).
 
 ### <a name="create-new-objects-in-office-documents"></a>Создание новых объектов в документах Office
 
-Вы можете внедрить веб-объекты, или контентные надстройки, в документы Excel и PowerPoint. Благодаря контентным надстройкам можно интегрировать мультимедиа (например, видеопроигрыватель YouTube или галерею рисунков), полнофункциональные веб-визуализации данных и другое внешнее содержимое.
+You can embed web-based objects called content add-ins within Excel and PowerPoint documents. With content add-ins, you can integrate rich, web-based data visualizations, media (such as a YouTube video player or a picture gallery), and other external content.
 
 *Рис. 5. Контентная надстройка*
 
@@ -114,7 +114,7 @@ ms.locfileid: "44611963"
 
 ## <a name="office-javascript-apis"></a>API JavaScript для Office
 
-API JavaScript для Office содержат объекты и элементы для создания надстроек и взаимодействия с содержимым Office и веб-службами. В Excel, Outlook, Word, PowerPoint, OneNote и Project используется общая объектная модель. Кроме того, существуют расширенные объектные модели для Excel и Word. Эти API предоставляют доступ к известным объектам, таким как абзацы и книги, что упрощает создание надстройки для определенного ведущего приложения.  
+The Office JavaScript APIs contain objects and members for building add-ins and interacting with Office content and web services. There is a common object model that is shared by Excel, Outlook, Word, PowerPoint, OneNote and Project. There are also more extensive host-specific object models for Excel and Word. These APIs provide access to well-known objects such as paragraphs and workbooks, which makes it easier to create an add-in for a specific host.  
 
 ## <a name="next-steps"></a>Дальнейшие действия:
 

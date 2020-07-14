@@ -3,12 +3,12 @@ title: XML-манифест надстроек Office
 description: Получите обзор манифеста надстройки Office и его использования.
 ms.date: 03/18/2020
 localization_priority: Priority
-ms.openlocfilehash: 0df47ac67a924ab9fd2b3064e0a1ff1b4aa63360
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 4d2fa054cc268b68eb1c05ba82f9cd7745bc8685
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609001"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45093751"
 ---
 # <a name="office-add-ins-xml-manifest"></a>XML-манифест надстроек Office
 
@@ -18,7 +18,7 @@ XML-файл манифеста надстройки Office описывает �
 
 * предоставлять идентификатор, версию, описание, отображаемое имя и языковой стандарт по умолчанию.
 
-* указывать изображения, используемые для фирменного оформления надстройки, и значки, используемые для [команд надстройки][] в ленте Office;
+* указывать изображения, используемые для фирменного оформления надстройки, и значки, используемые для [команд надстройки][] на ленте приложения Office;
 
 * указывать, как надстройка интегрируется с Office, включая создаваемые ею элементы пользовательского интерфейса, например кнопки на ленте;
 
@@ -115,7 +115,7 @@ _\*\* SupportUrl требуется только для надстроек ра�
 
 ## <a name="best-practices-for-submitting-to-appsource"></a>Рекомендации по отправке решений в AppSource
 
-Убедитесь, что идентификатор надстройки представляет собой допустимый и уникальный GUID. В Интернете доступно множество генераторов, с помощью которых можно создать уникальный GUID.
+Make sure that the add-in ID is a valid and unique GUID. Various GUID generator tools are available on the web that you can use to create a unique GUID.
 
 Надстройки, отправляемые в AppSource, также должны включать элемент [SupportUrl](../reference/manifest/supporturl.md). Дополнительные сведения см. в статье [Политики проверки для приложений и надстроек, отправляемых в AppSource](/legal/marketplace/certification-policies).
 
@@ -213,7 +213,7 @@ _\*\* SupportUrl требуется только для надстроек ра�
             Think of the FunctionFile as the "code behind" ExecuteFunction-->
           <FunctionFile resid="Contoso.FunctionFile.Url" />
 
-          <!--PrimaryCommandSurface==Main Office Ribbon-->
+          <!--PrimaryCommandSurface==Main Office app ribbon-->
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
             <!--Use OfficeTab to extend an existing Tab. Use CustomTab to create a new tab -->
             <!-- Documentation includes all the IDs currently tested to work -->

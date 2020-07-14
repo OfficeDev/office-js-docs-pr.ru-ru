@@ -1,15 +1,15 @@
 ---
-ms.date: 01/21/2020
+ms.date: 07/07/2020
 ms.prod: non-product-specific
 description: Руководство по обмену кодом между надстройкой VSTO и надстройкой Office.
 title: Руководство. Обмен кодом между надстройкой VSTO и надстройкой Office с использованием общей библиотеки кода
 localization_priority: Priority
-ms.openlocfilehash: f4306e4a23483b58d1503c1ee257194b430b31ef
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 42903b607bd9bb6f6d81454106b8de03cc47f1e4
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611066"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094262"
 ---
 # <a name="tutorial-share-code-between-both-a-vsto-add-in-and-an-office-add-in-with-a-shared-code-library"></a>Руководство. Обмен кодом между надстройкой VSTO и надстройкой Office с помощью общей библиотеки кода
 
@@ -50,7 +50,7 @@ ms.locfileid: "44611066"
 
 Кроме того, необходимо следующее:
 
-- Учетная запись Office 365. Вы можете присоединиться к [программе для разработчиков Office 365](https://aka.ms/devprogramsignup), включающей бесплатную подписку на Office 365 сроком на 1 год.
+- Учетная запись Microsoft 365. Вы можете присоединиться к [программе для разработчиков Microsoft 365](https://aka.ms/devprogramsignup), включающей бесплатную подписку на Office 365 сроком на 1 год.
 - Клиент Microsoft Azure. Пробную подписку можно получить на сайте [Microsoft Azure](https://account.windowsazure.com/SignUp).
 
 ## <a name="the-cell-analyzer-vsto-add-in"></a>Надстройка VSTO для анализа ячеек

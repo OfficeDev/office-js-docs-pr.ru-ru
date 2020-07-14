@@ -1,15 +1,15 @@
 ---
 title: Руководство. Сборка надстройки Outlook для создания сообщения
 description: В этом руководстве вы создадите надстройку Outlook, которая вставляет списки GitHub в тело нового сообщения.
-ms.date: 12/10/2019
+ms.date: 07/07/2020
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: 66ce5aa01cc8ef82d8a4bd0030c9e94a9433daad
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 22b06d0c455cfcf0a4331976a4e23e0eeb123415
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611059"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45093506"
 ---
 # <a name="tutorial-build-a-message-compose-outlook-add-in"></a>Руководство. Сборка надстройки Outlook для создания сообщения
 
@@ -37,7 +37,7 @@ ms.locfileid: "44611059"
     > [!NOTE]
     > Даже если вы уже установили генератор Yeoman, рекомендуем обновить пакет до последней версии из npm.
 
-- Outlook 2016 или более поздней версии для Windows (подключенный к учетной записи Office 365) или Outlook в Интернете
+- Outlook 2016 или более поздней версии для Windows (подключенный к учетной записи Microsoft 365) или Outlook в Интернете
 
 - Учетная запись [GitHub](https://www.github.com)
 

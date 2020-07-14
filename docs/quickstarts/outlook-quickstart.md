@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 06/23/2020
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: 07f4eeae8cfd4a1962c15640555b2283a8d9fa3b
-ms.sourcegitcommit: a4873c3525c7d30ef551545d27eb2c0a16b4eb50
+ms.openlocfilehash: 6eb510986ebb9cd8a4362f8c11f744e694bef5f7
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44888154"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094164"
 ---
 # <a name="build-your-first-outlook-add-in"></a>Создание первой надстройки Outlook
 
@@ -131,10 +131,10 @@ ms.locfileid: "44888154"
     > [!NOTE]
     > Если вы уже установили Visual Studio 2019, [используйте установщик Visual Studio](/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**.
 
-- Office 365
+- Office 365
 
     > [!NOTE]
-    > Если у вас нет подписки на Office 365, вы можете получить бесплатную подписку, зарегистрировавшись в [программе для разработчиков Office 365](https://developer.microsoft.com/office/dev-program).
+    > Если у вас нет подписки на Microsoft 365, вы можете получить бесплатную подписку, зарегистрировавшись в [программе для разработчиков Microsoft 365](https://developer.microsoft.com/office/dev-program).
 
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
@@ -267,7 +267,7 @@ ms.locfileid: "44888154"
 1. В диалоговом окне **Подключение к учетной записи электронной почты Exchange** введите адрес электронной почты и пароль для вашей [учетной записи Майкрософт](https://account.microsoft.com/account) и нажмите кнопку **Подключить**. Когда в браузере откроется страница входа в Outlook.com, войдите в свою учетную запись электронной почты с теми же учетными данными, которые были введены ранее.
 
     > [!NOTE]
-    > Если диалоговое окно **Подключение к учетной записи электронной почты Exchange** повторно предлагает выполнить вход, для учетных записей в вашем клиенте Office 365, возможно, отключена обычная проверка подлинности. Чтобы протестировать эту надстройку, вместо этого выполните вход с помощью [учетной записи Майкрософт](https://account.microsoft.com/account).
+    > Если диалоговое окно **Подключение к учетной записи электронной почты Exchange** повторно предлагает выполнить вход, для учетных записей в вашем клиенте Microsoft 365, возможно, отключена обычная проверка подлинности. Чтобы протестировать эту надстройку, вместо этого выполните вход с помощью [учетной записи Майкрософт](https://account.microsoft.com/account).
 
 1. В Outlook в Интернете выберите или откройте сообщение.
 

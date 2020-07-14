@@ -1,14 +1,14 @@
 ---
 title: Требования к надстройкам Outlook
 description: Чтобы надстройки Outlook загружались и работали надлежащим образом, существует ряд требований к серверам и клиентам.
-ms.date: 10/09/2019
+ms.date: 07/07/2020
 localization_priority: Priority
-ms.openlocfilehash: 90c917f7dfa324f98f0a5d88ba59d6467e234ab3
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 700e0efd2ab2655de61d37d42038fa2c15a99cb4
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611661"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45093996"
 ---
 # <a name="outlook-add-in-requirements"></a>Требования к надстройкам Outlook
 
@@ -26,11 +26,11 @@ ms.locfileid: "44611661"
    - Outlook в Интернете для Exchange 2013
    - Outlook.com.
 
-- Клиент должен иметь прямое подключение к серверу Exchange Server или Office 365. При настройке клиента пользователь должен выбрать тип учетной записи **Exchange**, **Office 365** или **Outlook.com**. Если клиент настроен на подключение POP3 или IMAP, надстройки не загрузятся.
+- The client must be connected to an Exchange server or Microsoft 365 using a direct connection. When configuring the client, the user must choose an **Exchange**, **Office 365**, or **Outlook.com** account type. If the client is configured to connect with POP3 or IMAP, add-ins will not load.
 
 ## <a name="mail-server-requirements"></a>Требования к почтовым серверам
 
-Если пользователь подключен к Office 365 или Outlook.com, требования к почтовому серверу уже выполнены. Но если пользователи подключаются к локально установленным экземплярам Exchange Server, требуется соответствие указанным ниже условиям.
+If the user is connected to Microsoft 365 or Outlook.com, mail server requirements are all taken care of already. However, for users connected to on-premises installations of Exchange Server, the following requirements apply.
 
 - Должен использоваться сервер Exchange 2013 или более поздней версии.
 - Веб-службы Exchange (EWS) должны быть включены и подключены к Интернету. Многие надстройки требуют надлежащей работы EWS.
@@ -39,7 +39,7 @@ ms.locfileid: "44611661"
 
 ## <a name="add-in-server-requirements"></a>Требования к серверам надстроек
 
-Файлы надстройки (например, HTML, JavaScript) могут быть размещены на любой платформе веб-сервера. Единственное требование — настройка сервера на использование HTTPS и доверия к SSL-сертификату со стороны клиента.
+Add-in files (HTML, JavaScript, etc.) can be hosted on any web server platform desired. The only requirement is that the server must be configured to use HTTPS, and the SSL certificate must be trusted by the client.
 
 ## <a name="see-also"></a>См. также
 

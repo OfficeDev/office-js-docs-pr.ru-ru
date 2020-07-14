@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач OneNote
 description: Узнайте, как создать простую надстройку для области задач OneNote, используя API JS для Office.
-ms.date: 01/16/2020
+ms.date: 07/07/2020
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: 6c09ca26047adeaacf93d77238cf831fbd2601ea
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 6f057d650451d12e834d8f875f40d9d6d71ee4d7
+ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608917"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "45094157"
 ---
 # <a name="build-your-first-onenote-task-pane-add-in"></a>Создание первой надстройки области задач OneNote
 
