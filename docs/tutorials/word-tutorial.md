@@ -87,11 +87,11 @@ ms.locfileid: "45093513"
 
 8. Добавьте следующую функцию в конец файла. Примечание.
 
-   - Your Word.js business logic will be added to the function that is passed to `Word.run`. This logic does not execute immediately. Instead, it is added to a queue of pending commands.
+   - Бизнес-логика Word.js будет добавлена в функцию, передаваемую методу `Word.run`. Эта логика выполняется не сразу. Вместо этого она добавляется в очередь ожидания команд.
 
    - Метод `context.sync` отправляет все команды из очереди в Word для выполнения.
 
-   - The `Word.run` is followed by a `catch` block. This is a best practice that you should always follow. 
+   - За методом `Word.run` следует блок `catch`. Рекомендуется всегда следовать этой методике. 
 
     ```js
     function insertParagraph() {
@@ -114,7 +114,7 @@ ms.locfileid: "45093513"
 
    - Первый параметр метода `insertParagraph` — это текст нового абзаца.
 
-   - The second parameter is the location within the body where the paragraph will be inserted. Other options for insert paragraph, when the parent object is the body, are "End" and "Replace".
+   - Второй параметр — расположение в основном тексте, где будет вставлен абзац. Другие варианты вставки абзаца, родительским объектом которого является основной текст, — End и Replace.
 
     ```js
     var docBody = context.document.body;
@@ -318,11 +318,11 @@ ms.locfileid: "45093513"
 
 4. В Word создайте [настраиваемый стиль](https://support.office.com/article/customize-or-create-new-styles-d38d6e47-f6fc-48eb-a607-1eb120dec563) с именем "MyCustomStyle". Его форматирование может быть любым.
 
-5. Choose the **Apply Style** button. The first paragraph will be styled with the built-in style **Intense Reference**.
+5. Нажмите кнопку **Apply Style** (Применить стиль). К первому абзацу будет применен встроенный стиль **Сильная ссылка**.
 
-6. Choose the **Apply Custom Style** button. The last paragraph will be styled with your custom style. (If nothing seems to happen, the last paragraph might be blank. If so, add some text to it.)
+6. Нажмите кнопку **Apply Custom Style** (Применить пользовательский стиль). К последнему абзацу будет применен созданный вами стиль. Если ничего не происходит, возможно, последний абзац пуст. Если это так, добавьте в него какой-нибудь текст.
 
-7. Choose the **Change Font** button. The font of the second paragraph changes to 18 pt., bold, Courier New.
+7. Нажмите кнопку **Change Font** (Изменить шрифт). Шрифт второго абзаца изменится на полужирный Courier New с размером 18.
 
     ![Руководство по Word: применение стилей и шрифта](../images/word-tutorial-apply-styles-and-font-2.png)
 
@@ -374,15 +374,15 @@ ms.locfileid: "45093513"
 
 6. В функции `insertTextIntoRange()` замените `TODO1` следующим кодом: Примечание.
 
-   - The method is intended to insert the abbreviation ["(C2R)"] into the end of the Range whose text is "Click-to-Run". It makes a simplifying assumption that the string is present and the user has selected it.
+   - Этот метод призван вставить аббревиатуру ["(C2R)"] в конце диапазона с текстом "Click-to-Run". Для простоты предполагается, что такая строка существует и пользователь выделил ее.
 
    - Первый параметр метода `Range.insertText` — это строка, вставляемая в объект `Range`.
 
-   - The second parameter specifies where in the range the additional text should be inserted. Besides "End", the other possible options are "Start", "Before", "After", and "Replace". 
+   - Второй параметр указывает, в каком месте диапазона требуется вставить дополнительный текст. Помимо значения End, можно использовать значения Start, Before, After и Replace. 
 
-   - The difference between "End" and "After" is that "End" inserts the new text inside the end of the existing range, but "After" creates a new range with the string and inserts the new range after the existing range. Similarly, "Start" inserts text inside the beginning of the existing range and "Before" inserts a new range. "Replace" replaces the text of the existing range with the string in the first parameter.
+   - Разница между значениями End и After состоит в том, что End вставляет новый текст в конце имеющегося диапазона, а After создает новый диапазон со строкой и вставляет его после имеющегося. Аналогично, Start вставляет текст в начале имеющегося диапазона, а Before вставляет новый диапазон. Replace заменяет текст существующего диапазона на строку из первого параметра.
 
-   - You saw in an earlier stage of the tutorial that the insert* methods of the body object do not have the "Before" and "After" options. This is because you can't put content outside of the document's body.
+   - На одном из предыдущих этапов руководства вы могли заметить, что в методах insert* объекта body нет параметров Before и After. Это связано с тем, что содержимое невозможно добавлять за пределами основного текста документа.
 
     ```js
     var doc = context.document;
@@ -421,11 +421,11 @@ ms.locfileid: "45093513"
         //        been queued.
     ```
 
-2. You can't have two `return` statements in the same unbranching code path, so delete the final line `return context.sync();` at the end of the `Word.run`. You'll add a new final `context.sync` later in this tutorial.
+2. Для двух операторов `return` не может использоваться один путь кода, который не разветвляется, поэтому удалите последнюю строку `return context.sync();` в конце метода `Word.run`. Последний метод `context.sync` будет добавлен позже в этом руководстве.
 
 3. Вырежьте строку `doc.body.insertParagraph` и вставьте ее вместо заполнителя `TODO4`.
 
-4. Replace `TODO5` with the following code. Note:
+4. Замените `TODO5` на приведенный ниже код. Обратите внимание:
 
    - Передача метода `sync` в функцию `then` гарантирует, что он не будет выполняться, пока логика `insertParagraph` не будет поставлена в очередь.
 
@@ -503,11 +503,11 @@ function insertTextIntoRange() {
 
 6. В функции `insertTextBeforeRange()` замените `TODO1` следующим кодом: Примечание.
 
-   - The method is intended to add a range whose text is "Office 2019, " before the range with text "Office 365". It makes a simplifying assumption that the string is present and the user has selected it.
+   - Этот метод предназначен для добавления диапазона с текстом "Office 2019, " перед диапазоном с текстом "Office 365". Для простоты предполагается, что такая строка существует и пользователь выделил ее.
 
    - Первый параметр метода `Range.insertText` — это добавляемая строка.
 
-   - The second parameter specifies where in the range the additional text should be inserted. For more details about the location options, see the previous discussion of the `insertTextIntoRange` function.
+   - Второй параметр указывает, в каком месте диапазона требуется вставить дополнительный текст. Дополнительные сведения о вариантах расположения см. выше в описании функции `insertTextIntoRange`.
 
     ```js
     var doc = context.document;
@@ -529,7 +529,7 @@ function insertTextIntoRange() {
         //        been queued.
     ```
 
-8. Replace `TODO3` with the following code. This new paragraph will demonstrate the fact that the new text is ***not*** part of the original selected range. The original range still has only the text it had when it was selected.
+8. Замените `TODO3` на приведенный ниже код. Этот абзац покажет, что новый текст ***не*** входит в исходный выделенный диапазон. Исходный диапазон по-прежнему содержит такой же текст, как и когда он был выделен.
 
     ```js
     doc.body.insertParagraph("Current text of original range: " + originalRange.text, "End");
@@ -598,15 +598,15 @@ function insertTextIntoRange() {
 
 4. В документе выберите фразу "Click-to-Run". *Будьте осторожны, чтобы не включать пробелы или запятые в выделенном фрагменте.*
 
-5. Choose the **Insert Abbreviation** button. Note that " (C2R)" is added. Note also that at the bottom of the document a new paragraph is added with the entire expanded text because the new string was added to the existing range.
+5. Нажмите кнопку **Insert Abbreviation** (Вставить аббревиатуру). Обратите внимание на добавленную строку " (C2R)". Кроме того, обратите внимание, что в конце документа добавлен новый абзац со всем развернутым текстом, так как новая строка была добавлена к имеющемуся диапазону.
 
 6. В документе выберите фразу "Office 365". *Будьте осторожны, чтобы не выделить пробел в начале или конце фразы.*
 
-7. Choose the **Add Version Info** button. Note that "Office 2019, " is inserted between "Office 2016" and "Office 365". Note also that at the bottom of the document a new paragraph is added but it contains only the originally selected text because the new string became a new range rather than being added to the original range.
+7. Нажмите кнопку **Add Version Info** (Добавить сведения о версии). Обратите внимание, что между строками "Office 2016" и "Office 365" вставлена строка "Office 2019, ". Кроме того, обратите внимание, что в конце документа появился новый абзац, содержащий только изначально выделенный текст, так как новая строка стала новым диапазоном, а не была добавлена к существующему.
 
 8. В документе выделите слово "несколько". *Будьте осторожны, чтобы не выделить пробел в начале или конце фразы.*
 
-9. Choose the **Change Quantity Term** button. Note that "many" replaces the selected text.
+9. Нажмите кнопку **Change Quantity Term** (Изменить числительное). Обратите внимание, что слово "many" заменило выделенный текст.
 
     ![Руководство по Word: добавленный и замененный текст](../images/word-tutorial-text-replace-2.png)
 
@@ -716,7 +716,7 @@ function insertTextIntoRange() {
 
    - Первая строка добавляет пустой абзац в конце документа. 
 
-   - The second line inserts a string of HTML at the end of the paragraph; specifically two paragraphs, one formatted with Verdana font, the other with the default styling of the Word document. (As you saw in the `insertImage` method earlier, the `context.document.body` object also has the `insert*` methods.)
+   - Вторая команда вставляет строку HTML-кода в конце абзаца. В частности, вставляются два абзаца, в одном из которых используется шрифт Verdana, а в другом — стандартный стиль документа Word. Как видно по вышеописанному методу `insertImage`, у объекта `context.document.body` также есть методы `insert*`.
 
     ```js
     var blankParagraph = context.document.body.paragraphs.getLast().insertParagraph("", "After");
@@ -813,7 +813,7 @@ function insertTextIntoRange() {
 > [!NOTE]
 > Существует несколько типов элементов управления содержимым, которые можно добавить в документ Word через пользовательский интерфейс, но в настоящее время Word.js. поддерживает только элементы управления содержимым Rich Text.
 >
-> Before you start this step of the tutorial, we recommend that you create and manipulate Rich Text content controls through the Word UI, so you can be familiar with the controls and their properties. For details, see [Create forms that users complete or print in Word](https://support.office.com/article/create-forms-that-users-complete-or-print-in-word-040c5cc1-e309-445b-94ac-542f732c8c8b).
+> Прежде чем приступать к этому этапу руководства, рекомендуем создать элементы управления форматированным текстом и управлять ими через пользовательский интерфейс Word, чтобы получить представление об этих элементах и их свойствах. Дополнительные сведения см. в статье [Создание форм, предназначенных для заполнения или печати в приложении Word](https://support.office.com/article/create-forms-that-users-complete-or-print-in-word-040c5cc1-e309-445b-94ac-542f732c8c8b).
 
 ### <a name="create-a-content-control"></a>Создание элемента управления содержимым
 
@@ -853,13 +853,13 @@ function insertTextIntoRange() {
 
 6. В функции `createContentControl()` замените `TODO1` следующим кодом: Примечание.
 
-   - This code is intended to wrap the phrase "Office 365" in a content control. It makes a simplifying assumption that the string is present and the user has selected it.
+   - Этот код заключает фразу "Office 365" в элемент управления содержимым. Для простоты предполагается, что такая строка существует и пользователь выделил ее.
 
    - Свойство `ContentControl.title` задает видимый заголовок элемента управления содержимым.
 
    - Свойство `ContentControl.tag` задает тег, с помощью которого можно получить ссылку на элемент управления содержимым путем вызова метода `ContentControlCollection.getByTag`, который будет использоваться в последующей функции.
 
-   - The `ContentControl.appearance` property specifies the visual look of the control. Using the value "Tags" means that the control will be wrapped in opening and closing tags, and the opening tag will have the content control's title. Other possible values are "BoundingBox" and "None".
+   - Свойство `ContentControl.appearance` задает внешний вид элемента управления. Значение Tags указывает, что элемент управления будет заключен в открывающие и закрывающие теги, а открывающий тег будет содержать заголовок элемента управления содержимым. Другие возможные значения: BoundingBox и None.
 
    - Свойство `ContentControl.color` задает цвет тегов или рамки ограничивающего прямоугольника.
 
