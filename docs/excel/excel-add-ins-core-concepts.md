@@ -1,14 +1,14 @@
 ---
 title: Основные концепции программирования с помощью API JavaScript для Excel
 description: Создание надстроек для Excel с помощью API JavaScript для Excel.
-ms.date: 06/20/2019
+ms.date: 07/13/2020
 localization_priority: Priority
-ms.openlocfilehash: c9e72f7408af6b25b2db49939d02b5c96bd21ce7
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 01e5fa1037719e89eed70f00e63431bbd445c213
+ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609722"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45159418"
 ---
 # <a name="fundamental-programming-concepts-with-the-excel-javascript-api"></a>Основные концепции программирования с помощью API JavaScript для Excel
 
@@ -211,35 +211,6 @@ range.values = 'Due Date';
 Если диапазон содержит большое количество ячеек, значений, форматов чисел или формул, то, возможно, не удастся выполнить операции API над этим диапазоном. API всегда делает все возможное, чтобы выполнить запрошенную операцию над диапазоном (то есть получить или записать указанные данные), но попытка выполнить операцию чтения или записи для большого диапазона может привести к ошибке API из-за чрезмерного потребления ресурсов. Чтобы избежать таких ошибок, мы рекомендуем выполнять отдельные операции чтения или записи для небольших подмножеств большого диапазона, а не пытаться выполнить одну операцию чтения или записи для большого диапазона.
 
 Дополнительные сведения об ограничениях системы см. в статье [Ограничения передачи данных в Excel](../develop/common-coding-issues.md#excel-data-transfer-limits).
-
-## <a name="update-all-cells-in-a-range"></a>Изменение всех ячеек в диапазоне
-
-Если необходимо одинаково изменить все ячейки в диапазоне (например, заполнить все ячейки одним и тем же значением или формулой либо задать один и тот же формат чисел), задайте для соответствующего свойства в объекте `range` (одно) необходимое значение.
-
-В примере ниже показано, как получить диапазон, содержащий 20 ячеек, а затем задать формат чисел и заполнить все ячейки в диапазоне значением **3/11/2015** (11.03.2015).
-
-```js
-Excel.run(function (context) {
-    var sheetName = 'Sheet1';
-    var rangeAddress = 'A1:A20';
-    var worksheet = context.workbook.worksheets.getItem(sheetName);
-
-    var range = worksheet.getRange(rangeAddress);
-    range.numberFormat = 'm/d/yyyy';
-    range.values = '3/11/2015';
-    range.load('text');
-
-    return context.sync()
-      .then(function () {
-        console.log(range.text);
-    });
-}).catch(function (error) {
-    console.log('Error: ' + error);
-    if (error instanceof OfficeExtension.Error) {
-      console.log('Debug info: ' + JSON.stringify(error.debugInfo));
-    }
-});
-```
 
 ## <a name="handle-errors"></a>Обработка ошибок
 
