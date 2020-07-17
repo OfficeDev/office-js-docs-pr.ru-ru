@@ -4,12 +4,12 @@ description: Сведения о настройке надстройки с по
 ms.date: 07/07/2020
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: c1d292ed8ead40201dd035d6ae8e6997174ea477
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 8d4ab4653bcd8fccdcbecbe2e7e8e29a49a3184f
+ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45094486"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45159453"
 ---
 # <a name="customize-your-nodejs-sso-enabled-add-in"></a>Настройка надстройки Node.js с поддержкой единого входа
 
@@ -18,7 +18,7 @@ ms.locfileid: "45094486"
 
 [Быстрый запуск единого входа](sso-quickstart.md) создает надстройку с включенной поддержкой единого входа, которая получает данные профиля пользователя, выполнившего вход, и записывает их в документ или сообщение. В этой статье описывается процесс обновления надстройки, созданной с помощью генератора Yeoman в быстром запуске единого входа, для добавления новых функциональных возможностей, требующих других разрешений.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Предварительные требования
 
 * Надстройка Office, созданная в соответствии с инструкциями, приведенными в [кратком](sso-quickstart.md)руководстве по SSO.
 
@@ -73,7 +73,7 @@ ms.locfileid: "45094486"
 
     а. В разделе **файлы**выберите **файлы. Read. ALL**.
 
-    б) Нажмите кнопку **Добавить разрешения** в нижней части панели, чтобы сохранить изменения этих разрешений.
+    б. Нажмите кнопку **Добавить разрешения** в нижней части панели, чтобы сохранить изменения этих разрешений.
 
 12. Нажмите кнопку **предоставить согласие администратора для пользователя [имя клиента]** .
 
@@ -99,7 +99,7 @@ ms.locfileid: "45094486"
 
     а. Замените `GRAPH_URL_SEGMENT=/me` на следующий:`GRAPH_URL_SEGMENT=/me/drive/root/children`
 
-    б) Замените `QUERY_PARAM_SEGMENT=` на следующий:`QUERY_PARAM_SEGMENT=?$select=name&$top=10`
+    б. Замените `QUERY_PARAM_SEGMENT=` на следующий:`QUERY_PARAM_SEGMENT=?$select=name&$top=10`
 
     в. Замените `SCOPE=User.Read` на следующий:`SCOPE=Files.Read.All`
 

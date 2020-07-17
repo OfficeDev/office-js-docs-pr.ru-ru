@@ -3,12 +3,12 @@ title: Устранение ошибок единого входа
 description: Руководство по устранению неполадок с единым входом (SSO) в надстройках Office и обработке специальных условий или ошибок.
 ms.date: 07/07/2020
 localization_priority: Normal
-ms.openlocfilehash: 49e967aa0d500df64828c66d9dee8574eb948cec
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 0f4069ee2167a180bb4ba1fbd8db57d5d355e24b
+ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45093562"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45159572"
 ---
 # <a name="troubleshoot-error-messages-for-single-sign-on-sso-preview"></a>Устранение ошибок единого входа (предварительная версия)
 
@@ -17,7 +17,7 @@ ms.locfileid: "45093562"
 > [!NOTE]
 > В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint в тестовом режиме. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](../reference/requirement-sets/identity-api-requirement-sets.md).
 > [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
-> Если вы работаете с надстройкой Outlook, обязательно включите современная проверка подлинности для клиента Microsoft 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Microsoft 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 ## <a name="debugging-tools"></a>Средства отладки
 
@@ -82,7 +82,7 @@ ms.locfileid: "45093562"
 
 - Если эта ошибка возникает во время разработки, убедитесь, что в регистрационных данных и манифесте надстройки указаны разрешение `profile` (и разрешение `openid`, если вы используете MSAL.NET). Дополнительные сведения см. в статье [Регистрация надстройки с помощью конечной точки Azure AD версии 2.0](register-sso-add-in-aad-v2.md).
 - В рабочей среде эта ошибка может возникать по нескольким причинам. Вот некоторые из них:
-    - Пользователь имеет удостоверение учетной записи Майкрософт (MSA).
+    - У пользователя есть удостоверение учетной записи Майкрософт.
     - В некоторых ситуациях, которые могут привести к тому, что одна из других ошибок 13xxx с учетной записью Microsoft 365 для образовательных или рабочих учетных записей приведет к 13007у при использовании MSA.
 
   Во всех этих случаях ваш код должен инициировать возврат к альтернативной системе проверки подлинности пользователя.

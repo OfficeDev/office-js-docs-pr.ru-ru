@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API диалоговых окон
 description: Узнайте больше о наборах обязательных элементов API диалоговых окон.
-ms.date: 06/10/2020
+ms.date: 07/10/2020
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: d50c30fd769777c8dd3c168a9289dfb60012bbbd
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: f53bd5c62c434c361d435eb51035e45079f8e429
+ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45094430"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45159103"
 ---
 # <a name="dialog-api-requirement-sets"></a>Наборы обязательных элементов API диалоговых окон
 

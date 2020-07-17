@@ -3,12 +3,12 @@ title: Среды выполнения в файле манифеста
 description: Элемент Runtimes указывает среду выполнения надстройки.
 ms.date: 06/01/2020
 localization_priority: Normal
-ms.openlocfilehash: ef00bea317ae479d912b3a02f269ef97045b015d
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 082491befc6b9dbdc474b0e40f9defd90a4ef75f
+ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608099"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45159362"
 ---
 # <a name="runtimes-element"></a>Элемент среды выполнения
 
@@ -24,8 +24,6 @@ ms.locfileid: "44608099"
 **Тип надстройки:** Область задач, почта
 
 > [!IMPORTANT]
-> **Excel**: общая среда выполнения в настоящее время доступна только в Excel для Windows.
->
 > **Outlook**: функция активации на основе событий в настоящее время находится [в предварительной версии](../../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) и доступна только в Outlook в Интернете. Дополнительные сведения см. [в статье Просмотр функции активации на основе событий](../../outlook/autolaunch.md#how-to-preview-the-event-based-activation-feature).
 
 ## <a name="syntax"></a>Синтаксис
@@ -38,7 +36,7 @@ ms.locfileid: "44608099"
 
 ## <a name="contained-in"></a>Содержится в
 
-[Host](host.md) (Узел)
+[Host](host.md)
 
 ## <a name="child-elements"></a>Дочерние элементы
 

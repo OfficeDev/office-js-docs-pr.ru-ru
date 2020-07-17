@@ -1,15 +1,15 @@
 ---
 title: Наборы требований к настраиваемым функциям
-description: Сведения о требованиях к настраиваемым функциям для API JavaScript для Excel
-ms.date: 07/15/2019
+description: Сведения о требованиях к настраиваемым функциям для API JavaScript для Excel.
+ms.date: 07/10/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 184c78a9c0e99a79150da47d4af0e8819f079e56
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 2bf8308498653f588099a175d321fa883819897c
+ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45093450"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45159509"
 ---
 # <a name="custom-functions-requirement-sets"></a>Наборы требований к настраиваемым функциям
 

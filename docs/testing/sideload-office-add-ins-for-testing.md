@@ -1,14 +1,14 @@
 ---
 title: Загрузка неопубликованных надстроек Office в Office в Интернете для тестирования
-description: Тестирование неопубликованной надстройки Office в Office в Интернете путем ее загрузки
-ms.date: 07/07/2020
+description: Протестируйте надстройку Office в Office в Интернете для загрузки неопубликованных приложений.
+ms.date: 07/10/2020
 localization_priority: Normal
-ms.openlocfilehash: 60b7e4f1d598e4f5ec09307d58294f54123112ad
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 2f9a0d058fc972316da964dd5af03b5733dc7b60
+ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45094122"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45159292"
 ---
 # <a name="sideload-office-add-ins-in-office-on-the-web-for-testing"></a>Загрузка неопубликованных надстроек Office в Office в Интернете для тестирования
 
@@ -25,7 +25,7 @@ ms.locfileid: "45094122"
 
 ## <a name="sideload-an-office-add-in-in-office-on-the-web"></a>Загрузка неопубликованной надстройки Office в Office в Интернете
 
-1. Откройте [Microsoft Office в Интернете](https://office.live.com/).
+1. Откройте [Office в Интернете](https://office.live.com/).
 
 2. В разделе Начало **работы с веб-приложениями**выберите **Excel**, **Word**или **PowerPoint**; а затем откройте новый документ.
 

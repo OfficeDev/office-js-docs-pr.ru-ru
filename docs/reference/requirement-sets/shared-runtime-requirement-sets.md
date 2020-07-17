@@ -1,15 +1,15 @@
 ---
 title: Общие наборы требований среды выполнения
 description: Указывает платформы и узлы Office, которые поддерживают API Шаредрунтиме.
-ms.date: 03/11/2020
+ms.date: 07/10/2020
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: bb1a621de9127417a8a17c2c71a3b3796e7a6ac4
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 37ab904242a07a5ae7f1f580332f709ac409c6be
+ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45094311"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45159271"
 ---
 # <a name="shared-runtime-requirement-sets"></a>Общие наборы требований среды выполнения
 
@@ -21,7 +21,7 @@ ms.locfileid: "45094311"
 
 |  Набор обязательных элементов  |  Office 2013 (или более поздней версии) в Windows<br>(единовременная покупка) | Office для Windows<br>(подключено к подписке Microsoft 365)   |  Office для iPad<br>(подключено к подписке Microsoft 365)  |  Office для Mac<br>(подключено к подписке Microsoft 365)  | Office в Интернете  | Office Online Server |
 |:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-| Шаредрунтиме 1,1  | Недоступно | Версия 2002 (сборка 12527,20092) или более поздняя | Недоступно | 16.35 или более поздняя | Февраль 2020 г. | Недоступно |
+| Шаредрунтиме 1,1  | Н/Д | Версия 2002 (сборка 12527,20092) или более поздняя | Н/Д | 16.35 или более поздняя | Февраль 2020 г. | Н/Д |
 
 ## <a name="office-versions-and-build-numbers"></a>Номера версий и сборок Office
 

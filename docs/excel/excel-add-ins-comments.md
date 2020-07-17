@@ -3,12 +3,12 @@ title: Работайте с комментариями с помощью API Ja
 description: Сведения об использовании API для добавления, удаления и редактирования комментариев и потоков комментариев.
 ms.date: 03/17/2020
 localization_priority: Normal
-ms.openlocfilehash: a0ea156c8599b98800d03d2238451c7935d6466f
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 59751086b645ed56cb2a00bc70678967cae085c5
+ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609778"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45159432"
 ---
 # <a name="work-with-comments-using-the-excel-javascript-api"></a>Работайте с комментариями с помощью API JavaScript для Excel
 
@@ -175,7 +175,8 @@ Excel.run(function (context) {
 
 Комментарии с упоминанием следует создавать с помощью объектов [комментричконтент](/javascript/api/excel/excel.commentrichcontent) . Вызов `CommentCollection.add` с `CommentRichContent` указанием одного или нескольких упоминаний и указанием в `ContentType.mention` качестве `contentType` параметра. `content`Строку также необходимо отформатировать, чтобы вставить упоминание в текст. Формат для упоминания: `<at id="{replyIndex}">{mentionName}</at>` .
 
-> НОТЕ В настоящее время в качестве текста ссылки на упоминание можно использовать только точное имя упоминания. Поддержка сокращенных версий имени будет добавлена позже.
+> [!NOTE]
+> В настоящее время в качестве текста ссылки на упоминание можно использовать только точное имя упоминания. Поддержка сокращенных версий имени будет добавлена позже.
 
 В приведенном ниже примере показан комментарий с одним упоминанием.
 
