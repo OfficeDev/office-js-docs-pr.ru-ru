@@ -12,7 +12,7 @@ ms.locfileid: "45093758"
 ---
 # <a name="task-panes-in-office-add-ins"></a>Области задач в надстройках Office
  
-Task panes are interface surfaces that typically appear on the right side of the window within Word, PowerPoint, Excel, and Outlook. Task panes give users access to interface controls that run code to modify documents or emails, or display data from a data source. Use task panes when you don't need to embed functionality directly into the document.
+Области задач — это области интерфейса, которые обычно отображаются в правой части окна Word, PowerPoint, Excel и Outlook. Элементы области задач выполняют код для изменения документов или писем, а также для отображения данных. Используйте области задач, когда вам не нужно внедрять функции прямо в документ.
 
 *Рис. 1. Типичный макет области задач*
 
@@ -30,7 +30,7 @@ Task panes are interface surfaces that typically appear on the right side of the
 
 ## <a name="variants"></a>Варианты
 
-The following images show the various task pane sizes with the Office app ribbon at a 1366x768 resolution. For Excel, additional vertical space is required to accommodate the formula bar.  
+На следующих рисунках показаны различные размеры области задач с помощью ленты приложения Office с разрешением 1366x768. Для Excel для размещения строки формул требуется дополнительное вертикальное пространство.  
 
 *Рис. 2. Размеры области задач в классических приложениях Office 2016*
 
@@ -54,7 +54,7 @@ The following images show the various task pane sizes with the Office app ribbon
 
 ## <a name="personality-menu"></a>Меню личных данных
 
-Personality menus can obstruct navigational and commanding elements located near the top right of the add-in. The following are the current dimensions of the personality menu on Windows and Mac.
+Меню личных данных могут перекрывать элементы навигации и управления, расположенные в правой верхней части надстройки. Ниже указаны текущие размеры меню личных данных в Windows и Mac.
 
 Меню личных данных в Windows имеет размер 12 x 32 пикселей, как показано ниже.
 

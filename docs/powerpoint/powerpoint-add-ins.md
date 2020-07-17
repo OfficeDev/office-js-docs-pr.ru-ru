@@ -16,7 +16,7 @@ ms.locfileid: "45006453"
 
 С помощью надстроек PowerPoint можно создавать удобные решения, подходящие для использования в презентациях на различных платформах, таких как Windows, iPad, Mac и браузеры. Можно создать два типа надстроек PowerPoint:
 
-- Use **content add-ins** to add dynamic HTML5 content to your presentations. For example, see the [LucidChart Diagrams for PowerPoint](https://appsource.microsoft.com/product/office/wa104380117) add-in, which you can use to inject an interactive diagram from LucidChart into your deck.
+- **Контентные надстройки** позволяют добавлять динамический контент HTML5 в презентации. Например, ознакомьтесь с надстройкой [LucidChart Diagrams for PowerPoint](https://appsource.microsoft.com/product/office/wa104380117), с помощью которой можно добавить интерактивные схемы LucidChart в набор слайдов.
 
 - **Надстройки области задач** позволяют добавлять справочные сведения или данные в презентацию с помощью службы. Например, используя надстройку [Pexels - Free Stock Photos](https://appsource.microsoft.com/product/office/wa104379997), вы можете вставить профессиональные фотографии в свою презентацию.
 

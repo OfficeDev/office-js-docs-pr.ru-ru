@@ -30,7 +30,7 @@ ms.locfileid: "45093618"
 Чтобы получить последнюю сборку Office:
 
 1. Скачайте [средство развертывания Office](https://www.microsoft.com/download/details.aspx?id=49117).
-2. Run the tool. This extracts the following two files: Setup.exe and configuration.xml.
+2. Запустите это средство. Будут извлечены два файла: Setup.exe и configuration.xml.
 3. Замените файл configuration.xml [файлом конфигурации первого выпуска](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-Commands-Samples/master/Tools/FirstReleaseConfig/configuration.xml).
 4. Выполните следующую команду от имени администратора: `setup.exe /configure configuration.xml`
 

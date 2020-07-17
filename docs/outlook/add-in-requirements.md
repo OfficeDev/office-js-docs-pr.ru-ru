@@ -26,11 +26,11 @@ ms.locfileid: "45093996"
    - Outlook в Интернете для Exchange 2013
    - Outlook.com.
 
-- The client must be connected to an Exchange server or Microsoft 365 using a direct connection. When configuring the client, the user must choose an **Exchange**, **Office 365**, or **Outlook.com** account type. If the client is configured to connect with POP3 or IMAP, add-ins will not load.
+- Клиент должен иметь прямое подключение к серверу Exchange Server или Microsoft 365. При настройке клиента пользователь должен выбрать тип учетной записи **Exchange**, **Office 365** или **Outlook.com**. Если клиент настроен на подключение POP3 или IMAP, надстройки не загрузятся.
 
 ## <a name="mail-server-requirements"></a>Требования к почтовым серверам
 
-If the user is connected to Microsoft 365 or Outlook.com, mail server requirements are all taken care of already. However, for users connected to on-premises installations of Exchange Server, the following requirements apply.
+Если пользователь подключен к Microsoft 365 или Outlook.com, требования к почтовому серверу уже выполнены. Но если пользователи подключаются к локально установленным экземплярам Exchange Server, требуется соответствие указанным ниже условиям.
 
 - Должен использоваться сервер Exchange 2013 или более поздней версии.
 - Веб-службы Exchange (EWS) должны быть включены и подключены к Интернету. Многие надстройки требуют надлежащей работы EWS.
@@ -39,7 +39,7 @@ If the user is connected to Microsoft 365 or Outlook.com, mail server requiremen
 
 ## <a name="add-in-server-requirements"></a>Требования к серверам надстроек
 
-Add-in files (HTML, JavaScript, etc.) can be hosted on any web server platform desired. The only requirement is that the server must be configured to use HTTPS, and the SSL certificate must be trusted by the client.
+Файлы надстройки (например, HTML, JavaScript) могут быть размещены на любой платформе веб-сервера. Единственное требование — настройка сервера на использование HTTPS и доверия к SSL-сертификату со стороны клиента.
 
 ## <a name="see-also"></a>См. также
 

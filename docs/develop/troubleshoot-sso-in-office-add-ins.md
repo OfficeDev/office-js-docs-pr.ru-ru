@@ -21,7 +21,7 @@ ms.locfileid: "45093562"
 
 ## <a name="debugging-tools"></a>Средства отладки
 
-We strongly recommend that you use a tool that can intercept and display the HTTP Requests from, and Responses to, your add-in's web service when you are developing. Two of the most popular are:
+Настоятельно рекомендуем использовать во время разработки средство, которое может перехватывать и отображать HTTP-запросы от веб-службы надстройки и отклики для нее. Из них наиболее популярны следующие средства:
 
 - [Fiddler](https://www.telerik.com/fiddler), предоставляемое бесплатно ([документация](https://docs.telerik.com/fiddler/configure-fiddler/tasks/configurefiddler));
 - [Charles](https://www.charlesproxy.com), предоставляемое бесплатно в течение 30 дней ([документация](https://www.charlesproxy.com/documentation/)).

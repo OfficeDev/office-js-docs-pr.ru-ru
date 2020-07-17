@@ -32,11 +32,11 @@ ms.locfileid: "45094255"
 
 ## <a name="recommended-approach-for-deploying-office-add-ins"></a>Рекомендуемый подход к развертыванию надстроек Office
 
-Consider deploying Office Add-ins in a phased approach to help ensure that the deployment goes smoothly. We recommend the following plan:
+Вы можете развертывать надстройки Office поэтапно, чтобы предотвратить возникновение проблем. Рекомендуем такой план:
 
-1. Deploy the add-in to a small set of business stakeholders and members of the IT department. If the deployment is successful, move on to step 2.
+1. Разверните надстройку для небольшой группы заинтересованных лиц и сотрудников ИТ-отдела. Если развертывание прошло успешно, переходите к этапу 2.
 
-2. Deploy the add-in to a larger set of individuals within the business who will be using the add-in. If the deployment is successful, move on to step 3.
+2. Разверните надстройку для большей группы пользователей в предприятии, которые будут работать с надстройкой. Если развертывание прошло успешно, переходите к этапу 3.
 
 3. Разверните надстройку для всех пользователей, которые будут работать с надстройкой.
 
@@ -57,8 +57,8 @@ Consider deploying Office Add-ins in a phased approach to help ensure that the d
 7. На странице **Централизованное развертывание** выберите один из следующих вариантов:
 
     - **Я хочу добавить надстройку из Магазина Office**.
-    - **I have the manifest file (.xml) on this device.** For this option, choose **Browse** to locate the manifest file (.xml) that you want to use.
-    - **I have a URL for the manifest file.** For this option, type the manifest's URL in the field provided.
+    - **У меня есть файл манифеста (.xml) на данном устройстве.** Если выбран этот вариант, нажмите кнопку **Обзор**, чтобы найти нужный файл манифеста (XML).
+    - **У меня есть URL-адрес для файла манифеста.** Если выбран этот вариант, укажите URL-адрес манифеста в предоставленном поле.
 
     ![Диалоговое окно создания надстройки в центре администрирования Microsoft 365](../images/new-add-in.png)
 
@@ -92,15 +92,15 @@ Consider deploying Office Add-ins in a phased approach to help ensure that the d
 
 ## <a name="considerations-when-granting-access-to-an-add-in"></a>Рекомендации по предоставлению доступа к надстройке
 
-Admins can assign an add-in to everyone in the organization or to specific users and/or groups within the organization. The following list describes the implications of each option:
+Администраторы могут назначить надстройку всем или только определенным пользователям и/или группам в организации. В приведенном ниже списке описываются последствия выбора каждого из вариантов.
 
-- **Everyone**: As the name implies, this option assigns the add-in to every user in the tenant. Use this option sparingly and only for add-ins that are truly universal to your organization.
+- **Все.** Как следует из названия, этот вариант позволяет назначить надстройку всем пользователям в клиенте. Используйте этот вариант с осторожностью и только для надстроек, которые являются действительно универсальными для вашей организации.
 
-- **Users**: If you assign an add-in to individual users, you'll need to update the Central Deployment settings for the add-in each time you want to assign it additional users. Likewise, you'll need to update the Central Deployment settings for the add-in each time you want to remove a user's access to the add-in.
+- **Пользователи**. Если назначить надстройку отдельным пользователям, вам придется обновлять параметры централизованного развертывания надстройки каждый раз, когда нужно назначить ее дополнительным пользователям. Параметры централизованного развертывания придется обновлять каждый раз, когда нужно запретить пользователю доступ к надстройке.
 
 - **Группы**. Если назначить надстройку группе, члены этой группы автоматически получат доступ к ней. При удалении пользователя из группы он автоматически теряет доступ к надстройке. В любом случае никаких дополнительных действий от администратора Microsoft 365 не нужно.
 
-In general, for ease of maintenance, we recommend assigning add-ins by using groups whenever possible. However, in situations where you want to restrict add-in access to a very small number of users, it may be more practical to assign the add-in to specific users.
+В общем случае для простоты обслуживания рекомендуем по мере возможности назначать надстройки группам. Однако в тех случаях, когда надстройка должна быть доступна узкому кругу пользователей, может быть практичнее назначить ее определенным пользователям.
 
 ## <a name="add-in-states"></a>Состояния надстроек
 
@@ -109,12 +109,12 @@ In general, for ease of maintenance, we recommend assigning add-ins by using gro
 |Состояние|Причины|Влияние|
 |-----|--------------------|------|
 |**Активна**|Администратор отправил надстройку и назначил ее пользователям и/или группам.|Надстройка видна назначенным пользователям и/или группам в соответствующих клиентах Office.|
-|**Отключена**|Администратор отключил надстройку.|Users and/or groups assigned to the add-in no longer have access to it. If the add-in state is changed from **Turned off** to **Active**, the users and groups will regain access to it.|
+|**Отключена**|Администратор отключил надстройку.|Надстройка недоступна назначенным пользователям и/или группам. Если состояние **Отключена** надстройки поменялось на **Активна**, то она снова доступна пользователям и группам.|
 |**Deleted**|Администратор удалил надстройку.|Надстройка недоступна назначенным пользователям и/или группам.|
 
 ## <a name="updating-office-add-ins-that-are-published-via-centralized-deployment"></a>Обновление надстроек Office, опубликованных с использованием централизованного развертывания
 
-After an Office Add-in has been published via Centralized Deployment, any changes made to the add-in's web application will automatically be available to all users as soon as those changes are implemented in the web application. Changes made to an add-in's [XML manifest file](../develop/add-in-manifests.md), for example, to update the add-in's icon, text, or add-in commands, happen as follows:
+После публикации надстройки Office путем централизованного развертывания все изменения, внесенные в веб-приложение надстройки, автоматически становятся доступны всем пользователям сразу после их реализации в веб-приложении. Изменения, внесенные в [XML-файл манифеста](../develop/add-in-manifests.md) надстройки (например, обновление значка, текста или команд надстройки), выполняются следующим образом:
 
 - **Бизнес-надстройка**: если администратор явно отправил файл манифеста при реализации централизованного развертывания с помощью центра администрирования Microsoft 365, администратор должен отправить новый файл манифеста, который содержит нужные изменения. После отправки обновленного файла манифеста надстройка обновится при следующем запуске соответствующего приложения Office.
 
@@ -129,7 +129,7 @@ After an Office Add-in has been published via Centralized Deployment, any change
 
 После публикации надстройки с применением централизованного развертывания пользователи могут приступить к работе с ней на любой платформе, которую поддерживает надстройка.
 
-If the add-in supports add-in commands, the commands will appear on the Office application ribbon for all users to whom the add-in is deployed. In the following example, the command **Search Citation** appears in the ribbon for the **Citations** add-in.
+Если в надстройке предусмотрена поддержка команд надстройки, они отображаются на ленте приложения Office для всех пользователей, для которых развернута эта надстройка. В приведенном ниже примере команда **Search Citation** (Поиск ссылки) отображается на ленте для надстройки **Citations** (Ссылки).
 
 ![Снимок экрана, на котором показан раздел ленты приложения Office с выделенной в надстройке "ссылки" командой "Поиск ссылок"](../images/search-citation.png)
 
@@ -139,7 +139,7 @@ If the add-in supports add-in commands, the commands will appear on the Office a
 2. В окне надстройки перейдите на вкладку **Управляемые администратором**.
 3. Выберите нужную надстройку и нажмите **Добавить**.
 
-    ![Screenshot shows the Admin Managed tab of the Office Add-ins page of an Office application. The Citations add-in is shown on the tab.](../images/office-add-ins-admin-managed.png)
+    ![Снимок экрана со вкладкой "Управляемые администратором" на странице "Надстройки Office" в приложении Office. На вкладке показана надстройка Citations (Ссылки).](../images/office-add-ins-admin-managed.png)
 
 Однако в Outlook 2016 или более поздних версий можно сделать вот что:
 

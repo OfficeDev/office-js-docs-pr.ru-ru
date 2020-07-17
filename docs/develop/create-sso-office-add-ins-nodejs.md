@@ -12,7 +12,7 @@ ms.locfileid: "45093694"
 ---
 # <a name="create-a-nodejs-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office на платформе Node.js с использованием единого входа (предварительная версия)
 
-Users can sign in to Office, and your Office Web Add-in can take advantage of this sign-in process to authorize users to your add-in and to Microsoft Graph without requiring users to sign in a second time. For an overview, see [Enable SSO in an Office Add-in](sso-in-office-add-ins.md).
+Ваша веб-надстройка Office может использовать процедуру входа в Office для авторизации пользователей в надстройке и Microsoft Graph. При этом им не потребуется входить повторно. Общие сведения см. в статье [Включение единого входа в надстройке Office](sso-in-office-add-ins.md).
 
 Из этой статьи вы узнаете, как включить единый вход в надстройке, созданной с помощью Node.js и Express. Аналогичная статья, посвященная надстройке на основе ASP.NET, — [Создание надстройки Office на платформе ASP.NET с использованием единого входа](create-sso-office-add-ins-aspnet.md).
 
@@ -41,7 +41,7 @@ Users can sign in to Office, and your Office Web Add-in can take advantage of th
 
     > [!NOTE]
     > Существует три версии примера.  
-    > * The **Begin** folder is a starter project. The UI and other aspects of the add-in that are not directly connected to SSO or authorization are already done. Later sections of this article walk you through the process of completing it.
+    > * **Начальная папка является** начальным проектом. Пользовательский интерфейс и другие аспекты надстройки, которые не подключены напрямую к SSO или авторизации, уже выполнены. В последующих разделах этой статьи описывается процесс ее выполнения.
     > * Версия примера в папке **Complete** идентична надстройке, которую вы бы создали, выполнив процедуры из этой статьи, за тем исключением, что готовый проект содержит комментарии к коду. В них нет необходимости, если вы читаете эту статью. Чтобы использовать завершенную версию, следуйте инструкциям, приведенным в этой статье, но замените "Begin" на "Completed" и пропустите **код разделов на стороне клиента** и **кода на стороне сервера** .
     > * Версия **SSOAutoSetup** — это готовый пример, который автоматизирует большинство шагов регистрации надстройки в Azure AD и ее настройки. Используйте эту версию, если нужно быстро получить рабочую надстройку с единым входом. Просто следуйте инструкциям файла сведений в папке. На определенном этапе рекомендуется выполнить шаги ручной регистрации и настройки из этой статьи, чтобы лучше понять связь между Azure AD и надстройкой. 
 

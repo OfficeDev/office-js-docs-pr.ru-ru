@@ -12,7 +12,7 @@ ms.locfileid: "45093478"
 ---
 # <a name="coauthoring-in-excel-add-ins"></a>Совместное редактирование в надстройках Excel  
 
-With [coauthoring](https://support.office.com/article/Collaborate-on-Excel-workbooks-at-the-same-time-with-co-authoring-7152aa8b-b791-414c-a3bb-3024e46fb104), multiple people can work together and edit the same Excel workbook simultaneously. All coauthors of a workbook can see another coauthor's changes as soon as that coauthor saves the workbook. To coauthor an Excel workbook, the workbook must be stored in OneDrive, OneDrive for Business, or SharePoint Online.
+Благодаря функции [совместного редактирования](https://support.office.com/article/Collaborate-on-Excel-workbooks-at-the-same-time-with-co-authoring-7152aa8b-b791-414c-a3bb-3024e46fb104) несколько человек могут работать вместе и редактировать одну и ту же книгу Excel одновременно. Все соавторы книги могут видеть изменения, внесенные и сохраненные другими соавторами. Чтобы книги Excel можно было совместно редактировать, они должны храниться в OneDrive, OneDrive для бизнеса или SharePoint Online.
 
 > [!IMPORTANT]
 > В Excel для Microsoft 365 вы увидите в левом верхнем углу функцию автосохранения. Если автосохранение включено, соавторы видят внесенные вами изменения в режиме реального времени. Учтите влияние такого поведения на макет вашей надстройки Excel. Пользователи могут выключить автосохранение с помощью переключателя в левом верхнем углу окна Excel.
@@ -26,24 +26,24 @@ range.values = [['Contoso']];
 ```
 После того как книга со значением "Contoso" синхронизируется для всех соавторов, новое значение диапазона будет доступно всем пользователям и надстройкам, выполняемым в той же книге.
 
-Coauthoring only synchronizes the content within the shared workbook. Values copied from the workbook to JavaScript variables in an Excel add-in are not synchronized. For example, if your add-in stores the value of a cell (such as 'Contoso') in a JavaScript variable, and then a coauthor changes the value of the cell to 'Example', after synchronization all coauthors see 'Example' in the cell. However, the value of the JavaScript variable is still set to 'Contoso'. Furthermore, when multiple coauthors use the same add-in, each coauthor has their own copy of the variable, which is not synchronized. When you use variables that use workbook content, be sure you check for updated values in the workbook before you use the variable.
+Функция совместного редактирования синхронизирует содержимое только общей книги. Значения, скопированные из книги в переменные JavaScript в надстройке Excel, не синхронизируются. Например, если надстройка хранит значение ячейки (например, "Contoso") в переменной JavaScript, а соавтор заменяет его на "Пример", после синхронизации все соавторы увидят в ячейке значение "Пример". Но для ячейки в переменной JavaScript по-прежнему будет задано значение "Contoso". Кроме того, когда несколько соавторов используют одну и ту же надстройку, у каждого соавтора есть своя, не синхронизированная с остальными, копия переменной. Перед работой с переменными, использующими содержимое книги, убедитесь, что все значения в книге обновлены.
 
 ## <a name="use-events-to-manage-the-in-memory-state-of-your-add-in"></a>Использование событий для управления состоянием надстройки в памяти
 
-Excel add-ins can read workbook content (from hidden worksheets and a setting object), and then store it in data structures such as variables. After the original values are copied into any of these data structures, coauthors can update the original workbook content. This means that the copied values in the data structures are now out of sync with the workbook content. When you build your add-ins, be sure to account for this separation of workbook content and values stored in data structures.
+Надстройки Excel могут читать содержимое книги (из скрытых листов и объекта параметра), а затем хранить его в таких структурах данных как переменные. После того как исходные значения скопированы в любую из структур данных, соавторы могут обновить исходное содержание книги. Это означает, что теперь скопированные значения в структурах данных не синхронизируются с содержимым книги. При создании надстроек необходимо учитывать это разделение содержания книги и значений, хранящихся в структурах данных.
 
-For example, you might build a content add-in that displays custom visualizations. The state of your custom visualizations might be saved in a hidden worksheet. When coauthors use the same workbook, the following scenario can occur:
+Например, вы можете создать надстройку контента, которая отображает пользовательские визуализации. Состояние ваших пользовательских визуализаций может быть сохранено в скрытом листе. Когда соавторы используют одну и ту же книгу, может возникнуть следующая ситуация:
 
-- User A opens the document and the custom visualizations are shown in the workbook. The custom visualizations read data from a hidden worksheet (for example, the color of the visualizations is set to blue).
-- User B opens the same document, and starts modifying the custom visualizations. User B sets the color of the custom visualizations to orange. Orange is saved to the hidden worksheet.
+- Пользователь A открывает документ, и пользовательские визуализации отображаются в книге. Пользовательские визуализации читают данные из скрытого листа (например, задан синий цвет визуализации).
+- Пользователь Б открывает тот же документ, начинает изменять пользовательские визуализации и в качестве цвета для них задает оранжевый. Оранжевый цвет сохраняется в скрытом листе.
 - Скрытый лист пользователя А обновляется с учетом оранжевого цвета.
 - Специальные элементы визуализации пользователя А по-прежнему синие.
 
-If you want User A's custom visualizations to respond to changes made by coauthors on the hidden worksheet, use the [BindingDataChanged](/javascript/api/office/office.bindingdatachangedeventargs) event. This ensures that changes to workbook content made by coauthors is reflected in the state of your add-in.
+Чтобы специальные элементы визуализации пользователя А соответствовали изменениям, внесенным соавторами на скрытом листе, используйте событие [BindingDataChanged](/javascript/api/office/office.bindingdatachangedeventargs). Это обеспечит отражение изменений, внесенных соавторами в содержимое книги, в вашей надстройке.
 
 ## <a name="caveats-to-using-events-with-coauthoring"></a>Предостережения, касающиеся использования событий для совместного редактирования
 
-As described earlier, in some scenarios, triggering events for all coauthors provides an improved user experience. However, be aware that in some scenarios this behavior can produce poor user experiences. 
+Как описано выше, в некоторых сценариях применение  триггеров события для всех соавторов обеспечивает улучшенное взаимодействие с пользователем. Однако, имейте ввиду, что в ряде сценариев такое поведение может привести к неудобствам в работе пользователей. 
 
 Например, обычно в сценариях проверки данных пользовательский интерфейс отображается в ответ на события. Событие [BindingDataChanged](/javascript/api/office/office.bindingdatachangedeventargs), описанное в предыдущем разделе, выполняется когда локальный пользователь или соавтор (удаленный) изменяет содержимое книги в пределах привязки. Если обработчик события `BindingDataChanged` отображает пользовательский интерфейс, пользователи увидят пользовательский интерфейс, который не связан с изменениями, над которыми они работали в книге, что приводит к плохому взаимодействию с пользователем. Избегайте отображения пользовательского интерфейса при использовании событий в вашей надстройке.
 

@@ -16,7 +16,7 @@ ms.locfileid: "45093842"
 
 Интерфейсы ленты приложений Office имеют стандартный визуальный стиль. Это поможет обеспечить знакомый пользователям единообразный интерфейс для всех приложений Office. Рекомендации помогут вам создать для своего решения набор ресурсов PNG, полностью совместимых с Office.
 
-Many HTML containers contain controls with iconography. Use Office UI Fabric’s custom font to render Office styled icons in your add-in. Fabric’s icon font contains many glyphs for common Office metaphors that you can scale, color, and style to suit your needs. If you have an existing visual language with your own set of icons, feel free to use it in your HTML canvases. Building continuity with your own brand with a standard set of icons is an important part of any design language. Be careful to avoid creating confusion for customers by conflicting with Office metaphors.
+Многие контейнеры HTML содержат элементы управления со значками. Используйте пользовательский шрифт Office UI Fabric для отрисовки значков в стиле Office в своей надстройке. Шрифт значков Fabric содержит ряд глифов для распространенных метафор Office, к которым можно применить необходимые параметры масштабирования, цвета и стиля. Если у вас имеется визуальный язык с собственным набором значков, используйте его на своем полотне HTML. Обеспечение согласованности собственной фирменной символики со стандартным набором значков — важная часть любого языка дизайна. Не допускайте конфликтов с метафорами Office. Это облегчит работу пользователей и поможет избежать путаницы.
 
 ## <a name="design-icons-for-add-in-commands"></a>Создание значков для команд надстроек
 

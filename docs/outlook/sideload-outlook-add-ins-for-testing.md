@@ -47,7 +47,7 @@ ms.locfileid: "45093884"
 
     ![Снимок экрана: управление надстройками с указанием параметра "Добавить из файла"](../images/outlook-sideload-desktop-add-from-file.png)
 
-1. Locate the manifest file for your custom add-in and install it. Accept all prompts during the installation.
+1. Найдите файл манифеста для своей надстройки и установите его, подтверждая все запросы.
 
 ### <a name="sideload-an-add-in-in-classic-outlook-on-the-web"></a>Загрузка неопубликованной надстройки в классической веб-версии Outlook
 
@@ -65,7 +65,7 @@ ms.locfileid: "45093884"
 
     ![Снимок экрана: управление надстройками с указанием параметра "Добавить из файла"](../images/outlook-sideload-desktop-add-from-file.png)
 
-1. Locate the manifest file for your custom add-in and install it. Accept all prompts during the installation.
+1. Найдите файл манифеста для своей надстройки и установите его, подтверждая все запросы.
 
 ## <a name="sideload-an-add-in-in-outlook-on-the-desktop"></a>Загрузка неопубликованной надстройки в классической версии Outlook
 
@@ -88,7 +88,7 @@ ms.locfileid: "45093884"
 
     ![Снимок экрана: магазин с параметром "Добавить из файла"](../images/outlook-sideload-desktop-add-from-file.png)
 
-1. Locate the manifest file for your custom add-in and install it. Accept all prompts during the installation.
+1. Найдите файл манифеста для своей надстройки и установите его, подтверждая все запросы.
 
 ### <a name="outlook-2013"></a>Outlook 2013
 

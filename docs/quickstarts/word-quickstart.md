@@ -110,7 +110,7 @@ _Область применения: Word 2016 и более поздних в
 
 3. Присвойте проекту имя и нажмите кнопку **Создать**.
 
-4. Visual Studio creates a solution and its two projects appear in **Solution Explorer**. The **Home.html** file opens in Visual Studio.
+4. Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.
 
 ### <a name="explore-the-visual-studio-solution"></a>Обзор решения Visual Studio
 
@@ -118,7 +118,7 @@ _Область применения: Word 2016 и более поздних в
 
 ### <a name="update-the-code"></a>Обновление кода
 
-1. **Home.html** specifies the HTML that will be rendered in the add-in's task pane. In **Home.html**, replace the `<body>` element with the following markup and save the file.
+1. Файл **Home.html** содержит HTML-контент, который будет отображаться в области задач надстройки. В файле **Home.html** замените элемент `<body>` на приведенную ниже часть кода и сохраните файл.
 
     ```html
     <body>
@@ -144,7 +144,7 @@ _Область применения: Word 2016 и более поздних в
     </body>
     ```
 
-2. Open the file **Home.js** in the root of the web application project. This file specifies the script for the add-in. Replace the entire contents with the following code and save the file.
+2. Откройте файл **Home.js** в корневой папке проекта веб-приложения. Этот файл содержит скрипт надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.
 
     ```js
     'use strict';
@@ -245,7 +245,7 @@ _Область применения: Word 2016 и более поздних в
     })();
     ```
 
-3. Open the file **Home.css** in the root of the web application project. This file specifies the custom styles for the add-in. Replace the entire contents with the following code and save the file.
+3. Откройте файл **Home.css** в корневой папке проекта веб-приложения. Этот файл определяет специальные стили надстройки. Замените все его содержимое указанным ниже кодом и сохраните файл.
 
     ```css
     #content-header {
@@ -278,11 +278,11 @@ _Область применения: Word 2016 и более поздних в
 
 1. Откройте XML-файл манифеста в проекте надстройки. Этот файл определяет параметры и возможности надстройки.
 
-2. The `ProviderName` element has a placeholder value. Replace it with your name.
+2. Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.
 
-3. The `DefaultValue` attribute of the `DisplayName` element has a placeholder. Replace it with **My Office Add-in**.
+3. Атрибут `DefaultValue` элемента `DisplayName` содержит заполнитель. Замените его на строку **Моя надстройка Office**.
 
-4. The `DefaultValue` attribute of the `Description` element has a placeholder. Replace it with **A task pane add-in for Word**.
+4. Атрибут `DefaultValue` элемента `Description` содержит заполнитель. Замените его строкой **Надстройка области задач для Word**.
 
 5. Сохраните файл.
 
@@ -298,7 +298,7 @@ _Область применения: Word 2016 и более поздних в
 
 ### <a name="try-it-out"></a>Проверка
 
-1. Using Visual Studio, test the newly created Word add-in by pressing **F5** or choosing the **Start** button to launch Word with the **Show Taskpane** add-in button displayed in the ribbon. The add-in will be hosted locally on IIS.
+1. Протестируйте новую надстройку Word в Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить Word с кнопкой надстройки **Show Taskpane** (Показать область задач) на ленте. Надстройка будет размещена на локальном сервере IIS.
 
 2. В Word выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки. (Если вы используете единовременно приобретенную версию Office, а не версию Microsoft 365, пользовательские кнопки не поддерживаются. Сразу откроется область задач.)
 

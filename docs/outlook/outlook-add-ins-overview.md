@@ -27,15 +27,15 @@ ms.locfileid: "45093905"
 
 ## <a name="extension-points"></a>Точки расширения
 
-Extension points are the ways that add-ins integrate with Outlook. The following are the ways this can be done:
+Надстройка использует точки расширения для интеграции с Outlook. Это можно сделать следующими способами:
 
-- Add-ins can declare buttons that appear in command surfaces across messages and appointments. For more information, see [Add-in commands for Outlook](add-in-commands-for-outlook.md).
+- Надстройки могут объявлять кнопки, которые отображаются на панелях команд в сообщениях и встречах. Дополнительные сведения см. в статье [Команды надстроек Outlook](add-in-commands-for-outlook.md).
 
     **Надстройка с кнопками на ленте**
 
     ![Команда надстройки для фигуры без интерфейса](../images/uiless-command-shape.png)
 
-- Add-ins can link off regular expression matches or detected entities in messages and appointments. For more information, see [Contextual Outlook add-ins](contextual-outlook-add-ins.md).
+- Надстройки могут активироваться по совпадениям с регулярными выражениями или обнаруженным сущностям в сообщениях и встречах. Дополнительные сведения см. в статье [Контекстно-зависимые надстройки Outlook](contextual-outlook-add-ins.md).
 
     **Контекстная надстройка для выделенной сущности (адреса)**
 
@@ -46,9 +46,9 @@ Extension points are the ways that add-ins integrate with Outlook. The following
 
 ## <a name="mailbox-items-available-to-add-ins"></a>Элементы почтовых ящиков, доступные надстройкам
 
-Outlook add-ins are available on messages or appointments while composing or reading, but not other item types. Outlook does not activate add-ins if the current message item, in a compose or read form, is one of the following:
+Надстройки Outlook доступны при создании или просмотре сообщений или встреч. Outlook не активирует надстройки, если текущий элемент сообщения в форме создания или просмотра имеет одну из следующих особенностей:
 
-- Protected by Information Rights Management (IRM) or encrypted in other ways for protection. A digitally signed message is an example since digital signing relies on one of these mechanisms.
+- Защищен управлением правами на доступ к данным (IRM) или зашифрован каким-либо другим способом. Один из примеров — сообщение, подписанное цифровой подписью, так как в этом случае используется один из указанных выше механизмов.
 
 - Отчет или уведомление о доставке имеет класс сообщения IPM.Report.*, включая отчеты о доставке, о недоставке, а также уведомления о прочтении, о непрочтении и о задержке.
 

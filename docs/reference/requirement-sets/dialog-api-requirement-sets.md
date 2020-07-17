@@ -13,9 +13,9 @@ ms.locfileid: "45094430"
 ---
 # <a name="dialog-api-requirement-sets"></a>Наборы обязательных элементов API диалоговых окон
 
-Requirement sets are named groups of API members. Office Add-ins use requirement sets specified in the manifest or use a runtime check to determine whether an Office host supports APIs that an add-in needs. For more information, see [Office versions and requirement sets](../../develop/office-versions-and-requirement-sets.md).
+Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md).
 
-Office Add-ins run across multiple versions of Office. The following table lists the Dialog API requirement sets, the Office host applications that support that requirement set, and the build or version numbers for the Office application.
+Надстройки Office работают в нескольких версиях Office. В приведенной ниже таблице перечислены наборы обязательных элементов Dialog API, ведущие приложения Office, которые их поддерживают, а также номера сборок или версий для этих приложений.
 
 |  Набор обязательных элементов  | Office 2013 для Windows\*<br>(единовременная покупка) | Office 2016 или более поздней версии в Windows\*<br>(единовременная покупка)   | Office для Windows<br>(подключено к подписке Microsoft 365) |  Office для iPad<br>(подключено к подписке Microsoft 365)  |  Office для Mac<br>(подключено к подписке Microsoft 365)  | Office в Интернете  |  Office Online Server  |
 |:-----|-----|:-----|:-----|:-----|:-----|:-----|:-----|

@@ -29,7 +29,7 @@ ms.locfileid: "45093709"
 
 |**Продукты**|**Платформы**|
 |:-----------|:------------|
-|<ul><li>Word</li><li>Excel</li><li>PowerPoint</li></ul>|Поддерживаемые платформы для всех продуктов:<ul><li>Office on Windows Desktop. Build 16.0.8121.1000+</li><li>Office on Mac. Build 15.34.17051500+</li><li>Office в Интернете</li></ul>|
+|<ul><li>Word</li><li>Excel</li><li>PowerPoint</li></ul>|Поддерживаемые платформы для всех продуктов:<ul><li>Office для настольных компьютеров с Windows (сборки 16.0.8121.1000 или более поздней)</li><li>Office для Mac, сборка 15.34.17051500 или выше</li><li>Office в Интернете</li></ul>|
 
 
 ## <a name="best-practices"></a>Рекомендации
@@ -37,16 +37,16 @@ ms.locfileid: "45093709"
 При использовании функции автоматического открытия придерживайтесь указанных рекомендаций.
 
 - Используйте функцию автоматического открытия, если она повысит эффективность работы пользователей в подобных случаях:
-  - When the document needs the add-in in order to function properly. For example, a spreadsheet that includes stock values that are periodically refreshed by an add-in. The add-in should open automatically when the spreadsheet is opened to keep the values up to date.
-  - When the user will most likely always use the add-in with a particular document. For example, an add-in that helps users fill in or change data in a document by pulling information from a backend system.
-- Allow users to turn on or turn off the autoopen feature. Include an option in your UI for users to choose to no longer automatically open the add-in task pane.  
+  - Если надстройка требуется для правильной работы документа. Например, для электронной таблицы, содержащей стоимость запасов, которая периодически обновляется с помощью надстройки. Надстройка должна открываться автоматически вместе с электронной таблицей, чтобы значения своевременно обновлялись.
+  - Если пользователь с большой вероятностью всегда будет использовать эту надстройку при работе с определенным документом. Пример: надстройка, которая помогает пользователям добавлять данные в документы или вносить изменения, извлекая информацию из серверной системы.
+- Разрешите пользователям включать и выключать функцию автоматического открытия. Добавьте параметр в интерфейс для пользователей, чтобы автоматическое открытие области задач надстройки можно было отключить.  
 - Обнаружение набора требований используется для определения доступности функции автоматического открытия и обеспечения резервного поведения, если это не так.
 - Не используйте функцию автоматического открытия, чтобы искусственно увеличивать показатели использования надстройки. Если вы не хотите, чтобы ваша надстройка автоматически открывалась с определенными документами, эта функция может раздражать пользователей.
 
     > [!NOTE]
     > Если корпорация Майкрософт обнаружит, что функция автоматического открытия применяется не по назначению, возможно исключение вашей надстройки из AppSource.
 
-- Don't use this feature to pin multiple task panes. You can only set one pane of your add-in to open automatically with a document.  
+- Не используйте эту функцию, чтобы закрепить несколько областей задач. Можно задать только одну область вашей надстройки для автоматического открытия вместе с документом.  
 
 ## <a name="implementation"></a>Реализация
 
@@ -56,11 +56,11 @@ ms.locfileid: "45093709"
 - Отметьте документ, в котором будет автоматически открываться эта область задач.
 
 > [!IMPORTANT]
-> The pane that you designate to open automatically will only open if the add-in is already installed on the user's device. If the user does not have the add-in installed when they open a document, the autoopen feature will not work and the setting will be ignored. If you also require the add-in to be distributed with the document you need to set the visibility property to 1; this can only be done using OpenXML, an example is provided later in this article.
+> Область, отмеченная для автоматического открытия, будет открываться, только если необходимая надстройка уже есть на устройстве пользователя. Если она там не установлена, функция автоматического открытия не сработает при открытии документа, а параметр будет проигнорирован. Чтобы надстройка распространялась вместе с документом, задайте для свойства visibility значение 1. Это можно сделать только с помощью OpenXML. Соответствующий пример приведен ниже.
 
 ### <a name="step-1-specify-the-task-pane-to-open"></a>Этап 1. Указание области задач, которую необходимо открывать
 
-To specify the task pane to open automatically, set the [TaskpaneId](../reference/manifest/action.md#taskpaneid) value to **Office.AutoShowTaskpaneWithDocument**. You can only set this value on one task pane. If you set this value on multiple task panes, the first occurrence of the value will be recognized and the others will be ignored.
+Чтобы указать область задач, которую необходимо открывать автоматически, задайте для [TaskpaneId](../reference/manifest/action.md#taskpaneid) значение **Office.AutoShowTaskpaneWithDocument**. Это значение можно установить только в одной области задач. Если установить это значение для нескольких областей задач, распознается только первый случай его использования, а все остальные будут игнорироваться.
 
 Ниже представлен пример, где для TaskPaneId задано значение Office.AutoShowTaskpaneWithDocument.
 
@@ -73,7 +73,7 @@ To specify the task pane to open automatically, set the [TaskpaneId](../referenc
 
 ### <a name="step-2-tag-the-document-to-automatically-open-the-task-pane"></a>Этап 2. Установка отметки для документа, вместе с которым будет автоматически открываться область задач
 
-You can tag the document to trigger the autoopen feature in one of two ways. Pick the alternative that works best for your scenario.  
+Вы можете отметить документ для запуска функции автоматического открытия одним из двух способов. Выберите вариант, который лучше всего подходит для вашего сценария.  
 
 
 #### <a name="tag-the-document-on-the-client-side"></a>Установка отметки для документа на стороне клиента
@@ -89,7 +89,7 @@ Office.context.document.settings.saveAsync();
 
 #### <a name="use-open-xml-to-tag-the-document"></a>Установка отметки для документа с помощью Open XML
 
-You can use Open XML to create or modify a document and add the appropriate Open Office XML markup to trigger the autoopen feature. For a sample that shows you how to do this, see [Office-OOXML-EmbedAddin](https://github.com/OfficeDev/Office-OOXML-EmbedAddin).
+С помощью Open XML можно создать документ и вносить в него изменения, а также добавлять соответствующие исправления в Open Office XML для запуска функции автоматического открытия. Пример с иллюстрацией того, как это можно сделать, см. в статье [Office-OOXML-EmbedAddin](https://github.com/OfficeDev/Office-OOXML-EmbedAddin).
 
 Добавьте в документ две части Open XML:
 
@@ -122,7 +122,7 @@ You can use Open XML to create or modify a document and add the appropriate Open
 |Registry (реестр системы)|GUID надстройки в ее манифесте.|"developer"|Версия в манифесте надстройки.|
 
 > [!NOTE]
-> To find the asset ID and version of an add-in in AppSource, go to the AppSource landing page for the add-in. The asset ID appears in the address bar in the browser. The version is listed in the **Details** section of the page.
+> Для поиска ИД ресурса и версии надстройки в AppSource перейдите на целевую страницу AppSource для соответствующей надстройки. ИД ресурса отображается в адресной строке браузера. Версия указана в разделе **Сведения** на этой странице.
 
 Дополнительные сведения об исправлении webextension см. в документе [[MS-OWEXML] 2.2.5. WebExtensionReference](https://msdn.microsoft.com/library/hh695383(v=office.12).aspx).
 
@@ -136,14 +136,14 @@ You can use Open XML to create or modify a document and add the appropriate Open
 
 Обратите внимание, что в этом примере для атрибута `visibility` установлено значение "0". Это означает, что после добавления частей webextension и `taskpane` при первом открытии документа пользователю необходимо будет установить надстройку, нажав кнопку **Надстройка** на ленте. После этого область задач надстройки будет открываться автоматически вместе с файлом. Кроме того, если установить для `visibility` значение "0", можно с помощью Office.js предоставить пользователям возможность включать и выключать функцию автоматического открытия. В частности, ваш скрипт устанавливает для параметра документа **Office.AutoShowTaskpaneWithDocument** значение `true` или `false`. (Дополнительные сведения см. в разделе [Установка отметки для документа на стороне клиента](#tag-the-document-on-the-client-side).)
 
-If `visibility` is set to "1", the task pane opens automatically the first time the document is opened. The user is prompted to trust the add-in, and when trust is granted, the add-in opens. Thereafter, the add-in task pane opens automatically when the file is opened. However, when `visibility` is set to "1", you can't use Office.js to enable users to turn on or turn off the autoopen feature.
+Если для `visibility` установлено значение "1", область задач откроется автоматически при первом открытии документа. Пользователю будет предложено доверять надстройке. В случае предоставления доверия надстройка откроется. После этого область задач надстройки будет открываться автоматически вместе с файлом. Однако если установить для `visibility` значение "1", можно с помощью Office.js предоставить пользователям возможность включать и выключать функцию автоматического открытия.
 
 Значение "1" отлично подходит для свойства `visibility`, если надстройка и шаблон или содержимое документа интегрированы настолько тесно, что пользователь не откажется от использования функции автоматического открытия.
 
 > [!NOTE]
-> If you want to distribute your add-in with the document, so that users are prompted to install it, you must set the visibility property to 1. You can only do this via Open XML.
+> Если вы хотите распространять надстройку вместе с документом, чтобы пользователям предлагалось установить ее, необходимо задать для свойства visibility значение 1. Это можно сделать только через Open XML.
 
-An easy way to write the XML is to first run your add-in and [tag the document on the client side](#tag-the-document-on-the-client-side) to write the value, and then save the document and inspect the XML that is generated. Office will detect and provide the appropriate attribute values. You can also use the [Open XML SDK 2.5 Productivity Tool](https://www.microsoft.com/download/details.aspx?id=30425) tool to generate C# code to programmatically add the markup based on the XML you generate.
+Самый простой способ записи XML — сначала запустить надстройку и [отметить документ на стороне клиента](#tag-the-document-on-the-client-side), чтобы записать значение, а затем сохранить документ и проверить созданный XML. Office обнаружит и укажет соответствующие значения атрибута. Инструмент [Open XML SDK 2.5 Productivity Tool](https://www.microsoft.com/download/details.aspx?id=30425) также можно использовать для создания кода на языке C#, чтобы программным способом добавить исправление на основе создаваемого XML.
 
 ## <a name="test-and-verify-opening-task-panes"></a>Тестирование и проверка открытия областей задач
 

@@ -21,9 +21,9 @@ ms.locfileid: "45094493"
 - Получите учетную запись разработчика Microsoft 365, если у вас еще нет доступа к сайту SharePoint.
 
   > [!NOTE]
-  > To get a free, 90-day renewable Microsoft 365 developer subscription, join our [Microsoft 365 developer program](https://developer.microsoft.com/office/dev-program). See the [Microsoft 365 developer program documentation](/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Microsoft 365 developer program and configure your subscription.
+  > Чтобы получить 90 бесплатную реневаблеую подписку на Microsoft 365 для разработчиков, присоединитесь к нашей [программе для разработчиков microsoft 365](https://developer.microsoft.com/office/dev-program). В [документации по программе для разработчиков microsoft 365](/office/developer-program/office-365-developer-program) содержатся пошаговые инструкции по присоединению к программе для разработчиков Microsoft 365 и настройке подписки.
 
-- Set up an app catalog on SharePoint Online. An app catalog is a dedicated site collection in SharePoint Online that hosts document libraries for Office Add-ins. If you have your own SharePoint site, you can set up an app catalog document library. For more information, see [Publish task pane and content add-ins to an app catalog on SharePoint](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md).
+- Настройка каталога приложений в SharePoint Online. Каталог приложений — это выделенное семейство веб-сайтов в SharePoint Online, в котором размещаются библиотеки документов для надстроек Office. Если у вас есть свой сайт SharePoint, вы можете настроить библиотеку документов каталога приложений. Дополнительные сведения см. [в статье публикация надстроек области задач и контентных надстроек в каталоге приложений в SharePoint](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md).
 
 
 ## <a name="debug-your-add-in-from-excel-or-word-on-the-web"></a>Отладка надстройки в Excel и Word в Интернете
@@ -35,7 +35,7 @@ ms.locfileid: "45094493"
     > [!NOTE]
     > Рекомендуем использовать [генератор Yeoman](https://github.com/OfficeDev/generator-office) для создания и размещения надстройки.
 
-2. In your [add-in manifest file](../develop/add-in-manifests.md), update the **SourceLocation** element value to include an absolute, rather than a relative, URI. For example:
+2. В [файле манифеста надстройки](../develop/add-in-manifests.md) измените значение элемента **SourceLocation** так, чтобы оно включало абсолютный URL-адрес, а не относительный. Пример:
 
     ```xml
     <SourceLocation DefaultValue="https://localhost:44300/App/Home/Home.html" />

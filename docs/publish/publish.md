@@ -60,9 +60,9 @@ ms.locfileid: "45094185"
 
 ### <a name="sharepoint-app-catalog-deployment"></a>Развертывание с использованием каталога приложений SharePoint
 
-A SharePoint app catalog is a special site collection that you can create to host Word, Excel, and PowerPoint add-ins. Because SharePoint catalogs don't support new add-in features implemented in the `VersionOverrides` node of the manifest, including add-in commands, we recommend that you use Centralized Deployment via the admin center if possible. Add-in commands deployed via a SharePoint catalog open in a task pane by default.
+Каталог приложений SharePoint — это специальное семейство веб-сайтов, в котором можно размещать надстройки Word, Excel и PowerPoint. Так как каталоги SharePoint не поддерживают новые функции надстроек, реализованные в узле `VersionOverrides` манифеста, в том числе команды надстроек, рекомендуем развертывать надстройки в Центре администрирования. Команды надстроек, развернутые с помощью каталога SharePoint, по умолчанию открываются в области задач.
 
-If you are deploying add-ins in an on-premises environment, use a SharePoint catalog. For details, see [Publish task pane and content add-ins to a SharePoint catalog](publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md).
+Если вы развертываете надстройки в локальной среде, используйте каталог SharePoint. Дополнительные сведения см. в статье [Публикация надстроек области задач и контентных надстроек в каталоге SharePoint](publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md).
 
 > [!NOTE]
 > Каталоги SharePoint не поддерживают Office для Mac. Для развертывания надстроек Office на клиентах Mac необходимо отправить их в [AppSource](/office/dev/store/submit-to-the-office-store).
@@ -76,7 +76,7 @@ If you are deploying add-ins in an on-premises environment, use a SharePoint cat
 - Microsoft 365, Exchange Online или Exchange Server 2013 или более поздней версии
 - Outlook 2013 или более поздней версии
 
-To assign add-ins to tenants, you use the Exchange admin center to upload a manifest directly, either from a file or a URL, or add an add-in from AppSource. To assign add-ins to individual users, you must use Exchange PowerShell. For details, see [Install or remove Outlook add-ins for your organization](https://technet.microsoft.com/library/jj943752(v=exchg.150).aspx) on TechNet.
+Чтобы назначить надстройки клиентам, загрузите манифест напрямую из файла или URL-адреса в Центре администрирования Exchange или добавьте надстройку из AppSource. Чтобы назначить надстройки отдельным пользователям, необходимо использовать Exchange PowerShell. Дополнительные сведения см. в статье [Установка или удаление надстроек Outlook для организации](https://technet.microsoft.com/library/jj943752(v=exchg.150).aspx) на сайте TechNet.
 
 ## <a name="see-also"></a>См. также
 

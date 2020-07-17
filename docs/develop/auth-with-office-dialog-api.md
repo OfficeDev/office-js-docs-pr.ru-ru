@@ -46,7 +46,7 @@ ms.locfileid: "45093737"
 
 #### <a name="support-multiple-identity-providers"></a>Поддержка нескольких поставщиков удостоверений
 
-If your add-in gives the user a choice of providers, such as Microsoft Account, Google, or Facebook, you need a local first page (see preceding section) that provides a UI for the user to select a provider. Selection triggers the construction of the sign-in URL and redirection to it.
+Если пользователь может выбрать поставщика для входа в надстройку, например учетную запись Майкрософт, Google или Facebook, первой должна открываться локальная страница со списком поставщиков (см. предыдущий раздел). После выбора поставщика происходит создание URL-адреса входа и перенаправление на него.
 
 #### <a name="authorization-of-the-add-in-to-an-external-resource"></a>Авторизация надстройки через внешний ресурс
 
@@ -55,7 +55,7 @@ If your add-in gives the user a choice of providers, such as Microsoft Account, 
 - Список разрешений, которые нужны приложению.
 - URL-адрес, на который служба ресурса должна возвращать маркер доступа, когда приложение получает доступ к службе.  
 
-When a user invokes a function in the application that accesses the user's data in the resource service, they are prompted to sign in to the service and then prompted to grant the application the permissions it needs to the user's resources. The service then redirects the sign-in window to the previously registered URL and passes the access token. The application uses the access token to access the user's resources.
+Когда пользователь вызывает функцию в приложении, которое получает доступ к его данным в службе ресурса, пользователю будет предложено войти в службу, а затем предоставить приложению необходимые разрешения. Служба затем перенаправляет пользователя на зарегистрированный URL-адрес и передает маркер доступа. Приложение использует маркер доступа для доступа к ресурсам пользователя.
 
 Вы можете управлять этим процессом с помощью Dialog API для Office, используя поток, похожий на тот, который обеспечивает возможность входа пользователей. Отличия:
 

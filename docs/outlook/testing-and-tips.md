@@ -24,11 +24,11 @@ ms.locfileid: "45093863"
 
 ## <a name="create-a-manifest-file-for-the-add-in"></a>Создание файла манифеста для надстройки
 
-Each add-in is described by an XML manifest, a document that gives the server information about the add-in, provides descriptive information about the add-in for the user, and identifies the location of the add-in UI HTML file. You can store the manifest in a local folder or server, as long as the location is accessible by the Exchange server of the mailbox that you are testing with. We'll assume that you store your manifest in a local folder. For information about how to create a manifest file, see [Outlook add-in manifests](manifests.md).
+Каждая надстройка описывается XML-манифестом, то есть документом, который предоставляет серверу сведения о почтовой надстройке, сообщает пользователям подробные сведения о надстройке и определяет местоположение HTML-файла пользовательского интерфейса надстройки. Вы можете сохранить манифест в локальной папке или на сервере, если у сервера Exchange, где размещен почтовый ящик, используемый в тестировании, есть доступ к этому месту. Сведения о создании файла манифеста см. в разделе [Манифесты надстроек Outlook](manifests.md).
 
 ## <a name="deploy-an-add-in-to-a-web-server"></a>Развертывание надстройки на веб-сервере
 
-You can use HTML and JavaScript to create the add-in. The resulting source files are stored on a web server that can be accessed by the Exchange server that hosts the add-in. After initially deploying the source files for the add-in, you can update the add-in UI and behavior by replacing the HTML files or JavaScript files stored on the web server with a new version of the HTML file.
+Для создания надстройки можно использовать HTML и JavaScript. Конечные исходные файлы хранятся на веб-сервере, к которому может обращаться сервер Exchange Server, на котором размещена надстройка. После развертывания исходных файлов надстройки вы можете обновить ее пользовательский интерфейс и поведение, обновив файлы HTML или JavaScript на веб-сервере.
 
 ## <a name="install-the-add-in"></a>Установка надстройки
 
@@ -36,9 +36,9 @@ You can use HTML and JavaScript to create the add-in. The resulting source files
 
 ### <a name="sideload-the-add-in"></a>Загрузка неопубликованной надстройки
 
-You can install an add-in if your mailbox is on Exchange Online, Exchange 2013 or a later release. Sideloading add-ins requires at minimum the **My Custom Apps** role for your Exchange Server. In order to test your add-in, or install add-ins in general by specifying a URL or file name for the add-in manifest, you should request your Exchange administrator to provide the necessary permissions.
+Вы можете установить надстройку, если ваш почтовый ящик находится в Exchange Online, Exchange 2013 или более поздней версии. Для загрузки неопубликованных надстроек требуется по крайней мере роль **My Custom Apps** для сервера Exchange Server. Чтобы проверить надстройку или иметь возможность устанавливать надстройки, указывая URL-адрес или имя файла манифеста, попросите своего администратора Exchange предоставить вам необходимые разрешения.
 
-The Exchange administrator can run the following PowerShell cmdlet to assign a single user the necessary permissions. In this example, `wendyri` is the user's email alias.
+Администратор Exchange может выполнить следующий командлет PowerShell, чтобы назначить необходимые разрешения одному пользователю. В этом примере `wendyri` — псевдоним электронной почты пользователя.
 
 ```powershell
 New-ManagementRoleAssignment -Role "My Custom Apps" -User "wendyri"
@@ -74,9 +74,9 @@ New-App -URL:"http://<fully-qualified URL">
 
 Выбор версии клиента Outlook для тестирования зависит от ваших требований к разработке.
 
-- If you are developing an add-in for private use, or only for members of your organization, then it is important to test the versions of Outlook that your company uses. Keep in mind that some users may use Outlook on the web, so testing your company's standard browser versions is also important.
+- Если вы разрабатываете надстройку для частного использования или только для членов организации, важно протестировать версии Outlook, используемые в компании. Обратите внимание, что некоторые пользователи могут использовать Outlook в Интернете, поэтому также важно протестировать версии стандартного браузера компании.
 
-- If you are developing an add-in to list in [AppSource](https://appsource.microsoft.com), you must test the required versions as specified in the [Commercial marketplace certification policies 1120.3](/legal/marketplace/certification-policies#11203-functionality). This includes:
+- Если вы разрабатываете надстройку для размещения в [AppSource](https://appsource.microsoft.com), необходимо протестировать версии, указанные в [политиках сертификации коммерческой платформы Marketplace 1120.3](/legal/marketplace/certification-policies#11203-functionality), в том числе:
   - Последнюю и предпоследнюю версии Outlook для Windows.
   - Последнюю версию Outlook для Mac.
   - Последнюю версию Outlook для iOS и Android (если надстройка [поддерживает мобильный формат](add-mobile-support.md)).
