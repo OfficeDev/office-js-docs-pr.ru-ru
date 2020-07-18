@@ -1,21 +1,21 @@
 ---
-ms.date: 01/16/2020
+ms.date: 07/10/2020
 description: Краткое руководство по разработке пользовательских функций в Excel.
 title: Краткое руководство по пользовательским функциям
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 126349f316cc923349f3f42e719c0017bbd7d7c0
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: adf420618ff744a409c6fc61af9b854f786055c0
+ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45094150"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45159446"
 ---
 # <a name="get-started-developing-excel-custom-functions"></a>Начало разработки пользовательских функций Excel
 
 С помощью пользовательских функций разработчики могут добавлять новые функции в Excel путем их определения в JavaScript или Typescript как части надстройки. Пользователи Excel могут получить доступ к пользовательским функциям так же, как и к любой встроенной функции в Excel, например `SUM()`.
 
-## <a name="prerequisites"></a>Необходимые действия
+## <a name="prerequisites"></a>Предварительные требования
 
 [!include[Set up requirements](../includes/set-up-dev-environment-beforehand.md)]
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]

@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для PowerPoint
-description: Узнайте больше о наборах требований PowerPoint JavaScript API
-ms.date: 03/11/2020
+description: Узнайте больше о наборах обязательных элементов API JavaScript для PowerPoint
+ms.date: 07/10/2020
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: 8349ff4c96e73ce93a77c86b709081f9355b1f06
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: eebcc78e69cd35732853daaee32f36df2b37252e
+ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45094304"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45159264"
 ---
 # <a name="powerpoint-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для PowerPoint
 

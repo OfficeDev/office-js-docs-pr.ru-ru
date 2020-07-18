@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Excel
 description: Сведения о наборе обязательных элементов надстройки Office для сборок Excel.
-ms.date: 05/06/2020
+ms.date: 07/10/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: e77bcb25437e082ce0fbf1b8a695db20ae9f14f1
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 4ed1b25732900357265ad9bb79228bf7a00ba888
+ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45094388"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45159278"
 ---
 # <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
 
