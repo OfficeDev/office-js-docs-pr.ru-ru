@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: Функции и API, которые в настоящее время находятся в режиме предварительной версии для надстроек Outlook.
-ms.date: 07/10/2020
+ms.date: 07/22/2020
 localization_priority: Normal
-ms.openlocfilehash: 457195b7511d4dabca101242400d44154a57a781
-ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
+ms.openlocfilehash: 9a2ca9a71498c954d9864f2b967b5fb240f8c506
+ms.sourcegitcommit: 7d5407d3900d2ad1feae79a4bc038afe50568be0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45159222"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "46530480"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -228,6 +228,40 @@ ms.locfileid: "45159222"
 
 ---
 
+### <a name="notification-messages-with-actions"></a>Сообщения уведомления с действиями
+
+Эта функция позволяет надстройке включать сообщение уведомления с дополнительным **действием, кроме действия по** умолчанию.
+
+#### <a name="officenotificationmessagedetailsactions"></a>[Office. NotificationMessageDetails. Actions](/javascript/api/outlook/office.notificationmessagedetails#actions)
+
+Добавлено новое свойство, которое позволяет добавить `InsightMessage` уведомление с дополнительным действием.
+
+**Доступно в**: Outlook в Windows (подключенном к подписке Microsoft 365), Outlook в Интернете (современный)
+
+#### <a name="officenotificationmessageaction"></a>[Office. Нотификатионмессажеактион](/javascript/api/outlook/office.notificationmessageaction)
+
+Добавлен новый объект, в котором определяется дополнительное действие для `InsightMessage` уведомления.
+
+**Доступно в**: Outlook в Windows (подключенном к подписке Microsoft 365), Outlook в Интернете (современный)
+
+#### <a name="officemailboxenumsactiontype"></a>[Office. MailboxEnums.](/javascript/api/outlook/office.mailboxenums.actiontype)
+
+Добавлено новое перечисление `ActionType` .
+
+**Доступно в**: Outlook в Windows (подключенном к подписке Microsoft 365), Outlook в Интернете (современный)
+
+#### <a name="officemailboxenumsitemnotificationmessagetypeinsightmessage"></a>[Office. MailboxEnums. Итемнотификатионмессажетипе. Инсигхтмессаже](/javascript/api/outlook/office.mailboxenums.itemnotificationmessagetype)
+
+Добавлен новый тип `InsightMessage` в `ItemNotificationMessageType` перечисление.
+
+**Доступно в**: Outlook в Windows (подключенном к подписке Microsoft 365), Outlook в Интернете (современный)
+
+<br>
+
+---
+
+---
+
 ### <a name="office-theme"></a>Тема Office
 
 #### <a name="officecontextofficetheme"></a>[Office.context.officeTheme](/javascript/api/office/office.context#officetheme)
@@ -248,7 +282,7 @@ ms.locfileid: "45159222"
 
 ---
 
-### <a name="single-sign-on-sso"></a>Единый вход (SSO)
+### <a name="single-sign-on-sso"></a>Единый вход
 
 #### <a name="officeruntimeauthgetaccesstoken"></a>[OfficeRuntime.auth.getAccessToken](../../../develop/sso-in-office-add-ins.md#sso-api-reference)
 

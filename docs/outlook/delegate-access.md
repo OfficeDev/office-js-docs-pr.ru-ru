@@ -1,21 +1,21 @@
 ---
 title: Включение сценариев делегирования доступа в надстройке Outlook
 description: В кратко описывается доступ представителя и описывается настройка поддержки надстройки.
-ms.date: 06/30/2020
+ms.date: 07/28/2020
 localization_priority: Normal
-ms.openlocfilehash: a5b4581783ca65bfe858dcf6638287418a3dcfe2
-ms.sourcegitcommit: 065bf4f8e0d26194cee9689f7126702b391340cc
+ms.openlocfilehash: 9cf4d15e81e4018d819f8f47a0729a25944c0fb5
+ms.sourcegitcommit: 7d5407d3900d2ad1feae79a4bc038afe50568be0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "45006418"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "46530452"
 ---
 # <a name="enable-delegate-access-scenarios-in-an-outlook-add-in"></a>Включение сценариев делегирования доступа в надстройке Outlook
 
 Владелец почтового ящика может использовать функцию делегированного доступа, чтобы [Разрешить другому пользователю управлять своей почтой и календарем](https://support.office.com/article/allow-someone-else-to-manage-your-mail-and-calendar-41c40c04-3bd1-4d22-963a-28eafec25926). В этой статье указывается, какие разрешения представителей поддерживает API JavaScript для Office, а также описывается включение сценариев делегированного доступа в надстройке Outlook.
 
 > [!IMPORTANT]
-> Доступ к представителю в настоящее время недоступен в Outlook для Mac, Android и iOS. Эта функция может быть доступна в будущем.
+> Доступ к представителю в настоящее время недоступен в Outlook для Mac, Android и iOS. Кроме того, эта функция в настоящее время недоступна для [групп общих почтовых ящиков](/microsoft-365/admin/create-groups/compare-groups?view=o365-worldwide#shared-mailboxes) в Outlook в Интернете. Эта функция может быть доступна в будущем.
 >
 > Поддержка этой функции появилась в наборе требований 1,8. См [клиенты и платформы](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
@@ -23,10 +23,10 @@ ms.locfileid: "45006418"
 
 В следующей таблице описаны разрешения представителей, поддерживаемые API JavaScript для Office.
 
-|Permission|Значение|Описание|
+|Разрешение|Значение|Описание|
 |---|---:|---|
 |Чтение|1 (000001)|Возможность чтения элементов.|
-|Write|2 (000010)|Может создавать элементы.|
+|Запись|2 (000010)|Может создавать элементы.|
 |делетеовн|4 (000100)|Можно удалять только созданные ими элементы.|
 |DeleteAll|8 (001000)|Может удалять все элементы.|
 |едитовн|16 (010000)|Возможность изменения только созданных ими элементов.|

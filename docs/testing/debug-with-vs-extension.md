@@ -1,16 +1,16 @@
 ---
-title: Расширение отладчика надстроек Microsoft Office для Visual Studio Code
+title: Надстройка Microsoft Office "Расширение отладчика для Visual Studio Code"
 description: Используйте отладчик надстроек Microsoft Office с расширением кода Visual Studio, чтобы отладить надстройку Office.
 ms.date: 05/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 1bd3814eba6da2339e7865d720b8a4c792b9310e
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 2439af12f30cef1b9d291578cbababe3ed601644
+ms.sourcegitcommit: 7d5407d3900d2ad1feae79a4bc038afe50568be0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611213"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "46530473"
 ---
-# <a name="microsoft-office-add-in-debugger-extension-for-visual-studio-code"></a>Расширение отладчика надстроек Microsoft Office для Visual Studio Code
+# <a name="microsoft-office-add-in-debugger-extension-for-visual-studio-code"></a>Надстройка Microsoft Office "Расширение отладчика для Visual Studio Code"
 
 Расширение отладчика надстроек Microsoft Office для Visual Studio Code позволяет отлаживать надстройку Office в пограничной среде выполнения.
 
@@ -21,8 +21,8 @@ ms.locfileid: "44611213"
 ## <a name="prerequisites"></a>Предварительные требования
 
 - [Visual Studio Code](https://code.visualstudio.com/) (необходимо запускать от имени администратора)
-- [Node. js (версия 10 +)](https://nodejs.org/)
-- Windows 10
+- [Node.js (версия 10 +)](https://nodejs.org/)
+- Windows 10;
 - [Microsoft Edge](https://www.microsoft.com/edge)
 
 В этих инструкциях предполагается, что у вас есть опыт работы с помощью командной строки, общие сведения об основном коде JavaScript и создание проекта надстройки Office перед использованием генератора Yo Office. Если вы еще этого не сделали, ознакомьтесь с одним из наших руководств, как в этом [руководстве по надстройкам Office для Excel](../tutorials/excel-tutorial.md).
@@ -31,7 +31,8 @@ ms.locfileid: "44611213"
 
 1. Если вам нужно создать проект надстройки, [создайте его с помощью генератора Yo Office](https://docs.microsoft.com/office/dev/add-ins/quickstarts/excel-quickstart-jquery?tabs=yeomangenerator). Чтобы настроить проект, следуйте инструкциям в командной строке. Вы можете выбрать любой язык или тип проекта в соответствии со своими потребностями.
 
-> ! НОТЕ Если у вас уже есть проект, пропустите шаг 1 и перейдите к шагу 2.
+> [!NOTE]
+> Если у вас уже есть проект, пропустите шаг 1 и перейдите к шагу 2.
 
 2. Откройте командную строку от имени администратора.
    ![Параметры командной строки, в том числе "Запуск от имени администратора" в Windows 10](../images/run-as-administrator-vs-code.jpg)
@@ -51,7 +52,7 @@ code .
 
 5. В рамках кода VS нажмите **клавиши CTRL + SHIFT + X** , чтобы открыть панель расширений. Выполните поиск расширения "надстройка Microsoft Office Debugger Debugger" и установите его.
 
-6. В папке. вскоде проекта откройте файл **Launch. JSON** . Добавьте в раздел следующий код `configurations` :
+6. В папке. вскоде проекта откройте **launch.jsв** файле. Добавьте в раздел следующий код `configurations` :
 
 ```JSON
 {

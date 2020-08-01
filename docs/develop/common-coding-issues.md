@@ -1,14 +1,14 @@
 ---
 title: Рекомендации по написанию кода для распространенных проблем и непредвиденных поведений платформы
 description: Список проблем платформы API JavaScript для Office, часто встречающихся разработчиками.
-ms.date: 05/21/2020
+ms.date: 07/23/2020
 localization_priority: Normal
-ms.openlocfilehash: d67a069cd2b752be3fca8ce094eaacfd0db08c18
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 8f604acaee308c3bd04e181719b091eb948d63ee
+ms.sourcegitcommit: 7d5407d3900d2ad1feae79a4bc038afe50568be0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608385"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "46530459"
 ---
 # <a name="coding-guidance-for-common-issues-and-unexpected-platform-behaviors"></a>Рекомендации по написанию кода для распространенных проблем и непредвиденных поведений платформы
 
@@ -142,6 +142,10 @@ Excel.run(async (context) => {
 
 > [!NOTE]
 > Это относится только к нескольким книгам Excel, открываемым в Windows или Mac.
+
+### <a name="coauthoring"></a>Совместное редактирование
+
+Используйте совместное [Редактирование в](../excel/co-authoring-in-excel-add-ins.md) надстройках Excel для шаблонов, используемых с событиями в среде совместной работы. В этой статье также обсуждаются потенциальные конфликты объединения при использовании определенных API, например [`TableRowCollection.add`](/javascript/api/excel/excel.tablerowcollection#add-index--values-) .
 
 ## <a name="see-also"></a>См. также
 

@@ -3,12 +3,12 @@ title: Устранение ошибок, с которыми сталкиваю
 description: Узнайте, как устранять ошибки пользователей в надстройках Office.
 ms.date: 06/17/2020
 localization_priority: Normal
-ms.openlocfilehash: 51f5ec406a09b18ece24b74dc22718e7fd422e38
-ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
+ms.openlocfilehash: c0d08b512f61ecfd0ec149194897d31ff32741e0
+ms.sourcegitcommit: 7d5407d3900d2ad1feae79a4bc038afe50568be0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45159187"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "46530487"
 ---
 # <a name="troubleshoot-user-errors-with-office-add-ins"></a>Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 
@@ -104,7 +104,8 @@ Office.context.ui.displayDialogAsync(startAddress, {displayInIFrame:true}, callb
 Если внесенные в манифест изменения (например, имена значков кнопок на ленте или текст элементов меню) не вступили в силу, попробуйте очистить кэш Office на своем компьютере. 
 
 #### <a name="for-windows"></a>Для Windows:
-Удалите содержимое папки `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\`.
+
+Удалите содержимое папки `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\` и удалите содержимое папки `%userprofile%\AppData\Local\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\AC\#!123\INetCache\` , если она существует.
 
 #### <a name="for-mac"></a>Для Mac
 
@@ -143,6 +144,6 @@ del /s /f /q %LOCALAPPDATA%\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\AC
 - [Отладка надстроек в Office в Интернете](debug-add-ins-in-office-online.md)
 - [Загрузка неопубликованной надстройки Office на iPad и Mac](sideload-an-office-add-in-on-ipad-and-mac.md)  
 - [Отладка надстроек Office на iPad и Mac](debug-office-add-ins-on-ipad-and-mac.md)  
-- [Расширение отладчика надстроек Microsoft Office для Visual Studio Code](debug-with-vs-extension.md)
+- [Надстройка Microsoft Office "Расширение отладчика для Visual Studio Code"](debug-with-vs-extension.md)
 - [Проверка манифеста надстройки Office](troubleshoot-manifest.md)
 - [Отладка надстройки с помощью журнала среды выполнения](runtime-logging.md)

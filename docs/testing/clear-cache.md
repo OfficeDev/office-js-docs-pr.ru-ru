@@ -3,12 +3,12 @@ title: Очистка кэша Office
 description: Узнайте, как очищать кэш Office на компьютере.
 ms.date: 05/22/2020
 localization_priority: Normal
-ms.openlocfilehash: c48f3ed6f4c2f5f246341b6b878a725a54758bbe
-ms.sourcegitcommit: 19312a54f47a17988ffa86359218a504713f9f09
+ms.openlocfilehash: fe8184a5bd084450c3be6d3d13707bf92f5c508f
+ms.sourcegitcommit: 7d5407d3900d2ad1feae79a4bc038afe50568be0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "44679404"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "46530494"
 ---
 # <a name="clear-the-office-cache"></a>Очистка кэша Office
 
@@ -20,8 +20,14 @@ ms.locfileid: "44679404"
 
 Чтобы удалить все надстройки неопубликованные из Excel, Word и PowerPoint, удалите содержимое папки:
 
-```text
+```
 %LOCALAPPDATA%\Microsoft\Office\16.0\Wef\
+```
+
+Если следующая папка существует, удалите ее содержимое:
+
+```
+%userprofile%\AppData\Local\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\AC\#!123\INetCache\
 ```
 
 Чтобы удалить надстройку неопубликованные из Outlook, выполните действия, описанные в статье [Загрузка неопубликованных Outlook Add-ins for test](../outlook/sideload-outlook-add-ins-for-testing.md) , чтобы найти надстройку в разделе " **Настраиваемые** надстройки" диалогового окна со списком установленных надстроек. Нажмите кнопку с многоточием ( `...` ) для надстройки, а затем выберите **Удалить** , чтобы удалить эту надстройку. Если эта надстройка не работает, удалите содержимое `Wef` папки, как указано выше для Excel, Word и PowerPoint.
