@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки Outlook
 description: Узнайте, как создать простую надстройку для области задач Outlook, используя API JS для Office.
-ms.date: 06/23/2020
+ms.date: 07/27/2020
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: 6eb510986ebb9cd8a4362f8c11f744e694bef5f7
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: ba1b3ace97c6fcf380f013b3b394eabe8b9db8b8
+ms.sourcegitcommit: 7d5407d3900d2ad1feae79a4bc038afe50568be0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45094164"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "46530501"
 ---
 # <a name="build-your-first-outlook-add-in"></a>Создание первой надстройки Outlook
 
@@ -111,6 +111,9 @@ ms.locfileid: "45094164"
 1. Выберите вкладку **Главная** (или вкладку **Сообщения**, если вы открыли сообщение в новом окне), а затем нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
     ![Снимок экрана с окном сообщения в Outlook, где выделена кнопка надстройки](../images/quick-start-button-1.png)
+
+    > [!NOTE]
+    > Если сообщение об ошибке "Не удается открыть эту надстройку с localhost" появляется в области задач, выполните действия, описанные в [статье по устранению неполадок](/office/troubleshoot/office-suite-issues/cannot-open-add-in-from-localhost).
 
 1. Прокрутите область задачи в самый низ и перейдите по ссылке **Выполнить**, чтобы написать тему сообщения в области задач.
 
