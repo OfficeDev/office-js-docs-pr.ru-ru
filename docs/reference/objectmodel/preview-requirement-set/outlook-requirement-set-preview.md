@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: Функции и API, которые в настоящее время находятся в режиме предварительной версии для надстроек Outlook.
-ms.date: 07/22/2020
+ms.date: 08/03/2020
 localization_priority: Normal
-ms.openlocfilehash: 9a2ca9a71498c954d9864f2b967b5fb240f8c506
-ms.sourcegitcommit: 7d5407d3900d2ad1feae79a4bc038afe50568be0
+ms.openlocfilehash: 5ffa7021fd260f41599a771a1b11aef3cafd832e
+ms.sourcegitcommit: a3b743598025466bad19177e0ba9ca94ea66d490
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "46530480"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "46547530"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -29,6 +29,18 @@ ms.locfileid: "46530480"
 ## <a name="features-in-preview"></a>Возможности предварительной версии
 
 Ниже перечислены возможности предварительной версии.
+
+### <a name="add-in-activation-on-items-protected-by-information-rights-management-irm"></a>Активация надстройки для элементов, защищенных службой управления правами на доступ к данным (IRM)
+
+Теперь надстройки можно активировать на элементах, защищенных с помощью управления правами на доступ к данным. Чтобы включить эту возможность, администратору клиента необходимо включить `OBJMODEL` право на использование, установив параметр **Разрешить программный доступ к** настраиваемой политике в Office. Для получения дополнительных сведений ознакомьтесь [с разрешениями и описаниями использования](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) .
+
+**Доступно в**: Outlook в Windows, начиная с сборки 13120,1000 (подключены к подписке Microsoft 365).
+
+<br>
+
+---
+
+---
 
 ### <a name="additional-calendar-properties"></a>Дополнительные свойства календаря
 

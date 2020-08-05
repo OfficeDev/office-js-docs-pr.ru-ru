@@ -1,18 +1,18 @@
 ---
 title: Использование правил активации на основе регулярных выражений для отображения надстройки
 description: Узнайте, как использовать правила активации на основе регулярных выражений для контекстных надстроек Outlook.
-ms.date: 10/31/2019
+ms.date: 07/28/2020
 localization_priority: Normal
-ms.openlocfilehash: b697f1b0a4d20254986a7aa10a5cc7f25dbdd887
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 3943f42363bd9a34978d1f42d701dcf906aa0446
+ms.sourcegitcommit: a3b743598025466bad19177e0ba9ca94ea66d490
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44605243"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "46547523"
 ---
 # <a name="use-regular-expression-activation-rules-to-show-an-outlook-add-in"></a>Использование правил активации на основе регулярных выражений для отображения надстройки Outlook
 
-Вы можете указать правила на основе регулярных выражений для активации [контекстной надстройки](contextual-outlook-add-ins.md) при обнаружении соответствия в определенных полях сообщения. Контекстные надстройки активируются только в режиме чтения. Outlook не активирует контекстные надстройки, когда пользователь создает элемент. Существуют также другие сценарии, согласно которым Outlook не активирует надстройки. Например, когда присутствуют элементы, защищенные службой управления правами на доступ к данным (IRM). Дополнительные сведения см. в статье [Правила активации для надстроек Outlook](activation-rules.md).
+Вы можете указать правила на основе регулярных выражений для активации [контекстной надстройки](contextual-outlook-add-ins.md) при обнаружении соответствия в определенных полях сообщения. Контекстные надстройки активируются только в режиме чтения. Outlook не активирует контекстные надстройки, когда пользователь создает элемент. Кроме того, существуют другие сценарии, в которых Outlook не активирует надстройки, например элементы с цифровой подписью. Дополнительные сведения см. в статье [Правила активации для надстроек Outlook](activation-rules.md).
 
 Вы можете указать регулярное выражение в составе правила [ItemHasRegularExpressionMatch](../reference/manifest/rule.md#itemhasregularexpressionmatch-rule) или [ItemHasKnownEntity](../reference/manifest/rule.md#itemhasknownentity-rule) в XML-файле манифеста надстройки. Правила указываются в точке расширения [DetectedEntity](../reference/manifest/extensionpoint.md#detectedentity).
 
