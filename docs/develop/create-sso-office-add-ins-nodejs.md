@@ -1,16 +1,16 @@
 ---
 title: Создание надстройки Office на платформе Node.js с использованием единого входа
 description: Узнайте, как создать надстройку на основе Node.js, использующую единый вход Office
-ms.date: 06/18/2020
+ms.date: 07/30/2020
 localization_priority: Normal
-ms.openlocfilehash: f2f28d0725de52c9a0647d9d1848662fb1ab7b4f
-ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
+ms.openlocfilehash: fcd77f9cdf9ac817679b020fff887c975450e05d
+ms.sourcegitcommit: 8fdd7369bfd97a273e222a0404e337ba2b8807b0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45159593"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "46573162"
 ---
-# <a name="create-a-nodejs-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office на платформе Node.js с использованием единого входа (предварительная версия)
+# <a name="create-a-nodejs-office-add-in-that-uses-single-sign-on"></a>Создание надстройки Office на платформе Node.js с использованием единого входа
 
 Ваша веб-надстройка Office может использовать процедуру входа в Office для авторизации пользователей в надстройке и Microsoft Graph. При этом им не потребуется входить повторно. Общие сведения см. в статье [Включение единого входа в надстройке Office](sso-in-office-add-ins.md).
 
@@ -102,6 +102,7 @@ ms.locfileid: "45159593"
     - `d3590ed6-52b3-4102-aeff-aad2292ab01c` (Microsoft Office).
     - `ea5a67f6-b6f3-4338-b240-c655ddc3cc8e` (Microsoft Office).
     - `57fb890c-0dab-4253-a5e0-7188c88b2bb4` (Office в Интернете).
+    - `08e18876-6177-487e-b8b5-cf950c1e598c` (Office в Интернете).
     - `bc59ab01-8403-45c6-8796-ac3ef710b3e3` (Outlook в Интернете).
 
     Для каждого идентификатора сделайте следующее:

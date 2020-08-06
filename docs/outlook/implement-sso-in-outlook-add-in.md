@@ -1,14 +1,14 @@
 ---
 title: 'Сценарий: реализация единого входа для службы'
 description: Узнайте, как реализовать единый вход в службе с помощью маркера единого входа и маркера удостоверения Exchange, предоставляемых надстройкой Outlook.
-ms.date: 04/15/2019
+ms.date: 07/30/2020
 localization_priority: Normal
-ms.openlocfilehash: f1f8d4e844223e698d3db4ee0a16cf29b2355e1b
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 7fef3dd2b583bd1aef4623e66e54d287eeb61db5
+ms.sourcegitcommit: 8fdd7369bfd97a273e222a0404e337ba2b8807b0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45093975"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "46573128"
 ---
 # <a name="scenario-implement-single-sign-on-to-your-service-in-an-outlook-add-in"></a>Сценарий: реализация единого входа для службы в надстройке Outlook
 
@@ -16,9 +16,8 @@ ms.locfileid: "45093975"
 
 
 > [!NOTE]
-> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint в тестовом режиме. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](../reference/requirement-sets/identity-api-requirement-sets.md).
-> Чтобы использовать единый вход, вам необходимо загрузить бета-версию библиотеки JavaScript Office из https://appsforoffice.microsoft.com/lib/beta/hosted/office.js на страницу подготовки HTML для надстройки.
-> Если вы работаете с надстройкой Outlook, обязательно включите современная проверка подлинности для клиента Microsoft 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](../reference/requirement-sets/identity-api-requirement-sets.md).
+> Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 
 ## <a name="why-use-the-sso-access-token"></a>Зачем использовать маркер доступа с единым входом?

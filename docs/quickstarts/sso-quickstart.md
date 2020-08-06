@@ -1,17 +1,17 @@
 ---
-title: Создание надстройки Office, в которой используется единый вход (предварительная версия), с помощью генератора Yeoman
-description: Создание надстройки Office на платформе Node.js с использованием единого входа (предварительная версия) с помощью генератора Yeoman.
-ms.date: 02/20/2020
+title: Создание надстройки Office, в которой используется единый вход, с помощью генератора Yeoman
+description: Создание надстройки Office на платформе Node.js с использованием единого входа с помощью генератора Yeoman.
+ms.date: 07/30/2020
 ms.prod: non-product-specific
 localization_priority: Priority
-ms.openlocfilehash: 7b6c6121a7a0f943a8c86276bad31f06de555b79
-ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
+ms.openlocfilehash: abc3c0ca7fb5068bf2964e4809970fb2ea86d5bf
+ms.sourcegitcommit: 8fdd7369bfd97a273e222a0404e337ba2b8807b0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45159382"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "46573233"
 ---
-# <a name="use-the-yeoman-generator-to-create-an-office-add-in-that-uses-single-sign-on-preview"></a>Создание надстройки Office, в которой используется единый вход (предварительная версия), с помощью генератора Yeoman
+# <a name="use-the-yeoman-generator-to-create-an-office-add-in-that-uses-single-sign-on"></a>Создание надстройки Office, в которой используется единый вход, с помощью генератора Yeoman
 
 В этой статье описывается процесс использования генератора Yeoman для создания надстройки Office для Excel, Outlook, Word или PowerPoint, в которой используется единый вход (SSO), когда это возможно, и альтернативный метод проверки подлинности пользователей, если единый вход не поддерживается.
 
@@ -31,8 +31,6 @@ ms.locfileid: "45159382"
     ```
 
     [!include[note to update Yeoman generator](../includes/note-yeoman-generator-update.md)]
-
-[!include[additional prerequisites](../includes/sso-tutorial-prereqs.md)]
 
 * Если вы используете компьютер Mac, на котором не установлено приложение Azure CLI, необходимо установить [Homebrew](https://brew.sh/). Сценарий конфигурации единого входа, который вы запустите во время этого быстрого запуска, будет использовать Homebrew для установки Azure CLI, а затем будет использовать Azure CLI для настройки единого входа в Azure.
 

@@ -1,14 +1,14 @@
 ---
 title: Варианты проверки подлинности в надстройках Outlook
 description: Надстройки Outlook предоставляют несколько различных способов проверки подлинности для разных сценариев.
-ms.date: 04/28/2020
+ms.date: 07/30/2020
 localization_priority: Priority
-ms.openlocfilehash: 7864b2cfe76154fc8f939f0838095d23ad727054
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 2f97ed75d6415e449970b09f5183d470e9cb4448
+ms.sourcegitcommit: 8fdd7369bfd97a273e222a0404e337ba2b8807b0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45094017"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "46573135"
 ---
 # <a name="authentication-options-in-outlook-add-ins"></a>Варианты проверки подлинности в надстройках Outlook
 
@@ -19,11 +19,8 @@ ms.locfileid: "45094017"
 Маркеры доступа для единого входа упрощают проверку подлинности надстройки и получение маркеров доступа для вызова [API Microsoft Graph](/graph/overview). Эта возможность повышает удобство работы, так как пользователю не требуется вводить свои учетные данные.
 
 > [!NOTE]
-> В настоящий момент API единого входа поддерживается в предварительной версии для Word, Excel, Outlook и PowerPoint. Его **не** следует использовать для рабочих надстроек. Дополнительные сведения о том, где в настоящий момент поддерживается API единого входа, см. в статье [Наборы требований к API удостоверений](../reference/requirement-sets/identity-api-requirement-sets.md).
->
-> Чтобы использовать единый вход, вам необходимо загрузить бета-версию библиотеки JavaScript Office из https://appsforoffice.microsoft.com/lib/beta/hosted/office.js на страницу подготовки HTML для надстройки.
->
-> Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Microsoft 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> API единого входа в настоящее время поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](../reference/requirement-sets/identity-api-requirement-sets.md).
+> Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 Рекомендуем использовать маркеры единого входа в таких случаях:
 

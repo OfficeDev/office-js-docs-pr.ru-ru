@@ -1,22 +1,23 @@
 ---
 title: Авторизация в Microsoft Graph с помощью единого входа
 description: Узнайте, как пользователи надстройки Office могут использовать единый вход (SSO) для получения данных из Microsoft Graph.
-ms.date: 07/07/2020
+ms.date: 07/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 809dc4f07c6d2afba4ea47cdee0eb7466dfb9635
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 81e8a87c21682a76c73e5e7389e85cd4f20c6a1d
+ms.sourcegitcommit: 8fdd7369bfd97a273e222a0404e337ba2b8807b0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45093730"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "46573177"
 ---
-# <a name="authorize-to-microsoft-graph-with-sso-preview"></a>Авторизация в Microsoft Graph с помощью единого входа (предварительная версия)
+# <a name="authorize-to-microsoft-graph-with-sso"></a>Авторизация в Microsoft Graph с помощью единого входа
 
-Пользователи входят в Office (Интернет-, мобильные и Настольные платформы) с помощью личной учетной записи Майкрософт или учетной записи Microsoft 365 для образовательных или рабочих учетных записей. Чтобы надстройка Office могла получить авторизованный доступ к [Microsoft Graph](https://developer.microsoft.com/graph/docs), лучше всего использовать учетные данные для входа пользователя в Office. Это позволяет пользователям получить доступ к своим данным Microsoft Graph без необходимости повторного входа.
+Пользователи входят в Office (в Интернете, на мобильных устройствах и настольных компьютерах), используя личную учетную запись Майкрософт, учетную запись Microsoft 365 для образования или рабочую учетную запись. Чтобы надстройка Office могла получить авторизованный доступ к [Microsoft Graph](https://developer.microsoft.com/graph/docs), лучше всего использовать учетные данные для входа пользователя в Office. Это позволяет пользователям получить доступ к своим данным Microsoft Graph без необходимости повторного входа.
 
 > [!NOTE]
-> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint в тестовом режиме. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](../reference/requirement-sets/identity-api-requirement-sets.md).
-> Если вы работаете с надстройкой Outlook, обязательно включите современная проверка подлинности для клиента Microsoft 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets).
+> Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+
 
 ## <a name="add-in-architecture-for-sso-and-microsoft-graph"></a>Архитектура надстройки для единого входа и Microsoft Graph
 
@@ -64,3 +65,16 @@ ms.locfileid: "45093730"
 * [Создание надстройки Office на платформе Node.js с использованием единого входа](create-sso-office-add-ins-nodejs.md)
 * [Создание надстройки Office на платформе ASP.NET с использованием единого входа](create-sso-office-add-ins-aspnet.md)
 * [Сценарий: реализация единого входа для службы в надстройке Outlook](../outlook/implement-sso-in-outlook-add-in.md)
+
+## <a name="distributing-sso-enabled-add-ins-in-microsoft-appsource"></a>Распространение надстроек с включенной поддержкой единого входа в Microsoft AppSource
+
+Когда администратор Microsoft 365 получает надстройку от [AppSource](https://appsource.microsoft.com), администратор может перераспределить его с помощью [централизованного развертывания](../publish/centralized-deployment.md) и предоставить надстройке разрешение администратора для доступа к областям Microsoft Graph. Тем не менее, для конечного пользователя также можно получить надстройку непосредственно из AppSource, в этом случае пользователь должен предоставить согласие на надстройку. Это может создать потенциальную проблему с производительностью, для которой мы предоставили решение.
+
+Если ваш код передает `allowConsentPrompt` параметр в вызове `getAccessToken` , например `OfficeRuntime.auth.getAccessToken( { allowConsentPrompt: true } );` , Office может запросить разрешение у пользователя, если вы получаете отчеты Azure AD в Office, что согласие еще не было предоставлено надстройке. Однако из соображений безопасности Office может запрашивать у пользователя согласие только на область Azure AD `profile` . *Office не может запрашивать согласие на любые области Microsoft Graph*, а не даже `User.Read` . Это означает, что если пользователь предоставит согласие на запрос, Office возвратит маркер начальной загрузки. Но попытка Exchange маркера начальной загрузки для маркера доступа к Microsoft Graph завершится с ошибкой AADSTS65001, что означает, что разрешение (в областях Microsoft Graph) не было предоставлено.
+
+Ваш код может, а также обрабатывать эту ошибку, возвращающую альтернативную систему проверки подлинности, которая предложит пользователю предоставить разрешения для областей Microsoft Graph. (Примеры кода: создание надстройки [office Node.js, использующей единый вход](create-sso-office-add-ins-nodejs.md) , и [Создание надстройки Office ASP.NET, которая использует единый вход](create-sso-office-add-ins-aspnet.md) , и образцы, на которые они ссылаются.) Но весь процесс требует нескольких циклов обработки в Azure AD. Можно избежать этого снижения производительности, включив `forMSGraphAccess` параметр в вызове `getAccessToken` , например `OfficeRuntime.auth.getAccessToken( { forMSGraphAccess: true } )` .  Это означает, что вашей надстройке требуются области Microsoft Graph. Office запросит Azure AD, чтобы убедиться в том, что эта надстройка уже предоставила разрешения для областей Microsoft Graph. Если это так, будет возвращен маркер начальной загрузки. В противном случае вызов возвратит `getAccessToken` ошибку 13012. Код может обработать эту ошибку, вернувшись обратно в альтернативную систему проверки подлинности немедленно, не предоставляя думед для обмена токенами с Azure AD.
+
+Рекомендуется всегда передаваться в то `forMSGraphAccess` `getAccessToken` время, когда ваша надстройка будет распространяться в AppSource и нуждается в областях Microsoft Graph.
+
+> [!TIP]
+> Если вы разрабатываете надстройку Outlook, использующую единый вход, и Загрузка неопубликованных ее для тестирования, Office *всегда* возвращает сообщение об ошибке 13012, если оно будет `forMSGraphAccess` передано, `getAccessToken` даже если предоставлено согласие администратора. По этой причине следует закомментировать `forMSGraphAccess` параметр **при разработке** надстройки Outlook. При развертывании в рабочей среде обязательно раскомментируйте параметр. Поддельный 13012 возникает только при наличии неопубликованных приложений в Outlook.

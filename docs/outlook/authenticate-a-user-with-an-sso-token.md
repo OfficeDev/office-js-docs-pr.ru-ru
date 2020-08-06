@@ -1,16 +1,16 @@
 ---
 title: Проверка подлинности пользователя с помощью маркера единого входа
 description: Узнайте, как реализовать единый вход в службе с помощью маркера единого входа, предоставляемого надстройкой Outlook.
-ms.date: 04/28/2020
+ms.date: 07/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 6d144e9ae4dcaf03705deb75f58c2f67a9c03106
-ms.sourcegitcommit: 7d5407d3900d2ad1feae79a4bc038afe50568be0
+ms.openlocfilehash: 79768147fc91a137a363a071beff46cec60ee819
+ms.sourcegitcommit: 8fdd7369bfd97a273e222a0404e337ba2b8807b0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "46530466"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "46573142"
 ---
-# <a name="authenticate-a-user-with-a-single-sign-on-token-in-an-outlook-add-in-preview"></a>Проверка подлинности пользователя с помощью маркера единого входа в надстройке Outlook (предварительная версия)
+# <a name="authenticate-a-user-with-a-single-sign-on-token-in-an-outlook-add-in"></a>Проверка подлинности пользователя с помощью маркера единого входа в надстройке Outlook
 
 Единый вход (SSO) упрощает проверку подлинности пользователей в надстройке (и, при необходимости, получение маркеров доступа для вызова [API Microsoft Graph](/graph/overview)).
 
@@ -20,7 +20,6 @@ ms.locfileid: "46530466"
 - использовать сведения об удостоверении в маркере для определения удостоверения пользователя и проверки подлинности во внутренних службах.
 
 Общие сведения о едином входе в надстройках Office см. в статье [Включение единого входа для надстроек Office (тестовый режим)](../develop/sso-in-office-add-ins.md) и [Авторизация для Microsoft Graph в надстройке Office](../develop/authorize-to-microsoft-graph.md).
-
 
 ## <a name="enable-modern-authentication-in-your-microsoft-365-tenancy"></a>Включение современной проверки подлинности в клиенте Microsoft 365
 
@@ -32,7 +31,7 @@ ms.locfileid: "46530466"
 
 ### <a name="provide-consent-when-sideloading-an-add-in"></a>Предоставление согласия при загрузке неопубликованной надстройки
 
-Когда надстройка, использующая SSO, получена из AppSource, она должна иметь метод проверки подлинности резервного копирования для предоставления согласия, если он содержит области Microsoft Graph. Когда вы разрабатываете надстройку, вам потребуется предварительно предоставить согласие. Дополнительные сведения см. в статье [Предоставление надстройке согласия администратора](../develop/grant-admin-consent-to-an-add-in.md)
+Когда вы разрабатываете надстройку, вам потребуется предварительно предоставить согласие. Для получения дополнительных сведений обратитесь к разделу [Предоставление администратору разрешения для надстройки](../develop/grant-admin-consent-to-an-add-in.md).
 
 ## <a name="update-the-add-in-manifest"></a>Обновление манифеста надстройки
 
