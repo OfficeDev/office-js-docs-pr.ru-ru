@@ -3,12 +3,12 @@ title: Требования для запуска надстроек Office
 description: Узнайте о требованиях к клиенту и серверу, которые конечный пользователь должен запускать надстройки Office.
 ms.date: 03/18/2020
 localization_priority: Normal
-ms.openlocfilehash: fa01decddcc7cc59945ad92912fabab90cc505f7
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 49e1799961a0367d9eaf00415375c98a42534ba9
+ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45093485"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46641230"
 ---
 # <a name="requirements-for-running-office-add-ins"></a>Требования для запуска надстроек Office
 
@@ -29,7 +29,7 @@ ms.locfileid: "45093485"
 > [!TIP]
 > Когда вы создаете и отлаживаете надстройку в Visual Studio, эта система развертывает и запускает соответствующие файлы веб-страниц локально с помощью IIS Express. Использовать дополнительный веб-сервер не требуется.
 
-Кроме того, требуется [каталог приложений](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md) в SharePoint, чтобы отправить XML-файл манифеста надстройки (контентной или области задач) в поддерживаемых приложениях Office — Excel, PowerPoint, Project и Word.
+Для контентных надстроек и надстроек области задач в поддерживаемых ведущих приложениях Office — Excel, PowerPoint, Project или Word для отправки XML-файла манифеста надстройки также необходим [Каталог приложений](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md) в SharePoint, или необходимо развернуть надстройку с помощью [централизованного развертывания](../publish/centralized-deployment.md).
 
 Чтобы протестировать и запустить надстройку Outlook, учетная запись электронной почты Outlook должна находиться в Exchange 2013 или более поздней версии, доступной в Microsoft 365, Exchange Online или в локальной установке. Пользователь или администратор устанавливают файлы манифестов надстроек Outlook на соответствующем сервере.
 

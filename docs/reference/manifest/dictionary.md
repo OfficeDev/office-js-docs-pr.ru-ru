@@ -3,12 +3,12 @@ title: Элемент Dictionary в файле манифеста
 description: Определяет параметры для надстройки области задач, которая обеспечивает поддержку дополнительного словаря.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 768745b06bb22896e7b2907509f77957ee5580fa
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 89f9327fa640c4248e733a602c44be76d87bd841
+ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44612271"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46641482"
 ---
 # <a name="dictionary-element"></a>Элемент Dictionary
 
@@ -30,7 +30,7 @@ ms.locfileid: "44612271"
 
 ## <a name="can-contain"></a>Может содержать
 
-|**Элемент**|
+|Элемент|
 |:-----|
 |[TargetDialects](targetdialects.md)|
 |[QueryUri](queryuri.md)|

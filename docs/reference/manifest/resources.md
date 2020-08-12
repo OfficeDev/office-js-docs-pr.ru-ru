@@ -3,12 +3,12 @@ title: Элемент Resources в файле манифеста
 description: В элементе Resources находятся значки, строки и URL-адреса для узла VersionOverrides.
 ms.date: 10/09/2018
 localization_priority: Normal
-ms.openlocfilehash: 717e3cecd32fbf2bdb806f7484cc954a86b82e3d
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 0a528b05904ef65c3643aaebb9149eb2091e2287
+ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608749"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46641272"
 ---
 # <a name="resources-element"></a>Элемент Resources
 
@@ -43,10 +43,10 @@ ms.locfileid: "44608749"
 - 48x48
 - 64x64
 
-> [!IMPORTANT] 
-> Для оптимальной работы Outlook требуется кэшировать ресурсы изображений. Поэтому сервер, на котором размещен ресурс изображения, не должен добавлять директивы CACHE-CONTROL в заголовок ответа. Это приведет к тому, что Outlook автоматически заменит универсальное или стандартное изображение.    
+> [!IMPORTANT]
+> Для оптимальной работы Outlook требуется кэшировать ресурсы изображений. Поэтому сервер, на котором размещен ресурс изображения, не должен добавлять директивы CACHE-CONTROL в заголовок ответа. Это приведет к тому, что Outlook автоматически заменит универсальное или стандартное изображение.
 
-## <a name="resources-examples"></a>Примеры ресурсов 
+## <a name="resources-examples"></a>Примеры ресурсов
 
 ```XML
 <Resources>

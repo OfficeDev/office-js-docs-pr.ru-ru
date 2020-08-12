@@ -3,12 +3,12 @@ title: Элемент OfficeTab в файле манифеста
 description: Элемент OfficeTab определяет вкладку ленты, в которой отображается команда надстройки.
 ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: b4bfd83c210a1b0a8a443e1a3f849974124a6b61
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 9b07ce1e57329e796545610e0c61a2c11d1ed55d
+ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611514"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46641443"
 ---
 # <a name="officetab-element"></a>Элемент OfficeTab
 
@@ -58,7 +58,7 @@ ms.locfileid: "44611514"
 - TabDeveloper
 - TabAddIns
 - TabPrintPreview
-- TabBackgroundRemoval 
+- TabBackgroundRemoval
 
 ### <a name="powerpoint"></a>PowerPoint
 

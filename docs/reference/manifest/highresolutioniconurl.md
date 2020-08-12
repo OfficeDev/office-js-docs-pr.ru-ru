@@ -3,12 +3,12 @@ title: Элемент HighResolutionIconUrl в файле манифеста
 description: Указывает URL-адрес изображения, которое используется для представления надстройки Office в пользовательском интерфейсе вставки и Магазине Office на экранах с высоким DPI.
 ms.date: 12/04/2018
 localization_priority: Normal
-ms.openlocfilehash: 1ebe69a7576c82ec121094ed84c0d49acde1098a
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 77675e768895a568bdfee97fc4d5006e1e890937
+ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611822"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46641356"
 ---
 # <a name="highresolutioniconurl-element"></a>Элемент HighResolutionIconUrl
 
@@ -28,7 +28,7 @@ ms.locfileid: "44611822"
 
 ## <a name="attributes"></a>Атрибуты
 
-|**Атрибут**|**Тип**|**Обязательный**|**Описание**|
+|Атрибут|Тип|Обязательный|Описание|
 |:-----|:-----|:-----|:-----|
 |DefaultValue|string (URL-адрес)|Обязательный|Задает значение по умолчанию для этого параметра, представленное для языкового стандарта, который указан с помощью элемента [DefaultLocale](defaultlocale.md).|
 

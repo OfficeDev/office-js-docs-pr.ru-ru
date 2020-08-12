@@ -3,12 +3,12 @@ title: Элемент Sets в файле манифеста
 description: Элемент Sets указывает минимальный набор API JavaScript для Office, необходимый для активации надстройки Office.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 8c1c97bfc2934ecf3cc20b472b29a03805603729
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: bd8f8311bb06a8e9e98fc408aece6395ab5643b1
+ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608735"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46641426"
 ---
 # <a name="sets-element"></a>Элемент Sets
 
@@ -34,7 +34,7 @@ ms.locfileid: "44608735"
 
 ## <a name="attributes"></a>Атрибуты
 
-|**Атрибут**|**Тип**|**Обязательный**|**Описание**|
+|Атрибут|Тип|Обязательный|Описание|
 |:-----|:-----|:-----|:-----|
 |DefaultMinVersion|string|необязательный|Задает значение атрибута **MinVersion** по умолчанию для всех дочерних элементов [набора](set.md) . Значение по умолчанию: "1.1".|
 

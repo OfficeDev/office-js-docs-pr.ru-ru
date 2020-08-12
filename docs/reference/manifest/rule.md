@@ -3,12 +3,12 @@ title: Элемент Rule в файле манифеста
 description: Элемент Rule указывает правила активации, которые должны оцениваться для этой контекстной почтовой надстройки.
 ms.date: 05/14/2020
 localization_priority: Normal
-ms.openlocfilehash: c4094cdf9e9006bbc49d180cb79845527461a543
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 79b97f2e442e9d8ce59d17467161b5b9b7a7252d
+ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608113"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46641433"
 ---
 # <a name="rule-element"></a>Элемент Rule
 
@@ -128,5 +128,5 @@ ms.locfileid: "44608113"
 ## <a name="see-also"></a>См. также
 
 - [Правила активации для надстроек Outlook](../../outlook/activation-rules.md)
-- [Сопоставление строк в элементе Outlook как известных сущностей](../../outlook/match-strings-in-an-item-as-well-known-entities.md)    
+- [Сопоставление строк в элементе Outlook как известных сущностей](../../outlook/match-strings-in-an-item-as-well-known-entities.md)
 - [Использование регулярных правил активации выражений для отображения надстройки Outlook](../../outlook/use-regular-expressions-to-show-an-outlook-add-in.md)

@@ -3,12 +3,12 @@ title: Элемент MobileFormFactor в файле манифеста
 description: Элемент MobileFormFactor указывает параметры параметров формы мобильного устройства для надстройки.
 ms.date: 10/09/2018
 localization_priority: Normal
-ms.openlocfilehash: 64a7681ca23becf42af1ba435aae4d509e6ad1ba
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 5e52e66a2b97a32a19d42a4938dbeaed8f367478
+ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44612229"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46641475"
 ---
 # <a name="mobileformfactor-element"></a>Элемент MobileFormFactor
 
@@ -20,8 +20,8 @@ ms.locfileid: "44612229"
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-| Элемент                               | Обязательный | Описание  |
-|:--------------------------------------|:--------:|:-------------|
+| Элемент                             | Обязательный | Описание  |
+|:------------------------------------|:--------:|:-------------|
 | [ExtensionPoint](extensionpoint.md) | Да      | Определяет, где предоставляются функции надстройки. |
 | [FunctionFile](functionfile.md)     | Да      | URL-адрес файла, который содержит функции JavaScript.|
 
@@ -36,7 +36,7 @@ ms.locfileid: "44612229"
       <FunctionFile resid="residUILessFunctionFileUrl" />
       <ExtensionPoint xsi:type="MobileMessageReadCommandSurface">
         <!-- information on this extension point -->
-      </ExtensionPoint> 
+      </ExtensionPoint>
       <!-- possibly more ExtensionPoint elements -->
     </MobileFormFactor>
   </Host>

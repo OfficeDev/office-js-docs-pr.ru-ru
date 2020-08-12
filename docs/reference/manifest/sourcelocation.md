@@ -3,12 +3,12 @@ title: Элемент SourceLocation в файле манифеста
 description: Элемент SourceLocation указывает расположение исходных файлов для надстройки Office.
 ms.date: 05/12/2020
 localization_priority: Normal
-ms.openlocfilehash: 9af2337263314bec5ce04eb0d22626ab368c19ef
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 447adb7df7d0c59305fe5046357959fcd7824735
+ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608728"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46641405"
 ---
 # <a name="sourcelocation-element"></a>Элемент SourceLocation
 
@@ -34,6 +34,6 @@ ms.locfileid: "44608728"
 
 ## <a name="attributes"></a>Атрибуты
 
-|**Атрибут**|**Тип**|**Обязательный**|**Описание**|
+|Атрибут|Тип|Обязательный|Описание|
 |:-----|:-----|:-----|:-----|
 |DefaultValue|URL-адрес|Обязательный|Задает значение этого параметра по умолчанию для языкового стандарта, указанного в элементе [DefaultLocale](defaultlocale.md).|

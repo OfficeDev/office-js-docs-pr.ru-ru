@@ -3,12 +3,12 @@ title: Элемент ExtensionPoint в файле манифеста
 description: Определяет, где доступны функции надстройки в пользовательском интерфейсе Office.
 ms.date: 05/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 44824e0c74b35105833f1f05cdda87bc873a4427
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 7b602f81927da34a948b1762d7b91608963d2e25
+ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45094458"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46641391"
 ---
 # <a name="extensionpoint-element"></a>Элемент ExtensionPoint
 
@@ -71,7 +71,7 @@ ms.locfileid: "45094458"
 
 #### <a name="child-elements"></a>Дочерние элементы
  
-|**Элемент**|**Описание**|
+|Элемент|Описание|
 |:-----|:-----|
 |**CustomTab**|Обязательный, если требуется добавить пользовательскую вкладку в ленту (с помощью элемента **PrimaryCommandSurface**). Невозможно использовать элементы **CustomTab** и **OfficeTab** одновременно. Атрибут **id** является обязательным. |
 |**OfficeTab**|Является обязательным, если вы хотите расширить вкладку ленты приложения Office по умолчанию (с помощью **PrimaryCommandSurface**). Невозможно использовать элементы **OfficeTab** и **CustomTab** одновременно. Дополнительные сведения см. в разделе [OfficeTab](officetab.md).|

@@ -1,17 +1,17 @@
 ---
-title: Реализация добавления при отправке в надстройке Outlook (Предварительная версия)
+title: Реализация дополнения по протоколу Send в надстройке Outlook (Предварительная версия)
 description: Узнайте, как реализовать функцию "присоединение к передаче" в надстройке Outlook.
 ms.topic: article
-ms.date: 05/26/2020
+ms.date: 08/07/2020
 localization_priority: Normal
-ms.openlocfilehash: b9c834778d68e50806da908732cd0c8663ec6680
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 2b97d65a0f1056257b9cf79eb23fabca10be3a78
+ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45093989"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46641503"
 ---
-# <a name="implement-append-on-send-in-your-outlook-add-in-preview"></a>Реализация добавления при отправке в надстройке Outlook (Предварительная версия)
+# <a name="implement-append-on-send-in-your-outlook-add-in-preview"></a>Реализация дополнения по протоколу Send в надстройке Outlook (Предварительная версия)
 
 По завершении этого пошагового руководства у вас будет надстройка Outlook, которая может вставить заявление об отказе при отправке сообщения.
 
@@ -137,6 +137,9 @@ ms.locfileid: "45093989"
 ## <a name="implement-append-on-send-handling"></a>Реализация обработки при отправке по требованию
 
 Затем реализуйте Добавление в событие Send.
+
+> [!IMPORTANT]
+> Если надстройка также реализует [обработку событий при отправке с помощью `ItemSend` ](outlook-on-send-addins.md), вызов `AppendOnSendAsync` в обработчике on – Send возвращает сообщение об ошибке, так как этот сценарий не поддерживается.
 
 В этом сценарии вы реализуете Добавление заявления об отказе для элемента при отправке пользователя.
 

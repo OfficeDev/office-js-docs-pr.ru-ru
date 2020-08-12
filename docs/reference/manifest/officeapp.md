@@ -3,12 +3,12 @@ title: Элемент OfficeApp в файле манифеста
 description: Элемент OfficeApp является корневым элементом манифеста надстройки Office.
 ms.date: 02/04/2020
 localization_priority: Normal
-ms.openlocfilehash: b6f3102a97794a19366b06734789e01fc4bc4f9d
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 770c764db6d8d7d1d2e870e48437de7c8f887101
+ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611528"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46641461"
 ---
 # <a name="officeapp-element"></a>Элемент OfficeApp
 
@@ -33,7 +33,7 @@ ms.locfileid: "44611528"
 
 ## <a name="must-contain"></a>Должен содержать
 
-|**Element**|**Content**|**Почтовая надстройка**|**TaskPane**|
+|Элемент|Контентная|Почта|Область задач|
 |:-----|:-----|:-----|:-----|
 |[Id](id.md)|x|x|x|
 |[Версия](version.md)|x|x|x|
@@ -46,9 +46,9 @@ ms.locfileid: "44611528"
 |[Разрешения](permissions.md)|x||x|
 |[Rule](rule.md)||x||
 
-## <a name="can-contain"></a>Может содержать:
+## <a name="can-contain"></a>Может содержать
 
-|**Элемент**|**Content**|**Почтовая надстройка**|**TaskPane**|
+|Элемент|Контентная|Почта|Область задач|
 |:-----|:-----|:-----|:-----|
 |[AlternateId](alternateid.md)|x|x|x|
 |[IconUrl](iconurl.md)|x|x|x|
@@ -65,7 +65,7 @@ ms.locfileid: "44611528"
 
 ## <a name="attributes"></a>Атрибуты
 
-|||
+|Атрибут|Описание|
 |:-----|:-----|
 |xmlns|Определяет пространство имен и версию схемы для манифеста надстройки Office. Для этого атрибута всегда должно быть задано значение `"http://schemas.microsoft.com/office/appforoffice/1.1"`.|
 |xmlns:xsi|Определяет экземпляр объекта XMLSchema. Для этого атрибута всегда должно быть задано значение `"http://www.w3.org/2001/XMLSchema-instance"`.|

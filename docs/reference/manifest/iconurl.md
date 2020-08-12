@@ -3,12 +3,12 @@ title: Элемент IconUrl в файле манифеста
 description: Элемент IconUrl указывает URL-адрес изображения, которое представляет надстройку Office в пользовательском интерфейсе вставки и магазине Office.
 ms.date: 06/20/2019
 localization_priority: Normal
-ms.openlocfilehash: 2ccfc2fc1d0a07f6d549f388bbb58e40e79a17d5
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: b2c117f69259911bf4643eaddbbbcdf5fb502197
+ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611794"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46641363"
 ---
 # <a name="iconurl-element"></a>Элемент IconUrl
 
@@ -28,7 +28,7 @@ ms.locfileid: "44611794"
 
 ## <a name="attributes"></a>Атрибуты
 
-|**Атрибут**|**Тип**|**Обязательный**|**Описание**|
+|Атрибут|Тип|Обязательный|Описание|
 |:-----|:-----|:-----|:-----|
 |DefaultValue|string|Обязательный|Задает значение по умолчанию для этого параметра, представленное для языкового стандарта, который указан с помощью элемента [DefaultLocale](defaultlocale.md).|
 

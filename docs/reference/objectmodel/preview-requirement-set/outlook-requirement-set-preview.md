@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: Функции и API, которые в настоящее время находятся в режиме предварительной версии для надстроек Outlook.
-ms.date: 08/03/2020
+ms.date: 08/07/2020
 localization_priority: Normal
-ms.openlocfilehash: 5ffa7021fd260f41599a771a1b11aef3cafd832e
-ms.sourcegitcommit: a3b743598025466bad19177e0ba9ca94ea66d490
+ms.openlocfilehash: 99f2a47c366508be17b34dbf3e373ac078843056
+ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "46547530"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46641279"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -285,6 +285,26 @@ ms.locfileid: "46547530"
 #### <a name="officeeventtypeofficethemechanged"></a>[Office.EventType.OfficeThemeChanged](/javascript/api/office/office.eventtype)
 
 Добавлено событие `OfficeThemeChanged` для объекта `Mailbox`.
+
+**Доступно в**: Outlook в Windows (подключено к подписке Microsoft 365)
+
+<br>
+
+---
+
+---
+
+### <a name="session-data"></a>Данные сеансов
+
+#### <a name="officesessiondata"></a>[Office. Сессиондата](/javascript/api/outlook/office.sessiondata)
+
+Добавлен новый объект, представляющий данные сеанса для элемента.
+
+**Доступно в**: Outlook в Windows (подключено к подписке Microsoft 365)
+
+#### <a name="officecontextmailboxitemsessiondata"></a>[Office. Context. Mailbox. Item. Сессиондата](office.context.mailbox.item.md#properties)
+
+Добавлено новое свойство для управления данными сеанса элемента в режиме создания.
 
 **Доступно в**: Outlook в Windows (подключено к подписке Microsoft 365)
 

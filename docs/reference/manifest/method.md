@@ -3,12 +3,12 @@ title: Элемент Method в файле манифеста
 description: Элемент Method указывает отдельный метод из API JavaScript для Office, необходимый для активации надстроек Office.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: c3531475a920fd24ce8390170b5f4728d4dcd0e0
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 0e3e74a73a3422a7789e82d6f0e7a516bd795ca8
+ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611759"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46641327"
 ---
 # <a name="method-element"></a>Элемент Method
 
@@ -28,7 +28,7 @@ ms.locfileid: "44611759"
 
 ## <a name="attributes"></a>Атрибуты
 
-|**Атрибут**|**Тип**|**Обязательный**|**Описание**|
+|Атрибут|Тип|Обязательный|Описание|
 |:-----|:-----|:-----|:-----|
 |Имя|string|Обязательный|Указывает имя необходимого метода, соответствующее его родительскому объекту. Например, чтобы указать `getSelectedDataAsync` метод, необходимо указать `"Document.getSelectedDataAsync"` .|
 
