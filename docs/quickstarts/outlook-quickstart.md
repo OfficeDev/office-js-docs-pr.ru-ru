@@ -1,77 +1,77 @@
 ---
 title: Создание первой надстройки Outlook
 description: Узнайте, как создать простую надстройку для области задач Outlook, используя API JS для Office.
-ms.date: 07/27/2020
+ms.date: 08/11/2020
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: ba1b3ace97c6fcf380f013b3b394eabe8b9db8b8
-ms.sourcegitcommit: 7d5407d3900d2ad1feae79a4bc038afe50568be0
+ms.openlocfilehash: 6ed50b52e0f4d5667e835c875851ed14c68bfe49
+ms.sourcegitcommit: 65c15a9040279901ea7ff7f522d86c8fddb98e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "46530501"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "46672717"
 ---
-# <a name="build-your-first-outlook-add-in"></a><span data-ttu-id="1df62-103">Создание первой надстройки Outlook</span><span class="sxs-lookup"><span data-stu-id="1df62-103">Build your first Outlook add-in</span></span>
+# <a name="build-your-first-outlook-add-in"></a><span data-ttu-id="93b5f-103">Создание первой надстройки Outlook</span><span class="sxs-lookup"><span data-stu-id="93b5f-103">Build your first Outlook add-in</span></span>
 
-<span data-ttu-id="1df62-104">В этой статье вы ознакомитесь с процессом создания надстройки для области задач Outlook, отображающей минимум одно свойство выбранного сообщения.</span><span class="sxs-lookup"><span data-stu-id="1df62-104">In this article, you'll walk through the process of building an Outlook task pane add-in that displays at least one property of a selected message.</span></span>
+<span data-ttu-id="93b5f-104">В этой статье вы ознакомитесь с процессом создания надстройки для области задач Outlook, отображающей минимум одно свойство выбранного сообщения.</span><span class="sxs-lookup"><span data-stu-id="93b5f-104">In this article, you'll walk through the process of building an Outlook task pane add-in that displays at least one property of a selected message.</span></span>
 
-## <a name="create-the-add-in"></a><span data-ttu-id="1df62-105">Создание надстройки</span><span class="sxs-lookup"><span data-stu-id="1df62-105">Create the add-in</span></span>
+## <a name="create-the-add-in"></a><span data-ttu-id="93b5f-105">Создание надстройки</span><span class="sxs-lookup"><span data-stu-id="93b5f-105">Create the add-in</span></span>
 
-<span data-ttu-id="1df62-106">Можно создать надстройку Office с помощью [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office) или Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="1df62-106">You can create an Office Add-in by using the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office) or Visual Studio.</span></span> <span data-ttu-id="1df62-107">Генератор Yeoman создает проект Node.js, которым можно управлять с помощью Visual Studio Code или любого другого редактора, а Visual Studio создает решение Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="1df62-107">The Yeoman generator creates a Node.js project that can be managed with Visual Studio Code or any other editor, whereas Visual Studio creates a Visual Studio solution.</span></span>  <span data-ttu-id="1df62-108">Выберите вкладку с нужным вариантом и следуйте инструкциям, чтобы создать надстройку и протестировать ее локально.</span><span class="sxs-lookup"><span data-stu-id="1df62-108">Select the tab for the one you'd like to use and then follow the instructions to create your add-in and test it locally.</span></span>
+<span data-ttu-id="93b5f-106">Можно создать надстройку Office с помощью [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office) или Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="93b5f-106">You can create an Office Add-in by using the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office) or Visual Studio.</span></span> <span data-ttu-id="93b5f-107">Генератор Yeoman создает проект Node.js, которым можно управлять с помощью Visual Studio Code или любого другого редактора, а Visual Studio создает решение Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="93b5f-107">The Yeoman generator creates a Node.js project that can be managed with Visual Studio Code or any other editor, whereas Visual Studio creates a Visual Studio solution.</span></span>  <span data-ttu-id="93b5f-108">Выберите вкладку с нужным вариантом и следуйте инструкциям, чтобы создать надстройку и протестировать ее локально.</span><span class="sxs-lookup"><span data-stu-id="93b5f-108">Select the tab for the one you'd like to use and then follow the instructions to create your add-in and test it locally.</span></span>
 
-# <a name="yeoman-generator"></a>[<span data-ttu-id="1df62-109">Генератор Yeoman</span><span class="sxs-lookup"><span data-stu-id="1df62-109">Yeoman generator</span></span>](#tab/yeomangenerator)
+# <a name="yeoman-generator"></a>[<span data-ttu-id="93b5f-109">Генератор Yeoman</span><span class="sxs-lookup"><span data-stu-id="93b5f-109">Yeoman generator</span></span>](#tab/yeomangenerator)
 
-### <a name="prerequisites"></a><span data-ttu-id="1df62-110">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="1df62-110">Prerequisites</span></span>
+### <a name="prerequisites"></a><span data-ttu-id="93b5f-110">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="93b5f-110">Prerequisites</span></span>
 
 [!include[Set up requirements](../includes/set-up-dev-environment-beforehand.md)]
 
-- <span data-ttu-id="1df62-111">[Node.js](https://nodejs.org/) (последняя версия [LTS](https://nodejs.org/about/releases))</span><span class="sxs-lookup"><span data-stu-id="1df62-111">[Node.js](https://nodejs.org/) (the latest [LTS](https://nodejs.org/about/releases) version)</span></span>
+- <span data-ttu-id="93b5f-111">[Node.js](https://nodejs.org/) (последняя версия [LTS](https://nodejs.org/about/releases))</span><span class="sxs-lookup"><span data-stu-id="93b5f-111">[Node.js](https://nodejs.org/) (the latest [LTS](https://nodejs.org/about/releases) version)</span></span>
 
-- <span data-ttu-id="1df62-112">Последняя версия [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office). Выполните в командной строке указанную ниже команду, чтобы установить эти инструменты глобально.</span><span class="sxs-lookup"><span data-stu-id="1df62-112">The latest version of [Yeoman](https://github.com/yeoman/yo) and the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office). To install these tools globally, run the following command via the command prompt:</span></span>
+- <span data-ttu-id="93b5f-112">Последняя версия [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office). Выполните в командной строке указанную ниже команду, чтобы установить эти инструменты глобально.</span><span class="sxs-lookup"><span data-stu-id="93b5f-112">The latest version of [Yeoman](https://github.com/yeoman/yo) and the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office). To install these tools globally, run the following command via the command prompt:</span></span>
 
     ```command&nbsp;line
     npm install -g yo generator-office
     ```
 
     > [!NOTE]
-    > <span data-ttu-id="1df62-113">Даже если вы уже установили генератор Yeoman, рекомендуем обновить пакет до последней версии из npm.</span><span class="sxs-lookup"><span data-stu-id="1df62-113">Even if you've previously installed the Yeoman generator, we recommend you update your package to the latest version from npm.</span></span>
+    > <span data-ttu-id="93b5f-113">Даже если вы уже установили генератор Yeoman, рекомендуем обновить пакет до последней версии из npm.</span><span class="sxs-lookup"><span data-stu-id="93b5f-113">Even if you've previously installed the Yeoman generator, we recommend you update your package to the latest version from npm.</span></span>
 
-### <a name="create-the-add-in-project"></a><span data-ttu-id="1df62-114">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="1df62-114">Create the add-in project</span></span>
+### <a name="create-the-add-in-project"></a><span data-ttu-id="93b5f-114">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="93b5f-114">Create the add-in project</span></span>
 
 1. [!include[Yeoman generator create project guidance](../includes/yo-office-command-guidance.md)]
 
-    - <span data-ttu-id="1df62-115">**Выберите тип проекта** - `Office Add-in Task Pane project`</span><span class="sxs-lookup"><span data-stu-id="1df62-115">**Choose a project type** - `Office Add-in Task Pane project`</span></span>
+    - <span data-ttu-id="93b5f-115">**Выберите тип проекта** - `Office Add-in Task Pane project`</span><span class="sxs-lookup"><span data-stu-id="93b5f-115">**Choose a project type** - `Office Add-in Task Pane project`</span></span>
 
-    - <span data-ttu-id="1df62-116">**Выберите тип сценария** - `Javascript`</span><span class="sxs-lookup"><span data-stu-id="1df62-116">**Choose a script type** - `Javascript`</span></span>
+    - <span data-ttu-id="93b5f-116">**Выберите тип сценария** - `Javascript`</span><span class="sxs-lookup"><span data-stu-id="93b5f-116">**Choose a script type** - `Javascript`</span></span>
 
-    - <span data-ttu-id="1df62-117">**Как вы хотите назвать надстройку?**</span><span class="sxs-lookup"><span data-stu-id="1df62-117">**What do you want to name your add-in?**</span></span> - `My Office Add-in`
+    - <span data-ttu-id="93b5f-117">**Как вы хотите назвать надстройку?**</span><span class="sxs-lookup"><span data-stu-id="93b5f-117">**What do you want to name your add-in?**</span></span> - `My Office Add-in`
 
-    - <span data-ttu-id="1df62-118">**Какое клиентское приложение Office должно поддерживаться?**</span><span class="sxs-lookup"><span data-stu-id="1df62-118">**Which Office client application would you like to support?**</span></span> - `Outlook`
+    - <span data-ttu-id="93b5f-118">**Какое клиентское приложение Office должно поддерживаться?**</span><span class="sxs-lookup"><span data-stu-id="93b5f-118">**Which Office client application would you like to support?**</span></span> - `Outlook`
 
     ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-outlook.png)
     
-    <span data-ttu-id="1df62-120">После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.</span><span class="sxs-lookup"><span data-stu-id="1df62-120">After you complete the wizard, the generator will create the project and install supporting Node components.</span></span>
+    <span data-ttu-id="93b5f-120">После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.</span><span class="sxs-lookup"><span data-stu-id="93b5f-120">After you complete the wizard, the generator will create the project and install supporting Node components.</span></span>
 
     [!include[Yeoman generator next steps](../includes/yo-office-next-steps.md)]
 
-1. <span data-ttu-id="1df62-121">Перейдите в корневую папку проекта веб-приложения.</span><span class="sxs-lookup"><span data-stu-id="1df62-121">Navigate to the root folder of the web application project.</span></span>
+1. <span data-ttu-id="93b5f-121">Перейдите в корневую папку проекта веб-приложения.</span><span class="sxs-lookup"><span data-stu-id="93b5f-121">Navigate to the root folder of the web application project.</span></span>
 
     ```command&nbsp;line
     cd "My Office Add-in"
     ```
 
-### <a name="explore-the-project"></a><span data-ttu-id="1df62-122">Знакомство с проектом</span><span class="sxs-lookup"><span data-stu-id="1df62-122">Explore the project</span></span>
+### <a name="explore-the-project"></a><span data-ttu-id="93b5f-122">Знакомство с проектом</span><span class="sxs-lookup"><span data-stu-id="93b5f-122">Explore the project</span></span>
 
-<span data-ttu-id="1df62-123">Проект надстройки, который вы создали с помощью генератора Yeoman, содержит образец кода для простейшей надстройки области задач.</span><span class="sxs-lookup"><span data-stu-id="1df62-123">The add-in project that you've created with the Yeoman generator contains sample code for a very basic task pane add-in.</span></span> 
+<span data-ttu-id="93b5f-123">Проект надстройки, который вы создали с помощью генератора Yeoman, содержит образец кода для простейшей надстройки области задач.</span><span class="sxs-lookup"><span data-stu-id="93b5f-123">The add-in project that you've created with the Yeoman generator contains sample code for a very basic task pane add-in.</span></span> 
 
-- <span data-ttu-id="1df62-124">Файл **./manifest.xml** в корневом каталоге проекта определяет настройки и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="1df62-124">The **./manifest.xml** file in the root directory of the project defines the settings and capabilities of the add-in.</span></span>
-- <span data-ttu-id="1df62-125">Файл **./src/taskpane/taskpane.html** содержит разметку HTML для области задач.</span><span class="sxs-lookup"><span data-stu-id="1df62-125">The **./src/taskpane/taskpane.html** file contains the HTML markup for the task pane.</span></span>
-- <span data-ttu-id="1df62-126">Файл **./src/taskpane/taskpane.css** содержит код CSS, который применяется к содержимому области задач.</span><span class="sxs-lookup"><span data-stu-id="1df62-126">The **./src/taskpane/taskpane.css** file contains the CSS that's applied to content in the task pane.</span></span>
-- <span data-ttu-id="1df62-127">Файл **./src/taskpane/taskpane.js** содержит код API JavaScript для Office, который упрощает взаимодействие между областью задачи и Outlook.</span><span class="sxs-lookup"><span data-stu-id="1df62-127">The **./src/taskpane/taskpane.js** file contains the Office JavaScript API code that facilitates interaction between the task pane and Outlook.</span></span>
+- <span data-ttu-id="93b5f-124">Файл **./manifest.xml** в корневом каталоге проекта определяет настройки и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="93b5f-124">The **./manifest.xml** file in the root directory of the project defines the settings and capabilities of the add-in.</span></span>
+- <span data-ttu-id="93b5f-125">Файл **./src/taskpane/taskpane.html** содержит разметку HTML для области задач.</span><span class="sxs-lookup"><span data-stu-id="93b5f-125">The **./src/taskpane/taskpane.html** file contains the HTML markup for the task pane.</span></span>
+- <span data-ttu-id="93b5f-126">Файл **./src/taskpane/taskpane.css** содержит код CSS, который применяется к содержимому области задач.</span><span class="sxs-lookup"><span data-stu-id="93b5f-126">The **./src/taskpane/taskpane.css** file contains the CSS that's applied to content in the task pane.</span></span>
+- <span data-ttu-id="93b5f-127">Файл **./src/taskpane/taskpane.js** содержит код API JavaScript для Office, который упрощает взаимодействие между областью задачи и Outlook.</span><span class="sxs-lookup"><span data-stu-id="93b5f-127">The **./src/taskpane/taskpane.js** file contains the Office JavaScript API code that facilitates interaction between the task pane and Outlook.</span></span>
 
-### <a name="update-the-code"></a><span data-ttu-id="1df62-128">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="1df62-128">Update the code</span></span>
+### <a name="update-the-code"></a><span data-ttu-id="93b5f-128">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="93b5f-128">Update the code</span></span>
 
-1. <span data-ttu-id="1df62-129">Откройте в редакторе кода файл **./src/taskpane/taskpane.html** и замените весь элемент `<main>` (внутри элемента `<body>`) приведенной ниже разметкой.</span><span class="sxs-lookup"><span data-stu-id="1df62-129">In your code editor, open the file **./src/taskpane/taskpane.html** and replace the entire `<main>` element (within the `<body>` element) with the following markup.</span></span> <span data-ttu-id="1df62-130">Эта новая разметка добавляет метку в том месте, где скрипт **./src/taskpane/taskpane.js** запишет данные.</span><span class="sxs-lookup"><span data-stu-id="1df62-130">This new markup adds a label where the script in **./src/taskpane/taskpane.js** will write data.</span></span>
+1. <span data-ttu-id="93b5f-129">Откройте в редакторе кода файл **./src/taskpane/taskpane.html** и замените весь элемент `<main>` (внутри элемента `<body>`) приведенной ниже разметкой.</span><span class="sxs-lookup"><span data-stu-id="93b5f-129">In your code editor, open the file **./src/taskpane/taskpane.html** and replace the entire `<main>` element (within the `<body>` element) with the following markup.</span></span> <span data-ttu-id="93b5f-130">Эта новая разметка добавляет метку в том месте, где скрипт **./src/taskpane/taskpane.js** запишет данные.</span><span class="sxs-lookup"><span data-stu-id="93b5f-130">This new markup adds a label where the script in **./src/taskpane/taskpane.js** will write data.</span></span>
 
     ```html
     <main id="app-body" class="ms-welcome__main" style="display: none;">
@@ -83,7 +83,7 @@ ms.locfileid: "46530501"
     </main>
     ```
 
-1. <span data-ttu-id="1df62-131">Откройте файл **./src/taskpane/taskpane.js** в редакторе кода и добавьте следующий код в функцию `run`.</span><span class="sxs-lookup"><span data-stu-id="1df62-131">In your code editor, open the file **./src/taskpane/taskpane.js** and add the following code within the `run` function.</span></span> <span data-ttu-id="1df62-132">В этом коде используется API JavaScript для Office для получения ссылки на текущее сообщение и записи его свойства `subject` в область задач.</span><span class="sxs-lookup"><span data-stu-id="1df62-132">This code uses the Office JavaScript API to get a reference to the current message and write its `subject` property value to the task pane.</span></span>
+1. <span data-ttu-id="93b5f-131">Откройте файл **./src/taskpane/taskpane.js** в редакторе кода и добавьте следующий код в функцию `run`.</span><span class="sxs-lookup"><span data-stu-id="93b5f-131">In your code editor, open the file **./src/taskpane/taskpane.js** and add the following code within the `run` function.</span></span> <span data-ttu-id="93b5f-132">В этом коде используется API JavaScript для Office для получения ссылки на текущее сообщение и записи его свойства `subject` в область задач.</span><span class="sxs-lookup"><span data-stu-id="93b5f-132">This code uses the Office JavaScript API to get a reference to the current message and write its `subject` property value to the task pane.</span></span>
 
     ```js
     // Get a reference to the current message
@@ -93,74 +93,74 @@ ms.locfileid: "46530501"
     document.getElementById("item-subject").innerHTML = "<b>Subject:</b> <br/>" + item.subject;
     ```
 
-### <a name="try-it-out"></a><span data-ttu-id="1df62-133">Проверка</span><span class="sxs-lookup"><span data-stu-id="1df62-133">Try it out</span></span>
+### <a name="try-it-out"></a><span data-ttu-id="93b5f-133">Проверка</span><span class="sxs-lookup"><span data-stu-id="93b5f-133">Try it out</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="1df62-134">Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки.</span><span class="sxs-lookup"><span data-stu-id="1df62-134">Office Add-ins should use HTTPS, not HTTP, even when you are developing.</span></span> <span data-ttu-id="1df62-135">Если вам будет предложено установить сертификат после того, как вы запустите указанную ниже команду, примите предложение установить сертификат, предоставленный генератором Yeoman.</span><span class="sxs-lookup"><span data-stu-id="1df62-135">If you are prompted to install a certificate after you run the following command, accept the prompt to install the certificate that the Yeoman generator provides.</span></span>
+> <span data-ttu-id="93b5f-134">Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки.</span><span class="sxs-lookup"><span data-stu-id="93b5f-134">Office Add-ins should use HTTPS, not HTTP, even when you are developing.</span></span> <span data-ttu-id="93b5f-135">Если вам будет предложено установить сертификат после того, как вы запустите указанную ниже команду, примите предложение установить сертификат, предоставленный генератором Yeoman.</span><span class="sxs-lookup"><span data-stu-id="93b5f-135">If you are prompted to install a certificate after you run the following command, accept the prompt to install the certificate that the Yeoman generator provides.</span></span>
 
-1. <span data-ttu-id="1df62-136">Выполните следующую команду в корневом каталоге своего проекта.</span><span class="sxs-lookup"><span data-stu-id="1df62-136">Run the following command in the root directory of your project.</span></span> <span data-ttu-id="1df62-137">После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).</span><span class="sxs-lookup"><span data-stu-id="1df62-137">When you run this command, the local web server will start (if it's not already running).</span></span>
+1. <span data-ttu-id="93b5f-136">Выполните следующую команду в корневом каталоге своего проекта.</span><span class="sxs-lookup"><span data-stu-id="93b5f-136">Run the following command in the root directory of your project.</span></span> <span data-ttu-id="93b5f-137">После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).</span><span class="sxs-lookup"><span data-stu-id="93b5f-137">When you run this command, the local web server will start (if it's not already running).</span></span>
 
     ```command&nbsp;line
-    npm run dev-server
+    npm start
     ```
 
-1. <span data-ttu-id="1df62-138">Чтобы загрузить неопубликованную надстройку в Outlook, следуйте инструкциями из статьи [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md).</span><span class="sxs-lookup"><span data-stu-id="1df62-138">Follow the instructions in [Sideload Outlook add-ins for testing](../outlook/sideload-outlook-add-ins-for-testing.md) to sideload the add-in in Outlook.</span></span>
+1. <span data-ttu-id="93b5f-138">Чтобы загрузить неопубликованную надстройку в Outlook, следуйте инструкциями из статьи [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md).</span><span class="sxs-lookup"><span data-stu-id="93b5f-138">Follow the instructions in [Sideload Outlook add-ins for testing](../outlook/sideload-outlook-add-ins-for-testing.md) to sideload the add-in in Outlook.</span></span>
 
-1. <span data-ttu-id="1df62-139">В Outlook выберите или откройте сообщение.</span><span class="sxs-lookup"><span data-stu-id="1df62-139">In Outlook, select or open a message.</span></span>
+1. <span data-ttu-id="93b5f-139">В Outlook выберите или откройте сообщение.</span><span class="sxs-lookup"><span data-stu-id="93b5f-139">In Outlook, select or open a message.</span></span>
 
-1. <span data-ttu-id="1df62-140">Выберите вкладку **Главная** (или вкладку **Сообщения**, если вы открыли сообщение в новом окне), а затем нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="1df62-140">Choose the **Home** tab (or the **Message** tab if you opened the message in a new window), and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
+1. <span data-ttu-id="93b5f-140">Выберите вкладку **Главная** (или вкладку **Сообщения**, если вы открыли сообщение в новом окне), а затем нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="93b5f-140">Choose the **Home** tab (or the **Message** tab if you opened the message in a new window), and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
 
     ![Снимок экрана с окном сообщения в Outlook, где выделена кнопка надстройки](../images/quick-start-button-1.png)
 
     > [!NOTE]
-    > <span data-ttu-id="1df62-142">Если сообщение об ошибке "Не удается открыть эту надстройку с localhost" появляется в области задач, выполните действия, описанные в [статье по устранению неполадок](/office/troubleshoot/office-suite-issues/cannot-open-add-in-from-localhost).</span><span class="sxs-lookup"><span data-stu-id="1df62-142">If you receive the error "We can't open this add-in from localhost" in the task pane, follow the steps outlined in the [troubleshooting article](/office/troubleshoot/office-suite-issues/cannot-open-add-in-from-localhost).</span></span>
+    > <span data-ttu-id="93b5f-142">Если сообщение об ошибке "Не удается открыть эту надстройку с localhost" появляется в области задач, выполните действия, описанные в [статье по устранению неполадок](/office/troubleshoot/office-suite-issues/cannot-open-add-in-from-localhost).</span><span class="sxs-lookup"><span data-stu-id="93b5f-142">If you receive the error "We can't open this add-in from localhost" in the task pane, follow the steps outlined in the [troubleshooting article](/office/troubleshoot/office-suite-issues/cannot-open-add-in-from-localhost).</span></span>
 
-1. <span data-ttu-id="1df62-143">Прокрутите область задачи в самый низ и перейдите по ссылке **Выполнить**, чтобы написать тему сообщения в области задач.</span><span class="sxs-lookup"><span data-stu-id="1df62-143">Scroll to the bottom of the task pane and choose the **Run** link to write the message subject to the task pane.</span></span>
+1. <span data-ttu-id="93b5f-143">Прокрутите область задачи в самый низ и перейдите по ссылке **Выполнить**, чтобы написать тему сообщения в области задач.</span><span class="sxs-lookup"><span data-stu-id="93b5f-143">Scroll to the bottom of the task pane and choose the **Run** link to write the message subject to the task pane.</span></span>
 
     ![Снимок экрана: область задач надстройки с выделенной ссылкой "Выполнить"](../images/quick-start-task-pane-2.png)
 
     ![Снимок экрана: область задач надстройки с темой сообщения](../images/quick-start-task-pane-3.png)
 
-### <a name="next-steps"></a><span data-ttu-id="1df62-146">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="1df62-146">Next steps</span></span>
+### <a name="next-steps"></a><span data-ttu-id="93b5f-146">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="93b5f-146">Next steps</span></span>
 
-<span data-ttu-id="1df62-147">Поздравляем! Вы успешно создали свою первую надстройку для области задач Outlook!</span><span class="sxs-lookup"><span data-stu-id="1df62-147">Congratulations, you've successfully created your first Outlook task pane add-in!</span></span> <span data-ttu-id="1df62-148">Теперь воспользуйтесь [руководством по надстройкам Outlook](../tutorials/outlook-tutorial.md), чтобы узнать больше о возможностях надстроек Outlook и создать более сложную надстройку.</span><span class="sxs-lookup"><span data-stu-id="1df62-148">Next, learn more about the capabilities of an Outlook add-in and build a more complex add-in by following along with the [Outlook add-in tutorial](../tutorials/outlook-tutorial.md).</span></span>
+<span data-ttu-id="93b5f-147">Поздравляем! Вы успешно создали свою первую надстройку для области задач Outlook!</span><span class="sxs-lookup"><span data-stu-id="93b5f-147">Congratulations, you've successfully created your first Outlook task pane add-in!</span></span> <span data-ttu-id="93b5f-148">Теперь воспользуйтесь [руководством по надстройкам Outlook](../tutorials/outlook-tutorial.md), чтобы узнать больше о возможностях надстроек Outlook и создать более сложную надстройку.</span><span class="sxs-lookup"><span data-stu-id="93b5f-148">Next, learn more about the capabilities of an Outlook add-in and build a more complex add-in by following along with the [Outlook add-in tutorial](../tutorials/outlook-tutorial.md).</span></span>
 
-# <a name="visual-studio"></a>[<span data-ttu-id="1df62-149">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="1df62-149">Visual Studio</span></span>](#tab/visualstudio)
+# <a name="visual-studio"></a>[<span data-ttu-id="93b5f-149">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="93b5f-149">Visual Studio</span></span>](#tab/visualstudio)
 
-### <a name="prerequisites"></a><span data-ttu-id="1df62-150">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="1df62-150">Prerequisites</span></span>
+### <a name="prerequisites"></a><span data-ttu-id="93b5f-150">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="93b5f-150">Prerequisites</span></span>
 
-- <span data-ttu-id="1df62-151">[Visual Studio 2019](https://www.visualstudio.com/vs/) с установленной рабочей нагрузкой **Разработка надстроек для Office и SharePoint**</span><span class="sxs-lookup"><span data-stu-id="1df62-151">[Visual Studio 2019](https://www.visualstudio.com/vs/) with the **Office/SharePoint development** workload installed</span></span>
-
-    > [!NOTE]
-    > <span data-ttu-id="1df62-152">Если вы уже установили Visual Studio 2019, [используйте установщик Visual Studio](/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**.</span><span class="sxs-lookup"><span data-stu-id="1df62-152">If you've previously installed Visual Studio 2019, [use the Visual Studio Installer](/visualstudio/install/modify-visual-studio) to ensure that the **Office/SharePoint development** workload is installed.</span></span>
-
-- <span data-ttu-id="1df62-153">Office 365</span><span class="sxs-lookup"><span data-stu-id="1df62-153">Office 365</span></span>
+- <span data-ttu-id="93b5f-151">[Visual Studio 2019](https://www.visualstudio.com/vs/) с установленной рабочей нагрузкой **Разработка надстроек для Office и SharePoint**</span><span class="sxs-lookup"><span data-stu-id="93b5f-151">[Visual Studio 2019](https://www.visualstudio.com/vs/) with the **Office/SharePoint development** workload installed</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="1df62-154">Если у вас нет подписки на Microsoft 365, вы можете получить бесплатную подписку, зарегистрировавшись в [программе для разработчиков Microsoft 365](https://developer.microsoft.com/office/dev-program).</span><span class="sxs-lookup"><span data-stu-id="1df62-154">If you do not have a Microsoft 365 subscription, you can get a free one by signing up for the [Microsoft 365 developer program](https://developer.microsoft.com/office/dev-program).</span></span>
+    > <span data-ttu-id="93b5f-152">Если вы уже установили Visual Studio 2019, [используйте установщик Visual Studio](/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**.</span><span class="sxs-lookup"><span data-stu-id="93b5f-152">If you've previously installed Visual Studio 2019, [use the Visual Studio Installer](/visualstudio/install/modify-visual-studio) to ensure that the **Office/SharePoint development** workload is installed.</span></span>
 
-### <a name="create-the-add-in-project"></a><span data-ttu-id="1df62-155">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="1df62-155">Create the add-in project</span></span>
+- <span data-ttu-id="93b5f-153">Office 365</span><span class="sxs-lookup"><span data-stu-id="93b5f-153">Office 365</span></span>
 
-1. <span data-ttu-id="1df62-156">В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.</span><span class="sxs-lookup"><span data-stu-id="1df62-156">On the Visual Studio menu bar, choose **File** > **New** > **Project**.</span></span>
+    > [!NOTE]
+    > <span data-ttu-id="93b5f-154">Если у вас нет подписки на Microsoft 365, вы можете получить бесплатную подписку, зарегистрировавшись в [программе для разработчиков Microsoft 365](https://developer.microsoft.com/office/dev-program).</span><span class="sxs-lookup"><span data-stu-id="93b5f-154">If you do not have a Microsoft 365 subscription, you can get a free one by signing up for the [Microsoft 365 developer program](https://developer.microsoft.com/office/dev-program).</span></span>
 
-1. <span data-ttu-id="1df62-157">В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, затем выберите **Надстройки** > **Веб-надстройка Outlook**.</span><span class="sxs-lookup"><span data-stu-id="1df62-157">In the list of project types under **Visual C#** or **Visual Basic**, expand **Office/SharePoint**, choose **Add-ins**, and then choose **Outlook Web Add-in** as the project type.</span></span>
+### <a name="create-the-add-in-project"></a><span data-ttu-id="93b5f-155">Создание проекта надстройки</span><span class="sxs-lookup"><span data-stu-id="93b5f-155">Create the add-in project</span></span>
 
-1. <span data-ttu-id="1df62-158">Укажите имя проекта и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="1df62-158">Name the project, and then choose **OK**.</span></span>
+1. <span data-ttu-id="93b5f-156">В строке меню Visual Studio выберите **Файл** > **Создать** > **Проект**.</span><span class="sxs-lookup"><span data-stu-id="93b5f-156">On the Visual Studio menu bar, choose **File** > **New** > **Project**.</span></span>
 
-1. <span data-ttu-id="1df62-159">Visual Studio создаст решение, и два соответствующих проекта появятся в **обозревателе решений**.</span><span class="sxs-lookup"><span data-stu-id="1df62-159">Visual Studio creates a solution and its two projects appear in **Solution Explorer**.</span></span> <span data-ttu-id="1df62-160">Файл **MessageRead.html** откроется в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="1df62-160">The **MessageRead.html** file opens in Visual Studio.</span></span>
+1. <span data-ttu-id="93b5f-157">В списке типов проекта разверните узел **Visual C#** или **Visual Basic**, разверните **Office/SharePoint**, затем выберите **Надстройки** > **Веб-надстройка Outlook**.</span><span class="sxs-lookup"><span data-stu-id="93b5f-157">In the list of project types under **Visual C#** or **Visual Basic**, expand **Office/SharePoint**, choose **Add-ins**, and then choose **Outlook Web Add-in** as the project type.</span></span>
 
-### <a name="explore-the-visual-studio-solution"></a><span data-ttu-id="1df62-161">Обзор решения Visual Studio</span><span class="sxs-lookup"><span data-stu-id="1df62-161">Explore the Visual Studio solution</span></span>
+1. <span data-ttu-id="93b5f-158">Укажите имя проекта и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="93b5f-158">Name the project, and then choose **OK**.</span></span>
 
-<span data-ttu-id="1df62-162">После завершения работы мастера Visual Studio создает решение, которое содержит два проекта.</span><span class="sxs-lookup"><span data-stu-id="1df62-162">When you've completed the wizard, Visual Studio creates a solution that contains two projects.</span></span>
+1. <span data-ttu-id="93b5f-159">Visual Studio создаст решение, и два соответствующих проекта появятся в **обозревателе решений**.</span><span class="sxs-lookup"><span data-stu-id="93b5f-159">Visual Studio creates a solution and its two projects appear in **Solution Explorer**.</span></span> <span data-ttu-id="93b5f-160">Файл **MessageRead.html** откроется в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="93b5f-160">The **MessageRead.html** file opens in Visual Studio.</span></span>
 
-|<span data-ttu-id="1df62-163">**Проект**</span><span class="sxs-lookup"><span data-stu-id="1df62-163">**Project**</span></span>|<span data-ttu-id="1df62-164">**Описание**</span><span class="sxs-lookup"><span data-stu-id="1df62-164">**Description**</span></span>|
+### <a name="explore-the-visual-studio-solution"></a><span data-ttu-id="93b5f-161">Обзор решения Visual Studio</span><span class="sxs-lookup"><span data-stu-id="93b5f-161">Explore the Visual Studio solution</span></span>
+
+<span data-ttu-id="93b5f-162">После завершения работы мастера Visual Studio создает решение, которое содержит два проекта.</span><span class="sxs-lookup"><span data-stu-id="93b5f-162">When you've completed the wizard, Visual Studio creates a solution that contains two projects.</span></span>
+
+|<span data-ttu-id="93b5f-163">**Проект**</span><span class="sxs-lookup"><span data-stu-id="93b5f-163">**Project**</span></span>|<span data-ttu-id="93b5f-164">**Описание**</span><span class="sxs-lookup"><span data-stu-id="93b5f-164">**Description**</span></span>|
 |:-----|:-----|
-|<span data-ttu-id="1df62-165">Проект надстройки</span><span class="sxs-lookup"><span data-stu-id="1df62-165">Add-in project</span></span>|<span data-ttu-id="1df62-166">Содержит только XML-файл манифеста со всеми параметрами надстройки.</span><span class="sxs-lookup"><span data-stu-id="1df62-166">Contains only an XML manifest file, which contains all the settings that describe your add-in.</span></span> <span data-ttu-id="1df62-167">Эти параметры помогают ведущему приложению Office определить условия активации и место отображения надстройки.</span><span class="sxs-lookup"><span data-stu-id="1df62-167">These settings help the Office host determine when your add-in should be activated and where the add-in should appear.</span></span> <span data-ttu-id="1df62-168">Visual Studio создает этот файл автоматически, чтобы вы могли сразу запускать проект и использовать надстройку.</span><span class="sxs-lookup"><span data-stu-id="1df62-168">Visual Studio generates the contents of this file for you so that you can run the project and use your add-in immediately.</span></span> <span data-ttu-id="1df62-169">Вы можете изменить эти параметры в любой момент, отредактировав XML-файл.</span><span class="sxs-lookup"><span data-stu-id="1df62-169">You can change these settings any time by modifying the XML file.</span></span>|
-|<span data-ttu-id="1df62-170">Проект веб-приложения</span><span class="sxs-lookup"><span data-stu-id="1df62-170">Web application project</span></span>|<span data-ttu-id="1df62-p109">Содержит страницы контента надстройки, включающие все файлы и ссылки на файлы, необходимые для разработки страниц HTML и JavaScript с поддержкой Office. При разработке надстройки Visual Studio размещает веб-приложение на локальном сервере IIS. Для публикации надстройки этот проект веб-приложения нужно развернуть на веб-сервере.</span><span class="sxs-lookup"><span data-stu-id="1df62-p109">Contains the content pages of your add-in, including all the files and file references that you need to develop Office-aware HTML and JavaScript pages. While you develop your add-in, Visual Studio hosts the web application on your local IIS server. When you're ready to publish the add-in, you'll need to deploy this web application project to a web server.</span></span>|
+|<span data-ttu-id="93b5f-165">Проект надстройки</span><span class="sxs-lookup"><span data-stu-id="93b5f-165">Add-in project</span></span>|<span data-ttu-id="93b5f-166">Содержит только XML-файл манифеста со всеми параметрами надстройки.</span><span class="sxs-lookup"><span data-stu-id="93b5f-166">Contains only an XML manifest file, which contains all the settings that describe your add-in.</span></span> <span data-ttu-id="93b5f-167">Эти параметры помогают ведущему приложению Office определить условия активации и место отображения надстройки.</span><span class="sxs-lookup"><span data-stu-id="93b5f-167">These settings help the Office host determine when your add-in should be activated and where the add-in should appear.</span></span> <span data-ttu-id="93b5f-168">Visual Studio создает этот файл автоматически, чтобы вы могли сразу запускать проект и использовать надстройку.</span><span class="sxs-lookup"><span data-stu-id="93b5f-168">Visual Studio generates the contents of this file for you so that you can run the project and use your add-in immediately.</span></span> <span data-ttu-id="93b5f-169">Вы можете изменить эти параметры в любой момент, отредактировав XML-файл.</span><span class="sxs-lookup"><span data-stu-id="93b5f-169">You can change these settings any time by modifying the XML file.</span></span>|
+|<span data-ttu-id="93b5f-170">Проект веб-приложения</span><span class="sxs-lookup"><span data-stu-id="93b5f-170">Web application project</span></span>|<span data-ttu-id="93b5f-p109">Содержит страницы контента надстройки, включающие все файлы и ссылки на файлы, необходимые для разработки страниц HTML и JavaScript с поддержкой Office. При разработке надстройки Visual Studio размещает веб-приложение на локальном сервере IIS. Для публикации надстройки этот проект веб-приложения нужно развернуть на веб-сервере.</span><span class="sxs-lookup"><span data-stu-id="93b5f-p109">Contains the content pages of your add-in, including all the files and file references that you need to develop Office-aware HTML and JavaScript pages. While you develop your add-in, Visual Studio hosts the web application on your local IIS server. When you're ready to publish the add-in, you'll need to deploy this web application project to a web server.</span></span>|
 
-### <a name="update-the-code"></a><span data-ttu-id="1df62-174">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="1df62-174">Update the code</span></span>
+### <a name="update-the-code"></a><span data-ttu-id="93b5f-174">Обновление кода</span><span class="sxs-lookup"><span data-stu-id="93b5f-174">Update the code</span></span>
 
-1. <span data-ttu-id="1df62-175">Файл **MessageRead.html** содержит HTML-контент, который будет отображаться в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="1df62-175">**MessageRead.html** specifies the HTML that will be rendered in the add-in's task pane.</span></span> <span data-ttu-id="1df62-176">Замените элемент `<body>` в **MessageRead.html** приведенной ниже частью кода и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="1df62-176">In **MessageRead.html**, replace the `<body>` element with the following markup and save the file.</span></span>
+1. <span data-ttu-id="93b5f-175">Файл **MessageRead.html** содержит HTML-контент, который будет отображаться в области задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="93b5f-175">**MessageRead.html** specifies the HTML that will be rendered in the add-in's task pane.</span></span> <span data-ttu-id="93b5f-176">Замените элемент `<body>` в **MessageRead.html** приведенной ниже частью кода и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="93b5f-176">In **MessageRead.html**, replace the `<body>` element with the following markup and save the file.</span></span>
  
     ```HTML
     <body class="ms-font-m ms-welcome">
@@ -196,7 +196,7 @@ ms.locfileid: "46530501"
     </body>
     ```
 
-1. <span data-ttu-id="1df62-177">Откройте файл **MessageRead.js** в корневой папке проекта веб-приложения.</span><span class="sxs-lookup"><span data-stu-id="1df62-177">Open the file **MessageRead.js** in the root of the web application project.</span></span> <span data-ttu-id="1df62-178">Этот файл содержит скрипт надстройки.</span><span class="sxs-lookup"><span data-stu-id="1df62-178">This file specifies the script for the add-in.</span></span> <span data-ttu-id="1df62-179">Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="1df62-179">Replace the entire contents with the following code and save the file.</span></span>
+1. <span data-ttu-id="93b5f-177">Откройте файл **MessageRead.js** в корневой папке проекта веб-приложения.</span><span class="sxs-lookup"><span data-stu-id="93b5f-177">Open the file **MessageRead.js** in the root of the web application project.</span></span> <span data-ttu-id="93b5f-178">Этот файл содержит скрипт надстройки.</span><span class="sxs-lookup"><span data-stu-id="93b5f-178">This file specifies the script for the add-in.</span></span> <span data-ttu-id="93b5f-179">Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="93b5f-179">Replace the entire contents with the following code and save the file.</span></span>
 
     ```js
     'use strict';
@@ -221,7 +221,7 @@ ms.locfileid: "46530501"
     })();
     ```
 
-1. <span data-ttu-id="1df62-180">Откройте файл **MessageRead.css** в корневой папке проекта веб-приложения.</span><span class="sxs-lookup"><span data-stu-id="1df62-180">Open the file **MessageRead.css** in the root of the web application project.</span></span> <span data-ttu-id="1df62-181">Этот файл определяет специальные стили надстройки.</span><span class="sxs-lookup"><span data-stu-id="1df62-181">This file specifies the custom styles for the add-in.</span></span> <span data-ttu-id="1df62-182">Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="1df62-182">Replace the entire contents with the following code and save the file.</span></span>
+1. <span data-ttu-id="93b5f-180">Откройте файл **MessageRead.css** в корневой папке проекта веб-приложения.</span><span class="sxs-lookup"><span data-stu-id="93b5f-180">Open the file **MessageRead.css** in the root of the web application project.</span></span> <span data-ttu-id="93b5f-181">Этот файл определяет специальные стили надстройки.</span><span class="sxs-lookup"><span data-stu-id="93b5f-181">This file specifies the custom styles for the add-in.</span></span> <span data-ttu-id="93b5f-182">Замените все его содержимое указанным ниже кодом и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="93b5f-182">Replace the entire contents with the following code and save the file.</span></span>
 
     ```CSS
     html,
@@ -241,17 +241,17 @@ ms.locfileid: "46530501"
     }
     ```
 
-### <a name="update-the-manifest"></a><span data-ttu-id="1df62-183">Обновление манифеста</span><span class="sxs-lookup"><span data-stu-id="1df62-183">Update the manifest</span></span>
+### <a name="update-the-manifest"></a><span data-ttu-id="93b5f-183">Обновление манифеста</span><span class="sxs-lookup"><span data-stu-id="93b5f-183">Update the manifest</span></span>
 
-1. <span data-ttu-id="1df62-p113">Откройте XML-файл манифеста в проекте надстройки. Этот файл определяет параметры и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="1df62-p113">Open the XML manifest file in the Add-in project. This file defines the add-in's settings and capabilities.</span></span>
+1. <span data-ttu-id="93b5f-p113">Откройте XML-файл манифеста в проекте надстройки. Этот файл определяет параметры и возможности надстройки.</span><span class="sxs-lookup"><span data-stu-id="93b5f-p113">Open the XML manifest file in the Add-in project. This file defines the add-in's settings and capabilities.</span></span>
 
-1. <span data-ttu-id="1df62-p114">Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.</span><span class="sxs-lookup"><span data-stu-id="1df62-p114">The `ProviderName` element has a placeholder value. Replace it with your name.</span></span>
+1. <span data-ttu-id="93b5f-p114">Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.</span><span class="sxs-lookup"><span data-stu-id="93b5f-p114">The `ProviderName` element has a placeholder value. Replace it with your name.</span></span>
 
-1. <span data-ttu-id="1df62-188">Атрибут `DefaultValue` элемента `DisplayName` содержит заполнитель.</span><span class="sxs-lookup"><span data-stu-id="1df62-188">The `DefaultValue` attribute of the `DisplayName` element has a placeholder.</span></span> <span data-ttu-id="1df62-189">Замените его на текст `My Office Add-in`.</span><span class="sxs-lookup"><span data-stu-id="1df62-189">Replace it with `My Office Add-in`.</span></span>
+1. <span data-ttu-id="93b5f-188">Атрибут `DefaultValue` элемента `DisplayName` содержит заполнитель.</span><span class="sxs-lookup"><span data-stu-id="93b5f-188">The `DefaultValue` attribute of the `DisplayName` element has a placeholder.</span></span> <span data-ttu-id="93b5f-189">Замените его на текст `My Office Add-in`.</span><span class="sxs-lookup"><span data-stu-id="93b5f-189">Replace it with `My Office Add-in`.</span></span>
 
-1. <span data-ttu-id="1df62-190">Атрибут `DefaultValue` элемента `Description` содержит заполнитель.</span><span class="sxs-lookup"><span data-stu-id="1df62-190">The `DefaultValue` attribute of the `Description` element has a placeholder.</span></span> <span data-ttu-id="1df62-191">Замените его на текст `My First Outlook add-in`.</span><span class="sxs-lookup"><span data-stu-id="1df62-191">Replace it with `My First Outlook add-in`.</span></span>
+1. <span data-ttu-id="93b5f-190">Атрибут `DefaultValue` элемента `Description` содержит заполнитель.</span><span class="sxs-lookup"><span data-stu-id="93b5f-190">The `DefaultValue` attribute of the `Description` element has a placeholder.</span></span> <span data-ttu-id="93b5f-191">Замените его на текст `My First Outlook add-in`.</span><span class="sxs-lookup"><span data-stu-id="93b5f-191">Replace it with `My First Outlook add-in`.</span></span>
 
-1. <span data-ttu-id="1df62-192">Сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="1df62-192">Save the file.</span></span>
+1. <span data-ttu-id="93b5f-192">Сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="93b5f-192">Save the file.</span></span>
 
     ```xml
     ...
@@ -263,34 +263,34 @@ ms.locfileid: "46530501"
     ...
     ```
 
-### <a name="try-it-out"></a><span data-ttu-id="1df62-193">Проверка</span><span class="sxs-lookup"><span data-stu-id="1df62-193">Try it out</span></span>
+### <a name="try-it-out"></a><span data-ttu-id="93b5f-193">Проверка</span><span class="sxs-lookup"><span data-stu-id="93b5f-193">Try it out</span></span>
 
-1. <span data-ttu-id="1df62-194">Протестируйте созданную в Visual Studio надстройку Outlook, нажав F5 или кнопку **Запуск**.</span><span class="sxs-lookup"><span data-stu-id="1df62-194">Using Visual Studio, test the newly created Outlook add-in by pressing F5 or choosing the **Start** button.</span></span> <span data-ttu-id="1df62-195">Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="1df62-195">The add-in will be hosted locally on IIS.</span></span>
+1. <span data-ttu-id="93b5f-194">Протестируйте созданную в Visual Studio надстройку Outlook, нажав F5 или кнопку **Запуск**.</span><span class="sxs-lookup"><span data-stu-id="93b5f-194">Using Visual Studio, test the newly created Outlook add-in by pressing F5 or choosing the **Start** button.</span></span> <span data-ttu-id="93b5f-195">Надстройка будет размещена на локальном сервере IIS.</span><span class="sxs-lookup"><span data-stu-id="93b5f-195">The add-in will be hosted locally on IIS.</span></span>
 
-1. <span data-ttu-id="1df62-196">В диалоговом окне **Подключение к учетной записи электронной почты Exchange** введите адрес электронной почты и пароль для вашей [учетной записи Майкрософт](https://account.microsoft.com/account) и нажмите кнопку **Подключить**.</span><span class="sxs-lookup"><span data-stu-id="1df62-196">In the **Connect to Exchange email account** dialog box, enter the email address and password for your [Microsoft account](https://account.microsoft.com/account) and then choose **Connect**.</span></span> <span data-ttu-id="1df62-197">Когда в браузере откроется страница входа в Outlook.com, войдите в свою учетную запись электронной почты с теми же учетными данными, которые были введены ранее.</span><span class="sxs-lookup"><span data-stu-id="1df62-197">When the Outlook.com login page opens in a browser, sign in to your email account with the same credentials as you entered previously.</span></span>
+1. <span data-ttu-id="93b5f-196">В диалоговом окне **Подключение к учетной записи электронной почты Exchange** введите адрес электронной почты и пароль для вашей [учетной записи Майкрософт](https://account.microsoft.com/account) и нажмите кнопку **Подключить**.</span><span class="sxs-lookup"><span data-stu-id="93b5f-196">In the **Connect to Exchange email account** dialog box, enter the email address and password for your [Microsoft account](https://account.microsoft.com/account) and then choose **Connect**.</span></span> <span data-ttu-id="93b5f-197">Когда в браузере откроется страница входа в Outlook.com, войдите в свою учетную запись электронной почты с теми же учетными данными, которые были введены ранее.</span><span class="sxs-lookup"><span data-stu-id="93b5f-197">When the Outlook.com login page opens in a browser, sign in to your email account with the same credentials as you entered previously.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="1df62-198">Если диалоговое окно **Подключение к учетной записи электронной почты Exchange** повторно предлагает выполнить вход, для учетных записей в вашем клиенте Microsoft 365, возможно, отключена обычная проверка подлинности.</span><span class="sxs-lookup"><span data-stu-id="1df62-198">If the **Connect to Exchange email account** dialog box repeatedly prompts you to sign in, Basic Auth may be disabled for accounts on your Microsoft 365 tenant.</span></span> <span data-ttu-id="1df62-199">Чтобы протестировать эту надстройку, вместо этого выполните вход с помощью [учетной записи Майкрософт](https://account.microsoft.com/account).</span><span class="sxs-lookup"><span data-stu-id="1df62-199">To test this add-in, sign in using a [Microsoft account](https://account.microsoft.com/account) instead.</span></span>
+    > <span data-ttu-id="93b5f-198">Если диалоговое окно **Подключение к учетной записи электронной почты Exchange** повторно предлагает выполнить вход, для учетных записей в вашем клиенте Microsoft 365, возможно, отключена обычная проверка подлинности.</span><span class="sxs-lookup"><span data-stu-id="93b5f-198">If the **Connect to Exchange email account** dialog box repeatedly prompts you to sign in, Basic Auth may be disabled for accounts on your Microsoft 365 tenant.</span></span> <span data-ttu-id="93b5f-199">Чтобы протестировать эту надстройку, вместо этого выполните вход с помощью [учетной записи Майкрософт](https://account.microsoft.com/account).</span><span class="sxs-lookup"><span data-stu-id="93b5f-199">To test this add-in, sign in using a [Microsoft account](https://account.microsoft.com/account) instead.</span></span>
 
-1. <span data-ttu-id="1df62-200">В Outlook в Интернете выберите или откройте сообщение.</span><span class="sxs-lookup"><span data-stu-id="1df62-200">In Outlook on the web, select or open a message.</span></span>
+1. <span data-ttu-id="93b5f-200">В Outlook в Интернете выберите или откройте сообщение.</span><span class="sxs-lookup"><span data-stu-id="93b5f-200">In Outlook on the web, select or open a message.</span></span>
 
-1. <span data-ttu-id="1df62-201">В сообщении найдите многоточие, чтобы перейти в меню переполнения, содержащее кнопку надстройки.</span><span class="sxs-lookup"><span data-stu-id="1df62-201">Within the message, locate the ellipsis for the overflow menu containing the add-in's button.</span></span>
+1. <span data-ttu-id="93b5f-201">В сообщении найдите многоточие, чтобы перейти в меню переполнения, содержащее кнопку надстройки.</span><span class="sxs-lookup"><span data-stu-id="93b5f-201">Within the message, locate the ellipsis for the overflow menu containing the add-in's button.</span></span>
 
     ![Снимок экрана: окно сообщения в Outlook в Интернете, в котором выделено многоточие](../images/quick-start-button-owa-1.png)
 
-1. <span data-ttu-id="1df62-203">Найдите кнопку надстройки в меню переполнения.</span><span class="sxs-lookup"><span data-stu-id="1df62-203">Within the overflow menu, locate the add-in's button.</span></span>
+1. <span data-ttu-id="93b5f-203">Найдите кнопку надстройки в меню переполнения.</span><span class="sxs-lookup"><span data-stu-id="93b5f-203">Within the overflow menu, locate the add-in's button.</span></span>
 
     ![Снимок экрана с окном сообщения в Outlook в Интернете, где выделена кнопка надстройки](../images/quick-start-button-owa-2.png)
 
-1. <span data-ttu-id="1df62-205">Нажмите кнопку, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="1df62-205">Click the button to open the add-in's task pane.</span></span>
+1. <span data-ttu-id="93b5f-205">Нажмите кнопку, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="93b5f-205">Click the button to open the add-in's task pane.</span></span>
 
     ![Снимок экрана: область задач надстройки в Outlook в Интернете со свойствами сообщения](../images/quick-start-task-pane-owa-1.png)
 
     > [!NOTE]
-    > <span data-ttu-id="1df62-207">Если область задач не загружается, проверьте ее, открыв в браузере на том же компьютере.</span><span class="sxs-lookup"><span data-stu-id="1df62-207">If the task pane doesn't load, try to verify by opening it in a browser on the same machine.</span></span>
+    > <span data-ttu-id="93b5f-207">Если область задач не загружается, проверьте ее, открыв в браузере на том же компьютере.</span><span class="sxs-lookup"><span data-stu-id="93b5f-207">If the task pane doesn't load, try to verify by opening it in a browser on the same machine.</span></span>
 
-### <a name="next-steps"></a><span data-ttu-id="1df62-208">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="1df62-208">Next steps</span></span>
+### <a name="next-steps"></a><span data-ttu-id="93b5f-208">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="93b5f-208">Next steps</span></span>
 
-<span data-ttu-id="1df62-209">Поздравляем! Вы успешно создали свою первую надстройку для области задач Outlook!</span><span class="sxs-lookup"><span data-stu-id="1df62-209">Congratulations, you've successfully created your first Outlook task pane add-in!</span></span> <span data-ttu-id="1df62-210">Теперь изучите дополнительные сведения о [разработке надстроек Office с помощью Visual Studio](../develop/develop-add-ins-visual-studio.md).</span><span class="sxs-lookup"><span data-stu-id="1df62-210">Next, learn more about [developing Office Add-ins with Visual Studio](../develop/develop-add-ins-visual-studio.md).</span></span>
+<span data-ttu-id="93b5f-209">Поздравляем! Вы успешно создали свою первую надстройку для области задач Outlook!</span><span class="sxs-lookup"><span data-stu-id="93b5f-209">Congratulations, you've successfully created your first Outlook task pane add-in!</span></span> <span data-ttu-id="93b5f-210">Теперь изучите дополнительные сведения о [разработке надстроек Office с помощью Visual Studio](../develop/develop-add-ins-visual-studio.md).</span><span class="sxs-lookup"><span data-stu-id="93b5f-210">Next, learn more about [developing Office Add-ins with Visual Studio](../develop/develop-add-ins-visual-studio.md).</span></span>
 
 ---
