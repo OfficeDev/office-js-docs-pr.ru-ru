@@ -1,15 +1,15 @@
 ---
 title: Руководство. Сборка надстройки Outlook для создания сообщения
 description: В этом руководстве вы создадите надстройку Outlook, которая вставляет списки GitHub в тело нового сообщения.
-ms.date: 07/07/2020
+ms.date: 08/11/2020
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: e14cb90c79b873cfc3ebd948563941f1f9738855
-ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
+ms.openlocfilehash: 3742e492c5d59b706508d2f9d9c2f3bdfc147bb8
+ms.sourcegitcommit: 65c15a9040279901ea7ff7f522d86c8fddb98e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46641510"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "46672738"
 ---
 # <a name="tutorial-build-a-message-compose-outlook-add-in"></a>Руководство. Сборка надстройки Outlook для создания сообщения
 
@@ -599,7 +599,7 @@ ul {
 5. Выполните указанную ниже команду, чтобы запустить веб-сервер.
 
     ```command&nbsp;line
-    npm run dev-server
+    npm start
     ```
 
 ### <a name="fetch-data-from-github"></a>Получение данных из GitHub
@@ -900,7 +900,7 @@ function buildBodyContent(gist, callback) {
 
 ### <a name="test-the-button"></a>Тестирование кнопки
 
-Сохраните все изменения и выполните в командной строке команду `npm run dev-server`, если сервер еще не запущен. Затем выполните указанные ниже действия, чтобы протестировать кнопку **Insert default gist** (Вставить gist по умолчанию).
+Сохраните все изменения и выполните в командной строке команду `npm start`, если сервер еще не запущен. Затем выполните указанные ниже действия, чтобы протестировать кнопку **Insert default gist** (Вставить gist по умолчанию).
 
 1. Откройте Outlook и создайте новое сообщение.
 
@@ -1261,7 +1261,7 @@ ul {
 
 ### <a name="test-the-button"></a>Тестирование кнопки
 
-Сохраните все изменения и выполните в командной строке команду `npm run dev-server`, если сервер еще не запущен. Затем выполните указанные ниже действия, чтобы протестировать кнопку **Insert gist** (Вставить gist).
+Сохраните все изменения и выполните в командной строке команду `npm start`, если сервер еще не запущен. Затем выполните указанные ниже действия, чтобы протестировать кнопку **Insert gist** (Вставить gist).
 
 1. Откройте Outlook и создайте новое сообщение.
 

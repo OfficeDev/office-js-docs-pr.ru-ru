@@ -1,14 +1,14 @@
 ---
 title: Расширение пользовательских функций с помощью пользовательских функций XLL
 description: Обеспечение совместимости с пользовательскими функциями XLL в Excel, которые имеют эквивалентные функциональные возможности для пользовательских функций
-ms.date: 04/29/2020
+ms.date: 08/13/2020
 localization_priority: Normal
-ms.openlocfilehash: 036421700c0415e5f0599b5917cdebb298c2c4fa
-ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
+ms.openlocfilehash: 3a4793053950fccca74de4b9ebf8998a7d635d67
+ms.sourcegitcommit: 65c15a9040279901ea7ff7f522d86c8fddb98e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46641237"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "46672689"
 ---
 # <a name="extend-custom-functions-with-xll-user-defined-functions"></a>Расширение пользовательских функций с помощью пользовательских функций XLL
 
@@ -43,7 +43,7 @@ ms.locfileid: "46641237"
       <FileName>contosofunctions.xll</FileName>
       <Type>XLL</Type>
     </EquivalentAddin>
-  <EquivalentAddins>
+  </EquivalentAddins>
 </VersionOverrides>
 ```
 

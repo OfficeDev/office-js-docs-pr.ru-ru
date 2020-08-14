@@ -2,14 +2,14 @@
 title: Реализация дополнения по протоколу Send в надстройке Outlook (Предварительная версия)
 description: Узнайте, как реализовать функцию "присоединение к передаче" в надстройке Outlook.
 ms.topic: article
-ms.date: 08/07/2020
+ms.date: 08/11/2020
 localization_priority: Normal
-ms.openlocfilehash: 2b97d65a0f1056257b9cf79eb23fabca10be3a78
-ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
+ms.openlocfilehash: fbc2f11006d6f02d44365294476aee8aa3e262c7
+ms.sourcegitcommit: 65c15a9040279901ea7ff7f522d86c8fddb98e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46641503"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "46672731"
 ---
 # <a name="implement-append-on-send-in-your-outlook-add-in-preview"></a>Реализация дополнения по протоколу Send в надстройке Outlook (Предварительная версия)
 
@@ -143,7 +143,7 @@ ms.locfileid: "46641503"
 
 В этом сценарии вы реализуете Добавление заявления об отказе для элемента при отправке пользователя.
 
-1. В проекте быстрого запуска откройте **commands.jsфайл./СРК/коммандс/** в редакторе кода.
+1. В проекте быстрого запуска откройте **commands.jsфайл./СРК/коммандс/ ** в редакторе кода.
 
 1. После `action` функции вставьте следующую функцию JavaScript.
 
@@ -182,7 +182,7 @@ ms.locfileid: "46641503"
 1. Выполните следующую команду в корневом каталоге своего проекта. При выполнении этой команды локальный веб-сервер запустится, если он еще не запущен.
 
     ```command&nbsp;line
-    npm run dev-server
+    npm start
     ```
 
 1. Следуйте инструкциям в статье [Загрузка неопубликованных надстройки Outlook для тестирования](sideload-outlook-add-ins-for-testing.md).
