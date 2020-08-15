@@ -1,14 +1,14 @@
 ---
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
-ms.date: 07/07/2020
+ms.date: 08/13/2020
 localization_priority: Normal
-ms.openlocfilehash: 0cdb601da7625eb3cafdcd883192861938529e0d
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 53e3061f1729ac792e91a10e31bc9d0d908ab07b
+ms.sourcegitcommit: 3efa932b70035dde922929d207896e1a6007f620
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45093443"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "46757361"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -21,16 +21,19 @@ ms.locfileid: "45093443"
 
 В приведенной ниже таблице указано, какой браузер используется для той или иной платформы и операционной системы.
 
-|**ОС / платформа**|**Browser**|
+|СОВМЕСТИМ|Версия Office|Установлен пограничный WebView2 (на основе Чромиум)?|Браузер|
 |:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-|Office в Интернете|Браузер, в котором открыт Office.|
-|Mac|Safari|
-|iOS|Safari|
-|Android|Chrome|
-|Windows / Office 2013 или более поздней версии без подписки|Internet Explorer 11|
-|Windows 10 версии ниже 1903 / Office 365|Internet Explorer 11|
-|Windows 10 версии >= 1903/Office 365 ver < 16.0.11629<sup>1</sup>|Internet Explorer 11|
-|Windows 10 версии >= 1903/Office 365 ver >= 16.0.11629<sup>1</sup>|Microsoft Edge<sup>2, 3</sup>|
+|любой|Office в Интернете|Неприменимо|Браузер, в котором открыт Office.|
+|Mac|любой|Неприменимо|Safari|
+|iOS|любой|Неприменимо|Safari|
+|Android|любой|Неприменимо|Chrome|
+|Windows 7, 8,1, 10 | не подписка Office 2013 или более поздняя версия|Всё равно|Internet Explorer 11|
+|Windows 7 | Microsoft 365| Всё равно | Internet Explorer 11|
+|Windows 8,1,<br>Windows 10 ver. &nbsp; < &nbsp; 1903| Microsoft 365 | Нет| Internet Explorer 11|
+|Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; < &nbsp; 16.0.11629<sup>1</sup>| Всё равно|Internet Explorer 11|
+|Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.11629 &nbsp; _и_ &nbsp; < &nbsp; 16.0.13127.20082<sup>1</sup>| Всё равно|Microsoft Edge<sup>2, 3</sup> с исходным Вебвиев (еджехтмл)|
+|Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13127.20082<sup>1</sup>| Нет |Microsoft Edge<sup>2, 3</sup> с исходным Вебвиев (еджехтмл)|
+|Windows 8.1<br>Windows 10| Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13127.20082<sup>1</sup>| Да|  Просмотрите Примечание 4. |
 
 <sup>1</sup> ознакомьтесь со [страницей "журнал обновлений](/officeupdates/update-history-office365-proplus-by-date) " и Узнайте, как [найти версию клиента Office и канал обновления](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19) для получения дополнительных сведений.
 
@@ -38,6 +41,7 @@ ms.locfileid: "45093443"
 
 <sup>3</sup> если надстройка содержит `Runtimes` элемент в манифесте, он использует Internet Explorer 11 независимо от версии Windows или Microsoft 365. Дополнительные [сведения см.](../reference/manifest/runtimes.md)
 
+<sup>4</sup> браузер, используемый для этой комбинации версий, зависит от канала обновления подписки Microsoft 365. Если пользователь находится на [канале бета-версии](https://insider.office.com/join/windows) (ранее он быстро является быстрым каналом), Office использует Microsoft Edge с WebView2 (чромиум на основе). Для любого другого канала Office использует Microsoft Edge с исходной Вебвиев (Еджехтмл). Поддержка WebView2 в других каналах ожидается на ранних 2021.
 > [!IMPORTANT]
 > Internet Explorer 11 не поддерживает версии JavaScript, более поздние, чем ES5. Если какой-либо пользователь вашей надстройки применяет платформы с Internet Explorer 11, для применения синтаксиса и возможностей ECMAScript 2015 или более поздних версий вам нужно либо транскомпилировать свой код JavaScript в ES5, либо использовать полизаполнение. Кроме того, Internet Explorer 11 не поддерживает некоторые элементы HTML5, в частности медиа, запись и местоположение.
 
@@ -45,11 +49,7 @@ ms.locfileid: "45093443"
 
 ### <a name="service-workers-are-not-working"></a>Рабочие процессы не работают
 
-Надстройки Office не поддерживают служебных рабочих процессов в [Microsoft Edge вебвиев](/microsoft-edge/hosting/webview). Ознакомьтесь со статьей " [Обзор надстроек Office](../overview/office-add-ins.md) " для получения последних поддерживаемых функций для элемента управления вебвиев Edge. Мы работаем над тем, чтобы создать новую [WebView2 пограничный сервер на основе чромиум](/microsoft-edge/hosting/webview2) на платформе надстроек Office, которые мы планируем поддерживать для сотрудников службы.
-
-### <a name="chromium-based-edge-is-installed-on-my-development-computer-but-my-add-in-does-not-use-it"></a>На моем компьютере разработчика установлен граничный сервер чромиум, но надстройка не использует ее
-
-Базовый браузер в [Microsoft Edge](https://support.microsoft.com/help/4501095/download-the-new-microsoft-edge-based-on-chromium) изменился на чромиум. Старая база, называемая Еджехтмл, не удаляется при установке пограничного сервера на основе Чромиум. Office по-прежнему будет использовать базу Еджехтмл для надстроек до тех пор, пока не будет установлена сборка Microsoft 365, поддерживающая Чромиум на компьютере. Мы ожидаем, что эти сборки поставляются в 2020. Скорее всего, они будут отображаться в канале "предварительные сотрудники" в первой половине года.
+Надстройки Office не поддерживают сотрудников службы при использовании исходной [Вебвиев Microsoft Edge](/microsoft-edge/hosting/webview) . Они поддерживаются [пограничным WebView2 на основе чромиум](/microsoft-edge/hosting/webview2).
 
 ### <a name="scroll-bar-does-not-appear-in-task-pane"></a>В области задач не отображается полоса прокрутки
 
