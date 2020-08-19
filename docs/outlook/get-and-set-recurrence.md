@@ -1,14 +1,14 @@
 ---
 title: Просмотр и изменение повторения в надстройке Outlook
 description: В этой статье показано, как использовать API JavaScript для Office, чтобы просматривать и изменять различные свойства повторения элемента в надстройке Outlook.
-ms.date: 01/14/2020
+ms.date: 08/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 6a50ba5eab39145d8e50a5a888a6ed0900200bc4
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 0b179725677f071fe2ae7baf1c719add5ccd8aa7
+ms.sourcegitcommit: e9f23a2857b90a7c17e3152292b548a13a90aa33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44606457"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "46803746"
 ---
 # <a name="get-and-set-recurrence"></a>Просмотр и изменение повторения
 
@@ -25,11 +25,11 @@ ms.locfileid: "44606457"
 
 |Тип повторения|Допустимые свойства повторения|Применение|
 |---|---|---|
-|`daily`|- [`interval`][interval link]|Встреча проводится через определенный *interval* дней. Пример: встреча проводится каждые **_2_** дня.|
+|`daily`|-&nbsp;[`interval`][interval link]|Встреча проводится через определенный *interval* дней. Пример: встреча проводится каждые **_2_** дня.|
 |`weekday`|Отсутствуют.|Встреча повторяется в определенный день недели.|
-|`monthly`|- [`interval`][interval link]<br/>- [`dayOfMonth`][dayOfMonth link]<br/>- [`dayOfWeek`][dayOfWeek link]<br/>- [`weekNumber`][weekNumber link]|- Встреча проводится в *dayOfMonth* день через определенный *interval* месяцев. Пример: встреча проводится в **_5_** день каждые **_4_** месяца.<br/><br/>- Встреча проводится в *weekNumber* *dayOfWeek* через определенный *interval* месяцев. Пример: встреча проводится в **_третий_** **_четверг_** каждые **_2_** месяца.|
-|`weekly`|- [`interval`][interval link]<br/>- [`days`][days link]|Встреча проводится в *days* через определенный *interval* недель. Пример: встреча проводится во **_вторник_ и _четверг_** каждые **_2_** недели.|
-|`yearly`|- [`interval`][interval link]<br/>- [`dayOfMonth`][dayOfMonth link]<br/>- [`dayOfWeek`][dayOfWeek link]<br/>- [`weekNumber`][weekNumber link]<br/>- [`month`][month link]|- Встреча проводится в *dayOfMonth* день *month* через определенный *interval* лет. Пример: встреча проводится **_7_** **_сентября_** каждые **_4_** года.<br/><br/>- Встреча проводится в *weekNumber* *dayOfWeek* *month* через определенный *interval* лет. Пример: встреча проводится в **_первый_** **_четверг_** **_сентября_** каждые **_2_** года.|
+|`monthly`|-&nbsp;[`interval`][interval link]<br/>-&nbsp;[`dayOfMonth`][dayOfMonth link]<br/>-&nbsp;[`dayOfWeek`][dayOfWeek link]<br/>-&nbsp;[`weekNumber`][weekNumber link]|- Встреча проводится в *dayOfMonth* день через определенный *interval* месяцев. Пример: встреча проводится в **_5_** день каждые **_4_** месяца.<br/><br/>- Встреча проводится в *weekNumber* *dayOfWeek* через определенный *interval* месяцев. Пример: встреча проводится в **_третий_** **_четверг_** каждые **_2_** месяца.|
+|`weekly`|-&nbsp;[`interval`][interval link]<br/>-&nbsp;[`days`][days link]|Встреча проводится в *days* через определенный *interval* недель. Пример: встреча проводится во **_вторник_ и _четверг_** каждые **_2_** недели.|
+|`yearly`|-&nbsp;[`interval`][interval link]<br/>-&nbsp;[`dayOfMonth`][dayOfMonth link]<br/>-&nbsp;[`dayOfWeek`][dayOfWeek link]<br/>-&nbsp;[`weekNumber`][weekNumber link]<br/>-&nbsp;[`month`][month link]|- Встреча проводится в *dayOfMonth* день *month* через определенный *interval* лет. Пример: встреча проводится **_7_** **_сентября_** каждые **_4_** года.<br/><br/>- Встреча проводится в *weekNumber* *dayOfWeek* *month* через определенный *interval* лет. Пример: встреча проводится в **_первый_** **_четверг_** **_сентября_** каждые **_2_** года.|
 
 > [!NOTE]
 > Вы также можете использовать свойство [`firstDayOfWeek`][firstDayOfWeek link] с типом повторения `weekly`. С указанного дня начинается список дней, отображаемый в диалоговом окне повторения.
@@ -73,6 +73,27 @@ Office.context.mailbox.item.recurrence.setAsync(pattern, callback);
 function callback(asyncResult)
 {
     console.log(JSON.stringify(asyncResult));
+}
+```
+
+## <a name="change-recurrence-as-the-organizer"></a>Изменение периодичности в качестве организатора
+
+В следующем примере организатор встречи получает в режиме создания объект повторения ряда встреч с учетом ряда или экземпляра этого ряда, а затем задает новое значение длительности повторения.
+
+```js
+Office.context.mailbox.item.recurrence.getAsync(callback);
+
+function callback(asyncResult) {
+  var recurrencePattern = asyncResult.value;
+  recurrencePattern.seriesTime.setDuration(60);
+  Office.context.mailbox.item.recurrence.setAsync(recurrencePattern, (asyncResult) => {
+    if (asyncResult.status !== Office.AsyncResultStatus.Succeeded) {
+      console.log("failed");
+      return;
+    }
+
+    console.log("success");
+  });
 }
 ```
 

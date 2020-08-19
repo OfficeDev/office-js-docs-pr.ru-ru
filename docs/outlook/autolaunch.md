@@ -2,14 +2,14 @@
 title: Настройка надстройки Outlook для активации на основе событий (Предварительная версия)
 description: Узнайте, как настроить надстройку Outlook для активации на основе событий.
 ms.topic: article
-ms.date: 08/11/2020
+ms.date: 08/18/2020
 localization_priority: Normal
-ms.openlocfilehash: f5df8c1efe5e1e5c4c83b1536e90d8f38729dcc3
-ms.sourcegitcommit: 65c15a9040279901ea7ff7f522d86c8fddb98e14
+ms.openlocfilehash: 736573fb5ab5b50841348f55d89ae15e4d174a22
+ms.sourcegitcommit: e9f23a2857b90a7c17e3152292b548a13a90aa33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "46672724"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "46803753"
 ---
 # <a name="configure-your-outlook-add-in-for-event-based-activation-preview"></a>Настройка надстройки Outlook для активации на основе событий (Предварительная версия)
 
@@ -17,6 +17,9 @@ ms.locfileid: "46672724"
 
 - `OnNewMessageCompose`: На составление нового сообщения (включая ответ, ответить всем и пересылать)
 - `OnNewAppointmentOrganizer`: При создании новой встречи
+
+  > [!IMPORTANT]
+  > Эта функция **не** активируется при редактировании элемента, например черновика или существующей встречи.
 
 По завершении этого пошагового руководства у вас будет надстройка, которая запускается при создании нового сообщения.
 
