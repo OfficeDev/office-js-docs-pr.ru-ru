@@ -1,14 +1,14 @@
 ---
 title: Работа с событиями при помощи API JavaScript для Excel
-description: Список событий для объектов JavaScript Excel. Сюда входят сведения об использовании обработчиков событий и связанных с ними шаблонов.
-ms.date: 05/06/2020
+description: Список событий для объектов JavaScript для Excel. Сюда входит информация об использовании обработчиков событий и связанных шаблонах.
+ms.date: 08/18/2020
 localization_priority: Normal
-ms.openlocfilehash: fbf92d34a0fb1d8b18b9ebb379cd24d34775c243
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: adb924ff370c49f5b8f6a3175683ecdb959d9329
+ms.sourcegitcommit: 7faa0932b953a4983a80af70f49d116c3236d81a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609603"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "46845523"
 ---
 # <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями при помощи API JavaScript для Excel
 
@@ -31,19 +31,10 @@ ms.locfileid: "44609603"
 | `onDeleted` | Возникает при удалении объекта из коллекции. | [**ChartCollection**](/javascript/api/excel/excel.chartcollection#ondeleted), [**TableCollection**](/javascript/api/excel/excel.tablecollection#ondeleted), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#ondeleted) |
 | `onFormatChanged` | Возникает при изменении формата на листе. | [**Worksheet**](/javascript/api/excel/excel.worksheet#onformatchanged), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#onformatchanged) |
 | `onRowSorted` | Возникает при сортировке одной или нескольких строк. Происходит в результате операции сортировки сверху вниз. | [**Worksheet**](/javascript/api/excel/excel.worksheet#onrowsorted), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#onrowsorted) |
-| `onSelectionChanged` | Возникает при изменении активной ячейки или выбранного диапазона. | [**Привязка**](/javascript/api/excel/excel.binding#onselectionchanged), [**Таблица**](/javascript/api/excel/excel.table#onselectionchanged), [**Книга**](/javascript/api/excel/excel.workbook#onselectionchanged), [**лист**](/javascript/api/excel/excel.worksheet#onselectionchanged), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#onselectionchanged) |
+| `onSelectionChanged` | Возникает при изменении активной ячейки или выбранного диапазона. | [**Привязка,**](/javascript/api/excel/excel.binding#onselectionchanged) [**таблица,**](/javascript/api/excel/excel.table#onselectionchanged) [**Книга,**](/javascript/api/excel/excel.workbook#onselectionchanged) [**Worksheet,**](/javascript/api/excel/excel.worksheet#onselectionchanged) [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#onselectionchanged) |
 | `onRowHiddenChanged` | Возникает при изменении состояния скрытия строки на определенном листе. | [**Worksheet**](/javascript/api/excel/excel.worksheet#onrowhiddenchanged), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#onrowhiddenchanged) |
 | `onSettingsChanged` | Возникает при изменении параметров в документе. | [**SettingCollection**](/javascript/api/excel/excel.settingcollection#onsettingschanged) |
 | `onSingleClicked` | Возникает, когда происходит щелчок левой кнопкой мыши или нажатие на листе. | [**Worksheet**](/javascript/api/excel/excel.worksheet#onsingleclicked), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#onsingleclicked) |
-
-> [!WARNING]
-> Событие `onSelectionChanged` в настоящее время нестабильно. Существует временное решение для надежного использования `onSelectionChanged`. Добавьте следующий код в раздел `<head>` своей главной страницы HTML:
->
-> ```HTML
-> <script> MutationObserver=null; </script>
-> ```
->
-> Полное обсуждение проблемы находится в [репозитории GitHub office-js](https://github.com/OfficeDev/office-js/issues/533).
 
 ### <a name="events-in-preview"></a>События в предварительной версии
 
@@ -111,7 +102,7 @@ function handleChange(event)
 
 ## <a name="remove-an-event-handler"></a>Удаление обработчика события
 
-В приведенном ниже примере кода регистрируется обработчик событий `onSelectionChanged` на листе под названием **Sample** и определяется функция `handleSelectionChange`, которая будет выполняться при возникновении события. В нем также определяется функция `remove()`, которую можно впоследствии вызвать для удаления обработчика событий. Обратите внимание, что `RequestContext` для удаления обработчика событий необходимо, чтобы он использовался для создания обработчика событий. 
+В приведенном ниже примере кода регистрируется обработчик событий `onSelectionChanged` на листе под названием **Sample** и определяется функция `handleSelectionChange`, которая будет выполняться при возникновении события. В нем также определяется функция `remove()`, которую можно впоследствии вызвать для удаления обработчика событий. Обратите внимание, что `RequestContext` для его удаления необходимо использовать метод, используемый для создания обработчика событий. 
 
 ```js
 var eventResult;
