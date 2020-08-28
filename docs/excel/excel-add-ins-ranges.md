@@ -1,29 +1,29 @@
 ---
 title: Работа с диапазонами с использованием API JavaScript для Excel (основные задачи)
 description: Примеры кода, демонстрирующие выполнение типовых задач с диапазонами с использованием API JavaScript для Excel.
-ms.date: 04/30/2019
+ms.date: 07/28/2020
 localization_priority: Normal
-ms.openlocfilehash: 8cba0908d2179c397dc3530e9bcb4063c09fce19
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 4eb04a58fdf58425f7bb13a6dc457da28625dba5
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609596"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47294166"
 ---
-# <a name="work-with-ranges-using-the-excel-javascript-api"></a><span data-ttu-id="bbbef-103">Работа с диапазонами с использованием API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="bbbef-103">Work with ranges using the Excel JavaScript API</span></span>
+# <a name="work-with-ranges-using-the-excel-javascript-api"></a><span data-ttu-id="acf0a-103">Работа с диапазонами с использованием API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="acf0a-103">Work with ranges using the Excel JavaScript API</span></span>
 
-<span data-ttu-id="bbbef-104">В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диапазонов с использованием API JavaScript для Excel.</span><span class="sxs-lookup"><span data-stu-id="bbbef-104">This article provides code samples that show how to perform common tasks with ranges using the Excel JavaScript API.</span></span> <span data-ttu-id="bbbef-105">Полный список свойств и методов, `Range` поддерживаемых объектом, представлен в разделе [объект Range (API JavaScript для Excel)](/javascript/api/excel/excel.range).</span><span class="sxs-lookup"><span data-stu-id="bbbef-105">For the complete list of properties and methods that the `Range` object supports, see [Range Object (JavaScript API for Excel)](/javascript/api/excel/excel.range).</span></span>
+<span data-ttu-id="acf0a-104">В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диапазонов с использованием API JavaScript для Excel.</span><span class="sxs-lookup"><span data-stu-id="acf0a-104">This article provides code samples that show how to perform common tasks with ranges using the Excel JavaScript API.</span></span> <span data-ttu-id="acf0a-105">Полный список свойств и методов, `Range` поддерживаемых объектом, представлен в разделе [объект Range (API JavaScript для Excel)](/javascript/api/excel/excel.range).</span><span class="sxs-lookup"><span data-stu-id="acf0a-105">For the complete list of properties and methods that the `Range` object supports, see [Range Object (JavaScript API for Excel)](/javascript/api/excel/excel.range).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="bbbef-106">Примеры кода, в которых показано, как выполнять более сложные задачи для диапазонов, см. в статье [Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)](excel-add-ins-ranges-advanced.md).</span><span class="sxs-lookup"><span data-stu-id="bbbef-106">For code samples that show how to perform more advanced tasks with ranges, see [Work with ranges using the Excel JavaScript API (advanced)](excel-add-ins-ranges-advanced.md).</span></span>
+> <span data-ttu-id="acf0a-106">Примеры кода, в которых показано, как выполнять более сложные задачи для диапазонов, см. в статье [Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)](excel-add-ins-ranges-advanced.md).</span><span class="sxs-lookup"><span data-stu-id="acf0a-106">For code samples that show how to perform more advanced tasks with ranges, see [Work with ranges using the Excel JavaScript API (advanced)](excel-add-ins-ranges-advanced.md).</span></span>
 
-## <a name="get-a-range"></a><span data-ttu-id="bbbef-107">Получение диапазона</span><span class="sxs-lookup"><span data-stu-id="bbbef-107">Get a range</span></span>
+## <a name="get-a-range"></a><span data-ttu-id="acf0a-107">Получение диапазона</span><span class="sxs-lookup"><span data-stu-id="acf0a-107">Get a range</span></span>
 
-<span data-ttu-id="bbbef-108">В примерах ниже показаны различные способы получения ссылки на диапазон, расположенный на листе.</span><span class="sxs-lookup"><span data-stu-id="bbbef-108">The following examples show different ways to get a reference to a range within a worksheet.</span></span>
+<span data-ttu-id="acf0a-108">В примерах ниже показаны различные способы получения ссылки на диапазон, расположенный на листе.</span><span class="sxs-lookup"><span data-stu-id="acf0a-108">The following examples show different ways to get a reference to a range within a worksheet.</span></span>
 
-### <a name="get-range-by-address"></a><span data-ttu-id="bbbef-109">Получение диапазона по адресу</span><span class="sxs-lookup"><span data-stu-id="bbbef-109">Get range by address</span></span>
+### <a name="get-range-by-address"></a><span data-ttu-id="acf0a-109">Получение диапазона по адресу</span><span class="sxs-lookup"><span data-stu-id="acf0a-109">Get range by address</span></span>
 
-<span data-ttu-id="bbbef-110">В примере кода ниже показано, как получить диапазон с адресом **B2: C5** из листа с именем **Sample**, загружает его `address` свойство и записывает сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="bbbef-110">The following code sample gets the range with address **B2:C5** from the worksheet named **Sample**, loads its `address` property, and writes a message to the console.</span></span>
+<span data-ttu-id="acf0a-110">В примере кода ниже показано, как получить диапазон с адресом **B2: C5** из листа с именем **Sample**, загружает его `address` свойство и записывает сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="acf0a-110">The following code sample gets the range with address **B2:C5** from the worksheet named **Sample**, loads its `address` property, and writes a message to the console.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -38,9 +38,9 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-### <a name="get-range-by-name"></a><span data-ttu-id="bbbef-111">Получение диапазона по имени</span><span class="sxs-lookup"><span data-stu-id="bbbef-111">Get range by name</span></span>
+### <a name="get-range-by-name"></a><span data-ttu-id="acf0a-111">Получение диапазона по имени</span><span class="sxs-lookup"><span data-stu-id="acf0a-111">Get range by name</span></span>
 
-<span data-ttu-id="bbbef-112">Следующий пример кода получает диапазон с именем `MyRange` **Sample**, загружает его `address` свойство и записывает сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="bbbef-112">The following code sample gets the range named `MyRange` from the worksheet named **Sample**, loads its `address` property, and writes a message to the console.</span></span>
+<span data-ttu-id="acf0a-112">Следующий пример кода получает диапазон с именем `MyRange` **Sample**, загружает его `address` свойство и записывает сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="acf0a-112">The following code sample gets the range named `MyRange` from the worksheet named **Sample**, loads its `address` property, and writes a message to the console.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -55,9 +55,9 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-### <a name="get-used-range"></a><span data-ttu-id="bbbef-113">Получение используемого диапазона</span><span class="sxs-lookup"><span data-stu-id="bbbef-113">Get used range</span></span>
+### <a name="get-used-range"></a><span data-ttu-id="acf0a-113">Получение используемого диапазона</span><span class="sxs-lookup"><span data-stu-id="acf0a-113">Get used range</span></span>
 
-<span data-ttu-id="bbbef-114">Следующий пример кода получает использованный диапазон из листа **Sample**, загружает его `address` свойство и записывает сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="bbbef-114">The following code sample gets the used range from the worksheet named **Sample**, loads its `address` property, and writes a message to the console.</span></span> <span data-ttu-id="bbbef-115">Используемый диапазон — это наименьший диапазон, включающий в себя все ячейки листа, которые содержат значение или форматирование.</span><span class="sxs-lookup"><span data-stu-id="bbbef-115">The used range is the smallest range that encompasses any cells in the worksheet that have a value or formatting assigned to them.</span></span> <span data-ttu-id="bbbef-116">Если лист пуст, `getUsedRange()` метод возвращает диапазон, состоящий только из верхней левой ячейки на листе.</span><span class="sxs-lookup"><span data-stu-id="bbbef-116">If the entire worksheet is blank, the `getUsedRange()` method returns a range that consists of only the top-left cell in the worksheet.</span></span>
+<span data-ttu-id="acf0a-114">Следующий пример кода получает использованный диапазон из листа **Sample**, загружает его `address` свойство и записывает сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="acf0a-114">The following code sample gets the used range from the worksheet named **Sample**, loads its `address` property, and writes a message to the console.</span></span> <span data-ttu-id="acf0a-115">Используемый диапазон — это наименьший диапазон, включающий в себя все ячейки листа, которые содержат значение или форматирование.</span><span class="sxs-lookup"><span data-stu-id="acf0a-115">The used range is the smallest range that encompasses any cells in the worksheet that have a value or formatting assigned to them.</span></span> <span data-ttu-id="acf0a-116">Если лист пуст, `getUsedRange()` метод возвращает диапазон, состоящий только из верхней левой ячейки на листе.</span><span class="sxs-lookup"><span data-stu-id="acf0a-116">If the entire worksheet is blank, the `getUsedRange()` method returns a range that consists of only the top-left cell in the worksheet.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -72,9 +72,9 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-### <a name="get-entire-range"></a><span data-ttu-id="bbbef-117">Получение всего диапазона</span><span class="sxs-lookup"><span data-stu-id="bbbef-117">Get entire range</span></span>
+### <a name="get-entire-range"></a><span data-ttu-id="acf0a-117">Получение всего диапазона</span><span class="sxs-lookup"><span data-stu-id="acf0a-117">Get entire range</span></span>
 
-<span data-ttu-id="bbbef-118">Следующий пример кода получает весь диапазон листа на листе **Sample**, загружает его `address` свойство и записывает сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="bbbef-118">The following code sample gets the entire worksheet range from the worksheet named **Sample**, loads its `address` property, and writes a message to the console.</span></span>
+<span data-ttu-id="acf0a-118">Следующий пример кода получает весь диапазон листа на листе **Sample**, загружает его `address` свойство и записывает сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="acf0a-118">The following code sample gets the entire worksheet range from the worksheet named **Sample**, loads its `address` property, and writes a message to the console.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -89,9 +89,9 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="insert-a-range-of-cells"></a><span data-ttu-id="bbbef-119">Вставка диапазона ячеек</span><span class="sxs-lookup"><span data-stu-id="bbbef-119">Insert a range of cells</span></span>
+## <a name="insert-a-range-of-cells"></a><span data-ttu-id="acf0a-119">Вставка диапазона ячеек</span><span class="sxs-lookup"><span data-stu-id="acf0a-119">Insert a range of cells</span></span>
 
-<span data-ttu-id="bbbef-120">В примере кода ниже показано, как вставить диапазон ячеек в расположение **B4:E4** и сдвинуть другие ячейки вниз, чтобы освободить место для новых ячеек.</span><span class="sxs-lookup"><span data-stu-id="bbbef-120">The following code sample inserts a range of cells in location **B4:E4** and shifts other cells down to provide space for the new cells.</span></span>
+<span data-ttu-id="acf0a-120">В примере кода ниже показано, как вставить диапазон ячеек в расположение **B4:E4** и сдвинуть другие ячейки вниз, чтобы освободить место для новых ячеек.</span><span class="sxs-lookup"><span data-stu-id="acf0a-120">The following code sample inserts a range of cells in location **B4:E4** and shifts other cells down to provide space for the new cells.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -99,22 +99,22 @@ Excel.run(function (context) {
     var range = sheet.getRange("B4:E4");
 
     range.insert(Excel.InsertShiftDirection.down);
-    
+
     return context.sync();
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="bbbef-121">**Данные перед вставкой диапазона**</span><span class="sxs-lookup"><span data-stu-id="bbbef-121">**Data before range is inserted**</span></span>
+### <a name="data-before-range-is-inserted"></a><span data-ttu-id="acf0a-121">Данные перед вставкой диапазона</span><span class="sxs-lookup"><span data-stu-id="acf0a-121">Data before range is inserted</span></span>
 
 ![Данные в Excel перед вставкой диапазона](../images/excel-ranges-start.png)
 
-<span data-ttu-id="bbbef-123">**Данные после вставки диапазона**</span><span class="sxs-lookup"><span data-stu-id="bbbef-123">**Data after range is inserted**</span></span>
+### <a name="data-after-range-is-inserted"></a><span data-ttu-id="acf0a-123">Данные после вставки диапазона</span><span class="sxs-lookup"><span data-stu-id="acf0a-123">Data after range is inserted</span></span>
 
 ![Данные в Excel после вставки диапазона](../images/excel-ranges-after-insert.png)
 
-## <a name="clear-a-range-of-cells"></a><span data-ttu-id="bbbef-125">Очистка диапазона ячеек</span><span class="sxs-lookup"><span data-stu-id="bbbef-125">Clear a range of cells</span></span>
+## <a name="clear-a-range-of-cells"></a><span data-ttu-id="acf0a-125">Очистка диапазона ячеек</span><span class="sxs-lookup"><span data-stu-id="acf0a-125">Clear a range of cells</span></span>
 
-<span data-ttu-id="bbbef-126">В примере кода ниже показано, как удалить все содержимое и форматирование ячеек в диапазоне **E2:E5**.</span><span class="sxs-lookup"><span data-stu-id="bbbef-126">The following code sample clears all contents and formatting of cells in the range **E2:E5**.</span></span>  
+<span data-ttu-id="acf0a-126">В примере кода ниже показано, как удалить все содержимое и форматирование ячеек в диапазоне **E2:E5**.</span><span class="sxs-lookup"><span data-stu-id="acf0a-126">The following code sample clears all contents and formatting of cells in the range **E2:E5**.</span></span>  
 
 ```js
 Excel.run(function (context) {
@@ -127,17 +127,17 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="bbbef-127">**Данные перед очисткой диапазона**</span><span class="sxs-lookup"><span data-stu-id="bbbef-127">**Data before range is cleared**</span></span>
+### <a name="data-before-range-is-cleared"></a><span data-ttu-id="acf0a-127">Данные перед очисткой диапазона</span><span class="sxs-lookup"><span data-stu-id="acf0a-127">Data before range is cleared</span></span>
 
 ![Данные в Excel перед очисткой диапазона](../images/excel-ranges-start.png)
 
-<span data-ttu-id="bbbef-129">**Данные после очистки диапазона**</span><span class="sxs-lookup"><span data-stu-id="bbbef-129">**Data after range is cleared**</span></span>
+### <a name="data-after-range-is-cleared"></a><span data-ttu-id="acf0a-129">Данные после очистки диапазона</span><span class="sxs-lookup"><span data-stu-id="acf0a-129">Data after range is cleared</span></span>
 
 ![Данные в Excel после очистки диапазона](../images/excel-ranges-after-clear.png)
 
-## <a name="delete-a-range-of-cells"></a><span data-ttu-id="bbbef-131">Удаление диапазона ячеек</span><span class="sxs-lookup"><span data-stu-id="bbbef-131">Delete a range of cells</span></span>
+## <a name="delete-a-range-of-cells"></a><span data-ttu-id="acf0a-131">Удаление диапазона ячеек</span><span class="sxs-lookup"><span data-stu-id="acf0a-131">Delete a range of cells</span></span>
 
-<span data-ttu-id="bbbef-132">В примере кода ниже показано, как удалить ячейки в диапазоне **B4:E4** и сдвинуть другие ячейки вверх, чтобы заполнить место, освободившееся после удаления ячеек.</span><span class="sxs-lookup"><span data-stu-id="bbbef-132">The following code sample deletes the cells in the range **B4:E4** and shift other cells up to fill the space that was vacated by the deleted cells.</span></span>
+<span data-ttu-id="acf0a-132">В примере кода ниже показано, как удалить ячейки в диапазоне **B4:E4** и сдвинуть другие ячейки вверх, чтобы заполнить место, освободившееся после удаления ячеек.</span><span class="sxs-lookup"><span data-stu-id="acf0a-132">The following code sample deletes the cells in the range **B4:E4** and shift other cells up to fill the space that was vacated by the deleted cells.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -150,17 +150,17 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="bbbef-133">**Данные перед удалением диапазона**</span><span class="sxs-lookup"><span data-stu-id="bbbef-133">**Data before range is deleted**</span></span>
+### <a name="data-before-range-is-deleted"></a><span data-ttu-id="acf0a-133">Данные перед удалением диапазона</span><span class="sxs-lookup"><span data-stu-id="acf0a-133">Data before range is deleted</span></span>
 
 ![Данные в Excel перед удалением диапазона](../images/excel-ranges-start.png)
 
-<span data-ttu-id="bbbef-135">**Данные после удаления диапазона**</span><span class="sxs-lookup"><span data-stu-id="bbbef-135">**Data after range is deleted**</span></span>
+### <a name="data-after-range-is-deleted"></a><span data-ttu-id="acf0a-135">Данные после удаления диапазона</span><span class="sxs-lookup"><span data-stu-id="acf0a-135">Data after range is deleted</span></span>
 
 ![Данные в Excel после удаления диапазона](../images/excel-ranges-after-delete.png)
 
-## <a name="set-the-selected-range"></a><span data-ttu-id="bbbef-137">Задание выделенного диапазона</span><span class="sxs-lookup"><span data-stu-id="bbbef-137">Set the selected range</span></span>
+## <a name="set-the-selected-range"></a><span data-ttu-id="acf0a-137">Задание выделенного диапазона</span><span class="sxs-lookup"><span data-stu-id="acf0a-137">Set the selected range</span></span>
 
-<span data-ttu-id="bbbef-138">В примере кода ниже показано, как выделить диапазон **B2:E6** на активном листе.</span><span class="sxs-lookup"><span data-stu-id="bbbef-138">The following code sample selects the range **B2:E6** in the active worksheet.</span></span>
+<span data-ttu-id="acf0a-138">В примере кода ниже показано, как выделить диапазон **B2:E6** на активном листе.</span><span class="sxs-lookup"><span data-stu-id="acf0a-138">The following code sample selects the range **B2:E6** in the active worksheet.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -173,13 +173,13 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="bbbef-139">**Выделенный диапазон B2:E6**</span><span class="sxs-lookup"><span data-stu-id="bbbef-139">**Selected range B2:E6**</span></span>
+### <a name="selected-range-b2e6"></a><span data-ttu-id="acf0a-139">Выделенный диапазон B2:E6</span><span class="sxs-lookup"><span data-stu-id="acf0a-139">Selected range B2:E6</span></span>
 
 ![Выделенный диапазон в Excel](../images/excel-ranges-set-selection.png)
 
-## <a name="get-the-selected-range"></a><span data-ttu-id="bbbef-141">Получение выделенного диапазона</span><span class="sxs-lookup"><span data-stu-id="bbbef-141">Get the selected range</span></span>
+## <a name="get-the-selected-range"></a><span data-ttu-id="acf0a-141">Получение выделенного диапазона</span><span class="sxs-lookup"><span data-stu-id="acf0a-141">Get the selected range</span></span>
 
-<span data-ttu-id="bbbef-142">Следующий пример кода получает выбранный диапазон, загружает его `address` свойство и записывает сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="bbbef-142">The following code sample gets the selected range, loads its `address` property, and writes a message to the console.</span></span> 
+<span data-ttu-id="acf0a-142">Следующий пример кода получает выбранный диапазон, загружает его `address` свойство и записывает сообщение в консоль.</span><span class="sxs-lookup"><span data-stu-id="acf0a-142">The following code sample gets the selected range, loads its `address` property, and writes a message to the console.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -193,13 +193,13 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="set-values-or-formulas"></a><span data-ttu-id="bbbef-143">Задание значений или формул</span><span class="sxs-lookup"><span data-stu-id="bbbef-143">Set values or formulas</span></span>
+## <a name="set-values-or-formulas"></a><span data-ttu-id="acf0a-143">Задание значений или формул</span><span class="sxs-lookup"><span data-stu-id="acf0a-143">Set values or formulas</span></span>
 
-<span data-ttu-id="bbbef-144">В примерах ниже показано, как задать значения и формулы для одной ячейки или диапазона ячеек.</span><span class="sxs-lookup"><span data-stu-id="bbbef-144">The following examples show how to set values and formulas for a single cell or a range of cells.</span></span>
+<span data-ttu-id="acf0a-144">В примерах ниже показано, как задать значения и формулы для одной ячейки или диапазона ячеек.</span><span class="sxs-lookup"><span data-stu-id="acf0a-144">The following examples show how to set values and formulas for a single cell or a range of cells.</span></span>
 
-### <a name="set-value-for-a-single-cell"></a><span data-ttu-id="bbbef-145">Задание значения для одной ячейки</span><span class="sxs-lookup"><span data-stu-id="bbbef-145">Set value for a single cell</span></span>
+### <a name="set-value-for-a-single-cell"></a><span data-ttu-id="acf0a-145">Задание значения для одной ячейки</span><span class="sxs-lookup"><span data-stu-id="acf0a-145">Set value for a single cell</span></span>
 
-<span data-ttu-id="bbbef-146">В примере кода ниже показано, как присвоить ячейке **C3** значение 5, а затем настроить ширину столбцов для наилучшего размещения данных.</span><span class="sxs-lookup"><span data-stu-id="bbbef-146">The following code sample sets the value of cell **C3** to "5" and then sets the width of the columns to best fit the data.</span></span>
+<span data-ttu-id="acf0a-146">В примере кода ниже показано, как присвоить ячейке **C3** значение 5, а затем настроить ширину столбцов для наилучшего размещения данных.</span><span class="sxs-lookup"><span data-stu-id="acf0a-146">The following code sample sets the value of cell **C3** to "5" and then sets the width of the columns to best fit the data.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -213,17 +213,17 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="bbbef-147">**Данные перед изменением значения ячейки**</span><span class="sxs-lookup"><span data-stu-id="bbbef-147">**Data before cell value is updated**</span></span>
+#### <a name="data-before-cell-value-is-updated"></a><span data-ttu-id="acf0a-147">Данные перед изменением значения ячейки</span><span class="sxs-lookup"><span data-stu-id="acf0a-147">Data before cell value is updated</span></span>
 
 ![Данные в Excel перед изменением значения ячейки](../images/excel-ranges-set-start.png)
 
-<span data-ttu-id="bbbef-149">**Данные после изменения значения ячейки**</span><span class="sxs-lookup"><span data-stu-id="bbbef-149">**Data after cell value is updated**</span></span>
+#### <a name="data-after-cell-value-is-updated"></a><span data-ttu-id="acf0a-149">Данные после изменения значения ячейки</span><span class="sxs-lookup"><span data-stu-id="acf0a-149">Data after cell value is updated</span></span>
 
 ![Данные в Excel после изменения значения ячейки](../images/excel-ranges-set-cell-value.png)
 
-### <a name="set-values-for-a-range-of-cells"></a><span data-ttu-id="bbbef-151">Задание значений для диапазона ячеек</span><span class="sxs-lookup"><span data-stu-id="bbbef-151">Set values for a range of cells</span></span>
+### <a name="set-values-for-a-range-of-cells"></a><span data-ttu-id="acf0a-151">Задание значений для диапазона ячеек</span><span class="sxs-lookup"><span data-stu-id="acf0a-151">Set values for a range of cells</span></span>
 
-<span data-ttu-id="bbbef-152">В примере кода ниже показано, как присвоить значения ячейкам в диапазоне **B5:D5**, а затем настроить ширину столбцов для наилучшего размещения данных.</span><span class="sxs-lookup"><span data-stu-id="bbbef-152">The following code sample sets values for the cells in the range **B5:D5** and then sets the width of the columns to best fit the data.</span></span>
+<span data-ttu-id="acf0a-152">В примере кода ниже показано, как присвоить значения ячейкам в диапазоне **B5:D5**, а затем настроить ширину столбцов для наилучшего размещения данных.</span><span class="sxs-lookup"><span data-stu-id="acf0a-152">The following code sample sets values for the cells in the range **B5:D5** and then sets the width of the columns to best fit the data.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -232,7 +232,7 @@ Excel.run(function (context) {
     var data = [
         ["Potato Chips", 10, 1.80],
     ];
-    
+
     var range = sheet.getRange("B5:D5");
     range.values = data;
     range.format.autofitColumns();
@@ -241,17 +241,17 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="bbbef-153">**Данные перед изменением значений ячеек**</span><span class="sxs-lookup"><span data-stu-id="bbbef-153">**Data before cell values are updated**</span></span>
+#### <a name="data-before-cell-values-are-updated"></a><span data-ttu-id="acf0a-153">Данные перед изменением значений ячеек</span><span class="sxs-lookup"><span data-stu-id="acf0a-153">Data before cell values are updated</span></span>
 
 ![Данные в Excel перед изменением значений ячеек](../images/excel-ranges-set-start.png)
 
-<span data-ttu-id="bbbef-155">**Данные после изменения значений ячеек**</span><span class="sxs-lookup"><span data-stu-id="bbbef-155">**Data after cell values are updated**</span></span>
+#### <a name="data-after-cell-values-are-updated"></a><span data-ttu-id="acf0a-155">Данные после изменения значений ячеек</span><span class="sxs-lookup"><span data-stu-id="acf0a-155">Data after cell values are updated</span></span>
 
 ![Данные в Excel после изменения значений ячеек](../images/excel-ranges-set-cell-values.png)
 
-### <a name="set-formula-for-a-single-cell"></a><span data-ttu-id="bbbef-157">Задание формулы для одной ячейки</span><span class="sxs-lookup"><span data-stu-id="bbbef-157">Set formula for a single cell</span></span>
+### <a name="set-formula-for-a-single-cell"></a><span data-ttu-id="acf0a-157">Задание формулы для одной ячейки</span><span class="sxs-lookup"><span data-stu-id="acf0a-157">Set formula for a single cell</span></span>
 
-<span data-ttu-id="bbbef-158">В примере кода ниже показано, как задать формулу для ячейки **E3**, а затем настроить ширину столбцов для наилучшего размещения данных.</span><span class="sxs-lookup"><span data-stu-id="bbbef-158">The following code sample sets a formula for cell **E3** and then sets the width of the columns to best fit the data.</span></span>
+<span data-ttu-id="acf0a-158">В примере кода ниже показано, как задать формулу для ячейки **E3**, а затем настроить ширину столбцов для наилучшего размещения данных.</span><span class="sxs-lookup"><span data-stu-id="acf0a-158">The following code sample sets a formula for cell **E3** and then sets the width of the columns to best fit the data.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -265,17 +265,17 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="bbbef-159">**Данные перед заданием формулы для ячейки**</span><span class="sxs-lookup"><span data-stu-id="bbbef-159">**Data before cell formula is set**</span></span>
+#### <a name="data-before-cell-formula-is-set"></a><span data-ttu-id="acf0a-159">Данные перед заданием формулы для ячейки</span><span class="sxs-lookup"><span data-stu-id="acf0a-159">Data before cell formula is set</span></span>
 
 ![Данные в Excel перед заданием формулы для ячейки](../images/excel-ranges-start-set-formula.png)
 
-<span data-ttu-id="bbbef-161">**Данные после задания формулы для ячейки**</span><span class="sxs-lookup"><span data-stu-id="bbbef-161">**Data after cell formula is set**</span></span>
+#### <a name="data-after-cell-formula-is-set"></a><span data-ttu-id="acf0a-161">Данные после задания формулы для ячейки</span><span class="sxs-lookup"><span data-stu-id="acf0a-161">Data after cell formula is set</span></span>
 
 ![Данные в Excel после задания формулы для ячейки](../images/excel-ranges-set-formula.png)
 
-### <a name="set-formulas-for-a-range-of-cells"></a><span data-ttu-id="bbbef-163">Задание формул для диапазона ячеек</span><span class="sxs-lookup"><span data-stu-id="bbbef-163">Set formulas for a range of cells</span></span>
+### <a name="set-formulas-for-a-range-of-cells"></a><span data-ttu-id="acf0a-163">Задание формул для диапазона ячеек</span><span class="sxs-lookup"><span data-stu-id="acf0a-163">Set formulas for a range of cells</span></span>
 
-<span data-ttu-id="bbbef-164">В примере кода ниже показано, как задать формулы для ячеек в диапазоне **E2:E6**, а затем настроить ширину столбцов для наилучшего размещения данных.</span><span class="sxs-lookup"><span data-stu-id="bbbef-164">The following code sample sets formulas for cells in the range **E2:E6** and then sets the width of the columns to best fit the data.</span></span>
+<span data-ttu-id="acf0a-164">В примере кода ниже показано, как задать формулы для ячеек в диапазоне **E2:E6**, а затем настроить ширину столбцов для наилучшего размещения данных.</span><span class="sxs-lookup"><span data-stu-id="acf0a-164">The following code sample sets formulas for cells in the range **E2:E6** and then sets the width of the columns to best fit the data.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -287,7 +287,7 @@ Excel.run(function (context) {
         ["=C5 * D5"],
         ["=SUM(E3:E5)"]
     ];
-    
+
     var range = sheet.getRange("E3:E6");
     range.formulas = data;
     range.format.autofitColumns();
@@ -296,21 +296,21 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="bbbef-165">**Данные перед заданием формул для ячеек**</span><span class="sxs-lookup"><span data-stu-id="bbbef-165">**Data before cell formulas are set**</span></span>
+#### <a name="data-before-cell-formulas-are-set"></a><span data-ttu-id="acf0a-165">Данные перед заданием формул для ячеек</span><span class="sxs-lookup"><span data-stu-id="acf0a-165">Data before cell formulas are set</span></span>
 
 ![Данные в Excel перед заданием формул для ячеек](../images/excel-ranges-start-set-formula.png)
 
-<span data-ttu-id="bbbef-167">**Данные после задания формул для ячеек**</span><span class="sxs-lookup"><span data-stu-id="bbbef-167">**Data after cell formulas are set**</span></span>
+#### <a name="data-after-cell-formulas-are-set"></a><span data-ttu-id="acf0a-167">Данные после задания формул для ячеек</span><span class="sxs-lookup"><span data-stu-id="acf0a-167">Data after cell formulas are set</span></span>
 
 ![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
 
-## <a name="get-values-text-or-formulas"></a><span data-ttu-id="bbbef-169">Получение значений, текста или формул</span><span class="sxs-lookup"><span data-stu-id="bbbef-169">Get values, text, or formulas</span></span>
+## <a name="get-values-text-or-formulas"></a><span data-ttu-id="acf0a-169">Получение значений, текста или формул</span><span class="sxs-lookup"><span data-stu-id="acf0a-169">Get values, text, or formulas</span></span>
 
-<span data-ttu-id="bbbef-170">В примерах ниже показано, как получать значения, текст и формулы из диапазона ячеек.</span><span class="sxs-lookup"><span data-stu-id="bbbef-170">These examples show how to get values, text, and formulas from a range of cells.</span></span>
+<span data-ttu-id="acf0a-170">В примерах ниже показано, как получать значения, текст и формулы из диапазона ячеек.</span><span class="sxs-lookup"><span data-stu-id="acf0a-170">These examples show how to get values, text, and formulas from a range of cells.</span></span>
 
-### <a name="get-values-from-a-range-of-cells"></a><span data-ttu-id="bbbef-171">Получение значений из диапазона ячеек</span><span class="sxs-lookup"><span data-stu-id="bbbef-171">Get values from a range of cells</span></span>
+### <a name="get-values-from-a-range-of-cells"></a><span data-ttu-id="acf0a-171">Получение значений из диапазона ячеек</span><span class="sxs-lookup"><span data-stu-id="acf0a-171">Get values from a range of cells</span></span>
 
-<span data-ttu-id="bbbef-172">Следующий пример кода получает диапазон **B2: E6**, загружает его `values` свойство и записывает значения в консоль.</span><span class="sxs-lookup"><span data-stu-id="bbbef-172">The following code sample gets the range **B2:E6**, loads its `values` property, and writes the values to the console.</span></span> <span data-ttu-id="bbbef-173">`values`Свойство диапазона указывает необработанные значения, содержащиеся в ячейках.</span><span class="sxs-lookup"><span data-stu-id="bbbef-173">The `values` property of a range specifies the raw values that the cells contain.</span></span> <span data-ttu-id="bbbef-174">Даже если некоторые ячейки в диапазоне содержат формулы, `values` свойство диапазона указывает необработанные значения для этих ячеек, а не формулы.</span><span class="sxs-lookup"><span data-stu-id="bbbef-174">Even if some cells in a range contain formulas, the `values` property of the range specifies the raw values for those cells, not any of the formulas.</span></span>
+<span data-ttu-id="acf0a-172">Следующий пример кода получает диапазон **B2: E6**, загружает его `values` свойство и записывает значения в консоль.</span><span class="sxs-lookup"><span data-stu-id="acf0a-172">The following code sample gets the range **B2:E6**, loads its `values` property, and writes the values to the console.</span></span> <span data-ttu-id="acf0a-173">`values`Свойство диапазона указывает необработанные значения, содержащиеся в ячейках.</span><span class="sxs-lookup"><span data-stu-id="acf0a-173">The `values` property of a range specifies the raw values that the cells contain.</span></span> <span data-ttu-id="acf0a-174">Даже если некоторые ячейки в диапазоне содержат формулы, `values` свойство диапазона указывает необработанные значения для этих ячеек, а не формулы.</span><span class="sxs-lookup"><span data-stu-id="acf0a-174">Even if some cells in a range contain formulas, the `values` property of the range specifies the raw values for those cells, not any of the formulas.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -325,11 +325,11 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="bbbef-175">**Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)**</span><span class="sxs-lookup"><span data-stu-id="bbbef-175">**Data in range (values in column E are a result of formulas)**</span></span>
+#### <a name="data-in-range-values-in-column-e-are-a-result-of-formulas"></a><span data-ttu-id="acf0a-175">Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)</span><span class="sxs-lookup"><span data-stu-id="acf0a-175">Data in range (values in column E are a result of formulas)</span></span>
 
 ![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
 
-<span data-ttu-id="bbbef-177">**range.values (как записано в консоль в примере кода выше)**</span><span class="sxs-lookup"><span data-stu-id="bbbef-177">**range.values (as logged to the console by the code sample above)**</span></span>
+#### <a name="rangevalues-as-logged-to-the-console-by-the-code-sample-above"></a><span data-ttu-id="acf0a-177">range.values (как записано в консоль в примере кода выше)</span><span class="sxs-lookup"><span data-stu-id="acf0a-177">range.values (as logged to the console by the code sample above)</span></span>
 
 ```json
 [
@@ -366,9 +366,9 @@ Excel.run(function (context) {
 ]
 ```
 
-### <a name="get-text-from-a-range-of-cells"></a><span data-ttu-id="bbbef-178">Получение текста из диапазона ячеек</span><span class="sxs-lookup"><span data-stu-id="bbbef-178">Get text from a range of cells</span></span>
+### <a name="get-text-from-a-range-of-cells"></a><span data-ttu-id="acf0a-178">Получение текста из диапазона ячеек</span><span class="sxs-lookup"><span data-stu-id="acf0a-178">Get text from a range of cells</span></span>
 
-<span data-ttu-id="bbbef-179">Следующий пример кода получает диапазон **B2: E6**, загружает его `text` свойство и записывает его в консоль.</span><span class="sxs-lookup"><span data-stu-id="bbbef-179">The following code sample gets the range **B2:E6**, loads its `text` property, and writes it to the console.</span></span> <span data-ttu-id="bbbef-180">`text`Свойство диапазона определяет отображаемые значения для ячеек в диапазоне.</span><span class="sxs-lookup"><span data-stu-id="bbbef-180">The `text` property of a range specifies the display values for cells in the range.</span></span> <span data-ttu-id="bbbef-181">Даже если некоторые ячейки в диапазоне содержат формулы, `text` свойство диапазона определяет отображаемые значения для этих ячеек, а не формулы.</span><span class="sxs-lookup"><span data-stu-id="bbbef-181">Even if some cells in a range contain formulas, the `text` property of the range specifies the display values for those cells, not any of the formulas.</span></span>
+<span data-ttu-id="acf0a-179">Следующий пример кода получает диапазон **B2: E6**, загружает его `text` свойство и записывает его в консоль.</span><span class="sxs-lookup"><span data-stu-id="acf0a-179">The following code sample gets the range **B2:E6**, loads its `text` property, and writes it to the console.</span></span> <span data-ttu-id="acf0a-180">`text`Свойство диапазона определяет отображаемые значения для ячеек в диапазоне.</span><span class="sxs-lookup"><span data-stu-id="acf0a-180">The `text` property of a range specifies the display values for cells in the range.</span></span> <span data-ttu-id="acf0a-181">Даже если некоторые ячейки в диапазоне содержат формулы, `text` свойство диапазона определяет отображаемые значения для этих ячеек, а не формулы.</span><span class="sxs-lookup"><span data-stu-id="acf0a-181">Even if some cells in a range contain formulas, the `text` property of the range specifies the display values for those cells, not any of the formulas.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -383,11 +383,11 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="bbbef-182">**Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)**</span><span class="sxs-lookup"><span data-stu-id="bbbef-182">**Data in range (values in column E are a result of formulas)**</span></span>
+#### <a name="data-in-range-values-in-column-e-are-a-result-of-formulas"></a><span data-ttu-id="acf0a-182">Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)</span><span class="sxs-lookup"><span data-stu-id="acf0a-182">Data in range (values in column E are a result of formulas)</span></span>
 
 ![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
 
-<span data-ttu-id="bbbef-184">**range.text (как записано в консоль в примере кода выше)**</span><span class="sxs-lookup"><span data-stu-id="bbbef-184">**range.text (as logged to the console by the code sample above)**</span></span>
+#### <a name="rangetext-as-logged-to-the-console-by-the-code-sample-above"></a><span data-ttu-id="acf0a-184">range.text (как записано в консоль в примере кода выше)</span><span class="sxs-lookup"><span data-stu-id="acf0a-184">range.text (as logged to the console by the code sample above)</span></span>
 
 ```json
 [
@@ -424,9 +424,9 @@ Excel.run(function (context) {
 ]
 ```
 
-### <a name="get-formulas-from-a-range-of-cells"></a><span data-ttu-id="bbbef-185">Получение формул из диапазона ячеек</span><span class="sxs-lookup"><span data-stu-id="bbbef-185">Get formulas from a range of cells</span></span>
+### <a name="get-formulas-from-a-range-of-cells"></a><span data-ttu-id="acf0a-185">Получение формул из диапазона ячеек</span><span class="sxs-lookup"><span data-stu-id="acf0a-185">Get formulas from a range of cells</span></span>
 
-<span data-ttu-id="bbbef-186">Следующий пример кода получает диапазон **B2: E6**, загружает его `formulas` свойство и записывает его в консоль.</span><span class="sxs-lookup"><span data-stu-id="bbbef-186">The following code sample gets the range **B2:E6**, loads its `formulas` property, and writes it to the console.</span></span> <span data-ttu-id="bbbef-187">`formulas`Свойство диапазона определяет формулы для ячеек в диапазоне, содержащих формулы, и необработанные значения для ячеек в диапазоне, которые не содержат формул.</span><span class="sxs-lookup"><span data-stu-id="bbbef-187">The `formulas` property of a range specifies the formulas for cells in the range that contain formulas and the raw values for cells in the range that do not contain formulas.</span></span>
+<span data-ttu-id="acf0a-186">Следующий пример кода получает диапазон **B2: E6**, загружает его `formulas` свойство и записывает его в консоль.</span><span class="sxs-lookup"><span data-stu-id="acf0a-186">The following code sample gets the range **B2:E6**, loads its `formulas` property, and writes it to the console.</span></span> <span data-ttu-id="acf0a-187">`formulas`Свойство диапазона определяет формулы для ячеек в диапазоне, содержащих формулы, и необработанные значения для ячеек в диапазоне, которые не содержат формул.</span><span class="sxs-lookup"><span data-stu-id="acf0a-187">The `formulas` property of a range specifies the formulas for cells in the range that contain formulas and the raw values for cells in the range that do not contain formulas.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -441,11 +441,11 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="bbbef-188">**Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)**</span><span class="sxs-lookup"><span data-stu-id="bbbef-188">**Data in range (values in column E are a result of formulas)**</span></span>
+#### <a name="data-in-range-values-in-column-e-are-a-result-of-formulas"></a><span data-ttu-id="acf0a-188">Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)</span><span class="sxs-lookup"><span data-stu-id="acf0a-188">Data in range (values in column E are a result of formulas)</span></span>
 
 ![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
 
-<span data-ttu-id="bbbef-190">**range.formulas (как записано в консоль в примере кода выше)**</span><span class="sxs-lookup"><span data-stu-id="bbbef-190">**range.formulas (as logged to the console by the code sample above)**</span></span>
+#### <a name="rangeformulas-as-logged-to-the-console-by-the-code-sample-above"></a><span data-ttu-id="acf0a-190">range.formulas (как записано в консоль в примере кода выше)</span><span class="sxs-lookup"><span data-stu-id="acf0a-190">range.formulas (as logged to the console by the code sample above)</span></span>
 
 ```json
 [
@@ -482,13 +482,13 @@ Excel.run(function (context) {
 ]
 ```
 
-## <a name="set-range-format"></a><span data-ttu-id="bbbef-191">Задание формата диапазона</span><span class="sxs-lookup"><span data-stu-id="bbbef-191">Set range format</span></span>
+## <a name="set-range-format"></a><span data-ttu-id="acf0a-191">Задание формата диапазона</span><span class="sxs-lookup"><span data-stu-id="acf0a-191">Set range format</span></span>
 
-<span data-ttu-id="bbbef-192">В примерах ниже показано, как задать цвет шрифта, цвет заливки и формат чисел для ячеек в диапазоне.</span><span class="sxs-lookup"><span data-stu-id="bbbef-192">The following examples show how to set font color, fill color, and number format for cells in a range.</span></span>
+<span data-ttu-id="acf0a-192">В примерах ниже показано, как задать цвет шрифта, цвет заливки и формат чисел для ячеек в диапазоне.</span><span class="sxs-lookup"><span data-stu-id="acf0a-192">The following examples show how to set font color, fill color, and number format for cells in a range.</span></span>
 
-### <a name="set-font-color-and-fill-color"></a><span data-ttu-id="bbbef-193">Задание цвета шрифта и цвета заливки</span><span class="sxs-lookup"><span data-stu-id="bbbef-193">Set font color and fill color</span></span>
+### <a name="set-font-color-and-fill-color"></a><span data-ttu-id="acf0a-193">Задание цвета шрифта и цвета заливки</span><span class="sxs-lookup"><span data-stu-id="acf0a-193">Set font color and fill color</span></span>
 
-<span data-ttu-id="bbbef-194">В примере ниже показано, как задать цвет шрифта и цвет заливки для ячеек в диапазоне **B2: E2**.</span><span class="sxs-lookup"><span data-stu-id="bbbef-194">The following code sample sets the font color and fill color for cells in range **B2:E2**.</span></span>
+<span data-ttu-id="acf0a-194">В примере ниже показано, как задать цвет шрифта и цвет заливки для ячеек в диапазоне **B2: E2**.</span><span class="sxs-lookup"><span data-stu-id="acf0a-194">The following code sample sets the font color and fill color for cells in range **B2:E2**.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -502,17 +502,17 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="bbbef-195">**Данные в диапазоне перед заданием цвета шрифта и цвета заливки**</span><span class="sxs-lookup"><span data-stu-id="bbbef-195">**Data in range before font color and fill color are set**</span></span>
+#### <a name="data-in-range-before-font-color-and-fill-color-are-set"></a><span data-ttu-id="acf0a-195">Данные в диапазоне перед заданием цвета шрифта и цвета заливки</span><span class="sxs-lookup"><span data-stu-id="acf0a-195">Data in range before font color and fill color are set</span></span>
 
 ![Данные в Excel перед заданием формата](../images/excel-ranges-format-before.png)
 
-<span data-ttu-id="bbbef-197">**Данные в диапазоне после задания цвета шрифта и цвета заливки**</span><span class="sxs-lookup"><span data-stu-id="bbbef-197">**Data in range after font color and fill color are set**</span></span>
+#### <a name="data-in-range-after-font-color-and-fill-color-are-set"></a><span data-ttu-id="acf0a-197">Данные в диапазоне после задания цвета шрифта и цвета заливки</span><span class="sxs-lookup"><span data-stu-id="acf0a-197">Data in range after font color and fill color are set</span></span>
 
 ![Данные в Excel после задания формата](../images/excel-ranges-format-font-and-fill.png)
 
-### <a name="set-number-format"></a><span data-ttu-id="bbbef-199">Задание формата чисел</span><span class="sxs-lookup"><span data-stu-id="bbbef-199">Set number format</span></span>
+### <a name="set-number-format"></a><span data-ttu-id="acf0a-199">Задание формата чисел</span><span class="sxs-lookup"><span data-stu-id="acf0a-199">Set number format</span></span>
 
-<span data-ttu-id="bbbef-200">В примере ниже показано, как задать формат чисел для ячеек в диапазоне **D3:E5**.</span><span class="sxs-lookup"><span data-stu-id="bbbef-200">The following code sample sets the number format for the cells in range **D3:E5**.</span></span>
+<span data-ttu-id="acf0a-200">В примере ниже показано, как задать формат чисел для ячеек в диапазоне **D3:E5**.</span><span class="sxs-lookup"><span data-stu-id="acf0a-200">The following code sample sets the number format for the cells in range **D3:E5**.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -531,21 +531,47 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="bbbef-201">**Данные в диапазоне перед заданием формата чисел**</span><span class="sxs-lookup"><span data-stu-id="bbbef-201">**Data in range before number format is set**</span></span>
+#### <a name="data-in-range-before-number-format-is-set"></a><span data-ttu-id="acf0a-201">Данные в диапазоне перед заданием формата чисел</span><span class="sxs-lookup"><span data-stu-id="acf0a-201">Data in range before number format is set</span></span>
 
-![Данные в Excel перед заданием формата](../images/excel-ranges-format-font-and-fill.png)
+![Данные в Excel перед заданием формата чисел](../images/excel-ranges-format-font-and-fill.png)
 
-<span data-ttu-id="bbbef-203">**Данные в диапазоне после задания формата чисел**</span><span class="sxs-lookup"><span data-stu-id="bbbef-203">**Data in range after number format is set**</span></span>
+#### <a name="data-in-range-after-number-format-is-set"></a><span data-ttu-id="acf0a-203">Данные в диапазоне после задания формата чисел</span><span class="sxs-lookup"><span data-stu-id="acf0a-203">Data in range after number format is set</span></span>
 
-![Данные в Excel после задания формата](../images/excel-ranges-format-numbers.png)
+![Данные в Excel после задания числового формата](../images/excel-ranges-format-numbers.png)
 
-### <a name="conditional-formatting-of-ranges"></a><span data-ttu-id="bbbef-205">Условное форматирование диапазонов</span><span class="sxs-lookup"><span data-stu-id="bbbef-205">Conditional formatting of ranges</span></span>
+## <a name="read-or-write-to-an-unbounded-range"></a><span data-ttu-id="acf0a-205">Чтение из неограниченного диапазона и запись в него</span><span class="sxs-lookup"><span data-stu-id="acf0a-205">Read or write to an unbounded range</span></span>
 
-<span data-ttu-id="bbbef-206">В диапазонах может применяться форматирование к отдельным ячейкам на основе условий.</span><span class="sxs-lookup"><span data-stu-id="bbbef-206">Ranges can have formats applied to individual cells based on conditions.</span></span> <span data-ttu-id="bbbef-207">Дополнительные сведения об этом см. в статье [Применение условного форматирования к диапазонам Excel](excel-add-ins-conditional-formatting.md).</span><span class="sxs-lookup"><span data-stu-id="bbbef-207">For more information about this, see [Apply conditional formatting to Excel ranges](excel-add-ins-conditional-formatting.md).</span></span>
+### <a name="read-an-unbounded-range"></a><span data-ttu-id="acf0a-206">Чтение из неограниченного диапазона</span><span class="sxs-lookup"><span data-stu-id="acf0a-206">Read an unbounded range</span></span>
 
-## <a name="find-a-cell-using-string-matching"></a><span data-ttu-id="bbbef-208">Поиск ячейки с помощью сопоставления строк</span><span class="sxs-lookup"><span data-stu-id="bbbef-208">Find a cell using string matching</span></span>
+<span data-ttu-id="acf0a-207">Неограниченный адрес диапазона — это адрес диапазона, в котором задаются либо все столбцы, либо все строки.</span><span class="sxs-lookup"><span data-stu-id="acf0a-207">An unbounded range address is a range address that specifies either entire columns or entire rows.</span></span> <span data-ttu-id="acf0a-208">Например:</span><span class="sxs-lookup"><span data-stu-id="acf0a-208">For example:</span></span>
 
-<span data-ttu-id="bbbef-209">У объекта `Range` есть метод `find` для поиска указанной строки в диапазоне.</span><span class="sxs-lookup"><span data-stu-id="bbbef-209">The `Range` object has a `find` method to search for a specified string within the range.</span></span> <span data-ttu-id="bbbef-210">Он возвращает диапазон первой ячейки с текстом, соответствующим критериям.</span><span class="sxs-lookup"><span data-stu-id="bbbef-210">It returns the range of the first cell with matching text.</span></span> <span data-ttu-id="bbbef-211">Приведенный ниже пример кода находит первую ячейку со значением, соответствующим строке **Food** (Еда), и заносит ее адрес в консоль.</span><span class="sxs-lookup"><span data-stu-id="bbbef-211">The following code sample finds the first cell with a value equal to the string **Food** and logs its address to the console.</span></span> <span data-ttu-id="bbbef-212">Обратите внимание, что метод `find` выдает ошибку `ItemNotFound`, если указанной строки не существует в диапазоне.</span><span class="sxs-lookup"><span data-stu-id="bbbef-212">Note that `find` throws an `ItemNotFound` error if the specified string doesn't exist in the range.</span></span> <span data-ttu-id="bbbef-213">Если ожидается, что указанная строка может отсутствовать в диапазоне, используйте вместо этого метод [findOrNullObject](excel-add-ins-advanced-concepts.md#ornullobject-methods), чтобы ваш код корректно обработал этот сценарий.</span><span class="sxs-lookup"><span data-stu-id="bbbef-213">If you expect that the specified string may not exist in the range, use the [findOrNullObject](excel-add-ins-advanced-concepts.md#ornullobject-methods) method instead, so your code gracefully handles that scenario.</span></span>
+- <span data-ttu-id="acf0a-209">Диапазоны адресов состоят из целых столбцов:</span><span class="sxs-lookup"><span data-stu-id="acf0a-209">Range addresses comprised of entire columns:</span></span><ul><li>`C:C`</li><li>`A:F`</li></ul>
+- <span data-ttu-id="acf0a-210">Диапазоны адресов состоят из целых строк:</span><span class="sxs-lookup"><span data-stu-id="acf0a-210">Range addresses comprised of entire rows:</span></span><ul><li>`2:2`</li><li>`1:4`</li></ul>
+
+<span data-ttu-id="acf0a-p107">Когда API отправляет запрос на получение неограниченного диапазона (например, `getRange('C:C')`), ответ будет содержать значения `null` для свойств уровня ячейки, например свойств `values`, `text`, `numberFormat` и `formula`. Другие свойства диапазона, например `address` и `cellCount`, будут содержать допустимые значения для неограниченного диапазона.</span><span class="sxs-lookup"><span data-stu-id="acf0a-p107">When the API makes a request to retrieve an unbounded range (for example, `getRange('C:C')`), the response will contain `null` values for cell-level properties such as `values`, `text`, `numberFormat`, and `formula`. Other properties of the range, such as `address` and `cellCount`, will contain valid values for the unbounded range.</span></span>
+
+### <a name="write-to-an-unbounded-range"></a><span data-ttu-id="acf0a-213">Запись в неограниченный диапазон</span><span class="sxs-lookup"><span data-stu-id="acf0a-213">Write to an unbounded range</span></span>
+
+<span data-ttu-id="acf0a-214">Невозможно задать свойства уровня ячейки `values` , например, `numberFormat` и `formula` для неограниченного диапазона, так как входной запрос слишком велик.</span><span class="sxs-lookup"><span data-stu-id="acf0a-214">You cannot set cell-level properties such as `values`, `numberFormat`, and `formula` on an unbounded range because the input request is too large.</span></span> <span data-ttu-id="acf0a-215">Например, приведенный ниже фрагмент кода недопустим, так как он пытается указать свойство `values` для неограниченного диапазона.</span><span class="sxs-lookup"><span data-stu-id="acf0a-215">For example, the following code snippet is not valid because it attempts to specify `values` for an unbounded range.</span></span> <span data-ttu-id="acf0a-216">API возвращает ошибку при попытке установить свойства на уровне ячейки для неограниченного диапазона.</span><span class="sxs-lookup"><span data-stu-id="acf0a-216">The API returns an error if you attempt to set cell-level properties for an unbounded range.</span></span>
+
+```js
+var range = context.workbook.worksheets.getActiveWorksheet().getRange('A:B');
+range.values = 'Due Date';
+```
+
+## <a name="read-or-write-to-a-large-range"></a><span data-ttu-id="acf0a-217">Чтение из большого диапазона и запись в него</span><span class="sxs-lookup"><span data-stu-id="acf0a-217">Read or write to a large range</span></span>
+
+<span data-ttu-id="acf0a-p109">Если диапазон содержит большое количество ячеек, значений, форматов чисел или формул, то, возможно, не удастся выполнить операции API над этим диапазоном. API всегда делает все возможное, чтобы выполнить запрошенную операцию над диапазоном (то есть получить или записать указанные данные), но попытка выполнить операцию чтения или записи для большого диапазона может привести к ошибке API из-за чрезмерного потребления ресурсов. Чтобы избежать таких ошибок, мы рекомендуем выполнять отдельные операции чтения или записи для небольших подмножеств большого диапазона, а не пытаться выполнить одну операцию чтения или записи для большого диапазона.</span><span class="sxs-lookup"><span data-stu-id="acf0a-p109">If a range contains a large number of cells, values, number formats, and/or formulas, it may not be possible to run API operations on that range. The API will always make a best attempt to run the requested operation on a range (i.e., to retrieve or write the specified data), but attempting to perform read or write operations for a large range may result in an API error due to excessive resource utilization. To avoid such errors, we recommend that you run separate read or write operations for smaller subsets of a large range, instead of attempting to run a single read or write operation on a large range.</span></span>
+
+<span data-ttu-id="acf0a-221">Подробнее об ограничениях системы можно узнать в разделе "надстройки Excel" [ограничений ресурсов и оптимизации производительности для надстроек Office](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins).</span><span class="sxs-lookup"><span data-stu-id="acf0a-221">For details on the system limitations, see the "Excel add-ins" section of [Resource limits and performance optimization for Office Add-ins](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins).</span></span>
+
+### <a name="conditional-formatting-of-ranges"></a><span data-ttu-id="acf0a-222">Условное форматирование диапазонов</span><span class="sxs-lookup"><span data-stu-id="acf0a-222">Conditional formatting of ranges</span></span>
+
+<span data-ttu-id="acf0a-223">В диапазонах может применяться форматирование к отдельным ячейкам на основе условий.</span><span class="sxs-lookup"><span data-stu-id="acf0a-223">Ranges can have formats applied to individual cells based on conditions.</span></span> <span data-ttu-id="acf0a-224">Дополнительные сведения об этом см. в статье [Применение условного форматирования к диапазонам Excel](excel-add-ins-conditional-formatting.md).</span><span class="sxs-lookup"><span data-stu-id="acf0a-224">For more information about this, see [Apply conditional formatting to Excel ranges](excel-add-ins-conditional-formatting.md).</span></span>
+
+## <a name="find-a-cell-using-string-matching"></a><span data-ttu-id="acf0a-225">Поиск ячейки с помощью сопоставления строк</span><span class="sxs-lookup"><span data-stu-id="acf0a-225">Find a cell using string matching</span></span>
+
+<span data-ttu-id="acf0a-226">У объекта `Range` есть метод `find` для поиска указанной строки в диапазоне.</span><span class="sxs-lookup"><span data-stu-id="acf0a-226">The `Range` object has a `find` method to search for a specified string within the range.</span></span> <span data-ttu-id="acf0a-227">Он возвращает диапазон первой ячейки с текстом, соответствующим критериям.</span><span class="sxs-lookup"><span data-stu-id="acf0a-227">It returns the range of the first cell with matching text.</span></span> <span data-ttu-id="acf0a-228">Приведенный ниже пример кода находит первую ячейку со значением, соответствующим строке **Food** (Еда), и заносит ее адрес в консоль.</span><span class="sxs-lookup"><span data-stu-id="acf0a-228">The following code sample finds the first cell with a value equal to the string **Food** and logs its address to the console.</span></span> <span data-ttu-id="acf0a-229">Обратите внимание, что метод `find` выдает ошибку `ItemNotFound`, если указанной строки не существует в диапазоне.</span><span class="sxs-lookup"><span data-stu-id="acf0a-229">Note that `find` throws an `ItemNotFound` error if the specified string doesn't exist in the range.</span></span> <span data-ttu-id="acf0a-230">Если ожидается, что указанная строка может отсутствовать в диапазоне, используйте вместо этого метод [findOrNullObject](../develop/application-specific-api-model.md#ornullobject-methods-and-properties), чтобы ваш код корректно обработал этот сценарий.</span><span class="sxs-lookup"><span data-stu-id="acf0a-230">If you expect that the specified string may not exist in the range, use the [findOrNullObject](../develop/application-specific-api-model.md#ornullobject-methods-and-properties) method instead, so your code gracefully handles that scenario.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -566,9 +592,9 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="bbbef-214">Если метод `find` вызывается для диапазона, представляющего одну ячейку, поиск выполняется во всем листе.</span><span class="sxs-lookup"><span data-stu-id="bbbef-214">When the `find` method is called on a range representing a single cell, the entire worksheet is searched.</span></span> <span data-ttu-id="bbbef-215">Поиск начинается в этой ячейке и продолжается в направлении, которое определяется параметром `SearchCriteria.searchDirection`, охватывающим концы листа при необходимости.</span><span class="sxs-lookup"><span data-stu-id="bbbef-215">The search begins at that cell and goes in the direction specified by `SearchCriteria.searchDirection`, wrapping around the ends of the worksheet if needed.</span></span>
+<span data-ttu-id="acf0a-231">Если метод `find` вызывается для диапазона, представляющего одну ячейку, поиск выполняется во всем листе.</span><span class="sxs-lookup"><span data-stu-id="acf0a-231">When the `find` method is called on a range representing a single cell, the entire worksheet is searched.</span></span> <span data-ttu-id="acf0a-232">Поиск начинается в этой ячейке и продолжается в направлении, которое определяется параметром `SearchCriteria.searchDirection`, охватывающим концы листа при необходимости.</span><span class="sxs-lookup"><span data-stu-id="acf0a-232">The search begins at that cell and goes in the direction specified by `SearchCriteria.searchDirection`, wrapping around the ends of the worksheet if needed.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="bbbef-216">См. также</span><span class="sxs-lookup"><span data-stu-id="bbbef-216">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="acf0a-233">См. также</span><span class="sxs-lookup"><span data-stu-id="acf0a-233">See also</span></span>
 
-- [<span data-ttu-id="bbbef-217">Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)</span><span class="sxs-lookup"><span data-stu-id="bbbef-217">Work with ranges using the Excel JavaScript API (advanced)</span></span>](excel-add-ins-ranges-advanced.md)
-- [<span data-ttu-id="bbbef-218">Основные концепции программирования с помощью API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="bbbef-218">Fundamental programming concepts with the Excel JavaScript API</span></span>](excel-add-ins-core-concepts.md)
+- [<span data-ttu-id="acf0a-234">Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)</span><span class="sxs-lookup"><span data-stu-id="acf0a-234">Work with ranges using the Excel JavaScript API (advanced)</span></span>](excel-add-ins-ranges-advanced.md)
+- [<span data-ttu-id="acf0a-235">Основные концепции программирования с помощью API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="acf0a-235">Fundamental programming concepts with the Excel JavaScript API</span></span>](excel-add-ins-core-concepts.md)

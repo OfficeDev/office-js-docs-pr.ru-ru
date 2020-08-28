@@ -1,103 +1,53 @@
 ---
-title: Передача данных и сообщений в диалоговое окно с главной страницы
-description: Узнайте, как передавать данные в диалоговое окно с главной страницы с помощью API Мессажечилд и Диалогпарентмессажерецеивед.
-ms.date: 07/07/2020
+title: Альтернативные способы передачи сообщений в диалоговое окно с главной страницы
+description: Узнайте, как использовать методы обхода, если метод Мессажечилд не поддерживается.
+ms.date: 08/20/2020
 localization_priority: Normal
-ms.openlocfilehash: 05220fa4cecad4fe412a5590605f774f92ef8f61
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: b516896d28979f439f3065f9ff036ff21c2c0997
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45093576"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293179"
 ---
-# <a name="passing-data-and-messages-to-a-dialog-box-from-its-host-page-preview"></a><span data-ttu-id="0dc57-103">Передача данных и сообщений в диалоговое окно с главной страницы (Предварительная версия)</span><span class="sxs-lookup"><span data-stu-id="0dc57-103">Passing data and messages to a dialog box from its host page (preview)</span></span>
+# <a name="alternative-ways-of-passing-messages-to-a-dialog-box-from-its-host-page"></a><span data-ttu-id="ceb37-103">Альтернативные способы передачи сообщений в диалоговое окно с главной страницы</span><span class="sxs-lookup"><span data-stu-id="ceb37-103">Alternative ways of passing messages to a dialog box from its host page</span></span>
 
-<span data-ttu-id="0dc57-104">Надстройка может отправлять сообщения с [главной страницы](dialog-api-in-office-add-ins.md#open-a-dialog-box-from-a-host-page) в диалоговое окно с помощью метода [мессажечилд](/javascript/api/office/office.dialog#messagechild-message-) объекта [DIALOG](/javascript/api/office/office.dialog) .</span><span class="sxs-lookup"><span data-stu-id="0dc57-104">Your add-in can send messages from the [host page](dialog-api-in-office-add-ins.md#open-a-dialog-box-from-a-host-page) to a dialog box using the [messageChild](/javascript/api/office/office.dialog#messagechild-message-) method of the [Dialog](/javascript/api/office/office.dialog) object.</span></span>
+<span data-ttu-id="ceb37-104">Рекомендуемый способ передачи данных и сообщений из родительской страницы в дочернее диалоговое окно осуществляется с помощью `messageChild` метода, как описано в статье [Использование API диалоговых окон Office в](dialog-api-in-office-add-ins.md#pass-information-to-the-dialog-box)надстройках Office. Если ваша надстройка работает на платформе или узле, которая не поддерживает [набор требований DialogApi 1,2](../reference/requirement-sets/dialog-api-requirement-sets.md), существует два других способа передачи сведений в диалоговое окно:</span><span class="sxs-lookup"><span data-stu-id="ceb37-104">The recommended way to pass data and messages from a parent page to a child dialog box is with the `messageChild` method as described in [Use the Office dialog API in your Office Add-ins](dialog-api-in-office-add-ins.md#pass-information-to-the-dialog-box). If your add-in is running on a platform or host that does not support the [DialogApi 1.2 requirement set](../reference/requirement-sets/dialog-api-requirement-sets.md), there are two other ways that you can pass information to the dialog box:</span></span>
 
-> [!Important]
->
-> - <span data-ttu-id="0dc57-105">API, описанные в этой статье, доступны в предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="0dc57-105">The APIs described in this article are in preview.</span></span> <span data-ttu-id="0dc57-106">Они доступны разработчикам для экспериментов; но его не следует использовать в рабочей надстройке.</span><span class="sxs-lookup"><span data-stu-id="0dc57-106">They are available to developers for experimentation; but should not be used in a production add-in.</span></span> <span data-ttu-id="0dc57-107">Пока этот API не будет выпущен, используйте методы, описанные в статье [Передача сведений в диалоговое окно](dialog-api-in-office-add-ins.md#pass-information-to-the-dialog-box) для рабочих надстроек.</span><span class="sxs-lookup"><span data-stu-id="0dc57-107">Until this API is released, use the techniques described in [Pass information to the dialog box](dialog-api-in-office-add-ins.md#pass-information-to-the-dialog-box) for production add-ins.</span></span>
-> - <span data-ttu-id="0dc57-108">Для интерфейсов API, описанных в этой статье, требуется подписка на Microsoft 365.</span><span class="sxs-lookup"><span data-stu-id="0dc57-108">The APIs described in this article require a Microsoft 365 subscription.</span></span> <span data-ttu-id="0dc57-109">Следует использовать последнюю версию для текущего месяца и сборку из канала для участников программы предварительной оценки.</span><span class="sxs-lookup"><span data-stu-id="0dc57-109">You should use the latest monthly version and build from the Insiders channel.</span></span> <span data-ttu-id="0dc57-110">Чтобы получить эту версию, необходимо быть участником программы предварительной оценки Office.</span><span class="sxs-lookup"><span data-stu-id="0dc57-110">You need to be an Office Insider to get this version.</span></span> <span data-ttu-id="0dc57-111">Дополнительные сведения см. на странице [Примите участие в программе предварительной оценки Office](https://insider.office.com).</span><span class="sxs-lookup"><span data-stu-id="0dc57-111">For more information, see [Be an Office Insider](https://insider.office.com).</span></span> <span data-ttu-id="0dc57-112">Обратите внимание на то, что при построении градуатес к производственному каналу поддержка предварительных функций для этой сборки отключена.</span><span class="sxs-lookup"><span data-stu-id="0dc57-112">Please note that when a build graduates to the production semi-annual channel, support for preview features is turned off for that build.</span></span>
-> - <span data-ttu-id="0dc57-113">На начальном этапе предварительной версии API поддерживаются в Excel, PowerPoint и Word; но не в Outlook.</span><span class="sxs-lookup"><span data-stu-id="0dc57-113">In the initial stage of the preview, the APIs are supported in Excel, PowerPoint, and Word; but not in Outlook.</span></span>
->
-> [!INCLUDE [Information about using preview APIs](../includes/using-preview-apis.md)]
+- <span data-ttu-id="ceb37-105">Добавьте параметры запроса в URL-адрес, который передается в метод `displayDialogAsync`.</span><span class="sxs-lookup"><span data-stu-id="ceb37-105">Add query parameters to the URL that is passed to `displayDialogAsync`.</span></span>
+- <span data-ttu-id="ceb37-106">Храните информацию в месте, доступном как для главного, так и для диалогового окна.</span><span class="sxs-lookup"><span data-stu-id="ceb37-106">Store the information somewhere that is accessible to both the host window and dialog box.</span></span> <span data-ttu-id="ceb37-107">Два окна не разделяют общее хранилище сеансов, но *если они имеют один и тот же домен* (включая номер порта, если таковой имеется), они совместно используют общее [Локальное хранилище](https://www.w3schools.com/html/html5_webstorage.asp).\*</span><span class="sxs-lookup"><span data-stu-id="ceb37-107">The two windows do not share a common session storage, but *if they have the same domain* (including port number, if any), they share a common [Local Storage](https://www.w3schools.com/html/html5_webstorage.asp).\*</span></span>
 
-## <a name="use-messagechild-from-the-host-page"></a><span data-ttu-id="0dc57-114">Использование `messageChild()` с главной страницы</span><span class="sxs-lookup"><span data-stu-id="0dc57-114">Use `messageChild()` from the host page</span></span>
 
-<span data-ttu-id="0dc57-115">Когда вы вызываете API диалоговых окон Office для открытия диалогового окна, возвращается объект [DIALOG](/javascript/api/office/office.dialog) .</span><span class="sxs-lookup"><span data-stu-id="0dc57-115">When you call the Office dialog API to open a dialog box, a [Dialog](/javascript/api/office/office.dialog) object is returned.</span></span> <span data-ttu-id="0dc57-116">Она должна быть назначена переменной, которая, как правило, имеет больший объем, чем метод [displayDialogAsync](/javascript/api/office/office.ui#displaydialogasync-startaddress--callback-) , так как на объект будут ссылаться другие методы.</span><span class="sxs-lookup"><span data-stu-id="0dc57-116">It should be assigned to a variable, which typically has greater scope than the [displayDialogAsync](/javascript/api/office/office.ui#displaydialogasync-startaddress--callback-) method because the object will be referenced by other methods.</span></span> <span data-ttu-id="0dc57-117">Ниже приведен пример.</span><span class="sxs-lookup"><span data-stu-id="0dc57-117">The following is an example:</span></span>
+> [!NOTE]
+> <span data-ttu-id="ceb37-108">\* Существует ошибка, влияющая на вашу стратегию обработки маркеров.</span><span class="sxs-lookup"><span data-stu-id="ceb37-108">\* There is a bug that will effect your strategy for token handling.</span></span> <span data-ttu-id="ceb37-109">Если надстройка работает в **Office в Интернете** с использованием браузера Safari или Microsoft Edge, у диалогового окна и области задач нет одного общего локального хранилища, поэтому его нельзя использовать для связи между ними.</span><span class="sxs-lookup"><span data-stu-id="ceb37-109">If the add-in is running in **Office on the web** in either the Safari or Edge browser, the dialog box and task pane do not share the same Local Storage, so it cannot be used to communicate between them.</span></span>
 
-```javascript
-var dialog;
-Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html',
-    function (asyncResult) {
-        dialog = asyncResult.value;
-        dialog.addEventHandler(Office.EventType.DialogMessageReceived, processMessage);
-    }
-);
+## <a name="use-local-storage"></a><span data-ttu-id="ceb37-110">Использование локального хранилища</span><span class="sxs-lookup"><span data-stu-id="ceb37-110">Use local storage</span></span>
 
-function processMessage(arg) {
-    dialog.close();
+<span data-ttu-id="ceb37-111">Чтобы использовать локальное хранилище, вызовите `setItem` метод `window.localStorage` объекта на главной странице перед `displayDialogAsync` вызовом, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="ceb37-111">To use local storage, call the `setItem` method of the `window.localStorage` object in the host page before the `displayDialogAsync` call, as in the following example:</span></span>
 
-  // message processing code goes here;
-
-}
+```js
+localStorage.setItem("clientID", "15963ac5-314f-4d9b-b5a1-ccb2f1aea248");
 ```
 
-<span data-ttu-id="0dc57-118">Этот `Dialog` объект содержит метод [мессажечилд](/javascript/api/office/office.dialog#messagechild-message-) , который отправляет любую строку или данные преобразованного в диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="0dc57-118">This `Dialog` object has a [messageChild](/javascript/api/office/office.dialog#messagechild-message-) method that sends any string, or stringified data, to the dialog box.</span></span> <span data-ttu-id="0dc57-119">Это вызывает `DialogParentMessageReceived` событие в диалоговом окне.</span><span class="sxs-lookup"><span data-stu-id="0dc57-119">This raises a `DialogParentMessageReceived` event in the dialog box.</span></span> <span data-ttu-id="0dc57-120">Код должен обрабатывать это событие, как показано в следующем разделе.</span><span class="sxs-lookup"><span data-stu-id="0dc57-120">Your code should handle this event, as shown in the next section.</span></span>
+<span data-ttu-id="ceb37-112">Код в диалоговом окне считывает элемент, когда он необходим, как в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="ceb37-112">Code in the dialog box reads the item when it's needed, as in the following example:</span></span>
 
-<span data-ttu-id="0dc57-121">Рассмотрим сценарий, в котором пользовательский интерфейс диалогового окна должен сопоставляться с текущим активным листом и положением листа относительно других листов.</span><span class="sxs-lookup"><span data-stu-id="0dc57-121">Consider a scenario in which the UI of the dialog should correlate with the currently active worksheet and that worksheet's position relative to the other worksheets.</span></span> <span data-ttu-id="0dc57-122">В следующем примере в `sheetPropertiesChanged` диалоговое окно отправляются свойства листа Excel.</span><span class="sxs-lookup"><span data-stu-id="0dc57-122">In the following example, `sheetPropertiesChanged` sends Excel worksheet properties to the dialog box.</span></span> <span data-ttu-id="0dc57-123">В этом случае текущий лист называется "Мой лист" и является 2-м листом книги.</span><span class="sxs-lookup"><span data-stu-id="0dc57-123">In this case the current worksheet is named "My Sheet" and it is the 2nd sheet in the workbook.</span></span> <span data-ttu-id="0dc57-124">Данные инкапсулируются в объекте, который является преобразованного, чтобы его можно было передать `messageChild` .</span><span class="sxs-lookup"><span data-stu-id="0dc57-124">The data is encapsulated in an object which is stringified so that it can be passed to `messageChild`.</span></span>
-
-```javascript
-function sheetPropertiesChanged() {
-    var messageToDialog = JSON.stringify({
-                               name: "My Sheet",
-                               position: 2
-                           });
-
-    dialog.messageChild(messageToDialog);
-}
+```js
+var clientID = localStorage.getItem("clientID");
+// You can also use property syntax:
+// var clientID = localStorage.clientID;
 ```
 
-## <a name="handle-dialogparentmessagereceived-in-the-dialog-box"></a><span data-ttu-id="0dc57-125">Обработка Диалогпарентмессажерецеивед в диалоговом окне</span><span class="sxs-lookup"><span data-stu-id="0dc57-125">Handle DialogParentMessageReceived in the dialog box</span></span>
+## <a name="use-query-parameters"></a><span data-ttu-id="ceb37-113">Использование параметров запроса</span><span class="sxs-lookup"><span data-stu-id="ceb37-113">Use query parameters</span></span>
 
-<span data-ttu-id="0dc57-126">В JavaScript диалогового окна Зарегистрируйте обработчик для `DialogParentMessageReceived` события с помощью метода [UI. addHandlerAsync](/javascript/api/office/office.ui#addhandlerasync-eventtype--handler--options--callback-) .</span><span class="sxs-lookup"><span data-stu-id="0dc57-126">In the dialog box's JavaScript, register a handler for the `DialogParentMessageReceived` event with the [UI.addHandlerAsync](/javascript/api/office/office.ui#addhandlerasync-eventtype--handler--options--callback-) method.</span></span> <span data-ttu-id="0dc57-127">Обычно это выполняется в [методах Office. onread или Office.iniтиализе](initialize-add-in.md).</span><span class="sxs-lookup"><span data-stu-id="0dc57-127">This is typically done in the [Office.onReady or Office.initialize methods](initialize-add-in.md).</span></span> <span data-ttu-id="0dc57-128">Ниже приведен пример.</span><span class="sxs-lookup"><span data-stu-id="0dc57-128">The following is an example:</span></span>
+<span data-ttu-id="ceb37-114">В приведенном ниже примере показано, как передавать данные с помощью параметра запроса.</span><span class="sxs-lookup"><span data-stu-id="ceb37-114">The following example shows how to pass data with a query parameter:</span></span>
 
-```javascript
-Office.onReady()
-    .then(function() {
-        Office.context.ui.addHandlerAsync(
-            Office.EventType.DialogParentMessageReceived,
-            onMessageFromParent);
-    });
+```js
+Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?clientID=15963ac5-314f-4d9b-b5a1-ccb2f1aea248');
 ```
 
-<span data-ttu-id="0dc57-129">Затем определите `onMessageFromParent` обработчик.</span><span class="sxs-lookup"><span data-stu-id="0dc57-129">Then, define the `onMessageFromParent` handler.</span></span> <span data-ttu-id="0dc57-130">Приведенный ниже код продолжает пример из предыдущего раздела.</span><span class="sxs-lookup"><span data-stu-id="0dc57-130">The following code continues the example from the preceding section.</span></span> <span data-ttu-id="0dc57-131">Обратите внимание, что Office передает аргумент обработчику и что `message` свойство объекта Argument содержит строку со страницы узла.</span><span class="sxs-lookup"><span data-stu-id="0dc57-131">Note that Office passes an argument to the handler and that the `message` property of argument object contains the string from the host page.</span></span> <span data-ttu-id="0dc57-132">В этом примере сообщение переводится в объект, а jQuery используется для установки верхнего заголовка диалогового окна в соответствующее имя нового листа.</span><span class="sxs-lookup"><span data-stu-id="0dc57-132">In this example, the message is reconverted to an object and jQuery is used to set the top heading of the dialog to match the new worksheet name.</span></span>
+<span data-ttu-id="ceb37-115">Пример, в котором используется эта техника, см. в статье [Вставка диаграмм Excel с помощью Microsoft Graph в надстройке PowerPoint](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart).</span><span class="sxs-lookup"><span data-stu-id="ceb37-115">For a sample that uses this technique, see [Insert Excel charts using Microsoft Graph in a PowerPoint add-in](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart).</span></span>
 
-```javascript
-function onMessageFromParent(event) {
-    var messageFromParent = JSON.parse(event.message);
-    $('h1').text(messageFromParent.name);
-}
-```
+<span data-ttu-id="ceb37-116">Код в вашем диалоговом окне может проанализировать URL-адрес и прочитать значение параметра.</span><span class="sxs-lookup"><span data-stu-id="ceb37-116">Code in your dialog box can parse the URL and read the parameter value.</span></span>
 
-<span data-ttu-id="0dc57-133">Рекомендуется проверить правильность регистрации обработчика.</span><span class="sxs-lookup"><span data-stu-id="0dc57-133">It is a best practice to verify that your handler is properly registered.</span></span> <span data-ttu-id="0dc57-134">Для этого можно передать обратный вызов `addHandlerAsync` методу, который выполняется при завершении попытки регистрации обработчика.</span><span class="sxs-lookup"><span data-stu-id="0dc57-134">You can do this by passing a callback to the `addHandlerAsync` method that runs when the attempt to register the handler completes.</span></span> <span data-ttu-id="0dc57-135">Используйте обработчик для записи или отображения ошибки, если обработчик не был успешно зарегистрирован.</span><span class="sxs-lookup"><span data-stu-id="0dc57-135">Use the handler to log or show an error if the handler was not successfully registered.</span></span> <span data-ttu-id="0dc57-136">Ниже приведен пример.</span><span class="sxs-lookup"><span data-stu-id="0dc57-136">The following is an example.</span></span> <span data-ttu-id="0dc57-137">Обратите внимание, что `reportError` это функция, не определенная здесь, записывает или отображает сообщение об ошибке.</span><span class="sxs-lookup"><span data-stu-id="0dc57-137">Note that `reportError` is a function, not defined here, that logs or displays the error.</span></span>
-
-```javascript
-Office.onReady()
-    .then(function() {
-        Office.context.ui.addHandlerAsync(
-            Office.EventType.DialogParentMessageReceived,
-            onMessageFromParent,
-            onRegisterMessageComplete);
-    });
-
-function onRegisterMessageComplete(asyncResult) {
-    if (asyncResult.status !== Office.AsyncResultStatus.Succeeded) {
-        reportError(asyncResult.error.message);
-    }
-}
-```
-
-## <a name="conditional-messaging"></a><span data-ttu-id="0dc57-138">Условные сообщения</span><span class="sxs-lookup"><span data-stu-id="0dc57-138">Conditional messaging</span></span>
-
-<span data-ttu-id="0dc57-139">Так как вы можете выполнять несколько `messageChild` вызовов со страницы узла, но у вас есть только один обработчик в диалоговом окне для `DialogParentMessageReceived` события, обработчик должен использовать условную логику для различения разных сообщений.</span><span class="sxs-lookup"><span data-stu-id="0dc57-139">Because you can make multiple `messageChild` calls from the host page, but you have only one handler in the dialog box for the `DialogParentMessageReceived` event, the handler must use conditional logic to distinguish different messages.</span></span> <span data-ttu-id="0dc57-140">Это можно сделать точно так же, как при структурировании условной передачи сообщений, когда диалоговое окно отправляет сообщение на страницу узла, как описано в [условной системе обмена сообщениями](dialog-api-in-office-add-ins.md#conditional-messaging).</span><span class="sxs-lookup"><span data-stu-id="0dc57-140">You can do this in a way that is precisely parallel to how you would structure conditional messaging when the dialog box is sending a message to the host page as described in [Conditional messaging](dialog-api-in-office-add-ins.md#conditional-messaging).</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="ceb37-p103">Office автоматически добавляет параметр запроса `_host_info` в URL-адрес, который передается `displayDialogAsync`. (Этот параметр добавляется после пользовательских параметров запроса, если они есть. Он не добавляется в последующие URL-адреса, которые открываются в диалоговом окне.) Корпорация Майкрософт может изменить содержимое этого значения или удалить его полностью, поэтому ваш код не должен его считывать. То же значение добавляется в хранилище сеанса диалогового окна. *Ваш код не должен ни считывать это значение, ни записывать в него данные*.</span><span class="sxs-lookup"><span data-stu-id="ceb37-p103">Office automatically adds a query parameter called `_host_info` to the URL that is passed to `displayDialogAsync`. (It is appended after your custom query parameters, if any. It is not appended to any subsequent URLs that the dialog box navigates to.) Microsoft may change the content of this value, or remove it entirely, in the future, so your code should not read it. The same value is added to the dialog box's session storage. Again, *your code should neither read nor write to this value*.</span></span>
