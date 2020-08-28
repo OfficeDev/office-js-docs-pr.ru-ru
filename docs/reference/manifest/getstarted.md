@@ -1,18 +1,18 @@
 ---
 title: Элемент GetStarted в файле манифеста
-description: Предоставляет сведения для выноски, которая отображается при установке надстройки в ведущих приложениях Word, Excel, PowerPoint и OneNote.
+description: Предоставляет сведения, используемые вызываемым вызываемым выноски при установке надстройки в Word, Excel, PowerPoint и OneNote.
 ms.date: 10/09/2018
 localization_priority: Normal
-ms.openlocfilehash: c1fbdd5d4f4365f9f8190805519fc7a70c8c87ca
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 01b10b8316c87b046cf816d6f86551bf1a349267
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611836"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292295"
 ---
 # <a name="getstarted-element"></a>Элемент GetStarted
 
-Предоставляет сведения для выноски, которая отображается при установке надстройки в ведущих приложениях Word, Excel, PowerPoint и OneNote. Элемент **GetStarted** является дочерним для элемента [DesktopFormFactor](desktopformfactor.md).
+Предоставляет сведения, используемые вызываемым вызываемым выноски при установке надстройки в Word, Excel, PowerPoint и OneNote. Элемент **GetStarted** является дочерним для элемента [DesktopFormFactor](desktopformfactor.md).
 
 ## <a name="child-elements"></a>Дочерние элементы
 
@@ -22,7 +22,7 @@ ms.locfileid: "44611836"
 | [Описание](#description)   | Да      | URL-адрес файла, который содержит функции JavaScript.|
 | [LearnMoreUrl](#learnmoreurl) | Да       | URL-адрес страницы с подробным описанием надстройки.   |
 
-### <a name="title"></a>Название 
+### <a name="title"></a>Title 
 
 Обязательный. Заголовок в верхней части выноски. Атрибут **resid** ссылается на допустимый идентификатор элемента **ShortStrings** в разделе [Resources](resources.md).
 

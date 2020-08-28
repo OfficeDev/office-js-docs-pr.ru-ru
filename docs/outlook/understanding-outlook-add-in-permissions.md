@@ -3,12 +3,12 @@ title: Общие сведения о разрешениях для надстр
 description: Надстройки Outlook указывают требуемый уровень разрешений в своем манифесте, который включает Restricted, ReadItem, ReadWriteItem, or ReadWriteMailbox.
 ms.date: 02/19/2020
 localization_priority: Normal
-ms.openlocfilehash: d566c0f330ff4473fc9c71a7dff26048093707db
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 7b0b481edc77170bb395d86f77688bc976f8e6e4
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611626"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292519"
 ---
 # <a name="understanding-outlook-add-in-permissions"></a>Общие сведения о разрешениях для надстроек Outlook
 
@@ -177,5 +177,5 @@ ms.locfileid: "44611626"
 
 ## <a name="see-also"></a>См. также
 
-- [Конфиденциальность, разрешения и безопасность для надстроек Outlook](../develop/privacy-and-security.md)
+- [Конфиденциальность, разрешения и безопасность для надстроек Outlook](../concepts/privacy-and-security.md)
 - [Сопоставление строк в элементе Outlook как известных сущностей](match-strings-in-an-item-as-well-known-entities.md)

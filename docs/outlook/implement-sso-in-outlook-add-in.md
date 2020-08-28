@@ -1,22 +1,24 @@
 ---
 title: 'Сценарий: реализация единого входа для службы'
 description: Узнайте, как реализовать единый вход в службе с помощью маркера единого входа и маркера удостоверения Exchange, предоставляемых надстройкой Outlook.
-ms.date: 07/30/2020
+ms.date: 08/20/2020
 localization_priority: Normal
-ms.openlocfilehash: 7fef3dd2b583bd1aef4623e66e54d287eeb61db5
-ms.sourcegitcommit: 8fdd7369bfd97a273e222a0404e337ba2b8807b0
+ms.openlocfilehash: 54de99d1857e771453795f5e75ae5ee69bbac6ce
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "46573128"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293907"
 ---
 # <a name="scenario-implement-single-sign-on-to-your-service-in-an-outlook-add-in"></a>Сценарий: реализация единого входа для службы в надстройке Outlook
 
 В этой статье мы рассмотрим рекомендуемый способ совместного применения [маркера доступа для единого входа](authenticate-a-user-with-an-sso-token.md) и [маркера удостоверения Exchange](authenticate-a-user-with-an-identity-token.md) для обеспечения единого входа во внутренней службе. Применяя эти маркеры вместе, вы можете воспользоваться преимуществами маркера доступа для единого входа, если этот токен доступен, при этом обеспечив работу надстройки даже при отсутствии такого маркера (например, когда пользователь переходит на клиент, не поддерживающий подобные маркеры, или почтовый ящик пользователя находится на локальном сервере Exchange Server).
 
+Для примера надстройки, в которой реализованы идеи, описанные в этой статье, можно найти [в статье единый вход в надстройке Outlook](https://github.com/OfficeDev/Outlook-Add-in-SSO).
+
 
 > [!NOTE]
-> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](../reference/requirement-sets/identity-api-requirement-sets.md).
+> API единого входа в настоящее время поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](../reference/requirement-sets/identity-api-requirement-sets.md).
 > Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 
@@ -80,7 +82,8 @@ ms.locfileid: "46573128"
 
 1. Надстройка сообщает пользователю, что ему необходимо пройти авторизацию для использования API, и предлагает перейти по ссылке или нажать кнопку для начала процесса.
 
-1. Надстройка использует [API диалоговых окон](/javascript/api/office/office.ui#displaydialogasync-startaddress--options--callback-) или [библиотеку office-js-helpers](https://github.com/OfficeDev/office-js-helpers), чтобы запустить [поток кода авторизации OAuth2](/azure/active-directory/develop/active-directory-protocols-oauth-code) для API.
+    > [!NOTE]
+    > В примере надстройки на [основе единого входа надстройки Outlook](https://github.com/OfficeDev/Outlook-Add-in-SSO) показано, как использовать [API диалоговых окон](/javascript/api/office/office.ui#displaydialogasync-startaddress--options--callback-) и [библиотеку помощников Office-JS](https://github.com/OfficeDev/office-js-helpers) в качестве параметров для запуска [процесса кода авторизации OAuth2](/azure/active-directory/develop/active-directory-protocols-oauth-code) для API.
 
 1. По завершении потока надстройка отправляет маркер обновления внутреннему веб-API, включив маркер единого входа (если этот токен доступен) или маркер удостоверения Exchange.
 

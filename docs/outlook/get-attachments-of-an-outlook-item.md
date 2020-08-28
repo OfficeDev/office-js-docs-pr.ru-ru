@@ -1,14 +1,14 @@
 ---
 title: Получение вложений в надстройке Outlook
 description: Надстройка может использовать API вложений для отправки информации о вложениях удаленной службе.
-ms.date: 01/13/2020
+ms.date: 08/20/2020
 localization_priority: Normal
-ms.openlocfilehash: bcb8226ab0755351b9e3a365e40623d258887d3f
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 57191820e27bc78431d0a7c97ffd6b8f23e75f4b
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44612082"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293914"
 ---
 # <a name="get-attachments-of-an-outlook-item-from-the-server"></a>Получение вложений элемента Outlook с сервера
 
@@ -412,4 +412,4 @@ private string ProcessXmlResponse(XElement responseEnvelope)
 - [Создание надстроек Outlook для форм чтения](read-scenario.md)
 - [Сведения об управляемом API EWS, EWS и веб-службах в Exchange](/exchange/client-developer/exchange-web-services/explore-the-ews-managed-api-ews-and-web-services-in-exchange)
 - [Начало работы с клиентскими приложениями, использующими управляемый API EWS](/exchange/client-developer/exchange-web-services/get-started-with-ews-managed-api-client-applications)
-- [Надстройка Outlook для примера AttachmentsDemo](https://github.com/OfficeDev/outlook-add-in-attachments-demo)
+- [Единый вход надстройки Outlook](https://github.com/OfficeDev/Outlook-Add-in-SSO)

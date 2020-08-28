@@ -1,14 +1,14 @@
 ---
 title: Проверка подлинности пользователя с помощью маркера единого входа
 description: Узнайте, как реализовать единый вход в службе с помощью маркера единого входа, предоставляемого надстройкой Outlook.
-ms.date: 07/30/2020
+ms.date: 08/20/2020
 localization_priority: Normal
-ms.openlocfilehash: 79768147fc91a137a363a071beff46cec60ee819
-ms.sourcegitcommit: 8fdd7369bfd97a273e222a0404e337ba2b8807b0
+ms.openlocfilehash: e0925979d26f6b3145658d71b1edaf30431e0c7e
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "46573142"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293984"
 ---
 # <a name="authenticate-a-user-with-a-single-sign-on-token-in-an-outlook-add-in"></a>Проверка подлинности пользователя с помощью маркера единого входа в надстройке Outlook
 
@@ -50,6 +50,6 @@ ms.locfileid: "46573142"
 
 ## <a name="see-also"></a>См. также
 
-- Пример надстройки Outlook, использующей маркер единого входа для доступа к API Microsoft Graph: [Пример надстройки AttachmentsDemo](https://github.com/OfficeDev/outlook-add-in-attachments-demo).
+- Для примера надстройки Outlook, использующей маркер единого входа для доступа к API Microsoft Graph, обратитесь к разделу [единый вход надстройки Outlook](https://github.com/OfficeDev/Outlook-Add-in-SSO).
 - [Справочные материалы по API единого входа](../develop/sso-in-office-add-ins.md#sso-api-reference)
 - [Настройка требования IdentityAPI](../reference/requirement-sets/identity-api-requirement-sets.md)

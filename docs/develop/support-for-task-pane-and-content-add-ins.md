@@ -3,24 +3,24 @@ title: Поддержка API JavaScript для Office для контентны
 description: Используйте API JavaScript для Office, чтобы создать область задач в Office 2013.
 ms.date: 02/27/2020
 localization_priority: Normal
-ms.openlocfilehash: 334db88bbec07755678e3ba35e0d4998951ff5ab
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 35a8ff5c36d5a4bc5ce77a2aeb94d58054471086
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609708"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293144"
 ---
 # <a name="office-javascript-api-support-for-content-and-task-pane-add-ins-in-office-2013"></a>Поддержка API JavaScript для Office для контентных надстроек и надстроек области задач в Office 2013
 
 [!include[information about the common API](../includes/alert-common-api-info.md)]
 
-Вы можете использовать [API JavaScript для Office](../reference/javascript-api-for-office.md) для создания надстроек области задач или контентных надстроек для ведущих приложений Office 2013. Объекты и методы, поддерживаемые контентными надстройками и надстройками области задач, можно сгруппировать указанным ниже образом.
+С помощью [API JavaScript для Office](../reference/javascript-api-for-office.md) можно создавать надстройки области задач или контентные надстройки для клиентских приложений Office 2013. Объекты и методы, поддерживаемые контентными надстройками и надстройками области задач, можно сгруппировать указанным ниже образом.
 
 1. **Общие объекты, которые используются совместно с другими надстройками Office.** К этим объектам относятся [Office](/javascript/api/office), [context](/javascript/api/office/office.context)и [asyncResult](/javascript/api/office/office.asyncresult). `Office`Объект является корневым объектом API JavaScript для Office. `Context`Объект представляет среду выполнения надстройки. Оба `Office` и `Context` являются основными объектами для любой надстройки Office. `AsyncResult`Объект представляет результаты асинхронной операции, например данные, возвращенные в `getSelectedDataAsync` метод, который считывает сведения о том, что пользователь выбрал в документе.
 
 2. **Объект Document.** Большей частью API, доступной для контентных надстроек и надстроек области задач, можно воспользоваться с помощью методов, свойств и событий объекта [Document](/javascript/api/office/office.document). Контентная надстройка или надстройка области задач может использовать свойство [Office.context.document](/javascript/api/office/office.context#document) для доступа к объекту **Document** и с его помощью получать доступ к ключевым компонентам API для работы с данными в документах, например к объектам [Bindings](/javascript/api/office/office.bindings) и [CustomXmlParts](/javascript/api/office/office.customxmlparts) и методам [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-), [setSelectedDataAsync](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-)и [getFileAsync](/javascript/api/office/office.document#getfileasync-filetype--options--callback-). `Document`Объект также предоставляет свойство [mode](/javascript/api/office/office.document#mode) для определения того, является ли документ предназначен только для чтения или находится в режиме редактирования, свойство [URL](/javascript/api/office/office.document#url) для получения URL-адреса текущего документа и доступа к объекту [Settings](/javascript/api/office/office.settings) . `Document`Объект также поддерживает добавление обработчиков событий для события [SelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) , чтобы можно было обнаружить, когда пользователь изменяет свой выбор в документе.
 
-   Надстройка области задач или контентная надстройка может получать доступ к `Document` объекту только после загрузки модели DOM и среды выполнения, обычно в обработчике события для события [Office. Initialize](/javascript/api/office) . Сведения о потоке событий при инициализации надстройки и проверке успешности загрузки модели DOM и среды выполнения см. в разделе [Loading the DOM and runtime environment](loading-the-dom-and-runtime-environment.md).
+   Надстройка области задач или контентная надстройка может получить доступ к `Document` объекту только после загрузки модели DOM и среды выполнения, как правило, в обработчике события [Office.iniсобытия тиализе](/javascript/api/office) . Сведения о потоке событий при инициализации надстройки и проверке успешности загрузки модели DOM и среды выполнения см. в разделе [Loading the DOM and runtime environment](loading-the-dom-and-runtime-environment.md).
 
 3. **Объекты для работы с конкретными функциями.** Для работы с конкретными функциями API используйте указанные ниже объекты и методы.
 
@@ -36,12 +36,12 @@ ms.locfileid: "44609708"
 > [!IMPORTANT]
 > Некоторые элементы API поддерживаются не всеми приложениями Office, в которых могут размещаться контентные надстройки и надстройки области задач. Чтобы определить, какие элементы поддерживаются, см. один из указанных ниже ресурсов.
 
-Сводка по поддержке API JavaScript для Office в ведущих приложениях Office приведена [в статье Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md).
+Сводка по поддержке API JavaScript для Office в клиентских приложениях Office приведена [в статье Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md).
 
 
 ## <a name="reading-and-writing-to-an-active-selection"></a>Чтение и запись данных в активное выделение
 
-Вы можете считывать данные из текущего выделения пользователя в документе, электронной таблице или презентации, а также записывать их в это выделение. В зависимости от ведущего приложения можно указать тип структуры данных, которая будет считана или записана, в качестве параметра методов [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) и [setSelectedDataAsync](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) объекта [Document](/javascript/api/office/office.document). Например, вы можете указать любой тип данных (текст, HTML, табличные данные или Office Open XML) для Word, текст и табличные данные для Excel, а также текст для PowerPoint и Project. Вы также можете создать обработчики событий для обнаружения изменений в выделении пользователя. В примере ниже показано, как получить данные из выделенного фрагмента в виде текста с помощью `getSelectedDataAsync` метода.
+Вы можете считывать данные из текущего выделения пользователя в документе, электронной таблице или презентации, а также записывать их в это выделение. В зависимости от приложения Office для надстройки можно указать тип структуры данных для чтения или записи в качестве параметра в методах [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) и [setSelectedDataAsync](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) объекта [Document](/javascript/api/office/office.document) . Например, вы можете указать любой тип данных (текст, HTML, табличные данные или Office Open XML) для Word, текст и табличные данные для Excel, а также текст для PowerPoint и Project. Вы также можете создать обработчики событий для обнаружения изменений в выделении пользователя. В примере ниже показано, как получить данные из выделенного фрагмента в виде текста с помощью `getSelectedDataAsync` метода.
 
 
 ```js

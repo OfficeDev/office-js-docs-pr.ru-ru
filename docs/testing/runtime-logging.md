@@ -3,12 +3,12 @@ title: Отладка надстройки с помощью журнала ср
 description: Узнайте, как использовать журнал среды выполнения для отладки надстройки.
 ms.date: 12/31/2019
 localization_priority: Normal
-ms.openlocfilehash: e97f989ff4791da678fbecbf8bceed3670749e01
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: e7ac3c3895830ae2fc5e26bd578d34a8d6203e7b
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611149"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292330"
 ---
 # <a name="debug-your-add-in-with-runtime-logging"></a>Отладка надстройки с помощью журнала среды выполнения
 
@@ -84,7 +84,7 @@ ms.locfileid: "44611149"
 
     `<bundle id>` указывает, для какого узла требуется включить ведение журнала в среде выполнения. `<file_name>` — это имя текстового файла, в который будет записан журнал.
 
-    Чтобы включить ведение журнала в среде выполнения для соответствующего узла, присвойте параметру `<bundle id>` одно из следующих значений:
+    Задайте `<bundle id>` одно из следующих значений, чтобы включить ведение журнала в среде выполнения для соответствующего приложения:
 
     - `com.microsoft.Word`
     - `com.microsoft.Excel`

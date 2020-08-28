@@ -1,14 +1,14 @@
 ---
 title: Работа с книгами с использованием API JavaScript для Excel
 description: Примеры кода, в которых показано, как выполнять распространенные задачи с книгами или функциями уровня приложения с помощью API JavaScript для Excel.
-ms.date: 05/06/2020
+ms.date: 08/24/2020
 localization_priority: Normal
-ms.openlocfilehash: 16c091c3f01ffba144cf28c4f6e2bf4889872194
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: a7a35e2627863c648f8c3e31ab05b2714ca0aebe
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609206"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47294131"
 ---
 # <a name="work-with-workbooks-using-the-excel-javascript-api"></a>Работа с книгами с использованием API JavaScript для Excel
 
@@ -146,6 +146,8 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
+### <a name="custom-properties"></a>Настраиваемые свойства
+
 Также можно установить настраиваемые свойства. Объект DocumentProperties содержит свойство `custom`, представляющее коллекцию пар "ключ-значение" для свойств, определяемых пользователем. В приведенном ниже примере показано, как создать настраиваемое свойство с именем **Introduction** со значением "Hello", а затем вызвать его.
 
 ```js
@@ -160,11 +162,46 @@ Excel.run(function (context) {
 Excel.run(function (context) {
     var customDocProperties = context.workbook.properties.custom;
     var customProperty = customDocProperties.getItem("Introduction");
-    customProperty.load("key, value");
+    customProperty.load(["key, value"]);
 
     return context.sync().then(function() {
         console.log("Custom key  : " + customProperty.key); // "Introduction"
         console.log("Custom value : " + customProperty.value); // "Hello"
+    });
+}).catch(errorHandlerFunction);
+```
+
+#### <a name="worksheet-level-custom-properties-preview"></a>Настраиваемые свойства на уровне листа (Предварительная версия)
+
+> [!NOTE]
+> Настраиваемые свойства на уровне листа в настоящее время находятся в режиме предварительного просмотра. [!INCLUDE [Information about using preview Excel APIs](../includes/using-excel-preview-apis.md)]
+
+Настраиваемые свойства также можно задать на уровне листа. Они похожи на настраиваемые свойства на уровне документа, за исключением того, что один и тот же ключ может повторяться на разных листах. В приведенном ниже примере показано, как создать настраиваемое свойство с именем **воркшитграуп** со значением "Alpha" на текущем листе, а затем извлечь его.
+
+```js
+Excel.run(function (context) {
+    // Add the custom property.
+    var customWorksheetProperties = context.workbook.worksheets.getActiveWorksheet().customProperties;
+    customWorksheetProperties.add("WorksheetGroup", "Alpha");
+
+    return context.sync();
+}).catch(errorHandlerFunction);
+
+[...]
+
+Excel.run(function (context) {
+    // Load the keys and values of all custom properties in the current worksheet.
+    var worksheet = context.workbook.worksheets.getActiveWorksheet();
+    worksheet.load("name");
+
+    var customWorksheetProperties = worksheet.customProperties;
+    var customWorksheetProperty = customWorksheetProperties.getItem("WorksheetGroup");
+    customWorksheetProperty.load(["key", "value"]);
+
+    return context.sync().then(function() {
+        // Log the WorksheetGroup custom property to the console.
+        console.log(worksheet.name + ": " + customWorksheetProperty.key); // "WorksheetGroup"
+        console.log("  Custom value : " + customWorksheetProperty.value); // "Alpha"
     });
 }).catch(errorHandlerFunction);
 ```
@@ -190,7 +227,7 @@ Excel.run(function (context) {
 
 Книга содержит параметры языка и региональных параметров, которые влияют на отображение определенных данных. Эти параметры могут помочь локализовать данные, когда пользователи надстройки совместно работают с книгами на различных языках и региональных параметрах. Надстройка может использовать синтаксический анализ строк для локализации формата чисел, дат и времени на основе параметров языковых параметров системы, чтобы каждый пользователь видел данные в формате языка и региональных параметров.
 
-`Application.cultureInfo`Определяет параметры языка и региональных параметров системы в виде объекта [CultureInfo](/javascript/api/excel/excel.cultureinfo) . Содержит такие параметры, как числовой десятичный разделитель или формат даты.
+`Application.cultureInfo` Определяет параметры языка и региональных параметров системы в виде объекта [CultureInfo](/javascript/api/excel/excel.cultureinfo) . Содержит такие параметры, как числовой десятичный разделитель или формат даты.
 
 Некоторые параметры культуры можно [изменить с помощью пользовательского интерфейса Excel](https://support.office.com/article/Change-the-character-used-to-separate-thousands-or-decimals-c093b545-71cb-4903-b205-aebb9837bd1e). Параметры системы сохраняются в `CultureInfo` объекте. Все локальные изменения хранятся в виде свойств уровня [приложения](/javascript/api/excel/excel.application), например `Application.decimalSeparator` .
 

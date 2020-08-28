@@ -1,81 +1,21 @@
 ---
 title: Оптимизация производительности API JavaScript для Excel
-description: Оптимизируйте производительность с использованием API JavaScript для Excel
-ms.date: 07/14/2020
+description: Оптимизируйте производительность надстройки Excel с помощью API JavaScript.
+ms.date: 07/29/2020
 localization_priority: Normal
-ms.openlocfilehash: 193cbe8c8cd1a432c6567401ed645990cb93e5e9
-ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
+ms.openlocfilehash: fdaccdca4779aaca64420794e382330994488606
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45159096"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47294103"
 ---
 # <a name="performance-optimization-using-the-excel-javascript-api"></a>Оптимизация производительности с использованием API JavaScript для Excel
 
 Существует несколько способов выполнения стандартных задач с помощью API JavaScript для Excel. Вы обнаружите существенные различия в производительности между разными подходами. В этой статье приведены инструкции и примеры кода, показывающие, как эффективно выполнять стандартные задачи, используя API JavaScript для Excel.
 
-## <a name="minimize-the-number-of-sync-calls"></a>Минимизация количества вызовов sync()
-
-В API JavaScript для Excel `sync()` является единственной асинхронной операцией и в некоторых обстоятельствах может выполняться медленно, особенно в случае с Excel в Интернете. Для оптимизации производительности минимизируйте количество вызовов `sync()`, поставив в очередь максимально возможное количество изменений до ее вызова.
-
-Примеры кода, использующие этот подход, см. в статье [Основные концепции — sync()](excel-add-ins-core-concepts.md#sync).
-
-## <a name="minimize-the-number-of-proxy-objects-created"></a>Минимизация количества созданных прокси-объектов
-
-Избегайте повторного создания одного и того же прокси-объекта. Вместо этого, если вам нужен одинаковый прокси-объект для нескольких операций, создайте его один раз и назначьте его переменной, а затем используйте эту переменную в своем коде.
-
-```js
-// BAD: repeated calls to .getRange() to create the same proxy object
-worksheet.getRange("A1").format.fill.color = "red";
-worksheet.getRange("A1").numberFormat = "0.00%";
-worksheet.getRange("A1").values = [[1]];
-
-// GOOD: create the range proxy object once and assign to a variable
-var range = worksheet.getRange("A1")
-range.format.fill.color = "red";
-range.numberFormat = "0.00%";
-range.values = [[1]];
-
-// ALSO GOOD: use a "set" method to immediately set all the properties without even needing to create a variable!
-worksheet.getRange("A1").set({
-    numberFormat: [["0.00%"]],
-    values: [[1]],
-    format: {
-        fill: {
-            color: "red"
-        }
-    }
-});
-```
-
-## <a name="load-necessary-properties-only"></a>Загрузка только необходимых свойств
-
-В API JavaScript для Excel необходимо явно загрузить свойства прокси-объекта. Несмотря на то, что вы можете загрузить все свойства одновременно, сделав пустой вызов `load()`, этот подход может значительно замедлить производительность. Вместо этого предлагается загружать только необходимые свойства, особенно для объектов с большим количеством свойств.
-
-Например, если требуется только прочитать `address` свойство объекта Range, при вызове метода укажите только это свойство `load()` :
-
-```js
-range.load('address');
-```
-
-Метод можно вызвать `load()` одним из следующих способов:
-
-_Синтаксис:_
-
-```js
-object.load(string: properties);
-// or
-object.load(array: properties);
-// or
-object.load({ loadOption });
-```
-
-_Где:_
-
-* `properties` — это список свойств для загрузки, указанных как строки с разделителями-запятыми или как массив имен. Дополнительные сведения приведены в статье `load()` методы, определенные для объектов в [справочнике по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md).
-* `loadOption` указывает объект, описывающий параметры "выбрать", "развернуть", "сверху" и "пропустить". Дополнительные сведения см. в статье, посвященной [параметрам](/javascript/api/office/officeextension.loadoption) загрузки объектов.
-
-Обратите внимание, что некоторые "Свойства" в объекте могут иметь такое же имя, что и другой объект. Например, `format` — это свойство объекта range, но также имеется и объект `format`. Поэтому если вы, например, вызываете `range.load("format")`, это эквивалентно `range.format.load()`, являющемуся пустым вызовом load(), который может стать причиной проблем с производительностью, как описано ранее. Чтобы избежать этого, код должен загружать только "конечные узлы" в дереве объектов.
+> [!IMPORTANT]
+> Многие проблемы, связанные с производительностью, можно устранить, выполняя Рекомендуемые `load` `sync` вызовы и вызовы. Изучите раздел "улучшения производительности с помощью API для определенных приложений" в разделе [пределы ресурсов и оптимизация производительности для надстроек Office](../concepts/resource-limits-and-performance-optimization.md#performance-improvements-with-the-application-specific-apis) , чтобы получить рекомендации по работе с API, зависящими от приложения.
 
 ## <a name="suspend-excel-processes-temporarily"></a>Временная приостановка процессов Excel
 
@@ -141,14 +81,14 @@ Excel отображает изменения, производимые ваше
 
 ## <a name="importing-data-into-tables"></a>Импорт данных в таблицы
 
-При попытке импортировать огромное количество данных непосредственно в объект [Table](/javascript/api/excel/excel.table) (например, с помощью `TableRowCollection.add()`) можно столкнуться с низкой производительностью. Если вы пытаетесь добавить новую таблицу, сначала необходимо заполнить данные, установив `range.values`, а затем выполнить вызов `worksheet.tables.add()` для создания таблицы по диапазону. Если вы пытаетесь записать данные в существующую таблицу, запишите данные в объект range с помощью `table.getDataBodyRange()`, и таблица расширится автоматически. 
+При попытке импортировать огромное количество данных непосредственно в объект [Table](/javascript/api/excel/excel.table) (например, с помощью `TableRowCollection.add()`) можно столкнуться с низкой производительностью. Если вы пытаетесь добавить новую таблицу, сначала необходимо заполнить данные, установив `range.values`, а затем выполнить вызов `worksheet.tables.add()` для создания таблицы по диапазону. Если вы пытаетесь записать данные в существующую таблицу, запишите данные в объект range с помощью `table.getDataBodyRange()`, и таблица расширится автоматически.
 
 Ниже приведен пример такого способа.
 
 ```js
 Excel.run(async (ctx) => {
     var sheet = ctx.workbook.worksheets.getItem("Sheet1");
-    // Write the data into the range first 
+    // Write the data into the range first.
     var range = sheet.getRange("A1:B3");
     range.values = [["Key", "Value"], ["A", 1], ["B", 2]];
 
@@ -169,40 +109,8 @@ Excel.run(async (ctx) => {
 > [!NOTE]
 > Можно легко преобразовать объект Table в объект Range, используя метод [Table.convertToRange()](/javascript/api/excel/excel.table#converttorange--).
 
-## <a name="untrack-unneeded-ranges"></a>Прекращение отслеживания ненужных диапазонов
-
-Слой JavaScript создает прокси-объекты для вашей надстройки для взаимодействия с книгой Excel и базовыми диапазонами. Эти объекты хранятся в памяти до вызова `context.sync()`. Операции с большими пакетами могут создавать много прокси-объектов, необходимых надстройке лишь один раз, которые можно удалить из памяти до выполнения пакетных действий.
-
-Метод [Range.untrack()](/javascript/api/excel/excel.range#untrack--) удаляет объект Excel Range из памяти. Вызов этого метода после завершения действий надстройки с диапазоном должен приводить к заметному повышению производительности при использовании большого количества объектов Range.
-
-> [!NOTE]
-> `Range.untrack()` — это ярлык для [ClientRequestContext.trackedObjects.remove(thisRange)](/javascript/api/office/officeextension.trackedobjects#remove-object-). Отслеживание любого прокси-объекта можно прекратить, удалив его из списка отслеживаемых объектов в контексте. Обычно объекты Range являются единственными объектами Excel, используемыми в достаточных количествах для применения прекращения отслеживания.
-
-В приведенном ниже примере кода выбранный диапазон заполняется данными по одной ячейке. После добавления значения в ячейку, диапазон отображает, что отслеживание ячейки прекращено. Выполните этот код с выбранным диапазоном от 10 000 до 20 000 ячеек сначала со строкой `cell.untrack()`, а затем без нее. Вы должны заметить, что код выполняется с использованием строки `cell.untrack()` быстрее, чем без нее. Вы также можете заметить уменьшение времени отклика впоследствии, так как этап очистки занимает меньше времени.
-
-```js
-Excel.run(async (context) => {
-    var largeRange = context.workbook.getSelectedRange();
-    largeRange.load(["rowCount", "columnCount"]);
-    await context.sync();
-
-    for (var i = 0; i < largeRange.rowCount; i++) {
-        for (var j = 0; j < largeRange.columnCount; j++) {
-            var cell = largeRange.getCell(i, j);
-            cell.values = [[i *j]];
-
-            // call untrack() to release the range from memory
-            cell.untrack();
-        }
-    }
-
-    await context.sync();
-});
-```
-
 ## <a name="see-also"></a>См. также
 
-- [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
-- [Дополнительные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-advanced-concepts.md)
-- [Ограничения ресурсов и оптимизация производительности надстроек Office](../concepts/resource-limits-and-performance-optimization.md)
-- [Объект Worksheet Functions (API JavaScript для Excel)](/javascript/api/excel/excel.functions)
+* [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
+* [Ограничения ресурсов и оптимизация производительности надстроек Office](../concepts/resource-limits-and-performance-optimization.md)
+* [Объект Worksheet Functions (API JavaScript для Excel)](/javascript/api/excel/excel.functions)

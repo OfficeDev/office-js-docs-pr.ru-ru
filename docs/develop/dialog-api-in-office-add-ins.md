@@ -1,14 +1,14 @@
 ---
 title: Использование Office Dialog API в вашей надстройках Office
-description: Общие сведения о создании диалогового окна в надстройке Office.
-ms.date: 06/10/2020
+description: Изучите основы создания диалогового окна в надстройке Office
+ms.date: 08/20/2020
 localization_priority: Normal
-ms.openlocfilehash: 5cdd457b99636dd244eed1fa88c1b76cab23ee8c
-ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
+ms.openlocfilehash: 9d333c12d629232ece39bc30948318fbcafa3aa0
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45159565"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292793"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
@@ -32,7 +32,7 @@ ms.locfileid: "45159565"
 
 ![Команды надстроек](../images/auth-o-dialog-open.png)
 
-Обратите внимание, что диалоговое окно всегда открывается в центре экрана. Пользователь может перемещать ее и изменять ее размер. Окно является *не модальным*: пользователь может продолжать взаимодействовать как с документом в главном приложении Office, так и со страницей на панели задач, если она есть.
+Обратите внимание, что диалоговое окно всегда открывается в центре экрана. Пользователь может перемещать ее и изменять ее размер. Окно не является *модальным*— пользователь может продолжать взаимодействовать с документом в приложении Office и со страницей в области задач, если таковая имеется.
 
 ## <a name="open-a-dialog-box-from-a-host-page"></a>Откройте диалоговое окно с главной страницы
 
@@ -99,7 +99,8 @@ if (loginSuccess) {
 > [!IMPORTANT]
 > - Функцию `messageParent` можно вызывать только на странице, которая относится к тому же домену (включая протокол и порт), что и главная страница.
 > - `messageParent`Функция является одним из двух *only* API Office JS, которые можно вызывать в диалоговом окне. 
-> - Другой API JS, который может вызываться в диалоговом окне, — это `Office.context.requirements.isSetSupported` . Сведения о нем: [Указание ведущих приложений Office и требований к API](specify-office-hosts-and-api-requirements.md). Однако в диалоговом окне этот API не поддерживается в Outlook 2016 1-Time Purchase (версия MSI).
+> - Другой API JS, который может вызываться в диалоговом окне, — это `Office.context.requirements.isSetSupported` . Сведения о том, как [указать приложения Office и требования к API](specify-office-hosts-and-api-requirements.md). Однако в диалоговом окне этот API не поддерживается в Outlook 2016 1-Time Purchase (версия MSI).
+
 
 В следующем примере `googleProfile` — это строковое представление профиля Google пользователя.
 
@@ -212,47 +213,96 @@ function processMessage(arg) {
 
 ## <a name="pass-information-to-the-dialog-box"></a>Передача данных диалоговому окну
 
-Иногда главной странице нужно передать данные в диалоговое окно. Есть два основных способа обеспечить эту возможность:
-
-- Добавьте параметры запроса в URL-адрес, который передается в метод `displayDialogAsync`.
-- Храните информацию в месте, доступном как для главного, так и для диалогового окна. Два окна не разделяют общее хранилище сеансов, но *если они имеют один и тот же домен* (включая номер порта, если таковой имеется), они совместно используют общее [Локальное хранилище](https://www.w3schools.com/html/html5_webstorage.asp).\*
+Надстройка может отправлять сообщения с [главной страницы](dialog-api-in-office-add-ins.md#open-a-dialog-box-from-a-host-page) в диалоговое окно с помощью [диалогового окна Dialog. мессажечилд](/javascript/api/office/office.dialog#messagechild-message-).
 
 > [!NOTE]
-> \* Существует ошибка, влияющая на вашу стратегию обработки маркеров. Если надстройка работает в **Office в Интернете** с использованием браузера Safari или Microsoft Edge, у диалогового окна и области задач нет одного общего локального хранилища, поэтому его нельзя использовать для связи между ними.
+> API диалоговых окон поддерживаются только в Excel, PowerPoint и Word. Поддержка Outlook находится на стадии разработки.
 
-### <a name="use-local-storage"></a>Использование локального хранилища
+### <a name="use-messagechild-from-the-host-page"></a>Использование `messageChild()` с главной страницы
 
-Чтобы использовать локальное хранилище, код вызывает метод `setItem` объекта `window.localStorage` на главной странице перед вызовом `displayDialogAsync`, как показано в приведенном ниже примере.
+Когда вы вызываете API диалоговых окон Office для открытия диалогового окна, возвращается объект [DIALOG](/javascript/api/office/office.dialog) . Она должна быть назначена переменной с большей областью действия, чем метод [displayDialogAsync](/javascript/api/office/office.ui#displaydialogasync-startaddress--callback-) , так как на объект будут ссылаться другие методы. Ниже приведен пример.
 
-```js
-localStorage.setItem("clientID", "15963ac5-314f-4d9b-b5a1-ccb2f1aea248");
+```javascript
+var dialog;
+Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html',
+    function (asyncResult) {
+        dialog = asyncResult.value;
+        dialog.addEventHandler(Office.EventType.DialogMessageReceived, processMessage);
+    }
+);
+
+function processMessage(arg) {
+    dialog.close();
+
+  // message processing code goes here;
+
+}
 ```
 
-Код в диалоговом окне считывает элемент, когда он необходим, как в следующем примере:
+Этот `Dialog` объект содержит метод [мессажечилд](/javascript/api/office/office.dialog#messagechild-message-) , который отправляет любую строку, в том числе данные преобразованного, в диалоговое окно. Это вызывает `DialogParentMessageReceived` событие в диалоговом окне. Код должен обрабатывать это событие, как показано в следующем разделе.
 
-```js
-var clientID = localStorage.getItem("clientID");
-// You can also use property syntax:
-// var clientID = localStorage.clientID;
+Рассмотрим сценарий, в котором пользовательский интерфейс диалогового окна связан с текущим активным листом и положением листа относительно других листов. В следующем примере в `sheetPropertiesChanged` диалоговое окно отправляются свойства листа Excel. В этом случае текущий лист называется "Мой лист", а второй лист книги. Данные инкапсулируются в объекте и преобразованного, чтобы их можно было передать `messageChild` .
+
+```javascript
+function sheetPropertiesChanged() {
+    var messageToDialog = JSON.stringify({
+                               name: "My Sheet",
+                               position: 2
+                           });
+
+    dialog.messageChild(messageToDialog);
+}
 ```
 
-### <a name="use-query-parameters"></a>Использование параметров запроса
+### <a name="handle-dialogparentmessagereceived-in-the-dialog-box"></a>Обработка Диалогпарентмессажерецеивед в диалоговом окне
 
-В приведенном ниже примере показано, как передавать данные с помощью параметра запроса.
+В JavaScript диалогового окна Зарегистрируйте обработчик для `DialogParentMessageReceived` события с помощью метода [UI. addHandlerAsync](/javascript/api/office/office.ui#addhandlerasync-eventtype--handler--options--callback-) . Это обычно делается в [методах Office. onread или Office.iniтиализе](initialize-add-in.md), как показано в следующем примере. (Ниже приведен пример более надежного примера.)
 
-```js
-Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?clientID=15963ac5-314f-4d9b-b5a1-ccb2f1aea248');
+```javascript
+Office.onReady()
+    .then(function() {
+        Office.context.ui.addHandlerAsync(
+            Office.EventType.DialogParentMessageReceived,
+            onMessageFromParent);
+    });
 ```
 
-Пример, в котором используется эта техника, см. в статье [Вставка диаграмм Excel с помощью Microsoft Graph в надстройке PowerPoint](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart).
+Затем определите `onMessageFromParent` обработчик. Приведенный ниже код продолжает пример из предыдущего раздела. Обратите внимание, что Office передает аргумент обработчику и что `message` свойство объекта Argument содержит строку со страницы узла. В этом примере сообщение переводится в объект, а jQuery используется для установки верхнего заголовка диалогового окна в соответствующее имя нового листа.
 
-Код в вашем диалоговом окне может проанализировать URL-адрес и прочитать значение параметра.
+```javascript
+function onMessageFromParent(event) {
+    var messageFromParent = JSON.parse(event.message);
+    $('h1').text(messageFromParent.name);
+}
+```
+
+Рекомендуется проверить правильность регистрации обработчика. Для этого можно передать обратный вызов `addHandlerAsync` методу. Это выполняется при завершении попытки регистрации обработчика. Используйте обработчик для записи или отображения ошибки, если обработчик не был успешно зарегистрирован. Ниже приведен пример. Обратите внимание, что `reportError` это функция, не определенная здесь, записывает или отображает сообщение об ошибке.
+
+```javascript
+Office.onReady()
+    .then(function() {
+        Office.context.ui.addHandlerAsync(
+            Office.EventType.DialogParentMessageReceived,
+            onMessageFromParent,
+            onRegisterMessageComplete);
+    });
+
+function onRegisterMessageComplete(asyncResult) {
+    if (asyncResult.status !== Office.AsyncResultStatus.Succeeded) {
+        reportError(asyncResult.error.message);
+    }
+}
+```
+
+### <a name="conditional-messaging-from-parent-page-to-dialog-box"></a>Диалоговое окно "Условная передача сообщений из родительской страницы"
+
+Так как вы можете выполнять несколько `messageChild` вызовов со страницы узла, но у вас есть только один обработчик в диалоговом окне для `DialogParentMessageReceived` события, обработчик должен использовать условную логику для различения разных сообщений. Это можно сделать точно так же, как при структурировании условной передачи сообщений, когда диалоговое окно отправляет сообщение на страницу узла, как описано в [условной системе обмена сообщениями](#conditional-messaging).
+
+> [!NOTE]
+> В некоторых случаях `messageChild` API, который является частью [набора требований DialogApi 1,2](../reference/requirement-sets/dialog-api-requirement-sets.md), может не поддерживаться. Некоторые альтернативные способы обмена сообщениями с родительским диалоговым окном описаны в разделе [альтернативные способы передачи сообщений в диалоговое окно со страницы узла](parent-to-dialog.md).
 
 > [!IMPORTANT]
-> Office автоматически добавляет параметр запроса `_host_info` в URL-адрес, который передается `displayDialogAsync`. (Этот параметр добавляется после пользовательских параметров запроса, если они есть. Он не добавляется в последующие URL-адреса, которые открываются в диалоговом окне.) Корпорация Майкрософт может изменить содержимое этого значения или удалить его полностью, поэтому ваш код не должен его считывать. То же значение добавляется в хранилище сеанса диалогового окна. *Ваш код не должен ни считывать это значение, ни записывать в него данные*.
-
-> [!NOTE]
-> Теперь вы `messageChild` можете просмотреть API, который родительская страница может использовать для отправки сообщений в диалоговое окно, так как `messageParent` описанный выше API отправляет сообщения из диалогового окна. Дополнительные сведения см. в статье [Передача данных и сообщений в диалоговое окно с главной страницы](parent-to-dialog.md). Мы рекомендуем испытать ее, но для рабочих надстроек мы рекомендуем использовать методы, описанные в этом разделе.
+> [Набор требований DialogApi 1,2](../reference/requirement-sets/dialog-api-requirement-sets.md) не может быть указан в `<Requirements>` разделе манифеста надстройки. Вам потребуется проверить поддержку DialogApi 1,2 во время выполнения с помощью метода [метод issetsupported](specify-office-hosts-and-api-requirements.md#use-runtime-checks-in-your-javascript-code) . Поддержка требований к манифесту находится на стадии разработки.
 
 ## <a name="closing-the-dialog-box"></a>Закрытие диалогового окна
 

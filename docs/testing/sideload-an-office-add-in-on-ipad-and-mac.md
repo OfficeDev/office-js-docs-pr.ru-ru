@@ -3,12 +3,12 @@ title: Загрузка неопубликованных надстроек Offi
 description: Тестирование надстройки Office на iPad и Mac с помощью неопубликованных приложений
 ms.date: 02/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 092207898547969a361b10d72fad106311563907
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 1a1cb804a72aa182480d06009cf30b41a37276d2
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611142"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292204"
 ---
 # <a name="sideload-office-add-ins-on-ipad-and-mac-for-testing"></a>Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 
@@ -84,7 +84,7 @@ ms.locfileid: "44611142"
 
 ## <a name="remove-a-sideloaded-add-in"></a>Удаление надстройки неопубликованные
 
-Вы можете удалить ранее созданную надстройку неопубликованные, очистив кэш Office на вашем компьютере. Сведения о том, как очистить кэш для каждой платформы и узла можно найти в статье [очистить кэш Office](clear-cache.md).
+Вы можете удалить ранее созданную надстройку неопубликованные, очистив кэш Office на вашем компьютере. Сведения о том, как очистить кэш для каждой платформы и приложений можно найти в статье [Очистка кэша Office](clear-cache.md).
 
 ## <a name="see-also"></a>См. также
 

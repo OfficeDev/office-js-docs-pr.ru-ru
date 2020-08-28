@@ -3,12 +3,12 @@ title: Обход правила ограничения домена в надс
 description: Сведения о том, как разменять политики единого происхождения с помощью JSONP, CORS, IFRAMEs и других методов.
 ms.date: 10/17/2019
 localization_priority: Normal
-ms.openlocfilehash: fa478b223f30efe5283cf9eaec10ba3be40e493f
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: e50292c30d77856c896f892c930038c1e19d7af7
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42719198"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293340"
 ---
 # <a name="addressing-same-origin-policy-limitations-in-office-add-ins"></a>Обход правила ограничения домена в надстройках Office
 

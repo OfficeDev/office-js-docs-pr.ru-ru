@@ -3,12 +3,12 @@ title: Обновление схемы манифеста надстройки A
 description: Обновление до версии 1.1 файлов JavaScript (Office.js и JS-файлов приложения) и файла проверки манифеста надстройки в проекте надстройки Office.
 ms.date: 10/11/2019
 localization_priority: Normal
-ms.openlocfilehash: 34127b3920af1309d4e4c2e1c265c676640a1c24
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: b0536b4b55accd99e002e26c467572330ba72ae2
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45093555"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293130"
 ---
 # <a name="update-to-the-latest-office-javascript-api-library-and-version-11-add-in-manifest-schema"></a>Обновление схемы манифеста надстройки API JavaScript для Office и версии 1,1 до последней версии
 
@@ -122,7 +122,7 @@ ms.locfileid: "45093555"
 
 ## <a name="see-also"></a>См. также
 
-- [Указание ведущих приложений Office и требований к API](specify-office-hosts-and-api-requirements.md) ]
+- [Указание приложений Office и требований к API](specify-office-hosts-and-api-requirements.md) ]
 - [Общие сведения об API JavaScript для Office](understanding-the-javascript-api-for-office.md)
 - [API JavaScript для Office](../reference/javascript-api-for-office.md)
 - [Справка по схеме для манифестов надстроек Office (версия 1.1)](../develop/add-in-manifests.md)

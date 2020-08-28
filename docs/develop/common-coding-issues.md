@@ -1,14 +1,14 @@
 ---
 title: Рекомендации по написанию кода для распространенных проблем и непредвиденных поведений платформы
 description: Список проблем платформы API JavaScript для Office, часто встречающихся разработчиками.
-ms.date: 07/23/2020
+ms.date: 07/29/2020
 localization_priority: Normal
-ms.openlocfilehash: 8f604acaee308c3bd04e181719b091eb948d63ee
-ms.sourcegitcommit: 7d5407d3900d2ad1feae79a4bc038afe50568be0
+ms.openlocfilehash: f6d6a31059b32550e3176ed278d7da4c2c7a6c68
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "46530459"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292913"
 ---
 # <a name="coding-guidance-for-common-issues-and-unexpected-platform-behaviors"></a>Рекомендации по написанию кода для распространенных проблем и непредвиденных поведений платформы
 
@@ -16,7 +16,7 @@ ms.locfileid: "46530459"
 
 ## <a name="common-apis-and-outlook-apis-are-not-promise-based"></a>Общие API и API Outlook не основаны на обещаниях
 
-[Общие API](/javascript/api/office) (которые не привязаны к определенному ведущему приложению Office) и [API Outlook](/javascript/api/outlook) используют модель программирования на основе обратных вызовов. Для взаимодействия с базовым документом Office требуется асинхронный вызов чтения или записи, указывающий обратный вызов, который должен выполняться при завершении операции. Пример этого шаблона приведен в статье [Document. getFileAsync](/javascript/api/office/office.document#getfileasync-filetype--options--callback-).
+[Общие API](/javascript/api/office) (которые не привязаны к определенному приложению Office) и [API Outlook](/javascript/api/outlook) используют модель программирования на основе обратных вызовов. Для взаимодействия с базовым документом Office требуется асинхронный вызов чтения или записи, который указывает обратный вызов, выполняемый по завершении операции. Пример этого шаблона приведен в статье [Document. getFileAsync](/javascript/api/office/office.document#getfileasync-filetype--options--callback-).
 
 Эти общие API и методы API Outlook не возвращают [обещаний](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise). Таким образом, вы не можете использовать параметр [await](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await) , чтобы приостановить выполнение до завершения асинхронной операции. Если требуется `await` поведение, можно создать оболочку вызова метода в явно созданном обещании.
 
@@ -50,7 +50,7 @@ readDocumentFileAsync(): Promise<any> {
 ## <a name="some-properties-cannot-be-set-directly"></a>Некоторые свойства невозможно задать напрямую
 
 > [!NOTE]
-> Этот раздел относится только к API, предназначенным для ведущего приложения, для Excel и Word.
+> Этот раздел относится только к API, зависящим от приложения, для Excel и Word.
 
 Некоторые свойства не могут быть заданы, несмотря на то, что они доступны для записи. Эти свойства являются частью родительского свойства, которое должно быть задано как один объект. Это связано с тем, что родительское свойство использует вложенные свойства с определенными логическими связями. Эти родительские свойства должны быть заданы с помощью нотации литерала объекта, чтобы задать весь объект, а не задавать отдельные вложенные свойства этого объекта. Один из примеров этого примера находится в файле [PageLayout](/javascript/api/excel/excel.pagelayout). `zoom`Свойство должно быть задано с помощью одного объекта [пажелайаутзумоптионс](/javascript/api/excel/excel.pagelayoutzoomoptions) , как показано ниже:
 
@@ -61,7 +61,7 @@ sheet.pageLayout.zoom = { scale: 200 };
 
 В предыдущем примере вы ***не*** сможете напрямую присвоить `zoom` значение: `sheet.pageLayout.zoom.scale = 200;` . Этот оператор выдает ошибку, так как `zoom` не загружен. Даже если `zoom` были загружены, набор масштабов не вступит в силу. Все операции контекста выполняются `zoom` , обновляя прокси-объект в надстройке и перезаписывая локально заданные значения.
 
-Это поведение отличается от [свойств навигации](../excel/excel-add-ins-advanced-concepts.md#scalar-and-navigation-properties) , таких как [Range. Format](/javascript/api/excel/excel.range#format). Свойства `format` можно задать с помощью навигации по объектам, как показано ниже:
+Это поведение отличается от [свойств навигации](application-specific-api-model.md#scalar-and-navigation-properties) , таких как [Range. Format](/javascript/api/excel/excel.range#format). Свойства `format` можно задать с помощью навигации по объектам, как показано ниже:
 
 ```js
 // This will set the font size on the range during the next `content.sync()`.
@@ -104,17 +104,6 @@ Excel.run(async (context) => {
 
 ## <a name="excel-specific-issues"></a>Проблемы, связанные с Excel
 
-### <a name="excel-data-transfer-limits"></a>Пределы переноса данных Excel
-
-При создании надстройки Excel учитывайте следующие ограничения размера при взаимодействии с книгой:
-
-- В Excel в Интернете действует ограничение в 5 МБ на размер полезных данных запросов и откликов. При превышении этого ограничения возникает ошибка `RichAPI.Error`.
-- Диапазон ограничен 5 000 000 ячейками для операций Get.
-
-Если ожидается, что вводимые пользователем данные превышают эти ограничения, обязательно проверьте данные перед вызовом `context.sync()` . При необходимости разделите операцию на небольшие части. Не забудьте позвонить `context.sync()` по каждой подоперации, чтобы избежать повторного пакетной операции.
-
-Эти ограничения обычно превышаются с помощью больших диапазонов. Надстройка может использовать [RangeAreas](/javascript/api/excel/excel.rangeareas) для стратегических обновлений ячеек в пределах большого диапазона. Для получения дополнительных сведений просмотрите [работу с несколькими диапазонами в](../excel/excel-add-ins-multiple-ranges.md) надстройках Excel.
-
 ### <a name="api-limitations-when-the-active-workbook-switches"></a>Ограничения API при использовании активных переключателей книги
 
 Надстройки для Excel предназначены для работы с одной книгой за раз. Ошибки могут возникать, если книга, отделяющая от того, где работает надстройка, получает фокус. Это происходит только в том случае, если определенные методы находятся в процессе вызова при изменении фокуса.
@@ -149,6 +138,7 @@ Excel.run(async (context) => {
 
 ## <a name="see-also"></a>См. также
 
+- [Ограничения ресурсов и оптимизация производительности надстроек Office](../concepts/resource-limits-and-performance-optimization.md)
 - [OfficeDev/Office-JS](https://github.com/OfficeDev/office-js/issues): место для создания отчетов и просмотра проблем с платформой надстроек Office и API JavaScript.
 - [Переполнение стека](https://stackoverflow.com/questions/tagged/office-js): место для Ask и просмотра вопросов по программированию, посвященных API JavaScript для Office. При публикации в стеке обязательно примените к вопросу тег "Office — JS".
 - [UserVoice](https://officespdev.uservoice.com/): в этом месте вы можете предложить новые функции для платформы надстроек Office и API JavaScript для Office.

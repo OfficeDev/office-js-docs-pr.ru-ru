@@ -3,18 +3,18 @@ title: Вставка данных в текст в надстройке Outlook
 description: Узнайте, как вставить данные в текст сообщения или встречи в надстройке Outlook.
 ms.date: 04/15/2019
 localization_priority: Normal
-ms.openlocfilehash: e8100e036d29c13f12aedddd4436cf35569309cf
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 0e875619520ee309dec97b2db60ed49c29b2a463
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609099"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293872"
 ---
 # <a name="insert-data-in-the-body-when-composing-an-appointment-or-message-in-outlook"></a>Вставка данных в текст при создании встречи или сообщения в Outlook
 
 Вы можете использовать асинхронные методы ([Body.getAsync](/javascript/api/outlook/office.Body#getasync-coerciontype--options--callback-), [Body.getTypeAsync](/javascript/api/outlook/office.Body#gettypeasync-options--callback-), [Body.prependAsync](/javascript/api/outlook/office.Body#prependasync-data--options--callback-), [Body.setAsync](/javascript/api/outlook/office.Body#setasync-data--options--callback-) и [Body.setSelectedDataAsync](/javascript/api/outlook/office.Body#setselecteddataasync-data--options--callback-)), чтобы получить тип основного текста и вставить данные в основной текст элемента встречи или сообщения, создаваемых пользователем. Эти асинхронные методы доступны только для надстроек создания. Чтобы использовать эти методы, необходимо настроить манифест для активации надстройки в Outlook, как описано в статье [Создание надстроек Outlook для форм создания](compose-scenario.md).
 
-В Outlook пользователь может создавать сообщения (текстовые, а также в формате HTML и RTF) и встречи (в формате HTML). Перед вставкой всегда необходимо сначала проверить поддерживаемый формат элемента, вызвав метод **getTypeAsync**, так как может понадобиться выполнить дополнительные действия. Значение, которое возвращает метод **getTypeAsync**, зависит от исходного формата элемента, а также от того, поддерживают ли операционная система устройства и узел редактирование в формате HTML (1). Затем соответствующим образом укажите параметр _coercionType_ метода **prependAsync** или **setSelectedDataAsync** (2) для вставки данных, как показано в таблице ниже. Если вы не укажете аргумент, методы **prependAsync** и **setSelectedDataAsync** поведут себя так, как будто данные вставляются в текстовом формате.
+В Outlook пользователь может создать сообщение в виде текста, HTML или RTF, а также создать встречу в формате HTML. Перед вставкой необходимо всегда сначала проверить поддерживаемый формат элемента, вызвав **getTypeAsync**, так как может потребоваться выполнение дополнительных действий. Значение, возвращаемое **getTypeAsync** , зависит от исходного формата элемента, а также от поддержки операционной системы устройства и приложения для редактирования в формате HTML (1). Затем установите параметр  _coercionType_ в **prependAsync** или **setSelectedDataAsync** соответствующим образом (2), чтобы вставить данные, как показано в следующей таблице. Если аргумент не указан, **prependAsync** и **setSelectedDataAsync** предполагают, что вставляемые данные находятся в текстовом формате.
 
 <br/>
 
@@ -25,11 +25,11 @@ ms.locfileid: "44609099"
 |Текст|HTML|Текст или HTML|
 |HTML|HTML |HTML|
 
-1.  На планшетах и смартфонах метод **getTypeAsync** возвращает **Office.MailboxEnums.BodyType.Text** в формате HTML, если операционная система или узел не поддерживает редактирование элемента, изначально созданного в этом формате.
+1.  На планшетах и смартфонах **getTypeAsync** возвращает **Office. MailboxEnums. BodyType. Text** , если операционная система или приложение не поддерживает редактирование элемента, ИЗНАЧАЛЬНО созданного в HTML, в формате HTML.
 
-2.  Если вставляются данные HTML, а метод **getTypeAsync** возвращает текстовый тип, преобразуйте данные в текст и вставьте их, используя **Office.MailboxEnums.BodyType.Text** в качестве _coercionType_. Если просто вставить данные HTML с помощью типа приведения text, узел отобразит HTML-теги в виде текста. Если вы попытаетесь вставить данные HTML, используя **Office.MailboxEnums.BodyType.Html** в качестве _coercionType_, возвратится ошибка.
+2.  Если вставляемые данные — HTML, а **getTypeAsync** Возвращает тип текста для этого элемента, реорганизуйте данные в виде текста и вставьте его в **Office. MailboxEnums. BodyType. Text** как _coercionType_. Если вы просто вставляете данные HTML с типом приведения текста, в приложении будут отображаться HTML-теги в виде текста. При попытке вставить данные HTML с **Office.MailboxEnums.BodyType.Html** в виде _coercionType_возникает ошибка.
 
-В дополнение к _coercionType_, как и для большинства асинхронных методов в API JavaScript для Office, **getTypeAsync**, **prependAsync** и **setSelectedDataAsync** принимают другие необязательные входные параметры. Дополнительные сведения об указании дополнительных входных параметров приведены в статье [Передача необязательных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-inline) в [асинхронном программировании в](../develop/asynchronous-programming-in-office-add-ins.md)надстройках Office.
+В дополнение к  _coercionType_, как и для большинства асинхронных методов в API JavaScript для Office, **getTypeAsync**, **prependAsync** и **setSelectedDataAsync** принимают другие необязательные входные параметры. Дополнительные сведения об указании дополнительных входных параметров приведены в статье [Передача необязательных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-inline) в [асинхронном программировании в](../develop/asynchronous-programming-in-office-add-ins.md)надстройках Office.
 
 
 ## <a name="insert-data-at-the-current-cursor-position"></a>Вставка данных в текущей позиции курсора

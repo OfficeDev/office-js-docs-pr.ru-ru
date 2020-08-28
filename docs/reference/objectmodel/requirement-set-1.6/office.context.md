@@ -3,12 +3,12 @@ title: Office. Context — набор обязательных элементо�
 description: Элементы объекта Office. Context, доступные для надстроек Outlook с помощью набора требований API почтовых ящиков 1,6.
 ms.date: 03/18/2020
 localization_priority: Normal
-ms.openlocfilehash: a60b77ca67b6994455e2dff40fb0b340ee29f1ca
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 449ea52b623e3ec491a426096becae7a1b8a334a
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611465"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293711"
 ---
 # <a name="context-mailbox-requirement-set-16"></a>контекст (набор требований для почтового ящика 1,6)
 
@@ -25,17 +25,17 @@ Office. context предоставляет общие интерфейсы, ко
 
 ##### <a name="properties"></a>Свойства
 
-| Свойство | Способов | Тип возвращаемых данных | Минимальные<br>набор требований |
+| Свойство | Способов | Тип возвращаемых данных | Minimum<br>набор требований |
 |---|---|---|:---:|
-| [contentLanguage](#contentlanguage-string) | Создание<br>Read | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [диагностики](#diagnostics-contextinformation) | Создание<br>Read | [контекстинформатион](/javascript/api/office/office.contextinformation?view=outlook-js-1.6) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [displayLanguage](#displaylanguage-string) | Создание<br>Read | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [размещать](#host-hosttype) | Создание<br>Read | [HostType](/javascript/api/office/office.hosttype?view=outlook-js-1.6) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [mailbox](office.context.mailbox.md) | Создание<br>Read | [Mailbox](/javascript/api/outlook/office.mailbox?view=outlook-js-1.6) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [управляем](#platform-platformtype) | Создание<br>Read | [PlatformType](/javascript/api/office/office.platformtype?view=outlook-js-1.6) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [потребность](#requirements-requirementsetsupport) | Создание<br>Read | [рекуирементсетсуппорт](/javascript/api/office/office.requirementsetsupport?view=outlook-js-1.6) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [roamingSettings](#roamingsettings-roamingsettings) | Создание<br>Read | [RoamingSettings](/javascript/api/outlook/office.roamingsettings?view=outlook-js-1.6) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [ui](#ui-ui) | Создание<br>Read | [UI](/javascript/api/office/office.ui?view=outlook-js-1.6) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [contentLanguage](#contentlanguage-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [диагностики](#diagnostics-contextinformation) | Создание<br>Чтение | [контекстинформатион](/javascript/api/office/office.contextinformation?view=outlook-js-1.6) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [displayLanguage](#displaylanguage-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [размещать](#host-hosttype) | Создание<br>Чтение | [HostType](/javascript/api/office/office.hosttype?view=outlook-js-1.6) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [mailbox](office.context.mailbox.md) | Создание<br>Чтение | [Mailbox](/javascript/api/outlook/office.mailbox?view=outlook-js-1.6) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [платформа](#platform-platformtype) | Создание<br>Чтение | [PlatformType](/javascript/api/office/office.platformtype?view=outlook-js-1.6) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [потребность](#requirements-requirementsetsupport) | Создание<br>Чтение | [рекуирементсетсуппорт](/javascript/api/office/office.requirementsetsupport?view=outlook-js-1.6) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [roamingSettings](#roamingsettings-roamingsettings) | Создание<br>Чтение | [RoamingSettings](/javascript/api/outlook/office.roamingsettings?view=outlook-js-1.6) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [ui](#ui-ui) | Создание<br>Чтение | [UI](/javascript/api/office/office.ui?view=outlook-js-1.6) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
 ## <a name="property-details"></a>Сведения о свойстве
 
@@ -43,7 +43,7 @@ Office. context предоставляет общие интерфейсы, ко
 
 Получает языковой стандарт (язык), указанный пользователем для редактирования элемента.
 
-`contentLanguage`Значение соответствует текущему **языковому** параметру редактирования, указанному с **параметрами > файлов > языке** в ведущем приложении Office.
+`contentLanguage`Значение соответствует текущему **языковому** параметру редактирования, указанному в разделе **Параметры > файлов > языке** в клиентском приложении Office.
 
 ##### <a name="type"></a>Тип
 
@@ -110,9 +110,9 @@ console.log(JSON.stringify(Office.context.diagnostics));
 
 #### <a name="displaylanguage-string"></a>displayLanguage: строка
 
-Получает определенный пользователем языковой стандарт (язык) в формате обозначений языка RFC 1766 для пользовательского интерфейса ведущего приложения Office.
+Получает языковой стандарт (язык) в формате языковых тегов RFC 1766, указанный пользователем для пользовательского интерфейса клиентского приложения Office.
 
-The `displayLanguage` value reflects the current **Display Language** setting specified with **File > Options > Language** in the Office host application.
+`displayLanguage`Значение соответствует текущему параметру **языка отображения** , указанному с **параметрами > файлов > языке** в клиентском приложении Office.
 
 ##### <a name="type"></a>Тип
 
@@ -153,7 +153,7 @@ function write(message){
 
 #### <a name="host-hosttype"></a>узел: [HostType](/javascript/api/office/office.hosttype)
 
-Получает узел приложений Office, в котором работает надстройка.
+Получает приложение Office, в котором размещается надстройка.
 
 ##### <a name="type"></a>Тип
 
@@ -205,7 +205,7 @@ console.log(JSON.stringify(Office.context.platform));
 
 #### <a name="requirements-requirementsetsupport"></a>требования: [рекуирементсетсуппорт](/javascript/api/office/office.requirementsetsupport)
 
-Предоставляет метод для определения наборов требований, поддерживаемых на текущем узле и платформе.
+Предоставляет метод для определения наборов требований, поддерживаемых в текущем приложении и платформе.
 
 ##### <a name="type"></a>Тип
 
@@ -233,7 +233,7 @@ console.log(JSON.stringify(Office.context.requirements.isSetSupported("mailbox",
 
 Получает объект, представляющий настраиваемые параметры или состояние надстройки почты, сохраненное в почтовом ящике пользователя.
 
-Объект `RoamingSettings` позволяет сохранять данные для надстройки почты, записанные в почтовом ящике пользователя, и получать к ним доступ, таким образом делая их доступными для этой надстройки, когда она запускается из любого клиентского ведущего приложения, используемого для доступа к этому почтовому ящику.
+`RoamingSettings`Объект позволяет хранить и получать доступ к данным для почтовой надстройки, хранящейся в почтовом ящике пользователя, поэтому эта надстройка будет доступна для всех клиентов Outlook, используемых для доступа к этому почтовому ящику.
 
 ##### <a name="type"></a>Тип
 

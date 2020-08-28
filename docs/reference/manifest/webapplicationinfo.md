@@ -1,20 +1,20 @@
 ---
 title: Элемент WebApplicationInfo в файле манифеста
-description: Справочная документация по элементу VersionOverrides для файлов манифеста надстроек Office (XML).
+description: Справочная документация по элементу WebApplicationInfo для файлов манифеста надстроек Office (XML).
 ms.date: 07/30/2020
 localization_priority: Normal
-ms.openlocfilehash: b64739f388720abb872fe2407f7e7d3031b5ec70
-ms.sourcegitcommit: 8fdd7369bfd97a273e222a0404e337ba2b8807b0
+ms.openlocfilehash: 8644529d82204cb9fbc07c6fe9f8a35b60a512c8
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "46573121"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293809"
 ---
 # <a name="webapplicationinfo-element"></a>Элемент WebApplicationInfo
 
 Поддерживает единый вход в надстройках Office. Этот элемент содержит сведения для надстройки в качестве следующего:
 
-- *Ресурс* OAuth 2.0, для которого могут потребоваться разрешения ведущему приложению Office.
+- *Ресурс* OAuth 2,0, которому клиентским приложениям Office могут потребоваться разрешения.
 - *Клиент* OAuth 2.0, которому могут потребоваться разрешения для Microsoft Graph.
 
 > [!NOTE]

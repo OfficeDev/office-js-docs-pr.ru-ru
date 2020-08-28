@@ -6,7 +6,7 @@
 
 - В общей сетевой папке или на веб-сервере необходимо иметь следующие файлы:
 
-    - HTML-файл (GetDoc_App.html), содержащий пользовательский интерфейс, а также ссылки на файлы JavaScript (включая office.js и host-specific.js) и CSS-файлы.
+    - HTML-файл (GetDoc_App.html), содержащий пользовательский интерфейс, а также ссылки на файлы JavaScript (в том числе office.js и JS-файлы приложения) и файлы каскадных таблиц стилей (CSS).
 
     - Файл JavaScript (GetDoc_App.js), содержащий алгоритм надстройки.
 
@@ -151,7 +151,7 @@ function updateStatus(message) {
 Когда вы наберете кнопку " **послать** " в пользовательском интерфейсе, надстройка вызывает `sendFile` функцию, которая содержит вызов метода [Document. getFileAsync](/javascript/api/office/office.document#getfileasync-filetype--options--callback-) . `getFileAsync`Метод использует асинхронный шаблон, аналогичный другим методам в API JavaScript для Office. В нем есть один обязательный параметр _fileType_ и два необязательных параметра _options_ и _callback_. 
 
 
-Параметр _filetype_ ожидает один из трех констант в перечислении [filetype](/javascript/api/office/office.filetype) : `Office.FileType.Compressed` ("сжатый"), **Office. filetype. PDF** ("PDF") или **Office. filetype. Text** ("Text"). PowerPoint supports only **Compressed** as an argument; Word supports all three. При передаче **сжатия** для параметра _filetype_ `getFileAsync` метод возвращает документ как файл презентации PowerPoint 2013 (*pptx) или файл документа Word 2013 (* docx), создавая временную копию файла на локальном компьютере.
+Параметр  _filetype_ ожидает один из трех констант в перечислении [filetype](/javascript/api/office/office.filetype) : `Office.FileType.Compressed` ("сжатый"), **Office.FileType.PDF** ("PDF") или **Office. filetype. Text** ("Text"). PowerPoint supports only **Compressed** as an argument; Word supports all three. При передаче **сжатия** для параметра _filetype_ `getFileAsync` метод возвращает документ как файл презентации PowerPoint 2013 (*pptx) или файл документа Word 2013 (* docx), создавая временную копию файла на локальном компьютере.
 
 `getFileAsync`Метод возвращает ссылку на файл в виде объекта [File](/javascript/api/office/office.file) . `File`Объект предоставляет четыре члена: свойство [size](/javascript/api/office/office.file#size) , свойство [sliceCount](/javascript/api/office/office.file#slicecount) , метод [getSliceAsync](/javascript/api/office/office.file#getsliceasync-sliceindex--callback-) и метод [closeAsync](/javascript/api/office/office.file#closeasync-callback-) . `size`Свойство возвращает число байтов в файле. `sliceCount`Возвращает количество объектов [slice](/javascript/api/office/office.slice) (обсуждаемых далее в этой статье) в файле.
 

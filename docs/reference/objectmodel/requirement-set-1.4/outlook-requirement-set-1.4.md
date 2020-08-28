@@ -3,12 +3,12 @@ title: Набор обязательных элементов API для над�
 description: Функции и API, которые были представлены для надстроек Outlook и API JavaScript для Office в составе API почтовых ящиков 1,4.
 ms.date: 10/30/2019
 localization_priority: Normal
-ms.openlocfilehash: 6154acc357dd0e0e663d658c8de2d54b641e080a
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: b4460315412e1a82473a1c33319fb960b73a5a61
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609820"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293760"
 ---
 # <a name="outlook-add-in-api-requirement-set-14"></a>Набор обязательных элементов API для надстройки Outlook 1.4
 
@@ -23,7 +23,7 @@ ms.locfileid: "44609820"
 
 ### <a name="change-log"></a>Журнал изменений
 
-- Добавлен метод [Office.context.ui.displayDialogAsync](/javascript/api/office/office.ui#displaydialogasync-startaddress--options--callback-). Отображает диалоговое окно в ведущем приложении Office.
+- Добавлен элемент [Office. Context. UI. displayDialogAsync](/javascript/api/office/office.ui#displaydialogasync-startaddress--options--callback-): отображает диалоговое окно в приложении Office.
 - Добавлен метод [Office.context.ui.messageParent](/javascript/api/office/office.ui#messageparent-message-). Доставляет сообщение из диалогового окна родительской странице.
 - Добавлен объект [Dialog](/javascript/api/office/office.dialog). Объект, возвращаемый при вызове метода [`displayDialogAsync`](/javascript/api/office/office.ui#displaydialogasync-startaddress--options--callback-).
 

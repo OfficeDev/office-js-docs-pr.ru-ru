@@ -1,103 +1,53 @@
 ---
-title: Передача данных и сообщений в диалоговое окно с главной страницы
-description: Узнайте, как передавать данные в диалоговое окно с главной страницы с помощью API Мессажечилд и Диалогпарентмессажерецеивед.
-ms.date: 07/07/2020
+title: Альтернативные способы передачи сообщений в диалоговое окно с главной страницы
+description: Узнайте, как использовать методы обхода, если метод Мессажечилд не поддерживается.
+ms.date: 08/20/2020
 localization_priority: Normal
-ms.openlocfilehash: 05220fa4cecad4fe412a5590605f774f92ef8f61
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: b516896d28979f439f3065f9ff036ff21c2c0997
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45093576"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293179"
 ---
-# <a name="passing-data-and-messages-to-a-dialog-box-from-its-host-page-preview"></a>Передача данных и сообщений в диалоговое окно с главной страницы (Предварительная версия)
+# <a name="alternative-ways-of-passing-messages-to-a-dialog-box-from-its-host-page"></a>Альтернативные способы передачи сообщений в диалоговое окно с главной страницы
 
-Надстройка может отправлять сообщения с [главной страницы](dialog-api-in-office-add-ins.md#open-a-dialog-box-from-a-host-page) в диалоговое окно с помощью метода [мессажечилд](/javascript/api/office/office.dialog#messagechild-message-) объекта [DIALOG](/javascript/api/office/office.dialog) .
+Рекомендуемый способ передачи данных и сообщений из родительской страницы в дочернее диалоговое окно осуществляется с помощью `messageChild` метода, как описано в статье [Использование API диалоговых окон Office в](dialog-api-in-office-add-ins.md#pass-information-to-the-dialog-box)надстройках Office. Если ваша надстройка работает на платформе или узле, которая не поддерживает [набор требований DialogApi 1,2](../reference/requirement-sets/dialog-api-requirement-sets.md), существует два других способа передачи сведений в диалоговое окно:
 
-> [!Important]
->
-> - API, описанные в этой статье, доступны в предварительной версии. Они доступны разработчикам для экспериментов; но его не следует использовать в рабочей надстройке. Пока этот API не будет выпущен, используйте методы, описанные в статье [Передача сведений в диалоговое окно](dialog-api-in-office-add-ins.md#pass-information-to-the-dialog-box) для рабочих надстроек.
-> - Для интерфейсов API, описанных в этой статье, требуется подписка на Microsoft 365. Следует использовать последнюю версию для текущего месяца и сборку из канала для участников программы предварительной оценки. Чтобы получить эту версию, необходимо быть участником программы предварительной оценки Office. Дополнительные сведения см. на странице [Примите участие в программе предварительной оценки Office](https://insider.office.com). Обратите внимание на то, что при построении градуатес к производственному каналу поддержка предварительных функций для этой сборки отключена.
-> - На начальном этапе предварительной версии API поддерживаются в Excel, PowerPoint и Word; но не в Outlook.
->
-> [!INCLUDE [Information about using preview APIs](../includes/using-preview-apis.md)]
+- Добавьте параметры запроса в URL-адрес, который передается в метод `displayDialogAsync`.
+- Храните информацию в месте, доступном как для главного, так и для диалогового окна. Два окна не разделяют общее хранилище сеансов, но *если они имеют один и тот же домен* (включая номер порта, если таковой имеется), они совместно используют общее [Локальное хранилище](https://www.w3schools.com/html/html5_webstorage.asp).\*
 
-## <a name="use-messagechild-from-the-host-page"></a>Использование `messageChild()` с главной страницы
 
-Когда вы вызываете API диалоговых окон Office для открытия диалогового окна, возвращается объект [DIALOG](/javascript/api/office/office.dialog) . Она должна быть назначена переменной, которая, как правило, имеет больший объем, чем метод [displayDialogAsync](/javascript/api/office/office.ui#displaydialogasync-startaddress--callback-) , так как на объект будут ссылаться другие методы. Ниже приведен пример.
+> [!NOTE]
+> \* Существует ошибка, влияющая на вашу стратегию обработки маркеров. Если надстройка работает в **Office в Интернете** с использованием браузера Safari или Microsoft Edge, у диалогового окна и области задач нет одного общего локального хранилища, поэтому его нельзя использовать для связи между ними.
 
-```javascript
-var dialog;
-Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html',
-    function (asyncResult) {
-        dialog = asyncResult.value;
-        dialog.addEventHandler(Office.EventType.DialogMessageReceived, processMessage);
-    }
-);
+## <a name="use-local-storage"></a>Использование локального хранилища
 
-function processMessage(arg) {
-    dialog.close();
+Чтобы использовать локальное хранилище, вызовите `setItem` метод `window.localStorage` объекта на главной странице перед `displayDialogAsync` вызовом, как показано в следующем примере:
 
-  // message processing code goes here;
-
-}
+```js
+localStorage.setItem("clientID", "15963ac5-314f-4d9b-b5a1-ccb2f1aea248");
 ```
 
-Этот `Dialog` объект содержит метод [мессажечилд](/javascript/api/office/office.dialog#messagechild-message-) , который отправляет любую строку или данные преобразованного в диалоговое окно. Это вызывает `DialogParentMessageReceived` событие в диалоговом окне. Код должен обрабатывать это событие, как показано в следующем разделе.
+Код в диалоговом окне считывает элемент, когда он необходим, как в следующем примере:
 
-Рассмотрим сценарий, в котором пользовательский интерфейс диалогового окна должен сопоставляться с текущим активным листом и положением листа относительно других листов. В следующем примере в `sheetPropertiesChanged` диалоговое окно отправляются свойства листа Excel. В этом случае текущий лист называется "Мой лист" и является 2-м листом книги. Данные инкапсулируются в объекте, который является преобразованного, чтобы его можно было передать `messageChild` .
-
-```javascript
-function sheetPropertiesChanged() {
-    var messageToDialog = JSON.stringify({
-                               name: "My Sheet",
-                               position: 2
-                           });
-
-    dialog.messageChild(messageToDialog);
-}
+```js
+var clientID = localStorage.getItem("clientID");
+// You can also use property syntax:
+// var clientID = localStorage.clientID;
 ```
 
-## <a name="handle-dialogparentmessagereceived-in-the-dialog-box"></a>Обработка Диалогпарентмессажерецеивед в диалоговом окне
+## <a name="use-query-parameters"></a>Использование параметров запроса
 
-В JavaScript диалогового окна Зарегистрируйте обработчик для `DialogParentMessageReceived` события с помощью метода [UI. addHandlerAsync](/javascript/api/office/office.ui#addhandlerasync-eventtype--handler--options--callback-) . Обычно это выполняется в [методах Office. onread или Office.iniтиализе](initialize-add-in.md). Ниже приведен пример.
+В приведенном ниже примере показано, как передавать данные с помощью параметра запроса.
 
-```javascript
-Office.onReady()
-    .then(function() {
-        Office.context.ui.addHandlerAsync(
-            Office.EventType.DialogParentMessageReceived,
-            onMessageFromParent);
-    });
+```js
+Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?clientID=15963ac5-314f-4d9b-b5a1-ccb2f1aea248');
 ```
 
-Затем определите `onMessageFromParent` обработчик. Приведенный ниже код продолжает пример из предыдущего раздела. Обратите внимание, что Office передает аргумент обработчику и что `message` свойство объекта Argument содержит строку со страницы узла. В этом примере сообщение переводится в объект, а jQuery используется для установки верхнего заголовка диалогового окна в соответствующее имя нового листа.
+Пример, в котором используется эта техника, см. в статье [Вставка диаграмм Excel с помощью Microsoft Graph в надстройке PowerPoint](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart).
 
-```javascript
-function onMessageFromParent(event) {
-    var messageFromParent = JSON.parse(event.message);
-    $('h1').text(messageFromParent.name);
-}
-```
+Код в вашем диалоговом окне может проанализировать URL-адрес и прочитать значение параметра.
 
-Рекомендуется проверить правильность регистрации обработчика. Для этого можно передать обратный вызов `addHandlerAsync` методу, который выполняется при завершении попытки регистрации обработчика. Используйте обработчик для записи или отображения ошибки, если обработчик не был успешно зарегистрирован. Ниже приведен пример. Обратите внимание, что `reportError` это функция, не определенная здесь, записывает или отображает сообщение об ошибке.
-
-```javascript
-Office.onReady()
-    .then(function() {
-        Office.context.ui.addHandlerAsync(
-            Office.EventType.DialogParentMessageReceived,
-            onMessageFromParent,
-            onRegisterMessageComplete);
-    });
-
-function onRegisterMessageComplete(asyncResult) {
-    if (asyncResult.status !== Office.AsyncResultStatus.Succeeded) {
-        reportError(asyncResult.error.message);
-    }
-}
-```
-
-## <a name="conditional-messaging"></a>Условные сообщения
-
-Так как вы можете выполнять несколько `messageChild` вызовов со страницы узла, но у вас есть только один обработчик в диалоговом окне для `DialogParentMessageReceived` события, обработчик должен использовать условную логику для различения разных сообщений. Это можно сделать точно так же, как при структурировании условной передачи сообщений, когда диалоговое окно отправляет сообщение на страницу узла, как описано в [условной системе обмена сообщениями](dialog-api-in-office-add-ins.md#conditional-messaging).
+> [!IMPORTANT]
+> Office автоматически добавляет параметр запроса `_host_info` в URL-адрес, который передается `displayDialogAsync`. (Этот параметр добавляется после пользовательских параметров запроса, если они есть. Он не добавляется в последующие URL-адреса, которые открываются в диалоговом окне.) Корпорация Майкрософт может изменить содержимое этого значения или удалить его полностью, поэтому ваш код не должен его считывать. То же значение добавляется в хранилище сеанса диалогового окна. *Ваш код не должен ни считывать это значение, ни записывать в него данные*.

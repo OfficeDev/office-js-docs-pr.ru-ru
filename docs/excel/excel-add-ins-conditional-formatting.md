@@ -1,18 +1,18 @@
 ---
 title: Применение условного форматирования к диапазонам с помощью API JavaScript для Excel
 description: В этой статье рассматривается условное форматирование в контексте надстроек JavaScript для Excel.
-ms.date: 04/15/2019
+ms.date: 07/28/2020
 localization_priority: Normal
-ms.openlocfilehash: 8b3b833f2c2e4d8d9b43a6d9cde7d619fc488e3d
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 9f0bed7fb7421984c98ad1bc396c130afda4fb50
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609631"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292665"
 ---
 # <a name="apply-conditional-formatting-to-excel-ranges"></a>Применение условного форматирования к диапазонам Excel
 
-Библиотека JavaScript Excel предоставляет API для применения условного форматирования к диапазонам данных в книгах. Эта функция упрощает визуальный анализ больших наборов данных. Форматирование также динамически обновляется с учетом изменений в диапазоне. 
+Библиотека JavaScript Excel предоставляет API для применения условного форматирования к диапазонам данных в книгах. Эта функция упрощает визуальный анализ больших наборов данных. Форматирование также динамически обновляется с учетом изменений в диапазоне.
 
 > [!NOTE]
 > В этой статье рассматривается условное форматирование в контексте надстроек JavaScript для Excel. В указанных ниже статьях представлены подробные сведения о всех возможностях условного форматирования в Excel.
@@ -21,7 +21,7 @@ ms.locfileid: "44609631"
 
 ## <a name="programmatic-control-of-conditional-formatting"></a>Программное управление условным форматированием
 
-Свойство `Range.conditionalFormats` — это коллекция объектов [ConditionalFormat](/javascript/api/excel/excel.conditionalformat), применяемых к диапазону.  Объект `ConditionalFormat` содержит несколько свойств, определяющих применяемый формат на основе [ConditionalFormatType](/javascript/api/excel/excel.conditionalformattype). 
+Свойство `Range.conditionalFormats` — это коллекция объектов [ConditionalFormat](/javascript/api/excel/excel.conditionalformat), применяемых к диапазону.  Объект `ConditionalFormat` содержит несколько свойств, определяющих применяемый формат на основе [ConditionalFormatType](/javascript/api/excel/excel.conditionalformattype).
 
 -    `cellValue`
 -    `colorScale`
@@ -33,9 +33,9 @@ ms.locfileid: "44609631"
 -    `topBottom`
 
 > [!NOTE]
-> У каждого из этих свойств форматирования есть соответствующий вариант `*OrNullObject`. Дополнительные сведения об этом шаблоне см. в разделе [Методы *OrNullObject](../excel/excel-add-ins-advanced-concepts.md#ornullobject-methods).
+> У каждого из этих свойств форматирования есть соответствующий вариант `*OrNullObject`. Узнайте больше об этом шаблоне в разделе [ \* методы орнуллобжект](../develop/application-specific-api-model.md#ornullobject-methods-and-properties) .
 
-Для объекта ConditionalFormat можно установить только один тип формата. Это определено свойством `type`, которое является значением перечисления объекта [ConditionalFormatType](/javascript/api/excel/excel.conditionalformattype). Параметр `type` устанавливается при добавлении условного форматирования к диапазону. 
+Для объекта ConditionalFormat можно установить только один тип формата. Это определено свойством `type`, которое является значением перечисления объекта [ConditionalFormatType](/javascript/api/excel/excel.conditionalformattype). Параметр `type` устанавливается при добавлении условного форматирования к диапазону.
 
 ## <a name="creating-conditional-formatting-rules"></a>Создание правил условного форматирования
 
@@ -110,7 +110,7 @@ await context.sync();
 При пользовательском условном форматировании применяется пользовательский формат к ячейкам на основе формулы произвольной сложности. Объект [ConditionalFormatRule](/javascript/api/excel/excel.conditionalformatrule) позволяет определять формулу в разных нотациях:
 
 -    `formula` — стандартная нотация.
--    `formulaLocal`— Локализовано на основе языка пользователя.
+-    `formulaLocal` — Локализовано на основе языка пользователя.
 -    `formulaR1C1` — нотация R1C1.
 
 В приведенном ниже примере зеленым цветом окрашен шрифт ячеек с более высокими значениями, чем в ячейках слева.

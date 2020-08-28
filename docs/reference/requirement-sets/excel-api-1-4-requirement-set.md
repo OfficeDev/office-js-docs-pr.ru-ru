@@ -1,15 +1,15 @@
 ---
 title: Набор обязательных элементов API JavaScript для Excel 1,4
 description: Сведения о наборе требований ExcelApi 1,4
-ms.date: 07/26/2019
+ms.date: 07/28/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 1bd6d913bf069e4b8774b8eb65ea147992f98b9b
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 3e2ad776383caf66c12e1402afe49962381dab61
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611430"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47294271"
 ---
 # <a name="whats-new-in-excel-javascript-api-14"></a>Новые возможности API JavaScript для Excel 1.4
 
@@ -20,13 +20,13 @@ ms.locfileid: "44611430"
 Новые свойства:
 
 * `comment`
-* `scope`— Элементы листа или книги.
-* `worksheet`— Возвращает лист, на который распространяется именованный элемент.
+* `scope` — Элементы листа или книги.
+* `worksheet` — Возвращает лист, на который распространяется именованный элемент.
 
 Новые методы:
 
-* `add(name: string, reference: Range or string, comment: string)`— Добавляет новое имя в коллекцию заданной области.
-* `addFormulaLocal(name: string, formula: string, comment: string)`-Добавляет новое имя в коллекцию заданной области, используя языковой стандарт пользователя для формулы.
+* `add(name: string, reference: Range or string, comment: string)` — Добавляет новое имя в коллекцию заданной области.
+* `addFormulaLocal(name: string, formula: string, comment: string)` -Добавляет новое имя в коллекцию заданной области, используя языковой стандарт пользователя для формулы.
 
 ## <a name="settings-api-in-the-excel-namespace"></a>Параметры API в пространстве имен Excel
 
@@ -40,7 +40,7 @@ ms.locfileid: "44611430"
 * Добавление столбца таблицы в конец таблицы.
 * Добавление нескольких строк в таблицу за раз.
 * `range.getColumnsAfter(count: number)` и `range.getColumnsBefore(count: number)`, чтобы вернуть определенное количество столбцов справа/слева от текущего объекта Range.
-* [Функция "получить элемент" или "null Object](../../excel/excel-add-ins-advanced-concepts.md#ornullobject-methods)": Эта функция позволяет получать объект с помощью ключа. Если объект не существует, свойство возвращаемого объекта `isNullObject` будет иметь значение true. Это позволяет разработчикам проверять, существует ли объект, но не обрабатывать его с помощью обработки исключений. `*OrNullObject`Метод доступен для большинства объектов Collection.
+* [ \* Методы и свойства орнуллобжект](../../develop/application-specific-api-model.md#ornullobject-methods-and-properties): Эта функция позволяет получает объект с помощью ключа. Если объект не существует, свойство возвращаемого объекта `isNullObject` будет иметь значение true. Это позволяет разработчикам проверять, существует ли объект, без необходимости его обрабатывать с помощью обработки исключений. `*OrNullObject`Метод доступен для большинства объектов Collection.
 
 ```js
 worksheet.getItemOrNullObject("itemName")
@@ -90,7 +90,7 @@ worksheet.getItemOrNullObject("itemName")
 |[TableRowCollection](/javascript/api/excel/excel.tablerowcollection)|[getCount()](/javascript/api/excel/excel.tablerowcollection#getcount--)|Получает количество строк в таблице.|
 |[Workbook](/javascript/api/excel/excel.workbook)|[settings](/javascript/api/excel/excel.workbook#settings)|Представляет коллекцию параметров, сопоставленных с книгой. Только для чтения.|
 |[Worksheet](/javascript/api/excel/excel.worksheet)|[getUsedRangeOrNullObject (valuesOnly?: Boolean)](/javascript/api/excel/excel.worksheet#getusedrangeornullobject-valuesonly-)|Используемый диапазон — это наименьший диапазон, включающий в себя все ячейки, которые содержат значение или форматирование. Если весь лист пустой, эта функция возвращает пустой объект.|
-||[псевдоним](/javascript/api/excel/excel.worksheet#names)|Коллекция имен, относящих к текущему листу. Только для чтения.|
+||[names](/javascript/api/excel/excel.worksheet#names)|Коллекция имен, относящих к текущему листу. Только для чтения.|
 |[WorksheetCollection](/javascript/api/excel/excel.worksheetcollection)|[NOCOUNT (visibleOnly?: Boolean)](/javascript/api/excel/excel.worksheetcollection#getcount-visibleonly-)|Получает количество листов в коллекции.|
 ||[getItemOrNullObject(key: string)](/javascript/api/excel/excel.worksheetcollection#getitemornullobject-key-)|Получает объект листа по его имени или ИД. Если лист не существует, возвращает пустой объект.|
 

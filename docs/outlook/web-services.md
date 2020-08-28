@@ -3,12 +3,12 @@ title: Использование веб-служб Exchange (EWS) из надс
 description: Содержит пример, в котором показано, как надстройка Outlook может запрашивать сведения из веб-службы Exchange.
 ms.date: 04/28/2020
 localization_priority: Normal
-ms.openlocfilehash: a1141570c14b6905584f9398b629a75b477d3870
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: a8299b3e96db48c296fe0e61b36668a788fb8799
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44604512"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292484"
 ---
 # <a name="call-web-services-from-an-outlook-add-in"></a>Вызов веб-служб из надстройки Outlook
 
@@ -25,7 +25,7 @@ ms.locfileid: "44604512"
 |:-----|:-----|
 |Сервер Exchange, на котором размещен почтовый ящик клиента|Используйте метод [makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods) для вызова операций EWS, поддерживаемых надстройками. Сервер Exchange Server, на котором размещен почтовый ящик, также предоставляет доступ к EWS.|
 |Веб-сервер, предоставляющий исходное расположение для пользовательского интерфейса надстроек.|Вызывайте веб-службу с помощью стандартных методик JavaScript. Код JavaScript в пределах пользовательского интерфейса работает в контексте веб-сервера, предоставляющего пользовательский интерфейс. Поэтому он сможет вызывать веб-службы на этом сервере, не создавая ошибки межсайтового скрипта.|
-|Все другие расположения|Создайте прокси для веб-службы на веб-сервере, предоставляющем исходное расположение для пользовательского интерфейса. Если не указать прокси, надстройка не запустится из-за ошибок межсайтовых сценариев. Один из способов указать такой прокси — это использовать JSON/P. Дополнительные сведения см. в статье [Конфиденциальность и безопасность надстроек для Office](../develop/privacy-and-security.md).|
+|Все другие расположения|Создайте прокси для веб-службы на веб-сервере, предоставляющем исходное расположение для пользовательского интерфейса. Если не указать прокси, надстройка не запустится из-за ошибок межсайтовых сценариев. Один из способов указать такой прокси — это использовать JSON/P. Дополнительные сведения см. в статье [Конфиденциальность и безопасность надстроек для Office](../concepts/privacy-and-security.md).|
 
 ## <a name="using-the-makeewsrequestasync-method-to-access-ews-operations"></a>Получение доступа к операциям веб-служб Exchange с помощью метода makeEwsRequestAsync
 
@@ -51,7 +51,7 @@ ms.locfileid: "44604512"
 
 - При использовании метода DOM укажите префикс имени тега `getElementsByTagName` , чтобы включить поддержку Internet Explorer.
 
-  `getElementsByTagName`вести себя по-разному в зависимости от типа браузера. Например, ответ EWS может содержать следующий XML-код (отформатированный и сокращенный для отображения):
+  `getElementsByTagName` вести себя по-разному в зависимости от типа браузера. Например, ответ EWS может содержать следующий XML-код (отформатированный и сокращенный для отображения):
 
    ```XML
         <t:ExtendedProperty><t:ExtendedFieldURI PropertySetId="00000000-0000-0000-0000-000000000000" 
@@ -154,7 +154,7 @@ function callback(asyncResult)  {
 
 1. В XML-коде замените все идентификаторы элементов и релевантные атрибуты операций EWS на соответствующие значения.
 
-2. Включите SOAP Request в качестве аргумента для параметра _Data_ объекта `makeEwsRequestAsync` .
+2. Включите SOAP Request в качестве аргумента для параметра  _Data_ объекта `makeEwsRequestAsync` .
 
 3. Укажите метод обратного вызова и вызов `makeEwsRequestAsync` .
 
@@ -203,7 +203,7 @@ function callback(asyncResult)  {
 
 ## <a name="see-also"></a>См. также
 
-- [Конфиденциальность и безопасность надстроек для Office](../develop/privacy-and-security.md)
+- [Конфиденциальность и безопасность надстроек для Office](../concepts/privacy-and-security.md)
 - [Работа с ограничениями по принципу одинакового источника в надстройках Office](../develop/addressing-same-origin-policy-limitations.md)
 - [Справка по службам EWS для Exchange](/exchange/client-developer/web-service-reference/ews-reference-for-exchange)
 - [Приложения электронной почты для Outlook и служб EWS в Exchange](/exchange/client-developer/exchange-web-services/mail-apps-for-outlook-and-ews-in-exchange)

@@ -3,12 +3,12 @@ ms.date: 07/10/2020
 description: Узнайте, как отладить пользовательские функции Excel, не использующие область задач.
 title: Отладка пользовательских функций без пользовательского интерфейса
 localization_priority: Normal
-ms.openlocfilehash: 9a493600b6e94d86138cd7949dad0498ec9df05b
-ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
+ms.openlocfilehash: 73e5d40dc2bf38ce6ea0f52c55cc2a25c1467f7f
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45159516"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293116"
 ---
 # <a name="ui-less-custom-functions-debugging"></a>Отладка пользовательских функций без пользовательского интерфейса
 
@@ -31,7 +31,7 @@ ms.locfileid: "45159516"
 > [!NOTE]
 > Для простоты в этой статье показана Отладка в контексте использования Visual Studio Code для редактирования, запуска задач и в некоторых случаях использования представления отладки. Если вы используете другой редактор или средство командной строки, ознакомьтесь с [инструкциями по использованию командной строки](#commands-for-building-and-running-your-add-in) в конце этой статьи.
 
-## <a name="requirements"></a>Требования
+## <a name="requirements"></a>Requirements
 
 Перед началом отладки следует использовать [генератор Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office) , чтобы создать проект пользовательских функций. Руководство по созданию проекта пользовательских функций представлено в [руководстве Custom functions](../tutorials/excel-tutorial-create-custom-functions.md).
 

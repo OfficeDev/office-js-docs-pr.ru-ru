@@ -3,19 +3,19 @@ title: Устранение ошибок единого входа
 description: Руководство по устранению неполадок с единым входом (SSO) в надстройках Office и обработке специальных условий или ошибок.
 ms.date: 07/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 4809ccf964467567503cdbaa0cf99e90b81fd19b
-ms.sourcegitcommit: 8fdd7369bfd97a273e222a0404e337ba2b8807b0
+ms.openlocfilehash: b8578f103c0b4e31523a3c4f99f4eac6ec544b2b
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "46573212"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293137"
 ---
 # <a name="troubleshoot-error-messages-for-single-sign-on-sso"></a>Устранение ошибок единого входа
 
 В этой статье представлено руководство по обеспечению надежной обработки специальных условий и ошибок в надстройках Office, поддерживающих единый вход, а также устранению связанных с единым входом проблем в таких надстройках.
 
 > [!NOTE]
-> В настоящее время API единого входа поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](../reference/requirement-sets/identity-api-requirement-sets.md).
+> API единого входа в настоящее время поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](../reference/requirement-sets/identity-api-requirement-sets.md).
 > Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 ## <a name="debugging-tools"></a>Средства отладки
@@ -77,7 +77,7 @@ ms.locfileid: "46573212"
 
 ### <a name="13007"></a>13007
 
-Ведущему приложению Office не удалось получить маркер доступа к веб-службе надстройки.
+Приложению Office не удалось получить маркер доступа к веб-службе надстройки.
 
 - Если эта ошибка возникает во время разработки, убедитесь, что в регистрационных данных и манифесте надстройки указаны разрешение `profile` (и разрешение `openid`, если вы используете MSAL.NET). Дополнительные сведения см. в статье [Регистрация надстройки с помощью конечной точки Azure AD версии 2.0](register-sso-add-in-aad-v2.md).
 - В рабочей среде эта ошибка может возникать по нескольким причинам. Вот некоторые из них:

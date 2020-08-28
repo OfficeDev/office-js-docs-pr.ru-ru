@@ -3,16 +3,16 @@ title: Браузеры, используемые надстройками Offic
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
 ms.date: 08/13/2020
 localization_priority: Normal
-ms.openlocfilehash: 53e3061f1729ac792e91a10e31bc9d0d908ab07b
-ms.sourcegitcommit: 3efa932b70035dde922929d207896e1a6007f620
+ms.openlocfilehash: 4c4462434480a82e69ebaf5a2599ceda1e4693a7
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "46757361"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293060"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
-Надстройки Office — это веб-приложения, отображаемые с помощью элементов iFrame при работе в Office в Интернете и с помощью встроенных элементов управления браузеров в Office для настольных и мобильных клиентов. Для запуска JavaScript надстройкам также требуется модуль JavaScript. Как встроенный браузер, так и модуль предоставляются браузером, установленным на компьютере пользователя.
+Надстройки Office — это веб-приложения, которые отображаются с помощью iFrames при работе в Office в Интернете и с использованием встроенных элементов управления браузером в Office для настольных и мобильных клиентов. Для запуска JavaScript надстройкам также требуется модуль JavaScript. Как встроенный браузер, так и модуль предоставляются браузером, установленным на компьютере пользователя.
 
 Используемый браузер зависит от указанных ниже факторов.
 
@@ -28,7 +28,7 @@ ms.locfileid: "46757361"
 |iOS|любой|Неприменимо|Safari|
 |Android|любой|Неприменимо|Chrome|
 |Windows 7, 8,1, 10 | не подписка Office 2013 или более поздняя версия|Всё равно|Internet Explorer 11|
-|Windows 7 | Microsoft 365| Всё равно | Internet Explorer 11|
+|Windows 7 | Microsoft 365| Всё равно | Internet Explorer 11|
 |Windows 8,1,<br>Windows 10 ver. &nbsp; < &nbsp; 1903| Microsoft 365 | Нет| Internet Explorer 11|
 |Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; < &nbsp; 16.0.11629<sup>1</sup>| Всё равно|Internet Explorer 11|
 |Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.11629 &nbsp; _и_ &nbsp; < &nbsp; 16.0.13127.20082<sup>1</sup>| Всё равно|Microsoft Edge<sup>2, 3</sup> с исходным Вебвиев (еджехтмл)|
@@ -39,7 +39,7 @@ ms.locfileid: "46757361"
 
 <sup>2</sup> при использовании Microsoft Edge экранный диктор Windows 10 (иногда называется "средство чтения с экрана") считывает `<title>` тег на странице, которая открывается в области задач. Когда используется Internet Explorer 11, экранный диктор читает панель заголовка области задач, полученный от значения `<DisplayName>` в манифесте надстройки.
 
-<sup>3</sup> если надстройка содержит `Runtimes` элемент в манифесте, он использует Internet Explorer 11 независимо от версии Windows или Microsoft 365. Дополнительные [сведения см.](../reference/manifest/runtimes.md)
+<sup>3</sup> если надстройка содержит `Runtimes` элемент в манифесте, он использует Internet Explorer 11 независимо от версии Windows или Microsoft 365. Дополнительные сведения см. в статье [Runtimes](../reference/manifest/runtimes.md).
 
 <sup>4</sup> браузер, используемый для этой комбинации версий, зависит от канала обновления подписки Microsoft 365. Если пользователь находится на [канале бета-версии](https://insider.office.com/join/windows) (ранее он быстро является быстрым каналом), Office использует Microsoft Edge с WebView2 (чромиум на основе). Для любого другого канала Office использует Microsoft Edge с исходной Вебвиев (Еджехтмл). Поддержка WebView2 в других каналах ожидается на ранних 2021.
 > [!IMPORTANT]

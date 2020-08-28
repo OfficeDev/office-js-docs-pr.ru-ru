@@ -1,14 +1,14 @@
 ---
 title: Работа с диапазонами с использованием API JavaScript для Excel (основные задачи)
 description: Примеры кода, демонстрирующие выполнение типовых задач с диапазонами с использованием API JavaScript для Excel.
-ms.date: 04/30/2019
+ms.date: 07/28/2020
 localization_priority: Normal
-ms.openlocfilehash: 8cba0908d2179c397dc3530e9bcb4063c09fce19
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 4eb04a58fdf58425f7bb13a6dc457da28625dba5
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609596"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47294166"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api"></a>Работа с диапазонами с использованием API JavaScript для Excel
 
@@ -99,16 +99,16 @@ Excel.run(function (context) {
     var range = sheet.getRange("B4:E4");
 
     range.insert(Excel.InsertShiftDirection.down);
-    
+
     return context.sync();
 }).catch(errorHandlerFunction);
 ```
 
-**Данные перед вставкой диапазона**
+### <a name="data-before-range-is-inserted"></a>Данные перед вставкой диапазона
 
 ![Данные в Excel перед вставкой диапазона](../images/excel-ranges-start.png)
 
-**Данные после вставки диапазона**
+### <a name="data-after-range-is-inserted"></a>Данные после вставки диапазона
 
 ![Данные в Excel после вставки диапазона](../images/excel-ranges-after-insert.png)
 
@@ -127,11 +127,11 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-**Данные перед очисткой диапазона**
+### <a name="data-before-range-is-cleared"></a>Данные перед очисткой диапазона
 
 ![Данные в Excel перед очисткой диапазона](../images/excel-ranges-start.png)
 
-**Данные после очистки диапазона**
+### <a name="data-after-range-is-cleared"></a>Данные после очистки диапазона
 
 ![Данные в Excel после очистки диапазона](../images/excel-ranges-after-clear.png)
 
@@ -150,11 +150,11 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-**Данные перед удалением диапазона**
+### <a name="data-before-range-is-deleted"></a>Данные перед удалением диапазона
 
 ![Данные в Excel перед удалением диапазона](../images/excel-ranges-start.png)
 
-**Данные после удаления диапазона**
+### <a name="data-after-range-is-deleted"></a>Данные после удаления диапазона
 
 ![Данные в Excel после удаления диапазона](../images/excel-ranges-after-delete.png)
 
@@ -173,13 +173,13 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-**Выделенный диапазон B2:E6**
+### <a name="selected-range-b2e6"></a>Выделенный диапазон B2:E6
 
 ![Выделенный диапазон в Excel](../images/excel-ranges-set-selection.png)
 
 ## <a name="get-the-selected-range"></a>Получение выделенного диапазона
 
-Следующий пример кода получает выбранный диапазон, загружает его `address` свойство и записывает сообщение в консоль. 
+Следующий пример кода получает выбранный диапазон, загружает его `address` свойство и записывает сообщение в консоль.
 
 ```js
 Excel.run(function (context) {
@@ -213,11 +213,11 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-**Данные перед изменением значения ячейки**
+#### <a name="data-before-cell-value-is-updated"></a>Данные перед изменением значения ячейки
 
 ![Данные в Excel перед изменением значения ячейки](../images/excel-ranges-set-start.png)
 
-**Данные после изменения значения ячейки**
+#### <a name="data-after-cell-value-is-updated"></a>Данные после изменения значения ячейки
 
 ![Данные в Excel после изменения значения ячейки](../images/excel-ranges-set-cell-value.png)
 
@@ -232,7 +232,7 @@ Excel.run(function (context) {
     var data = [
         ["Potato Chips", 10, 1.80],
     ];
-    
+
     var range = sheet.getRange("B5:D5");
     range.values = data;
     range.format.autofitColumns();
@@ -241,11 +241,11 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-**Данные перед изменением значений ячеек**
+#### <a name="data-before-cell-values-are-updated"></a>Данные перед изменением значений ячеек
 
 ![Данные в Excel перед изменением значений ячеек](../images/excel-ranges-set-start.png)
 
-**Данные после изменения значений ячеек**
+#### <a name="data-after-cell-values-are-updated"></a>Данные после изменения значений ячеек
 
 ![Данные в Excel после изменения значений ячеек](../images/excel-ranges-set-cell-values.png)
 
@@ -265,11 +265,11 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-**Данные перед заданием формулы для ячейки**
+#### <a name="data-before-cell-formula-is-set"></a>Данные перед заданием формулы для ячейки
 
 ![Данные в Excel перед заданием формулы для ячейки](../images/excel-ranges-start-set-formula.png)
 
-**Данные после задания формулы для ячейки**
+#### <a name="data-after-cell-formula-is-set"></a>Данные после задания формулы для ячейки
 
 ![Данные в Excel после задания формулы для ячейки](../images/excel-ranges-set-formula.png)
 
@@ -287,7 +287,7 @@ Excel.run(function (context) {
         ["=C5 * D5"],
         ["=SUM(E3:E5)"]
     ];
-    
+
     var range = sheet.getRange("E3:E6");
     range.formulas = data;
     range.format.autofitColumns();
@@ -296,11 +296,11 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-**Данные перед заданием формул для ячеек**
+#### <a name="data-before-cell-formulas-are-set"></a>Данные перед заданием формул для ячеек
 
 ![Данные в Excel перед заданием формул для ячеек](../images/excel-ranges-start-set-formula.png)
 
-**Данные после задания формул для ячеек**
+#### <a name="data-after-cell-formulas-are-set"></a>Данные после задания формул для ячеек
 
 ![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
 
@@ -325,11 +325,11 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-**Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)**
+#### <a name="data-in-range-values-in-column-e-are-a-result-of-formulas"></a>Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)
 
 ![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
 
-**range.values (как записано в консоль в примере кода выше)**
+#### <a name="rangevalues-as-logged-to-the-console-by-the-code-sample-above"></a>range.values (как записано в консоль в примере кода выше)
 
 ```json
 [
@@ -383,11 +383,11 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-**Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)**
+#### <a name="data-in-range-values-in-column-e-are-a-result-of-formulas"></a>Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)
 
 ![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
 
-**range.text (как записано в консоль в примере кода выше)**
+#### <a name="rangetext-as-logged-to-the-console-by-the-code-sample-above"></a>range.text (как записано в консоль в примере кода выше)
 
 ```json
 [
@@ -441,11 +441,11 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-**Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)**
+#### <a name="data-in-range-values-in-column-e-are-a-result-of-formulas"></a>Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)
 
 ![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
 
-**range.formulas (как записано в консоль в примере кода выше)**
+#### <a name="rangeformulas-as-logged-to-the-console-by-the-code-sample-above"></a>range.formulas (как записано в консоль в примере кода выше)
 
 ```json
 [
@@ -502,11 +502,11 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-**Данные в диапазоне перед заданием цвета шрифта и цвета заливки**
+#### <a name="data-in-range-before-font-color-and-fill-color-are-set"></a>Данные в диапазоне перед заданием цвета шрифта и цвета заливки
 
 ![Данные в Excel перед заданием формата](../images/excel-ranges-format-before.png)
 
-**Данные в диапазоне после задания цвета шрифта и цвета заливки**
+#### <a name="data-in-range-after-font-color-and-fill-color-are-set"></a>Данные в диапазоне после задания цвета шрифта и цвета заливки
 
 ![Данные в Excel после задания формата](../images/excel-ranges-format-font-and-fill.png)
 
@@ -531,13 +531,39 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-**Данные в диапазоне перед заданием формата чисел**
+#### <a name="data-in-range-before-number-format-is-set"></a>Данные в диапазоне перед заданием формата чисел
 
-![Данные в Excel перед заданием формата](../images/excel-ranges-format-font-and-fill.png)
+![Данные в Excel перед заданием формата чисел](../images/excel-ranges-format-font-and-fill.png)
 
-**Данные в диапазоне после задания формата чисел**
+#### <a name="data-in-range-after-number-format-is-set"></a>Данные в диапазоне после задания формата чисел
 
-![Данные в Excel после задания формата](../images/excel-ranges-format-numbers.png)
+![Данные в Excel после задания числового формата](../images/excel-ranges-format-numbers.png)
+
+## <a name="read-or-write-to-an-unbounded-range"></a>Чтение из неограниченного диапазона и запись в него
+
+### <a name="read-an-unbounded-range"></a>Чтение из неограниченного диапазона
+
+Неограниченный адрес диапазона — это адрес диапазона, в котором задаются либо все столбцы, либо все строки. Например:
+
+- Диапазоны адресов состоят из целых столбцов:<ul><li>`C:C`</li><li>`A:F`</li></ul>
+- Диапазоны адресов состоят из целых строк:<ul><li>`2:2`</li><li>`1:4`</li></ul>
+
+Когда API отправляет запрос на получение неограниченного диапазона (например, `getRange('C:C')`), ответ будет содержать значения `null` для свойств уровня ячейки, например свойств `values`, `text`, `numberFormat` и `formula`. Другие свойства диапазона, например `address` и `cellCount`, будут содержать допустимые значения для неограниченного диапазона.
+
+### <a name="write-to-an-unbounded-range"></a>Запись в неограниченный диапазон
+
+Невозможно задать свойства уровня ячейки `values` , например, `numberFormat` и `formula` для неограниченного диапазона, так как входной запрос слишком велик. Например, приведенный ниже фрагмент кода недопустим, так как он пытается указать свойство `values` для неограниченного диапазона. API возвращает ошибку при попытке установить свойства на уровне ячейки для неограниченного диапазона.
+
+```js
+var range = context.workbook.worksheets.getActiveWorksheet().getRange('A:B');
+range.values = 'Due Date';
+```
+
+## <a name="read-or-write-to-a-large-range"></a>Чтение из большого диапазона и запись в него
+
+Если диапазон содержит большое количество ячеек, значений, форматов чисел или формул, то, возможно, не удастся выполнить операции API над этим диапазоном. API всегда делает все возможное, чтобы выполнить запрошенную операцию над диапазоном (то есть получить или записать указанные данные), но попытка выполнить операцию чтения или записи для большого диапазона может привести к ошибке API из-за чрезмерного потребления ресурсов. Чтобы избежать таких ошибок, мы рекомендуем выполнять отдельные операции чтения или записи для небольших подмножеств большого диапазона, а не пытаться выполнить одну операцию чтения или записи для большого диапазона.
+
+Подробнее об ограничениях системы можно узнать в разделе "надстройки Excel" [ограничений ресурсов и оптимизации производительности для надстроек Office](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins).
 
 ### <a name="conditional-formatting-of-ranges"></a>Условное форматирование диапазонов
 
@@ -545,7 +571,7 @@ Excel.run(function (context) {
 
 ## <a name="find-a-cell-using-string-matching"></a>Поиск ячейки с помощью сопоставления строк
 
-У объекта `Range` есть метод `find` для поиска указанной строки в диапазоне. Он возвращает диапазон первой ячейки с текстом, соответствующим критериям. Приведенный ниже пример кода находит первую ячейку со значением, соответствующим строке **Food** (Еда), и заносит ее адрес в консоль. Обратите внимание, что метод `find` выдает ошибку `ItemNotFound`, если указанной строки не существует в диапазоне. Если ожидается, что указанная строка может отсутствовать в диапазоне, используйте вместо этого метод [findOrNullObject](excel-add-ins-advanced-concepts.md#ornullobject-methods), чтобы ваш код корректно обработал этот сценарий.
+У объекта `Range` есть метод `find` для поиска указанной строки в диапазоне. Он возвращает диапазон первой ячейки с текстом, соответствующим критериям. Приведенный ниже пример кода находит первую ячейку со значением, соответствующим строке **Food** (Еда), и заносит ее адрес в консоль. Обратите внимание, что метод `find` выдает ошибку `ItemNotFound`, если указанной строки не существует в диапазоне. Если ожидается, что указанная строка может отсутствовать в диапазоне, используйте вместо этого метод [findOrNullObject](../develop/application-specific-api-model.md#ornullobject-methods-and-properties), чтобы ваш код корректно обработал этот сценарий.
 
 ```js
 Excel.run(function (context) {

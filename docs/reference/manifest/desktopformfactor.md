@@ -3,12 +3,12 @@ title: Элемент DesktopFormFactor в файле манифеста
 description: Указывает параметры для надстройки классического форм-фактора.
 ms.date: 10/31/2019
 localization_priority: Normal
-ms.openlocfilehash: 46de234f2d97a9e6c7645c17a0f0a61d0c3e1a80
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 18828e6b61a45ae2dc1528b3f7a54e664af09519
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44612285"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292316"
 ---
 # <a name="desktopformfactor-element"></a>Элемент DesktopFormFactor
 
@@ -22,8 +22,8 @@ ms.locfileid: "44612285"
 |:--------------------------------------|:--------:|:-------------|
 | [ExtensionPoint](extensionpoint.md)   | Да      | Определяет, где предоставляются функции надстройки. |
 | [FunctionFile](functionfile.md)       | Да      | URL-адрес файла, который содержит функции JavaScript.|
-| [GetStarted](getstarted.md)           | Нет       | Определяет выноску, которая отображается при установке надстройки в ведущих приложениях Word, Excel и PowerPoint. |
-| [SupportsSharedFolders](supportssharedfolders.md) | Нет | Определяет, доступна ли надстройка Outlook в сценариях делегирования, и имеет значение *false* по умолчанию. |
+| [GetStarted](getstarted.md)           | Нет       | Определяет выноску, которая отображается при установке надстройки в Word, Excel или PowerPoint. |
+| [SupportsSharedFolders](supportssharedfolders.md) | Нет | Определяет, доступна ли надстройка Outlook в сценариях делегирования. По умолчанию задано значение *false* . |
 
 ## <a name="desktopformfactor-example"></a>Пример DesktopFormFactor
 

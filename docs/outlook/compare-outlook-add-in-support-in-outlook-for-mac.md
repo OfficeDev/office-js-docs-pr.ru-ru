@@ -3,12 +3,12 @@ title: Сравнение поддержки надстроек Outlook в Outlo
 description: Узнайте, как сравнение надстроек в Outlook для Mac с другими клиентами Outlook.
 ms.date: 06/04/2020
 localization_priority: Normal
-ms.openlocfilehash: a1eb51ed5b8fa51283b738bc7522b1cf4eb16169
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: f6aa9914e1320de05a67b3ec227e373bac5c2402
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608973"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293921"
 ---
 # <a name="compare-outlook-add-in-support-in-outlook-on-mac-with-other-outlook-clients"></a>Сравнение поддержки надстроек Outlook в Outlook в Mac с другими клиентами Outlook
 
@@ -23,7 +23,7 @@ ms.locfileid: "44608973"
 | Поддерживаемые версии файла office.js и схемы манифеста Надстройки Office | Все API в файле office.js и схема версии 1.1. | Все API в файле office.js и схема версии 1.1.<br><br>**Примечание**: в Outlook на Mac-адресе только построение 16.35.308 или более поздней версии поддерживает сохранение собрания. В противном случае `saveAsync` метод завершается с ошибкой при вызове из собрания в режиме создания. Временное решение представлено в статье [Не удается сохранить встречу как черновик в Outlook для Mac с помощью API JS для Office](https://support.microsoft.com/help/4505745). |
 | Экземпляры серии повторяющихся встреч | <ul><li>Можно получить идентификатор элемента и другие свойства основной встречи или экземпляра встречи из серии повторяющихся встреч.</li><li>Можно использовать [mailbox.displayAppointmentForm](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods), чтобы вывести на экран экземпляр или основную встречу их серии.</li></ul> | <ul><li>Можно получить идентификатор элемента и другие свойства основной встречи, но не экземпляра серии повторяющихся встреч.</li><li>Можно отобразить основную встречу из серии повторяющихся встреч. Без идентификатора элемента экземпляр серии повторяющихся встреч отобразить невозможно.</li></ul> |
 | Тип получателя участника встречи | С помощью [EmailAddressDetails.recipientType](/javascript/api/outlook/office.emailaddressdetails#recipienttype) можно определить тип получателя участника. | `EmailAddressDetails.recipientType` возвращает `undefined` для участников встречи. |
-| Строка версии клиента узла | Формат строки версии, возвращаемой [Diagnostics. hostVersion](/javascript/api/outlook/office.diagnostics#hostversion) , зависит от фактического типа клиента. Пример.<ul><li>Outlook в Windows:`15.0.4454.1002`</li><li>Outlook в Интернете:`15.0.918.2`</li></ul> |Пример строки версии, возвращаемой `Diagnostics.hostVersion` в Outlook для Mac:`15.0 (140325)` |
+| Строка версии клиентского приложения | Формат строки версии, возвращаемой [Diagnostics. hostVersion](/javascript/api/outlook/office.diagnostics#hostversion) , зависит от фактического типа клиента. Например:<ul><li>Outlook в Windows: `15.0.4454.1002`</li><li>Outlook в Интернете: `15.0.918.2`</li></ul> |Пример строки версии, возвращаемой `Diagnostics.hostVersion` в Outlook для Mac: `15.0 (140325)` |
 | Настраиваемые свойства элемента | Если сеть выходит из строя, надстройка все еще может получить доступ к кэшированным настраиваемым свойствам. | Так как Outlook на Mac не кэширует настраиваемые свойства, если сеть отключена, надстройки не смогут получить к ним доступ. |
 | Сведения о вложениях | Тип контента и имена вложений в объекте [AttachmentDetails](/javascript/api/outlook/office.attachmentdetails) зависят от типа клиента:<ul><li>Пример `AttachmentDetails.contentType` в формате JSON: `"contentType": "image/x-png"`. </li><li>`AttachmentDetails.name` не содержит расширение файла. Например, если вложение является сообщением с темой "RE: Планы на лето", то объект JSON, представляющий имя этого вложения, будет иметь вид `"name": "RE: Summer activity"`.</li></ul> | <ul><li>Пример `AttachmentDetails.contentType` в формате JSON: `"contentType" "image/png"`</li><li>`AttachmentDetails.name` всегда включает расширение имени файла. Вложения, являющиеся почтовыми элементами, имеют расширение EML, а встречи — расширение ICS. Например, если вложение — сообщение с темой "RE: Планы на лето", имя вложения будет представлено следующим объектом JSON: `"name": "RE: Summer activity.eml"`.<p>**Примечание.** Если файл вложен программным образом (например, с помощью надстройки) без расширения, то имя файла в свойстве `AttachmentDetails.name` не будет включать расширение.</p></li></ul> |
 | Строка, представляющая часовой пояс в свойствах `dateTimeCreated` и `dateTimeModified` |Пример: `Thu Mar 13 2014 14:09:11 GMT+0800 (China Standard Time)` | Пример: `Thu Mar 13 2014 14:09:11 GMT+0800 (CST)` |
@@ -38,7 +38,7 @@ ms.locfileid: "44608973"
 1. Контекстные надстройки
 1. On — Send
 1. Поддержка общих папок
-1. `saveAsync`При создании собрания
+1. `saveAsync` При создании собрания
 1. Единый вход (SSO)
 
 Мы рекомендуем предварительно просмотреть новый Outlook в Mac, который доступен в версии 16.38.506. Для получения дополнительных сведений о том, как испытать, ознакомьтесь [с разметкой Outlook для Mac-релизов для быстрых построений](https://support.microsoft.com/office/d6347358-5613-433e-a49e-a9a0e8e0462a).

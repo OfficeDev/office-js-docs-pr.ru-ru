@@ -3,12 +3,12 @@ title: Области задач в надстройках Office
 description: Области задач предоставляют пользователям доступ к элементам управления интерфейсом, которые выполняют код для изменения документов или сообщений электронной почты, а также для отображения данных из источника данных.
 ms.date: 07/07/2020
 localization_priority: Normal
-ms.openlocfilehash: 39a96f4d5aa63d55f4dcb30d9aeb9e680357aa09
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 6d1641c2262b1d1c7b0e4570c357d36d265c80de
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45093758"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292962"
 ---
 # <a name="task-panes-in-office-add-ins"></a>Области задач в надстройках Office
  
@@ -45,7 +45,7 @@ ms.locfileid: "45093758"
 
 *Рис. 3. Размеры областей задач Office*
 
-![Размеры области задач в классических приложениях при разрешении 1366 x 768](../images/office-365-taskpane-sizes.png)
+![Изображение, отображающее размеры области задач по адресу 1366x768](../images/office-365-taskpane-sizes.png)
 
 - Excel — 350 x 378
 - PowerPoint — 348 x 391

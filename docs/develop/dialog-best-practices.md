@@ -3,12 +3,12 @@ title: Рекомендации и правила Office dialog API
 description: Содержит правила и рекомендации для API диалоговых окон Office, такие как рекомендации для одностраничного приложения (SPA)
 ms.date: 01/29/2020
 localization_priority: Normal
-ms.openlocfilehash: 88c833d91cc16684b5e434d6aff9e77f23bbbdb4
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 5e0854137b27d8b8ae33fff8943421cc0c488abe
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608273"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292759"
 ---
 # <a name="best-practices-and-rules-for-the-office-dialog-api"></a>Рекомендации и правила Office dialog API
 
@@ -26,7 +26,7 @@ ms.locfileid: "44608273"
 - Ведущее окно, которое может быть областью задач или [файлом функции](../reference/manifest/functionfile.md) без пользовательского интерфейса команды надстройки, может одновременно открыть только одно диалоговое окно.
 - В диалоговом окне можно вызывать только два интерфейса API Office:
   - Функция [messageParent](/javascript/api/office/office.ui#messageparent-message-) .
-  - `Office.context.requirements.isSetSupported`(Дополнительные сведения см. в разделе [Указание ведущих приложений Office и требований к API](specify-office-hosts-and-api-requirements.md).)
+  - `Office.context.requirements.isSetSupported` (Дополнительные сведения см. в разделе [Указание приложений Office и требований к API](specify-office-hosts-and-api-requirements.md).)
 - Функцию [messageParent](/javascript/api/office/office.ui#messageparent-message-) можно вызвать только со страницы в том же домене, что и сама надстройка.
 
 ## <a name="best-practices"></a>Рекомендации

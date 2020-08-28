@@ -1,14 +1,14 @@
 ---
 title: Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 description: Расширенные функции и сценарии объектов Range, такие как специальные ячейки, удаление дубликатов и работа с датами.
-ms.date: 05/06/2020
+ms.date: 08/26/2020
 localization_priority: Normal
-ms.openlocfilehash: 0a185551bf0ddd6b5d4d5a90e4faac7ce78e2cc9
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 47f154c2bffac2e730aba21204261bc1bd536af2
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609750"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47294159"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api-advanced"></a>Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 
@@ -99,7 +99,7 @@ Excel.run(function (context) {
 Если ожидается, что всегда должны существовать ячейки с целевыми характеристиками, скорее всего вы захотите, чтобы код выдавал ошибку при их отсутствии. Если отсутствие соответствующих ячеек является допустимым сценарием, ваш код должен проверить наличие такой возможности и корректно выполнить действие без выдачи ошибки. Добиться такого поведения можно с помощью метода `getSpecialCellsOrNullObject` и возвращаемого им свойства `isNullObject`. Этот шаблон используется в приведенном ниже примере. Вот что нужно знать об этом коде:
 
 - Метод `getSpecialCellsOrNullObject` всегда возвращает прокси-объект, поэтому он не может иметь значение `null` в обычном смысле JavaScript. Но если соответствующие ячейки не обнаружены, свойству `isNullObject` объекта присваивается значение `true`.
-- Он вызывает `context.sync` *перед* тестированием свойства `isNullObject`. Это требование для всех методов и свойств `*OrNullObject`, так как всегда нужно загружать и синхронизировать свойство, чтобы его прочесть. Однако необязательно *явно* загружать свойство `isNullObject`. Оно автоматически загружается с помощью `context.sync`, даже если `load` не вызывается для объекта. Дополнительные сведения см. в разделе [\*OrNullObject](../excel/excel-add-ins-advanced-concepts.md#ornullobject-methods).
+- Он вызывает `context.sync` *перед* тестированием свойства `isNullObject`. Это требование для всех методов и свойств `*OrNullObject`, так как всегда нужно загружать и синхронизировать свойство, чтобы его прочесть. Однако необязательно *явно* загружать свойство `isNullObject`. Оно автоматически загружается с помощью `context.sync`, даже если `load` не вызывается для объекта. Дополнительные сведения см. в статье [ \* методы и свойства орнуллобжект](../develop/application-specific-api-model.md#ornullobject-methods-and-properties).
 - Этот код можно проверить, выбрав сначала диапазон без ячеек с формулами и запустив его. Затем следует выбрать диапазон, содержащий по крайней мере одну ячейку с формулой, и снова запустить его.
 
 ```js
@@ -197,10 +197,10 @@ copyFrom(sourceRange: Range | RangeAreas | string, copyType?: Excel.RangeCopyTyp
 
 `copyType` указывает, какие данные копируются из источника в назначение.
 
-- `Excel.RangeCopyType.formulas`передает формулы в исходных ячейках и сохраняет относительное расположение диапазонов этих формул. Все записи, не являющиеся формулами, копируются в исходном виде.
+- `Excel.RangeCopyType.formulas` передает формулы в исходных ячейках и сохраняет относительное расположение диапазонов этих формул. Все записи, не являющиеся формулами, копируются в исходном виде.
 - `Excel.RangeCopyType.values` копирует значения данных, а в случае формул — результат формулы.
 - `Excel.RangeCopyType.formats` копирует форматирование диапазона, включая шрифт, цвет и другие параметры форматирования, но без значений.
-- `Excel.RangeCopyType.all`(параметр по умолчанию) копирует данные и форматирование, сохраняя формулы ячеек, если они найдены.
+- `Excel.RangeCopyType.all` (параметр по умолчанию) копирует данные и форматирование, сохраняя формулы ячеек, если они найдены.
 
 `skipBlanks` устанавливает, будут ли копироваться пустые ячейки в назначение. Если значение равно true, `copyFrom` пропускает пустые ячейки в диапазоне источника.
 Пропущенные ячейки не перезапишут существующие данные в соответствующих им ячейках конечного диапазона. Значение по умолчанию: false.
@@ -326,6 +326,37 @@ Excel.run(function (context) {
 ![Диапазон с двумя уровнями структуры с двумя измерениями](../images/excel-outline.png)
 
 Чтобы разгруппировать группу строк или столбцов, используйте метод [Range. Ungroup](/javascript/api/excel/excel.range#ungroup-groupoption-) . Это приведет к удалению внешнего уровня структуры. Если несколько групп одного и того же типа строк или столбцов находятся на одном уровне в пределах указанного диапазона, все эти группы размещаются в разгруппировании.
+
+## <a name="handle-dynamic-arrays-and-spilling-preview"></a>Обработка динамических массивов и сброс (Предварительная версия)
+
+> [!NOTE]
+> Динамический массив и API для переноса диапазона в настоящее время находятся в режиме предварительного просмотра. [!INCLUDE [Information about using preview Excel APIs](../includes/using-excel-preview-apis.md)]
+
+Некоторые формулы Excel возвращают [динамические массивы](https://support.microsoft.com/office/dynamic-array-formulas-and-spilled-array-behavior-205c6b06-03ba-4151-89a1-87a7eb36e531). Эти значения заполняют значения нескольких ячеек за прев ячейке оргинал в формуле. Это значение переполнения называется "Spill". Надстройка может найти диапазон, используемый для Spill, с помощью метода [Range. жетспиллингторанже](/javascript/api/excel/excel.range#getspillingtorange--) . Кроме того, существует [версия * орнуллобжект](..//develop/application-specific-api-model.md#ornullobject-methods-and-properties), `Range.getSpillingToRangeOrNullObject` .
+
+В следующем примере показана базовая формула, которая копирует содержимое диапазона в ячейку, которая переводится в соседние ячейки. Затем надстройка заносит в журнал диапазон, содержащий сброс.
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getItem("Sample");
+
+    // Set G4 to a formula that returns a dynamic array.
+    var targetCell = sheet.getRange("G4");
+    targetCell.formulas = [["=A4:D4"]];
+
+    // Get the address of the cells that the dynamic array spilled into.
+    var spillRange = targetCell.getSpillingToRange();
+    spillRange.load("address");
+
+    // Sync and log the spilled-to range.
+    return context.sync().then(function () {
+        // This will log the range as "G4:J4".
+        console.log(`Copying the table headers spilled into ${spillRange.address}.`);
+    });
+}).catch(errorHandlerFunction);
+```
+
+Кроме того, можно найти ячейку, отвечающую за прохождение в заданную ячейку, с помощью метода [Range. жетспиллпарент](/javascript/api/excel/excel.range#getspillparent--) . Обратите внимание, что `getSpillParent` работает, только если объект Range является одной ячейкой. Вызов `getSpillParent` в диапазоне с несколькими ячейками приведет к ошибке (или возвращаемому диапазону значений NULL `Range.getSpillParentOrNullObject` ).
 
 ## <a name="see-also"></a>См. также
 

@@ -3,12 +3,12 @@ title: Элемент Host в файле манифеста
 description: Определяет тип приложения Office, в котором следует активировать надстройку.
 ms.date: 11/05/2019
 localization_priority: Normal
-ms.openlocfilehash: 5db9df97c4ba558d54756b983a26cb7b71e049d5
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 5b6c6e6b5471b4117c28cf92e11eb0a99b512a97
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611815"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292288"
 ---
 # <a name="host-element"></a>Элемент Host
 
@@ -25,7 +25,7 @@ ms.locfileid: "44611815"
 
 | Атрибут     | Тип   | Обязательный | Описание                                      |
 |:--------------|:-------|:---------|:-------------------------------------------------|
-| [Name](#name) | string | Обязательный | Имя типа ведущего приложения Office. |
+| [Name](#name) | string | Обязательный | Имя типа клиентского приложения Office. |
 
 ### <a name="name"></a>Имя
 
@@ -71,7 +71,7 @@ ms.locfileid: "44611815"
 
 ### <a name="xsitype"></a>xsi:type
 
-Указывает, к какому ведущему приложению Office (Word, Excel, PowerPoint, Outlook, OneNote) применяются содержащиеся параметры. Допустимые значения:
+Управляет приложением Office (Word, Excel, PowerPoint, Outlook, OneNote), к которому применяются вложенные параметры. Поддерживаются такие значения:
 
 - `Document` (Word)
 - `MailHost` (Outlook)

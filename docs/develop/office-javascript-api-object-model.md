@@ -3,18 +3,18 @@ title: Общая объектная модель API JavaScript
 description: Сведения об объектной модели общего API JavaScript для Office
 ms.date: 04/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 44c5258ad164c19df53ebe2fcbb00f420018a710
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 37d2bca0aa4aadfc6ab7ef00d76d74e9acde4711
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609736"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293256"
 ---
 # <a name="common-javascript-api-object-model"></a>Общая объектная модель API JavaScript
 
 [!include[information about the common API](../includes/alert-common-api-info.md)]
 
-Надстройки JavaScript для Office предоставляют доступ к базовым функциональным возможностям ведущего приложения. В основном такой доступ осуществляется при помощи нескольких значимых объектов. Объект [Context](#context-object) предоставляет доступ к среде выполнения после инициализации. Объект [Document](#document-object) предоставляет пользователю управление документом Excel, PowerPoint или Word. Объект [Mailbox](#mailbox-object) предоставляет надстройкам Outlook доступ к сообщениям и профилям пользователей. Связи между этими объектами высокого уровня — это основа надстроек JavaScript.
+API JavaScript для Office предоставляют доступ к базовым функциональным возможностям клиентского приложения Office. В основном такой доступ осуществляется при помощи нескольких значимых объектов. Объект [Context](#context-object) предоставляет доступ к среде выполнения после инициализации. Объект [Document](#document-object) предоставляет пользователю управление документом Excel, PowerPoint или Word. Объект [Mailbox](#mailbox-object) предоставляет надстройке Outlook доступ к сообщениям, встречам и профилям пользователей. Общие сведения о связях между этими объектами высокого уровня основаны на надстройке Office.
 
 ## <a name="context-object"></a>Объект Context
 
@@ -24,7 +24,7 @@ ms.locfileid: "44609736"
 
 Например, в надстройках области задач или контентных надстройках можно использовать свойство [document](/javascript/api/office/office.context#document) объекта **Context** для получения доступа к свойствам и методам объекта **Document**, чтобы взаимодействовать с содержимым документов Word, электронными таблицами Excel или расписаниями Project. Аналогично этому в надстройках Outlook можно использовать свойство [mailbox](/javascript/api/office/office.context#mailbox) объекта **Context** для получения доступа к свойствам и методам объекта **Mailbox**, чтобы взаимодействовать с контентом сообщений, запросов на собрание или встреч.
 
-Объект **Context** также предоставляет доступ к свойствам [contentLanguage](/javascript/api/office/office.context#contentlanguage) и [displayLanguage](/javascript/api/office/office.context#displaylanguage), которые позволяют задать языковые параметры, используемые в документе, элементе или ведущем приложении. Свойство [roamingSettings](/javascript/api/office/office.context#roamingsettings) позволяет получить доступ к элементам объекта [RoamingSettings](/javascript/api/office/office.context#roamingsettings), в котором хранятся настройки, специфичные для надстроек почтовых ящиков отдельных пользователей. Наконец, объект **Context** предоставляет свойство [ui](/javascript/api/office/office.context#ui), позволяющее надстройке открывать всплывающие диалоговые окна.
+Объект **context** также предоставляет доступ к свойствам [contentLanguage](/javascript/api/office/office.context#contentlanguage) и [displayLanguage](/javascript/api/office/office.context#displaylanguage) , которые позволяют определить языковой стандарт (язык), используемый в документе или элементе, или приложение Office. Свойство [roamingSettings](/javascript/api/office/office.context#roamingsettings) позволяет получить доступ к элементам объекта [RoamingSettings](/javascript/api/office/office.context#roamingsettings), в котором хранятся настройки, специфичные для надстроек почтовых ящиков отдельных пользователей. Наконец, объект **Context** предоставляет свойство [ui](/javascript/api/office/office.context#ui), позволяющее надстройке открывать всплывающие диалоговые окна.
 
 
 ## <a name="document-object"></a>Объект Document
@@ -88,7 +88,7 @@ ms.locfileid: "44609736"
 
 
 > [!TIP]
-> **В каких случаях следует использовать для доступа к данным матрицы, а в каких — coercionType?** Если требуется, чтобы табличные данные динамически увеличивались при добавлении строк и столбцов, и необходимо работать с заголовками таблиц, следует использовать тип данных table (указав параметр _coercionType_ `Document` `Binding` метода доступа к данным или объекта или `"table"` `Office.CoercionType.Table` ). Добавление строк и столбцов в структуре данных поддерживается как табличными, так и матричными данными, но присоединение строк и столбцов поддерживается только табличными данными. Если вы не планируете добавлять строки и столбцы, а ваши данные не нуждаются в функциях заголовков, следует использовать тип данных Matrix (указав параметр _coercionType_ метода доступа к данным как `"matrix"` или `Office.CoercionType.Matrix` ), что обеспечивает более простую модель взаимодействия с данными.
+> **В каких случаях следует использовать для доступа к данным матрицы, а в каких — coercionType?** Если требуется, чтобы табличные данные динамически увеличивались при добавлении строк и столбцов, и необходимо работать с заголовками таблиц, следует использовать тип данных table (указав параметр _coercionType_ `Document` `Binding` метода доступа к данным или объекта или `"table"` `Office.CoercionType.Table` ). Добавление строк и столбцов в структуре данных поддерживается как табличными, так и матричными данными, но присоединение строк и столбцов поддерживается только табличными данными. Если вы не планируете добавлять строки и столбцы, а ваши данные не нуждаются в функциях заголовков, следует использовать тип данных Matrix (указав параметр  _coercionType_ метода доступа к данным как `"matrix"` или `Office.CoercionType.Matrix` ), что обеспечивает более простую модель взаимодействия с данными.
 
 Если данные невозможно привести к заданному типу, то свойство [AsyncResult.status](/javascript/api/office/office.asyncresult#status) в функции обратного вызова возвращает значение `"failed"`, и можно использовать свойство [AsyncResult.error](/javascript/api/office/office.asyncresult#error), чтобы получить доступ к объекту [Error](/javascript/api/office/office.error) со сведениями о причине ошибки во время вызова метода.
 
@@ -117,7 +117,7 @@ ms.locfileid: "44609736"
 
 Объект [Bindings](/javascript/api/office/office.bindings) предоставляет метод [getAllAsync](/javascript/api/office/office.bindings#getallasync-options--callback-), который обеспечивает доступ к набору всех привязок, установленных в этом документе или листе. Доступ к отдельной привязке можно получить по ее идентификатору с помощью методов [Bindings.getBindingByIdAsync](/javascript/api/office/office.bindings#getbyidasync-id--options--callback-) или [Office.select](/javascript/api/office). Вы можете создавать новые привязки, а также удалять существующие, используя один из следующих методов `Bindings` объекта: [addFromSelectionAsync](/javascript/api/office/office.bindings#addfromselectionasync-bindingtype--options--callback-), [AddFromPromptAsync](/javascript/api/office/office.bindings#addfrompromptasync-bindingtype--options--callback-), [addFromNamedItemAsync](/javascript/api/office/office.bindings#addfromnameditemasync-itemname--bindingtype--options--callback-)или [releaseByIdAsync](/javascript/api/office/office.bindings#releasebyidasync-id--options--callback-).
 
-Существует три различных типа привязок, которые указываются с помощью параметра _bindingType_ при создании привязки с помощью `addFromSelectionAsync` `addFromPromptAsync` `addFromNamedItemAsync` методов или.
+Существует три различных типа привязок, которые указываются с помощью параметра  _bindingType_ при создании привязки с помощью `addFromSelectionAsync` `addFromPromptAsync` `addFromNamedItemAsync` методов или.
 
 
 
@@ -164,11 +164,10 @@ var item = Office.context.mailbox.item;
 
 Кроме того, надстройки Outlook могут использовать следующие объекты:
 
-- `Office`Объект: для инициализации.
+- `Office` Объект: для инициализации.
 
-- `Context`Объект: для доступа к контенту и отображения свойств языка.
+- `Context` Объект: для доступа к контенту и отображения свойств языка.
 
-- `RoamingSettings`Объект: для сохранения настраиваемых параметров надстройки Outlook в почтовом ящике пользователя, в котором установлена надстройка.
+- `RoamingSettings` Объект: для сохранения настраиваемых параметров надстройки Outlook в почтовом ящике пользователя, в котором установлена надстройка.
 
 Сведения об использовании JavaScript в надстройках Outlook см. в статье [Надстройки Outlook](../outlook/outlook-add-ins-overview.md).
-
