@@ -4,12 +4,12 @@ description: Обзор JavaScript API проекта
 ms.date: 07/05/2019
 ms.prod: project
 localization_priority: Priority
-ms.openlocfilehash: 1e937e3c8a89340858cf715cfa4723062c780805
-ms.sourcegitcommit: 19312a54f47a17988ffa86359218a504713f9f09
+ms.openlocfilehash: 15dbe8cde9510f052f929a99f4073f5fa8bf8a12
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "44679306"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293620"
 ---
 # <a name="javascript-api-for-project"></a>API JavaScript для Project
 
@@ -24,4 +24,4 @@ Project поддерживает надстройки, созданные с п�
 - [Документация по надстройкам Project](../../project/index.yml)
 - [Обзор надстроек Project](../../project/project-add-ins.md)
 - [Справочная документация по API](../javascript-api-for-office.md)
-- [Доступность ведущих приложений и платформ для надстроек Office](../../overview/office-add-in-availability.md)
+- [Доступность клиентских приложений и платформ Office для надстроек Office](../../overview/office-add-in-availability.md)

@@ -3,12 +3,12 @@ title: Разработка надстроек Office с помощью Visual S
 description: Разработка надстроек Office с помощью Visual Studio
 ms.date: 12/31/2019
 localization_priority: Priority
-ms.openlocfilehash: cf8ed9d47840115f22641d0c4b6c6426e3a01a11
-ms.sourcegitcommit: 19312a54f47a17988ffa86359218a504713f9f09
+ms.openlocfilehash: ae627b09b9160abc01deec6d52abeb922f02c833
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "44679260"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292829"
 ---
 # <a name="develop-office-add-ins-with-visual-studio"></a>Разработка надстроек Office с помощью Visual Studio
 
@@ -26,7 +26,7 @@ ms.locfileid: "44679260"
 - [Краткое руководство по началу работы с Word](../quickstarts/word-quickstart.md?tabs=visualstudio)
 - [Краткое руководство по началу работы с PowerPoint](../quickstarts/powerpoint-quickstart.md?tabs=visualstudio)
 
-В Visual Studio не поддерживается создание надстроек Office для OneNote и Project. Чтобы создать надстройки Office для любого из этих ведущих приложений потребуется использовать генератор Yeoman для надстроек Office, как описано в [кратком руководстве по началу работы с OneNote](../quickstarts/onenote-quickstart.md) и в [кратком руководстве по началу работы с Project](../quickstarts/project-quickstart.md).
+В Visual Studio не поддерживается создание надстроек Office для OneNote и Project. Чтобы создавать надстройки Office для любого из этих приложений, потребуется использовать генератор Yeoman для надстроек Office, как описано в [кратком руководстве по началу работы с OneNote](../quickstarts/onenote-quickstart.md) и в [кратком руководстве по началу работы с Project](../quickstarts/project-quickstart.md).
 
 ## <a name="develop-the-add-in-using-visual-studio"></a>Разработка надстройки с помощью Visual Studio
 
@@ -35,7 +35,7 @@ ms.locfileid: "44679260"
 > [!TIP]
 > Надстройка Office представляет собой веб-приложение, поэтому для изменения надстройки требуются базовые навыки веб-разработки. Если вы впервые работаете с JavaScript, рекомендуем прочесть [учебник Mozilla по JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction).
 
-Чтобы настроить надстройку, потребуется понять принципы, описанные в разделе [Основные принципы > Разработка](develop-overview.md) этой документации, а также принципы, описанные в соответствующем разделе документации ведущего приложения, для которого вы создаете надстройку (например, [Excel](../excel/index.yml)). 
+Чтобы настроить надстройку, вам нужно будет усвоить принципы, описанные в разделе [Основные принципы > Разработка](develop-overview.md) этой документации, а также принципы, описанные в соответствующем разделе документации приложения, для которого вы создаете надстройку (например, [Excel](../excel/index.yml)). 
 
 ## <a name="test-and-debug-the-add-in"></a>Тестирование и отладка надстройки
 

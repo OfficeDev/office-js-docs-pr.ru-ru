@@ -4,12 +4,12 @@ description: В этом руководстве вы создадите надс
 ms.date: 12/24/2019
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: b9c31e589369bdcc844e3c587d12e6a26406357b
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 4693b8a5a2f4bd7c63f76532585113db5b0805bb
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611052"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293382"
 ---
 # <a name="tutorial-create-a-powerpoint-task-pane-add-in"></a>Учебник: Создание надстройки области задач PowerPoint
 
@@ -268,7 +268,7 @@ ms.locfileid: "44611052"
 
 3. Обратите внимание на то, что область задач теперь содержит раздел верхнего колонтитула и заголовок и больше не содержит раздел нижнего колонтитула.
 
-    ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Insert Image" (Вставить изображение)](../images/powerpoint-tutorial-new-task-pane-ui.png)
+    ![Снимок экрана: надстройка PowerPoint с кнопкой "Вставить изображение"](../images/powerpoint-tutorial-new-task-pane-ui.png)
 
 4. В Visual Studio остановите работу надстройки, нажав клавиши **Shift + F5** или кнопку **Остановить**. PowerPoint автоматически закроется при остановке надстройки.
 
@@ -320,7 +320,7 @@ ms.locfileid: "44611052"
 
 3. В области задач нажмите кнопку **Insert Image** (Вставить изображение), чтобы добавить фотографию дня Bing на текущий слайд, и выберите макет слайда с текстовым полем для заголовка.
 
-    ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Insert Image" (Вставить изображение)](../images/powerpoint-tutorial-insert-image-slide-design.png)
+    ![Снимок экрана: PowerPoint с выделенным текущим слайдом и надстройка с выделенной кнопкой "Вставить изображение"](../images/powerpoint-tutorial-insert-image-slide-design.png)
 
 4. Установите курсор в текстовом поле на заглавном слайде и нажмите кнопку **Insert Text** (Вставить текст) в области задач, чтобы добавить текст.
 

@@ -1,15 +1,15 @@
 ---
-ms.date: 08/13/2020
+ms.date: 08/25/2020
 title: Настройка надстройки Excel для совместного использования среды выполнения браузера
 ms.prod: excel
 description: Настройте надстройку Excel, чтобы предоставить общий доступ к среде выполнения браузера и запускать код ленты, области задач и пользовательских функций в одной и той же среде выполнения.
 localization_priority: Priority
-ms.openlocfilehash: 573fa5f5c3fdee0fb6a4bc3844f98bb7b5f2046d
-ms.sourcegitcommit: 3efa932b70035dde922929d207896e1a6007f620
+ms.openlocfilehash: 08e4155b7f79101f8a61b323c623b5cb6b86decf
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "46757368"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292638"
 ---
 # <a name="configure-your-excel-add-in-to-use-a-shared-javascript-runtime"></a>Настройка надстройки Excel для использования общей среды выполнения JavaScript
 
@@ -93,7 +93,24 @@ yo office
    ...
    ```
 
-8. Сохраните изменения и перестройте проект.
+8. Убедитесь в том, что в файле taskpane.html есть тег `<script>`, ссылающийся на файл dist/functions.js. Ниже приведен пример.
+
+   ```html
+   <script type="text/javascript" src="/dist/functions.js" ></script>
+   ```
+
+   > [!NOTE]
+   > Если для вставки тегов сценариев надстройка использует Webpack и HtmlWebpackPlugin, как это делают надстройки, созданные генератором Yeoman (см. раздел [Создание проекта надстройки](#create-the-add-in-project) выше), то вам необходимо обеспечить включение модуля functions.js в массив `chunks`, как в следующем примере.
+   >
+   > ```javascript
+   > new HtmlWebpackPlugin({
+   >     filename: "taskpane.html",
+   >     template: "./src/taskpane/taskpane.html",
+   >     chunks: ["polyfill", "taskpane", “functions”]
+   > }),
+   >```
+
+9. Сохраните изменения и перестройте проект.
 
    ```command line
    npm run build

@@ -3,12 +3,12 @@ title: Требования к надстройкам Outlook
 description: Чтобы надстройки Outlook загружались и работали надлежащим образом, существует ряд требований к серверам и клиентам.
 ms.date: 07/07/2020
 localization_priority: Priority
-ms.openlocfilehash: 700e0efd2ab2655de61d37d42038fa2c15a99cb4
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 353c03fc0cdfe83c5f775df09dfb7c6b23cca191
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45093996"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47294005"
 ---
 # <a name="outlook-add-in-requirements"></a>Требования к надстройкам Outlook
 
@@ -16,7 +16,7 @@ ms.locfileid: "45093996"
 
 ## <a name="client-requirements"></a>Требования к клиентам
 
-- Клиент должен быть одним из поддерживаемых ведущих приложений для надстроек Outlook. Эти клиенты поддерживают надстройки:
+- Клиент должен быть одним из поддерживаемых приложений для надстроек Outlook. Эти клиенты поддерживают надстройки:
 
    - Outlook 2013 или более поздней версии для Windows
    - Outlook 2016 или более поздней версии для Mac
@@ -44,5 +44,5 @@ ms.locfileid: "45093996"
 ## <a name="see-also"></a>См. также
 
 - [Требования для запуска надстроек Office](../concepts/requirements-for-running-office-add-ins.md)
-- [Доступность ведущих приложений и платформ для надстроек Office (раздел Outlook)](../overview/office-add-in-availability.md#outlook)
+- [Доступность клиентских приложений и платформ Office для надстроек Office (раздел Outlook)](../overview/office-add-in-availability.md#outlook)
 - [Поддержка наборов обязательных элементов API JavaScript для Outlook](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients)

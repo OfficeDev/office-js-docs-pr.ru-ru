@@ -1,22 +1,22 @@
 ---
-title: Начните отсюда! Руководство для начинающих, делающих Office-надстройки
-description: Рекомендуемый путь для начинающих через учебные ресурсы для надстроек Office.
+title: Руководство для начинающих
+description: Рекомендуемый для начинающих путь, включающий использование учебных ресурсов для надстроек Office.
 ms.date: 04/16/2020
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: b62c7a5d2117c52f4bd3f91c1a2e1b735554028e
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: fd4f1902b196399e011631a7dabaecb59a8974f9
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44604504"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292470"
 ---
-# <a name="start-here-a-guide-for-beginners-making-office-add-ins"></a>Начните отсюда! Руководство для начинающих, делающих Office-надстройки
+# <a name="beginners-guide"></a>Руководство для начинающих
 
 Хотите начать создавать собственные кроссплатформенные расширения Office? Следующие шаги покажут вам, что читать в первую очередь, какие инструменты установить и какие учебные пособия рекомендуется выполнить.
 
 > [!NOTE]
-> Если у вас есть опыт создания надстроек VSTO для Office, рекомендуем сразу перейти к статье [Выполните переход! Руководство для авторов надстроек VSTO, создающих веб-надстройки Office](learning-path-transition.md), которая дополняет сведения, приведенные в этой статье.
+> Если у вас есть опыт создания надстроек VSTO для Office, рекомендуем сразу перейти к статье [Руководство для разработчиков надстроек VSTO](learning-path-transition.md), которая дополняет сведения, приведенные в этой статье.
 
 ## <a name="step-0-prerequisites"></a>Шаг 0. Необходимые условия
 

@@ -1,18 +1,18 @@
 ---
-title: Доступность ведущих приложений и платформ для надстроек Office
+title: Доступность клиентских приложений и платформ Office для надстроек Office
 description: Поддерживаемые наборы обязательных элементов для Excel, OneNote, Outlook, PowerPoint, Project и Word.
 ms.date: 07/10/2020
 localization_priority: Priority
-ms.openlocfilehash: 655009edc42a9daff84f20a6e0d0febf505f1601
-ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
+ms.openlocfilehash: 4b78b320e36f14c774c03fff56ddef7d369fb13c
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45159138"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292428"
 ---
-# <a name="office-add-in-host-and-platform-availability"></a>Доступность ведущих приложений и платформ для надстроек Office
+# <a name="office-client-application-and-platform-availability-for-office-add-ins"></a>Доступность клиентских приложений и платформ Office для надстроек Office
 
-Работа надстройки Office может зависеть от ведущего приложения Office, набора требований, элемента или версии API. В таблицах ниже представлены сведения о доступных платформах, точках расширения, наборах обязательных элементов API и общих API, которые в настоящее время поддерживаются для всех приложений Office.
+Работа надстройки Office может зависеть от приложения Office, набора требований, элемента или версии API. В таблицах ниже представлены сведения о доступных платформах, точках расширения, наборах обязательных элементов API и общих API, которые в настоящее время поддерживаются для всех приложений Office.
 
 > [!NOTE]
 > Исходный выпуск Office 2016, установленный с помощью MSI, содержит только набор обязательных элементов ExcelApi 1.1, WordApi 1.1 и наборы обязательных элементов общего API. Дополнительные сведения о журналах обновлений различных версий Office см. в разделе [См. также](#see-also).

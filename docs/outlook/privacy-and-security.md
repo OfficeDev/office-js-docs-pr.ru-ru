@@ -3,12 +3,12 @@ title: Конфиденциальность, разрешения и безоп�
 description: Узнайте, как управлять конфиденциальностью, разрешениями и безопасностью в надстройке Outlook.
 ms.date: 08/18/2020
 localization_priority: Priority
-ms.openlocfilehash: ab2bae004699b2e82fd74c4c320fb033dfc6c1b9
-ms.sourcegitcommit: e9f23a2857b90a7c17e3152292b548a13a90aa33
+ms.openlocfilehash: 8a95330059de39506a8f9ece6bdd10246b6c212d
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "46803767"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47294299"
 ---
 # <a name="privacy-permissions-and-security-for-outlook-add-ins"></a>Конфиденциальность, разрешения и безопасность для надстроек Outlook
 
@@ -173,6 +173,6 @@ ms.locfileid: "46803767"
 
 ## <a name="see-also"></a>Дополнительные ресурсы
 
-- [Конфиденциальность и безопасность надстроек для Office](../develop/privacy-and-security.md)
+- [Конфиденциальность и безопасность надстроек для Office](../concepts/privacy-and-security.md)
 - [API надстроек Outlook](apis.md)
 - [Ограничения для активации и API JavaScript для надстроек Outlook](limits-for-activation-and-javascript-api-for-outlook-add-ins.md)

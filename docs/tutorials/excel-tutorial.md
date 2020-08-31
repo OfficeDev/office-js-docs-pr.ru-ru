@@ -4,12 +4,12 @@ description: В этом руководстве вы создадите надс
 ms.date: 06/05/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 2e637bad83432f8adf94826b906dc68a57e02fa6
-ms.sourcegitcommit: 7d5407d3900d2ad1feae79a4bc038afe50568be0
+ms.openlocfilehash: d75655c1bb69209cf4cdb5925d04b6c3f84bb39f
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "46530508"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47293424"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -63,7 +63,7 @@ ms.locfileid: "46530508"
     <button class="ms-Button" id="create-table">Create Table</button><br/><br/>
     ```
 
-5. Откройте файл **./src/taskpane/taskpane.js**. Этот файл содержит код API JavaScript Office, который облегчает взаимодействие между областью задач и основным приложением Office.
+5. Откройте файл **./src/taskpane/taskpane.js**. Этот файл содержит код API JavaScript для Office, облегчающий взаимодействие между областью задач и клиентским приложением Office.
 
 6. Удалите все ссылки на кнопку`run` и функцию`run()`, выполнив следующие действия:
 
@@ -602,7 +602,7 @@ ms.locfileid: "46530508"
 
 1. Откройте файл **.\commands\commands.js**.
 
-2. Добавьте указанную ниже функцию сразу после функции `action`. Обратите внимание, что мы указываем параметр `args` для функции, а самая последняя строка функции вызывает `args.completed`. Это требование для всех команд надстройки типа **ExecuteFunction**. Это сигнализирует ведущему приложению Office о том, что работа функции завершена и пользовательский интерфейс снова может реагировать.
+2. Добавьте указанную ниже функцию сразу после функции `action`. Обратите внимание, что мы указываем параметр `args` для функции, а самая последняя строка функции вызывает `args.completed`. Это требование для всех команд надстройки типа **ExecuteFunction**. Это сигнализирует клиентскому приложению Office о том, что действие функции завершено и пользовательский интерфейс снова может реагировать.
 
     ```js
     function toggleProtection(args) {
@@ -721,18 +721,18 @@ ms.locfileid: "46530508"
 
 ### <a name="test-the-add-in"></a>Тестирование надстройки
 
-1. Закройте все приложения Office, в том числе Excel. 
+1. Закройте все приложения Office, в том числе Excel.
 
-2. Очистите кэш Office, удалив содержимое (все файлы и вложенные папки) папки кэша. Это необходимо, чтобы можно было полностью удалить старую версию надстройки из ведущего приложения.
+2. Очистите кэш Office, удалив содержимое (все файлы и вложенные папки) папки кэша. Это необходимо для полного удаления старой версии надстройки из
 
     - Для Windows: `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\`.
 
-    - Для Mac: `~/Library/Containers/com.Microsoft.OsfWebHost/Data/`. 
+    - Для Mac: `~/Library/Containers/com.Microsoft.OsfWebHost/Data/`.
     
         > [!NOTE]
         > Если эта папка не существует, проверьте наличие следующих папок и в случае их присутствия удалите содержимое папки:
-        >    - `~/Library/Containers/com.microsoft.{host}/Data/Library/Caches/`, где `{host}` — ведущее приложение Office (например, `Excel`)
-        >    - `~/Library/Containers/com.microsoft.{host}/Data/Library/Application Support/Microsoft/Office/16.0/Wef/`, где `{host}` — ведущее приложение Office (например, `Excel`)
+        >    - `~/Library/Containers/com.microsoft.{host}/Data/Library/Caches/`, где `{host}` — это приложение Office (например, `Excel`)
+        >    - `~/Library/Containers/com.microsoft.{host}/Data/Library/Application Support/Microsoft/Office/16.0/Wef/`, где `{host}` — это приложение Office (например, `Excel`)
         >    - `com.microsoft.Office365ServiceV2/Data/Caches/com.microsoft.Office365ServiceV2/`
         >    - `com.microsoft.Office365ServiceV2/Data/Library/Caches/com.microsoft.Office365ServiceV2/`
 
@@ -764,7 +764,7 @@ ms.locfileid: "46530508"
 
 ## <a name="open-a-dialog"></a>Открытие диалогового окна
 
-На данном заключительном этапе, указанном в руководстве, вы откроете диалоговое окно в своей надстройке, передадите сообщение из процесса диалогового окна в процесс области задач и закроете диалоговое окно. Диалоговые окна надстройки Office *не модальные*: пользователь может продолжать работать и с документом в ведущем приложении Office, и с главной страницей в области задач.
+На данном заключительном этапе, указанном в руководстве, вы откроете диалоговое окно в своей надстройке, передадите сообщение из процесса диалогового окна в процесс области задач и закроете диалоговое окно. Диалоговые окна надстройки Office *не модальные*: пользователь может продолжать работать и с документом в приложении Office, и с главной страницей в области задач.
 
 ### <a name="create-the-dialog-page"></a>Создание страницы диалогового окна
 
@@ -941,7 +941,7 @@ ms.locfileid: "46530508"
     var dialog = null;
     ```
 
-7. Добавьте следующую функцию в конец файла (после объявления `dialog`). Важно отметить, что в этом коде *отсутствует* вызов `Excel.run`. Это связано с тем, что API, открывающий диалоговое окно, совместно используется всеми ведущими приложениями Office, поэтому относится к общему API JavaScript для Office, а не API для Excel.
+7. Добавьте следующую функцию в конец файла (после объявления `dialog`). Важно отметить, что в этом коде *отсутствует* вызов `Excel.run`. Это связано с тем, что API, открывающий диалоговое окно, совместно используется всеми приложениями Office, поэтому относится к общему API JavaScript для Office, а не API для Excel.
 
     ```js
     function openDialog() {

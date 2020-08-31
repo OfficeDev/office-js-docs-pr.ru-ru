@@ -1,16 +1,16 @@
 ---
 title: Обзор создания кода с помощью API JavaScript для OneNote
 description: Узнайте об API OneNote JavaScript для надстроек OneNote в Интернете.
-ms.date: 03/18/2020
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: c26d2f929a1c32efa3b860ef6d15275ed1e1b8fb
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 86a388c2e8a89b97d82083964e0fcf120f310e66
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44607633"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47294061"
 ---
 # <a name="onenote-javascript-api-programming-overview"></a>Обзор создания кода с помощью API JavaScript для OneNote
 
@@ -26,20 +26,20 @@ ms.locfileid: "44607633"
 
 - **Манифест в формате XML**, в котором указан URL-адрес веб-страницы надстройки и все требования, необходимые для получения доступа, параметры и возможности для надстройки. Этот файл хранится на клиентском компьютере. Для надстроек OneNote используется такой же формат [манифеста](../develop/add-in-manifests.md), что и для других надстроек Office.
 
-**Надстройка Office = манифест + веб-страница**
+### <a name="office-add-in--manifest--webpage"></a>Надстройка Office = манифест + веб-страница
 
 ![Надстройка Office состоит из манифеста и веб-страницы](../images/onenote-add-in.png)
 
 ## <a name="using-the-javascript-api"></a>Использование API JavaScript
 
-Для доступа к API JavaScript надстройки используют контекст среды выполнения ведущего приложения. API состоит из двух указанных ниже уровней.
+Для доступа к API JavaScript надстройки используют контекст среды выполнения клиентского приложения. API состоит из двух указанных ниже уровней.
 
-- **API для определенных ведущих приложений** для связанных с OneNote операций, доступ к которому осуществляется с помощью объекта `Application`.
+- **API для определенных клиентских приложений** для связанных с OneNote операций, доступ к которому осуществляется с помощью объекта `Application`.
 - **Общий API**, используемый приложениями Office, доступ к которому осуществляется с помощью объекта `Document`.
 
-### <a name="accessing-the-host-specific-api-through-the-application-object"></a>Доступ к API для определенных ведущих приложений с помощью объекта *Application*
+### <a name="accessing-the-application-specific-api-through-the-application-object"></a>Доступ к API для определенных клиентских приложений с помощью объекта *Application*
 
-Для доступа к объектам OneNote, например к объектам **Notebook**, **Section** и **Page**, используйте объект `Application`. С помощью API для определенных ведущих приложений вы можете запустить пакетные операции на прокси-объектах. Основной процесс выглядит примерно так, как указано ниже.
+Для доступа к объектам OneNote, например к объектам **Notebook**, **Section** и **Page**, используйте объект `Application`. С помощью API для определенных клиентских приложений вы можете запустить пакетные операции на прокси-объектах. Основной процесс выглядит примерно так, как указано ниже.
 
 1. Получение экземпляра приложения из контекста.
 
@@ -52,7 +52,7 @@ ms.locfileid: "44607633"
 
 4. Чтобы запустить все поставленные в очередь команды в том порядке, в котором они находятся в очереди, вызовите метод `context.sync`. Этот метод синхронизирует состояния выполняющихся сценариев и реальных объектов, а также получает свойства загруженных объектов OneNote, которые необходимо использовать в сценарии. Вы можете использовать возвращенный объект обещания для связывания дополнительных действий в цепочку.
 
-Например:
+Например,
 
 ```js
 function getPagesInSection() {
@@ -86,16 +86,17 @@ function getPagesInSection() {
 }
 ```
 
+Дополнительные сведения о `load`/`sync`шаблонах и других распространенных практиках, используемых в API JavaScript для OneNote, см. в статье [Использование модели API, зависящей от приложений](../develop/application-specific-api-model.md).
+
 Сведения о поддерживаемых объектах и операциях OneNote см. в [справочнике по API](../reference/overview/onenote-add-ins-javascript-reference.md).
 
 #### <a name="onenote-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для OneNote
 
-Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли ведущее приложение Office необходимые API. Дополнительные сведения о наборах обязательных элементов API JavaScript для OneNote см. в статье [Наборы обязательных элементов API JavaScript для OneNote](../reference/requirement-sets/onenote-api-requirement-sets.md).
+Наборы требований — это именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли клиентское приложение Office необходимые API. Дополнительные сведения о наборах обязательных элементов API JavaScript для OneNote см. в статье [Наборы обязательных элементов API JavaScript для OneNote](../reference/requirement-sets/onenote-api-requirement-sets.md).
 
 ### <a name="accessing-the-common-api-through-the-document-object"></a>Получение доступа к общему API с помощью объекта *Document*
 
 Для доступа к общему API, например к методам [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) и [setSelectedDataAsync](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-), используйте объект `Document`.
-
 
 Например:  
 
@@ -124,15 +125,13 @@ function getSelectionFromPage() {
 | [Office.context.document.settings.set(имя, значение);](/javascript/api/office/office.settings#set-name--value-) | Параметры поддерживаются только контентными надстройками | 
 | [Office.EventType.DocumentSelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) ||
 
-Обычно общий API следует использовать, когда необходимые возможности не поддерживаются в API для определенных ведущих приложений. Дополнительные сведения об использовании общего API см. в статье [Общая объектная модель API JavaScript](../develop/office-javascript-api-object-model.md).
-
+Обычно общий API следует использовать, когда необходимые возможности не поддерживаются в API для определенных клиентских приложений. Дополнительные сведения об использовании общего API см. в статье [Общая объектная модель API JavaScript](../develop/office-javascript-api-object-model.md).
 
 <a name="om-diagram"></a>
 ## <a name="onenote-object-model-diagram"></a>Схема объектной модели OneNote 
 На схеме ниже показаны возможности, которые на данный момент доступны в API JavaScript для OneNote .
 
   ![Схема объектной модели OneNote](../images/onenote-om.png)
-
 
 ## <a name="see-also"></a>См. также
 

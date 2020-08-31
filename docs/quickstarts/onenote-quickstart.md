@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 07/07/2020
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: 6f057d650451d12e834d8f875f40d9d6d71ee4d7
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 1eaead7f44ee3615d5779a864399ce7a00b5915d
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45094157"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292323"
 ---
 # <a name="build-your-first-onenote-task-pane-add-in"></a>Создание первой надстройки области задач OneNote
 
@@ -42,7 +42,7 @@ ms.locfileid: "45094157"
 - Файл **./manifest.xml** в корневом каталоге проекта определяет настройки и возможности надстройки.
 - Файл **./src/taskpane/taskpane.html** содержит разметку HTML для области задач.
 - Файл **./src/taskpane/taskpane.css** содержит код CSS, который применяется к содержимому области задач.
-- Файл **./src/taskpane/taskpane.js** содержит код API JavaScript для Office, который упрощает взаимодействие между областью задач и ведущим приложением Office.
+- Файл **./src/taskpane/taskpane.js** содержит код API JavaScript для Office, который упрощает взаимодействие между областью задач и клиентским приложением Office.
 
 ## <a name="update-the-code"></a>Обновление кода
 

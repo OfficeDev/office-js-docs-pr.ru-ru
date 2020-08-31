@@ -4,12 +4,12 @@ description: В этом руководстве показано создани�
 ms.date: 07/07/2020
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 9ee851c9d479c15a0abce5228d89648d1268861b
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 03960f5de7e99ba4ffa52be5cd4f7fc896942b76
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45093513"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47294222"
 ---
 # <a name="tutorial-create-a-word-task-pane-add-in"></a>Учебник: Создание надстройки области задач Word
 
@@ -62,7 +62,7 @@ ms.locfileid: "45093513"
     <button class="ms-Button" id="insert-paragraph">Insert Paragraph</button><br/><br/>
     ```
 
-5. Откройте файл **./src/taskpane/taskpane.js**. Этот файл содержит код API JavaScript Office, который облегчает взаимодействие между областью задач и основным приложением Office.
+5. Откройте файл **./src/taskpane/taskpane.js**. Этот файл содержит код API JavaScript для Office, облегчающий взаимодействие между областью задач и клиентским приложением Office.
 
 6. Удалите все ссылки на кнопку`run` и функцию`run()`, выполнив следующие действия:
 

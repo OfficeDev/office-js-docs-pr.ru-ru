@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 04/03/2020
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: 31bfc87559550d865367f6430b980620e813bed8
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 9bab9c0c05ace89a1d5dc89b62108f34b49cf679
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608903"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47294341"
 ---
 # <a name="build-your-first-powerpoint-task-pane-add-in"></a>Создание первой надстройки области задач PowerPoint
 
@@ -242,7 +242,7 @@ ms.locfileid: "44608903"
 
 2. В PowerPoint вставьте новый пустой слайд, выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
-    ![Снимок экрана PowerPoint с выделенной кнопкой "Показать область задач"](../images/powerpoint_quickstart_addin_1.png)
+    ![Снимок экрана: PowerPoint с выделенной кнопкой ленты "Показать область задач"](../images/powerpoint_quickstart_addin_1.png)
 
 3. В области задач нажмите кнопку **Вставить изображение**, чтобы добавить изображение на выбранный слайд.
 
@@ -250,7 +250,7 @@ ms.locfileid: "44608903"
 
 4. В области задач нажмите кнопку **Вставить текст**, чтобы добавить текст к выбранному слайду.
 
-    ![Снимок экрана PowerPoint с изображением собаки и надписью "Hello World" на слайде](../images/powerpoint_quickstart_addin_3.png)
+    ![Снимок экрана: PowerPoint с изображением собаки и надписью "Hello World" на слайде](../images/powerpoint_quickstart_addin_3.png)
 
 [!include[Console tool note](../includes/console-tool-note.md)]
 

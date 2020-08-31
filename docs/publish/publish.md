@@ -3,12 +3,12 @@ title: Развертывание и публикация надстроек Off
 description: Методы и варианты развертывания надстройки Office для тестирования и распространения.
 ms.date: 06/02/2020
 localization_priority: Priority
-ms.openlocfilehash: 797abbde43e6172ba26f3dd4b128fb06f1e70bec
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 7792b2196b686f36b81869ce81a3e3b87659f1c2
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45094185"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292399"
 ---
 # <a name="deploy-and-publish-office-add-ins"></a>Развертывание и публикация надстроек Office
 
@@ -25,9 +25,9 @@ ms.locfileid: "45094185"
 
 [!INCLUDE [publish policies note](../includes/note-publish-policies.md)]
 
-## <a name="deployment-options-by-office-host-and-add-in-type"></a>Варианты развертывания по типам основных приложений и надстроек Office
+## <a name="deployment-options-by-office-application-and-add-in-type"></a>Варианты развертывания по типам приложений и надстроек Office
 
-Доступные варианты развертывания зависят от ведущего приложения Office и типа создаваемой надстройки.
+Доступные варианты развертывания зависят от приложения Office и типа создаваемой надстройки.
 
 ### <a name="deployment-options-for-word-excel-and-powerpoint-add-ins"></a>Варианты развертывания для надстроек Word, Excel и PowerPoint
 
@@ -87,4 +87,3 @@ ms.locfileid: "45094185"
 - [Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office](../testing/testing-and-troubleshooting.md)
 
 [AppSource]: /office/dev/store/submit-to-appsource-via-partner-center
-[Office Add-in host and platform availability]: ../overview/office-add-in-availability

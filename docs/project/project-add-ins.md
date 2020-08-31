@@ -5,12 +5,12 @@ ms.date: 09/26/2019
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 635fd01dd9aa5ea398b2679e925b5c58dd757782
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 1e471c53e39af8764840716d59a4d26719d3ac0a
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611920"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292407"
 ---
 # <a name="task-pane-add-ins-for-project"></a>Надстройки области задач для Project
 
@@ -104,7 +104,7 @@ Project стандартный 2013 и Project профессиональный 
   - Элемент **Version** указывает версию надстройки. Элемент **ProviderName** указывает название компании или имя разработчика, предоставивших надстройку. Элемент **DefaultLocale** указывает язык и региональные параметры по умолчанию для строк манифеста.
   - Элемент **DisplayName** представляет собой имя, отображаемое в раскрывающемся списке **Надстройка области задач** на вкладке **Вид** ленты Project 2013. Это значение может содержать до 32 символов.
   - Элемент **Description** содержит описание надстройки на языке по умолчанию. Это значение может содержать до 2000 символов.
-  - Элемент **Capabilities** содержит один или несколько дочерних элементов **Capability**, указывающих ведущее приложение.
+  - Элемент **Capabilities** содержит один или несколько дочерних элементов **Capability**, указывающих приложение Office.
   - Элемент **DefaultSettings** включает в себя элемент **SourceLocation**, который указывает путь к HTML-файлу в общей папке или URL-адрес веб-страницы, используемой надстройкой. Надстройка области задач игнорирует элементы **RequestedHeight** и **RequestedWidth**.
   - Элемент **IconUrl** является необязательным. Он может быть значком в общей папке или URL-адресом значка в веб-приложении.
 
