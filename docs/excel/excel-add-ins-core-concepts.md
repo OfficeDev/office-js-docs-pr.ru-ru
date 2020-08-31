@@ -1,182 +1,202 @@
 ---
 title: Основные концепции программирования с помощью API JavaScript для Excel
 description: Создание надстроек для Excel с помощью API JavaScript для Excel.
-ms.date: 07/13/2020
+ms.date: 07/28/2020
 localization_priority: Priority
-ms.openlocfilehash: 01e5fa1037719e89eed70f00e63431bbd445c213
-ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
+ms.openlocfilehash: dde7dc66e0746fc4d9cf91ed3df824fab05c109d
+ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45159418"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47292604"
 ---
-# <a name="fundamental-programming-concepts-with-the-excel-javascript-api"></a><span data-ttu-id="668bd-103">Основные концепции программирования с помощью API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="668bd-103">Fundamental programming concepts with the Excel JavaScript API</span></span>
+# <a name="fundamental-programming-concepts-with-the-excel-javascript-api"></a><span data-ttu-id="e5991-103">Основные концепции программирования с помощью API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="e5991-103">Fundamental programming concepts with the Excel JavaScript API</span></span>
 
-<span data-ttu-id="668bd-104">В этой статье описано, как создавать надстройки для Excel 2016 или более поздней версии с помощью [API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md).</span><span class="sxs-lookup"><span data-stu-id="668bd-104">This article describes how to use the [Excel JavaScript API](../reference/overview/excel-add-ins-reference-overview.md) to build add-ins for Excel 2016 or later.</span></span> <span data-ttu-id="668bd-105">В статье изложены основные принципы, которые являются фундаментальными при использовании этого API, а также имеются рекомендации по выполнению определенных задач, например чтению данных из большого диапазона или записи данных в него, изменения всех ячеек в диапазоне и много другого.</span><span class="sxs-lookup"><span data-stu-id="668bd-105">It introduces core concepts that are fundamental to using the API and provides guidance for performing specific tasks such as reading or writing to a large range, updating all cells in range, and more.</span></span>
+<span data-ttu-id="e5991-104">В этой статье описано, как создавать надстройки для Excel 2016 или более поздней версии с помощью [API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md).</span><span class="sxs-lookup"><span data-stu-id="e5991-104">This article describes how to use the [Excel JavaScript API](../reference/overview/excel-add-ins-reference-overview.md) to build add-ins for Excel 2016 or later.</span></span> <span data-ttu-id="e5991-105">В статье изложены основные принципы, которые являются фундаментальными при использовании этого API, а также имеются рекомендации по выполнению определенных задач, например чтению данных из большого диапазона или записи данных в него, изменения всех ячеек в диапазоне и много другого.</span><span class="sxs-lookup"><span data-stu-id="e5991-105">It introduces core concepts that are fundamental to using the API and provides guidance for performing specific tasks such as reading or writing to a large range, updating all cells in range, and more.</span></span>
 
-## <a name="asynchronous-nature-of-excel-apis"></a><span data-ttu-id="668bd-106">Асинхронный характер API Excel</span><span class="sxs-lookup"><span data-stu-id="668bd-106">Asynchronous nature of Excel APIs</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="e5991-106">Сведения об асинхронном типе интерфейсов API Excel и принципах их работы с книгой см. в статье [Использование модели API, зависящей от приложения](../develop/application-specific-api-model.md).</span><span class="sxs-lookup"><span data-stu-id="e5991-106">See [Using the application-specific API model](../develop/application-specific-api-model.md) to learn about the asynchronous nature of the Excel APIs and how they work with the workbook.</span></span>  
 
-<span data-ttu-id="668bd-p102">Веб-надстройки Excel работают в контейнере браузера, внедренном в приложение Office на платформах для настольных ПК, например Office для Windows, и работающем в iFrame HTML в Office в Интернете. API Office.js не может синхронно взаимодействовать с ведущим приложением Excel на всех поддерживаемых платформах из соображений производительности. Таким образом, при вызове API `sync()` в Office.js возвращается [обещание](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise), которое разрешается, когда приложение Excel выполняет запрошенные действия чтения или записи. Кроме того, вы можете поместить в очередь несколько действий, например для настройки свойств или вызова методов, а затем запустить их в виде пакета команд в одном вызове метода `sync()`, а не отправлять отдельные запросы для каждого действия. В следующих разделах описано, как сделать это, используя API `Excel.run()` и `sync()`.</span><span class="sxs-lookup"><span data-stu-id="668bd-p102">The web-based Excel add-ins run inside a browser container that is embedded within the Office application on desktop-based platforms such as Office on Windows and runs inside an HTML iFrame in Office on the web. Enabling the Office.js API to interact synchronously with the Excel host across all supported platforms is not feasible due to performance considerations. Therefore, the `sync()` API call in Office.js returns a [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is resolved when the Excel application completes the requested read or write actions. Also, you can queue up multiple actions, such as setting properties or invoking methods, and run them as a batch of commands with a single call to `sync()`, rather than sending a separate request for each action. The following sections describe how to accomplish this using the `Excel.run()` and `sync()` APIs.</span></span>
+## <a name="officejs-apis-for-excel"></a><span data-ttu-id="e5991-107">Интерфейсы API Office.js для Excel</span><span class="sxs-lookup"><span data-stu-id="e5991-107">Office.js APIs for Excel</span></span>
 
-## <a name="excelrun"></a><span data-ttu-id="668bd-112">Excel.run</span><span class="sxs-lookup"><span data-stu-id="668bd-112">Excel.run</span></span>
+<span data-ttu-id="e5991-108">Надстройка Excel взаимодействует с объектами в Excel с помощью API JavaScript для Office, включающего две объектных модели JavaScript:</span><span class="sxs-lookup"><span data-stu-id="e5991-108">An Excel add-in interacts with objects in Excel by using the Office JavaScript API, which includes two JavaScript object models:</span></span>
 
-<span data-ttu-id="668bd-p103">`Excel.run` выполняет функцию, в которой вы указываете действия, которые необходимо совершить над объектной моделью Excel. `Excel.run` автоматически создает контекст запроса, который вы можете использовать для взаимодействия с объектами Excel. Когда `Excel.run` завершает работу, обещание разрешается, и все объекты, которые были выделены в среде выполнения, будут автоматически разблокированы.</span><span class="sxs-lookup"><span data-stu-id="668bd-p103">`Excel.run` executes a function where you specify the actions to perform against the Excel object model. `Excel.run` automatically creates a request context that you can use to interact with Excel objects. When `Excel.run` completes, a promise is resolved, and any objects that were allocated at runtime are automatically released.</span></span>
+* <span data-ttu-id="e5991-109">**API JavaScript для Excel**. Появившийся в Office 2016 [API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к листам, диапазонам, таблицам, диаграммам и другим объектам.</span><span class="sxs-lookup"><span data-stu-id="e5991-109">**Excel JavaScript API**: Introduced with Office 2016, the [Excel JavaScript API](../reference/overview/excel-add-ins-reference-overview.md) provides strongly-typed objects that you can use to access worksheets, ranges, tables, charts, and more.</span></span>
 
-<span data-ttu-id="668bd-p104">В примере ниже показано, как использовать `Excel.run`. Оператор catch перехватывает и записывает ошибки, возникающие в `Excel.run`, в журнал.</span><span class="sxs-lookup"><span data-stu-id="668bd-p104">The following example shows how to use `Excel.run`. The catch statement catches and logs errors that occur within the `Excel.run`.</span></span>
+* <span data-ttu-id="e5991-110">**Общие API**. Появившиеся в Office 2013 [общие API](/javascript/api/office) можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office.</span><span class="sxs-lookup"><span data-stu-id="e5991-110">**Common APIs**: Introduced with Office 2013, the [Common API](/javascript/api/office) can be used to access features such as UI, dialogs, and client settings that are common across multiple types of Office applications.</span></span>
+
+<span data-ttu-id="e5991-111">Скорее всего, вы будете разрабатывать большую часть функций надстроек для Excel 2016 или более поздней версии с помощью API JavaScript для Excel, но вам также потребуются объекты из общего API.</span><span class="sxs-lookup"><span data-stu-id="e5991-111">While you'll likely use the Excel JavaScript API to develop the majority of functionality in add-ins that target Excel 2016 or later, you'll also use objects in the Common API.</span></span> <span data-ttu-id="e5991-112">Например:</span><span class="sxs-lookup"><span data-stu-id="e5991-112">For example:</span></span>
+
+* <span data-ttu-id="e5991-p103">[Context](/javascript/api/office/office.context). Объект `Context` представляет среду выполнения надстройки и предоставляет доступ к ключевым объектам API. Он состоит из данных конфигурации книги, например `contentLanguage` и `officeTheme`, а также предоставляет сведения о среде выполнения надстройки, например `host` и `platform`. Кроме того, он предоставляет метод `requirements.isSetSupported()`, с помощью которого можно проверить, поддерживается ли указанный набор обязательных элементов приложением Excel, в котором работает надстройка.</span><span class="sxs-lookup"><span data-stu-id="e5991-p103">[Context](/javascript/api/office/office.context): The `Context` object represents the runtime environment of the add-in and provides access to key objects of the API. It consists of workbook configuration details such as `contentLanguage` and `officeTheme` and also provides information about the add-in's runtime environment such as `host` and `platform`. Additionally, it provides the `requirements.isSetSupported()` method, which you can use to check whether the specified requirement set is supported by the Excel application where the add-in is running.</span></span>
+* <span data-ttu-id="e5991-116">[Document](/javascript/api/office/office.document). Объект `Document` предоставляет метод `getFileAsync()`, позволяющий скачать файл Excel, в котором работает надстройка.</span><span class="sxs-lookup"><span data-stu-id="e5991-116">[Document](/javascript/api/office/office.document): The `Document` object provides the `getFileAsync()` method, which you can use to download the Excel file where the add-in is running.</span></span>
+
+<span data-ttu-id="e5991-117">На рисунке ниже показано, когда можно использовать API JavaScript для Excel или общие API.</span><span class="sxs-lookup"><span data-stu-id="e5991-117">The following image illustrates when you might use the Excel JavaScript API or the Common APIs.</span></span>
+
+![Изображение различий между API JS для Excel и общими API](../images/excel-js-api-common-api.png)
+
+## <a name="object-model"></a><span data-ttu-id="e5991-119">Объектная модель</span><span class="sxs-lookup"><span data-stu-id="e5991-119">Object model</span></span>
+
+<span data-ttu-id="e5991-120">Чтобы понять API-интерфейсы Excel, вы должны понимать, как компоненты рабочей книги связаны друг с другом.</span><span class="sxs-lookup"><span data-stu-id="e5991-120">To understand the Excel APIs, you must understand how the components of a workbook are related to one another.</span></span>
+
+* <span data-ttu-id="e5991-121">**Рабочая книга** содержит одну или несколько **рабочих листов**.</span><span class="sxs-lookup"><span data-stu-id="e5991-121">A **Workbook** contains one or more **Worksheets**.</span></span>
+* <span data-ttu-id="e5991-122">**Рабочий лист** предоставляет доступ к ячейкам через объекты **Range**.</span><span class="sxs-lookup"><span data-stu-id="e5991-122">A **Worksheet** gives access to cells through **Range** objects.</span></span>
+* <span data-ttu-id="e5991-123">**Range** представляет группу смежных клеток.</span><span class="sxs-lookup"><span data-stu-id="e5991-123">A **Range** represents a group of contiguous cells.</span></span>
+* <span data-ttu-id="e5991-124">**Диапазоны** используются для создания и размещения **таблиц**, **диаграмм**, **фигур** и других объектов визуализации данных или организации.</span><span class="sxs-lookup"><span data-stu-id="e5991-124">**Ranges** are used to create and place **Tables**, **Charts**, **Shapes**, and other data visualization or organization objects.</span></span>
+* <span data-ttu-id="e5991-125">**Рабочий лист** содержит коллекции тех объектов данных, которые присутствуют на отдельном листе.</span><span class="sxs-lookup"><span data-stu-id="e5991-125">A **Worksheet** contains collections of those data objects that are present in the individual sheet.</span></span>
+* <span data-ttu-id="e5991-126">**Рабочие книги** содержат коллекции некоторых из этих объектов данных (таких как **таблицы**) для всей **рабочей книги**.</span><span class="sxs-lookup"><span data-stu-id="e5991-126">**Workbooks** contain collections of some of those data objects (such as **Tables**) for the entire **Workbook**.</span></span>
+
+### <a name="ranges"></a><span data-ttu-id="e5991-127">Диапазоны</span><span class="sxs-lookup"><span data-stu-id="e5991-127">Ranges</span></span>
+
+<span data-ttu-id="e5991-128">Диапазон - это группа непрерывных ячеек в рабочей книге.</span><span class="sxs-lookup"><span data-stu-id="e5991-128">A range is a group of contiguous cells in the workbook.</span></span> <span data-ttu-id="e5991-129">В надстройках обычно используется нотация в стиле A1 (например, **B3** для отдельной ячейки в столбце **B** и строке **3** или **C2:F4** для ячеек из столбцов с **C** по **F** и строк с **2** по **4**) для определения диапазонов.</span><span class="sxs-lookup"><span data-stu-id="e5991-129">Add-ins typically use A1-style notation (e.g. **B3** for the single cell in column **B** and row **3** or **C2:F4** for the cells from columns **C** through **F** and rows **2** through **4**) to define ranges.</span></span>
+
+<span data-ttu-id="e5991-130">Диапазоны имеют три основных свойства: `values`, `formulas`, и `format`.</span><span class="sxs-lookup"><span data-stu-id="e5991-130">Ranges have three core properties: `values`, `formulas`, and `format`.</span></span> <span data-ttu-id="e5991-131">Эти свойства получают или устанавливают значения ячеек, формулы для оценки и визуальное форматирование ячеек.</span><span class="sxs-lookup"><span data-stu-id="e5991-131">These properties get or set the cell values, formulas to be evaluated, and the visual formatting of the cells.</span></span>
+
+#### <a name="range-sample"></a><span data-ttu-id="e5991-132">Образец диапазона</span><span class="sxs-lookup"><span data-stu-id="e5991-132">Range sample</span></span>
+
+<span data-ttu-id="e5991-133">В следующем примере показано, как создавать записи продаж.</span><span class="sxs-lookup"><span data-stu-id="e5991-133">The following sample shows how to create sales records.</span></span> <span data-ttu-id="e5991-134">Эта функция использует объекты `Range` для установки значений, формул и форматов.</span><span class="sxs-lookup"><span data-stu-id="e5991-134">This function uses `Range` objects to set the values, formulas, and formats.</span></span>
 
 ```js
 Excel.run(function (context) {
-    // You can use the Excel JavaScript API here in the batch function
-    // to execute actions on the Excel object model.
-    console.log('Your code goes here.');
-}).catch(function (error) {
-    console.log('error: ' + error);
-    if (error instanceof OfficeExtension.Error) {
-        console.log('Debug info: ' + JSON.stringify(error.debugInfo));
-    }
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+
+    // Create the headers and format them to stand out.
+    var headers = [
+      ["Product", "Quantity", "Unit Price", "Totals"]
+    ];
+    var headerRange = sheet.getRange("B2:E2");
+    headerRange.values = headers;
+    headerRange.format.fill.color = "#4472C4";
+    headerRange.format.font.color = "white";
+
+    // Create the product data rows.
+    var productData = [
+      ["Almonds", 6, 7.5],
+      ["Coffee", 20, 34.5],
+      ["Chocolate", 10, 9.56],
+    ];
+    var dataRange = sheet.getRange("B3:D5");
+    dataRange.values = productData;
+
+    // Create the formulas to total the amounts sold.
+    var totalFormulas = [
+      ["=C3 * D3"],
+      ["=C4 * D4"],
+      ["=C5 * D5"],
+      ["=SUM(E3:E5)"]
+    ];
+    var totalRange = sheet.getRange("E3:E6");
+    totalRange.formulas = totalFormulas;
+    totalRange.format.font.bold = true;
+
+    // Display the totals as US dollar amounts.
+    totalRange.numberFormat = [["$0.00"]];
+
+    return context.sync();
 });
 ```
 
-### <a name="run-options"></a><span data-ttu-id="668bd-118">Параметры выполнения</span><span class="sxs-lookup"><span data-stu-id="668bd-118">Run options</span></span>
+<span data-ttu-id="e5991-135">В этом примере создаются следующие данные в текущем листе:</span><span class="sxs-lookup"><span data-stu-id="e5991-135">This sample creates the following data in the current worksheet:</span></span>
 
-<span data-ttu-id="668bd-119">`Excel.run` есть перегрузка, получающая объект [RunOptions](/javascript/api/excel/excel.runoptions).</span><span class="sxs-lookup"><span data-stu-id="668bd-119">`Excel.run` has an overload that takes in a [RunOptions](/javascript/api/excel/excel.runoptions) object.</span></span> <span data-ttu-id="668bd-120">Он содержит набор свойств, влияющих на поведение платформы при выполнении функции.</span><span class="sxs-lookup"><span data-stu-id="668bd-120">This contains a set of properties that affect platform behavior when the function runs.</span></span> <span data-ttu-id="668bd-121">Ниже перечислены поддерживаемые в настоящее время свойства.</span><span class="sxs-lookup"><span data-stu-id="668bd-121">The following property is currently supported:</span></span>
+![Запись о продажах, показывающая строки значений, столбец формулы и отформатированные заголовки.](../images/excel-overview-range-sample.png)
 
-- <span data-ttu-id="668bd-122">`delayForCellEdit`: определяет, откладывает ли Excel пакетный запрос до выхода пользователя из режима правки ячейки.</span><span class="sxs-lookup"><span data-stu-id="668bd-122">`delayForCellEdit`: Determines whether Excel delays the batch request until the user exits cell edit mode.</span></span> <span data-ttu-id="668bd-123">Если присвоено значение **true**, пакетный запрос откладывается и запускается, когда пользователь выходит из режима правки ячейки.</span><span class="sxs-lookup"><span data-stu-id="668bd-123">When **true**, the batch request is delayed and runs when the user exits cell edit mode.</span></span> <span data-ttu-id="668bd-124">Если присвоено значение **false**, происходит автоматический сбой пакетного запроса, если пользователь находится в режиме правки ячейки (приводит к ошибке обращения к пользователю).</span><span class="sxs-lookup"><span data-stu-id="668bd-124">When **false**, the batch request automatically fails if the user is in cell edit mode (causing an error to reach the user).</span></span> <span data-ttu-id="668bd-125">Поведение по умолчанию при отсутствии заданного свойства `delayForCellEdit` аналогично поведению при значении **false**.</span><span class="sxs-lookup"><span data-stu-id="668bd-125">The default behavior with no `delayForCellEdit` property specified is equivalent to when it is **false**.</span></span>
+### <a name="charts-tables-and-other-data-objects"></a><span data-ttu-id="e5991-137">Диаграммы, таблицы и другие объекты данных</span><span class="sxs-lookup"><span data-stu-id="e5991-137">Charts, tables, and other data objects</span></span>
+
+<span data-ttu-id="e5991-138">API JavaScript для Excel могут создавать и управлять структурами данных и визуализациями в Excel.</span><span class="sxs-lookup"><span data-stu-id="e5991-138">The Excel JavaScript APIs can create and manipulate the data structures and visualizations within Excel.</span></span> <span data-ttu-id="e5991-139">Таблицы и диаграммы являются двумя наиболее часто используемыми объектами, но API поддерживают сводные таблицы, фигуры, изображения и многое другое.</span><span class="sxs-lookup"><span data-stu-id="e5991-139">Tables and charts are two of the more commonly used objects, but the APIs support PivotTables, shapes, images, and more.</span></span>
+
+#### <a name="creating-a-table"></a><span data-ttu-id="e5991-140">Создание таблицы</span><span class="sxs-lookup"><span data-stu-id="e5991-140">Creating a table</span></span>
+
+<span data-ttu-id="e5991-141">Создавайте таблицы, используя заполненные данными диапазоны.</span><span class="sxs-lookup"><span data-stu-id="e5991-141">Create tables by using data-filled ranges.</span></span> <span data-ttu-id="e5991-142">Элементы управления форматированием и таблицами (например, фильтры) автоматически применяются к диапазону.</span><span class="sxs-lookup"><span data-stu-id="e5991-142">Formatting and table controls (such as filters) are automatically applied to the range.</span></span>
+
+<span data-ttu-id="e5991-143">В следующем примере создается таблица с использованием диапазонов из предыдущего примера.</span><span class="sxs-lookup"><span data-stu-id="e5991-143">The following sample creates a table using the ranges from the previous sample.</span></span>
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+    sheet.tables.add("B2:E5", true);
+    return context.sync();
+});
+```
+
+<span data-ttu-id="e5991-144">Использование этого примера кода на листе с предыдущими данными создает следующую таблицу:</span><span class="sxs-lookup"><span data-stu-id="e5991-144">Using this sample code on the worksheet with the previous data creates the following table:</span></span>
+
+![Таблица сделана из предыдущего рекорда продаж.](../images/excel-overview-table-sample.png)
+
+#### <a name="creating-a-chart"></a><span data-ttu-id="e5991-146">Создание диаграммы</span><span class="sxs-lookup"><span data-stu-id="e5991-146">Creating a chart</span></span>
+
+<span data-ttu-id="e5991-147">Создайте диаграммы для визуализации данных в диапазоне.</span><span class="sxs-lookup"><span data-stu-id="e5991-147">Create charts to visualize the data in a range.</span></span> <span data-ttu-id="e5991-148">API поддерживают десятки разновидностей диаграмм, каждая из которых может быть настроена в соответствии с вашими потребностями.</span><span class="sxs-lookup"><span data-stu-id="e5991-148">The APIs support dozens of chart varieties, each of which can be customized to suit your needs.</span></span>
+
+<span data-ttu-id="e5991-149">В следующем примере создается простая гистограмма для трех элементов, которая размещается на 100 пикселей ниже верхней части листа.</span><span class="sxs-lookup"><span data-stu-id="e5991-149">The following sample creates a simple column chart for three items and places it 100 pixels below the top of the worksheet.</span></span>
+
+```js
+Excel.run(function (context) {
+    var sheet = context.workbook.worksheets.getActiveWorksheet();
+    var chart = sheet.charts.add(Excel.ChartType.columnStacked, sheet.getRange("B3:C5"));
+    chart.top = 100;
+    return context.sync();
+});
+```
+
+<span data-ttu-id="e5991-150">Выполнение этого примера на листе с предыдущей таблицей создает следующую диаграмму:</span><span class="sxs-lookup"><span data-stu-id="e5991-150">Running this sample on the worksheet with the previous table creates the following chart:</span></span>
+
+![Гистограмма, показывающая количества трех элементов из предыдущей записи о продажах.](../images/excel-overview-chart-sample.png)
+
+## <a name="run-options"></a><span data-ttu-id="e5991-152">Параметры выполнения</span><span class="sxs-lookup"><span data-stu-id="e5991-152">Run options</span></span>
+
+<span data-ttu-id="e5991-153">`Excel.run` есть перегрузка, получающая объект [RunOptions](/javascript/api/excel/excel.runoptions).</span><span class="sxs-lookup"><span data-stu-id="e5991-153">`Excel.run` has an overload that takes in a [RunOptions](/javascript/api/excel/excel.runoptions) object.</span></span> <span data-ttu-id="e5991-154">Он содержит набор свойств, влияющих на поведение платформы при выполнении функции.</span><span class="sxs-lookup"><span data-stu-id="e5991-154">This contains a set of properties that affect platform behavior when the function runs.</span></span> <span data-ttu-id="e5991-155">Ниже перечислены поддерживаемые в настоящее время свойства.</span><span class="sxs-lookup"><span data-stu-id="e5991-155">The following property is currently supported:</span></span>
+
+* <span data-ttu-id="e5991-156">`delayForCellEdit`: определяет, откладывает ли Excel пакетный запрос до выхода пользователя из режима правки ячейки.</span><span class="sxs-lookup"><span data-stu-id="e5991-156">`delayForCellEdit`: Determines whether Excel delays the batch request until the user exits cell edit mode.</span></span> <span data-ttu-id="e5991-157">Если присвоено значение **true**, пакетный запрос откладывается и запускается, когда пользователь выходит из режима правки ячейки.</span><span class="sxs-lookup"><span data-stu-id="e5991-157">When **true**, the batch request is delayed and runs when the user exits cell edit mode.</span></span> <span data-ttu-id="e5991-158">Если присвоено значение **false**, происходит автоматический сбой пакетного запроса, если пользователь находится в режиме правки ячейки (приводит к ошибке обращения к пользователю).</span><span class="sxs-lookup"><span data-stu-id="e5991-158">When **false**, the batch request automatically fails if the user is in cell edit mode (causing an error to reach the user).</span></span> <span data-ttu-id="e5991-159">Поведение по умолчанию при отсутствии заданного свойства `delayForCellEdit` аналогично поведению при значении **false**.</span><span class="sxs-lookup"><span data-stu-id="e5991-159">The default behavior with no `delayForCellEdit` property specified is equivalent to when it is **false**.</span></span>
 
 ```js
 Excel.run({ delayForCellEdit: true }, function (context) { ... })
 ```
 
-## <a name="request-context"></a><span data-ttu-id="668bd-126">Контекст запроса</span><span class="sxs-lookup"><span data-stu-id="668bd-126">Request context</span></span>
+## <a name="null-or-blank-property-values"></a><span data-ttu-id="e5991-160">Значения null или пустые значения свойств</span><span class="sxs-lookup"><span data-stu-id="e5991-160">null or blank property values</span></span>
 
-<span data-ttu-id="668bd-p107">Excel и ваша надстройка запускаются как два отдельных процесса. Так как они используют разные среды выполнения, надстройкам Excel требуется объект `RequestContext`, чтобы можно было подключать надстройку к объектам в Excel, например к листам, диапазонам, диаграммам и таблицам.</span><span class="sxs-lookup"><span data-stu-id="668bd-p107">Excel and your add-in run in two different processes. Since they use different runtime environments, Excel add-ins require a `RequestContext` object in order to connect your add-in to objects in Excel such as worksheets, ranges, charts, and tables.</span></span>
+<span data-ttu-id="e5991-161">Значения `null` и пустые строки имеют специальные применения в API JavaScript для Excel.</span><span class="sxs-lookup"><span data-stu-id="e5991-161">`null` and empty strings have special implications in the Excel JavaScript APIs.</span></span> <span data-ttu-id="e5991-162">Они используются для представления пустых ячеек, отсутствия форматирования или значений по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="e5991-162">They're used to represent empty cells, no formatting, or default values.</span></span> <span data-ttu-id="e5991-163">В этом разделе описано использование значения `null` и пустой строки при получении и настройке свойств.</span><span class="sxs-lookup"><span data-stu-id="e5991-163">This section details the use of `null` and empty string when getting and setting properties.</span></span>
 
-## <a name="proxy-objects"></a><span data-ttu-id="668bd-129">Прокси-объекты</span><span class="sxs-lookup"><span data-stu-id="668bd-129">Proxy objects</span></span>
+### <a name="null-input-in-2-d-array"></a><span data-ttu-id="e5991-164">Входное значение null в двумерном массиве</span><span class="sxs-lookup"><span data-stu-id="e5991-164">null input in 2-D Array</span></span>
 
-<span data-ttu-id="668bd-p108">Объекты JavaScript в Excel, которые вы объявляете и используете в надстройке, представляют собой прокси-объекты. Все методы, которые вы вызываете, либо свойства, которые вы настраиваете либо загружаете, в прокси-объектах просто добавляются в очередь команд, ожидающих выполнения. Когда вы вызываете метод `sync()` в контексте запроса (например, `context.sync()`), команды, помещенные в очередь, передаются в Excel и выполняются. По существу, API JavaScript для Excel ориентирован на работу с пакетами. Вы можете поместить в очередь любое количество изменений в контексте запроса, а затем вызвать метод `sync()`, чтобы запустить пакет команд, помещенных в очередь.</span><span class="sxs-lookup"><span data-stu-id="668bd-p108">The Excel JavaScript objects that you declare and use in an add-in are proxy objects. Any methods that you invoke or properties that you set or load on proxy objects are simply added to a queue of pending commands. When you call the `sync()` method on the request context (for example, `context.sync()`), the queued commands are dispatched to Excel and run. The Excel JavaScript API is fundamentally batch-centric. You can queue up as many changes as you wish on the request context, and then call the `sync()` method to run the batch of queued commands.</span></span>
+<span data-ttu-id="e5991-p113">В Excel диапазон представлен двумерным массивом, в котором первое измерение — это строки, а второе — столбцы. Чтобы задать значения, формат чисел или формулу только для определенных ячеек в диапазоне, укажите значения, формат чисел или формулу для этих ячеек в двумерном массиве, а для всех остальных ячеек в этом массиве укажите значение `null`.</span><span class="sxs-lookup"><span data-stu-id="e5991-p113">In Excel, a range is represented by a 2-D array, where the first dimension is rows and the second dimension is columns. To set values, number format, or formula for only specific cells within a range, specify the values, number format, or formula for those cells in the 2-D array, and specify `null` for all other cells in the 2-D array.</span></span>
 
-<span data-ttu-id="668bd-p109">Например, во фрагменте кода ниже показано, как объявить локальный объект JavaScript `selectedRange` для ссылки на выделенный диапазон в документе Excel, а затем задать ряд свойств для этого объекта. Объект `selectedRange` представляет собой прокси-объект, поэтому свойства, заданные в этом объекте, и методы, вызванные в этом объекте, не будут отображены в документе Excel, пока надстройка не вызовет метод `context.sync()`.</span><span class="sxs-lookup"><span data-stu-id="668bd-p109">For example, the following code snippet declares the local JavaScript object `selectedRange` to reference a selected range in the Excel document, and then sets some properties on that object. The `selectedRange` object is a proxy object, so the properties that are set and method that is invoked on that object will not be reflected in the Excel document until your add-in calls `context.sync()`.</span></span>
-
-```js
-var selectedRange = context.workbook.getSelectedRange();
-selectedRange.format.fill.color = "#4472C4";
-selectedRange.format.font.color = "white";
-selectedRange.format.autofitColumns();
-```
-
-### <a name="sync"></a><span data-ttu-id="668bd-137">sync()</span><span class="sxs-lookup"><span data-stu-id="668bd-137">sync()</span></span>
-
-<span data-ttu-id="668bd-p110">При вызове метода `sync()` в контексте запроса будет синхронизировано состояние прокси-объектов и объектов в документе Excel. Метод `sync()` запускает любые команды, помещенные в очередь в контексте запроса, и получает значения для любых свойств, которые следует загрузить, в прокси-объектах. Метод `sync()` выполняется асинхронно и возвращает [обещание](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise), которое разрешается по завершении работы метода `sync()`.</span><span class="sxs-lookup"><span data-stu-id="668bd-p110">Calling the `sync()` method on the request context synchronizes the state between proxy objects and objects in the Excel document. The `sync()` method runs any commands that are queued on the request context and retrieves values for any properties that should be loaded on the proxy objects. The `sync()` method executes asynchronously and returns a [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise), which is resolved when the `sync()` method completes.</span></span>
-
-<span data-ttu-id="668bd-141">В примере ниже показана пакетная функция, которая определяет локальный прокси-объект JavaScript (`selectedRange`), загружает свойство этого объекта, а затем использует шаблон JavaScript Promises для вызова метода `context.sync()` и, соответственно, синхронизации состояния прокси-объектов и объектов в документе Excel.</span><span class="sxs-lookup"><span data-stu-id="668bd-141">The following example shows a batch function that defines a local JavaScript proxy object (`selectedRange`), loads a property of that object, and then uses the JavaScript Promises pattern to call `context.sync()` to synchronize the state between proxy objects and objects in the Excel document.</span></span>
-
-```js
-Excel.run(function (context) {
-    var selectedRange = context.workbook.getSelectedRange();
-    selectedRange.load('address');
-    return context.sync()
-      .then(function () {
-        console.log('The selected range is: ' + selectedRange.address);
-    });
-}).catch(function (error) {
-    console.log('error: ' + error);
-    if (error instanceof OfficeExtension.Error) {
-        console.log('Debug info: ' + JSON.stringify(error.debugInfo));
-    }
-});
-```
-
-<span data-ttu-id="668bd-142">В предыдущем примере `selectedRange` установлен, и его параметр `address` загружается при вызове `context.sync()`.</span><span class="sxs-lookup"><span data-stu-id="668bd-142">In the previous example, `selectedRange` is set and its `address` property is loaded when `context.sync()` is called.</span></span>
-
-<span data-ttu-id="668bd-143">Так как `sync()` — это асинхронная операция, возвращающая обещание, всегда следует `return` обещание (в JavaScript).</span><span class="sxs-lookup"><span data-stu-id="668bd-143">Because `sync()` is an asynchronous operation that returns a promise, you should always `return` the promise (in JavaScript).</span></span> <span data-ttu-id="668bd-144">Это гарантирует, что операция `sync()` будет завершена до того как продолжится выполнение скрипта.</span><span class="sxs-lookup"><span data-stu-id="668bd-144">Doing so ensures that the `sync()` operation completes before the script continues to run.</span></span> <span data-ttu-id="668bd-145">Дополнительные сведения об оптимизации производительности с помощью метода `sync()` см. в статье [Оптимизация производительности API JavaScript для Excel](../excel/performance.md).</span><span class="sxs-lookup"><span data-stu-id="668bd-145">For more information about optimizing performance with `sync()`, see [Excel JavaScript API performance optimization](../excel/performance.md).</span></span>
-
-### <a name="load"></a><span data-ttu-id="668bd-146">load()</span><span class="sxs-lookup"><span data-stu-id="668bd-146">load()</span></span>
-
-<span data-ttu-id="668bd-p112">Чтобы можно было считывать свойства прокси-объекта, вам необходимо явно загрузить их и заполнить прокси-объект данными из документа Excel, а затем вызвать метод `context.sync()`. Например, вы создали прокси-объект для ссылки на выделенный диапазон, а затем вам потребовалось считать свойство `address` выделенного диапазона. Прежде чем вы сможете считать свойство `address`, вам потребуется загрузить его. Чтобы запросить загрузку свойств прокси-объекта, вызовите метод `load()` в объекте и укажите свойства, которые необходимо загрузить.</span><span class="sxs-lookup"><span data-stu-id="668bd-p112">Before you can read the properties of a proxy object, you must explicitly load the properties to populate the proxy object with data from the Excel document, and then call `context.sync()`. For example, if you create a proxy object to reference a selected range, and then want to read the selected range's `address` property, you need to load the `address` property before you can read it. To request properties of a proxy object be loaded, call the `load()` method on the object and specify the properties to load.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="668bd-p113">Если вы вызываете методы или задаете свойства только в прокси-объекте, вам не нужно вызывать объект `load()`. Метод `load()` требуется только тогда, когда вам необходимо считать свойства в прокси-объекте.</span><span class="sxs-lookup"><span data-stu-id="668bd-p113">If you are only calling methods or setting properties on a proxy object, you do not need to call the `load()` method. The `load()` method is only required when you want to read properties on a proxy object.</span></span>
-
-<span data-ttu-id="668bd-p114">Аналогично запросам для задания свойств или вызова методов в прокси-объектах, запросы на загрузку свойств в прокси-объектах добавляются в очередь команд, ожидающих выполнения, в контексте запроса, который будет запущен, когда вы в следующий раз вызовете метод `sync()`. В очередь можно поставить сколько угодно вызовов `load()` в контексте запроса.</span><span class="sxs-lookup"><span data-stu-id="668bd-p114">Just like requests to set properties or invoke methods on proxy objects, requests to load properties on proxy objects get added to the queue of pending commands on the request context, which will run the next time you call the `sync()` method. You can queue up as many `load()` calls on the request context as necessary.</span></span>
-
-<span data-ttu-id="668bd-154">В примере ниже загружаются только определенные свойства диапазона.</span><span class="sxs-lookup"><span data-stu-id="668bd-154">In the following example, only specific properties of the range are loaded.</span></span>
-
-```js
-Excel.run(function (context) {
-    var sheetName = 'Sheet1';
-    var rangeAddress = 'A1:B2';
-    var myRange = context.workbook.worksheets.getItem(sheetName).getRange(rangeAddress);
-
-    myRange.load(['address', 'format/*', 'format/fill', 'entireRow' ]);
-
-    return context.sync()
-      .then(function () {
-        console.log (myRange.address);              // ok
-        console.log (myRange.format.wrapText);      // ok
-        console.log (myRange.format.fill.color);    // ok
-        //console.log (myRange.format.font.color);  // not ok as it was not loaded
-        });
-    }).then(function () {
-        console.log('done');
-}).catch(function (error) {
-    console.log('Error: ' + error);
-    if (error instanceof OfficeExtension.Error) {
-        console.log('Debug info: ' + JSON.stringify(error.debugInfo));
-    }
-});
-```
-
-<span data-ttu-id="668bd-155">В предыдущем примере из-за того, что `format/font` не указан в вызове метода `myRange.load()`, вам не удастся считать свойство `format.font.color`.</span><span class="sxs-lookup"><span data-stu-id="668bd-155">In the previous example, because `format/font` is not specified in the call to `myRange.load()`, the `format.font.color` property cannot be read.</span></span>
-
-<span data-ttu-id="668bd-156">Чтобы оптимизировать производительность, при использовании метода `load()` в объекте вам следует явно указать свойства, которые необходимо загрузить, как описано в статье [Оптимизация производительности API JavaScript для Excel](performance.md).</span><span class="sxs-lookup"><span data-stu-id="668bd-156">To optimize performance, you should explicitly specify the properties to load when using the `load()` method on an object, as covered in [Excel JavaScript API performance optimizations](performance.md).</span></span> <span data-ttu-id="668bd-157">Дополнительные сведения о методе `load()` см. в статье [Дополнительные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-advanced-concepts.md).</span><span class="sxs-lookup"><span data-stu-id="668bd-157">For more information about the `load()` method, see [Advanced programming concepts with the Excel JavaScript API](excel-add-ins-advanced-concepts.md).</span></span>
-
-## <a name="null-or-blank-property-values"></a><span data-ttu-id="668bd-158">Значения null или пустые значения свойств</span><span class="sxs-lookup"><span data-stu-id="668bd-158">null or blank property values</span></span>
-
-### <a name="null-input-in-2-d-array"></a><span data-ttu-id="668bd-159">Входное значение null в двумерном массиве</span><span class="sxs-lookup"><span data-stu-id="668bd-159">null input in 2-D Array</span></span>
-
-<span data-ttu-id="668bd-p116">В Excel диапазон представлен двумерным массивом, в котором первое измерение — это строки, а второе — столбцы. Чтобы задать значения, формат чисел или формулу только для определенных ячеек в диапазоне, укажите значения, формат чисел или формулу для этих ячеек в двумерном массиве, а для всех остальных ячеек в этом массиве укажите значение `null`.</span><span class="sxs-lookup"><span data-stu-id="668bd-p116">In Excel, a range is represented by a 2-D array, where the first dimension is rows and the second dimension is columns. To set values, number format, or formula for only specific cells within a range, specify the values, number format, or formula for those cells in the 2-D array, and specify `null` for all other cells in the 2-D array.</span></span>
-
-<span data-ttu-id="668bd-p117">Например, чтобы изменить формат чисел только для одной ячейки в диапазоне и сохранить существующий формат чисел для всех остальных ячеек в диапазоне, укажите новый формат чисел для ячейки, которую необходимо изменить, а для всех остальных ячеек укажите значение `null`. Во фрагменте кода ниже показано, как задать новый формат чисел для четвертой ячейки в диапазоне, при этом формат чисел для первых трех ячеек в диапазоне останется неизменным.</span><span class="sxs-lookup"><span data-stu-id="668bd-p117">For example, to update the number format for only one cell within a range, and retain the existing number format for all other cells in the range, specify the new number format for the cell to update, and specify `null` for all other cells. The following code snippet sets a new number format for the fourth cell in the range, and leaves the number format unchanged for the first three cells in the range.</span></span>
+<span data-ttu-id="e5991-p114">Например, чтобы изменить формат чисел только для одной ячейки в диапазоне и сохранить существующий формат чисел для всех остальных ячеек в диапазоне, укажите новый формат чисел для ячейки, которую необходимо изменить, а для всех остальных ячеек укажите значение `null`. Во фрагменте кода ниже показано, как задать новый формат чисел для четвертой ячейки в диапазоне, при этом формат чисел для первых трех ячеек в диапазоне останется неизменным.</span><span class="sxs-lookup"><span data-stu-id="e5991-p114">For example, to update the number format for only one cell within a range, and retain the existing number format for all other cells in the range, specify the new number format for the cell to update, and specify `null` for all other cells. The following code snippet sets a new number format for the fourth cell in the range, and leaves the number format unchanged for the first three cells in the range.</span></span>
 
 ```js
 range.values = [['Eurasia', '29.96', '0.25', '15-Feb' ]];
 range.numberFormat = [[null, null, null, 'm/d/yyyy;@']];
 ```
 
-### <a name="null-input-for-a-property"></a><span data-ttu-id="668bd-164">Входное значение null для свойства</span><span class="sxs-lookup"><span data-stu-id="668bd-164">null input for a property</span></span>
+### <a name="null-input-for-a-property"></a><span data-ttu-id="e5991-169">Входное значение null для свойства</span><span class="sxs-lookup"><span data-stu-id="e5991-169">null input for a property</span></span>
 
-<span data-ttu-id="668bd-p118">`null` не является допустимым входным значением для одного свойства. Например, указанный ниже фрагмент кода не является допустимым, так как свойство `values` диапазона не должно иметь значение `null`.</span><span class="sxs-lookup"><span data-stu-id="668bd-p118">`null` is not a valid input for single property. For example, the following code snippet is not valid, as the `values` property of the range cannot be set to `null`.</span></span>
+<span data-ttu-id="e5991-p115">`null` не является допустимым входным значением для одного свойства. Например, указанный ниже фрагмент кода не является допустимым, так как свойство `values` диапазона не должно иметь значение `null`.</span><span class="sxs-lookup"><span data-stu-id="e5991-p115">`null` is not a valid input for single property. For example, the following code snippet is not valid, as the `values` property of the range cannot be set to `null`.</span></span>
 
 ```js
 range.values = null;
 ```
 
-<span data-ttu-id="668bd-167">Аналогично, указанный ниже фрагмент кода не является допустимым, так как `null` — недопустимое значение для свойства `color`.</span><span class="sxs-lookup"><span data-stu-id="668bd-167">Likewise, the following code snippet is not valid, as `null` is not a valid value for the `color` property.</span></span>
+<span data-ttu-id="e5991-172">Аналогично, указанный ниже фрагмент кода не является допустимым, так как `null` — недопустимое значение для свойства `color`.</span><span class="sxs-lookup"><span data-stu-id="e5991-172">Likewise, the following code snippet is not valid, as `null` is not a valid value for the `color` property.</span></span>
 
 ```js
 range.format.fill.color =  null;
 ```
 
-### <a name="null-property-values-in-the-response"></a><span data-ttu-id="668bd-168">Значения свойств null в ответе</span><span class="sxs-lookup"><span data-stu-id="668bd-168">null property values in the response</span></span>
+### <a name="null-property-values-in-the-response"></a><span data-ttu-id="e5991-173">Значения свойств null в ответе</span><span class="sxs-lookup"><span data-stu-id="e5991-173">null property values in the response</span></span>
 
-<span data-ttu-id="668bd-p119">Если в указанном диапазоне имеются другие значения, свойства форматирования, например `size` и `color` будут содержать значения `null` в ответе. Например, если вы получаете диапазон и загружаете его свойство `format.font.color`:</span><span class="sxs-lookup"><span data-stu-id="668bd-p119">Formatting properties such as `size` and `color` will contain `null` values in the response when different values exist in the specified range. For example, if you retrieve a range and load its `format.font.color` property:</span></span>
+<span data-ttu-id="e5991-p116">Если в указанном диапазоне имеются другие значения, свойства форматирования, например `size` и `color` будут содержать значения `null` в ответе. Например, если вы получаете диапазон и загружаете его свойство `format.font.color`:</span><span class="sxs-lookup"><span data-stu-id="e5991-p116">Formatting properties such as `size` and `color` will contain `null` values in the response when different values exist in the specified range. For example, if you retrieve a range and load its `format.font.color` property:</span></span>
 
-- <span data-ttu-id="668bd-171">Если у всех ячеек в диапазоне один и тот же цвет шрифта, свойство `range.format.font.color` указывает этот цвет.</span><span class="sxs-lookup"><span data-stu-id="668bd-171">If all cells in the range have the same font color, `range.format.font.color` specifies that color.</span></span>
-- <span data-ttu-id="668bd-172">Если в диапазоне используется несколько цветов шрифтов, свойство `range.format.font.color` имеет значение `null`.</span><span class="sxs-lookup"><span data-stu-id="668bd-172">If multiple font colors are present within the range, `range.format.font.color` is `null`.</span></span>
+* <span data-ttu-id="e5991-176">Если у всех ячеек в диапазоне один и тот же цвет шрифта, свойство `range.format.font.color` указывает этот цвет.</span><span class="sxs-lookup"><span data-stu-id="e5991-176">If all cells in the range have the same font color, `range.format.font.color` specifies that color.</span></span>
+* <span data-ttu-id="e5991-177">Если в диапазоне используется несколько цветов шрифтов, свойство `range.format.font.color` имеет значение `null`.</span><span class="sxs-lookup"><span data-stu-id="e5991-177">If multiple font colors are present within the range, `range.format.font.color` is `null`.</span></span>
 
-### <a name="blank-input-for-a-property"></a><span data-ttu-id="668bd-173">Пустое входное значение для свойства</span><span class="sxs-lookup"><span data-stu-id="668bd-173">Blank input for a property</span></span>
+### <a name="blank-input-for-a-property"></a><span data-ttu-id="e5991-178">Пустое входное значение для свойства</span><span class="sxs-lookup"><span data-stu-id="e5991-178">Blank input for a property</span></span>
 
-<span data-ttu-id="668bd-p120">Когда вы указываете пустое значение для свойства (то есть две кавычки подряд без других знаков между `''`), это будет интерпретировано как инструкция по очистке или сбросу свойства. Например:</span><span class="sxs-lookup"><span data-stu-id="668bd-p120">When you specify a blank value for a property (i.e., two quotation marks with no space in-between `''`), it will be interpreted as an instruction to clear or reset the property. For example:</span></span>
+<span data-ttu-id="e5991-p117">Когда вы указываете пустое значение для свойства (то есть две кавычки подряд без других знаков между `''`), это будет интерпретировано как инструкция по очистке или сбросу свойства. Например:</span><span class="sxs-lookup"><span data-stu-id="e5991-p117">When you specify a blank value for a property (i.e., two quotation marks with no space in-between `''`), it will be interpreted as an instruction to clear or reset the property. For example:</span></span>
 
-- <span data-ttu-id="668bd-176">Если вы укажете пустое значение для свойства `values` диапазона, содержимое диапазона будет очищено.</span><span class="sxs-lookup"><span data-stu-id="668bd-176">If you specify a blank value for the `values` property of a range, the content of the range is cleared.</span></span>
+* <span data-ttu-id="e5991-181">Если вы укажете пустое значение для свойства `values` диапазона, содержимое диапазона будет очищено.</span><span class="sxs-lookup"><span data-stu-id="e5991-181">If you specify a blank value for the `values` property of a range, the content of the range is cleared.</span></span>
+* <span data-ttu-id="e5991-182">Если вы укажете пустое значение для свойства `numberFormat`, формат чисел будет "сброшен" до формата `General`.</span><span class="sxs-lookup"><span data-stu-id="e5991-182">If you specify a blank value for the `numberFormat` property, the number format is reset to `General`.</span></span>
+* <span data-ttu-id="e5991-183">Если вы укажете пустое значение для свойств `formula` и `formulaLocale`, значения формул будут очищены.</span><span class="sxs-lookup"><span data-stu-id="e5991-183">If you specify a blank value for the `formula` property and `formulaLocale` property, the formula values are cleared.</span></span>
 
-- <span data-ttu-id="668bd-177">Если вы укажете пустое значение для свойства `numberFormat`, формат чисел будет "сброшен" до формата `General`.</span><span class="sxs-lookup"><span data-stu-id="668bd-177">If you specify a blank value for the `numberFormat` property, the number format is reset to `General`.</span></span>
+### <a name="blank-property-values-in-the-response"></a><span data-ttu-id="e5991-184">Значения пустых свойств в ответе</span><span class="sxs-lookup"><span data-stu-id="e5991-184">Blank property values in the response</span></span>
 
-- <span data-ttu-id="668bd-178">Если вы укажете пустое значение для свойств `formula` и `formulaLocale`, значения формул будут очищены.</span><span class="sxs-lookup"><span data-stu-id="668bd-178">If you specify a blank value for the `formula` property and `formulaLocale` property, the formula values are cleared.</span></span>
-
-### <a name="blank-property-values-in-the-response"></a><span data-ttu-id="668bd-179">Значения пустых свойств в ответе</span><span class="sxs-lookup"><span data-stu-id="668bd-179">Blank property values in the response</span></span>
-
-<span data-ttu-id="668bd-p121">Для операций чтения пустое значение свойства в ответе (то есть две кавычки подряд без других знаков между `''`) указывает, что ячейка не содержит данных или значения. В первом примере ниже первая и последняя ячейки в диапазоне не содержат данных. Во втором примере две первые ячейки в диапазоне не содержат формул.</span><span class="sxs-lookup"><span data-stu-id="668bd-p121">For read operations, a blank property value in the response (i.e., two quotation marks with no space in-between `''`) indicates that cell contains no data or value. In the first example below, the first and last cell in the range contain no data. In the second example, the first two cells in the range do not contain a formula.</span></span>
+<span data-ttu-id="e5991-p118">Для операций чтения пустое значение свойства в ответе (то есть две кавычки подряд без других знаков между `''`) указывает, что ячейка не содержит данных или значения. В первом примере ниже первая и последняя ячейки в диапазоне не содержат данных. Во втором примере две первые ячейки в диапазоне не содержат формул.</span><span class="sxs-lookup"><span data-stu-id="e5991-p118">For read operations, a blank property value in the response (i.e., two quotation marks with no space in-between `''`) indicates that cell contains no data or value. In the first example below, the first and last cell in the range contain no data. In the second example, the first two cells in the range do not contain a formula.</span></span>
 
 ```js
 range.values = [['', 'some', 'data', 'in', 'other', 'cells', '']];
@@ -186,41 +206,52 @@ range.values = [['', 'some', 'data', 'in', 'other', 'cells', '']];
 range.formula = [['', '', '=Rand()']];
 ```
 
-## <a name="read-or-write-to-an-unbounded-range"></a><span data-ttu-id="668bd-183">Чтение из неограниченного диапазона и запись в него</span><span class="sxs-lookup"><span data-stu-id="668bd-183">Read or write to an unbounded range</span></span>
+## <a name="requirement-sets"></a><span data-ttu-id="e5991-188">Наборы обязательных элементов</span><span class="sxs-lookup"><span data-stu-id="e5991-188">Requirement sets</span></span>
 
-### <a name="read-an-unbounded-range"></a><span data-ttu-id="668bd-184">Чтение из неограниченного диапазона</span><span class="sxs-lookup"><span data-stu-id="668bd-184">Read an unbounded range</span></span>
+<span data-ttu-id="e5991-189">Наборы требований — это именованные группы элементов API.</span><span class="sxs-lookup"><span data-stu-id="e5991-189">Requirement sets are named groups of API members.</span></span> <span data-ttu-id="e5991-190">Надстройка Office может выполнить проверку в среде выполнения или использовать указанные в манифесте наборы обязательных элементов, чтобы определить, поддерживает ли приложение Office необходимые надстройке API.</span><span class="sxs-lookup"><span data-stu-id="e5991-190">An Office Add-in can perform a runtime check or use requirement sets specified in the manifest to determine whether an Office application supports the APIs that the add-in needs.</span></span> <span data-ttu-id="e5991-191">Сведения о том, какие именно наборы обязательных элементов доступны на каждой поддерживаемой платформе, см. в статье [Наборы обязательных элементов API JavaScript для Excel](../reference/requirement-sets/excel-api-requirement-sets.md).</span><span class="sxs-lookup"><span data-stu-id="e5991-191">To identify the specific requirement sets that are available on each supported platform, see [Excel JavaScript API requirement sets](../reference/requirement-sets/excel-api-requirement-sets.md).</span></span>
 
-<span data-ttu-id="668bd-p122">Адрес неограниченного диапазона представляет собой адрес диапазона, указывающий весь столбец (столбцы) либо всю строку (строки). Например:</span><span class="sxs-lookup"><span data-stu-id="668bd-p122">An unbounded range address is a range address that specifies either entire column(s) or entire row(s). For example:</span></span>
+### <a name="checking-for-requirement-set-support-at-runtime"></a><span data-ttu-id="e5991-192">Проверка поддержки наборов обязательных элементов в среде выполнения</span><span class="sxs-lookup"><span data-stu-id="e5991-192">Checking for requirement set support at runtime</span></span>
 
-- <span data-ttu-id="668bd-187">Адреса диапазона включают в себя весь столбец (столбцы):</span><span class="sxs-lookup"><span data-stu-id="668bd-187">Range addresses comprised of entire column(s):</span></span><ul><li>`C:C`</li><li>`A:F`</li></ul>
-- <span data-ttu-id="668bd-188">Адреса диапазона включают в себя всю строку (строки):</span><span class="sxs-lookup"><span data-stu-id="668bd-188">Range addresses comprised of entire row(s):</span></span><ul><li>`2:2`</li><li>`1:4`</li></ul>
-
-<span data-ttu-id="668bd-p123">Когда API отправляет запрос на получение неограниченного диапазона (например, `getRange('C:C')`), ответ будет содержать значения `null` для свойств уровня ячейки, например свойств `values`, `text`, `numberFormat` и `formula`. Другие свойства диапазона, например `address` и `cellCount`, будут содержать допустимые значения для неограниченного диапазона.</span><span class="sxs-lookup"><span data-stu-id="668bd-p123">When the API makes a request to retrieve an unbounded range (for example, `getRange('C:C')`), the response will contain `null` values for cell-level properties such as `values`, `text`, `numberFormat`, and `formula`. Other properties of the range, such as `address` and `cellCount`, will contain valid values for the unbounded range.</span></span>
-
-### <a name="write-to-an-unbounded-range"></a><span data-ttu-id="668bd-191">Запись в неограниченный диапазон</span><span class="sxs-lookup"><span data-stu-id="668bd-191">Write to an unbounded range</span></span>
-
-<span data-ttu-id="668bd-p124">Вам не удастся задать свойства уровня ячейки, например `values`, `numberFormat` и `formula`, в неограниченном диапазоне, так как входной запрос слишком велик. Например, приведенный ниже фрагмент кода недопустим, так как он пытается указать свойство `values` для неограниченного диапазона. Если вы попытаетесь задать свойства уровня ячейки для неограниченного диапазона, API возвратит ошибку.</span><span class="sxs-lookup"><span data-stu-id="668bd-p124">You cannot set cell-level properties such as `values`, `numberFormat`, and `formula` on unbounded range because the input request is too large. For example, the following code snippet is not valid because it attempts to specify `values` for an unbounded range. The API will return an error if you attempt to set cell-level properties for an unbounded range.</span></span>
+<span data-ttu-id="e5991-193">В следующем примере кода показано, как определить, поддерживает ли приложение Office, в котором запускается надстройка, указанный набор обязательных элементов API.</span><span class="sxs-lookup"><span data-stu-id="e5991-193">The following code sample shows how to determine whether the Office application where the add-in is running supports the specified API requirement set.</span></span>
 
 ```js
-var range = context.workbook.worksheets.getActiveWorksheet().getRange('A:B');
-range.values = 'Due Date';
+if (Office.context.requirements.isSetSupported('ExcelApi', '1.3')) {
+  /// perform actions
+}
+else {
+  /// provide alternate flow/logic
+}
 ```
 
-## <a name="read-or-write-to-a-large-range"></a><span data-ttu-id="668bd-195">Чтение из большого диапазона и запись в него</span><span class="sxs-lookup"><span data-stu-id="668bd-195">Read or write to a large range</span></span>
+### <a name="defining-requirement-set-support-in-the-manifest"></a><span data-ttu-id="e5991-194">Определение поддержки наборов обязательных элементов в манифесте</span><span class="sxs-lookup"><span data-stu-id="e5991-194">Defining requirement set support in the manifest</span></span>
 
-<span data-ttu-id="668bd-p125">Если диапазон содержит большое количество ячеек, значений, форматов чисел или формул, то, возможно, не удастся выполнить операции API над этим диапазоном. API всегда делает все возможное, чтобы выполнить запрошенную операцию над диапазоном (то есть получить или записать указанные данные), но попытка выполнить операцию чтения или записи для большого диапазона может привести к ошибке API из-за чрезмерного потребления ресурсов. Чтобы избежать таких ошибок, мы рекомендуем выполнять отдельные операции чтения или записи для небольших подмножеств большого диапазона, а не пытаться выполнить одну операцию чтения или записи для большого диапазона.</span><span class="sxs-lookup"><span data-stu-id="668bd-p125">If a range contains a large number of cells, values, number formats, and/or formulas, it may not be possible to run API operations on that range. The API will always make a best attempt to run the requested operation on a range (i.e., to retrieve or write the specified data), but attempting to perform read or write operations for a large range may result in an API error due to excessive resource utilization. To avoid such errors, we recommend that you run separate read or write operations for smaller subsets of a large range, instead of attempting to run a single read or write operation on a large range.</span></span>
+<span data-ttu-id="e5991-195">С помощью [элемента Requirements](../reference/manifest/requirements.md) в манифесте надстройки можно указать минимальные наборы обязательных элементов и/или методы API, необходимые надстройке для активации.</span><span class="sxs-lookup"><span data-stu-id="e5991-195">You can use the [Requirements element](../reference/manifest/requirements.md) in the add-in manifest to specify the minimal requirement sets and/or API methods that your add-in requires to activate.</span></span> <span data-ttu-id="e5991-196">Если платформа или приложение Office не поддерживает наборы обязательных элементов или методы API, указанные в элементе `Requirements` манифеста, надстройка не будет работать в этом приложении или на этой платформе, а также не будет отображаться в списке надстроек в разделе **Мои надстройки**.</span><span class="sxs-lookup"><span data-stu-id="e5991-196">If the Office application or platform doesn't support the requirement sets or API methods that are specified in the `Requirements` element of the manifest, the add-in won't run in that application or platform, and it won't display in the list of add-ins that are shown in **My Add-ins**.</span></span>
 
-<span data-ttu-id="668bd-199">Дополнительные сведения об ограничениях системы см. в статье [Ограничения передачи данных в Excel](../develop/common-coding-issues.md#excel-data-transfer-limits).</span><span class="sxs-lookup"><span data-stu-id="668bd-199">For details on the system limitations, see [Excel data transfer limits](../develop/common-coding-issues.md#excel-data-transfer-limits).</span></span>
+<span data-ttu-id="e5991-197">В следующем примере кода показан элемент `Requirements` в манифесте надстройки, где указано, что надстройка должна загружаться во всех клиентских приложениях Office, поддерживающих набор обязательных элементов ExcelApi версии 1.3 или выше.</span><span class="sxs-lookup"><span data-stu-id="e5991-197">The following code sample shows the `Requirements` element in an add-in manifest which specifies that the add-in should load in all Office client applications that support ExcelApi requirement set version 1.3 or greater.</span></span>
 
-## <a name="handle-errors"></a><span data-ttu-id="668bd-200">Обработка ошибок</span><span class="sxs-lookup"><span data-stu-id="668bd-200">Handle errors</span></span>
+```xml
+<Requirements>
+   <Sets DefaultMinVersion="1.3">
+      <Set Name="ExcelApi" MinVersion="1.3"/>
+   </Sets>
+</Requirements>
+```
 
-<span data-ttu-id="668bd-201">При возникновении ошибки в интерфейсе API он возвращает объект `error`, содержащий код и сообщение.</span><span class="sxs-lookup"><span data-stu-id="668bd-201">When an API error occurs, the API returns an `error` object that contains a code and a message.</span></span> <span data-ttu-id="668bd-202">Подробные сведения об обработке ошибок, включая список ошибок API, см. в статье [Обработка ошибок](excel-add-ins-error-handling.md).</span><span class="sxs-lookup"><span data-stu-id="668bd-202">For detailed information about error handling, including a list of API errors, see [Error handling](excel-add-ins-error-handling.md).</span></span>
+> [!NOTE]
+> <span data-ttu-id="e5991-198">Чтобы надстройка была доступна на всех платформах приложения Office, например Excel в Интернете, Excel для Windows и для iPad, рекомендуем проверять поддержку обязательных элементов в среде выполнения, а не определять поддержку набора обязательных элементов в манифесте.</span><span class="sxs-lookup"><span data-stu-id="e5991-198">To make your add-in available on all platforms of an Office application, such as Excel on the web, Windows, and iPad, we recommend that you check for requirement support at runtime instead of defining requirement set support in the manifest.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="668bd-203">См. также</span><span class="sxs-lookup"><span data-stu-id="668bd-203">See also</span></span>
+### <a name="requirement-sets-for-the-officejs-common-api"></a><span data-ttu-id="e5991-199">Наборы обязательных элементов общего API JavaScript для Office</span><span class="sxs-lookup"><span data-stu-id="e5991-199">Requirement sets for the Office.js Common API</span></span>
 
-- [<span data-ttu-id="668bd-204">Создание первой надстройки Excel</span><span class="sxs-lookup"><span data-stu-id="668bd-204">Build your first Excel add-in</span></span>](../quickstarts/excel-quickstart-jquery.md)
-- [<span data-ttu-id="668bd-205">Примеры кода надстроек Excel</span><span class="sxs-lookup"><span data-stu-id="668bd-205">Excel add-ins code samples</span></span>](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
-- [<span data-ttu-id="668bd-206">Дополнительные концепции программирования с помощью API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="668bd-206">Advanced programming concepts with the Excel JavaScript API</span></span>](excel-add-ins-advanced-concepts.md)
-- [<span data-ttu-id="668bd-207">Оптимизация производительности API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="668bd-207">Excel JavaScript API performance optimization</span></span>](../excel/performance.md)
-- [<span data-ttu-id="668bd-208">Справочник по API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="668bd-208">Excel JavaScript API reference</span></span>](../reference/overview/excel-add-ins-reference-overview.md)
-- <span data-ttu-id="668bd-209">[Распространенные проблемы кодирования и неожиданное поведение платформы](../develop/common-coding-issues.md).</span><span class="sxs-lookup"><span data-stu-id="668bd-209">[Common coding issues and unexpected platform behaviors](../develop/common-coding-issues.md).</span></span>
+<span data-ttu-id="e5991-200">Сведения о наборах обязательных элементов общего API см. в статье [Наборы обязательных элементов общего API для Office](../reference/requirement-sets/office-add-in-requirement-sets.md).</span><span class="sxs-lookup"><span data-stu-id="e5991-200">For information about Common API requirement sets, see [Office Common API requirement sets](../reference/requirement-sets/office-add-in-requirement-sets.md).</span></span>
+
+## <a name="handle-errors"></a><span data-ttu-id="e5991-201">Обработка ошибок</span><span class="sxs-lookup"><span data-stu-id="e5991-201">Handle errors</span></span>
+
+<span data-ttu-id="e5991-202">При возникновении ошибки в интерфейсе API он возвращает объект `error`, содержащий код и сообщение.</span><span class="sxs-lookup"><span data-stu-id="e5991-202">When an API error occurs, the API returns an `error` object that contains a code and a message.</span></span> <span data-ttu-id="e5991-203">Подробные сведения об обработке ошибок, включая список ошибок API, см. в статье [Обработка ошибок](excel-add-ins-error-handling.md).</span><span class="sxs-lookup"><span data-stu-id="e5991-203">For detailed information about error handling, including a list of API errors, see [Error handling](excel-add-ins-error-handling.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="e5991-204">См. также</span><span class="sxs-lookup"><span data-stu-id="e5991-204">See also</span></span>
+
+* [<span data-ttu-id="e5991-205">Создание первой надстройки Excel</span><span class="sxs-lookup"><span data-stu-id="e5991-205">Build your first Excel add-in</span></span>](../quickstarts/excel-quickstart-jquery.md)
+* [<span data-ttu-id="e5991-206">Примеры кода надстроек Excel</span><span class="sxs-lookup"><span data-stu-id="e5991-206">Excel add-ins code samples</span></span>](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
+* [<span data-ttu-id="e5991-207">Оптимизация производительности API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="e5991-207">Excel JavaScript API performance optimization</span></span>](../excel/performance.md)
+* [<span data-ttu-id="e5991-208">Справочник по API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="e5991-208">Excel JavaScript API reference</span></span>](../reference/overview/excel-add-ins-reference-overview.md)
+* [<span data-ttu-id="e5991-209">Распространенные проблемы кодирования и неожиданное поведение платформы</span><span class="sxs-lookup"><span data-stu-id="e5991-209">Common coding issues and unexpected platform behaviors</span></span>](../develop/common-coding-issues.md)
