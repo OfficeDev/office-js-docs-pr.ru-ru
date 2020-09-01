@@ -5,13 +5,10 @@
   displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
 - name: Начало работы
   items:
-    - name: Начните отсюда! Руководство для начинающих
+    - name: Руководство для начинающих
       href: overview/learning-path-beginner.md
       displayName: develop
-    - name: Выполните переход! Руководство для разработчиков надстроек VSTO
-      href: overview/learning-path-transition.md
-      displayName: develop
-    - name: Создание надстроек Office
+    - name: Обзор процесса разработки
       href: overview/office-add-ins-fundamentals.md
       displayName: develop
     - name: Краткие руководства
@@ -38,47 +35,73 @@
     - name: Настройка среды разработки
       href: overview/set-up-your-dev-environment.md
       displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
-- name: Основные понятия
+- name: Процесс разработки
   items:
     - name: Обзор
       href: overview/core-concepts-office-add-ins.md
       displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
+    - name: План
+      items:
+        - name: Рекомендации по разработке надстроек
+          href: concepts/add-in-development-best-practices.md
+          displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
+        - name: Наборы обязательных элементов и версии Office
+          href: develop/office-versions-and-requirement-sets.md
+        - name: Доступность платформ и приложений Office
+          href: overview/office-add-in-availability.md
+          displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
+        - name: Требования к запуску надстроек
+          href: concepts/requirements-for-running-office-add-ins.md
+          displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
+        - name: Установка последней версии Office
+          href: develop/install-latest-office-version.md
+          displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
     - name: Разработка
       items:
         - name: Разработка надстроек Office
           href: develop/develop-overview.md
           displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
-        - name: Доступность ведущих приложений и платформ
-          href: overview/office-add-in-availability.md
-          displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
-        - name: API JavaScript для Office
+        - name: Общие сведения об API JavaScript для Office
+          href: develop/understanding-the-javascript-api-for-office.md
+        - name: Использование модели API для определенных приложений
+          href: develop/application-specific-api-model.md
+        - name: Использование общей модели API
           items:
-            - name: Общие сведения об API JavaScript для Office
-              href: develop/understanding-the-javascript-api-for-office.md
-            - name: Версии Office и наборы обязательных элементов
-              href: develop/office-versions-and-requirement-sets.md
+            - name: Общая объектная модель API JavaScript
+              href: develop/office-javascript-api-object-model.md
+            - name: Асинхронное программирование в надстройках для Office
+              href: develop/asynchronous-programming-in-office-add-ins.md
+            - name: Поддержка надстроек области задач и контентных надстроек
+              href: develop/support-for-task-pane-and-content-add-ins.md
+            - name: Сохранение состояния и параметров
+              href: develop/persisting-add-in-state-and-settings.md
+        - name: Настройка и запуск надстройки
+          items:
             - name: Добавление ссылок на Office.js
               href: develop/referencing-the-javascript-api-for-office-library-from-its-cdn.md
+            - name: Указание приложений Office и требований API
+              href: develop/specify-office-hosts-and-api-requirements.md
             - name: Последовательность загрузки надстройки Office
               href: develop/loading-the-dom-and-runtime-environment.md
             - name: Инициализация надстройки
               href: develop/initialize-add-in.md
-            - name: Руководство по написанию кода для распространенных проблем
-              href: develop/common-coding-issues.md
-            - name: Общие API
-              items:
-                - name: Общая объектная модель API JavaScript
-                  href: develop/office-javascript-api-object-model.md
-                - name: Асинхронное программирование в надстройках для Office
-                  href: develop/asynchronous-programming-in-office-add-ins.md
-                - name: Поддержка надстроек области задач и контентных надстроек
-                  href: develop/support-for-task-pane-and-content-add-ins.md
-                - name: Сохранение состояния и параметров
-                  href: develop/persisting-add-in-state-and-settings.md
+              displayName: manifest
+            - name: Автоматическое открытие области задач с документом
+              href: develop/automatically-open-a-task-pane-with-a-document.md
+              displayName: manifest
         - name: Манифест
-          href: develop/add-in-manifests.md
-        - name: Проверка подлинности и авторизация.
           items:
+            - name: Обзор
+              href: develop/add-in-manifests.md
+            - name: Определение правильного порядка элементов манифеста
+              href: develop/manifest-element-ordering.md
+            - name: Обновление API и версии манифеста
+              href: develop/update-your-javascript-api-for-office-and-manifest-schema-version.md
+              displayName: manifest
+        - name: 'Конфиденциальность, безопасность и проверка подлинности'
+          items:
+            - name: Обзор конфиденциальности и безопасности надстроек
+              href: concepts/privacy-and-security.md
             - name: Обзор проверки подлинности и авторизации
               href: develop/overview-authn-authz.md
             - name: Проверка подлинности и авторизация с помощью Office Dialog API
@@ -107,29 +130,94 @@
                   href: develop/grant-admin-consent-to-an-add-in.md
                 - name: Устранение ошибок единого входа
                   href: develop/troubleshoot-sso-in-office-add-ins.md
-        - name: Концепции
+            - name: Запрос разрешений на использование API в надстройках
+              href: develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md
+        - name: Пользовательский интерфейс и взаимодействие с пользователем
           items:
-            - name: Рекомендации по разработке надстроек
-              href: concepts/add-in-development-best-practices.md
-              displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
-            - name: Требования к запуску надстроек
-              href: concepts/requirements-for-running-office-add-ins.md
-              displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
-            - name: 'Браузеры, используемые надстройками Office'
-              href: concepts/browsers-used-by-office-web-add-ins.md
-              displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
-            - name: Установка последней версии Office
-              href: develop/install-latest-office-version.md
-              displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
-        - name: Практическое руководство
+            - name: Обзор
+              href: design/add-in-design.md
+            - name: Рекомендации
+              items:
+                - name: Специальные возможности
+                  href: design/accessibility-guidelines.md
+                - name: Визуализация данных
+                  href: design/data-visualization-guidelines.md
+                - name: Голос
+                  href: design/voice-guidelines.md
+            - name: Язык дизайна
+              items:
+                - name: Общие сведения
+                  href: design/add-in-design-language.md
+                - name: Цвет
+                  href: design/add-in-color.md
+                - name: Значки
+                  items:
+                    - name: Рекомендации по созданию значков
+                      href: design/add-in-icons.md
+                    - name: Стиль "Свежий"
+                      href: design/add-in-icons-fresh.md
+                    - name: Стиль "Монолинейный"
+                      href: design/add-in-icons-monoline.md
+                - name: Макет
+                  href: design/add-in-layout.md
+                - name: Движение
+                  href: design/using-motion-office-addins.md
+                - name: Шрифтовое оформление
+                  href: design/add-in-typography.md
+            - name: Элементы интерфейса
+              items:
+                - name: Общие сведения
+                  href: design/interface-elements.md
+                - name: Команды надстроек
+                  items:
+                    - name: Основные концепции для команд надстроек
+                      href: design/add-in-commands.md
+                    - name: Создание команд надстройки
+                      href: develop/create-addin-commands.md
+                    - name: Включение и отключение команд надстроек
+                      href: design/disable-add-in-commands.md
+                - name: Контентные надстройки
+                  href: design/content-add-ins.md
+                - name: Диалоговые окна
+                  items:
+                    - name: Обзор
+                      href: design/dialog-boxes.md
+                    - name: Использование Office Dialog API в вашей надстройках Office
+                      href: develop/dialog-api-in-office-add-ins.md
+                    - name: Рекомендации и правила Office dialog API
+                      href: develop/dialog-best-practices.md
+                    - name: Отправка данных со страницы узла в диалоговое окно
+                      href: develop/parent-to-dialog.md
+                    - name: Обработка ошибок и событий в диалоговом окне "Office"
+                      href: develop/dialog-handle-errors-events.md
+                    - name: Используйте диалоговое окно "Office" для воспроизведения видео
+                      href: develop/dialog-video.md
+                - name: Области задач
+                  href: design/task-pane-add-ins.md
+            - name: Локализация
+              href: develop/localization.md
+            - name: Конструктивные шаблоны для взаимодействия с пользователем
+              items:
+                - name: Обзор
+                  href: design/ux-design-pattern-templates.md
+                - name: Проверка подлинности
+                  href: design/authentication-patterns.md
+                - name: Брендирование
+                  href: design/branding-patterns.md
+                - name: Первый запуск
+                  href: design/first-run-experience-patterns.md
+                - name: Навигация
+                  href: design/navigation-patterns.md
+            - name: Ресурсы
+              items:
+                - name: Наборы средств оформления
+                  href: design/design-toolkits.md
+                - name: Начало работы с Fabric React
+                  href: design/using-office-ui-fabric-react.md
+                - name: Office UI Fabric
+                  href: design/office-ui-fabric.md
+        - name: Платформы и идентификаторы
           items:
-            - name: 'Обход ограничений, связанных с политикой единого домена'
-              href: develop/addressing-same-origin-policy-limitations.md
-            - name: Автоматическое открытие области задач с документом
-              href: develop/automatically-open-a-task-pane-with-a-document.md
-            - name: Создание команд надстройки
-              href: develop/create-addin-commands.md
-              displayName: manifest
             - name: Разработка надстроек для iPad
               href: develop/develop-office-add-ins-for-the-ipad.md
             - name: Разработка надстроек с помощью Angular
@@ -147,110 +235,6 @@
                   href: develop/get-javascript-intellisense-in-visual-studio.md
                 - name: Преобразование JavaScript в TypeScript
                   href: develop/convert-javascript-to-typescript.md
-            - name: Определение правильного порядка элементов манифеста
-              href: develop/manifest-element-ordering.md
-            - name: Определение аналогичной надстройки COM
-              href: develop/make-office-add-in-compatible-with-existing-com-add-in.md
-              displayName: manifest
-            - name: Локализация
-              href: develop/localization.md
-            - name: Диалоговые окна
-              items:
-                - name: Использование Office Dialog API в надстройках Office
-                  href: develop/dialog-api-in-office-add-ins.md
-                - name: Рекомендации и правила Office dialog API
-                  href: develop/dialog-best-practices.md
-                - name: Отправка данных со страницы узла в диалоговое окно
-                  href: develop/parent-to-dialog.md
-                - name: Обработка ошибок и событий в диалоговом окне "Office"
-                  href: develop/dialog-handle-errors-events.md
-                - name: Используйте диалоговое окно "Office" для воспроизведения видео
-                  href: develop/dialog-video.md
-            - name: Производительность
-              items:
-                - name: Избегайте использования метода context.sync в циклах
-                  href: concepts/correlated-objects-pattern.md
-                - name: Ограничения ресурсов и оптимизация производительности надстроек Office
-                  href: concepts/resource-limits-and-performance-optimization.md
-            - name: Конфиденциальность и безопасность
-              href: concepts/privacy-and-security.md
-            - name: Запрос разрешений на использование API в надстройках
-              href: develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md
-              displayName: manifest
-            - name: Указание ведущих приложений Office и обязательных элементов API
-              href: develop/specify-office-hosts-and-api-requirements.md
-              displayName: manifest
-            - name: Обновление API и версии манифеста
-              href: develop/update-your-javascript-api-for-office-and-manifest-schema-version.md
-              displayName: manifest
-    - name: Пользовательский интерфейс и взаимодействие с пользователем
-      items:
-        - name: Обзор
-          href: design/add-in-design.md
-        - name: Рекомендации
-          items:
-            - name: Специальные возможности
-              href: design/accessibility-guidelines.md
-            - name: Визуализация данных
-              href: design/data-visualization-guidelines.md
-            - name: Голос
-              href: design/voice-guidelines.md
-        - name: Язык дизайна
-          items:
-            - name: Общие сведения
-              href: design/add-in-design-language.md
-            - name: Цвет
-              href: design/add-in-color.md
-            - name: Значки
-              items:
-                - name: Рекомендации по созданию значков
-                  href: design/add-in-icons.md
-                - name: Стиль "Свежий"
-                  href: design/add-in-icons-fresh.md
-                - name: Стиль "Монолинейный"
-                  href: design/add-in-icons-monoline.md
-            - name: Макет
-              href: design/add-in-layout.md
-            - name: Движение
-              href: design/using-motion-office-addins.md
-            - name: Шрифтовое оформление
-              href: design/add-in-typography.md
-        - name: Элементы интерфейса
-          items:
-            - name: Общие сведения
-              href: design/interface-elements.md
-            - name: Команды надстроек
-              items:
-                - name: Основные концепции для команд надстроек
-                  href: design/add-in-commands.md
-                - name: Включение и отключение команд надстроек
-                  href: design/disable-add-in-commands.md
-            - name: Диалоговые окна
-              href: design/dialog-boxes.md
-            - name: Контентные надстройки
-              href: design/content-add-ins.md
-            - name: Области задач
-              href: design/task-pane-add-ins.md
-        - name: Конструктивные шаблоны для взаимодействия с пользователем
-          items:
-            - name: Обзор
-              href: design/ux-design-pattern-templates.md
-            - name: Проверка подлинности
-              href: design/authentication-patterns.md
-            - name: Брендирование
-              href: design/branding-patterns.md
-            - name: Первый запуск
-              href: design/first-run-experience-patterns.md
-            - name: Навигация
-              href: design/navigation-patterns.md
-        - name: Ресурсы
-          items:
-            - name: Наборы средств оформления
-              href: design/design-toolkits.md
-            - name: Начало работы с Fabric React
-              href: design/using-office-ui-fabric-react.md
-            - name: Office UI Fabric
-              href: design/office-ui-fabric.md
     - name: Тестирование и отладка
       items:
         - name: Тестирование и отладка надстроек Office
@@ -281,10 +265,18 @@
         - name: Очистка кэша Office
           href: testing/clear-cache.md
           displayName: 'uninstall, sideload'
+        - name: Руководство по написанию кода для распространенных проблем
+          href: develop/common-coding-issues.md
         - name: Отладка с помощью журнала среды выполнения
           href: testing/runtime-logging.md
         - name: "Расширение отладчика для Visual\_Studio\_Code"
           href: testing/debug-with-vs-extension.md
+        - name: Производительность
+          items:
+            - name: Избегайте использования метода context.sync в циклах
+              href: concepts/correlated-objects-pattern.md
+            - name: Ограничения ресурсов и оптимизация производительности надстроек Office
+              href: concepts/resource-limits-and-performance-optimization.md
         - name: 'Устранение ошибок, с которыми сталкиваются пользователи'
           href: testing/testing-and-troubleshooting.md
         - name: Тестирование удобства использования
@@ -500,6 +492,11 @@
                   href: reference/manifest/supportssharedfolders.md
                 - name: WebApplicationInfo
                   href: reference/manifest/webapplicationinfo.md
+        - name: 'Обход ограничений, связанных с политикой единого домена'
+          href: develop/addressing-same-origin-policy-limitations.md
+        - name: 'Браузеры, используемые надстройками Office'
+          href: concepts/browsers-used-by-office-web-add-ins.md
+          displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
         - name: Коды ошибок
           href: reference/javascript-api-for-office-error-codes.md
         - name: Неподдерживаемые объекты окна
@@ -586,9 +583,6 @@
           displayName: Excel
         - name: Основные концепции программирования
           href: excel/excel-add-ins-core-concepts.md
-          displayName: Excel
-        - name: Дополнительные концепции программирования
-          href: excel/excel-add-ins-advanced-concepts.md
           displayName: Excel
         - name: Вызов встроенных функций
           href: excel/excel-add-ins-worksheet-functions.md
@@ -1139,8 +1133,6 @@
           displayName: Word
 - name: Шаблоны и рекомендации
   items:
-    - name: Поделиться кодом из надстройки VSTO в надстройку Office
-      href: tutorials/migrate-vsto-to-office-add-in-shared-code-library-tutorial.md
     - name: Пакетная обработка пользовательских функций в удаленных вызовов
       href: excel/custom-functions-batching.md
       displayName: 'Excel, Custom Functions'
@@ -1148,3 +1140,12 @@
       href: develop/authentication-pnp.md
     - name: Обработка высокого разрешения и масштабирования в решении для Office
       href: /office/client-developer/ddpi/handle-high-dpi-and-dpi-scaling-in-your-office-solution
+- name: Ресурсы о переходе между VSTO и COM
+  items:
+    - name: Руководство для разработчиков надстроек VSTO
+      href: overview/learning-path-transition.md
+    - name: Обмен кодом между надстройками VSTO и Office
+      href: tutorials/migrate-vsto-to-office-add-in-shared-code-library-tutorial.md
+    - name: Определение аналогичной надстройки COM
+      href: develop/make-office-add-in-compatible-with-existing-com-add-in.md
+      displayName: manifest
