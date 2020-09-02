@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: Функции и API, которые в настоящее время находятся в режиме предварительной версии для надстроек Outlook.
-ms.date: 08/07/2020
+ms.date: 09/01/2020
 localization_priority: Normal
-ms.openlocfilehash: 99f2a47c366508be17b34dbf3e373ac078843056
-ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
+ms.openlocfilehash: 0e4dae76846c2174d8eb1115dcb1098f8374b1ba
+ms.sourcegitcommit: 4adfc368a366f00c3f3d7ed387f34aaecb47f17c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46641279"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "47326305"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -108,37 +108,37 @@ ms.locfileid: "46641279"
 
 Добавлена новая функция для `Mailbox` объекта, отображающего существующую встречу. Это асинхронная версия `displayAppointmentForm` метода.
 
-**Доступно в**: Outlook в Windows (подключено к подписке Microsoft 365)
+**Доступно в**: Outlook в Windows (подключенном к подписке Microsoft 365), Outlook в Интернете (современный)
 
 #### <a name="officecontextmailboxdisplaymessageformasync"></a>[Office. Context. Mailbox. Дисплаймессажеформасинк](/javascript/api/outlook/office.mailbox?view=outlook-js-preview#displaymessageformasync-itemid--options--callback-)
 
 Добавлена новая функция для `Mailbox` объекта, отображающего существующее сообщение. Это асинхронная версия `displayMessageForm` метода.
 
-**Доступно в**: Outlook в Windows (подключено к подписке Microsoft 365)
+**Доступно в**: Outlook в Windows (подключенном к подписке Microsoft 365), Outlook в Интернете (современный)
 
 #### <a name="officecontextmailboxdisplaynewappointmentformasync"></a>[Office. Context. Mailbox. Дисплайневаппоинтментформасинк](/javascript/api/outlook/office.mailbox?view=outlook-js-preview#displaynewappointmentformasync-parameters--options--callback-)
 
 Добавлена новая функция для `Mailbox` объекта, отображающего новую форму встречи. Это асинхронная версия `displayNewAppointmentForm` метода.
 
-**Доступно в**: Outlook в Windows (подключено к подписке Microsoft 365)
+**Доступно в**: Outlook в Windows (подключенном к подписке Microsoft 365), Outlook в Интернете (современный)
 
 #### <a name="officecontextmailboxdisplaynewmessageformasync"></a>[Office. Context. Mailbox. Дисплайневмессажеформасинк](/javascript/api/outlook/office.mailbox?view=outlook-js-preview#displaynewmessageformasync-parameters--options--callback-)
 
 Добавлена новая функция для `Mailbox` объекта, отображающего форму нового сообщения. Это асинхронная версия `displayNewMessageForm` метода.
 
-**Доступно в**: Outlook в Windows (подключено к подписке Microsoft 365)
+**Доступно в**: Outlook в Windows (подключенном к подписке Microsoft 365), Outlook в Интернете (современный)
 
 #### <a name="officecontextmailboxitemdisplayreplyallformasync"></a>[Office. Context. Mailbox. Item. Дисплайрепляллформасинк](office.context.mailbox.item.md#methods)
 
 Добавлена новая функция для `Item` объекта, отображающего форму "ответить всем" в режиме чтения. Это асинхронная версия `displayReplyAllForm` метода.
 
-**Доступно в**: Outlook в Windows (подключено к подписке Microsoft 365)
+**Доступно в**: Outlook в Windows (подключенном к подписке Microsoft 365), Outlook в Интернете (современный)
 
 #### <a name="officecontextmailboxitemdisplayreplyformasync"></a>[Office. Context. Mailbox. Item. Дисплайреплиформасинк](office.context.mailbox.item.md#methods)
 
 Добавлена новая функция для `Item` объекта, отображающего форму "Reply" в режиме чтения. Это асинхронная версия `displayReplyForm` метода.
 
-**Доступно в**: Outlook в Windows (подключено к подписке Microsoft 365)
+**Доступно в**: Outlook в Windows (подключенном к подписке Microsoft 365), Outlook в Интернете (современный)
 
 <br>
 
@@ -314,7 +314,7 @@ ms.locfileid: "46641279"
 
 ---
 
-### <a name="single-sign-on-sso"></a>Единый вход
+### <a name="single-sign-on-sso"></a>Единый вход (SSO)
 
 #### <a name="officeruntimeauthgetaccesstoken"></a>[OfficeRuntime.auth.getAccessToken](../../../develop/sso-in-office-add-ins.md#sso-api-reference)
 

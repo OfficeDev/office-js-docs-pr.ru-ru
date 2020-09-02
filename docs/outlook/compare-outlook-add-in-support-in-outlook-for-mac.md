@@ -1,14 +1,14 @@
 ---
 title: Сравнение поддержки надстроек Outlook в Outlook на компьютерах Mac
 description: Узнайте, как сравнение надстроек в Outlook для Mac с другими клиентами Outlook.
-ms.date: 06/04/2020
+ms.date: 09/01/2020
 localization_priority: Normal
-ms.openlocfilehash: f6aa9914e1320de05a67b3ec227e373bac5c2402
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: d25d0b25ee6d3ba7d6f5d78b55764de8caeba3a0
+ms.sourcegitcommit: 4adfc368a366f00c3f3d7ed387f34aaecb47f17c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293921"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "47326319"
 ---
 # <a name="compare-outlook-add-in-support-in-outlook-on-mac-with-other-outlook-clients"></a>Сравнение поддержки надстроек Outlook в Outlook в Mac с другими клиентами Outlook
 
@@ -31,9 +31,9 @@ ms.locfileid: "47293921"
 
 ## <a name="new-outlook-on-mac-preview"></a>Новые Outlook на Mac (Предварительная версия)
 
-Теперь надстройки Outlook поддерживаются в новом пользовательском интерфейсе Mac, вплоть до набора требований 1,6. Однако следующие наборы требований и функции пока **не** поддерживаются.
+Теперь надстройки Outlook поддерживаются в новом пользовательском интерфейсе Mac, вплоть до набора требований 1,7. Однако следующие наборы требований и функции пока **не** поддерживаются.
 
-1. Наборы обязательных элементов API 1,7 и 1,8
+1. Набор требований API 1,8
 1. Область задач закрепляемая, `ItemChanged` событие
 1. Контекстные надстройки
 1. On — Send
