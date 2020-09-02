@@ -144,26 +144,40 @@
                   href: design/data-visualization-guidelines.md
                 - name: Голос
                   href: design/voice-guidelines.md
-            - name: Язык дизайна
+            - name: Язык дизайна и шаблоны пользовательского интерфейса
               items:
-                - name: Общие сведения
-                  href: design/add-in-design-language.md
-                - name: Цвет
-                  href: design/add-in-color.md
-                - name: Значки
+                - name: Язык дизайна
                   items:
-                    - name: Рекомендации по созданию значков
-                      href: design/add-in-icons.md
-                    - name: Стиль "Свежий"
-                      href: design/add-in-icons-fresh.md
-                    - name: Стиль "Монолинейный"
-                      href: design/add-in-icons-monoline.md
-                - name: Макет
-                  href: design/add-in-layout.md
-                - name: Движение
-                  href: design/using-motion-office-addins.md
-                - name: Шрифтовое оформление
-                  href: design/add-in-typography.md
+                    - name: Общие сведения
+                      href: design/add-in-design-language.md
+                    - name: Цвет
+                      href: design/add-in-color.md
+                    - name: Значки
+                      items:
+                        - name: Рекомендации по созданию значков
+                          href: design/add-in-icons.md
+                        - name: Стиль "Свежий"
+                          href: design/add-in-icons-fresh.md
+                        - name: Стиль "Монолинейный"
+                          href: design/add-in-icons-monoline.md
+                    - name: Макет
+                      href: design/add-in-layout.md
+                    - name: Движение
+                      href: design/using-motion-office-addins.md
+                    - name: Шрифтовое оформление
+                      href: design/add-in-typography.md
+                - name: Конструктивные шаблоны пользовательского интерфейса для распространенных сценариев
+                  items:
+                    - name: Обзор
+                      href: design/ux-design-pattern-templates.md
+                    - name: Проверка подлинности
+                      href: design/authentication-patterns.md
+                    - name: Брендирование
+                      href: design/branding-patterns.md
+                    - name: Первый запуск
+                      href: design/first-run-experience-patterns.md
+                    - name: Навигация
+                      href: design/navigation-patterns.md
             - name: Элементы интерфейса
               items:
                 - name: Общие сведения
@@ -196,18 +210,6 @@
                   href: design/task-pane-add-ins.md
             - name: Локализация
               href: develop/localization.md
-            - name: Конструктивные шаблоны для взаимодействия с пользователем
-              items:
-                - name: Обзор
-                  href: design/ux-design-pattern-templates.md
-                - name: Проверка подлинности
-                  href: design/authentication-patterns.md
-                - name: Брендирование
-                  href: design/branding-patterns.md
-                - name: Первый запуск
-                  href: design/first-run-experience-patterns.md
-                - name: Навигация
-                  href: design/navigation-patterns.md
             - name: Ресурсы
               items:
                 - name: Наборы средств оформления
@@ -233,7 +235,7 @@
                   href: develop/debug-office-add-ins-in-visual-studio.md
                 - name: Использование IntelliSense для JavaScript в Visual Studio
                   href: develop/get-javascript-intellisense-in-visual-studio.md
-                - name: Преобразование JavaScript в TypeScript
+                - name: Преобразование проектов JavaScript в TypeScript
                   href: develop/convert-javascript-to-typescript.md
     - name: Тестирование и отладка
       items:
