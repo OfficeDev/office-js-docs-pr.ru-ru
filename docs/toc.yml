@@ -8,9 +8,6 @@
     - name: Руководство для начинающих
       href: overview/learning-path-beginner.md
       displayName: develop
-    - name: Обзор процесса разработки
-      href: overview/office-add-ins-fundamentals.md
-      displayName: develop
     - name: Краткие руководства
       items:
         - name: Надстройка Excel
@@ -35,9 +32,9 @@
     - name: Настройка среды разработки
       href: overview/set-up-your-dev-environment.md
       displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
-- name: Процесс разработки
+- name: Жизненный цикл разработки
   items:
-    - name: Обзор
+    - name: Обзор жизненного цикла
       href: overview/core-concepts-office-add-ins.md
       displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
     - name: План
@@ -58,7 +55,7 @@
           displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
     - name: Разработка
       items:
-        - name: Разработка надстроек Office
+        - name: Обзор
           href: develop/develop-overview.md
           displayName: 'Excel, Word, OneNote, Project, PowerPoint, Outlook'
         - name: Общие сведения об API JavaScript для Office
@@ -1148,6 +1145,6 @@
       href: overview/learning-path-transition.md
     - name: Обмен кодом между надстройками VSTO и Office
       href: tutorials/migrate-vsto-to-office-add-in-shared-code-library-tutorial.md
-    - name: Определение аналогичной надстройки COM
+    - name: 'Убедитесь, что надстройка Office совместима с существующей надстройкой COM'
       href: develop/make-office-add-in-compatible-with-existing-com-add-in.md
       displayName: manifest
