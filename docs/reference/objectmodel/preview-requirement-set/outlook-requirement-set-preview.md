@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: Функции и API, которые в настоящее время находятся в режиме предварительной версии для надстроек Outlook.
-ms.date: 09/01/2020
+ms.date: 09/02/2020
 localization_priority: Normal
-ms.openlocfilehash: 0e4dae76846c2174d8eb1115dcb1098f8374b1ba
-ms.sourcegitcommit: 4adfc368a366f00c3f3d7ed387f34aaecb47f17c
+ms.openlocfilehash: 0223a8b62f60b45092866ee5f2362723912c189f
+ms.sourcegitcommit: 604361e55dee45c7a5d34c2fa6937693c154fc24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "47326305"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "47363732"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -34,7 +34,7 @@ ms.locfileid: "47326305"
 
 Теперь надстройки можно активировать на элементах, защищенных с помощью управления правами на доступ к данным. Чтобы включить эту возможность, администратору клиента необходимо включить `OBJMODEL` право на использование, установив параметр **Разрешить программный доступ к** настраиваемой политике в Office. Для получения дополнительных сведений ознакомьтесь [с разрешениями и описаниями использования](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) .
 
-**Доступно в**: Outlook в Windows, начиная с сборки 13120,1000 (подключены к подписке Microsoft 365).
+**Доступно в**: Outlook в Windows, начиная с сборки 13229,10000 (подключены к подписке Microsoft 365).
 
 <br>
 

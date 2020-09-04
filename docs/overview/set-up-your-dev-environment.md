@@ -3,12 +3,12 @@ title: Настройка среды разработки
 description: Настройка среды разработки для создания надстроек Office
 ms.date: 07/07/2020
 localization_priority: Normal
-ms.openlocfilehash: 1948cd83a252ea713c9b9a41941ceaef09d4a524
-ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
+ms.openlocfilehash: 5e7d91d81ef3d124e9582e74151626b9fd65991a
+ms.sourcegitcommit: 604361e55dee45c7a5d34c2fa6937693c154fc24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45159411"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "47363697"
 ---
 # <a name="set-up-your-development-environment"></a>Настройка среды разработки
 
@@ -21,7 +21,7 @@ ms.locfileid: "45159411"
 
 В этом руководстве предполагается, что вы знаете, как использовать средство командной строки. 
 
-## <a name="install-nodejs"></a>Установка Node.js
+## <a name="install-nodejs"></a>Установите Node.js.
 
 Node.js — это среда выполнения JavaScript, вам потребуется разработать современные надстройки Office.
 
@@ -47,7 +47,7 @@ npm -v
 
 ## <a name="get-office-365"></a>Получение Office 365
 
-Если у вас еще нет учетной записи Microsoft 365, вы можете получить бесплатную, 90 день реневабле подписку на Microsoft 365, присоединяясь к [программе microsoft 365 Developer Program](https://developer.microsoft.com/office/dev-program).
+Если у вас еще нет учетной записи Microsoft 365, вы можете оформить бесплатную возобновляемую подписку на Microsoft 365 на 90 дней, присоединившись к [программе для разработчиков Microsoft 365](https://developer.microsoft.com/office/dev-program).
 
 ## <a name="install-a-code-editor"></a>Установка редактора кода
 
@@ -71,7 +71,7 @@ npm -v
 
 ## <a name="see-also"></a>См. также
 
-- [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
+- [Разработка надстроек Office](../develop/develop-overview.md)
 - [Основные принципы надстроек Office](../overview/core-concepts-office-add-ins.md)
 - [Разработка надстроек Office](../develop/develop-overview.md)
 - [Проектирование надстроек Office](../design/add-in-design.md)

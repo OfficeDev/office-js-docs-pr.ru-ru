@@ -1,14 +1,14 @@
 ---
 title: Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
-description: Тестирование надстройки Office на iPad и Mac с помощью неопубликованных приложений
-ms.date: 02/18/2020
+description: Протестируйте надстройку Office на iPad и Mac, не прополнив загрузку неопубликованных приложений.
+ms.date: 09/02/2020
 localization_priority: Normal
-ms.openlocfilehash: 1a1cb804a72aa182480d06009cf30b41a37276d2
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 7c5e9542c6e6f9abc96defde389b9543421b8529
+ms.sourcegitcommit: 604361e55dee45c7a5d34c2fa6937693c154fc24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292204"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "47364060"
 ---
 # <a name="sideload-office-add-ins-on-ipad-and-mac-for-testing"></a>Загрузка неопубликованных надстроек Office на iPad и Mac для тестирования
 
@@ -17,8 +17,10 @@ ms.locfileid: "47292204"
 ## <a name="prerequisites-for-office-on-ios"></a>Предварительные требования (Office для iOS)
 
 - Компьютер Windows или Mac, на котором установлено приложение [iTunes](https://www.apple.com/itunes/download/).
+  > [!IMPORTANT]
+  > Если вы используете macOS Каталина, [iTunes больше не будет доступен](https://support.apple.com/HT210200) , поэтому вам следует выполнить инструкции из раздела [Загрузка неопубликованных надстройки в Excel или Word на iPad с помощью macOS Каталина](#sideload-an-add-in-on-excel-or-word-on-ipad-using-macos-catalina) далее в этой статье.
 
-- iPad под управлением iOS 8.2 или более поздней версии, на котором установлено приложение [Excel на iPad](https://itunes.apple.com/us/app/microsoft-excel/id586683407?mt=8) и к которому подключен кабель для синхронизации.
+- IPad под управлением iOS 8,2 или более поздней версии с установленными [приложением Excel](https://apps.apple.com/app/microsoft-excel/id586683407) или [Word](https://apps.apple.com/app/microsoft-word/id586447913) и кабелем синхронизации.
 
 - XML-файл манифеста для надстройки, которую вы хотите протестировать.
 
@@ -34,7 +36,7 @@ ms.locfileid: "47292204"
 
 - XML-файл манифеста для надстройки, которую вы хотите протестировать.
 
-## <a name="sideload-an-add-in-on-excel-or-word-on-ipad"></a>Загрузка неопубликованной надстройки в Excel или Word на iPad
+## <a name="sideload-an-add-in-on-excel-or-word-on-ipad-using-itunes"></a>Загрузка неопубликованных надстройку в Excel или Word на iPad с помощью iTunes
 
 1. Подключите iPad к компьютеру с помощью кабеля для синхронизации. Если вы подключаете iPad к компьютеру в первый раз, вам будет предложено **доверять этому компьютеру?**. Выберите **Доверять**.
 
@@ -50,18 +52,39 @@ ms.locfileid: "47292204"
 
 7. Откройте документ.
 
-8. Выберите **Add-ins** надстройки на вкладке **Вставка** . Надстройка неопубликованные доступна для вставки под заголовком **разработчик** **в пользовательском интерфейсе надстроек.**
+8. Выберите **пункт надстройки** на вкладке **Вставка** . (на вкладке **Вставка** может потребоваться прокрутить страницу по горизонтали, пока не появится **кнопка** надстройка.) Надстройка неопубликованные доступна для вставки под заголовком **разработчик** **в пользовательском интерфейсе надстроек.**
+
+    ![Вставка надстроек в приложение Excel](../images/excel-insert-add-in.png)
+
+## <a name="sideload-an-add-in-on-excel-or-word-on-ipad-using-macos-catalina"></a>Загрузка неопубликованных надстройку в Excel или Word на iPad с помощью macOS Каталина
+
+> [!IMPORTANT]
+> С появлением macOS Каталина, [iTunes по протоколу Apple в Mac](https://support.apple.com/HT210200) и интегрированных функциональных возможностей, необходимых для Загрузка неопубликованных приложений в **Finder**.
+
+1. Подключите iPad к компьютеру с помощью кабеля для синхронизации. Если вы подключаете iPad к компьютеру в первый раз, вам будет предложено **доверять этому компьютеру?**. Выберите **Доверять**. Кроме того, вам может быть предложено сделать это новым iPad или восстановить его.
+
+2. В области Finder в разделе **расположения**выберите значок **iPad** под строкой меню.
+
+3. В верхней части окна Finder выберите **файлы**, а затем найдите **Excel** или **Word**.
+
+4. В другом окне Finder перетащите manifest.xml файл надстройки, который требуется загрузить, в файл **Excel** или **Word** в первом окне Finder.
+
+5. Откройте приложение Excel или Word на iPad. Если приложение Excel или Word уже запущено, нажмите кнопку **домой** , а затем закройте и перезапустите приложение.
+
+6. Откройте документ.
+
+7. Выберите **пункт надстройки** на вкладке **Вставка** . (на вкладке **Вставка** может потребоваться прокрутить страницу по горизонтали, пока не появится **кнопка** надстройка.) Надстройка неопубликованные доступна для вставки под заголовком **разработчик** **в пользовательском интерфейсе надстроек.**
 
     ![Вставка надстроек в приложение Excel](../images/excel-insert-add-in.png)
 
 ## <a name="sideload-an-add-in-in-office-on-mac"></a>Загрузка неопубликованной надстройки в Office для Mac
 
 > [!NOTE]
-> Сведения о загрузке неопубликованной надстройки Outlook для Mac см. в статье [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md).
+> Сведения о загрузке неопубликованной надстройки Outlook для Mac см. в статье [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md#sideload-an-add-in-in-outlook-on-the-desktop).
 
 1. Откройте **терминал** и перейдите в одну из следующих папок, где будет сохранен файл манифеста надстройки. Если папки `wef` нет на компьютере, создайте ее.
 
-    - Для Word: `/Users/<username>/Library/Containers/com.microsoft.Word/Data/Documents/wef`    
+    - Для Word: `/Users/<username>/Library/Containers/com.microsoft.Word/Data/Documents/wef`
     - Для Excel: `/Users/<username>/Library/Containers/com.microsoft.Excel/Data/Documents/wef`
     - Для PowerPoint: `/Users/<username>/Library/Containers/com.microsoft.Powerpoint/Data/Documents/wef`
 

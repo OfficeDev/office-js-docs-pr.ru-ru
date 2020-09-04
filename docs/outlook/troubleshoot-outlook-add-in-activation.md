@@ -1,14 +1,14 @@
 ---
 title: Устранение неполадок при активации контекстных надстроек Outlook
 description: Если ваша надстройка не активируется надлежащим образом, это может быть вызвано указанными ниже причинами.
-ms.date: 08/18/2020
+ms.date: 09/02/2020
 localization_priority: Normal
-ms.openlocfilehash: 3e4fd270dbd2c8e6b258e2c473a822c791dee7a6
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 1420c1383730d6a334c181bc34b014da355d26db
+ms.sourcegitcommit: 604361e55dee45c7a5d34c2fa6937693c154fc24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292533"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "47363970"
 ---
 # <a name="troubleshoot-outlook-add-in-activation"></a>Устранение неполадок при активации надстроек Outlook
 
@@ -77,7 +77,7 @@ ms.locfileid: "47292533"
 Если ваша надстройка является надстройкой создания, которая должна активироваться, когда пользователь создает сообщение или приглашение на собрание, убедитесь, что элемент не защищен с помощью IRM. Однако существует несколько исключений.
 
 1. Надстройки активируют сообщения с цифровой подписью в Outlook, связанном с подпиской на Microsoft 365. В Windows эта поддержка представлена в сборке 8711.1000.
-1. Начиная с Outlook сборки 13120.1000 в Windows, надстройки могут активировать элементы, защищенные с помощью IRM.  Дополнительные сведения об этой поддержке в предварительной версии можно найти в статье [Активация надстроек в элементах, защищенных службой управления правами на доступ к данным (IRM)](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md#add-in-activation-on-items-protected-by-information-rights-management-irm).
+1. Начиная с Outlook Build 13229,10000 в Windows, надстройки теперь могут активировать элементы, защищенные IRM.  Дополнительные сведения об этой поддержке в предварительной версии можно найти в статье [Активация надстроек в элементах, защищенных службой управления правами на доступ к данным (IRM)](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md#add-in-activation-on-items-protected-by-information-rights-management-irm).
 
 ## <a name="is-the-add-in-manifest-installed-properly-and-does-outlook-have-a-cached-copy"></a>Установлен ли манифест надстройки должным образом, и есть ли Outlook кэшированная копия?
 
