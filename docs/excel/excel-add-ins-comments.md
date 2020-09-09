@@ -3,12 +3,12 @@ title: Работайте с комментариями с помощью API Ja
 description: Сведения об использовании API для добавления, удаления и редактирования комментариев и потоков комментариев.
 ms.date: 03/17/2020
 localization_priority: Normal
-ms.openlocfilehash: 59751086b645ed56cb2a00bc70678967cae085c5
-ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
+ms.openlocfilehash: f0be13cc666ed4b6b5b3cfac59f299c872139f4c
+ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45159432"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "47408574"
 ---
 # <a name="work-with-comments-using-the-excel-javascript-api"></a>Работайте с комментариями с помощью API JavaScript для Excel
 
@@ -204,6 +204,6 @@ Excel.run(function (context) {
 
 ## <a name="see-also"></a>См. также
 
-- [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
+- [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с книгами с использованием API JavaScript для Excel](excel-add-ins-workbooks.md)
 - [Вставка комментариев и заметок в Excel](https://support.office.com/article/insert-comments-and-notes-in-excel-bdcc9f5d-38e2-45b4-9a92-0b2b5c7bf6f8)

@@ -3,12 +3,12 @@ title: Работа с диапазонами с использованием AP
 description: Расширенные функции и сценарии объектов Range, такие как специальные ячейки, удаление дубликатов и работа с датами.
 ms.date: 08/26/2020
 localization_priority: Normal
-ms.openlocfilehash: 47f154c2bffac2e730aba21204261bc1bd536af2
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: b3854d15a85db20e1c544ebfa6e8a63712e958d9
+ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47294159"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "47408448"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api-advanced"></a>Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 
@@ -361,5 +361,5 @@ Excel.run(function (context) {
 ## <a name="see-also"></a>См. также
 
 - [Работа с диапазонами с использованием API JavaScript для Excel](excel-add-ins-ranges.md)
-- [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
+- [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md)

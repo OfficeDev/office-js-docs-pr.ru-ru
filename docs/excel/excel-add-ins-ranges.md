@@ -3,12 +3,12 @@ title: Работа с диапазонами с использованием AP
 description: Примеры кода, демонстрирующие выполнение типовых задач с диапазонами с использованием API JavaScript для Excel.
 ms.date: 07/28/2020
 localization_priority: Normal
-ms.openlocfilehash: 4eb04a58fdf58425f7bb13a6dc457da28625dba5
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 2cb5640fa9c647c0e6d1f8083986455f2b5a59a3
+ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47294166"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "47408483"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api"></a>Работа с диапазонами с использованием API JavaScript для Excel
 
@@ -543,7 +543,7 @@ Excel.run(function (context) {
 
 ### <a name="read-an-unbounded-range"></a>Чтение из неограниченного диапазона
 
-Неограниченный адрес диапазона — это адрес диапазона, в котором задаются либо все столбцы, либо все строки. Например:
+Неограниченный адрес диапазона — это адрес диапазона, в котором задаются либо все столбцы, либо все строки. Пример:
 
 - Диапазоны адресов состоят из целых столбцов:<ul><li>`C:C`</li><li>`A:F`</li></ul>
 - Диапазоны адресов состоят из целых строк:<ul><li>`2:2`</li><li>`1:4`</li></ul>
@@ -597,4 +597,4 @@ Excel.run(function (context) {
 ## <a name="see-also"></a>См. также
 
 - [Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)](excel-add-ins-ranges-advanced.md)
-- [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
+- [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)

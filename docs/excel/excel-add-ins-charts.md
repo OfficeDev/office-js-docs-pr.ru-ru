@@ -3,12 +3,12 @@ title: Работа с диаграммами с использованием AP
 description: Примеры кода, демонстрирующие задачи диаграмм с помощью API JavaScript для Excel.
 ms.date: 07/17/2019
 localization_priority: Normal
-ms.openlocfilehash: 9763657fc245a509d21267511d8d1c706e1d389e
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 3cd5008e4a71001607911ffd89da26d8b31d9377
+ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609638"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "47408588"
 ---
 # <a name="work-with-charts-using-the-excel-javascript-api"></a>Работа с диаграммами с использованием API JavaScript для Excel
 
@@ -217,4 +217,4 @@ getImage(width?: number, height?: number, fittingMode?: Excel.ImageFittingMode):
 
 ## <a name="see-also"></a>См. также
 
-- [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
+- [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)

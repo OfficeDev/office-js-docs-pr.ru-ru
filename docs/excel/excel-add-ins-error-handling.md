@@ -3,19 +3,19 @@ title: Обработка ошибок
 description: Изучите логику обработки ошибок API JavaScript для Excel, чтобы учитывать ошибки времени выполнения.
 ms.date: 06/25/2020
 localization_priority: Normal
-ms.openlocfilehash: 89df7723d48298862034751ab06bca766fedb30f
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 189c92a4e960c8f9f1668f67f10472fdcdf84868
+ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292555"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "47408455"
 ---
 # <a name="error-handling"></a>Обработка ошибок
 
 При создании надстройки с использованием API JavaScript для Excel не забудьте включить логику для обработки ошибок, возникающих в среде выполнения. Это очень важно из-за асинхронного характера API.
 
 > [!NOTE]
-> Для получения дополнительных сведений о `sync()` методе и асинхронной природе API JavaScript для Excel ознакомьтесь [с основными концепциями программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md).
+> Дополнительные сведения о `sync()` методе и асинхронной природе API JavaScript для Excel можно найти [в статье объектная модель JavaScript для Excel в](excel-add-ins-core-concepts.md)надстройках Office.
 
 ## <a name="best-practices"></a>Рекомендации
 
@@ -76,5 +76,5 @@ Excel.run(function (context) {
 
 ## <a name="see-also"></a>См. также
 
-- [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
+- [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Объект OfficeExtension.Error (API JavaScript для Excel)](/javascript/api/office/officeextension.error?view=excel-js-preview)

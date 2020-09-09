@@ -3,12 +3,12 @@ title: Применение условного форматирования к �
 description: В этой статье рассматривается условное форматирование в контексте надстроек JavaScript для Excel.
 ms.date: 07/28/2020
 localization_priority: Normal
-ms.openlocfilehash: 9f0bed7fb7421984c98ad1bc396c130afda4fb50
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 04a1b18c47d76d44201ea222eac305bb8d438b58
+ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292665"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "47408595"
 ---
 # <a name="apply-conditional-formatting-to-excel-ranges"></a>Применение условного форматирования к диапазонам Excel
 
@@ -336,7 +336,7 @@ await context.sync();
 
 ## <a name="see-also"></a>См. также
 
-- [Основные концепции программирования с помощью API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
+- [Объектная модель JavaScript для Excel в надстройках Office](../excel/excel-add-ins-core-concepts.md)
 - [Работа с диапазонами с использованием API JavaScript для Excel](../excel/excel-add-ins-ranges.md)
 - [Объект ConditionalFormat (API JavaScript для Excel)](/javascript/api/excel/excel.conditionalformat)
 - [Добавление, изменение или удаление условного форматирования](https://support.office.com/article/add-change-or-clear-conditional-formats-8a1cc355-b113-41b7-a483-58460332a1af)

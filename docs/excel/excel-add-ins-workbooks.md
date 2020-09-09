@@ -3,12 +3,12 @@ title: Работа с книгами с использованием API JavaSc
 description: Примеры кода, в которых показано, как выполнять распространенные задачи с книгами или функциями уровня приложения с помощью API JavaScript для Excel.
 ms.date: 08/24/2020
 localization_priority: Normal
-ms.openlocfilehash: a7a35e2627863c648f8c3e31ab05b2714ca0aebe
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 1da664b5ebbc8bd44b1c4e558a48997291e8967e
+ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47294131"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "47408700"
 ---
 # <a name="work-with-workbooks-using-the-excel-javascript-api"></a>Работа с книгами с использованием API JavaScript для Excel
 
@@ -361,6 +361,6 @@ context.workbook.close(Excel.CloseBehavior.save);
 
 ## <a name="see-also"></a>См. также
 
-- [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
+- [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с листами с использованием API JavaScript для Excel](excel-add-ins-worksheets.md)
 - [Работа с диапазонами с использованием API JavaScript для Excel](excel-add-ins-ranges.md)

@@ -3,12 +3,12 @@ title: Добавление проверки данных в диапазоны 
 description: Узнайте, как интерфейсы API JavaScript для Excel позволяют надстройке добавить автоматическую проверку данных для таблиц, столбцов, строк и других диапазонов в книге.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 422876e35d90a6f61da81f112ff61a732c1d0546
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: ce792e36f9ad24eb4b26e2034c59063d65940be4
+ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292560"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "47408553"
 ---
 # <a name="add-data-validation-to-excel-ranges"></a>Добавление проверки данных в диапазоны Excel
 
@@ -223,6 +223,6 @@ myrange.dataValidation.clear()
 
 ## <a name="see-also"></a>См. также
 
-- [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
+- [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Объект DataValidation (API JavaScript для Excel)](/javascript/api/excel/excel.datavalidation)
 - [Объект Range (API JavaScript для Excel)](/javascript/api/excel/excel.range)

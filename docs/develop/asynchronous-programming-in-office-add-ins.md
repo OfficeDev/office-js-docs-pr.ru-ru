@@ -1,14 +1,14 @@
 ---
 title: Асинхронное программирование в случае надстроек Office
 description: Узнайте, как библиотека JavaScript для Office использует асинхронное программирование в надстройках Office.
-ms.date: 02/27/2020
+ms.date: 09/08/2020
 localization_priority: Normal
-ms.openlocfilehash: affe493cdf1633b3a8749b694da479a732271195
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 96805ee0f78caedd718642a97828db26f0de7900
+ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292947"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "47408581"
 ---
 # <a name="asynchronous-programming-in-office-add-ins"></a>Асинхронное программирование в надстройках для Office
 
@@ -121,11 +121,13 @@ API JavaScript для Office поддерживает два вида шабло
     
 При асинхронном программировании с использованием функций обратного вызова зачастую требуется вкладывать возвращаемый результат одного обратного вызова в один или несколько других обратных вызовов. В этом случае вы можете использовать вложенные обратные вызовы асинхронных методов API.
 
-Использование вложенных обратных вызовов — это шаблон программирования, знакомый большинству разработчиков на языке JavaScript, но код с глубоко вложенными обратными вызовами может быть труден для чтения и понимания. В качестве альтернативы вложенным обратным вызовам API JavaScript для Office также поддерживает реализацию шаблона обещания. Однако в текущей версии API JavaScript для Office шаблон обещания работает только с кодом для [привязок в электронных таблицах Excel и документах Word](bind-to-regions-in-a-document-or-spreadsheet.md).
+Использование вложенных обратных вызовов — это шаблон программирования, знакомый большинству разработчиков на языке JavaScript, но код с глубоко вложенными обратными вызовами может быть труден для чтения и понимания. В качестве альтернативы вложенным обратным вызовам API JavaScript для Office также поддерживает реализацию шаблона обещания. 
 
-<a name="AsyncProgramming_NestedCallbacks" />
+> [!NOTE]
+> В текущей версии API JavaScript для Office *Встроенная* поддержка схемы обещания работает только с кодом для [привязок в электронных таблицах Excel и документах Word](bind-to-regions-in-a-document-or-spreadsheet.md). Однако можно заключить другие функции, которые содержат обратные вызовы, внутри собственной функции, возвращающей обещание. Дополнительные сведения см в разделе [Wrap Common API в функциях, возвращающих обещаний](#wrap-common-apis-in-promise-returning-functions).
+
+
 ### <a name="asynchronous-programming-using-nested-callback-functions"></a>Асинхронное программирование с использованием вложенных функций обратного вызова
-
 
 Зачастую для какой-либо задачи необходимо выполнять несколько асинхронных операций. Для этого можно вкладывать один асинхронный вызов в другой.
 
@@ -240,7 +242,7 @@ function write(message){
 }
 ```
 
-Замените заполнитель _биндингобжектасинкмесод_ на вызов любого из четырех `Binding` методов объекта, поддерживаемых объектом обещания: `getDataAsync` , `setDataAsync` , `addHandlerAsync` или `removeHandlerAsync` . Вызовы этих методов не поддерживают дополнительные шаблоны promise. Их нужно вызывать с помощью [шаблона функции вложенного обратного вызова](#AsyncProgramming_NestedCallbacks).
+Замените заполнитель _биндингобжектасинкмесод_ на вызов любого из четырех `Binding` методов объекта, поддерживаемых объектом обещания: `getDataAsync` , `setDataAsync` , `addHandlerAsync` или `removeHandlerAsync` . Вызовы этих методов не поддерживают дополнительные шаблоны promise. Их нужно вызывать с помощью [шаблона функции вложенного обратного вызова](#asynchronous-programming-using-nested-callback-functions).
 
 После выполнения `Binding` обещаний объекта его можно повторно использовать в цепочке вызовов метода, как если бы это была привязка (надстройка не будет асинхронно пытаться выполнить обещание). Если `Binding` обещание объекта не может быть выполнено, среда выполнения надстройки снова попытается получить доступ к объекту Binding при следующем вызове одного из его асинхронных методов.
 
@@ -395,6 +397,57 @@ function write(message){
 
 В примерах необязательных параметров параметр _callback_ указывается в качестве последнего параметра (после необязательных параметров, а также после объекта аргумента _Options_ ). Кроме того, параметр _callback_ можно указать либо во встроенном объекте JSON, либо в объекте `options`. Однако параметр _callback_ можно передать только одним из способов: или в объекте _options_ (встроенном или созданном внешне), или в качестве последнего параметра.
 
+## <a name="wrap-common-apis-in-promise-returning-functions"></a>Перенос распространенных API в функциях, возвращающих обещаний
+
+Методы Common API (и Outlook API) не возвращают [обещаний](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise). Таким образом, вы не можете использовать параметр [await](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await) , чтобы приостановить выполнение до завершения асинхронной операции. Если требуется `await` поведение, можно создать оболочку вызова метода в явно созданном обещании. 
+
+Базовый шаблон — создать асинхронный метод, который немедленно возвращает объект Promise и *разрешает* этот объект Promise при завершении внутреннего метода, или *отклоняет* объект, если метод завершается с ошибкой. Ниже приведен простой пример.
+
+```javascript
+function getDocumentFilePath() {
+    return new OfficeExtension.Promise(function (resolve, reject) {
+        try {
+            Office.context.document.getFilePropertiesAsync(function (asyncResult) {
+                resolve(asyncResult.value.url);
+            });
+        }
+        catch (error) {
+            reject(WordMarkdownConversion.errorHandler(error));
+        }
+    })
+}
+```
+
+Если этот метод необходимо ожидать, его можно вызвать либо с помощью `await` ключевого слова, либо с помощью функции, переданной в `then` функцию.
+
+> [!NOTE]
+> Эта методика особенно полезна, если вам нужно вызвать один из общих API в вызове `run` метода в одной из объектных моделей для конкретных приложений. Пример использования функции, описанной выше, приведен в разделе File [Home.js примера Word — Add + in – JavaScript — мдконверсион](https://github.com/OfficeDev/Word-Add-in-MarkdownConversion/blob/master/Word-Add-in-JavaScript-MDConversionWeb/Home.js).
+
+Ниже приведен пример использования TypeScript.
+
+```typescript
+readDocumentFileAsync(): Promise<any> {
+    return new Promise((resolve, reject) => {
+        const chunkSize = 65536;
+        const self = this;
+
+        Office.context.document.getFileAsync(Office.FileType.Compressed, { sliceSize: chunkSize }, (asyncResult) => {
+            if (asyncResult.status === Office.AsyncResultStatus.Failed) {
+                reject(asyncResult.error);
+            } else {
+                // `getAllSlices` is a Promise-wrapped implementation of File.getSliceAsync.
+                self.getAllSlices(asyncResult.value).then(result => {
+                    if (result.IsSuccess) {
+                        resolve(result.Data);
+                    } else {
+                        reject(asyncResult.error);
+                    }
+                });
+            }
+        });
+    });
+}
+```
 
 ## <a name="see-also"></a>См. также
 

@@ -3,12 +3,12 @@ title: Браузеры, используемые надстройками Offic
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
 ms.date: 08/13/2020
 localization_priority: Normal
-ms.openlocfilehash: 4c4462434480a82e69ebaf5a2599ceda1e4693a7
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 544388014bfef0dd647a79d655a173d09f5a4ff7
+ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293060"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "47408441"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -42,8 +42,14 @@ ms.locfileid: "47293060"
 <sup>3</sup> если надстройка содержит `Runtimes` элемент в манифесте, он использует Internet Explorer 11 независимо от версии Windows или Microsoft 365. Дополнительные сведения см. в статье [Runtimes](../reference/manifest/runtimes.md).
 
 <sup>4</sup> браузер, используемый для этой комбинации версий, зависит от канала обновления подписки Microsoft 365. Если пользователь находится на [канале бета-версии](https://insider.office.com/join/windows) (ранее он быстро является быстрым каналом), Office использует Microsoft Edge с WebView2 (чромиум на основе). Для любого другого канала Office использует Microsoft Edge с исходной Вебвиев (Еджехтмл). Поддержка WebView2 в других каналах ожидается на ранних 2021.
+
 > [!IMPORTANT]
-> Internet Explorer 11 не поддерживает версии JavaScript, более поздние, чем ES5. Если какой-либо пользователь вашей надстройки применяет платформы с Internet Explorer 11, для применения синтаксиса и возможностей ECMAScript 2015 или более поздних версий вам нужно либо транскомпилировать свой код JavaScript в ES5, либо использовать полизаполнение. Кроме того, Internet Explorer 11 не поддерживает некоторые элементы HTML5, в частности медиа, запись и местоположение.
+> Internet Explorer 11 не поддерживает версии JavaScript, более поздние, чем ES5. Если у пользователей надстройки есть платформы, использующие Internet Explorer 11, то для использования синтаксиса и функций ECMAScript 2015 или более поздней версии доступны два варианта:
+>
+> - Напишите код в ECMAScript 2015 (также именуемый ES6) или более поздней версии JavaScript или в TypeScript, а затем скомпилируйте код в ES5 JavaScript с помощью компилятора, например [Бабел](https://babeljs.io/) или [TSC](https://www.typescriptlang.org/index.html).
+> - Напишите в ECMAScript 2015 или более поздней версии JavaScript, но также загружается библиотека с [заполнением](https://wikipedia.org/wiki/Polyfill_(programming)) , например [Core – JS](https://github.com/zloirock/core-js) , которая позволяет IE запускать код.
+>
+> Кроме того, Internet Explorer 11 не поддерживает некоторые элементы HTML5, в частности медиа, запись и местоположение.
 
 ## <a name="troubleshooting-microsoft-edge-issues"></a>Устранение проблем с Microsoft Edge
 

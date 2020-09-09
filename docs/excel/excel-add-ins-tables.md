@@ -3,12 +3,12 @@ title: Работа с таблицами с использованием API Ja
 description: Примеры кода, демонстрирующие выполнение типовых задач с таблицами с помощью API JavaScript для Excel.
 ms.date: 09/09/2019
 localization_priority: Normal
-ms.openlocfilehash: 8d47a747fe876e01522099f99b8c9fef2ab88a33
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: b358ff33aa3681043f86d650ae2dd9b01a95f962
+ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47294138"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "47408476"
 ---
 # <a name="work-with-tables-using-the-excel-javascript-api"></a>Работа с таблицами с использованием API JavaScript для Excel
 
@@ -498,4 +498,4 @@ Excel.run(function (context) {
 
 ## <a name="see-also"></a>См. также
 
-- [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
+- [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
