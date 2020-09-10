@@ -264,8 +264,6 @@
         - name: Очистка кэша Office
           href: testing/clear-cache.md
           displayName: 'uninstall, sideload'
-        - name: Руководство по написанию кода для распространенных проблем
-          href: develop/common-coding-issues.md
         - name: Отладка с помощью журнала среды выполнения
           href: testing/runtime-logging.md
         - name: "Расширение отладчика для Visual\_Studio\_Code"
@@ -278,6 +276,8 @@
               href: concepts/resource-limits-and-performance-optimization.md
         - name: 'Устранение ошибок, с которыми сталкиваются пользователи'
           href: testing/testing-and-troubleshooting.md
+        - name: Устранение ошибок разработки
+          href: testing/troubleshoot-development-errors.md
         - name: Тестирование удобства использования
           href: develop/usability-testing.md
         - name: Проверка манифеста надстройки
@@ -580,8 +580,11 @@
         - name: Справочные материалы по API
           href: reference/excel-api-reference.md
           displayName: Excel
-        - name: Основные концепции программирования
+        - name: Объектная модель Excel
           href: excel/excel-add-ins-core-concepts.md
+          displayName: Excel
+        - name: Пустые значения и значения NULL в надстройках Excel
+          href: excel/excel-add-ins-blank-null-values.md
           displayName: Excel
         - name: Вызов встроенных функций
           href: excel/excel-add-ins-worksheet-functions.md
@@ -603,6 +606,9 @@
           displayName: Excel
         - name: Проверка данных
           href: excel/excel-add-ins-data-validation.md
+          displayName: Excel
+        - name: Задержка выполнения во время редактирования ячейки
+          href: excel/excel-add-ins-delay-in-cell-edit.md
           displayName: Excel
         - name: Обработка ошибок
           href: excel/excel-add-ins-error-handling.md
@@ -642,6 +648,9 @@
           displayName: Excel
         - name: Листы
           href: excel/excel-add-ins-worksheets.md
+          displayName: Excel
+        - name: Устранение неполадок с надстройками Excel
+          href: excel/excel-add-ins-troubleshooting.md
           displayName: Excel
     - name: Пользовательские функции
       items:
@@ -1109,7 +1118,7 @@
         - name: Справочные материалы по API
           href: reference/word-api-reference.md
           displayName: Word
-        - name: Основные концепции программирования
+        - name: Объектная модель Word
           href: word/word-add-ins-core-concepts.md
           displayName: Word
         - name: Привязка к областям в документе
