@@ -2,14 +2,14 @@
 title: Реализация дополнения по протоколу Send в надстройке Outlook (Предварительная версия)
 description: Узнайте, как реализовать функцию "присоединение к передаче" в надстройке Outlook.
 ms.topic: article
-ms.date: 08/24/2020
+ms.date: 09/09/2020
 localization_priority: Normal
-ms.openlocfilehash: 951f42b82a956d43796144ed94f086d9fb078ca4
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 2199f837351c1030e6f6d0d23db7bf81e498d433
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293991"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47430935"
 ---
 # <a name="implement-append-on-send-in-your-outlook-add-in-preview"></a>Реализация дополнения по протоколу Send в надстройке Outlook (Предварительная версия)
 
@@ -28,7 +28,7 @@ ms.locfileid: "47293991"
 
 - Ссылка на **бета-** библиотеку в сети CDN ( https://appsforoffice.microsoft.com/lib/beta/hosted/office.js) . [Файл определения типа](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts) для компиляции TypeScript и IntelliSense находится в сети CDN и [DefinitelyTyped](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js-preview/index.d.ts). Вы можете установить эти типы с помощью `npm install --save-dev @types/office-js-preview` .
 - Для Windows вы можете присоединиться к [программе предварительной оценки Office](https://insider.office.com) , чтобы получить доступ к последним сборкам Office.
-- Для Outlook в Интернете [Настройте целевой выпуск на клиенте Microsoft 365](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide#set-up-the-release-option-in-the-admin-center).
+- Для Outlook в Интернете [Настройте целевой выпуск на клиенте Microsoft 365](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center).
 
 ## <a name="set-up-your-environment"></a>Настройка среды
 
@@ -182,11 +182,8 @@ ms.locfileid: "47293991"
 1. Выполните следующую команду в корневом каталоге своего проекта. При выполнении этой команды локальный веб-сервер запустится, если он еще не запущен.
 
     ```command&nbsp;line
-    npm start
+    npm run dev-server
     ```
-
-    > [!IMPORTANT]
-    > Если отображается сообщение об ошибке "Загрузка неопубликованных not supported", его можно проигнорировать и продолжить.
 
 1. Следуйте инструкциям в статье [Загрузка неопубликованных надстройки Outlook для тестирования](sideload-outlook-add-ins-for-testing.md).
 

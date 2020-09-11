@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1,9
 ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 6e5de61328ef3e02bc4fcd39848c0f0ecdfff533
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 77e8ed886344f3761d7dfbb982a54a878a554980
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611395"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47430858"
 ---
 # <a name="whats-new-in-excel-javascript-api-19"></a>Новые возможности API JavaScript для Excel 1,9
 
@@ -29,7 +29,7 @@ ms.locfileid: "44611395"
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Excel 1,9. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых набором обязательных элементов API JavaScript для Excel 1,9 или более ранней версии, обратитесь к разделам [API Excel в наборе требований 1,9](/javascript/api/excel?view=excel-js-1.9)
+В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Excel 1,9. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых набором обязательных элементов API JavaScript для Excel 1,9 или более ранней версии, обратитесь к разделам [API Excel в наборе требований 1,9](/javascript/api/excel?view=excel-js-1.9&preserve-view=true)
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
@@ -413,7 +413,7 @@ ms.locfileid: "44611395"
 |[StyleCollection](/javascript/api/excel/excel.stylecollection)|[getCount()](/javascript/api/excel/excel.stylecollection#getcount--)|Получает количество стилей в коллекции.|
 ||[getItemAt(index: number)](/javascript/api/excel/excel.stylecollection#getitemat-index-)|Получает стиль на основе его позиции в коллекции.|
 |[Table](/javascript/api/excel/excel.table)|[autoFilter](/javascript/api/excel/excel.table#autofilter)|Представляет объект AutoFilter таблицы. Только для чтения.|
-|[TableAddedEventArgs](/javascript/api/excel/excel.tableaddedeventargs)|[источник](/javascript/api/excel/excel.tableaddedeventargs#source)|Получает источник события. Дополнительные сведения см. в статье Excel.EventSource.|
+|[TableAddedEventArgs](/javascript/api/excel/excel.tableaddedeventargs)|[source](/javascript/api/excel/excel.tableaddedeventargs#source)|Получает источник события. Дополнительные сведения см. в статье Excel.EventSource.|
 ||[tableId](/javascript/api/excel/excel.tableaddedeventargs#tableid)|Получает идентификатор добавленной таблицы.|
 ||[type](/javascript/api/excel/excel.tableaddedeventargs#type)|Получает тип события. Дополнительные сведения см. в статье Excel.EventType.|
 ||[worksheetId](/javascript/api/excel/excel.tableaddedeventargs#worksheetid)|Получает идентификатор листа, в который добавлена таблица.|
@@ -484,5 +484,5 @@ ms.locfileid: "44611395"
 
 ## <a name="see-also"></a>См. также
 
-- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.9)
+- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.9&preserve-view=true)
 - [Наборы обязательных элементов API JavaScript для Excel](./excel-api-requirement-sets.md)

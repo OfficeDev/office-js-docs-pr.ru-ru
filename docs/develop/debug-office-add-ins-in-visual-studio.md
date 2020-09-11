@@ -3,12 +3,12 @@ title: Отладка надстроек Office в Visual Studio
 description: Используйте Visual Studio для отладки надстроек Office в настольном клиенте Office для Windows
 ms.date: 12/31/2019
 localization_priority: Normal
-ms.openlocfilehash: 8086eaeeb3556edcef40bdf9fea980bd4ae640cc
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 7c49e3019c22af0b5d44a382b33187e5d2de4ceb
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292843"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47430480"
 ---
 # <a name="debug-office-add-ins-in-visual-studio"></a>Отладка надстроек Office в Visual Studio
 
@@ -119,7 +119,7 @@ ms.locfileid: "47292843"
 
 3. Открывает приложение Office.
 
-Visual Studio не отображает ошибки проверки в окне **ВЫВОД** при построении проекта. Visual Studio генерирует ошибки и предупреждения в окне **СПИСОК ОШИБОК** при их появлении. Visual Studio также генерирует отчеты об ошибках проверки, отображая волнистые линии (называется волнистой линией) различных цветов в редакторе кода и текста. Эти отметки уведомляют о проблемах, которые Visual Studio обнаружил в вашем коде. Дополнительные сведения о том, как включить или отключить проверку см. в статье [Параметры, текстовый редактор, JavaScript, IntelliSense](/visualstudio/ide/reference/options-text-editor-javascript-intellisense?view=vs-2019).
+Visual Studio не отображает ошибки проверки в окне **ВЫВОД** при построении проекта. Visual Studio генерирует ошибки и предупреждения в окне **СПИСОК ОШИБОК** при их появлении. Visual Studio также генерирует отчеты об ошибках проверки, отображая волнистые линии (называется волнистой линией) различных цветов в редакторе кода и текста. Эти отметки уведомляют о проблемах, которые Visual Studio обнаружил в вашем коде. Дополнительные сведения о том, как включить или отключить проверку см. в статье [Параметры, текстовый редактор, JavaScript, IntelliSense](/visualstudio/ide/reference/options-text-editor-javascript-intellisense?view=vs-2019&preserve-view=true).
 
 Чтобы просмотреть правила проверки XML-файла манифеста проекта, ознакомьтесь с разделом [XML-манифест надстройки для Office](../develop/add-in-manifests.md).
 

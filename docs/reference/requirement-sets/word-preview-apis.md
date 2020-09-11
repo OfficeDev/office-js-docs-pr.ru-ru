@@ -4,12 +4,12 @@ description: Сведения о предстоящих API JavaScript для Wo
 ms.date: 08/15/2019
 ms.prod: word
 localization_priority: Normal
-ms.openlocfilehash: bde7ff45c8352277b9aec38ecccb41333544172a
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 90d60e1a6ef24907af7b0bff14fa43ee5c312beb
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611276"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47430522"
 ---
 # <a name="word-javascript-preview-apis"></a>API предварительного просмотра для Word JavaScript
 
@@ -19,7 +19,7 @@ ms.locfileid: "44611276"
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API JavaScript для Word, находящиеся в предварительной версии. Чтобы просмотреть полный список всех API JavaScript для Word (включая предварительные API и ранее выпущенные API), ознакомьтесь со статьями [все API JavaScript для Word](/javascript/api/word?view=word-js-preview).
+В следующей таблице перечислены API JavaScript для Word, находящиеся в предварительной версии. Чтобы просмотреть полный список всех API JavaScript для Word (включая предварительные API и ранее выпущенные API), ознакомьтесь со статьями [все API JavaScript для Word](/javascript/api/word?view=word-js-preview&preserve-view=true).
 
 | Класс | Поля | Описание |
 |:---|:---|:---|

@@ -2,14 +2,14 @@
 title: Настройка надстройки Outlook для активации на основе событий (Предварительная версия)
 description: Узнайте, как настроить надстройку Outlook для активации на основе событий.
 ms.topic: article
-ms.date: 08/24/2020
+ms.date: 09/09/2020
 localization_priority: Normal
-ms.openlocfilehash: 0131cafa8315315d63b6319ecad4fd41b1168073
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 69f14748a898c2c963c9d049b2c40c28f3aec725
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293928"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47431250"
 ---
 # <a name="configure-your-outlook-add-in-for-event-based-activation-preview"></a>Настройка надстройки Outlook для активации на основе событий (Предварительная версия)
 
@@ -191,11 +191,8 @@ Outlook в Windows использует файл JavaScript, в то время 
 1. Выполните следующую команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).
 
     ```command&nbsp;line
-    npm start
+    npm run dev-server
     ```
-
-    > [!IMPORTANT]
-    > Если отображается сообщение об ошибке "Загрузка неопубликованных not supported", его можно проигнорировать и продолжить.
 
 1. Чтобы загрузить неопубликованную надстройку в Outlook, следуйте инструкциями из статьи [Загрузка неопубликованных надстроек Outlook для тестирования](sideload-outlook-add-ins-for-testing.md).
 

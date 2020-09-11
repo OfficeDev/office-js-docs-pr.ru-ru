@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1,5
 ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: a722498f264ac8a681e91231d737451274b01c48
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 346b5192d6d68046b9365d3159df9c3964a59271
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611423"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47430851"
 ---
 # <a name="whats-new-in-excel-javascript-api-15"></a>Новые возможности API JavaScript для Excel 1.5
 
@@ -30,7 +30,7 @@ ExcelApi 1,5 добавляет пользовательские XML-части.
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Excel 1,5. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых набором обязательных элементов API JavaScript для Excel 1,5 или более ранней версии, обратитесь к разделам [API Excel в наборе требований 1,5](/javascript/api/excel?view=excel-js-1.5)
+В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Excel 1,5. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых набором обязательных элементов API JavaScript для Excel 1,5 или более ранней версии, обратитесь к разделам [API Excel в наборе требований 1,5](/javascript/api/excel?view=excel-js-1.5&preserve-view=true)
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
@@ -62,5 +62,5 @@ ExcelApi 1,5 добавляет пользовательские XML-части.
 
 ## <a name="see-also"></a>См. также
 
-- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.5)
+- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.5&preserve-view=true)
 - [Наборы обязательных элементов API JavaScript для Excel](./excel-api-requirement-sets.md)

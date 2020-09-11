@@ -3,14 +3,14 @@ title: Элемент Екстендедпермиссион в файле ма�
 description: Определяет расширенное разрешение, необходимое надстройке для доступа к связанному API или функции.
 ms.date: 03/05/2020
 localization_priority: Normal
-ms.openlocfilehash: ca4c2d12cb9a5be159c22712b631d0bde42e48ed
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 138acafb359e2b6e386b34fde7201b1b2c4b3177
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611542"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47430928"
 ---
-# <a name="extendedpermission-element"></a>`ExtendedPermission`элементами
+# <a name="extendedpermission-element"></a>`ExtendedPermission` элементами
 
 Определяет расширенное разрешение, необходимое надстройке для доступа к связанному API или функции. `ExtendedPermission`Элемент является дочерним элементом объекта [екстендедпермиссионс](extendedpermissions.md).
 
@@ -21,11 +21,11 @@ ms.locfileid: "44611542"
 
 Ниже приведены доступные значения.
 
-|Доступное значение|Description|Hosts|
+|Доступное значение|Описание|Hosts|
 |---|---|---|
-|`AppendOnSend`|Объявляет, что надстройка использует API [Office. Body. аппендонсендасинк](/javascript/api/outlook/office.body?view=outlook-js-preview#appendonsendasync-data--options--callback-) .|Outlook|
+|`AppendOnSend`|Объявляет, что надстройка использует API [Office. Body. аппендонсендасинк](/javascript/api/outlook/office.body?view=outlook-js-preview&preserve-view=true#appendonsendasync-data--options--callback-) .|Outlook|
 
-## <a name="extendedpermission-example"></a>`ExtendedPermission`Примеры
+## <a name="extendedpermission-example"></a>`ExtendedPermission` Примеры
 
 Ниже приведен пример `ExtendedPermission` элемента.
 

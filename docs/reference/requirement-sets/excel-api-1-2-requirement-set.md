@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1,2
 ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 7404437569ba69851376fc7d5df76a6465468e1e
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: e55c9dbee09228130b86c76535bb5bf8ef6666c1
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611444"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47430914"
 ---
 # <a name="whats-new-in-excel-javascript-api-12"></a>Новые возможности API JavaScript для Excel 1.2
 
@@ -17,7 +17,7 @@ ExcelApi 1,2 добавлена поддержка фильтрации табл
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Excel 1,2. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых набором обязательных элементов API JavaScript для Excel 1,2 или более ранней версии, обратитесь к разделам [API Excel в наборе требований 1,2](/javascript/api/excel?view=excel-js-1.2)
+В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Excel 1,2. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых набором обязательных элементов API JavaScript для Excel 1,2 или более ранней версии, обратитесь к разделам [API Excel в наборе требований 1,2](/javascript/api/excel?view=excel-js-1.2&preserve-view=true)
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
@@ -31,7 +31,7 @@ ExcelApi 1,2 добавлена поддержка фильтрации табл
 ||[startRow](/javascript/api/excel/excel.bindingselectionchangedeventargs#startrow)|Получает индекс первой строки текущего выбора (с отсчетом от нуля).|
 |[Chart](/javascript/api/excel/excel.chart)|[-Image (Width?: Number, Height?: Number, fittingMode?: Excel. Имажефиттингмоде)](/javascript/api/excel/excel.chart#getimage-width--height--fittingmode-)|Отрисовывает диаграмму в виде изображения с кодировкой base64, масштабируя ее в соответствии с указанным размером.|
 ||[worksheet](/javascript/api/excel/excel.chart#worksheet)|Лист, содержащий текущую диаграмму. Только для чтения.|
-|[Filter](/javascript/api/excel/excel.filter)|[Apply (условия_отбора: Excel. FilterCriteria)](/javascript/api/excel/excel.filter#apply-criteria-)|Применяет заданные условия фильтра для определенного столбца.|
+|[Фильтр](/javascript/api/excel/excel.filter)|[Apply (условия_отбора: Excel. FilterCriteria)](/javascript/api/excel/excel.filter#apply-criteria-)|Применяет заданные условия фильтра для определенного столбца.|
 ||[applyBottomItemsFilter(count: number)](/javascript/api/excel/excel.filter#applybottomitemsfilter-count-)|Применяет к столбцу фильтр по количеству элементов снизу.|
 ||[applyBottomPercentFilter(percent: number)](/javascript/api/excel/excel.filter#applybottompercentfilter-percent-)|Применяет к столбцу фильтр по проценту элементов снизу.|
 ||[applyCellColorFilter(color: string)](/javascript/api/excel/excel.filter#applycellcolorfilter-color-)|Применяет к столбцу фильтр по цвету ячеек.|
@@ -50,7 +50,7 @@ ExcelApi 1,2 добавлена поддержка фильтрации табл
 ||[dynamicCriteria](/javascript/api/excel/excel.filtercriteria#dynamiccriteria)|Динамические критерии из набора Excel.DynamicFilterCriteria, которые необходимо применить к этому столбцу. Используется с фильтрацией типа "dynamic".|
 ||[filterOn](/javascript/api/excel/excel.filtercriteria#filteron)|Свойство, с помощью которого фильтр определяет, следует ли показывать значения.|
 ||[icon](/javascript/api/excel/excel.filtercriteria#icon)|Значок, используемый для фильтрации ячеек. Используется с фильтрацией типа "icon".|
-||[or](/javascript/api/excel/excel.filtercriteria#operator)|Оператор, который используется для объединения критериев 1 и 2 при фильтрации типа "custom".|
+||[operator](/javascript/api/excel/excel.filtercriteria#operator)|Оператор, который используется для объединения критериев 1 и 2 при фильтрации типа "custom".|
 ||[values](/javascript/api/excel/excel.filtercriteria#values)|Набор значений, который используется при фильтрации по значениям.|
 |[FilterDatetime](/javascript/api/excel/excel.filterdatetime)|[дата](/javascript/api/excel/excel.filterdatetime#date)|Дата в формате ISO8601, используемая для фильтрации данных.|
 ||[specificity](/javascript/api/excel/excel.filterdatetime#specificity)|Точность, с которой производится фильтрация данных на основе даты. Например, если указана дата 2005-04-02, а для свойства specificity задано значение month, после фильтрации останутся все строки, датированные апрелем 2009 г.|
@@ -580,5 +580,5 @@ ExcelApi 1,2 добавлена поддержка фильтрации табл
 
 ## <a name="see-also"></a>См. также
 
-- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.2)
+- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.2&preserve-view=true)
 - [Наборы обязательных элементов API JavaScript для Excel](./excel-api-requirement-sets.md)

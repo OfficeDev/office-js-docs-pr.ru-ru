@@ -3,12 +3,12 @@ title: Обработка значений дат в надстройках Outl
 description: API JavaScript для Office использует объект JavaScript Date для большей части хранения и извлечения даты и времени.
 ms.date: 10/31/2019
 localization_priority: Normal
-ms.openlocfilehash: 48cbc407e21e377ed64dc873574d938b136bfd22
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: fb27e7393da9f5192daa5f7b14099f3fb0aeded0
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292568"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47431047"
 ---
 # <a name="tips-for-handling-date-values-in-outlook-add-ins"></a>Советы по использованию значений дат в надстройках Outlook
 
@@ -59,7 +59,7 @@ document.write ("The current UTC time is " +
 
 **Элемент API**|**Представление часового пояса**|**Пример в расширенном клиенте Outlook**|**Пример в Outlook в Интернете или на мобильных устройствах**
 --------------|----------------------------|-------------------------------------|-------------------
-[Office.context.mailbox.userProfile.timeZone](/javascript/api/outlook/office.userprofile?view=outlook-js-preview#timezone)|В расширенном клиенте Outlook это свойство возвращает часовой пояс клиентского компьютера. В Outlook в Интернете и мобильных устройствах это свойство возвращает часовой пояс центра администрирования Exchange. |EST|PST
+[Office.context.mailbox.userProfile.timeZone](/javascript/api/outlook/office.userprofile?view=outlook-js-preview&preserve-view=true#timezone)|В расширенном клиенте Outlook это свойство возвращает часовой пояс клиентского компьютера. В Outlook в Интернете и мобильных устройствах это свойство возвращает часовой пояс центра администрирования Exchange. |EST|PST
 [Office.context.mailbox.item.dateTimeCreated](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties) и [Office.context.mailbox.item.dateTimeModified](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties)|Каждое из этих свойств возвращает объект JavaScript `Date` . Это `Date` значение указано в формате UTC, как показано в следующем примере — `myUTCDate` имеет то же значение, что и в расширенном клиенте Outlook, Outlook в Интернете и на мобильных устройствах.<br/><br/>`var myDate = Office.mailbox.item.dateTimeCreated;`<br/>`var myUTCDate = myDate.getUTCDate;`<br/><br/>Однако вызов  `myDate.getDate` возвращает значение даты в часовом поясе клиентского компьютера, которое согласуется с часовым поясом, используемым для отображения значений даты и времени в пользовательском интерфейсе Outlook с расширенными возможностями, но может отличаться от часовых поясов, которые Outlook в Интернете и мобильные устройства используют в своем пользовательском интерфейсе.|Если элемент создан в 9 часов утра в формате времени UTC, для метода<br/><br/>`Office.mailbox.item.`<br/>`dateTimeCreated.getHours` возвращается значение 4 часа утра в формате времени EST.<br/><br/>Если элемент изменен в 11 часов утра в формате времени UTC, для метода<br/><br/>`Office.mailbox.item.`<br/>`dateTimeModified.getHours` возвращается значение 6 часов утра в формате времени EST.|Если элемент создан в 9 часов утра в формате времени UTC, для метода<br/><br/>`Office.mailbox.item.`</br>`dateTimeCreated.getHours` возвращается значение 4 часа утра в формате времени EST.<br/><br/>Если элемент изменен в 11 часов утра в формате времени UTC, для метода<br/><br/>`Office.mailbox.item.`</br>`dateTimeModified.getHours` возвращается значение 6 часов утра в формате времени EST.<br/><br/>Обратите внимание, что если необходимо отобразить время создания или изменения в пользовательском интерфейсе, следует сначала преобразовать время в формат PST, чтобы оно соответствовало формату времени остального пользовательского интерфейса.
 [Office.context.mailbox.displayNewAppointmentForm](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)|Для каждого из параметров  _Start_ и _End_ требуется объект JavaScript `Date` . Аргументы должны быть правильно заданы в формате UTC независимо от часового пояса, используемого в пользовательском интерфейсе в расширенном клиенте Outlook или в Интернете или на мобильных устройствах.|Если значениями начального и конечного времени для формы встречи являются 9 и 11 часов утра в формате времени UTC, следует убедиться, что аргументы `start` и `end` правильны относительно формата времени UTC. Это означает, что для метода<br/><br/><ul><li>`start.getUTCHours` возвращается значение 9 часов утра в формате времени UTC, а для метода</li><li>`end.getUTCHours` возвращается значение 11 часов утра в формате времени UTC</li></ul>|Если значениями начального и конечного времени для формы встречи являются 9 и 11 часов утра в формате времени UTC, следует убедиться, что аргументы `start` и `end` правильны относительно формата времени UTC. Это означает, что для метода<br/><br/><ul><li>`start.getUTCHours` возвращается значение 9 часов утра в формате времени UTC, а для метода</li><li>`end.getUTCHours` возвращается значение 11 часов утра в формате времени UTC</li></ul>
 

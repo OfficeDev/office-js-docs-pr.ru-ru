@@ -3,19 +3,19 @@ title: Включение сценариев делегирования дост
 description: В кратко описывается доступ представителя и описывается настройка поддержки надстройки.
 ms.date: 09/03/2020
 localization_priority: Normal
-ms.openlocfilehash: 965798995638c9ec518d1e69ed23763d845fb7ec
-ms.sourcegitcommit: 604361e55dee45c7a5d34c2fa6937693c154fc24
+ms.openlocfilehash: 68b912d35f68cbf1177dd0b809994840092330a9
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "47363830"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47430984"
 ---
 # <a name="enable-delegate-access-scenarios-in-an-outlook-add-in"></a>Включение сценариев делегирования доступа в надстройке Outlook
 
 Владелец почтового ящика может использовать функцию делегированного доступа, чтобы [Разрешить другому пользователю управлять своей почтой и календарем](https://support.office.com/article/allow-someone-else-to-manage-your-mail-and-calendar-41c40c04-3bd1-4d22-963a-28eafec25926). В этой статье указывается, какие разрешения представителей поддерживает API JavaScript для Office, а также описывается включение сценариев делегированного доступа в надстройке Outlook.
 
 > [!IMPORTANT]
-> Доступ к представителю в настоящее время недоступен в Outlook на Android и iOS. Кроме того, эта функция в настоящее время недоступна для [групп общих почтовых ящиков](/microsoft-365/admin/create-groups/compare-groups?view=o365-worldwide#shared-mailboxes) в Outlook в Интернете. Эта функция может быть доступна в будущем.
+> Доступ к представителю в настоящее время недоступен в Outlook на Android и iOS. Кроме того, эта функция в настоящее время недоступна для [групп общих почтовых ящиков](/microsoft-365/admin/create-groups/compare-groups?view=o365-worldwide&preserve-view=true#shared-mailboxes) в Outlook в Интернете. Эта функция может быть доступна в будущем.
 >
 > Поддержка этой функции появилась в наборе требований 1,8. См [клиенты и платформы](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 

@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1,6
 ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: f86a470d39bacfe4940a6c225b9ce7d8903e2092
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: ea54b825c3d5eff71a3355c3d313feb355d3c892
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611416"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47430844"
 ---
 # <a name="whats-new-in-excel-javascript-api-16"></a>Новые возможности API JavaScript для Excel 1.6
 
@@ -32,7 +32,7 @@ ms.locfileid: "44611416"
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Excel 1,6. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых набором обязательных элементов API JavaScript для Excel 1,6 или более ранней версии, обратитесь к разделам [API Excel в наборе требований 1,6](/javascript/api/excel?view=excel-js-1.6)
+В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Excel 1,6. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых набором обязательных элементов API JavaScript для Excel 1,6 или более ранней версии, обратитесь к разделам [API Excel в наборе требований 1,6](/javascript/api/excel?view=excel-js-1.6&preserve-view=true)
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
@@ -43,7 +43,7 @@ ms.locfileid: "44611416"
 ||[сриколорскале](/javascript/api/excel/excel.colorscaleconditionalformat#threecolorscale)|Если задано значение true, цветовая шкала будет иметь три точки (минимальная, средняя, максимальная), в противном случае будет существовать два (минимум, максимум).|
 |[ConditionalCellValueRule](/javascript/api/excel/excel.conditionalcellvaluerule)|[Formula1](/javascript/api/excel/excel.conditionalcellvaluerule#formula1)|Формула, с помощью которой при необходимости оценивается правило условного форматирования.|
 ||[formula2](/javascript/api/excel/excel.conditionalcellvaluerule#formula2)|Формула, с помощью которой при необходимости оценивается правило условного форматирования.|
-||[or](/javascript/api/excel/excel.conditionalcellvaluerule#operator)|Оператор условного форматирования текста.|
+||[operator](/javascript/api/excel/excel.conditionalcellvaluerule#operator)|Оператор условного форматирования текста.|
 |[кондитионалколорскалекритериа](/javascript/api/excel/excel.conditionalcolorscalecriteria)|[maximum](/javascript/api/excel/excel.conditionalcolorscalecriteria#maximum)|Условие цветовой шкалы "максимальная точка".|
 ||[точка](/javascript/api/excel/excel.conditionalcolorscalecriteria#midpoint)|Условие цветовой шкалы "средняя точка", если используется трехцветная цветовая шкала.|
 ||[minimum](/javascript/api/excel/excel.conditionalcolorscalecriteria#minimum)|Условие цветовой шкалы "минимальная точка".|
@@ -93,7 +93,7 @@ ms.locfileid: "44611416"
 ||[formulaR1C1](/javascript/api/excel/excel.conditionalformatrule#formular1c1)|Формула, с помощью которой при необходимости оценивается правило условного форматирования в формате R1C1.|
 |[ConditionalIconCriterion](/javascript/api/excel/excel.conditionaliconcriterion)|[кустомикон](/javascript/api/excel/excel.conditionaliconcriterion#customicon)|Специальный значок для текущего условия, если он отличается от набора значков по умолчанию, в противном случае возвращается значение NULL.|
 ||[formula](/javascript/api/excel/excel.conditionaliconcriterion#formula)|Число или формула в зависимости от типа.|
-||[or](/javascript/api/excel/excel.conditionaliconcriterion#operator)|GreaterThan или Греатерсанорекуал для каждого типа правила для условного форматирования значка.|
+||[operator](/javascript/api/excel/excel.conditionaliconcriterion#operator)|GreaterThan или Греатерсанорекуал для каждого типа правила для условного форматирования значка.|
 ||[type](/javascript/api/excel/excel.conditionaliconcriterion#type)|На чем должна основываться условная формула значка.|
 |[ConditionalPresetCriteriaRule](/javascript/api/excel/excel.conditionalpresetcriteriarule)|[текущего](/javascript/api/excel/excel.conditionalpresetcriteriarule#criterion)|Критерий условного форматирования.|
 |[кондитионалранжебордер](/javascript/api/excel/excel.conditionalrangeborder)|[color](/javascript/api/excel/excel.conditionalrangeborder#color)|HTML-код, представляющий цвет линии границы в виде #RRGGBB (например, FFA500) или в виде ключевого слова (например, orange).|
@@ -119,7 +119,7 @@ ms.locfileid: "44611416"
 ||[borders](/javascript/api/excel/excel.conditionalrangeformat#borders)|Коллекция объектов Border, которые применяются к общему диапазону условного форматирования. Только для чтения.|
 ||[fill](/javascript/api/excel/excel.conditionalrangeformat#fill)|Возвращает объект Fill, определенный в общем диапазоне условного форматирования. Только для чтения.|
 ||[font](/javascript/api/excel/excel.conditionalrangeformat#font)|Возвращает объект Font, определенный в общем диапазоне условного форматирования. Только для чтения.|
-|[кондитионалтексткомпарисонруле](/javascript/api/excel/excel.conditionaltextcomparisonrule)|[or](/javascript/api/excel/excel.conditionaltextcomparisonrule#operator)|Оператор условного форматирования текста.|
+|[кондитионалтексткомпарисонруле](/javascript/api/excel/excel.conditionaltextcomparisonrule)|[operator](/javascript/api/excel/excel.conditionaltextcomparisonrule#operator)|Оператор условного форматирования текста.|
 ||[text](/javascript/api/excel/excel.conditionaltextcomparisonrule#text)|Текстовое значение условного форматирования.|
 |[ConditionalTopBottomRule](/javascript/api/excel/excel.conditionaltopbottomrule)|[rank](/javascript/api/excel/excel.conditionaltopbottomrule#rank)|От 1 до 1000 для числовых рейтингов или от 1 до 100 для процентных рейтингов.|
 ||[type](/javascript/api/excel/excel.conditionaltopbottomrule#type)|Форматирование значений на основе верхнего или нижнего ранга.|
@@ -149,5 +149,5 @@ ms.locfileid: "44611416"
 
 ## <a name="see-also"></a>См. также
 
-- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.6)
+- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.6&preserve-view=true)
 - [Наборы обязательных элементов API JavaScript для Excel](./excel-api-requirement-sets.md)

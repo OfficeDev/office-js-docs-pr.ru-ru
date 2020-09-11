@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1,8
 ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: e5d40df0ec9e6b5fb307f834c239c7fa895af42e
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: ad8c67fddffeec7937b66d43fb58a8608d662be1
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611402"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47430837"
 ---
 # <a name="whats-new-in-excel-javascript-api-18"></a>Новые возможности API JavaScript для Excel 1,8
 
@@ -33,13 +33,13 @@ ms.locfileid: "44611402"
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Excel 1,8. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых набором обязательных элементов API JavaScript для Excel 1,8 или более ранней версии, обратитесь к разделам [API Excel в наборе требований 1,8](/javascript/api/excel?view=excel-js-1.8)
+В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Excel 1,8. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых набором обязательных элементов API JavaScript для Excel 1,8 или более ранней версии, обратитесь к разделам [API Excel в наборе требований 1,8](/javascript/api/excel?view=excel-js-1.8&preserve-view=true)
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
 |[басикдатавалидатион](/javascript/api/excel/excel.basicdatavalidation)|[Formula1](/javascript/api/excel/excel.basicdatavalidation#formula1)|Задает правый операнд, если для свойства operator задан бинарный оператор, такой как GreaterThan (левый операнд — это значение, которое пользователь пытается ввести в ячейку). С помощью операторов тернарного между и Нотбетвин задает нижнюю границу операнда.|
 ||[formula2](/javascript/api/excel/excel.basicdatavalidation#formula2)|С помощью операторов тернарного между и Нотбетвин указывает верхнюю границу операнда. Не используется с двоичными операторами, например GreaterThan.|
-||[or](/javascript/api/excel/excel.basicdatavalidation#operator)|Оператор, используемый для проверки данных.|
+||[operator](/javascript/api/excel/excel.basicdatavalidation#operator)|Оператор, используемый для проверки данных.|
 |[Chart](/javascript/api/excel/excel.chart)|[categoryLabelLevel](/javascript/api/excel/excel.chart#categorylabellevel)|Возвращает или задает константу перечисления Чарткатегорилабеллевел, ссылающуюся на|
 ||[displayBlanksAs](/javascript/api/excel/excel.chart#displayblanksas)|Возвращает или задает способ отображения пустых ячеек на диаграмме. Для чтения и записи.|
 ||[plotBy](/javascript/api/excel/excel.chart#plotby)|Возвращает или задает способ использования столбцов или строк в качестве рядов данных на диаграмме. Для чтения и записи.|
@@ -179,13 +179,13 @@ ms.locfileid: "44611402"
 |[датавалидатионруле](/javascript/api/excel/excel.datavalidationrule)|[собственный](/javascript/api/excel/excel.datavalidationrule#custom)|Условия проверки настраиваемых данных.|
 ||[дата](/javascript/api/excel/excel.datavalidationrule#date)|Условия проверки данных даты.|
 ||[числе](/javascript/api/excel/excel.datavalidationrule#decimal)|Условия проверки десятичных данных.|
-||[списка](/javascript/api/excel/excel.datavalidationrule#list)|Условия проверки данных списка.|
+||[list](/javascript/api/excel/excel.datavalidationrule#list)|Условия проверки данных списка.|
 ||[textLength](/javascript/api/excel/excel.datavalidationrule#textlength)|Условия проверки данных TextLength.|
 ||[time](/javascript/api/excel/excel.datavalidationrule#time)|Условия проверки данных времени.|
 ||[wholeNumber](/javascript/api/excel/excel.datavalidationrule#wholenumber)|Условия проверки данных WholeNumber.|
 |[датетимедатавалидатион](/javascript/api/excel/excel.datetimedatavalidation)|[Formula1](/javascript/api/excel/excel.datetimedatavalidation#formula1)|Задает правый операнд, если для свойства operator задан бинарный оператор, такой как GreaterThan (левый операнд — это значение, которое пользователь пытается ввести в ячейку). С помощью операторов тернарного между и Нотбетвин задает нижнюю границу операнда.|
 ||[formula2](/javascript/api/excel/excel.datetimedatavalidation#formula2)|С помощью операторов тернарного между и Нотбетвин указывает верхнюю границу операнда. Не используется с двоичными операторами, например GreaterThan.|
-||[or](/javascript/api/excel/excel.datetimedatavalidation#operator)|Оператор, используемый для проверки данных.|
+||[operator](/javascript/api/excel/excel.datetimedatavalidation#operator)|Оператор, используемый для проверки данных.|
 |[FilterPivotHierarchy](/javascript/api/excel/excel.filterpivothierarchy)|[енаблемултиплефилтеритемс](/javascript/api/excel/excel.filterpivothierarchy#enablemultiplefilteritems)|Определяет, следует ли разрешить несколько элементов фильтра.|
 ||[name](/javascript/api/excel/excel.filterpivothierarchy#name)|Имя FilterPivotHierarchy.|
 ||[position](/javascript/api/excel/excel.filterpivothierarchy#position)|Положение FilterPivotHierarchy.|
@@ -287,5 +287,5 @@ ms.locfileid: "44611402"
 
 ## <a name="see-also"></a>См. также
 
-- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.8)
+- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.8&preserve-view=true)
 - [Наборы обязательных элементов API JavaScript для Excel](./excel-api-requirement-sets.md)

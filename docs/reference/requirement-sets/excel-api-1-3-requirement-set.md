@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1,3
 ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 482d04a951acc48d34838a758834adfba273bd19
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 71bad9fae630a11688458e4cb76ded2fa523a563
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611437"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47430872"
 ---
 # <a name="whats-new-in-excel-javascript-api-13"></a>Новые возможности API JavaScript для Excel 1.3
 
@@ -17,7 +17,7 @@ ExcelApi 1,3 добавлена поддержка привязки данных
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Excel 1,3. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых набором обязательных элементов API JavaScript для Excel 1,3 или более ранней версии, обратитесь к разделам [API Excel в наборе требований 1,3](/javascript/api/excel?view=excel-js-1.3)
+В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Excel 1,3. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых набором обязательных элементов API JavaScript для Excel 1,3 или более ранней версии, обратитесь к разделам [API Excel в наборе требований 1,3](/javascript/api/excel?view=excel-js-1.3&preserve-view=true)
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
@@ -57,5 +57,5 @@ ExcelApi 1,3 добавлена поддержка привязки данных
 
 ## <a name="see-also"></a>См. также
 
-- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.3)
+- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.3&preserve-view=true)
 - [Наборы обязательных элементов API JavaScript для Excel](./excel-api-requirement-sets.md)

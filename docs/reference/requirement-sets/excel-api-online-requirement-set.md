@@ -4,12 +4,12 @@ description: Сведения о наборе требований Ексцел�
 ms.date: 05/06/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: f4a39406328605e11d8108ddee454c339bf3919f
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: aa497ff97533ff3a414905547a949fa8430c3efe
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47294243"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47430816"
 ---
 # <a name="excel-javascript-api-online-only-requirement-set"></a>Набор обязательных элементов API JavaScript для Excel Online
 
@@ -54,6 +54,6 @@ if (Office.context.requirements.isSetSupported("ExcelApiOnline", "1.1")) {
 
 ## <a name="see-also"></a>См. также
 
-- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-online)
+- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-online&preserve-view=true)
 - [Предварительные версии API JavaScript для Excel](./excel-preview-apis.md)
 - [Наборы обязательных элементов API JavaScript для Excel](./excel-api-requirement-sets.md)

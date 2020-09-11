@@ -4,12 +4,12 @@ description: Сведения о предстоящих API JavaScript для Ex
 ms.date: 06/29/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 2c547524fcb630ecb1b02fede829cf0a9a4e173f
-ms.sourcegitcommit: 065bf4f8e0d26194cee9689f7126702b391340cc
+ms.openlocfilehash: d1701ad393b96e33f0007bfcb5609c93c13608a2
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "45006467"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47430767"
 ---
 # <a name="excel-javascript-preview-apis"></a>Предварительные версии API JavaScript для Excel
 
@@ -28,7 +28,7 @@ ms.locfileid: "45006467"
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API JavaScript для Excel, находящиеся в предварительной версии. Чтобы просмотреть полный список всех интерфейсов API JavaScript для Excel (включая предварительные API и ранее выпущенные API), ознакомьтесь со статьями [все API JavaScript для Excel](/javascript/api/excel?view=excel-js-preview).
+В следующей таблице перечислены API JavaScript для Excel, находящиеся в предварительной версии. Чтобы просмотреть полный список всех интерфейсов API JavaScript для Excel (включая предварительные API и ранее выпущенные API), ознакомьтесь со статьями [все API JavaScript для Excel](/javascript/api/excel?view=excel-js-preview&preserve-view=true).
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
@@ -134,7 +134,7 @@ ms.locfileid: "45006467"
 ||[use1904DateSystem](/javascript/api/excel/excel.workbook#use1904datesystem)|Значение true, если в книге используется система дат 1904.|
 |[воркбукранжеареас](/javascript/api/excel/excel.workbookrangeareas)|[Жетранжеареасбишит (Key: строка)](/javascript/api/excel/excel.workbookrangeareas#getrangeareasbysheet-key-)|Возвращает `RangeAreas` объект, основанный на идентификаторе или имени листа в коллекции.|
 ||[Жетранжеареасорнуллобжектбишит (Key: строка)](/javascript/api/excel/excel.workbookrangeareas#getrangeareasornullobjectbysheet-key-)|Возвращает `RangeAreas` объект, основанный на имени листа или идентификаторе в коллекции. Если лист не существует, возвращает пустой объект.|
-||[устраняющее](/javascript/api/excel/excel.workbookrangeareas#addresses)|Возвращает массив адресов в стиле a1. Значение Address будет содержать имя листа для каждого прямоугольного блока ячеек (например, "Лист1! A1: B4, Лист1! D1: D4 "). Только для чтения.|
+||[addresses](/javascript/api/excel/excel.workbookrangeareas#addresses)|Возвращает массив адресов в стиле a1. Значение Address будет содержать имя листа для каждого прямоугольного блока ячеек (например, "Лист1! A1: B4, Лист1! D1: D4 "). Только для чтения.|
 ||[areas](/javascript/api/excel/excel.workbookrangeareas#areas)|Возвращает объект Ранжеареасколлектион, каждый RangeAreas в коллекции представляет один или несколько диапазонов прямоугольников в одном листе.|
 ||[ячеек](/javascript/api/excel/excel.workbookrangeareas#ranges)|Возвращает коллекцию диапазонов, состоящих из этого объекта.|
 |[Worksheet](/javascript/api/excel/excel.worksheet)|[customProperties](/javascript/api/excel/excel.worksheet#customproperties)|Возвращает коллекцию настраиваемых свойств на уровне листа.|
@@ -155,5 +155,5 @@ ms.locfileid: "45006467"
 
 ## <a name="see-also"></a>См. также
 
-- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-preview)
+- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-preview&preserve-view=true)
 - [Наборы обязательных элементов API JavaScript для Excel](./excel-api-requirement-sets.md)

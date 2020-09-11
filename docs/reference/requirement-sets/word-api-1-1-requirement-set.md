@@ -4,12 +4,12 @@ description: Сведения о наборе требований WordApi 1,1
 ms.date: 07/25/2019
 ms.prod: word
 localization_priority: Normal
-ms.openlocfilehash: 9f7efdd0ce8f67a05d8197ec3005b2d6e9049409
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: ad1ec8b226bc958ed1be6e233a070108612661ad
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611311"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47431509"
 ---
 # <a name="whats-new-in-word-javascript-api-11"></a>Новые возможности API JavaScript для Word 1,1
 
@@ -17,11 +17,11 @@ WordApi 1,1 является первым набором требований AP
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Word 1,1. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых в наборе обязательных элементов API JavaScript для Word 1,1, обратитесь к разделам [API Word в наборе требований 1,1](/javascript/api/word?view=word-js-1.1).
+В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Word 1,1. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых в наборе обязательных элементов API JavaScript для Word 1,1, обратитесь к разделам [API Word в наборе требований 1,1](/javascript/api/word?view=word-js-1.1&preserve-view=true).
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
-|[Body](/javascript/api/word/word.body)|[clear()](/javascript/api/word/word.body#clear--)|Очищает объект содержимого. Пользователь может отменить операцию очищения для содержимого.|
+|[Основной текст](/javascript/api/word/word.body)|[clear()](/javascript/api/word/word.body#clear--)|Очищает объект содержимого. Пользователь может отменить операцию очищения для содержимого.|
 ||[getHtml()](/javascript/api/word/word.body#gethtml--)|Возвращает HTML-представление объекта Body. При отображении на веб-странице или в средстве просмотра HTML форматирование будет близким, но не точным, соответствующим формату документа. Этот метод не возвращает точно такой же HTML-код для одного и того же документа на различных платформах (Windows, Mac и т. д.). Если вам нужна точная точность или согласованность на различных платформах, используйте `Body.getOoxml()` и преобразуйте возвращенный XML в HTML.|
 ||[getOoxml()](/javascript/api/word/word.body#getooxml--)|Возвращает OOXML-представление (Office Open XML) объекта содержимого.|
 ||[insertBreak (breakType: Word. BreakType, insertLocation: Word. InsertLocation)](/javascript/api/word/word.body#insertbreak-breaktype--insertlocation-)|Вставляет разрыв в указанном расположении в основном документе. Возможные значения InsertLocation: Start или End.|

@@ -3,12 +3,12 @@ title: Создание надстройки Project, использующей R
 description: Узнайте, как создать надстройку области задач для Project профессиональный 2013, которая сравнивает данные о затратах и трудозатратах в активном проекте со средними для всех проектов в текущем экземпляре Project Web App.
 ms.date: 09/26/2019
 localization_priority: Normal
-ms.openlocfilehash: ca5c33815b4f47ba8aa88625725b3b235853c7fb
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 17325b9a59c502d5d7331702584292579b36dc50
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611899"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47431201"
 ---
 # <a name="create-a-project-add-in-that-uses-rest-with-an-on-premises-project-server-odata-service"></a>Создание надстройки Project, использующей REST с локальной службой OData Project Server
 
@@ -101,7 +101,7 @@ ms.locfileid: "44611899"
 
 ![Просмотр файлов веб-проекта в обозревателе решений](../images/pj15-hello-project-o-data-initial-solution-explorer.png)
 
-Манифестом для проекта **HelloProjectOData** является файл HelloProjectOData. XML. Его можно изменить при необходимости, чтобы добавить описание надстройки, ссылку на значок, сведения о дополнительных языках и другие параметры. В процедуре 3 изменяется только отображаемое имя надстройки и описание и добавляется значок.
+Манифестом для проекта **HelloProjectOData** является файл HelloProjectOData.xml. Его можно изменить при необходимости, чтобы добавить описание надстройки, ссылку на значок, сведения о дополнительных языках и другие параметры. В процедуре 3 изменяется только отображаемое имя надстройки и описание и добавляется значок.
 
 Дополнительные сведения о манифесте см. в статьях [XML-манифест надстроек для Office](../develop/add-in-manifests.md) и [Справка по схеме для манифестов надстроек Office (версия 1.1)](../develop/add-in-manifests.md#see-also).
 
@@ -125,7 +125,7 @@ ms.locfileid: "44611899"
 
     ![Значок для приложения HelloProjectOData](../images/pj15-hello-project-data-new-icon.jpg)
 
-3. В манифесте HelloProjectOData. xml добавьте элемент **IconUrl** под элементом **Description** , где значение URL-адреса значка — это относительный путь к файлу значка 32x32. Например, добавьте следующую строку: **<IconUrl DefaultValue="~remoteAppUrl/Images/NewIcon.png" />** . Файл манифеста HelloProjectOData.xml теперь содержит (ваше значение **Id** будет другим):
+3. В манифесте HelloProjectOData.xml добавьте элемент **IconUrl** под элементом **Description** , где значение URL-адреса значка — это относительный путь к файлу значка 32x32. Например, добавьте следующую строку: **<IconUrl DefaultValue="~remoteAppUrl/Images/NewIcon.png" />** . Файл манифеста HelloProjectOData.xml теперь содержит (ваше значение **Id** будет другим):
 
     ```XML
     <?xml version="1.0" encoding="UTF-8"?>
@@ -171,16 +171,16 @@ ms.locfileid: "44611899"
 
 ### <a name="procedure-4-to-create-the-html-content"></a>Процедура 4. Создание HTML-контента
 
-1. В элементе **head** файла Home. HTML добавьте все дополнительные элементы **Link** для CSS-файлов, которые использует надстройка. Шаблон проекта Visual Studio содержит ссылку на файл App.css, который можно использовать для настраиваемых стилей CSS.
+1. В элементе **head** файла Home.html добавьте любые дополнительные элементы **Link** для CSS файлов, которые использует надстройка. Шаблон проекта Visual Studio содержит ссылку на файл App.css, который можно использовать для настраиваемых стилей CSS.
 
-2. Добавьте дополнительные элементы **script** для библиотек JavaScript, которые использует надстройка. Шаблон проекта включает ссылки на файлы jQuery – _[Version]_. js, Office. js и MicrosoftAjax. js в папке **Scripts** .
+2. Добавьте дополнительные элементы **script** для библиотек JavaScript, которые использует надстройка. Шаблон проекта включает ссылки на файлы jQuery – _[Version]_. js, office.js и MicrosoftAjax.js в папке **Scripts** .
 
     > [!NOTE]
     > Перед развертыванием надстройки измените ссылку office.js и ссылку jQuery на ссылку сети доставки содержимого (CDN). Ссылка CDN предоставляет самую последнюю версию и обеспечивает оптимальную производительность.
 
-    Надстройка **HelloProjectOData** использует файл SurfaceErrors.js, который отображает ошибки и всплывающее сообщение. Вы можете скопировать код из раздела " _надежное программирование_ " [раздела Создание первой надстройки области задач для Project 2013 с помощью текстового редактора](../project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md), а затем добавьте файл SurfaceErrors. js в папку **скриптс\оффице** проекта **HelloProjectODataWeb** .
+    Надстройка **HelloProjectOData** использует файл SurfaceErrors.js, который отображает ошибки и всплывающее сообщение. Вы можете скопировать код из раздела " _надежное программирование_ " [раздела Создание первой надстройки области задач для Project 2013 с помощью текстового редактора](../project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md), а затем добавьте SurfaceErrors.js файл в папку **скриптс\оффице** проекта **HelloProjectODataWeb** .
 
-    Ниже приведен обновленный HTML-код для элемента **head** с дополнительной строкой для файла SurfaceErrors. js:
+    Ниже приведен обновленный HTML-код для элемента **head** с дополнительной строкой для файла SurfaceErrors.js:
 
     ```HTML
     <!DOCTYPE html>
@@ -218,7 +218,7 @@ ms.locfileid: "44611899"
 
 3. В элементе **Body** удалите существующий код из шаблона, а затем добавьте код для пользовательского интерфейса. Если элемент должен заполняться данными или изменяться оператором jQuery, элемент должен содержать уникальный атрибут **id**. В приведенном ниже коде атрибуты **ID** для элементов **Button**, **span**и **TD** (определения ячейки таблицы), которые используются функциями jQuery, отображаются полужирным шрифтом.
 
-   Следующий HTML-код добавляет графическое изображение, которое может быть эмблемой компании. Вы можете использовать логотип или скопировать файл Невлого. png из загружаемого пакета SDK для Project 2013, а затем с помощью **обозревателя решений** добавить файл в `HelloProjectODataWeb\Images` папку.
+   Следующий HTML-код добавляет графическое изображение, которое может быть эмблемой компании. Вы можете использовать логотип или скопировать файл NewLogo.png из загружаемого пакета SDK для Project 2013, а затем с помощью **обозревателя решений** добавить файл в `HelloProjectODataWeb\Images` папку.
 
     ```HTML
     <body>
@@ -276,15 +276,15 @@ ms.locfileid: "44611899"
 
 ## <a name="creating-the-javascript-code-for-the-add-in"></a>Создание кода JavaScript для надстройки
 
-Шаблон надстройки области задач для Project содержит код инициализации по умолчанию, который предназначен для демонстрации базовых действий получения и записи данных в документе для типичных приложений Office 2013. Так как Project 2013 не поддерживает действия, которые записываются в активный проект, а надстройка **HelloProjectOData** не использует этот `getSelectedDataAsync` метод, можно удалить скрипт в `Office.initialize` функции и удалить `setData` функцию и `getData` функцию в файле HelloProjectOData. js по умолчанию.
+Шаблон надстройки области задач для Project содержит код инициализации по умолчанию, который предназначен для демонстрации базовых действий получения и записи данных в документе для типичных приложений Office 2013. Так как Project 2013 не поддерживает действия, которые записываются в активный проект, а надстройка **HelloProjectOData** не использует этот `getSelectedDataAsync` метод, можно удалить скрипт в `Office.initialize` функции и удалить `setData` функцию и `getData` функцию в файле HelloProjectOData.js по умолчанию.
 
 В JavaScript содержатся глобальные константы для запроса REST и глобальные переменные, используемые в нескольких функциях. Кнопка **получить конечную точку ProjectData** вызывает `setOdataUrl` функцию, которая инициализирует глобальные переменные и определяет, подключен ли Project к Project Web App.
 
-Оставшаяся часть файла HelloProjectOData. js включает две функции: `retrieveOData` функция вызывается, когда пользователь выбирает **сравнение всех проектов**; и `parseODataResult` функция вычисляет средние значения, а затем заполняет таблицу сравнения значениями Color и Units.
+Оставшаяся часть файла HelloProjectOData.js включает две функции: `retrieveOData` функция вызывается, когда пользователь выбирает **сравнение всех проектов**; и `parseODataResult` функция вычисляет средние значения, а затем заполняет таблицу сравнения значениями цвета и единиц.
 
 ### <a name="procedure-5-to-create-the-javascript-code"></a>Процедура 5. Создание кода JavaScript
 
-1. Удалите весь код в файле по умолчанию HelloProjectOData. js, а затем добавьте функции Global Variables и `**` Office. Initialize. Имена переменных, написанные полностью заглавными буквами подразумевают, что они являются константами; они позже будут использоваться с переменной **_pwa** для создания запроса REST в этом примере.
+1. Удалите весь код в файле HelloProjectOData.js по умолчанию, а затем добавьте глобальные переменные и `**`Office.iniтиализе. Имена переменных, написанные полностью заглавными буквами подразумевают, что они являются константами; они позже будут использоваться с переменной **_pwa** для создания запроса REST в этом примере.
 
     ```js
     var PROJDATA = "/_api/ProjectData";
@@ -306,10 +306,10 @@ ms.locfileid: "44611899"
     }
     ```
 
-2. Добавление `setOdataUrl` и связанные функции. `setOdataUrl`Вызов функции `getProjectGuid` и `getDocumentUrl` Инициализация глобальных переменных. В [методе getProjectFieldAsync](/javascript/api/office/office.document)анонимная функция для параметра _callback_ включает кнопку " **Сравнить все проекты** " с помощью `removeAttr` метода в библиотеке jQuery, а затем отображает URL-адрес службы **ProjectData** . Если Project не подключен к Project Web App, функция вызывает ошибку, которая отображает всплывающее сообщение об ошибке. Файл SurfaceErrors. js включает `throwError` метод.
+2. Добавление `setOdataUrl` и связанные функции. `setOdataUrl`Вызов функции `getProjectGuid` и `getDocumentUrl` Инициализация глобальных переменных. В [методе getProjectFieldAsync](/javascript/api/office/office.document)анонимная функция для параметра  _callback_ включает кнопку " **Сравнить все проекты** " с помощью `removeAttr` метода в библиотеке jQuery, а затем отображает URL-адрес службы **ProjectData** . Если Project не подключен к Project Web App, функция вызывает ошибку, которая отображает всплывающее сообщение об ошибке. Файл SurfaceErrors.js содержит `throwError` метод.
 
    > [!NOTE]
-   > Если вы работаете с Visual Studio на компьютере Project Server, то для того, чтобы использовать отладку по клавише **F5**, раскомментируйте код после строки, инициализирующей глобальную переменную **_pwa**. Чтобы включить использование метода jQuery `ajax` при отладке на компьютере Project Server, необходимо задать `localhost` значение для URL-адреса PWA. Если вы запускаете Visual Studio на удаленном компьютере, `localhost` URL-адрес не требуется. Перед развертыванием надстройки закомментируйте этот код.
+   > Если вы работаете с Visual Studio на компьютере Project Server, то для того, чтобы использовать отладку по клавише **F5**, раскомментируйте код после строки, инициализирующей глобальную переменную **_pwa**. Чтобы включить использование метода jQuery `ajax` при отладке на компьютере Project Server, необходимо задать `localhost` значение для URL-адреса PWA. Если вы запускаете Visual Studio на удаленном компьютере,  `localhost` URL-адрес не требуется. Перед развертыванием надстройки закомментируйте этот код.
 
     ```js
     function setOdataUrl() {
@@ -372,7 +372,7 @@ ms.locfileid: "44611899"
    > [!NOTE]
    > Приведенный ниже код подходит для локального сервера Project Server 2013. В Project в Интернете можно использовать OAuth для проверки подлинности на основе токенов. Дополнительные сведения см. в статье [Обход ограничений, связанных с принципом одинакового источника, в надстройках Office](../develop/addressing-same-origin-policy-limitations.md).
 
-   В `ajax` вызове можно использовать либо параметр _headers_ , либо параметр _бефоресенд_ . Параметр _Complete_ — это анонимная функция, которая находится в той же области, что и переменные в `retrieveOData` . Функция для параметра _Complete_ отображает результаты в `odataText` элементе управления, а также вызывает `parseODataResult` метод для синтаксического анализа и отображения ответа JSON. Параметр _Error_ указывает именованную `getProjectDataErrorHandler` функцию, которая записывает сообщение об ошибке в `odataText` элемент управления, а также использует `throwError` метод для отображения всплывающего сообщения.
+   В `ajax` вызове можно использовать либо параметр _headers_ , либо параметр _бефоресенд_ . Параметр _Complete_ — это анонимная функция, которая находится в той же области, что и переменные в `retrieveOData` . Функция для параметра  _Complete_ отображает результаты в `odataText` элементе управления, а также вызывает `parseODataResult` метод для синтаксического анализа и отображения ответа JSON. Параметр _Error_ указывает именованную `getProjectDataErrorHandler` функцию, которая записывает сообщение об ошибке в `odataText` элемент управления, а также использует `throwError` метод для отображения всплывающего сообщения.
 
     ```js
     // Functions to get and parse the Project Server reporting data./
@@ -1111,7 +1111,7 @@ Table styles
 
   `~/ProjectData/Projects()?skip= [numSkipped]&amp;$top=100&amp;$filter=[filter]&amp;$select=[field1,field2, ???????]`
 
-  For more information, see [OData System Query Options Using the REST Endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg309461(v=crm.7)). You can also use the [Set-SPProjectOdataConfiguration](/powershell/module/sharepoint-server/Set-SPProjectOdataConfiguration?view=sharepoint-ps) command in Windows PowerShell to override the default page size for a query of the **Projects** entity set (or any of the 33 entity sets). See [ProjectData - Project OData service reference](/previous-versions/office/project-odata/jj163015(v=office.15)).
+  For more information, see [OData System Query Options Using the REST Endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg309461(v=crm.7)). You can also use the [Set-SPProjectOdataConfiguration](/powershell/module/sharepoint-server/Set-SPProjectOdataConfiguration?view=sharepoint-ps&preserve-view=true) command in Windows PowerShell to override the default page size for a query of the **Projects** entity set (or any of the 33 entity sets). See [ProjectData - Project OData service reference](/previous-versions/office/project-odata/jj163015(v=office.15)).
 
 - Сведения о развертывании надстройки см. в статье [Публикация надстройки Office](../publish/publish.md).
 

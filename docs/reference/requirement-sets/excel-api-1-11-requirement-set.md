@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1,11
 ms.date: 05/06/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: ab9fde262640aa243aaf2b88767225505e08b3b7
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 72353b61925c05e6a9f1c3ff8a2c413f38d5693b
+ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44612096"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47431558"
 ---
 # <a name="whats-new-in-excel-javascript-api-111"></a>Новые возможности API JavaScript для Excel 1,11
 
@@ -26,7 +26,7 @@ ms.locfileid: "44612096"
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Excel 1,11. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых набором обязательных элементов API JavaScript для Excel 1,11 или более ранней версии, обратитесь к разделам [API Excel в наборе требований 1,11](/javascript/api/excel?view=excel-js-1.11)
+В следующей таблице перечислены API в наборе обязательных элементов API JavaScript для Excel 1,11. Чтобы просмотреть справочную документацию по API для всех API, поддерживаемых набором обязательных элементов API JavaScript для Excel 1,11 или более ранней версии, обратитесь к разделам [API Excel в наборе требований 1,11](/javascript/api/excel?view=excel-js-1.11&preserve-view=true)
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
@@ -68,5 +68,5 @@ ms.locfileid: "44612096"
 
 ## <a name="see-also"></a>См. также
 
-- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.11)
+- [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.11&preserve-view=true)
 - [Наборы обязательных элементов API JavaScript для Excel](excel-api-requirement-sets.md)
