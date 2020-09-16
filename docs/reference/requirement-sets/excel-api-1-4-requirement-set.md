@@ -1,15 +1,15 @@
 ---
 title: Набор обязательных элементов API JavaScript для Excel 1,4
-description: Сведения о наборе требований ExcelApi 1,4
+description: Сведения о наборе требований ExcelApi 1,4.
 ms.date: 07/28/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: a0a7be48e8a17ebcd650185519b7330ddb6041e0
-ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
+ms.openlocfilehash: ed6a9329ae5c0c5839abf5d97a0c67a44783a579
+ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47430753"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "47819765"
 ---
 # <a name="whats-new-in-excel-javascript-api-14"></a>Новые возможности API JavaScript для Excel 1.4
 
@@ -97,4 +97,4 @@ worksheet.getItemOrNullObject("itemName")
 ## <a name="see-also"></a>См. также
 
 - [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.4&preserve-view=true)
-- [Наборы обязательных элементов API JavaScript для Excel](./excel-api-requirement-sets.md)
+- [Наборы обязательных элементов API JavaScript для Excel](excel-api-requirement-sets.md)

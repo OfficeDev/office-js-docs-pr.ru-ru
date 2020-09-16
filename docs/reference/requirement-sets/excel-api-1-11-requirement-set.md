@@ -1,15 +1,15 @@
 ---
 title: Набор обязательных элементов API JavaScript для Excel 1,11
-description: Сведения о наборе требований ExcelApi 1,11
+description: Сведения о наборе требований ExcelApi 1,11.
 ms.date: 05/06/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 72353b61925c05e6a9f1c3ff8a2c413f38d5693b
-ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
+ms.openlocfilehash: 871d14beedd6c04239ca1a08222775a4e4fb293c
+ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47431558"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "47819695"
 ---
 # <a name="whats-new-in-excel-javascript-api-111"></a>Новые возможности API JavaScript для Excel 1,11
 

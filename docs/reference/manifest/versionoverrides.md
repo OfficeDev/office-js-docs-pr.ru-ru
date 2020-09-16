@@ -3,16 +3,16 @@ title: Элемент VersionOverrides в файле манифеста
 description: Справочная документация по элементу VersionOverrides для файлов манифеста надстроек Office (XML).
 ms.date: 03/05/2020
 localization_priority: Normal
-ms.openlocfilehash: 979a75c3ea8b4d600a2c43fc4edfcb0d4e96930e
-ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
+ms.openlocfilehash: a744772c01c57c41a9dc20ee0accea5f070c3ff3
+ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47431544"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "47819828"
 ---
 # <a name="versionoverrides-element"></a>Элемент VersionOverrides
 
-Корневой элемент, который содержит сведения о командах надстройки. Элемент манифеста **VersionOverrides** является дочерним для элемента [OfficeApp](./officeapp.md). Этот элемент поддерживается в схеме манифестов версий 1.1 и выше, но определяется в схеме VersionOverrides версии 1.0 или 1.1.
+Корневой элемент, который содержит сведения о командах надстройки. Элемент манифеста **VersionOverrides** является дочерним для элемента [OfficeApp](officeapp.md). Этот элемент поддерживается в схеме манифестов версий 1.1 и выше, но определяется в схеме VersionOverrides версии 1.0 или 1.1.
 
 ## <a name="attributes"></a>Атрибуты
 

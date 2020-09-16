@@ -1,16 +1,16 @@
 ---
-ms.date: 05/06/2020
-description: 'Обработка и возврат таких ошибок, как #ПУСТО!, из пользовательской функции'
-title: Обработка и возврат ошибок из пользовательской функции (предварительная версия)
+ms.date: 09/15/2020
+description: 'Обработка и возврат таких ошибок, как #ПУСТО!, из пользовательской функции.'
+title: Обработка и возврат ошибок пользовательской функции
 localization_priority: Normal
-ms.openlocfilehash: 5b1efcdc22a4efc59304bbe76f8d3f2d09979bc1
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 5da68417aa52f1d14340c8c8a46f4943ffd2d223
+ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45093471"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "47819534"
 ---
-# <a name="handle-and-return-errors-from-your-custom-function-preview"></a>Обработка и возврат ошибок из пользовательской функции (предварительная версия)
+# <a name="handle-and-return-errors-from-your-custom-function"></a>Обработка и возврат ошибок пользовательской функции
 
 > [!NOTE]
 > Возможности, описанные в этой статье, в настоящее время доступны в предварительной версии и могут изменяться. В настоящее время их нельзя использовать в рабочих средах. Для ознакомления с предварительными возможностями необходимо присоединиться к программе [предварительной оценки Office](https://insider.office.com/join) .  Хороший способ испытать ознакомительные функции — использовать подписку на Microsoft 365. Если у вас еще нет подписки на Microsoft 365, вы можете получить бесплатную, 90 день реневабле подписку на Microsoft 365, присоединяясь к [программе microsoft 365 Developer Program](https://developer.microsoft.com/office/dev-program).

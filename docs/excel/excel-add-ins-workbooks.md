@@ -3,12 +3,12 @@ title: Работа с книгами с использованием API JavaSc
 description: Примеры кода, в которых показано, как выполнять распространенные задачи с книгами или функциями уровня приложения с помощью API JavaScript для Excel.
 ms.date: 08/24/2020
 localization_priority: Normal
-ms.openlocfilehash: 1da664b5ebbc8bd44b1c4e558a48997291e8967e
-ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
+ms.openlocfilehash: f0af6cc889a110406d987664575a6f3d1b30aa7b
+ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "47408700"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "47819506"
 ---
 # <a name="work-with-workbooks-using-the-excel-javascript-api"></a>Работа с книгами с использованием API JavaScript для Excel
 
@@ -171,10 +171,7 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-#### <a name="worksheet-level-custom-properties-preview"></a>Настраиваемые свойства на уровне листа (Предварительная версия)
-
-> [!NOTE]
-> Настраиваемые свойства на уровне листа в настоящее время находятся в режиме предварительного просмотра. [!INCLUDE [Information about using preview Excel APIs](../includes/using-excel-preview-apis.md)]
+#### <a name="worksheet-level-custom-properties"></a>Настраиваемые свойства на уровне листа
 
 Настраиваемые свойства также можно задать на уровне листа. Они похожи на настраиваемые свойства на уровне документа, за исключением того, что один и тот же ключ может повторяться на разных листах. В приведенном ниже примере показано, как создать настраиваемое свойство с именем **воркшитграуп** со значением "Alpha" на текущем листе, а затем извлечь его.
 

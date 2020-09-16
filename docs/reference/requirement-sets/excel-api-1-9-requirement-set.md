@@ -1,15 +1,15 @@
 ---
 title: Набор обязательных элементов API JavaScript для Excel 1,9
-description: Сведения о наборе требований ExcelApi 1,9
+description: Сведения о наборе требований ExcelApi 1,9.
 ms.date: 07/26/2019
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 77e8ed886344f3761d7dfbb982a54a878a554980
-ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
+ms.openlocfilehash: a32705cc7557ae2f6f7214dd05f7a757188aba4c
+ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47430858"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "47819660"
 ---
 # <a name="whats-new-in-excel-javascript-api-19"></a>Новые возможности API JavaScript для Excel 1,9
 
@@ -485,4 +485,4 @@ ms.locfileid: "47430858"
 ## <a name="see-also"></a>См. также
 
 - [Справочная документация по API JavaScript для Excel](/javascript/api/excel?view=excel-js-1.9&preserve-view=true)
-- [Наборы обязательных элементов API JavaScript для Excel](./excel-api-requirement-sets.md)
+- [Наборы обязательных элементов API JavaScript для Excel](excel-api-requirement-sets.md)

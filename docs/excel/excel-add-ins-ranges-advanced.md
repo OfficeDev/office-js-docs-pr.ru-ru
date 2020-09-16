@@ -3,12 +3,12 @@ title: Работа с диапазонами с использованием AP
 description: Расширенные функции и сценарии объектов Range, такие как специальные ячейки, удаление дубликатов и работа с датами.
 ms.date: 08/26/2020
 localization_priority: Normal
-ms.openlocfilehash: b3854d15a85db20e1c544ebfa6e8a63712e958d9
-ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
+ms.openlocfilehash: 485fb34c11774045308c6ed9053d01097cdc3f5b
+ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "47408448"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "47819576"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api-advanced"></a>Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 
@@ -327,10 +327,7 @@ Excel.run(function (context) {
 
 Чтобы разгруппировать группу строк или столбцов, используйте метод [Range. Ungroup](/javascript/api/excel/excel.range#ungroup-groupoption-) . Это приведет к удалению внешнего уровня структуры. Если несколько групп одного и того же типа строк или столбцов находятся на одном уровне в пределах указанного диапазона, все эти группы размещаются в разгруппировании.
 
-## <a name="handle-dynamic-arrays-and-spilling-preview"></a>Обработка динамических массивов и сброс (Предварительная версия)
-
-> [!NOTE]
-> Динамический массив и API для переноса диапазона в настоящее время находятся в режиме предварительного просмотра. [!INCLUDE [Information about using preview Excel APIs](../includes/using-excel-preview-apis.md)]
+## <a name="handle-dynamic-arrays-and-spilling"></a>Обработка динамических массивов и сброс
 
 Некоторые формулы Excel возвращают [динамические массивы](https://support.microsoft.com/office/dynamic-array-formulas-and-spilled-array-behavior-205c6b06-03ba-4151-89a1-87a7eb36e531). Эти значения заполняют значения нескольких ячеек за прев ячейке оргинал в формуле. Это значение переполнения называется "Spill". Надстройка может найти диапазон, используемый для Spill, с помощью метода [Range. жетспиллингторанже](/javascript/api/excel/excel.range#getspillingtorange--) . Кроме того, существует [версия * орнуллобжект](..//develop/application-specific-api-model.md#ornullobject-methods-and-properties), `Range.getSpillingToRangeOrNullObject` .
 

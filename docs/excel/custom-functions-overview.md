@@ -5,12 +5,12 @@ title: Создание пользовательских функций в Excel
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 2ea2d70b0a404c15ed9b349020b76356c70cd6de
-ms.sourcegitcommit: 3efa932b70035dde922929d207896e1a6007f620
+ms.openlocfilehash: 731e8d99a36cfef7d125838c67efcdd7a77b4bb1
+ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "46757375"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "47819562"
 ---
 # <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel
 
@@ -76,7 +76,7 @@ function add(first, second){
 - Использует уникальные для манифеста пользовательских функций элементы `<ExtensionPoint>` и `<Resources>`. Эти элементы содержат сведения о расположении JavaScript, JSON и HTML-файлов.
 - Указывает, какую среду выполнения использовать для пользовательской функции. Рекомендуется всегда использовать общую среду выполнения, если нет особой потребности в использовании другой среды, так как общая позволяет делиться данными между функциями и областью задач. Обратите внимание, что использование общей среды выполнения означает, что ваша надстройка будет использовать Internet Explorer 11, а не Microsoft Edge.
 
-Если для создания файлов используется генератор Yo Office, рекомендуется настроить манифест для использования общей среды выполнения, так как это не настроено по умолчанию для этих файлов. Чтобы изменить манифест, следуйте инструкциям в статье [Настройка надстройки Excel для использования общей среды выполнения JavaScript](./configure-your-add-in-to-use-a-shared-runtime.md).
+Если для создания файлов используется генератор Yo Office, рекомендуется настроить манифест для использования общей среды выполнения, так как это не настроено по умолчанию для этих файлов. Чтобы изменить манифест, следуйте инструкциям в статье [Настройка надстройки Excel для использования общей среды выполнения JavaScript](configure-your-add-in-to-use-a-shared-runtime.md).
 
 Чтобы просмотреть полный рабочий манифест из примера надстройки, см. [этот репозиторий GitHub](https://github.com/OfficeDev/PnP-OfficeAddins/blob/master/Samples/excel-shared-runtime-global-state/manifest.xml).
 

@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: Функции и API, которые в настоящее время находятся в режиме предварительной версии для надстроек Outlook.
-ms.date: 09/02/2020
+ms.date: 09/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 24cad394f0f3ffb95a05a81ccb38ee4aa72a3797
-ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
+ms.openlocfilehash: c5663946a12eddf1f076a8656a6daecae9186919
+ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47431068"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "47819835"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -307,20 +307,6 @@ ms.locfileid: "47431068"
 Добавлено новое свойство для управления данными сеанса элемента в режиме создания.
 
 **Доступно в**: Outlook в Windows (подключено к подписке Microsoft 365)
-
-<br>
-
----
-
----
-
-### <a name="single-sign-on-sso"></a>Единый вход (SSO)
-
-#### <a name="officeruntimeauthgetaccesstoken"></a>[OfficeRuntime.auth.getAccessToken](../../../develop/sso-in-office-add-ins.md#sso-api-reference)
-
-Добавлена возможность доступа к `getAccessToken`, что позволяет надстройкам [получать маркер доступа](../../../outlook/authenticate-a-user-with-an-sso-token.md) для API Microsoft Graph.
-
-**Доступно в**: Outlook в Windows (подключенном к подписке Microsoft 365), Outlook на Mac (подключен к подписке Microsoft 365), Outlook в Интернете (современный), Outlook в Интернете (классическая)
 
 ## <a name="see-also"></a>См. также
 
