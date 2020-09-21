@@ -1,15 +1,15 @@
 ---
 title: Набор обязательных элементов API JavaScript для Excel 1,12
 description: Сведения о наборе требований ExcelApi 1,12.
-ms.date: 09/15/2020
+ms.date: 09/16/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: a88c511e90fe48e1a9997d19cb4a2851cb718f6b
-ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
+ms.openlocfilehash: 2f2fb04c914e26aacbd8815a1d173c8af9c09342
+ms.sourcegitcommit: 0844ca7589ad3a6b0432fe126ca4e0ac9dbb80ce
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "47819845"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47963824"
 ---
 # <a name="whats-new-in-excel-javascript-api-112"></a>Новые возможности API JavaScript для Excel 1,12
 
@@ -79,7 +79,6 @@ ms.locfileid: "47819845"
 ||[ловербаунд](/javascript/api/excel/excel.pivotlabelfilter#lowerbound)|Нижняя граница диапазона между условиями фильтра.|
 ||[substring](/javascript/api/excel/excel.pivotlabelfilter#substring)|Подстрока, используемая для `BeginsWith` `EndsWith` `Contains` условий фильтра и.|
 ||[уппербаунд](/javascript/api/excel/excel.pivotlabelfilter#upperbound)|Верхняя граница диапазона между условиями фильтра.|
-|[PivotLayout](/javascript/api/excel/excel.pivotlayout)|[пивотстиле](/javascript/api/excel/excel.pivotlayout#pivotstyle)|Стиль, примененный к сводной таблице.|
 |[пивотмануалфилтер](/javascript/api/excel/excel.pivotmanualfilter)|[selectedItems](/javascript/api/excel/excel.pivotmanualfilter#selecteditems)|Список выбранных элементов, которые необходимо фильтровать вручную. В выбранном поле должны быть существующие и допустимые элементы.|
 |[PivotTable](/javascript/api/excel/excel.pivottable)|[алловмултиплефилтерсперфиелд](/javascript/api/excel/excel.pivottable#allowmultiplefiltersperfield)|Указывает, разрешена ли в сводной таблице возможность применения нескольких PivotFilters к заданному PivotField в таблице.|
 |[пивоттаблескопедколлектион](/javascript/api/excel/excel.pivottablescopedcollection)|[getCount()](/javascript/api/excel/excel.pivottablescopedcollection#getcount--)|Получает количество сводных таблиц в коллекции.|
@@ -107,7 +106,6 @@ ms.locfileid: "47819845"
 |[ранжеареасколлектион](/javascript/api/excel/excel.rangeareascollection)|[getCount()](/javascript/api/excel/excel.rangeareascollection#getcount--)|Получает число объектов RangeAreas в коллекции.|
 ||[getItemAt(index: number)](/javascript/api/excel/excel.rangeareascollection#getitemat-index-)|Возвращает объект RangeAreas на основе позиции в коллекции.|
 ||[items](/javascript/api/excel/excel.rangeareascollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
-|[Slicer](/javascript/api/excel/excel.slicer)|[слицерстиле](/javascript/api/excel/excel.slicer#slicerstyle)|Стиль, примененный к срезу.|
 |[воркбукранжеареас](/javascript/api/excel/excel.workbookrangeareas)|[Жетранжеареасбишит (Key: строка)](/javascript/api/excel/excel.workbookrangeareas#getrangeareasbysheet-key-)|Возвращает `RangeAreas` объект, основанный на идентификаторе или имени листа в коллекции.|
 ||[Жетранжеареасорнуллобжектбишит (Key: строка)](/javascript/api/excel/excel.workbookrangeareas#getrangeareasornullobjectbysheet-key-)|Возвращает `RangeAreas` объект, основанный на имени листа или идентификаторе в коллекции. Если лист не существует, возвращает пустой объект.|
 ||[addresses](/javascript/api/excel/excel.workbookrangeareas#addresses)|Возвращает массив адресов в стиле a1. Значение Address будет содержать имя листа для каждого прямоугольного блока ячеек (например, "Лист1! A1: B4, Лист1! D1: D4 "). Только для чтения.|

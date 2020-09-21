@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Excel
 description: Сведения о наборе обязательных элементов надстройки Office для сборок Excel.
-ms.date: 07/10/2020
+ms.date: 09/15/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: aa2eb78063d3ae63efa725e13892e24596ebfceb
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 3c3057dd27b571e9c4faa09cfc7415667d1c612b
+ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47294250"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "47819800"
 ---
 # <a name="excel-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Excel
 
@@ -27,7 +27,8 @@ ms.locfileid: "47294250"
 |  Набор обязательных элементов  |  Office для Windows<br>(подключено к подписке на Microsoft 365)  |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac<br>(подключено к подписке на Microsoft 365)  | Office в Интернете |
 |:-----|-----|:-----|:-----|:-----|:-----|
 | [Предварительная версия](excel-preview-apis.md)  | Применяйте последнюю версию Office для использования предварительных версий API (может потребоваться присоединение к [программе предварительной оценки Office](https://insider.office.com)) |
-| [ExcelApiOnline](excel-api-online-requirement-set.md) | Н/Д | Н/Д | Н/Д | Последние (см. [набор обязательных элементов, стр.](./excel-api-online-requirement-set.md)) |
+| [ExcelApiOnline](excel-api-online-requirement-set.md) | Н/Д | Н/Д | Н/Д | Последние (см. [набор обязательных элементов, стр.](excel-api-online-requirement-set.md)) |
+| [ExcelApi 1.12](excel-api-1-12-requirement-set.md) | Версия 2008 (сборка 13127.20408) или более поздняя | 16.40 или более поздняя | 16.40 или более поздняя | Сентябрь 2020 г. |
 | [ExcelApi 1.11](excel-api-1-11-requirement-set.md) | Версия 2002 (сборка 12527.20470) или более поздняя | 16.35 или более поздняя | 16.33 или более поздняя | Май 2020 г. |
 | [ExcelApi 1.10](excel-api-1-10-requirement-set.md) | Версия 1907 (сборка 11929.20306) или более поздняя | 16.0 или более поздняя | 16.30 или более поздняя версия | Октябрь 2019 г. |
 | [ExcelApi 1.9](excel-api-1-9-requirement-set.md)  | Версия 1903 (сборка 11425.20204) или более поздняя | 16.0 или более поздняя | 16.24 или более поздняя версия | Май 2019 г. |
@@ -52,10 +53,41 @@ ms.locfileid: "47294250"
 
 [!INCLUDE [Links to get Office versions and how to find Office client version](../../includes/links-get-office-versions-builds.md)]
 
+## <a name="how-to-use-excel-requirement-sets-at-runtime-and-in-the-manifest"></a>Использование наборов обязательных элементов Excel в среде выполнения и в манифесте
+
+> [!NOTE]
+> В этом разделе предполагается, что вы знакомы с общими сведениями о наборах обязательных элементов, изложенными в статьях [Версии и наборы обязательных элементов Office](../../develop/office-versions-and-requirement-sets.md) и [Указание приложений и обязательных элементов API Office](../../develop/specify-office-hosts-and-api-requirements.md).
+
+Наборы требований — это именованные группы элементов API. Надстройка Office может выполнить проверку в среде выполнения или использовать указанные в манифесте наборы обязательных элементов, чтобы определить, поддерживает ли приложение Office необходимые надстройке API.
+
+### <a name="checking-for-requirement-set-support-at-runtime"></a>Проверка поддержки наборов обязательных элементов в среде выполнения
+
+В следующем примере кода показано, как определить, поддерживает ли приложение Office, в котором запускается надстройка, указанный набор обязательных элементов API.
+
+```js
+if (Office.context.requirements.isSetSupported('ExcelApi', '1.3')) {
+  /// perform actions
+}
+else {
+  /// provide alternate flow/logic
+}
+```
+
+### <a name="defining-requirement-set-support-in-the-manifest"></a>Определение поддержки наборов обязательных элементов в манифесте
+
+С помощью [элемента Requirements](../manifest/requirements.md) в манифесте надстройки можно указать минимальные наборы обязательных элементов и/или методы API, необходимые надстройке для активации. Если приложение или платформа Office не поддерживает наборы обязательных элементов или методы API, указанные в элементе манифеста `Requirements`, надстройка не будет работать в этом приложении или на этой платформе и не будет отображать список надстроек, показанный в разделе **Мои надстройки**. Если вашей надстройке для полной функциональности необходим определенный набор обязательных элементов, но она может быть полезна пользователям даже на тех платформах, которые не поддерживают этот набор, мы рекомендуем проверить поддержку обязательных элементов в среде выполнения как описано выше, а не прописывать поддержку набора обязательных элементов в манифесте.
+
+В следующем примере кода показан элемент `Requirements` в манифесте надстройки, где указано, что надстройка должна загружаться во всех клиентских приложениях Office, поддерживающих набор обязательных элементов ExcelApi версии 1.3 или выше.
+
+```xml
+<Requirements>
+   <Sets DefaultMinVersion="1.3">
+      <Set Name="ExcelApi" MinVersion="1.3"/>
+   </Sets>
+</Requirements>
+```
+
 ## <a name="see-also"></a>См. также
 
 - [Справочная документация по API JavaScript для Excel](/javascript/api/excel)
-- [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md)
-- [Указание приложений Office и обязательных элементов API](../../develop/specify-office-hosts-and-api-requirements.md)
 - [XML-манифест надстроек Office](../../develop/add-in-manifests.md)
-- [Обзор Office Online Server](/officeonlineserver/office-online-server-overview)

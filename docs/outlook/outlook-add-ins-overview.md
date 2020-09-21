@@ -1,15 +1,15 @@
 ---
 title: Обзор надстроек Outlook
 description: Надстройки Outlook — это встраиваемые в Outlook решения от сторонних разработчиков, использующие нашу веб-платформу.
-ms.date: 08/18/2020
+ms.date: 09/14/2020
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 006b19af1f7c9186e9247a3b45a3c8ac109c446a
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 09f410ccbddb4cffadc700036a4da3c45d2fb6e3
+ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47294320"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "47819569"
 ---
 # <a name="outlook-add-ins-overview"></a>Обзор надстроек Outlook
 
@@ -39,10 +39,7 @@ ms.locfileid: "47294320"
 
     **Контекстная надстройка для выделенной сущности (адреса)**
 
-    ![Показывает контекстное приложение на карточке](../images/outlook-detected-entity-card.png)
-
-> [!NOTE]
-> Поскольку [настраиваемые области устарели](https://developer.microsoft.com/outlook/blogs/make-your-add-ins-available-in-the-office-ribbon/), следует убедиться, что вы используете поддерживаемую точку расширения.
+    ![Показывает контекстное приложение на карте](../images/outlook-detected-entity-card.png)
 
 ## <a name="mailbox-items-available-to-add-ins"></a>Элементы почтовых ящиков, доступные надстройкам
 
@@ -53,7 +50,7 @@ ms.locfileid: "47294320"
   > [!IMPORTANT]
   > - Надстройки активируют сообщения с цифровой подписью в Outlook, связанном с подпиской на Microsoft 365. В Windows эта поддержка представлена в сборке 8711.1000.
   >
-  > - Начиная с Outlook сборки 13120.1000 в Windows, надстройки могут активировать элементы, защищенные с помощью IRM. Дополнительные сведения об этой функции в предварительной версии см. в статье [Активация надстроек для элементов, защищенных службами управления правами на доступ к данным (IRM)](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md#add-in-activation-on-items-protected-by-information-rights-management-irm).
+  > - Начиная с Outlook сборки 13229.10000 в Windows, надстройки могут активировать элементы, защищенные с помощью IRM. Дополнительные сведения об этой функции в предварительной версии см. в статье [Активация надстроек для элементов, защищенных службами управления правами на доступ к данным (IRM)](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md#add-in-activation-on-items-protected-by-information-rights-management-irm).
 
 - Отчет или уведомление о доставке имеет класс сообщения IPM.Report.*, включая отчеты о доставке, о недоставке, а также уведомления о прочтении, о непрочтении и о задержке.
 

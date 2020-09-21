@@ -1,19 +1,19 @@
 ---
 title: Наборы обязательных элементов общего API для Office
 description: Узнайте больше о наборах требований к общим API для Office.
-ms.date: 07/07/2020
+ms.date: 09/17/2020
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: f9929cb2f3de6499145540e12d1d96c55b24b1aa
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: d5fd33a2c44cb85e8279a970d4d7443783f049ff
+ms.sourcegitcommit: 2479812e677d1a7337765fe8f1c8345061d4091a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293522"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "48135223"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
-Наборы требований — это именованные группы элементов API. Надстройки Office используют наборы требований, указанные в манифесте, или используют проверку среды выполнения, чтобы определить, поддерживает ли приложение Office API, необходимые надстройке. Более подробную информацию можно узнать в статье [версии Office и наборах требований](../../develop/office-versions-and-requirement-sets.md).
+Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md).
 
 > [!TIP]
 > Ищете наборы требований API для *конкретных приложений* ? см. ниже.
@@ -152,6 +152,14 @@ ms.locfileid: "47293522"
 
 ---
 
+### <a name="openbrowserwindowapi"></a>опенбровсервиндовапи
+
+|**Ведущие приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| В разделе Открытие набора обязательных элементов [API окна браузера](open-browser-window-api-requirement-sets.md). | Office. Context. UI. Опенбровсервиндов |
+
+---
+
 ### <a name="partialtablebindings"></a>PartialTableBindings
 
 |**Приложения Office**|**Методы в наборе**|
@@ -266,5 +274,5 @@ ms.locfileid: "47293522"
 ## <a name="see-also"></a>См. также
 
 - [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md)
-- [Указание приложений Office и требований к API](../../develop/specify-office-hosts-and-api-requirements.md)
+- [Указание приложений Office и обязательных элементов API](../../develop/specify-office-hosts-and-api-requirements.md)
 - [XML-манифест надстроек Office](../../develop/add-in-manifests.md)
