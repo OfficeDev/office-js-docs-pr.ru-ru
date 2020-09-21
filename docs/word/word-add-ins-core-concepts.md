@@ -1,72 +1,50 @@
 ---
-title: Основные концепции программирования с помощью API JavaScript для Word
-description: Создание надстроек для Word с помощью API JavaScript для Word.
-ms.date: 07/28/2020
+title: Объектная модель JavaScript для Word в надстройках Office
+description: Сведения о важнейших классах в объектной модели JavaScript для Word.
+ms.date: 09/04/2020
 localization_priority: Priority
-ms.openlocfilehash: 1e7a90d4be378ed9b2c1f30ebebd4a0beec45a11
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 7424ee83bde0c19a574233c64811ecbb55763d93
+ms.sourcegitcommit: 0844ca7589ad3a6b0432fe126ca4e0ac9dbb80ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293095"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47963841"
 ---
-# <a name="fundamental-programming-concepts-with-the-word-javascript-api"></a><span data-ttu-id="61964-103">Основные концепции программирования с помощью API JavaScript для Word</span><span class="sxs-lookup"><span data-stu-id="61964-103">Fundamental programming concepts with the Word JavaScript API</span></span>
+# <a name="word-javascript-object-model-in-office-add-ins"></a><span data-ttu-id="db9f2-103">Объектная модель JavaScript для Word в надстройках Office</span><span class="sxs-lookup"><span data-stu-id="db9f2-103">Word JavaScript object model in Office Add-ins</span></span>
 
-<span data-ttu-id="61964-104">В этой статье описаны основные концепции использования [API JavaScript для Word](../reference/overview/word-add-ins-reference-overview.md) с целью создания надстроек для Word 2016 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="61964-104">This article describes concepts that are fundamental to using the [Word JavaScript API](../reference/overview/word-add-ins-reference-overview.md) to build add-ins for Word 2016 or later.</span></span>
+<span data-ttu-id="db9f2-104">В этой статье описаны основные принципы использования [API JavaScript для Word](../reference/overview/word-add-ins-reference-overview.md) для создания надстроек. Представлены основные понятия, важные для использования API.</span><span class="sxs-lookup"><span data-stu-id="db9f2-104">This article describes concepts that are fundamental to using the [Word JavaScript API](../reference/overview/word-add-ins-reference-overview.md) to build add-ins. It introduces core concepts that are fundamental to using the API.</span></span>
 
-## <a name="referencing-officejs"></a><span data-ttu-id="61964-105">Ссылки на Office.js</span><span class="sxs-lookup"><span data-stu-id="61964-105">Referencing Office.js</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="db9f2-105">Сведения об асинхронном типе API-интерфейсов Word и принципах их работы с документами см. в статье [Использование модели API, зависящей от приложения](../develop/application-specific-api-model.md).</span><span class="sxs-lookup"><span data-stu-id="db9f2-105">See [Using the application-specific API model](../develop/application-specific-api-model.md) to learn about the asynchronous nature of the Word APIs and how they work with the document.</span></span>
 
-<span data-ttu-id="61964-106">Файл Office.js можно получить из указанных ниже расположений.</span><span class="sxs-lookup"><span data-stu-id="61964-106">You can reference Office.js from the following locations:</span></span>
+## <a name="officejs-apis-for-word"></a><span data-ttu-id="db9f2-106">API-интерфейсы Office.js для Word</span><span class="sxs-lookup"><span data-stu-id="db9f2-106">Office.js APIs for Word</span></span>
 
-- <span data-ttu-id="61964-107">`https://appsforoffice.microsoft.com/lib/1/hosted/office.js`. Используйте этот ресурс для рабочих надстроек.</span><span class="sxs-lookup"><span data-stu-id="61964-107">`https://appsforoffice.microsoft.com/lib/1/hosted/office.js` - use this resource for production add-ins.</span></span>
+<span data-ttu-id="db9f2-107">Надстройка Word взаимодействует с объектами в Word с помощью API JavaScript для Office, включающего две объектных модели JavaScript:</span><span class="sxs-lookup"><span data-stu-id="db9f2-107">A Word add-in interacts with objects in Excel by using the Office JavaScript API, which includes two JavaScript object models:</span></span>
 
-- <span data-ttu-id="61964-108">`https://appsforoffice.microsoft.com/lib/beta/hosted/office.js`. Используйте этот ресурс для применения предварительных функций.</span><span class="sxs-lookup"><span data-stu-id="61964-108">`https://appsforoffice.microsoft.com/lib/beta/hosted/office.js` - use this resource to try out preview features.</span></span>
+* <span data-ttu-id="db9f2-108">**API JavaScript для Word**. [API-интерфейс JavaScript для Word](../reference/overview/word-add-ins-reference-overview.md) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к документам, диапазонам, таблицам, спискам, форматированию и другим объектам.</span><span class="sxs-lookup"><span data-stu-id="db9f2-108">**Word JavaScript API**: The [Word JavaScript API](../reference/overview/word-add-ins-reference-overview.md) provides strongly-typed objects that you can use to access the document, ranges, tables, lists, formatting, and more.</span></span>
 
-## <a name="word-javascript-api-requirement-sets"></a><span data-ttu-id="61964-109">Наборы обязательных элементов API JavaScript для Word</span><span class="sxs-lookup"><span data-stu-id="61964-109">Word JavaScript API requirement sets</span></span>
+* <span data-ttu-id="db9f2-109">**Общие API-интерфейсы**. [Общий API](/javascript/api/office) можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office.</span><span class="sxs-lookup"><span data-stu-id="db9f2-109">**Common APIs**: The [Common API](/javascript/api/office) can be used to access features such as UI, dialogs, and client settings that are common across multiple types of Office applications.</span></span>
 
-<span data-ttu-id="61964-110">Наборы требований — это именованные группы элементов API.</span><span class="sxs-lookup"><span data-stu-id="61964-110">Requirement sets are named groups of API members.</span></span> <span data-ttu-id="61964-111">Надстройки Office используют наборы обязательных элементов, указанных в манифесте, или проверки в среде выполнения, чтобы определить, поддерживает ли клиентское приложение Office необходимые API.</span><span class="sxs-lookup"><span data-stu-id="61964-111">Office Add-ins use requirement sets specified in the manifest or use a runtime check to determine whether an Office application supports APIs that an add-in needs.</span></span> <span data-ttu-id="61964-112">Подробнее о наборах обязательных элементов API JavaScript для Word см. в статье [Наборы обязательных элементов API JavaScript для Word](../reference/requirement-sets/word-api-requirement-sets.md).</span><span class="sxs-lookup"><span data-stu-id="61964-112">For detailed information about Word JavaScript API requirement sets, see [Word JavaScript API requirement sets](../reference/requirement-sets/word-api-requirement-sets.md).</span></span>
+<span data-ttu-id="db9f2-110">Скорее всего, вы будете разрабатывать большую часть функций надстроек для Word с помощью API JavaScript для Word, но вам также потребуются объекты из общего API.</span><span class="sxs-lookup"><span data-stu-id="db9f2-110">While you'll likely use the Word JavaScript API to develop the majority of functionality in add-ins that target Word, you'll also use objects in the Common API.</span></span> <span data-ttu-id="db9f2-111">Пример.</span><span class="sxs-lookup"><span data-stu-id="db9f2-111">For example:</span></span>
 
-## <a name="running-word-add-ins"></a><span data-ttu-id="61964-113">Запуск надстроек Word</span><span class="sxs-lookup"><span data-stu-id="61964-113">Running Word add-ins</span></span>
+* <span data-ttu-id="db9f2-112">[Context](/javascript/api/office/office.context). объект `Context` представляет среду выполнения надстройки и предоставляет доступ к ключевым объектам API.</span><span class="sxs-lookup"><span data-stu-id="db9f2-112">[Context](/javascript/api/office/office.context): The `Context` object represents the runtime environment of the add-in and provides access to key objects of the API.</span></span> <span data-ttu-id="db9f2-113">Он состоит из данных конфигурации документа, например `contentLanguage` и `officeTheme`, а также предоставляет сведения о среде выполнения надстройки, например `host` и `platform`.</span><span class="sxs-lookup"><span data-stu-id="db9f2-113">It consists of document configuration details such as `contentLanguage` and `officeTheme` and also provides information about the add-in's runtime environment such as `host` and `platform`.</span></span> <span data-ttu-id="db9f2-114">Кроме того, он предоставляет метод `requirements.isSetSupported()`, с помощью которого можно проверить, поддерживается ли указанный набор обязательных элементов приложением Excel, в котором работает надстройка.</span><span class="sxs-lookup"><span data-stu-id="db9f2-114">Additionally, it provides the `requirements.isSetSupported()` method, which you can use to check whether a specified requirement set is supported by the Excel application where the add-in is running.</span></span>
+* <span data-ttu-id="db9f2-115">[Document](/javascript/api/office/office.document). Объект `Document` предоставляет метод `getFileAsync()`, позволяющий загрузить файл Word, в котором работает надстройка.</span><span class="sxs-lookup"><span data-stu-id="db9f2-115">[Document](/javascript/api/office/office.document): The `Document` object provides the `getFileAsync()` method, which you can use to download the Word file where the add-in is running.</span></span>
 
-<span data-ttu-id="61964-114">Чтобы запустить надстройку, воспользуйтесь обработчиком событий `Office.initialize`Office.initialize.</span><span class="sxs-lookup"><span data-stu-id="61964-114">To run your add-in, use an `Office.initialize` event handler.</span></span> <span data-ttu-id="61964-115">Дополнительные сведения об инициализации надстроек см. в статье [Общие сведения об API](../develop/understanding-the-javascript-api-for-office.md).</span><span class="sxs-lookup"><span data-stu-id="61964-115">For more information about add-in initialization, see [Understanding the API](../develop/understanding-the-javascript-api-for-office.md).</span></span>
+![Изображение различий между API JS для Word и общими API](../images/word-js-api-common-api.png)
 
-<span data-ttu-id="61964-116">Надстройки, предназначенные для Word 2016 и более поздних версий, могут использовать API для Word.</span><span class="sxs-lookup"><span data-stu-id="61964-116">Add-ins that target Word 2016 or later can use the Word-specific APIs.</span></span> <span data-ttu-id="61964-117">Они передают методу `Word.run()` логику взаимодействия с Word в качестве функции.</span><span class="sxs-lookup"><span data-stu-id="61964-117">They pass the Word-interaction logic as a function into the `Word.run()` method.</span></span> <span data-ttu-id="61964-118">Дополнительные сведения о том, как работать с документом Word в этой модели программирования, см. в статье [Использование модели API для определенных приложений](../develop/application-specific-api-model.md).</span><span class="sxs-lookup"><span data-stu-id="61964-118">See [Using the application-specific API model](../develop/application-specific-api-model.md) to learn about how to interact with the Word document in this programming model.</span></span>
+## <a name="word-specific-object-model"></a><span data-ttu-id="db9f2-117">Объектная модель для Word</span><span class="sxs-lookup"><span data-stu-id="db9f2-117">Word-specific object model</span></span>
 
-<span data-ttu-id="61964-119">В следующем примере показано, как инициализировать и запустить надстройку Word с помощью метода `Word.run()`.</span><span class="sxs-lookup"><span data-stu-id="61964-119">The following example shows how to initialize and run a Word add-in by using the `Word.run()` method.</span></span>
+<span data-ttu-id="db9f2-118">Чтобы понять API-интерфейсы Word, нужно понимать, как компоненты документа связаны друг с другом.</span><span class="sxs-lookup"><span data-stu-id="db9f2-118">To understand the Word APIs, you must understand how the components of a document are related to one another.</span></span>
 
-```js
-(function () {
-    "use strict";
+* <span data-ttu-id="db9f2-119">Объект **Document** содержит объекты **Section**, а также объекты уровня документа, например параметры и настраиваемые части XML.</span><span class="sxs-lookup"><span data-stu-id="db9f2-119">The **Document** contains the **Section**s, and document-level entities such as settings and custom XML parts.</span></span>
+* <span data-ttu-id="db9f2-120">Объект **Section** содержит объект **Body**.</span><span class="sxs-lookup"><span data-stu-id="db9f2-120">A **Section** contains a **Body**.</span></span>
+* <span data-ttu-id="db9f2-121">Объект **Body** предоставляет доступ к объектам **Paragraph**, **ContentControl** и **Range**, а также к другим объектам.</span><span class="sxs-lookup"><span data-stu-id="db9f2-121">A **Body** gives access to **Paragraph**s, **ContentControl**s, and **Range** objects, among others.</span></span>
+* <span data-ttu-id="db9f2-122">Объект **Range** представляет собой непрерывную область содержимого, включающую текст, пробелы, объекты **Table**, а также изображения.</span><span class="sxs-lookup"><span data-stu-id="db9f2-122">A **Range** represents a contiguous area of content, including text, white space, **Table**s, and images.</span></span> <span data-ttu-id="db9f2-123">Он также содержит большую часть методов обработки текста.</span><span class="sxs-lookup"><span data-stu-id="db9f2-123">It also contains most of the text manipulation methods.</span></span>
+* <span data-ttu-id="db9f2-124">Объект **List** представляет текст в виде нумерованного или маркированного списка.</span><span class="sxs-lookup"><span data-stu-id="db9f2-124">A **List** represents text in a numbered or bulleted list.</span></span>
 
-    // The initialize event handler must be run on each page to initialize Office JS.
-    // You can add optional custom initialization code that will run after OfficeJS
-    // has initialized.
-    Office.initialize = function (reason) {
-        // The reason object tells how the add-in was initialized. The values can be:
-        // inserted - the add-in was inserted to an open document.
-        // documentOpened - the add-in was already inserted in to the document and the document was opened.
+## <a name="see-also"></a><span data-ttu-id="db9f2-125">См. также</span><span class="sxs-lookup"><span data-stu-id="db9f2-125">See also</span></span>
 
-        // Checks for the DOM to load using the jQuery ready function.
-        $(document).ready(function () {
-            // Set your optional initialization code.
-            // You can also load saved settings from the Office object.
-        });
-    };
-
-    // Run a batch operation against the Word JavaScript API object model.
-    // Use the context argument to get access to the Word document.
-    Word.run(function (context) {
-
-        // Create a proxy object for the document.
-        var thisDocument = context.document;
-        // ...
-    })
-})();
-```
-
-## <a name="see-also"></a><span data-ttu-id="61964-120">См. также</span><span class="sxs-lookup"><span data-stu-id="61964-120">See also</span></span>
-
-- [<span data-ttu-id="61964-121">Обзор API JavaScript для Word</span><span class="sxs-lookup"><span data-stu-id="61964-121">Word JavaScript API overview</span></span>](../reference/overview/word-add-ins-reference-overview.md)
-- [<span data-ttu-id="61964-122">Создание первой надстройки Word</span><span class="sxs-lookup"><span data-stu-id="61964-122">Build your first Word add-in</span></span>](../quickstarts/word-quickstart.md)
-- [<span data-ttu-id="61964-123">Руководство по надстройкам Word</span><span class="sxs-lookup"><span data-stu-id="61964-123">Word add-in tutorial</span></span>](../tutorials/word-tutorial.md)
-- [<span data-ttu-id="61964-124">Справочник по API JavaScript для Word</span><span class="sxs-lookup"><span data-stu-id="61964-124">Word JavaScript API reference</span></span>](/javascript/api/word)
+- [<span data-ttu-id="db9f2-126">Обзор API JavaScript для Word</span><span class="sxs-lookup"><span data-stu-id="db9f2-126">Word JavaScript API overview</span></span>](../reference/overview/word-add-ins-reference-overview.md)
+- [<span data-ttu-id="db9f2-127">Создание первой надстройки Word</span><span class="sxs-lookup"><span data-stu-id="db9f2-127">Build your first Word add-in</span></span>](../quickstarts/word-quickstart.md)
+- [<span data-ttu-id="db9f2-128">Руководство по надстройкам Word</span><span class="sxs-lookup"><span data-stu-id="db9f2-128">Word add-in tutorial</span></span>](../tutorials/word-tutorial.md)
+- [<span data-ttu-id="db9f2-129">Справочник по API JavaScript для Word</span><span class="sxs-lookup"><span data-stu-id="db9f2-129">Word JavaScript API reference</span></span>](/javascript/api/word)
