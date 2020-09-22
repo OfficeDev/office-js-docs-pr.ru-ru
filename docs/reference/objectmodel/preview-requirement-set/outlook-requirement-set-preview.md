@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: Функции и API, которые в настоящее время находятся в режиме предварительной версии для надстроек Outlook.
-ms.date: 09/14/2020
+ms.date: 09/21/2020
 localization_priority: Normal
-ms.openlocfilehash: c5663946a12eddf1f076a8656a6daecae9186919
-ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
+ms.openlocfilehash: f7c9c7c2e60a77c30e3957a0c759d0f20b22e86a
+ms.sourcegitcommit: 4a03d8b3f676ee2d91114813cb81bce5da3c8d6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "47819835"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48175544"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -154,19 +154,19 @@ ms.locfileid: "47819835"
 
 Добавлена `LaunchEvent` Поддержка точек расширения для манифеста. Он настраивает функции активации на основе событий.
 
-**Доступно в**: Outlook в Интернете (современный, [запрос предварительной версии Access](https://aka.ms/OWAPreview))
+**Доступно в**: Outlook в Интернете (современная, [Настройка предварительного доступа](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center))
 
 #### <a name="launchevents-manifest-element"></a>[Элемент манифеста Лаунчевентс](../../manifest/launchevents.md)
 
 Добавлен `LaunchEvents` элемент для манифеста. Он поддерживает настройку функций активации на основе событий.
 
-**Доступно в**: Outlook в Интернете (современный, [запрос предварительной версии Access](https://aka.ms/OWAPreview))
+**Доступно в**: Outlook в Интернете (современная, [Настройка предварительного доступа](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center))
 
 #### <a name="runtimes-manifest-element"></a>[Элемент манифеста среды выполнения](../../manifest/runtimes.md)
 
 Добавлена поддержка Outlook для `Runtimes` элемента manifest. Он ссылается на HTML-и JavaScript-файлы, необходимые для функции активации на основе событий.
 
-**Доступно в**: Outlook в Интернете (современный, [запрос предварительной версии Access](https://aka.ms/OWAPreview))
+**Доступно в**: Outlook в Интернете (современная, [Настройка предварительного доступа](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center))
 
 <br>
 

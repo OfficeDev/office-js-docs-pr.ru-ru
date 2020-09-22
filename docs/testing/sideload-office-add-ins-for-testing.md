@@ -1,14 +1,14 @@
 ---
 title: Загрузка неопубликованных надстроек Office в Office в Интернете для тестирования
 description: Протестируйте надстройку Office в Office в Интернете для загрузки неопубликованных приложений.
-ms.date: 07/10/2020
+ms.date: 09/21/2020
 localization_priority: Normal
-ms.openlocfilehash: 2f9a0d058fc972316da964dd5af03b5733dc7b60
-ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
+ms.openlocfilehash: 709461d19fbf4602db3ba5bd9c40f495d0dbbd52
+ms.sourcegitcommit: 4a03d8b3f676ee2d91114813cb81bce5da3c8d6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45159292"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48175537"
 ---
 # <a name="sideload-office-add-ins-in-office-on-the-web-for-testing"></a>Загрузка неопубликованных надстроек Office в Office в Интернете для тестирования
 
@@ -42,13 +42,7 @@ ms.locfileid: "45159292"
 6. Убедитесь, что надстройка установлена. Например, если надстройка вызывается командой, эта команда должна появиться на ленте или в контекстном меню. Если же у вас надстройка области задач, должна появиться область.
 
 > [!NOTE]
->Чтобы протестировать надстройку Office с помощью Microsoft Edge, требуется выполнить два действия по настройке: 
->
-> - В командной строке Windows выполните следующую строку: `CheckNetIsolation LoopbackExempt -a -n="Microsoft.MicrosoftEdge_8wekyb3d8bbwe"`
->
-> - Введите "**about: flags**" в панели поиска Microsoft EDGE, чтобы открыть раздел Параметры для разработчиков.  Установите флажок "**Разрешить замыкание на себя для localhost**" и перезапустите Microsoft Edge.
-
->    ![Параметр "Разрешить замыкание на себя для localhost" в Microsoft Edge с установленным флажком.](../images/allow-localhost-loopback.png)
+> Чтобы протестировать надстройку Office с помощью Microsoft EDGE, необходимо выполнить дополнительные действия по настройке. В командной строке Windows выполните следующую строку: `npx office-addin-dev-settings appcontainer EdgeWebView --loopback --yes`
 
 ## <a name="sideload-an-office-add-in-in-office-365"></a>Загрузка неопубликованной надстройки Office в Office 365
 

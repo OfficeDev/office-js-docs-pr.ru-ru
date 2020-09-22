@@ -2,14 +2,14 @@
 title: Настройка надстройки Outlook для активации на основе событий (Предварительная версия)
 description: Узнайте, как настроить надстройку Outlook для активации на основе событий.
 ms.topic: article
-ms.date: 09/09/2020
+ms.date: 09/21/2020
 localization_priority: Normal
-ms.openlocfilehash: 69f14748a898c2c963c9d049b2c40c28f3aec725
-ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
+ms.openlocfilehash: 1ddf5cd17934df261ef0002f38d92ed0dc40ca00
+ms.sourcegitcommit: 4a03d8b3f676ee2d91114813cb81bce5da3c8d6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47431250"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48175551"
 ---
 # <a name="configure-your-outlook-add-in-for-event-based-activation-preview"></a>Настройка надстройки Outlook для активации на основе событий (Предварительная версия)
 
@@ -35,7 +35,7 @@ ms.locfileid: "47431250"
 Чтобы просмотреть эту функцию, выполните указанные ниже действия.
 
 - Ссылка на **бета-** библиотеку в сети CDN ( https://appsforoffice.microsoft.com/lib/beta/hosted/office.js) . [Файл определения типа](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts) для компиляции TypeScript и IntelliSense находится в сети CDN и [DefinitelyTyped](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js-preview/index.d.ts). Вы можете установить эти типы с помощью `npm install --save-dev @types/office-js-preview` .
-- Запросите доступ к предварительной версии BITS для Outlook в Интернете, используя свою учетную запись Microsoft 365, заполнив и отправив [эту форму запроса](https://aka.ms/OWAPreview). Мы будем знать, когда ваш клиент готов.
+- [Настройте целевой выпуск на клиенте Microsoft 365](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center).
 
 ## <a name="set-up-your-environment"></a>Настройка среды
 

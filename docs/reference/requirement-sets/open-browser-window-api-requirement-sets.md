@@ -1,15 +1,15 @@
 ---
-title: Открытие наборов требований окна браузера
+title: Открытие набора обязательных элементов окна браузера
 description: Указывает, какие платформы и сборки Office поддерживают API Опенбровсервиндов.
 ms.date: 09/16/2020
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 8f6966f5bdcecd9c55a20f2d640d066906c1b6a3
-ms.sourcegitcommit: 2479812e677d1a7337765fe8f1c8345061d4091a
+ms.openlocfilehash: 8bc26525bf64ed87d46d85cd1248f79696d67f2b
+ms.sourcegitcommit: 4a03d8b3f676ee2d91114813cb81bce5da3c8d6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "48135240"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48175509"
 ---
 # <a name="open-browser-window-api-requirement-sets"></a>Наборы обязательных элементов API окна браузера
 
@@ -36,7 +36,7 @@ ms.locfileid: "48135240"
 
 ## <a name="openbrowserwindowapi-11"></a>Опенбровсервиндовапи 1,1
 
-Опенбровсервиндовапи 1,1 — это первая версия API. Более подробную информацию об API можно узнать в разделе [Office. Context. UI](/javascript/api/office/office.context.ui) .
+Опенбровсервиндовапи 1,1 — это первая версия API. Более подробную информацию об API можно узнать в разделе [Office. Context. UI](/javascript/api/office/office.context#ui) .
 
 ## <a name="see-also"></a>См. также
 
