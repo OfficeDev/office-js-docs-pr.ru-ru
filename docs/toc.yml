@@ -1145,6 +1145,9 @@
           displayName: Word
 - name: Шаблоны и рекомендации
   items:
+    - name: Открыть в Excel
+      href: excel/pnp-open-in-excel.md
+      displayName: Excel
     - name: Пакетная обработка пользовательских функций в удаленных вызовов
       href: excel/custom-functions-batching.md
       displayName: 'Excel, Custom Functions'
