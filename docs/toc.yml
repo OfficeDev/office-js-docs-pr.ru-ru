@@ -1145,6 +1145,8 @@
           displayName: Word
 - name: Шаблоны и рекомендации
   items:
+    - name: Обзор
+      href: overview/patterns-and-practices-overview.md
     - name: Открыть в Excel
       href: excel/pnp-open-in-excel.md
       displayName: Excel
