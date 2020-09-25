@@ -1,14 +1,14 @@
 ---
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
-ms.date: 08/13/2020
+ms.date: 09/24/2020
 localization_priority: Normal
-ms.openlocfilehash: 544388014bfef0dd647a79d655a173d09f5a4ff7
-ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
+ms.openlocfilehash: 6fc1661a49bd5ba60a42ab891eee5a640b579feb
+ms.sourcegitcommit: 09e1d8ff14b3c09a3eb11c91432c224a539181a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "47408441"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48268560"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -28,12 +28,12 @@ ms.locfileid: "47408441"
 |iOS|любой|Неприменимо|Safari|
 |Android|любой|Неприменимо|Chrome|
 |Windows 7, 8,1, 10 | не подписка Office 2013 или более поздняя версия|Всё равно|Internet Explorer 11|
-|Windows 7 | Microsoft 365| Всё равно | Internet Explorer 11|
+|Windows 7 | Microsoft 365| Всё равно | Internet Explorer 11|
 |Windows 8,1,<br>Windows 10 ver. &nbsp; < &nbsp; 1903| Microsoft 365 | Нет| Internet Explorer 11|
 |Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; < &nbsp; 16.0.11629<sup>1</sup>| Всё равно|Internet Explorer 11|
 |Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.11629 &nbsp; _и_ &nbsp; < &nbsp; 16.0.13127.20082<sup>1</sup>| Всё равно|Microsoft Edge<sup>2, 3</sup> с исходным Вебвиев (еджехтмл)|
 |Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13127.20082<sup>1</sup>| Нет |Microsoft Edge<sup>2, 3</sup> с исходным Вебвиев (еджехтмл)|
-|Windows 8.1<br>Windows 10| Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13127.20082<sup>1</sup>| Да|  Просмотрите Примечание 4. |
+|Windows 8.1<br>Windows 10| Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13127.20082<sup>1</sup>| Да<sup>5</sup>|  Просмотрите Примечание 4. |
 
 <sup>1</sup> ознакомьтесь со [страницей "журнал обновлений](/officeupdates/update-history-office365-proplus-by-date) " и Узнайте, как [найти версию клиента Office и канал обновления](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19) для получения дополнительных сведений.
 
@@ -41,7 +41,10 @@ ms.locfileid: "47408441"
 
 <sup>3</sup> если надстройка содержит `Runtimes` элемент в манифесте, он использует Internet Explorer 11 независимо от версии Windows или Microsoft 365. Дополнительные сведения см. в статье [Runtimes](../reference/manifest/runtimes.md).
 
-<sup>4</sup> браузер, используемый для этой комбинации версий, зависит от канала обновления подписки Microsoft 365. Если пользователь находится на [канале бета-версии](https://insider.office.com/join/windows) (ранее он быстро является быстрым каналом), Office использует Microsoft Edge с WebView2 (чромиум на основе). Для любого другого канала Office использует Microsoft Edge с исходной Вебвиев (Еджехтмл). Поддержка WebView2 в других каналах ожидается на ранних 2021.
+<sup>4</sup> браузер, используемый для этой комбинации версий, зависит от канала обновления подписки Microsoft 365. Если пользователь находится на [канале бета-версии](https://insider.office.com/join/windows) (ранее он быстро является быстрым каналом), Office использует Microsoft Edge с WebView2 (чромиум на основе). Для любого другого канала Office использует Microsoft Edge с исходной Вебвиев (Еджехтмл). Поддержка WebView2 в других каналах ожидается на ранних 2021. *См. также Примечание 5*.
+
+<sup>5</sup> внедряемый элемент управления WebView2 должен быть установлен в дополнение к установке Microsoft EDGE, чтобы надстройка могла внедриться в Office. Чтобы установить его, ознакомьтесь со статьей [Microsoft Edge WebView2 (Предварительная версия)/внедрить веб-контент... с Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/).
+
 
 > [!IMPORTANT]
 > Internet Explorer 11 не поддерживает версии JavaScript, более поздние, чем ES5. Если у пользователей надстройки есть платформы, использующие Internet Explorer 11, то для использования синтаксиса и функций ECMAScript 2015 или более поздней версии доступны два варианта:

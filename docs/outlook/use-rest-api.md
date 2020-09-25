@@ -1,14 +1,14 @@
 ---
 title: Использование REST API Outlook из надстройки Outlook
 description: Узнайте, как использовать REST API Outlook из надстройки Outlook, чтобы получить маркер доступа
-ms.date: 10/31/2019
+ms.date: 09/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 7cd26c26e277d7d5fe93664494eb84b4e94bcc47
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 067934f18b02d5106b58a7ec2a0de11a6ea35581
+ms.sourcegitcommit: 09e1d8ff14b3c09a3eb11c91432c224a539181a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611619"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48268553"
 ---
 # <a name="use-the-outlook-rest-apis-from-an-outlook-add-in"></a>Использование REST API Outlook из надстройки Outlook
 
@@ -82,6 +82,9 @@ var restHost = Office.context.mailbox.restUrl;
 ## <a name="call-the-api"></a>Вызов API
 
 Когда надстройка получит маркер доступа, идентификатор элемента и URL-адрес REST API, она может передать эти сведения внутренней службе, которая вызовет REST API, или вызвать его напрямую с помощью AJAX. В приведенном ниже примере вызывается REST API почты Outlook для получения текущего сообщения.
+
+> [!IMPORTANT]
+> Для локальных развертываний Exchange запросы на стороне клиента, использующие AJAX или похожие библиотеки, завершатся с ошибками, так как CORS не поддерживается в программе установки сервера.
 
 ```js
 function getCurrentItem(accessToken) {

@@ -1,14 +1,14 @@
 ---
 title: Загрузка неопубликованных надстроек Office в Office в Интернете для тестирования
 description: Протестируйте надстройку Office в Office в Интернете для загрузки неопубликованных приложений.
-ms.date: 09/21/2020
+ms.date: 09/24/2020
 localization_priority: Normal
-ms.openlocfilehash: 709461d19fbf4602db3ba5bd9c40f495d0dbbd52
-ms.sourcegitcommit: 4a03d8b3f676ee2d91114813cb81bce5da3c8d6b
+ms.openlocfilehash: 91f23200a2c393eb5c79f615765df52f205ac6e1
+ms.sourcegitcommit: 09e1d8ff14b3c09a3eb11c91432c224a539181a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48175537"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48268567"
 ---
 # <a name="sideload-office-add-ins-in-office-on-the-web-for-testing"></a>Загрузка неопубликованных надстроек Office в Office в Интернете для тестирования
 
@@ -42,7 +42,7 @@ ms.locfileid: "48175537"
 6. Убедитесь, что надстройка установлена. Например, если надстройка вызывается командой, эта команда должна появиться на ленте или в контекстном меню. Если же у вас надстройка области задач, должна появиться область.
 
 > [!NOTE]
-> Чтобы протестировать надстройку Office с помощью Microsoft EDGE, необходимо выполнить дополнительные действия по настройке. В командной строке Windows выполните следующую строку: `npx office-addin-dev-settings appcontainer EdgeWebView --loopback --yes`
+> Чтобы протестировать надстройку Office с помощью Microsoft Edge с исходной Вебвиев (Еджехтмл), необходимо выполнить дополнительные действия по настройке. В командной строке Windows выполните следующую строку: `npx office-addin-dev-settings appcontainer EdgeWebView --loopback --yes` . Этот параметр не является обязательным, если Office использует пограничный WebView2 на основе Чромиум. Дополнительные сведения см. в разделе [браузеры, используемые](../concepts/browsers-used-by-office-web-add-ins.md)надстройками Office.
 
 ## <a name="sideload-an-office-add-in-in-office-365"></a>Загрузка неопубликованной надстройки Office в Office 365
 

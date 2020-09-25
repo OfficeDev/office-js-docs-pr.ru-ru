@@ -1,14 +1,14 @@
 ---
-ms.date: 09/21/2020
+ms.date: 09/23/2020
 description: 'Обработка и возврат таких ошибок, как #ПУСТО!, из пользовательской функции.'
 title: Обработка и возврат ошибок пользовательской функции
 localization_priority: Normal
-ms.openlocfilehash: 58c2ab432a4525f660e2d89735fd3add6e76fa7f
-ms.sourcegitcommit: 4a03d8b3f676ee2d91114813cb81bce5da3c8d6b
+ms.openlocfilehash: b3d3b325649a0775d3375c9f5285bba7cde0aa16
+ms.sourcegitcommit: 09e1d8ff14b3c09a3eb11c91432c224a539181a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48175530"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48268546"
 ---
 # <a name="handle-and-return-errors-from-your-custom-function"></a>Обработка и возврат ошибок пользовательской функции
 
@@ -38,9 +38,9 @@ function getCity(zipCode: string): string {
 Объект [CustomFunctions. Error](/javascript/api/custom-functions-runtime/customfunctions.error) используется для возврата к ячейке ошибки. При создании объекта укажите, какую ошибку следует использовать, выбрав одно из следующих `ErrorCode` значений перечисления.
 
 
-|Значение перечисления ErrorCode  |Значение ячейки Excel  |Смысл  |
+|Значение перечисления ErrorCode  |Значение ячейки Excel  |Описание  |
 |---------------|---------|---------|
-|`divisionByZero` | `#DIV/0`  | Обратите внимание, что JavaScript позволяет делить на нуль, поэтому при создании обработчика ошибок нужно внимательно определить это условие. |
+|`divisionByZero` | `#DIV/0`  | Функция пытается разделить на ноль. |
 |`invalidName`    | `#NAME?`  | В имени функции присутствует опечатка. Обратите внимание, что эта ошибка поддерживается как ошибка ввода пользовательской функции, но не в качестве ошибки вывода пользовательской функции. | 
 |`invalidNumber`  | `#NUM!`   | Возникла проблема с числом в формуле. |
 |`invalidReference` | `#REF!` | Функция ссылается на недопустимую ячейку. Обратите внимание, что эта ошибка поддерживается как ошибка ввода пользовательской функции, но не в качестве ошибки вывода пользовательской функции.|
