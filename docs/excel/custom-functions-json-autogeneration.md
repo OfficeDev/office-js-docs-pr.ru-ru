@@ -1,14 +1,14 @@
 ---
-ms.date: 05/06/2020
+ms.date: 09/25/2020
 description: Использование тегов JSDoc для динамического создания метаданных JSON пользовательских функций.
 title: Автоматическое генерирование метаданных JSON для пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: 8138e738188e50d2a1369c359fbca3e1574db32f
-ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
+ms.openlocfilehash: 995f323b24efdc1964e6e9643f6dad8a999a6d39
+ms.sourcegitcommit: b47318a24a50443b0579e05e178b3bb5433c372f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "47819520"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279500"
 ---
 # <a name="autogenerate-json-metadata-for-custom-functions"></a>Автоматическое генерирование метаданных JSON для пользовательских функций
 
@@ -38,7 +38,9 @@ ms.locfileid: "47819520"
 
 
 ## <a name="jsdoc-tags"></a>Теги JSDoc
-Ниже приведены теги JSDoc, которые поддерживаются в пользовательских функциях Excel:
+
+Следующие теги Жсдок поддерживаются в пользовательских функциях Excel.
+
 * [@cancelable](#cancelable)
 * [@customfunction](#customfunction) id name
 * [@helpurl](#helpurl) url
@@ -50,7 +52,7 @@ ms.locfileid: "47819520"
 
 ---
 ### <a name="cancelable"></a>@cancelable
-<a id="cancelable"/>
+<a id="cancelable"></a>
 
 Указывает, что настраиваемая функция выполняет действие при отмене функции.
 
@@ -62,7 +64,7 @@ ms.locfileid: "47819520"
 
 ---
 ### <a name="customfunction"></a>@customfunction
-<a id="customfunction"/>
+<a id="customfunction"></a>
 
 Синтаксис: @customfunction _id_ _name_
 
@@ -131,7 +133,7 @@ ms.locfileid: "47819520"
 
 ---
 ### <a name="helpurl"></a>@helpurl
-<a id="helpurl"/>
+<a id="helpurl"></a>
 
 Синтаксис: @helpurl _url_
 
@@ -150,7 +152,7 @@ ms.locfileid: "47819520"
 
 ---
 ### <a name="param"></a>@param
-<a id="param"/>
+<a id="param"></a>
 
 #### <a name="javascript"></a>JavaScript
 
@@ -161,6 +163,7 @@ ms.locfileid: "47819520"
 * `description` предоставляет описание, которое отображается в Excel для параметра функции. Это необязательный параметр.
 
 Чтобы обозначить параметр пользовательской функции как необязательный:
+
 * Поместите имя параметра в квадратные скобки. Пример: `@param {string} [text] Optional text`.
 
 > [!NOTE]
@@ -189,6 +192,7 @@ ms.locfileid: "47819520"
 Дополнительные сведения о типах параметров функций, которые могут использоваться, см. в разделе [Типы](#types).
 
 Чтобы обозначить параметр пользовательской функции как необязательный, выполните одно из указанных ниже действий.
+
 * Используйте необязательный параметр. Пример: `function f(text?: string)`
 * Задайте для параметра значение по умолчанию. Пример: `function f(text: string = "abc")`
 
@@ -214,7 +218,7 @@ function add(first: number, second: number): number {
 
 ---
 ### <a name="requiresaddress"></a>@requiresAddress
-<a id="requiresAddress"/>
+<a id="requiresAddress"></a>
 
 Указывает, что следует предоставлять адрес ячейки, в которой вычисляется функция.
 
@@ -222,7 +226,7 @@ function add(first: number, second: number): number {
 
 ---
 ### <a name="returns"></a>@returns
-<a id="returns"/>
+<a id="returns"></a>
 
 Синтаксис: @returns {_type_}
 
@@ -247,7 +251,7 @@ function add(first: number, second: number): number {
 
 ---
 ### <a name="streaming"></a>@streaming
-<a id="streaming"/>
+<a id="streaming"></a>
 
 Используется для обозначения того, что пользовательская функция является потоковой передачей функции. 
 
@@ -262,7 +266,7 @@ function add(first: number, second: number): number {
 
 ---
 ### <a name="volatile"></a>@volatile
-<a id="volatile"/>
+<a id="volatile"></a>
 
 Переменные функции — это такие функции, чей результат не остается неизменным в каждый период времени, даже если они не содержат аргументов или их аргументы не меняются. Excel повторно проводит вычисления в ячейках, которые содержат переменные функции, вместе со всеми зависимыми функциями при каждом вычислении. По этой причине чрезмерное использование переменных функций может замедлить пересчет, поэтому используйте их умеренно.
 
@@ -272,7 +276,7 @@ function add(first: number, second: number): number {
 
 ```js
 /**
- * Simulates rolling a 6-sided dice.
+ * Simulates rolling a 6-sided die.
  * @customfunction
  * @volatile
  */
@@ -310,6 +314,7 @@ function roll6sided(): number {
 Любой другой тип будет рассматриваться как ошибка.
 
 ## <a name="next-steps"></a>Дальнейшие действия
+
 Узнайте о [соглашениях именования для пользовательских функций](custom-functions-naming.md). Или же узнайте, как [локализовать свои функции](custom-functions-localize.md), для чего нужно [записать файл JSON вручную](custom-functions-json.md).
 
 ## <a name="see-also"></a>Дополнительные ресурсы
