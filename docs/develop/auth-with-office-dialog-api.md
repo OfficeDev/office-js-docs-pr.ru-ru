@@ -1,14 +1,14 @@
 ---
 title: Проверка подлинности и авторизация с помощью Dialog API для Office
 description: Узнайте, как использовать диалоговый API-интерфейс Office, чтобы пользователи могли входить в Google, Facebook, Microsoft 365 и другие службы, защищенные платформой Microsoft Identity.
-ms.date: 07/07/2020
+ms.date: 09/24/2020
 localization_priority: Priority
-ms.openlocfilehash: 22242b3e54a63b76a44f8e610be2194a1fc5f00b
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: bc0d092dad105cbdff09a5826632baa6fd4f7021
+ms.sourcegitcommit: b47318a24a50443b0579e05e178b3bb5433c372f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293347"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279487"
 ---
 # <a name="authenticate-and-authorize-with-the-office-dialog-api"></a>Проверка подлинности и авторизация с помощью Dialog API для Office
 
@@ -23,7 +23,7 @@ ms.locfileid: "47293347"
 - Это полностью отдельный экземпляр браузера в области задач. Это означает следующее:
   - В нем есть собственная среда выполнения JavaScript, объект окна и глобальные переменные.
   - Не существует общей среды выполнения с областью задач.
-  - Он не использует то же хранилище для сессии, что и область задач.
+  - Оно не использует то же хранилище сеанса (свойство [Window.sessionStorage](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)), что и область задач.
 - Первая страница, открытая в диалоговом окне, должна размещаться в том же домене, что и область задач, включая протокол, поддомены и порт, если есть.
 - Из диалогового окна информация может направляться обратно в область задач с помощью метода [messageParent](/javascript/api/office/office.ui#messageparent-message-), однако этот метод можно вызывать только на странице, размещенной в том же домене, что и область задач, включая протокол, поддомены и порт.
 
