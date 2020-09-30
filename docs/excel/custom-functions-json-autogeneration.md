@@ -3,12 +3,12 @@ ms.date: 09/25/2020
 description: Использование тегов JSDoc для динамического создания метаданных JSON пользовательских функций.
 title: Автоматическое генерирование метаданных JSON для пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: 995f323b24efdc1964e6e9643f6dad8a999a6d39
-ms.sourcegitcommit: b47318a24a50443b0579e05e178b3bb5433c372f
+ms.openlocfilehash: 151dc7c97b2a98743906b7e0a920fdc1eff62e7f
+ms.sourcegitcommit: 42202d7e2ac24dffa77cf937f5697a1cd79ee790
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279500"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "48308539"
 ---
 # <a name="autogenerate-json-metadata-for-custom-functions"></a>Автоматическое генерирование метаданных JSON для пользовательских функций
 
@@ -51,8 +51,9 @@ ms.locfileid: "48279500"
 * [@volatile](#volatile)
 
 ---
-### <a name="cancelable"></a>@cancelable
 <a id="cancelable"></a>
+
+### <a name="cancelable"></a>@cancelable
 
 Указывает, что настраиваемая функция выполняет действие при отмене функции.
 
@@ -63,8 +64,9 @@ ms.locfileid: "48279500"
 Функция не может содержать одновременно теги `@cancelable` и `@streaming`.
 
 ---
-### <a name="customfunction"></a>@customfunction
 <a id="customfunction"></a>
+
+### <a name="customfunction"></a>@customfunction
 
 Синтаксис: @customfunction _id_ _name_
 
@@ -132,8 +134,9 @@ ms.locfileid: "48279500"
 ```
 
 ---
-### <a name="helpurl"></a>@helpurl
 <a id="helpurl"></a>
+
+### <a name="helpurl"></a>@helpurl
 
 Синтаксис: @helpurl _url_
 
@@ -151,8 +154,9 @@ ms.locfileid: "48279500"
 ```
 
 ---
-### <a name="param"></a>@param
 <a id="param"></a>
+
+### <a name="param"></a>@param
 
 #### <a name="javascript"></a>JavaScript
 
@@ -217,16 +221,18 @@ function add(first: number, second: number): number {
 ```
 
 ---
-### <a name="requiresaddress"></a>@requiresAddress
 <a id="requiresAddress"></a>
+
+### <a name="requiresaddress"></a>@requiresAddress
 
 Указывает, что следует предоставлять адрес ячейки, в которой вычисляется функция.
 
 Тип последнего параметра функции должен быть `CustomFunctions.Invocation` или производной от него. При вызове функции свойство `address` будет содержать адрес.
 
 ---
-### <a name="returns"></a>@returns
 <a id="returns"></a>
+
+### <a name="returns"></a>@returns
 
 Синтаксис: @returns {_type_}
 
@@ -250,8 +256,9 @@ function add(first: number, second: number): number {
 ```
 
 ---
-### <a name="streaming"></a>@streaming
 <a id="streaming"></a>
+
+### <a name="streaming"></a>@streaming
 
 Используется для обозначения того, что пользовательская функция является потоковой передачей функции. 
 
@@ -265,8 +272,9 @@ function add(first: number, second: number): number {
 Потоковые передачи функций невозможно пометить как [@volatile](#volatile).
 
 ---
-### <a name="volatile"></a>@volatile
 <a id="volatile"></a>
+
+### <a name="volatile"></a>@volatile
 
 Переменные функции — это такие функции, чей результат не остается неизменным в каждый период времени, даже если они не содержат аргументов или их аргументы не меняются. Excel повторно проводит вычисления в ячейках, которые содержат переменные функции, вместе со всеми зависимыми функциями при каждом вычислении. По этой причине чрезмерное использование переменных функций может замедлить пересчет, поэтому используйте их умеренно.
 
