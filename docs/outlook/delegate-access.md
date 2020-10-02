@@ -1,14 +1,14 @@
 ---
 title: Включение сценариев делегирования доступа в надстройке Outlook
 description: В кратко описывается доступ представителя и описывается настройка поддержки надстройки.
-ms.date: 09/03/2020
+ms.date: 09/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 68b912d35f68cbf1177dd0b809994840092330a9
-ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
+ms.openlocfilehash: 68e9c8003f8d223a591283fd1a73f0a38bd3c8a4
+ms.sourcegitcommit: 6c3a04acde57832feeaaa599148f93af7e3e36ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47430984"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "48336421"
 ---
 # <a name="enable-delegate-access-scenarios-in-an-outlook-add-in"></a>Включение сценариев делегирования доступа в надстройке Outlook
 
@@ -83,9 +83,6 @@ ms.locfileid: "47430984"
 
 Вы можете получить общие свойства элемента в режиме создания или чтения, вызвав метод [Item. жетшаредпропертиесасинк](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods) . Возвращает объект [шаредпропертиес](/javascript/api/outlook/office.sharedproperties) , который в настоящее время предоставляет разрешения делегата, адрес электронной почты владельца, базовый URL-адрес REST API и целевой почтовый ящик.
 
-> [!IMPORTANT]
-> В сценарии делегирования надстройка может использовать REST, но не EWS, а разрешение надстройки должно быть настроено на разрешение `ReadWriteMailbox` REST доступа к почтовому ящику владельца.
-
 В приведенном ниже примере показано, как получить общие свойства сообщения или встречи, проверить, есть ли у делегата разрешение на **запись** , и СОВЕРШИТЬ вызов REST.
 
 ```js
@@ -139,6 +136,46 @@ function performOperation() {
 
 > [!TIP]
 > Как представитель вы можете использовать REST для [получения содержимого сообщения Outlook, присоединенного к элементу Outlook или записи группы](/graph/outlook-get-mime-message#get-mime-content-of-an-outlook-message-attached-to-an-outlook-item-or-group-post).
+
+## <a name="handle-calling-rest-on-shared-and-non-shared-items"></a>Обработка вызовов REST для общих и необщих элементов
+
+Если вы хотите вызвать операцию REST для элемента, независимо от того, является ли элемент общим, вы можете использовать `getSharedPropertiesAsync` API, чтобы определить, является ли элемент общим. После этого вы можете создать URL-адрес REST для операции, используя соответствующий объект.
+
+```js
+if (item.getSharedPropertiesAsync) {
+  // In Windows, Mac, and the web client, this indicates a shared item so use SharedProperties properties to construct the REST URL.
+  // Add-ins don't activate on shared items in mobile so no need to handle.
+
+  // Perform operation for shared item.
+} else {
+  // In general, this is not a shared item, so construct the REST URL using info from the Call REST APIs article:
+  // https://docs.microsoft.com/office/dev/add-ins/outlook/use-rest-api
+
+  // Perform operation for non-shared item.
+}
+```
+
+## <a name="limitations"></a>Ограничения
+
+В зависимости от сценариев надстройки существует ряд ограничений, которые необходимо учитывать при обработке ситуаций делегата.
+
+### <a name="rest-and-ews"></a>REST и EWS
+
+Надстройка может использовать REST, но не EWS, и разрешение надстройки должно быть настроено на разрешение `ReadWriteMailbox` REST доступа к почтовому ящику владельца.
+
+### <a name="message-compose-mode"></a>Режим создания сообщения
+
+В режиме создания сообщений [жетшаредпропертиесасинк](/javascript/api/outlook/office.messagecompose#getsharedpropertiesasync-options--callback-) не поддерживается в Outlook в Интернете или Windows, если не выполняются следующие условия.
+
+1. Владелец предоставляет по крайней мере одну папку почтового ящика с представителем.
+1. Делегирование черновика сообщения в общей папке.
+
+    Примеры:
+
+    - Делегат отправляет сообщение электронной почты в общую папку или пересылает его.
+    - Делегат сохраняет черновик сообщения и перемещает его из своей папки **"Черновики** " в общую папку. После этого представитель открывает черновик из общей папки, а затем продолжает сохранится.
+
+После отправки сообщения оно обычно находится в папке " **Отправленные** " делегата.
 
 ## <a name="see-also"></a>См. также
 
