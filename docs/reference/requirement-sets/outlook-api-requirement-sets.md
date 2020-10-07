@@ -4,12 +4,12 @@ description: Узнайте больше о наборах обязательн�
 ms.date: 09/01/2020
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: c7491492236817548277ad4fc82c504b77a9046d
-ms.sourcegitcommit: 4adfc368a366f00c3f3d7ed387f34aaecb47f17c
+ms.openlocfilehash: 8424d9f657c3fc43ed8577edecc32296382181e2
+ms.sourcegitcommit: d7fd52260eb6971ab82009c835b5a752dc696af4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "47326312"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "48370502"
 ---
 # <a name="outlook-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Outlook
 
@@ -103,7 +103,7 @@ if (item.somePropertyOrFunction !== undefined) {
 || классический пользовательский интерфейс Outlook при подключении к<br>Локальная среда Exchange | [1.1](../objectmodel/requirement-set-1.1/outlook-requirement-set-1.1.md), [1.2](../objectmodel/requirement-set-1.2/outlook-requirement-set-1.2.md), [1.3](../objectmodel/requirement-set-1.3/outlook-requirement-set-1.3.md), [1.4](../objectmodel/requirement-set-1.4/outlook-requirement-set-1.4.md), [1.5](../objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md), [1.6](../objectmodel/requirement-set-1.6/outlook-requirement-set-1.6.md) |
 
 > [!NOTE]
-> <sup>1</sup> Поддержка набора 1,8 в Outlook для Windows с подпиской Microsoft 365 или розничной версии для единовременной покупки доступна начиная с версии 1910 (сборка 12130,20272). Дополнительные сведения относительно вашей версии см.в журнале обновлений на стр [Office 2019](/officeupdates/update-history-office-2019) или [Microsoft 365](/officeupdates/update-history-office365-proplus-by-date) и в статье [Поиск версии клиента Office и канала обновления](https://support.office.com/article/about-office-what-version-of-office-am-i-using-932788b8-a3ce-44bf-bb09-e334518b8b19).
+> <sup>1</sup> Поддержка набора 1,8 в Outlook для Windows с подпиской Microsoft 365 или розничной версии для единовременной покупки доступна начиная с версии 1910 (сборка 12130,20272). Дополнительные сведения относительно вашей версии см.в журнале обновлений на стр [Office 2019](/officeupdates/update-history-office-2019) или [Microsoft 365](/officeupdates/update-history-office365-proplus-by-date) и в статье [Поиск версии клиента Office и канала обновления](https://support.microsoft.com/office/932788b8-a3ce-44bf-bb09-e334518b8b19).
 >
 > <sup>2</sup> Поддержка версии 1.3 в Outlook 2013 добавлена в рамках [обновления для Outlook 2013 (KB3114349) от 8 декабря 2015 г.](https://support.microsoft.com/kb/3114349) Поддержка версии 1.4 в Outlook 2013 добавлена в рамках [обновления для Outlook 2013 (KB3118280) от 13 сентября 2016 г.](https://support.microsoft.com/help/3118280) Поддержка версии 1.4 в Outlook 2016 (единовременная покупка) добавлена в рамках [обновления для Office 2016 (KB4022223) от 3 июля 2018 г.](https://support.microsoft.com/help/4022223).
 >

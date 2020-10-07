@@ -1,14 +1,14 @@
 ---
 title: Основные концепции команд надстроек
 description: Как добавить настраиваемые кнопки ленты и элементы меню в Office в составе надстройки Office
-ms.date: 07/10/2020
+ms.date: 10/03/2020
 localization_priority: Priority
-ms.openlocfilehash: 13db2191d9691a699c5976b812e1ca6d8f3bf1ae
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: eea1983d8c45d13ca48594c108e2992a1bec0d02
+ms.sourcegitcommit: d7fd52260eb6971ab82009c835b5a752dc696af4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293361"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "48370509"
 ---
 # <a name="add-in-commands-for-excel-powerpoint-and-word"></a>Команды надстроек для Excel, PowerPoint и Word
 
@@ -52,12 +52,12 @@ ms.locfileid: "47293361"
 - ShowTaskpane: отображает одну или несколько областей, в которые можно загрузить пользовательские HTML-страницы.
 - ExecuteFunction загружает невидимую HTML-страницу, а затем выполняет содержащуюся в ней функцию JavaScript. Для показа ошибок, хода выполнения или дополнительных данных функции можно использовать API [displayDialog](/javascript/api/office/office.ui).  
 
-### <a name="default-enabled-or-disabled-status-preview"></a>Состояние по умолчанию: "Включено" или "Отключено" (предварительная версия)
+### <a name="default-enabled-or-disabled-status"></a>Состояние по умолчанию: "Включено" или "Отключено"
 
 Вы можете указать, включена или отключена команда при запуске надстройки, а также изменять параметр программными средствами.
 
 > [!NOTE]
-> Эта функция доступна в предварительной версии и поддерживается не всеми приложениями Office и сценариями. Дополнительные сведения см. в статье о [Включение и отключение команд надстроек](disable-add-in-commands.md).
+> Эта функция поддерживается не всеми приложениями Office и сценариями. Дополнительные сведения см. в статье о [Включение и отключение команд надстроек](disable-add-in-commands.md).
 
 ## <a name="supported-platforms"></a>Поддерживаемые платформы
 
