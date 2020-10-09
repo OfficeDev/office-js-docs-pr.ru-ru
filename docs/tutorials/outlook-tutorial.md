@@ -1,15 +1,15 @@
 ---
 title: Руководство. Сборка надстройки Outlook для создания сообщения
 description: В этом руководстве вы создадите надстройку Outlook, которая вставляет списки GitHub в тело нового сообщения.
-ms.date: 08/24/2020
+ms.date: 10/02/2020
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: 6b4dabd803f304270fd7926a4d02e2cb485bb526
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 78a3d2c8d3d44ceb98b0eb0964ea487bcb019aec
+ms.sourcegitcommit: d7fd52260eb6971ab82009c835b5a752dc696af4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293396"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "48370537"
 ---
 # <a name="tutorial-build-a-message-compose-outlook-add-in"></a>Руководство. Сборка надстройки Outlook для создания сообщения
 
@@ -103,7 +103,7 @@ ms.locfileid: "47293396"
 
     - **Выберите тип проекта** - `Office Add-in Task Pane project`
 
-    - **Выберите тип сценария** - `Javascript`
+    - **Выберите тип сценария** - `JavaScript`
 
     - **Как вы хотите назвать надстройку?** - `Git the gist`
 
@@ -157,16 +157,13 @@ ms.locfileid: "47293396"
 Прежде чем продолжить, протестируйте базовую надстройку, созданную генератором, чтобы подтвердить правильную настройку проекта.
 
 > [!NOTE]
-> Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите указанную ниже команду, примите предложение установить сертификат, предоставленный генератором Yeoman.
+> Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите указанную ниже команду, примите предложение установить сертификат, предоставленный генератором Yeoman. Кроме того, вам может потребоваться запустить командную строку или терминал с правами администратора, чтобы внести изменения.
 
 1. Выполните следующую команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).
 
     ```command&nbsp;line
-    npm start
+    npm run dev-server
     ```
-
-    > [!IMPORTANT]
-    > Если появляется сообщение об ошибке "Загрузка неопубликованных надстроек не поддерживается", его можно проигнорировать и продолжить.
 
 1. Выполните инструкции, приведенные в статье [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md), чтобы загрузить неопубликованный файл **manifest.xml**, находящийся в корневом каталоге проекта.
 
@@ -539,21 +536,51 @@ ul {
       dialog: "./src/settings/dialog.js"
     },
     ```
-  
-2. Найдите массив `plugins` в объекте `config` и добавьте эти два новых объекта в конец массива.
+
+1. Найдите массив `plugins` в объекте `config`. В массиве `patterns` объекта `new CopyWebpackPlugin` добавьте новую запись после записи `taskpane.css`.
+
+    ```js
+    {
+      to: "dialog.css",
+      from: "./src/settings/dialog.css"
+    },
+    ```
+
+    После этого объект `new CopyWebpackPlugin` будет выглядеть следующим образом:
+
+    ```js
+      new CopyWebpackPlugin({
+        patterns: [
+        {
+          to: "taskpane.css",
+          from: "./src/taskpane/taskpane.css"
+        },
+        {
+          to: "dialog.css",
+          from: "./src/settings/dialog.css"
+        },
+        {
+          to: "[name]." + buildType + ".[ext]",
+          from: "manifest*.xml",
+          transform(content) {
+            if (dev) {
+              return content;
+            } else {
+              return content.toString().replace(new RegExp(urlDev, "g"), urlProd);
+            }
+          }
+        }
+      ]}),
+    ```
+
+1. Найдите массив `plugins` в объекте `config` и добавьте новый объект в конец массива.
 
     ```js
     new HtmlWebpackPlugin({
       filename: "dialog.html",
       template: "./src/settings/dialog.html",
       chunks: ["polyfill", "dialog"]
-    }),
-    new CopyWebpackPlugin([
-      {
-        to: "dialog.css",
-        from: "./src/settings/dialog.css"
-      }
-    ])
+    })
     ```
 
     После этого новый массив `plugins` будет выглядеть следующим образом:
@@ -564,14 +591,30 @@ ul {
       new HtmlWebpackPlugin({
         filename: "taskpane.html",
         template: "./src/taskpane/taskpane.html",
-        chunks: ['polyfill', 'taskpane']
+        chunks: ["polyfill", "taskpane"]
       }),
-      new CopyWebpackPlugin([
-      {
-        to: "taskpane.css",
-        from: "./src/taskpane/taskpane.css"
-      }
-      ]),
+      new CopyWebpackPlugin({
+        patterns: [
+        {
+          to: "taskpane.css",
+          from: "./src/taskpane/taskpane.css"
+        },
+        {
+          to: "dialog.css",
+          from: "./src/settings/dialog.css"
+        },
+        {
+          to: "[name]." + buildType + ".[ext]",
+          from: "manifest*.xml",
+          transform(content) {
+            if (dev) {
+              return content;
+            } else {
+              return content.toString().replace(new RegExp(urlDev, "g"), urlProd);
+            }
+          }
+        }
+      ]}),
       new HtmlWebpackPlugin({
         filename: "commands.html",
         template: "./src/commands/commands.html",
@@ -580,33 +623,24 @@ ul {
       new HtmlWebpackPlugin({
         filename: "dialog.html",
         template: "./src/settings/dialog.html",
-        chunks: ['polyfill', 'dialog']
-      }),
-      new CopyWebpackPlugin([
-      {
-        to: "dialog.css",
-        from: "./src/settings/dialog.css"
-      }
-      ])
+        chunks: ["polyfill", "dialog"]
+      })
     ],
     ```
 
-3. Если веб-сервер работает, закройте окно команды узла.
+1. Если веб-сервер работает, закройте окно команды узла.
 
-4. Выполните указанную ниже команду, чтобы повторно собрать проект.
+1. Выполните указанную ниже команду, чтобы повторно собрать проект.
 
     ```command&nbsp;line
     npm run build
     ```
 
-5. Выполните указанную ниже команду, чтобы запустить веб-сервер.
+1. Выполните указанную ниже команду, чтобы запустить веб-сервер.
 
     ```command&nbsp;line
-    npm start
+    npm run dev-server
     ```
-
-    > [!IMPORTANT]
-    > Если появляется сообщение об ошибке "Загрузка неопубликованных надстроек не поддерживается", его можно проигнорировать и продолжить.
 
 ### <a name="fetch-data-from-github"></a>Получение данных из GitHub
 
@@ -906,10 +940,7 @@ function buildBodyContent(gist, callback) {
 
 ### <a name="test-the-button"></a>Тестирование кнопки
 
-Сохраните все изменения и выполните в командной строке команду `npm start`, если сервер еще не запущен. Затем выполните указанные ниже действия, чтобы протестировать кнопку **Insert default gist** (Вставить gist по умолчанию).
-
-> [!IMPORTANT]
-> Если появляется сообщение об ошибке "Загрузка неопубликованных надстроек не поддерживается", его можно проигнорировать и продолжить.
+Сохраните все изменения и выполните в командной строке команду `npm run dev-server`, если сервер еще не запущен. Затем выполните указанные ниже действия, чтобы протестировать кнопку **Insert default gist** (Вставить gist по умолчанию).
 
 1. Откройте Outlook и создайте новое сообщение.
 
@@ -1270,10 +1301,7 @@ ul {
 
 ### <a name="test-the-button"></a>Тестирование кнопки
 
-Сохраните все изменения и выполните в командной строке команду `npm start`, если сервер еще не запущен. Затем выполните указанные ниже действия, чтобы протестировать кнопку **Insert gist** (Вставить gist).
-
-> [!IMPORTANT]
-> Если появляется сообщение об ошибке "Загрузка неопубликованных надстроек не поддерживается", его можно проигнорировать и продолжить.
+Сохраните все изменения и выполните в командной строке команду `npm run dev-server`, если сервер еще не запущен. Затем выполните указанные ниже действия, чтобы протестировать кнопку **Insert gist** (Вставить gist).
 
 1. Откройте Outlook и создайте новое сообщение.
 
