@@ -1,14 +1,14 @@
 ---
 title: Конфиденциальность, разрешения и безопасность для надстроек Outlook
 description: Узнайте, как управлять конфиденциальностью, разрешениями и безопасностью в надстройке Outlook.
-ms.date: 10/05/2020
+ms.date: 10/07/2020
 localization_priority: Priority
-ms.openlocfilehash: 93eee06659b6452e6dd0961837715be5557e6c2c
-ms.sourcegitcommit: d7fd52260eb6971ab82009c835b5a752dc696af4
+ms.openlocfilehash: aa30b4c9aff9a07761d06ae538d56a01f2c30e0d
+ms.sourcegitcommit: 4bfef315102bd5b4333ff9aeaa6537cffb5bca9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "48370516"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48398418"
 ---
 # <a name="privacy-permissions-and-security-for-outlook-add-ins"></a>Конфиденциальность, разрешения и безопасность для надстроек Outlook
 
@@ -68,7 +68,7 @@ ms.locfileid: "48370516"
 - Браузер: доступность надстроек и доступ к магазину остаются без изменения, поэтому пользователи могут продолжать [управлять своими надстройками](https://support.microsoft.com/office/8f2ce816-5df4-44a5-958c-f7f9d6dabdce), в том числе развернутыми администратором.
 
   > [!NOTE]
-  > \* В Windows такое взаимодействие (или поведение) поддерживается в версии 2009 (сборка 13127.20296). Дополнительные сведения относительно вашей версии см. на странице журнала обновлений для [Microsoft 365](/officeupdates/update-history-office365-proplus-by-date) и в статье [Поиск версии клиента Office и канала обновления](https://support.microsoft.com/office/932788b8-a3ce-44bf-bb09-e334518b8b19).
+  > \* В Windows такое взаимодействие или поведение поддерживается с версии 2008 (сборка 13127.20296). Дополнительные сведения относительно вашей версии см. на странице журнала обновлений для [Microsoft 365](/officeupdates/update-history-office365-proplus-by-date) и в статье [Поиск версии клиента Office и канала обновления](https://support.microsoft.com/office/932788b8-a3ce-44bf-bb09-e334518b8b19).
 
 Общие сведения о надстройках см. в разделе [Конфиденциальность и безопасность надстроек для Office](../concepts/privacy-and-security.md#optional-connected-experiences).
 
