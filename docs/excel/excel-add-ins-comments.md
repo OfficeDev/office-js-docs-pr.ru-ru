@@ -1,14 +1,14 @@
 ---
 title: Работайте с комментариями с помощью API JavaScript для Excel
 description: Сведения об использовании API для добавления, удаления и редактирования комментариев и потоков комментариев.
-ms.date: 03/17/2020
+ms.date: 10/09/2020
 localization_priority: Normal
-ms.openlocfilehash: f0be13cc666ed4b6b5b3cfac59f299c872139f4c
-ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
+ms.openlocfilehash: 85312cbd92aa6c9d0f82fd167e8a372c2eff8c85
+ms.sourcegitcommit: b50eebd303adcc22eb86e65756ce7e9a82f41a57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "47408574"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48456554"
 ---
 # <a name="work-with-comments-using-the-excel-javascript-api"></a>Работайте с комментариями с помощью API JavaScript для Excel
 
@@ -202,8 +202,123 @@ Excel.run(function (context) {
 });
 ```
 
+## <a name="comment-events"></a>События комментариев
+
+Надстройка может прослушивать добавленные комментарии, изменения и удаления. [События с комментариями](/javascript/api/excel/excel.commentcollection#event-details) возникают для `CommentCollection` объекта. Для прослушивания событий комментариев Зарегистрируйте `onAdded` `onChanged` обработчик событий, или `onDeleted` комментарий. При обнаружении события комментария используйте этот обработчик событий для получения данных о добавленных, измененных или удаленных комментариях. `onChanged`Кроме того, событие обрабатывает добавления, изменения и удаления ответа на комментарии. 
+
+Каждое событие Comment инициируется только один раз при одновременном выполнении нескольких добавлений, изменений или удалений. Все объекты [комментаддедевентаргс](/javascript/api/excel/excel.commentaddedeventargs), [комментчанжедевентаргс](/javascript/api/excel/excel.commentchangedeventarg)и [комментделетедевентаргс](/javascript/api/excel/excel.commentdeletedeventargs) содержат массивы идентификаторов комментариев для сопоставления действий события с коллекциями комментариев.
+
+В статье [Работа с событиями с помощью API JavaScript для Excel](excel-add-ins-events.md) можно получить дополнительные сведения о регистрации обработчиков событий, обработке событий и удалении обработчиков событий. 
+
+### <a name="comment-addition-events"></a>События добавления комментариев 
+`onAdded`Событие инициируется, когда в коллекцию комментариев добавляется один или несколько новых комментариев. Это событие *не* инициируется при добавлении ответов в поток комментариев (просмотрите [события изменения комментария](#comment-change-events) , чтобы узнать о событиях ответа на комментарии).
+
+В следующем примере показано, как зарегистрировать `onAdded` обработчик событий и затем использовать `CommentAddedEventArgs` объект для получения `commentDetails` массива добавленного комментария.
+
+> [!NOTE]
+> Этот пример работает только при добавлении одного комментария. 
+
+```js
+Excel.run(function (context) {
+    var comments = context.workbook.worksheets.getActiveWorksheet().comments;
+
+    // Register the onAdded comment event handler.
+    comments.onAdded.add(commentAdded);
+
+    return context.sync();
+});
+
+function commentAdded() {
+    Excel.run(function (context) {
+        // Retrieve the added comment using the comment ID.
+        // Note: This method assumes only a single comment is added at a time. 
+        var addedComment = context.workbook.comments.getItem(event.commentDetails[0].commentId);
+
+        // Load the added comment's data.
+        addedComment.load(["content", "authorName"]);
+
+        return context.sync().then(function () {
+            // Print out the added comment's data.
+            console.log(`A comment was added. ID: ${event.commentDetails[0].commentId}. Comment content:${addedComment.content}. Comment author:${addedComment.authorName}`);
+            return context.sync();
+        });            
+    });
+}
+```
+
+### <a name="comment-change-events"></a>События изменения комментариев 
+`onChanged`Событие Comment запускается в приведенных ниже сценариях.
+
+- Обновляется контент комментария.
+- Поток комментариев разрешается.
+- Поток комментариев повторно открыт.
+- В цепочку комментариев добавляется ответ.
+- Ответ обновляется в цепочке комментариев.
+- В цепочке комментариев удаляется ответ.
+
+В следующем примере показано, как зарегистрировать `onChanged` обработчик событий и затем использовать `CommentChangedEventArgs` объект для получения `commentDetails` массива измененного комментария.
+
+> [!NOTE]
+> Этот пример работает только при изменении одного комментария. 
+
+```js
+Excel.run(function (context) {
+    var comments = context.workbook.worksheets.getActiveWorksheet().comments;
+
+    // Register the onChanged comment event handler.
+    comments.onChanged.add(commentChanged);
+
+    return context.sync();
+});    
+
+function commentChanged() {
+    Excel.run(function (context) {
+        // Retrieve the changed comment using the comment ID.
+        // Note: This method assumes only a single comment is changed at a time. 
+        var changedComment = context.workbook.comments.getItem(event.commentDetails[0].commentId);
+
+        // Load the changed comment's data.
+        changedComment.load(["content", "authorName"]);
+
+        return context.sync().then(function () {
+            // Print out the changed comment's data.
+            console.log(`A comment was changed. ID: ${event.commentDetails[0].commentId}`. Updated comment content: ${changedComment.content}`. Comment author: ${changedComment.authorName}`);
+            return context.sync();
+        });
+    });
+}
+```
+
+### <a name="comment-deletion-events"></a>События удаления комментариев
+`onDeleted`Событие инициируется при удалении комментария из коллекции комментариев. После удаления комментария его метаданные больше не будут доступны. Объект [комментделетедевентаргс](/javascript/api/excel/excel.commentdeletedeventargs) предоставляет идентификаторы комментариев, если ваша надстройка управляет отдельными комментариями.
+
+В приведенном ниже примере показано, как зарегистрировать `onDeleted` обработчик событий и затем использовать `CommentDeletedEventArgs` объект для получения `commentDetails` массива удаляемого комментария.
+
+> [!NOTE]
+> Этот пример работает только при удалении одного комментария. 
+
+```js
+Excel.run(function (context) {
+    var comments = context.workbook.worksheets.getActiveWorksheet().comments;
+
+    // Register the onDeleted comment event handler.
+    comments.onDeleted.add(commentDeleted);
+
+    return context.sync();
+});
+
+function commentDeleted() {
+    Excel.run(function (context) {
+        // Print out the deleted comment's ID.
+        // Note: This method assumes only a single comment is deleted at a time. 
+        console.log(`A comment was deleted. ID: ${event.commentDetails[0].commentId}`);
+    });
+}
+```
+
 ## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с книгами с использованием API JavaScript для Excel](excel-add-ins-workbooks.md)
+- [Работа с событиями при помощи API JavaScript для Excel](excel-add-ins-events.md)
 - [Вставка комментариев и заметок в Excel](https://support.office.com/article/insert-comments-and-notes-in-excel-bdcc9f5d-38e2-45b4-9a92-0b2b5c7bf6f8)
