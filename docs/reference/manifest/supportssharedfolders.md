@@ -1,22 +1,20 @@
 ---
 title: Элемент SupportsSharedFolders в файле манифеста
 description: Элемент SupportsSharedFolders определяет, доступна ли надстройка Outlook в сценариях делегирования.
-ms.date: 01/14/2020
+ms.date: 10/15/2020
 localization_priority: Normal
-ms.openlocfilehash: 3835f7060cc52a72ff0a5ed4dbdb9f1e09258669
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 786a4763450d78cb16c9baafc81701758af54787
+ms.sourcegitcommit: 6fa29989dfaec4dfa0f8df3fe5fb038d7afbae30
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608714"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "48487882"
 ---
 # <a name="supportssharedfolders-element"></a>Элемент SupportsSharedFolders
 
 Определяет, доступна ли надстройка Outlook в сценариях делегирования. Элемент **SupportsSharedFolders** является дочерним для элемента [DesktopFormFactor](desktopformfactor.md). По умолчанию для него установлено значение *false*.
 
 > [!IMPORTANT]
-> Элемент **SupportsSharedFolders** поддерживается только в Outlook в Интернете и в Windows.
->
 > Поддержка этого элемента была введена в наборе требований 1,8. См [клиенты и платформы](../../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
 Ниже приведен пример элемента **SupportsSharedFolders** .

@@ -1,14 +1,14 @@
 ---
 title: Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 description: Расширенные функции и сценарии объектов Range, такие как специальные ячейки, удаление дубликатов и работа с датами.
-ms.date: 08/26/2020
+ms.date: 10/13/2020
 localization_priority: Normal
-ms.openlocfilehash: 485fb34c11774045308c6ed9053d01097cdc3f5b
-ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
+ms.openlocfilehash: 144012177e0e070149f6cef825c63392a468773d
+ms.sourcegitcommit: 6fa29989dfaec4dfa0f8df3fe5fb038d7afbae30
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "47819576"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "48487889"
 ---
 # <a name="work-with-ranges-using-the-excel-javascript-api-advanced"></a>Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)
 
@@ -354,6 +354,45 @@ Excel.run(function (context) {
 ```
 
 Кроме того, можно найти ячейку, отвечающую за прохождение в заданную ячейку, с помощью метода [Range. жетспиллпарент](/javascript/api/excel/excel.range#getspillparent--) . Обратите внимание, что `getSpillParent` работает, только если объект Range является одной ячейкой. Вызов `getSpillParent` в диапазоне с несколькими ячейками приведет к ошибке (или возвращаемому диапазону значений NULL `Range.getSpillParentOrNullObject` ).
+
+## <a name="get-formula-precedents"></a>Получение ячеек формулы
+
+Формула Excel часто ссылается на другие ячейки. Когда ячейка предоставляет данные формуле, она называется "влияющей" формулой. Дополнительные сведения о функциях Excel, связанных с отношениями между ячейками, приведены в статье [Отображение связей между формулами и ячейками](https://support.microsoft.com/office/display-the-relationships-between-formulas-and-cells-a59bef2b-3701-46bf-8ff1-d3518771d507) . 
+
+С помощью [Range. жетдиректпрецедентс](/javascript/api/excel/excel.range#getdirectprecedents--)надстройка может искать прямые влияющие ячейки формулы. `Range.getDirectPrecedents` Возвращает `WorkbookRangeAreas` объект. Этот объект содержит адреса всех влияющих ячеек в книге. У него есть отдельный `RangeAreas` объект для каждого листа, содержащего по крайней мере одну формулу. Узнайте [, как работать с несколькими диапазонами одновременно в](excel-add-ins-multiple-ranges.md) надстройках Excel, чтобы получить дополнительные сведения о работе с `RangeAreas` объектом.
+
+В пользовательском интерфейсе Excel кнопка **трассировки влияющих** элементов рисует стрелку от влияющих ячеек до выбранной формулы. В отличие от кнопки пользовательского интерфейса Excel, `getDirectPrecedents` метод не рисует стрелки. 
+
+> [!IMPORTANT]
+> `getDirectPrecedents`Метод не может получать влияющие ячейки между книгами. 
+
+В примере ниже показано, как получить прямые и влияющие границы для активного диапазона, а затем изменить цвет фона этих ячеек на желтый. 
+
+> [!NOTE]
+> Активный диапазон должен содержать формулу, ссылающуюся на другие ячейки в той же книге, чтобы выделение работало должным образом. 
+
+```js
+Excel.run(function (context) {
+    // Precedents are cells that provide data to the selected formula.
+    var range = context.workbook.getActiveCell();
+    var directPrecedents = range.getDirectPrecedents();
+    range.load("address");
+    directPrecedents.areas.load("address");
+    
+    return context.sync()
+        .then(function () {
+            console.log(`Direct precedent cells of ${range.address}:`);
+
+            // Use the direct precedents API to loop through precedents of the active cell.
+            for (var i = 0; i < directPrecedents.areas.items.length; i++) {
+              // Highlight and print out the address of each precedent cell.
+              directPrecedents.areas.items[i].format.fill.color = "Yellow";
+              console.log(`  ${directPrecedents.areas.items[i].address}`);
+            }
+        })
+        .then(context.sync);
+}).catch(errorHandlerFunction);
+```
 
 ## <a name="see-also"></a>См. также
 
