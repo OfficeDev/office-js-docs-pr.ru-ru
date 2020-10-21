@@ -1,34 +1,22 @@
 ---
-title: Реализация дополнения по протоколу Send в надстройке Outlook (Предварительная версия)
+title: Реализация добавления в надстройку Outlook с помощью командлета send
 description: Узнайте, как реализовать функцию "присоединение к передаче" в надстройке Outlook.
 ms.topic: article
-ms.date: 09/09/2020
+ms.date: 10/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 2199f837351c1030e6f6d0d23db7bf81e498d433
-ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
+ms.openlocfilehash: 62234f580f6ff6be418f1c252510f234e297b0c6
+ms.sourcegitcommit: 4e7c74ad67ea8bf6b47d65b2fde54a967090f65b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47430935"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "48626458"
 ---
-# <a name="implement-append-on-send-in-your-outlook-add-in-preview"></a>Реализация дополнения по протоколу Send в надстройке Outlook (Предварительная версия)
+# <a name="implement-append-on-send-in-your-outlook-add-in"></a>Реализация добавления в надстройку Outlook с помощью командлета send
 
 По завершении этого пошагового руководства у вас будет надстройка Outlook, которая может вставить заявление об отказе при отправке сообщения.
 
-> [!IMPORTANT]
-> Эта функция в настоящее время поддерживается для [предварительной версии](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) в Outlook в Интернете и Windows с подпиской на Microsoft 365. Узнайте [, как выполнить предварительный просмотр функции присоединения при отправке](#how-to-preview-the-append-on-send-feature) в этой статье для получения дополнительных сведений.
->
-> Так как функции предварительного просмотра могут быть изменены без предварительного уведомления, они не должны использоваться в производственных надстройках.
-
-## <a name="how-to-preview-the-append-on-send-feature"></a>Предварительный просмотр функции присоединения при отправке
-
-Мы приглашаем вас испытать функцию "дописывать от отправки"! Сообщите нам о своих сценариях и способах их усовершенствования, предоставив отзыв на сайте GitHub (обратитесь к разделу **Отзывы** в конце этой страницы).
-
-Чтобы просмотреть эту функцию, выполните указанные ниже действия.
-
-- Ссылка на **бета-** библиотеку в сети CDN ( https://appsforoffice.microsoft.com/lib/beta/hosted/office.js) . [Файл определения типа](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts) для компиляции TypeScript и IntelliSense находится в сети CDN и [DefinitelyTyped](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js-preview/index.d.ts). Вы можете установить эти типы с помощью `npm install --save-dev @types/office-js-preview` .
-- Для Windows вы можете присоединиться к [программе предварительной оценки Office](https://insider.office.com) , чтобы получить доступ к последним сборкам Office.
-- Для Outlook в Интернете [Настройте целевой выпуск на клиенте Microsoft 365](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center).
+> [!NOTE]
+> Поддержка этой функции появилась в наборе требований 1,9. См [клиенты и платформы](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
 ## <a name="set-up-your-environment"></a>Настройка среды
 

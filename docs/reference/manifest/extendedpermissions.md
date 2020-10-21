@@ -1,21 +1,21 @@
 ---
 title: Элемент Екстендедпермиссионс в файле манифеста
 description: Определяет коллекцию расширенных разрешений, необходимых надстройке для доступа к связанным API или функциям.
-ms.date: 03/05/2020
+ms.date: 10/15/2020
 localization_priority: Normal
-ms.openlocfilehash: cf59d13d794f8f303da6cc0ca39066584bc3f56c
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 1e3aa16c160613d34ef2c4f9c25bc2ffe4970816
+ms.sourcegitcommit: 4e7c74ad67ea8bf6b47d65b2fde54a967090f65b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611535"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "48626444"
 ---
 # <a name="extendedpermissions-element"></a>Элемент Екстендедпермиссионс
 
 Определяет коллекцию расширенных разрешений, необходимых надстройке для доступа к связанным API или функциям. `ExtendedPermissions`Элемент является дочерним элементом объекта [VersionOverrides](versionoverrides.md).
 
 > [!IMPORTANT]
-> Этот элемент доступен только в [предварительной версии требования к надстройке Outlook](../objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) для Exchange Online. Надстройки, использующие этот элемент, нельзя опубликовать в AppSource или развернуть с помощью централизованного развертывания.
+> Поддержка этого элемента была введена в наборе требований 1,9. См [клиенты и платформы](../../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
 ## <a name="child-elements"></a>Дочерние элементы
 
@@ -23,7 +23,7 @@ ms.locfileid: "44611535"
 |:-----|:-----:|:-----|
 |  [ExtendedPermission](extendedpermission.md)    |  Нет   | Определяет расширенное разрешение, необходимое надстройке для доступа к связанному API или функции. |
 
-## <a name="extendedpermissions-example"></a>`ExtendedPermissions`Примеры
+## <a name="extendedpermissions-example"></a>`ExtendedPermissions` Примеры
 
 Ниже приведен пример `ExtendedPermissions` элемента.
 

@@ -3,12 +3,12 @@ title: Работайте с комментариями с помощью API Ja
 description: Сведения об использовании API для добавления, удаления и редактирования комментариев и потоков комментариев.
 ms.date: 10/09/2020
 localization_priority: Normal
-ms.openlocfilehash: 85312cbd92aa6c9d0f82fd167e8a372c2eff8c85
-ms.sourcegitcommit: b50eebd303adcc22eb86e65756ce7e9a82f41a57
+ms.openlocfilehash: 00f7dd22fb2148902152197521098482071e5284
+ms.sourcegitcommit: 4e7c74ad67ea8bf6b47d65b2fde54a967090f65b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48456554"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "48626423"
 ---
 # <a name="work-with-comments-using-the-excel-javascript-api"></a>Работайте с комментариями с помощью API JavaScript для Excel
 
@@ -206,7 +206,7 @@ Excel.run(function (context) {
 
 Надстройка может прослушивать добавленные комментарии, изменения и удаления. [События с комментариями](/javascript/api/excel/excel.commentcollection#event-details) возникают для `CommentCollection` объекта. Для прослушивания событий комментариев Зарегистрируйте `onAdded` `onChanged` обработчик событий, или `onDeleted` комментарий. При обнаружении события комментария используйте этот обработчик событий для получения данных о добавленных, измененных или удаленных комментариях. `onChanged`Кроме того, событие обрабатывает добавления, изменения и удаления ответа на комментарии. 
 
-Каждое событие Comment инициируется только один раз при одновременном выполнении нескольких добавлений, изменений или удалений. Все объекты [комментаддедевентаргс](/javascript/api/excel/excel.commentaddedeventargs), [комментчанжедевентаргс](/javascript/api/excel/excel.commentchangedeventarg)и [комментделетедевентаргс](/javascript/api/excel/excel.commentdeletedeventargs) содержат массивы идентификаторов комментариев для сопоставления действий события с коллекциями комментариев.
+Каждое событие Comment инициируется только один раз при одновременном выполнении нескольких добавлений, изменений или удалений. Все объекты [комментаддедевентаргс](/javascript/api/excel/excel.commentaddedeventargs), [комментчанжедевентаргс](/javascript/api/excel/excel.commentchangedeventargs)и [комментделетедевентаргс](/javascript/api/excel/excel.commentdeletedeventargs) содержат массивы идентификаторов комментариев для сопоставления действий события с коллекциями комментариев.
 
 В статье [Работа с событиями с помощью API JavaScript для Excel](excel-add-ins-events.md) можно получить дополнительные сведения о регистрации обработчиков событий, обработке событий и удалении обработчиков событий. 
 

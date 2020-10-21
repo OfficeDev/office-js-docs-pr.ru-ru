@@ -1,18 +1,21 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.8
-description: Набор требований 1,8 для API надстроек Outlook
-ms.date: 05/20/2020
+description: Набор требований 1,8 для API надстройки Outlook.
+ms.date: 10/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 6da1de2529f48fa15d93846d4afcca0718b81165
-ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
+ms.openlocfilehash: d175cc84aa123c6a941ea57cfe4ff2114d693d32
+ms.sourcegitcommit: 4e7c74ad67ea8bf6b47d65b2fde54a967090f65b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47431537"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "48626591"
 ---
 # <a name="outlook-add-in-api-requirement-set-18"></a>Набор обязательных элементов API для надстройки Outlook 1.8
 
 Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.
+
+> [!NOTE]
+> В этой документации рассматривается не последняя версия [набора обязательных элементов](../../requirement-sets/outlook-api-requirement-sets.md).
 
 ## <a name="whats-new-in-18"></a>Новые возможности в версии 1.8
 

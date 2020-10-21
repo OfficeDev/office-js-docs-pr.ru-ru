@@ -1,14 +1,14 @@
 ---
 title: Использование Office Dialog API в вашей надстройках Office
 description: Изучите основы создания диалогового окна в надстройке Office
-ms.date: 08/20/2020
+ms.date: 10/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 9d333c12d629232ece39bc30948318fbcafa3aa0
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 5220d4876d0a8de9c731d2879f0bcb5e669066cd
+ms.sourcegitcommit: 4e7c74ad67ea8bf6b47d65b2fde54a967090f65b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292793"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "48626465"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
@@ -214,9 +214,6 @@ function processMessage(arg) {
 ## <a name="pass-information-to-the-dialog-box"></a>Передача данных диалоговому окну
 
 Надстройка может отправлять сообщения с [главной страницы](dialog-api-in-office-add-ins.md#open-a-dialog-box-from-a-host-page) в диалоговое окно с помощью [диалогового окна Dialog. мессажечилд](/javascript/api/office/office.dialog#messagechild-message-).
-
-> [!NOTE]
-> API диалоговых окон поддерживаются только в Excel, PowerPoint и Word. Поддержка Outlook находится на стадии разработки.
 
 ### <a name="use-messagechild-from-the-host-page"></a>Использование `messageChild()` с главной страницы
 
