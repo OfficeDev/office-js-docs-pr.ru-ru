@@ -1,21 +1,21 @@
 ---
 title: Использование Office Dialog API в вашей надстройках Office
-description: Изучите основы создания диалогового окна в надстройке Office
-ms.date: 10/14/2020
+description: Общие сведения о создании диалогового окна в надстройке Office.
+ms.date: 10/21/2020
 localization_priority: Normal
-ms.openlocfilehash: 5220d4876d0a8de9c731d2879f0bcb5e669066cd
-ms.sourcegitcommit: 4e7c74ad67ea8bf6b47d65b2fde54a967090f65b
+ms.openlocfilehash: 1aa7a306402885f37d1cf07010eb43958407bf0f
+ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "48626465"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "48741087"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
 Вы можете использовать [Office dialog API](/javascript/api/office/office.ui), чтобы открывать диалоговые окна в надстройке Office. Эта статья содержит инструкции по использованию dialog API в надстройке Office.
 
 > [!NOTE]
-> Сведения о поддержке Dialog API см. в статье [Наборы обязательных элементов Dialog API](../reference/requirement-sets/dialog-api-requirement-sets.md). В настоящее время Dialog API поддерживается для Word, Excel, PowerPoint и Outlook.
+> Сведения о том, где в настоящее время поддерживается API диалоговых окон, приведены в разделе [наборы требований API диалоговых окон](../reference/requirement-sets/dialog-api-requirement-sets.md). API диалоговых окон в настоящее время поддерживается для Excel, PowerPoint и Word. Поддержка Outlook включена в различные наборы требований к почтовому ящику дополнительные &mdash; сведения см. в справочнике по API.
 
 Основной сценарий для Dialog API - включить аутентификацию с помощью таких ресурсов, как Google, Facebook или Microsoft Graph. Дополнительные сведения см. в статье [Проверка подлинности с помощью Office Dialog API](auth-with-office-dialog-api.md) *после* ознакомления с текущей статьей.
 
@@ -220,18 +220,18 @@ function processMessage(arg) {
 Когда вы вызываете API диалоговых окон Office для открытия диалогового окна, возвращается объект [DIALOG](/javascript/api/office/office.dialog) . Она должна быть назначена переменной с большей областью действия, чем метод [displayDialogAsync](/javascript/api/office/office.ui#displaydialogasync-startaddress--callback-) , так как на объект будут ссылаться другие методы. Ниже приведен пример.
 
 ```javascript
-var dialog;
+var dialog;
 Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html',
-    function (asyncResult) {
-        dialog = asyncResult.value;
-        dialog.addEventHandler(Office.EventType.DialogMessageReceived, processMessage);
-    }
+    function (asyncResult) {
+        dialog = asyncResult.value;
+        dialog.addEventHandler(Office.EventType.DialogMessageReceived, processMessage);
+    }
 );
 
-function processMessage(arg) {
+function processMessage(arg) {
     dialog.close();
 
-  // message processing code goes here;
+  // message processing code goes here;
 
 }
 ```
@@ -241,13 +241,13 @@ function processMessage(arg) {
 Рассмотрим сценарий, в котором пользовательский интерфейс диалогового окна связан с текущим активным листом и положением листа относительно других листов. В следующем примере в `sheetPropertiesChanged` диалоговое окно отправляются свойства листа Excel. В этом случае текущий лист называется "Мой лист", а второй лист книги. Данные инкапсулируются в объекте и преобразованного, чтобы их можно было передать `messageChild` .
 
 ```javascript
-function sheetPropertiesChanged() {
-    var messageToDialog = JSON.stringify({
-                               name: "My Sheet",
-                               position: 2
+function sheetPropertiesChanged() {
+    var messageToDialog = JSON.stringify({
+                               name: "My Sheet",
+                               position: 2
                            });
 
-    dialog.messageChild(messageToDialog);
+    dialog.messageChild(messageToDialog);
 }
 ```
 
@@ -257,19 +257,19 @@ function sheetPropertiesChanged() {
 
 ```javascript
 Office.onReady()
-    .then(function() {
-        Office.context.ui.addHandlerAsync(
+    .then(function() {
+        Office.context.ui.addHandlerAsync(
             Office.EventType.DialogParentMessageReceived,
             onMessageFromParent);
-    });
+    });
 ```
 
 Затем определите `onMessageFromParent` обработчик. Приведенный ниже код продолжает пример из предыдущего раздела. Обратите внимание, что Office передает аргумент обработчику и что `message` свойство объекта Argument содержит строку со страницы узла. В этом примере сообщение переводится в объект, а jQuery используется для установки верхнего заголовка диалогового окна в соответствующее имя нового листа.
 
 ```javascript
-function onMessageFromParent(event) {
-    var messageFromParent = JSON.parse(event.message);
-    $('h1').text(messageFromParent.name);
+function onMessageFromParent(event) {
+    var messageFromParent = JSON.parse(event.message);
+    $('h1').text(messageFromParent.name);
 }
 ```
 
@@ -277,17 +277,17 @@ function onMessageFromParent(event) {
 
 ```javascript
 Office.onReady()
-    .then(function() {
-        Office.context.ui.addHandlerAsync(
-            Office.EventType.DialogParentMessageReceived,
-            onMessageFromParent,
+    .then(function() {
+        Office.context.ui.addHandlerAsync(
+            Office.EventType.DialogParentMessageReceived,
+            onMessageFromParent,
             onRegisterMessageComplete);
-    });
+    });
 
-function onRegisterMessageComplete(asyncResult) {
-    if (asyncResult.status !== Office.AsyncResultStatus.Succeeded) {
-        reportError(asyncResult.error.message);
-    }
+function onRegisterMessageComplete(asyncResult) {
+    if (asyncResult.status !== Office.AsyncResultStatus.Succeeded) {
+        reportError(asyncResult.error.message);
+    }
 }
 ```
 

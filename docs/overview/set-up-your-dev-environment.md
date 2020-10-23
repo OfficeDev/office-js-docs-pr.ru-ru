@@ -1,14 +1,14 @@
 ---
 title: Настройка среды разработки
-description: Настройка среды разработки для создания надстроек Office
-ms.date: 07/07/2020
+description: Настройка среды разработки для создания надстроек Office.
+ms.date: 10/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 5e7d91d81ef3d124e9582e74151626b9fd65991a
-ms.sourcegitcommit: 604361e55dee45c7a5d34c2fa6937693c154fc24
+ms.openlocfilehash: 644194d7d0da479b13ac09d7e830af53e9a9838e
+ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "47363697"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "48740835"
 ---
 # <a name="set-up-your-development-environment"></a>Настройка среды разработки
 
@@ -55,7 +55,7 @@ npm -v
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Atom](https://atom.io);
-- [Webstorm](https://www.jetbrains.com/webstorm)
+- [Webstorm](https://www.jetbrains.com/webstorm).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -71,9 +71,9 @@ npm -v
 
 ## <a name="see-also"></a>См. также
 
-- [Разработка надстроек Office](../develop/develop-overview.md)
 - [Основные принципы надстроек Office](../overview/core-concepts-office-add-ins.md)
 - [Разработка надстроек Office](../develop/develop-overview.md)
 - [Проектирование надстроек Office](../design/add-in-design.md)
 - [Тестирование и отладка надстроек Office](../testing/test-debug-office-add-ins.md)
 - [Публикация надстроек Office](../publish/publish.md)
+- [Сведения о программе для разработчиков Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)

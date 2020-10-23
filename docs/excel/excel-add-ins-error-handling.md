@@ -1,16 +1,16 @@
 ---
-title: Обработка ошибок
+title: Обработка ошибок с помощью API JavaScript для Excel
 description: Изучите логику обработки ошибок API JavaScript для Excel, чтобы учитывать ошибки времени выполнения.
-ms.date: 06/25/2020
+ms.date: 10/22/2020
 localization_priority: Normal
-ms.openlocfilehash: cb06ab890fc10afd327bde0eb708ff97fabbcdca
-ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
+ms.openlocfilehash: a3b1bbfa7daba1b856bce35aa075d5b625bd9769
+ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47430557"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "48740821"
 ---
-# <a name="error-handling"></a>Обработка ошибок
+# <a name="error-handling-with-the-excel-javascript-api"></a>Обработка ошибок с помощью API JavaScript для Excel
 
 При создании надстройки с использованием API JavaScript для Excel не забудьте включить логику для обработки ошибок, возникающих в среде выполнения. Это очень важно из-за асинхронного характера API.
 
@@ -51,12 +51,15 @@ Excel.run(function (context) {
 
 В таблице ниже перечислены ошибки, которые может возвращать API.
 
-|error.code | error.message |
+|Код ошибки | Сообщение об ошибке |
 |:----------|:--------------|
 |`AccessDenied` |Вы не можете выполнить запрашиваемую операцию.|
 |`ActivityLimitReached`|Достигнут предел действий.|
 |`ApiNotAvailable`|Запрашиваемый интерфейс API недоступен.|
+|`ApiNotFound`|Не удалось найти API, который вы пытаетесь использовать. Она может быть доступна в более новой версии Excel. Дополнительные сведения см. в статье набор обязательных элементов [API JavaScript для Excel](../reference/requirement-sets/excel-api-requirement-sets.md) .|
+|`BadPassword`|Введен недопустимый пароль.|
 |`Conflict`|Запрос не удалось обработать из-за конфликта.|
+|`ContentLengthRequired`|`Content-length`Отсутствует заголовок HTTP.|
 |`GeneralException`|При обработке запроса возникла внутренняя ошибка.|
 |`InsertDeleteConflict`|Операция вставки или удаления привела к конфликту.|
 |`InvalidArgument` |Аргумент недопустим, отсутствует или имеет неправильный формат.|
@@ -67,8 +70,12 @@ Excel.run(function (context) {
 |`InvalidSelection`|Выбранный фрагмент недопустим для этой операции.|
 |`ItemAlreadyExists`|Создаваемый ресурс уже существует.|
 |`ItemNotFound` |Запрашиваемый ресурс не существует.|
-|`NotImplemented`  |Запрашиваемая функция не реализована.|
+|`NonBlankCellOffSheet`|Запрос на вставку новых ячеек невозможно выполнить, так как он переносит непустые ячейки из конца листа. Эти непустые ячейки могут быть пустыми, но иметь пустые значения, часть форматирования или формулу. Удалите достаточное количество строк или столбцов, чтобы освободить место для вставки, а затем повторите попытку.|
+|`NotImplemented`|Запрашиваемая функция не реализована.|
+|`RangeExceedsLimit`|Число ячеек в диапазоне превысило максимальное поддерживаемое число. Дополнительные сведения см. в статье [пределы ресурсов и оптимизация производительности для надстроек Office](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins) .|
 |`RequestAborted`|Запрос прерван во время выполнения.|
+|`RequestPayloadSizeLimitExceeded`|Размер полезных данных запроса превысил допустимое значение. Дополнительные сведения см. в статье [пределы ресурсов и оптимизация производительности для надстроек Office](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins) . <br><br>Эта ошибка возникает только в Excel в Интернете.|
+|`ResponsePayloadSizeLimitExceeded`|Размер полезных данных ответа превысил допустимое значение. Дополнительные сведения см. в статье [пределы ресурсов и оптимизация производительности для надстроек Office](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins) .  <br><br>Эта ошибка возникает только в Excel в Интернете.|
 |`ServiceNotAvailable`|Служба недоступна.|
 |`Unauthenticated` |Требуемые сведения о проверке подлинности отсутствуют или недопустимы.|
 |`UnsupportedOperation`|Выполняемая операция не поддерживается.|

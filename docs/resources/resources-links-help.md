@@ -1,14 +1,14 @@
 ---
 title: 'Надстройки Office: дополнительные ресурсы'
 description: Материалы, которые могут пригодиться в разделе надстройки Office
-ms.date: 07/14/2020
+ms.date: 10/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 25cfcf5ba56322f8bf5afb9273f94dcdf8db43c3
-ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
+ms.openlocfilehash: d5fa3eb95f4c6745e735f1b8667fb3b7b95a2bdb
+ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45159075"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "48740814"
 ---
 # <a name="office-add-ins-additional-resources"></a>Надстройки Office: дополнительные ресурсы
 
@@ -24,4 +24,7 @@ ms.locfileid: "45159075"
 |**Script Lab**| Если вы хотите ознакомиться с API JavaScript для Office или испытать предварительный просмотр API, вы можете использовать сценарий "Лаборатория" в Excel, Outlook, PowerPoint и Word. Дополнительные сведения см. в статье [Изучение API JavaScript для Office с помощью Script Lab](../overview/explore-with-script-lab.md). |
 |**Курс Pluralsight о надстройках Office**| В <a href="https://www.pluralsight.com/courses/build-office-addins-js-api" target="_blank">курсе "основные вопросы создания надстроек Office с помощью API JavaScript для Office"</a> рассказывается о том, как создать надстройку PowerPoint с нуля, в том числе сведения о том, как общаться с Trello и опубликовать надстройку в магазине Office.|
 |**Курс LinkedIn о надстройках Office**| <a href="https://www.linkedin.com/learning/microsoft-office-add-ins-for-developers/microsoft-office-add-ins?u=3322">Курс Билла Айера "Надстройки Microsoft Office для разработчиков"</a> содержит обзор платформы и описание многих основных понятий для надстроек Office.|
-|**Книга *"Создание надстроек Office с помощью Office.js"***| <a href="https://leanpub.com/buildingofficeaddins">В книге Майкла Златковского *"Создание надстроек Office с помощью Office.js"*</a> описаны принципы и шаблоны разработки, используемые в API 2016 для Excel, Word и OneNote. Майкл является участником группы расширяемости Office в корпорации Майкрософт и специалистом со статусом Microsoft MVP, но эта книга написана отдельно, без участия корпорации Майкрософт. Ни корпорация Майкрософт, ни Майкл не получают никакой прибыли от этой книги, так как вырученные за нее средства жертвуются на оказание помощи при стихийных бедствиях и гуманитарную благотворительность.|
+|**Книга _"Создание надстроек Office с помощью Office.js"_**| <a href="https://leanpub.com/buildingofficeaddins">В книге Майкла Златковского *"Создание надстроек Office с помощью Office.js"*</a> описаны принципы и шаблоны разработки, используемые в API 2016 для Excel, Word и OneNote. Майкл является участником группы расширяемости Office в корпорации Майкрософт и специалистом со статусом Microsoft MVP, но эта книга написана отдельно, без участия корпорации Майкрософт. Ни корпорация Майкрософт, ни Майкл не получают никакой прибыли от этой книги, так как вырученные за нее средства жертвуются на оказание помощи при стихийных бедствиях и гуманитарную благотворительность.|
+
+## <a name="see-also"></a>См. также
+- [Сведения о программе для разработчиков Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)
