@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Word
 description: Узнайте, как создать простую надстройку области задач Word, используя API JS для Office.
-ms.date: 07/07/2020
+ms.date: 10/14/2020
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: ab8926eae6ddc41f82ab055d727b6279f357c316
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 85f617ffa24f77faa5e9d810f2b9eda50ddd83ab
+ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45094478"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "48741150"
 ---
 # <a name="build-your-first-word-task-pane-add-in"></a>Создание первой надстройки области задач Word
 
@@ -319,8 +319,8 @@ _Область применения: Word 2016 и более поздних в
 ## <a name="see-also"></a>См. также
 
 * [Обзор платформы надстроек Office](../overview/office-add-ins.md)
-* [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
 * [Разработка надстроек Office](../develop/develop-overview.md)
 * [Обзор надстроек Word](../word/word-add-ins-programming-overview.md)
-* [Примеры кода надстроек Word](https://developer.microsoft.com/en-us/office/gallery/?filterBy=Samples,Word)
+* 
+  [Примеры кода надстроек Word](https://developer.microsoft.com/en-us/office/gallery/?filterBy=Samples,Word)
 * [Справочник по API JavaScript для Word](../reference/overview/word-add-ins-reference-overview.md)
