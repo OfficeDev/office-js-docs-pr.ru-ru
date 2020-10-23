@@ -1,16 +1,16 @@
 ---
-ms.date: 08/13/2020
+ms.date: 10/14/2020
 description: Создайте пользовательскую функцию Excel для надстройки Office
 title: Создание пользовательских функций в Excel
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 731e8d99a36cfef7d125838c67efcdd7a77b4bb1
-ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
+ms.openlocfilehash: 466050a5323f0f02fb886c763f5a2a594a9e2233
+ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "47819562"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "48741115"
 ---
 # <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel
 
@@ -99,6 +99,7 @@ Excel в Интернете и Windows, подключенные к подпис
 Еще одно простое средство ознакомления с пользовательскими функциями — [Script Lab](https://appsource.microsoft.com/product/office/WA104380862?src=office&corrid=1ada79ac-6392-438d-bb16-fce6994a2a7e&omexanonuid=f7b03101-ec22-4270-a274-bcf16c762039&referralurl=https%3a%2f%2fgithub.com%2fofficedev%2fscript-lab), надстройка, в которой можно экспериментировать с пользовательскими функциями прямо в Excel. Вы можете попробовать создать собственные пользовательские функции или поиграть с готовыми примерами.
 
 ## <a name="see-also"></a>См. также 
+* [Сведения о программе для разработчиков Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)
 * [Требования к настраиваемым функциям](custom-functions-requirement-sets.md)
 * [Рекомендации по именованию](custom-functions-naming.md)
 * [Создание пользовательских функций, совместимых с функциями XLL, определенными пользователями](make-custom-functions-compatible-with-xll-udf.md)
