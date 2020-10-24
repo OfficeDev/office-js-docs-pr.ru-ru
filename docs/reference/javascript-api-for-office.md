@@ -3,14 +3,14 @@ layout: LandingPage
 ms.topic: landing-page
 title: Справочная документация по API JavaScript для Office
 description: Узнайте об API-интерфейсах JavaScript для Office.
-ms.date: 12/24/2019
+ms.date: 10/14/2020
 localization_priority: Priority
-ms.openlocfilehash: 46f5ae8a073fe45a6f6ac7f873f9adeb37fbab15
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 128f4fa146ace079c8999083b49fe83b68120b07
+ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47294285"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "48741129"
 ---
 # <a name="api-reference-documentation"></a>Справочная документация по API
 
@@ -21,7 +21,7 @@ ms.locfileid: "47294285"
     <li><b>Общие</b> API-интерфейсы можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office.</li>
 </ul>
 
-Во всех возможных случаях следует использовать API-интерфейсы для определенных приложений. Общие API следует применять только в сценариях, которые не поддерживаются API-интерфейсами для определенных приложений. Более подробные сведения об этих двух моделях API-интерфейсов см. в статье <a href="../overview/office-add-ins-fundamentals.md#api-models">Создание надстроек Office</a>.
+Во всех возможных случаях следует использовать API-интерфейсы для определенных приложений. Общие API следует применять только в сценариях, которые не поддерживаются API-интерфейсами для определенных приложений. Более подробные сведения об этих двух моделях API-интерфейсов см. в статье <a href="../develop/develop-overview.md#api-models">Разработка надстроек Office</a>.
 
 <h2>Справочные материалы по API</h2>
 
