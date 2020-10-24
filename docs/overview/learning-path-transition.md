@@ -1,15 +1,15 @@
 ---
 title: Руководство для разработчиков надстроек VSTO
 description: Рекомендуемый путь для опытных разработчиков надстроек VSTO по изучению ресурсов веб-надстроек Office.
-ms.date: 05/10/2020
+ms.date: 10/14/2020
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 959fb23ef86f37f46425d9b7ede7f7f60f6baf3a
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 1dca15a4d286e3bfa5b7ba4a502bb9161bf3257f
+ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292442"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "48741066"
 ---
 # <a name="vsto-add-in-developers-guide"></a>Руководство для разработчиков надстроек VSTO
 
@@ -33,7 +33,7 @@ ms.locfileid: "47292442"
 Мы знаем, что вам не терпится начать программирование, но есть некоторые вещи о надстройках Office, которые вы должны прочитать, прежде чем открывать свою IDE или редактор кода.
 
 - [Обзор платформы надстроек Office](office-add-ins.md): узнайте, что такое надстройки Office Web и чем они отличаются от более старых способов расширения Office, таких как надстройки VSTO.
-- [Создание надстроек Office](office-add-ins-fundamentals.md): Ознакомьтесь с обзором разработки и жизненного цикла надстроек Office, включая инструменты, создание пользовательского интерфейса надстройки и использование API-интерфейсов JavaScript для взаимодействия с документом Office.
+- [Разработка надстроек Office](../develop/develop-overview.md). Ознакомьтесь с обзором разработки и жизненного цикла надстроек Office, включая инструменты, создание пользовательского интерфейса надстройки и использование API-интерфейсов JavaScript для взаимодействия с документом Office.
 
 В этих статьях есть много ссылок, но если вы переходите к веб-надстройкам Office, рекомендуем вам вернуться сюда после их прочтения и продолжить со следующего раздела.
 
@@ -86,3 +86,4 @@ ms.locfileid: "47292442"
   - [Тестирование и отладка надстроек Office](../testing/test-debug-office-add-ins.md)
   - [Развертывание и публикация надстроек Office](../publish/publish.md)
   - [Ресурсы](../resources/resources-links-help.md)
+  - [Сведения о программе для разработчиков Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)

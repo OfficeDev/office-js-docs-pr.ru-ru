@@ -1,15 +1,15 @@
 ---
 title: Руководство по надстройкам Word
 description: В этом руководстве показано создание надстройки Word, которая вставляет (и заменяет) диапазоны текста, абзацы, изображения, HTML-код, таблицы и элементы управления контентом. Вы также узнаете, как форматировать текст, вставлять и заменять содержимое в элементах управления контентом.
-ms.date: 07/07/2020
+ms.date: 10/14/2020
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 03960f5de7e99ba4ffa52be5cd4f7fc896942b76
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: f7397ef74890fb1a2ab89a044e919c863655999f
+ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47294222"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "48741136"
 ---
 # <a name="tutorial-create-a-word-task-pane-add-in"></a>Учебник: Создание надстройки области задач Word
 
@@ -515,7 +515,7 @@ function insertTextIntoRange() {
     originalRange.insertText("Office 2019, ", "Before");
     ```
 
-7. В функции `insertTextBeforeRange()` замените `TODO2` следующим кодом:
+7. В функции `insertTextBeforeRange()` замените `TODO2` следующим кодом.
 
      ```js
     originalRange.load("text");
@@ -529,7 +529,7 @@ function insertTextIntoRange() {
         //        been queued.
     ```
 
-8. Замените `TODO3` на приведенный ниже код. Этот абзац покажет, что новый текст ***не*** входит в исходный выделенный диапазон. Исходный диапазон по-прежнему содержит такой же текст, как и когда он был выделен.
+8. Замените `TODO3` на приведенный ниже код. Этот абзац покажет, что новый текст **_не_* входит в исходный выделенный диапазон. Исходный диапазон по-прежнему содержит такой же текст, как и когда он был выделен.
 
     ```js
     doc.body.insertParagraph("Current text of original range: " + originalRange.text, "End");
@@ -543,7 +543,7 @@ function insertTextIntoRange() {
 
 ### <a name="replace-the-text-of-a-range"></a>Замена текста диапазона
 
-1. Откройте файл **./src/taskpane/taskpane.html**.
+1. Откройте файл *./src/taskpane/taskpane.html**.
 
 2. Найдите элемент `<button>` для кнопки `insert-text-outside-range` и после нее добавьте следующий текст: 
 
@@ -945,5 +945,5 @@ function insertTextIntoRange() {
 ## <a name="see-also"></a>См. также
 
 * [Обзор платформы надстроек Office](../overview/office-add-ins.md)
-* [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
 * [Разработка надстроек Office](../develop/develop-overview.md)
+

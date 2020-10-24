@@ -1,16 +1,16 @@
 ---
 title: Надстройки PowerPoint
 description: Узнайте, как использовать надстройки PowerPoint для создания удобных решений для презентаций на разных платформах, включая Windows, iPad, Mac и в браузере.
-ms.date: 06/29/2020
+ms.date: 10/14/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 314b441f3d4b6d2188ed630fe2b254aec42a86bc
-ms.sourcegitcommit: 065bf4f8e0d26194cee9689f7126702b391340cc
+ms.openlocfilehash: 476f8f34bc47d85842d5b31f8a0298bf2d5d7b18
+ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "45006453"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "48740842"
 ---
 # <a name="powerpoint-add-ins"></a>Надстройки PowerPoint
 
@@ -193,7 +193,8 @@ reader.readAsDataURL(myFile.files[0]);
 
 ## <a name="see-also"></a>См. также
 
-- [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
+- [Разработка надстроек Office](../develop/develop-overview.md)
+- [Сведения о программе для разработчиков Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)
 - [Примеры кода PowerPoint](https://developer.microsoft.com/office/gallery/?filterBy=Samples,PowerPoint)
 - [Сохранение состояния надстройки и параметров документа для надстроек области задач и контентных надстроек](../develop/persisting-add-in-state-and-settings.md#how-to-save-add-in-state-and-settings-per-document-for-content-and-task-pane-add-ins)
 - [Чтение и запись данных при активном выделении фрагмента в документе или электронной таблице](../develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md)

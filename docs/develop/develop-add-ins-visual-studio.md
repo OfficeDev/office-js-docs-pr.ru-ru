@@ -1,21 +1,21 @@
 ---
 title: Разработка надстроек Office с помощью Visual Studio
-description: Разработка надстроек Office с помощью Visual Studio
-ms.date: 12/31/2019
+description: Как разрабатывать надстройки Office с помощью Visual Studio.
+ms.date: 10/14/2020
 localization_priority: Priority
-ms.openlocfilehash: ae627b09b9160abc01deec6d52abeb922f02c833
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: cfa7adb3f8d19fcc5784a13291b7ad624919f2e7
+ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292829"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "48741108"
 ---
 # <a name="develop-office-add-ins-with-visual-studio"></a>Разработка надстроек Office с помощью Visual Studio
 
 В этой статье описано, как использовать Visual Studio для разработки надстроек Office. Если надстройка уже создана, можно перейти к разделу [Разработка надстройки с помощью Visual Studio](#develop-the-add-in-using-visual-studio).
 
 > [!NOTE]
-> Вместо Visual Studio можно использовать генератор Yeoman для надстроек Office и VS Code для создания надстройки Office. Дополнительные сведения о выборе средств создания см. в разделе [Создание надстроек Office](../overview/office-add-ins-fundamentals.md#creating-an-office-add-in).
+> Вместо Visual Studio можно использовать генератор Yeoman для надстроек Office и VS Code для создания надстройки Office. Дополнительные сведения о выборе средств создания см. в разделе [Создание надстроек Office](../develop/develop-overview.md)#creating-an-office-add-in).
 
 ## <a name="create-the-add-in-project-using-visual-studio"></a>Создание проекта надстройки с помощью Visual Studio
 
@@ -53,7 +53,6 @@ ms.locfileid: "47292829"
 
 ## <a name="see-also"></a>См. также
 
-- [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
 - [Основные принципы надстроек Office](../overview/core-concepts-office-add-ins.md)
 - [Разработка надстроек Office](../develop/develop-overview.md)
 - [Проектирование надстроек Office](../design/add-in-design.md)

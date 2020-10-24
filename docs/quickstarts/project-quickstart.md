@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Project
 description: Узнайте, как создать простую надстройку для области задач Project, используя API JS для Office.
-ms.date: 04/03/2020
+ms.date: 10/14/2020
 ms.prod: project
 localization_priority: Priority
-ms.openlocfilehash: 8bb92b7a6c2d4610a962c2b2a84d38fb545ddd34
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: ba6d6d0917e43311370188b46a7c2d26b8c916ae
+ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47294313"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "48741192"
 ---
 # <a name="build-your-first-project-task-pane-add-in"></a>Создание первой надстройки области задач Project
 
@@ -104,7 +104,7 @@ Office.context.document.getSelectedTaskAsync(
     Выполните следующую команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер.
 
     ```command&nbsp;line
-    npm start
+    npm run dev server
     ```
 
 3. В Project создайте простой план проекта.
@@ -126,6 +126,5 @@ Office.context.document.getSelectedTaskAsync(
 
 ## <a name="see-also"></a>См. также
 
-- [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
-- [Основные принципы надстроек Office](../overview/core-concepts-office-add-ins.md)
 - [Разработка надстроек Office](../develop/develop-overview.md)
+- [Основные принципы надстроек Office](../overview/core-concepts-office-add-ins.md)

@@ -1,16 +1,16 @@
 ---
 title: Общие сведения о надстройках Excel
 description: Надстройка Excel позволяет расширять функциональность приложения Excel на нескольких платформах, включая Windows, Mac, iPad и в браузере.
-ms.date: 07/05/2019
+ms.date: 10/14/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 9c6f86bd5e50d97e395517d8a4887fac3554f867
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 6ecb702649a3cef0f3c3acb8432d3f8d3db65115
+ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609764"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "48740856"
 ---
 # <a name="excel-add-ins-overview"></a>Общие сведения о надстройках Excel
 
@@ -122,6 +122,7 @@ ms.locfileid: "44609764"
 ## <a name="see-also"></a>См. также
 
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)
-- [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
-- [Основные концепции программирования с помощью API JavaScript для Excel](excel-add-ins-core-concepts.md)
+- [Сведения о программе для разработчиков Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)
+- [Разработка надстроек Office](../develop/develop-overview.md)
+- [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)

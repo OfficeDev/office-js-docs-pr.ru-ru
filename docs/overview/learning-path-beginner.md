@@ -1,15 +1,15 @@
 ---
 title: Руководство для начинающих
 description: Рекомендуемый для начинающих путь, включающий использование учебных ресурсов для надстроек Office.
-ms.date: 04/16/2020
+ms.date: 10/14/2020
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: fd4f1902b196399e011631a7dabaecb59a8974f9
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: a51ffc437c9d1946b886d1e665836dd6d76f52d2
+ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292470"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "48741073"
 ---
 # <a name="beginners-guide"></a>Руководство для начинающих
 
@@ -28,7 +28,7 @@ ms.locfileid: "47292470"
 Мы знаем, что вам не терпится начать программирование, но есть некоторые вещи о надстройках Office, которые вы должны прочитать, прежде чем открывать свою IDE или редактор кода.
 
 - [Обзор платформы надстроек Office](office-add-ins.md): узнайте, что такое надстройки Office Web и чем они отличаются от более старых способов расширения Office, таких как надстройки VSTO.
-- [Создание надстроек Office](office-add-ins-fundamentals.md): Ознакомьтесь с обзором разработки и жизненного цикла надстроек Office, включая инструменты, создание пользовательского интерфейса надстройки и использование API-интерфейсов JavaScript для взаимодействия с документом Office.
+- [Разработка надстроек Office](../develop/develop-overview.md). Ознакомьтесь с обзором разработки и жизненного цикла надстроек Office, включая инструменты, создание пользовательского интерфейса надстройки и использование API-интерфейсов JavaScript для взаимодействия с документом Office.
 
 В этих статьях много ссылок, но если вы новичок в надстройках Office, мы рекомендуем вам вернуться сюда после прочтения и перейти к следующему разделу.
 
@@ -73,3 +73,4 @@ ms.locfileid: "47292470"
   - [Тестирование и отладка надстроек Office](../testing/test-debug-office-add-ins.md)
   - [Развертывание и публикация надстроек Office](../publish/publish.md)
   - [Ресурсы](../resources/resources-links-help.md)
+  - [Сведения о программе для разработчиков Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)

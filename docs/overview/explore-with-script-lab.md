@@ -1,16 +1,16 @@
 ---
 title: Изучение API JavaScript для Office с помощью Script Lab
 description: Используйте Script Lab для изучения API JS Office и использования функциональности работы с прототипами.
-ms.date: 06/10/2020
+ms.date: 10/14/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: ab2d086551dbfa5063615f505d8cb8aa5a210b7a
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 8fef3d0df73ab84cc17b2e6ff3c8fe436bf6e789
+ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45094136"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "48741080"
 ---
 # <a name="explore-office-javascript-api-using-script-lab"></a>Изучение API JavaScript для Office с помощью Script Lab
 
@@ -85,4 +85,6 @@ Script Lab поддерживается для Excel, Word и  PowerPoint в с�
 - [Получение Script Lab для Outlook](https://appsource.microsoft.com/product/office/wa200001603)
 - [Подробнее о Script Lab](https://github.com/OfficeDev/script-lab#script-lab-a-microsoft-garage-project)
 - [Присоединяйтесь к программе для разработчиков Microsoft 365](https://developer.microsoft.com/office/dev-program).
-- [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
+- [Разработка надстроек Office](../develop/develop-overview.md)
+- [Сведения о программе для разработчиков Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)
+

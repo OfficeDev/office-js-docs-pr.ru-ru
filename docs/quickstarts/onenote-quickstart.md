@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач OneNote
 description: Узнайте, как создать простую надстройку для области задач OneNote, используя API JS для Office.
-ms.date: 07/07/2020
+ms.date: 10/14/2020
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: 1eaead7f44ee3615d5779a864399ce7a00b5915d
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 0e4022b9f2b91b03cb260f2d56fc3bac2a0ddaae
+ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292323"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "48741164"
 ---
 # <a name="build-your-first-onenote-task-pane-add-in"></a>Создание первой надстройки области задач OneNote
 
@@ -81,7 +81,7 @@ try {
 2. Запустите локальный веб-сервер и загрузите неопубликованную надстройку.
 
     > [!NOTE]
-    > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите одну из указанных ниже команд, примите предложение установить сертификат, предоставленный генератором Yeoman.
+    > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите одну из указанных ниже команд, примите предложение установить сертификат, предоставленный генератором Yeoman. Кроме того, вам может потребоваться запустить командную строку или терминал с правами администратора, чтобы внести изменения.
 
     > [!TIP]
     > Если вы тестируете надстройку на компьютере Mac, перед продолжением выполните указанную ниже команду. После выполнения этой команды запустится локальный веб-сервер.
@@ -126,7 +126,6 @@ try {
 ## <a name="see-also"></a>См. также
 
 * [Обзор платформы надстроек Office](../overview/office-add-ins.md)
-* [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
 * [Разработка надстроек Office](../develop/develop-overview.md)
 - [Обзор API JavaScript для OneNote](../onenote/onenote-add-ins-programming-overview.md)
 - [Справочник по API JavaScript для OneNote](../reference/overview/onenote-add-ins-javascript-reference.md)

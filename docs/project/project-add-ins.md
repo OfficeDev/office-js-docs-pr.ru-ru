@@ -1,16 +1,16 @@
 ---
 title: Надстройки области задач для Project
 description: Узнайте о надстройках панели задач для Project.
-ms.date: 09/26/2019
+ms.date: 10/14/2019
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 1e471c53e39af8764840716d59a4d26719d3ac0a
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 1925e83f3c740172a22da3f2f03bf589785b9b46
+ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292407"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "48740828"
 ---
 # <a name="task-pane-add-ins-for-project"></a>Надстройки области задач для Project
 
@@ -195,7 +195,8 @@ Project стандартный 2013 и Project профессиональный 
 ## <a name="see-also"></a>См. также
 
 - [Обзор платформы надстроек Office](../overview/office-add-ins.md)
-- [Создание надстроек Office](../overview/office-add-ins-fundamentals.md)
+- [Сведения о программе для разработчиков Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)
+- [Разработка надстроек Office](../develop/develop-overview.md)
 - [Создание первой надстройки области задач для Project 2013 с помощью текстового редактора](create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md)
 - [Создание надстройки Project, использующей REST с локальной службой OData Project Server](create-a-project-add-in-that-uses-rest-with-an-on-premises-odata-service.md)
 - [Загрузка пакета SDK для Project 2013](https://www.microsoft.com/download/details.aspx?id=30435%20)
