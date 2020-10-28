@@ -1,15 +1,15 @@
 ---
 title: Предварительные версии API JavaScript для Excel
 description: Сведения о предстоящих API JavaScript для Excel.
-ms.date: 09/15/2020
+ms.date: 10/26/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 9ddc1405d4bc13087780e8950b36d9b3b4b04069
-ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
+ms.openlocfilehash: a1cb3afb28f69ff5b0c0bd03bfae9877dda91906
+ms.sourcegitcommit: a4e09546fd59579439025aca9cc58474b5ae7676
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "47819793"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "48774742"
 ---
 # <a name="excel-javascript-preview-apis"></a>Предварительные версии API JavaScript для Excel
 
@@ -26,7 +26,7 @@ ms.locfileid: "47819793"
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API JavaScript для Excel, находящиеся в предварительной версии. Чтобы просмотреть полный список всех интерфейсов API JavaScript для Excel (включая предварительные API и ранее выпущенные API), ознакомьтесь со статьями [все API JavaScript для Excel](/javascript/api/excel?view=excel-js-preview&preserve-view=true).
+В следующей таблице перечислены API JavaScript для Excel, находящиеся в предварительной версии. Полный список всех API JavaScript для Excel (в том числе API предварительного просмотра и ранее выпущенных API) представлен в статье [все API JavaScript для Excel](/javascript/api/excel?view=excel-js-preview&preserve-view=true).
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
