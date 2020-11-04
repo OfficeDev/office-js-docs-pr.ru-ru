@@ -1,18 +1,23 @@
 ---
 title: Доступность клиентских приложений и платформ Office для надстроек Office
 description: Поддерживаемые наборы обязательных элементов для Excel, OneNote, Outlook, PowerPoint, Project и Word.
-ms.date: 10/14/2020
+ms.date: 11/02/2020
 localization_priority: Priority
-ms.openlocfilehash: 587a89f948aff37e6c8c1bf699fc10a915867788
-ms.sourcegitcommit: a4e09546fd59579439025aca9cc58474b5ae7676
+ms.openlocfilehash: 9ac3dffdee742f0cf74005847bb731f83b7aab2b
+ms.sourcegitcommit: 6ade8891ad947094d305fc146bb4deb703093ca6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "48774714"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "48906031"
 ---
 # <a name="office-client-application-and-platform-availability-for-office-add-ins"></a>Доступность клиентских приложений и платформ Office для надстроек Office
 
 Работа надстройки Office может зависеть от приложения Office, набора требований, элемента или версии API. В таблицах ниже представлены сведения о доступных платформах, точках расширения, наборах обязательных элементов API и общих API, которые в настоящее время поддерживаются для всех приложений Office.
+
+<br>
+
+|<a href="#excel"><img src="../images/index/logo-excel.svg" alt="Excel" width="48" /><br><span>Excel</span></a>|<a href="#onenote"><img src="../images/index/logo-onenote.svg" alt="OneNote" width="48" /><br><span>OneNote</span></a>|<a href="#outlook"><img src="../images/index/logo-outlook.svg" alt="Outlook" width="48" /><br><span>Outlook</span></a>|<a href="#powerpoint"><img src="../images/index/logo-powerpoint.svg" alt="PowerPoint" width="48" /><br><span>PowerPoint</span></a>|<a href="#project"><img src="../images/index/logo-project-server.svg" alt="Project" width="48" /><br><span>Project</span></a>|<a href="#word"><img src="../images/index/logo-word.svg" alt="Word" width="48" /><br><span>Word</span></a>|
+|:---:|:---:|:---:|:---:|:---:|:---:|
 
 > [!NOTE]
 > Исходный выпуск Office 2016, установленный с помощью MSI, содержит только набор обязательных элементов ExcelApi 1.1, WordApi 1.1 и наборы обязательных элементов общего API. Дополнительные сведения о журналах обновлений различных версий Office см. в разделе [См. также](#see-also).
