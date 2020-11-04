@@ -4,12 +4,12 @@ title: Настройка надстройки Excel для совместног
 ms.prod: excel
 description: Настройте надстройку Excel, чтобы предоставить общий доступ к среде выполнения браузера и запускать код ленты, области задач и пользовательских функций в одной и той же среде выполнения.
 localization_priority: Priority
-ms.openlocfilehash: 08e4155b7f79101f8a61b323c623b5cb6b86decf
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 3f980ffc3ed78a4adf8c1b2cb565feb0f7c51c2f
+ms.sourcegitcommit: 6ade8891ad947094d305fc146bb4deb703093ca6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292638"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "48906024"
 ---
 # <a name="configure-your-excel-add-in-to-use-a-shared-javascript-runtime"></a>Настройка надстройки Excel для использования общей среды выполнения JavaScript
 
@@ -23,7 +23,7 @@ ms.locfileid: "47292638"
 
 Если вы начинаете новый проект, выполните указанные ниже действия, чтобы с помощью генератора Yeoman создать проект надстройки Excel. Выполните приведенную ниже команду и ответьте на вопросы, как показано ниже.
 
-```command line
+```command line
 yo office
 ```
 
@@ -41,7 +41,7 @@ yo office
 
 1. Запустите Visual Studio Code и откройте проект **Моя надстройка Office**.
 2. Откройте файл **manifest.xml**.
-3. Найдите раздел `<VersionOverrides>` и добавьте следующий раздел `<Runtimes>`. Время существования должно быть **длительным**, чтобы пользовательские функции могли работать даже после закрытия области задач. Атрибут resid равен `ContosoAddin.Url` и ссылается на строку в разделе ресурсов далее. Можно использовать любое значение resid, но оно должно соответствовать resid других элементов в элементах вашей надстройки.
+3. Найдите раздел `<VersionOverrides>` и добавьте следующий раздел `<Runtimes>`. Время существования должно быть **длительным** , чтобы пользовательские функции могли работать даже после закрытия области задач. Атрибут resid равен `ContosoAddin.Url` и ссылается на строку в разделе ресурсов далее. Можно использовать любое значение resid, но оно должно соответствовать resid других элементов в элементах вашей надстройки.
 
    ```xml
    <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -53,7 +53,7 @@ yo office
        <AllFormFactors>
    ```
 
-4. В элементе `<Page>` замените расположение источника с **Functions.Page.Url** на **ContosoAddin.Url**. Этот resid соответствует элементу resid `<Runtime>`. Обратите внимание: если у вас нет пользовательских функций, то у вас не будет элемента **Page**, и этот шаг можно пропустить.
+4. В элементе `<Page>` замените расположение источника с **Functions.Page.Url** на **ContosoAddin.Url**. Этот resid соответствует элементу resid `<Runtime>`. Обратите внимание: если у вас нет пользовательских функций, то у вас не будет элемента **Page** , и этот шаг можно пропустить.
 
    ```xml
    <AllFormFactors>
@@ -64,7 +64,7 @@ yo office
    ...
    ```
 
-5. В разделе `<DesktopFormFactor>` замените **FunctionFile** с **Commands.Url** на **ContosoAddin.Url**. Обратите внимание: если у вас нет команд действий, то у вас не будет элемента **FunctionFile**, и этот шаг можно пропустить.
+5. В разделе `<DesktopFormFactor>` замените **FunctionFile** с **Commands.Url** на **ContosoAddin.Url**. Обратите внимание: если у вас нет команд действий, то у вас не будет элемента **FunctionFile** , и этот шаг можно пропустить.
 
    ```xml
    <DesktopFormFactor>
@@ -74,7 +74,7 @@ yo office
    <FunctionFile resid="ContosoAddin.Url"/>
    ```
 
-6. В разделе `<Action>` измените расположение источника с **Taskpane.Url** на **ContosoAddin.Url**. Обратите внимание: если у вас нет области задач, то у вас не будет действия **ShowTaskpane**, и этот шаг можно пропустить.
+6. В разделе `<Action>` измените расположение источника с **Taskpane.Url** на **ContosoAddin.Url**. Обратите внимание: если у вас нет области задач, то у вас не будет действия **ShowTaskpane** , и этот шаг можно пропустить.
 
    ```xml
    <Action xsi:type="ShowTaskpane">
@@ -83,7 +83,7 @@ yo office
    </Action>
    ```
 
-7. Добавьте новый **Url-идентификатор** для **ContosoAddin.Url**, указывающий на **taskpane.html**.
+7. Добавьте новый **Url-идентификатор** для **ContosoAddin.Url** , указывающий на **taskpane.html**.
 
    ```xml
    <bt:Urls>
@@ -106,13 +106,13 @@ yo office
    > new HtmlWebpackPlugin({
    >     filename: "taskpane.html",
    >     template: "./src/taskpane/taskpane.html",
-   >     chunks: ["polyfill", "taskpane", “functions”]
+   >     chunks: ["polyfill", "taskpane", "functions"]
    > }),
    >```
 
 9. Сохраните изменения и перестройте проект.
 
-   ```command line
+   ```command line
    npm run build
    ```
 
