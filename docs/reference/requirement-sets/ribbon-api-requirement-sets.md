@@ -1,19 +1,19 @@
 ---
 title: Наборы обязательных элементов API ленты
 description: Указывает, какие платформы и сборки Office поддерживают динамические API ленты.
-ms.date: 08/26/2020
+ms.date: 11/07/2020
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: f734931817111ce52f779946e1f983ecc9238d3a
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 878670367b253fa7700434681244b43b9cfa36a7
+ms.sourcegitcommit: ca66ff7462bfdf4ed7ae04f43d1388c24de63bf9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293494"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48996517"
 ---
 # <a name="ribbon-api-requirement-sets"></a>Наборы обязательных элементов API ленты
 
-Наборы требований — это именованные группы элементов API. Надстройки Office используют наборы требований, указанные в манифесте, или используют проверку среды выполнения, чтобы определить, поддерживает ли приложение Office API, необходимые надстройке. Более подробную информацию можно узнать в статье [версии Office и наборах требований](/office/dev/add-ins/develop/office-versions-and-requirement-sets).
+Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets).
 
 Набор API ленты поддерживает программное управление при включении и отключении пользовательских команд надстроек (то есть кнопок ленты и их элементов меню).
 
@@ -21,13 +21,13 @@ ms.locfileid: "47293494"
 
 |  Набор обязательных элементов  | Office 2013 для Windows<br>(единовременная покупка) | Office 2016 или более поздней версии в Windows<br>(единовременная покупка)   | Office для Windows\*<br>(подключено к подписке на Microsoft 365) |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac\*<br>(подключено к подписке на Microsoft 365)  | Office в Интернете\*  |  Office Online Server  |
 |:-----|-----|:-----|:-----|:-----|:-----|:-----|:-----|
-| Риббонапи 1,1  | Н/Д | Н/Д | Ознакомьтесь со статьей поддержка<br>раздел ниже | Недоступно | 16,38 | Скоро | Недоступно|
+| Риббонапи 1,1  | Н/Д | Н/Д | Ознакомьтесь со статьей поддержка<br>раздел ниже | Н/Д | 16,38 | Ноябрь, 2020 | Н/Д|
 
-> **&#42;** API ленты поддерживается только в Excel и требует подписки Microsoft 365. 
+> **&#42;** API ленты поддерживается только в Excel и требует подписки Microsoft 365.
 
 ## <a name="office-on-windows-subscription-support"></a>Поддержка Office в Windows (подписка)
 
-Набор обязательных элементов поддерживается в канале потребителей версии 2006 (сборка, 13001,20498 или выше). Для Office в Windows эта функция также поддерживается в течение полугодового канала и на ежемесячные сборки корпоративного канала, доступные в июле 14th 2020 или более поздней версии. Ниже приведены минимальные поддерживаемые сборки для каждого канала.  
+Набор обязательных элементов поддерживается в канале потребителей версии 2006 (сборка, 13001,20498 или выше). Для Office в Windows эта функция также поддерживается в сборках каналов Semi-Annual и месячных корпоративных каналах, доступных в июле 14th 2020 или более поздних версий. Ниже приведены минимальные поддерживаемые сборки для каждого канала.  
 
 |Канал | Версия | Сборка|
 |:-----|:-----|:-----|
@@ -36,12 +36,12 @@ ms.locfileid: "47293494"
 |Ежемесячный канал (корпоративный) | 2004 | 12730,20602 или выше|
 |Полугодовой канал (корпоративный) | 2002 или выше | 12527,20880 или выше|
 
-## <a name="more-information"></a>Дополнительная информация
+## <a name="more-information"></a>Дополнительные сведения
 
 Статьи и разделы с дополнительными сведениями о версиях, номерах сборок и Office Online Server:
 
-- [Номера версий и сборок для выпусков канала обновления для клиентов Microsoft 365](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7)
-- [Какая у меня версия Office](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19);
+- [Номера версий и сборок выпусков из канала обновления для клиентов Microsoft 365](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7);
+- [Какая у меня версия Office?](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19);
 - [Где можно найти версию и номер сборки для клиентского приложения Microsoft 365](https://support.office.com/article/version-and-build-numbers-of-update-channel-releases-ae942449-1fca-4484-898b-a933ea23def7)
 - [Обзор Office Online Server](/officeonlineserver/office-online-server-overview)
 
@@ -60,5 +60,5 @@ API ленты 1,1 — это первая версия API. Более подр
 ## <a name="see-also"></a>См. также
 
 - [Версии Office и наборы обязательных элементов](/office/dev/add-ins/develop/office-versions-and-requirement-sets)
-- [Указание приложений Office и требований к API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
+- [Указание приложений Office и обязательных элементов API](/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements)
 - [XML-манифест надстроек Office](/office/dev/add-ins/develop/add-in-manifests)

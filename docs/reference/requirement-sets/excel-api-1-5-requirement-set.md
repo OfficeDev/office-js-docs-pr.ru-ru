@@ -1,15 +1,15 @@
 ---
 title: Набор обязательных элементов API JavaScript для Excel 1,5
 description: Сведения о наборе требований ExcelApi 1,5.
-ms.date: 07/26/2019
+ms.date: 11/09/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 303f2c6f55063095d75cf75607d7227e241afd03
-ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
+ms.openlocfilehash: 901ea29253bdfee3aeeefd1595eda32d70e4f1e1
+ms.sourcegitcommit: ca66ff7462bfdf4ed7ae04f43d1388c24de63bf9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "47819687"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48996258"
 ---
 # <a name="whats-new-in-excel-javascript-api-15"></a>Новые возможности API JavaScript для Excel 1.5
 
@@ -36,8 +36,8 @@ ExcelApi 1,5 добавляет пользовательские XML-части.
 |:---|:---|:---|
 |[CustomXmlPart](/javascript/api/excel/excel.customxmlpart)|[delete()](/javascript/api/excel/excel.customxmlpart#delete--)|Удаляет пользовательскую XML-часть.|
 ||[Жетксмл ()](/javascript/api/excel/excel.customxmlpart#getxml--)|Получает полное содержимое пользовательской XML-части.|
-||[id](/javascript/api/excel/excel.customxmlpart#id)|ИДЕНТИФИКАТОР пользовательской XML-части. Только для чтения.|
-||[Пространства](/javascript/api/excel/excel.customxmlpart#namespaceuri)|URI пространства имен настраиваемой части XML. Только для чтения.|
+||[id](/javascript/api/excel/excel.customxmlpart#id)|ИДЕНТИФИКАТОР пользовательской XML-части.|
+||[Пространства](/javascript/api/excel/excel.customxmlpart#namespaceuri)|URI пространства имен настраиваемой части XML.|
 ||[setXml (XML: строка)](/javascript/api/excel/excel.customxmlpart#setxml-xml-)|Задает полное содержимое пользовательской XML-части.|
 |[CustomXmlPartCollection](/javascript/api/excel/excel.customxmlpartcollection)|[Add (XML: String)](/javascript/api/excel/excel.customxmlpartcollection#add-xml-)|Добавляет новую пользовательскую XML-часть в книгу.|
 ||[getByNamespace (namespaceUri: строка)](/javascript/api/excel/excel.customxmlpartcollection#getbynamespace-namespaceuri-)|Получает новую ограниченную коллекцию пользовательских XML-частей, пространства имен которых совпадают с указанным пространством имен.|
@@ -45,18 +45,19 @@ ExcelApi 1,5 добавляет пользовательские XML-части.
 ||[getItem(id: string)](/javascript/api/excel/excel.customxmlpartcollection#getitem-id-)|Получает пользовательскую XML-часть по идентификатору.|
 ||[getItemOrNullObject(id: строка)](/javascript/api/excel/excel.customxmlpartcollection#getitemornullobject-id-)|Получает пользовательскую XML-часть по идентификатору.|
 ||[items](/javascript/api/excel/excel.customxmlpartcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
-|[кустомксмлпартскопедколлектион](/javascript/api/excel/excel.customxmlpartscopedcollection)|[getCount()](/javascript/api/excel/excel.customxmlpartscopedcollection#getcount--)|Получает количество частей CustomXML в этой коллекции.|
+|[CustomXmlPartScopedCollection](/javascript/api/excel/excel.customxmlpartscopedcollection)|[getCount()](/javascript/api/excel/excel.customxmlpartscopedcollection#getcount--)|Получает количество частей CustomXML в этой коллекции.|
 ||[getItem(id: string)](/javascript/api/excel/excel.customxmlpartscopedcollection#getitem-id-)|Получает пользовательскую XML-часть по идентификатору.|
 ||[getItemOrNullObject(id: строка)](/javascript/api/excel/excel.customxmlpartscopedcollection#getitemornullobject-id-)|Получает пользовательскую XML-часть по идентификатору.|
 ||[Жетонлитем ()](/javascript/api/excel/excel.customxmlpartscopedcollection#getonlyitem--)|Если коллекция содержит ровно один элемент, этот метод возвращает его.|
 ||[Жетонлитеморнуллобжект ()](/javascript/api/excel/excel.customxmlpartscopedcollection#getonlyitemornullobject--)|Если коллекция содержит ровно один элемент, этот метод возвращает его.|
 ||[items](/javascript/api/excel/excel.customxmlpartscopedcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
-|[PivotTable](/javascript/api/excel/excel.pivottable)|[id](/javascript/api/excel/excel.pivottable#id)|Идентификатор сводной таблицы. Только для чтения.|
-|[Время выполнения](/javascript/api/excel/excel.runtime)||[Workbook](/javascript/api/excel/excel.workbook)|[customXmlParts](/javascript/api/excel/excel.workbook#customxmlparts)|Представляет коллекцию настраиваемых XML-частей, которые содержит эта книга. Только для чтения.|
-|[Worksheet](/javascript/api/excel/excel.worksheet)|[GetNext (visibleOnly?: Boolean)](/javascript/api/excel/excel.worksheet#getnext-visibleonly-)|Получает лист, следующий по отношению к элементу. При отсутствии листов, указанных ниже, этот метод вызовет ошибку.|
-||[getNextOrNullObject (visibleOnly?: Boolean)](/javascript/api/excel/excel.worksheet#getnextornullobject-visibleonly-)|Получает лист, следующий по отношению к элементу. Если после этого листа нет ни одного листа, этот метод возвратит нулевой объект.|
-||[Previous (visibleOnly?: Boolean)](/javascript/api/excel/excel.worksheet#getprevious-visibleonly-)|Получает лист, который предшествует этому. Если нет предыдущих листов, этот метод выдаст ошибку.|
-||[getPreviousOrNullObject (visibleOnly?: Boolean)](/javascript/api/excel/excel.worksheet#getpreviousornullobject-visibleonly-)|Получает лист, который предшествует этому. Если нет предыдущих листов, этот метод возвратит значение NULL обжет.|
+|[PivotTable](/javascript/api/excel/excel.pivottable)|[id](/javascript/api/excel/excel.pivottable#id)|Идентификатор сводной таблицы.|
+|[RequestContext](/javascript/api/excel/excel.requestcontext)|[runtime](/javascript/api/excel/excel.requestcontext#runtime)|[API Set: ExcelApi 1,5]|
+|[Runtime](/javascript/api/excel/excel.runtime)||[Workbook](/javascript/api/excel/excel.workbook)|[customXmlParts](/javascript/api/excel/excel.workbook#customxmlparts)|Представляет коллекцию настраиваемых XML-частей, которые содержит эта книга.|
+|[Worksheet](/javascript/api/excel/excel.worksheet)|[GetNext (visibleOnly?: Boolean)](/javascript/api/excel/excel.worksheet#getnext-visibleonly-)|Получает лист, следующий по отношению к элементу.|
+||[getNextOrNullObject (visibleOnly?: Boolean)](/javascript/api/excel/excel.worksheet#getnextornullobject-visibleonly-)|Получает лист, следующий по отношению к элементу.|
+||[Previous (visibleOnly?: Boolean)](/javascript/api/excel/excel.worksheet#getprevious-visibleonly-)|Получает лист, который предшествует этому.|
+||[getPreviousOrNullObject (visibleOnly?: Boolean)](/javascript/api/excel/excel.worksheet#getpreviousornullobject-visibleonly-)|Получает лист, который предшествует этому.|
 |[WorksheetCollection](/javascript/api/excel/excel.worksheetcollection)|[-First (visibleOnly?: Boolean)](/javascript/api/excel/excel.worksheetcollection#getfirst-visibleonly-)|Получает первый лист в коллекции.|
 ||[-Last (visibleOnly?: Boolean)](/javascript/api/excel/excel.worksheetcollection#getlast-visibleonly-)|Получает последний лист в коллекции.|
 

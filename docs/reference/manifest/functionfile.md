@@ -1,18 +1,23 @@
 ---
 title: Элемент FunctionFile в файле манифеста
 description: Указывает файл исходного кода для операций, предоставляемых надстройкой через команды надстройки, которые выполняют функцию JavaScript вместо отображения пользовательского интерфейса.
-ms.date: 10/09/2018
+ms.date: 11/06/2020
 localization_priority: Normal
-ms.openlocfilehash: db447a904c04d07d51119f1eac2556af536a647c
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 4c47c3e4b824f2b93aaea17cef88e01f748d6f95
+ms.sourcegitcommit: ca66ff7462bfdf4ed7ae04f43d1388c24de63bf9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611843"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48996447"
 ---
 # <a name="functionfile-element"></a>Элемент FunctionFile
 
-Указывает файл исходного кода для операций, предоставляемых надстройкой через команды надстройки, которые выполняют функцию JavaScript вместо отображения пользовательского интерфейса. `FunctionFile`Элемент является дочерним для элемента [DesktopFormFactor](desktopformfactor.md) или [MobileFormFactor](mobileformfactor.md). `resid` `FunctionFile` Для атрибута элемента задается значение `id` атрибута `Url` элемента в `Resources` элементе, который содержит URL-адрес HTML-файла, который содержит или загружает все функции JavaScript, которые используются КНОПКАМИ надстройки без пользовательского интерфейса, как определено [элементом Control](control.md).
+Указывает файл исходного кода для операций, предоставляемых надстройкой, одним из следующих способов:
+
+* Команды надстройки, которые выполняют функцию JavaScript вместо отображения пользовательского интерфейса.
+* Сочетания клавиш, которые выполняют функцию JavaScript.
+
+`FunctionFile`Элемент является дочерним для элемента [DesktopFormFactor](desktopformfactor.md) или [MobileFormFactor](mobileformfactor.md). `resid` `FunctionFile` Для атрибута элемента задается значение `id` атрибута `Url` элемента в `Resources` элементе, который содержит URL-адрес HTML-файла, который содержит или загружает все функции JavaScript, которые используются КНОПКАМИ надстройки без пользовательского интерфейса, как определено [элементом Control](control.md).
 
 Ниже приведен пример `FunctionFile` элемента.
 

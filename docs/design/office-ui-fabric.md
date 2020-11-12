@@ -1,56 +1,53 @@
 ---
-title: Office UI Fabric в надстройках Office 
+title: Office UI Fabric в надстройках Office
 description: Общие сведения о том, как использовать компоненты Office UI Fabric в надстройках Office.
-ms.date: 04/20/2020
+ms.date: 10/29/2020
 localization_priority: Normal
-ms.openlocfilehash: 7b74c734fb2559e4bf4408e40eb5366f9b79b755
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: c4a13c615fe63183f595e24895b9fe6054fdc05d
+ms.sourcegitcommit: ca66ff7462bfdf4ed7ae04f43d1388c24de63bf9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608504"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48996377"
 ---
-# <a name="office-ui-fabric-in-office-add-ins"></a>Office UI Fabric в надстройках Office 
+# <a name="office-ui-fabric-in-office-add-ins"></a>Office UI Fabric в надстройках Office
 
-Office UI Fabric — это интерфейсная платформа JavaScript для создания дизайна для Office и Office 365. В Fabric предоставлены компоненты дизайна, которые можно расширять, дорабатывать и использовать в надстройке Office. Так как Fabric использует язык дизайна Office, компоненты дизайна Fabric выглядят в Office очень естественно. 
+Office UI Fabric — это интерфейсная платформа JavaScript для создания дизайна для Office и Office 365. В Fabric предоставлены компоненты дизайна, которые можно расширять, дорабатывать и использовать в надстройке Office. Так как Fabric использует язык дизайна Office, компоненты дизайна Fabric выглядят в Office очень естественно.
 
 Рекомендуем использовать Office UI Fabric для создания надстроек. Использовать Office UI Fabric необязательно.
 
-В следующих разделах описано, как начать использовать Fabric для своих потребностей. 
+В следующих разделах описано, как начать использовать Fabric для своих потребностей.
 
 ## <a name="use-fabric-core-icons-fonts-colors"></a>Использование Fabric Core: значки, шрифты, цвета
-Fabric Core содержит основные элементы языка дизайна, такие как значки, цвета, тип и сетку.Fabric Core не зависит от платформы. Fabric Core используется с помощью Fabric React и входит в его состав.
+
+Fabric Core содержит основные элементы языка дизайна, такие как значки, цвета, тип и сетку. Fabric Core не зависит от платформы. Fabric Core используется с помощью Fabric React и входит в его состав.
 
 Чтобы начать работу с Fabric Core:
 
-1. Добавьте ссылку CDN в HTML-код на своей странице.  
+1. Добавьте ссылку CDN в HTML-код на своей странице.  
 
     ```html
     <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css">
-    ```   
-    
-2. Используйте значки и шрифты Fabric. 
+    ```
 
-    Чтобы использовать значок Fabric, разместите элемент "i" на своей странице и сошлитесь на соответствующие классы. Вы можете сами выбирать размер значка, изменяя размер шрифта. Например, в коде ниже показано, как сделать очень большой значок таблицы, который использует цвет themePrimary (#0078d7). 
-   
+2. Используйте значки и шрифты Fabric.
+
+    Чтобы использовать значок Fabric, разместите элемент "i" на своей странице и сошлитесь на соответствующие классы. Вы можете сами выбирать размер значка, изменяя размер шрифта. Например, в коде ниже показано, как сделать очень большой значок таблицы, который использует цвет themePrimary (#0078d7).
+
     ```html
     <i class="ms-Icon ms-font-xl ms-Icon--Table ms-fontColor-themePrimary"></i>
     ```
 
-    Чтобы найти другие значки, доступные в Office UI Fabric, используйте функцию поиска на странице [Значки](https://developer.microsoft.com/fabric#/styles/icons). Когда вы найдете значок для надстройки, добавьте к его имени префикс `ms-Icon--`. 
+    Чтобы найти другие значки, доступные в Office UI Fabric, используйте функцию поиска на странице [Значки](https://developer.microsoft.com/fabric#/styles/icons). Когда вы найдете значок для надстройки, добавьте к его имени префикс `ms-Icon--`.
 
     Сведения о размерах шрифтов и цветах, доступных в Office UI Fabric, см. в разделах [Оформление](https://developer.microsoft.com/fabric#/styles/typography) и [Цвета](https://developer.microsoft.com/fabric#/styles/colors).
- 
-## <a name="use-fabric-components"></a>Использование компонентов Fabric 
-В Fabric есть различные компоненты оформления, которые можно использовать при создании надстроек, в том числе:
 
-- Компоненты ввода — например, Button, Checkbox и Toggle.
-- Компоненты навигации — например, Pivot и Breadcrumb.
-- Компоненты уведомления — например, MessageBar и Callout.  
+## <a name="use-fabric-components"></a>Использование компонентов Fabric
 
-Не все компоненты Fabric рекомендуется использовать в надстройках. Ниже приведен список компонентов дизайна Fabric React, рекомендованных для надстроек.
+Fabric предоставляет разнообразные компоненты UX, которые можно использовать для построения надстройки. Мы не будем ожидать, что все компоненты Fabric будут использоваться одной надстройкой. Определите лучшие компоненты для вашего сценария и пользовательского интерфейса (например, может оказаться невозможной правильно отображать [Навигатор](https://developer.microsoft.com/fabric#/components/breadcrumb) в области задач).
 
-- [Строка навигации](https://developer.microsoft.com/fabric#/components/breadcrumb)
+Ниже приведен список стандартных [компонентов взаимодействия Fabric](https://developer.microsoft.com/fluentui#/controls/web) , которые рекомендуются для использования в надстройке.
+
 - [Кнопка](https://developer.microsoft.com/fabric#/components/button)
 - [Флажок](https://developer.microsoft.com/fabric#/components/checkbox)
 - [ChoiceGroup](https://developer.microsoft.com/fabric#/components/choicegroup)

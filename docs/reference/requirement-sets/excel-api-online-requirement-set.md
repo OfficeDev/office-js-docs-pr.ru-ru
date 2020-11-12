@@ -1,15 +1,15 @@
 ---
 title: Набор обязательных элементов API JavaScript для Excel Online
 description: Сведения о наборе требований Ексцелапионлине.
-ms.date: 09/15/2020
+ms.date: 11/09/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 29f5826ba2adbf18b79033b83254b046210015fe
-ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
+ms.openlocfilehash: 16c96f413424d5fc85a21419fb72cf6580c1ac18
+ms.sourcegitcommit: ca66ff7462bfdf4ed7ae04f43d1388c24de63bf9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "47819807"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48996531"
 ---
 # <a name="excel-javascript-api-online-only-requirement-set"></a>Набор обязательных элементов API JavaScript для Excel Online
 
@@ -40,7 +40,9 @@ if (Office.context.requirements.isSetSupported("ExcelApiOnline", "1.1")) {
 
 ## <a name="api-list"></a>Список API
 
-В настоящее время интерфейсы API в наборе обязательных элементов отсутствуют `ExcelApiOnline` . Все интерфейсы API, которые ранее были частью этого набора, превышены до набора обязательных наборов требований и доступны на всех платформах.
+| Класс | Поля | Описание |
+|:---|:---|:---|
+|[Range](/javascript/api/excel/excel.range)|[Жетмержедареас ()](/javascript/api/excel/excel.range#getmergedareas--)|Возвращает объект RangeAreas, представляющий Объединенные области в этом диапазоне.|
 
 ## <a name="see-also"></a>См. также
 

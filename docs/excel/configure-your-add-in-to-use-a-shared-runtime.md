@@ -4,12 +4,12 @@ title: Настройка надстройки Excel для совместног
 ms.prod: excel
 description: Настройте надстройку Excel, чтобы предоставить общий доступ к среде выполнения браузера и запускать код ленты, области задач и пользовательских функций в одной и той же среде выполнения.
 localization_priority: Priority
-ms.openlocfilehash: 3f980ffc3ed78a4adf8c1b2cb565feb0f7c51c2f
-ms.sourcegitcommit: 6ade8891ad947094d305fc146bb4deb703093ca6
+ms.openlocfilehash: be4e79ae54376a9574ffb0669681c2fba7cd158c
+ms.sourcegitcommit: ca66ff7462bfdf4ed7ae04f43d1388c24de63bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "48906024"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48996279"
 ---
 # <a name="configure-your-excel-add-in-to-use-a-shared-javascript-runtime"></a>Настройка надстройки Excel для использования общей среды выполнения JavaScript
 
@@ -140,6 +140,7 @@ yo office
 
 - Подробные сведения об использовании API JavaScript для Excel и пользовательских функций Excel в общей среде выполнения см. в статье [Вызов API Excel из пользовательской функции](call-excel-apis-from-custom-function.md).
 - Изучите пример PnP [Управление интерфейсом ленты и области задач, а также запуск кода при открытии документа](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/excel-shared-runtime-scenario), чтобы ознакомиться с масштабным примером работы общей среды выполнения JavaScript.
+- Сведения о добавлении в проект настраиваемых сочетаний клавиш см. в статье [Пользовательские сочетания клавиш в надстройках Office](../design/keyboard-shortcuts.md).
 
 ## <a name="see-also"></a>См. также
 

@@ -1,15 +1,15 @@
 ---
 title: Предварительные версии API JavaScript для Excel
 description: Сведения о предстоящих API JavaScript для Excel.
-ms.date: 10/26/2020
+ms.date: 11/09/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: a1cb3afb28f69ff5b0c0bd03bfae9877dda91906
-ms.sourcegitcommit: a4e09546fd59579439025aca9cc58474b5ae7676
+ms.openlocfilehash: 7617ef03d7ef6b0ef6dcd1dbe12e88b58e1228fe
+ms.sourcegitcommit: ca66ff7462bfdf4ed7ae04f43d1388c24de63bf9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "48774742"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48996545"
 ---
 # <a name="excel-javascript-preview-apis"></a>Предварительные версии API JavaScript для Excel
 
@@ -21,8 +21,8 @@ ms.locfileid: "48774742"
 
 | Функциональная область | Описание | Соответствующие объекты |
 |:--- |:--- |:--- |
-| Связанные типы данных | Добавляет поддержку для типов данных, подключенных к Excel из внешних источников. | [линкеддататипе](/javascript/api/excel/excel.linkeddatatype)|
-| Представления именованных листов | Обеспечивает программное управление представлениями листа на уровне пользователя. | [намедшитвиев](/javascript/api/excel/excel.namedsheetview) |
+| Связанные типы данных | Добавляет поддержку для типов данных, подключенных к Excel из внешних источников. | [LinkedDataType](/javascript/api/excel/excel.linkeddatatype)|
+| Представления именованных листов | Обеспечивает программное управление представлениями листа на уровне пользователя. | [NamedSheetView](/javascript/api/excel/excel.namedsheetview) |
 
 ## <a name="api-list"></a>Список API
 
@@ -30,29 +30,29 @@ ms.locfileid: "48774742"
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
-|[линкеддататипе](/javascript/api/excel/excel.linkeddatatype)|[Предоставление dataProvider](/javascript/api/excel/excel.linkeddatatype#dataprovider)|Имя поставщика данных для связанного типа данных. Это может измениться, когда информация извлекается из службы.|
+|[LinkedDataType](/javascript/api/excel/excel.linkeddatatype)|[Предоставление dataProvider](/javascript/api/excel/excel.linkeddatatype#dataprovider)|Имя поставщика данных для связанного типа данных.|
 ||[ластрефрешед](/javascript/api/excel/excel.linkeddatatype#lastrefreshed)|Дата и время местного часового пояса с момента открытия книги при последнем обновлении связанного типа данных.|
-||[name](/javascript/api/excel/excel.linkeddatatype#name)|Имя связанного типа данных. Это может измениться, когда информация извлекается из службы.|
+||[name](/javascript/api/excel/excel.linkeddatatype#name)|Имя связанного типа данных.|
 ||[периодикрефрешинтервал](/javascript/api/excel/excel.linkeddatatype#periodicrefreshinterval)|Частота обновления связанного типа данных (в секундах), если `refreshMode` для параметра задано значение "периодический".|
 ||[рефрешмоде](/javascript/api/excel/excel.linkeddatatype#refreshmode)|Механизм, с помощью которого извлекаются данные для связанного типа данных.|
 ||[serviceId](/javascript/api/excel/excel.linkeddatatype#serviceid)|Уникальный идентификатор связанного типа данных.|
-||[суппортедрефрешмодес](/javascript/api/excel/excel.linkeddatatype#supportedrefreshmodes)|Возвращает массив со всеми режимами обновления, поддерживаемыми связанным типом данных. Содержимое массива может измениться, когда информация извлекается из службы.|
-||[Рекуестрефреш ()](/javascript/api/excel/excel.linkeddatatype#requestrefresh--)|Отправляет запрос на обновление связанного типа данных. Если служба занята или временно недоступна, запрос не будет выполнен.|
+||[суппортедрефрешмодес](/javascript/api/excel/excel.linkeddatatype#supportedrefreshmodes)|Возвращает массив со всеми режимами обновления, поддерживаемыми связанным типом данных.|
+||[Рекуестрефреш ()](/javascript/api/excel/excel.linkeddatatype#requestrefresh--)|Отправляет запрос на обновление связанного типа данных.|
 ||[Рекуестсетрефрешмоде (Рефрешмоде: Excel. Линкеддататиперефрешмоде)](/javascript/api/excel/excel.linkeddatatype#requestsetrefreshmode-refreshmode-)|Отправляет запрос на изменение режима обновления для этого связанного типа данных.|
-|[линкеддататипеаддедевентаргс](/javascript/api/excel/excel.linkeddatatypeaddedeventargs)|[serviceId](/javascript/api/excel/excel.linkeddatatypeaddedeventargs#serviceid)|Уникальный идентификатор нового связанного типа данных.|
-||[source](/javascript/api/excel/excel.linkeddatatypeaddedeventargs#source)|Получает источник события. Дополнительные сведения см. в статье Excel.EventSource.|
-||[type](/javascript/api/excel/excel.linkeddatatypeaddedeventargs#type)|Получает тип события. Дополнительные сведения см. в статье Excel.EventType.|
-|[линкеддататипеколлектион](/javascript/api/excel/excel.linkeddatatypecollection)|[getCount()](/javascript/api/excel/excel.linkeddatatypecollection#getcount--)|Получает число связанных типов данных в коллекции.|
+|[LinkedDataTypeAddedEventArgs](/javascript/api/excel/excel.linkeddatatypeaddedeventargs)|[serviceId](/javascript/api/excel/excel.linkeddatatypeaddedeventargs#serviceid)|Уникальный идентификатор нового связанного типа данных.|
+||[source](/javascript/api/excel/excel.linkeddatatypeaddedeventargs#source)|Получает источник события.|
+||[type](/javascript/api/excel/excel.linkeddatatypeaddedeventargs#type)|Получает тип события.|
+|[LinkedDataTypeCollection](/javascript/api/excel/excel.linkeddatatypecollection)|[getCount()](/javascript/api/excel/excel.linkeddatatypecollection#getcount--)|Получает число связанных типов данных в коллекции.|
 ||[GetItem (ключ: число)](/javascript/api/excel/excel.linkeddatatypecollection#getitem-key-)|Получает связанный тип данных по идентификатору службы.|
 ||[getItemAt(index: number)](/javascript/api/excel/excel.linkeddatatypecollection#getitemat-index-)|Получает связанный тип данных по индексу в коллекции.|
-||[getItemOrNullObject (ключ: число)](/javascript/api/excel/excel.linkeddatatypecollection#getitemornullobject-key-)|Получает связанный тип данных по ИДЕНТИФИКАТОРу. Если связанный тип данных не существует, объект со `isNullObject` свойством, для которого задано значение `true` . Дополнительные сведения см. в статье {@link https://docs.microsoft.com/office/dev/add-ins/develop/application-specific-api-model#ornullobject-methods-and-properties | * Методы и свойства Орнуллобжект}.|
+||[getItemOrNullObject (ключ: число)](/javascript/api/excel/excel.linkeddatatypecollection#getitemornullobject-key-)|Получает связанный тип данных по ИДЕНТИФИКАТОРу.|
 ||[items](/javascript/api/excel/excel.linkeddatatypecollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 ||[Рекуестрефрешалл ()](/javascript/api/excel/excel.linkeddatatypecollection#requestrefreshall--)|Отправляет запрос на обновление всех связанных типов данных в коллекции.|
-|[намедшитвиев](/javascript/api/excel/excel.namedsheetview)|[activate()](/javascript/api/excel/excel.namedsheetview#activate--)|Активирует это представление листа. Это эквивалентно использованию команды "переключиться" в пользовательском интерфейсе Excel.|
+|[NamedSheetView](/javascript/api/excel/excel.namedsheetview)|[activate()](/javascript/api/excel/excel.namedsheetview#activate--)|Активирует это представление листа.|
 ||[delete()](/javascript/api/excel/excel.namedsheetview#delete--)|Удаляет представление листа из листа.|
 ||[дублировать (имя?: строка)](/javascript/api/excel/excel.namedsheetview#duplicate-name-)|Создает копию этого представления листа.|
 ||[name](/javascript/api/excel/excel.namedsheetview#name)|Получает или задает имя представления листа.|
-|[намедшитвиевколлектион](/javascript/api/excel/excel.namedsheetviewcollection)|[add(name: string)](/javascript/api/excel/excel.namedsheetviewcollection#add-name-)|Создает новое представление листа с заданным именем.|
+|[NamedSheetViewCollection](/javascript/api/excel/excel.namedsheetviewcollection)|[add(name: string)](/javascript/api/excel/excel.namedsheetviewcollection#add-name-)|Создает новое представление листа с заданным именем.|
 ||[Ентертемпорари ()](/javascript/api/excel/excel.namedsheetviewcollection#entertemporary--)|Создает и активирует новое временное представление листа.|
 ||[Exit ()](/javascript/api/excel/excel.namedsheetviewcollection#exit--)|Выполняет выход из текущего активного представления листа.|
 ||[onactive ()](/javascript/api/excel/excel.namedsheetviewcollection#getactive--)|Получает текущее активное представление листа.|
@@ -62,27 +62,28 @@ ms.locfileid: "48774742"
 ||[items](/javascript/api/excel/excel.namedsheetviewcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 |[PivotLayout](/javascript/api/excel/excel.pivotlayout)|[altTextDescription](/javascript/api/excel/excel.pivotlayout#alttextdescription)|Описание замещающий текст сводной таблицы.|
 ||[altTextTitle](/javascript/api/excel/excel.pivotlayout#alttexttitle)|Замещающий текст заголовка сводной таблицы.|
-||[Дисплайбланклинеафтереачитем (Display: Boolean)](/javascript/api/excel/excel.pivotlayout#displayblanklineaftereachitem-display-)|Указывает, следует ли отображать пустую строку после каждого элемента. Это значение задается на глобальном уровне для сводной таблицы и применяется к отдельным PivotFields.|
+||[Дисплайбланклинеафтереачитем (Display: Boolean)](/javascript/api/excel/excel.pivotlayout#displayblanklineaftereachitem-display-)|Указывает, следует ли отображать пустую строку после каждого элемента.|
 ||[емптицеллтекст](/javascript/api/excel/excel.pivotlayout#emptycelltext)|Текст, автоматически заполняемый в любую пустую ячейку в сводной таблице, если `fillEmptyCells == true` .|
-||[филлемптицеллс](/javascript/api/excel/excel.pivotlayout#fillemptycells)|Указывает, следует ли заполнить пустые ячейки в сводной таблице с помощью `emptyCellText` . По умолчанию — false.|
-||[getCell(dataHierarchy: DataPivotHierarchy \| string, rowItems: Array<PivotItem \| string>, columnItems: Array<PivotItem \| string>)](/javascript/api/excel/excel.pivotlayout#getcell-datahierarchy--rowitems--columnitems-)|Получает уникальную ячейку в сводной таблице на основе иерархии данных и элементов строк и столбцов соответствующих иерархий. Возвращаемая ячейка находится на пересечении указанной строки и столбца, содержащего данные из заданной иерархии. Этот метод является обратным вызову методов getPivotItems и getDataHierarchy для конкретной ячейки.|
+||[филлемптицеллс](/javascript/api/excel/excel.pivotlayout#fillemptycells)|Указывает, следует ли заполнить пустые ячейки в сводной таблице с помощью `emptyCellText` .|
+||[getCell(dataHierarchy: DataPivotHierarchy \| string, rowItems: Array<PivotItem \| string>, columnItems: Array<PivotItem \| string>)](/javascript/api/excel/excel.pivotlayout#getcell-datahierarchy--rowitems--columnitems-)|Получает уникальную ячейку в сводной таблице на основе иерархии данных и элементов строк и столбцов соответствующих иерархий.|
+||[пивотстиле](/javascript/api/excel/excel.pivotlayout#pivotstyle)|Стиль, примененный к сводной таблице.|
 ||[Репеаталлитемлабелс (Репеатлабелс: Boolean)](/javascript/api/excel/excel.pivotlayout#repeatallitemlabels-repeatlabels-)|Задает параметр "повторять все подписи элементов" для всех полей в сводной таблице.|
 ||[Сетстиле (Style: string \| пивоттаблестиле \| буилтинпивоттаблестиле)](/javascript/api/excel/excel.pivotlayout#setstyle-style-)|Задает стиль, применяемый к сводной таблице.|
 ||[шовфиелдхеадерс](/javascript/api/excel/excel.pivotlayout#showfieldheaders)|Указывает, отображаются ли в сводной таблице заголовки полей (заголовки полей и раскрывающиеся фильтры).|
-|[PivotTable](/javascript/api/excel/excel.pivottable)|[рефрешонопен](/javascript/api/excel/excel.pivottable#refreshonopen)|Указывает, обновляется ли Сводная таблица при открытии книги. Соответствует параметру "обновить при загрузке" в пользовательском интерфейсе.|
-|[Range](/javascript/api/excel/excel.range)|[Жетмержедареас ()](/javascript/api/excel/excel.range#getmergedareas--)|Возвращает `RangeAreas` объект, представляющий Объединенные области в этом диапазоне. Обратите внимание, что если число Объединенных областей в этом диапазоне превышает 512, API не будет возвращать результат.|
-||[Влияющие ()](/javascript/api/excel/excel.range#getprecedents--)|Возвращает `WorkbookRangeAreas` объект, представляющий диапазон, содержащий все влияющие ячейки на одном листе или на нескольких листах.|
-|[рефрешмодечанжедевентаргс](/javascript/api/excel/excel.refreshmodechangedeventargs)|[рефрешмоде](/javascript/api/excel/excel.refreshmodechangedeventargs#refreshmode)|Режим обновления связанного типа данных.|
+|[PivotTable](/javascript/api/excel/excel.pivottable)|[рефрешонопен](/javascript/api/excel/excel.pivottable#refreshonopen)|Указывает, обновляется ли Сводная таблица при открытии книги.|
+|[Range](/javascript/api/excel/excel.range)|[Влияющие ()](/javascript/api/excel/excel.range#getprecedents--)|Возвращает `WorkbookRangeAreas` объект, представляющий диапазон, содержащий все влияющие ячейки на одном листе или на нескольких листах.|
+|[RefreshModeChangedEventArgs](/javascript/api/excel/excel.refreshmodechangedeventargs)|[рефрешмоде](/javascript/api/excel/excel.refreshmodechangedeventargs#refreshmode)|Режим обновления связанного типа данных.|
 ||[serviceId](/javascript/api/excel/excel.refreshmodechangedeventargs#serviceid)|Уникальный идентификатор объекта, режим обновления которого изменился.|
-||[source](/javascript/api/excel/excel.refreshmodechangedeventargs#source)|Получает источник события. Дополнительные сведения см. в статье Excel.EventSource.|
-||[type](/javascript/api/excel/excel.refreshmodechangedeventargs#type)|Получает тип события. Дополнительные сведения см. в статье Excel.EventType.|
-|[рефрешрекуесткомплетедевентаргс](/javascript/api/excel/excel.refreshrequestcompletedeventargs)|[обновляется](/javascript/api/excel/excel.refreshrequestcompletedeventargs#refreshed)|Указывает, успешно ли выполнен запрос на обновление.|
+||[source](/javascript/api/excel/excel.refreshmodechangedeventargs#source)|Получает источник события.|
+||[type](/javascript/api/excel/excel.refreshmodechangedeventargs#type)|Получает тип события.|
+|[RefreshRequestCompletedEventArgs](/javascript/api/excel/excel.refreshrequestcompletedeventargs)|[обновляется](/javascript/api/excel/excel.refreshrequestcompletedeventargs#refreshed)|Указывает, успешно ли выполнен запрос на обновление.|
 ||[serviceId](/javascript/api/excel/excel.refreshrequestcompletedeventargs#serviceid)|Уникальный идентификатор объекта, для которого был выполнен запрос на обновление.|
-||[source](/javascript/api/excel/excel.refreshrequestcompletedeventargs#source)|Получает источник события. Дополнительные сведения см. в статье Excel.EventSource.|
-||[type](/javascript/api/excel/excel.refreshrequestcompletedeventargs#type)|Получает тип события. Дополнительные сведения см. в статье Excel.EventType.|
+||[source](/javascript/api/excel/excel.refreshrequestcompletedeventargs#source)|Получает источник события.|
+||[type](/javascript/api/excel/excel.refreshrequestcompletedeventargs#type)|Получает тип события.|
 ||[дефицит](/javascript/api/excel/excel.refreshrequestcompletedeventargs#warnings)|Массив, содержащий все предупреждения, созданные с помощью запроса на обновление.|
-|[ShapeCollection](/javascript/api/excel/excel.shapecollection)|[addSvg(xml: string)](/javascript/api/excel/excel.shapecollection#addsvg-xml-)|Создает изображение SVG (масштабируемая векторная графика) из строки XML и добавляет его на лист. Возвращает объект Shape, представляющий новое изображение.|
+|[ShapeCollection](/javascript/api/excel/excel.shapecollection)|[addSvg(xml: string)](/javascript/api/excel/excel.shapecollection#addsvg-xml-)|Создает изображение SVG (масштабируемая векторная графика) из строки XML и добавляет его на лист.|
 |[Slicer](/javascript/api/excel/excel.slicer)|[nameInFormula](/javascript/api/excel/excel.slicer#nameinformula)|Представляет имя среза, используемое в формуле.|
+||[слицерстиле](/javascript/api/excel/excel.slicer#slicerstyle)|Стиль, примененный к срезу.|
 ||[Сетстиле (Style: string \| слицерстиле \| буилтинслицерстиле)](/javascript/api/excel/excel.slicer#setstyle-style-)|Задает стиль, применяемый к срезу.|
 |[Table](/javascript/api/excel/excel.table)|[clearStyle()](/javascript/api/excel/excel.table#clearstyle--)|Изменяет таблицу для использования стиля таблицы по умолчанию.|
 ||[onFiltered](/javascript/api/excel/excel.table#onfiltered)|Возникает, если применен фильтр к указанной таблице.|
@@ -90,7 +91,7 @@ ms.locfileid: "48774742"
 ||[Сетстиле (Style: string \| TableStyle \| буилтинтаблестиле)](/javascript/api/excel/excel.table#setstyle-style-)|Задает стиль, применяемый к таблице.|
 |[TableCollection](/javascript/api/excel/excel.tablecollection)|[onFiltered](/javascript/api/excel/excel.tablecollection#onfiltered)|Возникает, если применен фильтр к любой таблице в книге или листе.|
 |[TableFilteredEventArgs](/javascript/api/excel/excel.tablefilteredeventargs)|[tableId](/javascript/api/excel/excel.tablefilteredeventargs#tableid)|Получает идентификатор таблицы, в которой применяется фильтр.|
-||[type](/javascript/api/excel/excel.tablefilteredeventargs#type)|Получает тип события. Дополнительные сведения см. в статье Excel.EventType.|
+||[type](/javascript/api/excel/excel.tablefilteredeventargs#type)|Получает тип события.|
 ||[worksheetId](/javascript/api/excel/excel.tablefilteredeventargs#worksheetid)|Получает идентификатор листа, содержащего таблицу.|
 |[Workbook](/javascript/api/excel/excel.workbook)|[линкеддататипес](/javascript/api/excel/excel.workbook#linkeddatatypes)|Возвращает коллекцию связанных типов данных, которые являются частью рабочей книги.|
 ||[шовпивотфиелдлист](/javascript/api/excel/excel.workbook#showpivotfieldlist)|Указывает, отображается ли область списка полей сводной таблицы на уровне книги.|
@@ -99,7 +100,7 @@ ms.locfileid: "48774742"
 ||[onFiltered](/javascript/api/excel/excel.worksheet#onfiltered)|Возникает, если применен фильтр к указанному листу.|
 |[WorksheetCollection](/javascript/api/excel/excel.worksheetcollection)|[addFromBase64(base64File: string, sheetNamesToInsert?: string[], positionType?: Excel.WorksheetPositionType, relativeTo?: Worksheet \| string)](/javascript/api/excel/excel.worksheetcollection#addfrombase64-base64file--sheetnamestoinsert--positiontype--relativeto-)|Вставляет указанные листы книги в текущую книгу.|
 ||[onFiltered](/javascript/api/excel/excel.worksheetcollection#onfiltered)|Возникает при применении любого фильтра листа в книге.|
-|[WorksheetFilteredEventArgs](/javascript/api/excel/excel.worksheetfilteredeventargs)|[type](/javascript/api/excel/excel.worksheetfilteredeventargs#type)|Получает тип события. Дополнительные сведения см. в статье Excel.EventType.|
+|[WorksheetFilteredEventArgs](/javascript/api/excel/excel.worksheetfilteredeventargs)|[type](/javascript/api/excel/excel.worksheetfilteredeventargs#type)|Получает тип события.|
 ||[worksheetId](/javascript/api/excel/excel.worksheetfilteredeventargs#worksheetid)|Получает идентификатор листа, в котором применяется фильтр.|
 
 ## <a name="see-also"></a>См. также

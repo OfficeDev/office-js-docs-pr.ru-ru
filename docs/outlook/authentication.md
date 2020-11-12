@@ -1,20 +1,20 @@
 ---
 title: Варианты проверки подлинности в надстройках Outlook
 description: Надстройки Outlook предоставляют несколько различных способов проверки подлинности для разных сценариев.
-ms.date: 08/20/2020
+ms.date: 11/10/2020
 localization_priority: Priority
-ms.openlocfilehash: 2f0fd2eae9bedf67b279c2b68a61ebed001d963c
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 54584483b7d4fd75e3f2d6c3188465333e9f58d5
+ms.sourcegitcommit: ca66ff7462bfdf4ed7ae04f43d1388c24de63bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293970"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48996398"
 ---
 # <a name="authentication-options-in-outlook-add-ins"></a>Варианты проверки подлинности в надстройках Outlook
 
 Надстройка Outlook может получать доступ к данным из любого расположения в Интернете с сервера, на котором размещается надстройка, из внутренней сети или из другого места в облаке. Если эти сведения защищены, то надстройке нужен способ проверки подлинности пользователя. Надстройки Outlook предоставляют несколько различных способов проверки подлинности для разных сценариев.
 
-## <a name="single-sign-on-access-token-preview"></a>Маркер доступа для единого входа (предварительная версия)
+## <a name="single-sign-on-access-token"></a>Маркер доступа для единого входа
 
 Маркеры доступа для единого входа упрощают проверку подлинности надстройки и получение маркеров доступа для вызова [API Microsoft Graph](/graph/overview). Эта возможность повышает удобство работы, так как пользователю не требуется вводить свои учетные данные.
 
