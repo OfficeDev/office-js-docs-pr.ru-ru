@@ -669,23 +669,37 @@
           displayName: Excel
     - name: Пользовательские функции
       items:
-        - name: Общие сведения
+        - name: Обзор
           href: excel/custom-functions-overview.md
           displayName: 'Excel, Custom Functions'
-        - name: Начало работы с пользовательскими функциями Excel
-          href: quickstarts/excel-custom-functions-quickstart-redirect.md
+        - name: Наборы обязательных элементов API CustomFunctionsRuntime
+          href: excel/custom-functions-requirement-sets.md
           displayName: 'Excel, Custom Functions'
-        - name: Руководство по пользовательским функциям
-          href: tutorials/excel-tutorial-create-custom-functions.md
+        - name: Руководства
+          items:
+            - name: Создание первой надстройки пользовательских функций
+              href: quickstarts/excel-custom-functions-quickstart-redirect.md
+              displayName: 'Excel, Custom Functions'
+            - name: Руководство по пользовательским функциям
+              href: tutorials/excel-tutorial-create-custom-functions.md
+              displayName: 'Excel, Custom Functions'
+            - name: Руководство по обмену данными между пользовательской функцией и областью задач
+              href: tutorials/share-data-and-events-between-custom-functions-and-the-task-pane-tutorial.md
+              displayName: 'Excel, Custom Functions'
+        - name: Рекомендации по именованию
+          href: excel/custom-functions-naming.md
           displayName: 'Excel, Custom Functions'
-        - name: Учебник по обмену данными между пользовательской функцией и областью задач
-          href: tutorials/share-data-and-events-between-custom-functions-and-the-task-pane-tutorial.md
-          displayName: 'Excel, Custom Functions'
-        - name: Вызов API JS для Excel из пользовательской функции
-          href: excel/call-excel-apis-from-custom-function.md
+        - name: Варианты параметров
+          href: excel/custom-functions-parameter-options.md
           displayName: 'Excel, Custom Functions'
         - name: Обработка ошибок
           href: excel/custom-functions-errors.md
+          displayName: 'Excel, Custom Functions'
+        - name: Автоматическое создание метаданных JSON
+          href: excel/custom-functions-json-autogeneration.md
+          displayName: 'Excel, Custom Functions'
+        - name: Вызов API JS для Excel
+          href: excel/call-excel-apis-from-custom-function.md
           displayName: 'Excel, Custom Functions'
         - name: Определение аналогичной функции XLL
           href: excel/make-custom-functions-compatible-with-xll-udf.md
@@ -693,29 +707,14 @@
         - name: Локализация
           href: excel/custom-functions-localize.md
           displayName: 'Excel, Custom Functions'
-        - name: Метаданные
+        - name: Создание метаданных JSON вручную
           href: excel/custom-functions-json.md
-          displayName: 'Excel, Custom Functions'
-        - name: Генерация метаданных
-          href: excel/custom-functions-json-autogeneration.md
-          displayName: 'Excel, Custom Functions'
-        - name: Рекомендации по именованию
-          href: excel/custom-functions-naming.md
-          displayName: 'Excel, Custom Functions'
-        - name: Варианты параметров
-          href: excel/custom-functions-parameter-options.md
-          displayName: 'Excel, Custom Functions'
-        - name: Наборы обязательных элементов
-          href: excel/custom-functions-requirement-sets.md
           displayName: 'Excel, Custom Functions'
         - name: Возвращение динамического массива
           href: excel/custom-functions-dynamic-arrays.md
           displayName: 'Excel, Custom Functions'
-        - name: Общее время выполнения
+        - name: Общая среда выполнения
           href: excel/custom-functions-shared-overview.md
-          displayName: 'Excel, Custom Functions'
-        - name: Устранение неполадок
-          href: excel/custom-functions-troubleshooting.md
           displayName: 'Excel, Custom Functions'
         - name: Пользовательские функции без пользовательского интерфейса
           items:
@@ -733,6 +732,9 @@
           displayName: 'Excel, Custom Functions'
         - name: Веб-запросы
           href: excel/custom-functions-web-reqs.md
+          displayName: 'Excel, Custom Functions'
+        - name: Устранение неполадок
+          href: excel/custom-functions-troubleshooting.md
           displayName: 'Excel, Custom Functions'
 - name: OneNote
   items:
@@ -1118,7 +1120,7 @@
     - name: Документация по надстройкам Word
       href: word/index.yml
       displayName: Word
-    - name: Общие сведения
+    - name: Обзор
       href: word/word-add-ins-programming-overview.md
       displayName: Word
     - name: Создание первой надстройки Word
