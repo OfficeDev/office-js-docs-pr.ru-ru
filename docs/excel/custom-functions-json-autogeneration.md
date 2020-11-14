@@ -1,18 +1,18 @@
 ---
-ms.date: 09/25/2020
+ms.date: 11/06/2020
 description: Использование тегов JSDoc для динамического создания метаданных JSON пользовательских функций.
 title: Автоматическое генерирование метаданных JSON для пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: 151dc7c97b2a98743906b7e0a920fdc1eff62e7f
-ms.sourcegitcommit: 42202d7e2ac24dffa77cf937f5697a1cd79ee790
+ms.openlocfilehash: 23ad0466c157b6dbb9d5fd5fbecf3fd5fe479752
+ms.sourcegitcommit: 5bfd1e9956485c140179dfcc9d210c4c5a49a789
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "48308539"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "49071650"
 ---
 # <a name="autogenerate-json-metadata-for-custom-functions"></a>Автоматическое генерирование метаданных JSON для пользовательских функций
 
-Если пользовательская функция Excel написана в JavaScript или TypeScript, [теги JSDoc](https://jsdoc.app/) используются для предоставления дополнительной информации о пользовательской функции. Теги JSDoc используются при сборке для создания [файла метаданных JSON](custom-functions-json.md). Использование тегов JSDoc освобождает вас от необходимости редактировать файл метаданных JSON вручную.
+Если пользовательская функция Excel написана в JavaScript или TypeScript, [теги JSDoc](https://jsdoc.app/) используются для предоставления дополнительной информации о пользовательской функции. Теги JSDoc используются при сборке для создания файла метаданных JSON. С помощью тегов Жсдок вы избавляете от усилий по [изменению файла МЕТАДАННЫХ JSON вручную](custom-functions-json.md).
 
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
@@ -140,7 +140,7 @@ ms.locfileid: "48308539"
 
 Синтаксис: @helpurl _url_
 
-Предоставленный _url_-адрес отображается в Excel.
+Предоставленный _url_ -адрес отображается в Excel.
 
 В следующем примере `helpurl` используется значение `www.contoso.com/weatherhelp` .
 
@@ -234,7 +234,7 @@ function add(first: number, second: number): number {
 
 ### <a name="returns"></a>@returns
 
-Синтаксис: @returns {_type_}
+Синтаксис: @returns { _type_ }
 
 Предоставляет тип для возвращаемого значения.
 
@@ -327,5 +327,5 @@ function roll6sided(): number {
 
 ## <a name="see-also"></a>Дополнительные ресурсы
 
-* [Метаданные пользовательских функций](custom-functions-json.md)
+* [Создание метаданных JSON для пользовательских функций вручную](custom-functions-json.md)
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)

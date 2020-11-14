@@ -1,14 +1,14 @@
 ---
-ms.date: 04/29/2020
+ms.date: 11/06/2020
 description: Запрос, потоковая передача и отмена потоковой передачи внешних данных к книге с помощью пользовательских функций в Excel
 title: Получение и обработка данных с помощью пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: cd9a3eb3456cfd32d55d3caa6ccc36f2e05ed004
-ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
+ms.openlocfilehash: a5faa4fd8af2b41a3d79ac1c978a4c550592b27e
+ms.sourcegitcommit: 5bfd1e9956485c140179dfcc9d210c4c5a49a789
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "47819513"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "49071671"
 ---
 # <a name="receive-and-handle-data-with-custom-functions"></a>Получение и обработка данных с помощью пользовательских функций
 
@@ -178,6 +178,6 @@ ws.onerror(error){
 
 - [Пересчитываемые значения в функциях](custom-functions-volatile.md)
 - [Создание метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md)
-- [Метаданные пользовательских функций](custom-functions-json.md)
+- [Создание метаданных JSON для пользовательских функций вручную](custom-functions-json.md)
 - [Создание пользовательских функций в Excel](custom-functions-overview.md)
 - [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)

@@ -1,14 +1,14 @@
 ---
 title: Добавление и удаление вложений в надстройке Outlook
 description: Можно использовать различные API вложений для управления файлами или элементами Outlook, связанными с элементом, создаваемым пользователем.
-ms.date: 10/31/2019
+ms.date: 11/11/2020
 localization_priority: Normal
-ms.openlocfilehash: d162ae4c0fa8059376a3c55463080e38679d9a01
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 6f146b3efc3234313191d93af05d9c0d35111829
+ms.sourcegitcommit: 5bfd1e9956485c140179dfcc9d210c4c5a49a789
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611675"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "49071706"
 ---
 # <a name="manage-an-items-attachments-in-a-compose-form-in-outlook"></a>Управление вложениями элемента в форме создания в Outlook
 
@@ -117,6 +117,11 @@ function addItemAttachment(itemId) {
 > Вы можете использовать надстройку создания, чтобы вложить экземпляр повторяющейся встречи в Outlook в Интернете или на мобильных устройствах. Однако в расширенном клиенте Outlook попытка прикрепить такой экземпляр приведет к прикреплению ряда повторений (основной встречи).
 
 ## <a name="get-attachments"></a>Получение вложений
+
+API для получения вложений в режиме создания доступны в [наборе требований 1,8](../reference/objectmodel/requirement-set-1.8/outlook-requirement-set-1.8.md).
+
+- [жетаттачментсасинк](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
+- [жетаттачментконтентасинк](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
 
 Вы можете использовать метод [жетаттачментсасинк](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods) для получения вложений создаваемого сообщения или встречи.
 

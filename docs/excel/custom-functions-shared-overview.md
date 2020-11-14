@@ -1,16 +1,16 @@
 ---
 ms.date: 08/13/2020
 description: Узнайте, как запускать пользовательские функции, кнопки ленты и код области задач в одной и той же среде выполнения JavaScript для координации сценариев в вашей надстройке.
-title: Запуск кода собственной надстройки в общей среде выполнения JavaScript
+title: Запуск кода надстройки в общей среде выполнения JavaScript
 localization_priority: Priority
-ms.openlocfilehash: 04932bcf292686fd9d0abf2ff99c19f062f21456
-ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
+ms.openlocfilehash: 70d13372dbe3ef40d527c781d0fd55dc0b1eb7ed
+ms.sourcegitcommit: 5bfd1e9956485c140179dfcc9d210c4c5a49a789
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "47819548"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "49071630"
 ---
-# <a name="overview-run-your-add-in-code-in-a-shared-javascript-runtimes"></a>Обзор: запуск кода собственной надстройки в общей среде выполнения JavaScript
+# <a name="overview-run-your-add-in-code-in-a-shared-javascript-runtime"></a>Обзор: запуск кода надстройки в общей среде выполнения JavaScript
 
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 

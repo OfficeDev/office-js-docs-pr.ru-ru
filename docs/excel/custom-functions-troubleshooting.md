@@ -1,14 +1,14 @@
 ---
-ms.date: 04/29/2020
+ms.date: 11/06/2020
 description: Устранение распространенных проблем с пользовательскими функциями Excel.
 title: Устранение проблем в пользовательских функциях
 localization_priority: Normal
-ms.openlocfilehash: 3ee18eabd19be56eece465da880fae7af1c12f3d
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: fb187c443f02df92f9d489d4c6463f76d072a5e5
+ms.sourcegitcommit: 5bfd1e9956485c140179dfcc9d210c4c5a49a789
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609799"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "49071664"
 ---
 # <a name="troubleshoot-custom-functions"></a>Устранение проблем в пользовательских функциях
 
@@ -76,7 +76,7 @@ function add(first, second) {
 CustomFunctions.associate("ADD", add);
 ```
 
-Дополнительные сведения об этом процессе см. в статье [Сопоставление имен функций с метаданными JSON](../excel/custom-functions-json.md#associating-function-names-with-json-metadata).
+Дополнительные сведения об этом процессе приведены в статье [сопоставление имен функций с метаданными JSON](../excel/custom-functions-json.md#associating-function-names-with-json-metadata).
 
 ## <a name="reporting-feedback"></a>Обратная связь
 
@@ -95,5 +95,5 @@ CustomFunctions.associate("ADD", add);
 
 ## <a name="see-also"></a>Дополнительные ресурсы
 
-* [Автогенерация метаданных для пользовательских функций](custom-functions-json-autogeneration.md)
+* [Автоматическое генерирование метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md)
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)

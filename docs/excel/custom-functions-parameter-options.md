@@ -1,14 +1,14 @@
 ---
-ms.date: 04/29/2020
+ms.date: 11/06/2020
 description: Узнайте, как использовать различные параметры в пользовательских функциях, таких как диапазоны Excel, необязательные параметры, контекст вызова и многое другое.
 title: Параметры для пользовательских функций Excel
 localization_priority: Normal
-ms.openlocfilehash: ee193ed68ef59bfd9068bc43cd30721d6bb7b86a
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 0a803a4d41354530584b25d2bf9df944af430909
+ms.sourcegitcommit: 5bfd1e9956485c140179dfcc9d210c4c5a49a789
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609277"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "49071622"
 ---
 # <a name="custom-functions-parameter-options"></a>Параметры параметров пользовательских функций
 
@@ -221,7 +221,7 @@ function addSingleRange(singleRange) {
 
 
 ### <a name="declaring-repeating-parameters"></a>Объявление повторяющихся параметров
-В typescript укажите, что параметр является многомерным. Например, `ADD(values: number[])` указывает на одномерный массив, который указывает на `ADD(values:number[][])` двухмерный массив и т. д.
+В typescript укажите, что параметр является многомерным. Например,  `ADD(values: number[])` указывает на одномерный массив, который указывает на `ADD(values:number[][])` двухмерный массив и т. д.
 
 В JavaScript используйте одномерные `@param values {number[]}` массивы, `@param <name> {number[][]}` для двумерных массивов и т. д. для дополнительных измерений.
 
@@ -253,7 +253,7 @@ function add(first, second, invocation) {
 ## <a name="see-also"></a>См. также
 
 * [Получение и обработка данных с помощью пользовательских функций](custom-functions-web-reqs.md)
-* [Метаданные пользовательских функций](custom-functions-json.md)
 * [Автоматическое генерирование метаданных JSON для пользовательских функций](custom-functions-json-autogeneration.md)
+* [Создание метаданных JSON для пользовательских функций вручную](custom-functions-json.md)
 * [Создание пользовательских функций в Excel](custom-functions-overview.md)
 * [Руководство по пользовательским функциям в Excel](../tutorials/excel-tutorial-create-custom-functions.md)
