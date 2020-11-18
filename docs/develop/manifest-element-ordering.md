@@ -1,14 +1,14 @@
 ---
 title: Как определить правильный порядок элементов манифеста
 description: Узнайте, как определить правильный порядок расположения дочерних элементов в родительском элементе.
-ms.date: 01/10/2020
+ms.date: 11/01/2020
 localization_priority: Normal
-ms.openlocfilehash: 8798031410e6d71fd6d9f3f08f89a4c6f78f4692
-ms.sourcegitcommit: ca66ff7462bfdf4ed7ae04f43d1388c24de63bf9
+ms.openlocfilehash: 35ed1b87162b84ff13cafc2084ce9ca1b1666235
+ms.sourcegitcommit: 3189c4bd62dbe5950b19f28ac2c1314b6d304dca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48996384"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "49087926"
 ---
 # <a name="how-to-find-the-proper-order-of-manifest-elements"></a>Как определить правильный порядок элементов манифеста
 
@@ -209,7 +209,7 @@ XML-элементы в манифесте надстройки Office долж�
                                     <Title>
                                     <FunctionName>
                     <CustomTab>
-                        <Group>
+                        <Group> (can be below <ControlGroup>)
                             <Label>
                             <Icon>
                                 <Image>
@@ -237,7 +237,9 @@ XML-элементы в манифесте надстройки Office долж�
                                         <SourceLocation>
                                         <Title>
                                         <FunctionName>
+                        <ControlGroup> (can be above <Group>)
                         <Label>
+                        <InsertAfter> (or <InsertBefore>)
                     <OfficeMenu>
                         <Control>
                             <Label>
