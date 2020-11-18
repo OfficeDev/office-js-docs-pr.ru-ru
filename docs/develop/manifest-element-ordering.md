@@ -1,32 +1,32 @@
 ---
 title: Как определить правильный порядок элементов манифеста
 description: Узнайте, как определить правильный порядок расположения дочерних элементов в родительском элементе.
-ms.date: 01/10/2020
+ms.date: 11/01/2020
 localization_priority: Normal
-ms.openlocfilehash: 8798031410e6d71fd6d9f3f08f89a4c6f78f4692
-ms.sourcegitcommit: ca66ff7462bfdf4ed7ae04f43d1388c24de63bf9
+ms.openlocfilehash: 35ed1b87162b84ff13cafc2084ce9ca1b1666235
+ms.sourcegitcommit: 3189c4bd62dbe5950b19f28ac2c1314b6d304dca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48996384"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "49087926"
 ---
-# <a name="how-to-find-the-proper-order-of-manifest-elements"></a><span data-ttu-id="8a6c4-103">Как определить правильный порядок элементов манифеста</span><span class="sxs-lookup"><span data-stu-id="8a6c4-103">How to find the proper order of manifest elements</span></span>
+# <a name="how-to-find-the-proper-order-of-manifest-elements"></a><span data-ttu-id="fef23-103">Как определить правильный порядок элементов манифеста</span><span class="sxs-lookup"><span data-stu-id="fef23-103">How to find the proper order of manifest elements</span></span>
 
-<span data-ttu-id="8a6c4-104">XML-элементы в манифесте надстройки Office должны располагаться под правильным родительском элементом *и* в определенном порядке относительно друг друга под родительским элементом.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-104">The XML elements in the manifest of an Office Add-in must be under the proper parent element *and* in a specific order, relative to each other, under the parent.</span></span>
+<span data-ttu-id="fef23-104">XML-элементы в манифесте надстройки Office должны располагаться под правильным родительском элементом *и* в определенном порядке относительно друг друга под родительским элементом.</span><span class="sxs-lookup"><span data-stu-id="fef23-104">The XML elements in the manifest of an Office Add-in must be under the proper parent element *and* in a specific order, relative to each other, under the parent.</span></span>
 
-<span data-ttu-id="8a6c4-105">Нужный порядок указывается в XSD-файлах в папке [Schemas](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8).</span><span class="sxs-lookup"><span data-stu-id="8a6c4-105">The required ordering is specified in the XSD files in the [Schemas](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8) folder.</span></span> <span data-ttu-id="8a6c4-106">XSD-файлы упорядочены в подпапках для области задач, контента и почтовых надстроек.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-106">The XSD files are categorized into subfolders for taskpane, content, and mail add-ins.</span></span>
+<span data-ttu-id="fef23-105">Нужный порядок указывается в XSD-файлах в папке [Schemas](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8).</span><span class="sxs-lookup"><span data-stu-id="fef23-105">The required ordering is specified in the XSD files in the [Schemas](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8) folder.</span></span> <span data-ttu-id="fef23-106">XSD-файлы упорядочены в подпапках для области задач, контента и почтовых надстроек.</span><span class="sxs-lookup"><span data-stu-id="fef23-106">The XSD files are categorized into subfolders for taskpane, content, and mail add-ins.</span></span>
 
-<span data-ttu-id="8a6c4-107">Например, в элементе `<OfficeApp>` элементы `<Id>`, `<Version>`, `<ProviderName>` должны располагаться в указанном порядке.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-107">For example, in the `<OfficeApp>` element, the `<Id>`, `<Version>`, `<ProviderName>` must appear in that order.</span></span> <span data-ttu-id="8a6c4-108">Если добавляется элемент `<AlternateId>`, он должен размещаться между элементами `<Id>` и `<Version>`.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-108">If an `<AlternateId>` element is added, it must be between the `<Id>` and `<Version>` element.</span></span> <span data-ttu-id="8a6c4-109">Ваш манифест будет недопустимым и надстройка не загрузится, если любой из элементов находится в неправильном порядке.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-109">Your manifest will not be valid and your add-in will not load, if any element is in the wrong order.</span></span>
+<span data-ttu-id="fef23-107">Например, в элементе `<OfficeApp>` элементы `<Id>`, `<Version>`, `<ProviderName>` должны располагаться в указанном порядке.</span><span class="sxs-lookup"><span data-stu-id="fef23-107">For example, in the `<OfficeApp>` element, the `<Id>`, `<Version>`, `<ProviderName>` must appear in that order.</span></span> <span data-ttu-id="fef23-108">Если добавляется элемент `<AlternateId>`, он должен размещаться между элементами `<Id>` и `<Version>`.</span><span class="sxs-lookup"><span data-stu-id="fef23-108">If an `<AlternateId>` element is added, it must be between the `<Id>` and `<Version>` element.</span></span> <span data-ttu-id="fef23-109">Ваш манифест будет недопустимым и надстройка не загрузится, если любой из элементов находится в неправильном порядке.</span><span class="sxs-lookup"><span data-stu-id="fef23-109">Your manifest will not be valid and your add-in will not load, if any element is in the wrong order.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="8a6c4-110">[Средство проверки в Office-ADDIN-manifest](../testing/troubleshoot-manifest.md#validate-your-manifest-with-office-addin-manifest) использует то же самое сообщение об ошибке, если элемент находится в неупорядоченном виде, если элемент находится в неправильном родительском элементе.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-110">The [validator within office-addin-manifest](../testing/troubleshoot-manifest.md#validate-your-manifest-with-office-addin-manifest) uses the same error message when an element is out-of-order as it does when an element is under the wrong parent.</span></span> <span data-ttu-id="8a6c4-111">В сообщении об ошибке указывается, что для родительского элемента этот дочерний элемент не является допустимым.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-111">The error says the child element is not a valid child of the parent element.</span></span> <span data-ttu-id="8a6c4-112">Если появляется такая ошибка, но при этом в справочной документации указано, что дочерний элемент *является* допустимым для родительского, значит проблема вероятно связана с тем, что дочерний элемент помещен в неправильном порядке.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-112">If you get such an error but the reference documentation for the child element indicates that it *is* valid for the parent, then the problem is likely that the child has been placed in the wrong order.</span></span>
+> <span data-ttu-id="fef23-110">[Средство проверки в Office-ADDIN-manifest](../testing/troubleshoot-manifest.md#validate-your-manifest-with-office-addin-manifest) использует то же самое сообщение об ошибке, если элемент находится в неупорядоченном виде, если элемент находится в неправильном родительском элементе.</span><span class="sxs-lookup"><span data-stu-id="fef23-110">The [validator within office-addin-manifest](../testing/troubleshoot-manifest.md#validate-your-manifest-with-office-addin-manifest) uses the same error message when an element is out-of-order as it does when an element is under the wrong parent.</span></span> <span data-ttu-id="fef23-111">В сообщении об ошибке указывается, что для родительского элемента этот дочерний элемент не является допустимым.</span><span class="sxs-lookup"><span data-stu-id="fef23-111">The error says the child element is not a valid child of the parent element.</span></span> <span data-ttu-id="fef23-112">Если появляется такая ошибка, но при этом в справочной документации указано, что дочерний элемент *является* допустимым для родительского, значит проблема вероятно связана с тем, что дочерний элемент помещен в неправильном порядке.</span><span class="sxs-lookup"><span data-stu-id="fef23-112">If you get such an error but the reference documentation for the child element indicates that it *is* valid for the parent, then the problem is likely that the child has been placed in the wrong order.</span></span>
 
-<span data-ttu-id="8a6c4-113">В следующих разделах показаны элементы манифеста в том порядке, в котором они должны отображаться.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-113">The following sections show the manifest elements in the order in which they must appear.</span></span> <span data-ttu-id="8a6c4-114">Существуют различия в зависимости от того `type` `<OfficeApp>` , имеет ли атрибут элемента значение `TaskPaneApp` , `ContentApp` или `MailApp` .</span><span class="sxs-lookup"><span data-stu-id="8a6c4-114">There are differences depending on whether the `type` attribute of the `<OfficeApp>` element is `TaskPaneApp`, `ContentApp`, or `MailApp`.</span></span> <span data-ttu-id="8a6c4-115">Чтобы эти разделы не стали слишком громоздкими, строго сложный `<VersionOverrides>` элемент разбивается на отдельные разделы.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-115">To keep these sections from becoming too unwieldy, the highly complex `<VersionOverrides>` element is broken out into separate sections.</span></span>
+<span data-ttu-id="fef23-113">В следующих разделах показаны элементы манифеста в том порядке, в котором они должны отображаться.</span><span class="sxs-lookup"><span data-stu-id="fef23-113">The following sections show the manifest elements in the order in which they must appear.</span></span> <span data-ttu-id="fef23-114">Существуют различия в зависимости от того `type` `<OfficeApp>` , имеет ли атрибут элемента значение `TaskPaneApp` , `ContentApp` или `MailApp` .</span><span class="sxs-lookup"><span data-stu-id="fef23-114">There are differences depending on whether the `type` attribute of the `<OfficeApp>` element is `TaskPaneApp`, `ContentApp`, or `MailApp`.</span></span> <span data-ttu-id="fef23-115">Чтобы эти разделы не стали слишком громоздкими, строго сложный `<VersionOverrides>` элемент разбивается на отдельные разделы.</span><span class="sxs-lookup"><span data-stu-id="fef23-115">To keep these sections from becoming too unwieldy, the highly complex `<VersionOverrides>` element is broken out into separate sections.</span></span>
 
 > [!Note]
-> <span data-ttu-id="8a6c4-116">Не все указанные элементы являются обязательными.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-116">Not all of the elements shown are mandatory.</span></span> <span data-ttu-id="8a6c4-117">Если `minOccurs` значение элемента равно **0** в [схеме](/openspecs/office_file_formats/ms-owemxml/4e112d0a-c8ab-46a6-8a6c-2a1c1d1299e3), элемент является необязательным.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-117">If the `minOccurs` value for a element is **0** in the [schema](/openspecs/office_file_formats/ms-owemxml/4e112d0a-c8ab-46a6-8a6c-2a1c1d1299e3), the element is optional.</span></span>
+> <span data-ttu-id="fef23-116">Не все указанные элементы являются обязательными.</span><span class="sxs-lookup"><span data-stu-id="fef23-116">Not all of the elements shown are mandatory.</span></span> <span data-ttu-id="fef23-117">Если `minOccurs` значение элемента равно **0** в [схеме](/openspecs/office_file_formats/ms-owemxml/4e112d0a-c8ab-46a6-8a6c-2a1c1d1299e3), элемент является необязательным.</span><span class="sxs-lookup"><span data-stu-id="fef23-117">If the `minOccurs` value for a element is **0** in the [schema](/openspecs/office_file_formats/ms-owemxml/4e112d0a-c8ab-46a6-8a6c-2a1c1d1299e3), the element is optional.</span></span>
 
-## <a name="basic-task-pane-add-in-element-ordering"></a><span data-ttu-id="8a6c4-118">Упорядочение элементов базовой области задач</span><span class="sxs-lookup"><span data-stu-id="8a6c4-118">Basic task pane add-in element ordering</span></span>
+## <a name="basic-task-pane-add-in-element-ordering"></a><span data-ttu-id="fef23-118">Упорядочение элементов базовой области задач</span><span class="sxs-lookup"><span data-stu-id="fef23-118">Basic task pane add-in element ordering</span></span>
 
 ```xml
 <OfficeApp xsi:type="TaskPaneApp">
@@ -67,9 +67,9 @@ ms.locfileid: "48996384"
     <ExtendedOverrides>
 ```
 
-<span data-ttu-id="8a6c4-119">\*Рассмотрите [сортировку элементов надстройки области задач в VersionOverrides](#task-pane-add-in-element-ordering-within-versionoverrides) для упорядочивания дочерних элементов VersionOverrides.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-119">\*See [Task pane add-in element ordering within VersionOverrides](#task-pane-add-in-element-ordering-within-versionoverrides) for the ordering of children elements of VersionOverrides.</span></span>
+<span data-ttu-id="fef23-119">\*Рассмотрите [сортировку элементов надстройки области задач в VersionOverrides](#task-pane-add-in-element-ordering-within-versionoverrides) для упорядочивания дочерних элементов VersionOverrides.</span><span class="sxs-lookup"><span data-stu-id="fef23-119">\*See [Task pane add-in element ordering within VersionOverrides](#task-pane-add-in-element-ordering-within-versionoverrides) for the ordering of children elements of VersionOverrides.</span></span>
 
-## <a name="basic-mail-add-in-element-ordering"></a><span data-ttu-id="8a6c4-120">Упорядочение элементов базовой почтовой надстройки</span><span class="sxs-lookup"><span data-stu-id="8a6c4-120">Basic mail add-in element ordering</span></span>
+## <a name="basic-mail-add-in-element-ordering"></a><span data-ttu-id="fef23-120">Упорядочение элементов базовой почтовой надстройки</span><span class="sxs-lookup"><span data-stu-id="fef23-120">Basic mail add-in element ordering</span></span>
 
 ```xml
 <OfficeApp xsi:type="MailApp">
@@ -110,9 +110,9 @@ ms.locfileid: "48996384"
     <VersionOverrides>*
 ```
 
-<span data-ttu-id="8a6c4-121">\*В статье упорядочение [элементов почтовых ящиков в VersionOverrides ver. 1,0](#mail-add-in-element-ordering-within-versionoverrides-ver-10) и [почтовых почтовых элементов надстройки в VersionOverrides ver. 1,1](#mail-add-in-element-ordering-within-versionoverrides-ver-11) для упорядочивания дочерних элементов VersionOverrides.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-121">\*See [Mail add-in element ordering within VersionOverrides Ver. 1.0](#mail-add-in-element-ordering-within-versionoverrides-ver-10) and [Mail add-in element ordering within VersionOverrides Ver. 1.1](#mail-add-in-element-ordering-within-versionoverrides-ver-11) for the ordering of children elements of VersionOverrides.</span></span>
+<span data-ttu-id="fef23-121">\*В статье упорядочение [элементов почтовых ящиков в VersionOverrides ver. 1,0](#mail-add-in-element-ordering-within-versionoverrides-ver-10) и [почтовых почтовых элементов надстройки в VersionOverrides ver. 1,1](#mail-add-in-element-ordering-within-versionoverrides-ver-11) для упорядочивания дочерних элементов VersionOverrides.</span><span class="sxs-lookup"><span data-stu-id="fef23-121">\*See [Mail add-in element ordering within VersionOverrides Ver. 1.0](#mail-add-in-element-ordering-within-versionoverrides-ver-10) and [Mail add-in element ordering within VersionOverrides Ver. 1.1](#mail-add-in-element-ordering-within-versionoverrides-ver-11) for the ordering of children elements of VersionOverrides.</span></span>
 
-## <a name="basic-content-add-in-element-ordering"></a><span data-ttu-id="8a6c4-122">Упорядочение элементов базовой надстройки контента</span><span class="sxs-lookup"><span data-stu-id="8a6c4-122">Basic content add-in element ordering</span></span>
+## <a name="basic-content-add-in-element-ordering"></a><span data-ttu-id="fef23-122">Упорядочение элементов базовой надстройки контента</span><span class="sxs-lookup"><span data-stu-id="fef23-122">Basic content add-in element ordering</span></span>
 
 ```xml
 <OfficeApp xsi:type="ContentApp">
@@ -149,9 +149,9 @@ ms.locfileid: "48996384"
     <VersionOverrides>*
 ```
 
-<span data-ttu-id="8a6c4-123">\*Просмотрите [Упорядочивание элементов контентной надстройки в VersionOverrides](#content-add-in-element-ordering-within-versionoverrides) для упорядочивания дочерних элементов VersionOverrides.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-123">\*See [Content add-in element ordering within VersionOverrides](#content-add-in-element-ordering-within-versionoverrides) for the ordering of children elements of VersionOverrides.</span></span>
+<span data-ttu-id="fef23-123">\*Просмотрите [Упорядочивание элементов контентной надстройки в VersionOverrides](#content-add-in-element-ordering-within-versionoverrides) для упорядочивания дочерних элементов VersionOverrides.</span><span class="sxs-lookup"><span data-stu-id="fef23-123">\*See [Content add-in element ordering within VersionOverrides](#content-add-in-element-ordering-within-versionoverrides) for the ordering of children elements of VersionOverrides.</span></span>
 
-## <a name="task-pane-add-in-element-ordering-within-versionoverrides"></a><span data-ttu-id="8a6c4-124">Упорядочение элементов надстройки области задач в VersionOverrides</span><span class="sxs-lookup"><span data-stu-id="8a6c4-124">Task pane add-in element ordering within VersionOverrides</span></span>
+## <a name="task-pane-add-in-element-ordering-within-versionoverrides"></a><span data-ttu-id="fef23-124">Упорядочение элементов надстройки области задач в VersionOverrides</span><span class="sxs-lookup"><span data-stu-id="fef23-124">Task pane add-in element ordering within VersionOverrides</span></span>
 
 ```xml
 <VersionOverrides>
@@ -209,7 +209,7 @@ ms.locfileid: "48996384"
                                     <Title>
                                     <FunctionName>
                     <CustomTab>
-                        <Group>
+                        <Group> (can be below <ControlGroup>)
                             <Label>
                             <Icon>
                                 <Image>
@@ -237,7 +237,9 @@ ms.locfileid: "48996384"
                                         <SourceLocation>
                                         <Title>
                                         <FunctionName>
+                        <ControlGroup> (can be above <Group>)
                         <Label>
+                        <InsertAfter> (or <InsertBefore>)
                     <OfficeMenu>
                         <Control>
                             <Label>
@@ -295,7 +297,7 @@ ms.locfileid: "48996384"
                 <Type>
 ```
 
-## <a name="mail-add-in-element-ordering-within-versionoverrides-ver-10"></a><span data-ttu-id="8a6c4-125">Упорядочение элементов почтовой надстройки в VersionOverrides ver.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-125">Mail add-in element ordering within VersionOverrides Ver.</span></span> <span data-ttu-id="8a6c4-126">1.0</span><span class="sxs-lookup"><span data-stu-id="8a6c4-126">1.0</span></span>
+## <a name="mail-add-in-element-ordering-within-versionoverrides-ver-10"></a><span data-ttu-id="fef23-125">Упорядочение элементов почтовой надстройки в VersionOverrides ver.</span><span class="sxs-lookup"><span data-stu-id="fef23-125">Mail add-in element ordering within VersionOverrides Ver.</span></span> <span data-ttu-id="fef23-126">1.0</span><span class="sxs-lookup"><span data-stu-id="fef23-126">1.0</span></span>
 
 ```xml
 <VersionOverrides>
@@ -389,9 +391,9 @@ ms.locfileid: "48996384"
     <VersionOverrides>*
 ```
 
-<span data-ttu-id="8a6c4-127">\* Объект VersionOverrides со `type` значением `VersionOverridesV1_1` , а не `VersionOverridesV1_0` , может быть вложен в конце внешнего VersionOverrides.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-127">\* A VersionOverrides with `type` value `VersionOverridesV1_1`, instead of `VersionOverridesV1_0`, can be nested at the end of the outer VersionOverrides.</span></span> <span data-ttu-id="8a6c4-128">Сведения о порядке элементов [почтовых ящиков в VersionOverrides ver. 1,1](#mail-add-in-element-ordering-within-versionoverrides-ver-11) для упорядочивания элементов в `VersionOverridesV1_1` .</span><span class="sxs-lookup"><span data-stu-id="8a6c4-128">See [Mail add-in element ordering within VersionOverrides Ver. 1.1](#mail-add-in-element-ordering-within-versionoverrides-ver-11) for the ordering of elements in `VersionOverridesV1_1`.</span></span>
+<span data-ttu-id="fef23-127">\* Объект VersionOverrides со `type` значением `VersionOverridesV1_1` , а не `VersionOverridesV1_0` , может быть вложен в конце внешнего VersionOverrides.</span><span class="sxs-lookup"><span data-stu-id="fef23-127">\* A VersionOverrides with `type` value `VersionOverridesV1_1`, instead of `VersionOverridesV1_0`, can be nested at the end of the outer VersionOverrides.</span></span> <span data-ttu-id="fef23-128">Сведения о порядке элементов [почтовых ящиков в VersionOverrides ver. 1,1](#mail-add-in-element-ordering-within-versionoverrides-ver-11) для упорядочивания элементов в `VersionOverridesV1_1` .</span><span class="sxs-lookup"><span data-stu-id="fef23-128">See [Mail add-in element ordering within VersionOverrides Ver. 1.1](#mail-add-in-element-ordering-within-versionoverrides-ver-11) for the ordering of elements in `VersionOverridesV1_1`.</span></span>
 
-## <a name="mail-add-in-element-ordering-within-versionoverrides-ver-11"></a><span data-ttu-id="8a6c4-129">Упорядочение элементов почтовой надстройки в VersionOverrides ver.</span><span class="sxs-lookup"><span data-stu-id="8a6c4-129">Mail add-in element ordering within VersionOverrides Ver.</span></span> <span data-ttu-id="8a6c4-130">1.1</span><span class="sxs-lookup"><span data-stu-id="8a6c4-130">1.1</span></span>
+## <a name="mail-add-in-element-ordering-within-versionoverrides-ver-11"></a><span data-ttu-id="fef23-129">Упорядочение элементов почтовой надстройки в VersionOverrides ver.</span><span class="sxs-lookup"><span data-stu-id="fef23-129">Mail add-in element ordering within VersionOverrides Ver.</span></span> <span data-ttu-id="fef23-130">1.1</span><span class="sxs-lookup"><span data-stu-id="fef23-130">1.1</span></span>
 
 ```xml
 <VersionOverrides>
@@ -493,7 +495,7 @@ ms.locfileid: "48996384"
             <Scope>
 ```
 
-## <a name="content-add-in-element-ordering-within-versionoverrides"></a><span data-ttu-id="8a6c4-131">Упорядочение элементов контентной надстройки в VersionOverrides</span><span class="sxs-lookup"><span data-stu-id="8a6c4-131">Content add-in element ordering within VersionOverrides</span></span>
+## <a name="content-add-in-element-ordering-within-versionoverrides"></a><span data-ttu-id="fef23-131">Упорядочение элементов контентной надстройки в VersionOverrides</span><span class="sxs-lookup"><span data-stu-id="fef23-131">Content add-in element ordering within VersionOverrides</span></span>
 
 ```xml
 <VersionOverrides>
@@ -504,6 +506,6 @@ ms.locfileid: "48996384"
             <Scope>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="8a6c4-132">См. также</span><span class="sxs-lookup"><span data-stu-id="8a6c4-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fef23-132">См. также</span><span class="sxs-lookup"><span data-stu-id="fef23-132">See also</span></span>
 
-- [<span data-ttu-id="8a6c4-133">Справочник по схеме для манифестов надстроек Office (версия 1.1)</span><span class="sxs-lookup"><span data-stu-id="8a6c4-133">Schema reference for Office Add-ins manifests (v1.1)</span></span>](../develop/add-in-manifests.md)
+- [<span data-ttu-id="fef23-133">Справочник по схеме для манифестов надстроек Office (версия 1.1)</span><span class="sxs-lookup"><span data-stu-id="fef23-133">Schema reference for Office Add-ins manifests (v1.1)</span></span>](../develop/add-in-manifests.md)
