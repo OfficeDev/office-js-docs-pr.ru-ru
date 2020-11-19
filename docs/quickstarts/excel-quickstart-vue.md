@@ -1,15 +1,15 @@
 ---
 title: Создание области задач Excel с помощью Vue
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office и Vue.
-ms.date: 10/14/2020
+ms.date: 11/09/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: aff6271fa4d602141807b33ff96637957818c466
-ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
+ms.openlocfilehash: 61fa374f9c1f628c50b12b6495afba2d89d02840
+ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "48741171"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49132349"
 ---
 # <a name="build-an-excel-task-pane-add-in-using-vue"></a>Создание области задач Excel с помощью Vue
 
@@ -61,7 +61,7 @@ vue create my-add-in
     - **Как вы хотите назвать надстройку?** `My Office Add-in`
     - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
-    ![Генератор Yeoman](../images/yo-office-manifest-only-vue.png)
+    ![Снимок экрана: интерфейс командной строки генератора Yeoman надстроек Office, где в качестве типа проекта установлен только манифест](../images/yo-office-manifest-only-vue.png)
 
 После завершения работы мастера создается папка `My Office Add-in`, содержащая файл `manifest.xml`. В конце краткого руководства вам потребуется использовать манифест для загрузки без публикации и тестирования вашей надстройки.
 
@@ -208,13 +208,13 @@ vue create my-add-in
 
 2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
-   ![Кнопка надстройки Excel](../images/excel-quickstart-addin-2a.png)
+   ![Снимок экрана: меню "Главная" в Excel с выделенной кнопкой "Показать область задач"](../images/excel-quickstart-addin-2a.png)
 
 3. Выберите любой диапазон ячеек на листе.
 
 4. В области задач нажмите кнопку **Set color** (Задать цвет), чтобы сделать выбранный диапазон зеленым.
 
-   ![Надстройка Excel](../images/excel-quickstart-addin-2c.png)
+   ![Снимок экрана: Excel с открытой областью задач надстройки](../images/excel-quickstart-addin-2c.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

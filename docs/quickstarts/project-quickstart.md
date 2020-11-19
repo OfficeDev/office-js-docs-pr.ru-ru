@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 10/14/2020
 ms.prod: project
 localization_priority: Priority
-ms.openlocfilehash: ba6d6d0917e43311370188b46a7c2d26b8c916ae
-ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
+ms.openlocfilehash: a7f9b00a9f2782e014f1060d59505d7e876a969e
+ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "48741192"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49132258"
 ---
 # <a name="build-your-first-project-task-pane-add-in"></a>Создание первой надстройки области задач Project
 
@@ -31,7 +31,7 @@ ms.locfileid: "48741192"
 - **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `Project`
 
-![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-project.png)
+![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки](../images/yo-office-project.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -39,7 +39,7 @@ ms.locfileid: "48741192"
 
 ## <a name="explore-the-project"></a>Знакомство с проектом
 
-Проект надстройки, который вы создали с помощью генератора Yeoman, содержит образец кода для простейшей надстройки области задач. 
+Проект надстройки, который вы создали с помощью генератора Yeoman, содержит образец кода для простейшей надстройки области задач.
 
 - Файл **./manifest.xml** в корневом каталоге проекта определяет настройки и возможности надстройки.
 - Файл **./src/taskpane/taskpane.html** содержит разметку HTML для области задач.

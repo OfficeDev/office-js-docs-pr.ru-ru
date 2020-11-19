@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 10/14/2020
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 85f617ffa24f77faa5e9d810f2b9eda50ddd83ab
-ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
+ms.openlocfilehash: fe82515e0a2839ccb8669d1c590364049126d9de
+ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "48741150"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49132328"
 ---
 # <a name="build-your-first-word-task-pane-add-in"></a>Создание первой надстройки области задач Word
 
@@ -39,7 +39,7 @@ _Область применения: Word 2016 и более поздних в
 - **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `Word`
 
-![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-word.png)
+![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки](../images/yo-office-word.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -102,7 +102,6 @@ _Область применения: Word 2016 и более поздних в
 [!include[Quick Start prerequisites](../includes/quickstart-vs-prerequisites.md)]
 
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
-
 
 1. В Visual Studio выберите пункт **Создать проект**.
 
@@ -255,7 +254,7 @@ _Область применения: Word 2016 и более поздних в
         top: 0;
         left: 0;
         width: 100%;
-        height: 80px; 
+        height: 80px;
         overflow: hidden;
     }
 
@@ -318,9 +317,9 @@ _Область применения: Word 2016 и более поздних в
 
 ## <a name="see-also"></a>См. также
 
-* [Обзор платформы надстроек Office](../overview/office-add-ins.md)
-* [Разработка надстроек Office](../develop/develop-overview.md)
-* [Обзор надстроек Word](../word/word-add-ins-programming-overview.md)
-* 
+- [Обзор платформы надстроек Office](../overview/office-add-ins.md)
+- [Разработка надстроек Office](../develop/develop-overview.md)
+- [Обзор надстроек Word](../word/word-add-ins-programming-overview.md)
+- 
   [Примеры кода надстроек Word](https://developer.microsoft.com/en-us/office/gallery/?filterBy=Samples,Word)
-* [Справочник по API JavaScript для Word](../reference/overview/word-add-ins-reference-overview.md)
+- [Справочник по API JavaScript для Word](../reference/overview/word-add-ins-reference-overview.md)
