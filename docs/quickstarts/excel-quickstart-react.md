@@ -1,15 +1,15 @@
 ---
 title: Создание области задач Excel с помощью React
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office и React.
-ms.date: 04/03/2020
+ms.date: 11/09/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: a893ea78943f7a2687d005e6e1e24a9528c730ce
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 143c5254a2a6bb00fba44373878baf5626443777
+ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44612335"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49132300"
 ---
 # <a name="build-an-excel-task-pane-add-in-using-react"></a>Создание области задач Excel с помощью React
 
@@ -29,7 +29,7 @@ ms.locfileid: "44612335"
 - **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
-![Генератор Yeoman](../images/yo-office-excel-react-2.png)
+![Снимок экрана: интерфейс командной строки генератора Yeoman надстроек Office, где в качестве типа проекта установлена инфраструктура React ](../images/yo-office-excel-react-2.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -56,13 +56,13 @@ ms.locfileid: "44612335"
 
 3. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
-    ![Кнопка надстройки Excel](../images/excel-quickstart-addin-3b.png)
+    ![Снимок экрана: меню "Главная" в Excel с выделенной кнопкой "Показать область задач"](../images/excel-quickstart-addin-3b.png)
 
 4. Выберите любой диапазон ячеек на листе.
 
 5. Внизу области задач выберите ссылку **Выполнить**, чтобы задать выбранному диапазону желтый цвет.
 
-    ![Надстройка Excel](../images/excel-quickstart-addin-3c.png)
+    ![Снимок экрана: Excel с открытой областью задач надстройки и выделенной кнопкой "Запустить"](../images/excel-quickstart-addin-3c.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -74,6 +74,6 @@ ms.locfileid: "44612335"
 ## <a name="see-also"></a>См. также
 
 * [Руководство по надстройкам Excel](../tutorials/excel-tutorial-create-table.md)
-* [Основные концепции программирования с помощью API JavaScript для Excel](../excel/excel-add-ins-core-concepts.md)
+* [Объектная модель JavaScript для Excel в надстройках Office](../excel/excel-add-ins-core-concepts.md)
 * [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
 * [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)

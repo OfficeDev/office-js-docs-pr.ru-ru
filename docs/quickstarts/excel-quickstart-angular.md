@@ -1,15 +1,15 @@
 ---
 title: Создание области задач Excel с помощью Angular
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office и Angular.
-ms.date: 10/14/2020
+ms.date: 11/09/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 602b17dae29dfc43ab6b37648c3ad2f7fcfe86af
-ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
+ms.openlocfilehash: 5898d9bd3072e829c35afac90348cb844f96011c
+ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "48741185"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49132321"
 ---
 # <a name="build-an-excel-task-pane-add-in-using-angular"></a>Создание области задач Excel с помощью Angular
 
@@ -29,7 +29,7 @@ ms.locfileid: "48741185"
 - **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
-![Генератор Yeoman](../images/yo-office-excel-angular-2.png)
+![Снимок экрана: интерфейс командной строки генератора Yeoman надстроек Office, где в качестве типа проекта установлена инфраструктура Angular ](../images/yo-office-excel-angular-2.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -56,13 +56,13 @@ ms.locfileid: "48741185"
 
 3. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
-    ![Кнопка надстройки Excel](../images/excel-quickstart-addin-3b.png)
+    ![Снимок экрана: меню "Главная" в Excel с выделенной кнопкой "Показать область задач"](../images/excel-quickstart-addin-3b.png)
 
 4. Выберите любой диапазон ячеек на листе.
 
 5. Внизу области задач выберите ссылку **Выполнить**, чтобы задать выбранному диапазону желтый цвет.
 
-    ![Надстройка Excel](../images/excel-quickstart-addin-3c.png)
+    ![Снимок экрана: Excel с открытой областью задач надстройки и выделенной кнопкой "Запустить"](../images/excel-quickstart-addin-3c.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

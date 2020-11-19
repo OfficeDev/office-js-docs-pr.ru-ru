@@ -4,12 +4,12 @@ ms.prod: non-product-specific
 description: Руководство по обмену кодом между надстройкой VSTO и надстройкой Office.
 title: Руководство. Обмен кодом между надстройкой VSTO и надстройкой Office с использованием общей библиотеки кода
 localization_priority: Priority
-ms.openlocfilehash: 5be0b3c1064da43c8d5225c372ab65b4839f09fb
-ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
+ms.openlocfilehash: 761820dece1d5b8322de38863e10ad2f536445b9
+ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45159110"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49131747"
 ---
 # <a name="tutorial-share-code-between-both-a-vsto-add-in-and-an-office-add-in-with-a-shared-code-library"></a>Руководство. Обмен кодом между надстройкой VSTO и надстройкой Office с помощью общей библиотеки кода
 
@@ -61,16 +61,16 @@ ms.locfileid: "45159110"
 > В примере используется C#, но вы можете применить представленные в этом руководстве методы для надстройки VSTO, написанной на любом языке .NET.
 
 1. Скачайте решение PnP [общей библиотеки надстройки VSTO для надстройки Office](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/VSTO-shared-code-migration) в рабочую папку на своем компьютере.
-2. Запустите Visual Studio 2019 и откройте решение **/start/Cell-Analyzer.sln**.
-3. В меню **Отладка** выберите команду **Начать отладку**.
-3. В **обозревателе решений** щелкните правой кнопкой мыши проект **Cell-Analyzer** и выберите пункт **Свойства**.
-4. В свойствах выберите категорию **Подписывание**.
-5. Установите флажок **Подписать манифесты ClickOnce** и нажмите кнопку **Создать тестовый сертификат**.
-6. В диалоговом окне **Создание тестового сертификата** введите и подтвердите пароль. Затем нажмите кнопку **OK**.
+1. Запустите Visual Studio 2019 и откройте решение **/start/Cell-Analyzer.sln**.
+1. В меню **Отладка** выберите команду **Начать отладку**.
+1. В **обозревателе решений** щелкните правой кнопкой мыши проект **Cell-Analyzer** и выберите пункт **Свойства**.
+1. В свойствах выберите категорию **Подписывание**.
+1. Установите флажок **Подписать манифесты ClickOnce** и нажмите кнопку **Создать тестовый сертификат**.
+1. В диалоговом окне **Создание тестового сертификата** введите и подтвердите пароль. Затем нажмите кнопку **OK**.
 
-Надстройка является настраиваемой областью задач для Excel. Вы можете выделить любую ячейку с текстом и нажать кнопку **Показать Юникод**. Надстройка отобразит список всех символов в тексте вместе с соответствующим номером Юникода.
+Надстройка является настраиваемой областью задач для Excel. Вы можете выделить любую ячейку с текстом и нажать кнопку **Показать Юникод**. В разделе **Результат** надстройка отобразит список всех символов в тексте вместе с соответствующим номером Юникода.
 
-![Снимок экрана: надстройка VSTO для анализа ячеек, запущенная в Excel](../images/pnp-cell-analyzer-vsto-add-in.png)
+![Снимок экрана: надстройка VSTO в Excel с кнопкой "Показать Юникод" и пустым разделом "Результат"](../images/pnp-cell-analyzer-vsto-add-in.png)
 
 ## <a name="analyze-types-of-code-in-the-vsto-add-in"></a>Анализ типов кода в надстройке VSTO
 
@@ -91,10 +91,10 @@ ms.locfileid: "45159110"
 Рассмотрим надстройку VSTO. В коде ниже каждый раздел определен как код ДОКУМЕНТА, ПОЛЬЗОВАТЕЛЬСКОГО ИНТЕРФЕЙСА или АЛГОРИТМА.
 
 ```csharp
-// *** UI CODE ***
+// **_ UI CODE _*_
 private void btnUnicode_Click(object sender, EventArgs e)
 {
-    // *** DOCUMENT CODE ***
+    // _*_ DOCUMENT CODE _*_
     Microsoft.Office.Interop.Excel.Range rangeCell;
     rangeCell = Globals.ThisAddIn.Application.ActiveCell;
 
@@ -105,7 +105,7 @@ private void btnUnicode_Click(object sender, EventArgs e)
         cellValue = rangeCell.Value.ToString();
     }
 
-    // *** ALGORITHM CODE ***
+    // _*_ ALGORITHM CODE _*_
     //convert string to Unicode listing
     string result = "";
     foreach (char c in cellValue)
@@ -114,8 +114,8 @@ private void btnUnicode_Click(object sender, EventArgs e)
 
         result += $"{c}: {unicode}\r\n";
     }
-    
-    // *** UI CODE ***
+
+    // _*_ UI CODE _*_
     //Output the result
     txtResult.Text = result;
 }
@@ -124,7 +124,7 @@ private void btnUnicode_Click(object sender, EventArgs e)
 С помощью этого подхода вы можете увидеть, что один раздел кода можно предоставить для надстройки Office. Следующий код потребуется преобразовать в отдельную библиотеку классов.
 
 ```csharp
-// *** ALGORITHM CODE ***
+// _*_ ALGORITHM CODE _*_
 //convert string to Unicode listing
 string result = "";
 foreach (char c in cellValue)
@@ -139,7 +139,7 @@ foreach (char c in cellValue)
 
 Надстройки VSTO создаются в Visual Studio в виде проектов .NET, поэтому мы будем по возможности использовать .NET, чтобы не усложнять процесс. Наш следующий метод заключается в создании библиотеки классов и преобразовании общего кода в библиотеку классов.
 
-1. Если вы этого еще не сделали, запустите Visual Studio 2019 и откройте решение **/start/Cell-Analyzer.sln**.
+1. Если вы этого еще не сделали, запустите Visual Studio 2019 и откройте решение _ */start/Cell-Analyzer.sln**.
 2. Щелкните решение правой кнопкой мыши в **обозревателе решений** и выберите пункты **Добавить > Создать проект**.
 3. В диалоговом окне **Добавить новый проект** выберите **Библиотека классов (.NET Framework)** и нажмите кнопку **Далее**.
     > [!NOTE]
@@ -177,7 +177,7 @@ public class CellOperations
 2. Выберите **CellAnalyzerSharedLibrary** и нажмите кнопку **ОК**.
 3. В **обозревателе решений** разверните проект **Cell-Analyzer**, щелкните правой кнопкой мыши файл **CellAnalyzerPane.cs** и выберите пункт **Просмотреть код**.
 4. В методе `btnUnicode_Click` удалите следующие строки кода.
-    
+
     ```csharp
     //Convert to Unicode listing
     string result = "";
@@ -187,14 +187,14 @@ public class CellOperations
       result += $"{c}: {unicode}\r\n";
     }
     ```
-    
+
 5. Обновите строку кода под комментарием `//Output the result` следующим образом:
-    
+
     ```csharp
     //Output the result
     txtResult.Text = CellAnalyzerSharedLibrary.CellOperations.GetUnicodeFromText(cellValue);
     ```
-    
+
 6. В меню **Отладка** выберите команду **Начать отладку**. Настраиваемая область задач должна работать правильно. Введите текст в ячейке и проверьте, можно ли преобразовать его в список Юникод в надстройке.
 
 ## <a name="create-a-rest-api-wrapper"></a>Создание оболочки API REST
@@ -216,7 +216,7 @@ public class CellOperations
 11. В диалоговом окне **Добавить новый шаблонный элемент** выберите **Контроллер API — пустой** и нажмите **Добавить**.
 12. В диалоговом окне **Добавление пустого контроллера API** присвойте контроллеру имя **AnalyzeUnicodeController** и нажмите **Добавить**.
 13. Откройте файл **AnalyzeUnicodeController.cs** и добавьте следующий код в качестве метода для класса `AnalyzeUnicodeController`.
-    
+
     ```csharp
     [HttpGet]
     public ActionResult<string> AnalyzeUnicode(string value)
@@ -228,7 +228,7 @@ public class CellOperations
       return CellAnalyzerSharedLibrary.CellOperations.GetUnicodeFromText(value);
     }
     ```
-    
+
 14. Щелкните правой кнопкой мыши проект **CellAnalyzerRESTAPI** и выберите команду **Назначить автозагружаемым проектом**.
 15. В меню **Отладка** выберите команду **Начать отладку**.
 16. Запустится браузер. Чтобы проверить, работает ли API REST, введите следующий URL-адрес: `https://localhost:<ssl port number>/api/analyzeunicode?value=test`. Вы можете повторно использовать номер порта из URL-адреса в браузере, который запущен приложением Visual Studio. Должна возвратиться строка со значениями Юникода для каждого символа.
@@ -257,6 +257,7 @@ public class CellOperations
 5. В диалоговом окне **Выбор типа надстройки** выберите **Добавить новые функции в Excel** и нажмите **Готово**.
 
 Будут созданы два проекта:
+
 - **CellAnalyzerOfficeAddin**. Этот проект настраивает XML-файлы манифеста, описывающего надстройку, чтобы приложение Office могло правильно ее загрузить. Он содержит идентификатор, имя, описание и другие сведения о надстройке.
 - **CellAnalyzerOfficeAddinWeb**. Этот проект содержит веб-ресурсы для надстройки, например HTML, CSS и скрипты. Он также настраивает экземпляр IIS Express для размещения надстройки в виде веб-приложения.
 
@@ -264,15 +265,15 @@ public class CellOperations
 
 1. В **обозревателе решений** разверните проект **CellAnalyzerOfficeAddinWeb**.
 2. Откройте файл **Home.html** и замените содержимое `<body>` указанным ниже HTML-кодом.
-    
+
     ```html
     <button id="btnShowUnicode" onclick="showUnicode()">Show Unicode</button>
     <p>Result:</p>
     <div id="txtResult"></div>
     ```
-    
-3. Откройте файл **Home.js** и замените все содержимое указанным ниже кодом. 
-    
+
+3. Откройте файл **Home.js** и замените все содержимое указанным ниже кодом.
+
     ```js
     (function () {
       "use strict";
@@ -282,7 +283,7 @@ public class CellOperations
         });
       };
     })();
-    
+
     function showUnicode() {
       Excel.run(function (ctx) {
         const range = ctx.workbook.getSelectedRange();
@@ -304,7 +305,7 @@ public class CellOperations
       });
     }
     ```
-    
+
 4. В приведенном выше коде введите номер **sslPort**, сохраненный ранее из файла **launchSettings.json**.
 
 В приведенном выше коде возвращаемая строка будет обрабатываться для замены возврата каретки и перевода строки на HTML-теги `<br>`. Иногда могут возникать ситуации, когда возвращаемое значение, подходящее для .NET в надстройке VSTO, потребуется изменить в надстройке Office для правильной работы. В этом случае API REST и общая библиотека классов отвечают только за возвращение строки. За правильное форматирование возвращаемых значений для представления отвечает метод `showUnicode()`.
@@ -318,7 +319,7 @@ public class CellOperations
 3. В окне свойств скопируйте значение свойства **URL-адрес SSL** и сохраните его в другом месте. Это URL-адрес, который требуется разрешить в CORS.
 4. В проекте **CellAnalyzerRESTAPI** откройте файл **Startup.cs**.
 5. Добавьте следующий код в начале метода `ConfigureServices`. Не забудьте подставить URL-адрес SSL, скопированный ранее для вызова `builder.WithOrigins`.
-    
+
     ```csharp
     services.AddCors(options =>
     {
@@ -331,18 +332,18 @@ public class CellOperations
       });
     });
     ```
-    
+
     > [!NOTE]
     > Оставьте `/` в конце URL-адреса, если вы используете его в методе `builder.WithOrigins`. Он должен выглядеть примерно так: `https://localhost:44000`. В противном случае возникнет ошибка CORS во время выполнения.
-    
+
 6. Добавьте в класс `Startup` следующее поле:
-    
+
     ```csharp
     readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
     ```
-    
+
 7. Добавьте следующий код в метод `configure` непосредственно перед строкой кода для `app.UseEndpoints`.
-    
+
     ```csharp
     app.UseCors(MyAllowSpecificOrigins);
     ```
@@ -386,7 +387,7 @@ public class Startup
         {
             app.UseDeveloperExceptionPage();
         }
-            
+
         app.UseHttpsRedirection();
 
         app.UseRouting();
@@ -408,11 +409,11 @@ public class Startup
 1. В **обозревателе решений** щелкните правой кнопкой мыши верхний узел **Решение "Cell-Analyzer"** и выберите **Назначить запускаемые проекты**.
 2. В диалоговом окне **Страницы свойств решения "Cell-Analyzer"** выберите **Несколько запускаемых проектов**.
 3. Присвойте свойству **Действие** значение **Запуск** для каждого из следующих проектов.
-    
+
     - CellAnalyzerRESTAPI
     - CellAnalyzerOfficeAddin
     - CellAnalyzerOfficeAddinWeb
-    
+
 4. Нажмите кнопку **OK**.
 5. В меню **Отладка** выберите команду **Начать отладку**.
 
@@ -436,17 +437,19 @@ public class Startup
 Завершающим этапом является обновление кода в надстройке Office, чтобы использовать службу приложений Azure, а не localhost.
 
 1. В **обозревателе решений** разверните проект **CellAnalyzerOfficeAddinWeb** и откройте файл **Home.js**.
-2. Измените константу `url`, чтобы использовать URL-адрес для службы приложения Azure, как показано в следующей строке кода. Замените `<myappservice>` на уникальное имя, созданное вами для новой службы приложений.
+1. Измените константу `url`, чтобы использовать URL-адрес для службы приложения Azure, как показано в следующей строке кода. Замените `<myappservice>` на уникальное имя, созданное вами для новой службы приложений.
+
     ```JavaScript
     const url = "https://<myappservice>.azurewebsites.net/api/analyzeunicode?value=" + range.values[0][0];
     ```
-3. В **обозревателе решений** щелкните правой кнопкой мыши верхний узел **Решение "Cell-Analyzer"** и выберите **Назначить запускаемые проекты**.
-4. В диалоговом окне **Страницы свойств решения "Cell-Analyzer"** выберите **Несколько запускаемых проектов**.
-5. Разрешите действие **Запуск** для каждого из следующих проектов:
+
+1. В **обозревателе решений** щелкните правой кнопкой мыши верхний узел **Решение "Cell-Analyzer"** и выберите **Назначить запускаемые проекты**.
+1. В диалоговом окне **Страницы свойств решения "Cell-Analyzer"** выберите **Несколько запускаемых проектов**.
+1. Разрешите действие **Запуск** для каждого из следующих проектов:
     - CellAnalyzerOfficeAddinWeb
     - CellAnalyzerOfficeAddin
-6. Нажмите кнопку **OK**.
-7. В меню **Отладка** выберите команду **Начать отладку**.
+1. Нажмите кнопку **OK**.
+1. В меню **Отладка** выберите команду **Начать отладку**.
 
 Запустится приложение Excel, которое загрузит неопубликованную надстройку Office. Чтобы проверить правильность работы службы приложений, введите текстовое значение в ячейку и нажмите **Показать Юникод** в надстройке Office. Она должна вызвать службу и отобразить значения Юникода для текстовых символов.
 

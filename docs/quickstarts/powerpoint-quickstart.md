@@ -4,18 +4,18 @@ description: Узнайте, как создать простую надстро
 ms.date: 10/14/2020
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: e2720ce1c894f2692e797c5c1ae76c09fb3d5d72
-ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
+ms.openlocfilehash: 47ca14b4dd8ab67ffc20551b1e13ca62cc75ee34
+ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "48741199"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49132363"
 ---
 # <a name="build-your-first-powerpoint-task-pane-add-in"></a>Создание первой надстройки области задач PowerPoint
 
 В этой статье вы ознакомитесь с процессом создания надстройки для области задач PowerPoint.
 
-## <a name="create-the-add-in"></a>Создание надстройки 
+## <a name="create-the-add-in"></a>Создание надстройки
 
 [!include[Choose your editor](../includes/quickstart-choose-editor.md)]
 
@@ -37,7 +37,7 @@ ms.locfileid: "48741199"
 - **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `PowerPoint`
 
-![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-powerpoint.png)
+![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки](../images/yo-office-powerpoint.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -110,7 +110,7 @@ ms.locfileid: "48741199"
 4. В диалоговом окне **Создание надстройки Office** выберите **Добавить новые функции в PowerPoint**, а затем нажмите кнопку **Готово**, чтобы создать проект.
 
 5. Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.
-    
+
 ### <a name="explore-the-visual-studio-solution"></a>Обзор решения Visual Studio
 
 [!include[Description of Visual Studio projects](../includes/quickstart-vs-solution.md)]
@@ -118,7 +118,7 @@ ms.locfileid: "48741199"
 ### <a name="update-the-code"></a>Обновление кода
 
 1. Файл **Home.html** содержит HTML-контент, который будет отображаться в области задач надстройки. В файле **Home.html** замените элемент `<body>` на приведенную ниже часть кода и сохраните файл.
- 
+
     ```html
     <body class="ms-font-m ms-welcome">
         <div id="content-header">
@@ -262,5 +262,5 @@ ms.locfileid: "48741199"
 
 ## <a name="see-also"></a>См. также
 
-* [Обзор платформы надстроек Office](../overview/office-add-ins.md)
-* [Разработка надстроек Office](../develop/develop-overview.md)
+- [Обзор платформы надстроек Office](../overview/office-add-ins.md)
+- [Разработка надстроек Office](../develop/develop-overview.md)

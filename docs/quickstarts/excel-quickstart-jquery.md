@@ -1,21 +1,21 @@
 ---
 title: Создание первой надстройки области задач Excel
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office.
-ms.date: 10/14/2020
+ms.date: 11/09/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: a4c2dd7d475458439436dc7499d5f26f2c8eafb0
-ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
+ms.openlocfilehash: 627c8ce235a69e6da4a15c7064a2937b1fed5d05
+ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "48741178"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49132370"
 ---
 # <a name="build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel
 
 В этой статье вы ознакомитесь с процессом создания надстройки области задач Excel.
 
-## <a name="create-the-add-in"></a>Создание надстройки 
+## <a name="create-the-add-in"></a>Создание надстройки
 
 [!include[Choose your editor](../includes/quickstart-choose-editor.md)]
 # <a name="yeoman-generator"></a>[Генератор Yeoman](#tab/yeomangenerator)
@@ -36,7 +36,7 @@ ms.locfileid: "48741178"
 - **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
-![Генератор Yeoman](../images/yo-office-excel.png)
+![Снимок экрана: интерфейс командной строки генератора Yeoman надстроек Office](../images/yo-office-excel.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -58,13 +58,13 @@ ms.locfileid: "48741178"
 
 3. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
-    ![Кнопка надстройки Excel](../images/excel-quickstart-addin-3b.png)
+    ![Снимок экрана: меню "Главная" в Excel с выделенной кнопкой "Показать область задач"](../images/excel-quickstart-addin-3b.png)
 
 4. Выберите любой диапазон ячеек на листе.
 
 5. Внизу области задач выберите ссылку **Выполнить**, чтобы задать выбранному диапазону желтый цвет.
 
-    ![Надстройка Excel с кнопкой "Выполнить"](../images/excel-quickstart-addin-3c.png)
+    ![Снимок экрана: Excel с открытой областью задач надстройки и выделенной кнопкой "Запустить"](../images/excel-quickstart-addin-3c.png)
 
 ### <a name="next-steps"></a>Дальнейшие действия
 
@@ -202,13 +202,13 @@ ms.locfileid: "48741178"
 
 2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
-    ![Кнопка "Показать область задач" в надстройке Excel](../images/excel-quickstart-addin-2a.png)
+    ![Снимок экрана: меню "Главная" в Excel с выделенной кнопкой "Показать область задач"](../images/excel-quickstart-addin-2a.png)
 
 3. Выберите любой диапазон ячеек на листе.
 
-4. В области задач нажмите кнопку **Set color** (Задать цвет), чтобы сделать выбранный диапазон зеленым.
+4. В области задач нажмите кнопку **Задать цвет**, чтобы сделать выбранный диапазон зеленым.
 
-    ![Надстройка Excel](../images/excel-quickstart-addin-2c.png)
+    ![Снимок экрана: Excel с открытой областью задач надстройки](../images/excel-quickstart-addin-2c.png)
 
 [!include[Console tool note](../includes/console-tool-note.md)]
 

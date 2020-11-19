@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 09/22/2020
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: f4a3827b630ccee7cd8cef6222bfe6bac82f8ba2
-ms.sourcegitcommit: fd110305c2be8660ab8a47c1da3e3969bd1ede86
+ms.openlocfilehash: c9db8d0d69829a474867e210ea491b1872b8c100
+ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48214612"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49132272"
 ---
 # <a name="build-your-first-outlook-add-in"></a>Создание первой надстройки Outlook
 
@@ -48,8 +48,8 @@ ms.locfileid: "48214612"
 
     - **Какое клиентское приложение Office должно поддерживаться?** - `Outlook`
 
-    ![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-outlook.png)
-    
+    ![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки](../images/yo-office-outlook.png)
+
     После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
     [!include[Yeoman generator next steps](../includes/yo-office-next-steps.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "48214612"
 
 ### <a name="explore-the-project"></a>Знакомство с проектом
 
-Проект надстройки, который вы создали с помощью генератора Yeoman, содержит образец кода для простейшей надстройки области задач. 
+Проект надстройки, который вы создали с помощью генератора Yeoman, содержит образец кода для простейшей надстройки области задач.
 
 - Файл **./manifest.xml** в корневом каталоге проекта определяет настройки и возможности надстройки.
 - Файл **./src/taskpane/taskpane.html** содержит разметку HTML для области задач.
@@ -110,7 +110,7 @@ ms.locfileid: "48214612"
 
 1. Выберите вкладку **Главная** (или вкладку **Сообщения**, если вы открыли сообщение в новом окне), а затем нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
-    ![Снимок экрана с окном сообщения в Outlook, где выделена кнопка надстройки](../images/quick-start-button-1.png)
+    ![Снимок экрана с окном сообщения в Outlook с выделенной кнопкой ленты надстройки](../images/quick-start-button-1.png)
 
     > [!NOTE]
     > Если сообщение об ошибке "Не удается открыть эту надстройку с localhost" появляется в области задач, выполните действия, описанные в [статье по устранению неполадок](/office/troubleshoot/office-suite-issues/cannot-open-add-in-from-localhost).

@@ -4,22 +4,23 @@ description: В этом руководстве вы создадите надс
 ms.date: 10/14/2020
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: eed21235a2de78a160bf9df9253dcabe43bac366
-ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
+ms.openlocfilehash: 72b7abb8f67ad634025abd80b5bc9bb987ff6868
+ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "48740912"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49132377"
 ---
 # <a name="tutorial-create-a-powerpoint-task-pane-add-in"></a>Учебник: Создание надстройки области задач PowerPoint
 
 В этом учебнике вы будете использовать Visual Studio для создания надстройки области задачи PowerPoint, которая:
 
 > [!div class="checklist"]
-> * Добавляет фотографию дня из [Bing](https://www.bing.com) на слайд
-> * Добавляет текст на слайд
-> * Получает метаданные слайды
-> * Выполняет переходы между слайдами
+>
+> - Добавляет фотографию дня из [Bing](https://www.bing.com) на слайд
+> - Добавляет текст на слайд
+> - Получает метаданные слайды
+> - Выполняет переходы между слайдами
 
 ## <a name="prerequisites"></a>Необходимые компоненты
 
@@ -39,13 +40,13 @@ ms.locfileid: "48740912"
 
 5. Visual Studio создаст решение, и в **обозревателе решений** появятся два соответствующих проекта. В Visual Studio откроется файл **Home.html**.
 
-     ![Руководство по PowerPoint: окно обозревателя решений Visual Studio с двумя проектами в решении HelloWorld](../images/powerpoint-tutorial-solution-explorer.png)
+     ![Снимок экрана: окно обозревателя решений Visual Studio с HelloWorld и HelloWorldWeb, 2 проекта в решении HelloWorld](../images/powerpoint-tutorial-solution-explorer.png)
 
 ### <a name="explore-the-visual-studio-solution"></a>Обзор решения Visual Studio
 
 [!include[Description of Visual Studio projects](../includes/quickstart-vs-solution.md)]
 
-### <a name="update-code"></a>Обновление кода 
+### <a name="update-code"></a>Обновление кода
 
 Измените код надстройки, как указано ниже, чтобы создать платформу для реализации функций надстройки, следуя инструкциям в следующих разделах этого руководства.
 
@@ -111,7 +112,7 @@ ms.locfileid: "48740912"
 
 1. Используя обозреватель решений, добавьте новую папку **Controllers** в проект **HelloWorldWeb**.
 
-    ![Руководство по PowerPoint: окно обозревателя решений Visual Studio с выделенной папкой Controllers в проекте HelloWorldWeb](../images/powerpoint-tutorial-solution-explorer-controllers.png)
+    ![Снимок экрана: окно обозревателя решений Visual Studio с выделенной папкой "Контроллеры" в проекте HelloWorldWeb](../images/powerpoint-tutorial-solution-explorer-controllers.png)
 
 2. Щелкните правой кнопкой мыши папку **Controllers** и выберите **Добавить > Создать шаблонный элемент**.
 
@@ -198,9 +199,9 @@ ms.locfileid: "48740912"
     }
     ```
 
-9. В файле **Home.js** замените `TODO3` приведенным ниже кодом, чтобы определить функцию `insertImageFromBase64String`. Эта функция использует API JavaScript для Office, чтобы вставить изображение в документ. Примечание. 
+9. В файле **Home.js** замените `TODO3` приведенным ниже кодом, чтобы определить функцию `insertImageFromBase64String`. Эта функция использует API JavaScript для Office, чтобы вставить изображение в документ. Примечание.
 
-    - `coercionType`, второй параметр запроса `setSelectedDataAsyc`, определяет тип вставляемых данных. 
+    - `coercionType`, второй параметр запроса `setSelectedDataAsync`, определяет тип вставляемых данных.
 
     - Объект `asyncResult` инкапсулирует результат запроса `setSelectedDataAsync`, включая сведения о состоянии и ошибке, если запрос завершился ошибкой.
 
@@ -226,7 +227,7 @@ ms.locfileid: "48740912"
 
 2. В PowerPoint нажмите кнопку **Show Taskpane** (Показать область задач) на ленте, чтобы открыть надстройку области задач.
 
-    ![Снимок экрана: Visual Studio с выделенной кнопкой "Show Taskpane" (Показать область задач) на ленте "Главная"](../images/powerpoint-tutorial-show-taskpane-button.png)
+    ![Снимок экрана с выделенной кнопкой "Показать область задач" на вкладке "Главная" ленты PowerPoint](../images/powerpoint-tutorial-show-taskpane-button.png)
 
 3. В области задач нажмите кнопку **Insert Image** (Вставить изображение), чтобы добавить фотографию дня Bing на текущий слайд.
 
@@ -234,7 +235,7 @@ ms.locfileid: "48740912"
 
 4. В Visual Studio остановите работу надстройки, нажав клавиши **Shift + F5** или кнопку **Остановить**. PowerPoint автоматически закроется при остановке надстройки.
 
-    ![Снимок экрана: Visual Studio с выделенной кнопкой "Остановить"](../images/powerpoint-tutorial-stop.png)
+    ![Снимок экрана: Visual Studio с выделенной кнопкой "Стоп"](../images/powerpoint-tutorial-stop.png)
 
 ## <a name="customize-user-interface-ui-elements"></a>Настройка элементов пользовательского интерфейса
 
@@ -264,7 +265,7 @@ ms.locfileid: "48740912"
 
 2. В PowerPoint нажмите кнопку **Show Taskpane** (Показать область задач) на ленте, чтобы открыть надстройку области задач.
 
-    ![Снимок экрана: Visual Studio с выделенной кнопкой "Show Taskpane" (Показать область задач) на ленте "Главная"](../images/powerpoint-tutorial-show-taskpane-button.png)
+    ![Снимок экрана с выделенной кнопкой "Показать область задач" на вкладке "Главная" ленты PowerPoint](../images/powerpoint-tutorial-show-taskpane-button.png)
 
 3. Обратите внимание на то, что область задач теперь содержит раздел верхнего колонтитула и заголовок и больше не содержит раздел нижнего колонтитула.
 
@@ -272,7 +273,7 @@ ms.locfileid: "48740912"
 
 4. В Visual Studio остановите работу надстройки, нажав клавиши **Shift + F5** или кнопку **Остановить**. PowerPoint автоматически закроется при остановке надстройки.
 
-    ![Снимок экрана: Visual Studio с выделенной кнопкой "Остановить"](../images/powerpoint-tutorial-stop.png)
+    ![Снимок экрана: Visual Studio с выделенной кнопкой "Стоп"](../images/powerpoint-tutorial-stop.png)
 
 ## <a name="insert-text"></a>Вставка текста
 
@@ -316,7 +317,7 @@ ms.locfileid: "48740912"
 
 2. В PowerPoint нажмите кнопку **Show Taskpane** (Показать область задач) на ленте, чтобы открыть надстройку области задач.
 
-    ![Снимок экрана: Visual Studio с выделенной кнопкой "Show Taskpane" (Показать область задач) на ленте "Главная"](../images/powerpoint-tutorial-show-taskpane-button.png)
+    ![Снимок экрана с выделенной кнопкой "Показать область задач" на вкладке "Главная" ленты PowerPoint](../images/powerpoint-tutorial-show-taskpane-button.png)
 
 3. В области задач нажмите кнопку **Insert Image** (Вставить изображение), чтобы добавить фотографию дня Bing на текущий слайд, и выберите макет слайда с текстовым полем для заголовка.
 
@@ -326,10 +327,9 @@ ms.locfileid: "48740912"
 
     ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Insert Text" (Вставить текст)](../images/powerpoint-tutorial-insert-text.png)
 
-
 5. В Visual Studio остановите работу надстройки, нажав клавиши **Shift + F5** или кнопку **Остановить**. PowerPoint автоматически закроется при остановке надстройки.
 
-    ![Снимок экрана: Visual Studio с выделенной кнопкой "Остановить"](../images/powerpoint-tutorial-stop.png)
+    ![Снимок экрана: Visual Studio с выделенной кнопкой "Стоп"](../images/powerpoint-tutorial-stop.png)
 
 ## <a name="get-slide-metadata"></a>Получение метаданных слайда
 
@@ -376,7 +376,7 @@ ms.locfileid: "48740912"
 
 2. В PowerPoint нажмите кнопку **Show Taskpane** (Показать область задач) на ленте, чтобы открыть надстройку области задач.
 
-    ![Снимок экрана: Visual Studio с выделенной кнопкой "Show Taskpane" (Показать область задач) на ленте "Главная"](../images/powerpoint-tutorial-show-taskpane-button.png)
+    ![Снимок экрана с выделенной кнопкой "Показать область задач" на вкладке "Главная" ленты PowerPoint](../images/powerpoint-tutorial-show-taskpane-button.png)
 
 3. В области задач нажмите кнопку **Get Slide Metadata** (Получить метаданные слайда), чтобы получить метаданные выбранного слайда. Метаданные слайда записываются во всплывающее диалоговое окно в нижней части области задач. В этом случае массив `slides` в метаданных JSON содержит один объект, в котором указаны свойства `id`, `title` и `index` выбранного слайда. Если при извлечении метаданных будет выбрано несколько слайдов, массив `slides` в метаданных JSON будет содержать один объект для каждого выбранного слайда.
 
@@ -384,7 +384,7 @@ ms.locfileid: "48740912"
 
 4. В Visual Studio остановите работу надстройки, нажав клавиши **Shift + F5** или кнопку **Остановить**. PowerPoint автоматически закроется при остановке надстройки.
 
-    ![Снимок экрана: Visual Studio с выделенной кнопкой "Остановить"](../images/powerpoint-tutorial-stop.png)
+    ![Снимок экрана: Visual Studio с выделенной кнопкой "Стоп"](../images/powerpoint-tutorial-stop.png)
 
 ## <a name="navigate-between-slides"></a>Переход между слайдами
 
@@ -472,34 +472,33 @@ ms.locfileid: "48740912"
 
 1. Испытайте надстройку с помощью Visual Studio, нажав клавишу **F5** или кнопку **Запустить**, чтобы запустить PowerPoint с кнопкой надстройки **Показать область задач** на ленте. Надстройка будет размещена на локальном сервере IIS.
 
-    ![Снимок экрана: Visual Studio с выделенной кнопкой "Запустить"](../images/powerpoint-tutorial-start.png)
+    ![Снимок экрана: панель инструментов Visual Studio с выделенной кнопкой "Запустить"](../images/powerpoint-tutorial-start.png)
 
 2. В PowerPoint нажмите кнопку **Show Taskpane** (Показать область задач) на ленте, чтобы открыть надстройку области задач.
 
-    ![Снимок экрана: Visual Studio с выделенной кнопкой "Show Taskpane" (Показать область задач) на ленте "Главная"](../images/powerpoint-tutorial-show-taskpane-button.png)
+    ![Снимок экрана с выделенной кнопкой "Показать область задач" на вкладке "Главная" ленты PowerPoint](../images/powerpoint-tutorial-show-taskpane-button.png)
 
-
-3. Нажмите кнопку **Создать слайд** на ленте вкладки **Главная**, чтобы добавить в документ два новых слайда. 
+3. Нажмите кнопку **Создать слайд** на ленте вкладки **Главная**, чтобы добавить в документ два новых слайда.
 
 4. В области задач нажмите кнопку **Go to First Slide** (Перейти к первому слайду). Будет выбран и показан первый слайд в документе.
 
-    ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Go to First Slide" (Перейти к первому слайду)](../images/powerpoint-tutorial-go-to-first-slide.png)
+    ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Перейти к первому слайду"](../images/powerpoint-tutorial-go-to-first-slide.png)
 
 5. В области задач нажмите кнопку **Go to Next Slide** (Перейти к следующему слайду). Будет выбран и показан следующий слайд в документе.
 
-    ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Go to Next Slide" (Перейти к следующему слайду)](../images/powerpoint-tutorial-go-to-next-slide.png)
+    ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Перейти к следующему слайду"](../images/powerpoint-tutorial-go-to-next-slide.png)
 
 6. В области задач нажмите кнопку **Go to Previous Slide** (Перейти к предыдущему слайду). Будет выбран и показан предыдущий слайд в документе.
 
-    ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Go to Previous Slide" (Перейти к предыдущему слайду)](../images/powerpoint-tutorial-go-to-previous-slide.png)
+    ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Перейти к предыдущему слайду"](../images/powerpoint-tutorial-go-to-previous-slide.png)
 
 7. В области задач нажмите кнопку **Go to Last Slide** (Перейти к последнему слайду). Будет выбран и показан последний слайд в документе.
 
-    ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Go to Last Slide" (Перейти к последнему слайду)](../images/powerpoint-tutorial-go-to-last-slide.png)
+    ![Снимок экрана: надстройка PowerPoint с выделенной кнопкой "Перейти к последнему слайду"](../images/powerpoint-tutorial-go-to-last-slide.png)
 
 8. В Visual Studio остановите работу надстройки, нажав клавиши **Shift + F5** или кнопку **Остановить**. PowerPoint автоматически закроется при остановке надстройки.
 
-    ![Снимок экрана: Visual Studio с выделенной кнопкой "Остановить"](../images/powerpoint-tutorial-stop.png)
+    ![Снимок экрана: панель инструментов Visual Studio с выделенной кнопкой "Стоп"](../images/powerpoint-tutorial-stop.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -510,6 +509,5 @@ ms.locfileid: "48740912"
 
 ## <a name="see-also"></a>См. также
 
-* [Обзор платформы надстроек Office](../overview/office-add-ins.md)
-* [Разработка надстроек Office](../develop/develop-overview.md)
-
+- [Обзор платформы надстроек Office](../overview/office-add-ins.md)
+- [Разработка надстроек Office](../develop/develop-overview.md)

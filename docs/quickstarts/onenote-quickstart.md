@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 10/14/2020
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: 0e4022b9f2b91b03cb260f2d56fc3bac2a0ddaae
-ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
+ms.openlocfilehash: de0729a483057a61be3793e299995aa05d287441
+ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "48741164"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49132293"
 ---
 # <a name="build-your-first-onenote-task-pane-add-in"></a>Создание первой надстройки области задач OneNote
 
@@ -29,7 +29,7 @@ ms.locfileid: "48741164"
 - **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `OneNote`
 
-![Снимок экрана с вопросами и ответами в генераторе Yeoman](../images/yo-office-onenote.png)
+![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки](../images/yo-office-onenote.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -37,7 +37,7 @@ ms.locfileid: "48741164"
 
 ## <a name="explore-the-project"></a>Знакомство с проектом
 
-Проект надстройки, который вы создали с помощью генератора Yeoman, содержит образец кода для простейшей надстройки области задач. 
+Проект надстройки, который вы создали с помощью генератора Yeoman, содержит образец кода для простейшей надстройки области задач.
 
 - Файл **./manifest.xml** в корневом каталоге проекта определяет настройки и возможности надстройки.
 - Файл **./src/taskpane/taskpane.html** содержит разметку HTML для области задач.
@@ -102,19 +102,19 @@ try {
 
     - Если вы вошли с помощью обычной учетной записи, выберите **Отправить надстройку** на вкладке **МОИ НАДСТРОЙКИ**.
 
-    - Если вы вошли с помощью рабочей или учебной учетной записи, выберите **Отправить надстройку** на вкладке **МОЯ ОРГАНИЗАЦИЯ**. 
+    - Если вы вошли с помощью рабочей или учебной учетной записи, выберите **Отправить надстройку** на вкладке **МОЯ ОРГАНИЗАЦИЯ**.
 
     На следующем изображении показана вкладка **МОИ НАДСТРОЙКИ** для обычных записных книжек.
 
-    <img alt="The Office Add-ins dialog showing the MY ADD-INS tab" src="../images/onenote-office-add-ins-dialog.png" width="500">
+    <img alt="Screenshot of the Office Add-ins dialog showing the MY ADD-INS tab" src="../images/onenote-office-add-ins-dialog.png" width="500">
 
-5. В диалоговом окне "Отправить надстройку" выберите **manifest.xml** в папке проекта и нажмите кнопку **Отправить**. 
+5. В диалоговом окне "Отправить надстройку" выберите **manifest.xml** в папке проекта и нажмите кнопку **Отправить**.
 
 6. На вкладке **Главная** ленты нажмите кнопку **Показать область задач**. Область задач надстройки откроется в iFrame рядом со страницей OneNote.
 
 7. В нижней части области задач щелкните ссылку **Выполнить**, чтобы настроить заголовок страницы и добавить контур к тексту страницы.
 
-    ![Надстройка OneNote, созданная на основе этого руководства](../images/onenote-first-add-in-4.png)
+    ![Снимок экрана с надстройкой, созданной в этом пошаговом руководстве: выделенная кнопка ленты "Показать область задач" и область задач в OneNote](../images/onenote-first-add-in-4.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -125,9 +125,8 @@ try {
 
 ## <a name="see-also"></a>См. также
 
-* [Обзор платформы надстроек Office](../overview/office-add-ins.md)
-* [Разработка надстроек Office](../develop/develop-overview.md)
+- [Обзор платформы надстроек Office](../overview/office-add-ins.md)
+- [Разработка надстроек Office](../develop/develop-overview.md)
 - [Обзор API JavaScript для OneNote](../onenote/onenote-add-ins-programming-overview.md)
 - [Справочник по API JavaScript для OneNote](../reference/overview/onenote-add-ins-javascript-reference.md)
 - [Пример надстройки Rubric Grader](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
-
