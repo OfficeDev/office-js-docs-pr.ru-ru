@@ -3,12 +3,12 @@ title: Использование Office Dialog API в вашей надстро
 description: Общие сведения о создании диалогового окна в надстройке Office.
 ms.date: 10/21/2020
 localization_priority: Normal
-ms.openlocfilehash: 1aa7a306402885f37d1cf07010eb43958407bf0f
-ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
+ms.openlocfilehash: 56c12aa5b15f8f79273923402c5a5bfa92a2dde8
+ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "48741087"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49131761"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
@@ -30,7 +30,7 @@ ms.locfileid: "48741087"
 
 На приведенном ниже изображении показан пример диалогового окна. 
 
-![Команды надстроек](../images/auth-o-dialog-open.png)
+![Снимок экрана с диалоговым окном с тремя параметрами входа, отображаемыми перед Word](../images/auth-o-dialog-open.png)
 
 Обратите внимание, что диалоговое окно всегда открывается в центре экрана. Пользователь может перемещать ее и изменять ее размер. Окно не является *модальным*— пользователь может продолжать взаимодействовать с документом в приложении Office и со страницей в области задач, если таковая имеется.
 
@@ -47,7 +47,7 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html');
 ```
 
 > [!NOTE]
-> - В случае URL-адреса используется протокол HTTP**S**, Обязательный для всех страниц, загружаемых в диалоговом окне, а не только для первой страницы.
+> - В случае URL-адреса используется протокол HTTP **S**, Обязательный для всех страниц, загружаемых в диалоговом окне, а не только для первой страницы.
 > - Домен диалогового окна совпадает с доменом главной страницы, которая может быть страницей в панели задач или [файлом функции](../reference/manifest/functionfile.md) команды надстройки. Страница, метод контроллера или другой ресурс, передаваемый в метод `displayDialogAsync`, должен быть в том же домене, что и страница ведущего приложения.
 
 > [!IMPORTANT]
@@ -98,9 +98,8 @@ if (loginSuccess) {
 
 > [!IMPORTANT]
 > - Функцию `messageParent` можно вызывать только на странице, которая относится к тому же домену (включая протокол и порт), что и главная страница.
-> - `messageParent`Функция является одним из двух *only* API Office JS, которые можно вызывать в диалоговом окне. 
+> - `messageParent`Функция является одним из двух *only* API Office JS, которые можно вызывать в диалоговом окне.
 > - Другой API JS, который может вызываться в диалоговом окне, — это `Office.context.requirements.isSetSupported` . Сведения о том, как [указать приложения Office и требования к API](specify-office-hosts-and-api-requirements.md). Однако в диалоговом окне этот API не поддерживается в Outlook 2016 1-Time Purchase (версия MSI).
-
 
 В следующем примере `googleProfile` — это строковое представление профиля Google пользователя.
 

@@ -1,15 +1,15 @@
 ---
 title: Предварительные версии API JavaScript для Excel
 description: Сведения о предстоящих API JavaScript для Excel.
-ms.date: 11/09/2020
+ms.date: 11/17/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 7617ef03d7ef6b0ef6dcd1dbe12e88b58e1228fe
-ms.sourcegitcommit: ca66ff7462bfdf4ed7ae04f43d1388c24de63bf9
+ms.openlocfilehash: 083741d35d3e881c2e46b186c4e93591bf7f4834
+ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48996545"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49131768"
 ---
 # <a name="excel-javascript-preview-apis"></a>Предварительные версии API JavaScript для Excel
 
@@ -23,6 +23,7 @@ ms.locfileid: "48996545"
 |:--- |:--- |:--- |
 | Связанные типы данных | Добавляет поддержку для типов данных, подключенных к Excel из внешних источников. | [LinkedDataType](/javascript/api/excel/excel.linkeddatatype)|
 | Представления именованных листов | Обеспечивает программное управление представлениями листа на уровне пользователя. | [NamedSheetView](/javascript/api/excel/excel.namedsheetview) |
+| Задачи | Включение комментариев в задачи, назначенные пользователям. | [Задача](/javascript/api/excel/excel.task) |
 
 ## <a name="api-list"></a>Список API
 
@@ -30,6 +31,12 @@ ms.locfileid: "48996545"
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
+|[Comment](/javascript/api/excel/excel.comment)|[Ассигнтаск (электронная почта: строка)](/javascript/api/excel/excel.comment#assigntask-email-)|Назначает задачу, прикрепленную к комментарию, для данного пользователя в качестве единственного уполномоченного.|
+||[Задание ()](/javascript/api/excel/excel.comment#gettask--)|Получает задачу, связанную с данным комментарием.|
+||[Жеттаскорнуллобжект ()](/javascript/api/excel/excel.comment#gettaskornullobject--)|Получает задачу, связанную с данным комментарием.|
+|[CommentReply](/javascript/api/excel/excel.commentreply)|[Ассигнтаск (электронная почта: строка)](/javascript/api/excel/excel.commentreply#assigntask-email-)|Назначает задачу, прикрепленную к комментарию, для данного пользователя в качестве единственного уполномоченного.|
+||[Задание ()](/javascript/api/excel/excel.commentreply#gettask--)|Получает задачу, связанную с данным комментарием.|
+||[Жеттаскорнуллобжект ()](/javascript/api/excel/excel.commentreply#gettaskornullobject--)|Получает задачу, связанную с данным комментарием.|
 |[LinkedDataType](/javascript/api/excel/excel.linkeddatatype)|[Предоставление dataProvider](/javascript/api/excel/excel.linkeddatatype#dataprovider)|Имя поставщика данных для связанного типа данных.|
 ||[ластрефрешед](/javascript/api/excel/excel.linkeddatatype#lastrefreshed)|Дата и время местного часового пояса с момента открытия книги при последнем обновлении связанного типа данных.|
 ||[name](/javascript/api/excel/excel.linkeddatatype#name)|Имя связанного типа данных.|
@@ -93,11 +100,61 @@ ms.locfileid: "48996545"
 |[TableFilteredEventArgs](/javascript/api/excel/excel.tablefilteredeventargs)|[tableId](/javascript/api/excel/excel.tablefilteredeventargs#tableid)|Получает идентификатор таблицы, в которой применяется фильтр.|
 ||[type](/javascript/api/excel/excel.tablefilteredeventargs#type)|Получает тип события.|
 ||[worksheetId](/javascript/api/excel/excel.tablefilteredeventargs#worksheetid)|Получает идентификатор листа, содержащего таблицу.|
+|[Задача](/javascript/api/excel/excel.task)|[Аддассигни (электронная почта: строка)](/javascript/api/excel/excel.task#addassignee-email-)|Добавляет к задаче уполномоченного.|
+||[applyChanges (Таскчанжес: Excel. Таскчанжес)](/javascript/api/excel/excel.task#applychanges-taskchanges-)|Применяет указанные изменения к задаче.|
+||[уполномоченные](/javascript/api/excel/excel.task#assignees)|Получает пользователей, которым назначена задача.|
+||[comment](/javascript/api/excel/excel.task#comment)|Получает комментарий, связанный с задачей.|
+||[dueDate](/javascript/api/excel/excel.task#duedate)|Получает дату и время выполнения задачи.|
+||[хисторирекордс](/javascript/api/excel/excel.task#historyrecords)|Получает записи журнала задачи.|
+||[id](/javascript/api/excel/excel.task#id)|Получает идентификатор задачи.|
+||[percentComplete](/javascript/api/excel/excel.task#percentcomplete)|Получает процент завершения задачи.|
+||[priority](/javascript/api/excel/excel.task#priority)|Получает приоритет задачи.|
+||[startDate](/javascript/api/excel/excel.task#startdate)|Получает дату и время начала задачи.|
+||[заголовок](/javascript/api/excel/excel.task#title)|Получает название задачи.|
+||[Ремовеаллассигнис ()](/javascript/api/excel/excel.task#removeallassignees--)|Удаляет все уполномоченные из задачи.|
+||[Ремовеассигни (электронная почта: строка)](/javascript/api/excel/excel.task#removeassignee-email-)|Удаляет уполномоченного из задачи.|
+||[Сетперценткомплете (percentComplete: число)](/javascript/api/excel/excel.task#setpercentcomplete-percentcomplete-)|Изменение завершения задачи.|
+||[setPriority (приоритет: число)](/javascript/api/excel/excel.task#setpriority-priority-)|Изменение приоритета задачи.|
+||[Сетстартдатеанддуедате (startDate: Date, dueDate: Date)](/javascript/api/excel/excel.task#setstartdateandduedate-startdate--duedate-)|Изменение даты начала и срока выполнения задачи.|
+||[Сеттитле (Title: строка)](/javascript/api/excel/excel.task#settitle-title-)|Изменяет название задачи.|
+|[таскчанжес](/javascript/api/excel/excel.taskchanges)|[dueDate](/javascript/api/excel/excel.taskchanges#duedate)|Задает новую дату выполнения для задачи в формате UTC.|
+||[емаилстоассигн](/javascript/api/excel/excel.taskchanges#emailstoassign)|Задает адреса электронной почты пользователей, которым назначена задача.|
+||[емаилстаунассигн](/javascript/api/excel/excel.taskchanges#emailstounassign)|Задает адреса электронной почты пользователей, для которых требуется отменить назначение задачи.|
+||[percentComplete](/javascript/api/excel/excel.taskchanges#percentcomplete)|Задает новый процент завершения для задачи.|
+||[priority](/javascript/api/excel/excel.taskchanges#priority)|Задает новый приоритет задачи.|
+||[ремовеаллпревиаусассигнис](/javascript/api/excel/excel.taskchanges#removeallpreviousassignees)|Указывает, следует ли удалить из задачи все предыдущие уполномоченные.|
+||[startDate](/javascript/api/excel/excel.taskchanges#startdate)|Задает новую дату начала для задачи в формате UTC.|
+||[заголовок](/javascript/api/excel/excel.taskchanges#title)|Задает новое название задачи.|
+|[таскколлектион](/javascript/api/excel/excel.taskcollection)|[getCount()](/javascript/api/excel/excel.taskcollection#getcount--)|Получает число задач в коллекции.|
+||[getItem(key: string)](/javascript/api/excel/excel.taskcollection#getitem-key-)|Получает задачу с помощью идентификатора.|
+||[getItemAt(index: number)](/javascript/api/excel/excel.taskcollection#getitemat-index-)|Получает задачу по индексу в коллекции.|
+||[getItemOrNullObject(key: string)](/javascript/api/excel/excel.taskcollection#getitemornullobject-key-)|Получает задачу с помощью идентификатора.|
+||[items](/javascript/api/excel/excel.taskcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
+|[таскхисторирекорд](/javascript/api/excel/excel.taskhistoryrecord)|[анчорид](/javascript/api/excel/excel.taskhistoryrecord#anchorid)|Представляет идентификатор объекта, к которому привязана задача (например, Комментид для задач, прикрепленных к комментариям).|
+||[получателю](/javascript/api/excel/excel.taskhistoryrecord#assignee)|Представляет пользователя, которому назначена задача для типа записи журнала "Assign", или пользователя, чтобы отменить назначение задачи для типа записи журнала "unassign".|
+||[аттрибутионусер](/javascript/api/excel/excel.taskhistoryrecord#attributionuser)|Представляет пользователя, который создал или изменил задачу.|
+||[dueDate](/javascript/api/excel/excel.taskhistoryrecord#duedate)|Представляет дату выполнения задачи.|
+||[хисторирекордкреатеддате](/javascript/api/excel/excel.taskhistoryrecord#historyrecordcreateddate)|Представляет дату создания записи журнала задач.|
+||[id](/javascript/api/excel/excel.taskhistoryrecord#id)|Идентификатор записи журнала.|
+||[percentComplete](/javascript/api/excel/excel.taskhistoryrecord#percentcomplete)|Представляет процент завершения задачи.|
+||[priority](/javascript/api/excel/excel.taskhistoryrecord#priority)|Представляет приоритет задачи.|
+||[startDate](/javascript/api/excel/excel.taskhistoryrecord#startdate)|Представляет дату начала задачи.|
+||[заголовок](/javascript/api/excel/excel.taskhistoryrecord#title)|Представляет название задачи.|
+||[type](/javascript/api/excel/excel.taskhistoryrecord#type)|Представляет тип записи в журнале задач.|
+||[ундохисторид](/javascript/api/excel/excel.taskhistoryrecord#undohistoryid)|Представляет свойство TaskHistoryRecord.id, которое было отменено для типа записи истории "Undo".|
+|[таскхисторирекордколлектион](/javascript/api/excel/excel.taskhistoryrecordcollection)|[getCount()](/javascript/api/excel/excel.taskhistoryrecordcollection#getcount--)|Получает количество записей журнала в коллекции для задачи.|
+||[getItemAt(index: number)](/javascript/api/excel/excel.taskhistoryrecordcollection#getitemat-index-)|Получает запись журнала задач с помощью индекса в коллекции.|
+||[items](/javascript/api/excel/excel.taskhistoryrecordcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
+|[Пользователь](/javascript/api/excel/excel.user)|[displayName](/javascript/api/excel/excel.user#displayname)|Представляет отображаемое имя пользователя.|
+||[email](/javascript/api/excel/excel.user#email)|Представляет электронный адрес пользователя.|
+||[uid](/javascript/api/excel/excel.user#uid)|Представляет уникальный идентификатор пользователя.|
 |[Workbook](/javascript/api/excel/excel.workbook)|[линкеддататипес](/javascript/api/excel/excel.workbook#linkeddatatypes)|Возвращает коллекцию связанных типов данных, которые являются частью рабочей книги.|
+||[задач](/javascript/api/excel/excel.workbook#tasks)|Возвращает коллекцию задач, присутствующих в книге.|
 ||[шовпивотфиелдлист](/javascript/api/excel/excel.workbook#showpivotfieldlist)|Указывает, отображается ли область списка полей сводной таблицы на уровне книги.|
 ||[use1904DateSystem](/javascript/api/excel/excel.workbook#use1904datesystem)|Значение true, если в книге используется система дат 1904.|
 |[Worksheet](/javascript/api/excel/excel.worksheet)|[намедшитвиевс](/javascript/api/excel/excel.worksheet#namedsheetviews)|Возвращает коллекцию представлений листа, присутствующих на листе.|
 ||[onFiltered](/javascript/api/excel/excel.worksheet#onfiltered)|Возникает, если применен фильтр к указанному листу.|
+||[задач](/javascript/api/excel/excel.worksheet#tasks)|Возвращает коллекцию задач, присутствующих на листе.|
 |[WorksheetCollection](/javascript/api/excel/excel.worksheetcollection)|[addFromBase64(base64File: string, sheetNamesToInsert?: string[], positionType?: Excel.WorksheetPositionType, relativeTo?: Worksheet \| string)](/javascript/api/excel/excel.worksheetcollection#addfrombase64-base64file--sheetnamestoinsert--positiontype--relativeto-)|Вставляет указанные листы книги в текущую книгу.|
 ||[onFiltered](/javascript/api/excel/excel.worksheetcollection#onfiltered)|Возникает при применении любого фильтра листа в книге.|
 |[WorksheetFilteredEventArgs](/javascript/api/excel/excel.worksheetfilteredeventargs)|[type](/javascript/api/excel/excel.worksheetfilteredeventargs#type)|Получает тип события.|

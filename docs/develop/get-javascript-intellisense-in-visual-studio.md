@@ -3,12 +3,12 @@ title: Использование IntelliSense для JavaScript в Visual Studi
 description: Узнайте, как использовать Жсдок для создания IntelliSense для переменных JavaScript, объектов, параметров и возвращаемых значений.
 ms.date: 10/11/2019
 localization_priority: Normal
-ms.openlocfilehash: 963945c3ac627ab48fe8b491cd778e9cab973e16
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 495e43994d78b1e01374e348e6d21d41d9611212
+ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608162"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49131810"
 ---
 # <a name="get-javascript-intellisense-in-visual-studio-2019"></a>Использование IntelliSense для JavaScript в Visual Studio 2019
 
@@ -48,7 +48,8 @@ ms.locfileid: "44608162"
 /** @type {Excel.Range} */
 var subsetRange;
 ```
-![IntelliSense — переменная](../images/intellisense-vs17-var.png)
+
+![Снимок экрана с выдержкой из функции IntelliSense для переменной "Субсетранже"](../images/intellisense-vs17-var.png)
 
 ### <a name="parameter"></a>Параметр
 
@@ -58,7 +59,8 @@ function myFunc(paragraphs){
 
 }
 ```
-![IntelliSense — параметр](../images/intellisense-vs17-param.png)
+
+![Снимок экрана: Выдержка о параметре "Para" в параметре "paras" ("абзацы" в примере JavaScript)](../images/intellisense-vs17-param.png)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -68,7 +70,8 @@ function myFunc() {
 
 }
 ```
-![IntelliSense — возвращаемое значение](../images/intellisense-vs17-return.png)
+
+![Снимок экрана, на котором показана выдержка из IntelliSense для возвращаемого значения "Мифунк ()"](../images/intellisense-vs17-return.png)
 
 ### <a name="complex-types"></a>Сложные типы
 
@@ -80,7 +83,8 @@ function myFunc() {
 
 }
 ```
-![IntelliSense — сложный тип](../images/intellisense-vs17-complex-type.png)
+
+![Снимок экрана: IntelliSense для объявления сложного типа "var Мивар;" например,](../images/intellisense-vs17-complex-type.png)
 
 ## <a name="see-also"></a>См. также
 

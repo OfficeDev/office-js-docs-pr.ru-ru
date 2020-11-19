@@ -3,12 +3,12 @@ title: Контентные надстройки Office
 description: Контентные надстройки — это рабочие области, которые можно внедрять прямо в документы Excel или PowerPoint, что предоставляет пользователям доступ к элементам управления интерфейсом, которые выполняют код для изменения документов или отображения данных.
 ms.date: 07/07/2020
 localization_priority: Normal
-ms.openlocfilehash: 6dca7e295bbc2efe0469fa4c69c14238d977c3ed
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: cf4ea46b4b924683756063bb36c3f2ea2b8c6764
+ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292990"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49132083"
 ---
 # <a name="content-office-add-ins"></a>Контентные надстройки Office
 
@@ -16,7 +16,7 @@ ms.locfileid: "47292990"
 
 *Рисунок 1. Макет для контентных надстроек*
 
-![Изображение, на котором показан типичный макет контентной надстройки.](../images/overview-with-app-content.png)
+![Типичный макет контентных надстроек в приложении Office](../images/overview-with-app-content.png)
 
 ## <a name="best-practices"></a>Рекомендации
 
@@ -33,16 +33,15 @@ ms.locfileid: "47292990"
 
 В Windows меню личных данных имеет размер 12 x 32 пикселей, как показано на изображении.
 
-*Рисунок 2. Меню личных данных в Windows* 
+*Рисунок 2. Меню личных данных в Windows*
 
-![Изображение меню личных данных на компьютере с Windows](../images/personality-menu-win.png)
-
+![32 — меню "личные" на рабочем столе Windows](../images/personality-menu-win.png)
 
 В Mac меню личных данных имеет размер 26 x 26 точек, но сдвинуто на 8 пикселей влево и на 6 вниз, из-за чего оно занимает пространство размером 34 x 32 пикселей, как показано на изображении.
 
 *Рисунок 3. Меню личных данных на Mac*
 
-![Изображение меню личных данных на компьютере с Mac](../images/personality-menu-mac.png)
+![меню "личные" размером 34-Pixel на компьютере Mac](../images/personality-menu-mac.png)
 
 ## <a name="implementation"></a>Реализация
 
