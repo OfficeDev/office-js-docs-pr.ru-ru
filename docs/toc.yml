@@ -189,6 +189,10 @@
                       href: develop/create-addin-commands.md
                     - name: Включение и отключение команд надстроек
                       href: design/disable-add-in-commands.md
+                    - name: Интеграция встроенных кнопок Office в настраиваемые вкладки
+                      href: design/built-in-button-integration.md
+                    - name: Размещение настраиваемой вкладки на ленте
+                      href: design/custom-tab-placement.md
                 - name: Контентные надстройки
                   href: design/content-add-ins.md
                 - name: Диалоговые окна
