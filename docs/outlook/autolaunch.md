@@ -2,14 +2,14 @@
 title: Настройка надстройки Outlook для активации на основе событий (Предварительная версия)
 description: Узнайте, как настроить надстройку Outlook для активации на основе событий.
 ms.topic: article
-ms.date: 09/21/2020
+ms.date: 11/24/2020
 localization_priority: Normal
-ms.openlocfilehash: 1ddf5cd17934df261ef0002f38d92ed0dc40ca00
-ms.sourcegitcommit: 4a03d8b3f676ee2d91114813cb81bce5da3c8d6b
+ms.openlocfilehash: d7ba4a0fb87ec51db56892f4eb3002ae5b7fa6ec
+ms.sourcegitcommit: f4fa1a0187466ea136009d1fe48ec67e4312c934
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48175551"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49408843"
 ---
 # <a name="configure-your-outlook-add-in-for-event-based-activation-preview"></a>Настройка надстройки Outlook для активации на основе событий (Предварительная версия)
 
@@ -161,7 +161,7 @@ Outlook в Windows использует файл JavaScript, в то время 
 
 В этом сценарии вы добавите обработку для создания новых элементов.
 
-1. В проекте быстрого запуска откройте **commands.jsфайл./СРК/коммандс/ ** в редакторе кода.
+1. В проекте быстрого запуска откройте **commands.jsфайл./СРК/коммандс/** в редакторе кода.
 
 1. После `action` функции вставьте следующие функции JavaScript.
 
@@ -188,7 +188,7 @@ Outlook в Windows использует файл JavaScript, в то время 
 
 ## <a name="try-it-out"></a>Проверка
 
-1. Выполните следующую команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).
+1. В корневом каталоге проекта выполните указанную ниже команду. При ее выполнении будет запущен локальный веб-сервер (если он еще не запущен).
 
     ```command&nbsp;line
     npm run dev-server
@@ -219,6 +219,7 @@ Outlook в Windows использует файл JavaScript, в то время 
   - `displayDialogAsync`
   - `messageParent`
 - В разделе `Office.context.auth` :
+  - `getAccessToken`
   - `getAccessTokenAsync`
 
 ## <a name="see-also"></a>См. также
