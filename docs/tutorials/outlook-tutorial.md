@@ -1,60 +1,60 @@
 ---
 title: Руководство. Сборка надстройки Outlook для создания сообщения
 description: В этом руководстве вы создадите надстройку Outlook, которая вставляет списки GitHub в тело нового сообщения.
-ms.date: 11/12/2020
+ms.date: 11/20/2020
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: 8c962fb5772ed906fe6096a7e039d0be31a26c77
-ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
+ms.openlocfilehash: af42c13905fa793818c5dfb833fa9e7827c8a4c6
+ms.sourcegitcommit: f4fa1a0187466ea136009d1fe48ec67e4312c934
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49132384"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49408857"
 ---
-# <a name="tutorial-build-a-message-compose-outlook-add-in"></a><span data-ttu-id="8fb5a-103">Руководство. Сборка надстройки Outlook для создания сообщения</span><span class="sxs-lookup"><span data-stu-id="8fb5a-103">Tutorial: Build a message compose Outlook add-in</span></span>
+# <a name="tutorial-build-a-message-compose-outlook-add-in"></a><span data-ttu-id="43425-103">Руководство. Сборка надстройки Outlook для создания сообщения</span><span class="sxs-lookup"><span data-stu-id="43425-103">Tutorial: Build a message compose Outlook add-in</span></span>
 
-<span data-ttu-id="8fb5a-104">В этом руководстве разъясняется, как выполнить сборку надстройки Outlook, которую можно использовать в режиме создания сообщения для вставки содержимого в его текст.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-104">This tutorial teaches you how to build an Outlook add-in that can be used in message compose mode to insert content into the body of a message.</span></span>
+<span data-ttu-id="43425-104">В этом руководстве разъясняется, как выполнить сборку надстройки Outlook, которую можно использовать в режиме создания сообщения для вставки содержимого в его текст.</span><span class="sxs-lookup"><span data-stu-id="43425-104">This tutorial teaches you how to build an Outlook add-in that can be used in message compose mode to insert content into the body of a message.</span></span>
 
-<span data-ttu-id="8fb5a-105">В этом руководстве описан порядок выполнения перечисленных ниже задач.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-105">In this tutorial, you will:</span></span>
+<span data-ttu-id="43425-105">В этом руководстве описан порядок выполнения перечисленных ниже задач.</span><span class="sxs-lookup"><span data-stu-id="43425-105">In this tutorial, you will:</span></span>
 
 > [!div class="checklist"]
 >
-> - <span data-ttu-id="8fb5a-106">Создание проекта надстройки Outlook</span><span class="sxs-lookup"><span data-stu-id="8fb5a-106">Create an Outlook add-in project</span></span>
-> - <span data-ttu-id="8fb5a-107">Определение кнопок, отображаемых в окне создания сообщения</span><span class="sxs-lookup"><span data-stu-id="8fb5a-107">Define buttons that will render in the compose message window</span></span>
-> - <span data-ttu-id="8fb5a-108">Реализация интерфейса первого запуска, который собирает сведения от пользователя и получает данные из внешней службы</span><span class="sxs-lookup"><span data-stu-id="8fb5a-108">Implement a first-run experience that collects information from the user and fetches data from an external service</span></span>
-> - <span data-ttu-id="8fb5a-109">Реализация кнопки без пользовательского интерфейса, вызывающей функцию</span><span class="sxs-lookup"><span data-stu-id="8fb5a-109">Implement a UI-less button that invokes a function</span></span>
-> - <span data-ttu-id="8fb5a-110">Реализация области задач, вставляющей содержимое в текст сообщения</span><span class="sxs-lookup"><span data-stu-id="8fb5a-110">Implement a task pane that inserts content into the body of a message</span></span>
+> - <span data-ttu-id="43425-106">Создание проекта надстройки Outlook</span><span class="sxs-lookup"><span data-stu-id="43425-106">Create an Outlook add-in project</span></span>
+> - <span data-ttu-id="43425-107">Определение кнопок, отображаемых в окне создания сообщения</span><span class="sxs-lookup"><span data-stu-id="43425-107">Define buttons that will render in the compose message window</span></span>
+> - <span data-ttu-id="43425-108">Реализация интерфейса первого запуска, который собирает сведения от пользователя и получает данные из внешней службы</span><span class="sxs-lookup"><span data-stu-id="43425-108">Implement a first-run experience that collects information from the user and fetches data from an external service</span></span>
+> - <span data-ttu-id="43425-109">Реализация кнопки без пользовательского интерфейса, вызывающей функцию</span><span class="sxs-lookup"><span data-stu-id="43425-109">Implement a UI-less button that invokes a function</span></span>
+> - <span data-ttu-id="43425-110">Реализация области задач, вставляющей содержимое в текст сообщения</span><span class="sxs-lookup"><span data-stu-id="43425-110">Implement a task pane that inserts content into the body of a message</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="8fb5a-111">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="8fb5a-111">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="43425-111">Необходимые компоненты</span><span class="sxs-lookup"><span data-stu-id="43425-111">Prerequisites</span></span>
 
-- <span data-ttu-id="8fb5a-112">[Node.js](https://nodejs.org/) (последняя версия [LTS](https://nodejs.org/about/releases))</span><span class="sxs-lookup"><span data-stu-id="8fb5a-112">[Node.js](https://nodejs.org/) (the latest [LTS](https://nodejs.org/about/releases) version)</span></span>
+- <span data-ttu-id="43425-112">[Node.js](https://nodejs.org/) (последняя версия [LTS](https://nodejs.org/about/releases))</span><span class="sxs-lookup"><span data-stu-id="43425-112">[Node.js](https://nodejs.org/) (the latest [LTS](https://nodejs.org/about/releases) version)</span></span>
 
-- <span data-ttu-id="8fb5a-113">Последняя версия [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office). Выполните в командной строке указанную ниже команду, чтобы установить эти инструменты глобально.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-113">The latest version of [Yeoman](https://github.com/yeoman/yo) and the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office). To install these tools globally, run the following command via the command prompt:</span></span>
+- <span data-ttu-id="43425-113">Последняя версия [Yeoman](https://github.com/yeoman/yo) и [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office). Выполните в командной строке указанную ниже команду, чтобы установить эти инструменты глобально.</span><span class="sxs-lookup"><span data-stu-id="43425-113">The latest version of [Yeoman](https://github.com/yeoman/yo) and the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office). To install these tools globally, run the following command via the command prompt.</span></span>
 
     ```command&nbsp;line
     npm install -g yo generator-office
     ```
 
     > [!NOTE]
-    > <span data-ttu-id="8fb5a-114">Даже если вы уже установили генератор Yeoman, рекомендуем обновить пакет до последней версии из npm.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-114">Even if you've previously installed the Yeoman generator, we recommend you update your package to the latest version from npm.</span></span>
+    > <span data-ttu-id="43425-114">Даже если вы уже установили генератор Yeoman, рекомендуем обновить пакет до последней версии из npm.</span><span class="sxs-lookup"><span data-stu-id="43425-114">Even if you've previously installed the Yeoman generator, we recommend you update your package to the latest version from npm.</span></span>
 
-- <span data-ttu-id="8fb5a-115">Outlook 2016 или более поздней версии для Windows (подключенный к учетной записи Microsoft 365) или Outlook в Интернете</span><span class="sxs-lookup"><span data-stu-id="8fb5a-115">Outlook 2016 or later on Windows (connected to a Microsoft 365 account) or Outlook on the web</span></span>
+- <span data-ttu-id="43425-115">Outlook 2016 или более поздней версии для Windows (подключенный к учетной записи Microsoft 365) или Outlook в Интернете</span><span class="sxs-lookup"><span data-stu-id="43425-115">Outlook 2016 or later on Windows (connected to a Microsoft 365 account) or Outlook on the web</span></span>
 
-- <span data-ttu-id="8fb5a-116">Учетная запись [GitHub](https://www.github.com)</span><span class="sxs-lookup"><span data-stu-id="8fb5a-116">A [GitHub](https://www.github.com) account</span></span>
+- <span data-ttu-id="43425-116">Учетная запись [GitHub](https://www.github.com)</span><span class="sxs-lookup"><span data-stu-id="43425-116">A [GitHub](https://www.github.com) account</span></span>
 
-## <a name="setup"></a><span data-ttu-id="8fb5a-117">Настройка</span><span class="sxs-lookup"><span data-stu-id="8fb5a-117">Setup</span></span>
+## <a name="setup"></a><span data-ttu-id="43425-117">Настройка</span><span class="sxs-lookup"><span data-stu-id="43425-117">Setup</span></span>
 
-<span data-ttu-id="8fb5a-p101">Надстройка, создаваемая с помощью этого руководства, считывает элементы [gist](https://gist.github.com) из учетной записи GitHub пользователя и добавляет выбранные элементы gist в текст сообщения. Выполните указанные ниже действия для создания двух новых элементов gist, с помощью которых можно проверить создаваемую надстройку.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-p101">The add-in that you'll create in this tutorial will read [gists](https://gist.github.com) from the user's GitHub account and add the selected gist to the body of a message. Complete the following steps to create two new gists that you can use to test the add-in you're going to build.</span></span>
+<span data-ttu-id="43425-p101">Надстройка, создаваемая с помощью этого руководства, считывает элементы [gist](https://gist.github.com) из учетной записи GitHub пользователя и добавляет выбранные элементы gist в текст сообщения. Выполните указанные ниже действия для создания двух новых элементов gist, с помощью которых можно проверить создаваемую надстройку.</span><span class="sxs-lookup"><span data-stu-id="43425-p101">The add-in that you'll create in this tutorial will read [gists](https://gist.github.com) from the user's GitHub account and add the selected gist to the body of a message. Complete the following steps to create two new gists that you can use to test the add-in you're going to build.</span></span>
 
-1. <span data-ttu-id="8fb5a-120">[Выполните вход в GitHub](https://github.com/login).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-120">[Login to GitHub](https://github.com/login).</span></span>
+1. <span data-ttu-id="43425-120">[Выполните вход в GitHub](https://github.com/login).</span><span class="sxs-lookup"><span data-stu-id="43425-120">[Login to GitHub](https://github.com/login).</span></span>
 
-1. <span data-ttu-id="8fb5a-121">[Создайте новый элемент gist](https://gist.github.com).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-121">[Create a new gist](https://gist.github.com).</span></span>
+1. <span data-ttu-id="43425-121">[Создайте новый элемент gist](https://gist.github.com).</span><span class="sxs-lookup"><span data-stu-id="43425-121">[Create a new gist](https://gist.github.com).</span></span>
 
-    - <span data-ttu-id="8fb5a-122">В поле **Gist description...** (Описание gist) введите **Hello World Markdown**.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-122">In the **Gist description...** field, enter **Hello World Markdown**.</span></span>
+    - <span data-ttu-id="43425-122">В поле **Gist description...** (Описание gist) введите **Hello World Markdown**.</span><span class="sxs-lookup"><span data-stu-id="43425-122">In the **Gist description...** field, enter **Hello World Markdown**.</span></span>
 
-    - <span data-ttu-id="8fb5a-123">В поле **Filename including extension...** (Имя файла с расширением) введите **test.md**.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-123">In the **Filename including extension...** field, enter **test.md**.</span></span>
+    - <span data-ttu-id="43425-123">В поле **Filename including extension…** (Имя файла с расширением) введите **test.md**.</span><span class="sxs-lookup"><span data-stu-id="43425-123">In the **Filename including extension...** field, enter **test.md**.</span></span>
 
-    - <span data-ttu-id="8fb5a-124">Добавьте в многострочное текстовое поле указанную ниже разметку.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-124">Add the following markdown to the multiline textbox:</span></span>
+    - <span data-ttu-id="43425-124">Добавьте в многострочное текстовое поле указанную ниже разметку.</span><span class="sxs-lookup"><span data-stu-id="43425-124">Add the following markdown to the multiline textbox.</span></span>
 
         ```markdown
         # Hello World
@@ -70,15 +70,15 @@ ms.locfileid: "49132384"
           ```
         ```
 
-    - <span data-ttu-id="8fb5a-125">Нажмите кнопку **Create public gist** (Создать общедоступный элемент gist).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-125">Select the **Create public gist** button.</span></span>
+    - <span data-ttu-id="43425-125">Нажмите кнопку **Create public gist** (Создать общедоступный элемент gist).</span><span class="sxs-lookup"><span data-stu-id="43425-125">Select the **Create public gist** button.</span></span>
 
-1. <span data-ttu-id="8fb5a-126">[Создайте другой элемент gist](https://gist.github.com).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-126">[Create another new gist](https://gist.github.com).</span></span>
+1. <span data-ttu-id="43425-126">[Создайте другой элемент gist](https://gist.github.com).</span><span class="sxs-lookup"><span data-stu-id="43425-126">[Create another new gist](https://gist.github.com).</span></span>
 
-    - <span data-ttu-id="8fb5a-127">В поле **Gist description...** (Описание gist) введите **Hello World Html**.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-127">In the **Gist description...** field, enter **Hello World Html**.</span></span>
+    - <span data-ttu-id="43425-127">В поле **Gist description...** (Описание gist) введите **Hello World Html**.</span><span class="sxs-lookup"><span data-stu-id="43425-127">In the **Gist description...** field, enter **Hello World Html**.</span></span>
 
-    - <span data-ttu-id="8fb5a-128">В поле **Filename including extension...** (Имя файла с расширением) введите **test.html**.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-128">In the **Filename including extension...** field, enter **test.html**.</span></span>
+    - <span data-ttu-id="43425-128">В поле **Filename including extension…** (Имя файла с расширением) введите **test.html**.</span><span class="sxs-lookup"><span data-stu-id="43425-128">In the **Filename including extension...** field, enter **test.html**.</span></span>
 
-    - <span data-ttu-id="8fb5a-129">Добавьте в многострочное текстовое поле указанную ниже разметку.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-129">Add the following markdown to the multiline textbox:</span></span>
+    - <span data-ttu-id="43425-129">Добавьте в многострочное текстовое поле указанную ниже разметку.</span><span class="sxs-lookup"><span data-stu-id="43425-129">Add the following markdown to the multiline textbox.</span></span>
 
         ```HTML
         <html>
@@ -96,108 +96,108 @@ ms.locfileid: "49132384"
         </html>
         ```
 
-    - <span data-ttu-id="8fb5a-130">Нажмите кнопку **Create public gist** (Создать общедоступный элемент gist).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-130">Select the **Create public gist** button.</span></span>
+    - <span data-ttu-id="43425-130">Нажмите кнопку **Create public gist** (Создать общедоступный элемент gist).</span><span class="sxs-lookup"><span data-stu-id="43425-130">Select the **Create public gist** button.</span></span>
 
-## <a name="create-an-outlook-add-in-project"></a><span data-ttu-id="8fb5a-131">Создание проекта надстройки Outlook</span><span class="sxs-lookup"><span data-stu-id="8fb5a-131">Create an Outlook add-in project</span></span>
+## <a name="create-an-outlook-add-in-project"></a><span data-ttu-id="43425-131">Создание проекта надстройки Outlook</span><span class="sxs-lookup"><span data-stu-id="43425-131">Create an Outlook add-in project</span></span>
 
 1. [!include[Yeoman generator create project guidance](../includes/yo-office-command-guidance.md)]
 
-    - <span data-ttu-id="8fb5a-132">**Выберите тип проекта** - `Office Add-in Task Pane project`</span><span class="sxs-lookup"><span data-stu-id="8fb5a-132">**Choose a project type** - `Office Add-in Task Pane project`</span></span>
+    - <span data-ttu-id="43425-132">**Выберите тип проекта** - `Office Add-in Task Pane project`</span><span class="sxs-lookup"><span data-stu-id="43425-132">**Choose a project type** - `Office Add-in Task Pane project`</span></span>
 
-    - <span data-ttu-id="8fb5a-133">**Выберите тип сценария** - `JavaScript`</span><span class="sxs-lookup"><span data-stu-id="8fb5a-133">**Choose a script type** - `JavaScript`</span></span>
+    - <span data-ttu-id="43425-133">**Выберите тип сценария** - `JavaScript`</span><span class="sxs-lookup"><span data-stu-id="43425-133">**Choose a script type** - `JavaScript`</span></span>
 
-    - <span data-ttu-id="8fb5a-134">**Как вы хотите назвать надстройку?**</span><span class="sxs-lookup"><span data-stu-id="8fb5a-134">**What do you want to name your add-in?**</span></span> - `Git the gist`
+    - <span data-ttu-id="43425-134">**Как вы хотите назвать надстройку?**</span><span class="sxs-lookup"><span data-stu-id="43425-134">**What do you want to name your add-in?**</span></span> - `Git the gist`
 
-    - <span data-ttu-id="8fb5a-135">**Какое клиентское приложение Office должно поддерживаться?**</span><span class="sxs-lookup"><span data-stu-id="8fb5a-135">**Which Office client application would you like to support?**</span></span> - `Outlook`
+    - <span data-ttu-id="43425-135">**Какое клиентское приложение Office должно поддерживаться?**</span><span class="sxs-lookup"><span data-stu-id="43425-135">**Which Office client application would you like to support?**</span></span> - `Outlook`
 
     ![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки](../images/yeoman-prompts-2.png)
 
-    <span data-ttu-id="8fb5a-137">После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-137">After you complete the wizard, the generator will create the project and install supporting Node components.</span></span>
+    <span data-ttu-id="43425-137">После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.</span><span class="sxs-lookup"><span data-stu-id="43425-137">After you complete the wizard, the generator will create the project and install supporting Node components.</span></span>
 
     [!include[Yeoman generator next steps](../includes/yo-office-next-steps.md)]
 
-1. <span data-ttu-id="8fb5a-138">Перейдите к корневому каталогу проекта.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-138">Navigate to the root directory of the project.</span></span>
+1. <span data-ttu-id="43425-138">Перейдите к корневому каталогу проекта.</span><span class="sxs-lookup"><span data-stu-id="43425-138">Navigate to the root directory of the project.</span></span>
 
     ```command&nbsp;line
     cd "Git the gist"
     ```
 
-1. <span data-ttu-id="8fb5a-139">Эта надстройка будет использовать следующие библиотеки:</span><span class="sxs-lookup"><span data-stu-id="8fb5a-139">This add-in will use the following libraries:</span></span>
+1. <span data-ttu-id="43425-139">Эта надстройка будет использовать указанные ниже библиотеки.</span><span class="sxs-lookup"><span data-stu-id="43425-139">This add-in will use the following libraries.</span></span>
 
-    - <span data-ttu-id="8fb5a-140">Библиотека [Showdown](https://github.com/showdownjs/showdown) для преобразования Markdown в HTML</span><span class="sxs-lookup"><span data-stu-id="8fb5a-140">[Showdown](https://github.com/showdownjs/showdown) library to convert Markdown to HTML</span></span>
-    - <span data-ttu-id="8fb5a-141">Библиотека [URI.js](https://github.com/medialize/URI.js) для создания относительных URL-адресов.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-141">[URI.js](https://github.com/medialize/URI.js) library to build relative URLs.</span></span>
-    - <span data-ttu-id="8fb5a-142">Библиотеки [jquery](https://jquery.com/) для упрощения взаимодействий DOM.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-142">[jquery](https://jquery.com/) library to simplify DOM interactions.</span></span>
+    - <span data-ttu-id="43425-140">Библиотека [Showdown](https://github.com/showdownjs/showdown) для преобразования Markdown в HTML</span><span class="sxs-lookup"><span data-stu-id="43425-140">[Showdown](https://github.com/showdownjs/showdown) library to convert Markdown to HTML</span></span>
+    - <span data-ttu-id="43425-141">Библиотека [URI.js](https://github.com/medialize/URI.js) для создания относительных URL-адресов.</span><span class="sxs-lookup"><span data-stu-id="43425-141">[URI.js](https://github.com/medialize/URI.js) library to build relative URLs.</span></span>
+    - <span data-ttu-id="43425-142">Библиотека [jquery](https://jquery.com/) для упрощения взаимодействий DOM.</span><span class="sxs-lookup"><span data-stu-id="43425-142">[jquery](https://jquery.com/) library to simplify DOM interactions.</span></span>
 
-     <span data-ttu-id="8fb5a-143">Чтобы установить эти инструменты для своего проекта, выполните в корневом каталоге проекта указанную ниже команду.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-143">To install these tools for your project, run the following command in the root directory of the project:</span></span>
+     <span data-ttu-id="43425-143">Чтобы установить эти инструменты для своего проекта, выполните в корневом каталоге проекта указанную ниже команду.</span><span class="sxs-lookup"><span data-stu-id="43425-143">To install these tools for your project, run the following command in the root directory of the project.</span></span>
 
     ```command&nbsp;line
     npm install showdown urijs jquery --save
     ```
 
-### <a name="update-the-manifest"></a><span data-ttu-id="8fb5a-144">Обновление манифеста</span><span class="sxs-lookup"><span data-stu-id="8fb5a-144">Update the manifest</span></span>
+### <a name="update-the-manifest"></a><span data-ttu-id="43425-144">Обновление манифеста</span><span class="sxs-lookup"><span data-stu-id="43425-144">Update the manifest</span></span>
 
-<span data-ttu-id="8fb5a-p102">Манифест надстройки управляет ее отображением в Outlook. Он определяет, как надстройка отображается в списке, а также задает кнопки на ленте и URL-адреса файлов HTML и JavaScript, используемых надстройкой.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-p102">The manifest for an add-in controls how it appears in Outlook. It defines the way the add-in appears in the add-in list and the buttons that appear on the ribbon, and it sets the URLs for the HTML and JavaScript files used by the add-in.</span></span>
+<span data-ttu-id="43425-p102">Манифест надстройки управляет ее отображением в Outlook. Он определяет, как надстройка отображается в списке, а также задает кнопки на ленте и URL-адреса файлов HTML и JavaScript, используемых надстройкой.</span><span class="sxs-lookup"><span data-stu-id="43425-p102">The manifest for an add-in controls how it appears in Outlook. It defines the way the add-in appears in the add-in list and the buttons that appear on the ribbon, and it sets the URLs for the HTML and JavaScript files used by the add-in.</span></span>
 
-#### <a name="specify-basic-information"></a><span data-ttu-id="8fb5a-147">Указание основных сведений</span><span class="sxs-lookup"><span data-stu-id="8fb5a-147">Specify basic information</span></span>
+#### <a name="specify-basic-information"></a><span data-ttu-id="43425-147">Указание основных сведений</span><span class="sxs-lookup"><span data-stu-id="43425-147">Specify basic information</span></span>
 
-<span data-ttu-id="8fb5a-148">Внесите следующие изменения в файле **manifest.xml**, чтобы указать некоторые основные сведения о надстройке.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-148">Make the following updates in the **manifest.xml** file to specify some basic information about the add-in:</span></span>
+<span data-ttu-id="43425-148">Внесите следующие изменения в файл **manifest.xml**, чтобы указать некоторые основные сведения о надстройке.</span><span class="sxs-lookup"><span data-stu-id="43425-148">Make the following updates in the **manifest.xml** file to specify some basic information about the add-in.</span></span>
 
-1. <span data-ttu-id="8fb5a-149">Найдите элемент `ProviderName` и замените значение по умолчанию на название вашей компании.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-149">Locate the `ProviderName` element and replace the default value with your company name.</span></span>
+1. <span data-ttu-id="43425-149">Найдите элемент `ProviderName` и замените значение по умолчанию на название вашей компании.</span><span class="sxs-lookup"><span data-stu-id="43425-149">Locate the `ProviderName` element and replace the default value with your company name.</span></span>
 
     ```xml
     <ProviderName>Contoso</ProviderName>
     ```
 
-1. <span data-ttu-id="8fb5a-150">Найдите элемент `Description`, замените значение по умолчанию на описание надстройки и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-150">Locate the `Description` element, replace the default value with a description of the add-in, and save the file.</span></span>
+1. <span data-ttu-id="43425-150">Найдите элемент `Description`, замените значение по умолчанию на описание надстройки и сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="43425-150">Locate the `Description` element, replace the default value with a description of the add-in, and save the file.</span></span>
 
     ```xml
     <Description DefaultValue="Allows users to access their GitHub gists."/>
     ```
 
-#### <a name="test-the-generated-add-in"></a><span data-ttu-id="8fb5a-151">Тестирование созданной надстройки</span><span class="sxs-lookup"><span data-stu-id="8fb5a-151">Test the generated add-in</span></span>
+#### <a name="test-the-generated-add-in"></a><span data-ttu-id="43425-151">Тестирование созданной надстройки</span><span class="sxs-lookup"><span data-stu-id="43425-151">Test the generated add-in</span></span>
 
-<span data-ttu-id="8fb5a-152">Прежде чем продолжить, протестируйте базовую надстройку, созданную генератором, чтобы подтвердить правильную настройку проекта.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-152">Before going any further, let's test the basic add-in that the generator created to confirm that the project is set up correctly.</span></span>
+<span data-ttu-id="43425-152">Прежде чем продолжить, протестируйте базовую надстройку, созданную генератором, чтобы подтвердить правильную настройку проекта.</span><span class="sxs-lookup"><span data-stu-id="43425-152">Before going any further, let's test the basic add-in that the generator created to confirm that the project is set up correctly.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="8fb5a-p103">Надстройки Office должны использовать протокол HTTPS, а не HTTP, даже в процессе разработки. Если вам будет предложено установить сертификат после выполнения следующей команды, согласитесь с предложением установить сертификат, предоставленный генератором Yeoman. Для внесения этих изменений вам может потребоваться запустить командную строку или терминал с правами администратора.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-p103">Office Add-ins should use HTTPS, not HTTP, even when you are developing. If you are prompted to install a certificate after you run the following command, accept the prompt to install the certificate that the Yeoman generator provides. You may also have to run your command prompt or terminal as an administrator for the changes to be made.</span></span>
+> <span data-ttu-id="43425-p103">Надстройки Office должны использовать протокол HTTPS, а не HTTP, даже в процессе разработки. Если вам будет предложено установить сертификат после выполнения следующей команды, согласитесь с предложением установить сертификат, предоставленный генератором Yeoman. Для внесения этих изменений вам может потребоваться запустить командную строку или терминал с правами администратора.</span><span class="sxs-lookup"><span data-stu-id="43425-p103">Office Add-ins should use HTTPS, not HTTP, even when you are developing. If you are prompted to install a certificate after you run the following command, accept the prompt to install the certificate that the Yeoman generator provides. You may also have to run your command prompt or terminal as an administrator for the changes to be made.</span></span>
 
-1. <span data-ttu-id="8fb5a-p104">В корневом каталоге проекта выполните указанную ниже команду. При ее выполнении будет запущен локальный веб-сервер (если он еще не запущен).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-p104">Run the following command in the root directory of your project. When you run this command, the local web server will start (if it's not already running).</span></span>
+1. <span data-ttu-id="43425-p104">В корневом каталоге проекта выполните указанную ниже команду. При ее выполнении будет запущен локальный веб-сервер (если он еще не запущен).</span><span class="sxs-lookup"><span data-stu-id="43425-p104">Run the following command in the root directory of your project. When you run this command, the local web server will start (if it's not already running).</span></span>
 
     ```command&nbsp;line
     npm run dev-server
     ```
 
-1. <span data-ttu-id="8fb5a-158">Выполните инструкции, приведенные в статье [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md), чтобы загрузить неопубликованный файл **manifest.xml**, находящийся в корневом каталоге проекта.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-158">Follow the instructions in [Sideload Outlook add-ins for testing](../outlook/sideload-outlook-add-ins-for-testing.md) to sideload the **manifest.xml** file that's located in the root directory of the project.</span></span>
+1. <span data-ttu-id="43425-158">Выполните инструкции, приведенные в статье [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md), чтобы загрузить неопубликованный файл **manifest.xml**, находящийся в корневом каталоге проекта.</span><span class="sxs-lookup"><span data-stu-id="43425-158">Follow the instructions in [Sideload Outlook add-ins for testing](../outlook/sideload-outlook-add-ins-for-testing.md) to sideload the **manifest.xml** file that's located in the root directory of the project.</span></span>
 
-1. <span data-ttu-id="8fb5a-p105">Откройте какое-либо из имеющихся сообщений Outlook и нажмите кнопку **Показать область задач**. Если все настройки были выполнены верно, откроется область задач с отображенной на ней страницей приветствия надстройки.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-p105">In Outlook, open an existing message and select the **Show Taskpane** button. If everything's been set up correctly, the task pane will open and render the add-in's welcome page.</span></span>
+1. <span data-ttu-id="43425-p105">Откройте какое-либо из имеющихся сообщений Outlook и нажмите кнопку **Показать область задач**. Если все настройки были выполнены верно, откроется область задач с отображенной на ней страницей приветствия надстройки.</span><span class="sxs-lookup"><span data-stu-id="43425-p105">In Outlook, open an existing message and select the **Show Taskpane** button. If everything's been set up correctly, the task pane will open and render the add-in's welcome page.</span></span>
 
     ![Снимок экрана с кнопкой "Показать область задач" и областью задач Git the gist, добавленной после выполнения примера](../images/button-and-pane.png)
 
-## <a name="define-buttons"></a><span data-ttu-id="8fb5a-162">Определение кнопок</span><span class="sxs-lookup"><span data-stu-id="8fb5a-162">Define buttons</span></span>
+## <a name="define-buttons"></a><span data-ttu-id="43425-162">Определение кнопок</span><span class="sxs-lookup"><span data-stu-id="43425-162">Define buttons</span></span>
 
-<span data-ttu-id="8fb5a-p106">Теперь, когда вы проверили базовую надстройку и убедились в том, что она работает, можно настроить ее, расширив функциональность. По умолчанию в манифесте определены только кнопки для окна чтения сообщений. Давайте изменим этот манифест, убрав кнопки из окна чтения сообщений и определим две новые кнопки для окна создания сообщений:</span><span class="sxs-lookup"><span data-stu-id="8fb5a-p106">Now that you've verified the base add-in works, you can customize it to add more functionality. By default, the manifest only defines buttons for the read message window. Let's update the manifest to remove the buttons from the read message window and define two new buttons for the compose message window:</span></span>
+<span data-ttu-id="43425-p106">Теперь, когда вы проверили базовую надстройку и убедились в том, что она работает, можно настроить ее, расширив функциональность. По умолчанию в манифесте определены только кнопки для окна чтения сообщений. Давайте изменим этот манифест, убрав кнопки из окна чтения сообщений и определим две новые кнопки для окна создания сообщений:</span><span class="sxs-lookup"><span data-stu-id="43425-p106">Now that you've verified the base add-in works, you can customize it to add more functionality. By default, the manifest only defines buttons for the read message window. Let's update the manifest to remove the buttons from the read message window and define two new buttons for the compose message window:</span></span>
 
-- <span data-ttu-id="8fb5a-166">**Insert gist** (Вставить gist): кнопка, открывающая область задач</span><span class="sxs-lookup"><span data-stu-id="8fb5a-166">**Insert gist**: a button that opens a task pane</span></span>
+- <span data-ttu-id="43425-166">**Insert gist** (Вставить gist): кнопка, открывающая область задач</span><span class="sxs-lookup"><span data-stu-id="43425-166">**Insert gist**: a button that opens a task pane</span></span>
 
-- <span data-ttu-id="8fb5a-167">**Insert default gist** (Вставить gist по умолчанию): кнопка, вызывающая функцию</span><span class="sxs-lookup"><span data-stu-id="8fb5a-167">**Insert default gist**: a button that invokes a function</span></span>
+- <span data-ttu-id="43425-167">**Insert default gist** (Вставить gist по умолчанию): кнопка, вызывающая функцию</span><span class="sxs-lookup"><span data-stu-id="43425-167">**Insert default gist**: a button that invokes a function</span></span>
 
-### <a name="remove-the-messagereadcommandsurface-extension-point"></a><span data-ttu-id="8fb5a-168">Удаление точки расширения MessageReadCommandSurface</span><span class="sxs-lookup"><span data-stu-id="8fb5a-168">Remove the MessageReadCommandSurface extension point</span></span>
+### <a name="remove-the-messagereadcommandsurface-extension-point"></a><span data-ttu-id="43425-168">Удаление точки расширения MessageReadCommandSurface</span><span class="sxs-lookup"><span data-stu-id="43425-168">Remove the MessageReadCommandSurface extension point</span></span>
 
-<span data-ttu-id="8fb5a-p107">Откройте файл **manifest.xml** и найдите элемент `ExtensionPoint` с типом `MessageReadCommandSurface`. Удалите этот элемент `ExtensionPoint` (вместе с его закрывающим тегом), чтобы удалить кнопки из окна чтения сообщений.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-p107">Open the **manifest.xml** file and locate the `ExtensionPoint` element with type `MessageReadCommandSurface`. Delete this `ExtensionPoint` element (including its closing tag) to remove the buttons from the read message window.</span></span>
+<span data-ttu-id="43425-p107">Откройте файл **manifest.xml** и найдите элемент `ExtensionPoint` с типом `MessageReadCommandSurface`. Удалите этот элемент `ExtensionPoint` (вместе с его закрывающим тегом), чтобы удалить кнопки из окна чтения сообщений.</span><span class="sxs-lookup"><span data-stu-id="43425-p107">Open the **manifest.xml** file and locate the `ExtensionPoint` element with type `MessageReadCommandSurface`. Delete this `ExtensionPoint` element (including its closing tag) to remove the buttons from the read message window.</span></span>
 
-### <a name="add-the-messagecomposecommandsurface-extension-point"></a><span data-ttu-id="8fb5a-171">Добавление точки расширения MessageComposeCommandSurface</span><span class="sxs-lookup"><span data-stu-id="8fb5a-171">Add the MessageComposeCommandSurface extension point</span></span>
+### <a name="add-the-messagecomposecommandsurface-extension-point"></a><span data-ttu-id="43425-171">Добавление точки расширения MessageComposeCommandSurface</span><span class="sxs-lookup"><span data-stu-id="43425-171">Add the MessageComposeCommandSurface extension point</span></span>
 
-<span data-ttu-id="8fb5a-p108">Найдите в манифесте строку `</DesktopFormFactor>`. Сразу после нее вставьте приведенную ниже разметку XML. Обратите внимание на следующее:</span><span class="sxs-lookup"><span data-stu-id="8fb5a-p108">Locate the line in the manifest that reads `</DesktopFormFactor>`. Immediately before this line, insert the following XML markup. Note the following about this markup:</span></span>
+<span data-ttu-id="43425-p108">Найдите в манифесте строку `</DesktopFormFactor>`. Непосредственно перед ней вставьте приведенную ниже разметку XML. Обратите внимание на следующее:</span><span class="sxs-lookup"><span data-stu-id="43425-p108">Locate the line in the manifest that reads `</DesktopFormFactor>`. Immediately before this line, insert the following XML markup. Note the following about this markup.</span></span>
 
-- <span data-ttu-id="8fb5a-175">`ExtensionPoint` с `xsi:type="MessageComposeCommandSurface"` означает, что вы определяете кнопки для окна составления сообщений.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-175">The `ExtensionPoint` with `xsi:type="MessageComposeCommandSurface"` indicates that you're defining buttons to add to the compose message window.</span></span>
+- <span data-ttu-id="43425-175">`ExtensionPoint` с `xsi:type="MessageComposeCommandSurface"` означает, что вы определяете кнопки для окна составления сообщений.</span><span class="sxs-lookup"><span data-stu-id="43425-175">The `ExtensionPoint` with `xsi:type="MessageComposeCommandSurface"` indicates that you're defining buttons to add to the compose message window.</span></span>
 
-- <span data-ttu-id="8fb5a-176">С помощью элемента `OfficeTab` с параметром `id="TabDefault"` вы указываете, что нужно добавить кнопки на вкладку ленты по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-176">By using an `OfficeTab` element with `id="TabDefault"`, you're indicating you want to add the buttons to the default tab on the ribbon.</span></span>
+- <span data-ttu-id="43425-176">С помощью элемента `OfficeTab` с параметром `id="TabDefault"` вы указываете, что нужно добавить кнопки на вкладку ленты по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="43425-176">By using an `OfficeTab` element with `id="TabDefault"`, you're indicating you want to add the buttons to the default tab on the ribbon.</span></span>
 
-- <span data-ttu-id="8fb5a-177">Элемент `Group` определяет группу новых кнопок, а ресурс `groupLabel` задает подпись группы.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-177">The `Group` element defines the grouping for the new buttons, with a label set by the `groupLabel` resource.</span></span>
+- <span data-ttu-id="43425-177">Элемент `Group` определяет группу новых кнопок, а ресурс `groupLabel` задает подпись группы.</span><span class="sxs-lookup"><span data-stu-id="43425-177">The `Group` element defines the grouping for the new buttons, with a label set by the `groupLabel` resource.</span></span>
 
-- <span data-ttu-id="8fb5a-178">Первый элемент `Control` содержит элемент `Action` с параметром `xsi:type="ShowTaskPane"`, поэтому эта кнопка открывает область задач.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-178">The first `Control` element contains an `Action` element with `xsi:type="ShowTaskPane"`, so this button opens a task pane.</span></span>
+- <span data-ttu-id="43425-178">Первый элемент `Control` содержит элемент `Action` с параметром `xsi:type="ShowTaskPane"`, поэтому эта кнопка открывает область задач.</span><span class="sxs-lookup"><span data-stu-id="43425-178">The first `Control` element contains an `Action` element with `xsi:type="ShowTaskPane"`, so this button opens a task pane.</span></span>
 
-- <span data-ttu-id="8fb5a-179">Второй элемент `Control` содержит элемент `Action` с параметром `xsi:type="ExecuteFunction"`, поэтому кнопка вызывает функцию JavaScript, содержащуюся в файле функций.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-179">The second `Control` element contains an `Action` element with `xsi:type="ExecuteFunction"`, so this button invokes a JavaScript function contained in the function file.</span></span>
+- <span data-ttu-id="43425-179">Второй элемент `Control` содержит элемент `Action` с параметром `xsi:type="ExecuteFunction"`, поэтому кнопка вызывает функцию JavaScript, содержащуюся в файле функций.</span><span class="sxs-lookup"><span data-stu-id="43425-179">The second `Control` element contains an `Action` element with `xsi:type="ExecuteFunction"`, so this button invokes a JavaScript function contained in the function file.</span></span>
 
 ```xml
 <!-- Message Compose -->
@@ -240,13 +240,13 @@ ms.locfileid: "49132384"
 </ExtensionPoint>
 ```
 
-### <a name="update-resources-in-the-manifest"></a><span data-ttu-id="8fb5a-180">Обновление ресурсов в манифесте</span><span class="sxs-lookup"><span data-stu-id="8fb5a-180">Update resources in the manifest</span></span>
+### <a name="update-resources-in-the-manifest"></a><span data-ttu-id="43425-180">Обновление ресурсов в манифесте</span><span class="sxs-lookup"><span data-stu-id="43425-180">Update resources in the manifest</span></span>
 
-<span data-ttu-id="8fb5a-p109">В предыдущем программном коде есть ссылки на метки, подсказки и URL-адреса, которые необходимо определить для того, чтобы манифест стал рабочим. Эта информация указывается в разделе `Resources` манифеста.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-p109">The previous code references labels, tooltips, and URLs that you need to define before the manifest will be valid. You'll specify this information in the `Resources` section of the manifest.</span></span>
+<span data-ttu-id="43425-p109">В предыдущем программном коде есть ссылки на метки, подсказки и URL-адреса, которые необходимо определить для того, чтобы манифест стал рабочим. Эта информация указывается в разделе `Resources` манифеста.</span><span class="sxs-lookup"><span data-stu-id="43425-p109">The previous code references labels, tooltips, and URLs that you need to define before the manifest will be valid. You'll specify this information in the `Resources` section of the manifest.</span></span>
 
-1. <span data-ttu-id="8fb5a-183">Найдите элемент `Resources` в файле манифеста и удалите его целиком (вместе с закрывающим тегом).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-183">Locate the `Resources` element in the manifest file and delete the entire element (including its closing tag).</span></span>
+1. <span data-ttu-id="43425-183">Найдите элемент `Resources` в файле манифеста и удалите его целиком (вместе с закрывающим тегом).</span><span class="sxs-lookup"><span data-stu-id="43425-183">Locate the `Resources` element in the manifest file and delete the entire element (including its closing tag).</span></span>
 
-1. <span data-ttu-id="8fb5a-184">Добавьте в том же местоположении следующую разметку, чтобы заменить только что удаленный элемент `Resources`:</span><span class="sxs-lookup"><span data-stu-id="8fb5a-184">In that same location, add the following markup to replace the `Resources` element you just removed:</span></span>
+1. <span data-ttu-id="43425-184">Добавьте в то же местоположение следующую разметку, чтобы заменить только что удаленный элемент `Resources`.</span><span class="sxs-lookup"><span data-stu-id="43425-184">In that same location, add the following markup to replace the `Resources` element you just removed.</span></span>
 
     ```xml
     <Resources>
@@ -273,37 +273,37 @@ ms.locfileid: "49132384"
     </Resources>
     ```
 
-1. <span data-ttu-id="8fb5a-185">Сохраните изменения манифеста.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-185">Save your changes to the manifest.</span></span>
+1. <span data-ttu-id="43425-185">Сохраните изменения в манифесте.</span><span class="sxs-lookup"><span data-stu-id="43425-185">Save your changes to the manifest.</span></span>
 
-### <a name="reinstall-the-add-in"></a><span data-ttu-id="8fb5a-186">Переустановка надстройки</span><span class="sxs-lookup"><span data-stu-id="8fb5a-186">Reinstall the add-in</span></span>
+### <a name="reinstall-the-add-in"></a><span data-ttu-id="43425-186">Переустановка надстройки</span><span class="sxs-lookup"><span data-stu-id="43425-186">Reinstall the add-in</span></span>
 
-<span data-ttu-id="8fb5a-187">Так как вы ранее установили надстройку из файла, необходимо переустановить ее, чтобы изменения манифеста вступили в силу.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-187">Since you previously installed the add-in from a file, you must reinstall it in order for the manifest changes to take effect.</span></span>
+<span data-ttu-id="43425-187">Так как вы ранее установили надстройку из файла, необходимо переустановить ее, чтобы изменения манифеста вступили в силу.</span><span class="sxs-lookup"><span data-stu-id="43425-187">Since you previously installed the add-in from a file, you must reinstall it in order for the manifest changes to take effect.</span></span>
 
-1. <span data-ttu-id="8fb5a-188">Следуйте указаниям по удалению **Git the gist** из [загруженных неопубликованных надстроек](../outlook/sideload-outlook-add-ins-for-testing.md#remove-a-sideloaded-add-in).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-188">Follow the instructions to remove **Git the gist** from [sideloaded add-ins](../outlook/sideload-outlook-add-ins-for-testing.md#remove-a-sideloaded-add-in).</span></span>
+1. <span data-ttu-id="43425-188">Следуйте указаниям по удалению **Git the gist** из [загруженных неопубликованных надстроек](../outlook/sideload-outlook-add-ins-for-testing.md#remove-a-sideloaded-add-in).</span><span class="sxs-lookup"><span data-stu-id="43425-188">Follow the instructions to remove **Git the gist** from [sideloaded add-ins](../outlook/sideload-outlook-add-ins-for-testing.md#remove-a-sideloaded-add-in).</span></span>
 
-1. <span data-ttu-id="8fb5a-189">Закройте окно **Мои надстройки**.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-189">Close the **My add-ins** window.</span></span>
+1. <span data-ttu-id="43425-189">Закройте окно **Мои надстройки**.</span><span class="sxs-lookup"><span data-stu-id="43425-189">Close the **My add-ins** window.</span></span>
 
-1. <span data-ttu-id="8fb5a-190">Пользовательская кнопка должна моментально исчезнуть с ленты.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-190">The custom button should disappear from the ribbon momentarily.</span></span>
+1. <span data-ttu-id="43425-190">Пользовательская кнопка должна моментально исчезнуть с ленты.</span><span class="sxs-lookup"><span data-stu-id="43425-190">The custom button should disappear from the ribbon momentarily.</span></span>
 
-1. <span data-ttu-id="8fb5a-191">Следуйте инструкциям в статье [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md), чтобы переустановить надстройку с помощью обновленного файла **manifest.xml**.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-191">Follow the instructions in [Sideload Outlook add-ins for testing](../outlook/sideload-outlook-add-ins-for-testing.md) to reinstall the add-in using the updated **manifest.xml** file.</span></span>
+1. <span data-ttu-id="43425-191">Следуйте инструкциям в статье [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md), чтобы переустановить надстройку с помощью обновленного файла **manifest.xml**.</span><span class="sxs-lookup"><span data-stu-id="43425-191">Follow the instructions in [Sideload Outlook add-ins for testing](../outlook/sideload-outlook-add-ins-for-testing.md) to reinstall the add-in using the updated **manifest.xml** file.</span></span>
 
-<span data-ttu-id="8fb5a-192">После повторной установки надстройки можно убедиться, что она установлена успешно, проверив команды **Insert gist** и **Insert default gist** в окне составления сообщений.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-192">After you've reinstalled the add-in, you can verify that it installed successfully by checking for the commands **Insert gist** and **Insert default gist** in a compose message window.</span></span> <span data-ttu-id="8fb5a-193">Обратите внимание, что при выборе этих двух элементов ничего не происходит, так как вы еще не закончили создание этой надстройки.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-193">Note that nothing will happen if you select either of these items, because you haven't yet finished building this add-in.</span></span>
+<span data-ttu-id="43425-p110">После повторной установки надстройки убедитесь, что она установлена успешно, проверив наличие команд **Insert gist** (Вставить gist) и **Insert default gist** (Вставить gist по умолчанию) в окне составления сообщений. Обратите внимание, что при выборе одного из этих элементов ничего не происходит, так как вы еще не закончили создание этой надстройки.</span><span class="sxs-lookup"><span data-stu-id="43425-p110">After you've reinstalled the add-in, you can verify that it installed successfully by checking for the commands **Insert gist** and **Insert default gist** in a compose message window. Note that nothing will happen if you select either of these items, because you haven't yet finished building this add-in.</span></span>
 
-- <span data-ttu-id="8fb5a-194">При запуске этой надстройки в Outlook 2016 или более поздней версии для Windows отобразятся две новые кнопки на ленте окна составления сообщений: **Insert gist** (Вставить gist) и **Insert default gist** (Вставить gist по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-194">If you're running this add-in in Outlook 2016 or later on Windows, you should see two new buttons in the ribbon of the compose message window: **Insert gist** and **Insert default gist**.</span></span>
+- <span data-ttu-id="43425-194">При запуске этой надстройки в Outlook 2016 или более поздней версии для Windows отобразятся две новые кнопки на ленте окна составления сообщений: **Insert gist** (Вставить gist) и **Insert default gist** (Вставить gist по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="43425-194">If you're running this add-in in Outlook 2016 or later on Windows, you should see two new buttons in the ribbon of the compose message window: **Insert gist** and **Insert default gist**.</span></span>
 
-    ![Снимок экрана: лента в Outlook для Windows с выделенными кнопками надстройки](../images/add-in-buttons-in-windows.png)
+    ![Снимок экрана: меню переполнения элементов ленты в Outlook для Windows с выделенными кнопками надстройки](../images/add-in-buttons-in-windows.png)
 
-- <span data-ttu-id="8fb5a-196">При запуске этой надстройки в Outlook в Интернете в нижней части окна составления сообщений отобразится новая кнопка.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-196">If you're running this add-in in Outlook on the web, you should see a new button at the bottom of the compose message window.</span></span> <span data-ttu-id="8fb5a-197">Нажмите эту кнопку, чтобы просмотреть варианты **Insert gist** (Вставить gist) и **Insert default gist** (Вставить gist по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-197">Select that button to see the options **Insert gist** and **Insert default gist**.</span></span>
+- <span data-ttu-id="43425-p111">При запуске этой надстройки в Outlook в Интернете в нижней части окна составления сообщений отобразится новая кнопка. Нажмите эту кнопку, чтобы просмотреть варианты **Insert gist** (Вставить gist) и **Insert default gist** (Вставить gist по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="43425-p111">If you're running this add-in in Outlook on the web, you should see a new button at the bottom of the compose message window. Select that button to see the options **Insert gist** and **Insert default gist**.</span></span>
 
-    ![Снимок экрана: форма создания сообщения в Outlook в Интернете с выделенной кнопкой надстройки и всплывающим меню](../images/add-in-buttons-in-owa.png)
+    ![Снимок экрана: форма создания сообщения в Outlook в Интернете с выделенной кнопкой надстройки и контекстным меню](../images/add-in-buttons-in-owa.png)
 
-## <a name="implement-a-first-run-experience"></a><span data-ttu-id="8fb5a-199">Реализация FRE</span><span class="sxs-lookup"><span data-stu-id="8fb5a-199">Implement a first-run experience</span></span>
+## <a name="implement-a-first-run-experience"></a><span data-ttu-id="43425-199">Реализация FRE</span><span class="sxs-lookup"><span data-stu-id="43425-199">Implement a first-run experience</span></span>
 
-<span data-ttu-id="8fb5a-200">Эта надстройка должна иметь возможность считывать элементы gist из учетной записи GitHub пользователя и определять, какой из них пользователь выбрал в качестве используемого по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-200">This add-in needs to be able to read gists from the user's GitHub account and identify which one the user has chosen as the default gist.</span></span> <span data-ttu-id="8fb5a-201">Для выполнения этих целей надстройка должна предложить пользователю указать его имя пользователя GitHub и выбрать элемент gist в качестве используемого по умолчанию из его коллекции существующих элементов gist.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-201">In order to achieve these goals, the add-in must prompt the user to provide their GitHub username and choose a default gist from their collection of existing gists.</span></span> <span data-ttu-id="8fb5a-202">Выполните действия, описанные в этом разделе, чтобы реализовать интерфейс первого запуска, отображающий диалоговое окно для получения этих сведений от пользователя.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-202">Complete the steps in this section to implement a first-run experience that will display a dialog to collect this information from the user.</span></span>
+<span data-ttu-id="43425-p112">Эта надстройка должна иметь возможность считывать элементы gist из учетной записи GitHub пользователя и определять, какой из них пользователь выбрал в качестве используемого по умолчанию. Для выполнения этих целей надстройка предлагает пользователю указать его имя пользователя GitHub и выбрать элемент gist в качестве используемого по умолчанию из его коллекции существующих элементов gist. Выполните действия, описанные в этом разделе, чтобы реализовать интерфейс FRE, отображающий диалоговое окно для получения этих сведений от пользователя.</span><span class="sxs-lookup"><span data-stu-id="43425-p112">This add-in needs to be able to read gists from the user's GitHub account and identify which one the user has chosen as the default gist. In order to achieve these goals, the add-in must prompt the user to provide their GitHub username and choose a default gist from their collection of existing gists. Complete the steps in this section to implement a first-run experience that will display a dialog to collect this information from the user.</span></span>
 
-### <a name="collect-data-from-the-user"></a><span data-ttu-id="8fb5a-203">Получение данных от пользователя</span><span class="sxs-lookup"><span data-stu-id="8fb5a-203">Collect data from the user</span></span>
+### <a name="collect-data-from-the-user"></a><span data-ttu-id="43425-203">Сбор данных пользователя</span><span class="sxs-lookup"><span data-stu-id="43425-203">Collect data from the user</span></span>
 
-<span data-ttu-id="8fb5a-204">Начнем с создания пользовательского интерфейса для самого диалогового окна.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-204">Let's start by creating the UI for the dialog itself.</span></span> <span data-ttu-id="8fb5a-205">Создайте в папке **./src** новую подпапку с именем **settings**.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-205">Within the **./src** folder, create a new subfolder named **settings**.</span></span> <span data-ttu-id="8fb5a-206">Создайте в папке **./src/settings** файл с именем **dialog.html** и добавьте следующую разметку, чтобы определить базовую форму с вводом текста для имени пользователя GitHub, а также пустой список элементов gist, который будет заполнен с помощью JavaScript.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-206">In the **./src/settings** folder, create a file named **dialog.html**, and add the following markup to define a very basic form with a text input for a GitHub username and an empty list for gists that'll be populated via JavaScript.</span></span>
+<span data-ttu-id="43425-p113">Начнем с создания пользовательского интерфейса для самого диалогового окна. Создайте в папке **./src** новую подпапку с именем **settings**. Создайте в папке **./src/settings** файл с именем **dialog.html** и добавьте следующую разметку, чтобы определить базовую форму с вводом текста для имени пользователя GitHub, а также пустой список элементов gist, который будет заполнен с помощью JavaScript.</span><span class="sxs-lookup"><span data-stu-id="43425-p113">Let's start by creating the UI for the dialog itself. Within the **./src** folder, create a new subfolder named **settings**. In the **./src/settings** folder, create a file named **dialog.html**, and add the following markup to define a very basic form with a text input for a GitHub username and an empty list for gists that'll be populated via JavaScript.</span></span>
 
 ```html
 <!DOCTYPE html>
@@ -377,7 +377,7 @@ ms.locfileid: "49132384"
 </html>
 ```
 
-<span data-ttu-id="8fb5a-207">Затем создайте в папке **./src/settings** файл с именем **dialog.css** и добавьте приведенный ниже код, чтобы указать стили, используемые файлом **dialog.html**.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-207">Next, create a file in the **./src/settings** folder named **dialog.css**, and add the following code to specify the styles that are used by **dialog.html**.</span></span>
+<span data-ttu-id="43425-207">Затем создайте в папке **./src/settings** файл с именем **dialog.css** и добавьте приведенный ниже код, чтобы указать стили, используемые файлом **dialog.html**.</span><span class="sxs-lookup"><span data-stu-id="43425-207">Next, create a file in the **./src/settings** folder named **dialog.css**, and add the following code to specify the styles that are used by **dialog.html**.</span></span>
 
 ```CSS
 section {
@@ -412,7 +412,7 @@ ul {
 }
 ```
 
-<span data-ttu-id="8fb5a-208">Теперь, после определения пользовательского интерфейса диалогового окна, можно написать код для выполнения в нем действий.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-208">Now that you've defined the dialog UI, you can write the code that makes it actually do something.</span></span> <span data-ttu-id="8fb5a-209">Создайте в папке **./src/settings** файл с именем **dialog.js** и добавьте приведенный ниже код.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-209">Create a file in the **./src/settings** folder named **dialog.js** and add the following code.</span></span> <span data-ttu-id="8fb5a-210">Обратите внимание, что в этом коде используется jQuery для регистрации событий, а также функция `messageParent` для возвращения выбранных пользователем параметров вызывающей стороне.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-210">Note that this code uses jQuery to register events and uses the `messageParent` function to send the user's choices back to the caller.</span></span>
+<span data-ttu-id="43425-p114">Теперь, после определения пользовательского интерфейса диалогового окна, можно написать код для выполнения в нем действий. Создайте в папке **./src/settings** файл с именем **dialog.js** и добавьте приведенный ниже код. Обратите внимание, что в этом коде используется jQuery для регистрации событий и функция `messageParent` для отправки выбора пользователя назад вызывающей стороне.</span><span class="sxs-lookup"><span data-stu-id="43425-p114">Now that you've defined the dialog UI, you can write the code that makes it actually do something. Create a file in the **./src/settings** folder named **dialog.js** and add the following code. Note that this code uses jQuery to register events and uses the `messageParent` function to send the user's choices back to the caller.</span></span>
 
 ```js
 (function(){
@@ -516,17 +516,17 @@ ul {
 })();
 ```
 
-#### <a name="update-webpack-config-settings"></a><span data-ttu-id="8fb5a-211">Обновление настроек конфигурации webpack</span><span class="sxs-lookup"><span data-stu-id="8fb5a-211">Update webpack config settings</span></span>
+#### <a name="update-webpack-config-settings"></a><span data-ttu-id="43425-211">Обновление параметров конфигурации webpack</span><span class="sxs-lookup"><span data-stu-id="43425-211">Update webpack config settings</span></span>
 
-<span data-ttu-id="8fb5a-212">Наконец, откройте файл **webpack.config.js** в корневом каталоге проекта и выполните описанные ниже шаги.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-212">Finally, open the file **webpack.config.js** file in the root directory of the project and complete the following steps.</span></span>
+<span data-ttu-id="43425-212">Наконец, откройте файл **webpack.config.js** в корневом каталоге проекта и выполните описанные ниже шаги.</span><span class="sxs-lookup"><span data-stu-id="43425-212">Finally, open the file **webpack.config.js** file in the root directory of the project and complete the following steps.</span></span>
 
-1. <span data-ttu-id="8fb5a-213">Найдите объект `entry` в объекте `config` и добавьте новую запись для `dialog`.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-213">Locate the `entry` object within the `config` object and add a new entry for `dialog`.</span></span>
+1. <span data-ttu-id="43425-213">Найдите объект `entry` в объекте `config` и добавьте новую запись для `dialog`.</span><span class="sxs-lookup"><span data-stu-id="43425-213">Locate the `entry` object within the `config` object and add a new entry for `dialog`.</span></span>
 
     ```js
     dialog: "./src/settings/dialog.js"
     ```
 
-    <span data-ttu-id="8fb5a-214">После этого новый объект `entry` будет выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="8fb5a-214">After you've done this, the new `entry` object will look like this:</span></span>
+    <span data-ttu-id="43425-214">После этого новый объект `entry` будет выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="43425-214">After you've done this, the new `entry` object will look like this:</span></span>
 
     ```js
     entry: {
@@ -537,7 +537,7 @@ ul {
     },
     ```
 
-1. <span data-ttu-id="8fb5a-215">Найдите массив `plugins` в объекте `config`.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-215">Locate the `plugins` array within the `config` object.</span></span> <span data-ttu-id="8fb5a-216">В массиве `patterns` объекта `new CopyWebpackPlugin` добавьте новую запись после записи `taskpane.css`.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-216">In the `patterns` array of the `new CopyWebpackPlugin` object, add a new entry after the `taskpane.css` entry.</span></span>
+1. <span data-ttu-id="43425-p115">Найдите массив `plugins` в объекте `config`. В массиве `patterns` объекта `new CopyWebpackPlugin` добавьте новую запись после записи `taskpane.css`.</span><span class="sxs-lookup"><span data-stu-id="43425-p115">Locate the `plugins` array within the `config` object. In the `patterns` array of the `new CopyWebpackPlugin` object, add a new entry after the `taskpane.css` entry.</span></span>
 
     ```js
     {
@@ -546,7 +546,7 @@ ul {
     },
     ```
 
-    <span data-ttu-id="8fb5a-217">После этого объект `new CopyWebpackPlugin` будет выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="8fb5a-217">After you've done this, the `new CopyWebpackPlugin` object will look like this:</span></span>
+    <span data-ttu-id="43425-217">После этого объект `new CopyWebpackPlugin` будет выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="43425-217">After you've done this, the `new CopyWebpackPlugin` object will look like this:</span></span>
 
     ```js
       new CopyWebpackPlugin({
@@ -573,7 +573,7 @@ ul {
       ]}),
     ```
 
-1. <span data-ttu-id="8fb5a-218">Найдите массив `plugins` в объекте `config` и добавьте новый объект в конец массива.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-218">Locate the `plugins` array within the `config` object and add this new object to the end of that array.</span></span>
+1. <span data-ttu-id="43425-218">Найдите массив `plugins` в объекте `config` и добавьте новый объект в конец массива.</span><span class="sxs-lookup"><span data-stu-id="43425-218">Locate the `plugins` array within the `config` object and add this new object to the end of that array.</span></span>
 
     ```js
     new HtmlWebpackPlugin({
@@ -583,7 +583,7 @@ ul {
     })
     ```
 
-    <span data-ttu-id="8fb5a-219">После этого новый массив `plugins` будет выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="8fb5a-219">After you've done this, the new `plugins` array will look like this:</span></span>
+    <span data-ttu-id="43425-219">После этого новый массив `plugins` будет выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="43425-219">After you've done this, the new `plugins` array will look like this:</span></span>
 
     ```js
     plugins: [
@@ -628,25 +628,25 @@ ul {
     ],
     ```
 
-1. <span data-ttu-id="8fb5a-220">Если веб-сервер работает, закройте окно команды узла.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-220">If the web server is running, close the node command window.</span></span>
+1. <span data-ttu-id="43425-220">Если веб-сервер работает, закройте окно команды узла.</span><span class="sxs-lookup"><span data-stu-id="43425-220">If the web server is running, close the node command window.</span></span>
 
-1. <span data-ttu-id="8fb5a-221">Выполните указанную ниже команду, чтобы повторно собрать проект.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-221">Run the following command to rebuild the project.</span></span>
+1. <span data-ttu-id="43425-221">Выполните указанную ниже команду, чтобы повторно собрать проект.</span><span class="sxs-lookup"><span data-stu-id="43425-221">Run the following command to rebuild the project.</span></span>
 
     ```command&nbsp;line
     npm run build
     ```
 
-1. <span data-ttu-id="8fb5a-222">Выполните указанную ниже команду, чтобы запустить веб-сервер.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-222">Run the following command to start the web server.</span></span>
+1. <span data-ttu-id="43425-222">Выполните указанную ниже команду, чтобы запустить веб-сервер.</span><span class="sxs-lookup"><span data-stu-id="43425-222">Run the following command to start the web server.</span></span>
 
     ```command&nbsp;line
     npm run dev-server
     ```
 
-### <a name="fetch-data-from-github"></a><span data-ttu-id="8fb5a-223">Получение данных из GitHub</span><span class="sxs-lookup"><span data-stu-id="8fb5a-223">Fetch data from GitHub</span></span>
+### <a name="fetch-data-from-github"></a><span data-ttu-id="43425-223">Получение данных из GitHub</span><span class="sxs-lookup"><span data-stu-id="43425-223">Fetch data from GitHub</span></span>
 
-<span data-ttu-id="8fb5a-224">Только что созданный файл **Dialog.js** определяет, что надстройка должна загружать элементы gist, если возникает событие `change` для поля имени пользователя GitHub.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-224">The **dialog.js** file you just created specifies that the add-in should load gists when the `change` event fires for the GitHub username field.</span></span> <span data-ttu-id="8fb5a-225">Для получения элементов gist пользователя из GitHub используется [API элементов gist GitHub](https://developer.github.com/v3/gists/).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-225">To retrieve the user's gists from GitHub, you'll use the [GitHub Gists API](https://developer.github.com/v3/gists/).</span></span>
+<span data-ttu-id="43425-p116">Только что созданный файл **dialog.js** определяет, что надстройка должна загружать элементы gist, если возникает событие `change` для поля имени пользователя GitHub. Чтобы получить элементы gist пользователя из GitHub, используйте [API элементов gist GitHub](https://developer.github.com/v3/gists/).</span><span class="sxs-lookup"><span data-stu-id="43425-p116">The **dialog.js** file you just created specifies that the add-in should load gists when the `change` event fires for the GitHub username field. To retrieve the user's gists from GitHub, you'll use the [GitHub Gists API](https://developer.github.com/v3/gists/).</span></span>
 
-<span data-ttu-id="8fb5a-226">Создайте в папке **./src** новую подпапку с именем **helpers**.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-226">Within the **./src** folder, create a new subfolder named **helpers**.</span></span> <span data-ttu-id="8fb5a-227">Создайте в папке **./src/helpers** файл с именем **gist-api.js** и добавьте следующий код, чтобы получить элементы gist пользователя из GitHub и составить список элементов gist.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-227">In the **./src/helpers** folder, create a file named **gist-api.js**, and add the following code to retrieve the user's gists from GitHub and build the list of gists.</span></span>
+<span data-ttu-id="43425-p117">Создайте в папке **./src** новую подпапку с именем **helpers**. Создайте в папке **./src/helpers** файл с именем **gist-api.js** и добавьте следующий код, чтобы получить элементы gist пользователя из GitHub и составить список элементов gist.</span><span class="sxs-lookup"><span data-stu-id="43425-p117">Within the **./src** folder, create a new subfolder named **helpers**. In the **./src/helpers** folder, create a file named **gist-api.js**, and add the following code to retrieve the user's gists from GitHub and build the list of gists.</span></span>
 
 ```js
 function getUserGists(user, callback) {
@@ -717,21 +717,21 @@ function buildFileList(files) {
 ```
 
 > [!NOTE]
-> <span data-ttu-id="8fb5a-228">Вы могли заметить, что отсутствует кнопка для вызова диалогового окна параметров.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-228">You may have noticed that there's no button to invoke the settings dialog.</span></span> <span data-ttu-id="8fb5a-229">Вместо этого надстройка будет проверять наличие конфигурации при нажатии пользователем кнопки **Insert gist** (Вставить gist) или **Insert default gist** (Вставить gist по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-229">Instead, the add-in will check whether it has been configured when the user selects either the **Insert default gist** button or the **Insert gist** button.</span></span> <span data-ttu-id="8fb5a-230">Если конфигурация надстройки еще не выполнена, диалоговое окно параметров предложит пользователю выполнить настройку, прежде чем продолжить.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-230">If the add-in has not yet been configured, the settings dialog will prompt the user to configure before proceeding.</span></span>
+> <span data-ttu-id="43425-p118">Вы могли заметить, что отсутствует кнопка для вызова диалогового окна параметров. Вместо этого надстройка будет проверять наличие конфигурации при нажатии пользователем кнопки **Insert gist** (Вставить gist) или **Insert default gist** (Вставить gist по умолчанию). Если конфигурация надстройки еще не выполнена, диалоговое окно параметров предложит пользователю выполнить настройку, прежде чем продолжить.</span><span class="sxs-lookup"><span data-stu-id="43425-p118">You may have noticed that there's no button to invoke the settings dialog. Instead, the add-in will check whether it has been configured when the user selects either the **Insert default gist** button or the **Insert gist** button. If the add-in has not yet been configured, the settings dialog will prompt the user to configure before proceeding.</span></span>
 
-## <a name="implement-a-ui-less-button"></a><span data-ttu-id="8fb5a-231">Реализация кнопки без пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="8fb5a-231">Implement a UI-less button</span></span>
+## <a name="implement-a-ui-less-button"></a><span data-ttu-id="43425-231">Реализация кнопки без пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="43425-231">Implement a UI-less button</span></span>
 
-<span data-ttu-id="8fb5a-232">Эта кнопка надстройки **Insert default gist** (Вставить gist по умолчанию) является кнопкой без пользовательского интерфейса, вызывающей функцию JavaScript вместо открытия области задач, выполняемого многими кнопками надстройки.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-232">This add-in's **Insert default gist** button is a UI-less button that will invoke a JavaScript function, rather than open a task pane like many add-in buttons do.</span></span> <span data-ttu-id="8fb5a-233">Если пользователь нажимает кнопку **Insert gist** (Вставить gist), соответствующая функция JavaScript проверяет наличие конфигурации надстройки.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-233">When the user selects the **Insert default gist** button, the corresponding JavaScript function will check whether the add-in has been configured.</span></span>
+<span data-ttu-id="43425-p119">Эта кнопка надстройки **Insert default gist** (Вставить gist по умолчанию) является кнопкой без пользовательского интерфейса, вызывающей функцию JavaScript вместо открытия области задач, выполняемого многими кнопками надстройки. При нажатии пользователем кнопки **Insert default gist** (Вставить gist по умолчанию) соответствующая функция JavaScript проверит наличие конфигурации.</span><span class="sxs-lookup"><span data-stu-id="43425-p119">This add-in's **Insert default gist** button is a UI-less button that will invoke a JavaScript function, rather than open a task pane like many add-in buttons do. When the user selects the **Insert default gist** button, the corresponding JavaScript function will check whether the add-in has been configured.</span></span>
 
-- <span data-ttu-id="8fb5a-234">Если конфигурация надстройки уже выполнена, функция загружает содержимое элемента gist, выбранного пользователем в качестве используемого по умолчанию, и вставляет его в текст сообщения.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-234">If the add-in has already been configured, the function will load the content of the gist that the user has selected as the default and insert it into the body of the message.</span></span>
+- <span data-ttu-id="43425-234">Если конфигурация надстройки уже выполнена, функция загружает содержимое элемента gist, выбранного пользователем в качестве используемого по умолчанию, и вставляет его в текст сообщения.</span><span class="sxs-lookup"><span data-stu-id="43425-234">If the add-in has already been configured, the function will load the content of the gist that the user has selected as the default and insert it into the body of the message.</span></span>
 
-- <span data-ttu-id="8fb5a-235">Если конфигурация надстройки еще не выполнена, диалоговое окно параметров предложит пользователю предоставить нужные сведения.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-235">If the add-in hasn't yet been configured, then the settings dialog will prompt the user to provide the required information.</span></span>
+- <span data-ttu-id="43425-235">Если конфигурация надстройки еще не выполнена, диалоговое окно параметров предложит пользователю предоставить нужные сведения.</span><span class="sxs-lookup"><span data-stu-id="43425-235">If the add-in hasn't yet been configured, then the settings dialog will prompt the user to provide the required information.</span></span>
 
-### <a name="update-the-function-file-html"></a><span data-ttu-id="8fb5a-236">Обновление файла функции (HTML)</span><span class="sxs-lookup"><span data-stu-id="8fb5a-236">Update the function file (HTML)</span></span>
+### <a name="update-the-function-file-html"></a><span data-ttu-id="43425-236">Обновление файла функции (HTML)</span><span class="sxs-lookup"><span data-stu-id="43425-236">Update the function file (HTML)</span></span>
 
-<span data-ttu-id="8fb5a-237">Функция, вызываемая кнопкой без пользовательского интерфейса, должна быть определена в файле, указанном в элементе `FunctionFile` манифеста для соответствующего форм-фактора.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-237">A function that's invoked by a UI-less button must be defined in the file that's specified by the `FunctionFile` element in the manifest for the corresponding form factor.</span></span> <span data-ttu-id="8fb5a-238">Этот манифест надстройки указывает `https://localhost:3000/commands.html` в качестве файла функции.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-238">This add-in's manifest specifies `https://localhost:3000/commands.html` as the function file.</span></span>
+<span data-ttu-id="43425-p120">Функция, вызываемая кнопкой без пользовательского интерфейса, должна быть определена в файле, указанном в элементе `FunctionFile` манифеста для соответствующего форм-фактора. В манифесте этой надстройки файл `https://localhost:3000/commands.html` указан как файл функции.</span><span class="sxs-lookup"><span data-stu-id="43425-p120">A function that's invoked by a UI-less button must be defined in the file that's specified by the `FunctionFile` element in the manifest for the corresponding form factor. This add-in's manifest specifies `https://localhost:3000/commands.html` as the function file.</span></span>
 
-<span data-ttu-id="8fb5a-239">Откройте файл **./src/commands/commands.html** и замените все содержимое приведенной ниже разметкой.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-239">Open the file **./src/commands/commands.html** and replace the entire contents with the following markup.</span></span>
+<span data-ttu-id="43425-239">Откройте файл **./src/commands/commands.html** и замените все содержимое приведенной ниже разметкой.</span><span class="sxs-lookup"><span data-stu-id="43425-239">Open the file **./src/commands/commands.html** and replace the entire contents with the following markup.</span></span>
 
 ```html
 <!DOCTYPE html>
@@ -759,9 +759,9 @@ function buildFileList(files) {
 </html>
 ```
 
-### <a name="update-the-function-file-javascript"></a><span data-ttu-id="8fb5a-240">Обновление файла функции (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="8fb5a-240">Update the function file (JavaScript)</span></span>
+### <a name="update-the-function-file-javascript"></a><span data-ttu-id="43425-240">Обновление файла функции (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="43425-240">Update the function file (JavaScript)</span></span>
 
-<span data-ttu-id="8fb5a-241">Откройте файл **./src/commands/commands.js** и замените все содержимое приведенным ниже кодом.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-241">Open the file **./src/commands/commands.js** and replace the entire contents with the following code.</span></span> <span data-ttu-id="8fb5a-242">Обратите внимание, если функция `insertDefaultGist` определяет, что конфигурация надстройки не выполнена, добавляется параметр `?warn=1` к URL-адресу диалогового окна.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-242">Note that if the `insertDefaultGist` function determines the add-in has not yet been configured, it adds the `?warn=1` parameter to the dialog URL.</span></span> <span data-ttu-id="8fb5a-243">Благодаря этому в диалоговом окне параметров отображается панель сообщений, определенная в файле **./settings/dialog.html**, которая сообщает пользователю причину появления диалогового окна.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-243">Doing so makes the settings dialog render the message bar that's defined in **./settings/dialog.html**, to tell the user why they're seeing the dialog.</span></span>
+<span data-ttu-id="43425-p121">Откройте файл **./src/commands/commands.js** и замените все содержимое приведенным ниже кодом. Обратите внимание, что если функция `insertDefaultGist` определяет, что конфигурация надстройки еще не выполнена, она добавляет параметр `?warn=1` в URL-адрес диалогового окна. Благодаря этому в диалоговом окне параметров отображается панель сообщений, которая определена в **./settings/dialog.html** и сообщает пользователю, почему он видит это окно.</span><span class="sxs-lookup"><span data-stu-id="43425-p121">Open the file **./src/commands/commands.js** and replace the entire contents with the following code. Note that if the `insertDefaultGist` function determines the add-in has not yet been configured, it adds the `?warn=1` parameter to the dialog URL. Doing so makes the settings dialog render the message bar that's defined in **./settings/dialog.html**, to tell the user why they're seeing the dialog.</span></span>
 
 ```js
 var config;
@@ -823,8 +823,8 @@ function insertDefaultGist(event) {
 
     Office.context.ui.displayDialogAsync(url, dialogOptions, function(result) {
       settingsDialog = result.value;
-      settingsDialog.addEventHandler(Microsoft.Office.WebExtension.EventType.DialogMessageReceived, receiveMessage);
-      settingsDialog.addEventHandler(Microsoft.Office.WebExtension.EventType.DialogEventReceived, dialogClosed);
+      settingsDialog.addEventHandler(Office.EventType.DialogMessageReceived, receiveMessage);
+      settingsDialog.addEventHandler(Office.EventType.DialogEventReceived, dialogClosed);
     });
   }
 }
@@ -858,9 +858,9 @@ var g = getGlobal();
 g.insertDefaultGist = insertDefaultGist;
 ```
 
-### <a name="create-a-file-to-manage-configuration-settings"></a><span data-ttu-id="8fb5a-244">Создание файла для управления параметрами конфигурации</span><span class="sxs-lookup"><span data-stu-id="8fb5a-244">Create a file to manage configuration settings</span></span>
+### <a name="create-a-file-to-manage-configuration-settings"></a><span data-ttu-id="43425-244">Создание файла для управления параметрами конфигурации</span><span class="sxs-lookup"><span data-stu-id="43425-244">Create a file to manage configuration settings</span></span>
 
-<span data-ttu-id="8fb5a-245">HTML-файл функции ссылается на файл под названием **addin-config.js**, которого еще не существует.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-245">The HTML function file references a file named **addin-config.js**, which doesn't yet exist.</span></span> <span data-ttu-id="8fb5a-246">Создайте файл с именем **addin-config.js** в папке **./src/helpers** и добавьте указанный ниже код.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-246">Create a file named **addin-config.js** in the **./src/helpers** folder and add the following code.</span></span> <span data-ttu-id="8fb5a-247">В этом коде используется [объект RoamingSettings](/javascript/api/outlook/office.RoamingSettings), позволяющий получать и задавать значения конфигурации.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-247">This code uses the [RoamingSettings object](/javascript/api/outlook/office.RoamingSettings) to get and set configuration values.</span></span>
+<span data-ttu-id="43425-p122">HTML-файл функции ссылается на файл с именем **addin-config.js**, которого еще не существует. Создайте файл с именем **addin-config.js** в папке **./src/helpers** и добавьте указанный ниже код. В этом коде для получения и настройки значений конфигурации используется объект [RoamingSettings](/javascript/api/outlook/office.RoamingSettings).</span><span class="sxs-lookup"><span data-stu-id="43425-p122">The HTML function file references a file named **addin-config.js**, which doesn't yet exist. Create a file named **addin-config.js** in the **./src/helpers** folder and add the following code. This code uses the [RoamingSettings object](/javascript/api/outlook/office.RoamingSettings) to get and set configuration values.</span></span>
 
 ```js
 function getConfig() {
@@ -880,15 +880,15 @@ function setConfig(config, callback) {
 }
 ```
 
-### <a name="create-new-functions-to-process-gists"></a><span data-ttu-id="8fb5a-248">Создание новых функций для обработки элементов gist</span><span class="sxs-lookup"><span data-stu-id="8fb5a-248">Create new functions to process gists</span></span>
+### <a name="create-new-functions-to-process-gists"></a><span data-ttu-id="43425-248">Создание новых функций для обработки элементов gist</span><span class="sxs-lookup"><span data-stu-id="43425-248">Create new functions to process gists</span></span>
 
-<span data-ttu-id="8fb5a-249">Затем откройте файл **./src/helpers/gist-api.js** и добавьте указанные ниже функции.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-249">Next, open the **./src/helpers/gist-api.js** file and add the following functions.</span></span> <span data-ttu-id="8fb5a-250">Обратите внимание на следующее:</span><span class="sxs-lookup"><span data-stu-id="8fb5a-250">Note the following:</span></span>
+<span data-ttu-id="43425-p123">Затем откройте файл **./src/helpers/gist-api.js** и добавьте указанные ниже функции. Обратите внимание на перечисленные ниже аспекты.</span><span class="sxs-lookup"><span data-stu-id="43425-p123">Next, open the **./src/helpers/gist-api.js** file and add the following functions. Note the following:</span></span>
 
-- <span data-ttu-id="8fb5a-251">Если элемент gist содержит код HTML, надстройка вставит HTML-код в текст сообщения без изменений.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-251">If the gist contains HTML, the add-in will insert the HTML as-is into the body of the message.</span></span>
+- <span data-ttu-id="43425-251">Если элемент gist содержит код HTML, надстройка вставит HTML-код в текст сообщения без изменений.</span><span class="sxs-lookup"><span data-stu-id="43425-251">If the gist contains HTML, the add-in will insert the HTML as-is into the body of the message.</span></span>
 
-- <span data-ttu-id="8fb5a-252">Если элемент gist содержит код Markdown, надстройка воспользуется библиотекой [Showdown](https://github.com/showdownjs/showdown), чтобы преобразовать формат Markdown в HTML, и вставит получившийся HTML-код в текст сообщения.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-252">If the gist contains Markdown, the add-in will use the [Showdown](https://github.com/showdownjs/showdown) library to convert the Markdown to HTML, and will then insert the resulting HTML into the body of the message.</span></span>
+- <span data-ttu-id="43425-252">Если элемент gist содержит код Markdown, надстройка воспользуется библиотекой [Showdown](https://github.com/showdownjs/showdown), чтобы преобразовать формат Markdown в HTML, и вставит получившийся HTML-код в текст сообщения.</span><span class="sxs-lookup"><span data-stu-id="43425-252">If the gist contains Markdown, the add-in will use the [Showdown](https://github.com/showdownjs/showdown) library to convert the Markdown to HTML, and will then insert the resulting HTML into the body of the message.</span></span>
 
-- <span data-ttu-id="8fb5a-253">Если элемент gist содержит любой код, отличный от HTML или Markdown, надстройка вставит его в текст сообщения как фрагмент кода.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-253">If the gist contains anything other than HTML or Markdown, the add-in will insert it into the body of the message as a code snippet.</span></span>
+- <span data-ttu-id="43425-253">Если элемент gist содержит любой код, отличный от HTML или Markdown, надстройка вставит его в текст сообщения как фрагмент кода.</span><span class="sxs-lookup"><span data-stu-id="43425-253">If the gist contains anything other than HTML or Markdown, the add-in will insert it into the body of the message as a code snippet.</span></span>
 
 ```js
 function getGist(gistId, callback) {
@@ -938,32 +938,32 @@ function buildBodyContent(gist, callback) {
 }
 ```
 
-### <a name="test-the-button"></a><span data-ttu-id="8fb5a-254">Тестирование кнопки</span><span class="sxs-lookup"><span data-stu-id="8fb5a-254">Test the button</span></span>
+### <a name="test-the-button"></a><span data-ttu-id="43425-254">Тестирование кнопки</span><span class="sxs-lookup"><span data-stu-id="43425-254">Test the button</span></span>
 
-<span data-ttu-id="8fb5a-255">Сохраните все изменения и выполните в командной строке команду `npm run dev-server`, если сервер еще не запущен.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-255">Save all of your changes and run `npm run dev-server` from the command prompt, if the server isn't already running.</span></span> <span data-ttu-id="8fb5a-256">Затем выполните указанные ниже действия, чтобы протестировать кнопку **Insert default gist** (Вставить gist по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-256">Then complete the following steps to test the **Insert default gist** button.</span></span>
+<span data-ttu-id="43425-p124">Сохраните все изменения и выполните в командной строке команду `npm run dev-server`, если сервер еще не запущен. Затем выполните указанные ниже действия, чтобы протестировать кнопку **Insert default gist** (Вставить gist по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="43425-p124">Save all of your changes and run `npm run dev-server` from the command prompt, if the server isn't already running. Then complete the following steps to test the **Insert default gist** button.</span></span>
 
-1. <span data-ttu-id="8fb5a-257">Откройте Outlook и создайте новое сообщение.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-257">Open Outlook and compose a new message.</span></span>
+1. <span data-ttu-id="43425-257">Откройте Outlook и создайте новое сообщение.</span><span class="sxs-lookup"><span data-stu-id="43425-257">Open Outlook and compose a new message.</span></span>
 
-1. <span data-ttu-id="8fb5a-258">В окне создания сообщения нажмите кнопку **Insert default gist** (Вставить gist по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-258">In the compose message window, select the **Insert default gist** button.</span></span> <span data-ttu-id="8fb5a-259">Вы увидите диалоговое окно, в котором можно настроить надстройку, указав имя пользователя GitHub в диалоговом окне с соответствующим приглашением.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-259">You should see a dialog where you can configure the add-in, starting with the prompt to set your GitHub username.</span></span>
+1. <span data-ttu-id="43425-p125">В окне создания сообщения нажмите кнопку **Insert default gist** (Вставить gist по умолчанию). Вы увидите диалоговое окно, в котором можно настроить надстройку, указав имя пользователя GitHub в диалоговом окне с соответствующим приглашением.</span><span class="sxs-lookup"><span data-stu-id="43425-p125">In the compose message window, select the **Insert default gist** button. You should see a dialog where you can configure the add-in, starting with the prompt to set your GitHub username.</span></span>
 
-    ![Снимок экрана: диалоговое окно с предложением настроить надстройку](../images/addin-prompt-configure.png)
+    ![Снимок экрана: диалоговое окно с приглашением настроить надстройку](../images/addin-prompt-configure.png)
 
-1. <span data-ttu-id="8fb5a-261">В диалоговом окне параметров введите имя пользователя GitHub, а затем нажмите кнопку **TAB** или щелкните в другом месте диалогового окна, чтобы вызвать событие `change`, которое должно загрузить ваш список общедоступных элементов gist.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-261">In the settings dialog, enter your GitHub username and then either **Tab** or click elsewhere in the dialog to invoke the `change` event, which should load your list of public gists.</span></span> <span data-ttu-id="8fb5a-262">Выберите элемент gist в качестве используемого по умолчанию и нажмите кнопку **Done** (Готово).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-262">Select a gist to be the default, and select **Done**.</span></span>
+1. <span data-ttu-id="43425-p126">В диалоговом окне параметров введите имя пользователя GitHub, а затем нажмите кнопку **TAB** или щелкните в другом месте диалогового окна, чтобы вызвать событие `change`, которое должно загрузить ваш список общедоступных элементов gist. Выберите элемент gist, который будет использоваться по умолчанию, и нажмите кнопку **Готово**.</span><span class="sxs-lookup"><span data-stu-id="43425-p126">In the settings dialog, enter your GitHub username and then either **Tab** or click elsewhere in the dialog to invoke the `change` event, which should load your list of public gists. Select a gist to be the default, and select **Done**.</span></span>
 
     ![Снимок экрана с диалоговым окном параметров надстройки](../images/addin-settings.png)
 
-1. <span data-ttu-id="8fb5a-264">Снова нажмите кнопку **Insert default gist** (Вставить gist по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-264">Select the **Insert default gist** button again.</span></span> <span data-ttu-id="8fb5a-265">На этот раз содержимое элемента gist должно быть вставлено в текст сообщения.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-265">This time, you should see the contents of the gist inserted into the body of the email.</span></span>
+1. <span data-ttu-id="43425-p127">Нажмите кнопку **Insert default gist** (Вставить gist по умолчанию) снова. На этот раз содержимое элемента gist должно быть вставлено в текст сообщения.</span><span class="sxs-lookup"><span data-stu-id="43425-p127">Select the **Insert default gist** button again. This time, you should see the contents of the gist inserted into the body of the email.</span></span>
 
    > [!NOTE]
-   > <span data-ttu-id="8fb5a-266">Outlook для Windows: чтобы применить последние параметры, может потребоваться закрытие и повторное открытие окна создания сообщения.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-266">Outlook on Windows: To pick up the latest settings, you may need to close and reopen the compose message window.</span></span>
+   > <span data-ttu-id="43425-266">Outlook для Windows: чтобы применить последние параметры, может потребоваться закрытие и повторное открытие окна создания сообщения.</span><span class="sxs-lookup"><span data-stu-id="43425-266">Outlook on Windows: To pick up the latest settings, you may need to close and reopen the compose message window.</span></span>
 
-## <a name="implement-a-task-pane"></a><span data-ttu-id="8fb5a-267">Реализация области задач</span><span class="sxs-lookup"><span data-stu-id="8fb5a-267">Implement a task pane</span></span>
+## <a name="implement-a-task-pane"></a><span data-ttu-id="43425-267">Реализация области задач</span><span class="sxs-lookup"><span data-stu-id="43425-267">Implement a task pane</span></span>
 
-<span data-ttu-id="8fb5a-268">Эта кнопка **Insert gist** (Вставить gist) надстройки открывает область задач и отображает элементы gist пользователя.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-268">This add-in's **Insert gist** button will open a task pane and display the user's gists.</span></span> <span data-ttu-id="8fb5a-269">После этого пользователь сможет выбрать один из элементов gist для вставки в текст сообщения.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-269">The user can then select one of the gists to insert into the body of the message.</span></span> <span data-ttu-id="8fb5a-270">Если пользователь еще не выполнил конфигурацию надстройки, ему будет предложено сделать это.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-270">If the user has not yet configured the add-in, they will be prompted to do so.</span></span>
+<span data-ttu-id="43425-p128">Эта кнопка надстройки **Insert gist** (Вставить gist) открывает область задач и отображает элементы gist пользователя. После этого пользователь может выбрать один из элементов gist для вставки в текст сообщения. Если пользователь еще не выполнил конфигурацию надстройки, ему будет предложено сделать это.</span><span class="sxs-lookup"><span data-stu-id="43425-p128">This add-in's **Insert gist** button will open a task pane and display the user's gists. The user can then select one of the gists to insert into the body of the message. If the user has not yet configured the add-in, they will be prompted to do so.</span></span>
 
-### <a name="specify-the-html-for-the-task-pane"></a><span data-ttu-id="8fb5a-271">Указание HTML для области задач</span><span class="sxs-lookup"><span data-stu-id="8fb5a-271">Specify the HTML for the task pane</span></span>
+### <a name="specify-the-html-for-the-task-pane"></a><span data-ttu-id="43425-271">Указание HTML для области задач</span><span class="sxs-lookup"><span data-stu-id="43425-271">Specify the HTML for the task pane</span></span>
 
-<span data-ttu-id="8fb5a-272">В созданном вами проекте HTML области задач указан в файле **./src/taskpane/taskpane.html**.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-272">In the project that you've created, the task pane HTML is specified in the file **./src/taskpane/taskpane.html**.</span></span> <span data-ttu-id="8fb5a-273">Откройте этот файл и замените все содержимое приведенной ниже разметкой.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-273">Open that file and replace the entire contents with the following markup.</span></span>
+<span data-ttu-id="43425-p129">В созданном вами проекте HTML области задач указан в файле **./src/taskpane/taskpane.html**. Откройте этот файл и замените все содержимое приведенной ниже разметкой.</span><span class="sxs-lookup"><span data-stu-id="43425-p129">In the project that you've created, the task pane HTML is specified in the file **./src/taskpane/taskpane.html**. Open that file and replace the entire contents with the following markup.</span></span>
 
 ```html
 <!DOCTYPE html>
@@ -1025,9 +1025,9 @@ function buildBodyContent(gist, callback) {
 </html>
 ```
 
-### <a name="specify-the-css-for-the-task-pane"></a><span data-ttu-id="8fb5a-274">Указание CSS для области задач</span><span class="sxs-lookup"><span data-stu-id="8fb5a-274">Specify the CSS for the task pane</span></span>
+### <a name="specify-the-css-for-the-task-pane"></a><span data-ttu-id="43425-274">Указание CSS для области задач</span><span class="sxs-lookup"><span data-stu-id="43425-274">Specify the CSS for the task pane</span></span>
 
-<span data-ttu-id="8fb5a-275">В созданном вами проекте CSS области задач указан в файле **./src/taskpane/taskpane.css**.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-275">In the project that you've created, the task pane CSS is specified in the file **./src/taskpane/taskpane.css**.</span></span> <span data-ttu-id="8fb5a-276">Откройте этот файл и замените все содержимое приведенным ниже кодом.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-276">Open that file and replace the entire contents with the following code.</span></span>
+<span data-ttu-id="43425-p130">В созданном вами проекте CSS области задач указан в файле **./src/taskpane/taskpane.css**. Откройте этот файл и замените все содержимое приведенным ниже кодом.</span><span class="sxs-lookup"><span data-stu-id="43425-p130">In the project that you've created, the task pane CSS is specified in the file **./src/taskpane/taskpane.css**. Open that file and replace the entire contents with the following code.</span></span>
 
 ```css
 /* Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See full license in root of repo. */
@@ -1185,9 +1185,9 @@ ul {
           background: transparent; }
 ```
 
-### <a name="specify-the-javascript-for-the-task-pane"></a><span data-ttu-id="8fb5a-277">Указание JavaScript для области задач</span><span class="sxs-lookup"><span data-stu-id="8fb5a-277">Specify the JavaScript for the task pane</span></span>
+### <a name="specify-the-javascript-for-the-task-pane"></a><span data-ttu-id="43425-277">Указание JavaScript для области задач</span><span class="sxs-lookup"><span data-stu-id="43425-277">Specify the JavaScript for the task pane</span></span>
 
-<span data-ttu-id="8fb5a-278">В созданном вами проекте область задач JavaScript указана в файле **./src/taskpane/taskpane.js**.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-278">In the project that you've created, the task pane JavaScript is specified in the file **./src/taskpane/taskpane.js**.</span></span> <span data-ttu-id="8fb5a-279">Откройте этот файл и замените все содержимое приведенным ниже кодом.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-279">Open that file and replace the entire contents with the following code.</span></span>
+<span data-ttu-id="43425-p131">В созданном вами проекте JavaScript области задач указан в файле **./src/taskpane/taskpane.js**. Откройте этот файл и замените все содержимое приведенным ниже кодом.</span><span class="sxs-lookup"><span data-stu-id="43425-p131">In the project that you've created, the task pane JavaScript is specified in the file **./src/taskpane/taskpane.js**. Open that file and replace the entire contents with the following code.</span></span>
 
 ```js
 (function(){
@@ -1249,8 +1249,8 @@ ul {
 
         Office.context.ui.displayDialogAsync(url, dialogOptions, function(result) {
           settingsDialog = result.value;
-          settingsDialog.addEventHandler(Microsoft.Office.WebExtension.EventType.DialogMessageReceived, receiveMessage);
-          settingsDialog.addEventHandler(Microsoft.Office.WebExtension.EventType.DialogEventReceived, dialogClosed);
+          settingsDialog.addEventHandler(Office.EventType.DialogMessageReceived, receiveMessage);
+          settingsDialog.addEventHandler(Office.EventType.DialogEventReceived, dialogClosed);
         });
       })
     });
@@ -1272,9 +1272,9 @@ ul {
   }
 
   function onGistSelected() {
+    $('#insert-button').removeAttr('disabled');
     $('.ms-ListItem').removeClass('is-selected').removeAttr('checked');
     $(this).children('.ms-ListItem').addClass('is-selected').attr('checked', 'checked');
-    $('#insert-button').removeAttr('disabled');
   }
 
   function showError(error) {
@@ -1299,21 +1299,21 @@ ul {
 })();
 ```
 
-### <a name="test-the-button"></a><span data-ttu-id="8fb5a-280">Тестирование кнопки</span><span class="sxs-lookup"><span data-stu-id="8fb5a-280">Test the button</span></span>
+### <a name="test-the-button"></a><span data-ttu-id="43425-280">Тестирование кнопки</span><span class="sxs-lookup"><span data-stu-id="43425-280">Test the button</span></span>
 
-<span data-ttu-id="8fb5a-281">Сохраните все изменения и выполните в командной строке команду `npm run dev-server`, если сервер еще не запущен.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-281">Save all of your changes and run `npm run dev-server` from the command prompt, if the server isn't already running.</span></span> <span data-ttu-id="8fb5a-282">Затем выполните указанные ниже действия, чтобы протестировать кнопку **Insert gist** (Вставить gist).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-282">Then complete the following steps to test the **Insert gist** button.</span></span>
+<span data-ttu-id="43425-p132">Сохраните все изменения и выполните в командной строке команду `npm run dev-server`, если сервер еще не запущен. Затем выполните указанные ниже действия, чтобы протестировать кнопку **Insert gist** (Вставить gist).</span><span class="sxs-lookup"><span data-stu-id="43425-p132">Save all of your changes and run `npm run dev-server` from the command prompt, if the server isn't already running. Then complete the following steps to test the **Insert gist** button.</span></span>
 
-1. <span data-ttu-id="8fb5a-283">Откройте Outlook и создайте новое сообщение.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-283">Open Outlook and compose a new message.</span></span>
+1. <span data-ttu-id="43425-283">Откройте Outlook и создайте новое сообщение.</span><span class="sxs-lookup"><span data-stu-id="43425-283">Open Outlook and compose a new message.</span></span>
 
-1. <span data-ttu-id="8fb5a-284">В окне создания сообщения нажмите кнопку **Insert gist** (Вставить gist).</span><span class="sxs-lookup"><span data-stu-id="8fb5a-284">In the compose message window, select the **Insert gist** button.</span></span> <span data-ttu-id="8fb5a-285">Справа от формы создания сообщения должна открыться область задач.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-285">You should see a task pane open to the right of the compose form.</span></span>
+1. <span data-ttu-id="43425-p133">В окне создания сообщения нажмите кнопку **Insert gist** (Вставить gist). Справа от формы создания сообщения должна открыться область задач.</span><span class="sxs-lookup"><span data-stu-id="43425-p133">In the compose message window, select the **Insert gist** button. You should see a task pane open to the right of the compose form.</span></span>
 
-1. <span data-ttu-id="8fb5a-286">В области задач выберите элемент gist **Hello World Html** и нажмите кнопку **Insert** (Вставить) для вставки этого элемента gist в текст сообщения.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-286">In the task pane, select the **Hello World Html** gist and select **Insert** to insert that gist into the body of the message.</span></span>
+1. <span data-ttu-id="43425-286">В области задач выберите элемент gist **Hello World Html** и нажмите кнопку **Insert** (Вставить) для вставки этого элемента gist в текст сообщения.</span><span class="sxs-lookup"><span data-stu-id="43425-286">In the task pane, select the **Hello World Html** gist and select **Insert** to insert that gist into the body of the message.</span></span>
 
 ![Снимок экрана: область задач надстройки и выделенное содержимое элемента gist, отображаемое в тексте сообщения](../images/addin-taskpane.png)
 
-## <a name="next-steps"></a><span data-ttu-id="8fb5a-288">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="8fb5a-288">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="43425-288">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="43425-288">Next steps</span></span>
 
-<span data-ttu-id="8fb5a-289">С помощью этого руководства вы выполнили сборку надстройки Outlook, которую можно использовать в режиме создания сообщения для вставки содержимого в его текст.</span><span class="sxs-lookup"><span data-stu-id="8fb5a-289">In this tutorial, you've created an Outlook add-in that can be used in message compose mode to insert content into the body of a message.</span></span> <span data-ttu-id="8fb5a-290">Чтобы узнать больше о разработке надстроек Outlook, перейдите к следующей статье:</span><span class="sxs-lookup"><span data-stu-id="8fb5a-290">To learn more about developing Outlook add-ins, continue to the following article:</span></span>
+<span data-ttu-id="43425-p134">С помощью этого руководства вы выполнили сборку надстройки Outlook, которую можно использовать в режиме создания сообщения для вставки содержимого в текст сообщения. Дополнительные сведения о разработке надстроек Outlook см. в следующей статье.</span><span class="sxs-lookup"><span data-stu-id="43425-p134">In this tutorial, you've created an Outlook add-in that can be used in message compose mode to insert content into the body of a message. To learn more about developing Outlook add-ins, continue to the following article.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="8fb5a-291">API надстроек Outlook</span><span class="sxs-lookup"><span data-stu-id="8fb5a-291">Outlook add-in APIs</span></span>](../outlook/apis.md)
+> [<span data-ttu-id="43425-291">API надстроек Outlook</span><span class="sxs-lookup"><span data-stu-id="43425-291">Outlook add-in APIs</span></span>](../outlook/apis.md)
