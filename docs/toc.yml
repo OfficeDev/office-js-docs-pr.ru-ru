@@ -188,6 +188,8 @@ items:
                         href: design/add-in-commands.md
                       - name: Создание команд надстройки
                         href: develop/create-addin-commands.md
+                      - name: Создание настраиваемых контекстных вкладок
+                        href: design/contextual-tabs.md
                       - name: Включение и отключение команд надстроек
                         href: design/disable-add-in-commands.md
                       - name: Интеграция встроенных кнопок Office в настраиваемые вкладки
@@ -1117,7 +1119,7 @@ items:
       - name: Обзор
         href: reference/overview/visio-javascript-reference-overview.md
         displayName: Visio
-      - name: Справочные материалы по API
+      - name: Справочник по API
         href: reference/visio-api-reference.md
         displayName: Visio
   - name: Word
