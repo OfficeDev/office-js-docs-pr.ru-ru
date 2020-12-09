@@ -1,15 +1,15 @@
 ---
 title: Набор обязательных элементов API JavaScript для Excel 1,10
 description: Сведения о наборе требований ExcelApi 1,10.
-ms.date: 11/09/2020
+ms.date: 11/19/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: b7bfd8038883dc527721d648b2b75d7187886f49
-ms.sourcegitcommit: ca66ff7462bfdf4ed7ae04f43d1388c24de63bf9
+ms.openlocfilehash: 951835a040b767bc9cf802be4d3bb0790b49fc06
+ms.sourcegitcommit: fecad2afa7938d7178456c11ba52b558224813b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48996245"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49603787"
 ---
 # <a name="whats-new-in-excel-javascript-api-110"></a>Новые возможности API JavaScript для Excel 1,10
 
@@ -19,7 +19,7 @@ ms.locfileid: "48996245"
 |:--- |:--- |:--- |
 | [Примечания](../../excel/excel-add-ins-comments.md) | Добавление, редактирование и удаление примечаний. | [Comment](/javascript/api/excel/excel.comment), [CommentCollection](/javascript/api/excel/excel.commentcollection) |
 | [Описываются](../../excel/excel-add-ins-ranges-advanced.md#group-data-for-an-outline) | Сгруппируйте строки и столбцы, чтобы сформировать свертываемые структуры. | [Диапазон](/javascript/api/excel/excel.range), [лист](/javascript/api/excel/excel.worksheet) |
-| [Slicers](../../excel/excel-add-ins-pivottables.md#slicers) | Вставка и настройка срезов для таблиц и сводных таблиц. | [Slicer](/javascript/api/excel/excel.slicer) |
+| [Slicers](../../excel/excel-add-ins-pivottables.md#filter-with-slicers) | Вставка и настройка срезов для таблиц и сводных таблиц. | [Slicer](/javascript/api/excel/excel.slicer) |
 | [Дополнительные события листа](../../excel/excel-add-ins-events.md) | Прослушивать события Click и Sort на листе. | [Лист (события)](/javascript/api/excel/excel.worksheet#events) |
 
 ## <a name="api-list"></a>Список API
