@@ -720,7 +720,7 @@ items:
           - name: Возвращение динамического массива
             href: excel/custom-functions-dynamic-arrays.md
             displayName: 'Excel, Custom Functions'
-          - name: Общая среда выполнения
+          - name: Общее время выполнения
             href: excel/custom-functions-shared-overview.md
             displayName: 'Excel, Custom Functions'
           - name: Пользовательские функции без пользовательского интерфейса
@@ -1083,6 +1083,9 @@ items:
           - name: Справочные материалы по API
             href: reference/powerpoint-api-reference.md
             displayName: PowerPoint
+          - name: Вставка и удаление слайдов в презентации
+            href: powerpoint/insert-slides-into-presentation.md
+            displayName: PowerPoint
           - name: Получение всего документа из надстройки
             href: powerpoint/get-the-whole-document-from-an-add-in-for-powerpoint.md
             displayName: PowerPoint
@@ -1119,7 +1122,7 @@ items:
       - name: Обзор
         href: reference/overview/visio-javascript-reference-overview.md
         displayName: Visio
-      - name: Справочник по API
+      - name: Справочные материалы по API
         href: reference/visio-api-reference.md
         displayName: Visio
   - name: Word
