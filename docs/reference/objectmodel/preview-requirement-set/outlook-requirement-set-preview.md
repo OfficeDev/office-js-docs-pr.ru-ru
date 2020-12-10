@@ -3,12 +3,12 @@ title: Предварительная версия набора обязател
 description: Функции и API, которые в настоящее время находятся в режиме предварительной версии для надстроек Outlook.
 ms.date: 10/14/2020
 localization_priority: Normal
-ms.openlocfilehash: d91105e0cfbb97dc1a239e40b1c81adc4e76988b
-ms.sourcegitcommit: 4e7c74ad67ea8bf6b47d65b2fde54a967090f65b
+ms.openlocfilehash: 2f83f81dcf7aa7ab0e3a48fff4279c1e08ba6286
+ms.sourcegitcommit: cba180ae712d88d8d9ec417b4d1c7112cd8fdd17
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "48626598"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49612752"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -114,7 +114,7 @@ ms.locfileid: "48626598"
 
 Добавлена новая функция, которая возвращает данные инициализации, передаваемые при [активации надстройки интерактивным сообщением](/outlook/actionable-messages/invoke-add-in-from-actionable-message).
 
-**Доступно в**: Outlook в Windows (подключенном к подписке Microsoft 365), Outlook в Интернете (классическая)
+**Доступно в**: Outlook в Windows (подключенном к подписке Microsoft 365), Outlook в Интернете (современный)
 
 <br>
 
@@ -162,7 +162,7 @@ ms.locfileid: "48626598"
 
 ### <a name="notification-messages-with-actions"></a>Сообщения уведомления с действиями
 
-Эта функция позволяет надстройке включать сообщение уведомления с дополнительным **действием, кроме действия по** умолчанию.
+Эта функция позволяет надстройке включать сообщение уведомления с дополнительным **действием, кроме действия по** умолчанию. В современных Outlook в Интернете эта функция доступна только в режиме создания.
 
 #### <a name="officenotificationmessagedetailsactions"></a>[Office. NotificationMessageDetails. Actions](/javascript/api/outlook/office.notificationmessagedetails#actions)
 
