@@ -89,6 +89,10 @@ items:
               - name: Автоматическое открытие области задач с документом
                 href: develop/automatically-open-a-task-pane-with-a-document.md
                 displayName: manifest
+              - name: Настройка надстройки для использования общей среды выполнения
+                href: develop/configure-your-add-in-to-use-a-shared-runtime.md
+              - name: Выполнение кода при открытии документа
+                href: develop/run-code-on-document-open.md
           - name: Манифест
             items:
               - name: Обзор
@@ -216,6 +220,8 @@ items:
                     href: design/task-pane-add-ins.md
               - name: Сочетания клавиш
                 href: design/keyboard-shortcuts.md
+              - name: Отображение и скрытие области задач надстройки Office
+                href: develop/show-hide-add-in.md
               - name: Локализация
                 href: develop/localization.md
               - name: Ресурсы
@@ -623,9 +629,6 @@ items:
           - name: Условное форматирование диапазонов
             href: excel/excel-add-ins-conditional-formatting.md
             displayName: Excel
-          - name: Настройка надстройки для использования общей среды выполнения
-            href: excel/configure-your-add-in-to-use-a-shared-runtime.md
-            displayName: Excel
           - name: Проверка данных
             href: excel/excel-add-ins-data-validation.md
             displayName: Excel
@@ -653,14 +656,8 @@ items:
           - name: Диапазоны (дополнительные)
             href: excel/excel-add-ins-ranges-advanced.md
             displayName: Excel
-          - name: Выполнение кода при открытии документа
-            href: excel/run-code-on-document-open.md
-            displayName: Excel
           - name: Фигуры
             href: excel/excel-add-ins-shapes.md
-            displayName: Excel
-          - name: Отображение и скрытие надстройки Office в общей среде выполнения
-            href: excel/show-hide-add-in.md
             displayName: Excel
           - name: Таблицы
             href: excel/excel-add-ins-tables.md
@@ -719,9 +716,6 @@ items:
             displayName: 'Excel, Custom Functions'
           - name: Возвращение динамического массива
             href: excel/custom-functions-dynamic-arrays.md
-            displayName: 'Excel, Custom Functions'
-          - name: Общее время выполнения
-            href: excel/custom-functions-shared-overview.md
             displayName: 'Excel, Custom Functions'
           - name: Пользовательские функции без пользовательского интерфейса
             items:
