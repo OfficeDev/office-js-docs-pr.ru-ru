@@ -1,14 +1,14 @@
 ---
 title: Доступность клиентских приложений и платформ Office для надстроек Office
 description: Поддерживаемые наборы обязательных элементов для Excel, OneNote, Outlook, PowerPoint, Project и Word.
-ms.date: 11/02/2020
+ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: 9ac3dffdee742f0cf74005847bb731f83b7aab2b
-ms.sourcegitcommit: 6ade8891ad947094d305fc146bb4deb703093ca6
+ms.openlocfilehash: e09c56076a1650a4a88fb417878369c08b137e21
+ms.sourcegitcommit: 7b8906fdb5cc2db93dae09d1a2c0334f87062510
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "48906031"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "49784473"
 ---
 # <a name="office-client-application-and-platform-availability-for-office-add-ins"></a>Доступность клиентских приложений и платформ Office для надстроек Office
 
@@ -36,7 +36,7 @@ ms.locfileid: "48906031"
     <td>
       - Область задач<br>
       - Контент<br>
-      - Пользовательские функции<br>
+      - CustomFunctions<br>
       - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстройки</a>
     </td>
     <td>
@@ -74,7 +74,7 @@ ms.locfileid: "48906031"
     <td>
       - Область задач<br>
       - Контент<br>
-      - Пользовательские функции<br>
+      - CustomFunctions<br>
       - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстройки</a>
     </td>
     <td>
@@ -229,7 +229,7 @@ ms.locfileid: "48906031"
     <td>
       - Область задач<br>
       - Контент<br>
-      - Пользовательские функции<br>
+      - CustomFunctions<br>
       - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстройки</a>
     </td>
     <td>
@@ -333,27 +333,39 @@ ms.locfileid: "48906031"
 
 <table style="width:80%">
   <tr>
-    <th style="width:10%">Платформа</th>
-    <th style="width:10%">Точки расширения</th>
-    <th style="width:20%">Наборы обязательных элементов API</th>
-    <th style="width:40%"><a href="/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Общие API</b></a></th>
+    <th>Платформа</th>
+    <th>Точки расширения</th>
+    <th>Наборы обязательных элементов API</th>
+    <th><a href="/office/dev/add-ins/reference/requirement-sets/office-add-in-requirement-sets"><b>Общие API</b></a></th>
   </tr>
   <tr>
     <td>Office в Интернете</td>
-    <td>- Пользовательские функции</td>
-    <td>- <a href="/office/dev/add-ins/excel/custom-functions-requirement-sets">CustomFunctionsRuntime 1.1</a></td>
+    <td>- CustomFunctions</td>
+    <td>
+      - <a href="/office/dev/add-ins/excel/custom-functions-requirement-sets">CustomFunctionsRuntime 1.1</a><br>
+      - <a href="/office/dev/add-ins/excel/custom-functions-requirement-sets">CustomFunctionsRuntime 1.2</a><br>
+      - <a href="/office/dev/add-ins/excel/custom-functions-requirement-sets">CustomFunctionsRuntime 1.3</a>
+    </td>
     <td></td>
   </tr>
   <tr>
     <td>Office для Windows<br>(подключено к подписке на Microsoft 365)</td>
-    <td>- Пользовательские функции</td>
-    <td>- <a href="/office/dev/add-ins/excel/custom-functions-requirement-sets">CustomFunctionsRuntime 1.1</a></td>
+    <td>- CustomFunctions</td>
+    <td>
+      - <a href="/office/dev/add-ins/excel/custom-functions-requirement-sets">CustomFunctionsRuntime 1.1</a><br>
+      - <a href="/office/dev/add-ins/excel/custom-functions-requirement-sets">CustomFunctionsRuntime 1.2</a><br>
+      - <a href="/office/dev/add-ins/excel/custom-functions-requirement-sets">CustomFunctionsRuntime 1.3</a>
+    </td>
     <td></td>
   </tr>
   <tr>
     <td>Office для Mac<br>(подключено к подписке на Microsoft 365)</td>
-    <td>- Пользовательские функции</td>
-    <td>- <a href="/office/dev/add-ins/excel/custom-functions-requirement-sets">CustomFunctionsRuntime 1.1</a></td>
+    <td>- CustomFunctions</td>
+    <td>
+      - <a href="/office/dev/add-ins/excel/custom-functions-requirement-sets">CustomFunctionsRuntime 1.1</a><br>
+      - <a href="/office/dev/add-ins/excel/custom-functions-requirement-sets">CustomFunctionsRuntime 1.2</a><br>
+      - <a href="/office/dev/add-ins/excel/custom-functions-requirement-sets">CustomFunctionsRuntime 1.3</a>
+    </td>
     <td></td>
   </tr>
 </table>
@@ -1176,5 +1188,5 @@ ms.locfileid: "48906031"
 - [Журнал обновлений Office 2013 ("нажми и работай")](/officeupdates/update-history-office-2013)
 - [Журнал обновлений Office 2010, 2013 и 2016 (MSI)](/officeupdates/office-updates-msi)
 - [Журнал обновлений Outlook 2010, 2013 и 2016 (MSI)](/officeupdates/outlook-updates-msi)
-- [История обновлений Office для Mac](/officeupdates/update-history-office-for-mac)
+- [Журнал обновлений Office для Mac](/officeupdates/update-history-office-for-mac)
 - [Разработка надстроек Office](../develop/develop-overview.md)
