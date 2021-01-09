@@ -4,12 +4,12 @@ description: В этом руководстве вы создадите надс
 ms.date: 11/09/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: e45bea36b8826912a38838429d83990293fc47db
-ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
+ms.openlocfilehash: cec05135297bb2aa23c3c936a2481b69ed13891a
+ms.sourcegitcommit: 545888b08f57bb1babb05ccfd83b2b3286bdad5c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49131796"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "49789207"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -243,4 +243,4 @@ function clock(invocation) {
 Поздравляем! Вы создали новый проект пользовательских функций, попробовали, как работает готовая функция, создали пользовательскую функцию, которая запрашивает данные из Интернета, а также создали пользовательскую функцию, которая осуществляет потоковую передачу данных. Затем вы можете изменить свой проект, чтобы использовать общую среду выполнения, упрощая взаимодействие с панелью задач. Выполните инструкции из следующей статьи:
 
 > [!div class="nextstepaction"]
-> [Настройка надстройки для использования общей среды выполнения](../excel/configure-your-add-in-to-use-a-shared-runtime.md)
+> [Настройка надстройки для использования общей среды выполнения](../develop/configure-your-add-in-to-use-a-shared-runtime.md)
