@@ -1071,8 +1071,14 @@ items:
               - name: Обзор
                 href: reference/requirement-sets/powerpoint-api-requirement-sets.md
                 displayName: PowerPoint
-              - name: Предварительные API PowerPoint
+              - name: PowerPointApi — предварительная версия набора обязательных элементов
                 href: reference/requirement-sets/powerpoint-preview-apis.md
+                displayName: PowerPoint
+              - name: PowerPointApi 1.2 — предварительная версия набора обязательных элементов
+                href: reference/requirement-sets/powerpoint-api-1-2-requirement-set.md
+                displayName: PowerPoint
+              - name: PowerPointApi 1.1 — предварительная версия набора обязательных элементов
+                href: reference/requirement-sets/powerpoint-api-1-1-requirement-set.md
                 displayName: PowerPoint
           - name: Справочные материалы по API
             href: reference/powerpoint-api-reference.md
