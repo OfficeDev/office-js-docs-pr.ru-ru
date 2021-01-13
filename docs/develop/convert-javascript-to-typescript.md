@@ -1,24 +1,24 @@
 ---
 title: Преобразование проекта надстройки Office в Visual Studio в TypeScript
-description: Сведения о том, как преобразовать проект надстройки Office в Visual Studio для использования TypeScript.
+description: Узнайте, как преобразовать проект надстройки Office в Visual Studio использовать TypeScript.
 ms.date: 09/01/2020
 localization_priority: Normal
-ms.openlocfilehash: e05861e3fef79f87afc820eb62b2a52aaa953f31
-ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
+ms.openlocfilehash: 2134727a6065a1236dca313721d7721657e9a677
+ms.sourcegitcommit: d28392721958555d6edea48cea000470bd27fcf7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47430487"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "49839966"
 ---
 # <a name="convert-an-office-add-in-project-in-visual-studio-to-typescript"></a>Преобразование проекта надстройки Office в Visual Studio в TypeScript
 
 Вы можете использовать шаблон надстройки Office в Visual Studio, чтобы создать надстройку с использованием JavaScript, а затем преобразовать этот проект в TypeScript. В этой статье описан процесс преобразования для надстройки Excel. Таким же образом в Visual Studio можно преобразовывать и другие проекты надстроек Office из JavaScript в TypeScript.
 
 > [!IMPORTANT]
-> В этой статье описываются *минимальные* действия, которые необходимо выполнить, чтобы убедиться, что при нажатии клавиши F5 код будет передаваться в JavaScript, который затем неопубликованные автоматически в Office. Однако код не является "TypeScript". Например, переменные объявляются с помощью `var` ключевого слова, а `let` не объявления с указанным типом. Чтобы использовать все преимущества строгой типизации TypeScript, рассмотрите возможность внесения дальнейших изменений в код. 
+> В этой статье  описаны минимальные действия, необходимые для того, чтобы при нажатии на F5 код перезаписывался на JavaScript, который затем автоматически загружен в Office. Однако код не очень "TypeScripty". Например, переменные объявляются с ключевым словом, а не с указанным `var` `let` типом. Чтобы в полной мере воспользоваться преимуществами сильного ввода TypeScript, рассмотрите возможность внесения дополнительных изменений в код. 
 
 > [!NOTE]
-> Чтобы создать проект надстройки Office на TypeScript без использования Visual Studio, следуйте указаниям из раздела "Генератор Yeoman" любого [5-минутного руководства по началу работы](/office/dev/add-ins/) и выберите `TypeScript` по соответствующему запросу [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
+> Чтобы создать проект надстройки Office на TypeScript без использования Visual Studio, следуйте указаниям из раздела "Генератор Yeoman" любого [5-минутного руководства по началу работы](../index.yml) и выберите `TypeScript` по соответствующему запросу [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -56,7 +56,7 @@ ms.locfileid: "47430487"
 
 4. На вкладке **Средства** выберите **Диспетчер пакетов NuGet** и щелкните пункт **Управление пакетами NuGet для решения...**.
 
-5. После выбора вкладки **Обзор** введите **jQuery. TypeScript. DefinitelyTyped**. Установите этот пакет или обновите его, если он уже установлен. Это обеспечит включение определений TypeScript для jQuery в проект. Пакеты для jQuery отображаются в файле, созданном Visual Studio, который называется **packages.config**.
+5. Выбрав **вкладку** "Обзор", введите **jquery. TypeScript.DefinitelyTyped**. Установите этот пакет или обновим его, если он уже установлен. Это гарантирует, что определения jQuery TypeScript будут включены в проект. Пакеты для jQuery отображаются в файле, Visual Studio под названием **packages.config**.
 
     > [!NOTE]
     > В проекте TypeScript могут быть как файлы TypeScript, так и файлы JavaScript, это не повлияет на компиляцию. Потому что TypeScript — это типизированная расширенная версия языка JavaScript. Код TypeScript компилируется в JavaScript.

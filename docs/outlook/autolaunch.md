@@ -1,55 +1,55 @@
 ---
-title: Настройка надстройки Outlook для активации на основе событий (Предварительная версия)
+title: Настройка надстройки Outlook для активации на основе событий (предварительная версия)
 description: Узнайте, как настроить надстройку Outlook для активации на основе событий.
 ms.topic: article
-ms.date: 11/24/2020
+ms.date: 01/06/2021
 localization_priority: Normal
-ms.openlocfilehash: d7ba4a0fb87ec51db56892f4eb3002ae5b7fa6ec
-ms.sourcegitcommit: f4fa1a0187466ea136009d1fe48ec67e4312c934
+ms.openlocfilehash: d6893733af52bba7917531b2e8d5a442ce3dcd77
+ms.sourcegitcommit: d28392721958555d6edea48cea000470bd27fcf7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "49408843"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "49839833"
 ---
-# <a name="configure-your-outlook-add-in-for-event-based-activation-preview"></a>Настройка надстройки Outlook для активации на основе событий (Предварительная версия)
+# <a name="configure-your-outlook-add-in-for-event-based-activation-preview"></a>Настройка надстройки Outlook для активации на основе событий (предварительная версия)
 
-Без функции активации на основе событий пользователю необходимо явным образом запустить надстройку для выполнения своих задач. Эта функция позволяет надстройке запускать задачи на основе определенных событий, особенно для операций, которые применяются к каждому элементу. Также можно выполнить интеграцию с областью задач и функциональностью без пользовательского интерфейса. В настоящее время поддерживаются следующие события.
+Без функции активации на основе событий пользователю необходимо явным образом запустить надстройки для выполнения своих задач. Эта функция позволяет надстройка выполнять задачи на основе определенных событий, особенно для операций, которые применяются к каждому элементу. Вы также можете интегрироваться с функциональностью области задач и без пользовательского интерфейса. В настоящее время поддерживаются следующие события.
 
-- `OnNewMessageCompose`: На составление нового сообщения (включая ответ, ответить всем и пересылать)
+- `OnNewMessageCompose`: при составления нового сообщения (включая ответ, ответ всем и переад. );
 - `OnNewAppointmentOrganizer`: При создании новой встречи
 
   > [!IMPORTANT]
-  > Эта функция **не** активируется при редактировании элемента, например черновика или существующей встречи.
+  > Эта функция не **активируется** при редактировании элемента, например черновика или существующей встречи.
 
-По завершении этого пошагового руководства у вас будет надстройка, которая запускается при создании нового сообщения.
+К концу этого побока у вас будет надстройка, которая запускается при всех создания нового сообщения.
 
 > [!IMPORTANT]
-> Эта функция поддерживается только для [предварительного просмотра](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) в Outlook в Интернете с подпиской на Microsoft 365. Узнайте [, как просмотреть функцию активации на основе событий,](#how-to-preview-the-event-based-activation-feature) приведенную в этой статье, для получения дополнительных сведений.
+> Эта функция поддерживается только для [предварительного](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) просмотра в Outlook в Интернете с подпиской на Microsoft 365. Дополнительные [сведения см.](#how-to-preview-the-event-based-activation-feature) в этой статье, чтобы просмотреть функцию активации на основе событий.
 >
-> Так как функции предварительного просмотра могут быть изменены без предварительного уведомления, они не должны использоваться в производственных надстройках.
+> Поскольку функции предварительного просмотра могут быть без предварительного уведомления, их не следует использовать в производственных надстройки.
 
-## <a name="how-to-preview-the-event-based-activation-feature"></a>Предварительный просмотр функции активации на основе событий
+## <a name="how-to-preview-the-event-based-activation-feature"></a>Просмотр функции активации на основе событий
 
-Мы приглашаем вас испытать функцию активации на основе событий! Сообщите нам о своих сценариях и способах их усовершенствования, предоставив отзыв на сайте GitHub (обратитесь к разделу **Отзывы** в конце этой страницы).
+Мы предлагаем вам попробовать функцию активации на основе событий! Let us know your scenarios and how we can improve by giving us feedback through GitHub (see the **Feedback** section at the end of this page).
 
-Чтобы просмотреть эту функцию, выполните указанные ниже действия.
+Чтобы просмотреть эту функцию:
 
-- Ссылка на **бета-** библиотеку в сети CDN ( https://appsforoffice.microsoft.com/lib/beta/hosted/office.js) . [Файл определения типа](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts) для компиляции TypeScript и IntelliSense находится в сети CDN и [DefinitelyTyped](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js-preview/index.d.ts). Вы можете установить эти типы с помощью `npm install --save-dev @types/office-js-preview` .
-- [Настройте целевой выпуск на клиенте Microsoft 365](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center).
+- Ссылка на **бета-версию** библиотеки в CDN ( https://appsforoffice.microsoft.com/lib/beta/hosted/office.js) . Файл [определения типа для](https://appsforoffice.microsoft.com/lib/beta/hosted/office.d.ts) компиляции и IntelliSense TypeScript находится в CDN и [DefinitelyTyped.](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/office-js-preview/index.d.ts) Эти типы можно установить с помощью `npm install --save-dev @types/office-js-preview` .
+- [Настройка целевого выпуска в клиенте Microsoft 365.](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center)
 
 ## <a name="set-up-your-environment"></a>Настройка среды
 
-Завершите работу с [быстрым запуском Outlook](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator) , который создает проект надстройки с помощью генератора Yeoman для надстроек Office.
+Завершите [краткое начало работы с Outlook,](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator) которое создает проект надстройки с помощью генератора Yeoman для надстройки Office.
 
 ## <a name="configure-the-manifest"></a>Настройка манифеста
 
-Чтобы включить активацию надстройки на основе событий, необходимо настроить элемент [среды выполнения](../reference/manifest/runtimes.md) и точку расширения [лаунчевент](../reference/manifest/extensionpoint.md#launchevent-preview) в манифесте. Пока `DesktopFormFactor` это единственный поддерживаемый конструктивный параметр.
+Чтобы включить активацию надстройки на основе событий, необходимо настроить элемент [Runtimes](../reference/manifest/runtimes.md) и точку расширения [LaunchEvent](../reference/manifest/extensionpoint.md#launchevent-preview) в манифесте. На данный момент `DesktopFormFactor` это единственный поддерживаемый форм-фактор.
 
-1. В редакторе кода откройте Быстрый запуск проекта.
+1. В редакторе кода откройте проект быстрого запуска.
 
-1. Откройте файл **manifest.xml** , расположенный в корневом каталоге проекта.
+1. Откройте файл **manifest.xml,** расположенный в корневой папке проекта.
 
-1. Выберите весь `<VersionOverrides>` узел (включая открывающие и закрывающие теги) и замените его следующим XML-документом.
+1. Выберите весь узел (включая открытые и закрываемые `<VersionOverrides>` теги) и замените его на следующий XML-
 
 ```XML
 <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -150,36 +150,47 @@ ms.locfileid: "49408843"
 </VersionOverrides>
 ```
 
-Outlook в Windows использует файл JavaScript, в то время как Outlook в Интернете использует HTML-файл, который ссылается на тот же файл JavaScript. Необходимо предоставить ссылки на эти файлы в манифесте, так как платформа Outlook в конечном итоге определяет, следует ли использовать HTML или JavaScript на основе клиента Outlook. Таким образом, чтобы настроить обработку событий, укажите расположение HTML-кода в `Runtime` элементе, а затем в `Override` дочернем элементе укажите расположение файла JavaScript, встроенного или ссылающегося на HTML.
+Outlook для Windows использует файл JavaScript, а Outlook в Интернете использует HTML-файл, ссылаясь на тот же файл JavaScript. Необходимо предоставить ссылки на оба этих файла в манифесте, так как платформа Outlook в конечном итоге определяет, следует ли использовать HTML или JavaScript на основе клиента Outlook. Таким образом, чтобы настроить обработку событий, указите расположение HTML-кода в элементе, а затем в его потомке указите расположение файла JavaScript, на который ссылается `Runtime` `Override` HTML-код.
 
 > [!TIP]
-> Чтобы узнать больше о манифестах для надстроек Outlook, ознакомьтесь с разделом [манифесты надстроек Outlook](manifests.md).
+> Дополнительные информацию о манифестах надстройки Outlook см. в манифестах [надстройки Outlook.](manifests.md)
 
 ## <a name="implement-event-handling"></a>Реализация обработки событий
 
 Необходимо реализовать обработку выбранных событий.
 
-В этом сценарии вы добавите обработку для создания новых элементов.
+В этом сценарии вы добавим обработку для составления новых элементов.
 
-1. В проекте быстрого запуска откройте **commands.jsфайл./СРК/коммандс/** в редакторе кода.
+1. В том же проекте быстрого запуска откройте файл **./src/commands/commands.js** в редакторе кода.
 
 1. После `action` функции вставьте следующие функции JavaScript.
 
     ```js
     function onMessageComposeHandler(event) {
-      setSubject();
-      event.completed();
+      setSubject(event);
     }
     function onAppointmentComposeHandler(event) {
-      setSubject();
-      event.completed();
+      setSubject(event);
     }
-    function setSubject() {
-      Office.context.mailbox.item.subject.setAsync("Set by an event-based add-in!");
+    function setSubject(event) {
+      Office.context.mailbox.item.subject.setAsync(
+        "Set by an event-based add-in!",
+        {
+          "asyncContext" : event
+        },
+        function (asyncResult) {
+          // Handle success or error.
+          if (asyncResult.status !== Office.AsyncResultStatus.Succeeded) {
+            console.error("Failed to set subject: " + JSON.stringify(asyncResult.error));
+          }
+    
+          // Call event.completed() after all work is done.
+          asyncResult.asyncContext.completed();
+        });
     }
     ```
 
-1. В конце файла добавьте указанные ниже операторы.
+1. В конце файла добавьте следующие утверждения.
 
     ```js
     g.onMessageComposeHandler = onMessageComposeHandler;
@@ -188,7 +199,7 @@ Outlook в Windows использует файл JavaScript, в то время 
 
 ## <a name="try-it-out"></a>Проверка
 
-1. В корневом каталоге проекта выполните указанную ниже команду. При ее выполнении будет запущен локальный веб-сервер (если он еще не запущен).
+1. Выполните следующую команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).
 
     ```command&nbsp;line
     npm run dev-server
@@ -198,27 +209,27 @@ Outlook в Windows использует файл JavaScript, в то время 
 
 1. Создайте новое сообщение в веб-версии Outlook.
 
-    ![Снимок экрана с окном сообщения в Outlook в Интернете с набором тем для создания.](../images/outlook-web-autolaunch.png)
+    ![Снимок экрана: окно сообщения в Outlook в Интернете с темой, настроенной для составить.](../images/outlook-web-autolaunch.png)
 
 ## <a name="event-based-activation-behavior-and-limitations"></a>Поведение и ограничения активации на основе событий
 
-Надстройки, активируемые на основе событий, ориентированы на короткий запуск и только до 330 секунд. Мы рекомендуем, чтобы ваша надстройка вызывала `event.completed` метод, чтобы сообщить, что обработка события запуска завершена. Кроме того, надстройка завершает работу, когда пользователь закрывает окно создания.
+Надстройки, которые активируются на основе событий, рассчитаны на кратковременную работу до 330 секунд. Мы рекомендуем вызвать метод, чтобы надстройка сигнализирует о том, что обработка события `event.completed` запуска завершена. Надстройка также заканчивается, когда пользователь закрывает окно составить.
 
-Если у пользователя есть несколько надстроек, подписанных на одно и то же событие, платформа Outlook запускает надстройку в неопределенном порядке. В настоящее время только пять надстроек на основе событий могут быть запущены в активном состоянии. Все дополнительные надстройки помещаются в очередь, а затем выполняются, как только ранее активные надстройки завершаются или отключаются.
+Если у пользователя есть несколько надстройок, которые подписаны на одно и то же событие, платформа Outlook запускает надстройки в определенном порядке. В настоящее время можно активно запускать только пять надстройок на основе событий. Все дополнительные надстройки добавляются в очередь, а затем запускаются по мере завершения или отключения ранее активных надстроек.
 
-Пользователь может переключить или покинуть текущий почтовый элемент, где запущена надстройка. Запущенная надстройка завершит свою работу в фоновом режиме.
+Пользователь может переключиться или перейти от текущего почтового элемента, в котором запущена надстройка. Запущенная надстройка завершит свою работу в фоновом режиме.
 
-Некоторые API Office.js, которые изменяют или изменяют пользовательский интерфейс, не поддерживаются в надстройках, основанных на событиях. Ниже приведены заблокированные API.
+Некоторые Office.js API, которые изменяют или изменяют пользовательский интерфейс, не разрешены из надстройки на основе событий. Ниже следующую ссылку: заблокированные API.
 
-- В разделе `Office.context.mailbox` :
+- Under `Office.context.mailbox` :
   - `displayAppointmentForm`
   - `displayMessageForm`
   - `displayNewAppointmentForm`
   - `displayNewMessageForm`
-- В разделе `Office.context.ui` :
+- Under `Office.context.ui` :
   - `displayDialogAsync`
   - `messageParent`
-- В разделе `Office.context.auth` :
+- Under `Office.context.auth` :
   - `getAccessToken`
   - `getAccessTokenAsync`
 

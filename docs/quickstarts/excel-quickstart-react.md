@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 11/09/2020
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 143c5254a2a6bb00fba44373878baf5626443777
-ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
+ms.openlocfilehash: 460f6a6d58e6405a0ede909eec755d454744461b
+ms.sourcegitcommit: d28392721958555d6edea48cea000470bd27fcf7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49132300"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "49839728"
 ---
 # <a name="build-an-excel-task-pane-add-in-using-react"></a>Создание области задач Excel с помощью React
 
@@ -73,7 +73,7 @@ ms.locfileid: "49132300"
 
 ## <a name="see-also"></a>См. также
 
-* [Руководство по надстройкам Excel](../tutorials/excel-tutorial-create-table.md)
+* [Руководство по надстройкам Excel](../tutorials/excel-tutorial.md)
 * [Объектная модель JavaScript для Excel в надстройках Office](../excel/excel-add-ins-core-concepts.md)
 * [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
 * [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)

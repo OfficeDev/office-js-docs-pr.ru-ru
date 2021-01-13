@@ -5,12 +5,12 @@ ms.date: 10/14/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: d0dae515df3d8fb3ec1bcb12f553b21b341552ad
-ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
+ms.openlocfilehash: 2dba67cabaf11d6e10560ba3dbe5babde3ed0c92
+ms.sourcegitcommit: d28392721958555d6edea48cea000470bd27fcf7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "48740849"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "49840008"
 ---
 # <a name="word-add-ins-overview"></a>Обзор надстроек Word
 
@@ -75,7 +75,7 @@ API JavaScript для Word предоставляют приложению до�
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Готовы [создать свою первую надстройку Word](word-add-ins.md)? Используйте [манифест надстройки](../develop/add-in-manifests.md), чтобы указать ведущее приложение, имя, разрешения и другие сведения.
+Готовы [создать свою первую надстройку Word](../quickstarts/word-quickstart.md)? Используйте [манифест надстройки](../develop/add-in-manifests.md), чтобы указать ведущее приложение, имя, разрешения и другие сведения.
 
 Чтобы узнать больше о том, как создать качественную и привлекательную надстройку Word, см. [руководство по разработке](../design/add-in-design.md) и [рекомендации](../concepts/add-in-development-best-practices.md).
 

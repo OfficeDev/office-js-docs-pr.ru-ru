@@ -1,14 +1,14 @@
 ---
 title: Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
-description: Узнайте, как устранять ошибки пользователей в надстройках Office.
+description: Узнайте, как устранять ошибки пользователей в надстройки Office.
 ms.date: 09/08/2020
 localization_priority: Normal
-ms.openlocfilehash: 878295a4a6237860c349efb04a6684ab527b7e4f
-ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
+ms.openlocfilehash: e1cb5e0bb8005f04425a5ad9c7e807d10f054e35
+ms.sourcegitcommit: d28392721958555d6edea48cea000470bd27fcf7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "47408833"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "49840099"
 ---
 # <a name="troubleshoot-user-errors-with-office-add-ins"></a>Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 
@@ -43,7 +43,7 @@ ms.locfileid: "47408833"
 Если надстройка Outlook в Windows и [в Internet Explorer](../concepts/browsers-used-by-office-web-add-ins.md) работает неправильно, попробуйте включить отладку сценариев в Internet Explorer. 
 
 
-- Откройте раздел Сервис > " **Свойства браузера**"  >  **Advanced**.
+- Go to Tools > **Internet Options**  >  **Advanced**.
     
 - В разделе **Обзор**, снимите флажки **Отключить отладку сценариев (Internet Explorer)** и **Отключить отладку сценариев (другие)**.
     
@@ -69,7 +69,7 @@ ms.locfileid: "47408833"
 
 "Параметры безопасности браузера не позволили создать диалоговое окно. Используйте другой браузер или настройте браузер так, чтобы [URL-адрес] и домен, отображаемый в адресной строке браузера, находились в одной зоне безопасности."
 
-![Снимок экрана: сообщение об ошибке](http://i.imgur.com/3mqmlgE.png)
+![Снимок экрана: сообщение об ошибке в диалоговом окне](../images/dialog-prevented.png)
 
 |**Браузеры**|**Платформы**|
 |:--------------------|:---------------------|
@@ -95,5 +95,4 @@ Office.context.ui.displayDialogAsync(startAddress, {displayInIFrame:true}, callb
 
 ## <a name="see-also"></a>См. также
 
-- [Устранение ошибок разработки надстроек Office](troubleshoot-development-errors.md)
-
+- [Устранение ошибок разработки с помощью надстройки Office](troubleshoot-development-errors.md)
