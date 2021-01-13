@@ -1,16 +1,16 @@
 ---
-ms.date: 11/06/2020
+ms.date: 01/08/2020
 description: Создайте пользовательскую функцию Excel для надстройки Office
 title: Создание пользовательских функций в Excel
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 052c90f81af79d420c60783f8dfc6b256e8da370
-ms.sourcegitcommit: 545888b08f57bb1babb05ccfd83b2b3286bdad5c
+ms.openlocfilehash: 97037f201a237cdc6dae551552a0a1609a58b34c
+ms.sourcegitcommit: d28392721958555d6edea48cea000470bd27fcf7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "49789130"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "49839875"
 ---
 # <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel
 
@@ -35,8 +35,8 @@ function sphereVolume(radius) {
 }
 ```
 
-> [!NOTE]
-> В разделе [Известные проблемы](#known-issues) далее в этой статье определены текущие ограничения для пользовательских функций.
+> [!TIP]
+> Если надстройка пользовательской функции использует область задач или кнопку ленты (помимо выполнения кода пользовательской функции), вам потребуется настроить общую среду выполнения JavaScript. Дополнительные сведения см. в статье [Настройка надстройки Office для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md).
 
 ## <a name="how-a-custom-function-is-defined-in-code"></a>Как определена пользовательская функция в коде
 
@@ -88,10 +88,6 @@ Excel в Интернете и Windows, подключенные к подпис
 
 Дополнительные сведения о совместном редактировании см. в статье [О совместном редактировании в Excel](/office/vba/excel/concepts/about-coauthoring-in-excel).
 
-## <a name="known-issues"></a>Известные проблемы
-
-С известными проблемами можно ознакомиться в нашем [репозитории GitHub, посвященном пользовательским функциям в Excel](https://github.com/OfficeDev/Excel-Custom-Functions/issues).
-
 ## <a name="next-steps"></a>Дальнейшие действия
 
 Хотите попробовать пользовательские функции? Ознакомьтесь с простым [кратким руководством по началу работы с пользовательскими функциями](../quickstarts/excel-custom-functions-quickstart.md) или с более глубоким [руководством по пользовательским функциям](../tutorials/excel-tutorial-create-custom-functions.md), если вы этого еще не сделали.
@@ -103,3 +99,4 @@ Excel в Интернете и Windows, подключенные к подпис
 * [Наборы обязательных элементов пользовательских функций](custom-functions-requirement-sets.md)
 * [Правила именования пользовательских функций](custom-functions-naming.md)
 * [Создание пользовательских функций, совместимых с функциями XLL, определенными пользователями](make-custom-functions-compatible-with-xll-udf.md)
+* [Настройка надстройки Office для использования общей среды выполнения JavaScript](../develop/configure-your-add-in-to-use-a-shared-runtime.md)

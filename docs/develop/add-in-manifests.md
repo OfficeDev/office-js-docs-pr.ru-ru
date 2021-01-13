@@ -3,12 +3,12 @@ title: XML-манифест надстроек Office
 description: Получите обзор манифеста надстройки Office и его использования.
 ms.date: 03/18/2020
 localization_priority: Priority
-ms.openlocfilehash: 495638ee70630c5330e800419076463273bd2491
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: e664893445ed6d9ee9a7adf23f3b3b189df8634e
+ms.sourcegitcommit: d28392721958555d6edea48cea000470bd27fcf7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293356"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "49840001"
 ---
 # <a name="office-add-ins-xml-manifest"></a>XML-манифест надстроек Office
 
@@ -131,7 +131,7 @@ _\*\* SupportUrl требуется только для надстроек ра�
 > Из этого правила есть два исключения:
 >
 > - Это относится только к корневой области надстройки. Если в страницу надстройки внедрен iframe, его можно перенаправить на любой URL-адрес, независимо от того, указан ли он в элементе **AppDomains**, даже в классической версии Office.
-> - Если диалоговое окно открыто с помощью API [displayDialogAsync](/javascript/api/office/office.ui?view=common-js#displaydialogasync-startaddress--options--callback-), URL-адрес, передаваемый методу, должен находиться в том же домене, что и надстройка. Затем диалоговое окно можно перенаправить на любой URL-адрес, независимо от того, указан ли он в элементе **AppDomains**, даже в классической версии Office.
+> - Если диалоговое окно открыто с помощью API [displayDialogAsync](/javascript/api/office/office.ui?view=common-js&preserve-view=true#displaydialogasync-startaddress--options--callback-), URL-адрес, передаваемый методу, должен находиться в том же домене, что и надстройка. Затем диалоговое окно можно перенаправить на любой URL-адрес, независимо от того, указан ли он в элементе **AppDomains**, даже в классической версии Office.
 
 В приведенном ниже примере XML-манифеста главная страница надстройки размещена в домене `https://www.contoso.com`, указанном в элементе **SourceLocation**. В нем также указан домен `https://www.northwindtraders.com` с помощью элемента [AppDomain](../reference/manifest/appdomain.md) из списка **AppDomains**. Страница в домене `www.northwindtraders.com` будет открываться в области надстроек даже в классической версии Office.
 
@@ -336,7 +336,7 @@ _\*\* SupportUrl требуется только для надстроек ра�
         <bt:Image id="Contoso.TaskpaneButton.Icon16" DefaultValue="https://myCDN/Images/Button16x16.png" />
         <bt:Image id="Contoso.TaskpaneButton.Icon32" DefaultValue="https://myCDN/Images/Button32x32.png" />
         <bt:Image id="Contoso.TaskpaneButton.Icon80" DefaultValue="https://myCDN/Images/Button80x80.png" />
-        <bt:Image id="Contoso.FunctionButton.Icon" DefaultValue="https://i.imgur.com/qDujiX0.png" />
+        <bt:Image id="Contoso.FunctionButton.Icon" DefaultValue="https://myCDN/Images/ButtonFunction.png" />
       </bt:Images>
       <bt:Urls>
         <bt:Url id="Contoso.FunctionFile.Url" DefaultValue="https://commandsimple.azurewebsites.net/FunctionFile.html" />

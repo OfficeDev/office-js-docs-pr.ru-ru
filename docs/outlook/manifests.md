@@ -1,14 +1,14 @@
 ---
 title: Манифесты надстройки Outlook
 description: В манифесте описывается, как выполняется интеграция надстройки Outlook с клиентами Outlook, включая пример.
-ms.date: 10/31/2019
+ms.date: 05/27/2020
 localization_priority: Priority
-ms.openlocfilehash: f4d60919db15c4f470ecccac634abee94973bb6c
-ms.sourcegitcommit: 5d29801180f6939ec10efb778d2311be67d8b9f1
+ms.openlocfilehash: 0135db8b6ff2b9fbcb3b6370979d8013aa21155a
+ms.sourcegitcommit: d28392721958555d6edea48cea000470bd27fcf7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "42324942"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "49839826"
 ---
 # <a name="outlook-add-in-manifests"></a>Манифесты надстройки Outlook
 
@@ -274,9 +274,11 @@ ms.locfileid: "42324942"
 
 ## <a name="versionoverrides"></a>VersionOverrides
 
-Элемент **VersionOverrides** — это расположение данных для команд надстройки. Дополнительные сведения об этом элементе см. в статье [Определение команд надстройки в манифесте](../develop/define-add-in-commands.md).
+Элемент **VersionOverrides** — это расположение данных о [командах надстройки](add-in-commands-for-outlook.md).
 
 Кроме того, в этом элементе определяется поддержка [мобильных надстроек](add-mobile-support.md).
+
+Описание этого элемента см. в статье [Создание команд надстроек в манифесте для Excel, PowerPoint и Word](../develop/create-addin-commands.md).
 
 ## <a name="localization"></a>Локализация
 
@@ -324,7 +326,7 @@ ms.locfileid: "42324942"
 </OfficeApp>
 ```
 
-Он отличается от элемента **Hosts** в элементе **VersionOverrides**, который рассматривается в статье [Определение команд надстройки в манифесте](../develop/define-add-in-commands.md).
+Он отличается от элемента **Hosts** в элементе **VersionOverrides**, который рассматривается в статье [Создание команд надстроек в манифесте для Excel, PowerPoint и Word](../develop/create-addin-commands.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -420,7 +422,7 @@ ms.locfileid: "42324942"
 
 ## <a name="next-steps-add-in-commands"></a>Дальнейшие действия: команды надстроек
 
-После определения основного манифеста [определите команды для вашей надстройки](../develop/define-add-in-commands.md). Команды надстроек представляют собой кнопки на ленте, с помощью которых пользователи могут легко и интуитивно активировать ваши надстройки. Дополнительные сведения см. в статье [Команды надстроек Outlook](add-in-commands-for-outlook.md).
+После определения основного манифеста определите команды для вашей надстройки. Команды надстроек представляют собой кнопки на ленте, с помощью которых пользователи могут легко и интуитивно активировать ваши надстройки. Дополнительные сведения см. в статье [Команды надстроек для Outlook](add-in-commands-for-outlook.md).
 
 Пример надстройки, в которой определены команды надстройки: [command-demo](https://github.com/OfficeDev/outlook-add-in-command-demo).
 
