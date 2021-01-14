@@ -1,13 +1,13 @@
-<span data-ttu-id="ffcac-101">Если надстройка работает в Microsoft Edge, код без пользовательского интерфейса не сможет по умолчанию подключаться к отладчику.</span><span class="sxs-lookup"><span data-stu-id="ffcac-101">When the add-in is running in Microsoft Edge, UI-less code will not be able to attach to a debugger by default.</span></span>
-<span data-ttu-id="ffcac-102">Код без пользовательского интерфейса — это любой код, выполняющийся, когда область задач не отображается, например команды надстройки.</span><span class="sxs-lookup"><span data-stu-id="ffcac-102">UI-less code is any code running while the task pane is not visible, such as add-in commands.</span></span> <span data-ttu-id="ffcac-103">Чтобы включить отладку, требуется выполнить следующую команду [Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/getting-started-with-windows-powershell):</span><span class="sxs-lookup"><span data-stu-id="ffcac-103">To enable debugging, you need to run the following [Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/getting-started-with-windows-powershell) commands.</span></span>
+<span data-ttu-id="de6fd-101">Если надстройка работает в Microsoft Edge, код без пользовательского интерфейса не сможет по умолчанию подключаться к отладчику.</span><span class="sxs-lookup"><span data-stu-id="de6fd-101">When the add-in is running in Microsoft Edge, UI-less code will not be able to attach to a debugger by default.</span></span>
+<span data-ttu-id="de6fd-102">Код без пользовательского интерфейса — это любой код, выполняющийся, когда область задач не отображается, например команды надстройки.</span><span class="sxs-lookup"><span data-stu-id="de6fd-102">UI-less code is any code running while the task pane is not visible, such as add-in commands.</span></span> <span data-ttu-id="de6fd-103">Чтобы включить отладку, требуется выполнить следующую команду [Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell):</span><span class="sxs-lookup"><span data-stu-id="de6fd-103">To enable debugging, you need to run the following [Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell) commands.</span></span>
 
-1. <span data-ttu-id="ffcac-104">Выполните следующую команду, чтобы получить сведения о пакете приложения **Microsoft.Win32WebViewHost**.</span><span class="sxs-lookup"><span data-stu-id="ffcac-104">Run the following command to get information for the **Microsoft.Win32WebViewHost** app package.</span></span>
+1. <span data-ttu-id="de6fd-104">Выполните следующую команду, чтобы получить сведения о пакете приложения **Microsoft.Win32WebViewHost**.</span><span class="sxs-lookup"><span data-stu-id="de6fd-104">Run the following command to get information for the **Microsoft.Win32WebViewHost** app package.</span></span>
     
     ```powershell
     Get-AppxPackage Microsoft.Win32WebViewHost
     ```
     
-    <span data-ttu-id="ffcac-105">Эта команда перечисляет сведения о пакете приложения аналогично следующему результату.</span><span class="sxs-lookup"><span data-stu-id="ffcac-105">The command lists app package information similar to the following output.</span></span>
+    <span data-ttu-id="de6fd-105">Эта команда перечисляет сведения о пакете приложения аналогично следующему результату.</span><span class="sxs-lookup"><span data-stu-id="de6fd-105">The command lists app package information similar to the following output.</span></span>
     
     ```powershell
     Name              : Microsoft.Win32WebViewHost
@@ -29,10 +29,10 @@
     Status            : Ok
     ```
     
-2. <span data-ttu-id="ffcac-106">Чтобы включить отладку, выполните следующую команду.</span><span class="sxs-lookup"><span data-stu-id="ffcac-106">Run the following command to enable debugging.</span></span> <span data-ttu-id="ffcac-107">Используйте значение для **PackageFullName**, полученное в списке от предыдущей команды.</span><span class="sxs-lookup"><span data-stu-id="ffcac-107">Use the value for the **PackageFullName** listed from the previous command.</span></span>
+2. <span data-ttu-id="de6fd-106">Чтобы включить отладку, выполните следующую команду.</span><span class="sxs-lookup"><span data-stu-id="de6fd-106">Run the following command to enable debugging.</span></span> <span data-ttu-id="de6fd-107">Используйте значение для **PackageFullName**, полученное в списке от предыдущей команды.</span><span class="sxs-lookup"><span data-stu-id="de6fd-107">Use the value for the **PackageFullName** listed from the previous command.</span></span>
     
     ```powershell
     setx JS_DEBUG <PackageFullName>
     ```
     
-3. <span data-ttu-id="ffcac-108">Если Office уже запущен, закройте и перезапустите его, чтобы учесть изменения отладки.</span><span class="sxs-lookup"><span data-stu-id="ffcac-108">If Office was already running, close and restart Office so that it picks up the debugging change.</span></span>
+3. <span data-ttu-id="de6fd-108">Если Office уже запущен, закройте и перезапустите его, чтобы учесть изменения отладки.</span><span class="sxs-lookup"><span data-stu-id="de6fd-108">If Office was already running, close and restart Office so that it picks up the debugging change.</span></span>
