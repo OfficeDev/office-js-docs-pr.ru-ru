@@ -1,14 +1,14 @@
 ---
-ms.date: 12/09/2020
+ms.date: 12/21/2020
 description: Узнайте, как использовать различные параметры в пользовательских функциях, такие как диапазоны Excel, необязательные параметры, контекст вызовов и другие.
 title: Параметры пользовательских функций Excel
 localization_priority: Normal
-ms.openlocfilehash: 9f43955324c148a0af030fb796b82f6d72f429c5
-ms.sourcegitcommit: b300e63a96019bdcf5d9f856497694dbd24bfb11
+ms.openlocfilehash: 312046551236e96e67de6f63f3e3511aba6f50ce
+ms.sourcegitcommit: 48b9c3b63668b2a53ce73f92ce124ca07c5ca68c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "49624668"
+ms.lasthandoff: 12/28/2020
+ms.locfileid: "49735531"
 ---
 # <a name="custom-functions-parameter-options"></a>Параметры пользовательских функций
 
@@ -61,7 +61,7 @@ function add(first: number, second: number, third?: number): number {
 ---
 
 > [!NOTE]
-> Если для необязательного параметра не задано значение, Excel назначает ему `null` значение. Это означает, что параметры, инициализированные по умолчанию в TypeScript, не будут работать ожидаемым образом. Не используйте синтаксис, так как он не будет инициализироваться `function add(first:number, second:number, third=0):number` `third` до 0. Вместо этого используйте синтаксис TypeScript, как показано в предыдущем примере.
+> Если для необязательного параметра не задано значение, Excel назначает ему `null` значение. Это означает, что инициализированные по умолчанию параметры в TypeScript не будут работать ожидаемым образом. Не используйте синтаксис, так как он не будет инициализироваться `function add(first:number, second:number, third=0):number` `third` до 0. Вместо этого используйте синтаксис TypeScript, как показано в предыдущем примере.
 
 При указании функции, которая содержит один или несколько необязательных параметров, укажите, что происходит, если необязательные параметры имеют null. В приведенном ниже примере `zipCode` и `dayOfWeek` являются необязательными параметрами для функции `getWeatherReport`. Если параметр `zipCode` имеет значение NULL, по умолчанию задано значение `98052` . Если параметр `dayOfWeek` имеет null, ему задана среда.
 
@@ -229,22 +229,64 @@ function addSingleRange(singleRange) {
 
 ## <a name="invocation-parameter"></a>Параметр вызовов
 
-Каждая пользовательская функция автоматически передает аргумент `invocation` в качестве последнего аргумента. Этот аргумент можно использовать для получения дополнительного контекста, например адреса вызываемой ячейки. Или его можно использовать для отправки сведений в Excel, таких как обработитель функции для [отмены функции.](custom-functions-web-reqs.md#make-a-streaming-function) Даже если параметры не объявлены, этот параметр имеется в пользовательской функции. Этот аргумент не появляется для пользователя в Excel. Если вы хотите использовать `invocation` настраиваемую функцию, объявите ее в качестве последнего параметра.
+Каждая пользовательская функция автоматически передает аргумент в качестве последнего входного параметра, даже если она не `invocation` объявлена явным образом. Этот `invocation` параметр соответствует объекту [Invocation.](/javascript/api/custom-functions-runtime/customfunctions.invocation) Объект можно использовать для получения дополнительного контекста, например адреса ячейки, которая `Invocation` вызывалась пользовательской функцией. Чтобы получить доступ `Invocation` к объекту, необходимо объявить `invocation` как последний параметр в пользовательской функции. 
 
-В следующем примере кода контекст `invocation` явно заявим для ссылки.
+> [!NOTE]
+> Параметр не появляется в Excel в качестве `invocation` аргумента пользовательской функции для пользователей.
+
+В следующем примере показано, как использовать параметр для возврата адреса ячейки, которая `invocation` вызывает пользовательскую функцию. В этом примере [используется свойство address](/javascript/api/custom-functions-runtime/customfunctions.invocation#address) `Invocation` объекта. Чтобы получить доступ `Invocation` к объекту, сначала `CustomFunctions.Invocation` объявите в качестве параметра в JSDoc. Затем `@requiresAddress` объявите в JSDoc доступ к `address` свойству `Invocation` объекта. Наконец, в функции извлекаете и возвращаете `address` свойство. 
 
 ```js
 /**
- * Add two numbers.
+ * Return the address of the cell that invoked the custom function. 
  * @customfunction
- * @param {number} first First number.
- * @param {number} second Second number.
- * @returns {number} The sum of the two (or optionally three) numbers.
+ * @param {number} first First parameter.
+ * @param {number} second Second parameter.
+ * @param {CustomFunctions.Invocation} invocation Invocation object. 
+ * @requiresAddress 
  */
-function add(first, second, invocation) {
-  return first + second;
+function getAddress(first, second, invocation) {
+  var address = invocation.address;
+  return address;
 }
 ```
+
+В Excel пользовательская функция, вызываемая свойство объекта, возвращает абсолютный адрес, следующий за форматом в ячейке, вызываемой `address` `Invocation` `SheetName!RelativeCellAddress` функцией. Например, если входной параметр находится на листе с и названием **"Цены"** в ячейке F6, возвращается значение адреса параметра `Prices!F6` . 
+
+Этот `invocation` параметр также можно использовать для отправки сведений в Excel. Дополнительные [дополнительные данные см.](custom-functions-web-reqs.md#make-a-streaming-function) в подкатовной функции "Сделать потоковой передачей".
+
+## <a name="detect-the-address-of-a-parameter"></a>Обнаружение адреса параметра
+
+В сочетании с [параметром вызовов](#invocation-parameter)можно использовать объект ["Вызов"](/javascript/api/custom-functions-runtime/customfunctions.invocation) для получения адреса параметра ввода пользовательской функции. При вызове свойство [parameterAddresses](/javascript/api/custom-functions-runtime/customfunctions.invocation#parameterAddresses) объекта позволяет функции возвращать адреса `Invocation` всех входных параметров. 
+
+Это полезно в сценариях, где типы входных данных могут отличаться. Адрес входного параметра можно использовать для проверки формата номера входного значения. Формат номера можно при необходимости скорректировать до ввода. Адрес входного параметра также можно использовать, чтобы определить, есть ли у входного значения какие-либо связанные свойства, которые могут быть релевантны для последующих вычислений. 
+
+>[!IMPORTANT]
+> В `parameterAddresses` настоящее время свойство работает только с [вручную созданными метаданными JSON.](custom-functions-json.md) Чтобы вернуть адреса параметров, у объекта должно быть задано свойство , а для объекта `options` `requiresParameterAddresses` должно быть `true` `result` `dimensionality` задано свойство `matrix` .
+
+Следующая пользовательская функция принимает три входных параметра, извлекает свойство объекта для каждого параметра и возвращает `parameterAddresses` `Invocation` адреса. 
+
+```js
+/**
+ * Return the address of three parameters. 
+ * @customfunction
+ * @param {string} firstParameter First parameter.
+ * @param {string} secondParameter Second parameter.
+ * @param {string} thirdParameter Third parameter
+ * @param {CustomFunctions.Invocation} invocation Invocation object. 
+ * @requiresParameterAddresses
+ */
+function getParameterAddresses(firstParameter, secondParameter, thirdParameter, invocation) {
+  var addresses = [
+    [invocation.parameterAddresses[0]],
+    [invocation.parameterAddresses[1]],
+    [invocation.parameterAddresses[2]]
+  ];
+  return addresses;
+}
+```
+
+При запуске настраиваемой функции, вызываемой свойством, адрес параметра возвращается в соответствии с форматом в ячейке, `parameterAddresses` `SheetName!RelativeCellAddress` вызываемой функцией. Например, если входной параметр расположен на листе **"Затраты"** в ячейке D8, возвращается значение адреса параметра `Costs!D8` . Если настраиваемая функция имеет несколько параметров и возвращается несколько адресов параметров, возвращаемые адреса будут перетекать по нескольким ячейкам, убывая по вертикали из ячейки, которая вызывает функцию. 
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
