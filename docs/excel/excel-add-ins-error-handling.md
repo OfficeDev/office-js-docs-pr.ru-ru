@@ -1,14 +1,14 @@
 ---
 title: Обработка ошибок с помощью API JavaScript для Excel
 description: Узнайте о логике обработки ошибок API JavaScript для Excel, чтобы учесть ошибки во время работы.
-ms.date: 01/06/2021
+ms.date: 01/13/2021
 localization_priority: Normal
-ms.openlocfilehash: fd863e9783336ba9121312ba06aae03330d57562
-ms.sourcegitcommit: 545888b08f57bb1babb05ccfd83b2b3286bdad5c
+ms.openlocfilehash: 813755a70f3662354dbfa958531da563680521c4
+ms.sourcegitcommit: 6a378d2a3679757c5014808ae9da8ababbfe8b16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "49789123"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "49870646"
 ---
 # <a name="error-handling-with-the-excel-javascript-api"></a>Обработка ошибок с помощью API JavaScript для Excel
 
@@ -61,7 +61,7 @@ Excel.run(function (context) {
 |`Conflict`|Запрос не удалось обработать из-за конфликта.|
 |`ContentLengthRequired`|Отсутствует `Content-length` заголок HTTP.|
 |`GeneralException`|При обработке запроса возникла внутренняя ошибка.|
-|`InactiveWorkbook`|Операция не удалась из-за того, что открыто несколько книг, а книга, вызванная этим API, теряет фокус.|
+|`InactiveWorkbook`|Операция не удалась из-за того, что открыто несколько книг, и книга, которая была вызвана этим API, теряет фокус.|
 |`InsertDeleteConflict`|Операция вставки или удаления привела к конфликту.|
 |`InvalidArgument` |Аргумент недопустим, отсутствует или имеет неправильный формат.|
 |`InvalidBinding`  |Эта привязка объектов недопустима из-за предыдущих обновлений.|
@@ -71,18 +71,22 @@ Excel.run(function (context) {
 |`InvalidSelection`|Выбранный фрагмент недопустим для этой операции.|
 |`ItemAlreadyExists`|Создаваемый ресурс уже существует.|
 |`ItemNotFound` |Запрашиваемый ресурс не существует.|
-|`NonBlankCellOffSheet`|Запрос на вставку новых ячеек не может быть выполнен, так как он будет отставлять непустые ячейки с конца таблицы. Эти непустые ячейки могут выглядеть пустыми, но иметь пустые значения, форматирование или формулу. Удалите достаточно строк или столбцов, чтобы уместить место для вставки, а затем попробуйте еще раз.|
+|`NonBlankCellOffSheet`|Запрос на вставку новых ячеек не может быть выполнен, так как он будет отставлять непустые ячейки с конца таблицы. Эти непустые ячейки могут отображаться пустыми, но имеют пустые значения, некоторые форматирование или формулу. Удалите достаточно строк или столбцов, чтобы упустить место для вставки, а затем попробуйте еще раз.|
 |`NotImplemented`|Запрашиваемая функция не реализована.|
 |`RangeExceedsLimit`|Число ячеок в диапазоне превысило максимальное поддерживаемые числа. Дополнительные [сведения см.](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins) в статье об ограничениях ресурсов и оптимизации производительности надстройки Office.|
 |`RequestAborted`|Запрос прерван во время выполнения.|
 |`RequestPayloadSizeLimitExceeded`|Размер полезной нагрузки запроса превысил ограничение. Дополнительные [сведения см.](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins) в статье об ограничениях ресурсов и оптимизации производительности надстройки Office. <br><br>Эта ошибка возникает только в Excel в Интернете.|
-|`ResponsePayloadSizeLimitExceeded`|Размер полезной нагрузки отклика превысил ограничение. Дополнительные [сведения см.](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins) в статье об ограничениях ресурсов и оптимизации производительности надстройки Office.  <br><br>Эта ошибка возникает только в Excel в Интернете.|
+|`ResponsePayloadSizeLimitExceeded`|Размер полезной нагрузки ответа превысил ограничение. Дополнительные [сведения см.](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins) в статье об ограничениях ресурсов и оптимизации производительности надстройки Office.  <br><br>Эта ошибка возникает только в Excel в Интернете.|
 |`ServiceNotAvailable`|Служба недоступна.|
 |`Unauthenticated` |Требуемые сведения о проверке подлинности отсутствуют или недопустимы.|
 |`UnsupportedOperation`|Выполняемая операция не поддерживается.|
 |`UnsupportedSheet`|Этот тип листа не поддерживает эту операцию, так как он является листом макроса или диаграммы.|
 
+> [!NOTE]
+> В предыдущей таблице перечислены сообщения об ошибках, которые могут возникнуть при использовании API JavaScript для Excel. Если вы работаете с общим API, а не С API JavaScript для Конкретных приложений, см. коды ошибок общего [API Office,](../reference/javascript-api-for-office-error-codes.md) чтобы узнать о соответствующих сообщениях об ошибках.
+
 ## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Объект OfficeExtension.Error (API JavaScript для Excel)](/javascript/api/office/officeextension.error?view=excel-js-preview&preserve-view=true)
+- [Коды ошибок общего API Office](../reference/javascript-api-for-office-error-codes.md)
