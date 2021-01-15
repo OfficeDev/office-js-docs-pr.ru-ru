@@ -1,14 +1,14 @@
 ---
 title: Элемент Namespace в файле манифеста
-description: Элемент namespace определяет пространство имен, используемое пользовательской функцией в Excel.
+description: Элемент Namespace определяет пространство имен, которое пользовательская функция использует в Excel.
 ms.date: 10/09/2018
 localization_priority: Normal
-ms.openlocfilehash: f4b3510c6c137bd303af8a3eaac8ebe66c5f4dc7
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 342f5ebcafa861838956f1033f8597cf05e60215
+ms.sourcegitcommit: 2f75a37de349251bc0e0fc402c5ae6dc5c3b8b08
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44612236"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49771263"
 ---
 # <a name="namespace-element"></a>Элемент Namespace
 
@@ -18,7 +18,7 @@ ms.locfileid: "44612236"
 
 |  Атрибут  |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  **resid="namespace"**  |  Нет  | Должен соответствовать заголовку ShortStrings для пользовательской функции, указанной в элементе [Resources](resources.md). |
+|  **resid="namespace"**  |  Нет  | Должен соответствовать заголовку ShortStrings для пользовательской функции, указанной в элементе [Resources](resources.md). Может быть не более 32 символов. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 

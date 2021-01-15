@@ -1,16 +1,16 @@
 ---
-title: Устранение ошибок разработки надстроек Office
-description: Узнайте, как устранять ошибки разработки в надстройках Office.
-ms.date: 09/08/2020
+title: Устранение ошибок разработки с помощью надстройки Office
+description: Узнайте, как устранять ошибки разработки в надстройки Office.
+ms.date: 01/04/2021
 localization_priority: Normal
-ms.openlocfilehash: 5801146165446352ec806f6f832e9976f96467ac
-ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
+ms.openlocfilehash: 48216230db4bf90ca53ef10d98786877bd3905c2
+ms.sourcegitcommit: 2f75a37de349251bc0e0fc402c5ae6dc5c3b8b08
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "47409418"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49771426"
 ---
-# <a name="troubleshoot-development-errors-with-office-add-ins"></a>Устранение ошибок разработки надстроек Office
+# <a name="troubleshoot-development-errors-with-office-add-ins"></a>Устранение ошибок разработки с помощью надстройки Office
 
 ## <a name="add-in-doesnt-load-in-task-pane-or-other-issues-with-the-add-in-manifest"></a>Надстройка не загружается в область задач или возникают другие проблемы с манифестом надстройки
 
@@ -22,7 +22,7 @@ ms.locfileid: "47409418"
 
 #### <a name="for-windows"></a>Для Windows:
 
-Удалите содержимое папки `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\` и удалите содержимое папки `%userprofile%\AppData\Local\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\AC\#!123\INetCache\` , если она существует.
+Удалите содержимое папки и удалите ее( `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\` если `%userprofile%\AppData\Local\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\AC\#!123\INetCache\` она существует).
 
 #### <a name="for-mac"></a>Для Mac
 
@@ -56,22 +56,33 @@ ms.locfileid: "47409418"
 del /s /f /q %LOCALAPPDATA%\Packages\Microsoft.Win32WebViewHost_cw5n1h2txyewy\AC\#!123\INetCache\
 ```
 
-## <a name="changes-made-to-property-values-dont-happen-and-there-is-no-error-message"></a>Изменения, внесенные в значения свойств, не происходят и сообщение об ошибке не отображается
+## <a name="changes-made-to-property-values-dont-happen-and-there-is-no-error-message"></a>Изменения значений свойств не происходят, и сообщение об ошибке не сообщается
 
-Ознакомьтесь с справочной документацией по свойству, чтобы проверить, доступно ли оно только для чтения. Кроме того, [определения TypeScript](../develop/referencing-the-javascript-api-for-office-library-from-its-cdn.md) для Office JS указывают, какие свойства объекта доступны только для чтения. Если вы попытаетесь установить свойство, доступное только для чтения, операция записи завершится с ошибкой без уведомления и не выдается сообщение об ошибке. В следующем примере ошибочно попытаются задать свойство, доступное только для чтения, [Chart.ID](/javascript/api/excel/excel.chart#id). Просмотрите также, что [некоторые свойства не могут быть установлены напрямую](../develop/application-specific-api-model.md#some-properties-cannot-be-set-directly).
+Проверьте справочную документацию по свойству, чтобы узнать, прочитано ли оно только. Кроме того, определения [TypeScript](../develop/referencing-the-javascript-api-for-office-library-from-its-cdn.md) для Office JS указывают, какие свойства объекта являются только для чтения. Если попытаться установить свойство только для чтения, операция записи будет неудачной без ошибок. В следующем примере ошибочно предпринимается попытка установить свойство только [для Chart.id.](/javascript/api/excel/excel.chart#id) См. [также, что некоторые свойства нельзя настроить напрямую.](../develop/application-specific-api-model.md#some-properties-cannot-be-set-directly)
 
 ```js
 // This will do nothing, since `id` is a read-only property.
 myChart.id = "5";
 ```
 
-## <a name="add-in-doesnt-work-on-edge-but-it-works-on-other-browsers"></a>Надстройка не работает на пограничной стороне, но работает в других браузерах
+## <a name="getting-error-this-add-in-is-no-longer-available"></a>Ошибка при получении: "Эта надстройка больше недоступна"
 
-Ознакомьтесь с [разрешениями проблем Microsoft Edge](../concepts/browsers-used-by-office-web-add-ins.md#troubleshooting-microsoft-edge-issues).
+Ниже следующую часть причин этой ошибки. Если вы обнаружите дополнительные причины, сообщите нам с помощью средства обратной связи в нижней части страницы.
 
-## <a name="excel-add-in-throws-errors-but-not-consistently"></a>Надстройка Excel вызывает ошибки, но не всегда
+- Если вы используете Visual Studio, возможно, возникла проблема с загрузкой неогрузки. Закроем все экземпляры ведущего экземпляра Office и Visual Studio. Перезапустите Visual Studio и повторите нажатие F5.
+- Манифест надстройки удален из расположения развертывания, например централизованного развертывания, каталога SharePoint или сетевой сети.
+- Значение элемента [ID](../reference/manifest/id.md) в манифесте было изменено непосредственно в развернутой копии. Если по какой-либо причине вы хотите изменить этот ИД, сначала удалите надстройки из ведущего office, а затем замените исходный манифест на измененный манифест. Многим необходимо очистить кэш Office, чтобы удалить все трассировки исходного. См. раздел "Изменения команд [надстройки",](#changes-to-add-in-commands-including-ribbon-buttons-and-menu-items-do-not-take-effect) включая кнопки ленты и пункты меню, которые не вступили в силу ранее в этой статье.
+- Манифест надстройки имеет манифест, который не определен ни в разделе "Ресурсы" манифеста, либо имеется несоответствие в орфографии между местом ее использования и местом, где оно определено в `resid` [](../reference/manifest/resources.md) `resid` `<Resources>` разделе.
+- В `resid` манифесте есть атрибут, в который вмеется более 32 символов. Атрибут и атрибут соответствующего ресурса в разделе не могут быть больше `resid` `id` `<Resources>` 32 символов.
+- Надстройка имеет пользовательскую команду надстройки, но вы пытаетесь запустить ее на платформе, которая их не поддерживает. Дополнительные сведения см. в наборах требований [для команд надстройки.](../reference/requirement-sets/add-in-commands-requirement-sets.md)
 
-Возможные причины [: Устранение неполадок](../excel/excel-add-ins-troubleshooting.md) в надстройках Excel.
+## <a name="add-in-doesnt-work-on-edge-but-it-works-on-other-browsers"></a>Надстройка не работает в Edge, но работает в других браузерах
+
+См. [устранение неполадок Microsoft Edge.](../concepts/browsers-used-by-office-web-add-ins.md#troubleshooting-microsoft-edge-issues)
+
+## <a name="excel-add-in-throws-errors-but-not-consistently"></a>Надстройка Excel высылает ошибки, но не постоянно
+
+Возможные причины см. в устранении [неполадок](../excel/excel-add-ins-troubleshooting.md) надстройки Excel.
 
 ## <a name="see-also"></a>См. также
 

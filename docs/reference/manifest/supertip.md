@@ -1,14 +1,14 @@
 ---
 title: Элемент Supertip в файле манифеста
-description: Элемент SuperTip определяет расширенную подсказку (название и описание).
+description: Элемент Supertip определяет rich tooltip (название и описание).
 ms.date: 05/07/2019
 localization_priority: Normal
-ms.openlocfilehash: 8061c9dcd7903db0f1265084498d6c86654e1dfa
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 5e8b3850d99f6791726b1b2f0545c5fb4b52c554
+ms.sourcegitcommit: 2f75a37de349251bc0e0fc402c5ae6dc5c3b8b08
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608721"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49771300"
 ---
 # <a name="supertip"></a>Supertip
 
@@ -19,18 +19,18 @@ ms.locfileid: "44608721"
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
 | [Title](#title) | Да | Текст подсказки. |
-| [Description](#description) | Да | Описание подсказки.<br>**Note**: (Outlook) поддерживаются только клиенты Windows и Mac. |
+| [Description](#description) | Да | Описание подсказки.<br>**Примечание.**(Outlook) поддерживаются только клиенты Windows и Mac. |
 
-### <a name="title"></a>Название
+### <a name="title"></a>Title
 
-Обязательный элемент. Текст суперподсказки. Атрибуту **Resid** должно быть присвоено значение атрибута **ID** элемента **String** в элементе **ShortStrings** элемента [Resources](resources.md) .
+Обязательный. Текст суперподсказки. Атрибут **resid** не может быть больше 32 символов и должен иметь значение атрибута **id** элемента **String** в **элементе ShortStrings** в [элементе Resources.](resources.md)
 
 ### <a name="description"></a>Описание
 
-Обязательный. Описание суперподсказки. Атрибуту **Resid** должно быть присвоено значение атрибута **ID** элемента **String** в элементе **LongStrings** элемента [Resources](resources.md) .
+Обязательный. Описание суперподсказки. Атрибут **resid** не может быть больше 32 символов и должен иметь значение атрибута **id** элемента **String** в **элементе LongStrings** в [элементе Resources.](resources.md)
 
 > [!NOTE]
-> В Outlook только клиенты Windows и Mac поддерживают элемент **Description** .
+> В Outlook элемент Description поддерживается только **клиентами** Windows и Mac.
 
 ## <a name="example"></a>Пример
 
