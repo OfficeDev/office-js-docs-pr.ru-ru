@@ -4,16 +4,16 @@ description: Сведения о наборе требований PowerPointApi
 ms.date: 01/08/2021
 ms.prod: powerpoint
 localization_priority: Normal
-ms.openlocfilehash: d8db8df725fc6230c3cef02f0c4632fc29103c23
-ms.sourcegitcommit: d28392721958555d6edea48cea000470bd27fcf7
+ms.openlocfilehash: 682e016d93ff201652a1b3f1333369826eaebe9c
+ms.sourcegitcommit: 4fc5829d66cdd52f110d9a59dd7317b520807cbe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "49841537"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49908895"
 ---
 # <a name="whats-new-in-powerpoint-javascript-api-11"></a>Новые возможности API JavaScript для PowerPoint 1.1
 
-API JavaScript для PowerPoint 1.1 содержит [один API для создания новой презентации.](/javascript/api/powerpoint#powerpoint-createpresentation-base64file--options) Дополнительные сведения об API см. в [подразделе "Создание презентации".](../../powerpoint/powerpoint-add-ins.md#create-a-presentation)
+API JavaScript для PowerPoint 1.1 содержит [единый API для создания новых презентаций](/javascript/api/powerpoint#powerpoint-createpresentation-base64file-). Сведения об этом API см. в разделе [Создание презентации](../../powerpoint/powerpoint-add-ins.md#create-a-presentation).
 
 ## <a name="api-list"></a>Список API
 
@@ -21,4 +21,4 @@ API JavaScript для PowerPoint 1.1 содержит [один API для со�
 
 | Класс | Метод | Описание |
 |:---|:---|:---|
-|[PowerPoint](/javascript/api/powerpoint/powerpoint)|[createPresentation](/javascript/api/powerpoint#powerpoint-createpresentation-base64file--options)|Создает новую презентацию и открывает ее в другом окне PowerPoint.|
+|[PowerPoint](/javascript/api/powerpoint)|[createPresentation](/javascript/api/powerpoint#powerpoint-createpresentation-base64file-)|Создает новую презентацию и открывает ее в другом окне PowerPoint.|

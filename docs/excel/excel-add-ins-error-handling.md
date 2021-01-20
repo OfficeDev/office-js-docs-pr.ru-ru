@@ -1,14 +1,14 @@
 ---
 title: Обработка ошибок с помощью API JavaScript для Excel
 description: Узнайте о логике обработки ошибок API JavaScript для Excel, чтобы учесть ошибки во время работы.
-ms.date: 01/13/2021
+ms.date: 01/15/2021
 localization_priority: Normal
-ms.openlocfilehash: 813755a70f3662354dbfa958531da563680521c4
-ms.sourcegitcommit: 6a378d2a3679757c5014808ae9da8ababbfe8b16
+ms.openlocfilehash: 00aa1ae1c8ed39b21146d86090df912a8804c8b3
+ms.sourcegitcommit: 4fc5829d66cdd52f110d9a59dd7317b520807cbe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "49870646"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49908908"
 ---
 # <a name="error-handling-with-the-excel-javascript-api"></a>Обработка ошибок с помощью API JavaScript для Excel
 
@@ -71,7 +71,7 @@ Excel.run(function (context) {
 |`InvalidSelection`|Выбранный фрагмент недопустим для этой операции.|
 |`ItemAlreadyExists`|Создаваемый ресурс уже существует.|
 |`ItemNotFound` |Запрашиваемый ресурс не существует.|
-|`NonBlankCellOffSheet`|Запрос на вставку новых ячеек не может быть выполнен, так как он будет отставлять непустые ячейки с конца таблицы. Эти непустые ячейки могут отображаться пустыми, но имеют пустые значения, некоторые форматирование или формулу. Удалите достаточно строк или столбцов, чтобы упустить место для вставки, а затем попробуйте еще раз.|
+|`NonBlankCellOffSheet`|Microsoft Excel не может вставлять новые ячейки, так как при этом непустые ячейки будут отставляться с конца листа. Эти непустые ячейки могут отображаться пустыми, но имеют пустые значения, некоторые форматирование или формулу. Удалите достаточно строк или столбцов, чтобы упустить место для вставки, а затем попробуйте еще раз.|
 |`NotImplemented`|Запрашиваемая функция не реализована.|
 |`RangeExceedsLimit`|Число ячеок в диапазоне превысило максимальное поддерживаемые числа. Дополнительные [сведения см.](../concepts/resource-limits-and-performance-optimization.md#excel-add-ins) в статье об ограничениях ресурсов и оптимизации производительности надстройки Office.|
 |`RequestAborted`|Запрос прерван во время выполнения.|
@@ -89,4 +89,4 @@ Excel.run(function (context) {
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Объект OfficeExtension.Error (API JavaScript для Excel)](/javascript/api/office/officeextension.error?view=excel-js-preview&preserve-view=true)
-- [Коды ошибок общего API Office](../reference/javascript-api-for-office-error-codes.md)
+- [Коды ошибок общего API для Office](../reference/javascript-api-for-office-error-codes.md)
