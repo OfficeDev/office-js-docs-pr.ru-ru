@@ -1,18 +1,18 @@
 ---
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
-ms.date: 01/04/2021
+ms.date: 01/20/2021
 localization_priority: Normal
-ms.openlocfilehash: 0bd231cc870322dd6f756defd14e4d67a69478b4
-ms.sourcegitcommit: 2f75a37de349251bc0e0fc402c5ae6dc5c3b8b08
+ms.openlocfilehash: c540eece3b74bb043cc8f4921c7c774511b5a60a
+ms.sourcegitcommit: 54d141cefb7bdc5f16330747d0ec8e8e2bd03e93
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "49771251"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "49916463"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
-Надстройки Office — это веб-приложения, которые отображаются с помощью iFrame при работе в Office в Интернете и с помощью встроенных элементов управления браузера в Office для классических и мобильных клиентов. Для запуска JavaScript надстройкам также требуется модуль JavaScript. Встроенный браузер и обдвижка поставляются браузером, установленным на компьютере пользователя.
+Надстройки Office — это веб-приложения, которые отображаются с помощью iFrame при работе в Office в Интернете и с помощью встроенных элементов управления браузера в Office для настольных и мобильных клиентов. Для запуска JavaScript надстройкам также требуется модуль JavaScript. Встроенный браузер и обдвижка поставляются браузером, установленным на компьютере пользователя.
 
 Используемый браузер зависит от указанных ниже факторов.
 
@@ -27,15 +27,15 @@ ms.locfileid: "49771251"
 |Mac|любой|Неприменимо|Safari|
 |iOS|любой|Неприменимо|Safari|
 |Android|любой|Неприменимо|Chrome|
-|Windows 7, 8.1, 10 | Office 2013 или более поздней, не от подписки|Всё равно|Internet Explorer 11|
-|Windows 7 | Microsoft 365| Всё равно | Internet Explorer 11|
+|Windows 7, 8.1, 10 | Office 2013 или более поздней подписки|Всё равно|Internet Explorer 11|
+|Windows 7 | Microsoft 365| Всё равно | Internet Explorer 11|
 |Windows 8.1,<br>Windows 10 ver. &nbsp; < &nbsp; 1903| Microsoft 365 | Нет| Internet Explorer 11|
 |Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; < &nbsp; 16.0.11629<sup>1</sup>| Всё равно|Internet Explorer 11|
-|Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.11629 &nbsp; _И_ &nbsp; < &nbsp; 16.0.13530.20316 <sup>1</sup>| Всё равно|Microsoft Edge<sup>2, 3 с</sup> исходным WebView (EdgeHTML)|
-|Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13530.20316<sup>1</sup>| Нет |Microsoft Edge<sup>2, 3 с</sup> исходным WebView (EdgeHTML)|
-|Windows 8.1<br>Windows 10| Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13530.20316<sup>1</sup>| Да<sup>4</sup>|  Microsoft Edge<sup>2, 3 с</sup> WebView2 (на основе Chromium) |
+|Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.11629 &nbsp; _И_ &nbsp; < &nbsp; 16.0.13530.20424 <sup>1</sup>| Всё равно|Microsoft Edge<sup>2, 3 с</sup> исходным WebView (EdgeHTML)|
+|Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13530.20424<sup>1</sup>| Нет |Microsoft Edge<sup>2, 3 с</sup> исходным WebView (EdgeHTML)|
+|Windows 8.1<br>Windows 10| Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13530.20424<sup>1</sup>| Да<sup>4</sup>|  Microsoft Edge<sup>2, 3 с</sup> WebView2 (на основе Chromium) |
 
-<sup>Дополнительные</sup> сведения см. на странице "История [обновлений"](/officeupdates/update-history-office365-proplus-by-date) и сведения о том, как найти версию клиента [Office](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19) и канал обновления.
+<sup>1.</sup> [Дополнительные](/officeupdates/update-history-office365-proplus-by-date) сведения см. на странице истории обновлений и о том, как найти версию клиента [Office](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19) и канал обновления.
 
 <sup>2</sup> Когда используется Microsoft Edge, экранный диктор Windows 10 (иногда называемый "устройством чтения с экрана") читает тег на странице, которая открывается в области `<title>` задач. Когда используется Internet Explorer 11, экранный диктор читает панель заголовка области задач, полученный от значения `<DisplayName>` в манифесте надстройки.
 
@@ -45,9 +45,9 @@ ms.locfileid: "49771251"
 
 
 > [!IMPORTANT]
-> Internet Explorer 11 не поддерживает версии JavaScript, более поздние, чем ES5. Если у любого из пользователей вашей надстройки есть платформы, которые используют Internet Explorer 11, то для использования синтаксиса и функций ECMAScript 2015 или более поздней можно использовать два варианта:
+> Internet Explorer 11 не поддерживает версии JavaScript, более поздние, чем ES5. Если у любого из пользователей вашей надстройки есть платформы, которые используют Internet Explorer 11, то для использования синтаксиса и функций ECMAScript 2015 или более поздней, у вас есть два варианта:
 >
-> - Напишите код в ECMAScript 2015 (также называется ES6) или более поздней платформы JavaScript или TypeScript, а затем скомпилировать код в ES5 JavaScript с помощью компиляторов, таких как [esel](https://babeljs.io/) или [tsc](https://www.typescriptlang.org/index.html).
+> - Напишите код в ECMAScript 2015 (также называется ES6) или более поздней платформы JavaScript или TypeScript, а затем скомпилируете код в ES5 JavaScript с помощью компиляторов, таких как [esel](https://babeljs.io/) или [tsc.](https://www.typescriptlang.org/index.html)
 > - Написание в ECMAScript 2015 или более [](https://wikipedia.org/wiki/Polyfill_(programming)) поздней платформе JavaScript, но также загрузка библиотеки полизаполнен, например [core-js,](https://github.com/zloirock/core-js) которая позволяет IE запускать ваш код.
 >
 > Кроме того, Internet Explorer 11 не поддерживает некоторые элементы HTML5, в частности медиа, запись и местоположение.
