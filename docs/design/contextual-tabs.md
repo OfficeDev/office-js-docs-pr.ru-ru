@@ -3,12 +3,12 @@ title: Создание настраиваемой контекстной вкл
 description: Узнайте, как добавлять настраиваемые контекстные вкладки в надстройку Office.
 ms.date: 01/20/2021
 localization_priority: Normal
-ms.openlocfilehash: 7c9593c98bf7cc7f4e270037768be1e2de06aeb3
-ms.sourcegitcommit: 1d33ea6dd3a55fd3bc9af48737ad6d7369d30cd8
+ms.openlocfilehash: d9258b962c2cfa6aa7e3686087ed8a2e31a7d651
+ms.sourcegitcommit: 6c5716d92312887e3d944bf12d9985560109b3c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "49934347"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "49944314"
 ---
 # <a name="create-custom-contextual-tabs-in-office-add-ins-preview"></a>Создание пользовательских контекстных вкладок в надстройках Office (предварительная версия)
 
@@ -61,7 +61,7 @@ ms.locfileid: "49934347"
 > [!NOTE]
 > Структура свойств и подэлементов BLOB-объекта JSON (и имен ключей) приблизительно параллельна структуре элемента [CustomTab](../reference/manifest/customtab.md) и его потомков в XML манифеста.
 
-Пошаговое создание примера контекстных вкладок JSON. (Полная схема контекстной вкладки JSON находится [вdynamic-ribbon.schema.js.](https://developer.microsoft.com/json-schemas/office-js/dynamic-ribbon.schema.json) Эта ссылка может не работать в начале периода предварительного просмотра для контекстных вкладок. Если ссылка не работает, вы можете найти последний черновик схемы на черновике dynamic-ribbon.schema.js[на](https://github.com/OfficeDev/testing-assets/tree/master/jsonschema/dynamic-ribbon.schema.json).) Если вы работаете в Visual Studio Code, этот файл можно использовать для получения IntelliSense проверки JSON. Дополнительные сведения см. в редактировании [JSON с помощью Visual Studio Code — схемы и параметры JSON.](https://code.visualstudio.com/docs/languages/json#_json-schemas-and-settings)
+Пошаговое создание примера контекстных вкладок JSON. (Полная схема контекстной вкладки JSON находится [вdynamic-ribbon.schema.js.](https://developer.microsoft.com/json-schemas/office-js/dynamic-ribbon.schema.json) Эта ссылка может не работать в период предварительного просмотра для контекстных вкладок. Если ссылка не работает, вы можете найти последний черновик схемы на черновике dynamic-ribbon.schema.js[на](https://github.com/OfficeDev/testing-assets/tree/master/jsonschema/dynamic-ribbon/1.0/dynamic-ribbon.schema.json).) Если вы работаете в Visual Studio Code, этот файл можно использовать для получения IntelliSense проверки JSON. Дополнительные сведения см. в редактировании [JSON с помощью Visual Studio Code — схемы и параметры JSON.](https://code.visualstudio.com/docs/languages/json#_json-schemas-and-settings)
 
 
 1. Начните с создания строки JSON с двумя свойствами массива с именем `actions` и `tabs` . Массив — это спецификация всех функций, которые можно выполнять с помощью элементов управления `actions` на контекстной вкладке. Массив определяет одну или несколько контекстных вкладок `tabs` до *20*.
