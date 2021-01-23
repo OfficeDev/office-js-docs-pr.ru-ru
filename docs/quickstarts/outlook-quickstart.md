@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки Outlook
 description: Узнайте, как создать простую надстройку для области задач Outlook, используя API JS для Office.
-ms.date: 09/22/2020
+ms.date: 01/22/2021
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: c9db8d0d69829a474867e210ea491b1872b8c100
-ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
+ms.openlocfilehash: ae14416cd7fbcfeca10e4ace25997395fc9b44c1
+ms.sourcegitcommit: 6c5716d92312887e3d944bf12d9985560109b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49132272"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "49944341"
 ---
 # <a name="build-your-first-outlook-add-in"></a>Создание первой надстройки Outlook
 
@@ -42,13 +42,13 @@ ms.locfileid: "49132272"
 
     - **Выберите тип проекта** - `Office Add-in Task Pane project`
 
-    - **Выберите тип сценария** - `Javascript`
+    - **Выберите тип сценария** - `JavaScript`
 
     - **Как вы хотите назвать надстройку?** - `My Office Add-in`
 
     - **Какое клиентское приложение Office должно поддерживаться?** - `Outlook`
 
-    ![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки](../images/yo-office-outlook.png)
+    ![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки](../images/yo-office-outlook-1.png)
 
     После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
