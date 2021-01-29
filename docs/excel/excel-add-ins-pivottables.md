@@ -1,67 +1,67 @@
 ---
-title: Работать со сводными таблицами с помощью API JavaScript для Excel
-description: Используйте API JavaScript для Excel, чтобы создавать сводные таблицы и взаимодействовать с их компонентами.
-ms.date: 12/07/2020
+title: Работа со сводными таблицами с помощью API JavaScript для Excel
+description: Используйте API JavaScript для Excel, чтобы создавать с помощью севоварок и взаимодействовать с их компонентами.
+ms.date: 01/26/2021
 localization_priority: Normal
-ms.openlocfilehash: 0a1fefa6a855ab9ee1ccd71fd0dc60f282d2944b
-ms.sourcegitcommit: fecad2afa7938d7178456c11ba52b558224813b4
+ms.openlocfilehash: 9832322d40bbeb247685ff2498bdce42975c0377
+ms.sourcegitcommit: 3123b9819c5225ee45a5312f64be79e46cbd0e3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49603801"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "50043913"
 ---
-# <a name="work-with-pivottables-using-the-excel-javascript-api"></a>Работать со сводными таблицами с помощью API JavaScript для Excel
+# <a name="work-with-pivottables-using-the-excel-javascript-api"></a>Работа со сводными таблицами с помощью API JavaScript для Excel
 
-Сводные таблицы упрощают работу с большими наборами данных. Они позволяют быстро управлять группированием данных. API JavaScript для Excel позволяет надстройке создавать сводные таблицы и взаимодействовать с их компонентами. В этой статье описывается, как сводные таблицы представлены с помощью API JavaScript для Office, а также приведены примеры кода для ключевых сценариев.
+СvotTables упрощают более крупные наборы данных. Они позволяют быстро манипулировать сгруппными данными. С помощью API JavaScript для Excel надстройка может создавать с помощью список и взаимодействовать с их компонентами. В этой статье описывается, как API JavaScript для Office представлена с помощью список, и представлены примеры кода для ключевых сценариев.
 
-Если вы не знакомы с функциями сводных таблиц, рассмотрите возможность их изучения в качестве конечного пользователя.
-Ознакомьтесь со статьей [Создание сводной таблицы, чтобы проанализировать данные листа](https://support.office.com/article/Import-and-analyze-data-ccd3c4a6-272f-4c97-afbb-d3f27407fcde#ID0EAABAAA=PivotTables) для хорошего учебника по этим средствам.
+Если вы не знакомы с функциями с помощью список, рассмотрите возможность их изучения в качестве конечного пользователя.
+Дополнительные сведения об этих [средствах](https://support.office.com/article/Import-and-analyze-data-ccd3c4a6-272f-4c97-afbb-d3f27407fcde#ID0EAABAAA=PivotTables) см. в подметке "Создание с помощью с помощью совверной таблицы для анализа данных на таблицах".
 
 > [!IMPORTANT]
-> Сводные таблицы, созданные с помощью OLAP, в настоящее время не поддерживаются. Кроме того, отсутствует поддержка Power Pivot.
+> В настоящее время с помощью OLAP не поддерживаются с помощью стеблей. Power Pivot также не поддерживается.
 
 ## <a name="object-model"></a>Объектная модель
 
-[Сводная таблица](/javascript/api/excel/excel.pivottable) является центральным объектом для сводных ТАБЛИЦ в API JavaScript для Office.
+[PivotTable](/javascript/api/excel/excel.pivottable) — это центральный объект для список в API JavaScript для Office.
 
-- `Workbook.pivotTables` и `Worksheet.pivotTables` — это [пивоттаблеколлектионс](/javascript/api/excel/excel.pivottablecollection) , которые содержат [Сводные таблицы](/javascript/api/excel/excel.pivottable) в книге и листе соответственно.
-- [Сводная таблица](/javascript/api/excel/excel.pivottable) содержит [Пивосиерарчиколлектион](/javascript/api/excel/excel.pivothierarchycollection) с несколькими [пивосиерарчиес](/javascript/api/excel/excel.pivothierarchy).
-- Эти [пивосиерарчиес](/javascript/api/excel/excel.pivothierarchy) можно добавить в конкретные коллекции иерархий, чтобы определить, как данные будут сведены в сводную таблицу (как описано в [следующем разделе](#hierarchies)).
-- [PivotHierarchy](/javascript/api/excel/excel.pivothierarchy) содержит [пивотфиелдколлектион](/javascript/api/excel/excel.pivotfieldcollection) , в котором есть ровно один [PivotField](/javascript/api/excel/excel.pivotfield). Если проект разворачивается для включения сводных таблиц OLAP, это может измениться.
-- К [PivotField](/javascript/api/excel/excel.pivotfield) может быть применено одно или несколько [PivotFilters](/javascript/api/excel/excel.pivotfilters) , если [PivotHierarchy](/javascript/api/excel/excel.pivothierarchy) поля назначено категории иерархии. 
-- [PivotField](/javascript/api/excel/excel.pivotfield) содержит [Пивотитемколлектион](/javascript/api/excel/excel.pivotitemcollection) с несколькими [PivotItems](/javascript/api/excel/excel.pivotitem).
-- [Сводная таблица](/javascript/api/excel/excel.pivottable) содержит объект [PivotLayout](/javascript/api/excel/excel.pivotlayout) , определяющий, где на листе отображаются [PivotFields](/javascript/api/excel/excel.pivotfield) и [PivotItems](/javascript/api/excel/excel.pivotitem) .
+- `Workbook.pivotTables` и `Worksheet.pivotTables` являются [pivotTableCollections,](/javascript/api/excel/excel.pivottablecollection) которые содержат [pivotTables](/javascript/api/excel/excel.pivottable) в книге и на электронных таблицах соответственно.
+- [PivotTable](/javascript/api/excel/excel.pivottable) содержит [pivotHierarchyCollection](/javascript/api/excel/excel.pivothierarchycollection) с несколькими [pivotHierarchies](/javascript/api/excel/excel.pivothierarchy).
+- Эти [pivotHierarchies](/javascript/api/excel/excel.pivothierarchy) можно добавить в определенные коллекции иерархии, чтобы определить, как данные pivotTable pivots (как поясняется в [следующем разделе).](#hierarchies)
+- [PivotHierarchy](/javascript/api/excel/excel.pivothierarchy) содержит [pivotFieldCollection,](/javascript/api/excel/excel.pivotfieldcollection) который содержит только одно [pivotField](/javascript/api/excel/excel.pivotfield). Если проект расширяется и включает в себя севобли OLAP, это может измениться.
+- К [pivotField](/javascript/api/excel/excel.pivotfield) может применяться один или несколько [pivotFilters,](/javascript/api/excel/excel.pivotfilters) если [pivotHierarchy](/javascript/api/excel/excel.pivothierarchy) поля назначена категории иерархии. 
+- [PivotField](/javascript/api/excel/excel.pivotfield) содержит [pivotItemCollection](/javascript/api/excel/excel.pivotitemcollection) с несколькими [pivotItems](/javascript/api/excel/excel.pivotitem).
+- [PivotTable](/javascript/api/excel/excel.pivottable) contains a [PivotLayout](/javascript/api/excel/excel.pivotlayout) that defines where the [PivotFields](/javascript/api/excel/excel.pivotfield) and [PivotItems](/javascript/api/excel/excel.pivotitem) are displayed in the worksheet.
 
-Рассмотрим, как эти отношения применяются к некоторым примерам данных. В приведенных ниже данных описываются продажи фруктов из различных ферм. Это будет пример во всей этой статье.
+Рассмотрим, как эти связи применяются к некоторым примерам данных. В следующих данных описаны продажи деревьев из различных ферм. Это будет пример в этой статье.
 
-![Коллекция продаж фруктов различных типов из различных ферм.](../images/excel-pivots-raw-data.png)
+![Коллекция продаж разных видов в разных фермах.](../images/excel-pivots-raw-data.png)
 
-Данные продаж фермы фруктов будут использоваться для создания сводной таблицы. Каждый столбец, например **types**, — это `PivotHierarchy` . Иерархия **types** содержит поле **типы** . Поле **типы** содержит элементы **Apple**, **киви**, **Лемон**, **травяные** и **оранжевые**.
+Эти данные продаж фермы будет использоваться для список. Каждый столбец, например **"Типы",** имеет тип `PivotHierarchy` . **Иерархия** типов содержит поле **"Типы".** Поле **"Типы"** содержит элементы **Apple,** **Kiwi,** **Юли** **и** **Orange.**
 
 ### <a name="hierarchies"></a>Hierarchies
 
-Сводные таблицы организованы в соответствии с четырьмя категориями иерархии: [строкой](/javascript/api/excel/excel.rowcolumnpivothierarchy), [столбцом](/javascript/api/excel/excel.rowcolumnpivothierarchy), [данными](/javascript/api/excel/excel.datapivothierarchy)и [фильтром](/javascript/api/excel/excel.filterpivothierarchy).
+СvotTables организованы на основе четырех категорий иерархии: [строка,](/javascript/api/excel/excel.rowcolumnpivothierarchy) [столбец,](/javascript/api/excel/excel.rowcolumnpivothierarchy) [данные](/javascript/api/excel/excel.datapivothierarchy)и [фильтр](/javascript/api/excel/excel.filterpivothierarchy).
 
-Приведенные выше данные фермы имеют пять иерархий: **фермы**, **типы**, **классификации**, **ящики**, проданные в ферме и **ящики, продаваемые оптовой торговлей**. Каждая иерархия может существовать только в одной из четырех категорий. Если **тип** добавляется к иерархиям столбцов, он также не может находиться в иерархиях "строка", "данные" или "Фильтрация". Если впоследствии **тип** добавляется к иерархиям строк, он удаляется из иерархий столбцов. Такое поведение аналогично тому, как выполняется назначение иерархии с помощью пользовательского интерфейса Excel или API JavaScript для Excel.
+Данные фермы, показанные ранее, имеет пять иерархий: **фермы,** **тип,** **классификация,** ящики, проданные в ферме, и **crates Sold Farms.** Каждая иерархия может существовать только в одной из четырех категорий. Если **тип** добавляется в иерархии столбцов, он также не может быть в иерархиях строк, данных или фильтров. Если **тип** впоследствии добавляется в иерархии строк, он удаляется из иерархий столбцов. Это поведение одинаково для назначения иерархии с помощью пользовательского интерфейса Excel или API JavaScript для Excel.
 
-Иерархии строк и столбцов определяют, как группируются данные. Например, иерархия **ферм фермы** объединяет все наборы данных из одной фермы. Выбор между строкой и иерархией столбцов определяет ориентацию сводной таблицы.
+Иерархии строк и столбцов определяют группировку данных. Например, иерархия строк  ферм объединяет все наборы данных из одной фермы. Выбор между иерархией строк и столбцов определяет ориентацию pivotTable.
 
-Иерархии данных — это значения, которые должны быть объединены на основе иерархий строк и столбцов. Сводная таблица с иерархией **ферм** и иерархией данных для ящиков, проданных в **оптовой торговле** , показывает общую сумму (по умолчанию) всех различных Fruits для каждой фермы.
+Иерархии данных — это значения, которые необходимо агрегировать на основе иерархий строк и столбцов. С помощью список с иерархией  строк в фермах и иерархией данных "Crates **Sold Farms"** (По умолчанию) для каждой фермы показана общая сумма (по умолчанию) всех разных ферм.
 
-Иерархии фильтров включают или исключают данные из сводной таблицы на основе значений в этом типе фильтрации. Иерархия фильтров **классификации** **с типом "** не только выбранные" показывает только данные для придля себя фруктов.
+Иерархии фильтров включают или исключают данные из pivot на основе значений этого отфильтрованного типа. Иерархия фильтров **классификации** с выбранным типом **"Органическая"** показывает данные только для органично выбранных видов.
 
-Далее представлены данные фермы, вместе со сводной таблицей. В сводной таблице используется **ферма** и **тип** в качестве иерархий строк, **ящики** , проданные в ферме и ящики, проданные в ферме, а также **продаются по оптовой торговле** в виде иерархий данных (с использованием статистической функции по умолчанию Sum) и **классификации** в качестве иерархии фильтров ( **с выбранным** параметром "
+Вот данные фермы еще раз вместе со списной. С помощью иерархии строк  "Ферма" и "Тип" в качестве иерархии используется "Ферма" и "Тип", "Crates **Sold at Farm"** и  **"Crates SoldМайл"** в качестве иерархий данных (с функцией суммирования по умолчанию) и **"Классификация** как иерархия фильтров" (с выбранным "органичным"). 
 
-![Выбор данных о продажах для фруктов рядом со сводной таблицей со строками, данными и иерархиями фильтров.](../images/excel-pivot-table-and-data.png)
+![Выбор данных о продажах вех рядом со совивей с иерархиями строк, данных и фильтров.](../images/excel-pivot-table-and-data.png)
 
-Эту сводную таблицу можно создать с помощью API JavaScript или пользовательского интерфейса Excel. Оба варианта позволяют осуществлять дальнейшую обработку надстроек.
+Эта списоная таблица может быть сгенерирована с помощью API JavaScript или пользовательского интерфейса Excel. Оба варианта позволяют дальнейшее манипулирование с помощью надстройки.
 
-## <a name="create-a-pivottable"></a>Создание сводной таблицы
+## <a name="create-a-pivottable"></a>Создание севоtTable
 
-Для сводных таблиц требуются имя, источник и назначение. Источником может быть адрес диапазона или имя таблицы (передается как `Range` тип, `string` или `Table` тип). Назначение является адресом диапазона ( `Range` или `string` ).
-В следующих примерах показаны различные методы создания сводных таблиц.
+СvotTables need a name, source, and destination. Источником может быть адрес диапазона или имя таблицы (переданное в виде `Range` , `string` или `Table` типа). Назначением является адрес диапазона (заданный как a `Range` или `string` ).
+В следующих примерах демонстрируются различные методики создания с помощью с помощью список.
 
-### <a name="create-a-pivottable-with-range-addresses"></a>Создание сводной таблицы с адресами диапазона
+### <a name="create-a-pivottable-with-range-addresses"></a>Создание с помощью севоttable с адресами диапазона
 
 ```js
 Excel.run(function (context) {
@@ -74,7 +74,7 @@ Excel.run(function (context) {
 });
 ```
 
-### <a name="create-a-pivottable-with-range-objects"></a>Создание сводной таблицы с объектами Range
+### <a name="create-a-pivottable-with-range-objects"></a>Создание с помощью с помощью объектов Range
 
 ```js
 Excel.run(function (context) {
@@ -89,7 +89,7 @@ Excel.run(function (context) {
 });
 ```
 
-### <a name="create-a-pivottable-at-the-workbook-level"></a>Создание сводной таблицы на уровне книги
+### <a name="create-a-pivottable-at-the-workbook-level"></a>Создание севоtTable на уровне книги
 
 ```js
 Excel.run(function (context) {
@@ -102,9 +102,9 @@ Excel.run(function (context) {
 });
 ```
 
-## <a name="use-an-existing-pivottable"></a>Использование существующей сводной таблицы
+## <a name="use-an-existing-pivottable"></a>Использование существующей pivotTable
 
-Вы также можете получить доступ к сводным таблицам, созданным вручную, с помощью сводной таблицы книги или отдельных листов. В следующем коде показано получение сводной таблицы с именем **My Pivot** из книги.
+С помощью коллекции pivotTables, созданной вручную, можно также использовать коллекцию pivotTable книги или отдельных таблиц. Следующий код получает из книги севоtTable с именем **My Pivot.**
 
 ```js
 Excel.run(function (context) {
@@ -113,13 +113,13 @@ Excel.run(function (context) {
 });
 ```
 
-## <a name="add-rows-and-columns-to-a-pivottable"></a>Добавление строк и столбцов в сводную таблицу
+## <a name="add-rows-and-columns-to-a-pivottable"></a>Добавление строк и столбцов в списоную
 
-Строки и столбцы поворачивают данные вокруг этих значений полей.
+Строки и столбцы своют данные вокруг значений этих полей.
 
-При добавлении столбца **фермы** все продажи для каждой фермы отворачиваются. Добавление строк **типа** и **классификации** дополнительно разделяет данные на основании того, сколько фруктов было продано, и не было ли оно согласовано.
+Добавление **столбца "Ферма"** совокупно совокупные объемы продаж для каждой фермы. Добавление строк **"Тип"** и **"Классификация"** дополнительно разбивает данные в зависимости от того, какие именно продукты были проданы и были ли они органичными.
 
-![Сводная таблица со столбцами фермы, а также строками типов и классификации.](../images/excel-pivots-table-rows-and-columns.png)
+![PivotTable with a Farm column and Type and Classification rows.](../images/excel-pivots-table-rows-and-columns.png)
 
 ```js
 Excel.run(function (context) {
@@ -134,7 +134,7 @@ Excel.run(function (context) {
 });
 ```
 
-Кроме того, можно создать сводную таблицу, используя только строки или столбцы.
+Кроме того, можно использовать с помощью с помощью севоводки только строк или столбцов.
 
 ```js
 Excel.run(function (context) {
@@ -147,13 +147,13 @@ Excel.run(function (context) {
 });
 ```
 
-## <a name="add-data-hierarchies-to-the-pivottable"></a>Добавление иерархий данных в сводную таблицу
+## <a name="add-data-hierarchies-to-the-pivottable"></a>Добавление иерархий данных в списоную
 
-Иерархии данных заполняют сводную таблицу со сведениями, которые необходимо объединить в зависимости от строк и столбцов. Добавление иерархий данных ящиков, проданных **в ферме** и **ящиков, продаваемых в оптовой торговле** , приводит к суммированию этих значений для каждой строки и столбца.
+Иерархии данных заполняют с помощью совмещаемых данных с помощью строк и столбцов. При добавлении иерархий данных **"Crates Sold at Farm"** и **"Crates Sold SoldА"** суммы этих рисунков для каждой строки и столбца суммы.
 
-В этом примере **ферма** и **тип** представляют собой строки, в которых продажи ящиков являются данными.
+В этом примере **"Ферма"** и **"Тип"** — это строки, данные о продажах в кавере.
 
-![Сводная таблица, в которой показаны общие продажи разных фруктов на основе фермы, из которой они получены.](../images/excel-pivots-data-hierarchy.png)
+![Сиветь, показывающая общий объем продаж разных видов деревьев в зависимости от фермы, из которой они поступили.](../images/excel-pivots-data-hierarchy.png)
 
 ```js
 Excel.run(function (context) {
@@ -172,19 +172,19 @@ Excel.run(function (context) {
 });
 ```
 
-## <a name="pivottable-layouts-and-getting-pivoted-data"></a>Макеты сводных таблиц и извлечение сведенных данных
+## <a name="pivottable-layouts-and-getting-pivoted-data"></a>Макеты pivotTable и получение совописаемых данных
 
 [PivotLayout](/javascript/api/excel/excel.pivotlayout) определяет размещение иерархий и их данных. Вы можете получить доступ к макету, чтобы определить диапазоны, в которых хранятся данные.
 
-На следующей схеме показано, какие вызовы функций макета соответствуют какому диапазону сводной таблицы.
+На следующей схеме показано, какие вызовы функции макета соответствуют диапазонам pivotTable.
 
-![Схема, на которой показано, какие разделы сводной таблицы возвращаются функциями диапазона получения в макете.](../images/excel-pivots-layout-breakdown.png)
+![Схема, показывающая, какие разделы с помощью pivotTable возвращаются функциями получения диапазона макета.](../images/excel-pivots-layout-breakdown.png)
 
-### <a name="get-data-from-the-pivottable"></a>Получение данных из сводной таблицы
+### <a name="get-data-from-the-pivottable"></a>Get data from the PivotTable
 
-Макет определяет способ отображения сводной таблицы на листе. Это означает, что `PivotLayout` объект управляет диапазонами, используемыми для элементов сводной таблицы. Используйте диапазоны, предоставленные макетом, для получения данных, собранных и агрегированных сводной таблицей. В частности, используйте `PivotLayout.getDataBodyRange` для доступа к тем, что делает Сводная таблица.
+Макет определяет, как отображается pivotTable на этом экране. Это `PivotLayout` означает, что объект управляет диапазонами, используемыми для элементов pivotTable. Используйте диапазоны, предоставляемые макетом, для получения данных, собранных и собранных сводной. В частности, используйте для доступа к данным, которые `PivotLayout.getDataBodyRange` создает с помощью pivotTable.
 
-В приведенном ниже коде показано, как получить последнюю строку данных сводной таблицы, посвященную макету ( **общему** количеству **ящиков, проданных в ферме** , и **сумме ящиков, проданных** в одной колонке в предыдущем примере). Затем эти значения суммируются вместе для итогового итога, который отображается в ячейке **E30** (вне сводной таблицы).
+В следующем коде показано, как получить последнюю строку данных с помощью  макета (общая  сумма как суммы проданных в ферме, так и столбцов **"Сумма** проданных ящиков" в предыдущем примере). Затем эти значения суммются в итоговом итоговом значении, которое отображается в ячейке **E30** (за пределами списной).
 
 ```js
 Excel.run(function (context) {
@@ -204,21 +204,21 @@ Excel.run(function (context) {
 
 ### <a name="layout-types"></a>Типы макетов
 
-В сводных таблицах есть три стиля макета: компактный, структурированный и табличный. В предыдущих примерах показан стиль "Компактный".
+Сивчатые таблицы имеют три стиля макета: Compact, Outline и Tabular. В предыдущих примерах мы видели компактный стиль.
 
-В приведенных ниже примерах используются структурированные и табличные стили соответственно. В примере кода показано, как циклически переключаться между различными макетами.
+В следующих примерах используются стили структур и таблиц соответственно. В примере кода показано, как цикли между различными макетами.
 
-#### <a name="outline-layout"></a>Макет структуры
+#### <a name="outline-layout"></a>Макет контура
 
-![Сводная таблица с использованием структуры.](../images/excel-pivots-outline-layout.png)
+![PivotTable using the outline layout.](../images/excel-pivots-outline-layout.png)
 
-#### <a name="tabular-layout"></a>Табличный макет
+#### <a name="tabular-layout"></a>Табулярный макет
 
-![Сводная таблица с использованием табличного макета.](../images/excel-pivots-tabular-layout.png)
+![PivotTable using the tabular layout.](../images/excel-pivots-tabular-layout.png)
 
-## <a name="delete-a-pivottable"></a>Удаление сводной таблицы
+## <a name="delete-a-pivottable"></a>Удаление советнойtable
 
-Сводные таблицы удаляются с использованием их имени.
+PivotTables are deleted by using their name.
 
 ```js
 Excel.run(function (context) {
@@ -227,37 +227,37 @@ Excel.run(function (context) {
 });
 ```
 
-## <a name="filter-a-pivottable"></a>Фильтрация сводной таблицы
+## <a name="filter-a-pivottable"></a>Фильтрация севоtTable
 
-Основным методом фильтрации данных сводной таблицы является PivotFilters. Срезы предоставляют альтернативный и менее гибкий метод фильтрации. 
+Основной метод фильтрации данных pivotTable — с помощью pivotFilters. Срезы предлагают альтернативный, менее гибкий метод фильтрации. 
 
-[PivotFilters](/javascript/api/excel/excel.pivotfilters) фильтрация данных на основе четырех [иерархических категорий](#hierarchies) сводной таблицы (фильтров, столбцов, строк и значений). Существует четыре типа PivotFilters, позволяющие использовать фильтрацию на основе дат, анализ строк, сравнение чисел и фильтрацию на основе настраиваемого ввода. 
+[Фильтры pivotFilters](/javascript/api/excel/excel.pivotfilters) фильтруют данные на основе [](#hierarchies) четырех категорий иерархии (фильтров, столбцов, строк и значений) в списанной. Существует четыре типа pivotFilters, которые позволяют использовать фильтрацию на основе даты календаря, разбиение строк, сравнение номеров и фильтрацию на основе пользовательского ввода. 
 
-[Срезы](/javascript/api/excel/excel.slicer) можно применять как к сводным таблицам, так и к обычным таблицам Excel. При применении к сводной таблице срезы функционируют так же, как и [пивотмануалфилтер](#pivotmanualfilter) , и позволяют выполнять фильтрацию на основе настраиваемого ввода. В отличие от PivotFilters, срезы имеют [компонент пользовательского интерфейса Excel](https://support.office.com/article/Use-slicers-to-filter-data-249f966b-a9d5-4b0f-b31a-12651785d29d). С помощью `Slicer` класса вы создадите этот компонент пользовательского интерфейса, управляете фильтрацией и контролируйте его внешний вид. 
+[Срезы](/javascript/api/excel/excel.slicer) можно применять как к срезам, так и к обычным таблицам Excel. При применении к pivotTable срезы функционируют как [pivotManualFilter](#pivotmanualfilter) и позволяют фильтровать на основе пользовательского ввода. В отличие от PivotFilters, срезы имеют компонент [пользовательского интерфейса Excel.](https://support.office.com/article/Use-slicers-to-filter-data-249f966b-a9d5-4b0f-b31a-12651785d29d) С помощью `Slicer` класса вы создаете этот компонент пользовательского интерфейса, управляете фильтрацией и управляете его внешним видом. 
 
-### <a name="filter-with-pivotfilters"></a>Фильтрация с помощью PivotFilters
+### <a name="filter-with-pivotfilters"></a>Фильтрация с помощью pivotFilters
 
-[PivotFilters](/javascript/api/excel/excel.pivotfilters) позволяют фильтровать данные сводной таблицы на основе четырех [категорий иерархии](#hierarchies) (фильтров, столбцов, строк и значений). В объектной модели сводной таблицы `PivotFilters` применяются к [PivotField](/javascript/api/excel/excel.pivotfield), и у каждого из них `PivotField` может быть один или несколько назначенных `PivotFilters` . Чтобы применить PivotFilters к PivotField, соответствующему [PivotHierarchy](/javascript/api/excel/excel.pivothierarchy) поля необходимо назначить категории иерархии. 
+[Фильтры pivotFilters](/javascript/api/excel/excel.pivotfilters) позволяют фильтровать данные pivotTable на основе четырех категорий [иерархии](#hierarchies) (фильтров, столбцов, строк и значений). В объектной модели pivotTable применяются к `PivotFilters` [pivotField,](/javascript/api/excel/excel.pivotfield)и каждому из них может быть назначен один или `PivotField` `PivotFilters` несколько. Чтобы применить pivotFilters к pivotField, соответствующая [pivotHierarchy](/javascript/api/excel/excel.pivothierarchy) поля должна быть назначена категории иерархии. 
 
-#### <a name="types-of-pivotfilters"></a>Типы PivotFilters
+#### <a name="types-of-pivotfilters"></a>Типы pivotFilters
 
-| Тип фильтра | Назначение фильтра | Справочные материалы по API JavaScript для Excel |
+| Тип фильтра | Цель фильтрации | Справочные материалы по API JavaScript для Excel |
 |:--- |:--- |:--- |
-| датефилтер | Фильтрация на основе даты в календаре. | [пивотдатефилтер](/javascript/api/excel/excel.pivotdatefilter) |
-| лабелфилтер | Фильтрация по текстовому сравнению. | [пивотлабелфилтер](/javascript/api/excel/excel.pivotlabelfilter) |
-| мануалфилтер | Настраиваемый фильтр ввода. | [пивотмануалфилтер](/javascript/api/excel/excel.pivotmanualfilter) |
-| валуефилтер | Фильтрация сравнения номеров. | [пивотвалуефилтер](/javascript/api/excel/excel.pivotvaluefilter) |
+| DateFilter | Фильтрация на основе даты в календаре. | [PivotDateFilter](/javascript/api/excel/excel.pivotdatefilter) |
+| LabelFilter | Фильтрация сравнения текста. | [PivotLabelFilter](/javascript/api/excel/excel.pivotlabelfilter) |
+| ManualFilter | Настраиваемая фильтрация входных данных. | [PivotManualFilter](/javascript/api/excel/excel.pivotmanualfilter) |
+| ValueFilter | Фильтрация сравнения номеров. | [PivotValueFilter](/javascript/api/excel/excel.pivotvaluefilter) |
 
-#### <a name="create-a-pivotfilter"></a>Создание PivotFilter
+#### <a name="create-a-pivotfilter"></a>Создание pivotFilter
 
-Чтобы отфильтровать данные сводной таблицы с помощью сводного фильтра (например, Пивотдатефилтер), примените фильтр к [PivotField](/javascript/api/excel/excel.pivotfield). В следующих четырех примерах кода показано, как использовать каждый из четырех типов PivotFilters. 
+Чтобы отфильтровать данные pivotTable с помощью (например, a), применим фильтр `Pivot*Filter` `PivotDateFilter` к [pivotField.](/javascript/api/excel/excel.pivotfield) В следующих четырех примерах кода покажем, как использовать каждый из четырех типов pivotFilters. 
 
-##### <a name="pivotdatefilter"></a>пивотдатефилтер
+##### <a name="pivotdatefilter"></a>PivotDateFilter
 
-Первый пример кода применяет [пивотдатефилтер](/javascript/api/excel/excel.pivotdatefilter) к **дате обновления** PivotField, скрывая все данные до **2020-08-01**. 
+Первый пример кода применяет [pivotDateFilter](/javascript/api/excel/excel.pivotdatefilter) к pivotField с обновлением даты, скрывая все данные до **2020-08-01**.  
 
 > [!IMPORTANT] 
-> Фильтр PIVOT нельзя применить к PivotField, если это поле PivotHierarchy не назначено категории иерархии. В следующем примере кода `dateHierarchy` необходимо добавить в категорию сводной таблицы, `rowHierarchies` прежде чем его можно будет использовать для фильтрации.
+> A не может применяться к `Pivot*Filter` pivotField, если pivotHierarchy этого поля не назначена категории иерархии. В следующем примере кода необходимо добавить его в категорию pivotTable, прежде чем его можно будет использовать `dateHierarchy` `rowHierarchies` для фильтрации.
 
 ```js
 Excel.run(function (context) {
@@ -289,11 +289,11 @@ Excel.run(function (context) {
 ```
 
 > [!NOTE]
-> В следующих трех фрагментах кода отображаются только отрывок, относящиеся к фильтрам, а не полные `Excel.run` вызовы.
+> В следующих трех фрагментах кода отображаются только фрагменты фильтра, а не полные `Excel.run` вызовы.
 
-##### <a name="pivotlabelfilter"></a>пивотлабелфилтер
+##### <a name="pivotlabelfilter"></a>PivotLabelFilter
 
-Во втором фрагменте кода показано, как применить [пивотлабелфилтер](/javascript/api/excel/excel.pivotlabelfilter) к **типу** PivotField, используя свойство, `LabelFilterCondition.beginsWith` чтобы исключить метки, начинающиеся с буквы **L**. 
+Во втором фрагменте кода показано, как применить [pivotLabelFilter](/javascript/api/excel/excel.pivotlabelfilter) к **Типу** PivotField, используя свойство для исключения меток, которые начинаются с буквы `LabelFilterCondition.beginsWith` **L**. 
 
 ```js
     // Get the "Type" field.
@@ -310,9 +310,9 @@ Excel.run(function (context) {
     filterField.applyFilter({ labelFilter: filter });
 ```
 
-##### <a name="pivotmanualfilter"></a>пивотмануалфилтер
+##### <a name="pivotmanualfilter"></a>PivotManualFilter
 
-Третий фрагмент кода применяет к полю **классификации** вручную фильтр с [пивотмануалфилтер](/javascript/api/excel/excel.pivotmanualfilter) , отфильтровывая данные, которые не включают согласованности классификации **.** 
+В третьем фрагменте кода к полю классификации применяется ручной фильтр  [с pivotManualFilter,](/javascript/api/excel/excel.pivotmanualfilter) отфильтровывая данные, не включающие классификацию **"Органическая".** 
 
 ```js
     // Apply a manual filter to include only a specific PivotItem (the string "Organic").
@@ -321,9 +321,9 @@ Excel.run(function (context) {
     filterField.applyFilter({ manualFilter: manualFilter });
 ```
 
-##### <a name="pivotvaluefilter"></a>пивотвалуефилтер
+##### <a name="pivotvaluefilter"></a>PivotValueFilter
 
-Чтобы сравнить числа, используйте фильтр значений с [пивотвалуефилтер](/javascript/api/excel/excel.pivotvaluefilter), как показано в последнем фрагменте кода. В этом `PivotValueFilter` разделе сравниваются данные в **ферме** PivotField с данными в рабочих ящиках, проданных в **оптовой торговле** PivotField, включая только те фермы, сумма которых проданных ящиков превышает значение **500**. 
+Чтобы сравнить числа, используйте фильтр значений [с pivotValueFilter,](/javascript/api/excel/excel.pivotvaluefilter)как показано в фрагменте кода. The `PivotValueFilter` compares the data in the **Farm** PivotField to the data in the **Crates Sold Sold** PivotField, including only farms whose sum of crates sold exceeds the value **500**. 
 
 ```js
     // Get the "Farm" field.
@@ -340,9 +340,9 @@ Excel.run(function (context) {
     filterField.applyFilter({ valueFilter: filter });
 ```
 
-#### <a name="remove-pivotfilters"></a>Удаление PivotFilters
+#### <a name="remove-pivotfilters"></a>Удаление pivotFilters
 
-Чтобы удалить все PivotFilters, примените `clearAllFilters` метод к каждому PivotField, как показано в следующем примере кода. 
+Чтобы удалить все pivotFilters, примените метод к каждому pivotField, как показано в следующем `clearAllFilters` примере кода. 
 
 ```js
 Excel.run(function (context) {
@@ -360,24 +360,24 @@ Excel.run(function (context) {
 });
 ```
 
-### <a name="filter-with-slicers"></a>Фильтрация с помощью срезов
+### <a name="filter-with-slicers"></a>Фильтрация с срезами
 
-[Срезы](/javascript/api/excel/excel.slicer) позволяют фильтровать данные из сводной таблицы или таблицы Excel. Срез использует значения из указанного столбца или PivotField для фильтрации соответствующих строк. Эти значения хранятся в виде объектов [SlicerItem](/javascript/api/excel/excel.sliceritem) в `Slicer` . Надстройка может настраивать эти фильтры, как это могут делать пользователи ([через пользовательский интерфейс Excel](https://support.office.com/article/Use-slicers-to-filter-data-249f966b-a9d5-4b0f-b31a-12651785d29d)). Срез располагается вверху листа в графическом слое, как показано на следующем снимке экрана.
+[Срезы](/javascript/api/excel/excel.slicer) позволяют фильтровать данные из таблицы или таблицы Excel. Срез использует значения из указанного столбца или pivotField для фильтрации соответствующих строк. Эти значения хранятся в качестве объектов [SlicerItem](/javascript/api/excel/excel.sliceritem) в `Slicer` объекте . Надстройка может настраивать эти фильтры, как и пользователи[(с помощью пользовательского интерфейса Excel).](https://support.office.com/article/Use-slicers-to-filter-data-249f966b-a9d5-4b0f-b31a-12651785d29d) Срез находится поверх таблицы на уровне рисования, как показано на следующем снимке экрана.
 
-![Фильтрация данных среза в сводной таблице.](../images/excel-slicer.png)
+![Данные фильтрации срезов в списанной.](../images/excel-slicer.png)
 
 > [!NOTE]
-> Методы, описанные в этом разделе, касаются использования срезов, подключенных к сводным таблицам. Те же методы применяются и для использования срезов, подключенных к таблицам.
+> Методы, описанные в этом разделе, посвящены использованию срезов, подключенных к списанной. Те же методы применяются и к использованию срезов, подключенных к таблицам.
 
 #### <a name="create-a-slicer"></a>Создание среза
 
-Вы можете создать срез в книге или листе с помощью `Workbook.slicers.add` метода или `Worksheet.slicers.add` метода. Это приведет к добавлению среза в [слицерколлектион](/javascript/api/excel/excel.slicercollection) указанного `Workbook` или `Worksheet` объекта. `SlicerCollection.add`Метод имеет три параметра:
+Вы можете создать срез в книге или на литейке с помощью `Workbook.slicers.add` метода или `Worksheet.slicers.add` метода. При этом к объекту [SlicerCollection](/javascript/api/excel/excel.slicercollection) указанного объекта добавляется `Workbook` `Worksheet` срез. Метод `SlicerCollection.add` имеет три параметра:
 
-- `slicerSource`: Источник данных, на котором основан новый срез. Это может быть `PivotTable` , `Table` или строка, представляющая имя или идентификатор или `PivotTable` `Table` .
-- `sourceField`: Поле в источнике данных, с помощью которого выполняется фильтрация. Это может быть `PivotField` , `TableColumn` или строка, представляющая имя или идентификатор или `PivotField` `TableColumn` .
-- `slicerDestination`: Лист, на котором будет создан новый срез. Это может быть `Worksheet` объект или имя или идентификатор объекта `Worksheet` . Этот параметр не является обязательным при `SlicerCollection` доступе к `Worksheet.slicers` . В этом случае лист коллекции используется в качестве назначения.
+- `slicerSource`: источник данных, на котором основан новый срез. Это может быть `PivotTable` `Table` строка , или строка, представляющая имя или ИД `PivotTable` или `Table` .
+- `sourceField`: поле в источнике данных, по которому необходимо отфильтровать данные. Это может быть `PivotField` `TableColumn` строка , или строка, представляющая имя или ИД `PivotField` или `TableColumn` .
+- `slicerDestination`: таблица, на которой будет создан новый срез. Это может быть `Worksheet` объект, имя или ИД `Worksheet` объекта . Этот параметр не является нужным при `SlicerCollection` доступе к `Worksheet.slicers` нему. В этом случае в качестве места назначения используется таблица коллекции.
 
-В приведенном ниже примере кода в **сводную** таблицу добавляется новый срез. Источник среза — это сводная таблица и фильтры **продаж фермы** с использованием данных **типа** . Срез также называется **срезом фруктов** для дальнейшего использования.
+В следующем примере кода новый срез добавляется на таблицу **Pivot.** Источником среза является совивная область продаж фермы, которая фильтруется с использованием данных **Type.**  Срез также называется **срезом "Срезы"** для дальнейшей ссылки.
 
 ```js
 Excel.run(function (context) {
@@ -393,12 +393,12 @@ Excel.run(function (context) {
 
 #### <a name="filter-items-with-a-slicer"></a>Фильтрация элементов с помощью среза
 
-Срез фильтрует сводную таблицу с элементами из `sourceField` . `Slicer.selectItems`Метод задает элементы, остающиеся в срезе. Эти элементы передаются в метод как объект `string[]` , представляющий ключи элементов. Все строки, содержащие эти элементы, сохраняются в статистической обработке сводной таблицы. Последующие вызовы `selectItems` задают для списка ключи, указанные в этих вызовах.
+Срез фильтрует с помощью срезов с помощью элементов из `sourceField` срезов. Метод `Slicer.selectItems` задает элементы, которые остаются в срезе. Эти элементы передаются методу в качестве `string[]` ключей элементов. Все строки, содержащие эти элементы, остаются в агрегации pivotTable. Последующие `selectItems` вызовы, чтобы установить для списка ключи, указанные в этих вызовах.
 
 > [!NOTE]
-> Если `Slicer.selectItems` передается элемент, который не находится в источнике данных, `InvalidArgument` возникает ошибка. Содержимое можно проверить с помощью `Slicer.slicerItems` свойства, которое является [слицеритемколлектион](/javascript/api/excel/excel.sliceritemcollection).
+> Если передается элемент, который не находится в источнике `Slicer.selectItems` данных, будет `InvalidArgument` выброшена ошибка. Содержимое можно проверить с помощью свойства, которое является `Slicer.slicerItems` [SlicerItemCollection.](/javascript/api/excel/excel.sliceritemcollection)
 
-В приведенном ниже примере кода показаны три выбранных для среза элементов: **Лемон**, **травяной** и **оранжевый**.
+В примере кода ниже показано, как выбрать три пункта для среза: **"Неугомя"** и **"Оранжевый".** 
 
 ```js
 Excel.run(function (context) {
@@ -409,7 +409,7 @@ Excel.run(function (context) {
 });
 ```
 
-Чтобы удалить все фильтры из среза, используйте `Slicer.clearFilters` метод, как показано в следующем примере.
+Чтобы удалить все фильтры из среза, используйте метод, как `Slicer.clearFilters` показано в следующем примере.
 
 ```js
 Excel.run(function (context) {
@@ -421,7 +421,7 @@ Excel.run(function (context) {
 
 #### <a name="style-and-format-a-slicer"></a>Стиль и форматирование среза
 
-Надстройка может настраивать параметры отображения среза с помощью `Slicer` свойств. В приведенном ниже примере кода для стиля задается значение **SlicerStyleLight6**, в верхней части среза задается **Тип фруктов**, помещается срез в позицию **(395, 15)** на уровне рисунка и задается размер среза **135x150** пикселей.
+Надстройка может настраивать параметры отображения среза с помощью `Slicer` свойств. В следующем примере кода устанавливается стиль **SlicerStyleLight6,** замещется текст в верхней части среза **"Типы",** срез помещается в положение **(395, 15)** на уровне рисования и устанавливается размер среза **135x150** пикселей.
 
 ```js
 Excel.run(function (context) {
@@ -438,7 +438,7 @@ Excel.run(function (context) {
 
 #### <a name="delete-a-slicer"></a>Удаление среза
 
-Чтобы удалить срез, вызовите `Slicer.delete` метод. В примере кода ниже показано, как удалить первый срез из текущего листа.
+Чтобы удалить срез, вызовите `Slicer.delete` метод. В следующем примере кода первый срез удаляется с текущего таблицы.
 
 ```js
 Excel.run(function (context) {
@@ -448,13 +448,13 @@ Excel.run(function (context) {
 });
 ```
 
-## <a name="change-aggregation-function"></a>Изменение статистической функции
+## <a name="change-aggregation-function"></a>Изменение функции агрегации
 
-Иерархия данных содержит статистические значения. Для наборов данных Numbers это сумма по умолчанию. `summarizeBy`Свойство определяет это поведение на основе типа [аггрегатионфунктион](/javascript/api/excel/excel.aggregationfunction) .
+Иерархии данных объединяют свои значения. Для наборов данных чисел это сумма по умолчанию. Свойство определяет это поведение на основе типа `summarizeBy` [AggregationFunction.](/javascript/api/excel/excel.aggregationfunction)
 
-В настоящее время поддерживаются типы статистической функции,,,,,,,,, `Sum` `Count` `Average` `Max` `Min` `Product` `CountNumbers` `StandardDeviation` `StandardDeviationP` `Variance` `VarianceP` и `Automatic` (значение по умолчанию).
+Поддерживаемые в настоящее время типы функций агрегирования: `Sum` `Count` , и `Average` `Max` `Min` `Product` `CountNumbers` `StandardDeviation` `StandardDeviationP` `Variance` `VarianceP` `Automatic` (по умолчанию).
 
-В приведенных ниже примерах кода статистическая схема изменяется для средних значений данных.
+В следующих примерах кода агрегация изменяется на средние значения данных.
 
 ```js
 Excel.run(function (context) {
@@ -470,21 +470,21 @@ Excel.run(function (context) {
 });
 ```
 
-## <a name="change-calculations-with-a-showasrule"></a>Изменение вычислений с помощью Шовасруле
+## <a name="change-calculations-with-a-showasrule"></a>Изменение вычислений с помощью ShowAsRule
 
-Сводные таблицы по умолчанию объединяют данные иерархий строк и столбцов независимо друг от друга. [Шовасруле](/javascript/api/excel/excel.showasrule) изменяет иерархию данных на выходные значения на основе других элементов в сводной таблице.
+По умолчанию сводные данные иерархий строк и столбцов объединяются независимо друг от друга. [ShowAsRule](/javascript/api/excel/excel.showasrule) изменяет иерархию данных на значения вывода на основе других элементов в pivotTable.
 
-`ShowAsRule`У объекта есть три свойства:
+У `ShowAsRule` объекта есть три свойства:
 
-- `calculation`: Тип относительного вычисления, применяемого к иерархии данных (значение по умолчанию — `none` ).
-- `baseField`: [PivotField](/javascript/api/excel/excel.pivotfield) в иерархии, содержащей базовые данные перед применением вычисления. Так как сводные таблицы Excel имеют сопоставление "один к одному" в поле "иерархия", для доступа к иерархии и полю используется то же имя.
-- `baseItem`: Отдельные [PivotItem](/javascript/api/excel/excel.pivotitem) по сравнению со значениями базовых полей на основе типа вычисления. Для этого поля требуется не все вычисления.
+- `calculation`: тип относительного вычисления, применяемого к иерархии данных (по `none` умолчанию).
+- `baseField`: [PivotField](/javascript/api/excel/excel.pivotfield) в иерархии, содержащей базовые данные перед вычислением. Поскольку в список Excel есть сопоставление иерархии с полем "один к одному", для доступа к иерархии и полю используется одно и то же имя.
+- `baseItem`: отдельный [pivotItem](/javascript/api/excel/excel.pivotitem) сравнивается со значениями базовых полей на основе типа вычисления. Это поле требуется не для всех вычислений.
 
-В следующем примере показана настройка вычисления **суммы ящиков, проданных в** иерархии данных фермы, в процентах от общей суммы по столбцу.
-Мы по-прежнему хотим, чтобы гранулярность была расширена до уровня типа фруктов, поэтому мы будем использовать иерархию **типов** строк и базовое поле.
-В примере также используется **ферма** в качестве первой иерархии строк, поэтому записи итоговой фермы отображаются в процентах, ответственных за изготовление.
+В следующем примере вычисление в иерархии данных фермы **суммы** проданных ящиков устанавливается в процентах от общего числа столбцов.
+Мы по-прежнему хотим, чтобы степень детализации была расширена  до уровня типа соков, поэтому мы будем использовать иерархию строк Type и его поле.
+В примере  также в качестве первой строки иерархии показана ферма, поэтому в общем число записей фермы отображается процент, за создание которых отвечает и каждая ферма.
 
-![Сводная таблица, в которой показаны процентные доли продаж фруктов относительно общего итога для отдельных ферм и отдельных типов фруктов в каждой ферме.](../images/excel-pivots-showas-percentage.png)
+![СvotTable showing the percentages of the farms sales relative to the total total for both individual farms and individual farms types within each farm.](../images/excel-pivots-showas-percentage.png)
 
 ```js
 Excel.run(function (context) {
@@ -504,12 +504,12 @@ Excel.run(function (context) {
 });
 ```
 
-В предыдущем примере показано, как задать вычисление для столбца относительно поля отдельной иерархии строк. Когда расчет относится к отдельному элементу, используйте `baseItem` свойство.
+В предыдущем примере вычисление устанавливается для столбца относительно поля отдельной иерархии строк. Если вычисление относится к отдельному элементу, используйте `baseItem` свойство.
 
-В приведенном ниже примере показано `differenceFrom` вычисление. В нем отображается разность записей иерархии данных о продажах в ферме, относящихся к параметрам **ферм**.
-`baseField` **Ферма** состоит в том, что мы видим различия между другими фермами, а также подразделение для каждого типа вроде фруктов (**тип** также является иерархией строк в данном примере).
+В следующем примере показано `differenceFrom` вычисление. Он отображает разницу в записях иерархии данных о продажах в кэш фермы относительно записей **A Farms.**
+Это `baseField` **"Ферма",** поэтому мы видим различия между другими фермами, а также разбивку по каждому типу как кебайт **(Тип** также является иерархией строк в этом примере).
 
-![Сводная таблица, в которой показаны различия продаж фруктов между "фермами" и другими. В этом примере показана разница в общем объеме продаж фруктов ферм и продаж на различных типах фруктов. Если "фермы" не продают определенный тип фруктов, отображается "#N/A".](../images/excel-pivots-showas-differencefrom.png)
+![Сиветь, показывающая различия в продажах деревьев между "A Farms" и другими. Это показывает разницу в общем продажах деревьев в фермах и в продажах типов. Если "A Farms" не продает определенный тип деревьев, отображается "#N/A".](../images/excel-pivots-showas-differencefrom.png)
 
 ```js
 Excel.run(function (context) {
@@ -530,9 +530,9 @@ Excel.run(function (context) {
 });
 ```
 
-## <a name="change-hierarchy-names"></a>Изменение имен иерархий
+## <a name="change-hierarchy-names"></a>Изменение имен иерархии
 
-Поля иерархии можно редактировать. В приведенном ниже коде показано, как изменить отображаемые имена двух иерархий данных.
+Поля иерархии можно редактировать. В следующем коде показано, как изменить отображаемую имена двух иерархий данных.
 
 ```js
 Excel.run(function (context) {

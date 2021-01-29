@@ -1,21 +1,21 @@
 ---
 title: Использование Office Dialog API в вашей надстройках Office
-description: Общие сведения о создании диалогового окна в надстройке Office.
-ms.date: 10/21/2020
+description: Узнайте, как создать диалоговое окно в надстройке Office.
+ms.date: 01/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 56c12aa5b15f8f79273923402c5a5bfa92a2dde8
-ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
+ms.openlocfilehash: bece18d6b861db97c1f4b455e8ab4ff9ce83a5a8
+ms.sourcegitcommit: 3123b9819c5225ee45a5312f64be79e46cbd0e3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49131761"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "50043885"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
 Вы можете использовать [Office dialog API](/javascript/api/office/office.ui), чтобы открывать диалоговые окна в надстройке Office. Эта статья содержит инструкции по использованию dialog API в надстройке Office.
 
 > [!NOTE]
-> Сведения о том, где в настоящее время поддерживается API диалоговых окон, приведены в разделе [наборы требований API диалоговых окон](../reference/requirement-sets/dialog-api-requirement-sets.md). API диалоговых окон в настоящее время поддерживается для Excel, PowerPoint и Word. Поддержка Outlook включена в различные наборы требований к почтовому ящику дополнительные &mdash; сведения см. в справочнике по API.
+> Сведения о том, где в настоящее время поддерживается Dialog API, см. в наборах требований [Dialog API.](../reference/requirement-sets/dialog-api-requirement-sets.md) Dialog API в настоящее время поддерживается для Excel, PowerPoint и Word. Поддержка Outlook включена в различные наборы требований почтовых ящиков, дополнительные сведения см. в справочнике &mdash; по API.
 
 Основной сценарий для Dialog API - включить аутентификацию с помощью таких ресурсов, как Google, Facebook или Microsoft Graph. Дополнительные сведения см. в статье [Проверка подлинности с помощью Office Dialog API](auth-with-office-dialog-api.md) *после* ознакомления с текущей статьей.
 
@@ -26,13 +26,13 @@ ms.locfileid: "49131761"
 - разместить видео, которое будет слишком маленьким в области задач.
 
 > [!NOTE]
-> Поскольку перекрывающиеся элементы пользовательского интерфейса не приветствуются, избегайте открытия диалогового окна на панели задач, если это не требуется в сценарий. При планировании контактной зоны помните, что в области задач можно использовать вкладки. Например, как в [надстройке JavaScript SalesTracker для Excel](https://github.com/OfficeDev/Excel-Add-in-JavaScript-SalesTracker).
+> Поскольку перекрывающиеся элементы пользовательского интерфейса не приветствуются, избегайте открытия диалогового окна на панели задач, если это не требуется в сценарий. При планировании контактной зоны помните, что в области задач можно использовать вкладки. Пример области задач с вкладками см. в примере Надстройка [Excel JavaScript SalesTracker.](https://github.com/OfficeDev/Excel-Add-in-JavaScript-SalesTracker)
 
 На приведенном ниже изображении показан пример диалогового окна. 
 
-![Снимок экрана с диалоговым окном с тремя параметрами входа, отображаемыми перед Word](../images/auth-o-dialog-open.png)
+![Screenshot showing dialog with 3 sign-in options displayed in front of Word](../images/auth-o-dialog-open.png)
 
-Обратите внимание, что диалоговое окно всегда открывается в центре экрана. Пользователь может перемещать ее и изменять ее размер. Окно не является *модальным*— пользователь может продолжать взаимодействовать с документом в приложении Office и со страницей в области задач, если таковая имеется.
+Обратите внимание, что диалоговое окно всегда открывается в центре экрана. Пользователь может перемещать ее и изменять ее размер. Это немодульное окно— пользователь может продолжать взаимодействовать как с документом в приложении Office, так и со страницей в области задач, если она существует. 
 
 ## <a name="open-a-dialog-box-from-a-host-page"></a>Откройте диалоговое окно с главной страницы
 
@@ -61,7 +61,7 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html');
 Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 30, width: 20});
 ```
 
-Подобная надстройка приведена в статье [Пример надстройки Office с Dialog API](https://github.com/OfficeDev/Office-Add-in-Dialog-API-Simple-Example).
+Подобная надстройка приведена в статье [Пример надстройки Office с Dialog API](https://github.com/OfficeDev/Office-Add-in-Dialog-API-Simple-Example). Дополнительные примеры см. в `displayDialogAsync` [примерах.](#samples)
 
 Установите оба значения равными 100 %, чтобы надстройка открывалась во весь экран. (На самом деле, максимальное значение составляет 99,5 %, возможность перемещать окно и изменять его размер сохраняется.)
 
@@ -79,14 +79,14 @@ Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 
 Значение по умолчанию: `false`. Его использование равнозначно пропуску всего свойства. Если надстройка не работает в Office в Интернете, `displayInIframe` игнорируется.
 
 > [!NOTE]
-> Вам **не** следует `displayInIframe: true`использовать, если диалоговое окно будет выполнять перенаправление на страницу, которую невозможно открыть в элементе iframe. Например, страницы входа многих популярных веб-служб, таких как учетные записи Google и Майкрософт, не могут быть открыты в IFRAME.
+> Вам **не** следует `displayInIframe: true`использовать, если диалоговое окно будет выполнять перенаправление на страницу, которую невозможно открыть в элементе iframe. Например, страницы для входов многих популярных веб-служб, таких как учетная запись Google и Майкрософт, невозможно открыть в iframe.
 
 ## <a name="send-information-from-the-dialog-box-to-the-host-page"></a>Отправка сведений из диалогового окна главной странице
 
 Диалоговое окно может взаимодействовать с главной страницей в области задач, если:
 
 - Текущая страница в диалоговом окне не находится в том же домене, что и главная страница.
-- На странице загружается библиотека API JavaScript для Office. (Как и любая страница, использующая библиотеку API JavaScript для Office, сценарий для страницы должен назначить метод `Office.initialize` свойству, хотя это может быть пустой метод. Дополнительные сведения см. [в статье Initialize Your надстройка Office](initialize-add-in.md).
+- Библиотека API JavaScript для Office загружается на странице. (Как и любая страница, использующая библиотеку API JavaScript для Office, сценарий для страницы должен назначить свойству метод, хотя это может быть `Office.initialize` пустой метод. Дополнительные сведения см. в [инициализации надстройки Office.)](initialize-add-in.md)
 
 Код в диалоговом окне использует функцию [messageParent](/javascript/api/office/office.ui#messageparent-message-), чтобы отправить на главную страницу логическое значение или строковое сообщение. Строка может быть словом, предложением, большим двоичным объектом XML, преобразованными данными JSON или любыми другими объектами, которые можно сериализовать в строку. Ниже приведен пример.
 
@@ -98,8 +98,8 @@ if (loginSuccess) {
 
 > [!IMPORTANT]
 > - Функцию `messageParent` можно вызывать только на странице, которая относится к тому же домену (включая протокол и порт), что и главная страница.
-> - `messageParent`Функция является одним из двух *only* API Office JS, которые можно вызывать в диалоговом окне.
-> - Другой API JS, который может вызываться в диалоговом окне, — это `Office.context.requirements.isSetSupported` . Сведения о том, как [указать приложения Office и требования к API](specify-office-hosts-and-api-requirements.md). Однако в диалоговом окне этот API не поддерживается в Outlook 2016 1-Time Purchase (версия MSI).
+> - Эта функция является одним из двух API JS Office, которые можно назвать `messageParent` в диалоговом  окне.
+> - Другой API JS, который можно назвать в диалоговом окне: `Office.context.requirements.isSetSupported` . Сведения об этом см. в [подразделе "Указание приложений Office и требований к API".](specify-office-hosts-and-api-requirements.md) Однако в диалоговом окне этот API не поддерживается в Outlook 2016 одноразовая покупка (то есть версия MSI).
 
 В следующем примере `googleProfile` — это строковое представление профиля Google пользователя.
 
@@ -137,7 +137,7 @@ function processMessage(arg) {
 ```
 
 > [!NOTE]
-> - Office передает объект `arg` в обработчик. Его `message` свойством является логическое значение или строка, отправляемая при вызове `messageParent` в диалоговом окне. В этом примере это преобразованногоное представление профиля пользователя из службы, например учетной записи Майкрософт или Google, поэтому она возвращается в объект с `JSON.parse` .
+> - Office передает объект `arg` в обработчик. Его `message` свойством является логическое значение или строка, отправляемая при вызове `messageParent` в диалоговом окне. В этом примере это строковые представления профиля пользователя из службы, такой как учетная запись Майкрософт или Google, поэтому она десериализирована обратно в объект с `JSON.parse` .
 > - Функция `showUserName` не показана. Она может отображать персонализированное приветствие в области задач.
 
 Когда взаимодействие пользователя с диалоговым окном закончится, обработчик сообщений должен закрыть диалоговое окно, как показано в этом примере.
@@ -170,7 +170,7 @@ function processMessage(arg) {
 
 ### <a name="conditional-messaging"></a>Условные сообщения
 
-Так как из диалогового окна можно отправить несколько вызовов `messageParent`, но на главной странице есть только один обработчик для события `DialogMessageReceived`, обработчику необходимо использовать условную логику, чтобы различать сообщения. Например, если диалоговое окно предлагает пользователю выполнить вход в поставщика удостоверений, например в учетной записи Майкрософт или Google, он отправляет профиль пользователя в виде сообщения. Если выполнить аутентификацию не удается, диалоговое окно отправляет сведения об ошибке на главную страницу, как показано в приведенном ниже примере.
+Так как из диалогового окна можно отправить несколько вызовов `messageParent`, но на главной странице есть только один обработчик для события `DialogMessageReceived`, обработчику необходимо использовать условную логику, чтобы различать сообщения. Например, если в диалоговом окне пользователю будет предложено войти к поставщику удостоверений, например учетной записи Майкрософт или Google, профиль пользователя отправляется в качестве сообщения. Если выполнить аутентификацию не удается, диалоговое окно отправляет сведения об ошибке на главную страницу, как показано в приведенном ниже примере.
 
 ```js
 if (loginSuccess) {
@@ -212,11 +212,11 @@ function processMessage(arg) {
 
 ## <a name="pass-information-to-the-dialog-box"></a>Передача данных диалоговому окну
 
-Надстройка может отправлять сообщения с [главной страницы](dialog-api-in-office-add-ins.md#open-a-dialog-box-from-a-host-page) в диалоговое окно с помощью [диалогового окна Dialog. мессажечилд](/javascript/api/office/office.dialog#messagechild-message-).
+Надстройка может отправлять сообщения [](dialog-api-in-office-add-ins.md#open-a-dialog-box-from-a-host-page) с хост-страницы в диалоговое окно с помощью [Dialog.messageChild.](/javascript/api/office/office.dialog#messagechild-message-)
 
-### <a name="use-messagechild-from-the-host-page"></a>Использование `messageChild()` с главной страницы
+### <a name="use-messagechild-from-the-host-page"></a>Использование `messageChild()` со страницы ведущего сайта
 
-Когда вы вызываете API диалоговых окон Office для открытия диалогового окна, возвращается объект [DIALOG](/javascript/api/office/office.dialog) . Она должна быть назначена переменной с большей областью действия, чем метод [displayDialogAsync](/javascript/api/office/office.ui#displaydialogasync-startaddress--callback-) , так как на объект будут ссылаться другие методы. Ниже приведен пример.
+При вызове dialog API Office для открытия диалоговых окно возвращается объект [Dialog.](/javascript/api/office/office.dialog) Он должен быть назначен переменной с большей областью действия, чем метод [displayDialogAsync,](/javascript/api/office/office.ui#displaydialogasync-startaddress--callback-) так как на объект будут ссылаться другие методы. Ниже приведен пример.
 
 ```javascript
 var dialog;
@@ -235,9 +235,9 @@ function processMessage(arg) {
 }
 ```
 
-Этот `Dialog` объект содержит метод [мессажечилд](/javascript/api/office/office.dialog#messagechild-message-) , который отправляет любую строку, в том числе данные преобразованного, в диалоговое окно. Это вызывает `DialogParentMessageReceived` событие в диалоговом окне. Код должен обрабатывать это событие, как показано в следующем разделе.
+Этот `Dialog` объект имеет метод [messageChild,](/javascript/api/office/office.dialog#messagechild-message-) который отправляет любую строку, включая строковые данные, в диалоговое окно. Это вызывает `DialogParentMessageReceived` событие в диалоговом окне. Код должен обрабатывать это событие, как показано в следующем разделе.
 
-Рассмотрим сценарий, в котором пользовательский интерфейс диалогового окна связан с текущим активным листом и положением листа относительно других листов. В следующем примере в `sheetPropertiesChanged` диалоговое окно отправляются свойства листа Excel. В этом случае текущий лист называется "Мой лист", а второй лист книги. Данные инкапсулируются в объекте и преобразованного, чтобы их можно было передать `messageChild` .
+Рассмотрим сценарий, в котором пользовательский интерфейс диалога связан с текущим активным на данный момент и положением этого таблицы относительно других таблиц. В следующем примере свойства листа Excel отправляются `sheetPropertiesChanged` в диалоговое окно. В этом случае текущий лист называется "Мой лист" и является вторым листом в книге. Данные инкапсулированы в объект и строку, чтобы их можно было передать `messageChild` в .
 
 ```javascript
 function sheetPropertiesChanged() {
@@ -250,9 +250,9 @@ function sheetPropertiesChanged() {
 }
 ```
 
-### <a name="handle-dialogparentmessagereceived-in-the-dialog-box"></a>Обработка Диалогпарентмессажерецеивед в диалоговом окне
+### <a name="handle-dialogparentmessagereceived-in-the-dialog-box"></a>Обработка DialogParentMessageReceived в диалоговом окне
 
-В JavaScript диалогового окна Зарегистрируйте обработчик для `DialogParentMessageReceived` события с помощью метода [UI. addHandlerAsync](/javascript/api/office/office.ui#addhandlerasync-eventtype--handler--options--callback-) . Это обычно делается в [методах Office. onread или Office.iniтиализе](initialize-add-in.md), как показано в следующем примере. (Ниже приведен пример более надежного примера.)
+В JavaScript диалогового окна зарегистрируйте обработатель события с помощью метода `DialogParentMessageReceived` [UI.addHandlerAsync.](/javascript/api/office/office.ui#addhandlerasync-eventtype--handler--options--callback-) Обычно это делается в [методах Office.onReady Office.initialize,](initialize-add-in.md)как показано ниже. (Более надежный пример приведен ниже.)
 
 ```javascript
 Office.onReady()
@@ -263,7 +263,7 @@ Office.onReady()
     });
 ```
 
-Затем определите `onMessageFromParent` обработчик. Приведенный ниже код продолжает пример из предыдущего раздела. Обратите внимание, что Office передает аргумент обработчику и что `message` свойство объекта Argument содержит строку со страницы узла. В этом примере сообщение переводится в объект, а jQuery используется для установки верхнего заголовка диалогового окна в соответствующее имя нового листа.
+Затем определите `onMessageFromParent` обработок. Следующий код продолжает пример из предыдущего раздела. Обратите внимание, что Office передает аргумент обработработеку и свойство объекта аргумента содержит строку `message` с хост-страницы. В этом примере сообщение перенаправляется в объект, и jQuery используется для того, чтобы установить верхний заголовок диалоговых окно в соответствие с новым именем таблицы.
 
 ```javascript
 function onMessageFromParent(event) {
@@ -272,7 +272,7 @@ function onMessageFromParent(event) {
 }
 ```
 
-Рекомендуется проверить правильность регистрации обработчика. Для этого можно передать обратный вызов `addHandlerAsync` методу. Это выполняется при завершении попытки регистрации обработчика. Используйте обработчик для записи или отображения ошибки, если обработчик не был успешно зарегистрирован. Ниже приведен пример. Обратите внимание, что `reportError` это функция, не определенная здесь, записывает или отображает сообщение об ошибке.
+Лучше всего проверить правильность регистрации обработера. Это можно сделать, передав методу `addHandlerAsync` вызов. Этот запуск выполняется после завершения попытки регистрации обработера. Используйте обработок для регистрации в журнале или для показа ошибки, если обработка не была успешно зарегистрирована. Ниже приведен пример. Обратите внимание, что это функция, которая не определена здесь, которая регистрет `reportError` или отображает ошибку.
 
 ```javascript
 Office.onReady()
@@ -290,15 +290,15 @@ function onRegisterMessageComplete(asyncResult) {
 }
 ```
 
-### <a name="conditional-messaging-from-parent-page-to-dialog-box"></a>Диалоговое окно "Условная передача сообщений из родительской страницы"
+### <a name="conditional-messaging-from-parent-page-to-dialog-box"></a>Условный обмен сообщениями с родительской страницы на диалоговое окно
 
-Так как вы можете выполнять несколько `messageChild` вызовов со страницы узла, но у вас есть только один обработчик в диалоговом окне для `DialogParentMessageReceived` события, обработчик должен использовать условную логику для различения разных сообщений. Это можно сделать точно так же, как при структурировании условной передачи сообщений, когда диалоговое окно отправляет сообщение на страницу узла, как описано в [условной системе обмена сообщениями](#conditional-messaging).
+Так как на хост-странице можно сделать несколько вызовов, но в диалоговом окне для события есть только один обработок, обработчивая должна использовать условную логику, чтобы различать различные `messageChild` `DialogParentMessageReceived` сообщения. Это можно сделать точно так, как вы бы структурировали условные сообщения, когда диалоговое окно отправляет сообщение на страницу ведущего приложения, как описано в условных [сообщениях.](#conditional-messaging)
 
 > [!NOTE]
-> В некоторых случаях `messageChild` API, который является частью [набора требований DialogApi 1,2](../reference/requirement-sets/dialog-api-requirement-sets.md), может не поддерживаться. Некоторые альтернативные способы обмена сообщениями с родительским диалоговым окном описаны в разделе [альтернативные способы передачи сообщений в диалоговое окно со страницы узла](parent-to-dialog.md).
+> В некоторых ситуациях API, который входит в набор требований `messageChild` [DialogApi 1.2,](../reference/requirement-sets/dialog-api-requirement-sets.md)может не поддерживаться. Некоторые альтернативные способы передачи сообщений из родительского диалогового окна описаны в альтернативных способах передачи сообщений в диалоговое окно с его [хост-страницы.](parent-to-dialog.md)
 
 > [!IMPORTANT]
-> [Набор требований DialogApi 1,2](../reference/requirement-sets/dialog-api-requirement-sets.md) не может быть указан в `<Requirements>` разделе манифеста надстройки. Вам потребуется проверить поддержку DialogApi 1,2 во время выполнения с помощью метода [метод issetsupported](specify-office-hosts-and-api-requirements.md#use-runtime-checks-in-your-javascript-code) . Поддержка требований к манифесту находится на стадии разработки.
+> Набор [требований DialogApi 1.2](../reference/requirement-sets/dialog-api-requirement-sets.md) не может быть указан в разделе `<Requirements>` манифеста надстройки. Вам придется проверить поддержку DialogApi 1.2 во время работы с помощью [метода isSetSupported.](specify-office-hosts-and-api-requirements.md#use-runtime-checks-in-your-javascript-code) Поддержка требований манифеста находится на стадии разработки.
 
 ## <a name="closing-the-dialog-box"></a>Закрытие диалогового окна
 
@@ -346,3 +346,34 @@ function processMessage(arg) {
 ## <a name="next-steps"></a>Дальнейшие действия
 
 Узнайте о том, как использовать Office dialog API, в [Рекомендации по использованию Office dialog API](dialog-best-practices.md).
+
+## <a name="samples"></a>Примеры
+
+Все следующие примеры используют `displayDialogAsync` . Некоторые из них используют серверы на основе NodeJS, а другие ASP.NET/IIS-based, но логика использования метода не зависит от того, как реализована надстройка на стороне сервера.
+
+**Основные принципы:**
+
+- [Пример использования API диалоговых окон в надстройке Office](https://github.com/OfficeDev/Office-Add-in-Dialog-API-Simple-Example)
+- [Обучающий контент/ создание надстроек (несколько примеров)](https://github.com/OfficeDev/TrainingContent/tree/2db14a16774e1539a3eebae7dada4798142b8493/OfficeAddin)
+
+**Более сложные примеры:**
+
+- [ASPNET надстройки Office для Microsoft Graph](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET)
+- [Надстройка Office в Microsoft Graph React](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-React)
+- [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO)
+- [Служба SSO для надстройки Office ASPNET](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO)
+- [Пример монетизации SAAS для надстройки Office](https://github.com/OfficeDev/office-add-in-saas-monetization-sample)
+- [AsPNET надстройки Outlook для Microsoft Graph](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET)
+- [SSO для надстройки Outlook](https://github.com/OfficeDev/Outlook-Add-in-SSO)
+- [Просмотр маркеров надстройки Outlook](https://github.com/OfficeDev/Outlook-Add-In-Token-Viewer)
+- [Сообщение с действиями надстройки Outlook](https://github.com/OfficeDev/Outlook-Add-In-Actionable-Message)
+- [Общий доступ к надстройки Outlook в OneDrive](https://github.com/OfficeDev/Outlook-Add-in-Sharing-to-OneDrive)
+- [Вставка диаграммы ASPNET надстройки PowerPoint в Microsoft Graph](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart)
+- [Сценарий общей времени работы Excel](https://github.com/OfficeDev/PnP-OfficeAddins/tree/900b5769bca9bbcff79d6cd6106d9fcc55c70d5a/Samples/excel-shared-runtime-scenario)
+- [Краткие книги надстройки Excel в ASPNET](https://github.com/OfficeDev/Excel-Add-in-ASPNET-QuickBooks)
+- [Надстройка Word JS Redact](https://github.com/OfficeDev/Word-Add-in-JS-Redact)
+- [Надстройка Word JS SpecKit](https://github.com/OfficeDev/Word-Add-in-JS-SpecKit)
+- [OAuth клиента надстройки Word в AngularJS](https://github.com/OfficeDev/Word-Add-in-AngularJS-Client-OAuth)
+- [Надстройка Office Auth0](https://github.com/OfficeDev/Office-Add-in-Auth0)
+- [Надстройки Office OAuth.io](https://github.com/OfficeDev/Office-Add-in-OAuth.io)
+- [Код шаблонов дизайна для надстройки Office](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code)
