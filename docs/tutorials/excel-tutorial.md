@@ -1,15 +1,15 @@
 ---
 title: Руководство по надстройкам Excel
 description: В этом руководстве вы создадите надстройку Excel, которая создает, заполняет, фильтрует и сортирует таблицу, создает диаграмму, замораживает заголовок таблицы, защищает лист и открывает диалоговое окно.
-ms.date: 11/09/2020
+ms.date: 02/03/2021
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: c11b253d8cc55ce4bac8a44bde1ddf7baa91f89e
-ms.sourcegitcommit: 2f75a37de349251bc0e0fc402c5ae6dc5c3b8b08
+ms.openlocfilehash: 5b2660ef27ebc457d2d7602b716baf03e4b93cf3
+ms.sourcegitcommit: 8546889a759590c3798ce56e311d9e46f0171413
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "49771370"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "50104870"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -396,7 +396,7 @@ ms.locfileid: "49771370"
    - Третий параметр определяет, как следует отображать на диаграмме ряд точек данных из таблицы: по строкам или по столбцам. Значение `auto` сообщает Excel, что следует выбрать оптимальный способ.
 
     ```js
-    var chart = currentWorksheet.charts.add('ColumnClustered', dataRange, 'auto');
+    var chart = currentWorksheet.charts.add('ColumnClustered', dataRange, 'Auto');
     ```
 
 8. В функции `createChart()` замените `TODO3` следующим кодом. Большая часть этого кода не требует объяснений. Примечание.
@@ -408,11 +408,11 @@ ms.locfileid: "49771370"
     ```js
     chart.setPosition("A15", "F30");
     chart.title.text = "Expenses";
-    chart.legend.position = "right"
+    chart.legend.position = "Right";
     chart.legend.format.fill.setSolidColor("white");
     chart.dataLabels.format.font.size = 15;
     chart.dataLabels.format.font.color = "black";
-    chart.series.getItemAt(0).name = 'Value in &euro;';
+    chart.series.getItemAt(0).name = 'Value in \u20AC';
     ```
 
 9. Убедитесь, что вы сохранили все изменения, внесенные в проект.
