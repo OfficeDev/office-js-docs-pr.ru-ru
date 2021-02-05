@@ -1,14 +1,14 @@
 ---
 title: Элемент ExtensionPoint в файле манифеста
 description: Определяет, где доступны функции надстройки в пользовательском интерфейсе Office.
-ms.date: 01/22/2021
+ms.date: 02/01/2021
 localization_priority: Normal
-ms.openlocfilehash: 96bf3a6835b1a0ab6e5aa85a837515a3071e5610
-ms.sourcegitcommit: 6c5716d92312887e3d944bf12d9985560109b3c0
+ms.openlocfilehash: 7bf64b3a49228ade65350f9d730e68ec71401c60
+ms.sourcegitcommit: 8546889a759590c3798ce56e311d9e46f0171413
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "49944307"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "50104821"
 ---
 # <a name="extensionpoint-element"></a>Элемент ExtensionPoint
 
@@ -261,7 +261,7 @@ ms.locfileid: "49944307"
 
 ### <a name="mobileonlinemeetingcommandsurface"></a>MobileOnlineMeetingCommandSurface
 
-Эта точка расширения помещает соответствующий режиму в командную поверхность для встречи в форм-факторе мобильного устройства. Организатор собрания может создать собрание по сети. После этого участник может присоединиться к собранию по сети. Дополнительные информацию об этом сценарии см. в статье "Создание мобильной надстройки [Outlook"](../../outlook/online-meeting.md) для поставщика собраний по сети.
+Эта точка расширения помещает соответствующий режиму в командную поверхность для встречи в форм-факторе мобильного устройства. Организатор собрания может создать собрание по сети. После этого участник может присоединиться к собранию по сети. Дополнительные информацию об этом сценарии см. в статье "Создание мобильной надстройки [Outlook" для поставщика](../../outlook/online-meeting.md) собраний по сети.
 
 > [!NOTE]
 > Эта точка расширения поддерживается только на Android с подпиской на Microsoft 365.
@@ -272,7 +272,7 @@ ms.locfileid: "49944307"
 |:-----|:-----|
 |  [Control](control.md) |  Добавляет кнопку на поверхность команды.  |
 
-`ExtensionPoint` элементы этого типа могут иметь только один элемент: `Control` элемент.
+`ExtensionPoint` у элементов этого типа может быть только один элемент: `Control` элемент.
 
 Элемент, `Control` содержащийся в этой точке расширения, должен иметь `xsi:type` атрибут , установленный в `MobileButton` .
 
@@ -305,16 +305,16 @@ ms.locfileid: "49944307"
 ### <a name="launchevent-preview"></a>LaunchEvent (предварительная версия)
 
 > [!NOTE]
-> Эта точка расширения поддерживается только в предварительной [версии](../objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) Outlook в Интернете с подпиской на Microsoft 365.
+> Эта точка расширения поддерживается только в предварительной версии Outlook в Интернете и Windows с подпиской на Microsoft 365. [](../objectmodel/preview-requirement-set/outlook-requirement-set-preview.md)
 
-Эта точка расширения позволяет надстройка активироваться на основе поддерживаемых событий в форм-факторе рабочего стола. В настоящее время поддерживаются только события `OnNewMessageCompose` и `OnNewAppointmentOrganizer` . Дополнительные информацию об этом сценарии см. в статье "Настройка надстройки Outlook для [активации на](../../outlook/autolaunch.md) основе событий".
+Эта точка расширения позволяет надстройка активироваться на основе поддерживаемых событий в форм-факторе рабочего стола. В настоящее время поддерживаются только события `OnNewMessageCompose` и `OnNewAppointmentOrganizer` . Дополнительные информацию об этом сценарии см. в статье "Настройка надстройки Outlook для активации [на](../../outlook/autolaunch.md) основе событий".
 
 #### <a name="child-elements"></a>Дочерние элементы
 
 |  Элемент |  Описание  |
 |:-----|:-----|
 | [LaunchEvents](launchevents.md) |  Список [LaunchEvent для](launchevent.md) активации на основе событий.  |
-| [SourceLocation](sourcelocation.md) |  Расположение исходных файлов JavaScript.  |
+| [SourceLocation](sourcelocation.md) |  Расположение источника файла JavaScript.  |
 
 #### <a name="example"></a>Пример
 
@@ -362,7 +362,7 @@ ms.locfileid: "49944307"
 
 #### <a name="label"></a>Label
 
-Обязательный элемент. Метка группы. Атрибут **resid** может быть не более 32 символов и должен иметь значение атрибута **id** элемента **String** в **элементе ShortStrings** в [элементе Resources.](resources.md)
+Обязательный элемент. Метка группы. Атрибут **resid** не может быть больше 32 символов и должен иметь значение атрибута **id** элемента **String** в **элементе ShortStrings** в [элементе Resources.](resources.md)
 
 #### <a name="highlight-requirements"></a>Требования к выделению
 

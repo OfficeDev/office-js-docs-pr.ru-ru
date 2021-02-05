@@ -1,14 +1,14 @@
 ---
 title: Runtimes in the manifest file
 description: Элемент Runtimes указывает времени работы надстройки.
-ms.date: 06/01/2020
+ms.date: 02/01/2021
 localization_priority: Normal
-ms.openlocfilehash: afbcc6a909c51d2ed56292ef1541193f7f698d28
-ms.sourcegitcommit: 545888b08f57bb1babb05ccfd83b2b3286bdad5c
+ms.openlocfilehash: 74bb2b432f46d5876601052003e20ff843e13b06
+ms.sourcegitcommit: 8546889a759590c3798ce56e311d9e46f0171413
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "49789165"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "50104828"
 ---
 # <a name="runtimes-element"></a>Элемент Runtimes
 
@@ -24,7 +24,7 @@ ms.locfileid: "49789165"
 **Тип надстройки:** Области задач, почта
 
 > [!IMPORTANT]
-> **Outlook**: функция активации на [](../../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) основе событий в настоящее время находится в предварительной версии и доступна только в Outlook в Интернете. Дополнительные сведения см. в [предварительном просмотре функции активации на основе событий.](../../outlook/autolaunch.md#how-to-preview-the-event-based-activation-feature)
+> **Outlook**: функция активации на [](../../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) основе событий в настоящее время находится в предварительной версии и доступна только в Outlook в Интернете и Windows. Дополнительные сведения см. в [предварительном просмотре функции активации на основе событий.](../../outlook/autolaunch.md#how-to-preview-the-event-based-activation-feature)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,8 +42,8 @@ ms.locfileid: "49789165"
 
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-| [Время выполнения](runtime.md) | Да |  Время работы надстройки. |
+| [Runtime](runtime.md) | Да |  Время работы надстройки. |
 
 ## <a name="see-also"></a>См. также
 
-- [Время выполнения](runtime.md)
+- [Runtime](runtime.md)

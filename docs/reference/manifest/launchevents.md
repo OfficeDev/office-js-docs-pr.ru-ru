@@ -1,23 +1,23 @@
 ---
-title: Лаунчевентс в файле манифеста (Предварительная версия)
-description: Элемент Лаунчевентс настраивает надстройку для активации на основе поддерживаемых событий.
-ms.date: 05/18/2020
+title: LaunchEvents в файле манифеста (предварительная версия)
+description: Элемент LaunchEvents настраивает надстройку для активации на основе поддерживаемых событий.
+ms.date: 02/01/2021
 localization_priority: Normal
-ms.openlocfilehash: 92416f8c646326410a8cd9ee7831e17a5c5f1ffc
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 9df059879018d79a61f1c900888c8d197e0b9880
+ms.sourcegitcommit: 8546889a759590c3798ce56e311d9e46f0171413
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611773"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "50104814"
 ---
-# <a name="launchevents-element-preview"></a>Элемент Лаунчевентс (Preview)
+# <a name="launchevents-element-preview"></a>Элемент LaunchEvents (предварительная версия)
 
-Настраивает надстройку для активации на основе поддерживаемых событий. Дочерний [`<ExtensionPoint>`](extensionpoint.md) элемент. Дополнительные сведения см. [в разделе Настройка надстройки Outlook для активации на основе событий](../../outlook/autolaunch.md).
+Настраивает надстройки для активации на основе поддерживаемых событий. Child of the [`<ExtensionPoint>`](extensionpoint.md) element. Дополнительные сведения см. в настройке [надстройки Outlook для активации на основе событий.](../../outlook/autolaunch.md)
 
 **Тип надстройки:** почтовая
 
 > [!IMPORTANT]
-> Активация на основе событий в настоящее время находится [в режиме предварительной версии](../../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) и доступна только в Outlook в Интернете. Дополнительные сведения см. [в статье Просмотр функции активации на основе событий](../../outlook/autolaunch.md#how-to-preview-the-event-based-activation-feature).
+> Активация на основе событий в настоящее время находится [в предварительной](../../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) версии и доступна только в Outlook в Интернете и Windows. Дополнительные сведения см. в [предварительном просмотре функции активации на основе событий.](../../outlook/autolaunch.md#how-to-preview-the-event-based-activation-feature)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,13 +34,13 @@ ms.locfileid: "44611773"
 
 ## <a name="contained-in"></a>Содержится в
 
-[ExtensionPoint](extensionpoint.md) (почтовые надстройки**лаунчевент** )
+[ExtensionPoint](extensionpoint.md) ( Почтовая надстройка **LaunchEvent)**
 
 ## <a name="child-elements"></a>Дочерние элементы
 
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-| [LaunchEvent](launchevent.md) | Да |  Сопоставление поддерживаемого события с функцией в файле JavaScript для активации надстройки. |
+| [LaunchEvent](launchevent.md) | Да |  Соейте поддерживаемые события с его функцией в файле JavaScript для активации надстройки. |
 
 ## <a name="see-also"></a>См. также
 
