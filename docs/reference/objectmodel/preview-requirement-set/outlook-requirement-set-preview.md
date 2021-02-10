@@ -1,14 +1,14 @@
 ---
 title: Предварительная версия набора обязательных элементов API для надстройки Outlook
 description: Функции и API, которые в настоящее время находятся в предварительной версии для надстройки Outlook.
-ms.date: 02/02/2021
+ms.date: 02/05/2021
 localization_priority: Normal
-ms.openlocfilehash: 39dd1221f4dea9674c89cdaad20024ce408f8db3
-ms.sourcegitcommit: 8546889a759590c3798ce56e311d9e46f0171413
+ms.openlocfilehash: 92ba3510af0c8b9ebdf9ca4368c889b821a9cb3b
+ms.sourcegitcommit: 4805454f7fc6c64368a35d014e24075faf3e7557
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "50104842"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "50173957"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Предварительная версия набора обязательных элементов API для надстройки Outlook
 
@@ -22,7 +22,7 @@ ms.locfileid: "50104842"
 > [!TIP]
 > Вы можете просмотреть функции в Outlook в Интернете, настроив целевой выпуск в [клиенте Microsoft 365.](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center) На этой странице отмечена "Настройка доступа к предварительному просмотру" для применимых функций.
 >
-> Для других функций вы можете запросить доступ к битам предварительного просмотра для Outlook в Интернете с помощью учетной записи Microsoft 365, заполнив и передав [эту форму.](https://aka.ms/OWAPreview) Для этих функций отмечена "Запрос предварительного доступа".
+> Для других функций вы можете запросить доступ к битам предварительного просмотра для Outlook в Интернете с помощью учетной записи Microsoft 365, заполнив и передав [эту форму.](https://aka.ms/OWAPreview) Для этих функций отмечено "Запрашивать предварительный доступ".
 
 Набор предварительных требований включает все функции набора требований [1.9.](../requirement-set-1.9/outlook-requirement-set-1.9.md)
 
@@ -30,9 +30,9 @@ ms.locfileid: "50104842"
 
 Ниже перечислены возможности предварительной версии.
 
-### <a name="add-in-activation-on-items-protected-by-information-rights-management-irm"></a>Активация надстройки для элементов, защищенных с помощью управления правами на данные (IRM)
+### <a name="add-in-activation-on-items-protected-by-information-rights-management-irm"></a>Активация надстройки для элементов, защищенных с помощью управления правами на управление правами на данные (IRM)
 
-Надстройки теперь могут активироваться для элементов, защищенных СУИБ. Чтобы включить эту возможность, администратор клиента должен включить право на использование, задав параметр политики "Разрешить программный доступ" `OBJMODEL` в Office.  Дополнительные [сведения см. в](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) описании и правах на использование.
+Теперь надстройки могут активироваться для элементов, защищенных с защитой IRM. Чтобы включить эту возможность, администратор клиента должен включить право на использование, задав параметр политики "Разрешить программный доступ" `OBJMODEL` в Office.  Дополнительные [сведения см. в описании](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) и правах на использование.
 
 **Доступно в**: Outlook для Windows, начиная со сборки 13229.10000 (подключенной к подписке На Microsoft 365)
 
@@ -86,7 +86,7 @@ ms.locfileid: "50104842"
 
 #### <a name="launchevent-extension-point"></a>[Точка расширения LaunchEvent](../../manifest/extensionpoint.md#launchevent-preview)
 
-Добавлена `LaunchEvent` поддержка точек расширения для манифеста. Он настраивает функции активации на основе событий.
+Добавлена `LaunchEvent` поддержка точки расширения для манифеста. Он настраивает функции активации на основе событий.
 
 **Доступно в**: Outlook для Windows (подключенный к подписке Microsoft 365), Outlook в Интернете (современный, [настройка доступа к предварительной версии)](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center)
 
@@ -114,7 +114,7 @@ ms.locfileid: "50104842"
 
 Добавлена новая функция, которая возвращает данные инициализации, передаваемые при [активации надстройки интерактивным сообщением](/outlook/actionable-messages/invoke-add-in-from-actionable-message).
 
-**Доступно в**: Outlook для Windows (подключенный к подписке Microsoft 365), Outlook в Интернете (современный)
+**Доступно в**: Outlook для Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современная версия)
 
 <br>
 
@@ -126,7 +126,7 @@ ms.locfileid: "50104842"
 
 #### <a name="officecontextmailboxitembodysetsignatureasync"></a>[Office.context.mailbox.item.body.setSignatureAsync](/javascript/api/outlook/office.body?view=outlook-js-preview&preserve-view=true#setsignatureasync-data--options--callback-)
 
-Добавлена новая функция для объекта, которая добавляет или заменяет подпись в теле `Body` элемента в режиме compose.
+Добавлена новая функция для объекта, которая добавляет или заменяет подпись в теле `Body` элемента в режиме составить.
 
 **Доступно в**: Outlook для Windows (подключенный к подписке Microsoft 365), Outlook в Интернете (современный, [настройка доступа к предварительной версии)](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center)
 
@@ -162,31 +162,31 @@ ms.locfileid: "50104842"
 
 ### <a name="notification-messages-with-actions"></a>Уведомления с действиями
 
-С помощью этой функции надстройка может добавить уведомление с  дополнительным действием, кроме действия "Отклонять" по умолчанию. В современном Outlook в Интернете эта функция доступна только в режиме составить.
+Эта функция позволяет надстройка включать уведомление с дополнительным действием, кроме действия по умолчанию **"Отклонять".** В современном Outlook в Интернете эта функция доступна только в режиме составить.
 
 #### <a name="officenotificationmessagedetailsactions"></a>[Office.NotificationMessageDetails.actions](/javascript/api/outlook/office.notificationmessagedetails#actions)
 
 Добавлено новое свойство, которое позволяет добавить уведомление `InsightMessage` с помощью дополнительного действия.
 
-**Доступно в**: Outlook для Windows (подключенный к подписке Microsoft 365), Outlook в Интернете (современный)
+**Доступно в**: Outlook для Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современная версия)
 
 #### <a name="officenotificationmessageaction"></a>[Office.NotificationMessageAction](/javascript/api/outlook/office.notificationmessageaction)
 
 Добавлен новый объект, в котором вы определяете дополнительное действие для `InsightMessage` уведомления.
 
-**Доступно в**: Outlook для Windows (подключенный к подписке Microsoft 365), Outlook в Интернете (современный)
+**Доступно в**: Outlook для Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современная версия)
 
 #### <a name="officemailboxenumsactiontype"></a>[Office.MailboxEnums.ActionType](/javascript/api/outlook/office.mailboxenums.actiontype)
 
 Добавлено новое enum `ActionType` .
 
-**Доступно в**: Outlook для Windows (подключенный к подписке Microsoft 365), Outlook в Интернете (современный)
+**Доступно в**: Outlook для Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современная версия)
 
 #### <a name="officemailboxenumsitemnotificationmessagetypeinsightmessage"></a>[Office.MailboxEnums.ItemNotificationMessageType.InsightMessage](/javascript/api/outlook/office.mailboxenums.itemnotificationmessagetype)
 
 Добавлен новый тип `InsightMessage` в `ItemNotificationMessageType` enum.
 
-**Доступно в**: Outlook для Windows (подключенный к подписке Microsoft 365), Outlook в Интернете (современный)
+**Доступно в**: Outlook для Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современная версия)
 
 <br>
 
@@ -220,13 +220,13 @@ ms.locfileid: "50104842"
 
 Добавлен новый объект, который представляет данные сеанса элемента.
 
-**Доступно в**: Outlook для Windows (подключен к подписке На Microsoft 365)
+**Доступно в**: Outlook для Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современная версия)
 
 #### <a name="officecontextmailboxitemsessiondata"></a>[Office.context.mailbox.item.sessionData](office.context.mailbox.item.md#properties)
 
 Добавлено новое свойство для управления данными сеанса элемента в режиме составить.
 
-**Доступно в**: Outlook для Windows (подключен к подписке На Microsoft 365)
+**Доступно в**: Outlook для Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современная версия)
 
 ## <a name="see-also"></a>См. также
 

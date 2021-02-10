@@ -1,14 +1,14 @@
 ---
 title: Создание настраиваемой контекстной вкладки в надстройки Office
 description: Узнайте, как добавлять настраиваемые контекстные вкладки в надстройку Office.
-ms.date: 01/20/2021
+ms.date: 01/29/2021
 localization_priority: Normal
-ms.openlocfilehash: d9258b962c2cfa6aa7e3686087ed8a2e31a7d651
-ms.sourcegitcommit: 6c5716d92312887e3d944bf12d9985560109b3c0
+ms.openlocfilehash: 67588e04d6ea95bc581c51e274c8135cfa5afd50
+ms.sourcegitcommit: 4805454f7fc6c64368a35d014e24075faf3e7557
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "49944314"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "50173922"
 ---
 # <a name="create-custom-contextual-tabs-in-office-add-ins-preview"></a>Создание пользовательских контекстных вкладок в надстройках Office (предварительная версия)
 
@@ -289,7 +289,7 @@ Office.onReady(async () => {
 });
 ```
 
-Затем определите обработчики. Ниже приводится простой пример ошибки `showDataTab` [HostRestartNeeded,](#handling-the-hostrestartneeded-error) но более надежную версию функции см. далее в этой статье. Вот что нужно знать об этом коде:
+Затем определите обработчики. Ниже приводится простой пример ошибки `showDataTab` [HostRestartNeeded,](#handle-the-hostrestartneeded-error) но более надежную версию функции см. далее в этой статье. Вот что нужно знать об этом коде:
 
 - Office определяет время обновления состояния ленты. Метод  [Office.ribbon.requestUpdate](/javascript/api/office/office.ribbon?view=common-js&preserve-view=true#requestupdate-input-) очереди запрос на обновление. Метод разрешит объект сразу после того, как он задюет запрос в очередь, а не при `Promise` обновлении ленты.
 - Параметром метода является объект `requestUpdate` [RibbonUpdaterData,](/javascript/api/office/office.ribbonupdaterdata) который (1) указывает вкладку по ее ИД точно так же, как указано в *JSON* и (2) определяет видимость вкладки.
@@ -428,9 +428,83 @@ function GetContextualTabsJsonSupportedLocale () {
 var contextualTabJSON = GetContextualTabsJsonSupportedLocale();
 ```
 
-## <a name="handling-the-hostrestartneeded-error"></a>Обработка ошибки HostRestartNeeded
+## <a name="best-practices-for-custom-contextual-tabs"></a>Best practices for custom contextual tabs
 
-В некоторых случаях Office не может обновить ленту и возвращает ошибку. Например, если после обновления у надстройки другой набор настраиваемых команд, приложение Office необходимо закрыть и снова открыть. Пока это действие не будет выполнено, метод `requestUpdate` будет возвращать ошибку `HostRestartNeeded`. Ниже приведен пример обработки этой ошибки. В этом случае метод `reportError` выводит сообщение об ошибке для пользователя.
+### <a name="implement-an-alternate-ui-experience-when-custom-contextual-tabs-are-not-supported"></a>Реализация альтернативного интерфейса пользователя, когда настраиваемые контекстные вкладки не поддерживаются
+
+Некоторые сочетания платформы, приложения Office и сборки Office не `requestCreateControls` поддерживаются. Ваша надстройка должна быть разработана для предоставления пользователям, которые запускают надстройки в одной из этих комбинаций. В следующих разделах описаны два способа обеспечения отката.
+
+#### <a name="use-noncontextual-tabs-or-controls"></a>Использование неконтекстуальных вкладок или элементов управления
+
+Существует элемент манифеста [OverriddenByRibbonApi,](../reference/manifest/overriddenbyribbonapi.md)предназначенный для создания отката в надстройке, которая реализует настраиваемые контекстные вкладки, когда надстройка запущена в приложении или платформе, не поддерживаю которой настраиваемые контекстные вкладки. 
+
+Простейшая стратегия использования этого элемента заключается в *том,* что вы определяете в манифесте одну или несколько настраиваемых ядер вкладок (то есть неконтекстуальных настраиваемых вкладок), дублирующих настройки ленты настраиваемых контекстных вкладок в надстройке. Но вы `<OverriddenByRibbonApi>true</OverriddenByRibbonApi>` добавляете в качестве первого потомка элемента [CustomTab.](../reference/manifest/customtab.md) Это может быть следующим образом:
+
+- Если надстройка работает на приложениях и платформах, поддерживаюх настраиваемые контекстные вкладки, настраиваемая основная вкладка не будет отображаться на ленте. Вместо этого настраиваемая контекстная вкладка будет создана, когда надстройка вызывает `requestCreateControls` метод.
+- Если надстройка работает в приложении или платформе, которые не поддерживаются, на ленте появляется настраиваемая вкладка  `requestCreateControls` "Ядро".
+
+Ниже приводится пример этой простой стратегии.
+
+```xml
+<OfficeApp ...>
+  ...
+  <VersionOverrides ...>
+    ...
+    <Hosts>
+      <Host ...>
+        ...
+        <DesktopFormFactor>
+          <ExtensionPoint ...>
+            <CustomTab ...>
+              <OverriddenByRibbonApi>true</OverriddenByRibbonApi>
+              ...
+              <Group ...>
+                ...
+                <Control ... id="MyButton">
+                  ...
+                  <Action ...>
+...
+</OfficeApp>
+```
+
+Эта простая стратегия использует настраиваемую основную вкладку, которая зеркально отражает настраиваемую контекстную вкладку с ее потомками и группами элементов управления, но вы можете использовать более сложную стратегию. Этот элемент также можно добавить как (первый) в элементы Group и Control (тип кнопки и `<OverriddenByRibbonApi>` [тип](../reference/manifest/control.md#menu-dropdown-button-controls)меню) и элементы [](../reference/manifest/group.md) [](../reference/manifest/control.md) [](../reference/manifest/control.md#button-control) `<Item>` меню. Это позволяет распределять группы и элементы управления, которые в противном случае отображаются на контекстной вкладке между различными группами, кнопками и меню на различных настраиваемой вкладке ядра. Ниже приведен пример. Обратите внимание, что MyButton будет отображаться на настраиваемой основной вкладке только в том случае, если настраиваемые контекстные вкладки не поддерживаются. Однако родительская группа и настраиваемая основная вкладка будут отображаться независимо от того, поддерживаются ли настраиваемые контекстные вкладки.
+
+```xml
+<OfficeApp ...>
+  ...
+  <VersionOverrides ...>
+    ...
+    <Hosts>
+      <Host ...>
+        ...
+        <DesktopFormFactor>
+          <ExtensionPoint ...>
+            <CustomTab ...>              
+              ...
+              <Group ...>
+                ...
+                <Control ... id="MyButton">
+                  <OverriddenByRibbonApi>true</OverriddenByRibbonApi>
+                  ...
+                  <Action ...>
+...
+</OfficeApp>
+```
+
+Дополнительные примеры см. в [подразделе OverriddenByRibbonApi.](../reference/manifest/overriddenbyribbonapi.md)
+
+Если родительская вкладка, группа или меню помечены , то она не отображается, а вся ее родительская разметка игнорируется, если настраиваемые контекстные вкладки не `<OverriddenByRibbonApi>true</OverriddenByRibbonApi>` поддерживаются. Поэтому не имеет значения, имеет ли какой-либо из этих элементов элемент `<OverriddenByRibbonApi>` или его значение. Это означает, что если элемент меню, элемент управления или группа должны быть видимыми во всех контекстах, то не только не должен быть помечен, но и его предок меню, группа и вкладка также не должны помечаться таким `<OverriddenByRibbonApi>true</OverriddenByRibbonApi>` образом. 
+
+> [!IMPORTANT]
+> Не *пометить* все элементы вкладки, группы или меню с помощью `<OverriddenByRibbonApi>true</OverriddenByRibbonApi>` . Это не имеет смысла, если родительский элемент помечен по причинам, `<OverriddenByRibbonApi>true</OverriddenByRibbonApi>` заданным в предыдущем абзаце. Кроме того, если не использовать родительский текст (или установить для него его), то родительский будет отображаться независимо от того, поддерживаются ли настраиваемые контекстные вкладки, но он будет пустым при их `<OverriddenByRibbonApi>` `false` поддержке. Таким образом, если при поддержке настраиваемой контекстной вкладки не должны отображаться все эти элементы, пометите родительский элемент и только родительский элемент с помощью `<OverriddenByRibbonApi>true</OverriddenByRibbonApi>` .
+
+#### <a name="use-apis-that-show-or-hide-a-task-pane-in-specified-contexts"></a>Использование API,которые показывают или скрывают области задач в указанных контекстах
+
+В качестве альтернативы надстройка может определить области задач с помощью элементов управления пользовательского интерфейса, дублирующих функции элементов управления на `<OverriddenByRibbonApi>` настраиваемой контекстной вкладке. Затем используйте методы [Office.addin.showAsTaskpane](/javascript/api/office/office.addin?view=common-js&preserve-view=true#showAsTaskpane__) и [Office.addin.hide,](/javascript/api/office/office.addin?view=common-js&preserve-view=true#hide__) чтобы показать область задач, когда и только когда контекстная вкладка была бы показана, если бы она была поддерживается. Дополнительные сведения об использовании этих методов см. в подстройке "Показать" или "Скрыть" области [задач надстройки Office.](../develop/show-hide-add-in.md)
+
+### <a name="handle-the-hostrestartneeded-error"></a>Обработка ошибки HostRestartNeeded
+
+В некоторых случаях Office не может обновить ленту и возвращает ошибку. Например, если после обновления у надстройки другой набор настраиваемых команд, приложение Office необходимо закрыть и снова открыть. Пока это действие не будет выполнено, метод `requestUpdate` будет возвращать ошибку `HostRestartNeeded`. Код должен обработать эту ошибку. Ниже приводится пример того, как это сделать. В этом случае метод `reportError` выводит сообщение об ошибке для пользователя.
 
 ```javascript
 function showDataTab() {

@@ -1,14 +1,14 @@
 ---
 title: Элемент Control в файле манифеста
 description: Определяет функцию JavaScript, которая выполняет действие или открывает область задач.
-ms.date: 01/10/2020
+ms.date: 01/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 820ef39ba2b4ac296e5f5d598d5f45cc2ded701d
-ms.sourcegitcommit: 2f75a37de349251bc0e0fc402c5ae6dc5c3b8b08
+ms.openlocfilehash: 737902bef52edeb70e2c5760df5bb589b624271b
+ms.sourcegitcommit: 4805454f7fc6c64368a35d014e24075faf3e7557
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "49771377"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "50173985"
 ---
 # <a name="control-element"></a>Элемент Control
 
@@ -31,12 +31,13 @@ ms.locfileid: "49771377"
 ### <a name="child-elements"></a>Дочерние элементы
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  **Label**     | Да |  Текст для кнопки. Атрибут **resid** не может быть больше 32 символов и должен иметь значение атрибута **id** элемента **String** в **элементе ShortStrings** в [элементе Resources.](resources.md)        |
+|  **Label**     | Да |  Текст для кнопки. Атрибут **resid** может быть не более 32 символов и должен иметь значение атрибута **id** элемента **String** в **элементе ShortStrings** в [элементе Resources.](resources.md)        |
 |  **ToolTip**    |Нет|Подсказка для кнопки. Атрибут **resid** не может быть больше 32 символов и должен иметь значение атрибута **id** элемента **String.** **String** — это дочерний элемент **LongStrings**, являющийся дочерним для элемента [Resources](resources.md).|        
 |  [Supertip](supertip.md)  | Да |  Суперподсказка для кнопки.    |
 |  [Icon](icon.md)      | Да |  Изображение для кнопки.         |
 |  [Action](action.md)    | Да |  Указание действия, которое предстоит выполнить.  |
 |  [Enabled](enabled.md)    | Нет |  Указывает, включен ли этот контроль при запуске надстройки.  |
+|  [OverriddenByRibbonApi](overriddenbyribbonapi.md)      | Нет |  Указывает, должна ли кнопка отображаться в сочетаниях приложений и платформ, поддерживаюх настраиваемые контекстные вкладки. Если используется, он должен быть *первым элементом.* |
 
 ### <a name="executefunction-button-example"></a>Пример кнопки ExecuteFunction
 
@@ -44,6 +45,7 @@ ms.locfileid: "49771377"
 
 ```xml
 <Control xsi:type="Button" id="msgReadFunctionButton">
+  <OverriddenByRibbonApi>true</OverriddenByRibbonApi>
   <Label resid="funcReadButtonLabel" />
   <Supertip>
     <Title resid="funcReadSuperTipTitle" />
@@ -149,16 +151,18 @@ ms.locfileid: "49771377"
 
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  **Label**     | Да |  Текст для кнопки. Атрибут **resid** не может быть больше 32 символов и должен иметь значение атрибута **id** элемента **String** в **элементе ShortStrings** в [элементе Resources.](resources.md)      |
+|  **Label**     | Да |  Текст для кнопки. Атрибут **resid** может быть не более 32 символов и должен иметь значение атрибута **id** элемента **String** в **элементе ShortStrings** в [элементе Resources.](resources.md)      |
 |  **ToolTip**    |Нет|Подсказка для кнопки. Атрибут **resid** не может быть больше 32 символов и должен иметь значение атрибута **id** элемента **String.** **String** — это дочерний элемент **LongStrings**, являющийся дочерним для элемента [Resources](resources.md).|        
 |  [Supertip](supertip.md)  | Да |  Суперподсказка для кнопки.    |
 |  [Icon](icon.md)      | Да |  Изображение для кнопки.         |
 |  **Items**     | Да |  Коллекция кнопок, отображающихся в меню. Содержит элементы **Item** для каждого элемента подменю. Каждый элемент **Item** содержит дочерние элементы, вложенные в [элемент управления Button](#button-control).|
+|  [OverriddenByRibbonApi](overriddenbyribbonapi.md)      | Нет |  Указывает, должно ли меню отображаться в сочетаниях приложений и платформ, которые поддерживают настраиваемые контекстные вкладки. Если используется, он должен быть *первым элементом.* |
 
 ### <a name="menu-control-examples"></a>Примеры элементов управления Menu
 
 ```xml
 <Control xsi:type="Menu" id="TestMenu2">
+  <OverriddenByRibbonApi>true</OverriddenByRibbonApi>
   <Label resid="residLabel3" />
   <Tooltip resid="residToolTip" />
   <Supertip>
@@ -221,6 +225,7 @@ ms.locfileid: "49771377"
   </Icon>
   <Items>
     <Item id="msgReadMenuItem1">
+      <OverriddenByRibbonApi>true</OverriddenByRibbonApi>
       <Label resid="menuItem1ReadLabel" />
       <Supertip>
         <Title resid="menuItem1ReadLabel" />
@@ -248,7 +253,7 @@ ms.locfileid: "49771377"
 ### <a name="child-elements"></a>Дочерние элементы
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  **Label**     | Да |  Текст для кнопки. Атрибут **resid** не может быть больше 32 символов и должен иметь значение атрибута **id** элемента **String** в **элементе ShortStrings** в [элементе Resources.](resources.md)        |
+|  **Label**     | Да |  Текст для кнопки. Атрибут **resid** может быть не более 32 символов и должен иметь значение атрибута **id** элемента **String** в **элементе ShortStrings** в [элементе Resources.](resources.md)        |
 |  [Icon](icon.md)      | Да |  Изображение для кнопки.         |
 |  [Action](action.md)    | Да |  Указание действия, которое предстоит выполнить.  |
 

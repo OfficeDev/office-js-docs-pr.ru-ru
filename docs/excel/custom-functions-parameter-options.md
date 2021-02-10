@@ -1,14 +1,14 @@
 ---
-ms.date: 12/21/2020
+ms.date: 02/04/2021
 description: Узнайте, как использовать различные параметры в пользовательских функциях, такие как диапазоны Excel, необязательные параметры, контекст вызовов и другие.
 title: Параметры пользовательских функций Excel
 localization_priority: Normal
-ms.openlocfilehash: 312046551236e96e67de6f63f3e3511aba6f50ce
-ms.sourcegitcommit: 48b9c3b63668b2a53ce73f92ce124ca07c5ca68c
+ms.openlocfilehash: afe6947b1a1b9022a0284535b9ab1d68c9777c14
+ms.sourcegitcommit: 4805454f7fc6c64368a35d014e24075faf3e7557
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/28/2020
-ms.locfileid: "49735531"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "50173908"
 ---
 # <a name="custom-functions-parameter-options"></a>Параметры пользовательских функций
 
@@ -261,8 +261,8 @@ function getAddress(first, second, invocation) {
 
 Это полезно в сценариях, где типы входных данных могут отличаться. Адрес входного параметра можно использовать для проверки формата номера входного значения. Формат номера можно при необходимости скорректировать до ввода. Адрес входного параметра также можно использовать, чтобы определить, есть ли у входного значения какие-либо связанные свойства, которые могут быть релевантны для последующих вычислений. 
 
->[!IMPORTANT]
-> В `parameterAddresses` настоящее время свойство работает только с [вручную созданными метаданными JSON.](custom-functions-json.md) Чтобы вернуть адреса параметров, у объекта должно быть задано свойство , а для объекта `options` `requiresParameterAddresses` должно быть `true` `result` `dimensionality` задано свойство `matrix` .
+>[!NOTE]
+> Если вы работаете с вручную созданными метаданными [JSON](custom-functions-json.md) для возврата адресов параметров вместо генератора Yo Office, для объекта должно быть задано свойство , а для объекта должно быть задано свойство `options` `requiresParameterAddresses` `true` `result` `dimensionality` `matrix` .
 
 Следующая пользовательская функция принимает три входных параметра, извлекает свойство объекта для каждого параметра и возвращает `parameterAddresses` `Invocation` адреса. 
 
