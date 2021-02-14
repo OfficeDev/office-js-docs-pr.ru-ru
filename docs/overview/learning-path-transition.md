@@ -4,12 +4,12 @@ description: Рекомендуемый путь для опытных разр�
 ms.date: 10/14/2020
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 1dca15a4d286e3bfa5b7ba4a502bb9161bf3257f
-ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
+ms.openlocfilehash: 6da72dbdc5dc25d222cc7c2a269d905d9271ce15
+ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "48741066"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "50238017"
 ---
 # <a name="vsto-add-in-developers-guide"></a>Руководство для разработчиков надстроек VSTO
 

@@ -3,12 +3,12 @@ title: Проверка подлинности и авторизация с по
 description: Узнайте, как использовать диалоговый API-интерфейс Office, чтобы пользователи могли входить в Google, Facebook, Microsoft 365 и другие службы, защищенные платформой Microsoft Identity.
 ms.date: 09/24/2020
 localization_priority: Priority
-ms.openlocfilehash: 195b17d81a7a6c6de1930d3fc8710f0fce153e9f
-ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
+ms.openlocfilehash: 1d7bb4fc6828ffeb339fc6ff053d8ba99c73f582
+ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49131933"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "50237877"
 ---
 # <a name="authenticate-and-authorize-with-the-office-dialog-api"></a>Проверка подлинности и авторизация с помощью Dialog API для Office
 

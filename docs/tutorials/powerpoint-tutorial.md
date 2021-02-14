@@ -1,15 +1,15 @@
 ---
 title: Руководство по надстройкам PowerPoint
 description: В этом руководстве вы создадите надстройку PowerPoint, которая вставляет изображение, вставляет текст, получает метаданные слайда и перемещается между слайдами.
-ms.date: 10/14/2020
+ms.date: 02/09/2021
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: 72b7abb8f67ad634025abd80b5bc9bb987ff6868
-ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
+ms.openlocfilehash: 35359f58831ebd4b8874247378a09e9da97e4d69
+ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49132377"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "50238080"
 ---
 # <a name="tutorial-create-a-powerpoint-task-pane-add-in"></a>Учебник: Создание надстройки области задач PowerPoint
 
@@ -243,7 +243,7 @@ ms.locfileid: "49132377"
 
 1. В файле **Home.html** замените `TODO2` приведенным ниже кодом, чтобы добавить раздел верхнего колонтитула и заголовок в область задач. Примечание.
 
-    - Стили, которые начинаются с `ms-`, относятся к стилям [Office UI Fabric](../design/office-ui-fabric.md), интерфейсной платформы JavaScript для создания функциональных возможностей Office и Office 365. Файл **Home.html** включает ссылку на таблицу стилей Fabric.
+    - Стили, которые начинаются с `ms-`, относятся к стилям [Office UI Fabric](../design/office-ui-fabric.md), интерфейсной платформы JavaScript для создания функциональных возможностей Office. Файл **Home.html** включает ссылку на таблицу стилей Fabric.
 
     ```html
     <div id="content-header">
