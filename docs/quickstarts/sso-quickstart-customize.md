@@ -1,111 +1,111 @@
 ---
 title: Настройка надстройки Node.js с поддержкой единого входа
-description: Сведения о настройке надстройки с поддержкой единого входа, созданной с помощью генератора Yeoman.
-ms.date: 09/09/2020
+description: Узнайте о настройке надстройки с поддержкой SSO, созданной с помощью генератора Yeoman.
+ms.date: 02/01/2021
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: cc13d813e6d46296f5557d4e3374fa67aa51bc65
-ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
+ms.openlocfilehash: 174df5e58e794b94b02025bd90a65f5ae8e26d44
+ms.sourcegitcommit: fefc279b85e37463413b6b0e84c880d9ed5d7ac3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49132335"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50234172"
 ---
-# <a name="customize-your-nodejs-sso-enabled-add-in"></a><span data-ttu-id="9457d-103">Настройка надстройки Node.js с поддержкой единого входа</span><span class="sxs-lookup"><span data-stu-id="9457d-103">Customize your Node.js SSO-enabled add-in</span></span>
+# <a name="customize-your-nodejs-sso-enabled-add-in"></a><span data-ttu-id="b2cf2-103">Настройка надстройки Node.js с поддержкой единого входа</span><span class="sxs-lookup"><span data-stu-id="b2cf2-103">Customize your Node.js SSO-enabled add-in</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="9457d-104">Эта статья основана на надстройке с поддержкой единого входа, которая создается с помощью краткого руководства по выполнению [единого входа (SSO)](sso-quickstart.md).</span><span class="sxs-lookup"><span data-stu-id="9457d-104">This article builds upon the SSO-enabled add-in that's created by completing the [single sign-on (SSO) quick start](sso-quickstart.md).</span></span> <span data-ttu-id="9457d-105">Прежде чем приступить к чтению этой статьи, заполните краткое руководство.</span><span class="sxs-lookup"><span data-stu-id="9457d-105">Please complete the quick start before reading this article.</span></span>
+> <span data-ttu-id="b2cf2-104">Эта статья создана на основе надстройки с поддержкой единого входа, созданной путем быстрого запуска [единого входа.](sso-quickstart.md)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-104">This article builds upon the SSO-enabled add-in that's created by completing the [single sign-on (SSO) quick start](sso-quickstart.md).</span></span> <span data-ttu-id="b2cf2-105">Прежде чем прочитать эту статью, выполните краткое начало работы.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-105">Please complete the quick start before reading this article.</span></span>
 
-<span data-ttu-id="9457d-106">[Быстрый запуск единого входа](sso-quickstart.md) создает надстройку с включенной поддержкой единого входа, которая получает данные профиля пользователя, выполнившего вход, и записывает их в документ или сообщение.</span><span class="sxs-lookup"><span data-stu-id="9457d-106">The [SSO quick start](sso-quickstart.md) creates an SSO-enabled add-in that gets the signed-in user's profile information and writes it to the document or message.</span></span> <span data-ttu-id="9457d-107">В этой статье описывается процесс обновления надстройки, созданной с помощью генератора Yeoman в быстром запуске единого входа, для добавления новых функциональных возможностей, требующих других разрешений.</span><span class="sxs-lookup"><span data-stu-id="9457d-107">In this article, you'll walk through the process of updating the add-in that you created with the Yeoman generator in the SSO quick start, to add new functionality that requires different permissions.</span></span>
+<span data-ttu-id="b2cf2-106">В кратком начале [SSO](sso-quickstart.md) создается надстройка с поддержкой SSO, которая получает данные профиля во включенного пользователя и записывает их в документ или сообщение.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-106">The [SSO quick start](sso-quickstart.md) creates an SSO-enabled add-in that gets the signed-in user's profile information and writes it to the document or message.</span></span> <span data-ttu-id="b2cf2-107">В этой статье вы разберемся в процессе обновления надстройки, созданной с помощью генератора Yeoman в кратком запуске SSO, чтобы добавить новые функции, требуя различных разрешений.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-107">In this article, you'll walk through the process of updating the add-in that you created with the Yeoman generator in the SSO quick start, to add new functionality that requires different permissions.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="9457d-108">Предварительные условия</span><span class="sxs-lookup"><span data-stu-id="9457d-108">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="b2cf2-108">Предварительные условия</span><span class="sxs-lookup"><span data-stu-id="b2cf2-108">Prerequisites</span></span>
 
-- <span data-ttu-id="9457d-109">Надстройка Office, созданная в соответствии с инструкциями, приведенными в [кратком](sso-quickstart.md)руководстве по SSO.</span><span class="sxs-lookup"><span data-stu-id="9457d-109">An Office Add-in that you created by following the instructions in the [SSO quick start](sso-quickstart.md).</span></span>
+- <span data-ttu-id="b2cf2-109">Надстройка Office, созданная с помощью инструкций в кратком начале службы [SSO.](sso-quickstart.md)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-109">An Office Add-in that you created by following the instructions in the [SSO quick start](sso-quickstart.md).</span></span>
 
-- <span data-ttu-id="9457d-110">По крайней мере несколько файлов и папок хранятся в OneDrive для бизнеса в вашей подписке на Microsoft 365.</span><span class="sxs-lookup"><span data-stu-id="9457d-110">At least a few files and folders stored on OneDrive for Business in your Microsoft 365 subscription.</span></span>
+- <span data-ttu-id="b2cf2-110">По крайней мере несколько файлов и папок, хранимые в OneDrive для бизнеса в вашей подписке на Microsoft 365.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-110">At least a few files and folders stored on OneDrive for Business in your Microsoft 365 subscription.</span></span>
 
-- <span data-ttu-id="9457d-111">[Node.js](https://nodejs.org) (последняя версия [LTS](https://nodejs.org/about/releases)).</span><span class="sxs-lookup"><span data-stu-id="9457d-111">[Node.js](https://nodejs.org) (the latest [LTS](https://nodejs.org/about/releases) version).</span></span>
+- <span data-ttu-id="b2cf2-111">[Node.js](https://nodejs.org) (последняя версия [LTS](https://nodejs.org/about/releases)).</span><span class="sxs-lookup"><span data-stu-id="b2cf2-111">[Node.js](https://nodejs.org) (the latest [LTS](https://nodejs.org/about/releases) version).</span></span>
 
 [!include[additional prerequisites](../includes/sso-tutorial-prereqs.md)]
 
-## <a name="review-contents-of-the-project"></a><span data-ttu-id="9457d-112">Просмотр содержимого проекта</span><span class="sxs-lookup"><span data-stu-id="9457d-112">Review contents of the project</span></span>
+## <a name="review-contents-of-the-project"></a><span data-ttu-id="b2cf2-112">Просмотр содержимого проекта</span><span class="sxs-lookup"><span data-stu-id="b2cf2-112">Review contents of the project</span></span>
 
-<span data-ttu-id="9457d-113">Начнем с краткого обзора проекта надстройки, [созданного ранее с помощью генератора Yeoman](sso-quickstart.md).</span><span class="sxs-lookup"><span data-stu-id="9457d-113">Let's begin with a quick review of the add-in project that you previously [created with the Yeoman generator](sso-quickstart.md).</span></span>
+<span data-ttu-id="b2cf2-113">Начнем с краткого просмотра проекта надстройки, который вы ранее создали [с помощью генератора Yeoman.](sso-quickstart.md)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-113">Let's begin with a quick review of the add-in project that you previously [created with the Yeoman generator](sso-quickstart.md).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="9457d-114">В местах, где эта статья ссылается на файлы сценариев с использованием расширения **JS** , вместо этого следует использовать расширение **TS** , если проект был создан с помощью TypeScript.</span><span class="sxs-lookup"><span data-stu-id="9457d-114">In places where this article references script files using **.js** file extension, assume the **.ts** file extension instead if your project was created with TypeScript.</span></span>
+> <span data-ttu-id="b2cf2-114">В тех местах, где эта статья ссылается на файлы скриптов с расширением **JS,** предположим, что расширение **TS** файла, если ваш проект был создан с помощью TypeScript.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-114">In places where this article references script files using **.js** file extension, assume the **.ts** file extension instead if your project was created with TypeScript.</span></span>
 
 [!include[project structure for an SSO-enabled add-in created with the Yeoman generator](../includes/sso-yeoman-project-structure.md)]
 
-## <a name="add-new-functionality"></a><span data-ttu-id="9457d-115">Добавление новых функциональных возможностей</span><span class="sxs-lookup"><span data-stu-id="9457d-115">Add new functionality</span></span>
+## <a name="add-new-functionality"></a><span data-ttu-id="b2cf2-115">Добавление новых функций</span><span class="sxs-lookup"><span data-stu-id="b2cf2-115">Add new functionality</span></span>
 
-<span data-ttu-id="9457d-116">Надстройка, созданная с помощью быстрого запуска единого входа, использует Microsoft Graph для получения сведений о профиле пользователя, выполнившего вход, и записывает эти сведения в документ или сообщение.</span><span class="sxs-lookup"><span data-stu-id="9457d-116">The add-in that you created with the SSO quick start uses Microsoft Graph to get the signed-in user's profile information and writes that information to the document or message.</span></span> <span data-ttu-id="9457d-117">Теперь изменим функциональные возможности надстройки, чтобы она выводила имена 10 файлов и папок из OneDrive для бизнеса пользователя, выполнившего вход, и записывает эти сведения в документ или сообщение.</span><span class="sxs-lookup"><span data-stu-id="9457d-117">Let's change the add-in's functionality such that it gets the names of the top 10 files and folders from the signed-in user's OneDrive for Business and writes that information to the document or message.</span></span> <span data-ttu-id="9457d-118">Для этого требуется обновление разрешений приложений в Azure и обновление кода в проекте надстройки.</span><span class="sxs-lookup"><span data-stu-id="9457d-118">Enabling this new functionality requires updating app permissions in Azure and updating code within the add-in project.</span></span>
+<span data-ttu-id="b2cf2-116">Надстройка, созданная с помощью краткого запуска службы SSO, использует Microsoft Graph для получения сведений о профиле во пользователя и записи этих сведений в документ или сообщение.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-116">The add-in that you created with the SSO quick start uses Microsoft Graph to get the signed-in user's profile information and writes that information to the document or message.</span></span> <span data-ttu-id="b2cf2-117">Давайте изменим функции надстройки так, чтобы она получила имена 10 самых 10 файлов и папок из OneDrive для бизнеса во пользователя, выписав эти сведения в документ или сообщение.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-117">Let's change the add-in's functionality such that it gets the names of the top 10 files and folders from the signed-in user's OneDrive for Business and writes that information to the document or message.</span></span> <span data-ttu-id="b2cf2-118">Для включения этой новой функции требуется обновление разрешений приложения в Azure и обновление кода в проекте надстройки.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-118">Enabling this new functionality requires updating app permissions in Azure and updating code within the add-in project.</span></span>
 
-### <a name="update-app-permissions-in-azure"></a><span data-ttu-id="9457d-119">Обновление разрешений приложения в Azure</span><span class="sxs-lookup"><span data-stu-id="9457d-119">Update app permissions in Azure</span></span>
+### <a name="update-app-permissions-in-azure"></a><span data-ttu-id="b2cf2-119">Обновление разрешений приложения в Azure</span><span class="sxs-lookup"><span data-stu-id="b2cf2-119">Update app permissions in Azure</span></span>
 
-<span data-ttu-id="9457d-120">Прежде чем надстройка сможет успешно прочитать содержимое OneDrive для бизнеса пользователя, ее регистрационная информация в Azure должна быть обновлена с соответствующими разрешениями.</span><span class="sxs-lookup"><span data-stu-id="9457d-120">Before the add-in can successfully read the contents of the user's OneDrive for Business, its app registration information in Azure must be updated with the appropriate permissions.</span></span> <span data-ttu-id="9457d-121">Выполните следующие действия, чтобы предоставить приложению разрешение **Files. Read. ALL** и отозвать разрешение **User.** Read. ALL, что больше не требуется.</span><span class="sxs-lookup"><span data-stu-id="9457d-121">Complete the following steps to grant the app the **Files.Read.All** permission and revoke the **User.Read** permission, which is no longer needed.</span></span>
+<span data-ttu-id="b2cf2-120">Прежде чем надстройка сможет успешно прочитать содержимое OneDrive для бизнеса пользователя, сведения о регистрации ее приложений в Azure должны быть обновлены с соответствующими разрешениями.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-120">Before the add-in can successfully read the contents of the user's OneDrive for Business, its app registration information in Azure must be updated with the appropriate permissions.</span></span> <span data-ttu-id="b2cf2-121">Выполните следующие действия, чтобы предоставить приложению разрешение **Files.Read.All** и отопросить разрешение **User.Read,** которое больше не требуется.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-121">Complete the following steps to grant the app the **Files.Read.All** permission and revoke the **User.Read** permission, which is no longer needed.</span></span>
 
-1. <span data-ttu-id="9457d-122">Перейдите на [портал Azure](https://ms.portal.azure.com/#home) и **Войдите в систему, используя учетные данные администратора Microsoft 365**.</span><span class="sxs-lookup"><span data-stu-id="9457d-122">Navigate to the [Azure portal](https://ms.portal.azure.com/#home) and **sign in using your Microsoft 365 administrator credentials**.</span></span>
+1. <span data-ttu-id="b2cf2-122">Перейдите на [портал Azure и](https://ms.portal.azure.com/#home) войдите, используя учетные данные администратора Microsoft **365.**</span><span class="sxs-lookup"><span data-stu-id="b2cf2-122">Navigate to the [Azure portal](https://ms.portal.azure.com/#home) and **sign in using your Microsoft 365 administrator credentials**.</span></span>
 
-2. <span data-ttu-id="9457d-123">Перейдите на страницу **регистрации приложений** .</span><span class="sxs-lookup"><span data-stu-id="9457d-123">Navigate to the **App registrations** page.</span></span>
+2. <span data-ttu-id="b2cf2-123">Перейдите на **страницу регистрации** приложений.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-123">Navigate to the **App registrations** page.</span></span>
     > [!TIP]
-    > <span data-ttu-id="9457d-124">Это можно сделать, выбрав плитку **регистрации приложений** на домашней странице Azure или воспользовавшись полем поиска на домашней странице, чтобы найти и выбрать **регистрации приложений**.</span><span class="sxs-lookup"><span data-stu-id="9457d-124">You can do this either by choosing the **App registrations** tile on the Azure home page or by using the search box on the home page to find and choose **App registrations**.</span></span>
+    > <span data-ttu-id="b2cf2-124">Это можно сделать, выбрав  плитку регистрации приложений на домашней странице Azure или используя поле поиска на домашней странице, чтобы найти и выбрать регистрацию **приложений.**</span><span class="sxs-lookup"><span data-stu-id="b2cf2-124">You can do this either by choosing the **App registrations** tile on the Azure home page or by using the search box on the home page to find and choose **App registrations**.</span></span>
 
-3. <span data-ttu-id="9457d-125">На странице **регистрации приложений** выберите приложение, созданное на этапе быстрого запуска.</span><span class="sxs-lookup"><span data-stu-id="9457d-125">On the **App registrations** page, choose the app that you created during the quick start.</span></span>
+3. <span data-ttu-id="b2cf2-125">На странице **регистрации приложений** выберите приложение, созданное во время краткого запуска.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-125">On the **App registrations** page, choose the app that you created during the quick start.</span></span>
     > [!TIP]
-    > <span data-ttu-id="9457d-126">**Отображаемое имя** приложения будет соответствующим имени надстройки, которое вы указали при создании проекта с помощью генератора Yeoman.</span><span class="sxs-lookup"><span data-stu-id="9457d-126">The **Display name** of the app will match the add-in name that you specified when you created the project with the Yeoman generator.</span></span>
+    > <span data-ttu-id="b2cf2-126">**Отображаемая имя** приложения будет совпадать с именем надстройки, которое вы указали при создания проекта с помощью генератора Yeoman.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-126">The **Display name** of the app will match the add-in name that you specified when you created the project with the Yeoman generator.</span></span>
 
-4. <span data-ttu-id="9457d-127">На странице "Обзор приложения" выберите **разрешения API** в разделе **Управление** заголовком в левой части страницы.</span><span class="sxs-lookup"><span data-stu-id="9457d-127">From the app overview page, choose **API permissions** under the **Manage** heading on the left side of the page.</span></span>
+4. <span data-ttu-id="b2cf2-127">На странице обзора приложения выберите **разрешения API** под заголовком **"Управление"** в левой части страницы.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-127">From the app overview page, choose **API permissions** under the **Manage** heading on the left side of the page.</span></span>
 
-5. <span data-ttu-id="9457d-128">В строке **User. Read** таблицы Permissions нажмите кнопку с многоточием, а затем выберите **отозвать согласие администратора** из появившегося меню.</span><span class="sxs-lookup"><span data-stu-id="9457d-128">In the **User.Read** row of the permissions table, choose the ellipsis and then select **Revoke admin consent** from the menu that appears.</span></span>
+5. <span data-ttu-id="b2cf2-128">В **строке User.Read** таблицы разрешений выберите многоточки,  а затем выберите "Отопросить согласие администратора" в отображатом меню.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-128">In the **User.Read** row of the permissions table, choose the ellipsis and then select **Revoke admin consent** from the menu that appears.</span></span>
 
-6. <span data-ttu-id="9457d-129">Нажмите кнопку **Да, удалить** в ответ на отображаемый запрос.</span><span class="sxs-lookup"><span data-stu-id="9457d-129">Select the **Yes, remove** button in response to the prompt that's displayed.</span></span>
+6. <span data-ttu-id="b2cf2-129">Выберите **кнопку "Да", "Удалить"** в ответ на отображаемую подсказку.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-129">Select the **Yes, remove** button in response to the prompt that's displayed.</span></span>
 
-7. <span data-ttu-id="9457d-130">В строке **User. Read** таблицы Permissions нажмите кнопку с многоточием, а затем выберите пункт **удалить разрешение** из появившегося меню.</span><span class="sxs-lookup"><span data-stu-id="9457d-130">In the **User.Read** row of the permissions table, choose the ellipsis and then select **Remove permission** from the menu that appears.</span></span>
+7. <span data-ttu-id="b2cf2-130">В **строке User.Read** таблицы разрешений выберите многоточки,  а затем выберите "Удалить разрешение" в меню.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-130">In the **User.Read** row of the permissions table, choose the ellipsis and then select **Remove permission** from the menu that appears.</span></span>
 
-8. <span data-ttu-id="9457d-131">Нажмите кнопку **Да, удалить** в ответ на отображаемый запрос.</span><span class="sxs-lookup"><span data-stu-id="9457d-131">Select the **Yes, remove** button in response to the prompt that's displayed.</span></span>
+8. <span data-ttu-id="b2cf2-131">Выберите **кнопку "Да", "Удалить"** в ответ на отображаемую подсказку.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-131">Select the **Yes, remove** button in response to the prompt that's displayed.</span></span>
 
-9. <span data-ttu-id="9457d-132">Нажмите кнопку **Добавить разрешение** .</span><span class="sxs-lookup"><span data-stu-id="9457d-132">Select the **Add a permission** button.</span></span>
+9. <span data-ttu-id="b2cf2-132">Выберите **кнопку "Добавить разрешение".**</span><span class="sxs-lookup"><span data-stu-id="b2cf2-132">Select the **Add a permission** button.</span></span>
 
-10. <span data-ttu-id="9457d-133">В открывшейся панели выберите **Microsoft Graph** , а затем — **делегированные разрешения**.</span><span class="sxs-lookup"><span data-stu-id="9457d-133">On the panel that opens choose **Microsoft Graph** and then choose **Delegated permissions**.</span></span>
+10. <span data-ttu-id="b2cf2-133">На открываемой панели выберите **Microsoft Graph,** а затем выберите "Делегирование **разрешений".**</span><span class="sxs-lookup"><span data-stu-id="b2cf2-133">On the panel that opens choose **Microsoft Graph** and then choose **Delegated permissions**.</span></span>
 
-11. <span data-ttu-id="9457d-134">На панели **разрешений API запроса** выполните следующие действия:</span><span class="sxs-lookup"><span data-stu-id="9457d-134">On the **Request API permissions** panel:</span></span>
+11. <span data-ttu-id="b2cf2-134">На панели **разрешений API запросов:**</span><span class="sxs-lookup"><span data-stu-id="b2cf2-134">On the **Request API permissions** panel:</span></span>
 
-    <span data-ttu-id="9457d-135">а)</span><span class="sxs-lookup"><span data-stu-id="9457d-135">a.</span></span> <span data-ttu-id="9457d-136">В разделе **файлы** выберите **файлы. Read. ALL**.</span><span class="sxs-lookup"><span data-stu-id="9457d-136">Under **Files**, select **Files.Read.All**.</span></span>
+    <span data-ttu-id="b2cf2-135">а.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-135">a.</span></span> <span data-ttu-id="b2cf2-136">Under **Files**, select **Files.Read.All**.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-136">Under **Files**, select **Files.Read.All**.</span></span>
 
-    <span data-ttu-id="9457d-137">б)</span><span class="sxs-lookup"><span data-stu-id="9457d-137">b.</span></span> <span data-ttu-id="9457d-138">Нажмите кнопку **Добавить разрешения** в нижней части панели, чтобы сохранить изменения этих разрешений.</span><span class="sxs-lookup"><span data-stu-id="9457d-138">Select the **Add permissions** button at the bottom of the panel to save these permissions changes.</span></span>
+    <span data-ttu-id="b2cf2-137">б.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-137">b.</span></span> <span data-ttu-id="b2cf2-138">Выберите **кнопку "Добавить разрешения"** в нижней части панели, чтобы сохранить эти изменения разрешений.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-138">Select the **Add permissions** button at the bottom of the panel to save these permissions changes.</span></span>
 
-12. <span data-ttu-id="9457d-139">Нажмите кнопку **предоставить согласие администратора для пользователя [имя клиента]** .</span><span class="sxs-lookup"><span data-stu-id="9457d-139">Select the **Grant admin consent for [tenant name]** button.</span></span>
+12. <span data-ttu-id="b2cf2-139">Выберите **кнопку "Предоставить согласие администратора для [имя клиента]".**</span><span class="sxs-lookup"><span data-stu-id="b2cf2-139">Select the **Grant admin consent for [tenant name]** button.</span></span>
 
-13. <span data-ttu-id="9457d-140">Нажмите кнопку **Да** в ответ на отображаемый запрос.</span><span class="sxs-lookup"><span data-stu-id="9457d-140">Select the **Yes** button in response to the prompt that's displayed.</span></span>
+13. <span data-ttu-id="b2cf2-140">Выберите **кнопку "Да"** в ответ на отображаемую подсказку.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-140">Select the **Yes** button in response to the prompt that's displayed.</span></span>
 
-### <a name="update-code-in-the-add-in-project"></a><span data-ttu-id="9457d-141">Обновление кода в проекте надстройки</span><span class="sxs-lookup"><span data-stu-id="9457d-141">Update code in the add-in project</span></span>
+### <a name="update-code-in-the-add-in-project"></a><span data-ttu-id="b2cf2-141">Обновление кода в проекте надстройки</span><span class="sxs-lookup"><span data-stu-id="b2cf2-141">Update code in the add-in project</span></span>
 
-<span data-ttu-id="9457d-142">Чтобы надстройка прочитала содержимое OneDrive для бизнеса пользователя, выполнившего вход, необходимо выполнить следующие действия:</span><span class="sxs-lookup"><span data-stu-id="9457d-142">To enable the add-in to read contents of the signed-in user's OneDrive for Business, you'll need to:</span></span>
+<span data-ttu-id="b2cf2-142">Чтобы надстройка считывала содержимое OneDrive для бизнеса во выгрузаемого пользователя, необходимо:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-142">To enable the add-in to read contents of the signed-in user's OneDrive for Business, you'll need to:</span></span>
 
-- <span data-ttu-id="9457d-143">Обновите код, ссылающийся на URL-адрес, параметры и требуемую область доступа Microsoft Graph.</span><span class="sxs-lookup"><span data-stu-id="9457d-143">Update the code that references the Microsoft Graph URL, parameters, and required access scope.</span></span>
+- <span data-ttu-id="b2cf2-143">Обновим код, который ссылается на URL-адрес Microsoft Graph, параметры и требуемую область доступа.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-143">Update the code that references the Microsoft Graph URL, parameters, and required access scope.</span></span>
 
-- <span data-ttu-id="9457d-144">Обновите код, определяющий пользовательский интерфейс области задач, чтобы он точно описывает новые функциональные возможности.</span><span class="sxs-lookup"><span data-stu-id="9457d-144">Update the code that defines the task pane UI, so that it accurately describes the new functionality.</span></span>
+- <span data-ttu-id="b2cf2-144">Обновите код, который определяет пользовательский интерфейс области задач, чтобы он точно описывал новые функции.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-144">Update the code that defines the task pane UI, so that it accurately describes the new functionality.</span></span>
 
-- <span data-ttu-id="9457d-145">Обновление кода, который анализирует отклик от Microsoft Graph и записывает его в документ или сообщение.</span><span class="sxs-lookup"><span data-stu-id="9457d-145">Update the code that parses the response from Microsoft Graph and writes it to the document or message.</span></span>
+- <span data-ttu-id="b2cf2-145">Обновите код, который проансирует ответ из Microsoft Graph и записывает его в документ или сообщение.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-145">Update the code that parses the response from Microsoft Graph and writes it to the document or message.</span></span>
 
-<span data-ttu-id="9457d-146">Эти обновления описываются в следующих шагах.</span><span class="sxs-lookup"><span data-stu-id="9457d-146">The following steps describe these updates.</span></span>
+<span data-ttu-id="b2cf2-146">Эти обновления описаны в следующих шагах.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-146">The following steps describe these updates.</span></span>
 
-### <a name="changes-required-for-any-type-of-add-in"></a><span data-ttu-id="9457d-147">Изменения, необходимые для любого типа надстройки</span><span class="sxs-lookup"><span data-stu-id="9457d-147">Changes required for any type of add-in</span></span>
+### <a name="changes-required-for-any-type-of-add-in"></a><span data-ttu-id="b2cf2-147">Изменения, необходимые для любого типа надстройки</span><span class="sxs-lookup"><span data-stu-id="b2cf2-147">Changes required for any type of add-in</span></span>
 
-<span data-ttu-id="9457d-148">Выполните следующие действия для надстройки, чтобы изменить URL-адрес, параметры и область доступа Microsoft Graph, а также обновить пользовательский интерфейс области задач.</span><span class="sxs-lookup"><span data-stu-id="9457d-148">Complete the following steps for your add-in, to change the Microsoft Graph URL, parameters, and access scope, and update the task pane UI.</span></span> <span data-ttu-id="9457d-149">Эти действия одинаковы, независимо от того, какое приложение Office является целью надстройки.</span><span class="sxs-lookup"><span data-stu-id="9457d-149">These steps are the same, regardless of which Office application your add-in targets.</span></span>
+<span data-ttu-id="b2cf2-148">Выполните следующие действия для надстройки, чтобы изменить URL-адрес Microsoft Graph, параметры и область доступа, а также обновить пользовательский интерфейс области задач.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-148">Complete the following steps for your add-in, to change the Microsoft Graph URL, parameters, and access scope, and update the task pane UI.</span></span> <span data-ttu-id="b2cf2-149">Эти действия одинаковы независимо от того, какое приложение Office будет целевым для надстройки.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-149">These steps are the same, regardless of which Office application your add-in targets.</span></span>
 
-1. <span data-ttu-id="9457d-150">В файле **./. ENV** :</span><span class="sxs-lookup"><span data-stu-id="9457d-150">In the **./.ENV** file:</span></span>
+1. <span data-ttu-id="b2cf2-150">В **./. ENV-файл:**</span><span class="sxs-lookup"><span data-stu-id="b2cf2-150">In the **./.ENV** file:</span></span>
 
-    <span data-ttu-id="9457d-151">а)</span><span class="sxs-lookup"><span data-stu-id="9457d-151">a.</span></span> <span data-ttu-id="9457d-152">Замените `GRAPH_URL_SEGMENT=/me` на следующий: `GRAPH_URL_SEGMENT=/me/drive/root/children`</span><span class="sxs-lookup"><span data-stu-id="9457d-152">Replace `GRAPH_URL_SEGMENT=/me` with the following: `GRAPH_URL_SEGMENT=/me/drive/root/children`</span></span>
+    <span data-ttu-id="b2cf2-151">а.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-151">a.</span></span> <span data-ttu-id="b2cf2-152">Замените `GRAPH_URL_SEGMENT=/me` следующим образом: `GRAPH_URL_SEGMENT=/me/drive/root/children`</span><span class="sxs-lookup"><span data-stu-id="b2cf2-152">Replace `GRAPH_URL_SEGMENT=/me` with the following: `GRAPH_URL_SEGMENT=/me/drive/root/children`</span></span>
 
-    <span data-ttu-id="9457d-153">б)</span><span class="sxs-lookup"><span data-stu-id="9457d-153">b.</span></span> <span data-ttu-id="9457d-154">Замените `QUERY_PARAM_SEGMENT=` на следующий: `QUERY_PARAM_SEGMENT=?$select=name&$top=10`</span><span class="sxs-lookup"><span data-stu-id="9457d-154">Replace `QUERY_PARAM_SEGMENT=` with the following: `QUERY_PARAM_SEGMENT=?$select=name&$top=10`</span></span>
+    <span data-ttu-id="b2cf2-153">б.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-153">b.</span></span> <span data-ttu-id="b2cf2-154">Замените `QUERY_PARAM_SEGMENT=` следующим образом: `QUERY_PARAM_SEGMENT=?$select=name&$top=10`</span><span class="sxs-lookup"><span data-stu-id="b2cf2-154">Replace `QUERY_PARAM_SEGMENT=` with the following: `QUERY_PARAM_SEGMENT=?$select=name&$top=10`</span></span>
 
-    <span data-ttu-id="9457d-155">в.</span><span class="sxs-lookup"><span data-stu-id="9457d-155">c.</span></span> <span data-ttu-id="9457d-156">Замените `SCOPE=User.Read` на следующий: `SCOPE=Files.Read.All`</span><span class="sxs-lookup"><span data-stu-id="9457d-156">Replace `SCOPE=User.Read` with the following: `SCOPE=Files.Read.All`</span></span>
+    <span data-ttu-id="b2cf2-155">в.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-155">c.</span></span> <span data-ttu-id="b2cf2-156">Замените `SCOPE=User.Read` следующим образом: `SCOPE=Files.Read.All`</span><span class="sxs-lookup"><span data-stu-id="b2cf2-156">Replace `SCOPE=User.Read` with the following: `SCOPE=Files.Read.All`</span></span>
 
-2. <span data-ttu-id="9457d-157">В **manifest.xml** найдите строку `<Scope>User.Read</Scope>` около конца файла и замените ее на строку `<Scope>Files.Read.All</Scope>` .</span><span class="sxs-lookup"><span data-stu-id="9457d-157">In **./manifest.xml**, find the line `<Scope>User.Read</Scope>` near the end of the file and replace it with the line `<Scope>Files.Read.All</Scope>`.</span></span>
+2. <span data-ttu-id="b2cf2-157">В **./manifest.xml** найдите строку в конце файла и замените ее `<Scope>User.Read</Scope>` `<Scope>Files.Read.All</Scope>` строкой.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-157">In **./manifest.xml**, find the line `<Scope>User.Read</Scope>` near the end of the file and replace it with the line `<Scope>Files.Read.All</Scope>`.</span></span>
 
-3. <span data-ttu-id="9457d-158">В **/срк/хелперс/fallbackauthdialog.js** (или в **/СРК/Хелперс/фаллбаккаусдиалог.ТС** для проекта TypeScript) найдите строку `https://graph.microsoft.com/User.Read` и замените ее строкой `https://graph.microsoft.com/Files.Read.All` , которая `requestObj` определяется следующим образом:</span><span class="sxs-lookup"><span data-stu-id="9457d-158">In **./src/helpers/fallbackauthdialog.js** (or in **./src/helpers/fallbackauthdialog.ts** for a TypeScript project), find the string `https://graph.microsoft.com/User.Read` and replace it with the string `https://graph.microsoft.com/Files.Read.All`, such that `requestObj` is defined as follows:</span></span>
+3. <span data-ttu-id="b2cf2-158">В **./src/helpers/fallbackauthdialog.js** (или в **./src/helpers/fallbackauthdialog.ts для** проекта TypeScript) найдите строку и замените ее строкой, которая определяется следующим `https://graph.microsoft.com/User.Read` `https://graph.microsoft.com/Files.Read.All` `requestObj` образом:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-158">In **./src/helpers/fallbackauthdialog.js** (or in **./src/helpers/fallbackauthdialog.ts** for a TypeScript project), find the string `https://graph.microsoft.com/User.Read` and replace it with the string `https://graph.microsoft.com/Files.Read.All`, such that `requestObj` is defined as follows:</span></span>
 
     ```javascript
     var requestObj = {
@@ -119,7 +119,7 @@ ms.locfileid: "49132335"
     };
     ```
 
-4. <span data-ttu-id="9457d-159">В файле **./срк/таскпане/taskpane.html** найдите элемент `<section class="ms-firstrun-instructionstep__header">` и обновите текст в этом элементе, чтобы описать новые функции надстройки.</span><span class="sxs-lookup"><span data-stu-id="9457d-159">In **./src/taskpane/taskpane.html**, find the element `<section class="ms-firstrun-instructionstep__header">` and update the text within that element to describe the add-in's new functionality.</span></span>
+4. <span data-ttu-id="b2cf2-159">В **./src/taskpane/taskpane.html** найдите элемент и обновите текст в этом элементе, чтобы описать новую функциональность надстройки. `<section class="ms-firstrun-instructionstep__header">`</span><span class="sxs-lookup"><span data-stu-id="b2cf2-159">In **./src/taskpane/taskpane.html**, find the element `<section class="ms-firstrun-instructionstep__header">` and update the text within that element to describe the add-in's new functionality.</span></span>
 
     ```html
     <section class="ms-firstrun-instructionstep__header">
@@ -129,7 +129,7 @@ ms.locfileid: "49132335"
     </section>
     ```
 
-5. <span data-ttu-id="9457d-160">В файле **./срк/таскпане/taskpane.html** найдите и замените все вхождения строки `Get My User Profile Information` строкой `Read my OneDrive for Business` .</span><span class="sxs-lookup"><span data-stu-id="9457d-160">In **./src/taskpane/taskpane.html**, find and replace both occurrences of the string `Get My User Profile Information` with the string `Read my OneDrive for Business`.</span></span>
+5. <span data-ttu-id="b2cf2-160">В **./src/taskpane/taskpane.html** найдите и замените оба вхождения `Get My User Profile Information` строки строкой. `Read my OneDrive for Business`</span><span class="sxs-lookup"><span data-stu-id="b2cf2-160">In **./src/taskpane/taskpane.html**, find and replace both occurrences of the string `Get My User Profile Information` with the string `Read my OneDrive for Business`.</span></span>
 
     ```html
     <li class="ms-ListItem">
@@ -146,7 +146,7 @@ ms.locfileid: "49132335"
     </p>
     ```
 
-6. <span data-ttu-id="9457d-161">В файле **./срк/таскпане/taskpane.html** найдите и замените строку `Your user profile information will be displayed in the document.` строкой `The names of the top 10 files and folders in your OneDrive for Business will be displayed in the document or message.` .</span><span class="sxs-lookup"><span data-stu-id="9457d-161">In **./src/taskpane/taskpane.html**, find and replace the string `Your user profile information will be displayed in the document.` with the string `The names of the top 10 files and folders in your OneDrive for Business will be displayed in the document or message.`.</span></span>
+6. <span data-ttu-id="b2cf2-161">В **./src/taskpane/taskpane.html** найдите и замените строку `Your user profile information will be displayed in the document.` `The names of the top 10 files and folders in your OneDrive for Business will be displayed in the document or message.` строкой.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-161">In **./src/taskpane/taskpane.html**, find and replace the string `Your user profile information will be displayed in the document.` with the string `The names of the top 10 files and folders in your OneDrive for Business will be displayed in the document or message.`.</span></span>
 
     ```html
     <li class="ms-ListItem">
@@ -155,22 +155,22 @@ ms.locfileid: "49132335"
     </li>
     ```
 
-7. <span data-ttu-id="9457d-162">Обновите код, который анализирует ответ от Microsoft Graph, и записывает его в документ или сообщение, следуя указаниям в разделе, соответствующем типу надстройки:</span><span class="sxs-lookup"><span data-stu-id="9457d-162">Update the code that parses the response from Microsoft Graph and writes it to the document or message, by following guidance in the section that corresponds to your type of add-in:</span></span>
+7. <span data-ttu-id="b2cf2-162">Обновите код, который проансирует ответ из Microsoft Graph и записывает его в документ или сообщение, следуя указаниям в разделе, соответствующем вашему типу надстройки:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-162">Update the code that parses the response from Microsoft Graph and writes it to the document or message, by following guidance in the section that corresponds to your type of add-in:</span></span>
 
-    - [<span data-ttu-id="9457d-163">Изменения, необходимые для надстройки Excel (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="9457d-163">Changes required for an Excel add-in (JavaScript)</span></span>](#changes-required-for-an-excel-add-in-javascript)
-    - [<span data-ttu-id="9457d-164">Изменения, необходимые для надстройки Excel (TypeScript)</span><span class="sxs-lookup"><span data-stu-id="9457d-164">Changes required for an Excel add-in (TypeScript)</span></span>](#changes-required-for-an-excel-add-in-typescript)
-    - [<span data-ttu-id="9457d-165">Изменения, необходимые для надстройки Outlook (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="9457d-165">Changes required for an Outlook add-in (JavaScript)</span></span>](#changes-required-for-an-outlook-add-in-javascript)
-    - [<span data-ttu-id="9457d-166">Изменения, необходимые для надстройки Outlook (TypeScript)</span><span class="sxs-lookup"><span data-stu-id="9457d-166">Changes required for an Outlook add-in (TypeScript)</span></span>](#changes-required-for-an-outlook-add-in-typescript)
-    - [<span data-ttu-id="9457d-167">Изменения, необходимые для надстройки PowerPoint (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="9457d-167">Changes required for a PowerPoint add-in (JavaScript)</span></span>](#changes-required-for-a-powerpoint-add-in-javascript)
-    - [<span data-ttu-id="9457d-168">Изменения, необходимые для надстройки PowerPoint (TypeScript)</span><span class="sxs-lookup"><span data-stu-id="9457d-168">Changes required for a PowerPoint add-in (TypeScript)</span></span>](#changes-required-for-a-powerpoint-add-in-typescript)
-    - [<span data-ttu-id="9457d-169">Изменения, необходимые для надстройки Word (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="9457d-169">Changes required for a Word add-in (JavaScript)</span></span>](#changes-required-for-a-word-add-in-javascript)
-    - [<span data-ttu-id="9457d-170">Изменения, необходимые для надстройки Word (TypeScript)</span><span class="sxs-lookup"><span data-stu-id="9457d-170">Changes required for a Word add-in (TypeScript)</span></span>](#changes-required-for-a-word-add-in-typescript)
+    - [<span data-ttu-id="b2cf2-163">Изменения, необходимые для надстройки Excel (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-163">Changes required for an Excel add-in (JavaScript)</span></span>](#changes-required-for-an-excel-add-in-javascript)
+    - [<span data-ttu-id="b2cf2-164">Изменения, необходимые для надстройки Excel (TypeScript)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-164">Changes required for an Excel add-in (TypeScript)</span></span>](#changes-required-for-an-excel-add-in-typescript)
+    - [<span data-ttu-id="b2cf2-165">Изменения, необходимые для надстройки Outlook (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-165">Changes required for an Outlook add-in (JavaScript)</span></span>](#changes-required-for-an-outlook-add-in-javascript)
+    - [<span data-ttu-id="b2cf2-166">Изменения, необходимые для надстройки Outlook (TypeScript)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-166">Changes required for an Outlook add-in (TypeScript)</span></span>](#changes-required-for-an-outlook-add-in-typescript)
+    - [<span data-ttu-id="b2cf2-167">Изменения, необходимые для надстройки PowerPoint (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-167">Changes required for a PowerPoint add-in (JavaScript)</span></span>](#changes-required-for-a-powerpoint-add-in-javascript)
+    - [<span data-ttu-id="b2cf2-168">Изменения, необходимые для надстройки PowerPoint (TypeScript)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-168">Changes required for a PowerPoint add-in (TypeScript)</span></span>](#changes-required-for-a-powerpoint-add-in-typescript)
+    - [<span data-ttu-id="b2cf2-169">Изменения, необходимые для надстройки Word (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-169">Changes required for a Word add-in (JavaScript)</span></span>](#changes-required-for-a-word-add-in-javascript)
+    - [<span data-ttu-id="b2cf2-170">Изменения, необходимые для надстройки Word (TypeScript)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-170">Changes required for a Word add-in (TypeScript)</span></span>](#changes-required-for-a-word-add-in-typescript)
 
-### <a name="changes-required-for-an-excel-add-in-javascript"></a><span data-ttu-id="9457d-171">Изменения, необходимые для надстройки Excel (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="9457d-171">Changes required for an Excel add-in (JavaScript)</span></span>
+### <a name="changes-required-for-an-excel-add-in-javascript"></a><span data-ttu-id="b2cf2-171">Изменения, необходимые для надстройки Excel (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-171">Changes required for an Excel add-in (JavaScript)</span></span>
 
-<span data-ttu-id="9457d-172">Если надстройка представляет собой надстройку Excel, созданную с помощью JavaScript, внесите следующие изменения в **/срк/хелперс/documentHelper.js**:</span><span class="sxs-lookup"><span data-stu-id="9457d-172">If your add-in is an Excel add-in that was created with JavaScript, make the following changes in **./src/helpers/documentHelper.js**:</span></span>
+<span data-ttu-id="b2cf2-172">Если ваша надстройка является надстройка Excel, созданная с помощью JavaScript, внести следующие изменения в **./src/helpers/documentHelper.js:**</span><span class="sxs-lookup"><span data-stu-id="b2cf2-172">If your add-in is an Excel add-in that was created with JavaScript, make the following changes in **./src/helpers/documentHelper.js**:</span></span>
 
-1. <span data-ttu-id="9457d-173">Найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="9457d-173">Find the `writeDataToOfficeDocument` function and replace it with the following function:</span></span>
+1. <span data-ttu-id="b2cf2-173">Найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-173">Find the `writeDataToOfficeDocument` function and replace it with the following function:</span></span>
 
     ```javascript
     export function writeDataToOfficeDocument(result) {
@@ -185,7 +185,7 @@ ms.locfileid: "49132335"
     }
     ```
 
-2. <span data-ttu-id="9457d-174">Найдите `filterUserProfileInfo` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="9457d-174">Find the `filterUserProfileInfo` function and replace it with the following function:</span></span>
+2. <span data-ttu-id="b2cf2-174">Найдите `filterUserProfileInfo` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-174">Find the `filterUserProfileInfo` function and replace it with the following function:</span></span>
 
     ```javascript
     function filterOneDriveInfo(result) {
@@ -198,7 +198,7 @@ ms.locfileid: "49132335"
     }
     ```
 
-3. <span data-ttu-id="9457d-175">Найдите `writeDataToExcel` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="9457d-175">Find the `writeDataToExcel` function and replace it with the following function:</span></span>
+3. <span data-ttu-id="b2cf2-175">Найдите `writeDataToExcel` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-175">Find the `writeDataToExcel` function and replace it with the following function:</span></span>
 
     ```javascript
     function writeDataToExcel(result) {
@@ -225,17 +225,17 @@ ms.locfileid: "49132335"
     }
     ```
 
-4. <span data-ttu-id="9457d-176">Удалите `writeDataToOutlook` функцию.</span><span class="sxs-lookup"><span data-stu-id="9457d-176">Delete the `writeDataToOutlook` function.</span></span>
+4. <span data-ttu-id="b2cf2-176">Удалите `writeDataToOutlook` функцию.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-176">Delete the `writeDataToOutlook` function.</span></span>
 
-5. <span data-ttu-id="9457d-177">Удалите `writeDataToPowerPoint` функцию.</span><span class="sxs-lookup"><span data-stu-id="9457d-177">Delete the `writeDataToPowerPoint` function.</span></span>
+5. <span data-ttu-id="b2cf2-177">Удалите `writeDataToPowerPoint` функцию.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-177">Delete the `writeDataToPowerPoint` function.</span></span>
 
-6. <span data-ttu-id="9457d-178">Удалите `writeDataToWord` функцию.</span><span class="sxs-lookup"><span data-stu-id="9457d-178">Delete the `writeDataToWord` function.</span></span>
+6. <span data-ttu-id="b2cf2-178">Удалите `writeDataToWord` функцию.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-178">Delete the `writeDataToWord` function.</span></span>
 
-<span data-ttu-id="9457d-179">После внесения этих изменений перейдите к разделу " [попробовать](#try-it-out) " в этой статье, чтобы испытать обновленную надстройку.</span><span class="sxs-lookup"><span data-stu-id="9457d-179">After you've made these changes, skip ahead to the [Try it out](#try-it-out) section of this article to try out your updated add-in.</span></span>
+<span data-ttu-id="b2cf2-179">После внесения этих изменений переперейти к [](#try-it-out) разделу "Попробовать" этой статьи, чтобы проверить обновленную надстройки.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-179">After you've made these changes, skip ahead to the [Try it out](#try-it-out) section of this article to try out your updated add-in.</span></span>
 
-### <a name="changes-required-for-an-excel-add-in-typescript"></a><span data-ttu-id="9457d-180">Изменения, необходимые для надстройки Excel (TypeScript)</span><span class="sxs-lookup"><span data-stu-id="9457d-180">Changes required for an Excel add-in (TypeScript)</span></span>
+### <a name="changes-required-for-an-excel-add-in-typescript"></a><span data-ttu-id="b2cf2-180">Изменения, необходимые для надстройки Excel (TypeScript)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-180">Changes required for an Excel add-in (TypeScript)</span></span>
 
-<span data-ttu-id="9457d-181">Если надстройка представляет собой надстройку Excel, созданную с помощью TypeScript, откройте **./СРК/таскпане/таскпане.ТС**, найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="9457d-181">If your add-in is an Excel add-in that was created with TypeScript, open **./src/taskpane/taskpane.ts**, find the `writeDataToOfficeDocument` function, and replace it with the following function:</span></span>
+<span data-ttu-id="b2cf2-181">Если ваша надстройка — это надстройка Excel, созданная с помощью TypeScript, откройте **./src/taskpane/taskpane.ts,** найдите функцию и замените ее следующей `writeDataToOfficeDocument` функцией:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-181">If your add-in is an Excel add-in that was created with TypeScript, open **./src/taskpane/taskpane.ts**, find the `writeDataToOfficeDocument` function, and replace it with the following function:</span></span>
 
 ```typescript
 export function writeDataToOfficeDocument(result: Object): Promise<any> {
@@ -267,13 +267,13 @@ export function writeDataToOfficeDocument(result: Object): Promise<any> {
 }
 ```
 
-<span data-ttu-id="9457d-182">После внесения этих изменений перейдите к разделу " [попробовать](#try-it-out) " в этой статье, чтобы испытать обновленную надстройку.</span><span class="sxs-lookup"><span data-stu-id="9457d-182">After you've made these changes, skip ahead to the [Try it out](#try-it-out) section of this article to try out your updated add-in.</span></span>
+<span data-ttu-id="b2cf2-182">После внесения этих изменений переперейти к [](#try-it-out) разделу "Попробовать" этой статьи, чтобы проверить обновленную надстройки.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-182">After you've made these changes, skip ahead to the [Try it out](#try-it-out) section of this article to try out your updated add-in.</span></span>
 
-### <a name="changes-required-for-an-outlook-add-in-javascript"></a><span data-ttu-id="9457d-183">Изменения, необходимые для надстройки Outlook (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="9457d-183">Changes required for an Outlook add-in (JavaScript)</span></span>
+### <a name="changes-required-for-an-outlook-add-in-javascript"></a><span data-ttu-id="b2cf2-183">Изменения, необходимые для надстройки Outlook (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-183">Changes required for an Outlook add-in (JavaScript)</span></span>
 
-<span data-ttu-id="9457d-184">Если надстройка представляет собой надстройку Outlook, созданную с помощью JavaScript, внесите следующие изменения в **/срк/хелперс/documentHelper.js**:</span><span class="sxs-lookup"><span data-stu-id="9457d-184">If your add-in is an Outlook add-in that was created with JavaScript, make the following changes in **./src/helpers/documentHelper.js**:</span></span>
+<span data-ttu-id="b2cf2-184">Если ваша надстройка является надстройка Outlook, созданная с помощью JavaScript, внести следующие изменения в **./src/helpers/documentHelper.js:**</span><span class="sxs-lookup"><span data-stu-id="b2cf2-184">If your add-in is an Outlook add-in that was created with JavaScript, make the following changes in **./src/helpers/documentHelper.js**:</span></span>
 
-1. <span data-ttu-id="9457d-185">Найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="9457d-185">Find the `writeDataToOfficeDocument` function and replace it with the following function:</span></span>
+1. <span data-ttu-id="b2cf2-185">Найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-185">Find the `writeDataToOfficeDocument` function and replace it with the following function:</span></span>
 
     ```javascript
     export function writeDataToOfficeDocument(result) {
@@ -288,7 +288,7 @@ export function writeDataToOfficeDocument(result: Object): Promise<any> {
     }
     ```
 
-2. <span data-ttu-id="9457d-186">Найдите `filterUserProfileInfo` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="9457d-186">Find the `filterUserProfileInfo` function and replace it with the following function:</span></span>
+2. <span data-ttu-id="b2cf2-186">Найдите `filterUserProfileInfo` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-186">Find the `filterUserProfileInfo` function and replace it with the following function:</span></span>
 
     ```javascript
     function filterOneDriveInfo(result) {
@@ -301,7 +301,7 @@ export function writeDataToOfficeDocument(result: Object): Promise<any> {
     }
     ```
 
-3. <span data-ttu-id="9457d-187">Найдите `writeDataToOutlook` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="9457d-187">Find the `writeDataToOutlook` function and replace it with the following function:</span></span>
+3. <span data-ttu-id="b2cf2-187">Найдите `writeDataToOutlook` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-187">Find the `writeDataToOutlook` function and replace it with the following function:</span></span>
 
     ```javascript
     function writeDataToOutlook(result) {
@@ -323,17 +323,17 @@ export function writeDataToOfficeDocument(result: Object): Promise<any> {
     }
     ```
 
-4. <span data-ttu-id="9457d-188">Удалите `writeDataToExcel` функцию.</span><span class="sxs-lookup"><span data-stu-id="9457d-188">Delete the `writeDataToExcel` function.</span></span>
+4. <span data-ttu-id="b2cf2-188">Удалите `writeDataToExcel` функцию.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-188">Delete the `writeDataToExcel` function.</span></span>
 
-5. <span data-ttu-id="9457d-189">Удалите `writeDataToPowerPoint` функцию.</span><span class="sxs-lookup"><span data-stu-id="9457d-189">Delete the `writeDataToPowerPoint` function.</span></span>
+5. <span data-ttu-id="b2cf2-189">Удалите `writeDataToPowerPoint` функцию.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-189">Delete the `writeDataToPowerPoint` function.</span></span>
 
-6. <span data-ttu-id="9457d-190">Удалите `writeDataToWord` функцию.</span><span class="sxs-lookup"><span data-stu-id="9457d-190">Delete the `writeDataToWord` function.</span></span>
+6. <span data-ttu-id="b2cf2-190">Удалите `writeDataToWord` функцию.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-190">Delete the `writeDataToWord` function.</span></span>
 
-<span data-ttu-id="9457d-191">После внесения этих изменений перейдите к разделу " [попробовать](#try-it-out) " в этой статье, чтобы испытать обновленную надстройку.</span><span class="sxs-lookup"><span data-stu-id="9457d-191">After you've made these changes, skip ahead to the [Try it out](#try-it-out) section of this article to try out your updated add-in.</span></span>
+<span data-ttu-id="b2cf2-191">После внесения этих изменений переперейти к [](#try-it-out) разделу "Попробовать" этой статьи, чтобы проверить обновленную надстройки.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-191">After you've made these changes, skip ahead to the [Try it out](#try-it-out) section of this article to try out your updated add-in.</span></span>
 
-### <a name="changes-required-for-an-outlook-add-in-typescript"></a><span data-ttu-id="9457d-192">Изменения, необходимые для надстройки Outlook (TypeScript)</span><span class="sxs-lookup"><span data-stu-id="9457d-192">Changes required for an Outlook add-in (TypeScript)</span></span>
+### <a name="changes-required-for-an-outlook-add-in-typescript"></a><span data-ttu-id="b2cf2-192">Изменения, необходимые для надстройки Outlook (TypeScript)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-192">Changes required for an Outlook add-in (TypeScript)</span></span>
 
-<span data-ttu-id="9457d-193">Если надстройка представляет собой надстройку Outlook, созданную с помощью TypeScript, откройте **./СРК/таскпане/таскпане.ТС**, найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="9457d-193">If your add-in is an Outlook add-in that was created with TypeScript, open **./src/taskpane/taskpane.ts**, find the `writeDataToOfficeDocument` function, and replace it with the following function:</span></span>
+<span data-ttu-id="b2cf2-193">Если ваша надстройка — это надстройка Outlook, созданная с помощью TypeScript, откройте **./src/taskpane/taskpane.ts,** найдите функцию и замените ее следующей `writeDataToOfficeDocument` функцией:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-193">If your add-in is an Outlook add-in that was created with TypeScript, open **./src/taskpane/taskpane.ts**, find the `writeDataToOfficeDocument` function, and replace it with the following function:</span></span>
 
 ```typescript
 export function writeDataToOfficeDocument(result: Object): void {
@@ -360,13 +360,13 @@ export function writeDataToOfficeDocument(result: Object): void {
 }
 ```
 
-<span data-ttu-id="9457d-194">После внесения этих изменений перейдите к разделу " [попробовать](#try-it-out) " в этой статье, чтобы испытать обновленную надстройку.</span><span class="sxs-lookup"><span data-stu-id="9457d-194">After you've made these changes, skip ahead to the [Try it out](#try-it-out) section of this article to try out your updated add-in.</span></span>
+<span data-ttu-id="b2cf2-194">После внесения этих изменений переперейти к [](#try-it-out) разделу "Попробовать" этой статьи, чтобы проверить обновленную надстройки.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-194">After you've made these changes, skip ahead to the [Try it out](#try-it-out) section of this article to try out your updated add-in.</span></span>
 
-### <a name="changes-required-for-a-powerpoint-add-in-javascript"></a><span data-ttu-id="9457d-195">Изменения, необходимые для надстройки PowerPoint (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="9457d-195">Changes required for a PowerPoint add-in (JavaScript)</span></span>
+### <a name="changes-required-for-a-powerpoint-add-in-javascript"></a><span data-ttu-id="b2cf2-195">Изменения, необходимые для надстройки PowerPoint (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-195">Changes required for a PowerPoint add-in (JavaScript)</span></span>
 
-<span data-ttu-id="9457d-196">Если надстройка представляет собой надстройку PowerPoint, созданную с помощью JavaScript, внесите следующие изменения в **/срк/хелперс/documentHelper.js**:</span><span class="sxs-lookup"><span data-stu-id="9457d-196">If your add-in is a PowerPoint add-in that was created with JavaScript, make the following changes in **./src/helpers/documentHelper.js**:</span></span>
+<span data-ttu-id="b2cf2-196">Если ваша надстройка — это надстройка PowerPoint, созданная с помощью JavaScript, внести следующие изменения в **./src/helpers/documentHelper.js:**</span><span class="sxs-lookup"><span data-stu-id="b2cf2-196">If your add-in is a PowerPoint add-in that was created with JavaScript, make the following changes in **./src/helpers/documentHelper.js**:</span></span>
 
-1. <span data-ttu-id="9457d-197">Найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="9457d-197">Find the `writeDataToOfficeDocument` function and replace it with the following function:</span></span>
+1. <span data-ttu-id="b2cf2-197">Найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-197">Find the `writeDataToOfficeDocument` function and replace it with the following function:</span></span>
 
     ```javascript
     export function writeDataToOfficeDocument(result) {
@@ -381,7 +381,7 @@ export function writeDataToOfficeDocument(result: Object): void {
     }
     ```
 
-2. <span data-ttu-id="9457d-198">Найдите `filterUserProfileInfo` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="9457d-198">Find the `filterUserProfileInfo` function and replace it with the following function:</span></span>
+2. <span data-ttu-id="b2cf2-198">Найдите `filterUserProfileInfo` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-198">Find the `filterUserProfileInfo` function and replace it with the following function:</span></span>
 
     ```javascript
     function filterOneDriveInfo(result) {
@@ -394,7 +394,7 @@ export function writeDataToOfficeDocument(result: Object): void {
     }
     ```
 
-3. <span data-ttu-id="9457d-199">Найдите `writeDataToPowerPoint` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="9457d-199">Find the `writeDataToPowerPoint` function and replace it with the following function:</span></span>
+3. <span data-ttu-id="b2cf2-199">Найдите `writeDataToPowerPoint` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-199">Find the `writeDataToPowerPoint` function and replace it with the following function:</span></span>
 
     ```javascript
     function writeDataToPowerPoint(result) {
@@ -422,17 +422,17 @@ export function writeDataToOfficeDocument(result: Object): void {
     }
     ```
 
-4. <span data-ttu-id="9457d-200">Удалите `writeDataToExcel` функцию.</span><span class="sxs-lookup"><span data-stu-id="9457d-200">Delete the `writeDataToExcel` function.</span></span>
+4. <span data-ttu-id="b2cf2-200">Удалите `writeDataToExcel` функцию.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-200">Delete the `writeDataToExcel` function.</span></span>
 
-5. <span data-ttu-id="9457d-201">Удалите `writeDataToOutlook` функцию.</span><span class="sxs-lookup"><span data-stu-id="9457d-201">Delete the `writeDataToOutlook` function.</span></span>
+5. <span data-ttu-id="b2cf2-201">Удалите `writeDataToOutlook` функцию.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-201">Delete the `writeDataToOutlook` function.</span></span>
 
-6. <span data-ttu-id="9457d-202">Удалите `writeDataToWord` функцию.</span><span class="sxs-lookup"><span data-stu-id="9457d-202">Delete the `writeDataToWord` function.</span></span>
+6. <span data-ttu-id="b2cf2-202">Удалите `writeDataToWord` функцию.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-202">Delete the `writeDataToWord` function.</span></span>
 
-<span data-ttu-id="9457d-203">После внесения этих изменений перейдите к разделу " [попробовать](#try-it-out) " в этой статье, чтобы испытать обновленную надстройку.</span><span class="sxs-lookup"><span data-stu-id="9457d-203">After you've made these changes, skip ahead to the [Try it out](#try-it-out) section of this article to try out your updated add-in.</span></span>
+<span data-ttu-id="b2cf2-203">После внесения этих изменений переперейти к [](#try-it-out) разделу "Попробовать" этой статьи, чтобы проверить обновленную надстройки.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-203">After you've made these changes, skip ahead to the [Try it out](#try-it-out) section of this article to try out your updated add-in.</span></span>
 
-### <a name="changes-required-for-a-powerpoint-add-in-typescript"></a><span data-ttu-id="9457d-204">Изменения, необходимые для надстройки PowerPoint (TypeScript)</span><span class="sxs-lookup"><span data-stu-id="9457d-204">Changes required for a PowerPoint add-in (TypeScript)</span></span>
+### <a name="changes-required-for-a-powerpoint-add-in-typescript"></a><span data-ttu-id="b2cf2-204">Изменения, необходимые для надстройки PowerPoint (TypeScript)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-204">Changes required for a PowerPoint add-in (TypeScript)</span></span>
 
-<span data-ttu-id="9457d-205">Если надстройка представляет собой надстройку PowerPoint, созданную с помощью TypeScript, откройте **./СРК/таскпане/таскпане.ТС**, найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="9457d-205">If your add-in is a PowerPoint add-in that was created with TypeScript, open **./src/taskpane/taskpane.ts**, find the `writeDataToOfficeDocument` function, and replace it with the following function:</span></span>
+<span data-ttu-id="b2cf2-205">Если ваша надстройка — это надстройка PowerPoint, созданная с помощью TypeScript, откройте **./src/taskpane/taskpane.ts,** найдите функцию и замените ее следующей `writeDataToOfficeDocument` функцией:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-205">If your add-in is a PowerPoint add-in that was created with TypeScript, open **./src/taskpane/taskpane.ts**, find the `writeDataToOfficeDocument` function, and replace it with the following function:</span></span>
 
 ```typescript
 export function writeDataToOfficeDocument(result: Object): void {
@@ -463,13 +463,13 @@ export function writeDataToOfficeDocument(result: Object): void {
 }
 ```
 
-<span data-ttu-id="9457d-206">После внесения этих изменений перейдите к разделу " [попробовать](#try-it-out) " в этой статье, чтобы испытать обновленную надстройку.</span><span class="sxs-lookup"><span data-stu-id="9457d-206">After you've made these changes, skip ahead to the [Try it out](#try-it-out) section of this article to try out your updated add-in.</span></span>
+<span data-ttu-id="b2cf2-206">После внесения этих изменений переперейти к [](#try-it-out) разделу "Попробовать" этой статьи, чтобы проверить обновленную надстройки.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-206">After you've made these changes, skip ahead to the [Try it out](#try-it-out) section of this article to try out your updated add-in.</span></span>
 
-### <a name="changes-required-for-a-word-add-in-javascript"></a><span data-ttu-id="9457d-207">Изменения, необходимые для надстройки Word (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="9457d-207">Changes required for a Word add-in (JavaScript)</span></span>
+### <a name="changes-required-for-a-word-add-in-javascript"></a><span data-ttu-id="b2cf2-207">Изменения, необходимые для надстройки Word (JavaScript)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-207">Changes required for a Word add-in (JavaScript)</span></span>
 
-<span data-ttu-id="9457d-208">Если надстройка представляет собой надстройку Word, созданную с помощью JavaScript, внесите следующие изменения в **/срк/хелперс/documentHelper.js**:</span><span class="sxs-lookup"><span data-stu-id="9457d-208">If your add-in is a Word add-in that was created with JavaScript, make the following changes in **./src/helpers/documentHelper.js**:</span></span>
+<span data-ttu-id="b2cf2-208">Если ваша надстройка — это надстройка Word, созданная с помощью JavaScript, внести следующие изменения в **./src/helpers/documentHelper.js:**</span><span class="sxs-lookup"><span data-stu-id="b2cf2-208">If your add-in is a Word add-in that was created with JavaScript, make the following changes in **./src/helpers/documentHelper.js**:</span></span>
 
-1. <span data-ttu-id="9457d-209">Найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="9457d-209">Find the `writeDataToOfficeDocument` function and replace it with the following function:</span></span>
+1. <span data-ttu-id="b2cf2-209">Найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-209">Find the `writeDataToOfficeDocument` function and replace it with the following function:</span></span>
 
     ```javascript
     export function writeDataToOfficeDocument(result) {
@@ -484,7 +484,7 @@ export function writeDataToOfficeDocument(result: Object): void {
     }
     ```
 
-2. <span data-ttu-id="9457d-210">Найдите `filterUserProfileInfo` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="9457d-210">Find the `filterUserProfileInfo` function and replace it with the following function:</span></span>
+2. <span data-ttu-id="b2cf2-210">Найдите `filterUserProfileInfo` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-210">Find the `filterUserProfileInfo` function and replace it with the following function:</span></span>
 
     ```javascript
     function filterOneDriveInfo(result) {
@@ -497,7 +497,7 @@ export function writeDataToOfficeDocument(result: Object): void {
     }
     ```
 
-3. <span data-ttu-id="9457d-211">Найдите `writeDataToWord` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="9457d-211">Find the `writeDataToWord` function and replace it with the following function:</span></span>
+3. <span data-ttu-id="b2cf2-211">Найдите `writeDataToWord` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-211">Find the `writeDataToWord` function and replace it with the following function:</span></span>
 
     ```javascript
     function writeDataToWord(result) {
@@ -523,17 +523,17 @@ export function writeDataToOfficeDocument(result: Object): void {
     }
     ```
 
-4. <span data-ttu-id="9457d-212">Удалите `writeDataToExcel` функцию.</span><span class="sxs-lookup"><span data-stu-id="9457d-212">Delete the `writeDataToExcel` function.</span></span>
+4. <span data-ttu-id="b2cf2-212">Удалите `writeDataToExcel` функцию.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-212">Delete the `writeDataToExcel` function.</span></span>
 
-5. <span data-ttu-id="9457d-213">Удалите `writeDataToOutlook` функцию.</span><span class="sxs-lookup"><span data-stu-id="9457d-213">Delete the `writeDataToOutlook` function.</span></span>
+5. <span data-ttu-id="b2cf2-213">Удалите `writeDataToOutlook` функцию.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-213">Delete the `writeDataToOutlook` function.</span></span>
 
-6. <span data-ttu-id="9457d-214">Удалите `writeDataToPowerPoint` функцию.</span><span class="sxs-lookup"><span data-stu-id="9457d-214">Delete the `writeDataToPowerPoint` function.</span></span>
+6. <span data-ttu-id="b2cf2-214">Удалите `writeDataToPowerPoint` функцию.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-214">Delete the `writeDataToPowerPoint` function.</span></span>
 
-<span data-ttu-id="9457d-215">После внесения этих изменений перейдите к разделу " [попробовать](#try-it-out) " в этой статье, чтобы испытать обновленную надстройку.</span><span class="sxs-lookup"><span data-stu-id="9457d-215">After you've made these changes, skip ahead to the [Try it out](#try-it-out) section of this article to try out your updated add-in.</span></span>
+<span data-ttu-id="b2cf2-215">После внесения этих изменений переперейти к [](#try-it-out) разделу "Попробовать" этой статьи, чтобы проверить обновленную надстройки.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-215">After you've made these changes, skip ahead to the [Try it out](#try-it-out) section of this article to try out your updated add-in.</span></span>
 
-### <a name="changes-required-for-a-word-add-in-typescript"></a><span data-ttu-id="9457d-216">Изменения, необходимые для надстройки Word (TypeScript)</span><span class="sxs-lookup"><span data-stu-id="9457d-216">Changes required for a Word add-in (TypeScript)</span></span>
+### <a name="changes-required-for-a-word-add-in-typescript"></a><span data-ttu-id="b2cf2-216">Изменения, необходимые для надстройки Word (TypeScript)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-216">Changes required for a Word add-in (TypeScript)</span></span>
 
-<span data-ttu-id="9457d-217">Если надстройка представляет собой надстройку Word, созданную с помощью TypeScript, откройте **./СРК/таскпане/таскпане.ТС**, найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией:</span><span class="sxs-lookup"><span data-stu-id="9457d-217">If your add-in is a Word add-in that was created with TypeScript, open **./src/taskpane/taskpane.ts**, find the `writeDataToOfficeDocument` function, and replace it with the following function:</span></span>
+<span data-ttu-id="b2cf2-217">Если ваша надстройка — это надстройка Word, созданная с помощью TypeScript, откройте **./src/taskpane/taskpane.ts,** найдите функцию и замените ее следующей `writeDataToOfficeDocument` функцией:</span><span class="sxs-lookup"><span data-stu-id="b2cf2-217">If your add-in is a Word add-in that was created with TypeScript, open **./src/taskpane/taskpane.ts**, find the `writeDataToOfficeDocument` function, and replace it with the following function:</span></span>
 
 ```typescript
 export function writeDataToOfficeDocument(result: Object): Promise<any> {
@@ -563,85 +563,85 @@ export function writeDataToOfficeDocument(result: Object): Promise<any> {
 }
 ```
 
-<span data-ttu-id="9457d-218">После внесения этих изменений перейдите [к разделу](#try-it-out) "ознакомьтесь с этой статьей", чтобы испытать обновленную надстройку.</span><span class="sxs-lookup"><span data-stu-id="9457d-218">After you've made these changes, continue to the [Try it out](#try-it-out) section of this article to try out your updated add-in.</span></span>
+<span data-ttu-id="b2cf2-218">После внесения этих изменений переопробуйте обновленные надстройки в разделе "Попробуйте" этой статьи. [](#try-it-out)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-218">After you've made these changes, continue to the [Try it out](#try-it-out) section of this article to try out your updated add-in.</span></span>
 
-## <a name="try-it-out"></a><span data-ttu-id="9457d-219">Проверка</span><span class="sxs-lookup"><span data-stu-id="9457d-219">Try it out</span></span>
+## <a name="try-it-out"></a><span data-ttu-id="b2cf2-219">Проверка</span><span class="sxs-lookup"><span data-stu-id="b2cf2-219">Try it out</span></span>
 
-<span data-ttu-id="9457d-220">Если надстройка представляет собой надстройку Excel, Word или PowerPoint, выполните действия, описанные в следующем разделе, чтобы попробовать. Если надстройка является надстройкой Outlook, выполните действия, описанные в разделе [Outlook](#outlook) .</span><span class="sxs-lookup"><span data-stu-id="9457d-220">If your add-in is an Excel, Word, or PowerPoint add-in, complete the steps in the following section to try it out. If your add-in is an Outlook add-in, complete the steps in the [Outlook](#outlook) section instead.</span></span>
+<span data-ttu-id="b2cf2-220">Если ваша надстройка является надстройка Excel, Word или PowerPoint, выполните действия из следующего раздела, чтобы опробовать ее. Если ваша надстройка является надстройка Outlook, выполните действия в разделе [Outlook.](#outlook)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-220">If your add-in is an Excel, Word, or PowerPoint add-in, complete the steps in the following section to try it out. If your add-in is an Outlook add-in, complete the steps in the [Outlook](#outlook) section instead.</span></span>
 
-### <a name="excel-word-and-powerpoint"></a><span data-ttu-id="9457d-221">Excel, Word и PowerPoint</span><span class="sxs-lookup"><span data-stu-id="9457d-221">Excel, Word, and PowerPoint</span></span>
+### <a name="excel-word-and-powerpoint"></a><span data-ttu-id="b2cf2-221">Excel, Word и PowerPoint</span><span class="sxs-lookup"><span data-stu-id="b2cf2-221">Excel, Word, and PowerPoint</span></span>
 
-<span data-ttu-id="9457d-222">Выполните следующие действия, чтобы испытать надстройку Excel, Word или PowerPoint.</span><span class="sxs-lookup"><span data-stu-id="9457d-222">Complete the following steps to try out an Excel, Word, or PowerPoint add-in.</span></span>
+<span data-ttu-id="b2cf2-222">Выполните следующие действия, чтобы испытать надстройку Excel, Word или PowerPoint.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-222">Complete the following steps to try out an Excel, Word, or PowerPoint add-in.</span></span>
 
-1. <span data-ttu-id="9457d-223">В корневой папке проекта выполните следующую команду, чтобы выполнить сборку проекта, запустите локальный веб-сервер и Загрузка неопубликованных вашу надстройку в выбранном ранее клиентском приложении Office.</span><span class="sxs-lookup"><span data-stu-id="9457d-223">In the root folder of the project, run the following command to build the project, start the local web server, and sideload your add-in in the previously selected Office client application.</span></span>
+1. <span data-ttu-id="b2cf2-223">В корневой папке проекта запустите следующую команду для построения проекта, запуска локального веб-сервера и загрузки неопровержимой надстройки в ранее выбранном клиентом приложении Office.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-223">In the root folder of the project, run the following command to build the project, start the local web server, and sideload your add-in in the previously selected Office client application.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="9457d-224">Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки.</span><span class="sxs-lookup"><span data-stu-id="9457d-224">Office Add-ins should use HTTPS, not HTTP, even when you are developing.</span></span> <span data-ttu-id="9457d-225">Если вам будет предложено установить сертификат после того, как вы запустите указанную ниже команду, примите предложение установить сертификат, предоставленный генератором Yeoman.</span><span class="sxs-lookup"><span data-stu-id="9457d-225">If you are prompted to install a certificate after you run the following command, accept the prompt to install the certificate that the Yeoman generator provides.</span></span>
+    > <span data-ttu-id="b2cf2-224">Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-224">Office Add-ins should use HTTPS, not HTTP, even when you are developing.</span></span> <span data-ttu-id="b2cf2-225">Если вам будет предложено установить сертификат после того, как вы запустите указанную ниже команду, примите предложение установить сертификат, предоставленный генератором Yeoman.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-225">If you are prompted to install a certificate after you run the following command, accept the prompt to install the certificate that the Yeoman generator provides.</span></span>
 
     ```command&nbsp;line
     npm start
     ```
 
-2. <span data-ttu-id="9457d-226">В клиентском приложении Office, которое открывается при выполнении предыдущей команды (например, Excel, Word или PowerPoint), убедитесь, что вы вошли в систему с учетной записью пользователя, который является участником той же организации Microsoft 365, что и учетная запись администратора Microsoft 365, которую вы использовали для подключения к Azure при [настройке единого входа](sso-quickstart.md#configure-sso) для приложения.</span><span class="sxs-lookup"><span data-stu-id="9457d-226">In the Office client application that opens when you run the previous command (i.e., Excel, Word or PowerPoint), make sure that you're signed in with a user that's a member of the same Microsoft 365 organization as the Microsoft 365 administrator account that you used to connect to Azure while [configuring SSO](sso-quickstart.md#configure-sso) for the app.</span></span> <span data-ttu-id="9457d-227">Благодаря этому будут созданы соответствующие условия для успешного единого входа.</span><span class="sxs-lookup"><span data-stu-id="9457d-227">Doing so establishes the appropriate conditions for SSO to succeed.</span></span> 
+2. <span data-ttu-id="b2cf2-226">В клиентских приложениях Office, открываемых при запуске предыдущей команды (например, Excel, Word или PowerPoint), убедитесь, что вы вписались с пользователем, который является членом той же организации Microsoft 365, что и учетная запись администратора Microsoft 365, которая использовалась для подключения к Azure при настройке [службы SSO](sso-quickstart.md#configure-sso) для приложения.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-226">In the Office client application that opens when you run the previous command (i.e., Excel, Word or PowerPoint), make sure that you're signed in with a user that's a member of the same Microsoft 365 organization as the Microsoft 365 administrator account that you used to connect to Azure while [configuring SSO](sso-quickstart.md#configure-sso) for the app.</span></span> <span data-ttu-id="b2cf2-227">Благодаря этому будут созданы соответствующие условия для успешного единого входа.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-227">Doing so establishes the appropriate conditions for SSO to succeed.</span></span> 
 
-3. <span data-ttu-id="9457d-228">В клиентском приложении Office выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="9457d-228">In the Office client application, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span> <span data-ttu-id="9457d-229">На рисунке ниже показана эта кнопка в Excel. </span><span class="sxs-lookup"><span data-stu-id="9457d-229">The following image shows this button in Excel.</span></span>
+3. <span data-ttu-id="b2cf2-228">В клиентском приложении Office выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-228">In the Office client application, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span> <span data-ttu-id="b2cf2-229">На рисунке ниже показана эта кнопка в Excel. </span><span class="sxs-lookup"><span data-stu-id="b2cf2-229">The following image shows this button in Excel.</span></span>
 
-    ![Снимок экрана: Выделенная кнопка надстройки в ленте Excel](../images/excel-quickstart-addin-3b.png)
+    ![Снимок экрана: выделенная кнопка надстройки на ленте Excel](../images/excel-quickstart-addin-3b.png)
 
-4. <span data-ttu-id="9457d-231">В нижней части области задач нажмите кнопку **прочитать мою службу OneDrive для бизнеса** , чтобы начать процесс единого входа.</span><span class="sxs-lookup"><span data-stu-id="9457d-231">At the bottom of the task pane, choose the **Read my OneDrive for Business** button to initiate the SSO process.</span></span>
+4. <span data-ttu-id="b2cf2-231">В нижней части области задач выберите кнопку "Чтение **oneDrive** для бизнеса", чтобы инициировать процесс SSO.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-231">At the bottom of the task pane, choose the **Read my OneDrive for Business** button to initiate the SSO process.</span></span>
 
-5. <span data-ttu-id="9457d-232">Если открывается диалоговое окно, в котором запрашиваются разрешения от имени надстройки, это означает, что единый вход не поддерживается для вашего сценария и надстройка использует альтернативный метод проверки подлинности пользователя.</span><span class="sxs-lookup"><span data-stu-id="9457d-232">If a dialog window appears to request permissions on behalf of the add-in, this means that SSO is not supported for your scenario and the add-in has instead fallen back to an alternate method of user authentication.</span></span> <span data-ttu-id="9457d-233">Это может произойти, если администратор клиента не дал согласие на доступ надстройки к Microsoft Graph или если пользователь не вошел в Office с помощью действительной учетной записи Майкрософт или рабочей или учебной учетной записи Microsoft 365.</span><span class="sxs-lookup"><span data-stu-id="9457d-233">This may occur when the tenant administrator hasn't granted consent for the add-in to access Microsoft Graph, or when the user isn't signed into Office with a valid Microsoft account or Microsoft 365 Education or Work account.</span></span> <span data-ttu-id="9457d-234">Чтобы продолжить, нажмите кнопку **Принять** в диалоговом окне.</span><span class="sxs-lookup"><span data-stu-id="9457d-234">Choose the **Accept** button in the dialog window to continue.</span></span>
+5. <span data-ttu-id="b2cf2-232">Если открывается диалоговое окно, в котором запрашиваются разрешения от имени надстройки, это означает, что единый вход не поддерживается для вашего сценария и надстройка использует альтернативный метод проверки подлинности пользователя.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-232">If a dialog window appears to request permissions on behalf of the add-in, this means that SSO is not supported for your scenario and the add-in has instead fallen back to an alternate method of user authentication.</span></span> <span data-ttu-id="b2cf2-233">Это может произойти, если администратор клиента не дал согласие на доступ надстройки к Microsoft Graph или если пользователь не вошел в Office с помощью действительной учетной записи Майкрософт или рабочей или учебной учетной записи Microsoft 365.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-233">This may occur when the tenant administrator hasn't granted consent for the add-in to access Microsoft Graph, or when the user isn't signed into Office with a valid Microsoft account or Microsoft 365 Education or Work account.</span></span> <span data-ttu-id="b2cf2-234">Чтобы продолжить, нажмите кнопку **Принять** в диалоговом окне.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-234">Choose the **Accept** button in the dialog window to continue.</span></span>
 
-    ![Снимок экрана: диалоговое окно запрошенных разрешений с выделенной кнопкой "принять"](../images/sso-permissions-request.png)
-
-    > [!NOTE]
-    > <span data-ttu-id="9457d-236">После принятия пользователем запрос разрешений больше не выводится на экран.</span><span class="sxs-lookup"><span data-stu-id="9457d-236">After a user accepts this permissions request, they won't be prompted again in the future.</span></span>
-
-6. <span data-ttu-id="9457d-237">Надстройка читает данные из OneDrive для бизнеса пользователя, выполнившего вход, и записывает в документ имена из 10 самых популярных файлов и папок.</span><span class="sxs-lookup"><span data-stu-id="9457d-237">The add-in reads data from the signed-in user's OneDrive for Business and writes the names of the top 10 files and folders to the document.</span></span> <span data-ttu-id="9457d-238">На следующем рисунке показан пример имен файлов и папок, записанных на лист Excel.</span><span class="sxs-lookup"><span data-stu-id="9457d-238">The following image shows an example of file and folder names written to an Excel worksheet.</span></span>
-
-    ![Снимок экрана: сведения о OneDrive для бизнеса на листе Excel](../images/sso-onedrive-info-excel.png)
-
-### <a name="outlook"></a><span data-ttu-id="9457d-240">Outlook</span><span class="sxs-lookup"><span data-stu-id="9457d-240">Outlook</span></span>
-
-<span data-ttu-id="9457d-241">Выполните следующие действия, чтобы испытать надстройку Outlook.</span><span class="sxs-lookup"><span data-stu-id="9457d-241">Complete the following steps to try out an Outlook add-in.</span></span>
-
-1. <span data-ttu-id="9457d-242">В корневой папке проекта выполните следующую команду, чтобы построить проект и запустить локальный веб-сервер.</span><span class="sxs-lookup"><span data-stu-id="9457d-242">In the root folder of the project, run the following command to build the project and start the local web server.</span></span>
+    ![Снимок экрана: диалоговое окно, запрашивающее разрешения, с выделенной кнопкой "Принять"](../images/sso-permissions-request.png)
 
     > [!NOTE]
-    > <span data-ttu-id="9457d-243">Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки.</span><span class="sxs-lookup"><span data-stu-id="9457d-243">Office Add-ins should use HTTPS, not HTTP, even when you are developing.</span></span> <span data-ttu-id="9457d-244">Если вам будет предложено установить сертификат после того, как вы запустите указанную ниже команду, примите предложение установить сертификат, предоставленный генератором Yeoman.</span><span class="sxs-lookup"><span data-stu-id="9457d-244">If you are prompted to install a certificate after you run the following command, accept the prompt to install the certificate that the Yeoman generator provides.</span></span> <span data-ttu-id="9457d-245">Кроме того, вам может потребоваться запустить командную строку или терминал с правами администратора, чтобы внести изменения.</span><span class="sxs-lookup"><span data-stu-id="9457d-245">You may also have to run your command prompt or terminal as an administrator for the changes to be made.</span></span>
+    > <span data-ttu-id="b2cf2-236">После принятия пользователем запрос разрешений больше не выводится на экран.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-236">After a user accepts this permissions request, they won't be prompted again in the future.</span></span>
+
+6. <span data-ttu-id="b2cf2-237">Надстройка считывает данные из OneDrive для бизнеса во выгрузки пользователя и записывает в документ имена 10 самых верхних файлов и папок.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-237">The add-in reads data from the signed-in user's OneDrive for Business and writes the names of the top 10 files and folders to the document.</span></span> <span data-ttu-id="b2cf2-238">На следующем рисунке показан пример имен файлов и папок, написанных на листах Excel.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-238">The following image shows an example of file and folder names written to an Excel worksheet.</span></span>
+
+    ![Screenshot showing OneDrive for Business information in Excel worksheet](../images/sso-onedrive-info-excel.png)
+
+### <a name="outlook"></a><span data-ttu-id="b2cf2-240">Outlook</span><span class="sxs-lookup"><span data-stu-id="b2cf2-240">Outlook</span></span>
+
+<span data-ttu-id="b2cf2-241">Выполните следующие действия, чтобы испытать надстройку Outlook.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-241">Complete the following steps to try out an Outlook add-in.</span></span>
+
+1. <span data-ttu-id="b2cf2-242">В корневой папке проекта запустите следующую команду для построения проекта, запуска локального веб-сервера и загрузки неогрузки надстройки.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-242">In the root folder of the project, run the following command to build the project, start the local web server, and sideload your add-in.</span></span> 
+
+    > [!NOTE]
+    > <span data-ttu-id="b2cf2-243">Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-243">Office Add-ins should use HTTPS, not HTTP, even when you are developing.</span></span> <span data-ttu-id="b2cf2-244">Если вам будет предложено установить сертификат после того, как вы запустите указанную ниже команду, примите предложение установить сертификат, предоставленный генератором Yeoman.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-244">If you are prompted to install a certificate after you run the following command, accept the prompt to install the certificate that the Yeoman generator provides.</span></span> <span data-ttu-id="b2cf2-245">Кроме того, вам может потребоваться запустить командную строку или терминал с правами администратора, чтобы внести изменения.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-245">You may also have to run your command prompt or terminal as an administrator for the changes to be made.</span></span>
 
     ```command&nbsp;line
-    npm run dev-server
+    npm start
     ```
 
-2. <span data-ttu-id="9457d-246">Чтобы загрузить неопубликованную надстройку в Outlook, следуйте инструкциями из статьи [Загрузка неопубликованных надстроек Outlook для тестирования](/outlook/add-ins/sideload-outlook-add-ins-for-testing).</span><span class="sxs-lookup"><span data-stu-id="9457d-246">Follow the instructions in [Sideload Outlook add-ins for testing](/outlook/add-ins/sideload-outlook-add-ins-for-testing) to sideload the add-in in Outlook.</span></span> <span data-ttu-id="9457d-247">Убедитесь, что вы выполнили вход в Outlook с пользователем, который является участником той же организации Microsoft 365, что и учетная запись администратора Microsoft 365, которую вы использовали для подключения к Azure при [настройке единого входа](sso-quickstart.md#configure-sso) для приложения.</span><span class="sxs-lookup"><span data-stu-id="9457d-247">Make sure that you're signed in to Outlook with a user that's a member of the same Microsoft 365 organization as the Microsoft 365 administrator account that you used to connect to Azure while [configuring SSO](sso-quickstart.md#configure-sso) for the app.</span></span> <span data-ttu-id="9457d-248">Благодаря этому будут созданы соответствующие условия для успешного единого входа.</span><span class="sxs-lookup"><span data-stu-id="9457d-248">Doing so establishes the appropriate conditions for SSO to succeed.</span></span>
+2. <span data-ttu-id="b2cf2-246">Убедитесь, что вы вписались в Outlook с пользователем, который является членом той же организации Microsoft 365, что и учетная запись администратора Microsoft 365, которая использовалась для подключения к Azure при настройке [SSO](sso-quickstart.md#configure-sso) для приложения.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-246">Make sure that you're signed in to Outlook with a user that's a member of the same Microsoft 365 organization as the Microsoft 365 administrator account that you used to connect to Azure while [configuring SSO](sso-quickstart.md#configure-sso) for the app.</span></span> <span data-ttu-id="b2cf2-247">Благодаря этому будут созданы соответствующие условия для успешного единого входа.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-247">Doing so establishes the appropriate conditions for SSO to succeed.</span></span>
 
-3. <span data-ttu-id="9457d-249">В Outlook создайте новое сообщение.</span><span class="sxs-lookup"><span data-stu-id="9457d-249">In Outlook, compose a new message.</span></span>
+3. <span data-ttu-id="b2cf2-248">В Outlook создайте новое сообщение.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-248">In Outlook, compose a new message.</span></span>
 
-4. <span data-ttu-id="9457d-250">В окне создания сообщения нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="9457d-250">In the message compose window, choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
+4. <span data-ttu-id="b2cf2-249">В окне создания сообщения нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-249">In the message compose window, choose the **Show Taskpane** button in the ribbon to open the add-in task pane.</span></span>
 
-    ![Снимок экрана: Выделенная кнопка ленты надстройки в окне сообщения создания Outlook](../images/outlook-sso-ribbon-button.png)
+    ![Снимок экрана: выделенная кнопка ленты надстройки в окне создания сообщения Outlook](../images/outlook-sso-ribbon-button.png)
 
-5. <span data-ttu-id="9457d-252">В нижней части области задач нажмите кнопку **прочитать мою службу OneDrive для бизнеса** , чтобы начать процесс единого входа.</span><span class="sxs-lookup"><span data-stu-id="9457d-252">At the bottom of the task pane, choose the **Read my OneDrive for Business** button to initiate the SSO process.</span></span>
+5. <span data-ttu-id="b2cf2-251">В нижней части области задач выберите кнопку "Чтение **oneDrive** для бизнеса", чтобы инициировать процесс SSO.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-251">At the bottom of the task pane, choose the **Read my OneDrive for Business** button to initiate the SSO process.</span></span>
 
-6. <span data-ttu-id="9457d-253">Если открывается диалоговое окно, в котором запрашиваются разрешения от имени надстройки, это означает, что единый вход не поддерживается для вашего сценария и надстройка использует альтернативный метод проверки подлинности пользователя.</span><span class="sxs-lookup"><span data-stu-id="9457d-253">If a dialog window appears to request permissions on behalf of the add-in, this means that SSO is not supported for your scenario and the add-in has instead fallen back to an alternate method of user authentication.</span></span> <span data-ttu-id="9457d-254">Это может произойти, если администратор клиента не дал согласие на доступ надстройки к Microsoft Graph или если пользователь не вошел в Office с помощью действительной учетной записи Майкрософт или рабочей или учебной учетной записи Microsoft 365.</span><span class="sxs-lookup"><span data-stu-id="9457d-254">This may occur when the tenant administrator hasn't granted consent for the add-in to access Microsoft Graph, or when the user isn't signed into Office with a valid Microsoft account or Microsoft 365 Education or Work account.</span></span> <span data-ttu-id="9457d-255">Чтобы продолжить, нажмите кнопку **Принять** в диалоговом окне.</span><span class="sxs-lookup"><span data-stu-id="9457d-255">Choose the **Accept** button in the dialog window to continue.</span></span>
+6. <span data-ttu-id="b2cf2-252">Если открывается диалоговое окно, в котором запрашиваются разрешения от имени надстройки, это означает, что единый вход не поддерживается для вашего сценария и надстройка использует альтернативный метод проверки подлинности пользователя.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-252">If a dialog window appears to request permissions on behalf of the add-in, this means that SSO is not supported for your scenario and the add-in has instead fallen back to an alternate method of user authentication.</span></span> <span data-ttu-id="b2cf2-253">Это может произойти, если администратор клиента не дал согласие на доступ надстройки к Microsoft Graph или если пользователь не вошел в Office с помощью действительной учетной записи Майкрософт или рабочей или учебной учетной записи Microsoft 365.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-253">This may occur when the tenant administrator hasn't granted consent for the add-in to access Microsoft Graph, or when the user isn't signed into Office with a valid Microsoft account or Microsoft 365 Education or Work account.</span></span> <span data-ttu-id="b2cf2-254">Чтобы продолжить, нажмите кнопку **Принять** в диалоговом окне.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-254">Choose the **Accept** button in the dialog window to continue.</span></span>
 
-    ![Снимок экрана: диалоговое окно запрошенных разрешений с выделенной кнопкой "принять"](../images/sso-permissions-request.png)
+    ![Снимок экрана: диалоговое окно, запрашивающее разрешения, с выделенной кнопкой "Принять"](../images/sso-permissions-request.png)
 
     > [!NOTE]
-    > <span data-ttu-id="9457d-257">После принятия пользователем запрос разрешений больше не выводится на экран.</span><span class="sxs-lookup"><span data-stu-id="9457d-257">After a user accepts this permissions request, they won't be prompted again in the future.</span></span>
+    > <span data-ttu-id="b2cf2-256">После принятия пользователем запрос разрешений больше не выводится на экран.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-256">After a user accepts this permissions request, they won't be prompted again in the future.</span></span>
 
-7. <span data-ttu-id="9457d-258">Надстройка читает данные из OneDrive для бизнеса пользователя, выполнившего вход, и записывает имена 10 файлов и папок в текст сообщения электронной почты.</span><span class="sxs-lookup"><span data-stu-id="9457d-258">The add-in reads data from the signed-in user's OneDrive for Business and writes the names of the top 10 files and folders to the body of the email message.</span></span>
+7. <span data-ttu-id="b2cf2-257">Надстройка считывает данные из OneDrive для бизнеса во выгрузки и записывает имена 10 самых верхних файлов и папок в текст сообщения электронной почты.</span><span class="sxs-lookup"><span data-stu-id="b2cf2-257">The add-in reads data from the signed-in user's OneDrive for Business and writes the names of the top 10 files and folders to the body of the email message.</span></span>
 
-    ![Снимок экрана: сведения о OneDrive для бизнеса в окне сообщения об отформировании Outlook](../images/sso-onedrive-info-outlook.png)
+    ![Screenshot showing OneDrive for Business information in Outlook compose message window](../images/sso-onedrive-info-outlook.png)
 
-## <a name="next-steps"></a><span data-ttu-id="9457d-260">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="9457d-260">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="b2cf2-259">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="b2cf2-259">Next steps</span></span>
 
-<span data-ttu-id="9457d-261">Поздравляем, вы успешно настроили функции надстройки с поддержкой единого входа, созданной с помощью генератора Yeoman в [быстром запуске единого входа](sso-quickstart.md).</span><span class="sxs-lookup"><span data-stu-id="9457d-261">Congratulations, you've successfully customized the functionality of the SSO-enabled add-in that you created with the Yeoman generator in the [SSO quick start](sso-quickstart.md).</span></span> <span data-ttu-id="9457d-262">Дополнительные сведения об этапах настройки единого входа, которые генератор Yeoman выполняет автоматически, и коде, который упрощает процесс единого входа, см. в статье [Создание надстройки Office на платформе Node.js с использованием единого входа](../develop/create-sso-office-add-ins-nodejs.md).</span><span class="sxs-lookup"><span data-stu-id="9457d-262">To learn more about SSO configuration steps that the Yeoman generator completed automatically, and the code that facilitates the SSO process, see the [Create a Node.js Office Add-in that uses single sign-on](../develop/create-sso-office-add-ins-nodejs.md) tutorial.</span></span>
+<span data-ttu-id="b2cf2-260">Поздравляем, вы успешно настроили функции надстройки с поддержкой SSO, созданной с помощью генератора Yeoman в кратком запуске [SSO.](sso-quickstart.md)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-260">Congratulations, you've successfully customized the functionality of the SSO-enabled add-in that you created with the Yeoman generator in the [SSO quick start](sso-quickstart.md).</span></span> <span data-ttu-id="b2cf2-261">Дополнительные сведения об этапах настройки единого входа, которые генератор Yeoman выполняет автоматически, и коде, который упрощает процесс единого входа, см. в статье [Создание надстройки Office на платформе Node.js с использованием единого входа](../develop/create-sso-office-add-ins-nodejs.md).</span><span class="sxs-lookup"><span data-stu-id="b2cf2-261">To learn more about SSO configuration steps that the Yeoman generator completed automatically, and the code that facilitates the SSO process, see the [Create a Node.js Office Add-in that uses single sign-on](../develop/create-sso-office-add-ins-nodejs.md) tutorial.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="9457d-263">См. также</span><span class="sxs-lookup"><span data-stu-id="9457d-263">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2cf2-262">См. также</span><span class="sxs-lookup"><span data-stu-id="b2cf2-262">See also</span></span>
 
-- [<span data-ttu-id="9457d-264">Включение единого входа для надстроек Office</span><span class="sxs-lookup"><span data-stu-id="9457d-264">Enable single sign-on for Office Add-ins</span></span>](../develop/sso-in-office-add-ins.md)
-- [<span data-ttu-id="9457d-265">Краткое руководство по единому входу (SSO)</span><span class="sxs-lookup"><span data-stu-id="9457d-265">Single sign-on (SSO) quick start</span></span>](sso-quickstart.md)
-- [<span data-ttu-id="9457d-266">Создание надстройки Office на платформе Node.js с использованием единого входа</span><span class="sxs-lookup"><span data-stu-id="9457d-266">Create a Node.js Office Add-in that uses single sign-on</span></span>](../develop/create-sso-office-add-ins-nodejs.md)
-- [<span data-ttu-id="9457d-267">Устранение ошибок единого входа</span><span class="sxs-lookup"><span data-stu-id="9457d-267">Troubleshoot error messages for single sign-on (SSO)</span></span>](../develop/troubleshoot-sso-in-office-add-ins.md)
+- [<span data-ttu-id="b2cf2-263">Включение единого входа для надстроек Office</span><span class="sxs-lookup"><span data-stu-id="b2cf2-263">Enable single sign-on for Office Add-ins</span></span>](../develop/sso-in-office-add-ins.md)
+- [<span data-ttu-id="b2cf2-264">Краткое руководство по единому входу (SSO)</span><span class="sxs-lookup"><span data-stu-id="b2cf2-264">Single sign-on (SSO) quick start</span></span>](sso-quickstart.md)
+- [<span data-ttu-id="b2cf2-265">Создание надстройки Office на платформе Node.js с использованием единого входа</span><span class="sxs-lookup"><span data-stu-id="b2cf2-265">Create a Node.js Office Add-in that uses single sign-on</span></span>](../develop/create-sso-office-add-ins-nodejs.md)
+- [<span data-ttu-id="b2cf2-266">Устранение ошибок единого входа</span><span class="sxs-lookup"><span data-stu-id="b2cf2-266">Troubleshoot error messages for single sign-on (SSO)</span></span>](../develop/troubleshoot-sso-in-office-add-ins.md)
