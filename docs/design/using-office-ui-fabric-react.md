@@ -1,18 +1,18 @@
 ---
 title: Использование Office UI Fabric React в надстройках Office
 description: Использование Office UI Fabric React в надстройках Office
-ms.date: 09/09/2020
+ms.date: 02/09/2021
 localization_priority: Normal
-ms.openlocfilehash: c1671fdd2ea616398f9c57f76898a6cc96daf502
-ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
+ms.openlocfilehash: f8f61d1b094fa71b8a400a6a6d9ea3029c53b051
+ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49131985"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "50237730"
 ---
 # <a name="use-office-ui-fabric-react-in-office-add-ins"></a>Использование Office UI Fabric React в надстройках Office
 
-Office UI Fabric — это интерфейсная платформа JavaScript для построения взаимодействия с пользователем в Office и Office 365. Если вы разрабатываете надстройку с использованием React, пользовательский интерфейс рекомендуется создать с помощью Fabric React. В Fabric предоставлены некоторые компоненты дизайна на основе React, например кнопки и флажки, которые можно использовать в надстройке.
+Office UI Fabric — это интерфейсная структура JavaScript для создания пользовательского интерфейса для Office. Если вы создаете надстройки с помощью React, рассмотрите возможность использования Fabric React для создания пользовательского интерфейса. Fabric предоставляет несколько компонентов UX на основе React, например кнопки или контрольные элементы, которые можно использовать в надстройке.
 
 В этой статье объясняется, как создать надстройку с помощью React и использованием компонентов Fabric React.
 
@@ -36,7 +36,7 @@ Office UI Fabric — это интерфейсная платформа JavaScri
 - **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `Word`
 
-![Снимок экрана, на котором показаны приглашения и ответы для генератора Yeoman в интерфейсе командной строки](../images/yo-office-word-react.png)
+![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки](../images/yo-office-word-react.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -78,7 +78,7 @@ Office UI Fabric — это интерфейсная платформа JavaScri
 
 3. В Word выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки. Обратите внимание на текст по умолчанию и кнопку **Запустить** в нижней части области задач. Следуя этой инструкции до конца, вы переопределите эти текст и кнопку, создав компонент React с использованием компонентов дизайна Fabric React.
 
-    ![Снимок экрана, на котором показано приложение Word с выделенной кнопкой "Показать область задач" и кнопкой "выполнить" и сразу предшествующим текстом, выделенным в области задач](../images/word-task-pane-yo-default.png)
+    ![Screenshot showing the Word application with the Show Taskpane ribbon button highlighted and the Run button and immediately preceding text highlighted in the task pane](../images/word-task-pane-yo-default.png)
 
 ## <a name="create-a-react-component-that-uses-fabric-react"></a>Создание компонента React c использованием Fabric React
 
@@ -170,7 +170,7 @@ export class ButtonPrimaryExample extends React.Component<IButtonProps, {}> {
 
 После сохранения изменений в **App.tsx** область задач надстройки в Word обновляется автоматически.  Текст по умолчанию и кнопка в нижней части области задач теперь отображают пользовательский интерфейс, определяемый компонентом `ButtonPrimaryExample`. Нажмите кнопку **Вставить текст...** для вставки текста в документ.
 
-![Снимок экрана с приложением Word с "Insert Text..." Кнопка и непосредственно предшествующий выделенный текст](../images/word-task-pane-with-react-component.png)
+![Screenshot showing the Word application with the "Insert text..." кнопка и сразу после выделенного текста](../images/word-task-pane-with-react-component.png)
 
 Поздравляем! Вы успешно создали надстройку области задач с помощью React и Office UI Fabric React!
 

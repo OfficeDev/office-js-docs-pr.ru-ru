@@ -1,14 +1,14 @@
 ---
 title: Варианты проверки подлинности в надстройках Outlook
 description: Надстройки Outlook предоставляют несколько различных способов проверки подлинности для разных сценариев.
-ms.date: 11/10/2020
+ms.date: 02/09/2021
 localization_priority: Priority
-ms.openlocfilehash: 54584483b7d4fd75e3f2d6c3188465333e9f58d5
-ms.sourcegitcommit: ca66ff7462bfdf4ed7ae04f43d1388c24de63bf9
+ms.openlocfilehash: b53647c8a38051096ef59e7b784f8a00964aa73f
+ms.sourcegitcommit: fefc279b85e37463413b6b0e84c880d9ed5d7ac3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48996398"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50234284"
 ---
 # <a name="authentication-options-in-outlook-add-ins"></a>Варианты проверки подлинности в надстройках Outlook
 
@@ -20,7 +20,7 @@ ms.locfileid: "48996398"
 
 > [!NOTE]
 > API единого входа в настоящее время поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API идентификации](../reference/requirement-sets/identity-api-requirement-sets.md).
-> Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Office 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Microsoft 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 Рекомендуем использовать маркеры единого входа в таких случаях:
 

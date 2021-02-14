@@ -3,12 +3,12 @@ title: LaunchEvents в файле манифеста (предварительн
 description: Элемент LaunchEvents настраивает надстройку для активации на основе поддерживаемых событий.
 ms.date: 02/01/2021
 localization_priority: Normal
-ms.openlocfilehash: 9df059879018d79a61f1c900888c8d197e0b9880
-ms.sourcegitcommit: 8546889a759590c3798ce56e311d9e46f0171413
+ms.openlocfilehash: 59c52aa3f60e69e2bdda84718c6123f02942fedc
+ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "50104814"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "50237982"
 ---
 # <a name="launchevents-element-preview"></a>Элемент LaunchEvents (предварительная версия)
 
@@ -17,7 +17,7 @@ ms.locfileid: "50104814"
 **Тип надстройки:** почтовая
 
 > [!IMPORTANT]
-> Активация на основе событий в настоящее время находится [в предварительной](../../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) версии и доступна только в Outlook в Интернете и Windows. Дополнительные сведения см. в [предварительном просмотре функции активации на основе событий.](../../outlook/autolaunch.md#how-to-preview-the-event-based-activation-feature)
+> Активация на основе событий в настоящее время находится [в предварительной](../../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) версии и доступна только в Outlook в Интернете и Windows. Дополнительные сведения см. в предварительном просмотре функции [активации на основе событий.](../../outlook/autolaunch.md#how-to-preview-the-event-based-activation-feature)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,7 +34,7 @@ ms.locfileid: "50104814"
 
 ## <a name="contained-in"></a>Содержится в
 
-[ExtensionPoint](extensionpoint.md) ( Почтовая надстройка **LaunchEvent)**
+[ExtensionPoint](extensionpoint.md) (**Почтовая надстройка LaunchEvent)**
 
 ## <a name="child-elements"></a>Дочерние элементы
 

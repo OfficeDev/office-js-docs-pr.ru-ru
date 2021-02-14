@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Outlook
 description: Узнайте больше о наборах обязательных элементов API JavaScript для Outlook
-ms.date: 01/26/2021
+ms.date: 02/08/2021
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: 8838a1fb08b37218bf02a8dc0760a317c2e90e86
-ms.sourcegitcommit: adbc9d59ffa5efdff5afa9115e0990544f2246ab
+ms.openlocfilehash: d3a9255ccba922ecaef5aafe8407e98d4ab2fc33
+ms.sourcegitcommit: fefc279b85e37463413b6b0e84c880d9ed5d7ac3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "49990514"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50234144"
 ---
 # <a name="outlook-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Outlook
 
@@ -112,7 +112,7 @@ if (item.somePropertyOrFunction !== undefined) {
 >
 > <sup>3</sup>Поддержка версии 1.3 в Outlook 2013 добавлена в рамках [обновления для Outlook 2013 (KB3114349) от 8 декабря 2015 г.](https://support.microsoft.com/kb/3114349) Поддержка версии 1.4 в Outlook 2013 добавлена в рамках [обновления для Outlook 2013 (KB3118280) от 13 сентября 2016 г.](https://support.microsoft.com/help/3118280) Поддержка версии 1.4 в Outlook 2016 (единовременная покупка) добавлена в рамках [обновления для Office 2016 (KB4022223) от 3 июля 2018 г.](https://support.microsoft.com/help/4022223).
 >
-> <sup>4</sup> Поддержка предварительной версии в новом Outlook для Mac доступна с версии 16.38.506. Дополнительные сведения см. в разделе [Новый Outlook для Mac](../../outlook/compare-outlook-add-in-support-in-outlook-for-mac.md#new-outlook-on-mac-preview).
+> <sup>4</sup> Поддержка нового пользовательского интерфейса Mac (предварительной версии) доступна в Outlook с версии 16.38.506. Дополнительные сведения см. в разделе [Поддержка надстроек в Outlook в новом интерфейсе Mac](../../outlook/compare-outlook-add-in-support-in-outlook-for-mac.md#add-in-support-in-outlook-on-new-mac-ui-preview).
 >
 > <sup>5</sup> В настоящее время при проектировании и внедрении надстроек для мобильных клиентов следует учитывать и другие факторы. Например, единственный поддерживаемый режим — это "Сообщение прочитано". Дополнительные сведения см. в статье [Рекомендации по использованию кода при добавлении поддержки для команд надстроек Outlook Mobile](../../outlook/add-mobile-support.md#code-considerations).
 

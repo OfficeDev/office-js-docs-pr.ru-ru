@@ -3,12 +3,12 @@ title: Создание настраиваемой контекстной вкл
 description: Узнайте, как добавлять настраиваемые контекстные вкладки в надстройку Office.
 ms.date: 01/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 67588e04d6ea95bc581c51e274c8135cfa5afd50
-ms.sourcegitcommit: 4805454f7fc6c64368a35d014e24075faf3e7557
+ms.openlocfilehash: 0badd779f22edc9b4659908409764bea1cde44f5
+ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "50173922"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "50237723"
 ---
 # <a name="create-custom-contextual-tabs-in-office-add-ins-preview"></a>Создание пользовательских контекстных вкладок в надстройках Office (предварительная версия)
 

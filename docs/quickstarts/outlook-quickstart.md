@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки Outlook
 description: Узнайте, как создать простую надстройку для области задач Outlook, используя API JS для Office.
-ms.date: 01/22/2021
+ms.date: 02/09/2021
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: ae14416cd7fbcfeca10e4ace25997395fc9b44c1
-ms.sourcegitcommit: 6c5716d92312887e3d944bf12d9985560109b3c0
+ms.openlocfilehash: 2ba89f400feaf0664ad98f47d8c933431341466e
+ms.sourcegitcommit: fefc279b85e37463413b6b0e84c880d9ed5d7ac3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "49944341"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50234193"
 ---
 # <a name="build-your-first-outlook-add-in"></a>Создание первой надстройки Outlook
 
@@ -98,10 +98,10 @@ ms.locfileid: "49944341"
 > [!NOTE]
 > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите указанную ниже команду, примите предложение установить сертификат, предоставленный генератором Yeoman. Кроме того, вам может потребоваться запустить командную строку или терминал с правами администратора, чтобы внести изменения.
 
-1. Выполните следующую команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен).
+1. Выполните следующую команду в корневом каталоге своего проекта. После выполнения этой команды запустится локальный веб-сервер (если он еще не запущен) и будет загружена ваша неопубликованная надстройка.
 
     ```command&nbsp;line
-    npm run dev-server
+    npm start
     ```
 
 1. Чтобы загрузить неопубликованную надстройку в Outlook, следуйте инструкциями из статьи [Загрузка неопубликованных надстроек Outlook для тестирования](../outlook/sideload-outlook-add-ins-for-testing.md).
@@ -134,7 +134,7 @@ ms.locfileid: "49944341"
     > [!NOTE]
     > Если вы уже установили Visual Studio 2019, [используйте установщик Visual Studio](/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**.
 
-- Office 365
+- Microsoft 365
 
     > [!NOTE]
     > Если у вас нет подписки на Microsoft 365, вы можете получить бесплатную подписку, зарегистрировавшись в [программе для разработчиков Microsoft 365](https://developer.microsoft.com/office/dev-program).

@@ -1,102 +1,118 @@
-### YamlMime:Landing
+### YamlMime:Hub
 title: Документация по надстройкам Office
-summary: Используйте платформу надстроек Office для создания решений, расширяющих приложения Office и взаимодействующих с контентом в документах Office, а также в сообщениях электронной почты Outlook и элементах календаря. С помощью надстроек Office можно использовать привычные веб-технологии, такие как HTML, CSS и JavaScript, для создания решений, которые могут работать в Office в Интернете, Windows, Mac, Android и iOS.
+summary: Используйте платформу надстройки Office для создания решений, расширяющих приложения Office и взаимодействующих с содержимым в документах Office, а также в почтовых сообщениях и пунктах календаря Outlook. С помощью надстройки Office вы можете использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript, для создания решений, которые могут работать в Office в Интернете, Windows, Mac и на мобильных устройствах.
+brand: office
 metadata:
   title: Документация по надстройкам Office
   description: Сведения о создании надстроек Office.
-  ms.prod: non-product-specific
-  ms.topic: landing-page
+  services: service
+  ms.service: service
+  ms.topic: hub-page
   author: o365devx
   ms.author: o365devx
-  ms.date: 07/31/2020
-  ms.openlocfilehash: 993ef1e5671e42b1b6d5e6316d61d51a794be62e
-  ms.sourcegitcommit: 604361e55dee45c7a5d34c2fa6937693c154fc24
+  ms.date: 02/12/2021
+  ms.openlocfilehash: 848727c2b49c2ab8609fe07b98d25c307acb0315
+  ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/03/2020
-  ms.locfileid: "47363718"
-landingContent:
-- title: Сведения о надстройках Office
-  linkLists:
-  - linkListType: concept
+  ms.lasthandoff: 02/14/2021
+  ms.locfileid: "50238059"
+highlightedContent:
+  items:
+  - itemType: overview
+    title: Обзор платформы надстроек Office
+    url: overview/office-add-ins.md
+  - itemType: quickstart
+    title: Настройка надстройки Excel за 5 минут
+    url: quickstarts/excel-quickstart-jquery.md
+  - itemType: learn
+    title: 'Microsoft Learn: введение в настройку клиента Office с помощью надстройки'
+    url: /learn/modules/intro-office-add-ins
+  - itemType: learn
+    title: 'Microsoft Learn: расширение клиентов Office с помощью надстройки Office'
+    url: /learn/paths/m365-office-add-in-associate
+  - itemType: whats-new
+    title: Блог разработчиков Microsoft 365
+    url: https://developer.microsoft.com/office/blogs/technology/add-ins
+  - itemType: how-to-guide
+    title: Руководство для начинающих надстройки Office
+    url: overview/learning-path-beginner.md
+  - itemType: reference
+    title: Справочная документация по API JavaScript для Office
+    url: /javascript/api/overview
+  - itemType: sample
+    title: 'GitHub: шаблоны и методики для надстройки Office'
+    url: https://github.com/OfficeDev/PnP-OfficeAddins
+conceptualContent:
+  title: Ваш путь разработчика
+  summary: ''
+  items:
+  - title: Обзор
     links:
-    - text: Обзор платформы надстроек Office
-      url: overview/office-add-ins.md
-  - linkListType: learn
+    - url: overview/learning-path-beginner.md
+      itemType: get-started
+      text: Начало работы с надстройками Office
+    - url: overview/explore-with-script-lab.md
+      itemType: sample
+      text: Тестирование и эксперимент с script Lab
+    - url: quickstarts/outlook-quickstart.md
+      itemType: quickstart
+      text: Настройка надстройки Outlook за 5 минут
+    - url: quickstarts/powerpoint-quickstart.md
+      itemType: quickstart
+      text: Настройка надстройки PowerPoint за 5 минут
+  - title: Сборка
     links:
-    - text: Общие сведения о настройке клиента Office с помощью надстроек
-      url: /learn/modules/intro-office-add-ins/
-    - text: Расширение возможностей клиентов Office с помощью надстроек Office
-      url: /learn/paths/m365-office-add-in-associate/
-  - linkListType: overview
+    - url: tutorials/excel-tutorial.md
+      itemType: tutorial
+      text: Разработка полной надстройки Excel
+    - url: tutorials/outlook-tutorial.md
+      itemType: tutorial
+      text: Руководство по надстройкам Outlook
+    - url: overview/patterns-and-practices-overview.md
+      itemType: sample
+      text: Использование общих шаблонов и методик
+    - url: /javascript/api/overview
+      itemType: reference
+      text: Справочная документация по API чтения
+  - title: Тестирование и отладка
     links:
-    - text: Документация по надстройкам Excel
-      url: excel/index.yml
-    - text: Документация по надстройкам OneNote
-      url: onenote/index.yml
-    - text: Документация по надстройкам Outlook
-      url: outlook/index.yml
-    - text: Документация по надстройкам PowerPoint
-      url: powerpoint/index.yml
-    - text: Документация по надстройкам Project
-      url: project/index.yml
-    - text: Документация по надстройкам Word
-      url: word/index.yml
-- title: Начало работы
-  linkLists:
-  - linkListType: get-started
+    - url: testing/test-debug-office-add-ins.md
+      itemType: overview
+      text: Обзор отладки
+    - url: testing/testing-and-troubleshooting.md
+      itemType: concept
+      text: Устранение ошибок, с которыми сталкиваются пользователи
+    - url: testing/troubleshoot-manifest.md
+      itemType: architecture
+      text: Проверка манифеста надстройки
+  - title: Развертывание
     links:
-    - text: Начало работы с надстройками Office
-      url: overview/learning-path-beginner.md
-    - text: Изучение API JavaScript для Office с помощью Script Lab
-      url: overview/explore-with-script-lab.md
-  - linkListType: quickstart
+    - url: publish/publish.md
+      itemType: deploy
+      text: Изучение вариантов развертывания
+    - url: publish/centralized-deployment.md
+      itemType: deploy
+      text: Узнайте о централизованном развертывании
+  - title: Публикация
     links:
-    - text: Краткое руководство надстройкам Excel
-      url: quickstarts/excel-quickstart-jquery.md
-    - text: Краткое руководство по пользовательским функциям в Excel
-      url: quickstarts/excel-custom-functions-quickstart.md
-    - text: Краткое руководство надстройкам OneNote
-      url: quickstarts/onenote-quickstart.md
-    - text: Краткое руководство надстройкам Outlook
-      url: quickstarts/outlook-quickstart.md
-    - text: Краткое руководство надстройкам PowerPoint
-      url: quickstarts/powerpoint-quickstart.md
-    - text: Краткое руководство надстройкам Project
-      url: quickstarts/project-quickstart.md
-    - text: Краткое руководство надстройкам Word
-      url: quickstarts/word-quickstart.md
-    - text: Краткое руководство по единому входу (SSO)
-      url: quickstarts/sso-quickstart.md
-- title: Учебники
-  linkLists:
-  - linkListType: tutorial
+    - url: /office/dev/store
+      itemType: overview
+      text: Проверка надстройки Office
+    - url: /office/dev/store/add-in-submission-guide
+      itemType: how-to-guide
+      text: Обзор руководства по отправке в Магазин приложений Microsoft 365
+  - title: Вовлечение
     links:
-    - text: Руководство по надстройкам Excel
-      url: tutorials/excel-tutorial.md
-    - text: Руководство по пользовательским функциям в Excel
-      url: tutorials/excel-tutorial-create-custom-functions.md
-    - text: Руководство по надстройке Outlook
-      url: tutorials/outlook-tutorial.md
-    - text: Руководство по надстройкам PowerPoint
-      url: tutorials/powerpoint-tutorial.md
-    - text: Руководство по надстройкам Word
-      url: tutorials/word-tutorial.md
-- title: Ресурсы
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Задать вопрос
-      url: https://stackoverflow.com/questions/tagged/office-js
-    - text: Сообщить о проблеме
-      url: https://github.com/officedev/office-js/issues
-    - text: Предложить функцию
-      url: https://officespdev.uservoice.com/
-    - text: Документация по надстройкам COM или VSTO
-      url: /office/client-developer/office-client-development
-    - text: Репозиторий примеров PnP для надстроек Office
-      url: https://github.com/OfficeDev/PnP-OfficeAddins
-    - text: Блоги по надстройкам Office
-      url: https://developer.microsoft.com/office/gallery/?filterBy=Add-ins,Blog%20Posts
-    - text: Дополнительные ресурсы
-      url: resources/resources-links-help.md
+    - url: https://developer.microsoft.com/office
+      itemType: whats-new
+      text: Присоединяйтесь к программе для разработчиков
+    - url: https://officespdev.uservoice.com
+      itemType: architecture
+      text: Предложить функцию
+    - url: https://stackoverflow.com/questions/tagged/office-js
+      itemType: reference
+      text: Задайте вопросы о Office.js в Stack Overflow
+    - url: https://github.com/OfficeDev/office-js/issues
+      itemType: reference
+      text: Сообщение об ошибке или проблеме

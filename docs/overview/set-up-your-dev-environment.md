@@ -1,14 +1,14 @@
 ---
 title: Настройка среды разработки
 description: Настройка среды разработчика для создания надстройки Office.
-ms.date: 10/14/2020
+ms.date: 02/09/2021
 localization_priority: Normal
-ms.openlocfilehash: eddf8bdf7b20a54667e6f8eb38bdace801ea1813
-ms.sourcegitcommit: d28392721958555d6edea48cea000470bd27fcf7
+ms.openlocfilehash: 1dd0cc6bb035a0274e36fe9916dcd2481bdf0b39
+ms.sourcegitcommit: fefc279b85e37463413b6b0e84c880d9ed5d7ac3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "49839714"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50234130"
 ---
 # <a name="set-up-your-development-environment"></a>Настройка среды разработки
 
@@ -45,9 +45,9 @@ npm -v
 
 Вы можете использовать диспетчер версий Node, чтобы разрешить переключение между несколькими версиями Node.js npm, но это не является строго необходимым. Подробные сведения о том, как это сделать, см. в [инструкциях npm.](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-## <a name="get-office-365"></a>Получить Office 365
+## <a name="get-microsoft-365"></a>Получить Microsoft 365
 
-Если у вас еще нет учетной записи Microsoft 365, вы можете оформить бесплатную возобновляемую подписку на Microsoft 365 на 90 дней, присоединившись к [программе для разработчиков Microsoft 365](https://developer.microsoft.com/office/dev-program).
+Если у вас еще нет учетной записи Microsoft 365, вы можете получить бесплатную 90-дневную возобновляемую подписку на Microsoft 365, которая включает все приложения Office, присоединившись к программе для разработчиков [Microsoft 365.](https://developer.microsoft.com/office/dev-program)
 
 ## <a name="install-a-code-editor"></a>Установка редактора кода
 
@@ -55,7 +55,7 @@ npm -v
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Atom](https://atom.io);
-- [Webstorm](https://www.jetbrains.com/webstorm)
+- [Webstorm](https://www.jetbrains.com/webstorm).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -72,7 +72,7 @@ npm -v
 ## <a name="see-also"></a>См. также
 
 - [Основные принципы надстроек Office](../overview/core-concepts-office-add-ins.md)
-- [Разработка надстройки Office](../develop/develop-overview.md)
+- [Разработка надстроек Office](../develop/develop-overview.md)
 - [Проектирование надстроек Office](../design/add-in-design.md)
 - [Тестирование и отладка надстроек Office](../testing/test-debug-office-add-ins.md)
 - [Публикация надстроек Office](../publish/publish.md)

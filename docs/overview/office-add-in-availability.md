@@ -1,14 +1,14 @@
 ---
 title: Доступность клиентских приложений и платформ Office для надстроек Office
 description: Поддерживаемые наборы обязательных элементов для Excel, OneNote, Outlook, PowerPoint, Project и Word.
-ms.date: 01/26/2021
+ms.date: 02/08/2021
 localization_priority: Priority
-ms.openlocfilehash: 5633832085fa488a02ab4b45abb6c266e66dfe80
-ms.sourcegitcommit: adbc9d59ffa5efdff5afa9115e0990544f2246ab
+ms.openlocfilehash: c58efb8b9b9b663ddf8caf371a5a0e221ab31486
+ms.sourcegitcommit: fefc279b85e37463413b6b0e84c880d9ed5d7ac3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "49990521"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50234221"
 ---
 # <a name="office-client-application-and-platform-availability-for-office-add-ins"></a>Доступность клиентских приложений и платформ Office для надстроек Office
 
@@ -520,7 +520,7 @@ ms.locfileid: "49990521"
     <td>Недоступно</td>
   </tr>
   <tr>
-    <td>Office для Mac<br>(подключено к подписке на Microsoft 365)</td>
+    <td>Office для Mac<br>(текущий пользовательский интерфейс,<br>подключенный к подписке на Microsoft 365)</td>
     <td>
       - <a href="/office/dev/add-ins/reference/manifest/extensionpoint#messagereadcommandsurface">Чтение сообщения</a><br>
       - <a href="/office/dev/add-ins/reference/manifest/extensionpoint#messagecomposecommandsurface">Создание сообщения</a><br>
@@ -538,6 +538,26 @@ ms.locfileid: "49990521"
       - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.7/outlook-requirement-set-1.7">Mailbox 1.7</a><br>
       - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.8/outlook-requirement-set-1.8">Mailbox 1.8</a><br>
       - <a href="/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets">IdentityAPI 1.3</a><sup>1</sup>
+    </td>
+    <td>Недоступно</td>
+  </tr>
+  <tr>
+    <td>Office для Mac<br>(новый пользовательский интерфейс (предварительная версия)<sup>3</sup>,<br>подключенный к подписке на Microsoft 365)</td>
+    <td>
+      - <a href="/office/dev/add-ins/reference/manifest/extensionpoint#messagereadcommandsurface">Чтение сообщения</a><br>
+      - <a href="/office/dev/add-ins/reference/manifest/extensionpoint#messagecomposecommandsurface">Создание сообщения</a><br>
+      - <a href="/office/dev/add-ins/reference/manifest/extensionpoint#appointmentattendeecommandsurface">Участник встречи (чтение)</a><br>
+      - <a href="/office/dev/add-ins/reference/manifest/extensionpoint#appointmentorganizercommandsurface">Организатор встречи (создание)</a><br>
+      - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстройки</a>
+    </td>
+    <td>
+      - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.1/outlook-requirement-set-1.1">Mailbox 1.1</a><br>
+      - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.2/outlook-requirement-set-1.2">Mailbox 1.2</a><br>
+      - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.3/outlook-requirement-set-1.3">Mailbox 1.3</a><br>
+      - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.4/outlook-requirement-set-1.4">Mailbox 1.4</a><br>
+      - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.5/outlook-requirement-set-1.5">Mailbox 1.5</a><br>
+      - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.6/outlook-requirement-set-1.6">Mailbox 1.6</a><br>
+      - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.7/outlook-requirement-set-1.7">Mailbox 1.7</a>
     </td>
     <td>Недоступно</td>
   </tr>
@@ -601,6 +621,8 @@ ms.locfileid: "49990521"
 > <sup>1</sup>Чтобы потребовать набор API удостоверений 1.3 в коде надстройки, проверьте, поддерживается ли он вызовом `isSetSupported('IdentityAPI', '1.3')`. Объявление в манифесте надстройки не поддерживается. Также можно определить, поддерживается ли API, проверив, не `undefined` ли он. Подробнее см. в статье [Использование API из наборов требования более поздних версий](../reference/requirement-sets/outlook-api-requirement-sets.md#using-apis-from-later-requirement-sets).
 >
 > <sup>2</sup> Добавлены обновления после выпуска.
+>
+> <sup>3</sup> Поддержка нового пользовательского интерфейса Mac (предварительной версии) доступна в Outlook с версии 16.38.506. Дополнительные сведения см. в разделе [Поддержка надстроек в Outlook в новом интерфейсе Mac](../outlook/compare-outlook-add-in-support-in-outlook-for-mac.md#add-in-support-in-outlook-on-new-mac-ui-preview).
 
 > [!IMPORTANT]
 > Поддержка клиентами набора обязательных элементов может ограничиваться поддержкой сервера Exchange. Подробные сведения о диапазоне наборов обязательных элементов, поддерживаемых сервером Exchange и клиентами Outlook, см. в статье [Наборы обязательных элементов API JavaScript для Outlook](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients).
