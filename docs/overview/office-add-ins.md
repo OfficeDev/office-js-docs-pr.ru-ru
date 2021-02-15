@@ -5,12 +5,12 @@ ms.date: 10/14/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: cc3248427a8399532d62ca4bffc20f31c48f0aa4
-ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
+ms.openlocfilehash: 7460ca65313480cc4518bdfb30447dc83288debe
+ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "48741052"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "50237765"
 ---
 # <a name="office-add-ins-platform-overview"></a>Обзор платформы надстроек Office
 
@@ -82,7 +82,7 @@ ms.locfileid: "48741052"
 
 #### <a name="custom-buttons-and-menu-commands"></a>Настраиваемые кнопки и команды меню  
 
-Вы можете добавлять настраиваемые кнопки ленты и элементы меню на ленту в Office в Интернете и Office для Windows. Благодаря этому пользователям будет проще получать доступ к надстройке непосредственно из приложения Office. С помощью кнопок можно выполнять различные действия, например отображение области задач с пользовательским HTML или выполнение функции JavaScript.  
+Вы можете добавлять настраиваемые кнопки ленты и элементы меню на ленту в Office для Интернета и Windows. Благодаря этому пользователям будет проще получать доступ к надстройке непосредственно из приложения Office. С помощью командных кнопок можно выполнять различные действия, такие как отображение области задач с пользовательским HTML или выполнение функции JavaScript.  
 
 *Рис. 3. Команды надстройки на ленте*
 
