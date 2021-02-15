@@ -5,12 +5,12 @@ title: Создание пользовательских функций в Excel
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 97037f201a237cdc6dae551552a0a1609a58b34c
-ms.sourcegitcommit: d28392721958555d6edea48cea000470bd27fcf7
+ms.openlocfilehash: 804895f3e10cac849dc20b67625e4f30164eb41d
+ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "49839875"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "50237674"
 ---
 # <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel
 
@@ -84,7 +84,7 @@ function add(first, second){
 
 ## <a name="coauthoring"></a>Совместное редактирование
 
-Excel в Интернете и Windows, подключенные к подписке Microsoft 365, позволяют использовать совместное редактирование в Excel. Если в книге используется пользовательская функция, вашему коллеге по совместному редактированию будет предложено загрузить надстройку пользовательской функции. Когда вы оба загрузите надстройку, пользовательская функция поделится результатами с помощью совместного редактирования.
+Excel для Интернета и Windows, подключенный к подписке Microsoft 365, позволяет использовать совместное редактирование в Excel. Если в книге используется пользовательская функция, вашему коллеге по совместному редактированию будет предложено загрузить надстройку пользовательской функции. Когда вы оба загрузите надстройку, пользовательская функция поделится результатами с помощью совместного редактирования.
 
 Дополнительные сведения о совместном редактировании см. в статье [О совместном редактировании в Excel](/office/vba/excel/concepts/about-coauthoring-in-excel).
 
