@@ -1,14 +1,14 @@
 ---
 title: Версии Office и наборы обязательных элементов
 description: Поддерживаемые платформы Office.js с использованием JavaScript API
-ms.date: 07/07/2020
+ms.date: 02/09/2021
 localization_priority: Priority
-ms.openlocfilehash: 14b88402b1ee563d992b6f37f95be4fa7f337388
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 2fd1393271d50be66dd2bbc2bb8cbb251ae6efbc
+ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293214"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "50237667"
 ---
 # <a name="office-versions-and-requirement-sets"></a>Версии Office и наборы обязательных элементов
 
@@ -62,4 +62,4 @@ ms.locfileid: "47293214"
 - [Указание приложений Office и обязательных элементов API](../develop/specify-office-hosts-and-api-requirements.md)
 - [Установка последней версии Office](../develop/install-latest-office-version.md)
 - [Обзор каналов обновления для Приложений Microsoft 365](/deployoffice/overview-of-update-channels-for-office-365-proplus)
-- [Получите максимум от наших продуктов благодаря Office 365](https://products.office.com/compare-all-microsoft-office-products?tab=2)
+- [Свежий взгляд на продуктивность благодаря Microsoft 365 и Microsoft Teams](https://products.office.com/compare-all-microsoft-office-products?tab=2)
