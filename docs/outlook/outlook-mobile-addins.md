@@ -1,14 +1,14 @@
 ---
 title: Надстройки Outlook для Outlook Mobile
-description: Мобильные надстройки Outlook поддерживаются во всех бизнес-учетных записях Microsoft 365, Outlook.com учетных записях, а поддержка скоро появится в учетных записях Gmail.
+description: Мобильные надстройки Outlook поддерживаются во всех бизнес-учетных записях Microsoft 365, Outlook.com учетных записях и скоро поддержка будет добавлена в учетные записи Gmail.
 ms.date: 05/27/2020
 localization_priority: Normal
-ms.openlocfilehash: 24d396f67a3d73f7c3c357be7861164f586a50da
-ms.sourcegitcommit: 6c5716d92312887e3d944bf12d9985560109b3c0
+ms.openlocfilehash: 586a473e1036e8480f395da49011f540d87e1b5f
+ms.sourcegitcommit: 1cdf5728102424a46998e1527508b4e7f9f74a4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "49944321"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "50270709"
 ---
 # <a name="add-ins-for-outlook-mobile"></a>Надстройки для Outlook Mobile
 
@@ -32,10 +32,10 @@ ms.locfileid: "49944321"
 ## <a name="whats-different-on-mobile"></a>Чем отличаются надстройки для мобильных устройств?
 
 - Небольшой размер и скорость взаимодействия усложняют разработку для мобильных устройств. Чтобы пользователи получали только качественные приложения, мы устанавливаем строгие требования, которым должна соответствовать надстройка с заявленной поддержкой мобильных устройств для утверждения в AppSource.
-    - В надстройке **ДОЛЖНЫ** соблюдаться [рекомендации по пользовательскому интерфейсу](outlook-addin-design.md).
-    - Сценарий для использования надстройки **ДОЛЖЕН** [быть уместным на мобильных устройствах](#what-makes-a-good-scenario-for-mobile-add-ins).
+  - В надстройке **ДОЛЖНЫ** соблюдаться [рекомендации по пользовательскому интерфейсу](outlook-addin-design.md).
+  - Сценарий для использования надстройки **ДОЛЖЕН** [быть уместным на мобильных устройствах](#what-makes-a-good-scenario-for-mobile-add-ins).
 
-- Как правило, в настоящее время поддерживается только режим чтения сообщений. Это означает, что в мобильном разделе манифеста необходимо объявить `MobileMessageReadCommandSurface` [только ExtensionPoint.](../reference/manifest/extensionpoint.md#mobilemessagereadcommandsurface) Однако режим организатора встреч поддерживается для интегрированных надстроек поставщика собраний по сети, которые вместо этого объявляют точку расширения [MobileOnlineMeetingCommandSurface.](../reference/manifest/extensionpoint.md#mobileonlinemeetingcommandsurface) Подробнее об [этом сценарии](online-meeting.md) см. в статье "Создание мобильной надстройки Outlook для поставщика собраний по сети".
+- Как правило, в настоящее время поддерживается только режим чтения сообщений. Это означает, что в разделе манифеста для мобильных устройств необходимо объявить только `MobileMessageReadCommandSurface` [ExtensionPoint.](../reference/manifest/extensionpoint.md#mobilemessagereadcommandsurface) Однако режим организатора встреч поддерживается для интегрированных надстроек поставщика собраний по сети, которые вместо этого объявляют точку расширения [MobileOnlineMeetingCommandSurface.](../reference/manifest/extensionpoint.md#mobileonlinemeetingcommandsurface) Дополнительные [информацию об этом](online-meeting.md) сценарии см. в статье "Создание мобильной надстройки Outlook для поставщика собраний по сети".
 
 - API [makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods) не поддерживается на мобильных устройствах, так как мобильное приложение использует интерфейсы REST API для связи с сервером. Если внутреннему серверу приложения требуется подключиться к серверу Exchange, вы можете совершать вызовы REST API с помощью маркера обратного вызова. Дополнительные сведения см. в статье [Использование интерфейсов REST API Outlook из надстройки Outlook](use-rest-api.md).
 
@@ -69,7 +69,7 @@ ms.locfileid: "49944321"
 
 Подготовив надстройку к работе, протестируйте ее на экранах различных размеров, в том числе на телефонах и планшетах. Убедитесь, что она соответствует требованиям к специальным возможностям: контрастности, размеру шрифта, а также возможности работы со средствами чтения с экрана, такими как VoiceOver в iOS и TalkBack в Android.
 
-Устранение неполадок на мобильных устройствах может быть сложно, так как у вас может не быть средств, к которым вы привыкли. Однако одним из вариантов устранения неполадок в iOS является использование Fiddler (ознакомьтесь с этим учебником по его использованию на [устройстве с iOS).](https://www.telerik.com/blogs/using-fiddler-with-apple-ios-devices)
+Устранение неполадок на мобильных устройствах может быть сложно, так как у вас может не быть средств, к которым вы привыкли. Однако для устранения неполадок в iOS можно использовать Fiddler (ознакомьтесь с этим учебником по его использованию на [устройстве с iOS).](https://www.telerik.com/blogs/using-fiddler-with-apple-ios-devices)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
