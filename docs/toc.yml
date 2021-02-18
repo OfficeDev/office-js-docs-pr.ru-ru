@@ -1049,6 +1049,8 @@ items:
                 href: outlook/limits-for-activation-and-javascript-api-for-outlook-add-ins.md
               - name: Устранение неполадок при активации надстроек
                 href: outlook/troubleshoot-outlook-add-in-activation.md
+              - name: Отладка активации на основе событий
+                href: outlook/debug-autolaunch.md
   - name: PowerPoint
     items:
       - name: Документация по надстройкам PowerPoint
