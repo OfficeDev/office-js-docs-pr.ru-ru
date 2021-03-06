@@ -1,18 +1,18 @@
 ---
-title: Элемент Екстендедоверридес в файле манифеста
-description: Задает URL-адреса для расширения манифеста в формате JSON.
-ms.date: 11/06/2020
+title: Элемент ExtendedOverrides в файле манифеста
+description: Указывает URL-адреса для расширения манифеста в формате JSON.
+ms.date: 02/23/2021
 localization_priority: Normal
-ms.openlocfilehash: 76491af34d1caf0ec266826df97a5363e336b85d
-ms.sourcegitcommit: ca66ff7462bfdf4ed7ae04f43d1388c24de63bf9
+ms.openlocfilehash: f433c9c5604f3fae35580ba20780ea6fe91401c7
+ms.sourcegitcommit: e7009c565b18c607fe0868db2e26e250ad308dce
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48996708"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "50505474"
 ---
-# <a name="extendedoverrides-element"></a>Элемент Екстендедоверридес
+# <a name="extendedoverrides-element"></a>Элемент ExtendedOverrides
 
-Задает полные URL-адреса для файлов в формате JSON, которые расширяют манифест.
+Указывает полные URL-адреса для файлов в формате JSON, которые расширяют манифест. Подробные сведения об использовании этого элемента и его потомкных элементов см. в см. в описании [Work with extended overrides of the manifest.](../../develop/extended-overrides.md)
 
 **Тип надстройки:** надстройки области задач
 
@@ -30,16 +30,27 @@ ms.locfileid: "48996708"
 
 |Элемент|Контентная|Почта|Область задач|
 |:-----|:-----|:-----|:-----|
-|[Обнаружения](tokens.md)|||x|
+|[Tokens](tokens.md)|||x|
 
 ## <a name="attributes"></a>Атрибуты
 
 |Атрибут|Описание|
 |:-----|:-----|
-|URL-адрес (обязательный)| Полный URL-адрес расширенных переопределений JSON-файла. Это может быть шаблон URL-адреса, в котором используются маркеры, определенные элементом [tokens](tokens.md) .|
-|Ресаурцесурл (необязательно) | Полный URL-адрес файла, который предоставляет дополнительные ресурсы, такие как локализованные строки, для файла, указанного в `Url` атрибуте. Это может быть шаблон URL-адреса, в котором используются маркеры, определенные элементом [tokens](tokens.md) .|
+|Url (обязательно)| Полный URL-адрес расширенного файла JSON переопределяется. В будущем это значение может быть url-шаблоном, использующим маркеры, определенные элементом [Tokens.](tokens.md) См. [примеры](#examples).|
+|ResourcesUrl (необязательный) | Полный URL-адрес файла, который предоставляет дополнительные ресурсы, например локализованные строки, для файла, указанного в `Url` атрибуте. Это может быть URL-шаблон, использующий маркеры, определенные элементом [Tokens.](tokens.md)|
 
-## <a name="example"></a>Пример
+## <a name="examples"></a>Примеры
+
+```XML
+<OfficeApp ...>
+  <!-- other elements omitted -->
+  <ExtendedOverrides Url="http://contoso.com/addinmetadata/extended-manifest-overrides.json"
+                     ResourceUrl="https://contoso.com/addin/my-resources.json">
+  </ExtendedOverrides>
+</OfficeApp>
+```
+
+В будущем это значение может быть url-шаблоном, использующим маркеры, определенные элементом [Tokens.](tokens.md) Ниже приведен пример.
 
 ```XML
 <OfficeApp ...>

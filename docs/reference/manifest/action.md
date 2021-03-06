@@ -1,18 +1,18 @@
 ---
 title: Элемент Action в файле манифеста
-description: Этот элемент указывает действие, выполняемое при выборе пользователем кнопки или элемента управления меню.
-ms.date: 07/07/2020
+description: Этот элемент указывает действие, выполняемое, когда пользователь выбирает кнопку или элемент управления меню.
+ms.date: 02/12/2021
 localization_priority: Normal
-ms.openlocfilehash: e345d0a1682e0125373a309e1e56eb2d6298ac7d
-ms.sourcegitcommit: 2f75a37de349251bc0e0fc402c5ae6dc5c3b8b08
+ms.openlocfilehash: 6be1430800dea27dbd9bf78607161d88e475c145
+ms.sourcegitcommit: e7009c565b18c607fe0868db2e26e250ad308dce
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "49771416"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "50505411"
 ---
 # <a name="action-element"></a>Элемент Action
 
-Указывает действие, выполняемое при выборе пользователем кнопки [или](control.md#button-control) [меню.](control.md#menu-dropdown-button-controls)
+Указывает действие, выполняемое при выборе пользователем кнопки [или](control.md#button-control) [управления меню.](control.md#menu-dropdown-button-controls)
 
 ## <a name="attributes"></a>Атрибуты
 
@@ -29,7 +29,6 @@ ms.locfileid: "49771416"
 |  [TaskpaneId](#taskpaneid) | Определяет идентификатор контейнера области задач.|
 |  [Title](#title) | Определяет заголовок области задач.|
 |  [SupportsPinning](#supportspinning) | Указывает, что область задач поддерживает закрепление (область задач остается открытой, когда пользователь выбирает другой элемент).|
-  
 
 ## <a name="xsitype"></a>xsi:type
 
@@ -37,6 +36,9 @@ ms.locfileid: "49771416"
 
 - `ExecuteFunction`
 - `ShowTaskpane`
+
+> [!IMPORTANT]
+> Регистрация событий [почтовых ящиков](../objectmodel/preview-requirement-set/office.context.mailbox.md#events) и [элементов](../objectmodel/preview-requirement-set/office.context.mailbox.item.md#events) недоступна при **xsi:type.** `ExecuteFunction`
 
 ## <a name="functionname"></a>FunctionName
 
@@ -50,7 +52,7 @@ ms.locfileid: "49771416"
 
 ## <a name="sourcelocation"></a>SourceLocation
 
-Требуемого **элемента, когда xsi:type** имеет вид "ShowTaskpane". Указывает расположение исходного файла для этого действия. Атрибут **resid** не может быть больше 32 символов и должен иметь значение атрибута **id** элемента **Url** в **элементе Urls** в [элементе Resources.](resources.md)
+Необходимый **элемент, когда xsi:type** — "ShowTaskpane". Указывает расположение исходного файла для этого действия. Атрибут **resid** может быть не более 32 символов и должен быть задат к значению атрибута **id** элемента **URL** в элементе **URL-адресов** в [элементе Resources.](resources.md)
 
 ```xml
 <Action xsi:type="ShowTaskpane">
@@ -104,7 +106,7 @@ ms.locfileid: "49771416"
 
 Необязательный элемент, когда для атрибута **xsi:type** задано значение ShowTaskpane. Определяет заголовок области задач для этого действия.
 
-В следующем примере показано действие, использующее **элемент Title.** Обратите внимание, что заголовок не назначается **строке** напрямую. Вместо этого назначьте ему ид ресурса (resid), определенный в разделе **"Ресурсы"** манифеста и не более 32 символов.
+В следующем примере показано действие, использующее **элемент Title.** Обратите внимание, что вы не назначаете **заголовок** строке напрямую. Вместо этого вы назначите ему ИД ресурса (resid), который определяется в разделе **Ресурсы** манифеста и может быть не более 32 символов.
 
 ```xml
 <Action xsi:type="ShowTaskpane">
@@ -132,9 +134,10 @@ ms.locfileid: "49771416"
 Элемент необязательный, когда для **xsi:type** задано значение ShowTaskpane. Родительские элементы [VersionOverrides](versionoverrides.md) должны иметь значение атрибута `xsi:type` `VersionOverridesV1_1`. Включите этот элемент со значением `true` для поддержки закрепления области задач. Пользователь сможет закрепить область задач, после чего она будет оставаться открытой при выборе другого элемента. Дополнительные сведения см. в статье [Реализация закрепляемой области задач в Outlook](../../outlook/pinnable-taskpane.md).
 
 > [!IMPORTANT]
-> Хотя элемент был впервые представлен в наборе требований 1.5, в настоящее время он поддерживается только для подписчиков `SupportsPinning` Microsoft 365, использующих следующие [](../objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md)следующую следующую поддержку.
-> - Outlook 2016 или более поздней версии для Windows (сборка 7628.1000 или более поздней версии)
-> - Outlook 2016 или более поздней сборки для Mac (сборка 16.13.503 или более поздней)
+> Хотя элемент `SupportsPinning` был представлен в наборе [требований 1.5,](../objectmodel/requirement-set-1.5/outlook-requirement-set-1.5.md)в настоящее время он поддерживается только для подписчиков Microsoft 365 с помощью следующих элементов.
+>
+> - Outlook 2016 или более поздней версии Windows (сборка 7628.1000 или более поздней версии)
+> - Outlook 2016 или более поздний на Mac (сборка 16.13.503 или более поздней)
 > - Современная версия Outlook в Интернете
 
 ```xml

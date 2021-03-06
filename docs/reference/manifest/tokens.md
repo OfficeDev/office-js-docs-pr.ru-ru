@@ -1,18 +1,18 @@
 ---
-title: Элемент tokens в файле манифеста
-description: Задает маркеры или подстановочные знаки, которые можно использовать с шаблонами URL-адресов в манифесте.
+title: Элемент Маркеры в файле манифеста
+description: Указывает маркеры или под диктовки, которые можно использовать с URL-шаблонами в манифесте.
 ms.date: 11/06/2020
 localization_priority: Normal
-ms.openlocfilehash: a50de7c2c3e8ebeb9425c1677a94bbcc62281d3b
-ms.sourcegitcommit: ca66ff7462bfdf4ed7ae04f43d1388c24de63bf9
+ms.openlocfilehash: 8680b985068c44e93f601a2b24e2f28899eb483d
+ms.sourcegitcommit: e7009c565b18c607fe0868db2e26e250ad308dce
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48996698"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "50505327"
 ---
-# <a name="tokens-element"></a>Элемент tokens
+# <a name="tokens-element"></a>Элемент Маркеры
 
-Определяет маркеры, которые можно использовать в URL-адресах шаблонов.
+Определяет маркеры, которые можно использовать в URL-адресах шаблонов. Дополнительные сведения об использовании этого элемента см. в дополнительных сведениях о работе с расширенными [переопределениями манифеста.](../../develop/extended-overrides.md)
 
 **Тип надстройки:** надстройки области задач
 
@@ -24,7 +24,7 @@ ms.locfileid: "48996698"
 
 ## <a name="contained-in"></a>Содержится в
 
-[екстендедоверридес](extendedoverrides.md)
+[ExtendedOverrides](extendedoverrides.md)
 
 ## <a name="must-contain"></a>Должен содержать
 
