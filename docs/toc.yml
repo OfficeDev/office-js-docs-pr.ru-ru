@@ -97,6 +97,8 @@ items:
             items:
               - name: Обзор
                 href: develop/add-in-manifests.md
+              - name: Расширенные переопределения
+                href: develop/extended-overrides.md
               - name: Определение правильного порядка элементов манифеста
                 href: develop/manifest-element-ordering.md
               - name: Обновление API и версии манифеста
