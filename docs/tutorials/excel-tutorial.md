@@ -4,12 +4,12 @@ description: В этом руководстве вы создадите надс
 ms.date: 02/03/2021
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 5b2660ef27ebc457d2d7602b716baf03e4b93cf3
-ms.sourcegitcommit: 8546889a759590c3798ce56e311d9e46f0171413
+ms.openlocfilehash: 0fa22b7b91f041c95abad9981dd89e620cf9af1c
+ms.sourcegitcommit: d153f6d4c3e01d63ed24aa1349be16fa8ad51218
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "50104870"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "50613936"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -36,7 +36,7 @@ ms.locfileid: "50104870"
 [!include[Yeoman generator create project guidance](../includes/yo-office-command-guidance.md)]
 
 - **Выберите тип проекта:** `Office Add-in Task Pane project`
-- **Выберите тип сценария:** `Javascript`
+- **Выберите тип сценария:** `JavaScript`
 - **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `Excel`
 
@@ -656,7 +656,7 @@ ms.locfileid: "50104870"
 
 Эти три действия должны выполняться каждый раз, когда коду нужно *прочесть* данные из документа Office.
 
-1. В функции `toggleProtection` замените `TODO2` следующим кодом. Примечание.
+1. В функции `toggleProtection` замените `TODO2` следующим кодом: Примечание.
 
    - У каждого объекта Excel есть метод `load`. Вы указываете свойства объекта, которые нужно прочесть в параметре как строку имен, разделенных запятыми. В этом случае нужно прочесть подсвойство свойства `protection`. На подсвойство нужно ссылаться почти так же, как и в остальных частях кода. Отличие заключается в том, что вместо символа "." нужно указать косую черту ("/").
 

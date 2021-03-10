@@ -706,7 +706,7 @@ items:
           - name: Автоматическое создание метаданных JSON
             href: excel/custom-functions-json-autogeneration.md
             displayName: 'Excel, Custom Functions'
-          - name: Вызов API JS для Excel
+          - name: Вызов API JavaScript для Excel
             href: excel/call-excel-apis-from-custom-function.md
             displayName: 'Excel, Custom Functions'
           - name: Определение аналогичной функции XLL
@@ -1089,7 +1089,10 @@ items:
           - name: Справочные материалы по API
             href: reference/powerpoint-api-reference.md
             displayName: PowerPoint
-          - name: Вставка и удаление слайдов в презентации
+          - name: Добавление и удаление слайдов
+            href: powerpoint/add-slides.md
+            displayName: PowerPoint
+          - name: Вставка слайдов
             href: powerpoint/insert-slides-into-presentation.md
             displayName: PowerPoint
           - name: Получение всего документа из надстройки
