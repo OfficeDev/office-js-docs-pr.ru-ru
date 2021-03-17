@@ -138,6 +138,8 @@ items:
                     href: develop/troubleshoot-sso-in-office-add-ins.md
               - name: Запрос разрешений на использование API в надстройках
                 href: develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md
+              - name: ITP и сторонние файлы cookie
+                href: develop/itp-and-third-party-cookies.md
           - name: Пользовательский интерфейс и взаимодействие с пользователем
             items:
               - name: Обзор
