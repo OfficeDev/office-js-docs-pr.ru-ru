@@ -1,15 +1,15 @@
 ---
 title: Предварительные версии API JavaScript для Excel
 description: Сведения о предстоящих API JavaScript Excel.
-ms.date: 02/24/2021
+ms.date: 03/10/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 0663b6330c402f64e7ed7e8f598a52848bbe1319
-ms.sourcegitcommit: e7009c565b18c607fe0868db2e26e250ad308dce
+ms.openlocfilehash: b4a2db19ce04d316cf106dcd97f2d71f0f009e55
+ms.sourcegitcommit: 929dcf2f415b94f42330a9035ed11a5cedad88f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50505537"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "50830981"
 ---
 # <a name="excel-javascript-preview-apis"></a>Предварительные версии API JavaScript для Excel
 
@@ -21,10 +21,12 @@ ms.locfileid: "50505537"
 
 | Функциональная область | Описание | Соответствующие объекты |
 |:--- |:--- |:--- |
+| Задачи документа | Превратите комментарии в задачи, назначенные пользователям. | [DocumentTask](/javascript/api/excel/excel.documenttask) |
 | События с измененной формулой | Отслеживание изменений формул, в том числе источника и типа события, которое вызвало изменение. | [Таблица.onFormulaChanged](/javascript/api/excel/excel.worksheet#onFormulaChanged)|
 | Связанные типы данных | Добавляет поддержку типов данных, подключенных к Excel из внешних источников. | [LinkedDataType](/javascript/api/excel/excel.linkeddatatype)|
 | Именуемые представления листа | Предоставляет программный контроль представлений таблицы для каждого пользователя. | [NamedSheetView](/javascript/api/excel/excel.namedsheetview) |
-| Задачи | Превратите комментарии в задачи, назначенные пользователям. | [Задача](/javascript/api/excel/excel.task) |
+| PivotTable PivotLayout | Расширение класса PivotLayout, включая новую поддержку текста alt и управление пустыми ячейками. | [PivotLayout](/javascript/api/excel/excel.pivotlayout) |
+| Стили таблиц | Обеспечивает управление шрифтом, границей, цветом заполнения и другими аспектами стилей таблиц. | [Таблица](/javascript/api/excel/excel.table), [PivotTable](/javascript/api/excel/excel.pivottable), [Slicer](/javascript/api/excel/excel.slicer) |
 
 ## <a name="api-list"></a>Список API
 
@@ -32,28 +34,79 @@ ms.locfileid: "50505537"
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
-|[Comment](/javascript/api/excel/excel.comment)|[assignTask (email: string)](/javascript/api/excel/excel.comment#assigntask-email-)|Назначает задачу, прикрепленную к комментарию, для данного пользователя в качестве единственного назначаемой.|
+|[AutoFilter](/javascript/api/excel/excel.autofilter)|[clearColumnCriteria(columnIndex: number)](/javascript/api/excel/excel.autofilter#clearcolumncriteria-columnindex-)|Очищает условия фильтрации автофильтра.|
+|[Comment](/javascript/api/excel/excel.comment)|[assignTask(assignee: Identity)](/javascript/api/excel/excel.comment#assigntask-assignee-)|Назначает задачу, прикрепленную к комментарию, для данного пользователя в качестве ассимилята.|
 ||[getTask()](/javascript/api/excel/excel.comment#gettask--)|Получает задачу, связанную с этим комментарием.|
 ||[getTaskOrNullObject()](/javascript/api/excel/excel.comment#gettaskornullobject--)|Получает задачу, связанную с этим комментарием.|
-|[CommentReply](/javascript/api/excel/excel.commentreply)|[assignTask (email: string)](/javascript/api/excel/excel.commentreply#assigntask-email-)|Назначает задачу, прикрепленную к комментарию, для данного пользователя в качестве единственного назначаемой.|
-||[getTask()](/javascript/api/excel/excel.commentreply#gettask--)|Получает задачу, связанную с этим комментарием.|
-||[getTaskOrNullObject()](/javascript/api/excel/excel.commentreply#gettaskornullobject--)|Получает задачу, связанную с этим комментарием.|
+|[CommentCollection](/javascript/api/excel/excel.commentcollection)|[getItemOrNullObject(commentId: string)](/javascript/api/excel/excel.commentcollection#getitemornullobject-commentid-)|Получает примечание из коллекции на основе его идентификатора.|
+|[CommentReply](/javascript/api/excel/excel.commentreply)|[assignTask(assignee: Identity)](/javascript/api/excel/excel.commentreply#assigntask-assignee-)|Назначает задачу, прикрепленную к комментарию, для данного пользователя в качестве единственного назначаемой.|
+||[getTask()](/javascript/api/excel/excel.commentreply#gettask--)|Получает задачу, связанную с потоком ответа на этот комментарий.|
+||[getTaskOrNullObject()](/javascript/api/excel/excel.commentreply#gettaskornullobject--)|Получает задачу, связанную с потоком ответа на этот комментарий.|
+|[CommentReplyCollection](/javascript/api/excel/excel.commentreplycollection)|[getItemOrNullObject(commentReplyId: string)](/javascript/api/excel/excel.commentreplycollection#getitemornullobject-commentreplyid-)|Возвращает ответ на примечание, определенное по идентификатору.|
+|[ConditionalFormatCollection](/javascript/api/excel/excel.conditionalformatcollection)|[getItemOrNullObject(id: строка)](/javascript/api/excel/excel.conditionalformatcollection#getitemornullobject-id-)|Возвращает условный формат, идентифицированный его ID.|
+|[DocumentTask](/javascript/api/excel/excel.documenttask)|[percentComplete](/javascript/api/excel/excel.documenttask#percentcomplete)|Указывает процент выполнения задачи.|
+||[priority](/javascript/api/excel/excel.documenttask#priority)|Указывает приоритет задачи.|
+||[назначение](/javascript/api/excel/excel.documenttask#assignees)|Возвращает коллекцию назначений задачи.|
+||[изменения](/javascript/api/excel/excel.documenttask#changes)|Получает записи изменений задачи.|
+||[comment](/javascript/api/excel/excel.documenttask#comment)|Получает комментарий, связанный с задачей.|
+||[completedBy](/javascript/api/excel/excel.documenttask#completedby)|Получает последнего пользователя, который выполнил задачу.|
+||[completedDateTime](/javascript/api/excel/excel.documenttask#completeddatetime)|Получает дату и время завершения задачи.|
+||[createdBy](/javascript/api/excel/excel.documenttask#createdby)|Получает пользователя, создавшего задачу.|
+||[createdDateTime](/javascript/api/excel/excel.documenttask#createddatetime)|Получает дату и время создания задачи.|
+||[id](/javascript/api/excel/excel.documenttask#id)|Получает ID задачи.|
+||[setStartAndDueDateTime (startDateTime: Date, dueDateTime: Date)](/javascript/api/excel/excel.documenttask#setstartandduedatetime-startdatetime--duedatetime-)|Изменяет даты начала и срока действия задачи.|
+||[startAndDueDateTime](/javascript/api/excel/excel.documenttask#startandduedatetime)|Получает или задает дату и время, когда должна начаться и должна быть поставлена задача.|
+||[заголовок](/javascript/api/excel/excel.documenttask#title)|Указывает название задачи.|
+|[DocumentTaskChange](/javascript/api/excel/excel.documenttaskchange)|[assignee](/javascript/api/excel/excel.documenttaskchange#assignee)|Представляет пользователя, назначенного для задачи для типа записи изменений, или пользователя, не назначенного из задачи `assign` для типа записи `unassign` изменений.|
+||[changedBy](/javascript/api/excel/excel.documenttaskchange#changedby)|Представляет пользователя, создавшего или измениввшего задачу.|
+||[commentId](/javascript/api/excel/excel.documenttaskchange#commentid)|Представляет ID того или иного `Comment` изменения `CommentReply` задачи.|
+||[createdDateTime](/javascript/api/excel/excel.documenttaskchange#createddatetime)|Представляет дату создания и время записи изменения задачи.|
+||[dueDateTime](/javascript/api/excel/excel.documenttaskchange#duedatetime)|Представляет дату и время задачи в часовом поясе UTC.|
+||[id](/javascript/api/excel/excel.documenttaskchange#id)|ID для записи изменения задачи.|
+||[percentComplete](/javascript/api/excel/excel.documenttaskchange#percentcomplete)|Представляет процент выполнения задачи.|
+||[priority](/javascript/api/excel/excel.documenttaskchange#priority)|Представляет приоритет задачи.|
+||[startDateTime](/javascript/api/excel/excel.documenttaskchange#startdatetime)|Представляет дату и время начала задачи в часовом поясе UTC.|
+||[заголовок](/javascript/api/excel/excel.documenttaskchange#title)|Представляет название задачи.|
+||[type](/javascript/api/excel/excel.documenttaskchange#type)|Представляет тип действия записи изменения задачи.|
+||[undoHistoryId](/javascript/api/excel/excel.documenttaskchange#undohistoryid)|Представляет `DocumentTaskChange.id` свойство, которое было отменено для типа `undo` записи изменений.|
+|[DocumentTaskChangeCollection](/javascript/api/excel/excel.documenttaskchangecollection)|[getCount()](/javascript/api/excel/excel.documenttaskchangecollection#getcount--)|Получает количество записей изменений в коллекции для задачи.|
+||[getItemAt(index: number)](/javascript/api/excel/excel.documenttaskchangecollection#getitemat-index-)|Получает запись изменения задачи с помощью индекса в коллекции.|
+||[items](/javascript/api/excel/excel.documenttaskchangecollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
+|[DocumentTaskCollection](/javascript/api/excel/excel.documenttaskcollection)|[getCount()](/javascript/api/excel/excel.documenttaskcollection#getcount--)|Получает количество задач в коллекции.|
+||[getItem(key: string)](/javascript/api/excel/excel.documenttaskcollection#getitem-key-)|Получает задачу с помощью своего ID.|
+||[getItemAt(index: number)](/javascript/api/excel/excel.documenttaskcollection#getitemat-index-)|Получает задачу по индексу в коллекции.|
+||[getItemOrNullObject(key: string)](/javascript/api/excel/excel.documenttaskcollection#getitemornullobject-key-)|Получает задачу с помощью своего ID.|
+||[items](/javascript/api/excel/excel.documenttaskcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
+|[DocumentTaskSchedule](/javascript/api/excel/excel.documenttaskschedule)|[dueDateTime](/javascript/api/excel/excel.documenttaskschedule#duedatetime)|Получает дату и время, когда должна быть поставлена задача.|
+||[startDateTime](/javascript/api/excel/excel.documenttaskschedule#startdatetime)|Получает дату и время, которые должна начаться задача.|
 |[FormulaChangedEventDetail](/javascript/api/excel/excel.formulachangedeventdetail)|[cellAddress](/javascript/api/excel/excel.formulachangedeventdetail#celladdress)|Адрес ячейки, содержаной измененную формулу.|
 ||[previousFormula](/javascript/api/excel/excel.formulachangedeventdetail#previousformula)|Представляет предыдущую формулу, прежде чем она была изменена.|
+|[GroupShapeCollection](/javascript/api/excel/excel.groupshapecollection)|[getItemOrNullObject(key: string)](/javascript/api/excel/excel.groupshapecollection#getitemornullobject-key-)|Получает фигуру с ее именем или ИД.|
+|[Идентификация](/javascript/api/excel/excel.identity)|[displayName](/javascript/api/excel/excel.identity#displayname)|Представляет отображаемое имя пользователя.|
+||[email](/javascript/api/excel/excel.identity#email)|Представляет электронный адрес пользователя.|
+||[id](/javascript/api/excel/excel.identity#id)|Представляет уникальный ID пользователя.|
+|[IdentityCollection](/javascript/api/excel/excel.identitycollection)|[add(assignee: Identity)](/javascript/api/excel/excel.identitycollection#add-assignee-)|Добавляет идентификатор пользователя в коллекцию.|
+||[clear()](/javascript/api/excel/excel.identitycollection#clear--)|Удаляет все идентификаторы пользователей из коллекции.|
+||[getCount()](/javascript/api/excel/excel.identitycollection#getcount--)|Возвращает число элементов в коллекции.|
+||[getItemAt(index: number)](/javascript/api/excel/excel.identitycollection#getitemat-index-)|Получает удостоверение пользователя документа с помощью индекса в коллекции.|
+||[remove(assignee: Identity)](/javascript/api/excel/excel.identitycollection#remove-assignee-)|Удаляет удостоверение пользователя из коллекции.|
+|[InsertWorksheetOptions](/javascript/api/excel/excel.insertworksheetoptions)|[positionType](/javascript/api/excel/excel.insertworksheetoptions#positiontype)|Положение вставки в текущей книге новых таблиц.|
+||[relativeTo](/javascript/api/excel/excel.insertworksheetoptions#relativeto)|Таблица в текущей книге, которая ссылается на `WorksheetPositionType` параметр.|
+||[sheetNamesToInsert](/javascript/api/excel/excel.insertworksheetoptions#sheetnamestoinsert)|Имена отдельных таблиц, которые необходимо вставить.|
 |[LinkedDataType](/javascript/api/excel/excel.linkeddatatype)|[dataProvider](/javascript/api/excel/excel.linkeddatatype#dataprovider)|Имя поставщика данных для связанного типа данных.|
 ||[lastRefreshed](/javascript/api/excel/excel.linkeddatatype#lastrefreshed)|Дата и время локального часового пояса с момента открытия книги при последнем обновлении связанного типа данных.|
 ||[name](/javascript/api/excel/excel.linkeddatatype#name)|Имя связанного типа данных.|
 ||[periodicRefreshInterval](/javascript/api/excel/excel.linkeddatatype#periodicrefreshinterval)|Частота в секундах, при которой тип связанных данных обновляется, если `refreshMode` установлено "Периодическое".|
 ||[refreshMode](/javascript/api/excel/excel.linkeddatatype#refreshmode)|Механизм получения данных для связанного типа данных.|
-||[serviceId](/javascript/api/excel/excel.linkeddatatype#serviceid)|Уникальный id связанного типа данных.|
+||[serviceId](/javascript/api/excel/excel.linkeddatatype#serviceid)|Уникальный ID связанного типа данных.|
 ||[supportedRefreshModes](/javascript/api/excel/excel.linkeddatatype#supportedrefreshmodes)|Возвращает массив со всеми режимами обновления, поддерживаемыми типом связанных данных.|
 ||[requestRefresh()](/javascript/api/excel/excel.linkeddatatype#requestrefresh--)|Делает запрос на обновление связанного типа данных.|
 ||[requestSetRefreshMode(refreshMode: Excel.LinkedDataTypeRefreshMode)](/javascript/api/excel/excel.linkeddatatype#requestsetrefreshmode-refreshmode-)|Делает запрос на изменение режима обновления для этого связанного типа данных.|
-|[LinkedDataTypeAddedEventArgs](/javascript/api/excel/excel.linkeddatatypeaddedeventargs)|[serviceId](/javascript/api/excel/excel.linkeddatatypeaddedeventargs#serviceid)|Уникальный id нового типа связанных данных.|
+|[LinkedDataTypeAddedEventArgs](/javascript/api/excel/excel.linkeddatatypeaddedeventargs)|[serviceId](/javascript/api/excel/excel.linkeddatatypeaddedeventargs#serviceid)|Уникальный ID нового типа связанных данных.|
 ||[source](/javascript/api/excel/excel.linkeddatatypeaddedeventargs#source)|Получает источник события.|
 ||[type](/javascript/api/excel/excel.linkeddatatypeaddedeventargs#type)|Получает тип события.|
 |[LinkedDataTypeCollection](/javascript/api/excel/excel.linkeddatatypecollection)|[getCount()](/javascript/api/excel/excel.linkeddatatypecollection#getcount--)|Получает количество связанных типов данных в коллекции.|
-||[getItem(key: number)](/javascript/api/excel/excel.linkeddatatypecollection#getitem-key-)|Получает связанный тип данных по службе id.|
+||[getItem(key: number)](/javascript/api/excel/excel.linkeddatatypecollection#getitem-key-)|Получает связанный тип данных по ID службы.|
 ||[getItemAt(index: number)](/javascript/api/excel/excel.linkeddatatypecollection#getitemat-index-)|Получает связанный тип данных по индексу в коллекции.|
 ||[getItemOrNullObject(key: number)](/javascript/api/excel/excel.linkeddatatypecollection#getitemornullobject-key-)|Получает связанный тип данных по ID.|
 ||[items](/javascript/api/excel/excel.linkeddatatypecollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
@@ -69,6 +122,7 @@ ms.locfileid: "50505537"
 ||[getCount()](/javascript/api/excel/excel.namedsheetviewcollection#getcount--)|Получает количество просмотров листов в этом листе.|
 ||[getItem(key: string)](/javascript/api/excel/excel.namedsheetviewcollection#getitem-key-)|Получает представление листа с его именем.|
 ||[getItemAt(index: number)](/javascript/api/excel/excel.namedsheetviewcollection#getitemat-index-)|Получает представление листа по индексу в коллекции.|
+||[getItemOrNullObject(key: string)](/javascript/api/excel/excel.namedsheetviewcollection#getitemornullobject-key-)|Получает представление листа с его именем.|
 ||[items](/javascript/api/excel/excel.namedsheetviewcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 |[PivotLayout](/javascript/api/excel/excel.pivotlayout)|[altTextDescription](/javascript/api/excel/excel.pivotlayout#alttextdescription)|The alt text description of the PivotTable.|
 ||[altTextTitle](/javascript/api/excel/excel.pivotlayout#alttexttitle)|The alt text title of the PivotTable.|
@@ -81,90 +135,55 @@ ms.locfileid: "50505537"
 ||[setStyle(style: string \| PivotTableStyle \| BuiltInPivotTableStyle)](/javascript/api/excel/excel.pivotlayout#setstyle-style-)|Задает стиль, применяемый к PivotTable.|
 ||[showFieldHeaders](/javascript/api/excel/excel.pivotlayout#showfieldheaders)|Указывает, отображаются ли в pivotTable полевые заголовок (подписи полей и отфильтровываемые выпадения).|
 |[PivotTable](/javascript/api/excel/excel.pivottable)|[refreshOnOpen](/javascript/api/excel/excel.pivottable#refreshonopen)|Указывает, обновляется ли pivotTable при открываемой книге.|
-|[Range](/javascript/api/excel/excel.range)|[getPrecedents()](/javascript/api/excel/excel.range#getprecedents--)|Возвращает объект, представляющего диапазон, содержащий все прецеденты ячейки в одной и той же таблице или `WorkbookRangeAreas` в нескольких таблицах.|
+|[PivotTableScopedCollection](/javascript/api/excel/excel.pivottablescopedcollection)|[getFirstOrNullObject()](/javascript/api/excel/excel.pivottablescopedcollection#getfirstornullobject--)|Получает первый pivotTable в коллекции.|
+|[Range](/javascript/api/excel/excel.range)|[getDependents()](/javascript/api/excel/excel.range#getdependents--)|Возвращает объект, представляющего диапазон, содержащий все иждивенцы ячейки в одной и той же таблице или `WorkbookRangeAreas` в нескольких таблицах.|
+||[getDirectDependents()](/javascript/api/excel/excel.range#getdirectdependents--)|Возвращает объект, представляющего диапазон, содержащий все прямые иждивенцы ячейки в одной и той же таблице или в нескольких `WorkbookRangeAreas` таблицах.|
+||[getExtendedRange (направление: Excel.KeyboardDirection, activeCell?: Range \| string)](/javascript/api/excel/excel.range#getextendedrange-direction--activecell-)|Возвращает объект диапазона, который включает текущий диапазон и до края диапазона, в зависимости от предоставленного направления.|
+||[getMergedAreasOrNullObject()](/javascript/api/excel/excel.range#getmergedareasornullobject--)|Возвращает объект RangeAreas, который представляет объединенные области в этом диапазоне.|
+||[getPrecedents()](/javascript/api/excel/excel.range#getprecedents--)|Возвращает объект, представляющего диапазон, содержащий все прецеденты ячейки в одной и той же таблице или `WorkbookRangeAreas` в нескольких таблицах.|
+||[getRangeEdge (направление: Excel.KeyboardDirection, activeCell?: Range \| string)](/javascript/api/excel/excel.range#getrangeedge-direction--activecell-)|Возвращает объект диапазона, который является краеугольным элементом области данных, соответствующей предоставленной направлению.|
 |[RefreshModeChangedEventArgs](/javascript/api/excel/excel.refreshmodechangedeventargs)|[refreshMode](/javascript/api/excel/excel.refreshmodechangedeventargs#refreshmode)|Режим обновления связанного типа данных.|
-||[serviceId](/javascript/api/excel/excel.refreshmodechangedeventargs#serviceid)|Уникальный id объекта, режим обновления которого был изменен.|
+||[serviceId](/javascript/api/excel/excel.refreshmodechangedeventargs#serviceid)|Уникальный ID объекта, режим обновления которого был изменен.|
 ||[source](/javascript/api/excel/excel.refreshmodechangedeventargs#source)|Получает источник события.|
 ||[type](/javascript/api/excel/excel.refreshmodechangedeventargs#type)|Получает тип события.|
 |[RefreshRequestCompletedEventArgs](/javascript/api/excel/excel.refreshrequestcompletedeventargs)|[обновлено](/javascript/api/excel/excel.refreshrequestcompletedeventargs#refreshed)|Указывает, был ли запрос на обновление успешным.|
-||[serviceId](/javascript/api/excel/excel.refreshrequestcompletedeventargs#serviceid)|Уникальный id объекта, запрос на обновление которого был завершен.|
+||[serviceId](/javascript/api/excel/excel.refreshrequestcompletedeventargs#serviceid)|Уникальный ID объекта, запрос на обновление которого был завершен.|
 ||[source](/javascript/api/excel/excel.refreshrequestcompletedeventargs#source)|Получает источник события.|
 ||[type](/javascript/api/excel/excel.refreshrequestcompletedeventargs#type)|Получает тип события.|
 ||[предупреждения](/javascript/api/excel/excel.refreshrequestcompletedeventargs#warnings)|Массив, содержащий все предупреждения, созданные из запроса на обновление.|
 |[ShapeCollection](/javascript/api/excel/excel.shapecollection)|[addSvg(xml: string)](/javascript/api/excel/excel.shapecollection#addsvg-xml-)|Создает изображение SVG (масштабируемая векторная графика) из строки XML и добавляет его на лист.|
+||[getItemOrNullObject(key: string)](/javascript/api/excel/excel.shapecollection#getitemornullobject-key-)|Получает фигуру с ее именем или ИД.|
 |[Slicer](/javascript/api/excel/excel.slicer)|[nameInFormula](/javascript/api/excel/excel.slicer#nameinformula)|Представляет имя среза, используемое в формуле.|
-||[slicerStyle](/javascript/api/excel/excel.slicer#slicerstyle)|Стиль, примененный к slicer.|
+||[slicerStyle](/javascript/api/excel/excel.slicer#slicerstyle)|Стиль, применяемый к срезу.|
 ||[setStyle(style: string \| SlicerStyle \| BuiltInSlicerStyle)](/javascript/api/excel/excel.slicer#setstyle-style-)|Задает стиль, примененный к срезу.|
+|[StyleCollection](/javascript/api/excel/excel.stylecollection)|[getItemOrNullObject(имя: строка)](/javascript/api/excel/excel.stylecollection#getitemornullobject-name-)|Получает стиль по имени.|
 |[Table](/javascript/api/excel/excel.table)|[clearStyle()](/javascript/api/excel/excel.table#clearstyle--)|Изменяет таблицу для использования стиля таблицы по умолчанию.|
-||[onFiltered](/javascript/api/excel/excel.table#onfiltered)|Возникает, если применен фильтр к указанной таблице.|
+||[onFiltered](/javascript/api/excel/excel.table#onfiltered)|Возникает, когда фильтр применяется на определенной таблице.|
 ||[tableStyle](/javascript/api/excel/excel.table#tablestyle)|Стиль, примененный к таблице.|
+||[resize (newRange: Range \| string)](/javascript/api/excel/excel.table#resize-newrange-)|Resize the table to the new range.|
 ||[setStyle(style: string \| TableStyle \| BuiltInTableStyle)](/javascript/api/excel/excel.table#setstyle-style-)|Задает стиль, примененный к таблице.|
-|[TableCollection](/javascript/api/excel/excel.tablecollection)|[onFiltered](/javascript/api/excel/excel.tablecollection#onfiltered)|Возникает, если применен фильтр к любой таблице в книге или листе.|
-|[TableFilteredEventArgs](/javascript/api/excel/excel.tablefilteredeventargs)|[tableId](/javascript/api/excel/excel.tablefilteredeventargs#tableid)|Получает id таблицы, в которой применяется фильтр.|
+|[TableCollection](/javascript/api/excel/excel.tablecollection)|[onFiltered](/javascript/api/excel/excel.tablecollection#onfiltered)|Возникает, когда фильтр применяется на любой таблице в книге или в таблице.|
+|[TableFilteredEventArgs](/javascript/api/excel/excel.tablefilteredeventargs)|[tableId](/javascript/api/excel/excel.tablefilteredeventargs#tableid)|Получает ID таблицы, в которой применяется фильтр.|
 ||[type](/javascript/api/excel/excel.tablefilteredeventargs#type)|Получает тип события.|
-||[worksheetId](/javascript/api/excel/excel.tablefilteredeventargs#worksheetid)|Получает id таблицы, которая содержит таблицу.|
-|[Задача](/javascript/api/excel/excel.task)|[addAssignee (email: string)](/javascript/api/excel/excel.task#addassignee-email-)|Добавляет в задачу назначаемую.|
-||[applyChanges(taskChanges: Excel.TaskChanges)](/javascript/api/excel/excel.task#applychanges-taskchanges-)|Применяет заданные изменения к задаче.|
-||[назначение](/javascript/api/excel/excel.task#assignees)|Получает пользователей, которым назначена задача.|
-||[comment](/javascript/api/excel/excel.task#comment)|Получает комментарий, связанный с задачей.|
-||[dueDate](/javascript/api/excel/excel.task#duedate)|Получает дату и время, когда должна быть поставлена задача.|
-||[historyRecords](/javascript/api/excel/excel.task#historyrecords)|Получает записи истории задачи.|
-||[id](/javascript/api/excel/excel.task#id)|Получает id задачи.|
-||[percentComplete](/javascript/api/excel/excel.task#percentcomplete)|Получает процент выполнения задачи.|
-||[priority](/javascript/api/excel/excel.task#priority)|Получает приоритет задачи.|
-||[startDate](/javascript/api/excel/excel.task#startdate)|Получает дату и время начала задачи.|
-||[заголовок](/javascript/api/excel/excel.task#title)|Получает название задачи.|
-||[removeAllAssignees()](/javascript/api/excel/excel.task#removeallassignees--)|Удаляет все назначения из задачи.|
-||[removeAssignee (email: string)](/javascript/api/excel/excel.task#removeassignee-email-)|Удаляет назначаемую из задачи.|
-||[setPercentComplete (percentComplete: number)](/javascript/api/excel/excel.task#setpercentcomplete-percentcomplete-)|Изменяет выполнение задачи.|
-||[setPriority (приоритет: номер)](/javascript/api/excel/excel.task#setpriority-priority-)|Изменяет приоритет задачи.|
-||[setStartDateAndDueDate (startDate: Date, dueDate: Date)](/javascript/api/excel/excel.task#setstartdateandduedate-startdate--duedate-)|Изменяет даты начала и срока действия задачи.|
-||[setTitle (название: строка)](/javascript/api/excel/excel.task#settitle-title-)|Изменяет название задачи.|
-|[TaskChanges](/javascript/api/excel/excel.taskchanges)|[dueDate](/javascript/api/excel/excel.taskchanges#duedate)|Задает новую дату для задачи в часовом поясе UTC.|
-||[emailsToAssign](/javascript/api/excel/excel.taskchanges#emailstoassign)|Задает адреса электронной почты пользователей для назначения задачи.|
-||[emailsToUnassign](/javascript/api/excel/excel.taskchanges#emailstounassign)|Задает адреса электронной почты пользователей, чтобы отогнать их от задачи.|
-||[percentComplete](/javascript/api/excel/excel.taskchanges#percentcomplete)|Задает новый процент выполнения задачи.|
-||[priority](/javascript/api/excel/excel.taskchanges#priority)|Задает новый приоритет для задачи.|
-||[removeAllPreviousAssignees](/javascript/api/excel/excel.taskchanges#removeallpreviousassignees)|Задает, следует ли изменить все предыдущие назначения из задачи.|
-||[startDate](/javascript/api/excel/excel.taskchanges#startdate)|Задает новую дату начала задачи в часовом поясе UTC.|
-||[заголовок](/javascript/api/excel/excel.taskchanges#title)|Задает новое название для задачи.|
-|[TaskCollection](/javascript/api/excel/excel.taskcollection)|[getCount()](/javascript/api/excel/excel.taskcollection#getcount--)|Получает количество задач в коллекции.|
-||[getItem(key: string)](/javascript/api/excel/excel.taskcollection#getitem-key-)|Получает задачу с помощью ее id.|
-||[getItemAt(index: number)](/javascript/api/excel/excel.taskcollection#getitemat-index-)|Получает задачу по индексу в коллекции.|
-||[getItemOrNullObject(key: string)](/javascript/api/excel/excel.taskcollection#getitemornullobject-key-)|Получает задачу с помощью ее id.|
-||[items](/javascript/api/excel/excel.taskcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
-|[TaskHistoryRecord](/javascript/api/excel/excel.taskhistoryrecord)|[anchorId](/javascript/api/excel/excel.taskhistoryrecord#anchorid)|Представляет ID объекта, на который закреплена задача (например, commentId для задач, присоединенных к комментариям).|
-||[assignee](/javascript/api/excel/excel.taskhistoryrecord#assignee)|Представляет пользователя, назначенного для задачи типа записи записи "Назначение" или отозначить из задачи тип записи записи "Unassign".|
-||[attributionUser](/javascript/api/excel/excel.taskhistoryrecord#attributionuser)|Представляет пользователя, создавшего или измениввшего задачу.|
-||[dueDate](/javascript/api/excel/excel.taskhistoryrecord#duedate)|Представляет дату окончания задачи.|
-||[historyRecordCreatedDate](/javascript/api/excel/excel.taskhistoryrecord#historyrecordcreateddate)|Представляет дату создания записи истории задач.|
-||[id](/javascript/api/excel/excel.taskhistoryrecord#id)|ID для записи истории.|
-||[percentComplete](/javascript/api/excel/excel.taskhistoryrecord#percentcomplete)|Представляет процент выполнения задачи.|
-||[priority](/javascript/api/excel/excel.taskhistoryrecord#priority)|Представляет приоритет задачи.|
-||[startDate](/javascript/api/excel/excel.taskhistoryrecord#startdate)|Представляет дату начала задачи.|
-||[заголовок](/javascript/api/excel/excel.taskhistoryrecord#title)|Представляет название задачи.|
-||[type](/javascript/api/excel/excel.taskhistoryrecord#type)|Представляет тип записи истории задач.|
-||[undoHistoryId](/javascript/api/excel/excel.taskhistoryrecord#undohistoryid)|Представляет свойство TaskHistoryRecord.id, которое было отменено для типа записи записи "Undo".|
-|[TaskHistoryRecordCollection](/javascript/api/excel/excel.taskhistoryrecordcollection)|[getCount()](/javascript/api/excel/excel.taskhistoryrecordcollection#getcount--)|Получает количество записей истории в коллекции для задачи.|
-||[getItemAt(index: number)](/javascript/api/excel/excel.taskhistoryrecordcollection#getitemat-index-)|Получает запись истории задач с помощью ее индекса в коллекции.|
-||[items](/javascript/api/excel/excel.taskhistoryrecordcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
-|[User](/javascript/api/excel/excel.user)|[displayName](/javascript/api/excel/excel.user#displayname)|Представляет отображаемое имя пользователя.|
-||[email](/javascript/api/excel/excel.user#email)|Представляет электронный адрес пользователя.|
-||[uid](/javascript/api/excel/excel.user#uid)|Представляет уникальный ID пользователя.|
-|[Workbook](/javascript/api/excel/excel.workbook)|[linkedDataTypes](/javascript/api/excel/excel.workbook#linkeddatatypes)|Возвращает коллекцию связанных типов данных, которые являются частью книги.|
-||[tasks](/javascript/api/excel/excel.workbook#tasks)|Возвращает коллекцию задач, присутствующих в книге.|
+||[worksheetId](/javascript/api/excel/excel.tablefilteredeventargs#worksheetid)|Получает ID таблицы, которая содержит таблицу.|
+|[TableScopedCollection](/javascript/api/excel/excel.tablescopedcollection)|[getItemOrNullObject(key: string)](/javascript/api/excel/excel.tablescopedcollection#getitemornullobject-key-)|Получает таблицу по имени или ИД.|
+|[Workbook](/javascript/api/excel/excel.workbook)|[insertWorksheetsFromBase64(base64File: string, options?: Excel.InsertWorksheetOptions)](/javascript/api/excel/excel.workbook#insertworksheetsfrombase64-base64file--options-)|Вставляет указанные таблицы из источника книги в текущую книгу.|
+||[linkedDataTypes](/javascript/api/excel/excel.workbook#linkeddatatypes)|Возвращает коллекцию связанных типов данных, которые являются частью книги.|
+||[onActivated](/javascript/api/excel/excel.workbook#onactivated)|Возникает при активации книги.|
+||[задачи](/javascript/api/excel/excel.workbook#tasks)|Возвращает коллекцию задач, присутствующих в книге.|
 ||[showPivotFieldList](/javascript/api/excel/excel.workbook#showpivotfieldlist)|Указывает, отображается ли область списка полей PivotTable на уровне книги.|
 ||[use1904DateSystem](/javascript/api/excel/excel.workbook#use1904datesystem)|Значение true, если в книге используется система дат 1904.|
+|[WorkbookActivatedEventArgs](/javascript/api/excel/excel.workbookactivatedeventargs)|[type](/javascript/api/excel/excel.workbookactivatedeventargs#type)|Получает тип события.|
 |[Worksheet](/javascript/api/excel/excel.worksheet)|[namedSheetViews](/javascript/api/excel/excel.worksheet#namedsheetviews)|Возвращает коллекцию представлений листов, присутствующих в листе.|
-||[onFiltered](/javascript/api/excel/excel.worksheet#onfiltered)|Возникает, если применен фильтр к указанному листу.|
+||[onFiltered](/javascript/api/excel/excel.worksheet#onfiltered)|Возникает, когда фильтр применяется на определенном таблице.|
 ||[onFormulaChanged](/javascript/api/excel/excel.worksheet#onformulachanged)|Возникает, когда в этом таблице изменена одна или несколько формул.|
-||[tasks](/javascript/api/excel/excel.worksheet#tasks)|Возвращает коллекцию задач, присутствующих в таблице.|
+||[задачи](/javascript/api/excel/excel.worksheet#tasks)|Возвращает коллекцию задач, присутствующих в таблице.|
 |[WorksheetCollection](/javascript/api/excel/excel.worksheetcollection)|[addFromBase64(base64File: string, sheetNamesToInsert?: string[], positionType?: Excel.WorksheetPositionType, relativeTo?: Worksheet \| string)](/javascript/api/excel/excel.worksheetcollection#addfrombase64-base64file--sheetnamestoinsert--positiontype--relativeto-)|Вставляет указанные листы книги в текущую книгу.|
 ||[onFiltered](/javascript/api/excel/excel.worksheetcollection#onfiltered)|Возникает при применении любого фильтра листа в книге.|
 ||[onFormulaChanged](/javascript/api/excel/excel.worksheetcollection#onformulachanged)|Возникает, когда одна или несколько формул меняются в любом таблице этой коллекции.|
 |[WorksheetFilteredEventArgs](/javascript/api/excel/excel.worksheetfilteredeventargs)|[type](/javascript/api/excel/excel.worksheetfilteredeventargs#type)|Получает тип события.|
-||[worksheetId](/javascript/api/excel/excel.worksheetfilteredeventargs#worksheetid)|Получает id таблицы, в которой применяется фильтр.|
-|[WorksheetFormulaChangedEventArgs](/javascript/api/excel/excel.worksheetformulachangedeventargs)|[formulaDetails](/javascript/api/excel/excel.worksheetformulachangedeventargs#formuladetails)|Получает массив объектов FormulaChangedEventDetail, содержащих сведения обо всех измененных формулах.|
+||[worksheetId](/javascript/api/excel/excel.worksheetfilteredeventargs#worksheetid)|Получает ID таблицы, в которой применяется фильтр.|
+|[WorksheetFormulaChangedEventArgs](/javascript/api/excel/excel.worksheetformulachangedeventargs)|[formulaDetails](/javascript/api/excel/excel.worksheetformulachangedeventargs#formuladetails)|Получает массив объектов, содержащих сведения обо всех `FormulaChangedEventDetail` измененных формулах.|
 ||[source](/javascript/api/excel/excel.worksheetformulachangedeventargs#source)|Источник события.|
 ||[type](/javascript/api/excel/excel.worksheetformulachangedeventargs#type)|Получает тип события.|
 ||[worksheetId](/javascript/api/excel/excel.worksheetformulachangedeventargs#worksheetid)|Получает ID таблицы, в которой изменена формула.|

@@ -1,18 +1,18 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.8
-description: Набор требований 1,8 для API надстройки Outlook.
-ms.date: 10/14/2020
+description: Набор требований 1.8 для API надстройки Outlook.
+ms.date: 03/10/2021
 localization_priority: Normal
-ms.openlocfilehash: d175cc84aa123c6a941ea57cfe4ff2114d693d32
-ms.sourcegitcommit: 4e7c74ad67ea8bf6b47d65b2fde54a967090f65b
+ms.openlocfilehash: 9ff66bcaeecf54dde10821df1b48df6d20cb953d
+ms.sourcegitcommit: 929dcf2f415b94f42330a9035ed11a5cedad88f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "48626591"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "50830967"
 ---
 # <a name="outlook-add-in-api-requirement-set-18"></a>Набор обязательных элементов API для надстройки Outlook 1.8
 
-Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.
+API надстройки Outlook в API Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в надстройки Outlook.
 
 > [!NOTE]
 > В этой документации рассматривается не последняя версия [набора обязательных элементов](../../requirement-sets/outlook-api-requirement-sets.md).
@@ -28,7 +28,7 @@ ms.locfileid: "48626591"
 ### <a name="change-log"></a>Журнал изменений
 
 - Добавлен объект [AttachmentContent](/javascript/api/outlook/office.attachmentcontent?view=outlook-js-1.8&preserve-view=true). Добавляет новый объект, представляющий содержимое вложения.
-- Добавлена [аттачментдетаилскомпосе](/javascript/api/outlook/office.attachmentdetailscompose?view=outlook-js-1.8&preserve-view=true): добавляет новый объект, представляющий сведения о вложении в режиме создания.
+- Добавлена [AttachmentDetailsCompose:](/javascript/api/outlook/office.attachmentdetailscompose?view=outlook-js-1.8&preserve-view=true)добавляется новый объект, который представляет сведения о вложении в режиме Compose.
 - Добавлен объект [Categories](/javascript/api/outlook/office.categories?view=outlook-js-1.8&preserve-view=true). Добавляет новый объект, представляющий категории элемента.
 - Добавлен объект [CategoryDetails](/javascript/api/outlook/office.categorydetails?view=outlook-js-1.8&preserve-view=true). Добавляет новый объект, представляющий сведения о категории (ее имя и соответствующий цвет).
 - Добавлен объект [EnhancedLocation](/javascript/api/outlook/office.enhancedlocation?view=outlook-js-1.8&preserve-view=true). Добавляет новый объект, представляющий набор местоположений для встречи.
@@ -36,7 +36,7 @@ ms.locfileid: "48626591"
 - Добавлен объект [LocationDetails](/javascript/api/outlook/office.locationdetails?view=outlook-js-1.8&preserve-view=true). Добавляет новый объект, представляющий расположение. Только для чтения.
 - Добавлен объект [LocationIdentifier](/javascript/api/outlook/office.locationidentifier?view=outlook-js-1.8&preserve-view=true). Добавляет новый объект, представляющий идентификатор расположения.
 - Добавлен объект [MasterCategories](/javascript/api/outlook/office.mastercategories?view=outlook-js-1.8&preserve-view=true). Добавляет новый объект, представляющий главный список категорий для почтового ящика.
-- Добавлен объект [SharedProperties](/javascript/api/outlook/office.sharedproperties?view=outlook-js-1.8&preserve-view=true). Добавляет новый объект, представляющий свойства элемента встречи или сообщения в общей папке, календаре или почтовом ящике.
+- Добавлены [общие свойства.](/javascript/api/outlook/office.sharedproperties?view=outlook-js-1.8&preserve-view=true)Добавляется новый объект, который представляет свойства элемента встречи или сообщения в общей папке.
 - Добавлен [элемент манифеста SupportsSharedFolders](../../manifest/supportssharedfolders.md). Добавляет дочерний элемент к элементу манифеста [DesktopFormFactor](../../manifest/desktopformfactor.md). Он определяет, доступна ли надстройка в сценариях делегирования.
 - Добавлен объект [Office.context.mailbox.masterCategories](office.context.mailbox.md#properties). Добавляет новое свойство, представляющее главный список категорий для почтового ящика.
 - Добавлен объект [Office.context.mailbox.item.categories](office.context.mailbox.item.md#properties). Добавляет новое свойство, представляющее набор категорий для элемента.

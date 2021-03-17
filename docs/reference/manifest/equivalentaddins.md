@@ -1,20 +1,20 @@
 ---
-title: Элемент Екуивалентаддинс в файле манифеста
-description: Задает обратную совместимость с эквивалентной надстройкой COM, XLL или и тем, и другими.
-ms.date: 05/03/2019
+title: Элемент EquivalentAddins в файле манифеста
+description: Указывает обратную совместимость с эквивалентной надстройки COM, XLL или обоих.
+ms.date: 03/09/2021
 localization_priority: Normal
-ms.openlocfilehash: df854bd6bf7b7be0328235726e3adfc9fc44c5b4
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: cce316ceac2b6c79a0f7ea1378411b864923cada
+ms.sourcegitcommit: c0c61fe84f3c5de88bd7eac29120056bb1224fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611556"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "50836832"
 ---
-# <a name="equivalentaddins-element"></a>Элемент Екуивалентаддинс
+# <a name="equivalentaddins-element"></a>Элемент EquivalentAddins
 
-Задает обратную совместимость с эквивалентной надстройкой COM, XLL или и тем, и другими.
+Указывает обратную совместимость с эквивалентной надстройки COM, XLL или обоих.
 
-**Тип надстройки:** Область задач, настраиваемая функция
+**Тип надстройки:** Области задач, настраиваемая функция
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,4 +35,4 @@ ms.locfileid: "44611556"
 ## <a name="see-also"></a>Дополнительные ресурсы
 
 - [Создание пользовательских функций, совместимых с функциями XLL, определенными пользователями](../../excel/make-custom-functions-compatible-with-xll-udf.md)
-- [Обеспечение совместимости надстройки Excel с существующей надстройкой COM](../../develop/make-office-add-in-compatible-with-existing-com-add-in.md)
+- [Убедитесь, что надстройка Office совместима с существующей надстройкой COM](../../develop/make-office-add-in-compatible-with-existing-com-add-in.md)
