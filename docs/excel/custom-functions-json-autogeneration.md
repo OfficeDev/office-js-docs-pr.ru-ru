@@ -3,12 +3,12 @@ ms.date: 03/15/2021
 description: Использование тегов JSDoc для динамического создания метаданных JSON пользовательских функций.
 title: Автоматическое генерирование метаданных JSON для пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: 344239c35e38bd88bfee5338289d1c2a929ea14c
-ms.sourcegitcommit: c0c61fe84f3c5de88bd7eac29120056bb1224fc8
+ms.openlocfilehash: e31059de78e9daedc31c9b0a8605b5352fd0ed94
+ms.sourcegitcommit: 7482ab6bc258d98acb9ba9b35c7dd3b5cc5bed21
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "50836867"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51178050"
 ---
 # <a name="autogenerate-json-metadata-for-custom-functions"></a>Автоматическое генерирование метаданных JSON для пользовательских функций
 
@@ -245,11 +245,11 @@ function getAddress(first, second, invocation) {
 
 Указывает, что функция должна возвращать адреса параметров ввода. 
 
-Последний параметр функции должен быть типом или производным типом `CustomFunctions.Invocation` для  `@requiresParameterAddresses` использования. Комментарий JSDoc также должен включать тег, указывающий, что возвращаемая величина — это `@returns` матрица, например `@returns {string[][]}` или `@returns {number[][]}` . Дополнительные [сведения см.](/office/dev/add-ins/excel/custom-functions-json-autogeneration#matrix-type) в матричных типах. 
+Последний параметр функции должен быть типом или производным типом `CustomFunctions.Invocation` для  `@requiresParameterAddresses` использования. Комментарий JSDoc также должен включать тег, указывающий, что возвращаемая величина — это `@returns` матрица, например `@returns {string[][]}` или `@returns {number[][]}` . Дополнительные [сведения см.](#matrix-type) в матричных типах. 
 
 Когда функция называется, `parameterAddresses` свойство будет содержать адреса параметров ввода.
 
-В следующем примере показано, как использовать параметр в сочетании с возвращением `invocation` `@requiresParameterAddresses` адресов трех параметров ввода. Дополнительные [сведения см. в](/office/dev/add-ins/excel/custom-functions-parameter-options#detect-the-address-of-a-parameter) дополнительных сведениях Об обнаружении адреса параметра. 
+В следующем примере показано, как использовать параметр в сочетании с возвращением `invocation` `@requiresParameterAddresses` адресов трех параметров ввода. Дополнительные [сведения см. в](custom-functions-parameter-options.md#detect-the-address-of-a-parameter) дополнительных сведениях Об обнаружении адреса параметра. 
 
 ```js
 /**

@@ -3,12 +3,12 @@ title: Разработка надстройки Office для работы с I
 description: Работа с надстройкими ITP и Office при использовании сторонних файлов cookie
 ms.date: 03/12/2021
 localization_priority: Normal
-ms.openlocfilehash: 48db782a8a8a179183fdd1bdfdfd55ee1c5698d4
-ms.sourcegitcommit: c0c61fe84f3c5de88bd7eac29120056bb1224fc8
+ms.openlocfilehash: e66fc25e1dc0f3a93fdf38c1d0c099d3a68459d3
+ms.sourcegitcommit: 7482ab6bc258d98acb9ba9b35c7dd3b5cc5bed21
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "50836912"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51178043"
 ---
 # <a name="develop-your-office-add-in-to-work-with-itp-when-using-third-party-cookies"></a>Разработка надстройки Office для работы с ITP при использовании сторонних файлов cookie
 
@@ -60,7 +60,7 @@ if (document.hasStorageAccess) {
 
 ## <a name="see-also"></a>См. также
 
-- [Обработка ITP в Safari и других браузерах, где сторонние файлы cookie заблокированы](https://docs.microsoft.com/azure/active-directory/develop/reference-third-party-cookies-spas)
+- [Обработка ITP в Safari и других браузерах, где сторонние файлы cookie заблокированы](/azure/active-directory/develop/reference-third-party-cookies-spas)
 - [Отслеживание предотвращения в WebKit](https://webkit.org/tracking-prevention/)
 - ["Песочница конфиденциальности" Chrome](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html)
 - [Введение API доступа к хранилищам](https://blogs.windows.com/msedgedev/2020/07/08/introducing-storage-access-api/)
