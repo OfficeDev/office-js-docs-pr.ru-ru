@@ -91,13 +91,13 @@ _\*\* SupportUrl требуется только для надстроек ра�
 [permissions (mailapp)]: ../reference/manifest/permissions.md
 [rule (rulecollection)]: ../reference/manifest/rule.md
 [rule (mailapp)]: ../reference/manifest/rule.md
-[requirements (mailapp)*]: ../reference/manifest/requirements.md
-[set*]: ../reference/manifest/set.md
-[sets (mailapprequirements)*]: ../reference/manifest/sets.md
-[form*]: ../reference/manifest/form.md
-[formsettings*]: ../reference/manifest/formsettings.md
-[sets (requirements)*]: ../reference/manifest/sets.md
-[hosts*]: ../reference/manifest/hosts.md
+[Requirements (MailApp)*]: ../reference/manifest/requirements.md
+[Set*]: ../reference/manifest/set.md
+[Sets (MailAppRequirements)*]: ../reference/manifest/sets.md
+[Form*]: ../reference/manifest/form.md
+[FormSettings*]: ../reference/manifest/formsettings.md
+[Sets (Requirements)*]: ../reference/manifest/sets.md
+[Hosts*]: ../reference/manifest/hosts.md
 
 ## <a name="hosting-requirements"></a>Требования к размещению
 
