@@ -1,14 +1,14 @@
 ---
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
-ms.date: 02/24/2021
+ms.date: 03/24/2021
 localization_priority: Normal
-ms.openlocfilehash: e3297cde10136fad3e044b682957eb6cc60e2e1d
-ms.sourcegitcommit: e7009c565b18c607fe0868db2e26e250ad308dce
+ms.openlocfilehash: 4dc9e6a49aa54583f6c10f6b94653038a6798ea2
+ms.sourcegitcommit: 5ad32261f80e7ab371aba032d9024ad1275c23f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50505220"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51221369"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -32,8 +32,8 @@ ms.locfileid: "50505220"
 |Windows 8.1,<br>Windows 10 ver. &nbsp; < &nbsp; 1903| Microsoft 365 | Нет| Internet Explorer 11|
 |Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; < &nbsp; 16.0.11629<sup>1</sup>| Всё равно|Internet Explorer 11|
 |Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.11629 &nbsp; _И_ &nbsp; < &nbsp; 16.0.13530.20424 <sup>1</sup>| Всё равно|Microsoft Edge<sup>2, 3 с</sup> оригинальным WebView (EdgeHTML)|
-|Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13530.20424<sup>1</sup>| Нет |Microsoft Edge<sup>2, 3, 4 с</sup> оригинальным WebView (EdgeHTML)|
-|Windows 8.1<br>Windows 10| Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13530.20424<sup>1</sup>| Да<sup>5</sup>|  Microsoft Edge<sup>2, 3, 4 с</sup> WebView2 (на основе хрома) |
+|Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13530.20424<sup>1</sup>| Нет |Microsoft Edge<sup>2, 3 с</sup> оригинальным WebView (EdgeHTML)|
+|Windows 8.1<br>Windows 10| Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.13530.20424<sup>1</sup>| Да<sup>4</sup>|  Microsoft Edge<sup>2, 3</sup> с WebView2 (на основе хрома) |
 
 <sup>1.</sup> Дополнительные сведения см. на странице [история](/officeupdates/update-history-office365-proplus-by-date) обновления и поиске клиентской версии Office и [канала обновления.](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19)
 
@@ -41,9 +41,7 @@ ms.locfileid: "50505220"
 
 <sup>3 Если</sup> надстройка включает элемент манифеста, она использует Internet Explorer 11 независимо от версии Windows или `Runtimes` Microsoft 365. Дополнительные сведения см. в статье [Runtimes](../reference/manifest/runtimes.md).
 
-<sup>4</sup> В настоящее время продолжается процесс разработки надстройки WebView2 для Office. В результате Microsoft Edge с оригинальным WebView (EdgeHTML) может по-прежнему использоваться для надстройки, даже если на компьютере есть необходимые версии Windows и Office, а на компьютере установлено управление WebView2. Для пользователей ежемесячного канала мы ожидаем, что этот откат завершится к концу марта 2021 г. Выкат будет более поздним для Semi-Annual каналов. Мы обновим эту страницу, как только у нас появится эта информация.
-
-<sup>5</sup> Встраивляемый контроль WebView2 должен быть установлен в дополнение к установке Microsoft Edge, чтобы Office можно было встраить его. Чтобы установить его, см. [в веб-контенте Microsoft Edge WebView2 / Embed... с Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/).
+<sup>4</sup> Встраивляемый контроль WebView2 должен быть установлен в дополнение к установке Microsoft Edge, чтобы Office можно было встраить его. Чтобы установить его, см. [в веб-контенте Microsoft Edge WebView2 / Embed... с Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/).
 
 
 

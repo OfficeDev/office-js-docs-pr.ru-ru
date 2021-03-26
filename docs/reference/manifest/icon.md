@@ -3,12 +3,12 @@ title: Элемент Icon в файле манифеста
 description: Определяет элементы Image для элементов управления Button или Menu.
 ms.date: 10/09/2018
 localization_priority: Normal
-ms.openlocfilehash: ff16e6c0fbbf6d1c54508b4460ed3e02e899db03
-ms.sourcegitcommit: 2f75a37de349251bc0e0fc402c5ae6dc5c3b8b08
+ms.openlocfilehash: d2986d6d0325f425d5a66d010fff003c67356862
+ms.sourcegitcommit: 5ad32261f80e7ab371aba032d9024ad1275c23f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "49771335"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51221362"
 ---
 # <a name="icon-element"></a>Элемент Icon
 
@@ -28,7 +28,7 @@ ms.locfileid: "49771335"
 
 ### <a name="image"></a>Изображение
 
-Изображение кнопки. Атрибут **resid** не может быть больше 32 символов и должен иметь значение атрибута **id** элемента **Image** в **элементе Images** в [элементе Resources.](resources.md) Атрибут **size** указывает размер изображения в пикселях. Обязательными являются три размера изображения (16, 32 и 80 пикселей), а поддерживаются еще пять (20, 24, 40, 48 и 64 пикселя).|
+Изображение кнопки. Атрибут **resid** может быть не более 32 символов и должен быть задатки значению атрибута **id** элемента **Image** в элементе **Images** в [элементе Resources.](resources.md) Атрибут **size** указывает размер изображения в пикселях. Необходимо использовать три размера изображения (16, 32 и 80 пикселей), а поддерживается еще пять размеров (20, 24, 40, 48 и 64 пикселя).
 
 ```xml
 <Icon>
