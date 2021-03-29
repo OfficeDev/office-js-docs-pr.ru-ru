@@ -403,7 +403,7 @@ ms.locfileid: "49840001"
 </OfficeApp>
 ```
 
-# <a name="mail"></a><span data-ttu-id="7a4ad-254">[почта](#tab/tabid-3)</span><span class="sxs-lookup"><span data-stu-id="7a4ad-254">[Mail](#tab/tabid-3)</span></span>
+# <a name="mail"></a>[<span data-ttu-id="7a4ad-254">почта</span><span class="sxs-lookup"><span data-stu-id="7a4ad-254">Mail</span></span>](#tab/tabid-3)
 
 [<span data-ttu-id="7a4ad-255">Схемы манифестов надстроек</span><span class="sxs-lookup"><span data-stu-id="7a4ad-255">Add-in manifest schemas</span></span>](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8)
 
