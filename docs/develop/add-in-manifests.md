@@ -59,11 +59,11 @@ ms.locfileid: "49840001"
 | <span data-ttu-id="7a4ad-167">[SourceLocation (MailApp)][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-167">[SourceLocation (MailApp)][]</span></span>                                                                 |         |           |    <span data-ttu-id="7a4ad-168">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-168">X</span></span>    |
 | <span data-ttu-id="7a4ad-169">[Permissions (ContentApp)][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-169">[Permissions (ContentApp)][]</span></span><br/><span data-ttu-id="7a4ad-170">[Permissions (TaskPaneApp)][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-170">[Permissions (TaskPaneApp)][]</span></span><br/><span data-ttu-id="7a4ad-171">[Permissions (MailApp)][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-171">[Permissions (MailApp)][]</span></span> |    <span data-ttu-id="7a4ad-172">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-172">X</span></span>    |     <span data-ttu-id="7a4ad-173">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-173">X</span></span>     |    <span data-ttu-id="7a4ad-174">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-174">X</span></span>    |
 | <span data-ttu-id="7a4ad-175">[Rule (RuleCollection)][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-175">[Rule (RuleCollection)][]</span></span><br/><span data-ttu-id="7a4ad-176">[Rule (MailApp)][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-176">[Rule (MailApp)][]</span></span>                                             |         |           |    <span data-ttu-id="7a4ad-177">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-177">X</span></span>    |
-| <span data-ttu-id="7a4ad-178">[Requirements (MailApp)\*][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-178">[Requirements (MailApp)\*][]</span></span>                                                                  |         |           |    <span data-ttu-id="7a4ad-179">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-179">X</span></span>    |
-| <span data-ttu-id="7a4ad-180">[Set\*][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-180">[Set\*][]</span></span><br/><span data-ttu-id="7a4ad-181">[Sets (MailAppRequirements)\*][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-181">[Sets (MailAppRequirements)\*][]</span></span>                                                 |         |           |    <span data-ttu-id="7a4ad-182">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-182">X</span></span>    |
-| <span data-ttu-id="7a4ad-183">[Form\*][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-183">[Form\*][]</span></span><br/><span data-ttu-id="7a4ad-184">[FormSettings\*][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-184">[FormSettings\*][]</span></span>                                                              |         |           |    <span data-ttu-id="7a4ad-185">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-185">X</span></span>    |
-| <span data-ttu-id="7a4ad-186">[Sets (Requirements)\*][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-186">[Sets (Requirements)\*][]</span></span>                                                                     |    <span data-ttu-id="7a4ad-187">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-187">X</span></span>    |     <span data-ttu-id="7a4ad-188">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-188">X</span></span>     |         |
-| <span data-ttu-id="7a4ad-189">[Hosts\*][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-189">[Hosts\*][]</span></span>                                                                                   |    <span data-ttu-id="7a4ad-190">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-190">X</span></span>    |     <span data-ttu-id="7a4ad-191">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-191">X</span></span>     |         |
+| <span data-ttu-id="7a4ad-178">[Requirements (MailApp)*][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-178">[Requirements (MailApp)*][]</span></span>                                                                  |         |           |    <span data-ttu-id="7a4ad-179">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-179">X</span></span>    |
+| <span data-ttu-id="7a4ad-180">[Set*][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-180">[Set*][]</span></span><br/><span data-ttu-id="7a4ad-181">[Sets (MailAppRequirements)*][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-181">[Sets (MailAppRequirements)*][]</span></span>                                                 |         |           |    <span data-ttu-id="7a4ad-182">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-182">X</span></span>    |
+| <span data-ttu-id="7a4ad-183">[Form*][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-183">[Form*][]</span></span><br/><span data-ttu-id="7a4ad-184">[FormSettings*][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-184">[FormSettings*][]</span></span>                                                              |         |           |    <span data-ttu-id="7a4ad-185">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-185">X</span></span>    |
+| <span data-ttu-id="7a4ad-186">[Sets (Requirements)*][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-186">[Sets (Requirements)*][]</span></span>                                                                     |    <span data-ttu-id="7a4ad-187">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-187">X</span></span>    |     <span data-ttu-id="7a4ad-188">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-188">X</span></span>     |         |
+| <span data-ttu-id="7a4ad-189">[Hosts*][]</span><span class="sxs-lookup"><span data-stu-id="7a4ad-189">[Hosts*][]</span></span>                                                                                   |    <span data-ttu-id="7a4ad-190">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-190">X</span></span>    |     <span data-ttu-id="7a4ad-191">X</span><span class="sxs-lookup"><span data-stu-id="7a4ad-191">X</span></span>     |         |
 
 <span data-ttu-id="7a4ad-192">_\*Элемент добавлен в схеме манифеста для надстроек Office версии 1.1._</span><span class="sxs-lookup"><span data-stu-id="7a4ad-192">_\*Added in the Office Add-in Manifest Schema version 1.1._</span></span>
 
@@ -91,20 +91,20 @@ ms.locfileid: "49840001"
 [permissions (mailapp)]: ../reference/manifest/permissions.md
 [rule (rulecollection)]: ../reference/manifest/rule.md
 [rule (mailapp)]: ../reference/manifest/rule.md
-[Requirements (MailApp)\*]: ../reference/manifest/requirements.md
-[requirements (mailapp)\*]: ../reference/manifest/requirements.md
-[Set\*]: ../reference/manifest/set.md
-[set\*]: ../reference/manifest/set.md
-[Sets (MailAppRequirements)\*]: ../reference/manifest/sets.md
-[sets (mailapprequirements)\*]: ../reference/manifest/sets.md
-[Form\*]: ../reference/manifest/form.md
-[form\*]: ../reference/manifest/form.md
-[FormSettings\*]: ../reference/manifest/formsettings.md
-[formsettings\*]: ../reference/manifest/formsettings.md
-[Sets (Requirements)\*]: ../reference/manifest/sets.md
-[sets (requirements)\*]: ../reference/manifest/sets.md
-[Hosts\*]: ../reference/manifest/hosts.md
-[hosts\*]: ../reference/manifest/hosts.md
+[Requirements (MailApp)*]: ../reference/manifest/requirements.md
+[requirements (mailapp)*]: ../reference/manifest/requirements.md
+[Set*]: ../reference/manifest/set.md
+[set*]: ../reference/manifest/set.md
+[Sets (MailAppRequirements)*]: ../reference/manifest/sets.md
+[sets (mailapprequirements)*]: ../reference/manifest/sets.md
+[Form*]: ../reference/manifest/form.md
+[form*]: ../reference/manifest/form.md
+[FormSettings*]: ../reference/manifest/formsettings.md
+[formsettings*]: ../reference/manifest/formsettings.md
+[Sets (Requirements)*]: ../reference/manifest/sets.md
+[sets (requirements)*]: ../reference/manifest/sets.md
+[Hosts*]: ../reference/manifest/hosts.md
+[hosts*]: ../reference/manifest/hosts.md
 
 ## <a name="hosting-requirements"></a><span data-ttu-id="7a4ad-221">Требования к размещению</span><span class="sxs-lookup"><span data-stu-id="7a4ad-221">Hosting requirements</span></span>
 
@@ -403,7 +403,7 @@ ms.locfileid: "49840001"
 </OfficeApp>
 ```
 
-# <a name="mail"></a><span data-ttu-id="7a4ad-254">[почта](#tab/tabid-3);</span><span class="sxs-lookup"><span data-stu-id="7a4ad-254">[Mail](#tab/tabid-3)</span></span>
+# <a name="mail"></a><span data-ttu-id="7a4ad-254">[почта](#tab/tabid-3)</span><span class="sxs-lookup"><span data-stu-id="7a4ad-254">[Mail](#tab/tabid-3)</span></span>
 
 [<span data-ttu-id="7a4ad-255">Схемы манифестов надстроек</span><span class="sxs-lookup"><span data-stu-id="7a4ad-255">Add-in manifest schemas</span></span>](/openspecs/office_file_formats/ms-owemxml/c6a06390-34b8-4b42-82eb-b28be12494a8)
 
