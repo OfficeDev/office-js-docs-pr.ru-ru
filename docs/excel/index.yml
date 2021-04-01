@@ -6,16 +6,16 @@ metadata:
   description: Учебные ресурсы по надстройкам Excel.
   ms.prod: excel
   ms.topic: landing-page
-  ms.date: 06/09/2020
+  ms.date: 03/29/2021
   localization_priority: Priority
-  ms.openlocfilehash: 0d860e532431f090ad152ff3b33d8aba2ad88e24
-  ms.sourcegitcommit: 604361e55dee45c7a5d34c2fa6937693c154fc24
+  ms.openlocfilehash: 6e1b833b9f58c26e6a5ee85103d231ea75284064
+  ms.sourcegitcommit: a0624ef0d847fdbd6d83f27d1f9c69daf636ac38
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/03/2020
-  ms.locfileid: "47363564"
+  ms.lasthandoff: 03/30/2021
+  ms.locfileid: "51435314"
 landingContent:
-- title: Сведения о надстройках Excel
+- title: О надстройки Excel
   linkLists:
   - linkListType: overview
     links:
@@ -25,19 +25,19 @@ landingContent:
     links:
     - text: Создание первой надстройки Excel
       url: ../quickstarts/excel-quickstart-jquery.md
-    - text: Изучение API с помощью сценария Lab
+    - text: Изучение API с помощью лаборатории скриптов
       url: ../overview/explore-with-script-lab.md
   - linkListType: how-to-guide
     links:
-    - text: Использование API JavaScript для Excel для взаимодействия с объектами и контентом книги
+    - text: Используйте API JavaScript Excel для взаимодействия с объектами и контентом книг
       url: ../reference/overview/excel-add-ins-reference-overview.md
-    - text: Добавление пользовательских функций в Excel
+    - text: Добавление настраиваемой функции в Excel
       url: custom-functions-overview.md
-    - text: Тестирование и отладка надстройки Excel
+    - text: Тестирование и отлагивание надстройки Excel
       url: ../testing/test-debug-office-add-ins.md
     - text: Развертывание и публикация надстройки Excel
       url: ../publish/publish.md
-- title: Основные понятия, связанные с надстройками Office
+- title: Ключевые концепции надстройки Office
   linkLists:
   - linkListType: overview
     links:
@@ -58,7 +58,7 @@ landingContent:
     - text: Задать вопрос
       url: https://stackoverflow.com/questions/tagged/office-js
     - text: Предложить функцию
-      url: https://officespdev.uservoice.com/
+      url: /answers/products/m365
     - text: Сообщить о проблеме
       url: https://github.com/officedev/office-js/issues
     - text: 'Надстройки Office: дополнительные ресурсы'

@@ -6,16 +6,16 @@ metadata:
   description: Учебные ресурсы по надстройкам Project.
   ms.prod: project
   ms.topic: landing-page
-  ms.date: 06/08/2020
+  ms.date: 03/29/2021
   localization_priority: Priority
-  ms.openlocfilehash: 06234275e8344b2de01a65d5821a7420d6c7aba8
-  ms.sourcegitcommit: 604361e55dee45c7a5d34c2fa6937693c154fc24
+  ms.openlocfilehash: 0803558dbf4e8e9edbd2d43f273bbbe40216849e
+  ms.sourcegitcommit: a0624ef0d847fdbd6d83f27d1f9c69daf636ac38
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/03/2020
-  ms.locfileid: "47364040"
+  ms.lasthandoff: 03/30/2021
+  ms.locfileid: "51435293"
 landingContent:
-- title: Сведения о надстройках Project
+- title: О надстройки Project
   linkLists:
   - linkListType: overview
     links:
@@ -29,11 +29,11 @@ landingContent:
       url: ../quickstarts/project-quickstart.md
   - linkListType: how-to-guide
     links:
-    - text: Тестирование и отладка надстроек проекта
+    - text: Тестирование и отлагивание надстроек project
       url: ../testing/test-debug-office-add-ins.md
-    - text: Развертывание и публикация надстроек проекта
+    - text: Развертывание и публикация надстройки project
       url: ../publish/publish.md
-- title: Основные понятия, связанные с надстройками Office
+- title: Ключевые концепции надстройки Office
   linkLists:
   - linkListType: overview
     links:
@@ -54,7 +54,7 @@ landingContent:
     - text: Задать вопрос
       url: https://stackoverflow.com/questions/tagged/office-js
     - text: Предложить функцию
-      url: https://officespdev.uservoice.com/
+      url: /answers/products/m365
     - text: Сообщить о проблеме
       url: https://github.com/officedev/office-js/issues
     - text: 'Надстройки Office: дополнительные ресурсы'
