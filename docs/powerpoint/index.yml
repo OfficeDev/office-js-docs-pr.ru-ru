@@ -1,21 +1,21 @@
 ### YamlMime:Landing
 title: Документация по надстройкам PowerPoint
-summary: С помощью надстроек PowerPoint вы можете использовать привычные веб-технологии, такие как HTML, CSS и JavaScript, для создания решения, которое может работать в PowerPoint на нескольких платформах, в том числе в Интернете, Windows, Mac и iPad. Узнайте, как создавать, тестировать, отлаживать и публиковать надстройки PowerPoint.
+summary: С помощью надстройок PowerPoint можно использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript, чтобы создать решение, которое может работать в PowerPoint на нескольких платформах, в том числе в Интернете, Windows, Mac и iPad. Узнайте, как создавать, тестировать, отлаживать и публиковать надстройки PowerPoint.
 metadata:
   title: Документация по надстройкам PowerPoint
   description: Учебные ресурсы по надстройкам PowerPoint
   ms.prod: powerpoint
   ms.topic: landing-page
-  ms.date: 06/08/2020
+  ms.date: 03/29/2021
   localization_priority: Priority
-  ms.openlocfilehash: 4d74bb0150d21cc1fe31a5e5a311c2ddd2150879
-  ms.sourcegitcommit: 604361e55dee45c7a5d34c2fa6937693c154fc24
+  ms.openlocfilehash: 047b49ece238efac495da5a74e1699e2ccdcfea5
+  ms.sourcegitcommit: a0624ef0d847fdbd6d83f27d1f9c69daf636ac38
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/03/2020
-  ms.locfileid: "47363690"
+  ms.lasthandoff: 03/30/2021
+  ms.locfileid: "51435300"
 landingContent:
-- title: Сведения о надстройках PowerPoint
+- title: О надстройки PowerPoint
   linkLists:
   - linkListType: overview
     links:
@@ -31,11 +31,11 @@ landingContent:
       url: ../overview/explore-with-script-lab.md
   - linkListType: how-to-guide
     links:
-    - text: Тестирование и отладка надстроек PowerPoint
+    - text: Тестирование и отлагивание надстроек PowerPoint
       url: ../testing/test-debug-office-add-ins.md
-    - text: Развертывание и публикация надстроек PowerPoint
+    - text: Развертывание и публикация надстройки PowerPoint
       url: ../publish/publish.md
-- title: Основные понятия, связанные с надстройками Office
+- title: Ключевые концепции надстройки Office
   linkLists:
   - linkListType: overview
     links:
@@ -56,7 +56,7 @@ landingContent:
     - text: Задать вопрос
       url: https://stackoverflow.com/questions/tagged/office-js
     - text: Предложить функцию
-      url: https://officespdev.uservoice.com/
+      url: /answers/products/m365
     - text: Сообщить о проблеме
       url: https://github.com/officedev/office-js/issues
     - text: 'Надстройки Office: дополнительные ресурсы'
