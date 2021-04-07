@@ -1,14 +1,14 @@
 ---
 title: Элемент Resources в файле манифеста
 description: В элементе Resources находятся значки, строки и URL-адреса для узла VersionOverrides.
-ms.date: 10/09/2018
+ms.date: 03/30/2021
 localization_priority: Normal
-ms.openlocfilehash: 0a528b05904ef65c3643aaebb9149eb2091e2287
-ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
+ms.openlocfilehash: bdf73420345ca4d054438bfba5217254e6682e6d
+ms.sourcegitcommit: 0bff0411d8cfefd4bb00c189643358e6fb1df95e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46641272"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "51604619"
 ---
 # <a name="resources-element"></a>Элемент Resources
 
@@ -23,13 +23,14 @@ ms.locfileid: "46641272"
 |  [Images](#images)            |  image   |  Предоставляет URL-адрес HTTPS изображения значка. |
 |  **Urls**                |  url     |  Предоставляет URL-адрес HTTPS расположения. URL-адрес не может быть длиннее 2048 символов. |
 |  **ShortStrings** |  string  |  Текст для элементов **Label** и **Title**. Каждая **строка** содержит не более 125 символов.|
-|  **LongStrings**  |  string  | Текст для атрибутов **Description**. Каждая**строка** содержит не более 250 символов.|
+|  **LongStrings**  |  string  | Текст для атрибутов **Description**. Каждая **строка** содержит не более 250 символов.|
 
 > [!NOTE]
 > Для всех URL-адресов в элементах **Image** и **Url** необходимо использовать протокол SSL.
 
-### <a name="images"></a>Изображения
-У каждого значка должно быть три элемента **Images** , по одному для каждого из трех обязательных размеров:
+### <a name="images"></a>изображения;
+
+Каждый значок должен иметь три элемента **Изображения,** по одному для каждого из трех обязательных размеров:
 
 - 16 x 16
 - 32x32
@@ -44,7 +45,9 @@ ms.locfileid: "46641272"
 - 64x64
 
 > [!IMPORTANT]
-> Для оптимальной работы Outlook требуется кэшировать ресурсы изображений. Поэтому сервер, на котором размещен ресурс изображения, не должен добавлять директивы CACHE-CONTROL в заголовок ответа. Это приведет к тому, что Outlook автоматически заменит универсальное или стандартное изображение.
+>
+> - Если это изображение является представителем значка надстройки, см. в приложении [Create effective listings in AppSource и Office](/office/dev/store/create-effective-office-store-listings#create-an-icon-for-your-add-in) для размера и других требований.
+> - Для оптимальной работы Outlook требуется кэшировать ресурсы изображений. Поэтому сервер, на котором размещен ресурс изображения, не должен добавлять директивы CACHE-CONTROL в заголовок ответа. Это приведет к тому, что Outlook автоматически заменит универсальное или стандартное изображение.
 
 ## <a name="resources-examples"></a>Примеры ресурсов
 

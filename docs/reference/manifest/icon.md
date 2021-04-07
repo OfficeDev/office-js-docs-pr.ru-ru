@@ -1,14 +1,14 @@
 ---
 title: Элемент Icon в файле манифеста
 description: Определяет элементы Image для элементов управления Button или Menu.
-ms.date: 10/09/2018
+ms.date: 03/30/2021
 localization_priority: Normal
-ms.openlocfilehash: d2986d6d0325f425d5a66d010fff003c67356862
-ms.sourcegitcommit: 5ad32261f80e7ab371aba032d9024ad1275c23f9
+ms.openlocfilehash: 1adfbcd154091fcae49966f0c1f7d0b9cc968ed3
+ms.sourcegitcommit: 0bff0411d8cfefd4bb00c189643358e6fb1df95e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51221362"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "51604626"
 ---
 # <a name="icon-element"></a>Элемент Icon
 
@@ -37,6 +37,9 @@ ms.locfileid: "51221362"
   <bt:Image size="80" resid="blue-icon-80" />
 </Icon>
 ```
+
+> [!IMPORTANT]
+> Если это изображение является представителем значка надстройки, см. в приложении [Create effective listings in AppSource и Office](/office/dev/store/create-effective-office-store-listings#create-an-icon-for-your-add-in) для размера и других требований.
 
 ## <a name="additional-requirements-for-mobile-form-factors"></a>Дополнительные требования для форм-факторов мобильных устройств
 

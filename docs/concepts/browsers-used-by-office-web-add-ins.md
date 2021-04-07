@@ -3,12 +3,12 @@ title: Браузеры, используемые надстройками Offic
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
 ms.date: 03/24/2021
 localization_priority: Normal
-ms.openlocfilehash: b9f4d07122779a893bd10e8d28b4f1b329125630
-ms.sourcegitcommit: 074526a6dca8381dbdabf2705474c5ae6753b829
+ms.openlocfilehash: 489367231e1ed48e0bee6f0a32ccc47a8b39aed9
+ms.sourcegitcommit: 0bff0411d8cfefd4bb00c189643358e6fb1df95e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51506135"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "51604633"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -50,7 +50,7 @@ ms.locfileid: "51506135"
 > Internet Explorer 11 не поддерживает версии JavaScript, более поздние, чем ES5. Если у любого из пользователей надстройки есть платформы, которые используют Internet Explorer 11, то для синтаксиса и функций ECMAScript 2015 или более позднего времени у вас есть два варианта:
 >
 > - Напишите код в ECMAScript 2015 (также называемый ES6) или позже JavaScript, или в TypeScript, а затем скомпилировать код в ES5 JavaScript с помощью компиляторов, таких как [babel](https://babeljs.io/) или [tsc](https://www.typescriptlang.org/index.html).
-> - Напишите в ECMAScript 2015 или более [](https://wikipedia.org/wiki/Polyfill_(programming)) поздний JavaScript, а также загрузите библиотеку полифильмов, например [core-js,](https://github.com/zloirock/core-js) которая позволяет IE запускать код.
+> - Напишите в ECMAScript 2015 или более [](https://en.wikipedia.org/wiki/Polyfill_(programming)) поздний JavaScript, а также загрузите библиотеку полифильмов, например [core-js,](https://github.com/zloirock/core-js) которая позволяет IE запускать код.
 >
 > Кроме того, Internet Explorer 11 не поддерживает некоторые элементы HTML5, в частности медиа, запись и местоположение.
 
@@ -58,7 +58,7 @@ ms.locfileid: "51506135"
 
 ### <a name="service-workers-are-not-working"></a>Работники служб не работают
 
-Надстройки Office не поддерживают сотрудников служб при первоначальном [microsoft Edge WebView.](/microsoft-edge/hosting/webview) Они поддерживаются с [помощью edge WebView2 на основе хрома.](/microsoft-edge/hosting/webview2)
+Надстройки Office не поддерживают сотрудников служб, когда используется оригинальный Microsoft Edge [WebView, EdgeHTML.](https://en.wikipedia.org/wiki/EdgeHTML) Они поддерживаются с [помощью edge WebView2 на основе хрома.](/microsoft-edge/hosting/webview2)
 
 ### <a name="scroll-bar-does-not-appear-in-task-pane"></a>В области задач не отображается полоса прокрутки
 

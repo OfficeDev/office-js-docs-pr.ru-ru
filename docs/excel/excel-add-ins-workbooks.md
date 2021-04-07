@@ -1,18 +1,18 @@
 ---
 title: Работа с книгами с использованием API JavaScript для Excel
-description: Примеры кода, в которых показано, как выполнять распространенные задачи с книгами или функциями уровня приложения с помощью API JavaScript для Excel.
-ms.date: 08/24/2020
+description: Примеры кода, которые показывают, как выполнять общие задачи с книгами или функциями уровня приложений с помощью API JavaScript Excel.
+ms.date: 04/05/2021
 localization_priority: Normal
-ms.openlocfilehash: f0af6cc889a110406d987664575a6f3d1b30aa7b
-ms.sourcegitcommit: ed2a98b6fb5b432fa99c6cefa5ce52965dc25759
+ms.openlocfilehash: f2b359cf101dd5743549a2170a870cecf7fd2758
+ms.sourcegitcommit: 0bff0411d8cfefd4bb00c189643358e6fb1df95e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "47819506"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "51604654"
 ---
 # <a name="work-with-workbooks-using-the-excel-javascript-api"></a>Работа с книгами с использованием API JavaScript для Excel
 
-В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для книг с использованием API JavaScript для Excel. Полный список свойств и методов, `Workbook` поддерживаемых объектом, представлен в статье [объект WORKBOOK (API JavaScript для Excel)](/javascript/api/excel/excel.workbook). В этой статье также рассматриваются действия на уровне книги, выполняемые с помощью объекта [Application](/javascript/api/excel/excel.application).
+В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для книг с использованием API JavaScript для Excel. Полный список свойств и методов, поддерживаемых объектом, см. в книге `Workbook` [Объект (API JavaScript для Excel).](/javascript/api/excel/excel.workbook) В этой статье также рассматриваются действия на уровне книги, выполняемые с помощью объекта [Application](/javascript/api/excel/excel.application).
 
 Объект Workbook — это точка входа для вашей надстройки для взаимодействия с Excel. Он поддерживает коллекции листов, таблиц, сводных таблиц и других элементов, через которые выполняется доступ и изменение данных Excel. Объект [WorksheetCollection](/javascript/api/excel/excel.worksheetcollection) предоставляет надстройке доступ ко всем данным книги с помощью отдельных листов. В частности, он позволяет надстройке добавлять листы, перемещаться между ними и назначать обработчиков событий листа. В статье [Работа с листами с использованием API JavaScript для Excel](excel-add-ins-worksheets.md) описывается способ доступа к листам и их изменение.
 
@@ -51,7 +51,7 @@ Excel.createWorkbook();
 
 С помощью метода `createWorkbook` также можно создать копию существующей книги. Метод принимает в качестве необязательного параметра строковое представление XLSX-файла в кодировке base64. Полученная книга будет копией этого файла, предполагая, что строковый аргумент является допустимым XLSX-файлом.
 
-Вы можете получить текущую книгу надстройки в виде строки в кодировке Base64 с помощью [фрагментирования файлов](/javascript/api/office/office.document#getfileasync-filetype--options--callback-). Преобразование файла в нужную строку в кодировке base64 можно выполнить с помощью класса [FileReader](https://developer.mozilla.org/docs/Web/API/FileReader), как показано в приведенном ниже примере.
+Текущую книгу надстройки можно получить в качестве строки с кодом base64 с помощью [нарезки файлов.](/javascript/api/office/office.document#getfileasync-filetype--options--callback-) Преобразование файла в нужную строку в кодировке base64 можно выполнить с помощью класса [FileReader](https://developer.mozilla.org/docs/Web/API/FileReader), как показано в приведенном ниже примере.
 
 ```js
 var myFile = document.getElementById("file");
@@ -75,15 +75,19 @@ reader.readAsDataURL(myFile.files[0]);
 ### <a name="insert-a-copy-of-an-existing-workbook-into-the-current-one-preview"></a>Вставьте копию существующей книги в текущую (предварительная версия)
 
 > [!NOTE]
-> В настоящее время метод `WorksheetCollection.addFromBase64` доступен только в общедоступной предварительной версии и только в Office для Windows и Mac. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+> В `Workbook.insertWorksheetsFromBase64` настоящее время метод доступен только в общедоступных предварительных версиях. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+> 
 
-В предыдущем примере показана новая книга, которая была создана из существующей книги. Вы также можете скопировать отдельные части или всю существующую книгу целиком в книгу, привязанную в настоящее время к вашей надстройке. [WorksheetCollection](/javascript/api/excel/excel.worksheetcollection) для книги имеет метод `addFromBase64` для вставки копий листов целевой книги в саму книгу. Файл другой книги передается в виде строки в кодировке base64, как и вызов `Excel.createWorkbook`.
+В предыдущем примере показана новая книга, которая была создана из существующей книги. Вы также можете скопировать отдельные части или всю существующую книгу целиком в книгу, привязанную в настоящее время к вашей надстройке. В [книге](/javascript/api/excel/excel.workbook) используется метод вставки копий таблиц целевой книги `insertWorksheetsFromBase64` в себя. Файл другой книги передается как строка с кодом base64, как и `Excel.createWorkbook` вызов. 
 
 ```TypeScript
-addFromBase64(base64File: string, sheetNamesToInsert?: string[], positionType?: Excel.WorksheetPositionType, relativeTo?: Worksheet | string): OfficeExtension.ClientResult<string[]>;
+insertWorksheetsFromBase64(base64File: string, options?: Excel.InsertWorksheetOptions): OfficeExtension.ClientResult<string[]>;
 ```
 
-В примере ниже показаны листы книги, которые были вставлены в текущую книгу непосредственно после активного листа. Обратите внимание, что `null` передается для параметра `sheetNamesToInsert?: string[]`. Это означает, что все листы были вставлены.
+В следующем примере в текущую книгу вставляется другая книга. Новые таблицы вставляются после активного таблицы. Обратите `[]` внимание, что он передается в качестве параметра свойства [InsertWorksheetOptions.](/javascript/api/excel/excel.insertworksheetoptions) `sheetNamesToInsert` Это означает, что все таблицы из существующей книги вставляются в текущую книгу.
+
+> [!IMPORTANT]
+> Метод `insertWorksheetsFromBase64` поддерживается для Excel в Windows, Mac и в Интернете. Он не поддерживается для iOS. Кроме того, в Excel в Интернете этот метод не поддерживает исходные таблицы с элементами PivotTable, Chart, Comment или Slicer. Если эти объекты присутствуют, метод возвращает `insertWorksheetsFromBase64` `UnsupportedFeature` ошибку в Excel в Интернете. 
 
 ```js
 var myFile = document.getElementById("file");
@@ -91,22 +95,26 @@ var reader = new FileReader();
 
 reader.onload = (event) => {
     Excel.run((context) => {
-        // strip off the metadata before the base64-encoded string
-        var startIndex = reader.result.toString().indexOf("base64,");
-        var workbookContents = reader.result.toString().substr(startIndex + 7);
-
-        var sheets = context.workbook.worksheets;
-        sheets.addFromBase64(
-            workbookContents,
-            null, // get all the worksheets
-            Excel.WorksheetPositionType.after, // insert them after the worksheet specified by the next parameter
-            sheets.getActiveWorksheet() // insert them after the active worksheet
-        );
-        return context.sync();
+        // Remove the metadata before the base64-encoded string.
+        const startIndex = reader.result.toString().indexOf("base64,");
+        const workbookContents = reader.result.toString().substr(startIndex + 7);
+            
+        // Retrieve the workbook.
+        const workbook = context.workbook;
+            
+        // Set up the insert options. 
+        var options = { 
+            sheetNamesToInsert: [], // Insert all the worksheets from the source workbook.
+            positionType: Excel.WorksheetPositionType.after, // Insert after the `relativeTo` sheet.
+            relativeTo: "Sheet1" }; // The sheet relative to which the other worksheets will be inserted. Used with `positionType`.
+            
+         // Insert the workbook. 
+         workbook.insertWorksheetsFromBase64(workbookContents, options);
+         return context.sync();
     });
 };
 
-// read in the file as a data URL so we can parse the base64-encoded string
+// Read in the file as a data URL so we can parse the base64-encoded string.
 reader.readAsDataURL(myFile.files[0]);
 ```
 
@@ -136,7 +144,7 @@ Excel.run(function (context) {
 
 ## <a name="access-document-properties"></a>Доступ к свойствам документов
 
-Объекты Workbook имеют доступ к метаданным файлов Office, называемым [свойствами документов](https://support.office.com/article/View-or-change-the-properties-for-an-Office-file-21D604C2-481E-4379-8E54-1DD4622C6B75). Свойство `properties` объекта Workbook является объектом [DocumentProperties](/javascript/api/excel/excel.documentproperties), содержащим эти значения метаданных. В приведенном ниже примере показано, как задать `author` свойство.
+Объекты Workbook имеют доступ к метаданным файлов Office, называемым [свойствами документов](https://support.office.com/article/View-or-change-the-properties-for-an-Office-file-21D604C2-481E-4379-8E54-1DD4622C6B75). Свойство `properties` объекта Workbook является объектом [DocumentProperties](/javascript/api/excel/excel.documentproperties), содержащим эти значения метаданных. В следующем примере показано, как установить `author` свойство.
 
 ```js
 Excel.run(function (context) {
@@ -171,9 +179,9 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-#### <a name="worksheet-level-custom-properties"></a>Настраиваемые свойства на уровне листа
+#### <a name="worksheet-level-custom-properties"></a>Настраиваемые свойства на уровне таблицы
 
-Настраиваемые свойства также можно задать на уровне листа. Они похожи на настраиваемые свойства на уровне документа, за исключением того, что один и тот же ключ может повторяться на разных листах. В приведенном ниже примере показано, как создать настраиваемое свойство с именем **воркшитграуп** со значением "Alpha" на текущем листе, а затем извлечь его.
+Настраиваемые свойства также можно установить на уровне таблицы. Они похожи на настраиваемые свойства на уровне документов, за исключением того, что один и тот же ключ может повторяться в разных таблицах. В следующем примере показано, как создать настраиваемую свойство **WorksheetGroup** со значением "Альфа" на текущем таблице, а затем получить его.
 
 ```js
 Excel.run(function (context) {
@@ -220,15 +228,15 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="access-application-culture-settings"></a>Параметры культуры приложения Access
+## <a name="access-application-culture-settings"></a>Доступ к настройкам культуры приложений
 
-Книга содержит параметры языка и региональных параметров, которые влияют на отображение определенных данных. Эти параметры могут помочь локализовать данные, когда пользователи надстройки совместно работают с книгами на различных языках и региональных параметрах. Надстройка может использовать синтаксический анализ строк для локализации формата чисел, дат и времени на основе параметров языковых параметров системы, чтобы каждый пользователь видел данные в формате языка и региональных параметров.
+В книге есть языковые и культурные параметры, влияющие на отображение определенных данных. Эти параметры могут помочь локализовать данные, когда пользователи надстройки делятся книгами на разных языках и культурах. Ваша надстройка может использовать анализ строк для локализации формата чисел, дат и времени в зависимости от параметров культуры системы, чтобы каждый пользователь видел данные в формате своей культуры.
 
-`Application.cultureInfo` Определяет параметры языка и региональных параметров системы в виде объекта [CultureInfo](/javascript/api/excel/excel.cultureinfo) . Содержит такие параметры, как числовой десятичный разделитель или формат даты.
+`Application.cultureInfo`определяет параметры культуры системы как объект [CultureInfo.](/javascript/api/excel/excel.cultureinfo) Это содержит параметры, такие как числовой десятичной сепаратор или формат даты.
 
-Некоторые параметры культуры можно [изменить с помощью пользовательского интерфейса Excel](https://support.office.com/article/Change-the-character-used-to-separate-thousands-or-decimals-c093b545-71cb-4903-b205-aebb9837bd1e). Параметры системы сохраняются в `CultureInfo` объекте. Все локальные изменения хранятся в виде свойств уровня [приложения](/javascript/api/excel/excel.application), например `Application.decimalSeparator` .
+Некоторые параметры культуры можно [изменить с помощью пользовательского интерфейса Excel.](https://support.office.com/article/Change-the-character-used-to-separate-thousands-or-decimals-c093b545-71cb-4903-b205-aebb9837bd1e) Параметры системы сохраняются в `CultureInfo` объекте. Любые локальные изменения хранятся как [свойства уровня приложения,](/javascript/api/excel/excel.application)например `Application.decimalSeparator` .
 
-В примере ниже показано, как изменить символ десятичного разделителя в числовой строке с "," на символ, используемый параметрами системы.
+В следующем примере изменяется десятичное сепараторное течение числовой строки с "," на символ, используемый в параметрах системы.
 
 ```js
 // This will convert a number like "14,37" to "14.37"
