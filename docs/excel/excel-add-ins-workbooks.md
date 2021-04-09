@@ -1,14 +1,15 @@
 ---
 title: Работа с книгами с использованием API JavaScript для Excel
-description: Примеры кода, которые показывают, как выполнять общие задачи с книгами или функциями уровня приложений с помощью API JavaScript Excel.
+description: Узнайте, как выполнять общие задачи с книгами или функциями на уровне приложений с помощью API JavaScript Excel.
 ms.date: 04/05/2021
+ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: f2b359cf101dd5743549a2170a870cecf7fd2758
-ms.sourcegitcommit: 0bff0411d8cfefd4bb00c189643358e6fb1df95e
+ms.openlocfilehash: 2fe11aaba45dae1f0cd1375e28226ecd959950fe
+ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "51604654"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51650830"
 ---
 # <a name="work-with-workbooks-using-the-excel-javascript-api"></a>Работа с книгами с использованием API JavaScript для Excel
 
@@ -368,4 +369,3 @@ context.workbook.close(Excel.CloseBehavior.save);
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Работа с листами с использованием API JavaScript для Excel](excel-add-ins-worksheets.md)
-- [Работа с диапазонами с использованием API JavaScript для Excel](excel-add-ins-ranges.md)

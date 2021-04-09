@@ -1,14 +1,14 @@
 ---
 title: Работа с несколькими диапазонами одновременно в надстройках Excel
-description: Узнайте, как библиотека JavaScript для Excel позволяет надстройке выполнять операции, а также задавать свойства для нескольких диапазонов одновременно.
-ms.date: 04/30/2019
+description: Узнайте, как библиотека JavaScript Excel позволяет надстройки выполнять операции и устанавливать свойства одновременно на нескольких диапазонах.
+ms.date: 04/01/2021
 localization_priority: Normal
-ms.openlocfilehash: 6a508d8481d9851c7f7ae98ec959fcec9663972c
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 2999cd26d3258cf310766fbd590805535cd644f9
+ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609771"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51650893"
 ---
 # <a name="work-with-multiple-ranges-simultaneously-in-excel-add-ins"></a>Работа с несколькими диапазонами одновременно в надстройках Excel
 
@@ -16,7 +16,7 @@ ms.locfileid: "44609771"
 
 ## <a name="rangeareas"></a>RangeAreas
 
-Набор диапазонов (возможно, несмежных) представлен объектом [RangeAreas](/javascript/api/excel/excel.rangeareas) . Его свойства и методы аналогичны типу `Range` (многие с одинаковыми или похожими именами), но с изменением указанных ниже параметров:
+Набор (возможно, дисконтных) диапазонов представлен [объектом RangeAreas.](/javascript/api/excel/excel.rangeareas) Его свойства и методы аналогичны типу `Range` (многие с одинаковыми или похожими именами), но с изменением указанных ниже параметров:
 
 - Типы данных для свойств и поведений методов задания и методов получения.
 - Типы данных параметров метода и поведений метода.
@@ -49,7 +49,7 @@ ms.locfileid: "44609771"
 - `style`
 - `worksheet`
 
-##### <a name="methods"></a>Methods
+##### <a name="methods"></a>Методы
 
 - `calculate()`
 - `clear()`
@@ -60,12 +60,12 @@ ms.locfileid: "44609771"
 - `getEntireRow()`
 - `getIntersection()`
 - `getIntersectionOrNullObject()`
-- `getOffsetRange()`(с именем `getOffsetRangeAreas` для `RangeAreas` объекта)
+- `getOffsetRange()``getOffsetRangeAreas`(названо на `RangeAreas` объекте)
 - `getSpecialCells()`
 - `getSpecialCellsOrNullObject()`
 - `getTables()`
-- `getUsedRange()`(с именем `getUsedRangeAreas` для `RangeAreas` объекта)
-- `getUsedRangeOrNullObject()`(с именем `getUsedRangeAreasOrNullObject` для `RangeAreas` объекта)
+- `getUsedRange()``getUsedRangeAreas`(названо на `RangeAreas` объекте)
+- `getUsedRangeOrNullObject()``getUsedRangeAreasOrNullObject`(названо на `RangeAreas` объекте)
 - `load()`
 - `set()`
 - `setDirty()`
@@ -119,7 +119,7 @@ Excel.run(function (context) {
 
 ## <a name="get-special-cells-from-multiple-ranges"></a>Получение специальных ячеек из нескольких диапазонов
 
-Методы `getSpecialCells` и `getSpecialCellsOrNullObject` для объекта `RangeAreas` действуют аналогично методам с теми же названиями для объекта `Range`. Эти методы возвращают ячейки с указанными характеристиками из всех диапазонов в коллекции `RangeAreas.areas`. Дополнительные сведения о специальных ячейках см. в разделе [Поиск специальных ячеек в диапазоне](excel-add-ins-ranges-advanced.md#find-special-cells-within-a-range).
+Методы `getSpecialCells` и `getSpecialCellsOrNullObject` для объекта `RangeAreas` действуют аналогично методам с теми же названиями для объекта `Range`. Эти методы возвращают ячейки с указанными характеристиками из всех диапазонов в коллекции `RangeAreas.areas`. Дополнительные сведения о специальных ячейках см. в материале [Find special cells within a range.](excel-add-ins-ranges-special-cells.md)
 
 При вызове метода `getSpecialCells` или `getSpecialCellsOrNullObject` для объекта `RangeAreas`:
 
@@ -180,5 +180,4 @@ Excel.run(function (context) {
 ## <a name="see-also"></a>См. также
 
 - [Основные концепции программирования с помощью API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
-- [Работа с диапазонами с использованием API JavaScript для Excel (основные задачи)](excel-add-ins-ranges.md)
-- [Работа с диапазонами с использованием API JavaScript для Excel (дополнительные задачи)](excel-add-ins-ranges-advanced.md)
+- [Чтение или написание в большом диапазоне с помощью API JavaScript Excel](excel-add-ins-ranges-large.md)

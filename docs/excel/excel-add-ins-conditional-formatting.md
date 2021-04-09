@@ -1,14 +1,14 @@
 ---
 title: Применение условного форматирования к диапазонам с помощью API JavaScript для Excel
-description: В этой статье рассматривается условное форматирование в контексте надстроек JavaScript для Excel.
-ms.date: 07/28/2020
+description: Узнайте об условном форматирование в контексте надстройок Excel JavaScript.
+ms.date: 04/01/2021
 localization_priority: Normal
-ms.openlocfilehash: 04a1b18c47d76d44201ea222eac305bb8d438b58
-ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
+ms.openlocfilehash: 5736923ac3c4623342d9a77bd58d5682a551a2a6
+ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "47408595"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51650914"
 ---
 # <a name="apply-conditional-formatting-to-excel-ranges"></a>Применение условного форматирования к диапазонам Excel
 
@@ -33,7 +33,7 @@ ms.locfileid: "47408595"
 -    `topBottom`
 
 > [!NOTE]
-> У каждого из этих свойств форматирования есть соответствующий вариант `*OrNullObject`. Узнайте больше об этом шаблоне в разделе [ \* методы орнуллобжект](../develop/application-specific-api-model.md#ornullobject-methods-and-properties) .
+> У каждого из этих свойств форматирования есть соответствующий вариант `*OrNullObject`. Дополнительные статьи об этом шаблоне в разделе [ \* Методы OrNullObject.](../develop/application-specific-api-model.md#ornullobject-methods-and-properties)
 
 Для объекта ConditionalFormat можно установить только один тип формата. Это определено свойством `type`, которое является значением перечисления объекта [ConditionalFormatType](/javascript/api/excel/excel.conditionalformattype). Параметр `type` устанавливается при добавлении условного форматирования к диапазону.
 
@@ -110,7 +110,7 @@ await context.sync();
 При пользовательском условном форматировании применяется пользовательский формат к ячейкам на основе формулы произвольной сложности. Объект [ConditionalFormatRule](/javascript/api/excel/excel.conditionalformatrule) позволяет определять формулу в разных нотациях:
 
 -    `formula` — стандартная нотация.
--    `formulaLocal` — Локализовано на основе языка пользователя.
+-    `formulaLocal` - Локализовано на основе языка пользователя.
 -    `formulaR1C1` — нотация R1C1.
 
 В приведенном ниже примере зеленым цветом окрашен шрифт ячеек с более высокими значениями, чем в ячейках слева.
@@ -133,7 +133,7 @@ await context.sync();
 ```
 ### <a name="data-bar"></a>[Гистограмма](/javascript/api/excel/excel.databarconditionalformat)
 
-При условном форматировании с использованием гистограмм они добавляются к ячейкам. По умолчанию минимальное и максимальное значения в диапазоне создают границы и пропорциональные размеры гистограмм. У `DataBarConditionalFormat` объекта есть несколько свойств для управления внешним видом полосы. 
+При условном форматировании с использованием гистограмм они добавляются к ячейкам. По умолчанию минимальное и максимальное значения в диапазоне создают границы и пропорциональные размеры гистограмм. Объект `DataBarConditionalFormat` обладает несколькими свойствами для управления внешним видом панели. 
 
 В приведенном ниже примере используется форматирование с помощью гистограмм с заполнением слева направо.
 
@@ -157,7 +157,7 @@ await context.sync();
 
 В приведенном ниже примере показано применение в диапазоне набора из трех значков с треугольниками.
 
-![Диапазон с зелеными треугольными треугольниками для значений выше 1000, желтые линии для значений между 700 и 1000, а треугольники Красного вниз для уменьшения значений.](../images/excel-conditional-format-iconset.png)
+![Диапазон с зелеными восходящими треугольниками для значений выше 1000, желтыми линиями для значений от 700 до 1000 и красными нисходящими треугольниками для более низких значений.](../images/excel-conditional-format-iconset.png)
 
 ```typescript
 const sheet = context.workbook.worksheets.getItem("Sample");
@@ -198,7 +198,7 @@ await context.sync();
 
 При условном форматировании с готовыми условиями применяется пользовательский формат к диапазону на основе выбранного стандартного правила. Эти правила определяются с помощью [ConditionalFormatPresetCriterion](/javascript/api/excel/excel.ConditionalFormatPresetCriterion) в [ConditionalPresetCriteriaRule](/javascript/api/excel/excel.conditionalpresetcriteriarule). 
 
-В следующем примере цвета белого шрифта задается в том месте, где значение ячейки равно по крайней мере одному стандартному отклонению от среднего.
+В следующем примере цвет шрифта белый, где значение ячейки по крайней мере на одно стандартное отклонение выше среднего диапазона.
 
 ![Диапазон с белым шрифтом в ячейках со значениями, превышающими среднее значение хотя бы на одно стандартное отклонение.](../images/excel-conditional-format-preset.png)
 
@@ -222,7 +222,7 @@ await context.sync();
 
 При условном форматировании со сравнением текста используется сравнение строк в качестве условия. Свойство `rule` является объектом [ConditionalTextComparisonRule](/javascript/api/excel/excel.conditionaltextcomparisonrule), определяющим строку для сравнения с ячейкой и оператор для указания типа сравнения. 
 
-В примере ниже показано, как отформатировать красный цвет шрифта, если текст ячейки содержит "отсрочено".
+В следующем примере форматы цвета шрифта красный, когда текст ячейки содержит "Задержки".
 
 ![Диапазон с ячейками, содержащими слово Delayed красного цвета.](../images/excel-conditional-format-text.png)
 
@@ -337,7 +337,6 @@ await context.sync();
 ## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](../excel/excel-add-ins-core-concepts.md)
-- [Работа с диапазонами с использованием API JavaScript для Excel](../excel/excel-add-ins-ranges.md)
 - [Объект ConditionalFormat (API JavaScript для Excel)](/javascript/api/excel/excel.conditionalformat)
 - [Добавление, изменение или удаление условного форматирования](https://support.office.com/article/add-change-or-clear-conditional-formats-8a1cc355-b113-41b7-a483-58460332a1af)
 - [Использование формул с условным форматированием](https://support.office.com/article/Use-formulas-with-conditional-formatting-FED60DFA-1D3F-4E13-9ECB-F1951FF89D7F)

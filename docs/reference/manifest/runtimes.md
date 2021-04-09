@@ -1,30 +1,25 @@
 ---
-title: Runtimes in the manifest file
-description: Элемент Runtimes указывает времени работы надстройки.
-ms.date: 02/01/2021
+title: Время запуска в файле манифеста
+description: Элемент Runtimes указывает время работы надстройки.
+ms.date: 04/08/2021
 localization_priority: Normal
-ms.openlocfilehash: fd672e2592b2e9bfdf7abb0d293b93202d4ad210
-ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
+ms.openlocfilehash: a5cd05a0890615375bf3466caf70d22f9912d951
+ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "50237968"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51652238"
 ---
 # <a name="runtimes-element"></a>Элемент Runtimes
 
-Указывает времени работы надстройки. Child of the [`<Host>`](host.md) element.
+Указывает время запуска надстройки. Ребенок [`<Host>`](host.md) элемента.
 
 > [!NOTE]
-> При запуске в Office для Windows надстройка использует браузер Internet Explorer 11.
+> При работе в Office на Windows надстройка использует браузер Internet Explorer 11.
 
-В Excel этот элемент позволяет ленте, области задач и пользовательским функциям использовать ту же времени работы. Дополнительные сведения см. в настройках надстройки Excel для [использования общей времени работы JavaScript.](../../develop/configure-your-add-in-to-use-a-shared-runtime.md)
+**Тип надстройки:** Области задач, Почта
 
-В Outlook этот элемент включает активацию надстройки на основе событий. Дополнительные сведения см. в настройке [надстройки Outlook для активации на основе событий.](../../outlook/autolaunch.md)
-
-**Тип надстройки:** Области задач, почта
-
-> [!IMPORTANT]
-> **Outlook**: функция активации на [](../../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) основе событий в настоящее время находится в предварительной версии и доступна только в Outlook в Интернете и Windows. Дополнительные сведения см. в предварительном просмотре функции [активации на основе событий.](../../outlook/autolaunch.md#how-to-preview-the-event-based-activation-feature)
+[!include[Runtimes support](../../includes/runtimes-note.md)]
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,8 +37,10 @@ ms.locfileid: "50237968"
 
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-| [Время выполнения](runtime.md) | Да |  Время работы надстройки. |
+| [Runtime](runtime.md) | Да |  Время запуска надстройки. |
 
 ## <a name="see-also"></a>См. также
 
-- [Время выполнения](runtime.md)
+- [Runtime](runtime.md)
+- [Настройка надстройки Office для использования общей среды выполнения JavaScript](../../develop/configure-your-add-in-to-use-a-shared-runtime.md)
+- [Настройка надстройки Outlook для активации на основе событий](../../outlook/autolaunch.md)

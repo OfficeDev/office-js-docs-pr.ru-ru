@@ -1,14 +1,14 @@
 ---
 title: Работа с листами с использованием API JavaScript для Excel
-description: Примеры кода, демонстрирующие выполнение распространенных задач с листами с использованием API JavaScript для Excel.
+description: Примеры кода, которые показывают, как выполнять общие задачи с листами с помощью API JavaScript Excel.
 ms.date: 03/24/2020
 localization_priority: Normal
-ms.openlocfilehash: 0720715a38ff81196433d207148c63ffcd475003
-ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
+ms.openlocfilehash: 7ff1593ca66926de7ae3397defba7efbe97b1695
+ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "47408651"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51652204"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
@@ -331,11 +331,11 @@ function onWorksheetChanged(eventArgs) {
 
 ![Данные из таблицы в Excel до сортировки](../images/excel-sort-event-before.png)
 
-Если выполнить сортировку сверху вниз для "**Q1**" (значения в "**B**"), `WorksheetRowSortedEventArgs.address` возвращает следующие выделенные строки:
+Если выполнить сортировку сверху вниз для "**Q1**&quot; (значения в &quot;**B**"), `WorksheetRowSortedEventArgs.address` возвращает следующие выделенные строки:
 
 ![Данные из таблицы в Excel после сортировки сверху вниз. Выделены перемещенные строки.](../images/excel-sort-event-after-row.png)
 
-Если выполнить сортировку слева направо для "**Quinces**" (значения в "**4**") в исходных данных, `WorksheetColumnsSortedEventArgs.address` возвращает следующие выделенные столбцы:
+Если выполнить сортировку слева направо для "**Quinces**&quot; (значения в &quot;**4**") в исходных данных, `WorksheetColumnsSortedEventArgs.address` возвращает следующие выделенные столбцы:
 
 ![Данные из таблицы в Excel после сортировки слева направо. Выделены перемещенные столбцы.](../images/excel-sort-event-after-column.png)
 
@@ -386,7 +386,7 @@ Excel.run(function (context) {
 
 > [!NOTE]
 > В этом разделе описано, как найти ячейки и диапазоны с помощью функций объекта `Worksheet`. Дополнительные сведения об извлечении диапазонов можно найти в статьях о конкретных объектах.
-> - Примеры, в которых показано, как получить диапазон в листе с помощью объекта `Range`, см. в статье [Работа с диапазонами с использованием API JavaScript для Excel](excel-add-ins-ranges.md).
+> - Примеры получения диапазона в листах с помощью объекта см. в примере `Range` Get a range using the Excel [JavaScript API.](excel-add-ins-ranges-get.md)
 > - Примеры, в которых показано, как получить диапазоны из объекта `Table`, см. в статье [Работа с таблицами с использованием API JavaScript для Excel](excel-add-ins-tables.md).
 > - Примеры, в которых показано, как выполнять поиск большого диапазона для нескольких поддиапазонов с учетом характеристик ячеек, см. в статье [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md).
 
