@@ -623,6 +623,9 @@ items:
           - name: Вызов встроенных функций
             href: excel/excel-add-ins-worksheet-functions.md
             displayName: Excel
+          - name: Ячейки
+            href: excel/excel-add-ins-cells.md
+            displayName: Excel
           - name: Диаграммы
             href: excel/excel-add-ins-charts.md
             displayName: Excel
@@ -632,14 +635,8 @@ items:
           - name: Комментарии
             href: excel/excel-add-ins-comments.md
             displayName: Excel
-          - name: Условное форматирование диапазонов
-            href: excel/excel-add-ins-conditional-formatting.md
-            displayName: Excel
           - name: Проверка данных
             href: excel/excel-add-ins-data-validation.md
-            displayName: Excel
-          - name: Задержка выполнения во время редактирования ячейки
-            href: excel/excel-add-ins-delay-in-cell-edit.md
             displayName: Excel
           - name: Обработка ошибок
             href: excel/excel-add-ins-error-handling.md
@@ -647,21 +644,71 @@ items:
           - name: События
             href: excel/excel-add-ins-events.md
             displayName: Excel
-          - name: Несколько диапазонов
-            href: excel/excel-add-ins-multiple-ranges.md
-            displayName: Excel
           - name: Оптимизация производительности
             href: excel/performance.md
             displayName: Excel
           - name: Сводные таблицы
             href: excel/excel-add-ins-pivottables.md
             displayName: Excel
-          - name: Диапазоны (основные)
-            href: excel/excel-add-ins-ranges.md
-            displayName: Excel
-          - name: Диапазоны (дополнительные)
-            href: excel/excel-add-ins-ranges-advanced.md
-            displayName: Excel
+          - name: Диапазоны и ячейки
+            items:
+              - name: Получение диапазона
+                href: excel/excel-add-ins-ranges-get.md
+                displayName: Excel
+              - name: Вставка диапазона ячеек
+                href: excel/excel-add-ins-ranges-insert.md
+                displayName: Excel
+              - name: Очистка и удаление диапазона ячеек
+                href: excel/excel-add-ins-ranges-clear-delete.md
+                displayName: Excel
+              - name: Задание и получение выделенного диапазона
+                href: excel/excel-add-ins-ranges-set-get.md
+                displayName: Excel
+              - name: 'Задание и получение значений, текста или формул'
+                href: excel/excel-add-ins-ranges-set-get-values.md
+                displayName: Excel
+              - name: Задание формата диапазона
+                href: excel/excel-add-ins-ranges-set-format.md
+                displayName: Excel
+              - name: Условное форматирование диапазонов
+                href: excel/excel-add-ins-conditional-formatting.md
+                displayName: Excel
+              - name: Чтение из неограниченного диапазона и запись в него
+                href: excel/excel-add-ins-ranges-unbounded.md
+                displayName: Excel
+              - name: Чтение из большого диапазона и запись в него
+                href: excel/excel-add-ins-ranges-large.md
+                displayName: Excel
+              - name: Поиск ячейки с помощью сопоставления строк
+                href: excel/excel-add-ins-ranges-string-match.md
+                displayName: Excel
+              - name: Работа с датами с использованием подключаемого модуля Moment-MSDate
+                href: excel/excel-add-ins-ranges-dates.md
+                displayName: Excel
+              - name: Поиск специальных ячеек в диапазоне
+                href: excel/excel-add-ins-ranges-special-cells.md
+                displayName: Excel
+              - name: 'Команды "Вырезать", "Копировать" и "Вставить"'
+                href: excel/excel-add-ins-ranges-cut-copy-paste.md
+                displayName: Excel
+              - name: Удаление дубликатов
+                href: excel/excel-add-ins-ranges-remove-duplicates.md
+                displayName: Excel
+              - name: Группировка данных для контура
+                href: excel/excel-add-ins-ranges-group.md
+                displayName: Excel
+              - name: Обработка динамических массивов и переносов
+                href: excel/excel-add-ins-ranges-dynamic-arrays.md
+                displayName: Excel
+              - name: Получение прецедентов формул
+                href: excel/excel-add-ins-ranges-precedents.md
+                displayName: Excel
+              - name: Задержка выполнения во время редактирования ячейки
+                href: excel/excel-add-ins-delay-in-cell-edit.md
+                displayName: Excel
+              - name: Работа с несколькими диапазонами одновременно
+                href: excel/excel-add-ins-multiple-ranges.md
+                displayName: Excel
           - name: Фигуры
             href: excel/excel-add-ins-shapes.md
             displayName: Excel
