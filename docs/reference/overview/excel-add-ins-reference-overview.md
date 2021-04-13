@@ -1,15 +1,15 @@
 ---
 title: Обзор API JavaScript для Excel
 description: Узнайте больше об Excel JavaScript API
-ms.date: 07/28/2020
+ms.date: 04/05/2021
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: e589bd7ce814211759cc731d828e9c180339ea1f
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 80340b4990b56b2ba4d51f2a028480af3e267828
+ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293662"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51650814"
 ---
 # <a name="excel-javascript-api-overview"></a>Обзор API JavaScript для Excel
 
@@ -21,15 +21,15 @@ ms.locfileid: "47293662"
 
 В этом разделе рассматривается API JavaScript для Excel, используемый для разработки большинства функций в надстройках и предназначенный для Excel в Интернете, Excel 2016 или более поздних версий. Сведения об общем API см. в статье [Общая объектная модель API JavaScript](../../develop/office-javascript-api-object-model.md).
 
-## <a name="learn-programming-concepts"></a>Сведения о концепциях, связанных с программированием
+## <a name="learn-object-model-concepts"></a>Сведения о концепциях объектной модели
 
-Сведения о важных концепциях программирования см. в статье [Основные концепции программирования с помощью API JavaScript для Excel](../../excel/excel-add-ins-core-concepts.md).
+Сведения о важных понятиях объектной модели см. в статье [Объектная модель JavaScript для Excel в надстройках Office](../../excel/excel-add-ins-core-concepts.md).
 
 Чтобы получить практический опыт доступа к объектам в Excel с помощью API JavaScript для Excel, выполните инструкции из [руководства по надстройкам Excel](../../tutorials/excel-tutorial.md).
 
 ## <a name="learn-api-capabilities"></a>Сведения о возможностях API
 
-Каждой основной функции API Excel посвящена статья, описывающая ее возможности и соответствующую объектную модель.
+Каждой основной функции API Excel посвящена статья или набор статей с описанием ее возможностей и соответствующей объектной модели.
 
 * [Диаграммы](../../excel/excel-add-ins-charts.md)
 * [Комментарии](../../excel/excel-add-ins-comments.md)
@@ -37,9 +37,9 @@ ms.locfileid: "47293662"
 * [Пользовательские функции](../../excel/custom-functions-overview.md)
 * [Проверка данных](../../excel/excel-add-ins-data-validation.md)
 * [События](../../excel/excel-add-ins-events.md)
-* [Несколько диапазонов (RangeArea)](../../excel/excel-add-ins-multiple-ranges.md)
 * [Сводные таблицы](../../excel/excel-add-ins-pivottables.md)
-* [Диапазоны](../../excel/excel-add-ins-ranges.md) и [API расширенных диапазонов](../../excel/excel-add-ins-ranges-advanced.md)
+* [Диапазоны](../../excel/excel-add-ins-ranges-get.md) и [ячейки](../../excel/excel-add-ins-cells.md)
+* [RangeAreas (несколько диапазонов)](../../excel/excel-add-ins-multiple-ranges.md)
 * [Фигуры](../../excel/excel-add-ins-shapes.md)
 * [Таблицы](../../excel/excel-add-ins-tables.md)
 * [Книги и API уровня приложения](../../excel/excel-add-ins-workbooks.md)

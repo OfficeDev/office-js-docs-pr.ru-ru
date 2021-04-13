@@ -1,0 +1,2 @@
+> [!NOTE]
+> В API JavaScript для Excel нет объекта или класса Cell. Вместо этого API JavaScript для Excel определяет все ячейки Excel как объекты `Range`. Отдельные ячейки в пользовательском интерфейсе Excel преобразуются в объект `Range` с одной ячейкой в API JavaScript для Excel. Один объект `Range` также может содержать несколько смежных ячеек. Дополнительные сведения см. в статье [Работа с ячейками с использованием API JavaScript для Excel](/office/dev/add-ins/excel/excel-add-ins-cells).
