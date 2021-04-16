@@ -25,7 +25,7 @@
 
 - Чтобы задать вопрос об использовании API Office.js, раздайте свой вопрос в Stack Overflow и пометите его тегом "office-js" http://stackoverflow.com/questions/tagged/office-js) (.
 - Чтобы сообщить о проблеме с API Office.js или платформой, создайте проблему в репозитории OfficeDev/office-js (который члены группы продуктов отслеживают для проблем, о которых сообщают https://github.com/OfficeDev/office-js) клиенты.
-- Чтобы отправить запрос на функции для API Office.js или платформы, отправьте свою идею в [Microsoft 365](https://docs.microsoft.com/answers/products/m365)на Q&A или если запрос на функции уже существует, добавьте свой голос за него.
+- Чтобы отправить запрос на функции для Office.js API или платформы, отправьте свою идею в техническое сообщество [Microsoft 365 Developer Platform ,](https://techcommunity.microsoft.com/t5/microsoft-365-developer-platform/idb-p/Microsoft365DeveloperPlatform)или если запрос на функции уже существует, добавьте свой голос за него.
 
 ## <a name="join-the-microsoft-365-developer-program"></a>Присоединяйтесь к программе разработчиков Microsoft 365
 
