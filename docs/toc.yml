@@ -1147,6 +1147,9 @@ items:
           - name: Получение всего документа из надстройки
             href: powerpoint/get-the-whole-document-from-an-add-in-for-powerpoint.md
             displayName: PowerPoint
+          - name: 'Использование пользовательских тегов для презентаций, слайдов и фигур'
+            href: powerpoint/tagging-presentations-slides-shapes.md
+            displayName: PowerPoint
           - name: Использование тем документов в надстройках PowerPoint
             href: powerpoint/use-document-themes-in-your-powerpoint-add-ins.md
             displayName: PowerPoint
