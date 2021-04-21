@@ -3,12 +3,12 @@ title: Разработка надстройки Office для работы с I
 description: Работа с надстройкими ITP и Office при использовании сторонних файлов cookie
 ms.date: 03/12/2021
 localization_priority: Normal
-ms.openlocfilehash: e66fc25e1dc0f3a93fdf38c1d0c099d3a68459d3
-ms.sourcegitcommit: 7482ab6bc258d98acb9ba9b35c7dd3b5cc5bed21
+ms.openlocfilehash: 468147e923bb27638e45879104db75b99d014986
+ms.sourcegitcommit: da8ad214406f2e1cd80982af8a13090e76187dbd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "51178043"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "51917095"
 ---
 # <a name="develop-your-office-add-in-to-work-with-itp-when-using-third-party-cookies"></a>Разработка надстройки Office для работы с ITP при использовании сторонних файлов cookie
 
@@ -54,9 +54,9 @@ if (document.hasStorageAccess) {
 
 Сторонние файлы cookie — это файлы cookie, загружаются в iframe, где домен отличается от кадра верхнего уровня. ItP может повлиять на сложные сценарии проверки подлинности, когда диалоговое окно всплывающее окно используется для ввода учетных данных, а затем доступ к файлам cookie необходим надстройке iframe для завершения потока проверки подлинности. ItP также может повлиять на сценарии бесшумной проверки подлинности, где ранее для проверки подлинности использовался диалоговое окно всплывающее окно, но после этого использование надстройки пытается проверить подлинность через скрытый iframe.
 
-При разработке надстроек Office на Mac доступ к сторонним файлам cookie блокируется SDK MacOS Big Sur. Это происходит из-за того, что ITP WebKit включен по умолчанию в браузере Safari, а WKWebview блокирует все сторонние файлы cookie. Office на Mac версии 16.44 или более поздней версии интегрирован с MacOS Big Sur SDK.
+При разработке надстроек Office на Mac доступ к сторонним файлам cookie блокируется SDK MacOS Big Sur. Это происходит из-за того, что ИТП WKWebView включен по умолчанию в браузере Safari, а WKWebView блокирует все сторонние файлы cookie. Office на Mac версии 16.44 или более поздней версии интегрирован с MacOS Big Sur SDK.
 
-В браузере Safari конечные пользователи могут переключать контрольный ящик **Prevent cross-site tracking** under **Preference**  >  **Privacy,** чтобы отключить ITP. Однако itP нельзя отключить для встроенного управления WebKit2.
+В браузере Safari конечные пользователи могут переключать контрольный ящик **Prevent cross-site tracking** under **Preference**  >  **Privacy,** чтобы отключить ITP. Однако itP нельзя отключить для встроенного управления WKWebView.
 
 ## <a name="see-also"></a>См. также
 
