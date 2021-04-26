@@ -1257,6 +1257,8 @@ items:
         href: develop/authentication-pnp.md
       - name: Обработка высокого разрешения и масштабирования в решении для Office
         href: /office/client-developer/ddpi/handle-high-dpi-and-dpi-scaling-in-your-office-solution
+      - name: Конференция сообщества разработчиков надстроек Office
+        href: overview/office-add-ins-community-call.md
   - name: Ресурсы о переходе между VSTO и COM
     items:
       - name: Руководство для разработчиков надстроек VSTO
