@@ -1,14 +1,14 @@
 ---
 title: Работа с событиями при помощи API JavaScript для Excel
-description: Список событий для объектов JavaScript Excel. Сюда входят сведения об использовании обработчиков событий и связанных с ними шаблонов.
-ms.date: 09/15/2020
+description: Список событий для объектов JavaScript Excel. Это включает сведения об использовании обработчиков событий и связанных шаблонов.
+ms.date: 04/23/2021
 localization_priority: Normal
-ms.openlocfilehash: 12e4f0a7ebb9c50bf6874106ef711ca3207cae46
-ms.sourcegitcommit: 2479812e677d1a7337765fe8f1c8345061d4091a
+ms.openlocfilehash: 7c4a00736ef7a39e6d34153b113f1f274a2d3708
+ms.sourcegitcommit: 78fb861afe7d7c3ee7fe3186150b3fed20994222
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "48135216"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52024313"
 ---
 # <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями при помощи API JavaScript для Excel
 
@@ -24,14 +24,14 @@ ms.locfileid: "48135216"
 | `onAdded` | Возникает при добавлении объекта в коллекцию. | [**ChartCollection**](/javascript/api/excel/excel.chartcollection#onadded), [**CommentCollection**](/javascript/api/excel/excel.commentcollection#onadded), [**TableCollection**](/javascript/api/excel/excel.tablecollection#onadded), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#onadded) |
 | `onAutoSaveSettingChanged` | Возникает при изменении параметра `autoSave` для книги. | [**Workbook**](/javascript/api/excel/excel.workbook#onautosavesettingchanged) |
 | `onCalculated` | Возникает после завершения вычислений на листе (или на всех листах коллекции). | [**Worksheet**](/javascript/api/excel/excel.worksheet#oncalculated), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#oncalculated) |
-| `onChanged` | Возникает при изменении данных отдельных ячеек или примечаний. | [**CommentCollection**](/javascript/api/excel/excel.commentcollection#onchanged), [**Таблица**](/javascript/api/excel/excel.table#onchanged), [**TableCollection**](/javascript/api/excel/excel.tablecollection#onchanged), [**лист**](/javascript/api/excel/excel.worksheet#onchanged), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#onchanged) |
+| `onChanged` | Происходит, когда изменились данные отдельных ячеек или комментариев. | [**CommentCollection**](/javascript/api/excel/excel.commentcollection#onchanged), [**Таблица**](/javascript/api/excel/excel.table#onchanged), [**TableCollection**](/javascript/api/excel/excel.tablecollection#onchanged), [**Таблица**](/javascript/api/excel/excel.worksheet#onchanged), Таблица , [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#onchanged) |
 | `onColumnSorted` | Возникает при сортировке одного или нескольких столбцов. Происходит в результате операции сортировки слева направо. | [**Worksheet**](/javascript/api/excel/excel.worksheet#oncolumnsorted), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#oncolumnsorted) |
 | `onDataChanged` | Возникает при изменении данных или форматирования в привязке. | [**Binding**](/javascript/api/excel/excel.binding#ondatachanged) |
 | `onDeactivated` | Возникает при отключении объекта. | [**Chart**](/javascript/api/excel/excel.chart#ondeactivated), [**ChartCollection**](/javascript/api/excel/excel.chartcollection#ondeactivated), [**Shape**](/javascript/api/excel/excel.shape#ondeactivated), [**Worksheet**](/javascript/api/excel/excel.worksheet#ondeactivated), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#ondeactivated) |
 | `onDeleted` | Возникает при удалении объекта из коллекции. | [**ChartCollection**](/javascript/api/excel/excel.chartcollection#ondeleted), [**CommentCollection**](/javascript/api/excel/excel.commentcollection#ondeleted), [**TableCollection**](/javascript/api/excel/excel.tablecollection#ondeleted), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#ondeleted) |
 | `onFormatChanged` | Возникает при изменении формата на листе. | [**Worksheet**](/javascript/api/excel/excel.worksheet#onformatchanged), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#onformatchanged) |
 | `onRowSorted` | Возникает при сортировке одной или нескольких строк. Происходит в результате операции сортировки сверху вниз. | [**Worksheet**](/javascript/api/excel/excel.worksheet#onrowsorted), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#onrowsorted) |
-| `onSelectionChanged` | Возникает при изменении активной ячейки или выбранного диапазона. | [**Привязка**](/javascript/api/excel/excel.binding#onselectionchanged), [**Таблица**](/javascript/api/excel/excel.table#onselectionchanged), [**Книга**](/javascript/api/excel/excel.workbook#onselectionchanged), [**лист**](/javascript/api/excel/excel.worksheet#onselectionchanged), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#onselectionchanged) |
+| `onSelectionChanged` | Возникает при изменении активной ячейки или выбранного диапазона. | [**Привязка**](/javascript/api/excel/excel.binding#onselectionchanged), [**таблица**](/javascript/api/excel/excel.table#onselectionchanged), книга , [**таблица**](/javascript/api/excel/excel.worksheet#onselectionchanged), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#onselectionchanged) [](/javascript/api/excel/excel.workbook#onselectionchanged) |
 | `onRowHiddenChanged` | Возникает при изменении состояния скрытия строки на определенном листе. | [**Worksheet**](/javascript/api/excel/excel.worksheet#onrowhiddenchanged), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#onrowhiddenchanged) |
 | `onSettingsChanged` | Возникает при изменении параметров в документе. | [**SettingCollection**](/javascript/api/excel/excel.settingcollection#onsettingschanged) |
 | `onSingleClicked` | Возникает, когда происходит щелчок левой кнопкой мыши или нажатие на листе. | [**Worksheet**](/javascript/api/excel/excel.worksheet#onsingleclicked), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#onsingleclicked) |
@@ -68,7 +68,7 @@ ms.locfileid: "48135216"
 
 ## <a name="register-an-event-handler"></a>Регистрация обработчика событий
 
-В приведенном ниже примере кода регистрируется обработчик события `onChanged` на листе под названием **Sample**. В этом коде указано, что при изменении данных на этом листе должна выполняться функция `handleDataChange`.
+В приведенном ниже примере кода регистрируется обработчик события `onChanged` на листе под названием **Sample**. В этом коде указано, что при изменении данных на этом листе должна выполняться функция `handleChange`.
 
 ```js
 Excel.run(function (context) {
@@ -102,7 +102,7 @@ function handleChange(event)
 
 ## <a name="remove-an-event-handler"></a>Удаление обработчика события
 
-В приведенном ниже примере кода регистрируется обработчик событий `onSelectionChanged` на листе под названием **Sample** и определяется функция `handleSelectionChange`, которая будет выполняться при возникновении события. В нем также определяется функция `remove()`, которую можно впоследствии вызвать для удаления обработчика событий. Обратите внимание, что `RequestContext` для удаления обработчика событий необходимо, чтобы он использовался для создания обработчика событий. 
+В приведенном ниже примере кода регистрируется обработчик событий `onSelectionChanged` на листе под названием **Sample** и определяется функция `handleSelectionChange`, которая будет выполняться при возникновении события. В нем также определяется функция `remove()`, которую можно впоследствии вызвать для удаления обработчика событий. Обратите внимание, что для его удаления требуется использовать обработник `RequestContext` событий. 
 
 ```js
 var eventResult;

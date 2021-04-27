@@ -3,12 +3,12 @@ title: Microsoft Office вызов сообщества надстройки
 description: Расписание и ресурсы Microsoft Office сообществ надстройки
 ms.date: 04/20/2021
 localization_priority: Normal
-ms.openlocfilehash: bad2ad176d0a843f5d03ec58b3db365a02ecbbe1
-ms.sourcegitcommit: 691fa338029c9cbd9a7194d163f390c3321a0cd8
+ms.openlocfilehash: fbd2acdd7b6153829473dd0ea29290d02e6f8c84
+ms.sourcegitcommit: 78fb861afe7d7c3ee7fe3186150b3fed20994222
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2021
-ms.locfileid: "51959298"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52024320"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office вызов сообщества надстройки
 
@@ -23,7 +23,7 @@ ms.locfileid: "51959298"
 - [Вызов сообщества надстройки Office — 11 ноября 2020 г.](https://developer.microsoft.com/office/blogs/office-add-ins-community-call-november-11-2020/)
 - [Вызов сообщества надстройки Office — 14 октября 2020 г.](https://developer.microsoft.com/office/blogs/office-add-ins-community-call-october-14-2020%E2%80%AF/)
 - [Вызов сообщества надстройки Office — 9 сентября 2020 г.](https://developer.microsoft.com/office/blogs/office-add-ins-community-call-september-9-2020/)
-- [Вызов сообщества надстройки Office — 12 августа 2020 г.](https://developer.microsoft.com/office/blogs/office-add-ins-community-call-august-12-2020%e2%80%af)
+- [Вызов сообщества надстройки Office — 12 августа 2020 г.](https://developer.microsoft.com/office/blogs/office-add-ins-community-call-august-12-2020%E2%80%AF/)
 - [Вызов сообщества надстройки Office — 8 июля 2020 г.](https://developer.microsoft.com/office/blogs/office-add-ins-community-call-july-8-2020/)
 - [Вызов сообщества надстройки Office — 10 июня 2020 г.](https://developer.microsoft.com/office/blogs/office-add-ins-community-call-june-10-2020/)
 

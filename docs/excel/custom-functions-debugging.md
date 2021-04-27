@@ -1,14 +1,14 @@
 ---
-ms.date: 04/09/2021
+ms.date: 04/12/2021
 description: Узнайте, как отлагировать настраиваемые функции Excel, которые не используют области задач.
 title: Отладка пользовательских функций без пользовательского интерфейса
 localization_priority: Normal
-ms.openlocfilehash: 5b27ca44dbb891c2e1f4ae86175595dc902b74ba
-ms.sourcegitcommit: 094caf086c2696e78fbdfdc6030cb0c89d32b585
+ms.openlocfilehash: c6954af4638ae416c789af339d35187467e37b7f
+ms.sourcegitcommit: 78fb861afe7d7c3ee7fe3186150b3fed20994222
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "51862339"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52024327"
 ---
 # <a name="ui-less-custom-functions-debugging"></a>Отладка пользовательских функций без пользовательского интерфейса
 
@@ -31,7 +31,7 @@ ms.locfileid: "51862339"
 > [!NOTE]
 > Для простоты в этой статье показана отладка в контексте использования Visual Studio кода для редактирования, выполнения задач и в некоторых случаях использования представления отладки. При использовании другого средства редактора или [](#commands-for-building-and-running-your-add-in) командной строки см. инструкции по командной строке в конце этой статьи.
 
-## <a name="requirements"></a>Требования
+## <a name="requirements"></a>Requirements
 
 Этот процесс отладки работает **только** для пользовательских функций без пользовательского интерфейса, которые не используют области задач или другие элементы пользовательского интерфейса. Настраиваемая функция без пользовательского интерфейса может быть создана, следуя шагам в руководстве Create custom [functions in Excel,](../tutorials/excel-tutorial-create-custom-functions.md) а затем удалив все элементы области задач и пользовательского интерфейса, установленные генератором [Yeoman](https://www.npmjs.com/package/generator-office)для надстроек Office.
 
@@ -53,7 +53,7 @@ ms.locfileid: "51862339"
 ### <a name="start-the-vs-code-debugger"></a>Запуск отладки кода VS
 
 4. Выберите **просмотр > выполнить** или ввести **Ctrl+Shift+D,** чтобы перейти на отлагивание представления.
-5. Из выпадаемого меню Run выберите **Excel Desktop (Edge Chromium).**
+5. Из выпадаемого меню Run выберите **Excel Desktop (Настраиваемые функции).**
 6. Чтобы начать отладку, выберите **F5** **(или > запустить** отладку из меню). Новая книга Excel откроется с уже загруженной и готовой к использованию надстройке.
 
 ### <a name="start-debugging"></a>Начало отладки
