@@ -1,25 +1,25 @@
 ---
-title: Управление состоянием и параметрами для надстройки Outlook
-description: Сведения о том, как хранить состояние и параметры надстройки для надстройки Outlook.
-ms.date: 04/22/2020
+title: Управление состоянием и настройками Outlook надстройки
+description: Узнайте, как сохранить состояние надстройки и параметры для Outlook надстройки.
+ms.date: 04/29/2021
 localization_priority: Normal
-ms.openlocfilehash: b11468cdcd776a2d93bb4a435e5c878ca9ab42a3
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 6652034ffa6844d22fd725adc5adcc4a4063c1cb
+ms.sourcegitcommit: 6057afc1776e1667b231d2e9809d261d372151f6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293844"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52100287"
 ---
-# <a name="manage-state-and-settings-for-an-outlook-add-in"></a>Управление состоянием и параметрами для надстройки Outlook
+# <a name="manage-state-and-settings-for-an-outlook-add-in"></a>Управление состоянием и настройками Outlook надстройки
 
 > [!NOTE]
-> Перед прочтением этой статьи ознакомьтесь с разделом [Сохранение состояния надстройки и параметров](../develop/persisting-add-in-state-and-settings.md) в разделе **Основные понятия** этой документации.
+> Перед [чтением этой](../develop/persisting-add-in-state-and-settings.md) статьи просмотрите состояние и параметры сохраняющихся надстройок в разделе **Основные** концепции этой документации.
 
-Для надстроек Outlook API JavaScript для Office предоставляет объекты [roamingSettings](/javascript/api/outlook/office.roamingsettings) и [CustomProperties](/javascript/api/outlook/office.customproperties) для сохранения состояния надстройки во всех сеансах, как описано в следующей таблице. Во всех случаях сохраненные значения параметров связаны с [Id](../reference/manifest/id.md) создавшей их надстройки.
+Для Outlook надстройки Office API JavaScript предоставляет объекты [RoamingSettings](/javascript/api/outlook/office.roamingsettings) и [CustomProperties](/javascript/api/outlook/office.customproperties) для сохранения состояния надстройки во всех сеансах, как описано в следующей таблице. Во всех случаях сохраненные значения параметров связаны с [Id](../reference/manifest/id.md) создавшей их надстройки.
 
 |**Object**|**Расположение хранилища**|
-|:-----|:-----|:-----|
-|[RoamingSettings](/javascript/api/outlook/office.roamingsettings)|Почтовый ящик пользователя на сервере Exchange, на котором установлена надстройка. Так как эти параметры хранятся в почтовом ящике пользователя пользователя, они могут перемещаться с помощью пользователя и доступны надстройке в контексте любого поддерживаемого клиента, обращающегося к почтовому ящику этого пользователя.<br/><br/> Параметры перемещения надстройки Outlook доступны только создавшей их надстройке и только в том почтовом ящике, в котором она установлена.|
+|:-----|:-----|
+|[RoamingSettings](/javascript/api/outlook/office.roamingsettings)|Почтовый ящик пользователя на сервере Exchange, на котором установлена надстройка. Поскольку эти параметры хранятся в почтовом ящике сервера пользователя, они могут "перемещаться" с пользователем и доступны надстройке, когда она запущена в контексте любого поддерживаемого клиента, доступ к почтовому ящику этого пользователя.<br/><br/> Параметры перемещения надстройки Outlook доступны только создавшей их надстройке и только в том почтовом ящике, в котором она установлена.|
 |[CustomProperties](/javascript/api/outlook/office.customproperties)|Элемент сообщения, встречи, запроса на собрание для которого была запущена надстройка. Пользовательские свойства элемента надстройки Outlook доступны только для создавшей их надстройки и только в элементе, в котором они сохранены.|
 
 ## <a name="how-to-save-settings-in-the-users-mailbox-for-outlook-add-ins-as-roaming-settings"></a>Сохранение параметров в почтовом ящике пользователя для надстроек Outlook в качестве параметров перемещения
@@ -28,22 +28,10 @@ ms.locfileid: "47293844"
 
 ### <a name="loading-roaming-settings"></a>Загрузка параметров перемещения
 
-Надстройка Outlook обычно загружает параметры перемещения в обработчик событий [Office.initialize](/javascript/api/office). В следующем примере кода JavaScript показано, как выполняется загрузка существующих параметров перемещения.
+В следующем примере кода JavaScript показано, как выполняется загрузка существующих параметров перемещения.
 
 ```js
-var _mailbox;
-var _settings;
-
-// The initialize function is required for all add-ins.
-Office.initialize = function (reason) {
-    // Checks for the DOM to load using the jQuery ready function.
-    $(document).ready(function () {
-    // After the DOM is loaded, add-in-specific code can run.
-   // Initialize instance variables to access API objects.
-    _mailbox = Office.context.mailbox;
-    _settings = Office.context.roamingSettings;
-    });
-}
+var _settings = Office.context.roamingSettings;
 ```
 
 ### <a name="creating-or-assigning-a-roaming-setting"></a>Создание или назначение параметра перемещения
@@ -88,7 +76,7 @@ function removeAppSetting()
 
 ### <a name="custom-properties-example"></a>Пример пользовательских свойств
 
-В следующем примере демонстрируется упрощенный набор функций для надстройки Outlook, применяющей пользовательские свойства. Этот пример можно использовать в качестве отправной точки для работы с такой надстройкой Outlook. 
+В следующем примере демонстрируется упрощенный набор функций для надстройки Outlook, применяющей пользовательские свойства. Этот пример можно использовать в качестве отправной точки для работы с такой надстройкой Outlook.
 
 Надстройка Outlook, использующая эти функции, получает любые пользовательские свойства, вызывая метод **get** для переменной `_customProps`, как показано в приведенном ниже примере.
 
@@ -146,6 +134,25 @@ function saveCallback(asyncResult) {
     }
 }
 ```
+
+### <a name="platform-behavior-in-emails"></a>Поведение платформы в сообщениях электронной почты
+
+В следующей таблице обобщается сохраненное поведение пользовательских свойств в сообщениях электронной почты для Outlook клиентов.
+
+|Сценарий|Windows|Web|Mac|
+|---|---|---|---|
+|Новое сочинение|null|null|null|
+|Ответ, ответ все|null|null|null|
+|Перенаправление|Загружает свойства родителей|null|null|
+|Отправленный элемент из новой композиции|null|null|null|
+|Отправленный элемент из ответа или ответа|null|null|null|
+|Отправленный элемент из вперед|Удаляет свойства родителей, если их не сохранить|null|null|
+
+Для обработки ситуации на Windows:
+
+1. Проверьте существующие свойства при инициализации надстройки и храните их или очищайте по мере необходимости.
+1. При настройке настраиваемого свойства включайте дополнительное свойство, чтобы указать, были ли добавлены настраиваемые свойства во время чтения сообщения или в режиме чтения надстройки. Это поможет вам различать, было ли свойство создано во время создания или унаследовано от родителя.
+1. Вы также можете использовать [item.getComposeTypeAsync](/javascript/api/outlook/office.messagecompose?view=outlook-js-preview&preserve-view=true#getComposeTypeAsync_options__callback_) (в настоящее время находится в предварительном режиме), чтобы проверить, переадрост ли пользователь сообщение электронной почты или ответ.
 
 ## <a name="see-also"></a>См. также
 
