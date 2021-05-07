@@ -1,18 +1,18 @@
 ---
 title: Office UI Fabric в надстройках Office
-description: Обзор использования компонентов Office UI Fabric в надстройки Office.
-ms.date: 2/09/2021
+description: Получите обзор использования компонентов Office UI Fabric в Office надстройки.
+ms.date: 05/03/2021
 localization_priority: Normal
-ms.openlocfilehash: 9799d98d795486203e4bcc23bffc043c2ead6e28
-ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
+ms.openlocfilehash: 20f926913335197a65ac24e4ec30ed0106b81bae
+ms.sourcegitcommit: 8fbc7c7eb47875bf022e402b13858695a8536ec5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "50237681"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52253370"
 ---
 # <a name="office-ui-fabric-in-office-add-ins"></a>Office UI Fabric в надстройках Office
 
-Office UI Fabric — это интерфейсная структура JavaScript для создания пользовательского интерфейса для Office. В Fabric предоставлены компоненты дизайна, которые можно расширять, дорабатывать и использовать в надстройке Office. Так как Fabric использует язык дизайна Office, компоненты дизайна Fabric выглядят в Office очень естественно.
+Office UI Fabric является интерфейсной платформой JavaScript для создания пользовательских интерфейсов для Office. В Fabric предоставлены компоненты дизайна, которые можно расширять, дорабатывать и использовать в надстройке Office. Так как Fabric использует язык дизайна Office, компоненты дизайна Fabric выглядят в Office очень естественно.
 
 Рекомендуем использовать Office UI Fabric для создания надстроек. Использовать Office UI Fabric необязательно.
 
@@ -44,9 +44,9 @@ Fabric Core содержит основные элементы языка диз
 
 ## <a name="use-fabric-components"></a>Использование компонентов Fabric
 
-Fabric предоставляет различные компоненты UX, которые можно использовать для создания надстройки. Мы не ожидаем, что все компоненты Fabric будут использоваться одной надстройой. Определите оптимальные компоненты для сценария и пользовательского интерфейса (например, может быть сложно правильно отобразить навигацию в области задач). [](https://developer.microsoft.com/fabric#/components/breadcrumb)
+Fabric предоставляет различные компоненты UX, которые можно использовать для создания надстройки. Мы не ожидаем, что все компоненты ткани будут использоваться одной надстройки. Определите оптимальные компоненты для сценария и пользовательского интерфейса (например, может быть трудно правильно отображать [breadcrumb](https://developer.microsoft.com/fabric#/components/breadcrumb) в области задач).
 
-Ниже приводится список распространенных компонентов [fabric React UX,](https://developer.microsoft.com/fluentui#/controls/web) которые мы рекомендуем использовать в надстройки.
+Ниже приводится список общих компонентов [React Fabric,](https://developer.microsoft.com/fluentui#/controls/web) которые мы рекомендуем использовать в надстройки:
 
 - [Кнопка](https://developer.microsoft.com/fabric#/components/button)
 - [Флажок](https://developer.microsoft.com/fabric#/components/checkbox)
@@ -63,4 +63,3 @@ Fabric предоставляет различные компоненты UX, к
 |**Платформа**|**Пример**|
 |:------------|:----------|
 |**React**|[Использование Office UI Fabric React в надстройках Office](using-office-ui-fabric-react.md )|
-|**Angular**| [Рассмотрите возможность переноса компонентов Fabric с помощью компонентов Angular 2](../develop/add-ins-with-angular2.md#consider-wrapping-fabric-components-with-angular-components)|

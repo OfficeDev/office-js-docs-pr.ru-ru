@@ -3,12 +3,12 @@ title: Сравнение Outlook поддержки надстройки в Out
 description: Узнайте, как поддержка надстройки в Outlook Mac сравнивает с другими Outlook клиентами.
 ms.date: 04/29/2021
 localization_priority: Normal
-ms.openlocfilehash: fa643a423d058324618061f20c2028b6dd484bc9
-ms.sourcegitcommit: 6057afc1776e1667b231d2e9809d261d372151f6
+ms.openlocfilehash: 33134b3997730a14ea85608368d097e7b9d287ad
+ms.sourcegitcommit: 8fbc7c7eb47875bf022e402b13858695a8536ec5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52100308"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52253327"
 ---
 # <a name="compare-outlook-add-in-support-in-outlook-on-mac-with-other-outlook-clients"></a>Сравните Outlook поддержки надстройки в Outlook Mac с другими Outlook клиентами
 
@@ -41,12 +41,12 @@ Outlook надстройки теперь поддерживаются в нов
 
 Рекомендуется просмотреть Outlook пользовательского интерфейса Mac, доступного в версии 16.38.506. Дополнительные новости о том, как попробовать его, см. в Outlook для Mac - Заметки о выпуске для [сборки insider Fast.](https://support.microsoft.com/office/d6347358-5613-433e-a49e-a9a0e8e0462a)
 
-Вы можете определить, какая версия пользовательского интерфейса вы на, как следует.
+Вы можете определить, в какой версии пользовательского интерфейса вы на, следующим образом:
 
 **Текущий пользовательский интерфейс**
 
-&nbsp;&nbsp;&nbsp;&nbsp;![Текущий пользовательский интерфейс на Mac](../images/outlook-on-mac-classic.png)
+![Текущий пользовательский интерфейс на Mac](../images/outlook-on-mac-classic.png)
 
 **Новый пользовательский интерфейс (предварительный просмотр)**
 
-&nbsp;&nbsp;&nbsp;&nbsp;![Новый пользовательский интерфейс в предварительном просмотре на Mac](../images/outlook-on-mac-new.png)
+![Новый пользовательский интерфейс в предварительном просмотре на Mac](../images/outlook-on-mac-new.png)

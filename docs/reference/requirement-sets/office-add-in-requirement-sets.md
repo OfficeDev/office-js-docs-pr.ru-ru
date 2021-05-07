@@ -1,22 +1,22 @@
 ---
 title: Наборы обязательных элементов общего API для Office
-description: Узнайте больше о наборах требований к общим API для Office.
-ms.date: 09/17/2020
+description: Дополнительные дополнительные Office общих наборов API.
+ms.date: 04/28/2021
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: d5fd33a2c44cb85e8279a970d4d7443783f049ff
-ms.sourcegitcommit: 2479812e677d1a7337765fe8f1c8345061d4091a
+ms.openlocfilehash: 959f03bf41496c1506087c2851efad336cdec676
+ms.sourcegitcommit: 8fbc7c7eb47875bf022e402b13858695a8536ec5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "48135223"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52253349"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
 Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md).
 
 > [!TIP]
-> Ищете наборы требований API для *конкретных приложений* ? см. ниже.
+> Ищете *наборы требований* для API, определенных для приложений? см. ниже.
 >
 > - [Наборы обязательных элементов API JavaScript для Excel](excel-api-requirement-sets.md) (ExcelApi)
 > - [Наборы обязательных элементов API JavaScript для Word](word-api-requirement-sets.md) (WordApi)
@@ -29,10 +29,10 @@ ms.locfileid: "48135223"
 
 ## <a name="common-api-requirement-sets"></a>Наборы обязательных элементов общего API
 
-В следующих разделах перечислены общие наборы требований API, методы в каждом наборе и клиентские приложения Office, поддерживающие этот набор требований. Все эти наборы обязательных элементов API имеют версию 1.1, если не указано иное.
+В следующих разделах перечисляются общие наборы требований API, методы в каждом наборе и Office клиентские приложения, которые поддерживают этот набор требований. Все эти наборы обязательных элементов API имеют версию 1.1, если не указано иное.
 
 > [!TIP]
-> Требуются сведения о том, где в приложениях и версиях Office поддерживаются надстройки и наборы требований? Сведения [о доступности клиентских приложений и платформ Office для надстроек Office](../../overview/office-add-in-availability.md).
+> Нужна информация о том, где надстройки и наборы требований поддерживаются Office и версией? См. Office клиентского приложения и доступности [платформы для Office надстройки](../../overview/office-add-in-availability.md).
 
 ### <a name="activeview"></a>ActiveView
 
@@ -60,7 +60,7 @@ ms.locfileid: "48135223"
 
 |**Приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel 2016 и более поздних версий в Windows<br>Excel в Интернете<br>Excel 2016 и более поздних версий на компьютерах Mac<br>PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает вывод в формате Office Open XML (OOXML) в виде байтового массива<br>(Office.FileType.Compressed) при использовании метода Document.getFileAsync.|
+| Excel 2016 и более поздней Windows<br>Excel в Интернете<br>Excel 2016 и позднее на Mac<br>PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает вывод в формате Office Open XML (OOXML) в виде байтового массива<br>(Office.FileType.Compressed) при использовании метода Document.getFileAsync.|
 
 ---
 
@@ -88,7 +88,7 @@ ms.locfileid: "48135223"
 
 ---
 
-### <a name="file"></a>Файл
+### <a name="file"></a>File
 
 |**Приложения Office**|**Методы в наборе**|
 |:-----|:-----|
@@ -152,11 +152,11 @@ ms.locfileid: "48135223"
 
 ---
 
-### <a name="openbrowserwindowapi"></a>опенбровсервиндовапи
+### <a name="openbrowserwindowapi"></a>OpenBrowserWindowApi
 
 |**Ведущие приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| В разделе Открытие набора обязательных элементов [API окна браузера](open-browser-window-api-requirement-sets.md). | Office. Context. UI. Опенбровсервиндов |
+| См. [наборы требований к API API окна открытого браузера.](open-browser-window-api-requirement-sets.md) | Office.context.ui.openBrowserWindow |
 
 ---
 
@@ -172,15 +172,15 @@ ms.locfileid: "48135223"
 
 |**Приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Excel для Windows<br>Excel в Интернете<br>Excel для Mac<br>PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете<br>Word на iPad|Поддерживает вывод в формате PDF (Office.FileType.Pdf)<br>при использовании метода Document.getFileAsync.|
+| Excel для Windows<br>Excel в Интернете<br>Excel для Mac<br>PowerPoint для Windows<br>PowerPoint в Интернете<br>PowerPoint на iPad<br>PowerPoint для Mac<br>Word 2013 и более поздней версии для Windows<br>Word 2016 и более поздней версии для Mac<br>Word в Интернете|Поддерживает вывод в формате PDF (Office.FileType.Pdf)<br>при использовании метода Document.getFileAsync.|
 
 ---
 
-### <a name="ribbonapi"></a>риббонапи
+### <a name="ribbonapi"></a>RibbonApi
 
 |**Приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| См.: [наборы требований API ленты](ribbon-api-requirement-sets.md). | Office. Ribbon. Рекуеступдате |
+| См. [наборы требований к API ленты.](ribbon-api-requirement-sets.md) | Office.ribbon.requestUpdate |
 
 ---
 
@@ -192,7 +192,7 @@ ms.locfileid: "48135223"
 
 ---
 
-### <a name="settings"></a>Параметры
+### <a name="settings"></a>Settings
 
 |**Приложения Office**|**Методы в наборе**|
 |:-----|:-----|
@@ -200,11 +200,11 @@ ms.locfileid: "48135223"
 
 ---
 
-### <a name="sharedruntime"></a>шаредрунтиме
+### <a name="sharedruntime"></a>SharedRuntime
 
 |**Приложения Office**|**Методы в наборе**|
 |:-----|:-----|
-| Ознакомьтесь с [общими наборами требований среды выполнения](shared-runtime-requirement-sets.md). | Office. AddIn. Жетстартупбехавиор<br>Office. AddIn. Hide<br>Office. AddIn. Онвисибилитимодечанжед<br>Office. AddIn. Сетстартупбехавиор<br>Office. AddIn. Шовастаскпане<br> |
+| См. [общие наборы требований к времени работы.](shared-runtime-requirement-sets.md) | Office.addin.getStartupBehavior<br>Office.addin.hide<br>Office.addin.onVisibilityModeChanged<br>Office.addin.setStartupBehavior<br>Office.addin.showAsTaskpane<br> |
 
 ---
 
@@ -250,9 +250,9 @@ ms.locfileid: "48135223"
 
 ## <a name="methods-that-arent-part-of-a-requirement-set"></a>Методы, отсутствующие в наборе требований
 
-Следующие методы в API JavaScript для Office не входят в набор требований. Если вашей надстройке необходимы какие-либо из этих методов, используйте элементы **Methods** и **Method** в манифесте надстройки, чтобы объявить их обязательными, или выполняйте проверку в среде выполнения с использованием оператора `if`. Дополнительную информацию можно узнать в статье [Указание приложений Office и требований к API](../../develop/specify-office-hosts-and-api-requirements.md).
+Следующие методы в API Office JavaScript не являются частью набора требований. Если вашей надстройке необходимы какие-либо из этих методов, используйте элементы **Methods** и **Method** в манифесте надстройки, чтобы объявить их обязательными, или выполняйте проверку в среде выполнения с использованием оператора `if`. Дополнительные сведения см. в [Office приложениях и требованиях API.](../../develop/specify-office-hosts-and-api-requirements.md)
 
-|**Имя метода**|**Поддержка приложений Office**|
+|**Имя метода**|**Office поддержки приложений**|
 |:-----|:-----|
 |Bindings.addFromPromptAsync|Веб-приложения Access, Excel для Windows, Excel в Интернете, Excel на iPad и Excel для Mac|
 |Document.getFilePropertiesAsync|Excel для Windows, Excel в Интернете, Excel на iPad, Excel для Mac, PowerPoint для Windows, PowerPoint в Интернете, PowerPoint на iPad, PowerPoint для Mac, Word для Windows, Word в Интернете, Word на iPad и Word для Mac|
