@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов API JavaScript для Word
 description: Сведения о наборе обязательных элементов надстройки Office для сборок Word.
-ms.date: 07/10/2020
+ms.date: 05/05/2021
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: 23db807df0c47aaab4c579d17e4fbd28bb809fed
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 816bb49c165d41e5a29b71bb8df422c353087bab
+ms.sourcegitcommit: 132f5082f5bf9500dad0a2eaf89d924c823e575d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293438"
+ms.lasthandoff: 05/07/2021
+ms.locfileid: "52266098"
 ---
 # <a name="word-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Word
 
@@ -17,12 +17,12 @@ ms.locfileid: "47293438"
 
 ## <a name="requirement-set-availability"></a>Доступность набора обязательных элементов
 
-Надстройки Word работают в нескольких версиях Office, включая Office 2016 или более поздней версии для Windows, а также Office в Интернете, Office для iPad и Office для Mac. В приведенной ниже таблице перечислены наборы требований Word, клиентские приложения Office, которые их поддерживают, а также номера сборок или версий для этих приложений.
+Надстройки Word работают в нескольких версиях Office, включая Office 2016 для Windows, Office в Интернете, для iPad и Mac. В приведенной ниже таблице перечислены наборы требований Word, ведущие приложения Office, которые их поддерживают, а также номера сборок или версий для этих приложений.
 
 > [!NOTE]
 > Чтобы использовать API в любом из нумерованных наборов обязательных элементов, следует ссылаться на **рабочую** библиотеку в сети CDN: https://appsforoffice.microsoft.com/lib/1/hosted/office.js.
 >
-> Сведения об использовании API предварительных версий см. в статье [Предварительные версии API JavaScript для Excel](word-preview-apis.md).
+> Сведения об использовании API предварительных версий см. в статье [Предварительные версии API JavaScript для Word](word-preview-apis.md).
 
 |  Набор обязательных элементов  |   Office для Windows\*<br>(подключено к подписке на Microsoft 365)  |  Office для iPad<br>(подключено к подписке на Microsoft 365)  |  Office для Mac<br>(подключено к подписке на Microsoft 365)  | Office в Интернете  |
 |:-----|-----|:-----|:-----|:-----|
