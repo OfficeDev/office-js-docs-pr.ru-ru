@@ -1,14 +1,14 @@
 ---
 title: Контентные надстройки Office
 description: Контентные надстройки — это рабочие области, которые можно внедрять прямо в документы Excel или PowerPoint, что предоставляет пользователям доступ к элементам управления интерфейсом, которые выполняют код для изменения документов или отображения данных.
-ms.date: 07/07/2020
+ms.date: 05/12/2021
 localization_priority: Normal
-ms.openlocfilehash: cf4ea46b4b924683756063bb36c3f2ea2b8c6764
-ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
+ms.openlocfilehash: 89c8c7eb96d6b1cf6484133b52acbe7d0ccb5298
+ms.sourcegitcommit: 30f6c620380075e3459cac748ca0c656427b384d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49132083"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "52329998"
 ---
 # <a name="content-office-add-ins"></a>Контентные надстройки Office
 
@@ -16,7 +16,7 @@ ms.locfileid: "49132083"
 
 *Рисунок 1. Макет для контентных надстроек*
 
-![Типичный макет контентных надстроек в приложении Office](../images/overview-with-app-content.png)
+![Типичная схема для надстройок контента в Office приложении](../images/overview-with-app-content.png)
 
 ## <a name="best-practices"></a>Рекомендации
 
@@ -25,7 +25,7 @@ ms.locfileid: "49132083"
 
 ## <a name="variants"></a>Варианты
 
-Размеры контентных надстроек для Excel и PowerPoint в Office для настольных ПК и Microsoft 365 указаны пользователем.
+Размеры надстройки контента для Excel и PowerPoint в Office и Microsoft 365 указаны пользователем.
 
 ## <a name="personality-menu"></a>Меню личных данных
 
@@ -35,13 +35,13 @@ ms.locfileid: "49132083"
 
 *Рисунок 2. Меню личных данных в Windows*
 
-![32 — меню "личные" на рабочем столе Windows](../images/personality-menu-win.png)
+![12x32-пиксельное меню личности на Windows рабочем столе](../images/personality-menu-win.png)
 
 В Mac меню личных данных имеет размер 26 x 26 точек, но сдвинуто на 8 пикселей влево и на 6 вниз, из-за чего оно занимает пространство размером 34 x 32 пикселей, как показано на изображении.
 
 *Рисунок 3. Меню личных данных на Mac*
 
-![меню "личные" размером 34-Pixel на компьютере Mac](../images/personality-menu-mac.png)
+![34x32-пиксельное меню личности на рабочем столе Mac](../images/personality-menu-mac.png)
 
 ## <a name="implementation"></a>Реализация
 
@@ -49,13 +49,13 @@ ms.locfileid: "49132083"
 
 ## <a name="support-considerations"></a>Что касается поддержки
 
-- Проверьте, работает ли ваша надстройка Office в [определенном приложении или платформе Office](../overview/office-add-in-availability.md).
+- Убедитесь, что Office надстройка будет работать на определенном Office [или платформе.](../overview/office-add-in-availability.md)
 - Чтобы надстройка могла читать и записывать данные в Excel или PowerPoint, может потребоваться добавление в список доверенных. Вы можете объявить нужный [уровень разрешений](../develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md) для пользователя в манифесте надстройки.  
 - Контентные надстройки поддерживаются в Excel и PowerPoint в Office 2013 и более поздних версий. Если вы откроете надстройку в версии Office, которая не поддерживает веб-надстройки, вместо надстройки будет показано изображение.
 
 ## <a name="see-also"></a>См. также
 
 - [Доступность клиентских приложений и платформ Office для надстроек Office](../overview/office-add-in-availability.md)
-- [Office UI Fabric в надстройках Office](../design/office-ui-fabric.md)
+- [Fabric Core в Office надстройки](fabric-core.md)
 - [Конструктивные шаблоны для надстроек Office](../design/ux-design-pattern-templates.md)
 - [Запрос разрешений на использование API в надстройках](../develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md)
