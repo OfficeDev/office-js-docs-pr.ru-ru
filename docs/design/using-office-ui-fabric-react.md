@@ -1,23 +1,23 @@
 ---
-title: Использование Office UI Fabric React в надстройках Office
-description: Использование Office UI Fabric React в надстройках Office
-ms.date: 02/09/2021
+title: Fluent UI React в Office надстройки
+description: Узнайте, как использовать интерфейс Fluent React в Office надстройки.
+ms.date: 05/12/2021
 localization_priority: Normal
-ms.openlocfilehash: f8f61d1b094fa71b8a400a6a6d9ea3029c53b051
-ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
+ms.openlocfilehash: cb7f04c21a52a2e4a3f271abc56aa325dd2b02fd
+ms.sourcegitcommit: 30f6c620380075e3459cac748ca0c656427b384d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "50237730"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "52330145"
 ---
-# <a name="use-office-ui-fabric-react-in-office-add-ins"></a>Использование Office UI Fabric React в надстройках Office
+# <a name="use-fluent-ui-react-in-office-add-ins"></a>Использование интерфейса Fluent React в Office надстройки
 
-Office UI Fabric — это интерфейсная структура JavaScript для создания пользовательского интерфейса для Office. Если вы создаете надстройки с помощью React, рассмотрите возможность использования Fabric React для создания пользовательского интерфейса. Fabric предоставляет несколько компонентов UX на основе React, например кнопки или контрольные элементы, которые можно использовать в надстройке.
-
-В этой статье объясняется, как создать надстройку с помощью React и использованием компонентов Fabric React.
+Fluent UI React является официальной интерфейсной платформой JavaScript с открытым исходным кодом, предназначенной для создания интерфейсных интерфейсов, которые легко вписываются в широкий спектр продуктов Майкрософт, включая Office. Он предоставляет надежные, доступные React компоненты с высокой настройкой с помощью CSS-in-JS.
 
 > [!NOTE]
-> В Fabric React используется[Fabric Core](office-ui-fabric.md#use-fabric-core-icons-fonts-colors), поэтому после выполнения вами действий, указанных в этой статье, ваша надстройка будет включать и доступ к Fabric Core.
+> В этой статье описывается использование интерфейса fluent React в контексте Office надстройки. Но он также используется в широком диапазоне Microsoft 365 приложений и расширений. Дополнительные сведения см. в [странице Fluent UI React](https://developer.microsoft.com/fluentui#/get-started/web#fluent-ui-react) и репо с открытым исходным кодом [Fluent UI Web.](https://github.com/microsoft/fluentui)
+
+В этой статье описывается, как создать надстройку, созданную с React и использующую компоненты React пользовательского интерфейса Fluent.
 
 ## <a name="create-an-add-in-project"></a>Создание проекта надстройки
 
@@ -76,13 +76,13 @@ Office UI Fabric — это интерфейсная структура JavaScri
 
         Чтобы использовать надстройку, откройте новый документ в Word в Интернете, а затем загрузите неопубликованную надстройку, следуя инструкциям из статьи [Загрузка неопубликованных надстроек Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web).
 
-3. В Word выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки. Обратите внимание на текст по умолчанию и кнопку **Запустить** в нижней части области задач. Следуя этой инструкции до конца, вы переопределите эти текст и кнопку, создав компонент React с использованием компонентов дизайна Fabric React.
+3. Чтобы открыть области задач надстройки, на вкладке **Главная** выберите кнопку **Показать задачу.** Обратите внимание на текст по умолчанию и кнопку **Запустить** в нижней части области задач. В остальной части этого поголовия вы переопределяете этот текст и кнопку, создав компонент React, использующий компоненты UX из пользовательского интерфейса Fluent React.
 
-    ![Screenshot showing the Word application with the Show Taskpane ribbon button highlighted and the Run button and immediately preceding text highlighted in the task pane](../images/word-task-pane-yo-default.png)
+    ![Снимок экрана, показывающий приложение Word с выделенной кнопкой ленты Show Taskpane и кнопкой Run и сразу же предшествующим текстом, выделенным в области задач.](../images/word-task-pane-yo-default.png)
 
-## <a name="create-a-react-component-that-uses-fabric-react"></a>Создание компонента React c использованием Fabric React
+## <a name="create-a-react-component-that-uses-fluent-ui-react"></a>Создайте компонент React, использующий интерфейс Fluent React
 
-На этом этапе вы уже создали самую простую надстройку в области задач c использованием React. Теперь выполните приведенные ниже действия, чтобы создать новый компонент React (`ButtonPrimaryExample`) в проекте надстройки. В этом компоненте будут использованы компоненты `Label` и `PrimaryButton` из Fabric React.
+На этом этапе вы уже создали самую простую надстройку в области задач c использованием React. Теперь выполните приведенные ниже действия, чтобы создать новый компонент React (`ButtonPrimaryExample`) в проекте надстройки. Компонент использует `Label` компоненты и `PrimaryButton` компоненты из пользовательского интерфейса Fluent React.
 
 1. Откройте папку проекта, созданную генератором Yeoman, и перейдите в раздел **src\taskpane\components**.
 2. Создайте в этой папке новый файл под названием **Button.tsx**.
@@ -102,7 +102,7 @@ export class ButtonPrimaryExample extends React.Component<IButtonProps, {}> {
     // In the click event, write text to the document.
     await Word.run(async (context) => {
       let body = context.document.body;
-      body.insertParagraph('Hello Office UI Fabric React!', Word.InsertLocation.end);
+      body.insertParagraph('Hello Fluent UI React!', Word.InsertLocation.end);
       await context.sync();
     });
   }
@@ -126,10 +126,10 @@ export class ButtonPrimaryExample extends React.Component<IButtonProps, {}> {
 Этот код выполняет следующие действия:
 
 - Ссылается на библиотеку React с помощью `import * as React from 'react';`.
-- Ссылается на компоненты Fabric (`PrimaryButton`, `IButtonProps`, `Label`), которые используются для создания `ButtonPrimaryExample`.
+- Ссылается на компоненты React пользовательского интерфейса Fluent , `PrimaryButton` которые используются для создания `IButtonProps` `Label` `ButtonPrimaryExample` .
 - Объявляет новый компонент `ButtonPrimaryExample` с помощью `export class ButtonPrimaryExample extends React.Component`.
 - Объявляет функцию `insertText` для обработки события кнопки `onClick`.
-- Определяет пользовательский интерфейс компонента React в функции `render`. В HTML-разметке используются компоненты `Label` и `PrimaryButton` из Fabric React и указывается, что при подключения события `onClick` будет запускаться функция `insertText`.
+- Определяет пользовательский интерфейс компонента React в функции `render`. Разметка HTML использует и компоненты из интерфейса Fluent React и указывает, что при запуске события функция `Label` `PrimaryButton` будет `onClick` `insertText` работать.
 
 ## <a name="add-the-react-component-to-your-add-in"></a>Добавление компонента React в надстройку
 
@@ -170,13 +170,12 @@ export class ButtonPrimaryExample extends React.Component<IButtonProps, {}> {
 
 После сохранения изменений в **App.tsx** область задач надстройки в Word обновляется автоматически.  Текст по умолчанию и кнопка в нижней части области задач теперь отображают пользовательский интерфейс, определяемый компонентом `ButtonPrimaryExample`. Нажмите кнопку **Вставить текст...** для вставки текста в документ.
 
-![Screenshot showing the Word application with the "Insert text..." кнопка и сразу после выделенного текста](../images/word-task-pane-with-react-component.png)
+![Снимок экрана, показывающий приложение Word с текстом "Вставить текст...". кнопка и сразу перед выделением текста](../images/word-task-pane-with-react-component.png)
 
-Поздравляем! Вы успешно создали надстройку области задач с помощью React и Office UI Fabric React!
+Поздравляем, вы успешно создали надстройку области задач с React и fluent UI React!
 
 ## <a name="see-also"></a>См. также
 
-- [Office UI Fabric в надстройках Office](office-ui-fabric.md)
-- [Office UI Fabric React](https://developer.microsoft.com/fabric)
+- [Word Add-in GettingStartedFabricReact](https://github.com/OfficeDev/Word-Add-in-GettingStartedFabricReact)
+- [Fabric Core в Office надстройки](fabric-core.md)
 - [Конструктивные шаблоны для надстроек Office](ux-design-pattern-templates.md)
-- [Начало работы с примером кода Fabric React](https://github.com/OfficeDev/Word-Add-in-GettingStartedFabricReact)

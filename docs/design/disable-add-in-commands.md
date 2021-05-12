@@ -3,12 +3,12 @@ title: Включение и отключение команд надстрое�
 description: Узнайте, как изменить состояние ("Включено" или "Отключено") настраиваемых кнопок ленты и элементов меню в веб-надстройке Office.
 ms.date: 04/30/2021
 localization_priority: Normal
-ms.openlocfilehash: 2ba0470c33237fa4627cf98cc5d106f6b7d8a57c
-ms.sourcegitcommit: 8fbc7c7eb47875bf022e402b13858695a8536ec5
+ms.openlocfilehash: 9690850b2206c09b99dfc826dae1ecef915d5a04
+ms.sourcegitcommit: 30f6c620380075e3459cac748ca0c656427b384d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52253335"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "52330159"
 ---
 # <a name="enable-and-disable-add-in-commands"></a>Включение и отключение команд надстроек
 
@@ -23,7 +23,7 @@ ms.locfileid: "52253335"
 
 ## <a name="office-application-and-platform-support-only"></a>Office только для приложений и платформ
 
-API, описанные в этой статье, доступны только в Excel, и только Office на Windows, Office Mac и Office в Интернете.
+API, описанные в этой статье, доступны только в Excel на всех платформах и в PowerPoint в Интернете.
 
 ### <a name="test-for-platform-support-with-requirement-sets"></a>Тестирование поддержки платформ с использованием наборов обязательных элементов
 

@@ -1,23 +1,23 @@
 ---
-title: Наборы средств оформления для надстроек Office
-description: Ссылки на некоторые средства, помогающие разработать пользовательский интерфейс надстройки Office.
-ms.date: 06/27/2018
+title: Наборы инструментов для надстройок Office
+description: Получите ссылки на некоторые средства для разработки пользовательского интерфейса надстройки Office.
+ms.date: 05/12/2021
 localization_priority: Normal
-ms.openlocfilehash: 7dfbbd670a5f15f3776e360af3f3b04cffc03e2a
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 0f3f6c03019bec9f5e5f3bddce489ab952138d67
+ms.sourcegitcommit: 30f6c620380075e3459cac748ca0c656427b384d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608546"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "52330166"
 ---
-# <a name="design-toolkits"></a>Наборы средств оформления
+# <a name="design-tool-kits"></a>Наборы инструментов для разработки
 
-Мы включили наш набор средств, который поможет вам начать работу. Здесь представлены все наши доступные шаблоны с краткими описаниями, рекомендациями по макетам и примером надстройки.
+Чтобы помочь вам начать работу, мы создали наборы инструментов для использования с помощью приложения [Sketch](https://www.sketch.com/) для Mac или [приложения Adobe XD](https://www.adobe.com/products/xd/features.html) для Windows или Mac. Следующие загрузки включают все доступные шаблоны, а также краткие описания и рекомендации по макету.
 
-### <a name="downloads"></a>Файлы для загрузки
+## <a name="downloads"></a>Загрузки
 
-* [Набор средств для создания эскизов Fabric Design](https://aka.ms/fabric-sketch-toolkit)
-* [Набор средств Fabric Design для Adobe XD](https://aka.ms/fabric-toolkit)
+* [Эскиз проектирования пользовательского интерфейса fluent набор средств](https://aka.ms/fabric-sketch-toolkit)
+* [Fluent UI Design Adobe XD набор средств](https://aka.ms/fabric-toolkit)
 * [Набор средств для создания эскизов надстроек](https://aka.ms/addins_sketch_toolkit)
 * [Набор средств для создания надстроек для Adobe XD](https://aka.ms/addins_toolkit)
 * [Шрифт значков Segoe UI и Fabric MDL2](https://static2.sharepointonline.com/files/fabric/fabric-website/files/segoeui_fabricmdl2_icon_fonts.zip)
