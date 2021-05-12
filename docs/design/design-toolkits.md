@@ -1,23 +1,23 @@
 ---
-title: Наборы средств оформления для надстроек Office
-description: Ссылки на некоторые средства, помогающие разработать пользовательский интерфейс надстройки Office.
-ms.date: 06/27/2018
+title: Наборы инструментов для надстройок Office
+description: Получите ссылки на некоторые средства для разработки пользовательского интерфейса надстройки Office.
+ms.date: 05/12/2021
 localization_priority: Normal
-ms.openlocfilehash: 7dfbbd670a5f15f3776e360af3f3b04cffc03e2a
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 0f3f6c03019bec9f5e5f3bddce489ab952138d67
+ms.sourcegitcommit: 30f6c620380075e3459cac748ca0c656427b384d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608546"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "52330166"
 ---
-# <a name="design-toolkits"></a><span data-ttu-id="2130f-103">Наборы средств оформления</span><span class="sxs-lookup"><span data-stu-id="2130f-103">Design toolkits</span></span>
+# <a name="design-tool-kits"></a><span data-ttu-id="f5d5b-103">Наборы инструментов для разработки</span><span class="sxs-lookup"><span data-stu-id="f5d5b-103">Design tool kits</span></span>
 
-<span data-ttu-id="2130f-104">Мы включили наш набор средств, который поможет вам начать работу.</span><span class="sxs-lookup"><span data-stu-id="2130f-104">We've included our toolkit to help you get started.</span></span> <span data-ttu-id="2130f-105">Здесь представлены все наши доступные шаблоны с краткими описаниями, рекомендациями по макетам и примером надстройки.</span><span class="sxs-lookup"><span data-stu-id="2130f-105">You can find all of our available patterns here with brief descriptions, layout recommendations, and a sample add-in.</span></span>
+<span data-ttu-id="f5d5b-104">Чтобы помочь вам начать работу, мы создали наборы инструментов для использования с помощью приложения [Sketch](https://www.sketch.com/) для Mac или [приложения Adobe XD](https://www.adobe.com/products/xd/features.html) для Windows или Mac.</span><span class="sxs-lookup"><span data-stu-id="f5d5b-104">To help you get started, we've created tool kits for use with either the [Sketch](https://www.sketch.com/) application for Mac or the [Adobe XD](https://www.adobe.com/products/xd/features.html) application for Windows or Mac.</span></span> <span data-ttu-id="f5d5b-105">Следующие загрузки включают все доступные шаблоны, а также краткие описания и рекомендации по макету.</span><span class="sxs-lookup"><span data-stu-id="f5d5b-105">The following downloads include all of our available patterns, along with brief descriptions and layout recommendations.</span></span>
 
-### <a name="downloads"></a><span data-ttu-id="2130f-106">Файлы для загрузки</span><span class="sxs-lookup"><span data-stu-id="2130f-106">Downloads</span></span>
+## <a name="downloads"></a><span data-ttu-id="f5d5b-106">Загрузки</span><span class="sxs-lookup"><span data-stu-id="f5d5b-106">Downloads</span></span>
 
-* [<span data-ttu-id="2130f-107">Набор средств для создания эскизов Fabric Design</span><span class="sxs-lookup"><span data-stu-id="2130f-107">Fabric Design Sketch Toolkit</span></span>](https://aka.ms/fabric-sketch-toolkit)
-* [<span data-ttu-id="2130f-108">Набор средств Fabric Design для Adobe XD</span><span class="sxs-lookup"><span data-stu-id="2130f-108">Fabric Design Adobe XD Toolkit</span></span>](https://aka.ms/fabric-toolkit)
-* [<span data-ttu-id="2130f-109">Набор средств для создания эскизов надстроек</span><span class="sxs-lookup"><span data-stu-id="2130f-109">Add-in Sketch Toolkit</span></span>](https://aka.ms/addins_sketch_toolkit)
-* [<span data-ttu-id="2130f-110">Набор средств для создания надстроек для Adobe XD</span><span class="sxs-lookup"><span data-stu-id="2130f-110">Add-in Adobe XD Toolkit</span></span>](https://aka.ms/addins_toolkit)
-* [<span data-ttu-id="2130f-111">Шрифт значков Segoe UI и Fabric MDL2</span><span class="sxs-lookup"><span data-stu-id="2130f-111">Segoe UI and Fabric MDL2 icon font</span></span>](https://static2.sharepointonline.com/files/fabric/fabric-website/files/segoeui_fabricmdl2_icon_fonts.zip)
+* [<span data-ttu-id="f5d5b-107">Эскиз проектирования пользовательского интерфейса fluent набор средств</span><span class="sxs-lookup"><span data-stu-id="f5d5b-107">Fluent UI Design Sketch Toolkit</span></span>](https://aka.ms/fabric-sketch-toolkit)
+* [<span data-ttu-id="f5d5b-108">Fluent UI Design Adobe XD набор средств</span><span class="sxs-lookup"><span data-stu-id="f5d5b-108">Fluent UI Design Adobe XD Toolkit</span></span>](https://aka.ms/fabric-toolkit)
+* [<span data-ttu-id="f5d5b-109">Набор средств для создания эскизов надстроек</span><span class="sxs-lookup"><span data-stu-id="f5d5b-109">Add-in Sketch Toolkit</span></span>](https://aka.ms/addins_sketch_toolkit)
+* [<span data-ttu-id="f5d5b-110">Набор средств для создания надстроек для Adobe XD</span><span class="sxs-lookup"><span data-stu-id="f5d5b-110">Add-in Adobe XD Toolkit</span></span>](https://aka.ms/addins_toolkit)
+* [<span data-ttu-id="f5d5b-111">Шрифт значков Segoe UI и Fabric MDL2</span><span class="sxs-lookup"><span data-stu-id="f5d5b-111">Segoe UI and Fabric MDL2 icon font</span></span>](https://static2.sharepointonline.com/files/fabric/fabric-website/files/segoeui_fabricmdl2_icon_fonts.zip)
