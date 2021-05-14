@@ -1,15 +1,15 @@
 ---
 title: Руководство по надстройкам Excel
 description: В этом руководстве вы создадите надстройку Excel, которая создает, заполняет, фильтрует и сортирует таблицу, создает диаграмму, замораживает заголовок таблицы, защищает лист и открывает диалоговое окно.
-ms.date: 02/03/2021
+ms.date: 05/12/2021
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 0fa22b7b91f041c95abad9981dd89e620cf9af1c
-ms.sourcegitcommit: d153f6d4c3e01d63ed24aa1349be16fa8ad51218
+ms.openlocfilehash: 4eee9910c394238d4ce90cc629366b030f791144
+ms.sourcegitcommit: 30f6c620380075e3459cac748ca0c656427b384d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "50613936"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "52330019"
 ---
 # <a name="tutorial-create-an-excel-task-pane-add-in"></a>Учебник: Создание надстройки области задач Excel
 
@@ -207,18 +207,18 @@ ms.locfileid: "50613936"
 
     ![Снимок экрана с приложением Excel, демонстрирующий область задач надстройки с кнопкой "Создать таблицу", а также таблицу на листе, заполненную данными даты, продавца, категории и суммы](../images/excel-tutorial-create-table-2.png)
 
-## <a name="filter-and-sort-a-table"></a>Фильтрация и сортировка таблицы
+## <a name="filter-and-sort-a-table&quot;></a>Фильтрация и сортировка таблицы
 
 Из этого раздела руководства вы узнаете, как отфильтровать и отсортировать созданную ранее таблицу.
 
-### <a name="filter-the-table"></a>Фильтрация таблицы
+### <a name=&quot;filter-the-table&quot;></a>Фильтрация таблицы
 
 1. Откройте файл **./src/taskpane/taskpane.html**.
 
 2. Найдите элемент `<button>` для кнопки `create-table` и после нее добавьте следующий текст:
 
     ```html
-    <button class="ms-Button" id="filter-table">Filter Table</button><br/><br/>
+    <button class=&quot;ms-Button&quot; id=&quot;filter-table&quot;>Filter Table</button><br/><br/>
     ```
 
 3. Откройте файл **./src/taskpane/taskpane.js**.
@@ -226,7 +226,7 @@ ms.locfileid: "50613936"
 4. В вызове метода `Office.onReady` найдите строку, которая назначает обработчик щелчка для кнопки `create-table`, и добавьте следующий код после этой строки:
 
     ```js
-    document.getElementById("filter-table").onclick = filterTable;
+    document.getElementById(&quot;filter-table").onclick = filterTable;
     ```
 
 5. Добавьте следующую функцию в конец файла:
@@ -334,18 +334,18 @@ ms.locfileid: "50613936"
 
     ![Снимок экрана: приложение Excel с кнопками "Фильтровать таблицу" и "Сортировать таблицу", отображаемыми в области задач надстройки](../images/excel-tutorial-filter-and-sort-table-2.png)
 
-## <a name="create-a-chart"></a>Создание диаграммы
+## <a name="create-a-chart&quot;></a>Создание диаграммы
 
 На этом этапе руководства мы создадим диаграмму, используя данные из ранее созданной таблицы, а затем отформатируем эту диаграмму.
 
-### <a name="chart-a-chart-using-table-data"></a>Создание диаграммы с помощью таблицы данных
+### <a name=&quot;chart-a-chart-using-table-data&quot;></a>Создание диаграммы с помощью таблицы данных
 
 1. Откройте файл **./src/taskpane/taskpane.html**.
 
 2. Найдите элемент `<button>` для кнопки `sort-table` и после нее добавьте следующий текст: 
 
     ```html
-    <button class="ms-Button" id="create-chart">Create Chart</button><br/><br/>
+    <button class=&quot;ms-Button&quot; id=&quot;create-chart&quot;>Create Chart</button><br/><br/>
     ```
 
 3. Откройте файл **./src/taskpane/taskpane.js**.
@@ -353,7 +353,7 @@ ms.locfileid: "50613936"
 4. В вызове метода `Office.onReady` найдите строку, которая назначает обработчик щелчка для кнопки `sort-table`, и добавьте следующий код после этой строки:
 
     ```js
-    document.getElementById("create-chart").onclick = createChart;
+    document.getElementById(&quot;create-chart").onclick = createChart;
     ```
 
 5. Добавьте следующую функцию в конец файла:
@@ -403,7 +403,7 @@ ms.locfileid: "50613936"
 
    - Параметры метода `setPosition` задают левую верхнюю и правую нижнюю ячейки области листа, которые должны содержать диаграмму. Excel может настраивать такие параметры, как ширина линий, чтобы диаграмма хорошо выглядела в выделенном для нее пространстве.
 
-   - "Ряд" — это набор точек данных из столбца таблицы. Так как в таблице есть только один нестроковый столбец, Excel делает вывод, что это единственный столбец точек данных для диаграммы. Он рассматривает другие столбцы как метки диаграммы. Следовательно, в диаграмме будет только один ряд, обозначенный индексом 0. Это тот, на котором стоит «Стоимость в &euro;».
+   - "Ряд" — это набор точек данных из столбца таблицы. Так как в таблице есть только один нестроковый столбец, Excel делает вывод, что это единственный столбец точек данных для диаграммы. Он рассматривает другие столбцы как метки диаграммы. Следовательно, в диаграмме будет только один ряд, обозначенный индексом 0. К нему следует добавить метку "Значение в &euro;".
 
     ```js
     chart.setPosition("A15", "F30");
@@ -429,18 +429,18 @@ ms.locfileid: "50613936"
 
     ![Снимок экрана: Excel с кнопкой "Создать диаграмму" в области задач надстройки и диаграммой на листе с данными расходов на продукты и образование](../images/excel-tutorial-create-chart-2.png)
 
-## <a name="freeze-a-table-header"></a>Закрепление заголовка таблицы
+## <a name="freeze-a-table-header&quot;></a>Закрепление заголовка таблицы
 
 Когда таблица достаточно длинная, при прокрутке строка заголовков может исчезать с экрана. В этом разделе учебника мы расскажем, как закрепить строку заголовков созданной ранее таблицы, чтобы она была видна, даже когда пользователь прокручивает лист.
 
-### <a name="freeze-the-tables-header-row"></a>Закрепление строки заголовков таблицы
+### <a name=&quot;freeze-the-tables-header-row&quot;></a>Закрепление строки заголовков таблицы
 
 1. Откройте файл **./src/taskpane/taskpane.html**.
 
 2. Найдите элемент `<button>` для кнопки `create-chart` и после нее добавьте следующий текст:
 
     ```html
-    <button class="ms-Button" id="freeze-header">Freeze Header</button><br/><br/>
+    <button class=&quot;ms-Button&quot; id=&quot;freeze-header&quot;>Freeze Header</button><br/><br/>
     ```
 
 3. Откройте файл **./src/taskpane/taskpane.js**.
@@ -448,7 +448,7 @@ ms.locfileid: "50613936"
 4. В вызове метода `Office.onReady` найдите строку, которая назначает обработчик щелчка для кнопки `create-chart`, и добавьте следующий код после этой строки:
 
     ```js
-    document.getElementById("freeze-header").onclick = freezeHeader;
+    document.getElementById(&quot;freeze-header").onclick = freezeHeader;
     ```
 
 5. Добавьте следующую функцию в конец файла:
@@ -474,7 +474,7 @@ ms.locfileid: "50613936"
 
    - Коллекция `Worksheet.freezePanes` — это набор закрепленных строк, которые не исчезают с экрана при прокрутке листа.
 
-   - Метод `freezeRows` принимает в качестве параметра количество строк сверху, которые необходимо закрепить. Мы передаем `1`, чтобы закрепить первую строку.
+   - Метод `freezeRows` принимает в качестве параметра количество строк сверху, которые необходимо закрепить. Мы передаем значение `1`, чтобы закрепить первую строку.
 
     ```js
     var currentWorksheet = context.workbook.worksheets.getActiveWorksheet();
@@ -773,7 +773,7 @@ ms.locfileid: "50613936"
 
 2. В папке **./src/dialogs** создайте файл с именем **popup.html**.
 
-3. Добавьте в файл **popup.html** приведенный ниже код. Примечание:
+3. Добавьте в файл **popup.html** следующий код. Примечание.
 
    - На странице есть поле`<input>`, где пользователь будет вводить свое имя, и кнопка, при нажатии которой это имя будет отправлено в панель задач, где оно будет отображаться.
 
@@ -789,7 +789,7 @@ ms.locfileid: "50613936"
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <!-- For more information on Office UI Fabric, visit https://developer.microsoft.com/fabric. -->
+            <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui. -->
             <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css"/>
 
             <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
@@ -1003,7 +1003,7 @@ ms.locfileid: "50613936"
 
 3. Нажмите кнопку **Open Dialog** (Открыть диалоговое окно) в области задач.
 
-4. Когда диалоговое окно открыто, перетащите его и измените его размер. Обратите внимание, что вы можете взаимодействовать с листом и нажимать другие кнопки в области задач, но вы не можете запустить второе диалоговое окно на одной и той же странице панели задач.
+4. Когда диалоговое окно открыто, перетащите его и измените его размер. Обратите внимание, что вы можете взаимодействовать с листом и нажимать другие кнопки в области задач, но невозможно запустить второе диалоговое окно на одной и той же странице панели задач.
 
 5. В диалоговом окне введите имя и нажмите кнопку **OK**. В области задач отобразится имя, и диалоговое окно закроется.
 
