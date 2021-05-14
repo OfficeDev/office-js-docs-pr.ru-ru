@@ -144,6 +144,10 @@ items:
             items:
               - name: Обзор
                 href: design/add-in-design.md
+              - name: Fluent UI React в надстройках Office
+                href: design/using-office-ui-fabric-react.md
+              - name: Fabric Core в надстройках Office
+                href: design/fabric-core.md
               - name: Рекомендации
                 items:
                   - name: Специальные возможности
@@ -186,6 +190,8 @@ items:
                         href: design/first-run-experience-patterns.md
                       - name: Навигация
                         href: design/navigation-patterns.md
+              - name: Наборы инструментов разработки
+                href: design/design-toolkits.md
               - name: Элементы интерфейса
                 items:
                   - name: Общие сведения
@@ -228,14 +234,6 @@ items:
                 href: develop/show-hide-add-in.md
               - name: Локализация
                 href: develop/localization.md
-              - name: Ресурсы
-                items:
-                  - name: Наборы средств оформления
-                    href: design/design-toolkits.md
-                  - name: Начало работы с Fabric React
-                    href: design/using-office-ui-fabric-react.md
-                  - name: Office UI Fabric
-                    href: design/office-ui-fabric.md
           - name: Платформы и идентификаторы
             items:
               - name: Разработка надстроек с помощью Angular
