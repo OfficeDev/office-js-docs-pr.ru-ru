@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Документация по надстройкам PowerPoint
-summary: С помощью надстройок PowerPoint можно использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript, чтобы создать решение, которое может работать в PowerPoint на нескольких платформах, в том числе в Интернете, Windows, Mac и iPad. Узнайте, как создавать, тестировать, отлаживать и публиковать надстройки PowerPoint.
+summary: С PowerPoint надстройки, вы можете использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript для создания решения, которое может работать в PowerPoint на нескольких платформах, в том числе в Интернете, Windows, Mac и iPad. Узнайте, как создавать, тестировать, отлаживать и публиковать надстройки PowerPoint.
 metadata:
   title: Документация по надстройкам PowerPoint
   description: Учебные ресурсы по надстройкам PowerPoint
@@ -8,18 +8,18 @@ metadata:
   ms.topic: landing-page
   ms.date: 03/29/2021
   localization_priority: Priority
-  ms.openlocfilehash: 047b49ece238efac495da5a74e1699e2ccdcfea5
-  ms.sourcegitcommit: a0624ef0d847fdbd6d83f27d1f9c69daf636ac38
+  ms.openlocfilehash: 4fdc2e9da42cdaa7aafe954383c1c1c48bb404ce
+  ms.sourcegitcommit: 693d364616b42eea66977eef47530adabc51a40f
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 03/30/2021
-  ms.locfileid: "51435300"
+  ms.lasthandoff: 05/19/2021
+  ms.locfileid: "52555173"
 landingContent:
-- title: О надстройки PowerPoint
+- title: О PowerPoint надстройки
   linkLists:
   - linkListType: overview
     links:
-    - text: Что такое надстройки PowerPoint?
+    - text: Что такое PowerPoint дополнительные надстройки?
       url: powerpoint-add-ins.md
     - text: API JavaScript для PowerPoint
       url: ../reference/overview/powerpoint-add-ins-reference-overview.md
@@ -31,11 +31,11 @@ landingContent:
       url: ../overview/explore-with-script-lab.md
   - linkListType: how-to-guide
     links:
-    - text: Тестирование и отлагивание надстроек PowerPoint
+    - text: Тестирование и отладка PowerPoint дополнительных надстройок
       url: ../testing/test-debug-office-add-ins.md
-    - text: Развертывание и публикация надстройки PowerPoint
+    - text: Развертывание и публикация PowerPoint дополнительных надстройок
       url: ../publish/publish.md
-- title: Ключевые концепции надстройки Office
+- title: Ключевые Office концепции дополнительных элементов
   linkLists:
   - linkListType: overview
     links:
@@ -54,9 +54,9 @@ landingContent:
   - linkListType: reference
     links:
     - text: Задать вопрос
-      url: https://stackoverflow.com/questions/tagged/office-js
+      url: /answers/topics/office-addins-dev.html
     - text: Предложить функцию
-      url: /answers/products/m365
+      url: https://techcommunity.microsoft.com/t5/microsoft-365-developer-platform/idb-p/Microsoft365DeveloperPlatform
     - text: Сообщить о проблеме
       url: https://github.com/officedev/office-js/issues
     - text: 'Надстройки Office: дополнительные ресурсы'

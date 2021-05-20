@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Документация по надстройкам Outlook
-summary: С помощью надстроек Outlook можно использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript, чтобы создать решение, которое может работать в Outlook на нескольких платформах, в том числе в Интернете, Windows, Mac и iOS. Узнайте, как создавать, тестировать, отлаживать и публиковать надстройки Outlook.
+summary: С Outlook надстройки, вы можете использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript для создания решения, которое может работать в Outlook на нескольких платформах, в том числе в Интернете, Windows, Mac и iOS. Узнайте, как создавать, тестировать, отлаживать и публиковать надстройки Outlook.
 metadata:
   title: Документация по надстройкам Outlook
   description: Учебные ресурсы по надстройкам Outlook.
@@ -8,18 +8,18 @@ metadata:
   ms.topic: landing-page
   ms.date: 03/29/2021
   localization_priority: Priority
-  ms.openlocfilehash: 0270157672cc3756485af1daf2cc088fc5f3cb4f
-  ms.sourcegitcommit: a0624ef0d847fdbd6d83f27d1f9c69daf636ac38
+  ms.openlocfilehash: 22a4d97562287d7c4ef60208e87cc1c42f7ddf68
+  ms.sourcegitcommit: 693d364616b42eea66977eef47530adabc51a40f
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 03/30/2021
-  ms.locfileid: "51435237"
+  ms.lasthandoff: 05/19/2021
+  ms.locfileid: "52555292"
 landingContent:
-- title: О надстройки Outlook
+- title: О Outlook дополнительных надстройок
   linkLists:
   - linkListType: overview
     links:
-    - text: Что такое надстройки Outlook?
+    - text: Что Outlook надстройки?
       url: outlook-add-ins-overview.md
   - linkListType: quickstart
     links:
@@ -29,13 +29,13 @@ landingContent:
       url: ../overview/explore-with-script-lab.md
   - linkListType: how-to-guide
     links:
-    - text: Используйте API JavaScript Outlook для взаимодействия с объектами
+    - text: Используйте Outlook JavaScript для взаимодействия с объектами
       url: apis.md
-    - text: Тестирование и отлагивание надстройки Outlook
+    - text: Тестирование и отладка Outlook надстройки
       url: ../testing/test-debug-office-add-ins.md
-    - text: Развертывание и публикация надстройки Outlook
+    - text: Развертывание и публикация Outlook дополнения
       url: ../publish/publish.md
-- title: Ключевые концепции надстройки Office
+- title: Ключевые Office концепции дополнительных элементов
   linkLists:
   - linkListType: overview
     links:
@@ -54,9 +54,9 @@ landingContent:
   - linkListType: reference
     links:
     - text: Задать вопрос
-      url: https://stackoverflow.com/questions/tagged/office-js
+      url: /answers/topics/office-addins-dev.html
     - text: Предложить функцию
-      url: /answers/products/m365
+      url: https://techcommunity.microsoft.com/t5/microsoft-365-developer-platform/idb-p/Microsoft365DeveloperPlatform
     - text: Сообщить о проблеме
       url: https://github.com/officedev/office-js/issues
     - text: 'Надстройки Office: дополнительные ресурсы'
