@@ -1,47 +1,47 @@
 ---
-title: Пространство имен Office — набор обязательных элементов 1,1
-description: Элементы пространства имен Office, доступные для надстроек Outlook с помощью набора требований API почтовых ящиков 1,1.
-ms.date: 03/18/2020
+title: Office пространства имен — набор требований 1.1
+description: Office членов пространства имен, доступных для Outlook надстройки с помощью API почтовых ящиков, набор 1.1.
+ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: b821e4ee3f0a2ea2240ab0ff77131e12b3106c57
-ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
+ms.openlocfilehash: 8bec8d3e28c81f0fb0f7aa09cc7c6b43a9b76086
+ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47431383"
+ms.lasthandoff: 05/21/2021
+ms.locfileid: "52591053"
 ---
-# <a name="office-mailbox-requirement-set-11"></a>Office (набор требований для почтового ящика 1,1)
+# <a name="office-mailbox-requirement-set-11"></a>Office (набор требований к почтовым ящикам 1.1)
 
 Пространство имен Office содержит общие интерфейсы, которые используются надстройками всех приложений Office. В этот список входят только интерфейсы, используемые надстройками Outlook. Полный список интерфейсов пространства имен Office см. в статье [Общий API](/javascript/api/office).
 
-##### <a name="requirements"></a>Requirements
+##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
 |[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
-##### <a name="properties"></a>Свойства
+## <a name="properties"></a>Свойства
 
-| Свойство | Способов | Тип возвращаемых данных | Minimum<br>набор требований |
+| Свойство | Режимы | Тип возвращаемых данных | Minimum<br>набор требований |
 |---|---|---|:---:|
 | [контекст](office.context.md) | Создание<br>Чтение | [Context](/javascript/api/office/office.context?view=outlook-js-1.1&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
-##### <a name="enumerations"></a>Перечисления
+## <a name="enumerations"></a>Перечисления
 
-| Перечисление | Способов | Тип возвращаемых данных | Minimum<br>набор требований |
+| Перечисление | Режимы | Тип возвращаемых данных | Minimum<br>набор требований |
 |---|---|---|:---:|
-| [AsyncResultStatus](#asyncresultstatus-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [CoercionType](#coerciontype-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [SourceProperty](#sourceproperty-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [AsyncResultStatus](#asyncresultstatus-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [CoercionType](#coerciontype-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [SourceProperty](#sourceproperty-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
-### <a name="namespaces"></a>Пространства имен
+## <a name="namespaces"></a>Пространства имен
 
-[MailboxEnums](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat?view=outlook-js-1.1&preserve-view=true): включает ряд специфических перечислений Outlook, например,,,,, `ItemType` `EntityType` `AttachmentType` `RecipientType` `ResponseType` и `ItemNotificationMessageType` .
+[MailboxEnums:](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat?view=outlook-js-1.1&preserve-view=true)включает ряд Outlook определенных списков, например , , `ItemType` `EntityType` , `AttachmentType` , , , `RecipientType` и `ResponseType` `ItemNotificationMessageType` .
 
-## <a name="enumeration-details"></a>Сведения о перечислении
+## <a name="enumeration-details"></a>Сведения о переумериях
 
-#### <a name="asyncresultstatus-string"></a>AsyncResultStatus: строка
+#### <a name="asyncresultstatus-string"></a>AsyncResultStatus: String
 
 Указывает результат асинхронного вызова.
 
@@ -49,14 +49,14 @@ ms.locfileid: "47431383"
 
 *   String
 
-##### <a name="properties"></a>Свойства:
+##### <a name="properties"></a>Свойства
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Succeeded`| String|Вызов завершился успешно.|
+|`Succeeded`| Строка|Вызов завершился успешно.|
 |`Failed`| String|Вызов завершился ошибкой.|
 
-##### <a name="requirements"></a>Requirements
+##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
@@ -68,7 +68,7 @@ ms.locfileid: "47431383"
 ---
 ---
 
-#### <a name="coerciontype-string"></a>CoercionType: строка
+#### <a name="coerciontype-string"></a>CoercionType: String
 
 Указывает способ приведения данных, возвращаемых или задаваемых вызванным методом.
 
@@ -76,14 +76,14 @@ ms.locfileid: "47431383"
 
 *   String
 
-##### <a name="properties"></a>Свойства:
+##### <a name="properties"></a>Свойства
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Html`| String|Запрашивает возврат данных в формате HTML.|
+|`Html`| Строка|Запрашивает возврат данных в формате HTML.|
 |`Text`| String|Запрашивает возврат данных в формате текста.|
 
-##### <a name="requirements"></a>Requirements
+##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
@@ -95,7 +95,7 @@ ms.locfileid: "47431383"
 ---
 ---
 
-#### <a name="sourceproperty-string"></a>Перестрока: строка
+#### <a name="sourceproperty-string"></a>SourceProperty: String
 
 Указывает источник данных, возвращаемых вызванным методом.
 
@@ -103,14 +103,14 @@ ms.locfileid: "47431383"
 
 *   String
 
-##### <a name="properties"></a>Свойства:
+##### <a name="properties"></a>Свойства
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Body`| String|Источник данных — текст сообщения.|
+|`Body`| Строка|Источник данных — текст сообщения.|
 |`Subject`| String|Источник данных — тема сообщения.|
 
-##### <a name="requirements"></a>Requirements
+##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|

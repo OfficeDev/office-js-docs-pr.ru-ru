@@ -1,23 +1,20 @@
 ---
-title: LaunchEvents в файле манифеста (предварительная версия)
+title: LaunchEvents в файле манифеста
 description: Элемент LaunchEvents настраивает надстройку для активации на основе поддерживаемых событий.
-ms.date: 02/01/2021
+ms.date: 05/11/2021
 localization_priority: Normal
-ms.openlocfilehash: 59c52aa3f60e69e2bdda84718c6123f02942fedc
-ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
+ms.openlocfilehash: 16d721ca6d9402d2bd5d19787707e146358044f0
+ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "50237982"
+ms.lasthandoff: 05/21/2021
+ms.locfileid: "52590919"
 ---
-# <a name="launchevents-element-preview"></a>Элемент LaunchEvents (предварительная версия)
+# <a name="launchevents-element"></a>Элемент LaunchEvents
 
-Настраивает надстройки для активации на основе поддерживаемых событий. Child of the [`<ExtensionPoint>`](extensionpoint.md) element. Дополнительные сведения см. в настройке [надстройки Outlook для активации на основе событий.](../../outlook/autolaunch.md)
+Настраивает надстройка для активации на основе поддерживаемых событий. Ребенок [`<ExtensionPoint>`](extensionpoint.md) элемента. Дополнительные сведения см. в Outlook [надстройки](../../outlook/autolaunch.md)для активации на основе событий.
 
 **Тип надстройки:** почтовая
-
-> [!IMPORTANT]
-> Активация на основе событий в настоящее время находится [в предварительной](../../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) версии и доступна только в Outlook в Интернете и Windows. Дополнительные сведения см. в предварительном просмотре функции [активации на основе событий.](../../outlook/autolaunch.md#how-to-preview-the-event-based-activation-feature)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,13 +31,13 @@ ms.locfileid: "50237982"
 
 ## <a name="contained-in"></a>Содержится в
 
-[ExtensionPoint](extensionpoint.md) (**Почтовая надстройка LaunchEvent)**
+[ExtensionPoint](extensionpoint.md) **(Надстройка для почты LaunchEvent)**
 
 ## <a name="child-elements"></a>Дочерние элементы
 
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-| [LaunchEvent](launchevent.md) | Да |  Соейте поддерживаемые события с его функцией в файле JavaScript для активации надстройки. |
+| [LaunchEvent](launchevent.md) | Да |  Карта поддерживаемого события для его функции в файле JavaScript для активации надстройки. |
 
 ## <a name="see-also"></a>См. также
 

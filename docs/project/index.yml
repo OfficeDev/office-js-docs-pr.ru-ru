@@ -19,7 +19,7 @@ landingContent:
   linkLists:
   - linkListType: overview
     links:
-    - text: Что такое Project дополнительные надстройки?
+    - text: Что Project надстройки?
       url: project-add-ins.md
     - text: API JavaScript для Project
       url: ../reference/overview/project-add-ins-reference-overview.md
@@ -29,11 +29,11 @@ landingContent:
       url: ../quickstarts/project-quickstart.md
   - linkListType: how-to-guide
     links:
-    - text: Тестирование и отладка Project дополнительных надстройок
+    - text: Тестирование и отлагивание Project надстроек
       url: ../testing/test-debug-office-add-ins.md
-    - text: Развертывание и публикация Project дополнительных надстройок
+    - text: Развертывание и публикация Project надстройки
       url: ../publish/publish.md
-- title: Ключевые Office концепции дополнительных элементов
+- title: Основные Office надстройки
   linkLists:
   - linkListType: overview
     links:

@@ -1,16 +1,16 @@
 ---
-title: Office пространства имен — набор требований 1.6
-description: Office, доступные для Outlook надстройки с помощью API почтовых ящиков, набор 1.6.
+title: Office пространства имен — набор требований 1.10
+description: Office членов пространства имен, доступных для Outlook надстройки с помощью API почтовых ящиков, установленного 1.10.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 40cdb7de0678007b93b9251e7f1e2921ed857338
+ms.openlocfilehash: e7b7ab9127ebf8ce9b7394d348144fe63b47de6c
 ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/21/2021
-ms.locfileid: "52590836"
+ms.locfileid: "52592061"
 ---
-# <a name="office-mailbox-requirement-set-16"></a>Office (набор требований к почтовым ящикам 1.6)
+# <a name="office-mailbox-requirement-set-110"></a>Office (набор требований к почтовым ящикам 1.10)
 
 Пространство имен Office содержит общие интерфейсы, которые используются надстройками всех приложений Office. В этот список входят только интерфейсы, используемые надстройками Outlook. Полный список интерфейсов пространства имен Office см. в статье [Общий API](/javascript/api/office).
 
@@ -25,7 +25,7 @@ ms.locfileid: "52590836"
 
 | Свойство | Режимы | Тип возвращаемых данных | Minimum<br>набор требований |
 |---|---|---|:---:|
-| [контекст](office.context.md) | Создание<br>Чтение | [Context](/javascript/api/office/office.context?view=outlook-js-1.6&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [контекст](office.context.md) | Создание<br>Чтение | [Context](/javascript/api/office/office.context?view=outlook-js-1.10&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
 ## <a name="enumerations"></a>Перечисления
 
@@ -38,7 +38,7 @@ ms.locfileid: "52590836"
 
 ## <a name="namespaces"></a>Пространства имен
 
-[MailboxEnums:](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat?view=outlook-js-1.6&preserve-view=true)включает ряд Outlook определенных списков, например , , `ItemType` `EntityType` , `AttachmentType` , , , `RecipientType` и `ResponseType` `ItemNotificationMessageType` .
+[MailboxEnums:](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat?view=outlook-js-1.10&preserve-view=true)включает ряд Outlook определенных списков, например , , `ItemType` `EntityType` , `AttachmentType` , , , `RecipientType` и `ResponseType` `ItemNotificationMessageType` .
 
 ## <a name="enumeration-details"></a>Сведения о переумериях
 
@@ -108,14 +108,20 @@ ms.locfileid: "52590836"
 
 | Имя | Тип | Описание | Минимальный набор требований |
 |---|---|---|:---:|
+|`AppointmentTimeChanged`| Строка | Изменилась дата или время выбранной встречи или серии. | 1.7 |
+|`AttachmentsChanged`| Строка | Вложение было добавлено или удалено из элемента. | 1.8 |
+|`EnhancedLocationsChanged`| Строка | Расположение выбранного назначения изменилось. | 1.8 |
 |`ItemChanged`| Строка | Другой элемент Outlook для просмотра при закреплении области задач. | 1.5 |
+|`OfficeThemeChanged`| Строка | Тема Office на почтовом ящике изменилась. | 1.10 |
+|`RecipientsChanged`| Строка | Список получателей выбранного элемента или расположения встречи изменен. | 1.7 |
+|`RecurrenceChanged`| Строка | Изменился шаблон повторяемости выбранной серии. | 1.7 |
 
 ##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
 |[Минимальная версия набора обязательных элементов для почтового ящика](../../requirement-sets/outlook-api-requirement-sets.md)| 1.5 |
-|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение |
+|[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
 <br>
 

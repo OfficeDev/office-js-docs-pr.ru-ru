@@ -1,14 +1,14 @@
 ---
 title: Доступность клиентских приложений и платформ Office для надстроек Office
 description: Поддерживаемые наборы обязательных элементов для Excel, OneNote, Outlook, PowerPoint, Project и Word.
-ms.date: 05/03/2021
+ms.date: 05/11/2021
 localization_priority: Priority
-ms.openlocfilehash: 3566c096f48ddaed671f211086d2e36964f63b4d
-ms.sourcegitcommit: 8fbc7c7eb47875bf022e402b13858695a8536ec5
+ms.openlocfilehash: ea41a8116bb1e54f9e7dcb290e1a48c61e6f0f68
+ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52253377"
+ms.lasthandoff: 05/21/2021
+ms.locfileid: "52590871"
 ---
 # <a name="office-client-application-and-platform-availability-for-office-add-ins"></a>Доступность клиентских приложений и платформ Office для надстроек Office
 
@@ -281,7 +281,7 @@ ms.locfileid: "52253377"
     </td>
   </tr>
   <tr>
-    <td>Office 2019 для Mac<br>(единовременная покупка)</td>
+    <td>Office 2019 для Mac<br>(единовременная покупка)</td>
     <td>
       - Область задач<br>
       - Контент<br>
@@ -316,7 +316,7 @@ ms.locfileid: "52253377"
     </td>
   </tr>
   <tr>
-    <td>Office 2016 для Mac<br>(единовременная покупка)</td>
+    <td>Office 2016 для Mac<br>(единовременная покупка)</td>
     <td>
       - Область задач<br>
       - Контент </td>
@@ -414,6 +414,7 @@ ms.locfileid: "52253377"
       - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.7/outlook-requirement-set-1.7">Mailbox 1.7</a><br>
       - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.8/outlook-requirement-set-1.8">Mailbox 1.8</a><br>
       - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.9/outlook-requirement-set-1.9">Mailbox 1.9</a><br>
+      - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.10/outlook-requirement-set-1.10">Mailbox 1.10</a><br>
       - <a href="/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets">IdentityAPI 1.3</a><sup>1</sup>
     </td>
     <td>Недоступно</td>
@@ -457,6 +458,7 @@ ms.locfileid: "52253377"
       - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.7/outlook-requirement-set-1.7">Mailbox 1.7</a><br>
       - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.8/outlook-requirement-set-1.8">Mailbox 1.8</a><br>
       - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.9/outlook-requirement-set-1.9">Mailbox 1.9</a><br>
+      - <a href="/office/dev/add-ins/reference/objectmodel/requirement-set-1.10/outlook-requirement-set-1.10">Mailbox 1.10</a><br>
       - <a href="/office/dev/add-ins/reference/requirement-sets/identity-api-requirement-sets">IdentityAPI 1.3</a><sup>1</sup><br>
       - <a href="/office/dev/add-ins/reference/requirement-sets/open-browser-window-api-requirement-sets">OpenBrowserWindowApi 1.1</a>
     </td>
@@ -579,7 +581,7 @@ ms.locfileid: "52253377"
     <td>Недоступно</td>
   </tr>
   <tr>
-    <td>Office 2019 для Mac<br>(единовременная покупка)</td>
+    <td>Office 2019 для Mac<br>(единовременная покупка)</td>
     <td>
       - <a href="/office/dev/add-ins/reference/manifest/extensionpoint#messagereadcommandsurface">Чтение сообщения</a><br>
       - <a href="/office/dev/add-ins/reference/manifest/extensionpoint#messagecomposecommandsurface">Создание сообщения</a><br>
@@ -598,7 +600,7 @@ ms.locfileid: "52253377"
     <td>Недоступно</td>
   </tr>
   <tr>
-    <td>Office 2016 для Mac<br>(единовременная покупка)</td>
+    <td>Office 2016 для Mac<br>(единовременная покупка)</td>
     <td>
       - <a href="/office/dev/add-ins/reference/manifest/extensionpoint#messagereadcommandsurface">Чтение сообщения</a><br>
       - <a href="/office/dev/add-ins/reference/manifest/extensionpoint#messagecomposecommandsurface">Создание сообщения</a><br>
@@ -879,7 +881,7 @@ ms.locfileid: "52253377"
     </td>
   </tr>
   <tr>
-    <td>Office 2019 для Mac<br>(единовременная покупка)</td>
+    <td>Office 2019 для Mac<br>(единовременная покупка)</td>
     <td>
       - Область задач<br>
       - <a href="/office/dev/add-ins/reference/requirement-sets/add-in-commands-requirement-sets">Команды надстройки</a>
@@ -912,7 +914,7 @@ ms.locfileid: "52253377"
     </td>
   </tr>
   <tr>
-    <td>Office 2016 для Mac<br>(единовременная покупка)</td>
+    <td>Office 2016 для Mac<br>(единовременная покупка)</td>
     <td>- Область задач</td>
     <td>
       - <a href="/office/dev/add-ins/reference/requirement-sets/word-api-1-1-requirement-set">WordApi 1.1</a><br>
@@ -1120,7 +1122,7 @@ ms.locfileid: "52253377"
     </td>
   </tr>
   <tr>
-    <td>Office 2019 для Mac<br>(единовременная покупка)</td>
+    <td>Office 2019 для Mac<br>(единовременная покупка)</td>
     <td>
       - Контент<br>
       - Область задач<br>
@@ -1142,7 +1144,7 @@ ms.locfileid: "52253377"
     </td>
   </tr>
   <tr>
-    <td>Office 2016 для Mac<br>(единовременная покупка)</td>
+    <td>Office 2016 для Mac<br>(единовременная покупка)</td>
     <td>
       - Контент<br>
       - Область задач </td>

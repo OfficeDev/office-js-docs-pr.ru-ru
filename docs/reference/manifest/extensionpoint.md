@@ -1,14 +1,14 @@
 ---
 title: Элемент ExtensionPoint в файле манифеста
 description: Определяет, где доступны функции надстройки в пользовательском интерфейсе Office.
-ms.date: 05/06/2021
+ms.date: 05/11/2021
 localization_priority: Normal
-ms.openlocfilehash: fd7f07705307aa8361303ddcb5179cc18532498e
-ms.sourcegitcommit: 693d364616b42eea66977eef47530adabc51a40f
+ms.openlocfilehash: 8f84be1f2dcc43d795026fcd28dc3860c5e07a1e
+ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555166"
+ms.lasthandoff: 05/21/2021
+ms.locfileid: "52590927"
 ---
 # <a name="extensionpoint-element"></a>Элемент ExtensionPoint
 
@@ -74,13 +74,13 @@ ms.locfileid: "52555166"
 |Элемент|Описание|
 |:-----|:-----|
 |**CustomTab**|Обязательный, если требуется добавить пользовательскую вкладку в ленту (с помощью элемента **PrimaryCommandSurface**). Невозможно использовать элементы **CustomTab** и **OfficeTab** одновременно. Атрибут **id** является обязательным. |
-|**OfficeTab**|Требуется, если вы хотите расширить вкладку Приложение Office ленты (с **помощью PrimaryCommandSurface).** Невозможно использовать элементы **OfficeTab** и **CustomTab** одновременно. Для получения подробной информации [см.](officetab.md)|
+|**OfficeTab**|Требуется, если вы хотите расширить вкладку ленты Приложение Office по умолчанию (с помощью **PrimaryCommandSurface).** Невозможно использовать элементы **OfficeTab** и **CustomTab** одновременно. Подробные сведения см. [в материале OfficeTab](officetab.md).|
 |**OfficeMenu**|Обязательный при добавлении команд надстройки в контекстное меню по умолчанию (с помощью элемента **ContextMenu**). Для атрибута **id** необходимо задать следующее значение: <br/> - **ContextMenuText** для Excel или Word. Отображает элемент в контекстном меню, когда пользователь щелкает выделенный текст правой кнопкой мыши. <br/> - **ContextMenuCell** для Excel. Отображает элемент в контекстном меню, когда пользователь нажимает ячейку электронной таблицы правой кнопкой мыши.|
 |**Group**|Группа точек расширения интерфейса пользователя на вкладке. В группе может быть до шести элементов управления. Атрибут **id** является обязательным. Это строка длиной до 125 символов. |
-|**Label**|Обязательный. Метка группы. Атрибут **resid** может быть не более 32 символов и должен быть установлен на **значение атрибута идентификатора** **элемента String.** **String** — это дочерний элемент **ShortStrings**, который в свою очередь является дочерним для элемента **Resources**.|
-|**Icon**|Обязательный. Определяет значок группы для использования на устройствах с малым форм-фактором или в случаях, когда отображается слишком много кнопок. Атрибут **resid** может быть не более 32 символов и должен быть установлен на **значение атрибута идентификатора** **элемента** Изображения. **Image** — это дочерний элемент **Images**, который в свою очередь является дочерним для элемента **Resources**. Атрибут **size** определяет размер изображения в пикселях. Обязательными являются три размера изображения: 16, 32 и 80. Кроме того, поддерживаются пять необязательных размеров: 20, 24, 40, 48 и 64.|
-|**Tooltip**|Необязательный параметр. Всплывающая подсказка группы. Атрибут **resid** может быть не более 32 символов и должен быть установлен на **значение атрибута идентификатора** **элемента String.** **String** — это дочерний элемент **LongStrings**, который в свою очередь является дочерним для элемента **Resources**.|
-|**Control**|В каждой группе должен быть по крайней мере один элемент управления. Элемент **управления** может быть либо **кнопкой,** либо **меню.** Используйте **меню** для указать список вытеханых элементов управления кнопками. В настоящее время поддерживаются только кнопки и меню. Дополнительные сведения см. в разделах [Элементы управления "Кнопка"](control.md#button-control) и [Элементы управления меню](control.md#menu-dropdown-button-controls).<br/>**Примечание:**  Чтобы упростить устранение неполадок, мы рекомендуем добавить **элемент Управления** и связанные **с ним** элементы ребенка Ресурсов по одному.|
+|**Label**|Обязательный. Метка группы. Атрибут **resid** может быть не более 32 символов и должен быть задат к значению атрибута **id** элемента **String.** **String** — это дочерний элемент **ShortStrings**, который в свою очередь является дочерним для элемента **Resources**.|
+|**Icon**|Обязательный. Определяет значок группы для использования на устройствах с малым форм-фактором или в случаях, когда отображается слишком много кнопок. Атрибут **resid** может быть не более 32 символов и должен быть задат к значению атрибута **id** элемента **Image.** **Image** — это дочерний элемент **Images**, который в свою очередь является дочерним для элемента **Resources**. Атрибут **size** определяет размер изображения в пикселях. Обязательными являются три размера изображения: 16, 32 и 80. Кроме того, поддерживаются пять необязательных размеров: 20, 24, 40, 48 и 64.|
+|**Tooltip**|Необязательный параметр. Всплывающая подсказка группы. Атрибут **resid** может быть не более 32 символов и должен быть задат к значению атрибута **id** элемента **String.** **String** — это дочерний элемент **LongStrings**, который в свою очередь является дочерним для элемента **Resources**.|
+|**Control**|В каждой группе должен быть по крайней мере один элемент управления. Элемент **управления** может быть **кнопкой или** меню.  Используйте **Меню,** чтобы указать список элементов управления кнопками. В настоящее время поддерживаются только кнопки и меню. Дополнительные сведения см. в разделах [Элементы управления "Кнопка"](control.md#button-control) и [Элементы управления меню](control.md#menu-dropdown-button-controls).<br/>**Примечание:**  Чтобы упростить устранение неполадок, рекомендуется добавлять по одному **элементу Control** и связанным с ними детским элементам **Resources.**|
 |**Script**|Ссылка на файл JavaScript с пользовательским определением функции и кодом регистрации. Этот элемент не используется в предварительной версии для разработчиков. Загрузку всех файлов JavaScript выполняет страница HTML.|
 |**Page**|Ссылка на HTML-страницу для пользовательских функций.|
 
@@ -93,7 +93,7 @@ ms.locfileid: "52555166"
 - [Module](#module) (можно использовать только в [DesktopFormFactor](desktopformfactor.md))
 - [MobileMessageReadCommandSurface](#mobilemessagereadcommandsurface)
 - [MobileOnlineMeetingCommandSurface](#mobileonlinemeetingcommandsurface)
-- [LaunchEvent](#launchevent-preview)
+- [LaunchEvent](#launchevent)
 - [Events](#events)
 - [DetectedEntity](#detectedentity)
 
@@ -226,7 +226,7 @@ ms.locfileid: "52555166"
 Эта точка расширения добавляет кнопки на ленту для расширения модуля.
 
 > [!IMPORTANT]
-> Регистрация событий [Mailbox](../objectmodel/preview-requirement-set/office.context.mailbox.md#events) и [Item](../objectmodel/preview-requirement-set/office.context.mailbox.item.md#events) недоступна с этой точкой расширения.
+> Регистрация событий [почтовых ящиков](../objectmodel/preview-requirement-set/office.context.mailbox.md#events) и [элементов](../objectmodel/preview-requirement-set/office.context.mailbox.item.md#events) недоступна в этой точке расширения.
 
 #### <a name="child-elements"></a>Дочерние элементы
 
@@ -264,24 +264,24 @@ ms.locfileid: "52555166"
 
 ### <a name="mobileonlinemeetingcommandsurface"></a>MobileOnlineMeetingCommandSurface
 
-Эта точка расширения помещает соответствующий режиму переключатель в командной поверхности для назначения в мобильном форм-факторе. Организатор собрания может создать онлайн-собрание. Участник может впоследствии присоединиться к онлайн-собранию. Чтобы узнать больше об этом сценарии, см [Outlook.](../../outlook/online-meeting.md)
+В этой точке расширения в командной поверхности для встречи в мобильном форм-факторе помещается соответствующий режиму. Организатор собрания может создать собрание в Интернете. Впоследствии участник может присоединиться к собранию в Интернете. Дополнительные статьи об этом сценарии см. в статье [Create an mobile add-in Outlook для поставщика веб-собраний.](../../outlook/online-meeting.md)
 
 > [!NOTE]
 > Эта точка расширения поддерживается только на Android и iOS с Microsoft 365 подпиской.
 >
-> Регистрация событий [Mailbox](../objectmodel/preview-requirement-set/office.context.mailbox.md#events) и [Item](../objectmodel/preview-requirement-set/office.context.mailbox.item.md#events) недоступна с этой точкой расширения.
+> Регистрация событий [почтовых ящиков](../objectmodel/preview-requirement-set/office.context.mailbox.md#events) и [элементов](../objectmodel/preview-requirement-set/office.context.mailbox.item.md#events) недоступна в этой точке расширения.
 
 #### <a name="child-elements"></a>Дочерние элементы
 
 |  Элемент |  Описание  |
 |:-----|:-----|
-|  [Control](control.md) |  Добавляет кнопку к поверхности команды.  |
+|  [Control](control.md) |  Добавляет кнопку на поверхность команды.  |
 
-`ExtensionPoint` элементы этого типа могут иметь только один элемент: `Control` элемент.
+`ExtensionPoint` элементы этого типа могут иметь только один детский элемент: `Control` элемент.
 
-Элемент, `Control` содержащийся в этой точке расширения, должен `xsi:type` иметь набор `MobileButton` атрибутов.
+Элемент, `Control` содержащийся в этой точке расширения, должен иметь `xsi:type` набор атрибутов `MobileButton` .
 
-Изображения `Icon` должны быть в серой шкале, используя шестиугольный код или его эквивалент в других `#919191` [цветовых форматах.](https://convertingcolors.com/hex-color-919191.html)
+Изображения `Icon` должны быть в сером масштабе с использованием кода hex или его `#919191` эквивалента в других [цветовых форматах.](https://convertingcolors.com/hex-color-919191.html)
 
 #### <a name="example"></a>Пример
 
@@ -307,22 +307,19 @@ ms.locfileid: "52555166"
 </ExtensionPoint>
 ```
 
-### <a name="launchevent-preview"></a>LaunchEvent (предварительный просмотр)
+### <a name="launchevent"></a>LaunchEvent
 
-> [!NOTE]
-> Эта точка расширения поддерживается только в [предварительном просмотре](../objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) Outlook веб-сайтах и Windows с Microsoft 365 подпиской.
-
-Эта точка расширения позволяет активировать надстройку на основе поддерживаемых событий в форм-факторе рабочего стола. Чтобы узнать больше об этом сценарии и полный список поддерживаемых [Outlook](../../outlook/autolaunch.md) событий, см.
+Эта точка расширения позволяет надстройку активировать на основе поддерживаемых событий в форм-факторе рабочего стола. Дополнительные информацию об этом сценарии и полном списке поддерживаемых событий [см.](../../outlook/autolaunch.md) в статье Настройка надстройки Outlook для статьи активации на основе событий.
 
 > [!IMPORTANT]
-> Регистрация событий [Mailbox](../objectmodel/preview-requirement-set/office.context.mailbox.md#events) и [Item](../objectmodel/preview-requirement-set/office.context.mailbox.item.md#events) недоступна с этой точкой расширения.
+> Регистрация событий [почтовых ящиков](../objectmodel/preview-requirement-set/office.context.mailbox.md#events) и [элементов](../objectmodel/preview-requirement-set/office.context.mailbox.item.md#events) недоступна в этой точке расширения.
 
 #### <a name="child-elements"></a>Дочерние элементы
 
 |  Элемент |  Описание  |
 |:-----|:-----|
-| [LaunchEvents](launchevents.md) |  Список [LaunchEvent для активации](launchevent.md) на основе событий.  |
-| [SourceLocation](sourcelocation.md) |  Расположение файла JavaScript источника.  |
+| [LaunchEvents](launchevents.md) |  Список [launchEvent для](launchevent.md) активации на основе событий.  |
+| [SourceLocation](sourcelocation.md) |  Расположение исходных файлов JavaScript.  |
 
 #### <a name="example"></a>Пример
 
@@ -339,10 +336,10 @@ ms.locfileid: "52555166"
 
 ### <a name="events"></a>События
 
-Эта точка расширения добавляет обработчик для указанного события. Для получения дополнительной информации об использовании этой точки [расширения см Outlook.](../../outlook/outlook-on-send-addins.md)
+Эта точка расширения добавляет обработчик для указанного события. Дополнительные сведения об использовании этой точки расширения см. в пункте [On-send для Outlook надстройки.](../../outlook/outlook-on-send-addins.md)
 
 > [!IMPORTANT]
-> Регистрация событий [Mailbox](../objectmodel/preview-requirement-set/office.context.mailbox.md#events) и [Item](../objectmodel/preview-requirement-set/office.context.mailbox.item.md#events) недоступна с этой точкой расширения.
+> Регистрация событий [почтовых ящиков](../objectmodel/preview-requirement-set/office.context.mailbox.md#events) и [элементов](../objectmodel/preview-requirement-set/office.context.mailbox.item.md#events) недоступна в этой точке расширения.
 
 | Элемент | Описание  |
 |:-----|:-----|
@@ -361,7 +358,7 @@ ms.locfileid: "52555166"
 Эта точка расширения добавляет активацию контекстной надстройки для указанного типа сущности.
 
 > [!IMPORTANT]
-> Регистрация событий [Mailbox](../objectmodel/preview-requirement-set/office.context.mailbox.md#events) и [Item](../objectmodel/preview-requirement-set/office.context.mailbox.item.md#events) недоступна с этой точкой расширения.
+> Регистрация событий [почтовых ящиков](../objectmodel/preview-requirement-set/office.context.mailbox.md#events) и [элементов](../objectmodel/preview-requirement-set/office.context.mailbox.item.md#events) недоступна в этой точке расширения.
 
 В соответствующем элементе [VersionOverrides](versionoverrides.md) для атрибута `xsi:type` должно быть задано значение `VersionOverridesV1_1`.
 
@@ -376,7 +373,7 @@ ms.locfileid: "52555166"
 
 #### <a name="label"></a>Label
 
-Обязательный элемент. Метка группы. Атрибут **resid** может быть не более 32 символов и должен быть установлен на **значение атрибута идентификатора** **элемента Строки** в **элементе ShortStrings** в [элементе Ресурсов.](resources.md)
+Обязательный элемент. Метка группы. Атрибут **resid** может быть не более 32 символов и должен быть задат к значению атрибута **id** элемента **String** в **элементе ShortStrings** в [элементе Resources.](resources.md)
 
 #### <a name="highlight-requirements"></a>Требования к выделению
 

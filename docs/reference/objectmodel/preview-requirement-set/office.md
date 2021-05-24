@@ -1,48 +1,48 @@
 ---
-title: Пространство имен Office — Предварительная версия набора требований
-description: Элементы пространства имен Office, доступные для надстроек Outlook с использованием набора обязательных элементов API почтового ящика.
-ms.date: 03/18/2020
+title: Office пространства имен — набор требований к предварительному просмотру
+description: Office членов пространства имен, доступных для Outlook надстройки с помощью набора требований к API API почтовых ящиков.
+ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 1e0f932106df462c7cd172327082992f6e4d9a58
-ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
+ms.openlocfilehash: 72e2300dd50ff01e26417efaca92906049358fc0
+ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47431124"
+ms.lasthandoff: 05/21/2021
+ms.locfileid: "52590885"
 ---
-# <a name="office-mailbox-preview-requirement-set"></a>Office (набор требований предварительного просмотра почтового ящика)
+# <a name="office-mailbox-preview-requirement-set"></a>Office (набор требований к предварительному просмотру почтовых ящиков)
 
 Пространство имен Office содержит общие интерфейсы, которые используются надстройками всех приложений Office. В этот список входят только интерфейсы, используемые надстройками Outlook. Полный список интерфейсов пространства имен Office см. в статье [Общий API](/javascript/api/office).
 
-##### <a name="requirements"></a>Requirements
+##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
 |[Версия минимального набора требований к почтовому ящику](../../requirement-sets/outlook-api-requirement-sets.md)| 1.1|
 |[Применимый режим Outlook](../../../outlook/outlook-add-ins-overview.md#extension-points)| Создание или чтение|
 
-##### <a name="properties"></a>Свойства
+## <a name="properties"></a>Свойства
 
-| Свойство | Способов | Тип возвращаемых данных | Minimum<br>набор требований |
+| Свойство | Режимы | Тип возвращаемых данных | Minimum<br>набор требований |
 |---|---|---|:---:|
 | [контекст](office.context.md) | Создание<br>Чтение | [Context](/javascript/api/office/office.context?view=outlook-js-preview&preserve-view=true) | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
-##### <a name="enumerations"></a>Перечисления
+## <a name="enumerations"></a>Перечисления
 
-| Перечисление | Способов | Тип возвращаемых данных | Minimum<br>набор требований |
+| Перечисление | Режимы | Тип возвращаемых данных | Minimum<br>набор требований |
 |---|---|---|:---:|
-| [AsyncResultStatus](#asyncresultstatus-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [CoercionType](#coerciontype-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [EventType](#eventtype-string) | Создание<br>Чтение | String | [1,5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
-| [SourceProperty](#sourceproperty-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [AsyncResultStatus](#asyncresultstatus-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [CoercionType](#coerciontype-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [EventType](#eventtype-string) | Создание<br>Чтение | Строка | [1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md) |
+| [SourceProperty](#sourceproperty-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
-### <a name="namespaces"></a>Пространства имен
+## <a name="namespaces"></a>Пространства имен
 
-[MailboxEnums](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat?view=outlook-js-preview&preserve-view=true): включает ряд специфических перечислений Outlook, например,,,,, `ItemType` `EntityType` `AttachmentType` `RecipientType` `ResponseType` и `ItemNotificationMessageType` .
+[MailboxEnums:](/javascript/api/outlook/office.mailboxenums.attachmentcontentformat?view=outlook-js-preview&preserve-view=true)включает ряд Outlook определенных списков, например , , `ItemType` `EntityType` , `AttachmentType` , , , `RecipientType` и `ResponseType` `ItemNotificationMessageType` .
 
-## <a name="enumeration-details"></a>Сведения о перечислении
+## <a name="enumeration-details"></a>Сведения о переумериях
 
-#### <a name="asyncresultstatus-string"></a>AsyncResultStatus: строка
+#### <a name="asyncresultstatus-string"></a>AsyncResultStatus: String
 
 Указывает результат асинхронного вызова.
 
@@ -50,14 +50,14 @@ ms.locfileid: "47431124"
 
 *   String
 
-##### <a name="properties"></a>Свойства:
+##### <a name="properties"></a>Свойства
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Succeeded`| String|Вызов завершился успешно.|
+|`Succeeded`| Строка|Вызов завершился успешно.|
 |`Failed`| String|Вызов завершился ошибкой.|
 
-##### <a name="requirements"></a>Requirements
+##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
@@ -69,7 +69,7 @@ ms.locfileid: "47431124"
 ---
 ---
 
-#### <a name="coerciontype-string"></a>CoercionType: строка
+#### <a name="coerciontype-string"></a>CoercionType: String
 
 Указывает способ приведения данных, возвращаемых или задаваемых вызванным методом.
 
@@ -77,14 +77,14 @@ ms.locfileid: "47431124"
 
 *   String
 
-##### <a name="properties"></a>Свойства:
+##### <a name="properties"></a>Свойства
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Html`| String|Запрашивает возврат данных в формате HTML.|
+|`Html`| Строка|Запрашивает возврат данных в формате HTML.|
 |`Text`| String|Запрашивает возврат данных в формате текста.|
 
-##### <a name="requirements"></a>Requirements
+##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
@@ -96,7 +96,7 @@ ms.locfileid: "47431124"
 ---
 ---
 
-#### <a name="eventtype-string"></a>EventType: строка
+#### <a name="eventtype-string"></a>EventType: String
 
 Указывает событие, связанное с обработчиком.
 
@@ -104,19 +104,19 @@ ms.locfileid: "47431124"
 
 *   String
 
-##### <a name="properties"></a>Свойства:
+##### <a name="properties"></a>Свойства
 
-| Имя | Тип | Описание | Набор минимальных требований |
+| Имя | Тип | Описание | Минимальный набор требований |
 |---|---|---|:---:|
-|`AppointmentTimeChanged`| String | Дата или время выбранной встречи или ряда изменились. | 1.7 |
-|`AttachmentsChanged`| String | Вложение было добавлено или удалено из элемента. | 1.8 |
-|`EnhancedLocationsChanged`| String | Расположение выбранной встречи изменилось. | 1.8 |
-|`ItemChanged`| String | Для просмотра выбран другой элемент Outlook, когда область задач закреплена. | 1.5 |
-|`OfficeThemeChanged`| String | Тема Office в почтовом ящике изменилась. | Предварительная версия |
-|`RecipientsChanged`| String | Список получателей выбранного элемента или места встречи изменился. | 1.7 |
-|`RecurrenceChanged`| String | Шаблон повторения выбранного ряда изменился. | 1.7 |
+|`AppointmentTimeChanged`| Строка | Изменилась дата или время выбранной встречи или серии. | 1.7 |
+|`AttachmentsChanged`| Строка | Вложение было добавлено или удалено из элемента. | 1.8 |
+|`EnhancedLocationsChanged`| Строка | Расположение выбранного назначения изменилось. | 1.8 |
+|`ItemChanged`| Строка | Другой элемент Outlook для просмотра при закреплении области задач. | 1.5 |
+|`OfficeThemeChanged`| Строка | Тема Office на почтовом ящике изменилась. | Предварительный просмотр |
+|`RecipientsChanged`| Строка | Список получателей выбранного элемента или расположения встречи изменен. | 1.7 |
+|`RecurrenceChanged`| Строка | Изменился шаблон повторяемости выбранной серии. | 1.7 |
 
-##### <a name="requirements"></a>Requirements
+##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|
@@ -128,7 +128,7 @@ ms.locfileid: "47431124"
 ---
 ---
 
-#### <a name="sourceproperty-string"></a>Перестрока: строка
+#### <a name="sourceproperty-string"></a>SourceProperty: String
 
 Указывает источник данных, возвращаемых вызванным методом.
 
@@ -136,14 +136,14 @@ ms.locfileid: "47431124"
 
 *   String
 
-##### <a name="properties"></a>Свойства:
+##### <a name="properties"></a>Свойства
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Body`| String|Источник данных — текст сообщения.|
+|`Body`| Строка|Источник данных — текст сообщения.|
 |`Subject`| String|Источник данных — тема сообщения.|
 
-##### <a name="requirements"></a>Requirements
+##### <a name="requirements"></a>Требования
 
 |Требование| Значение|
 |---|---|

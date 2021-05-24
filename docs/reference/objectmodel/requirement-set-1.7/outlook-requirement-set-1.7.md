@@ -1,25 +1,25 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.7
-description: Обзор API надстройки Outlook (набор обязательных элементов 1,7)
-ms.date: 12/17/2019
+description: Обзор API Outlook надстройки (набор требований 1.7)
+ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: f8dc9fe097b56d3e940a5d7d945c5ccc50e07077
-ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
+ms.openlocfilehash: 6130cdadb63c7c3093b869950832e7a68358ea81
+ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47431390"
+ms.lasthandoff: 05/21/2021
+ms.locfileid: "52590815"
 ---
 # <a name="outlook-add-in-api-requirement-set-17"></a>Набор обязательных элементов API для надстройки Outlook 1.7
 
-Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.
+Подмножество API Outlook надстройки aPI Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в Outlook надстройки.
 
 > [!NOTE]
 > В этой документации рассматривается не последняя версия [набора обязательных элементов](../../requirement-sets/outlook-api-requirement-sets.md).
 
 ## <a name="whats-new-in-17"></a>Новые возможности в версии 1.7
 
-Набор обязательных элементов 1.7 включает все возможности [набора обязательных элементов версии 1.6](../requirement-set-1.6/outlook-requirement-set-1.6.md). В нем добавлены перечисленные ниже возможности.
+Набор требований 1.7 включает все функции набора [требований 1.6](../requirement-set-1.6/outlook-requirement-set-1.6.md). В нем добавлены перечисленные ниже возможности.
 
 - Добавлены новые API для расписания повторения встреч и сообщений с приглашением на собрание.
 - Изменено свойство item.from — теперь оно также доступно в режиме создания.

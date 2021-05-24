@@ -1,23 +1,20 @@
 ---
-title: LaunchEvent в файле манифеста (предварительный просмотр)
-description: Элемент LaunchEvent настраивает надстройки для активации на основе поддерживаемых событий.
-ms.date: 05/11/2021
+title: LaunchEvent в файле манифеста
+description: Элемент LaunchEvent настраивает надстройку для активации на основе поддерживаемых событий.
+ms.date: 05/12/2021
 localization_priority: Normal
-ms.openlocfilehash: 7283e9aba9ca57793019ffe027a7f4d6e3243aa8
-ms.sourcegitcommit: 693d364616b42eea66977eef47530adabc51a40f
+ms.openlocfilehash: c866a085ed6b7a33c8d7bf02d25e6ec748629e07
+ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555313"
+ms.lasthandoff: 05/21/2021
+ms.locfileid: "52591081"
 ---
-# <a name="launchevent-element-preview"></a>Элемент LaunchEvent (предварительный просмотр)
+# <a name="launchevent-element"></a>Элемент LaunchEvent
 
-Настраивает надстройки для активации на основе поддерживаемых событий. Дитя [`<LaunchEvents>`](launchevents.md) элемента. Для получения дополнительной информации [см Outlook.](../../outlook/autolaunch.md)
+Настраивает надстройка для активации на основе поддерживаемых событий. Ребенок [`<LaunchEvents>`](launchevents.md) элемента. Дополнительные сведения см. в Outlook [надстройки](../../outlook/autolaunch.md)для активации на основе событий.
 
 **Тип надстройки:** почтовая
-
-> [!IMPORTANT]
-> Активация на основе событий в [настоящее время находится](../../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) в предварительном просмотре и доступна только Outlook веб-сайтах и Windows. Для получения дополнительной информации [узнайте, как просмотреть функцию активации на основе событий.](../../outlook/autolaunch.md#how-to-preview-the-event-based-activation-feature)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,8 +37,8 @@ ms.locfileid: "52555313"
 
 |  Атрибут  |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  **Тип**  |  Да  | Определяет поддерживаемый тип события. Для набора поддерживаемых типов см. Как [просмотреть функцию активации на основе событий.](../../outlook/autolaunch.md#supported-events) |
-|  **FunctionName**  |  Да  | Указывается название функции JavaScript для обработки события, указанного в `Type` атрибуте. |
+|  **Тип**  |  Да  | Указывает поддерживаемый тип события. Для набора поддерживаемых типов см. в Outlook надстройку для [активации на](../../outlook/autolaunch.md#supported-events)основе событий. |
+|  **FunctionName**  |  Да  | Указывает имя функции JavaScript для обработки события, указанного в `Type` атрибуте. |
 
 ## <a name="see-also"></a>См. также
 

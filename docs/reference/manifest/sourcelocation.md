@@ -1,18 +1,18 @@
 ---
 title: Элемент SourceLocation в файле манифеста
-description: Элемент SourceLocation указывает расположение исходных файлов для надстройки Office.
-ms.date: 05/12/2020
+description: Элемент SourceLocation указывает расположение исходных файлов для Office надстройки.
+ms.date: 05/12/2021
 localization_priority: Normal
-ms.openlocfilehash: 447adb7df7d0c59305fe5046357959fcd7824735
-ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
+ms.openlocfilehash: 4dcd093db2f23220eaa34c0c81300c4994c1a697
+ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46641405"
+ms.lasthandoff: 05/21/2021
+ms.locfileid: "52590899"
 ---
 # <a name="sourcelocation-element"></a>Элемент SourceLocation
 
-Указывает расположение исходных файлов для надстройки Office в виде URL-адреса длиной от 1 до 2018 символов. В качестве источника необходимо указать адрес HTTPS, а не путь к файлу.
+Указывает расположение исходных файлов для надстройки Office как URL-адрес длиной от 1 до 2018 символов. В качестве источника необходимо указать адрес HTTPS, а не путь к файлу.
 
 **Тип надстройки:** контентные и почтовые надстройки, надстройки области задач
 
@@ -26,7 +26,7 @@ ms.locfileid: "46641405"
 
 - [DefaultSettings](defaultsettings.md) (надстройки области задач и контентные надстройки)
 - [FormSettings](formsettings.md) (почтовые надстройки)
-- [ExtensionPoint](extensionpoint.md) (контекстные и лаунчевент (Предварительная версия) почтовые надстройки)
+- [ExtensionPoint](extensionpoint.md) (надстройки для почты Contextual и LaunchEvent)
 
 ## <a name="can-contain"></a>Может содержать
 

@@ -1,25 +1,25 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.6
-description: Функции и API, которые были представлены для надстроек Outlook и API JavaScript для Office в составе API почтовых ящиков 1,6.
-ms.date: 02/19/2020
+description: Функции и API, которые были Outlook надстройки и Office API JavaScript в рамках API почтовых ящиков 1.6.
+ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: adcfcb49a76fd3f0df2c2c3acfc6e1861a02f3b1
-ms.sourcegitcommit: 83f9a2fdff81ca421cd23feea103b9b60895cab4
+ms.openlocfilehash: cdb39eae387035f386a59b4640448b0bef25031e
+ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47431453"
+ms.lasthandoff: 05/21/2021
+ms.locfileid: "52590997"
 ---
 # <a name="outlook-add-in-api-requirement-set-16"></a>Набор обязательных элементов API для надстройки Outlook 1.6
 
-Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.
+Подмножество API Outlook надстройки aPI Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в Outlook надстройки.
 
 > [!NOTE]
 > В этой документации рассматривается не последняя версия [набора обязательных элементов](../../requirement-sets/outlook-api-requirement-sets.md).
 
 ## <a name="whats-new-in-16"></a>Новые возможности в версии 1.6
 
-Набор обязательных элементов 1.6 включает все возможности [набора обязательных элементов версии 1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md). В нем добавлены перечисленные ниже возможности.
+Набор требований 1.6 включает все функции набора [требований 1.5](../requirement-set-1.5/outlook-requirement-set-1.5.md). В нем добавлены перечисленные ниже возможности.
 
 - Добавлены новые API для контекстных надстроек, которые позволяют получить соответствие объекта или RegEx, выбранного пользователем для активации надстройки.
 - Добавлен новый интерфейс API для открытия новой формы сообщения.

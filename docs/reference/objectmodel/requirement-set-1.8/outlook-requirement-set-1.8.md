@@ -1,25 +1,25 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.8
-description: Набор требований 1.8 для API надстройки Outlook.
-ms.date: 03/10/2021
+description: Набор требований 1.8 для Outlook API надстройки.
+ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 9ff66bcaeecf54dde10821df1b48df6d20cb953d
-ms.sourcegitcommit: 929dcf2f415b94f42330a9035ed11a5cedad88f1
+ms.openlocfilehash: 333bfd43ba488949f9eead0058da2e7a1b99a25f
+ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50830967"
+ms.lasthandoff: 05/21/2021
+ms.locfileid: "52590962"
 ---
 # <a name="outlook-add-in-api-requirement-set-18"></a>Набор обязательных элементов API для надстройки Outlook 1.8
 
-API надстройки Outlook в API Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в надстройки Outlook.
+Подмножество API Outlook надстройки aPI Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в Outlook надстройки.
 
 > [!NOTE]
 > В этой документации рассматривается не последняя версия [набора обязательных элементов](../../requirement-sets/outlook-api-requirement-sets.md).
 
 ## <a name="whats-new-in-18"></a>Новые возможности в версии 1.8
 
-Набор обязательных элементов 1.8 включает все возможности [набора обязательных элементов версии 1.7](../requirement-set-1.7/outlook-requirement-set-1.7.md). В нем добавлены перечисленные ниже возможности.
+Набор требований 1.8 включает все функции набора [требований 1.7](../requirement-set-1.7/outlook-requirement-set-1.7.md). В нем добавлены перечисленные ниже возможности.
 
 - Добавлены новые API для вложений, категорий, делегирования доступа, расширенного расположения, заголовков Интернета и функций блокирования при отправке.
 - Добавлен необязательный параметр `options` для метода Event.completed.

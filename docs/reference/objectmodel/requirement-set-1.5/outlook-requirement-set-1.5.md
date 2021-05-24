@@ -1,25 +1,25 @@
 ---
 title: Набор обязательных элементов API для надстройки Outlook 1.5
-description: Функции и API, которые были представлены для надстроек Outlook и API JavaScript для Office в составе API почтовых ящиков 1,5.
-ms.date: 12/17/2019
+description: Функции и API, которые были Outlook надстройки и Office API JavaScript в рамках API почтовых ящиков 1.5.
+ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: bc91ea93a6c3653dd326306139ee460132412a81
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 7d780538a77f54db6f1234a6d29a3bcdea9533b0
+ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44612040"
+ms.lasthandoff: 05/21/2021
+ms.locfileid: "52590843"
 ---
 # <a name="outlook-add-in-api-requirement-set-15"></a>Набор обязательных элементов API для надстройки Outlook 1.5
 
-Подмножество API надстройки Outlook в API JavaScript для Office включает объекты, методы, свойства и события, которые можно использовать в надстройке Outlook.
+Подмножество API Outlook надстройки aPI Office JavaScript включает объекты, методы, свойства и события, которые можно использовать в Outlook надстройки.
 
 > [!NOTE]
 > В этой документации рассматривается не последняя версия [набора обязательных элементов](../../requirement-sets/outlook-api-requirement-sets.md).
 
 ## <a name="whats-new-in-15"></a>Новые возможности в версии 1.5
 
-Набор обязательных элементов 1.5 включает все возможности [набора обязательных элементов версии 1.4](../requirement-set-1.4/outlook-requirement-set-1.4.md). В нем добавлены перечисленные ниже возможности.
+Набор требований 1.5 включает все функции набора [требований 1.4.](../requirement-set-1.4/outlook-requirement-set-1.4.md) В нем добавлены перечисленные ниже возможности.
 
 - Добавлена поддержка [закрепляемых областей задач](../../../outlook/pinnable-taskpane.md).
 - Добавлена поддержка вызовов [REST API](../../../outlook/use-rest-api.md).
@@ -29,7 +29,7 @@ ms.locfileid: "44612040"
 ### <a name="change-log"></a>Журнал изменений
 
 - Добавлен метод [Office.context.mailbox.addHandlerAsync](office.context.mailbox.md#methods). Добавляет обработчик для поддерживаемого события.
-- Добавлено [приложение Office. Context. Mailbox. removeHandlerAsync](office.context.mailbox.md#methods): удаляет обработчики событий для поддерживаемого типа события.
+- Добавлен [Office.context.mailbox.removeHandlerAsync:](office.context.mailbox.md#methods)Удаляет обработчики событий для поддерживаемого типа событий.
 - Добавлено свойство [Office.EventType](office.md#eventtype-string). Указывает событие, связанное с обработчиком, и включает поддержку события ItemChanged.
 - Добавлен метод [Office.context.mailbox.restUrl](office.context.mailbox.md#properties). Возвращает URL-адрес конечной точки REST для этой учетной записи электронной почты.
 - Изменен метод [Office.context.mailbox.getCallbackTokenAsync](office.context.mailbox.md#methods). Добавлен новый вариант этого метода с новой подписью (`getCallbackTokenAsync([options], callback)`). Исходная версия по-прежнему доступна и осталась без изменений.

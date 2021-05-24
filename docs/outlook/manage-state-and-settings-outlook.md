@@ -1,14 +1,14 @@
 ---
 title: Управление состоянием и настройками Outlook надстройки
 description: Узнайте, как сохранить состояние надстройки и параметры для Outlook надстройки.
-ms.date: 04/29/2021
+ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 6652034ffa6844d22fd725adc5adcc4a4063c1cb
-ms.sourcegitcommit: 6057afc1776e1667b231d2e9809d261d372151f6
+ms.openlocfilehash: 69c22ab912d5099c42d6c69b364465a585cba1d4
+ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52100287"
+ms.lasthandoff: 05/21/2021
+ms.locfileid: "52592012"
 ---
 # <a name="manage-state-and-settings-for-an-outlook-add-in"></a>Управление состоянием и настройками Outlook надстройки
 
@@ -152,7 +152,7 @@ function saveCallback(asyncResult) {
 
 1. Проверьте существующие свойства при инициализации надстройки и храните их или очищайте по мере необходимости.
 1. При настройке настраиваемого свойства включайте дополнительное свойство, чтобы указать, были ли добавлены настраиваемые свойства во время чтения сообщения или в режиме чтения надстройки. Это поможет вам различать, было ли свойство создано во время создания или унаследовано от родителя.
-1. Вы также можете использовать [item.getComposeTypeAsync](/javascript/api/outlook/office.messagecompose?view=outlook-js-preview&preserve-view=true#getComposeTypeAsync_options__callback_) (в настоящее время находится в предварительном режиме), чтобы проверить, переадрост ли пользователь сообщение электронной почты или ответ.
+1. Чтобы проверить, перенаносит ли пользователь сообщение электронной почты или отвечает, можно использовать [item.getComposeTypeAsync](/javascript/api/outlook/office.messagecompose?view=outlook-js-preview&preserve-view=true#getComposeTypeAsync_options__callback_) (доступно из набора требований 1.10).
 
 ## <a name="see-also"></a>См. также
 
