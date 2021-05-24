@@ -8,32 +8,34 @@ metadata:
   ms.topic: landing-page
   ms.date: 03/29/2021
   localization_priority: Priority
-  ms.openlocfilehash: 3f5e65b4309bf150e425fac789a1807301d5130e
-  ms.sourcegitcommit: a0624ef0d847fdbd6d83f27d1f9c69daf636ac38
+  ms.openlocfilehash: d8466a48c3fd35532989ecb707f8f77b0b1a47bb
+  ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 03/30/2021
-  ms.locfileid: "51435307"
+  ms.lasthandoff: 05/21/2021
+  ms.locfileid: "52592019"
 landingContent:
-- title: О надстройки OneNote
+- title: О OneNote надстройки
   linkLists:
   - linkListType: overview
     links:
-    - text: Что такое надстройки OneNote?
+    - text: Что OneNote надстройки?
       url: onenote-add-ins-programming-overview.md
+    - text: OneNote Обзор API
+      url: /graph/integrate-with-onenote
   - linkListType: quickstart
     links:
     - text: Создание первой надстройки OneNote
       url: ../quickstarts/onenote-quickstart.md
   - linkListType: how-to-guide
     links:
-    - text: Используйте API JavaScript OneNote для взаимодействия с объектами и контентом ноутбуков
+    - text: Используйте API OneNote JavaScript для взаимодействия с объектами и контентом ноутбуков
       url: ../reference/overview/onenote-add-ins-javascript-reference.md
-    - text: Тестирование и отлагивание надстройки OneNote
+    - text: Тестирование и отлагивание OneNote надстройки
       url: ../testing/test-debug-office-add-ins.md
-    - text: Развертывание и публикация надстройки OneNote
+    - text: Развертывание и публикация OneNote надстройки
       url: ../publish/publish.md
-- title: Ключевые концепции надстройки Office
+- title: Основные Office надстройки
   linkLists:
   - linkListType: overview
     links:
@@ -52,9 +54,9 @@ landingContent:
   - linkListType: reference
     links:
     - text: Задать вопрос
-      url: https://stackoverflow.com/questions/tagged/office-js
+      url: /answers/topics/office-addins-dev.html
     - text: Предложить функцию
-      url: /answers/products/m365
+      url: https://techcommunity.microsoft.com/t5/microsoft-365-developer-platform/idb-p/Microsoft365DeveloperPlatform
     - text: Сообщить о проблеме
       url: https://github.com/officedev/office-js/issues
     - text: 'Надстройки Office: дополнительные ресурсы'

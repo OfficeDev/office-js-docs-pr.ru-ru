@@ -1,25 +1,22 @@
 ---
-title: LaunchEvents в файле манифеста (предварительная версия)
+title: LaunchEvents в файле манифеста
 description: Элемент LaunchEvents настраивает надстройку для активации на основе поддерживаемых событий.
-ms.date: 02/01/2021
+ms.date: 05/11/2021
 localization_priority: Normal
-ms.openlocfilehash: 59c52aa3f60e69e2bdda84718c6123f02942fedc
-ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
+ms.openlocfilehash: 16d721ca6d9402d2bd5d19787707e146358044f0
+ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "50237982"
+ms.lasthandoff: 05/21/2021
+ms.locfileid: "52590919"
 ---
-# <a name="launchevents-element-preview"></a><span data-ttu-id="5c4a2-103">Элемент LaunchEvents (предварительная версия)</span><span class="sxs-lookup"><span data-stu-id="5c4a2-103">LaunchEvents element (preview)</span></span>
+# <a name="launchevents-element"></a><span data-ttu-id="8a517-103">Элемент LaunchEvents</span><span class="sxs-lookup"><span data-stu-id="8a517-103">LaunchEvents element</span></span>
 
-<span data-ttu-id="5c4a2-104">Настраивает надстройки для активации на основе поддерживаемых событий.</span><span class="sxs-lookup"><span data-stu-id="5c4a2-104">Configures your add-in to activate based on supported events.</span></span> <span data-ttu-id="5c4a2-105">Child of the [`<ExtensionPoint>`](extensionpoint.md) element.</span><span class="sxs-lookup"><span data-stu-id="5c4a2-105">Child of the [`<ExtensionPoint>`](extensionpoint.md) element.</span></span> <span data-ttu-id="5c4a2-106">Дополнительные сведения см. в настройке [надстройки Outlook для активации на основе событий.](../../outlook/autolaunch.md)</span><span class="sxs-lookup"><span data-stu-id="5c4a2-106">For more information, see [Configure your Outlook add-in for event-based activation](../../outlook/autolaunch.md).</span></span>
+<span data-ttu-id="8a517-104">Настраивает надстройка для активации на основе поддерживаемых событий.</span><span class="sxs-lookup"><span data-stu-id="8a517-104">Configures your add-in to activate based on supported events.</span></span> <span data-ttu-id="8a517-105">Ребенок [`<ExtensionPoint>`](extensionpoint.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="8a517-105">Child of the [`<ExtensionPoint>`](extensionpoint.md) element.</span></span> <span data-ttu-id="8a517-106">Дополнительные сведения см. в Outlook [надстройки](../../outlook/autolaunch.md)для активации на основе событий.</span><span class="sxs-lookup"><span data-stu-id="8a517-106">For more information, see [Configure your Outlook add-in for event-based activation](../../outlook/autolaunch.md).</span></span>
 
-<span data-ttu-id="5c4a2-107">**Тип надстройки:** почтовая</span><span class="sxs-lookup"><span data-stu-id="5c4a2-107">**Add-in type:** Mail</span></span>
+<span data-ttu-id="8a517-107">**Тип надстройки:** почтовая</span><span class="sxs-lookup"><span data-stu-id="8a517-107">**Add-in type:** Mail</span></span>
 
-> [!IMPORTANT]
-> <span data-ttu-id="5c4a2-108">Активация на основе событий в настоящее время находится [в предварительной](../../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) версии и доступна только в Outlook в Интернете и Windows.</span><span class="sxs-lookup"><span data-stu-id="5c4a2-108">Event-based activation is currently [in preview](../../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) and only available in Outlook on the web and on Windows.</span></span> <span data-ttu-id="5c4a2-109">Дополнительные сведения см. в предварительном просмотре функции [активации на основе событий.](../../outlook/autolaunch.md#how-to-preview-the-event-based-activation-feature)</span><span class="sxs-lookup"><span data-stu-id="5c4a2-109">For more information, see [How to preview the event-based activation feature](../../outlook/autolaunch.md#how-to-preview-the-event-based-activation-feature).</span></span>
-
-## <a name="syntax"></a><span data-ttu-id="5c4a2-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5c4a2-110">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="8a517-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8a517-108">Syntax</span></span>
 
 ```XML
 <ExtensionPoint xsi:type="LaunchEvent">
@@ -32,16 +29,16 @@ ms.locfileid: "50237982"
 </ExtensionPoint>
 ```
 
-## <a name="contained-in"></a><span data-ttu-id="5c4a2-111">Содержится в</span><span class="sxs-lookup"><span data-stu-id="5c4a2-111">Contained in</span></span>
+## <a name="contained-in"></a><span data-ttu-id="8a517-109">Содержится в</span><span class="sxs-lookup"><span data-stu-id="8a517-109">Contained in</span></span>
 
-<span data-ttu-id="5c4a2-112">[ExtensionPoint](extensionpoint.md) (**Почтовая надстройка LaunchEvent)**</span><span class="sxs-lookup"><span data-stu-id="5c4a2-112">[ExtensionPoint](extensionpoint.md) (**LaunchEvent** mail add-in)</span></span>
+<span data-ttu-id="8a517-110">[ExtensionPoint](extensionpoint.md) **(Надстройка для почты LaunchEvent)**</span><span class="sxs-lookup"><span data-stu-id="8a517-110">[ExtensionPoint](extensionpoint.md) (**LaunchEvent** mail add-in)</span></span>
 
-## <a name="child-elements"></a><span data-ttu-id="5c4a2-113">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="5c4a2-113">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="8a517-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="8a517-111">Child elements</span></span>
 
-|  <span data-ttu-id="5c4a2-114">Элемент</span><span class="sxs-lookup"><span data-stu-id="5c4a2-114">Element</span></span> |  <span data-ttu-id="5c4a2-115">Обязательный</span><span class="sxs-lookup"><span data-stu-id="5c4a2-115">Required</span></span>  |  <span data-ttu-id="5c4a2-116">Описание</span><span class="sxs-lookup"><span data-stu-id="5c4a2-116">Description</span></span>  |
+|  <span data-ttu-id="8a517-112">Элемент</span><span class="sxs-lookup"><span data-stu-id="8a517-112">Element</span></span> |  <span data-ttu-id="8a517-113">Обязательный</span><span class="sxs-lookup"><span data-stu-id="8a517-113">Required</span></span>  |  <span data-ttu-id="8a517-114">Описание</span><span class="sxs-lookup"><span data-stu-id="8a517-114">Description</span></span>  |
 |:-----|:-----|:-----|
-| [<span data-ttu-id="5c4a2-117">LaunchEvent</span><span class="sxs-lookup"><span data-stu-id="5c4a2-117">LaunchEvent</span></span>](launchevent.md) | <span data-ttu-id="5c4a2-118">Да</span><span class="sxs-lookup"><span data-stu-id="5c4a2-118">Yes</span></span> |  <span data-ttu-id="5c4a2-119">Соейте поддерживаемые события с его функцией в файле JavaScript для активации надстройки.</span><span class="sxs-lookup"><span data-stu-id="5c4a2-119">Map supported event to its function in the JavaScript file for add-in activation.</span></span> |
+| [<span data-ttu-id="8a517-115">LaunchEvent</span><span class="sxs-lookup"><span data-stu-id="8a517-115">LaunchEvent</span></span>](launchevent.md) | <span data-ttu-id="8a517-116">Да</span><span class="sxs-lookup"><span data-stu-id="8a517-116">Yes</span></span> |  <span data-ttu-id="8a517-117">Карта поддерживаемого события для его функции в файле JavaScript для активации надстройки.</span><span class="sxs-lookup"><span data-stu-id="8a517-117">Map supported event to its function in the JavaScript file for add-in activation.</span></span> |
 
-## <a name="see-also"></a><span data-ttu-id="5c4a2-120">См. также</span><span class="sxs-lookup"><span data-stu-id="5c4a2-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8a517-118">См. также</span><span class="sxs-lookup"><span data-stu-id="8a517-118">See also</span></span>
 
-- [<span data-ttu-id="5c4a2-121">LaunchEvent</span><span class="sxs-lookup"><span data-stu-id="5c4a2-121">LaunchEvent</span></span>](launchevent.md)
+- [<span data-ttu-id="8a517-119">LaunchEvent</span><span class="sxs-lookup"><span data-stu-id="8a517-119">LaunchEvent</span></span>](launchevent.md)

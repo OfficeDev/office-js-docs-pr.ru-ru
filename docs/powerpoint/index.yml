@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Документация по надстройкам PowerPoint
-summary: С PowerPoint надстройки, вы можете использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript для создания решения, которое может работать в PowerPoint на нескольких платформах, в том числе в Интернете, Windows, Mac и iPad. Узнайте, как создавать, тестировать, отлаживать и публиковать надстройки PowerPoint.
+summary: С PowerPoint надстройки можно использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript, чтобы создать решение, которое может работать PowerPoint на нескольких платформах, в том числе в Интернете, Windows, Mac и iPad. Узнайте, как создавать, тестировать, отлаживать и публиковать надстройки PowerPoint.
 metadata:
   title: Документация по надстройкам PowerPoint
   description: Учебные ресурсы по надстройкам PowerPoint
@@ -15,11 +15,11 @@ metadata:
   ms.lasthandoff: 05/19/2021
   ms.locfileid: "52555173"
 landingContent:
-- title: О PowerPoint надстройки
+- title: Около PowerPoint надстройки
   linkLists:
   - linkListType: overview
     links:
-    - text: Что такое PowerPoint дополнительные надстройки?
+    - text: Что PowerPoint надстройки?
       url: powerpoint-add-ins.md
     - text: API JavaScript для PowerPoint
       url: ../reference/overview/powerpoint-add-ins-reference-overview.md
@@ -31,11 +31,11 @@ landingContent:
       url: ../overview/explore-with-script-lab.md
   - linkListType: how-to-guide
     links:
-    - text: Тестирование и отладка PowerPoint дополнительных надстройок
+    - text: Тестирование и отлагивание PowerPoint надстроек
       url: ../testing/test-debug-office-add-ins.md
-    - text: Развертывание и публикация PowerPoint дополнительных надстройок
+    - text: Развертывание и публикация PowerPoint надстройки
       url: ../publish/publish.md
-- title: Ключевые Office концепции дополнительных элементов
+- title: Основные Office надстройки
   linkLists:
   - linkListType: overview
     links:

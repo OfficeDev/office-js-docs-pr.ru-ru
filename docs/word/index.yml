@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Документация по надстройкам Word
-summary: С помощью надстройок Word можно использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript, для создания решения, которое может работать в Word на нескольких платформах, в том числе в Интернете, Windows, Mac и iPad. Узнайте, как создавать, тестировать, отлаживать и публиковать надстройки Word.
+summary: С помощью надстройок Word можно использовать знакомые веб-технологии, такие как HTML, CSS и JavaScript, чтобы создать решение, которое может работать в Word на нескольких платформах, в том числе в Интернете, Windows, Mac и iPad. Узнайте, как создавать, тестировать, отлаживать и публиковать надстройки Word.
 metadata:
   title: Документация по надстройкам Word
   description: Учебные ресурсы по надстройкам Word.
@@ -25,17 +25,17 @@ landingContent:
     links:
     - text: Создание первой надстройки Word
       url: ../quickstarts/word-quickstart.md
-    - text: Исследуйте API с помощью Script Lab
+    - text: Ознакомьтесь с API с Script Lab
       url: ../overview/explore-with-script-lab.md
   - linkListType: how-to-guide
     links:
-    - text: Используйте API Word JavaScript для взаимодействия с содержанием документов и метаданными
+    - text: Используйте API Word JavaScript для взаимодействия с контентом документов и метаданными
       url: ../reference/overview/word-add-ins-reference-overview.md
-    - text: Тест и отладить добавление слова
+    - text: Тестирование и отлагивание надстройки Word
       url: ../testing/test-debug-office-add-ins.md
-    - text: Развертывание и публикация надстройок Word
+    - text: Развертывание и публикация надстройки Word
       url: ../publish/publish.md
-- title: Ключевые Office концепции дополнительных элементов
+- title: Основные Office надстройки
   linkLists:
   - linkListType: overview
     links:
