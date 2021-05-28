@@ -2,14 +2,14 @@
 title: Настройка надстройки Outlook для активации на основе событий
 description: Узнайте, как настроить Outlook надстройку для активации на основе событий.
 ms.topic: article
-ms.date: 05/20/2021
+ms.date: 05/26/2021
 localization_priority: Normal
-ms.openlocfilehash: a0d0b27c9b49132024c78577a4432d85542cf76f
-ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
+ms.openlocfilehash: debf6db16adc8e0bc923142da1e85629b8a1daa8
+ms.sourcegitcommit: a42ae8b804f944061c87bbd9d9f67990e4cf5e36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2021
-ms.locfileid: "52590507"
+ms.lasthandoff: 05/28/2021
+ms.locfileid: "52697199"
 ---
 # <a name="configure-your-outlook-add-in-for-event-based-activation"></a>Настройка надстройки Outlook для активации на основе событий
 
@@ -22,22 +22,22 @@ ms.locfileid: "52590507"
 
 ## <a name="supported-events"></a>Поддерживаемые события
 
-В настоящее время поддерживаются следующие события.
+В настоящее время следующие события поддерживаются в Интернете и Windows.
 
-|Событие|Описание|Клиенты|
-|---|---|---|
-|`OnNewMessageCompose`|При составлении нового сообщения (включает ответ, ответ все и вперед), но не при редактировании, например, черновика.|Windows, веб|
-|`OnNewAppointmentOrganizer`|О создании новой встречи, но не о редактировании существующего.|Windows, веб|
-|`OnMessageAttachmentsChanged`\*|При добавлении или удалении вложений при сочинении сообщения.|Windows|
-|`OnAppointmentAttachmentsChanged`\*|При добавлении или удалении вложений при записи на прием.|Windows|
-|`OnMessageRecipientsChanged`\*|При добавлении или удалении получателей при сочинении сообщения.|Windows|
-|`OnAppointmentAttendeesChanged`\*|При добавлении или удалении участников при записи на прием.|Windows|
-|`OnAppointmentTimeChanged`\*|При изменении даты и времени при записи на прием.|Windows|
-|`OnAppointmentRecurrenceChanged`\*|При добавлении, изменении или удалении сведений о повторении при записи на прием. Если дата и время изменены, `OnAppointmentTimeChanged` событие также будет уволено.|Windows|
-|`OnInfoBarDismissClicked`\*|При отклонении уведомления при записи сообщения или элемента встречи. Уведомления будут получать только надстройка, которая добавила уведомление.|Windows|
+|Событие|Описание|
+|---|---|
+|`OnNewMessageCompose`|При составлении нового сообщения (включает ответ, ответ все и вперед), но не при редактировании, например, черновика.|
+|`OnNewAppointmentOrganizer`|О создании новой встречи, но не о редактировании существующего.|
+|`OnMessageAttachmentsChanged`\*|При добавлении или удалении вложений при сочинении сообщения.|
+|`OnAppointmentAttachmentsChanged`\*|При добавлении или удалении вложений при записи на прием.|
+|`OnMessageRecipientsChanged`\*|При добавлении или удалении получателей при сочинении сообщения.|
+|`OnAppointmentAttendeesChanged`\*|При добавлении или удалении участников при записи на прием.|
+|`OnAppointmentTimeChanged`\*|При изменении даты и времени при записи на прием.|
+|`OnAppointmentRecurrenceChanged`\*|При добавлении, изменении или удалении сведений о повторении при записи на прием. Если дата и время изменены, `OnAppointmentTimeChanged` событие также будет уволено.|
+|`OnInfoBarDismissClicked`\*|При отклонении уведомления при записи сообщения или элемента встречи. Уведомления будут получать только надстройка, которая добавила уведомление.|
 
 > [!IMPORTANT]
-> \*Это событие поддерживается [](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) только для предварительного просмотра Outlook в Windows с Microsoft 365 подпиской. Дополнительные сведения см. [в статье How to preview](#how-to-preview) in this article.
+> \*Это событие поддерживается [](../reference/objectmodel/preview-requirement-set/outlook-requirement-set-preview.md) только для предварительного просмотра Outlook в Интернете и Windows с Microsoft 365 подпиской. Дополнительные сведения см. [в статье How to preview](#how-to-preview) in this article.
 >
 > Так как функции предварительного просмотра могут изменяться без предварительного уведомления, их не следует использовать в надстройки производства.
 
@@ -136,10 +136,8 @@ ms.locfileid: "52590507"
           <!-- Enable launching the add-in on the included events. -->
           <ExtensionPoint xsi:type="LaunchEvent">
             <LaunchEvents>
-              <!-- Events supported on the web and on Windows. -->
               <LaunchEvent Type="OnNewMessageCompose" FunctionName="onMessageComposeHandler"/>
               <LaunchEvent Type="OnNewAppointmentOrganizer" FunctionName="onAppointmentComposeHandler"/>
-              <!-- Events supported only on Windows. -->
               <LaunchEvent Type="OnMessageAttachmentsChanged" FunctionName="onMessageAttachmentsChangedHandler" />
               <LaunchEvent Type="OnAppointmentAttachmentsChanged" FunctionName="onAppointmentAttachmentsChangedHandler" />
               <LaunchEvent Type="OnMessageRecipientsChanged" FunctionName="onMessageRecipientsChangedHandler" />
@@ -320,3 +318,4 @@ AppSource и inclient stores: возможность развертывания 
 
 - [Манифесты надстроек Outlook](manifests.md)
 - [Отламывка надстроек на основе событий](debug-autolaunch.md)
+- Пример PnP: Outlook активации на основе событий [для набора подписи](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/outlook-set-signature)
