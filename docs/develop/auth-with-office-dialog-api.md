@@ -3,12 +3,12 @@ title: Проверка подлинности и авторизация с по
 description: Узнайте, как использовать диалоговый API-интерфейс Office, чтобы пользователи могли входить в Google, Facebook, Microsoft 365 и другие службы, защищенные платформой Microsoft Identity.
 ms.date: 09/24/2020
 localization_priority: Priority
-ms.openlocfilehash: 1d7bb4fc6828ffeb339fc6ff053d8ba99c73f582
-ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
+ms.openlocfilehash: 4fa0c6aaf93792da03ac5957ed3ed904728d7529
+ms.sourcegitcommit: 0d3bf72f8ddd1b287bf95f832b7ecb9d9fa62a24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "50237877"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52727922"
 ---
 # <a name="authenticate-and-authorize-with-the-office-dialog-api"></a>Проверка подлинности и авторизация с помощью Dialog API для Office
 
@@ -50,14 +50,14 @@ ms.locfileid: "50237877"
 
 #### <a name="authorization-of-the-add-in-to-an-external-resource"></a>Авторизация надстройки через внешний ресурс
 
-В современном Интернете пользователи и веб-приложения являются субъектами безопасности.  У приложений есть свои удостоверения и разрешения для онлайн-ресурсов, таких как Microsoft 365, Google+, Facebook и LinkedIn. Перед развертыванием приложение регистрируется у поставщика ресурса. Регистрация включает:
+В современном Интернете пользователи и веб-приложения — это субъекты безопасности. У приложения есть свое удостоверение и разрешения для онлайн-ресурсов, таких как Microsoft 365, Google+, Facebook и LinkedIn. Перед развертыванием приложение регистрируется у поставщика ресурса. Регистрация включает:
 
 - Список разрешений, которые нужны приложению.
 - URL-адрес, на который служба ресурса должна возвращать маркер доступа, когда приложение получает доступ к службе.  
 
 Когда пользователь вызывает функцию в приложении, которое получает доступ к его данным в службе ресурса, пользователю будет предложено войти в службу, а затем предоставить приложению необходимые разрешения. Служба затем перенаправляет пользователя на зарегистрированный URL-адрес и передает маркер доступа. Приложение использует маркер доступа для доступа к ресурсам пользователя.
 
-Вы можете управлять этим процессом с помощью Dialog API для Office, используя поток, похожий на тот, который обеспечивает возможность входа пользователей. Отличия:
+Вы можете управлять этим процессом с помощью API диалогового окна Office, используя поток, похожий на тот, который обеспечивает возможность входа пользователей. Единственные отличия:
 
 - Если пользователь не предоставил приложению необходимые разрешения, ему будет предложено сделать это в диалоговом окне после входа.
 - Диалоговое окно отправляет маркер доступа в главное окно, преобразовывая его в строку с помощью функции `messageParent` или сохраняя его там, откуда главное окно сможет его извлечь (и с помощью `messageParent` сообщает в главное окно о доступности маркера). Пока срок действия этого маркера не истек, главное окно может использовать его для прямого доступа к ресурсам пользователя без дополнительных запросов.
@@ -83,19 +83,19 @@ ms.locfileid: "50237877"
 
 Часто библиотека проверки подлинности использует метод, позволяющий получить маркер в интерактивном режиме, а также создать объект в контексте проверки подлинности, возвращаемый методом. Маркер — это свойство объекта (которое может быть частным и недоступным непосредственно из кода). У этого объекта есть методы получения данных из ресурса. Они включают маркер в HTTP-запросах, которые они выполняют к поставщику ресурсов (например, Google, Microsoft Graph, Facebook и т. д.).
 
-Такие объекты в контексте проверки подлинности и методы их создания не поддерживаются в надстройках Office. Так как вход выполняется в экземпляре браузера в диалоговом окне Office, там же должен быть создан и объект. Но данные, поступающие в ресурс, находятся в экземпляре браузера в области задач, и вам не удастся передать объект из одного экземпляра в другой. Например, невозможно передать объект методом `messageParent`, так как `messageParent` может передавать только строки или логические значения. Объект JavaScript, содержащий методы, нельзя надежно преобразовать в строку.
+Такие объекты в контексте проверки подлинности и методы их создания не поддерживаются в надстройках Office. Так как вход выполняется в экземпляре браузера в диалоговом окне Office, там же должен быть создан и объект. Но данные, поступающие в ресурс, находятся в экземпляре браузера в области задач, и вам не удастся передать объект из одного экземпляра в другой. Например, невозможно передать объект методом `messageParent`, так как `messageParent` может передавать только строковые значения. Объект JavaScript, содержащий методы, нельзя надежно преобразовать в строку.
 
 ### <a name="how-you-can-use-libraries-with-the-office-dialog-api"></a>Использование библиотек с помощью Dialog API для Office
 
 Большинство библиотек в дополнение к монолитным объектам в контексте проверки подлинности или вместо них обеспечивает API более низкого уровня абстракции, разрешая коду создавать менее монолитные вспомогательные объекты. Например, [MSAL.NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki#conceptual-documentation) версии 3.x.x имеет API для создания URL-адреса входа и еще один API, который создает объект AuthResult, содержащий маркер доступа в свойстве, доступном для вашего кода. Примеры MSAL.NET в надстройке Office см. в статьях [Надстройка Office в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET) и [Надстройка Outlook в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET). Пример использования [msal.js](https://github.com/AzureAD/microsoft-authentication-library-for-js) в надстройке см. в статье [Надстройка Office в Microsoft Graph React](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-React).
 
-Дополнительные сведения о библиотеках проверки подлинности и авторизации см. в статье[Microsoft Graph — Рекомендуемые библиотеки](authorize-to-microsoft-graph-without-sso.md#recommended-libraries-and-samples) и [Другие внешние службы: библиотеки](auth-external-add-ins.md#libraries).
+Дополнительные сведения о библиотеках проверки подлинности и авторизации см. в статье[Microsoft Graph — Рекомендуемые библиотеки](authorize-to-microsoft-graph-without-sso.md#recommended-libraries-and-samples) и [Другие внешние службы: библиотеки](auth-external-add-ins.md#libraries).
 
 ## <a name="samples"></a>Примеры
 
-- [Надстройка Office в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET) — это надстройка на основе ASP.NET (Excel, Word или PowerPoint), использующая библиотеку MSAL.NET и поток кода авторизации для входа и получения маркера доступа к данным Microsoft Graph.
-- [Надстройка Outlook в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET) — это такая же надстройка, как описано выше, но относящаяся к приложению Outlook.
-- [Надстройка Office в Microsoft Graph React](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-React) — это надстройка на основе NodeJS (Excel, Word или PowerPoint), использующая библиотеку msal.js и неявный поток для входа и получения маркера доступа к данным Microsoft Graph.
+- [Надстройка Office в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-ASPNET) — это надстройка на основе ASP.NET (Excel, Word или PowerPoint), использующая библиотеку MSAL.NET и поток кода авторизации для входа и получения маркера доступа к данным Microsoft Graph.
+- [Надстройка Outlook в Microsoft Graph ASP.NET](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Outlook-Add-in-Microsoft-Graph-ASPNET) — это такая же надстройка, как описано выше, но относящаяся к приложению Outlook.
+- [Надстройка Office в Microsoft Graph React](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/auth/Office-Add-in-Microsoft-Graph-React) — это надстройка на основе NodeJS (Excel, Word или PowerPoint), использующая библиотеку msal.js и неявный поток для входа и получения маркера доступа к данным Microsoft Graph.
 
 
 Дополнительные сведения см. в указанных ниже статьях.

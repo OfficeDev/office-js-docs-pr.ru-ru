@@ -1,18 +1,30 @@
 ---
 title: Тестирование и отладка надстроек Office
 description: Узнайте, как тестировать и отлаживать свою надстройку Office
-ms.date: 06/17/2020
+ms.date: 05/19/2021
 localization_priority: Priority
-ms.openlocfilehash: 526204fe94d4c97ce7e1e0bc9ac2a212f69611d3
-ms.sourcegitcommit: 472b81642e9eb5fb2a55cd98a7b0826d37eb7f73
+ms.openlocfilehash: f794225d5ece20a430b967c8aa81ea165b573e52
+ms.sourcegitcommit: 0d3bf72f8ddd1b287bf95f832b7ecb9d9fa62a24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45159250"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52727929"
 ---
 # <a name="test-and-debug-office-add-ins"></a>Тестирование и отладка надстроек Office
 
-Этот раздел содержит рекомендации по тестированию, отладке и диагностике надстроек Office.
+Эта статья содержит рекомендации по тестированию, отладке и диагностике надстроек Office.
+
+## <a name="test-cross-platform-and-for-multiple-versions-of-office"></a>Тестирование кроссплатформенных выпусков и выпусков для нескольких версий Office
+
+Надстройки Office запускаются на основных платформах, поэтому требуется протестировать надстройку на всех платформах, где ваши пользователи могут запускать Office. К ним обычно относятся Office в Интернете, Office для Windows (как подписка, так и единовременная покупка), Office для Mac, Office для iOS и (для надстроек Outlook) Office для Android. Однако могут возникать ситуации, когда вы точно знаете, что никто из ваших пользователей не будет работать на некоторых платформах. Например, если вы создаете надстройку для компании, которая требует, чтобы пользователи работали на компьютерах с Windows и подпиской на Office, вам не нужно выполнять тестирование в Office для Mac или единовременно приобретенных экземплярах для Windows. 
+
+> [!NOTE]
+> На компьютерах с Windows браузер, используемый надстройкой, определяется версией Windows и Office. Дополнительные сведения см. в статье [Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md).
+
+> [!IMPORTANT]
+> Надстройки, предлагаемые через AppSource, проходят проверку, включающую тестирование на всех платформах. Кроме того, надстройки тестируются в Office для Интернета со всеми основными современными браузерами, включая Microsoft Edge (WebView2 на основе Chromium), Chrome и Safari. Соответственно, перед отправкой в AppSource необходимо протестировать эти платформы и браузеры. Дополнительные сведения о проверке см. в статье [Политики сертификации коммерческой платформы Marketplace](/legal/marketplace/certification-policies), особенно в [разделе 1120.3](/legal/marketplace/certification-policies#11203-functionality), а также на странице [Доступность и применение надстроек Office](../overview/office-add-in-availability.md). 
+>
+> AppSource не использует Internet Explorer или устаревшую версию Microsoft Edge (WebView1) для тестирования надстроек в Office для Интернета. Но если многие ваши пользователи будут применять эти два браузера для открытия Office в Интернете, вам следует протестировать их. Дополнительные сведения см. в статье [Поддержка Internet Explorer 11](../develop/support-ie-11.md) и [Устранение проблем с Microsoft Edge](../concepts/browsers-used-by-office-web-add-ins.md#troubleshooting-microsoft-edge-issues). Office по-прежнему поддерживает эти браузеры для надстроек, поэтому если вы считаете, что столкнулись с ошибкой при работе надстройки в них, создайте проблему в репозитории [office-js](https://github.com/OfficeDev/office-js/issues/new/choose).
 
 ## <a name="sideload-an-office-add-in-for-testing"></a>Загрузка неопубликованной надстройки Office для тестирования
 
@@ -38,7 +50,7 @@ ms.locfileid: "45159250"
 
 - [Отладка надстроек Office на iPad и Mac](debug-office-add-ins-on-ipad-and-mac.md)
 
-- [Надстройка Microsoft Office "Расширение отладчика для Visual Studio Code"](debug-with-vs-extension.md)
+- [Надстройка Microsoft Office "Расширение отладчика для Visual Studio Code"](debug-with-vs-extension.md)
 
 ## <a name="validate-an-office-add-in-manifest"></a>Проверка манифеста надстройки Office
 
