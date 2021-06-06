@@ -1,15 +1,15 @@
 ---
 title: Работа с книгами с использованием API JavaScript для Excel
-description: Узнайте, как выполнять общие задачи с книгами или функциями на уровне приложений с помощью API JavaScript Excel.
-ms.date: 04/05/2021
+description: Узнайте, как выполнять общие задачи с помощью книг или функций уровня приложений с помощью Excel API JavaScript.
+ms.date: 06/01/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 2fe11aaba45dae1f0cd1375e28226ecd959950fe
-ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
+ms.openlocfilehash: 638384a1e08af182db042638c655d8d74354c637
+ms.sourcegitcommit: ba4fb7087b9841d38bb46a99a63e88df49514a4d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51650830"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "52779350"
 ---
 # <a name="work-with-workbooks-using-the-excel-javascript-api"></a>Работа с книгами с использованием API JavaScript для Excel
 
@@ -55,21 +55,22 @@ Excel.createWorkbook();
 Текущую книгу надстройки можно получить в качестве строки с кодом base64 с помощью [нарезки файлов.](/javascript/api/office/office.document#getfileasync-filetype--options--callback-) Преобразование файла в нужную строку в кодировке base64 можно выполнить с помощью класса [FileReader](https://developer.mozilla.org/docs/Web/API/FileReader), как показано в приведенном ниже примере.
 
 ```js
+// Retrieve the external workbook file and set up a `FileReader` object. 
 var myFile = document.getElementById("file");
 var reader = new FileReader();
 
 reader.onload = (function (event) {
     Excel.run(function (context) {
-        // strip off the metadata before the base64-encoded string
+        // Remove the metadata before the base64-encoded string.
         var startIndex = reader.result.toString().indexOf("base64,");
-        var workbookContents = reader.result.toString().substr(startIndex + 7);
+        var externalWorkbook = reader.result.toString().substr(startIndex + 7);
 
-        Excel.createWorkbook(workbookContents);
+        Excel.createWorkbook(externalWorkbook);
         return context.sync();
     }).catch(errorHandlerFunction);
 });
 
-// read in the file as a data URL so we can parse the base64-encoded string
+// Read the file as a data URL so we can parse the base64-encoded string.
 reader.readAsDataURL(myFile.files[0]);
 ```
 
@@ -85,37 +86,39 @@ reader.readAsDataURL(myFile.files[0]);
 insertWorksheetsFromBase64(base64File: string, options?: Excel.InsertWorksheetOptions): OfficeExtension.ClientResult<string[]>;
 ```
 
-В следующем примере в текущую книгу вставляется другая книга. Новые таблицы вставляются после активного таблицы. Обратите `[]` внимание, что он передается в качестве параметра свойства [InsertWorksheetOptions.](/javascript/api/excel/excel.insertworksheetoptions) `sheetNamesToInsert` Это означает, что все таблицы из существующей книги вставляются в текущую книгу.
-
 > [!IMPORTANT]
-> Метод `insertWorksheetsFromBase64` поддерживается для Excel в Windows, Mac и в Интернете. Он не поддерживается для iOS. Кроме того, в Excel в Интернете этот метод не поддерживает исходные таблицы с элементами PivotTable, Chart, Comment или Slicer. Если эти объекты присутствуют, метод возвращает `insertWorksheetsFromBase64` `UnsupportedFeature` ошибку в Excel в Интернете. 
+> Метод `insertWorksheetsFromBase64` поддерживается для Excel на Windows, Mac и в Интернете. Он не поддерживается для iOS. Кроме того, Excel в Интернете этот метод не поддерживает исходные таблицы с элементами PivotTable, Chart, Comment или Slicer. Если эти объекты присутствуют, метод возвращает `insertWorksheetsFromBase64` `UnsupportedFeature` ошибку в Excel в Интернете. 
+
+В следующем примере кода показано, как вставить в текущую книгу таблицы из другой книги. Этот пример кода сначала обрабатывает файл книги с объектом и извлекает строку с кодом base64, а затем вставляет эту строку с кодом base64 в текущую [`FileReader`](https://developer.mozilla.org/docs/Web/API/FileReader) книгу. Новые листы вставляются после листа с именем **Sheet1.** Обратите внимание, что он передается в качестве параметра свойства `[]` [InsertWorksheetOptions.sheetNamesToInsert.](/javascript/api/excel/excel.insertworksheetoptions#sheetNamesToInsert) Это означает, что все таблицы из целевой книги вставляются в текущую книгу.
 
 ```js
+// Retrieve the external workbook file and set up a `FileReader` object. 
 var myFile = document.getElementById("file");
 var reader = new FileReader();
 
 reader.onload = (event) => {
     Excel.run((context) => {
         // Remove the metadata before the base64-encoded string.
-        const startIndex = reader.result.toString().indexOf("base64,");
-        const workbookContents = reader.result.toString().substr(startIndex + 7);
+        var startIndex = reader.result.toString().indexOf("base64,");
+        var externalWorkbook = reader.result.toString().substr(startIndex + 7);
             
-        // Retrieve the workbook.
-        const workbook = context.workbook;
+        // Retrieve the current workbook.
+        var workbook = context.workbook;
             
         // Set up the insert options. 
         var options = { 
             sheetNamesToInsert: [], // Insert all the worksheets from the source workbook.
             positionType: Excel.WorksheetPositionType.after, // Insert after the `relativeTo` sheet.
-            relativeTo: "Sheet1" }; // The sheet relative to which the other worksheets will be inserted. Used with `positionType`.
+            relativeTo: "Sheet1" // The sheet relative to which the other worksheets will be inserted. Used with `positionType`.
+        }; 
             
-         // Insert the workbook. 
-         workbook.insertWorksheetsFromBase64(workbookContents, options);
+         // Insert the new worksheets into the current workbook.
+         workbook.insertWorksheetsFromBase64(externalWorkbook, options);
          return context.sync();
     });
 };
 
-// Read in the file as a data URL so we can parse the base64-encoded string.
+// Read the file as a data URL so we can parse the base64-encoded string.
 reader.readAsDataURL(myFile.files[0]);
 ```
 
@@ -235,7 +238,7 @@ Excel.run(function (context) {
 
 `Application.cultureInfo`определяет параметры культуры системы как объект [CultureInfo.](/javascript/api/excel/excel.cultureinfo) Это содержит параметры, такие как числовой десятичной сепаратор или формат даты.
 
-Некоторые параметры культуры можно [изменить с помощью пользовательского интерфейса Excel.](https://support.office.com/article/Change-the-character-used-to-separate-thousands-or-decimals-c093b545-71cb-4903-b205-aebb9837bd1e) Параметры системы сохраняются в `CultureInfo` объекте. Любые локальные изменения хранятся как [свойства уровня приложения,](/javascript/api/excel/excel.application)например `Application.decimalSeparator` .
+Некоторые параметры культуры можно [изменить с помощью Excel пользовательского интерфейса.](https://support.office.com/article/Change-the-character-used-to-separate-thousands-or-decimals-c093b545-71cb-4903-b205-aebb9837bd1e) Параметры системы сохраняются в `CultureInfo` объекте. Любые локальные изменения хранятся как [свойства уровня приложения,](/javascript/api/excel/excel.application)например `Application.decimalSeparator` .
 
 В следующем примере изменяется десятичное сепараторное течение числовой строки с "," на символ, используемый в параметрах системы.
 
