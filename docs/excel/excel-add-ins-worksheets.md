@@ -1,14 +1,14 @@
 ---
 title: Работа с листами с использованием API JavaScript для Excel
-description: Примеры кода, которые показывают, как выполнять общие задачи с листами с помощью API JavaScript Excel.
-ms.date: 03/24/2020
+description: Примеры кода, которые показывают, как выполнять общие задачи с помощью таблиц с Excel API JavaScript.
+ms.date: 06/03/2021
 localization_priority: Normal
-ms.openlocfilehash: 7ff1593ca66926de7ae3397defba7efbe97b1695
-ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
+ms.openlocfilehash: eeec79f1474857ec72f00a269cb1cb81e55b2ca9
+ms.sourcegitcommit: 17b5a076375bc5dc3f91d3602daeb7535d67745d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51652204"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "52783514"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
@@ -318,6 +318,53 @@ function onWorksheetChanged(eventArgs) {
 }
 ```
 
+## <a name="detect-formula-changes-preview"></a>Обнаружение изменений формулы (предварительный просмотр)
+
+> [!NOTE]
+> В `Worksheet.onFormulaChanged` настоящее время событие доступно только в общедоступных предварительных просмотрах. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+> 
+
+Надстройка может отслеживать изменения формул в таблице. Это полезно, если таблица подключена к внешней базе данных. Если формула изменяется в таблице, событие в этом сценарии вызывает соответствующие обновления во внешней базе данных.
+
+Чтобы обнаружить изменения формул, [зарегистрируйте](excel-add-ins-events.md#register-an-event-handler) обработчителя событий для [события onFormulaChanged](/javascript/api/excel/excel.worksheet#onFormulaChanged) для таблицы. Обработчики событий `onFormulaChanged` для события получают объект [WorksheetFormulaChangedEventArgs](/javascript/api/excel/excel.worksheetformulachangedeventargs) при пожаре события.
+
+> [!IMPORTANT]
+> Событие определяет, когда изменяется сама формула, а не значение данных, которое приводит к вычислению `onFormulaChanged` формулы.
+
+В следующем примере кода показано, как зарегистрировать обработник событий, использовать объект для получения массива formulaDetails измененной формулы, а затем распечатать сведения об измененной формуле с свойствами `onFormulaChanged` `WorksheetFormulaChangedEventArgs` [FormulaChangedEventDetail.](/javascript/api/excel/excel.formulachangedeventdetail) [](/javascript/api/excel/excel.worksheetformulachangedeventargs#formulaDetails)
+
+> [!NOTE]
+> Этот пример кода работает только при смене одной формулы.
+
+```js
+Excel.run(function (context) {
+    // Retrieve the worksheet named "Sample".
+    var sheet = context.workbook.worksheets.getItem("Sample");
+
+    // Register the formula changed event handler for this worksheet.
+    sheet.onFormulaChanged.add(formulaChangeHandler);
+
+    return context.sync();
+});
+
+function formulaChangeHandler(event) {
+    Excel.run(function (context) {
+        // Retrieve details about the formula change event.
+        // Note: This method assumes only a single formula is changed at a time. 
+        var cellAddress = event.formulaDetails[0].cellAddress;
+        var previousFormula = event.formulaDetails[0].previousFormula;
+        var source = event.source;
+    
+        // Print out the change event details.
+        console.log(
+          `The formula in cell ${cellAddress} changed. 
+          The previous formula was: ${previousFormula}. 
+          The source of the change was: ${source}.`
+        );         
+    });
+}
+```
+
 ## <a name="handle-sorting-events"></a>Обработка событий сортировки
 
 События `onColumnSorted` и `onRowSorted` указывают на сортировку любых данных на листе. Эти события связаны с индивидуальными объектами `Worksheet` и с `WorkbookCollection` книги. Они срабатывают при выполнении сортировки (программным образом или вручную с помощью пользовательского интерфейса Excel).
@@ -386,7 +433,7 @@ Excel.run(function (context) {
 
 > [!NOTE]
 > В этом разделе описано, как найти ячейки и диапазоны с помощью функций объекта `Worksheet`. Дополнительные сведения об извлечении диапазонов можно найти в статьях о конкретных объектах.
-> - Примеры получения диапазона в листах с помощью объекта см. в примере `Range` Get a range using the Excel [JavaScript API.](excel-add-ins-ranges-get.md)
+> - Примеры получения диапазона в пределах таблицы с помощью объекта см. в примере `Range` Get a range using the Excel [API JavaScript.](excel-add-ins-ranges-get.md)
 > - Примеры, в которых показано, как получить диапазоны из объекта `Table`, см. в статье [Работа с таблицами с использованием API JavaScript для Excel](excel-add-ins-tables.md).
 > - Примеры, в которых показано, как выполнять поиск большого диапазона для нескольких поддиапазонов с учетом характеристик ячеек, см. в статье [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md).
 
