@@ -701,8 +701,8 @@ items:
               - name: Обработка динамических массивов и переносов
                 href: excel/excel-add-ins-ranges-dynamic-arrays.md
                 displayName: Excel
-              - name: Получение прецедентов формул
-                href: excel/excel-add-ins-ranges-precedents.md
+              - name: Влияющие и зависимые ячейки с формулами
+                href: excel/excel-add-ins-ranges-precedents-dependents.md
                 displayName: Excel
               - name: Задержка выполнения во время редактирования ячейки
                 href: excel/excel-add-ins-delay-in-cell-edit.md
