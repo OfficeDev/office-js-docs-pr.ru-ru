@@ -1,25 +1,25 @@
 ---
 title: Работа с таблицами с использованием API JavaScript для Excel
-description: Примеры кода, которые показывают, как выполнять распространенные задачи с таблицами с помощью API JavaScript для Excel.
-ms.date: 01/11/2021
+description: Примеры кода, которые показывают, как выполнять общие задачи со таблицами с Excel API JavaScript.
+ms.date: 06/07/2021
 localization_priority: Normal
-ms.openlocfilehash: bd060f4a1382e68a7135227f5662a9e4fe1cb7aa
-ms.sourcegitcommit: d28392721958555d6edea48cea000470bd27fcf7
+ms.openlocfilehash: a44a99e0ddc612342b292fd6e9d203799cde7b53
+ms.sourcegitcommit: 5a151d4df81e5640363774406d0f329d6a0d3db8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "49839903"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52854004"
 ---
-# <a name="work-with-tables-using-the-excel-javascript-api"></a><span data-ttu-id="a30d3-103">Работа с таблицами с использованием API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="a30d3-103">Work with tables using the Excel JavaScript API</span></span>
+# <a name="work-with-tables-using-the-excel-javascript-api"></a><span data-ttu-id="b8846-103">Работа с таблицами с использованием API JavaScript для Excel</span><span class="sxs-lookup"><span data-stu-id="b8846-103">Work with tables using the Excel JavaScript API</span></span>
 
-<span data-ttu-id="a30d3-104">В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для таблиц с использованием API JavaScript для Excel.</span><span class="sxs-lookup"><span data-stu-id="a30d3-104">This article provides code samples that show how to perform common tasks with tables using the Excel JavaScript API.</span></span> <span data-ttu-id="a30d3-105">Полный список свойств и методов, поддерживаемых объектами, см. в таблицах `Table` `TableCollection` Object [(API JavaScript для Excel)](/javascript/api/excel/excel.table) и [TableCollection Object (API JavaScript для Excel).](/javascript/api/excel/excel.tablecollection)</span><span class="sxs-lookup"><span data-stu-id="a30d3-105">For the complete list of properties and methods that the `Table` and `TableCollection` objects support, see [Table Object (JavaScript API for Excel)](/javascript/api/excel/excel.table) and [TableCollection Object (JavaScript API for Excel)](/javascript/api/excel/excel.tablecollection).</span></span>
+<span data-ttu-id="b8846-104">В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для таблиц с использованием API JavaScript для Excel.</span><span class="sxs-lookup"><span data-stu-id="b8846-104">This article provides code samples that show how to perform common tasks with tables using the Excel JavaScript API.</span></span> <span data-ttu-id="b8846-105">Полный список свойств и методов, поддерживаемых объектами и объектами, см. в таблице Object `Table` `TableCollection` [(API JavaScript](/javascript/api/excel/excel.table) для Excel) и [TableCollection Object (API JavaScript](/javascript/api/excel/excel.tablecollection)для Excel).</span><span class="sxs-lookup"><span data-stu-id="b8846-105">For the complete list of properties and methods that the `Table` and `TableCollection` objects support, see [Table Object (JavaScript API for Excel)](/javascript/api/excel/excel.table) and [TableCollection Object (JavaScript API for Excel)](/javascript/api/excel/excel.tablecollection).</span></span>
 
-## <a name="create-a-table"></a><span data-ttu-id="a30d3-106">Создание таблицы</span><span class="sxs-lookup"><span data-stu-id="a30d3-106">Create a table</span></span>
+## <a name="create-a-table"></a><span data-ttu-id="b8846-106">Создание таблицы</span><span class="sxs-lookup"><span data-stu-id="b8846-106">Create a table</span></span>
 
-<span data-ttu-id="a30d3-107">В примере кода ниже показано, как создать таблицу на листе **Sample** (Пример).</span><span class="sxs-lookup"><span data-stu-id="a30d3-107">The following code sample creates a table in the worksheet named **Sample**.</span></span> <span data-ttu-id="a30d3-108">В таблице имеются заголовки, а также четыре столбца и семь строк с данными.</span><span class="sxs-lookup"><span data-stu-id="a30d3-108">The table has headers and contains four columns and seven rows of data.</span></span> <span data-ttu-id="a30d3-109">Если приложение Excel, в котором [](../reference/requirement-sets/excel-api-requirement-sets.md) работает код, поддерживает набор требований **ExcelApi 1.2,** ширина столбцов и высота строк задаются таким образом, чтобы наилучшим образом соответствовать текущим данным в таблице.</span><span class="sxs-lookup"><span data-stu-id="a30d3-109">If the Excel application where the code is running supports [requirement set](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, the width of the columns and height of the rows are set to best fit the current data in the table.</span></span>
+<span data-ttu-id="b8846-107">В примере кода ниже показано, как создать таблицу на листе **Sample** (Пример).</span><span class="sxs-lookup"><span data-stu-id="b8846-107">The following code sample creates a table in the worksheet named **Sample**.</span></span> <span data-ttu-id="b8846-108">В таблице имеются заголовки, а также четыре столбца и семь строк с данными.</span><span class="sxs-lookup"><span data-stu-id="b8846-108">The table has headers and contains four columns and seven rows of data.</span></span> <span data-ttu-id="b8846-109">Если Excel, в котором работает код, [](../reference/requirement-sets/excel-api-requirement-sets.md) поддерживает набор требований **ExcelApi 1.2,** то ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.</span><span class="sxs-lookup"><span data-stu-id="b8846-109">If the Excel application where the code is running supports [requirement set](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, the width of the columns and height of the rows are set to best fit the current data in the table.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="a30d3-110">Чтобы указать имя таблицы, необходимо сначала создать таблицу, а затем задать ее свойство, как показано `name` в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="a30d3-110">To specify a name for a table, you must first create the table and then set its `name` property, as shown in the following example.</span></span>
+> <span data-ttu-id="b8846-110">Чтобы указать имя таблицы, сначала необходимо создать таблицу, а затем задать ее свойство, как показано `name` в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="b8846-110">To specify a name for a table, you must first create the table and then set its `name` property, as shown in the following example.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -50,19 +50,19 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a30d3-111">**Новая таблица**</span><span class="sxs-lookup"><span data-stu-id="a30d3-111">**New table**</span></span>
+<span data-ttu-id="b8846-111">**Новая таблица**</span><span class="sxs-lookup"><span data-stu-id="b8846-111">**New table**</span></span>
 
 ![Новая таблица в Excel](../images/excel-tables-create.png)
 
-## <a name="add-rows-to-a-table"></a><span data-ttu-id="a30d3-113">Добавление строк в таблицу</span><span class="sxs-lookup"><span data-stu-id="a30d3-113">Add rows to a table</span></span>
+## <a name="add-rows-to-a-table"></a><span data-ttu-id="b8846-113">Добавление строк в таблицу</span><span class="sxs-lookup"><span data-stu-id="b8846-113">Add rows to a table</span></span>
 
-<span data-ttu-id="a30d3-114">В примере ниже показано, как добавить семь новых строк в таблицу **ExpensesTable** (Таблица расходов) на листе **Sample** (Пример).</span><span class="sxs-lookup"><span data-stu-id="a30d3-114">The following code sample adds seven new rows to the table named **ExpensesTable** within the worksheet named **Sample**.</span></span> <span data-ttu-id="a30d3-115">Новые строки будут добавлены в конец таблицы.</span><span class="sxs-lookup"><span data-stu-id="a30d3-115">The new rows are added to the end of the table.</span></span> <span data-ttu-id="a30d3-116">Если приложение Excel, в котором [](../reference/requirement-sets/excel-api-requirement-sets.md) работает код, поддерживает набор требований **ExcelApi 1.2,** ширина столбцов и высота строк задаются таким образом, чтобы наилучшим образом соответствовать текущим данным в таблице.</span><span class="sxs-lookup"><span data-stu-id="a30d3-116">If the Excel application where the code is running supports [requirement set](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, the width of the columns and height of the rows are set to best fit the current data in the table.</span></span>
+<span data-ttu-id="b8846-114">В примере ниже показано, как добавить семь новых строк в таблицу **ExpensesTable** (Таблица расходов) на листе **Sample** (Пример).</span><span class="sxs-lookup"><span data-stu-id="b8846-114">The following code sample adds seven new rows to the table named **ExpensesTable** within the worksheet named **Sample**.</span></span> <span data-ttu-id="b8846-115">Новые строки будут добавлены в конец таблицы.</span><span class="sxs-lookup"><span data-stu-id="b8846-115">The new rows are added to the end of the table.</span></span> <span data-ttu-id="b8846-116">Если Excel, в котором работает код, [](../reference/requirement-sets/excel-api-requirement-sets.md) поддерживает набор требований **ExcelApi 1.2,** то ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.</span><span class="sxs-lookup"><span data-stu-id="b8846-116">If the Excel application where the code is running supports [requirement set](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, the width of the columns and height of the rows are set to best fit the current data in the table.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="a30d3-117">Свойство объекта TableRow указывает номер индекса строки в коллекции `index` строк таблицы. [](/javascript/api/excel/excel.tablerow)</span><span class="sxs-lookup"><span data-stu-id="a30d3-117">The `index` property of a [TableRow](/javascript/api/excel/excel.tablerow) object indicates the index number of the row within the rows collection of the table.</span></span> <span data-ttu-id="a30d3-118">Объект не содержит свойство, которое можно использовать в качестве `TableRow` `id` уникального ключа для идентификации строки.</span><span class="sxs-lookup"><span data-stu-id="a30d3-118">A `TableRow` object does not contain an `id` property that can be used as a unique key to identify the row.</span></span>
+> <span data-ttu-id="b8846-117">Свойство объекта TableRow указывает номер индекса строки в коллекции строк `index` таблицы. [](/javascript/api/excel/excel.tablerow)</span><span class="sxs-lookup"><span data-stu-id="b8846-117">The `index` property of a [TableRow](/javascript/api/excel/excel.tablerow) object indicates the index number of the row within the rows collection of the table.</span></span> <span data-ttu-id="b8846-118">Объект `TableRow` не содержит `id` свойства, которые можно использовать в качестве уникального ключа для идентификации строки.</span><span class="sxs-lookup"><span data-stu-id="b8846-118">A `TableRow` object does not contain an `id` property that can be used as a unique key to identify the row.</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="a30d3-119">Добавление строк в таблицу из контентной надстройки приведет к утечке памяти.</span><span class="sxs-lookup"><span data-stu-id="a30d3-119">Adding rows to a table from a content add-in will result in a memory leak.</span></span> <span data-ttu-id="a30d3-120">Сведения о текущем состоянии и #1415 см. в #1415 [gitHub](https://github.com/OfficeDev/office-js/issues/1415) Issue.</span><span class="sxs-lookup"><span data-stu-id="a30d3-120">See [GitHub Issue #1415](https://github.com/OfficeDev/office-js/issues/1415) for current status and additional information.</span></span> 
+> <span data-ttu-id="b8846-119">Добавление строк в таблицу из надстройки контента приведет к утечке памяти.</span><span class="sxs-lookup"><span data-stu-id="b8846-119">Adding rows to a table from a content add-in will result in a memory leak.</span></span> <span data-ttu-id="b8846-120">См. [GitHub выпуск #1415](https://github.com/OfficeDev/office-js/issues/1415) текущего состояния и дополнительные сведения.</span><span class="sxs-lookup"><span data-stu-id="b8846-120">See [GitHub Issue #1415](https://github.com/OfficeDev/office-js/issues/1415) for current status and additional information.</span></span> 
 
 ```js
 Excel.run(function (context) {
@@ -88,20 +88,20 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a30d3-121">**Таблица с новыми строками**</span><span class="sxs-lookup"><span data-stu-id="a30d3-121">**Table with new rows**</span></span>
+<span data-ttu-id="b8846-121">**Таблица с новыми строками**</span><span class="sxs-lookup"><span data-stu-id="b8846-121">**Table with new rows**</span></span>
 
 ![Таблица с новыми строками в Excel](../images/excel-tables-add-rows.png)
 
-## <a name="add-a-column-to-a-table"></a><span data-ttu-id="a30d3-123">Добавление столбца в таблицу</span><span class="sxs-lookup"><span data-stu-id="a30d3-123">Add a column to a table</span></span>
+## <a name="add-a-column-to-a-table"></a><span data-ttu-id="b8846-123">Добавление столбца в таблицу</span><span class="sxs-lookup"><span data-stu-id="b8846-123">Add a column to a table</span></span>
 
-<span data-ttu-id="a30d3-p106">В примерах ниже показано, как добавить столбец в таблицу. В первом примере показано, как заполнить новый столбец статическими значениями, во втором — как заполнить новый столбец формулами.</span><span class="sxs-lookup"><span data-stu-id="a30d3-p106">These examples show how to add a column to a table. The first example populates the new column with static values; the second example populates the new column with formulas.</span></span>
+<span data-ttu-id="b8846-p106">В примерах ниже показано, как добавить столбец в таблицу. В первом примере показано, как заполнить новый столбец статическими значениями, во втором — как заполнить новый столбец формулами.</span><span class="sxs-lookup"><span data-stu-id="b8846-p106">These examples show how to add a column to a table. The first example populates the new column with static values; the second example populates the new column with formulas.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="a30d3-p107">Свойство **index** объекта [TableColumn](/javascript/api/excel/excel.tablecolumn) указывает номер индекса столбца в коллекции столбцов таблицы. Свойство **id** объекта **TableColumn** содержит уникальный ключ, идентифицирующий столбец.</span><span class="sxs-lookup"><span data-stu-id="a30d3-p107">The **index** property of a [TableColumn](/javascript/api/excel/excel.tablecolumn) object indicates the index number of the column within the columns collection of the table. The **id** property of a **TableColumn** object contains a unique key that identifies the column.</span></span>
+> <span data-ttu-id="b8846-p107">Свойство **index** объекта [TableColumn](/javascript/api/excel/excel.tablecolumn) указывает номер индекса столбца в коллекции столбцов таблицы. Свойство **id** объекта **TableColumn** содержит уникальный ключ, идентифицирующий столбец.</span><span class="sxs-lookup"><span data-stu-id="b8846-p107">The **index** property of a [TableColumn](/javascript/api/excel/excel.tablecolumn) object indicates the index number of the column within the columns collection of the table. The **id** property of a **TableColumn** object contains a unique key that identifies the column.</span></span>
 
-### <a name="add-a-column-that-contains-static-values"></a><span data-ttu-id="a30d3-128">Добавление столбца, содержащего статические значения</span><span class="sxs-lookup"><span data-stu-id="a30d3-128">Add a column that contains static values</span></span>
+### <a name="add-a-column-that-contains-static-values"></a><span data-ttu-id="b8846-128">Добавление столбца, содержащего статические значения</span><span class="sxs-lookup"><span data-stu-id="b8846-128">Add a column that contains static values</span></span>
 
-<span data-ttu-id="a30d3-129">В примере кода ниже показано, как добавить новый столбец в таблицу **ExpensesTable** (Таблица расходов) на листе **Sample** (Пример).</span><span class="sxs-lookup"><span data-stu-id="a30d3-129">The following code sample adds a new column to the table named **ExpensesTable** within the worksheet named **Sample**.</span></span> <span data-ttu-id="a30d3-130">Новый столбец будет добавлен после всех существующих столбцов в таблице. Он будет содержать заголовок Day of the Week (День недели), а также данные для заполнения ячеек в столбце.</span><span class="sxs-lookup"><span data-stu-id="a30d3-130">The new column is added after all existing columns in the table and contains a header ("Day of the Week") as well as data to populate the cells in the column.</span></span> <span data-ttu-id="a30d3-131">Если приложение Excel, в котором [](../reference/requirement-sets/excel-api-requirement-sets.md) работает код, поддерживает набор требований **ExcelApi 1.2,** ширина столбцов и высота строк задаются таким образом, чтобы наилучшим образом соответствовать текущим данным в таблице.</span><span class="sxs-lookup"><span data-stu-id="a30d3-131">If the Excel application where the code is running supports [requirement set](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, the width of the columns and height of the rows are set to best fit the current data in the table.</span></span>
+<span data-ttu-id="b8846-129">В примере кода ниже показано, как добавить новый столбец в таблицу **ExpensesTable** (Таблица расходов) на листе **Sample** (Пример).</span><span class="sxs-lookup"><span data-stu-id="b8846-129">The following code sample adds a new column to the table named **ExpensesTable** within the worksheet named **Sample**.</span></span> <span data-ttu-id="b8846-130">Новый столбец будет добавлен после всех существующих столбцов в таблице. Он будет содержать заголовок Day of the Week (День недели), а также данные для заполнения ячеек в столбце.</span><span class="sxs-lookup"><span data-stu-id="b8846-130">The new column is added after all existing columns in the table and contains a header ("Day of the Week") as well as data to populate the cells in the column.</span></span> <span data-ttu-id="b8846-131">Если Excel, в котором работает код, [](../reference/requirement-sets/excel-api-requirement-sets.md) поддерживает набор требований **ExcelApi 1.2,** то ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.</span><span class="sxs-lookup"><span data-stu-id="b8846-131">If the Excel application where the code is running supports [requirement set](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, the width of the columns and height of the rows are set to best fit the current data in the table.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -128,13 +128,13 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a30d3-132">**Таблица с новым столбцом**</span><span class="sxs-lookup"><span data-stu-id="a30d3-132">**Table with new column**</span></span>
+<span data-ttu-id="b8846-132">**Таблица с новым столбцом**</span><span class="sxs-lookup"><span data-stu-id="b8846-132">**Table with new column**</span></span>
 
 ![Таблица с новым столбцом в Excel](../images/excel-tables-add-column.png)
 
-### <a name="add-a-column-that-contains-formulas"></a><span data-ttu-id="a30d3-134">Добавление столбца, содержащего формулы</span><span class="sxs-lookup"><span data-stu-id="a30d3-134">Add a column that contains formulas</span></span>
+### <a name="add-a-column-that-contains-formulas"></a><span data-ttu-id="b8846-134">Добавление столбца, содержащего формулы</span><span class="sxs-lookup"><span data-stu-id="b8846-134">Add a column that contains formulas</span></span>
 
-<span data-ttu-id="a30d3-135">В примере кода ниже показано, как добавить новый столбец в таблицу **ExpensesTable** (Таблица расходов) на листе **Sample** (Пример).</span><span class="sxs-lookup"><span data-stu-id="a30d3-135">The following code sample adds a new column to the table named **ExpensesTable** within the worksheet named **Sample**.</span></span> <span data-ttu-id="a30d3-136">Новый столбец будет добавлен в конец таблицы, будет содержать заголовок Type of the Day (Тип дня), и в нем будет использована формула для заполнения каждой ячейки столбца.</span><span class="sxs-lookup"><span data-stu-id="a30d3-136">The new column is added to the end of the table, contains a header ("Type of the Day"), and uses a formula to populate each data cell in the column.</span></span> <span data-ttu-id="a30d3-137">Если приложение Excel, в котором [](../reference/requirement-sets/excel-api-requirement-sets.md) работает код, поддерживает набор требований **ExcelApi 1.2,** ширина столбцов и высота строк задаются таким образом, чтобы наилучшим образом соответствовать текущим данным в таблице.</span><span class="sxs-lookup"><span data-stu-id="a30d3-137">If the Excel application where the code is running supports [requirement set](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, the width of the columns and height of the rows are set to best fit the current data in the table.</span></span>
+<span data-ttu-id="b8846-135">В примере кода ниже показано, как добавить новый столбец в таблицу **ExpensesTable** (Таблица расходов) на листе **Sample** (Пример).</span><span class="sxs-lookup"><span data-stu-id="b8846-135">The following code sample adds a new column to the table named **ExpensesTable** within the worksheet named **Sample**.</span></span> <span data-ttu-id="b8846-136">Новый столбец будет добавлен в конец таблицы, будет содержать заголовок Type of the Day (Тип дня), и в нем будет использована формула для заполнения каждой ячейки столбца.</span><span class="sxs-lookup"><span data-stu-id="b8846-136">The new column is added to the end of the table, contains a header ("Type of the Day"), and uses a formula to populate each data cell in the column.</span></span> <span data-ttu-id="b8846-137">Если Excel, в котором работает код, [](../reference/requirement-sets/excel-api-requirement-sets.md) поддерживает набор требований **ExcelApi 1.2,** то ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.</span><span class="sxs-lookup"><span data-stu-id="b8846-137">If the Excel application where the code is running supports [requirement set](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, the width of the columns and height of the rows are set to best fit the current data in the table.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -161,13 +161,40 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a30d3-138">**Таблица с новым столбцом, содержащим вычисленные значения**</span><span class="sxs-lookup"><span data-stu-id="a30d3-138">**Table with new calculated column**</span></span>
+<span data-ttu-id="b8846-138">**Таблица с новым столбцом, содержащим вычисленные значения**</span><span class="sxs-lookup"><span data-stu-id="b8846-138">**Table with new calculated column**</span></span>
 
 ![Таблица с новым столбцом, содержащим вычисленные значения, в Excel](../images/excel-tables-add-calculated-column.png)
 
-## <a name="update-column-name"></a><span data-ttu-id="a30d3-140">Изменение имени столбца</span><span class="sxs-lookup"><span data-stu-id="a30d3-140">Update column name</span></span>
+## <a name="resize-a-table-online-only"></a><span data-ttu-id="b8846-140">Resize a table (online-only)</span><span class="sxs-lookup"><span data-stu-id="b8846-140">Resize a table (online-only)</span></span>
 
-<span data-ttu-id="a30d3-141">В примере кода ниже показано, как изменить имя первого столбца в таблице на **Purchase date**.</span><span class="sxs-lookup"><span data-stu-id="a30d3-141">The following code sample updates the name of the first column in the table to **Purchase date**.</span></span> <span data-ttu-id="a30d3-142">Если приложение Excel, в котором [](../reference/requirement-sets/excel-api-requirement-sets.md) работает код, поддерживает набор требований **ExcelApi 1.2,** ширина столбцов и высота строк задаются таким образом, чтобы наилучшим образом соответствовать текущим данным в таблице.</span><span class="sxs-lookup"><span data-stu-id="a30d3-142">If the Excel application where the code is running supports [requirement set](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, the width of the columns and height of the rows are set to best fit the current data in the table.</span></span>
+> [!NOTE]
+> <span data-ttu-id="b8846-141">В `Table.resize` настоящее время метод доступен только в ExcelApiOnline 1.1.</span><span class="sxs-lookup"><span data-stu-id="b8846-141">The `Table.resize` method is currently only available in ExcelApiOnline 1.1.</span></span> <span data-ttu-id="b8846-142">Дополнительные дополнительные [Excel API JavaScript в интернете.](../reference/requirement-sets/excel-api-online-requirement-set.md)</span><span class="sxs-lookup"><span data-stu-id="b8846-142">To learn more, see [Excel JavaScript API online-only requirement set](../reference/requirement-sets/excel-api-online-requirement-set.md).</span></span>
+
+<span data-ttu-id="b8846-143">Надстройка может изменять объем таблицы без добавления данных в таблицу или изменения значений ячейки.</span><span class="sxs-lookup"><span data-stu-id="b8846-143">Your add-in can resize a table without adding data to the table or changing cell values.</span></span> <span data-ttu-id="b8846-144">Чтобы повторно использовать таблицу, используйте [метод Table.resize.](/javascript/api/excel/excel.table#resize_newRange_)</span><span class="sxs-lookup"><span data-stu-id="b8846-144">To resize a table, use the [Table.resize](/javascript/api/excel/excel.table#resize_newRange_) method.</span></span> <span data-ttu-id="b8846-145">В следующем примере кода показано, как сделать таблицу повторной.</span><span class="sxs-lookup"><span data-stu-id="b8846-145">The following code sample shows how to resize a table.</span></span> <span data-ttu-id="b8846-146">В этом примере кода используется **Раздел ExpensesTable** из раздела [Создание](#create-a-table) таблицы ранее в этой статье и задает новый диапазон таблицы **A1:D20**.</span><span class="sxs-lookup"><span data-stu-id="b8846-146">This code sample uses the **ExpensesTable** from the [Create a table](#create-a-table) section earlier in this article and sets the new range of the table to **A1:D20**.</span></span>
+
+```js
+Excel.run(function (context) {
+    // Retrieve the worksheet and a table on that worksheet.
+    var sheet = context.workbook.worksheets.getItem("Sample");
+    var expensesTable = sheet.tables.getItem("ExpensesTable");
+
+    // Resize the table.
+    expensesTable.resize("A1:D20");
+
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+> [!IMPORTANT]
+> <span data-ttu-id="b8846-147">Новый диапазон таблицы должен совпадать с исходным диапазоном, а загонщики (или верхняя часть таблицы) должны быть в одной строке.</span><span class="sxs-lookup"><span data-stu-id="b8846-147">The new range of the table must overlap with the original range, and the headers (or the top of the table) must be in the same row.</span></span>
+
+<span data-ttu-id="b8846-148">**Таблица после повторного**</span><span class="sxs-lookup"><span data-stu-id="b8846-148">**Table after resize**</span></span> 
+
+![Таблица с несколькими пустыми строками в Excel](../images/excel-tables-resize.png)
+
+## <a name="update-column-name"></a><span data-ttu-id="b8846-150">Изменение имени столбца</span><span class="sxs-lookup"><span data-stu-id="b8846-150">Update column name</span></span>
+
+<span data-ttu-id="b8846-151">В примере кода ниже показано, как изменить имя первого столбца в таблице на **Purchase date**.</span><span class="sxs-lookup"><span data-stu-id="b8846-151">The following code sample updates the name of the first column in the table to **Purchase date**.</span></span> <span data-ttu-id="b8846-152">Если Excel, в котором работает код, [](../reference/requirement-sets/excel-api-requirement-sets.md) поддерживает набор требований **ExcelApi 1.2,** то ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.</span><span class="sxs-lookup"><span data-stu-id="b8846-152">If the Excel application where the code is running supports [requirement set](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, the width of the columns and height of the rows are set to best fit the current data in the table.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -190,13 +217,13 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a30d3-143">**Таблица со столбцом с новым именем**</span><span class="sxs-lookup"><span data-stu-id="a30d3-143">**Table with new column name**</span></span>
+<span data-ttu-id="b8846-153">**Таблица со столбцом с новым именем**</span><span class="sxs-lookup"><span data-stu-id="b8846-153">**Table with new column name**</span></span>
 
 ![Таблица со столбцом с новым именем в Excel](../images/excel-tables-update-column-name.png)
 
-## <a name="get-data-from-a-table"></a><span data-ttu-id="a30d3-145">Получение данных из таблицы</span><span class="sxs-lookup"><span data-stu-id="a30d3-145">Get data from a table</span></span>
+## <a name="get-data-from-a-table"></a><span data-ttu-id="b8846-155">Получение данных из таблицы</span><span class="sxs-lookup"><span data-stu-id="b8846-155">Get data from a table</span></span>
 
-<span data-ttu-id="a30d3-146">В примере кода ниже показано, как считать данные из таблицы **ExpensesTable** (Таблица расходов), размещенной на листе **Sample** (Пример), а затем отобразить эти данные под таблицей на том же листе.</span><span class="sxs-lookup"><span data-stu-id="a30d3-146">The following code sample reads data from a table named **ExpensesTable** in the worksheet named **Sample** and then outputs that data below the table in the same worksheet.</span></span>
+<span data-ttu-id="b8846-156">В примере кода ниже показано, как считать данные из таблицы **ExpensesTable** (Таблица расходов), размещенной на листе **Sample** (Пример), а затем отобразить эти данные под таблицей на том же листе.</span><span class="sxs-lookup"><span data-stu-id="b8846-156">The following code sample reads data from a table named **ExpensesTable** in the worksheet named **Sample** and then outputs that data below the table in the same worksheet.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -236,15 +263,15 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a30d3-147">**Таблица и выведенные данные**</span><span class="sxs-lookup"><span data-stu-id="a30d3-147">**Table and data output**</span></span>
+<span data-ttu-id="b8846-157">**Таблица и выведенные данные**</span><span class="sxs-lookup"><span data-stu-id="b8846-157">**Table and data output**</span></span>
 
 ![Данные из таблицы в Excel](../images/excel-tables-get-data.png)
 
-## <a name="detect-data-changes"></a><span data-ttu-id="a30d3-149">Обнаружение изменений данных</span><span class="sxs-lookup"><span data-stu-id="a30d3-149">Detect data changes</span></span>
+## <a name="detect-data-changes"></a><span data-ttu-id="b8846-159">Обнаружение изменений данных</span><span class="sxs-lookup"><span data-stu-id="b8846-159">Detect data changes</span></span>
 
-<span data-ttu-id="a30d3-150">Возможно, надстройке потребуется реагировать на изменения пользователями данных в таблице.</span><span class="sxs-lookup"><span data-stu-id="a30d3-150">Your add-in may need to react to users changing the data in a table.</span></span> <span data-ttu-id="a30d3-151">Чтобы обнаружить эти изменения, можно [зарегистрировать обработчик событий](excel-add-ins-events.md#register-an-event-handler) для события `onChanged` таблицы.</span><span class="sxs-lookup"><span data-stu-id="a30d3-151">To detect these changes, you can [register an event handler](excel-add-ins-events.md#register-an-event-handler) for the `onChanged` event of a table.</span></span> <span data-ttu-id="a30d3-152">Обработчики события `onChanged` получают объект [TableChangedEventArgs](/javascript/api/excel/excel.tablechangedeventargs) при возникновении события.</span><span class="sxs-lookup"><span data-stu-id="a30d3-152">Event handlers for the `onChanged` event receive a [TableChangedEventArgs](/javascript/api/excel/excel.tablechangedeventargs) object when the event fires.</span></span>
+<span data-ttu-id="b8846-160">Возможно, надстройке потребуется реагировать на изменения пользователями данных в таблице.</span><span class="sxs-lookup"><span data-stu-id="b8846-160">Your add-in may need to react to users changing the data in a table.</span></span> <span data-ttu-id="b8846-161">Чтобы обнаружить эти изменения, можно [зарегистрировать обработчик событий](excel-add-ins-events.md#register-an-event-handler) для события `onChanged` таблицы.</span><span class="sxs-lookup"><span data-stu-id="b8846-161">To detect these changes, you can [register an event handler](excel-add-ins-events.md#register-an-event-handler) for the `onChanged` event of a table.</span></span> <span data-ttu-id="b8846-162">Обработчики события `onChanged` получают объект [TableChangedEventArgs](/javascript/api/excel/excel.tablechangedeventargs) при возникновении события.</span><span class="sxs-lookup"><span data-stu-id="b8846-162">Event handlers for the `onChanged` event receive a [TableChangedEventArgs](/javascript/api/excel/excel.tablechangedeventargs) object when the event fires.</span></span>
 
-<span data-ttu-id="a30d3-153">Объект `TableChangedEventArgs` предоставляет сведения об изменениях и источнике.</span><span class="sxs-lookup"><span data-stu-id="a30d3-153">The `TableChangedEventArgs` object provides information about the changes and the source.</span></span> <span data-ttu-id="a30d3-154">Так как событие `onChanged` возникает при изменении формата или значения данных, может быть полезно, чтобы надстройка проверяла, действительно ли значения изменились.</span><span class="sxs-lookup"><span data-stu-id="a30d3-154">Since `onChanged` fires when either the format or value of the data changes, it can be useful to have your add-in check if the values have actually changed.</span></span> <span data-ttu-id="a30d3-155">Свойство `details` объединяет эти сведения в виде интерфейса [ChangedEventDetail](/javascript/api/excel/excel.changedeventdetail).</span><span class="sxs-lookup"><span data-stu-id="a30d3-155">The `details` property encapsulates this information as a [ChangedEventDetail](/javascript/api/excel/excel.changedeventdetail).</span></span> <span data-ttu-id="a30d3-156">В следующем примере кода показано, как отобразить значения и типы измененной ячейки до и после изменения.</span><span class="sxs-lookup"><span data-stu-id="a30d3-156">The following code sample shows how to display the before and after values and types of a cell that has been changed.</span></span>
+<span data-ttu-id="b8846-163">Объект `TableChangedEventArgs` предоставляет сведения об изменениях и источнике.</span><span class="sxs-lookup"><span data-stu-id="b8846-163">The `TableChangedEventArgs` object provides information about the changes and the source.</span></span> <span data-ttu-id="b8846-164">Так как событие `onChanged` возникает при изменении формата или значения данных, может быть полезно, чтобы надстройка проверяла, действительно ли значения изменились.</span><span class="sxs-lookup"><span data-stu-id="b8846-164">Since `onChanged` fires when either the format or value of the data changes, it can be useful to have your add-in check if the values have actually changed.</span></span> <span data-ttu-id="b8846-165">Свойство `details` объединяет эти сведения в виде интерфейса [ChangedEventDetail](/javascript/api/excel/excel.changedeventdetail).</span><span class="sxs-lookup"><span data-stu-id="b8846-165">The `details` property encapsulates this information as a [ChangedEventDetail](/javascript/api/excel/excel.changedeventdetail).</span></span> <span data-ttu-id="b8846-166">В следующем примере кода показано, как отобразить значения и типы измененной ячейки до и после изменения.</span><span class="sxs-lookup"><span data-stu-id="b8846-166">The following code sample shows how to display the before and after values and types of a cell that has been changed.</span></span>
 
 ```js
 // This function would be used as an event handler for the Table.onChanged event.
@@ -261,9 +288,9 @@ function onTableChanged(eventArgs) {
 }
 ```
 
-## <a name="sort-data-in-a-table"></a><span data-ttu-id="a30d3-157">Сортировка данных в таблице</span><span class="sxs-lookup"><span data-stu-id="a30d3-157">Sort data in a table</span></span>
+## <a name="sort-data-in-a-table"></a><span data-ttu-id="b8846-167">Сортировка данных в таблице</span><span class="sxs-lookup"><span data-stu-id="b8846-167">Sort data in a table</span></span>
 
-<span data-ttu-id="a30d3-158">В примере кода ниже показано, как отсортировать данные по убыванию в четвертом столбце таблицы.</span><span class="sxs-lookup"><span data-stu-id="a30d3-158">The following code sample sorts table data in descending order according to the values in the fourth column of the table.</span></span>
+<span data-ttu-id="b8846-168">В примере кода ниже показано, как отсортировать данные по убыванию в четвертом столбце таблицы.</span><span class="sxs-lookup"><span data-stu-id="b8846-168">The following code sample sorts table data in descending order according to the values in the fourth column of the table.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -284,15 +311,15 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a30d3-159">**Данные таблицы, отсортированные по столбцу Amount (Сумма) в порядке убывания**</span><span class="sxs-lookup"><span data-stu-id="a30d3-159">**Table data sorted by Amount (descending)**</span></span>
+<span data-ttu-id="b8846-169">**Данные таблицы, отсортированные по столбцу Amount (Сумма) в порядке убывания**</span><span class="sxs-lookup"><span data-stu-id="b8846-169">**Table data sorted by Amount (descending)**</span></span>
 
-![Сортировка данных таблицы в Excel](../images/excel-tables-sort.png)
+![Отсортировали данные таблицы в Excel](../images/excel-tables-sort.png)
 
-<span data-ttu-id="a30d3-161">При сортировке данных на листе создается уведомление о событии.</span><span class="sxs-lookup"><span data-stu-id="a30d3-161">When data is sorted in a worksheet, an event notification fires.</span></span> <span data-ttu-id="a30d3-162">Дополнительные сведения о событиях, связанных с сортировкой, и о регистрации обработчиков событий надстройкой в ответ на такие события см. в статье [Обработка событий сортировки](excel-add-ins-worksheets.md#handle-sorting-events).</span><span class="sxs-lookup"><span data-stu-id="a30d3-162">To learn more about sort-related events and how your add-in can register event handlers to respond to such events, see [Handle sorting events](excel-add-ins-worksheets.md#handle-sorting-events).</span></span>
+<span data-ttu-id="b8846-171">При сортировке данных на листе создается уведомление о событии.</span><span class="sxs-lookup"><span data-stu-id="b8846-171">When data is sorted in a worksheet, an event notification fires.</span></span> <span data-ttu-id="b8846-172">Дополнительные сведения о событиях, связанных с сортировкой, и о регистрации обработчиков событий надстройкой в ответ на такие события см. в статье [Обработка событий сортировки](excel-add-ins-worksheets.md#handle-sorting-events).</span><span class="sxs-lookup"><span data-stu-id="b8846-172">To learn more about sort-related events and how your add-in can register event handlers to respond to such events, see [Handle sorting events](excel-add-ins-worksheets.md#handle-sorting-events).</span></span>
 
-## <a name="apply-filters-to-a-table"></a><span data-ttu-id="a30d3-163">Применение фильтров к таблице</span><span class="sxs-lookup"><span data-stu-id="a30d3-163">Apply filters to a table</span></span>
+## <a name="apply-filters-to-a-table"></a><span data-ttu-id="b8846-173">Применение фильтров к таблице</span><span class="sxs-lookup"><span data-stu-id="b8846-173">Apply filters to a table</span></span>
 
-<span data-ttu-id="a30d3-p114">В примере кода ниже показано, как применить фильтры для столбцов **Amount** (Сумма) и **Category** (Категория) в таблице. В результате применения фильтров будут отображены только те строки, у которых в столбце **Category** (Категория) содержится одно из указанных значений, а значения в столбце **Amount** (Сумма) меньше среднего значения для всех строк.</span><span class="sxs-lookup"><span data-stu-id="a30d3-p114">The following code sample applies filters to the **Amount** column and the **Category** column within a table. As a result of the filters, only rows where **Category** is one of the specified values and **Amount** is below the average value for all rows is shown.</span></span>
+<span data-ttu-id="b8846-p116">В примере кода ниже показано, как применить фильтры для столбцов **Amount** (Сумма) и **Category** (Категория) в таблице. В результате применения фильтров будут отображены только те строки, у которых в столбце **Category** (Категория) содержится одно из указанных значений, а значения в столбце **Amount** (Сумма) меньше среднего значения для всех строк.</span><span class="sxs-lookup"><span data-stu-id="b8846-p116">The following code sample applies filters to the **Amount** column and the **Category** column within a table. As a result of the filters, only rows where **Category** is one of the specified values and **Amount** is below the average value for all rows is shown.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -318,13 +345,13 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a30d3-166">**Таблица данных, в которой применены фильтры для столбцов Category (Категория) и Amount (Сумма)**</span><span class="sxs-lookup"><span data-stu-id="a30d3-166">**Table data with filters applied for Category and Amount**</span></span>
+<span data-ttu-id="b8846-176">**Таблица данных, в которой применены фильтры для столбцов Category (Категория) и Amount (Сумма)**</span><span class="sxs-lookup"><span data-stu-id="b8846-176">**Table data with filters applied for Category and Amount**</span></span>
 
 ![Отфильтрованные данные таблицы в Excel](../images/excel-tables-filters-apply.png)
 
-## <a name="clear-table-filters"></a><span data-ttu-id="a30d3-168">Удаление фильтров в таблице</span><span class="sxs-lookup"><span data-stu-id="a30d3-168">Clear table filters</span></span>
+## <a name="clear-table-filters"></a><span data-ttu-id="b8846-178">Удаление фильтров в таблице</span><span class="sxs-lookup"><span data-stu-id="b8846-178">Clear table filters</span></span>
 
-<span data-ttu-id="a30d3-169">В примере кода ниже показано, как удалить все фильтры, примененные к таблице.</span><span class="sxs-lookup"><span data-stu-id="a30d3-169">The following code sample clears any filters currently applied on the table.</span></span>
+<span data-ttu-id="b8846-179">В примере кода ниже показано, как удалить все фильтры, примененные к таблице.</span><span class="sxs-lookup"><span data-stu-id="b8846-179">The following code sample clears any filters currently applied on the table.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -337,13 +364,13 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a30d3-170">**Данные таблицы без фильтров**</span><span class="sxs-lookup"><span data-stu-id="a30d3-170">**Table data with no filters applied**</span></span>
+<span data-ttu-id="b8846-180">**Данные таблицы без фильтров**</span><span class="sxs-lookup"><span data-stu-id="b8846-180">**Table data with no filters applied**</span></span>
 
 ![Неотфильтрованные данные таблицы в Excel](../images/excel-tables-filters-clear.png)
 
-## <a name="get-the-visible-range-from-a-filtered-table"></a><span data-ttu-id="a30d3-172">Получение отображаемого диапазона из отфильтрованной таблицы</span><span class="sxs-lookup"><span data-stu-id="a30d3-172">Get the visible range from a filtered table</span></span>
+## <a name="get-the-visible-range-from-a-filtered-table"></a><span data-ttu-id="b8846-182">Получение отображаемого диапазона из отфильтрованной таблицы</span><span class="sxs-lookup"><span data-stu-id="b8846-182">Get the visible range from a filtered table</span></span>
 
-<span data-ttu-id="a30d3-173">В примере кода ниже показано, как получить диапазон, содержащий данные только из тех ячеек, которые в данный момент отображаются в указанной таблице, и записать значения из этого диапазона в консоль.</span><span class="sxs-lookup"><span data-stu-id="a30d3-173">The following code sample gets a range that contains data only for cells that are currently visible within the specified table, and then writes the values of that range to the console.</span></span> <span data-ttu-id="a30d3-174">Этот метод можно использовать, как показано ниже, для получения видимого содержимого таблицы при применении фильтров `getVisibleView()` столбцов.</span><span class="sxs-lookup"><span data-stu-id="a30d3-174">You can use the `getVisibleView()` method as shown below to get the visible contents of a table whenever column filters have been applied.</span></span>
+<span data-ttu-id="b8846-183">В примере кода ниже показано, как получить диапазон, содержащий данные только из тех ячеек, которые в данный момент отображаются в указанной таблице, и записать значения из этого диапазона в консоль.</span><span class="sxs-lookup"><span data-stu-id="b8846-183">The following code sample gets a range that contains data only for cells that are currently visible within the specified table, and then writes the values of that range to the console.</span></span> <span data-ttu-id="b8846-184">Метод, как показано ниже, можно использовать для получения видимого содержимого таблицы при применении фильтров `getVisibleView()` столбцов.</span><span class="sxs-lookup"><span data-stu-id="b8846-184">You can use the `getVisibleView()` method as shown below to get the visible contents of a table whenever column filters have been applied.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -360,11 +387,11 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="autofilter"></a><span data-ttu-id="a30d3-175">Автофильтр</span><span class="sxs-lookup"><span data-stu-id="a30d3-175">AutoFilter</span></span>
+## <a name="autofilter"></a><span data-ttu-id="b8846-185">Автофильтр</span><span class="sxs-lookup"><span data-stu-id="b8846-185">AutoFilter</span></span>
 
-<span data-ttu-id="a30d3-176">Надстройка может использовать объект [AutoFilter](/javascript/api/excel/excel.autofilter) таблицы для фильтрации данных.</span><span class="sxs-lookup"><span data-stu-id="a30d3-176">An add-in can use the table's [AutoFilter](/javascript/api/excel/excel.autofilter) object to filter data.</span></span> <span data-ttu-id="a30d3-177">Объект `AutoFilter` является целой структурой фильтра таблицы или диапазона.</span><span class="sxs-lookup"><span data-stu-id="a30d3-177">An `AutoFilter` object is the entire filter structure of a table or range.</span></span> <span data-ttu-id="a30d3-178">Все операции фильтрации, описанные выше в этой статье, совместимы с автофильтром.</span><span class="sxs-lookup"><span data-stu-id="a30d3-178">All of the filter operations discussed earlier in this article are compatible with the auto-filter.</span></span> <span data-ttu-id="a30d3-179">Единая точка доступа упрощает доступ к нескольким фильтрам и управление ими.</span><span class="sxs-lookup"><span data-stu-id="a30d3-179">The single access point does make it easier to access and manage multiple filters.</span></span>
+<span data-ttu-id="b8846-186">Надстройка может использовать объект [AutoFilter](/javascript/api/excel/excel.autofilter) таблицы для фильтрации данных.</span><span class="sxs-lookup"><span data-stu-id="b8846-186">An add-in can use the table's [AutoFilter](/javascript/api/excel/excel.autofilter) object to filter data.</span></span> <span data-ttu-id="b8846-187">Объект `AutoFilter` является целой структурой фильтра таблицы или диапазона.</span><span class="sxs-lookup"><span data-stu-id="b8846-187">An `AutoFilter` object is the entire filter structure of a table or range.</span></span> <span data-ttu-id="b8846-188">Все операции фильтрации, описанные выше в этой статье, совместимы с автофильтром.</span><span class="sxs-lookup"><span data-stu-id="b8846-188">All of the filter operations discussed earlier in this article are compatible with the auto-filter.</span></span> <span data-ttu-id="b8846-189">Единая точка доступа упрощает доступ к нескольким фильтрам и управление ими.</span><span class="sxs-lookup"><span data-stu-id="b8846-189">The single access point does make it easier to access and manage multiple filters.</span></span>
 
-<span data-ttu-id="a30d3-180">В следующем примере кода показана такая же [фильтрация данных, как в примере кода выше](#apply-filters-to-a-table), но выполненная полностью с помощью автофильтра.</span><span class="sxs-lookup"><span data-stu-id="a30d3-180">The following code sample shows the same [data filtering as the earlier code sample](#apply-filters-to-a-table), but done entirely through the auto-filter.</span></span>
+<span data-ttu-id="b8846-190">В следующем примере кода показана такая же [фильтрация данных, как в примере кода выше](#apply-filters-to-a-table), но выполненная полностью с помощью автофильтра.</span><span class="sxs-lookup"><span data-stu-id="b8846-190">The following code sample shows the same [data filtering as the earlier code sample](#apply-filters-to-a-table), but done entirely through the auto-filter.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -384,11 +411,11 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a30d3-181">Объект `AutoFilter` можно также применять к диапазону на уровне листа.</span><span class="sxs-lookup"><span data-stu-id="a30d3-181">An `AutoFilter` can also be applied to a range at the worksheet level.</span></span> <span data-ttu-id="a30d3-182">Дополнительные сведения см. в статье [Работа с листами с использованием API JavaScript для Excel](excel-add-ins-worksheets.md#filter-data).</span><span class="sxs-lookup"><span data-stu-id="a30d3-182">See [Work with worksheets using the Excel JavaScript API](excel-add-ins-worksheets.md#filter-data) for more information.</span></span>
+<span data-ttu-id="b8846-191">Объект `AutoFilter` можно также применять к диапазону на уровне листа.</span><span class="sxs-lookup"><span data-stu-id="b8846-191">An `AutoFilter` can also be applied to a range at the worksheet level.</span></span> <span data-ttu-id="b8846-192">Дополнительные сведения см. в статье [Работа с листами с использованием API JavaScript для Excel](excel-add-ins-worksheets.md#filter-data).</span><span class="sxs-lookup"><span data-stu-id="b8846-192">See [Work with worksheets using the Excel JavaScript API](excel-add-ins-worksheets.md#filter-data) for more information.</span></span>
 
-## <a name="format-a-table"></a><span data-ttu-id="a30d3-183">Форматирование таблицы</span><span class="sxs-lookup"><span data-stu-id="a30d3-183">Format a table</span></span>
+## <a name="format-a-table"></a><span data-ttu-id="b8846-193">Форматирование таблицы</span><span class="sxs-lookup"><span data-stu-id="b8846-193">Format a table</span></span>
 
-<span data-ttu-id="a30d3-p118">В примере кода ниже показано, как применить форматирование к таблице. В примере показано, как указать различные цвета заливки для строки заголовков, основной части, второй строки и первого столбца таблицы. Сведения о свойствах, которые вы можете использовать для задания формата, см. в статье [Объект RangeFormat (API JavaScript для Excel)](/javascript/api/excel/excel.rangeformat).</span><span class="sxs-lookup"><span data-stu-id="a30d3-p118">The following code sample applies formatting to a table. It specifies different fill colors for the header row of the table, the body of the table, the second row of the table, and the first column of the table. For information about the properties you can use to specify format, see [RangeFormat Object (JavaScript API for Excel)](/javascript/api/excel/excel.rangeformat).</span></span>
+<span data-ttu-id="b8846-p120">В примере кода ниже показано, как применить форматирование к таблице. В примере показано, как указать различные цвета заливки для строки заголовков, основной части, второй строки и первого столбца таблицы. Сведения о свойствах, которые вы можете использовать для задания формата, см. в статье [Объект RangeFormat (API JavaScript для Excel)](/javascript/api/excel/excel.rangeformat).</span><span class="sxs-lookup"><span data-stu-id="b8846-p120">The following code sample applies formatting to a table. It specifies different fill colors for the header row of the table, the body of the table, the second row of the table, and the first column of the table. For information about the properties you can use to specify format, see [RangeFormat Object (JavaScript API for Excel)](/javascript/api/excel/excel.rangeformat).</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -404,13 +431,13 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a30d3-187">**Таблица после применения форматирования**</span><span class="sxs-lookup"><span data-stu-id="a30d3-187">**Table after formatting is applied**</span></span>
+<span data-ttu-id="b8846-197">**Таблица после применения форматирования**</span><span class="sxs-lookup"><span data-stu-id="b8846-197">**Table after formatting is applied**</span></span>
 
 ![Таблица после применения форматирования в Excel](../images/excel-tables-formatting-after.png)
 
-## <a name="convert-a-range-to-a-table"></a><span data-ttu-id="a30d3-189">Преобразование диапазона в таблицу</span><span class="sxs-lookup"><span data-stu-id="a30d3-189">Convert a range to a table</span></span>
+## <a name="convert-a-range-to-a-table"></a><span data-ttu-id="b8846-199">Преобразование диапазона в таблицу</span><span class="sxs-lookup"><span data-stu-id="b8846-199">Convert a range to a table</span></span>
 
-<span data-ttu-id="a30d3-190">В примере кода ниже показано, как создать диапазон данных и преобразовывать его в таблицу.</span><span class="sxs-lookup"><span data-stu-id="a30d3-190">The following code sample creates a range of data and then converts that range to a table.</span></span>
+<span data-ttu-id="b8846-200">В примере кода ниже показано, как создать диапазон данных и преобразовывать его в таблицу.</span><span class="sxs-lookup"><span data-stu-id="b8846-200">The following code sample creates a range of data and then converts that range to a table.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -444,17 +471,17 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a30d3-191">**Данные в диапазоне (перед его преобразованием в таблицу)**</span><span class="sxs-lookup"><span data-stu-id="a30d3-191">**Data in the range (before the range is converted to a table)**</span></span>
+<span data-ttu-id="b8846-201">**Данные в диапазоне (перед его преобразованием в таблицу)**</span><span class="sxs-lookup"><span data-stu-id="b8846-201">**Data in the range (before the range is converted to a table)**</span></span>
 
 ![Данные в диапазоне в Excel](../images/excel-ranges.png)
 
-<span data-ttu-id="a30d3-193">**Данные в таблице (после преобразования диапазона в таблицу)**</span><span class="sxs-lookup"><span data-stu-id="a30d3-193">**Data in the table (after the range is converted to a table)**</span></span>
+<span data-ttu-id="b8846-203">**Данные в таблице (после преобразования диапазона в таблицу)**</span><span class="sxs-lookup"><span data-stu-id="b8846-203">**Data in the table (after the range is converted to a table)**</span></span>
 
 ![Данные в таблице в Excel](../images/excel-tables-from-range.png)
 
-## <a name="import-json-data-into-a-table"></a><span data-ttu-id="a30d3-195">Импорт данных JSON в таблицу</span><span class="sxs-lookup"><span data-stu-id="a30d3-195">Import JSON data into a table</span></span>
+## <a name="import-json-data-into-a-table"></a><span data-ttu-id="b8846-205">Импорт данных JSON в таблицу</span><span class="sxs-lookup"><span data-stu-id="b8846-205">Import JSON data into a table</span></span>
 
-<span data-ttu-id="a30d3-196">В примере кода ниже показано, как создать таблицу на листе **Sample** (Пример), а затем заполнить ее с помощью объекта JSON, который определяет две строки данных.</span><span class="sxs-lookup"><span data-stu-id="a30d3-196">The following code sample creates a table in the worksheet named **Sample** and then populates the table by using a JSON object that defines two rows of data.</span></span> <span data-ttu-id="a30d3-197">Если приложение Excel, в котором [](../reference/requirement-sets/excel-api-requirement-sets.md) работает код, поддерживает набор требований **ExcelApi 1.2,** ширина столбцов и высота строк задаются таким образом, чтобы наилучшим образом соответствовать текущим данным в таблице.</span><span class="sxs-lookup"><span data-stu-id="a30d3-197">If the Excel application where the code is running supports [requirement set](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, the width of the columns and height of the rows are set to best fit the current data in the table.</span></span>
+<span data-ttu-id="b8846-206">В примере кода ниже показано, как создать таблицу на листе **Sample** (Пример), а затем заполнить ее с помощью объекта JSON, который определяет две строки данных.</span><span class="sxs-lookup"><span data-stu-id="b8846-206">The following code sample creates a table in the worksheet named **Sample** and then populates the table by using a JSON object that defines two rows of data.</span></span> <span data-ttu-id="b8846-207">Если Excel, в котором работает код, [](../reference/requirement-sets/excel-api-requirement-sets.md) поддерживает набор требований **ExcelApi 1.2,** то ширина столбцов и высота строк лучше всего соответствуют текущим данным в таблице.</span><span class="sxs-lookup"><span data-stu-id="b8846-207">If the Excel application where the code is running supports [requirement set](../reference/requirement-sets/excel-api-requirement-sets.md) **ExcelApi 1.2**, the width of the columns and height of the rows are set to best fit the current data in the table.</span></span>
 
 ```js
 Excel.run(function (context) {
@@ -495,10 +522,10 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-<span data-ttu-id="a30d3-198">**Новая таблица**</span><span class="sxs-lookup"><span data-stu-id="a30d3-198">**New table**</span></span>
+<span data-ttu-id="b8846-208">**Новая таблица**</span><span class="sxs-lookup"><span data-stu-id="b8846-208">**New table**</span></span>
 
-![Новая таблица из импортируемых данных JSON в Excel](../images/excel-tables-create-from-json.png)
+![Новая таблица из импортных данных JSON в Excel](../images/excel-tables-create-from-json.png)
 
-## <a name="see-also"></a><span data-ttu-id="a30d3-200">См. также</span><span class="sxs-lookup"><span data-stu-id="a30d3-200">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b8846-210">См. также</span><span class="sxs-lookup"><span data-stu-id="b8846-210">See also</span></span>
 
-- [<span data-ttu-id="a30d3-201">Объектная модель JavaScript для Excel в надстройках Office</span><span class="sxs-lookup"><span data-stu-id="a30d3-201">Excel JavaScript object model in Office Add-ins</span></span>](excel-add-ins-core-concepts.md)
+- [<span data-ttu-id="b8846-211">Объектная модель JavaScript для Excel в надстройках Office</span><span class="sxs-lookup"><span data-stu-id="b8846-211">Excel JavaScript object model in Office Add-ins</span></span>](excel-add-ins-core-concepts.md)
