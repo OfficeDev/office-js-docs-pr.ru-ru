@@ -1,15 +1,15 @@
 ---
 title: Работа с книгами с использованием API JavaScript для Excel
 description: Узнайте, как выполнять общие задачи с помощью книг или функций уровня приложений с помощью Excel API JavaScript.
-ms.date: 06/01/2021
+ms.date: 06/07/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 638384a1e08af182db042638c655d8d74354c637
-ms.sourcegitcommit: ba4fb7087b9841d38bb46a99a63e88df49514a4d
+ms.openlocfilehash: 48ceb882a7beea3fa3ca08216f3ee1dd82ba4fa9
+ms.sourcegitcommit: 5a151d4df81e5640363774406d0f329d6a0d3db8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "52779350"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853985"
 ---
 # <a name="work-with-workbooks-using-the-excel-javascript-api"></a>Работа с книгами с использованием API JavaScript для Excel
 
@@ -341,6 +341,46 @@ API Excel также позволяет надстройкам отключит�
 
 ```js
 context.application.suspendApiCalculationUntilNextSync();
+```
+
+## <a name="detect-workbook-activation-preview"></a>Обнаружение активации книг (предварительный просмотр)
+
+> [!NOTE]
+> В `Workbook.onActivated` настоящее время событие доступно только в общедоступных предварительных просмотрах. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
+> 
+
+Ваша надстройка может обнаруживать при активации книги. Книга становится  неактивной, когда пользователь переключает фокус на другую книгу, на другое приложение или (в Excel в Интернете) на другую вкладку веб-браузера. Книга *активируется,* когда пользователь возвращает фокус в книгу. Активация книги может вызвать функции вызова в надстройке, например освежающие данные книги.
+
+Чтобы определить, когда книга активирована, [зарегистрируйте](excel-add-ins-events.md#register-an-event-handler) обработник событий для [события onActivated](/javascript/api/excel/excel.workbook#onActivated) книги. Обработчики событий `onActivated` для события получают объект [WorkbookActivatedEventArgs](/javascript/api/excel/excel.workbookactivatedeventargs) при пожаре события.
+
+> [!IMPORTANT]
+> Событие `onActivated` не определяет, когда книга открывается. Это событие обнаруживает только тогда, когда пользователь переключается на уже открытую книгу.
+
+В следующем примере кода показано, как зарегистрировать обработник событий `onActivated` и настроить функцию вызова.
+
+```js
+Excel.run(function (context) {
+    // Retrieve the workbook.
+    var workbook = context.workbook;
+
+    // Register the workbook activated event handler.
+    workbook.onActivated.add(workbookActivated);
+
+    return context.sync();
+});
+
+function workbookActivated(event) {
+    Excel.run(function (context) {
+        // Retrieve the workbook and load the name.
+        var workbook = context.workbook;
+        workbook.load("name");
+        
+        return context.sync().then(function () {
+            // Callback function for when the workbook is activated.
+            console.log(`The workbook ${workbook.name} was activated.`);
+        });
+    });
+}
 ```
 
 ## <a name="save-the-workbook"></a>Сохраните книгу.

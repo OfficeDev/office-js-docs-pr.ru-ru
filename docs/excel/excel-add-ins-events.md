@@ -1,14 +1,14 @@
 ---
 title: Работа с событиями при помощи API JavaScript для Excel
 description: Список событий для Excel JavaScript. Это включает сведения об использовании обработчиков событий и связанных шаблонов.
-ms.date: 06/02/2021
+ms.date: 06/04/2021
 localization_priority: Normal
-ms.openlocfilehash: 50d9c4c2a15a955f0a96c70464fa0165625ea6f8
-ms.sourcegitcommit: 17b5a076375bc5dc3f91d3602daeb7535d67745d
+ms.openlocfilehash: 0a13508c501d30d74f1d21e15cf8f4e09b3f1c6a
+ms.sourcegitcommit: 5a151d4df81e5640363774406d0f329d6a0d3db8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "52783507"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853978"
 ---
 # <a name="work-with-events-using-the-excel-javascript-api"></a>Работа с событиями при помощи API JavaScript для Excel
 
@@ -43,6 +43,7 @@ ms.locfileid: "52783507"
 
 | Событие | Описание | Поддерживаемые объекты |
 |:---------------|:-------------|:-----------|
+| `onActivated` | Возникает при активации книги. | [**Workbook**](/javascript/api/excel/excel.workbook#onActivated) |
 | `onFiltered` | Возникает при применении фильтра к объекту. | [**Table**](/javascript/api/excel/excel.table#onfiltered), [**TableCollection**](/javascript/api/excel/excel.tablecollection#onfiltered), [**Worksheet**](/javascript/api/excel/excel.worksheet#onfiltered), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#onfiltered) |
 | `onFormulaChanged` | Возникает при смене формулы. | [**Worksheet**](/javascript/api/excel/excel.worksheet#onFormulaChanged), [**WorksheetCollection**](/javascript/api/excel/excel.worksheetcollection#onFormulaChanged) |
 

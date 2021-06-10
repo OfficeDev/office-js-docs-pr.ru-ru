@@ -3,12 +3,12 @@ title: Использование веб-служб Exchange (EWS) из надс
 description: Содержит пример, в котором показано, как надстройка Outlook может запрашивать сведения из веб-службы Exchange.
 ms.date: 04/28/2020
 localization_priority: Normal
-ms.openlocfilehash: b86040f513f4bd368e964270ba3e94184022938f
-ms.sourcegitcommit: d28392721958555d6edea48cea000470bd27fcf7
+ms.openlocfilehash: 16d20ca30f2860b8103257860a8619c1d51d8523
+ms.sourcegitcommit: 5a151d4df81e5640363774406d0f329d6a0d3db8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "49839700"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853964"
 ---
 # <a name="call-web-services-from-an-outlook-add-in"></a>Вызов веб-служб из надстройки Outlook
 
@@ -33,7 +33,7 @@ ms.locfileid: "49839700"
 
 Веб-службы Exchange поддерживают различные операции на сервере Exchange. Например, операции копирования, поиска, обновления или отправки на уровне элемента, а также операции создания, получения или обновления на уровне папки. Чтобы выполнить операцию веб-служб Exchange, создайте для нее SOAP-запрос в формате XML. После завершения операции будет возвращен SOAP-ответ в формате XML с необходимыми данными. SOAP-запросы к веб-службам Exchange и их SOAP-ответы соответствуют схеме, определенной в файле Messages.xsd. Как и другие файлы схемы веб-служб Exchange, файл Message.xsd расположен в виртуальном каталоге IIS, в котором размещены веб-службы Exchange.
 
-Чтобы использовать этот `makeEwsRequestAsync` метод для инициации операции EWS, указим следующее:
+Чтобы использовать метод `makeEwsRequestAsync` для инициации операции EWS, ука-
 
 - XML-код SOAP-запроса для соответствующей операции EWS в качестве аргумента для параметра  _data_;
 
@@ -41,7 +41,7 @@ ms.locfileid: "49839700"
 
 - все необязательные входные данные для этого метода обратного вызова (в качестве аргумента  _userContext_).
 
-После выполнения запроса EWS SOAP Outlook вызывает метод вызова с одним аргументом, который является объектом [AsyncResult.](/javascript/api/office/office.asyncresult) Метод callback может получить доступ к двум свойствам объекта: к свойству, которое содержит отклик XML SOAP операции `AsyncResult` EWS, и, при желании, к свойству, которое содержит любые данные, переданные в качестве `value` `asyncContext` `userContext` параметра. Как правило, метод callback затем синтаксирует XML в soap-ответе, чтобы получить любую релевантную информацию, и обрабатывает эту информацию соответствующим образом.
+Когда запрос EWS SOAP завершен, Outlook вызывает метод вызова с одним аргументом, который является [объектом AsyncResult.](/javascript/api/office/office.asyncresult) Метод вызова может получить доступ к двум свойствам объекта: свойству, которое содержит ответ XML SOAP операции EWS, и необязательно свойство, которое содержит все данные, переданные в качестве `AsyncResult` `value` `asyncContext` `userContext` параметра. Обычно метод вызываемого вызова затем обрабатывает XML в ответе SOAP, чтобы получить любую соответствующую информацию, и обрабатывает эту информацию соответствующим образом.
 
 
 ## <a name="tips-for-parsing-ews-responses"></a>Советы по анализу ответов веб-служб Exchange
@@ -49,9 +49,9 @@ ms.locfileid: "49839700"
 При анализе SOAP-ответа, полученного при выполнении операции веб-служб Exchange, обратите внимание на приведенные ниже особенности, связанные с типом браузера.
 
 
-- Укажите префикс для имени тега при использовании метода DOM, чтобы включить поддержку `getElementsByTagName` Internet Explorer.
+- Укажите префикс для имени тега при использовании метода DOM, чтобы включить `getElementsByTagName` поддержку Internet Explorer.
 
-  `getElementsByTagName` ведет себя по-разному в зависимости от типа браузера. Например, ответ EWS может содержать следующий XML-формат (отформатированный и сокращенный для отображения):
+  `getElementsByTagName` ведет себя по-разному в зависимости от типа браузера. Например, ответ EWS может содержать следующий XML (форматированный и сокращенный для отображения):
 
    ```XML
         <t:ExtendedProperty><t:ExtendedFieldURI PropertySetId="00000000-0000-0000-0000-000000000000" 
@@ -62,7 +62,7 @@ ms.locfileid: "49839700"
         }</t:Value></t:ExtendedProperty>
    ```
 
-   Код, как по следующему, будет работать в браузере, например Chrome, чтобы получить XML-код, заключенный `ExtendedProperty` в теги:
+   Код, как и в следующем, будет работать в браузере, как Chrome, чтобы получить XML заключен `ExtendedProperty` теги:
 
    ```js
         var mailbox = Office.context.mailbox;
@@ -82,7 +82,7 @@ ms.locfileid: "49839700"
             });
    ```
 
-- Используйте свойство DOM для получения содержимого тега в ответе `textContent` EWS, как показано ниже:
+- Используйте свойство DOM для получения содержимого тега в `textContent` ответе EWS, как показано ниже:
 
    ```js
       content = $.parseJSON(value.textContent);
@@ -93,11 +93,11 @@ ms.locfileid: "49839700"
 
 ## <a name="example"></a>Пример
 
-В следующем примере `makeEwsRequestAsync` вызывается использование [операции GetItem](/exchange/client-developer/web-service-reference/getitem-operation) для получения темы элемента. В этом примере содержатся следующие три функции:
+В следующем `makeEwsRequestAsync` примере вызывается использование [операции GetItem](/exchange/client-developer/web-service-reference/getitem-operation) для получения субъекта элемента. Этот пример содержит три следующие функции:
 
--  `getSubjectRequest`Принимает в качестве входных данных ИД элемента и возвращает XML-запрос SOAP для вызова &ndash; `GetItem` указанного элемента.
+-  `getSubjectRequest`Принимает ID элемента в качестве ввода и возвращает XML для запроса SOAP для вызова &ndash; `GetItem` указанного элемента.
 
--  `sendRequest`Вызывает запрос SOAP для выбранного элемента, а затем передает soap-запрос и метод вызова, чтобы получить тему &ndash;  `getSubjectRequest` `callback` `makeEwsRequestAsync` указанного элемента.
+-  `sendRequest`Вызывает запрос SOAP для выбранного элемента, затем передает запрос SOAP и метод вызова, чтобы получить субъект &ndash;  `getSubjectRequest` `callback` `makeEwsRequestAsync` указанного элемента.
 
 -  `callback` &ndash; обрабатывает SOAP-ответ, включающий тему и другие сведения об указанном элементе.
 
@@ -148,15 +148,15 @@ function callback(asyncResult)  {
 
 ## <a name="ews-operations-that-add-ins-support"></a>Операции веб-служб Exchange, которые надстройки поддерживают
 
-С помощью этого метода надстройки Outlook могут получать доступ к подмножество операций, доступных в `makeEwsRequestAsync` EWS. Если вы не знакомы с операциями EWS и как использовать этот метод для доступа к операции, начните с примера запроса SOAP для настройки `makeEwsRequestAsync` _аргумента_ данных.
+Outlook надстройки могут получать доступ к подмножество операций, доступных в EWS с помощью `makeEwsRequestAsync` метода. Если вы не знакомы с операциями EWS и как использовать метод для доступа к операции, начните с примера запроса SOAP для настройки `makeEwsRequestAsync` _аргумента данных._
 
 Ниже описано, как можно использовать `makeEwsRequestAsync` метод:
 
 1. В XML-коде замените все идентификаторы элементов и релевантные атрибуты операций EWS на соответствующие значения.
 
-2. Включаем SOAP-запрос в качестве аргумента для  _параметра_ данных `makeEwsRequestAsync` .
+2. Включи запрос SOAP в качестве аргумента для  _параметра данных_ `makeEwsRequestAsync` .
 
-3. Укажите метод и вызов `makeEwsRequestAsync` вызова.
+3. Укажите метод вызова и вызов `makeEwsRequestAsync` .
 
 4. В методе обратного вызова проверьте результаты операции в SOAP-ответе.
 
@@ -194,12 +194,12 @@ function callback(asyncResult)  {
 
 ## <a name="authentication-and-permission-considerations-for-makeewsrequestasync"></a>Разрешения и проверка подлинности для makeEwsRequestAsync
 
-При использовании этого метода проверка подлинности запроса происходит с использованием учетных данных учетной записи электронной почты `makeEwsRequestAsync` текущего пользователя. Этот метод управляет учетными данными для вас, чтобы вам не нужно было предоставлять учетные данные проверки подлинности `makeEwsRequestAsync` в запросе.
+При использовании метода запрос проверки подлинности с помощью учетных данных учетной записи электронной почты `makeEwsRequestAsync` текущего пользователя. Метод управляет учетными данными для вас, чтобы не предоставлять учетные данные проверки подлинности `makeEwsRequestAsync` с вашим запросом.
 
 > [!NOTE]
-> Администратор сервера должен использовать  [new-WebServicesVirtualDirectory](/powershell/module/exchange/client-access-servers/New-WebServicesVirtualDirectory?view=exchange-ps&preserve-view=true) или [set-WebServicesVirtualDirectory,](/powershell/module/exchange/client-access-servers/Set-WebServicesVirtualDirectory?view=exchange-ps&preserve-view=true) чтобы установить для параметра _OAuthAuthentication_ в каталоге сервера клиентского доступа EWS true, чтобы метод можно было делать запросы `makeEwsRequestAsync` EWS.
+> Администратор сервера должен использовать  [new-WebServicesVirtualDirectory](/powershell/module/exchange/client-access-servers/New-WebServicesVirtualDirectory?view=exchange-ps&preserve-view=true) или групплет [Set-WebServicesVirtualDirectory,](/powershell/module/exchange/client-access-servers/Set-WebServicesVirtualDirectory?view=exchange-ps&preserve-view=true) чтобы установить параметр _OAuthAuthAuthentication_ в каталоге EWS сервера клиентского доступа, чтобы включить метод для запросов `makeEwsRequestAsync` EWS.
 
-Чтобы использовать метод, надстройка должна указать разрешение в манифесте `ReadWriteMailbox` `makeEwsRequestAsync` надстройки. Сведения об использовании разрешения см. в разделе `ReadWriteMailbox` [Разрешение ReadWriteMailbox](understanding-outlook-add-in-permissions.md#readwritemailbox-permission) в разделе "Сведения о разрешениях надстройки [Outlook".](understanding-outlook-add-in-permissions.md)
+Ваша надстройка должна указать разрешение в манифесте надстройки `ReadWriteMailbox` для `makeEwsRequestAsync` использования метода. Сведения об использовании разрешения см. в разделе `ReadWriteMailbox` [Разрешение ReadWriteMailbox](understanding-outlook-add-in-permissions.md#readwritemailbox-permission) в разделе Outlook разрешений [надстройки.](understanding-outlook-add-in-permissions.md)
 
 ## <a name="see-also"></a>См. также
 
@@ -211,4 +211,4 @@ function callback(asyncResult)  {
 Сведения о создании внутренних служб для надстроек с помощью веб-API ASP.NET см. в следующих статьях:
 
 - [Создание веб-службы надстройки для Office с использованием веб-API ASP.NET](/archive/blogs/officeapps/create-a-web-service-for-an-app-for-office-using-the-asp-net-web-api)
-- [Основы создания службы HTTP с использованием веб-API ASP.NET](https://www.asp.net/web-api)
+- [Основы создания службы HTTP с использованием веб-API ASP.NET](https://dotnet.microsoft.com/apps/aspnet/apis)

@@ -1,14 +1,14 @@
 ---
 title: Outlook набор требований к предварительному просмотру API надстройки
 description: Функции и API, которые в настоящее время находятся в предварительном Outlook надстройки.
-ms.date: 05/17/2021
+ms.date: 06/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 98bf56c169967ad7c994d1793afa8678d31f6892
-ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
+ms.openlocfilehash: c7ca92e6a30f3109baff5721ae4e9930ef23dc56
+ms.sourcegitcommit: 5a151d4df81e5640363774406d0f329d6a0d3db8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2021
-ms.locfileid: "52591060"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52854013"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Outlook набор требований к предварительному просмотру API надстройки
 
@@ -73,6 +73,18 @@ ms.locfileid: "52591060"
 Добавлен новый `AppointmentSensitivityType` переумыв, который представляет параметры чувствительности, доступные при встрече.
 
 **Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365)
+
+<br>
+
+---
+
+---
+
+### <a name="event-based-activation"></a>Активация на основе событий
+
+Эта функция была выпущена в [наборе требований 1.10](../requirement-set-1.10/outlook-requirement-set-1.10.md). Однако дополнительные события теперь доступны в предварительном просмотре. Дополнительные дополнительные информации см. в [дополнительных подробной информации о поддерживаемых событиях.](../../../outlook/autolaunch.md#supported-events)
+
+**Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современная)
 
 <br>
 
