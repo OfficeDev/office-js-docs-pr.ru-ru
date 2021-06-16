@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки Outlook
 description: Узнайте, как создать простую надстройку для области задач Outlook, используя API JS для Office.
-ms.date: 02/09/2021
+ms.date: 06/10/2021
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: 2ba89f400feaf0664ad98f47d8c933431341466e
-ms.sourcegitcommit: fefc279b85e37463413b6b0e84c880d9ed5d7ac3
+ms.openlocfilehash: 59d04953822122a0b8c72502c2e3250da94dfd43
+ms.sourcegitcommit: ab3d38f2829e83f624bf43c49c0d267166552eec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50234193"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "52893661"
 ---
 # <a name="build-your-first-outlook-add-in"></a>Создание первой надстройки Outlook
 
@@ -17,7 +17,7 @@ ms.locfileid: "50234193"
 
 ## <a name="create-the-add-in"></a>Создание надстройки
 
-Можно создать надстройку Office с помощью [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office) или Visual Studio. Генератор Yeoman создает проект Node.js, которым можно управлять с помощью Visual Studio Code или любого другого редактора, а Visual Studio создает решение Visual Studio.  Выберите вкладку с нужным вариантом и следуйте инструкциям, чтобы создать надстройку и протестировать ее локально.
+Можно создать надстройку Office с помощью [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office) или Visual Studio. Генератор Yeoman создает проект Node.js, которым можно управлять с помощью Visual Studio Code или любого другого редактора, а Visual Studio создает решение Visual Studio. Выберите вкладку с нужным вариантом и следуйте инструкциям, чтобы создать надстройку и протестировать ее локально.
 
 # <a name="yeoman-generator"></a>[Генератор Yeoman](#tab/yeomangenerator)
 
@@ -132,12 +132,12 @@ ms.locfileid: "50234193"
 - [Visual Studio 2019](https://www.visualstudio.com/vs/) с установленной рабочей нагрузкой **Разработка надстроек для Office и SharePoint**
 
     > [!NOTE]
-    > Если вы уже установили Visual Studio 2019, [используйте установщик Visual Studio](/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**.
+    > Если вы уже установили Visual Studio 2019, [используйте установщик Visual Studio](/visualstudio/install/modify-visual-studio), чтобы убедиться, что также установлена рабочая нагрузка **Разработка надстроек для Office и SharePoint**.
 
-- Microsoft 365
+- Microsoft 365
 
     > [!NOTE]
-    > Если у вас нет подписки на Microsoft 365, вы можете получить бесплатную подписку, зарегистрировавшись в [программе для разработчиков Microsoft 365](https://developer.microsoft.com/office/dev-program).
+    > Если у вас нет подписки на Microsoft 365, вы можете получить бесплатную подписку, зарегистрировавшись в [программе для разработчиков Microsoft 365](https://developer.microsoft.com/office/dev-program).
 
 ### <a name="create-the-add-in-project"></a>Создание проекта надстройки
 
@@ -270,7 +270,7 @@ ms.locfileid: "50234193"
 1. В диалоговом окне **Подключение к учетной записи электронной почты Exchange** введите адрес электронной почты и пароль для вашей [учетной записи Майкрософт](https://account.microsoft.com/account) и нажмите кнопку **Подключить**. Когда в браузере откроется страница входа в Outlook.com, войдите в свою учетную запись электронной почты с теми же учетными данными, которые были введены ранее.
 
     > [!NOTE]
-    > Если диалоговое окно **Подключение к учетной записи электронной почты Exchange** повторно предлагает выполнить вход, для учетных записей в вашем клиенте Microsoft 365, возможно, отключена обычная проверка подлинности. Чтобы протестировать эту надстройку, вместо этого выполните вход с помощью [учетной записи Майкрософт](https://account.microsoft.com/account).
+    > Если диалоговое окно **Подключение к учетной записи электронной почты Exchange** повторно предлагает выполнить вход или вы получили сообщение с ошибкой авторизации, для учетных записей в вашем клиенте Microsoft 365, возможно, отключена обычная проверка подлинности. Чтобы проверить надстройку, попробуйте войти снова, задав для свойства **Использование многофакторной проверки подлинности** значение True в диалогом окне "Свойства проекта веб-надстройки", или войдите с помощью [учетной записи Майкрософт](https://account.microsoft.com/account).
 
 1. В Outlook в Интернете выберите или откройте сообщение.
 
