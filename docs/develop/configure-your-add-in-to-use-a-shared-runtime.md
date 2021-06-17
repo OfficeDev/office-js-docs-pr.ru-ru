@@ -1,15 +1,15 @@
 ---
-ms.date: 04/08/2021
+ms.date: 06/14/2021
 title: Настройка надстройки Office для использования общей среды выполнения JavaScript
 ms.prod: non-product-specific
 description: Настройте надстройку Office для использования общей среды выполнения JavaScript, чтобы применять дополнительные возможности ленты, области задач и пользовательских функций.
 localization_priority: Priority
-ms.openlocfilehash: d5f0a5b6d9053f23792012f1658d213a7972b970
-ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
+ms.openlocfilehash: ecde9a5564761b2dd902596f09db156332b5af4f
+ms.sourcegitcommit: 4fa952f78be30d339ceda3bd957deb07056ca806
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51652196"
+ms.lasthandoff: 06/16/2021
+ms.locfileid: "52961260"
 ---
 # <a name="configure-your-office-add-in-to-use-a-shared-javascript-runtime"></a>Настройка надстройки Office для использования общей среды выполнения JavaScript
 
@@ -31,6 +31,9 @@ ms.locfileid: "51652196"
 
 Генератор создаст проект и установит вспомогательные компоненты Node.
 
+> [!NOTE]
+> Кроме того, с помощью действий из этой статьи вы можете обновить существующий проект Visual Studio, чтобы использовать общую среду выполнения. Однако вам может потребоваться обновить схемы XML для манифеста. Дополнительные сведения см. в статье [Устранение ошибок разработки с надстройками Office](../testing/troubleshoot-development-errors.md#manifest-schema-validation-errors-in-visual-studio-projects).
+
 ## <a name="configure-the-manifest"></a>Настройка манифеста
 
 Выполните указанные ниже действия для нового или существующего проекта, чтобы настроить его для использования общей среды выполнения. Эти действия подразумевают, что вы создали проект с помощью [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
@@ -40,11 +43,15 @@ ms.locfileid: "51652196"
 1. Если вы создали надстройку для Excel, обновите раздел требований, чтобы использовать [общую среду выполнения](../reference/requirement-sets/shared-runtime-requirement-sets.md), а не среду выполнения пользовательских функций. XML-код должен выглядеть следующим образом.
 
     ```xml
+    <Hosts>
+      <Host Name="Workbook"/>
+    </Hosts>
     <Requirements>
-    <Sets DefaultMinVersion="1.1">
-      <Set Name="SharedRuntime" MinVersion="1.1"/>
-    </Sets>
+      <Sets DefaultMinVersion="1.1">
+        <Set Name="SharedRuntime" MinVersion="1.1"/>
+      </Sets>
     </Requirements>
+    <DefaultSettings>
     ```
 
 1. Найдите раздел `<VersionOverrides>` и добавьте следующий раздел `<Runtimes>` внутри тега `<Host ...>`. Время существования должно иметь значение **long**, чтобы код надстройки мог выполняться даже после закрытия области задач. Значение `resid` — **Taskpane.Url**, указывающее расположение файла **taskpane.html** в разделе ` <bt:Urls>` в нижней части **manifest.xml**.
@@ -53,7 +60,6 @@ ms.locfileid: "51652196"
    <VersionOverrides ...>
      <Hosts>
        <Host ...>
-       ...
        <Runtimes>
          <Runtime resid="Taskpane.Url" lifetime="long" />
        </Runtimes>
