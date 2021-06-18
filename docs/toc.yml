@@ -1021,8 +1021,9 @@ items:
             href: outlook/autolaunch.md
           - name: Закрепляемая область задач
             href: outlook/pinnable-taskpane.md
-          - name: Делегированный доступ
+          - name: Общие папки и общие почтовые ящики
             href: outlook/delegate-access.md
+            displayName: delegate access
           - name: Манифесты
             items:
               - name: Манифесты надстройки Outlook
