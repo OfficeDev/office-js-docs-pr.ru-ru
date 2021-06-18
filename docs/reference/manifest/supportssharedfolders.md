@@ -1,23 +1,23 @@
 ---
 title: Элемент SupportsSharedFolders в файле манифеста
-description: Элемент SupportsSharedFolders определяет, доступна ли надстройка Outlook в сценариях делегирования.
-ms.date: 10/15/2020
+description: Элемент SupportsSharedFolders определяет, доступна ли надстройка Outlook в общих папках и сценариях общих почтовых ящиков.
+ms.date: 06/15/2021
 localization_priority: Normal
-ms.openlocfilehash: 786a4763450d78cb16c9baafc81701758af54787
-ms.sourcegitcommit: 6fa29989dfaec4dfa0f8df3fe5fb038d7afbae30
+ms.openlocfilehash: 43f2c60664a6822b714023246cfa044e179e9a55
+ms.sourcegitcommit: 0bf0e076f705af29193abe3dba98cbfcce17b24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "48487882"
+ms.lasthandoff: 06/18/2021
+ms.locfileid: "53007785"
 ---
 # <a name="supportssharedfolders-element"></a>Элемент SupportsSharedFolders
 
-Определяет, доступна ли надстройка Outlook в сценариях делегирования. Элемент **SupportsSharedFolders** является дочерним для элемента [DesktopFormFactor](desktopformfactor.md). По умолчанию для него установлено значение *false*.
+Определяет, доступна ли надстройка Outlook в общих почтовых ящиках (в настоящее время в предварительном просмотре) и общих папках (т. е. в сценариях делегирования доступа). Элемент **SupportsSharedFolders** является дочерним для элемента [DesktopFormFactor](desktopformfactor.md). По умолчанию для него установлено значение *false*.
 
 > [!IMPORTANT]
-> Поддержка этого элемента была введена в наборе требований 1,8. См [клиенты и платформы](../../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
+> Поддержка этого элемента была представлена в наборе требований 1.8. См [клиенты и платформы](../../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
-Ниже приведен пример элемента **SupportsSharedFolders** .
+Ниже приводится пример элемента **SupportsSharedFolders.**
 
 ```XML
 ...

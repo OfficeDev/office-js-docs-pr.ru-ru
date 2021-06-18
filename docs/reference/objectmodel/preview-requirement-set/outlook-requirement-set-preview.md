@@ -1,14 +1,14 @@
 ---
 title: Outlook набор требований к предварительному просмотру API надстройки
 description: Функции и API, которые в настоящее время находятся в предварительном Outlook надстройки.
-ms.date: 06/08/2021
+ms.date: 06/15/2021
 localization_priority: Normal
-ms.openlocfilehash: c7ca92e6a30f3109baff5721ae4e9930ef23dc56
-ms.sourcegitcommit: 5a151d4df81e5640363774406d0f329d6a0d3db8
+ms.openlocfilehash: f9d8afc2b4347a8fb13f8ab98a163fb63968123f
+ms.sourcegitcommit: 0bf0e076f705af29193abe3dba98cbfcce17b24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52854013"
+ms.lasthandoff: 06/18/2021
+ms.locfileid: "53007764"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Outlook набор требований к предварительному просмотру API надстройки
 
@@ -20,9 +20,9 @@ ms.locfileid: "52854013"
 [!INCLUDE [Information about using preview APIs](../../../includes/using-preview-apis-host.md)]
 
 > [!TIP]
-> Вы можете просматривать функции Outlook в Интернете, настроив целевой выпуск на Microsoft 365 [клиента.](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center) "Настройка доступа к предварительному просмотру" отмечена на этой странице для применимых функций.
+> Можно просмотреть функции в Outlook в Интернете, настроив целевой выпуск на [Microsoft 365 клиента.](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#set-up-the-release-option-in-the-admin-center) "Настройка доступа к предварительному просмотру" отмечена на этой странице для применимых функций.
 >
-> Для других функций вы можете запросить доступ к битам предварительного просмотра для Outlook веб-страницы с помощью Microsoft 365 учетной записи, заполнив и подав эту [форму.](https://aka.ms/OWAPreview) В этих функциях отмечен "Запрос доступа к предварительному просмотру".
+> Для других функций вы можете запросить доступ к битам предварительного просмотра для Outlook в Интернете с помощью Microsoft 365 учетной записи, заполнив и подав [эту форму.](https://aka.ms/OWAPreview) В этих функциях отмечен "Запрос доступа к предварительному просмотру".
 
 Набор требований предварительного просмотра включает все функции [набора требований 1.10](../requirement-set-1.10/outlook-requirement-set-1.10.md).
 
@@ -82,7 +82,7 @@ ms.locfileid: "52854013"
 
 ### <a name="event-based-activation"></a>Активация на основе событий
 
-Эта функция была выпущена в [наборе требований 1.10](../requirement-set-1.10/outlook-requirement-set-1.10.md). Однако дополнительные события теперь доступны в предварительном просмотре. Дополнительные дополнительные информации см. в [дополнительных подробной информации о поддерживаемых событиях.](../../../outlook/autolaunch.md#supported-events)
+Эта функция была выпущена в [наборе требований 1.10](../requirement-set-1.10/outlook-requirement-set-1.10.md). Однако дополнительные события теперь доступны в предварительном просмотре. Дополнительные дополнительные ссылки на [поддерживаемые события.](../../../outlook/autolaunch.md#supported-events)
 
 **Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современная)
 
@@ -137,6 +137,18 @@ ms.locfileid: "52854013"
 #### <a name="officecontextmailboxitemsessiondata"></a>[Office.context.mailbox.item.sessionData](office.context.mailbox.item.md#properties)
 
 Добавлено новое свойство для управления данными сеанса элемента в режиме Compose.
+
+**Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современная)
+
+<br>
+
+---
+
+---
+
+### <a name="shared-mailboxes"></a>Общие почтовые ящики
+
+Поддержка функций для общих папок (т. е. доступа делегатов) была выпущена в наборе [требований 1.8](../requirement-set-1.8/outlook-requirement-set-1.8.md). Однако поддержка общих почтовых ящиков теперь доступна в предварительном просмотре. Чтобы узнать больше, обратитесь к [разделу Включить общие папки и сценарии общих почтовых ящиков.](../../../outlook/delegate-access.md)
 
 **Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современная)
 
