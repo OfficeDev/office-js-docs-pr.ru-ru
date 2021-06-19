@@ -1,15 +1,15 @@
 ---
 title: Создание области задач Excel с помощью Vue
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office и Vue.
-ms.date: 11/09/2020
+ms.date: 06/16/2021
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 61fa374f9c1f628c50b12b6495afba2d89d02840
-ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
+ms.openlocfilehash: cd709910c9e69478c953c03b5e17d5512e875d91
+ms.sourcegitcommit: 0bf0e076f705af29193abe3dba98cbfcce17b24f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49132349"
+ms.lasthandoff: 06/18/2021
+ms.locfileid: "53007820"
 ---
 # <a name="build-an-excel-task-pane-add-in-using-vue"></a>Создание области задач Excel с помощью Vue
 
@@ -34,7 +34,7 @@ ms.locfileid: "49132349"
 vue create my-add-in
 ```
 
-Затем выберите параметр `default`. Если в качестве пакета предлагается использовать Yarn или NPM, можно выбрать любой из этих вариантов.
+Затем выберите `Default` для "Vue 3" (при этом можно использовать "Vue 2").
 
 ## <a name="generate-the-manifest-file"></a>Создание файла манифеста
 
@@ -107,16 +107,12 @@ vue create my-add-in
 2. Откройте файл `src/main.js` и замените его содержимое указанным ниже кодом:
 
    ```js
-   import Vue from 'vue';
-   import App from './App.vue';
+   import { createApp } from 'vue'
+   import App from './App.vue'
 
-   Vue.config.productionTip = false;
-
-   window.Office.initialize = () => {
-     new Vue({
-       render: h => h(App)
-     }).$mount('#app');
-   };
+   window.Office.onReady(() => {
+       createApp(App).mount('#app');
+   });
    ```
 
 3. Откройте файл `src/App.vue` и замените содержимое файла указанным ниже кодом:
@@ -218,7 +214,7 @@ vue create my-add-in
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Поздравляем! Вы успешно создали надстройку области задач Excel с помощью Vue! Чтобы узнать больше о возможностях надстроек Excel и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Excel.
+Поздравляем, вы успешно создали надстройку панели задач Excel с помощью Vue! Чтобы узнать больше о возможностях надстроек Excel и создать более сложную надстройку, воспользуйтесь руководством по надстройкам Excel.
 
 > [!div class="nextstepaction"]
 > [Руководство по надстройкам Excel](../tutorials/excel-tutorial.md)
