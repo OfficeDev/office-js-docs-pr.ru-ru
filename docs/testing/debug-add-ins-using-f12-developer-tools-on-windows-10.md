@@ -3,12 +3,12 @@ title: Отладка надстроек с помощью средств раз
 description: Отладка надстроек с помощью средств разработчика Microsoft Edge в Windows 10
 ms.date: 12/16/2019
 localization_priority: Normal
-ms.openlocfilehash: 4888ef07f214611666b1c8d8de8dc5a467ca2db1
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 41e7f2c8efb6406948c30522b56424ed7f9aa400
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611234"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076534"
 ---
 # <a name="debug-add-ins-using-developer-tools-on-windows-10"></a>Отладка надстроек с помощью средств разработчика в Windows 10
 
@@ -66,7 +66,7 @@ ms.locfileid: "44611234"
     
    Например, выберите **home.html**. 
     
-   ![Экран IEChooser с выделенной надстройкой](../images/choose-target-to-debug.png)
+   ![Экран IEChooser, указывающий на надстройку пузырьков.](../images/choose-target-to-debug.png)
 
 4. В окне F12 выберите файл, который требуется отладить.
     
@@ -76,13 +76,13 @@ ms.locfileid: "44611234"
     
    Чтобы задать точку останова в файле **Home.js**, выберите строку 144 (код функции `textChanged`). Появятся красная точка слева от строки и соответствующая строка в области стека вызовов и точек останова (справа внизу). Другие способы задания точки останова см. в статье [Проверка выполнения кода JavaScript при помощи отладчика](/previous-versions/windows/internet-explorer/ie-developer/samples/dn255007(v=vs.85)). 
     
-   ![Отладчик с точкой останова в файле home.js](../images/debugger-home-js-02.png)
+   ![Отладка с брейк-пойнтом в home.js файле.](../images/debugger-home-js-02.png)
 
 6. Запустите надстройку, чтобы активировать точку останова.
     
    В Word выберите текстовое поле URL-адреса в верхней части области **QR4Office** и попробуйте ввести какой-либо текст. В области **стека вызовов и точек останова** в отладчике вы увидите, что точка останова активирована и показывает различные сведения. Чтобы увидеть результаты, может потребоваться обновить отладчик.
     
-   ![Отладчик с результатами из сработавшей точки останова](../images/debugger-home-js-01.png)
+   ![Отладка результатов с срабатывуемой точкой разрыва.](../images/debugger-home-js-01.png)
 
 
 ## <a name="see-also"></a>См. также

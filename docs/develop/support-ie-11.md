@@ -1,16 +1,24 @@
 ---
 title: Поддержка Internet Explorer 11
 description: Узнайте, как поддерживать Internet Explorer 11 и Javascript ES5 в надстройки.
-ms.date: 05/19/2021
+ms.date: 06/18/2021
 localization_priority: Normal
-ms.openlocfilehash: 21d712ce214c23b41740b5407bd106e23af33643
-ms.sourcegitcommit: 0d3bf72f8ddd1b287bf95f832b7ecb9d9fa62a24
+ms.openlocfilehash: 3677b12d265cb70d2c048e91fc32ff5f9619908b
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "52727968"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53075910"
 ---
 # <a name="support-internet-explorer-11"></a>Поддержка Internet Explorer 11
+
+> [!IMPORTANT]
+> **Internet Explorer по-прежнему Office надстройки**
+>
+> Корпорация Майкрософт заканчивает поддержку Internet Explorer, но это не влияет на Office надстройки. Некоторые сочетания платформ и Office версий, включая все версии с одновековой покупкой до Office 2019 г., будут по-прежнему использовать управление веб-просмотром, которое поставляется с Internet Explorer 11, для пользования надстройки, как поясняется в браузерах, используемых [Office надстройки](../concepts/browsers-used-by-office-web-add-ins.md). Кроме того, поддержка этих комбинаций и, следовательно, internet Explorer по-прежнему требуется для надстройок, представленных [в AppSource](/office/dev/store/submit-to-appsource-via-partner-center). Меняются *две* вещи:
+>
+> - AppSource больше не тестирует надстройки в Office в Интернете с помощью Internet Explorer в качестве браузера. Но AppSource по-прежнему тестирует комбинации  платформы и Office настольных версий, которые используют Internet Explorer.
+> - Средство [Script Lab прекратит](../overview/explore-with-script-lab.md) работу в Internet Explorer в 2021 году.
 
 Office Надстройки — это веб-приложения, которые отображаются в IFrames при Office в Интернете. Office Надстройки отображаются с помощью встроенных элементов управления браузером при Office на Windows или Office mac. Встроенные элементы управления браузером поставляются операционной системой или браузером, установленным на компьютере пользователя.
 

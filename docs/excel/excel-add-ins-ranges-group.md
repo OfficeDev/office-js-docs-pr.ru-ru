@@ -1,25 +1,25 @@
 ---
-title: Диапазоны групп с помощью API JavaScript Excel
-description: Узнайте, как сгруппить строки или столбцы диапазона вместе, чтобы создать контур с помощью API JavaScript Excel.
+title: Диапазоны групп с Excel API JavaScript
+description: Узнайте, как сгруппить строки или столбцы диапазона вместе, чтобы создать контур с Excel API JavaScript.
 ms.date: 04/05/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 32f65cf88c23bd6368b37318d3ba20fde95b8436
-ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
+ms.openlocfilehash: 960a394a1467ec1fe55ff8dbf7b0a3f39fd355a5
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51652924"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53075721"
 ---
-# <a name="group-ranges-for-an-outline-using-the-excel-javascript-api"></a>Диапазоны групп для контура с помощью API JavaScript Excel
+# <a name="group-ranges-for-an-outline-using-the-excel-javascript-api"></a>Диапазоны групп для контура с Excel API JavaScript
 
-В этой статье приводится пример кода, в который показано, как группировать диапазоны для контура с помощью API JavaScript Excel. Полный список свойств и методов, поддерживаемых объектом, см. в `Range` [класс Excel.Range.](/javascript/api/excel/excel.range)
+В этой статье приводится пример кода, в который показано, как группировать диапазоны для контура с Excel API JavaScript. Полный список свойств и методов, поддерживаемый объектом, см. в `Range` [Excel. Класс Range](/javascript/api/excel/excel.range).
 
 ## <a name="group-rows-or-columns-of-a-range-for-an-outline"></a>Групповые строки или столбцы диапазона для контура
 
 Строки или столбцы диапазона можно сгруппить для создания [контура.](https://support.office.com/article/Outline-group-data-in-a-worksheet-08CE98C4-0063-4D42-8AC7-8278C49E9AFF) Эти группы можно свернуть и расширить, чтобы скрыть и показать соответствующие ячейки. Это упрощает быстрый анализ данных верхнего верхней строки. Чтобы сделать эти группы контуров, используйте [Range.group.](/javascript/api/excel/excel.range#group-groupoption-)
 
-Контур может иметь иерархию, в которой небольшие группы вложены в более крупные группы. Это позволяет просматривать контуры на разных уровнях. Изменение уровня видимых контуров можно сделать программным путем с помощью метода [Worksheet.showOutlineLevels.](/javascript/api/excel/excel.worksheet#showoutlinelevels-rowlevels--columnlevels-) Обратите внимание, что Excel поддерживает только восемь уровней групп контуров.
+Контур может иметь иерархию, в которой небольшие группы вложены в более крупные группы. Это позволяет просматривать контуры на разных уровнях. Изменение уровня видимых контуров можно сделать программным путем с помощью метода [Worksheet.showOutlineLevels.](/javascript/api/excel/excel.worksheet#showoutlinelevels-rowlevels--columnlevels-) Обратите внимание, Excel поддерживает только восемь уровней групп контуров.
 
 В следующем примере кода создается контур с двумя уровнями групп для строк и столбцов. На последующем изображении показаны группировки этого контура. В примере кода диапазоны, которые группуются, не включают строку или столбец управления контурами (в этом примере "Итоги"). Группа определяет, что будет свернуто, а не строка или столбец с управлением.
 
@@ -49,7 +49,7 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-![Диапазон с двухуровневой двухмерной схемой](../images/excel-outline.png)
+![Диапазон с двухуровневой двухмерной схемой.](../images/excel-outline.png)
 
 ## <a name="remove-grouping-from-rows-or-columns-of-a-range"></a>Удаление группировки из строк или столбцов диапазона
 
@@ -58,5 +58,5 @@ Excel.run(function (context) {
 ## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
-- [Работа с ячейками с помощью API JavaScript Excel](excel-add-ins-cells.md)
+- [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)
 - [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md)

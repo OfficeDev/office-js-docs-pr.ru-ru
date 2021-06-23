@@ -3,12 +3,12 @@ title: Контекстные надстройки Outlook
 description: Инициируют задачи, связанные с сообщением, не выходя из самого сообщения, что обеспечивает большее удобство и богатый пользовательский опыт
 ms.date: 04/09/2020
 localization_priority: Normal
-ms.openlocfilehash: c2cfbc1019048bb02186521c2cb81ed832934a8d
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: c9a01e05fa5bb0a0932da50b096fa2cb71cf3b34
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608959"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076779"
 ---
 # <a name="contextual-outlook-add-ins"></a>Контекстные надстройки Outlook
 
@@ -64,7 +64,7 @@ ms.locfileid: "44608959"
 
 **Пример текста с выделенной сущностью (адресом)**
 
-![Показывает выделенную сущность в электронном письме](../images/outlook-detected-entity-highlight.png)
+![Отображает выделенную сущность в электронной почте.](../images/outlook-detected-entity-highlight.png)
     
 Если сообщение содержит несколько сущностей или контекстных надстроек, действует несколько правил взаимодействия:
 
@@ -78,7 +78,7 @@ ms.locfileid: "44608959"
 
 **Пример надстройки, отображаемой на карточке**
 
-![Показывает контекстное приложение на карточке](../images/outlook-detected-entity-card.png)
+![Показывает контекстное приложение на карте.](../images/outlook-detected-entity-card.png)
 
 Чтобы закрыть карточку и завершить работу надстройки, щелкните в любом месте за пределами карточки.
 

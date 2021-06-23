@@ -1,14 +1,14 @@
 ---
 title: Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
-description: Узнайте, как устранять ошибки пользователей в надстройки Office.
+description: Узнайте, как устранить ошибки пользователей в Office надстройки.
 ms.date: 09/08/2020
 localization_priority: Normal
-ms.openlocfilehash: e1cb5e0bb8005f04425a5ad9c7e807d10f054e35
-ms.sourcegitcommit: d28392721958555d6edea48cea000470bd27fcf7
+ms.openlocfilehash: 7762c81744aa484ee5c958e6c647c4ea7893efc9
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "49840099"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53077206"
 ---
 # <a name="troubleshoot-user-errors-with-office-add-ins"></a>Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office
 
@@ -43,7 +43,7 @@ ms.locfileid: "49840099"
 Если надстройка Outlook в Windows и [в Internet Explorer](../concepts/browsers-used-by-office-web-add-ins.md) работает неправильно, попробуйте включить отладку сценариев в Internet Explorer. 
 
 
-- Go to Tools > **Internet Options**  >  **Advanced**.
+- Перейдите к средствам >   >  **Расширенные параметры Интернета**.
     
 - В разделе **Обзор**, снимите флажки **Отключить отладку сценариев (Internet Explorer)** и **Отключить отладку сценариев (другие)**.
     
@@ -69,7 +69,7 @@ ms.locfileid: "49840099"
 
 "Параметры безопасности браузера не позволили создать диалоговое окно. Используйте другой браузер или настройте браузер так, чтобы [URL-адрес] и домен, отображаемый в адресной строке браузера, находились в одной зоне безопасности."
 
-![Снимок экрана: сообщение об ошибке в диалоговом окне](../images/dialog-prevented.png)
+![Снимок экрана сообщения об ошибке диалогового окна.](../images/dialog-prevented.png)
 
 |**Браузеры**|**Платформы**|
 |:--------------------|:---------------------|
@@ -95,4 +95,4 @@ Office.context.ui.displayDialogAsync(startAddress, {displayInIFrame:true}, callb
 
 ## <a name="see-also"></a>См. также
 
-- [Устранение ошибок разработки с помощью надстройки Office](troubleshoot-development-errors.md)
+- [Устранение ошибок разработки с Office надстройки](troubleshoot-development-errors.md)

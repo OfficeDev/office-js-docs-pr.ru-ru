@@ -1,23 +1,23 @@
 ---
-title: Fluent UI React в Office надстройки
-description: Узнайте, как использовать интерфейс Fluent React в Office надстройки.
+title: Fluent UI React в надстройках Office
+description: Узнайте, как использовать Fluent интерфейс React в Office надстройки.
 ms.date: 05/12/2021
 localization_priority: Normal
-ms.openlocfilehash: cb7f04c21a52a2e4a3f271abc56aa325dd2b02fd
-ms.sourcegitcommit: 30f6c620380075e3459cac748ca0c656427b384d
+ms.openlocfilehash: a71c1a0de64d99a9e52c4ca2a7a948b9c33eb9ed
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "52330145"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076310"
 ---
-# <a name="use-fluent-ui-react-in-office-add-ins"></a>Использование интерфейса Fluent React в Office надстройки
+# <a name="use-fluent-ui-react-in-office-add-ins"></a>Использование Fluent интерфейса React в Office надстройки
 
-Fluent UI React является официальной интерфейсной платформой JavaScript с открытым исходным кодом, предназначенной для создания интерфейсных интерфейсов, которые легко вписываются в широкий спектр продуктов Майкрософт, включая Office. Он предоставляет надежные, доступные React компоненты с высокой настройкой с помощью CSS-in-JS.
+Fluent Интерфейс React является официальной интерфейсной платформой JavaScript с открытым исходным кодом, предназначенной для создания интерфейсных интерфейсов, которые легко вписываются в широкий спектр продуктов Майкрософт, включая Office. Он обеспечивает надежные, современные, доступные компоненты на основе React, которые легко настраиваются с помощью CSS-in-JS.
 
 > [!NOTE]
-> В этой статье описывается использование интерфейса fluent React в контексте Office надстройки. Но он также используется в широком диапазоне Microsoft 365 приложений и расширений. Дополнительные сведения см. в [странице Fluent UI React](https://developer.microsoft.com/fluentui#/get-started/web#fluent-ui-react) и репо с открытым исходным кодом [Fluent UI Web.](https://github.com/microsoft/fluentui)
+> В этой статье описывается использование Fluent пользовательского React в контексте Office надстройки. Но он также используется в широком диапазоне Microsoft 365 приложений и расширений. Дополнительные сведения см. [в Fluent веб React](https://developer.microsoft.com/fluentui#/get-started/web#fluent-ui-react) пользовательского интерфейса и репо с открытым исходным кодом [Fluent пользовательского интерфейса.](https://github.com/microsoft/fluentui)
 
-В этой статье описывается, как создать надстройку, созданную с React и использующую компоненты React пользовательского интерфейса Fluent.
+В этой статье описывается, как создать надстройку, созданную с React и использующую Fluent компоненты React пользовательского интерфейса.
 
 ## <a name="create-an-add-in-project"></a>Создание проекта надстройки
 
@@ -36,7 +36,7 @@ Fluent UI React является официальной интерфейсной
 - **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `Word`
 
-![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки](../images/yo-office-word-react.png)
+![Снимок экрана, показывающий подсказки и ответы для генератора Yeoman в интерфейсе командной строки.](../images/yo-office-word-react.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -76,13 +76,13 @@ Fluent UI React является официальной интерфейсной
 
         Чтобы использовать надстройку, откройте новый документ в Word в Интернете, а затем загрузите неопубликованную надстройку, следуя инструкциям из статьи [Загрузка неопубликованных надстроек Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web).
 
-3. Чтобы открыть области задач надстройки, на вкладке **Главная** выберите кнопку **Показать задачу.** Обратите внимание на текст по умолчанию и кнопку **Запустить** в нижней части области задач. В остальной части этого поголовия вы переопределяете этот текст и кнопку, создав компонент React, использующий компоненты UX из пользовательского интерфейса Fluent React.
+3. Чтобы открыть области задач надстройки, на вкладке **Главная** выберите кнопку **Показать задачу.** Обратите внимание на текст по умолчанию и кнопку **Запустить** в нижней части области задач. В остальной части этого поголовия вы переопределяете этот текст и кнопку, создав компонент React, использующий компоненты UX из Fluent пользовательского React.
 
-    ![Снимок экрана, показывающий приложение Word с выделенной кнопкой ленты Show Taskpane и кнопкой Run и сразу же предшествующим текстом, выделенным в области задач.](../images/word-task-pane-yo-default.png)
+    ![Снимок экрана, показывающий приложение Word с выделенной кнопкой ленты Show Taskpane и кнопкой Run и непосредственно предшествующим текстом, выделенным в области задач.](../images/word-task-pane-yo-default.png)
 
-## <a name="create-a-react-component-that-uses-fluent-ui-react"></a>Создайте компонент React, использующий интерфейс Fluent React
+## <a name="create-a-react-component-that-uses-fluent-ui-react"></a>Создайте компонент React, использующий Fluent пользовательского React
 
-На этом этапе вы уже создали самую простую надстройку в области задач c использованием React. Теперь выполните приведенные ниже действия, чтобы создать новый компонент React (`ButtonPrimaryExample`) в проекте надстройки. Компонент использует `Label` компоненты и `PrimaryButton` компоненты из пользовательского интерфейса Fluent React.
+На этом этапе вы уже создали самую простую надстройку в области задач c использованием React. Теперь выполните приведенные ниже действия, чтобы создать новый компонент React (`ButtonPrimaryExample`) в проекте надстройки. Компонент использует `Label` компоненты из `PrimaryButton` Fluent пользовательского React.
 
 1. Откройте папку проекта, созданную генератором Yeoman, и перейдите в раздел **src\taskpane\components**.
 2. Создайте в этой папке новый файл под названием **Button.tsx**.
@@ -126,10 +126,10 @@ export class ButtonPrimaryExample extends React.Component<IButtonProps, {}> {
 Этот код выполняет следующие действия:
 
 - Ссылается на библиотеку React с помощью `import * as React from 'react';`.
-- Ссылается на компоненты React пользовательского интерфейса Fluent , `PrimaryButton` которые используются для создания `IButtonProps` `Label` `ButtonPrimaryExample` .
+- Ссылки Fluent пользовательского интерфейса React (, , ), которые `PrimaryButton` используются для создания `IButtonProps` `Label` `ButtonPrimaryExample` .
 - Объявляет новый компонент `ButtonPrimaryExample` с помощью `export class ButtonPrimaryExample extends React.Component`.
 - Объявляет функцию `insertText` для обработки события кнопки `onClick`.
-- Определяет пользовательский интерфейс компонента React в функции `render`. Разметка HTML использует и компоненты из интерфейса Fluent React и указывает, что при запуске события функция `Label` `PrimaryButton` будет `onClick` `insertText` работать.
+- Определяет пользовательский интерфейс компонента React в функции `render`. HtmL-разметка использует компоненты Fluent пользовательского интерфейса React и указывает, что при запуске события функция `Label` `PrimaryButton` будет `onClick` `insertText` работать.
 
 ## <a name="add-the-react-component-to-your-add-in"></a>Добавление компонента React в надстройку
 
@@ -170,12 +170,12 @@ export class ButtonPrimaryExample extends React.Component<IButtonProps, {}> {
 
 После сохранения изменений в **App.tsx** область задач надстройки в Word обновляется автоматически.  Текст по умолчанию и кнопка в нижней части области задач теперь отображают пользовательский интерфейс, определяемый компонентом `ButtonPrimaryExample`. Нажмите кнопку **Вставить текст...** для вставки текста в документ.
 
-![Снимок экрана, показывающий приложение Word с текстом "Вставить текст...". кнопка и сразу перед выделением текста](../images/word-task-pane-with-react-component.png)
+![Снимок экрана, показывающий приложение Word с текстом "Вставить текст...". кнопку и сразу перед выделенным текстом.](../images/word-task-pane-with-react-component.png)
 
-Поздравляем, вы успешно создали надстройку области задач с React и fluent UI React!
+Поздравляем, вы успешно создали надстройку области задач с помощью React и Fluent пользовательского интерфейса React!
 
 ## <a name="see-also"></a>См. также
 
 - [Word Add-in GettingStartedFabricReact](https://github.com/OfficeDev/Word-Add-in-GettingStartedFabricReact)
-- [Fabric Core в Office надстройки](fabric-core.md)
+- [Fabric Core в надстройках Office](fabric-core.md)
 - [Конструктивные шаблоны для надстроек Office](ux-design-pattern-templates.md)

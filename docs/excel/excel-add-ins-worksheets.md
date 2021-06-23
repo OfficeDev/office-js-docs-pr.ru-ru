@@ -3,12 +3,12 @@ title: Работа с листами с использованием API JavaSc
 description: Примеры кода, которые показывают, как выполнять общие задачи с помощью таблиц с Excel API JavaScript.
 ms.date: 06/03/2021
 localization_priority: Normal
-ms.openlocfilehash: eeec79f1474857ec72f00a269cb1cb81e55b2ca9
-ms.sourcegitcommit: 17b5a076375bc5dc3f91d3602daeb7535d67745d
+ms.openlocfilehash: 9e181ec800eccb938fa152bb28772b11961c7a40
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "52783514"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53075553"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
@@ -376,7 +376,7 @@ function formulaChangeHandler(event) {
 
 На приведенных ниже рисунках показаны диапазоны, возвращенные свойством `address` для событий сортировки. Вот образец данных до сортировки:
 
-![Данные из таблицы в Excel до сортировки](../images/excel-sort-event-before.png)
+![Таблица данных в Excel перед сортировкой.](../images/excel-sort-event-before.png)
 
 Если выполнить сортировку сверху вниз для "**Q1**&quot; (значения в &quot;**B**"), `WorksheetRowSortedEventArgs.address` возвращает следующие выделенные строки:
 

@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 06/07/2021
 ms.prod: project
 localization_priority: Priority
-ms.openlocfilehash: eed545d6ebf2b705d8d8963a76a0ac3bca2e13f4
-ms.sourcegitcommit: 5a151d4df81e5640363774406d0f329d6a0d3db8
+ms.openlocfilehash: 3589572c022e4fe3dc75cd25e5d378a3dab0c8b7
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853992"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076576"
 ---
 # <a name="build-your-first-project-task-pane-add-in"></a>Создание первой надстройки области задач Project
 
@@ -31,7 +31,7 @@ ms.locfileid: "52853992"
 - **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `Project`
 
-![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки](../images/yo-office-project.png)
+![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки.](../images/yo-office-project.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -115,7 +115,7 @@ Office.context.document.getSelectedTaskAsync(
 
 6. В нижней части области задач щелкните ссылку **Выполнить**, чтобы переименовать выбранную задачу и добавить к ней примечания.
 
-    ![Снимок экрана: приложение Project с загруженной надстройкой области задач](../images/project-quickstart-addin-1.png)
+    ![Снимок экрана: приложение Project с загруженной надстройкой области задач.](../images/project-quickstart-addin-1.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

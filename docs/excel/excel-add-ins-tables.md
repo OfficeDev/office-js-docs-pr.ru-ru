@@ -3,12 +3,12 @@ title: Работа с таблицами с использованием API Ja
 description: Примеры кода, которые показывают, как выполнять общие задачи со таблицами с Excel API JavaScript.
 ms.date: 06/07/2021
 localization_priority: Normal
-ms.openlocfilehash: a44a99e0ddc612342b292fd6e9d203799cde7b53
-ms.sourcegitcommit: 5a151d4df81e5640363774406d0f329d6a0d3db8
+ms.openlocfilehash: 480eda98c1828d11de7c3aa227468ebc408dae2c
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52854004"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53075805"
 ---
 # <a name="work-with-tables-using-the-excel-javascript-api"></a>Работа с таблицами с использованием API JavaScript для Excel
 
@@ -52,7 +52,7 @@ Excel.run(function (context) {
 
 **Новая таблица**
 
-![Новая таблица в Excel](../images/excel-tables-create.png)
+![Новая таблица Excel.](../images/excel-tables-create.png)
 
 ## <a name="add-rows-to-a-table"></a>Добавление строк в таблицу
 
@@ -90,7 +90,7 @@ Excel.run(function (context) {
 
 **Таблица с новыми строками**
 
-![Таблица с новыми строками в Excel](../images/excel-tables-add-rows.png)
+![Таблица с новыми строками в Excel.](../images/excel-tables-add-rows.png)
 
 ## <a name="add-a-column-to-a-table"></a>Добавление столбца в таблицу
 
@@ -130,7 +130,7 @@ Excel.run(function (context) {
 
 **Таблица с новым столбцом**
 
-![Таблица с новым столбцом в Excel](../images/excel-tables-add-column.png)
+![Таблица с новым столбцом в Excel.](../images/excel-tables-add-column.png)
 
 ### <a name="add-a-column-that-contains-formulas"></a>Добавление столбца, содержащего формулы
 
@@ -163,7 +163,7 @@ Excel.run(function (context) {
 
 **Таблица с новым столбцом, содержащим вычисленные значения**
 
-![Таблица с новым столбцом, содержащим вычисленные значения, в Excel](../images/excel-tables-add-calculated-column.png)
+![Таблица с новым вычисляемой колонкой в Excel.](../images/excel-tables-add-calculated-column.png)
 
 ## <a name="resize-a-table-online-only"></a>Resize a table (online-only)
 
@@ -190,7 +190,7 @@ Excel.run(function (context) {
 
 **Таблица после повторного** 
 
-![Таблица с несколькими пустыми строками в Excel](../images/excel-tables-resize.png)
+![Таблица с несколькими пустыми строками в Excel.](../images/excel-tables-resize.png)
 
 ## <a name="update-column-name"></a>Изменение имени столбца
 
@@ -219,7 +219,7 @@ Excel.run(function (context) {
 
 **Таблица со столбцом с новым именем**
 
-![Таблица со столбцом с новым именем в Excel](../images/excel-tables-update-column-name.png)
+![Таблица с новым именем столбца в Excel.](../images/excel-tables-update-column-name.png)
 
 ## <a name="get-data-from-a-table"></a>Получение данных из таблицы
 
@@ -265,7 +265,7 @@ Excel.run(function (context) {
 
 **Таблица и выведенные данные**
 
-![Данные из таблицы в Excel](../images/excel-tables-get-data.png)
+![Таблица данных в Excel.](../images/excel-tables-get-data.png)
 
 ## <a name="detect-data-changes"></a>Обнаружение изменений данных
 
@@ -313,7 +313,7 @@ Excel.run(function (context) {
 
 **Данные таблицы, отсортированные по столбцу Amount (Сумма) в порядке убывания**
 
-![Отсортировали данные таблицы в Excel](../images/excel-tables-sort.png)
+![Отсортировали данные таблицы в Excel.](../images/excel-tables-sort.png)
 
 При сортировке данных на листе создается уведомление о событии. Дополнительные сведения о событиях, связанных с сортировкой, и о регистрации обработчиков событий надстройкой в ответ на такие события см. в статье [Обработка событий сортировки](excel-add-ins-worksheets.md#handle-sorting-events).
 
@@ -347,7 +347,7 @@ Excel.run(function (context) {
 
 **Таблица данных, в которой применены фильтры для столбцов Category (Категория) и Amount (Сумма)**
 
-![Отфильтрованные данные таблицы в Excel](../images/excel-tables-filters-apply.png)
+![Данные таблицы фильтруются в Excel.](../images/excel-tables-filters-apply.png)
 
 ## <a name="clear-table-filters"></a>Удаление фильтров в таблице
 
@@ -366,7 +366,7 @@ Excel.run(function (context) {
 
 **Данные таблицы без фильтров**
 
-![Неотфильтрованные данные таблицы в Excel](../images/excel-tables-filters-clear.png)
+![Данные таблицы не фильтруются в Excel.](../images/excel-tables-filters-clear.png)
 
 ## <a name="get-the-visible-range-from-a-filtered-table"></a>Получение отображаемого диапазона из отфильтрованной таблицы
 
@@ -433,7 +433,7 @@ Excel.run(function (context) {
 
 **Таблица после применения форматирования**
 
-![Таблица после применения форматирования в Excel](../images/excel-tables-formatting-after.png)
+![Таблица после форматирования применяется в Excel.](../images/excel-tables-formatting-after.png)
 
 ## <a name="convert-a-range-to-a-table"></a>Преобразование диапазона в таблицу
 
@@ -473,11 +473,11 @@ Excel.run(function (context) {
 
 **Данные в диапазоне (перед его преобразованием в таблицу)**
 
-![Данные в диапазоне в Excel](../images/excel-ranges.png)
+![Данные в диапазоне Excel.](../images/excel-ranges.png)
 
 **Данные в таблице (после преобразования диапазона в таблицу)**
 
-![Данные в таблице в Excel](../images/excel-tables-from-range.png)
+![Данные в таблице Excel.](../images/excel-tables-from-range.png)
 
 ## <a name="import-json-data-into-a-table"></a>Импорт данных JSON в таблицу
 
@@ -524,7 +524,7 @@ Excel.run(function (context) {
 
 **Новая таблица**
 
-![Новая таблица из импортных данных JSON в Excel](../images/excel-tables-create-from-json.png)
+![Новая таблица из импортируемых данных JSON в Excel.](../images/excel-tables-create-from-json.png)
 
 ## <a name="see-also"></a>См. также
 

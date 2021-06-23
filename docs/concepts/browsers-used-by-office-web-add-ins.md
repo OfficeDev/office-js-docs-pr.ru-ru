@@ -1,14 +1,14 @@
 ---
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
-ms.date: 05/19/2021
+ms.date: 06/18/2021
 localization_priority: Normal
-ms.openlocfilehash: 07788c655d5c30527ac815ba2f3235cf504641f3
-ms.sourcegitcommit: 0d3bf72f8ddd1b287bf95f832b7ecb9d9fa62a24
+ms.openlocfilehash: 6347bbe6b02befeabf0fcd6f04545f6d543871c8
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "52727908"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076184"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -18,6 +18,14 @@ Office Надстройки — это веб-приложения, которы
 
 - Операционная система компьютера.
 - Работает ли надстройка в Office в Интернете, Microsoft 365 или без подписки Office 2013 или более поздней.
+
+> [!IMPORTANT]
+> **Internet Explorer по-прежнему Office надстройки**
+>
+> Корпорация Майкрософт заканчивает поддержку Internet Explorer, но это не влияет на Office надстройки. Некоторые сочетания платформ и Office версий, включая все версии с одновкулярной покупкой до Office 2019 г., будут по-прежнему использовать управление веб-просмотром, которое поставляется с Internet Explorer 11, для пользования надстройки, как поводится в этой статье. Кроме того, поддержка этих комбинаций и, следовательно, internet Explorer по-прежнему требуется для надстройок, представленных [в AppSource](/office/dev/store/submit-to-appsource-via-partner-center). Меняются *две* вещи:
+>
+> - AppSource больше не тестирует надстройки в Office в Интернете с помощью Internet Explorer в качестве браузера. Но AppSource по-прежнему тестирует комбинации  платформы и Office настольных версий, которые используют Internet Explorer.
+> - Средство [Script Lab прекратит](../overview/explore-with-script-lab.md) работу в Internet Explorer в 2021 году.
 
 В приведенной ниже таблице указано, какой браузер используется для той или иной платформы и операционной системы.
 
@@ -37,7 +45,7 @@ Office Надстройки — это веб-приложения, которы
 
 <sup>1.</sup> [Дополнительные](/officeupdates/update-history-office365-proplus-by-date) сведения см. на странице история обновления и Office клиентской версии и канала обновления. [](https://support.office.com/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19)
 
-<sup>2</sup> Когда Microsoft Edge используется, Windows 10 экранный диктор (иногда называемый "считыватель экрана") читает тег на странице, открываемой в области `<title>` задач. Когда используется Internet Explorer 11, экранный диктор читает панель заголовка области задач, полученный от значения `<DisplayName>` в манифесте надстройки.
+<sup>2</sup> Когда Microsoft Edge используется, Windows 10(иногда называемый "считыватель экрана") читает тег на странице, открываемой в области `<title>` задач. Когда используется Internet Explorer 11, экранный диктор читает панель заголовка области задач, полученный от значения `<DisplayName>` в манифесте надстройки.
 
 <sup>3</sup> Если надстройка включает элемент манифеста, она не будет использовать Microsoft Edge с исходным `<Runtimes>` WebView (EdgeHTML). Если условия использования Microsoft Edge WebView2 (Chromium на основе) выполнены, надстройка использует этот браузер. В противном случае он использует Internet Explorer 11 независимо от Windows или Microsoft 365 версии. Дополнительные сведения см. в статье [Runtimes](../reference/manifest/runtimes.md).
 

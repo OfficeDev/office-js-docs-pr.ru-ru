@@ -4,12 +4,12 @@ description: Узнайте больше о наборах обязательн�
 ms.date: 05/17/2021
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: 967bc0590d6cf1f513352c4a5c22eeb5205c2cbe
-ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
+ms.openlocfilehash: 49cfcfee075ba01f077162cef415ed58211b95f6
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2021
-ms.locfileid: "52591998"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53077213"
 ---
 # <a name="outlook-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для Outlook
 
@@ -121,11 +121,11 @@ if (item.somePropertyOrFunction !== undefined) {
 >
 > **современная версия**
 >
-> ![снимок части экрана с изображением панели инструментов современной версии Outlook](../../images/outlook-on-the-web-new-toolbar.png)
+> ![Снимок части экрана с изображением панели инструментов современной версии Outlook.](../../images/outlook-on-the-web-new-toolbar.png)
 >
 > **классическая версия**
 >
-> ![снимок части экрана с изображением панели инструментов классической версии Outlook](../../images/outlook-on-the-web-classic-toolbar.png)
+> ![Снимок части экрана с изображением панели инструментов классической версии Outlook.](../../images/outlook-on-the-web-classic-toolbar.png)
 
 ## <a name="using-preview-apis"></a>Использование предварительных версий API
 

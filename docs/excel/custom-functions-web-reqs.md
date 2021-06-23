@@ -3,12 +3,12 @@ ms.date: 03/15/2021
 description: Запрос, потоковая передача и отмена потоковой передачи внешних данных к книге с помощью пользовательских функций в Excel
 title: Получение и обработка данных с помощью пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: 4d960d642c3efd2f6f9745587b6cb0ef42ce0a86
-ms.sourcegitcommit: c0c61fe84f3c5de88bd7eac29120056bb1224fc8
+ms.openlocfilehash: 61959387dc3475997581233bc220f20394e8f6fb
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "50836825"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53075882"
 ---
 # <a name="receive-and-handle-data-with-custom-functions"></a>Получение и обработка данных с помощью пользовательских функций
 
@@ -16,7 +16,7 @@ ms.locfileid: "50836825"
 
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
-![GIF с пользовательской функцией, отправляющей время из API](../images/custom-functions-web-api.gif)
+![GIF настраиваемой функции, которая передает время из API.](../images/custom-functions-web-api.gif)
 
 ## <a name="functions-that-return-data-from-external-sources"></a>Функции, которые возвращают данные из внешних источников
 

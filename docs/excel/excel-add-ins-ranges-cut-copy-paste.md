@@ -1,25 +1,25 @@
 ---
-title: Диапазоны вырезать, скопировать и вклеить с помощью API JavaScript Excel
-description: Узнайте, как вырезать, скопировать и вклеить диапазоны с помощью API JavaScript Excel.
+title: Диапазоны вырезать, скопировать и вклеить с Excel API JavaScript
+description: Узнайте, как вырезать, скопировать и вклеить диапазоны с Excel API JavaScript.
 ms.date: 04/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 8cf92ef148c24613674930140cec762c9cd8c4a4
-ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
+ms.openlocfilehash: 2112702110b72e0020ed72090ce495abb3ff5366
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51652967"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53075826"
 ---
-# <a name="cut-copy-and-paste-ranges-using-the-excel-javascript-api"></a>Диапазоны вырезать, скопировать и вклеить с помощью API JavaScript Excel
+# <a name="cut-copy-and-paste-ranges-using-the-excel-javascript-api"></a>Диапазоны вырезать, скопировать и вклеить с Excel API JavaScript
 
-В этой статье данная статья содержит примеры кода, которые вырезали, копируют и вклеили диапазоны с помощью API JavaScript Excel. Полный список свойств и методов, поддерживаемых объектом, см. в `Range` [класс Excel.Range.](/javascript/api/excel/excel.range)
+В этой статье данная статья содержит примеры кода, которые вырезали, копируют и вклеили диапазоны с Excel API JavaScript. Полный список свойств и методов, поддерживаемый объектом, см. в `Range` [Excel. Класс Range](/javascript/api/excel/excel.range).
 
 [!include[Excel cells and ranges note](../includes/note-excel-cells-and-ranges.md)]
 
 ## <a name="copy-and-paste"></a>Copy and paste
 
-Метод [Range.copyFrom](/javascript/api/excel/excel.range#copyfrom-sourcerange--copytype--skipblanks--transpose-) реплицирует действия **copy** и **Paste** пользовательского интерфейса Excel. Назначение — это `Range` объект, `copyFrom` который вызван. Источник для копирования передается как диапазон или адрес строки, представляющий диапазон.
+Метод [Range.copyFrom](/javascript/api/excel/excel.range#copyfrom-sourcerange--copytype--skipblanks--transpose-) реплицирует  действия copy и **Paste** Excel пользовательского интерфейса. Назначение — это `Range` объект, `copyFrom` который вызван. Источник для копирования передается как диапазон или адрес строки, представляющий диапазон.
 
 В следующем примере кода копируются данные из **A1:E1** в диапазон, начиная с **G1** (который заканчивается вставкой в **G1:K1**).
 
@@ -72,11 +72,11 @@ Excel.run(function (context) {
 
 ### <a name="data-before-range-is-copied-and-pasted"></a>Данные перед копированием и вклейка диапазона
 
-![Данные в Excel перед запуском метода копирования диапазона](../images/excel-range-copyfrom-skipblanks-before.png)
+![Данные в Excel перед запуском метода копирования диапазона.](../images/excel-range-copyfrom-skipblanks-before.png)
 
 ### <a name="data-after-range-is-copied-and-pasted"></a>Данные после копирования и вклейки данных после диапазона
 
-![Данные в Excel после запуска метода копирования диапазона](../images/excel-range-copyfrom-skipblanks-after.png)
+![Данные в Excel после запуска метода копирования диапазона.](../images/excel-range-copyfrom-skipblanks-after.png)
 
 ## <a name="cut-and-paste-move-cells"></a>Вырезать и вклеить (переместить) ячейки
 
@@ -98,6 +98,6 @@ Excel.run(function (context) {
 ## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
-- [Работа с ячейками с помощью API JavaScript Excel](excel-add-ins-cells.md)
-- [Удаление дубликатов с помощью API JavaScript Excel](excel-add-ins-ranges-remove-duplicates.md)
+- [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)
+- [Удаление дубликатов с Excel API JavaScript](excel-add-ins-ranges-remove-duplicates.md)
 - [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md)

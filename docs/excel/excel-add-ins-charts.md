@@ -1,19 +1,19 @@
 ---
 title: Работа с диаграммами с использованием API JavaScript для Excel
-description: Примеры кода, демонстрирующие задачи диаграмм с помощью API JavaScript для Excel.
+description: Примеры кода, демонстрирующие задачи диаграммы с Excel API JavaScript.
 ms.date: 07/17/2019
 localization_priority: Normal
-ms.openlocfilehash: 3cd5008e4a71001607911ffd89da26d8b31d9377
-ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
+ms.openlocfilehash: e164384f70e644637d8928a124415ff007c8b475
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "47408588"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53075896"
 ---
 # <a name="work-with-charts-using-the-excel-javascript-api"></a>Работа с диаграммами с использованием API JavaScript для Excel
 
 В этой статье приведены примеры кода, в которых показано, как выполнять стандартные задачи для диаграмм с использованием API JavaScript для Excel.
-Полный список свойств и методов, `Chart` `ChartCollection` поддерживаемых объектами и поддерживаемых объектами, представлен в статье [объект диаграммы (API JavaScript для Excel)](/javascript/api/excel/excel.chart) и [объект коллекции диаграмм (API JavaScript для Excel)](/javascript/api/excel/excel.chartcollection).
+Полный список свойств и методов, поддерживаемых объектами и объектами, см. в таблице `Chart` `ChartCollection` Chart Object [(API JavaScript](/javascript/api/excel/excel.chart) для Excel) и Объект коллекции диаграмм [(API JavaScript](/javascript/api/excel/excel.chartcollection)для Excel).
 
 ## <a name="create-a-chart"></a>Создание диаграммы
 
@@ -37,7 +37,7 @@ Excel.run(function (context) {
 
 **Новый график**
 
-![Новый график в Excel](../images/excel-charts-create-line.png)
+![Новая диаграмма строки в Excel.](../images/excel-charts-create-line.png)
 
 
 ## <a name="add-a-data-series-to-a-chart"></a>Добавление ряда данных в диаграмму
@@ -59,11 +59,11 @@ Excel.run(function (context) {
 
 **Диаграмма перед добавлением ряда данных 2016**
 
-![Диаграмма в Excel перед добавлением ряда данных 2016](../images/excel-charts-data-series-before.png)
+![Диаграмма в Excel до добавленной серии данных за 2016 г.](../images/excel-charts-data-series-before.png)
 
 **Диаграмма после добавления ряда данных 2016**
 
-![Диаграмма в Excel после добавления ряда данных 2016](../images/excel-charts-data-series-after.png)
+![Диаграмма в Excel после добавленной серии данных 2016 г.](../images/excel-charts-data-series-after.png)
 
 ## <a name="set-chart-title"></a>Задание названия диаграммы
 
@@ -82,7 +82,7 @@ Excel.run(function (context) {
 
 **Диаграмма после задания заголовка**
 
-![Диаграмма с заголовком в Excel](../images/excel-charts-title-set.png)
+![Диаграмма с заголовком в Excel.](../images/excel-charts-title-set.png)
 
 ## <a name="set-properties-of-an-axis-in-a-chart"></a>Задание свойств оси диаграммы
 
@@ -105,7 +105,7 @@ Excel.run(function (context) {
 
 **Диаграмма после задания названия оси категорий**
 
-![Диаграмма с названием оси в Excel](../images/excel-charts-axis-title-set.png)
+![Диаграмма с названием оси в Excel.](../images/excel-charts-axis-title-set.png)
 
 ### <a name="set-axis-display-unit"></a>Задание отображаемой единицы измерения оси
 
@@ -124,11 +124,11 @@ Excel.run(function (context) {
 
 **Диаграмма после задания единицы измерения оси значений**
 
-![Диаграмма с отображаемой единицей измерения оси значений в Excel](../images/excel-charts-axis-display-unit-set.png)
+![Диаграмма с блоком отображения оси в Excel.](../images/excel-charts-axis-display-unit-set.png)
 
 ## <a name="set-visibility-of-gridlines-in-a-chart"></a>Настройка видимости линий сетки на диаграмме
 
-В примере ниже показано, как скрыть основные линии сетки для оси значений первой диаграммы на листе. Вы можете показать основные линии сетки для оси значений диаграммы, задав значение `chart.axes.valueAxis.majorGridlines.visible` `true` .
+В примере ниже показано, как скрыть основные линии сетки для оси значений первой диаграммы на листе. Основные линии сетки для оси значения диаграммы можно показать, установив `chart.axes.valueAxis.majorGridlines.visible` значение `true` .
 
 ```js
 Excel.run(function (context) {
@@ -143,7 +143,7 @@ Excel.run(function (context) {
 
 **Диаграмма со скрытыми линиями сетки**
 
-![Диаграмма со скрытыми линиями сетки в Excel](../images/excel-charts-gridlines-removed.png)
+![Диаграмма с сетками, скрытыми в Excel.](../images/excel-charts-gridlines-removed.png)
 
 ## <a name="chart-trendlines"></a>Линии трендов диаграммы
 
@@ -165,11 +165,11 @@ Excel.run(function (context) {
 
 **Диаграмма с линией тренда "скользящее среднее"**
 
-![Диаграмма с линией тренда "скользящее среднее" в Excel](../images/excel-charts-create-trendline.png)
+![Диаграмма с скользящего среднего тренда в Excel.](../images/excel-charts-create-trendline.png)
 
 ### <a name="update-a-trendline"></a>Изменение линии тренда
 
-В приведенном ниже примере кода линия тренда задается для ввода `Linear` первого ряда в первой диаграмме на листе с именем **Sample**.
+Следующий пример кода задает линию тренда для введите для первой серии в первой диаграмме в таблице `Linear` с именем **Sample**.
 
 ```js
 Excel.run(function (context) {
@@ -186,7 +186,7 @@ Excel.run(function (context) {
 
 **Диаграмма с линейной линией тренда**
 
-![Диаграмма с линейной линией тренда в Excel](../images/excel-charts-trendline-linear.png)
+![Диаграмма с линейным трендом в Excel.](../images/excel-charts-trendline-linear.png)
 
 ## <a name="export-a-chart-as-an-image"></a>Экспорт диаграммы как изображения
 
@@ -211,9 +211,9 @@ getImage(width?: number, height?: number, fittingMode?: Excel.ImageFittingMode):
 
 Эти параметры определяют размер изображения. Изображения всегда масштабируются пропорционально. Параметры ширины и высоты устанавливают верхние или нижние границы для масштабированного изображения. У параметра `ImageFittingMode` есть три значения с указанными ниже действиями.
 
-- `Fill`: Минимальная высота или ширина изображения задается указанной высотой или шириной (в зависимости от того, что достигается первым при масштабировании изображения). Это поведение по умолчанию, если не задан параметр режима подгонки.
-- `Fit`: Максимальная высота или ширина изображения задается указанной высотой или шириной (в зависимости от того, что достигается первым при масштабировании изображения).
-- `FitAndCenter`: Максимальная высота или ширина изображения задается указанной высотой или шириной (в зависимости от того, что достигается первым при масштабировании изображения). Получившееся изображение выравнивается по центру относительно другого измерения.
+- `Fill`: Минимальная высота или ширина изображения — указанная высота или ширина (в зависимости от того, достигается ли она сначала при масштабирования изображения). Это поведение по умолчанию, если не задан параметр режима подгонки.
+- `Fit`: Максимальная высота или ширина изображения — указанная высота или ширина (в зависимости от того, достигается ли она сначала при масштабирования изображения).
+- `FitAndCenter`: Максимальная высота или ширина изображения — указанная высота или ширина (в зависимости от того, достигается ли она сначала при масштабирования изображения). Получившееся изображение выравнивается по центру относительно другого измерения.
 
 ## <a name="see-also"></a>См. также
 

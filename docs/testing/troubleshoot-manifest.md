@@ -1,14 +1,14 @@
 ---
 title: Проверка манифеста надстройки Office
-description: Узнайте, как проверить манифест надстройки Office с помощью XML-схемы и других средств.
+description: Узнайте, как проверить манифест надстройки Office с помощью схемы XML и других средств.
 ms.date: 09/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 3b2ad6f89635a76828524e928c8a766840a708d5
-ms.sourcegitcommit: 2479812e677d1a7337765fe8f1c8345061d4091a
+ms.openlocfilehash: 8ac543719011339b3f22a6fb77f01c0e9ed6d930
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "48135209"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53075539"
 ---
 # <a name="validate-an-office-add-ins-manifest"></a>Проверка манифеста надстройки Office
 
@@ -25,7 +25,7 @@ ms.locfileid: "48135209"
 npm run validate
 ```
 
-![GIF-файл с анимацией запуска средства проверки Yo Office в командной строке и получения результатов, которые показывают, что проверка пройдена](../images/yo-office-validator.gif)
+![Анимированный GIF, на который Office проверки, запускаемой в командной строке, и генерирующих результатов, отображающих пройденную проверку.](../images/yo-office-validator.gif)
 
 > [!NOTE]
 > Для доступа к этой функции проект надстройки должен быть создан с помощью [генератора Yeoman](https://www.npmjs.com/package/generator-office) 1.1.17 или более поздней версии.
@@ -36,20 +36,20 @@ npm run validate
 
 1. Установите [Node.js](https://nodejs.org/download/).
 
-2. Откройте командную строку и установите средство проверки с помощью следующей команды.
+2. Откройте командную подсказку и установите валидатор со следующей командой.
 
     ```command&nbsp;line
     npm install -g office-addin-manifest
     ```
 
-3. Выполните следующую команду *в корневом каталоге проекта*.
+3. Запустите следующую команду *в корневом каталоге проекта.*
 
     ```command&nbsp;line
     npm run validate
     ```
 
     > [!NOTE]
-    > Если эта команда недоступна или не работает, выполните следующую команду, чтобы принудительно использовать последнюю версию средства Office-ADDIN-MANIFEST (замените на `MANIFEST_FILE` имя файла манифеста):
+    > Если эта команда недоступна или не работает, запустите следующую команду, чтобы заставить использовать последнюю версию средства office-addin-manifest (заменив имя файла `MANIFEST_FILE` манифеста):
     >
     > ```command&nbsp;line
     > npx --ignore-existing office-addin-manifest validate MANIFEST_FILE

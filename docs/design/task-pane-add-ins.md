@@ -3,12 +3,12 @@ title: Области задач в надстройках Office
 description: Области задач предоставляют пользователям доступ к элементам управления интерфейсом, которые выполняют код для изменения документов или сообщений электронной почты, а также для отображения данных из источника данных.
 ms.date: 05/12/2021
 localization_priority: Normal
-ms.openlocfilehash: d235d6c437ee124441389e68b54fc6ab8cde8dae
-ms.sourcegitcommit: 30f6c620380075e3459cac748ca0c656427b384d
+ms.openlocfilehash: cd8d9386fa9f154d611926add12e21f545e36351
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "52330152"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076306"
 ---
 # <a name="task-panes-in-office-add-ins"></a>Области задач в надстройках Office
 
@@ -16,7 +16,7 @@ ms.locfileid: "52330152"
 
 *Рис. 1. Типичный макет области задач*
 
-![Иллюстрация, отобразив типичную макет области задач с вкладками раздела в верхней части, логотипом компании и именем компании в левом нижнем ряду и значком параметров в правом нижнем справа](../images/overview-with-app-task-pane.png)
+![На рисунке отображается типичная макет области задач с вкладки разделов в верхней части, логотип компании и имя компании в левом нижнем ряду и значок параметров в правом нижнем ряду.](../images/overview-with-app-task-pane.png)
 
 ## <a name="best-practices"></a>Рекомендации
 
@@ -33,7 +33,7 @@ ms.locfileid: "52330152"
 
 *Рис. 2. Размеры области задач в классических приложениях Office 2016*
 
-![Схема с отображением размеров области задач рабочего стола с разрешением 1366x768](../images/office-2016-taskpane-sizes.png)
+![Схема с отображением размеров области задач рабочего стола с разрешением 1366x768.](../images/office-2016-taskpane-sizes.png)
 
 - Excel — 320x455 пикселей
 - PowerPoint — 320x531 пикселей
@@ -44,7 +44,7 @@ ms.locfileid: "52330152"
 
 *Рис. 3. Office размеров области задач*
 
-![Схема с отображением размеров области задач с разрешением 1366x768](../images/office-365-taskpane-sizes.png)
+![Схема с отображением размеров области задач с разрешением 1366x768.](../images/office-365-taskpane-sizes.png)
 
 - Excel — 350x378 пикселей
 - PowerPoint — 348x391 пикселей
@@ -59,13 +59,13 @@ ms.locfileid: "52330152"
 
 *Рис. 4. Меню личных данных в Windows*
 
-![Схема, показывающая меню личности на Windows рабочем столе](../images/personality-menu-win.png)
+![Схема, показывающая меню личности на Windows рабочем столе.](../images/personality-menu-win.png)
 
 В Mac меню личных данных имеет размер 26 x 26 пикселей, но сдвинуто на 8 пикселей влево и на 6 вниз, из-за чего оно занимает пространство размером 34 x 32 пикселя, как показано на изображении.
 
 *Рис. 5. Меню личных данных на Mac*
 
-![Схема, показывающая меню личности на рабочем столе Mac](../images/personality-menu-mac.png)
+![Схема, показывающая меню личности на рабочем столе Mac.](../images/personality-menu-mac.png)
 
 ## <a name="implementation"></a>Реализация
 
@@ -73,5 +73,5 @@ ms.locfileid: "52330152"
 
 ## <a name="see-also"></a>См. также
 
-- [Fabric Core в Office надстройки](fabric-core.md)
+- [Fabric Core в надстройках Office](fabric-core.md)
 - [Конструктивные шаблоны для надстроек Office](../design/ux-design-pattern-templates.md)

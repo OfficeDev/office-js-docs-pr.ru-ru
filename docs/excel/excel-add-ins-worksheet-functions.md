@@ -1,14 +1,14 @@
 ---
 title: Вызов встроенных функций листов Excel с помощью API JavaScript для Excel
-description: Узнайте, как вызывать встроенные функции листов Excel, такие как `VLOOKUP` и `SUM` с помощью API JavaScript для Excel.
+description: Узнайте, как вызывать встроенные функции Excel таблицы, такие как `VLOOKUP` `SUM` Excel API JavaScript.
 ms.date: 12/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 3dd7ae24e27b3a3147265a0bcf539ae23af03fc3
-ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
+ms.openlocfilehash: a72fe01341295fccfee168132d8a252cd22a8332
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "47408686"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53075714"
 ---
 # <a name="call-built-in-excel-worksheet-functions"></a>Вызов встроенных функций листов Excel
 
@@ -19,7 +19,7 @@ ms.locfileid: "47408686"
 
 ## <a name="calling-a-worksheet-function"></a>Вызов функции листа
 
-В приведенном ниже фрагменте кода показано, как вызвать функцию листа, где `sampleFunction()`— это заполнитель, который следует заменить на имя вызываемой функции и необходимые ей входные параметры. `value`Свойство `FunctionResult` объекта, возвращаемого функцией листа, содержит результат указанной функции. Как показано в этом примере, необходимо `load` , `value` `FunctionResult` чтобы свойство объекта было доступно для чтения. В этом примере результат выполнения функции просто записывается в консоль.
+В приведенном ниже фрагменте кода показано, как вызвать функцию листа, где `sampleFunction()`— это заполнитель, который следует заменить на имя вызываемой функции и необходимые ей входные параметры. Свойство объекта, возвращаемого функцией таблицы, содержит `value` `FunctionResult` результат указанной функции. Как показано в этом примере, перед чтением необходимо свойство `load` `value` `FunctionResult` объекта. В этом примере результат выполнения функции просто записывается в консоль.
 
 ```js
 var functionResult = context.workbook.functions.sampleFunction();
@@ -37,7 +37,7 @@ return context.sync()
 
 На приведенном ниже изображении показана таблица на листе Excel, содержащая данные о продажах различных инструментов в течение трех месяцев. Каждое число в таблице представляет количество единиц того или иного инструмента, проданных за определенный месяц. В последующих примерах показано, как применить к этим данным встроенные функции листов.
 
-![Снимок экрана Excel с данными о продажах молотков, гаечных ключей и пил за ноябрь, декабрь и январь](../images/worksheet-functions-chaining-results.jpg)
+![Снимок экрана данных о продажах Excel для Hammer, Wrench и Saw в ноябре, декабре и январе.](../images/worksheet-functions-chaining-results.jpg)
 
 ## <a name="example-1-single-function"></a>Пример 1. Одна функция
 
@@ -126,7 +126,7 @@ Excel.run(function (context) {
 | <a href="https://support.office.com/article/BITOR-function-f6ead5c8-5b98-4c9e-9053-8ad5234919b2" target="_blank">Функция БИТ.ИЛИ</a> | Возвращает результат операции поразрядного ИЛИ для двух чисел |
 | <a href="https://support.office.com/article/BITRSHIFT-function-274d6996-f42c-4743-abdb-4ff95351222c" target="_blank">Функция БИТ.СДВИГП</a> | Возвращает число со сдвигом вправо на указанное число бит |
 | <a href="https://support.office.com/article/BITXOR-function-c81306a1-03f9-4e89-85ac-b86c3cba10e4" target="_blank">Функция БИТ.ИСКЛИЛИ</a> | Возвращает результат операции поразрядного исключающего ИЛИ для двух чисел |
-| <a href="https://support.microsoft.com/office/80f95d2f-b499-4eee-9f16-f795a8e306c8" target="_blank">Г. МАТЕМАТИЧЕСКИе функции, ECMA_CEILINGные функции</a> | Округляет число к большему до ближайшего целого или до ближайшего кратного значения с указанной точностью |
+| <a href="https://support.microsoft.com/office/80f95d2f-b499-4eee-9f16-f795a8e306c8" target="_blank">ПОТОЛОК. MATH, ECMA_CEILING функции</a> | Округляет число к большему до ближайшего целого или до ближайшего кратного значения с указанной точностью |
 | <a href="https://support.office.com/article/CEILINGPRECISE-function-f366a774-527a-4c92-ba49-af0a196e66cb" target="_blank">Функция ОКРВВЕРХ.ТОЧН</a> | Округляет число до ближайшего целого или до ближайшего кратного значения с указанной точностью. Число округляется до большего значения вне зависимости от его знака. |
 | <a href="https://support.office.com/article/CHAR-function-bbd249c8-b36e-4a91-8017-1c133f9b837a" target="_blank">Функция СИМВОЛ</a> | Возвращает символ с указанным кодом |
 | <a href="https://support.office.com/article/CHISQDIST-function-8486b05e-5c05-4942-a9ea-f6b341518732" target="_blank">Функция ХИ2.РАСП</a> | Возвращает интегральную функцию плотности бета-распределения |
@@ -185,7 +185,7 @@ Excel.run(function (context) {
 | <a href="https://support.office.com/article/DISC-function-71fce9f3-3f05-4acf-a5a3-eac6ef4daa53" target="_blank">Функция СКИДКА</a> | Возвращает ставку дисконтирования ценной бумаги |
 | <a href="https://support.microsoft.com/office/f4e8209d-8958-4c3d-a1ee-6351665d41c2" target="_blank">Функция ДМАКС</a> | Возвращает наибольшее значение из выбранных записей базы данных |
 | <a href="https://support.microsoft.com/office/4ae6f1d9-1f26-40f1-a783-6dc3680192a3" target="_blank">Функция ДМИН</a> | Возвращает наименьшее значение из выбранных записей базы данных |
-| <a href="https://support.microsoft.com/office/a6cd05d9-9740-4ad3-a469-8109d18ff611" target="_blank">ДОЛЛАРы, функции УСДОЛЛАР</a> | Преобразует число в текст, используя денежный формат |
+| <a href="https://support.microsoft.com/office/a6cd05d9-9740-4ad3-a469-8109d18ff611" target="_blank">Функции DOLLAR, USDOLLAR</a> | Преобразует число в текст, используя денежный формат |
 | <a href="https://support.office.com/article/DOLLARDE-function-db85aab0-1677-428a-9dfd-a38476693427" target="_blank">Функция РУБЛЬ.ДЕС</a> | Преобразует цену в рублях, представленную в виде десятичной дроби, в десятичное число |
 | <a href="https://support.office.com/article/DOLLARFR-function-0835d163-3023-4a33-9824-3042c5d4f495" target="_blank">Функция РУБЛЬ.ДРОБЬ</a> | Преобразует цену в рублях, представленную в виде десятичного числа, в десятичную дробь |
 | <a href="https://support.office.com/article/DPRODUCT-function-4f96b13e-d49c-47a7-b769-22f6d017cb31" target="_blank">Функция БДПРОИЗВЕД</a> | Перемножает значения определенного поля записей, соответствующих условию, в базе данных |
@@ -447,4 +447,4 @@ Excel.run(function (context) {
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
 - [Класс functions (API JavaScript для Excel)](/javascript/api/excel/excel.functions)
-- [Объект функции книги (API JavaScript для Excel)](/javascript/api/excel/excel.workbook#functions)
+- [Объект Функции книги (API JavaScript для Excel)](/javascript/api/excel/excel.workbook#functions)

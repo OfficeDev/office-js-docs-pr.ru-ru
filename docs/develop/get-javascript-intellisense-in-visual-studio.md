@@ -1,14 +1,14 @@
 ---
 title: Использование IntelliSense для JavaScript в Visual Studio 2019
-description: Узнайте, как использовать Жсдок для создания IntelliSense для переменных JavaScript, объектов, параметров и возвращаемых значений.
+description: Узнайте, как использовать JSDoc для создания IntelliSense для переменных JavaScript, объектов, параметров и значений возврата.
 ms.date: 10/11/2019
 localization_priority: Normal
-ms.openlocfilehash: 495e43994d78b1e01374e348e6d21d41d9611212
-ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
+ms.openlocfilehash: 6135649ce80e496d5e195b0ddb0dcb64172d41f5
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49131810"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076057"
 ---
 # <a name="get-javascript-intellisense-in-visual-studio-2019"></a>Использование IntelliSense для JavaScript в Visual Studio 2019
 
@@ -49,7 +49,7 @@ ms.locfileid: "49131810"
 var subsetRange;
 ```
 
-![Снимок экрана с выдержкой из функции IntelliSense для переменной "Субсетранже"](../images/intellisense-vs17-var.png)
+![Снимок экрана с выдержкой IntelliSense переменной "subsetRange".](../images/intellisense-vs17-var.png)
 
 ### <a name="parameter"></a>Параметр
 
@@ -60,7 +60,7 @@ function myFunc(paragraphs){
 }
 ```
 
-![Снимок экрана: Выдержка о параметре "Para" в параметре "paras" ("абзацы" в примере JavaScript)](../images/intellisense-vs17-param.png)
+![Снимок экрана с выдержкой IntelliSense параметра "paras" (параметр "абзацы" в примере JavaScript).](../images/intellisense-vs17-param.png)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -71,7 +71,7 @@ function myFunc() {
 }
 ```
 
-![Снимок экрана, на котором показана выдержка из IntelliSense для возвращаемого значения "Мифунк ()"](../images/intellisense-vs17-return.png)
+![Снимок экрана, показывающий отрывок IntelliSense для возвращаемого значения "myFunc()".](../images/intellisense-vs17-return.png)
 
 ### <a name="complex-types"></a>Сложные типы
 
@@ -84,7 +84,7 @@ function myFunc() {
 }
 ```
 
-![Снимок экрана: IntelliSense для объявления сложного типа "var Мивар;" например,](../images/intellisense-vs17-complex-type.png)
+![Снимок экрана IntelliSense для сложного типа объявления "var myVar;" например.](../images/intellisense-vs17-complex-type.png)
 
 ## <a name="see-also"></a>См. также
 

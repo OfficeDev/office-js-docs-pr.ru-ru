@@ -1,19 +1,19 @@
 ---
-title: Очистить или удалить диапазоны с помощью API JavaScript Excel
-description: Узнайте, как очистить или удалить диапазоны с помощью API JavaScript Excel.
+title: Очистить или удалить диапазоны с Excel API JavaScript
+description: Узнайте, как очистить или удалить диапазоны с помощью Excel API JavaScript.
 ms.date: 04/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 7e030c6b5ba7ba6e6c54e9be0524cd93c2516bcb
-ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
+ms.openlocfilehash: a1bd99db3aa9af3903552d9cefc6ec6d21701136
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51652970"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53075833"
 ---
-# <a name="clear-or-delete-ranges-using-the-excel-javascript-api"></a>Очистить или удалить диапазоны с помощью API JavaScript Excel
+# <a name="clear-or-delete-ranges-using-the-excel-javascript-api"></a>Очистить или удалить диапазоны с Excel API JavaScript
 
-В этой статье данная статья содержит примеры кода, которые очищают и удаляют диапазоны с помощью API JavaScript Excel. Полный список свойств и методов, поддерживаемых объектом, см. в класс `Range` [Excel.Range.](/javascript/api/excel/excel.range)
+В этой статье данная статья содержит примеры кода, которые очищают и удаляют диапазоны с Excel API JavaScript. Полный список свойств и методов, поддерживаемых объектом, см. в `Range` [Excel. Класс Range](/javascript/api/excel/excel.range).
 
 [!include[Excel cells and ranges note](../includes/note-excel-cells-and-ranges.md)]
 
@@ -34,11 +34,11 @@ Excel.run(function (context) {
 
 ### <a name="data-before-range-is-cleared"></a>Данные перед очисткой диапазона
 
-![Данные в Excel перед очисткой диапазона](../images/excel-ranges-start.png)
+![Данные в Excel перед очисткой диапазона.](../images/excel-ranges-start.png)
 
 ### <a name="data-after-range-is-cleared"></a>Данные после очистки диапазона
 
-![Данные в Excel после очистки диапазона](../images/excel-ranges-after-clear.png)
+![Данные в Excel после очистки диапазона.](../images/excel-ranges-after-clear.png)
 
 ## <a name="delete-a-range-of-cells"></a>Удаление диапазона ячеек
 
@@ -57,15 +57,15 @@ Excel.run(function (context) {
 
 ### <a name="data-before-range-is-deleted"></a>Данные перед удалением диапазона
 
-![Данные в Excel перед удалением диапазона](../images/excel-ranges-start.png)
+![Данные в Excel перед удалением диапазона.](../images/excel-ranges-start.png)
 
 ### <a name="data-after-range-is-deleted"></a>Данные после удаления диапазона
 
-![Данные в Excel после удаления диапазона](../images/excel-ranges-after-delete.png)
+![Данные в Excel после удаления диапазона.](../images/excel-ranges-after-delete.png)
 
 
 ## <a name="see-also"></a>См. также
 
-- [Работа с ячейками с помощью API JavaScript Excel](excel-add-ins-cells.md)
-- [Настройка и получения диапазонов с помощью API JavaScript Excel](excel-add-ins-ranges-set-get.md)
+- [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)
+- [Настройка и получения диапазонов с Excel API JavaScript](excel-add-ins-ranges-set-get.md)
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)

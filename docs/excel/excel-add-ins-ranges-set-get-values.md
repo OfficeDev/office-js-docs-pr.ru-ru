@@ -1,19 +1,19 @@
 ---
-title: Установите и получите значения диапазона, текст или формулы с помощью API JavaScript Excel
-description: Узнайте, как использовать API JavaScript Excel для набора и получения значений диапазона, текста или формул.
+title: Установите и получите значения диапазона, текст или формулы с Excel API JavaScript
+description: Узнайте, как использовать API Excel JavaScript для набора и получения значений диапазона, текста или формул.
 ms.date: 04/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: ad6e58c6e9fe3246d23d6ef1dd298fc6c18167a2
-ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
+ms.openlocfilehash: 5d9d1bf3b248585bf27ac591754cfa4eb4dd0fbc
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51652906"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53075749"
 ---
-# <a name="set-and-get-range-values-text-or-formulas-using-the-excel-javascript-api"></a>Установите и получите значения диапазона, текст или формулы с помощью API JavaScript Excel
+# <a name="set-and-get-range-values-text-or-formulas-using-the-excel-javascript-api"></a>Установите и получите значения диапазона, текст или формулы с Excel API JavaScript
 
-В этой статье данная статья содержит примеры кода, которые устанавливают и получают значения диапазона, текст или формулы с API JavaScript Excel. Полный список свойств и методов, поддерживаемых объектом, см. в `Range` [класс Excel.Range.](/javascript/api/excel/excel.range)
+В этой статье данная статья содержит примеры кода, которые устанавливают и получают значения диапазона, текст или формулы с Excel API JavaScript. Полный список свойств и методов, поддерживаемый объектом, см. в `Range` [Excel. Класс Range](/javascript/api/excel/excel.range).
 
 [!include[Excel cells and ranges note](../includes/note-excel-cells-and-ranges.md)]
 
@@ -39,11 +39,11 @@ Excel.run(function (context) {
 
 #### <a name="data-before-cell-value-is-updated"></a>Данные перед изменением значения ячейки
 
-![Данные в Excel перед изменением значения ячейки](../images/excel-ranges-set-start.png)
+![Данные в Excel перед обновлением значения ячейки.](../images/excel-ranges-set-start.png)
 
 #### <a name="data-after-cell-value-is-updated"></a>Данные после изменения значения ячейки
 
-![Данные в Excel после изменения значения ячейки](../images/excel-ranges-set-cell-value.png)
+![Данные в Excel после обновления значения ячейки.](../images/excel-ranges-set-cell-value.png)
 
 ### <a name="set-values-for-a-range-of-cells"></a>Задание значений для диапазона ячеек
 
@@ -67,11 +67,11 @@ Excel.run(function (context) {
 
 #### <a name="data-before-cell-values-are-updated"></a>Данные перед изменением значений ячеек
 
-![Данные в Excel перед изменением значений ячеек](../images/excel-ranges-set-start.png)
+![Данные в Excel перед обновлением значений ячейки.](../images/excel-ranges-set-start.png)
 
 #### <a name="data-after-cell-values-are-updated"></a>Данные после изменения значений ячеек
 
-![Данные в Excel после изменения значений ячеек](../images/excel-ranges-set-cell-values.png)
+![Данные в Excel после обновления значений ячейки.](../images/excel-ranges-set-cell-values.png)
 
 ### <a name="set-formula-for-a-single-cell"></a>Задание формулы для одной ячейки
 
@@ -91,11 +91,11 @@ Excel.run(function (context) {
 
 #### <a name="data-before-cell-formula-is-set"></a>Данные перед заданием формулы для ячейки
 
-![Данные в Excel перед заданием формулы для ячейки](../images/excel-ranges-start-set-formula.png)
+![Данные в Excel перед набором формулы ячейки.](../images/excel-ranges-start-set-formula.png)
 
 #### <a name="data-after-cell-formula-is-set"></a>Данные после задания формулы для ячейки
 
-![Данные в Excel после задания формулы для ячейки](../images/excel-ranges-set-formula.png)
+![Данные в Excel после набора формулы ячейки.](../images/excel-ranges-set-formula.png)
 
 ### <a name="set-formulas-for-a-range-of-cells"></a>Задание формул для диапазона ячеек
 
@@ -122,11 +122,11 @@ Excel.run(function (context) {
 
 #### <a name="data-before-cell-formulas-are-set"></a>Данные перед заданием формул для ячеек
 
-![Данные в Excel перед заданием формул для ячеек](../images/excel-ranges-start-set-formula.png)
+![Данные в Excel перед набором формул ячейки.](../images/excel-ranges-start-set-formula.png)
 
 #### <a name="data-after-cell-formulas-are-set"></a>Данные после задания формул для ячеек
 
-![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
+![Данные в Excel после набора формул ячейки.](../images/excel-ranges-set-formulas.png)
 
 ## <a name="get-values-text-or-formulas"></a>Получение значений, текста или формул
 
@@ -151,7 +151,7 @@ Excel.run(function (context) {
 
 #### <a name="data-in-range-values-in-column-e-are-a-result-of-formulas"></a>Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)
 
-![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
+![Данные в Excel после набора формул ячейки.](../images/excel-ranges-set-formulas.png)
 
 #### <a name="rangevalues-as-logged-to-the-console-by-the-code-sample-above"></a>range.values (как записано в консоль в примере кода выше)
 
@@ -209,7 +209,7 @@ Excel.run(function (context) {
 
 #### <a name="data-in-range-values-in-column-e-are-a-result-of-formulas"></a>Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)
 
-![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
+![Данные в Excel после набора формул ячейки.](../images/excel-ranges-set-formulas.png)
 
 #### <a name="rangetext-as-logged-to-the-console-by-the-code-sample-above"></a>range.text (как записано в консоль в примере кода выше)
 
@@ -267,7 +267,7 @@ Excel.run(function (context) {
 
 #### <a name="data-in-range-values-in-column-e-are-a-result-of-formulas"></a>Данные в диапазоне (значения в столбце E представляют собой результат вычисления формул)
 
-![Данные в Excel после задания формул для ячеек](../images/excel-ranges-set-formulas.png)
+![Данные в Excel после набора формул ячейки.](../images/excel-ranges-set-formulas.png)
 
 #### <a name="rangeformulas-as-logged-to-the-console-by-the-code-sample-above"></a>range.formulas (как записано в консоль в примере кода выше)
 
@@ -309,6 +309,6 @@ Excel.run(function (context) {
 ## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
-- [Работа с ячейками с помощью API JavaScript Excel](excel-add-ins-cells.md)
-- [Настройка и получения диапазонов с помощью API JavaScript Excel](excel-add-ins-ranges-set-get.md)
-- [Настройка формата диапазона с помощью API JavaScript Excel](excel-add-ins-ranges-set-format.md)
+- [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)
+- [Настройка и получения диапазонов с Excel API JavaScript](excel-add-ins-ranges-set-get.md)
+- [Настройка формата диапазона с Excel API JavaScript](excel-add-ins-ranges-set-format.md)

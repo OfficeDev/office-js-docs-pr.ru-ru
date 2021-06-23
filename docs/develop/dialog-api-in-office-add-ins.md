@@ -3,12 +3,12 @@ title: Использование Office Dialog API в вашей надстро
 description: Узнайте основы создания диалоговых окне в Office надстройке.
 ms.date: 01/28/2021
 localization_priority: Normal
-ms.openlocfilehash: acb26255778a57d89b6654e7bf6e3fdc71b67d8d
-ms.sourcegitcommit: 0d3bf72f8ddd1b287bf95f832b7ecb9d9fa62a24
+ms.openlocfilehash: 210b12f826e0d0d360163ee7663d6afca740a24d
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "52727915"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076106"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
@@ -30,7 +30,7 @@ ms.locfileid: "52727915"
 
 На приведенном ниже изображении показан пример диалогового окна. 
 
-![Снимок экрана, показывающий диалоговое окно с 3 вариантами входа, отображаемой перед Word](../images/auth-o-dialog-open.png)
+![Снимок экрана, показывающий диалоговое окно с 3 вариантами входа, отображаемой перед Word.](../images/auth-o-dialog-open.png)
 
 Обратите внимание, что диалоговое окно всегда открывается в центре экрана. Пользователь может перемещать ее и изменять ее размер. Окно является *немодальным*— пользователь может продолжать взаимодействовать как с документом в приложении Office, так и со страницей в области задач, если она есть.
 

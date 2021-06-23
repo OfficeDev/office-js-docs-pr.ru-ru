@@ -3,12 +3,12 @@ title: Функция проверки при отправке для надст
 description: Позволяет надстройке настраивать те или иные параметры при отправке, а также обрабатывать элемент и запрещать пользователям выполнять определенные действия.
 ms.date: 06/15/2021
 localization_priority: Normal
-ms.openlocfilehash: a731ee6c44c8559f6448e0f4705652dc14c42d74
-ms.sourcegitcommit: 0bf0e076f705af29193abe3dba98cbfcce17b24f
+ms.openlocfilehash: 9c56160fdfeb2df2e78ee8a9db8750841d043d87
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2021
-ms.locfileid: "53007806"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53077038"
 ---
 # <a name="on-send-feature-for-outlook-add-ins"></a>Функция проверки при отправке для надстроек Outlook
 
@@ -56,7 +56,7 @@ ms.locfileid: "53007806"
 
 <br/>
 
-![Снимок экрана с сообщением об ошибке, в котором пользователю предлагается ввести отсутствующую строку темы](../images/block-on-send-subject-cc-inforbar.png)
+![Снимок экрана с сообщением об ошибке, побуждающий пользователя ввести недостающую строку темы.](../images/block-on-send-subject-cc-inforbar.png)
 
 <br/>
 
@@ -66,7 +66,7 @@ ms.locfileid: "53007806"
 
 <br/>
 
-![Снимок экрана с сообщением об ошибке, которое сообщает пользователю о том, что обнаружены слова, подлежащие блокировке](../images/block-on-send-body.png)
+![Снимок экрана, показывающий сообщение об ошибке, сообщая пользователю, что были найдены заблокированные слова.](../images/block-on-send-body.png)
 
 ## <a name="limitations"></a>Ограничения
 

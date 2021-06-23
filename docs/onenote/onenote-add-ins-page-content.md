@@ -1,20 +1,20 @@
 ---
 title: Работа с содержимым страницы в OneNote
-description: Узнайте, как работать с контентом страницы OneNote с помощью API JavaScript.
+description: Узнайте, как работать с OneNote контентом страницы с помощью API JavaScript.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 319ec8a6a92bf6bf58fac9c3c2d22987bc027414
-ms.sourcegitcommit: fa4e81fcf41b1c39d5516edf078f3ffdbd4a3997
+ms.openlocfilehash: 9c4744f1121bbc5e28783940a946727275b806f2
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42720941"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076821"
 ---
 # <a name="work-with-onenote-page-content"></a>Работа с содержимым страницы в OneNote
 
 В API JavaScript для надстроек OneNote содержимое страницы представлено указанной ниже объектной моделью.
 
-  ![Схема объектной модели страницы OneNote](../images/one-note-om-page.png)
+  ![OneNote схема объектной модели страницы.](../images/one-note-om-page.png)
 
 - Объект Page содержит коллекцию объектов PageContent.
 - Объект PageContent содержит контент типов Outline, Image или Other.
@@ -54,7 +54,7 @@ ms.locfileid: "42720941"
 
 ## <a name="accessing-page-contents"></a>Доступ к содержимому страницы
 
-Через ** доступ можно получить только к `Page#load`. Чтобы изменить активную страницу, вызовите команду `navigateToPage($page)`.
+Через  доступ можно получить только к `Page#load`. Чтобы изменить активную страницу, вызовите команду `navigateToPage($page)`.
 
 Метаданные, например "Название", можно запросить для любой страницы.
 

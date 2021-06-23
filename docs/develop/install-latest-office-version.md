@@ -3,12 +3,12 @@ title: Установка последней версии Office
 description: Сведения о том, как получать последние сборки Office раньше других.
 ms.date: 07/07/2020
 localization_priority: Normal
-ms.openlocfilehash: df10d64d69b64283321bbad79aca7f7f6d482dd1
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: d72012e3c2e642c74d8573c4d9bb3b29a8fc0274
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45093618"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076022"
 ---
 # <a name="install-the-latest-version-of-office"></a>Установка последней версии Office
 
@@ -18,8 +18,8 @@ ms.locfileid: "45093618"
 
 Чтобы получать последние сборки Office раньше других:
 
-- Если вы являетесь участником семьи, персональным или университетом Microsoft 365, ознакомьтесь [со статьей "Предварительная](https://insider.office.com)подписка на Office".
-- Если вы используете приложения Microsoft 365 для бизнеса, ознакомьтесь со статьей [Установка сборки первого выпуска для приложений microsoft 365 для бизнеса](https://support.office.com/article/Install-the-First-Release-build-for-Office-365-for-business-customers-4dd8ba40-73c0-4468-b778-c7b744d03ead).
+- Если вы абонент Microsoft 365 для семьи, личный или университетский, см. статью [Be an Office Insider](https://insider.office.com).
+- Если вы клиент Приложения Microsoft 365 для бизнеса, см. в выпуске [Install the First Release build for Приложения Microsoft 365 для бизнеса клиентов.](https://support.office.com/article/Install-the-First-Release-build-for-Office-365-for-business-customers-4dd8ba40-73c0-4468-b778-c7b744d03ead)
 - Если вы используете Office для Mac:
   - Запустите приложение Office.
   - Выберите пункт **Проверить наличие обновлений** в меню "Справка".
@@ -39,7 +39,7 @@ ms.locfileid: "45093618"
 
 По завершении процесса установки у вас будут последние версии приложений Office. Чтобы убедиться, что у вас последняя сборка, в любом приложении Office последовательно выберите **Файл** > **Учетная запись**. В разделе "Обновления Office" над номером версии должна быть надпись "Предварительная оценка Office".
 
-![Снимок экрана, на котором показаны сведения о продукте с надписью "Предварительная оценка Office"](../images/office-insiders-label.png)
+![Снимок экрана, на который показаны сведения о продукте с Office insiders.](../images/office-insiders-label.png)
 
 ## <a name="minimum-office-builds-for-office-javascript-api-requirement-sets"></a>Минимальные сборки Office, которые могут использовать наборы обязательных элементов API JavaScript для Office
 

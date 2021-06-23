@@ -1,28 +1,28 @@
 ---
-title: Создание мобильной надстройки Outlook для поставщика онлайн-собраний
+title: Создание надстройки Outlook для поставщика онлайн-собраний
 description: Обсуждается настройка мобильной надстройки Outlook для поставщика услуг онлайн-собраний.
 ms.topic: article
 ms.date: 02/12/2021
 localization_priority: Normal
-ms.openlocfilehash: b973a0cada4127ecc614d42764a9ecea2a00fa2c
-ms.sourcegitcommit: e7009c565b18c607fe0868db2e26e250ad308dce
+ms.openlocfilehash: 7f65ef7a1b87a989063b6cb23e6e608e6b3bbefc
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50505523"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53077066"
 ---
-# <a name="create-an-outlook-mobile-add-in-for-an-online-meeting-provider"></a>Создание мобильной надстройки Outlook для поставщика онлайн-собраний
+# <a name="create-an-outlook-mobile-add-in-for-an-online-meeting-provider"></a>Создание надстройки Outlook для поставщика онлайн-собраний
 
-Настройка собрания в Интернете — это основной опыт для пользователя Outlook, и легко создать групповую встречу с [мобильным телефоном Outlook.](/microsoftteams/teams-add-in-for-outlook) Однако создание онлайн-собрания в Outlook с помощью службы, не в microsoft, может быть обременительным. Реализуя эту функцию, поставщики услуг могут оптимизировать работу по созданию собраний в Интернете для пользователей надстройки Outlook.
+Настройка собрания в Интернете — это основной опыт для Outlook, и легко создать Teams с Outlook [мобильным](/microsoftteams/teams-add-in-for-outlook) телефоном. Однако создание онлайн-собрания в Outlook с помощью службы, не в microsoft, может быть обременительным. Реализуя эту функцию, поставщики услуг могут упростить работу по созданию собраний в Интернете для Outlook пользователей надстройки.
 
 > [!IMPORTANT]
-> Эта функция поддерживается только на Android и iOS с подпиской Microsoft 365.
+> Эта функция поддерживается только на Android и iOS с Microsoft 365 подпиской.
 
-В этой статье вы узнаете, как настроить мобильную надстройка Outlook, чтобы пользователи могли организовывать собрания и присоединяться к ним с помощью службы онлайн-собраний. В этой статье мы будем использовать вымышленного поставщика онлайн-собраний "Contoso".
+В этой статье вы узнаете, как настроить Outlook надстройки, чтобы пользователи могли организовывать собрания и присоединяться к ним с помощью службы онлайн-собраний. В этой статье мы будем использовать вымышленного поставщика онлайн-собраний "Contoso".
 
 ## <a name="set-up-your-environment"></a>Настройка среды
 
-Выполните [быстрый запуск Outlook,](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator) который создает проект надстройки с генератором Yeoman для надстройок Office.
+Выполните [Outlook,](../quickstarts/outlook-quickstart.md?tabs=yeomangenerator) который создает проект надстройки с генератором Yeoman для Office надстройки.
 
 ## <a name="configure-the-manifest"></a>Настройка манифеста
 
@@ -122,7 +122,7 @@ ms.locfileid: "50505523"
 ```
 
 > [!TIP]
-> Дополнительные новости о манифестах надстройок Outlook см. в манифестах надстройки [Outlook](manifests.md) и дополнительных командах надстройки [для Outlook Mobile.](add-mobile-support.md)
+> Дополнительные информацию о манифестах для Outlook надстройки см. в Outlook манифестах надстройки и добавлении поддержки команд надстройки [для Outlook Mobile.](add-mobile-support.md) [](manifests.md)
 
 ## <a name="implement-adding-online-meeting-details"></a>Реализация добавления сведений о собраниях в Интернете
 
@@ -207,26 +207,26 @@ ms.locfileid: "50505523"
 
 ## <a name="testing-and-validation"></a>Тестирование и проверка
 
-Следуйте обычным рекомендациям [по проверке и проверке надстройки.](testing-and-tips.md) После [загрузки](sideload-outlook-add-ins-for-testing.md) в Outlook в Интернете, Windows или Mac перезапустите Outlook на мобильном устройстве Android. (Android — единственный поддерживаемый клиент на данный момент.) Затем на новом экране собраний убедитесь, что переукомплектовка Microsoft Teams или Skype заменена на вашу.
+Следуйте обычным рекомендациям [по проверке и проверке надстройки.](testing-and-tips.md) После [sideloading](sideload-outlook-add-ins-for-testing.md) в Outlook в Интернете, Windows или Mac, перезапустите Outlook на вашем мобильном устройстве Android. (Android — единственный поддерживаемый клиент на данный момент.) Затем на новом экране собрания убедитесь, что Microsoft Teams или Skype очки заменены на собственные.
 
 ### <a name="create-meeting-ui"></a>Создание пользовательского интерфейса собрания
 
 В качестве организатора собрания при создании собрания необходимо видеть экраны, похожие на следующие три изображения.
 
-снимок экрана создания экрана собраний на [ ![ Android - Contoso](../images/outlook-android-create-online-meeting-off.png)](../images/outlook-android-create-online-meeting-off-expanded.png#lightbox) отключил снимок экрана создания экрана собраний на Android - загрузка экрана [ ![ Contoso,](../images/outlook-android-create-online-meeting-load.png)](../images/outlook-android-create-online-meeting-load-expanded.png#lightbox) чтобы загрузить скриншот создания экрана собраний на Android — переключение на [ ![ Contoso](../images/outlook-android-create-online-meeting-on.png)](../images/outlook-android-create-online-meeting-on-expanded.png#lightbox)
+[![Экран создания собраний на Android — contoso отключается.](../images/outlook-android-create-online-meeting-off.png)](../images/outlook-android-create-online-meeting-off-expanded.png#lightbox) [![Экран создания собраний на Android — загрузка toggle Contoso.](../images/outlook-android-create-online-meeting-load.png)](../images/outlook-android-create-online-meeting-load-expanded.png#lightbox) [![Создание экрана собраний на Android — перегной contoso.](../images/outlook-android-create-online-meeting-on.png)](../images/outlook-android-create-online-meeting-on-expanded.png#lightbox)
 
 ### <a name="join-meeting-ui"></a>Регистрация пользовательского интерфейса собрания
 
 В качестве участника собрания при просмотре собрания необходимо увидеть экран, аналогичный следующему изображению.
 
-[![снимок экрана собрания на Android](../images/outlook-android-join-online-meeting-view-1.png)](../images/outlook-android-join-online-meeting-view-1-expanded.png#lightbox)
+[![Снимок экрана присоединиться к собранию на Android.](../images/outlook-android-join-online-meeting-view-1.png)](../images/outlook-android-join-online-meeting-view-1-expanded.png#lightbox)
 
 > [!IMPORTANT]
 > Если вы не видите ссылку **Join,** возможно, шаблон онлайн-собраний для вашей службы не зарегистрирован на наших серверах. Подробные [сведения см. в разделе Регистрация шаблона онлайн-собраний.](#register-your-online-meeting-template)
 
 ## <a name="register-your-online-meeting-template"></a>Регистрация шаблона собраний в Интернете
 
-Если вы хотите зарегистрировать шаблон онлайн-собраний для своей службы, вы можете создать проблему GitHub с подробными сведениями. После этого мы свяемся с вами, чтобы согласовать сроки регистрации.
+Если вы хотите зарегистрировать шаблон онлайн-собраний для службы, вы можете создать GitHub проблемы с деталями. После этого мы свяемся с вами, чтобы согласовать сроки регистрации.
 
 1. Перейдите в **раздел Отзыв** в конце этой статьи.
 1. Нажмите **ссылку На эту страницу.**
@@ -234,14 +234,14 @@ ms.locfileid: "50505523"
 1. В тексте проблемы замените строку "[Введите обратную связь здесь]" строкой, заданной в или аналогичной переменной из раздела `newBody` Implement adding online meeting [details](#implement-adding-online-meeting-details) earlier in this article.
 1. Нажмите **кнопку Отправка новой проблемы**.
 
-![снимок экрана новой проблемы GitHub с образцом контента Contoso](../images/outlook-request-to-register-online-meeting-template.png)
+![снимок экрана GitHub с образцом контента Contoso.](../images/outlook-request-to-register-online-meeting-template.png)
 
 ## <a name="available-apis"></a>Доступные API
 
 Для этой функции доступны следующие API.
 
 - API-API организатора встреч
-  - [Office.context.mailbox.item.body](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#body) [(Body.getAsync,](/javascript/api/outlook/office.body?view=outlook-js-preview&preserve-view=true#getasync-coerciontype--options--callback-) [Body.setAsync)](/javascript/api/outlook/office.body?view=outlook-js-preview&preserve-view=true#setasync-data--options--callback-)
+  - [Office.context.mailbox.item.body](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#body) [(Body.getAsync,](/javascript/api/outlook/office.body?view=outlook-js-preview&preserve-view=true#getasync-coerciontype--options--callback-) [Body.setAsync](/javascript/api/outlook/office.body?view=outlook-js-preview&preserve-view=true#setasync-data--options--callback-))
   - [Office.context.mailbox.item.end](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#end) [(Время)](/javascript/api/outlook/office.time?view=outlook-js-preview&preserve-view=true)
   - [Office.context.mailbox.item.loadCustomPropertiesAsync](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#loadcustompropertiesasync-callback--usercontext-) [(CustomProperties)](/javascript/api/outlook/office.customproperties?view=outlook-js-preview&preserve-view=true)
   - [Office.context.mailbox.item.location](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-preview&preserve-view=true#location) [(Location)](/javascript/api/outlook/office.location?view=outlook-js-preview&preserve-view=true)
@@ -258,7 +258,7 @@ ms.locfileid: "50505523"
 Применяется несколько ограничений.
 
 - Применимо только к поставщикам онлайн-собраний.
-- Только надстройки, установленные администратором, будут отображаться на экране композитной встречи, заменяя параметр Teams по умолчанию или Skype. Установленные пользователем надстройки не активируются.
+- Только надстройки, установленные администратором, появятся на экране композитной встречи, заменив по умолчанию Teams или Skype. Установленные пользователем надстройки не активируются.
 - Значок надстройки должен быть в серой шкале с использованием кода hex или его эквивалента `#919191` в [других цветовых форматах.](https://convertingcolors.com/hex-color-919191.html)
 - Только одна команда без пользовательского интерфейса поддерживается в режиме Организатор встречи (составить).
 

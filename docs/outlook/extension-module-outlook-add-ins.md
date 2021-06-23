@@ -3,12 +3,12 @@ title: Надстройки Outlook с расширением модуля
 description: Создают приложения, которые запускаются внутри Outlook и с помощью которых пользователи могут легко получать доступ к бизнес-информации и средствам повышения производительности, не выходя из Outlook.
 ms.date: 05/27/2020
 localization_priority: Normal
-ms.openlocfilehash: ba25a10e0f6e8c8b3b14df7e98ff200e00717136
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 3a02e93375f1c0872790d050382a14bc2c324cef
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611647"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53077087"
 ---
 # <a name="module-extension-outlook-add-ins"></a>Надстройки Outlook с расширением модуля
 
@@ -33,7 +33,7 @@ ms.locfileid: "44611647"
 
 Когда вы щелкаете расширение, Outlook заменяет встроенный модуль на специальный, чтобы пользователи могли взаимодействовать с надстройкой. Вы можете использовать все функции API JavaScript для Outlook в надстройке и создавать кнопки на ленте Outlook, которые будут взаимодействовать с содержимым надстройки. Ниже показана интегрированная в панель навигации Outlook надстройка с кнопками на ленте, которые обновляют ее содержимое.
 
-![Пользовательский интерфейс расширения модуля](../images/outlook-module-extension.png)
+![Показывает пользовательский интерфейс расширения модуля.](../images/outlook-module-extension.png)
 
 ## <a name="example"></a>Пример
 

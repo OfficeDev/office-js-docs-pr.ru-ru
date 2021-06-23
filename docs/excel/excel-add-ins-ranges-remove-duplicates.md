@@ -1,19 +1,19 @@
 ---
-title: Удаление дубликатов с помощью API JavaScript Excel
-description: Узнайте, как использовать API JavaScript Excel для удаления дубликатов.
+title: Удаление дубликатов с Excel API JavaScript
+description: Узнайте, как использовать API Excel JavaScript для удаления дубликатов.
 ms.date: 04/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 0a2a076398e15d1b3b9db963a85703782056c91e
-ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
+ms.openlocfilehash: 859214d36bdf66a284304ba1d5f7f2d642b718cb
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51652912"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53075770"
 ---
-# <a name="remove-duplicates-using-the-excel-javascript-api"></a>Удаление дубликатов с помощью API JavaScript Excel
+# <a name="remove-duplicates-using-the-excel-javascript-api"></a>Удаление дубликатов с Excel API JavaScript
 
-В этой статье содержится пример кода, который удаляет дублирующиеся записи в диапазоне с помощью API JavaScript Excel. Полный список свойств и методов, поддерживаемых объектом, см. в `Range` [класс Excel.Range.](/javascript/api/excel/excel.range)
+В этой статье содержится пример кода, который удаляет дублирующиеся записи в диапазоне с Excel API JavaScript. Полный список свойств и методов, поддерживаемый объектом, см. в `Range` [Excel. Класс Range](/javascript/api/excel/excel.range).
 
 ## <a name="remove-rows-with-duplicate-entries"></a>Удаление строк с дублирующими записями
 
@@ -45,15 +45,15 @@ Excel.run(function (context) {
 
 ### <a name="data-before-duplicate-entries-are-removed"></a>Данные перед удалением дублирующих записей
 
-![Данные в Excel перед запуском метода удаления дубликатов диапазона](../images/excel-ranges-remove-duplicates-before.png)
+![Данные в Excel перед запуском метода удаления дубликатов диапазона.](../images/excel-ranges-remove-duplicates-before.png)
 
 ### <a name="data-after-duplicate-entries-are-removed"></a>Данные после удаления дублирующих записей
 
-![Данные в Excel после запуска метода удаления дубликатов диапазона](../images/excel-ranges-remove-duplicates-after.png)
+![Данные в Excel после запуска метода удаления дубликатов диапазона.](../images/excel-ranges-remove-duplicates-after.png)
 
 ## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
-- [Работа с ячейками с помощью API JavaScript Excel](excel-add-ins-cells.md)
-- [Диапазоны вырезать, скопировать и вклеить с помощью API JavaScript Excel](excel-add-ins-ranges-cut-copy-paste.md)
+- [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)
+- [Диапазоны вырезать, скопировать и вклеить с Excel API JavaScript](excel-add-ins-ranges-cut-copy-paste.md)
 - [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md)
