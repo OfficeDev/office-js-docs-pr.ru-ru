@@ -5,12 +5,12 @@ title: Обзор жизненного цикла разработки
 description: Узнайте о событиях жизненного цикла планирования, разработки, тестирования и публикации.
 ms.date: 05/25/2021
 localization_priority: Priority
-ms.openlocfilehash: 4bd1e7e005c5905528196a547ba96ff786f8dbac
-ms.sourcegitcommit: a42ae8b804f944061c87bbd9d9f67990e4cf5e36
+ms.openlocfilehash: 37a31e57fe15504937e9ece42a4b0dea8328fa24
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "52697192"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076674"
 ---
 # <a name="development-lifecycle-overview"></a>Обзор жизненного цикла разработки
 
@@ -20,8 +20,8 @@ ms.locfileid: "52697192"
 
 |               |               |
 | ------------- | ------------- |
-| ![рекомендации](../images/i_best-practices_small.svg) | **План**<br>[Ознакомьтесь с рекомендациями и требованиями к системе для надстроек Office.](../concepts/add-in-development-best-practices.md) |
-| ![блоки кода](../images/i_code-blocks_small.svg) | **Разработка**<br>[Изучите API и шаблоны для разработки надстроек Office.](../develop/develop-overview.md) |
-| ![рекомендуемое тестирование](../images/i_recommended-testing_small.svg) | **Тестирование и отладка**<br>[Узнайте, как тестировать и отлаживать надстройки Office.](../testing/test-debug-office-add-ins.md) |
-| ![развертывание](../images/i_deploy_small.svg) | **Публикация**<br>[Узнайте, как развертывать и публиковать надстройки Office.](../publish/publish.md) |
-| ![справочник](../images/i_reference_small.svg) | **Справочник**<br>[Ознакомьтесь со справочной документацией по API JavaScript для Office, манифестом надстроек, списками кодов ошибок и т. д.](../reference/javascript-api-for-office.md) |
+| :::image type="icon" source="../images/i_best-practices_small.svg"::: | **План**<br>[Ознакомьтесь с рекомендациями и требованиями к системе для надстроек Office.](../concepts/add-in-development-best-practices.md) |
+| :::image type="icon" source="../images/i_code-blocks_small.svg"::: | **Разработка**<br>[Изучите API и шаблоны для разработки надстроек Office.](../develop/develop-overview.md) |
+| :::image type="icon" source="../images/i_recommended-testing_small.svg"::: | **Тестирование и отладка**<br>[Узнайте, как тестировать и отлаживать надстройки Office.](../testing/test-debug-office-add-ins.md) |
+| :::image type="icon" source="../images/i_deploy_small.svg"::: | **Публикация**<br>[Узнайте, как развертывать и публиковать надстройки Office.](../publish/publish.md) |
+| :::image type="icon" source="../images/i_reference_small.svg"::: | **Справочник**<br>[Ознакомьтесь со справочной документацией по API JavaScript для Office, манифестом надстроек, списками кодов ошибок и т. д.](../reference/javascript-api-for-office.md) |
