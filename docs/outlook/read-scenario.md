@@ -1,14 +1,14 @@
 ---
 title: Создание надстроек Outlook для форм чтения
-description: Надстройки чтения — это надстройки Outlook, которые активируются в области чтения или с помощью инспектора чтения в Outlook.
+description: Надстройки чтения — это надстройки Outlook, которые активируются в области чтения или с помощью инспектора чтения в Outlook.
 ms.date: 03/19/2021
 localization_priority: Priority
-ms.openlocfilehash: 495b4d947ec965481859c3262d3b67b93f57a5c0
-ms.sourcegitcommit: 7482ab6bc258d98acb9ba9b35c7dd3b5cc5bed21
+ms.openlocfilehash: f84c0d5252f2cf728397965d9414df2ee5070444
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "51178001"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076695"
 ---
 # <a name="create-outlook-add-ins-for-read-forms"></a>Создание надстроек Outlook для форм чтения
 
@@ -21,7 +21,7 @@ ms.locfileid: "51178001"
 
 - Просматривает данные о собрании в роли участника.
 
-- просматривает собрание в роли организатора (только выпуск RTM Outlook 2013 и Exchange 2013).
+- просматривает собрание в роли организатора (только выпуск RTM Outlook 2013 и Exchange 2013).
 
    > [!NOTE]
    > Начиная с выпуска Office 2013 с пакетом обновления SP1, если пользователь просматривает данные об организованном им собрании, доступны только надстройки создания. Надстройки чтения больше не доступны в этом сценарии.
@@ -30,7 +30,7 @@ ms.locfileid: "51178001"
 
 **Область надстройки с надстройкой "Карты Bing" для выбранного сообщения Outlook, содержащего адрес**
 
-![Почтовое приложение "Карты Bing" в Outlook](../images/outlook-detected-entity-card.png)
+![Почтовое приложение "Карты Bing" в Outlook.](../images/outlook-detected-entity-card.png)
 
 ## <a name="types-of-add-ins-available-in-read-mode"></a>Типы надстроек, доступные в режиме чтения
 

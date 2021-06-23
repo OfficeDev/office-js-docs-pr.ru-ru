@@ -3,12 +3,12 @@ title: Дизайн надстройки Outlook
 description: Эти рекомендации помогут вам спроектировать и выполнить сборку надстройки с привлекательным внешним видом, которая сделает лучшие качества вашего приложения доступными в Outlook для Windows, веб, iOS, Mac и Android.
 ms.date: 06/24/2019
 localization_priority: Priority
-ms.openlocfilehash: ed2ffe1b46ba4673dea531450a0452afa8de11c5
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: a669d2cf0a98ffa0ca7b7dfc3fcc5b71d291a0e0
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44606527"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53077136"
 ---
 # <a name="outlook-add-in-design-guidelines"></a>Рекомендации по разработке надстроек Outlook
 
@@ -58,9 +58,9 @@ ms.locfileid: "44606527"
 
 Типичная надстройка состоит из следующих компонентов:
 
-![Схема основных вариантов графического дизайна области задач на iOS](../images/outlook-mobile-design-overview.png)
+![Схема основных шаблонов пользовательского интерфейса для области задач в iOS.](../images/outlook-mobile-design-overview.png)
 
-![Схема основных вариантов графического дизайна области задач на Android](../images/outlook-mobile-design-overview-android.jpg)
+![Схема основных шаблонов пользовательского интерфейса для области задач в Android.](../images/outlook-mobile-design-overview-android.jpg)
 
 ### <a name="loading"></a>Загрузка
 
@@ -68,11 +68,11 @@ ms.locfileid: "44606527"
 
 **Пример загрузки страниц на iOS**
 
-![Примеры индикаторов выполнения и работы на iOS](../images/outlook-mobile-design-loading.png)
+![Примеры индикаторов выполнения и работы на iOS.](../images/outlook-mobile-design-loading.png)
 
 **Пример загрузки страниц на Android**
 
-![Примеры индикаторов выполнения и работы на Android](../images/outlook-mobile-design-loading-android.jpg)
+![Примеры индикаторов выполнения и работы на Android.](../images/outlook-mobile-design-loading-android.jpg)
 
 
 ### <a name="sign-insign-up"></a>Вход и регистрация
@@ -81,11 +81,11 @@ ms.locfileid: "44606527"
 
 **Пример страницы входа и регистрации на iOS**
 
-![Примеры страниц входа и регистрации на iOS](../images/outlook-mobile-design-signin.png)
+![Примеры страниц входа и регистрации на iOS.](../images/outlook-mobile-design-signin.png)
 
 **Пример страницы входа на Android**
 
-![Примеры страниц входа на Android](../images/outlook-mobile-design-signin-android.png)
+![Примеры страниц входа на Android.](../images/outlook-mobile-design-signin-android.png)
 
 ### <a name="brand-bar"></a>Панель с фирменной символикой
 
@@ -93,17 +93,17 @@ ms.locfileid: "44606527"
 
 **Пример фирменной символики на iOS**
 
-![Примеры панели с фирменной символикой на iOS](../images/outlook-mobile-design-branding.png)
+![Примеры панели с фирменной символикой на iOS.](../images/outlook-mobile-design-branding.png)
 
 **Пример фирменной символики на Android**
 
-![Примеры панели с фирменной символикой на Android](../images/outlook-mobile-design-branding-android.png)
+![Примеры панели с фирменной символикой на Android.](../images/outlook-mobile-design-branding-android.png)
 
 ### <a name="margins"></a>Поля
 
-Размер полей на мобильных устройствах должен составлять 15 пикселей (8 % экрана) с каждой стороны на iOS и 16 пикселей с каждой стороны на Android.
+Размер полей на мобильных устройствах должен составлять 15 пикселей (8 % экрана) с каждой стороны на iOS и 16 пикселей с каждой стороны на Android.
 
-![Примеры полей на iOS](../images/outlook-mobile-design-margins.png)
+![Примеры полей на iOS.](../images/outlook-mobile-design-margins.png)
 
 ### <a name="typography"></a>Шрифтовое оформление
 
@@ -111,17 +111,17 @@ ms.locfileid: "44606527"
 
 **Шрифтовое оформление на iOS**
 
-![Примеры шрифтового оформления для iOS](../images/outlook-mobile-design-typography.png)
+![Примеры шрифтового оформления для iOS.](../images/outlook-mobile-design-typography.png)
 
 **Шрифтовое оформление на Android**
 
-![Примеры шрифтового оформления для Android](../images/outlook-mobile-design-typography-android.png)
+![Примеры шрифтового оформления для Android.](../images/outlook-mobile-design-typography-android.png)
 
 ### <a name="color-palette"></a>Цветовая палитра
 
 В Outlook iOS используется ненавязчивая цветовая схема.  Для согласованности рекомендуем использовать цвета только для действий и ошибок, а уникальные цвета использовать только на панели с фирменной символикой.
 
-![Цветовая палитра для iOS](../images/outlook-mobile-design-color-palette.png)
+![Цветовая палитра для iOS.](../images/outlook-mobile-design-color-palette.png)
 
 ### <a name="cells"></a>Ячейки
 
@@ -129,25 +129,25 @@ ms.locfileid: "44606527"
 
 **Примеры ячеек на iOS**
 
-![Типы ячеек для iOS](../images/outlook-mobile-design-cell-types.png)
+![Типы ячеек для iOS.](../images/outlook-mobile-design-cell-types.png)
 * * *
-![Примеры правильного оформления ячеек для iOS](../images/outlook-mobile-design-cell-dos.png)
+![Примеры правильного оформления ячеек для iOS.](../images/outlook-mobile-design-cell-dos.png)
 * * *
-![Примеры неправильного оформления ячеек для iOS](../images/outlook-mobile-design-cell-donts.png)
+![Примеры неправильного оформления ячеек для iOS.](../images/outlook-mobile-design-cell-donts.png)
 * * *
-![Ячейки и способы ввода для iOS](../images/outlook-mobile-design-cell-input.png)
+![Ячейки и способы ввода для iOS.](../images/outlook-mobile-design-cell-input.png)
 
 **Примеры ячеек на Android**
 
-![Типы ячеек для Android](../images/outlook-mobile-design-cell-type-android.png)
+![Типы ячеек для Android.](../images/outlook-mobile-design-cell-type-android.png)
 * * *
-![Примеры правильного оформления ячеек для Android](../images/outlook-mobile-design-cell-dos-android.png)
+![Примеры правильного оформления ячеек для Android.](../images/outlook-mobile-design-cell-dos-android.png)
 * * *
-![Примеры неправильного оформления ячеек для Android](../images/outlook-mobile-design-cell-donts-android.png)
+![Примеры неправильного оформления ячеек для Android.](../images/outlook-mobile-design-cell-donts-android.png)
 * * *
-![Ячейки и способы ввода для Android, часть 1](../images/outlook-mobile-design-cell-input-1-android.png)
+![Ячейки и способы ввода для Android, часть 1.](../images/outlook-mobile-design-cell-input-1-android.png)
 
-![Ячейки и способы ввода для Android, часть 2](../images/outlook-mobile-design-cell-input-2-android.png)
+![Ячейки и способы ввода для Android, часть 2.](../images/outlook-mobile-design-cell-input-2-android.png)
 
 ### <a name="actions"></a>Действия
 
@@ -157,13 +157,13 @@ ms.locfileid: "44606527"
 
 ![Действия и ячейки в iOS](../images/outlook-mobile-design-action-cells.png)
 * * *
-![Примеры правильного выбора действий для iOS](../images/outlook-mobile-design-action-dos.png)
+![Примеры правильного выбора действий для iOS.](../images/outlook-mobile-design-action-dos.png)
 
 **Примеры действий на Android**
 
-![Действия и ячейки в Android](../images/outlook-mobile-design-action-cells-android.png)
+![Действия и ячейки в Android.](../images/outlook-mobile-design-action-cells-android.png)
 * * *
-![Примеры правильного выбора действий для Android](../images/outlook-mobile-design-action-dos-android.png)
+![Примеры правильного выбора действий для Android.](../images/outlook-mobile-design-action-dos-android.png)
 
 ### <a name="buttons"></a>Кнопки
 
@@ -171,11 +171,11 @@ ms.locfileid: "44606527"
 
 **Примеры кнопок на iOS**
 
-![Примеры кнопок для iOS](../images/outlook-mobile-design-buttons.png)
+![Примеры кнопок для iOS.](../images/outlook-mobile-design-buttons.png)
 
 **Примеры кнопок на Android**
 
-![Примеры кнопок для Android](../images/outlook-mobile-design-buttons-android.png)
+![Примеры кнопок для Android.](../images/outlook-mobile-design-buttons-android.png)
 
 ### <a name="tabs"></a>Вкладки
 
@@ -183,11 +183,11 @@ ms.locfileid: "44606527"
 
 **Примеры вкладок на iOS**
 
-![Примеры вкладок для iOS](../images/outlook-mobile-design-tabs.png)
+![Примеры вкладок для iOS.](../images/outlook-mobile-design-tabs.png)
 
 **Примеры вкладок на Android**
 
-![Примеры вкладок для Android](../images/outlook-mobile-design-tabs-android.png)
+![Примеры вкладок для Android.](../images/outlook-mobile-design-tabs-android.png)
 
 ### <a name="icons"></a>Значки
 
@@ -195,11 +195,11 @@ ms.locfileid: "44606527"
 
 **Примеры значков на iOS**
 
-![Примеры значков для iOS](../images/outlook-mobile-design-icons.png)
+![Примеры значков для iOS.](../images/outlook-mobile-design-icons.png)
 
 **Примеры значков на Android**
 
-![Примеры значков для Android](../images/outlook-mobile-design-icons-android.jpg)
+![Примеры значков для Android.](../images/outlook-mobile-design-icons-android.jpg)
 
 ## <a name="end-to-end-examples"></a>Полные примеры
 
@@ -212,44 +212,44 @@ ms.locfileid: "44606527"
 
 **Пример GIPHY на iOS**
 
-![Полное оформление надстройки GIPHY на iOS](../images/outlook-mobile-design-giphy.png)
+![Полное оформление надстройки GIPHY на iOS.](../images/outlook-mobile-design-giphy.png)
 
 **Пример GIPHY на Android**
 
-![Полное оформление надстройки GIPHY на Android](../images/outlook-mobile-design-giphy-android.png)
+![Полное оформление надстройки GIPHY на Android.](../images/outlook-mobile-design-giphy-android.png)
 
 ### <a name="nimble"></a>Nimble
 
 **Пример Nimble на iOS**
 
-![Полное оформление надстройки Nimble на iOS](../images/outlook-mobile-design-nimble.png)
+![Полное оформление надстройки Nimble на iOS.](../images/outlook-mobile-design-nimble.png)
 
 **Пример Nimble на Android**
 
-![Полное оформление надстройки Nimble на Android](../images/outlook-mobile-design-nimble-android.png)
+![Полное оформление надстройки Nimble на Android.](../images/outlook-mobile-design-nimble-android.png)
 
 ### <a name="trello"></a>Trello
 
 **Пример Trello на iOS**
 
-![Полное оформление надстройки Trello на iOS (часть 1)](../images/outlook-mobile-design-trello-1.png)
+![Полное оформление надстройки Trello на iOS (часть 1).](../images/outlook-mobile-design-trello-1.png)
 * * *
-![Полное оформление надстройки Trello на iOS (часть 2)](../images/outlook-mobile-design-trello-2.png)
+![Полное оформление надстройки Trello на iOS (часть 2).](../images/outlook-mobile-design-trello-2.png)
 * * *
-![Полное оформление надстройки Trello на iOS (часть 3)](../images/outlook-mobile-design-trello-3.png)
+![Полное оформление надстройки Trello на iOS (часть 3).](../images/outlook-mobile-design-trello-3.png)
 
 **Пример Trello на Android**
 
-![Полное оформление надстройки Trello на Android (часть 1)](../images/outlook-mobile-design-trello-1-android.png)
+![Полное оформление надстройки Trello на Android (часть 1).](../images/outlook-mobile-design-trello-1-android.png)
 * * *
-![Полное оформление надстройки Trello на Android (часть 2)](../images/outlook-mobile-design-trello-2-android.png)
+![Полное оформление надстройки Trello на Android (часть 2).](../images/outlook-mobile-design-trello-2-android.png)
 
 ### <a name="dynamics-crm"></a>Dynamics CRM
 
 **Пример Dynamics CRM на iOS**
 
-![Полное оформление надстройки Dynamics CRM на iOS](../images/outlook-mobile-design-crm.png)
+![Полное оформление надстройки Dynamics CRM на iOS.](../images/outlook-mobile-design-crm.png)
 
 **Пример Dynamics CRM на Android**
 
-![Полное оформление надстройки Dynamics CRM на Android](../images/outlook-mobile-design-crm-android.png)
+![Полное оформление надстройки Dynamics CRM на Android.](../images/outlook-mobile-design-crm-android.png)

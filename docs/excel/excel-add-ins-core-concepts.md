@@ -4,12 +4,12 @@ description: Сведения об основных типах объектов 
 ms.date: 04/05/2021
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 50833deb4d996f577db9d3e40db21f1799e7f2f7
-ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
+ms.openlocfilehash: 1cef1775711ebdb66d2e8f6513602906d9c5a2d2
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51650906"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53075868"
 ---
 # <a name="excel-javascript-object-model-in-office-add-ins"></a>Объектная модель JavaScript для Excel в надстройках Office
 
@@ -33,7 +33,7 @@ ms.locfileid: "51650906"
 
 На рисунке ниже показано, когда можно использовать API JavaScript для Excel или общие API.
 
-![Изображение различий между API JS для Excel и общими API](../images/excel-js-api-common-api.png)
+![Различия между API JS для Excel и общими API.](../images/excel-js-api-common-api.png)
 
 ## <a name="excel-specific-object-model"></a>Объектная модель для Excel
 
@@ -109,7 +109,7 @@ API JavaScript для Excel могут создавать и управлять 
 
 #### <a name="creating-a-table"></a>Создание таблицы
 
-Создавайте таблицы, используя заполненные данными диапазоны. Элементы управления форматированием и таблицами (например, фильтры) автоматически применяются к диапазону.
+Создайте таблицы с помощью диапазонов данных. Форматирование и элементы управления таблицами (например, фильтры) автоматически применяются к диапазону.
 
 В следующем примере создается таблица с использованием диапазонов из предыдущего примера.
 

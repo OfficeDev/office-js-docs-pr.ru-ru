@@ -1,14 +1,14 @@
 ---
 title: Варианты проверки подлинности в надстройках Outlook
 description: Надстройки Outlook предоставляют несколько различных способов проверки подлинности для разных сценариев.
-ms.date: 02/09/2021
+ms.date: 06/22/2021
 localization_priority: Priority
-ms.openlocfilehash: b53647c8a38051096ef59e7b784f8a00964aa73f
-ms.sourcegitcommit: fefc279b85e37463413b6b0e84c880d9ed5d7ac3
+ms.openlocfilehash: 108dc918fcea956b8349d4e2c53c0e8dd06cbeca
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50234284"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53077108"
 ---
 # <a name="authentication-options-in-outlook-add-ins"></a>Варианты проверки подлинности в надстройках Outlook
 
@@ -48,7 +48,7 @@ ms.locfileid: "50234284"
 
 - если надстройку в основном применяют локальные пользователи Exchange;
 - если надстройке требуется доступ к управляемой вами сторонней службе;
-- в качестве резервной проверки подлинности (и авторизации в Microsoft Graph) при запуске надстройки в версии Office, не поддерживающей единый вход.
+- в качестве резервной проверки подлинности при запуске надстройки в версии Office, не поддерживающей единый вход.
 
 Надстройка может вызывать метод [getUserIdentityTokenAsync](/javascript/api/outlook/office.mailbox#getuseridentitytokenasync-callback--usercontext-), чтобы получать маркеры удостоверений пользователей Exchange. Сведения об использовании этих маркеров см. в статье [Проверка подлинности пользователя с помощью маркера удостоверения для Exchange](authenticate-a-user-with-an-identity-token.md).
 

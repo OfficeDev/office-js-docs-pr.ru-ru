@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 10/14/2020
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: de0729a483057a61be3793e299995aa05d287441
-ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
+ms.openlocfilehash: 761de3dc8f382a7b1b5a72704815f2d80af2566f
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49132293"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076905"
 ---
 # <a name="build-your-first-onenote-task-pane-add-in"></a>Создание первой надстройки области задач OneNote
 
@@ -29,7 +29,7 @@ ms.locfileid: "49132293"
 - **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `OneNote`
 
-![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки](../images/yo-office-onenote.png)
+![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки.](../images/yo-office-onenote.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -114,7 +114,7 @@ try {
 
 7. В нижней части области задач щелкните ссылку **Выполнить**, чтобы настроить заголовок страницы и добавить контур к тексту страницы.
 
-    ![Снимок экрана с надстройкой, созданной в этом пошаговом руководстве: выделенная кнопка ленты "Показать область задач" и область задач в OneNote](../images/onenote-first-add-in-4.png)
+    ![Снимок экрана с надстройкой, созданной в этом пошаговом руководстве: выделенная кнопка ленты "Показать область задач" и область задач в OneNote.](../images/onenote-first-add-in-4.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

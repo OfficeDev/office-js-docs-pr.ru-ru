@@ -4,12 +4,12 @@ description: Узнайте, как создать простую надстро
 ms.date: 10/14/2020
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: 47ca14b4dd8ab67ffc20551b1e13ca62cc75ee34
-ms.sourcegitcommit: ceb8dd66f3fb9c963fce8446c2f6c65ead56fbc1
+ms.openlocfilehash: 03cba67307fa12dca111d3fcecb6a4a0173f77f1
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49132363"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076926"
 ---
 # <a name="build-your-first-powerpoint-task-pane-add-in"></a>Создание первой надстройки области задач PowerPoint
 
@@ -37,7 +37,7 @@ ms.locfileid: "49132363"
 - **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `PowerPoint`
 
-![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки](../images/yo-office-powerpoint.png)
+![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки.](../images/yo-office-powerpoint.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -83,11 +83,11 @@ ms.locfileid: "49132363"
 
 3. В PowerPoint вставьте новый пустой слайд, выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
-    ![Снимок экрана PowerPoint с выделенной кнопкой "Показать область задач"](../images/powerpoint_quickstart_addin_1c.png)
+    ![Снимок экрана PowerPoint с выделенной кнопкой "Показать область задач".](../images/powerpoint_quickstart_addin_1c.png)
 
 4. В нижней части области задач выберите ссылку **Выполнить**, чтобы вставить текст "Hello World" в текущий слайд.
 
-    ![Снимок экрана PowerPoint с изображением собаки и надписью "Hello World" на слайде](../images/powerpoint_quickstart_addin_3c.png)
+    ![Снимок экрана PowerPoint с изображением собаки и надписью "Hello World" на слайде.](../images/powerpoint_quickstart_addin_3c.png)
 
 ### <a name="next-steps"></a>Дальнейшие действия
 
@@ -242,15 +242,15 @@ ms.locfileid: "49132363"
 
 2. В PowerPoint вставьте новый пустой слайд, выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
-    ![Снимок экрана: PowerPoint с выделенной кнопкой ленты "Показать область задач"](../images/powerpoint_quickstart_addin_1.png)
+    ![Снимок экрана: PowerPoint с выделенной кнопкой ленты "Показать область задач".](../images/powerpoint_quickstart_addin_1.png)
 
 3. В области задач нажмите кнопку **Вставить изображение**, чтобы добавить изображение на выбранный слайд.
 
-    ![Снимок экрана PowerPoint с изображением собаки на слайде](../images/powerpoint_quickstart_addin_2.png)
+    ![Снимок экрана PowerPoint с изображением собаки на слайде.](../images/powerpoint_quickstart_addin_2.png)
 
 4. В области задач нажмите кнопку **Вставить текст**, чтобы добавить текст к выбранному слайду.
 
-    ![Снимок экрана: PowerPoint с изображением собаки и надписью "Hello World" на слайде](../images/powerpoint_quickstart_addin_3.png)
+    ![Снимок экрана: PowerPoint с изображением собаки и надписью "Hello World" на слайде.](../images/powerpoint_quickstart_addin_3.png)
 
 [!include[Console tool note](../includes/console-tool-note.md)]
 

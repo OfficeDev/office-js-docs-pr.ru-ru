@@ -4,12 +4,12 @@ ms.prod: non-product-specific
 description: Руководство по обмену кодом между надстройкой VSTO и надстройкой Office.
 title: Руководство. Обмен кодом между надстройкой VSTO и надстройкой Office с использованием общей библиотеки кода
 localization_priority: Priority
-ms.openlocfilehash: 1645cdcc3c799ec09e98ae69dd4abd6e38b11880
-ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
+ms.openlocfilehash: aaf228d1e3ce33797165b1380b43d26ceffa1d8c
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "50238094"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076127"
 ---
 # <a name="tutorial-share-code-between-both-a-vsto-add-in-and-an-office-add-in-with-a-shared-code-library"></a>Руководство. Обмен кодом между надстройкой VSTO и надстройкой Office с помощью общей библиотеки кода
 
@@ -27,7 +27,7 @@ ms.locfileid: "50238094"
 
 На следующей схеме показано, как общая библиотека кода используется для миграции. Распространенный код перерабатывается в новую общую библиотеку кода. Код может оставаться на исходном языке, например C# или VB. Это означает, что вы можете продолжить использование кода в существующей надстройке VSTO, создав ссылку на проект. При создании надстройки Office она также будет использовать общую библиотеку кода, вызывая ее с помощью REST API.
 
-![Схема надстройки VSTO и надстройки Office с использованием общей библиотеки кода](../images/vsto-migration-shared-code-library.png)
+![Схема надстройки VSTO и надстройки Office с использованием общей библиотеки кода.](../images/vsto-migration-shared-code-library.png)
 
 Навыки и методы, рассматриваемые в этом руководстве:
 
@@ -70,7 +70,7 @@ ms.locfileid: "50238094"
 
 Надстройка является настраиваемой областью задач для Excel. Вы можете выделить любую ячейку с текстом и нажать кнопку **Показать Юникод**. В разделе **Результат** надстройка отобразит список всех символов в тексте вместе с соответствующим номером Юникода.
 
-![Снимок экрана: надстройка VSTO в Excel с кнопкой "Показать Юникод" и пустым разделом "Результат"](../images/pnp-cell-analyzer-vsto-add-in.png)
+![Снимок экрана: надстройка VSTO в Excel с кнопкой "Показать Юникод" и пустым разделом "Результат".](../images/pnp-cell-analyzer-vsto-add-in.png)
 
 ## <a name="analyze-types-of-code-in-the-vsto-add-in"></a>Анализ типов кода в надстройке VSTO
 

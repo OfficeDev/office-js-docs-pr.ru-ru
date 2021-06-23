@@ -4,12 +4,12 @@ description: Надстройки Outlook — это встраиваемые в
 ms.date: 06/15/2021
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: f0c1dbdd1cf9909310b629188d4f3d3d5de6b6bb
-ms.sourcegitcommit: 0bf0e076f705af29193abe3dba98cbfcce17b24f
+ms.openlocfilehash: 3fb6c47d0dc2b41ecf657ea4d453c2ffcb8a8902
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2021
-ms.locfileid: "53007813"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076758"
 ---
 # <a name="outlook-add-ins-overview"></a>Обзор надстроек Outlook
 
@@ -33,13 +33,13 @@ ms.locfileid: "53007813"
 
     **Надстройка с кнопками на ленте**
 
-    ![Команда надстройки для фигуры без интерфейса](../images/uiless-command-shape.png)
+    ![Команда надстройки для фигуры без интерфейса.](../images/uiless-command-shape.png)
 
 - Надстройки могут активироваться по совпадениям с регулярными выражениями или обнаруженным сущностям в сообщениях и встречах. Дополнительные сведения см. в статье [Контекстно-зависимые надстройки Outlook](contextual-outlook-add-ins.md).
 
     **Контекстная надстройка для выделенной сущности (адреса)**
 
-    ![Показывает контекстное приложение на карте](../images/outlook-detected-entity-card.png)
+    ![Показывает контекстное приложение на карте.](../images/outlook-detected-entity-card.png)
 
 ## <a name="mailbox-items-available-to-add-ins"></a>Элементы почтовых ящиков, доступные надстройкам
 

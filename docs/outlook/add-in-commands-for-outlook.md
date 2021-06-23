@@ -3,26 +3,26 @@ title: Команды надстроек Outlook
 description: Команды надстроек Outlook предоставляют доступ к определенным действиям надстройки с ленты, добавляя на нее кнопки или раскрывающиеся меню.
 ms.date: 07/07/2020
 localization_priority: Priority
-ms.openlocfilehash: 598d6e055b72d517d4a6bcfb90e3968b466e3aa0
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 1f4d8faf1ee691f515b47d712812e0ae7cabdf5c
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47294012"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076807"
 ---
 # <a name="add-in-commands-for-outlook"></a>Команды надстроек Outlook
 
 Команды надстроек Outlook позволяют вызывать определенные действия надстроек с ленты путем добавления кнопок или раскрывающихся меню. Благодаря этому пользователи могут легко получать доступ к надстройкам простым и интуитивно понятным способом. Так как команды надстроек предлагают удобные расширенные функции, с их помощью вы можете создавать более интересные решения.
 
 > [!NOTE]
-> Команды надстроек доступны только в Outlook 2013 или более поздней версии для Windows, Outlook 2016 или более поздней версии для Mac, Outlook для iOS, Outlook для Android, Outlook в Интернете для Exchange 2016 или более поздней версии, Outlook в Интернете для Microsoft 365 и Outlook.com.
+> Команды надстроек доступны только в Outlook 2013 или более поздней версии для Windows, Outlook 2016 или более поздней версии для Mac, Outlook для iOS, Outlook для Android, Outlook в Интернете для Exchange 2016 или более поздней версии, Outlook в Интернете для Microsoft 365 и Outlook.com.
 >
-> Для поддержки команд надстроек в Outlook 2013 необходимы три обновления:
-> - [Обновление для системы безопасности для Outlook от 8 марта 2016 г.](https://support.microsoft.com/kb/3114829)
-> - [Обновление для системы безопасности для Office (KB3114816) от 8 марта 2016 г.](https://support.microsoft.com/help/3114816/march-8,-2016,-update-for-office-2013-kb3114816)
-> - [Обновление для системы безопасности для Office (KB3114828) от 8 марта 2016 г.](https://support.microsoft.com/help/3114828/march-8,-2016,-update-for-office-2013-kb3114828)
+> Для поддержки команд надстроек в Outlook 2013 необходимы три обновления:
+> - [Обновление для системы безопасности для Outlook от 8 марта 2016 г.](https://support.microsoft.com/kb/3114829)
+> - [Обновление для системы безопасности для Office (KB3114816) от 8 марта 2016 г.](https://support.microsoft.com/help/3114816/march-8,-2016,-update-for-office-2013-kb3114816)
+> - [Обновление для системы безопасности для Office (KB3114828) от 8 марта 2016 г.](https://support.microsoft.com/help/3114828/march-8,-2016,-update-for-office-2013-kb3114828)
 >
-> Для поддержки команд надстроек в Exchange 2016 требуется [накопительный пакет обновления 5](https://support.microsoft.com/help/4012106/cumulative-update-5-for-exchange-server-2016).
+> Для поддержки команд надстроек в Exchange 2016 требуется [накопительный пакет обновления 5](https://support.microsoft.com/help/4012106/cumulative-update-5-for-exchange-server-2016).
 
 Команды надстроек доступны в тех надстройках, где не используются [правила ItemHasAttachment, ItemHasKnownEntity и ItemHasRegularExpressionMatch](activation-rules.md), для ограничения типов элементов, активирующих надстройки. В [контекстных надстройках](contextual-outlook-add-ins.md) могут отображаться разные команды в зависимости от того, какой элемент выбран (сообщение или встреча), и они могут работать в режимах просмотра и создания. [Рекомендуем](../concepts/add-in-development-best-practices.md) использовать команды надстроек по мере возможности.
 
@@ -42,9 +42,9 @@ ms.locfileid: "47294012"
 
 Команды надстройки отображаются в меню переполнения по мере заполнения ленты элементами. Команды надстройки обычно группируются вместе.
 
-![Кнопки команд надстройки на ленте](../images/commands-normal.png)
+![Кнопки команд надстройки на ленте.](../images/commands-normal.png)
 
-![Кнопки команд надстройки на ленте и в меню переполнения](../images/commands-collapsed.png)
+![Кнопки команд надстройки на ленте и в меню переполнения.](../images/commands-collapsed.png)
 
 При добавлении команды в надстройку имя надстройки удаляется с панели приложения. На ленте остается только кнопка надстройки.
 
@@ -52,9 +52,9 @@ ms.locfileid: "47294012"
 
 В Outlook в Интернете имя надстройки отображается в меню переполнения. Если у надстройки есть несколько команд, вы можете развернуть меню надстройки, чтобы просмотреть группу кнопок с именем надстройки.
 
-![Меню переполнения, в котором находятся кнопки команд надстройки](../images/commands-overflow-menu-web.png)
+![Меню переполнения, в котором находятся кнопки команд надстройки.](../images/commands-overflow-menu-web.png)
 
-![Меню переполнения, отображающее кнопки команд надстройки](../images/commands-overflow-menu-expand-web.png)
+![Меню переполнения, отображающее кнопки команд надстройки.](../images/commands-overflow-menu-expand-web.png)
 
 ## <a name="what-ux-shapes-exist-for-add-in-commands"></a>Оформление команд надстройки в пользовательском интерфейсе
 

@@ -5,16 +5,16 @@ ms.date: 10/14/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: e71535dce7892889a13e4546d8dd388f568ab5c4
-ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
+ms.openlocfilehash: ada302e971eac9dd3deb626e422fdf054315ea1a
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "48741122"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53077115"
 ---
 # <a name="onenote-javascript-api-programming-overview"></a>Обзор создания кода с помощью API JavaScript для OneNote
 
-В OneNote представлен API JavaScript для надстроек OneNote в Интернете. Вы можете создавать надстройки области задач, контентные надстройки и команды надстроек, которые взаимодействуют с объектами OneNote и подключаются к веб-службам или другим веб-ресурсам.
+В OneNote представлен API JavaScript для надстроек OneNote в Интернете. Вы можете создавать надстройки области задач, контентные надстройки и команды надстроек, которые взаимодействуют с объектами OneNote и подключаются к веб-службам или другим веб-ресурсам.
 
 [!INCLUDE [publish policies note](../includes/note-publish-policies.md)]
 
@@ -22,17 +22,17 @@ ms.locfileid: "48741122"
 
 Надстройки состоят из двух указанных ниже основных компонентов.
 
-- **Веб-приложение**, состоящее из веб-страницы и необходимых JavaScript-, CSS- или других файлов. Эти файлы можно разместить на веб-сервере или в службе веб-хостинга, например в Microsoft Azure. В OneNote в Интернете веб-приложение отображается в элементе управления браузера или в iFrame.
+- **Веб-приложение**, состоящее из веб-страницы и необходимых JavaScript-, CSS- или других файлов. Эти файлы можно разместить на веб-сервере или в службе веб-хостинга, например в Microsoft Azure. В OneNote в Интернете веб-приложение отображается в элементе управления браузера или в iFrame.
 
 - **Манифест в формате XML**, в котором указан URL-адрес веб-страницы надстройки и все требования, необходимые для получения доступа, параметры и возможности для надстройки. Этот файл хранится на клиентском компьютере. Для надстроек OneNote используется такой же формат [манифеста](../develop/add-in-manifests.md), что и для других надстроек Office.
 
 ### <a name="office-add-in--manifest--webpage"></a>Надстройка Office = манифест + веб-страница
 
-![Надстройка Office состоит из манифеста и веб-страницы](../images/onenote-add-in.png)
+![Надстройка Office состоит из манифеста и веб-страницы.](../images/onenote-add-in.png)
 
-## <a name="using-the-javascript-api"></a>Использование API JavaScript
+## <a name="using-the-javascript-api"></a>Использование API JavaScript
 
-Для доступа к API JavaScript надстройки используют контекст среды выполнения клиентского приложения. API состоит из двух указанных ниже уровней.
+Для доступа к API JavaScript надстройки используют контекст среды выполнения клиентского приложения. API состоит из двух указанных ниже уровней.
 
 - **API для определенных клиентских приложений** для связанных с OneNote операций, доступ к которому осуществляется с помощью объекта `Application`.
 - **Общий API**, используемый приложениями Office, доступ к которому осуществляется с помощью объекта `Document`.
@@ -129,9 +129,9 @@ function getSelectionFromPage() {
 
 <a name="om-diagram"></a>
 ## <a name="onenote-object-model-diagram"></a>Схема объектной модели OneNote 
-На схеме ниже показаны возможности, которые на данный момент доступны в API JavaScript для OneNote .
+На схеме ниже показаны возможности, которые на данный момент доступны в API JavaScript для OneNote .
 
-  ![Схема объектной модели OneNote](../images/onenote-om.png)
+  ![Схема объектной модели OneNote.](../images/onenote-om.png)
 
 ## <a name="see-also"></a>См. также
 

@@ -6,12 +6,12 @@ ms.prod: visio
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 9d0abb5ddc93419f5acd38a8c0134941e15be48b
-ms.sourcegitcommit: fecad2afa7938d7178456c11ba52b558224813b4
+ms.openlocfilehash: 7f706d8f566a747468c4c8d676bd54882bb2a6bf
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49603794"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53076443"
 ---
 # <a name="visio-javascript-api-overview"></a>Обзор API JavaScript для Visio
 
@@ -19,7 +19,7 @@ ms.locfileid: "49603794"
 
 Внедренный документ Visio — схема, которая хранится в библиотеке документов SharePoint и отображается на странице SharePoint. Чтобы внедрить документ Visio, отобразите его в элементе `<iframe>` HTML. После этого вы сможете программным способом работать с внедренным документом при помощи API JavaScript для Visio.
 
-![Документ Visio в iframe на странице SharePoint вместе с веб-частью редактора сценариев](../images/visio-api-block-diagram.png)
+![Документ Visio в iframe на странице SharePoint вместе с веб-частью редактора сценариев.](../images/visio-api-block-diagram.png)
 
 API JavaScript для Visio позволяет следующее:
 
@@ -30,12 +30,12 @@ API JavaScript для Visio позволяет следующее:
 
 В этой статье описано, как использовать API JavaScript для Visio с приложением Visio в Интернете, чтобы создавать решения для SharePoint Online. В ней рассматриваются ключевые понятия, понимание роли которых крайне важно при использовании API, такие как прокси-объекты JavaScript, `EmbeddedSession`, `RequestContext`, а также методы `sync()`, `Visio.run()` и `load()`. В приведенных ниже примерах кода показано применение этих элементов.
 
-## <a name="embeddedsession"></a>EmbeddedSession
+## <a name="embeddedsession&quot;></a>EmbeddedSession
 
 Объект EmbeddedSession инициализирует взаимодействие между фреймом разработчика и фреймом Visio в браузере.
 
 ```js
-var session = new OfficeExtension.EmbeddedSession(url, { id: "embed-iframe",container: document.getElementById("iframeHost") });
+var session = new OfficeExtension.EmbeddedSession(url, { id: &quot;embed-iframe&quot;,container: document.getElementById(&quot;iframeHost") });
 session.init().then(function () {
     window.console.log("Session successfully initialized");
 });
@@ -68,7 +68,7 @@ function hideToolbars() {
 
 ## <a name="proxy-objects"></a>Прокси-объекты
 
-Объекты JavaScript для Visio, объявленные и использованные во встроенном сеансе, — это прокси-объекты для реальных объектов в документе Visio. Все действия над прокси-объектами не реализуются в Visio, а состояние документа Visio — в прокси-объектах, пока оно не будет синхронизировано. Состояние документа синхронизируется при выполнении `context.sync()`.
+Объекты JavaScript для Visio, объявленные и использованные во встроенном сеансе, — это прокси-объекты для реальных объектов в документе Visio. Все действия над прокси-объектами не реализуются в Visio, а состояние документа Visio — в прокси-объектах, пока оно не будет синхронизировано. Состояние документа синхронизируется при выполнении `context.sync()`.
 
 Например, локальный объект JavaScript getActivePage объявлен в качестве ссылки на выбранную страницу. Это можно использовать для добавления в очередь настройки его свойств и вызова методов. Действия над такими объектами не реализуются до выполнения метода `sync()`.
 
@@ -90,7 +90,7 @@ var activePage = context.document.getActivePage();
 object.load(string: properties); //or object.load(array: properties); //or object.load({loadOption});
 ```
 
-1. **properties** — это список имен свойств, которые требуется загрузить, разделенных запятыми, или массив имен. Дополнительные сведения см. в описаниях методов `.load()` под каждым объектом.
+1. **properties** — это список имен свойств, которые требуется загрузить, разделенных запятыми, или массив имен. Дополнительные сведения см. в описаниях методов `.load()` под каждым объектом.
 
 2. **loadOption** указывает объект, описывающий свойства select, expand, top и skip. Дополнительные сведения см. в статье, посвященной [параметрам загрузки объектов](/javascript/api/office/officeextension.loadoption).
 
@@ -199,9 +199,9 @@ function getSelectedShapeText() {
 
 После этого вам нужен только URL-адрес документа Visio, с которым вы хотите работать. Просто отправьте документ Visio в SharePoint Online и откройте его в Visio в Интернете. Оттуда откройте диалоговое окно внедрения и используйте URL-адрес внедрения в приведенном выше примере.
 
-![Копирование URL-адреса файла Visio из диалогового окна внедрения](../images/Visio-embed-url.png)
+![Копирование URL-адреса файла Visio из диалогового окна внедрения.](../images/Visio-embed-url.png)
 
-Если вы используете Visio в Интернете в режиме правки, откройте диалоговое окно внедрения, выбрав **Файл** > **Общий доступ** > **Внедрить**. Если вы используете Visio в Интернете в режиме просмотра, откройте диалоговое окно внедрения, выбрав элемент "..." а затем — команду **Внедрить**.
+Если вы используете Visio в Интернете в режиме правки, откройте диалоговое окно внедрения, выбрав **Файл** > **Общий доступ** > **Внедрить**. Если вы используете Visio в Интернете в режиме просмотра, откройте диалоговое окно внедрения, выбрав элемент "..." а затем — команду **Внедрить**.
 
 ## <a name="visio-javascript-api-reference"></a>Справочник по API JavaScript для Visio
 
