@@ -3,18 +3,18 @@ title: Очистка кэша Office
 description: Узнайте, как очищать кэш Office на компьютере.
 ms.date: 05/22/2020
 localization_priority: Priority
-ms.openlocfilehash: 2b7cda61ee0fe1af99ed726d060d59bbe9e99fa7
-ms.sourcegitcommit: 3123b9819c5225ee45a5312f64be79e46cbd0e3c
+ms.openlocfilehash: db83a215a2f36d7250ad333f3fd1f7401a5cc1cc
+ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "50043906"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53077192"
 ---
 # <a name="clear-the-office-cache"></a>Очистка кэша Office
 
 Можно удалить надстройку, ранее установленную в Windows, на компьютерах Mac или в iOS, очистив кэш Office на компьютере.
 
-Кроме того, если вы изменяете манифест надстройки (например, обновляете имена файлов значков или текст команд надстройки), следует очистить кэш Office, а потом заново установить надстройку с помощью обновленного манифеста. В этом случае надстройка будет отображаться в Office в соответствии с обновленным манифестом.
+Кроме того, если вы изменяете манифест надстройки (например, обновляете имена файлов значков или текст команд надстройки), следует очистить кэш Office, а потом выполнить установку неопубликованной надстройки с помощью обновленного манифеста. Это позволит Office отобразить надстройку в соответствии с описанием в обновленном манифесте.
 
 ## <a name="clear-the-office-cache-on-windows"></a>Очистка кэша Office в Windows
 
