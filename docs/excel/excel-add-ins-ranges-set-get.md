@@ -1,19 +1,19 @@
 ---
 title: Установите и получите выбранный диапазон с Excel API JavaScript
-description: Узнайте, как использовать API Excel JavaScript для набора и получения диапазонов с Excel API JavaScript.
-ms.date: 04/02/2021
+description: Узнайте, как использовать API Excel JavaScript для набора и получения выбранного диапазона с Excel API JavaScript.
+ms.date: 06/22/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 0bd4a4f4bcf40e7899ee429cdc631a43ba176077
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 9e4c31f165b39d45fac342cb85577ef737105472
+ms.sourcegitcommit: ebb4a22a0bdeb5623c72b9494ebbce3909d0c90c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53075777"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53126738"
 ---
-# <a name="set-and-get-ranges-using-the-excel-javascript-api"></a>Настройка и получения диапазонов с Excel API JavaScript
+# <a name="set-and-get-the-selected-range-using-the-excel-javascript-api"></a>Установите и получите выбранный диапазон с Excel API JavaScript
 
-В этой статье данная статья содержит примеры кода, которые устанавливают и получают диапазоны с Excel API JavaScript. Полный список свойств и методов, поддерживаемый объектом, см. в `Range` [Excel. Класс Range](/javascript/api/excel/excel.range).
+В этой статье данная статья содержит примеры кода, которые устанавливают и получают выбранный диапазон с Excel API JavaScript. Полный список свойств и методов, поддерживаемый объектом, см. в `Range` [Excel. Класс Range](/javascript/api/excel/excel.range).
 
 [!include[Excel cells and ranges note](../includes/note-excel-cells-and-ranges.md)]
 
@@ -51,6 +51,95 @@ Excel.run(function (context) {
         });
 }).catch(errorHandlerFunction);
 ```
+
+## <a name="select-the-edge-of-a-used-range-online-only"></a>Выберите край используемого диапазона (только для сети)
+
+> [!NOTE]
+> В настоящее время эти методы `Range.getRangeEdge` доступны только в `Range.getExtendedRange` ExcelApiOnline 1.1. Дополнительные дополнительные [Excel API JavaScript в интернете.](../reference/requirement-sets/excel-api-online-requirement-set.md)
+
+Методы [Range.getRangeEdge](/javascript/api/excel/excel.range#getRangeEdge_direction__activeCell_) и [Range.getExtendedRange](/javascript/api/excel/excel.range#getExtendedRange_directionString__activeCell_) позволяют надстройке реплицировать поведение ярлыков выбора клавиатуры, выбрав край используемого диапазона на основе выбранного диапазона. Дополнительные дополнительные новости об используемых диапазонах см. в [руб. Get used range.](excel-add-ins-ranges-get.md#get-used-range)
+
+На следующем скриншоте используется диапазон таблицы со значениями в каждой ячейке **C5:F12**. Пустые ячейки за пределами этой таблицы находятся за пределами используемого диапазона.
+
+![Таблица с данными C5:F12 в Excel.](../images/excel-ranges-used-range.png)
+
+### <a name="select-the-cell-at-the-edge-of-the-current-used-range"></a>Выберите ячейку на краю текущего используемого диапазона
+
+В следующем примере кода показано, как использовать метод для выбора ячейки на самом дальнем краю используемого диапазона тока `Range.getRangeEdge` в направлении вверх. Это действие соответствует результату использования клавиши Ctrl+Up при выборе диапазона.
+
+```js
+Excel.run(function (context) {
+    // Get the selected range.
+    var range = context.workbook.getSelectedRange();
+
+    // Specify the direction with the `KeyboardDirection` enum.
+    var direction = Excel.KeyboardDirection.up;
+
+    // Get the active cell in the workbook.
+    var activeCell = context.workbook.getActiveCell();
+
+    // Get the top-most cell of the current used range.
+    // This method acts like the Ctrl+Up arrow key keyboard shortcut while a range is selected.
+    var rangeEdge = range.getRangeEdge(
+      direction,
+      activeCell
+    );
+    rangeEdge.select();
+
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+#### <a name="before-selecting-the-cell-at-the-edge-of-the-used-range"></a>Перед выбором ячейки на краю используемого диапазона
+
+На следующем скриншоте показан используемый диапазон и выбранный диапазон в используемом диапазоне. Используемый диапазон — это таблица с данными **на C5:F12**. В этой таблице выбирается **диапазон D8:E9.** Этот выбор является *состоянием до* запуска `Range.getRangeEdge` метода.
+
+![Таблица с данными C5:F12 в Excel. Выбран диапазон D8:E9.](../images/excel-ranges-used-range-d8-e9.png)
+
+#### <a name="after-selecting-the-cell-at-the-edge-of-the-used-range"></a>После выбора ячейки на краю используемого диапазона
+
+На следующем скриншоте показана та же таблица, что и на предыдущем скриншоте, с данными в диапазоне **C5:F12**. В этой таблице выбирается **диапазон D5.** Этот выбор после *состояния,* после запуска метода, чтобы выбрать ячейку на краю используемого диапазона `Range.getRangeEdge` в направлении вверх.
+
+![Таблица с данными C5:F12 в Excel. Выбран диапазон D5.](../images/excel-ranges-used-range-d5.png)
+
+### <a name="select-all-cells-from-current-range-to-furthest-edge-of-used-range"></a>Выберите все ячейки от текущего диапазона до дальнего края используемого диапазона
+
+В следующем примере кода показано, как использовать метод для выбора всех ячеек из выбранного диапазона до самого дальнего края используемого диапазона в направлении `Range.getExtendedRange` вниз. Это действие соответствует результату использования клавиши Ctrl+Shift+Down при выборе диапазона.
+
+```js
+Excel.run(function (context) {
+    // Get the selected range.
+    var range = context.workbook.getSelectedRange();
+
+    // Specify the direction with the `KeyboardDirection` enum.
+    var direction = Excel.KeyboardDirection.down;
+
+    // Get the active cell in the workbook.
+    var activeCell = context.workbook.getActiveCell();
+
+    // Get all the cells from the currently selected range to the bottom-most edge of the used range.
+    // This method acts like the Ctrl+Shift+Down arrow key keyboard shortcut while a range is selected.
+    var extendedRange = range.getExtendedRange(
+      direction,
+      activeCell
+    );
+    extendedRange.select();
+
+    return context.sync();
+}).catch(errorHandlerFunction);
+```
+
+#### <a name="before-selecting-all-the-cells-from-the-current-range-to-the-edge-of-the-used-range"></a>Перед выбором всех ячеек от текущего диапазона до края используемого диапазона
+
+На следующем скриншоте показан используемый диапазон и выбранный диапазон в используемом диапазоне. Используемый диапазон — это таблица с данными **на C5:F12**. В этой таблице выбирается **диапазон D8:E9.** Этот выбор является *состоянием до* запуска `Range.getExtendedRange` метода.
+
+![Таблица с данными C5:F12 в Excel. Выбран диапазон D8:E9.](../images/excel-ranges-used-range-d8-e9.png)
+
+#### <a name="after-selecting-all-the-cells-from-the-current-range-to-the-edge-of-the-used-range"></a>После выбора всех ячеек от текущего диапазона до края используемого диапазона
+
+На следующем скриншоте показана та же таблица, что и на предыдущем скриншоте, с данными в диапазоне **C5:F12**. В этой таблице выбирается **диапазон D8:E12.** Этот выбор *после* состояния после запуска метода для выбора всех ячеек от текущего диапазона до края используемого диапазона `Range.getExtendedRange` в направлении вниз.
+
+![Таблица с данными C5:F12 в Excel. Выбран диапазон D8:E12.](../images/excel-ranges-used-range-d8-e12.png)
 
 ## <a name="see-also"></a>См. также
 
