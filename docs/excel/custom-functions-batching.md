@@ -3,12 +3,12 @@ ms.date: 07/10/2019
 description: Объедините пользовательские функции в пакет, чтобы сократить количество обращений к удаленной службе через сеть.
 title: Пакетирование обращений пользовательских функций к удаленной службе
 localization_priority: Normal
-ms.openlocfilehash: ffafd8fee0beea2776bb7b0a0b79839e43876cc1
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 2ad9532fab26ff3ec8289a8892d518ab2570c6d6
+ms.sourcegitcommit: d372de1a25dbad983fa9872c6af19a916f63f317
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609659"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53204999"
 ---
 # <a name="batching-custom-function-calls-for-a-remote-service"></a>Пакетирование обращений пользовательских функций к удаленной службе
 
@@ -22,7 +22,7 @@ ms.locfileid: "44609659"
 
 Вы можете изучить эту статью и вставить примеры кода в свой проект. Например можно создать в [генераторе Yo Office](https://github.com/OfficeDev/generator-office) проект пользовательской функции для TypeScript, вставить в него весь код из этой статьи, а затем запустить код и посмотреть на результаты его работы.
 
-Также можно загрузить или просмотреть готовый образец проекта на странице [Custom function batching pattern (Пакетирование пользовательских функций)](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Excel-custom-functions/Batching). Если вы хотите просмотреть код в целом, прежде чем читать дальше, посмотрите на [файл сценария](https://github.com/OfficeDev/PnP-OfficeAddins/blob/master/Excel-custom-functions/Batching/src/functions/functions.ts).
+Также можно загрузить или просмотреть готовый образец проекта на странице [Custom function batching pattern (Пакетирование пользовательских функций)](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Excel-custom-functions/Batching). Если вы хотите просмотреть код в целом, прежде чем читать дальше, посмотрите на [файл сценария](https://github.com/OfficeDev/PnP-OfficeAddins/blob/main/Excel-custom-functions/Batching/src/functions/functions.js).
 
 ## <a name="create-the-batching-pattern-in-this-article"></a>Создание шаблона пакетирования в этой статье
 
