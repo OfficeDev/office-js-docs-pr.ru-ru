@@ -1,15 +1,15 @@
 ---
 title: Работа с прецедентами формул и зависимыми с помощью Excel API JavaScript
 description: Узнайте, как использовать API Excel JavaScript для получения прецедентов формул и зависимых.
-ms.date: 06/03/2021
+ms.date: 07/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 6021e383f02ca0de15210638b991dfe8b109ab63
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: bf92400af00df42ac245b9a2d3ff5e72512b5722
+ms.sourcegitcommit: aa73ec6367eaf74399fbf8d6b7776d77895e9982
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53075798"
+ms.lasthandoff: 07/03/2021
+ms.locfileid: "53290777"
 ---
 # <a name="get-formula-precedents-and-dependents-using-the-excel-javascript-api"></a>Получите прецеденты формул и иждивенцев с Excel API JavaScript
 
@@ -54,11 +54,7 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="get-the-direct-dependents-of-a-formula-preview"></a>Получить прямые иждивенцы формулы (предварительный просмотр)
-
-> [!NOTE]
-> В `Range.getDirectDependents` настоящее время метод доступен только в общедоступных предварительных версиях. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
-> 
+## <a name="get-the-direct-dependents-of-a-formula"></a>Получить прямые иждивенцы формулы
 
 Найдите прямые зависимые ячейки формулы [с помощью Range.getDirectDependents.](/javascript/api/excel/excel.range#getDirectDependents__) Как `Range.getDirectPrecedents` , также возвращает `Range.getDirectDependents` `WorkbookRangeAreas` объект. Этот объект содержит адреса всех прямых иждивенцев в книге. Он имеет отдельный `RangeAreas` объект для каждого таблицы, содержащего по крайней мере одну зависимую формулу. Дополнительные сведения о работе с объектом см. в совместной работе с несколькими диапазонами `RangeAreas` [Excel надстройки.](excel-add-ins-multiple-ranges.md)
 

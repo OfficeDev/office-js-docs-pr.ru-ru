@@ -1,14 +1,14 @@
 ---
 title: Включить общие папки и сценарии общих почтовых ящиков в Outlook надстройке
 description: Обсуждается настройка поддержки надстройки для общих папок (ака). делегирования доступа) и общих почтовых ящиков.
-ms.date: 06/17/2021
+ms.date: 07/02/2021
 localization_priority: Normal
-ms.openlocfilehash: 5d7fb712b8f814184c2a444c32416d35fb1da49c
-ms.sourcegitcommit: 0bf0e076f705af29193abe3dba98cbfcce17b24f
+ms.openlocfilehash: 70578f2c78a9dd88efc9ba70d5599a13e121df53
+ms.sourcegitcommit: aa73ec6367eaf74399fbf8d6b7776d77895e9982
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2021
-ms.locfileid: "53007771"
+ms.lasthandoff: 07/03/2021
+ms.locfileid: "53290714"
 ---
 # <a name="enable-shared-folders-and-shared-mailbox-scenarios-in-an-outlook-add-in"></a>Включить общие папки и сценарии общих почтовых ящиков в Outlook надстройке
 
@@ -216,6 +216,10 @@ if (item.getSharedPropertiesAsync) {
 ### <a name="rest-and-ews"></a>REST и EWS
 
 Ваша надстройка может использовать REST, и необходимо установить разрешение надстройки, чтобы включить доступ REST к почтовому ящику владельца или к общему почтовому ящику, как `ReadWriteMailbox` это применимо. EWS не поддерживается.
+
+### <a name="user-or-shared-mailbox-hidden-from-an-address-list"></a>Пользовательский или общий почтовый ящик, скрытый из списка адресов
+
+Если администратор спрятал пользовательский или общий адрес почтового ящика из списка адресов, таких как глобальный список адресов (GAL), затронутые почтовые элементы, открытые в отчете почтовых ящиков, как `Office.context.mailbox.item` null. Например, если пользователь открывает почтовый элемент в общем почтовом ящике, скрытом от GAL, то этот элемент почты является `Office.context.mailbox.item` null.
 
 ## <a name="see-also"></a>См. также
 

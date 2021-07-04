@@ -1,19 +1,19 @@
 ---
-title: Набор требований к API JavaScript для Excel только для интернета
+title: Excel Набор требований для API javaScript только для интернета
 description: Сведения о наборе требований ExcelApiOnline.
-ms.date: 04/02/2021
+ms.date: 07/01/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 282e11e415d51a6724715091d894df64ebaabfae
-ms.sourcegitcommit: 0bff0411d8cfefd4bb00c189643358e6fb1df95e
+ms.openlocfilehash: ef4831cf6a6f9be1a5413c89ae0f971bef51a9b1
+ms.sourcegitcommit: aa73ec6367eaf74399fbf8d6b7776d77895e9982
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "51604682"
+ms.lasthandoff: 07/03/2021
+ms.locfileid: "53290805"
 ---
-# <a name="excel-javascript-api-online-only-requirement-set"></a>Набор требований к API JavaScript для Excel только для интернета
+# <a name="excel-javascript-api-online-only-requirement-set"></a>Excel Набор требований для API javaScript только для интернета
 
-Набор требований — это специальный набор требований, который включает функции, доступные только `ExcelApiOnline` для Excel в Интернете. API в этом наборе требований считаются производственными API (не подверженными незадокументированные поведенческие или структурные изменения) для Excel в веб-приложении. `ExcelApiOnline` API считаются API предварительного просмотра для других платформ (Windows, Mac, iOS) и не могут поддерживаться ни одной из этих платформ.
+Набор требований — это специальный набор требований, который включает функции, доступные только для `ExcelApiOnline` Excel в Интернете. API в этом наборе требований считаются производственными API (не подверженными незадокументированные поведенческие или структурные изменения) для Excel в Интернете приложения. `ExcelApiOnline`API считаются API предварительного просмотра для других платформ (Windows, Mac, iOS) и не могут поддерживаться ни одной из этих платформ.
 
 Когда API в наборе требований поддерживаются на всех платформах, они будут добавлены в следующий выпущенный `ExcelApiOnline` набор требований ( `ExcelApi 1.[NEXT]` ). После того как это новое требование станет общедоступным, эти API будут удалены из `ExcelApiOnline` . Думайте об этом как об аналогичном процессе продвижения по службе aPI, перемещаемом с предварительного просмотра на выпуск.
 
@@ -21,7 +21,7 @@ ms.locfileid: "51604682"
 > `ExcelApiOnline` — это суперсет последнего набора требований с номерами.
 
 > [!IMPORTANT]
-> `ExcelApiOnline 1.1` это единственная версия API только для интернета. Это происходит потому, что Excel в Интернете всегда будет иметь одну версию, доступную пользователям, которая является последней версией.
+> `ExcelApiOnline 1.1` это единственная версия API только для интернета. Это потому, Excel в Интернете всегда будет иметь одну версию, доступную пользователям, которая является последней версией.
 
 В следующей таблице приводится краткий сводка [API,](#api-list) а в следующей таблице списка API приводится подробный список текущих `ExcelApiOnline` API.
 
@@ -46,7 +46,7 @@ if (Office.context.requirements.isSetSupported("ExcelApiOnline", "1.1")) {
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API JavaScript Excel, включенные в набор `ExcelApiOnline` требований. Полный список всех API JavaScript Excel (включая API и ранее выпущенные API) см. во всех API `ExcelApiOnline` [JavaScript Excel.](/javascript/api/excel?view=excel-js-online&preserve-view=true)
+В следующей таблице перечислены Excel API JavaScript, включенные в набор `ExcelApiOnline` требований. Полный список всех API Excel JavaScript (включая API и ранее выпущенные API), см. Excel `ExcelApiOnline` [API JavaScript.](/javascript/api/excel?view=excel-js-online&preserve-view=true)
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
@@ -62,10 +62,6 @@ if (Office.context.requirements.isSetSupported("ExcelApiOnline", "1.1")) {
 ||[getItem(key: string)](/javascript/api/excel/excel.namedsheetviewcollection#getitem-key-)|Получает представление листа с его именем.|
 ||[getItemAt(index: number)](/javascript/api/excel/excel.namedsheetviewcollection#getitemat-index-)|Получает представление листа по индексу в коллекции.|
 ||[items](/javascript/api/excel/excel.namedsheetviewcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
-|[Range](/javascript/api/excel/excel.range)|[getExtendedRange (направление: Excel.KeyboardDirection, activeCell?: Range \| string)](/javascript/api/excel/excel.range#getextendedrange-direction--activecell-)|Возвращает объект диапазона, который включает текущий диапазон и до края диапазона, в зависимости от предоставленного направления.|
-||[getMergedAreas()](/javascript/api/excel/excel.range#getmergedareas--)|Возвращает `RangeAreas` объект, который представляет объединенные области в этом диапазоне.|
-||[getRangeEdge (направление: Excel.KeyboardDirection, activeCell?: Range \| string)](/javascript/api/excel/excel.range#getrangeedge-direction--activecell-)|Возвращает объект диапазона, который является краеугольным элементом области данных, соответствующей предоставленной направлению.|
-|[Table](/javascript/api/excel/excel.table)|[resize (newRange: Range \| string)](/javascript/api/excel/excel.table#resize-newrange-)|Resize the table to the new range.|
 |[Worksheet](/javascript/api/excel/excel.worksheet)|[namedSheetViews](/javascript/api/excel/excel.worksheet#namedsheetviews)|Возвращает коллекцию представлений листов, присутствующих в листе.|
 
 ## <a name="see-also"></a>См. также

@@ -1,14 +1,14 @@
 ---
 title: Работа с таблицами с использованием API JavaScript для Excel
 description: Примеры кода, которые показывают, как выполнять общие задачи со таблицами с Excel API JavaScript.
-ms.date: 06/07/2021
+ms.date: 07/02/2021
 localization_priority: Normal
-ms.openlocfilehash: 480eda98c1828d11de7c3aa227468ebc408dae2c
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 931a035b5e46a77afe2f56fecb0cd7ef6d134570
+ms.sourcegitcommit: aa73ec6367eaf74399fbf8d6b7776d77895e9982
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53075805"
+ms.lasthandoff: 07/03/2021
+ms.locfileid: "53290791"
 ---
 # <a name="work-with-tables-using-the-excel-javascript-api"></a>Работа с таблицами с использованием API JavaScript для Excel
 
@@ -165,10 +165,7 @@ Excel.run(function (context) {
 
 ![Таблица с новым вычисляемой колонкой в Excel.](../images/excel-tables-add-calculated-column.png)
 
-## <a name="resize-a-table-online-only"></a>Resize a table (online-only)
-
-> [!NOTE]
-> В `Table.resize` настоящее время метод доступен только в ExcelApiOnline 1.1. Дополнительные дополнительные [Excel API JavaScript в интернете.](../reference/requirement-sets/excel-api-online-requirement-set.md)
+## <a name="resize-a-table"></a>Resize a table
 
 Надстройка может изменять объем таблицы без добавления данных в таблицу или изменения значений ячейки. Чтобы повторно использовать таблицу, используйте [метод Table.resize.](/javascript/api/excel/excel.table#resize_newRange_) В следующем примере кода показано, как сделать таблицу повторной. В этом примере кода используется **Раздел ExpensesTable** из раздела [Создание](#create-a-table) таблицы ранее в этой статье и задает новый диапазон таблицы **A1:D20**.
 

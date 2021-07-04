@@ -1,15 +1,15 @@
 ---
 title: Установите и получите выбранный диапазон с Excel API JavaScript
 description: Узнайте, как использовать API Excel JavaScript для набора и получения выбранного диапазона с Excel API JavaScript.
-ms.date: 06/22/2021
+ms.date: 07/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 9e4c31f165b39d45fac342cb85577ef737105472
-ms.sourcegitcommit: ebb4a22a0bdeb5623c72b9494ebbce3909d0c90c
+ms.openlocfilehash: 623ba5c1b9e76151d4a2c4b169e655236b37e8c8
+ms.sourcegitcommit: aa73ec6367eaf74399fbf8d6b7776d77895e9982
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53126738"
+ms.lasthandoff: 07/03/2021
+ms.locfileid: "53290784"
 ---
 # <a name="set-and-get-the-selected-range-using-the-excel-javascript-api"></a>Установите и получите выбранный диапазон с Excel API JavaScript
 
@@ -52,10 +52,7 @@ Excel.run(function (context) {
 }).catch(errorHandlerFunction);
 ```
 
-## <a name="select-the-edge-of-a-used-range-online-only"></a>Выберите край используемого диапазона (только для сети)
-
-> [!NOTE]
-> В настоящее время эти методы `Range.getRangeEdge` доступны только в `Range.getExtendedRange` ExcelApiOnline 1.1. Дополнительные дополнительные [Excel API JavaScript в интернете.](../reference/requirement-sets/excel-api-online-requirement-set.md)
+## <a name="select-the-edge-of-a-used-range"></a>Выберите край используемого диапазона
 
 Методы [Range.getRangeEdge](/javascript/api/excel/excel.range#getRangeEdge_direction__activeCell_) и [Range.getExtendedRange](/javascript/api/excel/excel.range#getExtendedRange_directionString__activeCell_) позволяют надстройке реплицировать поведение ярлыков выбора клавиатуры, выбрав край используемого диапазона на основе выбранного диапазона. Дополнительные дополнительные новости об используемых диапазонах см. в [руб. Get used range.](excel-add-ins-ranges-get.md#get-used-range)
 

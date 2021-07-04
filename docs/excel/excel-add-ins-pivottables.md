@@ -1,18 +1,18 @@
 ---
-title: Работа с pivotTables с помощью API JavaScript Excel
-description: Используйте API JavaScript Excel для создания pivotTables и взаимодействия с их компонентами.
-ms.date: 04/09/2021
+title: Работа с pivotTables с помощью Excel API JavaScript
+description: Используйте API Excel JavaScript для создания pivotTables и взаимодействия с их компонентами.
+ms.date: 07/02/2021
 localization_priority: Normal
-ms.openlocfilehash: a76d2401784c7ca52c2c54342ccce21b53097a58
-ms.sourcegitcommit: 094caf086c2696e78fbdfdc6030cb0c89d32b585
+ms.openlocfilehash: 8c8917f57b7546694e12380fc4369847be24ceac
+ms.sourcegitcommit: aa73ec6367eaf74399fbf8d6b7776d77895e9982
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "51862346"
+ms.lasthandoff: 07/03/2021
+ms.locfileid: "53290742"
 ---
-# <a name="work-with-pivottables-using-the-excel-javascript-api"></a>Работа с pivotTables с помощью API JavaScript Excel
+# <a name="work-with-pivottables-using-the-excel-javascript-api"></a>Работа с pivotTables с помощью Excel API JavaScript
 
-PivotTables упрощают большие наборы данных. Они позволяют быстро манипулировать сгруппными данными. API JavaScript Excel позволяет надстройки создавать pivotTables и взаимодействовать с их компонентами. В этой статье описывается, как pivotTables представлены API JavaScript Office и представлены примеры кода для ключевых сценариев.
+PivotTables упрощают большие наборы данных. Они позволяют быстро манипулировать сгруппными данными. API Excel JavaScript позволяет надстройки создавать pivotTables и взаимодействовать с их компонентами. В этой статье описывается, как pivotTables представлены API javaScript Office JavaScript и представлены примеры кода для ключевых сценариев.
 
 Если вы не знакомы с функциями PivotTables, рассмотрите их в качестве конечного пользователя.
 См. [в этой ссылке Создание pivotTable](https://support.office.com/article/Import-and-analyze-data-ccd3c4a6-272f-4c97-afbb-d3f27407fcde#ID0EAABAAA=PivotTables) для анализа данных таблицы для хорошей грунтовки на этих средствах.
@@ -22,7 +22,7 @@ PivotTables упрощают большие наборы данных. Они п
 
 ## <a name="object-model"></a>Объектная модель
 
-[PivotTable](/javascript/api/excel/excel.pivottable) — это центральный объект для pivotTables в API JavaScript Office.
+[PivotTable](/javascript/api/excel/excel.pivottable) — это центральный объект для pivotTables в API javaScript Office JavaScript.
 
 - `Workbook.pivotTables` и `Worksheet.pivotTables` [являются pivotTableCollections,](/javascript/api/excel/excel.pivottablecollection) которые содержат [pivotTables](/javascript/api/excel/excel.pivottable) в книге и таблице, соответственно.
 - [PivotTable содержит](/javascript/api/excel/excel.pivottable) [pivotHierarchyCollection](/javascript/api/excel/excel.pivothierarchycollection) с несколькими [pivotHierarchies.](/javascript/api/excel/excel.pivothierarchy)
@@ -42,7 +42,7 @@ PivotTables упрощают большие наборы данных. Они п
 
 PivotTables организованы на основе четырех категорий иерархии: [строка,](/javascript/api/excel/excel.rowcolumnpivothierarchy) [столбец,](/javascript/api/excel/excel.rowcolumnpivothierarchy) [данные](/javascript/api/excel/excel.datapivothierarchy)и [фильтр](/javascript/api/excel/excel.filterpivothierarchy).
 
-Данные фермы, показанные ранее, имеет пять иерархий: **фермы,** **тип,** **классификация,** ящики, проданные на **ферме,** и **ящики продаются** оптом. Каждая иерархия может существовать только в одной из четырех категорий. Если **тип** добавляется в иерархии столбцов, он также не может быть в строке, данных или иерархиях фильтрации. Если **type** впоследствии добавляется в иерархии строк, он удаляется из иерархий столбцов. Это поведение является одинаковым, если назначение иерархии делается с помощью пользовательского интерфейса Excel или API JavaScript Excel.
+Данные фермы, показанные ранее, имеет пять иерархий: **фермы,** **тип,** **классификация,** ящики, проданные на **ферме,** и **ящики продаются** оптом. Каждая иерархия может существовать только в одной из четырех категорий. Если **тип** добавляется в иерархии столбцов, он также не может быть в строке, данных или иерархиях фильтрации. Если **type** впоследствии добавляется в иерархии строк, он удаляется из иерархий столбцов. Это поведение одинаково, если назначение иерархии Excel пользовательского интерфейса или Excel API JavaScript.
 
 Иерархии строк и столбцов определяют группу данных. Например, иерархия строк  Фермы сгруппит все наборы данных из одной фермы. Выбор иерархии строк и столбцов определяет ориентацию pivotTable.
 
@@ -54,7 +54,7 @@ PivotTables организованы на основе четырех катег
 
 ![Выбор данных о продажах фруктов рядом с pivotTable с иерархиями строк, данных и фильтров.](../images/excel-pivot-table-and-data.png)
 
-Этот pivotTable может быть создан через API JavaScript или с помощью пользовательского интерфейса Excel. Оба варианта позволяют дальнейшие манипуляции с помощью надстройок.
+Этот pivotTable может быть создан с помощью API JavaScript или Excel пользовательского интерфейса. Оба варианта позволяют дальнейшие манипуляции с помощью надстройок.
 
 ## <a name="create-a-pivottable"></a>Создание pivotTable
 
@@ -244,9 +244,6 @@ Excel.run(function (context) {
 
 Кроме того, элемент управления загонами и параметров общей строки, отображение пустых ячеек данных `PivotLayout` и [параметры текста alt.](https://support.microsoft.com/topic/add-alternative-text-to-a-shape-picture-chart-smartart-graphic-or-other-object-44989b2a-903c-4d9a-b742-6a75b451c669) Ссылка [PivotLayout](/javascript/api/excel/excel.pivotlayout) содержит полный список этих функций.
 
-> [!NOTE]
-> Некоторые из упомянутых здесь функций PivotLayout в настоящее время доступны только в общедоступных предварительных версиях. [!INCLUDE [Information about using preview APIs](../includes/using-excel-preview-apis.md)]
-
 В следующем примере кода пустые ячейки данных отображают строку, форматировать диапазон тела до согласованного горизонтального выравнивания и гарантировать, что изменения форматирования остаются даже после обновления `"--"` PivotTable.
 
 ```js
@@ -286,7 +283,7 @@ Excel.run(function (context) {
 
 [PivotFilters](/javascript/api/excel/excel.pivotfilters) фильтрует данные на основе четырех категорий [](#hierarchies) иерархии PivotTable (фильтры, столбцы, строки и значения). Существует четыре типа pivotFilters, которые позволяют фильтрацию на основе дат календаря, размыв строк, сравнение номеров и фильтрацию на основе настраиваемого ввода.
 
-[Срезы](/javascript/api/excel/excel.slicer) можно применять как к таблицам PivotTables, так и к обычным таблицам Excel. При применении к pivotTable срезы функционируют как [PivotManualFilter](#pivotmanualfilter) и позволяют фильтрацию на основе настраиваемого ввода. В отличие от PivotFilters, срезеры имеют компонент [пользовательского интерфейса Excel.](https://support.office.com/article/Use-slicers-to-filter-data-249f966b-a9d5-4b0f-b31a-12651785d29d) С помощью `Slicer` класса вы создаете этот компонент пользовательского интерфейса, управляете фильтрацией и контролируете его внешний вид.
+[Срезы](/javascript/api/excel/excel.slicer) можно применять как к таблицам PivotTables, так и к Excel таблицам. При применении к pivotTable срезы функционируют как [PivotManualFilter](#pivotmanualfilter) и позволяют фильтрацию на основе настраиваемого ввода. В отличие от PivotFilters, срезеры имеют [компонент Excel пользовательского интерфейса.](https://support.office.com/article/Use-slicers-to-filter-data-249f966b-a9d5-4b0f-b31a-12651785d29d) С помощью `Slicer` класса вы создаете этот компонент пользовательского интерфейса, управляете фильтрацией и контролируете его внешний вид.
 
 ### <a name="filter-with-pivotfilters"></a>Фильтр с помощью pivotFilters
 
@@ -415,7 +412,7 @@ Excel.run(function (context) {
 
 ### <a name="filter-with-slicers"></a>Фильтр с помощью срезов
 
-[Слайсеры](/javascript/api/excel/excel.slicer) позволяют фильтровать данные из pivotTable Excel или таблицы. Срезер использует значения из указанного столбца или PivotField для фильтрации соответствующих строк. Эти значения хранятся в [качестве объектов SlicerItem](/javascript/api/excel/excel.sliceritem) в `Slicer` . Ваша надстройка может регулировать эти фильтры, как и пользователи[(с помощью пользовательского интерфейса Excel).](https://support.office.com/article/Use-slicers-to-filter-data-249f966b-a9d5-4b0f-b31a-12651785d29d) Срез находится на вершине таблицы в слое рисования, как показано на следующем скриншоте.
+[Срезы](/javascript/api/excel/excel.slicer) позволяют фильтровать данные из Excel pivotTable или таблицы. Срезер использует значения из указанного столбца или PivotField для фильтрации соответствующих строк. Эти значения хранятся в [качестве объектов SlicerItem](/javascript/api/excel/excel.sliceritem) в `Slicer` . Ваша надстройка может регулировать эти фильтры, как и пользователи (Excel[пользовательского интерфейса).](https://support.office.com/article/Use-slicers-to-filter-data-249f966b-a9d5-4b0f-b31a-12651785d29d) Срез находится на вершине таблицы в слое рисования, как показано на следующем скриншоте.
 
 ![Фильтрующий срез данных на pivotTable.](../images/excel-slicer.png)
 
@@ -530,7 +527,7 @@ Excel.run(function (context) {
 Объект `ShowAsRule` имеет три свойства:
 
 - `calculation`: Тип относительного вычисления, применяемого к иерархии данных (по `none` умолчанию).
-- `baseField`. [PivotField](/javascript/api/excel/excel.pivotfield) в иерархии, содержащей базовые данные перед применив расчет. Так как pivotTables Excel имеет сопоставление иерархии в поле один к одному, вы будете использовать одно и то же имя для доступа как к иерархии, так и к полю.
+- `baseField`. [PivotField](/javascript/api/excel/excel.pivotfield) в иерархии, содержащей базовые данные перед применив расчет. Поскольку Excel pivotTables имеют сопоставление иерархии в поле один к одному, вы будете использовать одно и то же имя для доступа как к иерархии, так и к полю.
 - `baseItem`: Отдельный [pivotItem](/javascript/api/excel/excel.pivotitem) сравнивается со значениями базовых полей, основанными на типе вычисления. Не все вычисления требуют этого поля.
 
 В следующем примере вычисление суммы ящиков, проданных в иерархии данных **фермы,** определяется в процентах от общего числа столбцов.
@@ -603,4 +600,4 @@ Excel.run(function (context) {
 ## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
-- [Ссылка на API JavaScript Excel](/javascript/api/excel)
+- [Excel Ссылка на API JavaScript](/javascript/api/excel)
