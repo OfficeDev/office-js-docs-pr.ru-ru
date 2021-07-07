@@ -1,14 +1,14 @@
 ---
 title: Дизайн надстройки Outlook
 description: Эти рекомендации помогут вам спроектировать и выполнить сборку надстройки с привлекательным внешним видом, которая сделает лучшие качества вашего приложения доступными в Outlook для Windows, веб, iOS, Mac и Android.
-ms.date: 06/24/2019
+ms.date: 07/05/2021
 localization_priority: Priority
-ms.openlocfilehash: a669d2cf0a98ffa0ca7b7dfc3fcc5b71d291a0e0
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 35ff407fae14654b3b6aa3d543e30524d4a1a5d0
+ms.sourcegitcommit: 488b26b29c7534e3bbc862b688ed2319cc028f71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53077136"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53315157"
 ---
 # <a name="outlook-add-in-design-guidelines"></a>Рекомендации по разработке надстроек Outlook
 
@@ -30,7 +30,7 @@ ms.locfileid: "53077136"
 
    В надстройке должны использоваться шаблоны, характерные для той платформы, на которой работает Outlook. Для этого следует соблюдать рекомендации по взаимодействию и внешнему виду для каждой платформы. Для приложения Outlook также есть свои рекомендации, которые важно учитывать. Хорошо спроектированная надстройка органично вписывается в интерфейс, платформу и Outlook.
 
-   Это означает, что ваша надстройка будет визуально отличаться при запуске в Outlook для iOS и в Outlook для Android. Рекомендуем ознакомиться с [Framework7](https://framework7.io/) как с одним из решений для оформления надстройки.
+   Это означает, что ваша надстройка будет визуально отличаться при запуске в Outlook для iOS и в Outlook для Android. Рекомендуем ознакомиться с [Fluent UI](https://developer.microsoft.com/fluentui#/) как с одним из решений для оформления надстройки.
 
 3. **Сделайте работу приятной и проявите внимание к мелочам**
 

@@ -1,21 +1,23 @@
 ---
 title: Использование REST API Outlook из надстройки Outlook
 description: Узнайте, как использовать REST API Outlook из надстройки Outlook, чтобы получить маркер доступа
-ms.date: 02/26/2021
+ms.date: 07/06/2021
 localization_priority: Normal
-ms.openlocfilehash: c0df1df4fdbda22768562892874e09bbeb760473
-ms.sourcegitcommit: e7009c565b18c607fe0868db2e26e250ad308dce
+ms.openlocfilehash: 9f6642afcfae8efd54c4ade6165aa2a6823e3bd2
+ms.sourcegitcommit: 488b26b29c7534e3bbc862b688ed2319cc028f71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50505488"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53315150"
 ---
 # <a name="use-the-outlook-rest-apis-from-an-outlook-add-in"></a>Использование REST API Outlook из надстройки Outlook
 
 Пространство имен [Office.context.mailbox.item](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md) предоставляет доступ ко множеству общих полей сообщений и встреч. Однако в некоторых случаях надстройке может потребоваться доступ к данным, недоступным из этого пространства имен. Например, надстройка может использовать настраиваемые свойства, заданные внешним приложением, или искать в почтовом ящике пользователя сообщения от одного отправителя. В таких случаях для получения сведений рекомендуется использовать [интерфейсы REST API Outlook](/outlook/rest).
 
-> [!NOTE]
-> Вы также можете получать доступ к [REST API Outlook через Microsoft Graph](/outlook/rest#outlook-rest-api-via-microsoft-graph), но при этом следует учитывать некоторые важные отличия. Чтобы узнать больше, см. [сравнение Microsoft Graph и Outlook](/outlook/rest/compare-graph).
+> [!IMPORTANT]
+> **API Outlook REST обесценились**
+>
+> Конечные точки rest Outlook полностью списаются в ноябре 2022 г. (дополнительные сведения см. в сообщении за ноябрь [2020 г.).](https://developer.microsoft.com/graph/blogs/outlook-rest-api-v2-0-deprecation-notice/) Чтобы использовать Microsoft Graph, следует перенести [существующие надстройки.](/outlook/rest#outlook-rest-api-via-microsoft-graph) Кроме того, [сравните конечные](/outlook/rest/compare-graph)точки Graph и Outlook API REST.
 
 ## <a name="get-an-access-token"></a>Получение токена доступа
 
@@ -87,7 +89,7 @@ var restHost = Office.context.mailbox.restUrl;
 Когда надстройка получит маркер доступа, идентификатор элемента и URL-адрес REST API, она может передать эти сведения внутренней службе, которая вызовет REST API, или вызвать его напрямую с помощью AJAX. В приведенном ниже примере вызывается REST API почты Outlook для получения текущего сообщения.
 
 > [!IMPORTANT]
-> В локальном развертывании Exchange клиентские запросы с помощью AJAX или аналогичных библиотек сбой, так как CORS не поддерживается в настройке сервера.
+> Для локального Exchange развертывание клиентские запросы с помощью AJAX или аналогичных библиотек сбои, так как CORS не поддерживается в настройке сервера.
 
 ```js
 function getCurrentItem(accessToken) {
