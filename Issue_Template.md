@@ -3,7 +3,7 @@ Welcome to the Office Add-ins documentation repository.
 
 To report an issue with the Office-Add-ins documentation, please provide the article URL and describe the issue below. Alternatively, if you want to submit a pull request with your recommended documentation changes, we will review your contributions and update our documentation accordingly.
 
-If your issue is not related to the Office Add-ins documentation, please post it to one of the following channels instead:
+If your issue is not related to the Office Add-ins documentation, please post it to one of the following channels instead.
 
 - To ask a question about using the Office.js API, post your question to Stack Overflow and tag it with the "office-js" tag (http://stackoverflow.com/questions/tagged/office-js).
 
@@ -14,9 +14,9 @@ If your issue is not related to the Office Add-ins documentation, please post it
 
 <!--- Provide a general summary of the documentation issue in the Title above -->
 
-## <a name="article-url"></a><span data-ttu-id="87a54-101">URL-адрес статьи</span><span class="sxs-lookup"><span data-stu-id="87a54-101">Article URL</span></span>
+## <a name="article-url"></a><span data-ttu-id="b3901-101">URL-адрес статьи</span><span class="sxs-lookup"><span data-stu-id="b3901-101">Article URL</span></span>
 <!-- Provide the URL of the article that this documentation issue relates to -->
 
-## <a name="issue"></a><span data-ttu-id="87a54-102">Проблема</span><span class="sxs-lookup"><span data-stu-id="87a54-102">Issue</span></span>
+## <a name="issue"></a><span data-ttu-id="b3901-102">Проблема</span><span class="sxs-lookup"><span data-stu-id="b3901-102">Issue</span></span>
 <!-- Provide a thorough description of the documentation issue -->
  
