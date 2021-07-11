@@ -4,12 +4,12 @@ description: Узнайте о настройке надстройки с под
 ms.date: 02/01/2021
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: af83571a5ed48b3e1261ea4ccebbe25f61e75d66
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 7ec55e849031878b0ee6c19cfd82332bee5f77a5
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076856"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348337"
 ---
 # <a name="customize-your-nodejs-sso-enabled-add-in"></a>Настройка надстройки Node.js с поддержкой единого входа
 
@@ -18,7 +18,7 @@ ms.locfileid: "53076856"
 
 Быстрое начало [SSO](sso-quickstart.md) создает надстройки с поддержкой SSO, которая получает сведения о профиле пользователя и записывает их в документ или сообщение. В этой статье вы пройдите процесс обновления надстройки, созданной с помощью генератора Yeoman в быстром запуске SSO, чтобы добавить новые функциональные возможности, которые требуют различных разрешений.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Предварительные условия
 
 - Надстройка Office, которую вы создали, следуя инструкциям в [быстром запуске SSO.](sso-quickstart.md)
 
@@ -71,9 +71,9 @@ ms.locfileid: "53076856"
 
 11. На панели **разрешений API запроса:**
 
-    а. В **статье Файлы** выберите **Files.Read.All**.
+    a. В **статье Файлы** выберите **Files.Read.All**.
 
-    б. Выберите **кнопку Добавить разрешения** в нижней части панели, чтобы сохранить эти изменения разрешений.
+    b. Выберите **кнопку Добавить разрешения** в нижней части панели, чтобы сохранить эти изменения разрешений.
 
 12. Выберите согласие **администратора гранта для кнопки [имя клиента].**
 
@@ -97,11 +97,11 @@ ms.locfileid: "53076856"
 
 1. В **./. Файл ENV:**
 
-    а. Замените `GRAPH_URL_SEGMENT=/me` следующим образом: `GRAPH_URL_SEGMENT=/me/drive/root/children`
+    a. Замените `GRAPH_URL_SEGMENT=/me` следующим образом: `GRAPH_URL_SEGMENT=/me/drive/root/children`
 
-    б. Замените `QUERY_PARAM_SEGMENT=` следующим образом: `QUERY_PARAM_SEGMENT=?$select=name&$top=10`
+    b. Замените `QUERY_PARAM_SEGMENT=` следующим образом: `QUERY_PARAM_SEGMENT=?$select=name&$top=10`
 
-    в. Замените `SCOPE=User.Read` следующим образом: `SCOPE=Files.Read.All`
+    c. Замените `SCOPE=User.Read` следующим образом: `SCOPE=Files.Read.All`
 
 2. В **./manifest.xml** найти строку в конце файла и заменить `<Scope>User.Read</Scope>` ее строкой `<Scope>Files.Read.All</Scope>` .
 
@@ -168,9 +168,9 @@ ms.locfileid: "53076856"
 
 ### <a name="changes-required-for-an-excel-add-in-javascript"></a>Изменения, необходимые для Excel надстройки (JavaScript)
 
-Если надстройка является Excel, созданной с помощью JavaScript, внести следующие изменения в **./src/helpers/documentHelper.js:**
+Если надстройка является Excel, созданной с помощью JavaScript, внести следующие изменения в **./src/helpers/documentHelper.js.**
 
-1. Найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией:
+1. Найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией.
 
     ```javascript
     export function writeDataToOfficeDocument(result) {
@@ -185,7 +185,7 @@ ms.locfileid: "53076856"
     }
     ```
 
-2. Найдите `filterUserProfileInfo` функцию и замените ее следующей функцией:
+2. Найдите `filterUserProfileInfo` функцию и замените ее следующей функцией.
 
     ```javascript
     function filterOneDriveInfo(result) {
@@ -198,7 +198,7 @@ ms.locfileid: "53076856"
     }
     ```
 
-3. Найдите `writeDataToExcel` функцию и замените ее следующей функцией:
+3. Найдите `writeDataToExcel` функцию и замените ее следующей функцией.
 
     ```javascript
     function writeDataToExcel(result) {
@@ -235,7 +235,7 @@ ms.locfileid: "53076856"
 
 ### <a name="changes-required-for-an-excel-add-in-typescript"></a>Изменения, необходимые для Excel надстройки (TypeScript)
 
-Если надстройка — это надстройка Excel, созданная с помощью TypeScript, откройте **./src/taskpane/taskpane.ts**, найдите функцию и замените ее следующей `writeDataToOfficeDocument` функцией:
+Если надстройка является Excel, созданной с помощью TypeScript, откройте **./src/taskpane/taskpane.ts,** найдите функцию и замените ее следующей `writeDataToOfficeDocument` функцией.
 
 ```typescript
 export function writeDataToOfficeDocument(result: Object): Promise<any> {
@@ -271,9 +271,9 @@ export function writeDataToOfficeDocument(result: Object): Promise<any> {
 
 ### <a name="changes-required-for-an-outlook-add-in-javascript"></a>Изменения, необходимые для Outlook надстройки (JavaScript)
 
-Если надстройка является Outlook, созданной с помощью JavaScript, внести следующие изменения в **./src/helpers/documentHelper.js:**
+Если надстройка Outlook, созданная с помощью JavaScript, внести следующие изменения в **./src/helpers/documentHelper.js.**
 
-1. Найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией:
+1. Найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией.
 
     ```javascript
     export function writeDataToOfficeDocument(result) {
@@ -288,7 +288,7 @@ export function writeDataToOfficeDocument(result: Object): Promise<any> {
     }
     ```
 
-2. Найдите `filterUserProfileInfo` функцию и замените ее следующей функцией:
+2. Найдите `filterUserProfileInfo` функцию и замените ее следующей функцией.
 
     ```javascript
     function filterOneDriveInfo(result) {
@@ -301,7 +301,7 @@ export function writeDataToOfficeDocument(result: Object): Promise<any> {
     }
     ```
 
-3. Найдите `writeDataToOutlook` функцию и замените ее следующей функцией:
+3. Найдите `writeDataToOutlook` функцию и замените ее следующей функцией.
 
     ```javascript
     function writeDataToOutlook(result) {
@@ -333,7 +333,7 @@ export function writeDataToOfficeDocument(result: Object): Promise<any> {
 
 ### <a name="changes-required-for-an-outlook-add-in-typescript"></a>Изменения, необходимые для Outlook надстройки (TypeScript)
 
-Если надстройка Outlook, созданная с помощью TypeScript, откройте **./src/taskpane/taskpane.ts,** найдите функцию и замените ее следующей `writeDataToOfficeDocument` функцией:
+Если надстройка Outlook, созданная с помощью TypeScript, откройте **./src/taskpane/taskpane.ts,** найдите функцию и замените ее следующей `writeDataToOfficeDocument` функцией.
 
 ```typescript
 export function writeDataToOfficeDocument(result: Object): void {
@@ -364,9 +364,9 @@ export function writeDataToOfficeDocument(result: Object): void {
 
 ### <a name="changes-required-for-a-powerpoint-add-in-javascript"></a>Изменения, необходимые для PowerPoint надстройки (JavaScript)
 
-Если надстройка является PowerPoint, созданной с помощью JavaScript, внести следующие изменения в **./src/helpers/documentHelper.js:**
+Если надстройка — это надстройка PowerPoint, созданная с помощью JavaScript, внести следующие изменения в **./src/helpers/documentHelper.js.**
 
-1. Найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией:
+1. Найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией.
 
     ```javascript
     export function writeDataToOfficeDocument(result) {
@@ -381,7 +381,7 @@ export function writeDataToOfficeDocument(result: Object): void {
     }
     ```
 
-2. Найдите `filterUserProfileInfo` функцию и замените ее следующей функцией:
+2. Найдите `filterUserProfileInfo` функцию и замените ее следующей функцией.
 
     ```javascript
     function filterOneDriveInfo(result) {
@@ -394,7 +394,7 @@ export function writeDataToOfficeDocument(result: Object): void {
     }
     ```
 
-3. Найдите `writeDataToPowerPoint` функцию и замените ее следующей функцией:
+3. Найдите `writeDataToPowerPoint` функцию и замените ее следующей функцией.
 
     ```javascript
     function writeDataToPowerPoint(result) {
@@ -432,7 +432,7 @@ export function writeDataToOfficeDocument(result: Object): void {
 
 ### <a name="changes-required-for-a-powerpoint-add-in-typescript"></a>Изменения, необходимые для PowerPoint надстройки (TypeScript)
 
-Если надстройка PowerPoint, созданная с помощью TypeScript, откройте **./src/taskpane/taskpane.ts**, найдите функцию и замените ее следующей `writeDataToOfficeDocument` функцией:
+Если надстройка — это надстройка PowerPoint, созданная с помощью TypeScript, откройте **./src/taskpane/taskpane.ts**, найдите функцию и замените ее следующей `writeDataToOfficeDocument` функцией.
 
 ```typescript
 export function writeDataToOfficeDocument(result: Object): void {
@@ -467,9 +467,9 @@ export function writeDataToOfficeDocument(result: Object): void {
 
 ### <a name="changes-required-for-a-word-add-in-javascript"></a>Изменения, необходимые для надстройки Word (JavaScript)
 
-Если ваша надстройка — это надстройка Word, созданная с помощью JavaScript, внести следующие изменения в **./src/helpers/documentHelper.js:**
+Если надстройка — это надстройка Word, созданная с помощью JavaScript, внести следующие изменения в **./src/helpers/documentHelper.js.**
 
-1. Найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией:
+1. Найдите `writeDataToOfficeDocument` функцию и замените ее следующей функцией.
 
     ```javascript
     export function writeDataToOfficeDocument(result) {
@@ -484,7 +484,7 @@ export function writeDataToOfficeDocument(result: Object): void {
     }
     ```
 
-2. Найдите `filterUserProfileInfo` функцию и замените ее следующей функцией:
+2. Найдите `filterUserProfileInfo` функцию и замените ее следующей функцией.
 
     ```javascript
     function filterOneDriveInfo(result) {
@@ -497,7 +497,7 @@ export function writeDataToOfficeDocument(result: Object): void {
     }
     ```
 
-3. Найдите `writeDataToWord` функцию и замените ее следующей функцией:
+3. Найдите `writeDataToWord` функцию и замените ее следующей функцией.
 
     ```javascript
     function writeDataToWord(result) {
@@ -533,7 +533,7 @@ export function writeDataToOfficeDocument(result: Object): void {
 
 ### <a name="changes-required-for-a-word-add-in-typescript"></a>Изменения, необходимые для надстройки Word (TypeScript)
 
-Если ваша надстройка — это надстройка Word, созданная с помощью TypeScript, откройте **./src/taskpane/taskpane.ts**, найдите функцию и замените ее следующей `writeDataToOfficeDocument` функцией:
+Если ваша надстройка — это надстройка Word, созданная с помощью TypeScript, откройте **./src/taskpane/taskpane.ts**, найдите функцию и замените ее следующей `writeDataToOfficeDocument` функцией.
 
 ```typescript
 export function writeDataToOfficeDocument(result: Object): Promise<any> {
@@ -590,9 +590,9 @@ export function writeDataToOfficeDocument(result: Object): Promise<any> {
 
 4. В нижней части области задач выберите кнопку Read **my OneDrive для бизнеса,** чтобы инициировать процесс SSO.
 
-5. Если открывается диалоговое окно, в котором запрашиваются разрешения от имени надстройки, это означает, что единый вход не поддерживается для вашего сценария и надстройка использует альтернативный метод проверки подлинности пользователя. Это может произойти, если администратор клиента не дал согласие на доступ надстройки к Microsoft Graph или если пользователь не вошел в Office с помощью действительной учетной записи Майкрософт или рабочей или учебной учетной записи Microsoft 365. Чтобы продолжить, нажмите кнопку **Принять** в диалоговом окне.
+5. Если открывается диалоговое окно, в котором запрашиваются разрешения от имени надстройки, это означает, что единый вход не поддерживается для вашего сценария и надстройка использует альтернативный метод проверки подлинности пользователя. Это может произойти, если администратор клиента не дал согласие на доступ надстройки к Microsoft Graph или если пользователь не вошел в Office с помощью действительной учетной записи Майкрософт или рабочей или учебной учетной записи Microsoft 365. Чтобы продолжить, нажмите кнопку **Принять** в диалоговом окне.
 
-    ![Снимок экрана, показывающий разрешения, запрашиваемую диалоговое окно с выделенной кнопкой Accept.](../images/sso-permissions-request.png)
+    ![Снимок экрана диалогового окна, запрашивающего разрешение, с выделенной кнопкой "Принять".](../images/sso-permissions-request.png)
 
     > [!NOTE]
     > После принятия пользователем запрос разрешений больше не выводится на экран.
@@ -620,13 +620,13 @@ export function writeDataToOfficeDocument(result: Object): Promise<any> {
 
 4. В окне создания сообщения нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
-    ![Снимок экрана, показывающий выделенную кнопку ленты надстройки в Outlook окне сообщения.](../images/outlook-sso-ribbon-button.png)
+    ![Снимок экрана: выделенная кнопка ленты надстройки в окне создания сообщения Outlook.](../images/outlook-sso-ribbon-button.png)
 
 5. В нижней части области задач выберите кнопку Read **my OneDrive для бизнеса,** чтобы инициировать процесс SSO.
 
-6. Если открывается диалоговое окно, в котором запрашиваются разрешения от имени надстройки, это означает, что единый вход не поддерживается для вашего сценария и надстройка использует альтернативный метод проверки подлинности пользователя. Это может произойти, если администратор клиента не дал согласие на доступ надстройки к Microsoft Graph или если пользователь не вошел в Office с помощью действительной учетной записи Майкрософт или рабочей или учебной учетной записи Microsoft 365. Чтобы продолжить, нажмите кнопку **Принять** в диалоговом окне.
+6. Если открывается диалоговое окно, в котором запрашиваются разрешения от имени надстройки, это означает, что единый вход не поддерживается для вашего сценария и надстройка использует альтернативный метод проверки подлинности пользователя. Это может произойти, если администратор клиента не дал согласие на доступ надстройки к Microsoft Graph или если пользователь не вошел в Office с помощью действительной учетной записи Майкрософт или рабочей или учебной учетной записи Microsoft 365. Чтобы продолжить, нажмите кнопку **Принять** в диалоговом окне.
 
-    ![Снимок экрана разрешений, запрашиваемого диалоговое окно с выделенной кнопкой Accept.](../images/sso-permissions-request.png)
+    ![Снимок экрана: диалоговое окно, запрашивающее разрешения, с выделенной кнопкой "Принять".](../images/sso-permissions-request.png)
 
     > [!NOTE]
     > После принятия пользователем запрос разрешений больше не выводится на экран.

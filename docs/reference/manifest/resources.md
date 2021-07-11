@@ -3,12 +3,12 @@ title: Элемент Resources в файле манифеста
 description: В элементе Resources находятся значки, строки и URL-адреса для узла VersionOverrides.
 ms.date: 03/30/2021
 localization_priority: Normal
-ms.openlocfilehash: bdf73420345ca4d054438bfba5217254e6682e6d
-ms.sourcegitcommit: 0bff0411d8cfefd4bb00c189643358e6fb1df95e
+ms.openlocfilehash: 1deacc0b93e19e5f646ca2dd74d6f89de562f21e
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "51604619"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348295"
 ---
 # <a name="resources-element"></a>Элемент Resources
 
@@ -36,7 +36,7 @@ ms.locfileid: "51604619"
 - 32x32
 - 80x80
 
-Кроме того, поддерживаются (но не требуются) указанные ниже дополнительные размеры.
+Следующие дополнительные размеры также поддерживаются, но не требуются.
 
 - 20x20
 - 24x24
@@ -46,7 +46,7 @@ ms.locfileid: "51604619"
 
 > [!IMPORTANT]
 >
-> - Если это изображение является представителем значка надстройки, см. в приложении [Create effective listings in AppSource и Office](/office/dev/store/create-effective-office-store-listings#create-an-icon-for-your-add-in) для размера и других требований.
+> - Если это изображение является символом представительства надстройки, см. в этой записи Создание эффективных списков в [AppSource](/office/dev/store/create-effective-office-store-listings#create-an-icon-for-your-add-in) и в Office для размера и других требований.
 > - Для оптимальной работы Outlook требуется кэшировать ресурсы изображений. Поэтому сервер, на котором размещен ресурс изображения, не должен добавлять директивы CACHE-CONTROL в заголовок ответа. Это приведет к тому, что Outlook автоматически заменит универсальное или стандартное изображение.
 
 ## <a name="resources-examples"></a>Примеры ресурсов

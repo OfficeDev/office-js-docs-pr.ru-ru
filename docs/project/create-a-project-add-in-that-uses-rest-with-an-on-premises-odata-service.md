@@ -3,12 +3,12 @@ title: Создание надстройки Project, использующей R
 description: Узнайте, как создать надстройку области задач для Project профессиональный 2013 г., которая сравнивает данные о затратах и работе в активном проекте со средними значениями для всех проектов в текущем экземпляре Project Web App.
 ms.date: 09/26/2019
 localization_priority: Normal
-ms.openlocfilehash: 318ef4fe45fdfbca5d47cb5d3d28b43fea61059b
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: c03cd580f9f5d4da654022de811d4a060a99e52d
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076667"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348813"
 ---
 # <a name="create-a-project-add-in-that-uses-rest-with-an-on-premises-project-server-odata-service"></a>Создание надстройки Project, использующей REST с локальной службой OData Project Server
 
@@ -18,7 +18,7 @@ ms.locfileid: "53076667"
 
 ## <a name="prerequisites-for-creating-a-task-pane-add-in-that-reads-project-server-reporting-data"></a>Необходимые условия для создания надстроек области задач, читающей данные отчетов Project Server
 
-Ниже следующую предпосылку для создания надстройки Project области задач, которая считыет службу **ProjectData** экземпляра Project Web App в локальной установке Project Server 2013:
+Ниже приводится условие создания надстройки Project области задач, которая читает службу **ProjectData** экземпляра Project Web App в локальной установке Project Server 2013.
 
 - Проверьте, что на локальном компьютере разработчика установлены самые последние пакеты обновления и обновления Windows. Операционной системой может быть Windows 7, Windows 8, Windows Server 2008 или Windows Server 2012.
 
@@ -37,7 +37,7 @@ ms.locfileid: "53076667"
 
 1. Чтобы разрешить браузеру напрямую отображать XML-данные из запроса REST, отключите вид чтения канала. Дополнительные сведения о том, как это сделать в Internet Explorer, см. в процедуру 1, шаг 4 в статье [Создание запросов веб-каналов OData для данных отчетов Project](/previous-versions/office/project-odata/jj163048(v=office.15)).
 
-2. Запрос **службы ProjectData** с помощью браузера со следующим **http://ServerName URL-адресом: /ProjectServerName /_api/ProjectData**. Например, если `http://MyServer/pwa` — это экземпляр Project Web App, то в браузере будут показаны следующие результаты:
+2. Запрос **службы ProjectData** с помощью браузера со следующим **http://ServerName URL-адресом: /ProjectServerName /_api/ProjectData**. Например, если экземпляр `http://MyServer/pwa` Project Web App, браузер показывает следующие результаты.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -71,7 +71,7 @@ ms.locfileid: "53076667"
 
 1. Запустите Visual Studio 2015 в качестве администратора, а затем выберите **new Project** на странице Начните.
 
-2. В **диалоговом окне Project** расширяйте узлы **Templates,** **Visual C#** и **Office/SharePoint,** а затем выберите ** Office надстройки**. Выберите **платформа .NET Framework 4.5.2** в выпадаемом списке целевых рамок в верхней части области центра, а затем выберите Office надстройку **(см.** следующий скриншот).
+2. В **диалоговом окне Project** расширения шаблонов, визуальных C# **и** **Office/SharePoint,** а затем выберите Office надстройки .  Выберите **платформа .NET Framework 4.5.2** в выпадаемом списке целевых рамок в верхней части области центра, а затем выберите Office надстройку **(см.** следующий скриншот).
 
 3. Чтобы разместить оба проекта Visual Studio в одной папке, выберите **Создать каталог для решения** и найдите требуемое расположение.
 
@@ -115,13 +115,13 @@ ms.locfileid: "53076667"
 
 4. Добавьте значок для отображения в раскрывающемся списке **Надстройки Office** на вкладке **PROJECT** ленты. Можно добавить файл значка в решении Visual Studio или использовать URL-адрес значка. 
 
-Ниже описано, как добавить файл значка в решение Visual Studio:
+В следующих действиях покажите, как добавить файл значка в Visual Studio решение.
 
 1. В **обозревателе решений** перейдите в папку с именем Images.
 
 2. Чтобы отображаться в раскрывающемся списке **Надстройки Office**, значок должен иметь размер 32 x 32 пикселя. Например, установите пакет SDK Project 2013, затем выберите папку **Images** и добавьте следующий файл из пакета SDK: `\Samples\Apps\HelloProjectOData\HelloProjectODataWeb\Images\NewIcon.png`
 
-    Вы можете использовать собственный значок размером 32 x 32 пикселя или скопировать следующее изображение в файл с именем NewIcon.png, а затем добавить этот файл в папку `HelloProjectODataWeb\Images`:
+    Поочередно используйте собственный значок 32 x 32; или скопируйте следующее изображение в файл с именем NewIcon.png, а затем добавьте этот файл в  `HelloProjectODataWeb\Images` папку.
 
     ![Значок для приложения HelloProjectOData.](../images/pj15-hello-project-data-new-icon.jpg)
 
@@ -180,7 +180,7 @@ ms.locfileid: "53076667"
 
     Надстройка **HelloProjectOData** использует файл SurfaceErrors.js, который отображает ошибки и всплывающее сообщение. Вы можете скопировать  код из раздела Надежное программирование в разделе Создание надстройки области задач для [Project 2013](../project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md)г. с помощью текстового редактора, а затем добавить файл SurfaceErrors.js в папку **Scripts\Office** проекта **HelloProjectODataWeb.**
 
-    Ниже приводится обновленный HTML-код для главного элемента с дополнительной строкой для SurfaceErrors.js файла: 
+    Ниже приводится обновленный HTML-код для главного элемента с дополнительной строкой для SurfaceErrors.js файла. 
 
     ```HTML
     <!DOCTYPE html>
@@ -192,7 +192,7 @@ ms.locfileid: "53076667"
 
     <link rel="stylesheet" type="text/css" href="../Content/Office.css" />
 
-    <!-- Add your CSS styles to the following file -->
+    <!-- Add your CSS styles to the following file. -->
     <link rel="stylesheet" type="text/css" href="../Content/App.css" />
 
     <!-- Use the CDN reference to the mini-version of jQuery when deploying your add-in. -->
@@ -206,7 +206,7 @@ ms.locfileid: "53076667"
     <script src="../Scripts/Office/1.0/MicrosoftAjax.js"></script>
     <script src="../Scripts/Office/1.0/Office.js"></script>
 
-    <!-- Add your JavaScript to the following files -->
+    <!-- Add your JavaScript to the following files. -->
     <script src="../Scripts/HelloProjectOData.js"></script>
     <script src="../Scripts/SurfaceErrors.js"></script>
     </head>
@@ -543,7 +543,7 @@ ms.locfileid: "53076667"
 
 ## <a name="testing-the-helloprojectodata-add-in"></a>Тестирование надстройки HelloProjectOData
 
-Для проверки и отламки надстройки **HelloProjectOData** с Visual Studio 2015 Project профессиональный 2013 года необходимо установить на компьютере разработки. Для работы с различными тестовыми сценариями убедитесь, что можно выбрать открытие файлов Project на локальном компьютере или подключение к Project Web App. Например, выполните следующие действия.
+Для проверки и отламки надстройки **HelloProjectOData** с Visual Studio 2015 Project профессиональный 2013 года необходимо установить на компьютере разработки. Для работы с различными тестовыми сценариями убедитесь, что можно выбрать открытие файлов Project на локальном компьютере или подключение к Project Web App. Например, сделайте следующие действия.
 
 1. Во вкладке **ФАЙЛ** на ленте выберите вкладку **Сведения** в представлении Backstage, а затем выберите **Управление учетными записями**.
 
@@ -581,7 +581,7 @@ ms.locfileid: "53076667"
 
 6. Проверьте выходные данные в текстовом поле. Они должны показывать путь к документу, запрос REST, сведения о состоянии и результаты JSON от вызовов **ajax** и **parseODataResult**. Вывод помогает понять, создать и отлагировать код в `parseODataResult` таком методе, как `projCost += Number(res.d.results[i].ProjectCost);` .
 
-    Ниже приведен пример выходных данных для трех проектов в экземпляре Project Web App с разрывами строки и пробелами, добавленными для ясности.
+    Ниже приводится пример вывода с разрывами строк и пробелами, добавленными в текст для ясности, для трех проектов в Project Web App экземпляре.
 
     ```json
     Document path: <>\WinProj test1
@@ -670,7 +670,7 @@ ms.locfileid: "53076667"
 
         <link rel="stylesheet" type="text/css" href="../Content/Office.css" />
 
-        <!-- Add your CSS styles to the following file -->
+        <!-- Add your CSS styles to the following file. -->
         <link rel="stylesheet" type="text/css" href="../Content/App.css" />
 
         <!-- Use the CDN reference to the mini-version of jQuery when deploying your add-in. -->
@@ -684,7 +684,7 @@ ms.locfileid: "53076667"
         <script src="../Scripts/Office/1.0/MicrosoftAjax.js"></script>
         <script src="../Scripts/Office/1.0/Office.js"></script>
 
-        <!-- Add your JavaScript to the following files -->
+        <!-- Add your JavaScript to the following files. -->
         <script src="../Scripts/HelloProjectOData.js"></script>
         <script src="../Scripts/SurfaceErrors.js"></script>
     </head>
@@ -1099,7 +1099,7 @@ Table styles
 
 Для других запросов службы **ProjectData** имеются ограничения на длину строки запроса, что влияет на число шагов, которые запрос может предпринять для выборки из родительской коллекции в объект в дочерней коллекции. Например, двухшаговый запрос **Projects** в **Tasks** для получения элементов задач работает, но трехшаговый запрос, такой как **Projects** в **Tasks** в **Assignments**, для получения элемента назначения может превысить максимальную длину URL-адреса по умолчанию. Дополнительные сведения см. в [веб-каналах запроса OData для Project отчетов.](/previous-versions/office/project-odata/jj163048(v=office.15))
 
-Если вы измените **надстройки HelloProjectOData** для производственного использования, сделайте следующие действия:
+Если вы измените **надстройки HelloProjectOData** для производственного использования, сделайте следующие действия.
 
 - В файле HelloProjectOData.html для лучшей производительности измените ссылку office.js из локального проекта на ссылку CDN:
 

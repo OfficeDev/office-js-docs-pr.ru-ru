@@ -3,12 +3,12 @@ title: Конфиденциальность и безопасность надс
 description: Узнайте об аспектах конфиденциальности и безопасности платформы Office надстройки.
 ms.date: 03/19/2021
 localization_priority: Normal
-ms.openlocfilehash: de33e0031a8deef8632cb82baaf3ac9aa2e95c90
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: fd2fbecf8af8b0e76073735ba21c140214948363
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076191"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349156"
 ---
 # <a name="privacy-and-security-for-office-add-ins"></a>Конфиденциальность и безопасность надстроек Office
 
@@ -160,7 +160,7 @@ ms.locfileid: "53076191"
 
 Одним из способов преодоления этого ограничения является использование JSON/P —  предоставление прокси-сервера веб-службы, включив тег скрипта с атрибутом **SRC,** который указывает на какой-то скрипт, который находится на другом домене. Вы можете программно создавать теги **script**, динамически формируя URL-адрес, на который указывает атрибут **src**, и передавая параметры на URL-адрес через параметры запроса URI. Поставщики веб-служб создают и размещают код JavaScript с использованием определенных URL-адресов и возвращают разные сценарии в зависимости от параметров запроса URI. Затем эти сценарии выполняются в точке вставки и работают надлежащим образом.
 
-Ниже приведен пример JSON/P в образце надстройки Outlook. 
+Ниже приведен пример JSON/P в образце надстройки Outlook.
 
 ```js
 // Dynamically create an HTML SCRIPT element that obtains the details for the specified video.
@@ -194,7 +194,7 @@ Exchange и SharePoint предоставляют прокси-серверы н
 
 - Если вы используете jQuery, то вместо метода [.html()](https://api.jquery.com/text/) воспользуйтесь методом [.text()](https://api.jquery.com/html/).
 
-- С помощью метода [toStaticHTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference) перед отправкой введенных пользователем данных в свойство **innerHTML** можно удалить из них любые динамические элементы и атрибуты HTML.
+- С помощью метода [toStaticHTML](https://developer.mozilla.org/docs/Web/HTML/Reference) перед отправкой введенных пользователем данных в свойство **innerHTML** можно удалить из них любые динамические элементы и атрибуты HTML.
 
 - С помощью функции [encodeURIComponent](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/encodeuricomponent) или [encodeURI](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/encodeuri) можно закодировать текст, который будет использоваться в качестве URL-адреса, введенного пользователем или содержащего введенные пользователем данные.
 

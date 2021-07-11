@@ -3,12 +3,12 @@ title: Убедитесь, что надстройка Office совместим
 description: Включить совместимость между Office надстройки и эквивалентной надстройки COM.
 ms.date: 03/09/2021
 localization_priority: Normal
-ms.openlocfilehash: e2ab1bb1eda548ff8e0923b8fbccfa9e007a6a0c
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: c475189ec19cbb0de1a070f6c529db3c59a093d8
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076001"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349807"
 ---
 # <a name="make-your-office-add-in-compatible-with-an-existing-com-add-in"></a>Убедитесь, что надстройка Office совместима с существующей надстройкой COM
 
@@ -70,7 +70,7 @@ ms.locfileid: "53076001"
 
 ## <a name="equivalent-behavior-for-users"></a>Эквивалентное поведение для пользователей
 
-При [указании](#specify-an-equivalent-com-add-in)эквивалентной надстройки COM Office на Windows не будет отображаться пользовательский интерфейс Office надстройки (UI), если установлена эквивалентная надстройка COM. Office только скрывает кнопки ленты надстройки Office надстройки и не препятствует установке. Поэтому Office надстройка по-прежнему будет отображаться в следующих расположениях в пользовательском интерфейсе:
+При [указании](#specify-an-equivalent-com-add-in)эквивалентной надстройки COM Office на Windows не будет отображаться пользовательский интерфейс Office надстройки (UI), если установлена эквивалентная надстройка COM. Office только скрывает кнопки ленты надстройки Office надстройки и не препятствует установке. Поэтому Office надстройка по-прежнему будет отображаться в следующих расположениях в пользовательском интерфейсе.
 
 - В **статье Мои надстройки**
 - В качестве записи в диспетчере ленты (только Excel, Word и PowerPoint)

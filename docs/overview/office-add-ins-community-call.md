@@ -3,12 +3,12 @@ title: Microsoft Office Вызов сообщества надстройки
 description: Расписание и ресурсы Microsoft Office сообществ надстройки
 ms.date: 05/20/2021
 localization_priority: Normal
-ms.openlocfilehash: e60d490f010eda2738340dea57e8e89fcb7ae755
-ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
+ms.openlocfilehash: f98e53211143bf377e72e4a477cbe72cd1864af5
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2021
-ms.locfileid: "52591046"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348407"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office Вызов сообщества надстройки
 
@@ -18,9 +18,9 @@ ms.locfileid: "52591046"
 - [Office Вызов сообщества надстройки — 12 мая 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-may-2021/ba-p/2369804)
 - [Office Вызов сообщества надстройки — 14 апреля 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-april-14-2021/ba-p/2318886)
 - [Office Вызов сообщества надстройки — 10 марта 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-march-10-2021/ba-p/2205369)
-- [Office Вызов сообщества надстройки — 10 февраля 2021 г.](https://developer.microsoft.com/en-us/office/blogs/office-add-ins-community-call-february-10-2021/)
-- [Office Вызов сообщества надстройки — 13 января 2021 г.](https://developer.microsoft.com/en-us/office/blogs/office-add-ins-community-call-january-13-2021%e2%80%af/)
-- [Office Вызов сообщества надстройки — 9 декабря 2020 г.](https://developer.microsoft.com/en-us/microsoft-365/blogs/office-add-ins-community-call-december-9-2020/)
+- [Office Вызов сообщества надстройки — 10 февраля 2021 г.](https://developer.microsoft.com/office/blogs/office-add-ins-community-call-february-10-2021/)
+- [Office Вызов сообщества надстройки — 13 января 2021 г.](https://developer.microsoft.com/office/blogs/office-add-ins-community-call-january-13-2021%e2%80%af/)
+- [Office Вызов сообщества надстройки — 9 декабря 2020 г.](https://developer.microsoft.com/microsoft-365/blogs/office-add-ins-community-call-december-9-2020/)
 - [Office Вызов сообщества надстройки - 11 ноября 2020 г.](https://developer.microsoft.com/office/blogs/office-add-ins-community-call-november-11-2020/)
 - [Office Вызов сообщества надстройки - 14 октября 2020 г.](https://developer.microsoft.com/office/blogs/office-add-ins-community-call-october-14-2020%E2%80%AF/)
 - [Office Вызов сообщества надстройки - 9 сентября 2020 г.](https://developer.microsoft.com/office/blogs/office-add-ins-community-call-september-9-2020/)

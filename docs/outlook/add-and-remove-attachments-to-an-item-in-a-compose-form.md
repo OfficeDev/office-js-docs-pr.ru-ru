@@ -1,32 +1,32 @@
 ---
 title: Добавление и удаление вложений в надстройке Outlook
-description: Вы можете использовать различные API вложений для управления файлами или элементами Outlook, присоединенными к элементу, который создает пользователь.
+description: Вы можете использовать различные API вложений для управления файлами Outlook элементов, присоединенных к элементу, который создает пользователь.
 ms.date: 02/24/2021
 localization_priority: Normal
-ms.openlocfilehash: da426813e865f5607ec3e2c65252e8a406d889e2
-ms.sourcegitcommit: e7009c565b18c607fe0868db2e26e250ad308dce
+ms.openlocfilehash: 0ba142bb1e8fb5f324d2bb6460bc8325a4800d2d
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50505502"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348589"
 ---
-# <a name="manage-an-items-attachments-in-a-compose-form-in-outlook"></a>Управление вложениями элемента в форме композитной формы в Outlook
+# <a name="manage-an-items-attachments-in-a-compose-form-in-outlook"></a>Управление вложениями элемента в форме композиции в Outlook
 
-API JavaScript Office предоставляет несколько API, которые можно использовать для управления вложениями элемента при его сочинении.
+API Office JavaScript предоставляет несколько API, которые можно использовать для управления вложениями элемента при его сочинении.
 
-## <a name="attach-a-file-or-outlook-item"></a>Присоединение файла или элемента Outlook
+## <a name="attach-a-file-or-outlook-item"></a>Прикрепить файл или Outlook элемент
 
-Вы можете прикрепить файл или элемент Outlook к форме композиции с помощью метода, подходящего для типа вложения.
+Вы можете прикрепить файл или Outlook элемент к форме композиции с помощью метода, подходящего для типа вложения.
 
 - [addFileAttachmentAsync:](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)Прикрепить файл
 - [addFileAttachmentFromBase64Async:](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)Прикрепить файл с помощью строки base64
-- [addItemAttachmentAsync:](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)Прикрепите элемент Outlook
+- [addItemAttachmentAsync:](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)прикрепите элемент Outlook
 
 Это асинхронные методы, что означает, что выполнение можно выполнить, не дожидаясь завершения действия. В зависимости от исходного расположения и размера добавляемого вложения асинхронный вызов может занять некоторое время.
 
 Если какие-то задачи зависят от завершения действия, их следует выполнять в методе обратного вызова. Этот метод вызова необязателен и вызывается после завершения загрузки вложения. Метод обратного вызова принимает объект [AsyncResult](/javascript/api/office/office.asyncresult) как выходной параметр, который содержит состояние, ошибку и возвращаемое значение при добавлении вложения. Если для обратного вызова требуются дополнительные параметры, их можно указать в необязательном параметре `options.asyncContext`. Параметр `options.asyncContext` может относиться к любому типу, поддерживаемому методом обратного вызова.
 
-Например, можно определить параметр `options.asyncContext` как объект JSON, содержащий одну или несколько пар "ключ-значение". Дополнительные примеры передачи необязательных параметров в асинхронные методы для платформы надстроек Office см. в статье [Асинхронное программирование в надстройках Office](../develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods). Ниже показано, как использовать параметр `asyncContext` для передачи двух аргументов методу обратного вызова.
+Например, можно определить объект JSON, содержащий одну или несколько пар значений `options.asyncContext` ключа. Дополнительные примеры передачи необязательных параметров асинхронным методам можно найти на платформе Office надстройки в Асинхронном программировании в [Office](../develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)надстройки . В следующем примере показано, как использовать параметр для `asyncContext` передачи 2 аргументов методу вызова.
 
 ```js
 var options = { asyncContext: { var1: 1, var2: 2}};
@@ -79,9 +79,9 @@ function write(message){
 }
 ```
 
-### <a name="attach-an-outlook-item"></a>Присоединение элемента Outlook
+### <a name="attach-an-outlook-item"></a>Прикрепить элемент Outlook
 
-Вы можете прикрепить элемент Outlook (например, электронную почту, календарь или контактный элемент) к сообщению или встрече в форме записи, указав ID элемента Exchange Web Services (EWS) и используя `addItemAttachmentAsync` метод. Вы можете получить EWS-ID элемента электронной почты, календаря, контакта или задачи в почтовом ящике пользователя с помощью метода [mailbox.makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods) и доступа к операции EWS [FindItem](/exchange/client-developer/web-service-reference/finditem-operation). Свойство [item.itemId](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties) также предоставляет идентификатор EWS существующего элемента в форме чтения.
+Вы можете прикрепить элемент Outlook (например, электронную почту, календарь или контактный элемент) к сообщению или встрече в форме записи, указав Exchange веб-службы (EWS) ИД элемента и используя `addItemAttachmentAsync` метод. Вы можете получить EWS-ID элемента электронной почты, календаря, контакта или задачи в почтовом ящике пользователя с помощью метода [mailbox.makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods) и доступа к операции EWS [FindItem](/exchange/client-developer/web-service-reference/finditem-operation). Свойство [item.itemId](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties) также предоставляет идентификатор EWS существующего элемента в форме чтения.
 
 Следующая функция JavaScript расширяет первый пример выше и добавляет элемент в качестве вложения в составную электронную почту или `addItemAttachment` встречу. В качестве параметра функция принимает идентификатор EWS прикрепляемого элемента. Если присоединение успешно, он получает ID вложения для дальнейшей обработки, включая удаление этого вложения в том же сеансе.
 
@@ -112,7 +112,7 @@ function addItemAttachment(itemId) {
 ```
 
 > [!NOTE]
-> Надстройку можно использовать для прикрепления экземпляра повторяющейся встречи в Outlook в Интернете или на мобильных устройствах. Однако в клиенте рабочего стола Outlook попытка прикрепить экземпляр приведет к присоединению повторяющейся серии (родительского назначения).
+> Надстройку можно использовать для прикрепления экземпляра повторяющейся встречи в Outlook в Интернете или на мобильных устройствах. Однако в клиенте Outlook настольного компьютера попытка прикрепить экземпляр приведет к присоединению повторяющейся серии (родительского назначения).
 
 ## <a name="get-attachments"></a>Получение вложений
 

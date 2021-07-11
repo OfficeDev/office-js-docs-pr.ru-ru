@@ -1,21 +1,21 @@
 ---
 title: Преобразование проекта надстройки Office в Visual Studio в TypeScript
-description: Узнайте, как преобразовать проект надстройки Office в Visual Studio использовать TypeScript.
+description: Узнайте, как преобразовать проект Office надстройки в Visual Studio с помощью TypeScript.
 ms.date: 09/01/2020
 localization_priority: Normal
-ms.openlocfilehash: 2134727a6065a1236dca313721d7721657e9a677
-ms.sourcegitcommit: d28392721958555d6edea48cea000470bd27fcf7
+ms.openlocfilehash: 2932c94052735436ce1357966832528679e6900d
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "49839966"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349982"
 ---
 # <a name="convert-an-office-add-in-project-in-visual-studio-to-typescript"></a>Преобразование проекта надстройки Office в Visual Studio в TypeScript
 
 Вы можете использовать шаблон надстройки Office в Visual Studio, чтобы создать надстройку с использованием JavaScript, а затем преобразовать этот проект в TypeScript. В этой статье описан процесс преобразования для надстройки Excel. Таким же образом в Visual Studio можно преобразовывать и другие проекты надстроек Office из JavaScript в TypeScript.
 
 > [!IMPORTANT]
-> В этой статье  описаны минимальные действия, необходимые для того, чтобы при нажатии на F5 код перезаписывался на JavaScript, который затем автоматически загружен в Office. Однако код не очень "TypeScripty". Например, переменные объявляются с ключевым словом, а не с указанным `var` `let` типом. Чтобы в полной мере воспользоваться преимуществами сильного ввода TypeScript, рассмотрите возможность внесения дополнительных изменений в код. 
+> В этой статье  описываются минимальные действия, необходимые для обеспечения того, чтобы при нажатии F5 код был перенагружен на JavaScript, который затем автоматически перезагружается в Office. Однако код не очень "TypeScripty". Например, переменные объявляются с ключевым словом, а не с указанным `var` `let` типом. Чтобы в полной мере воспользоваться преимуществами сильного ввода TypeScript, рассмотрите возможность внесения дополнительных изменений в код. 
 
 > [!NOTE]
 > Чтобы создать проект надстройки Office на TypeScript без использования Visual Studio, следуйте указаниям из раздела "Генератор Yeoman" любого [5-минутного руководства по началу работы](../index.yml) и выберите `TypeScript` по соответствующему запросу [генератора Yeoman для надстроек Office](https://github.com/OfficeDev/generator-office).
@@ -56,7 +56,7 @@ ms.locfileid: "49839966"
 
 4. На вкладке **Средства** выберите **Диспетчер пакетов NuGet** и щелкните пункт **Управление пакетами NuGet для решения...**.
 
-5. Выбрав **вкладку** "Обзор", введите **jquery. TypeScript.DefinitelyTyped**. Установите этот пакет или обновим его, если он уже установлен. Это гарантирует, что определения jQuery TypeScript будут включены в проект. Пакеты для jQuery отображаются в файле, Visual Studio под названием **packages.config**.
+5. С **выбранной** вкладке Просмотр введите **jquery. TypeScript.DefinitelyTyped**. Установите этот пакет или обнови его, если он уже установлен. Это позволит обеспечить, чтобы определения jQuery TypeScript были включены в проект. Пакеты для jQuery отображаются в файле, Visual Studio, называемом **packages.config.**
 
     > [!NOTE]
     > В проекте TypeScript могут быть как файлы TypeScript, так и файлы JavaScript, это не повлияет на компиляцию. Потому что TypeScript — это типизированная расширенная версия языка JavaScript. Код TypeScript компилируется в JavaScript.
@@ -65,12 +65,12 @@ ms.locfileid: "49839966"
 
     ```TypeScript
     Office.initialize = function (reason) {
-        // add the following line
+        // Add the following line.
         (window as any).Promise = OfficeExtension.Promise;
         ...
     ```
 
-7. В **Home.ts** найдите функцию `displaySelectedCells`, замените всю функцию приведенным ниже кодом и сохраните файл:
+7. В **Home.ts** найдите функцию, замените всю функцию `displaySelectedCells` следующим кодом и сохраните файл.
 
     ```TypeScript
     function displaySelectedCells() {

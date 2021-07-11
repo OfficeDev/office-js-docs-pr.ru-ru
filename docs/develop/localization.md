@@ -3,12 +3,12 @@ title: Локализация надстроек для Office
 description: Используйте API Office JavaScript для определения локального кода и отображения строк на основе Office приложения, а также для интерпретации или отображения данных на основе локального кода данных.
 ms.date: 02/23/2021
 localization_priority: Normal
-ms.openlocfilehash: f5d9d3cf01df8156c319b78222ed6c2d8ce09ca3
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: b49d64f2c9391539ac2d5929ebff2a4ecc08b630
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076008"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349828"
 ---
 # <a name="localization-for-office-add-ins"></a>Локализация надстроек для Office
 
@@ -307,7 +307,7 @@ API Office JavaScript предоставляет два свойства, под
 
 1. В **обозревателе решений** разверните узлы **WorldReadyAddIn** и **WorldReadyAddInManifest**, а затем выберите **WorldReadyAddIn.xml**.
 
-2. В файле WorldReadyAddInManifest.xml замените элементы [DisplayName] и [Description] на приведенный ниже блок кода.
+2. В WorldReadyAddInManifest.xml замените [элементы DisplayName] и [Description] следующим блоком кода.
 
     > [!NOTE]
     > Вы можете заменить локализованные строки на испанском языке, используемые в этом примере для элементов [DisplayName] и [Description], локализованными строками на любом другом языке.

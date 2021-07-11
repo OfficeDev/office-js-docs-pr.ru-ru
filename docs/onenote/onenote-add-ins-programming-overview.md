@@ -5,12 +5,12 @@ ms.date: 10/14/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: ada302e971eac9dd3deb626e422fdf054315ea1a
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: dcfeab909bfda54a4ed5b9a748e0f8a7e7d58bb9
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53077115"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348603"
 ---
 # <a name="onenote-javascript-api-programming-overview"></a>Обзор создания кода с помощью API JavaScript для OneNote
 
@@ -22,7 +22,7 @@ ms.locfileid: "53077115"
 
 Надстройки состоят из двух указанных ниже основных компонентов.
 
-- **Веб-приложение**, состоящее из веб-страницы и необходимых JavaScript-, CSS- или других файлов. Эти файлы можно разместить на веб-сервере или в службе веб-хостинга, например в Microsoft Azure. В OneNote в Интернете веб-приложение отображается в элементе управления браузера или в iFrame.
+- **Веб-приложение**, состоящее из веб-страницы и необходимых JavaScript-, CSS- или других файлов. Эти файлы можно разместить на веб-сервере или в службе веб-хостинга, например в Microsoft Azure. В OneNote для Интернета веб-приложение отображается в элементе управления браузера или в iFrame.
 
 - **Манифест в формате XML**, в котором указан URL-адрес веб-страницы надстройки и все требования, необходимые для получения доступа, параметры и возможности для надстройки. Этот файл хранится на клиентском компьютере. Для надстроек OneNote используется такой же формат [манифеста](../develop/add-in-manifests.md), что и для других надстроек Office.
 
@@ -39,7 +39,7 @@ ms.locfileid: "53077115"
 
 ### <a name="accessing-the-application-specific-api-through-the-application-object"></a>Доступ к API для определенных клиентских приложений с помощью объекта *Application*
 
-Для доступа к объектам OneNote, например к объектам **Notebook**, **Section** и **Page**, используйте объект `Application`. С помощью API для определенных клиентских приложений вы можете запустить пакетные операции на прокси-объектах. Основной процесс выглядит примерно так, как указано ниже.
+Используйте объект `Application` для доступа к таким объектам OneNote, как **записная книжка**, **раздел** и **страница**. С помощью API для конкретных приложений вы можете запустить пакетные операции на прокси-объектах. Основной процесс выглядит примерно следующим образом:
 
 1. Получение экземпляра приложения из контекста.
 
@@ -92,7 +92,7 @@ function getPagesInSection() {
 
 #### <a name="onenote-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для OneNote
 
-Наборы требований — это именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли клиентское приложение Office необходимые API. Дополнительные сведения о наборах обязательных элементов API JavaScript для OneNote см. в статье [Наборы обязательных элементов API JavaScript для OneNote](../reference/requirement-sets/onenote-api-requirement-sets.md).
+Наборы обязательных элементов — это именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверок в среде выполнения определяют, поддерживает ли приложение Office необходимые API. Дополнительные сведения см. в статье [Наборы обязательных элементов API JavaScript для OneNote](../reference/requirement-sets/onenote-api-requirement-sets.md).
 
 ### <a name="accessing-the-common-api-through-the-document-object"></a>Получение доступа к общему API с помощью объекта *Document*
 
@@ -128,7 +128,7 @@ function getSelectionFromPage() {
 Обычно общий API следует использовать, когда необходимые возможности не поддерживаются в API для определенных клиентских приложений. Дополнительные сведения об использовании общего API см. в статье [Общая объектная модель API JavaScript](../develop/office-javascript-api-object-model.md).
 
 <a name="om-diagram"></a>
-## <a name="onenote-object-model-diagram"></a>Схема объектной модели OneNote 
+## <a name="onenote-object-model-diagram"></a>Схема объектной модели OneNote
 На схеме ниже показаны возможности, которые на данный момент доступны в API JavaScript для OneNote .
 
   ![Схема объектной модели OneNote.](../images/onenote-om.png)

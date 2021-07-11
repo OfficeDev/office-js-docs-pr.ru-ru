@@ -1,15 +1,15 @@
 ---
 title: Наборы обязательных элементов для приведения изображений
-description: Поддержка наборов требований к принуждению к изображениям с помощью надстройок Office в Excel, PowerPoint и Word.
+description: Поддержка наборов требований к принуждению изображений с Office надстройки в Excel, PowerPoint и Word.
 ms.date: 02/19/2021
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 52ce46a46580500f5a292bf898674d4798378319
-ms.sourcegitcommit: e7009c565b18c607fe0868db2e26e250ad308dce
+ms.openlocfilehash: 29614718378fd51013360a2a922e11f89bca14b8
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50505530"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53350220"
 ---
 # <a name="image-coercion-requirement-sets"></a>Наборы обязательных элементов для приведения изображений
 
@@ -17,14 +17,14 @@ ms.locfileid: "50505530"
 
 ## <a name="imagecoercion-11"></a>ImageCoercion 1.1
 
-ImageCoercion 1.1 позволяет преобразования в изображение () при записи `Office.CoercionType.Image` данных с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) метода. Поддерживаются следующие приложения:
+ImageCoercion 1.1 позволяет преобразования в изображение () при записи `Office.CoercionType.Image` данных с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) метода. Поддерживаются следующие приложения.
 
-- Excel 2013 и более поздние версии Windows
-- Excel 2016 и более поздний mac
+- Excel 2013 г. и более поздней Windows
+- Excel 2016 и позднее на Mac
 - Excel на iPad
 - OneNote в Интернете
-- PowerPoint 2013 и более поздние версии Windows
-- PowerPoint 2016 и более поздний mac
+- PowerPoint 2013 и более поздней Windows
+- PowerPoint 2016 и более поздней основе на Mac
 - PowerPoint в Интернете
 - PowerPoint на iPad
 - Word 2013 и более поздней версии для Windows
@@ -34,12 +34,12 @@ ImageCoercion 1.1 позволяет преобразования в изобр�
 
 ## <a name="imagecoercion-12"></a>ImageCoercion 1.2
 
-ImageCoercion 1.2 позволяет преобразования в формат SVG () при записи данных `Office.CoercionType.XmlSvg` с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) метода. Поддерживаются следующие приложения:
+ImageCoercion 1.2 позволяет преобразования в формат SVG () при записи данных `Office.CoercionType.XmlSvg` с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) метода. Поддерживаются следующие приложения.
 
 - Excel на Windows (подключен к подписке Microsoft 365)
-- Excel на Mac (подключен к подписке Microsoft 365)
-- PowerPoint на Windows (подключена к подписке Microsoft 365)
-- PowerPoint на Mac (подключен к подписке Microsoft 365)
+- Excel Mac (подключен к подписке Microsoft 365)
+- PowerPoint на Windows (подключен к подписке Microsoft 365)
+- PowerPoint Mac (подключен к подписке Microsoft 365)
 - PowerPoint в Интернете
 - Word on Windows (подключен к подписке Microsoft 365)
 - Word на Mac (подключен к подписке Microsoft 365)

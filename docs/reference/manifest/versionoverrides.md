@@ -3,12 +3,12 @@ title: Элемент VersionOverrides в файле манифеста
 description: Справочная документация элемента VersionOverrides для Office файлов манифеста надстройок (XML).
 ms.date: 05/12/2021
 localization_priority: Normal
-ms.openlocfilehash: 0a70ded82b4603b1ac70698947a4710a4a44b5b6
-ms.sourcegitcommit: 693d364616b42eea66977eef47530adabc51a40f
+ms.openlocfilehash: 787ba8e7d90900cc72d6c5e9370d68ced0faee2f
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555152"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348659"
 ---
 # <a name="versionoverrides-element"></a>Элемент VersionOverrides
 
@@ -78,7 +78,7 @@ ms.locfileid: "52555152"
 
 Чтобы реализовать несколько версий, элемент `VersionOverrides` для новой версии должен зависеть от элемента `VersionOverrides` для старой версии. Дочерний элемент `VersionOverrides` не наследует значения от родительского объекта.
 
-Чтобы реализовать схему VersionOverrides версий 1.0 и 1.1, манифест должен выглядеть следующим образом:
+Чтобы реализовать схему VersionOverrides v1.0 и v1.1, манифест будет выглядеть аналогично следующему примеру.
 
 ```xml
 <OfficeApp ... xsi:type="MailApp">

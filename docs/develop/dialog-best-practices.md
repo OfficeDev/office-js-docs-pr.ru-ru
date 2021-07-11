@@ -3,12 +3,12 @@ title: Рекомендации и правила Office dialog API
 description: Предоставляет правила и лучшие практики для API Office диалогов, такие как лучшие практики для одно-страничного приложения (SPA)
 ms.date: 02/09/2021
 localization_priority: Normal
-ms.openlocfilehash: 3424e9802484f1f2626257cb3e7eb105596d8638
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 99129636cf722f98cef36c272f2e00e8a9321ccf
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076064"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349912"
 ---
 # <a name="best-practices-and-rules-for-the-office-dialog-api"></a>Рекомендации и правила Office dialog API
 
@@ -29,7 +29,7 @@ ms.locfileid: "53076064"
   - `Office.context.requirements.isSetSupported`(Дополнительные сведения см. в [Office приложениях и требованиях API.)](specify-office-hosts-and-api-requirements.md)
 - Функция [messageParent](/javascript/api/office/office.ui#messageparent-message-) может быть вызвана только со страницы в том же домене, что и сама надстройка.
 
-## <a name="best-practices"></a>Рекомендованные методики
+## <a name="best-practices"></a>Рекомендации
 
 ### <a name="avoid-overusing-dialog-boxes"></a>Избегайте чрезмерного окантовки диалогов
 
@@ -41,7 +41,7 @@ ms.locfileid: "53076064"
 
 ### <a name="handling-pop-up-blockers-with-office-on-the-web"></a>Обработка блокировщиков всплывающих окон с помощью Office в Интернете
 
-Попытка отобразить диалоговое окно при Office в Интернете может привести к блокировке блокатора всплывающих окна браузера. Office в Интернете имеет функцию, которая позволяет диалоговике надстройки быть исключением из блокатора всплывающее окно браузера. Когда код вызывает метод, Office в Интернете откроет запрос, аналогичный `displayDialogAsync` следующему.
+Попытка отобразить диалоговое окно при Office в Интернете может привести к блокировке блокатора всплывающих окна браузера. Office в Интернете имеет функцию, которая позволяет диалоговике надстройки быть исключением из блокатора всплывающее окно браузера. Когда код вызывает метод, Office в Интернете откроет запрос, аналогичный `displayDialogAsync` следующему:
 
 ![Снимок экрана, показывающий подсказку с кратким описанием и кнопками Разрешить и игнорировать, которые надстройка может создать, чтобы избежать блокаторов всплывающее окна в браузере.](../images/dialog-prompt-before-open.png)
 

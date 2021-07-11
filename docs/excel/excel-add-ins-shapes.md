@@ -3,12 +3,12 @@ title: Работа с фигурами с Excel API JavaScript
 description: Узнайте, Excel определяет фигуры как любой объект, который находится на уровне рисования Excel.
 ms.date: 01/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 936def11a5d597b68cc59a58b041c4f30ff46a38
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: eeb6a1f76c839e4b550662b28b717bfd1bcca4e8
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53075763"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349450"
 ---
 # <a name="work-with-shapes-using-the-excel-javascript-api"></a>Работа с фигурами с Excel API JavaScript
 
@@ -21,7 +21,7 @@ Excel определяет фигуры как любой объект, кото
 
 Формы создаются с помощью и хранятся в коллекции фигуры таблицы ( `Worksheet.shapes` ). `ShapeCollection` имеет несколько `.add*` методов для этой цели. Все фигуры имеют имена и ИД, созданные для них при добавлении в коллекцию. Это и `name` `id` свойства, соответственно. `name` может быть установлено вашей надстройки для легкого получения с помощью `ShapeCollection.getItem(name)` метода.
 
-Следующие типы фигур добавляются с помощью связанного метода:
+Следующие типы фигур добавляются с помощью связанного метода.
 
 | Shape | Добавление метода | Подпись |
 |-------|------------|-----------|

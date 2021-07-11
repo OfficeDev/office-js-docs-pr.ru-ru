@@ -3,12 +3,12 @@ title: Настраиваемые клавиши в Office надстройки
 description: Узнайте, как добавить в надстройку настраиваемые клавиши, также известные как комбинации ключей, Office надстройку.
 ms.date: 06/02/2021
 localization_priority: Normal
-ms.openlocfilehash: f550190aa6cc68824b97dc3b592e92db50adcaac
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: de8ce0d89dca6745cba96ac9a5ea946d50d41de4
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076317"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349259"
 ---
 # <a name="add-custom-keyboard-shortcuts-to-your-office-add-ins"></a>Добавление настраиваемого сочетания клавиш в Office надстройки
 
@@ -91,7 +91,7 @@ ms.locfileid: "53076317"
 ## <a name="create-a-mapping-of-actions-to-their-functions"></a>Создание сопоставления действий с их функциями
 
 1. В проекте откройте файл JavaScript, загруженный вашей htmL-страницей в `<FunctionFile>` элементе.
-1. В файле JavaScript [используйте API Office.actions.associate,](/javascript/api/office/office.actions#associate) чтобы соотнося каждое действие, указанное в файле JSON, с функцией JavaScript. Добавьте в файл следующий JavaScript. Обратите внимание на следующее:
+1. В файле JavaScript [используйте API Office.actions.associate,](/javascript/api/office/office.actions#associate) чтобы соотнося каждое действие, указанное в файле JSON, с функцией JavaScript. Добавьте в файл следующий JavaScript. Обратите внимание на следующее о коде.
 
     - Первый параметр — это одно из действий из файла JSON.
     - Второй параметр — это функция, которая выполняется при нажатии клавиши на сочетание ключей, относясь к действию в файле JSON.
@@ -137,7 +137,7 @@ ms.locfileid: "53076317"
 
 ### <a name="construct-the-action-objects"></a>Построение объектов действия
 
-Используйте следующие рекомендации при указании объектов в массиве `actions` shortcuts.js:
+Используйте следующие рекомендации при указании объектов в массиве `actions` shortcuts.js.
 
 - Имена свойств `id` и `name` обязательны.
 - Свойство `id` используется для уникальной идентификации действия, вызываемого с помощью ярлыка клавиатуры.
@@ -165,7 +165,7 @@ ms.locfileid: "53076317"
 
 ### <a name="construct-the-shortcut-objects"></a>Построение объектов ярлыка
 
-Используйте следующие рекомендации при указании объектов в массиве `shortcuts` shortcuts.js:
+Используйте следующие рекомендации при указании объектов в массиве `shortcuts` shortcuts.js.
 
 - Имена свойств `action` `key` и `default` обязательно.
 - Значение свойства является строкой и должно соответствовать одному из свойств `action` `id` объекта действия.

@@ -3,12 +3,12 @@ title: Используйте диалоговое окно "Office" для во
 description: Узнайте, как открыть и сыграть видео в диалоговом Office диалоговом окне
 ms.date: 01/29/2020
 localization_priority: Normal
-ms.openlocfilehash: bc69827164f2e5a2fed03239566ff814db0397b9
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 2519b2f105503a0479eee07d885a1543f5455343
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076071"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349884"
 ---
 # <a name="use-the-office-dialog-box-to-show-a-video"></a>Чтобы показать видео, Office диалоговое окно
 
@@ -19,7 +19,7 @@ ms.locfileid: "53076071"
 
 Чтобы играть видео в диалоговом окне с API Office диалоговом окне, выполните следующие действия:
 
-1. Создайте страницу, содержащую iframe и отсутствие другого контента. Страница должна быть в том же домене, что и хост-страница. Напоминая о том, что такое хост-страница, см. в странице Откройте диалоговое [окно с хост-страницы.](dialog-api-in-office-add-ins.md#open-a-dialog-box-from-a-host-page) В `src` атрибуте iframe указать URL-адрес онлайн-видео. URL-адрес видео должен быть защищен с помощью протокола HTTPS. В этой статье мы назовем эту страницу "video.dialogbox.html". Ниже приведен пример разметки:
+1. Создайте страницу, содержащую iframe и отсутствие другого контента. Страница должна быть в том же домене, что и хост-страница. Напоминая о том, что такое хост-страница, см. в странице Откройте диалоговое [окно с хост-страницы.](dialog-api-in-office-add-ins.md#open-a-dialog-box-from-a-host-page) В `src` атрибуте iframe указать URL-адрес онлайн-видео. URL-адрес видео должен быть защищен с помощью протокола HTTPS. В этой статье мы назовем эту страницу "video.dialogbox.html". Ниже приведен пример разметки.
 
     ```HTML
     <iframe class="ms-firstrun-video__player"  width="640" height="360"

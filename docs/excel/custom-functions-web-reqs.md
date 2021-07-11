@@ -3,16 +3,16 @@ ms.date: 03/15/2021
 description: Запрос, потоковая передача и отмена потоковой передачи внешних данных к книге с помощью пользовательских функций в Excel
 title: Получение и обработка данных с помощью пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: 61959387dc3475997581233bc220f20394e8f6fb
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 60f09b791b13d34a4a7f307bb9677c9fcc72ee97
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53075882"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349605"
 ---
 # <a name="receive-and-handle-data-with-custom-functions"></a>Получение и обработка данных с помощью пользовательских функций
 
-Один из способов, используемых пользовательскими функциями для повышения эффективности Excel, состоит в получении данных из расположений помимо книг, например из Интернета или сервера (через WebSockets). Можно запрашивать внешние данные с помощью такого API, как [`Fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), или с помощью `XmlHttpRequest` [(XHR)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который отправляет HTTP-запросы для взаимодействия с серверами.
+Один из способов, используемых пользовательскими функциями для повышения эффективности Excel, состоит в получении данных из расположений помимо книг, например из Интернета или сервера (через WebSockets). Можно запрашивать внешние данные с помощью такого API, как [`Fetch`](https://developer.mozilla.org/docs/Web/API/Fetch_API), или с помощью `XmlHttpRequest` [(XHR)](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest) — стандартного веб-API, который отправляет HTTP-запросы для взаимодействия с серверами.
 
 [!include[Excel custom functions note](../includes/excel-custom-functions-note.md)]
 
@@ -104,7 +104,7 @@ async function getStarCount(userName: string, repoName: string) {
 - `@streaming`Тег.
 - Параметр `CustomFunctions.StreamingInvocation` вызовов.
 
-Следующий пример кода — это пользовательская функция, которая добавляет число к результату каждую секунду. Обратите внимание на следующие особенности этого кода:
+Следующий пример кода — это пользовательская функция, которая добавляет число к результату каждую секунду. Обратите внимание на следующие аспекты этого кода.
 
 - Excel отображает каждое новое значение автоматически с помощью метода `setResult`.
 - Второй параметр ввода, вызов, не отображается для конечных пользователей в Excel, когда они выбирают функцию в меню "Автозаполнение".
@@ -133,7 +133,7 @@ function increment(incrementBy, invocation) {
 
 ## <a name="canceling-a-function"></a>Отмена функции
 
-Excel отменяет выполнение функций в следующих случаях:
+Excel отменяет выполнение функции в следующих ситуациях.
 
 - Когда пользователь редактирует или удаляет ячейку, ссылающуюся на функцию.
 - Когда изменяется один из аргументов (входных параметров) функции. В этом случае после отмены выполняется новый вызов функции.

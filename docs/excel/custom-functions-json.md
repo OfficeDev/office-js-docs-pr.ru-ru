@@ -3,12 +3,12 @@ ms.date: 12/22/2020
 description: Определите метаданные JSON для настраиваемой функции в Excel связывайте свой ID функции и свойства имен.
 title: Вручную создайте метаданные JSON для пользовательских функций в Excel
 localization_priority: Normal
-ms.openlocfilehash: 514eacba5045d160eb6f3d4823adbd8c2f45292a
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: c03238d46e8d861307ba0db3d03dafea81aeca51
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53075903"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349632"
 ---
 # <a name="manually-create-json-metadata-for-custom-functions"></a>Вручную создайте метаданные JSON для пользовательских функций
 
@@ -248,7 +248,7 @@ CustomFunctions.associate("ADD", add);
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/office-js/custom-functions.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/office-js/custom-functions.schema.json",
   "functions": [
     {
       "id": "ADD",

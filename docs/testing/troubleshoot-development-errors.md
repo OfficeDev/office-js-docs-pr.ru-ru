@@ -3,12 +3,12 @@ title: Устранение ошибок разработки с Office надс
 description: Узнайте, как устранить ошибки разработки в Office надстройки.
 ms.date: 06/11/2021
 localization_priority: Normal
-ms.openlocfilehash: 7fe52ff225a2e95147e2af045b40defb162522f7
-ms.sourcegitcommit: 4fa952f78be30d339ceda3bd957deb07056ca806
+ms.openlocfilehash: 8f0ceaf13041fa27c4e9e279646e979f132913b3
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2021
-ms.locfileid: "52961281"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349283"
 ---
 # <a name="troubleshoot-development-errors-with-office-add-ins"></a>Устранение ошибок разработки с Office надстройки
 
@@ -29,11 +29,12 @@ ms.locfileid: "52961281"
 [!include[additional cache folders on Mac](../includes/mac-cache-folders.md)]
 
 #### <a name="for-ios"></a>Для iOS
+
 Для принудительной перезагрузки вызовите метод JavaScript `window.location.reload(true)` в надстройке. Вы также можете переустановить Office.
 
 ## <a name="changes-to-static-files-such-as-javascript-html-and-css-do-not-take-effect"></a>Изменения статических файлов, таких как JavaScript, HTML и CSS, не отображаются.
 
-Браузер может кэшировать эти файлы. Чтобы избежать этого, отключите кэширование на стороне клиента при разработке. Сведения будут зависеть от того, какой тип сервера вы используете. В большинстве случаев необходимо добавить определенные заголовки в HTTP-ответы. Мы предлагаем следующий набор заголовков:
+Браузер может кэшировать эти файлы. Чтобы избежать этого, отключите кэширование на стороне клиента при разработке. Сведения будут зависеть от того, какой тип сервера вы используете. В большинстве случаев необходимо добавить определенные заголовки в HTTP-ответы. Предлагаем следующий набор.
 
 - Cache-Control: "private, no-cache, no-store"
 - Pragma: "No-cache"

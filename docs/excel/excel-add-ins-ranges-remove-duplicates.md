@@ -4,12 +4,12 @@ description: Узнайте, как использовать API Excel JavaScrip
 ms.date: 04/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 859214d36bdf66a284304ba1d5f7f2d642b718cb
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: e3c1ddf45f50e87ccc77044b1425e6f021756f60
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53075770"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349485"
 ---
 # <a name="remove-duplicates-using-the-excel-javascript-api"></a>Удаление дубликатов с Excel API JavaScript
 
@@ -21,7 +21,7 @@ ms.locfileid: "53075770"
 
 Функция `removeDuplicates` использует параметр `number[]`, представляющий индексы столбцов, которые проверяются на наличие дубликатов. Этот массив отсчитывается от нуля относительно диапазона, а не листа. Метод также принимает параметр boolean, который указывает, является ли первая строка загонщиком. При значении **true** верхняя строка игнорируется при поиске дубликатов. Метод возвращает объект, который указывает количество удаленных строк и количество `removeDuplicates` `RemoveDuplicatesResult` оставшихся уникальных строк.
 
-При использовании метода диапазона имейте в виду `removeDuplicates` следующее:
+При использовании метода диапазона имейте в виду `removeDuplicates` следующее.
 
 - Функция `removeDuplicates` рассматривает значения ячеек, а не результаты функций. Если две разные функции вычисляют одинаковый результат, значения ячеек не считаются повторяющимися.
 - Пустые ячейки не игнорируются функцией `removeDuplicates`. Значение пустой ячейки обрабатывается как любое другое значение. Это означает, что пустые строки, содержащиеся в диапазоне, будут включены в объект `RemoveDuplicatesResult`.

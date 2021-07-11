@@ -1,14 +1,14 @@
 ---
-title: Извлечение строк сущности из элемента Outlook
+title: Извлечение строк сущностей из элемента Outlook
 description: Узнайте, как извлечь строки сущностей из элемента Outlook в надстройке Outlook.
 ms.date: 10/31/2019
 localization_priority: Normal
-ms.openlocfilehash: b15ad23427f79a333ae8ae9d342acdf28e6d010c
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 987ba7626acb95bd5090e2f2350f71ecc8701e59
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608945"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348974"
 ---
 # <a name="extract-entity-strings-from-an-outlook-item"></a>Извлечение строк сущностей из элемента Outlook
 
@@ -205,7 +205,7 @@ div#meeting_suggestions
 
 ## <a name="extracting-entities-upon-initialization"></a>Извлечение сущностей при инициализации
 
-Когда происходит событие [Office.initialize](/javascript/api/office#office-initialize-reason-), надстройка для работы с сущностями вызывает метод [getEntities](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods) текущего элемента. `getEntities`Метод возвращает глобальную переменную в `_MyEntities` виде массива экземпляров поддерживаемых сущностей. Ниже представлен соответствующий код JavaScript.
+Когда происходит событие [Office.initialize](/javascript/api/office#office-initialize-reason-), надстройка для работы с сущностями вызывает метод [getEntities](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods) текущего элемента. Метод `getEntities` возвращает глобальной переменной `_MyEntities` массив экземпляров поддерживаемых сущностями. Ниже представлен соответствующий код JavaScript.
 
 
 ```js
@@ -258,10 +258,10 @@ function myGetAddresses()
 ## <a name="extracting-contact-information"></a>Извлечение контактных данных
 
 
-Когда пользователь нажимает кнопку **Get Contact Information** (Получить контактные данные), обработчик событий `myGetContacts` получает массив контактов вместе с соответствующими сведениями из свойства [contacts](/javascript/api/outlook/office.entities#contacts) объекта `_MyEntities` (если был извлечен хотя бы один контакт). Каждый извлеченный контакт сохраняется в качестве объекта [Contact](/javascript/api/outlook/office.contact) в массиве. Обработчик событий `myGetContacts` получает дополнительные данные о каждом контакте. Обратите внимание на то, что контекст определяет, может ли Outlook извлекать контакт из элемента (подпись в конце электронного сообщения) или же в непосредственной близости от контакта должны присутствовать какие-либо из указанных ниже данных.
+Когда пользователь нажимает кнопку **Получить** контактные сведения, обработник событий получает массив контактов вместе с их сведениями из свойства контактов объекта, если таково было `myGetContacts` [](/javascript/api/outlook/office.entities#contacts) `_MyEntities` извлечено. Каждый извлеченный контакт хранится в виде объекта [Contact](/javascript/api/outlook/office.contact) в массиве. Обработчик событий `myGetContacts` получает дополнительные данные о каждом контакте. Обратите внимание, что контекст определяет, может ли Outlook извлечения контакта из элемента подпись в конце сообщения электронной почты, или хотя бы некоторые из следующих сведений должны существовать в непосредственной близости от &mdash; контакта.
 
 
-- Строка, представляющая имя контакта из свойства [Contact.personName](/javascript/api/outlook/office.contact#personname).
+- Имя контакта из свойства [Contact.personName](/javascript/api/outlook/office.contact#personname).
 
 - Название компании, связанное с контактом, из свойства [Contact.businessName](/javascript/api/outlook/office.contact#businessname).
 
@@ -373,7 +373,7 @@ function myGetEmailAddresses() {
 
 
  > [!NOTE]
- > Тип объекта поддерживается только сообщениями, но не встречами `MeetingSuggestion` .
+ > Только сообщения, но не встречи поддерживают `MeetingSuggestion` тип сущности.
 
 Каждое извлеченное приглашение на собрание хранится в виде объекта [MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion) в массиве. Обработчик событий `myGetMeetingSuggestions` получает дополнительные данные о каждом приглашении на собрание:
 

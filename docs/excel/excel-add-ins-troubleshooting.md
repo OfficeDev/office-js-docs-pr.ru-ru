@@ -1,26 +1,26 @@
 ---
-title: Устранение неполадок надстройки Excel
-description: Узнайте, как устранять ошибки разработки в надстройки Excel.
+title: Устранение Excel надстройки
+description: Узнайте, как устранить ошибки разработки в Excel надстройки.
 ms.date: 02/12/2021
 localization_priority: Normal
-ms.openlocfilehash: 0efc8b4d25d9d748975146e187104972e4ad58a9
-ms.sourcegitcommit: 1cdf5728102424a46998e1527508b4e7f9f74a4c
+ms.openlocfilehash: cb622a1805be7bec61168ab37a41709a57075788
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "50270730"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349443"
 ---
-# <a name="troubleshooting-excel-add-ins"></a>Устранение неполадок надстройки Excel
+# <a name="troubleshooting-excel-add-ins"></a>Устранение Excel надстройки
 
-В этой статье обсуждается устранение неполадок, уникальных для Excel. Используйте средство обратной связи в нижней части страницы, чтобы предложить другие проблемы, которые можно добавить в статью.
+В этой статье обсуждаются проблемы устранения неполадок, которые уникальны для Excel. Используйте средство обратной связи в нижней части страницы, чтобы предложить другие проблемы, которые можно добавить в статью.
 
-## <a name="api-limitations-when-the-active-workbook-switches"></a>Ограничения API при переключении активной книги
+## <a name="api-limitations-when-the-active-workbook-switches"></a>Ограничения API при активных переключателях книг
 
-Надстройки для Excel предназначены для одновременной работы с одной книгой. Ошибки могут возникать, когда книга, отделенная от книги, на которую запущена надстройка, получает фокус. Это происходит только в том случае, если конкретные методы находятся в процессе, когда фокус изменяется.
+Надстройки для Excel предназначены для работы с одной книгой одновременно. Ошибки могут возникать, когда книга, которая отделена от книги, которая работает надстройка получает фокус. Это происходит только в том случае, если конкретные методы находятся в процессе призыва при смене фокуса.
 
-Этот переключатель книги влияет на следующие API::
+На следующие API влияет этот переключатель книги.
 
-|API JavaScript для Excel | Ошибка |
+|API JavaScript для Excel | Ошибка, брошенная |
 |--|--|
 | `Chart.activate` | GeneralException |
 | `Range.select` | GeneralException |
@@ -40,19 +40,19 @@ ms.locfileid: "50270730"
 | `WorksheetFreezePanes.unfreeze` | GeneralException |
 
 > [!NOTE]
-> Это относится только к нескольким книгам Excel, открытым в Windows или Mac.
+> Это касается только нескольких Excel книг, открытых на Windows или Mac.
 
 ## <a name="coauthoring"></a>Совместное редактирование
 
-Шаблоны для использования с событиями в среде совместной работы см. в надстройках [Excel.](co-authoring-in-excel-add-ins.md) В этой статье также обсуждаются потенциальные конфликты слияния при использовании определенных API, например [`TableRowCollection.add`](/javascript/api/excel/excel.tablerowcollection#add-index--values-) .
+См. [в](co-authoring-in-excel-add-ins.md) Excel надстройки для шаблонов, которые можно использовать с событиями в среде совместной работы. В статье также обсуждаются потенциальные конфликты слияния при использовании определенных API, например [`TableRowCollection.add`](/javascript/api/excel/excel.tablerowcollection#add-index--values-) .
 
 ## <a name="known-issues"></a>Известные проблемы
 
-### <a name="binding-events-return-temporary-binding-obects"></a>События привязки возвращают `Binding` временные обтекания
+### <a name="binding-events-return-temporary-binding-obects"></a>События привязки возвращают `Binding` временные obects
 
-[BindingDataChangedEventArgs.binding](/javascript/api/excel/excel.bindingdatachangedeventargs#binding) и [BindingSelectionChangedEventArgs.binding](/javascript/api/excel/excel.bindingselectionchangedeventargs#binding) возвращают временный объект, содержащий ИД объекта, который вызывает `Binding` `Binding` событие. Используйте этот ИД для `BindingCollection.getItem(id)` получения `Binding` объекта, который вызывает событие.
+Оба [bindingDataChangedEventArgs.binding](/javascript/api/excel/excel.bindingdatachangedeventargs#binding) и [BindingSelectionChangedEventArgs.binding](/javascript/api/excel/excel.bindingselectionchangedeventargs#binding) возвращают временный объект, содержащий ID объекта, который поднял `Binding` `Binding` событие. Используйте этот ID для `BindingCollection.getItem(id)` получения `Binding` объекта, который поднял событие.
 
-В следующем примере кода показано, как использовать этот временный ИД привязки для получения связанного `Binding` объекта. В примере прослушиватель событий назначен привязке. Прослушиватель вызывает метод `getBindingId` при `onDataChanged` запуске события. Метод использует ИД временного объекта для извлечения объекта, который `getBindingId` `Binding` вызывает `Binding` событие.
+В следующем примере кода показано, как использовать этот временный код привязки для получения связанного `Binding` объекта. В примере слушателю событий назначена привязка. При запуске события слушатель вызывает `getBindingId` `onDataChanged` метод. Метод использует ID временного объекта для получения объекта, `getBindingId` `Binding` который поднял `Binding` событие.
 
 ```js
 Excel.run(function (context) {
@@ -82,21 +82,21 @@ function getBindingId(eventArgs) {
 }
 ```
 
-### <a name="cell-format-usestandardheight-and-usestandardwidth-issues"></a>Формат и `useStandardHeight` `useStandardWidth` проблемы в ячейках
+### <a name="cell-format-usestandardheight-and-usestandardwidth-issues"></a>Формат `useStandardHeight` ячейки `useStandardWidth` и проблемы
 
-Свойство [useStandardHeight](/javascript/api/excel/excel.cellpropertiesformat#useStandardHeight) не работает должным образом `CellPropertiesFormat` в Excel в Интернете. Из-за проблемы в пользовательском интерфейсе Excel в Интернете установка свойства для некорректного вычисления высоты `useStandardHeight` `true` на этой платформе. Например, стандартная высота **14** в Excel в Интернете изменена на **14,25.**
+Свойство [useStandardHeight](/javascript/api/excel/excel.cellpropertiesformat#useStandardHeight) не работает должным образом `CellPropertiesFormat` в Excel в Интернете. Из-за проблемы в пользовательском интерфейсе Excel в Интернете, задав свойство для нечетких расчетов высоты `useStandardHeight` `true` на этой платформе. Например, стандартная высота **14** изменена до **14,25** в Excel в Интернете.
 
-На всех платформах свойства [useStandardHeight](/javascript/api/excel/excel.cellpropertiesformat#useStandardHeight) и [useStandardWidth](/javascript/api/excel/excel.cellpropertiesformat#useStandardWidth) предназначены только для `CellPropertiesFormat` `true` этого. Установка этих свойств не `false` оказывает влияния. 
+На всех платформах свойства [useStandardHeight](/javascript/api/excel/excel.cellpropertiesformat#useStandardHeight) и [UseStandardWidth](/javascript/api/excel/excel.cellpropertiesformat#useStandardWidth) предназначены только для `CellPropertiesFormat` `true` . Настройка этих свойств не `false` влияет. 
 
-### <a name="range-getimage-method-unsupported-on-excel-for-mac"></a>Метод Range `getImage` неподтверчен в Excel для Mac
+### <a name="range-getimage-method-unsupported-on-excel-for-mac"></a>Метод `getImage` Range, неподтвердимый Excel для Mac
 
-Метод Range [getImage](/javascript/api/excel/excel.range#getImage__) в настоящее время не поддерживается в Excel для Mac. Текущее состояние см. в #235 [officeDev/office-js Issue.](https://github.com/OfficeDev/office-js/issues/235)
+Метод [Range getImage](/javascript/api/excel/excel.range#getImage__) в настоящее время не поддерживается в Excel для Mac. См. [в #235 OfficeDev/office-js](https://github.com/OfficeDev/office-js/issues/235) Issue для текущего состояния.
 
-### <a name="range-return-character-limit"></a>Ограничение возвращаемого диапазона символов
+### <a name="range-return-character-limit"></a>Ограничение возвращаемого символа диапазона
 
-Для [методов Worksheet.getRange(address)](/javascript/api/excel/excel.worksheet#getRange_address_) и [Worksheet.getRanges(address)](/javascript/api/excel/excel.worksheet#getRanges_address_) ограничение строк адресов составляет 8192 символа. При превышении этого ограничения строка адреса усечена до 8192 символов.
+Методы [Worksheet.getRange(address)](/javascript/api/excel/excel.worksheet#getRange_address_) и [Worksheet.getRanges(address)](/javascript/api/excel/excel.worksheet#getRanges_address_) имеют ограничение строки адресов в 8192 символа. При превышении этого ограничения строка адресов будет усечена до 8192 символов.
 
 ## <a name="see-also"></a>См. также
 
-- [Устранение ошибок разработки с помощью надстройки Office](../testing/troubleshoot-development-errors.md)
+- [Устранение ошибок разработки с Office надстройки](../testing/troubleshoot-development-errors.md)
 - [Устранение ошибок, с которыми сталкиваются пользователи при работе с надстройками Office](../testing/testing-and-troubleshooting.md)

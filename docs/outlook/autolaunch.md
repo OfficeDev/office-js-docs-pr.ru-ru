@@ -2,14 +2,14 @@
 title: Настройка надстройки Outlook для активации на основе событий
 description: Узнайте, как настроить Outlook надстройку для активации на основе событий.
 ms.topic: article
-ms.date: 06/08/2021
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 07790ee84693596f4873bc04d53c1e76c3825b4d
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: ff1dc8da523d752d616981a570b4c83d9f1a423d
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076793"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349016"
 ---
 # <a name="configure-your-outlook-add-in-for-event-based-activation"></a>Настройка надстройки Outlook для активации на основе событий
 
@@ -28,13 +28,13 @@ ms.locfileid: "53076793"
 |---|---|---|
 |`OnNewMessageCompose`|При составлении нового сообщения (включает ответ, ответ все и вперед), но не при редактировании, например, черновика.|1.10|
 |`OnNewAppointmentOrganizer`|О создании новой встречи, но не о редактировании существующего.|1.10|
-|`OnMessageAttachmentsChanged`|При добавлении или удалении вложений при сочинении сообщения.|Предварительный просмотр|
-|`OnAppointmentAttachmentsChanged`|При добавлении или удалении вложений при записи на прием.|Предварительный просмотр|
-|`OnMessageRecipientsChanged`|При добавлении или удалении получателей при сочинении сообщения.|Предварительный просмотр|
-|`OnAppointmentAttendeesChanged`|При добавлении или удалении участников при записи на прием.|Предварительный просмотр|
-|`OnAppointmentTimeChanged`|При изменении даты и времени при записи на прием.|Предварительный просмотр|
-|`OnAppointmentRecurrenceChanged`|При добавлении, изменении или удалении сведений о повторении при записи на прием. Если дата и время изменены, `OnAppointmentTimeChanged` событие также будет уволено.|Предварительный просмотр|
-|`OnInfoBarDismissClicked`|При отклонении уведомления при записи сообщения или элемента встречи. Уведомления будут получать только надстройка, которая добавила уведомление.|Предварительный просмотр|
+|`OnMessageAttachmentsChanged`|При добавлении или удалении вложений при сочинении сообщения.|Предварительная версия|
+|`OnAppointmentAttachmentsChanged`|При добавлении или удалении вложений при записи на прием.|Предварительная версия|
+|`OnMessageRecipientsChanged`|При добавлении или удалении получателей при сочинении сообщения.|Предварительная версия|
+|`OnAppointmentAttendeesChanged`|При добавлении или удалении участников при записи на прием.|Предварительная версия|
+|`OnAppointmentTimeChanged`|При изменении даты и времени при записи на прием.|Предварительная версия|
+|`OnAppointmentRecurrenceChanged`|При добавлении, изменении или удалении сведений о повторении при записи на прием. Если дата и время изменены, `OnAppointmentTimeChanged` событие также будет уволено.|Предварительная версия|
+|`OnInfoBarDismissClicked`|При отклонении уведомления при записи сообщения или элемента встречи. Уведомления будут получать только надстройка, которая добавила уведомление.|Предварительная версия|
 
 > [!IMPORTANT]
 > События, которые по-прежнему находятся в предварительном просмотре, доступны только с Microsoft 365 подпиской в Outlook в Интернете и Windows. Дополнительные сведения см. [в статье How to preview](#how-to-preview) in this article. События предварительного просмотра не следует использовать в производственных надстройках.
@@ -294,7 +294,7 @@ AppSource и inclient stores: возможность развертывания 
 
 Импорт не поддерживается в файле JavaScript, где выполняется обработка активации на основе событий в Windows клиенте.
 
-Некоторые Office.js API, которые изменяют или изменяют пользовательский интерфейс, не допускаются из надстройок на основе событий. Следующие API заблокированы:
+Некоторые Office.js API, которые изменяют или изменяют пользовательский интерфейс, не допускаются из надстройок на основе событий. Ниже заблокировали API.
 
 - В `OfficeRuntime.auth` статье:
   - `getAccessToken`(Windows только)
@@ -316,4 +316,6 @@ AppSource и inclient stores: возможность развертывания 
 
 - [Манифесты надстроек Outlook](manifests.md)
 - [Отламывка надстроек на основе событий](debug-autolaunch.md)
-- Пример PnP: Outlook активации на основе событий [для набора подписи](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/outlook-set-signature)
+- Примеры PnP:
+  - [Для Outlook для набора подписи используйте активацию на основе событий](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/outlook-set-signature)
+  - [Использование Outlook активации на основе событий для тегов внешних получателей](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/outlook-tag-external)

@@ -3,12 +3,12 @@ title: Отладка надстройки с помощью журнала ср
 description: Узнайте, как использовать журнал среды выполнения для отладки надстройки.
 ms.date: 09/23/2020
 localization_priority: Normal
-ms.openlocfilehash: 3e9a78e6a2f82eca612712f54ac8a700e6d02701
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 6fcd1dd077dd6b3204d154e35e4c968ba9585a54
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076415"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348645"
 ---
 # <a name="debug-your-add-in-with-runtime-logging"></a>Отладка надстройки с помощью журнала среды выполнения
 
@@ -84,14 +84,14 @@ ms.locfileid: "53076415"
 
     `<bundle id>` указывает, для какого узла требуется включить ведение журнала в среде выполнения. `<file_name>` — это имя текстового файла, в который будет записан журнал.
 
-    Установите одно из следующих значений, чтобы включить журнал времени работы `<bundle id>` для соответствующего приложения:
+    Установите одно из следующих значений, чтобы включить ведение журнала времени для `<bundle id>` соответствующего приложения.
 
     - `com.microsoft.Word`
     - `com.microsoft.Excel`
     - `com.microsoft.Powerpoint`
     - `com.microsoft.Outlook`
 
-В следующем примере включается ведение журнала в среде выполнения в Word, а затем открывается файл журнала:
+В следующем примере включается ведение журнала для Word, а затем открывается файл журнала.
 
 ```command&nbsp;line
 defaults write com.microsoft.Word CEFRuntimeLoggingFile -string "runtime_logs.txt"
@@ -107,7 +107,7 @@ open ~/library/Containers/com.microsoft.Word/Data/runtime_logs.txt
 defaults delete <bundle id> CEFRuntimeLoggingFile
 ```
 
-В следующем примере отключается ведение журнала в среде выполнения для Word.
+В следующем примере отключается ведение журнала для Word.
 
 ```command&nbsp;line
 defaults delete com.microsoft.Word CEFRuntimeLoggingFile

@@ -3,12 +3,12 @@ title: Отладка надстроек Office в Visual Studio
 description: Используйте Visual Studio для отладки надстроек Office в настольном клиенте Office для Windows
 ms.date: 12/31/2019
 localization_priority: Normal
-ms.openlocfilehash: d325c25e6a9fe219334a6e2503718603f9e85c9c
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 2b260ab83c513419cb32bbe3f02900e3fc4f4b41
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076527"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349940"
 ---
 # <a name="debug-office-add-ins-in-visual-studio"></a>Отладка надстроек Office в Visual Studio
 
@@ -98,7 +98,7 @@ ms.locfileid: "53076527"
 > [!NOTE]
 > При запуске проекта надстройки Outlook вам будет предложено ввести учетные данные для входа. Если вам будет предложено войти повторно или если вы получили несанкционированную ошибку, базовый auth может быть отключен для учетных записей Microsoft 365 клиента. В этом случае попробуйте использовать учетную запись Майкрософт. Кроме того, может потребоваться задать в диалоговом окне свойств проекта веб-надстройки Outlook для свойства "Использовать многофакторную проверку подлинности" значение "True".
 
-Когда Visual Studio выполняет сборку проекта, происходит выполнение следующих действий:
+Когда Visual Studio проект, он выполняет следующие задачи.
 
 1. Создает копию XML-файл манифеста и добавляет ее в каталоге `_ProjectName_\bin\Debug\OfficeAppManifests`. Приложение Office, в котором размещена ваша надстройка, потребляет эту копию при Visual Studio и отлаговка надстройки.
 

@@ -3,12 +3,12 @@ title: Элемент Host в файле манифеста
 description: Определяет тип приложения Office, в котором следует активировать надстройку.
 ms.date: 11/05/2019
 localization_priority: Normal
-ms.openlocfilehash: 5b6c6e6b5471b4117c28cf92e11eb0a99b512a97
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 45d4ed42946038699be235ff3912c071a92ff226
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292288"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348330"
 ---
 # <a name="host-element"></a>Элемент Host
 
@@ -25,11 +25,11 @@ ms.locfileid: "47292288"
 
 | Атрибут     | Тип   | Обязательный | Описание                                      |
 |:--------------|:-------|:---------|:-------------------------------------------------|
-| [Name](#name) | string | Обязательный | Имя типа клиентского приложения Office. |
+| [Name](#name) | string | Обязательный | Имя типа Office клиентского приложения. |
 
 ### <a name="name"></a>Имя
 
-Определяет тип ведущего приложения, для которого предназначена эта надстройка. Значение должно быть одним из следующих.
+Определяет тип ведущего приложения, для которого предназначена эта надстройка. Поддерживаются такие значения:
 
 - `Document` (Word)
 - `Database` (Access)
@@ -59,19 +59,19 @@ ms.locfileid: "47292288"
 
 |  Атрибут  |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
-|  [xsi:type](#xsitype)  |  Да  | Описывает приложение Office, к которому применяются эти параметры.|
+|  [xsi:type](#xsitype)  |  Да  | Описывает приложение Office, в котором применяются эти параметры.|
 
 ### <a name="child-elements"></a>Дочерние элементы
 
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
 |  [DesktopFormFactor](desktopformfactor.md)    |  Да   |  Определяет параметры классического форм-фактора. |
-|  [MobileFormFactor](mobileformfactor.md)    |  Нет   |  Определяет параметры для мобильного конструктивного параметра. **Примечание:** Этот элемент поддерживается только в Outlook на iOS и Android. |
+|  [MobileFormFactor](mobileformfactor.md)    |  Нет   |  Определяет параметры мобильного форм-фактора. **Примечание:** Этот элемент поддерживается только в Outlook iOS и Android. |
 |  [AllFormFactors](allformfactors.md)    |  Нет   |  Определяет параметры всех форм-факторов. Используется только пользовательскими функциями в Excel. |
 
 ### <a name="xsitype"></a>xsi:type
 
-Управляет приложением Office (Word, Excel, PowerPoint, Outlook, OneNote), к которому применяются вложенные параметры. Поддерживаются такие значения:
+Элементы управления Office приложения (Word, Excel, PowerPoint, Outlook, OneNote), где применяются содержащиеся параметры. Поддерживаются такие значения:
 
 - `Document` (Word)
 - `MailHost` (Outlook)

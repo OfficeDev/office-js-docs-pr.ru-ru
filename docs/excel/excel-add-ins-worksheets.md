@@ -3,12 +3,12 @@ title: Работа с листами с использованием API JavaSc
 description: Примеры кода, которые показывают, как выполнять общие задачи с помощью таблиц с Excel API JavaScript.
 ms.date: 07/02/2021
 localization_priority: Normal
-ms.openlocfilehash: 0923bfe4b0880b572c4df6d0b8ed360ca46cee76
-ms.sourcegitcommit: aa73ec6367eaf74399fbf8d6b7776d77895e9982
+ms.openlocfilehash: a8a7da6ce01f8c0cc82c8ab9c764b032027f585c
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2021
-ms.locfileid: "53290735"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349415"
 ---
 # <a name="work-with-worksheets-using-the-excel-javascript-api"></a>Работа с листами с использованием API JavaScript для Excel
 
@@ -374,11 +374,11 @@ function formulaChangeHandler(event) {
 
 ![Таблица данных в Excel перед сортировкой.](../images/excel-sort-event-before.png)
 
-Если выполнить сортировку сверху вниз для "**Q1**&quot; (значения в &quot;**B**"), `WorksheetRowSortedEventArgs.address` возвращает следующие выделенные строки:
+Если в **"Q1&quot;** выполняется сортировка сверху вниз (значения в **&quot;B"),** возвращаются следующие выделенные строки `WorksheetRowSortedEventArgs.address` .
 
 ![Данные из таблицы в Excel после сортировки сверху вниз. Выделены перемещенные строки.](../images/excel-sort-event-after-row.png)
 
-Если выполнить сортировку слева направо для "**Quinces**&quot; (значения в &quot;**4**") в исходных данных, `WorksheetColumnsSortedEventArgs.address` возвращает следующие выделенные столбцы:
+Если выполняется сортировка слева направо на **"Quinces&quot;**(значения в **&quot;4")** на исходных данных, следующие столбцы с выделением возвращаются путем `WorksheetColumnsSortedEventArgs.address` .
 
 ![Данные из таблицы в Excel после сортировки слева направо. Выделены перемещенные столбцы.](../images/excel-sort-event-after-column.png)
 
@@ -435,7 +435,7 @@ Excel.run(function (context) {
 
 ## <a name="filter-data"></a>Фильтрация данных
 
-Объект [AutoFilter](/javascript/api/excel/excel.autofilter) применяет фильтры данных в диапазоне на листе. Он создается с помощью метода `Worksheet.autoFilter.apply`, содержащего следующие параметры:
+Объект [AutoFilter](/javascript/api/excel/excel.autofilter) применяет фильтры данных в диапазоне на листе. Это создается с `Worksheet.autoFilter.apply` помощью следующих параметров.
 
 - `range`: диапазон, к которому применяется фильтр, указанный в виде объекта `Range` или строки.
 - `columnIndex`: отсчитываемый от нуля индекс столбца, по которому оценивается условие фильтра.

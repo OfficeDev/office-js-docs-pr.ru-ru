@@ -3,12 +3,12 @@ title: Сравнение Outlook поддержки надстройки в Out
 description: Узнайте, как поддержка надстройки в Outlook Mac сравнивает с другими Outlook клиентами.
 ms.date: 07/01/2021
 localization_priority: Normal
-ms.openlocfilehash: c9cd1e8d438ba820e588a26c6a78ac6e70bc89c8
-ms.sourcegitcommit: d01d6db7050ac2dfc6d4135e1fd1974137f7a6f7
+ms.openlocfilehash: f6d7b7758e89978b5a2dc8fc98783babf250c3f6
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53275583"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348995"
 ---
 # <a name="compare-outlook-add-in-support-in-outlook-on-mac-with-other-outlook-clients"></a>Сравните Outlook поддержки надстройки в Outlook Mac с другими Outlook клиентами
 
@@ -27,7 +27,7 @@ ms.locfileid: "53275583"
 | Настраиваемые свойства элемента | Если сеть выходит из строя, надстройка все еще может получить доступ к кэшированным настраиваемым свойствам. | Поскольку Outlook Mac не кэшет настраиваемые свойства, если сеть сойтется, надстройки не смогут получить к ним доступ. |
 | Сведения о вложениях | Тип контента и имена вложений в [объекте AttachmentDetails](/javascript/api/outlook/office.attachmentdetails) зависят от типа клиента:<ul><li>Пример `AttachmentDetails.contentType` в формате JSON: `"contentType": "image/x-png"`. </li><li>`AttachmentDetails.name` не содержит расширение файла. Например, если вложение является сообщением с темой "RE: Планы на лето", то объект JSON, представляющий имя этого вложения, будет иметь вид `"name": "RE: Summer activity"`.</li></ul> | <ul><li>Пример `AttachmentDetails.contentType` в формате JSON: `"contentType" "image/png"`</li><li>`AttachmentDetails.name` всегда включает расширение имени файла. Вложения, являющиеся почтовыми элементами, имеют расширение EML, а встречи — расширение ICS. Например, если вложение — сообщение с темой "RE: Планы на лето", имя вложения будет представлено следующим объектом JSON: `"name": "RE: Summer activity.eml"`.<p>**Примечание.** Если файл вложен программным образом (например, с помощью надстройки) без расширения, то имя файла в свойстве `AttachmentDetails.name` не будет включать расширение.</p></li></ul> |
 | Строка, представляющая часовой пояс в свойствах `dateTimeCreated` и `dateTimeModified` |Пример: `Thu Mar 13 2014 14:09:11 GMT+0800 (China Standard Time)` | Пример: `Thu Mar 13 2014 14:09:11 GMT+0800 (CST)` |
-| Точность времени в свойствах `dateTimeCreated` и `dateTimeModified` | Если в надстройке используется приведенный ниже код, то обеспечивается точность до миллисекунд:<br/>`JSON.stringify(Office.context.mailbox.item, null, 4);`| Точность только до секунд. |
+| Точность времени в свойствах `dateTimeCreated` и `dateTimeModified` | Если надстройка использует приведенный ниже код, то обеспечивается точность до миллисекунд.<br/>`JSON.stringify(Office.context.mailbox.item, null, 4);`| Точность только до секунд. |
 
 ## <a name="add-in-support-in-outlook-on-new-mac-ui-preview"></a>Поддержка надстройки в Outlook в новом пользовательском интерфейсе Mac (предварительный просмотр)
 

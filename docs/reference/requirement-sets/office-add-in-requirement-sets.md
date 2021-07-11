@@ -4,19 +4,19 @@ description: Дополнительные дополнительные Office о
 ms.date: 04/28/2021
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 959f03bf41496c1506087c2851efad336cdec676
-ms.sourcegitcommit: 8fbc7c7eb47875bf022e402b13858695a8536ec5
+ms.openlocfilehash: 4ebf00ef0be4007f6cb29fdf049f9df2152ac626
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52253349"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53350206"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
 Наборы обязательных элементов — именованные группы элементов API. Надстройки Office с помощью наборов обязательных элементов, указанных в манифесте, или проверки в среде выполнения определяют, поддерживает ли приложение Office необходимые API. Дополнительные сведения см. в статье [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md).
 
 > [!TIP]
-> Ищете *наборы требований* для API, определенных для приложений? см. ниже.
+> Ищете *наборы требований* для API, определенных для приложений? См. следующие наборы требований API.
 >
 > - [Наборы обязательных элементов API JavaScript для Excel](excel-api-requirement-sets.md) (ExcelApi)
 > - [Наборы обязательных элементов API JavaScript для Word](word-api-requirement-sets.md) (WordApi)
@@ -88,7 +88,7 @@ ms.locfileid: "52253349"
 
 ---
 
-### <a name="file"></a>File
+### <a name="file"></a>Файл
 
 |**Приложения Office**|**Методы в наборе**|
 |:-----|:-----|
@@ -184,7 +184,7 @@ ms.locfileid: "52253349"
 
 ---
 
-### <a name="selection"></a>Selection
+### <a name="selection"></a>Выбор
 
 |**Приложения Office**|**Методы в наборе**|
 |:-----|:-----|
@@ -192,7 +192,7 @@ ms.locfileid: "52253349"
 
 ---
 
-### <a name="settings"></a>Settings
+### <a name="settings"></a>Параметры
 
 |**Приложения Office**|**Методы в наборе**|
 |:-----|:-----|

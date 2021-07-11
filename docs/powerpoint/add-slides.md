@@ -3,12 +3,12 @@ title: Добавление и удаление слайдов в PowerPoint
 description: Узнайте, как добавлять и удалять слайды и указать мастер и макет новых слайдов.
 ms.date: 06/02/2021
 localization_priority: Normal
-ms.openlocfilehash: 9a8613997fc52ad6a30576b38c517a9c992f0e1b
-ms.sourcegitcommit: ba4fb7087b9841d38bb46a99a63e88df49514a4d
+ms.openlocfilehash: fd1f3c805483050776cc5b71c9e7a9fb61610b07
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "52779336"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348414"
 ---
 # <a name="add-and-delete-slides-in-powerpoint"></a>Добавление и удаление слайдов в PowerPoint
 
@@ -37,7 +37,7 @@ async function addSlide() {
 
 ### <a name="selecting-which-slide-master-and-layout-to-use"></a>Выбор мастера слайдов и макета для использования
 
-Используйте параметр [AddSlideOptions,](/javascript/api/powerpoint/powerpoint.addslideoptions) чтобы контролировать, какой мастер слайда используется для нового слайда и какой макет используется в мастере. Ниже приведен пример. Обратите внимание на следующие особенности этого кода:
+Используйте параметр [AddSlideOptions,](/javascript/api/powerpoint/powerpoint.addslideoptions) чтобы контролировать, какой мастер слайда используется для нового слайда и какой макет используется в мастере. Ниже приведен пример. Обратите внимание на следующие аспекты этого кода.
 
 - Вы можете включить либо оба свойства `AddSlideOptions` объекта.
 - Если используются оба свойства, указанный макет должен принадлежать указанному мастеру или ошибка будет выброшена.
@@ -120,7 +120,7 @@ async function addSlide() {
 
 ## <a name="delete-slides"></a>Удаление слайдов
 
-Удалите слайд, получив ссылку на объект [Slide,](/javascript/api/powerpoint/powerpoint.slide) который представляет слайд, и позвоните по `Slide.delete` методу. Ниже приводится пример удаления 4-го слайда:
+Удалите слайд, получив ссылку на объект [Slide,](/javascript/api/powerpoint/powerpoint.slide) который представляет слайд, и позвоните по `Slide.delete` методу. Ниже приводится пример удаления 4-го слайда.
 
 ```javascript
 async function deleteSlide() {

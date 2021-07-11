@@ -3,12 +3,12 @@ title: Загрузка модели DOM и среды выполнения
 description: Загрузите среду времени Office dom и Office надстройки.
 ms.date: 04/20/2021
 localization_priority: Normal
-ms.openlocfilehash: e66e6d5e30f5305dce35157280210a371ee3896f
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 0cfdcf3750d9c0a3dd21667729da59dbfedf61c8
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076015"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349842"
 ---
 # <a name="loading-the-dom-and-runtime-environment"></a>Загрузка модели DOM и среды выполнения
 
@@ -20,7 +20,7 @@ ms.locfileid: "53076015"
 
 ![Flow событий при запуске надстройки содержимого или области задач.](../images/office15-app-sdk-loading-dom-agave-runtime.png)
 
-При запуске контентной надстройки или надстройки области задач возникают указанные ниже события.
+Следующие события происходят, когда начинается надстройка содержимого или области задач.
 
 1. Пользователь открывает документ, который уже содержит надстройку, или вставляет надстройку в документ.
 
@@ -43,7 +43,7 @@ ms.locfileid: "53076015"
 
 ![Flow событий при Outlook надстройки.](../images/outlook15-loading-dom-agave-runtime.png)
 
-При запуске надстройки Outlook происходят указанные ниже события.
+Следующие события происходят при Outlook надстройки.
 
 1. При запуске Outlook считывает XML-манифесты надстроек Outlook, установленных для учетной записи пользователя.
 

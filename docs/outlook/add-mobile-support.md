@@ -3,16 +3,16 @@ title: Добавление поддержки мобильных устройс
 description: Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.
 ms.date: 04/10/2020
 localization_priority: Normal
-ms.openlocfilehash: 90f3f9b4e22c446713f7503d6372e0b7a13bf9ee
-ms.sourcegitcommit: 3123b9819c5225ee45a5312f64be79e46cbd0e3c
+ms.openlocfilehash: f653f43228c7667bc6848d4f0a6d2e9fd1768964
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "50043871"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349009"
 ---
 # <a name="add-support-for-add-in-commands-for-outlook-mobile"></a>Добавление поддержки команд надстроек для Outlook Mobile
 
-Использование команд надстройки в Outlook Mobile позволяет пользователям получать доступ [](#code-considerations)к тем же функциям (с некоторыми ограничениями), которые у них уже есть в Outlook в Интернете, Windows и Mac. Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.
+Использование команд надстройки в Outlook Mobile позволяет пользователям получать доступ к [](#code-considerations)той же функции (с некоторыми ограничениями), что и в Outlook в Интернете, Windows и Mac. Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.
 
 ## <a name="updating-the-manifest"></a>Обновление манифеста
 
@@ -72,7 +72,7 @@ ms.locfileid: "50043871"
 
 Метод [Office.context.mailbox.makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods) не поддерживается в Outlook Mobile. По мере возможности надстройки должны отдавать предпочтение данным из API Office.js. Если надстройкам требуются сведения, которые не предоставляет API Office.js, то для доступа к почтовому ящику пользователя следует использовать [интерфейсы REST API Outlook](/outlook/rest/).
 
-В наборе требований для почтовых ящиков 1.5 представлена новая версия [Office.context.mailbox.getCallbackTokenAsync,](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods) которая может запрашивать маркер доступа, совместимый с API REST, и новое свойство [Office.context.mailbox.restUrl,](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#properties) которое можно использовать для поиска конечной точки REST API для пользователя.
+Набор требований к почтовым ящикам 1.5 представил новую версию [Office.context.mailbox.getCallbackTokenAsync,](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods) которая может запрашивать маркер доступа, совместимый с API REST, и новое [свойство Office.context.mailbox.restUrl,](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#properties) которое можно использовать для поиска конечной точки API REST для пользователя.
 
 ### <a name="pinch-zoom"></a>Масштабирование жестами
 
@@ -84,28 +84,28 @@ ms.locfileid: "50043871"
 
 ### <a name="compose-mode-and-appointments"></a>Режим создания и встречи
 
-В настоящее время надстройки Outlook Mobile поддерживают активацию только при просмотре сообщений. Надстройки не активируются при создании сообщений, а также при просмотре и создании встреч. Однако интегрированные надстройки поставщика собраний по сети можно активировать в режиме организатора встреч. Дополнительные [информацию об этом](online-meeting.md) исключении см. в статье "Создание мобильной надстройки Outlook для поставщика собраний по сети".
+В настоящее время надстройки Outlook Mobile поддерживают активацию только при просмотре сообщений. Надстройки не активируются при создании сообщений, а также при просмотре и создании встреч. Однако интегрированные надстройки поставщика собраний в Интернете можно активировать в режиме Организатор встречи. Дополнительные [статьи об этом исключении см. в статье Создание](online-meeting.md) надстройки Outlook для поставщика веб-собраний.
 
 ### <a name="unsupported-apis"></a>Неподдерживаемые интерфейсы API
 
 API, введенные в наборе требований 1.6 или более поздней, не поддерживаются Outlook Mobile. Следующие API из предыдущих наборов требований также не поддерживаются.
 
-  - [Office.context.officeTheme](../reference/objectmodel/preview-requirement-set/office.context.md#officetheme-officetheme)
-  - [Office.context.mailbox.ewsUrl](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#properties)
-  - [Office.context.mailbox.convertToEwsId](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)
-  - [Office.context.mailbox.convertToRestId](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)
-  - [Office.context.mailbox.displayAppointmentForm](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)
-  - [Office.context.mailbox.displayMessageForm](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)
-  - [Office.context.mailbox.displayNewAppointmentForm](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)
-  - [Office.context.mailbox.makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)
-  - [Office.context.mailbox.item.dateTimeModified](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties)
-  - [Office.context.mailbox.item.displayReplyAllForm](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
-  - [Office.context.mailbox.item.displayReplyForm](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
-  - [Office.context.mailbox.item.getEntities](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
-  - [Office.context.mailbox.item.getEntitiesByType](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
-  - [Office.context.mailbox.item.getFilteredEntitiesByName](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
-  - [Office.context.mailbox.item.getRegexMatches](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
-  - [Office.context.mailbox.item.getRegexMatchesByName](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
+- [Office.context.officeTheme](../reference/objectmodel/preview-requirement-set/office.context.md#officetheme-officetheme)
+- [Office.context.mailbox.ewsUrl](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#properties)
+- [Office.context.mailbox.convertToEwsId](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)
+- [Office.context.mailbox.convertToRestId](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)
+- [Office.context.mailbox.displayAppointmentForm](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)
+- [Office.context.mailbox.displayMessageForm](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)
+- [Office.context.mailbox.displayNewAppointmentForm](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)
+- [Office.context.mailbox.makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods)
+- [Office.context.mailbox.item.dateTimeModified](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties)
+- [Office.context.mailbox.item.displayReplyAllForm](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
+- [Office.context.mailbox.item.displayReplyForm](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
+- [Office.context.mailbox.item.getEntities](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
+- [Office.context.mailbox.item.getEntitiesByType](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
+- [Office.context.mailbox.item.getFilteredEntitiesByName](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
+- [Office.context.mailbox.item.getRegexMatches](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
+- [Office.context.mailbox.item.getRegexMatchesByName](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods)
 
 ## <a name="see-also"></a>См. также
 

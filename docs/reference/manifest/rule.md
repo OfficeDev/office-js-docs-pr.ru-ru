@@ -1,25 +1,25 @@
 ---
 title: Элемент Rule в файле манифеста
-description: Элемент Rule указывает правила активации, которые должны оцениваться для этой контекстной почтовой надстройки.
+description: Элемент Правила указывает правила активации, которые должны быть оценены для этой контекстной надстройки почты.
 ms.date: 05/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 79b97f2e442e9d8ce59d17467161b5b9b7a7252d
-ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
+ms.openlocfilehash: 60882a5e36a63832cf81eab9320b113a420b84a3
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46641433"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348673"
 ---
 # <a name="rule-element"></a>Элемент Rule
 
-Задает правила активации, которые должны оцениваться для этой контекстной почтовой надстройки.
+Указывает правила активации, которые необходимо оценить для этой контекстной надстройки почты.
 
 **Тип надстройки:** Почта (контекстная)
 
 ## <a name="contained-in"></a>Содержится в
 
 - [OfficeApp](officeapp.md)
-- [ExtensionPoint](extensionpoint.md) ([**кустомпане** (устаревшее)](https://developer.microsoft.com/outlook/blogs/make-your-add-ins-available-in-the-office-ribbon/), [**DetectedEntity**](extensionpoint.md#detectedentity))
+- [ExtensionPoint](extensionpoint.md) [**(CustomPane** (амортизации)](https://developer.microsoft.com/outlook/blogs/make-your-add-ins-available-in-the-office-ribbon/), [**DetectedEntity**](extensionpoint.md#detectedentity))
 
 ## <a name="attributes"></a>Атрибуты
 
@@ -27,7 +27,7 @@ ms.locfileid: "46641433"
 |:-----|:-----|:-----|
 | **xsi:type** | Да | Тип определяемого правила. |
 
-Правило может относиться к одному из указанных ниже типов.
+Тип правила может быть одним из следующих:
 
 - [ItemIs](#itemis-rule)
 - [ItemHasAttachment](#itemhasattachment-rule)

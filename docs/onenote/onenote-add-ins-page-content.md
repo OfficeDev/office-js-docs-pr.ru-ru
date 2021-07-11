@@ -3,12 +3,12 @@ title: Работа с содержимым страницы в OneNote
 description: Узнайте, как работать с OneNote контентом страницы с помощью API JavaScript.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 9c4744f1121bbc5e28783940a946727275b806f2
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: f506617bfdbc97e94f8fb16930dfc2a935385d5f
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076821"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349051"
 ---
 # <a name="work-with-onenote-page-content"></a>Работа с содержимым страницы в OneNote
 
@@ -21,7 +21,7 @@ ms.locfileid: "53076821"
 - Объект Outline содержит коллекцию объектов Paragraph.
 - Объект Paragraph содержит контент типов RichText, Image, Table или Other.
 
-Чтобы создать пустую страницу OneNote, воспользуйтесь одним из указанных ниже методов.
+Чтобы создать пустую OneNote страницу, используйте один из следующих методов.
 
 - [Section.addPage](/javascript/api/onenote/onenote.section#addpage-title-)
 - [Page.insertPageAsSibling](/javascript/api/onenote/onenote.section#insertsectionassibling-location--title-)
@@ -36,7 +36,7 @@ ms.locfileid: "53076821"
 
 ## <a name="supported-html"></a>Поддерживаемые элементы HTML
 
-Для создания и обновления содержимого страницы в API JavaScript для надстроек OneNote используются указанные ниже элементы HTML.
+API OneNote JavaScript поддерживает следующий HTML для создания и обновления контента страницы.
 
 - `<html>`, `<body>`, `<div>`, `<span>`, `<br/>`
 - `<p>`

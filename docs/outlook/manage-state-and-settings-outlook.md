@@ -3,12 +3,12 @@ title: Управление состоянием и настройками Outlo
 description: Узнайте, как сохранить состояние надстройки и параметры для Outlook надстройки.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 69c22ab912d5099c42d6c69b364465a585cba1d4
-ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
+ms.openlocfilehash: 8f43c7f105dc68c879f175beabcabb49715a75aa
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2021
-ms.locfileid: "52592012"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348505"
 ---
 # <a name="manage-state-and-settings-for-an-outlook-add-in"></a>Управление состоянием и настройками Outlook надстройки
 
@@ -84,7 +84,7 @@ function removeAppSetting()
 var property = _customProps.get("propertyName");
 ```
 
-Этот пример включает следующие функции:
+В этом примере содержатся следующие функции.
 
 |**Имя функции**|**Описание**|
 |:-----|:-----|

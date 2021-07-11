@@ -1,14 +1,14 @@
 ---
 title: Работа с несколькими диапазонами одновременно в надстройках Excel
-description: Узнайте, как библиотека JavaScript Excel позволяет надстройки выполнять операции и устанавливать свойства одновременно на нескольких диапазонах.
+description: Узнайте, как Excel JavaScript позволяет вашей надстройки выполнять операции и устанавливать свойства одновременно на нескольких диапазонах.
 ms.date: 04/01/2021
 localization_priority: Normal
-ms.openlocfilehash: 2999cd26d3258cf310766fbd590805535cd644f9
-ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
+ms.openlocfilehash: 729b687b14beaeb74b329974bcca48dfd78bc11e
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51650893"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349499"
 ---
 # <a name="work-with-multiple-ranges-simultaneously-in-excel-add-ins"></a>Работа с несколькими диапазонами одновременно в надстройках Excel
 
@@ -75,7 +75,7 @@ ms.locfileid: "51650893"
 
 ### <a name="rangearea-specific-properties-and-methods"></a>Свойства и методы, характерные для объекта RangeArea
 
-Для типа `RangeAreas` существуют несколько свойств и методов, отсутствующих в объекте `Range`. Ниже приведены некоторые из них.
+Для типа `RangeAreas` существуют несколько свойств и методов, отсутствующих в объекте `Range`. Ниже приводится их выбор.
 
 - `areas`. Объект `RangeCollection`, содержащий все диапазоны, которые представлены объектом `RangeAreas`. Объект `RangeCollection` — еще один новый объект, аналогичный другим объектам коллекции Excel. У него есть свойство `items`, являющееся массивом объектов `Range`, которые представляют диапазоны.
 - `areaCount`. Общее количество диапазонов в `RangeAreas`.
@@ -128,7 +128,7 @@ Excel.run(function (context) {
 
 ## <a name="read-properties-of-rangeareas"></a>Чтение свойств RangeAreas
 
-Чтение значений свойств `RangeAreas` требует внимания, так как определенное свойство может иметь разные значения для разных диапазонов в `RangeAreas`. Общее правило заключается в том, что если соответствующее значение *может* быть возвращено, оно будет возвращено. Например, в приведенном ниже коде RGB-код для розового цвета (`#FFC0CB`) и `true` будут записаны в консоль, так как оба диапазона в объекте `RangeAreas` имеют розовую заливку и оба являются целыми столбцами.
+Чтение значений свойств `RangeAreas` требует внимания, так как определенное свойство может иметь разные значения для разных диапазонов в `RangeAreas`. Общее правило заключается в том, что если соответствующее значение *может* быть возвращено, оно будет возвращено. Например, в следующем коде код RGB для розового () и будет вошел в консоль, так как оба диапазона в объекте имеют розовую заливка и оба являются целые `#FFC0CB` `true` `RangeAreas` столбцы.
 
 ```js
 Excel.run(function (context) {
@@ -180,4 +180,4 @@ Excel.run(function (context) {
 ## <a name="see-also"></a>См. также
 
 - [Основные концепции программирования с помощью API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
-- [Чтение или написание в большом диапазоне с помощью API JavaScript Excel](excel-add-ins-ranges-large.md)
+- [Чтение или написание в большом диапазоне с Excel API JavaScript](excel-add-ins-ranges-large.md)

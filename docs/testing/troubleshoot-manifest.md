@@ -3,12 +3,12 @@ title: Проверка манифеста надстройки Office
 description: Узнайте, как проверить манифест надстройки Office с помощью схемы XML и других средств.
 ms.date: 09/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 8ac543719011339b3f22a6fb77f01c0e9ed6d930
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 66127652a9abd00a3d1cb2e92a8a780b0c029327
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53075539"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348624"
 ---
 # <a name="validate-an-office-add-ins-manifest"></a>Проверка манифеста надстройки Office
 
@@ -36,20 +36,20 @@ npm run validate
 
 1. Установите [Node.js](https://nodejs.org/download/).
 
-2. Откройте командную подсказку и установите валидатор со следующей командой.
+1. Откройте командную подсказку и установите валидатор со следующей командой.
 
     ```command&nbsp;line
     npm install -g office-addin-manifest
     ```
 
-3. Запустите следующую команду *в корневом каталоге проекта.*
+1. Запустите следующую команду *в корневом каталоге проекта.*
 
     ```command&nbsp;line
     npm run validate
     ```
 
     > [!NOTE]
-    > Если эта команда недоступна или не работает, запустите следующую команду, чтобы заставить использовать последнюю версию средства office-addin-manifest (заменив имя файла `MANIFEST_FILE` манифеста):
+    > Если эта команда недоступна или не работает, запустите следующую команду, чтобы заставить использовать последнюю версию средства office-addin-manifest (заменив имя файла `MANIFEST_FILE` манифеста).
     >
     > ```command&nbsp;line
     > npx --ignore-existing office-addin-manifest validate MANIFEST_FILE
@@ -63,8 +63,8 @@ npm run validate
 
 1. Установите [tar](https://www.gnu.org/software/tar/) и [libxml](http://xmlsoft.org/FAQ.html), если вы еще этого не сделали.
 
-2. Выполните указанную ниже команду. Вместо `XSD_FILE` укажите путь к XSD-файлу манифеста, а вместо `XML_FILE` — путь к XML-файлу манифеста.
-    
+1. Выполните указанную ниже команду. Вместо `XSD_FILE` укажите путь к XSD-файлу манифеста, а вместо `XML_FILE` — путь к XML-файлу манифеста.
+
     ```command&nbsp;line
     xmllint --noout --schema XSD_FILE XML_FILE
     ```

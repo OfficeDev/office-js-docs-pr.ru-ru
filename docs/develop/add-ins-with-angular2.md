@@ -3,12 +3,12 @@ title: Разработка надстроек Office с помощью Angular
 description: Используйте Angular для создания надстройки Office в качестве приложения для одной страницы.
 ms.date: 05/03/2021
 localization_priority: Normal
-ms.openlocfilehash: 1aba8f90cc70221a42b7bebb5e34775ed369f32e
-ms.sourcegitcommit: 8fbc7c7eb47875bf022e402b13858695a8536ec5
+ms.openlocfilehash: e12f3e2d4733613fb542cf2be4e0ff6648ab8475
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52253342"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53350087"
 ---
 # <a name="develop-office-add-ins-with-angular"></a>Разработка надстроек Office с помощью Angular
 
@@ -21,7 +21,7 @@ ms.locfileid: "52253342"
 
 ## <a name="install-the-typescript-type-definitions"></a>Установка определений типов TypeScript
 
-Откройте окно Node.js и введите следующее в командной строке:
+Откройте окно Node.js и введите следующее в командной строке.
 
 ```command&nbsp;line
 npm install --save-dev @types/office-js
