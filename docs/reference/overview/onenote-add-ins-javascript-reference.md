@@ -4,26 +4,26 @@ description: Узнайте больше об API OneNote JavaScript
 ms.date: 07/28/2020
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: 08e98e81e46ca62178235454d3ba44f35be2eec2
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: d917d71cd9d3f4fadbab91a434a177c45b54c6f2
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293634"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349114"
 ---
 # <a name="onenote-javascript-api-overview"></a>Обзор API JavaScript для OneNote
 
 Надстройка OneNote взаимодействует с объектами в OneNote в Интернете с помощью API JavaScript для Office, включающего две объектных модели JavaScript.
 
-* **API JavaScript для OneNote **. Это [API-интерфейсы для определенных приложений](../../develop/application-specific-api-model.md) в OneNote. Появившийся в Office 2016 [API JavaScript для OneNote](/javascript/api/onenote) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к объектам OneNote в Интернете.
+* **API JavaScript для OneNote** — это [API конкретных приложений](../../develop/application-specific-api-model.md) для OneNote. Впервые представленный в Office 2016, [API JavaScript для OneNote](/javascript/api/onenote) предоставляет строго типизированные объекты, которые можно использовать для доступа к объектам в OneNote для Интернета.
 
 * **Общие API**. Появившиеся в Office 2013 [общие API](/javascript/api/office) можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office.
 
-В этом разделе рассматривается API JavaScript для OneNote, используемый для разработки большинства функций в надстройках и предназначенный для OneNote в Интернете. Сведения об общем API см. в статье [Общая объектная модель API JavaScript](../../develop/office-javascript-api-object-model.md).
+В этом разделе документации основное внимание уделяется интерфейсу API JavaScript для OneNote, который используется для разработки большинства функций надстройки, ориентированных на OneNote в Интернете. Сведения об общем API см. в статье об [общей объектной модели API JavaScript](../../develop/office-javascript-api-object-model.md).
 
-## <a name="learn-programming-concepts"></a>Сведения о концепциях, связанных с программированием
+## <a name="learn-programming-concepts"></a>Сведения о понятиях, связанных с программированием
 
-Сведения о важных концепциях программирования см. в следующих статьях:
+Сведения о важных понятиях, связанных с программированием, см. в следующих статьях:
 
 * [Обзор API JavaScript для OneNote](../../onenote/onenote-add-ins-programming-overview.md)
 * [Работа с содержимым страницы в OneNote](../../onenote/onenote-add-ins-page-content.md)

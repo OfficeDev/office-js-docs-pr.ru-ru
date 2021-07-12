@@ -4,12 +4,12 @@ description: Сведения об основных типах объектов 
 ms.date: 04/05/2021
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 1cef1775711ebdb66d2e8f6513602906d9c5a2d2
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 6c88dc84796d9fd898bee880035ed964ab6cd7c8
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53075868"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349562"
 ---
 # <a name="excel-javascript-object-model-in-office-add-ins"></a>Объектная модель JavaScript для Excel в надстройках Office
 
@@ -97,7 +97,7 @@ Excel.run(function (context) {
 });
 ```
 
-В этом примере создаются следующие данные в текущем листе:
+В этом примере создаются следующие данные в текущем листе.
 
 ![Запись о продажах, показывающая строки значений, столбец формулы и отформатированные заголовки.](../images/excel-overview-range-sample.png)
 
@@ -121,7 +121,7 @@ Excel.run(function (context) {
 });
 ```
 
-Использование этого примера кода на листе с предыдущими данными создает следующую таблицу:
+Использование этого примера кода на листе с предыдущими данными создает следующую таблицу.
 
 ![Таблица сделана из предыдущего рекорда продаж.](../images/excel-overview-table-sample.png)
 
@@ -142,7 +142,7 @@ Excel.run(function (context) {
 });
 ```
 
-Выполнение этого примера на листе с предыдущей таблицей создает следующую диаграмму:
+Выполнение этого примера на листе с предыдущей таблицей создает следующую диаграмму.
 
 ![Гистограмма, показывающая количества трех элементов из предыдущей записи о продажах.](../images/excel-overview-chart-sample.png)
 

@@ -10,7 +10,7 @@
 Вы также можете очистить кэш вручную, удалив все содержимое папки `~/Library/Containers/com.Microsoft.OsfWebHost/Data/`.
 
 > [!NOTE]
-> Если эта папка не существует, проверьте наличие следующих папок и в случае их присутствия удалите содержимое папки:
+> Если эта папка не существует, проверьте наличие следующих папок и в случае их присутствия удалите содержимое папки.
 >    - `~/Library/Containers/com.microsoft.{host}/Data/Library/Caches/`, где `{host}` — это приложение Office (например, `Excel`)
 >    - `~/Library/Containers/com.microsoft.{host}/Data/Library/Application Support/Microsoft/Office/16.0/Wef/`, где `{host}` — это приложение Office (например, `Excel`)
 >    - `~/Library/Containers/com.microsoft.Office365ServiceV2/Data/Caches/com.microsoft.Office365ServiceV2/`

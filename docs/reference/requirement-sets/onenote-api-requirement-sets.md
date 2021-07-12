@@ -4,12 +4,12 @@ description: Узнайте больше о наборах обязательн�
 ms.date: 08/24/2020
 ms.prod: onenote
 localization_priority: Priority
-ms.openlocfilehash: c8cadacac640cbe710c9894a65ee780267066afc
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: ecdb26edca54758540688ba03b1d9c1eec14e739
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293529"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53350192"
 ---
 # <a name="onenote-javascript-api-requirement-sets"></a>Наборы обязательных элементов API JavaScript для OneNote
 
@@ -19,7 +19,7 @@ ms.locfileid: "47293529"
 
 |  Набор обязательных элементов  |  Office в Интернете |
 |:-----|:-----|
-| [OneNoteApi 1.1](/javascript/api/onenote?view=onenote-js-1.1)  | Сентябрь 2016 г. |  
+| [OneNoteApi 1.1](/javascript/api/onenote?view=onenote-js-1.1&preserve-view=true)  | Сентябрь 2016 г. |  
 
 ## <a name="onenote-javascript-api-11"></a>API JavaScript для OneNote 1.1
 
@@ -27,7 +27,7 @@ API JavaScript для OneNote 1.1 — первая версия этого API. 
 
 ## <a name="runtime-requirement-support-check"></a>Проверка поддержки обязательных элементов в среде выполнения
 
-В среде выполнения надстройки могут проверять, поддерживает ли конкретное приложение Office набор обязательных элементов API с помощью следующей проверки.
+В среде выполнения надстройки могут проверять, поддерживает ли конкретное приложение Office набор обязательных элементов API, с помощью следующей проверки.
 
 ```js
 if (Office.context.requirements.isSetSupported('OneNoteApi', '1.1')) {

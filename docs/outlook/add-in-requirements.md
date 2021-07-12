@@ -3,12 +3,12 @@ title: Требования к надстройкам Outlook
 description: Чтобы надстройки Outlook загружались и работали надлежащим образом, существует ряд требований к серверам и клиентам.
 ms.date: 02/09/2021
 localization_priority: Priority
-ms.openlocfilehash: dd7831ce8ebd1165f920fe24775f46cd8cd7f91c
-ms.sourcegitcommit: fefc279b85e37463413b6b0e84c880d9ed5d7ac3
+ms.openlocfilehash: 6062073d44a412d67961f806677cd60701bbdb9b
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50234298"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348596"
 ---
 # <a name="outlook-add-in-requirements"></a>Требования к надстройкам Outlook
 
@@ -16,15 +16,15 @@ ms.locfileid: "50234298"
 
 ## <a name="client-requirements"></a>Требования к клиентам
 
-- Клиент должен быть одним из поддерживаемых приложений для надстроек Outlook. Эти клиенты поддерживают надстройки:
+- Клиент должен быть одним из поддерживаемых приложений для надстроек Outlook. Эти клиенты поддерживают надстройки.
 
-   - Outlook 2013 или более поздней версии для Windows
-   - Outlook 2016 или более поздней версии для Mac
-   - Outlook для iOS
-   - Outlook для Android
-   - Outlook в Интернете для Exchange 2016 или более поздней версии
-   - Outlook в Интернете для Exchange 2013
-   - Outlook.com.
+  - Outlook 2013 или более поздней версии для Windows
+  - Outlook 2016 или более поздней версии для Mac
+  - Outlook для iOS
+  - Outlook для Android
+  - Outlook в Интернете для Exchange 2016 или более поздней версии
+  - Outlook в Интернете для Exchange 2013
+  - Outlook.com.
 
 - Клиент должен напрямую подключаться к серверу Exchange Server или Microsoft 365. При настройке клиента пользователь должен выбрать тип учетной записи **Exchange**, **Office** или **Outlook.com**. Если клиент настроен на подключение POP3 или IMAP, надстройки не загрузятся.
 

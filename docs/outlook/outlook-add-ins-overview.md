@@ -4,12 +4,12 @@ description: Надстройки Outlook — это встраиваемые в
 ms.date: 06/15/2021
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 3fb6c47d0dc2b41ecf657ea4d453c2ffcb8a8902
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 6a490e78b524e84d53461838b8a2d5a15be031bd
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076758"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348925"
 ---
 # <a name="outlook-add-ins-overview"></a>Обзор надстроек Outlook
 
@@ -27,7 +27,7 @@ ms.locfileid: "53076758"
 
 ## <a name="extension-points"></a>Точки расширения
 
-Надстройка использует точки расширения для интеграции с Outlook. Это можно сделать следующими способами:
+Надстройка использует точки расширения для интеграции с Outlook. Это можно сделать следующими способами.
 
 - Надстройки могут объявлять кнопки, которые отображаются на панелях команд в сообщениях и встречах. Дополнительные сведения см. в статье [Команды надстроек Outlook](add-in-commands-for-outlook.md).
 

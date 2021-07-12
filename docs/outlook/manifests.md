@@ -3,12 +3,12 @@ title: Манифесты надстройки Outlook
 description: В манифесте описывается, как выполняется интеграция надстройки Outlook с клиентами Outlook, включая пример.
 ms.date: 05/27/2020
 localization_priority: Priority
-ms.openlocfilehash: f113a5d8f92ee80ed635283e9e5544bd4b9ce7cd
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 1d1f5c010586364bbbcc474cd4fcb8efa3efee1d
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076772"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348939"
 ---
 # <a name="outlook-add-in-manifests"></a>Манифесты надстройки Outlook
 

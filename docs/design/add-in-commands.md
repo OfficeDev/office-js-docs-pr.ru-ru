@@ -3,12 +3,12 @@ title: Основные концепции команд надстроек
 description: Как добавить настраиваемые кнопки ленты и элементы меню в Office в составе надстройки Office
 ms.date: 01/29/2021
 localization_priority: Priority
-ms.openlocfilehash: 922148130aa5384050813155819d2db4c75fe284
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 1f34a6335949a4cbd2a0f58cdefa12426414770e
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076141"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53349184"
 ---
 # <a name="add-in-commands-for-excel-powerpoint-and-word"></a>Команды надстроек для Excel, PowerPoint и Word
 
@@ -99,7 +99,7 @@ ms.locfileid: "53076141"
 
 ## <a name="best-practices"></a>Рекомендации
 
-При разработке надстроек придерживайтесь следующих рекомендаций:
+При разработке надстроек придерживайтесь следующих рекомендаций.
 
 - Каждая команда должна представлять определенное действие с очевидным и конкретным исходом для пользователей. Не совмещайте несколько действий в одной кнопке.
 - Предоставляйте точные действия, которые делают выполнение распространенных задач в надстройке более эффективным. Максимально сократите количество шагов, необходимых для выполнения действия.
