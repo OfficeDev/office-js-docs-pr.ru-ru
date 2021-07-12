@@ -3,12 +3,12 @@ title: Развертывание и установка надстроек Outlo
 description: Создайте файл манифеста, разверните файл пользовательского интерфейса надстройки на веб-сервере, установите надстройку в своем почтовом ящике, а затем протестируйте ее.
 ms.date: 05/20/2020
 localization_priority: Priority
-ms.openlocfilehash: 97841f7c8112b42cee2927f238b31fe985b2e101
-ms.sourcegitcommit: 7ef14753dce598a5804dad8802df7aaafe046da7
+ms.openlocfilehash: 86fcf82ddbb9b7e786ae905ad0c0bd864e6fbc56
+ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "45093863"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "53348876"
 ---
 # <a name="deploy-and-install-outlook-add-ins-for-testing"></a>Развертывание и установка надстроек Outlook для тестирования
 
@@ -44,7 +44,7 @@ ms.locfileid: "45093863"
 New-ManagementRoleAssignment -Role "My Custom Apps" -User "wendyri"
 ```
 
-При необходимости администратор может выполнить следующий командлет, чтобы назначить похожие разрешения нескольким пользователям:
+При необходимости администратор может выполнить следующий командлет, чтобы назначить похожие разрешения нескольким пользователям.
 
 ```powershell
 $users = Get-Mailbox *$users | ForEach-Object { New-ManagementRoleAssignment -Role "My Custom Apps" -User $_.Alias}
@@ -52,7 +52,7 @@ $users = Get-Mailbox *$users | ForEach-Object { New-ManagementRoleAssignment -Ro
 
 Дополнительные сведения об упомянутой роли см. в статье [Роль My Custom Apps](/exchange/my-custom-apps-role-exchange-2013-help).
 
-Если для разработки надстроек вы используете Microsoft 365 или Visual Studio, вам назначается роль администратора организации, позволяющая устанавливать надстройки с помощью файла или URL-адреса в Центре администрирования Exchange, а также с помощью командлетов PowerShell.
+Если для разработки надстроек вы используете Microsoft 365 или Visual Studio, вам назначается роль администратора организации, позволяющая устанавливать надстройки с помощью файла или URL-адреса в Центре администрирования Exchange, а также с помощью командлетов PowerShell.
 
 ### <a name="install-an-add-in-by-using-remote-powershell"></a>Установка надстройки с помощью удаленного сеанса PowerShell
 
@@ -64,7 +64,7 @@ New-App -URL:"http://<fully-qualified URL">
 
 Полный URL-адрес — это расположение подготовленного файла манифеста надстройки.
 
-Вы можете использовать следующие командлеты PowerShell для управления надстройками для почтового ящика:
+Вы можете использовать следующие командлеты PowerShell для управления надстройками для почтового ящика.
 
 - `Get-App`: отображает надстройки, включенные для почтового ящика.
 - `Set-App`: включает или отключает надстройку для почтового ящика.
@@ -89,9 +89,9 @@ New-App -URL:"http://<fully-qualified URL">
 
 Потребители и пользователи учетной записи Microsoft 365 видят современную версию интерфейса при обращении к Outlook в Интернете и больше не видят классическую версию, поддержка которой прекращена. Однако локальные серверы Exchange Server продолжают поддерживать классическую версию Outlook в Интернете. Поэтому во время проверки ваша отправка может получить предупреждение о том, что надстройка несовместима с классической версией Outlook в Интернете. В этом случае рекомендуется проверить надстройку в локальной среде Exchange. При этом предупреждение не блокирует отправку в AppSource, но для ваших пользователей могут быть ограничены возможности, если они используют Outlook в Интернете в локальной среде Exchange.
 
-Чтобы устранить эту проблему, рекомендуем проверить надстройку в Outlook в Интернете, подключенном к собственной приватной локальной среде Exchange. Дополнительные сведения см. в руководстве о том, как [создать тестовую среду Exchange 2016 или Exchange 2019](/Exchange/plan-and-deploy/plan-and-deploy?view=exchserver-2019#establish-an-exchange-2016-or-exchange-2019-test-environment), и о том, как управлять [Outlook в Интернете в Exchange Server](/exchange/clients/outlook-on-the-web/outlook-on-the-web?view=exchserver-2019).
+Чтобы устранить эту проблему, рекомендуем проверить надстройку в Outlook в Интернете, подключенном к собственной приватной локальной среде Exchange. Дополнительные сведения см. в руководстве о том, как [создать тестовую среду Exchange 2016 или Exchange 2019](/Exchange/plan-and-deploy/plan-and-deploy?view=exchserver-2019&preserve-view=true#establish-an-exchange-2016-or-exchange-2019-test-environment), и о том, как управлять [Outlook в Интернете в Exchange Server](/exchange/clients/outlook-on-the-web/outlook-on-the-web?view=exchserver-2019&preserve-view=true).
 
-Вы также можете выбрать вариант с оплатой и использовать службу, размещающую локальные серверы Exchange Server и управляющую ими. Несколько вариантов:
+Вы также можете выбрать вариант с оплатой и использовать службу, размещающую локальные серверы Exchange Server и управляющую ими. Некоторые варианты:
 
 - [Rackspace](https://www.rackspace.com/email-hosting/exchange-server)
 - [Hostway](https://hostway.com/products-services-2/hosted-microsoft-exchange/)
