@@ -1,14 +1,14 @@
 ---
 title: Убедитесь, что надстройка Office совместима с существующей надстройкой COM
 description: Включить совместимость между Office надстройки и эквивалентной надстройки COM.
-ms.date: 03/09/2021
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: c475189ec19cbb0de1a070f6c529db3c59a093d8
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 85e5d8cc06aa599862c92b59a26c744f28ca2d22
+ms.sourcegitcommit: 95fc1fc8a0dbe8fc94f0ea647836b51cc7f8601d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349807"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53418687"
 ---
 # <a name="make-your-office-add-in-compatible-with-an-existing-com-add-in"></a>Убедитесь, что надстройка Office совместима с существующей надстройкой COM
 
@@ -17,12 +17,9 @@ ms.locfileid: "53349807"
 Можно настроить надстройку Office так, чтобы при установке эквивалентной надстройки COM на компьютере пользователя Office на Windows надстройка COM вместо надстройки Office. Надстройка COM называется "эквивалентной", так как Office плавно переходит между надстройки COM и надстройки Office, в соответствии с которой устанавливается компьютер пользователя.
 
 > [!NOTE]
-> Эта функция поддерживается следующими платформами при под подключении к Microsoft 365 подписке.
+> Эта функция поддерживается следующей платформой и приложениями при под подключении к Microsoft 365 подписке. Надстройки COM не могут быть установлены на любой другой платформе, поэтому на этих платформах игнорируется элемент манифеста, который обсуждается позже в этой `EquivalentAddins` статье.
 >
-> - Excel, Word и PowerPoint в Интернете
 > - Excel, Word и PowerPoint на Windows (версия 1904 или более поздней версии)
-> - Excel, Word и PowerPoint Mac (версия 13.329 или более поздней версии)
-> - Outlook на Windows (версия 2102 или более поздней версии)
 
 ## <a name="specify-an-equivalent-com-add-in"></a>Укажите эквивалентную надстройка COM
 

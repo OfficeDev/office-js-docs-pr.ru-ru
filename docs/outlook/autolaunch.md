@@ -4,12 +4,12 @@ description: Узнайте, как настроить Outlook надстрой�
 ms.topic: article
 ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: ff1dc8da523d752d616981a570b4c83d9f1a423d
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: ccad56343d30983e6d76c6473945d3b8bc28c8a0
+ms.sourcegitcommit: 95fc1fc8a0dbe8fc94f0ea647836b51cc7f8601d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349016"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53418708"
 ---
 # <a name="configure-your-outlook-add-in-for-event-based-activation"></a>Настройка надстройки Outlook для активации на основе событий
 
@@ -311,6 +311,16 @@ AppSource и inclient stores: возможность развертывания 
 - В `Office.context.ui` статье:
   - `displayDialogAsync`
   - `messageParent`
+
+### <a name="requesting-external-data"></a>Запрос внешних данных
+
+Вы можете запрашивать внешние данные с помощью API типа [Fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API) или с помощью [XmlHttpRequest (XHR)](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest)— стандартного веб-API, который выдает http-запросы для взаимодействия с серверами.
+
+Следует помнить, что при создании XmlHttpRequests необходимо [](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy) использовать дополнительные меры безопасности, требующие одинаковой политики происхождения и [простой CORS.](https://www.w3.org/TR/cors/)
+
+Простая реализация CORS не может использовать файлы cookie и поддерживает только простые методы (GET, HEAD, POST). Простые запросы CORS принимают простые заголовки с именами полей `Accept`, `Accept-Language`, `Content-Language`. Вы также можете использовать `Content-Type` заготку в простой CORS, при условии, что тип контента `application/x-www-form-urlencoded` , `text/plain` или `multipart/form-data` .
+
+Полная поддержка CORS скоро.
 
 ## <a name="see-also"></a>См. также
 
