@@ -4,12 +4,12 @@ description: Узнайте, как настроить Outlook надстрой�
 ms.topic: article
 ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: ccad56343d30983e6d76c6473945d3b8bc28c8a0
-ms.sourcegitcommit: 95fc1fc8a0dbe8fc94f0ea647836b51cc7f8601d
+ms.openlocfilehash: 1856f78b7e6d49952d2eebf521894d6a988402a0
+ms.sourcegitcommit: 30a861ece18255e342725e31c47f01960b854532
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53418708"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53455532"
 ---
 # <a name="configure-your-outlook-add-in-for-event-based-activation"></a>Настройка надстройки Outlook для активации на основе событий
 
@@ -326,6 +326,7 @@ AppSource и inclient stores: возможность развертывания 
 
 - [Манифесты надстроек Outlook](manifests.md)
 - [Отламывка надстроек на основе событий](debug-autolaunch.md)
+- [Параметры списка AppSource для надстройки на Outlook событий](autolaunch-store-options.md)
 - Примеры PnP:
   - [Для Outlook для набора подписи используйте активацию на основе событий](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/outlook-set-signature)
   - [Использование Outlook активации на основе событий для тегов внешних получателей](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/outlook-tag-external)

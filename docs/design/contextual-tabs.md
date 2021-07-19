@@ -1,18 +1,18 @@
 ---
 title: Создание настраиваемой контекстной вкладки Office надстроек
 description: Узнайте, как добавить настраиваемые контекстные вкладки в Office надстройку.
-ms.date: 05/12/2021
+ms.date: 07/15/2021
 localization_priority: Normal
-ms.openlocfilehash: 90db6d010fb76be027df639cc67e62a548cd784a
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: a8eaffe0402601ee11a063d0df5670ff208be4fd
+ms.sourcegitcommit: b20041962a7f921a8c40eb9ae55bc6992450b243
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349233"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53456231"
 ---
 # <a name="create-custom-contextual-tabs-in-office-add-ins"></a>Создание настраиваемой контекстной вкладки Office надстроек
 
-Контекстная вкладка — это скрытый контроль вкладок в ленте Office, отображаемой в строке вкладок, когда указанное событие происходит в Office документе. Например, **вкладка "Дизайн** таблицы", которая отображается на Excel при выборе таблицы. Вы можете включить настраиваемые контекстные вкладки в Office надстройки и указать, когда они видны или скрыты, создав обработчики событий, которые изменяют видимость. (Однако настраиваемые контекстные вкладки не реагируют на изменения фокуса.)
+Контекстная вкладка — это скрытый контроль вкладок в ленте Office, отображаемой в строке вкладок, когда указанное событие происходит в Office документе. Например, **вкладка "Дизайн** таблицы", которая отображается на Excel при выборе таблицы. Вы включаете настраиваемые контекстные вкладки в Office надстройки и указываете, когда они видны или скрыты, создав обработчики событий, которые изменяют видимость. (Однако настраиваемые контекстные вкладки не реагируют на изменения фокуса.)
 
 > [!NOTE]
 > В этой статье предполагается, что вы уже ознакомились с приведенной ниже документацией. Просмотрите ее, если вы работали с командами надстроек (настраиваемыми элементами меню и кнопками ленты) некоторое время назад.
@@ -58,7 +58,7 @@ ms.locfileid: "53349233"
 
 ## <a name="define-the-groups-and-controls-that-appear-on-the-tab"></a>Определение групп и элементов управления, которые отображаются на вкладке
 
-В отличие от настраиваемой вкладки ядра, которые определяются с помощью XML в манифесте, настраиваемые контекстные вкладки определяются во время запуска с помощью BLOB JSON. Код разрезает blob в объект JavaScript, а затем передает объект [методу Office.ribbon.requestCreateControls.](/javascript/api/office/office.ribbon?view=common-js&preserve-view=true#requestCreateControls-tabDefinition-) Настраиваемые контекстные вкладки присутствуют только в документах, на которых в настоящее время запущена надстройка. Это отличается от настраиваемой основной вкладки, которые добавляются в ленту Office приложения при установке надстройки и остаются в момент открытия другого документа. Кроме того, `requestCreateControls` метод можно запускать только один раз в сеансе надстройки. Если он снова вызван, ошибка будет выброшена.
+В отличие от настраиваемой вкладки ядра, которые определяются с помощью XML в манифесте, настраиваемые контекстные вкладки определяются во время запуска с помощью BLOB JSON. Код разрезает blob в объект JavaScript, а затем передает объект [методу Office.ribbon.requestCreateControls.](/javascript/api/office/office.ribbon?view=common-js&preserve-view=true#requestCreateControls-tabDefinition-) Настраиваемые контекстные вкладки присутствуют только в документах, на которых в настоящее время запущена надстройка. Это отличается от настраиваемой основной вкладки, которые добавляются в ленту Office приложения при установке надстройки и остаются в момент открытия другого документа. Кроме того, `requestCreateControls` метод может запускаться только один раз в сеансе надстройки. Если он снова вызван, ошибка будет выброшена.
 
 > [!NOTE]
 > Структура свойств и свойств BLOB JSON (и имен ключей) примерно параллельна структуре элемента [CustomTab](../reference/manifest/customtab.md) и его элементов потомка в манифесте XML.
@@ -323,7 +323,7 @@ const showDataTab = async () => {
 
 ### <a name="toggle-tab-visibility-and-the-enabled-status-of-a-button-at-the-same-time"></a>Обзор вкладок и состояние включенной кнопки одновременно
 
-Метод также используется для настройки включенного или отключенного состояния настраиваемой кнопки на настраиваемой контекстной вкладке или настраиваемой основной `requestUpdate` вкладке. Дополнительные сведения см. в материале [Enable and Disable Add-in Commands.](disable-add-in-commands.md) Возможны сценарии, в которых одновременно необходимо изменить видимость вкладки и состояние включенной кнопки. Это можно сделать одним вызовом `requestUpdate` . Ниже приводится пример, в котором кнопка на основной вкладке включена одновременно с тем, как отображается контекстная вкладка.
+Метод также используется для настройки включенного или отключенного состояния настраиваемой кнопки на настраиваемой контекстной вкладке или настраиваемой основной `requestUpdate` вкладке. Дополнительные сведения см. в материале [Enable and Disable Add-in Commands.](disable-add-in-commands.md) Возможны сценарии, в которых одновременно необходимо изменить видимость вкладки и состояние включенной кнопки. Вы делаете это одним вызовом `requestUpdate` . Ниже приводится пример, в котором кнопка на основной вкладке включена одновременно с тем, как отображается контекстная вкладка.
 
 ```javascript
 function myContextChanges() {
@@ -378,7 +378,99 @@ function myContextChanges() {
 }
 ```
 
-## <a name="localizing-the-json-blob"></a>Локализация BLOB JSON
+## <a name="open-a-task-pane-from-contextual-tabs"></a>Откройте области задач из контекстных вкладок
+
+Чтобы открыть области задач с кнопки на настраиваемой контекстной вкладке, создайте действие в JSON с `type` помощью `ShowTaskpane` . Затем определите кнопку с `actionId` набором свойств `id` к действию. Это открывает области задач по умолчанию, указанные `<Runtime>` элементом в манифесте.
+
+```json
+`{
+  "actions": [
+    {
+      "id": "openChartsTaskpane",
+      "type": "ShowTaskpane",
+      "title": "Work with Charts",
+      "supportPinning": false
+    }
+  ],
+  "tabs": [
+    {
+      // some tab properties omitted
+      "groups": [
+        {
+          // some group properties omitted
+          "controls": [
+            {
+                "type": "Button",
+                "id": "CtxBt112",
+                "actionId": "openChartsTaskpane",
+                "enabled": false,
+                "label": "Open Charts Taskpane",
+                // some control properties omitted
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}`
+```
+
+Чтобы открыть любую области задач, которая не является области задач по умолчанию, укажите свойство в `sourceLocation` определении действия. В следующем примере с другой кнопки открывается вторая области задач.
+
+> [!IMPORTANT]
+>
+> - Если `sourceLocation` для действия задана задача, то  в области задач не используется общее время запуска. Он выполняется в новом времени запуска JavaScript.
+> - Не более одной области задач может использовать совместное время работы, поэтому не более одного действия типа могут `ShowTaskpane` опустить `sourceLocation` свойство.
+
+```json
+`{
+  "actions": [
+    {
+      "id": "openChartsTaskpane",
+      "type": "ShowTaskpane",
+      "title": "Work with Charts",
+      "supportPinning": false
+    },
+    {
+      "id": "openTablesTaskpane",
+      "type": "ShowTaskpane",
+      "title": "Work with Tables",
+      "supportPinning": false
+      "sourceLocation": "https://MyDomain.com/myPage.html"
+    }
+  ],
+  "tabs": [
+    {
+      // some tab properties omitted
+      "groups": [
+        {
+          // some group properties omitted
+          "controls": [
+            {
+                "type": "Button",
+                "id": "CtxBt112",
+                "actionId": "openChartsTaskpane",
+                "enabled": false,
+                "label": "Open Charts Taskpane",
+                // some control properties omitted
+            },
+            {
+                "type": "Button",
+                "id": "CtxBt113",
+                "actionId": "openTablesTaskpane",
+                "enabled": false,
+                "label": "Open Tables Taskpane",
+                // some control properties omitted
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}`
+```
+
+## <a name="localize-the-json-text"></a>Локализация текста JSON
 
 BLOB JSON, который передается, не локализован так же, как локализована разметка манифеста для настраиваемой вкладки ядра (которая описывается при локализации Control из `requestCreateControls` [манифеста).](../develop/localization.md#control-localization-from-the-manifest) Вместо этого локализация должна происходить во время запуска с использованием отдельных BLOB-меток JSON для каждого локального. Мы рекомендуем использовать заявление, которое проверяет `switch` [свойство Office.context.displayLanguage.](/javascript/api/office/office.context#displayLanguage) Ниже приведен пример.
 

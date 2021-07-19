@@ -2,14 +2,14 @@
 title: Создание надстройки Outlook для поставщика онлайн-собраний
 description: Обсуждается настройка мобильной надстройки Outlook для поставщика услуг онлайн-собраний.
 ms.topic: article
-ms.date: 02/12/2021
+ms.date: 07/09/2021
 localization_priority: Normal
-ms.openlocfilehash: 7f65ef7a1b87a989063b6cb23e6e608e6b3bbefc
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: f0f9b69c2b8b515df3829ca3ba0714393df79fd1
+ms.sourcegitcommit: 30a861ece18255e342725e31c47f01960b854532
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53077066"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53455504"
 ---
 # <a name="create-an-outlook-mobile-add-in-for-an-online-meeting-provider"></a>Создание надстройки Outlook для поставщика онлайн-собраний
 
@@ -207,7 +207,7 @@ ms.locfileid: "53077066"
 
 ## <a name="testing-and-validation"></a>Тестирование и проверка
 
-Следуйте обычным рекомендациям [по проверке и проверке надстройки.](testing-and-tips.md) После [sideloading](sideload-outlook-add-ins-for-testing.md) в Outlook в Интернете, Windows или Mac, перезапустите Outlook на вашем мобильном устройстве Android. (Android — единственный поддерживаемый клиент на данный момент.) Затем на новом экране собрания убедитесь, что Microsoft Teams или Skype очки заменены на собственные.
+Следуйте обычным рекомендациям [по проверке и проверке надстройки.](testing-and-tips.md) После [загрузки](sideload-outlook-add-ins-for-testing.md) в Outlook в Интернете, Windows или Mac перезапустите Outlook на мобильном устройстве Android или iOS. Затем на новом экране собрания убедитесь, что Microsoft Teams или Skype очки заменены на собственные.
 
 ### <a name="create-meeting-ui"></a>Создание пользовательского интерфейса собрания
 
@@ -261,6 +261,7 @@ ms.locfileid: "53077066"
 - Только надстройки, установленные администратором, появятся на экране композитной встречи, заменив по умолчанию Teams или Skype. Установленные пользователем надстройки не активируются.
 - Значок надстройки должен быть в серой шкале с использованием кода hex или его эквивалента `#919191` в [других цветовых форматах.](https://convertingcolors.com/hex-color-919191.html)
 - Только одна команда без пользовательского интерфейса поддерживается в режиме Организатор встречи (составить).
+- Надстройка должна обновить сведения о собрании в форме встречи в течение одного минутного периода рас растор между встречами. Однако любое время, проведенное в диалоговом окне, надстройка, открытая для проверки подлинности и т. д., исключается из периода ожидания.
 
 ## <a name="see-also"></a>См. также
 
