@@ -1,15 +1,15 @@
 ---
 title: Обзор надстроек Outlook
 description: Надстройки Outlook — это встраиваемые в Outlook решения от сторонних разработчиков, использующие нашу веб-платформу.
-ms.date: 07/13/2021
+ms.date: 07/14/2021
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: c39928fd59379eac1552e80bbaccb54f460c8357
-ms.sourcegitcommit: 95fc1fc8a0dbe8fc94f0ea647836b51cc7f8601d
+ms.openlocfilehash: 0d9dd51627cd797351e4e43957375b7a493b2b57
+ms.sourcegitcommit: 30a861ece18255e342725e31c47f01960b854532
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53418694"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53455490"
 ---
 # <a name="outlook-add-ins-overview"></a>Обзор надстроек Outlook
 
@@ -59,7 +59,7 @@ ms.locfileid: "53418694"
 
 - MSG- или EML-файл, открытый из файловой системы.
 
-- В [групповом почтовом ящике](/microsoft-365/admin/create-groups/compare-groups?view=o365-worldwide&preserve-view=true#shared-mailboxes), общем почтовом ящике\*, почтовом ящике другого пользователя \*, архивном почтовом ящике или общедоступной папке.
+- В [групповом почтовом ящике](/microsoft-365/admin/create-groups/compare-groups?view=o365-worldwide&preserve-view=true#shared-mailboxes), общем почтовом ящике\*, почтовом ящике другого пользователя\*, [архивном почтовом ящике](/office365/servicedescriptions/exchange-online-archiving-service-description/archive-features#archive-mailbox) или общедоступной папке.
 
   > [!IMPORTANT]
   > \* Поддержка сценариев делегирования доступа (например, папок, полученных из почтового ящика другого пользователя) была представлена в [наборе требований 1.8](../reference/objectmodel/requirement-set-1.8/outlook-requirement-set-1.8.md). Поддержка общих почтовых ящиков теперь доступна в предварительной версии. Дополнительные сведения приводятся в статье [Включение сценариев общих папок и общих почтовых ящиков](delegate-access.md).

@@ -1,14 +1,14 @@
 ---
 title: Рекомендации и правила Office dialog API
 description: Предоставляет правила и лучшие практики для API Office диалогов, такие как лучшие практики для одно-страничного приложения (SPA)
-ms.date: 02/09/2021
+ms.date: 07/19/2021
 localization_priority: Normal
-ms.openlocfilehash: 99129636cf722f98cef36c272f2e00e8a9321ccf
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 1f5162cd4071b2b37b973cdcd16614e9f448c208
+ms.sourcegitcommit: f46e4aeb9c31f674380dd804fd72957998b3a532
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349912"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "53535985"
 ---
 # <a name="best-practices-and-rules-for-the-office-dialog-api"></a>Рекомендации и правила Office dialog API
 
@@ -27,7 +27,7 @@ ms.locfileid: "53349912"
 - В диалоговом окне Office только два API:
   - Функция [messageParent.](/javascript/api/office/office.ui#messageparent-message-)
   - `Office.context.requirements.isSetSupported`(Дополнительные сведения см. в [Office приложениях и требованиях API.)](specify-office-hosts-and-api-requirements.md)
-- Функция [messageParent](/javascript/api/office/office.ui#messageparent-message-) может быть вызвана только со страницы в том же домене, что и сама надстройка.
+- Функция [messageParent](/javascript/api/office/office.ui#messageparent-message-) обычно должна быть вызвана со страницы в том же домене, что и сама надстройка, но это не является обязательным. Дополнительные сведения см. [в сообщении cross-domain messaging to the host runtime.](dialog-api-in-office-add-ins.md#cross-domain-messaging-to-the-host-runtime)
 
 ## <a name="best-practices"></a>Рекомендации
 
@@ -41,9 +41,9 @@ ms.locfileid: "53349912"
 
 ### <a name="handling-pop-up-blockers-with-office-on-the-web"></a>Обработка блокировщиков всплывающих окон с помощью Office в Интернете
 
-Попытка отобразить диалоговое окно при Office в Интернете может привести к блокировке блокатора всплывающих окна браузера. Office в Интернете имеет функцию, которая позволяет диалоговике надстройки быть исключением из блокатора всплывающее окно браузера. Когда код вызывает метод, Office в Интернете откроет запрос, аналогичный `displayDialogAsync` следующему:
+Попытка отобразить диалоговое окно при Office в Интернете может привести к блокировке блокатора всплывающих окна браузера. Office в Интернете имеет функцию, которая позволяет диалоговике надстройки быть исключением из блокатора всплывающее окно браузера. Когда код вызывает метод, Office в Интернете откроет запрос, аналогичный `displayDialogAsync` следующему.
 
-![Снимок экрана, показывающий подсказку с кратким описанием и кнопками Разрешить и игнорировать, которые надстройка может создать, чтобы избежать блокаторов всплывающее окна в браузере.](../images/dialog-prompt-before-open.png)
+![Снимок экрана, показывающий подсказку с кратким описанием и кнопками Разрешить и игнорировать, которые надстройка может создать, чтобы избежать блокаторов всплывающих окна в браузере](../images/dialog-prompt-before-open.png)
 
 Если пользователь выбирает **Разрешить,** откроется Office диалоговое окно. Если пользователь выбирает **Ignore,** запрос закрывается, а Office диалоговое окно не открывается. Вместо этого `displayDialogAsync` метод возвращает ошибку 12009. Код должен уловить эту ошибку и либо предоставить альтернативный интерфейс, не требующий диалога, либо отобразить сообщение пользователю, который сообщает, что надстройка требует от них разрешить диалоговое окно. (Подробнее о 12009 см. в руб. [Ошибки из displayDialogAsync](dialog-handle-errors-events.md#errors-from-displaydialogasync).)
 

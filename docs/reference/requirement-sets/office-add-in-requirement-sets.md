@@ -4,12 +4,12 @@ description: Дополнительные дополнительные Office о
 ms.date: 04/28/2021
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 4ebf00ef0be4007f6cb29fdf049f9df2152ac626
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 458369ad693afeedb760eda3238191c44bedc5e9
+ms.sourcegitcommit: f46e4aeb9c31f674380dd804fd72957998b3a532
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53350206"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "53536048"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
@@ -80,6 +80,14 @@ ms.locfileid: "53350206"
 
 ---
 
+### <a name="dialogorigin"></a>DialogOrigin
+
+|**Приложения Office**|**Методы в наборе**|
+|:-----|:-----|
+| См. [наборы требований к диалоговом происхождению.](dialog-origin-requirement-sets.md) | Поддержка кросс-домена для:<br>UI.messageParent<br>пользовательский интерфейс. Dialog.messageChild |
+
+---
+
 ### <a name="documentevents"></a>DocumentEvents
 
 |**Приложения Office**|**Методы в наборе**|
@@ -88,7 +96,7 @@ ms.locfileid: "53350206"
 
 ---
 
-### <a name="file"></a>Файл
+### <a name="file"></a>File
 
 |**Приложения Office**|**Методы в наборе**|
 |:-----|:-----|

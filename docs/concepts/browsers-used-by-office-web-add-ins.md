@@ -3,12 +3,12 @@ title: Браузеры, используемые надстройками Offic
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
 ms.date: 06/18/2021
 localization_priority: Normal
-ms.openlocfilehash: 6347bbe6b02befeabf0fcd6f04545f6d543871c8
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 2555025cdd350da433eb499faae7e70f3956725f
+ms.sourcegitcommit: f46e4aeb9c31f674380dd804fd72957998b3a532
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076184"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "53536027"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -36,7 +36,7 @@ Office Надстройки — это веб-приложения, которы
 |iOS|любой|Неприменимо|Safari|
 |Android|любой|Неприменимо|Chrome|
 |Windows 7, 8.1, 10 | подписка Office 2013 или более поздней|Всё равно|Internet Explorer 11|
-|Windows 7 | Microsoft 365| Всё равно | Internet Explorer 11|
+|Windows 7 | Microsoft 365| Всё равно | Internet Explorer 11|
 |Windows 8.1,<br>Windows 10 ver. &nbsp; < &nbsp; 1903| Microsoft 365 | Нет| Internet Explorer 11|
 |Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; < &nbsp; 16.0.11629<sup>1</sup>| Всё равно|Internet Explorer 11|
 |Windows 10 ver. &nbsp; >= &nbsp; 1903 | Microsoft 365 ver. &nbsp; >= &nbsp; 16.0.11629 &nbsp; _И_ &nbsp; < &nbsp; 16.0.13530.20424 <sup>1</sup>| Всё равно|Microsoft Edge<sup>2, 3 с</sup> оригинальным WebView (EdgeHTML)|
@@ -69,7 +69,7 @@ Office Надстройки не поддерживают сотрудников
 
 ### <a name="scroll-bar-does-not-appear-in-task-pane"></a>В области задач не отображается полоса прокрутки
 
-По умолчанию полосы прокрутки в Microsoft Edge скрыты до наведения указателя мыши. Чтобы полоса прокрутки отображалась постоянно, стиль CSS, применяемый к элементу `<body>` страниц в области задач, должен содержать свойство [-ms-overflow-style](https://developer.mozilla.org/docs/Archive/Web/CSS/-ms-overflow-style) со значением `scrollbar`.
+По умолчанию полосы прокрутки в Microsoft Edge скрыты до наведения указателя мыши. Чтобы полоса прокрутки отображалась постоянно, стиль CSS, применяемый к элементу `<body>` страниц в области задач, должен содержать свойство [-ms-overflow-style](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) со значением `scrollbar`.
 
 ### <a name="when-debugging-with-the-microsoft-edge-devtools-the-add-in-crashes-or-reloads"></a>При отладке с помощью Microsoft Edge DevTools надстройка аварийно завершает работу или перезагружается
 

@@ -1,14 +1,14 @@
 ---
 title: Использование Office Dialog API в вашей надстройках Office
 description: Узнайте основы создания диалоговых окне в Office надстройке.
-ms.date: 01/28/2021
+ms.date: 07/19/2021
 localization_priority: Normal
-ms.openlocfilehash: 878bdeaa6752e37f8d3c67f32b42e2a5a7b962cb
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: a8f3b6425dceaccbb50a56bfb7e05aafe061967d
+ms.sourcegitcommit: f46e4aeb9c31f674380dd804fd72957998b3a532
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349919"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "53535978"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
@@ -47,6 +47,7 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html');
 ```
 
 > [!NOTE]
+> 
 > - В случае URL-адреса используется протокол HTTP **S**, обязательный для всех страниц, загружаемых в диалоговом окне, а не только для первой страницы.
 > - Домен диалогового окна совпадает с доменом главной страницы, которая может быть страницей в панели задач или [файлом функции](../reference/manifest/functionfile.md) команды надстройки. Страница, метод контроллера или другой ресурс, передаваемый в метод `displayDialogAsync`, должен быть в том же домене, что и страница ведущего приложения.
 
@@ -83,10 +84,10 @@ Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 
 
 ## <a name="send-information-from-the-dialog-box-to-the-host-page"></a>Отправка сведений из диалогового окна главной странице
 
-Диалоговое окно может взаимодействовать с главной страницей в области задач, если:
-
-- Текущая страница в диалоговом окне не находится в том же домене, что и главная страница.
-- Библиотека API Office JavaScript загружается на страницу. (Как и любая страница, использующая библиотеку API Office JavaScript, скрипт для страницы должен назначить метод свойству, хотя он может быть `Office.initialize` пустым методом. Дополнительные сведения см. в [материале Initialize your Office надстройки.)](initialize-add-in.md)
+> [!NOTE]
+>
+> - Для ясности в этом разделе мы вызываем целевой адрес сообщения на хост-странице, но строго говоря, сообщения идут к времени запуска *JavaScript* в области задач (или времени запуска, в который размещен файл функций). [](../reference/manifest/functionfile.md) Различие имеет важное значение только в случае меж доменных сообщений. Дополнительные сведения см. [в сообщении cross-domain messaging to the host runtime.](#cross-domain-messaging-to-the-host-runtime)
+> - Диалоговое окно не может взаимодействовать с хост-страницей в области задач, если Office библиотека API JavaScript не загружена на страницу. (Как и любая страница, использующая библиотеку API Office JavaScript, скрипт для страницы должен назначить метод свойству `Office.initialize` или `Office.onReady` вызову. Дополнительные сведения см. в [материале Initialize your Office надстройки.)](initialize-add-in.md)
 
 Код в диалоговом окне использует [функцию messageParent](/javascript/api/office/office.ui#messageparent-message-) для отправки строки сообщения на хост-страницу. Строка может быть словом, предложением, BLOB XML, строками JSON или другими строками, которые можно сериализировать в строку или отбрасовать в строку. Ниже приведен пример.
 
@@ -97,7 +98,7 @@ if (loginSuccess) {
 ```
 
 > [!IMPORTANT]
-> - Функцию `messageParent` можно вызывать только на странице, которая относится к тому же домену (включая протокол и порт), что и главная страница.
+>
 > - Эта функция является одним из Office API JS, которые можно назвать в `messageParent` диалоговом  окне.
 > - Другой API JS, который можно назвать в диалоговом окне, `Office.context.requirements.isSetSupported` — . Сведения об этом см. в [Office приложениях и требованиях API.](specify-office-hosts-and-api-requirements.md) Однако в диалоговом окне этот API не поддерживается Outlook 2016 одноразовой покупке (то есть версии MSI).
 
@@ -122,6 +123,7 @@ Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 
 ```
 
 > [!NOTE]
+>
 > - Office передает объект [AsyncResult](/javascript/api/office/office.asyncresult) в функцию обратного вызова. Он представляет результат попытки открыть диалоговое окно. Он не представляет результат событий в диалоговом окне. Подробнее об этом различии см. в [Обработка ошибок и событий](dialog-handle-errors-events.md). 
 > - Для свойства `value` объекта `asyncResult` задан объект [Dialog](/javascript/api/office/office.dialog), который существует на главной странице, а не в контексте выполнения диалогового окна.
 > - `processMessage` — это функция, которая обрабатывает событие. Вы можете присвоить ей любое имя.
@@ -137,6 +139,7 @@ function processMessage(arg) {
 ```
 
 > [!NOTE]
+>
 > - Office передает объект `arg` в обработчик. Его `message` свойство — строка, отправленная вызовом в `messageParent` диалоговом окне. В этом примере это строковая репрезентация профиля пользователя из службы, например учетной записи Майкрософт или Google, поэтому она десервализована обратно к объекту с `JSON.parse` .
 > - Функция `showUserName` не показана. Она может отображать персонализированное приветствие в области задач.
 
@@ -150,6 +153,7 @@ function processMessage(arg) {
 ```
 
 > [!NOTE]
+>
 > - Объект `dialog` должен быть таким же, как объект, который возвращается при вызове `displayDialogAsync`.
 > - Вызов метода `dialog.close` дает указание Office немедленно закрыть диалоговое окно.
 
@@ -187,6 +191,7 @@ if (loginSuccess) {
 ```
 
 > [!NOTE]
+>
 > - Переменная `loginSuccess` будет инициализирована после считывания отклика HTTP от поставщика удостоверений.
 > - Реализация функций `getProfile` и `getError` не показана. Они получают данные из параметра запроса или ответа HTTP.
 > - В зависимости от того, удалось ли выполнить вход, отправляются анонимные объекты различных типов. Оба содержат свойство `messageType`, но один содержит свойство `profile`, а другой — свойство `error`.
@@ -209,6 +214,39 @@ function processMessage(arg) {
 
 > [!NOTE]
 > Реализация функции `showNotification` не показана в примере кода, представленном в этой статье. Пример возможного способа реализации этой функции в своей надстройке см. в статье [Пример использования API диалоговых окон в надстройке Office](https://github.com/OfficeDev/Office-Add-in-Dialog-API-Simple-Example).
+
+### <a name="cross-domain-messaging-to-the-host-runtime"></a>Меж доменная передача сообщений в хост-время работы
+
+Диалоговое окно может перемещаться вдали от домена надстройки или родительского времени запуска JavaScript (либо в области задач, либо во время работы без пользовательского интерфейса, в котором размещен файл функции) может перемещаться от домена надстройки после открытия диалогового поля. Если что-либо из этих вещей произошло, вызов сбой, если в коде не указан домен `messageParent` родительского времени запуска. Это необходимо, добавив параметр [DialogMessageOptions](/javascript/api/office/office.dialogmessageoptions) в вызов `messageParent` . Этот объект имеет `targetOrigin` свойство, которое указывает домен, в который должно быть отправлено сообщение. Если параметр не используется, Office предполагает, что целью является тот же домен, что и диалоговое окно.
+
+> [!NOTE]
+> Для отправки меж доменного сообщения требуется набор требований `messageParent` [Dialog Origin 1.1.](../reference/requirement-sets/dialog-origin-requirement-sets.md)
+
+Ниже приводится пример использования для отправки меж `messageParent` доменного сообщения.
+
+```js
+Office.context.ui.messageParent("Some message", { targetOrigin: "https://target.domain.com" });
+```
+
+> [!NOTE]
+> Параметр `DialogMessageOptions` был выпущен приблизительно 19 июля 2021 г. Примерно через 30 дней после этой даты в Office в Интернете первый раз, когда он называется без параметра, а родительский домен отличается от диалогового, пользователю будет предложено утвердить отправку данных в целевой `messageParent` `DialogMessageOptions` домен. Если пользователь одобряет, ответ пользователя кэшется в течение 24 часов. В этот период, когда он вызван с тем же целевым доменом, пользователю больше не будет `messageParent` предложено.
+
+Если в сообщении не содержатся конфиденциальные данные, можно установить ", что позволяет отправлять его `targetOrigin` \* в любой домен. Ниже приведен пример.
+
+```js
+Office.context.ui.messageParent("Some message", { targetOrigin: "*" });
+```
+
+> [!TIP]
+> Параметр был добавлен в метод в качестве обязательного параметра `DialogMessageOptions` `messageParent` в середине 2021 г. Старые надстройки, отправив сообщение с помощью метода, перестают работать до тех пор, пока не будут обновлены для использования нового параметра. В то же время только Office для *Windows* только пользователи и системные администраторы могут включить эти надстройки для продолжения работы, указав доверенный домен (ы) с параметром реестра: **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\WEF\AllowedDialogCommunicationDomains**. Самый простой способ сделать это — создать файл с расширением, сохранить его на Windows, а затем дважды щелкнуть его, чтобы `.reg` запустить его. Ниже приводится пример содержимого такого файла.
+>
+> ```
+> Windows Registry Editor Version 5.00
+> 
+> [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\WEF\AllowedDialogCommunicationDomains]
+> "My trusted domain"="https://www.MyTrustedDomain.com"
+> "Another trusted domain"="https://another.trusted.domain.com"
+> ```
 
 ## <a name="pass-information-to-the-dialog-box"></a>Передача данных диалоговому окну
 
@@ -266,8 +304,8 @@ Office.onReady()
 Затем определите `onMessageFromParent` обработник. Следующий код продолжает пример из предыдущего раздела. Обратите внимание, Office передает аргумент обработнику и что свойство объекта аргумента содержит строку `message` со страницы хост. В этом примере сообщение перенаправляется в объект, а jQuery используется для набора верхнего заголовка диалогов, чтобы соответствовать новому имени таблицы.
 
 ```javascript
-function onMessageFromParent(event) {
-    var messageFromParent = JSON.parse(event.message);
+function onMessageFromParent(arg) {
+    var messageFromParent = JSON.parse(arg.message);
     $('h1').text(messageFromParent.name);
 }
 ```
@@ -299,6 +337,43 @@ function onRegisterMessageComplete(asyncResult) {
 
 > [!IMPORTANT]
 > Набор [требований DialogApi 1.2](../reference/requirement-sets/dialog-api-requirement-sets.md) не может быть указан в разделе `<Requirements>` манифеста надстройки. Вам придется проверять поддержку DialogApi 1.2 во время запуска с помощью [метода isSetSupported.](specify-office-hosts-and-api-requirements.md#use-runtime-checks-in-your-javascript-code) Поддержка требований манифеста находится в стадии разработки.
+
+### <a name="cross-domain-messaging-to-the-dialog-runtime"></a>Меж доменная передача сообщений в диалоговое время работы
+
+Диалоговое окно может перемещаться вдали от домена надстройки или родительского времени запуска JavaScript (либо в области задач, либо во время работы без пользовательского интерфейса, в котором размещен файл функции) может перемещаться от домена надстройки после открытия диалогового поля. Если что-либо из этих вещей произошло, вызов сбой, если в коде не указан домен времени `messageChild` запуска диалогов. Это необходимо, добавив параметр [DialogMessageOptions](/javascript/api/office/office.dialogmessageoptions) в вызов `messageChild` . Этот объект имеет `targetOrigin` свойство, которое указывает домен, в который должно быть отправлено сообщение. Если параметр не используется, Office предполагает, что целью является тот же домен, что и родительское время запуска. 
+
+> [!NOTE]
+> Для отправки меж доменного сообщения требуется набор требований `messageChild` [Dialog Origin 1.1.](../reference/requirement-sets/dialog-origin-requirement-sets.md)
+
+Ниже приводится пример использования для отправки меж `messageChild` доменного сообщения.
+
+```js
+dialog.messageChild(messageToDialog, { targetOrigin: "https://target.domain.com" });
+```
+
+Если в сообщении не содержатся конфиденциальные данные, можно установить ", что позволяет отправлять его `targetOrigin` \* в любой домен.  Ниже приведен пример.
+
+```js
+dialog.messageChild(messageToDialog, { targetOrigin: "*" });
+```
+
+Время запуска JavaScript, в котором находится диалоговое окно, не может получить доступ к разделу манифеста, чтобы обеспечить доверие домена, из которого поступает сообщение, поэтому была предоставлена `<AppDomains>` альтернатива.  Объект, переданный обработителу, содержит домен, который в настоящее время размещен в диалоговом окте `DialogParentMessageReceived` в качестве `origin` свойства. Код должен использовать обработник, чтобы убедиться, что сообщение приходит из доверенного домена. Ниже приведен пример.
+
+```javascript
+function onMessageFromParent(arg) {
+    if (arg.origin === "https://some.trusted.domain.com") {
+        // process message
+    } else {
+        dialog.close();
+        showNotification("Messages from " + arg.origin + " are not accepted.");
+    }
+}
+```
+
+Например, код может использовать [методы Office.onReady или Office.initialize](initialize-add-in.md) для хранения массива доверенных доменов в глобальной переменной. Затем `arg.origin` свойство можно проверить в обработнике с этим списком.
+
+> [!TIP]
+> Параметр был добавлен в метод в качестве обязательного параметра `DialogMessageOptions` `messageChild` в середине 2021 г. Старые надстройки, отправив сообщение с помощью метода, перестают работать до тех пор, пока не будут обновлены для использования нового параметра. Пока же только Office для *Windows* пользователи и системные администраторы могут включить эти надстройки для продолжения работы, указав доверенный домен (ы) с параметром реестра. Подробные **сведения см.** в статье Совет по передаче сообщений с перекрестным доменом в [время запуска хостов.](#cross-domain-messaging-to-the-host-runtime)
 
 ## <a name="closing-the-dialog-box"></a>Закрытие диалогового окна
 

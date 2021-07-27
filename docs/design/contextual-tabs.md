@@ -3,12 +3,12 @@ title: Создание настраиваемой контекстной вкл
 description: Узнайте, как добавить настраиваемые контекстные вкладки в Office надстройку.
 ms.date: 07/15/2021
 localization_priority: Normal
-ms.openlocfilehash: a8eaffe0402601ee11a063d0df5670ff208be4fd
-ms.sourcegitcommit: b20041962a7f921a8c40eb9ae55bc6992450b243
+ms.openlocfilehash: bdb620c6f91e1337cbaacd2648b661bd6dcb8913
+ms.sourcegitcommit: f46e4aeb9c31f674380dd804fd72957998b3a532
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "53456231"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "53536003"
 ---
 # <a name="create-custom-contextual-tabs-in-office-add-ins"></a>Создание настраиваемой контекстной вкладки Office надстроек
 
@@ -18,6 +18,8 @@ ms.locfileid: "53456231"
 > В этой статье предполагается, что вы уже ознакомились с приведенной ниже документацией. Просмотрите ее, если вы работали с командами надстроек (настраиваемыми элементами меню и кнопками ленты) некоторое время назад.
 >
 > - [Основные концепции команд надстроек](add-in-commands.md)
+
+[!INCLUDE [Animation of contextual tabs and enabling buttons](../includes/animation-contextual-tabs-enable-button.md)]
 
 > [!IMPORTANT]
 > Пользовательские контекстные вкладки в настоящее время поддерживаются только на Excel и только на этих платформах и сборках:
