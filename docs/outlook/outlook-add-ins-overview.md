@@ -1,15 +1,15 @@
 ---
 title: Обзор надстроек Outlook
 description: Надстройки Outlook — это встраиваемые в Outlook решения от сторонних разработчиков, использующие нашу веб-платформу.
-ms.date: 07/14/2021
+ms.date: 07/16/2021
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 0d9dd51627cd797351e4e43957375b7a493b2b57
-ms.sourcegitcommit: 30a861ece18255e342725e31c47f01960b854532
+ms.openlocfilehash: b49a3aedc88064ec4eeb7e305192319f933abc1a
+ms.sourcegitcommit: 3cc8f6adee0c7c68c61a42da0d97ed5ea61be0ac
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "53455490"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53661287"
 ---
 # <a name="outlook-add-ins-overview"></a>Обзор надстроек Outlook
 
@@ -69,6 +69,8 @@ ms.locfileid: "53455490"
 - Создано с помощью [Simple MAPI](https://support.microsoft.com/topic/a3d3f856-eaf6-b6d8-3617-186c0a1123c5). Simple MAPI используется, если пользователь Office создает или отправляет сообщение электронной почты из приложения Office в Windows, когда Outlook закрыт. Например, пользователь может создать сообщение электронной почты Outlook во время работы в Word, что запускает окно создания сообщения Outlook без запуска основного приложения Outlook. Однако если Outlook уже запущен, когда пользователь создает сообщение электронной почты из Word, это не сценарий Simple MAPI, поэтому надстройки Outlook работают в форме создания при условии, что выполнены другие требования к активации.
 
 В общем случае Outlook может активировать надстройки в формах просмотра для элементов в папке "Отправленные", за исключением надстроек, активируемых на основании совпадений строк для известных сущностей. Дополнительные сведения о причинах этого см. "Поддержка известных сущностей" в статье [Сопоставление строк в элементе Outlook как известных сущностей](match-strings-in-an-item-as-well-known-entities.md).
+
+В настоящее время при проектировании и внедрении надстроек для мобильных клиентов следует учитывать и другие факторы. Дополнительные сведения см. в статье [Добавление поддержки мобильных устройств в надстройку Outlook](add-mobile-support.md#compose-mode-and-appointments).
 
 ## <a name="supported-clients"></a>Поддерживаемые клиенты
 

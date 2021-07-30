@@ -1,15 +1,15 @@
 ---
-ms.date: 06/14/2021
+ms.date: 07/27/2021
 title: Настройка надстройки Office для использования общей среды выполнения JavaScript
 ms.prod: non-product-specific
 description: Настройте надстройку Office для использования общей среды выполнения JavaScript, чтобы применять дополнительные возможности ленты, области задач и пользовательских функций.
 localization_priority: Priority
-ms.openlocfilehash: 9874d0fef2dc4966f106d1d88e4e897469300c0b
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 9e24545bac2b2aaad58c2441ed0a5741c78c053d
+ms.sourcegitcommit: 3cc8f6adee0c7c68c61a42da0d97ed5ea61be0ac
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076219"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53661147"
 ---
 # <a name="configure-your-office-add-in-to-use-a-shared-javascript-runtime"></a>Настройка надстройки Office для использования общей среды выполнения JavaScript
 
@@ -216,9 +216,9 @@ ms.locfileid: "53076219"
   - Пользовательские функции полностью поддерживают CORS.
   - Пользовательские функции могут вызывать API Office.js для чтения данных из электронной таблицы.
 
-Для Office в Windows общая среда выполнения требует наличия экземпляра браузера Microsoft Internet Explorer 11, как описано в статье [Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md). Кроме того, все кнопки, отображаемые вашей надстройкой на ленте, будут работать в этой же общей среде выполнения. На следующем рисунке показано, как пользовательские функции, пользовательский интерфейс ленты и код области задач будут запускаться в одной среде выполнения JavaScript.
+Для Office в Windows общая среда выполнения использует Microsoft Edge с WebView2 (на основе Chromium), если условия его использования выполнены, как объясняется в статье [Браузеры, используемые надстройками Office](../concepts/browsers-used-by-office-web-add-ins.md). В противном случае используется Internet Explorer 11. Кроме того, все кнопки, которые надстройка отображает на ленте, будут работать в одной и той же общей среде выполнения. На следующем рисунке показано, как пользовательские функции, пользовательский интерфейс ленты и код области задач будут запускаться в одной среде выполнения JavaScript.
 
-![Схема пользовательской функции, области задач и кнопок ленты, работающих в общей среде выполнения браузера IE в Excel.](../images/custom-functions-in-browser-runtime.png)
+![Схема пользовательской функции, области задач и кнопок ленты, работающих в общей среде выполнения браузера в Excel.](../images/custom-functions-in-browser-runtime.png)
 
 ### <a name="debugging"></a>Отладка
 
