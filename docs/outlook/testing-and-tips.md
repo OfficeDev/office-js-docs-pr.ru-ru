@@ -3,12 +3,12 @@ title: Развертывание и установка надстроек Outlo
 description: Создайте файл манифеста, разверните файл пользовательского интерфейса надстройки на веб-сервере, установите надстройку в своем почтовом ящике, а затем протестируйте ее.
 ms.date: 05/20/2020
 localization_priority: Priority
-ms.openlocfilehash: 86fcf82ddbb9b7e786ae905ad0c0bd864e6fbc56
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 59d758ae977c60fce36e788265081bc72b12faef
+ms.sourcegitcommit: 3cc8f6adee0c7c68c61a42da0d97ed5ea61be0ac
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53348876"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53661133"
 ---
 # <a name="deploy-and-install-outlook-add-ins-for-testing"></a>Развертывание и установка надстроек Outlook для тестирования
 
@@ -94,7 +94,7 @@ New-App -URL:"http://<fully-qualified URL">
 Вы также можете выбрать вариант с оплатой и использовать службу, размещающую локальные серверы Exchange Server и управляющую ими. Некоторые варианты:
 
 - [Rackspace](https://www.rackspace.com/email-hosting/exchange-server)
-- [Hostway](https://hostway.com/products-services-2/hosted-microsoft-exchange/)
+- [Hostway](https://hostway.com/microsoft-exchange/)
 
 Кроме того, если вы не хотите, чтобы ваши надстройки были доступны для пользователей, подключенных к локальной среде Exchange, вы можете настроить для [набора обязательных элементов](../reference/requirement-sets/outlook-api-requirement-sets.md#exchange-server-support) в манифесте надстройки версию 1.6 или более позднюю. Такие надстройки не будут проверяться в классическом интерфейсе Outlook в Интернете.
 

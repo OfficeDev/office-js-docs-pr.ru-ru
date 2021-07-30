@@ -1,15 +1,15 @@
 ---
 title: Excel Набор требований для API javaScript только для интернета
 description: Сведения о наборе требований ExcelApiOnline.
-ms.date: 07/01/2021
+ms.date: 07/23/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: ef4831cf6a6f9be1a5413c89ae0f971bef51a9b1
-ms.sourcegitcommit: aa73ec6367eaf74399fbf8d6b7776d77895e9982
+ms.openlocfilehash: c8c0282970cd384ea0e7f47762c1e24c6af6536a
+ms.sourcegitcommit: 3cc8f6adee0c7c68c61a42da0d97ed5ea61be0ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2021
-ms.locfileid: "53290805"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53661273"
 ---
 # <a name="excel-javascript-api-online-only-requirement-set"></a>Excel Набор требований для API javaScript только для интернета
 
@@ -50,6 +50,7 @@ if (Office.context.requirements.isSetSupported("ExcelApiOnline", "1.1")) {
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
+|[AutoFilter](/javascript/api/excel/excel.autofilter)|[clearColumnCriteria(columnIndex: number)](/javascript/api/excel/excel.autofilter#clearcolumncriteria-columnindex-)|Очищает критерии фильтрации столбцов автофайлов.|
 |[NamedSheetView](/javascript/api/excel/excel.namedsheetview)|[activate()](/javascript/api/excel/excel.namedsheetview#activate--)|Активирует это представление листа.|
 ||[delete()](/javascript/api/excel/excel.namedsheetview#delete--)|Удаляет представление листа из листа.|
 ||[дубликат (имя?: строка)](/javascript/api/excel/excel.namedsheetview#duplicate-name-)|Создает копию этого представления листа.|

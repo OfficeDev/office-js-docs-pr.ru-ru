@@ -1,14 +1,14 @@
 ---
 title: Браузеры, используемые надстройками Office
 description: Указывается, как операционная система и версия Office определяют браузер, используемый надстройками Office.
-ms.date: 06/18/2021
+ms.date: 07/27/2021
 localization_priority: Normal
-ms.openlocfilehash: 2555025cdd350da433eb499faae7e70f3956725f
-ms.sourcegitcommit: f46e4aeb9c31f674380dd804fd72957998b3a532
+ms.openlocfilehash: 1a6d1a6b0c1443b4c90fc38042a268c40c50de4c
+ms.sourcegitcommit: 3cc8f6adee0c7c68c61a42da0d97ed5ea61be0ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "53536027"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53661126"
 ---
 # <a name="browsers-used-by-office-add-ins"></a>Браузеры, используемые надстройками Office
 
@@ -49,7 +49,7 @@ Office Надстройки — это веб-приложения, которы
 
 <sup>3</sup> Если надстройка включает элемент манифеста, она не будет использовать Microsoft Edge с исходным `<Runtimes>` WebView (EdgeHTML). Если условия использования Microsoft Edge WebView2 (Chromium на основе) выполнены, надстройка использует этот браузер. В противном случае он использует Internet Explorer 11 независимо от Windows или Microsoft 365 версии. Дополнительные сведения см. в статье [Runtimes](../reference/manifest/runtimes.md).
 
-<sup>4</sup> Встраивляемый контроль WebView2 должен быть установлен в дополнение к установке Microsoft Edge, чтобы Office его встраить. Чтобы установить его, [см. Microsoft Edge WebView2 / Встраить веб-контент ... с Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/).
+<sup>4</sup> Необходимо установить встраивляемый контроль WebView2 таким образом, чтобы Office его можно встраить, и он не устанавливается с помощью Edge автоматически. Он устанавливается с Microsoft 365 версии 2101 или более поздней версии. Если у вас есть более раная версия Microsoft 365, используйте инструкции по установке управления в [Microsoft Edge WebView2 / Embed веб-контента ... с Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/).
 
 > [!IMPORTANT]
 > Internet Explorer 11 не поддерживает версии JavaScript, более поздние, чем ES5. Если у любого из пользователей надстройки есть платформы, которые используют Internet Explorer 11, то для синтаксиса и функций ECMAScript 2015 или более позднего времени у вас есть два варианта:

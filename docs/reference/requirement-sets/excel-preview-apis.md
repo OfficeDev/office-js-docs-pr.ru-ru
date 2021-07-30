@@ -1,15 +1,15 @@
 ---
 title: Предварительные версии API JavaScript для Excel
 description: Сведения о предстоящих Excel API JavaScript.
-ms.date: 07/02/2021
+ms.date: 07/23/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 39d526f194e1d9e818b8513058d2b414e0bf9673
-ms.sourcegitcommit: aa73ec6367eaf74399fbf8d6b7776d77895e9982
+ms.openlocfilehash: 4bceda6229270332ed7624b693913e47a065a066
+ms.sourcegitcommit: 3cc8f6adee0c7c68c61a42da0d97ed5ea61be0ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2021
-ms.locfileid: "53290798"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53661280"
 ---
 # <a name="excel-javascript-preview-apis"></a>Предварительные версии API JavaScript для Excel
 
@@ -21,11 +21,13 @@ ms.locfileid: "53290798"
 
 | Функциональная область | Описание | Соответствующие объекты |
 |:--- |:--- |:--- |
+| Таблицы данных диаграммы | Управление внешним видом, форматированием и видимостью таблиц данных на диаграммах. | [Диаграмма](/javascript/api/excel/excel.chart), [ChartDataTable](/javascript/api/excel/excel.chartdatatable), [ChartDataTableFormat](/javascript/api/excel/excel.chartdatatableformat) |
 | Задачи документа | Превратите комментарии в задачи, назначенные пользователям. | [DocumentTask](/javascript/api/excel/excel.documenttask) |
 | Удостоверения | Управление удостоверениями пользователей, включая имя отображения и адрес электронной почты. | [Identity](/javascript/api/excel/excel.identity), [IdentityCollection](/javascript/api/excel/excel.identitycollection), [IdentityEntity](/javascript/api/excel/excel.identityentity) |
 | Связанные типы данных | Добавляет поддержку типов данных, подключенных к Excel из внешних источников. | [LinkedDataType](/javascript/api/excel/excel.linkeddatatype)|
 | Связанные книги | Управление связями между книгами, включая поддержку обновления и разрыва ссылок на книги. | [LinkedWorkbook](/javascript/api/excel/excel.linkedworkbook), [LinkedWorkbookCollection](/javascript/api/excel/excel.linkedworkbookcollection) |
 | Стили таблиц | Обеспечивает управление шрифтом, границей, цветом заполнения и другими аспектами стилей таблиц. | [Таблица](/javascript/api/excel/excel.table), [PivotTable](/javascript/api/excel/excel.pivottable), [Slicer](/javascript/api/excel/excel.slicer) |
+| Запросы | Извлечение атрибутов запроса, таких как имя, дата обновления и количество запросов. | [Запрос](/javascript/api/excel/excel.query), [QueryCollection](/javascript/api/excel/excel.querycollection)|
 
 ## <a name="api-list"></a>Список API
 
@@ -33,9 +35,19 @@ ms.locfileid: "53290798"
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
-|[AutoFilter](/javascript/api/excel/excel.autofilter)|[clearColumnCriteria(columnIndex: number)](/javascript/api/excel/excel.autofilter#clearcolumncriteria-columnindex-)|Очищает условия фильтрации автофильтра.|
 |[ChangeDirectionState](/javascript/api/excel/excel.changedirectionstate)|[deleteShiftDirection](/javascript/api/excel/excel.changedirectionstate#deleteshiftdirection)|Представляет направление (например, вверх или влево), которое остальные ячейки будут смещаться при удалении ячейки или ячейки.|
 ||[insertShiftDirection](/javascript/api/excel/excel.changedirectionstate#insertshiftdirection)|Представляет направление (например, вниз или вправо), в которое будут перенесены существующие ячейки при вставке новой ячейки или ячеек.|
+|[Chart](/javascript/api/excel/excel.chart)|[getDataTable()](/javascript/api/excel/excel.chart#getdatatable--)|Получает таблицу данных на диаграмме.|
+||[getDataTableOrNullObject()](/javascript/api/excel/excel.chart#getdatatableornullobject--)|Получает таблицу данных на диаграмме.|
+|[ChartDataTable](/javascript/api/excel/excel.chartdatatable)|[format](/javascript/api/excel/excel.chartdatatable#format)|Представляет формат таблицы данных диаграммы, которая включает заполняемую таблицу, шрифт и пограничный формат.|
+||[showHorizontalBorder](/javascript/api/excel/excel.chartdatatable#showhorizontalborder)|Указывает, следует ли отображать горизонтальную границу таблицы данных.|
+||[showLegendKey](/javascript/api/excel/excel.chartdatatable#showlegendkey)|Указывает, следует ли показывать legendkey таблицы данных.|
+||[showOutlineBorder](/javascript/api/excel/excel.chartdatatable#showoutlineborder)|Указывает, следует ли отображать контурную границу таблицы данных.|
+||[showVerticalBorder](/javascript/api/excel/excel.chartdatatable#showverticalborder)|Указывает, следует ли отображать вертикальную границу таблицы данных.|
+||[visible](/javascript/api/excel/excel.chartdatatable#visible)|Указывает, следует ли показывать таблицу данных диаграммы.|
+|[ChartDataTableFormat](/javascript/api/excel/excel.chartdatatableformat)|[граница](/javascript/api/excel/excel.chartdatatableformat#border)|Представляет пограничный формат таблицы данных диаграммы, которая включает цвет, стиль строки и вес.|
+||[fill](/javascript/api/excel/excel.chartdatatableformat#fill)|Представляет формат заливки объекта, включая сведения о форматировании фона.|
+||[font](/javascript/api/excel/excel.chartdatatableformat#font)|Представляет атрибуты шрифта (например, имя шрифта, размер шрифта и цвет) для текущего объекта.|
 |[Comment](/javascript/api/excel/excel.comment)|[assignTask(assignee: Identity)](/javascript/api/excel/excel.comment#assigntask-assignee-)|Назначает задачу, прикрепленную к комментарию, для данного пользователя в качестве ассимилята.|
 ||[getTask()](/javascript/api/excel/excel.comment#gettask--)|Получает задачу, связанную с этим комментарием.|
 ||[getTaskOrNullObject()](/javascript/api/excel/excel.comment#gettaskornullobject--)|Получает задачу, связанную с этим комментарием.|
@@ -81,7 +93,7 @@ ms.locfileid: "53290798"
 |[DocumentTaskSchedule](/javascript/api/excel/excel.documenttaskschedule)|[dueDateTime](/javascript/api/excel/excel.documenttaskschedule#duedatetime)|Получает дату и время, когда должна быть поставлена задача.|
 ||[startDateTime](/javascript/api/excel/excel.documenttaskschedule#startdatetime)|Получает дату и время, которые должна начаться задача.|
 |[GroupShapeCollection](/javascript/api/excel/excel.groupshapecollection)|[getItemOrNullObject(key: string)](/javascript/api/excel/excel.groupshapecollection#getitemornullobject-key-)|Получает фигуру с ее именем или ИД.|
-|[Identity](/javascript/api/excel/excel.identity)|[displayName](/javascript/api/excel/excel.identity#displayname)|Представляет отображаемое имя пользователя.|
+|[Удостоверение](/javascript/api/excel/excel.identity)|[displayName](/javascript/api/excel/excel.identity#displayname)|Представляет отображаемое имя пользователя.|
 ||[email](/javascript/api/excel/excel.identity#email)|Представляет электронный адрес пользователя.|
 ||[id](/javascript/api/excel/excel.identity#id)|Представляет уникальный ID пользователя.|
 |[IdentityCollection](/javascript/api/excel/excel.identitycollection)|[add(assignee: Identity)](/javascript/api/excel/excel.identitycollection#add-assignee-)|Добавляет идентификатор пользователя в коллекцию.|
@@ -125,6 +137,15 @@ ms.locfileid: "53290798"
 ||[pivotStyle](/javascript/api/excel/excel.pivotlayout#pivotstyle)|Стиль, примененный к PivotTable.|
 ||[setStyle(style: string \| PivotTableStyle \| BuiltInPivotTableStyle)](/javascript/api/excel/excel.pivotlayout#setstyle-style-)|Задает стиль, применяемый к PivotTable.|
 |[PivotTableScopedCollection](/javascript/api/excel/excel.pivottablescopedcollection)|[getFirstOrNullObject()](/javascript/api/excel/excel.pivottablescopedcollection#getfirstornullobject--)|Получает первый pivotTable в коллекции.|
+|[Query](/javascript/api/excel/excel.query)|[error](/javascript/api/excel/excel.query#error)|Получает сообщение об ошибке запроса с последнего обновления запроса.|
+||[loadedTo](/javascript/api/excel/excel.query#loadedto)|Получает запрос 'loaded to' тип объекта.|
+||[loadedToDataModel](/javascript/api/excel/excel.query#loadedtodatamodel)|Указывает, загружен ли запрос в модель данных.|
+||[name](/javascript/api/excel/excel.query#name)|Получает имя запроса.|
+||[refreshDate](/javascript/api/excel/excel.query#refreshdate)|Получает дату и время последнего обновления запроса.|
+||[rowsLoadedCount](/javascript/api/excel/excel.query#rowsloadedcount)|Получает количество строк, загруженных при последнем обновлении запроса.|
+|[QueryCollection](/javascript/api/excel/excel.querycollection)|[getCount()](/javascript/api/excel/excel.querycollection#getcount--)|Получает количество запросов в книге.|
+||[getItem(key: string)](/javascript/api/excel/excel.querycollection#getitem-key-)|Получает запрос из коллекции на основе его имени.|
+||[items](/javascript/api/excel/excel.querycollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 |[Range](/javascript/api/excel/excel.range)|[getDependents()](/javascript/api/excel/excel.range#getdependents--)|Возвращает объект, представляющего диапазон, содержащий все иждивенцы ячейки в одной и той же таблице или `WorkbookRangeAreas` в нескольких таблицах.|
 ||[getPrecedents()](/javascript/api/excel/excel.range#getprecedents--)|Возвращает объект, представляющего диапазон, содержащий все прецеденты ячейки в одной и той же таблице или `WorkbookRangeAreas` в нескольких таблицах.|
 |[RefreshModeChangedEventArgs](/javascript/api/excel/excel.refreshmodechangedeventargs)|[refreshMode](/javascript/api/excel/excel.refreshmodechangedeventargs#refreshmode)|Режим обновления связанного типа данных.|
@@ -136,6 +157,7 @@ ms.locfileid: "53290798"
 ||[source](/javascript/api/excel/excel.refreshrequestcompletedeventargs#source)|Получает источник события.|
 ||[type](/javascript/api/excel/excel.refreshrequestcompletedeventargs#type)|Получает тип события.|
 ||[предупреждения](/javascript/api/excel/excel.refreshrequestcompletedeventargs#warnings)|Массив, содержащий все предупреждения, созданные из запроса на обновление.|
+|[Shape](/javascript/api/excel/excel.shape)|[displayName](/javascript/api/excel/excel.shape#displayname)|Получает имя отображения фигуры.|
 |[ShapeCollection](/javascript/api/excel/excel.shapecollection)|[addSvg(xml: string)](/javascript/api/excel/excel.shapecollection#addsvg-xml-)|Создает изображение SVG (масштабируемая векторная графика) из строки XML и добавляет его на лист.|
 ||[getItemOrNullObject(key: string)](/javascript/api/excel/excel.shapecollection#getitemornullobject-key-)|Получает фигуру с ее именем или ИД.|
 |[Slicer](/javascript/api/excel/excel.slicer)|[nameInFormula](/javascript/api/excel/excel.slicer#nameinformula)|Представляет имя среза, используемое в формуле.|
@@ -150,9 +172,12 @@ ms.locfileid: "53290798"
 |[TableFilteredEventArgs](/javascript/api/excel/excel.tablefilteredeventargs)|[tableId](/javascript/api/excel/excel.tablefilteredeventargs#tableid)|Получает ID таблицы, в которой применяется фильтр.|
 ||[type](/javascript/api/excel/excel.tablefilteredeventargs#type)|Получает тип события.|
 ||[worksheetId](/javascript/api/excel/excel.tablefilteredeventargs#worksheetid)|Получает ID таблицы, которая содержит таблицу.|
+|[TableRowCollection](/javascript/api/excel/excel.tablerowcollection)|[deleteRows(rows: number[] \| TableRow[])](/javascript/api/excel/excel.tablerowcollection#deleterows-rows-)|Удаление нескольких строк из таблицы.|
+||[deleteRowsAt(index: number, count?: number)](/javascript/api/excel/excel.tablerowcollection#deleterowsat-index--count-)|Удаление указанного количества строк из таблицы, начиная с указанного индекса.|
 |[TableScopedCollection](/javascript/api/excel/excel.tablescopedcollection)|[getItemOrNullObject(key: string)](/javascript/api/excel/excel.tablescopedcollection#getitemornullobject-key-)|Получает таблицу по имени или ИД.|
 |[Workbook](/javascript/api/excel/excel.workbook)|[linkedDataTypes](/javascript/api/excel/excel.workbook#linkeddatatypes)|Возвращает коллекцию связанных типов данных, которые являются частью книги.|
 ||[linkedWorkbooks](/javascript/api/excel/excel.workbook#linkedworkbooks)|Возвращает коллекцию связанных книг.|
+||[запросы](/javascript/api/excel/excel.workbook#queries)|Возвращает коллекцию запросов Power Query, которые являются частью книги.|
 ||[задачи](/javascript/api/excel/excel.workbook#tasks)|Возвращает коллекцию задач, присутствующих в книге.|
 ||[showPivotFieldList](/javascript/api/excel/excel.workbook#showpivotfieldlist)|Указывает, отображается ли область списка полей PivotTable на уровне книги.|
 ||[use1904DateSystem](/javascript/api/excel/excel.workbook#use1904datesystem)|Значение true, если в книге используется система дат 1904.|
