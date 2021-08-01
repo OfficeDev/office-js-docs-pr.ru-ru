@@ -3,12 +3,12 @@ title: Функция проверки при отправке для надст
 description: Позволяет надстройке настраивать те или иные параметры при отправке, а также обрабатывать элемент и запрещать пользователям выполнять определенные действия.
 ms.date: 06/16/2021
 localization_priority: Normal
-ms.openlocfilehash: 80047f4c8056bafa62d467f1e69dd334d168486a
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: fa39a934c0678f2ac3f59c08b488486dd8396c6c
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53348477"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671830"
 ---
 # <a name="on-send-feature-for-outlook-add-ins"></a>Функция проверки при отправке для надстроек Outlook
 
@@ -25,7 +25,7 @@ ms.locfileid: "53348477"
 
 В следующей таблице показаны поддерживаемые клиенто-серверные комбинации для функции отправки, включая минимально необходимое накопительное обновление, если это применимо. Исключенные комбинации не поддерживаются.
 
-| Client | Exchange Online | Exchange 2016<br>(Накопительное обновление 6 или более позднее) | Exchange 2019 на месте<br>(Накопительное обновление 1 или более позднее) |
+| Клиент | Exchange Online. | Exchange 2016<br>(Накопительное обновление 6 или более позднее) | Exchange 2019 на месте<br>(Накопительное обновление 1 или более позднее) |
 |---|:---:|:---:|:---:|
 |Windows:<br>версия 1910 (сборка 12130.20272) или более поздней версии|Да|Да|Да|
 |Mac:<br>сборка 16.47 или более поздней|Да|Да|Да|
@@ -71,7 +71,7 @@ ms.locfileid: "53348477"
 
 В настоящее время на функцию проверки при отправке действуют перечисленные ниже ограничения.
 
-- **Функция append-on-send** &ndash; При вызове [тела. В обработнике отправки appendOnSendAsync](/javascript/api/outlook/office.body?view=outlook-js-1.9&preserve-view=true#appendonsendasync-data--options--callback-) возвращается ошибка.
+- **Функция append-on-send** &ndash; При вызове [тела. В обработнике отправки appendOnSendAsync](/javascript/api/outlook/office.body?view=outlook-js-1.9&preserve-view=true#appendOnSendAsync_data__options__callback_) возвращается ошибка.
 - **AppSource**. Надстройки Outlook, в которых используется функция проверки при отправке, невозможно публиковать в [AppSource](https://appsource.microsoft.com), так как они не проходят проверку AppSource. Надстройки, использующие функцию проверки при отправке, должны разворачиваться администраторами.
 - **Манифест**. Для каждой надстройки поддерживается только одно событие `ItemSend`. Если манифест содержит несколько событий `ItemSend`, он не пройдет проверку.
 - **Производительность**. &ndash;Многочисленные случаи приема-передачи пакетов на веб-сервере, где размещается надстройка, могут повлиять на ее производительность. Учитывайте влияние на производительность при создании надстроек, требующих выполнения нескольких операций с сообщениями или собраниями.
@@ -387,10 +387,10 @@ Get-OWAMailboxPolicy OWAOnSendAddinAllUserPolicy | Set-OWAMailboxPolicy –OnSen
 
 В обработнике отправки:
 
-1. Вызов [displayDialogAsync,](/javascript/api/office/office.ui?view=outlook-js-preview&preserve-view=true#displaydialogasync-startaddress--options--callback-) чтобы открыть диалоговое окно, чтобы щелчки мыши и клавиши были отключены.
+1. Вызов [displayDialogAsync,](/javascript/api/office/office.ui?view=outlook-js-preview&preserve-view=true#displayDialogAsync_startAddress__options__callback_) чтобы открыть диалоговое окно, чтобы щелчки мыши и клавиши были отключены.
 
     > [!IMPORTANT]
-    > Чтобы получить это поведение в классическом Outlook в Интернете, необходимо задан параметр [displayInIframe](/javascript/api/office/office.dialogoptions?view=outlook-js-preview&preserve-view=true#displayiniframe) в `true` `options` параметре `displayDialogAsync` вызова.
+    > Чтобы получить это поведение в классическом Outlook в Интернете, необходимо задан параметр [displayInIframe](/javascript/api/office/office.dialogoptions?view=outlook-js-preview&preserve-view=true#displayInIframe) в `true` `options` параметре `displayDialogAsync` вызова.
 
 1. Реализация обработки элемента.
 1. Закройте диалоговое окно. Кроме того, обработать, что произойдет, если пользователь закрывает диалоговое окно.
@@ -487,7 +487,7 @@ function validateBody(event) {
 Функция `validateBody` возвращает текущий текст в заданном формате (HTML) и передает нужный объект события `ItemSend` в метод обратного вызова. Помимо метода `getAsync`, объект `Body` также предоставляет метод `setAsync`, с помощью которого вы можете заменить текст сообщения на указанный.
 
 > [!NOTE]
-> Дополнительные сведения см. в статьях [Объект Event](/javascript/api/office/office.addincommands.event) и [Body.getAsync](/javascript/api/outlook/office.Body#getasync-coerciontype--options--callback-).
+> Дополнительные сведения см. в статьях [Объект Event](/javascript/api/office/office.addincommands.event) и [Body.getAsync](/javascript/api/outlook/office.body#getAsync_coercionType__options__callback_).
   
 
 ### <a name="notificationmessages-object-and-eventcompleted-method"></a>Объект `NotificationMessages` и метод `event.completed`

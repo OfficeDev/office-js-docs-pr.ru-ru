@@ -3,12 +3,12 @@ title: Рекомендации и правила Office dialog API
 description: Предоставляет правила и лучшие практики для API Office диалогов, такие как лучшие практики для одно-страничного приложения (SPA)
 ms.date: 07/19/2021
 localization_priority: Normal
-ms.openlocfilehash: 1f5162cd4071b2b37b973cdcd16614e9f448c208
-ms.sourcegitcommit: f46e4aeb9c31f674380dd804fd72957998b3a532
+ms.openlocfilehash: c994625a662b2eed31f139819f4a1d7cf8418c6a
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "53535985"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671219"
 ---
 # <a name="best-practices-and-rules-for-the-office-dialog-api"></a>Рекомендации и правила Office dialog API
 
@@ -25,9 +25,9 @@ ms.locfileid: "53535985"
 - URL-адрес, переданный [методу displayDialogAsync,](/javascript/api/office/office.ui) должен быть в том же домене, что и сама надстройка. Это не может быть поддомен. Но страница, которая передается ему, может перенаправляться на страницу в другом домене.
 - В окне хост, которое может быть области [](../reference/manifest/functionfile.md) задач или файл функций без пользовательского интерфейса команды надстройки, может одновременно открываться только одно диалоговое окно.
 - В диалоговом окне Office только два API:
-  - Функция [messageParent.](/javascript/api/office/office.ui#messageparent-message-)
+  - Функция [messageParent.](/javascript/api/office/office.ui#messageParent_message__messageOptions_)
   - `Office.context.requirements.isSetSupported`(Дополнительные сведения см. в [Office приложениях и требованиях API.)](specify-office-hosts-and-api-requirements.md)
-- Функция [messageParent](/javascript/api/office/office.ui#messageparent-message-) обычно должна быть вызвана со страницы в том же домене, что и сама надстройка, но это не является обязательным. Дополнительные сведения см. [в сообщении cross-domain messaging to the host runtime.](dialog-api-in-office-add-ins.md#cross-domain-messaging-to-the-host-runtime)
+- Функция [messageParent](/javascript/api/office/office.ui#messageParent_message__messageOptions_) обычно должна быть вызвана со страницы в том же домене, что и сама надстройка, но это не является обязательным. Дополнительные сведения см. [в сообщении cross-domain messaging to the host runtime.](dialog-api-in-office-add-ins.md#cross-domain-messaging-to-the-host-runtime)
 
 ## <a name="best-practices"></a>Рекомендации
 

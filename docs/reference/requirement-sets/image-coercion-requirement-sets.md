@@ -4,12 +4,12 @@ description: Поддержка наборов требований к прин�
 ms.date: 02/19/2021
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 29614718378fd51013360a2a922e11f89bca14b8
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 35fed16003fe217e6f1f53d8c790cf78547308cf
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53350220"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671620"
 ---
 # <a name="image-coercion-requirement-sets"></a>Наборы обязательных элементов для приведения изображений
 
@@ -17,7 +17,7 @@ ms.locfileid: "53350220"
 
 ## <a name="imagecoercion-11"></a>ImageCoercion 1.1
 
-ImageCoercion 1.1 позволяет преобразования в изображение () при записи `Office.CoercionType.Image` данных с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) метода. Поддерживаются следующие приложения.
+ImageCoercion 1.1 позволяет преобразования в изображение () при записи `Office.CoercionType.Image` данных с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__options__callback_) метода. Поддерживаются следующие приложения.
 
 - Excel 2013 г. и более поздней Windows
 - Excel 2016 и позднее на Mac
@@ -34,7 +34,7 @@ ImageCoercion 1.1 позволяет преобразования в изобр�
 
 ## <a name="imagecoercion-12"></a>ImageCoercion 1.2
 
-ImageCoercion 1.2 позволяет преобразования в формат SVG () при записи данных `Office.CoercionType.XmlSvg` с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/office.document#setselecteddataasync-data--options--callback-) метода. Поддерживаются следующие приложения.
+ImageCoercion 1.2 позволяет преобразования в формат SVG () при записи данных `Office.CoercionType.XmlSvg` с помощью [`Document.setSelectedDataAsync`](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__options__callback_) метода. Поддерживаются следующие приложения.
 
 - Excel на Windows (подключен к подписке Microsoft 365)
 - Excel Mac (подключен к подписке Microsoft 365)

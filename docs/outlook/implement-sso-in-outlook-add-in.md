@@ -3,18 +3,18 @@ title: 'Сценарий: реализация единого входа для 
 description: Узнайте, как реализовать единый вход в службе с помощью маркера единого входа и маркера удостоверения Exchange, предоставляемых надстройкой Outlook.
 ms.date: 02/09/2021
 localization_priority: Normal
-ms.openlocfilehash: 44a1ee10af3f49a3738526b0ee7daf6cada3774b
-ms.sourcegitcommit: fefc279b85e37463413b6b0e84c880d9ed5d7ac3
+ms.openlocfilehash: 07e3672860a063f8bf14ef9a653f97a8244e2c3e
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50234235"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671452"
 ---
 # <a name="scenario-implement-single-sign-on-to-your-service-in-an-outlook-add-in"></a>Сценарий: реализация единого входа для службы в надстройке Outlook
 
 В этой статье мы рассмотрим рекомендуемый способ совместного применения [маркера доступа для единого входа](authenticate-a-user-with-an-sso-token.md) и [маркера удостоверения Exchange](authenticate-a-user-with-an-identity-token.md) для обеспечения единого входа во внутренней службе. Применяя эти маркеры вместе, вы можете воспользоваться преимуществами маркера доступа для единого входа, если этот токен доступен, при этом обеспечив работу надстройки даже при отсутствии такого маркера (например, когда пользователь переходит на клиент, не поддерживающий подобные маркеры, или почтовый ящик пользователя находится на локальном сервере Exchange Server).
 
-Пример надстройки, которая реализует идеи из этой статьи, см. в статье Об [SSO надстройки Outlook.](https://github.com/OfficeDev/Outlook-Add-in-SSO)
+Пример надстройки, реализуемой в этой статье, см. в Outlook [надстройки SSO.](https://github.com/OfficeDev/Outlook-Add-in-SSO)
 
 
 > [!NOTE]
@@ -83,7 +83,7 @@ ms.locfileid: "50234235"
 1. Надстройка сообщает пользователю, что ему необходимо пройти авторизацию для использования API, и предлагает перейти по ссылке или нажать кнопку для начала процесса.
 
     > [!NOTE]
-    > В примере надстройки в службе [SSO](https://github.com/OfficeDev/Outlook-Add-in-SSO) надстройки Outlook показано, как использовать [Dialog API](/javascript/api/office/office.ui#displaydialogasync-startaddress--options--callback-) и библиотеку [office-js-helpers](https://github.com/OfficeDev/office-js-helpers) в качестве параметров для запуска потока кода авторизации [OAuth2](/azure/active-directory/develop/active-directory-protocols-oauth-code) для API.
+    > В примере надстройки [в Outlook SSO](https://github.com/OfficeDev/Outlook-Add-in-SSO) надстройки показано, как использовать [API](/javascript/api/office/office.ui#displayDialogAsync_startAddress__options__callback_) диалогов и библиотеку [office-js-helpers](https://github.com/OfficeDev/office-js-helpers) в качестве вариантов запуска потока кода авторизации [OAuth2](/azure/active-directory/develop/active-directory-protocols-oauth-code) для API.
 
 1. По завершении потока надстройка отправляет маркер обновления внутреннему веб-API, включив маркер единого входа (если этот токен доступен) или маркер удостоверения Exchange.
 

@@ -3,12 +3,12 @@ title: Добавление поддержки мобильных устройс
 description: Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.
 ms.date: 07/16/2021
 localization_priority: Normal
-ms.openlocfilehash: 48cfb10d8e20df20436e836abbd58648e8e3a0a8
-ms.sourcegitcommit: 3cc8f6adee0c7c68c61a42da0d97ed5ea61be0ac
+ms.openlocfilehash: 270042d61077ae28abee79db024243bfbd5b6dc2
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/30/2021
-ms.locfileid: "53661245"
+ms.locfileid: "53671851"
 ---
 # <a name="add-support-for-add-in-commands-for-outlook-mobile"></a>Добавление поддержки команд надстроек для Outlook Mobile
 
@@ -80,7 +80,7 @@ ms.locfileid: "53661245"
 
 ### <a name="close-task-panes"></a>Закрытие области задач
 
-В Outlook Mobile области задач занимают весь экран, поэтому для возврата к сообщению их необходимо закрывать. Рекомендуем использовать метод [Office.context.ui.closeContainer](/javascript/api/office/office.ui#closecontainer--), чтобы закрыть область задач по завершении сценария.
+В Outlook Mobile области задач занимают весь экран, поэтому для возврата к сообщению их необходимо закрывать. Рекомендуем использовать метод [Office.context.ui.closeContainer](/javascript/api/office/office.ui#closeContainer__), чтобы закрыть область задач по завершении сценария.
 
 ### <a name="compose-mode-and-appointments"></a>Режим создания и встречи
 

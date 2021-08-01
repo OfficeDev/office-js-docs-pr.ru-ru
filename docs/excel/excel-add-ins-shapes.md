@@ -3,12 +3,12 @@ title: Работа с фигурами с Excel API JavaScript
 description: Узнайте, Excel определяет фигуры как любой объект, который находится на уровне рисования Excel.
 ms.date: 01/14/2020
 localization_priority: Normal
-ms.openlocfilehash: eeb6a1f76c839e4b550662b28b717bfd1bcca4e8
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 533a9cf9689bcaa5cd43635da836730a2af6ab61
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349450"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671473"
 ---
 # <a name="work-with-shapes-using-the-excel-javascript-api"></a>Работа с фигурами с Excel API JavaScript
 
@@ -25,11 +25,11 @@ Excel определяет фигуры как любой объект, кото
 
 | Shape | Добавление метода | Подпись |
 |-------|------------|-----------|
-| Геометрическая фигура | [addGeometricShape](/javascript/api/excel/excel.shapecollection#addgeometricshape-geometricshapetype-) | `addGeometricShape(geometricShapeType: Excel.GeometricShapeType): Excel.Shape` |
-| Изображение (JPEG или PNG) | [addImage](/javascript/api/excel/excel.shapecollection#addimage-base64imagestring-) | `addImage(base64ImageString: string): Excel.Shape` |
-| Line | [addLine](/javascript/api/excel/excel.shapecollection#addline-startleft--starttop--endleft--endtop--connectortype-) | `addLine(startLeft: number, startTop: number, endLeft: number, endTop: number, connectorType?: Excel.ConnectorType): Excel.Shape` |
-| SVG | [addSvg](/javascript/api/excel/excel.shapecollection#addsvg-xml-) | `addSvg(xml: string): Excel.Shape` |
-| Текстовое поле | [addTextBox](/javascript/api/excel/excel.shapecollection#addtextbox-text-) | `addTextBox(text?: string): Excel.Shape` |
+| Геометрическая фигура | [addGeometricShape](/javascript/api/excel/excel.shapecollection#addGeometricShape_geometricShapeType_) | `addGeometricShape(geometricShapeType: Excel.GeometricShapeType): Excel.Shape` |
+| Изображение (JPEG или PNG) | [addImage](/javascript/api/excel/excel.shapecollection#addImage_base64ImageString_) | `addImage(base64ImageString: string): Excel.Shape` |
+| Line | [addLine](/javascript/api/excel/excel.shapecollection#addLine_startLeft__startTop__endLeft__endTop__connectorType_) | `addLine(startLeft: number, startTop: number, endLeft: number, endTop: number, connectorType?: Excel.ConnectorType): Excel.Shape` |
+| SVG | [addSvg](/javascript/api/excel/excel.shapecollection#addSvg_xml_) | `addSvg(xml: string): Excel.Shape` |
+| Текстовое поле | [addTextBox](/javascript/api/excel/excel.shapecollection#addTextBox_text_) | `addTextBox(text?: string): Excel.Shape` |
 
 ### <a name="geometric-shapes"></a>Геометрические фигуры
 
@@ -214,7 +214,7 @@ Excel.run(function (context) {
 
 ## <a name="export-shapes-as-images"></a>Экспорт фигур в качестве изображений
 
-Любой `Shape` объект можно преобразовать в изображение. [Shape.getAsImage](/javascript/api/excel/excel.shape#getasimage-format-) возвращает строку base64-encoded. Формат изображения указывается как переоформаемая в [](/javascript/api/excel/excel.pictureformat) `getAsImage` .
+Любой `Shape` объект можно преобразовать в изображение. [Shape.getAsImage](/javascript/api/excel/excel.shape#getAsImage_format_) возвращает строку base64-encoded. Формат изображения указывается как переоформаемая в [](/javascript/api/excel/excel.pictureformat) `getAsImage` .
 
 ```js
 Excel.run(function (context) {

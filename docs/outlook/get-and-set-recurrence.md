@@ -3,19 +3,19 @@ title: Просмотр и изменение повторения в надст
 description: В этой статье показано, как использовать API JavaScript для Office, чтобы просматривать и изменять различные свойства повторения элемента в надстройке Outlook.
 ms.date: 08/18/2020
 localization_priority: Normal
-ms.openlocfilehash: 0b179725677f071fe2ae7baf1c719add5ccd8aa7
-ms.sourcegitcommit: e9f23a2857b90a7c17e3152292b548a13a90aa33
+ms.openlocfilehash: 47f805dff855cec4e6a6cfd2792a86179fac48f9
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "46803746"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53670316"
 ---
 # <a name="get-and-set-recurrence"></a>Просмотр и изменение повторения
 
-Иногда требуется создать или обновить повторяющуюся встречу, например еженедельное собрание, посвященное ходу выполнения командного проекта, или ежегодное напоминание о дне рождения. Вы можете использовать API JavaScript для Office для управления шаблонами повторения ряда встреч в надстройке.
+Иногда требуется создать или обновить повторяющуюся встречу, например еженедельное собрание, посвященное ходу выполнения командного проекта, или ежегодное напоминание о дне рождения. Вы можете использовать Office API JavaScript для управления шаблонами повторения серии встреч в надстройки.
 
 > [!NOTE]
-> Поддержка этой функции появилась в наборе требований 1,7. См [клиенты и платформы](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
+> Поддержка этой функции была представлена в наборе требований 1.7. См [клиенты и платформы](../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
 ## <a name="available-recurrence-patterns"></a>Доступные расписания повторения
 
@@ -42,12 +42,12 @@ ms.locfileid: "46803746"
 
 |Состояние встречи|Возможность изменения повторения|Возможность просмотра повторения|
 |---|---|---|
-|Организатор встречи — создание ряда|Да ([`setAsync`][setAsync link])|Да ([`getAsync`][getAsync link])|
-|Организатор встречи — создание экземпляра|Нет (`setAsync` возвращает ошибку)|Да ([`getAsync`][getAsync link])|
-|Участник встречи — чтение ряда|Нет (`setAsync` недоступно)|Да ([`item.recurrence`][item.recurrence link])|
-|Участник встречи — чтение экземпляра|Нет (`setAsync` недоступно)|Да ([`item.recurrence`][item.recurrence link])|
-|Приглашение на собрание — чтение ряда|Нет (`setAsync` недоступно)|Да ([`item.recurrence`][item.recurrence link])|
-|Приглашение на собрание — чтение экземпляра|Нет (`setAsync` недоступно)|Да ([`item.recurrence`][item.recurrence link])|
+|Организатор встречи — создание ряда|Да ( [`setAsync`][setAsync link] )|Да ( [`getAsync`][getAsync link] )|
+|Организатор встречи — создание экземпляра|Нет (`setAsync` возвращает ошибку)|Да ( [`getAsync`][getAsync link] )|
+|Участник встречи — чтение ряда|Нет (`setAsync` недоступно)|Да ( [`item.recurrence`][item.recurrence link] )|
+|Участник встречи — чтение экземпляра|Нет (`setAsync` недоступно)|Да ( [`item.recurrence`][item.recurrence link] )|
+|Приглашение на собрание — чтение ряда|Нет (`setAsync` недоступно)|Да ( [`item.recurrence`][item.recurrence link] )|
+|Приглашение на собрание — чтение экземпляра|Нет (`setAsync` недоступно)|Да ( [`item.recurrence`][item.recurrence link] )|
 
 ## <a name="set-recurrence-as-the-organizer"></a>Изменение повторения в качестве организатора
 
@@ -76,9 +76,9 @@ function callback(asyncResult)
 }
 ```
 
-## <a name="change-recurrence-as-the-organizer"></a>Изменение периодичности в качестве организатора
+## <a name="change-recurrence-as-the-organizer"></a>Изменение повторения в качестве организатора
 
-В следующем примере организатор встречи получает в режиме создания объект повторения ряда встреч с учетом ряда или экземпляра этого ряда, а затем задает новое значение длительности повторения.
+В следующем примере в режиме составить организатор встречи получает объект повторения серии встреч с учетом серии или экземпляра этой серии, а затем задает новую продолжительность повторения.
 
 ```js
 Office.context.mailbox.item.recurrence.getAsync(callback);
@@ -200,16 +200,16 @@ var recurrenceType = recurrence.recurrenceType;
 
 [Событие RecurrenceChanged](/javascript/api/office/office.eventtype)
 
-[getAsync link]: /javascript/api/outlook/office.recurrence#getasync-options--callback-
+[getAsync link]: /javascript/api/outlook/office.recurrence#getAsync_options__callback_
 [item.recurrence link]: ../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties
-[setAsync link]: /javascript/api/outlook/office.recurrence#setasync-recurrencepattern--options--callback-
+[setAsync link]: /javascript/api/outlook/office.recurrence#setAsync_recurrencePattern__options__callback_
 
-[dayOfMonth link]: /javascript/api/outlook/office.recurrenceproperties#dayofmonth
-[dayOfWeek link]: /javascript/api/outlook/office.recurrenceproperties#dayofweek
+[dayOfMonth link]: /javascript/api/outlook/office.recurrenceproperties#dayOfMonth
+[dayOfWeek link]: /javascript/api/outlook/office.recurrenceproperties#dayOfWeek
 [days link]: /javascript/api/outlook/office.recurrenceproperties#days
-[firstDayOfWeek link]: /javascript/api/outlook/office.recurrenceproperties#firstdayofweek
+[firstDayOfWeek link]: /javascript/api/outlook/office.recurrenceproperties#firstDayOfWeek
 [interval link]: /javascript/api/outlook/office.recurrenceproperties#interval
 [month link]: /javascript/api/outlook/office.recurrenceproperties#month
-[weekNumber link]: /javascript/api/outlook/office.recurrenceproperties#weeknumber
+[weekNumber link]: /javascript/api/outlook/office.recurrenceproperties#weekNumber
 
 [SeriesTime link]: /javascript/api/outlook/office.seriestime

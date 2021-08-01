@@ -3,12 +3,12 @@ title: Включение и отключение команд надстрое�
 description: Узнайте, как изменить состояние ("Включено" или "Отключено") настраиваемых кнопок ленты и элементов меню в веб-надстройке Office.
 ms.date: 07/15/2021
 localization_priority: Normal
-ms.openlocfilehash: d11b5c188da971f18969ff0abe9787021fad6bf1
-ms.sourcegitcommit: f46e4aeb9c31f674380dd804fd72957998b3a532
+ms.openlocfilehash: 1836d84a387afbef415dddd305adcb4eb7687552
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "53536013"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671410"
 ---
 # <a name="enable-and-disable-add-in-commands"></a>Включение и отключение команд надстроек
 
@@ -79,7 +79,7 @@ API и разметка манифеста надстройки, описанн�
 Ниже приведены основные действия по изменению состояния "Включено" команды надстройки.
 
 1. Создание [объекта RibbonUpdaterData,](/javascript/api/office/office.ribbonupdaterdata) который (1) указывает команду и ее родительскую группу и вкладку по своим ID-адресам, как указано в манифесте; и (2) указывает состояние включенной или отключенной команды.
-2. Перенесите объект **RibbonUpdaterData** в метод [Office.ribbon.requestUpdate()](/javascript/api/office/office.ribbon?view=common-js&preserve-view=true#requestupdate-input-).
+2. Перенесите объект **RibbonUpdaterData** в метод [Office.ribbon.requestUpdate()](/javascript/api/office/office.ribbon?view=common-js&preserve-view=true#requestUpdate_input_).
 
 Ниже приведен простой пример. Обратите внимание, что из манифеста копируется "MyButton", "OfficeAddinTab1" и "CustomGroup111".
 

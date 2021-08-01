@@ -3,12 +3,12 @@ title: Создание настраиваемой контекстной вкл
 description: Узнайте, как добавить настраиваемые контекстные вкладки в Office надстройку.
 ms.date: 07/15/2021
 localization_priority: Normal
-ms.openlocfilehash: bdb620c6f91e1337cbaacd2648b661bd6dcb8913
-ms.sourcegitcommit: f46e4aeb9c31f674380dd804fd72957998b3a532
+ms.openlocfilehash: 8696a9a7815b39ddd0100b70f7f9eaa94b1f4a89
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "53536003"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671536"
 ---
 # <a name="create-custom-contextual-tabs-in-office-add-ins"></a>Создание настраиваемой контекстной вкладки Office надстроек
 
@@ -60,7 +60,7 @@ ms.locfileid: "53536003"
 
 ## <a name="define-the-groups-and-controls-that-appear-on-the-tab"></a>Определение групп и элементов управления, которые отображаются на вкладке
 
-В отличие от настраиваемой вкладки ядра, которые определяются с помощью XML в манифесте, настраиваемые контекстные вкладки определяются во время запуска с помощью BLOB JSON. Код разрезает blob в объект JavaScript, а затем передает объект [методу Office.ribbon.requestCreateControls.](/javascript/api/office/office.ribbon?view=common-js&preserve-view=true#requestCreateControls-tabDefinition-) Настраиваемые контекстные вкладки присутствуют только в документах, на которых в настоящее время запущена надстройка. Это отличается от настраиваемой основной вкладки, которые добавляются в ленту Office приложения при установке надстройки и остаются в момент открытия другого документа. Кроме того, `requestCreateControls` метод может запускаться только один раз в сеансе надстройки. Если он снова вызван, ошибка будет выброшена.
+В отличие от настраиваемой вкладки ядра, которые определяются с помощью XML в манифесте, настраиваемые контекстные вкладки определяются во время запуска с помощью BLOB JSON. Код разрезает blob в объект JavaScript, а затем передает объект [методу Office.ribbon.requestCreateControls.](/javascript/api/office/office.ribbon?view=common-js&preserve-view=true#requestCreateControls_tabDefinition_) Настраиваемые контекстные вкладки присутствуют только в документах, на которых в настоящее время запущена надстройка. Это отличается от настраиваемой основной вкладки, которые добавляются в ленту Office приложения при установке надстройки и остаются в момент открытия другого документа. Кроме того, `requestCreateControls` метод может запускаться только один раз в сеансе надстройки. Если он снова вызван, ошибка будет выброшена.
 
 > [!NOTE]
 > Структура свойств и свойств BLOB JSON (и имен ключей) примерно параллельна структуре элемента [CustomTab](../reference/manifest/customtab.md) и его элементов потомка в манифесте XML.
@@ -295,7 +295,7 @@ Office.onReady(async () => {
 
 Далее определите обработчики. Ниже приводится простой пример ошибки `showDataTab` [HostRestartNeeded,](#handle-the-hostrestartneeded-error) но см. ниже в этой статье для более надежной версии функции. Вот что нужно знать об этом коде:
 
-- Office определяет время обновления состояния ленты. Метод [Office.ribbon.requestUpdate](/javascript/api/office/office.ribbon?view=common-js&preserve-view=true#requestupdate-input-) очереди запроса на обновление. Метод разрешит объект сразу после очереди запроса, а не после обновления `Promise` ленты.
+- Office определяет время обновления состояния ленты. Метод [Office.ribbon.requestUpdate](/javascript/api/office/office.ribbon?view=common-js&preserve-view=true#requestUpdate_input_) очереди запроса на обновление. Метод разрешит объект сразу после очереди запроса, а не после обновления `Promise` ленты.
 - Параметром метода является объект `requestUpdate` [RibbonUpdaterData,](/javascript/api/office/office.ribbonupdaterdata) который (1) указывает вкладку по своему ID точно так, как указано в *JSON* и (2) указывает видимость вкладки.
 - Если у вас есть несколько пользовательских контекстных вкладок, которые должны быть видны в том же контексте, вы просто добавляете дополнительные объекты вкладок в `tabs` массив.
 

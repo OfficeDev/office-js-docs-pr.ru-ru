@@ -3,17 +3,17 @@ title: Просмотр и изменение получателей в надс
 description: Узнайте, как просмотреть, изменить или добавить получателей сообщения или встречи в надстройке Outlook.
 ms.date: 12/10/2019
 localization_priority: Normal
-ms.openlocfilehash: b679a61d1e326f0aed4018970d2dd77fc9cd4c25
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 23e523c773b90fc02ed68151ea3c0cc6641b94ee
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53348519"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53670253"
 ---
 # <a name="get-set-or-add-recipients-when-composing-an-appointment-or-message-in-outlook"></a>Просмотр, изменение или добавление получателей при создании встречи или сообщения в Outlook
 
 
-API Office JavaScript предоставляет асинхронные методы[(Recipients.getAsync,](/javascript/api/outlook/office.Recipients#getasync-options--callback-) [Recipients.setAsync](/javascript/api/outlook/office.Recipients#setasync-recipients--options--callback-)или [Recipients.addAsync)](/javascript/api/outlook/office.Recipients#addasync-recipients--options--callback-)для получения, набора или добавления получателей в форме записи встречи или сообщения. Эти асинхронные методы доступны только для составить надстройки. Чтобы использовать эти методы, убедитесь, что манифест надстройки был настроен соответствующим образом для Outlook, чтобы активировать надстройки в композитных формах, как описано в create [Outlook](compose-scenario.md)надстройки для создания форм .
+API Office JavaScript предоставляет асинхронные методы[(Recipients.getAsync,](/javascript/api/outlook/office.recipients#getAsync_options__callback_) [Recipients.setAsync](/javascript/api/outlook/office.recipients#setAsync_recipients__options__callback_)или [Recipients.addAsync)](/javascript/api/outlook/office.recipients#addAsync_recipients__options__callback_)для получения, набора или добавления получателей в форме записи встречи или сообщения. Эти асинхронные методы доступны только для составить надстройки. Чтобы использовать эти методы, убедитесь, что манифест надстройки был настроен соответствующим образом для Outlook, чтобы активировать надстройки в композитных формах, как описано в create [Outlook](compose-scenario.md)надстройки для создания форм .
 
 Некоторые свойства, представляющие получателей в сообщении или встрече, доступны для чтения в формах создания и чтения. Это свойства [optionalAttendees](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties) и [requiredAttendees](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties) для встреч, а также свойства [cc](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties) и [to](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties) для сообщений.
 

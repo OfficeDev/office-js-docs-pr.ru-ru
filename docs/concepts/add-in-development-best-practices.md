@@ -3,12 +3,12 @@ title: Рекомендации по разработке надстроек Off
 description: Применяйте лучшие практики при разработке для создания Office надстройки.
 ms.date: 05/12/2021
 localization_priority: Normal
-ms.openlocfilehash: 06b7f74692edbba1bc0ecdde723c4a661e830970
-ms.sourcegitcommit: 30f6c620380075e3459cac748ca0c656427b384d
+ms.openlocfilehash: 2dd8162814115398a89dd75a0542d1d077abf006
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "52330082"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671312"
 ---
 # <a name="best-practices-for-developing-office-add-ins"></a>Рекомендации по разработке надстроек Office
 
@@ -76,7 +76,7 @@ ms.locfileid: "52330082"
 
 ### <a name="optimize-for-touch"></a>Оптимизация для сенсорного управления
 
-- Используйте [свойство Context.touchEnabled,](/javascript/api/office/office.context#touchenabled) чтобы определить, включено ли Office приложение, надстройка включена.
+- Используйте [свойство Context.touchEnabled,](/javascript/api/office/office.context#touchEnabled) чтобы определить, включено ли Office приложение, надстройка включена.
 
   > [!NOTE]
   > Это свойство не поддерживается в Outlook.
@@ -90,7 +90,7 @@ ms.locfileid: "52330082"
 - Протестируйте надстройку на настоящем устройстве, выполнив [загрузку неопубликованного приложения ](../testing/sideload-an-office-add-in-on-ipad-and-mac.md).
 
 > [!NOTE]
-> Если для элементов проектирования используется React интерфейса [Fluent,](../design/using-office-ui-fabric-react.md) многие из этих элементов встроены в систему проектирования.
+> Если вы используете Fluent [интерфейс React](../design/using-office-ui-fabric-react.md) элементов дизайна, многие из этих элементов встроены в систему проектирования.
 
 
 ## <a name="optimize-and-monitor-add-in-performance"></a>Оптимизация и отслеживание производительности приложения

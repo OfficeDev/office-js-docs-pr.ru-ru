@@ -4,12 +4,12 @@ description: Узнайте, как использовать API Excel JavaScrip
 ms.date: 04/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: e3c1ddf45f50e87ccc77044b1425e6f021756f60
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 03ef1c15f214fcbd6a81d0b4f557e9816175d3b7
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349485"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671135"
 ---
 # <a name="remove-duplicates-using-the-excel-javascript-api"></a>Удаление дубликатов с Excel API JavaScript
 
@@ -17,7 +17,7 @@ ms.locfileid: "53349485"
 
 ## <a name="remove-rows-with-duplicate-entries"></a>Удаление строк с дублирующими записями
 
-Метод [Range.removeDuplicates](/javascript/api/excel/excel.range#removeduplicates-columns--includesheader-) удаляет строки с дублирующимися записями в указанных столбцах. Метод проходит через каждую строку в диапазоне от самого низкого значения индекса до индекса с самым высоким значением в диапазоне (сверху донизу). Строка удаляется, если значение в ее указанном столбце или столбцах уже встречалось в диапазоне. Строки в диапазоне под удаленной строкой сдвигаются вверх. Функция `removeDuplicates` не влияет на положение ячеек вне диапазона.
+Метод [Range.removeDuplicates](/javascript/api/excel/excel.range#removeDuplicates_columns__includesHeader_) удаляет строки с дублирующимися записями в указанных столбцах. Метод проходит через каждую строку в диапазоне от самого низкого значения индекса до индекса с самым высоким значением в диапазоне (сверху донизу). Строка удаляется, если значение в ее указанном столбце или столбцах уже встречалось в диапазоне. Строки в диапазоне под удаленной строкой сдвигаются вверх. Функция `removeDuplicates` не влияет на положение ячеек вне диапазона.
 
 Функция `removeDuplicates` использует параметр `number[]`, представляющий индексы столбцов, которые проверяются на наличие дубликатов. Этот массив отсчитывается от нуля относительно диапазона, а не листа. Метод также принимает параметр boolean, который указывает, является ли первая строка загонщиком. При значении **true** верхняя строка игнорируется при поиске дубликатов. Метод возвращает объект, который указывает количество удаленных строк и количество `removeDuplicates` `RemoveDuplicatesResult` оставшихся уникальных строк.
 

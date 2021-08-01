@@ -1,23 +1,23 @@
 ---
-title: Поиск специальных ячеек в диапазоне с помощью API JavaScript Excel
-description: Узнайте, как использовать API JavaScript Excel для поиска специальных ячеек, таких как ячейки с формулами, ошибками или числами.
+title: Поиск специальных ячеек в диапазоне с Excel API JavaScript
+description: Узнайте, как использовать API Excel JavaScript для поиска специальных ячеек, таких как ячейки с формулами, ошибками или числами.
 ms.date: 04/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 6504873bcd8ab50bd4c03fe4f54b71d0bd920c5b
-ms.sourcegitcommit: 54fef33bfc7d18a35b3159310bbd8b1c8312f845
+ms.openlocfilehash: 00bc87a350cc31eb17d579298d79bfde41d03d35
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51652891"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671128"
 ---
-# <a name="find-special-cells-within-a-range-using-the-excel-javascript-api"></a>Поиск специальных ячеек в диапазоне с помощью API JavaScript Excel
+# <a name="find-special-cells-within-a-range-using-the-excel-javascript-api"></a>Поиск специальных ячеек в диапазоне с Excel API JavaScript
 
-В этой статье данная статья содержит примеры кода, которые находят специальные ячейки в диапазоне с помощью API JavaScript Excel. Полный список свойств и методов, поддерживаемых объектом, см. в `Range` [класс Excel.Range.](/javascript/api/excel/excel.range)
+В этой статье данная статья содержит примеры кода, которые находят специальные ячейки в диапазоне с Excel API JavaScript. Полный список свойств и методов, поддерживаемый объектом, см. в `Range` [Excel. Класс Range](/javascript/api/excel/excel.range).
 
 ## <a name="find-ranges-with-special-cells"></a>Поиск диапазонов с помощью специальных ячеек
 
-Методы [Range.getSpecialCells](/javascript/api/excel/excel.range#getspecialcells-celltype--cellvaluetype-) и [Range.getSpecialCellsOrNullObject](/javascript/api/excel/excel.range#getspecialcellsornullobject-celltype--cellvaluetype-) находят диапазоны, основанные на характеристиках их клеток и типах значений их клеток. Оба этих метода возвращают объекты `RangeAreas`. Подписи методов из файла типов данных TypeScript:
+Методы [Range.getSpecialCells](/javascript/api/excel/excel.range#getSpecialCells_cellType__cellValueType_) и [Range.getSpecialCellsOrNullObject](/javascript/api/excel/excel.range#getSpecialCellsOrNullObject_cellType__cellValueType_) находят диапазоны, основанные на характеристиках их клеток и типах значений их клеток. Оба этих метода возвращают объекты `RangeAreas`. Подписи методов из файла типов данных TypeScript:
 
 ```typescript
 getSpecialCells(cellType: Excel.SpecialCellType, cellValueType?: Excel.SpecialCellValueType): Excel.RangeAreas;
@@ -124,6 +124,6 @@ Excel.run(function (context) {
 ## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
-- [Работа с ячейками с помощью API JavaScript Excel](excel-add-ins-cells.md)
-- [Поиск строки с помощью API JavaScript Excel](excel-add-ins-ranges-string-match.md)
+- [Работа с ячейками с Excel API JavaScript](excel-add-ins-cells.md)
+- [Поиск строки с Excel API JavaScript](excel-add-ins-ranges-string-match.md)
 - [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md)

@@ -3,12 +3,12 @@ title: Outlook API надстройки 1.10
 description: Набор требований 1.10 для Outlook API надстройки.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: f5fda91c4105d56dcf9d20d570e48851c8b6dfeb
-ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
+ms.openlocfilehash: 9e3e30590279036a08a93d8643cd56c2c73be78c
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2021
-ms.locfileid: "52592056"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671263"
 ---
 # <a name="outlook-add-in-api-requirement-set-110"></a>Outlook API надстройки 1.10
 
@@ -26,9 +26,9 @@ ms.locfileid: "52592056"
 - Добавлена [точка расширения LaunchEvent.](../../manifest/extensionpoint.md#launchevent)Добавлен новый поддерживаемый тип ExtensionPoint. Он настраивает функции активации на основе событий.
 - Добавлен [элемент манифеста LaunchEvents:](../../manifest/launchevents.md)добавляет элемент манифеста для поддержки настройки функции активации на основе событий.
 - Измененный [элемент манифеста runtimes:](../../manifest/runtimes.md)добавляет Outlook поддержку. Он ссылается на ФАЙЛЫ HTML и JavaScript, необходимые для функций активации на основе событий.
-- Добавлен [Office.context.mailbox.item.body.setSignatureAsync:](/javascript/api/outlook/office.body?view=outlook-js-1.10&preserve-view=true#setsignatureasync-data--options--callback-)добавляет новую функцию в `Body` объект. Он добавляет или заменяет подпись в корпусе элемента в режиме Compose.
+- Добавлен [Office.context.mailbox.item.body.setSignatureAsync:](/javascript/api/outlook/office.body?view=outlook-js-1.10&preserve-view=true#setSignatureAsync_data__options__callback_)добавляет новую функцию в `Body` объект. Он добавляет или заменяет подпись в корпусе элемента в режиме Compose.
 - Добавлена [Office.context.mailbox.item.disableClientSignatureAsync:](office.context.mailbox.item.md#methods)добавляется новая функция, которая отключает подпись клиента для отправки почтового ящика в режиме Compose.
-- Добавлена [Office.context.mailbox.item.getComposeTypeAsync:](/javascript/api/outlook/office.messagecompose?view=outlook-js-1.10&preserve-view=true#getcomposetypeasync-options--callback-)добавляется новая функция, которая получает тип композитного сообщения в режиме Compose.
+- Добавлена [Office.context.mailbox.item.getComposeTypeAsync:](/javascript/api/outlook/office.messagecompose?view=outlook-js-1.10&preserve-view=true#getComposeTypeAsync_options__callback_)добавляется новая функция, которая получает тип композитного сообщения в режиме Compose.
 - Добавлена [Office.context.mailbox.item.isClientSignatureEnabledAsync:](office.context.mailbox.item.md#methods)добавляется новая функция, которая проверяет, включена ли подпись клиента на элементе в режиме Compose.
 - Добавлены [Office. MailboxEnums.ActionType:](/javascript/api/outlook/office.mailboxenums.actiontype)Добавляет новый список. Он представляет тип настраиваемого действия в уведомлении.
 - Добавлен [Office.MailboxEnums.ComposeType:](/javascript/api/outlook/office.mailboxenums.composetype?view=outlook-js-1.10&preserve-view=true)Добавляет новый список, доступный в режиме Compose.

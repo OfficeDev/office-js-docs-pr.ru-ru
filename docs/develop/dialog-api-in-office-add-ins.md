@@ -3,12 +3,12 @@ title: Использование Office Dialog API в вашей надстро
 description: Узнайте основы создания диалоговых окне в Office надстройке.
 ms.date: 07/19/2021
 localization_priority: Normal
-ms.openlocfilehash: a8f3b6425dceaccbb50a56bfb7e05aafe061967d
-ms.sourcegitcommit: f46e4aeb9c31f674380dd804fd72957998b3a532
+ms.openlocfilehash: 46fa02281c9e13241496c617cad9738a71102370
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "53535978"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671354"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
@@ -89,7 +89,7 @@ Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 
 > - Для ясности в этом разделе мы вызываем целевой адрес сообщения на хост-странице, но строго говоря, сообщения идут к времени запуска *JavaScript* в области задач (или времени запуска, в который размещен файл функций). [](../reference/manifest/functionfile.md) Различие имеет важное значение только в случае меж доменных сообщений. Дополнительные сведения см. [в сообщении cross-domain messaging to the host runtime.](#cross-domain-messaging-to-the-host-runtime)
 > - Диалоговое окно не может взаимодействовать с хост-страницей в области задач, если Office библиотека API JavaScript не загружена на страницу. (Как и любая страница, использующая библиотеку API Office JavaScript, скрипт для страницы должен назначить метод свойству `Office.initialize` или `Office.onReady` вызову. Дополнительные сведения см. в [материале Initialize your Office надстройки.)](initialize-add-in.md)
 
-Код в диалоговом окне использует [функцию messageParent](/javascript/api/office/office.ui#messageparent-message-) для отправки строки сообщения на хост-страницу. Строка может быть словом, предложением, BLOB XML, строками JSON или другими строками, которые можно сериализировать в строку или отбрасовать в строку. Ниже приведен пример.
+Код в диалоговом окне использует [функцию messageParent](/javascript/api/office/office.ui#messageParent_message__messageOptions_) для отправки строки сообщения на хост-страницу. Строка может быть словом, предложением, BLOB XML, строками JSON или другими строками, которые можно сериализировать в строку или отбрасовать в строку. Ниже приведен пример.
 
 ```js
 if (loginSuccess) {
@@ -250,11 +250,11 @@ Office.context.ui.messageParent("Some message", { targetOrigin: "*" });
 
 ## <a name="pass-information-to-the-dialog-box"></a>Передача данных диалоговому окну
 
-Ваша надстройка может отправлять [](dialog-api-in-office-add-ins.md#open-a-dialog-box-from-a-host-page) сообщения с хост-страницы в диалоговое окно с помощью [Dialog.messageChild.](/javascript/api/office/office.dialog#messagechild-message-)
+Ваша надстройка может отправлять [](dialog-api-in-office-add-ins.md#open-a-dialog-box-from-a-host-page) сообщения с хост-страницы в диалоговое окно с помощью [Dialog.messageChild.](/javascript/api/office/office.dialog#messageChild_message__messageOptions_)
 
 ### <a name="use-messagechild-from-the-host-page"></a>Использование `messageChild()` на хост-странице
 
-При вызове Office диалогового API для открытия диалоговое окно возвращается объект [Диалог.](/javascript/api/office/office.dialog) Она должна быть назначена переменной, которая имеет больше возможностей, чем метод [displayDialogAsync,](/javascript/api/office/office.ui#displaydialogasync-startaddress--callback-) так как объект будет ссылаться на другие методы. Ниже приведен пример.
+При вызове Office диалогового API для открытия диалоговое окно возвращается объект [Диалог.](/javascript/api/office/office.dialog) Она должна быть назначена переменной, которая имеет больше возможностей, чем метод [displayDialogAsync,](/javascript/api/office/office.ui#displayDialogAsync_startAddress__callback_) так как объект будет ссылаться на другие методы. Ниже приведен пример.
 
 ```javascript
 var dialog;
@@ -273,7 +273,7 @@ function processMessage(arg) {
 }
 ```
 
-Этот `Dialog` объект имеет метод [messageChild,](/javascript/api/office/office.dialog#messagechild-message-) который отправляет в диалоговое окно любую строку, включая строковые данные. Это вызывает событие `DialogParentMessageReceived` в диалоговом окне. Код должен обрабатывать это событие, как показано в следующем разделе.
+Этот `Dialog` объект имеет метод [messageChild,](/javascript/api/office/office.dialog#messageChild_message__messageOptions_) который отправляет в диалоговое окно любую строку, включая строковые данные. Это вызывает событие `DialogParentMessageReceived` в диалоговом окне. Код должен обрабатывать это событие, как показано в следующем разделе.
 
 Рассмотрим сценарий, в котором пользовательский интерфейс диалогов связан с текущим активным таблицой и положением этого таблицы по отношению к другим таблицам. В следующем примере `sheetPropertiesChanged` отправляет свойства Excel таблицы в диалоговое окно. В этом случае текущий лист называется "Мой лист" и это второй лист в книге. Данные инкапсулированы в объекте и струнные, чтобы они могли быть переданы `messageChild` .
 
@@ -290,7 +290,7 @@ function sheetPropertiesChanged() {
 
 ### <a name="handle-dialogparentmessagereceived-in-the-dialog-box"></a>Обработать диалоговое окно DialogParentMessageReceived
 
-В диалоговом окне JavaScript зарегистрируйте обработчиватель события методом `DialogParentMessageReceived` [UI.addHandlerAsync.](/javascript/api/office/office.ui#addhandlerasync-eventtype--handler--options--callback-) Обычно это делается в [методах Office.onReady или Office.initialize,](initialize-add-in.md)как показано в следующем. (Более надежный пример ниже.)
+В диалоговом окне JavaScript зарегистрируйте обработчиватель события методом `DialogParentMessageReceived` [UI.addHandlerAsync.](/javascript/api/office/office.ui#addHandlerAsync_eventType__handler__options__callback_) Обычно это делается в [методах Office.onReady или Office.initialize,](initialize-add-in.md)как показано в следующем. (Более надежный пример ниже.)
 
 ```javascript
 Office.onReady()

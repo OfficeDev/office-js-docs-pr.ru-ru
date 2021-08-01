@@ -3,12 +3,12 @@ title: Указание ведущих приложений Office и требо
 description: Узнайте, как указать Office приложений и API для вашей надстройки, чтобы работать как ожидалось.
 ms.date: 05/04/2021
 localization_priority: Normal
-ms.openlocfilehash: dad4a562c523291d7af3c975c89111fab410220c
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: f1382bcdba0c3bb88c1d98075fc4b14eb0ca3b07
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53075966"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671184"
 ---
 # <a name="specify-office-applications-and-api-requirements"></a>Указание приложений Office и требований API
 
@@ -88,7 +88,7 @@ ms.locfileid: "53075966"
 | Notebook      | OneNote в Интернете                             | Области задач, контент     |
 | Presentation  | PowerPoint в Интернете, Windows, Mac, iPad      | Области задач, контент     |
 | Проект       | Project для Windows                             | Область задач              |
-| Workbook      | Excel в Интернете, Windows, Mac, iPad           | Области задач, контент     |
+| Книга      | Excel в Интернете, Windows, Mac, iPad           | Области задач, контент     |
 
 > [!NOTE]
 > Атрибут `Name` указывает Office клиентского приложения, которое может запустить надстройку. Office поддерживаются на разных платформах и запускаются на настольных компьютерах, веб-браузерах, планшетах и мобильных устройствах. Вам не удастся указать, какую платформу можно использовать для запуска надстройки. Например, если указать, Outlook в Интернете и Windows можно использовать для запуска `Mailbox` надстройки.
@@ -135,7 +135,7 @@ ms.locfileid: "53075966"
 
 ## <a name="use-runtime-checks-in-your-javascript-code"></a>Использование проверок в среде выполнения в коде JavaScript
 
-Может потребоваться предоставить дополнительные функциональные возможности в надстройки, если определенные наборы требований поддерживаются Office приложением. Например, если надстройка работает в Word 2016, вы можете использовать в ней API JavaScript для Word. Для этого используйте метод [isSetSupported](/javascript/api/office/office.requirementsetsupport#issetsupported-name--minversion-) с именем набора обязательных элементов. `isSetSupported`определяет, поддерживает ли Office приложение, которое работает надстройка, набор требований. Если набор требований поддерживается, возвращается true и запускается дополнительный код, `isSetSupported` использующий  членов API из этого набора требований. Если Office не поддерживает набор требований, возвращается ложный и дополнительный `isSetSupported` код не будет работать.  В следующем коде показан синтаксис для использования с `isSetSupported`.
+Может потребоваться предоставить дополнительные функциональные возможности в надстройки, если определенные наборы требований поддерживаются Office приложением. Например, если надстройка работает в Word 2016, вы можете использовать в ней API JavaScript для Word. Для этого используйте метод [isSetSupported](/javascript/api/office/office.requirementsetsupport#isSetSupported_name__minVersion_) с именем набора обязательных элементов. `isSetSupported`определяет, поддерживает ли Office приложение, которое работает надстройка, набор требований. Если набор требований поддерживается, возвращается true и запускается дополнительный код, `isSetSupported` использующий  членов API из этого набора требований. Если Office не поддерживает набор требований, возвращается ложный и дополнительный `isSetSupported` код не будет работать.  В следующем коде показан синтаксис для использования с `isSetSupported`.
 
 ```js
 if (Office.context.requirements.isSetSupported(RequirementSetName, MinimumVersion))

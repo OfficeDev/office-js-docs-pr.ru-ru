@@ -3,12 +3,12 @@ title: Локализация надстроек для Office
 description: Используйте API Office JavaScript для определения локального кода и отображения строк на основе Office приложения, а также для интерпретации или отображения данных на основе локального кода данных.
 ms.date: 02/23/2021
 localization_priority: Normal
-ms.openlocfilehash: b49d64f2c9391539ac2d5929ebff2a4ecc08b630
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 009a413426b5971e89b2a7a1aa2c233300e25529
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349828"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671233"
 ---
 # <a name="localization-for-office-add-ins"></a>Локализация надстроек для Office
 
@@ -519,6 +519,6 @@ API Office JavaScript предоставляет два свойства, под
 [DesktopSettings]:       ../reference/manifest/desktopsettings.md
 [TabletSettings]:        ../reference/manifest/tabletsettings.md
 [PhoneSettings]:         ../reference/manifest/phonesettings.md
-[displayLanguage]:       /javascript/api/office/office.context#displaylanguage
-[contentLanguage]:       /javascript/api/office/office.context#contentlanguage
+[displayLanguage]:       /javascript/api/office/office.context#displayLanguage
+[contentLanguage]:       /javascript/api/office/office.context#contentLanguage
 [RFC 3066]:              https://www.rfc-editor.org/info/rfc3066

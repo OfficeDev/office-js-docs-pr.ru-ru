@@ -3,12 +3,12 @@ title: Извлечение строк сущностей из элемента 
 description: Узнайте, как извлечь строки сущностей из элемента Outlook в надстройке Outlook.
 ms.date: 10/31/2019
 localization_priority: Normal
-ms.openlocfilehash: 987ba7626acb95bd5090e2f2350f71ecc8701e59
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: d266795e3794cfa293d073dafc1ca714644faa5b
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53348974"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671114"
 ---
 # <a name="extract-entity-strings-from-an-outlook-item"></a>Извлечение строк сущностей из элемента Outlook
 
@@ -205,7 +205,7 @@ div#meeting_suggestions
 
 ## <a name="extracting-entities-upon-initialization"></a>Извлечение сущностей при инициализации
 
-Когда происходит событие [Office.initialize](/javascript/api/office#office-initialize-reason-), надстройка для работы с сущностями вызывает метод [getEntities](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods) текущего элемента. Метод `getEntities` возвращает глобальной переменной `_MyEntities` массив экземпляров поддерживаемых сущностями. Ниже представлен соответствующий код JavaScript.
+Когда происходит событие [Office.initialize](/javascript/api/office#Office_initialize_reason_), надстройка для работы с сущностями вызывает метод [getEntities](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#methods) текущего элемента. Метод `getEntities` возвращает глобальной переменной `_MyEntities` массив экземпляров поддерживаемых сущностями. Ниже представлен соответствующий код JavaScript.
 
 
 ```js
@@ -261,17 +261,17 @@ function myGetAddresses()
 Когда пользователь нажимает кнопку **Получить** контактные сведения, обработник событий получает массив контактов вместе с их сведениями из свойства контактов объекта, если таково было `myGetContacts` [](/javascript/api/outlook/office.entities#contacts) `_MyEntities` извлечено. Каждый извлеченный контакт хранится в виде объекта [Contact](/javascript/api/outlook/office.contact) в массиве. Обработчик событий `myGetContacts` получает дополнительные данные о каждом контакте. Обратите внимание, что контекст определяет, может ли Outlook извлечения контакта из элемента подпись в конце сообщения электронной почты, или хотя бы некоторые из следующих сведений должны существовать в непосредственной близости от &mdash; контакта.
 
 
-- Имя контакта из свойства [Contact.personName](/javascript/api/outlook/office.contact#personname).
+- Имя контакта из свойства [Contact.personName](/javascript/api/outlook/office.contact#personName).
 
-- Название компании, связанное с контактом, из свойства [Contact.businessName](/javascript/api/outlook/office.contact#businessname).
+- Название компании, связанное с контактом, из свойства [Contact.businessName](/javascript/api/outlook/office.contact#businessName).
 
-- Массив номеров телефонов, связанных с контактом, из свойства [Contact.phoneNumbers](/javascript/api/outlook/office.contact#phonenumbers). Каждый номер телефона представлен объектом [PhoneNumber](/javascript/api/outlook/office.phonenumber).
+- Массив номеров телефонов, связанных с контактом, из свойства [Contact.phoneNumbers](/javascript/api/outlook/office.contact#phoneNumbers). Каждый номер телефона представлен объектом [PhoneNumber](/javascript/api/outlook/office.phonenumber).
 
-- Строка, представляющая телефонный номер из свойства [PhoneNumber.phoneString](/javascript/api/outlook/office.phonenumber#phonestring) для каждого элемента **PhoneNumber** в массиве телефонных номеров.
+- Строка, представляющая телефонный номер из свойства [PhoneNumber.phoneString](/javascript/api/outlook/office.phonenumber#phoneString) для каждого элемента **PhoneNumber** в массиве телефонных номеров.
 
 - Массив URL-адресов, связанных с контактом, из свойства [Contact.urls](/javascript/api/outlook/office.contact#urls). Каждый URL-адрес представлен в виде строки в элементе массива.
 
-- Массив адресов эл. почты, связанных с контактом, из свойства [Contact.emailAddresses](/javascript/api/outlook/office.contact#emailaddresses). Каждый адрес эл. почты представлен в виде строки в элементе массива.
+- Массив адресов эл. почты, связанных с контактом, из свойства [Contact.emailAddresses](/javascript/api/outlook/office.contact#emailAddresses). Каждый адрес эл. почты представлен в виде строки в элементе массива.
 
 - Массив почтовых адресов, связанных с контактом, из свойства [Contact.addresses](/javascript/api/outlook/office.contact#addresses). Каждый почтовый адрес представлен в виде строки в элементе массива.
 
@@ -346,7 +346,7 @@ function myGetContacts()
 ## <a name="extracting-email-addresses"></a>Извлечение электронных адресов
 
 
-Когда пользователь нажимает кнопку **Get Email Addresses** (Получить электронные адреса), обработчик события `myGetEmailAddresses` получает массив SMTP-адресов электронной почты из свойства [emailAddresses](/javascript/api/outlook/office.entities#emailaddresses) объекта `_MyEntities` (если был извлечен хотя бы один адрес). Каждый извлеченный электронный адрес сохраняется в массиве в виде строки. Для отображения списка извлеченных электронных адресов обработчик событий `myGetEmailAddresses` формирует локальную HTML-строку в `htmlText`. Ниже приведен соответствующий код JavaScript.
+Когда пользователь нажимает кнопку **Get Email Addresses** (Получить электронные адреса), обработчик события `myGetEmailAddresses` получает массив SMTP-адресов электронной почты из свойства [emailAddresses](/javascript/api/outlook/office.entities#emailAddresses) объекта `_MyEntities` (если был извлечен хотя бы один адрес). Каждый извлеченный электронный адрес сохраняется в массиве в виде строки. Для отображения списка извлеченных электронных адресов обработчик событий `myGetEmailAddresses` формирует локальную HTML-строку в `htmlText`. Ниже приведен соответствующий код JavaScript.
 
 
 ```js
@@ -369,7 +369,7 @@ function myGetEmailAddresses() {
 ## <a name="extracting-meeting-suggestions"></a>Извлечение приглашений на собрания
 
 
-Когда пользователь нажимает кнопку **Get Meeting Suggestions** (Получить приглашения на собрания), обработчик событий `myGetMeetingSuggestions` получает массив приглашений на собрания из свойства [meetingSuggestions](/javascript/api/outlook/office.entities#meetingsuggestions) объекта `_MyEntities` (если было извлечено хотя бы одно приглашение).
+Когда пользователь нажимает кнопку **Get Meeting Suggestions** (Получить приглашения на собрания), обработчик событий `myGetMeetingSuggestions` получает массив приглашений на собрания из свойства [meetingSuggestions](/javascript/api/outlook/office.entities#meetingSuggestions) объекта `_MyEntities` (если было извлечено хотя бы одно приглашение).
 
 
  > [!NOTE]
@@ -378,13 +378,13 @@ function myGetEmailAddresses() {
 Каждое извлеченное приглашение на собрание хранится в виде объекта [MeetingSuggestion](/javascript/api/outlook/office.meetingsuggestion) в массиве. Обработчик событий `myGetMeetingSuggestions` получает дополнительные данные о каждом приглашении на собрание:
 
 
-- Приглашение на собрание из свойства [MeetingSuggestion.meetingString](/javascript/api/outlook/office.meetingsuggestion#meetingstring).
+- Приглашение на собрание из свойства [MeetingSuggestion.meetingString](/javascript/api/outlook/office.meetingsuggestion#meetingString).
 
 - Массив участников собрания из свойства [MeetingSuggestion.attendees](/javascript/api/outlook/office.meetingsuggestion#attendees). Каждый участник представлен объектом [EmailUser](/javascript/api/outlook/office.emailuser).
 
-- Имя из свойства [EmailUser.displayName](/javascript/api/outlook/office.emailuser#displayname) для каждого участника.
+- Имя из свойства [EmailUser.displayName](/javascript/api/outlook/office.emailuser#displayName) для каждого участника.
 
-- SMTP-адрес из свойства [EmailUser.emailAddress](/javascript/api/outlook/office.emailuser#emailaddress) для каждого участника.
+- SMTP-адрес из свойства [EmailUser.emailAddress](/javascript/api/outlook/office.emailuser#emailAddress) для каждого участника.
 
 - Предлагаемое место проведения собрания из свойства [MeetingSuggestion.location](/javascript/api/outlook/office.meetingsuggestion#location).
 
@@ -455,14 +455,14 @@ function myGetMeetingSuggestions() {
 ## <a name="extracting-phone-numbers"></a>Извлечение телефонных номеров
 
 
-Когда пользователь нажимает кнопку **Get Phone Numbers** (Получить телефонные номера), обработчик событий `myGetPhoneNumbers` получает массив телефонных номеров из свойства [phoneNumbers](/javascript/api/outlook/office.entities#phonenumbers) объекта `_MyEntities` (если был извлечен хотя бы один номер). Каждый извлеченный номер сохраняется в качестве объекта [PhoneNumber](/javascript/api/outlook/office.phonenumber) в массиве. Обработчик событий `myGetPhoneNumbers` получает дополнительные данные о каждом телефонном номере.
+Когда пользователь нажимает кнопку **Get Phone Numbers** (Получить телефонные номера), обработчик событий `myGetPhoneNumbers` получает массив телефонных номеров из свойства [phoneNumbers](/javascript/api/outlook/office.entities#phoneNumbers) объекта `_MyEntities` (если был извлечен хотя бы один номер). Каждый извлеченный номер сохраняется в качестве объекта [PhoneNumber](/javascript/api/outlook/office.phonenumber) в массиве. Обработчик событий `myGetPhoneNumbers` получает дополнительные данные о каждом телефонном номере.
 
 
 - Строка, представляющая тип номера телефона (например, домашний номер) из свойства [PhoneNumber.type](/javascript/api/outlook/office.phonenumber#type).
 
-- Номер телефона из свойства [PhoneNumber.phoneString](/javascript/api/outlook/office.phonenumber#phonestring).
+- Номер телефона из свойства [PhoneNumber.phoneString](/javascript/api/outlook/office.phonenumber#phoneString).
 
-- Исходный номер телефона из свойства [PhoneNumber.originalPhoneString](/javascript/api/outlook/office.phonenumber#originalphonestring).
+- Исходный номер телефона из свойства [PhoneNumber.originalPhoneString](/javascript/api/outlook/office.phonenumber#originalPhoneString).
 
 Чтобы отобразить данные каждого номера телефона, обработчик событий `myGetPhoneNumbers` формирует локальную HTML-строку в `htmlText`. Ниже представлен соответствующий код JavaScript.
 
@@ -506,16 +506,16 @@ function myGetPhoneNumbers()
 ## <a name="extracting-task-suggestions"></a>Извлечение предложений задач
 
 
-Когда пользователь нажимает кнопку **Get Task Suggestions** (Получить предложения задач), обработчик событий `myGetTaskSuggestions` получает массив предложений задач из свойства [taskSuggestions](/javascript/api/outlook/office.entities#tasksuggestions) объекта `_MyEntities` (если было извлечено хотя бы одно предложение). Каждое извлеченное предложение сохраняется в качестве объекта [TaskSuggestion](/javascript/api/outlook/office.tasksuggestion) в массиве. Обработчик событий `myGetTaskSuggestions` получает дополнительные данные о каждом предложении задачи.
+Когда пользователь нажимает кнопку **Get Task Suggestions** (Получить предложения задач), обработчик событий `myGetTaskSuggestions` получает массив предложений задач из свойства [taskSuggestions](/javascript/api/outlook/office.entities#taskSuggestions) объекта `_MyEntities` (если было извлечено хотя бы одно предложение). Каждое извлеченное предложение сохраняется в качестве объекта [TaskSuggestion](/javascript/api/outlook/office.tasksuggestion) в массиве. Обработчик событий `myGetTaskSuggestions` получает дополнительные данные о каждом предложении задачи.
 
 
-- Строка, изначально определенная как предложение задачи из свойства [TaskSuggestion.taskString](/javascript/api/outlook/office.tasksuggestion#taskstring).
+- Строка, изначально определенная как предложение задачи из свойства [TaskSuggestion.taskString](/javascript/api/outlook/office.tasksuggestion#taskString).
 
 - Массив уполномоченных из свойства [TaskSuggestion.assignees](/javascript/api/outlook/office.tasksuggestion#assignees). Каждый уполномоченный представлен объектом [EmailUser](/javascript/api/outlook/office.emailuser).
 
-- Имя из свойства [EmailUser.displayName](/javascript/api/outlook/office.emailuser#displayname) для каждого уполномоченного.
+- Имя из свойства [EmailUser.displayName](/javascript/api/outlook/office.emailuser#displayName) для каждого уполномоченного.
 
-- SMTP-адрес из свойства [EmailUser.emailAddress](/javascript/api/outlook/office.emailuser#emailaddress) для каждого уполномоченного.
+- SMTP-адрес из свойства [EmailUser.emailAddress](/javascript/api/outlook/office.emailuser#emailAddress) для каждого уполномоченного.
 
 Чтобы отобразить данные каждого предложения задачи, обработчик событий `myGetTaskSuggestions` формирует локальную HTML-строку в `htmlText`. Ниже представлен соответствующий код JavaScript.
 

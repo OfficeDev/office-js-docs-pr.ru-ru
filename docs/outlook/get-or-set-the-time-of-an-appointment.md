@@ -3,16 +3,16 @@ title: Просмотр или изменение времени встречи 
 description: Узнайте, как просмотреть и изменить время начала и окончания встречи в надстройке Outlook.
 ms.date: 10/31/2019
 localization_priority: Normal
-ms.openlocfilehash: 5e02523852584d4b5f1ede9bcd191b9ee16d4c24
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 883b2be75348b72ac3c6b11bf558f7ac27aa2b8d
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44609135"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671333"
 ---
 # <a name="get-or-set-the-time-when-composing-an-appointment-in-outlook"></a>Просмотр или изменение времени при создании встречи в Outlook
 
-API JavaScript для Office предоставляет асинхронные методы ([time. Async](/javascript/api/outlook/office.Time#getasync-options--callback-) и [time. setAsync](/javascript/api/outlook/office.Time#setasync-datetime--options--callback-)) для получения и задания времени начала или окончания встречи, создаваемой пользователем. Эти асинхронные методы доступны только для создания надстроек. Чтобы использовать эти методы, убедитесь, что вы правильно настроили манифест надстройки в Outlook для активации надстройки в формах создания, как описано в статье [Создание надстроек Outlook для форм создания](compose-scenario.md).
+API Office JavaScript предоставляет асинхронные методы[(Time.getAsync](/javascript/api/outlook/office.time#getAsync_options__callback_) и [Time.setAsync),](/javascript/api/outlook/office.time#setAsync_dateTime__options__callback_)чтобы получить и установить время начала или окончания встречи, которую создает пользователь. Эти асинхронные методы доступны только для составить надстройки. Чтобы использовать эти методы, убедитесь, что манифест надстройки был настроен соответствующим образом для Outlook, чтобы активировать надстройки в композитных формах, как описано в create [Outlook](compose-scenario.md)надстройки для создания форм .
 
 Свойства [start](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties) и [end](../reference/objectmodel/preview-requirement-set/office.context.mailbox.item.md#properties) доступны для встреч в формах создания и чтения. в форме чтения доступ к свойствам можно получить напрямую из родительского объекта, как в следующем примере:
 
@@ -38,7 +38,7 @@ item.start.getAsync
 item.end.getAsync
 ```
 
-Как и в случае с большинством асинхронных методов в API JavaScript для Office, методы SetAsync и- **Async** и **setAsync** принимают необязательные входные параметры. Дополнительные сведения об указании последних см. в разделе [Передача дополнительных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-inline) статьи [Asynchronous programming in Office Add-ins](../develop/asynchronous-programming-in-office-add-ins.md).
+Как и большинство асинхронных методов в API javaScript Office JavaScript, **getAsync** и **setAsync** принимают необязательные параметры ввода. Дополнительные сведения об указании последних см. в разделе [Передача дополнительных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-inline) статьи [Asynchronous programming in Office Add-ins](../develop/asynchronous-programming-in-office-add-ins.md).
 
 
 ## <a name="get-the-start-or-end-time"></a>Получение времени начала или окончания

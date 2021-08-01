@@ -3,12 +3,12 @@ title: Создание надстройки области задач слов�
 description: Узнайте, как создать надстройку области задач словаря
 ms.date: 09/26/2019
 localization_priority: Normal
-ms.openlocfilehash: 2d79a40511d28cdf5d11c33435703009b1793dc2
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: e8667e77416caeb041af15141cd47b9cf35e2737
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53077227"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671662"
 ---
 # <a name="create-a-dictionary-task-pane-add-in"></a>Создание надстройки области задач словаря
 
@@ -531,9 +531,9 @@ a:hover, a:active
 
 - Событие [](/javascript/api/office) инициализации объекта, которое повышается при инициализации контекста надстройки, и предоставляет доступ к экземпляру объекта Document, который представляет документ, с которым взаимодействует надстройка. `Office` [](/javascript/api/office/office.document)
     
-- Метод [addHandlerAsync](/javascript/api/office/office.document#addhandlerasync-eventtype--handler--options--callback-) объекта, который вызван в функцию, чтобы добавить обработник событий для события `Document` `initialize` [SelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) документа для прослушивания изменений выбора пользователя.
+- Метод [addHandlerAsync](/javascript/api/office/office.document#addHandlerAsync_eventType__handler__options__callback_) объекта, который вызван в функцию, чтобы добавить обработник событий для события `Document` `initialize` [SelectionChanged](/javascript/api/office/office.documentselectionchangedeventargs) документа для прослушивания изменений выбора пользователя.
     
-- Метод [getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) объекта, который вызывается в функции при поднятии обработника событий, чтобы получить выбранное пользователем слово или фразу, принудить его к простому тексту, а затем выполнить функцию асинхронного `Document` `tryUpdatingSelectedWord()` `SelectionChanged` `selectedTextCallback` вызова.
+- Метод [getSelectedDataAsync](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__options__callback_) объекта, который вызывается в функции при поднятии обработника событий, чтобы получить выбранное пользователем слово или фразу, принудить его к простому тексту, а затем выполнить функцию асинхронного `Document` `tryUpdatingSelectedWord()` `SelectionChanged` `selectedTextCallback` вызова.
     
 - Когда выполняется асинхронная функция обратного вызова, которая передается в качестве аргумента обратного вызова метода, она получает значение выбранного текста при возвращении обратного `selectTextCallback`  `getSelectedDataAsync` вызова. Оно получает это значение из выбранного аргумента _CallbackText_ (который имеет тип [AsyncResult)](/javascript/api/office/office.asyncresult)с помощью свойства значения возвращаемого [](/javascript/api/office/office.asyncresult#status) `AsyncResult` объекта.
     

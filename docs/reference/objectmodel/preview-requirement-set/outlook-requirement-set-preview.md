@@ -3,12 +3,12 @@ title: Outlook набор требований к предварительном
 description: Функции и API, которые в настоящее время находятся в предварительном Outlook надстройки.
 ms.date: 06/15/2021
 localization_priority: Normal
-ms.openlocfilehash: f9d8afc2b4347a8fb13f8ab98a163fb63968123f
-ms.sourcegitcommit: 0bf0e076f705af29193abe3dba98cbfcce17b24f
+ms.openlocfilehash: 79ae0f200743607ee762feebd34dc0e4d192048a
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2021
-ms.locfileid: "53007764"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671914"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Outlook набор требований к предварительному просмотру API надстройки
 
@@ -108,7 +108,7 @@ ms.locfileid: "53007764"
 
 ### <a name="office-theme"></a>Тема Office
 
-#### <a name="officecontextofficetheme"></a>[Office.context.officeTheme](/javascript/api/office/office.context#officetheme)
+#### <a name="officecontextofficetheme"></a>[Office.context.officeTheme](/javascript/api/office/office.context#officeTheme)
 
 Добавлена возможность получения темы Office.
 
@@ -148,7 +148,7 @@ ms.locfileid: "53007764"
 
 ### <a name="shared-mailboxes"></a>Общие почтовые ящики
 
-Поддержка функций для общих папок (т. е. доступа делегатов) была выпущена в наборе [требований 1.8](../requirement-set-1.8/outlook-requirement-set-1.8.md). Однако поддержка общих почтовых ящиков теперь доступна в предварительном просмотре. Чтобы узнать больше, обратитесь к [разделу Включить общие папки и сценарии общих почтовых ящиков.](../../../outlook/delegate-access.md)
+Поддержка функций для общих папок (т. е. доступа делегатов) была выпущена в наборе [требований 1.8](../requirement-set-1.8/outlook-requirement-set-1.8.md). Однако поддержка общих почтовых ящиков теперь доступна в предварительном просмотре. Дополнительные сведения приводятся в статье [Включение сценариев общих папок и общих почтовых ящиков](../../../outlook/delegate-access.md).
 
 **Доступно в**: Outlook на Windows (подключен к подписке Microsoft 365), Outlook в Интернете (современная)
 

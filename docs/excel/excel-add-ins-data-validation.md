@@ -3,12 +3,12 @@ title: Добавление проверки данных в диапазоны 
 description: Узнайте, как Excel API JavaScript позволяют надстройке добавлять автоматическую проверку данных в таблицы, столбцы, строки и другие диапазоны в книге.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: e1f5729e6e85ff8af92968c2ad65c19e655106e2
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: a6a92aeae309912eff2ecebb2897a6a64a3e9966
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349527"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671163"
 ---
 # <a name="add-data-validation-to-excel-ranges"></a>Добавление проверки данных в диапазоны Excel
 
@@ -210,7 +210,7 @@ Excel.run(function (context) {
 
 ## <a name="remove-data-validation-from-a-range"></a>Удаление проверки данных из диапазона
 
-Чтобы удалить проверку данных из диапазона, вызовите метод [Range.dataValidation.clear()](/javascript/api/excel/excel.datavalidation#clear--).
+Чтобы удалить проверку данных из диапазона, вызовите метод [Range.dataValidation.clear()](/javascript/api/excel/excel.datavalidation#clear__).
 
 ```js
 myrange.dataValidation.clear()

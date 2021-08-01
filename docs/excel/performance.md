@@ -3,12 +3,12 @@ title: Оптимизация производительности API JavaScrip
 description: Оптимизация Excel надстройки с помощью API JavaScript.
 ms.date: 07/29/2020
 localization_priority: Normal
-ms.openlocfilehash: 5313bb3fe25d165e49cc0508e81d58294db48798
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 0379eecddf54877d863ec057a8193347fa3091f8
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349387"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671585"
 ---
 # <a name="performance-optimization-using-the-excel-javascript-api"></a>Оптимизация производительности с использованием API JavaScript для Excel
 
@@ -107,7 +107,7 @@ Excel.run(async (ctx) => {
 ```
 
 > [!NOTE]
-> Можно легко преобразовать объект Table в объект Range, используя метод [Table.convertToRange()](/javascript/api/excel/excel.table#converttorange--).
+> Можно легко преобразовать объект Table в объект Range, используя метод [Table.convertToRange()](/javascript/api/excel/excel.table#convertToRange__).
 
 ## <a name="see-also"></a>См. также
 

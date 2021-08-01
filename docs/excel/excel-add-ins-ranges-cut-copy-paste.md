@@ -4,12 +4,12 @@ description: Узнайте, как вырезать, скопировать и 
 ms.date: 04/02/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 2112702110b72e0020ed72090ce495abb3ff5366
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: a61ac967f267dfe3820e6972939d336e16ddd8b1
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53075826"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671177"
 ---
 # <a name="cut-copy-and-paste-ranges-using-the-excel-javascript-api"></a>Диапазоны вырезать, скопировать и вклеить с Excel API JavaScript
 
@@ -19,7 +19,7 @@ ms.locfileid: "53075826"
 
 ## <a name="copy-and-paste"></a>Copy and paste
 
-Метод [Range.copyFrom](/javascript/api/excel/excel.range#copyfrom-sourcerange--copytype--skipblanks--transpose-) реплицирует  действия copy и **Paste** Excel пользовательского интерфейса. Назначение — это `Range` объект, `copyFrom` который вызван. Источник для копирования передается как диапазон или адрес строки, представляющий диапазон.
+Метод [Range.copyFrom](/javascript/api/excel/excel.range#copyFrom_sourceRange__copyType__skipBlanks__transpose_) реплицирует  действия copy и **Paste** Excel пользовательского интерфейса. Назначение — это `Range` объект, `copyFrom` который вызван. Источник для копирования передается как диапазон или адрес строки, представляющий диапазон.
 
 В следующем примере кода копируются данные из **A1:E1** в диапазон, начиная с **G1** (который заканчивается вставкой в **G1:K1**).
 
@@ -80,7 +80,7 @@ Excel.run(function (context) {
 
 ## <a name="cut-and-paste-move-cells"></a>Вырезать и вклеить (переместить) ячейки
 
-Метод [Range.moveTo](/javascript/api/excel/excel.range#moveto-destinationrange-) перемещает ячейки в новое расположение в книге. Это поведение движения клеток работает так [](https://support.office.com/article/Move-or-copy-cells-and-cell-contents-803d65eb-6a3e-4534-8c6f-ff12d1c4139e) же, как при перемещении ячеек путем перетаскивание границы диапазона или при принятии действий **Cut** и **Paste.** Форматирование и значения диапазона перемещаются в указанное в качестве параметра `destinationRange` расположение.
+Метод [Range.moveTo](/javascript/api/excel/excel.range#moveTo_destinationRange_) перемещает ячейки в новое расположение в книге. Это поведение движения клеток работает так [](https://support.office.com/article/Move-or-copy-cells-and-cell-contents-803d65eb-6a3e-4534-8c6f-ff12d1c4139e) же, как при перемещении ячеек путем перетаскивание границы диапазона или при принятии действий **Cut** и **Paste.** Форматирование и значения диапазона перемещаются в указанное в качестве параметра `destinationRange` расположение.
 
 Следующий пример кода перемещает диапазон с помощью `Range.moveTo` метода. Обратите внимание, что если диапазон назначения меньше источника, он будет расширен, чтобы охватить исходный контент.
 

@@ -3,12 +3,12 @@ title: Набор обязательных элементов API для над�
 description: Функции и API, которые были Outlook надстройки и Office API JavaScript в рамках API почтовых ящиков 1.4.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 19d77784926ac09d5620eb36242701da59b39f09
-ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
+ms.openlocfilehash: b00413ef4c7f862a125c4a5a1d2190d4d60e87bf
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2021
-ms.locfileid: "52591018"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671256"
 ---
 # <a name="outlook-add-in-api-requirement-set-14"></a>Набор обязательных элементов API для надстройки Outlook 1.4
 
@@ -23,9 +23,9 @@ ms.locfileid: "52591018"
 
 ### <a name="change-log"></a>Журнал изменений
 
-- Добавлен [Office.context.ui.displayDialogAsync:](/javascript/api/office/office.ui#displaydialogasync-startaddress--options--callback-)отображает диалоговое окно в Office приложении.
-- Добавлен метод [Office.context.ui.messageParent](/javascript/api/office/office.ui#messageparent-message-). Доставляет сообщение из диалогового окна родительской странице.
-- Добавлен объект [Dialog](/javascript/api/office/office.dialog). Объект, возвращаемый при вызове метода [`displayDialogAsync`](/javascript/api/office/office.ui#displaydialogasync-startaddress--options--callback-).
+- Добавлен [Office.context.ui.displayDialogAsync:](/javascript/api/office/office.ui#displayDialogAsync_startAddress__options__callback_)отображает диалоговое окно в Office приложении.
+- Добавлен метод [Office.context.ui.messageParent](/javascript/api/office/office.ui#messageParent_message__messageOptions_). Доставляет сообщение из диалогового окна родительской странице.
+- Добавлен объект [Dialog](/javascript/api/office/office.dialog). Объект, возвращаемый при вызове метода [`displayDialogAsync`](/javascript/api/office/office.ui#displayDialogAsync_startAddress__options__callback_).
 
 ## <a name="see-also"></a>См. также
 

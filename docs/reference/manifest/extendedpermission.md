@@ -1,33 +1,33 @@
 ---
-title: Элемент Екстендедпермиссион в файле манифеста
-description: Определяет расширенное разрешение, необходимое надстройке для доступа к связанному API или функции.
+title: Элемент ExtendedPermission в файле манифеста
+description: Определяет расширенное разрешение, необходимое надстройки для доступа к связанному API или функции.
 ms.date: 10/15/2020
 localization_priority: Normal
-ms.openlocfilehash: 996cac59c44220d05165c7be6ae7c3d79d853271
-ms.sourcegitcommit: 4e7c74ad67ea8bf6b47d65b2fde54a967090f65b
+ms.openlocfilehash: 37859350cfaffdc14ab91d5026d67aa0a736ac56
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "48626402"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671760"
 ---
-# <a name="extendedpermission-element"></a>`ExtendedPermission` элементами
+# <a name="extendedpermission-element"></a>`ExtendedPermission` элемент
 
-Определяет расширенное разрешение, необходимое надстройке для доступа к связанному API или функции. `ExtendedPermission`Элемент является дочерним элементом объекта [екстендедпермиссионс](extendedpermissions.md).
+Определяет расширенное разрешение, необходимое надстройки для доступа к связанному API или функции. Элемент `ExtendedPermission` является детским элементом [ExtendedPermissions.](extendedpermissions.md)
 
 > [!IMPORTANT]
-> Поддержка этого элемента была введена в наборе требований 1,9. См [клиенты и платформы](../../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
+> Поддержка этого элемента была представлена в наборе требований 1.9. См [клиенты и платформы](../../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
 ## <a name="available-extended-permissions"></a>Доступные расширенные разрешения
 
-Ниже приведены доступные значения.
+Ниже приводится доступное значение.
 
 |Доступное значение|Описание|Hosts|
 |---|---|---|
-|`AppendOnSend`|Объявляет, что надстройка использует API [Office. Body. аппендонсендасинк](/javascript/api/outlook/office.body?view=outlook-js-preview&preserve-view=true#appendonsendasync-data--options--callback-) .|Outlook|
+|`AppendOnSend`|Объявляет, что надстройка использует [Office. API Body.appendOnSendAsync.](/javascript/api/outlook/office.body?view=outlook-js-preview&preserve-view=true#appendOnSendAsync_data__options__callback_)|Outlook|
 
-## <a name="extendedpermission-example"></a>`ExtendedPermission` Примеры
+## <a name="extendedpermission-example"></a>`ExtendedPermission` пример
 
-Ниже приведен пример `ExtendedPermission` элемента.
+Ниже приводится пример `ExtendedPermission` элемента.
 
 ```XML
 ...
