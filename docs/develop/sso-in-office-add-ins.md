@@ -3,12 +3,12 @@ title: Включение единого входа для надстроек Of
 description: Узнайте, как включить единый вход для надстроек Office с помощью обычной личной, рабочей или учебной учетной записи Майкрософт.
 ms.date: 07/30/2020
 localization_priority: Priority
-ms.openlocfilehash: f56b1b30d018f507e537909f1b75c37e189327a5
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: a776b434f42428cfc65b23a67f9ba6518028f677
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349737"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671501"
 ---
 # <a name="enable-single-sign-on-for-office-add-ins"></a>Включение единого входа для надстроек Office
 
@@ -31,7 +31,7 @@ ms.locfileid: "53349737"
 
 ![Схема единого входа.](../images/sso-overview-diagram.png)
 
-1. Код JavaScript надстройки вызывает новый API Office.js — [getAccessToken](/javascript/api/office-runtime/officeruntime.auth#getaccesstoken-options-). Он указывает клиентскому приложению Office, что необходимо получить маркер доступа к надстройке. См. [Пример маркера доступа](#example-access-token).
+1. Код JavaScript надстройки вызывает новый API Office.js — [getAccessToken](/javascript/api/office-runtime/officeruntime.auth#getAccessToken_options_). Он указывает клиентскому приложению Office, что необходимо получить маркер доступа к надстройке. См. [Пример маркера доступа](#example-access-token).
 2. Если вход в Office не выполнен, в клиентском приложении открывается всплывающее окно, в котором пользователю предлагается войти.
 3. Если пользователь запускает надстройку в первый раз, ему предлагается дать согласие.
 4. Клиентское приложение Office запрашивает **маркер надстройки** у конечной точки Azure AD версии 2.0 для текущего пользователя.
@@ -95,7 +95,7 @@ ms.locfileid: "53349737"
 
 Добавьте в надстройку код JavaScript для:
 
-- Вызова [getAccessToken](/javascript/api/office-runtime/officeruntime.auth#getaccesstoken-options-).
+- Вызова [getAccessToken](/javascript/api/office-runtime/officeruntime.auth#getAccessToken_options_).
 
 - Анализа маркера доступа или передачи его в код надстройки на стороне сервера.
 

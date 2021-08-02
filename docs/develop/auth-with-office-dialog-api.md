@@ -3,12 +3,12 @@ title: Проверка подлинности и авторизация с по
 description: Узнайте, как использовать диалоговый API-интерфейс Office, чтобы пользователи могли входить в Google, Facebook, Microsoft 365 и другие службы, защищенные платформой Microsoft Identity.
 ms.date: 07/19/2021
 localization_priority: Priority
-ms.openlocfilehash: 270a6214c9dbb268a19a1aee3e08c07da693ab87
-ms.sourcegitcommit: f46e4aeb9c31f674380dd804fd72957998b3a532
+ms.openlocfilehash: 706e4f50cea0ae15ff6b7b0f12e18821d18f768d
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "53536055"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671382"
 ---
 # <a name="authenticate-and-authorize-with-the-office-dialog-api"></a>Проверка подлинности и авторизация с помощью Dialog API для Office
 
@@ -25,7 +25,7 @@ ms.locfileid: "53536055"
   - Не существует общей среды выполнения с областью задач.
   - Оно не использует то же хранилище сеанса (свойство [Window.sessionStorage](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)), что и область задач.
 - Первая страница, открытая в диалоговом окне, должна размещаться в том же домене, что и область задач, включая протокол, поддомены и порт, если есть.
-- Из диалогового окна информация может направляться обратно в область задач с помощью метода [messageParent](/javascript/api/office/office.ui#messageparent-message-). (Рекомендуется вызывать этот метод только на странице, размещенной в том же домене, что и область задач, включая протокол, поддомены и порт. В противном случае с вызовом метода и обработкой сообщения сопряжены сложности. Дополнительные сведения см. в разделе [Междоменные сообщения в основной среде выполнения](dialog-api-in-office-add-ins.md#cross-domain-messaging-to-the-host-runtime).)
+- Из диалогового окна информация может направляться обратно в область задач с помощью метода [messageParent](/javascript/api/office/office.ui#messageParent_message__messageOptions_). (Рекомендуется вызывать этот метод только на странице, размещенной в том же домене, что и область задач, включая протокол, поддомены и порт. В противном случае с вызовом метода и обработкой сообщения сопряжены сложности. Дополнительные сведения см. в разделе [Междоменные сообщения в основной среде выполнения](dialog-api-in-office-add-ins.md#cross-domain-messaging-to-the-host-runtime).)
 
 Если диалоговое окно не является элементом iframe (оно не является им по умолчанию), оно позволяет открыть страницу входа поставщика удостоверений. Как показано ниже, характеристики диалогового окна Office определяют, каким образом вы используете библиотеки проверки подлинности и авторизации, такие как MSAL и Passport.
 
