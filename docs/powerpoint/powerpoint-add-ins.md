@@ -5,16 +5,16 @@ ms.date: 10/14/2020
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 476f8f34bc47d85842d5b31f8a0298bf2d5d7b18
-ms.sourcegitcommit: 42e6cfe51d99d4f3f05a3245829d764b28c46bbb
+ms.openlocfilehash: 106f11da21d994534219399829dca37e16bd2fe5
+ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "48740842"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "53671704"
 ---
 # <a name="powerpoint-add-ins"></a>Надстройки PowerPoint
 
-С помощью надстроек PowerPoint можно создавать удобные решения, подходящие для использования в презентациях на различных платформах, таких как Windows, iPad, Mac и браузеры. Можно создать два типа надстроек PowerPoint:
+С помощью надстроек PowerPoint можно создавать удобные решения, подходящие для использования в презентациях на различных платформах, таких как Windows, iPad, Mac и в браузере. Можно создать два типа надстроек PowerPoint:
 
 - **Контентные надстройки** позволяют добавлять динамический контент HTML5 в презентации. Например, ознакомьтесь с надстройкой [LucidChart Diagrams for PowerPoint](https://appsource.microsoft.com/product/office/wa104380117), с помощью которой можно добавить интерактивные схемы LucidChart в набор слайдов.
 
@@ -22,7 +22,7 @@ ms.locfileid: "48740842"
 
 ## <a name="powerpoint-add-in-scenarios"></a>Сценарии надстроек PowerPoint
 
-В приведенных в этой статье примерах кода показаны основные задачи по разработке надстроек для PowerPoint. Обратите внимание на следующее:
+В приведенных в этой статье примерах кода показаны основные задачи по разработке надстроек для PowerPoint. Обратите внимание на перечисленные ниже аспекты.
 
 - При отображении сведений эти примеры используют функцию `app.showNotification`, включенную в шаблоны проектов надстроек Office в Visual Studio. Если для разработки надстройки вы не используете Visual Studio, замените функцию `showNotification` собственным кодом.
 
@@ -39,9 +39,9 @@ ms.locfileid: "48740842"
 
 В представленном ниже примере кода:
 
-- Функция `getActiveFileView` вызывает метод [Document.getActiveViewAsync](/javascript/api/office/office.document#getactiveviewasync-options--callback-), который возвращает текущее представление презентации: "edit" (представления, в которых можно редактировать слайды, например  **Обычный режим** или **Режим структуры**) или "read" (**Показ слайдов** или **Режим чтения**).
+- Функция `getActiveFileView` вызывает метод [Document.getActiveViewAsync](/javascript/api/office/office.document#getActiveViewAsync_options__callback_), который возвращает текущее представление презентации: "edit" (представления, в которых можно редактировать слайды, например  **Обычный режим** или **Режим структуры**) или "read" (**Показ слайдов** или **Режим чтения**).
 
-- Функция `registerActiveViewChanged` вызывает метод [addHandlerAsync](/javascript/api/office/office.document#addhandlerasync-eventtype--handler--options--callback-) для регистрации обработчика для события [Document.ActiveViewChanged](/javascript/api/office/office.document).
+- Функция `registerActiveViewChanged` вызывает метод [addHandlerAsync](/javascript/api/office/office.document#addHandlerAsync_eventType__handler__options__callback_) для регистрации обработчика для события [Document.ActiveViewChanged](/javascript/api/office/office.document).
 
 
 ```js
@@ -90,7 +90,7 @@ function registerActiveViewChanged() {
 
 ## <a name="navigate-to-a-particular-slide-in-the-presentation"></a>Переход к определенному слайду презентации
 
-В следующем примере кода функция `getSelectedRange` вызывает метод [Document.getSelectedDataAsync](/javascript/api/office/office.document#getselecteddataasync-coerciontype--options--callback-) для получения объекта JSON, возвращаемого свойством `asyncResult.value`. Этот объект содержит массив с именем `slides`. Массив `slides` содержит идентификаторы, заголовки и индексы выбранного диапазона слайдов (или текущего слайда, если не выбрано несколько слайдов). Кроме того, он сохраняет идентификатор первого слайда в выбранном диапазоне в глобальной переменной.
+В следующем примере кода функция `getSelectedRange` вызывает метод [Document.getSelectedDataAsync](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__options__callback_) для получения объекта JSON, возвращаемого свойством `asyncResult.value`. Этот объект содержит массив с именем `slides`. Массив `slides` содержит идентификаторы, заголовки и индексы выбранного диапазона слайдов (или текущего слайда, если не выбрано несколько слайдов). Кроме того, он сохраняет идентификатор первого слайда в выбранном диапазоне в глобальной переменной.
 
 ```js
 function getSelectedRange() {
@@ -109,7 +109,7 @@ function getSelectedRange() {
 }
 ```
 
-В приведенном ниже примере кода функция `goToFirstSlide` вызывает метод [Document.goToByIdAsync](/javascript/api/office/office.document#gotobyidasync-id--gototype--options--callback-) для перехода к первому слайду, который был определен показанной ранее функцией `getSelectedRange`.
+В приведенном ниже примере кода функция `goToFirstSlide` вызывает метод [Document.goToByIdAsync](/javascript/api/office/office.document#goToByIdAsync_id__goToType__options__callback_) для перехода к первому слайду, который был определен показанной ранее функцией `getSelectedRange`.
 
 ```js
 function goToFirstSlide() {
@@ -148,7 +148,7 @@ function goToSlideByIndex() {
 
 ## <a name="get-the-url-of-the-presentation"></a>Получение URL-адреса презентации
 
-В приведенном ниже примере кода функция `getFileUrl` вызывает метод [Document.getFileProperties](/javascript/api/office/office.document#getfilepropertiesasync-options--callback-), чтобы получить URL-адрес файла презентации.
+В приведенном ниже примере кода функция `getFileUrl` вызывает метод [Document.getFileProperties](/javascript/api/office/office.document#getFilePropertiesAsync_options__callback_), чтобы получить URL-адрес файла презентации.
 
 ```js
 function getFileUrl() {
