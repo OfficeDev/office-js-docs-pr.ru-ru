@@ -1,14 +1,14 @@
 ---
 title: Преобразование проекта надстройки Office в Visual Studio в TypeScript
 description: Узнайте, как преобразовать проект Office надстройки в Visual Studio с помощью TypeScript.
-ms.date: 09/01/2020
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 2932c94052735436ce1357966832528679e6900d
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 33378fa1270d4ff43a9c8219f6c68675974834f3
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349982"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773883"
 ---
 # <a name="convert-an-office-add-in-project-in-visual-studio-to-typescript"></a>Преобразование проекта надстройки Office в Visual Studio в TypeScript
 
@@ -30,7 +30,7 @@ ms.locfileid: "53349982"
 - Пакет SDK для TypeScript версии 2.3 или более поздней (для Visual Studio 2019)
 
     > [!TIP]
-    > В [установщике Visual Studio](/visualstudio/install/modify-visual-studio) выберите вкладку **Отдельные компоненты** и прокрутите вниз до раздела **Пакеты SDK, библиотеки и платформы**. Убедитесь, что в этом разделе выбран хотя бы один из компонентов **Пакет SDK для TypeScript** (версии 2.3 или более поздней). Если не выбран ни один из компонентов **Пакет для TypeScript**, выберите последнюю доступную версию пакета SDK и нажмите кнопку **Изменить**, чтобы [установить этот отдельный компонент](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true#modify-individual-components). 
+    > В [установщике Visual Studio](/visualstudio/install/modify-visual-studio) выберите вкладку **Отдельные компоненты** и прокрутите вниз до раздела **Пакеты SDK, библиотеки и платформы**. Убедитесь, что в этом разделе выбран хотя бы один из компонентов **Пакет SDK для TypeScript** (версии 2.3 или более поздней). Если ни один из компонентов **TypeScript SDK** не выбран, выберите последнюю доступную версию SDK и выберите **Изменение** для установки этого [отдельного компонента.](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true#modify-individual-components)
 
 - Excel 2016 или более поздней версии
 
@@ -61,7 +61,7 @@ ms.locfileid: "53349982"
     > [!NOTE]
     > В проекте TypeScript могут быть как файлы TypeScript, так и файлы JavaScript, это не повлияет на компиляцию. Потому что TypeScript — это типизированная расширенная версия языка JavaScript. Код TypeScript компилируется в JavaScript.
 
-6. В **Home.ts** найдите строку `Office.initialize = function (reason) {` и добавьте строку сразу после нее для полизаполнения глобального объекта `window.Promise`, как показано здесь:
+6. В **Home.ts** найдите строку и добавьте строку сразу же после нее для полифулля `Office.initialize = function (reason) {` `window.Promise` глобального, как показано здесь.
 
     ```TypeScript
     Office.initialize = function (reason) {

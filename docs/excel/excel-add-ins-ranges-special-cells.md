@@ -1,15 +1,15 @@
 ---
 title: Поиск специальных ячеек в диапазоне с Excel API JavaScript
 description: Узнайте, как использовать API Excel JavaScript для поиска специальных ячеек, таких как ячейки с формулами, ошибками или числами.
-ms.date: 04/02/2021
+ms.date: 07/08/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 00bc87a350cc31eb17d579298d79bfde41d03d35
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: f1562351b045b5c8df1edb3c22f651883a836ad9
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671128"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773631"
 ---
 # <a name="find-special-cells-within-a-range-using-the-excel-javascript-api"></a>Поиск специальных ячеек в диапазоне с Excel API JavaScript
 

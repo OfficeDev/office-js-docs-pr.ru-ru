@@ -1,14 +1,14 @@
 ---
 title: Убедитесь, что надстройка Office совместима с существующей надстройкой COM
 description: Включить совместимость между Office надстройки и эквивалентной надстройки COM.
-ms.date: 07/08/2021
+ms.date: 08/03/2021
 localization_priority: Normal
-ms.openlocfilehash: 85e5d8cc06aa599862c92b59a26c744f28ca2d22
-ms.sourcegitcommit: 95fc1fc8a0dbe8fc94f0ea647836b51cc7f8601d
+ms.openlocfilehash: 616da7b722a8e7645d801aec211d9579a880f93e
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53418687"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53774268"
 ---
 # <a name="make-your-office-add-in-compatible-with-an-existing-com-add-in"></a>Убедитесь, что надстройка Office совместима с существующей надстройкой COM
 
@@ -20,13 +20,17 @@ ms.locfileid: "53418687"
 > Эта функция поддерживается следующей платформой и приложениями при под подключении к Microsoft 365 подписке. Надстройки COM не могут быть установлены на любой другой платформе, поэтому на этих платформах игнорируется элемент манифеста, который обсуждается позже в этой `EquivalentAddins` статье.
 >
 > - Excel, Word и PowerPoint на Windows (версия 1904 или более поздней версии)
+> - Outlook версии Windows версии 2102 или более поздней версии Exchange сервера
+>   - Exchange Online
+>   - Exchange 2019 Накопительное обновление 10 или более поздней версии[(KB5003612)](https://support.microsoft.com/topic/cumulative-update-10-for-exchange-server-2019-kb5003612-b1434cad-3fbc-4dc3-844d-82568e8d4344)
+>   - Exchange 2016 накопительного обновления 21 или более поздней версии[(KB5003611)](https://support.microsoft.com/topic/cumulative-update-21-for-exchange-server-2016-kb5003611-b7ba1656-abba-4a0b-9be9-dac45095d969)
 
 ## <a name="specify-an-equivalent-com-add-in"></a>Укажите эквивалентную надстройка COM
 
 ### <a name="manifest"></a>Манифест
 
 > [!IMPORTANT]
-> Применяется к Excel, PowerPoint и Word. Outlook поддержка скоро.
+> Применяется к Excel, Outlook, PowerPoint и Word.
 
 Чтобы обеспечить совместимость Office надстройки и надстройки COM, определите эквивалентную надстройка COM в манифесте Office надстройки. [](add-in-manifests.md) Затем Office на Windows надстройка COM вместо надстройки Office, если они установлены.
 
@@ -45,7 +49,7 @@ ms.locfileid: "53418687"
 ```
 
 > [!TIP]
-> Сведения о совместимости надстройки COM и совместимости XLL UDF см. в ссылке [Make your custom functions compatible with XLL user-defined functions.](../excel/make-custom-functions-compatible-with-xll-udf.md)
+> Сведения о совместимости надстройки COM и совместимости XLL UDF см. в ссылке [Make your custom functions compatible with XLL user-defined functions.](../excel/make-custom-functions-compatible-with-xll-udf.md) Не применимо для Outlook.
 
 ### <a name="group-policy"></a>Групповая политика
 

@@ -3,12 +3,12 @@ title: Откройте Excel веб-страницы и встроите Office
 description: Откройте Excel веб-страницы и встроите Office надстройки.
 ms.date: 02/09/2021
 localization_priority: Normal
-ms.openlocfilehash: 18f40b0030f4132a413a879e8b3419af49984b45
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: a7998d1f15f40a549f8ff9ddd9745d6bf9b8ab6d
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349380"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773141"
 ---
 # <a name="open-excel-from-your-web-page-and-embed-your-office-add-in"></a>Откройте Excel веб-страницы и встроите Office надстройки
 
@@ -115,6 +115,7 @@ We.WebExtensionStoreReference webExtensionStoreReference1 = new We.WebExtensionS
 ### <a name="upload-a-file-to-onedrive"></a>Upload файл для OneDrive
 
 1. Откройте решение **graph-tutorial.sln** в Visual Studio 2019 г. и откройте **PrivateSettings.config** файл.
+
 1. Добавьте новую область **Files.ReadWrite** в ключ   **ida:AppScopes,** чтобы он выглядел как следующий код.
 
     ```xml

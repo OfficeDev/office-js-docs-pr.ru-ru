@@ -1,22 +1,21 @@
 ---
 title: Альтернативные способы передачи сообщений в диалоговое окно со своей хост-страницы
 description: Узнайте обходные пути, которые можно использовать, если метод messageChild не поддерживается.
-ms.date: 09/24/2020
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 8da6bc3e1231bc6296a16fa153dc0e4ba1bd102b
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: d664178a804b206e02634326cc27699fc6ceb0f7
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349779"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773386"
 ---
 # <a name="alternative-ways-of-passing-messages-to-a-dialog-box-from-its-host-page"></a>Альтернативные способы передачи сообщений в диалоговое окно со своей хост-страницы
 
-Рекомендуемый способ передачи данных и сообщений с родительской страницы в диалоговое окно для детей используется метод, описанный в API диалоговых Office в Office надстройки `messageChild` . [](dialog-api-in-office-add-ins.md#pass-information-to-the-dialog-box) Если надстройка работает на платформе или хосте, не поддерживающей набор требований [DialogApi 1.2,](../reference/requirement-sets/dialog-api-requirement-sets.md)существует два других способа передать информацию в диалоговое окно:
+Рекомендуемый способ передачи данных и сообщений с родительской страницы в диалоговое окно для детей используется метод, описанный в API диалоговых Office в Office надстройки `messageChild` . [](dialog-api-in-office-add-ins.md#pass-information-to-the-dialog-box) Если надстройка работает на платформе или хосте, не поддерживающей набор требований [DialogApi 1.2,](../reference/requirement-sets/dialog-api-requirement-sets.md)существует два других способа передать информацию в диалоговое окно.
 
 - Добавьте параметры запроса в URL-адрес, который передается в метод `displayDialogAsync`.
 - Храните информацию в месте, доступном как для главного, так и для диалогового окна. Два окна не имеют общего хранилища сеансов (свойство [Window.sessionStorage),](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage) но если они имеют один и тот же домен *(включая* номер [порта,](https://www.w3schools.com/html/html5_webstorage.asp)если таковые имеются), они имеют общий локальный служба хранилища .\*
-
 
 > [!NOTE]
 > \* Существует ошибка, влияющая на вашу стратегию обработки маркеров. Если надстройка работает в **Office в Интернете** с использованием браузера Safari или Microsoft Edge, у диалогового окна и области задач нет одного общего локального хранилища, поэтому его нельзя использовать для связи между ними.

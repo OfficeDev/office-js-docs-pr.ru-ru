@@ -1,14 +1,14 @@
 ---
-ms.date: 09/25/2020
+ms.date: 07/08/2021
 description: Понимание Excel пользовательских функций, которые не используют области задач и их определенное время запуска JavaScript.
 title: Время запуска для пользовательских Excel пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: aa2cf2632ddf9eb1ad1eb202b031ee2ca686af01
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 8e08f4accd33e405beb5fab618e92dd28abf2246
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349625"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53774184"
 ---
 # <a name="runtime-for-ui-less-excel-custom-functions"></a>Время запуска для пользовательских Excel пользовательских функций
 
@@ -20,7 +20,7 @@ ms.locfileid: "53349625"
 
 Это время запуска JavaScript предоставляет доступ к API в пространстве имен, которые могут использоваться пользовательскими функциями без пользовательского интерфейса и областью задач для `OfficeRuntime` хранения данных.
 
-## <a name="requesting-external-data"></a>Запрос внешних данных
+## <a name="request-external-data"></a>Запрос внешних данных
 
 В настраиваемой функции без пользовательского интерфейса можно запрашивать внешние данные с помощью API типа [Fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API) или С помощью [XmlHttpRequest (XHR)](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest)— стандартного веб-API, который выдает HTTP-запросы для взаимодействия с серверами.
 
@@ -28,7 +28,7 @@ ms.locfileid: "53349625"
 
 Простая реализация CORS не может использовать файлы cookie и поддерживает только простые методы (GET, HEAD, POST). Простые запросы CORS принимают простые заголовки с именами полей `Accept`, `Accept-Language`, `Content-Language`. Вы также можете использовать `Content-Type` заготку в простой CORS, при условии, что тип контента `application/x-www-form-urlencoded` , `text/plain` или `multipart/form-data` .
 
-## <a name="storing-and-accessing-data"></a>Хранения данных и доступ к ним
+## <a name="store-and-access-data"></a>Хранение и доступ к данным
 
 В настраиваемой функции без пользовательского интерфейса можно хранить и получать доступ к данным с помощью `OfficeRuntime.storage` объекта. `Storage` — это система хранения сохраняемой, незашифрованной и ключевой ценности, которая предоставляет альтернативу [localStorage,](https://developer.mozilla.org/docs/Web/API/Window/localStorage)которая не может использоваться пользовательскими функциями без пользовательского интерфейса. `Storage` предоставляет 10 МБ данных на домен. Домены могут быть общими для более чем одной надстройки.
 
@@ -64,11 +64,12 @@ function StoreValue(key, value) {
 }
 ```
 
-## <a name="additional-considerations"></a>Дополнительные рекомендации
+## <a name="additional-considerations"></a>Дополнительные сведения
 
 Если надстройка использует только настраиваемые функции без пользовательского интерфейса, обратите внимание, что вы не можете получить доступ к объектной модели документа (DOM) с пользовательскими функциями без пользовательского интерфейса или использовать библиотеки, такие как jQuery, которые полагаются на DOM.
 
 ## <a name="next-steps"></a>Дальнейшие действия
+
 Узнайте, как [отламыть пользовательские функции без пользовательского интерфейса.](custom-functions-debugging.md)
 
 ## <a name="see-also"></a>См. также

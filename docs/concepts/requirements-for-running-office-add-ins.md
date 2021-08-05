@@ -1,14 +1,14 @@
 ---
 title: Требования для запуска надстроек Office
 description: Узнайте о требованиях клиента и сервера, которые необходимо выполнить конечному пользователю Office надстройки.
-ms.date: 03/18/2020
+ms.date: 07/27/2021
 localization_priority: Normal
-ms.openlocfilehash: 2aa5b2ffadffb86052ea55e06b1c0c49742543e6
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: f432eab8404b210bbe2bc2734f81873e80bc6397
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349135"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773232"
 ---
 # <a name="requirements-for-running-office-add-ins"></a>Требования для запуска надстроек Office
 
@@ -29,7 +29,7 @@ ms.locfileid: "53349135"
 > [!TIP]
 > Когда вы создаете и отлаживаете надстройку в Visual Studio, эта система развертывает и запускает соответствующие файлы веб-страниц локально с помощью IIS Express. Использовать дополнительный веб-сервер не требуется.
 
-Для надстройок контента и области задач в поддерживаемых Office клиентских приложениях — Excel, PowerPoint, Project или Word [](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md) — также требуется каталог приложений в SharePoint, чтобы загрузить XML-файл манифеста надстройки, или необходимо развернуть надстройку с помощью централизованного [развертывания.](../publish/centralized-deployment.md)
+Для надстройок контента и области задач в поддерживаемых Office клиентских приложениях — Excel, PowerPoint, Project или Word [](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md) — также требуется каталог приложений в SharePoint для загрузки XML-файла манифеста надстройки или необходимо развернуть надстройку с помощью интегрированных [приложений](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps).
 
 Чтобы проверить и запустить надстройку Outlook, учетная запись электронной почты Outlook пользователя должна находиться в Exchange 2013 г. или более поздней, которая доступна через Microsoft 365, Exchange Online или с помощью локальной установки. Пользователь или администратор устанавливают файлы манифестов надстроек Outlook на соответствующем сервере.
 

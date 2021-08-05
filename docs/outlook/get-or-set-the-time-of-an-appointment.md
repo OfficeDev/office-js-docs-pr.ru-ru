@@ -1,14 +1,14 @@
 ---
 title: Просмотр или изменение времени встречи в надстройке Outlook
 description: Узнайте, как просмотреть и изменить время начала и окончания встречи в надстройке Outlook.
-ms.date: 10/31/2019
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 883b2be75348b72ac3c6b11bf558f7ac27aa2b8d
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: eadce9b540a9b3b8a03186340fff4511d42dd35a
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671333"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53774351"
 ---
 # <a name="get-or-set-the-time-when-composing-an-appointment-in-outlook"></a>Просмотр или изменение времени при создании встречи в Outlook
 
@@ -38,7 +38,7 @@ item.start.getAsync
 item.end.getAsync
 ```
 
-Как и большинство асинхронных методов в API javaScript Office JavaScript, **getAsync** и **setAsync** принимают необязательные параметры ввода. Дополнительные сведения об указании последних см. в разделе [Передача дополнительных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-inline) статьи [Asynchronous programming in Office Add-ins](../develop/asynchronous-programming-in-office-add-ins.md).
+Как и большинство асинхронных методов в API javaScript Office JavaScript, **getAsync** и **setAsync** принимают необязательные параметры ввода. Дополнительные сведения об указании последних см. в разделе [Передача дополнительных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#pass-optional-parameters-inline) статьи [Asynchronous programming in Office Add-ins](../develop/asynchronous-programming-in-office-add-ins.md).
 
 
 ## <a name="get-the-start-or-end-time"></a>Получение времени начала или окончания

@@ -1,16 +1,16 @@
 ---
-ms.date: 07/10/2019
+ms.date: 07/08/2021
 description: Объедините пользовательские функции в пакет, чтобы сократить количество обращений к удаленной службе через сеть.
 title: Пакетирование обращений пользовательских функций к удаленной службе
 localization_priority: Normal
-ms.openlocfilehash: 0729e06df5f6e26f9726e1de0dcdaac0f101b18d
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: fa02a88646ca373a463aefaa51076c35c3df08cf
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349653"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53774177"
 ---
-# <a name="batching-custom-function-calls-for-a-remote-service"></a>Пакетирование обращений пользовательских функций к удаленной службе
+# <a name="batch-custom-function-calls-for-a-remote-service"></a>Пакетные пользовательские вызовы функции для удаленной службы
 
 Если пользовательские функции обращаются к удаленной службе, можно использовать шаблон пакетирования для сокращения количества сетевых вызовов удаленной службы. Для уменьшения объема сетевых операций можно объединить все вызовы в один вызов веб-службы. Это идеальное решение при пересчете электронной таблицы.
 
@@ -216,6 +216,7 @@ function pause(ms: number) {
 - Поместите код в удаленную службу.
 
 ## <a name="next-steps"></a>Дальнейшие действия
+
 Узнайте о [различных параметрах](custom-functions-parameter-options.md), которые можно использовать в пользовательских функциях. Или узнайте, что лежит в основе [веб-вызова через пользовательскую функцию](custom-functions-web-reqs.md).
 
 ## <a name="see-also"></a>Дополнительные ресурсы

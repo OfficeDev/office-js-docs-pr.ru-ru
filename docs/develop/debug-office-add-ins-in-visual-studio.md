@@ -1,14 +1,14 @@
 ---
 title: Отладка надстроек Office в Visual Studio
 description: Используйте Visual Studio для отладки надстроек Office в настольном клиенте Office для Windows
-ms.date: 12/31/2019
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 2b260ab83c513419cb32bbe3f02900e3fc4f4b41
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 44a3d56a276d70e24a3b466e16dd24d264f6555d
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349940"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773820"
 ---
 # <a name="debug-office-add-ins-in-visual-studio"></a>Отладка надстроек Office в Visual Studio
 
@@ -31,7 +31,7 @@ ms.locfileid: "53349940"
 
 ### <a name="add-in-project-properties"></a>Свойства проекта надстройки
 
-Откройте окно **Свойства** в проекте надстройки для просмотра свойств проекта:
+Откройте **окно Свойства** для проекта надстройки, чтобы просмотреть свойства проекта.
 
 1. В **Обозревателе решений** выберите проект надстройки (*не* проект веб-приложения).
 
@@ -57,7 +57,7 @@ ms.locfileid: "53349940"
 
 ### <a name="web-application-project-properties"></a>Свойства проекта веб-приложения
 
-Откройте окно **Свойства** в проекте веб-приложения для просмотра свойств проекта:
+Откройте **окно Свойства** для проекта веб-приложения, чтобы просмотреть свойства проекта.
 
 1. В **Обозревателе решений** выберите проект веб-приложения.
 

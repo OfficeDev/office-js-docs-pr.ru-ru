@@ -73,7 +73,7 @@
 
         git clone https://github.com/<your user name>/<repo name>.git
 
-    Затем создайте ссылку на корневой репозиторий с помощью следующих команд:
+    Затем создайте ссылку на корневой репозиторий, введите эти команды.
 
         cd <repo name>
         git remote add upstream https://github.com/OfficeDev/<repo name>.git
@@ -197,7 +197,7 @@
 Запросы на вытяги, как правило, рассматриваются в течение 10 бизнес-дней.
 
 
-## <a name="more-resources"></a>Дополнительные ресурсы
+## <a name="more-resources"></a>Другие ресурсы
 
 * Чтобы узнать больше о Markdown, перейдите на сайт создателя Markdown [Daring Fireball.]
 * Чтобы узнать больше об использовании Git и GitHub, сначала ознакомьтесь с GitHub [Справка].

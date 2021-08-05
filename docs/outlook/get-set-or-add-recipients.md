@@ -3,12 +3,12 @@ title: Просмотр и изменение получателей в надс
 description: Узнайте, как просмотреть, изменить или добавить получателей сообщения или встречи в надстройке Outlook.
 ms.date: 12/10/2019
 localization_priority: Normal
-ms.openlocfilehash: 23e523c773b90fc02ed68151ea3c0cc6641b94ee
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: 9a98fbc78e98cbaaf99c60625dd7f6a725c57c0f
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53670253"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773085"
 ---
 # <a name="get-set-or-add-recipients-when-composing-an-appointment-or-message-in-outlook"></a>Просмотр, изменение или добавление получателей при создании встречи или сообщения в Outlook
 
@@ -32,7 +32,7 @@ item.cc.getAsync
 
 Эти свойства доступны для записи только в формах создания, но не формах чтения.
 
-Как и большинство асинхронных методов в API JavaScript для Office, и принимать необязательные `getAsync` `setAsync` `addAsync` параметры ввода. Дополнительные сведения об указании последних см. в разделе [Передача дополнительных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-inline) статьи [Asynchronous programming in Office Add-ins](../develop/asynchronous-programming-in-office-add-ins.md).
+Как и большинство асинхронных методов в API JavaScript для Office, и принимать необязательные `getAsync` `setAsync` `addAsync` параметры ввода. Дополнительные сведения об указании последних см. в разделе [Передача дополнительных параметров в асинхронные методы](../develop/asynchronous-programming-in-office-add-ins.md#pass-optional-parameters-inline) статьи [Asynchronous programming in Office Add-ins](../develop/asynchronous-programming-in-office-add-ins.md).
 
 
 ## <a name="get-recipients"></a>Извлечение получателей

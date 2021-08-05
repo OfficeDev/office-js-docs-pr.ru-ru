@@ -1,14 +1,14 @@
 ---
 title: Совместное редактирование в надстройках Excel
 description: Узнайте, как совместно Excel книги, хранимой в OneDrive, OneDrive для бизнеса или SharePoint Online.
-ms.date: 07/23/2020
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 6901df106f9b70bc0265d78757ec7416380fc76c
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: 6923b003417e78432975fa78fb5423b055bd02bf
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671487"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53774163"
 ---
 # <a name="coauthoring-in-excel-add-ins"></a>Совместное редактирование в надстройках Excel  
 
@@ -48,7 +48,7 @@ range.values = [['Contoso']];
 
 Например, обычно в сценариях проверки данных пользовательский интерфейс отображается в ответ на события. Событие [BindingDataChanged](/javascript/api/office/office.bindingdatachangedeventargs), описанное в предыдущем разделе, выполняется когда локальный пользователь или соавтор (удаленный) изменяет содержимое книги в пределах привязки. Если обработник события отображает пользовательский интерфейс, пользователи увидят пользовательский интерфейс, не связанный с изменениями, которые они работали в книге, что приводит к плохому пользовательскому `BindingDataChanged` интерфейсу. Избегайте отображения пользовательского интерфейса при использовании событий в вашей надстройке.
 
-## <a name="avoiding-table-row-coauthoring-conflicts"></a>Предотвращение конфликтов совместной строки таблицы
+## <a name="avoid-table-row-coauthoring-conflicts"></a>Избегайте конфликтов совместной с строкой таблицы
 
 Известно, что вызовы в [`TableRowCollection.add`](/javascript/api/excel/excel.tablerowcollection#add_index__values_) API могут вызывать конфликты соавторов. Мы не рекомендуем использовать API, если предполагается, что надстройка будет работать, пока другие пользователи редактируют книгу надстройки (в частности, если они редактируют таблицу или какой-либо диапазон под таблицей). Следующие рекомендации должны помочь вам избежать проблем с методом (и не запускать желтый Excel показывает, что просит пользователей `TableRowCollection.add` обновиться).
 

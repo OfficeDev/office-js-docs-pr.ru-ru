@@ -1,16 +1,16 @@
 ---
 title: Рекомендации по цвету надстроек Office
 description: Узнайте, как использовать цвета в пользовательском интерфейсе Office надстройки.
-ms.date: 05/12/2021
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 8a1fc8103ae945afdcaea45e5a9b2dd0954f893f
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: a472dfd02787d68a5ce11a198d580aefe37ce315
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349198"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773225"
 ---
-# <a name="color"></a>Цвет
+# <a name="color-guidelines-for-office-add-ins"></a>Рекомендации по цвету надстроек Office
 
 Цвет часто используется для выделения торговой марки и усиления визуальной иерархии. Он позволяет определить интерфейс, а также предоставить клиентам пошаговые инструкции по его использованию. В Office цвет используется в таких же целях, но применяется только в особенных случаях. Он ни в коем случае не должен превалировать над содержимым клиента. Даже если для каждого приложения Office определен собственный основной цвет, им не следует злоупотреблять.
 

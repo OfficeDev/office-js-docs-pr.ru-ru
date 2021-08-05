@@ -1,14 +1,14 @@
 ---
 title: Создание надстройки Project, использующей REST с локальной службой OData Project Server
 description: Узнайте, как создать надстройку области задач для Project профессиональный 2013 г., которая сравнивает данные о затратах и работе в активном проекте со средними значениями для всех проектов в текущем экземпляре Project Web App.
-ms.date: 09/26/2019
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: c03cd580f9f5d4da654022de811d4a060a99e52d
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 2ffcd8eacef56f881ae61a5c0f2a656e5b3edfee
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53348813"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773155"
 ---
 # <a name="create-a-project-add-in-that-uses-rest-with-an-on-premises-project-server-odata-service"></a>Создание надстройки Project, использующей REST с локальной службой OData Project Server
 
@@ -16,7 +16,7 @@ ms.locfileid: "53348813"
 
 Код в данной статье основан на примере, разработанном Саурабхом Сангхви (Saurabh Sanghvi) и Эрвиндом Лаиром (Arvind Iyer), сотрудниками корпорации Майкрософт.
 
-## <a name="prerequisites-for-creating-a-task-pane-add-in-that-reads-project-server-reporting-data"></a>Необходимые условия для создания надстроек области задач, читающей данные отчетов Project Server
+## <a name="prerequisites"></a>Предварительные требования
 
 Ниже приводится условие создания надстройки Project области задач, которая читает службу **ProjectData** экземпляра Project Web App в локальной установке Project Server 2013.
 
@@ -33,9 +33,9 @@ ms.locfileid: "53348813"
 
     Убедитесь, **что служба ProjectData** доступна с компьютера разработки.
 
-### <a name="procedure-1-to-verify-that-the-projectdata-service-is-accessible"></a>Процедура 1. Проверка доступности службы ProjectData
+### <a name="procedure-1-verify-that-the-projectdata-service-is-accessible"></a>Процедура 1. Убедитесь, что служба ProjectData доступна
 
-1. Чтобы разрешить браузеру напрямую отображать XML-данные из запроса REST, отключите вид чтения канала. Дополнительные сведения о том, как это сделать в Internet Explorer, см. в процедуру 1, шаг 4 в статье [Создание запросов веб-каналов OData для данных отчетов Project](/previous-versions/office/project-odata/jj163048(v=office.15)).
+1. Чтобы разрешить браузеру напрямую отображать XML-данные из запроса REST, отключите вид чтения канала. Сведения о том, как это сделать в Internet Explorer, см. в процедуре 1, шаг 4 в лентах запросов OData для Project [отчетов.](/previous-versions/office/project-odata/jj163048(v=office.15))
 
 2. Запрос **службы ProjectData** с помощью браузера со следующим **http://ServerName URL-адресом: /ProjectServerName /_api/ProjectData**. Например, если экземпляр `http://MyServer/pwa` Project Web App, браузер показывает следующие результаты.
 
@@ -59,7 +59,7 @@ ms.locfileid: "53348813"
 
 3. Вам может потребоваться предоставить свои сетевые учетные данные, чтобы увидеть результаты. Если браузер показывает сообщение "Ошибка 403, доступ запрещен", то либо у вас либо нет разрешений на вход для заданного экземпляра Project Web App, либо имеется проблема сети, требующая помощи администратора.
 
-## <a name="using-visual-studio-to-create-a-task-pane-add-in-for-project"></a>Создание надстройки области задач для Project с помощью Visual Studio
+## <a name="use-visual-studio-to-create-a-task-pane-add-in-for-project"></a>Используйте Visual Studio для создания надстройки области задач для Project
 
 Инструменты разработчика Office для Visual Studio включает шаблон надстроек области задач для Project 2013. Если вы создаете решение с именем **HelloProjectOData,** решение содержит следующие два Visual Studio:
 
@@ -67,7 +67,7 @@ ms.locfileid: "53348813"
 
 - Веб-проект называется **HelloProjectODataWeb**. Оно содержит файлы JavaScript веб-страниц, файлы CSS, рисунки, ссылки и файлы конфигурации для веб-контента в области задач. Веб-проект настраивается на конечную платформу .NET Framework 4. В процедуре 4 и процедуре 5 показано, как изменить эти файлы в веб-проекте, чтобы создать функциональность надстройки **HelloProjectOData**.
 
-### <a name="procedure-2-to-create-the-helloprojectodata-add-in-for-project"></a>Процедура 2. Создание надстройки HelloProjectOData для Project
+### <a name="procedure-2-create-the-helloprojectodata-add-in-for-project"></a>Процедура 2. Создайте надстройка HelloProjectOData для Project
 
 1. Запустите Visual Studio 2015 в качестве администратора, а затем выберите **new Project** на странице Начните.
 
@@ -77,21 +77,21 @@ ms.locfileid: "53348813"
 
 4. В поле **Name** введитеHelloProjectOData и выберите **ОК.**
 
-    *Рис. 1. Создание надстройки Office*
+    *Рис. 1. Создание Office надстройки*
 
-    ![Создание Office надстройки.](../images/pj15-hello-project-o-data-creating-app.png)
+    ![Создайте Office надстройки.](../images/pj15-hello-project-o-data-creating-app.png)
 
 5. В диалоговом окне **Выбор типа надстройки** выберите пункт **Надстройка области задач** и нажмите кнопку **Далее** (см. следующий снимок экрана).
 
     *Рис. 2. Выбор типа создаваемой надстройки*
 
-    ![Выбор типа надстройки для создания.](../images/pj15-hello-project-o-data-choose-project.png)
+    ![Выберите тип надстройки для создания.](../images/pj15-hello-project-o-data-choose-project.png)
 
 6. В диалоговом окне **Выбор ведущих приложений** снимите все флажки, кроме флажка **Project** (см. следующий снимок экрана), а затем нажмите кнопку **Готово**.
 
     *Рис. 3. Выбор ведущего приложения*
 
-    ![Выбор Project как единственное хост-приложение.](../images/create-office-add-in.png)
+    ![Выберите Project как единственное хост-приложение.](../images/create-office-add-in.png)
 
     Visual Studio проект **HelloProjectOdata** и **проект HelloProjectODataWeb.**
 
@@ -99,13 +99,13 @@ ms.locfileid: "53348813"
 
 *Рис. 4. Просмотр файлов веб-проекта по умолчанию в обозревателе решений*
 
-![Просмотр файлов веб-проекта в Expl решения.](../images/pj15-hello-project-o-data-initial-solution-explorer.png)
+![Просмотр файлов веб-проектов в обозревателе решений.](../images/pj15-hello-project-o-data-initial-solution-explorer.png)
 
 Манифест проекта **HelloProjectOData** — это файл HelloProjectOData.xml. Его можно изменить при необходимости, чтобы добавить описание надстройки, ссылку на значок, сведения о дополнительных языках и другие параметры. В процедуре 3 изменяется только отображаемое имя надстройки и описание и добавляется значок.
 
 Дополнительные сведения о манифесте см. в статьях [XML-манифест надстроек для Office](../develop/add-in-manifests.md) и [Справка по схеме для манифестов надстроек Office (версия 1.1)](../develop/add-in-manifests.md#see-also).
 
-### <a name="procedure-3-to-modify-the-add-in-manifest&quot;></a>Процедура 3. Изменение манифеста надстройки
+### <a name="procedure-3-modify-the-add-in-manifest&quot;></a>Процедура 3. Изменение манифеста надстройки
 
 1. Откройте файл HelloProjectOData.xml в Visual Studio.
 
@@ -125,7 +125,7 @@ ms.locfileid: "53348813"
 
     ![Значок для приложения HelloProjectOData.](../images/pj15-hello-project-data-new-icon.jpg)
 
-3. В манифесте HelloProjectOData.xml добавьте элемент **IconUrl**  ниже элемента Description, где значение URL-адреса значка является относительным путем к файлу значка 32x32. Например, добавьте следующую строку: **<IconUrl DefaultValue="~remoteAppUrl/Images/NewIcon.png" />** . Файл манифеста HelloProjectOData.xml теперь содержит (ваше значение **Id** будет другим):
+3. В манифесте HelloProjectOData.xml добавьте элемент **IconUrl**  ниже элемента Description, где значение URL-адреса значка является относительным путем к файлу значка 32x32. Например, добавьте следующую строку: `<IconUrl DefaultValue="~remoteAppUrl/Images/NewIcon.png" />` . Файл манифеста HelloProjectOData.xml теперь содержит (ваше значение **Id** будет другим):
 
     ```XML
     <?xml version="1.0" encoding="UTF-8"?>
@@ -150,9 +150,9 @@ ms.locfileid: "53348813"
     </OfficeApp>
     ```
 
-## <a name="creating-the-html-content-for-the-helloprojectodata-add-in"></a>Создание HTML-контента для надстройки HelloProjectOData
+## <a name="create-the-html-content-for-the-helloprojectodata-add-in"></a>Создание HTML-контента для надстройки HelloProjectOData
 
-**Надстройка HelloProjectOData** — это пример, который включает отладку и выход ошибок; она не предназначена для производственного использования. Прежде чем приступить к кодированию HTML-контента, разработать пользовательский интерфейс и пользовательский интерфейс для надстройки и наметить функции JavaScript, взаимодействующие с HTML-кодом. Дополнительные сведения см. в руководстве по разработке[Office надстройки.](../design/add-in-design.md) 
+**Надстройка HelloProjectOData** — это пример, который включает отладку и выход ошибок; она не предназначена для производственного использования. Прежде чем приступить к кодированию HTML-контента, разработать пользовательский интерфейс и пользовательский интерфейс для надстройки и наметить функции JavaScript, взаимодействующие с HTML-кодом. Дополнительные сведения см. в руководстве по разработке [Office надстройки.](../design/add-in-design.md)
 
 На области задач отображается имя отображения надстройки в верхней части, которое является значением элемента **DisplayName** в манифесте. Элемент **body** в файле HelloProjectOData.html содержит другие элементы пользовательского интерфейса:
 
@@ -169,7 +169,7 @@ ms.locfileid: "53348813"
     > [!NOTE]
     > В данном примере данные о материальных и трудовых затратах по активному проекту извлекаются из опубликованных значений. Если изменить значения в Project, служба **ProjectData** не будет знать об изменениях до тех пор, пока проект не опубликован.
 
-### <a name="procedure-4-to-create-the-html-content"></a>Процедура 4. Создание HTML-контента
+### <a name="procedure-4-create-the-html-content"></a>Процедура 4. Создание HTML-контента
 
 1. В элементе **head** файла Home.html добавьте любые дополнительные элементы **link** для CSS-файлов, используемых в надстройке. Шаблон проекта Visual Studio содержит ссылку на файл App.css, который можно использовать для настраиваемых стилей CSS.
 
@@ -274,7 +274,7 @@ ms.locfileid: "53348813"
     </body>
     ```
 
-## <a name="creating-the-javascript-code-for-the-add-in"></a>Создание кода JavaScript для надстройки
+## <a name="create-the-javascript-code-for-the-add-in"></a>Создание кода JavaScript для надстройки
 
 Шаблон надстройки области задач для Project содержит код инициализации по умолчанию, который предназначен для демонстрации базовых действий получения и записи данных в документе для типичных приложений Office 2013. Поскольку Project 2013 не поддерживает действия, которые записывают в активный проект, а надстройка **HelloProjectOData** не использует метод, можно удалить скрипт в функции и удалить функцию и функцию в файле HelloProjectOData.js `getSelectedDataAsync` `Office.initialize` по `setData` `getData` умолчанию.
 
@@ -282,7 +282,7 @@ ms.locfileid: "53348813"
 
 Остальная часть файла HelloProjectOData.js включает две функции: функция называется, когда пользователь выбирает Сравнение всех проектов; а функция вычисляет средние значения, а затем заполняет таблицу сравнения значениями, отформатированные для цвета и `retrieveOData`  `parseODataResult` единиц.
 
-### <a name="procedure-5-to-create-the-javascript-code"></a>Процедура 5. Создание кода JavaScript
+### <a name="procedure-5-create-the-javascript-code"></a>Процедура 5. Создание кода JavaScript
 
 1. Удалите весь код в файле HelloProjectOData.js по умолчанию, а затем добавьте глобальные переменные `**` иOffice.iniфункцию tialize. Имена переменных, написанные полностью заглавными буквами подразумевают, что они являются константами; они позже будут использоваться с переменной **_pwa** для создания запроса REST в этом примере.
 
@@ -541,11 +541,11 @@ ms.locfileid: "53348813"
     }
     ```
 
-## <a name="testing-the-helloprojectodata-add-in"></a>Тестирование надстройки HelloProjectOData
+## <a name="test-the-helloprojectodata-add-in"></a>Тестирование надстройки HelloProjectOData
 
 Для проверки и отламки надстройки **HelloProjectOData** с Visual Studio 2015 Project профессиональный 2013 года необходимо установить на компьютере разработки. Для работы с различными тестовыми сценариями убедитесь, что можно выбрать открытие файлов Project на локальном компьютере или подключение к Project Web App. Например, сделайте следующие действия.
 
-1. Во вкладке **ФАЙЛ** на ленте выберите вкладку **Сведения** в представлении Backstage, а затем выберите **Управление учетными записями**.
+1. На **вкладке Файл** выберите вкладку **Info** в представлении "Закулисье", а затем управляйте **учетной записью.**
 
 2. В **диалоговом окне** Project учетных  записей веб-приложения список доступных учетных записей может иметь несколько Project Web App учетных записей в дополнение к локальной **учетной записи Компьютера.** В разделе **Во время запуска** выберите **Выбрать учетную запись**.
 
@@ -559,7 +559,7 @@ ms.locfileid: "53348813"
 
 - Запустите надстройку еще раз и создайте проект, содержащий задачи с данными о материальных и трудовых затратах. Этот проект можно сохранить в Project Web App, но не публиковать. Убедитесь, что надстройка отображает данные с Project Server, но показывает **NA** для текущего проекта.
 
-### <a name="procedure-6-to-test-the-add-in"></a>Процедура 6. Тестирование надстройки
+### <a name="procedure-6-test-the-add-in"></a>Процедура 6. Тестирование надстройки
 
 1. Запустите Project профессиональный 2013, подключитесь к Project Web App и создайте тестовый проект. Назначьте задачи локальным ресурсам или ресурсам предприятия, настройте различные значения процента выполнения для некоторых задач и затем опубликуйте проект. Закройте Project, что позволит Visual Studio запустить Project для отладки надстройки.
 
@@ -567,15 +567,15 @@ ms.locfileid: "53348813"
 
 3. На **вкладке PROJECT** ленты **в** списке Office надстройки выберите **Hello ProjectData** (см. рис. 5). Кнопка **Сравнение всех проектов** должна быть отключена.
 
-    *Рис. 5. Запуск надстройки HelloProjectOData*
+    *Рис. 5. Запуск надстройки HelloProjectOData*
 
-    ![Тестирование приложения HelloProjectOData.](../images/pj15-hello-project-data-test-the-app.png)
+    ![Проверьте приложение HelloProjectOData.](../images/pj15-hello-project-data-test-the-app.png)
 
 4. В области **задач Hello ProjectData** выберите конечную точку **Get ProjectData**. В **строке projectDataEndPoint** должен быть указан URL-адрес  службы **ProjectData** и включена кнопка Сравнение всех проектов (см. рис. 6).
 
 5. Нажмите кнопку **Compare All Projects**. Надстройка может приостановить работу на время получения данных из службы **ProjectData**, а затем она должна отобразить отформатированные средние и текущие значения в таблице.
 
-    *Рис. 6. Просмотр результатов запроса REST*
+    *Рис. 6. Просмотр результатов запроса REST*
 
     ![Просмотр результатов запроса REST.](../images/pj15-hello-project-data-rest-results.png)
 
@@ -631,17 +631,17 @@ ms.locfileid: "53348813"
 
 7. Остановите отладку **(нажмите кнопку Shift + F5),** а затем нажмите **кнопку F5** снова, чтобы запустить новый экземпляр Project. В **диалоговом окне Login** выберите локальный профиль **компьютера,** а не Project Web App. Создайте или откройте локальный файл project .mpp, откройте области **задач Hello ProjectData** и выберите конечную точку **Get ProjectData.** Надстройка должна показывать отсутствие **подключения!** ошибка (см. рис. 7) и кнопка **Сравнение всех** проектов должны оставаться отключенными.
 
-   *Рис. 7. Использование надстройки без подключения Project Web App*
+   *Рис. 7. Использование надстройки без подключения Project приложения*
 
-   ![Использование приложения без Project Web App подключения.](../images/pj15-hello-project-data-no-connection.png)
+   ![Используйте приложение без Project Web App подключения.](../images/pj15-hello-project-data-no-connection.png)
 
 8. Остановите отладку и нажмите клавишу **F5** снова. Войдите в Project Web App и создайте проект, содержащий данные о материальных и трудовых затратах. Проект можно сохранить, но не публикуйте его.
 
    В области **задач Hello ProjectData** при выборе сравнения всех проектов следует увидеть синий **NA** для полей в столбце **Current** (см. рис. 8).
 
-   *Рис. 8. Сравнение неопубликованного проекта с другими проектами*
+   *Рис. 8. Сравнение неопубликованного проекта с другими проектами*
 
-   ![Сравнение неопубликованного проекта с другими.](../images/pj15-hello-project-data-not-published.png)
+   ![Сравните неопубликованный проект с другими.](../images/pj15-hello-project-data-not-published.png)
 
 Даже если ваша надстройка работала правильно в предыдущих тестах, есть другие тесты, которые необходимо выполнить. Например:
 
@@ -1107,11 +1107,11 @@ Table styles
     <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
     ```
 
-- Переписать `retrieveOData` функцию, чтобы включить запросы более 100 проектов. Например, можно получить число проектов с помощью запроса `~/ProjectData/Projects()/$count` и использовать оператор _$skip_ и оператор _$top_ в запросе REST для получения данных проекта. Запустите несколько запросов в цикле и затем усредните данные из всех запросов. Каждый запрос для данных проекта будет иметь форму: 
+- Переписать `retrieveOData` функцию, чтобы включить запросы более 100 проектов. Например, можно получить число проектов с помощью запроса `~/ProjectData/Projects()/$count` и использовать оператор _$skip_ и оператор _$top_ в запросе REST для получения данных проекта. Запустите несколько запросов в цикле и затем усредните данные из всех запросов. Каждый запрос для данных проекта будет иметь форму:
 
   `~/ProjectData/Projects()?skip= [numSkipped]&amp;$top=100&amp;$filter=[filter]&amp;$select=[field1,field2, ???????]`
 
-  For more information, see [OData System Query Options Using the REST Endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg309461(v=crm.7)). You can also use the [Set-SPProjectOdataConfiguration](/powershell/module/sharepoint-server/Set-SPProjectOdataConfiguration?view=sharepoint-ps&preserve-view=true) command in Windows PowerShell to override the default page size for a query of the **Projects** entity set (or any of the 33 entity sets). See [ProjectData - Project OData service reference](/previous-versions/office/project-odata/jj163015(v=office.15)).
+  Дополнительные сведения см. в дополнительных сведениях о параметрах [системного запроса OData с помощью конечной точки REST.](/previous-versions/dynamicscrm-2015/developers-guide/gg309461(v=crm.7)) You can also use the [Set-SPProjectOdataConfiguration](/powershell/module/sharepoint-server/Set-SPProjectOdataConfiguration?view=sharepoint-ps&preserve-view=true) command in Windows PowerShell to override the default page size for a query of the **Projects** entity set (or any of the 33 entity sets). See [ProjectData - Project OData service reference](/previous-versions/office/project-odata/jj163015(v=office.15)).
 
 - Сведения о развертывании надстройки см. в статье [Публикация надстройки Office](../publish/publish.md).
 

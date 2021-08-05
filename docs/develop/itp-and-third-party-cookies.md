@@ -1,20 +1,20 @@
 ---
 title: Разработка надстройки Office для работы с ITP при использовании сторонних файлов cookie
 description: Работа с ITP и Office надстройки при использовании сторонних файлов cookie
-ms.date: 03/12/2021
+ms.date: 07/8/2021
 localization_priority: Normal
-ms.openlocfilehash: dbc23e4ead0abc94ffa173ffc22919342c4fca6d
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 6a9452f24cb1cbd76c4f6cc3f39fab1f9310ec97
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349863"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773477"
 ---
 # <a name="develop-your-office-add-in-to-work-with-itp-when-using-third-party-cookies"></a>Разработка надстройки Office для работы с ITP при использовании сторонних файлов cookie
 
 Если для Office надстройки требуются сторонние файлы cookie, эти файлы cookie будут заблокированы, если интеллектуальная профилактика отслеживания (ITP) используется временем запуска браузера, загрузив надстройку. Для проверки подлинности пользователей или для других сценариев, таких как хранение параметров, можно использовать сторонние файлы cookie.
 
-Если ваша Office надстройка и веб-сайт должны полагаться на сторонние файлы cookie, используйте следующие действия для работы с ITP:
+Если ваша Office надстройка и веб-сайт должны полагаться на сторонние файлы cookie, используйте следующие действия для работы с ITP.
 
 1. Настройка [авторизации OAuth 2.0](https://tools.ietf.org/html/rfc6749)таким образом, чтобы домен проверки подлинности (в вашем случае стороннее стороннее, ожидающее файлов cookie) перенародил маркер авторизации на   ваш веб-сайт. Используйте маркер для создания сеанса входа с помощью сервера Secure и [cookie HttpOnly.](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Secure_and_HttpOnly_cookies)
 2. Используйте [API служба хранилища доступа,](https://webkit.org/blog/8124/introducing-storage-access-api/)чтобы сторонние стороны могли запрашивать разрешения на доступ к его первому   участнику cookie. Текущие версии Office Mac и Office в Интернете поддерживают этот API.

@@ -1,22 +1,20 @@
 ---
 title: Установка последней версии Office
 description: Сведения о том, как получать последние сборки Office раньше других.
-ms.date: 07/07/2020
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: d72012e3c2e642c74d8573c4d9bb3b29a8fc0274
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 76ca1a91ff30d1310ddbfc38d7a2ced682d2b47e
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076022"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773771"
 ---
 # <a name="install-the-latest-version-of-office"></a>Установка последней версии Office
 
 Первыми новые функции для разработчиков, в том числе предварительные версии, получают подписчики, которые получают последние сборки Office раньше других.
 
-## <a name="opt-in-to-getting-the-latest-builds"></a>Как получать последние сборки раньше других
-
-Чтобы получать последние сборки Office раньше других:
+## <a name="opt-in-to-getting-the-latest-builds-of-office"></a>Выберите получение последних сборки Office
 
 - Если вы абонент Microsoft 365 для семьи, личный или университетский, см. статью [Be an Office Insider](https://insider.office.com).
 - Если вы клиент Приложения Microsoft 365 для бизнеса, см. в выпуске [Install the First Release build for Приложения Microsoft 365 для бизнеса клиентов.](https://support.office.com/article/Install-the-First-Release-build-for-Office-365-for-business-customers-4dd8ba40-73c0-4468-b778-c7b744d03ead)
@@ -25,9 +23,7 @@ ms.locfileid: "53076022"
   - Выберите пункт **Проверить наличие обновлений** в меню "Справка".
   - В окне "Автоматическое обновление (Майкрософт)" установите флажок для участия в программе предварительной оценки Office.
 
-## <a name="get-the-latest-build"></a>Как получить последнюю сборку
-
-Чтобы получить последнюю сборку Office:
+## <a name="get-the-latest-build-of-office"></a>Получите последнюю сборку Office
 
 1. Скачайте [средство развертывания Office](https://www.microsoft.com/download/details.aspx?id=49117).
 2. Запустите это средство. Будут извлечены два файла: Setup.exe и configuration.xml.
@@ -42,8 +38,6 @@ ms.locfileid: "53076022"
 ![Снимок экрана, на который показаны сведения о продукте с Office insiders.](../images/office-insiders-label.png)
 
 ## <a name="minimum-office-builds-for-office-javascript-api-requirement-sets"></a>Минимальные сборки Office, которые могут использовать наборы обязательных элементов API JavaScript для Office
-
-Сведения о минимальных сборках продуктов для каждой платформы см. в следующих статьях:
 
 - [Наборы обязательных элементов API JavaScript для Excel](../reference/requirement-sets/excel-api-requirement-sets.md)
 - [Наборы обязательных элементов API JavaScript для OneNote](../reference/requirement-sets/onenote-api-requirement-sets.md)

@@ -1,14 +1,14 @@
 ---
 title: Авторизация в Microsoft Graph с помощью единого входа
 description: Узнайте, как пользователи Office надстройки могут использовать один вход (SSO) для получения данных из Microsoft Graph.
-ms.date: 02/09/2021
+ms.date: 07/27/2021
 localization_priority: Normal
-ms.openlocfilehash: a7a0b179d2038fb9e8e70ea073278303bf2ac6cb
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: e8e2946b6e6bc1cd49d18453065b52758d099a25
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671375"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773925"
 ---
 # <a name="authorize-to-microsoft-graph-with-sso"></a>Авторизация в Microsoft Graph с помощью единого входа
 
@@ -67,7 +67,7 @@ ms.locfileid: "53671375"
 
 ## <a name="distributing-sso-enabled-add-ins-in-microsoft-appsource"></a>Распространение надстройок с поддержкой SSO в Microsoft AppSource
 
-Когда администратор Microsoft 365 получает надстройку из [AppSource,](https://appsource.microsoft.com)администратор может [](../publish/centralized-deployment.md) перераспределить ее путем централизованного развертывания и предоставления согласия администратора надстройке для доступа к microsoft Graph области. Однако конечному пользователю также возможно приобрести надстройки непосредственно из AppSource, в этом случае пользователь должен предоставить согласие на надстройки. Это может создать потенциальную проблему производительности, для которой мы предоставили решение.
+Когда Microsoft 365 получает надстройку от [AppSource,](https://appsource.microsoft.com)администратор может перераспределить ее через интегрированные приложения и предоставить администратору согласие на надстройку для доступа к microsoft Graph области. [](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) Однако конечному пользователю также возможно приобрести надстройки непосредственно из AppSource, в этом случае пользователь должен предоставить согласие на надстройки. Это может создать потенциальную проблему производительности, для которой мы предоставили решение.
 
 Если код передает параметр в вызове , например , Office может вызвать пользователя на согласие, если Azure AD сообщает Office что согласие еще не было предоставлено `allowConsentPrompt` `getAccessToken` надстройки. `OfficeRuntime.auth.getAccessToken( { allowConsentPrompt: true } );` Однако по соображениям безопасности Office только побудить пользователя дать согласие на область Azure `profile` AD. *Office не может подсказок для согласия* на какие-либо microsoft Graph области, даже `User.Read` не . Это означает, что если пользователь дает согласие на запрос, Office возвращает маркер bootstrap. Но попытка обмена маркера загрузки для маркера доступа в Microsoft Graph не увенчается ошибкой AADSTS65001, что означает, что согласие (для microsoft Graph области) не было предоставлено.
 

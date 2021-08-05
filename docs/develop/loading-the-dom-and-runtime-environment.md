@@ -1,14 +1,14 @@
 ---
 title: Загрузка модели DOM и среды выполнения
 description: Загрузите среду времени Office dom и Office надстройки.
-ms.date: 04/20/2021
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 76322de3d830747a825b0934993f8801daf8a9ae
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: 26ff15eb009fbec2554fa74db3109c4fa4abd712
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671529"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53774282"
 ---
 # <a name="loading-the-dom-and-runtime-environment"></a>Загрузка модели DOM и среды выполнения
 
@@ -35,7 +35,6 @@ ms.locfileid: "53671529"
 5. Клиентское приложение Office загружает среду времени запуска, которая загружает и засеивает файлы библиотеки API Office JavaScript с сервера сети рассылки контента (CDN), а [](/javascript/api/office#Office_initialize_reason_) затем вызывает обработчик событий надстройки для события инициализации объекта [Office,](/javascript/api/office) если ему назначен обработчик. В это время также проверяется, выполнялась ли передача (или связывание) любых обратных вызовов (или связанных функций `then()`) обработчику `Office.onReady`. Дополнительные сведения о различиях между `Office.initialize` и `Office.onReady` , см. в [инициализации надстройки](initialize-add-in.md).
 
 6. После завершения загрузки DOM и основного текста HTML и инициализации надстройки запускается основная функция надстройки.
-
 
 ## <a name="startup-of-an-outlook-add-in"></a>Запуск надстройки Outlook
 

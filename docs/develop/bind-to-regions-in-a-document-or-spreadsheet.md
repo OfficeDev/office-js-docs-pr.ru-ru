@@ -1,14 +1,14 @@
 ---
 title: Привязка к областям в документе или электронной таблице
 description: Узнайте, как использовать привязку для обеспечения согласованного доступа к определенному региону или элементу документа или таблицы через идентификатор.
-ms.date: 06/20/2019
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 213118f6acba1ee7aaabca7b4e524b9a3f75dd49
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: 9db35168274b599b93a6688d1318103c48edee55
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671368"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773904"
 ---
 # <a name="bind-to-regions-in-a-document-or-spreadsheet"></a>Привязка к областям в документе или электронной таблице
 
@@ -24,7 +24,7 @@ ms.locfileid: "53671368"
 
 ## <a name="binding-types"></a>Типы привязок
 
-Существует три [различных типа][привязки Office. BindingType,] который вы указываете с параметром _bindingType_ при создании привязки с [помощью методов addFromSelectionAsync, addFromPromptAsync]или [addFromNamedItemAsync:] []
+Существует три [различных типа][привязки Office. BindingType,] который вы указываете с параметром _bindingType_ при создании привязки с [помощью методов addFromSelectionAsync, addFromPromptAsync]или [addFromNamedItemAsync.] []
 
 1. **[Текстовая привязка][TextBinding]**. Выполняет привязку к области документа, которая может быть представлена как текст.
 
@@ -243,7 +243,6 @@ function write(message){
 }
 ```
 
-
 > [!NOTE]
 > Если обещание метода успешно возвращает объект Binding, этот объект предоставляет только следующие четыре метода `select` объекта: [getDataAsync,] [setDataAsync,] [addHandlerAsync]и [removeHandlerAsync]. [] Если обещание не может вернуть объект Binding, обратное вызов можно использовать для доступа к `onError` [объекту asyncResult].error, чтобы получить дополнительные сведения. Если необходимо вызвать члена объекта Binding, кроме четырех методов, выставленных обещанием объекта Binding, возвращенным методом, вместо этого используйте метод [] `select` [getByIdAsync] с помощью свойства [Document.bindings] и bindings.[ метод getByIdAsync] для получения объекта [Binding.]
 
@@ -285,7 +284,7 @@ function write(message){
 }
 ```
 
-`myBinding` — переменная, содержащая существующую текстовую привязку в документе. Кроме того, с помощью метода [Office.select] можно получить доступ к привязке по ее идентификатору и вызвать метод [getDataAsync]. Вот как это сделать: 
+`myBinding` — переменная, содержащая существующую текстовую привязку в документе. Кроме того, с помощью метода [Office.select] можно получить доступ к привязке по ее идентификатору и вызвать метод [getDataAsync]. Вот как это сделать:
 
 ```js
 Office.select("bindings#myBindingID").getDataAsync

@@ -1,14 +1,14 @@
 ---
 title: Отображение и скрытие области задач надстройки Office
 description: Узнайте, как программным образом скрыть или показать пользовательский интерфейс надстройки во время ее непрерывного работы.
-ms.date: 12/28/2020
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 7df6301073531661ba87ddaaef711a131cf90fac
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: b2f0efa95f4ce71fc73d9834cfc165cfdd85dc8f
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671515"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773757"
 ---
 # <a name="show-or-hide-the-task-pane-of-your-office-add-in"></a>Отображение и скрытие области задач надстройки Office
 
@@ -77,7 +77,7 @@ Office.addin.onVisibilityModeChanged(function(args) {
 });
 ```
 
-Функция возвращает другую функцию, которая *отстранив* обработитель. Вот простой, но не надежный пример:
+Функция возвращает другую функцию, которая *отстранив* обработитель. Вот простой, но не надежный пример.
 
 ```javascript
 var removeVisibilityModeHandler =

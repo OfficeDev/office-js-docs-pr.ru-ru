@@ -85,9 +85,9 @@ conceptualContent:
         - url: publish/publish.md
           itemType: deploy
           text: Изучение параметров развертывания
-        - url: publish/centralized-deployment.md
+        - url: /microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps
           itemType: deploy
-          text: Узнайте о централизованном развертывании
+          text: Тестирование и развертывание Приложения Microsoft 365 партнеров на портале интегрированных приложений
     - title: Публикация
       links:
         - url: /office/dev/store

@@ -1,14 +1,14 @@
 ---
 title: Fluent UI React в надстройках Office
 description: Узнайте, как использовать Fluent интерфейс React в Office надстройки.
-ms.date: 05/12/2021
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: a71c1a0de64d99a9e52c4ca2a7a948b9c33eb9ed
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 8018c27a50aa4aca96aae5fd8fb2b62261a694a0
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076310"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773540"
 ---
 # <a name="use-fluent-ui-react-in-office-add-ins"></a>Использование Fluent интерфейса React в Office надстройки
 
@@ -36,7 +36,7 @@ Fluent Интерфейс React является официальной инте
 - **Как вы хотите назвать надстройку?** `My Office Add-in`
 - **Какое клиентское приложение Office должно поддерживаться?** `Word`
 
-![Снимок экрана, показывающий подсказки и ответы для генератора Yeoman в интерфейсе командной строки.](../images/yo-office-word-react.png)
+![Снимок экрана: запросы и ответы для генератора Yeoman в интерфейсе командной строки.](../images/yo-office-word-react.png)
 
 После завершения работы мастера генератор создаст проект и установит вспомогательные компоненты Node.
 
@@ -133,7 +133,7 @@ export class ButtonPrimaryExample extends React.Component<IButtonProps, {}> {
 
 ## <a name="add-the-react-component-to-your-add-in"></a>Добавление компонента React в надстройку
 
-Добавьте компонент `ButtonPrimaryExample` к своей надстройке. Для этого откройте файл **src\components\App.tsx** и выполните указанные ниже действия.
+Добавьте компонент `ButtonPrimaryExample` в надстройку, открыв **src\components\App.tsx** и завершив следующие действия.
 
 1. Добавьте приведенный ниже оператор импорта для ссылки на `ButtonPrimaryExample` из **Button.tsx**.
 

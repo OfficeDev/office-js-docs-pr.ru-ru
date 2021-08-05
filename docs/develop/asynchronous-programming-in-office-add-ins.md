@@ -1,14 +1,14 @@
 ---
 title: Асинхронное программирование в случае надстроек Office
 description: Узнайте, как Office JavaScript использует асинхронное программирование в Office надстройки.
-ms.date: 09/08/2020
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 1663f15d1b9f4191fc1f0c21f0532b5e23fdade6
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: 6408d1efc99f38468b371247156d84f1a4ac4b99
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671389"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773946"
 ---
 # <a name="asynchronous-programming-in-office-add-ins"></a>Асинхронное программирование в надстройках для Office
 
@@ -26,7 +26,7 @@ ms.locfileid: "53671389"
 
 Поддержка этой асинхронной конструкции как в полнофункциональных, так и в веб-клиентах предусмотрена в рамках стратегии проектирования "однократное написание — запуск на нескольких платформах" модели разработки надстроек Office. Например, вы можете создать надстройку области задач или контентную надстройку на единой базе кода, которая будет работать как в Excel 2013, так и в Excel в Интернете.
 
-## <a name="writing-the-callback-function-for-an-async-method"></a>Написание функции обратного вызова для асинхронного метода
+## <a name="write-the-callback-function-for-an-async-method"></a>Напишите функцию вызова для метода "Async"
 
 Функция вызова, которую вы  передаете в качестве аргумента вызова в метод "Async", должна объявить один параметр, который будет использовать время выполнения надстройки для предоставления доступа к объекту [AsyncResult](/javascript/api/office/office.asyncresult) при выполнении функции вызова. Можно записать:
 
@@ -36,7 +36,7 @@ ms.locfileid: "53671389"
 
 Анонимную функцию удобно использовать, если код такой функции будет использован всего один раз (так как у нее нет имени, вы не сможете сослаться на нее в другой части кода). Именованные функции применяются, если необходимо многократно использовать функцию обратного вызова для нескольких асинхронных методов.
 
-### <a name="writing-an-anonymous-callback-function"></a>Написание анонимной функции обратного вызова
+### <a name="write-an-anonymous-callback-function"></a>Написать функцию анонимного вызова
 
 Следующая функция анонимного обратного вызова объявляет один параметр с именем, который извлекает данные из свойства `result` [AsyncResult.value](/javascript/api/office/office.asyncresult#value) при возвращении обратного вызова.
 
@@ -69,7 +69,7 @@ function write(message){
 
 Дополнительные сведения об использовании метода см. в публикации `getSelectedDataAsync` Read and write data to the active selection in a document or [spreadsheet.](read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md) 
 
-### <a name="writing-a-named-callback-function"></a>Написание именованной функции обратного вызова
+### <a name="write-a-named-callback-function"></a>Написание функции вызова с именем
 
 Кроме того, можно написать именоваемую  функцию и передать ее имя параметру вызова метода "Async". Например, предыдущий пример можно изменить так, чтобы передавать функцию с именем `writeDataCallback` в качестве параметра _callback_.
 
@@ -101,7 +101,7 @@ function write(message){
 
 ## <a name="asynchronous-programming-patterns"></a>Шаблоны асинхронного программирования
 
-API Office JavaScript поддерживает два вида асинхронных шаблонов программирования:
+API Office JavaScript поддерживает два вида асинхронных шаблонов программирования.
 
 - С использованием вложенных обратных вызовов
 - С использованием шаблона promise
@@ -142,7 +142,7 @@ function write(message){
 
 В следующих разделах показано, как использовать анонимные или именованные функции для вложенных обратных вызовов в асинхронных методах.
 
-#### <a name="using-anonymous-functions-for-nested-callbacks"></a>Использование анонимных функций для вложенных обратных вызовов
+#### <a name="use-anonymous-functions-for-nested-callbacks"></a>Использование анонимных функций для вложенных вызовов
 
 В следующем примере две анонимные функции объявляются inline и передаются в вложенные обратное вызовы и `getByIdAsync` `getDataAsync` методы. Поскольку это простые и встроенные функции, их назначение сразу же становится понятным.
 
@@ -163,7 +163,7 @@ function write(message){
 }
 ```
 
-#### <a name="using-named-functions-for-nested-callbacks"></a>Использование именованных функций для вложенных обратных вызовов
+#### <a name="use-named-functions-for-nested-callbacks"></a>Использование именных функций для вложенных вызовов
 
 В сложных реализациях может оказаться полезным использовать именованные функции для упрощения чтения, поддержки и повторного использования. В следующем примере две анонимные функции из примера в предыдущем разделе были переписаны как функции с `deleteAllData` именем и `showResult` . Эти названные функции затем передаются в методы обратного вызова по `getByIdAsync` `deleteAllDataValuesAsync` имени.
 
@@ -194,7 +194,7 @@ function write(message){
 
 API Office JavaScript предоставляет [метод Office.select](/javascript/api/office#Office_select_expression__callback_) для поддержки шаблона обещаний для работы с существующими объектами привязки. Объект promise, возвращенный методу, поддерживает только четыре метода, к которые можно получить доступ непосредственно из объекта `Office.select` [Binding:](/javascript/api/office/office.binding) [getDataAsync,](/javascript/api/office/office.binding#getDataAsync_options__callback_) [setDataAsync,](/javascript/api/office/office.binding#setDataAsync_data__options__callback_) [addHandlerAsync](/javascript/api/office/office.binding#addHandlerAsync_eventType__handler__options__callback_)и [removeHandlerAsync](/javascript/api/office/office.binding#removeHandlerAsync_eventType__options__callback_).
 
-Шаблон promise для работы с привязками принимает такую форму:
+Шаблон обещаний для работы с привязками принимает эту форму.
 
 **Office.select**_(selectorExpression_, _onError_**).** _BindingObjectAsyncMethod_
 
@@ -232,9 +232,9 @@ function addBindingDataChangedEventHandler() {
 > [!IMPORTANT]
 > Обещание `Binding` объекта, возвращаемого методом, предоставляет доступ только `Office.select` к четырем методам `Binding` объекта. Если вам нужно получить доступ к любому из других участников объекта, вместо этого необходимо использовать свойство и методы для `Binding` `Document.bindings` получения `Bindings.getByIdAsync` `Bindings.getAllAsync` `Binding` объекта. Например, если вам необходимо получить доступ к любым свойствам объекта (свойствам или свойствам) или получить доступ к свойствам объектов `Binding` `document` `id` `type` [MatrixBinding или TableBinding,](/javascript/api/office/office.matrixbinding) [](/javascript/api/office/office.tablebinding) `getByIdAsync` `getAllAsync` необходимо использовать или методы для получения `Binding` объекта.
 
-## <a name="passing-optional-parameters-to-asynchronous-methods"></a>Передача дополнительных параметров в асинхронные методы
+## <a name="pass-optional-parameters-to-asynchronous-methods"></a>Передай необязательные параметры асинхронным методам
 
-Общий синтаксис методов "Async" следует следующему шаблону:
+Общий синтаксис для всех методов Async следует этому шаблону.
 
  _AsyncMethod_ `(`_RequiredParameters_`, [`_OptionalParameters_`],`_CallbackFunction_`);`
 
@@ -242,7 +242,7 @@ function addBindingDataChangedEventHandler() {
 
 Вы можете создать объект JSON, содержащий дополнительные параметры в линию, или путем создания объекта и передачи его в качестве `options` _параметра параметра параметра параметра._
 
-### <a name="passing-optional-parameters-inline"></a>Передача дополнительных параметров в качестве встроенных
+### <a name="pass-optional-parameters-inline"></a>Передать необязательные параметры в линию
 
 Например, синтаксис вызова метода [Document.setSelectedDataAsync](/javascript/api/office/office.document#setSelectedDataAsync_data__options__callback_) с необязательными параметрами в качестве встроенных выглядит так:
 
@@ -273,7 +273,7 @@ function write(message){
 > [!NOTE]
 > Дополнительные параметры можно задавать в объекте JSON в любом порядке, если их имена указываются правильно.
 
-### <a name="passing-optional-parameters-in-an-options-object"></a>Передача дополнительных параметров в объекте options
+### <a name="pass-optional-parameters-in-an-options-object"></a>Передать необязательные параметры в объекте параметры
 
 Кроме того, можно создать объект с именем, который указывает необязательные параметры отдельно от вызова метода, а затем передать объект в `options` `options` качестве _аргумента параметра._
 

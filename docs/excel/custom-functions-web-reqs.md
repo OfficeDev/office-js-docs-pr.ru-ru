@@ -1,14 +1,14 @@
 ---
-ms.date: 03/15/2021
+ms.date: 07/08/2021
 description: Запрос, потоковая передача и отмена потоковой передачи внешних данных к книге с помощью пользовательских функций в Excel
 title: Получение и обработка данных с помощью пользовательских функций
 localization_priority: Normal
-ms.openlocfilehash: 60f09b791b13d34a4a7f307bb9677c9fcc72ee97
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: aaaee865c95c2edb568f73df91fd1a8f2ff659de
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349605"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773358"
 ---
 # <a name="receive-and-handle-data-with-custom-functions"></a>Получение и обработка данных с помощью пользовательских функций
 
@@ -51,8 +51,8 @@ function webRequest() {
 }
 ```
 
->[!NOTE]
->При использовании метода `Fetch` не создаются вложенные обратные вызовы, что в некоторых случаях может быть предпочтительнее, чем использование метода XHR.
+> [!NOTE]
+> При использовании метода `Fetch` не создаются вложенные обратные вызовы, что в некоторых случаях может быть предпочтительнее, чем использование метода XHR.
 
 ### <a name="xhr-example"></a>Пример XHR
 
@@ -131,7 +131,7 @@ function increment(incrementBy, invocation) {
 }
 ```
 
-## <a name="canceling-a-function"></a>Отмена функции
+## <a name="cancel-a-function"></a>Отмена функции
 
 Excel отменяет выполнение функции в следующих ситуациях.
 
@@ -143,7 +143,7 @@ Excel отменяет выполнение функции в следующих
 
 Обратите внимание, что существует еще одна категория — так называемые отменяемые функции, которые _не_ связаны с функциями потоковой передачи. Отменяются только асинхронные настраиваемые функции, возвращаемые одному значению. Отменяемые функции позволяют прервать выполнение веб-запроса, используя [`CancelableInvocation`](/javascript/api/custom-functions-runtime/customfunctions.cancelableinvocation), чтобы решить, что делать после отмены. Для объявления отменяемых функций используется тег `@cancelable`.
 
-### <a name="using-an-invocation-parameter"></a>Использование параметра вызова
+### <a name="use-an-invocation-parameter"></a>Использование параметра вызовов
 
 Параметр `invocation` является по умолчанию последним в любой пользовательской функции. Параметр дает контекст о ячейке (например, ее адрес и содержимое) и позволяет `invocation` использовать и `setResult` `onCanceled` методы. Эти методы определяют, что делает функция во время ее потоковой передачи (`setResult`) или отмены (`onCanceled`).
 

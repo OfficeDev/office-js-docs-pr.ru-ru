@@ -1,14 +1,14 @@
 ---
 title: Подключение отладчика из области задач
 description: Узнайте, как прикрепить отладку из области задач
-ms.date: 06/17/2020
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: f5a63e9912e2a7d8ac400fc9abba116abfedbbeb
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 930c5db7a9e1a0499a759d70e0bc94e64c5b7ae5
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53077199"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53774317"
 ---
 # <a name="attach-a-debugger-from-the-task-pane"></a>Подключение отладчика из области задач
 
@@ -17,19 +17,19 @@ ms.locfileid: "53077199"
 Для запуска средства **подключения отладчика** откройте меню **Личные данные** в правом верхнем углу области задач (выделено красным на рисунке ниже).
 
 > [!NOTE]
-> - В настоящее время поддерживается только отладчик [Visual Studio 2015](https://www.visualstudio.com/downloads/) с [обновлением 3](/previous-versions/mt752379(v=vs.140)) или более поздней версии. Если у вас нет Visual Studio, выбор параметра **Attach Debugger** не приводит к действию.
+> - В настоящее время единственным поддерживаемым средством отладки является [Visual Studio 2015](https://www.visualstudio.com/downloads/) с [обновлением 3 или](/previous-versions/mt752379(v=vs.140)) более поздней версией. Если у вас нет Visual Studio, выбор параметра **Attach Debugger** не приводит к действию.
 > - Для отладки клиентского кода JavaScript можно использовать только средство **Подключить отладчик**. Для отладки серверного кода, например на сервере Node.js, существует множество вариантов. Сведения о том, как выполнять отладку в Visual Studio Code, см. в статье [Отладка Node.js в VS Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging). Если вы не используете Visual Studio Code, выполните поиск по запросу "отладка Node.js" или "отладка {имя_сервера}".
 
 ![Снимок экрана меню Attach Debugger.](../images/attach-debugger.png)
 
-Выберите элемент **Подключить отладчик**. Откроется диалоговое окно **JIT-отладчик Visual Studio** (см. рисунок ниже). 
+Выберите элемент **Подключить отладчик**. Откроется диалоговое окно **JIT-отладчик Visual Studio** (см. рисунок ниже).
 
 ![Снимок экрана Visual Studio диалоговом окне JIT Debugger.](../images/visual-studio-debugger.png)
 
 В **обозревателе решений** Visual Studio вы увидите файлы кода.   Вы можете задать точки останова для отлаживаемой строки кода в Visual Studio.
 
 > [!NOTE]
-> Если меню "Личные данные" не отображается, отладить надстройку можно с помощью Visual Studio. Убедитесь, что надстройка области задач открыта в Office, и выполните указанные ниже действия.
+> Если меню "Личные данные" не отображается, отладить надстройку можно с помощью Visual Studio. Убедитесь, что надстройка области задач открыта в Office, а затем выполните указанные действия.
 >
 > 1. В Visual Studio выберите **ОТЛАДКА** > **Присоединиться к процессу**.
 > 2. В разделе **Доступные процессы** выберите *либо* все доступные процессы `Iexplore.exe`, *либо* все доступные процессы `MicrosoftEdge*.exe`, в зависимости от того, [использует ли ваша надстройка Internet Explorer или Microsoft Edge](../concepts/browsers-used-by-office-web-add-ins.md), а затем нажмите кнопку **Присоединиться**.

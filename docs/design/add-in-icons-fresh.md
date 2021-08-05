@@ -1,14 +1,14 @@
 ---
 title: Рекомендации по значкам стиля Office надстройки
 description: Рекомендации по использованию значков стиля Fresh в Office надстройки.
-ms.date: 05/12/2021
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: e7a06ec25f82215a402bc5eb7fc74fa39430e227
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 0c50adcea8091ae2f6fbc941d4b5359babd7274c
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349317"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773239"
 ---
 # <a name="fresh-style-icon-guidelines-for-office-add-ins"></a>Рекомендации по значкам стиля Office надстройки
 
@@ -20,7 +20,7 @@ ms.locfileid: "53349317"
 
 ## <a name="best-practices"></a>Рекомендации
 
-При создании значков следуйте перечисленным ниже рекомендациям.
+Следуйте этим рекомендациям при создании значков.
 
 |Правильно|Неправильно|
 |:---|:---|

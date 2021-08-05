@@ -1,14 +1,14 @@
 ---
 title: Разработка надстроек Office с помощью Angular
 description: Используйте Angular для создания надстройки Office в качестве приложения для одной страницы.
-ms.date: 05/03/2021
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: e12f3e2d4733613fb542cf2be4e0ff6648ab8475
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: e0d30b7cb2f3d5489f5dae9e257c0cfc115a955e
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53350087"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773505"
 ---
 # <a name="develop-office-add-ins-with-angular"></a>Разработка надстроек Office с помощью Angular
 
@@ -76,7 +76,7 @@ const routes: Routes = // route definitions go here
 export class AppRoutingModule { }
 ```
 
-## <a name="using-the-office-dialog-api-with-angular"></a>Использование Office dialog API с Angular
+## <a name="use-the-office-dialog-api-with-angular"></a>Используйте API Office диалогов с Angular
 
 Надстройка dialog AP в Office позволяет вышей надстройке открывать страницы в немодальном диалоговом окне, с помощью которой можно обмениваться информацией с главной страницей, которая обычно находится в панели задач.
 
@@ -102,19 +102,19 @@ export class MyComponent {
 }
 ```
 
-## <a name="using-observable"></a>Использование Observable
+## <a name="use-observable"></a>Использование Observable
 
 Angular использует библиотеку RxJS, в которой предусмотрены объекты `Observable` и `Observer` для реализации асинхронной обработки. Из этого раздела вы узнаете, как использовать `Observables`. Более подробную информацию см. в официальной документации по [RxJS](https://rxjs-dev.firebaseapp.com/).
 
 Объект `Observable` отчасти похож на объект `Promise`: он возвращается сразу же после асинхронного вызова, но для его разрешения может потребоваться некоторое время. Но если `Promise` — это единственное значение (которое может быть объектом массивов), то `Observable` — это массив объектов (возможно, только с одним элементом). Благодаря этому код может вызывать такие [методы массива](https://www.w3schools.com/jsref/jsref_obj_array.asp), как `concat`, `map` и `filter`, для объектов `Observable`.
 
-### <a name="pushing-instead-of-pulling"></a>Рассылка вместо извлечения
+### <a name="push-instead-of-pull"></a>Push instead of pull
 
 Ваш код извлекает объекты `Promise`, назначая их переменным, тогда как объекты `Observable` рассылают свои значения объектам, которые *подписаны* на `Observable`. Подписчики — объекты `Observer`. Преимущество подхода, предусматривающего подобную рассылку, состоит в том, что позже можно добавлять в массив `Observable` новые элементы. При добавлении нового элемента все объекты `Observer`, подписанные на `Observable`, получают уведомление.
 
 Объект `Observer` настроен на обработку каждого нового объекта (именуемого "следующим") с помощью функции. (Он также настроен на то, чтобы отвечать на ошибку и уведомление о завершении. См. пример в следующем разделе.) По этой причине объекты `Observable` можно использовать в более широком диапазоне сценариев, чем объекты `Promise`. Например, в дополнение к возврату `Observable` при вызове AJAX (этим способом можно вернуть также `Promise`), объект `Observable` можно возвращать из обработчика событий, например обработчика событий изменения для текстового поля. Каждый раз, когда пользователь вводит текст в поле, все подписанные объекты `Observer` немедленно реагируют, используя последний текст или текущее состояние приложения в качестве вводных данных.
 
-### <a name="waiting-until-all-asynchronous-calls-have-completed"></a>Ожидание выполнения всех асинхронных вызовов
+### <a name="wait-until-all-asynchronous-calls-have-completed"></a>Подождите, пока все асинхронные вызовы не будут завершены
 
 Чтобы обратный вызов выполнялся только при условии разрешения каждого элемента из набора объектов `Promise`, используйте метод `Promise.all()`.
 

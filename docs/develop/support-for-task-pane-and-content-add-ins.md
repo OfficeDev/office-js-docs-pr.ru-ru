@@ -1,14 +1,14 @@
 ---
 title: Поддержка API JavaScript для Office для контентных надстроек и надстроек области задач в Office 2013
 description: Используйте API Office JavaScript для создания области задач в Office 2013 г.
-ms.date: 02/27/2020
+ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: fc22e1f438285d47c397d64a4dd28718fb5c8035
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: 356880c0f4bb4377f2d5997217f26f51dd95f845
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671170"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773365"
 ---
 # <a name="office-javascript-api-support-for-content-and-task-pane-add-ins-in-office-2013"></a>Поддержка API JavaScript для Office для контентных надстроек и надстроек области задач в Office 2013
 
@@ -32,14 +32,12 @@ ms.locfileid: "53671170"
 
     - Используйте объект [Settings](/javascript/api/office/office.settings) для сохранения пользовательских данных, например настроек пользователей и состояния надстройки.
 
-
 > [!IMPORTANT]
 > Некоторые элементы API поддерживаются не всеми приложениями Office, в которых могут размещаться контентные надстройки и надстройки области задач. Чтобы определить, какие элементы поддерживаются, см. один из указанных ниже ресурсов.
 
 Краткое описание поддержки API Office JavaScript в Office клиентских приложений см. в Office [API JavaScript.](understanding-the-javascript-api-for-office.md)
 
-
-## <a name="reading-and-writing-to-an-active-selection"></a>Чтение и запись данных в активное выделение
+## <a name="read-and-write-to-an-active-selection-in-a-document-spreadsheet-or-presentation"></a>Чтение и написание активного выбора в документе, таблице или презентации
 
 Вы можете считывать данные из текущего выделения пользователя в документе, электронной таблице или презентации, а также записывать их в это выделение. В зависимости Office приложения для надстройки можно указать тип структуры данных для чтения или записи в качестве параметра в [методах getSelectedDataAsync](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__options__callback_) и [setSelectedDataAsync](/javascript/api/office/office.document#setSelectedDataAsync_data__options__callback_) объекта [Document.](/javascript/api/office/office.document) Например, вы можете указать любой тип данных (текст, HTML, табличные данные или Office Open XML) для Word, текст и табличные данные для Excel, а также текст для PowerPoint и Project. Вы также можете создать обработчики событий для обнаружения изменений в выделении пользователя. В следующем примере получаются данные из выбора в виде текста с помощью `getSelectedDataAsync` метода.
 
@@ -64,16 +62,13 @@ function write(message){
 
 Дополнительные сведения и примеры см. в статье [Чтение и запись данных в активное выделение в документе или в электронной таблице](read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md).
 
-
-## <a name="binding-to-a-region-in-a-document-or-spreadsheet"></a>Привязка к областям в документе или электронной таблице
+## <a name="bind-to-a-region-in-a-document-or-spreadsheet"></a>Привязка к региону в документе или таблице
 
 Вы можете использовать эти методы для чтения или записи текущего выбора пользователя в документе, таблице `getSelectedDataAsync` `setSelectedDataAsync` или презентации.  Тем не менее если вам необходимо обращаться к одной области документа в различных сеансах запущенной надстройки, не принуждая пользователя делать выбор, сначала потребуется создать привязку к этой области. Вы также сможете подписаться на события изменения данных и выделения только для этой привязанной области.
 
 Привязку можно добавить с помощью методов [addFromNamedItemAsync](/javascript/api/office/office.bindings#addFromNamedItemAsync_itemName__bindingType__options__callback_), [addFromPromptAsync](/javascript/api/office/office.bindings#addFromPromptAsync_bindingType__options__callback_) или [addFromSelectionAsync](/javascript/api/office/office.bindings#addFromSelectionAsync_bindingType__options__callback_) объекта [Bindings](/javascript/api/office/office.bindings). Они возвращают идентификатор, который можно использовать для доступа к данным в привязке или для подписки на события изменения данных или выделения в привязанной области.
 
 Ниже приводится пример, который добавляет привязку к выбранному в настоящее время тексту в документе с помощью `Bindings.addFromSelectionAsync` метода.
-
-
 
 ```js
 Office.context.document.bindings.addFromSelectionAsync(
@@ -94,8 +89,7 @@ function write(message){
 
 Дополнительные сведения и примеры см. в статье [Привязка к областям в документе или электронной таблице](bind-to-regions-in-a-document-or-spreadsheet.md).
 
-
-## <a name="getting-entire-documents"></a>Получение документов целиком
+## <a name="get-entire-documents"></a>Получить все документы
 
 Если надстройка области задач работает в PowerPoint или Word, то для получения презентации или документа целиком вы можете использовать методы [Document.getFileAsync](/javascript/api/office/office.document#getFileAsync_fileType__options__callback_), [File.getSliceAsync](/javascript/api/office/office.file#getSliceAsync_sliceIndex__callback_)и [File.closeAsync](/javascript/api/office/office.file#closeAsync_callback_).
 
@@ -103,8 +97,7 @@ function write(message){
 
 Дополнительные сведения см. в инструкции по [получению документа целиком из надстройки для PowerPoint или Word](../word/get-the-whole-document-from-an-add-in-for-word.md).
 
-
-## <a name="reading-and-writing-custom-xml-parts-of-a-word-document"></a>Чтение и запись настраиваемых XML-частей документа Word
+## <a name="read-and-write-custom-xml-parts-of-a-word-document"></a>Чтение и написание пользовательских XML-частей документа Word
 
 С помощью формата файлов Open Office XML и элементов управления контентом вы можете добавлять пользовательские XML-части в документ Word и привязывать элементы в XML-частях к элементам управления контентом в этом документе. При открытии документа Word считывает и автоматически заполняет привязанные элементы управления контентом данными из пользовательских XML-частей. Кроме того, пользователи могут записывать данные в элементы управления контентом. Когда пользователь сохраняет документ, данные в элементах управления также сохраняются в привязанных XML-частях. Надстройки области задач для Word могут использовать свойство [Document.customXmlParts](/javascript/api/office/office.document#customXmlParts), а также объекты [CustomXmlParts](/javascript/api/office/office.customxmlparts), [CustomXmlPart](/javascript/api/office/office.customxmlpart)и [CustomXmlNode](/javascript/api/office/office.customxmlnode) для динамического считывания и записи данных в документ.
 
@@ -116,16 +109,11 @@ function write(message){
 
 Подробные сведения о работе с пользовательскими XML-частями с помощью надстройки области задач см. в статье [Создание улучшенных надстроек для Word с помощью Office Open XML](../word/create-better-add-ins-for-word-with-office-open-xml.md).
 
-
 ## <a name="persisting-add-in-settings"></a>Сохранение настроек надстроек
-
 
 Надстройкам часто требуется сохранять пользовательские данные, например настройки пользователя или состояние надстройки, и запрашивать их при следующем запуске. Для этого можно использовать стандартные методы веб-программирования, например файлы cookie в браузере или веб-хранилище HTML 5. Кроме того, если надстройка работает в Excel, PowerPoint или Word, вы можете использовать методы объекта [Settings](/javascript/api/office/office.settings). Данные, созданные с объектом, хранятся в таблице, презентации или документе, в который была вставлена и сохранена `Settings` надстройка. Данные доступны только для создавшей их надстройки.
 
 Чтобы избежать округлий на сервер, на котором хранится документ, данные, созданные с объектом, управляются в `Settings` памяти во время запуска. Ранее сохраненные данные настроек загружаются в память при инициализации надстройки, а внесенные в эти данные изменения сохраняются в документе только при вызове метода [Settings.saveAsync](/javascript/api/office/office.settings#saveAsync_options__callback_). Для внутренних целей данные хранятся в сериализованном объекте JSON в виде пар "имя-значение". Вы можете использовать методы [get](/javascript/api/office/office.settings#get_name_), [set](/javascript/api/office/office.settings#set_name__value_) и [remove](/javascript/api/office/office.settings#remove_name_) объекта **Settings** для чтения, записи и удаления элементов из копии данных, хранящейся в памяти. Ниже приведена строка кода, позволяющая создать настройку с именем `themeColor` и задать для нее значение green.
-
-
-
 
 ```js
 Office.context.document.settings.set('themeColor', 'green');
@@ -135,18 +123,15 @@ Office.context.document.settings.set('themeColor', 'green');
 
 Дополнительные сведения о работе с пользовательскими данными с использованием методов объекта см. в материале `Settings` [Persisting add-in state and settings.](persisting-add-in-state-and-settings.md)
 
-
-## <a name="reading-properties-of-a-project-document"></a>Чтение свойств документа проекта
+## <a name="read-properties-of-a-project-document"></a>Чтение свойств документа проекта
 
 Если надстройка области задач выполняется в Project, то она может считывать данные из некоторых полей, ресурсов и полей задач в активном проекте. Для этого используются методы и события объекта [ProjectDocument,](/javascript/api/office/office.document) который расширяет объект для предоставления дополнительных Project `Document` определенных функций.
 
 Примеры считывания данных Project см. в статье [Создание первой надстройки области задач для Project 2013 с использованием текстового редактора](../project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md).
 
-
 ## <a name="permissions-model-and-governance"></a>Модель разрешений и управление
 
 Ваша надстройка использует элемент в манифесте для запроса разрешения на доступ к требуемого уровня функциональности из `Permissions` API JavaScript Office JavaScript. Например, если надстройка требует доступа к документу для чтения и записи, его манифест должен указываться как `ReadWriteDocument` текстовое значение в `Permissions` элементе. Так как разрешения обеспечивают конфиденциальность и безопасность пользователей, рекомендуется запросить минимальный уровень разрешений, необходимый для работы надстройки. В примере ниже показано, как запросить разрешение **ReadDocument** в манифесте надстройки области задач.
-
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -161,7 +146,6 @@ Office.context.document.settings.set('themeColor', 'green');
 ```
 
 Дополнительные сведения см. в добавлении [Requesting permissions for API use in add-ins.](requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md)
-
 
 ## <a name="see-also"></a>См. также
 
