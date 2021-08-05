@@ -1,14 +1,14 @@
 ---
 title: Основные концепции команд надстроек
 description: Как добавить настраиваемые кнопки ленты и элементы меню в Office в составе надстройки Office
-ms.date: 01/29/2021
+ms.date: 07/27/2021
 localization_priority: Priority
-ms.openlocfilehash: 1f34a6335949a4cbd2a0f58cdefa12426414770e
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 4ee2e53a1d2a74a2663a372aeb080c5f32da1bde
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349184"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773211"
 ---
 # <a name="add-in-commands-for-excel-powerpoint-and-word"></a>Команды надстроек для Excel, PowerPoint и Word
 
@@ -17,7 +17,7 @@ ms.locfileid: "53349184"
 Обзор этой функции приведен в видео, посвященном [командам надстроек на ленте приложения Office](https://channel9.msdn.com/events/Build/2016/P551).
 
 > [!NOTE]
-> В каталогах SharePoint не поддерживаются команды надстроек. Последние можно развернуть с помощью компонента [централизованного развертывания](../publish/centralized-deployment.md) или [AppSource](/office/dev/store/submit-to-appsource-via-partner-center). Чтобы развернуть команду надстройки для тестирования, выполните [загрузку неопубликованного приложения](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md).
+> В каталогах SharePoint команды надстроек не поддерживаются. Развернуть их можно с помощью [интегрированных приложений](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) или [AppSource](/office/dev/store/submit-to-appsource-via-partner-center). Чтобы развернуть команду надстройки для тестирования, используйте [загрузку неопубликованного приложения](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md).
 
 > [!IMPORTANT]
 > В Outlook также поддерживаются команды надстроек. Дополнительные сведения см. в статье [Команды надстроек для Outlook](../outlook/add-in-commands-for-outlook.md).
@@ -93,7 +93,7 @@ ms.locfileid: "53349184"
 > [!NOTE]
 > Сведения о поддержке Outlook см. в[Команды надстройки для Outlook](../outlook/add-in-commands-for-outlook.md).
 
-## <a name="debugging"></a>Отладка
+## <a name="debug"></a>Отладка
 
 Чтобы отлаживать команду надстройки, необходимо запустить ее в Office в Интернете. Дополнительные сведения см. в статье [Отладка надстроек в Office в Интернете](../testing/debug-add-ins-in-office-online.md)
 

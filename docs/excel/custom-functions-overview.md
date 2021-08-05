@@ -1,16 +1,16 @@
 ---
-ms.date: 01/08/2020
 description: Создайте пользовательскую функцию Excel для надстройки Office
 title: Создание пользовательских функций в Excel
+ms.date: 07/08/2021
 ms.topic: conceptual
 ms.custom: scenarios:getting-started
 localization_priority: Priority
-ms.openlocfilehash: 804895f3e10cac849dc20b67625e4f30164eb41d
-ms.sourcegitcommit: ccc0a86d099ab4f5ef3d482e4ae447c3f9b818a3
+ms.openlocfilehash: 99211ed1debbff5274b257d91bb5a3612609d9d4
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "50237674"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53774205"
 ---
 # <a name="create-custom-functions-in-excel"></a>Создание пользовательских функций в Excel
 
@@ -20,7 +20,7 @@ ms.locfileid: "50237674"
 
 Ниже на анимированном изображении показано, как рабочая книга вызывает функцию, созданную вами с помощью JavaScript или Typescript. В этом примере пользовательская функция `=MYFUNCTION.SPHEREVOLUME` рассчитывает объем сферы.
 
-<img alt="animated image showing an end user inserting the MYFUNCTION.SPHEREVOLUME custom function into a cell of an Excel worksheet" src="../images/SphereVolumeNew.gif" />
+![Анимированное изображение, на котором показано, как конечный пользователь вводит пользовательскую функцию MYFUNCTION.SPHEREVOLUME в ячейку листа Excel.](../images/SphereVolumeNew.gif)
 
 Приведенный ниже код определяет пользовательскую функцию `=MYFUNCTION.SPHEREVOLUME`.
 
@@ -40,7 +40,7 @@ function sphereVolume(radius) {
 
 ## <a name="how-a-custom-function-is-defined-in-code"></a>Как определена пользовательская функция в коде
 
-Если использовать [генератор Yo Office](https://github.com/OfficeDev/generator-office) для создания в Excel проекта с пользовательскими функциями, он создаст файлы, управляющие вашими функциями и областью задач. Мы сосредоточимся на файлах, которые важны для пользовательских функций:
+Если использовать [генератор Yo Office](https://github.com/OfficeDev/generator-office) для создания в Excel проекта с пользовательскими функциями, он создаст файлы, управляющие вашими функциями и областью задач. Мы сосредоточимся на файлах, которые важны для пользовательских функций.
 
 | Файл | Формат файла | Описание |
 |------|-------------|-------------|
@@ -70,9 +70,9 @@ function add(first, second){
 
 ### <a name="manifest-file"></a>Файл манифеста
 
-Файл манифеста XML для надстройки, определяющий пользовательские функции (**./manifest.xml** в проекте, созданном генератором Yo Office) выполняет следующее:
+XML-файл манифеста для надстройки, определяющий пользовательские функции (**./manifest.xml** в проекте, созданном генератором Yo Office), выполняет несколько задач.
 
-- Определяет пространство имен для пользовательских функций. Пространство имен добавляется к пользовательским функциям, чтобы клиенты могли определить ваши функции в рамках надстройки.
+- Определяет пространство имен для ваших пользовательских функций. Пространство имен добавляется к пользовательским функциям, чтобы клиенты могли определить ваши функции в рамках надстройки.
 - Использует уникальные для манифеста пользовательских функций элементы `<ExtensionPoint>` и `<Resources>`. Эти элементы содержат сведения о расположении JavaScript, JSON и HTML-файлов.
 - Указывает, какую среду выполнения использовать для пользовательской функции. Рекомендуется всегда использовать общую среду выполнения, если нет особой потребности в использовании другой среды, так как общая позволяет делиться данными между функциями и областью задач. Обратите внимание, что использование общей среды выполнения означает, что ваша надстройка будет использовать Internet Explorer 11, а не Microsoft Edge.
 
@@ -94,7 +94,8 @@ Excel для Интернета и Windows, подключенный к подп
 
 Еще одно простое средство ознакомления с пользовательскими функциями — [Script Lab](https://appsource.microsoft.com/product/office/WA104380862?src=office&corrid=1ada79ac-6392-438d-bb16-fce6994a2a7e&omexanonuid=f7b03101-ec22-4270-a274-bcf16c762039&referralurl=https%3a%2f%2fgithub.com%2fofficedev%2fscript-lab), надстройка, в которой можно экспериментировать с пользовательскими функциями прямо в Excel. Вы можете попробовать создать собственные пользовательские функции или поиграть с готовыми примерами.
 
-## <a name="see-also"></a>См. также 
+## <a name="see-also"></a>См. также
+
 * [Сведения о программе для разработчиков Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)
 * [Наборы обязательных элементов пользовательских функций](custom-functions-requirement-sets.md)
 * [Правила именования пользовательских функций](custom-functions-naming.md)

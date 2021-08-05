@@ -1,15 +1,15 @@
 ---
 title: Настройка надстройки Node.js с поддержкой единого входа
 description: Узнайте о настройке надстройки с поддержкой SSO, созданной с помощью генератора Yeoman.
-ms.date: 02/01/2021
+ms.date: 08/04/2021
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 7ec55e849031878b0ee6c19cfd82332bee5f77a5
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 71d2cb81aa5b10ef69cbbeacc5c1e071f115fa91
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53348337"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53774422"
 ---
 # <a name="customize-your-nodejs-sso-enabled-add-in"></a>Настройка надстройки Node.js с поддержкой единого входа
 
@@ -18,7 +18,7 @@ ms.locfileid: "53348337"
 
 Быстрое начало [SSO](sso-quickstart.md) создает надстройки с поддержкой SSO, которая получает сведения о профиле пользователя и записывает их в документ или сообщение. В этой статье вы пройдите процесс обновления надстройки, созданной с помощью генератора Yeoman в быстром запуске SSO, чтобы добавить новые функциональные возможности, которые требуют различных разрешений.
 
-## <a name="prerequisites"></a>Предварительные условия
+## <a name="prerequisites"></a>Предварительные требования
 
 - Надстройка Office, которую вы создали, следуя инструкциям в [быстром запуске SSO.](sso-quickstart.md)
 
@@ -71,9 +71,9 @@ ms.locfileid: "53348337"
 
 11. На панели **разрешений API запроса:**
 
-    a. В **статье Файлы** выберите **Files.Read.All**.
+    А. В **статье Файлы** выберите **Files.Read.All**.
 
-    b. Выберите **кнопку Добавить разрешения** в нижней части панели, чтобы сохранить эти изменения разрешений.
+    Б. Выберите **кнопку Добавить разрешения** в нижней части панели, чтобы сохранить эти изменения разрешений.
 
 12. Выберите согласие **администратора гранта для кнопки [имя клиента].**
 
@@ -97,9 +97,9 @@ ms.locfileid: "53348337"
 
 1. В **./. Файл ENV:**
 
-    a. Замените `GRAPH_URL_SEGMENT=/me` следующим образом: `GRAPH_URL_SEGMENT=/me/drive/root/children`
+    А. Замените `GRAPH_URL_SEGMENT=/me` следующим образом: `GRAPH_URL_SEGMENT=/me/drive/root/children`
 
-    b. Замените `QUERY_PARAM_SEGMENT=` следующим образом: `QUERY_PARAM_SEGMENT=?$select=name&$top=10`
+    Б. Замените `QUERY_PARAM_SEGMENT=` следующим образом: `QUERY_PARAM_SEGMENT=?$select=name&$top=10`
 
     c. Замените `SCOPE=User.Read` следующим образом: `SCOPE=Files.Read.All`
 
