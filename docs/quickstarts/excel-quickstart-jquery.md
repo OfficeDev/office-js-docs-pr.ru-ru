@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Excel
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office.
-ms.date: 1/19/2021
+ms.date: 08/04/2021
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 09abf03c5e345c61a4e98226930d79120c95949b
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 6f1ce6d14d1a9840011294028db3c7db5faa2e83
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076639"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53774450"
 ---
 # <a name="build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel
 
@@ -64,7 +64,7 @@ ms.locfileid: "53076639"
 
 5. Внизу области задач выберите ссылку **Выполнить**, чтобы задать выбранному диапазону желтый цвет.
 
-    ![Снимок экрана: Excel с открытой областью задач надстройки и выделенной кнопкой "Запустить".](../images/excel-quickstart-addin-3c.png)
+    ![Снимок экрана: Excel с открытой областью задач надстройки и выделенной кнопкой "Выполнить".](../images/excel-quickstart-addin-3c.png)
 
 ### <a name="next-steps"></a>Дальнейшие действия
 
@@ -176,7 +176,7 @@ ms.locfileid: "53076639"
 
 ### <a name="update-the-manifest"></a>Обновление манифеста
 
-1. Откройте **Обозреватель решений**, перейдите к проекту надстройки **ExcelWebAddIn1**, затем откройте каталог **ExcelWebAddIn1Manifest**. Этот каталог содержит **ExcelWebAddIn1.xml** (ваш файл манифеста). XML-файл манифеста определяет параметры и возможности надстройки. Дополнительные сведения о двух проектах, созданных решением Visual Studio, приведены ранее в разделе [Обзор решения Visual Studio](#explore-the-visual-studio-solution). 
+1. Откройте **Обозреватель решений**, перейдите к проекту надстройки **ExcelWebAddIn1**, затем откройте каталог **ExcelWebAddIn1Manifest**. Этот каталог содержит **ExcelWebAddIn1.xml** (ваш файл манифеста). XML-файл манифеста определяет параметры и возможности надстройки. Дополнительные сведения о двух проектах, созданных решением Visual Studio, приведены ранее в разделе [Обзор решения Visual Studio](#explore-the-visual-studio-solution).
 
 2. Элемент `ProviderName` содержит заполнитель. Замените его на свое имя.
 
@@ -220,8 +220,8 @@ ms.locfileid: "53076639"
 
 ## <a name="see-also"></a>См. также
 
-* [Обзор платформы надстроек Office](../overview/office-add-ins.md)
-* [Разработка надстроек Office](../develop/develop-overview.md)
-* [Объектная модель JavaScript для Excel в надстройках Office](../excel/excel-add-ins-core-concepts.md)
-* [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
-* [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
+- [Обзор платформы надстроек Office](../overview/office-add-ins.md)
+- [Разработка надстроек Office](../develop/develop-overview.md)
+- [Объектная модель JavaScript для Excel в надстройках Office](../excel/excel-add-ins-core-concepts.md)
+- [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
+- [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)

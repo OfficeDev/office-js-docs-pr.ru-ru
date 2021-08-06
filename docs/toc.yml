@@ -320,8 +320,6 @@ items:
             href: /office/dev/store/submit-to-the-office-store
           - name: Политики проверки AppSource
             href: /legal/marketplace/certification-policies
-          - name: Публикация надстроек с помощью централизованного развертывания
-            href: publish/centralized-deployment.md
           - name: Публикация надстроек в каталоге приложений SharePoint
             href: publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md
       - name: Справка
