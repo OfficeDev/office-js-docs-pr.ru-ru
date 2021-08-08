@@ -3,12 +3,12 @@ title: Указание ведущих приложений Office и требо
 description: Узнайте, как указать Office приложений и API для вашей надстройки, чтобы работать как ожидалось.
 ms.date: 05/04/2021
 localization_priority: Normal
-ms.openlocfilehash: f1382bcdba0c3bb88c1d98075fc4b14eb0ca3b07
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: 8d8d4d8536cd118bd139c19541f9a9808e6eec442b1a828fa241222e282e8b8b
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671184"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57080102"
 ---
 # <a name="specify-office-applications-and-api-requirements"></a>Указание приложений Office и требований API
 
@@ -80,7 +80,7 @@ ms.locfileid: "53671184"
 
 Элемент `Hosts` может содержать один или несколько `Host` элементов. Элемент `Host` указывает Office приложения, требуемого для надстройки. Атрибут `Name` необходим и может быть задат одним из следующих значений.
 
-| Имя          | Office клиентских приложений                     | Доступные типы надстройки |
+| Name          | Office клиентских приложений                     | Доступные типы надстройки |
 |:--------------|:-----------------------------------------------|:-----------------------|
 | Database      | Веб-приложения Access                                | Область задач              |
 | Document      | Word в Интернете, Windows, Mac, iPad            | Область задач              |
@@ -88,7 +88,7 @@ ms.locfileid: "53671184"
 | Notebook      | OneNote в Интернете                             | Области задач, контент     |
 | Presentation  | PowerPoint в Интернете, Windows, Mac, iPad      | Области задач, контент     |
 | Проект       | Project для Windows                             | Область задач              |
-| Книга      | Excel в Интернете, Windows, Mac, iPad           | Области задач, контент     |
+| Workbook      | Excel в Интернете, Windows, Mac, iPad           | Области задач, контент     |
 
 > [!NOTE]
 > Атрибут `Name` указывает Office клиентского приложения, которое может запустить надстройку. Office поддерживаются на разных платформах и запускаются на настольных компьютерах, веб-браузерах, планшетах и мобильных устройствах. Вам не удастся указать, какую платформу можно использовать для запуска надстройки. Например, если указать, Outlook в Интернете и Windows можно использовать для запуска `Mailbox` надстройки.

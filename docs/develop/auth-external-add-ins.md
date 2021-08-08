@@ -3,12 +3,12 @@ title: Авторизация внешних служб в надстройке 
 description: Получение авторизации для сторонних источников данных (отличных от Майкрософт), например Google, Facebook, LinkedIn, SalesForce и GitHub, с помощью OAuth 2.0, кода авторизации и неявных потоков.
 ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 4927837caf96268421cfbc79ce3859b9dc4043f9
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.openlocfilehash: 761a61c03a67c3dc582556deff89fe918ebe2d597c4c239fac7e55976e4fbf0c
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53773939"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57081362"
 ---
 # <a name="authorize-external-services-in-your-office-add-in"></a>Авторизация внешних служб в надстройке Office
 

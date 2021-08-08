@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки Outlook
 description: Узнайте, как создать простую надстройку для области задач Outlook, используя API JS для Office.
-ms.date: 06/10/2021
+ms.date: 08/04/2021
 ms.prod: outlook
 localization_priority: Priority
-ms.openlocfilehash: 75a2b4d5a3ec995971b6cca1e47c77572d274555
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: c435fe78255513fb50001e99cfeb476959aafb28
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076604"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53774429"
 ---
 # <a name="build-your-first-outlook-add-in"></a>Создание первой надстройки Outlook
 
@@ -58,6 +58,12 @@ ms.locfileid: "53076604"
 
     ```command&nbsp;line
     cd "My Office Add-in"
+    ```
+
+1. Установите зависимости для своего проекта.
+
+     ```command&nbsp;line
+    npm install
     ```
 
 ### <a name="explore-the-project"></a>Знакомство с проектом

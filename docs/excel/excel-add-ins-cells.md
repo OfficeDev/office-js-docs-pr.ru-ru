@@ -1,23 +1,23 @@
 ---
-title: Работа с ячейками с помощью API JavaScript Excel.
-description: Узнайте определение API JavaScript Excel для ячейки и узнайте, как работать с ячейками.
+title: Работа с ячейками с Excel API JavaScript.
+description: Узнайте Excel API JavaScript для ячейки и узнайте, как работать с ячейками.
 ms.date: 04/16/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: ad8ca985b6bbdcf19920c36c371e690f61639f16
-ms.sourcegitcommit: da8ad214406f2e1cd80982af8a13090e76187dbd
+ms.openlocfilehash: 444feecd4aafb0e884de05b2ff198a3ca1423a16644c537865bcfb6905684a40
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51917102"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57079350"
 ---
-# <a name="work-with-cells-using-the-excel-javascript-api"></a>Работа с ячейками с помощью API JavaScript Excel
+# <a name="work-with-cells-using-the-excel-javascript-api"></a>Работа с ячейками с Excel API JavaScript
 
-В API JavaScript для Excel нет объекта или класса Cell. Вместо этого все ячейки Excel являются `Range` объектами. Отдельные ячейки в пользовательском интерфейсе Excel преобразуются в объект `Range` с одной ячейкой в API JavaScript для Excel.
+В API JavaScript для Excel нет объекта или класса Cell. Вместо этого все Excel являются `Range` объектами. Отдельные ячейки в пользовательском интерфейсе Excel преобразуются в объект `Range` с одной ячейкой в API JavaScript для Excel.
 
 Объект `Range` также может содержать несколько соразмерных ячеек. Дополнительные ячейки образуют неоконченный прямоугольник (включая отдельные строки или столбцы). Чтобы узнать о работе с ячейками, которые не являются соразмерными, см. в этой ссылке Работа с дисконтными ячейками с помощью объекта [RangeAreas.](#work-with-discontiguous-cells-using-the-rangeareas-object)
 
-Полный список свойств и методов, поддерживаемых объектом, см. в списке `Range` [Range Object (API JavaScript для Excel).](/javascript/api/excel/excel.range)
+Полный список свойств и методов, поддерживаемых объектом, см. в руб. `Range` [Range Object (API JavaScript для Excel).](/javascript/api/excel/excel.range)
 
 ## <a name="work-with-discontiguous-cells-using-the-rangeareas-object"></a>Работа с дисконтными ячейками с помощью объекта RangeAreas
 
@@ -26,5 +26,5 @@ ms.locfileid: "51917102"
 ## <a name="see-also"></a>См. также
 
 - [Объектная модель JavaScript для Excel в надстройках Office](excel-add-ins-core-concepts.md)
-- [Получите диапазон с помощью API JavaScript Excel](excel-add-ins-ranges-get.md)
+- [Получите диапазон с помощью Excel API JavaScript](excel-add-ins-ranges-get.md)
 - [Работа с несколькими диапазонами одновременно в надстройках Excel](excel-add-ins-multiple-ranges.md)

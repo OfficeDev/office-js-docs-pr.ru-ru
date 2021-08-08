@@ -4,12 +4,12 @@ description: API удостоверений заданная информаци�
 ms.date: 01/26/2021
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 40f9154b06b0e373ac367b0dcc24cbfc05be4856
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: b4ca583126eb70351fd7b9162cc6ee77a686e8b269219ba298a91f498f6a4b0a
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671431"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57079094"
 ---
 # <a name="identity-api-requirement-sets"></a>Наборы обязательных элементов API удостоверений
 

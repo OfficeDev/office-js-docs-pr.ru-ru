@@ -3,12 +3,12 @@ title: Запрос разрешений на использование API в 
 description: Узнайте о различных уровнях разрешений для объявления в манифесте надстройки содержимого или области задач, чтобы указать уровень доступа к API JavaScript.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: ecb9211431beb6671395f40526cc2340ee2a50a3
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: de84330396ba258db38a39dabf7e45f081247a865fef79c7ae4d254892918ddc
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671508"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57080225"
 ---
 # <a name="requesting-permissions-for-api-use-in-add-ins"></a>Запрос разрешений на использование API в надстройках
 

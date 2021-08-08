@@ -1,17 +1,17 @@
 ---
-title: Создание области задач Excel с помощью Vue
+title: Создание надстройки области задач Excel с помощью Vue
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office и Vue.
-ms.date: 06/16/2021
+ms.date: 08/04/2021
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: ec216e84e9aa4bc7eabec4b20c7a2dd271ca1718
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 1686f9d9537718eb5ba56fa9ea7f0b4ccb7d65ec
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076618"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53774443"
 ---
-# <a name="build-an-excel-task-pane-add-in-using-vue"></a>Создание области задач Excel с помощью Vue
+# <a name="use-vue-to-build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel с помощью Vue
 
 Из этой статьи вы узнаете, как создать надстройку области Excel, используя Vue и API JavaScript для Excel.
 
@@ -20,7 +20,7 @@ ms.locfileid: "53076618"
 [!include[Set up requirements](../includes/set-up-dev-environment-beforehand.md)]
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
-- Установите [Vue CLI](https://cli.vuejs.org/) глобально.
+- Установите [Vue CLI](https://cli.vuejs.org/) глобально. В терминале выполните следующую команду:
 
   ```command&nbsp;line
   npm install -g @vue/cli
@@ -28,13 +28,13 @@ ms.locfileid: "53076618"
 
 ## <a name="generate-a-new-vue-app"></a>Создание нового приложения Vue
 
-Используйте Vue CLI, чтобы создать новое приложение Vue. С помощью терминала выполните следующую команду.
+Используйте интерфейс командной строки Vue, чтобы создать новое приложение Vue.
 
 ```command&nbsp;line
 vue create my-add-in
 ```
 
-Затем выберите `Default` для "Vue 3" (при этом можно использовать "Vue 2").
+Затем выберите предустановку `Default` для "Vue 3" (также можно использовать "Vue 2").
 
 ## <a name="generate-the-manifest-file"></a>Создание файла манифеста
 
@@ -46,16 +46,16 @@ vue create my-add-in
     cd my-add-in
     ```
 
-2. С помощью генератора Yeoman создайте файл манифеста для надстройки, выполнив следующую команду:
+1. Используя генератор Yeoman, создайте файл манифеста для надстройки.
 
     ```command&nbsp;line
     yo office
     ```
 
     > [!NOTE]
-    > При выполнении команды `yo office` может появиться запрос о политиках сбора данных генератора Yeoman и средств CLI надстройки Office. Используйте предоставленные сведения, чтобы ответить на запросы подходящим образом. Если в ответ на второй запрос выбран вариант **Выход**, потребуется снова выполнить команду `yo office`, когда вы будете готовы создать проект надстройки.
+    > При выполнении команды `yo office` могут появиться запросы о политиках сбора данных генератора Yeoman и средств командной строки надстройки Office. Используйте предоставленные сведения, чтобы ответить на запросы подходящим образом. Если в ответ на второй запрос выбран вариант **Выход**, потребуется снова выполнить команду `yo office`, когда вы будете готовы создать проект надстройки.
 
-    При появлении запроса предоставьте следующую информацию для создания проекта надстройки:
+    При появлении запроса предоставьте следующую информацию для создания проекта надстройки.
 
     - **Выберите тип проекта:** `Office Add-in project containing the manifest only`
     - **Как вы хотите назвать надстройку?** `My Office Add-in`
@@ -63,7 +63,7 @@ vue create my-add-in
 
     ![Снимок экрана: интерфейс командной строки генератора Yeoman надстроек Office, где в качестве типа проекта установлен только манифест.](../images/yo-office-manifest-only-vue.png)
 
-После завершения работы мастера создается папка `My Office Add-in`, содержащая файл `manifest.xml`. В конце краткого руководства вам потребуется использовать манифест для загрузки без публикации и тестирования вашей надстройки.
+По завершении мастер создает папку **My Office Add-in**, содержащую файл **manifest.xml**. Вы воспользуетесь манифестом для загрузки вашей неопубликованной надстройки и для ее тестирования.
 
 > [!TIP]
 > Вы можете игнорировать инструкции по *дальнейшим действиям*, предоставляемые генератором Yeoman после создания проекта надстройки. Пошаговые инструкции этой статьи содержат все сведения, необходимые для завершения этого учебного курса.
@@ -72,7 +72,7 @@ vue create my-add-in
 
 [!include[HTTPS guidance](../includes/https-guidance.md)]
 
-1. Чтобы включить HTTPS для своего приложения, создайте файл `vue.config.js` в корневой папке проекта Vue со следующим содержанием:
+1. Включите протокол HTTPS для вашего приложения. В корневой папке проекта Vue создайте файл **vue.config.js** со следующим содержимым.
 
     ```js
     var fs = require("fs");
@@ -90,21 +90,34 @@ vue create my-add-in
     }
     ```
 
-2. В терминале выполните следующую команду, чтобы установить сертификаты надстройки.
+1. Установите сертификаты надстройки.
 
    ```command&nbsp;line
    npx office-addin-dev-certs install
    ```
 
-## <a name="update-the-app"></a>Обновление приложения
+## <a name="explore-the-project"></a>Знакомство с проектом
 
-1. Откройте файл `public/index.html` и добавьте следующий тег `<script>` непосредственно перед тегом `</head>`:
+Проект надстройки, который вы создали с помощью генератора Yeoman, содержит образец кода для простой надстройки области задач. Если вы хотите ознакомиться с ключевыми компонентами проекта надстройки, откройте проект в редакторе кода и просмотрите файлы, перечисленные ниже. Когда вы будете готовы попробовать собственную надстройку, перейдите к следующему разделу.
+
+- Файл **manifest.xml** в корневом каталоге проекта определяет настройки и возможности надстройки. Дополнительные сведения о файле **manifest.xml** см. в статье [XML-манифест надстроек Office](../develop/add-in-manifests.md).
+- Файл **./src/App.vue** содержит разметку HTML для области задач, таблицу стилей CSS, применяемую к содержимому области задач и код API JavaScript Office, обеспечивающий взаимодействие между областью задач и Excel.
+
+## <a name="update-the-app"></a>Обновите приложение
+
+1. Откройте файл **./public/index.html** и добавьте следующий тег `<script>` непосредственно перед тегом `</head>`.
 
    ```html
    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
    ```
 
-2. Откройте файл `src/main.js` и замените его содержимое указанным ниже кодом:
+1. Откройте файл **manifest.xml** и найдите теги `<bt:Urls>` внутри тега `<Resources>`. Найдите тег `<bt:Url>` с идентификатором `Taskpane.Url` и обновите его атрибут `DefaultValue`. Новое значение `DefaultValue` — `https://localhost:3000/index.html`. Весь обновленный тег должен совпадать со следующей строкой.
+
+   ```html
+   <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/index.html" />
+   ```
+
+1. Откройте файл **src/main.js** и замените его содержимое на следующий код.
 
    ```js
    import { createApp } from 'vue'
@@ -115,7 +128,7 @@ vue create my-add-in
    });
    ```
 
-3. Откройте файл `src/App.vue` и замените содержимое файла указанным ниже кодом:
+1. Откройте файл **./src/App.vue** и замените его содержимое на следующий код.
 
    ```html
    <template>
@@ -186,29 +199,35 @@ vue create my-add-in
 
 ## <a name="start-the-dev-server"></a>Запуск сервера разработки
 
-1. Используя терминал, выполните приведенную ниже команду, чтобы запустить сервер разработки.
+1. Установите зависимости.
+
+     ```command&nbsp;line
+    npm install
+    ```
+
+1. Запустите сервер разработки
 
    ```command&nbsp;line
    npm run serve
    ```
 
-2. В веб-браузере перейдите по адресу `https://localhost:3000` (обратите внимание на `https`). Если страница `https://localhost:3000` пуста и не содержит ошибок сертификата, значит, она работает. Приложение Vue подключается после запуска Office, поэтому в нем отображаются только элементы из среды Excel.
+1. В веб-браузере перейдите по адресу `https://localhost:3000` (обратите внимание на `https`). Если страница `https://localhost:3000` пуста, а ошибки сертификата отсутствуют, значит, эта страница работает. Приложение Vue подключается после запуска Office, поэтому в нем отображаются только элементы из среды Excel.
 
 ## <a name="try-it-out"></a>Проверка
 
-1. Следуя указаниям для нужной платформы, загрузите неопубликованную надстройку в Excel.
+1. Запустите надстройку и загрузите неопубликованную надстройку в Excel. Следуйте инструкциям для используемой вами платформы:
 
    - [Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)
    - Веб-браузер: [загрузка неопубликованных надстроек Office в Office в Интернете](../testing/sideload-office-add-ins-for-testing.md#sideload-an-office-add-in-in-office-on-the-web)
    - [iPad и Mac](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
 
-2. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
+1. Откройте область задач надстройки в Excel. На вкладке **Главная** нажмите кнопку **Показать область задач**.
 
    ![Снимок экрана: меню "Главная" в Excel с выделенной кнопкой "Показать область задач".](../images/excel-quickstart-addin-2a.png)
 
-3. Выберите любой диапазон ячеек на листе.
+1. Выберите любой диапазон ячеек на листе.
 
-4. В области задач нажмите кнопку **Set color** (Задать цвет), чтобы сделать выбранный диапазон зеленым.
+1. Установите зеленый цвет для выбранного диапазона. В области задач надстройки нажмите кнопку **Задать цвет**.
 
    ![Снимок экрана: Excel с открытой областью задач надстройки.](../images/excel-quickstart-addin-2c.png)
 
@@ -221,8 +240,8 @@ vue create my-add-in
 
 ## <a name="see-also"></a>См. также
 
-* [Обзор платформы надстроек Office](../overview/office-add-ins.md)
-* [Разработка надстроек Office](../develop/develop-overview.md)
-* [Объектная модель JavaScript для Excel в надстройках Office](../excel/excel-add-ins-core-concepts.md)
-* [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
-* [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
+- [Обзор платформы надстроек Office](../overview/office-add-ins.md)
+- [Разработка надстроек Office](../develop/develop-overview.md)
+- [Объектная модель JavaScript для Excel в надстройках Office](../excel/excel-add-ins-core-concepts.md)
+- [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
+- [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)

@@ -3,12 +3,12 @@ title: Использование Office Dialog API в вашей надстро
 description: Узнайте основы создания диалоговых окне в Office надстройке.
 ms.date: 07/22/2021
 localization_priority: Normal
-ms.openlocfilehash: cf806434fa5357fec554639f161fa0780b884e9a
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.openlocfilehash: 6108051b9fd229804bb8c6a3ac25bb036ab072f03bc649139338361d0cc2ba89
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53773778"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57080881"
 ---
 # <a name="use-the-office-dialog-api-in-office-add-ins"></a>Использование Office Dialog API в надстройках Office
 
@@ -85,7 +85,7 @@ Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 
 
 > [!NOTE]
 >
-> - Для ясности в этом разделе мы вызываем целевой адрес сообщения на хост-странице, но строго говоря, сообщения идут к времени запуска *JavaScript* в области задач (или времени запуска, в который размещен файл функций). [](../reference/manifest/functionfile.md) Различие имеет важное значение только в случае меж доменных сообщений. Дополнительные сведения см. [в сообщении cross-domain messaging to the host runtime.](#cross-domain-messaging-to-the-host-runtime)
+> - Для ясности в этом разделе мы вызываем целевой адрес сообщения на хост-странице, но строго говоря, сообщения идут к времени запуска *JavaScript* в области задач (или времени запуска, в который размещен файл функций). [](../reference/manifest/functionfile.md) Различие имеет важное значение только в случае меж доменных сообщений. Дополнительные сведения см. в разделе [Междоменные сообщения в основной среде выполнения](#cross-domain-messaging-to-the-host-runtime).
 > - Диалоговое окно не может общаться с хост-страницей в области задач, если Office библиотека API JavaScript не загружена на страницу. (Как и на любой странице, Office библиотеке API JavaScript, сценарий страницы должен инициализировать надстройки. Дополнительные сведения см. в [материале Initialize your Office надстройки.)](initialize-add-in.md)
 
 Код в диалоговом окне использует [функцию messageParent](/javascript/api/office/office.ui#messageParent_message__messageOptions_) для отправки строки сообщения на хост-страницу. Строка может быть словом, предложением, BLOB XML, строками JSON или другими строками, которые можно сериализировать в строку или отбрасовать в строку. Ниже приведен пример.

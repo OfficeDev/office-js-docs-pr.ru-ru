@@ -1,14 +1,14 @@
 ---
 title: Пустые значения и значения NULL в надстройках Excel
-description: Узнайте, как работать с пустыми значениями NULL в методах и свойствах объектной модели Excel.
+description: Узнайте, как работать с пустыми значениями null в Excel и свойствах объектной модели.
 ms.date: 09/03/2020
 localization_priority: Normal
-ms.openlocfilehash: 3f38569f7342bb88c52ce424db426bfa7939be5e
-ms.sourcegitcommit: c6308cf245ac1bc66a876eaa0a7bb4a2492991ac
+ms.openlocfilehash: 94603209a6f8d12d184583cd513108aadde956de049fe76d3bf02e04dbf609d3
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "47409416"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57079379"
 ---
 # <a name="blank-and-null-values-in-excel-add-ins"></a>Пустые значения и значения NULL в надстройках Excel
 

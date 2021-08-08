@@ -3,12 +3,12 @@ title: Работа с диаграммами с использованием AP
 description: Примеры кода, демонстрирующие задачи диаграммы с Excel API JavaScript.
 ms.date: 07/17/2019
 localization_priority: Normal
-ms.openlocfilehash: a7199aae31e917b0609a47cc69b5e52279d43b24
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 8e3445a60514321461409b20710848ec7a51852e4f19d44b643721b4b860affd
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349576"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57079355"
 ---
 # <a name="work-with-charts-using-the-excel-javascript-api"></a>Работа с диаграммами с использованием API JavaScript для Excel
 
