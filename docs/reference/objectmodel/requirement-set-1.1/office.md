@@ -3,12 +3,12 @@ title: Office пространства имен — набор требован�
 description: Office членов пространства имен, доступных для Outlook надстройки с помощью API почтовых ящиков, набор 1.1.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 8bec8d3e28c81f0fb0f7aa09cc7c6b43a9b76086
-ms.sourcegitcommit: 0d9fcdc2aeb160ff475fbe817425279267c7ff31
+ms.openlocfilehash: eb97378ac1085983a04741757fd60d66ac02d95c95f22e0ace1aa795a86fe1e4
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2021
-ms.locfileid: "52591053"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57092684"
 ---
 # <a name="office-mailbox-requirement-set-11"></a>Office (набор требований к почтовым ящикам 1.1)
 
@@ -31,9 +31,9 @@ ms.locfileid: "52591053"
 
 | Перечисление | Режимы | Тип возвращаемых данных | Minimum<br>набор требований |
 |---|---|---|:---:|
-| [AsyncResultStatus](#asyncresultstatus-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [CoercionType](#coerciontype-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
-| [SourceProperty](#sourceproperty-string) | Создание<br>Чтение | Строка | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [AsyncResultStatus](#asyncresultstatus-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [CoercionType](#coerciontype-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
+| [SourceProperty](#sourceproperty-string) | Создание<br>Чтение | String | [1.1](../requirement-set-1.1/outlook-requirement-set-1.1.md) |
 
 ## <a name="namespaces"></a>Пространства имен
 
@@ -53,7 +53,7 @@ ms.locfileid: "52591053"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Succeeded`| Строка|Вызов завершился успешно.|
+|`Succeeded`| String|Вызов завершился успешно.|
 |`Failed`| String|Вызов завершился ошибкой.|
 
 ##### <a name="requirements"></a>Требования
@@ -80,7 +80,7 @@ ms.locfileid: "52591053"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Html`| Строка|Запрашивает возврат данных в формате HTML.|
+|`Html`| String|Запрашивает возврат данных в формате HTML.|
 |`Text`| String|Запрашивает возврат данных в формате текста.|
 
 ##### <a name="requirements"></a>Требования
@@ -107,7 +107,7 @@ ms.locfileid: "52591053"
 
 |Имя| Тип| Описание|
 |---|---|---|
-|`Body`| Строка|Источник данных — текст сообщения.|
+|`Body`| String|Источник данных — текст сообщения.|
 |`Subject`| String|Источник данных — тема сообщения.|
 
 ##### <a name="requirements"></a>Требования

@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.6.
 ms.date: 11/09/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 9cc7155928fb3f98acf25a38ca5210ca6d57bb19
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: 74fd184c4d65f30643266ba4799406cfe6f6e8e1e275af09eb6102e4bda986fa
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671212"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57088985"
 ---
 # <a name="whats-new-in-excel-javascript-api-16"></a>Новые возможности API JavaScript для Excel 1.6
 
@@ -62,7 +62,7 @@ ms.locfileid: "53671212"
 |[ConditionalFormat](/javascript/api/excel/excel.conditionalformat)|[delete()](/javascript/api/excel/excel.conditionalformat#delete__)|Удаляет это условное форматирование.|
 ||[getRange()](/javascript/api/excel/excel.conditionalformat#getRange__)|Возврат диапазона, к которому применено условное форматирование.|
 ||[getRangeOrNullObject()](/javascript/api/excel/excel.conditionalformat#getRangeOrNullObject__)|Возвращает диапазон, к которому применяется кондитональный формат.|
-||[приоритет](/javascript/api/excel/excel.conditionalformat#priority)|Приоритет (или индекс) в условном наборе форматов, в который в настоящее время существует этот условный формат.|
+||[priority](/javascript/api/excel/excel.conditionalformat#priority)|Приоритет (или индекс) в условном наборе форматов, в который в настоящее время существует этот условный формат.|
 ||[cellValue](/javascript/api/excel/excel.conditionalformat#cellValue)|Возвращает свойства условного формата значения ячейки, если текущий условный формат является `CellValue` типом.|
 ||[cellValueOrNullObject](/javascript/api/excel/excel.conditionalformat#cellValueOrNullObject)|Возвращает свойства условного формата значения ячейки, если текущий условный формат является `CellValue` типом.|
 ||[colorScale](/javascript/api/excel/excel.conditionalformat#colorScale)|Возвращает свойства условного формата цветовой шкалы, если текущий условный формат является `ColorScale` типом.|

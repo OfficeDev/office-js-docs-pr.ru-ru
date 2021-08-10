@@ -3,12 +3,12 @@ title: Элемент FunctionFile в файле манифеста
 description: Указывает исходный файл кода для операций, которые надстройка предоставляет с помощью команд надстройки, которые выполняют функцию JavaScript вместо отображения пользовательского интерфейса.
 ms.date: 11/06/2020
 localization_priority: Normal
-ms.openlocfilehash: f31a1bc7a561305a89f5388102a4985aaa31fe37
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 66277ab148690b37fbdcd60cf49b10a0fc1b9422c187c6bc213b0cd91a999dfd
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53348302"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57092328"
 ---
 # <a name="functionfile-element"></a>Элемент FunctionFile
 

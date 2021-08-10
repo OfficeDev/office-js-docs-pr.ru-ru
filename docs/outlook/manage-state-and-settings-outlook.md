@@ -3,12 +3,12 @@ title: Управление состоянием и настройками Outlo
 description: Узнайте, как сохранить состояние надстройки и параметры для Outlook надстройки.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 5893850e100399c742954ed130347ff1944b4f37
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: e045c2410c30ae7142aaf9de06d3d4606dc8a0c8fd2cb776620b4aa69cafac99
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53670323"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57093536"
 ---
 # <a name="manage-state-and-settings-for-an-outlook-add-in"></a>Управление состоянием и настройками Outlook надстройки
 

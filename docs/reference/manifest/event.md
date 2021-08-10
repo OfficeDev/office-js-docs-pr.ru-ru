@@ -1,28 +1,28 @@
 ---
-title: Элемент Event в файле манифеста
+title: Элемент события в файле манифеста
 description: Определяет обработчик событий в надстройке.
 ms.date: 05/15/2020
 localization_priority: Normal
-ms.openlocfilehash: 3d8e94c10bed214dd976b3048e11328f10f99325
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 486236f2c2dc19f835e06bad027b4fca33809fb257ba6f6d455add66ab5b5ce0
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611549"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57093300"
 ---
 # <a name="event-element"></a>Элемент Event
 
 Определяет обработчик событий в надстройке.
 
 > [!NOTE]
-> Сведения о поддержке и использовании можно найти [в статье функция отправки почты для надстроек Outlook](../../outlook/outlook-on-send-addins.md).
+> Сведения о поддержке и использовании см. в сайте [On-send feature for Outlook надстройки.](../../outlook/outlook-on-send-addins.md)
 
 ## <a name="attributes"></a>Атрибуты
 
 |  Атрибут  |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
 |  [Тип](#type-attribute)  |  Да  | Задает обрабатываемое событие. |
-|  [функтионексекутион](#functionexecution-attribute)  |  Да  | Задает способ выполнения обработчика событий (асинхронное или синхронное). В настоящее время поддерживаются только синхронные обработчики событий. |
+|  [FunctionExecution](#functionexecution-attribute)  |  Да  | Задает способ выполнения обработчика событий (асинхронное или синхронное). В настоящее время поддерживаются только синхронные обработчики событий. |
 |  [FunctionName](#functionname-attribute)  |  Да  | Задает имя функции для обработчика событий. |
 
 ### <a name="type-attribute"></a>Атрибут Type

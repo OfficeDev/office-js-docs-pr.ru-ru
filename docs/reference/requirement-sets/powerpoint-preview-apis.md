@@ -4,12 +4,12 @@ description: Сведения о предстоящих PowerPoint API JavaScrip
 ms.date: 01/27/2021
 ms.prod: powerpoint
 localization_priority: Normal
-ms.openlocfilehash: af947919ad680864bf4a63ab29af33d0560aaaa0
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: 5569a732dce2db1da5b6fb29169c87e65222afb50b55c7b1930a7c20e138c5c9
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671606"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57092624"
 ---
 # <a name="powerpoint-javascript-preview-apis"></a>PowerPoint API предварительного просмотра JavaScript
 

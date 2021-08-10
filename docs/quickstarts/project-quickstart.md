@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач Project
 description: Узнайте, как создать простую надстройку для области задач Project, используя API JS для Office.
-ms.date: 06/07/2021
+ms.date: 08/04/2021
 ms.prod: project
 localization_priority: Priority
-ms.openlocfilehash: 3589572c022e4fe3dc75cd25e5d378a3dab0c8b7
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 8cada7195d61b26867beeff87fc95ac2b2864c911b07a53540f1934fbaddc420
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076576"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57089432"
 ---
 # <a name="build-your-first-project-task-pane-add-in"></a>Создание первой надстройки области задач Project
 
@@ -96,7 +96,13 @@ Office.context.document.getSelectedTaskAsync(
     cd "My Office Add-in"
     ```
 
-2. Запустите локальный веб-сервер.
+1. Установите для проекта зависимости.
+
+     ```command&nbsp;line
+    npm install
+    ```
+
+1. Запустите локальный веб-сервер.
 
     > [!NOTE]
     > Надстройки Office должны использовать HTTPS, а не HTTP, даже в случае разработки. Если вам будет предложено установить сертификат после того, как вы запустите указанную ниже команду, примите предложение установить сертификат, предоставленный генератором Yeoman.
@@ -107,13 +113,13 @@ Office.context.document.getSelectedTaskAsync(
     npm run dev-server
     ```
 
-3. В Project создайте простой план проекта.
+1. В Project создайте простой план проекта.
 
-4. Загрузите свою надстройку в Project, следуя инструкциям в статье [Загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md).
+1. Загрузите свою надстройку в Project, следуя инструкциям в статье [Загрузка неопубликованных надстроек Office в Windows](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md).
 
-5. Выберите отдельную задачу в проекте.
+1. Выберите отдельную задачу в проекте.
 
-6. В нижней части области задач щелкните ссылку **Выполнить**, чтобы переименовать выбранную задачу и добавить к ней примечания.
+1. В нижней части области задач щелкните ссылку **Выполнить**, чтобы переименовать выбранную задачу и добавить к ней примечания.
 
     ![Снимок экрана: приложение Project с загруженной надстройкой области задач.](../images/project-quickstart-addin-1.png)
 

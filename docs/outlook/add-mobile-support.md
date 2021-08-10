@@ -3,12 +3,12 @@ title: Добавление поддержки мобильных устройс
 description: Чтобы добавить поддержку Outlook Mobile, необходимо обновить манифест надстройки и, возможно, изменить код для мобильных сценариев.
 ms.date: 07/16/2021
 localization_priority: Normal
-ms.openlocfilehash: 270042d61077ae28abee79db024243bfbd5b6dc2
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: afd8c944a6524f4b5b532ed6136ef28c326d0d0c475b35d6254592c3a392aac3
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671851"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57089543"
 ---
 # <a name="add-support-for-add-in-commands-for-outlook-mobile"></a>Добавление поддержки команд надстроек для Outlook Mobile
 

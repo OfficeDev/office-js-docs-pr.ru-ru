@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.1.
 ms.date: 11/09/2020
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 7bc378c200d8aa7c200158d7fe50fdbd71b8251a
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: db8754e793d86fbc1c85bae85a1ce1f925504c649b1694659896ba567dc4e478
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671445"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57093825"
 ---
 # <a name="excel-javascript-api-requirement-set-11"></a>Excel Набор API JavaScript 1.1
 

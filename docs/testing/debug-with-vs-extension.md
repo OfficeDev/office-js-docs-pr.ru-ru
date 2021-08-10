@@ -3,12 +3,12 @@ title: Надстройка Microsoft Office "Расширение отладч�
 description: Чтобы отладить Office надстройки, Visual Studio Code надстройки Microsoft Office надстройки.
 ms.date: 02/01/2021
 localization_priority: Normal
-ms.openlocfilehash: 3daedb48bdec5a17dfc220f049a8e2cdc86ac398
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: d027e5937fa3a58623ce9e798fc683e5459e73b8b72606c0a006e465c9c1360c
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349289"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57088471"
 ---
 # <a name="microsoft-office-add-in-debugger-extension-for-visual-studio-code"></a>Надстройка Microsoft Office "Расширение отладчика для Visual Studio Code"
 
@@ -22,7 +22,7 @@ ms.locfileid: "53349289"
 
 - [Код Visual Studio](https://code.visualstudio.com/) (необходимо запускать от имени администратора)
 - [Node.js (версия 10. или более поздняя)](https://nodejs.org/)
-- Windows 10
+- Windows 10
 - [Microsoft Edge](https://www.microsoft.com/edge)
 
 Эти инструкции предполагают, что вы имеете опыт использования командной строки, понимаете базовый JavaScript и создали проект Office надстройки перед использованием генератора Yo Office. Если вы еще не сделали этого раньше, рассмотрите возможность посещения одного из наших учебников, например Excel Office [надстройки](../tutorials/excel-tutorial.md).

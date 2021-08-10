@@ -3,12 +3,12 @@ title: Элемент OverriddenByRibbonApi в файле манифеста
 description: Узнайте, как указать, что настраиваемая вкладка, группа, элемент управления или меню не должны отображаться, когда он также является частью настраиваемой контекстной вкладки.
 ms.date: 01/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 06d7ae47c7d9de9d48fe9c59493258efc1fa9cae
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: 0f314761f686ca559caea4e04ec5d5a66fab9618ea21a221a6cf2affde897578
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671753"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57092214"
 ---
 # <a name="overriddenbyribbonapi-element"></a>Элемент OverriddenByRibbonApi
 

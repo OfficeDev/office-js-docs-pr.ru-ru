@@ -1,14 +1,14 @@
 ---
 title: Элемент RequestedHeight в файле манифеста
-description: Элемент RequestedHeight указывает начальную высоту (в пикселях) надстройки для работы с контентом или почтовой надстройкой.
+description: Элемент RequestedHeight указывает начальную высоту (в пикселях) контента или надстройки почты.
 ms.date: 05/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 44675918a4208683f442fe8a6e8f4f906f484571
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 0e5f9de909d32622ac244ff4118c8a3192abf2ff0fe89ed81a6188ddcb265549
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44611731"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57092989"
 ---
 # <a name="requestedheight-element"></a>Элемент RequestedHeight
 
@@ -26,4 +26,4 @@ ms.locfileid: "44611731"
 
 - [DefaultSettings](defaultsettings.md) (контентные надстройки) со значением в диапазоне от 32 до 1000
 - [DesktopSettings](desktopsettings.md) и [TabletSettings](tabletsettings.md) (почтовые надстройки) со значением в диапазоне от 32 до 450
-- [ExtensionPoint](extensionpoint.md) (контекстные почтовые надстройки) со значением, которое может находиться в диапазоне от 140 до 450 точки расширения **DetectedEntity** и между 32 и 450 для [точки расширения **кустомпане** (не рекомендуется)](https://developer.microsoft.com/outlook/blogs/make-your-add-ins-available-in-the-office-ribbon/)
+- [ExtensionPoint](extensionpoint.md) (надстройки контекстной почты) со значением от 140 до 450 для точки расширения **DetectedEntity** и от 32 до 450 для точки расширения [ **CustomPane** (неподготовленной)](https://developer.microsoft.com/outlook/blogs/make-your-add-ins-available-in-the-office-ribbon/)

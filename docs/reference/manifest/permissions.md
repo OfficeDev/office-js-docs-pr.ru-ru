@@ -1,14 +1,14 @@
 ---
 title: Элемент Permissions в файле манифеста
-description: Элемент Permissions определяет уровень доступа к API для надстройки Office.
+description: Элемент Permissions указывает уровень доступа к API для Office надстройки.
 ms.date: 06/26/2020
 localization_priority: Normal
-ms.openlocfilehash: bc4cc2713d5a781c3407385470acd762910d17fd
-ms.sourcegitcommit: 065bf4f8e0d26194cee9689f7126702b391340cc
+ms.openlocfilehash: 2f2ccb4f6ec691b19cadea76a06520a9bad7a0b6c0e51699f2c8db67a3030de0
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "45006460"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57089016"
 ---
 # <a name="permissions-element"></a>Элемент Permissions
 
@@ -36,4 +36,4 @@ ms.locfileid: "45006460"
 
 ## <a name="remarks"></a>Замечания
 
-Дополнительные сведения см в статье [запрашивание разрешений для использования API в контентных](../../develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md) надстройках и надстройках области задач и [Общие сведения о разрешениях для надстроек Outlook](../../outlook/understanding-outlook-add-in-permissions.md).
+Дополнительные сведения см. в материале Запрашивание разрешений на использование [API](../../develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md) в надстройке контента и области задач и Outlook разрешений [надстройки.](../../outlook/understanding-outlook-add-in-permissions.md)

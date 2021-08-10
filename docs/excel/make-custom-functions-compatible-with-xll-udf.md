@@ -3,12 +3,12 @@ title: Расширение пользовательских функций с �
 description: Включить совместимость с Excel функциями, определенными пользователем XLL, которые имеют эквивалентные функциональные возможности для настраиваемой функции
 ms.date: 03/09/2021
 localization_priority: Normal
-ms.openlocfilehash: 33c7ee9309196d627520b37a02d5a1bca44cb767
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: b7a2330f7a875c894f371138034314ae99bb0e9393a45c6e8572a97a084fe94e
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53349394"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57089317"
 ---
 # <a name="extend-custom-functions-with-xll-user-defined-functions"></a>Расширение пользовательских функций с помощью функций, определенных пользователем XLL
 

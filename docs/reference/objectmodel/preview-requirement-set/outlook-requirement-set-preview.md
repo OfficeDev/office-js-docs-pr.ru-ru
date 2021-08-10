@@ -3,12 +3,12 @@ title: Outlook набор требований к предварительном
 description: Функции и API, которые в настоящее время находятся в предварительном Outlook надстройки.
 ms.date: 06/15/2021
 localization_priority: Normal
-ms.openlocfilehash: 79ae0f200743607ee762feebd34dc0e4d192048a
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: 58f27010372bef495ece16e3c9fb5cf4a8a7e78b1c3e7880485367ec6f954f63
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671914"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57091396"
 ---
 # <a name="outlook-add-in-api-preview-requirement-set"></a>Outlook набор требований к предварительному просмотру API надстройки
 

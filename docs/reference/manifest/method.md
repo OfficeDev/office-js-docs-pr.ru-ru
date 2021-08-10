@@ -1,18 +1,18 @@
 ---
 title: Элемент Method в файле манифеста
-description: Элемент Method указывает отдельный метод из API JavaScript для Office, необходимый для активации надстроек Office.
+description: Элемент Method указывает отдельный метод из Office API JavaScript, который требуется Office надстройки для активации.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 0e3e74a73a3422a7789e82d6f0e7a516bd795ca8
-ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
+ms.openlocfilehash: 811cd84e1ad2aade8b7042eefa822eee6b2ab200a8fa1b71c9fe5fc34874ec66
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46641327"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57089732"
 ---
 # <a name="method-element"></a>Элемент Method
 
-Указывает отдельный метод из API JavaScript для Office, необходимый для активации надстройки Office.
+Указывает отдельный метод из API Office JavaScript, который требуется Office надстройки для активации.
 
 **Тип надстройки:** контентные надстройки и надстройки области задач
 
@@ -34,7 +34,7 @@ ms.locfileid: "46641327"
 
 ## <a name="remarks"></a>Примечания
 
-`Methods`Элементы и `Method` не поддерживаются почтовыми надстройками. Дополнительные сведения о наборах требований: [версии и наборы](../../develop/office-versions-and-requirement-sets.md)обязательных элементов для Office.
+Эти `Methods` элементы и элементы не `Method` поддерживаются почтовыми надстройки. Дополнительные сведения о наборах требований [см. в Office версиях и наборах требований.](../../develop/office-versions-and-requirement-sets.md)
 
 > [!IMPORTANT]
-> Минимальную версию невозможно указать для отдельных методов. Чтобы убедиться, что метод доступен в среде выполнения, при вызове этого метода в сценарии надстройки следует также использовать оператор **if**. Дополнительные сведения о том, как это сделать, можно узнать в статье Общие сведения об [API JavaScript для Office](../../develop/understanding-the-javascript-api-for-office.md).
+> Минимальную версию невозможно указать для отдельных методов. Чтобы убедиться, что метод доступен в среде выполнения, при вызове этого метода в сценарии надстройки следует также использовать оператор **if**. Дополнительные сведения о том, как это сделать, см. в Office [API JavaScript.](../../develop/understanding-the-javascript-api-for-office.md)

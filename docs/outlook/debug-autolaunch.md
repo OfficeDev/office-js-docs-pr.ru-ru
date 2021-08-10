@@ -4,12 +4,12 @@ description: Узнайте, как отлагировать Outlook надст�
 ms.topic: article
 ms.date: 05/14/2021
 localization_priority: Normal
-ms.openlocfilehash: 8cabbb669d9b46e047efa7e79ae4225c1fc22689
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: d96ab13ada1135d17feef7597c6427cf56d75872cefdf43f0e24fb8da2274ce1
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53077094"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57090819"
 ---
 # <a name="debug-your-event-based-outlook-add-in-preview"></a>Отламывка надстройки Outlook событий (предварительный просмотр)
 
@@ -78,7 +78,7 @@ ms.locfileid: "53077094"
     }
     ```
 
-### <a name="other"></a>Другое
+### <a name="other"></a>Другие
 
 1. Создайте новую папку под названием **Отладка** (возможно, в **папке Desktop).**
 1. Откройте Visual Studio Code.
@@ -123,7 +123,7 @@ ms.locfileid: "53077094"
 
     ![Снимок экрана выбора прямого отладки из параметров конфигурации в Visual Studio Code отладки.](../images/outlook-win-autolaunch-debug-vsc.png)
 
-## <a name="debug"></a>Debug
+## <a name="debug"></a>Отладка
 
 1. После подтверждения того, что отладка присоединена, вернись в  Outlook и в диалоговом окне обработник на основе событий отладки выберите **ОК** .
 

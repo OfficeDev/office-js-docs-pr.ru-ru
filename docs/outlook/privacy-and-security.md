@@ -3,12 +3,12 @@ title: Конфиденциальность, разрешения и безоп�
 description: Узнайте, как управлять конфиденциальностью, разрешениями и безопасностью в надстройке Outlook.
 ms.date: 07/27/2021
 localization_priority: Priority
-ms.openlocfilehash: cd0c793bb8a2cfbc4cef17e0cf717c35cb68794c
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.openlocfilehash: e88dc6395eafc665a6e0635823a0419feb8f27de1acc7ec28bb94becc43b5536
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53773120"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57093507"
 ---
 # <a name="privacy-permissions-and-security-for-outlook-add-ins"></a>Конфиденциальность, разрешения и безопасность для надстроек Outlook
 

@@ -3,12 +3,12 @@ title: Тестирование Internet Explorer 11
 description: Проверьте Office надстройки в Internet Explorer 11.
 ms.date: 06/18/2021
 localization_priority: Normal
-ms.openlocfilehash: fa9550884a24feffdd750171f3a7e08648f9432f
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 8579a37f1ea48d511010b8c55cfe9fad5aa6b41acee85b1da426e25083287655
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076408"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57090132"
 ---
 # <a name="test-your-office-add-in-on-internet-explorer-11"></a>Проверьте Office надстройки в Internet Explorer 11
 

@@ -1,17 +1,16 @@
 ---
 title: Включение единого входа для надстроек Office
 description: Узнайте, как включить единый вход для надстроек Office с помощью обычной личной, рабочей или учебной учетной записи Майкрософт.
-ms.date: 07/30/2020
+ms.date: 07/08/2021
 localization_priority: Priority
-ms.openlocfilehash: a776b434f42428cfc65b23a67f9ba6518028f677
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: 2e3951cd4e480de1fec563b68b3c5b4e2ff4cd293446a14c42c0cc7e50104e41
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671501"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57080035"
 ---
 # <a name="enable-single-sign-on-for-office-add-ins"></a>Включение единого входа для надстроек Office
-
 
 Пользователи входят в Office (в Интернете, на мобильных устройствах и настольных компьютерах), используя личную учетную запись Майкрософт либо учетную запись Microsoft 365 для образования или рабочую учетную запись. Вы можете использовать единый вход для авторизации пользователя в надстройке (при этом пользователю не потребуется входить повторно).
 
@@ -22,8 +21,6 @@ ms.locfileid: "53671501"
 Если вы работаете с надстройкой **Outlook**, обязательно включите современную проверку подлинности для клиента Microsoft 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить в клиенте современную проверку подлинности](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 Вам *не* следует опираться на функцию единого в качестве единого способа проверки подлинности вашей надстройки. Вам следует внедрить альтернативную систему проверки подлинности, на которую ваша надстройка может опираться при определенных ошибках. Вы можете использовать систему таблиц пользователя и проверки подлинности, либо вы можете выделить одну из систем входа с использованием социальных сервисов. Дополнительные сведения о том, как это сделать с помощью надстройки Office см. в статье [Авторизация внешних служб в надстройке Office](auth-external-add-ins.md). Для *Outlook* существует рекомендуемая система возврата. Дополнительные сведения см. в статье [Сценарий: реализация единого входа для службы в надстройке Outlook](../outlook/implement-sso-in-outlook-add-in.md). Примеры использования Azure Active Directory в качестве системы возврата см. в статьях [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO) и [Единый вход с использованием ASP.NET для надстройки Office](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO).
-
-
 
 ## <a name="how-sso-works-at-runtime"></a>Принцип работы единого входа во время выполнения
 
@@ -103,7 +100,6 @@ ms.locfileid: "53671501"
 
 > [!NOTE]
 > В этом примере обрабатывается только один тип ошибки явным образом. Примеры более сложной обработки ошибок см. в статьях [Единый вход с использованием NodeJS для надстройки Office](https://github.com/OfficeDev/Office-Add-in-NodeJS-SSO) и [Единый вход с использованием ASP.NET для надстройки Office](https://github.com/OfficeDev/Office-Add-in-ASPNET-SSO).
-
 
 ```js
 async function getGraphData() {

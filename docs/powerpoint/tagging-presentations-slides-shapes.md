@@ -1,14 +1,14 @@
 ---
-title: Использование пользовательских тегов на презентациях, слайдах и фигурах в PowerPoint
+title: Используйте настраиваемые теги на презентациях, слайдах и фигурах в PowerPoint
 description: Узнайте, как использовать теги для настраиваемой метаданных о презентациях, слайдах и фигурах.
 ms.date: 04/08/2021
 localization_priority: Normal
-ms.openlocfilehash: fbb13e67da1f7962fc2c0b8d45689f259b015014
-ms.sourcegitcommit: 58d394fa49308ecf93cd53f7d3fb6e316ff56209
+ms.openlocfilehash: 9ae86906a2ac69cb79adac34fa4e923a9bc218a7dc8a7e5bdefd63300b589da5
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "51876862"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57093660"
 ---
 # <a name="use-custom-tags-for-presentations-slides-and-shapes-in-powerpoint"></a>Используйте настраиваемые теги для презентаций, слайдов и фигур в PowerPoint
 
@@ -32,7 +32,7 @@ ms.locfileid: "51876862"
 
 - Первым параметром метода `add` является ключ в паре значение ключа. 
 - Второй параметр — это значение.
-- Ключ находится в верхних буквах. Это не является строго обязательным для метода; однако ключ всегда хранится в PowerPoint в качестве верхнего шкафа, и некоторые методы, связанные с тегами, требуют, чтобы ключ был выражен в верхнем шкафу, поэтому мы рекомендуем в качестве наилучшей практики использовать верхний шкаф в коде для `add` ключа тега. 
+- Ключ находится в верхних буквах. Это не является строго обязательным для метода; однако ключ всегда хранится в PowerPoint как верхний шкаф, и некоторые методы, связанные с тегами, требуют, чтобы ключ был выражен в верхнем шкафу, поэтому мы рекомендуем в качестве рекомендации использовать верхний шкаф в коде для `add` ключа тега. 
 
 ```javascript
 async function addMultipleSlideTags() {
@@ -88,7 +88,7 @@ async function updateTag() {
     - Он использует метод [Office.context.document.getSelectedDataAsync](/javascript/api/office/office.document#getSelectedDataAsync_coercionType__callback_) общих API JavaScript.
     - Вызов встроен в функцию возврата `getSelectedDataAsync` обещаний. Дополнительные сведения о том, почему и как это сделать, см. в этой ссылке [Wrap Common API в функциях возврата обещаний.](../develop/asynchronous-programming-in-office-add-ins.md#wrap-common-apis-in-promise-returning-functions)
     - `getSelectedDataAsync` возвращает массив, так как можно выбрать несколько слайдов. В этом сценарии пользователь выбрал только один, поэтому код получает первый (0-й) слайд, который является единственным выбранным.
-    - Значение слайда — это 1-основанное значение, что пользователь видит рядом со слайдом в области эскизов пользовательского интерфейса `index` PowerPoint.
+    - Значение слайда — это 1-базирующееся значение, что пользователь видит рядом со слайдом в области PowerPoint `index` интерфейса пользовательского интерфейса.
 
     ```javascript
     function getSelectedSlideIndex() {
@@ -138,7 +138,7 @@ async function updateTag() {
 
 ## <a name="set-custom-metadata-on-the-presentation"></a>Настройка настраиваемой метаданных на презентации
 
-Надстройки также могут применять теги к презентации в целом. Это позволяет использовать теги для метаданных на уровне документов, аналогичные использованию класса [CustomProperty](/javascript/api/word/word.customproperty)в Word. Но в отличие от класса Word, значение `CustomProperty` тега PowerPoint может быть только типа `string` .
+Надстройки также могут применять теги к презентации в целом. Это позволяет использовать теги для метаданных на уровне документов, аналогичные использованию класса [CustomProperty](/javascript/api/word/word.customproperty)в Word. Но в отличие от класса Word, значение тега PowerPoint `CustomProperty` может быть только типа `string` .
 
 Следующий код — пример добавления тега в презентацию. 
 

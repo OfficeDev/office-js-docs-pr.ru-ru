@@ -4,12 +4,12 @@ description: Сведения о предстоящих Excel API JavaScript.
 ms.date: 07/23/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 5de8ee52aea357c8dce4d2027556e5e8a5b1a4ac
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: d90c5e8bb2c344cb3bb297a3cd793613f017e910ab99df6dfffc456c3f715d20
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671718"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57092648"
 ---
 # <a name="excel-javascript-preview-apis"></a>Предварительные версии API JavaScript для Excel
 
@@ -58,7 +58,7 @@ ms.locfileid: "53671718"
 |[CommentReplyCollection](/javascript/api/excel/excel.commentreplycollection)|[getItemOrNullObject(commentReplyId: string)](/javascript/api/excel/excel.commentreplycollection#getItemOrNullObject_commentReplyId_)|Возвращает ответ на примечание, определенное по идентификатору.|
 |[ConditionalFormatCollection](/javascript/api/excel/excel.conditionalformatcollection)|[getItemOrNullObject(id: строка)](/javascript/api/excel/excel.conditionalformatcollection#getItemOrNullObject_id_)|Возвращает условный формат, идентифицированный его ID.|
 |[DocumentTask](/javascript/api/excel/excel.documenttask)|[percentComplete](/javascript/api/excel/excel.documenttask#percentComplete)|Указывает процент выполнения задачи.|
-||[приоритет](/javascript/api/excel/excel.documenttask#priority)|Указывает приоритет задачи.|
+||[priority](/javascript/api/excel/excel.documenttask#priority)|Указывает приоритет задачи.|
 ||[назначение](/javascript/api/excel/excel.documenttask#assignees)|Возвращает коллекцию назначений задачи.|
 ||[изменения](/javascript/api/excel/excel.documenttask#changes)|Получает записи изменений задачи.|
 ||[comment](/javascript/api/excel/excel.documenttask#comment)|Получает комментарий, связанный с задачей.|
@@ -77,7 +77,7 @@ ms.locfileid: "53671718"
 ||[dueDateTime](/javascript/api/excel/excel.documenttaskchange#dueDateTime)|Представляет дату и время задачи в часовом поясе UTC.|
 ||[id](/javascript/api/excel/excel.documenttaskchange#id)|ID для записи изменения задачи.|
 ||[percentComplete](/javascript/api/excel/excel.documenttaskchange#percentComplete)|Представляет процент выполнения задачи.|
-||[приоритет](/javascript/api/excel/excel.documenttaskchange#priority)|Представляет приоритет задачи.|
+||[priority](/javascript/api/excel/excel.documenttaskchange#priority)|Представляет приоритет задачи.|
 ||[startDateTime](/javascript/api/excel/excel.documenttaskchange#startDateTime)|Представляет дату и время начала задачи в часовом поясе UTC.|
 ||[заголовок](/javascript/api/excel/excel.documenttaskchange#title)|Представляет название задачи.|
 ||[type](/javascript/api/excel/excel.documenttaskchange#type)|Представляет тип действия записи изменения задачи.|

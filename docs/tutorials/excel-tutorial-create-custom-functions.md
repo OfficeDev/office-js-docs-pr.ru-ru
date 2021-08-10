@@ -4,12 +4,12 @@ description: В этом руководстве вы создадите надс
 ms.date: 07/07/2021
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 56e8a31f8d33756ca1668e2fa1468d10d1ad4821
-ms.sourcegitcommit: 95fc1fc8a0dbe8fc94f0ea647836b51cc7f8601d
+ms.openlocfilehash: 0067d0164c5bb126963f3ec1786f8428d3ea18a6503002af483e5495e916d688
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53418715"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57087188"
 ---
 # <a name="tutorial-create-custom-functions-in-excel"></a>Руководство: создание пользовательских функций в Excel
 
@@ -26,11 +26,11 @@ ms.locfileid: "53418715"
 
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
 
-- Excel для Windows (версия 1904 или более поздняя, подключенная к подписке на Microsoft 365) или в Интернете
+* Excel для Windows (версия 1904 или более поздняя, подключенная к подписке на Microsoft 365) или Excel в Интернете
 
 ## <a name="create-a-custom-functions-project"></a>Создание проекта пользовательских функций
 
- Чтобы начать, вам необходимо создать проект кода для разработки надстройки пользовательской функции. [Генератор Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office) настроит в вашем проекте некоторые готовые пользовательские функции, которые можно использовать. Если вы уже запустили «Краткое руководство по пользовательским функциям» и создали проект, то продолжайте этот проект и [пропустите эту процедуру](#create-a-custom-function-that-requests-data-from-the-web).
+ Чтобы начать, создайте проект кода для разработки надстройки пользовательской функции. [Генератор Yeoman для надстроек Office](https://www.npmjs.com/package/generator-office) настроит в вашем проекте некоторые готовые пользовательские функции, которые можно попробовать. Если вы уже с помощью краткого руководства по пользовательским функциям создали проект, то продолжайте работать с ним и [пропустите этот шаг](#create-a-custom-function-that-requests-data-from-the-web).
 
 1. [!include[Yeoman generator create project guidance](../includes/yo-office-command-guidance.md)]
 
@@ -95,7 +95,7 @@ npm run start:web
 
 Созданный проект пользовательских функций содержит некоторые готовые пользовательские функции, определенные в файле **src/functions/functions.js**. Файл **./manifest.xml** указывает, что все пользовательские функции принадлежат пространству имен `CONTOSO`. Вы будете использовать пространство имен CONTOSO для доступа к пользовательским функциям в Excel.
 
-Затем вы проверите пользовательскую функцию `ADD`, выполнив действия ниже.
+Попробуйте, как работает пользовательская функция `ADD`, выполнив описанные далее шаги.
 
 1. В Excel перейдите в любую ячейку и введите `=CONTOSO`. Обратите внимание на то, что в меню автозаполнения содержится список всех функций в пространстве имен `CONTOSO`.
 
@@ -154,7 +154,6 @@ npm run start:web
 1. В списке доступных надстроек найдите раздел **Надстройки разработчика** и выберите вашу надстройку **starcount**, чтобы ее зарегистрировать.
     ![Снимок экрана: лента "Вставка" в Excel для Windows с выделенной надстройкой "Пользовательские функции Excel" в списке "Мои надстройки".](../images/list-starcount.png)
 
-
 # <a name="excel-on-the-web"></a>[Excel в Интернете](#tab/excel-online)
 
 1. В Excel выберите вкладку **Вставка**, а затем выберите **Надстройки**. ![Снимок экрана: лента "Вставка" Excel для Интернета с выделенной кнопкой "Мои надстройки".](../images/excel-cf-online-register-add-in-1.png)
@@ -165,11 +164,9 @@ npm run start:web
 
 1. Выберите файл **manifest.xml** и нажмите **Открыть**, затем нажмите кнопку **Отправить**.
 
----
+5. Теперь давайте оценим, как работает новая функция. В ячейке **B1** введите текст **=CONTOSO.GETSTARCOUNT("OfficeDev&quot;, &quot;Excel-Custom-Functions")** и нажмите клавишу ВВОД. Результат в ячейке **B1** — это текущее количество звезд, отданных репозиторию [Excel-Custom-Functions Github](https://github.com/OfficeDev/Excel-Custom-Functions).
 
-<ol start="5&quot;>
-<li> Теперь давайте оценим, как работает новая функция. В ячейке <strong>B1</strong>введите текст <strong>=CONTOSO.GETSTARCOUNT(&quot;OfficeDev&quot;, &quot;Excel-Custom-Functions")</strong> и нажмите клавишу ВВОД. Результат в ячейке <strong>B1</strong> — это текущее количество звезд, отданных репозиторию [Excel-Custom-Functions Github](https://github.com/OfficeDev/Excel-Custom-Functions).</li>
-</ol>
+---
 
 ## <a name="create-a-streaming-asynchronous-custom-function"></a>Создание потоковой асинхронной пользовательской функции
 

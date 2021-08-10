@@ -4,12 +4,12 @@ description: Сведения о наборе требований ExcelApi 1.8.
 ms.date: 03/19/2021
 ms.prod: excel
 localization_priority: Normal
-ms.openlocfilehash: 87d59bb78a00035d4dc0ff8514d3214bc93397b3
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: b6cc766277d6f6a7c9ecca505e2f527f7654fd6e93fc85a2f2694c2a3df6db05
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671424"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57088954"
 ---
 # <a name="whats-new-in-excel-javascript-api-18"></a>Новые возможности в Excel API JavaScript 1.8
 
@@ -254,7 +254,7 @@ ms.locfileid: "53671424"
 ||[getItemOrNullObject(имя: строка)](/javascript/api/excel/excel.rowcolumnpivothierarchycollection#getItemOrNullObject_name_)|Получает RowColumnPivotHierarchy по имени.|
 ||[items](/javascript/api/excel/excel.rowcolumnpivothierarchycollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
 ||[remove (rowColumnPivotHierarchy: Excel. RowColumnPivotHierarchy)](/javascript/api/excel/excel.rowcolumnpivothierarchycollection#remove_rowColumnPivotHierarchy_)|Удаляет PivotHierarchy из текущей оси.|
-|[Runtime](/javascript/api/excel/excel.runtime)|[enableEvents](/javascript/api/excel/excel.runtime#enableEvents)|Добавление событий JavaScript в текущую области задач или надстройку контента.|
+|[Время выполнения](/javascript/api/excel/excel.runtime)|[enableEvents](/javascript/api/excel/excel.runtime#enableEvents)|Добавление событий JavaScript в текущую области задач или надстройку контента.|
 |[ShowAsRule](/javascript/api/excel/excel.showasrule)|[baseField](/javascript/api/excel/excel.showasrule#baseField)|PivotField на основе расчета, если применимо `ShowAs` в соответствии с `ShowAsCalculation` типом, еще `null` .|
 ||[baseItem](/javascript/api/excel/excel.showasrule#baseItem)|Элемент, на основе `ShowAs` расчета, если применимо в соответствии с `ShowAsCalculation` типом, еще `null` .|
 ||[вычисление](/javascript/api/excel/excel.showasrule#calculation)|`ShowAs`Вычисление, используемого для PivotField.|

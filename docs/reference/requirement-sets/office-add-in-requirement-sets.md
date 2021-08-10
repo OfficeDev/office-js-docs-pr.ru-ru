@@ -4,12 +4,12 @@ description: Дополнительные дополнительные Office о
 ms.date: 04/28/2021
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: 458369ad693afeedb760eda3238191c44bedc5e9
-ms.sourcegitcommit: f46e4aeb9c31f674380dd804fd72957998b3a532
+ms.openlocfilehash: d62f71905f892f6abd700fb78d21eb75c3fb4271f1370eb6b10a60326d52eafb
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "53536048"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57093252"
 ---
 # <a name="office-common-api-requirement-sets"></a>Наборы обязательных элементов общего API для Office
 
@@ -96,7 +96,7 @@ ms.locfileid: "53536048"
 
 ---
 
-### <a name="file"></a>File
+### <a name="file"></a>Файл
 
 |**Приложения Office**|**Методы в наборе**|
 |:-----|:-----|

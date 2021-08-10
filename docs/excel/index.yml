@@ -8,36 +8,36 @@ metadata:
   ms.topic: landing-page
   ms.date: 03/29/2021
   localization_priority: Priority
-  ms.openlocfilehash: 6e1b833b9f58c26e6a5ee85103d231ea75284064
-  ms.sourcegitcommit: a0624ef0d847fdbd6d83f27d1f9c69daf636ac38
+  ms.openlocfilehash: 90b40568affbf7895bda15fb73345676be118f6f0830805dcedcbf3decccae83
+  ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 03/30/2021
-  ms.locfileid: "51435314"
+  ms.lasthandoff: 08/07/2021
+  ms.locfileid: "57088935"
 landingContent:
-- title: О надстройки Excel
+- title: О Excel надстройки
   linkLists:
   - linkListType: overview
     links:
-    - text: Что такое надстройки Excel?
+    - text: Что Excel надстройки?
       url: excel-add-ins-overview.md
   - linkListType: quickstart
     links:
     - text: Создание первой надстройки Excel
       url: ../quickstarts/excel-quickstart-jquery.md
-    - text: Изучение API с помощью лаборатории скриптов
+    - text: Ознакомьтесь с API с Script Lab
       url: ../overview/explore-with-script-lab.md
   - linkListType: how-to-guide
     links:
-    - text: Используйте API JavaScript Excel для взаимодействия с объектами и контентом книг
+    - text: Используйте API Excel JavaScript для взаимодействия с объектами и контентом книг
       url: ../reference/overview/excel-add-ins-reference-overview.md
     - text: Добавление настраиваемой функции в Excel
       url: custom-functions-overview.md
-    - text: Тестирование и отлагивание надстройки Excel
+    - text: Тестирование и отлагивание Excel надстройки
       url: ../testing/test-debug-office-add-ins.md
-    - text: Развертывание и публикация надстройки Excel
+    - text: Развертывание и публикация Excel надстройки
       url: ../publish/publish.md
-- title: Ключевые концепции надстройки Office
+- title: Основные Office надстройки
   linkLists:
   - linkListType: overview
     links:
