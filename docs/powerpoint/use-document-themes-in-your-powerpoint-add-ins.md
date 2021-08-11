@@ -3,12 +3,12 @@ title: Использование тем документов в надстро�
 description: Узнайте, как визуально координировать такие темы, как шрифты и цвета для применения к презентациям, документам, таблицам и электронным письмам.
 ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: e01f8d9181d9667e9a38a34dcfca0201bef1ae71
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.openlocfilehash: 4493517fbaf5307ae0c9e0195944397c2ab766f8154f26095f764e1499d1f218
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53774065"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57096097"
 ---
 # <a name="use-document-themes-in-your-powerpoint-add-ins"></a>Использование тем документов в надстройках PowerPoint
 

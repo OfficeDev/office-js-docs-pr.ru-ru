@@ -1,18 +1,18 @@
 ---
 title: Элемент AppDomains в файле манифеста
-description: Список всех доменов в дополнение к домену, указанному в `SourceLocation` элементе, который будет использоваться вашей надстройкой Office и должен быть доверенным для Office.
+description: Перечислены все домены в дополнение к домену, указанному в элементе, Office надстройка будет использовать и должна доверяться `SourceLocation` Office.
 ms.date: 06/12/2020
 localization_priority: Normal
-ms.openlocfilehash: 751e4ad2ffa5fd50739a855fad48964473b154f1
-ms.sourcegitcommit: 9eed5201a3ef556f77ba3b6790f007358188d57d
+ms.openlocfilehash: 55401d62e88cc1f2d67d13de0997a40db7a3f6b0c2f8997aa1b976962c8c797f
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "44778657"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57096536"
 ---
 # <a name="appdomains-element"></a>Элемент AppDomains
 
-Перечисляет все домены в дополнение к домену, указанному в `SourceLocation` элементе, что ваша надстройка Office будет использовать и должна быть доверенной для Office. Это позволяет страницам в доменах совершать вызовы Office.js API из IFrames в надстройке и имеет другие эффекты. Для каждого дополнительного домена укажите элемент **AppDomain**.
+Перечислены все домены, в дополнение к домену, указанному в элементе, который будет Office надстройка и которому следует доверять `SourceLocation` Office. Это позволяет страницам в доменах звонить Office.js API из IFrames в надстройки и имеет другие эффекты. Для каждого дополнительного домена укажите элемент **AppDomain**.
 
  **Тип надстройки:** контентные и почтовые надстройки, надстройки области задач.
 
@@ -26,7 +26,7 @@ ms.locfileid: "44778657"
 ```
 
 > [!IMPORTANT]
-> Существуют ограничения на то, что может быть значением элемента **AppDomain** . Дополнительные сведения см. в разделе [AppDomain](appdomain.md).
+> Существуют ограничения по значению элемента **AppDomain.** Дополнительные сведения см. в [приложении AppDomain.](appdomain.md)
 
 ## <a name="contained-in"></a>Содержится в
 

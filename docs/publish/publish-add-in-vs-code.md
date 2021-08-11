@@ -3,12 +3,12 @@ title: Публикация надстройки с Visual Studio Code Azure
 description: Публикация надстройки с помощью Visual Studio Code Azure Active Directory
 ms.date: 08/12/2020
 localization_priority: Normal
-ms.openlocfilehash: ab8daf3dfb87c809cd812da45246ce2d5ca9e743
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: e8c81a57b49254103366c28092f30235cc525e12d9a446897d862af4fc189325
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076940"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57097213"
 ---
 # <a name="publish-an-add-in-developed-with-visual-studio-code"></a>Публикация надстройки, разработанной с помощью Visual Studio Code
 

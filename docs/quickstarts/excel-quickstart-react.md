@@ -1,17 +1,17 @@
 ---
-title: Создание области задач Excel с помощью React
+title: Создание надстройки области задач Excel с помощью React
 description: Узнайте, как создать простую надстройку области задач Excel, используя API JS для Office и React.
-ms.date: 11/09/2020
+ms.date: 08/04/2021
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 4cb3c56af21f11efcb97fd9fe901a2d0718ae801
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: 11f31d4145b83ad1efbef441cd78c4ad62410df3f371a991f9f7d94cd75db899
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076912"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57097519"
 ---
-# <a name="build-an-excel-task-pane-add-in-using-react"></a>Создание области задач Excel с помощью React
+# <a name="use-react-to-build-an-excel-task-pane-add-in"></a>Создание надстройки области задач Excel с помощью React
 
 В этой статье описывается процесс создания надстройки в области задач Excel с помощью React и API JavaScript для Excel.
 
@@ -37,9 +37,9 @@ ms.locfileid: "53076912"
 
 ## <a name="explore-the-project"></a>Знакомство с проектом
 
-Проект надстройки, который вы создали с помощью генератора Yeoman, содержит образец кода для простейшей надстройки области задач. Если вы хотите ознакомиться с ключевыми компонентами проекта надстройки, откройте проект в редакторе кода и просмотрите файлы, перечисленные ниже. Когда вы будете готовы попробовать собственную надстройку, перейдите к следующему разделу.
+Проект надстройки, который вы создали с помощью генератора Yeoman, содержит образец кода для простой надстройки области задач. Если вы хотите ознакомиться с ключевыми компонентами проекта надстройки, откройте проект в редакторе кода и просмотрите файлы, перечисленные ниже. Когда вы будете готовы попробовать собственную надстройку, перейдите к следующему разделу.
 
-- Файл **manifest.xml** в корневом каталоге проекта определяет настройки и возможности надстройки.
+- Файл **manifest.xml** в корневом каталоге проекта определяет настройки и возможности надстройки. Дополнительные сведения о файле **manifest.xml** см. в статье [XML-манифест надстроек Office](../develop/add-in-manifests.md).
 - В файле **./src/taskpane/taskpane.html** определена HTML-инфраструктура области задач, а файлы в папке **./src/taskpane/components** определяют разные части пользовательского интерфейса области задач.
 - Файл **./src/taskpane/taskpane.css** содержит код CSS, который применяется к содержимому области задач.
 - Файл **./src/taskpane/components/App.tsx** содержит код API JavaScript для Office, который упрощает взаимодействие между областью задач и Excel.
@@ -52,17 +52,17 @@ ms.locfileid: "53076912"
     cd "My Office Add-in"
     ```
 
-2. [!include[Start server section](../includes/quickstart-yo-start-server-excel.md)] 
+1. [!include[Start server section](../includes/quickstart-yo-start-server-excel.md)] 
 
-3. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
+1. В Excel выберите вкладку **Главная** и нажмите кнопку **Показать область задач** на ленте, чтобы открыть область задач надстройки.
 
     ![Снимок экрана: меню "Главная" в Excel с выделенной кнопкой "Показать область задач".](../images/excel-quickstart-addin-3b.png)
 
-4. Выберите любой диапазон ячеек на листе.
+1. Выберите любой диапазон ячеек на листе.
 
-5. Внизу области задач выберите ссылку **Выполнить**, чтобы задать выбранному диапазону желтый цвет.
+1. Внизу области задач выберите ссылку **Выполнить**, чтобы задать выбранному диапазону желтый цвет.
 
-    ![Снимок экрана: Excel с открытой областью задач надстройки и выделенной кнопкой "Запустить".](../images/excel-quickstart-addin-3c.png)
+    ![Снимок экрана: Excel с открытой областью задач надстройки и выделенной кнопкой "Выполнить".](../images/excel-quickstart-addin-3c.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -73,7 +73,7 @@ ms.locfileid: "53076912"
 
 ## <a name="see-also"></a>См. также
 
-* [Руководство по надстройкам Excel](../tutorials/excel-tutorial.md)
-* [Объектная модель JavaScript для Excel в надстройках Office](../excel/excel-add-ins-core-concepts.md)
-* [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
-* [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)
+- [Руководство по надстройкам Excel](../tutorials/excel-tutorial.md)
+- [Объектная модель JavaScript для Excel в надстройках Office](../excel/excel-add-ins-core-concepts.md)
+- [Примеры кода надстроек Excel](https://developer.microsoft.com/office/gallery/?filterBy=Samples,Excel)
+- [Справочник по API JavaScript для Excel](../reference/overview/excel-add-ins-reference-overview.md)

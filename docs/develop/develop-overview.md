@@ -3,12 +3,12 @@ title: Разработка надстроек Office
 description: Общие сведения о разработке надстроек Office.
 ms.date: 07/08/2021
 localization_priority: Priority
-ms.openlocfilehash: 4677f50d718234cb0751b192547fe99ec720d680725aeeed2be9caea904001be
-ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
+ms.openlocfilehash: b2fa3e630fbcfb013f4458f7b8f9f564d0fed3f1
+ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57080833"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53773799"
 ---
 # <a name="develop-office-add-ins"></a>Разработка надстроек Office
 

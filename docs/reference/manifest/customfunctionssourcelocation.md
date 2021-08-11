@@ -1,16 +1,16 @@
 ---
-title: Элемент SourceLocation для пользовательских функций в файле манифеста
+title: Элемент SourceLocation для настраиваемой функции в файле манифеста
 description: Определяет расположение ресурса, который необходим для элементов Script или Page, используемых пользовательскими функциями в Excel.
 ms.date: 08/07/2020
 localization_priority: Normal
-ms.openlocfilehash: 6001673f1954a4af2de66ff7611069c3fb402a13
-ms.sourcegitcommit: 2f75a37de349251bc0e0fc402c5ae6dc5c3b8b08
+ms.openlocfilehash: b18a340d4dd4403b1e5fd2c7d8868a820eef5a241ac3d666926d8f2cb49fcc09
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "49771384"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57098305"
 ---
-# <a name="sourcelocation-element-custom-functions"></a>Элемент SourceLocation (пользовательские функции)
+# <a name="sourcelocation-element-custom-functions"></a>Элемент SourceLocation (настраиваемые функции)
 
 Определяет расположение ресурса, который необходим для элементов Script или Page, используемых пользовательскими функциями в Excel.
 

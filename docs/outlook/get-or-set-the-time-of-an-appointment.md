@@ -3,12 +3,12 @@ title: Просмотр или изменение времени встречи 
 description: Узнайте, как просмотреть и изменить время начала и окончания встречи в надстройке Outlook.
 ms.date: 07/08/2021
 localization_priority: Normal
-ms.openlocfilehash: eadce9b540a9b3b8a03186340fff4511d42dd35a
-ms.sourcegitcommit: e570fa8925204c6ca7c8aea59fbf07f73ef1a803
+ms.openlocfilehash: 6af5bc6227a8a159946991beeb4bdfda85bf9c52fa880c523224c2ad3c67da3d
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53774351"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57098971"
 ---
 # <a name="get-or-set-the-time-when-composing-an-appointment-in-outlook"></a>Просмотр или изменение времени при создании встречи в Outlook
 

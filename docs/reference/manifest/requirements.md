@@ -1,18 +1,18 @@
 ---
 title: Элемент Requirements в файле манифеста
-description: Элемент указывает минимальный набор обязательных требований и методы, необходимые надстройке Office для активации.
+description: Элемент Requirements указывает минимальный набор требований и методы, необходимые Office надстройки для активации.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: 319ddc59901c524ed1cee580a81cff749ad570db
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 3020037b48e3f759acf6a7e2758bb8c1fd2dd36429e0b21613e22fca33cacc1a
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47292274"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57098109"
 ---
 # <a name="requirements-element"></a>Элемент Requirements
 
-Указывает минимальный набор требований к API JavaScript для Office ([набор требований](../../develop/office-versions-and-requirement-sets.md#specify-office-applications-and-requirement-sets) и/или методов), которые должна активировать надстройка Office.
+Указывает минимальный набор Office API JavaScript[(наборы](../../develop/office-versions-and-requirement-sets.md#specify-office-applications-and-requirement-sets) требований и/или методы), который необходимо активировать Office надстройки.
 
 **Тип надстройки:** контентные и почтовые надстройки, надстройки области задач
 

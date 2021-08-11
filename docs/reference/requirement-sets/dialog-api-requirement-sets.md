@@ -4,12 +4,12 @@ description: Дополнительные информацию о наборах
 ms.date: 07/19/2021
 ms.prod: non-product-specific
 localization_priority: Normal
-ms.openlocfilehash: a5e0855cf6e7b7c9c3157fe24bed3610a26992ed
-ms.sourcegitcommit: f46e4aeb9c31f674380dd804fd72957998b3a532
+ms.openlocfilehash: 3c5aea3fecc6b48a830e48cf7739e93ef16dab6bacee1338b94774911a06ef5d
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "53536041"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57098947"
 ---
 # <a name="dialog-api-requirement-sets"></a>Наборы обязательных элементов API диалоговых окон
 

@@ -1,33 +1,33 @@
 ---
 title: Обзор API JavaScript для Word
 description: Обзор Word JavaScript API
-ms.date: 07/28/2020
+ms.date: 09/04/2020
 ms.prod: word
 localization_priority: Priority
-ms.openlocfilehash: a3bc6e1bc19fdc149506301068969366fb141e52
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 22c3c63494fd389dd2cd77501a129b38cc55b2232551b106ca73fe809ca4cfe7
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293627"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57098983"
 ---
 # <a name="word-javascript-api-overview"></a>Обзор API JavaScript для Word
 
 Надстройка Word взаимодействует с объектами в Word с помощью API JavaScript для Office, включающего две указанных ниже объектных модели JavaScript.
 
-* **API JavaScript для Word**. Это [API-интерфейсы для определенных приложений](../../develop/application-specific-api-model.md) в Word. Появившийся в Office 2016 [API JavaScript для Word](/javascript/api/word) предоставляет строго типизированные объекты, с помощью которых можно получать доступ к объектам и метаданным в документе Word.
+* **API JavaScript для Word** — это [API конкретных приложений](../../develop/application-specific-api-model.md) для Word. Впервые представленный в Office 2016, [API JavaScript для Word](/javascript/api/word) предоставляет строго типизированные объекты, которые можно использовать для доступа к объектам и метаданным в документе Word.
 
 * **Общие API**. Появившиеся в Office 2013 [общие API](/javascript/api/office) можно использовать для доступа к таким компонентам, как пользовательский интерфейс, диалоговые окна и параметры клиентов, общие для нескольких типов приложений Office.
 
-В этом разделе рассматривается API JavaScript для Word, используемый для разработки большинства функций в надстройках и предназначенный для Word в Интернете, Word 2016 или более поздних версий. Сведения об общем API см. в статье [Общая объектная модель API JavaScript](../../develop/office-javascript-api-object-model.md).
+В этом разделе документации основное внимание уделяется интерфейсу API JavaScript для Word, который используется для разработки большинства функций надстройки, ориентированных на Word в Интернете или Word 2016 и более поздние версии. Сведения об общем API см. в статье об [общей объектной модели API JavaScript](../../develop/office-javascript-api-object-model.md).
 
-## <a name="learn-programming-concepts"></a>Сведения о концепциях, связанных с программированием
+## <a name="learn-programming-concepts"></a>Сведения о понятиях, связанных с программированием
 
-Сведения о важных концепциях программирования см. в статье [Основные концепции программирования с помощью API JavaScript для Word](../../word/word-add-ins-core-concepts.md).
+Сведения о важных понятиях программирования см. в статье [Объектная модель JavaScript для Word в надстройках Office](../../word/word-add-ins-core-concepts.md).
 
 ## <a name="learn-about-api-capabilities"></a>Сведения о возможностях API
 
-Используйте другие статьи в этом разделе, чтобы узнать, как [получить весь документ из надстройки](../../word/get-the-whole-document-from-an-add-in-for-word.md), [воспользоваться параметрами поиска, чтобы найти текст в надстройке Word,](../../word/search-option-guidance.md) и т. д. Полный список доступных статей см. в оглавлении.
+Используйте другие статьи в этом разделе, чтобы узнать, как [получить весь документ из надстройки](../../word/get-the-whole-document-from-an-add-in-for-word.md), [воспользоваться параметрами поиска, чтобы найти текст в надстройке Word](../../word/search-option-guidance.md), и т. д. Полный список доступных статей см. в оглавлении.
 
 Чтобы получить практический опыт доступа к объектам в Word с помощью API JavaScript для Word, выполните инструкции из [руководства по надстройкам Word](../../tutorials/word-tutorial.md).
 

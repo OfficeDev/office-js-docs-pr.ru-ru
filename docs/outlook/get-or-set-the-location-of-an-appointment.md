@@ -3,12 +3,12 @@ title: Просмотр или изменение места встречи в �
 description: Узнайте, как просмотреть и изменить место проведения встречи в надстройке Outlook.
 ms.date: 10/31/2019
 localization_priority: Normal
-ms.openlocfilehash: 5669f656348465baabb3e684b359261024a509ca
-ms.sourcegitcommit: 3fa8c754a47bab909e559ae3e5d4237ba27fdbe4
+ms.openlocfilehash: 5557820cb1549bf0d24b5ff68d268c4f02d3fd36fa3bab344595adadbb31c3e1
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "53671837"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57098348"
 ---
 # <a name="get-or-set-the-location-when-composing-an-appointment-in-outlook"></a>Просмотр или изменение расположения при создании встречи в Outlook
 

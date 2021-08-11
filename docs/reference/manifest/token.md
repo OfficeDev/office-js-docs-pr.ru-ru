@@ -3,12 +3,12 @@ title: Элемент маркера в файле манифеста
 description: Указывает маркер или под диктовую карточку, которые можно использовать с шаблонами URL-адресов в манифесте.
 ms.date: 11/06/2020
 localization_priority: Normal
-ms.openlocfilehash: 48078f8211a8fd3f0e3f9d7c3f3aabd1d31b0a6d
-ms.sourcegitcommit: e7009c565b18c607fe0868db2e26e250ad308dce
+ms.openlocfilehash: 867bb5bc801b85b63c7815debfaf59c5cee3a8157dc866ba7082803ee1d7fe2a
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50505369"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57095946"
 ---
 # <a name="token-element"></a>Элемент Token
 
@@ -37,7 +37,7 @@ ms.locfileid: "50505369"
 |Атрибут|Описание|
 |:-----|:-----|
 |DefaultValue|Значение по умолчанию для этого маркера, если условие в любом `<Override>` детском элементе не совпадает.|
-|Имя|Имя маркера. Это имя определяется пользователем. Тип маркера определяется атрибутом типа.|
+|Name|Имя маркера. Это имя определяется пользователем. Тип маркера определяется атрибутом типа.|
 |xsi:type|Определяет тип Маркера. Этот атрибут должен быть заданной для одного из:  `"RequirementsToken"` или  `"LocaleToken"` .|
 
 ## <a name="example"></a>Пример

@@ -3,16 +3,16 @@ title: API надстроек Outlook
 description: Узнайте, как ссылаться на API надстроек Outlook и объявлять разрешения в надстройке Outlook.
 ms.date: 02/21/2021
 localization_priority: Normal
-ms.openlocfilehash: 0e38747f484eabac26e2e9e846e562ec54510326
-ms.sourcegitcommit: e7009c565b18c607fe0868db2e26e250ad308dce
+ms.openlocfilehash: d063045acfad3dee16c676733ddb5494761b66270345d701d36e7e8a6db16c6a
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50505495"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57095398"
 ---
 # <a name="outlook-add-in-apis"></a>API надстроек Outlook
 
-Чтобы использовать API-интерфейсы в надстройке Outlook, необходимо указать расположение библиотеки Office.js, набор требований, схему и разрешения. В основном вы будете использовать API Office JavaScript, открытые через объект [почтовых ящиков.](#mailbox-object)
+Чтобы использовать API-интерфейсы в надстройке Outlook, необходимо указать расположение библиотеки Office.js, набор требований, схему и разрешения. В основном вы будете использовать Office API JavaScript, выставленные через объект [почтовых ящиков.](#mailbox-object)
 
 ## <a name="officejs-library"></a>Библиотека Office.js
 
@@ -26,7 +26,7 @@ ms.locfileid: "50505495"
 При добавлении новых API-интерфейсов не будет меняться URL-адрес Office.js. Мы укажем другую версию в URL-адресе, только если изменится поведение API.
 
 > [!IMPORTANT]
-> При разработке надстройки для любого клиентского приложения Office ссылайся на API JavaScript Office из раздела `<head>` страницы. Это гарантирует, что API полностью инициализируется раньше всех элементов body.
+> При разработке надстройки для Office клиентского приложения ссылайся на Office API JavaScript из раздела `<head>` страницы. Это гарантирует, что API полностью инициализируется раньше всех элементов body.
 
 ## <a name="requirement-sets"></a>Наборы требований
 
@@ -64,7 +64,7 @@ if (item.somePropertyOrFunction) {
 | **Чтение и запись** | Помимо возможностей уровня **Чтение элемента**, поддерживаются:<ul><li>полный доступ ко всем элементам API Outlook, кроме метода `makeEwsRequestAsync`;</li><li>задание свойств элемента.</li></ul> |
 | **Чтение и запись почтового ящика** | Помимо возможностей уровня **Чтение и запись**, поддерживаются:<ul><li>создание, чтение и запись элементов и папок;</li><li>отправка папок;</li><li>вызов метода [makeEwsRequestAsync](../reference/objectmodel/preview-requirement-set/office.context.mailbox.md#methods).</li></ul> |
 
-Как правило, следует указывать минимальные разрешения, необходимые надстройке. Разрешения объявляются в элементе `<Permissions>` манифеста. Дополнительные сведения см. в статье [Манифесты надстроек Outlook](manifests.md). Сведения о проблемах с безопасностью см. в [выпуске Privacy and security for Office Add-ins.](../concepts/privacy-and-security.md)
+Как правило, следует указывать минимальные разрешения, необходимые надстройке. Разрешения объявляются в элементе `<Permissions>` манифеста. Дополнительные сведения см. в статье [Манифесты надстроек Outlook](manifests.md). Сведения о проблемах безопасности см. в Office конфиденциальности и [безопасности надстройки.](../concepts/privacy-and-security.md)
 
 ## <a name="mailbox-object"></a>Объект Mailbox
 

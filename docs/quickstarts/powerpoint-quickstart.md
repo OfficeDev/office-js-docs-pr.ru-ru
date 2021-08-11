@@ -1,15 +1,15 @@
 ---
 title: Создание первой надстройки области задач PowerPoint
 description: Узнайте, как создать простую надстройку области задач PowerPoint, используя API JS для Office.
-ms.date: 10/14/2020
+ms.date: 08/04/2021
 ms.prod: powerpoint
 localization_priority: Priority
-ms.openlocfilehash: 03cba67307fa12dca111d3fcecb6a4a0173f77f1
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: b64a1f9554513e1b301c7989ee57f89734131433efc1d886265427affd9d8e82
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076926"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57095143"
 ---
 # <a name="build-your-first-powerpoint-task-pane-add-in"></a>Создание первой надстройки области задач PowerPoint
 
@@ -23,7 +23,7 @@ ms.locfileid: "53076926"
 
 [!include[Redirect to the single sign-on (SSO) quick start](../includes/sso-quickstart-reference.md)]
 
-### <a name="prerequisites"></a>Необходимые условия
+### <a name="prerequisites"></a>Необходимые компоненты
 
 [!include[Set up requirements](../includes/set-up-dev-environment-beforehand.md)]
 [!include[Yeoman generator prerequisites](../includes/quickstart-yo-prerequisites.md)]
@@ -66,6 +66,12 @@ ms.locfileid: "53076926"
     > ```command&nbsp;line
     > npm run dev-server
     > ```
+
+    - Установите зависимости для надстройки в корневом каталоге проекта.
+
+        ```command&nbsp;line
+        npm install
+        ```
 
     - Чтобы проверить надстройку в PowerPoint, выполните следующую команду в корневом каталоге своего проекта. При этом запускается локальный веб-сервер (если он еще не запущен) и открывается приложение PowerPoint с загруженной надстройкой.
 

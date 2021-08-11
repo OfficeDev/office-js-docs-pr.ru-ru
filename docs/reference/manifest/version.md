@@ -1,18 +1,18 @@
 ---
 title: Элемент Version в файле манифеста
-description: Элемент Version указывает версию надстройки Office.
+description: Элемент Version указывает Office надстройки.
 ms.date: 02/05/2021
 localization_priority: Normal
-ms.openlocfilehash: 48a2be94d95ece597e47468bb18db2a7962a51e9
-ms.sourcegitcommit: 4805454f7fc6c64368a35d014e24075faf3e7557
+ms.openlocfilehash: 9641153cbe6fa0284986b8dd286ba2114b32a82894bd5f8d33516e2a56c90be9
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "50173936"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57096333"
 ---
 # <a name="version-element"></a>Элемент Version
 
-Указывает версию надстройки Office. Номер версии: 1, 2, 3 или 4 части (например, n, n.n, n.n.n или n.n.n).
+Указывает версию надстройки Office. Номер версии может быть 1, 2, 3 или 4 частей (например, n, n.n, n.n.n или n.n.n.n.).
 
 **Тип надстройки:** контентные и почтовые надстройки, надстройки области задач
 

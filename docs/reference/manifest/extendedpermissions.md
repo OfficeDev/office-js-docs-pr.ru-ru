@@ -1,31 +1,31 @@
 ---
-title: Элемент Екстендедпермиссионс в файле манифеста
+title: Элемент ExtendedPermissions в файле манифеста
 description: Определяет коллекцию расширенных разрешений, необходимых надстройке для доступа к связанным API или функциям.
 ms.date: 10/15/2020
 localization_priority: Normal
-ms.openlocfilehash: 1e3aa16c160613d34ef2c4f9c25bc2ffe4970816
-ms.sourcegitcommit: 4e7c74ad67ea8bf6b47d65b2fde54a967090f65b
+ms.openlocfilehash: c3f021adfcc2f3a4ba7b7d7aeeb52f3213d92788d401130abbc92618930d09fe
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "48626444"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57097899"
 ---
-# <a name="extendedpermissions-element"></a>Элемент Екстендедпермиссионс
+# <a name="extendedpermissions-element"></a>Элемент ExtendedPermissions
 
-Определяет коллекцию расширенных разрешений, необходимых надстройке для доступа к связанным API или функциям. `ExtendedPermissions`Элемент является дочерним элементом объекта [VersionOverrides](versionoverrides.md).
+Определяет коллекцию расширенных разрешений, необходимых надстройке для доступа к связанным API или функциям. Элемент `ExtendedPermissions` является детским элементом [VersionOverrides](versionoverrides.md).
 
 > [!IMPORTANT]
-> Поддержка этого элемента была введена в наборе требований 1,9. См [клиенты и платформы](../../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
+> Поддержка этого элемента была представлена в наборе требований 1.9. См [клиенты и платформы](../../reference/requirement-sets/outlook-api-requirement-sets.md#requirement-sets-supported-by-exchange-servers-and-outlook-clients), поддерживающие этот набор обязательных требований.
 
 ## <a name="child-elements"></a>Дочерние элементы
 
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----:|:-----|
-|  [ExtendedPermission](extendedpermission.md)    |  Нет   | Определяет расширенное разрешение, необходимое надстройке для доступа к связанному API или функции. |
+|  [ExtendedPermission](extendedpermission.md)    |  Нет   | Определяет расширенное разрешение, необходимое для надстройки для доступа к связанному API или функции. |
 
-## <a name="extendedpermissions-example"></a>`ExtendedPermissions` Примеры
+## <a name="extendedpermissions-example"></a>`ExtendedPermissions` пример
 
-Ниже приведен пример `ExtendedPermissions` элемента.
+Ниже приводится пример `ExtendedPermissions` элемента.
 
 ```XML
 ...

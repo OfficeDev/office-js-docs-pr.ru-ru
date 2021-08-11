@@ -1,20 +1,22 @@
 ---
 title: Microsoft Office Вызов сообщества надстройки
-description: Расписание и ресурсы Microsoft Office сообществ надстройки
-ms.date: 05/20/2021
+description: Ежемесячное расписание Microsoft Office и ресурсы сообщества надстройки.
+ms.date: 08/02/2021
 localization_priority: Normal
-ms.openlocfilehash: f98e53211143bf377e72e4a477cbe72cd1864af5
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: 401bf2f174ee4d383417b7a465c316b3f1727036b229a1b13cafb750825a74a8
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53348407"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57095155"
 ---
 # <a name="microsoft-office-add-ins-community-call"></a>Microsoft Office Вызов сообщества надстройки
 
 Вызов Microsoft Office надстройки — это ежемесячный вызов, в котором вы можете узнать больше о новых функций, практиках разработки и дополнительных сведениях о создании надстройок Office надстройки. Вызов сообщества происходит во вторую среду каждого месяца в 8:00 по московскому времени. Вы можете скачать приглашение календаря по [https://aka.ms/officeaddinscommunitycall](https://aka.ms/officeaddinscommunitycall) ссылке .
 
 Пропустили предыдущий вызов сообщества? Ознакомьтесь со следующими ресурсами блога, чтобы догнать обсуждение!
+
+- [Office Вызов сообщества надстройки — 9 июня 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-june-2021/ba-p/2446156)
 - [Office Вызов сообщества надстройки — 12 мая 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-may-2021/ba-p/2369804)
 - [Office Вызов сообщества надстройки — 14 апреля 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-april-14-2021/ba-p/2318886)
 - [Office Вызов сообщества надстройки — 10 марта 2021 г.](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/office-add-ins-community-call-march-10-2021/ba-p/2205369)

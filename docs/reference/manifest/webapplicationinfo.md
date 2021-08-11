@@ -1,24 +1,24 @@
 ---
 title: Элемент WebApplicationInfo в файле манифеста
-description: Справочная документация по элементу WebApplicationInfo для XML-файлов манифеста надстройки Office.
+description: Справочная документация элемента WebApplicationInfo для Office файлов манифеста надстройок (XML).
 ms.date: 07/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 037de49320a6d1a1ca7dce3446b4f4008a2f1331
-ms.sourcegitcommit: fefc279b85e37463413b6b0e84c880d9ed5d7ac3
+ms.openlocfilehash: 7b14b62fa8b3dd87c650dbeaaeedb8d29c3995a77e0be8c8582da422cb480e67
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50234165"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57097887"
 ---
 # <a name="webapplicationinfo-element"></a>Элемент WebApplicationInfo
 
 Поддерживает единый вход в надстройках Office. Этот элемент содержит сведения для надстройки в качестве следующего:
 
-- Ресурс OAuth 2.0, для которого клиентского приложения Office могут потребоваться разрешения. 
+- Ресурс OAuth 2.0, на который Office клиентского приложения могут потребоваться разрешения. 
 - *Клиент* OAuth 2.0, которому могут потребоваться разрешения для Microsoft Graph.
 
 > [!NOTE]
-> API единого входов в настоящее время поддерживается для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API удостоверений](../requirement-sets/identity-api-requirement-sets.md). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Microsoft 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить современную проверку подлинности для клиента](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
+> В настоящее время поддерживается единый API входов для Word, Excel, Outlook и PowerPoint. Дополнительные сведения о текущей поддержке API единого входа см. в статье [Наборы обязательных элементов API удостоверений](../requirement-sets/identity-api-requirement-sets.md). Если вы работаете с надстройкой Outlook, обязательно включите современную проверку подлинности для клиента Microsoft 365. Сведения о том, как это сделать, см. в статье [Exchange Online: как включить современную проверку подлинности для клиента](https://social.technet.microsoft.com/wiki/contents/articles/32711.exchange-online-how-to-enable-your-tenant-for-modern-authentication.aspx).
 
 **WebApplicationInfo** — дочерний элемент элемента [VersionOverrides](versionoverrides.md) в манифесте.  
 
@@ -27,7 +27,7 @@ ms.locfileid: "50234165"
 |  Элемент |  Обязательный  |  Описание  |
 |:-----|:-----|:-----|
 |  **Id**    |  Да   |  **Идентификатор** связанной с надстройкой службы, зарегистрированный в конечной точке Azure Active Directory 2.0.|
-|  **MsaId**    |  Нет   |  ИД клиента веб-приложения надстройки для MSA, зарегистрированного в msm.live.com.|
+|  **MsaId**    |  Нет   |  ID клиента веб-приложения надстройки для MSA, зарегистрированного в msm.live.com.|
 |  **Resource**  |  Да   |  Указывает **URI идентификатора** надстройки, зарегистрированный в конечной точке Azure Active Directory 2.0.|
 |  [Scopes](scopes.md)                |  Да  |  Указывает разрешения, необходимые надстройки для ресурса, например Microsoft Graph.  |
 |  [Authorizations](authorizations.md)  |  Нет   | Указывает внешние ресурсы, на которые веб-приложению надстройки требуется авторизация, и необходимые разрешения.|

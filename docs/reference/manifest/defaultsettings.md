@@ -3,12 +3,12 @@ title: Элемент DefaultSettings в файле манифеста
 description: Указывает исходное расположение по умолчанию и другие стандартные параметры для контентной надстройки или надстройки области задач.
 ms.date: 10/09/2018
 localization_priority: Normal
-ms.openlocfilehash: a9711fb44390bcbda8979b8018eed1318c5579bc
-ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
+ms.openlocfilehash: 11e398d86a702f4e45a5cea7b63e0380ce65d1749d0660789e96477744d73079
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46641468"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57095925"
 ---
 # <a name="defaultsettings-element"></a>Элемент DefaultSettings
 
@@ -38,4 +38,4 @@ ms.locfileid: "46641468"
 
 ## <a name="remarks"></a>Замечания
 
-Исходное расположение и другие параметры в элементе **DefaultSettings** применяются только к контентным надстройкам и надстройкам области задач. Для почтовых надстроек указываются расположения по умолчанию для исходных файлов и другие параметры по умолчанию в элементе [FormSettings](formsettings.md) .
+Расположение источника и другие параметры в **элементе DefaultSettings** применяются только к надстройке контента и области задач. Для надстройок почты в элементе [FormSettings](formsettings.md) указывается расположение исходных файлов по умолчанию и другие параметры по умолчанию.

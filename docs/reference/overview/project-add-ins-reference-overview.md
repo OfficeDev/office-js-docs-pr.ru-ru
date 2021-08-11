@@ -4,12 +4,12 @@ description: Обзор JavaScript API проекта
 ms.date: 07/05/2019
 ms.prod: project
 localization_priority: Priority
-ms.openlocfilehash: 15dbe8cde9510f052f929a99f4073f5fa8bf8a12
-ms.sourcegitcommit: 9609bd5b4982cdaa2ea7637709a78a45835ffb19
+ms.openlocfilehash: 8b5fd35a7feafc76192091835a252531b89515f9fecbeeaf5d94c00242362c81
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47293620"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57098085"
 ---
 # <a name="javascript-api-for-project"></a>API JavaScript для Project
 

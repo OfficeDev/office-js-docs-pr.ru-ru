@@ -1,21 +1,21 @@
 ---
 title: Элемент TabletSettingst в файле манифеста
-description: Элемент TabletSettings указывает параметры элементов управления, которые применяются при использовании почтовой надстройки на планшете.
+description: Элемент TabletSettings указывает параметры управления, которые применяются при добавлении почты на планшете.
 ms.date: 04/09/2020
 localization_priority: Normal
-ms.openlocfilehash: b5a74db4f9fb43df10a08ab43b59507f6e0d7952
-ms.sourcegitcommit: be23b68eb661015508797333915b44381dd29bdb
+ms.openlocfilehash: 3360a446396da058b5ced0127050d807f33e7bda007b1da88414b351782d0127
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "44608700"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57094648"
 ---
 # <a name="tabletsettings-element"></a>Элемент TabletSettingst
 
 Задает параметры управления, которые применяются при использовании вашей почтовой надстройки на планшете.
 
 > [!IMPORTANT]
-> `TabletSettings`Элемент доступен только в классическом приложении Outlook в Интернете (как правило, подключенный к старым версиям локального сервера Exchange Server) и Outlook 2013 в Windows. Для поддержки Outlook в Android и iOS, ознакомьтесь со статьей надстройки [для Outlook Mobile](../../outlook/outlook-mobile-addins.md).
+> Элемент доступен только в классических Outlook в Интернете (обычно подключенных к старым версиям локального Exchange сервера) и `TabletSettings` Outlook 2013 Windows. Чтобы поддерживать Outlook Android и iOS, см. в приложении Надстройки [для Outlook Mobile.](../../outlook/outlook-mobile-addins.md)
 
 **Тип надстройки:** почтовая
 

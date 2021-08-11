@@ -1,47 +1,48 @@
 ---
-title: API предварительного просмотра для Word JavaScript
-description: Сведения о предстоящих API JavaScript для Word
+title: API предварительного просмотра Word JavaScript
+description: Сведения о предстоящих API JavaScript Word
 ms.date: 11/09/2020
 ms.prod: word
 localization_priority: Normal
-ms.openlocfilehash: 6a3b67e65c4ced3f1b89d98afe45d5d6c33f63b6
-ms.sourcegitcommit: ca66ff7462bfdf4ed7ae04f43d1388c24de63bf9
+ms.openlocfilehash: 1a3871ca4445e595620112bb5176fe2b7ab39015228a1602c119c06730cc90ab
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48996405"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57097851"
 ---
-# <a name="word-javascript-preview-apis"></a>API предварительного просмотра для Word JavaScript
+# <a name="word-javascript-preview-apis"></a>API предварительного просмотра Word JavaScript
 
-Новые API JavaScript для Word впервые представлены в слове Preview и далее становятся частью определенного набора обязательных требований после выполнения тестирования и получения отзывов пользователей.
+Новые API JavaScript Word сначала вводятся в "предварительную версию", а затем становятся частью определенного набора требований с номерами после достаточного тестирования и получения отзывов пользователей.
 
+[!INCLUDE [Information about using Word preview APIs](../../includes/word-preview-apis-note.md)]
 [!INCLUDE [Information about using preview APIs](../../includes/using-preview-apis-host.md)]
 
 ## <a name="api-list"></a>Список API
 
-В следующей таблице перечислены API JavaScript для Word, находящиеся в предварительной версии. Чтобы просмотреть полный список всех API JavaScript для Word (включая предварительные API и ранее выпущенные API), ознакомьтесь со статьями [все API JavaScript для Word](/javascript/api/word?view=word-js-preview&preserve-view=true).
+В следующей таблице перечислены API Word JavaScript, которые в настоящее время находятся в предварительном просмотре. Чтобы просмотреть полный список всех API JavaScript Word (включая API предварительного просмотра и ранее выпущенные API), см. все API [Word JavaScript.](/javascript/api/word?view=word-js-preview&preserve-view=true)
 
 | Класс | Поля | Описание |
 |:---|:---|:---|
-|[ContentControl](/javascript/api/word/word.contentcontrol)|[onDataChanged](/javascript/api/word/word.contentcontrol#ondatachanged)|Возникает при изменении данных в элементе управления содержимым.|
-||[onDeleted](/javascript/api/word/word.contentcontrol#ondeleted)|Возникает при удалении элемента управления содержимым.|
-||[onSelectionChanged](/javascript/api/word/word.contentcontrol#onselectionchanged)|Возникает при изменении выделенного фрагмента в элементе управления содержимым.|
-|[ContentControlEventArgs](/javascript/api/word/word.contentcontroleventargs)|[contentControl](/javascript/api/word/word.contentcontroleventargs#contentcontrol)|Объект, который вызвал событие.|
+|[ContentControl](/javascript/api/word/word.contentcontrol)|[onDataChanged](/javascript/api/word/word.contentcontrol#ondatachanged)|Происходит при смене данных в области управления контентом.|
+||[onDeleted](/javascript/api/word/word.contentcontrol#ondeleted)|Происходит при удалении управления контентом.|
+||[onSelectionChanged](/javascript/api/word/word.contentcontrol#onselectionchanged)|Возникает при смене выбора в области управления контентом.|
+|[ContentControlEventArgs](/javascript/api/word/word.contentcontroleventargs)|[contentControl](/javascript/api/word/word.contentcontroleventargs#contentcontrol)|Объект, который поднял событие.|
 ||[eventType](/javascript/api/word/word.contentcontroleventargs#eventtype)|Тип события.|
 |[CustomXmlPart](/javascript/api/word/word.customxmlpart)|[delete()](/javascript/api/word/word.customxmlpart#delete--)|Удаляет пользовательскую XML-часть.|
-||[Делетеаттрибуте (XPath: строка, Намеспацемаппингс: Any, Name: строка)](/javascript/api/word/word.customxmlpart#deleteattribute-xpath--namespacemappings--name-)|Удаляет атрибут с указанным именем из элемента, указанного с помощью XPath.|
-||[Делетилемент (XPath: String, Намеспацемаппингс: Any)](/javascript/api/word/word.customxmlpart#deleteelement-xpath--namespacemappings-)|Удаляет элемент, указанный с помощью XPath.|
-||[Жетксмл ()](/javascript/api/word/word.customxmlpart#getxml--)|Получает полное XML-содержимое пользовательской XML-части.|
-||[Инсертаттрибуте (XPath: String, Намеспацемаппингс: Any, Name: String, Value: String)](/javascript/api/word/word.customxmlpart#insertattribute-xpath--namespacemappings--name--value-)|Вставляет атрибут с заданным именем и значением в элемент, указанный с помощью XPath.|
-||[Инсертелемент (XPath: строка, XML: строка, Намеспацемаппингс: Any, index?: число)](/javascript/api/word/word.customxmlpart#insertelement-xpath--xml--namespacemappings--index-)|Вставляет заданный XML-код в родительский элемент, определенный с помощью XPath в индексе позиции дочернего элемента.|
-||[запрос (XPath: String, Намеспацемаппингс: Any)](/javascript/api/word/word.customxmlpart#query-xpath--namespacemappings-)|Запрашивает XML-содержимое пользовательской XML-части.|
-||[id](/javascript/api/word/word.customxmlpart#id)|Получает идентификатор пользовательской XML-части.|
-||[Пространства](/javascript/api/word/word.customxmlpart#namespaceuri)|Получает URI пространства имен настраиваемой XML-части.|
-||[setXml (XML: строка)](/javascript/api/word/word.customxmlpart#setxml-xml-)|Задает полное XML-содержимое пользовательской XML-части.|
-||[Упдатеаттрибуте (XPath: String, Намеспацемаппингс: Any, Name: String, Value: String)](/javascript/api/word/word.customxmlpart#updateattribute-xpath--namespacemappings--name--value-)|Обновляет значение атрибута, используя заданное имя элемента, указанного с помощью XPath.|
-||[Упдатилемент (XPath: строка, XML: строка, Намеспацемаппингс: Any)](/javascript/api/word/word.customxmlpart#updateelement-xpath--xml--namespacemappings-)|Обновляет XML элемента, указанного с помощью XPath.|
-|[CustomXmlPartCollection](/javascript/api/word/word.customxmlpartcollection)|[Add (XML: String)](/javascript/api/word/word.customxmlpartcollection#add-xml-)|Добавляет новую пользовательскую XML-часть в документ.|
-||[getByNamespace (namespaceUri: строка)](/javascript/api/word/word.customxmlpartcollection#getbynamespace-namespaceuri-)|Получает новую ограниченную коллекцию пользовательских XML-частей, пространства имен которых совпадают с указанным пространством имен.|
+||[deleteAttribute (xpath: string, namespaceMappings: any, name: string)](/javascript/api/word/word.customxmlpart#deleteattribute-xpath--namespacemappings--name-)|Удаляет атрибут с заданным именем из элемента, идентифицированного xpath.|
+||[deleteElement (xpath: string, namespaceMappings: any)](/javascript/api/word/word.customxmlpart#deleteelement-xpath--namespacemappings-)|Удаляет элемент, идентифицированный xpath.|
+||[getXml()](/javascript/api/word/word.customxmlpart#getxml--)|Получает полное XML-содержимое пользовательской части XML.|
+||[insertAttribute (xpath: string, namespaceMappings: any, name: string, value: string)](/javascript/api/word/word.customxmlpart#insertattribute-xpath--namespacemappings--name--value-)|Вставляет атрибут с заданным именем и значением в элемент, идентифицированный xpath.|
+||[insertElement (xpath: string, xml: string, namespaceMappings: any, index?: number)](/javascript/api/word/word.customxmlpart#insertelement-xpath--xml--namespacemappings--index-)|Вставляет данный XML в родительский элемент, идентифицированный xpath в индексе положения ребенка.|
+||[query(xpath: string, namespaceMappings: any)](/javascript/api/word/word.customxmlpart#query-xpath--namespacemappings-)|Запрашивает XML-содержимое пользовательской части XML.|
+||[id](/javascript/api/word/word.customxmlpart#id)|Получает ID пользовательской части XML.|
+||[namespaceUri](/javascript/api/word/word.customxmlpart#namespaceuri)|Получает URI пространства имен пользовательской части XML.|
+||[setXml (xml: string)](/javascript/api/word/word.customxmlpart#setxml-xml-)|Задает полное XML-содержимое пользовательской части XML.|
+||[updateAttribute(xpath: string, namespaceMappings: any, name: string, value: string)](/javascript/api/word/word.customxmlpart#updateattribute-xpath--namespacemappings--name--value-)|Обновляет значение атрибута с заданным именем элемента, идентифицированного xpath.|
+||[updateElement (xpath: string, xml: string, namespaceMappings: any)](/javascript/api/word/word.customxmlpart#updateelement-xpath--xml--namespacemappings-)|Обновляет XML элемента, идентифицированного xpath.|
+|[CustomXmlPartCollection](/javascript/api/word/word.customxmlpartcollection)|[add(xml: string)](/javascript/api/word/word.customxmlpartcollection#add-xml-)|Добавляет в документ новую настраиваемую часть XML.|
+||[getByNamespace (namespaceUri: string)](/javascript/api/word/word.customxmlpartcollection#getbynamespace-namespaceuri-)|Получает новую ограниченную коллекцию пользовательских XML-частей, пространства имен которых совпадают с указанным пространством имен.|
 ||[getCount()](/javascript/api/word/word.customxmlpartcollection#getcount--)|Возвращает число элементов в коллекции.|
 ||[getItem(id: string)](/javascript/api/word/word.customxmlpartcollection#getitem-id-)|Получает пользовательскую XML-часть по идентификатору.|
 ||[getItemOrNullObject(id: строка)](/javascript/api/word/word.customxmlpartcollection#getitemornullobject-id-)|Получает пользовательскую XML-часть по идентификатору.|
@@ -49,40 +50,40 @@ ms.locfileid: "48996405"
 |[CustomXmlPartScopedCollection](/javascript/api/word/word.customxmlpartscopedcollection)|[getCount()](/javascript/api/word/word.customxmlpartscopedcollection#getcount--)|Возвращает число элементов в коллекции.|
 ||[getItem(id: string)](/javascript/api/word/word.customxmlpartscopedcollection#getitem-id-)|Получает пользовательскую XML-часть по идентификатору.|
 ||[getItemOrNullObject(id: строка)](/javascript/api/word/word.customxmlpartscopedcollection#getitemornullobject-id-)|Получает пользовательскую XML-часть по идентификатору.|
-||[Жетонлитем ()](/javascript/api/word/word.customxmlpartscopedcollection#getonlyitem--)|Если коллекция содержит ровно один элемент, этот метод возвращает его.|
-||[Жетонлитеморнуллобжект ()](/javascript/api/word/word.customxmlpartscopedcollection#getonlyitemornullobject--)|Если коллекция содержит ровно один элемент, этот метод возвращает его.|
+||[getOnlyItem()](/javascript/api/word/word.customxmlpartscopedcollection#getonlyitem--)|Если коллекция содержит ровно один элемент, этот метод возвращает его.|
+||[getOnlyItemOrNullObject()](/javascript/api/word/word.customxmlpartscopedcollection#getonlyitemornullobject--)|Если коллекция содержит ровно один элемент, этот метод возвращает его.|
 ||[items](/javascript/api/word/word.customxmlpartscopedcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
-|[Document](/javascript/api/word/word.document)|[Делетебукмарк (имя: строка)](/javascript/api/word/word.document#deletebookmark-name-)|Удаляет закладку (если она существует) из документа.|
-||[Жетбукмаркранже (имя: строка)](/javascript/api/word/word.document#getbookmarkrange-name-)|Возвращает диапазон закладок.|
-||[Жетбукмаркранжеорнуллобжект (имя: строка)](/javascript/api/word/word.document#getbookmarkrangeornullobject-name-)|Возвращает диапазон закладок.|
-||[customXmlParts](/javascript/api/word/word.document#customxmlparts)|Возвращает пользовательские XML-части в документе.|
-||[онконтентконтроладдед](/javascript/api/word/word.document#oncontentcontroladded)|Возникает при добавлении элемента управления содержимым.|
+|[Document](/javascript/api/word/word.document)|[deleteBookmark (имя: строка)](/javascript/api/word/word.document#deletebookmark-name-)|Удаляет закладки, если она существует, из документа.|
+||[getBookmarkRange (имя: строка)](/javascript/api/word/word.document#getbookmarkrange-name-)|Получает диапазон закладок.|
+||[getBookmarkRangeOrNullObject (имя: строка)](/javascript/api/word/word.document#getbookmarkrangeornullobject-name-)|Получает диапазон закладок.|
+||[customXmlParts](/javascript/api/word/word.document#customxmlparts)|Получает настраиваемые XML-части в документе.|
+||[onContentControlAdded](/javascript/api/word/word.document#oncontentcontroladded)|Возникает при добавлении управления контентом.|
 ||[settings](/javascript/api/word/word.document#settings)|Получает параметры надстройки в документе.|
-|[DocumentCreated](/javascript/api/word/word.documentcreated)|[Делетебукмарк (имя: строка)](/javascript/api/word/word.documentcreated#deletebookmark-name-)|Удаляет закладку (если она существует) из документа.|
-||[Жетбукмаркранже (имя: строка)](/javascript/api/word/word.documentcreated#getbookmarkrange-name-)|Возвращает диапазон закладок.|
-||[Жетбукмаркранжеорнуллобжект (имя: строка)](/javascript/api/word/word.documentcreated#getbookmarkrangeornullobject-name-)|Возвращает диапазон закладок.|
-||[customXmlParts](/javascript/api/word/word.documentcreated#customxmlparts)|Возвращает пользовательские XML-части в документе.|
+|[DocumentCreated](/javascript/api/word/word.documentcreated)|[deleteBookmark (имя: строка)](/javascript/api/word/word.documentcreated#deletebookmark-name-)|Удаляет закладки, если она существует, из документа.|
+||[getBookmarkRange (имя: строка)](/javascript/api/word/word.documentcreated#getbookmarkrange-name-)|Получает диапазон закладок.|
+||[getBookmarkRangeOrNullObject (имя: строка)](/javascript/api/word/word.documentcreated#getbookmarkrangeornullobject-name-)|Получает диапазон закладок.|
+||[customXmlParts](/javascript/api/word/word.documentcreated#customxmlparts)|Получает настраиваемые XML-части в документе.|
 ||[settings](/javascript/api/word/word.documentcreated#settings)|Получает параметры надстройки в документе.|
-|[InlinePicture](/javascript/api/word/word.inlinepicture)|[имажеформат](/javascript/api/word/word.inlinepicture#imageformat)|Получает формат встроенного изображения.|
-|[List](/javascript/api/word/word.list)|[Жетлевелфонт (Level: число)](/javascript/api/word/word.list#getlevelfont-level-)|Получает или задает значение, указывающее, указаны ли в списке.|
-||[Жетлевелпиктуре (Level: число)](/javascript/api/word/word.list#getlevelpicture-level-)|Получает строковое представление изображения в кодировке Base64 на указанном уровне в списке.|
-||[Ресетлевелфонт (Level: число, Ресетфонтнаме?: Boolean)](/javascript/api/word/word.list#resetlevelfont-level--resetfontname-)|Сбрасывает шрифт маркера, числа или изображения на указанном уровне списка.|
-||[Сетлевелпиктуре (Level: число, base64EncodedImage?: строка)](/javascript/api/word/word.list#setlevelpicture-level--base64encodedimage-)|Задает рисунок на указанном уровне в списке.|
-|[Range](/javascript/api/word/word.range)|[Закладки (Инклудехидден?: Boolean, Инклудеаджацент?: Boolean)](/javascript/api/word/word.range#getbookmarks-includehidden--includeadjacent-)|Получает имена всех закладок в диапазоне или перекрывают их.|
-||[Инсертбукмарк (имя: строка)](/javascript/api/word/word.range#insertbookmark-name-)|Вставляет закладку в диапазон.|
+|[InlinePicture](/javascript/api/word/word.inlinepicture)|[imageFormat](/javascript/api/word/word.inlinepicture#imageformat)|Получает формат inline image.|
+|[Список](/javascript/api/word/word.list)|[getLevelFont (уровень: номер)](/javascript/api/word/word.list#getlevelfont-level-)|Получает шрифт пули, номера или изображения на указанном уровне в списке.|
+||[getLevelPicture(level: number)](/javascript/api/word/word.list#getlevelpicture-level-)|Получает кодированное представление строки base64 на указанном уровне в списке.|
+||[resetLevelFont (уровень: номер, resetFontName?: boolean)](/javascript/api/word/word.list#resetlevelfont-level--resetfontname-)|Сброс шрифта пули, номера или изображения на указанном уровне в списке.|
+||[setLevelPicture(level: number, base64EncodedImage?: string)](/javascript/api/word/word.list#setlevelpicture-level--base64encodedimage-)|Задает изображение на указанном уровне в списке.|
+|[Range](/javascript/api/word/word.range)|[getBookmarks (includeHidden?: boolean, includeAdjacent?: boolean)](/javascript/api/word/word.range#getbookmarks-includehidden--includeadjacent-)|Получает имена всех закладки или перекрывает диапазон.|
+||[insertBookmark (имя: строка)](/javascript/api/word/word.range#insertbookmark-name-)|Вставляет закладки в диапазоне.|
 |[Параметр](/javascript/api/word/word.setting)|[delete()](/javascript/api/word/word.setting#delete--)|Удаляет параметр.|
 ||[key](/javascript/api/word/word.setting#key)|Получает ключ параметра.|
 ||[value](/javascript/api/word/word.setting#value)|Получает или задает значение параметра.|
-|[SettingCollection](/javascript/api/word/word.settingcollection)|[Add (Key: строка, Value: Any)](/javascript/api/word/word.settingcollection#add-key--value-)|Создает новый параметр или устанавливает существующий параметр.|
-||[deleteAll ()](/javascript/api/word/word.settingcollection#deleteall--)|Удаляет все параметры в этой надстройке.|
+|[SettingCollection](/javascript/api/word/word.settingcollection)|[add(key: string, value: any)](/javascript/api/word/word.settingcollection#add-key--value-)|Создает новый параметр или задает существующий параметр.|
+||[deleteAll()](/javascript/api/word/word.settingcollection#deleteall--)|Удаляет все параметры в этой надстройки.|
 ||[getCount()](/javascript/api/word/word.settingcollection#getcount--)|Получает количество параметров.|
-||[getItem(key: string)](/javascript/api/word/word.settingcollection#getitem-key-)|Получает объект Setting по ключу, для которого учитывается регистр.|
-||[getItemOrNullObject(key: string)](/javascript/api/word/word.settingcollection#getitemornullobject-key-)|Получает объект Setting по ключу, для которого учитывается регистр.|
+||[getItem(key: string)](/javascript/api/word/word.settingcollection#getitem-key-)|Получает объект параметра по его ключу, который является чувствительным к делу.|
+||[getItemOrNullObject(key: string)](/javascript/api/word/word.settingcollection#getitemornullobject-key-)|Получает объект параметра по его ключу, который является чувствительным к делу.|
 ||[items](/javascript/api/word/word.settingcollection#items)|Получает загруженные дочерние элементы в этой коллекции.|
-|[Table](/javascript/api/word/word.table)|[Мержецеллс (Топров: число, Фирстцелл: число, Боттомров: число, Ластцелл: число)](/javascript/api/word/word.table#mergecells-toprow--firstcell--bottomrow--lastcell-)|Объединяет ячейки, ограниченные в первой и последней ячейках.|
-|[TableCell](/javascript/api/word/word.tablecell)|[Split (rowCount: число, columnCount: число)](/javascript/api/word/word.tablecell#split-rowcount--columncount-)|Разделяет ячейку на указанное количество строк и столбцов.|
-|[TableRow](/javascript/api/word/word.tablerow)|[insertContentControl()](/javascript/api/word/word.tablerow#insertcontentcontrol--)|Вставляет в строку элемент управления содержимым.|
-||[Merge ()](/javascript/api/word/word.tablerow#merge--)|Объединяет строку в одну ячейку.|
+|[Table](/javascript/api/word/word.table)|[mergeCells(topRow: number, firstCell: number, bottomRow: number, lastCell: number)](/javascript/api/word/word.table#mergecells-toprow--firstcell--bottomrow--lastcell-)|Объединяет ячейки, ограниченные включительно первой и последней ячейками.|
+|[TableCell](/javascript/api/word/word.tablecell)|[split(rowCount: number, columnCount: number)](/javascript/api/word/word.tablecell#split-rowcount--columncount-)|Разделяет ячейку на указанное количество строк и столбцов.|
+|[TableRow](/javascript/api/word/word.tablerow)|[insertContentControl()](/javascript/api/word/word.tablerow#insertcontentcontrol--)|Вставляет управление контентом в строку.|
+||[merge()](/javascript/api/word/word.tablerow#merge--)|Сливает строку в одну ячейку.|
 
 ## <a name="see-also"></a>См. также
 

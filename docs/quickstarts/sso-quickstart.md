@@ -4,12 +4,12 @@ description: Создание надстройки Office на платформ�
 ms.date: 11/03/2020
 ms.prod: non-product-specific
 localization_priority: Priority
-ms.openlocfilehash: 2baed2ef4aaca3539d1d41d1fb2ea985337fda25
-ms.sourcegitcommit: ee9e92a968e4ad23f1e371f00d4888e4203ab772
+ms.openlocfilehash: c4264c644e064787819705c8cd63bed6243b6eddfde24e21730b8938846a89b7
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53076562"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57097507"
 ---
 # <a name="use-the-yeoman-generator-to-create-an-office-add-in-that-uses-single-sign-on"></a>Создание надстройки Office, в которой используется единый вход, с помощью генератора Yeoman
 

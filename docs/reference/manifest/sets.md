@@ -1,18 +1,18 @@
 ---
 title: Элемент Sets в файле манифеста
-description: Элемент Sets указывает минимальный набор API JavaScript для Office, необходимый для активации надстройки Office.
+description: Элемент Sets указывает минимальный набор API Office JavaScript, необходимый Office надстройки для активации.
 ms.date: 03/19/2019
 localization_priority: Normal
-ms.openlocfilehash: bd8f8311bb06a8e9e98fc408aece6395ab5643b1
-ms.sourcegitcommit: cc6886b47c84ac37a3c957ff85dd0ed526ca5e43
+ms.openlocfilehash: a0a7edf6543cc74ac69ee6dc430c0a7497b6911ed43d66ea1082c0d477255948
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46641426"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57095023"
 ---
 # <a name="sets-element"></a>Элемент Sets
 
-Указывает минимальное подмножество API JavaScript для Office, необходимое для активации надстройки Office.
+Указывает минимальный подмножество API JavaScript Office, который требуется Office надстройки для активации.
 
 **Тип надстройки:** контентные и почтовые надстройки, надстройки области задач
 
@@ -36,11 +36,11 @@ ms.locfileid: "46641426"
 
 |Атрибут|Тип|Обязательный|Описание|
 |:-----|:-----|:-----|:-----|
-|DefaultMinVersion|string|необязательный|Задает значение атрибута **MinVersion** по умолчанию для всех дочерних элементов [набора](set.md) . Значение по умолчанию: "1.1".|
+|DefaultMinVersion|string|необязательный|Указывает значение атрибута **MinVersion** по умолчанию для всех [элементов](set.md) набора детей. Значение по умолчанию: "1.1".|
 
 ## <a name="remarks"></a>Примечания
 
 Дополнительные сведения о наборах обязательных элементов см. в статье [Версии Office и наборы обязательных элементов](../../develop/office-versions-and-requirement-sets.md).
 
-Дополнительные сведения об атрибуте **MinVersion** элемента **Set** и атрибуте **дефаултминверсион** элемента **Sets** приведены в разделе [set the требований в манифесте](../../develop/specify-office-hosts-and-api-requirements.md#set-the-requirements-element-in-the-manifest).
+Дополнительные сведения о атрибуте **MinVersion** элемента **Set** и **атрибуте DefaultMinVersion** элемента **Sets** см. в элементе [Set the Requirements in the manifest.](../../develop/specify-office-hosts-and-api-requirements.md#set-the-requirements-element-in-the-manifest)
 
