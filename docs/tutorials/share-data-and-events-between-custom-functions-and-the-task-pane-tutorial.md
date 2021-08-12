@@ -1,15 +1,15 @@
 ---
 title: 'Учебное руководство: обмен данными и событиями между пользовательскими функциями Excel и областью задач'
 description: Узнайте, как обмениваться данными и событиями между пользовательскими функциями и областью задач в Excel.
-ms.date: 08/13/2020
+ms.date: 08/04/2021
 ms.prod: excel
 localization_priority: Priority
-ms.openlocfilehash: 402534b55c1ff186dc5123407fc470c42ee2b253
-ms.sourcegitcommit: 883f71d395b19ccfc6874a0d5942a7016eb49e2c
+ms.openlocfilehash: de27ff675e8ef757e0b4b7c95a74a061e9cadee586ae6b7134b68c16184fdf9c
+ms.sourcegitcommit: 4f2c76b48d15e7d03c5c5f1f809493758fcd88ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "53350227"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57098548"
 ---
 # <a name="tutorial-share-data-and-events-between-excel-custom-functions-and-the-task-pane"></a>Учебное руководство: обмен данными и событиями между пользовательскими функциями Excel и областью задач
 
@@ -146,7 +146,7 @@ yo office
 ### <a name="create-task-pane-controls-to-work-with-global-data"></a>Создание элементов управления области задач для работы с глобальными данными
 
 1. Откройте файл **src/taskpane/taskpane.html**.
-2. Добавьте следующий элемент скрипта непосредственно перед элементом `</head>`.
+2. Добавьте следующий элемент сценария непосредственно перед закрывающим элементом `</head>`.
 
    ```html
    <script src="functions.js"></script>
@@ -183,18 +183,19 @@ yo office
    </div>
    ```
 
-4. Перед элементом `<body>` добавьте приведенный ниже сценарий. Этот код обрабатывает события нажатия кнопки, когда пользователь хочет сохранить или получить глобальные данные.
+4. Перед закрывающим элементом `</body>` добавьте приведенный ниже сценарий. Этот код обрабатывает события нажатия кнопки, когда пользователь хочет сохранить или получить глобальные данные.
 
    ```js
    <script>
    function storeSharedValue() {
-   let sharedValue = document.getElementById('storeBox').value;
-   window.sharedState = sharedValue;
+     let sharedValue = document.getElementById('storeBox').value;
+     window.sharedState = sharedValue;
    }
 
    function getSharedValue() {
-   document.getElementById('getBox').value = window.sharedState;
-   }</script>
+     document.getElementById('getBox').value = window.sharedState;
+   }
+   </script>
    ```
 
 5. Сохраните файл.
